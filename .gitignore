@@ -1,0 +1,8 @@
+# exclude everything by default (this is a CMS!), and whitelist the safe stuff
+/*
+!.gitattributes
+!.gitignore
+!/plugins
+/plugins/october/demo
+!/themes
+/themes/demo
