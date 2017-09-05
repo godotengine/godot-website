@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: arrizalamin.portfolio::lang.fields.tag.name
+        searchable: true
+    items:
+        label: arrizalamin.portfolio::lang.fields.tag.items
+        type: relation
+        nameFrom: title
+        emptyOption: arrizalamin.portfolio::lang.fields.tag.notavailable

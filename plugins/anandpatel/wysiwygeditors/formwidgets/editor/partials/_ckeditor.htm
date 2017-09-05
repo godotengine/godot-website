@@ -1,0 +1,26 @@
+<div data-control="wysiwyg">
+    <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
+</div>
+<script>
+    $(document).ready(function() {
+        function ckeditorInit() {
+            var editor = $('[data-control="wysiwyg"] textarea').ckeditor({
+                language: '<?php echo $lang; ?>',
+                width:    '<?php echo $width; ?>',
+                height:   '<?php echo $height; ?>',
+                toolbar:  [<?php echo $toolbar_ckeditor; ?>]
+            });
+        }
+        
+        if (typeof CKEDITOR === 'undefined') {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/ckeditor/ckeditor.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/ckeditor/adapters/jquery.js'); ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/ckeditor/lang/'.$lang.'.js'); ?>', function() {
+                ckeditorInit();
+            }); }); });
+        }
+        else {
+            ckeditorInit();
+        }
+    });
+</script>

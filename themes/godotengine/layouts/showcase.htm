@@ -1,0 +1,44 @@
+description = "Games showcases"
+
+[portfolio]
+category = 0
+itemsPerPage = 12
+order = "desc"
+pageNumber = "{{ :page }}"
+selectedTag = "{{ :selected_tag }}"
+selectedCat = "{{ :selected_cat }}"
+catListPage = "showcase_category"
+itemPage = "showcase"
+tagListPage = "showcase_tags"
+==
+<!DOCTYPE html>
+<html>
+{% partial "head" %}
+{% partial "header" %}
+<style>
+    .sh_item img{
+        width:100%;
+    }
+    .sh_item p {
+        font-size:16px;
+        text-align:justify;
+    }
+    .sh_item small {
+        font-weight:bold;
+    }
+</style>
+<div class="container">
+  <h1 class="intro-title">Showcase</h1>
+
+  <div class="row">
+    {% component 'portfolio' %}
+
+    <div class="row">
+        <div class="col-md-12">
+          <p>If you want your Godot game to be featured on this page, please see the instructions in <a href="/article/showcase-your-godot-game-our-website">this blog announcement</a>.</p>
+        </div>
+    </div>
+  </div>
+
+{% partial "footer" %}
+</html>

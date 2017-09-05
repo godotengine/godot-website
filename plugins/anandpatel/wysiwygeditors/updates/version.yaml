@@ -1,0 +1,26 @@
+1.0.1: First version of Wysiwyg Editors.
+1.0.2: Automatic Injection to CMS & other code editors and October CMS`s Rich Editor added.
+1.0.3: Automatic Injection to RainLab Static Pages & other plugin`s option is appear only if installed.
+1.0.4: New Froala editor added (on request from emzero439), Height & width property added for editor, setting moved to My Setting tab and minor changes in settings.
+1.0.5: Automatic Injection to Radiantweb`s Problog and ProEvents (option available in settings-content).
+1.0.6: CKEditor updated and bug fixes.
+1.0.7: Integrated elFinder (file browser) with TinyMCE & CKEditor, Image upload/delete for Froala Editor.
+1.0.8: Added security to File Browser`s route (Authenticate users can only access File Browser).
+1.0.9: Updated CKEditor, Froala and TinyMCE.
+1.1.0: Support multilanguage, update elFinder and cleanup code.
+1.1.1: Added Turkish language.
+1.1.2: Added Hungarian language.
+1.1.3: Fixed issue related to RC (Elfinder fix remaining).
+1.1.4:
+      - Fixed Elfinder issue.
+      - PublishConfig.php
+1.1.5: Updated CKEditor, Froala and TinyMCE.
+1.1.6: Changed destination folder.
+1.1.7: Added Czech language.
+1.1.8: Added Russian language.
+1.1.9: Fix hook and other issues (thanks to Vojta Svoboda).
+1.2.0: Put settings inside CMS sidemenu (thanks to Amanda Tresbach).
+1.2.1: Remove el-finder (Which fix issue of composer), added OC media manager support for image in TinyMCE & CkEditor, TinyMCE version updated, Fix Image upload for froala editor
+1.2.2: Add multilingual support, Add new languages, Update the Hungarian language, Add the missing English language files (Special thanks to Szabó Gergő)
+1.2.3: Added toolbar customization option (Special thanks to Szabó Gergő).
+1.2.4: Added support for Content Plus Plugin & News and Newsletter plugin(thanks to Szabó Gergő)

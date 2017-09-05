@@ -1,0 +1,45 @@
+<div data-control="wysiwyg">
+    <textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
+</div>
+<style>
+    #mceu_17 .mce-ico {
+        color: #c03f31!important;
+    }
+</style>
+<script>
+    function tinymceInit() {
+        tinyMCE.baseURL = "<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce'); ?>";
+        tinyMCE.suffix = '.min';
+        tinymce.init({
+            selector: 'textarea#<?php echo $this->getId('textarea') ?>',
+            language: '<?php echo $lang ?>',
+            theme: 'modern',
+            setup: function(editor) {
+                editor.on('change', function() {
+                    tinymce.triggerSave();
+                });
+            },
+            relative_urls: false,
+            width:  '<?php echo $width; ?>',
+            height: '<?php echo $height; ?>',
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality emoticons template paste textcolor ocmediamanager"
+            ],
+            toolbar: "<?php echo $toolbar_tinymce; ?>"
+        });
+    }
+
+    $(document).ready(function() {
+        if (typeof tinymce === 'undefined') {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce/tinymce.min.js') ?>', function() {
+            $.getScript('<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce/langs/'.$lang.'.js') ?>', function() {
+                tinymceInit();
+            }); });
+        }
+        else {
+            tinymceInit();
+        }
+    });
+</script>

@@ -1,0 +1,7 @@
+<a href="{{ feedBurnerAddress ?  feedBurnerLink : defaultRssLink}}" target="_blank">
+    {% if iconClass %}
+        <i class="{{ iconClass }}"></i>
+    {% else %}
+        {{ defaultText }}
+    {% endif %}
+</a>

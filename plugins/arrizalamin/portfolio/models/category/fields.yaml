@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: arrizalamin.portfolio::lang.fields.category.name
+        span: left
+        searchable: true
+    slug:
+        label: arrizalamin.portfolio::lang.fields.category.slug
+        span: right
+        preset:
+            field: name
+            type: slug
+    description:
+        label: arrizalamin.portfolio::lang.fields.category.description
+        type: textarea
+        searchable: false

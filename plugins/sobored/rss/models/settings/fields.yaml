@@ -1,0 +1,47 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        title:
+            tab: Site Information
+            label: Title
+            span: left
+            placeholder: Blog/RSS Feed Title
+            comment:  The <title> of your RSS feed (this will be part of the xml)
+            description:  The <title> of your RSS feed (this will be part of the xml)
+
+        link:
+            tab: Site Information
+            label: Link
+            span: right
+            placeholder: Website/Blog Link
+            comment:  The <link> to your blog/website (blog.example.com)
+            description:  The <link> to your blog/website (blog.example.com)
+
+
+        description:
+            tab: Site Information
+            label: Description
+            type: textarea
+            size: small
+            comment:  A short description of your website/blog.
+            description:  A short description of your website/blog
+
+        postPage:
+            tab: Blog Information
+            label: Post Page
+            span: left
+            placeholder: /blog/post
+            comment:  The post page for linking in RSS
+            description:  The post page for linking in RSS
+
+        showFullPostContent:
+            tab: Blog Information
+            label: Show full post content?
+            type: checkbox
+            span: left
+            default: true
+            comment: Uncheck if you want only the excerpt to be displayed in the xml
+            description: Uncheck if you want only the excerpt to be displayed in the xml

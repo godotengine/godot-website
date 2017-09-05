@@ -1,0 +1,78 @@
+/* The input form element */
+.owl-tagbox input[data-control="tagbox-input"] {
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    padding: 5px;
+    font-size: 13px;
+}
+.owl-tagbox input[data-control="tagbox-input"]::-webkit-input-placeholder { color: #ccc; }
+.owl-tagbox input[data-control="tagbox-input"]:-moz-placeholder { color: #ccc; }
+.owl-tagbox input[data-control="tagbox-input"]::-moz-placeholder { color: #ccc; }
+.owl-tagbox input[data-control="tagbox-input"]:-ms-input-placeholder { color: #ccc; }
+
+/* The list containing our tags */
+.owl-tagbox ul {
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    color: #555555;
+    cursor: text;
+    display: block;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 6px 6px;
+    width: 100%;
+}
+
+.owl-tagbox ul.focused {
+    border-color: #808C8D;
+}
+
+/* Tags are contained within <li> items */
+.owl-tagbox li {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    line-height: 1.428571429;
+    margin: 6px 6px 0 0;
+}
+
+/* These are the actual tags */
+.owl-tagbox li[data-control="tag"] {
+    background-color: #405D7A;
+    border-radius: 2px;
+    border: 1px solid #000;
+    color: #dedede;
+    cursor: default;
+    padding: 3px 8px;
+}
+.owl-tagbox .tagbox-tag span.value { float: left; }
+.owl-tagbox .tagbox-tag span.remove-span { float: right; }
+
+/* Link for removing a tag */
+.owl-tagbox li[data-control="tag"] [data-control="remove"] {
+    color: inherit;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.owl-tagbox li[data-control="tag"] [data-control="remove"]:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* This class will add to pending backspace deletes */
+.owl-tagbox li[data-control="tag"].pre-delete {
+    background-color: #E0444B;
+}
+
+/* This class will be flashed to display duplicates */
+.owl-tagbox li[data-control="tag"].flash {
+    background-color: #457A40 !important;
+}

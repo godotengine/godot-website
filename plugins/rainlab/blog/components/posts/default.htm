@@ -1,0 +1,11 @@
+{% set posts = __SELF__.posts %}
+
+    {% for post in posts %}
+	<article class="news">
+		<div class="news-date">{{ post.published_at|date('M d, Y') }}</div>
+		<div class="news-title">
+		  <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
+		</div>
+	</article>
+    {% endfor %}
+

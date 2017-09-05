@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: arrizalamin.portfolio::lang.fields.item.title
+        span: left
+    slug:
+        label: arrizalamin.portfolio::lang.fields.item.slug
+        span: right
+        preset:
+            field: title
+            type: slug
+    category:
+        label: arrizalamin.portfolio::lang.fields.item.category
+        span: left
+        type: relation
+        nameFrom: name
+    url:
+        label: arrizalamin.portfolio::lang.fields.item.url
+        type: text
+        span: right
+    video_url:
+        label: arrizalamin.portfolio::lang.fields.item.video_url
+        type: text
+    tagbox:
+        label: arrizalamin.portfolio::lang.fields.item.tags
+        type: owl-tagbox
+        nameFrom: name
+        slugify: true
+    description:
+        label: arrizalamin.portfolio::lang.fields.item.description
+        type: richeditor
+    images:
+        label: arrizalamin.portfolio::lang.fields.item.images
+        type: fileupload
+        mode: image

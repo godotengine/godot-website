@@ -1,0 +1,13 @@
+title = "Download"
+url = "/download"
+layout = "download"
+description = "Download page"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+    $this["downloads"] = file_get_contents('https://godotengine.org/release.php',true);
+}
+?>
+==

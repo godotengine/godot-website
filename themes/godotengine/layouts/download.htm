@@ -1,0 +1,52 @@
+description = "Download layout"
+==
+<!DOCTYPE html>
+<html>
+{% partial "head" %}
+{% partial "header" %}
+<div class="container">
+  <h1 class="intro-title">Download</h1>
+  <div class="row">
+    <div class="col-md-7">        
+        <h4 class="download-header">Godot Engine 2.1.4-stable</h4>
+        <div class="release-date">Released <a href="https://downloads.tuxfamily.org/godotengine/2.1.4/">2017/08/27</a></div>
+        <ul class="file-list">
+          <li><a href="https://downloads.tuxfamily.org/godotengine/2.1.4/Godot_v2.1.4-stable_x11.64.zip"><i class="fa fa-linux"></i> Linux 64-bit</a> | <a href="http://op.godotengine.org:81/downloads/2.1.4/Godot_v2.1.4-stable_x11.64.zip">[Mirror 2]</a></li>
+          <li><a href="https://downloads.tuxfamily.org/godotengine/2.1.4/Godot_v2.1.4-stable_x11.32.zip"><i class="fa fa-linux"></i> Linux 32-bit</a> | <a href="http://op.godotengine.org:81/downloads/2.1.4/Godot_v2.1.4-stable_x11.32.zip">[Mirror 2]</a></li>
+          <li><a href="https://downloads.tuxfamily.org/godotengine/2.1.4/Godot_v2.1.4-stable_linux_server.64.zip"><i class="fa fa-linux"></i> Linux Server 64-bit</a> | <a href="http://op.godotengine.org:81/downloads/2.1.4/Godot_v2.1.4-stable_linux_server.64.zip">[Mirror 2]</a></li>
+          <li><a href="https://downloads.tuxfamily.org/godotengine/2.1.4/Godot_v2.1.4-stable_osx.fat.zip"><i class="fa fa-apple"></i> OS X (32-bit + 64-bit)</a> | <a href="http://op.godotengine.org:81/downloads/2.1.4/Godot_v2.1.4-stable_osx.fat.zip">[Mirror 2]</a></li>
+          <li><a href="https://downloads.tuxfamily.org/godotengine/2.1.4/Godot_v2.1.4-stable_win64.exe.zip"><i class="fa fa-windows"></i> Windows 64-bit</a> | <a href="http://op.godotengine.org:81/downloads/2.1.4/Godot_v2.1.4-stable_win64.exe.zip">[Mirror 2]</a></li>
+          <li><a href="https://downloads.tuxfamily.org/godotengine/2.1.4/Godot_v2.1.4-stable_win32.exe.zip"><i class="fa fa-windows"></i> Windows 32-bit</a> | <a href="http://op.godotengine.org:81/downloads/2.1.4/Godot_v2.1.4-stable_win32.exe.zip">[Mirror 2]</a></li>
+          <li><a href="https://downloads.tuxfamily.org/godotengine/2.1.4/Godot_v2.1.4-stable_export_templates.tpz"><i class="fa fa-share"></i> Export Templates</a> | <a href="http://op.godotengine.org:81/downloads/2.1.4/Godot_v2.1.4-stable_export_templates.tpz">[Mirror 2]</a></li>
+        </ul>
+
+        <p><a href="http://store.steampowered.com/app/404790" title="Godot Engine on Steam"><img src="{{ 'assets/download/steam.png'|theme }}" height=32></a> The latest stable release is also available on <a href="http://store.steampowered.com/app/404790" title="Godot Engine on Steam">Steam</a>.</p>
+        <p>You can find previous releases on our mirrors: <a href="https://downloads.tuxfamily.org/godotengine">[Mirror 1]</a> | <a href="http://op.godotengine.org:81/downloads">[Mirror 2]</a></p>
+
+        <h4 class="download-header">Demos projects and tools</h4>
+        <ul class="file-list">
+          <li><a href="https://downloads.tuxfamily.org/godotengine/demos/2.1/Godot-Demos-2.1.4-stable.zip"><i class="fa fa-newspaper-o"></i> Demos and Examples</a> | <a href="http://op.godotengine.org:81/downloads/demos/2.1/Godot-Demos-2.1.4-stable.zip">[Mirror 2]</a></li>
+          <li><a href="https://downloads.tuxfamily.org/godotengine/collada-exporter/BetterColladaExporter-latest.zip"><i class="fa fa-pie-chart"></i> Better Collada Exporter for Blender</a> | <a href="http://op.godotengine.org:81/downloads/collada-exporter/BetterColladaExporter-latest.zip">[Mirror 2]</a></li>
+        </ul>
+
+        <!--
+        <hr>
+          {{ downloads|raw }}
+        -->
+    </div>
+    <div class="col-md-4 download-info">
+      <div class="flex-center">
+        <img class="flex-center" src="{{ 'assets/download/dl_icon_osi.png'|theme }}">
+      </div>
+      <p>Godot's full source code is provided to you under the very permissive terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>. No royalties or payments are required, you have full control of your game and engine.</p>
+      <hr>
+     <div class="flex-center">
+        <img class="flex-center" src="{{ 'assets/download/dl_icon_github.png'|theme }}">
+      </div>
+      <p>Godot development is <strong>open</strong>. This means you can fix or improve any part of the engine yourself and choose whether to contribute it back to keep it private. New features are always available to use and test, without the need of having to wait for the next major release. Compiling Godot from source is <em>very easy</em> (it has no common dependencies) and the process (for each platform) is well-documented on the wiki. To obtain the source code (and consulting the documentation), please visit the <a href="https://github.com/godotengine/godot">GitHub project page</a>.</p>
+    </div>
+    <div class="col-md-1">&nbsp;</div>
+  </div>
+</div>
+{% partial "footer" %}
+</html>

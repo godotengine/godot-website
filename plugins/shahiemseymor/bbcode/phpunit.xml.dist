@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit colors="true"
+	backupGlobals="false"
+	backupStaticAttributes="false"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	processIsolation="false"
+	stopOnFailure="false"
+	syntaxCheck="true"
+	bootstrap="tests/bootstrap.php">
+
+	<testsuites>
+		<testsuite name="Decoda Tests">
+			<directory>./tests/</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

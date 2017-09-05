@@ -1,0 +1,35 @@
+# ===================================
+#  Field Definitions
+# ===================================
+fields:
+    name:
+      span: left
+      label: Name
+      type: text
+      required: true
+
+    emoticon:
+      span: right
+      label: Image
+      type: fileupload
+      required: true
+      options:
+        mode: image
+        image-width: 100
+        image-height: 100
+
+    notation:
+      type: repeater
+      form:
+        fields:
+            notation:
+              span: left
+              label: Notation
+              type: text
+              required: true
+
+    in_editor:
+      span: left
+      label: Display in WYSIWYG editor
+      type: checkbox
+      default: true

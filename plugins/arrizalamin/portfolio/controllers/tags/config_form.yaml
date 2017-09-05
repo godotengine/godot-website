@@ -1,0 +1,30 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: arrizalamin.portfolio::lang.controller.form.tags.title
+
+# Model Form Field configuration
+form: $/arrizalamin/portfolio/models/tag/fields.yaml
+
+# Model Class name
+modelClass: ArrizalAmin\Portfolio\Models\Tag
+
+# Default redirect location
+defaultRedirect: arrizalamin/portfolio/tags
+
+# Create page
+create:
+    title: arrizalamin.portfolio::lang.controller.form.tags.create
+    redirect: arrizalamin/portfolio/tags/update/:id
+    redirectClose: arrizalamin/portfolio/tags
+    flashSave: arrizalamin.portfolio::lang.controller.form.tags.flashCreate
+
+# Update page
+update:
+    title: arrizalamin.portfolio::lang.controller.form.tags.update
+    redirect: arrizalamin/portfolio/tags
+    redirectClose: arrizalamin/portfolio/tags
+    flashSave: arrizalamin.portfolio::lang.controller.form.tags.flashUpdate
+    flashDelete: arrizalamin.portfolio::lang.controller.form.tags.flashDelete

@@ -1,0 +1,26 @@
+{
+  "name": "arrizalmin/portfolio",
+  "description": "Create a portfolio on your OctoberCMS website.",
+  "homepage": "https://github.com/arrizalamin/october-portfolio",
+  "keywords": ["october", "portfolio", "categories", "tags", "arrizalmin", "oostmeijer"],
+  "authors": [
+    {
+      "name": "Arrizal Amin",
+      "email": "arrizalamin@gmail.com"
+    },
+    {
+      "name": "Jelle Oostmeijer",
+      "email": "git@2oo.nl"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "owl/tagbox": "~1.0@dev",
+    "mnsami/composer-custom-directory-installer": "1.1.*"
+  },
+  "extra": {
+    "installer-paths": {
+      "./assets/": ["owl/tagbox"]
+    }
+  }
+}

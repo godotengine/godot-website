@@ -1,0 +1,30 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: arrizalamin.portfolio::lang.controller.form.items.title
+
+# Model Form Field configuration
+form: $/arrizalamin/portfolio/models/item/fields.yaml
+
+# Model Class name
+modelClass: ArrizalAmin\Portfolio\Models\Item
+
+# Default redirect location
+defaultRedirect: arrizalamin/portfolio/items
+
+# Create page
+create:
+    title: arrizalamin.portfolio::lang.controller.form.items.create
+    redirect: arrizalamin/portfolio/items/update/:id
+    redirectClose: arrizalamin/portfolio/items
+    flashSave: arrizalamin.portfolio::lang.controller.form.items.flashCreate
+
+# Update page
+update:
+    title: arrizalamin.portfolio::lang.controller.form.items.update
+    redirect: arrizalamin/portfolio/items
+    redirectClose: arrizalamin/portfolio/items
+    flashSave: arrizalamin.portfolio::lang.controller.form.items.flashUpdate
+    flashDelete: arrizalamin.portfolio::lang.controller.form.items.flashDelete

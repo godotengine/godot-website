@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: arrizalamin.portfolio::lang.columns.category.name
+        searchable: true
+    description:
+        label: arrizalamin.portfolio::lang.columns.category.description
+        searchable: false

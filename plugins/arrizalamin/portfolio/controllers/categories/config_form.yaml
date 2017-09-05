@@ -1,0 +1,30 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: arrizalamin.portfolio::lang.controller.form.categories.title
+
+# Model Form Field configuration
+form: $/arrizalamin/portfolio/models/category/fields.yaml
+
+# Model Class name
+modelClass: ArrizalAmin\Portfolio\Models\Category
+
+# Default redirect location
+defaultRedirect: arrizalamin/portfolio/categories
+
+# Create page
+create:
+    title: arrizalamin.portfolio::lang.controller.form.categories.create
+    redirect: arrizalamin/portfolio/categories/update/:id
+    redirectClose: arrizalamin/portfolio/categories
+    flashSave: arrizalamin.portfolio::lang.controller.form.categories.flashCreate
+
+# Update page
+update:
+    title: arrizalamin.portfolio::lang.controller.form.categories.update
+    redirect: arrizalamin/portfolio/categories
+    redirectClose: arrizalamin/portfolio/categories
+    flashSave: arrizalamin.portfolio::lang.controller.form.categories.flashUpdate
+    flashDelete: arrizalamin.portfolio::lang.controller.form.categories.flashDelete

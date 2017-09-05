@@ -1,0 +1,37 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    update_existing:
+        label: Update existing posts
+        comment: Check this box to update posts that have exactly the same ID, title or slug.
+        type: checkbox
+        default: true
+        span: left
+
+    auto_create_categories:
+        label: Create categories specified in the import file
+        comment: You should match the Categories column to use this feature, otherwise select the default categories to use from the items below.
+        type: checkbox
+        default: true
+        span: right
+
+    post_categories:
+        label: Categories
+        commentAbove: Select the categories that imported posts will belong to (optional).
+        type: checkboxlist
+        span: right
+        cssClass: field-indent
+        trigger:
+            action: hide
+            field: auto_create_categories
+            condition: checked
+
+    default_author:
+        label: Default post author (optional)
+        comment: The import will try to use an existing author if you match the Author Email column, otherwise the author specified above is used.
+        type: dropdown
+        placeholder: -- Select author --
+        span: left

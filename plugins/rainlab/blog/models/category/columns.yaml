@@ -1,0 +1,13 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: rainlab.blog::lang.category.name
+        searchable: true
+
+    post_count:
+        label: rainlab.blog::lang.category.posts
+        sortable: false

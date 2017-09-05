@@ -1,0 +1,44 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/arrizalamin/portfolio/models/tag/columns.yaml
+
+# Model Class name
+modelClass: ArrizalAmin\Portfolio\Models\Tag
+
+# List Title
+title: arrizalamin.portfolio::lang.controller.list.tags
+
+# Link URL for each record
+recordUrl: arrizalamin/portfolio/tags/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 20
+
+# Displays the list column set up button
+showSetup: true
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Default sorting column
+defaultSort:
+    column: name
+    direction: asc
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

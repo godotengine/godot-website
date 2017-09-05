@@ -1,0 +1,14 @@
+<!-- Tag template -->
+<li data-control="tag"
+    <?php if (isset($tag)) echo "data-tag=\"$tag\"" ?>
+>
+    <input type="hidden" name="<?= $this->fieldName ?>[]"
+        <?php if (isset($tag)) echo "value=\"$tag\"" ?>
+    >
+    <span data-control="display">
+        <?php if (isset($tag)) echo $tag ?>
+    </span>
+    <span data-control="remove">
+        <i class="icon-times"></i>
+    </span>
+</li>

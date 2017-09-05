@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        {% for item in __SELF__.portfolio %}
+        <div class="col-lg-4">
+	  {% if item.video_url %}
+	  <iframe width="560" height="315" src="{{ item.video_url }}" frameborder="0" allowfullscreen></iframe>
+          {% endif %}
+	  
+            {% if item.images|length > 0 %}
+            <div>
+                {% set image = item.images.first %}
+                <a href="{{ item.pageUrl }}">
+                    <img src="{{ image.path }}" class="img-responsive" alt="{{ image.title }}">
+                </a>
+            </div>
+            {% endif %}
+            <a href="{{ item.pageUrl }}"><h2>{{ item.title }}</h2></a>
+            <small>posted {{ item.created_at|date('j m Y') }} in <a href="{{ item.category.pageUrl }}">{{ item.category.name }}</a></small>
+            {% if item.tags|length > 0 %}
+            <div>
+                {% for tag in item.tags %}
+                <a href="{{ tag.pageUrl }}"><span class="label label-primary">{{ tag.name }}</span></a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if item.description %}
+            <p>
+                {{ item.description|raw }}
+            </p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if __SELF__.portfolio.lastPage > 1 %}
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="pagination">
+                {% if __SELF__.portfolio.currentPage > 1 %}
+                <li><a href="{{ this.page.baseFileName|page({ page: (__SELF__.portfolio.currentPage - 1) }) }}">&larr; Prev</a></li>
+                {% endif %}
+
+                {% for page in 1..__SELF__.portfolio.lastPage %}
+                <li class="{{ __SELF__.portfolio.currentPage == page ? 'active' : null }}">
+                    <a href="{{ this.page.baseFileName|page({ page: page }) }}">{{ page }}</a>
+                </li>
+                {% endfor %}
+
+                {% if __SELF__.portfolio.lastPage > __SELF__.portfolio.currentPage %}
+                <li><a href="{{ this.page.baseFileName|page({ page: (__SELF__.portfolio.currentPage + 1) }) }}">Next &rarr;</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+</div>
+

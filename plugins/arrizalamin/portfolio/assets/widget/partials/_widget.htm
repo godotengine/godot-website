@@ -1,0 +1,30 @@
+<div data-owl="tagbox" class="owl-tagbox"
+    data-alias="<?= $this->alias ?>"
+    data-config="<?= $config ?>">
+
+    <!-- Tagbox container -->
+    <ul data-control="list">
+        <?php
+        if (isset($tags) && is_array($tags) && $tags) {
+            foreach ($tags as $tag)
+                echo $this->makePartial('tag', ['tag' => $tag]);
+        }
+        ?>
+        <li data-control="last">
+            <input data-control="tagbox-input" name="<?= $this->fieldName ?>[]" type="text" placeholder="<?= $placeholder ?>" />
+        </li>
+    </ul>
+
+    <!-- Tag template -->
+    <script type="text/template" data-control="template">
+        <?= $this->makePartial('tag') ?>
+    </script>
+
+    <!-- Initialize tagbox -->
+    <script type="text/javascript">
+        $(document).on('render', function() {
+            $('[data-owl="tagbox"][data-alias="<?= $this->alias ?>"]').tagbox()
+        });
+    </script>
+
+</div>

@@ -1,0 +1,26 @@
+{% set item = __SELF__.item %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            {% for image in item.images %}
+            <div class="col-sm-6">
+                <img src="{{ image.path }}" class="img-responsive" alt="{{ image.title }}">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-lg-6">
+            <h1>Portfolio Item {{ item.id }}</h1>
+            <h2>{{ item.title }}</h2>
+            <small>posted {{ item.created_at|date('j m Y') }} in <a href="{{ item.category.pageUrl }}">{{ item.category.name }}</a></small>
+            <div>
+                {% for tag in item.tags %}
+                <a href="{{ tag.pageUrl }}"><span class="label label-default">{{ tag.name }}</span></a>
+                {% endfor %}
+            </div>
+            <p>{{ item.description|raw }}</p>
+            {% if item.url %}
+                <a href="{{ item.url }}" class="btn btn-default" target="_blank">view project</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

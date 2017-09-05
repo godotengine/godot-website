@@ -1,0 +1,36 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+scopes:
+
+    category:
+
+        # Filter name
+        label: rainlab.blog::lang.posts.filter_category
+
+        # Model Class name
+        modelClass: RainLab\Blog\Models\Category
+
+        # Model attribute to display for the name
+        nameFrom: name
+
+        # Apply query scope
+        scope: FilterCategories
+
+    published:
+
+        # Filter name
+        label: rainlab.blog::lang.posts.filter_published
+
+        # Filter type
+        type: switch
+
+        # SQL Conditions
+        conditions:
+            - published <> '1'
+            - published = '1'
+
+    published_date:
+        label: Date
+        type: daterange
+        conditions: created_at >= ':after' AND created_at <= ':before'

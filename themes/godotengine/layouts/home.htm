@@ -1,0 +1,141 @@
+description = "home layout"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "news"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "{{ :slug }}"
+==
+<!DOCTYPE html>
+<html>
+{% partial "head" %}
+{% partial "header" %}
+<div class="jumbotron-filter"></div>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="main-title">Godot is an advanced, feature-packed, multi-platform 2D and 3D open source game engine</h1>
+        <a class="button button-success" href="/download"><i class="fa fa-download"></i> Download | 2.1</a>
+        <a class="button button-info" href="/article/godot-reaches-2-1-stable">What's new?</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row highlights">
+    <div class="col-md-6 intro">
+        {% page %}
+    </div>
+    <div class="col-md-6 news-list">
+      <h2>Latest news</h2>
+        {% component 'blogPosts' %}
+      <a class="more-news" href="/news">More news »</a>
+    </div>
+  </div>
+</div>
+<div class="container features">
+  <div class="row">
+    <div class="col-md-4 feature feature-design">
+        <div class="align-bottom">
+          <h3>Innovative design</h3>
+          <p>
+            Extremely efficient paradigm for designing games alone or in a team
+            using object-oriented scenes. <a href="/features#design">[+]</a>
+          </p>
+      </div>
+    </div>
+    <div class="col-md-4 feature feature-2d">
+      <div class="align-bottom">
+          <h3>Develop 2D games</h3>
+          <p>
+            Create any kind of complex 2D games with the fully dedicated 2D engine,
+            using pixels as your units. <a href="/features#2d-games">[+]</a>
+          </p>
+      </div>
+    </div>
+    <div class="col-md-4 feature feature-editor">
+     <div class="align-bottom">
+      <h3>Multi-platform editor</h3>
+      <p>
+        Create games using the Godot editor on Windows, OS X and Linux desktops.
+        <a href="/features#multiplatform-editor">[+]</a>
+      </p>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 feature feature-script">
+        <div class="align-bottom">
+      <h3>Script &amp; debug</h3>
+      <p>
+        Add behaviors to objects with built-in scripting. Debug and edit games
+        while it is running on device. <a href="/features#script">[+]</a>
+      </p>
+      </div>
+    </div>
+    <div class="col-md-4 feature feature-3d">
+        <div class="align-bottom">
+      <h3>Develop 3D games</h3>
+      <p>
+        Create realistic-looking 3D games with the dedicated 3D engine.
+        <a href="features#3d-games">[+]</a>
+      </p>
+      </div>
+    </div>
+    <div class="col-md-4 feature feature-deploy">
+        <div class="align-bottom">
+      <h3>Multi-platform deploy</h3>
+      <p>
+        Deploy games to PC (Windows, OS X, Linux), mobile (Android, iOS) and
+        HTML5. <a href="/features#multiplatform-deploy">[+]</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h2>Get involved</h2>
+  <div class="row get-involved">
+    <div class="col-sm-4">
+      <div class="flex-center">
+        <img src="{{ 'assets/home/icons/open-source.svg'|theme }}" width="128">
+      </div>
+      <h3>Open source</h3>
+      <p>
+        Godot's full source code is provided to you under the very permissive
+        terms of the MIT License. No royalties or payments are required. Free as in Freedom.
+      </p>
+      <a class="button button-success" href="https://github.com/godotengine/godot">View on GitHub</a>
+    </div>
+    <div class="col-sm-4">
+      <div class="flex-center">
+        <img src="{{ 'assets/home/icons/roadmap.svg'|theme }}" width="128">
+      </div>
+      <h3>Roadmap</h3>
+      <p>
+        See the upcoming releases and features. Godot Engine is developed in the
+        open by a community of developers. Come and lend us a hand to make it
+        better!
+      </p>
+      <a class="button button-success" href="https://github.com/godotengine/godot/milestone/4">Roadmap</a>
+    </div>
+    <div class="col-sm-4">
+      <div class="flex-center">
+        <img src="{{ 'assets/home/icons/donate.svg'|theme }}" width="128">
+      </div>
+      <h3>Donate</h3>
+      <p>
+        You don't need to be an engine developer to help Godot. Consider
+        donating to speed up development and make Godot Engine even more
+        awesome!
+      </p>
+      <a class="button button-success" href="/donate">Donate</a>
+    </div>
+  </div>
+</div>
+{% partial "footer" %}
+</html>

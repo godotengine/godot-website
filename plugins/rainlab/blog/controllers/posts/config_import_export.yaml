@@ -1,0 +1,41 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    # Page title
+    title: Import posts
+
+    # Import List Column configuration
+    list: $/rainlab/blog/models/postimport/columns.yaml
+
+    # Import Form Field configuration
+    form: $/rainlab/blog/models/postimport/fields.yaml
+
+    # Import Model class
+    modelClass: RainLab\Blog\Models\PostImport
+
+    # Redirect when finished
+    redirect: rainlab/blog/posts
+
+    # Required permissions
+    permissions: rainlab.blog.access_import_export
+
+export:
+    # Page title
+    title: Export posts
+
+    # Output file name
+    fileName: posts.csv
+
+    # Export List Column configuration
+    list: $/rainlab/blog/models/postexport/columns.yaml
+
+    # Export Model class
+    modelClass: RainLab\Blog\Models\PostExport
+
+    # Redirect when finished
+    redirect: rainlab/blog/posts
+
+    # Required permissions
+    permissions: rainlab.blog.access_import_export

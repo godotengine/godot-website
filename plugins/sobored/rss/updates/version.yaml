@@ -1,0 +1,14 @@
+1.0.1: Initialize plugin
+1.0.2:
+    - Fixed the rss.xml file to update when saving creating or deleting a blog post
+    - Makes the rss.xml file update when saving the RSS Feed settings
+    - Updates the conditional statement for the feed burner address
+1.0.3: Updates the generation of XML
+1.0.4: Updates pubDate to be RFC822
+1.0.5: Patch for valid RSS XML
+1.0.6: Fixes versioning
+1.0.7: Allows for full post content
+1.0.8:
+    - Changed having to where to help database type compatibility
+    - Updated the output to parse markdown
+1.0.9: Update to work with new RC version of October.

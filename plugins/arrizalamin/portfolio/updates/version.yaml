@@ -1,0 +1,32 @@
+1.0.1: First version of Portfolio
+1.0.2:
+    - Create Items and Categories Table
+    - create_items_table.php
+    - create_categories_table.php
+1.1.0:
+    - Using Localization File
+    - Add Support for Rainlab.Translate
+1.2.0:
+    - Add Pagination
+    - Add All Category Option
+    - Multiple Delete Items/Categories with Checkboxes
+1.3.0:
+    - Added (dynamic) Tags
+    - Minor bug fixes
+    - create_tags_table.php
+1.3.1:
+    - Added translatable functionality to category model
+    - Fixed requirement of Rainlab.Translate plugin
+1.4.0:
+    - Created Item component to show portfolio items
+    - Added slug fields to items and categories
+    - Added link functionality to categories
+    - Seed example data
+    - update_tables_with_slugs.php
+    - seed_example_data.php
+1.4.1: Minor bug fixes
+1.4.2: Remove Rainlab.Translate dependency
+1.4.3:
+    - Video link is added to items	
+    - add_video_url_from_item_table.php
+1.4.4: Fixed public folder mirroring
