@@ -6,7 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].app.js',
     path: path.resolve(__dirname, './assets/packed'),
     publicPath: ''
   },
