@@ -1,29 +1,36 @@
 description = "header partial"
+
+[Goal]
 ==
-<body>
+{% styles %}
+{% scripts %}
+
 <header>
-  <nav>
-    <input type="checkbox" id="nav-trigger" class="nav-trigger"><label for="nav-trigger"></label>
-    <div class="pull-left">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger">  <nav>
+    <div class="logoHeader">
+      <label for="nav-trigger"></label>
       <a href="/"><img class="nav-logo" src="{{ 'assets/logo.svg'|theme }}" height="48" alt="Godot Engine"></a>
     </div>
-    <ul class="pull-right">
-      <li {% if this.page.id == 'news' %} class="active" {% endif %}><a href="/news">News</a></li>
-      <li {% if this.page.id == 'features' %} class="active" {% endif %}><a href="/features">Features</a></li>
-      <li {% if this.page.id == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
-      <li {% if this.page.id == 'community' %} class="active" {% endif %}><a href="/community">Community</a></li>
-      <li {% if this.page.id == 'showcase' %} class="active" {% endif %}><a href="/showcase">Showcase</a></li>
-      <li {% if this.page.id == 'devblog' %} class="active" {% endif %}><a href="/devblog">Devblog</a></li>
-      <li><a href="http://docs.godotengine.org">Docs</a></li>
-      <li><a id="nav_more" href="#">More</a>
-          <ul>
-              <li><a href="/events">Events</a></li>
-              <li><a href="/qa">Q&amp;A</a></li>
-              <li><a href="/asset-library">Asset Library</a></li>
-              <li><a href="/contact">Contact</a></li>
-          </ul>
-      </li>
-      <li><a class="donate" href="/donate">Donate</a></li>
-    </ul>
+    <div class="menu">
+      <ul class="">
+        <li {% if this.page.id == 'news' %} class="active" {% endif %}><a href="/news">News</a></li>
+        <li {% if this.page.id == 'features' %} class="active" {% endif %}><a href="/features">Features</a></li>
+        <li {% if this.page.id == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
+        <li {% if this.page.id == 'community' %} class="active" {% endif %}><a href="/community">Community</a></li>
+        <li {% if this.page.id == 'showcase' %} class="active" {% endif %}><a href="/showcase">Showcase</a></li>
+        <li><a href="http://docs.godotengine.org">Docs</a></li>
+        <li><a id="nav_more" href="#">More</a>
+            <ul>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/qa">Q&amp;A</a></li>
+                <li><a href="/asset-library">Asset Library</a></li>
+                <li><a href="/contact">Contact</a></li>
+		<li {% if this.page.id == 'devblog' %} class="active" {% endif %}><a href="/devblog">Devblog</a></li>
+		<li><a class="donate" href="/donate">Donate</a></li>
+            </ul>
+        </li>
+        <li id="patreon"> {% component 'Goal' %} </li>
+      </ul>
+  </div>
   </nav>
 </header>

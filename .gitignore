@@ -1,5 +1,6 @@
 # exclude everything by default (this is a CMS!), and whitelist the safe stuff
 /*
+node_modules
 !.gitattributes
 !.gitignore
 !/plugins
