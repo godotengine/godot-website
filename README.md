@@ -36,3 +36,8 @@ Theme and plugins used in Godot Engine's OctoberCMS instance
 - Run `yarn deploy`.
 
 This will copy all the compiled assets from the `./godotengine/assets/packed` directory to the corresponding directory on live. It'll also make sure that group permissions are still set to write for the copied assets. Make sure you've thoroughly tested your changes on your local copy before running this. 
+
+## Resources
+
+- Join on freenode: #godotengine-atelier
+- When workingon the theme, take note of the [website stats](https://stats.tuxfamily.org/godotengine.org)
