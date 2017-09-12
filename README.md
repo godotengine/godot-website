@@ -40,4 +40,4 @@ This will copy all the compiled assets from the `./godotengine/assets/packed` di
 ## Resources
 
 - Join on freenode: #godotengine-atelier
-- When workingon the theme, take note of the [website stats](https://stats.tuxfamily.org/godotengine.org)
+- When working on the theme, take note of the [website stats](https://stats.tuxfamily.org/godotengine.org)
