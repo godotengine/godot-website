@@ -93,6 +93,8 @@ return [
         'posts_category' => 'Strona kategorii',
         'posts_category_description' => 'Nazwa strony kategorii w wyświetlaniu linków "Posted into" [Opublikowano w]. Ten parametr jest domyślnie używany przez komponent.',
         'posts_post' => 'Strona postu',
-        'posts_post_description' => 'Nazwa strony postu dla linków "Learn more" [Czytaj więcej]. Ten parametr jest domyślnie używany przez komponent.'
+        'posts_post_description' => 'Nazwa strony postu dla linków "Learn more" [Czytaj więcej]. Ten parametr jest domyślnie używany przez komponent.',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
     ]
 ];

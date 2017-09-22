@@ -93,6 +93,8 @@ return [
         'posts_category' => 'страница на категориите',
         'posts_category_description' => 'Име на страницата за категории , за "публикувано в". Това се използва подразбиране от компонента.',
         'posts_post' => 'Post page',
-        'posts_post_description' => 'Име на страницата за публикации "Прочетете повече". Това се използва подразбиране от компонента.'
+        'posts_post_description' => 'Име на страницата за публикации "Прочетете повече". Това се използва подразбиране от компонента.',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
     ]
 ];

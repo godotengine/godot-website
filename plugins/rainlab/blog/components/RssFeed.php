@@ -50,6 +50,12 @@ class RssFeed extends ComponentBase
                 'type'        => 'string',
                 'default'     => ''
             ],
+            'sortOrder' => [
+                'title'       => 'rainlab.blog::lang.settings.posts_order',
+                'description' => 'rainlab.blog::lang.settings.posts_order_description',
+                'type'        => 'dropdown',
+                'default'     => 'created_at desc',
+            ],
             'postsPerPage' => [
                 'title'             => 'rainlab.blog::lang.settings.posts_per_page',
                 'type'              => 'string',
@@ -82,6 +88,11 @@ class RssFeed extends ComponentBase
     public function getPostPageOptions()
     {
         return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
+    }
+
+    public function getSortOrderOptions()
+    {
+        return BlogPost::$allowedSortingOptions;
     }
 
     public function onRun()

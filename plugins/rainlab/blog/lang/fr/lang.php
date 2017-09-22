@@ -17,6 +17,7 @@ return [
         'access_categories' => 'Gérer les catégories',
         'access_other_posts' => 'Gérer les articles d’autres utilisateurs',
         'access_import_export' => 'Autorisé à importer et exporter des articles',
+        'access_publish' => 'Autorisé à publier des articles',
         'delete_confirm' => 'Confirmez-vous la suppression des articles sélectionnés ?',
         'chart_published' => 'Publié',
         'chart_drafts' => 'Brouillons',
@@ -26,7 +27,10 @@ return [
         'list_title' => 'Gérer les articles du blog',
         'filter_category' => 'Catégorie',
         'filter_published' => 'Masquer la publication',
-        'new_post' => 'Nouvel article'
+        'filter_date' => 'Date',
+        'new_post' => 'Nouvel article',
+        'export_post' => 'Exporter les articles',
+        'import_post' => 'Importer des articles'
     ],
     'post' => [
         'title' => 'Titre',
@@ -65,12 +69,17 @@ return [
     'category' => [
         'name' => 'Nom',
         'name_placeholder' => 'Nom de la nouvelle catégorie',
+        'description' => 'Description',
         'slug' => 'Adresse URL',
         'slug_placeholder' => 'adresse-de-la-nouvelle-catégorie',
         'posts' => 'Articles',
         'delete_confirm' => 'Confirmez-vous la suppression de cette catégorie ?',
         'return_to_categories' => 'Retour à la liste des catégories',
         'reorder' => 'Réorganiser les catégories'
+    ],
+    'menuitem' => [
+        'blog_category' => 'Catégories du blog',
+        'all_blog_categories' => 'Toutes les catégories du blog'
     ],
     'settings' => [
         'category_title' => 'Liste des catégories',
@@ -99,9 +108,15 @@ return [
         'posts_no_posts_description' => 'Message à afficher dans la liste d’articles lorsqu’il n’y a aucun article. Cette propriété est utilisée par le partial par défaut du composant.',
         'posts_order' => 'Ordre des articles',
         'posts_order_description' => 'Attribut selon lequel les articles seront ordonnés',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
         'posts_category' => 'Page des catégories',
         'posts_category_description' => 'Nom de la page des catégories pour les liens de catégories "Publié dans". Cette propriété est utilisée par le partial par défaut du composant.',
         'posts_post' => 'Page d’article',
-        'posts_post_description' => 'Nom de la page d’articles pour les liens "En savoir plus". Cette propriété est utilisée par le partial par défaut du composant.'
+        'posts_post_description' => 'Nom de la page d’articles pour les liens "En savoir plus". Cette propriété est utilisée par le partial par défaut du composant.',
+        'rssfeed_blog' => 'Page du blog',
+        'rssfeed_blog_description' => 'Nom de la page principale du blog pour générer les liens. Cette propriété est utilisé par le composant dans le partial.',
+        'rssfeed_title' => 'Flux RSS',
+        'rssfeed_description' => 'Génère un Flux RSS contenant les articles du blog.'
     ]
 ];

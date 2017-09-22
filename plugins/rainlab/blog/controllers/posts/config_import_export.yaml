@@ -4,7 +4,7 @@
 
 import:
     # Page title
-    title: Import posts
+    title: rainlab.blog::lang.posts.import_post
 
     # Import List Column configuration
     list: $/rainlab/blog/models/postimport/columns.yaml
@@ -23,7 +23,7 @@ import:
 
 export:
     # Page title
-    title: Export posts
+    title: rainlab.blog::lang.posts.export_post
 
     # Output file name
     fileName: posts.csv

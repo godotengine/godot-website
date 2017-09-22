@@ -3,6 +3,7 @@
 use Backend\Models\ImportModel;
 use Backend\Models\User as AuthorModel;
 use ApplicationException;
+use Exception;
 
 /**
  * Post Import Model
@@ -15,8 +16,8 @@ class PostImport extends ImportModel
      * Validation rules
      */
     public $rules = [
-        'title' => 'required',
-        'content' => 'required',
+        'title'   => 'required',
+        'content' => 'required'
     ];
 
     protected $authorEmailCache = [];
@@ -139,7 +140,9 @@ class PostImport extends ImportModel
             $categoryNames = $this->decodeArrayValue(array_get($data, 'categories'));
 
             foreach ($categoryNames as $name) {
-                if (!$name = trim($name)) continue;
+                if (!$name = trim($name)) {
+                    continue;
+                }
 
                 if (isset($this->categoryNameCache[$name])) {
                     $ids[] = $this->categoryNameCache[$name];
@@ -156,5 +159,4 @@ class PostImport extends ImportModel
 
         return $ids;
     }
-
 }

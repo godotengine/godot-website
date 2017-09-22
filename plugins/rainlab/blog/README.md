@@ -20,6 +20,22 @@ You can also add classes or ids to images by using the [markdown extra](http://m
 
     ![1](image){#id .class}
 
+## Excerpt Vs. Read more
+
+Posts are managed by selecting *Blog > Posts* from the menu. Each post can contain an excerpt by entering some text in this field on the *Manage* tab. This content is displayed on the page using the `summary` attribute of the blog post.
+
+    {{ post.summary|raw }}
+
+Alternatively this field can be left blank and the excerpt can be captured from the main content (*Edit* tab). Use the special tag `<!-- more -->` to specify a summary from the main content, all content above this tag will be treated as the summary. For example:
+
+    This is a great introduction to a great blog post. This text is included as part of the excerpt / summary.
+
+    <!-- more -->
+
+    Let's dive in to more detail about why this post is so great. This text will not be included in the summary.
+
+Finally, if no excerpt is specified and the "more" tag is not used, the blog post will capture the first 600 characters of the content and use this for the summary.
+
 ## Implementing front-end pages
 
 The plugin provides several components for building the post list page (archive), category page, post details page and category list for the sidebar.
@@ -35,6 +51,7 @@ Use the `blogPosts` component to display a list of latest blog posts on a page. 
 * **sortOrder** - the column name and direction used for the sort order of the posts. The default value is **published_at desc**.
 * **categoryPage** - path to the category page. The default value is **blog/category** - it matches the pages/blog/category.htm file in the theme directory. This property is used in the default component partial for creating links to the blog categories.
 * **postPage** - path to the post details page. The default value is **blog/post** - it matches the pages/blog/post.htm file in the theme directory. This property is used in the default component partial for creating links to the blog posts.
+* **exceptPost** - ignore a single post by its slug or unique ID. The ignored post will not be included in the list, useful for showing other/related posts.
 
 The blogPosts component injects the following variables to the page where it's used:
 
@@ -165,7 +182,7 @@ The component can be used on any page, it will hijack the entire page cycle to d
     ==
     <!-- This markup will never be displayed -->
 
-## Using markdown
+## Markdown guide
 
 October supports [standard markdown syntax](http://daringfireball.net/projects/markdown/) as well as [extended markdown syntax](http://michelf.ca/projects/php-markdown/extra/)
 

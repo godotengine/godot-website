@@ -1,30 +1,27 @@
 {% set post = __SELF__.post %}
-<div class="col-md-3 text-center">
-  <span class="date-big">{{ post.published_at|date('d') }}</span><br/>
-  <span class="date-small">{{ post.published_at|date('M Y') }}</span>
-  <br/><br/>
-  <p><img src="{{ post.user.avatar.path }}" width="100px"/>
-  <br/>{{ post.user.full_name }}</p>
-</div>
-<div class="col-md-6">
-  <h1>{{ post.title }}</h1>
-  {% if post.featured_images.count %}
-      <div class="featured-images text-center">
-          {% for image in post.featured_images %}
-              <p>
-                  <img
-                      data-src="{{ image.filename }}"
-                      src="{{ image.path }}"
-                      alt="{{ image.description }}"
-                      style="width:100%" />
-              </p>
-          {% endfor %}
-          </div>
 
-  {% endif %}
-  {{ post.content_html|raw }}
-    
-</div>
-</div>
+<div class="content">{{ post.content_html|raw }}</div>
 
-<div class="col-md-3">&nbsp;</div>
+{% if post.featured_images.count %}
+    <div class="featured-images text-center">
+        {% for image in post.featured_images %}
+            <p>
+                <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+            </p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<p class="info">
+    Posted
+    {% if post.categories.count %} in
+        {% for category in post.categories %}
+            <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+    on {{ post.published_at|date('M d, Y') }}
+</p>

@@ -17,6 +17,7 @@ return [
         'access_categories' => 'Manage the blog categories',
         'access_other_posts' => 'Manage other users blog posts',
         'access_import_export' => 'Allowed to import and export posts',
+        'access_publish' => 'Allowed to publish posts',
         'delete_confirm' => 'Are you sure?',
         'chart_published' => 'Published',
         'chart_drafts' => 'Drafts',
@@ -26,7 +27,10 @@ return [
         'list_title' => 'Manage the blog posts',
         'filter_category' => 'Category',
         'filter_published' => 'Published',
-        'new_post' => 'New post'
+        'filter_date' => 'Date',
+        'new_post' => 'New post',
+        'export_post' => 'Export posts',
+        'import_post' => 'Import posts'
     ],
     'post' => [
         'title' => 'Title',
@@ -53,7 +57,7 @@ return [
         'excerpt' => 'Excerpt',
         'summary' => 'Summary',
         'featured_images' => 'Featured Images',
-        'delete_confirm' => 'Do you really want to delete this post?',
+        'delete_confirm' => 'Delete this post?',
         'close_confirm' => 'The post is not saved.',
         'return_to_posts' => 'Return to posts list'
     ],
@@ -65,12 +69,19 @@ return [
     'category' => [
         'name' => 'Name',
         'name_placeholder' => 'New category name',
+        'description' => 'Description',
         'slug' => 'Slug',
         'slug_placeholder' => 'new-category-slug',
         'posts' => 'Posts',
-        'delete_confirm' => 'Do you really want to delete this category?',
+        'delete_confirm' => 'Delete this category?',
         'return_to_categories' => 'Return to the blog category list',
         'reorder' => 'Reorder Categories'
+    ],
+    'menuitem' => [
+        'blog_category' => 'Blog category',
+        'all_blog_categories' => 'All blog categories',
+        'blog_post' => 'Blog post',
+        'all_blog_posts' => 'All blog posts'
     ],
     'settings' => [
         'category_title' => 'Category List',
@@ -103,9 +114,11 @@ return [
         'posts_category_description' => 'Name of the category page file for the "Posted into" category links. This property is used by the default component partial.',
         'posts_post' => 'Post page',
         'posts_post_description' => 'Name of the blog post page file for the "Learn more" links. This property is used by the default component partial.',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
         'rssfeed_blog' => 'Blog page',
         'rssfeed_blog_description' => 'Name of the main blog page file for generating links. This property is used by the default component partial.',
         'rssfeed_title' => 'RSS Feed',
-        'rssfeed_description' => 'Generates an RSS feed containing posts from the blog.',
+        'rssfeed_description' => 'Generates an RSS feed containing posts from the blog.'
     ]
 ];

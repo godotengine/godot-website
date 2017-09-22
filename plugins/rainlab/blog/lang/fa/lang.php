@@ -69,7 +69,8 @@ return [
         'slug_placeholder' => 'آدرس-جدید-دسته-بندی',
         'posts' => 'پست ها',
         'delete_confirm' => 'آیا از حذف این دسته بندی اطمینان دارید؟',
-        'return_to_categories' => 'بازگشت به لیست دسته بندی های وبلاگ'
+        'return_to_categories' => 'بازگشت به لیست دسته بندی های وبلاگ',
+        'reorder' => 'مرتب سازی دسته بندی ها'
     ],
     'settings' => [
         'category_title' => 'لیست دسته بندی',
@@ -101,6 +102,8 @@ return [
         'posts_category' => 'صفحه دسته بندی',
         'posts_category_description' => 'نام صفحه دسته بندی برای نمایش پستهای مربوط به آن.',
         'posts_post' => 'صفحه پست',
-        'posts_post_description' => 'نام صفحه مربوط به نمایش کامل پست ها جهت لینک ادامه مطلب'
+        'posts_post_description' => 'نام صفحه مربوط به نمایش کامل پست ها جهت لینک ادامه مطلب',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
     ]
 ];

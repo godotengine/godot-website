@@ -34,3 +34,10 @@
 1.2.7: Introduced a new RSS feed component.
 1.2.8: Fixes issue with translated `content_html` attribute on blog posts.
 1.2.9: Added translation support for blog categories.
+1.2.10: Added translation support for post slugs.
+1.2.11: Fixes bug where excerpt is not translated.
+1.2.12: Description field added to category form.
+1.2.13: Improved support for Static Pages menus, added a blog post and all blog posts.
+1.2.14: Added post exception property to the post list component, useful for showing related posts.
+1.2.15: Back-end navigation sort order updated.
+1.2.16: Added `nextPost` and `previousPost` to the blog post component.

@@ -14,3 +14,10 @@ fields:
         span: right
         placeholder: rainlab.blog::lang.category.slug_placeholder
         preset: name
+
+    description:
+        label: 'rainlab.blog::lang.category.description'
+        size: large
+        oc.commentPosition: ''
+        span: full
+        type: textarea

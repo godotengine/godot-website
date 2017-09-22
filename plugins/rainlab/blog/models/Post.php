@@ -1,16 +1,20 @@
 <?php namespace RainLab\Blog\Models;
 
+use Db;
+use Url;
 use App;
 use Str;
 use Html;
 use Lang;
 use Model;
 use Markdown;
+use BackendAuth;
 use ValidationException;
 use RainLab\Blog\Classes\TagProcessor;
 use Backend\Models\User;
 use Carbon\Carbon;
-use DB;
+use Cms\Classes\Page as CmsPage;
+use Cms\Classes\Theme;
 
 class Post extends Model
 {
@@ -36,7 +40,8 @@ class Post extends Model
         'title',
         'content',
         'content_html',
-        'excerpt'
+        'excerpt',
+        ['slug', 'index' => true]
     ];
 
     /**
@@ -49,7 +54,7 @@ class Post extends Model
      * The attributes on which the post list can be ordered
      * @var array
      */
-    public static $allowedSortingOptions = array(
+    public static $allowedSortingOptions = [
         'title asc' => 'Title (ascending)',
         'title desc' => 'Title (descending)',
         'created_at asc' => 'Created (ascending)',
@@ -59,7 +64,7 @@ class Post extends Model
         'published_at asc' => 'Published (ascending)',
         'published_at desc' => 'Published (descending)',
         'random' => 'Random'
-    );
+    ];
 
     /*
      * Relations
@@ -88,6 +93,28 @@ class Post extends Model
 
     public $preview = null;
 
+    /**
+     * Limit visibility of the published-button
+     * @return void
+     */
+    public function filterFields($fields, $context = null)
+    {
+        if (!isset($fields->published, $fields->published_at)) {
+            return;
+        }
+
+        $user = BackendAuth::getUser();
+
+        if (!$user->hasAnyAccess(['rainlab.blog.access_publish'])) {
+            $fields->published->hidden = true;
+            $fields->published_at->hidden = true;
+        }
+        else {
+            $fields->published->hidden = false;
+            $fields->published_at->hidden = false;
+        }
+    }
+
     public function afterValidate()
     {
         if ($this->published && !$this->published_at) {
@@ -110,12 +137,19 @@ class Post extends Model
     public function setUrl($pageName, $controller)
     {
         $params = [
-            'id' => $this->id,
+            'id'   => $this->id,
             'slug' => $this->slug,
         ];
 
         if (array_key_exists('categories', $this->getRelations())) {
             $params['category'] = $this->categories->count() ? $this->categories->first()->slug : null;
+        }
+
+        //expose published year, month and day as URL parameters
+        if ($this->published) {
+            $params['year'] = $this->published_at->format('Y');
+            $params['month'] = $this->published_at->format('m');
+            $params['day'] = $this->published_at->format('d');
         }
 
         return $this->url = $controller->pageUrl($pageName, $params);
@@ -176,13 +210,26 @@ class Post extends Model
             'categories' => null,
             'category'   => null,
             'search'     => '',
-            'published'  => true
+            'published'  => true,
+            'exceptPost' => null,
         ], $options));
 
         $searchableFields = ['title', 'slug', 'excerpt', 'content'];
 
         if ($published) {
             $query->isPublished();
+        }
+
+        /*
+         * Ignore a post
+         */
+        if ($exceptPost) {
+            if (is_numeric($exceptPost)) {
+                $query->where('id', '<>', $exceptPost);
+            }
+            else {
+                $query->where('slug', '<>', $exceptPost);
+            }
         }
 
         /*
@@ -201,7 +248,7 @@ class Post extends Model
                 }
                 list($sortField, $sortDirection) = $parts;
                 if ($sortField == 'random') {
-                    $sortField = DB::raw('RAND()');
+                    $sortField = Db::raw('RAND()');
                 }
                 $query->orderBy($sortField, $sortDirection);
             }
@@ -263,7 +310,13 @@ class Post extends Model
      */
     public function getHasSummaryAttribute()
     {
-        return strlen($this->getSummaryAttribute()) < strlen($this->content_html);
+        $more = '<!-- more -->';
+
+        return (
+            !!strlen(trim($this->excerpt)) ||
+            strpos($this->content_html, $more) !== false ||
+            strlen(Html::strip($this->content_html)) > 600
+        );
     }
 
     /**
@@ -275,7 +328,7 @@ class Post extends Model
      */
     public function getSummaryAttribute()
     {
-        $excerpt = array_get($this->attributes, 'excerpt');
+        $excerpt = $this->excerpt;
         if (strlen(trim($excerpt))) {
             return $excerpt;
         }
@@ -286,6 +339,200 @@ class Post extends Model
             return array_get($parts, 0);
         }
 
-        return Str::limit(Html::strip($this->content_html), 600);
+        return Html::limit($this->content_html, 600);
+    }
+
+    //
+    // Next / Previous
+    //
+
+    /**
+     * Returns the next post, if available.
+     * @return self
+     */
+    public function nextPost()
+    {
+        return self::isPublished()
+            ->where('id', '>' , $this->id)
+            ->orderBy('id', 'asc')
+            ->first()
+        ;
+    }
+
+    /**
+     * Returns the previous post, if available.
+     * @return self
+     */
+    public function previousPost()
+    {
+        return self::isPublished()
+            ->where('id', '<' , $this->id)
+            ->orderBy('id', 'desc')
+            ->first()
+        ;
+    }
+
+    //
+    // Menu helpers
+    //
+
+    /**
+     * Handler for the pages.menuitem.getTypeInfo event.
+     * Returns a menu item type information. The type information is returned as array
+     * with the following elements:
+     * - references - a list of the item type reference options. The options are returned in the
+     *   ["key"] => "title" format for options that don't have sub-options, and in the format
+     *   ["key"] => ["title"=>"Option title", "items"=>[...]] for options that have sub-options. Optional,
+     *   required only if the menu item type requires references.
+     * - nesting - Boolean value indicating whether the item type supports nested items. Optional,
+     *   false if omitted.
+     * - dynamicItems - Boolean value indicating whether the item type could generate new menu items.
+     *   Optional, false if omitted.
+     * - cmsPages - a list of CMS pages (objects of the Cms\Classes\Page class), if the item type requires a CMS page reference to
+     *   resolve the item URL.
+     * @param string $type Specifies the menu item type
+     * @return array Returns an array
+     */
+    public static function getMenuTypeInfo($type)
+    {
+        $result = [];
+
+        if ($type == 'blog-post') {
+
+            $references = [];
+            $posts = self::orderBy('title')->get();
+            foreach ($posts as $post) {
+                $references[$post->id] = $post->title;
+            }
+
+            $result = [
+                'references'   => $references,
+                'nesting'      => false,
+                'dynamicItems' => false
+            ];
+        }
+
+        if ($type == 'all-blog-posts') {
+            $result = [
+                'dynamicItems' => true
+            ];
+        }
+
+        if ($result) {
+            $theme = Theme::getActiveTheme();
+
+            $pages = CmsPage::listInTheme($theme, true);
+            $cmsPages = [];
+
+            foreach ($pages as $page) {
+                if (!$page->hasComponent('blogPost')) {
+                    continue;
+                }
+
+                /*
+                 * Component must use a categoryPage filter with a routing parameter and post slug
+                 * eg: categoryPage = "{{ :somevalue }}", slug = "{{ :somevalue }}"
+                 */
+                $properties = $page->getComponentProperties('blogPost');
+                if (!isset($properties['categoryPage']) || !preg_match('/{{\s*:/', $properties['slug'])) {
+                    continue;
+                }
+
+                $cmsPages[] = $page;
+            }
+
+            $result['cmsPages'] = $cmsPages;
+        }
+
+        return $result;
+    }
+
+    /**
+     * Handler for the pages.menuitem.resolveItem event.
+     * Returns information about a menu item. The result is an array
+     * with the following keys:
+     * - url - the menu item URL. Not required for menu item types that return all available records.
+     *   The URL should be returned relative to the website root and include the subdirectory, if any.
+     *   Use the Url::to() helper to generate the URLs.
+     * - isActive - determines whether the menu item is active. Not required for menu item types that
+     *   return all available records.
+     * - items - an array of arrays with the same keys (url, isActive, items) + the title key.
+     *   The items array should be added only if the $item's $nesting property value is TRUE.
+     * @param \RainLab\Pages\Classes\MenuItem $item Specifies the menu item.
+     * @param \Cms\Classes\Theme $theme Specifies the current theme.
+     * @param string $url Specifies the current page URL, normalized, in lower case
+     * The URL is specified relative to the website root, it includes the subdirectory name, if any.
+     * @return mixed Returns an array. Returns null if the item cannot be resolved.
+     */
+    public static function resolveMenuItem($item, $url, $theme)
+    {
+        $result = null;
+
+        if ($item->type == 'blog-post') {
+            if (!$item->reference || !$item->cmsPage)
+                return;
+
+            $category = self::find($item->reference);
+            if (!$category)
+                return;
+
+            $pageUrl = self::getPostPageUrl($item->cmsPage, $category, $theme);
+            if (!$pageUrl)
+                return;
+
+            $pageUrl = Url::to($pageUrl);
+
+            $result = [];
+            $result['url'] = $pageUrl;
+            $result['isActive'] = $pageUrl == $url;
+            $result['mtime'] = $category->updated_at;
+        }
+        elseif ($item->type == 'all-blog-posts') {
+            $result = [
+                'items' => []
+            ];
+
+            $posts = self::orderBy('title')->get();
+            foreach ($posts as $post) {
+                $postItem = [
+                    'title' => $post->title,
+                    'url'   => self::getPostPageUrl($item->cmsPage, $post, $theme),
+                    'mtime' => $post->updated_at,
+                ];
+
+                $postItem['isActive'] = $postItem['url'] == $url;
+
+                $result['items'][] = $postItem;
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * Returns URL of a post page.
+     */
+    protected static function getPostPageUrl($pageCode, $category, $theme)
+    {
+        $page = CmsPage::loadCached($theme, $pageCode);
+        if (!$page) return;
+
+        $properties = $page->getComponentProperties('blogPost');
+        if (!isset($properties['slug'])) {
+            return;
+        }
+
+        /*
+         * Extract the routing parameter name from the category filter
+         * eg: {{ :someRouteParam }}
+         */
+        if (!preg_match('/^\{\{([^\}]+)\}\}$/', $properties['slug'], $matches)) {
+            return;
+        }
+
+        $paramName = substr(trim($matches[1]), 1);
+        $url = CmsPage::url($page->getBaseFileName(), [$paramName => $category->slug]);
+
+        return $url;
     }
 }

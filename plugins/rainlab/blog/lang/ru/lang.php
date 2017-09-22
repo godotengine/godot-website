@@ -102,6 +102,8 @@ return [
         'posts_category' => 'Страница категорий',
         'posts_category_description' => 'Название категории на странице записи "размещена в категории". Это свойство используется по умолчанию компонентом.',
         'posts_post' => 'Страница записи',
-        'posts_post_description' => 'Название страницы для ссылки "подробнее". Это свойство используется по умолчанию компонентом.'
+        'posts_post_description' => 'Название страницы для ссылки "подробнее". Это свойство используется по умолчанию компонентом.',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
     ]
 ];

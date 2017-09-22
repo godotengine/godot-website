@@ -93,6 +93,8 @@ return [
         'posts_category' => 'カテゴリページ',
         'posts_category_description' => 'カテゴリリンクを生成するために、カテゴリページのファイル名を指定します。この項目はコンポーネントのデフォルトパーシャルで使用されます。',
         'posts_post' => '投稿ページ',
-        'posts_post_description' => '"Learn more"リンクを生成するため、投稿ページのファイル名を指定します。拡張子(.htm)は省いてください。この項目はコンポーネントのデフォルトパーシャルで使用されます。'
+        'posts_post_description' => '"Learn more"リンクを生成するため、投稿ページのファイル名を指定します。拡張子(.htm)は省いてください。この項目はコンポーネントのデフォルトパーシャルで使用されます。',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
     ]
 ];

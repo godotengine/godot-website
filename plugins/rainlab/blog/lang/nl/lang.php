@@ -101,6 +101,8 @@ return [
         'posts_category' => 'Categorie pagina',
         'posts_category_description' => 'Naam van categorie pagina bestand voor gekoppeld artikel overzichts pagina. Deze waarde wordt standaard gebruikt door de partial.',
         'posts_post' => 'Artikel pagina',
-        'posts_post_description' => 'Naam van blog pagina bestand voor de "Lees meer" links. Deze waarde wordt standaard gebruikt door de partial.'
+        'posts_post_description' => 'Naam van blog pagina bestand voor de "Lees meer" links. Deze waarde wordt standaard gebruikt door de partial.',
+        'posts_except_post' => 'Except post',
+        'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
     ]
 ];

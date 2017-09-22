@@ -54,13 +54,19 @@ class PostExport extends ExportModel
 
     public function getAuthorEmailAttribute()
     {
-        if (!$this->post_user) return '';
+        if (!$this->post_user) {
+            return '';
+        }
+
         return $this->post_user->email;
     }
 
     public function getCategoriesAttribute()
     {
-        if (!$this->post_categories) return '';
+        if (!$this->post_categories) {
+            return '';
+        }
+
         return $this->encodeArrayValue($this->post_categories->lists('name'));
     }
 }

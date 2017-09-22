@@ -68,11 +68,11 @@ class MLBlogMarkdown extends BlogMarkdown
         /*
          * Set the translated values to the model
          */
-        if ($this->model->methodExists('setTranslateAttribute')) {
+        if ($this->model->methodExists('setAttributeTranslated')) {
             foreach ($localeData as $locale => $value) {
-                $this->model->setTranslateAttribute('content', $value, $locale);
+                $this->model->setAttributeTranslated('content', $value, $locale);
 
-                $this->model->setTranslateAttribute(
+                $this->model->setAttributeTranslated(
                     'content_html',
                     Post::formatHtml($value),
                     $locale

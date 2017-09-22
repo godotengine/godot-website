@@ -25,12 +25,12 @@
             <a
                 href="<?= Backend::url('rainlab/blog/posts/export') ?>"
                 class="btn btn-default oc-icon-download">
-                Export posts
+                <?= e(trans('rainlab.blog::lang.posts.export_post')) ?>
             </a>
             <a
                 href="<?= Backend::url('rainlab/blog/posts/import') ?>"
                 class="btn btn-default oc-icon-upload">
-                Import posts
+                <?= e(trans('rainlab.blog::lang.posts.import_post')) ?>
             </a>
         </div>
     <?php endif ?>
