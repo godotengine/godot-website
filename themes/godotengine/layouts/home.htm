@@ -35,7 +35,7 @@ postPage = "{{ :slug }}"
       <h2>Latest news</h2>
       {% for post in posts %}
         <article class="news">
-          <div class="news-date"> {{ post.updated_at|date("M d, Y") }} </div>
+          <div class="news-date"> {{ post.published_at|date("M d, Y") }} </div>
           <div class="news-title">
             <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
           </div>
