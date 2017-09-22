@@ -13,6 +13,7 @@ postPage = "{{ :slug }}"
 <html>
 {% partial "head" %}
 {% partial "header" %}
+{% set posts = blogPosts.posts %}
 <div class="jumbotron-filter"></div>
 <div class="jumbotron">
   <div class="container">
@@ -32,7 +33,14 @@ postPage = "{{ :slug }}"
     </div>
     <div class="col-md-6 news-list">
       <h2>Latest news</h2>
-        {% component 'blogPosts' %}
+      {% for post in posts %}
+        <article class="news">
+          <div class="news-date"> {{ post.updated_at|date("M d, Y") }} </div>
+          <div class="news-title">
+            <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
+          </div>
+        </article>
+      {% endfor %}
       <a class="more-news" href="/news">More news »</a>
     </div>
   </div>

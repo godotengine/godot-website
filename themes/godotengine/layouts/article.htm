@@ -11,8 +11,33 @@ categoryPage = "article"
 <div class="container">
   <h1 class="intro-title"></h1>
   <div class="row news-section">
-      {% component 'blogPost' %}
-  </div>
+    <div class="col-md-3 text-center">
+  <span class="date-big">{{ post.published_at|date('d') }}</span><br/>
+  <span class="date-small">{{ post.published_at|date('M Y') }}</span>
+  <br/><br/>
+  <p><img src="{{ post.user.avatar.path }}" width="100px"/>
+  <br/>{{ post.user.full_name }}</p>
+</div>
+<div class="col-md-6">
+  <h1>{{ post.title }}</h1>
+  {% if post.featured_images.count %}
+      <div class="featured-images text-center">
+          {% for image in post.featured_images %}
+              <p>
+                  <img
+                      data-src="{{ image.filename }}"
+                      src="{{ image.path }}"
+                      alt="{{ image.description }}"
+                      style="width:100%" />
+              </p>
+          {% endfor %}
+          </div>
+  {% endif %}
+  {{ post.content_html|raw }}
+</div>
+</div>
+<div class="col-md-3">&nbsp;</div>
+</div>
 
 </div>
 {% partial "footer" %}
