@@ -14,7 +14,7 @@ categoryPage = "blog/category"
   {% elseif this.page.id == 'article' %}
       {% set post = blogPost.post %}
       <title>Godot Engine - {{ post.title }}</title>
-      <meta property="og:image" content="https://godotengine.org{{ post.featured_images[0].path }}" />
+      <meta property="og:image" content="{{ post.featured_images[0].path }}" />
   {% elseif this.page.id == 'showcase' %}
       <title>Godot Engine - {{ this.page.title }}</title>
       <meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/576/ff8/07a/thumb_71_400x1_0_0_auto.jpg" />
