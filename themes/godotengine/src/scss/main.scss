@@ -313,9 +313,9 @@ nav a {
 
 .logoHeader {
   height: 100%;
+  margin-right: 10%;
   a {
-    margin-right: 45%;
-    padding: 0;
+    padding: 0 0 0 .4rem;
   }
 }
 
@@ -414,9 +414,11 @@ nav ul ul li a {
   }
   .logoHeader {
     display: flex;
+    align-items: center;
     justify-content: space-between; 
     width: 100%;
     height: auto;
+    margin-right: 0;
   }
   .logoHeader a {
     margin-right: 0%;
