@@ -12,13 +12,18 @@ categoryPage = "blog/category"
   {% if this.page.id == 'home' %}
     <title>Godot Engine - Free and open source 2D and 3D game engine</title>
   {% elseif this.page.id == 'article' %}
-      {% set post = blogPost.post %}
-      <title>Godot Engine - {{ post.title }}</title>
-      <meta property="og:image" content="{{ post.featured_images[0].path }}" />
+    {% set post = blogPost.post %}
+    <title>Godot Engine - {{ post.title }}</title>
+    <meta property="og:image" content="{{ post.featured_images[0].path }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@godotengine" />
+    <meta name="twitter:title" content="{{ post.title }}" />
+    <meta name="twitter:description" content="{{ post.summary }}" />
+    <meta name="twitter:image" content="{{ post.featured_images[0].path }}" />
   {% elseif this.page.id == 'showcase' %}
-      <title>Godot Engine - {{ this.page.title }}</title>
-      <meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/576/ff8/07a/thumb_71_400x1_0_0_auto.jpg" />
-      <meta property="og:description" content="Showcase of games developed and published using Godot, the feature-packed 2D and 3D open source game engine." />
+    <title>Godot Engine - {{ this.page.title }}</title>
+    <meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/576/ff8/07a/thumb_71_400x1_0_0_auto.jpg" />
+    <meta property="og:description" content="Showcase of games developed and published using Godot, the feature-packed 2D and 3D open source game engine." />
   {% else %}
     <title>Godot Engine - {{ this.page.title }}</title>
     <meta property="og:image" content="https://godotengine.org/themes/godotengine/assets/home/2d.jpg" />
