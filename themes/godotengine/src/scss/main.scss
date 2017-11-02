@@ -18,6 +18,35 @@ a.patreonLink {
   margin-right: 2em;
 }
 
+.flex-center-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+a.slink {
+  border-radius: 1.25em;
+  text-align: center;
+  display: block;
+  width: 10em;
+  height: 2.5em;
+  overflow: hidden;
+  margin: 0 2em;
+  background-color: #c3c3c3;
+  margin-bottom: 1em;
+  div {
+    width: 100%;
+    height: 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s;
+  }
+}
+
+a.slink:hover {
+  background-color: #6ca4cc;
+}
+
 .jumbotron {
   background-image: url("../home/background.jpg");
   background-size: cover;

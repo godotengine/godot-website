@@ -147,11 +147,17 @@ postPage = "{{ :slug }}"
 </div>
 <div class="container"> 
   <h2> Gold Sponsors </h2>
-  <a href="https://www.gamblify.com/"><img src="{{ 'assets/home/sponsors/gamblify.png'|theme }}"></a>
+  <div class="flex-center-wrap">
+    <a class="slink" href="https://www.gamblify.com/">
+      <div class="gamblify-background"> </div>
+    </a>
+    <a class="slink" href="http://gamedev.tv/">
+      <div class="gamedev-background"> </div>
+    </a>
+  </div>
   <div class="flex-center">
     <a class="button button-success" href="/donate"><i class=""></i> Support us! </a>
   </div>
-
 </div>
 {% partial "footer" %}
 </html>
