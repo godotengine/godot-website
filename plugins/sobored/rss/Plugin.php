@@ -12,6 +12,10 @@ use SoBoRed\Rss\Models\Settings;
 
 class Plugin extends PluginBase
 {
+    /**
+     * @var array Plugin dependencies
+     */
+    public $require = ['RainLab.Blog'];
 
     public function pluginDetails()
     {
@@ -80,7 +84,7 @@ class Plugin extends PluginBase
             $description = Markdown::parse(trim($description));
 
             $fileContents .= "\t\t<item>\n" .
-                             "\t\t\t<title>" . $post->title . "</title>\n" .
+                             "\t\t\t<title>" . htmlspecialchars($post->title, ENT_QUOTES, 'UTF-8') . "</title>\n" .
                              "\t\t\t<link>" . Settings::get('link') . Settings::get('postPage') . "/" . $post->slug . "</link>\n" .
                              "\t\t\t<guid>" . Settings::get('link') . Settings::get('postPage') . "/" . $post->slug . "</guid>\n" .
                              "\t\t\t<pubDate>" . $published->format(DateTime::RFC2822) . "</pubDate>\n" .

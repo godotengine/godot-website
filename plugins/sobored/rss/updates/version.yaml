@@ -12,3 +12,4 @@
     - Changed having to where to help database type compatibility
     - Updated the output to parse markdown
 1.0.9: Update to work with new RC version of October.
+1.1.0: Properly escape post title
