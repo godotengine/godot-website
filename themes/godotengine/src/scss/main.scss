@@ -75,7 +75,7 @@ a.slink:hover {
   .jumbotron .button {
     display: block;
   }
-  
+
   .jumbotron h1 {
     font-size: 33px;
     line-height: 45px;
@@ -422,7 +422,7 @@ nav ul ul li a {
     margin-top: 1em;
   }
   #nav_more {
-       display:none;   
+       display:none;
   }
   nav .pull-right {
     display: none;
@@ -446,7 +446,7 @@ nav ul ul li a {
   .logoHeader {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 100%;
     height: auto;
     margin-right: 0;
@@ -466,7 +466,7 @@ nav ul ul li a {
     width: 100%;
     border-top: 1px solid rgb(219, 219, 219);
     border-bottom: 1px solid rgb(219, 219, 219);
-  } 
+  }
   nav ul li:nth-child(7) ul:before{
     content: "MORE:";
     width: 100px;
@@ -541,7 +541,7 @@ nav ul ul li a {
   }
   nav ul ul li {
     width: 100%;
-  } 
+  }
   a.patreonLink {
     padding: 1em;
     float: left;
@@ -553,7 +553,7 @@ nav ul ul li a {
     background-color: #e3e4e5;
     padding: 0.125rem 0.375rem 0.375rem 0.375rem;
     height: 2rem;
-    
+
   }
   .donate:hover {
     background-color: #e3d58e;
@@ -739,8 +739,8 @@ footer h4 {
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   background-color: #f2f2f2;
   color: #333;
 }
@@ -909,7 +909,7 @@ img.full {
 
 .call-to-action p {
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 24px;
   text-align: center;
 }
