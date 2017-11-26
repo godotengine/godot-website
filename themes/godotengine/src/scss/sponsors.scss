@@ -1,6 +1,7 @@
 $sponsors: (
   gamblify: '/themes/godotengine/assets/home/sponsors/gamblify.png', 
-  gamedev:  '/themes/godotengine/assets/home/sponsors/gamedev.png'
+  gamedev:  '/themes/godotengine/assets/home/sponsors/gamedev.png',
+  enjin:  '/themes/godotengine/assets/home/sponsors/enjin.png'
 );
 
 @each $sponsor, $path in $sponsors {
