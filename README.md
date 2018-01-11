@@ -15,8 +15,12 @@ Theme and plugins used in Godot Engine's OctoberCMS instance
 - Download and install [OctoberCMS](http://octobercms.com/). Note: PHP has a builtin dev server. Example: `php -S localhost:8080` will host a server in the current directory 
 - If you have trouble with the installer, try to clone the repos instead. a `composer install` and then editing `config/database.php` with your database credentials should get it up and running.
 - Once installed, clone this repos into your OctoberCMS directory (you'll have to clone into an empty directory and then move it into the october directory).
-- You may have some errors at this point, they are most likely due to some plugins (we're still working on the best way to set up a local environment that is suitable for testing). 
-
+- Reassign the `active_theme` variable in `config/cms.php` to `godotengine`. 
+- You may have some errors at this point, they are most likely due to plugins. If an error is thrown it should tell you the plugin. Replace `authorname` and `pluginname` with the plugin you wish to run the command on.
+  - Try installing the new plugin like so: `php artisan plugin:install authorname.pluginname`
+  - Or refreshing the plugin like so: `php artisan plugin:refresh authorname.pluginname` (Fair warning, this'll erase all the db entries)
+  - Two plugins which might need these commands run on them are `RainLab.Blog` and `PaulVonZimmerman.Patreon`
+  
 ### Setting up the theme
 
 - Login into the October backend and change the frontend theme from the settings tab.
