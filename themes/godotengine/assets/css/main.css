@@ -513,11 +513,12 @@ pre {
   article .content {
     width: 100%;
   }
-}
-@media (max-width: 900px) {
 
   header {
     height: auto;
+  }
+  header > div {
+    flex-direction: column;
   }
 
   #logo-link {
@@ -558,14 +559,19 @@ pre {
     height: 64px !important;
     margin-left: 0px !important;
     margin-top: 16px;
-    width: 100%;
   }
   a.patreonLink > .patreon {
     height: inherit;
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+@media (max-width: 900px) {
+
+  a.patreonLink, a.patreonLink > .patreon {
     width: 100%;
   }
+
   #asset_lib::after {
     content: "asset lib";
   }
