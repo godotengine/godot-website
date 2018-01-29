@@ -1,7 +1,7 @@
 description = "Download layout"
 ==
 <?php
-  function onInit() { 
+  function onInit() {
     $this["stable_version"] = "2.1.4";
   }
 ?>
@@ -37,7 +37,7 @@ description = "Download layout"
   .btn.split > :first-child {
     background-color: var(--dark-color);
   }
-  .btn.split > :last-child {
+  .btn.split > :nth-child(2n) {
     background-color: transparent;
     color: var(--dark-color);
   }

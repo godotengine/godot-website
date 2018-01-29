@@ -7,7 +7,19 @@ is_hidden = 0
 <?php
 function onStart()
 {
-	return Redirect::to('/download/linux');
+	use Jenssegers\Agent\Agent;
+
+	$agent = new Agent();
+	$current_os = 'linux';
+	if ($agent->is('Windows')) {
+		$current_os = 'windows';
+	} else if ($agent->is('OS X')) {
+		$current_os = 'osx';
+	}
+	$current_os = 'linux';
+
+
+	return Redirect::to('/download/' . $current_os);
 }
 ?>
 ==
