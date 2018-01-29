@@ -87,6 +87,12 @@ description = "Download layout"
     margin-bottom: 0px;
   }
 
+  .subheader {
+    margin-top: 32px;
+  }
+
+
+
 </style>
 
 
@@ -121,6 +127,9 @@ description = "Download layout"
         <div class="base-padding">
           <h4> Downloads </h4>
           {% placeholder downloads %}
+
+          <h4 class="subheader">Mono version (C# support)</h4>
+          {% placeholder mono_downloads %}
         </div>
 
         
@@ -130,6 +139,7 @@ description = "Download layout"
           <h4> Requirements (version 3.0) </h4>
           <ul>
             <li>OpenGL ES 3.0 compatible hardware</li>
+            <li><b>For the Mono version</b>, Mono SDK 5.4+</li>
           </ul>
         </div>
 
