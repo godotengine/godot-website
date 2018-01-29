@@ -1,0 +1,6 @@
+plugin:
+    name: 'pikanji.agent::plugin.name'
+    description: 'pikanji.agent::plugin.description'
+    author: 'pikanji.agent::plugin.author'
+    homepage: 'https://coderwall.com/pikanji'
+
