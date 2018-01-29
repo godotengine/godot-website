@@ -8,8 +8,6 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "home"
 postPage = "{{ :slug }}"
-
-[Goal]
 ==
 <!DOCTYPE html>
 <html>
@@ -18,23 +16,6 @@ postPage = "{{ :slug }}"
 {% set posts = blogPosts.posts %}
 
 <style>
-  #main_image {
-    position: relative;
-  }
-  #main_image .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: relative;
-    height: 100%;
-    box-sizing: border-box;
-  }
-  .patreonLink {
-    border: 4px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .6), 0 0 2px rgba(0, 0, 0, .6);
-    text-decoration: none;
-  }
-
   #main_message {
     background-color: var(--dark-color);
     position: relative;
@@ -94,11 +75,7 @@ postPage = "{{ :slug }}"
   }
 </style>
 
-<div id="main_image">
-  <div class="container base-padding">
-    {% component 'Goal' %}
-  </div>
-</div>
+<div id="main_image"> </div>
 
 
 <section id="main_message" class="dark">

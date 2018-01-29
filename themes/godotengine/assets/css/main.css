@@ -215,6 +215,24 @@ nav > ul ul {
   display: none;
 }
 
+
+a.patreonLink {
+  text-decoration: none;
+  height: 64px !important;
+  margin-left: 16px !important;
+}
+a.patreonLink > .patreon {
+  height: inherit;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+a.patreonLink .patreon-brand {
+  background-size: 160px;
+}
+a.patreonLink .patreon-uppercase {
+  font-size: 12px;
+}
+
 ul {
   padding-left: 2rem;
 }
@@ -534,6 +552,19 @@ pre {
   nav ul a {
     width: 100%;
     display: block;
+  }
+  a.patreonLink {
+    text-decoration: none;
+    height: 64px !important;
+    margin-left: 0px !important;
+    margin-top: 16px;
+    width: 100%;
+  }
+  a.patreonLink > .patreon {
+    height: inherit;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
   }
   #asset_lib::after {
     content: "asset lib";

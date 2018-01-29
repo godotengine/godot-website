@@ -1,4 +1,6 @@
 description = "header partial"
+
+[Goal]
 ==
 {% styles %}
 <header>
@@ -25,6 +27,7 @@ description = "header partial"
         <li><a href="https://godotengine.org/asset-library/asset" id="asset_lib">
           <img src="{{ 'assets/asset_lib.svg' | theme }}" alt="">
         </a></li>
+        {% component 'Goal' %}
       </ul>
     </nav>
   </div>

@@ -56,7 +56,7 @@ description = "News layout"
     {% for post in posts %}
       <div class="news-item flex card responsive">
         <a class="image"
-           style="background: url('{{ post.featured_images[0].thumb(100, { extension: 'jpg' }) }}'); background-size: cover"
+           style="background: url('{{ post.featured_images[0].thumb(400, { extension: 'jpg' }) }}'); background-size: cover"
            href="{{ 'article'|page({ slug: post.slug }) }}">
         </a>
         <div class="content base-padding flex">
