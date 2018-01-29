@@ -8,164 +8,204 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "home"
 postPage = "{{ :slug }}"
+
+[Goal]
 ==
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
 {% partial "header" %}
 {% set posts = blogPosts.posts %}
-<div class="jumbotron-filter"></div>
-<div class="jumbotron">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h1 class="main-title">Godot is an advanced, feature-packed, multi-platform 2D and 3D open source game engine</h1>
-        <a class="button button-success" href="/download"><i class="fa fa-download"></i> Download | 2.1</a>
-        <a class="button button-info" href="/article/godot-reaches-2-1-stable">What's new?</a>
-      </div>
-    </div>
+
+<style>
+  #main_image {
+    position: relative;
+  }
+  #main_image .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .patreonLink {
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6), 0 0 2px rgba(0, 0, 0, .6);
+    text-decoration: none;
+  }
+
+  #main_message {
+    background-color: var(--dark-color);
+    position: relative;
+    z-index: 2;
+  }
+  #main_message .container {
+    overflow: initial;
+  }
+  .full-graphic {
+    padding-bottom: 0px;
+  }
+  .full-graphic > img {
+    height: 100%;
+  }
+
+  .feature {
+    margin-bottom: 42px;
+  }
+  .feature .dark {
+    background-color: var(--transparent-cover-darker);
+  }
+
+
+  #donations {
+    background-color: var(--dark-color);
+    color: var(--dark-color-text);
+    overflow: auto;
+    text-align: center;
+  }
+  #donations h1, #donations h2, #donations h3 {
+    color: var(--dark-color-text-title);
+  }
+  #sponsors {
+    background-color: #e3e6ec;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .2);
+  }
+  #sponsors .sponsor {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    margin-left: 8px;
+  }
+  #sponsors .platinum .sponsor {
+    height: 100px;
+  }
+  #sponsors img {
+    width: inherit;
+    height: 100%;
+  }
+  #sponsors .flex {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
+
+<div id="main_image">
+  <div class="container base-padding">
+    {% component 'Goal' %}
   </div>
 </div>
-<div class="container">
-  <div class="row highlights">
-    <div class="col-md-6 intro">
-        {% page %}
-    </div>
-    <div class="col-md-6 news-list">
-      <h2>Latest news</h2>
-      {% for post in posts %}
-        <article class="news">
-          <div class="news-date"> {{ post.published_at|date("M d, Y") }} </div>
-          <div class="news-title">
-            <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
-          </div>
-        </article>
-      {% endfor %}
-      <a class="more-news" href="/news">More news »</a>
-    </div>
-  </div>
-</div>
-<div class="container features">
-  <div class="row">
-    <div class="col-md-4 feature feature-design">
-        <div class="align-bottom">
-          <h3>Innovative design</h3>
-          <p>
-            Extremely efficient paradigm for designing games alone or in a team
-            using object-oriented scenes. <a href="/features#design">[+]</a>
-          </p>
-      </div>
-    </div>
-    <div class="col-md-4 feature feature-2d">
-      <div class="align-bottom">
-          <h3>Develop 2D games</h3>
-          <p>
-            Create any kind of complex 2D games with the fully dedicated 2D engine,
-            using pixels as your units. <a href="/features#2d-games">[+]</a>
-          </p>
-      </div>
-    </div>
-    <div class="col-md-4 feature feature-editor">
-     <div class="align-bottom">
-      <h3>Multi-platform editor</h3>
+
+
+<section id="main_message" class="dark">
+  <div class="container flex eqsize responsive">
+    <div class="padded">
+      <h2>The game engine you waited for.</h2>
       <p>
-        Create games using the Godot editor on Windows, OS X and Linux desktops.
-        <a href="/features#multiplatform-editor">[+]</a>
+        Godot provides a huge set of common tools, so you can just focus on making your game without reinventing the wheel.
       </p>
-    </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 feature feature-script">
-        <div class="align-bottom">
-      <h3>Script &amp; debug</h3>
+
       <p>
-        Add behaviors to objects with built-in scripting. Debug and edit games
-        while it is running on device. <a href="/features#script">[+]</a>
+        Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. Your game is yours, down to the last line of engine code.
       </p>
-      </div>
+
+      <a href="/download" class="btn download">
+        <div class="main">download </div>
+        <div class="opt">3.0</div>
+      </a>
     </div>
-    <div class="col-md-4 feature feature-3d">
-        <div class="align-bottom">
-      <h3>Develop 3D games</h3>
+    <div class="base-padding full-graphic text-right">
+      <img src=" {{ 'assets/home/graphic.svg' | theme }} " alt="">
+    </div>
+  </div>  
+</section>
+
+
+
+
+
+
+<section id="get_involved" class="container padded">
+  <h2> get involved </h2>
+  <p>
+    Join the community and help create a game engine that belongs to everybody.
+  </p>
+
+  <div class="flex eqsize responsive">
+    
+    <div class="text-center base-padding">
+      <img src="{{ 'assets/home/code.svg' | theme }}" alt="">
+      <h4>code</h4>
       <p>
-        Create realistic-looking 3D games with the dedicated 3D engine.
-        <a href="features#3d-games">[+]</a>
+        If you know how to code, and enjoy fun and challenging problems, you can help by fixing bugs, or create cool new features.
       </p>
-      </div>
+      <a href="http://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn flat" target="_blank"> learn more </a>
     </div>
-    <div class="col-md-4 feature feature-deploy">
-        <div class="align-bottom">
-      <h3>Multi-platform deploy</h3>
+
+    <div class="text-center base-padding">
+      <img src="{{ 'assets/home/document.svg' | theme }}" alt="">
+      <h4>document</h4>
       <p>
-        Deploy games to PC (Windows, OS X, Linux), mobile (Android, iOS) and
-        HTML5. <a href="/features#multiplatform-deploy">[+]</a>
+        Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
       </p>
-      </div>
+      <a href="http://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn flat" target="_blank"> learn more </a>
     </div>
-  </div>
-</div>
-<div class="container">
-  <h2>Get involved</h2>
-  <div class="row get-involved">
-    <div class="col-sm-4">
-      <div class="flex-center">
-        <img src="{{ 'assets/home/icons/open-source.svg'|theme }}" width="128">
-      </div>
-      <h3>Open source</h3>
+
+    <div class="text-center base-padding">
+      <img src="{{ 'assets/home/report.svg' | theme }}" alt="">
+      <h4>report</h4>
       <p>
-        Godot's full source code is provided to you under the very permissive
-        terms of the MIT License. No royalties or payments are required. Free as in Freedom.
+        Found some problem with the engine?, don't forget to report it, that way developers can track it down.
       </p>
-      <a class="button button-success" href="https://github.com/godotengine/godot">View on GitHub</a>
+      <a href="http://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn flat" target="_blank"> learn more </a>
     </div>
-    <div class="col-sm-4">
-      <div class="flex-center">
-        <img src="{{ 'assets/home/icons/roadmap.svg'|theme }}" width="128">
-      </div>
-      <h3>Roadmap</h3>
-      <p>
-        See the upcoming releases and features. Godot Engine is developed in the
-        open by a community of developers. Come and lend us a hand to make it
-        better!
-      </p>
-      <a class="button button-success" href="https://github.com/godotengine/godot/milestone/4">Roadmap</a>
+
+  </div>
+
+</section>
+
+
+<section id="donations" class="padded">
+  <div class="container sm-full">
+
+    <img id="sfc_graphic" src=" {{ 'assets/home/sfc.svg' | theme }} " alt="">
+    <h3 class="text-center">donate</h3>
+    <p class="small auto-margin">
+      You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot Engine even more awesome! 
+    </p>
+
+    <a href="/donate" class="btn flat">learn more</a>
+
+  </div>
+  
+</section>
+
+<section id="sponsors">
+  <div class="container sm-full padded">
+    <h2 class="text-center">sponsored by</h2>
+
+    <div class="platinum flex">
+      <a class="sponsor card base-padding" href="https://enjincoin.io/" target="_blank">
+        <img src="{{ 'assets/home/sponsors/enjin.png' | theme }}" alt="">
+      </a>
     </div>
-    <div class="col-sm-4">
-      <div class="flex-center">
-        <img src="{{ 'assets/home/icons/donate.svg'|theme }}" width="128">
-      </div>
-      <h3>Donate</h3>
-      <p>
-        You don't need to be an engine developer to help Godot. Consider
-        donating to speed up development and make Godot Engine even more
-        awesome!
-      </p>
-      <a class="button button-success" href="/donate">Donate</a>
+    <div class="gold flex">
+      <a class="sponsor card base-padding" href="https://www.gamblify.com/" target="_blank">
+        <img src="{{ 'assets/home/sponsors/gamblify.png' | theme }}" alt="">
+      </a>
+      <a class="sponsor card base-padding" href="http://gamedev.tv/" target="_blank">
+        <img src="{{ 'assets/home/sponsors/gamedev.png' | theme }}" alt="">
+      </a>
     </div>
+
   </div>
-</div>
-<div class="container"> 
-  <h2> Platinum Sponsors</h2>
-  <div class="flex-center-wrap">
-    <a class="slink platinum" href="https://enjincoin.io/">
-      <div class="enjin-background"> </div>
-    </a>
-  </div>
-</div>
-<div class="container"> 
-  <h2> Gold Sponsors </h2>
-  <div class="flex-center-wrap">
-    <a class="slink" href="https://www.gamblify.com/">
-      <div class="gamblify-background"> </div>
-    </a>
-    <a class="slink" href="http://gamedev.tv/">
-      <div class="gamedev-background"> </div>
-    </a>
-  </div>
-  <div class="flex-center">
-    <a class="button button-success" href="/donate"><i class=""></i> Support us! </a>
-  </div>
-</div>
+</section>
+
+
+
 {% partial "footer" %}
 </html>

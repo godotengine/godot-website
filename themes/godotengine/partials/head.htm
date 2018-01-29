@@ -14,12 +14,12 @@ categoryPage = "blog/category"
   {% elseif this.page.id == 'article' %}
     {% set post = blogPost.post %}
     <title>Godot Engine - {{ post.title }}</title>
-    <meta property="og:title" content="{{ post.title }}" />
-    <meta property="og:type" content="article" />
     <meta property="og:image" content="{{ post.featured_images[0].path }}" />
-    <meta property="og:description" content="{{ post.summary }}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@godotengine" />
+    <meta name="twitter:title" content="{{ post.title }}" />
+    <meta name="twitter:description" content="{{ post.summary }}" />
+    <meta name="twitter:image" content="{{ post.featured_images[0].path }}" />
   {% elseif this.page.id == 'showcase' %}
     <title>Godot Engine - {{ this.page.title }}</title>
     <meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/576/ff8/07a/thumb_71_400x1_0_0_auto.jpg" />
@@ -30,9 +30,8 @@ categoryPage = "blog/category"
   {% endif %}
   <link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml"/>
   <link rel="icon" href="{{ 'assets/favicon.png'|theme }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,300,300italic,900,900italic,700,700italic">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700,700italic">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{{ 'assets/packed/style.css'|theme }}">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Barlow:400,500i,700|Montserrat:700,800" rel="stylesheet">  -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,800" rel="stylesheet"> 
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' | theme }}">
 
 </head>

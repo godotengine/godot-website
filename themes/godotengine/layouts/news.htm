@@ -1,70 +1,92 @@
 description = "News layout"
-
-[blogPosts]
-pageNumber = "{{ :page }}"
-categoryFilter = "news"
-postsPerPage = "{{ 8 }}"
-noPostsMessage = "No posts found"
-sortOrder = "published_at desc"
-categoryPage = "article"
-postPage = "article"
 ==
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
-{% partial "header" %}
+{% partial "header" selected="news" %}
+
+
+<style>
+  .news-item {
+    margin-bottom: 16px;
+  }
+  .news-item .image {
+    height: inherit;
+    flex: 1;
+  }
+  .news-item .content {
+    flex: 4;
+  }
+  .news-item .title {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    text-transform: none;
+  }
+  .news-item .title a {
+    text-decoration: none;
+    color: var(--base-color-text-title);
+  }
+
+  .news-item .content .date {
+    flex: 1;
+    text-align: right;
+  }
+  .news-item .date-big {
+    line-height: .75;
+  }
+</style>
+
+
+<div class="head">
+  <div class="container flex eqsize responsive">
+    <div class="main">
+      <h1 class="intro-title">{{ this.page.id }}</h1>
+    </div>
+
+    <div class="tabs">
+      <a href="/news" class="title-font {% if this.page.id == 'news' %} active {% endif %}">all</a>
+      <a href="/devblog" class="title-font {% if this.page.id == 'devblog' %} active {% endif %}">devblog</a>
+    </div>
+  </div>
+</div>
+
+
 <div class="container">
-  <h1 class="intro-title">{{ this.page.id }}</h1>
   {% set posts = blogPosts.posts %}
-
     {% for post in posts %}
- <div class="row news-section news-item  bottom-border">
- 
-<div class="col-md-3 text-center">
-          {% for image in post.featured_images %}
-              <p>
-              <a href="{{ 'article'|page({ slug: post.slug }) }}">
-                  <img
-                      data-src="{{ image.filename }}"
-                      src="{{ image.path }}"
-                      alt="{{ image.description }}"
-                      style="width:100%" />
-                      </a>
-              </p>
-          {% endfor %}
-</div>
-<div class="col-md-6">
-  <h3><a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a></h3>
-      {{ post.excerpt |raw }}
-</div>
-<div class="col-md-3 text-center">
-  <span class="date-big">{{ post.published_at|date('d') }}</span><br/>
-  <span class="date-small">{{ post.published_at|date('M Y') }}</span>
-   <p>{{ post.user.full_name }}</p></p>
-</div>
-</div>
+      <div class="news-item flex card responsive">
+        <a class="image"
+           style="background: url('{{ post.featured_images[0].thumb(100, { extension: 'jpg' }) }}'); background-size: cover"
+           href="{{ 'article'|page({ slug: post.slug }) }}">
+        </a>
+        <div class="content base-padding flex">
+          <div class="brief">
+            <h3 class="title">
+              <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
+            </h3>
+            <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span> </h4>
+            <p>{{ post.excerpt |raw }}</p>
+          </div>
+        </div>
+      </div>
+  {% endfor %}
+
+
+  <div class="flex pagination">
+    {% if posts.currentPage > 1 %}
+      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a>
+    {% endif %}
+
+    {% for page in 1..posts.lastPage %}
+      <a class="{{ posts.currentPage == page ? 'active' : null }}" 
+         href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}
+      </a>
     {% endfor %}
-<div class="row news-section news-item">
-<div class="col-md-3">&nbsp;</div>
-<div class="col-md-6">
-        <ul class="pagination">
-        {% if posts.currentPage > 1 %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
-        {% endif %}
 
-        {% for page in 1..posts.lastPage %}
-            <li class="{{ posts.currentPage == page ? 'active' : null }}">
-                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-            </li>
-        {% endfor %}
-
-        {% if posts.lastPage > posts.currentPage %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
-        {% endif %}
-    </ul>
-</div>
-<div class="col-md-3">&nbsp;</div>
-</div>
+    {% if posts.lastPage > posts.currentPage %}
+      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
+    {% endif %}
+  </div>
 </div>
 
 {% partial "footer" %}

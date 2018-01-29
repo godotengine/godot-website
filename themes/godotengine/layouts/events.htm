@@ -1,0 +1,38 @@
+description = "Events layout"
+==
+<!DOCTYPE html>
+<html>
+{% partial "head" %}
+{% partial "header" %}
+
+
+<style>
+  .events .card {
+    margin-bottom: 16px;
+  }
+  .events .card h4 {
+    margin-top: 48px;
+    margin-bottom: 0;
+  }
+</style>
+
+
+<div class="head">
+  <div class="container flex eqsize responsive">
+    <div class="main">
+      <h1 class="intro-title">Events</h1>
+    </div>
+    <div class="tabs">
+      <a href="/events/" class="title-font {% if this.page.id == 'events' %} active {% endif %}">upcoming</a>
+      <a href="/events/past" class="title-font {% if this.page.id == 'events-past' %} active {% endif %}">past</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+	{% page %}
+</div>
+
+
+{% partial "footer" %}

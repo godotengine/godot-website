@@ -8,37 +8,54 @@ categoryPage = "article"
 <html>
 {% partial "head" %}
 {% partial "header" %}
-<div class="container">
-  <h1 class="intro-title"></h1>
-  <div class="row news-section">
-    <div class="col-md-3 text-center">
-  <span class="date-big">{{ post.published_at|date('d') }}</span><br/>
-  <span class="date-small">{{ post.published_at|date('M Y') }}</span>
-  <br/><br/>
-  <p><img src="{{ post.user.avatar.path }}" width="100px"/>
-  <br/>{{ post.user.full_name }}</p>
-</div>
-<div class="col-md-6">
-  <h1>{{ post.title }}</h1>
-  {% if post.featured_images.count %}
-      <div class="featured-images text-center">
-          {% for image in post.featured_images %}
-              <p>
-                  <img
-                      data-src="{{ image.filename }}"
-                      src="{{ image.path }}"
-                      alt="{{ image.description }}"
-                      style="width:100%" />
-              </p>
-          {% endfor %}
-          </div>
-  {% endif %}
-  {{ post.content_html|raw }}
-</div>
-</div>
-<div class="col-md-3">&nbsp;</div>
-</div>
 
+
+<style>
+
+  h1 {
+    margin-bottom: 8px;
+    margin-top: 32px;
+  }
+  .date-big {
+    line-height: 2;
+    margin-left: 32px;
+  }
+
+  article img {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 900px) {
+    article .content {
+      width: 60%;
+      margin: auto;
+    }
+  }
+</style>
+
+
+<div class="container">
+
+  <article class="flex padded">
+
+    <div class="content">
+      <img data-src="{{ post.featured_images[0].filename }}"
+           src="{{ post.featured_images[0].path }}"
+           alt="{{ post.featured_images[0].description }}"
+           style="width:100%"/>
+
+      <div class="info">
+        <h1> {{ post.title }} </h1>
+        <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span></h4>
+      </div>
+
+      {{ post.content_html|raw }}
+    </div>
+
+  </article>
 </div>
+  
+
+  <!-- <img src="{{ post.user.avatar.path }}" width="100px"/> -->
 {% partial "footer" %}
 </html>

@@ -1,71 +1,42 @@
-==
+
 <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                
-            </div>
+
+  <div class="grid">
+    {% for item in __SELF__.portfolio %}
+      <div class="card">
+        <a href="{{item.url}}">
+          {% if item.images | length > 0 %}
+              <img src="{{ item.images[0].thumb(400, { extension: 'jpg' }) }}" width="100%" alt="">
+          {% endif %}
+        </a>
+        <div class="base-padding">
+          <h3><a href="{{item.url}}">{{item.title}}</a></h3>
+          {% if item.description %}
+            <p> {{ item.description | raw }} </p>
+          {% endif %}
         </div>
+      </div>
+    {% endfor %}
+  </div>
 
-        {% set count = 0 %}
 
-        {% for item in __SELF__.portfolio %}
-        {% set count = count + 1 %}
-        {% if count == 1 %}
-                <div class="row">
-        {% endif %}
-        <div class="col-md-3 sh_item">
-             <h2><a target="_blank" href="{{ item.url }}">{{ item.title }}</a></h2>
-            {% if item.images|length > 0 %}
-            <div>
-                <a target="_blank" href="{{ item.url }}">
-                    <img style="width:100%;" src="{{ item.images[0].thumb(400, { extension: 'jpg' }) }}" alt="{{ item.images[0].path }}">
-                </a>
-            </div>
-            {% endif %}
-           
-           <small class="pull-right">
-               {% if item.tags|length > 0 %}
-                   {% for tag in item.tags %}
-                    <a href="https://godotengine.org/showcase/tags/{{ tag.name }}"><span class="label label-primary">{{ tag.name }}</span></a>
-                    {% endfor %}
-                    |
-               {% endif %}
-                <a href="https://godotengine.org/showcase/category/{{ item.category.name }}">{{ item.category.name }}</a>
-           </small>
-            <br/>
-            {% if item.tags|length > 0 %}
-            {% endif %}
-            {% if item.description %}
-            {{ item.description|raw }}
-            {% endif %}
-        </div>
-        {% if count == 4 %}
-            </div>
-            {% set count = 0 %}
-        {% endif %}
-        {% endfor %}
-    </div>
-    
+  {% if __SELF__.portfolio.lastPage > 1 %}
+  	<div class="flex pagination">
+  		{% if __SELF__.portfolio.currentPage > 1 %}
+	      <a href="{{ this.page.baseFileName|page({ page: (__SELF__.portfolio.currentPage - 1) }) }}">&larr; Prev</a>
+	    {% endif %}
 
-    {% if __SELF__.portfolio.lastPage > 1 %}
-    <div class="row">
-        <div class="col-sm-12">
-            <ul class="pagination">
-                {% if __SELF__.portfolio.currentPage > 1 %}
-                <li><a href="{{ this.page.baseFileName|page({ page: (__SELF__.portfolio.currentPage - 1) }) }}">&larr; Prev</a></li>
-                {% endif %}
+	    {% for page in 1..__SELF__.portfolio.lastPage %}
+	      <a class="{{__SELF__.portfolio.currentPage == page ? 'active' : null }}" 
+	         href="{{ this.page.baseFileName|page({ page: page }) }}">{{ page }}
+	      </a>
+	    {% endfor %}
 
-                {% for page in 1..__SELF__.portfolio.lastPage %}
-                <li class="{{ __SELF__.portfolio.currentPage == page ? 'active' : null }}">
-                    <a href="{{ this.page.baseFileName|page({ page: page }) }}">{{ page }}</a>
-                </li>
-                {% endfor %}
+	    {% if __SELF__.portfolio.lastPage > __SELF__.portfolio.currentPage %}
+	      <a href="{{ this.page.baseFileName|page({ page: (__SELF__.portfolio.currentPage + 1)} ) }}">Next &rarr;</a>
+	    {% endif %}
 
-                {% if __SELF__.portfolio.lastPage > __SELF__.portfolio.currentPage %}
-                <li><a href="{{ this.page.baseFileName|page({ page: (__SELF__.portfolio.currentPage + 1) }) }}">Next &rarr;</a></li>
-                {% endif %}
-            </ul>
-        </div>
-    </div>
-    {% endif %}
+  	</div>
+  {% endif %}
 </div>
+

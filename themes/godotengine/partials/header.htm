@@ -1,37 +1,31 @@
 description = "header partial"
-
-[Goal]
 ==
 {% styles %}
-{% scripts %}
-
 <header>
-  <input type="checkbox" id="nav-trigger" class="nav-trigger">  <nav>
-    <div class="logoHeader">
-      <label for="nav-trigger"></label>
-      <a href="/"><img class="nav-logo" src="{{ 'assets/logo.svg'|theme }}" height="48" alt="Godot Engine"></a>
+  <div class="container flex align-center">
+    <input type="checkbox" id="nav_toggle_cb">
+    <div id="nav_head">
+      <a href="/" id="logo-link"><img class="nav-logo" src="{{ 'assets/logo.svg' | theme }}" height="48" alt="Godot Engine"></a>
+      <label for="nav_toggle_cb" id="nav_toggle_btn">
+        <img src="{{ 'assets/hamburger.svg' | theme }}" alt="">
+      </label>
     </div>
-    <div class="menu">
-      <ul class="">
-        <li {% if this.page.id == 'news' %} class="active" {% endif %}><a href="/news">News</a></li>
-        <li {% if this.page.id == 'features' %} class="active" {% endif %}><a href="/features">Features</a></li>
-        <li {% if this.page.id == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
+    
+    <nav id="nav">
+      <ul class="left">
+        <li {% if selected == 'features' %} class="active" {% endif %}><a href="/features">Features</a></li>
+        <li {% if selected == 'news' %} class="active" {% endif %}><a href="/news">News</a></li>
         <li {% if this.page.id == 'community' %} class="active" {% endif %}><a href="/community">Community</a></li>
-        <li {% if this.page.id == 'showcase' %} class="active" {% endif %}><a href="/showcase">Showcase</a></li>
-        <li><a href="http://docs.godotengine.org">Docs</a></li>
-        <li><a id="nav_more" href="#">More</a>
-            <ul>
-                <li><a href="/qa">Q&amp;A</a></li>
-                <li><a href="/asset-library">Asset Library</a></li>
-                <li><a href="/devblog">Devblog</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/license">License</a></li>
-                <li><a href="/donate">Donate</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </li>
-        <li id="patreon"> {% component 'Goal' %} </li>
+        <li {% if selected == 'more' %} class="active" {% endif %}><a id="nav_more" href="/more">More</a></li>
       </ul>
+
+      <ul class="right">
+        <li {% if selected == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
+        <li><a href="http://docs.godotengine.org">Learn</a></li>
+        <li><a href="https://godotengine.org/asset-library/asset" id="asset_lib">
+          <img src="{{ 'assets/asset_lib.svg' | theme }}" alt="">
+        </a></li>
+      </ul>
+    </nav>
   </div>
-  </nav>
 </header>

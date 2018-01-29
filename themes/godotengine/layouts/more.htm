@@ -1,0 +1,32 @@
+description = "More layout"
+==
+<!DOCTYPE html>
+<html>
+{% partial "head" %}
+{% partial "header" selected="more" %}
+
+
+
+<div class="head">
+  <div class="container flex eqsize">
+    <div class="main">
+      <h1 class="intro-title">{% placeholder title %}</h1>
+      {% placeholder head_text %}
+    </div>
+
+    <div class="tabs">
+      <a href="/contact" class="title-font {% if this.page.id == 'contact' %} active {% endif %}">contact</a>
+      <a href="/license" class="title-font {% if this.page.id == 'license' %} active {% endif %}">license</a>
+      <a href="/donate" class="title-font {% if this.page.id == 'donate' %} active {% endif %}">donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  {% page %}
+</div>
+
+
+{% partial "footer" %}
+</html>

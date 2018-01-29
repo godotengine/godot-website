@@ -1,0 +1,28 @@
+title = "Download | Windows"
+url = "/download/windows"
+layout = "download"
+description = "Windows download page"
+is_hidden = 0
+==
+<?php
+	function onStart() {$this["platform"] = 'windows'; }
+?>
+==
+
+{% put downloads %}
+	<div class="btn split download">
+		<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_win64.exe.zip">64-bit</a>
+		<a href="http://op.godotengine.org:81/downloads/{{stable_version}}/internal2/Godot_v{{stable_version}}-stable_win64.exe.zip">Mirror</a>
+	</div>
+	<div class="btn split download">
+		<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_win32.exe.zip">32-bit</a>
+		<a href="http://op.godotengine.org:81/downloads/{{stable_version}}/internal2/Godot_v{{stable_version}}-stable_win32.exe.zip">Mirror</a>
+	</div>
+{% endput %}
+
+{% put instructions %}
+	<p>You can also get it with <a href="http://scoop.sh/">Scoop</a></p>
+	<ul>
+		<li> <code>scoop install godot</code> </li>
+	</ul>
+{% endput %}

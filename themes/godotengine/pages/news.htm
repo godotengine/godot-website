@@ -3,4 +3,13 @@ url = "/news/:page?"
 layout = "news"
 description = "News page"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ""
+postsPerPage = "{{ 8 }}"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "article"
+postPage = "article"
 ==

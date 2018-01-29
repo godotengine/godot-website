@@ -1,6 +1,179 @@
 title = "Community"
 url = "/community"
-layout = "community"
+layout = "default"
 description = "Community page"
 is_hidden = 0
 ==
+
+
+
+{% put head_text %}
+<p class="small">Godot has a very active community across multiple channels.</p>
+{% endput %}
+
+
+<style>
+	.card {
+		height: 100%;
+	}
+	a.card {
+		display: block;
+		text-decoration: none;
+	}
+	h3 a {
+		text-decoration: none;
+	}
+
+	#showcase {
+		margin-bottom: 16px;
+		background-color: var(--dark-color);
+		color: var(--dark-color-text);
+	}
+	#showcase h3 {
+		color: var(--dark-color-text-title);
+		margin-bottom: 0;
+	}
+
+	#extras {
+		grid-column-end: span 2;
+		display: flex;
+		flex-direction: column;
+	}
+	#extras .card {
+		height: auto;
+		flex: 1;
+	}
+
+	@media (max-width: 600px) {
+    #extras {
+    	grid-column-end: span 1;
+    }
+  }
+</style>
+
+
+
+<div class="flex grid">
+
+	<div id="extras">
+		<a href="/showcase" class="card base-padding" id="showcase">
+			<h3> showcase </h3>
+			<p>Games made with godot.</p>
+		</a>
+		<a href="/events" class="card base-padding" id="events">
+			<h3>events</h3>
+			<p>Upcoming community events.</p>
+		</a>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="/qa/"><img src="{{ 'assets/community/icon_qa.png'|theme }}" width="100%" alt=""></a>
+			<div class="base-padding">
+				<h3><a href="/qa">Questions &amp; Answers</a></h3>
+	      <p>Place to ask questions and search for answers from the community.</p>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="http://webchat.freenode.net/?channels=#godotengine"><img src="{{ 'assets/community/icon_irc.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="http://webchat.freenode.net/?channels=#godotengine">IRC</a></h3>
+	      <p>Great for chatting with other users.<br/>irc.freenode.net #godotengine</p>
+	    </div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://discord.gg/zH7NUgz"><img src="{{ 'assets/community/icon_discord.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://discord.gg/zH7NUgz">Discord</a></h3>
+      	<p>For the cool kids born after the IRC golden age who don't 5P34K 1337.</p>
+    	</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://matrix.to/#/#godotengine:matrix.org"><img src="{{ 'assets/community/icon_matrix.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://matrix.to/#/#godotengine:matrix.org">Matrix</a></h3>
+      	<p>Libre decentralized chat with advanced features, IRC compatible.</p>
+    	</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://www.facebook.com/groups/godotengine/"><img src="{{ 'assets/community/icon_facebook.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://www.facebook.com/groups/godotengine/">Facebook</a></h3>
+      	<p>Large community, great place to meet other Godot users.</p>
+    	</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://www.reddit.com/r/godot"><img src="{{ 'assets/community/icon_reddit.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://www.reddit.com/r/godot">Reddit</a></h3>
+      	<p>For the anti-imperialist resistance to Facebook.</p>
+    	</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://github.com/godotengine/"><img src="{{ 'assets/community/icon_github.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://github.com/godotengine/">GitHub</a></h3>
+      	<p>Send potential bugs and feature requests here.</p>
+    	</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://twitter.com/godotengine"><img src="{{ 'assets/community/icon_twitter.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://twitter.com/godotengine">Twitter</a></h3>
+      	<p>Get small bits of development news.</p>
+    	</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="http://godotdevelopers.org"><img src="{{ 'assets/community/icon_forum.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="http://godotdevelopers.org">Forum</a></h3>
+      	<p>Community forum for all Godot developers.</p>
+    	</div>
+  	</div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://steamcommunity.com/app/404790"><img src="{{ 'assets/community/icon_steam.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://steamcommunity.com/app/404790">Steam Community</a></h3>
+      	<p>Discuss and share tips with other developers on Steam.</p>
+    	</div>
+    </div>
+	</div>
+
+	<div>
+		<div class="card">
+			<a href="https://www.youtube.com/c/GodotEngineOfficial"><img src="{{ 'assets/community/icon_youtube.png'|theme }}" width="100%" alt=""></a>
+      <div class="base-padding">
+      	<h3><a href="https://www.youtube.com/c/GodotEngineOfficial">YouTube</a></h3>
+      	<p>Channel for official Godot videos.</p>
+    	</div>
+    </div>
+	</div>
+
+</div>

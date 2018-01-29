@@ -302,37 +302,32 @@ a.slink:hover {
 }
 
 nav {
-  height: 4rem;
-  font-size: 0;
+  height: 64px;
   position: fixed;
-  width: 100%;
-  background-color: #fff;
+  width: 100vw;
+  background-color: white;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   z-index: 9999;
   font-weight: 400;
-  display: flex;
+
+}
+
+nav > .container {
+    display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   .menu {
-    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: inherit;
+    display: flex;
+    align-items: center;
   }
 }
 
-nav ul,
-nav li {
-  display: inline-block;
-}
 nav ul {
-  padding-left: 0;
-}
-nav .menu > ul {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  li {
-    height: 100%;
-  }
+  list-style: none;
 }
 
 nav a {
@@ -346,16 +341,8 @@ nav a {
   align-items: center;
 }
 
-.logoHeader {
-  height: 100%;
-  margin-right: 10%;
-  a {
-    padding: 0 0 0 .4rem;
-  }
-}
-
 nav li a:hover {
-    background:#ececec;
+  color: red;
 }
 
 li#patreon a:hover {
@@ -365,11 +352,6 @@ li#patreon a:hover {
 .nav-trigger {
   position: absolute;
   clip: rect(0, 0, 0, 0);
-}
-
-
-.nav-logo {
-  margin-right: .5rem;
 }
 
 nav .pull-left {
