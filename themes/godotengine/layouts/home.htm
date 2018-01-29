@@ -31,13 +31,6 @@ postPage = "{{ :slug }}"
     height: 100%;
   }
 
-  .feature {
-    margin-bottom: 42px;
-  }
-  .feature .dark {
-    background-color: var(--transparent-cover-darker);
-  }
-
 
   #donations {
     background-color: var(--dark-color);
@@ -73,6 +66,39 @@ postPage = "{{ :slug }}"
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .feature {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .features-row > :first-child {
+    margin-right: 8px;
+  }
+  .features-row > :last-child {
+    margin-left: 8px;
+  }
+  .feature img {
+    position: relative;
+  }
+  .feature .dark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--transparent-cover-darker);
+  }
+  .feature .dark h4 {
+    color: var(--dark-color-text-title);
+  }
+
+  @media (max-width: 900px) {
+    .features-row > :first-child {
+      margin-right: 0px;
+    }
+    .features-row > :last-child {
+      margin-left: 0px;
+    }
+  }
 </style>
 
 <div id="main_image"> </div>
@@ -104,6 +130,61 @@ postPage = "{{ :slug }}"
 
 
 
+<section id="features" class="container padded">
+  <h2 class="text-right">A different way to make games</h2>
+
+  <div class="flex eqsize responsive features-row">
+    <div class="feature">
+      <img src="{{ 'assets/home/features/innovative.png' | theme }}" alt="" width="100%">
+      <div class="dark base-padding">
+        <h4>Innovative Design</h4>
+        <p>Big or small ideas adapt seamlessly to Godot node based architecture, making your life easier.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="{{ 'assets/home/features/3d.jpg' | theme }}" alt="" width="100%">
+      <div class="dark base-padding">
+        <h4>Gorgeous 3D</h4>
+        <p>Innovative 3D renderer design, which makes your art to look great with the minimum effort.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex eqsize responsive features-row">
+    <div class="feature">
+      <img src="{{ 'assets/home/features/2d.jpg' | theme }}" alt="" width="100%">
+      <div class="dark base-padding">
+        <h4>Beautiful 2D</h4>
+        <p>Dedicated 2D engine that works in pixel coordinates, with plenty of built-in tools.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="{{ 'assets/home/features/easy_code.png' | theme }}" alt="" width="100%">
+      <div class="dark base-padding">
+        <h4>Easy to program</h4>
+        <p>Object oriented API, with language options such as GDScript, Visual Script, C# and C++.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex eqsize responsive features-row">
+    <div class="feature">
+      <img src="{{ 'assets/home/features/team_friendly.svg' | theme }}" alt="" width="100%">
+      <div class="dark base-padding">
+        <h4>Team Friendly</h4>
+        <p>From architecture and tools to VCS integration, Godot is designed for everyone in your team.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="{{ 'assets/home/features/oss.svg' | theme }}" alt="" width="100%">
+      <div class="dark base-padding">
+        <h4>Open Source</h4>
+        <p>True open development: anyone who contributes to Godot benefits equally from other’s contributions.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 
 

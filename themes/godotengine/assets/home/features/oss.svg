@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" version="1.1" viewBox="0 0 132.29166 132.29167" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="a" x1="552.23" x2="706.41" y1="1693.3" y2="1544.1" gradientTransform="matrix(.48982 0 0 .48982 -242.11 -571.12)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#78e5f6" offset="0"/>
+<stop stop-color="#f57389" offset="1"/>
+</linearGradient>
+</defs>
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(0 -164.71)">
+<rect y="164.71" width="132.29" height="132.29" ry=".93543" fill="#333667"/>
+<path d="m66.146 185.18c-18.189 0-33.811 12.985-37.126 30.867-3.3148 17.882 6.6138 35.609 23.595 42.127a1.5104 1.5104 0 0 0 1.9516 -0.86865l8.4771-22.091a1.5104 1.5104 0 0 0 -0.86866 -1.9506c-4.9927-1.9168-7.8953-7.1-6.9206-12.357 0.97472-5.2573 5.5426-9.0539 10.891-9.0539 5.3482 0 9.9151 3.7966 10.89 9.0539 0.97474 5.2574-1.9279 10.441-6.9206 12.357a1.5104 1.5104 0 0 0 -0.86866 1.9506l8.4771 22.091a1.5104 1.5104 0 0 0 1.9516 0.86865c16.982-6.5179 26.91-24.245 23.595-42.127-3.3148-17.882-18.936-30.867-37.125-30.867zm0 3.0202c16.753 0 31.101 11.927 34.154 28.397 2.9604 15.97-5.544 31.737-20.322 38.154l-7.42-19.333c5.4751-2.8124 8.5898-8.8966 7.4468-15.062-1.2366-6.67-7.0755-11.523-13.859-11.523s-12.624 4.8531-13.86 11.523c-1.1431 6.1653 1.9716 12.249 7.4468 15.062l-7.42 19.332c-14.777-6.417-23.282-22.183-20.322-38.153 3.0529-16.47 17.402-28.397 34.155-28.397z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="url(#a)" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<rect transform="rotate(-45)" x="-65.619" y="208.11" width="4.4573" height="4.4573" ry="0" fill="#f57389" stroke-width="0"/>
+<rect transform="rotate(-45)" x="-133.88" y="160.96" width="3.5765" height="3.5765" ry="0" fill="#78e5f6" stroke-width="0"/>
+<path d="m54.766 177.88 0.31902 0.31902 1.8934 1.8934 2.2125-2.2125-2.2125-2.2125zm1.2761-1e-5 0.93636-0.93636 0.93636 0.93636-0.93636 0.93637z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#eff1f5" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<rect transform="rotate(-45)" x="-162.14" y="193.2" width="4.5417" height="4.5417" ry="0" fill="#3d8fcc"/>
+<rect transform="rotate(-45)" x="-64.674" y="199.44" width="2.2265" height="2.2265" ry="0" fill="#f6aa78" stroke-width="0"/>
+<rect transform="rotate(-45)" x="-98.051" y="252.75" width="2.0026" height="2.0026" ry="0" fill="#3d8fcc"/>
+<path d="m112.31 225.75 0.41441 0.4144 2.4595 2.4595 2.8739-2.8739-2.8739-2.8739zm1.6576-1e-5 1.2163-1.2163 1.2163 1.2163-1.2163 1.2163z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#67e6bb" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<rect transform="rotate(-45)" x="-154.22" y="227.25" width="2.9454" height="2.9454" ry="0" fill="#f57389" stroke-width="0"/>
+</g>
+</svg>
