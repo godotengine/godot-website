@@ -10,14 +10,12 @@ function onStart()
 	use Jenssegers\Agent\Agent;
 
 	$agent = new Agent();
-	$current_os = 'linux';
-	if ($agent->is('Windows')) {
-		$current_os = 'windows';
+	$current_os = 'windows';
+	if ($agent->is('Linux')) {
+		$current_os = 'linux';
 	} else if ($agent->is('OS X')) {
 		$current_os = 'osx';
 	}
-	$current_os = 'linux';
-
 
 	return Redirect::to('/download/' . $current_os);
 }
