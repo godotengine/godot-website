@@ -478,12 +478,19 @@ a.card {
 
 code {
   font-family: monospace;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+pre {
+  font-family: monospace;
+  white-space: pre-wrap;
   background-color: rgba(0, 0, 0, .05);
   padding: 8px;
   border-radius: 2px;
 }
-pre {
-  white-space: pre-line;
+pre > code {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 
