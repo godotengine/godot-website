@@ -3,7 +3,7 @@ description = "home layout"
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "news"
-postsPerPage = 3
+postsPerPage = 4
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "home"
@@ -67,21 +67,28 @@ postPage = "{{ :slug }}"
     flex-wrap: wrap;
   }
 
-  .feature {
+  .feature, #highlight {
     position: relative;
+  }
+  #highlight {
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+  }
+  .feature {
     margin-bottom: 16px;
   }
-  .features-row > :first-child {
+  .features-row > :first-child, .split-row > :first-child {
     margin-right: 8px;
   }
-  .features-row > :last-child {
+  .features-row > :last-child, .split-row > :last-child {
     margin-left: 8px;
   }
   .feature img {
     height: 100%;
     position: relative;
   }
-  .feature .dark {
+  .feature .dark, #highlight .dark {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -118,8 +125,7 @@ postPage = "{{ :slug }}"
       </p>
 
       <a href="/download" class="btn download">
-        <div class="main">download </div>
-        <div class="opt">3.0.1</div>
+        <div class="main">download</div><div class="opt">3.0.1</div>
       </a>
       <a href="/features" class="btn flat">learn more</a>
     </div>
@@ -127,6 +133,33 @@ postPage = "{{ :slug }}"
       <img src=" {{ 'assets/home/graphic.svg' | theme }} " alt="">
     </div>
   </div>  
+</section>
+
+
+<section id="news_and_highlights" class="container padded">
+  <div class="flex eqsize responsive card">
+
+    <a id="highlight" style="background-image: url({{ posts[0].featured_images[0].path }});" href="{{ 'article' | page({ slug: posts[0].slug }) }}">
+      <div class="dark base-padding">
+        <h4 class="no-margin">{{ posts[0].title }}</h4>
+        <p class="hide-on-mobile">{{ str_limit(posts[0].excerpt, 200) | raw }}</p>
+      </div>
+    </a>
+
+    <div id="news">
+      <h3 class="base-padding no-margin-bottom">news</h3>
+      <hr class="">
+      {% for post in posts %}
+        {% if post != posts[0] %}
+          <a class="base-padding flex base-color-text" href="{{ 'article'|page({ slug: post.slug }) }}">
+            <b>{{ post.title }}</b>
+          </a>
+          <hr>
+        {% endif %}
+      {% endfor %}
+      <div class="text-center base-padding"><a href="/news" class="btn flat no-margin">more</a></div>
+    </div>
+  </div>
 </section>
 
 

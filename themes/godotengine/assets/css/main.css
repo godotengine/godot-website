@@ -20,6 +20,7 @@
   --primary-color-text-title: white;
 
   --base-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  --more-shadow: 0 2px 10px rgba(0, 0, 0, .2);
 
   --accent-color: #f57389;
 }
@@ -41,7 +42,14 @@ body {
 
 body a {
   outline: none;
+  text-decoration: none;
   color: var(--primary-color);
+}
+body a, a.btn.flat {
+  transition: color .1s ease-in-out;  
+}
+body a:hover, a.btn.flat:hover {
+  color: var(--accent-color);
 }
 
 h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
@@ -50,6 +58,11 @@ h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
   text-transform: uppercase;
   color: var(--base-color-text-title);
   margin-top: 0px;
+}
+
+
+.base-color-text {
+  color: var(--base-color-text);
 }
 
 
@@ -365,10 +378,9 @@ p.small {
   background-color: var(--dark-color);
   color: var(--dark-color-text);
 }
-.dark h1, .dark h2, .dark h3 {
+.dark h1, .dark h2, .dark h3, .dark h4 {
   color: var(--dark-color-text-title);
 }
-
 
 .btn {
   box-shadow: var(--base-shadow);
@@ -385,6 +397,10 @@ a.btn {
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
+}
+
+a.btn:hover {
+  box-shadow: var(--more-shadow);
 }
 
 a.btn.flat {
@@ -404,12 +420,20 @@ a.btn.download > .main {
   color: var(--dark-color);
   display: inline-block;
   padding: 16px 32px 16px 32px;
+  transition: background-color .1s ease-in-out, color .1s ease-in-out;
 }
 a.btn.download > .opt {
   background-color: var(--primary-color);
   color: var(--primary-color-text-title);
   display: inline-block;
   padding: 16px 16px 16px 16px;
+  transition: background-color .1s ease-in-out, color .1s ease-in-out;
+}
+a.btn.download:hover > .opt {
+  background-color: white;
+}
+a.btn.download:hover > * {
+  color: var(--accent-color);
 }
 
 .date-big {
@@ -442,7 +466,7 @@ a.btn.download > .opt {
 
   transition: box-shadow .2s ease-in-out;
 }
-.card > hr {
+.card  hr {
   border-color: rgba(0, 0, 0, 0.05);
 }
 .card .footer {
@@ -455,6 +479,9 @@ a.btn.download > .opt {
 a.card {
   text-decoration: none;
   display: flex;
+}
+a.card:hover {
+  color: unset;
 }
 
 
@@ -470,6 +497,9 @@ a.card {
 .tabs a {
   color: inherit;
   white-space: nowrap;
+}
+.tabs a:not(.active):hover {
+  color: var(--primary-color-text-title);
 }
 .tabs .active {
   background-color: var(--base-color);
@@ -491,6 +521,15 @@ pre {
 pre > code {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+.no-margin {
+  margin: 0px !important;
 }
 
 
@@ -574,6 +613,10 @@ pre > code {
 }
 @media (max-width: 900px) {
 
+  .hide-on-mobile {
+    display: none;
+  }
+
   a.patreonLink, a.patreonLink > .patreon {
     width: 100%;
   }
@@ -597,7 +640,7 @@ pre > code {
   }
   
   .padded {
-    padding: 32px 16px 32px 16px;
+    padding: 32px 8px 32px 8px;
   }
 
   .container .padded {
