@@ -60,6 +60,12 @@ h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
   margin-top: 0px;
 }
 
+header a, a.btn, .tabs > a {
+  transition: opacity 200ms ease;
+}
+header a:not(.patreonLink):hover, a.btn:hover, .tabs > a:not(.active):hover {
+  opacity: 0.7;
+}
 
 .base-color-text {
   color: var(--base-color-text);
