@@ -60,7 +60,7 @@ categoryPage = "article"
 
       <div class="info">
         <h1> {{ post.title }} </h1>
-        <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span></h4>
+        <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d, Y') }} </span></h4>
       </div>
 
       {{ post.content_html|raw }}
