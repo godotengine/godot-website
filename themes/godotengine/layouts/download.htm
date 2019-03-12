@@ -125,42 +125,49 @@ description = "Download layout"
     <div>
       <div class="card">
         <div class="base-padding">
-          <h4> Downloads </h4>
-          {% placeholder downloads %}
+          <h4>Downloads</h4>
+            <h4 class="subheader">Standard version</h4>
+            {% placeholder downloads %}
 
-          <h4 class="subheader">Mono version (C# support)</h4>
-          {% placeholder mono_downloads %}
+            <h4 class="subheader">Mono version (C# support)</h4>
+            {% placeholder mono_downloads %}
         </div>
-
 
         <hr>
 
         <div class="base-padding">
-          <h4> Requirements</h4>
+          <h4>Requirements</h4>
           <ul>
-            <li>OpenGL ES 3.0 compatible hardware</li>
-            <li><b>For the Mono version</b>, Mono SDK 5.12.0 (other versions won't work)</li>
+            <li>OpenGL 3.3 / OpenGL ES 3.0 compatible hardware</li>
+            <li><b>For the Mono version:</b> <a href="https://www.mono-project.com/download/stable/">Mono SDK</a> version 5.12.0. Newer versions will not work.</li>
+            <!-- For 3.1
+            <li><b>For the Mono version:</b> MSBuild<br />(from <a href="https://visualstudio.microsoft.com/downloads/?q=build+tools">Visual Studio Build Tools</a> or the <a href="https://www.mono-project.com/download/stable/">Mono SDK</a>)</li>
+            -->
           </ul>
         </div>
 
         <hr>
 
         <div class="base-padding">
-          <h4> Instructions </h4>
+          <h4>Instructions</h4>
           <ul>
-            <li>Extract and run.</li>
+            <li>Extract and run. Godot is self-contained and does not require installation.</li>
           </ul>
           {% placeholder instructions %}
         </div>
 
         <div class="footer base-padding">
-          You can find previous releases <a href="https://downloads.tuxfamily.org/godotengine">here</a> and <a href="http://op.godotengine.org:81/downloads">here</a>.
+          You can find previous releases on the <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
         </div>
       </div>
 
+      <a class="steam-download base-padding card" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
+        <img src="{{ 'assets/download/itch_logo.svg' | theme }}" height=42>
+        Available on <b>itch.io</b>.
+      </a>
       <a class="steam-download base-padding card" href="http://store.steampowered.com/app/404790" title="Godot Engine on Steam">
         <img src="{{ 'assets/download/steam_logo.svg' | theme }}" height=42>
-        Also available on  <b>Steam </b>.
+        Available on <b>Steam</b>.
       </a>
     </div>
 
@@ -171,15 +178,15 @@ description = "Download layout"
 
       <a class="card" href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_export_templates.tpz">
         <div class="base-padding">
-          <h3>Export templates (classical)</h3>
-          <p>Used to export your games to multiple platforms.</p>
+          <h3>Export templates (standard)</h3>
+          <p>Used to export your games to all supported platforms.</p>
         </div>
       </a>
 
       <a class="card" href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_export_templates.tpz">
         <div class="base-padding">
           <h3>Export templates (Mono C#)</h3>
-          <p>Used to export your C# games to multiple platforms.</p>
+          <p>Used to export your C# games to the supported platforms. Currently, the C# version can only export to desktop platforms (Linux, macOS and Windows).</p>
         </div>
       </a>
 
@@ -190,10 +197,10 @@ description = "Download layout"
         </div>
       </a>
 
-      <a class="card" href="https://docs.godotengine.org/en/3.0/getting_started/step_by_step/">
+      <a class="card" href="https://docs.godotengine.org/en/3.1/getting_started/step_by_step/">
         <div class="base-padding">
           <h3>learn godot</h3>
-          <p>Start learning godot.</p>
+          <p>Learning how to use Godot with the Step by Step tutorial.</p>
         </div>
       </a>
 
@@ -207,7 +214,7 @@ description = "Download layout"
       <a href="https://downloads.tuxfamily.org/godotengine/2.1.5/" class="base-padding card">
         <div>
           <h3>Godot 2.1.5 downloads</h3>
-          <p>Looking for the old stable branch? It's here!</p>
+          <p>Looking for the older 2.1 branch? It's here!</p>
         </div>
       </a>
 
@@ -217,7 +224,8 @@ description = "Download layout"
 
     <div class="text-center base-padding">
       <img class="flex-center" src="{{ 'assets/download/dl_icon_github.png' | theme }}">
-      <p>Godot development is <strong>open</strong>. This means you can fix or improve any part of the engine yourself and choose whether to contribute it back or to keep it private. New features are always available to use and test, without the need of having to wait for the next major release. Compiling Godot from source is <em>very easy</em> (it has no common dependencies) and the process (for each platform) is well-documented on the wiki. To obtain the source code (and consulting the documentation), please visit the <a href="https://github.com/godotengine/godot">GitHub project page</a>.</p>
+      <p>Godot's development is <strong>open</strong>. This means that you can fix or improve any part of the engine yourself and choose whether to contribute it back or keep it private.</p>
+      <p>New features are always available to use and test, without the need of having to wait for the next major release. Compiling Godot from source is <em>very easy</em> and the process is well documented for each platform. To obtain the source code, please visit the <a href="https://github.com/godotengine/godot">GitHub project page</a>.</p>
 
     </div>
 
