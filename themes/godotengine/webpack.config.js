@@ -12,7 +12,7 @@ module.exports = {
   },
   // TODO: Change to something faster in the future
   devtool: 'inline-source-map',
-  // TODO: Add webpack-dev-server 
+  // TODO: Add webpack-dev-server
   plugins: [
     new CleanWebpackPlugin(['./assets/packed']),
     new webpack.optimize.CommonsChunkPlugin({
@@ -31,19 +31,19 @@ module.exports = {
             loader: 'css-loader', options: {
               sourceMap: true
             }
-          },{
+          }, {
             loader: 'postcss-loader', options: {
               sourceMap: true
             }
-          },{
+          }, {
             loader: 'sass-loader', options: {
               sourceMap: true
             },
-            
+
           }],
           // use style loader in development
           fallback: 'style-loader'
-        }) 
+        })
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

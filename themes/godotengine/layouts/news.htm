@@ -1,27 +1,31 @@
 description = "News layout"
 ==
+
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
 {% partial "header" selected="news" %}
 
-
 <style>
   .news-item {
     margin-bottom: 16px;
   }
+
   .news-item .image {
     height: inherit;
     flex: 1;
   }
+
   .news-item .content {
     flex: 4;
   }
+
   .news-item .title {
     margin-top: 0px;
     margin-bottom: 8px;
     text-transform: none;
   }
+
   .news-item .title a {
     text-decoration: none;
     color: var(--base-color-text-title);
@@ -31,11 +35,11 @@ description = "News layout"
     flex: 1;
     text-align: right;
   }
+
   .news-item .date-big {
     line-height: .75;
   }
 </style>
-
 
 <div class="head">
   <div class="container flex eqsize responsive">
@@ -44,33 +48,32 @@ description = "News layout"
     </div>
 
     <div class="tabs">
-      <a href="/news" class="title-font {% if this.page.id == 'news' %} active {% endif %}">all</a>
-      <a href="/devblog" class="title-font {% if this.page.id == 'devblog' %} active {% endif %}">devblog</a>
+      <a href="/news" class="title-font {% if this.page.id == 'news' %} active {% endif %}">All</a>
+      <a href="/devblog" class="title-font {% if this.page.id == 'devblog' %} active {% endif %}">Devblog</a>
     </div>
   </div>
 </div>
 
-
 <div class="container">
   {% set posts = blogPosts.posts %}
-    {% for post in posts %}
-      <div class="news-item flex card responsive">
-        <a class="image"
-           style="background: url('{{ post.featured_images[0].thumb(400, { extension: 'jpg' }) }}'); background-size: cover"
-           href="{{ 'article'|page({ slug: post.slug }) }}">
-        </a>
-        <div class="content base-padding flex">
-          <div class="brief">
-            <h3 class="title">
-              <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
-            </h3>
-            <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span> </h4>
-            <p>{{ post.excerpt |raw }}</p>
-          </div>
+  {% for post in posts %}
+    <div class="news-item flex card responsive">
+      <a
+        class="image"
+        style="background: url('{{ post.featured_images[0].thumb(400, { extension: 'jpg' }) }}'); background-size: cover"
+        href="{{ 'article'|page({ slug: post.slug }) }}"
+      ></a>
+      <div class="content base-padding flex">
+        <div class="brief">
+          <h3 class="title">
+            <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
+          </h3>
+          <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span> </h4>
+          <p>{{ post.excerpt |raw }}</p>
         </div>
       </div>
+    </div>
   {% endfor %}
-
 
   <div class="flex pagination">
     {% if posts.currentPage > 1 %}
@@ -78,7 +81,7 @@ description = "News layout"
     {% endif %}
 
     {% for page in 1..posts.lastPage %}
-      <a class="{{ posts.currentPage == page ? 'active' : null }}" 
+      <a class="{{ posts.currentPage == page ? 'active' : null }}"
          href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}
       </a>
     {% endfor %}
