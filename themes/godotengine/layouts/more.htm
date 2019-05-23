@@ -1,11 +1,10 @@
 description = "More layout"
 ==
+
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
 {% partial "header" selected="more" %}
-
-
 
 <div class="head">
   <div class="container flex eqsize">
@@ -15,18 +14,22 @@ description = "More layout"
     </div>
 
     <div class="tabs">
-      <a href="/contact" class="title-font {% if this.page.id == 'contact' %} active {% endif %}">contact</a>
-      <a href="/license" class="title-font {% if this.page.id == 'license' %} active {% endif %}">license</a>
-      <a href="/donate" class="title-font {% if this.page.id == 'donate' %} active {% endif %}">donate</a>
+      <a href="/contact" class="title-font {% if this.page.id == 'contact' %} active {% endif %}">
+        Contact
+      </a>
+      <a href="/license" class="title-font {% if this.page.id == 'license' %} active {% endif %}">
+        License
+      </a>
+      <a href="/donate" class="title-font {% if this.page.id == 'donate' %} active {% endif %}">
+        Donate
+      </a>
     </div>
   </div>
 </div>
 
-
 <div class="container">
   {% page %}
 </div>
-
 
 {% partial "footer" %}
 </html>

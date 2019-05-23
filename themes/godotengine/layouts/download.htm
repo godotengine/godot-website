@@ -6,37 +6,42 @@ description = "Download layout"
   }
 ?>
 ==
+
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
 {% partial "header" selected="download" %}
 
-
 <style>
-
   .btn.download {
     color: white;
     margin-bottom: 8px;
   }
+
   .btn.download a {
     color: white;
     text-decoration: none;
   }
+
   .btn.download a:hover {
     color: var(--accent-color);
   }
+
   .btn.split {
     border: 2px solid var(--dark-color);
     display: inline-flex;
     flex-basis: content;
   }
+
   .btn.split > a {
     padding: 8px 16px 8px 16px;
     width: auto;
   }
+
   .btn.split > :first-child {
     background-color: var(--dark-color);
   }
+
   .btn.split > :nth-child(2n) {
     background-color: transparent;
     color: var(--dark-color);
@@ -50,13 +55,16 @@ description = "Download layout"
     color: var(--dark-color-text);
     text-decoration: none;
   }
-  .steam-download b {
+
+  .steam-download strong {
     margin-left: 8px;
     color: var(--dark-color-text-hl);
   }
+
   .steam-download img {
     margin-right: 16px;
   }
+
   .version-overview {
     text-align: center;
     display: flex;
@@ -64,18 +72,22 @@ description = "Download layout"
     align-items: center;
     justify-content: center;
   }
+
   .version-overview h2 {
     margin-top: 16px;
     margin-bottom: 0px;
   }
+
   .version-overview h2 > em {
     color: var(--primary-color);
     font-style: normal;
     margin-left: 16px;
   }
+
   .version-overview .date {
     margin-top: 8px;
   }
+
   .version-overview img {
     filter: drop-shadow(var(--base-shadow));
   }
@@ -90,11 +102,7 @@ description = "Download layout"
   .subheader {
     margin-top: 32px;
   }
-
-
-
 </style>
-
 
 <div class="head">
   <div class="container flex eqsize responsive">
@@ -111,16 +119,13 @@ description = "Download layout"
 </div>
 
 <div class="container">
+
   <div class="flex responsive eqsize">
     <div class="version-overview">
-
       <img src="{{ 'assets/download/godot_logo.svg' | theme }}" alt="" height=200>
-
       <h2>Godot <em>{{stable_version}}</em></h2>
       <i class="date">released April 27, 2019</i>
-
       <p></p>
-
     </div>
 
     <div>
@@ -129,23 +134,22 @@ description = "Download layout"
           <h4>Downloads</h4>
             <h4 class="subheader">Standard version</h4>
             {% placeholder downloads %}
-
             <h4 class="subheader">Mono version (C# support)</h4>
             {% placeholder mono_downloads %}
         </div>
 
         <hr>
-
         <div class="base-padding">
           <h4>Requirements</h4>
           <ul>
             <li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
-            <li><b>For the Mono version:</b> MSBuild<br />(from <a href="https://visualstudio.microsoft.com/downloads/?q=build+tools">Visual Studio Build Tools</a> or the <a href="https://www.mono-project.com/download/stable/">Mono SDK</a>)</li>
+            <li>
+              <strong>For the Mono version:</strong> MSBuild<br />(from <a href="https://visualstudio.microsoft.com/downloads/?q=build+tools">Visual Studio Build Tools</a> or the <a href="https://www.mono-project.com/download/stable/">Mono SDK</a>)
+            </li>
           </ul>
         </div>
 
         <hr>
-
         <div class="base-padding">
           <h4>Instructions</h4>
           <ul>
@@ -155,20 +159,20 @@ description = "Download layout"
         </div>
 
         <div class="footer base-padding">
-          You can find previous releases on the <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
+          You can find previous releases on the
+          <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
         </div>
       </div>
 
       <a class="steam-download base-padding card" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
         <img src="{{ 'assets/download/itch_logo.svg' | theme }}" height=42>
-        Available on <b>itch.io</b>.
+        Available on <strong>itch.io</strong>.
       </a>
       <a class="steam-download base-padding card" href="http://store.steampowered.com/app/404790" title="Godot Engine on Steam">
         <img src="{{ 'assets/download/steam_logo.svg' | theme }}" height=42>
-        Available on <b>Steam</b>.
+        Available on <strong>Steam</strong>.
       </a>
     </div>
-
   </div>
 
   <div class="flex responsive eqsize padded">
@@ -184,7 +188,10 @@ description = "Download layout"
       <a class="card" href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_export_templates.tpz">
         <div class="base-padding">
           <h3>Export templates (Mono C#)</h3>
-          <p>Used to export your C# games to the supported platforms. Currently, the C# version can only export to desktop platforms (Linux, macOS and Windows).</p>
+          <p>
+            Used to export your C# games to the supported platforms.
+            Currently, the C# version can only export to desktop platforms (Linux, macOS and Windows).
+          </p>
         </div>
       </a>
 
@@ -223,19 +230,26 @@ description = "Download layout"
         </div>
       </a>
 
-
     </div>
-
 
     <div class="text-center base-padding">
       <img class="flex-center" src="{{ 'assets/download/dl_icon_github.png' | theme }}">
-      <p>Godot's development is <strong>open</strong>. This means that you can fix or improve any part of the engine yourself and choose whether to contribute it back or keep it private.</p>
-      <p>New features are always available to use and test, without the need of having to wait for the next major release. Compiling Godot from source is <em>very easy</em> and the process is well documented for each platform. To obtain the source code, please visit the <a href="https://github.com/godotengine/godot">GitHub project page</a>.</p>
-
+      <p>
+        Godot's development is <strong>open</strong>. This means that you can
+        fix or improve any part of the engine yourself and choose
+        whether to contribute it back or keep it private.
+      </p>
+      <p>
+        New features are always available to use and test, without the need of
+        having to wait for the next major release. Compiling Godot from source
+        is <em>very easy</em> and the process is well-documented for each platform.
+        To obtain the source code, please visit the
+        <a href="https://github.com/godotengine/godot">GitHub project page</a>.
+      </p>
     </div>
 
   </div>
-
 </div>
+
 {% partial "footer" %}
 </html>

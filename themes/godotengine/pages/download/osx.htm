@@ -5,29 +5,29 @@ description = "Mac OS download page"
 is_hidden = 0
 ==
 <?php
-	function onStart() {$this["platform"] = 'osx'; }
+  function onStart() {$this["platform"] = 'osx'; }
 ?>
 ==
 
 {% put downloads %}
-	<div class="btn split download">
-		<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_osx.64.zip">
-			64-bit
-		</a>
-	</div>
+  <div class="btn split download">
+    <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_osx.64.zip">
+      64-bit
+    </a>
+  </div>
 {% endput %}
 
 {% put mono_downloads %}
-	<div class="btn split download">
-		<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_osx.64.zip">
-			64-bit
-		</a>
-	</div>
+  <div class="btn split download">
+    <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_osx.64.zip">
+      64-bit
+    </a>
+  </div>
 {% endput %}
 
 {% put instructions %}
-	<p>You can also get it with <a href="https://brew.sh/">Homebrew</a>.</p>
-	<ul>
-		<li><pre><code>brew cask install godot</code></pre></li>
-	</ul>
+  <p>You can also get it with <a href="https://brew.sh/">Homebrew</a>.</p>
+  <ul>
+    <li><pre><code>brew cask install godot</code></pre></li>
+  </ul>
 {% endput %}

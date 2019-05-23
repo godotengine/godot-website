@@ -1,5 +1,4 @@
 :root {
-  ;
   --transparent-cover: rgb(51, 63, 103, 0.4);
   --transparent-cover-darker: rgba(51, 63, 103, 0.9);
 
@@ -46,7 +45,7 @@ body a {
   color: var(--primary-color);
 }
 body a, a.btn.flat {
-  transition: color .1s ease-in-out;  
+  transition: color .1s ease-in-out;
 }
 body a:hover, a.btn.flat:hover {
   color: var(--accent-color);
@@ -565,7 +564,7 @@ pre > code {
   }
 
   #logo-link {
-    margin: 0;    
+    margin: 0;
   }
   #nav_head {
     width: 100%;
@@ -636,7 +635,7 @@ pre > code {
   .container.sm-full:not(.padded) {
     padding: 0px;
   }
-  
+
   .padded {
     padding: 32px 8px 32px 8px;
   }
