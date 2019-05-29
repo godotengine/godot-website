@@ -1,7 +1,7 @@
 {
   "conf": {
-  "user": "user",
-  "host": "host",
-  "password": "password"
+    "user": "user",
+    "host": "host",
+    "password": "password"
   }
 }

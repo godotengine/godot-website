@@ -4,18 +4,18 @@ description = "Article layout"
 slug = "{{ :slug }}"
 categoryPage = "article"
 ==
+
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
 {% partial "header" %}
 
-
 <style>
-
   h1 {
     margin-bottom: 8px;
     margin-top: 32px;
   }
+
   .date-big {
     line-height: 2;
     margin-left: 32px;
@@ -28,12 +28,15 @@ categoryPage = "article"
     margin-top: 16px;
     margin-bottom: 16px;
   }
+
   article h1 {
     margin-top: 64px;
   }
+
   article h2, article h3, article h4 {
     margin-top: 42px;
   }
+
   .author {
     margin-top: 0px;
     margin-bottom: 64px;
@@ -47,29 +50,28 @@ categoryPage = "article"
   }
 </style>
 
-
 <div class="container">
-
   <article class="flex padded">
-
     <div class="content">
-      <img data-src="{{ post.featured_images[0].filename }}"
-           src="{{ post.featured_images[0].path }}"
-           alt="{{ post.featured_images[0].description }}"
-           style="width:100%"/>
+      <img
+        data-src="{{ post.featured_images[0].filename }}"
+        src="{{ post.featured_images[0].path }}"
+        alt="{{ post.featured_images[0].description }}"
+        style="width: 100%;"
+      />
 
       <div class="info">
-        <h1> {{ post.title }} </h1>
-        <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d, Y') }} </span></h4>
+        <h1>{{ post.title }}</h1>
+        <h4 class="author">
+          By: {{ post.user.full_name }}
+          <span class="date"> {{ post.published_at|date('M d, Y') }}</span>
+        </h4>
       </div>
 
       {{ post.content_html|raw }}
     </div>
-
   </article>
 </div>
-  
 
-  <!-- <img src="{{ post.user.avatar.path }}" width="100px"/> -->
 {% partial "footer" %}
 </html>

@@ -5,30 +5,36 @@ description = "Server (Linux) download page"
 is_hidden = 0
 ==
 <?php
-	function onStart() {$this["platform"] = 'server'; }
+  function onStart() {$this["platform"] = 'server'; }
 ?>
 ==
 
 {% put downloads %}
-	<div class="btn split download">
-		<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_linux_headless.64.zip">
-			Headless (64-bit)
-		</a>
-	</div>
-	<div class="btn split download">
-		<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_linux_server.64.zip">
-			Server (64-bit)
-		</a>
-	</div>
+  <div class="btn split download">
+    <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_linux_headless.64.zip">
+      Headless (64-bit)
+    </a>
+  </div>
+  <div class="btn split download">
+    <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_linux_server.64.zip">
+      Server (64-bit)
+    </a>
+  </div>
     <ul>
-	  <li><em>Headless</em> is a Linux 64-bit build of the editor tools to run on headless environment. It is used from the command line to run tests or export projects.</li>
-      <li><em>Server</em> is a Linux 64-bit build of the export template running without graphics and audio, useful to host server instances for Godot games.</li>
+      <li>
+        <em>Headless</em> is a Linux 64-bit build of the editor tools to run on headless environment.
+        It is used from the command line to run tests or export projects.
+      </li>
+      <li>
+        <em>Server</em> is a Linux 64-bit build of the export template running
+        without graphics and audio, useful to host server instances for Godot games.
+      </li>
     </ul>
 {% endput %}
 
 
 {% put mono_downloads %}
-	<p>Server/headless binaries not available yet for the Mono flavor.</p>
+  <p>Server/headless binaries not available yet for the Mono flavor.</p>
 {% endput %}
 
 {% put instructions %}

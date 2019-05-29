@@ -9,6 +9,7 @@ sortOrder = "published_at desc"
 categoryPage = "home"
 postPage = "{{ :slug }}"
 ==
+
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
@@ -21,16 +22,18 @@ postPage = "{{ :slug }}"
     position: relative;
     z-index: 2;
   }
+
   #main_message .container {
     overflow: initial;
   }
+
   .full-graphic {
     padding-bottom: 0px;
   }
+
   .full-graphic > img {
     height: 100%;
   }
-
 
   #donations {
     background-color: var(--dark-color);
@@ -38,14 +41,17 @@ postPage = "{{ :slug }}"
     overflow: auto;
     text-align: center;
   }
+
   #donations h1, #donations h2, #donations h3 {
     color: var(--dark-color-text-title);
   }
+
   #sponsors {
     background-color: #e3e6ec;
     box-shadow: inset 0 0 12px rgba(0, 0, 0, .2);
     border: 1px solid rgba(0, 0, 0, .2);
   }
+
   #sponsors .sponsor {
     overflow: auto;
     display: flex;
@@ -55,13 +61,16 @@ postPage = "{{ :slug }}"
     margin-bottom: 8px;
     margin-left: 8px;
   }
+
   #sponsors .platinum .sponsor {
     height: 100px;
   }
+
   #sponsors img {
     width: inherit;
     height: 100%;
   }
+
   #sponsors .flex {
     justify-content: center;
     flex-wrap: wrap;
@@ -70,24 +79,30 @@ postPage = "{{ :slug }}"
   .feature, #highlight {
     position: relative;
   }
+
   #highlight {
     min-height: 250px;
     background-size: cover;
     background-position: center;
   }
+
   .feature {
     margin-bottom: 16px;
   }
+
   .features-row > :first-child, .split-row > :first-child {
     margin-right: 8px;
   }
+
   .features-row > :last-child, .split-row > :last-child {
     margin-left: 8px;
   }
+
   .feature img {
     height: 100%;
     position: relative;
   }
+
   .feature .dark, #highlight .dark {
     position: absolute;
     bottom: 0;
@@ -95,6 +110,7 @@ postPage = "{{ :slug }}"
     right: 0;
     background-color: var(--transparent-cover-darker);
   }
+
   .feature .dark h4 {
     color: var(--dark-color-text-title);
   }
@@ -109,32 +125,35 @@ postPage = "{{ :slug }}"
   }
 </style>
 
-<div id="main_image"> </div>
-
+<div id="main_image"></div>
 
 <section id="main_message" class="dark">
   <div class="container flex eqsize responsive">
+
     <div class="padded">
       <h2>The game engine you waited for.</h2>
       <p>
-        Godot provides a huge set of common tools, so you can just focus on making your game without reinventing the wheel.
+        Godot provides a huge set of common tools, so you can just focus on
+        making your game without reinventing the wheel.
       </p>
-
       <p>
-        Godot is completely free and open-source under the very permissive MIT license. No strings attached, no royalties, nothing. Your game is yours, down to the last line of engine code.
+        Godot is completely free and open-source under the very permissive MIT license.
+        No strings attached, no royalties, nothing.
+        Your game is yours, down to the last line of engine code.
       </p>
 
       <a href="/download" class="btn download">
-        <div class="main">download</div><div class="opt">3.1</div>
+        <div class="main">Download</div><div class="opt">3.1</div>
       </a>
-      <a href="/features" class="btn flat">learn more</a>
+      <a href="/features" class="btn flat">Learn more</a>
     </div>
+
     <div class="base-padding full-graphic text-right">
       <img src=" {{ 'assets/home/graphic.svg' | theme }} " alt="">
     </div>
+
   </div>
 </section>
-
 
 <section id="news_and_highlights" class="container padded">
   <div class="flex eqsize responsive card">
@@ -152,17 +171,16 @@ postPage = "{{ :slug }}"
       {% for post in posts %}
         {% if post != posts[0] %}
           <a class="base-padding flex base-color-text" href="{{ 'article'|page({ slug: post.slug }) }}">
-            <b>{{ post.title }}</b>
+            <strong>{{ post.title }}</strong>
           </a>
           <hr>
         {% endif %}
       {% endfor %}
       <div class="text-center base-padding"><a href="/news" class="btn flat no-margin">more</a></div>
     </div>
+
   </div>
 </section>
-
-
 
 <section id="features" class="container padded">
   <h2 class="text-right">A different way to make games</h2>
@@ -196,7 +214,7 @@ postPage = "{{ :slug }}"
       <img src="{{ 'assets/home/features/easy_code.png' | theme }}" alt="" width="100%">
       <div class="dark base-padding">
         <h4>Easy to program</h4>
-        <p>Object-oriented API, with language options such as GDScript, Visual Script, C# and C++.</p>
+        <p>Object-oriented API with language options such as GDScript, C#, C++ and visual scripting.</p>
       </div>
     </div>
   </div>
@@ -205,7 +223,7 @@ postPage = "{{ :slug }}"
     <div class="feature">
       <img src="{{ 'assets/home/features/team_friendly.svg' | theme }}" alt="" width="100%">
       <div class="dark base-padding">
-        <h4>Team Friendly</h4>
+        <h4>Team-Friendly</h4>
         <p>From architecture and tools to VCS integration, Godot is designed for everyone in your team.</p>
       </div>
     </div>
@@ -217,13 +235,10 @@ postPage = "{{ :slug }}"
       </div>
     </div>
   </div>
-
 </section>
 
-
-
 <section id="get_involved" class="container padded">
-  <h2> get involved </h2>
+  <h2>Get involved</h2>
   <p>
     Join the community and help create a game engine that belongs to everybody.
   </p>
@@ -258,28 +273,23 @@ postPage = "{{ :slug }}"
     </div>
 
   </div>
-
 </section>
-
 
 <section id="donations" class="padded">
   <div class="container sm-full">
-
     <img id="sfc_graphic" src=" {{ 'assets/home/sfc.svg' | theme }} " alt="">
     <h3 class="text-center">donate</h3>
     <p class="small auto-margin">
       You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot Engine even more awesome!
     </p>
 
-    <a href="/donate" class="btn flat">learn more</a>
-
+    <a href="/donate" class="btn flat">Learn more</a>
   </div>
-
 </section>
 
 <section id="sponsors">
   <div class="container sm-full padded">
-    <h2 class="text-center">sponsored by</h2>
+    <h2 class="text-center">Sponsored by</h2>
 
     <div class="platinum flex">
       <a class="sponsor card base-padding" href="https://enjincoin.io/" target="_blank">
@@ -293,15 +303,9 @@ postPage = "{{ :slug }}"
       <a class="sponsor card base-padding" href="https://www.imagecampus.edu.ar/" target="_blank">
         <img src="{{ 'assets/home/sponsors/imagecampus.png' | theme }}" alt="">
       </a>
-      <a class="sponsor card base-padding" href="https://yakaz.com/" target="_blank">
-        <img src="{{ 'assets/home/sponsors/yakaz.png' | theme }}" alt="">
-      </a>
     </div>
-
   </div>
 </section>
-
-
 
 {% partial "footer" %}
 </html>

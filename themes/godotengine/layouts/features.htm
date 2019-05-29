@@ -1,10 +1,10 @@
 description = "Features layout"
 ==
+
 <!DOCTYPE html>
 <html>
 {% partial "head" %}
-{% partial "header" selected="features"%}
-
+{% partial "header" selected="features" %}
 
 <style>
   .head {
@@ -33,106 +33,97 @@ description = "Features layout"
   }
 </style>
 
-
 <div class="head">
   <div class="container flex eqsize">
     <div class="main">
-      <h1>features</h1>
+      <h1>Features</h1>
     </div>
   </div>
 </div>
 
 <section id="design" class="dark">
-
   <div class="container flex eqsize">
     <div>
       <img src="{{ 'assets/features/design_graphic.svg' | theme }}" alt="">
     </div>
 
     <div class="title-padded">
-      <h2>innovative design</h2>
-
+      <h2>Innovative design</h2>
       <p>
-        <em>Create games with ease, using Godot's unique approach to game development.</em>
+        <em>Create games with ease using Godot's unique approach to game development.</em>
         <ul class="text-left">
-          <li><b>Nodes for all your needs.</b> Godot comes with hundreds of built-in nodes that make game design a breeze. You can also create your own for custom behaviors, editors and much more.</li>
-          <li><b>Flexible scene system.</b> Create node compositions with support for instancing and inheritance.</li>
-          <li><b>Visual editor</b> with all the tools you need packed into a beautiful and uncluttered context-sensitive UI.</li>
-          <li><b>Friendly content creation pipeline</b> for artists, level designers, animators and everything in between.</li>
-          <li><b>Persistent live editing</b> where changes are not lost after stopping the game. It even works on mobile devices!</li>
-          <li><b>Create your own custom tools</b> with ease using the incredible tool system.</li>
+          <li><strong>Nodes for all your needs.</strong> Godot comes with hundreds of built-in nodes that make game design a breeze. You can also create your own for custom behaviors, editors and much more.</li>
+          <li><strong>Flexible scene system.</strong> Create node compositions with support for instancing and inheritance.</li>
+          <li><strong>Visual editor</strong> with all the tools you need packed into a beautiful and uncluttered context-sensitive UI.</li>
+          <li><strong>Friendly content creation pipeline</strong> for artists, level designers, animators and everyone in between.</li>
+          <li><strong>Persistent live editing</strong> where changes are not lost after stopping the game. It even works on mobile devices!</li>
+          <li><strong>Create your own custom tools</strong> with ease using the incredible tool system.</li>
         </ul>
       </p>
     </div>
   </div>
 </section>
 
-
 <section id="features_3d" class="container sm-full">
-  
   <img src="{{ 'assets/features/3dgames.jpg' | theme }}" alt="">
 
   <div class="title-padded base-padding">
-    <h2>Gorgeous 3D Graphics</h2>
+    <h2>Gorgeous 3D graphics</h2>
     <em>
-      The brand new physically based renderer comes with a ton of features that will make your games look incredible.
+      The brand new physically-based renderer comes with a ton of features that will make your games look incredible.
     </em>
   </div>
+
   <div class="flex eqsize responsive base-padding">
     <ul>
-      <li><b>Innovative architecture</b> that combines the best of forward rendering with the efficiency of deferred rendering.</li>
-      <li><b>Physically-based rendering</b> with full MSAA support</li>
-      <li><b>Full principled BSDF</b> with Subsurface Scattering, reflection, refraction, anisotropy, clearcoat, transmittance and more.</li>
+      <li><strong>Innovative architecture</strong> that combines the best of forward rendering with the efficiency of deferred rendering.</li>
+      <li><strong>Physically-based rendering</strong> with full MSAA support.</li>
+      <li><strong>Full principled BSDF</strong> with subsurface scattering, reflection, refraction, anisotropy, clearcoat, transmittance and more.</li>
     </ul>
     <ul>
-      <li><b>Global illumination</b> for real-time gorgeous graphics. It can also be pre-baked for beautiful results even on low end devices.</li>
-      <li><b>Mid and Post processing effects</b> including a new tonemapper that supports HDR, multiple standard curves and auto exposure, screen-space reflections, fog, bloom, depth of field and much more.</li>
-      <li><b>Easy-to-use shader language</b> based on GLSL, with built-in editor and code completion.</li>
+      <li><strong>Global illumination</strong> for real-time gorgeous graphics. It can also be pre-baked for beautiful results even on low-end devices.</li>
+      <li><strong>Mid- and Post-processing effects</strong> including a new tonemapper that supports HDR, multiple standard curves and auto exposure, screen-space reflections, fog, bloom, depth of field and much more.</li>
+      <li><strong>Easy-to-use shader language</strong> based on GLSL, with built-in editor and code completion.</li>
     </ul>
   </div>
 </section>
 
-
-
 <section id="features_2d" class="container sm-full">
-
   <img src="{{ 'assets/features/2dgames.jpg' | theme }}" alt="">
 
   <div class="title-padded base-padding">
     <h2>Create 2D games with ease</h2>
-    <em> Godot comes with a fully dedicated 2D engine packed with features. </em>
+    <em>Godot comes with a fully-dedicated 2D engine packed with features.</em>
   </div>
+
   <div class="flex eqsize responsive base-padding">
     <ul>
-      <li><b>Work in pixels as your units</b>, but scale to any screen size and aspect ratio.</li>
-      <li><b>Tile map editor</b> with auto-tiling, rotation, custom grid shapes and multiple layers.</li>
-      <li><b>2D lights and normal maps</b> to give your 2D games a more realistic look. </li>
+      <li><strong>Work in pixels as your units</strong>, but scale to any screen size and aspect ratio.</li>
+      <li><strong>Tile map editor</strong> with auto-tiling, rotation, custom grid shapes and multiple layers.</li>
+      <li><strong>2D lights and normal maps</strong> to give your 2D games a more realistic look. </li>
     </ul>
     <ul>
-      <li><b>Animate your games</b> using cut-out or sprite based animation. </li>
-      <li><b>Flexible kinematic controller</b> for collision without physics.</li>
+      <li><strong>Animate your games</strong> using cut-out or sprite-based animation. </li>
+      <li><strong>Flexible kinematic controller</strong> for collision without physics.</li>
     </ul>
   </div>
 </section>
 
-
-
 <section id="animation" class="container flex eqsize responsive">
-  <div style="overflow: hidden">
+  <div style="overflow: hidden;">
     <img src="{{ 'assets/features/animate.jpg'|theme }}">
   </div>
-  <div class="base-padding" style="padding-top: 0">
+  <div class="base-padding" style="padding-top: 0;">
     <h2>Animate everything</h2>
     <em>The most flexible animation system.</em>
     <ul>
-      <li><b>Animate literally everything</b>, from bones and objects to function calls.</li>
-      <li><b>Use custom transition curves and tweens</b> to create incredible animations.</li>
-      <li><b>Helpers to animate 2D rigs</b>, with skeletons and IK.</li>
-      <li><b>Efficient optimizer</b> to pack imported 3D animations.</li>
+      <li><strong>Animate literally everything</strong>, from bones and objects to function calls.</li>
+      <li><strong>Use custom transition curves and tweens</strong> to create incredible animations.</li>
+      <li><strong>Helpers to animate 2D rigs</strong>, with skeletons and IK.</li>
+      <li><strong>Efficient optimizer</strong> to pack imported 3D animations.</li>
     </ul>
   </div>
 </section>
-
 
 <div class="flex container responsive eqsize sm-full">
   <section id="script">
@@ -140,13 +131,16 @@ description = "Features layout"
       <h2>Script with full freedom</h2>
       <em>More choices than any other engine.</em>
       <ul>
-        <li><b>GDScript</b> Python-like scripting language, designed to make games with zero hassle. Learn why our community loves it.</li>
-        <li><b>Full C# 7.0 support</b> using Mono.</li>
-        <li><b>Full C++ support</b> without needing to recompile the engine.</li>
-        <li><b>Visual scripting</b> using blocks and connections.</li>
-        <li><b>Additional languages</b> with community-provided support for Python, Nim, D and other languages.</li>
-        <li><b>Built-in editor</b> with syntax highlighting, real-time parser and code completion.</li>
-        <li><b>Integrated documentation.</b> Browse and search the whole API offline, whithout leaving the editor.</li>
+        <li>
+          <strong>GDScript</strong> Python-like scripting language, designed to make games with zero hassle.
+          <a href="https://docs.godotengine.org/en/3.1/getting_started/scripting/gdscript/gdscript_basics.html">Learn why our community loves it.</a>
+        </li>
+        <li><strong>Full C# 7.0 support</strong> using Mono.</li>
+        <li><strong>Full C++ support</strong> without needing to recompile the engine.</li>
+        <li><strong>Visual scripting</strong> using blocks and connections.</li>
+        <li><strong>Additional languages</strong> with community-provided support for Python, Nim, D and other languages.</li>
+        <li><strong>Built-in editor</strong> with syntax highlighting, real-time parser and code completion.</li>
+        <li><strong>Integrated documentation.</strong> Browse and search the whole API offline, without leaving the editor.</li>
       </ul>
     </div>
   </section>
@@ -156,16 +150,15 @@ description = "Features layout"
       <h2>Debug & Optimize</h2>
       <em>Solve bugs and performance bottlenecks with the built-in debugger.</em>
       <ul>
-        <li><b>Explore and modify</b> your project while it's running, even on mobile devices.</li>
-        <li><b>Keeps changes</b> by default after closing the project.</li>
-        <li><b>Built-in profiler</b> with graph plotting and time seeking.</li>
+        <li><strong>Explore and modify</strong> your project while it's running, even on mobile devices.</li>
+        <li><strong>Keeps changes</strong> by default after closing the project.</li>
+        <li><strong>Built-in profiler</strong> with graph plotting and time seeking.</li>
         <li>Video memory debugger.</li>
-        <li><b>Error logger</b> with full stack traces.</li>
+        <li><strong>Error logger</strong> with full stack traces.</li>
       </ul>
     </div>
   </section>
 </div>
-
 
 <div class="flex container responsive eqsize sm-full">
   <section id="multiplatform-editor">
@@ -173,9 +166,9 @@ description = "Features layout"
       <h2>Multi-platform editor</h2>
       <em>Create games on any desktop OS.</em>
       <ul>
-        <li><b>Works on Windows, OS X, Linux, FreeBSD, OpenBSD and Haiku.</b> The editor runs in 32-bit and 64-bit, in all platforms.</li>
-        <li><b>Small download</b> (around 20 MB), and you are ready to go.</li>
-        <li><b>Very easy to compile</b> in any platform (no dependency hell).</li>
+        <li><strong>Works on Windows, macOS, Linux, FreeBSD, OpenBSD and Haiku.</strong> The editor runs in 32-bit and 64-bit on all platforms.</li>
+        <li><strong>Small download</strong> (around 25 MB), and you are ready to go.</li>
+        <li><strong>Very easy to compile</strong> on any platform (no dependency hell).</li>
       </ul>
     </div>
     <div></div>
@@ -185,17 +178,16 @@ description = "Features layout"
       <h2>Multi-platform deploy</h2>
       <em>Deploy games everywhere!</em>
       <ul>
-        <li><b>Mobile platforms:</b> iOS, Android</li>
-        <li><b>Desktop platforms:</b> Windows, macOS, Linux, UWP, *BSD, Haiku</li>
-        <li><b>Export to the web</b> using HTML and Web Assembly</li>
+        <li><strong>Mobile platforms:</strong> iOS, Android</li>
+        <li><strong>Desktop platforms:</strong> Windows, macOS, Linux, UWP, *BSD, Haiku</li>
+        <li><strong>Export to the web</strong> using HTML5 and WebAssembly</li>
         <!--<li>Consoles: PlayStation 3, PlayStation 4 and PlayStation Vita (only with license from Sony).</li>-->
-        <li><b>One-click deploy &amp; export</b> to most platforms. Easy to create custom builds too.</li>
+        <li><strong>One-click deploy &amp; export</strong> to most platforms. Easily create custom builds as well.</li>
       </ul>
     </div>
     <div></div>
   </section>
 </div>
-
 
 <section id="collaborate" class="container flex eqsize responsive">
   <div>
@@ -203,16 +195,14 @@ description = "Features layout"
     <p>Godot is designed from the ground up for smooth teamwork.</p>
 
     <ul>
-      <li><b>Friendly filesystem usage</b> that works great with version control systems like Git, Subversion, Mercurial, PlasticSCM, Perforce, you name it.</li>
-      <li><b>Scene instancing</b> makes teamwork a breeze. Every team member can focus on their own scene, be it a character, level, etc., and edit without stepping on each other's toes.</li>
+      <li><strong>Friendly filesystem usage</strong> that works great with version control systems like Git, Subversion, Mercurial, PlasticSCM, Perforce, you name it.</li>
+      <li><strong>Scene instancing</strong> makes teamwork a breeze. Every team member can focus on their own scene, be it a character, level, etc., and edit without stepping on each other's toes.</li>
       <li>Text-based descriptive and optimal scene format.</li>
       <li>Script syntax supported by GitHub.</li>
     </ul>
   </div>
   <div></div>
 </section>
-
-
 
 {% partial "footer" %}
 </html>
