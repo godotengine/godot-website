@@ -1,12 +1,30 @@
-# exclude everything by default (this is a CMS!), and whitelist the safe stuff
+# Exclude everything by default (this is a CMS!), and whitelist the safe stuff
 /*
+!/README.md
+!/ISSUE_TEMPLATE.md
+!/LICENSE.txt
+
+# Vim
+*.swp
+*.swo
+
+# Git stuff
+!.gitattributes
+!.gitignore
+
+# October CMS
 packed
 node_modules
 conf.json
-!.gitattributes
-!.gitignore
-!LICENSE.txt
+
+# Plugins
 !/plugins
 /plugins/october/demo
+
+# Themes
 !/themes
 /themes/demo
+
+# Docker
+!/docker
+/docker/mariadb/storage

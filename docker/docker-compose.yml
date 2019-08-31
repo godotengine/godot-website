@@ -1,0 +1,34 @@
+version: "3.4"
+
+networks:
+    godotengine-org--network: ~
+
+services:
+    php:
+        build:
+            context: ./php
+        container_name: "godotengine-org--php"
+        depends_on:
+            - mariadb
+        networks:
+            - godotengine-org--network
+        restart: unless-stopped
+        ports:
+            - "8080:80"
+        volumes:
+            - ../plugins:/var/www/html/plugins
+            - ../themes/godotengine:/var/www/html/themes/godotengine
+
+    mariadb:
+        image: mariadb
+        container_name: "godotengine-org--mariadb"
+        networks:
+            - godotengine-org--network
+        restart: unless-stopped
+        environment:
+            - MYSQL_ALLOW_EMPTY_PASSWORD=true
+            - MYSQL_USER=godot
+            - MYSQL_PASSWORD=godot
+        volumes:
+            - ./mariadb/storage:/var/lib/mysql
+            - ./mariadb/init:/docker-entrypoint-initdb.d

@@ -7,36 +7,39 @@ October instance.
 
 ### Dependencies
 
-- PHP 5 (version used in production)
-- [October](https://octobercms.com/)
-- Some database (MySQL is recommended)
+- [Docker](https://docker.com)
 - [Node.js](https://nodejs.org/) (6.x or newer)
   - If you cannot get a recent version from your distribution's repositories,
     try using [nvm](https://github.com/creationix/nvm).
 - [Yarn](https://yarnpkg.com/)
 
-### Installing October and the Godot theme & plugins
+### Running the site
 
-- Download and install [October](http://octobercms.com/).
-  - Note that you don't need to install Apache or nginx, as PHP has a built-in
-    development server. You can start it with `php -S localhost:8080` which
-    will host a server in the current directory.
-- If you have trouble with the installer, try to clone the repositories instead.
-  Running `composer install` then editing `config/database.php` with your
-  database credentials should get it up and running.
-- Once installed, clone this repository into your October directory (you'll have
-  to clone into an empty directory and then move it into the October directory).
-- Reassign the `active_theme` variable in `config/cms.php` to `godotengine`.
-- You may have some errors at this point, these are most likely due to plugins.
-  If an error is thrown, it should tell you which plugin caused it. Replace
-  `authorname` and `pluginname` with the plugin you wish to run the command on.
-  - Try installing the new plugin like so:
-    `php artisan plugin:install authorname.pluginname`
-  - Or refreshing the plugin like so:
-    `php artisan plugin:refresh authorname.pluginname`
-    (warning, this will erase all the database entries!)
-  - Plugins which might need these commands run on them are `RainLab.Blog` and
-    `PaulVonZimmerman.Patreon`
+- Clone this repo
+- Put a database dump (if you have one) into the `/docker/mariadb/init` folder
+    - Make sure that your script starts with the line `USE october;` and that the file extension is `.sql`
+- Run the `./docker/restart.sh` script (this will take a while the first time)
+- You might need to reinstall some plugins `/docker/php/install-plugin.sh author.name`
+    - Replace `author.name` with the names in the `/plugins/[author]/[name]` folders
+- See the website at [http://localhost:8080](http://localhost:8080)
+
+### Restoring a database
+
+- `mv /your/dump/backup-file.sql ./docker/mariadb/init`
+- `./docker/mariadb/bash.sh`
+- `cd /docker-entrypoint-initdb.d/`
+- `mysql < 000-setup.sql`
+- `mysql < backup-file.sql`
+
+### Interfacing with the Docker containers
+
+You can use the standard `docker exec -it godotengine-org--[php|mariadb] [command]` syntax or the following scripts:
+- `./docker/php/bash.sh`
+- `./docker/php/install-plugin.sh`
+- `./docker/php/log.sh`
+- `./docker/mariadb/bash.sh`
+- `./docker/mariadb/log.sh`
+- `./docker/mariadb/mysql.sh`
 
 ### Setting up the theme
 
