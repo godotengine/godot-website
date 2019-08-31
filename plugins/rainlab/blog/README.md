@@ -2,7 +2,7 @@
 
 A simple, extensible blogging platform for October CMS.
 
-!![560x315](https://player.vimeo.com/video/97088926)
+[Blog & Forum Building Tutorial Video](https://player.vimeo.com/video/97088926)
 
 ## Editing posts
 
@@ -52,6 +52,7 @@ Use the `blogPosts` component to display a list of latest blog posts on a page. 
 * **categoryPage** - path to the category page. The default value is **blog/category** - it matches the pages/blog/category.htm file in the theme directory. This property is used in the default component partial for creating links to the blog categories.
 * **postPage** - path to the post details page. The default value is **blog/post** - it matches the pages/blog/post.htm file in the theme directory. This property is used in the default component partial for creating links to the blog posts.
 * **exceptPost** - ignore a single post by its slug or unique ID. The ignored post will not be included in the list, useful for showing other/related posts.
+* **exceptCategories** - ignore posts from a comma-separated list of categories, given by their unique slug. The ignored posts will not be included in the list.
 
 The blogPosts component injects the following variables to the page where it's used:
 
@@ -118,7 +119,7 @@ The next example shows the basic component usage on the blog page:
     function onEnd()
     {
         // Optional - set the page title to the post title
-        if (isset($this->post))
+        if ($this->post)
             $this->page->title = $this->post->title;
     }
     ?>

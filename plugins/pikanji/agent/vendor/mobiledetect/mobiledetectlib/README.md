@@ -1,53 +1,63 @@
 ![Mobile Detect](http://demo.mobiledetect.net/logo-github.png)
 
-> Motto: "Every business should have a mobile detection script to detect mobile readers."
+> Motto: "Every business should have a detection script to detect mobile readers."
 
 [![Build Status](https://travis-ci.org/serbanghita/Mobile-Detect.svg?branch=devel)](https://travis-ci.org/serbanghita/Mobile-Detect) 
 [![Latest Stable Version](https://poser.pugx.org/mobiledetect/mobiledetectlib/v/stable.svg)](https://packagist.org/packages/mobiledetect/mobiledetectlib) 
 [![Total Downloads](https://poser.pugx.org/mobiledetect/mobiledetectlib/downloads.svg)](https://packagist.org/packages/mobiledetect/mobiledetectlib) 
 [![Daily Downloads](https://poser.pugx.org/mobiledetect/mobiledetectlib/d/daily.png)](https://packagist.org/packages/mobiledetect/mobiledetectlib) 
 [![License](https://poser.pugx.org/mobiledetect/mobiledetectlib/license.svg)](https://packagist.org/packages/mobiledetect/mobiledetectlib)
-[![Chat on Slack](https://img.shields.io/badge/Slack%20%23general-join-orange.svg)](https://mobiledetect.slack.com)
+[![Chat on Slack](https://img.shields.io/badge/Slack%20%23general-join-orange.svg)](https://join.slack.com/t/mobiledetect/shared_invite/enQtMjg1NDY0OTg5NzgzLTcwMzEzMWJjZjRlOWFkY2ZiNzE1ZmRmNzEwM2VhOGY5OGVkYWMxNjdkZDU5YjQ5MmM5MGUxYjhlZDQwOGVjZjE)
 
+#### About
 
+Mobile Detect is a lightweight PHP class for detecting mobile devices (including tablets).
+It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.
 
-*Mobile_Detect is a lightweight PHP class for detecting mobile devices (including tablets).
-It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.*
+*Why*
+
+Your website's _content strategy_ is important! You need a complete toolkit to deliver an experience that is _optimized_, 
+_fast_ and _relevant_ to your users. Mobile Detect class is a 
+[server-side detection](http://www.w3.org/TR/mwabp/#bp-devcap-detection) tool that can help you with your RWD strategy, 
+it is not a replacement for CSS3 media queries or other forms of client-side feature detection.
+
+*How*
 
 We're committed to make Mobile_Detect the best open-source mobile detection resource and this is why before 
-each release we're running [unit tests](./tests), we also research and update the detection rules on **daily** 
-and **weekly** basis.
+each release we're running [unit tests](./tests) and research and update the detection rules on **monthly** basis.
 
-Your website's _content strategy_ is important! You need a complete toolkit to deliver an experience that is _optimized_, _fast_ and _relevant_ to your users. Mobile_Detect class is a [server-side detection](http://www.w3.org/TR/mwabp/#bp-devcap-detection) tool that can help you with your RWD strategy, it is not a replacement for CSS3 media queries or other forms of client-side feature detection.
+*Who*
 
-##### Announcements
+See [the history](./docs/HISTORY.md) of the project.
 
-For `2.x` branch we are no longer taking optimizations pull requests, but only new regexes and User-Agents for our tests.
-On `2.x` releases we are focusing on **new tablets only**. All the pull requests about TVs, bots or optimizations will be closed and analyzed after `3.0.0-beta` is released.
+#### Announcements
 
-Still working on `3.0.0` branch to provide you with device detection!
-We're really excited on this one!
-We would like to speed this up, but life and family gets in the way ;)
+* **JetBrains** is sponsoring the project by providing licenses for [PHPStorm](https://www.jetbrains.com/phpstorm/) and 
+[DataGrip](https://www.jetbrains.com/datagrip/).
+* **Mobile_Detect `2.x.x`** is only integrating new regexes, User-Agents and tests. We are focusing on **new tablets only**. 
+The rest of the PRs about TVs, bots or optimizations will be closed and analyzed after `3.0.0-beta` is released.
+* **Mobile_Detect `3.x.x`** is experimental and WIP.
 
-Special thanks to **JetBrains** for providing licenses for **PHPStorm**. In case you never heard or tried PHPStorm, you're
-clearly missing out! [Check PHPStorm](https://www.jetbrains.com/phpstorm/) out!
 
-##### Download and demo
+#### Install
 
-|Download|Docs|Examples|
-|-------------|-------------|-------------|
-|[Go to releases](../../tags)|[Become a contributor](../../wiki/Become-a-contributor)|[Code examples](../../wiki/Code-examples)
-|[Mobile_Detect.php](./Mobile_Detect.php)|[History](../../wiki/History)|[:iphone: Live demo!](http://is.gd/mobiletest)
-|[Composer package](https://packagist.org/packages/mobiledetect/mobiledetectlib)|
+**Download and include manually**
+> Use this to quickly test the demo.
 
-#### Continuous updates
+* [Download latest release](../../tags)
+* [Mobile_Detect.php](./Mobile_Detect.php)
 
-You can use [composer](https://getcomposer.org/doc/00-intro.md) in your release and update process to make sure you have the latest Mobile_Detect version.
+```php
+require_once "libs/Mobile_Detect.php";
+```
+
+**Install as a [composer package](https://packagist.org/packages/mobiledetect/mobiledetectlib)**
+> Use this method to get continuous updates.
 
 ```
 composer require mobiledetect/mobiledetectlib
 ```
-
+or include the dependency in the `composer.json` file:
 ```json
 {
     "require": {
@@ -56,19 +66,30 @@ composer require mobiledetect/mobiledetectlib
 }
 ```
 
-##### Help
+#### Demo 
 
-|Pledgie|Paypal|
-|-------|------|
-|[Donate :+1:](https://pledgie.com/campaigns/21856)|[Donate :beer:](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mobiledetectlib%40gmail%2ecom&lc=US&item_name=Mobile%20Detect&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)|
+* [:iphone: Live demo!](http://is.gd/mobiletest)
+* [Code examples](../../wiki/Code-examples)
+
+#### Contribute
+
+*Submit a PR*
+> Submit a pull request but before make sure you read [how to contribute](../../docs/CONTRIBUTING.md) guide.
+
+*Donate*
+
+|Paypal|
+|------|
+|[Donate :+1:](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mobiledetectlib%40gmail%2ecom&lc=US&item_name=Mobile%20Detect&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)|
 
 
 I'm currently paying for hosting and spend a lot of my family time to maintain the project and planning the future releases.
 I would highly appreciate any money donations that will keep the research going.
 
-Special thanks to the community :+1: for donations, [BrowserStack](https://www.browserstack.com/) - for providing access to their great platform, [Zend](http://www.zend.com/) - for donating licenses, [Dragos Gavrila](https://twitter.com/grafician) who contributed with the logo.
+Special thanks to the community :+1: for donations, JetBrains team for the continuous support and [Dragos Gavrila](https://twitter.com/grafician) who contributed with the logo.
 
-##### 3rd party modules / [Submit new](../../issues/new?title=New%203rd%20party%20module&body=Name, Link and Description of the module.)
+#### Modules, plugins, ports
+> [Submit new module, plugin, port](../../issues/new?title=New%203rd%20party%20module&body=Name,%20Link%20and%20Description%20of%20the%20module.)
 
 :point_right: Keep `Mobile_Detect.php` class in a separate `module` and do NOT include it in your script core because of the high frequency of updates.
 :point_right: When including the class into you `web application` or `module` always use `include_once '../path/to/Mobile_Detect.php` to prevent conflicts.
@@ -96,6 +117,12 @@ Made by [Mark Walters](https://github.com/yourpalmark).
 
 **WordPress**
 
+* [Mobile Detect for WordPress](https://wordpress.org/plugins/tinywp-mobile-detect/) - WordPress has a built-in function 
+(`wp_is_mobile()`) to detect mobile devices. There is (at least) one catch, though. It considers iPad (iPad pro, 
+and any tablet) as a mobile. So, this 3rd party module changes the way `wp_is_mobile()` works with the help of 
+Mobile Detect PHP library!
+Made by [Pothi Kalimuthu](https://github.com/pothi)
+
 * [WordPress Mobile Detect](https://wordpress.org/plugins/wp-mobile-detect/) - Gives you the ability to wrap that 
 infographic in a `[notdevice][/notdevice]` shortcode so at the server level WordPress will 
 decide to show that content only if the user is NOT on a phone or tablet. 
@@ -112,6 +139,16 @@ easy styling based on various attributes (archive, user, post, mobile) and vario
 Mobile attributes include type of device, Operating System, Browser, etc. Examples: .is-mobile, .is-not-mobile, 
 .is-tablet, .is-ios, .is-not-ios, .is-androidos, .is-chromebrowser. 
 Made by [wescleveland56](https://github.com/wescleveland56).
+
+* [Adaptive Content](https://wordpress.org/plugins/addfunc-adaptive-content/) for WordPress provides the most
+intuitive set of shortcodes for including/excluding content  on mobile devices, tablets desktops and other
+more specific device parameters. This lightweight plugin lets content writers and theme authors choose when
+WordPress should or shouldn’t show any give content item using shortcodes and quicktags or theme elements using functions.
+Made by [AddFunc](https://profiles.wordpress.org/addfunc).
+
+* [AddFunc Mobile Detect](https://wordpress.org/plugins/addfunc-mobile-detect/) for WordPress redirects
+mobile traffic to your mobile website and, basically, gives you loads of control over your mobile redirects.
+Made by [AddFunc](https://profiles.wordpress.org/addfunc).
 
 **Drupal**
 
@@ -256,9 +293,13 @@ Made by [quentin389](https://github.com/quentin389).
 * [LJ Mobile Detect](https://github.com/lewisjenkins/craft-lj-mobiledetect) is a simple implementation of Mobile Detect 
 for Craft CMS. Made by [Lewis Jenkins](https://github.com/lewisjenkins).
 
+* [Detect Craft](https://github.com/mmikkel/Detect-Craft) is a Craft CMS wrapper for the Mobile_Detect library. Made by [Mikkel Rummelhoff](https://github.com/mmikkel).
+
 * [Grav Plugin Mobile Detect](https://github.com/dimitrilongo/grav-plugin-mobile-detect/) is a simple implementation 
 of Mobile Detect for Grav CMS. Made by [Dimitri Longo](https://github.com/dimitrilongo).
 
+* [Mobile_Detect module for UliCMS](https://github.com/derUli/ulicms-Mobile_Detect). 
+Made by [derUli](https://github.com/derUli).
 
 **Perl**
 
@@ -292,3 +333,12 @@ Made by [Frédéric Robinet](https://github.com/robinef).
 
 * [mobile-detect](https://github.com/validide/mobile-detect) is a .Net partial port written in C#. 
 Made by [Valentin Dide](https://github.com/validide).
+
+**ColdFusion**
+
+* [MobileDetect](https://github.com/GiancarloGomez/ColdFusion-MobileDetect) is a CFC port of the 
+Mobile_Detect PHP Library. Made by [Giancarlo Gomez](https://github.com/GiancarloGomez).
+
+**Experiments** :bulb:
+
+* [Mobile Detect Fast](https://bitbucket.org/lanaguani/mobile-detect-fast/) (See: [#474](https://github.com/serbanghita/Mobile-Detect/issues/474)) is a class to increase the performance of Mobile Detect lib. Made by [LanaGuani](https://github.com/lanaguanifw).

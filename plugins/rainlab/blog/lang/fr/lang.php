@@ -79,7 +79,9 @@ return [
     ],
     'menuitem' => [
         'blog_category' => 'Catégories du blog',
-        'all_blog_categories' => 'Toutes les catégories du blog'
+        'all_blog_categories' => 'Toutes les catégories du blog',
+        'blog_post' => 'Articles du blog',
+        'all_blog_posts' => 'Tous les articles du blog'
     ],
     'settings' => [
         'category_title' => 'Liste des catégories',

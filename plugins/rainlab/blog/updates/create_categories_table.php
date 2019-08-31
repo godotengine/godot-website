@@ -34,8 +34,8 @@ class CreateCategoriesTable extends Migration
 
     public function down()
     {
-        Schema::drop('rainlab_blog_categories');
-        Schema::drop('rainlab_blog_posts_categories');
+        Schema::dropIfExists('rainlab_blog_categories');
+        Schema::dropIfExists('rainlab_blog_posts_categories');
     }
 
 }

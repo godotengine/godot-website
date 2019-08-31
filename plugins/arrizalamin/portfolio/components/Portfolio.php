@@ -200,7 +200,7 @@ class Portfolio extends ComponentBase
         // check if a valid object has been created
         if( !$object ){
             // display all items
-            $this->portfolio = Item::orderBy('created_at', $this->property('order'))->paginate($this->property('itemsPerPage'), $this->property('pageNumber'));
+            $this->portfolio = Item::paginate($this->property('itemsPerPage'), $this->property('pageNumber'));
         }else{
             // show the items in the portfolio
             $this->portfolio = $object->items()

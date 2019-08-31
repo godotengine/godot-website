@@ -29,7 +29,7 @@ class PostImport extends ImportModel
         return AuthorModel::all()->lists('full_name', 'email');
     }
 
-    public function getPostCategoriesOptions()
+    public function getCategoriesOptions()
     {
         return Category::lists('name', 'id');
     }

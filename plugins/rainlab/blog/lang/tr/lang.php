@@ -3,7 +3,7 @@
 return [
     'plugin' => [
         'name' => 'Blog',
-        'description' => 'Sağlam blog platformu.'
+        'description' => 'Sağlam blog platformu.',
     ],
     'blog' => [
         'menu_label' => 'Blog',
@@ -21,7 +21,7 @@ return [
         'delete_confirm' => 'Emin misiniz?',
         'chart_published' => 'Yayınlandı',
         'chart_drafts' => 'Taslaklar',
-        'chart_total' => 'Toplam'
+        'chart_total' => 'Toplam',
     ],
     'posts' => [
         'list_title' => 'Blog gönderilerini yönet',
@@ -58,13 +58,14 @@ return [
         'summary' => 'Özet',
         'featured_images' => 'Öne Çıkan Görseller',
         'delete_confirm' => 'Bu yazıyı silmek istiyor musunuz?',
+        'delete_success' => 'Gönderi(ler) silindi.',
         'close_confirm' => 'Gönderi kaydedilmedi.',
-        'return_to_posts' => 'Gönderi listesine dön'
+        'return_to_posts' => 'Gönderi listesine dön',
     ],
     'categories' => [
         'list_title' => 'Kategorileri yönet',
         'new_category' => 'Yeni kategori',
-        'uncategorized' => 'Kategorisiz'
+        'uncategorized' => 'Kategorisiz',
     ],
     'category' => [
         'name' => 'İsim',
@@ -74,6 +75,7 @@ return [
         'slug_placeholder' => 'yeni-kategori-basligi',
         'posts' => 'Gönderiler',
         'delete_confirm' => 'Bu kategoriyi silmek istiyor musunuz?',
+        'delete_success' => 'Kategori(ler) silindi.',
         'return_to_categories' => 'Kategori listesine dön',
         'reorder' => 'Kategorileri sırala',
     ],
@@ -82,7 +84,7 @@ return [
         'all_blog_categories' => 'Tüm blog kategorileri',
         'blog_post' => 'Blog gönderisi',
         'all_blog_posts' => 'Tüm blog gönderileri',
-
+        'category_blog_posts' => 'Blog kategori gönderileri',
     ],
     'settings' => [
         'category_title' => 'Kategori Listesi',
@@ -109,6 +111,7 @@ return [
         'posts_per_page_validation' => 'Sayfa başına gönderi için geçersiz format',
         'posts_no_posts' => 'Gönderi mesajı yok',
         'posts_no_posts_description' => 'Eğer bir gönderi yoksa gönderi listesinde görüntülenecek mesaj. Bu özellik varsayılan kısmi bileşeni tarafından kullanılır.',
+        'posts_no_posts_default' => 'Gönderi yok',
         'posts_order' => 'Gönderi Sırası',
         'posts_order_description' => 'Gönderilerin sıralama türü',
         'posts_category' => 'Kategori sayfası',
@@ -117,9 +120,35 @@ return [
         'posts_post_description' => '"Daha fazla bilgi edinin" bağlantıları için gönderi sayfası dosyasının adı. Bu özellik varsayılan kısmi bileşeni tarafından kullanılır.',
         'posts_except_post' => 'Harici gönderi',
         'posts_except_post_description' => 'Hariç tutmak istediğiniz gönderinin ID/URL sini girin',
+        'posts_except_categories' => 'Kategori harici gönderiler',
+        'posts_except_categories_description' => 'Hariç tutmak istediğiniz kategori listesini içeren virgülle ayrılmış bir kategori listesi veya değişken listesi girin.',
         'rssfeed_blog' => 'Blog sayfası',
         'rssfeed_blog_description' => 'Linkleri üretmek için blog sayfasının adını girin. Bu bilgi, ana component için kullanılacak.',
         'rssfeed_title' => 'RSS Beslemesi',
-        'rssfeed_description' => 'Blog içerisindeki gönderileri veren RSS beslemesi oluşturur.'
-    ]
+        'rssfeed_description' => 'Blog içerisindeki gönderileri veren RSS beslemesi oluşturur.',
+        'group_links' => 'Linkler',
+        'group_exceptions' => 'Hariç olanlar',
+    ],
+    'sorting' => [
+        'title_asc' => 'Başlık (a-z)',
+        'title_desc' => 'Başlık (z-a)',
+        'created_asc' => 'Oluşturulma (a-z)',
+        'created_desc' => 'Oluşturulma (z-a)',
+        'updated_asc' => 'Güncellenme (a-z)',
+        'updated_desc' => 'Güncellenme (z-a)',
+        'published_asc' => 'Paylaşılma (a-z)',
+        'published_desc' => 'Paylaşılma (z-a)',
+        'random' => 'Rastgele',
+    ],
+    'import' => [
+        'update_existing_label' => 'Mevcut gönderileri güncelle',
+        'update_existing_comment' => 'Tam olarak aynı ID, başlık veya slug içeren gönderileri güncellemek için bu kutuyu işaretleyin.',
+        'auto_create_categories_label' => 'İçe aktarma dosyasında bulunan kategorileri oluştur',
+        'auto_create_categories_comment' => 'Bu özelliği kullanmak için Kategoriler sütununu eşleştirmelisiniz, aksi takdirde aşağıdaki öğelerden kullanılacak varsayılan kategorileri seçmelisiniz.',
+        'categories_label' => 'Kategoriler',
+        'categories_comment' => 'İçe aktarılan gönderilerin ait olacağı kategorileri seçin (isteğe bağlı).',
+        'default_author_label' => 'Varsayılan gönderi yazarı (isteğe bağlı)',
+        'default_author_comment' => 'İçe aktarma, yazar e-postası sütunuyla eşleşirse mevcut bir yazarı gönderi için kullanmaya çalışır, aksi takdirde yukarıda belirtilen yazar seçilir.',
+        'default_author_placeholder' => '-- yazar seçin --',
+    ],
 ];

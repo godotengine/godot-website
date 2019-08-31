@@ -20,7 +20,6 @@ use Exception;
  */
 class BlogMarkdown extends MarkdownEditor
 {
-
     public function init()
     {
         $this->viewPath = base_path().'/modules/backend/formwidgets/markdowneditor/partials';
@@ -49,8 +48,9 @@ class BlogMarkdown extends MarkdownEditor
 
     protected function checkUploadPostback()
     {
-        if (!post('X_BLOG_IMAGE_UPLOAD'))
+        if (!post('X_BLOG_IMAGE_UPLOAD')) {
             return;
+        }
 
         $uploadedFileName = null;
 
@@ -68,11 +68,13 @@ class BlogMarkdown extends MarkdownEditor
                 ['file_data' => $validationRules]
             );
 
-            if ($validation->fails())
+            if ($validation->fails()) {
                 throw new ValidationException($validation);
+            }
 
-            if (!$uploadedFile->isValid())
+            if (!$uploadedFile->isValid()) {
                 throw new SystemException(Lang::get('cms::lang.asset.file_not_valid'));
+            }
 
             $fileRelation = $this->model->content_images();
 

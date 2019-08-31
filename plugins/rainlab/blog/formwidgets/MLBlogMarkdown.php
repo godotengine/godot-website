@@ -59,6 +59,7 @@ class MLBlogMarkdown extends BlogMarkdown
 
     /**
      * Returns an array of translated values for this field
+     * @param $value
      * @return array
      */
     public function getSaveValue($value)

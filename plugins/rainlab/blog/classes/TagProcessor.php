@@ -30,8 +30,9 @@ class TagProcessor
 
     public function processTags($markup, $preview)
     {
-        foreach ($this->callbacks as $callback)
+        foreach ($this->callbacks as $callback) {
             $markup = $callback($markup, $preview);
+        }
 
         return $markup;
     }

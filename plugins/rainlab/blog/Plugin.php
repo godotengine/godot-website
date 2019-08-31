@@ -34,6 +34,10 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
+            'rainlab.blog.manage_settings' => [
+                'tab'   => 'rainlab.blog::lang.blog.tab',
+                'label' => 'rainlab.blog::lang.blog.manage_settings'
+            ],
             'rainlab.blog.access_posts' => [
                 'tab'   => 'rainlab.blog::lang.blog.tab',
                 'label' => 'rainlab.blog::lang.blog.access_posts'
@@ -92,12 +96,18 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function registerFormWidgets()
+    public function registerSettings()
     {
         return [
-            'RainLab\Blog\FormWidgets\Preview' => [
-                'label' => 'Preview',
-                'code'  => 'preview'
+            'blog' => [
+                'label' => 'rainlab.blog::lang.blog.menu_label',
+                'description' => 'rainlab.blog::lang.blog.settings_description',
+                'category' => 'rainlab.blog::lang.blog.menu_label',
+                'icon' => 'icon-pencil',
+                'class' => 'RainLab\Blog\Models\Settings',
+                'order' => 500,
+                'keywords' => 'blog post category',
+                'permissions' => ['rainlab.blog.manage_settings']
             ]
         ];
     }
@@ -137,6 +147,7 @@ class Plugin extends PluginBase
                 'all-blog-categories' => 'rainlab.blog::lang.menuitem.all_blog_categories',
                 'blog-post'           => 'rainlab.blog::lang.menuitem.blog_post',
                 'all-blog-posts'      => 'rainlab.blog::lang.menuitem.all_blog_posts',
+                'category-blog-posts' => 'rainlab.blog::lang.menuitem.category_blog_posts',
             ];
         });
 
@@ -144,7 +155,7 @@ class Plugin extends PluginBase
             if ($type == 'blog-category' || $type == 'all-blog-categories') {
                 return Category::getMenuTypeInfo($type);
             }
-            elseif ($type == 'blog-post' || $type == 'all-blog-posts') {
+            elseif ($type == 'blog-post' || $type == 'all-blog-posts' || $type == 'category-blog-posts') {
                 return Post::getMenuTypeInfo($type);
             }
         });
@@ -153,7 +164,7 @@ class Plugin extends PluginBase
             if ($type == 'blog-category' || $type == 'all-blog-categories') {
                 return Category::resolveMenuItem($item, $url, $theme);
             }
-            elseif ($type == 'blog-post' || $type == 'all-blog-posts') {
+            elseif ($type == 'blog-post' || $type == 'all-blog-posts' || $type == 'category-blog-posts') {
                 return Post::resolveMenuItem($item, $url, $theme);
             }
         });
