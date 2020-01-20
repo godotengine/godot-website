@@ -5,6 +5,7 @@ node_modules
 conf.json
 !.gitattributes
 !.gitignore
+!LICENSE.txt
 !/plugins
 /plugins/october/demo
 !/themes
