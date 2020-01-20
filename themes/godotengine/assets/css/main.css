@@ -36,7 +36,6 @@ body {
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
-  margin-top: 64px;
 }
 
 body a {
@@ -158,8 +157,6 @@ header {
   align-items: center;
   box-shadow: var(--base-shadow);
   z-index: 100;
-  position: fixed;
-  top: 0;
 }
 header > div.container {
   width: 100%;
