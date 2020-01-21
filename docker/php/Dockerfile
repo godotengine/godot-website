@@ -19,10 +19,13 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php &&\
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # Install OctoberCMS
-RUN git init . &&\
+ARG october_version
+RUN echo "Installing OctoberCMS version: ${october_version}" &&\
+    git init . &&\
     git remote add origin https://github.com/octobercms/october.git &&\
-    git pull origin master &&\
-    composer install
+    git fetch origin &&\
+    git checkout ${october_version} -b october-${october_version} &&\
+    composer install -v
 
 # Config
 RUN sed -i "s/'host'      => 'localhost'/'host'      => 'mariadb'/g" config/database.php

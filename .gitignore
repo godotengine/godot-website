@@ -27,4 +27,6 @@ conf.json
 
 # Docker
 !/docker
+!/docker/mariadb/init/000-setup.sql
+/docker/mariadb/init/*.sql
 /docker/mariadb/storage

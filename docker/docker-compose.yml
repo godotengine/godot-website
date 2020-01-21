@@ -7,6 +7,9 @@ services:
     php:
         build:
             context: ./php
+            args:
+                # Fallback version is the one we deploy on the website.
+                october_version: "${OCTOBER_VERSION:-v1.0.458}"
         container_name: "godotengine-org--php"
         depends_on:
             - mariadb
