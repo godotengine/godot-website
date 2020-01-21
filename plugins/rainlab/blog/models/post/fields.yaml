@@ -44,6 +44,14 @@ secondaryTabs:
             span: left
             type: checkbox
 
+        user:
+            tab: rainlab.blog::lang.post.tab_manage
+            label: rainlab.blog::lang.post.published_by
+            span: right
+            type: relation
+            nameFrom: login
+            emptyOption: rainlab.blog::lang.post.current_user
+
         published_at:
             tab: rainlab.blog::lang.post.tab_manage
             label: rainlab.blog::lang.post.published_on

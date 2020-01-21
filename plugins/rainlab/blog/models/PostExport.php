@@ -34,7 +34,7 @@ class PostExport extends ExportModel
             'System\Models\File',
             'order' => 'sort_order',
             'key' => 'attachment_id',
-            'conditions' => 'field = "featured_images" AND attachment_type = "RainLab\\\\Blog\\\\Models\\\\Post"'
+            'conditions' => "field = 'featured_images' AND attachment_type = 'RainLab\\\\Blog\\\\Models\\\\Post'"
         ]
     ];
 

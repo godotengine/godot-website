@@ -4,14 +4,14 @@ use Lang;
 use Redirect;
 use BackendAuth;
 use Cms\Classes\Page;
+use Cms\Classes\ComponentBase;
 use October\Rain\Database\Model;
 use October\Rain\Database\Collection;
 use RainLab\Blog\Models\Post as BlogPost;
-use RainLab\Blog\Classes\ComponentAbstract;
 use RainLab\Blog\Models\Category as BlogCategory;
 use RainLab\Blog\Models\Settings as BlogSettings;
 
-class Posts extends ComponentAbstract
+class Posts extends ComponentBase
 {
     /**
      * A collection of posts to display
@@ -219,26 +219,11 @@ class Posts extends ComponentAbstract
         /*
          * Add a "url" helper attribute for linking to each post and category
          */
-        $blogPostComponent = $this->getComponent('blogPost', $this->postPage);
-        $blogPostsComponent = $this->getComponent('blogPosts', $this->categoryPage);
+        $posts->each(function($post) {
+            $post->setUrl($this->postPage, $this->controller);
 
-        $posts->each(function ($post) use ($blogPostComponent, $blogPostsComponent) {
-            $post->setUrl(
-                $this->postPage,
-                $this->controller,
-                [
-                    'slug' => $this->urlProperty($blogPostComponent, 'slug')
-                ]
-            );
-
-            $post->categories->each(function ($category) use ($blogPostsComponent) {
-                $category->setUrl(
-                    $this->categoryPage,
-                    $this->controller,
-                    [
-                        'slug' => $this->urlProperty($blogPostsComponent, 'categoryFilter')
-                    ]
-                );
+            $post->categories->each(function($category) {
+                $category->setUrl($this->categoryPage, $this->controller);
             });
         });
 

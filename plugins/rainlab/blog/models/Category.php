@@ -83,15 +83,14 @@ class Category extends Model
      *
      * @param string $pageName
      * @param Cms\Classes\Controller $controller
-     * @param array $urlParams A mapping of overrides for default URL parameter names
      *
      * @return string
      */
-    public function setUrl($pageName, $controller, array $urlParams = array())
+    public function setUrl($pageName, $controller)
     {
         $params = [
-            array_get($urlParams, 'id', 'id')   => $this->id,
-            array_get($urlParams, 'slug', 'slug')  => $this->slug,
+            'id'   => $this->id,
+            'slug' => $this->slug
         ];
 
         return $this->url = $controller->pageUrl($pageName, $params, false);

@@ -9,13 +9,13 @@ use Lang;
 use Model;
 use Markdown;
 use BackendAuth;
-use ValidationException;
-use Backend\Models\User;
 use Carbon\Carbon;
+use Backend\Models\User;
 use Cms\Classes\Page as CmsPage;
 use Cms\Classes\Theme;
 use Cms\Classes\Controller;
 use RainLab\Blog\Classes\TagProcessor;
+use ValidationException;
 
 /**
  * Class Post
@@ -67,7 +67,7 @@ class Post extends Model
     public static $allowedSortingOptions = [
         'title asc'         => 'rainlab.blog::lang.sorting.title_asc',
         'title desc'        => 'rainlab.blog::lang.sorting.title_desc',
-        'created_at asc '   => 'rainlab.blog::lang.sorting.created_asc',
+        'created_at asc'    => 'rainlab.blog::lang.sorting.created_asc',
         'created_at desc'   => 'rainlab.blog::lang.sorting.created_desc',
         'updated_at asc'    => 'rainlab.blog::lang.sorting.updated_asc',
         'updated_at desc'   => 'rainlab.blog::lang.sorting.updated_desc',
@@ -139,6 +139,12 @@ class Post extends Model
 
     public function beforeSave()
     {
+        if (empty($this->user)) {
+            $user = BackendAuth::getUser();
+            if (!is_null($user)) {
+                $this->user = $user->id;
+            }
+        }
         $this->content_html = self::formatHtml($this->content);
     }
 
@@ -146,24 +152,23 @@ class Post extends Model
      * Sets the "url" attribute with a URL to this object.
      * @param string $pageName
      * @param Controller $controller
-     * @param array $urlParams A mapping of possible overrides of default URL parameter names
      *
      * @return string
      */
-    public function setUrl($pageName, $controller, array $urlParams = array())
+    public function setUrl($pageName, $controller)
     {
         $params = [
-            array_get($urlParams, 'id', 'id')   => $this->id,
-            array_get($urlParams, 'slug', 'slug') => $this->slug,
+            'id'   => $this->id,
+            'slug' => $this->slug
         ];
 
         $params['category'] = $this->categories->count() ? $this->categories->first()->slug : null;
 
         // Expose published year, month and day as URL parameters.
         if ($this->published) {
-            $params[array_get($urlParams, 'year', 'year')] = $this->published_at->format('Y');
-            $params[array_get($urlParams, 'month', 'month')] = $this->published_at->format('m');
-            $params[array_get($urlParams, 'day', 'day')] = $this->published_at->format('d');
+            $params['year']  = $this->published_at->format('Y');
+            $params['month'] = $this->published_at->format('m');
+            $params['day']   = $this->published_at->format('d');
         }
 
         return $this->url = $controller->pageUrl($pageName, $params);

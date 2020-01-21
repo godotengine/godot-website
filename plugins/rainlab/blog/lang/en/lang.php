@@ -27,7 +27,6 @@ return [
         'show_all_posts_label' => 'Show all posts to backend users',
         'show_all_posts_comment' => 'Display both published and unpublished posts on the frontend to backend users',
         'tab_general' => 'General'
-
     ],
     'posts' => [
         'list_title' => 'Manage the blog posts',
@@ -52,6 +51,8 @@ return [
         'updated' => 'Updated',
         'updated_date' => 'Updated date',
         'published' => 'Published',
+        'published_by' => 'Published by',
+        'current_user' => 'Current user',
         'published_date' => 'Published date',
         'published_validation' => 'Please specify the published date',
         'tab_edit' => 'Edit',

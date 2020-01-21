@@ -18,10 +18,15 @@ return [
         'access_other_posts' => 'Gérer les articles d’autres utilisateurs',
         'access_import_export' => 'Autorisé à importer et exporter des articles',
         'access_publish' => 'Autorisé à publier des articles',
+        'manage_settings' => 'Gérer les paramètres du blog',
         'delete_confirm' => 'Confirmez-vous la suppression des articles sélectionnés ?',
         'chart_published' => 'Publié',
         'chart_drafts' => 'Brouillons',
-        'chart_total' => 'Total'
+        'chart_total' => 'Total',
+        'settings_description' => 'Gérer les paramètres du blog',
+        'show_all_posts_label' => "Afficher tous les messages aux utilisateurs du panneaux d'administration",
+        'show_all_posts_comment' => 'Afficher autant les publications publiées et non publiées sur le site web pour les utilisateurs principaux',
+        'tab_general' => 'Général'
     ],
     'posts' => [
         'list_title' => 'Gérer les articles du blog',
@@ -46,6 +51,8 @@ return [
         'updated' => 'Mis a jour',
         'updated_date' => 'Date de mise à jour',
         'published' => 'Publié',
+        'published_by' => 'Publié par',
+        'current_user' => 'Utilisateur actuel',
         'published_date' => 'Date de publication',
         'published_validation' => 'Veuillez préciser la date de publication',
         'tab_edit' => 'Rédaction',
@@ -58,6 +65,7 @@ return [
         'summary' => 'Résumé',
         'featured_images' => 'Image de promotion',
         'delete_confirm' => 'Confirmez-vous la suppression de cet article ?',
+        'delete_success' => 'Ces articles ont été supprimés avec succès.',
         'close_confirm' => 'L’article n’est pas enregistré.',
         'return_to_posts' => 'Retour à la liste des articles'
     ],
@@ -74,6 +82,7 @@ return [
         'slug_placeholder' => 'adresse-de-la-nouvelle-catégorie',
         'posts' => 'Articles',
         'delete_confirm' => 'Confirmez-vous la suppression de cette catégorie ?',
+        'delete_success' => 'Ces catégories ont été supprimés avec succès.',
         'return_to_categories' => 'Retour à la liste des catégories',
         'reorder' => 'Réorganiser les catégories'
     ],
@@ -81,7 +90,8 @@ return [
         'blog_category' => 'Catégories du blog',
         'all_blog_categories' => 'Toutes les catégories du blog',
         'blog_post' => 'Articles du blog',
-        'all_blog_posts' => 'Tous les articles du blog'
+        'all_blog_posts' => 'Tous les articles du blog',
+        'category_blog_posts' => "Articles d'une catégorie du blog"
     ],
     'settings' => [
         'category_title' => 'Liste des catégories',
@@ -108,9 +118,14 @@ return [
         'posts_per_page_validation' => 'Format du nombre d’articles par page incorrect',
         'posts_no_posts' => 'Message en l’absence d’articles',
         'posts_no_posts_description' => 'Message à afficher dans la liste d’articles lorsqu’il n’y a aucun article. Cette propriété est utilisée par le partial par défaut du composant.',
+        'posts_no_posts_default' => 'Aucun article trouvé',
         'posts_order' => 'Ordre des articles',
         'posts_order_description' => 'Attribut selon lequel les articles seront ordonnés',
-        'posts_except_post' => 'Except post',
+        'posts_category' => 'Page de catégorie',
+        'posts_category_description' => 'Nom du fichier de la page de catégorie pour les liens de catégorie "Publié dans". Cette propriété est utilisée par le composant par défaut du modèle partiel.',
+        'posts_post' => "Page de l'article",
+        'posts_post_description' => 'Nom du fichier de la page de l\'article du blog pour les liens "En savoir plus". Cette propriété est utilisée par le composant par défaut du modèle partiel.',
+        'posts_except_post' => 'Article exempté',
         'posts_except_post_description' => 'Enter ID/URL or variable with post ID/URL you want to except',
         'posts_category' => 'Page des catégories',
         'posts_category_description' => 'Nom de la page des catégories pour les liens de catégories "Publié dans". Cette propriété est utilisée par le partial par défaut du composant.',
@@ -119,6 +134,30 @@ return [
         'rssfeed_blog' => 'Page du blog',
         'rssfeed_blog_description' => 'Nom de la page principale du blog pour générer les liens. Cette propriété est utilisé par le composant dans le partial.',
         'rssfeed_title' => 'Flux RSS',
-        'rssfeed_description' => 'Génère un Flux RSS contenant les articles du blog.'
+        'rssfeed_description' => 'Génère un Flux RSS contenant les articles du blog.',
+        'group_links' => 'Liens',
+        'group_exceptions' => 'Exceptions'
+    ],
+    'sorting' => [
+        'title_asc' => 'Titre (ascendant)',
+        'title_desc' => 'Titre (descendant)',
+        'created_asc' => 'Création le (ascendant)',
+        'created_desc' => 'Création (descendant)',
+        'updated_asc' => 'Mise à jour (ascendant)',
+        'updated_desc' => 'Mise à jour (descendant)',
+        'published_asc' => 'Publication (ascendant)',
+        'published_desc' => 'Publication (descendant)',
+        'random' => 'Aléatoire'
+    ],
+    'import' => [
+        'update_existing_label' => 'Mettre à jour les articles existants',
+        'update_existing_comment' => 'Cochez cette case pour mettre à jour les articles qui ont exactement le même identifiant, titre ou slug.',
+        'auto_create_categories_label' => "Créer les catégories spécifiées dans le fichier d'importation",
+        'auto_create_categories_comment' => 'Vous devez faire correspondre la colonne Catégories pour utiliser cette fonctionnalité. Sinon, sélectionnez les catégories par défaut à utiliser parmi les éléments ci-dessous.',
+        'categories_label' => 'Catégories',
+        'categories_comment' => 'Sélectionnez les catégories auxquelles appartiendront les articles importées (facultatif).',
+        'default_author_label' => 'Auteur par défaut (facultatif)',
+        'default_author_comment' => "L'importation tentera d'utiliser un auteur existant si vous correspondez la colonne Email à l'auteur, sinon l'auteur spécifié ci-dessus sera utilisé.",
+        'default_author_placeholder' => "-- sélectionnez l'auteur --"
     ]
 ];

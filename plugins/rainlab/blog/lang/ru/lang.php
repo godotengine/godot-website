@@ -34,8 +34,8 @@ return [
         'filter_published' => 'Скрыть опубликованные',
         'filter_date' => 'Дата',
         'new_post' => 'Новая запись',
-        'export_post' => 'Export posts',
-        'import_post' => 'Import posts'
+        'export_post' => 'Экспорт записей',
+        'import_post' => 'Импорт записей'
     ],
     'post' => [
         'title' => 'Заголовок',
@@ -114,7 +114,7 @@ return [
         'posts_filter_description' => 'Введите URL категории или параметр URL-адреса для фильтрации записей. Оставьте пустым, чтобы посмотреть все записи.',
         'posts_per_page' => 'Записей на странице',
         'posts_per_page_validation' => 'Недопустимый Формат. Ожидаемый тип данных - действительное число.',
-        'posts_no_posts' => 'Отсутсвие записей',
+        'posts_no_posts' => 'Отсутствие записей',
         'posts_no_posts_description' => 'Сообщение, отображаемое в блоге, если отсутствуют записи. Это свойство используется по умолчанию компонентом Фрагменты.',
         'posts_no_posts_default' => 'Записей не найдено',
         'posts_order' => 'Сортировка',

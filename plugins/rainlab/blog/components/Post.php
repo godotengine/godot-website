@@ -3,14 +3,14 @@
 use Event;
 use BackendAuth;
 use Cms\Classes\Page;
+use Cms\Classes\ComponentBase;
 use RainLab\Blog\Models\Post as BlogPost;
-use RainLab\Blog\Classes\ComponentAbstract;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-class Post extends ComponentAbstract
+class Post extends ComponentBase
 {
     /**
-     * @var BlogPost The post model used for display.
+     * @var RainLab\Blog\Models\Post The post model used for display.
      */
     public $post;
 
@@ -105,12 +105,8 @@ class Post extends ComponentAbstract
          * Add a "url" helper attribute for linking to each category
          */
         if ($post && $post->categories->count()) {
-            $blogPostsComponent = $this->getComponent('blogPosts', $this->categoryPage);
-
-            $post->categories->each(function ($category) use ($blogPostsComponent) {
-                $category->setUrl($this->categoryPage, $this->controller, [
-                    'slug' => $this->urlProperty($blogPostsComponent, 'categoryFilter')
-                ]);
+            $post->categories->each(function($category) {
+                $category->setUrl($this->categoryPage, $this->controller);
             });
         }
 
@@ -141,17 +137,10 @@ class Post extends ComponentAbstract
 
         $postPage = $this->getPage()->getBaseFileName();
 
-        $blogPostComponent = $this->getComponent('blogPost', $postPage);
-        $blogPostsComponent = $this->getComponent('blogPosts', $this->categoryPage);
+        $post->setUrl($postPage, $this->controller);
 
-        $post->setUrl($postPage, $this->controller, [
-            'slug' => $this->urlProperty($blogPostComponent, 'slug')
-        ]);
-
-        $post->categories->each(function ($category) use ($blogPostsComponent) {
-            $category->setUrl($this->categoryPage, $this->controller, [
-                'slug' => $this->urlProperty($blogPostsComponent, 'categoryFilter')
-            ]);
+        $post->categories->each(function($category) {
+            $category->setUrl($this->categoryPage, $this->controller);
         });
 
         return $post;
