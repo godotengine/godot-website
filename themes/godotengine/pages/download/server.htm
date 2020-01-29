@@ -20,6 +20,22 @@ is_hidden = 0
       Server (64-bit)
     </a>
   </div>
+{% endput %}
+
+{% put mono_downloads %}
+  <div class="btn split download">
+    <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_linux_headless_64.zip">
+      Headless (64-bit)
+    </a>
+  </div>
+  <div class="btn split download">
+    <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_linux_server_64.zip">
+      Server (64-bit)
+    </a>
+  </div>
+{% endput %}
+
+{% put instructions %}
     <ul>
       <li>
         <em>Headless</em> is a Linux 64-bit build of the editor tools to run on headless environment.
@@ -30,12 +46,4 @@ is_hidden = 0
         without graphics and audio, useful to host server instances for Godot games.
       </li>
     </ul>
-{% endput %}
-
-
-{% put mono_downloads %}
-  <p>Server/headless binaries not available yet for the Mono flavor.</p>
-{% endput %}
-
-{% put instructions %}
 {% endput %}
