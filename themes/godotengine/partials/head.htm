@@ -22,10 +22,6 @@ categoryPage = "blog/category"
     <meta name="twitter:title" content="{{ post.title }}" />
     <meta name="twitter:description" content="{{ post.summary }}" />
     <meta name="twitter:image" content="{{ post.featured_images[0].path }}" />
-  {% elseif this.page.id == 'showcase' %}
-    <title>Godot Engine - {{ this.page.title }}</title>
-    <meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/576/ff8/07a/thumb_71_400x1_0_0_auto.jpg" />
-    <meta property="og:description" content="Showcase of games developed and published using Godot, the feature-packed 2D and 3D open source game engine." />
   {% else %}
     <title>Godot Engine - {{ this.page.title }}</title>
     <meta property="og:image" content="https://godotengine.org/themes/godotengine/assets/home/2d.jpg" />
