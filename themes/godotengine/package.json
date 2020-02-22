@@ -3,30 +3,31 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.16",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^0.11.2",
+    "autoprefixer": "^9.7.4",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.1.0",
     "lodash": "^4.17.15",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
-    "postcss-loader": "^2.0.6",
-    "resolve-url-loader": "^2.1.0",
-    "sass-loader": "^6.0.6",
+    "postcss-loader": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^8.0.2",
     "scp2": "^0.5.0",
     "simple-ssh": "^1.0.0",
-    "style-loader": "^0.18.2",
-    "uglifyjs-webpack-plugin": "^0.4.6",
-    "webpack": "^3.5.5",
-    "webpack-dev-middleware": "^1.12.0",
-    "webpack-dev-server": "^3.10.1",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "ssh2": "^0.5.5"
+    "ssh2": "^0.8.7"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "clean": "rimraf assets/packed",
+    "build": "webpack --env.production",
     "watch": "webpack --watch",
     "deploy": "node deploy.js"
   }
