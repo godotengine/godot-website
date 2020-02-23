@@ -511,6 +511,7 @@ pre {
   background-color: rgba(0, 0, 0, .05);
   padding: 8px;
   border-radius: 2px;
+  overflow-y: auto;
 }
 pre > code {
   padding-left: 0px;
