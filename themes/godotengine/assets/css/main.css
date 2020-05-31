@@ -327,7 +327,7 @@ svg.icon {
   width: 42px;
 }
 
-p, ul {
+p, ul, ol {
   text-rendering: optimizeLegibility;
   line-height: 1.5;
 }
