@@ -1,0 +1,5 @@
+vendor
+bower_components
+*.swo
+*.swp
+composer.phar
