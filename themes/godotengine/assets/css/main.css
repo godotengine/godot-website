@@ -616,10 +616,6 @@ pre > code {
     width: 100%;
   }
 
-  #asset_lib::after {
-    content: "asset lib";
-  }
-
   .container {
     width: auto;
     overflow: auto;
