@@ -45,11 +45,11 @@ You can use the standard `docker exec -it godotengine-org--[php|mariadb] [comman
 ### Setting up the theme
 
 - Log into the October backend and change the frontend theme from the Settings tab.
-- You may need to install the [October Patreon](https://github.com/pcvonz/oc-patreongoalstatus-plugin) plugin.
 - While examining the frontpage, you'll notice that nothing is styled; this is
   because we need to compile the CSS from our SCSS. Make sure you have Node.js
   installed.
 - Change directory into `themes/godotengine` then run `yarn install && yarn build`.
+- Change directory into `plugins/paulvonzimmerman/patreon` then run `composer install`.
 - You should now have approximately what's in production. The only missing
   pieces are everything that's stored in the production database
   (devblog entries and featured games).

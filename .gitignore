@@ -10,6 +10,7 @@
 
 # Git stuff
 !.gitattributes
+!.gitmodules
 !.gitignore
 
 # October CMS
