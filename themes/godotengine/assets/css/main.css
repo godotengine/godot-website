@@ -477,7 +477,7 @@ a.card {
   display: flex;
 }
 a.card:hover {
-  color: unset;
+  color: hsla(0, 0%, 100%);
 }
 
 
