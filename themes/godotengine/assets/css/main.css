@@ -53,7 +53,6 @@ body a:hover, a.btn.flat:hover {
 h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
   color: var(--base-color-text-title);
   margin-top: 0px;
 }
@@ -78,6 +77,7 @@ h4 {
 }
 
 .intro-title {
+  text-transform: capitalize;
   margin-top: 48px;
   margin-bottom: 48px;
 }
@@ -206,9 +206,6 @@ nav > ul > :first-child {
 }
 nav > ul > :last-child {
   padding-right: 0px;
-}
-nav li {
-  text-transform: uppercase;
 }
 nav > ul > li {
   padding-left: 16px;
