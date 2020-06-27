@@ -473,7 +473,7 @@ a.card {
   text-decoration: none;
   display: flex;
 }
-a.card:hover {
+.steam-download:hover {
   color: hsla(0, 0%, 100%);
 }
 
