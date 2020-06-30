@@ -4,9 +4,12 @@ description = "footer partial"
 <footer>
   <div class="container flex">
     <div id="copyright">
-      © 2007-2020 Juan Linietsky, Ariel Manzur and <a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank">contributors</a><br>
-      Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank">Software Freedom Conservancy</a><br>
-      Kindly hosted by <a href="https://tuxfamily.org" target="_blank">TuxFamily.org</a>
+      <p>
+        © 2007-2020 Juan Linietsky, Ariel Manzur and <a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank">contributors</a><br>
+        Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank">Software Freedom Conservancy</a><br>
+        Kindly hosted by <a href="https://tuxfamily.org" target="_blank">TuxFamily.org</a>.
+      </p>
+      <p><a href="/privacy-policy">Privacy Policy</a> &ndash; <a href="/code-of-conduct">Code of Conduct</a></p>
     </div>
     <ul id="sitemap">
       <li><a href="/news">News</a></li>
@@ -19,14 +22,14 @@ description = "footer partial"
     <div id="social">
       <h4 class="text-right"><a href="/contact">Contact us</a></h4>
       <div class="flex justify-space-between">
-        <a href="https://www.facebook.com/groups/godotengine/" target="_blank">
-          <img src="{{ 'assets/footer/facebook_logo.svg' | theme }}" alt="Facebook">
+        <a href="https://github.com/godotengine" target="_blank">
+          <img src="{{ 'assets/footer/github_logo.svg' | theme }}" alt="GitHub">
         </a>
         <a href="https://twitter.com/godotengine" target="_blank">
           <img src="{{ 'assets/footer/twitter_logo.svg' | theme }}" alt="Twitter">
         </a>
-        <a href="https://github.com/godotengine" target="_blank">
-          <img src="{{ 'assets/footer/github_logo.svg' | theme }}" alt="GitHub">
+        <a href="https://www.facebook.com/groups/godotengine/" target="_blank">
+          <img src="{{ 'assets/footer/facebook_logo.svg' | theme }}" alt="Facebook">
         </a>
         <a href="https://www.reddit.com/r/godot" target="_blank">
           <!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
