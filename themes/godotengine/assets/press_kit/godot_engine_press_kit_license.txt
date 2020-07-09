@@ -1,0 +1,57 @@
+The logo
+
+Godot Logo (C) Andrea Calabró Distributed under the terms of
+the Creative Commons Attribution License version 3.0 (CC-BY 3.0)
+https://creativecommons.org/licenses/by/3.0/legalcode.
+
+The engine
+
+Godot Engine is free and open source software released under the permissive MIT license (also named Expat license).
+
+This license grants users a number of freedoms:
+
+    You are free to use Godot Engine, for any purpose
+    You can study how Godot Engine works and change it
+    You can distribute unmodified and changed versions of Godot Engine, even commercially and under a different license (including proprietary)
+
+The only restriction to that third freedom is that you need to distribute the
+copyright notice and license statement of Godot Engine whenever you redistribute it.
+So your derivative product may have a different license,
+but should still state in its documentation that it derives from the MIT licensed Godot Engine (see below).
+
+Your game
+
+Godot Engine's license terms and copyright do not apply to the content you create with it;
+you are free to license your games how you see best fit, and will be their sole copyright owner(s).
+
+Note however that the Godot Engine binary that you would distribute with your game is a copy of
+the "Software" as defined in the license, and you are therefore required to
+include the copyright notice and license statement somewhere in your documentation.
+
+The Godot Engine developers consider that a link to this page (godotengine.org/license)
+in your game documentation or credits would be an acceptable way to satisfy the license terms.
+
+License text
+
+Copyright (c) 2007-2017 Juan Linietsky, Ariel Manzur.
+Copyright (c) 2014-2017 Godot Engine contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-- Godot Engine <https://godotengine.org>
