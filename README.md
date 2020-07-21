@@ -8,10 +8,8 @@ October instance.
 ### Dependencies
 
 - [Docker](https://docker.com)
-- [Node.js](https://nodejs.org/) (8.x or newer)
-  - If you cannot get a recent version from your distribution's repositories,
-    try using [fnm](https://github.com/Schniz/fnm).
-- [Yarn](https://yarnpkg.com/)
+  - It's also possible to install PHP 7.2+, MySQL and October manually,
+    but this isn't covered in this README.
 
 ### Running the site
 
@@ -44,24 +42,22 @@ You can use the standard `docker exec -it godotengine-org--[php|mariadb] [comman
 
 ### Setting up the theme
 
-- Log into the October backend and change the frontend theme from the Settings tab.
-- While examining the frontpage, you'll notice that nothing is styled; this is
-  because we need to compile the CSS from our SCSS. Make sure you have Node.js
-  installed.
-- Change directory into `themes/godotengine` then run `yarn install && yarn build`.
+- Log into the October backend (located at `/backend`) and change the frontend theme from the Settings tab.
+  - Alternatively, you can edit `config/cms.php` and change the theme to `godotengine` there.
 - Change directory into `plugins/paulvonzimmerman/patreon` then run `composer install`.
 - You should now have approximately what's in production. The only missing
   pieces are everything that's stored in the production database
-  (devblog entries and featured games).
+  (blog entries).
 
 ### Deploying your changes
 
 Deploying is of course only possible to people who have access to our
 production server. Most contributors should submit a pull request instead.
 
+- Install Node.js and npm.
 - Copy example_conf.json: `cp example_conf.json conf.json`.
 - Fill out your credentials in `conf.json`.
-- Run `yarn deploy`.
+- Run `npm install` then `npm run deploy`.
 
 This will copy all the compiled assets from the `godotengine/assets/packed`
 directory to the corresponding directory on production. It'll also make sure
