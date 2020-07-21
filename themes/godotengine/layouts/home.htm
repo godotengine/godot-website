@@ -99,8 +99,10 @@ postPage = "{{ :slug }}"
   }
 
   .feature img {
-    height: 100%;
+    width: 100%;
+    height: auto;
     position: relative;
+    background-color: #607080;
   }
 
   .feature .dark, #highlight .dark {
@@ -122,6 +124,11 @@ postPage = "{{ :slug }}"
     .features-row > :last-child {
       margin-left: 0px;
     }
+  }
+
+  .img-auto-size {
+    width: 100%;
+    height: auto;
   }
 </style>
 
@@ -187,14 +194,14 @@ postPage = "{{ :slug }}"
 
   <div class="flex eqsize responsive features-row">
     <div class="feature">
-      <img src="{{ 'assets/home/features/innovative.png' | theme }}" alt="" width="100%">
+      <img src="{{ 'assets/home/features/innovative.png' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
         <h4>Innovative Design</h4>
         <p>Big or small ideas adapt seamlessly to Godot's node-based architecture, making your life easier.</p>
       </div>
     </div>
     <div class="feature">
-      <img src="{{ 'assets/home/features/3d.jpg' | theme }}" alt="" width="100%">
+      <img src="{{ 'assets/home/features/3d.jpg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
         <h4>Gorgeous 3D</h4>
         <p>Innovative 3D renderer design, which makes your art look great with minimal effort.</p>
@@ -204,14 +211,14 @@ postPage = "{{ :slug }}"
 
   <div class="flex eqsize responsive features-row">
     <div class="feature">
-      <img src="{{ 'assets/home/features/2d.jpg' | theme }}" alt="" width="100%">
+      <img src="{{ 'assets/home/features/2d.jpg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
         <h4>Beautiful 2D</h4>
         <p>Dedicated 2D engine that works in pixel coordinates, with plenty of built-in tools.</p>
       </div>
     </div>
     <div class="feature">
-      <img src="{{ 'assets/home/features/easy_code.png' | theme }}" alt="" width="100%">
+      <img src="{{ 'assets/home/features/easy_code.png' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
         <h4>Easy to program</h4>
         <p>Object-oriented API with language options such as GDScript, C#, C++ and visual scripting.</p>
@@ -221,14 +228,14 @@ postPage = "{{ :slug }}"
 
   <div class="flex eqsize responsive features-row">
     <div class="feature">
-      <img src="{{ 'assets/home/features/team_friendly.svg' | theme }}" alt="" width="100%">
+      <img src="{{ 'assets/home/features/team_friendly.svg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
         <h4>Team-Friendly</h4>
         <p>From architecture and tools to VCS integration, Godot is designed for everyone in your team.</p>
       </div>
     </div>
     <div class="feature">
-      <img src="{{ 'assets/home/features/oss.svg' | theme }}" alt="" width="100%">
+      <img src="{{ 'assets/home/features/oss.svg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
         <h4>Open Source</h4>
         <p>Truly open development: anyone who contributes to Godot benefits equally from others’ contributions.</p>
@@ -246,7 +253,7 @@ postPage = "{{ :slug }}"
   <div class="flex eqsize responsive">
 
     <div class="text-center base-padding">
-      <img src="{{ 'assets/home/code.svg' | theme }}" alt="">
+      <img src="{{ 'assets/home/code.svg' | theme }}" alt="" width="250" height="250">
       <h4>Code</h4>
       <p>
         If you know how to code, and enjoy fun and challenging problems, you can help by fixing bugs or creating cool new features.
@@ -255,7 +262,7 @@ postPage = "{{ :slug }}"
     </div>
 
     <div class="text-center base-padding">
-      <img src="{{ 'assets/home/document.svg' | theme }}" alt="">
+      <img src="{{ 'assets/home/document.svg' | theme }}" alt="" width="250" height="250">
       <h4>Document</h4>
       <p>
         Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
@@ -264,7 +271,7 @@ postPage = "{{ :slug }}"
     </div>
 
     <div class="text-center base-padding">
-      <img src="{{ 'assets/home/report.svg' | theme }}" alt="">
+      <img src="{{ 'assets/home/report.svg' | theme }}" alt="" width="250" height="250">
       <h4>Report</h4>
       <p>
         Found a problem with the engine? Don't forget to report it so that developers can track it down.
@@ -277,7 +284,7 @@ postPage = "{{ :slug }}"
 
 <section id="donations" class="padded">
   <div class="container sm-full">
-    <img id="sfc_graphic" src=" {{ 'assets/home/sfc.svg' | theme }} " alt="Software Freedom Conservancy">
+    <img id="sfc_graphic" src=" {{ 'assets/home/sfc.svg' | theme }} " alt="Software Freedom Conservancy" width="1" height="1" class="img-auto-size">
     <h3 class="text-center">Donate</h3>
     <p class="small auto-margin">
       You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot Engine even more awesome!
