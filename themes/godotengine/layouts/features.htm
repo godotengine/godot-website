@@ -13,6 +13,11 @@ description = "Features layout"
 
   section img {
     width: 100%;
+    height: auto;
+  }
+
+  .load-placeholder {
+  	background-color: #607080;
   }
 
   h2 {
@@ -44,7 +49,7 @@ description = "Features layout"
 <section id="design" class="dark">
   <div class="container flex eqsize">
     <div>
-      <img src="{{ 'assets/features/design_graphic.svg' | theme }}" alt="">
+      <img src="{{ 'assets/features/design_graphic.svg' | theme }}" width="500" height="600" alt="">
     </div>
 
     <div class="title-padded">
@@ -65,7 +70,7 @@ description = "Features layout"
 </section>
 
 <section id="features_3d" class="container sm-full">
-  <img src="{{ 'assets/features/3dgames.jpg' | theme }}" alt="">
+  <img src="{{ 'assets/features/3dgames.jpg' | theme }}" width="1587" height="893" alt="3D game screenshot" class="load-placeholder">
 
   <div class="title-padded base-padding">
     <h2>Gorgeous 3D graphics</h2>
@@ -89,7 +94,7 @@ description = "Features layout"
 </section>
 
 <section id="features_2d" class="container sm-full">
-  <img src="{{ 'assets/features/2dgames.jpg' | theme }}" alt="">
+  <img src="{{ 'assets/features/2dgames.jpg' | theme }}" width="1186" height="696" alt="2D game screenshot" class="load-placeholder">
 
   <div class="title-padded base-padding">
     <h2>Create 2D games with ease</h2>
@@ -111,7 +116,7 @@ description = "Features layout"
 
 <section id="animation" class="container flex eqsize responsive">
   <div style="overflow: hidden;">
-    <img src="{{ 'assets/features/animate.jpg'|theme }}">
+    <img src="{{ 'assets/features/animate.jpg'|theme }}" width="780" height="420" alt="Animation editor in Godot" class="load-placeholder">
   </div>
   <div class="base-padding" style="padding-top: 0;">
     <h2>Animate everything</h2>
@@ -203,7 +208,7 @@ description = "Features layout"
     </ul>
   </div>
   <div style="overflow: hidden;">
-    <img src="{{ 'assets/features/xrsupport.jpg'|theme }}">
+    <img src="{{ 'assets/features/xrsupport.jpg'|theme }}" width="716" height="420" alt="XR support screenshot" class="load-placeholder">
   </div>
 </section>
 
