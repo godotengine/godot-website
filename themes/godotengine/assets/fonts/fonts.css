@@ -1,0 +1,19 @@
+/** Montserrat Bold **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("Montserrat-Bold.woff2") format("woff2"),
+         url("Montserrat-Bold.woff") format("woff");
+}
+
+/** Montserrat ExtraBold **/
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    src: url("Montserrat-ExtraBold.woff2") format("woff2"),
+         url("Montserrat-ExtraBold.woff") format("woff");
+}
