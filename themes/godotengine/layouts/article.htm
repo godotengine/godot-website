@@ -11,14 +11,31 @@ categoryPage = "article"
 {% partial "header" %}
 
 <style>
+  body {
+    background-color: var(--background-color);
+  }
+
   h1 {
     margin-bottom: 8px;
     margin-top: 32px;
   }
 
+  code {
+    background: var(--code-background-color);
+    padding: 1px 4px;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-radius: 3px;
+  }
+
   .date-big {
     line-height: 2;
     margin-left: 32px;
+  }
+
+  article {
+    background-color: var(--base-color);
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
   }
 
   article img, article video {
@@ -27,6 +44,9 @@ categoryPage = "article"
     margin: auto;
     margin-top: 16px;
     margin-bottom: 16px;
+  }
+  article img:first-child, article video:first-child {
+    max-width: 70%;
   }
 
   article h1 {
@@ -37,6 +57,17 @@ categoryPage = "article"
     margin-top: 42px;
   }
 
+  footer {
+    background-color: var(--footer-background-color);
+    border-top: none;
+    margin-top: 64px;
+    font-size: 0.9em;
+  }
+
+  footer #sitemap li {
+    margin-bottom: 10px;
+  }
+
   .author {
     margin-top: 0px;
     margin-bottom: 64px;
@@ -44,8 +75,21 @@ categoryPage = "article"
 
   @media screen and (min-width: 900px) {
     article .content {
-      width: 60%;
+      width: 70%;
       margin: auto;
+    }
+  }
+
+  @media (max-width: 900px) {
+    body {
+      background-color: var(--base-color);
+    }
+    article {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    article img:first-child, article video:first-child {
+      max-width: 100%;
     }
   }
 </style>
