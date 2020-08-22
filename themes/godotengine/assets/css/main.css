@@ -285,12 +285,17 @@ footer a:hover {
 
 .pagination {
   margin-top: 64px;
+  justify-content: center;
 }
 
 .pagination a {
   color: inherit;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
   text-decoration: none;
   margin-right: 12px;
+  min-width: 16px;
 }
 .pagination a.active {
   color: var(--primary-color);
@@ -299,6 +304,20 @@ footer a:hover {
   color: var(--accent-color);
 }
 
+
+@media (max-width: 900px) {
+  .pagination {
+    display: block;
+    justify-content: initial;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .pagination a {
+    min-width: 28px;
+    min-height: 28px;
+  }
+}
 
 
 .padded {
