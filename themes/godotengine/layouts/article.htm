@@ -20,12 +20,22 @@ categoryPage = "article"
     margin-top: 32px;
   }
 
-  code {
+  code:not(pre code) {
     background: var(--code-background-color);
     padding: 1px 4px;
     font-weight: 600;
     font-size: 0.95em;
     border-radius: 3px;
+  }
+
+  pre {
+    background: var(--codeblock-background-color);
+    color: var(--codeblock-color);
+  }
+  pre code {
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
   }
 
   .date-big {
@@ -93,6 +103,17 @@ categoryPage = "article"
     }
   }
 </style>
+
+<link rel="stylesheet" href="{{ 'assets/css/highlight.obsidian.min.css' | theme }}">
+<script defer src="{{ 'assets/js/highlight.min.js' | theme }}"></script>
+<script defer src="{{ 'assets/js/highlight.gdscript.min.js' | theme }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
 
 <div class="container">
   <article class="flex padded">
