@@ -252,9 +252,10 @@ ul li {
 
 
 footer {
-  border-top: 1px dashed rgba(192, 196, 213, .6);
+  background-color: var(--footer-background-color);
   color: rgb(192, 196, 213);
-  margin-top: 128px;
+  font-size: 0.9em;
+  margin-top: 64px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -279,6 +280,9 @@ footer a:hover {
 }
 #sitemap {
   flex: 2;
+}
+#sitemap li {
+  margin-bottom: 10px;
 }
 #social {
   flex: 1;
