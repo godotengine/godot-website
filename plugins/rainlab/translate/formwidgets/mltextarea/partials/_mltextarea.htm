@@ -1,0 +1,32 @@
+<!-- Textarea -->
+<?php if ($this->previewMode): ?>
+    <div class="form-control"><?= nl2br(e($field->value)) ?></div>
+<?php else: ?>
+    <div
+        id="<?= $this->getId() ?>"
+        data-control="multilingual"
+        data-default-locale="<?= $defaultLocale->code ?>"
+        data-placeholder-field="#<?= $field->getId('placeholderField') ?>"
+        class="field-multilingual field-multilingual-textarea dropdown">
+
+        <textarea
+            name="<?= $field->getName() ?>"
+            id="<?= $field->getId('placeholderField') ?>"
+            placeholder="<?= e(trans($field->placeholder)) ?>"
+            class="form-control field-textarea size-<?= $field->size ?>"
+            autocomplete="off"
+            <?= $field->getAttributes() ?>><?= e($field->value) ?></textarea>
+
+        <button
+            class="btn btn-default ml-btn"
+            data-toggle="dropdown"
+            data-active-locale
+            type="button">
+        </button>
+
+        <?= $this->makeMLPartial('locale_values') ?>
+
+        <?= $this->makeMLPartial('locale_selector') ?>
+
+    </div>
+<?php endif ?>

@@ -1,0 +1,9 @@
+import:
+    title: 'rainlab.translate::lang.messages.import_messages_link'
+    modelClass: RainLab\Translate\Models\MessageImport
+    redirect: rainlab/translate/messages
+
+export:
+    title: 'rainlab.translate::lang.messages.export_messages_link'
+    modelClass: RainLab\Translate\Models\MessageExport
+    redirect: rainlab/translate/messages

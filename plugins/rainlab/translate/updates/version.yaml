@@ -1,0 +1,69 @@
+1.0.1:
+    - First version of Translate
+    - create_messages_table.php
+    - create_attributes_table.php
+    - create_locales_table.php
+1.0.2: Languages and Messages can now be deleted.
+1.0.3: Minor updates for latest October release.
+1.0.4: Locale cache will clear when updating a language.
+1.0.5: Add Spanish language and fix plugin config.
+1.0.6: Minor improvements to the code.
+1.0.7: Fixes major bug where translations are skipped entirely!
+1.0.8: Minor bug fixes.
+1.0.9: Fixes an issue where newly created models lose their translated values.
+1.0.10: Minor fix for latest build.
+1.0.11: Fix multilingual rich editor when used in stretch mode.
+1.1.0: Introduce compatibility with RainLab.Pages plugin.
+1.1.1: Minor UI fix to the language picker.
+1.1.2: Add support for translating Static Content files.
+1.1.3: Improved support for the multilingual rich editor.
+1.1.4: Adds new multilingual markdown editor.
+1.1.5: Minor update to the multilingual control API.
+1.1.6: Minor improvements in the message editor.
+1.1.7: Fixes bug not showing content when first loading multilingual textarea controls.
+1.2.0: CMS pages now support translating the URL.
+1.2.1: Minor update in the rich editor and code editor language control position.
+1.2.2: Static Pages now support translating the URL.
+1.2.3: Fixes Rich Editor when inserting a page link.
+1.2.4:
+    - Translatable attributes can now be declared as indexes.
+    - create_indexes_table.php
+1.2.5: Adds new multilingual repeater form widget.
+1.2.6: Fixes repeater usage with static pages plugin.
+1.2.7: Fixes placeholder usage with static pages plugin.
+1.2.8: Improvements to code for latest October build compatibility.
+1.2.9: Fixes context for translated strings when used with Static Pages.
+1.2.10: Minor UI fix to the multilingual repeater.
+1.2.11: Fixes translation not working with partials loaded via AJAX.
+1.2.12: Add support for translating the new grouped repeater feature.
+1.3.0: Added search to the translate messages page.
+1.3.1:
+    - Added reordering to languages
+    - builder_table_update_rainlab_translate_locales.php
+    - seed_all_tables.php
+1.3.2: Improved compatibility with RainLab.Pages, added ability to scan Mail Messages for translatable variables.
+1.3.3: Fix to the locale picker session handling in Build 420 onwards.
+1.3.4: Add alternate hreflang elements and adds prefixDefaultLocale setting.
+1.3.5: Fix MLRepeater bug when switching locales.
+1.3.6: Fix Middleware to use the prefixDefaultLocale setting introduced in 1.3.4
+1.3.7: Fix config reference in LocaleMiddleware
+1.3.8: Keep query string when switching locales
+1.4.0: Add importer and exporter for messages
+1.4.1: Updated Hungarian translation. Added Arabic translation. Fixed issue where default texts are overwritten by import. Fixed issue where the language switcher for repeater fields would overlap with the first repeater row.
+1.4.2: Add multilingual MediaFinder
+1.4.3: !!! Please update OctoberCMS to Build 444 before updating this plugin. Added ability to translate CMS Pages fields (e.g. title, description, meta-title, meta-description)
+1.4.4: Minor improvements to compatibility with Laravel framework.
+1.4.5: Fixed issue when using the language switcher
+1.5.0: Compatibility fix with Build 451
+1.6.0: Make File Upload widget properties translatable. Merge Repeater core changes into MLRepeater widget. Add getter method to retrieve original translate data.
+1.6.1: Add ability for models to provide translated computed data, add option to disable locale prefix routing
+1.6.2: Implement localeUrl filter, add per-locale theme configuration support
+1.6.3: Add eager loading for translations, restore support for accessors & mutators
+1.6.4: Fixes PHP 7.4 compatibility
+1.6.5: Fixes compatibility issue when other plugins use a custom model morph map
+1.6.6:
+    - Introduce migration to patch existing translations using morph map
+    - migrate_morphed_attributes.php
+1.6.7:
+    - Introduce migration to patch existing indexes using morph map
+    - migrate_morphed_indexes.php

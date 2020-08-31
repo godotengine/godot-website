@@ -1,0 +1,65 @@
+#messagesContainer {
+  padding-top: 20px;
+}
+.callout-container .callout {
+  margin-bottom: 0;
+}
+.translate-messages {
+  position: relative;
+  margin-top: -20px;
+}
+.translate-messages .pagination {
+  margin-left: 20px;
+}
+.translate-messages .dropdown-button-placeholder {
+  display: block;
+  width: 1px;
+  height: 20px;
+}
+.translate-messages .dropdown-to,
+.translate-messages .dropdown-from {
+  position: absolute;
+  top: 57px;
+}
+.translate-messages .dropdown-to {
+  left: 50%;
+}
+.translate-messages .dropdown-from {
+  left: 0;
+}
+.translate-messages .no-other-languages {
+  text-align: center;
+  padding: 5px;
+}
+.translate-messages .header-language,
+.translate-messages .header-swap-languages,
+.translate-messages .header-hide-translated {
+  line-height: 27px;
+}
+.translate-messages .header-language {
+  float: left;
+  cursor: pointer;
+}
+.translate-messages .header-language span.is-default {
+  text-transform: none;
+}
+.translate-messages .header-swap-languages {
+  margin-right: 10px;
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+}
+.translate-messages .header-hide-translated {
+  float: right;
+  text-align: right;
+}
+.translate-messages .header-hide-translated label {
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.translate-messages .header-hide-translated label:before {
+  top: 2px;
+  left: 0;
+}

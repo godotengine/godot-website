@@ -1,0 +1,3 @@
+{% for locale, alternateUrl in __SELF__.locales %}
+    <link rel="alternate" hreflang="{{ locale }}" href="{{ url(alternateUrl) }}" />
+{% endfor %}

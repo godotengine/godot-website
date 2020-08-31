@@ -1,0 +1,18 @@
+<!-- Language selector -->
+<ul
+    class="dropdown-menu pull-right ml-dropdown-menu"
+    role="menu"
+    data-locale-dropdown
+    data-dropdown-title="<?= e(trans('rainlab.translate::lang.locale.select_label')) ?>">
+    <?php foreach ($locales as $code => $name): ?>
+        <li role="presentation">
+            <a
+                role="menuitem"
+                tabindex="-1"
+                data-switch-locale="<?= $code ?>"
+                href="javascript:;">
+                <?= $name ?>
+            </a>
+        </li>
+    <?php endforeach ?>
+</ul>

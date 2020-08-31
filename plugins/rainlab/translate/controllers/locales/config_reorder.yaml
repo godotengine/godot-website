@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: rainlab.translate::lang.locale.reorder_title
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: RainLab\Translate\Models\Locale
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

@@ -1,0 +1,80 @@
+#messagesContainer {
+    padding-top: 20px;
+}
+
+.callout-container .callout {
+    margin-bottom: 0;
+}
+
+.translate-messages {
+    position: relative;
+    margin-top: -20px;
+
+    .pagination {
+        margin-left: 20px;
+    }
+
+    .dropdown-button-placeholder {
+        display:block;
+        width: 1px;
+        height: 20px
+    }
+
+    .dropdown-to, .dropdown-from {
+        position: absolute;
+        top: 57px;
+    }
+
+    .dropdown-to {
+        left: 50%;
+    }
+
+    .dropdown-from {
+        left: 0;
+    }
+
+    .no-other-languages {
+        text-align: center;
+        padding: 5px;
+    }
+
+    .header-language,
+    .header-swap-languages,
+    .header-hide-translated {
+        line-height: 27px;
+    }
+
+    .header-language {
+        float: left;
+        cursor: pointer;
+
+        span.is-default {
+            text-transform: none;
+        }
+    }
+
+    .header-swap-languages {
+        margin-right: 10px;
+        float: right;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .header-hide-translated {
+        float: right;
+        text-align: right;
+
+        label {
+            font-weight: normal;
+            margin-bottom: 0;
+            margin-right: 10px;
+            font-size: 12px;
+
+            &:before {
+                top: 2px;
+                left: 0;
+            }
+        }
+    }
+
+}

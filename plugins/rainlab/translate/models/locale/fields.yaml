@@ -1,0 +1,24 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: rainlab.translate::lang.locale.name
+        span: auto
+
+    code:
+        label: rainlab.translate::lang.locale.code
+        span: auto
+
+    is_enabled:
+        label: rainlab.translate::lang.locale.is_enabled
+        type: checkbox
+        comment: rainlab.translate::lang.locale.is_enabled_help
+        span: auto
+
+    is_default:
+        label: rainlab.translate::lang.locale.is_default
+        type: checkbox
+        comment: rainlab.translate::lang.locale.is_default_help
+        span: auto

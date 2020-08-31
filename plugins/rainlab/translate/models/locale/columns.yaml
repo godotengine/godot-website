@@ -1,0 +1,26 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: rainlab.translate::lang.locale.name
+        searchable: yes
+
+    code:
+        label: rainlab.translate::lang.locale.code
+        searchable: yes
+
+    is_default:
+        label: rainlab.translate::lang.locale.is_default
+        type: switch
+
+    is_enabled:
+        label: rainlab.translate::lang.locale.is_enabled
+        type: switch
+        invisible: true
+
+    sort_order:
+        label: rainlab.translate::lang.locale.sort_order
+        type: number
+        invisible: true

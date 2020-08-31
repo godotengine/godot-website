@@ -1,0 +1,22 @@
+<!-- ML MediaFinder -->
+<div
+    id="<?= $this->getId('mlControl') ?>"
+    data-control="mlmediafinder"
+    data-default-locale="<?= $defaultLocale->code ?>"
+    data-media-path="<?= $mediaPath ?>"
+    class="field-multilingual field-multilingual-mediafinder dropdown"
+    >
+
+    <?= $mediafinder ?>
+
+    <button
+        class="btn btn-default ml-btn"
+        data-toggle="dropdown"
+        data-active-locale
+        type="button">
+    </button>
+
+    <?= $this->makeMLPartial('locale_values') ?>
+
+    <?= $this->makeMLPartial('locale_selector') ?>
+</div>

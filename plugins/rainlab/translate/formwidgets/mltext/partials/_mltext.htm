@@ -1,0 +1,36 @@
+<!-- Text -->
+<?php if ($this->previewMode): ?>
+    <span class="form-control"><?= $field->value ? e($field->value) : '&nbsp;' ?></span>
+<?php else: ?>
+    <div
+        id="<?= $this->getId() ?>"
+        data-control="multilingual"
+        data-default-locale="<?= $defaultLocale->code ?>"
+        data-placeholder-field="#<?= $field->getId('placeholderField') ?>"
+        class="field-multilingual field-multilingual-text dropdown">
+
+        <input
+            type="text"
+            name="<?= $field->getName() ?>"
+            id="<?= $field->getId('placeholderField') ?>"
+            value="<?= e($field->value) ?>"
+            placeholder="<?= e(trans($field->placeholder)) ?>"
+            class="form-control"
+            autocomplete="off"
+            <?= $field->hasAttribute('maxlength') ? '' : 'maxlength="255"' ?>
+            <?= $field->getAttributes() ?>
+        />
+
+        <button
+            class="btn btn-default ml-btn"
+            data-toggle="dropdown"
+            data-active-locale
+            type="button">
+        </button>
+
+        <?= $this->makeMLPartial('locale_values') ?>
+
+        <?= $this->makeMLPartial('locale_selector') ?>
+
+    </div>
+<?php endif ?>

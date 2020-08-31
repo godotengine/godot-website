@@ -1,0 +1,14 @@
+<!-- Individual values -->
+<?php foreach ($locales as $code => $name): ?>
+    <?php
+        $value = $this->getLocaleValue($code);
+        $value = $this->isLocaleFieldJsonable() ? json_encode($value) : $value;
+    ?>
+    <input
+        type="hidden"
+        name="<?= $field->getName('RLTranslate['.$code.']') ?>"
+        value="<?= e($value) ?>"
+        data-locale-value="<?= $code ?>"
+        <?= $field->getAttributes() ?>
+    />
+<?php endforeach ?>

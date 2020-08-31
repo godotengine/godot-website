@@ -1,0 +1,31 @@
+<!-- ML Repeater -->
+<div
+    id="<?= $this->getId('mlControl') ?>"
+    data-control="mlrepeater"
+    data-default-locale="<?= e($defaultLocale->code) ?>"
+    data-switch-handler="<?= $this->getEventHandler('onSwitchItemLocale') ?>"
+    class="field-multilingual field-multilingual-repeater dropdown"
+    >
+
+    <div id="<?= $this->getId('mlRepeater') ?>">
+        <?= $repeater ?>
+    </div>
+
+    <button
+        class="btn btn-default ml-btn"
+        data-toggle="dropdown"
+        data-active-locale
+        type="button">
+    </button>
+
+    <input
+        type="hidden"
+        data-repeater-active-locale
+        name="<?= $field->getName('RLTranslateRepeaterLocale') ?>"
+        value="<?= e($defaultLocale->code) ?>"
+    />
+
+    <?= $this->makeMLPartial('locale_values') ?>
+
+    <?= $this->makeMLPartial('locale_selector') ?>
+</div>

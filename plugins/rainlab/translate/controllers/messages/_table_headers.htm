@@ -1,0 +1,100 @@
+<!-- From Header -->
+<script type="text/template" id="<?= $this->getId('fromTitle') ?>">
+    <div class="header-language" onclick="$.translateMessages.toggleDropdown('#fromTitleButton')">
+        <?php if ($selectedFrom === null): ?>
+            <?= $defaultLocale->name ?> <span class="is-default">- <?= e(trans('rainlab.translate::lang.locale.default_suffix')) ?></span>
+        <?php else: ?>
+            <?= $selectedFrom->name ?>
+        <?php endif ?>
+        <i class="icon-angle-down"></i>
+    </div>
+    <div class="header-swap-languages" onclick="$.translateMessages.swapLanguages()">
+        <i class="icon-exchange"></i>
+    </div>
+</script>
+
+<!-- From Language Picker -->
+<div class="dropdown dropdown-from">
+    <span data-toggle="dropdown" id="fromTitleButton" class="dropdown-button-placeholder"></span>
+    <ul class="dropdown-menu" role="menu" data-dropdown-title="Language">
+        <?php if ($selectedFrom !== null && $selectedTo !== null): ?>
+            <li role="presentation">
+                <a
+                    role="menuitem"
+                    tabindex="-1"
+                    href="javascript:;"
+                    onclick="return $.translateMessages.setLanguage('from', null)">
+                    <?= $defaultLocale->name ?> - <?= e(trans('rainlab.translate::lang.locale.default_suffix')) ?>
+                </a>
+            </li>
+        <?php endif ?>
+        <?php foreach ($locales as $locale): ?>
+            <?php if ($selectedTo && $selectedTo->id == $locale->id) continue; ?>
+            <?php if ($selectedFrom && $selectedFrom->id == $locale->id) continue; ?>
+            <li role="presentation">
+                <a
+                    role="menuitem"
+                    tabindex="-1"
+                    href="javascript:;"
+                    onclick="return $.translateMessages.setLanguage('from', '<?= $locale->code ?>')">
+                    <?= $locale->name ?>
+                </a>
+            </li>
+        <?php endforeach ?>
+        <?php if (count($locales) <= 1): ?>
+            <li class="no-other-languages text-muted"><small><?= e(trans('rainlab.translate::lang.locale.not_available_help')) ?></small></li>
+        <?php endif ?>
+    </ul>
+</div>
+
+<!-- To Header -->
+<script type="text/template" id="<?= $this->getId('toTitle') ?>">
+    <div class="header-language" onclick="$.translateMessages.toggleDropdown('#toTitleButton')">
+        <?php if ($selectedTo === null): ?>
+            <?= $defaultLocale->name ?> <span class="is-default">- <?= e(trans('rainlab.translate::lang.locale.default_suffix')) ?></span>
+        <?php else: ?>
+            <?= $selectedTo->name ?>
+        <?php endif ?>
+        <i class="icon-angle-down"></i>
+    </div>
+    <?php if ($selectedTo !== null): ?>
+        <div class="header-hide-translated custom-checkbox">
+            <input type="checkbox" id="hideTranslated" name="hide_translated" value="1" {{#hideTranslated}}checked{{/hideTranslated}} />
+            <label for="hideTranslated"><?= e(trans('rainlab.translate::lang.messages.hide_translated')) ?></label>
+        </div>
+    <?php endif ?>
+</script>
+
+<!-- To Language Picker -->
+<div class="dropdown dropdown-to">
+    <span data-toggle="dropdown" id="toTitleButton" class="dropdown-button-placeholder"></span>
+    <ul class="dropdown-menu" role="menu" data-dropdown-title="Language">
+        <?php if ($selectedFrom !== null && $selectedTo !== null): ?>
+            <li role="presentation">
+                <a
+                    role="menuitem"
+                    tabindex="-1"
+                    href="#"
+                    onclick="return $.translateMessages.setLanguage('to', null)">
+                    <?= $defaultLocale->name ?> - <?= e(trans('rainlab.translate::lang.locale.default_suffix')) ?>
+                </a>
+            </li>
+        <?php endif ?>
+        <?php foreach ($locales as $locale): ?>
+            <?php if ($selectedTo && $selectedTo->id == $locale->id) continue; ?>
+            <?php if ($selectedFrom && $selectedFrom->id == $locale->id) continue; ?>
+            <li role="presentation">
+                <a
+                    role="menuitem"
+                    tabindex="-1"
+                    href="#"
+                    onclick="return $.translateMessages.setLanguage('to', '<?= $locale->code ?>')">
+                    <?= $locale->name ?>
+                </a>
+            </li>
+        <?php endforeach ?>
+        <?php if (count($locales) <= 1): ?>
+            <li class="no-other-languages text-muted"><small><?= e(trans('rainlab.translate::lang.locale.not_available_help')) ?></small></li>
+        <?php endif ?>
+    </ul>
+</div>

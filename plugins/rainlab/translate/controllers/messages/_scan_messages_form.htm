@@ -1,0 +1,68 @@
+<div id="scanMessagesPopup">
+    <?= Form::open(['id' => 'scanMessagesForm']) ?>
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="popup">&times;</button>
+            <h4 class="modal-title"><?= e(trans('rainlab.translate::lang.messages.scan_messages_link')) ?></h4>
+        </div>
+
+        <div class="modal-body">
+
+            <p>
+                <?= e(trans('rainlab.translate::lang.messages.scan_messages_process')) ?>
+                <?= e(trans('rainlab.translate::lang.messages.scan_messages_process_limitations')) ?>
+                
+            </p>
+
+            <div class="form-preview">
+                <div class="form-group">
+                    <!-- Checkbox -->
+                    <div class="checkbox custom-checkbox">
+                        <input
+                            type="checkbox"
+                            name="purge_messages"
+                            value="1"
+                            id="purgeMessages">
+                        <label for="purgeMessages">
+                            <?= e(trans('rainlab.translate::lang.messages.scan_messages_purge_label')) ?>
+                        </label>
+                        <p class="help-block">
+                            <?= e(trans('rainlab.translate::lang.messages.scan_messages_purge_help')) ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <div class="loading-indicator-container">
+                <button
+                    type="submit"
+                    class="btn btn-success"
+                    data-request="onScanMessages"
+                    data-load-indicator="<?= e(trans('rainlab.translate::lang.messages.scan_messages_loading')) ?>"
+                    data-request-success="$(this).trigger('close.oc.popup')"
+                    id="scanMessagesButton">
+                    <?= e(trans('rainlab.translate::lang.messages.scan_messages_begin_scan')) ?>
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-default"
+                    data-dismiss="popup">
+                    <?= e(trans('backend::lang.form.cancel')) ?>
+                </button>
+            </div>
+        </div>
+
+    <?= Form::close() ?>
+</div>
+
+<script>
+    $('#purgeMessages').on('change', function() {
+        if ($(this).is(':checked')) {
+            $('#scanMessagesButton').data('request-confirm', '<?= e(trans('rainlab.translate::lang.messages.scan_messages_purge_confirm')) ?>')
+        }
+        else {
+            $('#scanMessagesButton').removeData('request-confirm')
+        }
+    })
+</script>

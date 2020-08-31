@@ -1,0 +1,23 @@
+<!-- ML Rich Editor -->
+<div
+    id="<?= $this->getId('mlControl') ?>"
+    data-control="mlricheditor"
+    data-textarea-element="#<?= $this->getId('textarea') ?>"
+    data-default-locale="<?= $defaultLocale->code ?>"
+    data-placeholder-field="#<?= $this->getId('textarea') ?>"
+    class="field-multilingual field-multilingual-textarea field-multilingual-richeditor dropdown <?= $stretch?'layout-relative stretch':'' ?>"
+    >
+
+    <?= $richeditor ?>
+
+    <button
+        class="btn btn-default ml-btn"
+        data-toggle="dropdown"
+        data-active-locale
+        type="button">
+    </button>
+
+    <?= $this->makeMLPartial('locale_values') ?>
+
+    <?= $this->makeMLPartial('locale_selector') ?>
+</div>

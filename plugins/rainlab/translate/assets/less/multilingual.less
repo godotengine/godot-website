@@ -1,0 +1,128 @@
+@import "../../../../../modules/backend/assets/less/core/boot.less";
+
+@multilingual-btn-color: #555555;
+
+.field-multilingual {
+    position: relative;
+
+    .ml-btn {
+        background: transparent;
+        position: absolute;
+        color: lighten(@multilingual-btn-color, 15%);
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 1px;
+        width: 44px;
+        padding-right: 0;
+        .box-shadow(none);
+        text-shadow: none;
+        z-index: 2;
+
+        &:hover {
+            color: @multilingual-btn-color;
+        }
+    }
+
+    &.field-multilingual-text {
+        .form-control {
+            padding-right: 44px;
+        }
+
+        .ml-btn {
+            right: 4px;
+            top: 50%;
+            margin-top: -44px;
+            height: 88px;
+        }
+    }
+
+    &.field-multilingual-textarea {
+        .ml-btn {
+            right: 11px;
+            top: 5px;
+            text-align: right;
+        }
+
+        .ml-dropdown-menu {
+            top: 39px;
+            right: 1px;
+        }
+    }
+
+    &.field-multilingual-richeditor {
+        .ml-btn {
+            top: 43px;
+            right: 25px;
+            text-align: right;
+        }
+
+        .ml-dropdown-menu {
+            top: 74px;
+            right: 12px;
+        }
+    }
+
+    &.field-multilingual-markdowneditor {
+        .ml-btn {
+            top: 43px;
+            right: 25px;
+            text-align: right;
+        }
+
+        .ml-dropdown-menu {
+            top: 74px !important;
+            right: 12px;
+        }
+    }
+
+    &.field-multilingual-repeater {
+        .ml-btn {
+            top: -27px;
+            right: 11px;
+            text-align: right;
+        }
+
+        .ml-dropdown-menu {
+            top: 0;
+            right: 0;
+        }
+
+        &.is-empty {
+            padding-top: 5px;
+
+            .ml-btn {
+                top: -10px;
+                right: 5px;
+                text-align: right;
+            }
+
+            .ml-dropdown-menu {
+                top: 15px;
+                right: -7px;
+            }
+        }
+    }
+}
+
+.fancy-layout {
+    .form-tabless-fields .field-multilingual {
+        .ml-btn {
+            color: rgba(255,255,255,.8);
+
+            &:hover {
+                color: rgba(255,255,255,1);
+            }
+        }
+    }
+
+    // .field-multilingual-richeditor {
+    //     .ml-btn {
+    //         top: 63px;
+    //         right: 25px;
+    //     }
+    //     .ml-dropdown-menu {
+    //         top: 94px !important;
+    //         right: 11px;
+    //     }
+    // }
+}
