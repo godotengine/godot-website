@@ -17,16 +17,30 @@ description = "header partial"
 
     <nav id="nav">
       <ul class="left">
-        <li {% if selected == 'features' %} class="active" {% endif %}><a href="/features">Features</a></li>
-        <li {% if selected == 'news' %} class="active" {% endif %}><a href="/news">News</a></li>
-        <li {% if this.page.id == 'community' %} class="active" {% endif %}><a href="/community">Community</a></li>
-        <li {% if selected == 'more' %} class="active" {% endif %}><a href="/contact">More</a></li>
+        <li {% if selected == 'features' %} class="active" {% endif %}>
+          <a href="/features">Features</a>
+        </li>
+        <li {% if selected == 'news' %} class="active" {% endif %}>
+          <a href="/news">News</a>
+        </li>
+        <li {% if this.page.id == 'community' %} class="active" {% endif %}>
+          <a href="/community">Community</a>
+        </li>
+        <li {% if selected == 'more' %} class="active" {% endif %}>
+          <a href="/contact">More</a>
+        </li>
       </ul>
 
       <ul class="right">
-        <li {% if selected == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
-        <li><a href="https://docs.godotengine.org">Learn</a></li>
-        <li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+        <li {% if selected == 'download' %} class="active" {% endif %}>
+          <a href="/download">Download</a>
+        </li>
+        <li>
+          <a href="https://docs.godotengine.org">Learn</a>
+        </li>
+        <li>
+          <a href="https://godotengine.org/asset-library/asset">Assets</a>
+        </li>
         {% component 'Goal' %}
       </ul>
     </nav>

@@ -1,0 +1,15 @@
+# Godot Website static content.
+# Copyright (C) 2007-2020, Juan Linietsky, Ariel Manzur
+# Copyright (C) 2014-2020, Godot Engine contributors.
+# Distributed under the terms of the Creative Commons Attribution License
+# version 4.0 (CC-BY 4.0) https://creativecommons.org/licenses/by/4.0/legalcode.
+#
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"POT-Creation-Date: 2020-09-03 17:25+0300\n"
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
