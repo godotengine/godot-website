@@ -3,7 +3,7 @@
 # Copyright (C) 2014-2020, Godot Engine contributors.
 # Distributed under the terms of the Creative Commons Attribution License
 # version 4.0 (CC-BY 4.0) https://creativecommons.org/licenses/by/4.0/legalcode.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
@@ -22,7 +22,8 @@ msgstr "Политики конфиденциальности"
 msgid "Code of Conduct"
 msgstr "Кодекс поведения"
 
-#: godotengine/partials/footer.htm:12 godotengine/partials/header.htm:19
+#: godotengine/layouts/news.htm:44 godotengine/partials/footer.htm:12
+#: godotengine/partials/header.htm:19
 msgid "News"
 msgstr "Новости"
 
@@ -65,3 +66,23 @@ msgstr "Познать"
 #: godotengine/partials/header.htm:37
 msgid "Assets"
 msgstr "Ассеты"
+
+#: godotengine/layouts/article.htm:113 godotengine/layouts/news.htm:68
+msgid "By"
+msgstr "Автор"
+
+#: godotengine/layouts/news.htm:48
+msgid "All"
+msgstr "Всё"
+
+#: godotengine/layouts/news.htm:49
+msgid "Devblog"
+msgstr "Девблог"
+
+#: godotengine/layouts/news.htm:77
+msgid "Prev"
+msgstr "Назад"
+
+#: godotengine/layouts/news.htm:87
+msgid "Next"
+msgstr "Вперёд"

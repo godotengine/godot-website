@@ -44,12 +44,12 @@ description = "News layout"
 <div class="head">
   <div class="container flex eqsize responsive">
     <div class="main">
-      <h1 class="intro-title">{{ this.page.title }}</h1>
+      <h1 class="intro-title">{{ TR('News')|_ }}</h1>
     </div>
 
     <div class="tabs">
-      <a href="/news" class="title-font {% if this.page.id == 'news' %} active {% endif %}">All</a>
-      <a href="/devblog" class="title-font {% if this.page.id == 'devblog' %} active {% endif %}">Devblog</a>
+      <a href="/news" class="title-font {% if this.page.id == 'news' %} active {% endif %}">{{ TR('All')|_ }}</a>
+      <a href="/devblog" class="title-font {% if this.page.id == 'devblog' %} active {% endif %}">{{ TR('Devblog')|_ }}</a>
     </div>
   </div>
 </div>
@@ -68,7 +68,7 @@ description = "News layout"
           <h3 class="title">
             <a href="{{ 'article'|page({ slug: post.slug }) }}">{{ post.title }}</a>
           </h3>
-          <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span> </h4>
+          <h4 class="author"> {{ TR('By')|_ }}: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span> </h4>
           <p>{{ post.excerpt |raw }}</p>
         </div>
       </div>
@@ -77,7 +77,7 @@ description = "News layout"
 
   <div class="flex pagination">
     {% if posts.currentPage > 1 %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a>
+      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; {{ TR('Prev')|_ }}</a>
     {% endif %}
 
     {% for page in 1..posts.lastPage %}
@@ -87,7 +87,7 @@ description = "News layout"
     {% endfor %}
 
     {% if posts.lastPage > posts.currentPage %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
+      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">{{ TR('Next')|_ }} &rarr;</a>
     {% endif %}
   </div>
 </div>

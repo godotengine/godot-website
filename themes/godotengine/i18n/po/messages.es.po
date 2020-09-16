@@ -22,7 +22,8 @@ msgstr ""
 msgid "Code of Conduct"
 msgstr ""
 
-#: godotengine/partials/footer.htm:12 godotengine/partials/header.htm:19
+#: godotengine/layouts/news.htm:44 godotengine/partials/footer.htm:12
+#: godotengine/partials/header.htm:19
 msgid "News"
 msgstr ""
 
@@ -64,4 +65,24 @@ msgstr ""
 
 #: godotengine/partials/header.htm:37
 msgid "Assets"
+msgstr ""
+
+#: godotengine/layouts/article.htm:113 godotengine/layouts/news.htm:68
+msgid "By"
+msgstr ""
+
+#: godotengine/layouts/news.htm:48
+msgid "All"
+msgstr ""
+
+#: godotengine/layouts/news.htm:49
+msgid "Devblog"
+msgstr ""
+
+#: godotengine/layouts/news.htm:77
+msgid "Prev"
+msgstr ""
+
+#: godotengine/layouts/news.htm:87
+msgid "Next"
 msgstr ""
