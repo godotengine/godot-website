@@ -3,13 +3,65 @@
 # Copyright (C) 2014-2020, Godot Engine contributors.
 # Distributed under the terms of the Creative Commons Attribution License
 # version 4.0 (CC-BY 4.0) https://creativecommons.org/licenses/by/4.0/legalcode.
-#
+# 
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Language: es\n"
-"MIME-Version: 1.0\n"
-"POT-Creation-Date: 2020-09-03 17:25+0300\n"
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-03 17:25+0300\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: godotengine/partials/footer.htm:9
+msgid "Privacy Policy"
+msgstr ""
+
+#: godotengine/partials/footer.htm:9
+msgid "Code of Conduct"
+msgstr ""
+
+#: godotengine/partials/footer.htm:12 godotengine/partials/header.htm:19
+msgid "News"
+msgstr ""
+
+#: godotengine/partials/footer.htm:13 godotengine/partials/header.htm:22
+msgid "Community"
+msgstr ""
+
+#: godotengine/partials/footer.htm:14 godotengine/partials/header.htm:16
+msgid "Features"
+msgstr ""
+
+#: godotengine/partials/footer.htm:15
+msgid "Documentation"
+msgstr ""
+
+#: godotengine/partials/footer.htm:16 godotengine/partials/header.htm:31
+msgid "Download"
+msgstr ""
+
+#: godotengine/partials/footer.htm:17
+msgid "Donate"
+msgstr ""
+
+#: godotengine/partials/footer.htm:20
+msgid "Contact us"
+msgstr ""
+
+#: godotengine/partials/head.htm:8
+msgid "Free and open source 2D and 3D game engine"
+msgstr ""
+
+#: godotengine/partials/header.htm:25
+msgid "More"
+msgstr ""
+
+#: godotengine/partials/header.htm:34
+msgid "Learn"
+msgstr ""
+
+#: godotengine/partials/header.htm:37
+msgid "Assets"
+msgstr ""
