@@ -132,21 +132,25 @@ postPage = "{{ :slug }}"
   <div class="container flex eqsize responsive">
 
     <div class="padded">
-      <h2>The game engine you waited&nbsp;for.</h2>
+      <h2>{{ TR('The game engine you waited&nbsp;for.') }}</h2>
       <p>
+        {{ TR("
         Godot provides a huge set of common tools, so you can just focus on
         making your game without reinventing the wheel.
+        ") }}
       </p>
       <p>
+        {{ TR("
         Godot is completely free and open-source under the very permissive MIT license.
         No strings attached, no royalties, nothing.
         Your game is yours, down to the last line of engine code.
+        ") }}
       </p>
 
       <a href="/download" class="btn download">
-        <div class="main">Download</div><div class="opt">3.2</div>
+        <div class="main">{{ TR('Download') }}</div><div class="opt">3.2</div>
       </a>
-      <a href="/features" class="btn flat">Learn more</a>
+      <a href="/features" class="btn flat">{{ TR('Learn more') }}</a>
     </div>
 
     <div class="base-padding full-graphic text-right">
@@ -167,7 +171,7 @@ postPage = "{{ :slug }}"
     </a>
 
     <div id="news">
-      <h3 class="base-padding no-margin-bottom">News</h3>
+      <h3 class="base-padding no-margin-bottom">{{ TR('News') }}</h3>
       <hr class="">
       {% for post in posts %}
         {% if post != posts[0] %}
@@ -177,28 +181,36 @@ postPage = "{{ :slug }}"
           <hr>
         {% endif %}
       {% endfor %}
-      <div class="text-center base-padding"><a href="/news" class="btn flat no-margin">More</a></div>
+      <div class="text-center base-padding"><a href="/news" class="btn flat no-margin">{{ TR('More') }}</a></div>
     </div>
 
   </div>
 </section>
 
 <section id="features" class="container padded">
-  <h2 class="text-right">A different way to make games</h2>
+  <h2 class="text-right">{{ TR('A different way to make games') }}</h2>
 
   <div class="flex eqsize responsive features-row">
     <div class="feature">
       <img src="{{ 'assets/home/features/innovative.png' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Innovative Design</h4>
-        <p>Big or small ideas adapt seamlessly to Godot's node-based architecture, making your life easier.</p>
+        <h4>{{ TR('Innovative Design') }}</h4>
+        <p>
+          {{ TR("
+          Big or small ideas adapt seamlessly to Godot's node-based architecture, making your life easier.
+          ") }}
+        </p>
       </div>
     </div>
     <div class="feature">
       <img src="{{ 'assets/home/features/3d.jpg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Gorgeous 3D</h4>
-        <p>Innovative 3D renderer design, which makes your art look great with minimal effort.</p>
+        <h4>{{ TR('Gorgeous 3D') }}</h4>
+        <p>
+          {{ TR("
+          Innovative 3D renderer design, which makes your art look great with minimal effort.
+          ") }}
+        </p>
       </div>
     </div>
   </div>
@@ -207,15 +219,23 @@ postPage = "{{ :slug }}"
     <div class="feature">
       <img src="{{ 'assets/home/features/2d.jpg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Beautiful 2D</h4>
-        <p>Dedicated 2D engine that works in pixel coordinates, with plenty of built-in tools.</p>
+        <h4>{{ TR('Beautiful 2D') }}</h4>
+        <p>
+          {{ TR("
+          Dedicated 2D engine that works in pixel coordinates, with plenty of built-in tools.
+          ") }}
+        </p>
       </div>
     </div>
     <div class="feature">
       <img src="{{ 'assets/home/features/easy_code.png' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Easy to program</h4>
-        <p>Object-oriented API with language options such as GDScript, C#, C++ and visual scripting.</p>
+        <h4>{{ TR('Easy to program') }}</h4>
+        <p>
+          {{ TR("
+          Object-oriented API with language options such as GDScript, C#, C++ and visual scripting.
+          ") }}
+        </p>
       </div>
     </div>
   </div>
@@ -224,53 +244,75 @@ postPage = "{{ :slug }}"
     <div class="feature">
       <img src="{{ 'assets/home/features/team_friendly.svg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Team-Friendly</h4>
-        <p>From architecture and tools to VCS integration, Godot is designed for everyone in your team.</p>
+        <h4>{{ TR('Team-Friendly') }}</h4>
+        <p>
+          {{ TR("
+          From architecture and tools to VCS integration, Godot is designed for everyone in your team.
+          ") }}
+        </p>
       </div>
     </div>
     <div class="feature">
       <img src="{{ 'assets/home/features/oss.svg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Open Source</h4>
-        <p>Truly open development: anyone who contributes to Godot benefits equally from others’ contributions.</p>
+        <h4>{{ TR('Open Source') }}</h4>
+        <p>
+          {{ TR("
+          Truly open development: anyone who contributes to Godot benefits equally from others’ contributions.
+          ") }}
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 <section id="get_involved" class="container padded">
-  <h2>Get involved</h2>
+  <h2>{{ TR('Get involved') }}</h2>
   <p>
+    {{ TR("
     Join the community and help create a game engine that belongs to everybody.
+    ") }}
   </p>
 
   <div class="flex eqsize responsive">
 
     <div class="text-center base-padding">
       <img src="{{ 'assets/home/code.svg' | theme }}" alt="" width="250" height="250">
-      <h4>Code</h4>
+      <h4>{{ TR('Code') }}</h4>
       <p>
+        {{ TR("
         If you know how to code, and enjoy fun and challenging problems, you can help by fixing bugs or creating cool new features.
+        ") }}
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn flat" target="_blank" rel="noopener"> Learn more </a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn flat" target="_blank" rel="noopener">
+        {{ TR('Learn more') }}
+      </a>
     </div>
 
     <div class="text-center base-padding">
       <img src="{{ 'assets/home/document.svg' | theme }}" alt="" width="250" height="250">
-      <h4>Document</h4>
+      <h4>{{ TR('Document') }}</h4>
       <p>
+        {{ TR("
         Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
+        ") }}
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn flat" target="_blank" rel="noopener"> Learn more </a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn flat" target="_blank" rel="noopener">
+        {{ TR('Learn more') }}
+      </a>
     </div>
 
     <div class="text-center base-padding">
       <img src="{{ 'assets/home/report.svg' | theme }}" alt="" width="250" height="250">
-      <h4>Report</h4>
+      <h4>{{ TR('Report') }}</h4>
       <p>
+        {{ TR("
         Found a problem with the engine? Don't forget to report it so that developers can track it down.
+        ") }}
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn flat" target="_blank" rel="noopener"> Learn more </a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn flat" target="_blank" rel="noopener">
+        {{ TR('Learn more') }}
+      </a>
     </div>
 
   </div>
@@ -279,18 +321,20 @@ postPage = "{{ :slug }}"
 <section id="donations" class="padded">
   <div class="container sm-full">
     <img id="sfc_graphic" src=" {{ 'assets/home/sfc.svg' | theme }} " alt="Software Freedom Conservancy" width="1" height="1" class="img-auto-size">
-    <h3 class="text-center">Donate</h3>
+    <h3 class="text-center">{{ TR('Donate') }}</h3>
     <p class="small auto-margin">
+      {{ TR("
       You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot Engine even more awesome!
+      ") }}
     </p>
 
-    <a href="/donate" class="btn flat">Learn more</a>
+    <a href="/donate" class="btn flat">{{ TR('Learn more') }}</a>
   </div>
 </section>
 
 <section id="sponsors">
   <div class="container sm-full padded">
-    <h2 class="text-center">Sponsored by</h2>
+    <h2 class="text-center">{{ TR('Sponsored by') }}</h2>
 
     <div class="platinum flex">
       <a class="sponsor card base-padding" href="https://heroiclabs.com/" target="_blank" rel="noopener">
