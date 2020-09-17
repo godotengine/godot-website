@@ -7,7 +7,7 @@ description = "head partial"
   <meta name="description" content="{{ page.description }}">
   <meta name="theme-color" content="#3d8fcc">
   {% if this.page.id == 'home' %}
-    <title>Godot Engine - {{ TR('Free and open source 2D and 3D game engine')|_ }}</title>
+    <title>Godot Engine - {{ TR('Free and open source 2D and 3D game engine') }}</title>
   {% elseif this.page.id == 'article' %}
     {% set post = blogPost.post %}
     <title>Godot Engine - {{ post.title }}</title>

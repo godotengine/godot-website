@@ -18,6 +18,7 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
+#: godotengine/layouts/more.htm:21 godotengine/pages/code-of-conduct.htm:1
 #: godotengine/partials/footer.htm:9
 msgid "Code of Conduct"
 msgstr ""
@@ -43,11 +44,12 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
+#: godotengine/layouts/more.htm:27 godotengine/pages/donate.htm:1
 #: godotengine/partials/footer.htm:17
 msgid "Donate"
 msgstr ""
 
-#: godotengine/partials/footer.htm:20
+#: godotengine/pages/contact.htm:1 godotengine/partials/footer.htm:20
 msgid "Contact us"
 msgstr ""
 
@@ -85,4 +87,1263 @@ msgstr ""
 
 #: godotengine/layouts/news.htm:87
 msgid "Next"
+msgstr ""
+
+#: godotengine/layouts/more.htm:15
+msgid "Contact"
+msgstr ""
+
+#: godotengine/layouts/more.htm:18
+msgid "Privacy"
+msgstr ""
+
+#: godotengine/layouts/more.htm:24 godotengine/pages/license.htm:1
+msgid "License"
+msgstr ""
+
+#: godotengine/pages/contact.htm:5
+msgid "Support"
+msgstr ""
+
+#: godotengine/pages/contact.htm:16
+msgid "Commercial support"
+msgstr ""
+
+#: godotengine/pages/contact.htm:27
+msgid "General inquiries"
+msgstr ""
+
+#: godotengine/pages/contact.htm:37
+msgid "Project Leadership Committee (PLC)"
+msgstr ""
+
+#: godotengine/pages/contact.htm:63
+msgid "Godot Engine team"
+msgstr ""
+
+#: godotengine/pages/contact.htm:71
+msgid "Project Founders"
+msgstr ""
+
+#: godotengine/pages/contact.htm:77
+msgid "Lead Developer"
+msgstr ""
+
+#: godotengine/pages/contact.htm:82
+msgid "Project Manager"
+msgstr ""
+
+#: godotengine/pages/contact.htm:87
+msgid "Developers"
+msgstr ""
+
+#: godotengine/pages/contact.htm:18
+msgid ""
+"While we still don't have a formal structure for offering commercial\n"
+"    support, many Godot developers can already help you, work per hour, or\n"
+"    relocate to your company. For such inquiries, contact\n"
+"    <em>support@godotengine.org</em>. Let us know about your needs and we'll "
+"try\n"
+"    to find the right person for you."
+msgstr ""
+
+#: godotengine/pages/contact.htm:29
+msgid ""
+"For other inquiries such as business, education, non-profit, promotion, "
+"etc.\n"
+"    Contact <em>contact@godotengine.org</em>."
+msgstr ""
+
+#: godotengine/pages/contact.htm:39
+msgid ""
+"The Godot project is legally represented by\n"
+"    <a href=\"https://sfconservancy.org\">Software Freedom Conservancy</a> "
+"(SFC),\n"
+"    a USA-based charity that helps promote, improve, develop, and defend\n"
+"    <abbr title=\"Free, Libre, and Open Source Software\">FLOSS</abbr> "
+"projects."
+msgstr ""
+
+#: godotengine/pages/contact.htm:47
+msgid ""
+"The Project Leadership Committee (PLC) is a group of core contributors who\n"
+"    represent the Godot project within SFC. It can be reached via the\n"
+"    <em>plc@godotengine.org</em> email address. It is currently composed of:"
+msgstr ""
+
+#: godotengine/pages/contact.htm:65
+msgid ""
+"The Godot Engine team is made of hundreds of developers around the world,\n"
+"    with both regular and occasional contributors."
+msgstr ""
+
+#: godotengine/pages/contact.htm:7
+msgid ""
+"If you have a problem learning Godot or need help, please first\n"
+"    <a href=\"/community\">use the various community channels</a>.\n"
+"    Godot developers are busy working on making Godot better, so they can't\n"
+"    always answer questions. They will, however, be glad to assist you if\n"
+"    you can't get an answer from conventional means."
+msgstr ""
+
+#: godotengine/pages/donate.htm:5
+msgid ""
+"Godot Engine is a not-for-profit, community-driven free and open source "
+"project.\n"
+"    It is legally represented by <a href=\"https://sfconservancy.org/"
+"\">Software Freedom Conservancy</a>,\n"
+"    a USA-based charity that helps promote, improve, develop, and defend "
+"<abbr title=\"Free, Libre, and Open Source Software\">FLOSS</abbr> projects."
+msgstr ""
+
+#: godotengine/pages/donate.htm:13
+msgid "User and company donations"
+msgstr ""
+
+#: godotengine/pages/donate.htm:15
+msgid ""
+"The project lives of the free time of its contributors, but also of the "
+"donations from the community.\n"
+"  All our donations are processed by Conservancy."
+msgstr ""
+
+#: godotengine/pages/donate.htm:21
+msgid "We use donations for:"
+msgstr ""
+
+#: godotengine/pages/donate.htm:23
+msgid ""
+"Hiring developers so that they can work part-time or full-time on Godot "
+"Engine, making the project progress faster."
+msgstr ""
+
+#: godotengine/pages/donate.htm:24
+msgid ""
+"Hiring artists to create high quality demo artwork under a permissive "
+"license."
+msgstr ""
+
+#: godotengine/pages/donate.htm:25
+msgid "Purchasing hardware required to develop Godot."
+msgstr ""
+
+#: godotengine/pages/donate.htm:26
+msgid "Pay for hosting of some web services."
+msgstr ""
+
+#: godotengine/pages/donate.htm:27
+msgid ""
+"Cover travel costs to some important industry events (e.g. GDC, Gamescom)."
+msgstr ""
+
+#: godotengine/pages/donate.htm:28
+msgid "Produce merchandising for events (T-shirts, banners, stickers, etc.)."
+msgstr ""
+
+#: godotengine/pages/donate.htm:32
+msgid ""
+"You can donate monthly via <a href=\"https://www.patreon.com/godotengine"
+"\">Patreon</a>,\n"
+"  or directly via PayPal."
+msgstr ""
+
+#: godotengine/pages/donate.htm:41
+msgid ""
+"Patreon is a platform for creators to crowdfund their work via monthly "
+"donations. \n"
+"  Godot Engine launched a <a href=\"https://www.patreon.com/godotengine"
+"\">Patreon page</a> \n"
+"  with the aim to collect enough money each month to hire some of its "
+"developers part-time \n"
+"  or full-time, starting with its lead developer Juan Linietsky."
+msgstr ""
+
+#: godotengine/pages/donate.htm:52
+msgid ""
+"The Patreon donations are processed by Conservancy, which then uses them \n"
+"  to hire developers based on contracts made transparent to all supporters."
+msgstr ""
+
+#: godotengine/pages/donate.htm:58
+msgid "PayPal direct donation"
+msgstr ""
+
+#: godotengine/pages/donate.htm:59
+msgid "Donations can be made to our PayPal account managed by Conservancy:"
+msgstr ""
+
+#: godotengine/pages/donate.htm:67
+msgid ""
+"If you cannot see the PayPal button, disable your ad blocker temporarily."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:1
+msgid "Privacy policy"
+msgstr ""
+
+#: godotengine/pages/license.htm:3
+msgid "The engine"
+msgstr ""
+
+#: godotengine/pages/license.htm:5
+msgid ""
+"Godot Engine is <a href=\"https://en.wikipedia.org/wiki/"
+"Free_and_open_source_software\">free and open source software</a>\n"
+"  released under the permissive <a href=\"https://github.com/godotengine/"
+"godot/blob/master/LICENSE.txt\">MIT license</a> (also named Expat license)."
+msgstr ""
+
+#: godotengine/pages/license.htm:10
+msgid "This license grants users a number of freedoms:"
+msgstr ""
+
+#: godotengine/pages/license.htm:12
+msgid "You are free to use Godot Engine, for any purpose"
+msgstr ""
+
+#: godotengine/pages/license.htm:13
+msgid "You can study how Godot Engine works and change it"
+msgstr ""
+
+#: godotengine/pages/license.htm:14
+msgid ""
+"You can distribute unmodified and changed versions of Godot Engine, even "
+"commercially and under a different license (including proprietary)"
+msgstr ""
+
+#: godotengine/pages/license.htm:25
+msgid "Your game"
+msgstr ""
+
+#: godotengine/pages/license.htm:54
+msgid "License text"
+msgstr ""
+
+#: godotengine/pages/license.htm:91
+msgid "Third-party components"
+msgstr ""
+
+#: godotengine/pages/license.htm:93
+msgid ""
+"Godot Engine uses several third-party libraries and code snippets, which are "
+"distributed under their own license and copyright statements.\n"
+"  All such components are compatible with the terms of Godot Engine's MIT "
+"license.\n"
+"  You can refer to <a href=\"https://github.com/godotengine/godot/blob/"
+"master/COPYRIGHT.txt\">this list</a>\n"
+"  for a comprehensive overview of all third-party components used in Godot "
+"Engine and their respective licenses."
+msgstr ""
+
+#: godotengine/pages/license.htm:101
+msgid "Disclaimer"
+msgstr ""
+
+#: godotengine/pages/license.htm:103
+msgid ""
+"The above explanations of Godot Engine's license terms and their "
+"implications for its users do not constitute legal advice.\n"
+"  They reflect the Godot Engine team's understanding of their own license "
+"terms and that of their third-party components;\n"
+"  in case of doubt, please refer to your lawyer."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:12
+msgid "Philosophy"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:35
+msgid "Application"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:44
+msgid "Expectations"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:71
+msgid "Restricted conduct"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:140
+msgid "Reporting a breach"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:162
+msgid "Code of Conduct team"
+msgstr ""
+
+#: godotengine/pages/license.htm:17
+msgid ""
+"The only restriction to that third freedom is that you need to distribute "
+"the\n"
+"  copyright notice and license statement of Godot Engine whenever you "
+"redistribute it.\n"
+"  So your derivative product may have a different license, but should still "
+"state in its\n"
+"  documentation that it derives from the MIT licensed Godot Engine (see "
+"below)."
+msgstr ""
+
+#: godotengine/pages/license.htm:27
+msgid ""
+"Godot Engine's license terms and copyright do not apply to the content you\n"
+"  create with it; you are free to license your games how you see best fit,\n"
+"  and will be their sole copyright owner(s)."
+msgstr ""
+
+#: godotengine/pages/license.htm:34
+msgid ""
+"Note however that the Godot Engine binary that you would distribute with\n"
+"  your game is a copy of the \"Software\" as defined in the license,\n"
+"  and you are therefore required to include the copyright notice and "
+"license\n"
+"  statement somewhere in your documentation."
+msgstr ""
+
+#: godotengine/pages/license.htm:42
+msgid ""
+"The Godot Engine developers consider that a link to this page (<a href=\"/"
+"license\">godotengine.org/license</a>)\n"
+"  in your game documentation or credits would be an acceptable way to "
+"satisfy the license terms."
+msgstr ""
+
+#: godotengine/pages/license.htm:48
+msgid ""
+"See <a href=\"https://docs.godotengine.org/en/latest/tutorials/legal/"
+"complying_with_licenses.html\">Complying with Licenses</a>\n"
+"  in the documentation for more information."
+msgstr ""
+
+#: godotengine/pages/license.htm:56
+msgid ""
+"A plain text version of the license is available from Godot Engine's GitHub "
+"repository: \n"
+"  <a href=\"https://github.com/godotengine/godot/blob/master/LICENSE.txt"
+"\">LICENSE.txt</a>."
+msgstr ""
+
+#: godotengine/pages/license.htm:61
+msgid ""
+"A list of contributors is also available: <a href=\"https://github.com/"
+"godotengine/godot/blob/master/AUTHORS.md\">AUTHORS.md</a>."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:4
+msgid ""
+"The Godot project is an international community open to everyone without "
+"discrimination.\n"
+"  We want this community to be a safe and welcoming place for both newcomers "
+"and current members.\n"
+"  Everyone should feel comfortable and accepted regardless of their personal "
+"background and\n"
+"  affiliation to the Godot project."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:15
+msgid ""
+"In the Godot community, participants from all over the world come together "
+"to create\n"
+"  a Free and Open Source game engine. This is made possible by the support, "
+"hard work,\n"
+"  and enthusiasm of thousands of people who collaborate towards the common "
+"goal of creating\n"
+"  great technology and games. Cooperation at such a scale requires common "
+"guidelines to ensure\n"
+"  a positive and inspiring atmosphere in the community."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:25
+msgid ""
+"This is why we have this Code of Conduct: it explains the type of community "
+"we want to have.\n"
+"  The rules below are not applied to all interactions with a simple matching "
+"algorithm. Human\n"
+"  interactions happen in context and are complex. Perceived violations are "
+"evaluated by real humans\n"
+"  who will try to interpret the interactions and the rules with kindness. "
+"Accordingly, there is\n"
+"  no need to hypothesize on how these rules would affect normal "
+"interactions. Be reasonable,\n"
+"  the <a href=\"#coc-team\">Code of Conduct team</a> surely will be as well."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:38
+msgid ""
+"This Code of Conduct applies to all users and contributors who engage with "
+"the Godot project\n"
+"  and its community platforms, both online and at Godot-related events."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:48
+msgid "Politeness is expected at all times. Be kind and courteous."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:53
+msgid ""
+"Always assume positive intent from others. Be aware that differences in "
+"culture\n"
+"    and English proficiency make written communication more difficult than "
+"face-to-face\n"
+"    communication and that your interpretation of messages may not be the "
+"one the author\n"
+"    intended. Conversely, if someone asks you to rephrase something you "
+"said, be ready\n"
+"    to do so without feeling judged."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:62
+msgid ""
+"Feedback is always welcome but keep your criticism constructive. We "
+"encourage you to\n"
+"    open discussions, proposals, issues, and bug reports. Use the community "
+"platforms to discuss\n"
+"    improvements, not to vent out frustration. Similarly, when other users "
+"offer you feedback\n"
+"    please accept it gracefully."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:74
+msgid ""
+"Participating in restricted conduct will lead to a warning from community\n"
+"  moderators and/or the Code of Conduct team and may lead to exclusion from\n"
+"  the community in the form of a ban from one or all platforms."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:83
+msgid ""
+"The Godot project is committed to providing a friendly and safe environment "
+"for\n"
+"    everyone, regardless of level of experience, gender identity and "
+"expression, sexual\n"
+"    orientation, disability, physical appearance, body size, race, "
+"ethnicity, language\n"
+"    proficiency, age, political orientation, nationality, religion, or other "
+"similar\n"
+"    characteristics. We do not tolerate harassment or discrimination of "
+"participants in any form."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:92
+msgid ""
+"In particular, we strive to be welcoming to all industry minorities and to "
+"ensure\n"
+"    that they can take a more active role in the community and the project. "
+"Targeted\n"
+"    harassment of minorities is unacceptable."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:99
+msgid ""
+"As a community developed project, we strive for consensus among contributors "
+"before\n"
+"    moving forward with a proposed feature. If there is not enough support "
+"for your ideas,\n"
+"    please don't continue insisting or trying to force others into "
+"supporting your point.\n"
+"    Features are not accepted through a voting process, so piling onto a "
+"contentious\n"
+"    feature proposal is not acceptable."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:108
+msgid "Aggressive or offensive behavior is not acceptable."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:113
+msgid ""
+"You will be excluded from participating in the community if you insult, "
+"demean, harass,\n"
+"    intentionally make others uncomfortable by any means, or participate in "
+"any other\n"
+"    hateful conduct, either publicly or privately."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:120
+msgid ""
+"Likewise, any spamming, trolling, flaming, baiting, or other attention-"
+"stealing behavior\n"
+"    is not welcome and will result in exclusion from the community."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:126
+msgid ""
+"Any form of retaliation against a participant who contacts the Code of "
+"Conduct team\n"
+"    is completely unacceptable, regardless of the outcome of the complaint. "
+"Any such\n"
+"    behavior will result in exclusion from the community."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:133
+msgid ""
+"For certainty, any conduct which could reasonably be considered "
+"inappropriate in\n"
+"    a professional setting is not acceptable."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:143
+msgid ""
+"If you witness or are involved in an interaction with another community "
+"member\n"
+"  that you think may violate this Code of Conduct, please contact Godot's\n"
+"  <a href=\"mailto:conduct@godotengine.org\">Code of Conduct team</a>."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:151
+msgid ""
+"The Godot team recognizes that it can be difficult to come forward in cases "
+"of\n"
+"  a violation of the Code of Conduct. To make it easier to report "
+"violations, we\n"
+"  provide a single point of contact via email at: <a href=\"mailto:"
+"conduct@godotengine.org\">conduct@godotengine.org</a>.\n"
+"  If you are more comfortable reaching out to a single person, you are also "
+"welcome\n"
+"  to contact one or more members of the team using their personal emails\n"
+"  <a href=\"#coc-team\">listed below</a>, or via direct messaging on "
+"community platforms\n"
+"  where they are present."
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:169
+msgid "Languages: English, Portuguese"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:176
+msgid "Languages: English, Dutch"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:183
+msgid "Languages: English, Italian"
+msgstr ""
+
+#: godotengine/pages/code-of-conduct.htm:190
+msgid "Languages: English, French, German"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:5
+msgid "Scope of This Notice"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:8
+msgid ""
+"This Privacy Statement is intended to describe Godot Engine's privacy\n"
+"    practices and provide information about the choices you have regarding\n"
+"    the ways in which information collected by Godot Engine is used and "
+"disclosed.\n"
+"    Godot Engine, a member project of the <a href=\"https://sfconservancy."
+"org/\">Software Freedom Conservancy</a>,\n"
+"    is referred to in this document as \"Godot\"."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:18
+msgid ""
+"It covers both online platforms of the Godot project and the use of the "
+"Godot Engine application."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:23
+msgid "Our Commitment to Privacy"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:26
+msgid ""
+"Your privacy is important to Godot and Software Freedom Conservancy.\n"
+"    To better protect your privacy and to comply with various laws and "
+"regulations,\n"
+"    we have provided this Statement explaining our information practices and "
+"the\n"
+"    choices you can make about the way your personal information is "
+"collected,\n"
+"    used and disclosed. To make this Statement easy to find, we have made "
+"it\n"
+"    available on our <a href=\"/privacy-policy\">homepage</a> and at many of "
+"the\n"
+"    locations where personally-identifiable information may be requested."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:37
+msgid "The Information We Collect"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:40
+msgid ""
+"This Privacy Statement applies to all information collected by or submitted\n"
+"    to Godot, including personal data. \"Personal data\" is data that can be "
+"used\n"
+"    to identify an individual."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:48
+msgid "Godot collects personal data when:"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:55
+msgid ""
+"you visit the Godot web site (<a href=\"https://godotengine.org"
+"\">godotengine.org</a>),\n"
+"      hosted by <a href=\"https://www.tuxfamily.org/\">TuxFamily</a> (see "
+"the TuxFamily privacy\n"
+"      policy: <a href=\"https://faq.tuxfamily.org/Privacy/En\">https://faq."
+"tuxfamily.org/Privacy/En</a>);"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:62
+msgid ""
+"you access the Asset Library in the Godot editor application to browse or "
+"download assets;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:67
+msgid ""
+"you sign up as a Godot Patreon (<a href=\"https://patreon.com/godotengine"
+"\">https://patreon.com/godotengine</a>)\n"
+"      or otherwise donate to Godot (<a href=\"https://godotengine.org/donate"
+"\">https://godotengine.org/donate</a>);"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:73
+msgid ""
+"you sign up and log in to an account on Godot's Q&amp;A site (<a href="
+"\"https://godotengine.org/qa\">https://godotengine.org/qa</a>),\n"
+"      and use it to ask or answer questions;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:79
+msgid ""
+"you sign up and log in to an account on Godot's Asset Library\n"
+"      (<a href=\"https://godotengine.org/asset-library\">https://godotengine."
+"org/asset-library</a>), and use it to submit content;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:85
+msgid ""
+"you use one of Godot's publicly logged project IRC channels (#godotengine-"
+"atelier,\n"
+"      #godotengine-devel, #godotengine-meeting) on the Freenode IRC network;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:91
+msgid "you sign up for one of our public mailing lists hosted by TuxFamily;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:96
+msgid "you participate in surveys or evaluations;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:101
+msgid "you submit questions or comments to us."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:108
+msgid ""
+"When you use the Asset Library in the Godot Engine application, HTTPS "
+"requests\n"
+"    are made to the Asset Library website, and may contain: Godot Engine "
+"version,\n"
+"    search query, selected assets, and user IP. The Asset Library processes "
+"this\n"
+"    data without storing it, but our TuxFamily hosting's HTTP server may log "
+"these\n"
+"    requests. Such logs are subject to TuxFamily's privacy policy (<a href="
+"\"https://faq.tuxfamily.org/Privacy/En\">https://faq.tuxfamily.org/Privacy/"
+"En</a>)."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:116
+msgid ""
+"This is the only personal data collected by the Godot Engine application."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:122
+msgid ""
+"When you create an account on the Godot website (including the Q&amp;A "
+"platform,\n"
+"    the Asset Library and October CMS), it collects your username and email "
+"address\n"
+"    for authentication. Additional information may be collected if you "
+"choose to\n"
+"    fill in optional fields in your user profile (e.g. full name, location, "
+"profile\n"
+"    picture)."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:132
+msgid ""
+"When you join or send messages to any of the IRC channels listed above, "
+"that\n"
+"    activity is logged and published publicly for others interested in the "
+"project.\n"
+"    This logging includes the user nickname specified when connecting to "
+"Freenode\n"
+"    and your messages in those public channels."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:141
+msgid ""
+"Third party services that Godot uses may also collect data from you and "
+"have\n"
+"    their own privacy policies which specify what they do with the data they "
+"collect."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:148
+msgid ""
+"Anonymized site visit statistics (<a href=\"https://stats.tuxfamily.org/"
+"godotengine.org\">https://stats.tuxfamily.org/godotengine.org</a>)\n"
+"    and download statistics (<a href=\"https://stats.download.tuxfamily.org/"
+"godotengine\">https://stats.download.tuxfamily.org/godotengine</a>)\n"
+"    are collected and published publicly by our TuxFamily hosting."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:156
+msgid ""
+"Godot may also collect personal data from individuals (with their consent) "
+"at\n"
+"    conventions, trade shows and expositions. The types of personal data "
+"collected\n"
+"    may include (but are not limited to):"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:165
+msgid "your first and last name;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:170
+msgid "your title and your company's name;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:175
+msgid ""
+"your home, billing, or other physical address (including street name, name "
+"of a city or town, state/province);"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:180
+msgid "your country code;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:185
+msgid "your e-mail address;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:190
+msgid "your telephone number;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:195
+msgid ""
+"any other identifier that permits Godot to make physical or online contact "
+"with you;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:201
+msgid "Using (Processing) Your Personal Data"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:204
+msgid "Godot uses the personal data you provide to:"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:211
+msgid "create and maintain your accounts;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:216
+msgid "identify and authenticate you;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:221
+msgid ""
+"attribute data and content you produce directly and indirectly in our public-"
+"facing services;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:226
+msgid "answer your questions;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:231
+msgid "send you information;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:236
+msgid ""
+"for research activities, including the production of statistical\n"
+"      reports (such aggregated information is not used to contact the "
+"subjects of the report);"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:242
+msgid "send you surveys;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:247
+msgid "maintain our servers."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:254
+msgid ""
+"We also use this personal data to provide you with information related to\n"
+"    your account and the educational materials, software and services you "
+"acquire\n"
+"    from us, to better understand your needs and interests, to improve what "
+"we do\n"
+"    for you and the public, to personalize communications, and to comply "
+"with or\n"
+"    fulfill any contractual obligations to you. It is in Godot’s legitimate "
+"business\n"
+"    interests to provide you with the information, communications, and "
+"services you\n"
+"    request; to create a public record of the data and content produced by "
+"Godot’s\n"
+"    services; and to maintain the integrity of that data and content for "
+"historical,\n"
+"    scientific, and research purposes."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:267
+msgid "Sharing Your Personal Data"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:270
+msgid ""
+"Unless you consent, Godot will never process or share the personal data you "
+"provide to us except as described below."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:276
+msgid ""
+"Godot may share your personal data with third parties under any of the "
+"following circumstances:"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:283
+msgid ""
+"To attribute your contributions to source repositories, forums, and IRC "
+"channels."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:288
+msgid ""
+"As required to provide service, and for e-mail housing (as a consequence of\n"
+"      uses already described in this Privacy Statement). It is in Godot’s "
+"legitimate\n"
+"      business interest to provide all users an accurate record of data and "
+"content\n"
+"      provided by Godot’s services, and to maintain the integrity of that "
+"data and\n"
+"      content for historical, scientific, and research purposes. This data "
+"and\n"
+"      content may include but is not limited to email, code changes, "
+"comments, and artifacts."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:298
+msgid ""
+"As required by law (such as responding to a valid subpoena, warrant, audit, "
+"or agency action, or to prevent fraud)."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:303
+msgid ""
+"For research activities, including the production of statistical reports "
+"(such\n"
+"      aggregated information is used to describe our services and is not "
+"used to\n"
+"      contact the subjects of the report)."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:311
+msgid "Donations"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:314
+msgid ""
+"We receive personal information from third party services when you donate to "
+"us\n"
+"    via online payment mechanisms. We do not sell or distribute this "
+"information to\n"
+"    third parties. Godot uses this information to acknowledge your donation "
+"and send\n"
+"    you occasional solicitations and newsletters. Donors can opt out of all "
+"contact\n"
+"    by emailing <a href=\"mailto:privacy@godotengine.org"
+"\">privacy@godotengine.org</a>.\n"
+"    Donor names (as registered on Patreon) are posted on <a href=\"https://"
+"github.com/godotengine/godot/blob/master/DONORS.md\">https://github.com/"
+"godotengine/godot/blob/master/DONORS.md</a>\n"
+"    and included in the Godot editor application's \"About\" dialog as a "
+"recognition of\n"
+"    their support. At the time of the donation, the donor can ask to be "
+"anonymous,\n"
+"    so that their name will not be publicly recognized."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:327
+msgid "Receiving E-Mail"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:330
+msgid ""
+"Godot may send you e-mail to authorize accounts you create on our site, to "
+"inform\n"
+"    you of important upcoming Godot events, to send occasional solicitations "
+"in\n"
+"    connection with our donor programs as described above or in response to "
+"your\n"
+"    questions. For your protection, Godot may contact you in the event that "
+"we\n"
+"    find an issue that requires your immediate attention. Godot processes "
+"your\n"
+"    personal data in these cases to fulfill and comply with its contractual "
+"obligations\n"
+"    to you, to provide the services you have requested, and to ensure the "
+"security\n"
+"    of your account."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:342
+msgid "Cookies and Other Browser Information"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:345
+msgid ""
+"Godot's online services automatically capture IP addresses. We use IP\n"
+"    addresses to help diagnose problems with our servers, to administer our "
+"website,\n"
+"    and to help ensure the security of your interaction with our services."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:353
+msgid ""
+"As part of offering and providing customizable and personalized services, "
+"Godot\n"
+"    uses cookies to store and sometimes track information about you. A "
+"cookie is\n"
+"    a small amount of data that is sent to your browser from a Web server "
+"and stored\n"
+"    on your computer's hard drive. All sections of godotengine.org where you "
+"are\n"
+"    prompted to log in or that are customizable require your browser to "
+"accept cookies."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:363
+msgid ""
+"Generally, we use cookies to remind us of who you are and to access your "
+"account\n"
+"    information (stored on our computers) in order to provide a better and "
+"more\n"
+"    personalized service. This cookie is set when you register or \"sign in"
+"\" and\n"
+"    is modified when you \"sign out\" of our services."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:372
+msgid ""
+"If you do not want your personal information to be stored by cookies, you\n"
+"    can configure your browser so that it always rejects these cookies or "
+"asks\n"
+"    you each time if you accept them or not. However, you must understand "
+"that\n"
+"    the use of cookies may be necessary to provide certain services, and "
+"choosing\n"
+"    to reject cookies will reduce the performance and functionality of the "
+"site.\n"
+"    Your browser documentation includes instructions explaining how to "
+"enable,\n"
+"    disable or delete cookies at the browser level (usually located in the "
+"“Help”,\n"
+"    “Tools” or “Edit” facility)."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:384
+msgid "Our Commitment to Data Security"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:387
+msgid ""
+"Godot trains its administrators on our privacy policy guidelines and makes\n"
+"    our privacy policy available to our partners. Our website uses Secure "
+"Socket\n"
+"    Layer (SSL) technology, which encrypts your personal data when you send "
+"your\n"
+"    personal information on our website. In addition, Godot and its "
+"partners\n"
+"    enter into confidentiality agreements which require that care and "
+"precautions\n"
+"    be taken to prevent loss, misuse, or disclosure of your personal data."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:397
+msgid "Public Forums Reminder"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:400
+msgid ""
+"Godot often makes mailing lists, source repositories, issue trackers, "
+"Etherpads,\n"
+"    forums, and IRC logs available to the public. Please remember that any "
+"information\n"
+"    that is disclosed in these areas becomes public information. Please "
+"think carefully\n"
+"    about your desired level of anonymity before you disclose personal "
+"information.\n"
+"    Although we value individual ideas and encourage free expression, Godot "
+"reserves\n"
+"    the right to take necessary action to preserve the integrity of these "
+"areas,\n"
+"    such as removing any posting that is vulgar or inappropriate. It is in "
+"Godot’s\n"
+"    legitimate business interests to provide all users an accurate record of "
+"data and\n"
+"    content provided in the public forums it maintains and uses; to maintain "
+"the\n"
+"    integrity of that data and content for historical, scientific, and "
+"research purposes;\n"
+"    and to provide an environment for the free exchange of ideas relevant "
+"and constructive\n"
+"    to the development and propagation of software freedom."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:416
+msgid "Our Commitment to Children's Online Privacy"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:419
+msgid ""
+"Out of special concern for children's privacy, Godot does not knowingly "
+"accept\n"
+"    online personal information from children under the age of 13. Godot "
+"does not\n"
+"    knowingly allow children under the age of 13 to become registered "
+"members of\n"
+"    our sites. Godot does not knowingly collect or solicit personal "
+"information\n"
+"    about children under 13."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:429
+msgid ""
+"In the event that Godot ever decides to expand its intended site audience "
+"to\n"
+"    include children under the age of 13, those specific web pages will, in "
+"accordance\n"
+"    with the requirements of the Children's Online Privacy Protection Act "
+"(COPPA),\n"
+"    be clearly identified and provide an explicit privacy notice addressed "
+"to children\n"
+"    under 13. In addition, Godot will provide an appropriate mechanism to "
+"obtain parental\n"
+"    approval, allow parents to subsequently make changes to or request "
+"removal of their\n"
+"    children's personal information, and provide access to any other "
+"information as required by law."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:441
+msgid ""
+"Additionally, EU residents under the age of 16 should not submit their "
+"personal\n"
+"    data for subscribing to our email solicitations and we will delete any "
+"such data\n"
+"    if we become aware of it."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:448
+msgid "About Links to Other Sites"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:451
+msgid ""
+"This site contains links to other sites. Godot does not control the "
+"information\n"
+"    collection of sites that can be reached through links from godotengine."
+"org. If\n"
+"    you have questions about the data collection procedures of linked sites, "
+"please\n"
+"    contact those sites directly."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:459
+msgid "Your Rights and Choices in the EEA and Around the World"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:462
+msgid ""
+"Where the EU General Data Protection Regulation 2016/679 (“GDPR”) applies to "
+"the\n"
+"    processing of your personal data, especially when you access the website "
+"from\n"
+"    a country in the European Economic Area (“EEA”), you have the following "
+"rights,\n"
+"    subject to some limitations, against Godot:"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:472
+msgid "The right to access your personal data;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:477
+msgid "The right to rectify the personal data we hold about you;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:482
+msgid "The right to erase your personal data;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:487
+msgid "The right to restrict our use of your personal data;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:492
+msgid "The right to object to our use of your personal data;"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:497
+msgid ""
+"The right to receive your personal data in a usable electronic format and\n"
+"      transmit it to a third party (also known as the right of data "
+"portability); and"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:503
+msgid ""
+"The right to lodge a complaint with your local data protection authority."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:510
+msgid ""
+"If you would like to exercise any of these rights, you may do so by mailing\n"
+"    <a href=\"mailto:privacy@godotengine.org\">privacy@godotengine.org</a>. "
+"Please\n"
+"    understand, however, the rights enumerated above are not absolute in all "
+"cases."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:518
+msgid ""
+"Where the GDPR applies, you also have the right to withdraw any consent\n"
+"    you have given to uses of your personal data. If you wish to withdraw\n"
+"    consent that you have previously provided to Godot, you may do so by\n"
+"    mailing <a href=\"mailto:privacy@godotengine.org\">privacy@godotengine."
+"org</a>.\n"
+"    However, the withdrawal of consent will not affect the lawfulness of\n"
+"    processing based on consent before its withdrawal."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:529
+msgid ""
+"Godot will undertake best efforts to provide these rights to people outside "
+"of the EEA as well."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:534
+msgid "How to Access, Modify or Update Your Information"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:537
+msgid ""
+"Godot gives you the ability to access, modify or update your personal\n"
+"    data at any time. On sites where you can create accounts (Q&amp;A, Asset "
+"Library),\n"
+"    you may log in and make changes to your login information (change your "
+"password),\n"
+"    your contact information, your general preferences and your "
+"personalization settings.\n"
+"    If necessary, you may also contact us and describe the changes you want "
+"made\n"
+"    to the personal data you have previously provided by mailing <a href="
+"\"mailto:privacy@godotengine.org\">privacy@godotengine.org</a>."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:548
+msgid ""
+"If you wish to remove your personal data from Godot, you may contact\n"
+"    us at <a href=\"mailto:privacy@godotengine.org\">privacy@godotengine."
+"org</a> and\n"
+"    request that we remove this information from the Godot System. Other\n"
+"    locations where you may have used your personal data as an identifier\n"
+"    (e.g. mailing list and forum postings in the archives, repository "
+"changelogs,\n"
+"    and IRC logs) will not be altered."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:558
+msgid "How to Contact Us"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:561
+msgid ""
+"If you have any questions about any of these practices or Godot's use of\n"
+"    your personal information, please feel free to contact us by email at:"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:570
+msgid ""
+"Godot will work with you to resolve any concerns you may have about this "
+"Statement."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:575
+msgid "Changes to this Privacy Statement"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:578
+msgid ""
+"Godot reserves the right to change this policy from time to time. If we do "
+"make\n"
+"    changes, the revised Privacy Statement will be posted on this site. A "
+"notice\n"
+"    will be posted on our homepage for 30 days whenever this privacy "
+"statement\n"
+"    is changed in a material way."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:587
+msgid "This Privacy Statement was last amended on 2020-06-30."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:591
+msgid ""
+"You can review the change history at <a href=\"https://github.com/"
+"godotengine/godot-website/commits/master/themes/godotengine/pages/privacy-"
+"policy.htm\">https://github.com/godotengine/godot-website/commits/master/"
+"themes/godotengine/pages/privacy-policy.htm</a>."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:596
+msgid "Attribution and License"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:599
+msgid ""
+"This Privacy Policy is licensed under Attribution-ShareAlike 4.0 "
+"International (CC BY-SA 4.0). It is a derivative work of:"
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:606
+msgid ""
+"Software Freedom Conservancy's Privacy Policy, used under Attribute-Share "
+"Alike 4.0."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:612
+msgid ""
+"Red Hat's Privacy Policy for the Fedora Project, used under Attribution-"
+"Share Alike 3.0 Unported."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:618
+msgid ""
+"The Free Software Foundation's Privacy Policy, used under Attribution-"
+"ShareAlike 4.0 International (CC BY-SA 4.0)."
+msgstr ""
+
+#: godotengine/pages/privacy-policy.htm:624
+msgid ""
+"WordPress.org's Privacy Policy, used under Attribution-ShareAlike 2.5 "
+"Generic (CC BY-SA 2.5)."
 msgstr ""

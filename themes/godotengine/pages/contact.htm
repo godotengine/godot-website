@@ -5,47 +5,57 @@ description = "Contact page"
 is_hidden = 0
 ==
 
-{% put title %} Contact us {% endput %}
+{% put title %} {{ TR('Contact us') }} {% endput %}
 
 <div class="container">
 
-  <h3 class="title">Support</h3>
+  <h3 class="title">{{ TR('Support') }}</h3>
   <p>
+    {{ TR("
     If you have a problem learning Godot or need help, please first
-    <a href="/community">use the various community channels</a>.
-    Godot developers are busy working in making Godot better, so they can't
+    <a href=\"/community\">use the various community channels</a>.
+    Godot developers are busy working on making Godot better, so they can't
     always answer questions. They will, however, be glad to assist you if
     you can't get an answer from conventional means.
+    ") }}
   </p>
 
-  <h3 class="title">Commercial support</h3>
+  <h3 class="title">{{ TR('Commercial support') }}</h3>
   <p>
+    {{ TR("
     While we still don't have a formal structure for offering commercial
     support, many Godot developers can already help you, work per hour, or
     relocate to your company. For such inquiries, contact
     <em>support@godotengine.org</em>. Let us know about your needs and we'll try
     to find the right person for you.
+    ") }}
   </p>
 
-  <h3 class="title">General inquiries</h3>
+  <h3 class="title">{{ TR('General inquiries') }}</h3>
   <p>
+    {{ TR("
     For other inquiries such as business, education, non-profit, promotion, etc.
     Contact <em>contact@godotengine.org</em>.
+    ") }}
   </p>
 
   <hr>
 
-  <h3 class="title" id="plc">Project Leadership Committee (PLC)</h3>
+  <h3 class="title" id="plc">{{ TR('Project Leadership Committee (PLC)') }}</h3>
   <p>
+    {{ TR("
     The Godot project is legally represented by
-    <a href="https://sfconservancy.org">Software Freedom Conservancy</a> (SFC),
+    <a href=\"https://sfconservancy.org\">Software Freedom Conservancy</a> (SFC),
     a USA-based charity that helps promote, improve, develop, and defend
-    <abbr title="Free, Libre, and Open Source Software">FLOSS</abbr> projects.
+    <abbr title=\"Free, Libre, and Open Source Software\">FLOSS</abbr> projects.
+    ") }}
   </p>
   <p>
+    {{ TR("
     The Project Leadership Committee (PLC) is a group of core contributors who
     represent the Godot project within SFC. It can be reached via the
     <em>plc@godotengine.org</em> email address. It is currently composed of:
+    ") }}
   </p>
   <ul>
     <li>Ariel Manzur - <em>ariel@godotengine.org</em></li>
@@ -57,29 +67,31 @@ is_hidden = 0
     <li>Rémi Verschelde - <em>remi@godotengine.org</em></li>
   </ul>
 
-  <h3 class="title" id="devs">Godot Engine team</h3>
+  <h3 class="title" id="devs">{{ TR('Godot Engine team') }}</h3>
   <p>
+    {{ TR("
     The Godot Engine team is made of hundreds of developers around the world,
     with both regular and occasional contributors.
+    ") }}
   </p>
 
-  <h4>Project Founders:</h4>
+  <h4>{{ TR('Project Founders') }}:</h4>
   <ul>
     <li>Juan Linietsky (reduz)</li>
     <li>Ariel Manzur (punto-)</li>
   </ul>
 
-  <h4>Lead Developer:</h4>
+  <h4>{{ TR('Lead Developer') }}:</h4>
   <ul>
     <li>Juan Linietsky (reduz)</li>
   </ul>
 
-  <h4>Project Manager:</h4>
+  <h4>{{ TR('Project Manager') }}:</h4>
   <ul>
     <li>Rémi Verschelde (akien-mga)</li>
   </ul>
 
-  <h4>Developers:</h4>
+  <h4>{{ TR('Developers') }}:</h4>
   <ul>
     <li>Aaron Franke (aaronfranke)</li>
     <li>Alexander Holland (AlexHolly)</li>

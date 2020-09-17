@@ -15,19 +15,19 @@ description = "More layout"
 
     <div class="tabs">
       <a href="/contact" class="title-font {% if this.page.id == 'contact' %} active {% endif %}">
-        Contact
+        {{ TR('Contact') }}
       </a>
       <a href="/privacy-policy" class="title-font {% if this.page.id == 'privacy-policy' %} active {% endif %}">
-        Privacy
+        {{ TR('Privacy') }}
       </a>
       <a href="/code-of-conduct" class="title-font {% if this.page.id == 'code-of-conduct' %} active {% endif %}">
-        Code of Conduct
+        {{ TR('Code of Conduct') }}
       </a>
       <a href="/license" class="title-font {% if this.page.id == 'license' %} active {% endif %}">
-        License
+        {{ TR('License') }}
       </a>
       <a href="/donate" class="title-font {% if this.page.id == 'donate' %} active {% endif %}">
-        Donate
+        {{ TR('Donate') }}
       </a>
     </div>
   </div>

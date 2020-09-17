@@ -18,28 +18,28 @@ description = "header partial"
     <nav id="nav">
       <ul class="left">
         <li {% if selected == 'features' %} class="active" {% endif %}>
-          <a href="/features">{{ TR('Features')|_ }}</a>
+          <a href="/features">{{ TR('Features') }}</a>
         </li>
         <li {% if selected == 'news' %} class="active" {% endif %}>
-          <a href="/news">{{ TR('News')|_ }}</a>
+          <a href="/news">{{ TR('News') }}</a>
         </li>
         <li {% if this.page.id == 'community' %} class="active" {% endif %}>
-          <a href="/community">{{ TR('Community')|_ }}</a>
+          <a href="/community">{{ TR('Community') }}</a>
         </li>
         <li {% if selected == 'more' %} class="active" {% endif %}>
-          <a href="/contact">{{ TR('More')|_ }}</a>
+          <a href="/contact">{{ TR('More') }}</a>
         </li>
       </ul>
 
       <ul class="right">
         <li {% if selected == 'download' %} class="active" {% endif %}>
-          <a href="/download">{{ TR('Download')|_ }}</a>
+          <a href="/download">{{ TR('Download') }}</a>
         </li>
         <li>
-          <a href="https://docs.godotengine.org">{{ TR('Learn')|_ }}</a>
+          <a href="https://docs.godotengine.org">{{ TR('Learn') }}</a>
         </li>
         <li>
-          <a href="https://godotengine.org/asset-library/asset">{{ TR('Assets')|_ }}</a>
+          <a href="https://godotengine.org/asset-library/asset">{{ TR('Assets') }}</a>
         </li>
         {% component 'Goal' %}
       </ul>
