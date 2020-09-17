@@ -8,9 +8,11 @@ use Cms\Classes\Theme;
 use Cms\Classes\Layout;
 use Cms\Classes\Partial;
 use System\Helpers\Cache as CacheHelper;
+use Symfony\Component\Yaml\Yaml;
 use RainLab\Translate\Models\Locale;
 use RainLab\Translate\Models\Message;
 use RainLab\Translate\Classes\ThemeScanner;
+use GodotEngine\Utility\Classes\TranslationHelper;
 use \Gettext\Loader\PoLoader;
 
 class UpdateI18n extends Command
@@ -56,10 +58,7 @@ class UpdateI18n extends Command
         // List is configured in the admin panel (Translate > Manage Languages).
         $availableLocales = Locale::listAvailable();
         foreach ($availableLocales as $lang => $langName) {
-            // English is the default language and does not need to be translated.
-            // In theory, this can be compared to the stored default value from the Translate plugin.
-            // But we probably won't ever change the default to anything but English.
-            if ($lang == 'en') {
+            if ($lang == Locale::getDefault()->code) {
                 continue;
             }
 
@@ -67,16 +66,17 @@ class UpdateI18n extends Command
             $outputPath = "themes/godotengine/i18n/$lang.yaml";
 
             $inputFile = $loader->loadFile($inputPath);
-            $outputFile = fopen($outputPath, 'w');
+            $yamlData = [];
 
             foreach ($inputFile->getTranslations() as $entry) {
                 $originalMessage = $entry->getOriginal();
                 $translatedMessage = $entry->getTranslation();
 
-                fwrite($outputFile, Message::makeMessageCode($originalMessage) . ': ' . $translatedMessage . "\r\n");
+                $translationKey = TranslationHelper::generateTranslationKey($originalMessage);
+                $yamlData[$translationKey] = $translatedMessage;
             }
 
-            fclose($outputFile);
+            file_put_contents($outputPath, Yaml::dump($yamlData));
             $this->output->writeln('Successfully updated "' . $lang . '" translation; file ' . $outputPath . ' has been written.');
         }
 

@@ -105,10 +105,7 @@ class ExtractI18n extends Command
         // List is configured in the admin panel (Translate > Manage Languages).
         $availableLocales = Locale::listAvailable();
         foreach ($availableLocales as $lang => $langName) {
-            // English is the default language and does not need to be translated.
-            // In theory, this can be compared to the stored default value from the Translate plugin.
-            // But we probably won't ever change the default to anything but English.
-            if ($lang == 'en') {
+            if ($lang == Locale::getDefault()->code) {
                 continue;
             }
 

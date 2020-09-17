@@ -4,6 +4,7 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use Cms\Classes\Theme;
+use GodotEngine\Utility\Classes\TranslationHelper;
 use \Gettext\Generator\PoGenerator;
 use \Gettext\Loader\PoLoader;
 
@@ -78,7 +79,7 @@ class AddI18n extends Command
             foreach ($baseFile->getTranslations() as $entry) {
                 $originalMessage = $entry->getOriginal();
 
-                fwrite($yamlFile, Message::makeMessageCode($originalMessage) . ': ' . "\r\n");
+                fwrite($yamlFile, TranslationHelper::generateTranslationKey($originalMessage) . ': ' . "\r\n");
             }
 
             fclose($yamlFile);

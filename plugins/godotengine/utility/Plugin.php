@@ -1,6 +1,11 @@
 <?php
 namespace GodotEngine\Utility;
 
+use Str;
+use RainLab\Translate\Models\Locale;
+use RainLab\Translate\Models\Message;
+use GodotEngine\Utility\Classes\TranslationHelper;
+
 class Plugin extends \System\Classes\PluginBase
 {
     public $require = ['Rainlab.Translate'];
@@ -27,7 +32,27 @@ class Plugin extends \System\Classes\PluginBase
     {
         return [
             'functions' => [
-                'TR' => function($msg) { return $msg; }
+                'TR' => function ($message) {
+                    if (Message::$locale == Locale::getDefault()->code) {
+                        return $message;
+                    }
+                    
+                    // Possibly sanitize the message beforehand to exclude any HTML tags.
+                    // Non-alphanumeric characters are removed by this regardless.
+                    $translationKey = TranslationHelper::generateTranslationKey($message);
+                    
+                    // Translated messages can contain HTML tags.
+                    // We trust that strings are sanitized via Weblate 
+                    // (https://docs.weblate.org/en/latest/user/checks.html#unsafe-html).
+                    $translatedMessage = Message::trans($translationKey, [], null);
+
+                    // Message was not translated, fallback to the English variant.
+                    if ($translatedMessage == $translationKey)
+                    {
+                        return $message;
+                    }
+                    return Message::trans($translationKey, [], null);
+                },
             ]
         ];
     }

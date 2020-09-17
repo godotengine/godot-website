@@ -56,7 +56,7 @@ class TwigFunctionsScanner implements FunctionsScannerInterface
         $function = new ParsedFunction($name, $filename, $line);
 
         foreach ($node->getNode('arguments')->getIterator() as $argument) {
-            $arg = $argument->hasAttribute('value') ? $argument->getAttribute('value') : null;
+            $arg = $argument->hasAttribute('value') ? trim($argument->getAttribute('value')) : null;
             $function->addArgument($arg);
         }
 
