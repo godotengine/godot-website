@@ -286,3 +286,42 @@ strongfriendly.filesystem.usagestrong.that.works.great.with.version.control.syst
 strongscene.instancingstrong.makes.teamwork.a.breeze.every.team.member.can.focus.on.their.own.scene.be.it.a.character.level.etc.and.edit.without.stepp.23: ''
 text.based.descriptive.and.optimal.scene.format: ''
 script.syntax.supported.by.github: ''
+events: Мероприятия
+upcoming: Будущие
+past: Прошедшие
+no.more.events.scheduled.for.2020.due.to.covid.19: 'В связи с эпидемиологической обстановкой вокруг Covid-19 на 2020 год больше не запланировано мероприятий.'
+no.events.scheduled.for.2021.yet: 'Пока не запланировано мероприятий на 2021 год.'
+page.not.found: 'Страница не найдена'
+were.sorry.but.the.page.you.requested.cannot.be.found: 'К сожалению, запрошенную страницу найти не удалось.'
+go.to.the.homepage: 'Вернуться на главную'
+godot.has.a.very.active.community.across.multiple.channels: 'На множестве площадок присутствуют очень активные сообщества Godot.'
+by.joining.godot.communities.you.agree.to.follow.godots.a.hrefcode.of.conductcode.of.conducta: 'Вступая в одно из сообществ Godot, вы соглашаетесь с <a href="/code-of-conduct">Кодексом поведения</a> Godot.'
+user.groups: 'Пользовательские группы'
+find.local.godot.user.groups.run.by.community.members: 'Узнайте о местных группах пользователей Godot.'
+upcoming.community.events: 'Будущие мероприятия сообщества.'
+questions.amp.answers: 'Вопросы и ответы'
+place.to.ask.questions.and.search.for.answers.from.the.community: 'Здесь можно задать вопрос и получить ответ от других участников сообщества.'
+a.vibrant.community.for.discussion.user.support.showcases.and.custom.emoji: 'Процветающее сообщество для обсуждений, поддержки, демонстрации работ... и уникальных эмодзи!'
+old.fashioned.but.reliable.the.main.discussion.platform.of.core.developers: 'Старомодный, но надёжный канал связи для основной команды разработки.'
+libre.decentralized.chat.with.advanced.features.compatible.with.irc: 'Свободный и децентрализованный чат с множеством функций, совместим с IRC.'
+large.community.for.discussions.around.godot: 'Большое сообщество для обсуждения всего, что связано с Godot.'
+for.the.anti.imperialist.resistance.to.facebook: 'Для сопротивленцев всем империалистическим идеалам Facebook.'
+send.bug.reports.here.to.request.features.use.the.a.hrefhttpsgithub.comgodotenginegodot.proposalsgodot.proposalsa.repository.instead: 'Здесь можно сообщить об ошибках. А новую функциональность можно предложить в <a href="https://github.com/godotengine/godot-proposals">специальном репозитории</a>.'
+get.small.bits.of.development.news: 'Крошечные порции новостей от команды разработки.'
+forum: Форум
+community.forum.for.all.godot.developers: 'Открытый форум для все разработчиков Godot.'
+steam.community: 'Сообщество Steam'
+discuss.and.share.tips.with.other.developers.on.steam: 'Обсуждения и советы от других разработчиков на платформе Steam.'
+channel.for.official.godot.videos: 'Официальный канал с видео о Godot.'
+internal.server.error: 'Внутренняя ошибка сервера'
+were.sorry.but.an.internal.server.error.occurred.when.trying.to.display.this.page: 'К сожалению, произошла ошибка при попытке отобразить страницу.'
+some.community.members.manage.local.godot.user.groups.anyone.is.welcome.to.join.or.create.a.local.community: 'Некоторые участники сообществ организуют местные пользовательские группы Godot. Каждый может к ним присоединиться или создать свою!'
+if.you.run.a.local.community.and.would.like.to.have.it.listed.here.please.send.an.email.to.emwebmaster.at.godotengine.orgem: 'Если вы являетесь организатором одной из таких групп и хотите увидеть её здесь, напишите письмо на <em>webmaster at godotengine · org</em>.'
+brazil: Бразилия
+canada: Канада
+colombia: Колумбия
+france.or.french.speaking: 'Франция и другие франко-говорящие'
+germany: Германия
+italy: Италия
+russia: Россия
+spain: Испания

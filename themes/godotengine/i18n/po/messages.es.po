@@ -28,7 +28,8 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: godotengine/partials/footer.htm:13 godotengine/partials/header.htm:22
+#: godotengine/pages/community.htm:1 godotengine/partials/footer.htm:13
+#: godotengine/partials/header.htm:22
 msgid "Community"
 msgstr ""
 
@@ -1834,4 +1835,178 @@ msgstr ""
 
 #: godotengine/layouts/features.htm:464
 msgid "Script syntax supported by GitHub."
+msgstr ""
+
+#: godotengine/layouts/events.htm:24 godotengine/pages/community.htm:78
+msgid "Events"
+msgstr ""
+
+#: godotengine/layouts/events.htm:27
+msgid "Upcoming"
+msgstr ""
+
+#: godotengine/layouts/events.htm:28
+msgid "Past"
+msgstr ""
+
+#: godotengine/pages/events.htm:5
+msgid "No more events scheduled for 2020 due to Covid-19."
+msgstr ""
+
+#: godotengine/pages/events.htm:9
+msgid "No events scheduled for 2021 yet."
+msgstr ""
+
+#: godotengine/pages/404.htm:1
+msgid "Page not found"
+msgstr ""
+
+#: godotengine/pages/404.htm:29
+msgid "We're sorry, but the page you requested cannot be found."
+msgstr ""
+
+#: godotengine/pages/404.htm:33 godotengine/pages/error.htm:33
+msgid "Go to the homepage"
+msgstr ""
+
+#: godotengine/pages/community.htm:5
+msgid "Godot has a very active community across multiple channels."
+msgstr ""
+
+#: godotengine/pages/community.htm:9
+msgid ""
+"By joining Godot communities, you agree to follow Godot's\n"
+"    <a href=\"/code-of-conduct\">Code of Conduct</a>."
+msgstr ""
+
+#: godotengine/pages/community.htm:70
+msgid "User groups"
+msgstr ""
+
+#: godotengine/pages/community.htm:72
+msgid "Find local Godot user groups run by community members."
+msgstr ""
+
+#: godotengine/pages/community.htm:80
+msgid "Upcoming community events."
+msgstr ""
+
+#: godotengine/pages/community.htm:91
+msgid "Questions &amp; Answers"
+msgstr ""
+
+#: godotengine/pages/community.htm:93
+msgid "Place to ask questions and search for answers from the community."
+msgstr ""
+
+#: godotengine/pages/community.htm:107
+msgid ""
+"A vibrant community for discussion, user support, showcases... and custom "
+"emoji!"
+msgstr ""
+
+#: godotengine/pages/community.htm:121
+msgid ""
+"Old-fashioned but reliable, the main discussion platform of core developers."
+msgstr ""
+
+#: godotengine/pages/community.htm:136
+msgid "Libre decentralized chat with advanced features, compatible with IRC."
+msgstr ""
+
+#: godotengine/pages/community.htm:150
+msgid "Large community for discussions around Godot."
+msgstr ""
+
+#: godotengine/pages/community.htm:164
+msgid "For the anti-imperialist resistance to Facebook."
+msgstr ""
+
+#: godotengine/pages/community.htm:178
+msgid ""
+"Send bug reports here. To request features, use the\n"
+"          <a href=\"https://github.com/godotengine/godot-proposals\">Godot "
+"proposals</a> repository instead."
+msgstr ""
+
+#: godotengine/pages/community.htm:193
+msgid "Get small bits of development news."
+msgstr ""
+
+#: godotengine/pages/community.htm:205
+msgid "Forum"
+msgstr ""
+
+#: godotengine/pages/community.htm:207
+msgid "Community forum for all Godot developers."
+msgstr ""
+
+#: godotengine/pages/community.htm:219
+msgid "Steam Community"
+msgstr ""
+
+#: godotengine/pages/community.htm:221
+msgid "Discuss and share tips with other developers on Steam."
+msgstr ""
+
+#: godotengine/pages/community.htm:235
+msgid "Channel for official Godot videos."
+msgstr ""
+
+#: godotengine/pages/error.htm:1
+msgid "Internal server error"
+msgstr ""
+
+#: godotengine/pages/error.htm:29
+msgid ""
+"We're sorry, but an internal server error occurred when trying to display "
+"this page."
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:1
+msgid "User Groups"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:5
+msgid ""
+"Some community members manage local Godot user groups.\n"
+"    Anyone is welcome to join or create a local community!"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:13
+msgid ""
+"If you run a local community and would like to have it listed here,\n"
+"  please send an email to <em>webmaster at godotengine · org</em>."
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:27
+msgid "Brazil"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:36
+msgid "Canada"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:42
+msgid "Colombia"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:48
+msgid "France or French-speaking"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:55
+msgid "Germany"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:62
+msgid "Italy"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:68
+msgid "Russia"
+msgstr ""
+
+#: godotengine/pages/user-groups.htm:75
+msgid "Spain"
 msgstr ""

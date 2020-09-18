@@ -24,11 +24,11 @@ description = "Events layout"
 <div class="head">
   <div class="container flex eqsize responsive">
     <div class="main">
-      <h1 class="intro-title">Events</h1>
+      <h1 class="intro-title">{{ TR('Events') }}</h1>
     </div>
     <div class="tabs">
-      <a href="/events/" class="title-font {% if this.page.id == 'events' %} active {% endif %}">Upcoming</a>
-      <a href="/events/past" class="title-font {% if this.page.id == 'events-past' %} active {% endif %}">Past</a>
+      <a href="/events/" class="title-font {% if this.page.id == 'events' %} active {% endif %}">{{ TR('Upcoming') }}</a>
+      <a href="/events/past" class="title-font {% if this.page.id == 'events-past' %} active {% endif %}">{{ TR('Past') }}</a>
     </div>
   </div>
 </div>

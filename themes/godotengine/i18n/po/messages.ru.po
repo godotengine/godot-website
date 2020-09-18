@@ -28,7 +28,8 @@ msgstr "Кодекс поведения"
 msgid "News"
 msgstr "Новости"
 
-#: godotengine/partials/footer.htm:13 godotengine/partials/header.htm:22
+#: godotengine/pages/community.htm:1 godotengine/partials/footer.htm:13
+#: godotengine/partials/header.htm:22
 msgid "Community"
 msgstr "Сообщество"
 
@@ -1870,3 +1871,192 @@ msgstr ""
 #: godotengine/layouts/features.htm:464
 msgid "Script syntax supported by GitHub."
 msgstr ""
+
+#: godotengine/layouts/events.htm:24 godotengine/pages/community.htm:78
+msgid "Events"
+msgstr "Мероприятия"
+
+#: godotengine/layouts/events.htm:27
+msgid "Upcoming"
+msgstr "Будущие"
+
+#: godotengine/layouts/events.htm:28
+msgid "Past"
+msgstr "Прошедшие"
+
+#: godotengine/pages/events.htm:5
+msgid "No more events scheduled for 2020 due to Covid-19."
+msgstr ""
+"В связи с эпидемиологической обстановкой вокруг Covid-19 на 2020 год больше "
+"не запланировано мероприятий."
+
+#: godotengine/pages/events.htm:9
+msgid "No events scheduled for 2021 yet."
+msgstr "Пока не запланировано мероприятий на 2021 год."
+
+#: godotengine/pages/404.htm:1
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: godotengine/pages/404.htm:29
+msgid "We're sorry, but the page you requested cannot be found."
+msgstr "К сожалению, запрошенную страницу найти не удалось."
+
+#: godotengine/pages/404.htm:33 godotengine/pages/error.htm:33
+msgid "Go to the homepage"
+msgstr "Вернуться на главную"
+
+#: godotengine/pages/community.htm:5
+msgid "Godot has a very active community across multiple channels."
+msgstr "На множестве площадок присутствуют очень активные сообщества Godot."
+
+#: godotengine/pages/community.htm:9
+msgid ""
+"By joining Godot communities, you agree to follow Godot's\n"
+"    <a href=\"/code-of-conduct\">Code of Conduct</a>."
+msgstr ""
+"Вступая в одно из сообществ Godot, вы соглашаетесь с "
+"<a href=\"/code-of-conduct\">Кодексом поведения</a> Godot."
+
+#: godotengine/pages/community.htm:70
+msgid "User groups"
+msgstr "Пользовательские группы"
+
+#: godotengine/pages/community.htm:72
+msgid "Find local Godot user groups run by community members."
+msgstr "Узнайте о местных группах пользователей Godot."
+
+#: godotengine/pages/community.htm:80
+msgid "Upcoming community events."
+msgstr "Будущие мероприятия сообщества."
+
+#: godotengine/pages/community.htm:91
+msgid "Questions &amp; Answers"
+msgstr "Вопросы и ответы"
+
+#: godotengine/pages/community.htm:93
+msgid "Place to ask questions and search for answers from the community."
+msgstr ""
+"Здесь можно задать вопрос и получить ответ от других участников сообщества."
+
+#: godotengine/pages/community.htm:107
+msgid ""
+"A vibrant community for discussion, user support, showcases... and custom "
+"emoji!"
+msgstr ""
+"Процветающее сообщество для обсуждений, поддержки, демонстрации работ... и "
+"уникальных эмодзи!"
+
+#: godotengine/pages/community.htm:121
+msgid ""
+"Old-fashioned but reliable, the main discussion platform of core developers."
+msgstr "Старомодный, но надёжный канал связи для основной команды разработки."
+
+#: godotengine/pages/community.htm:136
+msgid "Libre decentralized chat with advanced features, compatible with IRC."
+msgstr ""
+"Свободный и децентрализованный чат с множеством функций, совместим с IRC."
+
+#: godotengine/pages/community.htm:150
+msgid "Large community for discussions around Godot."
+msgstr "Большое сообщество для обсуждения всего, что связано с Godot."
+
+#: godotengine/pages/community.htm:164
+msgid "For the anti-imperialist resistance to Facebook."
+msgstr "Для сопротивленцев всем империалистическим идеалам Facebook."
+
+#: godotengine/pages/community.htm:178
+msgid ""
+"Send bug reports here. To request features, use the\n"
+"          <a href=\"https://github.com/godotengine/godot-proposals\">Godot "
+"proposals</a> repository instead."
+msgstr ""
+"Здесь можно сообщить об ошибках. А новую функциональность можно предложить "
+"в <a href=\"https://github.com/godotengine/godot-proposals\">специальном "
+"репозитории</a>."
+
+#: godotengine/pages/community.htm:193
+msgid "Get small bits of development news."
+msgstr "Крошечные порции новостей от команды разработки."
+
+#: godotengine/pages/community.htm:205
+msgid "Forum"
+msgstr "Форум"
+
+#: godotengine/pages/community.htm:207
+msgid "Community forum for all Godot developers."
+msgstr "Открытый форум для все разработчиков Godot."
+
+#: godotengine/pages/community.htm:219
+msgid "Steam Community"
+msgstr "Сообщество Steam"
+
+#: godotengine/pages/community.htm:221
+msgid "Discuss and share tips with other developers on Steam."
+msgstr "Обсуждения и советы от других разработчиков на платформе Steam."
+
+#: godotengine/pages/community.htm:235
+msgid "Channel for official Godot videos."
+msgstr "Официальный канал с видео о Godot."
+
+#: godotengine/pages/error.htm:1
+msgid "Internal server error"
+msgstr "Внутренняя ошибка сервера"
+
+#: godotengine/pages/error.htm:29
+msgid ""
+"We're sorry, but an internal server error occurred when trying to display "
+"this page."
+msgstr "К сожалению, произошла ошибка при попытке отобразить страницу."
+
+#: godotengine/pages/user-groups.htm:1
+msgid "User Groups"
+msgstr "Пользовательские группы"
+
+#: godotengine/pages/user-groups.htm:5
+msgid ""
+"Some community members manage local Godot user groups.\n"
+"    Anyone is welcome to join or create a local community!"
+msgstr ""
+"Некоторые участники сообществ организуют местные пользовательские "
+"группы Godot. Каждый может к ним присоединиться или создать свою!"
+
+#: godotengine/pages/user-groups.htm:13
+msgid ""
+"If you run a local community and would like to have it listed here,\n"
+"  please send an email to <em>webmaster at godotengine · org</em>."
+msgstr ""
+"Если вы являетесь организатором одной из таких групп и хотите увидеть "
+"её здесь, напишите письмо на <em>webmaster at godotengine · org</em>."
+
+#: godotengine/pages/user-groups.htm:27
+msgid "Brazil"
+msgstr "Бразилия"
+
+#: godotengine/pages/user-groups.htm:36
+msgid "Canada"
+msgstr "Канада"
+
+#: godotengine/pages/user-groups.htm:42
+msgid "Colombia"
+msgstr "Колумбия"
+
+#: godotengine/pages/user-groups.htm:48
+msgid "France or French-speaking"
+msgstr "Франция и другие франко-говорящие"
+
+#: godotengine/pages/user-groups.htm:55
+msgid "Germany"
+msgstr "Германия"
+
+#: godotengine/pages/user-groups.htm:62
+msgid "Italy"
+msgstr "Италия"
+
+#: godotengine/pages/user-groups.htm:68
+msgid "Russia"
+msgstr "Россия"
+
+#: godotengine/pages/user-groups.htm:75
+msgid "Spain"
+msgstr "Испания"
