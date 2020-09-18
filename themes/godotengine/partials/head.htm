@@ -18,7 +18,7 @@ description = "head partial"
     <meta name="twitter:description" content="{{ post.summary }}" />
     <meta name="twitter:image" content="{{ post.featured_images[0].path }}" />
   {% else %}
-    <title>Godot Engine - {{ this.page.title }}</title>
+    <title>Godot Engine - {% placeholder head_title default %}{{ TR(this.page.title) }}{% endplaceholder %}</title>
     <meta property="og:image" content="https://godotengine.org/themes/godotengine/assets/home/2d.jpg" />
   {% endif %}
   <link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml"/>

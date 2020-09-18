@@ -14,45 +14,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: godotengine/partials/footer.htm:85
+#: godotengine/partials/footer.htm:66
 msgid "Privacy Policy"
 msgstr ""
 
 #: godotengine/layouts/more.htm:21 godotengine/pages/code-of-conduct.htm:1
-#: godotengine/partials/footer.htm:85
+#: godotengine/partials/footer.htm:66
 msgid "Code of Conduct"
 msgstr ""
 
 #: godotengine/layouts/home.htm:162 godotengine/layouts/news.htm:44
-#: godotengine/partials/footer.htm:88 godotengine/partials/header.htm:19
+#: godotengine/partials/footer.htm:69 godotengine/partials/header.htm:19
 msgid "News"
 msgstr ""
 
-#: godotengine/pages/community.htm:1 godotengine/partials/footer.htm:89
+#: godotengine/pages/community.htm:1 godotengine/partials/footer.htm:70
 #: godotengine/partials/header.htm:22
 msgid "Community"
 msgstr ""
 
-#: godotengine/layouts/features.htm:41 godotengine/partials/footer.htm:90
+#: godotengine/layouts/features.htm:41 godotengine/partials/footer.htm:71
 #: godotengine/partials/header.htm:16
 msgid "Features"
 msgstr ""
 
-#: godotengine/partials/footer.htm:91
+#: godotengine/partials/footer.htm:72
 msgid "Documentation"
 msgstr ""
 
 #: godotengine/layouts/download.htm:101 godotengine/layouts/home.htm:139
-#: godotengine/partials/footer.htm:92 godotengine/partials/header.htm:31
+#: godotengine/pages/download/linux.htm:1 godotengine/pages/download/osx.htm:1
+#: godotengine/pages/download/server.htm:1
+#: godotengine/pages/download/windows.htm:1 godotengine/partials/footer.htm:73
+#: godotengine/partials/header.htm:31
 msgid "Download"
 msgstr ""
 
 #: godotengine/layouts/home.htm:312 godotengine/layouts/more.htm:27
-#: godotengine/pages/donate.htm:1 godotengine/partials/footer.htm:93
+#: godotengine/pages/donate.htm:1 godotengine/partials/footer.htm:74
 msgid "Donate"
 msgstr ""
 
-#: godotengine/pages/contact.htm:1 godotengine/partials/footer.htm:96
+#: godotengine/pages/contact.htm:1 godotengine/partials/footer.htm:77
 msgid "Contact us"
 msgstr ""
 
@@ -2154,7 +2157,7 @@ msgid ""
 "page</a>."
 msgstr ""
 
-#: godotengine/pages/download/osx.htm:19
+#: godotengine/pages/download/osx.htm:21
 msgid ""
 "Godot is currently not code-signed for macOS. See the last section of\n"
 "    <a href=\"https://support.apple.com/en-us/HT202491\">this page</a>\n"
@@ -2164,35 +2167,36 @@ msgid ""
 "a> to work around this."
 msgstr ""
 
-#: godotengine/pages/download/osx.htm:27
+#: godotengine/pages/download/osx.htm:29
 msgid ""
 "You can also get Godot with <a href=\"https://brew.sh/\">Homebrew</a>.\n"
 "    Note that the version available on Homebrew isn't code-signed either."
 msgstr ""
 
-#: godotengine/pages/download/server.htm:4
-#: godotengine/pages/download/server.htm:17
+#: godotengine/pages/download/server.htm:6
+#: godotengine/pages/download/server.htm:19
 msgid "Headless"
 msgstr ""
 
-#: godotengine/pages/download/server.htm:9
-#: godotengine/pages/download/server.htm:22
+#: godotengine/pages/download/server.htm:1
+#: godotengine/pages/download/server.htm:11
+#: godotengine/pages/download/server.htm:24
 msgid "Server"
 msgstr ""
 
-#: godotengine/pages/download/server.htm:30
+#: godotengine/pages/download/server.htm:32
 msgid ""
 "The <em>headless</em> build includes the editor tool functionality that\n"
 "        enables it to run tests and export projects in an automated manner."
 msgstr ""
 
-#: godotengine/pages/download/server.htm:36
+#: godotengine/pages/download/server.htm:38
 msgid ""
 "The <em>server</em> build is optimized to run dedicated game servers and\n"
 "        does not include editor tools, graphics or audio support."
 msgstr ""
 
-#: godotengine/pages/download/windows.htm:26
+#: godotengine/pages/download/windows.htm:28
 msgid ""
 "Note: The 32-bit Mono binaries do not run on 64-bit Windows systems at the\n"
 "    time being. Make sure to export 64-bit Mono binaries for your 64-bit "
@@ -2200,11 +2204,11 @@ msgid ""
 "    platforms."
 msgstr ""
 
-#: godotengine/pages/download/windows.htm:36
+#: godotengine/pages/download/windows.htm:38
 msgid "You can also get Godot with <a href=\"https://scoop.sh/\">Scoop</a>."
 msgstr ""
 
-#: godotengine/pages/download/windows.htm:49
+#: godotengine/pages/download/windows.htm:51
 msgid "Windows executables are code-signed by <em>Prehensile Tales B.V.</em>"
 msgstr ""
 
@@ -2212,22 +2216,22 @@ msgstr ""
 msgid "released"
 msgstr ""
 
-#: godotengine/partials/footer.htm:118
+#: godotengine/partials/footer.htm:99
 msgid "Language"
 msgstr ""
 
-#: godotengine/partials/footer.htm:122
+#: godotengine/partials/footer.htm:105
 msgid "English"
 msgstr ""
 
-#: godotengine/partials/footer.htm:125
+#: godotengine/partials/footer.htm:111
 msgid "Spanish"
 msgstr ""
 
-#: godotengine/partials/footer.htm:128
+#: godotengine/partials/footer.htm:117
 msgid "German"
 msgstr ""
 
-#: godotengine/partials/footer.htm:131
+#: godotengine/partials/footer.htm:123
 msgid "Russian"
 msgstr ""
