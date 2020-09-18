@@ -27,14 +27,18 @@ is_hidden = 0
 
 {% put instructions %}
   <p>
+    {{ TR("
     Godot is currently not code-signed for macOS. See the last section of
-    <a href="https://support.apple.com/en-us/HT202491">this page</a>
+    <a href=\"https://support.apple.com/en-us/HT202491\">this page</a>
     for instructions on allowing Godot to run anyway. Alternatively, you can install
-    <a href="https://store.steampowered.com/app/404790">Godot from Steam</a> to work around this.
+    <a href=\"https://store.steampowered.com/app/404790\">Godot from Steam</a> to work around this.
+    ") }}
   </p>
   <p>
-    You can also get Godot with <a href="https://brew.sh/">Homebrew</a>.
+    {{ TR("
+    You can also get Godot with <a href=\"https://brew.sh/\">Homebrew</a>.
     Note that the version available on Homebrew isn't code-signed either.
+    ") }}
   </p>
   <ul>
     <li><pre><code>brew cask install godot</code></pre></li>

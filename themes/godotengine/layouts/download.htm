@@ -1,8 +1,13 @@
 description = "Download layout"
 ==
 <?php
+  use October\Rain\Argon\Argon;
+
   function onInit() {
     $this["stable_version"] = "3.2.3";
+    
+    $releaseDate = new Argon('2020-09-17Z');
+    $this["stable_date"] = $releaseDate->format('F d, Y');
   }
 ?>
 ==
@@ -107,7 +112,7 @@ description = "Download layout"
 <div class="head">
   <div class="container flex eqsize responsive">
     <div class="main">
-      <h1 class="intro-title">Download</h1>
+      <h1 class="intro-title">{{ TR('Download') }}</h1>
     </div>
     <div class="tabs">
       <a href="/download/linux" class="title-font {% if platform == 'linux' %} active {% endif %}">Linux</a>
@@ -124,52 +129,73 @@ description = "Download layout"
     <div class="version-overview">
       <img src="{{ 'assets/download/godot_logo.svg' | theme }}" alt="" width="200" height="200">
       <h2>Godot <em>{{stable_version}}</em></h2>
-      <i class="date">released September 17, 2020</i>
+      <i class="date">{{ TR('released') }} {{ stable_date }}</i>
       <p></p>
     </div>
 
     <div>
       <div class="card">
         <div class="base-padding">
-          <h4>Standard version</h4>
+          <h4>{{ TR('Standard version') }}</h4>
           {% placeholder downloads %}
-          <h4>Mono version (C# support)</h4>
+          <h4>{{ TR('Mono version (C# support)') }}</h4>
           {% placeholder mono_downloads %}
         </div>
 
         <hr>
         <div class="base-padding">
-          <h4>Requirements</h4>
+          <h4>{{ TR('Requirements') }}</h4>
           <ul>
-            <li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
             <li>
-              <strong>For the Mono version:</strong> MSBuild<br />(from <a href="https://visualstudio.microsoft.com/downloads/?q=build+tools">Visual Studio Build Tools</a> or the <a href="https://www.mono-project.com/download/stable/">Mono SDK</a>)
+              {{ TR("
+              OpenGL 2.1 / OpenGL ES 2.0 compatible hardware
+              ") }}
+            </li>
+            <li>
+              {{ TR("
+              <strong>For the Mono version:</strong> MSBuild
+              ") }}
+              <br />
+              {{ TR("
+              (from <a href=\"https://visualstudio.microsoft.com/downloads/?q=build+tools\">Visual Studio Build Tools</a> or
+              the <a href=\"https://www.mono-project.com/download/stable/\">Mono SDK</a>)
+              ") }}
             </li>
           </ul>
         </div>
 
         <hr>
         <div class="base-padding">
-          <h4>Instructions</h4>
+          <h4>{{ TR('Instructions') }}</h4>
           <ul>
-            <li>Extract and run. Godot is self-contained and does not require installation.</li>
+            <li>
+              {{ TR("
+              Extract and run. Godot is self-contained and does not require installation.
+              ") }}
+            </li>
           </ul>
           {% placeholder instructions %}
         </div>
 
         <div class="footer base-padding">
+          {{ TR("
           You can find previous releases on the
-          <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
+          <a href=\"https://downloads.tuxfamily.org/godotengine\">download repository</a>.
+          ") }}
         </div>
       </div>
 
       <a class="steam-download base-padding card" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
         <img src="{{ 'assets/download/itch_logo.svg' | theme }}" width="42" height="42">
+        {{ TR("
         Available on <strong>itch.io</strong>.
+        ") }}
       </a>
       <a class="steam-download base-padding card" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
         <img src="{{ 'assets/download/steam_logo.svg' | theme }}" width="42" height="42">
+        {{ TR("
         Available on <strong>Steam</strong>.
+        ") }}
       </a>
     </div>
   </div>
@@ -179,67 +205,101 @@ description = "Download layout"
 
       <a class="card" href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_export_templates.tpz">
         <div class="base-padding">
-          <h3>Export templates (standard)</h3>
-          <p>Used to export your games to all supported platforms.</p>
+          <h3>{{ TR('Export templates (standard)') }}</h3>
+          <p>
+            {{ TR("
+            Used to export your games to all supported platforms.
+            ") }}
+          </p>
         </div>
       </a>
 
       <a class="card" href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_export_templates.tpz">
         <div class="base-padding">
-          <h3>Export templates (Mono / C#)</h3>
+          <h3>{{ TR('Export templates (Mono / C#)') }}</h3>
           <p>
+            {{ TR("
             Used to export your C# games to the supported platforms.
             Currently, the C# version can export to desktop platforms (Linux, macOS and Windows), Android, iOS, and HTML/WebAssembly.
+            ") }}
           </p>
         </div>
       </a>
 
       <a class="card" href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/godot-lib.{{stable_version}}.stable.release.aar">
         <div class="base-padding">
-          <h3>AAR library for Android plugins (standard)</h3>
-          <p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
+          <h3>{{ TR('AAR library for Android plugins (standard)') }}</h3>
+          <p>
+            {{ TR("
+            Use it to develop Android plugins in Java or Kotlin using the Godot API.
+            ") }}
+          </p>
         </div>
       </a>
 
       <a class="card" href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/godot-lib.{{stable_version}}.stable.mono.release.aar">
         <div class="base-padding">
-          <h3>AAR library for Android plugins (Mono / C#)</h3>
-          <p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
+          <h3>{{ TR('AAR library for Android plugins (Mono / C#)') }}</h3>
+          <p>
+            {{ TR("
+            Use it to develop Android plugins in Java or Kotlin using the Godot API.
+            ") }}
+          </p>
         </div>
       </a>
 
       <a class="card" href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/">
         <div class="base-padding">
-          <h3>Learn Godot</h3>
-          <p>Learning how to use Godot with the Step by Step tutorial.</p>
+          <h3>{{ TR('Learn Godot') }}</h3>
+          <p>
+            {{ TR("
+            Learning how to use Godot with the Step by Step tutorial.
+            ") }}
+          </p>
         </div>
       </a>
 
       <a class="card" href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">
         <div class="base-padding">
-          <h3>Demos</h3>
-          <p>Example projects to get you started.</p>
+          <h3>{{ TR('Demos') }}</h3>
+          <p>
+            {{ TR("
+            Example projects to get you started.
+            ") }}
+          </p>
         </div>
       </a>
 
       <a href="https://downloads.tuxfamily.org/godotengine/collada-exporter/BetterColladaExporter-latest.zip" class="base-padding card">
         <div>
-          <h3>Better Collada exporter</h3>
-          <p>An improved Collada exporter for Blender.</p>
+          <h3>{{ TR('Better Collada exporter') }}</h3>
+          <p>
+            {{ TR("
+            An improved Collada exporter for Blender.
+            ") }}
+          </p>
         </div>
       </a>
 
       <a href="https://downloads.tuxfamily.org/godotengine/3.1.2/" class="base-padding card">
         <div>
-          <h3>Godot 3.1.2 downloads</h3>
-          <p>Looking for the previous stable branch? It's here!</p>
+          <h3>{{ TR('Godot 3.1.2 downloads') }}</h3>
+          <p>
+            {{ TR("
+            Looking for the previous stable branch? It's here!
+            ") }}
+          </p>
         </div>
       </a>
 
       <a href="https://downloads.tuxfamily.org/godotengine/2.1.6/" class="base-padding card">
         <div>
-          <h3>Godot 2.1.6 downloads</h3>
-          <p>Looking for the older 2.1 branch? It's here!</p>
+          <h3>{{ TR('Godot 2.1.6 downloads') }}</h3>
+          <p>
+            {{ TR("
+            Looking for the older 2.1 branch? It's here!
+            ") }}
+          </p>
         </div>
       </a>
 
@@ -248,16 +308,20 @@ description = "Download layout"
     <div class="text-center base-padding">
       <img class="flex-center" src="{{ 'assets/download/dl_icon_github.png' | theme }}" width="200" height="200">
       <p>
+        {{ TR("
         Godot's development is <strong>open</strong>. This means that you can
         fix or improve any part of the engine yourself and choose
         whether to contribute it back or keep it private.
+        ") }}
       </p>
       <p>
+        {{ TR("
         New features are always available to use and test, without the need of
         having to wait for the next major release. Compiling Godot from source
         is <em>very easy</em> and the process is well-documented for each platform.
         To obtain the source code, please visit the
-        <a href="https://github.com/godotengine/godot">GitHub project page</a>.
+        <a href=\"https://github.com/godotengine/godot\">GitHub project page</a>.
+        ") }}
       </p>
     </div>
 

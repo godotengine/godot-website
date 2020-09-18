@@ -12,12 +12,12 @@ is_hidden = 0
 {% put downloads %}
   <div class="btn split download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_linux_headless.64.zip">
-      Headless (64-bit)
+      {{ TR('Headless') }} (64-bit)
     </a>
   </div>
   <div class="btn split download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_linux_server.64.zip">
-      Server (64-bit)
+      {{ TR('Server') }} (64-bit)
     </a>
   </div>
 {% endput %}
@@ -25,12 +25,12 @@ is_hidden = 0
 {% put mono_downloads %}
   <div class="btn split download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_linux_headless_64.zip">
-      Headless (64-bit)
+      {{ TR('Headless') }} (64-bit)
     </a>
   </div>
   <div class="btn split download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_linux_server_64.zip">
-      Server (64-bit)
+      {{ TR('Server') }} (64-bit)
     </a>
   </div>
 {% endput %}
@@ -38,12 +38,16 @@ is_hidden = 0
 {% put instructions %}
     <ul>
       <li>
+        {{ TR("
         The <em>headless</em> build includes the editor tool functionality that
         enables it to run tests and export projects in an automated manner.
+        ") }}
       </li>
       <li>
+        {{ TR("
         The <em>server</em> build is optimized to run dedicated game servers and
         does not include editor tools, graphics or audio support.
+        ") }}
       </li>
     </ul>
 {% endput %}

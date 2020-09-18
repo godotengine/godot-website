@@ -46,6 +46,7 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
+#: godotengine/layouts/download.htm:101
 #: godotengine/layouts/home.htm:139
 #: godotengine/partials/footer.htm:16
 #: godotengine/partials/header.htm:31
@@ -1712,4 +1713,194 @@ msgstr ""
 
 #: godotengine/pages/user-groups.htm:75
 msgid "Spain"
+msgstr ""
+
+#: godotengine/layouts/download.htm:125
+msgid "Standard version"
+msgstr ""
+
+#: godotengine/layouts/download.htm:127
+msgid "Mono version (C# support)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:133
+msgid "Requirements"
+msgstr ""
+
+#: godotengine/layouts/download.htm:136
+msgid "OpenGL 2.1 / OpenGL ES 2.0 compatible hardware"
+msgstr ""
+
+#: godotengine/layouts/download.htm:141
+msgid "<strong>For the Mono version:</strong> MSBuild"
+msgstr ""
+
+#: godotengine/layouts/download.htm:145
+msgid ""
+"(from <a href=\"https://visualstudio.microsoft.com/downloads/?q=build+tools\">Visual Studio Build Tools</a> or\n"
+"              the <a href=\"https://www.mono-project.com/download/stable/\">Mono SDK</a>)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:155
+msgid "Instructions"
+msgstr ""
+
+#: godotengine/layouts/download.htm:158
+msgid "Extract and run. Godot is self-contained and does not require installation."
+msgstr ""
+
+#: godotengine/layouts/download.htm:167
+msgid ""
+"You can find previous releases on the\n"
+"          <a href=\"https://downloads.tuxfamily.org/godotengine\">download repository</a>."
+msgstr ""
+
+#: godotengine/layouts/download.htm:176
+msgid "Available on <strong>itch.io</strong>."
+msgstr ""
+
+#: godotengine/layouts/download.htm:182
+msgid "Available on <strong>Steam</strong>."
+msgstr ""
+
+#: godotengine/layouts/download.htm:194
+msgid "Export templates (standard)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:196
+msgid "Used to export your games to all supported platforms."
+msgstr ""
+
+#: godotengine/layouts/download.htm:205
+msgid "Export templates (Mono / C#)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:207
+msgid ""
+"Used to export your C# games to the supported platforms.\n"
+"            Currently, the C# version can export to desktop platforms (Linux, macOS and Windows), Android, iOS, and HTML/WebAssembly."
+msgstr ""
+
+#: godotengine/layouts/download.htm:217
+msgid "AAR library for Android plugins (standard)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:219
+#: godotengine/layouts/download.htm:230
+msgid "Use it to develop Android plugins in Java or Kotlin using the Godot API."
+msgstr ""
+
+#: godotengine/layouts/download.htm:228
+msgid "AAR library for Android plugins (Mono / C#)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:239
+msgid "Learn Godot"
+msgstr ""
+
+#: godotengine/layouts/download.htm:241
+msgid "Learning how to use Godot with the Step by Step tutorial."
+msgstr ""
+
+#: godotengine/layouts/download.htm:250
+msgid "Demos"
+msgstr ""
+
+#: godotengine/layouts/download.htm:252
+msgid "Example projects to get you started."
+msgstr ""
+
+#: godotengine/layouts/download.htm:261
+msgid "Better Collada exporter"
+msgstr ""
+
+#: godotengine/layouts/download.htm:263
+msgid "An improved Collada exporter for Blender."
+msgstr ""
+
+#: godotengine/layouts/download.htm:272
+msgid "Godot 3.1.2 downloads"
+msgstr ""
+
+#: godotengine/layouts/download.htm:274
+msgid "Looking for the previous stable branch? It's here!"
+msgstr ""
+
+#: godotengine/layouts/download.htm:283
+msgid "Godot 2.1.6 downloads"
+msgstr ""
+
+#: godotengine/layouts/download.htm:285
+msgid "Looking for the older 2.1 branch? It's here!"
+msgstr ""
+
+#: godotengine/layouts/download.htm:297
+msgid ""
+"Godot's development is <strong>open</strong>. This means that you can\n"
+"        fix or improve any part of the engine yourself and choose\n"
+"        whether to contribute it back or keep it private."
+msgstr ""
+
+#: godotengine/layouts/download.htm:304
+msgid ""
+"New features are always available to use and test, without the need of\n"
+"        having to wait for the next major release. Compiling Godot from source\n"
+"        is <em>very easy</em> and the process is well-documented for each platform.\n"
+"        To obtain the source code, please visit the\n"
+"        <a href=\"https://github.com/godotengine/godot\">GitHub project page</a>."
+msgstr ""
+
+#: godotengine/pages/download/osx.htm:19
+msgid ""
+"Godot is currently not code-signed for macOS. See the last section of\n"
+"    <a href=\"https://support.apple.com/en-us/HT202491\">this page</a>\n"
+"    for instructions on allowing Godot to run anyway. Alternatively, you can install\n"
+"    <a href=\"https://store.steampowered.com/app/404790\">Godot from Steam</a> to work around this."
+msgstr ""
+
+#: godotengine/pages/download/osx.htm:27
+msgid ""
+"You can also get Godot with <a href=\"https://brew.sh/\">Homebrew</a>.\n"
+"    Note that the version available on Homebrew isn't code-signed either."
+msgstr ""
+
+#: godotengine/pages/download/server.htm:4
+#: godotengine/pages/download/server.htm:17
+msgid "Headless"
+msgstr ""
+
+#: godotengine/pages/download/server.htm:9
+#: godotengine/pages/download/server.htm:22
+msgid "Server"
+msgstr ""
+
+#: godotengine/pages/download/server.htm:30
+msgid ""
+"The <em>headless</em> build includes the editor tool functionality that\n"
+"        enables it to run tests and export projects in an automated manner."
+msgstr ""
+
+#: godotengine/pages/download/server.htm:36
+msgid ""
+"The <em>server</em> build is optimized to run dedicated game servers and\n"
+"        does not include editor tools, graphics or audio support."
+msgstr ""
+
+#: godotengine/pages/download/windows.htm:26
+msgid ""
+"Note: The 32-bit Mono binaries do not run on 64-bit Windows systems at the\n"
+"    time being. Make sure to export 64-bit Mono binaries for your 64-bit target\n"
+"    platforms."
+msgstr ""
+
+#: godotengine/pages/download/windows.htm:36
+msgid "You can also get Godot with <a href=\"https://scoop.sh/\">Scoop</a>."
+msgstr ""
+
+#: godotengine/pages/download/windows.htm:49
+msgid "Windows executables are code-signed by <em>Prehensile Tales B.V.</em>"
+msgstr ""
+
+#: godotengine/layouts/download.htm:118
+msgid "released"
 msgstr ""

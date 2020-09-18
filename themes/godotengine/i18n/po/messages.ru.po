@@ -42,8 +42,8 @@ msgstr "Возможности"
 msgid "Documentation"
 msgstr "Документация"
 
-#: godotengine/layouts/home.htm:139 godotengine/partials/footer.htm:16
-#: godotengine/partials/header.htm:31
+#: godotengine/layouts/download.htm:101 godotengine/layouts/home.htm:139
+#: godotengine/partials/footer.htm:16 godotengine/partials/header.htm:31
 msgid "Download"
 msgstr "Скачать"
 
@@ -1915,8 +1915,8 @@ msgid ""
 "By joining Godot communities, you agree to follow Godot's\n"
 "    <a href=\"/code-of-conduct\">Code of Conduct</a>."
 msgstr ""
-"Вступая в одно из сообществ Godot, вы соглашаетесь с "
-"<a href=\"/code-of-conduct\">Кодексом поведения</a> Godot."
+"Вступая в одно из сообществ Godot, вы соглашаетесь с <a href=\"/code-of-"
+"conduct\">Кодексом поведения</a> Godot."
 
 #: godotengine/pages/community.htm:70
 msgid "User groups"
@@ -1971,8 +1971,8 @@ msgid ""
 "          <a href=\"https://github.com/godotengine/godot-proposals\">Godot "
 "proposals</a> repository instead."
 msgstr ""
-"Здесь можно сообщить об ошибках. А новую функциональность можно предложить "
-"в <a href=\"https://github.com/godotengine/godot-proposals\">специальном "
+"Здесь можно сообщить об ошибках. А новую функциональность можно предложить в "
+"<a href=\"https://github.com/godotengine/godot-proposals\">специальном "
 "репозитории</a>."
 
 #: godotengine/pages/community.htm:193
@@ -2018,16 +2018,16 @@ msgid ""
 "Some community members manage local Godot user groups.\n"
 "    Anyone is welcome to join or create a local community!"
 msgstr ""
-"Некоторые участники сообществ организуют местные пользовательские "
-"группы Godot. Каждый может к ним присоединиться или создать свою!"
+"Некоторые участники сообществ организуют местные пользовательские группы "
+"Godot. Каждый может к ним присоединиться или создать свою!"
 
 #: godotengine/pages/user-groups.htm:13
 msgid ""
 "If you run a local community and would like to have it listed here,\n"
 "  please send an email to <em>webmaster at godotengine · org</em>."
 msgstr ""
-"Если вы являетесь организатором одной из таких групп и хотите увидеть "
-"её здесь, напишите письмо на <em>webmaster at godotengine · org</em>."
+"Если вы являетесь организатором одной из таких групп и хотите увидеть её "
+"здесь, напишите письмо на <em>webmaster at godotengine · org</em>."
 
 #: godotengine/pages/user-groups.htm:27
 msgid "Brazil"
@@ -2060,3 +2060,214 @@ msgstr "Россия"
 #: godotengine/pages/user-groups.htm:75
 msgid "Spain"
 msgstr "Испания"
+
+#: godotengine/layouts/download.htm:125
+msgid "Standard version"
+msgstr "Стандартная версия"
+
+#: godotengine/layouts/download.htm:127
+msgid "Mono version (C# support)"
+msgstr "Версия Mono (с поддержкой C#)"
+
+#: godotengine/layouts/download.htm:133
+msgid "Requirements"
+msgstr "Требования"
+
+#: godotengine/layouts/download.htm:136
+msgid "OpenGL 2.1 / OpenGL ES 2.0 compatible hardware"
+msgstr "Видеоустройство с поддержкой OpenGL 2.1 / OpenGL ES 2.0"
+
+#: godotengine/layouts/download.htm:141
+msgid "<strong>For the Mono version:</strong> MSBuild"
+msgstr "<strong>Для версии Mono:</strong> MSBuild"
+
+#: godotengine/layouts/download.htm:145
+msgid ""
+"(from <a href=\"https://visualstudio.microsoft.com/downloads/?q=build+tools"
+"\">Visual Studio Build Tools</a> or\n"
+"              the <a href=\"https://www.mono-project.com/download/stable/"
+"\">Mono SDK</a>)"
+msgstr ""
+"(входит в состав <a href=\"https://visualstudio.microsoft.com/downloads/?"
+"q=build+tools\">Visual Studio Build Tools</a> или <a href=\"https://www.mono-"
+"project.com/download/stable/\">Mono SDK</a>)"
+
+#: godotengine/layouts/download.htm:155
+msgid "Instructions"
+msgstr "Инструкция по установке"
+
+#: godotengine/layouts/download.htm:158
+msgid ""
+"Extract and run. Godot is self-contained and does not require installation."
+msgstr ""
+"Распакуйте и запустите. Godot не требует установки и не имеет внешних "
+"зависимостей."
+
+#: godotengine/layouts/download.htm:167
+msgid ""
+"You can find previous releases on the\n"
+"          <a href=\"https://downloads.tuxfamily.org/godotengine\">download "
+"repository</a>."
+msgstr ""
+"Предыдущие версии можно найти в <a href=\"https://downloads.tuxfamily.org/"
+"godotengine\">архиве загрузок</a>."
+
+#: godotengine/layouts/download.htm:176
+msgid "Available on <strong>itch.io</strong>."
+msgstr "Доступно на <strong>itch.io</strong>."
+
+#: godotengine/layouts/download.htm:182
+msgid "Available on <strong>Steam</strong>."
+msgstr "Доступно в <strong>Steam</strong>."
+
+#: godotengine/layouts/download.htm:194
+msgid "Export templates (standard)"
+msgstr "Шаблоны для экспорта (стандартные)"
+
+#: godotengine/layouts/download.htm:196
+msgid "Used to export your games to all supported platforms."
+msgstr "Используются при экспорте ваших игр для всех поддерживаемых платформ."
+
+#: godotengine/layouts/download.htm:205
+msgid "Export templates (Mono / C#)"
+msgstr "Шаблоны для экспорта (Mono / C#)"
+
+#: godotengine/layouts/download.htm:207
+msgid ""
+"Used to export your C# games to the supported platforms.\n"
+"            Currently, the C# version can export to desktop platforms "
+"(Linux, macOS and Windows), Android, iOS, and HTML/WebAssembly."
+msgstr ""
+"Используются при экспорте ваших игр, написанных на C#, для поддерживаемых "
+"платформ. В данный момент поддерживаются все стационарные платформы (Linux, "
+"macOS и Windows), а также Android, iOS и HTML/WebAssembly."
+
+#: godotengine/layouts/download.htm:217
+msgid "AAR library for Android plugins (standard)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:219 godotengine/layouts/download.htm:230
+msgid ""
+"Use it to develop Android plugins in Java or Kotlin using the Godot API."
+msgstr ""
+
+#: godotengine/layouts/download.htm:228
+msgid "AAR library for Android plugins (Mono / C#)"
+msgstr ""
+
+#: godotengine/layouts/download.htm:239
+msgid "Learn Godot"
+msgstr "Познакомиться с Godot"
+
+#: godotengine/layouts/download.htm:241
+msgid "Learning how to use Godot with the Step by Step tutorial."
+msgstr ""
+
+#: godotengine/layouts/download.htm:250
+msgid "Demos"
+msgstr "Демонстрационные проекты"
+
+#: godotengine/layouts/download.htm:252
+msgid "Example projects to get you started."
+msgstr ""
+
+#: godotengine/layouts/download.htm:261
+msgid "Better Collada exporter"
+msgstr ""
+
+#: godotengine/layouts/download.htm:263
+msgid "An improved Collada exporter for Blender."
+msgstr ""
+
+#: godotengine/layouts/download.htm:272
+msgid "Godot 3.1.2 downloads"
+msgstr ""
+
+#: godotengine/layouts/download.htm:274
+msgid "Looking for the previous stable branch? It's here!"
+msgstr ""
+
+#: godotengine/layouts/download.htm:283
+msgid "Godot 2.1.6 downloads"
+msgstr ""
+
+#: godotengine/layouts/download.htm:285
+msgid "Looking for the older 2.1 branch? It's here!"
+msgstr ""
+
+#: godotengine/layouts/download.htm:297
+msgid ""
+"Godot's development is <strong>open</strong>. This means that you can\n"
+"        fix or improve any part of the engine yourself and choose\n"
+"        whether to contribute it back or keep it private."
+msgstr ""
+
+#: godotengine/layouts/download.htm:304
+msgid ""
+"New features are always available to use and test, without the need of\n"
+"        having to wait for the next major release. Compiling Godot from "
+"source\n"
+"        is <em>very easy</em> and the process is well-documented for each "
+"platform.\n"
+"        To obtain the source code, please visit the\n"
+"        <a href=\"https://github.com/godotengine/godot\">GitHub project "
+"page</a>."
+msgstr ""
+
+#: godotengine/pages/download/osx.htm:19
+msgid ""
+"Godot is currently not code-signed for macOS. See the last section of\n"
+"    <a href=\"https://support.apple.com/en-us/HT202491\">this page</a>\n"
+"    for instructions on allowing Godot to run anyway. Alternatively, you can "
+"install\n"
+"    <a href=\"https://store.steampowered.com/app/404790\">Godot from Steam</"
+"a> to work around this."
+msgstr ""
+
+#: godotengine/pages/download/osx.htm:27
+msgid ""
+"You can also get Godot with <a href=\"https://brew.sh/\">Homebrew</a>.\n"
+"    Note that the version available on Homebrew isn't code-signed either."
+msgstr ""
+
+#: godotengine/pages/download/server.htm:4
+#: godotengine/pages/download/server.htm:17
+msgid "Headless"
+msgstr ""
+
+#: godotengine/pages/download/server.htm:9
+#: godotengine/pages/download/server.htm:22
+msgid "Server"
+msgstr ""
+
+#: godotengine/pages/download/server.htm:30
+msgid ""
+"The <em>headless</em> build includes the editor tool functionality that\n"
+"        enables it to run tests and export projects in an automated manner."
+msgstr ""
+
+#: godotengine/pages/download/server.htm:36
+msgid ""
+"The <em>server</em> build is optimized to run dedicated game servers and\n"
+"        does not include editor tools, graphics or audio support."
+msgstr ""
+
+#: godotengine/pages/download/windows.htm:26
+msgid ""
+"Note: The 32-bit Mono binaries do not run on 64-bit Windows systems at the\n"
+"    time being. Make sure to export 64-bit Mono binaries for your 64-bit "
+"target\n"
+"    platforms."
+msgstr ""
+
+#: godotengine/pages/download/windows.htm:36
+msgid "You can also get Godot with <a href=\"https://scoop.sh/\">Scoop</a>."
+msgstr ""
+
+#: godotengine/pages/download/windows.htm:49
+msgid "Windows executables are code-signed by <em>Prehensile Tales B.V.</em>"
+msgstr ""
+
+#: godotengine/layouts/download.htm:118
+msgid "released"
+msgstr "дата выпуска"

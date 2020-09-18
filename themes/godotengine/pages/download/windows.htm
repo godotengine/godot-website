@@ -33,11 +33,21 @@ is_hidden = 0
       32-bit
     </a>
   </div>
-  <p>Note: The 32-bit Mono binaries do not run on 64-bit Windows systems at the time being. Make sure to export 64-bit Mono binaries for your 64-bit target platforms.</p>
+  <p>
+    {{ TR("
+    Note: The 32-bit Mono binaries do not run on 64-bit Windows systems at the
+    time being. Make sure to export 64-bit Mono binaries for your 64-bit target
+    platforms.
+    ") }}
+  </p>
 {% endput %}
 
 {% put instructions %}
-  <p>You can also get Godot with <a href="https://scoop.sh/">Scoop</a>.</p>
+  <p>
+    {{ TR("
+    You can also get Godot with <a href=\"https://scoop.sh/\">Scoop</a>.
+    ") }}
+  </p>
   <ul>
     <li>
       <pre><code>scoop bucket add extras</code></pre>
@@ -46,5 +56,9 @@ is_hidden = 0
       <pre><code>scoop install godot</code></pre>
     </li>
   </ul>
-  <p>Windows executables are code-signed by <em>Prehensile Tales B.V.</em></p>
+  <p>
+    {{ TR("
+    Windows executables are code-signed by <em>Prehensile Tales B.V.</em>
+    ") }}
+  </p>
 {% endput %}
