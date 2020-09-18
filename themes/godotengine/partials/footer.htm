@@ -1,5 +1,64 @@
 description = "footer partial"
+
+[localePicker]
 ==
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const localeToggle = document.querySelector('.locale-toggle');
+    
+    localeToggle.addEventListener('click', () => {
+      const localeList = document.querySelector('.locale-list');
+      localeList.classList.toggle('active');
+    });
+  });
+</script>
+
+<style>
+  .locale-picker {
+    padding: 18px 0;
+    text-align: right;
+  }
+
+  .locale-toggle {
+    cursor: pointer;
+  }
+
+  .locale-selected {
+    color: var(--footer-link-color);
+  }
+
+  .locale-list {
+    display: none;
+    border-top: 1px solid var(--base-color);
+    margin: 8px 0 0 0;
+    padding: 6px 0 0 0;
+    width: 100%;
+  }
+  .locale-list.active {
+    display: block;
+  }
+
+  .locale-list > li {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 900px) {
+    .locale-picker {
+      text-align: center;
+    }
+
+    .locale-list {
+      margin: 16px 0 0 0;
+      padding: 12px 0 0 0;
+    }
+
+    .locale-list > li {
+      margin-bottom: 12px;
+    }
+  }
+</style>
 
 <footer>
   <div class="container flex">
@@ -39,6 +98,37 @@ description = "footer partial"
           <!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
           <img src="{{ 'assets/footer/feed_logo.svg' | theme }}" alt="RSS feed">
         </a>
+      </div>
+      <div class="locale-picker">
+        <div class="locale-toggle">
+          {{ TR('Language') }}: <span class="locale-selected" data-locale="{{ activeLocale }}">{{ TR(activeLocaleName) }}</span>
+        </div>
+        <ul class="locale-list">
+          <li>
+            <a href="/en/{{ this.page.baseFileName }}" class="locale-option" data-locale="en">
+              English
+              {% if activeLocale != 'en' %} ({{ TR('English') }}){% endif %}
+            </a>
+          </li>
+          <li>
+            <a href="/es/{{ this.page.baseFileName }}" class="locale-option" data-locale="es">
+              Español
+              {% if activeLocale != 'es' %} ({{ TR('Spanish') }}){% endif %}
+            </a>
+          </li>
+          <li>
+            <a href="/de/{{ this.page.baseFileName }}" class="locale-option" data-locale="de">
+              Deutsch
+              {% if activeLocale != 'de' %} ({{ TR('German') }}){% endif %}
+            </a>
+          </li>
+          <li>
+            <a href="/ru/{{ this.page.baseFileName }}" class="locale-option" data-locale="ru">
+              Русский
+              {% if activeLocale != 'ru' %} ({{ TR('Russian') }}){% endif %}
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

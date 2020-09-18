@@ -365,3 +365,8 @@ note.the.32.bit.mono.binaries.do.not.run.on.64.bit.windows.systems.at.the.time.b
 you.can.also.get.godot.with.a.hrefhttpsscoop.shscoopa: ''
 windows.executables.are.code.signed.by.emprehensile.tales.b.v.em: ''
 released: 'дата выпуска'
+language: Язык
+english: Английский
+spanish: Испанский
+german: Немецкий
+russian: Русский

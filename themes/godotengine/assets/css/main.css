@@ -28,6 +28,9 @@
   --code-background-color: #d0dada;
   --codeblock-background-color: #282b2e;
   --codeblock-color: #e0e2e4;
+
+  --footer-link-color: rgba(158, 168, 203, 0.9);
+  --footer-link-active-color: rgba(128, 139, 179, 0.9);
 }
 
 
@@ -269,11 +272,11 @@ footer ul {
 }
 footer a {
   text-decoration: none;
-  color: rgba(158, 168, 203, 0.9);
+  color: var(--footer-link-color);
 }
 footer a:hover {
   text-decoration: none;
-  color: rgba(128, 139, 179, 0.9);
+  color: var(--footer-link-active-color);
 }
 #copyright {
   /*flex: 1;*/

@@ -49,14 +49,20 @@ class TwigFunctionsScanner implements FunctionsScannerInterface
     {
         $name = $node->getAttribute('name');
         if (!in_array($name, $this->functions, true)) {
-            return;
+            return null;
         }
 
         $line = $node->getTemplateLine();
         $function = new ParsedFunction($name, $filename, $line);
 
         foreach ($node->getNode('arguments')->getIterator() as $argument) {
-            $arg = $argument->hasAttribute('value') ? trim($argument->getAttribute('value')) : null;
+            // Check if this function's arguments are literals, and not expressions.
+            if (!$argument->hasAttribute('value')) {
+                // If it uses expressions, ignore this function.
+                return null;
+            }
+
+            $arg = trim($argument->getAttribute('value'));
             $function->addArgument($arg);
         }
 

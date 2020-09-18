@@ -14,45 +14,45 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: godotengine/partials/footer.htm:9
+#: godotengine/partials/footer.htm:85
 msgid "Privacy Policy"
 msgstr ""
 
 #: godotengine/layouts/more.htm:21 godotengine/pages/code-of-conduct.htm:1
-#: godotengine/partials/footer.htm:9
+#: godotengine/partials/footer.htm:85
 msgid "Code of Conduct"
 msgstr ""
 
 #: godotengine/layouts/home.htm:162 godotengine/layouts/news.htm:44
-#: godotengine/partials/footer.htm:12 godotengine/partials/header.htm:19
+#: godotengine/partials/footer.htm:88 godotengine/partials/header.htm:19
 msgid "News"
 msgstr ""
 
-#: godotengine/pages/community.htm:1 godotengine/partials/footer.htm:13
+#: godotengine/pages/community.htm:1 godotengine/partials/footer.htm:89
 #: godotengine/partials/header.htm:22
 msgid "Community"
 msgstr ""
 
-#: godotengine/layouts/features.htm:41 godotengine/partials/footer.htm:14
+#: godotengine/layouts/features.htm:41 godotengine/partials/footer.htm:90
 #: godotengine/partials/header.htm:16
 msgid "Features"
 msgstr ""
 
-#: godotengine/partials/footer.htm:15
+#: godotengine/partials/footer.htm:91
 msgid "Documentation"
 msgstr ""
 
 #: godotengine/layouts/download.htm:101 godotengine/layouts/home.htm:139
-#: godotengine/partials/footer.htm:16 godotengine/partials/header.htm:31
+#: godotengine/partials/footer.htm:92 godotengine/partials/header.htm:31
 msgid "Download"
 msgstr ""
 
 #: godotengine/layouts/home.htm:312 godotengine/layouts/more.htm:27
-#: godotengine/pages/donate.htm:1 godotengine/partials/footer.htm:17
+#: godotengine/pages/donate.htm:1 godotengine/partials/footer.htm:93
 msgid "Donate"
 msgstr ""
 
-#: godotengine/pages/contact.htm:1 godotengine/partials/footer.htm:20
+#: godotengine/pages/contact.htm:1 godotengine/partials/footer.htm:96
 msgid "Contact us"
 msgstr ""
 
@@ -2210,4 +2210,24 @@ msgstr ""
 
 #: godotengine/layouts/download.htm:118
 msgid "released"
+msgstr ""
+
+#: godotengine/partials/footer.htm:118
+msgid "Language"
+msgstr ""
+
+#: godotengine/partials/footer.htm:122
+msgid "English"
+msgstr ""
+
+#: godotengine/partials/footer.htm:125
+msgid "Spanish"
+msgstr ""
+
+#: godotengine/partials/footer.htm:128
+msgid "German"
+msgstr ""
+
+#: godotengine/partials/footer.htm:131
+msgid "Russian"
 msgstr ""
