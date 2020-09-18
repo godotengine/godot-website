@@ -32,7 +32,8 @@ msgstr "Новости"
 msgid "Community"
 msgstr "Сообщество"
 
-#: godotengine/partials/footer.htm:14 godotengine/partials/header.htm:16
+#: godotengine/layouts/features.htm:41 godotengine/partials/footer.htm:14
+#: godotengine/partials/header.htm:16
 msgid "Features"
 msgstr "Возможности"
 
@@ -48,7 +49,7 @@ msgstr "Скачать"
 #: godotengine/layouts/home.htm:312 godotengine/layouts/more.htm:27
 #: godotengine/pages/donate.htm:1 godotengine/partials/footer.htm:17
 msgid "Donate"
-msgstr "Поддержать"
+msgstr "Поддержать проект"
 
 #: godotengine/pages/contact.htm:1 godotengine/partials/footer.htm:20
 msgid "Contact us"
@@ -1476,18 +1477,18 @@ msgid ""
 "If you know how to code, and enjoy fun and challenging problems, you can "
 "help by fixing bugs or creating cool new features."
 msgstr ""
-"Если вы знаете, как писать код, и увлекательными и сложными проблемами "
-"вас не запугать, вы можете помочь исправлять баги и реализовывать новые "
-"крутые функции."
+"Если вы знаете, как писать код, и увлекательными и сложными проблемами вас "
+"не запугать, вы можете помочь исправлять баги и реализовывать новые крутые "
+"функции."
 
 #: godotengine/layouts/home.htm:284
 msgid ""
 "Documentation quality is essential in a game engine; help make it better by "
 "updating the API reference, writing new guides or submitting corrections."
 msgstr ""
-"Для игрового движка очень важно поддерживать качество документации. "
-"Помогите улучшить её, внося коррективы в справку по API, создавая инструкции "
-"и уроки, или просто исправляя ошибки и опечатки."
+"Для игрового движка очень важно поддерживать качество документации. Помогите "
+"улучшить её, внося коррективы в справку по API, создавая инструкции и уроки, "
+"или просто исправляя ошибки и опечатки."
 
 #: godotengine/layouts/home.htm:297
 msgid ""
@@ -1502,8 +1503,8 @@ msgid ""
 "You don't need to be an engine developer to help Godot. Consider donating to "
 "speed up development and make Godot Engine even more awesome!"
 msgstr ""
-"Не нужно быть разработчиком игровых движков, чтобы поддержать Godot. "
-"Вы можете помочь разработке с помощью пожертвований в проект."
+"Не нужно быть разработчиком игровых движков, чтобы поддержать Godot. Вы "
+"можете помочь разработке с помощью пожертвований в проект."
 
 #: godotengine/layouts/home.htm:325
 msgid "Sponsored by"
@@ -1520,3 +1521,352 @@ msgstr "Создавайте документацию"
 #: godotengine/layouts/home.htm:295
 msgid "Report"
 msgstr "Сообщайте о проблемах"
+
+#: godotengine/layouts/features.htm:53
+msgid "Innovative design"
+msgstr "Инновационный дизайн"
+
+#: godotengine/layouts/features.htm:56
+msgid ""
+"Create games with ease using Godot's unique approach to game development."
+msgstr ""
+
+#: godotengine/layouts/features.htm:62
+msgid ""
+"<strong>Nodes for all your needs.</strong> Godot comes with hundreds\n"
+"            of built-in nodes that make game design a breeze. You can also "
+"create\n"
+"            your own for custom behaviors, editors and much more."
+msgstr ""
+
+#: godotengine/layouts/features.htm:69
+msgid ""
+"<strong>Flexible scene system.</strong> Create node compositions\n"
+"            with support for instancing and inheritance."
+msgstr ""
+
+#: godotengine/layouts/features.htm:75
+msgid ""
+"<strong>Visual editor</strong> with all the tools you need packed\n"
+"            into a beautiful and uncluttered context-sensitive UI."
+msgstr ""
+
+#: godotengine/layouts/features.htm:81
+msgid ""
+"<strong>Friendly content creation pipeline</strong> for artists, level\n"
+"            designers, animators and everyone in between."
+msgstr ""
+
+#: godotengine/layouts/features.htm:87
+msgid ""
+"<strong>Persistent live editing</strong> where changes are not\n"
+"            lost after stopping the game. It even works on mobile devices!"
+msgstr ""
+
+#: godotengine/layouts/features.htm:93
+msgid ""
+"<strong>Create your own custom tools</strong> with ease using\n"
+"            the incredible tool system."
+msgstr ""
+
+#: godotengine/layouts/features.htm:108
+msgid "Gorgeous 3D graphics"
+msgstr "Шикарная 3D графика"
+
+#: godotengine/layouts/features.htm:110
+msgid ""
+"The brand new physically-based renderer comes with a ton of features that "
+"will make your games look incredible."
+msgstr ""
+
+#: godotengine/layouts/features.htm:119
+msgid ""
+"<strong>Innovative architecture</strong> that combines the best\n"
+"        of forward rendering with the efficiency of deferred rendering."
+msgstr ""
+
+#: godotengine/layouts/features.htm:125
+msgid "<strong>Physically-based rendering</strong> with full MSAA support."
+msgstr ""
+
+#: godotengine/layouts/features.htm:130
+msgid ""
+"<strong>Full principled BSDF</strong> with subsurface scattering,\n"
+"        reflection, refraction, anisotropy, clearcoat, transmittance and "
+"more."
+msgstr ""
+
+#: godotengine/layouts/features.htm:138
+msgid ""
+"<strong>Global illumination</strong> for real-time gorgeous graphics.\n"
+"        It can also be pre-baked for beautiful results even on low-end "
+"devices."
+msgstr ""
+
+#: godotengine/layouts/features.htm:144
+msgid ""
+"<strong>Mid- and Post-processing effects</strong> including a new\n"
+"        tonemapper that supports HDR, multiple standard curves and auto\n"
+"        exposure, screen-space reflections, fog, bloom, depth of field and "
+"much more."
+msgstr ""
+
+#: godotengine/layouts/features.htm:151
+msgid ""
+"<strong>Easy-to-use shader language</strong> based on GLSL, with\n"
+"        built-in editor and code completion."
+msgstr ""
+
+#: godotengine/layouts/features.htm:164
+msgid "Create 2D games with ease"
+msgstr ""
+
+#: godotengine/layouts/features.htm:166
+msgid "Godot comes with a fully-dedicated 2D engine packed with features."
+msgstr ""
+
+#: godotengine/layouts/features.htm:175
+msgid ""
+"<strong>Work in pixels as your units</strong>, but scale to any screen size "
+"and aspect ratio."
+msgstr ""
+
+#: godotengine/layouts/features.htm:180
+msgid ""
+"<strong>Tile map editor</strong> with auto-tiling, rotation, custom grid "
+"shapes and multiple layers."
+msgstr ""
+
+#: godotengine/layouts/features.htm:185
+msgid ""
+"<strong>2D lights and normal maps</strong> to give your 2D games a more "
+"realistic look."
+msgstr ""
+
+#: godotengine/layouts/features.htm:192
+msgid ""
+"<strong>Animate your games</strong> using cut-out or sprite-based animation."
+msgstr ""
+
+#: godotengine/layouts/features.htm:197
+msgid ""
+"<strong>Flexible kinematic controller</strong> for collision without physics."
+msgstr ""
+
+#: godotengine/layouts/features.htm:210
+msgid "Animate everything"
+msgstr ""
+
+#: godotengine/layouts/features.htm:212
+msgid "The most flexible animation system."
+msgstr ""
+
+#: godotengine/layouts/features.htm:218
+msgid ""
+"<strong>Animate literally everything</strong>, from bones and objects to "
+"function calls."
+msgstr ""
+
+#: godotengine/layouts/features.htm:223
+msgid ""
+"<strong>Use custom transition curves and tweens</strong> to create "
+"incredible animations."
+msgstr ""
+
+#: godotengine/layouts/features.htm:228
+msgid "<strong>Helpers to animate 2D rigs</strong>, with skeletons and IK."
+msgstr ""
+
+#: godotengine/layouts/features.htm:233
+msgid "<strong>Efficient optimizer</strong> to pack imported 3D animations."
+msgstr ""
+
+#: godotengine/layouts/features.htm:244
+msgid "Script with full freedom"
+msgstr ""
+
+#: godotengine/layouts/features.htm:246
+msgid "More choices than any other engine."
+msgstr ""
+
+#: godotengine/layouts/features.htm:252
+msgid ""
+"<strong>GDScript</strong> Python-like scripting language, designed to make "
+"games with zero hassle.\n"
+"          <a href=\"https://docs.godotengine.org/en/stable/getting_started/"
+"scripting/gdscript/gdscript_basics.html\">Learn why our community loves it.</"
+"a>"
+msgstr ""
+
+#: godotengine/layouts/features.htm:258
+msgid "<strong>Full C# 8.0 support</strong> using Mono."
+msgstr ""
+
+#: godotengine/layouts/features.htm:263
+msgid ""
+"<strong>Full C++ support</strong> without needing to recompile the engine."
+msgstr ""
+
+#: godotengine/layouts/features.htm:268
+msgid "<strong>Visual scripting</strong> using blocks and connections."
+msgstr ""
+
+#: godotengine/layouts/features.htm:273
+msgid ""
+"<strong>Additional languages</strong> with community-provided support for\n"
+"          Python, Nim, D and other languages."
+msgstr ""
+
+#: godotengine/layouts/features.htm:279
+msgid ""
+"<strong>Built-in editor</strong> with syntax highlighting, real-time parser\n"
+"          and code completion."
+msgstr ""
+
+#: godotengine/layouts/features.htm:285
+msgid ""
+"<strong>Integrated documentation.</strong> Browse and search the whole API\n"
+"          offline, without leaving the editor."
+msgstr ""
+
+#: godotengine/layouts/features.htm:296
+msgid "Debug & Optimize"
+msgstr ""
+
+#: godotengine/layouts/features.htm:298
+msgid "Solve bugs and performance bottlenecks with the built-in debugger."
+msgstr ""
+
+#: godotengine/layouts/features.htm:304
+msgid ""
+"<strong>Explore and modify</strong> your project while it's running,\n"
+"          even on mobile devices."
+msgstr ""
+
+#: godotengine/layouts/features.htm:310
+msgid "<strong>Keeps changes</strong> by default after closing the project."
+msgstr ""
+
+#: godotengine/layouts/features.htm:315
+msgid ""
+"<strong>Built-in profiler</strong> with graph plotting and time seeking."
+msgstr ""
+
+#: godotengine/layouts/features.htm:320
+msgid "Video memory debugger."
+msgstr ""
+
+#: godotengine/layouts/features.htm:325
+msgid "<strong>Error logger</strong> with full stack traces."
+msgstr ""
+
+#: godotengine/layouts/features.htm:337
+msgid "Multi-platform editor"
+msgstr ""
+
+#: godotengine/layouts/features.htm:339
+msgid "Create games on any desktop OS."
+msgstr ""
+
+#: godotengine/layouts/features.htm:345
+msgid ""
+"<strong>Works on Windows, macOS, Linux, FreeBSD and OpenBSD.</strong>\n"
+"          The editor runs in 32-bit and 64-bit on all platforms."
+msgstr ""
+
+#: godotengine/layouts/features.htm:351
+msgid ""
+"<strong>Small download</strong> (around 25 MB), and you are ready to go."
+msgstr ""
+
+#: godotengine/layouts/features.htm:356
+msgid ""
+"<strong>Very easy to compile</strong> on any platform (no dependency hell)."
+msgstr ""
+
+#: godotengine/layouts/features.htm:366
+msgid "Multi-platform deploy"
+msgstr ""
+
+#: godotengine/layouts/features.htm:368
+msgid "Deploy games everywhere!"
+msgstr ""
+
+#: godotengine/layouts/features.htm:374
+msgid "<strong>Desktop platforms:</strong> Windows, macOS, Linux, UWP, *BSD."
+msgstr ""
+
+#: godotengine/layouts/features.htm:379
+msgid "<strong>Mobile platforms:</strong> iOS, Android."
+msgstr ""
+
+#: godotengine/layouts/features.htm:384
+msgid ""
+"<strong>Consoles:</strong> Nintendo Switch, PlayStation 4, Xbox One via "
+"third-party providers\n"
+"          <a href=\"https://docs.godotengine.org/en/latest/tutorials/"
+"platform/consoles.html\">(read more)</a>."
+msgstr ""
+
+#: godotengine/layouts/features.htm:390
+msgid "<strong>Export to the web</strong> using HTML5 and WebAssembly."
+msgstr ""
+
+#: godotengine/layouts/features.htm:395
+msgid ""
+"<strong>One-click deploy &amp; export</strong> to most platforms. Easily "
+"create custom builds as well."
+msgstr ""
+
+#: godotengine/layouts/features.htm:407
+msgid "XR support"
+msgstr ""
+
+#: godotengine/layouts/features.htm:409
+msgid ""
+"Godot makes cross platform Augmented and Virtual Reality development easy."
+msgstr ""
+
+#: godotengine/layouts/features.htm:416
+msgid ""
+"<strong>Plugin structure</strong> gives access to various SDKs such as\n"
+"        the OpenVR, OpenXR and Oculus SDKs. Godot works with HTC Vive, Valve "
+"Index,\n"
+"        Oculus Rift, Oculus Go, Oculus Quest, all Microsoft MR headsets, and "
+"many more."
+msgstr ""
+
+#: godotengine/layouts/features.htm:423
+msgid "<strong>ARKit</strong> support is directly available in the iOS build."
+msgstr ""
+
+#: godotengine/layouts/features.htm:436
+msgid "Easy teamwork"
+msgstr ""
+
+#: godotengine/layouts/features.htm:438
+msgid "Godot is designed from the ground up for smooth teamwork."
+msgstr ""
+
+#: godotengine/layouts/features.htm:445
+msgid ""
+"<strong>Friendly filesystem usage</strong> that works great with\n"
+"        version control systems like Git, Subversion, Mercurial, "
+"PlasticSCM,\n"
+"        Perforce, you name it."
+msgstr ""
+
+#: godotengine/layouts/features.htm:452
+msgid ""
+"<strong>Scene instancing</strong> makes teamwork a breeze. Every\n"
+"        team member can focus on their own scene, be it a character, level,\n"
+"        etc., and edit without stepping on each other's toes."
+msgstr ""
+
+#: godotengine/layouts/features.htm:459
+msgid "Text-based descriptive and optimal scene format."
+msgstr ""
+
+#: godotengine/layouts/features.htm:464
+msgid "Script syntax supported by GitHub."
+msgstr ""

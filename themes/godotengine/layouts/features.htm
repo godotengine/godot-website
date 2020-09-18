@@ -41,7 +41,7 @@ description = "Features layout"
 <div class="head">
   <div class="container flex eqsize">
     <div class="main">
-      <h1>Features</h1>
+      <h1>{{ TR('Features') }}</h1>
     </div>
   </div>
 </div>
@@ -53,16 +53,51 @@ description = "Features layout"
     </div>
 
     <div class="title-padded">
-      <h2>Innovative design</h2>
+      <h2>{{ TR('Innovative design') }}</h2>
       <p>
-        <em>Create games with ease using Godot's unique approach to game development.</em>
+        <em>
+          {{ TR("
+          Create games with ease using Godot's unique approach to game development.
+          ") }}
+        </em>
         <ul class="text-left">
-          <li><strong>Nodes for all your needs.</strong> Godot comes with hundreds of built-in nodes that make game design a breeze. You can also create your own for custom behaviors, editors and much more.</li>
-          <li><strong>Flexible scene system.</strong> Create node compositions with support for instancing and inheritance.</li>
-          <li><strong>Visual editor</strong> with all the tools you need packed into a beautiful and uncluttered context-sensitive UI.</li>
-          <li><strong>Friendly content creation pipeline</strong> for artists, level designers, animators and everyone in between.</li>
-          <li><strong>Persistent live editing</strong> where changes are not lost after stopping the game. It even works on mobile devices!</li>
-          <li><strong>Create your own custom tools</strong> with ease using the incredible tool system.</li>
+          <li>
+            {{ TR("
+            <strong>Nodes for all your needs.</strong> Godot comes with hundreds
+            of built-in nodes that make game design a breeze. You can also create
+            your own for custom behaviors, editors and much more.
+            ") }}
+          </li>
+          <li>
+            {{ TR("
+            <strong>Flexible scene system.</strong> Create node compositions
+            with support for instancing and inheritance.
+            ") }}
+          </li>
+          <li>
+            {{ TR("
+            <strong>Visual editor</strong> with all the tools you need packed
+            into a beautiful and uncluttered context-sensitive UI.
+            ") }}
+          </li>
+          <li>
+            {{ TR("
+            <strong>Friendly content creation pipeline</strong> for artists, level
+            designers, animators and everyone in between.
+            ") }}
+          </li>
+          <li>
+            {{ TR("
+            <strong>Persistent live editing</strong> where changes are not
+            lost after stopping the game. It even works on mobile devices!
+            ") }}
+          </li>
+          <li>
+            {{ TR("
+            <strong>Create your own custom tools</strong> with ease using
+            the incredible tool system.
+            ") }}
+          </li>
         </ul>
       </p>
     </div>
@@ -73,22 +108,54 @@ description = "Features layout"
   <img src="{{ 'assets/features/3dgames.jpg' | theme }}" width="1587" height="893" alt="3D game screenshot" class="load-placeholder">
 
   <div class="title-padded base-padding">
-    <h2>Gorgeous 3D graphics</h2>
+    <h2>{{ TR('Gorgeous 3D graphics') }}</h2>
     <em>
+      {{ TR("
       The brand new physically-based renderer comes with a ton of features that will make your games look incredible.
+      ") }}
     </em>
   </div>
 
   <div class="flex eqsize responsive base-padding">
     <ul>
-      <li><strong>Innovative architecture</strong> that combines the best of forward rendering with the efficiency of deferred rendering.</li>
-      <li><strong>Physically-based rendering</strong> with full MSAA support.</li>
-      <li><strong>Full principled BSDF</strong> with subsurface scattering, reflection, refraction, anisotropy, clearcoat, transmittance and more.</li>
+      <li>
+        {{ TR("
+        <strong>Innovative architecture</strong> that combines the best
+        of forward rendering with the efficiency of deferred rendering.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Physically-based rendering</strong> with full MSAA support.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Full principled BSDF</strong> with subsurface scattering,
+        reflection, refraction, anisotropy, clearcoat, transmittance and more.
+        ") }}
+      </li>
     </ul>
     <ul>
-      <li><strong>Global illumination</strong> for real-time gorgeous graphics. It can also be pre-baked for beautiful results even on low-end devices.</li>
-      <li><strong>Mid- and Post-processing effects</strong> including a new tonemapper that supports HDR, multiple standard curves and auto exposure, screen-space reflections, fog, bloom, depth of field and much more.</li>
-      <li><strong>Easy-to-use shader language</strong> based on GLSL, with built-in editor and code completion.</li>
+      <li>
+        {{ TR("
+        <strong>Global illumination</strong> for real-time gorgeous graphics.
+        It can also be pre-baked for beautiful results even on low-end devices.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Mid- and Post-processing effects</strong> including a new
+        tonemapper that supports HDR, multiple standard curves and auto
+        exposure, screen-space reflections, fog, bloom, depth of field and much more.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Easy-to-use shader language</strong> based on GLSL, with
+        built-in editor and code completion.
+        ") }}
+      </li>
     </ul>
   </div>
 </section>
@@ -97,19 +164,43 @@ description = "Features layout"
   <img src="{{ 'assets/features/2dgames.jpg' | theme }}" width="1186" height="696" alt="2D game screenshot" class="load-placeholder">
 
   <div class="title-padded base-padding">
-    <h2>Create 2D games with ease</h2>
-    <em>Godot comes with a fully-dedicated 2D engine packed with features.</em>
+    <h2>{{ TR('Create 2D games with ease') }}</h2>
+    <em>
+      {{ TR("
+      Godot comes with a fully-dedicated 2D engine packed with features.
+      ") }}
+    </em>
   </div>
 
   <div class="flex eqsize responsive base-padding">
     <ul>
-      <li><strong>Work in pixels as your units</strong>, but scale to any screen size and aspect ratio.</li>
-      <li><strong>Tile map editor</strong> with auto-tiling, rotation, custom grid shapes and multiple layers.</li>
-      <li><strong>2D lights and normal maps</strong> to give your 2D games a more realistic look. </li>
+      <li>
+        {{ TR("
+        <strong>Work in pixels as your units</strong>, but scale to any screen size and aspect ratio.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Tile map editor</strong> with auto-tiling, rotation, custom grid shapes and multiple layers.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>2D lights and normal maps</strong> to give your 2D games a more realistic look.
+        ") }}
+      </li>
     </ul>
     <ul>
-      <li><strong>Animate your games</strong> using cut-out or sprite-based animation. </li>
-      <li><strong>Flexible kinematic controller</strong> for collision without physics.</li>
+      <li>
+        {{ TR("
+        <strong>Animate your games</strong> using cut-out or sprite-based animation.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Flexible kinematic controller</strong> for collision without physics.
+        ") }}
+      </li>
     </ul>
   </div>
 </section>
@@ -119,13 +210,33 @@ description = "Features layout"
     <img src="{{ 'assets/features/animate.jpg'|theme }}" width="780" height="420" alt="Animation editor in Godot" class="load-placeholder">
   </div>
   <div class="base-padding" style="padding-top: 0;">
-    <h2>Animate everything</h2>
-    <em>The most flexible animation system.</em>
+    <h2>{{ TR('Animate everything') }}</h2>
+    <em>
+      {{ TR("
+      The most flexible animation system.
+      ") }}
+    </em>
     <ul>
-      <li><strong>Animate literally everything</strong>, from bones and objects to function calls.</li>
-      <li><strong>Use custom transition curves and tweens</strong> to create incredible animations.</li>
-      <li><strong>Helpers to animate 2D rigs</strong>, with skeletons and IK.</li>
-      <li><strong>Efficient optimizer</strong> to pack imported 3D animations.</li>
+      <li>
+        {{ TR("
+        <strong>Animate literally everything</strong>, from bones and objects to function calls.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Use custom transition curves and tweens</strong> to create incredible animations.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Helpers to animate 2D rigs</strong>, with skeletons and IK.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Efficient optimizer</strong> to pack imported 3D animations.
+        ") }}
+      </li>
     </ul>
   </div>
 </section>
@@ -133,33 +244,91 @@ description = "Features layout"
 <div class="flex container responsive eqsize sm-full">
   <section id="script">
     <div class="base-padding">
-      <h2>Script with full freedom</h2>
-      <em>More choices than any other engine.</em>
+      <h2>{{ TR('Script with full freedom') }}</h2>
+      <em>
+        {{ TR("
+        More choices than any other engine.
+        ") }}
+      </em>
       <ul>
         <li>
+          {{ TR("
           <strong>GDScript</strong> Python-like scripting language, designed to make games with zero hassle.
-          <a href="https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html">Learn why our community loves it.</a>
+          <a href=\"https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html\">Learn why our community loves it.</a>
+          ") }}
         </li>
-        <li><strong>Full C# 8.0 support</strong> using Mono.</li>
-        <li><strong>Full C++ support</strong> without needing to recompile the engine.</li>
-        <li><strong>Visual scripting</strong> using blocks and connections.</li>
-        <li><strong>Additional languages</strong> with community-provided support for Python, Nim, D and other languages.</li>
-        <li><strong>Built-in editor</strong> with syntax highlighting, real-time parser and code completion.</li>
-        <li><strong>Integrated documentation.</strong> Browse and search the whole API offline, without leaving the editor.</li>
+        <li>
+          {{ TR("
+          <strong>Full C# 8.0 support</strong> using Mono.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Full C++ support</strong> without needing to recompile the engine.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Visual scripting</strong> using blocks and connections.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Additional languages</strong> with community-provided support for
+          Python, Nim, D and other languages.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Built-in editor</strong> with syntax highlighting, real-time parser
+          and code completion.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Integrated documentation.</strong> Browse and search the whole API
+          offline, without leaving the editor.
+          ") }}
+        </li>
       </ul>
     </div>
   </section>
 
   <section id="debug">
     <div class="base-padding">
-      <h2>Debug & Optimize</h2>
-      <em>Solve bugs and performance bottlenecks with the built-in debugger.</em>
+      <h2>{{ TR('Debug & Optimize') }}</h2>
+      <em>
+        {{ TR("
+        Solve bugs and performance bottlenecks with the built-in debugger.
+        ") }}
+      </em>
       <ul>
-        <li><strong>Explore and modify</strong> your project while it's running, even on mobile devices.</li>
-        <li><strong>Keeps changes</strong> by default after closing the project.</li>
-        <li><strong>Built-in profiler</strong> with graph plotting and time seeking.</li>
-        <li>Video memory debugger.</li>
-        <li><strong>Error logger</strong> with full stack traces.</li>
+        <li>
+          {{ TR("
+          <strong>Explore and modify</strong> your project while it's running,
+          even on mobile devices.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Keeps changes</strong> by default after closing the project.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Built-in profiler</strong> with graph plotting and time seeking.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          Video memory debugger.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Error logger</strong> with full stack traces.
+          ") }}
+        </li>
       </ul>
     </div>
   </section>
@@ -168,29 +337,68 @@ description = "Features layout"
 <div class="flex container responsive eqsize sm-full">
   <section id="multiplatform-editor">
     <div class="base-padding">
-      <h2>Multi-platform editor</h2>
-      <em>Create games on any desktop OS.</em>
+      <h2>{{ TR('Multi-platform editor') }}</h2>
+      <em>
+        {{ TR("
+        Create games on any desktop OS.
+        ") }}
+      </em>
       <ul>
-        <li><strong>Works on Windows, macOS, Linux, FreeBSD and OpenBSD.</strong> The editor runs in 32-bit and 64-bit on all platforms.</li>
-        <li><strong>Small download</strong> (around 25 MB), and you are ready to go.</li>
-        <li><strong>Very easy to compile</strong> on any platform (no dependency hell).</li>
+        <li>
+          {{ TR("
+          <strong>Works on Windows, macOS, Linux, FreeBSD and OpenBSD.</strong>
+          The editor runs in 32-bit and 64-bit on all platforms.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Small download</strong> (around 25 MB), and you are ready to go.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Very easy to compile</strong> on any platform (no dependency hell).
+          ") }}
+        </li>
       </ul>
     </div>
     <div></div>
   </section>
   <section id="deploy">
     <div class="base-padding">
-      <h2>Multi-platform deploy</h2>
-      <em>Deploy games everywhere!</em>
+      <h2>{{ TR('Multi-platform deploy') }}</h2>
+      <em>
+        {{ TR("
+        Deploy games everywhere!
+        ") }}
+      </em>
       <ul>
-        <li><strong>Desktop platforms:</strong> Windows, macOS, Linux, UWP, *BSD</li>
-        <li><strong>Mobile platforms:</strong> iOS, Android</li>
         <li>
-          <strong>Consoles:</strong> Nintendo Switch, PlayStation 4, Xbox One via third-party providers
-          <a href="https://docs.godotengine.org/en/latest/tutorials/platform/consoles.html">(read more)</a>
+          {{ TR("
+          <strong>Desktop platforms:</strong> Windows, macOS, Linux, UWP, *BSD.
+          ") }}
         </li>
-        <li><strong>Export to the web</strong> using HTML5 and WebAssembly</li>
-        <li><strong>One-click deploy &amp; export</strong> to most platforms. Easily create custom builds as well.</li>
+        <li>
+          {{ TR("
+          <strong>Mobile platforms:</strong> iOS, Android.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Consoles:</strong> Nintendo Switch, PlayStation 4, Xbox One via third-party providers
+          <a href=\"https://docs.godotengine.org/en/latest/tutorials/platform/consoles.html\">(read more)</a>.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>Export to the web</strong> using HTML5 and WebAssembly.
+          ") }}
+        </li>
+        <li>
+          {{ TR("
+          <strong>One-click deploy &amp; export</strong> to most platforms. Easily create custom builds as well.
+          ") }}
+        </li>
       </ul>
     </div>
     <div></div>
@@ -199,12 +407,26 @@ description = "Features layout"
 
 <section id="xrsupport" class="container flex eqsize responsive">
   <div class="base-padding" style="padding-top: 0;">
-    <h2>XR support</h2>
-    <p>Godot makes cross platform Augmented and Virtual Reality development easy.</p>
+    <h2>{{ TR('XR support') }}</h2>
+    <p>
+      {{ TR("
+      Godot makes cross platform Augmented and Virtual Reality development easy.
+      ") }}
+    </p>
 
     <ul>
-      <li><strong>Plugin structure</strong> gives access to various SDKs such as the OpenVR, OpenXR and Oculus SDKs. Godot works with HTC Vive, Valve Index, Oculus Rift, Oculus Go, Oculus Quest, all Microsoft MR headsets, and many more.</li>
-      <li><strong>ARKit</strong> support is directly available in the iOS build.</li>
+      <li>
+        {{ TR("
+        <strong>Plugin structure</strong> gives access to various SDKs such as
+        the OpenVR, OpenXR and Oculus SDKs. Godot works with HTC Vive, Valve Index,
+        Oculus Rift, Oculus Go, Oculus Quest, all Microsoft MR headsets, and many more.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>ARKit</strong> support is directly available in the iOS build.
+        ") }}
+      </li>
     </ul>
   </div>
   <div style="overflow: hidden;">
@@ -214,14 +436,38 @@ description = "Features layout"
 
 <section id="collaborate" class="container flex eqsize responsive">
   <div>
-    <h2>Easy teamwork</h2>
-    <p>Godot is designed from the ground up for smooth teamwork.</p>
+    <h2>{{ TR('Easy teamwork') }}</h2>
+    <p>
+      {{ TR("
+      Godot is designed from the ground up for smooth teamwork.
+      ") }}
+    </p>
 
     <ul>
-      <li><strong>Friendly filesystem usage</strong> that works great with version control systems like Git, Subversion, Mercurial, PlasticSCM, Perforce, you name it.</li>
-      <li><strong>Scene instancing</strong> makes teamwork a breeze. Every team member can focus on their own scene, be it a character, level, etc., and edit without stepping on each other's toes.</li>
-      <li>Text-based descriptive and optimal scene format.</li>
-      <li>Script syntax supported by GitHub.</li>
+      <li>
+        {{ TR("
+        <strong>Friendly filesystem usage</strong> that works great with
+        version control systems like Git, Subversion, Mercurial, PlasticSCM,
+        Perforce, you name it.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        <strong>Scene instancing</strong> makes teamwork a breeze. Every
+        team member can focus on their own scene, be it a character, level,
+        etc., and edit without stepping on each other's toes.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        Text-based descriptive and optimal scene format.
+        ") }}
+      </li>
+      <li>
+        {{ TR("
+        Script syntax supported by GitHub.
+        ") }}
+      </li>
     </ul>
   </div>
   <div></div>
