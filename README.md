@@ -51,7 +51,7 @@ You can use the standard `docker exec -it godotengine-org--[php|mariadb] [comman
 
 ### Deploying your changes
 
-Deploying is of course only possible to people who have access to our
+Deploying is of course only possible for people who have access to our
 production server. Most contributors should submit a pull request instead.
 
 - Install Node.js and npm.
