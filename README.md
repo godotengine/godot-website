@@ -11,7 +11,7 @@ October instance.
   - It's also possible to install PHP 7.2+, MySQL and October manually,
     but this isn't covered in this README.
 
-### Running the site
+### Running the Site
 
 - Clone this repository.
 - Put a database dump (if you have one) into the `/docker/mariadb/init` folder.
@@ -21,7 +21,7 @@ October instance.
   - Replace `author.name` with the names in the `/plugins/[author]/[name]` folders.
 - See the website at [http://localhost:8080](http://localhost:8080).
 
-### Restoring a database
+### Restoring a Database
 
 - `mv /your/dump/backup-file.sql ./docker/mariadb/init`
 - `./docker/mariadb/bash.sh`
@@ -29,7 +29,7 @@ October instance.
 - `mysql < 000-setup.sql`
 - `mysql < backup-file.sql`
 
-### Interfacing with the Docker containers
+### Interfacing with the Docker Containers
 
 You can use the standard `docker exec -it godotengine-org--[php|mariadb] [command]` syntax or the following scripts:
 
@@ -40,7 +40,7 @@ You can use the standard `docker exec -it godotengine-org--[php|mariadb] [comman
 - `./docker/mariadb/log.sh`
 - `./docker/mariadb/mysql.sh`
 
-### Setting up the theme
+### Setting up the Theme
 
 - Log into the October backend (located at `/backend`) and change the frontend theme from the Settings tab.
   - Alternatively, you can edit `config/cms.php` and change the theme to `godotengine` there.
@@ -49,7 +49,7 @@ You can use the standard `docker exec -it godotengine-org--[php|mariadb] [comman
   pieces are everything that's stored in the production database
   (blog entries).
 
-### Deploying your changes
+### Deploying your Changes
 
 Deploying is of course only possible for people who have access to our
 production server. Most contributors should submit a pull request instead.
