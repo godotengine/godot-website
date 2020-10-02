@@ -1,0 +1,113 @@
+description = "List of sponsors"
+==
+function onStart() {
+  $this['sponsors'] = [
+    'platinum' => [
+      // name, logo, url
+      [
+        'name' => 'Heroic Labs',
+        'logo' =>  'heroiclabs.png',
+        'url' => 'https://heroiclabs.com/',
+      ],
+      [
+        'name' => 'Gamblify',
+        'logo' => 'gamblify.png',
+        'url' => 'https://www.gamblify.com/',
+      ],
+      [
+        'name' => 'Spiffcode',
+        'logo' => 'spiffcode.png',
+        'url' => 'http://spiffcode.com/',
+      ],
+    ],
+    'gold' => [
+      // name, logo, url
+    ],
+    'silver' => [
+      // name, logo, url
+      [
+        'name' => 'ASIFA-Hollywood',
+        'logo' => 'asifa-hollywood.png',
+        'url' => 'https://www.asifa-hollywood.org/',
+
+      ],
+      [
+        'name' => 'Moonwards',
+        'logo' => 'moonwards.png',
+        'url' => 'https://www.moonwards.com/',
+      ],
+      [
+        'name' => 'Zenva Academy',
+        'logo' => 'zenva-academy.png',
+        'url' => 'https://academy.zenva.com/product/godot-game-development-mini-degree/?zva_src=godotengineorg-godotmd',
+      ],
+    ],
+    'bronze' => [
+      // name, url
+      [
+        'name' => 'Example Sponsor',
+        'url' => 'https://example.com/',
+      ],
+    ],
+    'mini' => [
+      // name
+      ['name' => 'Example Sponsor'],
+    ],
+  ];
+}
+==
+{##}
+{#
+  On the Fund page, we want a different presentation and show all sponsor tiers.
+  On the homepage, we just want to show platinum, gold and silver sponsors without separate headings.
+#}
+<div class='sponsors'>
+  {% if sponsors.platinum %}
+  <h3 class="title text-center">Platinum Sponsors</h3>
+  <div class="sponsors-platinum flex">
+    {% for sponsor in sponsors.platinum %}
+    {% partial 'sponsor' sponsor=sponsor tier=4 %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if sponsors.gold %}
+  <h3 class="title text-center">Gold Sponsors</h3>
+  <div class="sponsors-gold flex">
+    {% for sponsor in sponsors.gold %}
+    {% partial 'sponsor' sponsor=sponsor tier=3 %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if sponsors.silver %}
+  <h3 class="title text-center">Silver Sponsors</h3>
+  <div class="sponsors-silver flex">
+    {% for sponsor in sponsors.silver %}
+    {% partial 'sponsor' sponsor=sponsor tier=2 %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page == 'fund' %}
+
+  {% if sponsors.bronze %}
+  <h3 class="title text-center">Bronze Sponsors</h3>
+  <div class="sponsors-bronze flex">
+    {% for sponsor in sponsors.bronze %}
+    {% partial 'sponsor' sponsor=sponsor tier=1 %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if sponsors.mini %}
+  <h3 class="title text-center">Mini Sponsors</h3>
+  <div class="sponsors-mini flex">
+    {% for sponsor in sponsors.mini %}
+    {% partial 'sponsor' sponsor=sponsor tier=0 %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% endif %}
+</div>

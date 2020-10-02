@@ -57,20 +57,14 @@ class Register extends Controller
                 if ($included != null) {
                     foreach ($included as $obj) {
                         if ($obj["type"] == "goal") {
-                            $pledge = $obj;
-                            $amount_cents = $pledge['attributes']['amount_cents'];
-                            $amount_dollars = $amount_cents / 100;
-                            $amount_cents = $amount_cents % 100;
-                            if ($amount_cents < 9) {
-                                $amount_cents = '0'.$amount_cents;
-                            }
-                            Settings::set('amount_cents', '$'.$amount_dollars.'.'.$amount_cents);
+                            $amount_cents = $obj['attributes']['amount_cents'];
+                            Settings::set('amount_cents', $amount_cents);
                             break;
                         }
                     }
                 }
             }
-        } 
+        }
         if(Settings::get('access_token') != null) {
             $register_client = new \Patreon\API(Settings::get('access_token'));
             $campaign_response = $register_client->fetch_campaign();

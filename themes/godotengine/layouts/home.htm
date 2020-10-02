@@ -12,8 +12,8 @@ postPage = "{{ :slug }}"
 {##}
 <!DOCTYPE html>
 <html lang="en">
-{% partial "head" %}
-{% partial "header" %}
+{% partial 'head' %}
+{% partial 'header' %}
 {% set posts = blogPosts.posts %}
 
 <style>
@@ -46,30 +46,6 @@ postPage = "{{ :slug }}"
 
   #donations h1, #donations h2, #donations h3 {
     color: var(--dark-color-text-title);
-  }
-
-  #sponsors .sponsor {
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    height: 70px;
-    box-sizing: border-box;
-    margin-bottom: 8px;
-    margin-left: 8px;
-  }
-
-  #sponsors .platinum .sponsor {
-    height: 100px;
-  }
-
-  #sponsors img {
-    width: inherit;
-    height: 100%;
-  }
-
-  #sponsors .flex {
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   .feature, #highlight {
@@ -354,39 +330,19 @@ postPage = "{{ :slug }}"
       You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot&nbsp;Engine even more awesome!
     </p>
 
-    <a href="/donate" class="btn flat btn-white-text">Learn more</a>
+    <a href="/fund" class="btn flat">Learn more</a>
   </div>
 </section>
 
 <section id="sponsors">
   <div class="container sm-full padded">
     <h2 class="text-center">Sponsored by</h2>
-
-    <div class="platinum flex">
-      <a class="sponsor card base-padding" href="https://heroiclabs.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/heroiclabs.png' | theme }}" width="264" height="66" alt="Heroic Labs" loading="lazy">
-      </a>
-      <a class="sponsor card base-padding" href="https://www.gamblify.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/gamblify.png' | theme }}" width="312" height="66" alt="Gamblify" loading="lazy">
-      </a>
-      <a class="sponsor card base-padding" href="http://spiffcode.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/spiffcode.png' | theme }}" width="291" height="66" alt="Spiffcode" loading="lazy">
-      </a>
-    </div>
-    <div class="gold flex">
-      <a class="sponsor card" href="https://www.asifa-hollywood.org/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/asifa-hollywood.png' | theme }}" width="223" height="68" alt="ASIFA-Hollywood" loading="lazy">
-      </a>
-      <a class="sponsor card" href="https://www.moonwards.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/moonwards.png' | theme }}" width="200" height="68" alt="Moonwards" loading="lazy">
-      </a>
-      <a class="sponsor card" href="https://academy.zenva.com/product/godot-game-development-mini-degree/?zva_src=godotengineorg-godotmd" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/zenva-academy.png' | theme }}" width="258" height="68" alt="Zenva Academy" loading="lazy">
-      </a>
-    </div>
+    {% partial 'sponsors' page='home' %}
+    <p class="text-center" style="font-size: 110%; margin-top: 4rem">
+      <a href="/fund">Become a sponsor today!</a>
+    </p>
   </div>
 </section>
 
-{% partial "footer" %}
-
+{% partial 'footer' %}
 </html>

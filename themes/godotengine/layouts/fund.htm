@@ -1,0 +1,37 @@
+description = "Fund layout"
+==
+
+<!DOCTYPE html>
+<html lang="en">
+{% partial "head" %}
+{% partial "header" selected="fund" %}
+
+<div class="head">
+  <div class="container flex eqsize">
+    <div class="main">
+      <h1 class="intro-title">{% placeholder title %}</h1>
+    </div>
+
+    <div class="tabs">
+      <a href="/fund" class="title-font {% if this.page.id == 'fund' %} active {% endif %}">
+        Home
+      </a>
+      <a href="/fund/about" class="title-font {% if this.page.id == 'fund-about' %} active {% endif %}">
+        About
+      </a>
+      <a href="/fund/grants" class="title-font {% if this.page.id == 'fund-grants' %} active {% endif %}">
+        Grants
+      </a>
+      <a href="/fund/corporate" class="title-font {% if this.page.id == 'fund-corporate' %} active {% endif %}">
+        Corporate memberships
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  {% page %}
+</div>
+
+{% partial "footer" %}
+</html>

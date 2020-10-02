@@ -36,15 +36,27 @@ class Goal extends ComponentBase
         }
         $included = $campaign_response['included'];
         if ($included != null) {
+            $patronCount = 0;
             foreach ($included as $obj) {
-                if ($obj["type"] == "goal") {
+                if ($obj['type'] === 'reward') {
+                    $reward = $obj;
+                    // `patron_count` doesn't exist for the "Everyone" reward
+                    // which seems to be included in every campaign response.
+                    if (isset($reward['attributes']['patron_count'])) {
+                        $patronCount += $reward['attributes']['patron_count'];
+                    }
+                }
+            }
+            Settings::set('patron_count', $patronCount);
+
+            foreach ($included as $obj) {
+                if ($obj['type'] === 'goal') {
                     $goal = $obj;
                     // Grab the first goal that is less than 100%
                     // If none are less than 100%, it'll pull latest entry from settings
                     if($goal['attributes']['completed_percentage'] < 100) {
                         // Set new goal amount (in case of update)
-                        $this->update_goal_amount($goal['attributes']['amount_cents']);
-
+                        Settings::set('amount_cents', $goal['attributes']['amount_cents']);
                         Settings::set('completed_percentage', $goal['attributes']['completed_percentage']);
                         break;
                     }
@@ -52,16 +64,13 @@ class Goal extends ComponentBase
             }
         }
     }
-    public function update_goal_amount($cents)
-    {
-        Settings::set('amount_cents', '$'.number_format($cents / 100, 2, '.', ','));
-    }
+
     public function init()
     {
         $this->page['patreon_url'] = Settings::get('patreon_url');
         $refresh_time = Settings::get('refresh_time');
         // Make sure refresh time is never 0
-        if ( $refresh_time == '' || $refresh_time < 5) {
+        if ($refresh_time == '' || $refresh_time < 5) {
             $refresh_time = 5;
         }
         if ((Settings::get('time_since_last_update') + $refresh_time * 60) < time()) {
@@ -70,6 +79,7 @@ class Goal extends ComponentBase
         }
         $this->page['amount_cents'] = Settings::get('amount_cents');
         $this->page['goalPercentage'] = Settings::get('completed_percentage');
+        $this->page['patron_count'] = Settings::get('patron_count');
     }
     public function onRun()
     {

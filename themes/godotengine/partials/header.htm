@@ -1,6 +1,4 @@
 description = "header partial"
-
-[Goal]
 ==
 {##}
 
@@ -66,7 +64,7 @@ description = "header partial"
         <li {% if selected == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
         <li><a href="https://docs.godotengine.org">Learn</a></li>
         <li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
-        {% component 'Goal' %}
+        <li class="fund {% if selected == 'fund' %} active {% endif %}"><a href="/fund">❤ Donate</a></li>
       </ul>
     </nav>
   </div>

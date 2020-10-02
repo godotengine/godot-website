@@ -1,7 +1,10 @@
 1.0.1: 'First version of Demo'
 1.0.2:
     - 'Created table paulvonzimmerman_patreon_system_settings'
-    - builder_table_create_paulvonzimmerman_patreon_system_settings.php
 1.0.3:
     - 'Add supuport for multiple goals'
     - 'Added commas to the amount displayed in the component'
+1.0.4:
+    - add_patron_count.php
+    - 'Add `patron_count` page variable which returns the total number of patrons'
+    - '`amount_cents` is now an integer, format it with the `number_format` Twig filter'

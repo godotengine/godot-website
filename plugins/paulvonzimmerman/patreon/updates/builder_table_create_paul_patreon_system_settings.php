@@ -3,7 +3,7 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreatePaulVonZimmermanPatreonSystemSettings extends Migration
+class BuilderTableCreatePaulPatreonSystemSettings extends Migration
 {
     public function up()
     {
@@ -20,7 +20,7 @@ class BuilderTableCreatePaulVonZimmermanPatreonSystemSettings extends Migration
             $table->integer('amount_cents')->nullable();
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('paulvonzimmerman_patreon_system_settings');

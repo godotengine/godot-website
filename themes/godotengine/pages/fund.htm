@@ -1,0 +1,245 @@
+title = "Godot Development Fund"
+url = "/fund"
+layout = "fund"
+is_hidden = 0
+
+[Goal]
+==
+function onStart() {
+  // The number of corporate patrons (donating outside Patreon).
+  // TODO: Use a real amount.
+  $this['corporate_patron_count'] = 20;
+  // The amount of recurring donations made monthly outside Patreon in USD cents.
+  // The amount from Patreon is fetched automatically by the Patreon plugin.
+  // TODO: Use a real amount.
+  $this['corporate_amount_cents'] = 500000;
+
+  // The current goal to reach in USD cents.
+  $this['goal_cents'] = 2000000;
+
+  $this['amount_cents_total'] = $this['amount_cents'] + $this['corporate_amount_cents'];
+}
+==
+{##}
+{% put title %} Godot Development Fund {% endput %}
+
+<p class="text-xl text-center fund-intro-text">
+  Join the Development Fund and support us to work on core Godot development.
+</p>
+
+<div class="fund-progress">
+  {# Prevent the bar from overflowing by limiting the width according to the other funding type. #}
+  <div class="fund-progress-corporate" style="
+    width: {{ (corporate_amount_cents / goal_cents) * 100 }}%;
+    max-width: {{ 100 - (amount_cents / goal_cents) * 100 }}%;
+    background-color: var(--fund-corporate-color);
+  "></div>
+  <div class="fund-progress-individual" style="
+    width: {{ (amount_cents / goal_cents) * 100 }}%;
+    max-width: {{ 100 - (corporate_amount_cents / goal_cents) * 100 }}%;
+    background-color: var(--fund-individual-color);
+  "></div>
+</div>
+
+<section class="grid" style="grid-template-columns: auto auto">
+  <article>
+    <span class="fund-progress-legend" style="--color: var(--fund-corporate-color)">Corporate</span>
+    <span class="fund-progress-legend" style="--color: var(--fund-individual-color)">Individual</span>
+  </article>
+  <article class="text-right leading-relaxed" style="font-size: 1rem">
+    Goal: $&nbsp;{{ (goal_cents / 100) | number_format(0, '.', ',') }}/month<br>
+    <strong>Hire another full-time developer!</strong>
+  </article>
+</section>
+
+<section class="grid text-center leading-relaxed items-center" style="
+  color: var(--base-color-text-title);
+  grid-template-columns: auto auto auto;
+  border-top: 2px solid hsla(0, 0%, 50%, 0.15);
+  border-bottom: 2px solid hsla(0, 0%, 50%, 0.15);
+  padding: 1rem;
+  margin: 2rem 0 4rem 0;
+">
+  <article class="text-lg fund-stats-secondary">
+    {# patron_count is from the Patreon plugin. #}
+    <div class="font-bold">{{ patron_count | number_format(0, '.', ',') }}</div>
+    individual sponsors
+  </article>
+  <article class="text-xl fund-stats-primary shadow" style="
+    background-color: var(--card-background-color);
+    padding: 1rem;
+    margin: -1rem;
+    border-radius: 0.5rem;
+  ">
+    {# amount_cents is from the Patreon plugin. #}
+    <div class="font-bold">$&nbsp;{{ (amount_cents_total / 100) | number_format(2, '.', ',') }}</div>
+    monthly contribution
+  </article>
+  <article class="text-lg fund-stats-secondary">
+    <div class="font-bold">{{ corporate_patron_count | number_format(0, '.', ',') }}</div>
+    corporate sponsors
+  </article>
+</section>
+
+<div>
+  <h2 class="title text-center">Choose a membership</h3>
+
+  <div class="flex">
+    <table class="table fund-options-table shadow text-sm" style="margin: 0 auto 1rem auto">
+      <thead>
+        <tr>
+          <td>Level</td>
+          <td>Perks</td>
+          <td>{# Actions ("Choose"/"Contact us" buttons) #}</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">1</span><br>
+            <span class="fund-options-table-price">$&nbsp;5 / month</span>
+          </td>
+          <td>
+            <ul>
+              <li>Early development updates on <a href="https://patreon.com/godotengine">Patreon</a>.</li>
+              <li>Custom Donor role in the Godot Discord server.</li>
+            </ul>
+          </td>
+          <td><a href="https://www.patreon.com/join/godotengine/checkout?rid=1878486" class="button rounded-full font-bold">Choose</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">2</span><br>
+            <span class="fund-options-table-price">$&nbsp;10 / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>Your name in the Godot editor's About box.</li>
+            </ul>
+          </td>
+          <td><a href="https://www.patreon.com/join/godotengine/checkout?rid=1878485" class="button rounded-full font-bold">Choose</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">3</span><br>
+            <span class="fund-options-table-price">$&nbsp;14 / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>Your name in the Godot editor's About box (higher up in the credits).</li>
+            </ul>
+          </td>
+          <td><a href="https://www.patreon.com/join/godotengine/checkout?rid=1878512" class="button rounded-full font-bold">Choose</a></td>
+        </tr>
+        <tr class="fund-options-table-popular">
+          <td>
+            <span class="fund-options-table-level">4</span> <em class="font-bold" style="color: var(--fund-individual-color)">- Popular</em><br>
+            <span class="fund-options-table-price">$&nbsp;26 / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>
+                Submit questions for the monthy live Q&amp;A sessions hosted on
+                <a href="https://www.youtube.com/c/GodotEngineOfficial/videos">YouTube</a>.
+              </li>
+            </ul>
+          </td>
+          <td><a href="https://www.patreon.com/join/godotengine/checkout?rid=1878539" class="button rounded-full font-bold">Choose</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">Mini</span><br>
+            <span class="fund-options-table-price">$&nbsp;48 / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>Your name in the Godot editor's About box Sponsor area and the website.
+            </ul>
+          </td>
+          <td><a href="https://www.patreon.com/join/godotengine/checkout?rid=1878543" class="button rounded-full font-bold">Choose</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">Bronze</span><br>
+            <span class="fund-options-table-price">$&nbsp;99 / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>Your name in the Godot editor's About box Sponsor area and the website, with an optional clickable link to your website.
+              </li>
+            </ul>
+          </td>
+          <td><a href="https://www.patreon.com/join/godotengine/checkout?rid=5533838" class="button rounded-full font-bold">Choose</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">Silver</span><br>
+            <span class="fund-options-table-price">$&nbsp;500 / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>
+                Your name or company logo on the Godot website front page
+                (small) and at the top of Godot's credits. Valid on releases
+                that come out during or right after you donated.
+              </li>
+            </ul>
+          </td>
+          <td><a href="https://www.patreon.com/join/godotengine/checkout?rid=5546320" class="button rounded-full font-bold">Choose</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">Gold</span><br>
+            <span class="fund-options-table-price">$&nbsp;800? / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>
+                Your name or company logo on the Godot website front page
+                (medium) and at the top of Godot's credits. Valid on releases
+                that come out during or right after you donated.
+              </li>
+            </ul>
+          </td>
+          <td><a href="/fund/corporate" class="button rounded-full font-bold">Contact us</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="fund-options-table-level">Platinum</span><br>
+            <span class="fund-options-table-price">$&nbsp;2,000? / month</span>
+          </td>
+          <td>
+            <ul>
+              <li><em>All perks above, plus:</em></li>
+              <li>
+                Your name or company logo on the Godot website front page
+                (large), at the topics of Godot's credits and on the Godot
+                editor's splash screen. Valid on releases that come out during
+                or right after you donated.
+            </li>
+              <li>One-time blog post about your company supporting Godot (optional).</li>
+            </ul>
+          </td>
+          <td><a href="/fund/corporate" class="button rounded-full font-bold">Contact us</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="text-sm text-center">
+    All prices are in USD. VAT may be added at checkout depending on your country of residence.<br>
+    Other pricing options are available upon request.<br>
+    <a href="/contact">Contact us</a> if you don't want your name or company to be displayed publicly.
+  </p>
+</div>
+
+<h2 class="title text-center">Credits</h3>
+{% partial 'sponsors' page='fund' %}

@@ -1,3 +1,4 @@
+{##}
 <a class="patreonLink" href="{{ patreon_url }}">
   <div class="patreon">
     <div class="patreon-row">
@@ -13,7 +14,7 @@
           </div
       </div>
     </div>
-      <p class="patreon-uppercase">{{ amount_cents }}</p>
+      <p class="patreon-uppercase">$&nbsp;{{ (amount_cents / 100) | number_format(2, '.', ',') }}</p>
     </div>
   </div>
 </a>
