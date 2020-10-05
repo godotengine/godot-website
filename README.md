@@ -23,11 +23,13 @@ October instance.
 
 ### Restoring a database
 
-- `mv /your/dump/backup-file.sql ./docker/mariadb/init`
-- `./docker/mariadb/bash.sh`
-- `cd /docker-entrypoint-initdb.d/`
-- `mysql < 000-setup.sql`
-- `mysql < backup-file.sql`
+```sh
+mv /your/dump/backup-file.sql docker/mariadb/init
+docker/mariadb/bash.sh
+cd /docker-entrypoint-initdb.d/
+mysql < 000-setup.sql
+mysql < backup-file.sql
+```
 
 ### Interfacing with the Docker containers
 
