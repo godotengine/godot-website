@@ -5,6 +5,19 @@ October instance.
 
 ## Development
 
+### Browser support
+
+When working on new features, keep in mind this website only supports
+*evergreen browsers*:
+
+- Chrome (latest version and N-1 version)
+- Edge (latest version and N-1 version)
+- Firefox (latest version, N-1 version, and latest ESR version)
+- Opera (latest version and N-1 version)
+- Safari (latest version and N-1 version)
+
+Internet Explorer isn't supported.
+
 ### Dependencies
 
 - [Docker](https://docker.com)
@@ -68,6 +81,6 @@ you've thoroughly tested your changes on your local copy before running this.
 
 ## Resources
 
-- Discuss on freenode IRC: `#godotengine-atelier`
+- Discuss on freenode IRC: [`#godotengine-atelier`](https://webchat.freenode.net/?channels=#godotengine-atelier)
 - When working on the theme, please take note of the
   [website stats](https://stats.tuxfamily.org/godotengine.org).
