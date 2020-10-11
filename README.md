@@ -79,6 +79,12 @@ directory to the corresponding directory on production. It'll also make sure
 that copied assets are still writable by the group on the server. Make sure
 you've thoroughly tested your changes on your local copy before running this.
 
+### Syntax highlighting
+
+If you use Visual Studio Code, you can install the
+[OctoberCMS Template Language](https://marketplace.visualstudio.com/items?itemName=dqsully.octobercms-template-language)
+extension to benefit from syntax highlighting in `.htm` templates.
+
 ## Resources
 
 - Discuss on freenode IRC: [`#godotengine-atelier`](https://webchat.freenode.net/?channels=#godotengine-atelier)
