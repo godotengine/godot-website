@@ -59,7 +59,10 @@ return [
         'featured_images' => 'Zugehörige Bilder',
         'delete_confirm' => 'Möchtest du diesen Artikel wirklich löschen?',
         'close_confirm' => 'Der Artikel ist noch nicht gespeichert.',
-        'return_to_posts' => 'Zurück zur Artikel-Übersicht'
+        'return_to_posts' => 'Zurück zur Artikel-Übersicht',
+        'posted_byline' => 'Veröffentlicht in :categories am :date',
+        'posted_byline_no_categories' => 'Veröffentlicht am :date',
+        'date_format' => 'd. F Y',
     ],
     'categories' => [
         'list_title' => 'Blog Kategorien verwalten',
@@ -81,7 +84,8 @@ return [
         'blog_category' => 'Blog Kategorie',
         'all_blog_categories' => 'Alle Blog Kategorien',
         'blog_post' => 'Blog Artikel',
-        'all_blog_posts' => 'Alle Blog Artikel'
+        'all_blog_posts' => 'Alle Blog Artikel',
+        'category_blog_posts' => 'Blog Kategorie Artikel'
     ],
     'settings' => [
         'category_title' => 'Blog Kategorie-Übersicht',
@@ -116,9 +120,13 @@ return [
         'posts_post_description' => 'Name der Artikel-Seiten-Datei für die "Erfahre mehr" Links. Dieser Wert für von der Standard-Komponente verwendet.',
         'posts_except_post' => 'Artikel ausschließen',
         'posts_except_post_description' => 'Gebe direkt die ID/URL oder eine Variable mit der Artikel-ID/URL an um diesen Artikel auszuschließen. Dieser Wert für von der Standard-Komponente verwendet.',
+        'posts_except_categories' => 'Kategorien ausschließen',
+        'posts_except_categories_description' => 'Gebe eine kommagetrennte Liste von Kategorie-Slugs oder eine Variable mit einer solchen Liste an um deren Artikel auszuschließen. Die Dieser Wert für von der Standard-Komponente verwendet.',
         'rssfeed_blog' => 'Blog Seite',
         'rssfeed_blog_description' => 'Name der Artikel-Seiten-Datei für die Links. Dieser Wert für von der Standard-Komponente verwendet.',
         'rssfeed_title' => 'RSS-Feed',
-        'rssfeed_description' => 'Erstellt einen RSS-Feed mit Artikeln aus dem Blog.'
+        'rssfeed_description' => 'Erstellt einen RSS-Feed mit Artikeln aus dem Blog.',
+        'group_links' => 'Links',
+        'group_exceptions' => 'Ausnahmen'
     ]
 ];

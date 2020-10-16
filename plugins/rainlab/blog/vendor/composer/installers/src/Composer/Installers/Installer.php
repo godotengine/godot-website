@@ -1,13 +1,18 @@
 <?php
+
 namespace Composer\Installers;
 
-use Composer\IO\IOInterface;
+use Composer\Composer;
+use Composer\Installer\BinaryInstaller;
 use Composer\Installer\LibraryInstaller;
+use Composer\IO\IOInterface;
 use Composer\Package\PackageInterface;
 use Composer\Repository\InstalledRepositoryInterface;
+use Composer\Util\Filesystem;
 
 class Installer extends LibraryInstaller
 {
+
     /**
      * Package types to installer class map
      *
@@ -23,40 +28,56 @@ class Installer extends LibraryInstaller
         'bonefish'     => 'BonefishInstaller',
         'cakephp'      => 'CakePHPInstaller',
         'chef'         => 'ChefInstaller',
+        'civicrm'      => 'CiviCrmInstaller',
         'ccframework'  => 'ClanCatsFrameworkInstaller',
         'cockpit'      => 'CockpitInstaller',
         'codeigniter'  => 'CodeIgniterInstaller',
         'concrete5'    => 'Concrete5Installer',
         'craft'        => 'CraftInstaller',
         'croogo'       => 'CroogoInstaller',
+        'dframe'       => 'DframeInstaller',
         'dokuwiki'     => 'DokuWikiInstaller',
         'dolibarr'     => 'DolibarrInstaller',
         'decibel'      => 'DecibelInstaller',
         'drupal'       => 'DrupalInstaller',
         'elgg'         => 'ElggInstaller',
+        'eliasis'      => 'EliasisInstaller',
         'ee3'          => 'ExpressionEngineInstaller',
         'ee2'          => 'ExpressionEngineInstaller',
+        'ezplatform'   => 'EzPlatformInstaller',
         'fuel'         => 'FuelInstaller',
         'fuelphp'      => 'FuelphpInstaller',
         'grav'         => 'GravInstaller',
         'hurad'        => 'HuradInstaller',
         'imagecms'     => 'ImageCMSInstaller',
+        'itop'         => 'ItopInstaller',
         'joomla'       => 'JoomlaInstaller',
+        'kanboard'     => 'KanboardInstaller',
         'kirby'        => 'KirbyInstaller',
+        'known'	       => 'KnownInstaller',
         'kodicms'      => 'KodiCMSInstaller',
         'kohana'       => 'KohanaInstaller',
+        'lms'      => 'LanManagementSystemInstaller',
         'laravel'      => 'LaravelInstaller',
+        'lavalite'     => 'LavaLiteInstaller',
         'lithium'      => 'LithiumInstaller',
         'magento'      => 'MagentoInstaller',
+        'majima'       => 'MajimaInstaller',
+        'mantisbt'     => 'MantisBTInstaller',
         'mako'         => 'MakoInstaller',
+        'maya'         => 'MayaInstaller',
         'mautic'       => 'MauticInstaller',
         'mediawiki'    => 'MediaWikiInstaller',
         'microweber'   => 'MicroweberInstaller',
         'modulework'   => 'MODULEWorkInstaller',
+        'modx'         => 'ModxInstaller',
         'modxevo'      => 'MODXEvoInstaller',
         'moodle'       => 'MoodleInstaller',
         'october'      => 'OctoberInstaller',
+        'ontowiki'     => 'OntoWikiInstaller',
         'oxid'         => 'OxidInstaller',
+        'osclass'         => 'OsclassInstaller',
+        'pxcms'        => 'PxcmsInstaller',
         'phpbb'        => 'PhpBBInstaller',
         'pimcore'      => 'PimcoreInstaller',
         'piwik'        => 'PiwikInstaller',
@@ -65,17 +86,24 @@ class Installer extends LibraryInstaller
         'puppet'       => 'PuppetInstaller',
         'radphp'       => 'RadPHPInstaller',
         'phifty'       => 'PhiftyInstaller',
+        'porto'        => 'PortoInstaller',
         'redaxo'       => 'RedaxoInstaller',
+        'redaxo5'      => 'Redaxo5Installer',
         'reindex'      => 'ReIndexInstaller',
         'roundcube'    => 'RoundcubeInstaller',
         'shopware'     => 'ShopwareInstaller',
+        'sitedirect'   => 'SiteDirectInstaller',
         'silverstripe' => 'SilverStripeInstaller',
         'smf'          => 'SMFInstaller',
+        'sydes'        => 'SyDESInstaller',
+        'sylius'       => 'SyliusInstaller',
         'symfony1'     => 'Symfony1Installer',
+        'tao'          => 'TaoInstaller',
         'thelia'       => 'TheliaInstaller',
         'tusk'         => 'TuskInstaller',
         'typo3-cms'    => 'TYPO3CmsInstaller',
         'typo3-flow'   => 'TYPO3FlowInstaller',
+        'userfrosting' => 'UserFrostingInstaller',
         'vanilla'      => 'VanillaInstaller',
         'whmcs'        => 'WHMCSInstaller',
         'wolfcms'      => 'WolfCMSInstaller',
@@ -85,6 +113,30 @@ class Installer extends LibraryInstaller
         'zikula'       => 'ZikulaInstaller',
         'prestashop'   => 'PrestashopInstaller'
     );
+
+    /**
+     * Installer constructor.
+     *
+     * Disables installers specified in main composer extra installer-disable
+     * list
+     *
+     * @param IOInterface          $io
+     * @param Composer             $composer
+     * @param string               $type
+     * @param Filesystem|null      $filesystem
+     * @param BinaryInstaller|null $binaryInstaller
+     */
+    public function __construct(
+        IOInterface $io,
+        Composer $composer,
+        $type = 'library',
+        Filesystem $filesystem = null,
+        BinaryInstaller $binaryInstaller = null
+    ) {
+        parent::__construct($io, $composer, $type, $filesystem,
+            $binaryInstaller);
+        $this->removeDisabledInstallers();
+    }
 
     /**
      * {@inheritDoc}
@@ -108,14 +160,9 @@ class Installer extends LibraryInstaller
 
     public function uninstall(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
-        if (!$repo->hasPackage($package)) {
-            throw new \InvalidArgumentException('Package is not installed: '.$package);
-        }
-
-        $repo->removePackage($package);
-
-        $installPath = $this->getInstallPath($package);
-        $this->io->write(sprintf('Deleting %s - %s', $installPath, $this->filesystem->removeDirectory($installPath) ? '<comment>deleted</comment>' : '<error>not deleted</error>'));
+        parent::uninstall($repo, $package);
+        $installPath = $this->getPackageBasePath($package);
+        $this->io->write(sprintf('Deleting %s - %s', $installPath, !file_exists($installPath) ? '<comment>deleted</comment>' : '<error>not deleted</error>'));
     }
 
     /**
@@ -185,5 +232,49 @@ class Installer extends LibraryInstaller
     private function getIO()
     {
         return $this->io;
+    }
+
+    /**
+     * Look for installers set to be disabled in composer's extra config and
+     * remove them from the list of supported installers.
+     *
+     * Globals:
+     *  - true, "all", and "*" - disable all installers.
+     *  - false - enable all installers (useful with
+     *     wikimedia/composer-merge-plugin or similar)
+     *
+     * @return void
+     */
+    protected function removeDisabledInstallers()
+    {
+        $extra = $this->composer->getPackage()->getExtra();
+
+        if (!isset($extra['installer-disable']) || $extra['installer-disable'] === false) {
+            // No installers are disabled
+            return;
+        }
+
+        // Get installers to disable
+        $disable = $extra['installer-disable'];
+
+        // Ensure $disabled is an array
+        if (!is_array($disable)) {
+            $disable = array($disable);
+        }
+
+        // Check which installers should be disabled
+        $all = array(true, "all", "*");
+        $intersect = array_intersect($all, $disable);
+        if (!empty($intersect)) {
+            // Disable all installers
+            $this->supportedTypes = array();
+        } else {
+            // Disable specified installers
+            foreach ($disable as $key => $installer) {
+                if (is_string($installer) && key_exists($installer, $this->supportedTypes)) {
+                    unset($this->supportedTypes[$installer]);
+                }
+            }
+        }
     }
 }

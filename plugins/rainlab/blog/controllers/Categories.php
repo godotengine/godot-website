@@ -1,9 +1,10 @@
 <?php namespace RainLab\Blog\Controllers;
 
 use BackendMenu;
+use Flash;
+use Lang;
 use Backend\Classes\Controller;
 use RainLab\Blog\Models\Category;
-use Flash;
 
 class Categories extends Controller
 {
@@ -31,13 +32,14 @@ class Categories extends Controller
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
             foreach ($checkedIds as $categoryId) {
-                if ((!$category = Category::find($categoryId)))
+                if ((!$category = Category::find($categoryId))) {
                     continue;
+                }
 
                 $category->delete();
             }
 
-            Flash::success('Successfully deleted those categories.');
+            Flash::success(Lang::get('rainlab.blog::lang.category.delete_success'));
         }
 
         return $this->listRefresh();

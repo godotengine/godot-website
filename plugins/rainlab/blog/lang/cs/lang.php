@@ -58,6 +58,7 @@ return [
         'summary' => 'Shrnutí',
         'featured_images' => 'Obrázky',
         'delete_confirm' => 'Opravdu chcete smazat tento příspěvek?',
+        'delete_success' => 'Vybrané příspěvky úspěšně odstraněny.',
         'close_confirm' => 'Příspěvek není uložený.',
         'return_to_posts' => 'Zpět na seznam příspěvků',
     ],
@@ -69,16 +70,21 @@ return [
     'category' => [
         'name' => 'Název',
         'name_placeholder' => 'Název nové kategorie',
+        'description' => 'Popis',
         'slug' => 'URL kategorie',
         'slug_placeholder' => 'zadejte-url-kategorie',
         'posts' => 'Počet příspěvků',
         'delete_confirm' => 'Opravdu chcete smazat tuto kategorii?',
+        'delete_success' => 'Vybrané kategorie úspěšně odstraněny.',
         'return_to_categories' => 'Zpět na seznam blogových kategorií',
         'reorder' => 'Změnit pořadí',
     ],
     'menuitem' => [
         'blog_category' => 'Blogová kategorie',
         'all_blog_categories' => 'Všechny blogové kategorie',
+        'blog_post' => 'Blogový příspěvek',
+        'all_blog_posts' => 'Všechny blogové příspěvky',
+        'category_blog_posts' => 'Blog category posts'
     ],
     'settings' => [
         'category_title' => 'Seznam kategorií',
@@ -105,6 +111,7 @@ return [
         'posts_per_page_validation' => 'Špatný formát počtu příspěvků na stránku, musí být zadáno jako číslo',
         'posts_no_posts' => 'Hláška prázdné stránky',
         'posts_no_posts_description' => 'Zpráva se zobrazí pokud se nepovede najít žádné články.',
+        'posts_no_posts_default' => 'Nenalezeny žádné příspěvky',
         'posts_order' => 'Řazení článků',
         'posts_order_decription' => 'Nastaví řazení článků ve výpisu',
         'posts_category' => 'Stránka kategorií',
@@ -113,9 +120,35 @@ return [
         'posts_post_description' => 'Vyberte stránku která slouží k zobrazení článků (nebo detailu článku).',
         'posts_except_post' => 'Vyloučit příspěvěk',
         'posts_except_post_description' => 'Zadejte ID nebo URL příspěvku který chcete vyloučit',
+        'posts_except_categories' => 'Vyloučené kategorie',
+        'posts_except_categories_description' => 'Pro vyloučení kategorií zadejte čárkou oddělené URL příspěvků nebo proměnnou, která tento seznam obsahuje.',
         'rssfeed_blog' => 'Blogová stránka',
         'rssfeed_blog_description' => 'Name of the main blog page file for generating links. This property is used by the default component partial.',
         'rssfeed_title' => 'RSS Kanál',
         'rssfeed_description' => 'Vygeneruje RSS kanál který obsahuje blogové příspěvky.',
+        'group_links' => 'Odkazy',
+        'group_exceptions' => 'Výjimky'
+    ],
+    'sorting' => [
+	    'title_asc' => 'Název (sestupně)',
+	    'title_desc' => 'Název (vzestupně)',
+	    'created_asc' => 'Vytvořeno (sestupně)',
+	    'created_desc' => 'Vytvořeno (vzestupně)',
+	    'updated_asc' => 'Upraveno (sestupně)',
+	    'updated_desc' => 'Upraveno (vzestupně)',
+	    'published_asc' => 'Publikováno (sestupně)',
+	    'published_desc' => 'Publikováno (vzestupně)',
+	    'random' => 'Náhodně'
+    ],
+    'import' => [
+	    'update_existing_label' => 'Uprav existující příspěvky',
+	    'update_existing_comment' => 'Zvolte pokud chcete upravit příspěvky se stejným ID, názvem nebo URL.',
+	    'auto_create_categories_label' => 'VYtvořit kategorie ze souboru',
+	    'auto_create_categories_comment' => 'Chcete-li tuto funkci použít, měli byste se shodovat se sloupcem Kategorie, jinak vyberte výchozí kategorie, které chcete použít z níže uvedených položek.',
+	    'categories_label' => 'Kategorie',
+	    'categories_comment' => 'Vyberte kategorie ke kterým budou příspěvky přiřazeny (volitelné).',
+	    'default_author_label' => 'Výchozí autor příspěvků (volitelné)',
+	    'default_author_comment' => 'Import se pokusí použít existujícího autora, pokud odpovídá sloupci email, jinak se použije výše uvedený autor.',
+	    'default_author_placeholder' => '-- vyberte autora --'
     ]
 ];

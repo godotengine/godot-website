@@ -5,22 +5,22 @@
 fields:
 
     update_existing:
-        label: Update existing posts
-        comment: Check this box to update posts that have exactly the same ID, title or slug.
+        label: rainlab.blog::lang.import.update_existing_label
+        comment: rainlab.blog::lang.import.update_existing_comment
         type: checkbox
         default: true
         span: left
 
     auto_create_categories:
-        label: Create categories specified in the import file
-        comment: You should match the Categories column to use this feature, otherwise select the default categories to use from the items below.
+        label: rainlab.blog::lang.import.auto_create_categories_label
+        comment: rainlab.blog::lang.import.auto_create_categories_comment
         type: checkbox
         default: true
         span: right
 
-    post_categories:
-        label: Categories
-        commentAbove: Select the categories that imported posts will belong to (optional).
+    categories:
+        label: rainlab.blog::lang.import.categories_label
+        commentAbove: rainlab.blog::lang.import.categories_comment
         type: checkboxlist
         span: right
         cssClass: field-indent
@@ -30,8 +30,8 @@ fields:
             condition: checked
 
     default_author:
-        label: Default post author (optional)
-        comment: The import will try to use an existing author if you match the Author Email column, otherwise the author specified above is used.
+        label: rainlab.blog::lang.import.default_author_label
+        comment: rainlab.blog::lang.import.default_author_comment
         type: dropdown
-        placeholder: -- Select author --
+        placeholder: rainlab.blog::lang.import.default_author_placeholder
         span: left

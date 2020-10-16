@@ -1,7 +1,7 @@
 <?php namespace RainLab\Blog\Components;
 
+use Lang;
 use Response;
-use Redirect;
 use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use RainLab\Blog\Models\Post as BlogPost;
@@ -48,7 +48,7 @@ class RssFeed extends ComponentBase
                 'title'       => 'rainlab.blog::lang.settings.posts_filter',
                 'description' => 'rainlab.blog::lang.settings.posts_filter_description',
                 'type'        => 'string',
-                'default'     => ''
+                'default'     => '',
             ],
             'sortOrder' => [
                 'title'       => 'rainlab.blog::lang.settings.posts_order',
@@ -68,14 +68,14 @@ class RssFeed extends ComponentBase
                 'description' => 'rainlab.blog::lang.settings.rssfeed_blog_description',
                 'type'        => 'dropdown',
                 'default'     => 'blog/post',
-                'group'       => 'Links',
+                'group'       => 'rainlab.blog::lang.settings.group_links',
             ],
             'postPage' => [
                 'title'       => 'rainlab.blog::lang.settings.posts_post',
                 'description' => 'rainlab.blog::lang.settings.posts_post_description',
                 'type'        => 'dropdown',
                 'default'     => 'blog/post',
-                'group'       => 'Links',
+                'group'       => 'rainlab.blog::lang.settings.group_links',
             ],
         ];
     }
@@ -92,7 +92,13 @@ class RssFeed extends ComponentBase
 
     public function getSortOrderOptions()
     {
-        return BlogPost::$allowedSortingOptions;
+        $options = BlogPost::$allowedSortingOptions;
+
+        foreach ($options as $key => $value) {
+            $options[$key] = Lang::get($value);
+        }
+
+        return $options;
     }
 
     public function onRun()
@@ -123,9 +129,9 @@ class RssFeed extends ComponentBase
          * List all the posts, eager load their categories
          */
         $posts = BlogPost::with('categories')->listFrontEnd([
-            'sort'       => $this->property('sortOrder'),
-            'perPage'    => $this->property('postsPerPage'),
-            'category'   => $category
+            'sort'     => $this->property('sortOrder'),
+            'perPage'  => $this->property('postsPerPage'),
+            'category' => $category
         ]);
 
         /*
@@ -140,11 +146,13 @@ class RssFeed extends ComponentBase
 
     protected function loadCategory()
     {
-        if (!$categoryId = $this->property('categoryFilter'))
+        if (!$categoryId = $this->property('categoryFilter')) {
             return null;
+        }
 
-        if (!$category = BlogCategory::whereSlug($categoryId)->first())
+        if (!$category = BlogCategory::whereSlug($categoryId)->first()) {
             return null;
+        }
 
         return $category;
     }

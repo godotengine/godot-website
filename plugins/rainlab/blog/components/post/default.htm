@@ -1,6 +1,6 @@
 {% set post = __SELF__.post %}
 
-<div class="content">{{ post.content_html|raw }}</div>
+<div class="content">{{ post.content_html | raw }}</div>
 
 {% if post.featured_images.count %}
     <div class="featured-images text-center">
@@ -17,11 +17,16 @@
 {% endif %}
 
 <p class="info">
-    Posted
-    {% if post.categories.count %} in
-        {% for category in post.categories %}
-            <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-        {% endfor %}
+    {% if post.categories.count %}
+        {% set categoryLinks = post.categories | map(c => "<a href=\"#{c.url}\">#{c.name}</a>") | join(', ') %}
+
+        {{ 'rainlab.blog::lang.post.posted_byline' | trans({
+            date: post.published_at | date('rainlab.blog::lang.post.date_format' | trans),
+            categories: categoryLinks
+        }) }}
+    {% else %}
+        {{ 'rainlab.blog::lang.post.posted_byline_no_categories' | trans({
+            date: post.published_at | date('rainlab.blog::lang.post.date_format'|trans)
+        }) }}
     {% endif %}
-    on {{ post.published_at|date('M d, Y') }}
 </p>

@@ -6,7 +6,7 @@
             <span class="badge">{{ postCount }}</span>
         {% endif %}
 
-        {% if category.children %}
+        {% if category.children|length > 0 %}
             <ul>
                 {% partial __SELF__ ~ "::items"
                     categories=category.children
