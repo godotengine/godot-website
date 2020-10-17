@@ -1,0 +1,172 @@
+description = "Showcase item layout"
+==
+{##}
+<!DOCTYPE html>
+<html lang="en">
+{% partial "head" %}
+{% partial "header" %}
+
+<style>
+  .showcase-video-image {
+    margin-top: 1rem;
+  }
+
+  .showcase-developer-quote {
+    font-style: italic;
+    color: var(--base-color-text-title);
+
+  }
+
+  .showcase-developer-quote p:first-child::before {
+    content: '“';
+    font-size: 150%;
+    margin-right: -0.1rem;
+  }
+
+  .showcase-developer-quote p:last-child::after {
+    content: '”';
+    font-size: 150%;
+    margin-left: -0.1rem;
+  }
+
+  @media (min-width: 900px) {
+    .showcase-video-image {
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+  }
+</style>
+
+<div class="head">
+  <div class="container flex eqsize responsive">
+    <div class="main">
+
+      <div style="margin: 1.25rem 0">
+        <a href="/showcase"><strong>&lt;</strong>&nbsp;&nbsp;Back to showcase</a>
+      </div>
+
+      {# Use function call syntax as this allows the placeholder to be used more than once in the page. #}
+      <h1 class="intro-title">{{ placeholder('title') }}</h1>
+      <h3 style="opacity: 0.75; margin-top: 0.5rem">
+        by <a href="{% placeholder author_url %}">{% placeholder author %}</a>
+        {% if placeholder('release_date') %}
+        | Released in {% placeholder release_date %}
+        {% else %}
+        | Release date: <abbr title="To Be Determined">TBD</abbr>
+        {% endif %}
+      </h3>
+      <div style="filter: invert(100%); opacity: 0.75; margin-top: 1rem">
+        {% for platform in placeholder('platforms') | replace({' ': ''}) | split(',') %}
+
+        {% if platform is same as('windows') %} {% set platformName = 'Windows' %} {% endif %}
+        {% if platform is same as('macos') %} {% set platformName = 'macOS' %} {% endif %}
+        {% if platform is same as('linux') %} {% set platformName = 'Linux' %} {% endif %}
+        {% if platform is same as('android') %} {% set platformName = 'Android' %} {% endif %}
+        {% if platform is same as('ios') %}  {% set platformName = 'iOS' %} {% endif %}
+        {% if platform is same as('html5') %} {% set platformName = 'HTML5' %} {% endif %}
+        {% if platform is same as('switch') %} {% set platformName = 'Nintendo Switch' %} {% endif %}
+        {% if platform is same as('playstation') %} {% set platformName = 'PlayStation' %} {% endif %}
+        {% if platform is same as('xbox') %} {% set platformName = 'Xbox' %} {% endif %}
+
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/' ~ platform ~ '.svg') | theme }}"
+          alt="{{ platformName }}"
+          title="{{ platformName }}"
+        >
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <section class="flex eqsize responsive">
+    <article>
+      {% placeholder description %}
+      <div class="flex" style="justify-content: center; margin-top: 2rem">
+        {% if placeholder('link_steam') %}
+        <a href="{% placeholder link_steam %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on Steam
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_egs') %}
+        <a href="{% placeholder link_egs %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on Epic Games Store
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_gog') %}
+        <a href="{% placeholder link_gog %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on GOG
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_itch') %}
+        <a href="{% placeholder link_itch %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on itch.io
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_play_store') %}
+        <a href="{% placeholder link_play_store %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on Google Play
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_app_store') %}
+        <a href="{% placeholder link_app_store %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on App Store
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_custom') %}
+        <a href="{% placeholder link_custom %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View
+        </a>
+        {% endif %}
+      </div>
+    </article>
+
+    <article class="showcase-video-image">
+      {# Ensure the video iframe always displays with a 16:9 aspect ratio. #}
+      <div style="position: relative; width: 100%; padding-bottom: 56.25%">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/{% placeholder youtube_embed_code %}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0"
+        >
+        </iframe>
+      </div>
+
+      <img
+        width="100%"
+        src="{{ ('assets/showcase/' ~ (placeholder('image') | replace({' ': ''}))) | theme }}"
+        alt="Screenshot of {{ placeholder('title') }}"
+        style="margin-top: 1rem"
+      >
+    </article>
+  </section>
+
+  {% if placeholder('developer_article_quote') %}
+  <section style="margin-top: 3rem">
+    <h3>Why the developer chose Godot</h3>
+
+    <blockquote class="showcase-developer-quote">
+      {% placeholder developer_article_quote %}
+    </blockquote>
+
+    <a href="/article/{% placeholder developer_article_url_slug %}">
+      — {% placeholder developer_article_title %}
+    </a>
+  </section>
+  {% endif %}
+</div>
+
+{% partial "footer" %}
+</html>

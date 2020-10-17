@@ -7,38 +7,61 @@ is_hidden = 0
 {##}
 {% put title %} Showcase {% endput %}
 
-<div class="container">
+<h2 class="title">Showreel videos</h2>
 
-  <p>
-    This page is a placeholder until we set up an up-to-date game showcase.<br>
-    Stay tuned for an upcoming showcase page featuring high-quality published games!
-  </p>
-  <h3 class="title">Desktop games</h3>
-  <iframe
-    width="854"
-    height="480"
-    src="https://www.youtube-nocookie.com/embed/UEDEIksGEjQ"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    style="max-width: 100%">
-  </iframe>
+<p>
+  Check out the showreel videos featuring some of our favorite projects made with Godot!
+</p>
 
-  <h3 class="title">Mobile games</h3>
-  <iframe
-    width="854"
-    height="480"
-    src="https://www.youtube-nocookie.com/embed/AIapugketbs"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    style="max-width: 100%"
-  ></iframe>
+{# 2 columns at most (instead of 4). #}
+<section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(427px, 1fr))">
+  <article>
+    <div style="position: relative">
+      <!-- Placeholder for aspect ratio. -->
+      <svg viewBox="0 0 16 9" style="display: block; width: 100%; height: auto"></svg>
+      <iframe
+        width="854"
+        height="480"
+        src="https://www.youtube-nocookie.com/embed/UEDEIksGEjQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"
+      ></iframe>
+    </div>
+  </article>
 
-  <p>
-    Previous showreel videos:
-    <a href="https://www.youtube.com/watch?v=NlKEO1N8wMM">2019 Desktop Games</a>,
-    <a href="https://www.youtube.com/watch?v=ODn4oOqWGik">2019 Mobile Games</a>,
-    <a href="https://www.youtube.com/watch?v=UTAeDoRIHaA">2018 Games</a>
-  </p>
-</div>
+  <article>
+    <div style="position: relative">
+      <!-- Placeholder for aspect ratio. -->
+      <svg viewBox="0 0 16 9" style="display: block; width: 100%; height: auto"></svg>
+      <iframe
+        width="854"
+        height="480"
+        src="https://www.youtube-nocookie.com/embed/AIapugketbs"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"
+      ></iframe>
+    </div>
+  </article>
+</section>
+
+<p style="margin-top: 3rem">
+  {# TODO: Add form URL. #}
+  Interested in showcasing your published game on this page? Use <a href="#">this form</a>.
+</p>
+
+{# 3 columns at most (instead of 4). #}
+<section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+  {% for i in range(0, 16, 1) %}
+  {%
+    partial "showcase/list-item"
+    title="Example Game"
+    author="Jane Doe"
+    slug="example-game"
+    image="https://via.placeholder.com/640x360"
+  %}
+  {% endfor %}
+  </section>

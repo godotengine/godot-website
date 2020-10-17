@@ -1,0 +1,14 @@
+description = "Showcase list item"
+==
+<a href="/showcase/{{ slug }}">
+  {# Add a gradient to ensure the text is readable regardless of the background color. #}
+  <article
+    class="card showcase-card"
+    style="background-image: linear-gradient(to bottom, transparent, hsla(0, 0%, 0%, 0.8)), url({{ ('assets/showcase/' ~ (image | replace({' ': ''}))) | theme }})"
+  >
+    <div>
+      <div class="showcase-card-title">{{ title }}</div>
+      <div>{{ author }}</div>
+    </div>
+  </article>
+</a>
