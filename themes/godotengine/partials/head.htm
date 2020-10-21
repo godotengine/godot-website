@@ -9,24 +9,37 @@ categoryPage = "blog/category"
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Godot Engine">
-  <meta name="description" content="{{ page.description }}">
+  <meta name="description" content="{{ this.page.description }}">
   <meta name="theme-color" content="#3d8fcc">
+  <meta property="og:site_name" content="Godot Engine">
+  <meta property="og:url" name="twitter:url" content="{{ '' | page }}">
+  <meta name="twitter:site" content="@godotengine">
+
   {% if this.page.id == 'home' %}
-    <title>Godot Engine - Free and open source 2D and 3D game engine</title>
+  <meta property="og:title" name="twitter:title" content="Free and open source 2D and 3D game engine">
+  <meta property="og:description" name="twitter:description" content="{{ this.page.description }}">
+  <meta property="og:image" name="twitter:image" content="https://godotengine.org/themes/godotengine/assets/logo.svg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <title>Godot Engine - Free and open source 2D and 3D game engine</title>
   {% elseif this.page.id == 'article' %}
-    {% set post = blogPost.post %}
-    <title>Godot Engine - {{ post.title }}</title>
-    <meta property="og:image" content="{{ post.featured_images[0].path }}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@godotengine" />
-    <meta name="twitter:title" content="{{ post.title }}" />
-    <meta name="twitter:description" content="{{ post.summary }}" />
-    <meta name="twitter:image" content="{{ post.featured_images[0].path }}" />
+  {% set post = blogPost.post %}
+  <title>Godot Engine - {{ post.title }}</title>
+  <meta property="og:title" name="twitter:title" content="{{ post.title }}">
+  <meta property="og:description" name="twitter:description" content="{{ post.summary }}">
+  <meta property="og:type" content="article">
+  <meta name="og:image" name="twitter:image" content="{{ post.featured_images[0].path }}">
+  <meta name="twitter:card" content="summary_large_image">
   {% else %}
-    <title>Godot Engine - {{ this.page.title }}</title>
-    <meta property="og:image" content="https://godotengine.org/themes/godotengine/assets/home/2d.jpg" />
+  <title>Godot Engine - {{ this.page.title }}</title>
+  <meta property="og:title" name="twitter:title" content="{{ this.page.title }}">
+  <meta property="og:description" name="twitter:description" content="{{ this.page.description }}">
+  <meta property="og:image" name="twitter:image" content="https://godotengine.org/themes/godotengine/assets/logo.svg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
   {% endif %}
-  <link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml"/>
+
+  <link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
   <link rel="icon" href="{{ 'assets/favicon.png'|theme }}">
   <link rel="stylesheet" href="{{ 'assets/fonts/fonts.css' | theme }}">
   <link rel="stylesheet" href="{{ 'assets/css/main.css' | theme }}">
