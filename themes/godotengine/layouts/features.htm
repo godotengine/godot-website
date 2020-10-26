@@ -75,19 +75,19 @@ description = "Features layout"
   <div class="title-padded base-padding">
     <h2>Gorgeous 3D graphics</h2>
     <em>
-      The brand new physically-based renderer comes with a ton of features that will make your games look incredible.
+      The physically-based renderer comes with a ton of features that will make your games look incredible.
     </em>
   </div>
 
   <div class="flex eqsize responsive base-padding">
     <ul>
       <li><strong>Innovative architecture</strong> that combines the best of forward rendering with the efficiency of deferred rendering.</li>
-      <li><strong>Physically-based rendering</strong> with full MSAA support.</li>
+      <li><strong>Physically-based rendering</strong> with full MSAA and FXAA support.</li>
       <li><strong>Full principled BSDF</strong> with subsurface scattering, reflection, refraction, anisotropy, clearcoat, transmittance and more.</li>
     </ul>
     <ul>
       <li><strong>Global illumination</strong> for real-time gorgeous graphics. It can also be pre-baked for beautiful results even on low-end devices.</li>
-      <li><strong>Mid- and Post-processing effects</strong> including a new tonemapper that supports HDR, multiple standard curves and auto exposure, screen-space reflections, fog, bloom, depth of field and much more.</li>
+      <li><strong>Mid- and Post-processing effects</strong> including a tonemapper that supports HDR, multiple standard curves and auto exposure, screen-space reflections, fog, bloom, depth of field and much more.</li>
       <li><strong>Easy-to-use shader language</strong> based on GLSL, with built-in editor and code completion.</li>
     </ul>
   </div>
@@ -109,7 +109,7 @@ description = "Features layout"
     </ul>
     <ul>
       <li><strong>Animate your games</strong> using cut-out or sprite-based animation. </li>
-      <li><strong>Flexible kinematic controller</strong> for collision without physics.</li>
+      <li><strong>Flexible kinematic controller</strong> for collision detection without physics.</li>
     </ul>
   </div>
 </section>
@@ -140,10 +140,23 @@ description = "Features layout"
           <strong>GDScript</strong> Python-like scripting language, designed to make games with zero hassle.
           <a href="https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html">Learn why our community loves it.</a>
         </li>
-        <li><strong>Full C# 8.0 support</strong> using Mono.</li>
-        <li><strong>Full C++ support</strong> without needing to recompile the engine.</li>
-        <li><strong>Visual scripting</strong> using blocks and connections.</li>
-        <li><strong>Additional languages</strong> with community-provided support for Python, Nim, D and other languages.</li>
+        <li>
+          <strong>
+            <a href="https://docs.godotengine.org/en/stable/getting_started/scripting/c_sharp/c_sharp_basics.html">Full C# 8.0 support</a>
+          </strong> using Mono.
+        </li>
+        <li>
+          <strong>Full C++ support</strong> without needing to recompile the engine using
+          <a href="https://docs.godotengine.org/en/latest/tutorials/scripting/gdnative/what_is_gdnative.html">GDNative</a>.
+        </li>
+        <li>
+          <strong><a href="https://docs.godotengine.org/en/stable/getting_started/scripting/visual_script/index.html">Visual scripting</a></strong>
+          using blocks and connections.
+        </li>
+        <li>
+          <strong><a href="https://docs.godotengine.org/en/latest/tutorials/scripting/gdnative/what_is_gdnative.html#supported-languages">Additional languages</a></strong>
+          with community-provided support for Rust, Nim, D and other languages.
+        </li>
         <li><strong>Built-in editor</strong> with syntax highlighting, real-time parser and code completion.</li>
         <li><strong>Integrated documentation.</strong> Browse and search the whole API offline, without leaving the editor.</li>
       </ul>
@@ -152,14 +165,18 @@ description = "Features layout"
 
   <section id="debug">
     <div class="base-padding">
-      <h2>Debug & Optimize</h2>
-      <em>Solve bugs and performance bottlenecks with the built-in debugger.</em>
+      <h2>Debug &amp; Optimize</h2>
+      <em>
+        Solve bugs and performance bottlenecks with the
+        <a href="https://docs.godotengine.org/en/stable/tutorials/debug/overview_of_debugging_tools.html">built-in debugger</a>.
+      </em>
       <ul>
         <li><strong>Explore and modify</strong> your project while it's running, even on mobile devices.</li>
         <li><strong>Keeps changes</strong> by default after closing the project.</li>
         <li><strong>Built-in profiler</strong> with graph plotting and time seeking.</li>
         <li>Video memory debugger.</li>
         <li><strong>Error logger</strong> with full stack traces.</li>
+        <li><strong>Network profiler</strong> with per-node remote call tracking and bandwidth usage estimation.</li>
       </ul>
     </div>
   </section>
@@ -171,9 +188,9 @@ description = "Features layout"
       <h2>Multi-platform editor</h2>
       <em>Create games on any desktop OS.</em>
       <ul>
-        <li><strong>Works on Windows, macOS, Linux, FreeBSD and OpenBSD.</strong> The editor runs in 32-bit and 64-bit on all platforms.</li>
-        <li><strong>Small download</strong> (around 25 MB), and you are ready to go.</li>
-        <li><strong>Very easy to compile</strong> on any platform (no dependency hell).</li>
+        <li><strong>Works on Windows, macOS, Linux, and *BSD.</strong><br> The editor runs in 32-bit and 64-bit on all platforms.</li>
+        <li><strong>Small download</strong> (around 30 MB), and you are ready to go.</li>
+        <li><strong>Easy to compile</strong> on any platform (no dependency hell).</li>
       </ul>
     </div>
     <div></div>
@@ -183,13 +200,13 @@ description = "Features layout"
       <h2>Multi-platform deploy</h2>
       <em>Deploy games everywhere!</em>
       <ul>
-        <li><strong>Desktop platforms:</strong> Windows, macOS, Linux, UWP, *BSD</li>
-        <li><strong>Mobile platforms:</strong> iOS, Android</li>
+        <li><strong>Export to desktop platforms:</strong> Windows, macOS, Linux, UWP, and *BSD.</li>
+        <li><strong>Export to mobile platforms:</strong> iOS and Android.</li>
         <li>
           <strong>Consoles:</strong> Nintendo Switch, PlayStation 4, Xbox One via third-party providers
-          <a href="https://docs.godotengine.org/en/latest/tutorials/platform/consoles.html">(read more)</a>
+          <a href="https://docs.godotengine.org/en/latest/tutorials/platform/consoles.html">(read more).</a>
         </li>
-        <li><strong>Export to the web</strong> using HTML5 and WebAssembly</li>
+        <li><strong>Export to the web</strong> using HTML5 and WebAssembly.</li>
         <li><strong>One-click deploy &amp; export</strong> to most platforms. Easily create custom builds as well.</li>
       </ul>
     </div>
@@ -200,11 +217,11 @@ description = "Features layout"
 <section id="xrsupport" class="container flex eqsize responsive">
   <div class="base-padding" style="padding-top: 0;">
     <h2>XR support</h2>
-    <p>Godot makes cross platform Augmented and Virtual Reality development easy.</p>
+    <p>Godot makes cross-platform Augmented and Virtual Reality development easy.</p>
 
     <ul>
       <li><strong>Plugin structure</strong> gives access to various SDKs such as the OpenVR, OpenXR and Oculus SDKs. Godot works with HTC Vive, Valve Index, Oculus Rift, Oculus Go, Oculus Quest, all Microsoft MR headsets, and many more.</li>
-      <li><strong>ARKit</strong> support is directly available in the iOS build.</li>
+      <li><strong>ARKit support</strong> is directly available in the iOS build.</li>
     </ul>
   </div>
   <div style="overflow: hidden;">
