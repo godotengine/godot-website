@@ -115,32 +115,17 @@ h4 {
   flex: 1;
 }
 
-
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 16px;
 }
 .grid > * {
-  flex: 1;
-  min-width: 250px;
-  margin-right: 16px;
-  margin-bottom: 16px;
+  width: 100%;
+  min-width: unset;
+  margin-right: 0;
+  margin-bottom: 0;
 }
-
-@supports (display: grid) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 16px;
-  }
-  .grid > * {
-    width: 100%;
-    min-width: unset;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-}
-
 
 .base-padding {
   padding: 16px;
