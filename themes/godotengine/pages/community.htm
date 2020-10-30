@@ -67,7 +67,8 @@ is_hidden = 0
 <div class="flex grid">
 
   <div id="extras">
-    <a href="/community/user-groups" class="card base-padding" id="user-groups">
+    {# Inline scripts aren't supported by Barba.js. #}
+    <a href="/community/user-groups" class="card base-padding" id="user-groups" data-barba-prevent>
       <h3>User groups</h3>
       <p>Find local Godot user groups run by community members.</p>
     </a>
