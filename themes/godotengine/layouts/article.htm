@@ -32,6 +32,7 @@ categoryPage = "article"
     background: var(--codeblock-background-color);
     color: var(--codeblock-color);
   }
+
   pre code {
     display: block;
     overflow-x: auto;
@@ -55,6 +56,7 @@ categoryPage = "article"
     margin-top: 16px;
     margin-bottom: 16px;
   }
+
   article img:first-child, article video:first-child {
     max-width: 85%;
   }
@@ -107,12 +109,19 @@ categoryPage = "article"
 <div class="container">
   <article class="flex padded">
     <div class="content">
-      <img
-        data-src="{{ post.featured_images[0].filename }}"
-        src="{{ post.featured_images[0].path }}"
-        alt="{{ post.featured_images[0].description }}"
-        style="width: 100%;"
-      />
+      <figure style="text-align: center">
+        <img
+          data-src="{{ post.featured_images[0].filename }}"
+          src="{{ post.featured_images[0].path }}"
+          title="{{ post.featured_images[0].title }}"
+          alt="{{ post.featured_images[0].title }} {{ post.featured_images[0].description }}"
+          style="width: 100%"
+        />
+        <figcaption style="opacity: 0.8; line-height: 1.5">
+          <strong>{{ post.featured_images[0].title }}</strong>
+          <span style="margin-left: 0.75rem; font-size: 90%">{{ post.featured_images[0].description }}</span>
+        </figcaption>
+      </figure>
 
       <div class="info">
         <h1>{{ post.title }}</h1>
