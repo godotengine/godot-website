@@ -733,5 +733,6 @@ pre > code {
   font-size: 180%;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  text-align: center;
   text-shadow: 0.125rem 0.125rem 0.125rem hsl(0, 0%, 0%);
 }

@@ -48,9 +48,9 @@ description = "Showcase item layout"
       {# Use function call syntax as this allows the placeholder to be used more than once in the page. #}
       <h1 class="intro-title">{{ placeholder('title') }}</h1>
       <h3 style="opacity: 0.75; margin-top: 0.5rem">
-        by <a href="{% placeholder author_url %}">{% placeholder author %}</a>
+        by <a href="{% placeholder author_url %}" style="text-decoration: underline">{% placeholder author %}</a>
         {% if placeholder('release_date') %}
-        | Released in {% placeholder release_date %}
+        | {% placeholder release_date %}
         {% else %}
         | Release date: <abbr title="To Be Determined">TBD</abbr>
         {% endif %}
@@ -74,6 +74,7 @@ description = "Showcase item layout"
           src="{{ ('assets/icons/' ~ platform ~ '.svg') | theme }}"
           alt="{{ platformName }}"
           title="{{ platformName }}"
+          style="margin: 0 0.125rem"
         >
         {% endfor %}
       </div>
@@ -86,7 +87,7 @@ description = "Showcase item layout"
   <section class="flex eqsize responsive">
     <article>
       {% placeholder description %}
-      <div class="flex" style="justify-content: center; margin-top: 2rem">
+      <div class="flex responsive" style="justify-content: center; margin-top: 2rem">
         {% if placeholder('link_steam') %}
         <a href="{% placeholder link_steam %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
           View on Steam
@@ -111,6 +112,12 @@ description = "Showcase item layout"
         </a>
         {% endif %}
 
+        {% if placeholder('link_humble') %}
+        <a href="{% placeholder link_humble %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on Humble Store
+        </a>
+        {% endif %}
+
         {% if placeholder('link_play_store') %}
         <a href="{% placeholder link_play_store %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
           View on Google Play
@@ -120,6 +127,18 @@ description = "Showcase item layout"
         {% if placeholder('link_app_store') %}
         <a href="{% placeholder link_app_store %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
           View on App Store
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_switch') %}
+        <a href="{% placeholder link_switch %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on Switch
+        </a>
+        {% endif %}
+
+        {% if placeholder('link_github') %}
+        <a href="{% placeholder link_github %}" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+          View on GitHub
         </a>
         {% endif %}
 
@@ -144,12 +163,17 @@ description = "Showcase item layout"
         </iframe>
       </div>
 
-      <img
-        width="100%"
-        src="{{ ('assets/showcase/' ~ (placeholder('image') | replace({' ': ''}))) | theme }}"
-        alt="Screenshot of {{ placeholder('title') }}"
-        style="margin-top: 1rem"
+      <a href="{{ ('assets/showcase/' ~ (placeholder('image') | replace({' ': ''}))) | theme }}"
+        target="_blank"
+        rel="noopener noreferrer"
       >
+        <img
+          width="100%"
+          src="{{ ('assets/showcase/' ~ (placeholder('image') | replace({' ': ''}))) | theme }}"
+          alt="Screenshot of {{ placeholder('title') }}"
+          style="margin-top: 1rem"
+        >
+      </a>
     </article>
   </section>
 
