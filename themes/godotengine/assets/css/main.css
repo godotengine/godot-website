@@ -298,6 +298,11 @@ footer a:hover {
 
 
 @media (max-width: 900px) {
+  blockquote {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   .pagination {
     display: block;
     justify-content: initial;
@@ -699,4 +704,35 @@ pre > code {
   #sfc_graphic {
     width: 100%;
   }
+}
+
+.showcase-card {
+  /* Display a placeholder color while the card's background image is loading. */
+  background-color: hsl(0, 0%, 50%) !important;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 0.25rem;
+  color: hsl(0, 0%, 100%);
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-card:hover {
+  filter: brightness(110%);
+
+}
+
+.showcase-card:active {
+  filter: brightness(90%);
+}
+
+.showcase-card-title {
+  font-size: 180%;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-shadow: 0.125rem 0.125rem 0.125rem hsl(0, 0%, 0%);
 }

@@ -7,38 +7,165 @@ is_hidden = 0
 {##}
 {% put title %} Showcase {% endput %}
 
-<div class="container">
+<h2 class="title">Showreel videos</h2>
 
-  <p>
-    This page is a placeholder until we set up an up-to-date game showcase.<br>
-    Stay tuned for an upcoming showcase page featuring high-quality published games!
-  </p>
-  <h3 class="title">Desktop games</h3>
-  <iframe
-    width="854"
-    height="480"
-    src="https://www.youtube-nocookie.com/embed/UEDEIksGEjQ"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    style="max-width: 100%">
-  </iframe>
+<p>
+  Check out the showreel videos featuring some of our favorite projects made with Godot!
+</p>
 
-  <h3 class="title">Mobile games</h3>
-  <iframe
-    width="854"
-    height="480"
-    src="https://www.youtube-nocookie.com/embed/AIapugketbs"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    style="max-width: 100%"
-  ></iframe>
+{# 2 columns at most (instead of 4). #}
+<section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(427px, 1fr))">
+  <article>
+    <div style="position: relative">
+      <!-- Placeholder for aspect ratio. -->
+      <svg viewBox="0 0 16 9" style="display: block; width: 100%; height: auto"></svg>
+      <iframe
+        width="854"
+        height="480"
+        src="https://www.youtube-nocookie.com/embed/UEDEIksGEjQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"
+      ></iframe>
+    </div>
+  </article>
 
-  <p>
-    Previous showreel videos:
-    <a href="https://www.youtube.com/watch?v=NlKEO1N8wMM">2019 Desktop Games</a>,
-    <a href="https://www.youtube.com/watch?v=ODn4oOqWGik">2019 Mobile Games</a>,
-    <a href="https://www.youtube.com/watch?v=UTAeDoRIHaA">2018 Games</a>
-  </p>
-</div>
+  <article>
+    <div style="position: relative">
+      <!-- Placeholder for aspect ratio. -->
+      <svg viewBox="0 0 16 9" style="display: block; width: 100%; height: auto"></svg>
+      <iframe
+        width="854"
+        height="480"
+        src="https://www.youtube-nocookie.com/embed/AIapugketbs"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"
+      ></iframe>
+    </div>
+  </article>
+</section>
+
+<p style="margin-top: 3rem" id="submit-project">
+  <strong>Interested in showcasing your published game on this page?</strong>
+  Use <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhNEywWfk7tm4ABSxmPfnJrKwGPAoYbzRfZlHmu9iZ5CJ5Pw/viewform?usp=sf_link">this form</a>.
+</p>
+
+{# 3 columns at most (instead of 4). #}
+{# Projects are sorted from most recent to least recent release date. #}
+<section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+  {%
+    partial "showcase/list-item"
+    title="Kingdoms of the Dump"
+    author="Roach Games"
+    slug="kingdoms-of-the-dump"
+    image="kingdoms-of-the-dump.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Rogue State Revolution"
+    author="Little Red Dog Games"
+    slug="rogue-state-revolution"
+    image="rogue-state-revolution.jpg"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Ex Zodiac"
+    author="Ben Hickling"
+    slug="ex-zodiac"
+    image="ex-zodiac.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Until Then"
+    author="Polychroma Games"
+    slug="until-then"
+    image="until-then.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Gravity Ace"
+    author="John Watson"
+    slug="gravity-ace"
+    image="gravity-ace.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Human Diaspora"
+    author="Leocesar3D"
+    slug="human-diaspora"
+    image="human-diaspora.jpg"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Primal Light"
+    author="Fat Gem"
+    slug="primal-light"
+    image="primal-light.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Resolutiion"
+    author="Monolith of Minds"
+    slug="resolutiion"
+    image="resolutiion.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Dungeondraft"
+    author="Megasploot"
+    slug="dungeondraft"
+    image="dungeondraft.jpg"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Material Maker"
+    author="R0dZill4"
+    slug="material-maker"
+    image="material-maker.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="RPG in a Box"
+    author="Justin Arnold"
+    slug="rpg-in-a-box"
+    image="rpg-in-a-box.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Pixelorama"
+    author="Orama Interactive"
+    slug="pixelorama"
+    image="pixelorama.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="City Game Studio"
+    author="Binogure Studio"
+    slug="city-game-studio"
+    image="city-game-studio.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Hive Time"
+    author="Cheeseness"
+    slug="hive-time"
+    image="hive-time.png"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="ΔV: Rings of Saturn"
+    author="Kodera Software"
+    slug="delta-v-rings-of-saturn"
+    image="delta-v-rings-of-saturn.jpg"
+  %}
+  {%
+    partial "showcase/list-item"
+    title="Precipice"
+    author="Little Red Dog Games"
+    slug="precipice"
+    image="precipice.png"
+  %}
+  </section>
