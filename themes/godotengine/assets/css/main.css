@@ -732,7 +732,16 @@ pre > code {
 .showcase-card-title {
   font-size: 180%;
   font-weight: 700;
+  /* Compensate for the platform icon margins. */
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
   text-align: center;
   text-shadow: 0.125rem 0.125rem 0.125rem hsl(0, 0%, 0%);
+}
+
+.showcase-card-icons {
+  filter: invert(100%);
+  text-align: center;
+  opacity: 0.75;
+  margin-top: 2rem;
 }
