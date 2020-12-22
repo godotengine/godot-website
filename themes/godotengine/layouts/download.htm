@@ -23,12 +23,8 @@ description = "Download layout"
     text-decoration: none;
   }
 
-  .btn.download a:hover {
-    color: var(--accent-color);
-  }
-
   .btn.split {
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--primary-color);
     display: inline-flex;
     flex-basis: content;
   }
@@ -39,7 +35,7 @@ description = "Download layout"
   }
 
   .btn.split > :first-child {
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
   }
 
   .btn.split > :nth-child(2n) {
@@ -263,7 +259,7 @@ description = "Download layout"
     </div>
 
     <div class="text-center base-padding">
-      <img class="flex-center" src="{{ 'assets/download/dl_icon_github.png' | theme }}" width="200" height="200">
+      <img class="flex-center dark-invert" src="{{ 'assets/download/dl_icon_github.png' | theme }}" width="200" height="200">
       <p>
         Godot's development is <strong>open</strong>. This means that you can
         fix or improve any part of the engine yourself and choose

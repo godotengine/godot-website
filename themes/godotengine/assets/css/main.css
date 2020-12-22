@@ -13,23 +13,117 @@
   --dark-color-text-hl: #d4e3f6;
   --dark-color-text-title: white;
 
-  --primary-color: #3d8fcc;
+  --primary-color: hsl(206, 58%, 52%);
   --primary-color-text: #d4edff;
   --primary-color-text-hl: white;
   --primary-color-text-title: white;
+  --accent-color: #f57389;
+
+  --link-color: hsl(206, 58%, 50%);
+  --link-underline-color: hsla(206, 58%, 50%, 0.3);
+  --navbar-link-color: var(--dark-color);
+  --navbar-link-current-color: var(--primary-color);
+  --footer-link-color: rgb(200, 210, 250);
+  --footer-link-underline-color: rgba(200, 210, 250, 0.3);
+  --tab-active-color: var(--primary-color);
 
   --base-shadow: 0 0 4px rgba(0, 0, 0, .2);
   --more-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-
-  --accent-color: #f57389;
   --background-color: #d5daea;
+  --navbar-background-color: #ffffff;
+  --head-background-color: var(--primary-color);
+  --card-background-color: #ffffff;
+  --card-footer-color: #eeeeee;
+  --button-background-color: #ffffff;
+  --footer-color: rgb(175, 180, 220);
   --footer-background-color: #414d69;
 
-  --code-background-color: #d0dada;
+  --code-background-color: #dcdfe2;
   --codeblock-background-color: #282b2e;
   --codeblock-color: #e0e2e4;
 }
 
+.nav-logo.dark-logo {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --transparent-cover: rgb(51, 63, 103, 0.4);
+    --transparent-cover-darker: rgba(51, 63, 103, 0.9);
+
+    --base-color: #25282b;
+    --base-color-text: hsla(0, 0%, 100%, 0.9);
+    --base-color-text-hl: hsla(0, 0%, 100%, 1.0);
+    --base-color-text-title: hsla(200, 00%, 100%, 0.85);
+    --base-color-text-subtitle: hsla(200, 00%, 100%, 0.7);
+
+    --dark-color: #263256;
+    --dark-color-text: lightsteelblue;
+    --dark-color-text-hl: #d4e3f6;
+    --dark-color-text-title: white;
+
+    --primary-color: #4d9fdc;
+    --primary-color-text: #d4edff;
+    --primary-color-text-hl: white;
+    --primary-color-text-title: white;
+    --accent-color: #f57389;
+
+    --link-color: hsl(200, 60%, 70%);
+    --link-underline-color: hsla(200, 60%, 60%, 0.3);
+    --navbar-link-color: hsla(0, 0%, 100%, 0.9);
+    --navbar-link-current-color: hsl(200, 100%, 80%);
+    --footer-link-color: hsla(0, 0%, 100%, 0.85);
+    --footer-link-underline-color: hsla(0, 0%, 100%, 0.25);
+    --tab-active-color: white;
+
+    --base-shadow: 0 0 4px rgba(0, 0, 0, .4);
+    --more-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+    --background-color: #202326;
+    --navbar-background-color: #333639;
+    --head-background-color: #232f57;
+    --card-background-color: #333639;
+    --card-footer-color: #505356;
+    --button-background-color: #333639;
+    --footer-color: hsla(0, 0%, 100%, 0.625);
+    --footer-background-color: #333639;
+
+    --code-background-color: #333639;
+    --codeblock-background-color: #333639;
+    --codeblock-color: hsla(0, 0%, 100%, 0.9);
+  }
+
+  /* Use logo with white text for dark navbar. */
+  .nav-logo {
+    display: none;
+  }
+  .nav-logo.dark-logo {
+    display: initial;
+  }
+
+  /* Fade Patreon widget a little to be less distracting. */
+  .patreon {
+    opacity: 0.85;
+  }
+
+  /* Invert hamburger menu button on mobile to be visible on dark navbar. */
+  #nav_toggle_btn {
+    filter: invert(100%) saturate(0%) brightness(120%);
+  }
+
+  .dark-invert {
+    filter: invert(100%);
+  }
+
+  .dark-desaturate {
+    filter: saturate(0%);
+  }
+}
+
+*:focus {
+  /* More visible outline for better keyboard navigation. */
+  outline: 0.125rem solid hsl(220, 100%, 62.5%);
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -47,13 +141,18 @@ body {
 body a {
   outline: none;
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--link-color);
 }
-body a, a.btn.flat {
-  transition: color .1s ease-in-out;
+body a {
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline-color);
+  text-decoration-thickness: 0.125rem;
 }
 body a:hover, a.btn.flat:hover {
-  color: var(--accent-color);
+  filter: brightness(117.5%);
+}
+body a:active, a.btn.flat:active {
+  filter: brightness(82.5%);
 }
 
 h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
@@ -63,11 +162,9 @@ h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
   margin-top: 0px;
 }
 
-
 .base-color-text {
   color: var(--base-color-text);
 }
-
 
 h1 {
   font-size: 42px;
@@ -90,8 +187,6 @@ h4 {
 .title {
   margin-top: 48px;
 }
-
-
 
 .container {
   width: 1200px;
@@ -137,12 +232,10 @@ h4 {
   padding-right: 0px;
 }
 
-
-
 header {
   width: 100vw;
   height: 64px;
-  background-color: white;
+  background-color: var(--navbar-background-color);
   display: flex;
   align-items: center;
   box-shadow: var(--base-shadow);
@@ -155,12 +248,12 @@ header .container {
   overflow: initial;
 }
 #logo-link {
-  height: 48px;
   margin-right: 48px;
+  /* Make the logo's clickable area as tall as for other navigation links. */
+  padding: 0.1875rem 0;
+  margin-top: 0.25rem;
 }
 #nav_head {
-  margin-top: 8px;
-  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -179,7 +272,13 @@ nav a {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  color: var(--dark-color);
+  color: var(--navbar-link-color);
+  /* Make links easier to click. */
+  padding: 1.3175rem 1rem;
+}
+nav a:hover,
+#logo-link:hover {
+  background-color: hsla(0, 0%, 50%, 0.1);
 }
 nav ul {
   list-style: none;
@@ -201,15 +300,16 @@ nav > ul > li {
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 0px;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 nav li.active > a {
-  color: var(--primary-color);
+  color: var(--navbar-link-current-color);
 }
 
 nav > ul ul {
   display: none;
 }
-
 
 a.patreonLink {
   text-decoration: none;
@@ -235,10 +335,9 @@ ul li {
   margin-bottom: 16px;
 }
 
-
 footer {
   background-color: var(--footer-background-color);
-  color: rgb(192, 196, 213);
+  color: var(--footer-color);;
   font-size: 0.9em;
   margin-top: 64px;
   padding-top: 32px;
@@ -253,15 +352,8 @@ footer ul {
   padding-left: 0px;
 }
 footer a {
-  text-decoration: none;
-  color: rgba(158, 168, 203, 0.9);
-}
-footer a:hover {
-  text-decoration: none;
-  color: rgba(128, 139, 179, 0.9);
-}
-#copyright {
-  /*flex: 1;*/
+  color: var(--footer-link-color);
+  text-decoration-color: var(--footer-link-underline-color);
 }
 #sitemap {
   flex: 2;
@@ -273,7 +365,6 @@ footer a:hover {
   flex: 1;
   margin-left: 32px;
 }
-
 
 .pagination {
   margin-top: 64px;
@@ -289,13 +380,11 @@ footer a:hover {
   margin-right: 12px;
   min-width: 16px;
 }
-.pagination a.active {
-  color: var(--primary-color);
-}
-.pagination a:hover {
-  color: var(--accent-color);
-}
 
+/* Make blog article images readable on a dark background. */
+article .content img {
+  background-color: white;
+}
 
 @media (max-width: 900px) {
   blockquote {
@@ -316,13 +405,10 @@ footer a:hover {
   }
 }
 
-
 .padded {
   padding-top: 64px;
   padding-bottom: 64px;
 }
-
-
 
 #main_image {
   background-color: var(--transparent-cover);
@@ -334,7 +420,6 @@ footer a:hover {
   background-blend-mode: darken;
   height: 600px;
 }
-
 
 svg.icon {
   fill: red;
@@ -356,7 +441,6 @@ p, ul, ol {
   text-align: justify;
 }
 
-
 p.small {
   width: 500px;
 }
@@ -364,9 +448,8 @@ p.small {
   margin: auto;
 }
 
-
 .head {
-  background-color: var(--primary-color);
+  background-color: var(--head-background-color);
   color: var(--primary-color-text);
   margin-bottom: 32px;
 }
@@ -401,7 +484,7 @@ p.small {
   font-weight: bold;
 }
 a.btn {
-  background-color: white;
+  background-color: var(--button-background-color);
   box-shadow: var(--base-shadow);
   font-size: 18px;
   padding: 16px 32px 16px 32px;
@@ -415,11 +498,16 @@ a.btn:hover {
 }
 
 a.btn.flat {
-  background: none;
   box-shadow: none;
-  color: var(--primary-color);
-  padding: 0px;
+  background-color: transparent;
+  color: var(--link-color);
   margin: 16px 32px 16px 32px;
+}
+a.btn.flat:hover {
+  background-color: hsla(0, 0%, 50%, 0.1);
+}
+a.btn.flat.btn-white-text {
+  color: hsla(0, 0%, 100%, 0.95);
 }
 
 a.btn.download {
@@ -431,20 +519,12 @@ a.btn.download > .main {
   color: var(--dark-color);
   display: inline-block;
   padding: 16px 32px 16px 32px;
-  transition: background-color .1s ease-in-out, color .1s ease-in-out;
 }
 a.btn.download > .opt {
   background-color: var(--primary-color);
   color: var(--primary-color-text-title);
   display: inline-block;
   padding: 16px 16px 16px 16px;
-  transition: background-color .1s ease-in-out, color .1s ease-in-out;
-}
-a.btn.download:hover > .opt {
-  background-color: white;
-}
-a.btn.download:hover > * {
-  color: var(--accent-color);
 }
 
 .date-big {
@@ -470,18 +550,16 @@ a.btn.download:hover > * {
 }
 
 .card {
-  background-color: white;
+  background-color: var(--card-background-color);
   color: var(--base-color-text);
   border: 1px solid rgba(0, 0, 0, .2);
   box-sizing: border-box;
-
-  transition: box-shadow .2s ease-in-out;
 }
-.card  hr {
+.card hr {
   border-color: rgba(0, 0, 0, 0.05);
 }
 .card .footer {
-  background-color: #dbdee4;
+  background-color: var(--card-footer-color);
 }
 .card:hover {
   box-shadow: 0 0 12px rgba(0, 0, 0, .2), 0 0 2px rgba(0, 0, 0, .1);
@@ -494,7 +572,6 @@ a.card {
 .steam-download:hover {
   color: hsla(0, 0%, 100%);
 }
-
 
 .tabs {
   display: flex;
@@ -511,10 +588,11 @@ a.card {
 }
 .tabs a:not(.active):hover {
   color: var(--primary-color-text-title);
+  background-color: hsla(0, 0%, 100%, 0.1);
 }
 .tabs .active {
   background-color: var(--base-color);
-  color: var(--primary-color);
+  color: var(--tab-active-color);
 }
 
 code {
@@ -523,7 +601,7 @@ code {
 pre {
   font-family: monospace;
   white-space: pre-wrap;
-  background-color: rgba(0, 0, 0, .05);
+  background-color: var(--code-background-color);
   padding: 8px;
   border-radius: 2px;
   overflow-y: auto;
@@ -533,7 +611,6 @@ pre > code {
   padding-right: 0px;
 }
 
-
 .no-margin-bottom {
   margin-bottom: 0px;
 }
@@ -541,7 +618,6 @@ pre > code {
 .no-margin {
   margin: 0px !important;
 }
-
 
 #sfc_graphic {
   width: 400px;
@@ -581,9 +657,18 @@ pre > code {
   }
   #nav_head {
     width: 100%;
+    margin-top: 0.25rem;
   }
   #nav_toggle_btn {
     display: block;
+    /* Make the navbar toggle button easier to click. */
+    padding: 1.25rem;
+    margin-top: -0.2rem;
+    margin-right: -1rem;
+  }
+  #nav_toggle_btn:hover,
+  #nav_toggle_btn:active {
+    background-color: hsla(0, 0%, 50%, 0.15);
   }
   #nav_toggle_cb:checked ~ nav {
     display: block;
@@ -598,7 +683,6 @@ pre > code {
   }
   nav > ul {
     margin-bottom: 16px;
-    margin-top: 16px;
   }
   nav ul > li {
     padding: 0;
@@ -608,6 +692,11 @@ pre > code {
   nav ul a {
     width: 100%;
     display: block;
+    /* Make links easier to click but still close to each other. */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top: -0.4375rem;
+    margin-bottom: -0.4375rem;
   }
   a.patreonLink {
     text-decoration: none;
@@ -621,8 +710,8 @@ pre > code {
     padding-right: 8px;
   }
 }
-@media (max-width: 900px) {
 
+@media (max-width: 900px) {
   .hide-on-mobile {
     display: none;
   }
@@ -722,7 +811,6 @@ pre > code {
 
 .showcase-card:hover {
   filter: brightness(110%);
-
 }
 
 .showcase-card:active {

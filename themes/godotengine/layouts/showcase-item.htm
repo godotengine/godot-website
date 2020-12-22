@@ -48,7 +48,7 @@ description = "Showcase item layout"
       {# Use function call syntax as this allows the placeholder to be used more than once in the page. #}
       <h1 class="intro-title">{{ placeholder('title') }}</h1>
       <h3 style="opacity: 0.75; margin-top: 0.5rem">
-        by <a href="{% placeholder author_url %}" style="text-decoration: underline">{% placeholder author %}</a>
+        by <a href="{% placeholder author_url %}" style="text-decoration: underline; text-decoration-thickness: 0.125rem; text-decoration-color: hsla(0, 0%, 100%, 0.5)">{% placeholder author %}</a>
         {% if placeholder('release_date') %}
         | {% placeholder release_date %}
         {% else %}
