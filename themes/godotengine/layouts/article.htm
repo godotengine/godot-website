@@ -96,15 +96,6 @@ categoryPage = "article"
 </style>
 
 <link rel="stylesheet" href="{{ 'assets/css/highlight.obsidian.min.css' | theme }}">
-<script defer src="{{ 'assets/js/highlight.min.js' | theme }}"></script>
-<script defer src="{{ 'assets/js/highlight.gdscript.min.js' | theme }}"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
 
 <div class="container">
   <article class="flex padded">
@@ -137,4 +128,5 @@ categoryPage = "article"
 </div>
 
 {% partial "footer" %}
+
 </html>

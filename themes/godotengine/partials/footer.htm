@@ -1,6 +1,9 @@
 description = "footer partial"
 ==
 {##}
+
+</main>
+
 <footer>
   <div class="container flex">
     <div id="copyright">
@@ -46,6 +49,55 @@ description = "footer partial"
 </footer>
 
 {% scripts %}
-<script type="module" src="{{ 'assets/js/instantpage.min.js' | theme }}"></script>
+<script defer src="{{ 'assets/js/barba.min.js' | theme }}"></script>
+<script defer src="{{ 'assets/js/highlight.min.js' | theme }}"></script>
+<script defer src="{{ 'assets/js/highlight.gdscript.min.js' | theme }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    barba.init({
+      transitions: [
+        {
+          name: 'default',
+          leave() {
+            // Simple transition to let the user know that the page is currently loading.
+            document.body.style.opacity = 0.6;
+          },
+          enter() {
+            document.body.style.opacity = 1.0;
+            // Scroll back to top and close the mobile menu to simulate
+            // traditional navigation. Don't do this on initial page load
+            // to preserve browser behavior on refresh, only on subsequent
+            // navigations.
+            window.scrollTo(0, 0);
+            document.getElementById('nav_toggle_cb').checked = false;
+
+            // Update the active tab in the navigation bar.
+            const oldActiveTab = document.querySelector('#nav li.active');
+            if (oldActiveTab) {
+              oldActiveTab.classList.remove('active');
+            }
+            document.querySelectorAll('#nav li a').forEach((tabLink) => {
+              if (tabLink.href === window.location.href) {
+                tabLink.parentElement.classList.add('active');
+              }
+            });
+          },
+        },
+      ],
+      views: [
+        {
+          namespace: 'default',
+          afterEnter() {
+            // This needs to be done after page changes in case a code block
+            // appears in an article.
+            document.querySelectorAll('pre code').forEach((block) => {
+              hljs.highlightBlock(block);
+            });
+          },
+        },
+      ],
+    });
+  });
+</script>
 
 </body>
