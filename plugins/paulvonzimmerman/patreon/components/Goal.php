@@ -74,7 +74,6 @@ class Goal extends ComponentBase
     public function onRun()
     {
         $this->addCss('/plugins/paulvonzimmerman/patreon/assets/css/goal.css');
-        $this->addJs('/plugins/paulvonzimmerman/patreon/bower_components/tween.js/src/Tween.js');
         $this->addJs('/plugins/paulvonzimmerman/patreon/assets/js/goal.js');
     }
     public function defineProperties()
