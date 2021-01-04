@@ -4,7 +4,7 @@ description = "Showcase list item"
   {# Add a gradient to ensure the text is readable regardless of the background color. #}
   <article
     class="card showcase-card"
-    style="background-image: linear-gradient(to bottom, transparent, hsla(0, 0%, 0%, 0.8)), url({{ ('assets/showcase/' ~ (image | replace({' ': ''}))) | theme }})"
+    style="background: linear-gradient(to bottom, transparent, hsla(0, 0%, 0%, 0.8)), url({{ ('assets/showcase/' ~ (image | replace({' ': ''}))) | theme }})"
   >
     <div>
       <div class="showcase-card-title">{{ title }}</div>
