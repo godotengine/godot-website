@@ -55,6 +55,9 @@ description = "footer partial"
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     barba.init({
+      // Increase timeout from the default value (2000) as our server is relatively slow to respond.
+      // Otherwise, the current page will be reloaded instead of loading the new page.
+      timeout: 10000,
       transitions: [
         {
           name: 'default',
