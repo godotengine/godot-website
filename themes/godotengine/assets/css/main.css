@@ -123,6 +123,9 @@
 *:focus {
   /* More visible outline for better keyboard navigation. */
   outline: 0.125rem solid hsl(220, 100%, 62.5%);
+  /* Make the outline always appear above other elements.
+  /* Otherwise, one of its sides can be hidden by tabs in the Download and More layouts. */
+  position: relative;
 }
 
 body {
