@@ -146,7 +146,7 @@ postPage = "{{ :slug }}"
       <a href="/download" class="btn download">
         <div class="main">Download</div><div class="opt">3.2</div>
       </a>
-      <a href="/features" class="btn flat">Learn more</a>
+      <a href="/features" class="btn flat btn-white-text">Learn more</a>
     </div>
 
     <div class="base-padding full-graphic text-right">
@@ -159,7 +159,7 @@ postPage = "{{ :slug }}"
 <section id="news_and_highlights" class="container padded">
   <div class="flex eqsize responsive card">
 
-    <a id="highlight" style="background-image: url({{ posts[0].featured_images[0].path }});" href="{{ 'article' | page({ slug: posts[0].slug }) }}">
+    <a id="highlight" style="background-image: url({{ posts[0].featured_images[0].path }}); background-color: white" href="{{ 'article' | page({ slug: posts[0].slug }) }}">
       <div class="dark base-padding">
         <h4 class="no-margin">{{ posts[0].title }}</h4>
         <p class="hide-on-mobile">{{ str_limit(posts[0].excerpt, 200) | raw }}</p>
@@ -184,13 +184,13 @@ postPage = "{{ :slug }}"
 </section>
 
 <section id="features" class="container padded">
-  <h2 class="text-right">A different way to make games</h2>
+  <h2>A different way to make games</h2>
 
   <div class="flex eqsize responsive features-row">
     <div class="feature">
       <img src="{{ 'assets/home/features/innovative.png' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Innovative Design</h4>
+        <h4>Innovative design</h4>
         <p>Big or small ideas adapt seamlessly to Godot's node-based architecture, making your life easier.</p>
       </div>
     </div>
@@ -224,7 +224,7 @@ postPage = "{{ :slug }}"
     <div class="feature">
       <img src="{{ 'assets/home/features/team_friendly.svg' | theme }}" alt="" width="1" height="1">
       <div class="dark base-padding">
-        <h4>Team-Friendly</h4>
+        <h4>Team-friendly</h4>
         <p>From architecture and tools to VCS integration, Godot is designed for everyone in your team.</p>
       </div>
     </div>
@@ -252,7 +252,7 @@ postPage = "{{ :slug }}"
       <p>
         If you know how to code, and enjoy fun and challenging problems, you can help by fixing bugs or creating cool new features.
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn flat" target="_blank" rel="noopener"> Learn more </a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn flat" target="_blank" rel="noopener">Learn more</a>
     </div>
 
     <div class="text-center base-padding">
@@ -261,7 +261,7 @@ postPage = "{{ :slug }}"
       <p>
         Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn flat" target="_blank" rel="noopener"> Learn more </a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn flat" target="_blank" rel="noopener">Learn more</a>
     </div>
 
     <div class="text-center base-padding">
@@ -270,7 +270,7 @@ postPage = "{{ :slug }}"
       <p>
         Found a problem with the engine? Don't forget to report it so that developers can track it down.
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn flat" target="_blank" rel="noopener"> Learn more </a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn flat" target="_blank" rel="noopener">Learn more</a>
     </div>
 
   </div>
@@ -284,7 +284,7 @@ postPage = "{{ :slug }}"
       You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot Engine even more awesome!
     </p>
 
-    <a href="/donate" class="btn flat">Learn more</a>
+    <a href="/donate" class="btn flat btn-white-text">Learn more</a>
   </div>
 </section>
 
