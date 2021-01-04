@@ -172,7 +172,7 @@ description = "Showcase item layout"
           height="9"
           src="{{ ('assets/showcase/' ~ (placeholder('image') | replace({' ': ''}))) | theme }}"
           alt="Screenshot of {{ placeholder('title') }}"
-          style="width: 100%; height: auto; margin-top: 1rem; background-color: #607080"
+          style="width: 100%; height: auto; margin-top: 1rem; background: {{ placeholder('placeholder') }}"
         >
       </a>
     </article>
