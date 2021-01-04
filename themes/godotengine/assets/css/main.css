@@ -422,6 +422,7 @@ article .content img {
   background-size: cover;
   background-blend-mode: darken;
   height: 600px;
+  max-height: 50vh;
 }
 
 svg.icon {
