@@ -800,7 +800,7 @@ pre > code {
 
 .showcase-card {
   /* Display a placeholder color while the card's background image is loading. */
-  background-color: hsl(0, 0%, 50%) !important;
+  background-color: #607080 !important;
   background-size: cover;
   background-position: center;
   border: none;
@@ -810,6 +810,10 @@ pre > code {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.showcase-cards a {
+  text-decoration: none;
 }
 
 .showcase-card:hover {

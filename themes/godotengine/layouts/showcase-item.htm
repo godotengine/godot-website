@@ -168,10 +168,11 @@ description = "Showcase item layout"
         rel="noopener noreferrer"
       >
         <img
-          width="100%"
+          width="16"
+          height="9"
           src="{{ ('assets/showcase/' ~ (placeholder('image') | replace({' ': ''}))) | theme }}"
           alt="Screenshot of {{ placeholder('title') }}"
-          style="margin-top: 1rem; background-color: #607080"
+          style="width: 100%; height: auto; margin-top: 1rem; background-color: #607080"
         >
       </a>
     </article>
