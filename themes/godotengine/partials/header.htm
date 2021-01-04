@@ -3,8 +3,10 @@ description = "header partial"
 [Goal]
 ==
 {##}
-{% styles %}
 
+
+<body data-barba="wrapper">
+{% styles %}
 <header>
   <div class="container flex align-center">
     <input type="checkbox" id="nav_toggle_cb">
@@ -26,9 +28,11 @@ description = "header partial"
       <ul class="right">
         <li {% if selected == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
         <li><a href="https://docs.godotengine.org">Learn</a></li>
-        <li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+        <li><a href="https://godotengine.org/asset-library/asset" data-barba-prevent>Assets</a></li>
         {% component 'Goal' %}
       </ul>
     </nav>
   </div>
 </header>
+
+<main data-barba="container" data-barba-namespace="default">
