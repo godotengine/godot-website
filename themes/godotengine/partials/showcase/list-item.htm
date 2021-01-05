@@ -7,7 +7,7 @@ description = "Showcase list item"
     style="
       background-image:
         linear-gradient(to bottom, transparent, hsla(0, 0%, 0%, 0.8)),
-        url({{ ('assets/showcase/' ~ (image | replace({' ': ''}))) | theme }}),
+        url({{ ('assets/showcase/' ~ (image | trim)) | theme }}),
         {{ placeholder }}
     "
   >
