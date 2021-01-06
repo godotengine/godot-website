@@ -100,9 +100,9 @@ categoryPage = "article"
 <div class="container">
   <article class="flex padded">
     <div class="content content-article">
+      {# Lightbox elements and classes are added to all images via JavaScript. #}
       <figure style="text-align: center">
         <img
-          data-src="{{ post.featured_images[0].filename }}"
           src="{{ post.featured_images[0].path }}"
           title="{{ post.featured_images[0].title }}"
           alt="{{ post.featured_images[0].title }} {{ post.featured_images[0].description }}"

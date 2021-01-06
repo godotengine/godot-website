@@ -50,6 +50,7 @@ description = "footer partial"
 
 {% scripts %}
 <script defer src="{{ 'assets/js/barba.min.js' | theme }}"></script>
+<script defer src="{{ 'assets/js/tobii.min.js' | theme }}"></script>
 <script defer src="{{ 'assets/js/highlight.min.js' | theme }}"></script>
 <script defer src="{{ 'assets/js/highlight.gdscript.min.js' | theme }}"></script>
 <script>
@@ -58,6 +59,8 @@ description = "footer partial"
       // Increase timeout from the default value (2000) as our server is relatively slow to respond.
       // Otherwise, the current page will be reloaded instead of loading the new page.
       timeout: 10000,
+      // Ignore lightbox links.
+      prevent: ({ el }) => el.classList && el.classList.contains('lightbox'),
       transitions: [
         {
           name: 'default',
@@ -91,10 +94,25 @@ description = "footer partial"
         {
           namespace: 'default',
           afterEnter() {
-            // This needs to be done after page changes in case a code block
-            // appears in an article.
+            // This needs to be done on page load but also after page changes,
+            // in case a code block appears in an article.
             document.querySelectorAll('pre code').forEach((block) => {
               hljs.highlightBlock(block);
+            });
+
+            document.querySelectorAll('.content-article img').forEach((articleImg) => {
+              // Add lightbox elements in blog articles for Tobii.
+              const lightbox = document.createElement('a');
+              lightbox.href = articleImg.src;
+              lightbox.classList.add('lightbox');
+              lightbox.dataset.group = 'article';
+              articleImg.parentNode.appendChild(lightbox);
+              lightbox.appendChild(articleImg);
+            });
+
+            // Initialize lightbox.
+            new Tobii({
+              zoom: false,
             });
           },
         },
