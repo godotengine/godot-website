@@ -166,15 +166,17 @@ body a {
   outline: none;
   text-decoration: none;
   color: var(--link-color);
-}
-body a {
   text-decoration: underline;
   text-decoration-color: var(--link-underline-color);
   text-decoration-thickness: 0.125rem;
+  /* Prevent color transitions from being too fast (for epilepsy). */
+  transition: 0.1s filter;
 }
+
 body a:hover, a.btn.flat:hover {
   filter: brightness(117.5%);
 }
+
 body a:active, a.btn.flat:active {
   filter: brightness(82.5%);
 }
