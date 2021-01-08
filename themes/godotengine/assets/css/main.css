@@ -70,7 +70,7 @@
     --accent-color: #f57389;
 
     --link-color: hsl(200, 60%, 70%);
-    --link-underline-color: hsla(200, 60%, 60%, 0.3);
+    --link-underline-color: hsla(200, 60%, 70%, 0.3);
     --navbar-link-color: hsla(0, 0%, 100%, 0.9);
     --navbar-link-current-color: hsl(200, 100%, 80%);
     --footer-link-color: hsla(0, 0%, 100%, 0.85);
