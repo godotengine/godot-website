@@ -200,6 +200,7 @@ postPage = "{{ :slug }}"
         width="1"
         height="1"
         style="background: linear-gradient(90deg, #333747 11%, #2d3342 50%, #2d3342 68%, #272d3c 87%)"
+        loading="lazy"
       >
       <div class="dark base-padding">
         <h4>Innovative design</h4>
@@ -213,6 +214,7 @@ postPage = "{{ :slug }}"
         width="1"
         height="1"
         style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)"
+        loading="lazy"
       >
       <div class="dark base-padding">
         <h4>Gorgeous 3D</h4>
@@ -229,6 +231,7 @@ postPage = "{{ :slug }}"
         width="1"
         height="1"
         style="background: linear-gradient(90deg, #252928 4%, #2c312f 13%, #252928 21%, #141213 33%)"
+        loading="lazy"
       >
       <div class="dark base-padding">
         <h4>Beautiful 2D</h4>
@@ -242,6 +245,7 @@ postPage = "{{ :slug }}"
         width="1"
         height="1"
         style="background: linear-gradient(90deg, #252a35 46%, #252a35 53%, #202630 76%, #202630 89%)"
+        loading="lazy"
       >
       <div class="dark base-padding">
         <h4>Easy to program</h4>
@@ -258,6 +262,7 @@ postPage = "{{ :slug }}"
         width="1"
         height="1"
         style="background-color: #335767"
+        loading="lazy"
       >
       <div class="dark base-padding">
         <h4>Team-friendly</h4>
@@ -271,6 +276,7 @@ postPage = "{{ :slug }}"
         width="1"
         height="1"
         style="background-color: #333667"
+        loading="lazy"
       >
       <div class="dark base-padding">
         <h4>Open Source</h4>
@@ -289,7 +295,7 @@ postPage = "{{ :slug }}"
   <div class="flex eqsize responsive">
 
     <div class="text-center base-padding">
-      <img src="{{ 'assets/home/code.svg' | theme }}" alt="" width="250" height="250">
+      <img src="{{ 'assets/home/code.svg' | theme }}" alt="" width="250" height="250" loading="lazy">
       <h4>Code</h4>
       <p>
         If you know how to code, and enjoy fun and challenging problems, you can help by fixing bugs or creating cool new features.
@@ -298,7 +304,7 @@ postPage = "{{ :slug }}"
     </div>
 
     <div class="text-center base-padding">
-      <img src="{{ 'assets/home/document.svg' | theme }}" alt="" width="250" height="250">
+      <img src="{{ 'assets/home/document.svg' | theme }}" alt="" width="250" height="250" loading="lazy">
       <h4>Document</h4>
       <p>
         Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
@@ -307,7 +313,7 @@ postPage = "{{ :slug }}"
     </div>
 
     <div class="text-center base-padding">
-      <img src="{{ 'assets/home/report.svg' | theme }}" alt="" width="250" height="250">
+      <img src="{{ 'assets/home/report.svg' | theme }}" alt="" width="250" height="250" loading="lazy">
       <h4>Report</h4>
       <p>
         Found a problem with the engine? Don't forget to report it so that developers can track it down.
@@ -320,7 +326,7 @@ postPage = "{{ :slug }}"
 
 <section id="donations" class="padded">
   <div class="container sm-full">
-    <img id="sfc_graphic" src=" {{ 'assets/home/sfc.svg' | theme }} " alt="Software Freedom Conservancy" width="1" height="1" class="img-auto-size">
+    <img id="sfc_graphic" src="{{ 'assets/home/sfc.svg' | theme }}" alt="Software Freedom Conservancy logo" width="1" height="1" class="img-auto-size"  loading="lazy">
     <h3 class="text-center">Donate</h3>
     <p class="small auto-margin">
       You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot Engine even more awesome!
@@ -336,24 +342,24 @@ postPage = "{{ :slug }}"
 
     <div class="platinum flex">
       <a class="sponsor card base-padding" href="https://heroiclabs.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/heroiclabs.png' | theme }}" alt="Heroic Labs">
+        <img src="{{ 'assets/home/sponsors/heroiclabs.png' | theme }}" alt="Heroic Labs" loading="lazy">
       </a>
       <a class="sponsor card base-padding" href="https://www.gamblify.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/gamblify.png' | theme }}" alt="Gamblify">
+        <img src="{{ 'assets/home/sponsors/gamblify.png' | theme }}" alt="Gamblify" loading="lazy">
       </a>
       <a class="sponsor card base-padding" href="http://spiffcode.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/spiffcode.png' | theme }}" alt="Spiffcode">
+        <img src="{{ 'assets/home/sponsors/spiffcode.png' | theme }}" alt="Spiffcode" loading="lazy">
       </a>
     </div>
     <div class="gold flex">
       <a class="sponsor card" href="https://www.asifa-hollywood.org/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/asifa-hollywood.png' | theme }}" alt="ASIFA-Hollywood">
+        <img src="{{ 'assets/home/sponsors/asifa-hollywood.png' | theme }}" alt="ASIFA-Hollywood" loading="lazy">
       </a>
       <a class="sponsor card" href="https://www.moonwards.com/" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/moonwards.png' | theme }}" alt="Moonwards">
+        <img src="{{ 'assets/home/sponsors/moonwards.png' | theme }}" alt="Moonwards" loading="lazy">
       </a>
       <a class="sponsor card" href="https://academy.zenva.com/product/godot-game-development-mini-degree/?zva_src=godotengineorg-godotmd" target="_blank" rel="noopener">
-        <img src="{{ 'assets/home/sponsors/zenva-academy.png' | theme }}" alt="Moonwards">
+        <img src="{{ 'assets/home/sponsors/zenva-academy.png' | theme }}" alt="Moonwards" loading="lazy">
       </a>
     </div>
   </div>
