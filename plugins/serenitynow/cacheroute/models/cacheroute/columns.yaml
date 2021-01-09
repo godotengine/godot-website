@@ -1,0 +1,14 @@
+columns:
+    route_pattern:
+        label: 'serenitynow.cacheroute::lang.plugin.route_pattern'
+        type: text
+        searchable: true
+        sortable: true
+    cache_ttl:
+        label: 'serenitynow.cacheroute::lang.plugin.cache_ttl'
+        type: number
+        sortable: true
+    sort_order:
+        label: 'serenitynow.cacheroute::lang.plugin.sort_order'
+        type: number
+        sortable: true

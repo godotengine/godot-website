@@ -1,0 +1,14 @@
+fields:
+    route_pattern:
+        label: 'serenitynow.cacheroute::lang.plugin.route_pattern'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    cache_ttl:
+        label: 'serenitynow.cacheroute::lang.plugin.cache_ttl'
+        span: auto
+        default: '10'
+        required: 1
+        type: text
+        comment: 'serenitynow.cacheroute::lang.plugin.cache_ttl_comment'   

@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table serenitynow_cacheroute_routes'
+    - builder_table_create_serenitynow_cacheroute_routes.php
+1.0.3:
+    - 'Updated table serenitynow_cacheroute_routes to have Sort_order - required for reorder'
+    - builder_table_update_serenitynow_cacheroute_routes.php
+1.0.4:
+    - 'Remove sort_order field from create form'
+    - 'Set default sort order for list (sort_order asc)'
+    - 'add icon for reorder button'
+1.0.5:  
+    - 'Several updates to cache-debugging appearance and behavior by mrbohnke'

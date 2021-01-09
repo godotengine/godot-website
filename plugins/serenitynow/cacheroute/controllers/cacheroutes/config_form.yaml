@@ -1,0 +1,11 @@
+name: CacheRoutes
+modelClass: SerenityNow\Cacheroute\Models\CacheRoute
+form: $/serenitynow/cacheroute/models/cacheroute/fields.yaml
+defaultRedirect: serenitynow/cacheroute/cacheroutes
+create:
+    redirect: 'serenitynow/cacheroute/cacheroutes/update/:id'
+    redirectClose: serenitynow/cacheroute/cacheroutes
+update:
+    redirect: serenitynow/cacheroute/cacheroutes
+    redirectClose: serenitynow/cacheroute/cacheroutes
+preview: {  }
