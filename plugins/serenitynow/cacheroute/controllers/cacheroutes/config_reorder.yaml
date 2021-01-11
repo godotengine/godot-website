@@ -1,0 +1,5 @@
+title: CacheRoutes
+modelClass: SerenityNow\Cacheroute\Models\CacheRoute
+nameFrom: route_pattern
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,17 @@
+plugin:
+    name: 'serenitynow.cacheroute::lang.plugin.name'
+    description: 'serenitynow.cacheroute::lang.plugin.description'
+    author: 'Shankar Manamalkav'
+    icon: oc-icon-fighter-jet
+    homepage: ''
+permissions:
+    serenitynow.cacheroute.manage_cacheroute:
+        tab: 'serenitynow.cacheroute::lang.plugin.name'
+        label: 'serenitynow.cacheroute::lang.plugin.manage_cache_route'
+navigation:
+    CacheRoute:
+        label: 'serenitynow.cacheroute::lang.plugin.name'
+        url: serenitynow/cacheroute/cacheroutes
+        icon: icon-fighter-jet
+        permissions:
+            - serenitynow.cacheroute.manage_cacheroute

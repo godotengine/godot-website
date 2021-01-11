@@ -1,0 +1,14 @@
+title: CacheRoutes
+modelClass: SerenityNow\Cacheroute\Models\CacheRoute
+list: $/serenitynow/cacheroute/models/cacheroute/columns.yaml
+recordUrl: 'serenitynow/cacheroute/cacheroutes/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+defaultSort:
+     column: sort_order
+     direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
