@@ -287,6 +287,9 @@ header .container {
 #nav_toggle_cb, #nav_toggle_btn {
   display: none;
   line-height: 0px;
+  cursor: pointer;
+  /* Prevent double-clicking the button from highlighting the icon as selected text on desktop. */
+  user-select: none;
 }
 nav {
   width: 100%;
@@ -693,9 +696,11 @@ pre > code {
     margin-top: -0.2rem;
     margin-right: -1rem;
   }
-  #nav_toggle_btn:hover,
-  #nav_toggle_btn:active {
+  #nav_toggle_btn:hover {
     background-color: hsla(0, 0%, 50%, 0.15);
+  }
+  #nav_toggle_btn:active {
+    background-color: hsla(0, 0%, 50%, 0.25);
   }
   #nav_toggle_cb:checked ~ nav {
     display: block;
