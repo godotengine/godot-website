@@ -31,3 +31,7 @@ conf.json
 !/docker/mariadb/init/000-setup.sql
 /docker/mariadb/init/*.sql
 /docker/mariadb/storage
+
+# Continuous integration
+!.github/
+!lighthouserc.js
