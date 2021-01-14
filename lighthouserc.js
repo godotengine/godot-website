@@ -38,8 +38,9 @@ module.exports = {
       assert: {
         assertions: {
           // Performance testing is flaky, so we don't require a minimum performance score.
-          "categories:accessibility": ["error", {"minScore": 0.8}],
-          "categories:best-practices": ["error", {"minScore": 0.8}],
+          // The score thresholds are based on the lowest scores from all pages listed above.
+          "categories:accessibility": ["error", {"minScore": 0.82}],
+          "categories:best-practices": ["error", {"minScore": 0.93}],
           "categories:seo": ["error", {"minScore": 0.75}],
         },
       },
