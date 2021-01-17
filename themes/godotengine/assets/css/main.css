@@ -27,8 +27,8 @@
   --footer-link-underline-color: rgba(200, 210, 250, 0.3);
   --tab-active-color: var(--primary-color);
 
-  --base-shadow: 0 0 4px rgba(0, 0, 0, .2);
-  --more-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  --base-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   --background-color: #d5daea;
   --navbar-background-color: #ffffff;
   --head-background-color: var(--primary-color);
@@ -54,7 +54,7 @@
 
     --base-color: #25282b;
     --base-color-text: hsla(0, 0%, 100%, 0.9);
-    --base-color-text-hl: hsla(0, 0%, 100%, 1.0);
+    --base-color-text-hl: hsla(0, 0%, 100%, 1);
     --base-color-text-title: hsla(200, 00%, 100%, 0.85);
     --base-color-text-subtitle: hsla(200, 00%, 100%, 0.7);
 
@@ -77,8 +77,8 @@
     --footer-link-underline-color: hsla(0, 0%, 100%, 0.25);
     --tab-active-color: white;
 
-    --base-shadow: 0 0 4px rgba(0, 0, 0, .4);
-    --more-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+    --base-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     --background-color: #202326;
     --navbar-background-color: #333639;
     --head-background-color: #232f57;
@@ -97,6 +97,7 @@
   .nav-logo {
     display: none;
   }
+
   .nav-logo.dark-logo {
     display: initial;
   }
@@ -127,7 +128,7 @@
   font-style: normal;
   font-display: swap;
   src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-       url("../fonts/Montserrat-Bold.woff") format("woff");
+    url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 /* Montserrat ExtraBold */
@@ -137,20 +138,20 @@
   font-style: normal;
   font-display: swap;
   src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
-       url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
 }
-
 
 *:focus {
   /* More visible outline for better keyboard navigation. */
   outline: 0.125rem solid hsl(220, 100%, 62.5%);
-  /* Make the outline always appear above other elements.
+  /* Make the outline always appear above other elements. */
   /* Otherwise, one of its sides can be hidden by tabs in the Download and More layouts. */
   position: relative;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
 
   background-color: var(--base-color);
@@ -164,7 +165,6 @@ body {
 
 body a {
   outline: none;
-  text-decoration: none;
   color: var(--link-color);
   text-decoration: underline;
   text-decoration-color: var(--link-underline-color);
@@ -173,16 +173,25 @@ body a {
   transition: 0.1s filter;
 }
 
-body a:hover, a.btn.flat:hover {
+body a:hover,
+a.btn.flat:hover {
   filter: brightness(117.5%);
 }
 
-body a:active, a.btn.flat:active {
+body a:active,
+a.btn.flat:active {
   filter: brightness(82.5%);
 }
 
-h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+nav a,
+.btn,
+a.btn,
+.title-font {
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   color: var(--base-color-text-title);
   margin-top: 0px;
@@ -195,12 +204,15 @@ h1, h2, h3, h4, nav a, .btn, a.btn, .title-font {
 h1 {
   font-size: 42px;
 }
+
 h2 {
   font-size: 36px;
 }
+
 h3 {
   font-size: 28px;
 }
+
 h4 {
   font-size: 22px;
 }
@@ -267,12 +279,15 @@ header {
   box-shadow: var(--base-shadow);
   z-index: 100;
 }
+
 header > div.container {
   width: 100%;
 }
+
 header .container {
   overflow: initial;
 }
+
 #logo-link {
   margin-right: 48px;
   /* Make the logo's clickable area as tall as for other navigation links. */
@@ -284,19 +299,22 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
-#nav_toggle_cb, #nav_toggle_btn {
+#nav_toggle_cb,
+#nav_toggle_btn {
   display: none;
   line-height: 0px;
   cursor: pointer;
   /* Prevent double-clicking the button from highlighting the icon as selected text on desktop. */
   user-select: none;
 }
+
 nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 nav a {
   text-decoration: none;
   font-size: 16px;
@@ -305,26 +323,32 @@ nav a {
   /* Make links easier to click. */
   padding: 1.3175rem 1rem;
 }
+
 nav a:hover,
 #logo-link:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
+
 nav ul {
   list-style: none;
   margin: 0px;
   padding-left: 0px;
 }
+
 nav > ul {
   display: flex;
   align-items: center;
   height: 100%;
 }
+
 nav > ul > :first-child {
   padding-left: 0px;
 }
+
 nav > ul > :last-child {
   padding-right: 0px;
 }
+
 nav > ul > li {
   padding-left: 16px;
   padding-right: 16px;
@@ -332,6 +356,7 @@ nav > ul > li {
   margin-left: -1rem;
   margin-right: -1rem;
 }
+
 nav li.active > a {
   color: var(--navbar-link-current-color);
 }
@@ -345,14 +370,17 @@ a.patreonLink {
   height: 64px !important;
   margin-left: 16px !important;
 }
+
 a.patreonLink > .patreon {
   height: inherit;
   padding-left: 8px;
   padding-right: 8px;
 }
+
 a.patreonLink .patreon-brand {
   background-size: 160px;
 }
+
 a.patreonLink .patreon-uppercase {
   font-size: 12px;
 }
@@ -360,18 +388,20 @@ a.patreonLink .patreon-uppercase {
 ul {
   padding-left: 2rem;
 }
+
 ul li {
   margin-bottom: 16px;
 }
 
 footer {
   background-color: var(--footer-background-color);
-  color: var(--footer-color);;
+  color: var(--footer-color);
   font-size: 0.9em;
   margin-top: 64px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 footer ul {
   list-style: none;
   margin: 0px;
@@ -380,6 +410,7 @@ footer ul {
   margin-left: 32px;
   padding-left: 0px;
 }
+
 footer a {
   color: var(--footer-link-color);
   text-decoration-color: var(--footer-link-underline-color);
@@ -457,7 +488,9 @@ svg.icon {
   width: 42px;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   text-rendering: optimizeLegibility;
   line-height: 1.5;
 }
@@ -483,7 +516,9 @@ p.small {
   color: var(--primary-color-text);
   margin-bottom: 32px;
 }
-.head h1, .head h2, .head h3 {
+.head h1,
+.head h2,
+.head h3 {
   color: var(--primary-color-text-title);
   margin: 0px;
 }
@@ -502,7 +537,10 @@ p.small {
   background-color: var(--dark-color);
   color: var(--dark-color-text);
 }
-.dark h1, .dark h2, .dark h3, .dark h4 {
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
   color: var(--dark-color-text-title);
 }
 
@@ -513,6 +551,7 @@ p.small {
   text-decoration: none;
   font-weight: bold;
 }
+
 a.btn {
   background-color: var(--button-background-color);
   box-shadow: var(--base-shadow);
@@ -533,9 +572,11 @@ a.btn.flat {
   color: var(--link-color);
   margin: 16px 32px 16px 32px;
 }
+
 a.btn.flat:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
+
 a.btn.flat.btn-white-text {
   color: hsla(0, 0%, 100%, 0.95);
 }
@@ -544,12 +585,14 @@ a.btn.download {
   padding: 0px;
   margin-top: 48px;
 }
+
 a.btn.download > .main {
   background-color: white;
   color: var(--dark-color);
   display: inline-block;
   padding: 16px 32px 16px 32px;
 }
+
 a.btn.download > .opt {
   background-color: var(--primary-color);
   color: var(--primary-color-text-title);
@@ -582,7 +625,7 @@ a.btn.download > .opt {
 .card {
   background-color: var(--card-background-color);
   color: var(--base-color-text);
-  border: 1px solid rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
 .card hr {
@@ -592,7 +635,7 @@ a.btn.download > .opt {
   background-color: var(--card-footer-color);
 }
 .card:hover {
-  box-shadow: 0 0 12px rgba(0, 0, 0, .2), 0 0 2px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 a.card {
@@ -628,6 +671,7 @@ a.card {
 code {
   font-family: monospace;
 }
+
 pre {
   font-family: monospace;
   white-space: pre-wrap;
@@ -636,6 +680,7 @@ pre {
   border-radius: 2px;
   overflow-y: auto;
 }
+
 pre > code {
   padding-left: 0px;
   padding-right: 0px;
@@ -748,7 +793,8 @@ pre > code {
     display: none;
   }
 
-  a.patreonLink, a.patreonLink > .patreon {
+  a.patreonLink,
+  a.patreonLink > .patreon {
     width: 100%;
   }
 
@@ -804,8 +850,8 @@ pre > code {
     margin-left: 0;
   }
   #social {
-    margin-left: 0;
     margin: auto;
+    margin-left: 0;
     width: 30%;
     min-width: 250px;
     margin-top: 32px;

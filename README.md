@@ -8,7 +8,7 @@ October instance.
 ### Browser support
 
 When working on new features, keep in mind this website only supports
-*evergreen browsers*:
+_evergreen browsers_:
 
 - Chrome (latest version and N-1 version)
 - Edge (latest version and N-1 version)

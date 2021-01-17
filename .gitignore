@@ -35,3 +35,8 @@ conf.json
 # Continuous integration
 !.github/
 !lighthouserc.js
+
+# Linting/formatting setup
+!.prettierignore
+!package-lock.json
+!package.json

@@ -1,0 +1,20 @@
+# Ignore everything by default.
+/*
+
+# Ignore October templates which Prettier can't format.
+*.htm
+
+# Only format the files specified below.
+!/.github/
+!/docker/
+!/themes/
+!/ISSUE_TEMPLATE.md
+!/README.md
+!/lighthouserc.js
+!/package.json
+
+# Ignore third-party CSS and JavaScript.
+/themes/godotengine/assets/css/highlight.obsidian.min.css
+/themes/godotengine/assets/css/normalize.min.css
+/themes/godotengine/assets/css/tobii.min.css
+/themes/godotengine/assets/js/
