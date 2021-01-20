@@ -4,7 +4,260 @@ layout = "default"
 description = "Find local Godot user groups run by community members."
 is_hidden = 0
 ==
+function onStart() {
+  // Order countries alphabetically with their name in English.
+  // A community is considered physical if it defines GPS coordinates (in [latitude, longitude] format).
+  // Otherwise, it's considered an online community.
+  $this['userGroups'] = [
+    'Brazil' => [
+      [
+        'name' => 'Godot Brazil',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/gWmQKBv'],
+        ],
+      ],
+      [
+        'name' => 'São Paulo',
+        'coordinates' => [-23.5505, -46.6333],
+        'links' => [
+          ['title' => 'MeetUp', 'url' => 'https://www.meetup.com/GodotSP/'],
+        ],
+      ],
+      [
+        'name' => 'Campinas',
+        'coordinates' => [-22.8136, -47.0641],
+        'links' => [
+          ['title' => 'Gamux', 'url' => 'https://gamuxunicamp.github.io/website/'],
+        ],
+      ],
+    ],
+    'Ecuador' => [
+      [
+        'name' => 'Godot Ecuador',
+        'coordinates' => [-1.8312, -78.1834],
+        'links' => [
+          ['title' => 'Reddit', 'url' => 'https://www.reddit.com/r/GodotEcuador/'],
+          ['title' => 'Discord', 'url' => 'https://discord.gg/nZecyhN'],
+          ['title' => 'Facebook', 'url' => 'https://www.facebook.com/groups/godotengineecuador/'],
+        ],
+      ],
+    ],
+    'Finland' => [
+      [
+        'name' => 'Godot Suomi',
+        'coordinates' => [60.16952, 24.93545],
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/5QF5du3'],
+        ],
+      ],
+    ],
+    'France or French-speaking' => [
+      [
+        'name' => 'Godot Francophone',
+        'links' => [
+          ['title' => 'Website', 'url' => 'https://www.godot-francophone.org/'],
+          ['title' => 'Discord', 'url' => 'https://discordapp.com/invite/NQVd34V'],
+          ['title' => 'GitHub', 'url' => 'https://github.com/Godot-Engine-Francophone'],
+        ],
+      ],
+      [
+        'name' => 'Godot est arrivé!',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/9FJAZaC'],
+        ],
+      ],
+      [
+        'name' => 'SoloCode France',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/gZ3QJ5T'],
+        ],
+      ],
+    ],
+    'Germany' => [
+      [
+        'name' => 'Godot Germany',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/Tr7Ma6E'],
+        ],
+      ],
+      [
+        'name' => 'Godot Engine German Developers',
+        'links' => [
+          ['title' => 'Facebook', 'url' => 'https://www.facebook.com/groups/359812631518879'],
+        ],
+      ],
+    ],
+    'India' => [
+      [
+        'name' => 'Godot India',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/cRvFbRg'],
+          ['title' => 'Telegram', 'url' => 'https://t.me/godotindia'],
+        ],
+      ],
+    ],
+    'Italy' => [
+      [
+        'name' => 'Godot Engine Italia',
+        'links' => [
+          ['title' => 'Website', 'url' => 'https://godotengineitalia.com/'],
+          ['title' => 'Telegram', 'url' => 'https://t.me/joinchat/Ga4KigwWn53t2RRfoaPSKg'],
+          ['title' => 'Discord', 'url' => 'https://discord.gg/7YuUqJB'],
+          ['title' => 'Facebook', 'url' => 'https://www.facebook.com/groups/1926189904375792/'],
+        ],
+      ],
+    ],
+    'Latvia' => [
+      [
+        'name' => 'Godot Engine Latvia',
+        'coordinates' => [56.9496, 24.1052],
+        'links' => [
+          ['title' => 'Facebook', 'url' => 'https://www.facebook.com/groups/844651272628474/'],
+          ['title' => 'Discord', 'url' => 'https://discord.gg/r6ewZGv'],
+          ['title' => 'Twitter', 'url' => 'https://twitter.com/GodotLatvia'],
+        ],
+      ],
+    ],
+    'Russia' => [
+      [
+        'name' => 'Godot Russia',
+        'links' => [
+          ['title' => 'VKontakte', 'url' => 'https://vk.com/godot_engine'],
+          ['title' => 'Telegram', 'url' => 'https://t.me/godot_engine'],
+        ],
+      ],
+      [
+        'name' => 'Skanersoft',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/GbjcGtS'],
+        ],
+      ],
+    ],
+    'Sweden' => [
+      [
+        'name' => 'Godot Sweden',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/6ZsgWmH'],
+        ],
+      ],
+    ],
+  ];
+}
+==
 {##}
+<link rel="stylesheet" href="{{ 'assets/leaflet/leaflet.css' | theme }}">
+<script defer src="{{ 'assets/leaflet/leaflet.js' | theme }}"></script>
+<script>
+  const points = {{ userGroups | json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_UNESCAPED_UNICODE')) | raw }};
+  const countryCoordinates = {
+    // Full country name: [latitude, longitude]
+    'Brazil': [-14.240073, -53.180502],
+    'Ecuador': [-1.160171, -78.432915],
+    'Finland': [62.777754, 26.199539],
+    'France or French-speaking': [47.824905, 2.618787],
+    'Germany': [51.133481, 10.018343],
+    'India': [22.199166, 78.476681],
+    'Italy': [42.504154, 12.646361],
+    'Latvia': [56.959065, 24.862593],
+    'Russia': [28.186385, 67.695237],
+    'Sweden': [64.964875, 17.675409],
+  }
+
+  function escapeXml(unsafe) {
+    return unsafe.replace(/[<>&'"]/g, function (character) {
+      switch (character) {
+        case '<': return '&lt;';
+        case '>': return '&gt;';
+        case '&': return '&amp;';
+        case "'": return '&apos;';
+        case '"': return '&quot;';
+      }
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    // Show the whole world (centered around Europe) when loading.
+    const myMap = L.map('community-map').setView([40, 0], 3);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      // This token is not sensitive information and doesn't need to be hidden from the client.
+      // The production setup token is scoped to the official Godot website only.
+      // In a development setup, replace with your own Mapbox token.
+      // The token only requires the `styles:tiles` public scope.
+      accessToken: 'pk.eyJ1IjoiY2FsaW5vdSIsImEiOiJja2pvazYyN3U2d2ZxMnNsZ2hmamFuZnk2In0.RSAILtqTL1BPqFNjfQV-KQ',
+    }).addTo(myMap);
+
+    // The icon to use for physical venues.
+    const physicalIcon = L.icon({
+      iconUrl: '{{ "assets/leaflet/images/physical-marker-icon.png" | theme }}',
+      iconRetinaUrl: '{{ "assets/leaflet/images/physical-marker-icon-2x.png" | theme }}',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      shadowUrl: '{{ "assets/leaflet/images/marker-shadow.png" | theme }}',
+      shadowSize: [41, 41],
+      shadowAnchor: [13, 41],
+      popupAnchor: [1, -34],
+      tooltipAnchor: [16, -28],
+    });
+
+    // Object with country names as key, array of points as value.
+    const onlinePoints = {};
+
+    // Flatten the object while looping over it.
+    Object.keys(points).forEach((country, index) => {
+      points[country].forEach((point, index2) => {
+        // Store the country so we can get the coordinates for online communities.
+        point.country = country;
+        if (point.coordinates) {
+          // Physical community.
+          const marker = L.marker(point.coordinates, {
+            title: point.name,
+            icon: physicalIcon,
+          });
+          marker.bindPopup(`
+            <strong>${escapeXml(point.name)}</strong><br>
+            ${point.links.map((link) => ` <a href="${escapeXml(link.url)}">${escapeXml(link.title)}</a>`)}
+          `).openPopup();
+          marker.addTo(myMap);
+        } else {
+          // Online community.
+          // We only want one marker per country (with a merged tooltip, see below).
+          // Therefore, we don't add the marker here directly.
+          if (!onlinePoints[point.country]) {
+            onlinePoints[point.country] = []
+          }
+
+          onlinePoints[point.country].push(point);
+        }
+      });
+    });
+
+    // Add markers for online communities with merged tooltips.
+    Object.keys(onlinePoints).forEach((country, index) => {
+      let markerPopup = '';
+      onlinePoints[country].forEach((point, index2) => {
+        // Add a line separation between online communities.
+        markerPopup += `
+            ${index2 >= 1 ? '<hr>' : ''}
+            <strong>${escapeXml(point.name)}</strong><br>
+            ${point.links.map((link) => ` <a href="${escapeXml(link.url)}">${escapeXml(link.title)}</a>`)}
+        `;
+      });
+
+      const marker = L.marker(countryCoordinates[country], {
+        title: country,
+      });
+      marker.bindPopup(markerPopup).openPopup();
+      marker.addTo(myMap);
+    });
+  });
+</script>
+
+
 {% put head_text %}
   <p class="small">
     Some community members manage local Godot user groups.
@@ -12,69 +265,33 @@ is_hidden = 0
   </p>
 {% endput %}
 
+<h2 class="title">Community map</h2>
 <p>
+  This map lists all physical venues and online community hosted by community members.
+  Scroll down to view a list of online communities.
+</p>
+<div id="community-map" style="height: 35rem"></div>
+<p>
+  <!-- Color legend. -->
+  <span style="display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #b7422c; margin-right: 0.4rem"></span>
+  Physical community
+  <span style="display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 50%; background-color: #257eca; margin-right: 0.4rem; margin-left: 1.5rem"></span>
+  Online community
+</p>
+
+{% for countryName, userGroupCountry in userGroups %}
+<h3 class="title">{{ countryName }}</h3>
+<ul>
+  {% for userGroup in userGroupCountry %}
+  <li>
+    {{ userGroup.name }}
+    ({% for userGroupLink in userGroup.links %}<a href="{{ userGroupLink.url }}">{{ userGroupLink.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %})
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+<p style="margin-top: 4rem">
   If you run a local community and would like to have it listed here,
   please send an email to <em>webmaster at godotengine · org</em>.
 </p>
-
-<!--
-Order countries alphabetically with their name in English.
-Use <ul> for the country's user groups, also listed alphabetically.
-Use the following format for each entry:
-
-  <li><a href="https://example.com">User group name (City)</a></li>
--->
-
-<h3 class="title">Brazil</h3>
-
-<ul>
-  <li><a href="https://www.meetup.com/GodotSP/">Godot SP (São Paulo) (Meetup)</a></li>
-  <li><a href="https://www.facebook.com/groups/1941782866044296">Godot Engine Brasil (Facebook)</a></li>
-  <li><a href="https://t.me/GodotBrasileiro">Godot Brasil (Telegram)</a></li>
-  <li><a href="https://web.whatsapp.com/accept?code=IA3ix2QSaKj654fRMY1n2n">Godot Engine Brazil (WhatsApp)</a></li>
-</ul>
-
-<h3 class="title">Canada</h3>
-
-<ul>
-  <li><a href="https://www.meetup.com/Godot-Toronto/">Godot Toronto (Meetup)</a></li>
-</ul>
-
-<h3 class="title">Colombia</h3>
-
-<ul>
-  <li><a href="https://www.meetup.com/Godot-Bogota/">Godot Bogotá (Meetup)</a></li>
-</ul>
-
-<h3 class="title">France or French-speaking</h3>
-
-<ul>
-  <li><a href="https://www.godot-francophone.org/">Godot Francophone (Website)</a></li>
-  <li><a href="https://discordapp.com/invite/3jvf3XN">Godot Francophone (Discord)</a></li>
-</ul>
-
-<h3 class="title">Germany</h3>
-
-<ul>
-  <li><a href="https://discord.gg/Tr7Ma6E">Deutsche Godot Community (Discord)</a></li>
-  <li><a href="https://www.facebook.com/groups/359812631518879">Godot Engine German Developers (Facebook)</a></li>
-</ul>
-
-<h3 class="title">Italy</h3>
-
-<ul>
-  <li><a href="https://godotengineitalia.com">Godot Engine Italia (Website)</a></li>
-</ul>
-
-<h3 class="title">Russia</h3>
-
-<ul>
-  <li><a href="https://t.me/godot_engine">Godot Russia (Telegram)</a></li>
-  <li><a href="https://vk.com/godot_engine">Godot Russia (VKontakte)</a></li>
-</ul>
-
-<h3 class="title">Spain</h3>
-
-<ul>
-  <li><a href="https://sugus.eii.us.es/about/">SUGUS (Sevilla) (Website)</a></li>
-</ul>
