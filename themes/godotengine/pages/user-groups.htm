@@ -216,19 +216,11 @@ function onStart() {
   window.addEventListener('DOMContentLoaded', () => {
     // Show the whole world (centered around Europe) when loading.
     const myMap = L.map('community-map').setView([40, 0], 3);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
       // Use more reasonable zoom level limits where tiles are still displayed.
       minZoom: 2,
       maxZoom: 18,
-      id: 'mapbox/streets-v11',
-      tileSize: 512,
-      zoomOffset: -1,
-      // This token is not sensitive information and doesn't need to be hidden from the client.
-      // The production setup token is scoped to the official Godot website only.
-      // In a development setup, replace with your own Mapbox token.
-      // The token only requires the `styles:tiles` public scope.
-      accessToken: 'pk.eyJ1IjoiY2FsaW5vdSIsImEiOiJja2pvazYyN3U2d2ZxMnNsZ2hmamFuZnk2In0.RSAILtqTL1BPqFNjfQV-KQ',
     }).addTo(myMap);
 
     // The icon to use for physical venues.
