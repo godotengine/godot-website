@@ -214,13 +214,22 @@ function onStart() {
   }
 
   window.addEventListener('DOMContentLoaded', () => {
-    // Show the whole world (centered around Europe) when loading.
-    const myMap = L.map('community-map').setView([40, 0], 3);
+    const bounds = L.latLngBounds(L.latLng(90, -180), L.latLng(-90, 180));
+    const myMap = L.map('community-map', {
+      // Show the whole world (centered around Europe) when loading.
+      center: [40, 0],
+      zoom: 3,
+      maxBounds: bounds,
+      maxBoundsViscosity: 1
+    });
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
       // Use more reasonable zoom level limits where tiles are still displayed.
       minZoom: 2,
       maxZoom: 18,
+      noWrap: true,
+      bounds
     }).addTo(myMap);
 
     // The icon to use for physical venues.
