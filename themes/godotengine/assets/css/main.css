@@ -470,7 +470,7 @@ article .content img {
   padding-bottom: 64px;
 }
 
-#main_image {
+.main-image {
   background-color: var(--transparent-cover);
   padding: 0px;
   margin: 0px;
@@ -480,6 +480,25 @@ article .content img {
   background-blend-mode: darken;
   height: 600px;
   max-height: 50vh;
+  /* For `.main-image-text`. */
+  position: relative;
+}
+
+.main-image-text {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  opacity: 0.75;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 9999px;
+  padding: 0.125rem 0.75rem;
+  text-shadow: 0 0.125rem 0.125rem hsl(0, 0%, 0%);
+}
+
+.main-image-text,
+.main-image-text a {
+  color: white;
+  text-decoration: none;
 }
 
 svg.icon {
@@ -834,7 +853,7 @@ pre > code {
   .flex.eqsize.responsive {
     flex-direction: column;
   }
-  #main_image {
+  .main-image {
     height: 30vh;
   }
 
