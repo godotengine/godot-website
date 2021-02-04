@@ -60,8 +60,21 @@ description = "footer partial"
       // Increase timeout from the default value (2000) as our server is relatively slow to respond.
       // Otherwise, the current page will be reloaded instead of loading the new page.
       timeout: 10000,
-      // Ignore lightbox links.
-      prevent: ({ el }) => el.classList && el.classList.contains('lightbox'),
+
+      // Ignore:
+      // - lightbox links,
+      // - user groups page (due to inline JavaScript being used),
+      // - links that are "external" websites,
+      // - direct PDF files.
+      prevent: ({ el }) => {
+        const isLightBox = el.classList && el.classList.contains('lightbox');
+        const isUserGroupsPage = el.href && el.href.includes('/community/user-groups');
+        const isQaUrl = el.href && el.href.includes('/qa');
+        const isAssetLibUrl = el.href && el.href.includes('/asset-library');
+        const isPdf = el.href && el.href.includes('.pdf');
+        return isLightBox || isUserGroupsPage || isQaUrl || isAssetLibUrl || isPdf;
+      },
+
       transitions: [
         {
           name: 'default',
