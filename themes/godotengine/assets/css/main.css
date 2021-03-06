@@ -119,6 +119,11 @@
   .dark-desaturate {
     filter: saturate(0%);
   }
+
+  /* Dark theme hack for the DuckDuckGo search iframe. */
+  .article-search-bar {
+    filter: invert(80%) hue-rotate(180deg);
+  }
 }
 
 /* Montserrat Bold */
