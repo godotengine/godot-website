@@ -55,6 +55,26 @@ description = "News layout"
 </div>
 
 <div class="container">
+  {#
+    Add a background to roughly match the iframe's appearance during loading.
+    This makes the pop-in during loading less noticeable.
+  #}
+  <iframe
+    src="https://duckduckgo.com/search.html?site=godotengine.org/article&width=285&prefill=Search articles"
+    frameborder="0"
+    class="article-search-bar"
+    style="
+      background-color:white;
+      box-shadow: 0 0 4px hsla(0, 0%, 0%, 1) inset;
+      border-radius: 3px;
+      overflow:hidden;
+      margin:0 0 1rem 0;
+      padding:0;
+      width:343px;
+      height:40px;
+    "
+  ></iframe>
+
   {% set posts = blogPosts.posts %}
   {% for post in posts %}
     <a href="{{ 'article'|page({ slug: post.slug }) }}" style="text-decoration: none">
