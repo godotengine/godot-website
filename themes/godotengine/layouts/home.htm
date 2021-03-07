@@ -33,6 +33,7 @@ postPage = "{{ :slug }}"
 
   .full-graphic > img {
     width: auto;
+    max-width: 50vw;
     height: 100%;
   }
 
@@ -112,18 +113,19 @@ postPage = "{{ :slug }}"
     color: var(--dark-color-text-title);
   }
 
+  .img-auto-size {
+    width: 100%;
+    height: auto;
+  }
+
   @media (max-width: 900px) {
     .features-row > :first-child {
       margin-right: 0px;
     }
+
     .features-row > :last-child {
       margin-left: 0px;
     }
-  }
-
-  .img-auto-size {
-    width: 100%;
-    height: auto;
   }
 </style>
 
