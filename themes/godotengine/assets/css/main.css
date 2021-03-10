@@ -434,16 +434,36 @@ footer a {
 .pagination {
   margin-top: 64px;
   justify-content: center;
+  /* Remove spacing between list items when `display` is `block`. */
+  font-size: 0;
 }
 
 .pagination a {
   color: inherit;
   display: inline-block;
+  background-color: var(--button-background-color);
+  padding: 0.7rem 0.7rem;
+  min-width: 1.4rem;
+  font-size: initial;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-  margin-right: 12px;
-  min-width: 16px;
+  box-shadow: var(--base-shadow);
+}
+
+.pagination a.active {
+  background-color: hsl(220, 100%, 62.5%);
+  color: white;
+}
+
+.pagination a:not(:last-child) {
+  border-right: 1px solid var(--card-footer-color);
+}
+
+.pagination a.pagination-previous,
+.pagination a.pagination-next {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 /* Make blog article images readable on a dark background. */
@@ -460,13 +480,7 @@ article .content img {
   .pagination {
     display: block;
     justify-content: initial;
-    line-height: 40px;
     text-align: center;
-  }
-
-  .pagination a {
-    min-width: 28px;
-    min-height: 28px;
   }
 }
 

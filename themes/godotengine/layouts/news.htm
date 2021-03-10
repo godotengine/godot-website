@@ -99,7 +99,7 @@ description = "News layout"
 
   <div class="flex pagination">
     {% if posts.currentPage > 1 %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a>
+      <a class="pagination-previous" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Previous</a>
     {% endif %}
 
     {% for page in 1..posts.lastPage %}
@@ -109,7 +109,7 @@ description = "News layout"
     {% endfor %}
 
     {% if posts.lastPage > posts.currentPage %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
+      <a class="pagination-next" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
     {% endif %}
   </div>
 </div>
