@@ -438,7 +438,8 @@ footer a {
   font-size: 0;
 }
 
-.pagination a {
+.pagination a,
+.pagination-disabled {
   color: inherit;
   display: inline-block;
   background-color: var(--button-background-color);
@@ -449,6 +450,11 @@ footer a {
   text-align: center;
   text-decoration: none;
   box-shadow: var(--base-shadow);
+}
+
+.pagination-disabled {
+  opacity: 50%;
+  user-select: none;
 }
 
 .pagination a.active {
