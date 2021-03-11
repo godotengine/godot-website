@@ -64,16 +64,18 @@ description = "News layout"
     frameborder="0"
     class="article-search-bar"
     style="
-      background-color:white;
+      background-color: white;
       box-shadow: 0 0 4px hsla(0, 0%, 0%, 1) inset;
       border-radius: 3px;
-      overflow:hidden;
-      margin:0 0 1rem 0;
-      padding:0;
-      width:343px;
-      height:40px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 343px;
+      height: 40px;
     "
   ></iframe>
+
+  {% partial "pagination" %}
 
   {% set posts = blogPosts.posts %}
   {% for post in posts %}
@@ -97,50 +99,7 @@ description = "News layout"
     </a>
   {% endfor %}
 
-  <div class="flex pagination">
-    {% if posts.currentPage > 1 %}
-      <a class="pagination-previous" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Previous</a>
-    {% else %}
-      <div class="pagination-previous pagination-disabled">&larr; Previous</div>
-    {% endif %}
-
-    {# Shortcuts to get to the first two pages. #}
-    {% if posts.currentPage - 2 > 1 %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): 1 }) }}">1</a>
-    {% endif %}
-    {% if posts.currentPage - 2 > 2 %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): 2 }) }}">2</a>
-      {# Only display the ellipsis if at least one page is omitted. #}
-      {% if posts.currentPage - 2 > 3 %}
-        <div class="pagination-disabled">&hellip;</div>
-      {% endif %}
-    {% endif %}
-
-    {# Display at least 5 page buttons regardless of the current page. #}
-    {% for page in max(1, min(posts.currentPage - 2, posts.lastPage - 4))..max(5, min(posts.currentPage + 2, posts.lastPage)) %}
-      <a class="{{ posts.currentPage == page ? 'active' : null }}"
-         href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}
-      </a>
-    {% endfor %}
-
-    {# Shortcuts to get to the last two pages. #}
-    {% if posts.currentPage + 2 < posts.lastPage - 1 %}
-      {# Only display the ellipsis if at least one page is omitted. #}
-      {% if posts.currentPage + 2 < posts.lastPage - 2 %}
-        <div class="pagination-disabled">&hellip;</div>
-      {% endif %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): posts.lastPage - 1 }) }}">{{  posts.lastPage - 1 }}</a>
-    {% endif %}
-    {% if posts.currentPage + 2 < posts.lastPage %}
-      <a href="{{ this.page.baseFileName|page({ (pageParam): posts.lastPage }) }}">{{ posts.lastPage }}</a>
-    {% endif %}
-
-    {% if posts.lastPage > posts.currentPage %}
-      <a class="pagination-next" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
-    {% else %}
-      <div class="pagination-next pagination-disabled">Next &rarr;</div>
-    {% endif %}
-  </div>
+  {% partial "pagination" %}
 </div>
 
 {% partial "footer" %}
