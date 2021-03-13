@@ -7,6 +7,7 @@
   --base-color-text-hl: #454b59;
   --base-color-text-title: #546b99;
   --base-color-text-subtitle: #8a9cc2;
+  --base-color-text-subtitle-date: #9aacd2;
 
   --dark-color: #333f67;
   --dark-color-text: lightsteelblue;
@@ -57,6 +58,7 @@
     --base-color-text-hl: hsla(0, 0%, 100%, 1);
     --base-color-text-title: hsla(200, 00%, 100%, 0.85);
     --base-color-text-subtitle: hsla(200, 00%, 100%, 0.7);
+    --base-color-text-subtitle-date: hsla(200, 00%, 100%, 0.5);
 
     --dark-color: #263256;
     --dark-color-text: lightsteelblue;
@@ -662,7 +664,7 @@ a.btn.download > .opt {
 }
 
 .author .date {
-  color: var(--base-color-text-subtitle);
+  color: var(--base-color-text-subtitle-date);
   padding-left: 24px;
 }
 
@@ -909,6 +911,12 @@ pre > code {
 
   .tabs {
     overflow: scroll;
+  }
+
+  .author .date {
+    display: block;
+    margin-top: 0.25rem;
+    padding-left: 0;
   }
 }
 @media (max-width: 500px) {
