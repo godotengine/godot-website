@@ -293,6 +293,10 @@ header .container {
   overflow: initial;
 }
 
+.only-on-mobile {
+  display: none;
+}
+
 #logo-link {
   margin-right: 48px;
   /* Make the logo's clickable area as tall as for other navigation links. */
@@ -336,8 +340,8 @@ nav a:hover,
 
 nav ul {
   list-style: none;
-  margin: 0px;
-  padding-left: 0px;
+  margin: 0;
+  padding-left: 0;
 }
 
 nav > ul {
@@ -347,17 +351,17 @@ nav > ul {
 }
 
 nav > ul > :first-child {
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 nav > ul > :last-child {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
-nav > ul > li {
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-bottom: 0px;
+nav > ul li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0;
   margin-left: -1rem;
   margin-right: -1rem;
 }
@@ -805,7 +809,7 @@ pre > code {
   nav > ul {
     margin-bottom: 16px;
   }
-  nav ul > li {
+  nav ul li {
     padding: 0;
     padding-top: 16px;
     width: 100%;
@@ -835,6 +839,10 @@ pre > code {
 @media (max-width: 900px) {
   .hide-on-mobile {
     display: none;
+  }
+
+  .only-on-mobile {
+    display: initial;
   }
 
   a.patreonLink,
@@ -914,6 +922,34 @@ pre > code {
 @media (max-width: 500px) {
   #sfc_graphic {
     width: 100%;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 12rem;
+    background-color: var(--navbar-background-color);
+    box-shadow: 0 0.5rem 0.5rem 0 hsla(0, 0%, 0%, 0.2);
+    margin-top: 1.125rem;
+    z-index: 1;
+  }
+
+  .nav-dropdown-content li a {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: calc(100% - 2rem);
+  }
+
+  .nav-dropdown:hover .nav-dropdown-content {
+    display: block;
   }
 }
 

@@ -25,7 +25,25 @@ description = "header partial"
         <li {% if selected == 'features' %} class="active" {% endif %}><a href="/features">Features</a></li>
         <li {% if selected == 'news' %} class="active" {% endif %}><a href="/news">News</a></li>
         <li {% if this.page.id == 'community' %} class="active" {% endif %}><a href="/community">Community</a></li>
-        <li {% if selected == 'more' %} class="active" {% endif %}><a href="/contact">More</a></li>
+        <div class="only-on-mobile" style="width: 100%">
+          <li {% if this.page.id == 'showcase' %} class="active" {% endif %}"><a href="/showcase">Showcase</a></li>
+          <li {% if selected == 'more' %} class="active" {% endif %}"><a href="/contact">More</a></li>
+        </div>
+        <div class="hide-on-mobile">
+          <li class="nav-dropdown {% if selected == 'more' %} active {% endif %}">
+            <a href="/contact">More&nbsp;&nbsp;↓</a>
+            <ul class="nav-dropdown-content">
+              <li><a href="/showcase">Showcase</a></li>
+              <li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+              <hr>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/privacy-policy">Privacy</a></li>
+              <li><a href="/code-of-conduct">Code of Conduct</a></li>
+              <li><a href="/license">License</a></li>
+              <li><a href="/donate">Donate</a></li>
+            </ul>
+          </li>
+        </div>
       </ul>
 
       <ul class="right">
