@@ -64,21 +64,6 @@ You can use the standard `docker exec -it godotengine-org--[php|mariadb] [comman
   pieces are everything that's stored in the production database
   (blog entries).
 
-### Deploying your changes
-
-Deploying is of course only possible for people who have access to our
-production server. Most contributors should submit a pull request instead.
-
-- Install Node.js and npm.
-- Copy example_conf.json: `cp example_conf.json conf.json`.
-- Fill out your credentials in `conf.json`.
-- Run `npm install` then `npm run deploy`.
-
-This will copy all the compiled assets from the `godotengine/assets/packed`
-directory to the corresponding directory on production. It'll also make sure
-that copied assets are still writable by the group on the server. Make sure
-you've thoroughly tested your changes on your local copy before running this.
-
 ### Syntax highlighting
 
 If you use Visual Studio Code, you can install the

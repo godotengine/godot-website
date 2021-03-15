@@ -14,9 +14,7 @@
 !.gitignore
 
 # October CMS
-packed
 node_modules
-conf.json
 
 # Plugins
 !/plugins
