@@ -39,6 +39,12 @@ description = "News layout"
   .news-item .date-big {
     line-height: .75;
   }
+
+  @media (max-width: 900px) {
+    .news-item .content .date {
+      text-align: left;
+    }
+  }
 </style>
 
 <div class="head">
@@ -91,7 +97,10 @@ description = "News layout"
             <h3 class="title">
               {{ post.title }}
             </h3>
-            <h4 class="author"> By: {{ post.user.full_name }} <span class="date"> {{ post.published_at|date('M d - Y') }} </span> </h4>
+            <h4 class="author">
+              By: {{ post.user.full_name }}
+              <span class="date">{{ post.published_at|date('j F Y') }}</span>
+            </h4>
             <p>{{ post.excerpt |raw }}</p>
           </div>
         </div>
