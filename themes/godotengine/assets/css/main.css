@@ -48,6 +48,13 @@
   display: none;
 }
 
+.article-search-bar {
+  /* Make the Search button blue instead of green to better match the Godot theme. */
+  /* We need to do this using a CSS filter since it's an iframe. */
+  /* This breaks the text selection color inside the iframe, but it's a minor issue. */
+  filter: hue-rotate(110deg) saturate(80%);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --transparent-cover: rgb(51, 63, 103, 0.4);
