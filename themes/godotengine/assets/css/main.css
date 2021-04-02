@@ -509,13 +509,13 @@ article .content img {
 }
 
 .main-image {
+  background-color: var(--transparent-cover);
   padding: 0px;
   margin: 0px;
-  background-image: url("../home/godette.jpg");
-  background-position: bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: #1b2333;
+  background-image: url("../home/background.jpg");
+  background-position: top;
+  background-size: cover;
+  background-blend-mode: darken;
   height: 600px;
   max-height: 50vh;
   /* For `.main-image-text`. */
