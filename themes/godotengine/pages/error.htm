@@ -6,6 +6,9 @@ is_hidden = 0
 ==
 {##}
 <style>
+  #error-message {
+    text-align: center
+  }
     .error {
       display: flex;
       align-items: center;
@@ -30,7 +33,7 @@ is_hidden = 0
 <p>
   <div class="error">
     <img class="error-logo" src="{{ 'assets/error_logo.svg'|theme }}" alt="Godot Engine Error">
-    <div style="text-align: center">
+    <div id="error-message">
       We're sorry, but an internal server error occurred when trying to display this page.<br>
       <a href="/">Go to the homepage</a>
     </div>
