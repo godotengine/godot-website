@@ -72,6 +72,6 @@ extension to benefit from syntax highlighting in `.htm` templates.
 
 ## Resources
 
-- Discuss on freenode IRC: [`#godotengine-atelier`](https://webchat.freenode.net/?channels=#godotengine-atelier)
+- Discuss on Godot Contributors Chat [#website](https://chat.godotengine.org/channel/website) channel.
 - When working on the theme, please take note of the
   [website stats](https://stats.tuxfamily.org/godotengine.org).
