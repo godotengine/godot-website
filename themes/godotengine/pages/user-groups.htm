@@ -9,6 +9,14 @@ function onStart() {
   // A community is considered physical if it defines GPS coordinates (in [latitude, longitude] format).
   // Otherwise, it's considered an online community.
   $this['userGroups'] = [
+    'Argentina' => [
+      [
+        'name' => 'Godot en Español',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/2BtycSPdkk'],
+        ],
+      ],
+    ],
     'Brazil' => [
       [
         'name' => 'Godot Brazil',
@@ -294,6 +302,7 @@ function onStart() {
   const points = {{ userGroups | json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_UNESCAPED_UNICODE')) | raw }};
   const countryCoordinates = {
     // Full country name: [latitude, longitude]
+    'Argentina': [-38.4192641, -63.5989206],
     'Brazil': [-14.240073, -53.180502],
     'Canada': [56.130366, -106.346771],
     'China': [35.486703, 101.901875],
