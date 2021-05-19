@@ -157,7 +157,7 @@ postPage = "{{ :slug }}"
       </p>
 
       <a href="/download" class="btn download">
-        <div class="main">Download</div><div class="opt">3.3.1</div>
+        <div class="main">Download</div><div class="opt">{% include('version') with {'key': 'identifier'} %}</div>
       </a>
       <a href="/features" class="btn flat btn-white-text">Learn more</a>
     </div>
