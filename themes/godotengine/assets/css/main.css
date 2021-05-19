@@ -285,13 +285,16 @@ h4 {
 }
 
 header {
+  /* Show on top of GodotCon banner. */
+  position: relative;
+  z-index: 2;
+
   width: 100vw;
   height: 64px;
   background-color: var(--navbar-background-color);
   display: flex;
   align-items: center;
   box-shadow: var(--base-shadow);
-  z-index: 100;
 }
 
 header > div.container {
