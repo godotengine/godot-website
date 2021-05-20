@@ -9,6 +9,7 @@ is_hidden = 0
 ?>
 ==
 {##}
+{% set stable_version = include('version', {'key': 'identifier'}) %}
 {% put downloads %}
   <div class="btn split download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_osx.universal.zip">

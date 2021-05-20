@@ -1,16 +1,12 @@
 description = "Download layout"
 ==
-<?php
-  function onInit() {
-    $this["stable_version"] = "3.3.1";
-  }
-?>
-==
 {##}
 <!DOCTYPE html>
 <html lang="en">
 {% partial "head" %}
 {% partial "header" selected="download" %}
+{% set stable_version = include('version', {'key': 'identifier'}) %}
+{% set stable_version_date = include('version', {'key': 'date'}) %}
 
 <style>
   .btn.download {
@@ -119,7 +115,7 @@ description = "Download layout"
     <div class="version-overview">
       <img src="{{ 'assets/download/godot_logo.svg' | theme }}" alt="" width="200" height="200" alt="">
       <h2>Godot <em>{{stable_version}}</em></h2>
-      <i class="date">released May 18, 2021</i>
+      <i class="date">released {{ stable_version_date | date('j F Y') }}</i>
       <p></p>
     </div>
 
