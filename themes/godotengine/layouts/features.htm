@@ -274,6 +274,24 @@ description = "Features layout"
   <div></div>
 </section>
 
+<section
+  id="call-to-action"
+  class="container flex eqsize responsive"
+  style="background-color: var(--dark-color); box-shadow: var(--base-shadow); padding: 1.5rem 1.5rem 0.5rem 1.5rem"
+>
+  <div>
+    <h2 class="text-center" style="color: white; width: 100%">Ready to start?</h2>
+    <p class="text-center" style="color: white; margin-bottom: -0.5rem">Download Godot and try it out today!</p>
+    <div class="text-center">
+      <a href="/download" class="btn download">
+        <div class="main">Download</div><div class="opt">{% include('version') with {'key': 'identifier'} %}</div>
+      </a>
+      <br>
+      <a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn flat btn-white-text">Complete list of features</a>
+    </div>
+  </div>
+</section>
+
 {% partial "footer" %}
 
 </html>
