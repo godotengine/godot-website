@@ -48,7 +48,6 @@ jobs:
           env -C plugins/paulvonzimmerman/patreon composer install
           php artisan plugin:refresh pikanji.agent
           php artisan plugin:refresh rainlab.blog
-          php artisan plugin:refresh serenitynow.cacheroute
           php artisan plugin:refresh sobored.rss
 
       - name: Run Lighthouse CI
