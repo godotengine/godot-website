@@ -776,6 +776,14 @@ pre > code {
     padding-right: 16px;
   }
 
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .only-on-mobile {
+    display: initial;
+  }
+
   article .content {
     width: 100%;
   }
@@ -849,14 +857,6 @@ pre > code {
 }
 
 @media (max-width: 900px) {
-  .hide-on-mobile {
-    display: none;
-  }
-
-  .only-on-mobile {
-    display: initial;
-  }
-
   a.patreonLink,
   a.patreonLink > .patreon {
     width: 100%;
