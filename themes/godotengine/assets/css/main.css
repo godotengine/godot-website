@@ -928,7 +928,7 @@ pre > code {
   }
 
   .tabs {
-    overflow: scroll;
+    overflow: auto;
   }
 
   .author .date {
