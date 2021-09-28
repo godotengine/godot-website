@@ -17,7 +17,7 @@ jobs:
           npm run lint
 
       - name: Install PHP
-        uses: shivammathur/setup-php@2.14.0
+        uses: shivammathur/setup-php@2.15.0
         with:
           php-version: "7.3"
           tools: composer:v1
