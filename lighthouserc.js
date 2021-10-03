@@ -2,35 +2,35 @@ module.exports = {
   ci: {
     collect: {
       url: [
-        "http://localhost:8000/",
+        "http://localhost:8080/",
 
         // Test news lists and one article.
-        "http://localhost:8000/news",
-        "http://localhost:8000/devblog",
-        "http://localhost:8000/article/first-blog-post",
+        "http://localhost:8080/news",
+        "http://localhost:8080/devblog",
+        "http://localhost:8080/article/first-blog-post",
 
-        "http://localhost:8000/features",
+        "http://localhost:8080/features",
 
-        "http://localhost:8000/community",
-        "http://localhost:8000/community/user-groups",
-        "http://localhost:8000/events",
-        "http://localhost:8000/events/past",
+        "http://localhost:8080/community",
+        "http://localhost:8080/community/user-groups",
+        "http://localhost:8080/events",
+        "http://localhost:8080/events/past",
 
-        "http://localhost:8000/download/linux",
-        "http://localhost:8000/download/osx",
-        "http://localhost:8000/download/windows",
-        "http://localhost:8000/download/server",
+        "http://localhost:8080/download/linux",
+        "http://localhost:8080/download/osx",
+        "http://localhost:8080/download/windows",
+        "http://localhost:8080/download/server",
 
         // Test showcase list and one item.
-        "http://localhost:8000/showcase",
-        "http://localhost:8000/showcase/kingdoms-of-the-dump",
+        "http://localhost:8080/showcase",
+        "http://localhost:8080/showcase/kingdoms-of-the-dump",
 
         // Pages under the "More" navbar link.
-        "http://localhost:8000/contact",
-        "http://localhost:8000/donate",
-        "http://localhost:8000/code-of-conduct",
-        "http://localhost:8000/privacy-policy",
-        "http://localhost:8000/license",
+        "http://localhost:8080/contact",
+        "http://localhost:8080/donate",
+        "http://localhost:8080/code-of-conduct",
+        "http://localhost:8080/privacy-policy",
+        "http://localhost:8080/license",
       ],
       // Print "Listening" immediately so that lighthouse-ci starts as soon as possible.
       startServerCommand:
