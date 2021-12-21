@@ -762,7 +762,7 @@ pre > code {
   .container > :first-child {
     padding-left: 0px;
   }
-  .container > :last-child {
+  .container > :last-child:not(a.btn) {
     padding-right: 0px;
   }
 }
