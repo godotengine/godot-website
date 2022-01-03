@@ -187,6 +187,13 @@ body a {
   transition: 0.1s filter;
 }
 
+body a,
+a.btn.flat {
+  /* Use `filter` on all states to prevent the clickable area from changing */
+  /* when an image is hovered (see GH-369). */
+  filter: brightness(100%);
+}
+
 body a:hover,
 a.btn.flat:hover {
   filter: brightness(117.5%);
