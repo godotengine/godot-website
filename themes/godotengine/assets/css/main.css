@@ -746,6 +746,8 @@ pre {
   padding: 8px;
   border-radius: 2px;
   overflow-y: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 pre > code {
