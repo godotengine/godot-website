@@ -689,6 +689,19 @@ a.btn.download > .opt {
   padding-left: 24px;
 }
 
+.tags {
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 1000px;
+  background-color: var(--card-background-color);
+  padding: 0.25rem 0.75rem;
+  margin: 0.1rem;
+}
+
 .card {
   background-color: var(--card-background-color);
   color: var(--base-color-text);
