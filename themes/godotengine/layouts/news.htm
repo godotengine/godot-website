@@ -52,11 +52,6 @@ description = "News layout"
     <div class="main">
       <h1 class="intro-title">{{ this.page.title }}</h1>
     </div>
-
-    <div class="tabs">
-      <a href="/news" class="title-font {% if this.page.id == 'news' %} active {% endif %}">All</a>
-      <a href="/devblog" class="title-font {% if this.page.id == 'devblog' %} active {% endif %}">Devblog</a>
-    </div>
   </div>
 </div>
 
@@ -80,6 +75,30 @@ description = "News layout"
       height: 40px;
     "
   ></iframe>
+
+  <h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
+  <div class="tags">
+    {# The category slug is an empty string if the legacy news URL (`/news`) is browsed to. #}
+    <a
+      href="/news/default/{{ blogPosts.posts.currentPage }}"
+      title="Show all categories"
+      {% if blogCategories.currentCategorySlug == "default" or blogCategories.currentCategorySlug == "" %} style="font-weight: bold" {% endif %}
+    ><div class="tag">All</div></a>
+    {% for category in blogCategories.categories %}
+      <a
+        href="/news/{{ category.slug }}/{{ blogPosts.posts.currentPage }}"
+        title="{{ category.description }}"
+        {% if category.slug == blogCategories.currentCategorySlug %} style="font-weight: bold" {% endif %}
+      ><div class="tag">{{ category.name }}</div></a>
+    {% endfor %}
+  </div>
+
+  {# The category slug is an empty string if the legacy news URL (`/news`) is browsed to. #}
+  {% if blogCategories.currentCategorySlug == "default" or blogCategories.currentCategorySlug == "" %}
+    <h3 style="margin-top: -1rem; margin-bottom: -1rem">All posts</h3>
+  {% else %}
+    <h3 style="margin-top: -1rem; margin-bottom: -1rem">Posts from category: {{ blogCategories.currentCategorySlug|capitalize }}</h3>
+  {% endif %}
 
   {% partial "pagination" %}
 
