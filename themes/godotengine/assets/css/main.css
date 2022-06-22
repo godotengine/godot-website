@@ -42,6 +42,10 @@
   --code-background-color: #dcdfe2;
   --codeblock-background-color: #282b2e;
   --codeblock-color: #e0e2e4;
+
+  --teams-odd-color: rgba(160, 160, 160, 0.15);
+  --teams-even-color: rgba(160, 160, 160, 0.05);
+  --teams-subteams-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-logo.dark-logo {
@@ -76,7 +80,7 @@
     --primary-color-text: #d4edff;
     --primary-color-text-hl: white;
     --primary-color-text-title: white;
-    --accent-color: #f57389;
+    --accent-color: #5b5491;
 
     --link-color: hsl(200, 60%, 70%);
     --link-underline-color: hsla(200, 60%, 70%, 0.3);
@@ -100,6 +104,10 @@
     --code-background-color: #333639;
     --codeblock-background-color: #333639;
     --codeblock-color: hsla(0, 0%, 100%, 0.9);
+
+    --teams-odd-color: rgba(120, 120, 120, 0.15);
+    --teams-even-color: rgba(120, 120, 120, 0.05);
+    --teams-subteams-color: rgba(0, 0, 0, 0.2);
   }
 
   /* Use logo with white text for dark navbar. */
@@ -1035,10 +1043,34 @@ pre > code {
   margin-top: 2rem;
 }
 
+.teams-team-section {
+  background-color: var(--teams-odd-color);
+  padding: 20px 16px;
+}
+.teams-team-section:nth-of-type(2n) {
+  background-color: var(--teams-even-color);
+}
+.teams-team-section + .teams-team-section {
+  margin-top: 8px;
+}
+
+.teams-team-section > h4 {
+  margin-top: 0;
+}
+
+.teams-subteams {
+  background-color: var(--teams-subteams-color);
+  border-left: 6px solid var(--accent-color);
+  padding: 4px 10px;
+  margin-top: 30px;
+  width: 100%;
+}
+
 .teams-subteam-name {
   font-weight: 600;
   padding: 6px 18px 6px 0;
   text-align: left;
+  width: 15%;
 }
 
 .teams-subteam-leader:before {
