@@ -1034,3 +1034,16 @@ pre > code {
   opacity: 0.75;
   margin-top: 2rem;
 }
+
+.teams-subteam-name {
+  font-weight: 600;
+  padding: 6px 18px 6px 0;
+  text-align: left;
+}
+
+.teams-subteam-leader:before {
+  content: "⭐ ";
+}
+.teams-subteam-leader {
+  font-weight: 700;
+}
