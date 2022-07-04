@@ -361,6 +361,14 @@ function onStart() {
         ],
       ],
     ],
+    'Taiwan' => [
+      [
+        'name' => 'Godot Engine Taiwan',
+        'links' => [
+          ['title' => 'Discord', 'url' => 'https://discord.gg/hSG6MbmTNd'],
+        ],
+      ],
+    ],
     'Turkey' => [
       [
         'name' => 'Godot Engine Türkiye',
@@ -406,6 +414,7 @@ function onStart() {
   const points = {{ userGroups | json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_UNESCAPED_UNICODE')) | raw }};
   const countryCoordinates = {
     // Full country name: [latitude, longitude]
+    // Use <https://latitude.to/> to find GPS coordinates.
     'Algeria': [28.00003, 2.99998],
     'Argentina': [-38.4192641, -63.5989206],
     'Brazil': [-14.240073, -53.180502],
@@ -434,6 +443,7 @@ function onStart() {
     'South Korea': [36.638392, 127.6961188],
     'Spain': [40.2085, -3.713],
     'Sweden': [64.964875, 17.675409],
+    'Taiwan': [23.44265, 120.50237],
     'Turkey': [39.908606, 32.784806],
     'United States': [39.78373, -100.44588],
   }
