@@ -4,26 +4,8 @@ networks:
   godotengine-org--network: ~
 
 services:
-  php:
-    build:
-      context: ./php
-      args:
-        # Fallback version is the one we deploy on the website.
-        october_version: "${OCTOBER_VERSION:-v1.0.469}"
-    container_name: "godotengine-org--php"
-    depends_on:
-      - mariadb
-    networks:
-      - godotengine-org--network
-    restart: unless-stopped
-    ports:
-      - "8080:80"
-    volumes:
-      - ../plugins:/var/www/html/plugins
-      - ../themes/godotengine:/var/www/html/themes/godotengine
-
   mariadb:
-    image: mariadb
+    image: mariadb:10.8
     container_name: "godotengine-org--mariadb"
     networks:
       - godotengine-org--network
@@ -35,3 +17,20 @@ services:
     volumes:
       - ./mariadb/storage:/var/lib/mysql
       - ./mariadb/init:/docker-entrypoint-initdb.d
+
+  php:
+    build:
+      context: ./php
+      args:
+        # Fallback version is the one we deploy on the website.
+        october_version: "${OCTOBER_VERSION:-v1.0.474}"
+    container_name: "godotengine-org--php"
+    depends_on:
+      - mariadb
+    networks:
+      - godotengine-org--network
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ../themes/godotengine:/var/www/html/themes/godotengine

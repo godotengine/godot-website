@@ -1,39 +1,52 @@
-FROM php:apache
+# Pin Debian 11 (Bullseye) and PHP 7.4.x.
+FROM php:7.4-apache-bullseye
 
-# Settings
+# Configure working environment.
 WORKDIR /var/www/html
-ENV COMPOSER_ALLOW_SUPERUSER=1
-
-# Install server dependencies
+# Install additional server dependencies.
 RUN apt-get update &&\
-    apt-get install -y git unzip vim zlib1g-dev libzip-dev libpng-dev
+    apt-get install -y git unzip vim nano mc zlib1g-dev libzip-dev libpng-dev netcat
 
-# Install PHP extensions
+
+# Configure PHP installation.
+
+# Install additional PHP extensions.
 RUN docker-php-ext-install mysqli pdo pdo_mysql zip gd
-
-# Enable PHP modules
+# Enable required PHP modules.
 RUN a2enmod rewrite
 
-# Install composer
-RUN curl -sS https://getcomposer.org/installer -o composer-setup.php &&\
-    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
-# Install OctoberCMS
+# Install Composer 2.
+
+# Disables warnings when working as superuser.
+ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN cd /opt &&\
+    # Download the installer and check for its integrity.
+    curl -sSL https://getcomposer.org/installer > composer-setup.php &&\
+    curl -sSL https://composer.github.io/installer.sha384sum > composer-setup.sha384sum &&\
+    sha384sum --check composer-setup.sha384sum &&\
+    # Then run it, aliasing it as just `composer`.
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer &&\
+    # Remove temporary files.
+    rm /opt/composer-setup.php /opt/composer-setup.sha384sum
+
+
+# Install OctoberCMS and update configuration.
+
 ARG october_version
-RUN echo "Installing OctoberCMS version: ${october_version}" &&\
-    git init . &&\
-    git remote add origin https://github.com/octobercms/october.git &&\
-    git fetch origin &&\
-    git checkout ${october_version} -b october-${october_version} &&\
-    composer install -v
+# Explicitly allow all plugins to run scripts during installation.
+RUN composer config -g allow-plugins true
+RUN cd /var/www/html &&\
+    composer create-project october/october . "${october_version}" --no-dev
+# Override default configuration (with backup).
+RUN mv ./config/cms.php ./config/cms.php.orig &&\
+    mv ./config/database.php ./config/database.php.orig
+COPY config/cms.php config/database.php /var/www/html/config/
 
-# Config
-RUN sed -i "s/'host'      => 'localhost'/'host'      => 'mariadb'/g" config/database.php
-RUN sed -i "s/'database'  => 'database'/'database'  => 'october'/g" config/database.php
-RUN sed -i "s/'username'  => 'root'/'username'  => 'godot'/g" config/database.php
-RUN sed -i "s/'password'  => ''/'password'  => 'godot'/g" config/database.php
+# Copy startup and setup scripts.
+COPY init/* /usr/local/bin/
+RUN chmod -R +x /usr/local/bin
 
-RUN sed -i "s/'activeTheme' => 'demo'/'activeTheme' => 'godotengine'/g" config/cms.php
 
-# Set permissions
-RUN chown www-data:www-data -R .
+# Override container's entrypoint to inject first-time setup.
+ENTRYPOINT docker-entrypoint.sh
