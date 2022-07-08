@@ -62,10 +62,10 @@ docker-compose -p "godot-website" up --build -d --force-recreate
 ```
 
 The script will take a couple of minutes to run the first time. After the
-build is done the containers will automatically start and perform their
+build is done, the containers will automatically start and perform their
 first time setup. Check the logs of the `godotengine-org--php` container,
 as it takes more time to finish. You will see the following line in the
-logs when it is done:
+logs when it's done:
 
 > Godot Website is READY to use!
 
@@ -86,7 +86,7 @@ docker exec -it godotengine-org--[php|mariadb] /bin/bash
 ```
 
 There are several shell scripts that come with the project, that may be useful
-when developing (assuming you're running a Unix-based system):
+when developing (assuming you're running Linux or macOS):
 
 - `./docker/php/bash.sh` starts a bash session with the PHP container.
 - `./docker/php/install-plugin.sh` is used to install additional CMS plugins with `artisan`.
