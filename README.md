@@ -36,13 +36,13 @@ This project requires the following stack:
 - MySQL/MariaDB
 - OctoberCMS/WinterCMS v1.0.xxx
 
-There are also some linting tools that can be run locally that require Node.JS.
+There are also some linting tools that can be run locally that require Node.js.
 
 This project comes with a [Docker](https://docker.com) setup that can be used to quickly
-create a network of compatible containers. Using this setup you can have a local copy of
-the project, sans the production database. For the development purposes you don't need
+create a network of compatible containers. Using this setup, you can have a local copy of
+the project, without the production database. For development purposes, you don't need
 that database, as the only thing that is specific to production is blog posts, which can
-be easily recreated, if required.
+be easily recreated if required.
 
 ### Local setup
 
@@ -55,7 +55,7 @@ we recommend using the provided Docker setup.
   - Every `.sql` and `.sh` file from that directory will be automatically executed when building the container.
 - Using a terminal, or another command-line environment, go to the `./docker` folder and execute the following command.
   - You can replace `"godot-website"` with anything else to help you identify this project in your Docker manager.
-  - In the future you can use the `./docker/restart.sh` script to rebuild containers.
+  - In the future, you can use the `./docker/restart.sh` script to rebuild containers.
 
 ```
 docker-compose -p "godot-website" up --build -d --force-recreate
