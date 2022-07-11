@@ -4,8 +4,10 @@ This repository contains the theme used by the Godot Engine's OctoberCMS/WinterC
 instance. The theme describes both the styling of the website and the components
 of its layouts, as well as some of its content.
 
-- [OctoberCMS](https://github.com/octobercms/october) is the original CMS platform of choice.
-- [WinterCMS](https://github.com/wintercms/winter) is the current CMS platform, a fork of October with more active development.
+- [OctoberCMS](https://github.com/octobercms/october) is the original CMS platform
+  of choice.
+- [WinterCMS](https://github.com/wintercms/winter) is the current CMS platform, a fork
+  of October with more active development.
 
 _WinterCMS_ is compatible with _OctoberCMS_, and uses the same plugin system. This is
 at least true for the version of the project that we use.
@@ -14,6 +16,15 @@ This repository also contains a Docker setup to be used by contributors. It
 is not used for production.
 
 ## Contributing
+
+Contributions are always welcome! Godot website, just like Godot engine, is open source.
+
+However, when contributing to the website, it is important to keep in mind that it
+acts as a public face of Godot organization and community. Thus, substantial
+changes must be discussed ahead of time. You don't necessarily need to open a formal
+Godot improvement proposal like you do with engine features, but starting an issue
+on this repository or joining the discussion on the
+[Godot Contributors Chat](https://chat.godotengine.org/channel/website) is a good idea.
 
 ### Browser support
 
@@ -26,7 +37,7 @@ _evergreen browsers_:
 - Opera (latest version and N-1 version)
 - Safari (latest version and N-1 version)
 
-Internet Explorer isn't supported.
+**Internet Explorer isn't supported.**
 
 ### Dependencies
 
@@ -38,63 +49,17 @@ This project requires the following stack:
 
 There are also some linting tools that can be run locally that require Node.js.
 
+### Local development setup
+
 This project comes with a [Docker](https://docker.com) setup that can be used to quickly
-create a network of compatible containers. Using this setup, you can have a local copy of
-the project, without the production database. For development purposes, you don't need
-that database, as the only thing that is specific to production is blog posts, which can
-be easily recreated if required.
+create a network of compatible ready-to-use containers.
 
-### Local setup
+Using this setup, you can have a local copy of the project, without the production database.
+For development purposes, you don't need that database, as the only thing that is specific
+to production is blog posts, which can be easily recreated if required. Everything else
+is located in the `./themes/godotengine` folder, including all static pages and their content.
 
-While it is possible to configure a local environment manually,
-we recommend using the provided Docker setup.
-
-- Clone this repository.
-- If you have a database dump, put it into the `./docker/mariadb/init` folder.
-  - Make sure that your script starts with the line `USE october;` and that the file extension is `.sql`.
-  - Every `.sql` and `.sh` file from that directory will be automatically executed when building the container.
-- Using a terminal, or another command-line environment, go to the `./docker` folder and execute the following command.
-  - You can replace `"godot-website"` with anything else to help you identify this project in your Docker manager.
-  - In the future, you can use the `./docker/restart.sh` script to rebuild containers.
-
-```
-docker-compose -p "godot-website" up --build -d --force-recreate
-```
-
-The script will take a couple of minutes to run the first time. After the
-build is done, the containers will automatically start and perform their
-first time setup. Check the logs of the `godotengine-org--php` container,
-as it takes more time to finish. You will see the following line in the
-logs when it's done:
-
-> Godot Website is READY to use!
-
-See the website at [http://localhost:8080](http://localhost:8080). The control
-panel is located at [http://localhost:8080/backend](http://localhost:8080/backend).
-The default admin account is `admin/admin`.
-
-### Interfacing with Docker containers
-
-You can use the standard syntax to either execute a shell script or connect
-to the running container:
-
-```
-# Execute shell command.
-docker exec -it godotengine-org--[php|mariadb] [command]
-# Connect to a remote shell.
-docker exec -it godotengine-org--[php|mariadb] /bin/bash
-```
-
-There are several shell scripts that come with the project, that may be useful
-when developing (assuming you're running Linux or macOS):
-
-- `./docker/php/bash.sh` starts a bash session with the PHP container.
-- `./docker/php/install-plugin.sh` is used to install additional CMS plugins with `artisan`.
-- `./docker/php/log.sh` is used to access logs of the PHP container.
-
-- `./docker/mariadb/bash.sh` starts a bash session with the MariaDB container.
-- `./docker/mariadb/log.sh` is used to access logs of the MariaDB container.
-- `./docker/mariadb/mysql.sh` starts a MySQL shell session in the MariaDB container.
+To start contributing, please follow this [Local development setup](DEVELOPMENT_SETUP.md) guide.
 
 ### Syntax highlighting
 
