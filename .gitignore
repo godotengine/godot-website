@@ -1,6 +1,7 @@
 # Exclude everything by default (this is a CMS!), and whitelist the safe stuff
 /*
 !/README.md
+!/DEVELOPMENT_SETUP.md
 !/ISSUE_TEMPLATE.md
 !/LICENSE.txt
 
