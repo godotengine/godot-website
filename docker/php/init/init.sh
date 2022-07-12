@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Only do this once.
 CONTAINER_ALREADY_STARTED="/tmp/CONTAINER_ALREADY_STARTED"
