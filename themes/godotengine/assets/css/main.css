@@ -311,7 +311,6 @@ h4 {
 
 header {
   /* Show on top of GodotCon banner (if any). */
-  position: relative;
   z-index: 2;
 
   width: 100vw;
