@@ -379,6 +379,15 @@ postPage = "{{ :slug }}"
   </div>
 </section>
 
+<script>
+  // Parallax effect on the hero image
+  window.addEventListener('scroll', function () {
+    let hero = document.querySelector('.main-image');
+    let bgPos = getComputedStyle(hero).backgroundPosition.split(' ');
+    hero.style.backgroundPosition = bgPos[0] + ' ' + (window.scrollY * 0.5) + 'px';
+  });
+</script>
+
 {% partial "footer" %}
 
 </html>

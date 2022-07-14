@@ -51,6 +51,10 @@
   --teams-subteams-color: rgba(255, 255, 255, 0.4);
 }
 
+html {
+  scroll-padding-top: 64px; /* Navbar height */
+}
+
 .nav-logo.dark-logo {
   display: none;
 }
@@ -315,7 +319,9 @@ header {
   background-color: var(--navbar-background-color);
   display: flex;
   align-items: center;
-  box-shadow: var(--base-shadow);
+  position: fixed;
+  top: 0px;
+  box-shadow: 0 0 40px -10px #0000007d;
 }
 
 header > div.container {
@@ -324,6 +330,10 @@ header > div.container {
 
 header .container {
   overflow: initial;
+}
+
+.header-gap {
+  height: 64px;
 }
 
 .only-on-mobile {
@@ -563,10 +573,10 @@ article .content img {
   padding: 0px;
   margin: 0px;
   background-image: url("../home/background.jpg");
-  background-position: top;
+  background-position: 50% 0;
   background-size: cover;
   background-blend-mode: darken;
-  height: 600px;
+  height: 500px;
   max-height: 50vh;
   /* For `.main-image-text`. */
   position: relative;
