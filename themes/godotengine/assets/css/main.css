@@ -46,6 +46,10 @@
   --codeblock-background-color: #282b2e;
   --codeblock-color: #e0e2e4;
 
+  --platform-code-background-color: #e5ebf1;
+
+  --digital-store-background-color: #2d4c74;
+
   --teams-odd-color: rgba(160, 160, 160, 0.15);
   --teams-even-color: rgba(160, 160, 160, 0.05);
   --teams-subteams-color: rgba(255, 255, 255, 0.4);
@@ -110,6 +114,10 @@
     --code-background-color: #333639;
     --codeblock-background-color: #333639;
     --codeblock-color: hsla(0, 0%, 100%, 0.9);
+
+    --platform-code-background-color: #282b2e;
+
+    --digital-store-background-color: #2d4c74;
 
     --teams-odd-color: rgba(120, 120, 120, 0.15);
     --teams-even-color: rgba(120, 120, 120, 0.05);
