@@ -51,22 +51,27 @@ description = "Download layout"
   .digital-stores-download {
     display: flex;
     align-items: center;
-    background-color: #2d4c74;
     margin-top: 16px;
     color: var(--dark-color-text-hl);
     font-size: 16px;
     text-decoration: none;
-    padding: 8px 16px;
   }
 
-  .digital-stores-download strong {
-    color: var(--dark-color-text-hl);
+  .digital-stores-logo {
+    background-color: var(--digital-store-background-color);
+    padding: 8px 8px;
+  }
+
+  .digital-stores-logo img {
+    vertical-align: middle;
+  }
+
+  .digital-stores-name {
+    color: var(--base-color-text-hl);
+    font-size: 13px;
     font-weight: 600;
-    margin-left: 8px;
-  }
-
-  .digital-stores-download img {
-    margin-right: 16px;
+    text-transform: uppercase;
+    padding: 8px 16px;
   }
 
   .version-overview {
@@ -82,10 +87,11 @@ description = "Download layout"
     margin-bottom: 0px;
   }
 
-  .version-overview h2 > em {
+  .version-overview .version-link {
     color: var(--primary-color);
     font-style: normal;
     margin-left: 16px;
+    text-decoration: none;
   }
 
   .version-overview .date {
@@ -94,6 +100,10 @@ description = "Download layout"
 
   .version-overview img {
     filter: drop-shadow(var(--base-shadow));
+  }
+
+  .platform-details pre {
+    background-color: var(--platform-code-background-color);
   }
 
   .extras .card {
@@ -128,7 +138,7 @@ description = "Download layout"
   <div class="flex responsive eqsize">
     <div class="version-overview">
       <img src="{{ 'assets/download/godot_logo.svg' | theme }}" alt="" width="200" height="200" alt="">
-      <h2>Godot <em>{{stable_version}}</em></h2>
+      <h2>Godot <a class="version-link" href="#links">{{stable_version}}</a></h2>
       <i class="date">released {{ stable_version_date | date('j F Y') }}</i>
 
       <div style="margin-top:32px; line-height: 1.6; font-size: 85%">
@@ -140,17 +150,21 @@ description = "Download layout"
       </div>
       <div class="digital-stores">
         <a class="digital-stores-download card" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
-          <img src="{{ 'assets/download/itch_logo.svg' | theme }}" width="28" height="28" alt="">
-          <strong>itch.io</strong>
+          <div class="digital-stores-logo">
+            <img src="{{ 'assets/download/itch_logo.svg' | theme }}" width="28" height="28" alt="">
+          </div>
+          <div class="digital-stores-name">itch.io</div>
         </a>
         <a class="digital-stores-download card" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
-          <img src="{{ 'assets/download/steam_logo.svg' | theme }}" width="28" height="28" alt="">
-          <strong>Steam</strong>
+          <div class="digital-stores-logo">
+            <img src="{{ 'assets/download/steam_logo.svg' | theme }}" width="28" height="28" alt="">
+          </div>
+          <div class="digital-stores-name">Steam</div>
         </a>
       </div>
     </div>
 
-    <div>
+    <div id="links" class="platform-details">
       <div class="card">
         <div class="base-padding">
           <h4>Standard version</h4>
