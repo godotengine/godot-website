@@ -4,6 +4,7 @@
 !/DEVELOPMENT_SETUP.md
 !/ISSUE_TEMPLATE.md
 !/LICENSE.txt
+!.well-known/
 
 # Vim
 *.swp
@@ -22,10 +23,10 @@ node_modules
 !/themes
 
 # Docker
-!/docker
-!/docker/mariadb/init/000-setup.sql
 /docker/mariadb/init/*.sql
 /docker/mariadb/storage
+!/docker
+!/docker/mariadb/init/000-setup.sql
 
 # Continuous integration
 !.github/
@@ -35,3 +36,7 @@ node_modules
 !.prettierignore
 !package-lock.json
 !package.json
+
+# OS specific
+.DS_Store
+docker/.DS_Store
