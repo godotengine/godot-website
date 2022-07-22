@@ -53,6 +53,8 @@
   --teams-odd-color: rgba(160, 160, 160, 0.15);
   --teams-even-color: rgba(160, 160, 160, 0.05);
   --teams-subteams-color: rgba(255, 255, 255, 0.4);
+
+  --table-divider-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo.dark-logo {
@@ -122,6 +124,8 @@
     --teams-odd-color: rgba(120, 120, 120, 0.15);
     --teams-even-color: rgba(120, 120, 120, 0.05);
     --teams-subteams-color: rgba(0, 0, 0, 0.2);
+
+    --table-divider-color: rgba(255, 255, 255, 0.1);
   }
 
   /* Use logo with white text for dark navbar. */
@@ -274,6 +278,27 @@ h4 {
   max-width: 1200px;
   margin: auto;
   overflow: visible;
+}
+
+.container-text {
+  width: 100%;
+  padding: 0 24px;
+  max-width: 800px;
+  margin: auto;
+  overflow: visible;
+}
+
+.container-text h2 {
+  margin-top: 80px;
+}
+
+.container-text h3 {
+  margin-top: 60px;
+}
+
+.container-text h4 {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .flex {
@@ -1067,7 +1092,9 @@ pre > code {
 .teams-team-section {
   background-color: var(--teams-odd-color);
   padding: 20px 16px;
+  margin: 40px 0;
 }
+
 .teams-team-section:nth-of-type(2n) {
   background-color: var(--teams-even-color);
 }
@@ -1085,18 +1112,44 @@ pre > code {
   padding: 4px 10px;
   margin-top: 30px;
   width: 100%;
+  table-layout: fixed;
+}
+
+.teams-subteams th {
+  padding: 16px;
+  border-right: 1px dashed var(--table-divider-color);
+}
+
+.teams-subteams td {
+  padding: 16px 0 16px 12px;
+}
+
+.teams-subteams th,
+.teams-subteams td {
+  border-bottom: 1px dashed var(--table-divider-color);
+  border-collapse: collapse;
+}
+
+.teams-subteams tr:last-of-type td,
+.teams-subteams tr:last-of-type th {
+  border-bottom: 0;
 }
 
 .teams-subteam-name {
-  font-weight: 600;
-  padding: 6px 18px 6px 0;
   text-align: left;
-  width: 15%;
+  width: 25%;
 }
 
 .teams-subteam-leader:before {
   content: "⭐ ";
 }
+
 .teams-subteam-leader {
   font-weight: 700;
+}
+
+.teams-subteam-leader,
+.teams-subteam-members {
+  font-size: 16px;
+  line-height: 1.6;
 }
