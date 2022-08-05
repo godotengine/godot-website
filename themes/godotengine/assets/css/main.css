@@ -805,10 +805,11 @@ a.card {
   justify-content: flex-end;
 }
 .tabs > * {
-  padding: 16px 32px 16px 32px;
+  padding: 16px 24px 16px 24px;
   text-decoration: none;
   text-align: center;
 }
+
 .tabs a {
   color: inherit;
   white-space: nowrap;
