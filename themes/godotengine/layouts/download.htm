@@ -123,11 +123,12 @@ description = "Download layout"
     <div class="main">
       <h1 class="intro-title">Download</h1>
     </div>
-    <div class="tabs">
+    <div class="tabs tabs-download">
       <a href="/download/linux" class="title-font {% if platform == 'linux' %} active {% endif %}">Linux</a>
       <a href="/download/osx" class="title-font {% if platform == 'osx' %} active {% endif %}">macOS</a>
       <a href="/download/windows" class="title-font {% if platform == 'windows' %} active {% endif %}">Windows</a>
       <a href="/download/server" class="title-font {% if platform == 'server' %} active {% endif %}">Linux Server</a>
+      <a href="/download/android" class="title-font {% if platform == 'android' %} active {% endif %}">Android</a>
       <a href="https://editor.godotengine.org/releases/latest/" class="title-font">Web Editor</a>
     </div>
   </div>
@@ -178,9 +179,11 @@ description = "Download layout"
           <h4>Requirements</h4>
           <ul>
             <li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
+            {% if platform != 'android' %}
             <li>
               <strong>For the Mono version:</strong> <a href="https://dotnet.microsoft.com/download">.NET SDK</a> or the <a href="https://www.mono-project.com/download/stable/">Mono SDK</a>
             </li>
+            {% endif %}
           </ul>
         </div>
 
@@ -188,7 +191,9 @@ description = "Download layout"
         <div class="base-padding">
           <h4>Instructions</h4>
           <ul>
+            {% if platform != 'android' %}
             <li>Extract and run. Godot is self-contained and does not require installation.</li>
+            {% endif %}
             <li>
               If you run into an issue, check the
               <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a>
