@@ -282,6 +282,7 @@ h4 {
 
 .container-text {
   width: 100%;
+  box-sizing: border-box;
   padding: 0 24px;
   max-width: 800px;
   margin: auto;
