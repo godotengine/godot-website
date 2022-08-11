@@ -5,12 +5,13 @@ FROM php:7.4-apache-bullseye
 WORKDIR /var/www/html
 # Install additional server dependencies.
 RUN apt-get update &&\
-    apt-get install -y git unzip vim nano mc zlib1g-dev libzip-dev libpng-dev netcat
+    apt-get install -y git unzip vim nano mc zlib1g-dev libzip-dev libpng-dev libjpeg-dev netcat
 
 
 # Configure PHP installation.
 
 # Install additional PHP extensions.
+RUN docker-php-ext-configure gd --with-jpeg
 RUN docker-php-ext-install mysqli pdo pdo_mysql zip gd
 # Enable required PHP modules.
 RUN a2enmod rewrite
