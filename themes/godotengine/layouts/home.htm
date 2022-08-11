@@ -54,28 +54,46 @@ postPage = "{{ :slug }}"
     color: var(--dark-color-text-title);
   }
 
+  #sponsors .flex {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   #sponsors .sponsor {
-    overflow: auto;
+    background-color: var(--sponsor-background-color);
+    border: 14px solid var(--sponsor-background-color);
+    border-radius: 8px 8px;
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 80px;
     box-sizing: border-box;
     margin-bottom: 8px;
     margin-left: 8px;
+    overflow: auto;
+    opacity: 0.85;
+    transition: opacity 0.2s;
   }
 
-  #sponsors .platinum .sponsor {
-    height: 100px;
+  #sponsors .sponsor:hover {
+    filter: brightness(105%);
+    opacity: 1.0;
   }
 
   #sponsors img {
+    mix-blend-mode: multiply;
     width: inherit;
     height: 100%;
   }
 
-  #sponsors .flex {
-    justify-content: center;
-    flex-wrap: wrap;
+  #sponsors .gold .sponsor {
+    background-color: var(--sponsor-gold-background-color);
+    border-color: var(--sponsor-gold-background-color);
+  }
+
+  #sponsors .platinum .sponsor {
+    background-color: var(--sponsor-platinum-background-color);
+    border-color: var(--sponsor-platinum-background-color);
+    height: 100px;
   }
 
   .feature, #highlight {
@@ -424,10 +442,10 @@ Make sure to update this gradient when the home background image is changed.
     <h2 class="text-center">Sponsored by</h2>
 
     <div class="platinum flex">
-      <a class="sponsor card base-padding" href="https://www.gamblify.com/" target="_blank" rel="noopener">
+      <a class="sponsor card" href="https://www.gamblify.com/" target="_blank" rel="noopener">
         <img src="{{ 'assets/home/sponsors/gamblify.png' | theme }}" width="312" height="66" alt="Gamblify" loading="lazy">
       </a>
-      <a class="sponsor card base-padding" href="http://spiffcode.com/" target="_blank" rel="noopener">
+      <a class="sponsor card" href="http://spiffcode.com/" target="_blank" rel="noopener">
         <img src="{{ 'assets/home/sponsors/spiffcode.png' | theme }}" width="291" height="66" alt="Spiffcode" loading="lazy">
       </a>
     </div>

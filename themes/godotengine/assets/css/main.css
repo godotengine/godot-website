@@ -46,6 +46,10 @@
   --codeblock-background-color: #282b2e;
   --codeblock-color: #e0e2e4;
 
+  --sponsor-background-color: #dcdcdc;
+  --sponsor-platinum-background-color: #cfdbe4;
+  --sponsor-gold-background-color: #e0dfd4;
+
   --platform-code-background-color: #e5ebf1;
 
   --digital-store-background-color: #2d4c74;
@@ -116,6 +120,10 @@
     --code-background-color: #333639;
     --codeblock-background-color: #333639;
     --codeblock-color: hsla(0, 0%, 100%, 0.9);
+
+    --sponsor-background-color: #ffffff;
+    --sponsor-platinum-background-color: #e2ebfa;
+    --sponsor-gold-background-color: #efece2;
 
     --platform-code-background-color: #282b2e;
 
