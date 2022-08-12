@@ -252,10 +252,6 @@ a.btn,
   margin-top: 0px;
 }
 
-.base-color-text {
-  color: var(--base-color-text);
-}
-
 h1 {
   font-size: 42px;
 }

@@ -2,7 +2,7 @@ description = "home layout"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 4
+postsPerPage = 7
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "home"
@@ -101,9 +101,43 @@ postPage = "{{ :slug }}"
   }
 
   #highlight {
-    min-height: 250px;
     background-size: cover;
     background-position: center;
+    background-color: var(--base-color);
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  #highlight .highlight-cover {
+    border-radius: 4px 0 0 0;
+    background-position: center;
+    height: 100%;
+    min-height: 250px;
+  }
+
+  #highlight .highlight-details {
+    border-radius: 0 0 0 4px;
+  }
+
+  #highlight .highlight-title {
+    text-decoration: underline;
+    text-decoration-color: var(--link-underline-color);
+    text-decoration-thickness: 0.125rem;
+  }
+
+  #news .news-list {
+    padding: 0 20px;
+  }
+
+  #news .news-shortitem {
+    color: var(--base-color-text);
+    padding: 2px 2px;
+  }
+
+  #news .news-shortitem:hover {
+    color: var(--base-color-text-hl);
   }
 
   .feature-link {
@@ -137,14 +171,6 @@ postPage = "{{ :slug }}"
     aspect-ratio: 3/2;
     object-fit: cover;
     object-position: top center;
-  }
-
-  #highlight .dark {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--transparent-cover-darker);
   }
 
   .feature {
@@ -189,6 +215,15 @@ postPage = "{{ :slug }}"
 
     .features-grid {
       grid-template-columns: 1fr;
+    }
+
+    #highlight .highlight-cover {
+      background-size: auto 100%;
+      border-radius: 4px 4px 0 0;
+    }
+
+    #highlight .highlight-details {
+      border-radius: 0;
     }
   }
 </style>
@@ -236,27 +271,36 @@ Make sure to update this gradient when the home background image is changed.
 </section>
 
 <section id="news_and_highlights" class="container padded">
-  <div class="flex eqsize responsive card">
+  <div class="flex eqsize responsive card" style="border-radius: 4px;">
 
-    <a id="highlight" style="background-image: url({{ posts[0].featured_images[0].path }}); background-color: white" href="{{ 'article' | page({ slug: posts[0].slug }) }}">
-      <div class="dark base-padding">
-        <h4 class="no-margin">{{ posts[0].title }}</h4>
-        <p class="hide-on-mobile">{{ str_limit(posts[0].excerpt, 200) | raw }}</p>
+    <a id="highlight" href="{{ 'article' | page({ slug: posts[0].slug }) }}">
+      <div
+        class="highlight-cover"
+        style="background-image: url({{ posts[0].featured_images[0].path }});"
+        title="{{ posts[0].featured_images[0].title }}"
+        alt="{{ posts[0].featured_images[0].title }} {{ posts[0].featured_images[0].description }}"
+      ></div>
+      <div class="highlight-details dark base-padding">
+        <h4 class="highlight-title no-margin">{{ posts[0].title }}</h4>
+        <p class="highlight-summary hide-on-mobile">{{ str_limit(posts[0].excerpt, 200) | raw }}</p>
       </div>
     </a>
 
     <div id="news">
-      <h3 class="base-padding no-margin-bottom">News</h3>
-      <hr class="">
-      {% for post in posts %}
-      {% if post != posts[0] %}
-      <a class="base-padding flex base-color-text" href="{{ 'article'|page({ slug: post.slug }) }}">
-        <strong>{{ post.title }}</strong>
-      </a>
-      <hr>
-      {% endif %}
-      {% endfor %}
-      <div class="text-center base-padding"><a href="/news/default/1" class="btn flat no-margin">More</a></div>
+      <h3 class="base-padding no-margin-bottom" style="text-align: center;">News</h3>
+      <div class="news-list">
+        {% for post in posts %}
+        {% if post != posts[0] %}
+        <a class="news-shortitem" href="{{ 'article'|page({ slug: post.slug }) }}">
+          <strong>· {{ post.title }}</strong>
+        </a>
+        <hr>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="base-padding" style="text-align: right;">
+        <a href="/news/default/1" class="btn flat no-margin">More</a>
+      </div>
     </div>
 
   </div>
