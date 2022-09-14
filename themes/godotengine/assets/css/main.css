@@ -65,13 +65,6 @@
   display: none;
 }
 
-.article-search-bar {
-  /* Make the Search button blue instead of green to better match the Godot theme. */
-  /* We need to do this using a CSS filter since it's an iframe. */
-  /* This breaks the text selection color inside the iframe, but it's a minor issue. */
-  filter: hue-rotate(110deg) saturate(80%);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --transparent-cover: rgb(51, 63, 103, 0.4);
@@ -162,11 +155,6 @@
   .dark-desaturate {
     filter: saturate(0%);
   }
-
-  /* Dark theme hack for the DuckDuckGo search iframe. */
-  .article-search-bar {
-    filter: invert(80%) hue-rotate(180deg);
-  }
 }
 
 /* Montserrat Bold */
@@ -222,19 +210,22 @@ body a {
 }
 
 body a,
-a.btn.flat {
+.btn.flat,
+.search-bar-btn:hover {
   /* Use `filter` on all states to prevent the clickable area from changing */
   /* when an image is hovered (see GH-369). */
   filter: brightness(100%);
 }
 
 body a:hover,
-a.btn.flat:hover {
+.btn.flat:hover,
+.search-bar-btn:hover {
   filter: brightness(117.5%);
 }
 
 body a:active,
-a.btn.flat:active {
+.btn.flat:active,
+.search-bar-btn:active {
   filter: brightness(82.5%);
 }
 
@@ -697,7 +688,7 @@ p.small {
   font-weight: bold;
 }
 
-a.btn {
+.btn {
   background-color: var(--button-background-color);
   box-shadow: var(--base-shadow);
   font-size: 18px;
@@ -707,38 +698,38 @@ a.btn {
   font-weight: bold;
 }
 
-a.btn:hover {
+.btn:hover {
   box-shadow: var(--more-shadow);
 }
 
-a.btn.flat {
+.btn.flat {
   box-shadow: none;
   background-color: transparent;
   color: var(--link-color);
   margin: 16px 32px 16px 32px;
 }
 
-a.btn.flat:hover {
+.btn.flat:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
 
-a.btn.flat.btn-white-text {
+.btn.flat.btn-white-text {
   color: hsla(0, 0%, 100%, 0.95);
 }
 
-a.btn.download {
+.btn.download {
   padding: 0px;
   margin-top: 48px;
 }
 
-a.btn.download > .main {
+.btn.download > .main {
   background-color: white;
   color: var(--dark-color);
   display: inline-block;
   padding: 16px 32px 16px 32px;
 }
 
-a.btn.download > .opt {
+.btn.download > .opt {
   background-color: var(--primary-color);
   color: var(--primary-color-text-title);
   display: inline-block;
@@ -858,6 +849,35 @@ pre > code {
 
 #sfc_graphic {
   width: 400px;
+}
+
+.search-bar {
+  display: flex;
+  height: 40px;
+  margin-bottom: 2rem;
+  box-shadow: var(--base-shadow);
+}
+.search-bar input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  line-height: 2;
+  font-size: 18px;
+  border: none;
+  border-right: 1px solid var(--transparent-cover);
+}
+.search-bar .search-bar-btn {
+  cursor: pointer;
+  border: none;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  /* background-color: var(--primary-color); */
+  background-color: hsl(220, 100%, 62.5%);
+  color: var(--primary-color-text-title);
+}
+.search-bar .search-bar-btn img {
+  margin: 8px;
+  filter: invert(100%);
 }
 
 @media (min-width: 1400px) {

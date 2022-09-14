@@ -57,24 +57,15 @@ description = "News layout"
 
 <div class="container">
   {#
-    Add a background to roughly match the iframe's appearance during loading.
-    This makes the pop-in during loading less noticeable.
+    search for articles on duckduckgo.com
   #}
-  <iframe
-    src="https://duckduckgo.com/search.html?site=godotengine.org/article&width=285&prefill=Search articles"
-    frameborder="0"
-    class="article-search-bar"
-    style="
-      background-color: white;
-      box-shadow: 0 0 4px hsla(0, 0%, 0%, 1) inset;
-      border-radius: 3px;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      width: 343px;
-      height: 40px;
-    "
-  ></iframe>
+  <form class="search-bar" method="get" action="https://duckduckgo.com/">
+    <input type="hidden" name="sites" value="godotengine.org/article" />
+    <input type="text" name="q" maxlength="300" placeholder="Search articles" />
+    <button class="btn search-bar-btn" type="submit">
+      <img width="24" height="24" src="{{ ('assets/icons/search.svg') | theme }}" alt="search" title="search" />
+    </button>
+  </form>
 
   <h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
   <div class="tags">
