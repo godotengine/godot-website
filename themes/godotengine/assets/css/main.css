@@ -848,10 +848,12 @@ pre > code {
   height: 40px;
   margin-bottom: 2rem;
   box-shadow: var(--base-shadow);
+  border-radius: 999px;
+  overflow: hidden;
 }
 .search-bar input {
   flex-grow: 1;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   line-height: 2;
   font-size: 18px;
   border: none;
@@ -862,11 +864,11 @@ pre > code {
 .search-bar .search-bar-btn {
   cursor: pointer;
   border: none;
-  width: 40px;
+  width: 3rem;
   padding: 0;
   margin: 0;
-  /* background-color: var(--primary-color); */
-  background-color: hsl(220, 100%, 62.5%);
+  /* background-color: hsl(220, 100%, 62.5%); */
+  background-color: var(--primary-color);
   color: var(--primary-color-text-title);
 }
 .search-bar .search-bar-btn img {
