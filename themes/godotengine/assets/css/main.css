@@ -681,14 +681,6 @@ p.small {
 }
 
 .btn {
-  box-shadow: var(--base-shadow);
-  font-size: 18px;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn {
   background-color: var(--button-background-color);
   box-shadow: var(--base-shadow);
   font-size: 18px;
@@ -864,6 +856,8 @@ pre > code {
   font-size: 18px;
   border: none;
   border-right: 1px solid var(--transparent-cover);
+  background-color: var(--card-background-color);
+  color: var(--base-color-text);
 }
 .search-bar .search-bar-btn {
   cursor: pointer;
