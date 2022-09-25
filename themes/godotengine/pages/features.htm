@@ -13,8 +13,10 @@ is_hidden = 0
 	}
 
 	section img {
+    display: block;
 	  width: 100%;
 	  height: auto;
+    border-radius: 0.5rem;
 	}
 
 	h2 {
@@ -38,7 +40,7 @@ is_hidden = 0
 <section id="design" style="margin-top: 24px">
 	<div class="container flex eqsize">
 	  <div>
-		<img src="{{ 'assets/features/design_graphic.svg' | theme }}" width="500" height="600" alt="">
+		  <img src="{{ 'assets/features/design_graphic.svg' | theme }}" width="500" height="600" alt="">
 	  </div>
 
 	  <div class="title-padded">
@@ -56,18 +58,18 @@ is_hidden = 0
 		</p>
 	  </div>
 	</div>
-  </section>
+</section>
 
-  <section id="features_3d" class="container sm-full">
+<section id="features_3d" class="container sm-full">
 	<a href="{{ 'assets/features/3dgames.jpg' | theme }}" class="lightbox" data-group="features">
 	  <img
-		src="{{ 'assets/features/3dgames.jpg' | theme }}"
-		width="1587"
-		height="893"
-		alt="Screenshot of Infinistate by fracteed"
-		style="background: linear-gradient(90deg, #8e3019 23%, #381d15 68%, #150f0e 80%, #150f0e 94%)"
-		loading="lazy"
-	  >
+      src="{{ 'assets/features/3dgames.jpg' | theme }}"
+      width="1587"
+      height="893"
+      alt="Screenshot of Infinistate by fracteed"
+		  style="background: linear-gradient(90deg, #8e3019 23%, #381d15 68%, #150f0e 80%, #150f0e 94%)"
+      loading="lazy"
+	  />
 	</a>
 	<div class="title-padded base-padding">
 	  <h2>Gorgeous 3D graphics</h2>
@@ -88,18 +90,18 @@ is_hidden = 0
 		<li><strong>Easy-to-use shader language</strong> based on GLSL, with built-in editor and code completion.</li>
 	  </ul>
 	</div>
-  </section>
+</section>
 
-  <section id="features_2d" class="container sm-full">
+<section id="features_2d" class="container sm-full">
 	<a href="{{ 'assets/features/2dgames.jpg' | theme }}" class="lightbox" data-group="features">
 	  <img
-		src="{{ 'assets/features/2dgames.jpg' | theme }}"
-		width="1186"
-		height="696"
-		alt="Screenshot of Slyway by Guaranapps"
-		style="background: linear-gradient(90deg, #4b5a6b 36%, #54687e 54%, #54677c 90%, #3f649e 95%)"
-		loading="lazy"
-	  >
+      src="{{ 'assets/features/2dgames.jpg' | theme }}"
+      width="1186"
+      height="696"
+      alt="Screenshot of Slyway by Guaranapps"
+		  style="background: linear-gradient(90deg, #4b5a6b 36%, #54687e 54%, #54677c 90%, #3f649e 95%)"
+      loading="lazy"
+    />
 	</a>
 	<div class="title-padded base-padding">
 	  <h2>Create 2D games with ease</h2>
@@ -108,68 +110,68 @@ is_hidden = 0
 
 	<div class="flex eqsize responsive base-padding">
 	  <ul>
-		<li><strong>Work in pixels as your units</strong>, but scale to any screen size and aspect ratio.</li>
-		<li><strong>Tile map editor</strong> with auto-tiling, rotation, custom grid shapes and multiple layers.</li>
-		<li><strong>2D lights and normal maps</strong> to give your 2D games a more realistic look. </li>
+      <li><strong>Work in pixels as your units</strong>, but scale to any screen size and aspect ratio.</li>
+      <li><strong>Tile map editor</strong> with auto-tiling, rotation, custom grid shapes and multiple layers.</li>
+      <li><strong>2D lights and normal maps</strong> to give your 2D games a more realistic look. </li>
 	  </ul>
 	  <ul>
-		<li><strong>Animate your games</strong> using cut-out or sprite-based animation. </li>
-		<li><strong>Flexible kinematic controller</strong> for collision detection without physics.</li>
+      <li><strong>Animate your games</strong> using cut-out or sprite-based animation. </li>
+      <li><strong>Flexible kinematic controller</strong> for collision detection without physics.</li>
 	  </ul>
 	</div>
-  </section>
+</section>
 
-  <section id="animation" class="container flex eqsize responsive">
+<section id="animation" class="container flex eqsize responsive">
 	<div style="overflow: hidden;">
 	  <a href="{{ 'assets/features/animate.jpg' | theme }}" class="lightbox" data-group="features">
-		<img
-		  src="{{ 'assets/features/animate.jpg' | theme }}"
-		  width="780"
-		  height="420"
-		  alt="Screenshot of Godot's animation editor by ndee85"
-		  style="background: linear-gradient(90deg, #423f4b 33%, #47444f 40%, #47444f 71%, #3c3a46 81%)"
-		  loading="lazy"
-		>
+      <img
+        src="{{ 'assets/features/animate.jpg' | theme }}"
+        width="780"
+        height="420"
+        alt="Screenshot of Godot's animation editor by ndee85"
+		    style="background: linear-gradient(90deg, #423f4b 33%, #47444f 40%, #47444f 71%, #3c3a46 81%)"
+        loading="lazy"
+      />
 	  </a>
 	</div>
 	<div class="base-padding" style="padding-top: 0;">
 	  <h2>Animate everything</h2>
 	  <em>The most flexible animation system.</em>
 	  <ul>
-		<li><strong>Animate literally everything</strong>, from bones and objects to function calls.</li>
-		<li><strong>Use custom transition curves and tweens</strong> to create incredible animations.</li>
-		<li><strong>Helpers to animate 2D rigs</strong>, with skeletons and IK.</li>
-		<li><strong>Efficient optimizer</strong> to pack imported 3D animations.</li>
+      <li><strong>Animate literally everything</strong>, from bones and objects to function calls.</li>
+      <li><strong>Use custom transition curves and tweens</strong> to create incredible animations.</li>
+      <li><strong>Helpers to animate 2D rigs</strong>, with skeletons and IK.</li>
+      <li><strong>Efficient optimizer</strong> to pack imported 3D animations.</li>
 	  </ul>
 	</div>
-  </section>
+</section>
 
-  <div class="flex container responsive eqsize sm-full">
+<div class="flex container responsive eqsize sm-full">
 	<section id="script">
 	  <div class="base-padding">
 		<h2>Script with full freedom</h2>
 		<em>More choices than any other engine.</em>
 		<ul>
 		  <li>
-			<strong>GDScript</strong> Python-like scripting language, designed to make games with zero hassle.
-			<a href="https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html">Learn why our community loves it.</a>
+        <strong>GDScript</strong> Python-like scripting language, designed to make games with zero hassle.
+        <a href="https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html">Learn why our community loves it.</a>
 		  </li>
 		  <li>
-			<strong>
-			  <a href="https://docs.godotengine.org/en/stable/getting_started/scripting/c_sharp/c_sharp_basics.html">Full C# 8.0 support</a>
-			</strong> using Mono.
+        <strong>
+          <a href="https://docs.godotengine.org/en/stable/getting_started/scripting/c_sharp/c_sharp_basics.html">Full C# 8.0 support</a>
+        </strong> using Mono.
 		  </li>
 		  <li>
-			<strong>Full C++ support</strong> without needing to recompile the engine using
-			<a href="https://docs.godotengine.org/en/latest/tutorials/scripting/gdnative/what_is_gdnative.html">GDNative</a>.
+        <strong>Full C++ support</strong> without needing to recompile the engine using
+        <a href="https://docs.godotengine.org/en/latest/tutorials/scripting/gdnative/what_is_gdnative.html">GDNative</a>.
 		  </li>
 		  <li>
-			<strong><a href="https://docs.godotengine.org/en/stable/getting_started/scripting/visual_script/index.html">Visual scripting</a></strong>
-			using blocks and connections.
+        <strong><a href="https://docs.godotengine.org/en/stable/getting_started/scripting/visual_script/index.html">Visual scripting</a></strong>
+        using blocks and connections.
 		  </li>
 		  <li>
-			<strong><a href="https://docs.godotengine.org/en/latest/tutorials/scripting/gdnative/what_is_gdnative.html#supported-languages">Additional languages</a></strong>
-			with community-provided support for Rust, Nim, D and other languages.
+        <strong><a href="https://docs.godotengine.org/en/latest/tutorials/scripting/gdnative/what_is_gdnative.html#supported-languages">Additional languages</a></strong>
+        with community-provided support for Rust, Nim, D and other languages.
 		  </li>
 		  <li><strong>Built-in editor</strong> with syntax highlighting, real-time parser and code completion.</li>
 		  <li><strong>Integrated documentation.</strong> Browse and search the whole API offline, without leaving the editor.</li>
@@ -179,24 +181,24 @@ is_hidden = 0
 
 	<section id="debug">
 	  <div class="base-padding">
-		<h2>Debug &amp; Optimize</h2>
-		<em>
-		  Solve bugs and performance bottlenecks with the
-		  <a href="https://docs.godotengine.org/en/stable/tutorials/debug/overview_of_debugging_tools.html">built-in debugger</a>.
-		</em>
-		<ul>
-		  <li><strong>Explore and modify</strong> your project while it's running, even on mobile devices.</li>
-		  <li><strong>Keeps changes</strong> by default after closing the project.</li>
-		  <li><strong>Built-in profiler</strong> with graph plotting and time seeking.</li>
-		  <li>Video memory debugger.</li>
-		  <li><strong>Error logger</strong> with full stack traces.</li>
-		  <li><strong>Network profiler</strong> with per-node remote call tracking and bandwidth usage estimation.</li>
-		</ul>
+      <h2>Debug &amp; Optimize</h2>
+      <em>
+        Solve bugs and performance bottlenecks with the
+        <a href="https://docs.godotengine.org/en/stable/tutorials/debug/overview_of_debugging_tools.html">built-in debugger</a>.
+      </em>
+      <ul>
+        <li><strong>Explore and modify</strong> your project while it's running, even on mobile devices.</li>
+        <li><strong>Keeps changes</strong> by default after closing the project.</li>
+        <li><strong>Built-in profiler</strong> with graph plotting and time seeking.</li>
+        <li>Video memory debugger.</li>
+        <li><strong>Error logger</strong> with full stack traces.</li>
+        <li><strong>Network profiler</strong> with per-node remote call tracking and bandwidth usage estimation.</li>
+      </ul>
 	  </div>
 	</section>
-  </div>
+</div>
 
-  <div class="flex container responsive eqsize sm-full">
+<div class="flex container responsive eqsize sm-full">
 	<section id="multiplatform-editor">
 	  <div class="base-padding">
 		<h2>Multi-platform editor</h2>
@@ -243,47 +245,46 @@ is_hidden = 0
 	</div>
 	<div style="overflow: hidden;">
 	  <a href="{{ 'assets/features/xrsupport.jpg' | theme }}" class="lightbox" data-group="features">
-		<img
-		  src="{{ 'assets/features/xrsupport.jpg' | theme }}"
-		  width="716"
-		  height="420"
-		  alt="Screenshot of XR support by Mux213"
-		  style="background: linear-gradient(90deg, #50594d 6%, #2b221b 43%, #7d7a77 82%, #84817e 92%)"
-		  loading="lazy"
-		>
+      <img
+        src="{{ 'assets/features/xrsupport.jpg' | theme }}"
+        width="716"
+        height="420"
+        alt="Screenshot of XR support by Mux213"
+		    style="background: linear-gradient(90deg, #50594d 6%, #2b221b 43%, #7d7a77 82%, #84817e 92%)"
+        loading="lazy"
+      />
 	  </a>
 	</div>
-  </section>
+</section>
 
-  <section id="collaborate" class="container flex eqsize responsive">
+<section id="collaborate" class="container flex eqsize responsive">
 	<div>
 	  <h2>Easy teamwork</h2>
 	  <p>Godot is designed from the ground up for smooth teamwork.</p>
 
 	  <ul>
-		<li><strong>Friendly filesystem usage</strong> that works great with version control systems like Git, Subversion, Mercurial, you name it.</li>
-		<li><strong>Scene instancing</strong> makes teamwork a breeze. Every team member can focus on their own scene, be it a character, level, etc., and edit without stepping on each other's toes.</li>
-		<li>Text-based descriptive and optimal scene format.</li>
-		<li>Script syntax supported by GitHub.</li>
+      <li><strong>Friendly filesystem usage</strong> that works great with version control systems like Git, Subversion, Mercurial, you name it.</li>
+      <li><strong>Scene instancing</strong> makes teamwork a breeze. Every team member can focus on their own scene, be it a character, level, etc., and edit without stepping on each other's toes.</li>
+      <li>Text-based descriptive and optimal scene format.</li>
+      <li>Script syntax supported by GitHub.</li>
 	  </ul>
 	</div>
-	<div></div>
-  </section>
+</section>
 
-  <section
-	id="call-to-action"
-	class="container flex eqsize responsive"
-	style="background-color: var(--dark-color); box-shadow: var(--base-shadow); padding: 1.5rem 1.5rem 0.5rem 1.5rem"
-  >
+<section
+  id="call-to-action"
+  class="container flex eqsize responsive"
+  style="background-color: var(--dark-color); box-shadow: var(--base-shadow); padding: 1.5rem 1.5rem 0.5rem 1.5rem"
+>
 	<div>
 	  <h2 class="text-center" style="color: white; width: 100%">Ready to start?</h2>
 	  <p class="text-center" style="color: white; margin-bottom: -0.5rem">Download Godot and try it out today!</p>
 	  <div class="text-center">
-		<a href="/download" class="btn download">
-		  <div class="main">Download</div><div class="opt">{% include('version') with {'key': 'identifier'} %}</div>
-		</a>
-		<br>
-		<a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn flat btn-white-text">Complete list of features</a>
+      <a href="/download" class="btn download">
+        <div class="main">Download</div><div class="opt">{% include('version') with {'key': 'identifier'} %}</div>
+      </a>
+      <br>
+      <a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn flat btn-white-text">Complete list of features</a>
 	  </div>
 	</div>
-  </section>
+</section>

@@ -152,7 +152,7 @@ description = "Showcase item layout"
 
     <article class="showcase-video-image">
       {# Ensure the video iframe always displays with a 16:9 aspect ratio. #}
-      <div style="position: relative; width: 100%; padding-bottom: 56.25%">
+      <div class="card showcase-card" style="width: 100%; padding-bottom: 56.25%">
         <iframe
           src="https://www.youtube-nocookie.com/embed/{% placeholder youtube_embed_code %}"
           frameborder="0"
@@ -165,6 +165,7 @@ description = "Showcase item layout"
 
       <a href="{{ ('assets/showcase/' ~ (placeholder('image') | trim)) | theme }}" class="lightbox" data-group="showcase">
         <img
+          class="rounded-lg"
           width="16"
           height="9"
           src="{{ ('assets/showcase/' ~ (placeholder('image') | trim)) | theme }}"
