@@ -152,13 +152,12 @@ description = "Showcase item layout"
 
     <article class="showcase-video-image">
       {# Ensure the video iframe always displays with a 16:9 aspect ratio. #}
-      <div class="card showcase-card" style="width: 100%; padding-bottom: 56.25%">
+      <div class="card youtube" style="padding-bottom: 56.25%">
         <iframe
           src="https://www.youtube-nocookie.com/embed/{% placeholder youtube_embed_code %}"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; background-color: #000"
         >
         </iframe>
       </div>
