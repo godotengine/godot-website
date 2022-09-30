@@ -116,20 +116,91 @@ description = "Download layout"
   .subheader {
     margin-top: 32px;
   }
+
+  /* hide tab icons by default */
+  .tab img {
+    display: none;
+    filter: invert(100%);
+  }
+
+  @media (max-width: 1060px) {
+    /* hide tab text only show icons */
+    .tab img {
+      display: block;
+    }
+    /* hide tab text, except for active tabs */
+    .tab:not(.active) span {
+      display: none;
+    }
+  }
 </style>
 
 <div class="head">
-  <div class="container flex eqsize responsive">
+  <div class="container flex responsive justify-space-between">
     <div class="main">
       <h1 class="intro-title">Download</h1>
     </div>
-    <div class="tabs tabs-download">
-      <a href="/download/linux" class="title-font {% if platform == 'linux' %} active {% endif %}">Linux</a>
-      <a href="/download/osx" class="title-font {% if platform == 'osx' %} active {% endif %}">macOS</a>
-      <a href="/download/windows" class="title-font {% if platform == 'windows' %} active {% endif %}">Windows</a>
-      <a href="/download/server" class="title-font {% if platform == 'server' %} active {% endif %}">Linux Server</a>
-      <a href="/download/android" class="title-font {% if platform == 'android' %} active {% endif %}">Android</a>
-      <a href="https://editor.godotengine.org/releases/latest/" class="title-font">Web Editor</a>
+    <div class="tabs snap-tabs">
+      <a href="/download/linux" class="tab title-font {% if platform == 'linux' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/linux.svg') | theme }}"
+          title="Linux"
+          alt="Linux"
+        />
+        <span>Linux</span>
+      </a>
+      <a href="/download/osx" class="tab title-font {% if platform == 'osx' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/macos.svg') | theme }}"
+          title="macOS"
+          alt="macOS"
+        />
+        <span>macOS</span>
+      </a>
+      <a href="/download/windows" class="tab title-font {% if platform == 'windows' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/windows.svg') | theme }}"
+          title="Windows"
+          alt="Windows"
+        />
+        <span>Windows</span>
+      </a>
+      <a href="/download/server" class="tab title-font {% if platform == 'server' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/server.svg') | theme }}"
+          title="Linux Server"
+          alt="Linux Server"
+        />
+        <span>Linux Server</span>
+      </a>
+      <a href="/download/android" class="tab title-font {% if platform == 'android' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/android.svg') | theme }}"
+          title="Android"
+          alt="Android"
+        />
+        <span>Android</span>
+      </a>
+      <a href="https://editor.godotengine.org/releases/latest/" class="tab title-font">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/html5.svg') | theme }}"
+          title="Web Editor"
+          alt="Web Editor"
+        />
+        <span>Web Editor</span>
+      </a>
     </div>
   </div>
 </div>

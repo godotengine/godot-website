@@ -846,6 +846,33 @@ a.card {
   color: var(--tab-active-color);
 }
 
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.snap-tabs {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: initial;
+  overflow: auto hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.snap-tabs::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.snap-tabs > .tab {
+  display: flex;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  overscroll-behavior-y: contain;
+}
+
 code {
   font-family: monospace;
 }
