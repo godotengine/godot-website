@@ -1099,6 +1099,9 @@ pre > code {
 
   .tabs {
     overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    justify-content: normal;
   }
 
   .author .date {
