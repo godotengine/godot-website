@@ -1,0 +1,535 @@
+title = "Teams"
+url = "/teams"
+layout = "more"
+description = "Teams and engine areas overview"
+is_hidden = 0
+==
+{##}
+{% put title %} Godot&nbsp;Engine teams {% endput %}
+
+<div class="container-text">
+  <p>
+    This pages provides an overview of the various teams working on Godot&nbsp;Engine. If you want to know who works on what, who to get in contact with on a topic,
+      which people should review a particular Pull Request or similar - this is a good first stop.
+  </p>
+
+  <p>
+    Engine teams are listed by engine area, with a few keywords describing what belongs to that area and a link to the teams chat channel,
+      followed by a list of the members of that team (names and GitHub handles). For some larger areas, subteams exist for parts of that area.<br>
+    Names in bold with a ⭐ emoji are the main contributors in charge of a given area, who typically lead the team work and can merge Pull Requests in their area of expertise.
+  </p>
+
+  <p>
+    If you want to get in touch, use the link to each team's chat channel on the Godot&nbsp;Engine Contributors chat after the team's names (see <a href="/community">Community</a>).<br>
+    For general development discussions which may not fit a specific team channel, use the general purpose <a href="https://chat.godotengine.org/channel/devel">#devel</a> channel.<br>
+    For general enquiries, private or security related matters, have a look at the <a href="/contact">Contact</a> page.
+  </p>
+
+
+  <h2 class="title" id="general">General areas</h2>
+
+  <p>
+    Categorizing the engine development in discrete teams is not easy! This section includes some broad areas which have an influence on all engine subsystems,
+      and where many contributors are active without necessarily being responsible for all the features that their team encompasses.<br>
+    Some more specialized teams are then listed in the <a href="#systems">Systems</a> section.
+  </p>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="core">Core • <a href="https://chat.godotengine.org/channel/core">#core</a></h4>
+
+    <p>
+      <em>Low-level Core API: Object, Variant, templates, base nodes like Node, Viewport, etc.
+        (everything under <a href="https://github.com/godotengine/godot/tree/master/core"><code>core</code></a> and
+        <a href="https://github.com/godotengine/godot/tree/master/scene/main"><code>scene/main</code></a>).</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>)</span>,
+        George Marques (<a href="https://github.com/vnen">@vnen</a>),
+        Hein-Pieter van Braam (<a href="https://github.com/hpvb">@hpvb</a>),
+        Pedro J. Estébanez (<a href="https://github.com/RandomShaper">@RandomShaper</a>)
+    </p>
+
+    <table class="teams-subteams">
+      <tr>
+        <th class="teams-subteam-name">Data Structures</th>
+        <td class="teams-subteam-members">
+          Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>),
+            <a href="https://github.com/lawnjelly">@lawnjelly</a>
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">Threading</th>
+        <td class="teams-subteam-members">
+          Pedro J. Estébanez (<a href="https://github.com/RandomShaper">@RandomShaper</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">Input</th>
+        <td class="teams-subteam-members">
+          Eric M (<a href="https://github.com/EricEzaM">@EricEzaM</a>),
+            Gilles Roudière (<a href="https://github.com/groud">@groud</a>),
+            Pedro J. Estébanez (<a href="https://github.com/RandomShaper">RandomShaper</a>),
+            Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>)
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="gui-nodes">GUI Nodes • <a href="https://chat.godotengine.org/channel/gui">#gui</a></h4>
+
+    <p>
+      <em>Everything that inherits Control (everything under <a href="https://github.com/godotengine/godot/tree/master/scene/gui"><code>scene/gui</code></a>)
+        and can be used to build Graphical User Interfaces (both game UI and editor tools).</em>
+    <p>
+
+    <p>
+      Eric M (<a href="https://github.com/EricEzaM">@EricEzaM</a>),
+        Gilles Roudière (<a href="https://github.com/groud">@groud</a>),
+        Hendrik Brucker (<a href="https://github.com/Geometror">@Geometror</a>),
+        Michael Alexsander (<a href="https://github.com/YeldhamDev">@YeldhamDev</a>),
+        Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>),
+        Tomasz Chabora (<a href="https://github.com/KoBeWi">@KoBeWi</a>),
+        Yuri Sizov (<a href="https://github.com/YuriSizov">@YuriSizov</a>)
+    </p>
+
+    <table class="teams-subteams">
+      <tr>
+        <th class="teams-subteam-name">Text</th>
+        <td class="teams-subteam-members">
+          Paul Batty (<a href="https://github.com/Paulb23">@Paulb23</a>),
+            Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>)
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="editor">Editor • <a href="https://chat.godotengine.org/channel/editor">#editor</a></h4>
+
+    <p>
+      <em>All things related to the editor, both tools and usability (<a href="https://github.com/godotengine/godot/tree/master/editor"><code>editor</code></a>).</em>
+    </p>
+
+    <p>
+      Eric M (<a href="https://github.com/EricEzaM">@EricEzaM</a>),
+        Gilles Roudière (<a href="https://github.com/groud">@groud</a>),
+        Hendrik Brucker (<a href="https://github.com/Geometror">@Geometror</a>),
+        Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+        Michael Alexsander (<a href="https://github.com/YeldhamDev">@YeldhamDev</a>),
+        Paul Batty (<a href="https://github.com/Paulb23">@Paulb23</a>),
+        Tomasz Chabora (<a href="https://github.com/KoBeWi">@KoBeWi</a>),
+        Yuri Sizov (<a href="https://github.com/YuriSizov">@YuriSizov</a>)
+    </p>
+
+    <table class="teams-subteams">
+      <tr>
+        <th class="teams-subteam-name">2D</th>
+        <td class="teams-subteam-members">
+          Gilles Roudière (<a href="https://github.com/groud">@groud</a>),
+            Michael Alexsander (<a href="https://github.com/YeldhamDev">@YeldhamDev</a>),
+            Tomasz Chabora (<a href="https://github.com/KoBeWi">@KoBeWi</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">3D</th>
+        <td class="teams-subteam-members">
+          Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+            Joan Fons Sanchez (<a href="https://github.com/JFonS">@JFonS</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">Debugger</th>
+        <td class="teams-subteam-members">
+          Fabio Alessandrelli (<a href="https://github.com/Faless">@Faless</a>),
+            George Marques (<a href="https://github.com/vnen">@vnen</a>)
+        </td>
+      </tr>
+    <tr>
+        <th class="teams-subteam-name">Script editor</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Paul Batty (<a href="https://github.com/Paulb23">@Paulb23</a>)</span>,
+            Michael Alexsander (<a href="https://github.com/YeldhamDev">@YeldhamDev</a>)
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="scripting">Scripting • <a href="https://chat.godotengine.org/channel/scripting">#scripting</a></h4>
+
+    <p>
+      <em>Umbrella team for all the scripting languages usable with Godot. Encompasses some shared core components (Object, ClassDB, MethodBind, ScriptLanguage, etc.)
+        and language specific implementations in dedicated subteams.</em>
+    </p>
+
+    <p>
+      George Marques (<a href="https://github.com/vnen">@vnen</a>),
+        Ignacio Roldán Etcheverry (<a href="https://github.com/neikeq">@neikeq</a>),
+        Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>)
+    </p>
+
+    <table class="teams-subteams">
+      <tr>
+        <th class="teams-subteam-name">GDExtension (<a href="https://chat.godotengine.org/channel/gdextension">#gdextension</a>)</th>
+        <td class="teams-subteam-members">
+          Bastiaan Olij (<a href="https://github.com/BastiaanOlij">@BastiaanOlij</a>),
+            Fabio Alessandrelli (<a href="https://github.com/Faless">@Faless</a>),
+            George Marques (<a href="https://github.com/vnen">@vnen</a>),
+            Gilles Roudière (<a href="https://github.com/groud">@groud</a>),
+            Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>),
+            Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">GDScript (<a href="https://chat.godotengine.org/channel/gdscript">#gdscript</a>)</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">George Marques (<a href="https://github.com/vnen">@vnen</a>)</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">Mono / C#</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Ignacio Roldán Etcheverry (<a href="https://github.com/neikeq">@neikeq</a>)</span>,
+            Aaron Franke (<a href="https://github.com/aaronfranke">@aaronfranke</a>),
+            Raul Santos (<a href="https://github.com/raulsntos">@raulsntos</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">VisualScript</th>
+        <td class="teams-subteam-members">
+          K. S. Ernest Lee (<a href="https://github.com/fire">@fire</a>)
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="buildsystem">Buildsystem • <a href="https://chat.godotengine.org/channel/buildsystem">#buildsystem</a></h4>
+
+    <p>
+      <em>Tools and scripts that we use to compile and maintain Godot, both for development purpose (SCons, CI) and releases (official build containers).</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>)</span>,
+        Aaron Franke (<a href="https://github.com/aaronfranke">@aaronfranke</a>),
+        Fabio Alessandrelli (<a href="https://github.com/Faless">@Faless</a>),
+        Hein-Pieter van Braam (<a href="https://github.com/hpvb">@hpvb</a>),
+        Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+        Ignacio Roldán Etcheverry (<a href="https://github.com/neikeq">@neikeq</a>)
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="platforms">Platforms • <a href="https://chat.godotengine.org/channel/platforms">#platforms</a></h4>
+
+    <p>
+      <em>Platform specific layers that reside in <a href="https://github.com/godotengine/godot/tree/master/platform"><code>platform</code></a>, with shared components
+        (Unix, Win32, Apple, etc.) in <a href="https://github.com/godotengine/godot/tree/master/drivers"><code>drivers</code></a>.</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>)</span>,
+        <span class="teams-subteam-leader">Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>)</span>
+    </p>
+
+    <table class="teams-subteams">
+      <tr>
+        <th class="teams-subteam-name">Android (<a href="https://chat.godotengine.org/channel/android">#android</a>)</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Fredia Huya-Kouadio (<a href="https://github.com/m4gr3d">@m4gr3d</a>)</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">HTML5</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Fabio Alessandrelli (<a href="https://github.com/Faless">@Faless</a>)</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">iOS</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>)</span>,
+            Sergey Minakov (<a href="https://github.com/naithar">@naithar</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">Linux / BSD</th>
+        <td class="teams-subteam-members">
+          Fabio Alessandrelli (<a href="https://github.com/Faless">@Faless</a>),
+            Hein-Pieter van Braam (<a href="https://github.com/hpvb">@hpvb</a>),
+            Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>),
+            Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">macOS</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>)</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">UWP</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">George Marques (<a href="https://github.com/vnen">@vnen</a>)</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">Windows</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Pāvels Nadtočajevs (<a href="https://github.com/bruvzg">@bruvzg</a>)</span>,
+            Max Hilbrunner (<a href="https://github.com/mhilbrunner">@mhilbrunner</a>)
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="title" id="systems">Systems</h2>
+
+  <p>
+    Specialized subsystems with their dedicated teams and communication channels.
+  </p>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="animation">Animation • <a href="https://chat.godotengine.org/channel/animation">#animation</a></h4>
+
+    <p>
+      <em>Nodes and features for 2D and 3D animation and IK workflows.</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>)</span>,
+        K. S. Ernest Lee (<a href="https://github.com/fire">@fire</a>),
+        <a href="https://github.com/lyuma">@lyuma</a>,
+        Silc 'Tokage' Renew (<a href="https://github.com/TokageItLab">@TokageItLab</a>),
+        <a href="https://github.com/SaracenOne">SaracenOne</a>
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="audio">Audio • <a href="https://chat.godotengine.org/channel/audio">#audio</a></h4>
+
+    <p>
+      <em>All audio-related features, from low-level AudioServer and drivers to high-level nodes and effects.</em>
+    </p>
+
+    <p>
+      Ellen Poe (<a href="https://github.com/ellenhp">@ellenhp</a>),
+        Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>)
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="import">Import • <a href="https://chat.godotengine.org/channel/asset-pipeline">#asset-pipeline</a></h4>
+
+    <p>
+      <em>Asset import pipeline for 2D (textures) and 3D (scenes, models, animations, etc.).</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>)</span>,
+        Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+        Joan Fons Sanchez (<a href="https://github.com/JFonS">@JFonS</a>),
+        K. S. Ernest Lee (<a href="https://github.com/fire">@fire</a>),
+        <a href="https://github.com/lyuma">@lyuma</a>,
+        Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>)
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="networking">Networking • <a href="https://chat.godotengine.org/channel/networking">#networking</a></h4>
+
+    <p>
+      <em>Networked multiplayer, RPCs and replication, HTTP/TCP/UDP/DNS, WebSockets, ENet, encryption.</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Fabio Alessandrelli (<a href="https://github.com/Faless">@Faless</a>)</span>,
+        Max Hilbrunner (<a href="https://github.com/mhilbrunner">@mhilbrunner</a>)
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="physics">Physics • <a href="https://chat.godotengine.org/channel/physics">#physics</a></h4>
+
+    <p>
+      <em>Physics servers and their implementation in 2D and 3D.</em>
+    </p>
+
+    <p>
+      Andrea Catania (<a href="https://github.com/AndreaCatania">@AndreaCatania</a>),
+        Fabrice Cipolla (<a href="https://github.com/fabriceci">@fabriceci</a>),
+        Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>),
+        <a href="https://github.com/lawnjelly">@lawnjelly</a>,
+        Ricardo Buring (<a href="https://github.com/rburing">@rburing</a>)
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="rendering">Rendering • <a href="https://chat.godotengine.org/channel/rendering">#rendering</a></h4>
+
+    <p>
+      <em>Rendering server and RenderingDevice implementations (Vulkan, OpenGL), as well as the actual rendering techniques implemented using those graphics APIs.</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Clay John (<a href="https://github.com/clayjohn">@clayjohn</a>)</span>,
+        Bastiaan Olij (<a href="https://github.com/BastiaanOlij">@BastiaanOlij</a>),
+        Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+        <a href="https://github.com/lawnjelly">@lawnjelly</a>,
+        Pedro J. Estébanez (<a href="https://github.com/RandomShaper">RandomShaper</a>),
+        Joan Fons Sanchez (<a href="https://github.com/JFonS">@JFonS</a>),
+        Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>)
+    </p>
+
+    <table class="teams-subteams">
+      <tr>
+        <th class="teams-subteam-name">Shaders</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">Yuri Rubinsky (<a href="https://github.com/Chaosus">@Chaosus</a>)</span>,
+            Clay John (<a href="https://github.com/clayjohn">@clayjohn</a>)
+        </td>
+      </tr>
+      <tr>
+        <th class="teams-subteam-name">Tech Art</th>
+        <td class="teams-subteam-members">
+          Clay John (<a href="https://github.com/clayjohn">@clayjohn</a>),
+            Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+            Ilaria Cislaghi (<a href="https://github.com/QbieShay">@QbieShay</a>),
+            Yuri Rubinsky (<a href="https://github.com/Chaosus">@Chaosus</a>)
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="xr">XR • <a href="https://chat.godotengine.org/channel/xr">#xr</a></h4>
+
+    <p>
+      <em>Augmented (AR) and virtual reality (VR).</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Bastiaan Olij (<a href="https://github.com/BastiaanOlij">@BastiaanOlij</a>)</span>,
+        Fredia Huya-Kouadio (<a href="https://github.com/m4gr3d">@m4gr3d</a>)
+    </p>
+
+    <table class="teams-subteams">
+      <tr>
+        <th class="teams-subteam-name">WebXR</th>
+        <td class="teams-subteam-members">
+          <span class="teams-subteam-leader">David Snopek (<a href="https://github.com/dsnopek">@dsnopek</a>)</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="title" id="community">Community</h2>
+
+  <p>
+    The following teams do not impact the engine code directly, but take care of all other important parts of the Godot ecosystem such
+      as the documentation, demos, website, etc.
+  </p>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="communication">Communication • <a href="https://chat.godotengine.org/channel/communication">#communication</a></h4>
+
+    <p>
+      <em>Coordination and collaboration around the official communication of the Godot project (blog, videos, website, social media, etc.).<br>
+      This team was newly created and we're still finding our bearings.</em>
+    </p>
+
+    <p>
+      Clay John (<a href="https://github.com/clayjohn">@clayjohn</a>),
+        Emilio Coppola (<a href="https://github.com/coppolaemilio">@coppolaemilio</a>),
+        Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+        Ilaria Cislaghi (<a href="https://github.com/QbieShay">@QbieShay</a>),
+        Raffaele Picca (<a href="https://github.com/RPicster">@RPicster</a>),
+        Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>),
+        Yuri Sizov (<a href="https://github.com/YuriSizov">@YuriSizov</a>)
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="demos">Demos • <a href="https://chat.godotengine.org/channel/demo-content">#demo-content</a></h4>
+
+    <p>
+      <em>Maintainance and creation of official demo projects in <a href="https://github.com/godotengine/godot-demo-projects">godot-demo-projects</a>.</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Aaron Franke (<a href="https://github.com/aaronfranke">@aaronfranke</a>)</span>,
+        <span class="teams-subteam-leader">Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>)</span>
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="documentation">Documentation • <a href="https://chat.godotengine.org/channel/documentation">#documentation</a></h4>
+
+    <p>
+      <em>Maintainance and writing of the official documentation at <a href="https://github.com/godotengine/godot-docs">godot-docs</a>.</em>
+    </p>
+
+    <p>
+      Chris Bradfield (<a href="https://github.com/cbscribe">@cbscribe</a>),
+        Clay John (<a href="https://github.com/clayjohn">@clayjohn</a>),
+        Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+        Matthew (<a href="https://github.com/skyace65">@skyace65</a>),
+        Max Hilbrunner (<a href="https://github.com/mhilbrunner">@mhilbrunner</a>),
+        Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>),
+        Yuri Sizov (<a href="https://github.com/YuriSizov">@YuriSizov</a>)
+    </p>
+  </div>
+
+<div class="teams-team-section">
+  <h4 class="title" id="production">Production • <a href="https://chat.godotengine.org/channel/devel">#devel</a></h4>
+
+  <p>
+    <em>The production team helps coordinate the engine development with the various teams.</em>
+  </p>
+
+  <p>
+    <span class="teams-subteam-leader">Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>)</span>,
+      Clay John (<a href="https://github.com/clayjohn">@clayjohn</a>),
+      Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>),
+      Juan Linietsky (<a href="https://github.com/reduz">@reduz</a>),
+      Max Hilbrunner (<a href="https://github.com/mhilbrunner">@mhilbrunner</a>),
+      Yuri Sizov (<a href="https://github.com/YuriSizov">@YuriSizov</a>)
+  </p>
+</div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="translation">Translation • <a href="https://chat.godotengine.org/channel/translation">#translation</a></h4>
+
+    <p>
+      <em>Internationalization and localization team - building the infrastructure to make it possible to translate Godot and its documentation.</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>)</span>,
+      <span class="teams-subteam-leader">Haoyu Qiu (<a href="https://github.com/timothyqiu">@timothyqiu</a>)</span>,
+        Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>)
+    </p>
+
+    <p>
+      If you work on Godot translations and contributors for your language have a dedicated communication channel for coordination, let us know so we can link it here.
+    </p>
+  </div>
+
+  <div class="teams-team-section">
+    <h4 class="title" id="website">Website • <a href="https://chat.godotengine.org/channel/website">#website</a></h4>
+
+    <p>
+      <em>Maintenance of the official Godot website and other hosted resources (Q&amp;A, asset library).</em>
+    </p>
+
+    <p>
+      <span class="teams-subteam-leader">Hugo Locurcio (<a href="https://github.com/Calinou">@Calinou</a>)</span>,
+        Max Hilbrunner (<a href="https://github.com/mhilbrunner">@mhilbrunner</a>),
+        Rémi Verschelde (<a href="https://github.com/akien-mga">@akien-mga</a>),
+        Yuri Sizov (<a href="https://github.com/YuriSizov">@YuriSizov</a>)
+    </p>
+  </div>
+</div>

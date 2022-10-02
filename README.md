@@ -1,9 +1,30 @@
 # Godot Website
 
-This repository contains the theme and plugins used in Godot Engine's
-October instance.
+This repository contains the theme used by the Godot Engine's OctoberCMS/WinterCMS
+instance. The theme describes both the styling of the website and the components
+of its layouts, as well as some of its content.
 
-## Development
+- [OctoberCMS](https://github.com/octobercms/october) is the original CMS platform
+  of choice.
+- [WinterCMS](https://github.com/wintercms/winter) is the current CMS platform, a fork
+  of October with more active development.
+
+_WinterCMS_ is compatible with _OctoberCMS_, and uses the same plugin system. This is
+at least true for the version of the project that we use.
+
+This repository also contains a Docker setup to be used by contributors. It
+is not used for production.
+
+## Contributing
+
+Contributions are always welcome! Godot website, just like Godot engine, is open source.
+
+However, when contributing to the website, it is important to keep in mind that it
+acts as a public face of Godot organization and community. Thus, substantial
+changes must be discussed ahead of time. You don't necessarily need to open a formal
+Godot improvement proposal like you do with engine features, but starting an issue
+on this repository or joining the discussion on the
+[Godot Contributors Chat](https://chat.godotengine.org/channel/website) is a good idea.
 
 ### Browser support
 
@@ -16,53 +37,29 @@ _evergreen browsers_:
 - Opera (latest version and N-1 version)
 - Safari (latest version and N-1 version)
 
-Internet Explorer isn't supported.
+**Internet Explorer isn't supported.**
 
 ### Dependencies
 
-- [Docker](https://docker.com)
-  - It's also possible to install PHP 7.2+, MySQL and October manually,
-    but this isn't covered in this README.
+This project requires the following stack:
 
-### Running the site
+- PHP 7.2+ & Composer 2
+- MySQL/MariaDB
+- OctoberCMS/WinterCMS v1.0.xxx
 
-- Clone this repository.
-- Put a database dump (if you have one) into the `/docker/mariadb/init` folder.
-  - Make sure that your script starts with the line `USE october;` and that the file extension is `.sql`.
-- Run the `./docker/restart.sh` script (this will take a while the first time).
-- You might need to reinstall some plugins `/docker/php/install-plugin.sh author.name`.
-  - Replace `author.name` with the names in the `/plugins/[author]/[name]` folders.
-- See the website at [http://localhost:8080](http://localhost:8080).
+There are also some linting tools that can be run locally that require Node.js.
 
-### Restoring a database
+### Local development setup
 
-```sh
-mv /your/dump/backup-file.sql docker/mariadb/init
-docker/mariadb/bash.sh
-cd /docker-entrypoint-initdb.d/
-mysql < 000-setup.sql
-mysql < backup-file.sql
-```
+This project comes with a [Docker](https://docker.com) setup that can be used to quickly
+create a network of compatible ready-to-use containers.
 
-### Interfacing with the Docker containers
+Using this setup, you can have a local copy of the project, without the production database.
+For development purposes, you don't need that database, as the only thing that is specific
+to production is blog posts, which can be easily recreated if required. Everything else
+is located in the `./themes/godotengine` folder, including all static pages and their content.
 
-You can use the standard `docker exec -it godotengine-org--[php|mariadb] [command]` syntax or the following scripts:
-
-- `./docker/php/bash.sh`
-- `./docker/php/install-plugin.sh`
-- `./docker/php/log.sh`
-- `./docker/mariadb/bash.sh`
-- `./docker/mariadb/log.sh`
-- `./docker/mariadb/mysql.sh`
-
-### Setting up the theme
-
-- Log into the October backend (located at `/backend`) and change the frontend theme from the Settings tab.
-  - Alternatively, you can edit `config/cms.php` and change the theme to `godotengine` there.
-- Change directory into `plugins/paulvonzimmerman/patreon` then run `composer install`.
-- You should now have approximately what's in production. The only missing
-  pieces are everything that's stored in the production database
-  (blog entries).
+To start contributing, please follow this [Local development setup](DEVELOPMENT_SETUP.md) guide.
 
 ### Syntax highlighting
 
@@ -72,6 +69,7 @@ extension to benefit from syntax highlighting in `.htm` templates.
 
 ## Resources
 
-- Discuss on Godot Contributors Chat [#website](https://chat.godotengine.org/channel/website) channel.
+- Join the discussion on Godot Contributors Chat in the
+  [#website](https://chat.godotengine.org/channel/website) channel.
 - When working on the theme, please take note of the
   [website stats](https://stats.tuxfamily.org/godotengine.org).

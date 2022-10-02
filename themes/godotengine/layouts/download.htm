@@ -38,22 +38,40 @@ description = "Download layout"
     color: var(--dark-color);
   }
 
-  .steam-download {
+  .digital-stores {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .digital-stores-download {
     display: flex;
     align-items: center;
-    background-color: #2d4c74;
     margin-top: 16px;
-    color: var(--dark-color-text);
+    color: var(--dark-color-text-hl);
+    font-size: 16px;
     text-decoration: none;
   }
 
-  .steam-download strong {
-    margin-left: 8px;
-    color: var(--dark-color-text-hl);
+  .digital-stores-logo {
+    background-color: var(--digital-store-background-color);
+    padding: 8px 8px;
   }
 
-  .steam-download img {
-    margin-right: 16px;
+  .digital-stores-logo img {
+    vertical-align: middle;
+  }
+
+  .digital-stores-name {
+    color: var(--base-color-text-hl);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 16px;
   }
 
   .version-overview {
@@ -69,10 +87,11 @@ description = "Download layout"
     margin-bottom: 0px;
   }
 
-  .version-overview h2 > em {
+  .version-overview .version-link {
     color: var(--primary-color);
     font-style: normal;
     margin-left: 16px;
+    text-decoration: none;
   }
 
   .version-overview .date {
@@ -81,6 +100,10 @@ description = "Download layout"
 
   .version-overview img {
     filter: drop-shadow(var(--base-shadow));
+  }
+
+  .platform-details pre {
+    background-color: var(--platform-code-background-color);
   }
 
   .extras .card {
@@ -93,18 +116,91 @@ description = "Download layout"
   .subheader {
     margin-top: 32px;
   }
+
+  /* hide tab icons by default */
+  .tab img {
+    display: none;
+    filter: invert(100%);
+  }
+
+  @media (max-width: 1060px) {
+    /* hide tab text only show icons */
+    .tab img {
+      display: block;
+    }
+    /* hide tab text, except for active tabs */
+    .tab:not(.active) span {
+      display: none;
+    }
+  }
 </style>
 
 <div class="head">
-  <div class="container flex eqsize responsive">
+  <div class="container flex responsive justify-space-between">
     <div class="main">
       <h1 class="intro-title">Download</h1>
     </div>
-    <div class="tabs">
-      <a href="/download/linux" class="title-font {% if platform == 'linux' %} active {% endif %}">Linux</a>
-      <a href="/download/osx" class="title-font {% if platform == 'osx' %} active {% endif %}">macOS</a>
-      <a href="/download/windows" class="title-font {% if platform == 'windows' %} active {% endif %}">Windows</a>
-      <a href="/download/server" class="title-font {% if platform == 'server' %} active {% endif %}">Linux Server</a>
+    <div class="tabs snap-tabs">
+      <a href="/download/linux" class="tab title-font {% if platform == 'linux' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/linux.svg') | theme }}"
+          title="Linux"
+          alt="Linux"
+        />
+        <span>Linux</span>
+      </a>
+      <a href="/download/osx" class="tab title-font {% if platform == 'osx' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/macos.svg') | theme }}"
+          title="macOS"
+          alt="macOS"
+        />
+        <span>macOS</span>
+      </a>
+      <a href="/download/windows" class="tab title-font {% if platform == 'windows' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/windows.svg') | theme }}"
+          title="Windows"
+          alt="Windows"
+        />
+        <span>Windows</span>
+      </a>
+      <a href="/download/server" class="tab title-font {% if platform == 'server' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/server.svg') | theme }}"
+          title="Linux Server"
+          alt="Linux Server"
+        />
+        <span>Linux Server</span>
+      </a>
+      <a href="/download/android" class="tab title-font {% if platform == 'android' %} active {% endif %}">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/android.svg') | theme }}"
+          title="Android"
+          alt="Android"
+        />
+        <span>Android</span>
+      </a>
+      <a href="https://editor.godotengine.org/releases/latest/" class="tab title-font">
+        <img
+          width="24"
+          height="24"
+          src="{{ ('assets/icons/html5.svg') | theme }}"
+          title="Web Editor"
+          alt="Web Editor"
+        />
+        <span>Web Editor</span>
+      </a>
     </div>
   </div>
 </div>
@@ -113,13 +209,34 @@ description = "Download layout"
 
   <div class="flex responsive eqsize">
     <div class="version-overview">
-      <img src="{{ 'assets/download/godot_logo.svg' | theme }}" alt="" width="200" height="200" alt="">
-      <h2>Godot <em>{{stable_version}}</em></h2>
+      <img src="{{ 'assets/download/godot_logo.svg' | theme }}" width="200" height="200" alt="logo">
+      <h2>Godot <a class="version-link" href="#links">{{stable_version}}</a></h2>
       <i class="date">released {{ stable_version_date | date('j F Y') }}</i>
-      <p></p>
+
+      <div style="margin-top:32px; line-height: 1.6; font-size: 85%">
+        You can find previous releases on the
+        <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.<br>
+        Slow download? Try the mirror on <a href="https://github.com/godotengine/godot/releases">GitHub Releases</a>.<br>
+        <br>
+        Also available on digital distribution platforms:
+      </div>
+      <div class="digital-stores">
+        <a class="digital-stores-download card" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
+          <div class="digital-stores-logo">
+            <img src="{{ 'assets/download/itch_logo.svg' | theme }}" width="28" height="28" alt="itch logo">
+          </div>
+          <div class="digital-stores-name">itch.io</div>
+        </a>
+        <a class="digital-stores-download card" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
+          <div class="digital-stores-logo">
+            <img src="{{ 'assets/download/steam_logo.svg' | theme }}" width="28" height="28" alt="Steam logo">
+          </div>
+          <div class="digital-stores-name">Steam</div>
+        </a>
+      </div>
     </div>
 
-    <div>
+    <div id="links" class="platform-details">
       <div class="card">
         <div class="base-padding">
           <h4>Standard version</h4>
@@ -133,9 +250,11 @@ description = "Download layout"
           <h4>Requirements</h4>
           <ul>
             <li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
+            {% if platform != 'android' %}
             <li>
-              <strong>For the Mono version:</strong> MSBuild<br />(from <a href="https://visualstudio.microsoft.com/downloads/?q=build+tools">Visual Studio Build Tools</a> or the <a href="https://www.mono-project.com/download/stable/">Mono SDK</a>)
+              <strong>For the Mono version:</strong> <a href="https://dotnet.microsoft.com/download">.NET SDK</a> or the <a href="https://www.mono-project.com/download/stable/">Mono SDK</a>
             </li>
+            {% endif %}
           </ul>
         </div>
 
@@ -143,7 +262,9 @@ description = "Download layout"
         <div class="base-padding">
           <h4>Instructions</h4>
           <ul>
+            {% if platform != 'android' %}
             <li>Extract and run. Godot is self-contained and does not require installation.</li>
+            {% endif %}
             <li>
               If you run into an issue, check the
               <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a>
@@ -153,21 +274,11 @@ description = "Download layout"
           {% placeholder instructions %}
         </div>
 
-        <div class="footer base-padding" style="line-height: 1.6; font-size: 85%">
-          You can find previous releases on the
-          <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.<br>
-          Slow download? Try the mirror on <a href="https://github.com/godotengine/godot/releases">GitHub Releases</a>.
+        <div class="footer base-padding" style="line-height: 1.6; font-size: 90%">
+          Learn how to use Godot with the <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/">Step by Step tutorial</a>.<br>
+          Give a try to <a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">demo projects</a> showcasing some of the engine features.
         </div>
       </div>
-
-      <a class="steam-download base-padding card" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
-        <img src="{{ 'assets/download/itch_logo.svg' | theme }}" width="42" height="42" alt="">
-        Available on <strong>itch.io</strong>.
-      </a>
-      <a class="steam-download base-padding card" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
-        <img src="{{ 'assets/download/steam_logo.svg' | theme }}" width="42" height="42" alt="">
-        Available on <strong>Steam</strong>.
-      </a>
     </div>
   </div>
 
@@ -185,7 +296,7 @@ description = "Download layout"
         <div class="base-padding">
           <h3>Export templates (Mono / C#)</h3>
           <p>
-            Used to export your C# games to the supported platforms.
+            Used to export your C# games to the supported platforms.<br>
             Currently, the C# version can export to desktop platforms (Linux, macOS and Windows), Android, iOS, and HTML5/WebAssembly.
           </p>
         </div>
@@ -205,20 +316,6 @@ description = "Download layout"
         </div>
       </a>
 
-      <a class="card" href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/">
-        <div class="base-padding">
-          <h3>Learn Godot</h3>
-          <p>Learning how to use Godot with the Step by Step tutorial.</p>
-        </div>
-      </a>
-
-      <a class="card" href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">
-        <div class="base-padding">
-          <h3>Demos</h3>
-          <p>Example projects to get you started.</p>
-        </div>
-      </a>
-
       <a href="https://github.com/godotengine/godot-blender-exporter" class="base-padding card">
         <div>
           <h3>Blender ESCN exporter</h3>
@@ -226,13 +323,6 @@ description = "Download layout"
             Blender add-on to export scenes to Godot's scene format directly.<br>
             Godot also supports glTF 2.0 and OBJ.
           </p>
-        </div>
-      </a>
-
-      <a href="https://downloads.tuxfamily.org/godotengine/" class="base-padding card">
-        <div>
-          <h3>Old Godot downloads</h3>
-          <p>Looking for the previous stable releases? They're here!</p>
         </div>
       </a>
 

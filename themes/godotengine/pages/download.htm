@@ -15,6 +15,8 @@ function onStart()
     $current_os = 'linux';
   } else if ($agent->is('OS X')) {
     $current_os = 'osx';
+  } else if ($agent->is('Android')) {
+    $current_os = 'android';
   }
 
   return Redirect::to('/download/' . $current_os);

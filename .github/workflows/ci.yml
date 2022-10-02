@@ -5,11 +5,11 @@ on:
 
 jobs:
   test:
-    name: Test
+    name: Validate formatting and setup
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
 
       - name: Lint and format CSS
         run: |
@@ -17,38 +17,47 @@ jobs:
           npm run lint
 
       - name: Install PHP
-        uses: shivammathur/setup-php@2.15.0
+        uses: shivammathur/setup-php@v2
         with:
           php-version: "7.3"
-          tools: composer:v1
+          tools: composer:v2
           extensions: curl, fileinfo, gd, mbstring, openssl, pdo, pdo_mysql, xml, zip
           # Disable Xdebug to improve performance.
           coverage: none
 
-      - name: Install October and set up MySQL database
+      - name: Set up MySQL and install OctoberCMS
         run: |
           sudo systemctl start mysql
           echo -e '[client]\nuser="root"\npassword="root"' > "$HOME/.my.cnf"
-          mysql -e 'CREATE DATABASE IF NOT EXISTS `database`;'
+
+          mysql -e "CREATE DATABASE IF NOT EXISTS october;"
           # https://stackoverflow.com/questions/52364415/php-with-mysql-8-0-error-the-server-requested-authentication-method-unknown-to
           mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
 
-          mkdir -p october
-          pushd october
-          php -r "eval('?>'.file_get_contents('https://octobercms.com/api/installer'));"
-          php artisan key:generate
-          # Set up the database.
-          sed -i "s/'password'   => ''/'password'   => 'root'/g" config/database.php
-          sed -i "s/'activeTheme' => 'demo'/'activeTheme' => 'godotengine'/g" config/cms.php
-          php artisan october:up
+          # Explicitly allow all plugins to run scripts during installation.
+          composer config -g allow-plugins true
 
-          cp -r ../plugins/* plugins
+          mkdir -p october
+          composer create-project october/october ./october "v1.0.474" --no-dev
+          pushd october
+
+          php artisan key:generate
+
+          # Copy project files.
           cp -r ../themes/* themes
-          php artisan plugin:refresh paulvonzimmerman.patreon
-          env -C plugins/paulvonzimmerman/patreon composer install
-          php artisan plugin:refresh pikanji.agent
-          php artisan plugin:refresh rainlab.blog
-          php artisan plugin:refresh sobored.rss
+          cp -r ../docker/php/config/* config
+          # Fix up the config for CI.
+          sed -i "s/'host'       => 'mariadb'/'host'       => 'localhost'/g" config/database.php
+          sed -i "s/'username'   => 'godot'/'username'   => 'root'/g" config/database.php
+          sed -i "s/'password'   => 'godot'/'password'   => 'root'/g" config/database.php
+
+          php artisan october:up
+          php artisan october:fresh
+
+          php artisan plugin:install paulvonzimmerman.patreon
+          php artisan plugin:install pikanji.agent
+          php artisan plugin:install rainlab.blog
+          php artisan plugin:install sobored.rss
 
       - name: Run Lighthouse CI
         run: |

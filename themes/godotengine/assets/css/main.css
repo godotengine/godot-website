@@ -28,6 +28,9 @@
   --footer-link-underline-color: rgba(200, 210, 250, 0.3);
   --tab-active-color: var(--primary-color);
 
+  --fund-color: #ef6767;
+  --fund-color-hl: #e53e3e;
+
   --base-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   --background-color: #d5daea;
@@ -42,17 +45,24 @@
   --code-background-color: #dcdfe2;
   --codeblock-background-color: #282b2e;
   --codeblock-color: #e0e2e4;
+
+  --sponsor-background-color: #dcdcdc;
+  --sponsor-platinum-background-color: #cfdbe4;
+  --sponsor-gold-background-color: #e0dfd4;
+
+  --platform-code-background-color: #e5ebf1;
+
+  --digital-store-background-color: #2d4c74;
+
+  --teams-odd-color: rgba(160, 160, 160, 0.15);
+  --teams-even-color: rgba(160, 160, 160, 0.05);
+  --teams-subteams-color: rgba(255, 255, 255, 0.4);
+
+  --table-divider-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo.dark-logo {
   display: none;
-}
-
-.article-search-bar {
-  /* Make the Search button blue instead of green to better match the Godot theme. */
-  /* We need to do this using a CSS filter since it's an iframe. */
-  /* This breaks the text selection color inside the iframe, but it's a minor issue. */
-  filter: hue-rotate(110deg) saturate(80%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,7 +86,7 @@
     --primary-color-text: #d4edff;
     --primary-color-text-hl: white;
     --primary-color-text-title: white;
-    --accent-color: #f57389;
+    --accent-color: #5b5491;
 
     --link-color: hsl(200, 60%, 70%);
     --link-underline-color: hsla(200, 60%, 70%, 0.3);
@@ -85,6 +95,9 @@
     --footer-link-color: hsla(0, 0%, 100%, 0.85);
     --footer-link-underline-color: hsla(0, 0%, 100%, 0.25);
     --tab-active-color: white;
+
+    --fund-color: #ef6767;
+    --fund-color-hl: #e53e3e;
 
     --base-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -100,6 +113,20 @@
     --code-background-color: #333639;
     --codeblock-background-color: #333639;
     --codeblock-color: hsla(0, 0%, 100%, 0.9);
+
+    --sponsor-background-color: #ffffff;
+    --sponsor-platinum-background-color: #e2ebfa;
+    --sponsor-gold-background-color: #efece2;
+
+    --platform-code-background-color: #282b2e;
+
+    --digital-store-background-color: #2d4c74;
+
+    --teams-odd-color: rgba(120, 120, 120, 0.15);
+    --teams-even-color: rgba(120, 120, 120, 0.05);
+    --teams-subteams-color: rgba(0, 0, 0, 0.2);
+
+    --table-divider-color: rgba(255, 255, 255, 0.1);
   }
 
   /* Use logo with white text for dark navbar. */
@@ -127,11 +154,6 @@
 
   .dark-desaturate {
     filter: saturate(0%);
-  }
-
-  /* Dark theme hack for the DuckDuckGo search iframe. */
-  .article-search-bar {
-    filter: invert(80%) hue-rotate(180deg);
   }
 }
 
@@ -187,13 +209,23 @@ body a {
   transition: 0.1s filter;
 }
 
+body a,
+.btn.flat,
+.search-bar-btn:hover {
+  /* Use `filter` on all states to prevent the clickable area from changing */
+  /* when an image is hovered (see GH-369). */
+  filter: brightness(100%);
+}
+
 body a:hover,
-a.btn.flat:hover {
+.btn.flat:hover,
+.search-bar-btn:hover {
   filter: brightness(117.5%);
 }
 
 body a:active,
-a.btn.flat:active {
+.btn.flat:active,
+.search-bar-btn:active {
   filter: brightness(82.5%);
 }
 
@@ -209,10 +241,6 @@ a.btn,
   font-weight: 800;
   color: var(--base-color-text-title);
   margin-top: 0px;
-}
-
-.base-color-text {
-  color: var(--base-color-text);
 }
 
 h1 {
@@ -245,6 +273,28 @@ h4 {
   max-width: 1200px;
   margin: auto;
   overflow: visible;
+}
+
+.container-text {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 24px;
+  max-width: 800px;
+  margin: auto;
+  overflow: visible;
+}
+
+.container-text h2 {
+  margin-top: 80px;
+}
+
+.container-text h3 {
+  margin-top: 60px;
+}
+
+.container-text h4 {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .flex {
@@ -310,10 +360,11 @@ header .container {
 }
 
 #logo-link {
-  margin-right: 48px;
+  margin-right: 36px;
   /* Make the logo's clickable area as tall as for other navigation links. */
-  padding: 0.1875rem 0;
+  padding: 0.2rem 0.5rem;
   margin-top: 0.25rem;
+  margin-left: -0.5rem;
 }
 #nav_head {
   display: flex;
@@ -334,6 +385,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 1rem;
 }
 
 nav a {
@@ -348,6 +400,16 @@ nav a {
 nav a:hover,
 #logo-link:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
+}
+
+nav li.fund > a {
+  color: var(--fund-color);
+}
+nav li.fund > a:hover {
+  color: var(--fund-color-hl);
+}
+nav li.fund.active > a {
+  color: var(--fund-color-hl);
 }
 
 nav ul {
@@ -436,11 +498,25 @@ footer a {
   color: var(--footer-link-color);
   text-decoration-color: var(--footer-link-underline-color);
 }
-#sitemap {
+#copyright {
   flex: 2;
 }
+#copyright > p:first-child {
+  margin-top: 0;
+}
+#sitemap {
+  flex: 3;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
 #sitemap li {
+  line-height: 20px;
   margin-bottom: 10px;
+}
+#sitemap strong {
+  color: var(--footer-link-color);
 }
 #social {
   flex: 1;
@@ -542,6 +618,24 @@ article .content img {
   text-decoration: none;
 }
 
+.youtube {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  aspect-ratio: 16 / 9;
+}
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
 svg.icon {
   fill: red;
   height: 42px;
@@ -605,14 +699,6 @@ p.small {
 }
 
 .btn {
-  box-shadow: var(--base-shadow);
-  font-size: 18px;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a.btn {
   background-color: var(--button-background-color);
   box-shadow: var(--base-shadow);
   font-size: 18px;
@@ -622,38 +708,38 @@ a.btn {
   font-weight: bold;
 }
 
-a.btn:hover {
+.btn:hover {
   box-shadow: var(--more-shadow);
 }
 
-a.btn.flat {
+.btn.flat {
   box-shadow: none;
   background-color: transparent;
   color: var(--link-color);
   margin: 16px 32px 16px 32px;
 }
 
-a.btn.flat:hover {
+.btn.flat:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
 
-a.btn.flat.btn-white-text {
+.btn.flat.btn-white-text {
   color: hsla(0, 0%, 100%, 0.95);
 }
 
-a.btn.download {
+.btn.download {
   padding: 0px;
   margin-top: 48px;
 }
 
-a.btn.download > .main {
+.btn.download > .main {
   background-color: white;
   color: var(--dark-color);
   display: inline-block;
   padding: 16px 32px 16px 32px;
 }
 
-a.btn.download > .opt {
+.btn.download > .opt {
   background-color: var(--primary-color);
   color: var(--primary-color-text-title);
   display: inline-block;
@@ -680,6 +766,19 @@ a.btn.download > .opt {
 .author .date {
   color: var(--base-color-text-subtitle-date);
   padding-left: 24px;
+}
+
+.tags {
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 1000px;
+  background-color: var(--card-background-color);
+  padding: 0.25rem 0.75rem;
+  margin: 0.1rem;
 }
 
 .card {
@@ -709,12 +808,14 @@ a.card {
 .tabs {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 .tabs > * {
-  padding: 16px 32px 16px 32px;
+  padding: 16px 24px 16px 24px;
   text-decoration: none;
   text-align: center;
 }
+
 .tabs a {
   color: inherit;
   white-space: nowrap;
@@ -728,6 +829,33 @@ a.card {
   color: var(--tab-active-color);
 }
 
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.snap-tabs {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: initial;
+  overflow: auto hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.snap-tabs::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.snap-tabs > .tab {
+  display: flex;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  overscroll-behavior-y: contain;
+}
+
 code {
   font-family: monospace;
 }
@@ -739,6 +867,8 @@ pre {
   padding: 8px;
   border-radius: 2px;
   overflow-y: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 pre > code {
@@ -758,24 +888,59 @@ pre > code {
   width: 400px;
 }
 
+.search-bar {
+  display: flex;
+  height: 40px;
+  margin-bottom: 2rem;
+  box-shadow: var(--base-shadow);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.search-bar input {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  line-height: 2;
+  font-size: 18px;
+  border: none;
+  border-right: 1px solid var(--transparent-cover);
+  background-color: var(--card-background-color);
+  color: var(--base-color-text);
+}
+.search-bar .search-bar-btn {
+  cursor: pointer;
+  border: none;
+  width: 3rem;
+  padding: 0;
+  margin: 0;
+  /* background-color: hsl(220, 100%, 62.5%); */
+  background-color: var(--primary-color);
+  color: var(--primary-color-text-title);
+}
+.search-bar .search-bar-btn img {
+  margin: 8px;
+  filter: invert(100%);
+}
+
 @media (min-width: 1400px) {
   .container > :first-child {
     padding-left: 0px;
   }
-  .container > :last-child {
+  .container > :last-child:not(a.btn) {
     padding-right: 0px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   body {
     width: auto;
   }
+
   .container {
     width: auto;
     padding-left: 16px;
     padding-right: 16px;
   }
-
+}
+@media (max-width: 1200px) {
   .hide-on-mobile {
     display: none;
   }
@@ -910,6 +1075,12 @@ pre > code {
     text-align: center;
   }
   #sitemap {
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 0;
+  }
+  #sitemap .sitemap-group {
     margin-top: 32px;
     margin-left: 0;
   }
@@ -942,46 +1113,20 @@ pre > code {
   }
 }
 
-@media (min-width: 901px) {
-  .nav-dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 12rem;
-    background-color: var(--navbar-background-color);
-    box-shadow: 0 0.5rem 0.5rem 0 hsla(0, 0%, 0%, 0.2);
-    margin-top: 1.125rem;
-    z-index: 1;
-  }
-
-  .nav-dropdown-content li a {
-    display: inline-block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: calc(100% - 2rem);
-  }
-
-  .nav-dropdown:hover .nav-dropdown-content {
-    display: block;
-  }
-}
-
 .showcase-card {
   /* Display a placeholder color while the card's background image is loading. */
   background-color: #607080 !important;
   background-size: cover;
   background-position: center;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   color: hsl(0, 0%, 100%);
   height: 16rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .showcase-cards a {
@@ -1011,4 +1156,77 @@ pre > code {
   text-align: center;
   opacity: 0.75;
   margin-top: 2rem;
+}
+
+.teams-team-section {
+  background-color: var(--teams-odd-color);
+  padding: 20px 16px;
+  margin: 40px 0;
+}
+
+.teams-team-section:nth-of-type(2n) {
+  background-color: var(--teams-even-color);
+}
+.teams-team-section + .teams-team-section {
+  margin-top: 8px;
+}
+
+.teams-team-section > h4 {
+  margin-top: 0;
+}
+
+.teams-subteams {
+  background-color: var(--teams-subteams-color);
+  border-left: 6px solid var(--accent-color);
+  padding: 4px 10px;
+  margin-top: 30px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.teams-subteams th {
+  padding: 16px;
+  border-right: 1px dashed var(--table-divider-color);
+}
+
+.teams-subteams td {
+  padding: 16px 0 16px 12px;
+}
+
+.teams-subteams th,
+.teams-subteams td {
+  border-bottom: 1px dashed var(--table-divider-color);
+  border-collapse: collapse;
+}
+
+.teams-subteams tr:last-of-type td,
+.teams-subteams tr:last-of-type th {
+  border-bottom: 0;
+}
+
+.teams-subteam-name {
+  text-align: left;
+  width: 25%;
+}
+
+.teams-subteam-leader:before {
+  content: "⭐ ";
+}
+
+.teams-subteam-leader {
+  font-weight: 700;
+}
+
+.teams-subteam-leader,
+.teams-subteam-members {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.rounded {
+  border-radius: 0.25rem; /* 4px */
+}
+
+.rounded-lg {
+  border-radius: 0.5rem; /* 8px */
 }

@@ -108,6 +108,7 @@ categoryPage = "article"
           width="{{ post.featured_images[0].width }}"
           height="{{ post.featured_images[0].height }}"
           alt="{{ post.featured_images[0].title }} {{ post.featured_images[0].description }}"
+          class="rounded-lg"
           style="width: 100%; height: auto"
         />
         <figcaption style="opacity: 0.8; line-height: 1.5">
@@ -127,6 +128,12 @@ categoryPage = "article"
           By: {{ post.user.full_name }}
           <span class="date"> {{ post.published_at|date('j F Y') }}</span>
         </h4>
+
+        <div class="tags">
+          {% for category in post.categories %}
+            <a href="/news/{{ category.slug }}/{{ blogPosts.posts.currentPage }}" title="{{ category.description }}"><div class="tag">{{ category.name }}</div></a>
+          {% endfor %}
+        </div>
       </div>
 
       {{ post.content_html|raw }}
