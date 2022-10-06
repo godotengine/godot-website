@@ -65,7 +65,7 @@ To start contributing, please follow this [Local development setup](DEVELOPMENT_
 
 If you use Visual Studio Code, you can install the
 [OctoberCMS Template Language](https://marketplace.visualstudio.com/items?itemName=dqsully.octobercms-template-language)
-extension to benefit from syntax highlighting in `.htm` templates.
+extension to benefit from syntax highlighting in `.html` templates.
 
 ## Resources
 
