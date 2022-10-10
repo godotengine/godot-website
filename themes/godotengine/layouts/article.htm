@@ -30,6 +30,7 @@ categoryPage = "article"
   pre {
     background: var(--codeblock-background-color);
     color: var(--codeblock-color);
+    border-radius: 0.5rem;
   }
 
   pre code {
@@ -55,6 +56,14 @@ categoryPage = "article"
     margin: auto;
     margin-top: 16px;
     margin-bottom: 16px;
+    border-radius: 0.5rem;
+  }
+
+  article iframe {
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
   }
 
   article img:first-child, article video:first-child {
@@ -67,6 +76,7 @@ categoryPage = "article"
 
   article h2, article h3, article h4 {
     margin-top: 42px;
+    word-break: break-word;
   }
 
   .author {
