@@ -48,6 +48,14 @@ categoryPage = "article"
     box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
   }
 
+  figure {
+    margin: 0;
+  }
+
+  figure img {
+    margin: 0;
+  }
+
   article img, article video {
     max-width: 100%;
     height: auto;
@@ -101,7 +109,7 @@ categoryPage = "article"
   <article class="flex padded">
     <div class="content content-article">
       {# Lightbox elements and classes are added to all images via JavaScript. #}
-      <figure style="text-align: center">
+      <figure>
         <img
           src="{{ post.featured_images[0].path }}"
           title="{{ post.featured_images[0].title }}"
