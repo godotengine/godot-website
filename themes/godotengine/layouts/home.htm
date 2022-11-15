@@ -85,6 +85,12 @@ postPage = "{{ :slug }}"
     height: 100%;
   }
 
+  #sponsors .silver .sponsor {
+    background-color: var(--sponsor-silver-background-color);
+    border-color: var(--sponsor-silver-background-color);
+    height: 68px;
+  }
+
   #sponsors .gold .sponsor {
     background-color: var(--sponsor-gold-background-color);
     border-color: var(--sponsor-gold-background-color);
@@ -505,6 +511,11 @@ Make sure to update this gradient when the home background image is changed.
       </a>
       <a class="sponsor card" href="http://robotgentleman.com/" target="_blank" rel="noopener">
         <img src="{{ 'assets/home/sponsors/robot-gentleman.png' | theme }}" width="120" height="103" alt="Robot Gentleman" loading="lazy">
+      </a>
+    </div>
+    <div class="silver flex">
+      <a class="sponsor card" href="https://developers.join-striked.com/home" target="_blank" rel="noopener">
+        <img src="{{ 'assets/home/sponsors/striked.png' | theme }}" width="171" height="40" alt="Striked" loading="lazy">
       </a>
     </div>
   </div>
