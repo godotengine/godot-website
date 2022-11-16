@@ -776,10 +776,20 @@ p.small {
 
 .tag {
   display: inline-block;
-  border-radius: 1000px;
   background-color: var(--card-background-color);
+  border-radius: 1000px;
+  box-shadow: var(--base-shadow);
+  filter: saturate(0.35);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   padding: 0.25rem 0.75rem;
   margin: 0.1rem;
+  opacity: 0.8;
+}
+
+.tag.active {
+  filter: saturate(1);
+  opacity: 1;
 }
 
 .card {

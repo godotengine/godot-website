@@ -73,14 +73,12 @@ description = "News layout"
     <a
       href="/news/default/{{ blogPosts.posts.currentPage }}"
       title="Show all categories"
-      {% if blogCategories.currentCategorySlug == "default" or blogCategories.currentCategorySlug == "" %} style="font-weight: bold" {% endif %}
-    ><div class="tag">All</div></a>
+    ><div class="tag tag--default {% if blogCategories.currentCategorySlug == "default" or blogCategories.currentCategorySlug == "" %} active {% endif %}">All</div></a>
     {% for category in blogCategories.categories %}
       <a
         href="/news/{{ category.slug }}/{{ blogPosts.posts.currentPage }}"
         title="{{ category.description }}"
-        {% if category.slug == blogCategories.currentCategorySlug %} style="font-weight: bold" {% endif %}
-      ><div class="tag">{{ category.name }}</div></a>
+      ><div class="tag tag--{{ category.slug }} {% if category.slug == blogCategories.currentCategorySlug %} active {% endif %}">{{ category.name }}</div></a>
     {% endfor %}
   </div>
 
