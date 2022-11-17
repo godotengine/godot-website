@@ -78,6 +78,10 @@ categoryPage = "article"
     margin-bottom: 64px;
   }
 
+  .tag.active {
+    filter: saturate(0.75);
+  }
+
   @media screen and (min-width: 900px) {
     article .content {
       width: 70%;
@@ -135,7 +139,7 @@ categoryPage = "article"
 
         <div class="tags">
           {% for category in post.categories %}
-            <a href="/news/{{ category.slug }}/{{ blogPosts.posts.currentPage }}" title="{{ category.description }}"><div class="tag">{{ category.name }}</div></a>
+            <a href="/news/{{ category.slug }}/{{ blogPosts.posts.currentPage }}" title="{{ category.description }}"><div class="tag active">{{ category.name }}</div></a>
           {% endfor %}
         </div>
       </div>
