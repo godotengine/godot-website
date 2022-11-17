@@ -15,13 +15,13 @@ is_hidden = 0
   </p>
 
   {# 2 columns at most (instead of 4). #}
-  <section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(427px, 1fr))">
+  <section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
     <article>
       <div class="card youtube">
         <iframe
           width="854"
           height="480"
-          src="https://www.youtube-nocookie.com/embed/iAceTF0yE7I"
+          src="https://www.youtube-nocookie.com/embed/UAS_pUTFA7o"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -34,7 +34,20 @@ is_hidden = 0
         <iframe
           width="854"
           height="480"
-          src="https://www.youtube-nocookie.com/embed/BhwMSfX-8iw"
+          src="https://www.youtube-nocookie.com/embed/xF3QiQfQxeQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </article>
+
+    <article>
+      <div class="card youtube">
+        <iframe
+          width="854"
+          height="480"
+          src="https://www.youtube-nocookie.com/embed/9kKp0oguzr8"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -51,6 +64,15 @@ is_hidden = 0
   {# 3 columns at most (instead of 4). #}
   {# Projects are sorted from most recent to least recent release date. #}
   <section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+    {%
+      partial "showcase/list-item"
+      title="Cruelty Squad"
+      author="Consumer Softproducts"
+      platforms="windows"
+      slug="cruelty-squad"
+      image="cruelty-squad.jpg"
+      placeholder="linear-gradient(90deg, #b5c1d8 2%, #a8b5d5 9%, #707473 47%, #666a6a 57%)"
+    %}
     {%
       partial "showcase/list-item"
       title="Kingdoms of the Dump"
