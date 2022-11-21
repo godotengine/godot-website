@@ -1,0 +1,19 @@
+name: Yearly update security.txt
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 11 *"
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  create-issue:
+    name: Create issue
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Create issue
+        run: |
+          gh issue create --repo '${{ github.repository }}' --title 'Update `security.txt` expiration date' --body 'This is the yearly reminder to update `.well-known/security.txt`'
