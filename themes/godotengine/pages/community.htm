@@ -32,7 +32,6 @@ is_hidden = 0
   }
 
   #user-groups {
-    margin-bottom: 16px;
     background-color: var(--dark-color);
     color: var(--dark-color-text);
   }
@@ -46,7 +45,6 @@ is_hidden = 0
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 16px;
     padding: 0;
   }
 
@@ -79,6 +77,11 @@ is_hidden = 0
   .extras .card {
     height: auto;
     flex: 1;
+    margin-bottom: 16px;
+  }
+
+  .extras .card:last-child {
+    margin-bottom: 0;
   }
 
   @media (max-width: 600px) {
@@ -323,7 +326,7 @@ is_hidden = 0
   </div>
 
   <div class="extras">
-    <a href="https://web.libera.chat/#godotengine" class="card base-padding" id="events">
+    <a href="https://web.libera.chat/#godotengine" class="card base-padding">
       <h3>IRC</h3>
       <p>
         Old-fashioned but reliable chat platform. Significantly less active than Discord. <span style="font-family: monospace; opacity: 0.7;">#godotengine@libera.chat</span>
