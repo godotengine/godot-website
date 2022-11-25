@@ -7,43 +7,62 @@ description = "News layout"
 {% partial "header" selected="news" %}
 
 <style>
-  .news-item {
-    margin-bottom: 16px;
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-
-  .news-item .image {
-    height: inherit;
-    flex: 1;
-  }
-
-  .news-item .content {
-    flex: 4;
-  }
-
-  .news-item .title {
-    margin-top: 0px;
-    margin-bottom: 8px;
-    text-transform: none;
-  }
-
-  .news-item .title a {
-    text-decoration: none;
-    color: var(--base-color-text-title);
-  }
-
-  .news-item .content .date {
-    flex: 1;
-    text-align: right;
-  }
-
-  .news-item .date-big {
-    line-height: .75;
-  }
-
-  @media (max-width: 900px) {
-    .news-item .content .date {
-      text-align: left;
+  @media (min-width: 768px) {
+    .posts {
+      grid-template-columns: 1fr 1fr;
     }
+  }
+  @media (min-width: 1024px) {
+    .posts {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  article p.excerpt {
+    color: var(--base-color-text);
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 0;
+  }
+  article h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  article .thumbnail {
+    aspect-ratio: 16 / 9;
+    border-radius: 7px;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--card-background-color);
+    box-shadow: 0 5px 10px -3px #00000078;
+  }
+  article .info {
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 32px;
+  }
+  article .info .avatar {
+    border-radius: 100%;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+  }
+  article .info span {
+    font-size: 14px;
+    color: var(--secondary-color-text);
   }
 </style>
 
@@ -54,6 +73,7 @@ description = "News layout"
     </div>
   </div>
 </div>
+
 
 <div class="container">
   {#
@@ -91,30 +111,34 @@ description = "News layout"
 
   {% partial "pagination" %}
 
-  {% set posts = blogPosts.posts %}
-  {% for post in posts %}
-    <a href="{{ 'article'|page({ slug: post.slug }) }}" style="text-decoration: none">
-      <div class="news-item flex card responsive">
-        <div
-          class="image"
-          style="background-image: url('{{ post.featured_images[0].thumb(400, { extension: 'jpg' }) }}'); background-size: cover; background-color: white"
-          href="{{ 'article'|page({ slug: post.slug }) }}"
-        ></div>
-        <div class="content base-padding flex">
-          <div class="brief">
-            <h3 class="title">
-              {{ post.title }}
-            </h3>
-            <h4 class="author">
-              By: {{ post.user.full_name }}
-              <span class="date">{{ post.published_at|date('j F Y') }}</span>
-            </h4>
-            <p>{{ post.excerpt |raw }}</p>
+  <div class="posts">
+    {% set posts = blogPosts.posts %}
+    {% for post in posts %}
+      <a href="{{ 'article'|page({ slug: post.slug }) }}" style="text-decoration: none">
+        <article>
+          <div
+            class="thumbnail"
+            style="background-image: url('{{ post.featured_images[0].thumb(400, { extension: 'jpg' }) }}');"
+            href="{{ 'article'|page({ slug: post.slug }) }}"
+          ></div>
+          <div class="content">
+            <div class="info">
+              {% if post.user.avatar %}
+              {# We display it at 25x25, but load it at a higher scale to avoid too much compression. #}
+              <img class="avatar" width="25" height="25" src="{{ post.user.avatar.getThumb(40, 40, { mode: 'crop' }) }}" alt="">
+              {% else %}
+              <img class="avatar" width="25" height="25" src="{{ 'assets/default_avatar.svg'|theme }}" alt="">
+              {% endif %}
+              <span class="by">{{ post.user.full_name }} </span>
+              <span class="date">&nbsp;-&nbsp;{{ post.published_at|date('j F Y') }}</span>
+            </div>
+            <h3>{{ post.title }}</h3>
+            <p class="excerpt">{{ post.excerpt |raw }}</p>
           </div>
-        </div>
-      </div>
-    </a>
-  {% endfor %}
+        </article>
+      </a>
+    {% endfor %}
+  </div>
 
   {% partial "pagination" %}
 </div>
