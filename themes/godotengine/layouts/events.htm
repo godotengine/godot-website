@@ -7,6 +7,10 @@ description = "Events layout"
 {% partial "header" %}
 
 <style>
+  #past {
+    margin-top: 30px;
+  }
+
   .events {
     display: grid;
     grid-template-columns: 360px 1fr;
@@ -70,8 +74,13 @@ description = "Events layout"
     max-width: 640px;
   }
 
-  .events .events-fulllist > p {
-    margin-top: 0;
+  .events .events-fulllist .events-empty {
+    background-color: var(--background-color);
+    border: none;
+  }
+
+  .events .events-fulllist .events-empty:hover {
+    box-shadow: none;
   }
 
   @media screen and (max-width: 900px) {
@@ -95,10 +104,7 @@ description = "Events layout"
   <div class="container flex eqsize responsive">
     <div class="main">
       <h1 class="intro-title">Events</h1>
-    </div>
-    <div class="tabs">
-      <a href="/events/" class="title-font {% if this.page.id == 'events' %} active {% endif %}">Upcoming</a>
-      <a href="/events/past" class="title-font {% if this.page.id == 'events-past' %} active {% endif %}">Past</a>
+      {% placeholder head_text %}
     </div>
   </div>
 </div>
