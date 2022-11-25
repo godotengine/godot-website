@@ -14,7 +14,6 @@ module.exports = {
         "http://localhost:8000/community",
         "http://localhost:8000/community/user-groups",
         "http://localhost:8000/events",
-        "http://localhost:8000/events/past",
 
         "http://localhost:8000/download/linux",
         "http://localhost:8000/download/osx",
@@ -27,6 +26,7 @@ module.exports = {
 
         // Pages under the "More" navbar link.
         "http://localhost:8000/contact",
+        "http://localhost:8000/teams",
         "http://localhost:8000/donate",
         "http://localhost:8000/code-of-conduct",
         "http://localhost:8000/privacy-policy",

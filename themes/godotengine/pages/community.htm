@@ -43,7 +43,31 @@ is_hidden = 0
   }
 
   #events {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 16px;
+    padding: 0;
+  }
+
+  #events > div {
+    padding: 16px;
+  }
+
+  #events .events-upcoming {
+    background-color: var(--transparent-cover-darker);
+    color: var(--dark-color-text-title);
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+    text-align: right;
+  }
+
+  #events .events-upcoming span:nth-child(2) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 120%;
+    margin-top: 24px;
   }
 
   .extras {
@@ -73,8 +97,15 @@ is_hidden = 0
       <p>Find local Godot user groups run by community members.</p>
     </a>
     <a href="/events" class="card base-padding" id="events">
-      <h3>Events</h3>
-      <p>Upcoming community events.</p>
+      <div>
+        <h3>Events</h3>
+        <p>Upcoming community and past events.</p>
+      </div>
+      <div class="events-upcoming">
+        <span>Next event:</span>
+        <span>Godot @ GDC 2023</span>
+        <span>20-24 March 2023</span>
+      </div>
     </a>
     <a href="https://docs.godotengine.org/en/stable/community/tutorials.html" class="card base-padding">
       <h3>Tutorials</h3>
@@ -290,7 +321,7 @@ is_hidden = 0
       </div>
     </div>
   </div>
-  
+
   <div class="extras">
     <a href="https://web.libera.chat/#godotengine" class="card base-padding" id="events">
       <h3>IRC</h3>
