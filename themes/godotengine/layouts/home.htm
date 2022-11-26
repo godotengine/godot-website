@@ -39,10 +39,6 @@ postPage = "{{ :slug }}"
     margin-top: 48px;
   }
 
-  .main-download .btn.download {
-    margin-top: 0;
-  }
-
   #donations {
     background-color: var(--dark-color);
     color: var(--dark-color-text);
@@ -136,6 +132,10 @@ postPage = "{{ :slug }}"
 
   #news .news-list {
     padding: 0 20px;
+  }
+
+  #news .news-list hr {
+    border-top-color: rgba(0, 0, 0, 0.05);
   }
 
   #news .news-shortitem {
@@ -262,10 +262,10 @@ Make sure to update this gradient when the home background image is changed.
       </p>
 
       <div class="main-download">
-        <a href="/download" class="btn download">
-          <div class="main">Download</div><div class="opt">{% include('version') with {'key': 'identifier'} %}</div>
+        <a href="/download" class="btn btn-download">
+          <div class="download-title">Download</div><div class="download-hint">{% include('version') with {'key': 'identifier'} %}</div>
         </a>
-        <a href="/features" class="btn flat btn-white-text">Learn more</a>
+        <a href="/features" class="btn btn-flat btn-flat-white">Learn more</a>
       </div>
     </div>
 
@@ -305,7 +305,7 @@ Make sure to update this gradient when the home background image is changed.
         {% endfor %}
       </div>
       <div class="base-padding" style="text-align: right;">
-        <a href="/news/default/1" class="btn flat no-margin">More</a>
+        <a href="/news/default/1" class="btn btn-flat no-margin">More</a>
       </div>
     </div>
 
@@ -451,7 +451,7 @@ Make sure to update this gradient when the home background image is changed.
       <p>
         If you know how to code, you can help by fixing bugs and working with engine contributors towards the implementation of new features.
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn flat" target="_blank" rel="noopener">Learn more</a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn btn-flat" target="_blank" rel="noopener">Learn more</a>
     </div>
 
     <div class="text-center base-padding">
@@ -460,7 +460,7 @@ Make sure to update this gradient when the home background image is changed.
       <p>
         Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn flat" target="_blank" rel="noopener">Learn more</a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn btn-flat" target="_blank" rel="noopener">Learn more</a>
     </div>
 
     <div class="text-center base-padding">
@@ -469,7 +469,7 @@ Make sure to update this gradient when the home background image is changed.
       <p>
         Found a problem with the engine? Don't forget to report it so that developers can track it down.
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn flat" target="_blank" rel="noopener">Learn more</a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn btn-flat" target="_blank" rel="noopener">Learn more</a>
     </div>
 
   </div>
@@ -483,7 +483,7 @@ Make sure to update this gradient when the home background image is changed.
       You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot&nbsp;Engine even more awesome!
     </p>
 
-    <a href="/donate" class="btn flat btn-white-text">Learn more</a>
+    <a href="/donate" class="btn btn-flat btn-flat-white">Learn more</a>
   </div>
 </section>
 

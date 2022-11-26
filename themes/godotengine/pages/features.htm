@@ -35,6 +35,10 @@ is_hidden = 0
     padding-top: 32px;
     padding-bottom: 42px;
   }
+
+  #call-to-action .btn.btn-download {
+    margin-top: 32px;
+  }
 </style>
 
 <section id="design" style="margin-top: 24px">
@@ -280,11 +284,11 @@ is_hidden = 0
     <h2 class="text-center" style="color: white; width: 100%">Ready to start?</h2>
     <p class="text-center" style="color: white; margin-bottom: -0.5rem">Download Godot and try it out today!</p>
     <div class="text-center">
-      <a href="/download" class="btn download">
-        <div class="main">Download</div><div class="opt">{% include('version') with {'key': 'identifier'} %}</div>
+      <a href="/download" class="btn btn-download">
+        <div class="download-title">Download</div><div class="download-hint">{% include('version') with {'key': 'identifier'} %}</div>
       </a>
       <br>
-      <a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn flat btn-white-text">Complete list of features</a>
+      <a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn btn-flat btn-flat-white">Complete list of features</a>
     </div>
   </div>
 </section>

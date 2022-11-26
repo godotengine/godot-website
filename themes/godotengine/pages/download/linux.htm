@@ -11,13 +11,13 @@ is_hidden = 0
 {##}
 {% set stable_version = include('version', {'key': 'identifier'}) %}
 {% put downloads %}
-  <div class="btn split download">
+  <div class="btn btn-version-download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_x11.64.zip">
       64-bit (x86_64)
     </a>
   </div>
 
-  <div class="btn split download">
+  <div class="btn btn-version-download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/Godot_v{{stable_version}}-stable_x11.32.zip">
       32-bit (x86)
     </a>
@@ -26,12 +26,12 @@ is_hidden = 0
 
 
 {% put mono_downloads %}
-  <div class="btn split download">
+  <div class="btn btn-version-download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_x11_64.zip">
       64-bit (x86_64)
     </a>
   </div>
-  <div class="btn split download">
+  <div class="btn btn-version-download">
     <a href="https://downloads.tuxfamily.org/godotengine/{{stable_version}}/mono/Godot_v{{stable_version}}-stable_mono_x11_32.zip">
       32-bit (x86)
     </a>

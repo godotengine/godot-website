@@ -9,33 +9,20 @@ description = "Download layout"
 {% set stable_version_date = include('version', {'key': 'date'}) %}
 
 <style>
-  .btn.download {
+  .btn.btn-version-download {
+    background-color: var(--primary-color);
     color: white;
+    display: inline-flex;
+    flex-basis: content;
+    padding: 0px;
     margin-bottom: 8px;
   }
 
-  .btn.download a {
+  .btn.btn-version-download a {
     color: white;
     text-decoration: none;
-  }
-
-  .btn.split {
-    display: inline-flex;
-    flex-basis: content;
-  }
-
-  .btn.split > a {
     padding: 10px 20px;
     width: auto;
-  }
-
-  .btn.split > :first-child {
-    background-color: var(--primary-color);
-  }
-
-  .btn.split > :nth-child(2n) {
-    background-color: transparent;
-    color: var(--dark-color);
   }
 
   .digital-stores {
@@ -68,9 +55,9 @@ description = "Download layout"
 
   .digital-stores-name {
     color: var(--base-color-text-hl);
-    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
     font-weight: 600;
-    text-transform: uppercase;
     padding: 8px 16px;
   }
 
@@ -100,6 +87,10 @@ description = "Download layout"
 
   .version-overview img {
     filter: drop-shadow(var(--base-shadow));
+  }
+
+  .platform-details hr {
+    border-top-color: rgba(0, 0, 0, 0.15);
   }
 
   .platform-details pre {
