@@ -260,6 +260,11 @@ h4 {
   font-size: 22px;
 }
 
+hr {
+  border: none;
+  border-top: 2px solid var(--base-color-text);
+}
+
 .intro-title {
   margin-top: 48px;
   margin-bottom: 48px;
@@ -708,39 +713,34 @@ p.small {
   text-decoration: none;
   font-weight: bold;
 }
-
 .btn:hover {
   box-shadow: var(--more-shadow);
 }
 
-.btn.flat {
+.btn.btn-flat {
   box-shadow: none;
   background-color: transparent;
   color: var(--link-color);
   margin: 16px 32px 16px 32px;
 }
-
-.btn.flat:hover {
+.btn.btn-flat:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
-
-.btn.flat.btn-white-text {
+.btn.btn-flat.btn-flat-white {
   color: hsla(0, 0%, 100%, 0.95);
 }
 
-.btn.download {
-  padding: 0px;
-  margin-top: 48px;
-}
-
-.btn.download > .main {
+.btn.btn-download {
   background-color: white;
+  padding: 0px;
+  text-align: center;
+}
+.btn.btn-download > .download-title {
   color: var(--dark-color);
   display: inline-block;
   padding: 16px 32px 16px 32px;
 }
-
-.btn.download > .opt {
+.btn.btn-download > .download-hint {
   background-color: var(--primary-color);
   color: var(--primary-color-text-title);
   display: inline-block;
@@ -798,14 +798,12 @@ p.small {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
-.card hr {
-  border-color: rgba(0, 0, 0, 0.05);
-}
-.card .footer {
-  background-color: var(--card-footer-color);
-}
 .card:hover {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.card .footer {
+  background-color: var(--card-footer-color);
 }
 
 a.card {
