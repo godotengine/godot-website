@@ -20,6 +20,8 @@
   --primary-color-text-title: white;
   --accent-color: #f57389;
 
+  --secondary-color-text: #546b99;
+
   --link-color: hsl(206, 58%, 50%);
   --link-underline-color: hsla(206, 58%, 50%, 0.3);
   --navbar-link-color: var(--dark-color);
@@ -88,6 +90,8 @@
     --primary-color-text-hl: white;
     --primary-color-text-title: white;
     --accent-color: #5b5491;
+
+    --secondary-color-text: #a6a6a6;
 
     --link-color: hsl(200, 60%, 70%);
     --link-underline-color: hsla(200, 60%, 70%, 0.3);
@@ -772,6 +776,11 @@ p.small {
 .tags {
   margin-top: -3rem;
   margin-bottom: 3rem;
+}
+
+.tags > a {
+  border-radius: 1000px;
+  display: inline-block;
 }
 
 .tag {
