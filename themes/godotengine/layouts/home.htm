@@ -2,7 +2,7 @@ description = "home layout"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 7
+postsPerPage = 4
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "home"
@@ -16,25 +16,6 @@ postPage = "{{ :slug }}"
 {% set posts = blogPosts.posts %}
 
 <style>
-  #main_message {
-    background-color: var(--dark-color);
-    position: relative;
-  }
-
-  #main_message .container {
-    overflow: initial;
-  }
-
-  .full-graphic {
-    padding-bottom: 0px;
-  }
-
-  .full-graphic > img {
-    width: auto;
-    max-width: 50vw;
-    height: 100%;
-  }
-
   .main-download {
     margin-top: 48px;
   }
@@ -98,62 +79,13 @@ postPage = "{{ :slug }}"
     height: 100px;
   }
 
-  .feature, #highlight {
-    position: relative;
-  }
-
-  #highlight {
-    background-size: cover;
-    background-position: center;
-    background-color: var(--base-color);
-    border-radius: 4px 0 0 4px;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-  }
-
-  #highlight .highlight-cover {
-    border-radius: 4px 0 0 0;
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    min-height: 250px;
-  }
-
-  #highlight .highlight-details {
-    border-radius: 0 0 0 4px;
-  }
-
-  #highlight .highlight-title {
-    text-decoration: underline;
-    text-decoration-color: var(--link-underline-color);
-    text-decoration-thickness: 0.125rem;
-  }
-
-  #news .news-list {
-    padding: 0 20px;
-  }
-
-  #news .news-list hr {
-    border-top-color: rgba(0, 0, 0, 0.05);
-  }
-
-  #news .news-shortitem {
-    color: var(--base-color-text);
-    padding: 2px 2px;
-  }
-
-  #news .news-shortitem:hover {
-    color: var(--base-color-text-hl);
-  }
-
   .feature-link {
     text-decoration: none;
   }
 
   .features-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
 
@@ -181,6 +113,7 @@ postPage = "{{ :slug }}"
   }
 
   .feature {
+    position: relative;
     overflow: hidden;
     transition: transform 200ms ease-in-out;
     height: 100%;
@@ -232,83 +165,139 @@ postPage = "{{ :slug }}"
       border-radius: 0;
     }
   }
+
+  .news-list .button-container {
+    text-align: right;
+  }
+  @media (max-width: 768px) {
+    .news-list .button-container {
+      text-align: left;
+    }
+  }
+
+  header {
+    box-shadow: none;
+    margin-bottom: -70px;
+    background-color: transparent;
+  }
+
+  /* Overwriting nav style */
+  nav#nav a {
+    color: white;
+  }
+  nav#nav .fund a {
+    color: var(--fund-color);
+    background-color: var(--base-color);
+  }
+  .nav-logo {
+    display: none;
+  }
+  .nav-logo.dark-logo {
+    display: block;
+  }
+  #nav_toggle_btn {
+    filter: invert(100%) saturate(0%) brightness(120%);
+  }
+  @media (max-width: 1200px) {
+    nav#nav a {
+      color: var(--navbar-link-color);
+    }
+    nav#nav .fund a {
+      position: relative;
+      top: -8px;
+      padding-top: 17px;
+    }
+    input#nav_toggle_cb:checked ~ #nav_head #nav_toggle_btn  {
+      filter: none;
+    }
+    input#nav_toggle_cb:checked ~ #nav_head .nav-logo {
+      display: block;
+    }
+    input#nav_toggle_cb:checked ~ #nav_head .nav-logo.dark-logo {
+      display: none;
+    }
+  }
+  @media (min-width: 1200px) {
+    nav#nav .fund {
+      margin-right: 0px;
+    }
+    nav#nav .fund a {
+      color: var(--fund-color);
+      background-color: var(--base-color);
+      border-radius: 9px;
+      box-shadow: inset 0 0 0 2px var(--fund-color);
+      padding: 13px;
+    }
+  }
 </style>
 
 {#
 Use placeholder background to show while the image is loading. This improves perceived performance.
 Make sure to update this gradient when the home background image is changed.
 #}
-<div style="background: linear-gradient(90deg, #6a515c 2%, #4d253c 14%, #5d4753 31%, #6c4448 53%, #3b2847 86%, #3c2848 93%)">
-  <div class="main-image" style="position: relative">
-    <div class="main-image-text">
-      <a href="https://kivano.games/"><i>TailQuest: Defense</i> by Kivano Games</a>
-    </div>
-  </div>
-</div>
 
-<section id="main_message" class="dark">
-  <div class="container flex eqsize responsive">
-
-    <div class="padded">
-      <h2>The game engine you've been waiting&nbsp;for.</h2>
-      <p>
-        Godot provides a huge set of common tools, so you can just focus on
-        making your game without reinventing the wheel.
-      </p>
-      <p>
-        Godot is completely free and open-source under the very permissive MIT license.
-        No strings attached, no royalties, nothing.
-        Your game is yours, down to the last line of engine code.
-      </p>
+<section class="hero">
+  <div class="background-image" style="background-image: url()"></div>
+  <div class="wrapper">
+    <div class="copy container">
+      <h1>The game engine you've been waiting&nbsp;for.</h1>
+      <p>The Godot Engine is an all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games.</p>
 
       <div class="main-download">
         <a href="/download" class="btn btn-download">
           <div class="download-title">Download</div><div class="download-hint">{% include('version') with {'key': 'identifier'} %}</div>
         </a>
-        <a href="/features" class="btn btn-flat btn-flat-white">Learn more</a>
+        <a href="/features" class="btn btn-flat btn-flat-white" style="background: #6f6f6f82;">Learn more</a>
       </div>
     </div>
-
-    <div class="base-padding full-graphic text-right">
-      <img src="{{ 'assets/home/graphic.svg' | theme }}" width="460" height="441" alt="">
-    </div>
-
+  </div>
+  <div class="credits">
+    <a href="" target="_blank"><span class="game"></span> <span class="by" style="opacity: 0.6;"></span></a>
   </div>
 </section>
 
-<section id="news_and_highlights" class="container padded">
-  <div class="flex eqsize responsive card" style="border-radius: 4px;">
+<section class="container padded">
+  <h2>Latest news</h2>
+  <div class="flex eqsize responsive" style="gap: 30px;">
 
-    <a id="highlight" href="{{ 'article' | page({ slug: posts[0].slug }) }}">
-      <div
-        class="highlight-cover"
-        style="background-image: url({{ posts[0].featured_images[0].path }});"
-        title="{{ posts[0].featured_images[0].title }}"
-        alt="{{ posts[0].featured_images[0].title }} {{ posts[0].featured_images[0].description }}"
-      ></div>
-      <div class="highlight-details dark base-padding">
-        <h4 class="highlight-title no-margin">{{ posts[0].title }}</h4>
-        <p class="highlight-summary hide-on-mobile">{{ str_limit(posts[0].excerpt, 200) | raw }}</p>
-      </div>
+    <a href="{{ 'article'|page({ slug: posts[0].slug }) }}" style="text-decoration: none">
+      <article class="article-card">
+        <div
+          class="thumbnail"
+          style="background-image: url('{{ posts[0].featured_images[0].path }}');"
+          href="{{ 'article'|page({ slug: posts[0].slug }) }}"
+        ></div>
+        <div class="content">
+          <h3>{{ posts[0].title }}</h3>
+          <p class="excerpt">{{ posts[0].excerpt |raw }}</p>
+        </div>
+      </article>
     </a>
 
-    <div id="news">
-      <h3 class="base-padding no-margin-bottom" style="text-align: center;">News</h3>
-      <div class="news-list">
+    <div class="news-list">
+      <div style="display: grid; gap: 18px;">
         {% for post in posts %}
-        {% if post != posts[0] %}
-        <a class="news-shortitem" href="{{ 'article'|page({ slug: post.slug }) }}">
-          <strong>· {{ post.title }}</strong>
-        </a>
-        <hr>
-        {% endif %}
+          {% if post != posts[0] %}
+            <a href="{{ 'article'|page({ slug: post.slug }) }}" style="text-decoration: none;">
+              <article class="article-card row">
+                <div 
+                  class="thumbnail"
+                  style="background-image: url('{{ post.featured_images[0].path }}');"
+                  href="{{ 'article'|page({ slug: post.slug }) }}"
+                ></div>
+                <div>
+                  <h3>{{ post.title }}</h3>
+                  <p class="excerpt">{{ str_limit(post.excerpt, 100) |raw }}</p>
+                </div>
+              </article>
+            </a>
+          {% endif %}
         {% endfor %}
-      </div>
-      <div class="base-padding" style="text-align: right;">
-        <a href="/news/default/1" class="btn btn-flat no-margin">More</a>
+        <div class="button-container">
+          <a href="/news/default/1" class="btn no-margin">More News</a>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -522,5 +511,4 @@ Make sure to update this gradient when the home background image is changed.
 </section>
 
 {% partial "footer" %}
-
 </html>
