@@ -126,6 +126,7 @@ categoryPage = "article"
       </figure>
 
       <div class="info">
+      {% set posts = blogPosts.posts %}
         <h1>
           {% if not post.published or post.published_at > date() %}
           <a href="/backend/rainlab/blog/posts/update/{{ post.id }}#secondarytab-rainlabbloglangposttab-manage" data-barba-prevent><abbr title="This article isn't marked as published on the CMS backend, or its publication date is set in the future. To make it display publicly, go to the post's Manage page, check Published and set a publication date in the past.">[UNPUBLISHED]</abbr></a>
@@ -145,6 +146,17 @@ categoryPage = "article"
       </div>
 
       {{ post.content_html|raw }}
+      {% if posts > 1 %}
+        <a class="pagination-previous" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Previous</a>
+      {% else %}
+        <div class="pagination-previous pagination-disabled">&larr; Previous</div>
+      {% endif %}
+
+      {% if posts.lastPage > posts.currentPage %}
+        <a class="pagination-next" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a>
+      {% else %}
+        <div class="pagination-next pagination-disabled">Next &rarr;</div>
+      {% endif %}
     </div>
   </article>
 </div>
