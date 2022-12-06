@@ -146,7 +146,8 @@ categoryPage = "article"
       </div>
 
       {{ post.content_html|raw }}
-      {% if posts > 1 %}
+
+      {% if posts.currentPage > 1 %}
         <a class="pagination-previous" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Previous</a>
       {% else %}
         <div class="pagination-previous pagination-disabled">&larr; Previous</div>

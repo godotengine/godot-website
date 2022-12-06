@@ -3,4 +3,14 @@ url = "/article/:slug"
 layout = "article"
 description = "Article page"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 24
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "article"
+postPage = "article"
+
 ==
