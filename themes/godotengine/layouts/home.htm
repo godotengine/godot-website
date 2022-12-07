@@ -180,6 +180,11 @@ postPage = "{{ :slug }}"
     margin-bottom: -70px;
     background-color: transparent;
   }
+  @media (max-width: 1200px) {
+    input#nav_toggle_cb:checked ~ header {
+      background-color: var(--navbar-background-color);
+    }
+  }
 
   /* Overwriting nav style */
   nav#nav a {
@@ -193,32 +198,27 @@ postPage = "{{ :slug }}"
     display: none;
   }
   .nav-logo.dark-logo {
-    display: block;
+    display: inline;
   }
   #nav_toggle_btn {
     filter: invert(100%) saturate(0%) brightness(120%);
   }
-  #logo-link {
-    margin-top: -1px;
-  }
   @media (max-width: 1200px) {
     nav#nav .fund a {
-      position: relative;
-      top: -8px;
-      padding-top: 17px;
+      background-color: transparent;
     }
   }
   @media (max-width: 1200px) and (prefers-color-scheme: light) {
     nav#nav a {
       color: var(--navbar-link-color);
     }
-    input#nav_toggle_cb:checked ~ #nav_head #nav_toggle_btn  {
+    input#nav_toggle_cb:checked ~ header #nav_head #nav_toggle_btn  {
       filter: none;
     }
-    input#nav_toggle_cb:checked ~ #nav_head .nav-logo {
-      display: block;
+    input#nav_toggle_cb:checked ~ header #nav_head .nav-logo {
+      display: inline;
     }
-    input#nav_toggle_cb:checked ~ #nav_head .nav-logo.dark-logo {
+    input#nav_toggle_cb:checked ~ header #nav_head .nav-logo.dark-logo {
       display: none;
     }
   }
@@ -285,7 +285,7 @@ Make sure to update this gradient when the home background image is changed.
           {% if post != posts[0] %}
             <a href="{{ 'article'|page({ slug: post.slug }) }}" style="text-decoration: none;">
               <article class="article-card row">
-                <div 
+                <div
                   class="thumbnail"
                   style="background-image: url('{{ post.featured_images[0].path }}');"
                   href="{{ 'article'|page({ slug: post.slug }) }}"

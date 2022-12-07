@@ -967,7 +967,7 @@ pre > code {
   #nav_toggle_btn:active {
     background-color: hsla(0, 0%, 50%, 0.25);
   }
-  #nav_toggle_cb:checked ~ nav {
+  #nav_toggle_cb:checked ~ header nav {
     display: block;
   }
   #nav {
