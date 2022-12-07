@@ -145,6 +145,11 @@ postPage = "{{ :slug }}"
     height: auto;
   }
 
+  .btn.btn-flat.btn-hero-learn-more {
+    background-color: rgb(111 111 111 / 27%);
+    backdrop-filter: blur(4px);
+  }
+
   @media (max-width: 900px) {
     .main-download {
       display: flex;
@@ -178,7 +183,8 @@ postPage = "{{ :slug }}"
   header {
     box-shadow: none;
     margin-bottom: -70px;
-    background-color: transparent;
+    backdrop-filter: blur(4px);
+    background-color: rgb(134 144 154 / 15%);
   }
   @media (max-width: 1200px) {
     input#nav_toggle_cb:checked ~ header {
@@ -252,7 +258,7 @@ Make sure to update this gradient when the home background image is changed.
         <a href="/download" class="btn btn-download">
           <div class="download-title">Download</div><div class="download-hint">{% include('version') with {'key': 'identifier'} %}</div>
         </a>
-        <a href="/features" class="btn btn-flat btn-flat-white" style="background: #6f6f6f82;">Learn more</a>
+        <a href="/features" class="btn btn-flat btn-flat-white btn-hero-learn-more">Learn more</a>
       </div>
     </div>
   </div>
