@@ -148,17 +148,19 @@ categoryPage = "article"
       {% set nextpost = "" %}
       {% set prevpost = "" %}
       {% set posts = blogPosts.posts %}
+      {% set hasFoundNextPost = false %}
       {% for post2 in posts %}
-        {% if post2.id == post.id+1 %}
-            {% set nextpost = post2.slug %}
-        {% endif %}
-        {% if post2.id == post.id-1 %}
+        {% if not (post2.id >= post.id) %}
             {% set prevpost = post2.slug %}
         {% endif %}
+        {% if (post2.id > post.id) %}
+          {% if not hasFoundNextPost %}
+            {% set nextpost = post2.slug %}
+            {% set hasFoundNextPost = true %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
-      {#{nextpost}#}
-      {#{post}#}
-      
+
       {% if prevpost != "" %}
         <a class="pagination-previous" href="{{ 'article'|page({ slug: prevpost }) }}">&larr; Previous</a>
       {% else %}
