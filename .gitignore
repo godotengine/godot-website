@@ -21,6 +21,8 @@ node_modules
 # Winter CMS files
 # Themes
 !/themes
+# Custom plugins
+!/plugins
 
 # Docker
 /docker/mariadb/init/*.sql
