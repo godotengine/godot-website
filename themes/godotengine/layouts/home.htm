@@ -198,14 +198,19 @@ postPage = "{{ :slug }}"
   #nav_toggle_btn {
     filter: invert(100%) saturate(0%) brightness(120%);
   }
+  #logo-link {
+    margin-top: -1px;
+  }
   @media (max-width: 1200px) {
-    nav#nav a {
-      color: var(--navbar-link-color);
-    }
     nav#nav .fund a {
       position: relative;
       top: -8px;
       padding-top: 17px;
+    }
+  }
+  @media (max-width: 1200px) and (prefers-color-scheme: light) {
+    nav#nav a {
+      color: var(--navbar-link-color);
     }
     input#nav_toggle_cb:checked ~ #nav_head #nav_toggle_btn  {
       filter: none;
@@ -241,7 +246,7 @@ Make sure to update this gradient when the home background image is changed.
   <div class="wrapper">
     <div class="copy container">
       <h1>The game engine you've been waiting&nbsp;for.</h1>
-      <p>The Godot Engine is an all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games.</p>
+      <p>The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games.</p>
 
       <div class="main-download">
         <a href="/download" class="btn btn-download">

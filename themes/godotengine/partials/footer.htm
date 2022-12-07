@@ -171,6 +171,11 @@ description = "footer partial"
               document.querySelector('.hero .credits a').href = author.url;
               document.querySelector('.hero .credits a span.game').innerText = author.game;
               document.querySelector('.hero .credits a span.by').innerText = author.by;
+
+              // Parallax effect: On page scroll move background-position up
+              window.onscroll = function() {
+                document.querySelector('section.hero .background-image').style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
+              };
             }
           },
           afterEnter() {
