@@ -7,7 +7,7 @@ is_hidden = 0
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"
-postsPerPage = 24
+postsPerPage = 10000
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "article"
@@ -15,5 +15,6 @@ postPage = "article"
 
 [blogCategories]
 slug = "{{ :slug }}"
-
+displayEmpty = 0
+categoryPage = "blog/category"
 ==
