@@ -34,3 +34,4 @@ services:
       - "8080:80"
     volumes:
       - ../themes/godotengine:/var/www/html/themes/godotengine
+      - ../plugins/godotengine:/var/www/html/plugins/godotengine
