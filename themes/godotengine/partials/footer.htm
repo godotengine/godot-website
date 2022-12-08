@@ -177,10 +177,29 @@ description = "footer partial"
               document.querySelector('.hero .credits a span.game').innerText = author.game;
               document.querySelector('.hero .credits a span.by').innerText = author.by;
 
-              // Parallax effect: On page scroll move background-position up
-              window.onscroll = function() {
-                document.querySelector('section.hero .background-image').style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
-              };
+              // Parallax effect: On page scroll move background-position up.
+              // This effect is disabled if user opted to have reduced motion in browser/OS settings.
+              const reducedMotionCheck = window.matchMedia('(prefers-reduced-motion)');
+              if (!reducedMotionCheck.matches) {
+                // Parallax effect lags on mobile, so we disable it based on the window resolution.
+                const parallaxWidth = 768;
+                const parallaxImage = document.querySelector('section.hero .background-image');
+
+                window.addEventListener("scroll", () => {
+                  // Only scroll in desktop or tablet mode.
+                  if (window.innerWidth > parallaxWidth) {
+                    parallaxImage.style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
+                  }
+                });
+                window.addEventListener("resize", () => {
+                  // Reset the offset, in case we switch to an unsupported state.
+                  if (window.innerWidth > parallaxWidth) {
+                    parallaxImage.style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
+                  } else {
+                    parallaxImage.style.backgroundPositionY = '0';
+                  }
+                });
+              }
             }
           },
           afterEnter() {
