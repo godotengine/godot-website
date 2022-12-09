@@ -458,6 +458,14 @@ nav > ul ul {
   display: none;
 }
 
+a.patronImgLink {
+  display: inline-block
+}
+
+a.patronImgLink > img {
+  display: block;
+}
+
 a.patreonLink {
   text-decoration: none;
   height: 64px !important;
