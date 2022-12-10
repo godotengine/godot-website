@@ -6,9 +6,10 @@ description = "header partial"
 
 <body data-barba="wrapper">
 {% styles %}
+
+<input type="checkbox" id="nav_toggle_cb">
 <header>
   <div class="container flex align-center">
-    <input type="checkbox" id="nav_toggle_cb">
     <div id="nav_head">
       <a href="/" id="logo-link">
         <img class="nav-logo" src="{{ 'assets/logo.svg' | theme }}" width="136" height="48" alt="Godot Engine">
@@ -35,7 +36,8 @@ description = "header partial"
         <li {% if selected == 'download' %} class="active" {% endif %}><a href="/download">Download</a></li>
         <li><a href="https://docs.godotengine.org">Learn</a></li>
         <li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
-        <li class="fund {% if this.page.id == 'donate' %} active {% endif %}"><a href="/donate">❤ Donate</a></li>
+        {# We add the control character at the end to force the heart to render as text and not as an emoji. #}
+        <li class="fund {% if this.page.id == 'donate' %} active {% endif %}"><a href="/donate">❤&#xFE0E; Donate</a></li>
       </ul>
     </nav>
   </div>

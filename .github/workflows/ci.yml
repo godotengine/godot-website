@@ -45,6 +45,7 @@ jobs:
 
           # Copy project files.
           cp -r ../themes/* themes
+          cp -r ../plugins/* plugins
           cp -r ../docker/php/config/* config
           # Fix up the config for CI.
           sed -i "s/'host'       => 'mariadb'/'host'       => 'localhost'/g" config/database.php

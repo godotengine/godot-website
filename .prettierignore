@@ -8,6 +8,7 @@
 !/.github/
 !/docker/
 !/themes/
+!/plugins/
 !/ISSUE_TEMPLATE.md
 !/README.md
 !/lighthouserc.js

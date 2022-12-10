@@ -129,6 +129,79 @@ description = "footer partial"
       views: [
         {
           namespace: 'default',
+          beforeEnter() {
+            // Updating the hero on the home page
+            if (window.location.pathname === '/') {
+              const authors = [
+                {
+                  game: 'TailQuest: Defense',
+                  by: 'by Kivano Games',
+                  url: 'https://kivano.games/',
+                  image: '/themes/godotengine/assets/home/hero/tail-quest.jpg',
+                },
+                {
+                  game: 'Beat Invaders',
+                  by: 'by Raffaele Picca',
+                  url: 'https://www.raffaelepicca.com/',
+                  image: '/themes/godotengine/assets/showcase/beat-invaders.jpg',
+                },
+                {
+                  game: 'Ex Zodiac',
+                  by: 'by Ben Hickling',
+                  url: 'https://store.steampowered.com/app/1249480/ExZodiac/',
+                  image: '/themes/godotengine/assets/showcase/ex-zodiac.png',
+                },
+                {
+                  game: 'Primal Light',
+                  by: 'by Fat Gem',
+                  url: 'https://store.steampowered.com/app/771420/Primal_Light/',
+                  image: '/themes/godotengine/assets/home/hero/primal-light.jpg',
+                },
+                {
+                  game: 'Resolutiion',
+                  by: 'by Monolith of Minds',
+                  url: 'https://store.steampowered.com/app/975150/Resolutiion/',
+                  image: '/themes/godotengine/assets/home/hero/resolutiion.jpg',
+                },
+                {
+                  game: 'Dome Keeper',
+                  by: 'by Bippinbits',
+                  url: 'https://bippinbits.com/',
+                  image: '/themes/godotengine/assets/showcase/dome-keeper.jpg',
+                },
+              ];
+
+              let author = authors[Math.floor(Math.random() * authors.length)];
+              document.querySelector('.hero .background-image').style.backgroundImage = `url(${author.image})`;
+              document.querySelector('.hero .credits a').href = author.url;
+              document.querySelector('.hero .credits a span.game').innerText = author.game;
+              document.querySelector('.hero .credits a span.by').innerText = author.by;
+
+              // Parallax effect: On page scroll move background-position up.
+              // This effect is disabled if user opted to have reduced motion in browser/OS settings.
+              const reducedMotionCheck = window.matchMedia('(prefers-reduced-motion)');
+              if (!reducedMotionCheck.matches) {
+                // Parallax effect lags on mobile, so we disable it based on the window resolution.
+                const parallaxWidth = 768;
+                const parallaxImage = document.querySelector('section.hero .background-image');
+
+                window.addEventListener("scroll", () => {
+                  // Only scroll in desktop or tablet mode.
+                  if (window.innerWidth > parallaxWidth) {
+                    parallaxImage.style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
+                  }
+                });
+                window.addEventListener("resize", () => {
+                  // Reset the offset, in case we switch to an unsupported state.
+                  if (window.innerWidth > parallaxWidth) {
+                    parallaxImage.style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
+                  } else {
+                    parallaxImage.style.backgroundPositionY = '0';
+                  }
+                });
+              }
+            }
+          },
           afterEnter() {
             // This needs to be done on page load but also after page changes,
             // in case a code block appears in an article.

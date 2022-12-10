@@ -21,6 +21,8 @@ if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
     php artisan plugin:install "pikanji.agent"
     php artisan plugin:install "rainlab.blog"
     php artisan plugin:install "sobored.rss"
+    # Make sure custom plugins are properly initialized.
+    php artisan plugin:refresh "godotengine.utility"
 
     echo "Updating file permissions for newly created files..."
     chown www-data:www-data -R .

@@ -458,6 +458,14 @@ nav > ul ul {
   display: none;
 }
 
+a.patronImgLink {
+  display: inline-block;
+}
+
+a.patronImgLink > img {
+  display: block;
+}
+
 a.patreonLink {
   text-decoration: none;
   height: 64px !important;
@@ -595,37 +603,6 @@ article .content img {
 .padded {
   padding-top: 64px;
   padding-bottom: 64px;
-}
-
-.main-image {
-  background-color: var(--transparent-cover);
-  padding: 0px;
-  margin: 0px;
-  background-image: url("../home/background.jpg");
-  background-position: top;
-  background-size: cover;
-  background-blend-mode: darken;
-  height: 600px;
-  max-height: 50vh;
-  /* For `.main-image-text`. */
-  position: relative;
-}
-
-.main-image-text {
-  position: absolute;
-  bottom: 1rem;
-  right: 2rem;
-  opacity: 0.75;
-  background-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 9999px;
-  padding: 0.125rem 0.75rem;
-  text-shadow: 0 0.125rem 0.125rem hsl(0, 0%, 0%);
-}
-
-.main-image-text,
-.main-image-text a {
-  color: white;
-  text-decoration: none;
 }
 
 .youtube {
@@ -998,7 +975,7 @@ pre > code {
   #nav_toggle_btn:active {
     background-color: hsla(0, 0%, 50%, 0.25);
   }
-  #nav_toggle_cb:checked ~ nav {
+  #nav_toggle_cb:checked ~ header nav {
     display: block;
   }
   #nav {
@@ -1023,6 +1000,8 @@ pre > code {
     /* Make links easier to click but still close to each other. */
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin-top: -0.4375rem;
     margin-bottom: -0.4375rem;
   }
@@ -1250,4 +1229,154 @@ pre > code {
 
 .rounded-lg {
   border-radius: 0.5rem; /* 8px */
+}
+
+/* Home Page */
+section.hero {
+  background-color: var(--dark-color);
+  position: relative;
+  margin-bottom: -5px;
+  z-index: 1;
+}
+
+section.hero .background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.6;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-color: var(--transparent-cover);
+}
+
+section.hero .copy {
+  position: relative;
+  z-index: 1;
+  max-width: 670px;
+  margin-left: 0;
+}
+
+section.hero .copy h1 {
+  font-size: 60px;
+  text-shadow: 0 0 28px #00000080;
+  margin-bottom: 20px;
+  color: white;
+}
+
+section.hero .copy p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 550px;
+  text-shadow: 0 0 28px #00000080;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  section.hero .copy {
+    text-align: center;
+    margin: 0 auto;
+  }
+  section.hero .copy h1 {
+    font-size: 50px;
+  }
+  section.hero .copy p {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+section.hero .wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 220px 0px 120px;
+}
+
+@media (max-width: 650px) {
+  section.hero .wrapper {
+    padding: 150px 0px 120px;
+  }
+}
+
+section.hero .credits {
+  position: absolute;
+  bottom: 14px;
+  right: 30px;
+  background: #1a1a1a7a;
+  border-radius: 8px;
+  padding: 2px 10px;
+  opacity: 0.6;
+}
+
+section.hero .credits a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Article card (as seen on the news or home page) */
+article.article-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+article.article-card.row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+
+@media (min-width: 768px) {
+  article.article-card.row {
+    grid-template-columns: 160px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  article.article-card.row .excerpt {
+    display: none;
+  }
+  article.article-card.row h3 {
+    font-size: 19px;
+  }
+}
+
+article.article-card p.excerpt {
+  color: var(--base-color-text);
+  font-size: 16px;
+  opacity: 0.8;
+  margin-top: 0;
+}
+article.article-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+article.article-card .thumbnail {
+  aspect-ratio: 16 / 9;
+  border-radius: 7px;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--card-background-color);
+  box-shadow: 0 5px 10px -3px #00000078;
+}
+article.article-card .info {
+  display: flex;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 32px;
+}
+article.article-card .info .avatar {
+  border-radius: 100%;
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+}
+article.article-card .info span {
+  font-size: 14px;
+  color: var(--secondary-color-text);
 }
