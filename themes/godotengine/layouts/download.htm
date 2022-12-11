@@ -2,7 +2,7 @@ description = "Download layout"
 ==
 {##}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ getCurrentLocale() }}">
 {% partial "head" %}
 {% partial "header" selected="download" %}
 {% set stable_version = include('version', {'key': 'identifier'}) %}

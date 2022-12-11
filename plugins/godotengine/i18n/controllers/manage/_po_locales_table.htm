@@ -1,0 +1,30 @@
+<div class="control-list">
+    <table class="table data">
+        <thead>
+            <tr>
+                <th><span>Code</span></th>
+                <th><span>% Translated</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($poLocales as $locale): ?>
+            <tr class="<?= ($locale['code'] == $defaultLocale ? 'i18n-default' : '') ?>">
+                <td><?= $locale['code'] ?></td>
+                <td>
+                    <?php if ($locale['code'] == $defaultLocale): ?>
+                        <?= ($poValid ? '100% (Base File)' : 'MISSING') ?>
+                    <?php else: ?>
+                        <div class="i18n-completion-progress">
+                            <span><?= $locale['completion'] ?></span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="<?= substr($locale['completion'], 0, -1) ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?= $locale['completion'] ?>;">
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif ?>
+                </td>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</div>

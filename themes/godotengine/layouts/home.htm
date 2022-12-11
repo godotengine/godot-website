@@ -10,7 +10,7 @@ postPage = "{{ :slug }}"
 ==
 {##}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ getCurrentLocale() }}">
 {% partial "head" %}
 {% partial "header" %}
 {% set posts = blogPosts.posts %}
@@ -253,7 +253,7 @@ Make sure to update this gradient when the home background image is changed.
   <div class="background-image" style="background-image: url()"></div>
   <div class="wrapper">
     <div class="copy container">
-      <h1>The game engine you've been waiting&nbsp;for.</h1>
+      <h1>{{ TR('The game engine you\'ve been waiting&nbsp;for.') }}</h1>
       <p>The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games.</p>
 
       <div class="main-download">

@@ -1,0 +1,5 @@
+{
+  "require": {
+    "gettext/gettext": "^5.5.1"
+  }
+}

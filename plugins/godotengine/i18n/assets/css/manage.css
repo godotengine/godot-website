@@ -1,0 +1,35 @@
+.i18n-manage-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.i18n-manage-flex > div {
+  flex: 1;
+}
+
+.i18n-default {
+  font-weight: 700;
+}
+
+.i18n-completion-progress {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+
+.i18n-completion-progress > span {
+  min-width: 48px;
+}
+
+table.table.data tbody td .i18n-completion-progress div.progress {
+  height: 18px;
+  width: 100%;
+  border-radius: 3px 3px;
+  background-color: #aec4d1;
+}
+
+table.table.data tbody td .i18n-completion-progress div.progress .progress-bar {
+  border-radius: 3px 3px;
+}

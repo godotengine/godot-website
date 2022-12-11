@@ -1,0 +1,9 @@
+msgid ""
+msgstr ""
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"X-Domain: default\n"
+
+#: godotengine/layouts/home.htm:246
+msgid "The game engine you've been waiting&nbsp;for."
+msgstr "Игровой движок, который стоило&nbsp;ждать."
