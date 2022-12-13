@@ -1236,6 +1236,7 @@ section.hero {
   background-color: var(--dark-color);
   position: relative;
   margin-bottom: -5px;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -1249,6 +1250,7 @@ section.hero .background-image {
   background-blend-mode: darken;
   background-size: cover;
   background-color: var(--transparent-cover);
+  will-change: transform;
 }
 
 section.hero .copy {
