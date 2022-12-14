@@ -188,7 +188,6 @@ description = "footer partial"
                 const parallaxSpeed = 0.4;
 
                 const parallaxTick = (offsetY) => {
-                  console.log(offsetY);
                   if (window.innerWidth > parallaxMinWidth) {
                     parallaxImage.style.transform = `translateY(${offsetY * parallaxSpeed}px)`;
                   } else {
