@@ -1,4 +1,6 @@
 description = "head partial"
+
+[alternateHrefLangElements]
 ==
 {##}
 <head>
@@ -12,27 +14,33 @@ description = "head partial"
   <meta name="twitter:site" content="@godotengine">
 
   {% if this.page.id == 'home' %}
+
+  <title>Godot Engine - Free and open source 2D and 3D game engine</title>
   <meta property="og:title" name="twitter:title" content="Free and open source 2D and 3D game engine">
   <meta property="og:description" name="twitter:description" content="{{ this.page.description }}">
   <meta property="og:image" name="twitter:image" content="{{ 'assets/og_image.png' | theme }}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <title>Godot Engine - Free and open source 2D and 3D game engine</title>
+
   {% elseif this.page.id == 'article' %}
+
   {% set post = blogPost.post %}
   <title>Godot Engine - {{ post.title }}</title>
   <meta property="og:title" name="twitter:title" content="{{ post.title }}">
   <meta property="og:description" name="twitter:description" content="{{ post.summary }}">
-  <meta property="og:type" content="article">
   <meta property="og:image" name="twitter:image" content="{{ post.featured_images[0].path }}">
+  <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
+
   {% else %}
+
   <title>Godot Engine - {{ this.page.title }}</title>
   <meta property="og:title" name="twitter:title" content="{{ this.page.title }}">
   <meta property="og:description" name="twitter:description" content="{{ this.page.description }}">
   <meta property="og:image" name="twitter:image" content="{{ 'assets/og_image.png' | theme }}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
+
   {% endif %}
 
   <link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
@@ -42,5 +50,8 @@ description = "head partial"
   <link rel="stylesheet" href="{{ 'assets/css/tobii.min.css?1' | theme }}">
   <link rel="preload" as="font" href="{{ 'assets/fonts/Montserrat-Bold.woff2?1' | theme }}" crossorigin>
   <link rel="preload" as="font" href="{{ 'assets/fonts/Montserrat-ExtraBold.woff2?1' | theme }}" crossorigin>
+
   <link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+
+  {% component 'alternateHrefLangElements' %}
 </head>

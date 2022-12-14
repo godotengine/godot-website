@@ -1,0 +1,56 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('system/settings') ?>">Settings</a></li>
+        <li>Godot I18n</li>
+    </ul>
+<?php Block::endPut() ?>
+
+<div class="padded-container container-flush">
+    <?= $this->makeHintPartial('i18n_index_hint', 'index_hint') ?>
+</div>
+
+<div data-control="toolbar">
+    <?php if (!$this->isSetupValid()): ?>
+    <a
+        href="javascript:;"
+        data-control="popup"
+        data-handler="onSetup"
+        class="btn btn-outline-success oc-icon-exclamation-circle">
+        Setup
+    </a>
+    <?php endif ?>
+
+    <a
+        href="javascript:;"
+        data-control="popup"
+        data-handler="onSyncLocales"
+        class="btn btn-default oc-icon-refresh">
+        Refresh Locales
+    </a>
+    <a
+        href="javascript:;"
+        data-control="popup"
+        data-handler="onExtractMessages"
+        class="btn btn-primary oc-icon-level-down">
+        Extract Messages
+    </a>
+    <a
+        href="javascript:;"
+        data-control="popup"
+        data-handler="onUpdateTranslation"
+        class="btn btn-primary oc-icon-level-up">
+        Update Translation
+    </a>
+</div>
+
+<div class="i18n-manage-flex">
+    <div>
+        <h4>CMS Locales</h4>
+        <?= $this->makePartial('cms_locales_table') ?>
+    </div>
+
+    <div>
+        <h4>PO Locales</h4>
+        <?= $this->makePartial('po_locales_table') ?>
+    </div>
+</div>

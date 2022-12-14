@@ -5,7 +5,7 @@ FROM php:7.4-apache-bullseye
 WORKDIR /var/www/html
 # Install additional server dependencies.
 RUN apt-get update &&\
-    apt-get install -y git unzip vim nano mc zlib1g-dev libzip-dev libpng-dev libjpeg-dev netcat
+    apt-get install -y git unzip vim nano mc zlib1g-dev libzip-dev libpng-dev libjpeg-dev netcat gettext
 
 
 # Configure PHP installation.

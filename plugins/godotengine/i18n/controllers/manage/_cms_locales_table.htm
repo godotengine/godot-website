@@ -1,0 +1,20 @@
+<div class="control-list">
+    <table class="table data">
+        <thead>
+            <tr>
+                <th><span>Code</span></th>
+                <th><span>Enabled</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($cmsLocales as $locale): ?>
+            <tr class="<?= ($locale['code'] == $defaultLocale ? 'i18n-default' : '') ?>">
+                <td><?= $locale['code'] ?></td>
+                <td>
+                    <?= ($locale['is_enabled'] ? 'Yes' : 'No') ?> <?= ($locale['code'] == $defaultLocale ? '(Default)' : '') ?>
+                </td>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</div>
