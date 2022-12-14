@@ -1,0 +1,20 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('system/settings') ?>">Settings</a></li>
+        <li>Godot Utilities</li>
+    </ul>
+<?php Block::endPut() ?>
+
+<div class="padded-container container-flush">
+    <?= $this->makeHintPartial('i18n_index_hint', 'index_hint') ?>
+</div>
+
+<div data-control="toolbar">
+    <a
+        href="javascript:;"
+        data-control="popup"
+        data-handler="onWinterMigrate"
+        class="btn btn-warning oc-icon-compass">
+        Perform Migration
+    </a>
+</div>
