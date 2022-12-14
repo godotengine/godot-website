@@ -1,0 +1,12 @@
+<div class="modal-header flex-row-reverse">
+	<button type="button" class="close" data-dismiss="popup">&times;</button>
+	<h4 class="modal-title">Migration logs</h4>
+</div>
+
+<div class="modal-body">
+	<pre style="max-height: 400px; tab-size: 8px;">
+		<?php foreach ($logs as $message): ?>
+		<?= $message ?><br />
+		<?php endforeach ?>
+	</pre>
+</div>

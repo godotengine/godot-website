@@ -34,6 +34,9 @@ node_modules
 !.github/
 !lighthouserc.js
 
+# Editor config
+!.editorconfig
+
 # Linting/formatting setup
 !.prettierignore
 !package-lock.json
