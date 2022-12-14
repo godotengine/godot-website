@@ -181,23 +181,26 @@ description = "footer partial"
               // This effect is disabled if user opted to have reduced motion in browser/OS settings.
               const reducedMotionCheck = window.matchMedia('(prefers-reduced-motion)');
               if (!reducedMotionCheck.matches) {
+
                 // Parallax effect lags on mobile, so we disable it based on the window resolution.
-                const parallaxWidth = 768;
                 const parallaxImage = document.querySelector('section.hero .background-image');
+                const parallaxMinWidth = 768;
+                const parallaxSpeed = 0.4;
+
+                const parallaxTick = (offsetY) => {
+                  if (window.innerWidth > parallaxMinWidth) {
+                    parallaxImage.style.transform = `translateY(${offsetY * parallaxSpeed}px)`;
+                  } else {
+                    parallaxImage.style.transform = 'none';
+                  }
+                }
 
                 window.addEventListener("scroll", () => {
-                  // Only scroll in desktop or tablet mode.
-                  if (window.innerWidth > parallaxWidth) {
-                    parallaxImage.style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
-                  }
+                  requestAnimationFrame(parallaxTick(window.pageYOffset))
                 });
+
                 window.addEventListener("resize", () => {
-                  // Reset the offset, in case we switch to an unsupported state.
-                  if (window.innerWidth > parallaxWidth) {
-                    parallaxImage.style.backgroundPositionY = 'calc( 50% + ' + window.pageYOffset * 0.5 + 'px)';
-                  } else {
-                    parallaxImage.style.backgroundPositionY = '0';
-                  }
+                  requestAnimationFrame(parallaxTick(window.pageYOffset))
                 });
               }
             }
