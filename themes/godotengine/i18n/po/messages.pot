@@ -30,7 +30,7 @@ msgstr ""
 #: godotengine/layouts/home.htm:440
 #: godotengine/layouts/home.htm:449
 #: godotengine/layouts/home.htm:458
-#: godotengine/layouts/home.htm:473
+#: godotengine/layouts/home.htm:472
 msgid "Learn more"
 msgstr ""
 
@@ -132,11 +132,11 @@ msgstr ""
 msgid "Donate"
 msgstr ""
 
-#: godotengine/layouts/home.htm:470
+#: godotengine/layouts/home.htm:469
 msgid "You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot&nbsp Engine even more awesome!"
 msgstr ""
 
-#: godotengine/layouts/home.htm:479
+#: godotengine/layouts/home.htm:478
 msgid "Sponsored by"
 msgstr ""
 
