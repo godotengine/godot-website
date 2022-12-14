@@ -34,6 +34,7 @@ class Utilities extends Controller
     public function onWinterMigrate()
     {
         $updateManager = UpdateManager::instance();
+        $updateManager->resetNotes();
         $updateManager->update();
 
         $this->vars['logs'] = $updateManager->getNotes();
