@@ -25,7 +25,7 @@ class Utilities extends Controller
      */
     public function index()
     {
-
+        $this->pageTitle = 'Godot Utilities';
     }
 
     /**

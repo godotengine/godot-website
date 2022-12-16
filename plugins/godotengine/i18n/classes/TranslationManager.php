@@ -1,24 +1,28 @@
 <?php
+
 namespace GodotEngine\I18n\Classes;
 
 use App;
 use Str;
 use Log;
-use Cms\Classes\Page;
 use Cms\Classes\Theme;
-use Cms\Classes\Layout;
-use Cms\Classes\Partial;
 use System\Helpers\Cache as CacheHelper;
 use Symfony\Component\Yaml\Yaml;
 use RainLab\Translate\Models\Locale;
 use RainLab\Translate\Models\Message;
 use RainLab\Translate\Classes\ThemeScanner;
-use \Gettext\Translations;
 use \Gettext\Generator\PoGenerator;
+use \Gettext\Languages\Language;
 use \Gettext\Loader\PoLoader;
 use \Gettext\Merge;
-use GodotEngine\I18n\Classes\TwigMarkupScanner;
 use ApplicationException;
+
+/**
+ * A manager/helper class for working with translation resources (PO, POT),
+ * as well as extrating strings from October's Twig templates.
+ *
+ * Refer to https://github.com/php-gettext/Gettext/ for Gettext/PO reference.
+ */
 
 class TranslationManager
 {
@@ -30,12 +34,7 @@ class TranslationManager
     /**
      * @var string The base file for all localized PO files.
      */
-    private static $baseFile = 'themes/godotengine/i18n/po/messages.po';
-
-    /**
-     * @var string The default domain name for extracted messages (used only internally).
-     */
-    private static $defaultDomain = 'default';
+    private static $baseFile = 'themes/godotengine/i18n/po/messages.pot';
 
     /**
      * Generates a qualified and reliably unique translation key for the specified message.
@@ -73,11 +72,20 @@ class TranslationManager
     }
 
     /**
-     * Normalizes the file path for the given object.
+     * Generates a locale object for the given locale, that can then be saved with PoGenerator.
+     *
+     * @return \Gettext\Translations
      */
-    private static function makeRelativePath($object)
+    private static function generateLocaleFile($lang)
     {
-        return $object->theme->getDirName() . '/' . $object->getObjectTypeDirName() . '/' . $object->getFileName();
+        $loader = new PoLoader();
+        // We use the base file as a... base.
+        $localeFile = $loader->loadFile(self::$baseFile);
+
+        $localeFile = self::generateMetadata($localeFile, $lang);
+        $localeFile->setLanguage($lang);
+
+        return $localeFile;
     }
 
     /**
@@ -117,6 +125,30 @@ class TranslationManager
     }
 
     /**
+     * Updates the theme configuration file with the newly added locale.
+     *
+     * @return void
+     */
+    private static function updateThemeConfig($lang)
+    {
+        Log::info('Updating Theme configuration.');
+        $theme = Theme::getActiveTheme();
+        $themeConfig = (array) $theme->getConfig();
+
+        if (!isset($themeConfig['translate']))
+        {
+          $themeConfig['translate'] = [];
+        }
+        if (!isset($themeConfig['translate'][$lang]))
+        {
+             $themeConfig['translate'][$lang] = "i18n/$lang.yaml";
+             ksort($themeConfig['translate']);
+        }
+
+        $theme->writeConfig($themeConfig, true);
+    }
+
+    /**
      * Returns the state of the initial setup, such as existence of the necessary files.
      *
      * @return bool
@@ -153,10 +185,7 @@ class TranslationManager
 
         $poPath = self::$I18N_ROOT_PATH . "/po/messages.$lang.po";
         $yamlPath = self::$I18N_ROOT_PATH . "/$lang.yaml";
-
-        $loader = new PoLoader();
-        $poFile = $loader->loadFile(self::$baseFile);
-        $poFile->getHeaders()->set('Language', $lang);
+        $poFile = self::generateLocaleFile($lang);
 
         if (!file_exists($poPath))
         {
@@ -175,20 +204,7 @@ class TranslationManager
             Log::info('Skipped writing ' . $yamlPath . ' file; file exists.');
         }
 
-        Log::info('Updating Theme configuration.');
-        $theme = Theme::getActiveTheme();
-        $themeConfig = (array) $theme->getConfig();
-
-        if (!isset($themeConfig['translate']))
-        {
-          $themeConfig['translate'] = [];
-        }
-        if (!isset($themeConfig['translate'][$lang]))
-        {
-             $themeConfig['translate'][$lang] = "i18n/$lang.yaml";
-             ksort($themeConfig['translate']);
-        }
-        $theme->writeConfig($themeConfig, true);
+        self::updateThemeConfig($lang);
 
         Log::info('Successfully added "' . $lang . '" translation.');
     }
@@ -265,7 +281,8 @@ class TranslationManager
         );
 
         $poPath = self::$I18N_ROOT_PATH . '/po';
-        if (!is_dir($poPath)) {
+        if (!is_dir($poPath))
+        {
             return $locales;
         }
 
@@ -273,12 +290,15 @@ class TranslationManager
         $poDir->rewind();
 
         while (($fileName = $poDir->read()) !== false){
-            if ($fileName == 'messages.po' || $fileName == '..' || $fileName == '.') {
+            $filePath = $poPath . '/' . $fileName;
+            $fileInfo = pathinfo($filePath);
+            if ($fileInfo['extension'] !== 'po')
+            {
                 continue;
             }
 
             $loader = new PoLoader();
-            $poFile = $loader->loadFile($poPath . '/' . $fileName);
+            $poFile = $loader->loadFile($filePath);
 
             $totalMessages = $poFile->count();
             $translatedMessages = 0;
@@ -314,41 +334,35 @@ class TranslationManager
     }
 
     /**
-     * Extracts translation messages and their codes and generates PO files.
+     * Enhances the given language file with metadata, such as description, headers, etc.
      *
-     * @return array A collection of translatable messages.
+     * @return void
      */
-    public static function extractMessages()
+    private static function generateMetadata($translations, $lang = null)
     {
-        Log::info('Starting message extraction.');
+        $languageName = 'LANGUAGE';
+        if ($lang !== null)
+        {
+            $languageInfo = Language::getById($lang);
 
-        $scanner = new TwigMarkupScanner(
-            Translations::create(self::$defaultDomain)
-        );
-        $scanner->setDefaultDomain(self::$defaultDomain);
-
-
-        Log::info('Scanning Layout files.');
-        foreach (Layout::all() as $layout) {
-            $tree = $layout->getTwigNodeTree();
-            $scanner->scanAST($tree, self::makeRelativePath($layout));
+            if (!empty($languageInfo)) {
+                $languageName = $languageInfo->name;
+            }
         }
 
-        Log::info('Scanning Page files.');
-        foreach (Page::all() as $page) {
-            $tree = $page->getTwigNodeTree();
-            $scanner->scanAST($tree, self::makeRelativePath($page));
-        }
+        $description = "
+$languageName translation of the Godot Engine class reference.
+Copyright (c) 2007-2022 Juan Linietsky, Ariel Manzur.
+Copyright (c) 2014-2022 Godot Engine contributors (cf. https://github.com/godotengine/godot/blob/master/AUTHORS.md).
+This file is distributed under the same license as the Godot source code.
+        ";
+        $translations->setDescription(trim($description));
 
-        Log::info('Scanning Partial files.');
-        foreach (Partial::all() as $partial) {
-            $tree = $partial->getTwigNodeTree();
-            $scanner->scanAST($tree, self::makeRelativePath($partial));
-        }
-
-        Log::info('Merging extracted messages with the current base file.');
-        $translations = $scanner->getTranslations()[self::$defaultDomain];
+        $translations->getHeaders()->set('Project-Id-Version', 'Godot Engine official website');
+        $translations->getHeaders()->set('Report-Msgid-Bugs-To', 'https://github.com/godotengine/godot-website');
+        $translations->getHeaders()->set('MIME-Version', '1.0');
         $translations->getHeaders()->set('Content-Type', 'text/plain; charset=utf-8');
+        $translations->getHeaders()->set('Content-Transfer-Encoding', '8-bit');
 
         return $translations;
     }
@@ -363,6 +377,9 @@ class TranslationManager
     {
         Log::info('Generating the base file.');
 
+        Log::info('Setting up meta information.');
+        $messages = self::generateMetadata($messages);
+
         $poPath = self::$I18N_ROOT_PATH . '/po';
         if (!is_dir($poPath)) {
             Log::info('The base directory doesn\'t exist, creating.');
@@ -375,8 +392,9 @@ class TranslationManager
             $loader = new PoLoader();
             $currentEntries = $loader->loadFile(self::$baseFile);
 
-            $mergeStrategy = Merge::TRANSLATIONS_THEIRS | Merge::HEADERS_OURS | Merge::COMMENTS_OURS | Merge::REFERENCES_THEIRS;
-            $messages = $currentEntries->mergeWith($messages, $mergeStrategy);
+            Log::info('Merging extracted messages with the current base file.');
+            $mergeStrategy = Merge::TRANSLATIONS_OURS | Merge::HEADERS_THEIRS | Merge::COMMENTS_THEIRS | Merge::REFERENCES_OURS;
+            $messages = $messages->mergeWith($currentEntries, $mergeStrategy);
         }
 
         Log::info('Writing extracted messages to the base file.');
@@ -386,8 +404,10 @@ class TranslationManager
 
     /**
      * Merges existing locale files with the base file.
+     *
+     * @return void
      */
-    public static function mergeLocaleFiles()
+    public static function updateLocaleFiles()
     {
         Log::info('Updating locale-specific files.');
 

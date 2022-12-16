@@ -1,7 +1,7 @@
 name: godotengine
 description: "Godot's custom theme"
 author: "Godot Engine"
-homepage: ""
+homepage: "https://godotengine.org/"
 code: gde
 translate:
   es: i18n/es.yaml

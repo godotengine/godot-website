@@ -6,6 +6,7 @@ use Redirect;
 use Backend\Classes\Controller;
 use System\Classes\SettingsManager;
 use GodotEngine\I18n\Classes\TranslationManager;
+use GodotEngine\I18n\Classes\TranslationExtractor;
 
 class Manage extends Controller
 {
@@ -29,6 +30,8 @@ class Manage extends Controller
      */
     public function index()
     {
+        $this->pageTitle = 'Godot I18n';
+
         $this->vars['defaultLocale'] = TranslationManager::getDefaultLocale();
         $this->vars['cmsLocales'] = TranslationManager::getCMSLocales();
         $this->vars['poValid'] = TranslationManager::isSetupValid();
@@ -40,7 +43,7 @@ class Manage extends Controller
      */
     public function onSetup()
     {
-        $messages = TranslationManager::extractMessages();
+        $messages = TranslationExtractor::extractMessages();
         TranslationManager::generateBaseFile($messages);
 
         Flash::success('First-time setup complete!');
@@ -64,9 +67,9 @@ class Manage extends Controller
      */
     public function onExtractMessages()
     {
-        $messages = TranslationManager::extractMessages();
+        $messages = TranslationExtractor::extractMessages();
         TranslationManager::generateBaseFile($messages);
-        TranslationManager::mergeLocaleFiles();
+        TranslationManager::updateLocaleFiles();
 
         Flash::success('Messages successfully extracted!');
         return Redirect::refresh();

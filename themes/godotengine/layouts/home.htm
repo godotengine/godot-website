@@ -254,13 +254,13 @@ Make sure to update this gradient when the home background image is changed.
   <div class="wrapper">
     <div class="copy container">
       <h1>{{ TR('The game engine you\'ve been waiting&nbsp;for.') }}</h1>
-      <p>The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games.</p>
+      <p>{{ TR('The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games.') }}</p>
 
       <div class="main-download">
         <a href="/download" class="btn btn-download">
-          <div class="download-title">Download</div><div class="download-hint">{% include('version') with {'key': 'identifier'} %}</div>
+          <div class="download-title">{{ TR('Download') }}</div><div class="download-hint">{% include('version') with {'key': 'identifier'} %}</div>
         </a>
-        <a href="/features" class="btn btn-flat btn-flat-white btn-hero-learn-more">Learn more</a>
+        <a href="/features" class="btn btn-flat btn-flat-white btn-hero-learn-more">{{ TR('Learn more') }}</a>
       </div>
     </div>
   </div>
@@ -270,7 +270,7 @@ Make sure to update this gradient when the home background image is changed.
 </section>
 
 <section class="container padded">
-  <h2>Latest news</h2>
+  <h2>{{ TR('Latest news') }}</h2>
   <div class="flex eqsize responsive" style="gap: 30px;">
 
     <a href="{{ 'article'|page({ slug: posts[0].slug }) }}" style="text-decoration: none">
@@ -307,7 +307,7 @@ Make sure to update this gradient when the home background image is changed.
           {% endif %}
         {% endfor %}
         <div class="button-container">
-          <a href="/news/default/1" class="btn no-margin">More News</a>
+          <a href="/news/default/1" class="btn no-margin">{{ TR('More News') }}</a>
         </div>
       </div>
     </div>
@@ -315,7 +315,7 @@ Make sure to update this gradient when the home background image is changed.
 </section>
 
 <section id="features" class="container padded">
-  <h2>A different way to make games</h2>
+  <h2>{{ TR('A different way to make games') }}</h2>
 
   <div class="features-grid">
     <a class="feature-link" href="/features#design" data-barba-prevent>
@@ -329,10 +329,9 @@ Make sure to update this gradient when the home background image is changed.
           loading="lazy"
         >
         <div class="body">
-          <h4>Innovative design</h4>
+          <h4>{{ TR('Innovative design') }}</h4>
           <p>
-            Godot's Node and Scene system gives you both power and flexibility
-            to create anything.
+            {{ TR("Godot's Node and Scene system gives you both power and flexibility to create anything.") }}
           </p>
         </div>
       </div>
@@ -349,10 +348,9 @@ Make sure to update this gradient when the home background image is changed.
           loading="lazy"
         >
         <div class="body">
-          <h4>Use the right language for the job</h4>
+          <h4>{{ TR('Use the right language for the job') }}</h4>
           <p>
-            Keep your code modular with an object-oriented API using Godot's own
-            GDScript, C#, C++, or bring your own using GDNative.
+            {{ TR("Keep your code modular with an object-oriented API using Godot's own GDScript, C#, C++, or bring your own using GDNative.") }}
           </p>
         </div>
       </div>
@@ -368,10 +366,9 @@ Make sure to update this gradient when the home background image is changed.
           loading="lazy"
         >
         <div class="body">
-          <h4>Dedicated 2D engine</h4>
+          <h4>{{ TR('Dedicated 2D engine') }}</h4>
           <p>
-            Make crisp and performant 2D games with Godot's dedicated 2D
-            rendering engine with real 2D pixel coordinates and 2D nodes.
+            {{ TR("Make crisp and performant 2D games with Godot's dedicated 2D rendering engine with real 2D pixel coordinates and 2D nodes.") }}
           </p>
         </div>
       </div>
@@ -388,10 +385,9 @@ Make sure to update this gradient when the home background image is changed.
           loading="lazy"
         >
         <div class="body">
-          <h4>Simple and powerful 3D</h4>
+          <h4>{{ TR('Simple and powerful 3D') }}</h4>
           <p>
-            Godot's 3D nodes give you everything you need to build, animate,
-            and render your 3D worlds and characters.
+            {{ TR("Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds and characters.") }}
           </p>
         </div>
       </div>
@@ -408,10 +404,9 @@ Make sure to update this gradient when the home background image is changed.
           loading="lazy"
         >
         <div class="body">
-          <h4>Release on all platforms</h4>
+          <h4>{{ TR('Release on all platforms') }}</h4>
           <p>
-            Deploy your game on desktop, mobile, and the web in seconds. Godot
-            even supports consoles through third party publishers.
+            {{ TR('Deploy your game on desktop, mobile, and the web in seconds. Godot even supports consoles through third party publishers.') }}
           </p>
         </div>
       </div>
@@ -428,10 +423,9 @@ Make sure to update this gradient when the home background image is changed.
           loading="lazy"
         >
         <div class="body">
-          <h4>Open Source</h4>
+          <h4>{{ TR('Open Source') }}</h4>
           <p>
-            Truly open development: anyone who contributes to Godot benefits
-            equally from others’ contributions.
+            {{ TR("Truly open development: anyone who contributes to Godot benefits equally from others' contributions.") }}
           </p>
         </div>
       </div>
@@ -440,38 +434,38 @@ Make sure to update this gradient when the home background image is changed.
 </section>
 
 <section id="get_involved" class="container padded">
-  <h2>Get involved</h2>
+  <h2>{{ TR('Get involved') }}</h2>
   <p>
-    Join the community and help create a game engine that belongs to everybody.
+    {{ TR('Join the community and help create a game engine that belongs to everybody.') }}
   </p>
 
   <div class="flex eqsize responsive">
 
     <div class="text-center base-padding">
       <img src="{{ 'assets/home/code.svg' | theme }}" alt="" width="250" height="250" loading="lazy">
-      <h4>Code</h4>
+      <h4>{{ TR('Code') }}</h4>
       <p>
-        If you know how to code, you can help by fixing bugs and working with engine contributors towards the implementation of new features.
+        {{ TR('If you know how to code, you can help by fixing bugs and working with engine contributors towards the implementation of new features.') }}
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn btn-flat" target="_blank" rel="noopener">Learn more</a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code" class="btn btn-flat" target="_blank" rel="noopener">{{ TR('Learn more') }}</a>
     </div>
 
     <div class="text-center base-padding">
       <img src="{{ 'assets/home/document.svg' | theme }}" alt="" width="250" height="250" loading="lazy">
-      <h4>Document</h4>
+      <h4>{{ TR('Document') }}</h4>
       <p>
-        Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
+        {{ TR('Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.') }}
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn btn-flat" target="_blank" rel="noopener">Learn more</a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation" class="btn btn-flat" target="_blank" rel="noopener">{{ TR('Learn more') }}</a>
     </div>
 
     <div class="text-center base-padding">
       <img src="{{ 'assets/home/report.svg' | theme }}" alt="" width="250" height="250" loading="lazy">
-      <h4>Report</h4>
+      <h4>{{ TR('Report') }}</h4>
       <p>
-        Found a problem with the engine? Don't forget to report it so that developers can track it down.
+        {{ TR("Found a problem with the engine? Don't forget to report it so that developers can track it down.") }}
       </p>
-      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn btn-flat" target="_blank" rel="noopener">Learn more</a>
+      <a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues" class="btn btn-flat" target="_blank" rel="noopener">{{ TR('Learn more') }}</a>
     </div>
 
   </div>
@@ -480,18 +474,19 @@ Make sure to update this gradient when the home background image is changed.
 <section id="donations" class="padded">
   <div class="container sm-full">
     <img id="sfc_graphic" src="{{ 'assets/home/sfc.svg' | theme }}" alt="Software Freedom Conservancy logo" width="1" height="1" class="img-auto-size"  loading="lazy">
-    <h3 class="text-center">Donate</h3>
-    <p class="small auto-margin">
-      You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot&nbsp;Engine even more awesome!
+    <h3 class="text-center">{{ TR('Donate') }}</h3>
+    <p class
+    ="small auto-margin">
+      {{ TR("You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot&nbsp Engine even more awesome!") }}
     </p>
 
-    <a href="/donate" class="btn btn-flat btn-flat-white">Learn more</a>
+    <a href="/donate" class="btn btn-flat btn-flat-white">{{ TR('Learn more') }}</a>
   </div>
 </section>
 
 <section id="sponsors">
   <div class="container sm-full padded">
-    <h2 class="text-center">Sponsored by</h2>
+    <h2 class="text-center">{{ TR('Sponsored by') }}</h2>
 
     <div class="platinum flex">
       <a class="sponsor card" href="https://www.gamblify.com/" target="_blank" rel="noopener">
