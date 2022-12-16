@@ -1,18 +1,15 @@
-# Russian translation of the Godot Engine class reference.
+# LANGUAGE translation of the Godot Engine class reference.
 # Copyright (c) 2007-2022 Juan Linietsky, Ariel Manzur.
 # Copyright (c) 2014-2022 Godot Engine contributors (cf. https://github.com/godotengine/godot/blob/master/AUTHORS.md).
 # This file is distributed under the same license as the Godot source code.
 #
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"MIME-Version: 1.0\n"
 "Project-Id-Version: Godot Engine official website\n"
 "Report-Msgid-Bugs-To: https://github.com/godotengine/godot-website\n"
-"Language: ru\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % "
-"10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
 "X-Domain: default\n"
 
 #: godotengine/layouts/home.htm:246
@@ -20,18 +17,19 @@ msgid "The game engine you've been waiting&nbsp;for."
 msgstr ""
 
 #: godotengine/layouts/home.htm:247
-msgid ""
-"The Godot Engine is a free, all-in-one, cross-platform game engine that "
-"makes it easy for you to create 2D and 3D games."
+msgid "The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games."
 msgstr ""
 
-#: godotengine/layouts/home.htm:251 godotengine/partials/footer.htm:18
+#: godotengine/layouts/home.htm:251
+#: godotengine/partials/footer.htm:18
 #: godotengine/partials/header.htm:33
 msgid "Download"
 msgstr ""
 
-#: godotengine/layouts/home.htm:253 godotengine/layouts/home.htm:440
-#: godotengine/layouts/home.htm:449 godotengine/layouts/home.htm:458
+#: godotengine/layouts/home.htm:253
+#: godotengine/layouts/home.htm:440
+#: godotengine/layouts/home.htm:449
+#: godotengine/layouts/home.htm:458
 #: godotengine/layouts/home.htm:473
 msgid "Learn more"
 msgstr ""
@@ -53,9 +51,7 @@ msgid "Innovative design"
 msgstr ""
 
 #: godotengine/layouts/home.htm:324
-msgid ""
-"Godot's Node and Scene system gives you both power and flexibility to create "
-"anything."
+msgid "Godot's Node and Scene system gives you both power and flexibility to create anything."
 msgstr ""
 
 #: godotengine/layouts/home.htm:341
@@ -63,9 +59,7 @@ msgid "Use the right language for the job"
 msgstr ""
 
 #: godotengine/layouts/home.htm:343
-msgid ""
-"Keep your code modular with an object-oriented API using Godot's own "
-"GDScript, C#, C++, or bring your own using GDNative."
+msgid "Keep your code modular with an object-oriented API using Godot's own GDScript, C#, C++, or bring your own using GDNative."
 msgstr ""
 
 #: godotengine/layouts/home.htm:359
@@ -73,9 +67,7 @@ msgid "Dedicated 2D engine"
 msgstr ""
 
 #: godotengine/layouts/home.htm:361
-msgid ""
-"Make crisp and performant 2D games with Godot's dedicated 2D rendering "
-"engine with real 2D pixel coordinates and 2D nodes."
+msgid "Make crisp and performant 2D games with Godot's dedicated 2D rendering engine with real 2D pixel coordinates and 2D nodes."
 msgstr ""
 
 #: godotengine/layouts/home.htm:378
@@ -83,9 +75,7 @@ msgid "Simple and powerful 3D"
 msgstr ""
 
 #: godotengine/layouts/home.htm:380
-msgid ""
-"Godot's 3D nodes give you everything you need to build, animate, and render "
-"your 3D worlds and characters."
+msgid "Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds and characters."
 msgstr ""
 
 #: godotengine/layouts/home.htm:397
@@ -93,9 +83,7 @@ msgid "Release on all platforms"
 msgstr ""
 
 #: godotengine/layouts/home.htm:399
-msgid ""
-"Deploy your game on desktop, mobile, and the web in seconds. Godot even "
-"supports consoles through third party publishers."
+msgid "Deploy your game on desktop, mobile, and the web in seconds. Godot even supports consoles through third party publishers."
 msgstr ""
 
 #: godotengine/layouts/home.htm:416
@@ -103,9 +91,7 @@ msgid "Open Source"
 msgstr ""
 
 #: godotengine/layouts/home.htm:418
-msgid ""
-"Truly open development: anyone who contributes to Godot benefits equally "
-"from others' contributions."
+msgid "Truly open development: anyone who contributes to Godot benefits equally from others' contributions."
 msgstr ""
 
 #: godotengine/layouts/home.htm:427
@@ -113,8 +99,7 @@ msgid "Get involved"
 msgstr ""
 
 #: godotengine/layouts/home.htm:429
-msgid ""
-"Join the community and help create a game engine that belongs to everybody."
+msgid "Join the community and help create a game engine that belongs to everybody."
 msgstr ""
 
 #: godotengine/layouts/home.htm:436
@@ -122,9 +107,7 @@ msgid "Code"
 msgstr ""
 
 #: godotengine/layouts/home.htm:438
-msgid ""
-"If you know how to code, you can help by fixing bugs and working with engine "
-"contributors towards the implementation of new features."
+msgid "If you know how to code, you can help by fixing bugs and working with engine contributors towards the implementation of new features."
 msgstr ""
 
 #: godotengine/layouts/home.htm:445
@@ -132,9 +115,7 @@ msgid "Document"
 msgstr ""
 
 #: godotengine/layouts/home.htm:447
-msgid ""
-"Documentation quality is essential in a game engine; help make it better by "
-"updating the API reference, writing new guides or submitting corrections."
+msgid "Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections."
 msgstr ""
 
 #: godotengine/layouts/home.htm:454
@@ -142,20 +123,17 @@ msgid "Report"
 msgstr ""
 
 #: godotengine/layouts/home.htm:456
-msgid ""
-"Found a problem with the engine? Don't forget to report it so that "
-"developers can track it down."
+msgid "Found a problem with the engine? Don't forget to report it so that developers can track it down."
 msgstr ""
 
-#: godotengine/layouts/home.htm:467 godotengine/partials/footer.htm:34
+#: godotengine/layouts/home.htm:467
+#: godotengine/partials/footer.htm:34
 #: godotengine/partials/header.htm:37
 msgid "Donate"
 msgstr ""
 
 #: godotengine/layouts/home.htm:470
-msgid ""
-"You don't need to be an engine developer to help Godot. Consider donating to "
-"speed up development and make Godot&nbsp Engine even more awesome!"
+msgid "You don't need to be an engine developer to help Godot. Consider donating to speed up development and make Godot&nbsp Engine even more awesome!"
 msgstr ""
 
 #: godotengine/layouts/home.htm:479
@@ -194,7 +172,8 @@ msgstr ""
 msgid "Public Relations"
 msgstr ""
 
-#: godotengine/partials/footer.htm:22 godotengine/partials/header.htm:26
+#: godotengine/partials/footer.htm:22
+#: godotengine/partials/header.htm:26
 msgid "News"
 msgstr ""
 
@@ -210,11 +189,13 @@ msgstr ""
 msgid "About Godot"
 msgstr ""
 
-#: godotengine/partials/footer.htm:28 godotengine/partials/header.htm:22
+#: godotengine/partials/footer.htm:28
+#: godotengine/partials/header.htm:22
 msgid "Features"
 msgstr ""
 
-#: godotengine/partials/footer.htm:29 godotengine/partials/header.htm:24
+#: godotengine/partials/footer.htm:29
+#: godotengine/partials/header.htm:24
 msgid "Showcase"
 msgstr ""
 

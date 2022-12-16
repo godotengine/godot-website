@@ -8,46 +8,46 @@ description = "footer partial"
   <div class="container flex">
     <div id="copyright">
       <p>
-        © 2007-{{ "now"|date("Y") }} Juan Linietsky, Ariel Manzur and <a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank" rel="noopener">contributors</a><br>
-        Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom Conservancy</a>.<br>
-        Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
-        <a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on GitHub</a>.
+        © 2007-{{ "now"|date("Y") }} Juan Linietsky, Ariel Manzur {{ TR('and') }} <a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank" rel="noopener">{{ TR('contributors') }}</a>.<br>
+        {{ TR('Godot is a member of the') }} <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom Conservancy</a>.<br>
+        {{ TR('Kindly hosted by') }} <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
+        <a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">{{ TR('Website source code on GitHub') }}</a>.
       </p>
     </div>
     <div id="sitemap">
       <ul class="sitemap-group">
-        <li><strong>Get Godot</strong></li>
-        <li><a href="/download">Download</a></li>
-        <li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+        <li><strong>{{ TR('Get Godot') }}</strong></li>
+        <li><a href="/download">{{ TR('Download') }}</a></li>
+        <li><a href="https://editor.godotengine.org/releases/latest/">{{ TR('Web Editor') }}</a></li>
         <li>&nbsp;</li>
-        <li><strong>Public Relations</strong></li>
-        <li><a href="/news/default/1">News</a></li>
-        <li><a href="/community">Communities and Events</a></li>
-        <li><a href="/press">Press Kit</a></li>
+        <li><strong>{{ TR('Public Relations') }}</strong></li>
+        <li><a href="/news/default/1">{{ TR('News') }}</a></li>
+        <li><a href="/community">{{ TR('Communities and Events') }}</a></li>
+        <li><a href="/press">{{ TR('Press Kit') }}</a></li>
       </ul>
       <ul class="sitemap-group">
-        <li><strong>About Godot</strong></li>
-        <li><a href="/features">Features</a></li>
-        <li><a href="/showcase">Showcase</a></li>
-        <li><a href="/education">Education</a></li>
-        <li><a href="/license">License</a></li>
-        <li><a href="/code-of-conduct">Code of Conduct</a></li>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
-        <li><a href="/donate">Donate</a></li>
+        <li><strong>{{ TR('About Godot') }}</strong></li>
+        <li><a href="/features">{{ TR('Features') }}</a></li>
+        <li><a href="/showcase">{{ TR('Showcase') }}</a></li>
+        <li><a href="/education">{{ TR('Education') }}</a></li>
+        <li><a href="/license">{{ TR('License') }}</a></li>
+        <li><a href="/code-of-conduct">{{ TR('Code of Conduct') }}</a></li>
+        <li><a href="/privacy-policy">{{ TR('Privacy Policy') }}</a></li>
+        <li><a href="/donate">{{ TR('Donate') }}</a></li>
       </ul>
       <ul class="sitemap-group">
-        <li><strong>Project Team</strong></li>
-        <li><a href="/governance">Governance</a></li>
-        <li><a href="/teams">Teams</a></li>
+        <li><strong>{{ TR('Project Team') }}</strong></li>
+        <li><a href="/governance">{{ TR('Governance') }}</a></li>
+        <li><a href="/teams">{{ TR('Teams') }}</a></li>
         <li>&nbsp;</li>
-        <li><strong>Extra Resources</strong></li>
-        <li><a href="/asset-library/asset">Asset Library</a></li>
-        <li><a href="https://docs.godotengine.org">Documentation</a></li>
-        <li><a href="https://github.com/godotengine">Code Repository</a></li>
+        <li><strong>{{ TR('Extra Resources') }}</strong></li>
+        <li><a href="/asset-library/asset">{{ TR('Asset Library') }}</a></li>
+        <li><a href="https://docs.godotengine.org">{{ TR('Documentation') }}</a></li>
+        <li><a href="https://github.com/godotengine">{{ TR('Code Repository') }}</a></li>
       </ul>
     </div>
     <div id="social" class="dark-desaturate">
-      <h4 class="text-right"><a href="/contact">Contact us</a></h4>
+      <h4 class="text-right"><a href="/contact">{{ TR('Contact us') }}</a></h4>
       <div class="flex justify-space-between">
         <a href="https://github.com/godotengine" target="_blank" rel="noopener">
           <img src="{{ 'assets/footer/github_logo.svg' | theme }}" width="32" height="32" alt="GitHub">
@@ -131,49 +131,45 @@ description = "footer partial"
           namespace: 'default',
           beforeEnter() {
             // Updating the hero on the home page
-            if (window.location.pathname === '/') {
+            // get the current html lang attribute
+            const htmlLang = document.documentElement.lang;
+            if (window.location.pathname === '/' || window.location.pathname === '/' + htmlLang || window.location.pathname === '/' + htmlLang + '/') {
               const authors = [
                 {
                   game: 'TailQuest: Defense',
-                  by: 'by Kivano Games',
+                  by: 'Kivano Games',
                   url: 'https://kivano.games/',
                   image: '/themes/godotengine/assets/home/hero/tail-quest.jpg',
                 },
                 {
                   game: 'Beat Invaders',
-                  by: 'by Raffaele Picca',
+                  by: 'Raffaele Picca',
                   url: 'https://www.raffaelepicca.com/',
                   image: '/themes/godotengine/assets/showcase/beat-invaders.jpg',
                 },
                 {
                   game: 'Ex Zodiac',
-                  by: 'by Ben Hickling',
+                  by: 'Ben Hickling',
                   url: 'https://store.steampowered.com/app/1249480/ExZodiac/',
                   image: '/themes/godotengine/assets/showcase/ex-zodiac.png',
                 },
                 {
                   game: 'Primal Light',
-                  by: 'by Fat Gem',
+                  by: 'Fat Gem',
                   url: 'https://store.steampowered.com/app/771420/Primal_Light/',
                   image: '/themes/godotengine/assets/home/hero/primal-light.jpg',
                 },
                 {
                   game: 'Resolutiion',
-                  by: 'by Monolith of Minds',
+                  by: 'Monolith of Minds',
                   url: 'https://store.steampowered.com/app/975150/Resolutiion/',
                   image: '/themes/godotengine/assets/home/hero/resolutiion.jpg',
                 },
                 {
                   game: 'Dome Keeper',
-                  by: 'by Bippinbits',
+                  by: 'Bippinbits',
                   url: 'https://bippinbits.com/',
                   image: '/themes/godotengine/assets/showcase/dome-keeper.jpg',
-                },
-                {
-                  game: 'Fist of the Forgotten',
-                  by: 'Lone Wulf Studio',
-                  url: 'https://fistoftheforgotten.com/',
-                  image: '/themes/godotengine/assets/showcase/fist-of-the-forgotten.jpg',
                 },
               ];
 
@@ -181,7 +177,7 @@ description = "footer partial"
               document.querySelector('.hero .background-image').style.backgroundImage = `url(${author.image})`;
               document.querySelector('.hero .credits a').href = author.url;
               document.querySelector('.hero .credits a span.game').innerText = author.game;
-              document.querySelector('.hero .credits a span.by').innerText = author.by;
+              document.querySelector('.hero .credits a span.by').innerText = ' - ' + author.by;
 
               // Parallax effect: On page scroll move background-position up.
               // This effect is disabled if user opted to have reduced motion in browser/OS settings.

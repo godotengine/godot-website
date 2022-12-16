@@ -1,9 +1,287 @@
+# Spanish translation of the Godot Engine class reference.
+# Copyright (c) 2007-2022 Juan Linietsky, Ariel Manzur.
+# Copyright (c) 2014-2022 Godot Engine contributors (cf. https://github.com/godotengine/godot/blob/master/AUTHORS.md).
+# This file is distributed under the same license as the Godot source code.
+#
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=utf-8\n"
+"Project-Id-Version: Godot Engine official website\n"
+"Report-Msgid-Bugs-To: https://github.com/godotengine/godot-website\n"
 "Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
 "X-Domain: default\n"
 
 #: godotengine/layouts/home.htm:246
 msgid "The game engine you've been waiting&nbsp;for."
+msgstr ""
+
+#: godotengine/layouts/home.htm:247
+msgid ""
+"The Godot Engine is a free, all-in-one, cross-platform game engine that "
+"makes it easy for you to create 2D and 3D games."
+msgstr ""
+
+#: godotengine/layouts/home.htm:251 godotengine/partials/footer.htm:18
+#: godotengine/partials/header.htm:33
+msgid "Download"
+msgstr ""
+
+#: godotengine/layouts/home.htm:253 godotengine/layouts/home.htm:440
+#: godotengine/layouts/home.htm:449 godotengine/layouts/home.htm:458
+#: godotengine/layouts/home.htm:473
+msgid "Learn more"
+msgstr ""
+
+#: godotengine/layouts/home.htm:263
+msgid "Latest news"
+msgstr ""
+
+#: godotengine/layouts/home.htm:300
+msgid "More News"
+msgstr ""
+
+#: godotengine/layouts/home.htm:308
+msgid "A different way to make games"
+msgstr ""
+
+#: godotengine/layouts/home.htm:322
+msgid "Innovative design"
+msgstr ""
+
+#: godotengine/layouts/home.htm:324
+msgid ""
+"Godot's Node and Scene system gives you both power and flexibility to create "
+"anything."
+msgstr ""
+
+#: godotengine/layouts/home.htm:341
+msgid "Use the right language for the job"
+msgstr ""
+
+#: godotengine/layouts/home.htm:343
+msgid ""
+"Keep your code modular with an object-oriented API using Godot's own "
+"GDScript, C#, C++, or bring your own using GDNative."
+msgstr ""
+
+#: godotengine/layouts/home.htm:359
+msgid "Dedicated 2D engine"
+msgstr ""
+
+#: godotengine/layouts/home.htm:361
+msgid ""
+"Make crisp and performant 2D games with Godot's dedicated 2D rendering "
+"engine with real 2D pixel coordinates and 2D nodes."
+msgstr ""
+
+#: godotengine/layouts/home.htm:378
+msgid "Simple and powerful 3D"
+msgstr ""
+
+#: godotengine/layouts/home.htm:380
+msgid ""
+"Godot's 3D nodes give you everything you need to build, animate, and render "
+"your 3D worlds and characters."
+msgstr ""
+
+#: godotengine/layouts/home.htm:397
+msgid "Release on all platforms"
+msgstr ""
+
+#: godotengine/layouts/home.htm:399
+msgid ""
+"Deploy your game on desktop, mobile, and the web in seconds. Godot even "
+"supports consoles through third party publishers."
+msgstr ""
+
+#: godotengine/layouts/home.htm:416
+msgid "Open Source"
+msgstr ""
+
+#: godotengine/layouts/home.htm:418
+msgid ""
+"Truly open development: anyone who contributes to Godot benefits equally "
+"from others' contributions."
+msgstr ""
+
+#: godotengine/layouts/home.htm:427
+msgid "Get involved"
+msgstr ""
+
+#: godotengine/layouts/home.htm:429
+msgid ""
+"Join the community and help create a game engine that belongs to everybody."
+msgstr ""
+
+#: godotengine/layouts/home.htm:436
+msgid "Code"
+msgstr ""
+
+#: godotengine/layouts/home.htm:438
+msgid ""
+"If you know how to code, you can help by fixing bugs and working with engine "
+"contributors towards the implementation of new features."
+msgstr ""
+
+#: godotengine/layouts/home.htm:445
+msgid "Document"
+msgstr ""
+
+#: godotengine/layouts/home.htm:447
+msgid ""
+"Documentation quality is essential in a game engine; help make it better by "
+"updating the API reference, writing new guides or submitting corrections."
+msgstr ""
+
+#: godotengine/layouts/home.htm:454
+msgid "Report"
+msgstr ""
+
+#: godotengine/layouts/home.htm:456
+msgid ""
+"Found a problem with the engine? Don't forget to report it so that "
+"developers can track it down."
+msgstr ""
+
+#: godotengine/layouts/home.htm:467 godotengine/partials/footer.htm:34
+#: godotengine/partials/header.htm:37
+msgid "Donate"
+msgstr ""
+
+#: godotengine/layouts/home.htm:470
+msgid ""
+"You don't need to be an engine developer to help Godot. Consider donating to "
+"speed up development and make Godot&nbsp Engine even more awesome!"
+msgstr ""
+
+#: godotengine/layouts/home.htm:479
+msgid "Sponsored by"
+msgstr ""
+
+#: godotengine/partials/footer.htm:9
+msgid "and"
+msgstr ""
+
+#: godotengine/partials/footer.htm:9
+msgid "contributors"
+msgstr ""
+
+#: godotengine/partials/footer.htm:10
+msgid "Godot is a member of the"
+msgstr ""
+
+#: godotengine/partials/footer.htm:11
+msgid "Kindly hosted by"
+msgstr ""
+
+#: godotengine/partials/footer.htm:12
+msgid "Website source code on GitHub"
+msgstr ""
+
+#: godotengine/partials/footer.htm:17
+msgid "Get Godot"
+msgstr ""
+
+#: godotengine/partials/footer.htm:19
+msgid "Web Editor"
+msgstr ""
+
+#: godotengine/partials/footer.htm:21
+msgid "Public Relations"
+msgstr ""
+
+#: godotengine/partials/footer.htm:22 godotengine/partials/header.htm:26
+msgid "News"
+msgstr ""
+
+#: godotengine/partials/footer.htm:23
+msgid "Communities and Events"
+msgstr ""
+
+#: godotengine/partials/footer.htm:24
+msgid "Press Kit"
+msgstr ""
+
+#: godotengine/partials/footer.htm:27
+msgid "About Godot"
+msgstr ""
+
+#: godotengine/partials/footer.htm:28 godotengine/partials/header.htm:22
+msgid "Features"
+msgstr ""
+
+#: godotengine/partials/footer.htm:29 godotengine/partials/header.htm:24
+msgid "Showcase"
+msgstr ""
+
+#: godotengine/partials/footer.htm:30
+msgid "Education"
+msgstr ""
+
+#: godotengine/partials/footer.htm:31
+msgid "License"
+msgstr ""
+
+#: godotengine/partials/footer.htm:32
+msgid "Code of Conduct"
+msgstr ""
+
+#: godotengine/partials/footer.htm:33
+msgid "Privacy Policy"
+msgstr ""
+
+#: godotengine/partials/footer.htm:37
+msgid "Project Team"
+msgstr ""
+
+#: godotengine/partials/footer.htm:38
+msgid "Governance"
+msgstr ""
+
+#: godotengine/partials/footer.htm:39
+msgid "Teams"
+msgstr ""
+
+#: godotengine/partials/footer.htm:41
+msgid "Extra Resources"
+msgstr ""
+
+#: godotengine/partials/footer.htm:42
+msgid "Asset Library"
+msgstr ""
+
+#: godotengine/partials/footer.htm:43
+msgid "Documentation"
+msgstr ""
+
+#: godotengine/partials/footer.htm:44
+msgid "Code Repository"
+msgstr ""
+
+#: godotengine/partials/footer.htm:48
+msgid "Contact us"
+msgstr ""
+
+#: godotengine/partials/header.htm:27
+msgid "Community"
+msgstr ""
+
+#: godotengine/partials/header.htm:28
+msgid "About"
+msgstr ""
+
+#: godotengine/partials/header.htm:29
+msgid "Assets"
+msgstr ""
+
+#: godotengine/partials/header.htm:34
+msgid "Learn"
+msgstr ""
+
+#: godotengine/partials/header.htm:35
+msgid "Contribute"
 msgstr ""
