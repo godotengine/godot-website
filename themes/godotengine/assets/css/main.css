@@ -43,6 +43,7 @@
   --button-background-color: #ffffff;
   --footer-color: rgb(175, 180, 220);
   --footer-background-color: #414d69;
+  --locale-background-color: #313849;
 
   --code-background-color: #dcdfe2;
   --codeblock-background-color: #282b2e;
@@ -114,6 +115,7 @@
     --button-background-color: #333639;
     --footer-color: hsla(0, 0%, 100%, 0.625);
     --footer-background-color: #333639;
+    --locale-background-color: #202325;
 
     --code-background-color: #333639;
     --codeblock-background-color: #333639;

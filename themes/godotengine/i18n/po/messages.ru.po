@@ -25,7 +25,7 @@ msgid ""
 "makes it easy for you to create 2D and 3D games."
 msgstr ""
 
-#: godotengine/layouts/home.htm:251 godotengine/partials/footer.htm:18
+#: godotengine/layouts/home.htm:251 godotengine/partials/footer.htm:19
 #: godotengine/partials/header.htm:33
 msgid "Download"
 msgstr ""
@@ -147,7 +147,7 @@ msgid ""
 "developers can track it down."
 msgstr ""
 
-#: godotengine/layouts/home.htm:467 godotengine/partials/footer.htm:34
+#: godotengine/layouts/home.htm:467 godotengine/partials/footer.htm:35
 #: godotengine/partials/header.htm:37
 msgid "Donate"
 msgstr ""
@@ -162,107 +162,107 @@ msgstr ""
 msgid "Sponsored by"
 msgstr ""
 
-#: godotengine/partials/footer.htm:9
+#: godotengine/partials/footer.htm:10
 msgid "and"
 msgstr ""
 
-#: godotengine/partials/footer.htm:9
+#: godotengine/partials/footer.htm:10
 msgid "contributors"
 msgstr ""
 
-#: godotengine/partials/footer.htm:10
+#: godotengine/partials/footer.htm:11
 msgid "Godot is a member of the"
 msgstr ""
 
-#: godotengine/partials/footer.htm:11
+#: godotengine/partials/footer.htm:12
 msgid "Kindly hosted by"
 msgstr ""
 
-#: godotengine/partials/footer.htm:12
+#: godotengine/partials/footer.htm:13
 msgid "Website source code on GitHub"
 msgstr ""
 
-#: godotengine/partials/footer.htm:17
+#: godotengine/partials/footer.htm:18
 msgid "Get Godot"
 msgstr ""
 
-#: godotengine/partials/footer.htm:19
+#: godotengine/partials/footer.htm:20
 msgid "Web Editor"
 msgstr ""
 
-#: godotengine/partials/footer.htm:21
+#: godotengine/partials/footer.htm:22
 msgid "Public Relations"
 msgstr ""
 
-#: godotengine/partials/footer.htm:22 godotengine/partials/header.htm:26
+#: godotengine/partials/footer.htm:23 godotengine/partials/header.htm:26
 msgid "News"
 msgstr ""
 
-#: godotengine/partials/footer.htm:23
+#: godotengine/partials/footer.htm:24
 msgid "Communities and Events"
 msgstr ""
 
-#: godotengine/partials/footer.htm:24
+#: godotengine/partials/footer.htm:25
 msgid "Press Kit"
 msgstr ""
 
-#: godotengine/partials/footer.htm:27
+#: godotengine/partials/footer.htm:28
 msgid "About Godot"
 msgstr ""
 
-#: godotengine/partials/footer.htm:28 godotengine/partials/header.htm:22
+#: godotengine/partials/footer.htm:29 godotengine/partials/header.htm:22
 msgid "Features"
 msgstr ""
 
-#: godotengine/partials/footer.htm:29 godotengine/partials/header.htm:24
+#: godotengine/partials/footer.htm:30 godotengine/partials/header.htm:24
 msgid "Showcase"
 msgstr ""
 
-#: godotengine/partials/footer.htm:30
+#: godotengine/partials/footer.htm:31
 msgid "Education"
 msgstr ""
 
-#: godotengine/partials/footer.htm:31
+#: godotengine/partials/footer.htm:32
 msgid "License"
 msgstr ""
 
-#: godotengine/partials/footer.htm:32
+#: godotengine/partials/footer.htm:33
 msgid "Code of Conduct"
 msgstr ""
 
-#: godotengine/partials/footer.htm:33
+#: godotengine/partials/footer.htm:34
 msgid "Privacy Policy"
 msgstr ""
 
-#: godotengine/partials/footer.htm:37
+#: godotengine/partials/footer.htm:38
 msgid "Project Team"
 msgstr ""
 
-#: godotengine/partials/footer.htm:38
+#: godotengine/partials/footer.htm:39
 msgid "Governance"
 msgstr ""
 
-#: godotengine/partials/footer.htm:39
+#: godotengine/partials/footer.htm:40
 msgid "Teams"
 msgstr ""
 
-#: godotengine/partials/footer.htm:41
+#: godotengine/partials/footer.htm:42
 msgid "Extra Resources"
 msgstr ""
 
-#: godotengine/partials/footer.htm:42
+#: godotengine/partials/footer.htm:43
 msgid "Asset Library"
 msgstr ""
 
-#: godotengine/partials/footer.htm:43
+#: godotengine/partials/footer.htm:44
 msgid "Documentation"
 msgstr ""
 
-#: godotengine/partials/footer.htm:44
+#: godotengine/partials/footer.htm:45
 msgid "Code Repository"
 msgstr ""
 
-#: godotengine/partials/footer.htm:48
+#: godotengine/partials/footer.htm:49
 msgid "Contact us"
 msgstr ""
 
@@ -284,4 +284,28 @@ msgstr ""
 
 #: godotengine/partials/header.htm:35
 msgid "Contribute"
+msgstr ""
+
+#: godotengine/partials/localePicker/default.htm:101
+msgid "Language"
+msgstr ""
+
+#: godotengine/partials/localePicker/default.htm:113
+msgid "English"
+msgstr ""
+
+#: godotengine/partials/localePicker/default.htm:119
+msgid "German"
+msgstr ""
+
+#: godotengine/partials/localePicker/default.htm:125
+msgid "Spanish"
+msgstr ""
+
+#: godotengine/partials/localePicker/default.htm:131
+msgid "French"
+msgstr ""
+
+#: godotengine/partials/localePicker/default.htm:137
+msgid "Russian"
 msgstr ""

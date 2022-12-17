@@ -1,7 +1,17 @@
 description = "footer partial"
+
+[localePicker]
+==
+<?php
+function onStart() {
+  $user = BackendAuth::getUser();
+  $this['isAuthorized'] = !!$user;
+}
+?>
 ==
 {##}
 
+{# main starts in header.htm #}
 </main>
 
 <footer>
@@ -46,9 +56,9 @@ description = "footer partial"
         <li><a href="https://github.com/godotengine">{{ TR('Code Repository') }}</a></li>
       </ul>
     </div>
-    <div id="social" class="dark-desaturate">
+    <div id="social">
       <h4 class="text-right"><a href="/contact">{{ TR('Contact us') }}</a></h4>
-      <div class="flex justify-space-between">
+      <div class="flex justify-space-between dark-desaturate">
         <a href="https://github.com/godotengine" target="_blank" rel="noopener">
           <img src="{{ 'assets/footer/github_logo.svg' | theme }}" width="32" height="32" alt="GitHub">
         </a>
@@ -67,6 +77,11 @@ description = "footer partial"
           <img src="{{ 'assets/footer/feed_logo.svg' | theme }}" width="32" height="32" alt="RSS feed">
         </a>
       </div>
+
+      {# Only show the locale picker for authorized users for the time being. #}
+      {% if isAuthorized %}
+      {% component 'localePicker' %}
+      {% endif %}
     </div>
   </div>
 </footer>
@@ -78,6 +93,10 @@ description = "footer partial"
 <script defer src="{{ 'assets/js/highlight.gdscript.min.js?1' | theme }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // We will use this DOM parser with barba to fetch the new metadata and update HTML/HEAD tags
+    // properly on transition.
+    const domParser = new DOMParser();
+
     barba.init({
       // Increase timeout from the default value (2000) as our server is relatively slow to respond.
       // Otherwise, the current page will be reloaded instead of loading the new page.
@@ -104,7 +123,18 @@ description = "footer partial"
             // Simple transition to let the user know that the page is currently loading.
             document.body.style.opacity = 0.6;
           },
-          enter() {
+          enter(data) {
+            // Parse the new document to extract and update the metadata.
+            const nextDocument = domParser.parseFromString(data.next.html, "text/html");
+            document.documentElement.setAttribute('lang', nextDocument.documentElement.getAttribute('lang'));
+
+            document.head.querySelectorAll('link[hreflang]').forEach((link) => {
+              link.remove();
+            });
+            nextDocument.head.querySelectorAll('link[hreflang]').forEach((link) => {
+              document.head.insertAdjacentHTML('beforeend', link.outerHTML);
+            });
+
             document.body.style.opacity = 1.0;
             // Scroll back to top and close the mobile menu to simulate
             // traditional navigation. Don't do this on initial page load

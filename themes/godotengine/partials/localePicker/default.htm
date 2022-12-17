@@ -1,0 +1,161 @@
+<style>
+  .locale-picker {
+    padding: 18px 0;
+    text-align: right;
+    position: relative;
+  }
+
+  .locale-toggle {
+    cursor: pointer;
+  }
+  .locale-toggle:hover {
+    filter: brightness(117.5%);
+  }
+  .locale-toggle:active {
+    filter: brightness(82.5%);
+  }
+
+  .locale-selected {
+    color: var(--footer-link-color);
+    text-decoration: underline;
+    text-decoration-color: var(--footer-link-underline-color);
+  }
+
+  .locale-list {
+    display: none;
+    background-color: var(--locale-background-color);
+    border-radius: 3px;
+    box-shadow: var(--base-shadow);
+    margin: 0 -8px;
+    padding: 6px 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 48px;
+  }
+  .locale-list.active {
+    display: block;
+  }
+
+  .locale-list > li {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .locale-list > li:hover {
+    background-color: var(--footer-background-color);
+  }
+
+  .locale-list > li a {
+    display: block;
+    padding: 4px 4px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .locale-picker {
+      text-align: center;
+    }
+
+    .locale-list {
+      margin: 0;
+      padding: 4px 0;
+    }
+
+    .locale-list > li {
+      margin-bottom: 4px;
+    }
+
+    .locale-list > li a {
+      padding: 6px 4px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Make the toggle element interactive.
+    const localeToggle = document.querySelector('.locale-toggle');
+    localeToggle.addEventListener('click', () => {
+      const localeList = document.querySelector('.locale-list');
+      localeList.classList.toggle('active');
+    });
+
+    // Auto-hide the locale picker list when clicked outside.
+    document.addEventListener('click', (event) => {
+      let node = event.target;
+      while (node) {
+        if (node.classList && node.classList.contains('locale-picker')) {
+          return;
+        }
+
+        node = node.parentNode;
+      }
+
+      const localeList = document.querySelector('.locale-list');
+      if (localeList.classList && localeList.classList.contains('active')) {
+        localeList.classList.toggle('active');
+      }
+    });
+
+    // Enable locale switching for locale picker options.
+    document.querySelectorAll('.locale-option').forEach((it) => {
+      it.addEventListener('click', () => {
+        // We will use the matching alternate link, as it contains the address
+        // that is properly formatted and qualified.
+        const alterLinks = document.head.querySelectorAll('link[hreflang]');
+
+        for (let link of alterLinks) {
+          const linkLocale = link.getAttribute('hreflang');
+
+          if (linkLocale == it.dataset.locale) {
+            window.location = link.getAttribute('href');
+            break;
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<div class="locale-picker">
+  <div class="locale-toggle">
+    {{ TR('Language') }}: <span class="locale-selected" data-locale="{{ activeLocale }}">{{ TR(activeLocaleName) }}</span>
+  </div>
+
+  {#
+    Options are listed as "LocaleName (TranslatedLocaleName)", unless it's the current locale.
+    This allows you to see both the name of each locale as it should be in its native language,
+    and as it would be in the current language.
+  #}
+  <ul class="locale-list">
+    <li>
+      <a href="javascript:;" class="locale-option" data-locale="en">
+        English
+        {% if activeLocale != 'en' %} ({{ TR('English') }}){% endif %}
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" class="locale-option" data-locale="de">
+        Deutsch
+        {% if activeLocale != 'de' %} ({{ TR('German') }}){% endif %}
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" class="locale-option" data-locale="es">
+        Español
+        {% if activeLocale != 'es' %} ({{ TR('Spanish') }}){% endif %}
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" class="locale-option" data-locale="fr">
+        français
+        {% if activeLocale != 'de' %} ({{ TR('French') }}){% endif %}
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" class="locale-option" data-locale="ru">
+        русский
+        {% if activeLocale != 'ru' %} ({{ TR('Russian') }}){% endif %}
+      </a>
+    </li>
+  </ul>
+</div>
