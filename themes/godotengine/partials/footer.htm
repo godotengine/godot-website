@@ -189,20 +189,20 @@ description = "footer partial"
                 const parallaxMinWidth = 768;
                 const parallaxSpeed = 0.4;
 
-                const parallaxTick = (offsetY) => {
+                const parallaxTick = () => {
                   if (window.innerWidth > parallaxMinWidth) {
-                    parallaxImage.style.transform = `translateY(${offsetY * parallaxSpeed}px)`;
+                    parallaxImage.style.transform = `translateY(${window.pageYOffset * parallaxSpeed}px)`;
                   } else {
                     parallaxImage.style.transform = 'none';
                   }
                 }
 
                 window.addEventListener("scroll", () => {
-                  requestAnimationFrame(parallaxTick(window.pageYOffset))
+                  window.requestAnimationFrame(parallaxTick)
                 });
 
                 window.addEventListener("resize", () => {
-                  requestAnimationFrame(parallaxTick(window.pageYOffset))
+                  window.requestAnimationFrame(parallaxTick)
                 });
               }
             }
