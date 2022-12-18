@@ -1,0 +1,107 @@
+title = "FBX Import"
+url = "/fbx-import"
+layout = "more-standalone"
+description = "How to enable importing of FBX scenes in Godot"
+is_hidden = 0
+==
+{##}
+{% put title %} FBX support in Godot {% endput %}
+
+<p>
+  <em>The information on this page only pertains to Godot 4.0 and later. Godot 3.x does not have support for using FBX2glTF directly, but you can use it as a command line tool to convert scenes before placing the converted glTF file in the Godot project folder.</em>
+</p>
+<hr>
+<p>
+  <a href="https://en.wikipedia.org/wiki/FBX">FBX</a> is a popular proprietary
+  3D interchange format from Autodesk. It is often used in game engines to allow
+  importing 3D scenes created using software such as Blender, Maya or 3DS Max.
+</p>
+<p>
+  Godot does not include an FBX importer in its editor code, as doing so would
+  require linking against a proprietary SDK. Relying on reverse engineering was
+  <a href="https://godotengine.org/article/fbx-importer-rewritten-for-godot-3-2-4">attempted in the past</a>,
+  but it turned out to be too unreliable.
+</p>
+<p>
+  However, thanks to a tool known as FBX2glTF, <strong>it is still possible to import
+  FBX scenes to Godot</strong> in a transparent manner. But first…
+</p>
+
+<h3 class="title">Consider using glTF 2.0 instead</h3>
+<p>
+  <a href="https://en.wikipedia.org/wiki/GlTF">glTF</a> is an open 3D
+  interchange format. Unlike FBX, it has many open source implementations
+  available and is supported out of the box in Godot.
+</p>
+<p>
+  We recommend using glTF over FBX for several reasons:
+  <ul>
+    <li>glTF is better supported in open source 3D software such as Blender.</li>
+    <li>
+      glTF import is integrated in the Godot editor. This way, team members
+      working on your project don't need to install external tools before they
+      can start working on the project.
+    </li>
+    <li>
+      If you use headless exporting (continuous integration) for your project,
+      you don't need to install external tools before you can export the
+      project.
+    </li>
+    <li>
+      If you use the Android or HTML5 editor, you can import glTF scenes, but
+      not FBX scenes as these platforms don't allow running arbitrary external
+      executables.
+    </li>
+    <li>
+      If you use a device on a non-x86 architecture, you can import glTF scenes,
+      but not FBX scenes as the Autodesk FBX SDK is only available for x86
+      architectures.
+    </li>
+    <li>
+      glTF is an open standard. Unlike FBX, it doesn't force other software to
+      link against a proprietary SDK to reliably import 3D scenes.
+    </li>
+  </ul>
+<p>
+  See <a href="https://godotengine.org/article/we-should-all-use-gltf-20-export-3d-assets-game-engines">this article</a> for more information.
+</p>
+
+<h3 class="title"">Download FBX2glTF</h3>
+<p><strong>
+  By downloading FBX2glTF, you accept the
+  <a href="https://github.com/godotengine/FBX2glTF/releases/latest/download/FBX-SDK-License.rtf">Autodesk LICENSE AND SERVICES AGREEMENT for Autodesk FBX SDK 2020</a>
+  as FBX2glTF includes this proprietary FBX SDK.
+</strong></p>
+
+<p>
+  <a href="https://github.com/facebookincubator/FBX2glTF">Upstream FBX2glTF</a> is not maintained anymore, so the <a href="https://github.com/godotengine/FBX2glTF">Godot Engine fork of FBX2glTF</a>
+  must be used instead.
+</p>
+<p>
+  Here are download links for the latest version of Godot Engine's FBX2glTF fork:
+</p>
+
+  <div style="margin: 2rem 0">
+    <a href="https://github.com/godotengine/FBX2glTF/releases/latest/download/FBX2glTF-windows-x86_64.zip" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+      Windows (x86_64)
+    </a>
+    <a href="https://github.com/godotengine/FBX2glTF/releases/latest/download/FBX2glTF-macos-x86_64.zip" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+      macOS (x86_64)
+    </a>
+    <a href="https://github.com/godotengine/FBX2glTF/releases/latest/download/FBX2glTF-linux-x86_64.zip" class="btn btn-default" style="margin: 0 0.5rem; white-space: nowrap">
+      Linux (x86_64)
+    </a>
+  </div>
+
+<p>
+  The macOS x86_64 binary can be used with an ARM Godot editor binary. In this
+  case, macOS will automatically use Rosetta when running FBX2glTF. Creating an
+  universal macOS binary (x86_64 + ARM) for FBX2glTF is planned in the future.
+</p>
+
+<p>
+  There are no plans to support the Android and HTML5 editor with FBX import, as
+  those platforms don't allow executing arbitrary external programs.<br>
+  For Android and HTML5, you can use FBX2glTF on another device then save the
+  converted glTF file.
+</p>
