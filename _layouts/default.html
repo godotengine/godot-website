@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="{{ page.description | default: 'Free and open source 2D and 3D game engine' }}">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="{{ page.title | default: 'Godot Engine' }}">
+	<meta property="og:description"
+		content="{{ page.description | default: 'Free and open source 2D and 3D game engine' }}">
+	<meta property="og:image" content="{{ page.image | default: '/assets/og_image.png' }}">
+	<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>{{ page.title | default: "Godot Engine" }}</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	{{ content }}
+</body>
+
+</html>

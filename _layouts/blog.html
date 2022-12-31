@@ -1,0 +1,131 @@
+---
+title: "Godot Engine - Blog"
+description: "Keep up-to-date with the latest Godot Engine development news."
+layout: default
+pagination:
+enabled: true
+collection: article
+---
+
+{% include header.html %}
+
+<style>
+	.posts {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	@media (min-width: 768px) {
+		.posts {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.posts {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+</style>
+
+<div class="head">
+	<div class="container flex eqsize responsive">
+		<div class="main">
+			<h1 class="intro-title">Blog</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<!-- Search -->
+	<form class="search-bar" method="get" action="https://duckduckgo.com/">
+		<input type="hidden" name="sites" value="godotengine.org/article" />
+		<input type="text" name="q" maxlength="300" placeholder="Search articles" />
+		<button class="btn search-bar-btn" type="submit">
+			<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
+		</button>
+	</form>
+
+	<!-- Categories -->
+
+	<h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
+
+	<div class="tags">
+		<a href="/blog" title="Show all categories">
+			<div class="tag tag--default {% if page.category == 'all' %}active{% endif %}">All</div>
+		</a>
+
+		{% for category in site.data.categories %}
+		{% for tag in category[1] %}
+		<a href="/blog/{{ tag.slug }}" title="{{ tag.description }}">
+			<div class="tag tag--{{ category.slug }} {% if tag.slug == page.category %} active {% endif %}">
+				{{ tag.name }}</div>
+		</a>
+		{% endfor%}
+		{% endfor %}
+	</div>
+	{% if page.category != 'all' %}
+	<h3 style="margin-top: 1rem;">Filtered by: {{ site.data.categories[page.category][0].name }}</h3>
+	{% endif %}
+
+	<!-- Posts -->
+	<div class="flex pagination">
+		{% if paginator.previous_page %}
+		<a class="pagination-previous"
+			href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">← Previous</a>
+		{% endif %}
+
+		{% if paginator.page_trail %}
+		{% for trail in paginator.page_trail %}
+		<a {% if page.url==trail.path %}class="active" {% endif %} title="{{trail.title}}"
+			href="{{ trail.path | prepend: site.baseurl | replace: 'index.html', '' }}">{{ trail.num }}</a>
+		{% endfor %}
+		{% endif %}
+
+		{% if paginator.next_page %}
+		<a class="pagination-next"
+			href="{{ paginator.next_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">Next →</a>
+		{% endif %}
+	</div>
+	<div class="posts">
+		{% for post in paginator.posts %}
+		<a href="{{ post.url }}" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="{% for author in site.data.authors %}{% if author.name == post.author %}{{ author.image }}{% endif %}{%
+						endfor %}" alt="" loading="lazy">
+						<span class="by">{{ post.author }} </span>
+						<span class="date">&nbsp;-&nbsp;{{ post.date | date: "%e %B %Y" }}</span>
+					</div>
+					<h3>{{ post.title }}</h3>
+					<p class="excerpt">{{ post.excerpt }}</p>
+				</div>
+			</article>
+		</a>
+		{% endfor %}
+	</div>
+	<div class="flex pagination">
+		{% if paginator.previous_page %}
+		<a class="pagination-previous"
+			href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">← Previous</a>
+		{% endif %}
+
+		{% if paginator.page_trail %}
+		{% for trail in paginator.page_trail %}
+		<a {% if page.url==trail.path %}class="active" {% endif %} title="{{trail.title}}"
+			href="{{ trail.path | prepend: site.baseurl | replace: 'index.html', '' }}">{{ trail.num }}</a>
+		{% endfor %}
+		{% endif %}
+
+		{% if paginator.next_page %}
+		<a class="pagination-next"
+			href="{{ paginator.next_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">Next →</a>
+		{% endif %}
+	</div>
+</div>
+
+
+{% include footer.html %}

@@ -1,0 +1,127 @@
+---
+permalink: /showcase/index.html
+title: "Godot Engine - Showcase"
+description: "Games made with the Godot Engine."
+layout: default
+---
+
+{% include header.html %}
+
+<div class="head">
+	<div class="container flex eqsize">
+		<div class="main">
+			<h1 class="intro-title">Showcase</h1>
+		</div>
+		<div class="tabs">
+			<a href="/features" class="title-font ">Features</a>
+			<a href="/showcase" class="title-font  active ">Showcase</a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<h2 class="title">Showreel videos</h2>
+
+	<p>
+		Check out the showreel videos featuring some of our favorite projects made with Godot!
+	</p>
+
+	<section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+		<article>
+			<div class="card youtube">
+				<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/UAS_pUTFA7o" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</article>
+
+		<article>
+			<div class="card youtube">
+				<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/xF3QiQfQxeQ" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</article>
+
+		<article>
+			<div class="card youtube">
+				<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/9kKp0oguzr8" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</article>
+	</section>
+
+	<p style="margin-top: 3rem" id="submit-project">
+		<strong>Interested in showcasing your published game on this page?</strong>
+		Use <a
+			href="https://docs.google.com/forms/d/e/1FAIpQLSdhNEywWfk7tm4ABSxmPfnJrKwGPAoYbzRfZlHmu9iZ5CJ5Pw/viewform?usp=sf_link">this
+			form</a>.
+	</p>
+
+	<section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+		{% assign projects = site.showcase | sort: 'date' | reverse %}
+		{% for project in projects %}
+		<a href="{{ project.url }}">
+			<article class="card showcase-card" style="
+		      background-image:
+		        linear-gradient(to bottom, transparent, hsla(0, 0%, 0%, 0.8)),
+		        url({{ project.image }}),
+		        linear-gradient(90deg, #b5c1d8 2%, #a8b5d5 9%, #707473 47%, #666a6a 57%)
+		    ">
+				<div>
+					<div class="showcase-card-title">{{ project.title }}</div>
+					<div class="text-center">{{ project.author }}</div>
+					<div class="showcase-card-icons">
+
+						{% if project.windows %}
+						<img src="/assets/icons/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.macos %}
+						<img src="/assets/icons/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
+						{% endif %}
+
+						{% if project.linux %}
+						<img src="/assets/icons/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.switch %}
+						<img src="/assets/icons/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem"
+							width="24" height="24">
+						{% endif %}
+
+						{% if project.html5 %}
+						<img src="/assets/icons/html5.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.android %}
+						<img src="/assets/icons/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.ios %}
+						<img src="/assets/icons/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
+						{% endif %}
+
+						{% if project.playstation %}
+						<img src="/assets/icons/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
+							width="24" height="24">
+						{% endif %}
+
+						{% if project.xbox %}
+						<img src="/assets/icons/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
+						{% endif %}
+					</div>
+				</div>
+			</article>
+		</a>
+		{% endfor %}
+	</section>
+
+</div>
+
+{% include footer.html %}

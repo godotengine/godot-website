@@ -1,4 +1,0 @@
-CREATE USER IF NOT EXISTS 'godot'@'localhost' IDENTIFIED BY 'godot';
-CREATE DATABASE IF NOT EXISTS october;
-
-GRANT ALL PRIVILEGES ON october.* TO 'godot'@'%';

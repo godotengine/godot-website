@@ -1,0 +1,25 @@
+---
+permalink: /rss.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+
+	<title>Godot Engine Official</title>
+	<link>https://godotengine.org</link>
+	<description>Godot is a 2D and 3D free and open source game engine developed by a community of contributors. It provides a huge set of common tools, so you can just focus on making your game without reinventing the wheel.</description>
+	<atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml" />
+
+	{% assign latest_posts = site.article | sort:"date" | reverse %}
+	{% for post in latest_posts limit:24 %}
+	<item>
+		<title>{{ post.title }}</title>
+		<link>{{ post.url }}</link>
+		<description>{{ post.content | xml_escape }}</description>
+		<pubDate>{{ post.date | date: "%a, %B %e %Y %X +0000" }}</pubDate>
+	</item>
+	{% endfor %}
+
+	</channel>
+</rss>

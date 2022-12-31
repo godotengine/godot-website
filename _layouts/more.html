@@ -1,0 +1,43 @@
+---
+layout: default
+header_text: ''
+current_tab: ''
+---
+
+{% include header.html %}
+
+<div class="head">
+	<div class="container flex eqsize" style="flex-direction: column">
+		<div class="main">
+			<h1 class="intro-title">{{ page.header_text }}</h1>
+
+		</div>
+
+		<div class="tabs">
+			<a href="/contact" class="title-font {% if page.current_tab == 'contact' %} active {% endif %}">
+				Contact
+			</a>
+			<a href="/code-of-conduct" class="title-font {% if page.current_tab == 'code-of-conduct' %} active {% endif %}">
+				Code of Conduct
+			</a>
+			<a href="/privacy-policy" class="title-font {% if page.current_tab == 'privacy-policy' %} active {% endif %}">
+				Privacy
+			</a>
+			<a href="/governance" class="title-font {% if page.current_tab == 'governance' %} active {% endif %}">
+				Governance
+			</a>
+			<a href="/teams" class="title-font {% if page.current_tab == 'teams' %} active {% endif %}">
+				Teams
+			</a>
+			<a href="/license" class="title-font {% if page.current_tab == 'license' %} active {% endif %}">
+				License
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	{{ content }}
+</div>
+
+{% include footer.html %}
