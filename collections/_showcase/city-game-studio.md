@@ -1,6 +1,5 @@
 ---
 description: "City Game Studio showcase page"
-layout: "showcase-item"
 date: 2021-07-01 00:00:00 +0000
 
 title: City Game Studio
@@ -8,7 +7,7 @@ author: Binogure Studio
 website: https://www.binogure-studio.com/
 release_date: August 2021
 
-image: "/assets/showcase/city-game-studio.png"
+image: "/assets/showcase/city-game-studio-header.jpg"
 gallery: [
 	"/assets/showcase/city-game-studio.png"
 ]

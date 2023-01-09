@@ -1,14 +1,13 @@
 ---
 description: "Primal Light showcase page"
-layout: "showcase-item"
-date: 2021-06-01 00:00:00 +0000
+date: 2021-07-01 00:00:00 +0000
 
 title: Primal Light
 author: Fat Gem
 website: https://twitter.com/primallightgame
 release_date: July 2020
 
-image: "/assets/showcase/primal-light-2.jpg"
+image: "/assets/showcase/primal-light-header.jpg"
 gallery: [
 	"/assets/showcase/primal-light-1.png",
   "/assets/showcase/primal-light-2.jpg"

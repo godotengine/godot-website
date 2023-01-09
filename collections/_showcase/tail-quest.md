@@ -1,6 +1,5 @@
 ---
 description: "TailQuest: Defense showcase page"
-layout: "showcase-item"
 date: 2021-06-01 00:00:00 +0000
 
 title: "TailQuest: Defense"
@@ -8,7 +7,7 @@ author: Kivano Games
 website: https://kivano.games/
 release_date: TBD
 
-image: "/assets/showcase/tail-quest.jpg"
+image: "/assets/showcase/tail-quest-header.jpg"
 gallery: [
 	"/assets/showcase/tail-quest.jpg"
 ]

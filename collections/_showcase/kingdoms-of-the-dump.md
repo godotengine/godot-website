@@ -1,6 +1,5 @@
 ---
 description: Kingdoms of the Dump showcase page
-layout: "showcase-item"
 date: 2019-09-01 00:00:00 +0000
 
 title: Kingdoms of the Dump
@@ -8,7 +7,7 @@ author: Roach Games
 website: https://kingdomsofthedump.com/
 release_date: TBD
 
-image: "/assets/showcase/kingdoms-of-the-dump.png"
+image: "/assets/showcase/kingdoms-of-the-dump-header.jpg"
 gallery: [
 	"/assets/showcase/kingdoms-of-the-dump.png"
 ]

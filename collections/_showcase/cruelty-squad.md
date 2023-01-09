@@ -1,6 +1,5 @@
 ---
 description: "An immersive power fantasy simulator with tactical stealth elements set in a sewage infused garbage world."
-layout: "showcase-item"
 date: 2021-06-01 00:00:00 +0000
 
 title: Cruelty Squad
@@ -8,7 +7,7 @@ author: Consumer Softproducts
 website: https://twitter.com/CSoftproducts
 release_date: June 2021
 
-image: "/assets/showcase/cruelty-squad.jpg"
+image: "/assets/showcase/cruelty-squad-header.jpg"
 gallery: [
 	"/assets/showcase/cruelty-squad.jpg"
 ]
@@ -17,7 +16,7 @@ youtube_id: "PvKEKD3eo2Y"
 windows: true
 
 
-steam: https://store.steampowered.com/app/1637320/Dome_Keeper/
+steam: https://store.steampowered.com/app/1388770/Cruelty_Squad/
 
 
 featured_in_home: false

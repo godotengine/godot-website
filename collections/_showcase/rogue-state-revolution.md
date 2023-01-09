@@ -1,14 +1,13 @@
 ---
-layout: "showcase-item"
 description: "Rogue State Revolution showcase page"
-date: 2021-06-01 00:00:00 +0000
+date: 2021-02-01 00:00:00 +0000
 
 title: "Rogue State Revolution"
 author: "Little Red Dog Games"
 website: https://www.littlereddoggames.com/
 release_date: "February 2021"
 
-image: "/assets/showcase/rogue-state-revolution.jpg"
+image: "/assets/showcase/rogue-state-revolution-header.jpg"
 gallery: [
 	"/assets/showcase/rogue-state-revolution.jpg"
 ]

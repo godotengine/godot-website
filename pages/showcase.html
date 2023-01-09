@@ -23,57 +23,124 @@ layout: default
 	<h2 class="title">Showreel videos</h2>
 
 	<p>
-		Check out the showreel videos featuring some of our favorite projects made with Godot!
+		Every year, we make a series of videos highlighting the best games made with Godot. Here are the latest ones:
 	</p>
 
 	<section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
 		<article>
-			<div class="card youtube">
-				<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/UAS_pUTFA7o" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+			<div class="showcase-card video">
+				<a href="https://www.youtube.com/watch?v=UAS_pUTFA7o" target="_blank">
+					<img src="/assets/showcase/desktop-showcase.jpg" alt="">
+				</a>
 			</div>
 		</article>
 
 		<article>
-			<div class="card youtube">
-				<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/xF3QiQfQxeQ" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+			<div class="showcase-card video">
+				<a href="https://www.youtube.com/watch?v=xF3QiQfQxeQ" target="_blank">
+					<img src="/assets/showcase/mobile-showcase.jpg" alt="">
+				</a>
 			</div>
 		</article>
 
 		<article>
-			<div class="card youtube">
-				<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/9kKp0oguzr8" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+			<div class="showcase-card video">
+				<a href="https://www.youtube.com/watch?v=9kKp0oguzr8" target="_blank">
+					<img src="/assets/showcase/apps-showcase.jpg" alt="">
+				</a>
 			</div>
 		</article>
 	</section>
 
-	<p style="margin-top: 3rem" id="submit-project">
-		<strong>Interested in showcasing your published game on this page?</strong>
-		Use <a
-			href="https://docs.google.com/forms/d/e/1FAIpQLSdhNEywWfk7tm4ABSxmPfnJrKwGPAoYbzRfZlHmu9iZ5CJ5Pw/viewform?usp=sf_link">this
-			form</a>.
-	</p>
+	<style>
+		.showcase-card h3 {
+			font-size: 33px;
+			margin-bottom: 0px;
+		}
+
+		.showcase-card p {
+			font-size: 14px;
+			margin: 0;
+			color: var(--secondary-color-text);
+		}
+
+		.showcase-card img.thumbnail {
+			max-width: 100%;
+			border-radius: 7px;
+			background-color: var(--card-background-color);
+			box-shadow: 0 5px 10px -3px #00000078;
+			display: block;
+			margin-bottom: 6px;
+		}
+
+		.showcase-card-caption {
+			display: flex;
+			column-gap: 12px;
+			justify-content: space-between;
+			margin: 0 14px;
+		}
+
+		.showcase-card-authors {
+			display: grid;
+			align-content: center;
+		}
+
+		.showcase-card-icons {
+			filter: none;
+			padding: 7px 0px 0px;
+			opacity: 0.5;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.showcase-card-icons {
+				filter: invert();
+			}
+		}
+
+		.showcase-card .no-capsule {
+			aspect-ratio: 92 / 43;
+			background-size: cover;
+			background-position: center;
+			border-radius: 6px;
+			box-shadow: 0 5px 10px -3px #00000078;
+			margin-bottom: 7px;
+			text-align: center;
+			display: grid;
+			align-content: center;
+		}
+
+		.showcase-card .no-capsule h3 {
+			text-shadow: 0 4px 5px black;
+		}
+
+		.showcase-card.video img {
+			max-width: 100%;
+			background-color: var(--card-background-color);
+			box-shadow: 0 5px 10px -3px #00000078;
+			border-radius: 7px;
+			display: block;
+		}
+	</style>
+
+	<!-- Filter will go here -->
+
+	<h2 class="title">Made with Godot</h2>
 
 	<section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
 		{% assign projects = site.showcase | sort: 'date' | reverse %}
 		{% for project in projects %}
-		<a href="{{ project.url }}">
-			<article class="card showcase-card" style="
-		      background-image:
-		        linear-gradient(to bottom, transparent, hsla(0, 0%, 0%, 0.8)),
-		        url({{ project.image }}),
-		        linear-gradient(90deg, #b5c1d8 2%, #a8b5d5 9%, #707473 47%, #666a6a 57%)
-		    ">
-				<div>
-					<div class="showcase-card-title">{{ project.title }}</div>
-					<div class="text-center">{{ project.author }}</div>
+		{% if project.release_date != 'TBD' and project.tool != true %}
+		<a href="{{ project.url }}" style="text-decoration: none;">
+			<article class="showcase-card">
+				{% if project.image %}
+				<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+				{% else %}
+				<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+					<h3>{{ project.title }}</h3>
+				</div>
+				{% endif %}
+				<div class="showcase-card-caption">
 					<div class="showcase-card-icons">
-
 						{% if project.windows %}
 						<img src="/assets/icons/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
 							height="24">
@@ -116,12 +183,116 @@ layout: default
 						<img src="/assets/icons/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
 						{% endif %}
 					</div>
+					<div class="showcase-card-authors">
+						<p>{{ project.author }}</p>
+					</div>
 				</div>
 			</article>
 		</a>
+		{% endif %}
 		{% endfor %}
 	</section>
 
+	<h2 class="title">Apps & Tools</h2>
+
+	<section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+		{% assign projects = site.showcase | sort: 'date' | reverse %}
+		{% for project in projects %}
+		{% if project.tool %}
+		<a href="{{ project.url }}" style="text-decoration: none;">
+			<article class="showcase-card">
+				{% if project.image %}
+				<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+				{% else %}
+				<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+					<h3>{{ project.title }}</h3>
+				</div>
+				{% endif %}
+				<div class="showcase-card-caption">
+					<div class="showcase-card-icons">
+						{% if project.windows %}
+						<img src="/assets/icons/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.macos %}
+						<img src="/assets/icons/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
+						{% endif %}
+
+						{% if project.linux %}
+						<img src="/assets/icons/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.switch %}
+						<img src="/assets/icons/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem"
+							width="24" height="24">
+						{% endif %}
+
+						{% if project.html5 %}
+						<img src="/assets/icons/html5.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.android %}
+						<img src="/assets/icons/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
+							height="24">
+						{% endif %}
+
+						{% if project.ios %}
+						<img src="/assets/icons/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
+						{% endif %}
+
+						{% if project.playstation %}
+						<img src="/assets/icons/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
+							width="24" height="24">
+						{% endif %}
+
+						{% if project.xbox %}
+						<img src="/assets/icons/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
+						{% endif %}
+					</div>
+					<div class="showcase-card-authors">
+						<p>{{ project.author }}</p>
+					</div>
+				</div>
+			</article>
+		</a>
+		{% endif %}
+		{% endfor %}
+	</section>
+
+	<h2 class="title">Coming soon</h2>
+	<section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+		{% assign projects = site.showcase | sort: 'date' | reverse %}
+		{% for project in projects %}
+		{% if project.release_date == 'TBD' %}
+		<a href="{{ project.url }}" style="text-decoration: none;">
+			<article class="showcase-card">
+				{% if project.image %}
+				<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+				{% else %}
+				<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+					<h3>{{ project.title }}</h3>
+				</div>
+				{% endif %}
+				<div class="showcase-card-caption">
+					<div class="showcase-card-authors">
+						<p>{{ project.author }}</p>
+					</div>
+				</div>
+			</article>
+		</a>
+		{% endif %}
+		{% endfor %}
+	</section>
+
+	<p style="margin-top: 3rem" id="submit-project">
+		<strong>Interested in showcasing your published game on this page?</strong>
+		Use <a
+			href="https://docs.google.com/forms/d/e/1FAIpQLSdhNEywWfk7tm4ABSxmPfnJrKwGPAoYbzRfZlHmu9iZ5CJ5Pw/viewform?usp=sf_link">this
+			form</a>.
+	</p>
 </div>
 
 {% include footer.html %}

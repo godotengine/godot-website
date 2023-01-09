@@ -20,6 +20,11 @@ defaults:
       og_type: "article"
   - scope:
       path: ""
+      type: "showcase"
+    values:
+      layout: "showcase-item"
+  - scope:
+      path: ""
       type: "download"
     values:
       layout: "download"

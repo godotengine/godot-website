@@ -1,6 +1,5 @@
 ---
 description: "ΔV: Rings of Saturn showcase page"
-layout: "showcase-item"
 date: 2019-08-01 00:00:00 +0000
 
 title: "ΔV: Rings of Saturn"
@@ -8,7 +7,7 @@ author: Kodera Software
 website: https://games.kodera.pl/dv/
 release_date: August 2019 (Early Access)
 
-image: "/assets/showcase/delta-v-rings-of-saturn.jpg"
+image: "/assets/showcase/delta-v-rings-of-saturn-header.jpg"
 gallery: [
   "/assets/showcase/delta-v-rings-of-saturn.jpg"
 ]

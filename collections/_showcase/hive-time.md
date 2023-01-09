@@ -1,6 +1,5 @@
 ---
 description: "Hive Time showcase page"
-layout: "showcase-item"
 date: 2019-12-01 00:00:00 +0000
 
 title: Hive Time
@@ -8,7 +7,6 @@ author: Cheeseness
 website: https://hivetime.twolofbees.com/
 release_date: December 2019
 
-image: "/assets/showcase/hive-time.png"
 gallery: [
   "/assets/showcase/hive-time.png"
 ]

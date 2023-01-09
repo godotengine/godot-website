@@ -1,6 +1,5 @@
 ---
 description: "Dungeondraft showcase page"
-layout: "showcase-item"
 date: 2020-02-01 00:00:00 +0000
 
 title: Dungeondraft
@@ -8,7 +7,6 @@ author: Megasploot
 website: https://dungeondraft.net/
 release_date: February 2020
 
-image: "/assets/showcase/dungeondraft.jpg"
 gallery: [
 	"/assets/showcase/dungeondraft.jpg"
 ]
@@ -22,6 +20,7 @@ macos: true
 custom: https://dungeondraft.net/
 
 
+tool: true
 featured_in_home: false
 ---
 
