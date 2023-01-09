@@ -31,7 +31,8 @@ When working on new features, keep in mind this website only supports _evergreen
 
 To build the website locally, follow these steps:
 
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/); make sure `bundle` is available from the command line.
+1. Install [Jekyll prerequisites](https://jekyllrb.com/docs/installation/).
+   - Make sure `bundle` is available from the command line.
 2. Clone this repository.
 3. Install the necessary dependencies: `bundle install`.
 4. Build the site: `bundle exec jekyll build`.
