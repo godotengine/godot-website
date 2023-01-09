@@ -1,0 +1,62 @@
+- name: Andrea Catania
+  image: /assets/images/authors/default_avatar.svg
+- name: Ariel Manzur
+  image: /assets/images/authors/punto.png
+- name: Bartleby Lawnjelly
+  image: /assets/images/authors/default_avatar.svg
+- name: Bastiaan Olij
+  image: /assets/images/authors/bastiaan.jpg
+- name: Camille Mohr-Daurat
+  image: /assets/images/authors/default_avatar.svg
+- name: Clay John
+  image: /assets/images/authors/clayjohn.jpg
+- name: Emi
+  image: /assets/images/authors/emi.png
+- name: Ernest Lee
+  image: /assets/images/authors/default_avatar.svg
+- name: Fabio Alessandrelli
+  image: /assets/images/authors/default_avatar.svg
+- name: Fredia Huya-Kouadio
+  image: /assets/images/authors/default_avatar.svg
+- name: George Marques
+  image: /assets/images/authors/default_avatar.svg
+- name: Gilles Roudiere
+  image: /assets/images/authors/groud.png
+- name: Gordon MacPherson
+  image: /assets/images/authors/default_avatar.svg
+- name: Hein-Pieter van Braam
+  image: /assets/images/authors/default_avatar.svg
+- name: Hugo Locurcio
+  image: /assets/images/authors/calinou.png
+- name: Ignacio Roldán Etcheverry
+  image: /assets/images/authors/ignacio.png
+- name: Ilaria Cislaghi
+  image: /assets/images/authors/ilaria.jpg
+- name: Joan Fons
+  image: /assets/images/authors/joan.png
+- name: Juan Linietsky
+  image: /assets/images/authors/reduzio.jpg
+- name: Julian Murgia
+  image: /assets/images/authors/default_avatar.svg
+- name: karroffel
+  image: /assets/images/authors/default_avatar.svg
+- name: Nathan GDQuest
+  image: /assets/images/authors/nathan.png
+- name: Matias Goldberg
+  image: /assets/images/authors/default_avatar.svg
+- name: Max Hilbrunner
+  image: /assets/images/authors/default_avatar.svg
+- name: Pāvels Nadtočajevs
+  image: /assets/images/authors/default_avatar.svg
+- name: Pedro J. Estébanez
+  image: /assets/images/authors/pedro.png
+- name: Rémi Verschelde
+  image: /assets/images/authors/akien.jpg
+- name: Silc Renew
+  image: /assets/images/authors/tokage.png
+- name: Yuri Roubinsky
+  image: /assets/images/authors/default_avatar.svg
+- name: Yuri Sizov
+  image: /assets/images/authors/yuri.jpeg
+- name: default
+  image: /assets/images/authors/default_avatar.svg

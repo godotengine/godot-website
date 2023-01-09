@@ -1,8 +1,0 @@
-name: godotengine
-description: "Godot's custom theme"
-author: "Godot Engine"
-homepage: "https://godotengine.org/"
-code: gde
-translate:
-  es: i18n/es.yaml
-  ru: i18n/ru.yaml

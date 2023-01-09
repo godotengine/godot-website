@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<style>
+	body {
+		background-color: var(--background-color);
+	}
+
+	h1 {
+		margin-bottom: 8px;
+		margin-top: 32px;
+	}
+
+	:not(pre)>code {
+		background: var(--code-background-color);
+		padding: 1px 4px;
+		font-size: 0.95em;
+		border-radius: 3px;
+	}
+
+	pre {
+		background: var(--codeblock-background-color);
+		color: var(--codeblock-color);
+	}
+
+	pre code {
+		display: block;
+		overflow-x: auto;
+		padding: .5em;
+	}
+
+	.date-big {
+		line-height: 2;
+		margin-left: 32px;
+	}
+
+	article {
+		background-color: var(--base-color);
+		box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	figure img {
+		margin: 0;
+	}
+
+	article img,
+	article video {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: auto;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	article h1 {
+		margin-top: 64px;
+	}
+
+	article h2,
+	article h3,
+	article h4 {
+		margin-top: 42px;
+	}
+
+	.author {
+		margin-top: 0px;
+		margin-bottom: 64px;
+	}
+
+	.tag.active {
+		filter: saturate(0.75);
+	}
+
+	@media screen and (min-width: 900px) {
+		article .content {
+			width: 70%;
+			margin: auto;
+		}
+	}
+
+	@media (max-width: 900px) {
+		body {
+			background-color: var(--base-color);
+		}
+
+		article {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		article img:first-child,
+		article video:first-child {
+			max-width: 100%;
+		}
+	}
+</style>
+
+<link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
+
+<div class="container">
+	<article class="flex padded">
+		<div class="content content-article">
+			<figure>
+				<img src="{{ page.image }}" title="{{ page.image_caption_title }}"
+					alt="{{ page.image_caption_title }} {{ page.image_caption_description }}" class="rounded-lg"
+					style="width: 100%; height: auto" />
+				<figcaption style="opacity: 0.8; line-height: 1.5">
+					<strong>{{ page.image_caption_title }}</strong>
+					<span style="margin-left: 0.75rem; font-size: 90%">{{ page.image_caption_description }}</span>
+				</figcaption>
+			</figure>
+
+			<div class="info">
+				<h1>
+					{{ page.title }}
+				</h1>
+				<h4 class="author">
+					By: {{ page.author }}
+					<span class="date"> {{ page.date | date: "%e %B %Y" }}</span>
+				</h4>
+
+				<div class="tags">
+					{% for category in page.categories %}
+					<a href="/blog/{{ category }}">
+						<div class="tag active">{{ site.data.categories[category][0].name }}</div>
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+
+			{{ content }}
+		</div>
+	</article>
+</div>
+
+
+
+{% include footer.html %}

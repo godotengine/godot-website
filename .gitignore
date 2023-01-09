@@ -1,47 +1,6 @@
-# Exclude everything by default (this is a CMS!), and whitelist the safe stuff
-/*
-!/README.md
-!/DEVELOPMENT_SETUP.md
-!/ISSUE_TEMPLATE.md
-!/LICENSE.txt
-!.well-known/
+# Build artifacts and cache
+.jekyll-cache
+_site
 
-# Vim
-*.swp
-*.swo
-
-# Git stuff
-!.gitattributes
-!.gitmodules
-!.gitignore
-
-# Local development tools
-node_modules
-
-# Winter CMS files
-# Themes
-!/themes
-# Custom plugins
-!/plugins
-
-# Docker
-/docker/mariadb/init/*.sql
-/docker/mariadb/storage
-!/docker
-!/docker/mariadb/init/000-setup.sql
-
-# Continuous integration
-!.github/
-!lighthouserc.js
-
-# Editor config
-!.editorconfig
-
-# Linting/formatting setup
-!.prettierignore
-!package-lock.json
-!package.json
-
-# OS specific
-.DS_Store
-docker/.DS_Store
+# Code editors
+.vscode/
