@@ -1,14 +1,13 @@
 ---
 description: "Defend against waves of alien attackers in this innovative roguelike survival miner. Dig for resources and choose from powerful upgrade paths. Is there enough time to mine a little deeper and get back to defend before the monsters attack your dome?"
-layout: "showcase-item"
-date: 2022-08-01 00:00:00 +0000
+date: 2022-09-01 00:00:00 +0000
 
 title: Dome Keeper
 author: Bippinbits
 website: https://bippinbits.com/
 release_date: September 2022
 
-image: "/assets/showcase/dome-keeper.jpg"
+image: "/assets/showcase/dome-keeper-header.jpg"
 gallery: [
 	"/assets/showcase/dome-keeper.jpg"
 ]

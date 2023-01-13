@@ -1,14 +1,13 @@
 ---
 description: "Resolutiion showcase page"
-layout: "showcase-item"
-date: 2021-06-01 00:00:00 +0000
+date: 2021-05-01 00:00:00 +0000
 
 title: Resolutiion
 author: Monolith of Minds
 website: https://resolutiion.monolithofminds.com/
 release_date: May 2020
 
-image: "/assets/showcase/resolutiion-1.jpg"
+image: "/assets/showcase/resolutiion-header.jpg"
 gallery: [
   "/assets/showcase/resolutiion-1.jpg",
 	"/assets/showcase/resolutiion-2.png"

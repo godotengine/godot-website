@@ -1113,51 +1113,6 @@ pre > code {
   }
 }
 
-.showcase-card {
-  /* Display a placeholder color while the card's background image is loading. */
-  background-color: #607080 !important;
-  background-size: cover;
-  background-position: center;
-  border: none;
-  border-radius: 0.5rem;
-  color: hsl(0, 0%, 100%);
-  height: 16rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.showcase-cards a {
-  text-decoration: none;
-}
-
-.showcase-card:hover {
-  filter: brightness(110%);
-}
-
-.showcase-card:active {
-  filter: brightness(90%);
-}
-
-.showcase-card-title {
-  font-size: 180%;
-  font-weight: 700;
-  /* Compensate for the platform icon margins. */
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  text-shadow: 0.125rem 0.125rem 0.125rem hsl(0, 0%, 0%);
-}
-
-.showcase-card-icons {
-  filter: invert(100%);
-  text-align: center;
-  opacity: 0.75;
-  margin-top: 2rem;
-}
-
 .teams-team-section {
   background-color: var(--teams-odd-color);
   padding: 20px 16px;

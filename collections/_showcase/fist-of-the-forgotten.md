@@ -1,6 +1,5 @@
 ---
 description: "Jump, punch, slide, and swing through the remnants of civilizations, facing powerful bosses to unlock new movement and combat abilities for your giant, mechanical fist as you seek out the remnants of humankind."
-layout: "showcase-item"
 date: 2022-06-01 00:00:00 +0000
 
 title: Fist of the Forgotten
@@ -8,7 +7,7 @@ author: Lone Wulf Studio
 website: https://lonewulfstudio.com/
 release_date: TBD
 
-image: "/assets/showcase/fist-of-the-forgotten.jpg"
+image: "/assets/showcase/fist-of-the-forgotten-header.jpg"
 gallery: [
 	"/assets/showcase/fist-of-the-forgotten.jpg"
 ]

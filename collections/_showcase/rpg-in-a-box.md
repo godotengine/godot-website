@@ -1,5 +1,4 @@
 ---
-layout: "showcase-item"
 description: "RPG in a Box showcase page"
 date: 2021-06-01 00:00:00 +0000
 
@@ -8,7 +7,7 @@ author: "Justin Arnold"
 website: https://www.rpginabox.com/
 release_date: "May 2022"
 
-image: "/assets/showcase/rpg-in-a-box.png"
+image: "/assets/showcase/rpg-in-a-box-header.jpg"
 gallery: [
 	"/assets/showcase/rpg-in-a-box.png"
 ]
@@ -37,6 +36,7 @@ developer_interview:
 </p>"
 
 
+tool: true
 featured_in_home: false
 ---
 

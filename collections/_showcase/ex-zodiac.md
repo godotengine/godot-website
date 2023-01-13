@@ -1,14 +1,13 @@
 ---
 description: "Ex Zodiac showcase page"
-layout: "showcase-item"
-date: 2021-01-01 00:00:00 +0000
+date: 2021-07-01 00:00:00 +0000
 
 title: Ex Zodiac
 author: Ben Hickling
 website: https://twitter.com/benhickling
-release_date: 2021 (Early Access)
+release_date: July 2021 (Early Access)
 
-image: "/assets/showcase/ex-zodiac.png"
+image: "/assets/showcase/ex-zodiac-header.jpg"
 gallery: [
 	"/assets/showcase/ex-zodiac.png"
 ]

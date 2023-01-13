@@ -1,6 +1,5 @@
 ---
 description: "Pixelorama showcase page"
-layout: "showcase-item"
 date: 2019-08-01 00:00:00 +0000
 
 title: Pixelorama
@@ -8,7 +7,6 @@ author: Orama Interactive
 website: https://twitter.com/OramaInteractiv
 release_date: August 2019
 
-image: "/assets/showcase/pixelorama.png"
 gallery: [
 	"/assets/showcase/pixelorama.png"
 ]
@@ -23,6 +21,7 @@ html5: true
 itch: https://orama-interactive.itch.io/pixelorama/
 github: https://github.com/Orama-Interactive/Pixelorama
 
+tool: true
 featured_in_home: false
 ---
 

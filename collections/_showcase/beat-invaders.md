@@ -1,6 +1,5 @@
 ---
 description: "Action Roguelite Shoot-em-up inspired by the classic Space Invaders."
-layout: "showcase-item"
 date: 2022-03-01 00:00:00 +0000
 
 title: Beat Invaders
@@ -8,7 +7,7 @@ author: Raffaele Picca
 website: https://www.raffaelepicca.com
 release_date: March 2022
 
-image: "/assets/showcase/beat-invaders.jpg"
+image: "/assets/showcase/beat-invaders-header.jpg"
 gallery: [
 	"/assets/showcase/beat-invaders.jpg"
 ]

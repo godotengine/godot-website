@@ -1,6 +1,5 @@
 ---
 description: "Precipice showcase page"
-layout: "showcase-item"
 date: 2019-05-01 00:00:00 +0000
 
 title: Precipice
@@ -8,7 +7,7 @@ author: Little Red Dog Games
 website: https://www.littlereddoggames.com/
 release_date: May 2019
 
-image: "/assets/showcase/precipice.png"
+image: "/assets/showcase/precipice-header.jpg"
 gallery: [
 	"/assets/showcase/precipice.png"
 ]

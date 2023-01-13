@@ -1,6 +1,5 @@
 ---
 description: Material Maker showcase page
-layout: "showcase-item"
 date: 2019-10-01 00:00:00 +0000
 
 title: Material Maker
@@ -8,7 +7,6 @@ author: R0dZill4
 website: https://twitter.com/R0dZill4
 release_date: October 2019
 
-image: "/assets/showcase/material-maker.png"
 gallery: [
 	"/assets/showcase/material-maker.png"
 ]
@@ -21,6 +19,7 @@ linux: true
 github: https://github.com/RodZill4/material-maker
 itch: https://rodzilla.itch.io/material-maker
 
+tool: true
 featured_in_home: false
 ---
 

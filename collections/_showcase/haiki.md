@@ -1,14 +1,13 @@
 ---
 description: "Haiki showcase page"
-layout: "showcase-item"
-date: 2021-05-01 00:00:00 +0000
+date: 2021-10-01 00:00:00 +0000
 
 title: Haiki
 author: Richard Hörnig
 website: https://twitter.com/haiki_game
-release_date: June 2021 (Early Access)
+release_date: October 2021 (Early Access)
 
-image: "/assets/showcase/haiki.png"
+image: "/assets/showcase/haiki-header.jpg"
 gallery: [
   "/assets/showcase/haiki.png"
 ]
