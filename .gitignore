@@ -1,6 +1,8 @@
 # Build artifacts and cache
+.bundle/
 .jekyll-cache
 _site
+vendor/
 
 # Code editors
 .vscode/
