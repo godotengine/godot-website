@@ -2,7 +2,7 @@
 title: "Why we broke your PR"
 excerpt: "As some of you probably noticed a lot of PRs on the backlog now need a rebase because of PR 20137"
 categories: ["progress-report"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b5/90c/f2d/5b590cf2dac47927219311.jpg
 date: 2018-07-25 23:30:00
 ---

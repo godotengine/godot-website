@@ -2,7 +2,7 @@
 title: "Maintenance release: Godot 3.0.2"
 excerpt: "We've found several small regressions in Godot 3.0.1. This maintenance release addresses these and also add some features for our C# users."
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5a9/bbf/1e2/5a9bbf1e2b04f446577255.jpg
 date: 2018-03-04 10:40:06
 ---

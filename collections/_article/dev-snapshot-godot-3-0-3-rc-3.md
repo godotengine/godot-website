@@ -2,7 +2,7 @@
 title: "Dev snapshot: Godot 3.0.3 RC 3"
 excerpt: "Godot 3.0.3 RC3 is out! We've done a lot of work to make the mono export experience better for Windows users. Please help us test and debug this release!"
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b1/2ab/104/5b12ab104dfb6960002176.png
 date: 2018-06-02 00:00:00
 ---

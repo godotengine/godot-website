@@ -4,7 +4,7 @@ excerpt: "We are pretty happy with the overall stability of Godot 3.0, that we r
 
 Check the detailed release notes to see what's new in Godot 3.0.1, and what bugs have been fixed."
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5a9/2f7/557/5a92f75575e65533435326.jpg
 date: 2018-02-25 20:59:56
 ---

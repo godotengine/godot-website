@@ -2,7 +2,7 @@
 title: "Godot APK Fixer tool"
 excerpt: "We have released a tool to repair APK files released with older versions of Godot. A fix for this will also be integrated in upcoming Godot releases."
 categories: ["news"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b1/962/b00/5b1962b00413a990510141.png
 date: 2018-06-07 00:00:00
 ---

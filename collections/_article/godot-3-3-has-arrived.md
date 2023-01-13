@@ -177,7 +177,7 @@ Fabio also greatly improved support for [gamepads](/article/godot-web-progress-r
 
 Thanks to Pāvels Nadtočajevs ([bruvzg](https://github.com/bruvzg)), Godot 3.2.3 already had support for *compiling* Godot for Apple M1 Macs (ARM64 architecture), but we hadn't updated our infrastructure to provide such builds at the time. With Godot 3.3, we now provide a *universal* binary which supports both x86_64 and ARM64 Macs. As of 3.3, this is only for the *standard* build, not for the *Mono* ones, as we still need more work to be able to cross-compile Mono for Apple M1.
 
-Additionally, we now provide editor binaries which are *signed and notarized*, so you should no longer need to jump through hoops to run Godot on a Mac. Thanks to Hein-Pieter van Braam-Stewart ([hpvb](https://github.com/hpvb)) and his company [Prehensile Tales](https://prehensile-tales.com/) who provide the Mac and signing certificate needed for this. Both *standard* and *Mono* builds are notarized.
+Additionally, we now provide editor binaries which are *signed and notarized*, so you should no longer need to jump through hoops to run Godot on a Mac. Thanks to HP van Braam ([hpvb](https://github.com/hpvb)) and their company [Prehensile Tales](https://prehensile-tales.com/) who provide the Mac and signing certificate needed for this. Both *standard* and *Mono* builds are notarized.
 
 The export dialog now has support for [signing](https://github.com/godotengine/godot/pull/33447) your builds when you export your game from a Mac, including the [configuration of entitlements](https://github.com/godotengine/godot/pull/46618) (this is sadly not possible from other OSes as it depends on macOS-specific tools).
 

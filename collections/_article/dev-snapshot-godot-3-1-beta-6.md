@@ -11,7 +11,7 @@ As bugfixing is going at a steady pace towards Godot 3.1 stable, we plan to rele
 
 See the changes between [3.1 beta 5 and 3.1 beta 6](https://github.com/godotengine/godot/compare/c54330c6b0530d0fdc836f7349c4725eb7f309cb...30a4723d9c974daaaf6b8af581b2d66c6b31b119). This beta is built from commit [30a4723](https://github.com/godotengine/godot/commit/30a4723d9c974daaaf6b8af581b2d66c6b31b119).
 
-A big change in this release is that the Windows binaries are now **properly code signed**. Our release manager [Hein-Pieter van Braam-Stewart](https://github.com/hpvb) is now signing binaries with his own company's certificate. From now on, you should thus expect (and can trust) our official binaries signed by **[Prehensile Tales B.V.](https://www.prehensile-tales.com/)**. macOS binaries will be signed at a later time.
+A big change in this release is that the Windows binaries are now **properly code signed**. Our release manager [HP van Braam](https://github.com/hpvb) is now signing binaries with their own company's certificate. From now on, you should thus expect (and can trust) our official binaries signed by **[Prehensile Tales B.V.](https://www.prehensile-tales.com/)**. macOS binaries will be signed at a later time.
 
 Contrarily to our [3.0.x maintenance releases](/article/maintenance-release-godot-3-0-6), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs](/devblog). It's been over a year since the 3.0 release and over 6,500 commits, so expect a lot of nice things in the final 3.1 version!
 
@@ -35,7 +35,7 @@ The download links are not featured on the [Download](/download) page to avoid c
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.1/beta6) (GDScript, GDNative, VisualScript)
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.1/beta6/mono) (C# support + all the above). You need to have MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version; it comes bundled with Mono 5.18.
 
-**Important:** As mentioned above, Windows binaries are now signed by **Prehensile Tales B.V.**, the company of our release manager [Hein-Pieter van Braam-Stewart](https://github.com/hpvb). You can trust this signature and accept any warning that Windows may issue due to the novelty of this certificate. As more users accept it, the certificate will be recognized as trusted for future releases.
+**Important:** As mentioned above, Windows binaries are now signed by **Prehensile Tales B.V.**, the company of our release manager [HP van Braam](https://github.com/hpvb). You can trust this signature and accept any warning that Windows may issue due to the novelty of this certificate. As more users accept it, the certificate will be recognized as trusted for future releases.
 
 ## Bug reports
 

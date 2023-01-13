@@ -2,7 +2,7 @@
 title: "Maintenance release: Godot 3.0.5"
 excerpt: "In Godot 3.0.5 we've fixed the Android APK export issue, a C# bug that only appeared on exported games, and several other small things. Get it while the gettin's good!"
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b4/266/3cc/5b42663cc18a0730946172.png
 date: 2018-07-08 00:00:00
 ---

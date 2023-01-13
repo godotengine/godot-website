@@ -182,7 +182,7 @@ After that, I started implementing *Pose and Trajectory Matching* (i.e. calculat
 
 - **Project:** Asynchronous Cached File Access
 - **Student:** Raghav Shankar ([WarpspeedSCP](https://gist.github.com/WarpspeedSCP))
-- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and Hein-Pieter van Braam ([hpvb](https://github.com/hpvb))
+- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and HP van Braam ([hpvb](https://github.com/hpvb))
 - **Repository:** https://github.com/WarpspeedSCP/godot/tree/wip-patch
 
 ### About this project

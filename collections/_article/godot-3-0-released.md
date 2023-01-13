@@ -255,7 +255,7 @@ The `get_node()` function also got syntactic sugar to obtain nodes in the local 
 
 ![New GDScript API in 3.0](/storage/app/media/3.0%20release/gdscript3.png)
 
-GDScript has also seen a huge performance boost thanks to the work of Hein-Pieter van Braam ([hpvb/TMM](https://github.com/hpvb)), which makes its execution much faster.
+GDScript has also seen a huge performance boost thanks to the work of HP van Braam ([hpvb/TMM](https://github.com/hpvb)), which makes its execution much faster.
 
 A new pattern matching API is also available, courtesy of [karroffel](https://github.com/karroffel).
 

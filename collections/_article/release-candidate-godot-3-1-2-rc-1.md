@@ -10,7 +10,7 @@ date: 2019-11-13 12:05:15
 
 It's been over 6 months since Godot 3.1.1-stable, so the upcoming **3.1.2** release is both long overdue and accordingly packed with important bug fixes and enhancements.
 
-We intended to have 3.1.x releases more regularly (every other month or so), but our release manager for the stable branches, Hein-Pieter, has been quite busy the past few months and thus less available for Godot contributions. So now that the 3.2 pipeline is well oiled (see [3.2 beta 1](/article/dev-snapshot-godot-3-2-beta-1)), I'm going back to the stable branches to provide new releases. I also plan to release 3.0.7 in coming weeks for those of you who are still using the 3.0 branch for specific projects.
+We intended to have 3.1.x releases more regularly (every other month or so), but our release manager for the stable branches, HP, has been quite busy the past few months and thus less available for Godot contributions. So now that the 3.2 pipeline is well oiled (see [3.2 beta 1](/article/dev-snapshot-godot-3-2-beta-1)), I'm going back to the stable branches to provide new releases. I also plan to release 3.0.7 in coming weeks for those of you who are still using the 3.0 branch for specific projects.
 
 As we cherry-picked close to 400 commits to the 3.1 branch since 3.1.1-stable, extensive testing is necessary to ensure that no regression crept in under disguise of a bugfix. This is why we publish this **release candidate** for 3.1.2 to gather test reports from the community.
 

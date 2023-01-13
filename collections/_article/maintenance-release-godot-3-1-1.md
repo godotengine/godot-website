@@ -2,7 +2,7 @@
 title: "Maintenance release: Godot 3.1.1"
 excerpt: "Godot 3.1.1-stable is released, the first maintenance release of the 3.1 series. In this release we've fixed an important security issue related to networking, added some nice quality of life improvements to the animation editor, and fixed several bugs."
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5cc/42f/af6/5cc42faf61a5d075621243.png
 date: 2019-04-27 00:00:00
 ---

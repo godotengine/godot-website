@@ -36,7 +36,7 @@ The download links are not featured on the [Download](/download) page to avoid c
 - [**Classic build**](https://downloads.tuxfamily.org/godotengine/3.1/rc1) (GDScript, GDNative, VisualScript)
 - [**Mono build**](https://downloads.tuxfamily.org/godotengine/3.1/rc1/mono) (C# support + all the above). You need to have MSbuild installed to use the Mono build.
 
-**Important:** Windows binaries are now signed by [**Prehensile Tales B.V.**](https://www.prehensile-tales.com), the company of our release manager [Hein-Pieter van Braam-Stewart](https://github.com/hpvb). You can trust this signature and accept any warning that Windows may issue due to the novelty of this certificate. As more users accept it, the certificate will be recognized as trusted for future releases.
+**Important:** Windows binaries are now signed by [**Prehensile Tales B.V.**](https://www.prehensile-tales.com), the company of our release manager [HP van Braam](https://github.com/hpvb). You can trust this signature and accept any warning that Windows may issue due to the novelty of this certificate. As more users accept it, the certificate will be recognized as trusted for future releases.
 
 ## Bug reports
 

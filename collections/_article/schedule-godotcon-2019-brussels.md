@@ -33,8 +33,8 @@ In particular, some additional talks or workshops may typically be planned by Go
   * In the field of neuroscience, the study of how the mind and brain make decisions relies heavily on observing, classifying and dissecting behaviour. Due to the difficult nature of this issue, neuroscience has historically studied very simple decision problems. Most decisions are not, however, simple. Throughout the last century, scientists have developed amazingly controlled environments and, in parallel, and often unknowingly, so have game developers. Despite doing so, these two fields do not create these environments with the same goals, principles, or even tools. By bridging the two we hope to create environments that are both complex enough to mimic "real decisions" and retain the elegance and analytical prowess of the simple scientific tasks. So how can we make games that, while analytically tractable and scientifically relevant, remain engaging and fun for the player?
 - **Workshop:** *Solving targeting solution for your game* | Leszek Nowak ([John Meadow](https://github.com/JohnMeadow1))
   * Depending on interests from the audience, John will run a workshop about [2D target leading](https://github.com/JohnMeadow1/GodotGeometryElements/blob/master/assets/examples_animations/targeting.gif), seeking AI or [solving for 3D ballistic trajectory](https://blog.forrestthewoods.com/solving-ballistic-trajectories-b0165523348c).
-- **Demo:** *Make your own cross-platform builds easily with the upcoming godot_build tool* | Hein-Pieter van Braam-Stewart ([hpvb](https://github.com/hpvb))
-  * Godot comes bundled with many great features, but sometimes you need to roll your own build to add specific features (Steam integration, mobile monetization SDKs, etc.). Setting up cross-platform build environments can be a daunting and error-prone task, so Hein-Pieter is developing a standalone tool to build Godot using containerized build environments, which he uses for official 3.1 builds and will make available for everyone.
+- **Demo:** *Make your own cross-platform builds easily with the upcoming godot_build tool* | HP van Braam ([hpvb](https://github.com/hpvb))
+  * Godot comes bundled with many great features, but sometimes you need to roll your own build to add specific features (Steam integration, mobile monetization SDKs, etc.). Setting up cross-platform build environments can be a daunting and error-prone task, so HP is developing a standalone tool to build Godot using containerized build environments, which he uses for official 3.1 builds and will make available for everyone.
 - **Talk:** *Re-making Triple Triad with Godot* | Davide Cristini
   * Davide has this question: "How difficult is it to re-create the Triple Triad card game from Final Fantasy 8 with the Godot Engine?" He will talk about the challenges of creating this simple card-game and how he solved them.
 - **Demo:** *Daki-chan's Great Expectations* | Piet Bronders & Laurent Van Acker
@@ -49,10 +49,10 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 
 <div class="speaker">
 <div class="speaker-img">
-    <img alt="Hein-Pieter van Braam-Stewart" src="/storage/app/uploads/public/5c5/0d7/96a/5c50d796a4c37792972855.jpg" />
+    <img alt="HP van Braam" src="/storage/app/uploads/public/5c5/0d7/96a/5c50d796a4c37792972855.jpg" />
 </div>
 <div class="speaker-text">
-    Hein-Pieter van Braam-Stewart is one of the more experienced developers of the community, often asked to investigate the most esoteric bugs involving compiler quirks or crafting platform-specific incantations.
+    HP van Braam is one of the more experienced developers of the community, often asked to investigate the most esoteric bugs involving compiler quirks or crafting platform-specific incantations.
     Aside from maintaining Godot's stable branches and doing all the official builds for 3.1, he runs his own Godot consulting company <a href="https://www.prehensile-tales.com/">Prehensile Tales</a>.
 </div>
 </div>

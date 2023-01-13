@@ -2,7 +2,7 @@
 title: "Maintenance release: Godot 3.0.6"
 excerpt: "Godot 3.0.6 fixes an important security issue. In addition we've added the 'headless' build for CI use and fixed several C# issues."
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b5/d0d/013/5b5d0d0134b9d363512677.jpg
 date: 2018-07-29 00:00:00
 ---
