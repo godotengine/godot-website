@@ -1,5 +1,14 @@
 # Settings
-exclude: [".github", "Gemfile", "Gemfile.lock", "build.sh", "build-and-serve.sh", "README.md"]
+exclude:
+  [
+    ".github",
+    "Gemfile",
+    "Gemfile.lock",
+    "build.sh",
+    "build-and-serve.sh",
+    "README.md",
+    "storage",
+  ]
 permalink: pretty
 
 collections_dir: collections
