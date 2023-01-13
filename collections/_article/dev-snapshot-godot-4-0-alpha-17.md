@@ -45,7 +45,7 @@ Some of the most notables feature changes in this update are:
   * Rename and move `Node.raise()` to `CanvasItem.move_to_front()` ([GH-60108](https://github.com/godotengine/godot/pull/60108)).
   * Rename SceneTree `change_scene()` and `change_scene_to()` to remove ambiguity ([GH-63596](https://github.com/godotengine/godot/pull/63596)).
   * Rename "ssl" references to "tls" in methods and properties ([GH-65460](https://github.com/godotengine/godot/pull/65460)).
-- Core: Fix `Time.get_datetime_*` methods possibly return wrong time on day change ([GH-65509](https://github.com/godotengine/godot/pull/65509)). 
+- Core: Fix `Time.get_datetime_*` methods possibly return wrong time on day change ([GH-65509](https://github.com/godotengine/godot/pull/65509)).
 - Core: Allow negative indices in Node `move_child()` ([GH-65595](https://github.com/godotengine/godot/pull/65595)).
 - Core: Add ability to flag classes and methods as experimental or deprecated ([GH-64982](https://github.com/godotengine/godot/pull/64982)).
 - Editor: Fix editing of remote objects in the Inspector ([GH-63640](https://github.com/godotengine/godot/pull/63640), [GH-65520](https://github.com/godotengine/godot/pull/65520)).

@@ -61,7 +61,7 @@ One of the most requested features is finally here! Keybindings in Godot can now
 
 ### Live script reloading
 
-Tired of having to reload your game for each small little code change or fix? Godot now supports live script reloading! Simply save your script and it will be updated in the running game. 
+Tired of having to reload your game for each small little code change or fix? Godot now supports live script reloading! Simply save your script and it will be updated in the running game.
 
 If you are running your game on an external device (*e.g.* Android), and using "Deploy with Remote Debug", live script reloading will magically happen in there too.
 
@@ -97,7 +97,7 @@ There is also a beautiful new flat icon theme which supports HiDPI, courtesy of 
 
 ### Drag & drop support
 
-The world has changed and some user interface conventions have evolved since Godot was made. New users used to find Godot a little rough due to not being able to drag around information. 
+The world has changed and some user interface conventions have evolved since Godot was made. New users used to find Godot a little rough due to not being able to drag around information.
 
 From this new version onwards, drag & drop is fully supported in the editor. You can drag resources from the inspector or filesystem, nodes to rearrange and reparent them, and in general all kinds of lists and previews. If you believe that some editor sections could further benefit from this functionality, let us know!
 

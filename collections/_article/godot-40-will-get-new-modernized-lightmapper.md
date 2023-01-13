@@ -83,7 +83,7 @@ In most game engines, a lightmap is baked for a whole scene and only one can be 
 
 It is also possible to toggle lightmaps as "interior", which allows mixing them with "exterior" lightmaps (as an example, a large field and a castle on that field, going inside the castle will make it have priority over the exterior because it's marked as "interior"). For lightmaps of the same type, Godot will perform blending between them for dynamic objects.
 
-This allows creating very complex scenarios by mixing pre-lit scenes transparently. 
+This allows creating very complex scenarios by mixing pre-lit scenes transparently.
 
 #### Lightprobes
 

@@ -27,7 +27,7 @@ The TileSet and TileMap editor have now been merged into the bottom panel. When 
 
 ## Support for different shapes and layouts
 
-To handle different shapes, like diamonds (for isometric maps) or hexagons, you previously had to use the "half-offset" option in the TileMap node. But whatever the shape you were using, the grid was always showing an half-offset grid of squares. Not only this was confusing to the eye, as painting hexagons on a square grid is not intuitive, but it was also making the `world_to_map(...)` function behave weirdly, as the shape did not fit perfectly into the grid. 
+To handle different shapes, like diamonds (for isometric maps) or hexagons, you previously had to use the "half-offset" option in the TileMap node. But whatever the shape you were using, the grid was always showing an half-offset grid of squares. Not only this was confusing to the eye, as painting hexagons on a square grid is not intuitive, but it was also making the `world_to_map(...)` function behave weirdly, as the shape did not fit perfectly into the grid.
 
 This problem is now fixed, you now select the shape you want to use (square, isometric, hexagon, half-offset square), and it is perfectly represented by the grid. Of course, the `world_to_map(...)` function now considers the shape accordingly.
 
@@ -39,7 +39,7 @@ Note that most of those properties have now been moved to the TileSet resource. 
 
 ## TileSet resource updates
 
-To simplify things with the TileSet setup (removing the need to specify manually the atlases, autotiles or single tiles in a texture), you now have to organize your textures into fixed-size grids. Basically, this means that all source textures are now considered as atlases. 
+To simplify things with the TileSet setup (removing the need to specify manually the atlases, autotiles or single tiles in a texture), you now have to organize your textures into fixed-size grids. Basically, this means that all source textures are now considered as atlases.
 
 It will be possible to configure the size of a tile in the texture to be different from the one of the tile shape, as this is needed for isometric views for example. Though, you will be able to visualize and configure how the bigger texture region is rendered over the base tile:
 

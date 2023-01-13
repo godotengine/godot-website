@@ -127,7 +127,7 @@ There are still some things to iron out (like cubemap seams), but this is a good
 
 ### implement BRDF
 
-To properly (in a PBR sense) support metalness and roughness, a [Bidirectional reflectance distribution function](https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function), short BRDF, is needed. 
+To properly (in a PBR sense) support metalness and roughness, a [Bidirectional reflectance distribution function](https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function), short BRDF, is needed.
 
 There are some great references and materials out there that can go into detail a lot better than I can, so I will just plug [some](https://academy.allegorithmic.com/courses/b6377358ad36c444f45e2deaa0626e65) [of](https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf) [them](https://disney-animation.s3.amazonaws.com/library/s2012_pbs_disney_brdf_notes_v2.pdf).
 

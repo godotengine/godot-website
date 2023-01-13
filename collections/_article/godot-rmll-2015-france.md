@@ -15,10 +15,10 @@ RMLL takes place in Beauvais, a city a little north of Paris, from July 4 to Jul
 
 The schedule will be:
 
-* **Tuesday 7 July, 15:20**: Introduction to Godot Engine (talk)  
+* **Tuesday 7 July, 15:20**: Introduction to Godot Engine (talk)
 *Edit:* The video recording of the talk can be [viewed online](http://video.rmll.info/videos/introduction-au-moteur-godot/).
 
-* The time and date of the workshop is TBA but should be the same or the next day.  
+* The time and date of the workshop is TBA but should be the same or the next day.
 More information at the [RMLL website](https://2015.rmll.info).
 
 Thanks enormously to the organization of RMLL for this invitation!

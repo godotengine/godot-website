@@ -21,7 +21,7 @@ To show you how to use it, I will apply it to the Platformer3D demo that can be 
 
 #### Create physical bones
 
-The first thing to do is to select the skeleton node (in the player scene of *Robi* the robot). You will notice that a skeleton button appears on the top bar menu: 
+The first thing to do is to select the skeleton node (in the player scene of *Robi* the robot). You will notice that a skeleton button appears on the top bar menu:
 
 ![Skeleton menu](/storage/app/uploads/public/5af/ab9/c72/5afab9c7200ce584291865.png)
 
@@ -62,7 +62,7 @@ My final result is this:
 
 #### Start and stop the simulation
 
-Now it's really simple to start the simulation by attaching a GDScript and writing down this code: 
+Now it's really simple to start the simulation by attaching a GDScript and writing down this code:
 
 ```
 func _ready():
@@ -80,13 +80,13 @@ func _ready():
     physical_bones_start_simulation(["r-arm", "l-arm"])
 ```
 
-With the code above, we are passing to the engine the names of bones for which we would like to simulate physics, and this is the result: 
+With the code above, we are passing to the engine the names of bones for which we would like to simulate physics, and this is the result:
 
 ![Ragdoll simulation with only arm bones](/storage/app/uploads/public/5af/b06/c69/5afb06c693617870253401.gif)
 
 ## Collision Layer and Mask
 
-Last but not least you have to properly set layer and mask in a way that doesn't collide with kinematic capsule but collide with ground: 
+Last but not least you have to properly set layer and mask in a way that doesn't collide with kinematic capsule but collide with ground:
 
 
 ![Untitled.png](/storage/app/uploads/public/5af/c73/2f8/5afc732f8071b214206421.png)

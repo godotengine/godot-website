@@ -56,7 +56,7 @@ So one of the use cases for templates is the creation of functions with C linkag
 
 Previously, only basic Godot types were supported to be used as method parameters, making it harder to pass around and use objects with C++ classes attached to them. A change in the `_ArgCast` templates allows each pointer type to construct the object the way it wants, enabling the use of custom classes as parameters.
 
-One kind of Object has special semantics in Godot, the [`Reference`](https://github.com/godotengine/godot/blob/e4213e6/core/reference.h#L42-L61) class. All classes inheriting from it can be reference counted. This is Godot's main mechanism for memory management. 
+One kind of Object has special semantics in Godot, the [`Reference`](https://github.com/godotengine/godot/blob/e4213e6/core/reference.h#L42-L61) class. All classes inheriting from it can be reference counted. This is Godot's main mechanism for memory management.
 To increase or decrease the reference count, the methods `reference()` and `unreference()` need to be called manually. Since this is bothersome, Godot has its own [smart-pointer](https://en.wikipedia.org/wiki/Smart_pointer) type called [`Ref`](https://github.com/godotengine/godot/blob/e4213e6/core/reference.h#L63-L64), which references on copy and automatically dereferences when the smart pointer goes out of scope.
 
 This functionality was replicated in the C++ bindings, but the translation from Godot-intern code into the external bindings had some unexpected problems - causing memory leaks.
@@ -67,14 +67,14 @@ With the work of [Zylann](https://github.com/Zylann), those issues were resolved
 
 Because GDNative is a C API, the minimal example demo to see if things are actually working is [implemented in C](https://github.com/GodotNativeTools/GDNative-demos/tree/386f6571eba1b5a2986660fbbb54ebf2348c0b53/c/SimpleDemo).
 
-The GDNative and NativeScript APIs are rather verbose, so many people seemed to wish for a simpler C++ demo. Hence a [new demo was added](https://github.com/GodotNativeTools/GDNative-demos/tree/8b3c2ee96b26b538248556cff9de5b4d2c85fe8d/cpp/SimpleDemo), which does exactly the same as the C demo, but is much simpler. 
+The GDNative and NativeScript APIs are rather verbose, so many people seemed to wish for a simpler C++ demo. Hence a [new demo was added](https://github.com/GodotNativeTools/GDNative-demos/tree/8b3c2ee96b26b538248556cff9de5b4d2c85fe8d/cpp/SimpleDemo), which does exactly the same as the C demo, but is much simpler.
 
 The whole demo pretty much boils down to the following code.
 
 ```cpp
 class Simple : public godot::GodotScript<godot::Reference> {
 	GODOT_CLASS(Simple)
-	
+
 	godot::String data;
 public:
 
@@ -109,9 +109,9 @@ The most obvious use case: underlining text.
 
 As seen in the previous screenshot, many UI elements looked "washed out" and stretched. The rendering command used by such an item is the [`CommandNinePatch`](https://github.com/karroffel/godot/blob/c82c9f73fc7f9880678482769f6c3b13143ef737/servers/visual/rasterizer.h#L700-L715).
 
-A Ninepatch element is a (usually textured) rectangle that has a fixed margin for the borders. That's how the borders of a button look equally smooth when resizing the button - only the center gets freely scaled, the corners stay the same and the other parts of the border get only scaled in one dimension. 
+A Ninepatch element is a (usually textured) rectangle that has a fixed margin for the borders. That's how the borders of a button look equally smooth when resizing the button - only the center gets freely scaled, the corners stay the same and the other parts of the border get only scaled in one dimension.
 
-It's called Ninepatch because the rectangle gets split into nine sub-rectangles. 
+It's called Ninepatch because the rectangle gets split into nine sub-rectangles.
 
 The GLES3 renderer only renders a single rectangle but feeds the fragment shader with the needed margin information. The fragment shader then calculates the associated UV coordinate for each fragment. The same approach shouldn't be used in GLES2, since some drivers work a lot better if no dependent texture reads are performed. (layman explanation: the UVs of a texture for a fragment should be known before the fragment shader actually executes)
 
@@ -167,7 +167,7 @@ Custom shaders are still in an early stage, but they already work inside the edi
 
 ### add circle rendering
 
-One of the last few item command types unimplemented for 2D rendering was the `CommandCircle`. While the initial implementation had a fatal bug, it helped uncover a more hidden bug that caused problems in the editor UI later on. 
+One of the last few item command types unimplemented for 2D rendering was the `CommandCircle`. While the initial implementation had a fatal bug, it helped uncover a more hidden bug that caused problems in the editor UI later on.
 
 ## Future
 

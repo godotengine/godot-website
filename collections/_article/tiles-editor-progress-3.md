@@ -25,7 +25,7 @@ The remaining of this section describes the TileSet changes I made. Right now, t
 
 #### Physics
 
-TileSet's physics have been reimplemented from scratch. The new implementation allows to define several physics layers. Each *TileSet's physics layer* has a collision layer property, a collision mask property and a physics material. 
+TileSet's physics have been reimplemented from scratch. The new implementation allows to define several physics layers. Each *TileSet's physics layer* has a collision layer property, a collision mask property and a physics material.
 Then, each tile can define one or several shapes for each *TileSet's physics layer*.
 
 ![TileSet physics](/storage/app/uploads/public/607/05d/819/60705d8191412365837988.gif)
@@ -44,7 +44,7 @@ Note that navigation in TileMap is still a little bit rough on the edges. The pa
 
 #### Custom data
 
-As it was quite a requested feature, TileSet now support *custom data layers*. Each custom data layer can be assigned a type and a name. Once this is done, each tile of the TileSet can be assigned a value for each custom data layer. 
+As it was quite a requested feature, TileSet now support *custom data layers*. Each custom data layer can be assigned a type and a name. Once this is done, each tile of the TileSet can be assigned a value for each custom data layer.
 
 ![custom_data.gif](/storage/app/uploads/public/607/064/9da/6070649dac6f3069466787.gif)
 
@@ -52,7 +52,7 @@ Right now, the tile inspector displays the index instead of the custom data name
 
 #### Terrains
 
-*Terrains* are the more powerful replacement of autotiles. Unlike autotiles, terrains can support transitions from one terrain to another, as a tile may define several terrains at once. 
+*Terrains* are the more powerful replacement of autotiles. Unlike autotiles, terrains can support transitions from one terrain to another, as a tile may define several terrains at once.
 
 Terrains are grouped into terrain sets. Each terrain set is assigned a mode from "Match corners and side", "Match corners" and "Match sides". They define how terrains are matched to each other in a terrain set. (This corresponds to the previous bitmask modes autotiles used: 2×2, 3×3 or 3×3 minimal, and is similar to what Tiled features.) Terrains will support hexagonal and isometric shapes.
 

@@ -12,7 +12,7 @@ The existing animation system in Godot was already one of the most powerful of a
 
 ### A bit of history
 
-Animation editing was one of the first distinctive Godot features. If you are familiar with Godot, you may already know that *any property* from *any object* can be animated or tweened. Changing sprite textures, colors, animation frames, calling functions, playing animations in other animation players, playing sounds, etc. All is done transparently by simply animating property states. 
+Animation editing was one of the first distinctive Godot features. If you are familiar with Godot, you may already know that *any property* from *any object* can be animated or tweened. Changing sprite textures, colors, animation frames, calling functions, playing animations in other animation players, playing sounds, etc. All is done transparently by simply animating property states.
 
 Although this approach works really well, it started showing its age as it was not improved very much in almost 8 years. The reason for this is that the code behind animation editing was too hard-coded in general, which made it difficult to add new features or improvements. In the image below, the animation editor can be shown as it was in 2010. Nothing much has changed since:
 
@@ -32,7 +32,7 @@ Following is the long list of changes and improvements included in the new anima
 
 First of all, there is a new layout (keep in mind the visuals are not final, and will be further refined by our UI styling contributors before 3.1).
 
-The old layout wasted a lot of horizontal space in buttons that were seldom used. Buttons in large groups are, in general, not a very helpful usability convention so the whole layout was confusing. Some useful menus (such as add track) were hidden in the clutter, and the animation name had only a bit of space to show itself. 
+The old layout wasted a lot of horizontal space in buttons that were seldom used. Buttons in large groups are, in general, not a very helpful usability convention so the whole layout was confusing. Some useful menus (such as add track) were hidden in the clutter, and the animation name had only a bit of space to show itself.
 
 Some buttons were unnecesary, such as move up/down, which remained from the ages when Godot did not support drag and drop.
 
@@ -48,7 +48,7 @@ The step field was confusing, so it was renamed to a snap button. Snapping can n
 
 ### New track workflow
 
-Besides the usual workflow of inserting keys (and creating tracks) from the inspector, new tracks can be created directly from the Add Track menu. This not only provides an alternative workflow, but works much better for non-property tracks, such as *Call* tracks and the new *Bezier*, *Audio* and *Animation* tracks. 
+Besides the usual workflow of inserting keys (and creating tracks) from the inspector, new tracks can be created directly from the Add Track menu. This not only provides an alternative workflow, but works much better for non-property tracks, such as *Call* tracks and the new *Bezier*, *Audio* and *Animation* tracks.
 
 
 
@@ -120,7 +120,7 @@ Audio tracks work very similar to a DAW. Just draw audio resources into the anim
 
 This workflow is very smooth, and previews of the audio are rendered in a thread to not obstruct your work, just like in a real DAW!
 
-For animations, just insert current animation keys in the same way as before, but now they will be previewed with full length on the timeline. 
+For animations, just insert current animation keys in the same way as before, but now they will be previewed with full length on the timeline.
 
 Added to that, the new tracks are designed to work better with seeking, so you can seek (via code or editing) to any point of the master animation, and both audio and sub-animations will start from the right offset:
 

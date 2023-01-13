@@ -146,13 +146,13 @@ Also work on the documentation.
 
 ### Current progress
 
-Since the last update, I've fixed a lot of bugs and made a bunch of simplifications to the design of the cache module. 
+Since the last update, I've fixed a lot of bugs and made a bunch of simplifications to the design of the cache module.
 
 * Lots of bug fixes.
 * Reduced the use of synchronisation primitives. Greatly reduces the complexity.
 * It's possible to write to files as well now.
 
-I've ended up straying from the schedule I set for myself in May in that I haven't finished implementing all the unbuffered file IO classes I had planned to, but they aren't strictly necessary for the module to function. 
+I've ended up straying from the schedule I set for myself in May in that I haven't finished implementing all the unbuffered file IO classes I had planned to, but they aren't strictly necessary for the module to function.
 
 I would like to make things nicer by using some of the C++11 features when the engine moves to it for Godot 4.0, but until then, I'll continue improving things as they currently are.
 
@@ -198,9 +198,9 @@ Our major task for now is fixing bugs within the current implementation and merg
 
 ### Current progress
 
-For those who are not familiar with the project I suggest you check out [last month's blog post](/article/gsoc-2019-progress-report-1-part-1) so you are brought up to speed with what the project entails. 
+For those who are not familiar with the project I suggest you check out [last month's blog post](/article/gsoc-2019-progress-report-1-part-1) so you are brought up to speed with what the project entails.
 
-First I will begin with an update on how I've dealt with some of the issues I mentioned last time, specifically the memory leak crash in `AudioStreamPlaylist`, which was causing the preview generator to generate an endless preview. 
+First I will begin with an update on how I've dealt with some of the issues I mentioned last time, specifically the memory leak crash in `AudioStreamPlaylist`, which was causing the preview generator to generate an endless preview.
 Thanks to last month's blog post I got in contact with a game developer who was interested in the feature and we started having a back and forth conversation about the project. I sent him the most current build and after he tested it I got a question about why playlist is looping indefinitely and I realised that it's not actually meant to do that. After looking at the code, I noticed that the line which updates the current stream did not have a safety check:
 
 ```
@@ -220,7 +220,7 @@ if ((current+1) < playlist->stream_count) {
             for (int i; i < playlist->stream_count; i++) {
                 std::swap(playback[i], playback[std::rand() % playlist->stream_count]);
             }
-        } 
+        }
     } else {
         stop();
     }
@@ -267,7 +267,7 @@ Apart from this the feature is mostly complete and I am quite happy with the res
 - **Repository:** https://github.com/Aa20475/godot/tree/godot-motion-matching
 
 So the final week is here! Some small but crucial things left.
-I am currently working to my fullest to complete as much as possible! 
+I am currently working to my fullest to complete as much as possible!
 
 ### What's done
 
@@ -294,7 +294,7 @@ I am currently working to my fullest to complete as much as possible!
 - **Project:** Version Control Systems (VCS) editor integration framework and Git plugin
 - **Student:** Twarit Waikar ([IronicallySerious](https://github.com/IronicallySerious))
 - **Mentors:** Gilles Roudiere ([groud](https://github.com/groud)) and Jairo Honorio ([jahd2602](https://github.com/jahd2602))
-- **Repositories:** 
+- **Repositories:**
   * Godot's framework for VCS integration (PR candidate): https://github.com/IronicallySerious/godot/tree/add-vcs-integration
   * Git interaction API plugin: https://github.com/IronicallySerious/godot-git-plugin
 
@@ -314,7 +314,7 @@ Keeping the implementation separated from the interface helps us to create diffe
 
 ### Complications faced since progress report #1
 
-My mentors, Groud and jahd, and I realised the kind of architecture that we were hoping to accomplish was unsuitable for the kind of functionality that the existing engine API has. I have tried to summarise my entire research surrounding the topic of creating a GDNative addon that extends an API which is called to from within the editor, [in this devlog](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs/blob/master/2019-8-2.md). 
+My mentors, Groud and jahd, and I realised the kind of architecture that we were hoping to accomplish was unsuitable for the kind of functionality that the existing engine API has. I have tried to summarise my entire research surrounding the topic of creating a GDNative addon that extends an API which is called to from within the editor, [in this devlog](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs/blob/master/2019-8-2.md).
 
 You can also have a look at the [predecessor of the above-mentioned devlog](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs/blob/master/2019-7-08.md) to know more about what different types of complications we faced while designing the architecture for this sort of an involvement between the editor and the GDNative addons.
 
@@ -334,7 +334,7 @@ Currently, we can expect the Commit panel to look similar to what is shown below
 
 ![Current state of the Commit panel](/storage/app/media/gsoc/2019-2/vcs-002.png)
 
-You may notice in the panel above that the 'Refresh' button has recently been clicked and the 'New' section of the tree has been populated. 
+You may notice in the panel above that the 'Refresh' button has recently been clicked and the 'New' section of the tree has been populated.
 
 ![Commit panel with expanded New tree](/storage/app/media/gsoc/2019-2/vcs-003.png)
 
@@ -352,7 +352,7 @@ As explained earlier, the engine editor is theoretically not allowed to even kno
 
 This interface is functionally complete. It currently defines all methods that the editor requires, which act as proxies to the methods defined in the GDNative addon. Thus, a function like `get_vcs_name()` would reply with a "Git" response, which has essentially originated from the GDNative addon.
 
-The proxy architecture in play here has particularly helped us to create an API which does not require the implementation addon to implement the entire variety of methods defined in the API. The addon can accomplish far less and still provide enough data for the editor to correctly display the data extracted by the GDNative addon. 
+The proxy architecture in play here has particularly helped us to create an API which does not require the implementation addon to implement the entire variety of methods defined in the API. The addon can accomplish far less and still provide enough data for the editor to correctly display the data extracted by the GDNative addon.
 
 ### 3. GDNative-based Git addon
 

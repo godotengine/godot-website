@@ -13,7 +13,7 @@ Like many other mainstream projects, Godot uses the [Sphinx](http://www.sphinx-d
 
 Given that our project has grown so much and that documentation is a critical piece of it, we are starting to find some limitations to this system, which should hopefully be possible to solve as every component is free and open source. There are many small tweaks and improvements that we would like to do to it but, as we game engine developers are not experienced in the web side of the programming world, everything seems daunting to us (please don't laugh).
 
-Because of this, we are looking for someone who can start by investigating what components should be modifed and how to solve the issues we have, and then ideally do the job and contribute it back upstream. 
+Because of this, we are looking for someone who can start by investigating what components should be modifed and how to solve the issues we have, and then ideally do the job and contribute it back upstream.
 
 To give an overview of the architecture:
 - Documentation is written in reStructuredText in a [GitHub repository](https://github.com/godotengine/godot-docs)

@@ -4,7 +4,7 @@ excerpt: "Another weekly beta snapshot on the road to Godot 4.0! Includes Androi
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/638/8d9/a60/6388d9a60ac95864295672.jpg
-image_caption_title: Disinfection 
+image_caption_title: Disinfection
 image_caption_description: A game by Evil Turtle Productions
 date: 2022-12-01 16:47:59
 ---

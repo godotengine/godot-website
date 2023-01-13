@@ -31,7 +31,7 @@ Some of the most notables feature changes in this update are:
 
 ### Multiplayer replication
 
-Built into the engine core we now have scene, spawn, and property replication over the network. This means the engine can now do a lot of the heavy lifting and get you started on the next multiplayer hit much quicker. You don't have to worry about manually keeping your scenes in sync across connected devices, even for players connecting mid-game. Long gone are boilerplate functions and remote calls just to change some property for every player in the session. 
+Built into the engine core we now have scene, spawn, and property replication over the network. This means the engine can now do a lot of the heavy lifting and get you started on the next multiplayer hit much quicker. You don't have to worry about manually keeping your scenes in sync across connected devices, even for players connecting mid-game. Long gone are boilerplate functions and remote calls just to change some property for every player in the session.
 
 Of course, you still can do all of it, or part of it, manually, depending on your needs. And you can mix and match — all of the additions are completely extendable, configurable, and replaceable. If you are still going to use RPCs, those received some love too and now have their own annotations in GDScript 2.0.
 

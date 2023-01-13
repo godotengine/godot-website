@@ -41,7 +41,7 @@ Anyone is welcome to give a hand, especially:
 
 **Good documentation is as important as new features** for any open source project. It's a rewarding job:
 
-1. Help *thousands* of new users to better learn Godot! 
+1. Help *thousands* of new users to better learn Godot!
 1. Get to learn how to better use the engine, discover tricks and subtleties nobody else knows.
 1. Become a contributor, give back to the project.
 1. Hang out together with the community, get to know fellow contributors better.
@@ -58,7 +58,7 @@ The sprint will happen on the [ official Discord server ](https://discordapp.com
 Click here to [Join the #documentation channel](https://discord.gg/8FE9RmX)
 
 
-## Every little bit helps! 
+## Every little bit helps!
 
 Drop by anytime and spend as little or as much time as you'd like. Every little bit helps. It doesn't matter if it's just a class or a few functions.
 

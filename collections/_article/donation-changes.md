@@ -52,7 +52,7 @@ Here is our new list of tiers:
 *  $26 - Ability to submit questions or topics to discuss to a monthly Live Q&A
 *  $48 - Mini Sponsor: Name on godotengine.org/donate page and in Godot's About dialog
 *  $99 - Bronze Sponsor: Name and URL to your site in godotengine.org/donate page and in Godot's About dialog
- 
+
 **Important**: We removed the $18 and $32 tiers to simplify the lineup, but this means that current patrons at those tiers will be switched to a "No reward" status by Patreon. We encourage patrons at those tiers to update the pledge whenever they see fit to ensure that they select one of the above pledge levels (e.g. $14, $26 or $48). See how to update your Patreon membership.
 
 If you have ideas and feedback of perks and rewards you think could be good for us to offer, please let us know.
@@ -70,7 +70,7 @@ Corporate sponsoring categories will change as follows:
 *  $500 - Silver Sponsor: Small logo on homepage and name + URL in Godot's About dialog
 *  $1500 - Gold Sponsor (outside Patreon, min. 6 months invoice): Small logo (icon size) on splash screen, medium logo on homepage
 *  $3000 - Platinum Sponsor (outside Patreon, min. 6 months invoice): Logo + name on splash screen (like now), big logo on homepage
-  
+
 ## Combined funding sources
 
 We constantly get requests to use alternative funding sources to Patreon and to show our total donation/grant income combined on the Godot website. This requires a significant amount of work and it will be among our priorities when we can hire someone to do this website work (let's hope soon) - in the meantime, Rémi will put together a simple overview and update it regularly to provide more transparency on our budget and current hires.

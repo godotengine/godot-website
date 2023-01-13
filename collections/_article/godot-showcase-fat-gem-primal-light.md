@@ -77,5 +77,5 @@ One hundred times yes!
 
 ___
 
- 
+
 *Primal Light is available on [Steam](https://store.steampowered.com/app/771420/Primal_Light/) for Windows, macOS and Linux.*

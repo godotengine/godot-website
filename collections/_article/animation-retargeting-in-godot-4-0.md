@@ -73,7 +73,7 @@ In some cases, you may need additional configuration. [Godot docs describes each
 
 ## Time to make some 3D games with Godot 4!
 
-Godot 4's animation features have been improved as well as retargeting. Skeleton bones can now be manipulated directly in the viewport ([GH-45699](https://github.com/godotengine/godot/pull/45699)), and broken blend animations have been fixed ([GH-57675](https://github.com/godotengine/godot/pull/57675)). 
+Godot 4's animation features have been improved as well as retargeting. Skeleton bones can now be manipulated directly in the viewport ([GH-45699](https://github.com/godotengine/godot/pull/45699)), and broken blend animations have been fixed ([GH-57675](https://github.com/godotengine/godot/pull/57675)).
 
 To be honest, the retargeting feature is not a blocker for creating 3D games. Anyone familiar with 3D character animation workflow can do it outside of Godot. However, the implementation of retargeting makes it easier and keeps more of your workflow contained inside Godot.
 

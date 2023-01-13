@@ -56,7 +56,7 @@ So, at first it seems that the approach in Godot is more wasteful, but is it rea
 
 * Node is lightweight, similar to a component.
 * Node2D contains the 2D transform, similar to Transform component in ECS. Three nodes are required whereas one component suffices in ECS. This seems wasteful, but is it really? In the entity, the collider and the sprite will most likely not be used centred and will still require offset and rotation properties, so in the end not much changes.
-* In Godot adding more of these (multiple sprites and colliders) is kind of free, the transform offset happens automatically. In ECS, special logic needs to exist to take care of this. 
+* In Godot adding more of these (multiple sprites and colliders) is kind of free, the transform offset happens automatically. In ECS, special logic needs to exist to take care of this.
 
 As can be seen, inheritance and composition can live together and make sense in the context of Godot.
 
@@ -72,7 +72,7 @@ Architecture wise, this leads to significant changes over how ECS works:
 
 #### Inheritance is more explicit
 
-As inheritance is preferred (for what would be implicit relationships between components in ECS), these relationships are now explicit in the inheritance chain. 
+As inheritance is preferred (for what would be implicit relationships between components in ECS), these relationships are now explicit in the inheritance chain.
 
 ![Inheritance tree for some 3D nodes](/storage/app/uploads/public/603/902/891/60390289179ea590472532.png)
 
@@ -108,7 +108,7 @@ This can be understood by examining the Engine and Game Logic parts separately:
 
 #### Engine
 
-Godot uses plenty of data-oriented optimizations for physics, rendering, audio, etc. They are, however, separate systems and completely isolated. 
+Godot uses plenty of data-oriented optimizations for physics, rendering, audio, etc. They are, however, separate systems and completely isolated.
 
 Most (if not all) technologies that utilize ECS do it at the core engine level, by serving as the base architecture and building everything else (physics, rendering, audio, etc.) over it.
 
@@ -122,7 +122,7 @@ In other words, Godot as an engine tries to take the burden of *processing* away
 
 #### Game logic
 
-Still (while, by far, not the majority) some types of games *will* see a performance benefit when using ECS in the game logic side. 
+Still (while, by far, not the majority) some types of games *will* see a performance benefit when using ECS in the game logic side.
 
 These are generally games that need to process game logic on dozens of thousands of objects, where data-oriented optimizations become a must, as the amount of pages moved into CPU cache increases by several orders of magnitude, severely affecting performance (and battery usage on mobile devices).
 
@@ -137,7 +137,7 @@ Examples of these types of games are:
 
 So, does this mean these types of games can't be made with Godot?
 
-The answer is that, you can still do anything you want, but you need to do it in a different way. 
+The answer is that, you can still do anything you want, but you need to do it in a different way.
 
 #### Do clever optimizations
 

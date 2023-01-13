@@ -189,7 +189,7 @@ Support for *root motion* as well as the ability to write your own custom blend 
 <a id="axis-handling"></a>
 ### New axis handling system
 
-After several months of deliberation and prototypes, we settled on a really good approach to [axis mapping](/article/handling-axis-godot), courtesy of Gilles Roudiere ([Groud](https://github.com/groud)). Instead of going the way other game engines do it with axis definitions, Godot 3.1 uses the novel concept of "action strength". 
+After several months of deliberation and prototypes, we settled on a really good approach to [axis mapping](/article/handling-axis-godot), courtesy of Gilles Roudiere ([Groud](https://github.com/groud)). Instead of going the way other game engines do it with axis definitions, Godot 3.1 uses the novel concept of "action strength".
 
 While it may take a bit of time to sink in, this approach allows using actions for all use cases and it makes it very easy to create in-game customizable mappings and customization screens.
 

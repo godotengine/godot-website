@@ -74,7 +74,7 @@ In 3.0 this architecture has been revisited and split up over multiple classes, 
 
 Because of that it's not possible to re-use much of the 2.1 rendering code (although a lot of it is still relevant and helpful as a reference).
 
-The first step towards creating a new rendering backend is to create classes that implement those new interfaces. The goal here was just to make the new code compile properly. 
+The first step towards creating a new rendering backend is to create classes that implement those new interfaces. The goal here was just to make the new code compile properly.
 
 ### implement basic texture loading
 

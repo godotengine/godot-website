@@ -4,7 +4,7 @@ excerpt: "Godot 3.3.3 is a maintenance release and a recommend update for all 3.
 categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/611/e5d/cfc/611e5dcfc09f2518746576.png
-image_caption_title: Spindle 
+image_caption_title: Spindle
 image_caption_description: Developed by Let's GameDev, NoFuel Games, and techel.
 date: 2021-08-19 16:36:13
 ---

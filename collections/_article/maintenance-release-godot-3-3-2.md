@@ -4,7 +4,7 @@ excerpt: "Here's a new bugfix release for the 3.3 branch, fixing some regression
 categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/60a/bf7/19d/60abf719de011665823007.png
-image_caption_title: Dialogic 
+image_caption_title: Dialogic
 image_caption_description: Godot plugin by Emilio Coppola
 date: 2021-05-24 18:51:43
 ---

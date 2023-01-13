@@ -4,7 +4,7 @@ excerpt: "Godot 3.4.1 is the first maintenance release in the 3.4 stable branch,
 categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/61b/c80/187/61bc801870274751729596.jpg
-image_caption_title: NeJ 
+image_caption_title: NeJ
 image_caption_description: A game by Ben Lega
 date: 2021-12-17 19:17:54
 ---

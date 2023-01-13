@@ -27,7 +27,7 @@ We thought we had ***everything***. Passionate contributors, an amazing communit
 
 How are we supposed to work on something ~~the English speak~~no one knows how to pronounce? Is it Go-Dot, Go-DOUGH? GOH-do? Robot? Not even the original authors have a clue when you ask them.
 
-Additionally, we realized that a big problem of Godot as a project name is that it's simply ***not cute***. To attract wider audiences, a different name must be found, a more marketable one which speaks to a broader public. 
+Additionally, we realized that a big problem of Godot as a project name is that it's simply ***not cute***. To attract wider audiences, a different name must be found, a more marketable one which speaks to a broader public.
 
 ### The Godot logo
 
@@ -41,7 +41,7 @@ Since Godot was open sourced, we received countless amount of criticism from a ~
 
 Yes, we did too. They are all over the place. They are the writing on the wall we would refuse to see.
 
-### The NEW branding 
+### The NEW branding
 
 After weeks of consultation with ~~Reddit users~~[**professional marketing experts**](https://twitter.com/reduzio/status/1367975083562655745), it was decided to rebrand both Godot and its logo to convey a more professional branding. From now on, the project will be known as **Godette Engine** and the new logo will reflect this:
 

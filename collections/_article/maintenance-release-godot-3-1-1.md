@@ -20,7 +20,7 @@ If you enjoy our work please consider [becoming our Patron](https://www.patreon.
 * A [security issue](https://github.com/godotengine/godot/issues/27395) was reported and [fixed](https://github.com/godotengine/godot/pull/27485). This change does add some API to Godot in case you need to be able to deserialize Object data. Please see [This PR](https://github.com/godotengine/godot/pull/27485) for details. If you do not use networking in your project you should not be affected. However GDNative ABI was changed so any native plugins need to be rebuilt for 3.1.1.
 * [GLES 3 support for depth textures](https://github.com/godotengine/godot/pull/27317) was fixed. This was a regression in 3.1 from 3.0.x.
 * [GLES 2 crash on older iOS devices](https://github.com/godotengine/godot/pull/27071) was resolved.
-* `OS.get_unique_id()` was fixed on Android. 
+* `OS.get_unique_id()` was fixed on Android.
 * A `HeightMapShape` was added to the Bullet physics engine implementation.
 * [FPS snapping in the Animation player](https://twitter.com/reduzio/status/1117513556847726594) was added to the engine, along with [other quality of life improvements](https://twitter.com/reduzio/status/1117631934497206272).
 * [New audio features for 3.2](https://godotengine.org/article/godot-32-will-get-new-audio-features) were backported.

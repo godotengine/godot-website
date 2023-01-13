@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/589/720/444/5897204442764550068699.png
 date: 2017-02-04 00:00:00
 ---
 
-First of all, apologies for not being able to show flashy stuff this month! January was spent mostly updating Godot internals and breaking compatibility, now that we have the chance. 
+First of all, apologies for not being able to show flashy stuff this month! January was spent mostly updating Godot internals and breaking compatibility, now that we have the chance.
 
-Most of the internal code in Godot was written over a decade ago, and many design decisions that were taken back then, did not stand the test of time. Nothing serious in general, just stuff that was either incorrect or overdesigned. 
+Most of the internal code in Godot was written over a decade ago, and many design decisions that were taken back then, did not stand the test of time. Nothing serious in general, just stuff that was either incorrect or overdesigned.
 
 The result of this work has been mostly a lot of simplification in the internals, resulting in more performance and more readable code.
 
@@ -20,7 +20,7 @@ We also took the chance to rewrite key parts of Godot, which were considerably o
 
 While the 3.0 work was carried in the *gles3* branch, Rémi Verschelde and other main devs kept working on the *master* branch, cleaning up the repo and reorganizing third party libraries into a more maintainable form.
 
-At the begining of January, the *gles3* branch was merged to *master*, which resulted in a pretty unusable repository. 
+At the begining of January, the *gles3* branch was merged to *master*, which resulted in a pretty unusable repository.
 
 This signalled the start of the process where all features that could not be implemented in previous versions, due to requiring breaking compatibility, could finally be implemented.
 
@@ -95,7 +95,7 @@ In Godot 3.0, most API access is done via properties:
 ![](/storage/app/media/devlog/progress4/progress-4-4.jpg)
 
 This simplifies code a lot, as well as making the documentation easier to read.
- 
+
 ![](/storage/app/media/devlog/progress4/progress-4-5.jpg)
 
 ##### Syntax sugar for get_node()
@@ -177,7 +177,7 @@ Godot 2.x used a separate concept for _Samples_ and _Streams_. Godot 3.0 simplif
 * .ogg files are small in both disk and memory, but expensive to reproduce and very expensive to resample (change pitch).
 * .wav files as PCM take up a lot of disk and RAM, but are cheap to reproduce (in the hundreds simuntaneous streams), can be seeked and played in reverse.
 * .wav files as IMA-ADPCM are in the middle of .ogg and PCM: they take up to 4 times less space than PCM, are also cheap to reproduce, but cannot be seeked.
- 
+
 ##### Playback
 
 Only 3 nodes are needed to play back audio:

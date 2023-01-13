@@ -53,7 +53,7 @@ This means that the minimum time information takes to reach from one end to the 
 
 #### Distributed simulation
 
-To compensate for this problem, the most common approach nowadays is to "distribute" the simulation between peers. Generally, each peer will simulate the part of the game "closer" to it. 
+To compensate for this problem, the most common approach nowadays is to "distribute" the simulation between peers. Generally, each peer will simulate the part of the game "closer" to it.
 
 As such, and given the complexity of this problem, magical solutions where networking "auto synchronizes" don't really exist, or fail to apply to anything but a simple surface of games.
 
@@ -79,7 +79,7 @@ This will call a `set_pos_and_velocity` function in all the other connected peer
 
 ![](/storage/app/media/nmpeer/nmrpc2.png)
 
-I'm sure that you have noticed this new keyword `remote`. It means that the function can be called from RPC. 
+I'm sure that you have noticed this new keyword `remote`. It means that the function can be called from RPC.
 Marking this function for RPC has many uses, but the main one is to simply let you know that it can be called.
 
 Giving peers the ability to call functions in other peers can be really dangerous from a security standpoint. Imagine, what if one peer would open a file in another peer to overwrite system files? This should never happen so, to avoid this, functions must be whitelisted for RPC.
@@ -126,7 +126,7 @@ As of today, all these new APIs are available on the [GitHub master branch](gith
 
 ### Conclusion
 
-From this first insight, it may not seem very obvious how the high level networking works in Godot. You'll most likely have to try it yourself to completely "get it". 
+From this first insight, it may not seem very obvious how the high level networking works in Godot. You'll most likely have to try it yourself to completely "get it".
 
 The huge advantage of this approach is that, once you are used to it, you can make a multiplayer game with almost the same amount of code as a single player game (save for placing `master`/`slave` keywords and calling some functions as RPC instead of regular call). As a plus, your multiplayer game will run single-player just fine without any changes (all nodes will be master, calls to slaves will be ignored).
 

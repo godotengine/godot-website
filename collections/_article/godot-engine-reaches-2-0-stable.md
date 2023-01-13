@@ -13,7 +13,7 @@ A little more than two years ago, Godot was open sourced. It was meant to be an 
 
 After a year of hard work and community feedback, Godot 1.0 was released, marking the first version that was ready for general consumption. This version worked well but we felt it was still far from the usability and features of a modern game engine. The more urgent issue was to improve the 2D engine so we worked hard again and released Godot 1.1, which did in fact improve 2D rendering considerably.
 
-Usability still remained a pressing issue, so we made a long list of tasks to improve upon for 2.0. We worked hard and after about 8 months we now finally have a stable Godot ready for you! 
+Usability still remained a pressing issue, so we made a long list of tasks to improve upon for 2.0. We worked hard and after about 8 months we now finally have a stable Godot ready for you!
 
 This release is special because our team has grown a lot. We have more regular contributors, a documentation team, a bug triage team and a much larger community! Godot keeps growing and becoming more and more awesome.
 
@@ -79,7 +79,7 @@ All this, of course, working together perfectly with code completion.
 
 Smaller new core features were also added:
 
-* Support for ZIP packs on export instead of PCK 
+* Support for ZIP packs on export instead of PCK
 * Support for OPUS Audio Format
 * Changed to a more compatible JPG decoder.
 * Very improved gamepad support
@@ -117,7 +117,7 @@ Godot used to have a primitive tree dock panel view with all the project resourc
 
 ![](/storage/app/media/godot2_3.png)
 
-This new panel can show resources in both thumbnail and icon view (similar to File Dialog), but it also includes several tools. 
+This new panel can show resources in both thumbnail and icon view (similar to File Dialog), but it also includes several tools.
 
 By popular request, Godot's new filesystem dock has tools to allow the user to:
 
@@ -130,20 +130,20 @@ By popular request, Godot's new filesystem dock has tools to allow the user to:
 
 #### Multiple scene editing
 
-Godot's divide and conquer approach to making games relies on subdividing scenes in several sub-scenes, each with an identity or function. 
+Godot's divide and conquer approach to making games relies on subdividing scenes in several sub-scenes, each with an identity or function.
 
-Godot 2.0 improves upon this with multiple scene editing support, allowing several scenes to be open at the same time. Switching between them is painless and Godot also automatically reloads scenes when a dependency (instance or inheritance) has changed. 
+Godot 2.0 improves upon this with multiple scene editing support, allowing several scenes to be open at the same time. Switching between them is painless and Godot also automatically reloads scenes when a dependency (instance or inheritance) has changed.
 
 ![](/storage/app/media/godot2_4.png)
 
 #### New tool layout
 
-In Godot, tools appear contextually when a given node or resource is selected. This makes the UI flow fast and removes large part of the need to maually organize panel layouts. 
+In Godot, tools appear contextually when a given node or resource is selected. This makes the UI flow fast and removes large part of the need to maually organize panel layouts.
 
-This aspect of Godot was also improved in 2.0 with the introduction of a new bottom panel. On it, contextual editors can make a tidy appareance. Some of the editors are also always shown with persistent buttons: 
+This aspect of Godot was also improved in 2.0 with the introduction of a new bottom panel. On it, contextual editors can make a tidy appareance. Some of the editors are also always shown with persistent buttons:
 
 * Output console
-* Debugger 
+* Debugger
 * Animation editor
 
 ![](/storage/app/media/godot2_5.png)
@@ -168,7 +168,7 @@ The code editor also has many new features:
 
 #### Improved debugger
 
-The debugger has seen many improvements too. A new addition is the reporting of run-time errors with proper notifications. 
+The debugger has seen many improvements too. A new addition is the reporting of run-time errors with proper notifications.
 
 Godot is designed from the ground to attempt handling common crash situations by recovering and reporting an error. This is helpful in production games, as unexpected bugs that might commonly cause a crash will not make it fail.
 These errors, however, were silently being reported to stdout, so it was not easy to spot them. Added to that, given the debugger does not stop for them, having some context to understand their origin was difficult.
@@ -199,11 +199,11 @@ We added support for debugging collision shapes and navigation polygons, both in
 #### Live scene editing
 
 In the vein of larger game engines, Godot has now live editing support. The way it implements this feature is different though.
-Godot uses IPC to synchronize the editor state with the running game. This means that any change made to the scene being edited is reflected automatically on the running game. 
+Godot uses IPC to synchronize the editor state with the running game. This means that any change made to the scene being edited is reflected automatically on the running game.
 
-While this approach to live editing does not allow easy inspecting into the game from different editor cameras (something it might be implemented eventually anyway), it has the huge advantage of allowing the possibility of editing a level while it's being played (and avoid the edited state from being lost when the game stops). Just add enemies, move them around, change their properties, add colliders, platforms, tiles, etc. and everything is reflected instantly on the running game. 
+While this approach to live editing does not allow easy inspecting into the game from different editor cameras (something it might be implemented eventually anyway), it has the huge advantage of allowing the possibility of editing a level while it's being played (and avoid the edited state from being lost when the game stops). Just add enemies, move them around, change their properties, add colliders, platforms, tiles, etc. and everything is reflected instantly on the running game.
 
-To enable live editing, just toggle it at any time from the remote options menu. 
+To enable live editing, just toggle it at any time from the remote options menu.
 
 ![](/storage/app/media/godot2_8d.png)
 
@@ -241,7 +241,7 @@ Godot 2.0 brings several smaller new additions to aid in usability:
 
 ## Future
 
-We know the weakest part of Godot is still the 3D engine and we plan to fully work on modernizing it. However, we feel there are several more urgent issues that need to be improved usability wise. Godot 2.1 will continue in the same vein as 2.0 and keep adding usability improvements. (Feel free to check the [Roadmap](https://trello.com/b/Vl7OgSuq/godot-engine-2-1)). 
+We know the weakest part of Godot is still the 3D engine and we plan to fully work on modernizing it. However, we feel there are several more urgent issues that need to be improved usability wise. Godot 2.1 will continue in the same vein as 2.0 and keep adding usability improvements. (Feel free to check the [Roadmap](https://trello.com/b/Vl7OgSuq/godot-engine-2-1)).
 
 ## Asset sharing
 

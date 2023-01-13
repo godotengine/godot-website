@@ -31,14 +31,14 @@ Unfortunately, VisualScript did not catch on. When trying to ask users why they 
 
 Another likely reason for VisualScript's low popularity is that we failed to provide good documentation for using it. The official documentation has examples in GDScript and C#, but we never succeeded in including VisualScript examples due to technical reasons (we'd have to make screenshots of VS graphs for each example and maintaining them would prove very difficult). We had some demo projects, but that's not enough to let users become proficient with a language, even a visual one – and to learn Godot's API, they'd need to become familiar with GDScript or C# to understand the examples.
 
-According to our most recent poll (with more than 5000 respondents), only 0.5% of the user base has used VisualScript as their main engine language. 
+According to our most recent poll (with more than 5000 respondents), only 0.5% of the user base has used VisualScript as their main engine language.
 
 ![Poll results showing the most used programming languages in Godot](/storage/app/uploads/public/630/526/086/630526086cf01605139233.png)
 
 
 ## No path forward
 
-The contributor community did improvements to it, but for the most part these were mostly based on assumptions of what could be improved since, for pretty much all features we implement in Godot, we always get user feedback indicating us what needs to change, via issues or proposals. 
+The contributor community did improvements to it, but for the most part these were mostly based on assumptions of what could be improved since, for pretty much all features we implement in Godot, we always get user feedback indicating us what needs to change, via issues or proposals.
 
 VisualScript was the exception, we struggled to get enough feedback to improve it meaningfully. The conclusion we can draw from this is that there simply wasn't any path forward: the approach we took to visual scripting was simply not the right one.
 

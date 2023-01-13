@@ -1,6 +1,6 @@
 ---
 title: "Godot gets 2D skeletal deform"
-excerpt: "Currently, Godot is pretty comfortable for doing 2D cutout animation, with several games in development making use of this feature. 
+excerpt: "Currently, Godot is pretty comfortable for doing 2D cutout animation, with several games in development making use of this feature.
 
 A very common request, though, was the ability to do custom mesh deformation based on the same bones used to animate separate parts. This would allow deforming such parts, for a more organic animation feel."
 categories: ["progress-report"]
@@ -9,7 +9,7 @@ image: /storage/app/uploads/public/5ae/c8f/8c1/5aec8f8c19c0b515935183.gif
 date: 2018-05-04 00:00:00
 ---
 
-Currently, Godot is pretty comfortable for doing [2D cutout animation](http://docs.godotengine.org/en/3.0/tutorials/animation/cutout_animation.html), with several games in development making use of this feature. 
+Currently, Godot is pretty comfortable for doing [2D cutout animation](http://docs.godotengine.org/en/3.0/tutorials/animation/cutout_animation.html), with several games in development making use of this feature.
 
 A very common request, though, was the ability to do custom mesh deformation based on the same bones used to animate separate parts. This would allow deforming such parts, for a more organic animation feel.
 
@@ -23,14 +23,14 @@ Two new types of nodes were added: **Skeleton2D** and **Bone2D**. The former is 
 
 ![](/storage/app/media/skeleton2d/skeleton_image.png)
 
-For editing, the workflow is the same as cutout, bones are laid out in a tree then marked as visual bones for editing (they are not visible by default). This is a bit more of a hassle than with dedicated software, but fortunately the process is done only once. 
+For editing, the workflow is the same as cutout, bones are laid out in a tree then marked as visual bones for editing (they are not visible by default). This is a bit more of a hassle than with dedicated software, but fortunately the process is done only once.
 
 Of course, compared to dedicated software, this workflow has the huge advantage that nodes are fully accessible within the engine, allowing to mix them up with particles, shaders, other nodes (i.e. swap a sword), and other visual effects built-in to Godot.
 
 
 ### Using with MeshInstance2D
 
-Although the recently added MeshInstance2D node now supports skeletal deforms, it can't be created with such property within the editor. 
+Although the recently added MeshInstance2D node now supports skeletal deforms, it can't be created with such property within the editor.
 
 This allows, however for the community to write importers for tools such as [Spine](http://esotericsoftware.com/) or [CoaTools](https://github.com/ndee85/coa_tools) that become actual Godot scenes instead of an opaque node.
 
@@ -84,7 +84,7 @@ Repeat this process to have a full skeleton. For skeleton points where two bones
 
 ![](/storage/app/media/skeleton2d/bonetut9.png)
 
-Ok, skeleton is complete! You might have noticed that nodes are showing warnings. This is because they need a *rest* pose. This is the default reference pose for the skeleton, and it must exist before bones are animated (so Godot knows how to rotate or move the points based on how rotated the or moved the bones is). 
+Ok, skeleton is complete! You might have noticed that nodes are showing warnings. This is because they need a *rest* pose. This is the default reference pose for the skeleton, and it must exist before bones are animated (so Godot knows how to rotate or move the points based on how rotated the or moved the bones is).
 
 Create the rest pose (once the skeleton is complete) by selecting the **Skeleton2D** node and the *Skeleton* menu:
 
@@ -101,7 +101,7 @@ Finally, connect sets of two points near bone unions, indicating that you dont w
 
 ![](/storage/app/media/skeleton2d/bonetut12.png)
 
-This process may demand some trial an error, as for complex polygons it may need to be re-adjusted a bit after the process is done. 
+This process may demand some trial an error, as for complex polygons it may need to be re-adjusted a bit after the process is done.
 
 
 ##### 4-Setup polygon for painting
@@ -114,7 +114,7 @@ Go back to the UV editor and select the *Bones* section, and from there the *Pai
 
 ![](/storage/app/media/skeleton2d/bonetut14.png)
 
-While the skeleton is visible over the image now, the bones are still not available for painting. 
+While the skeleton is visible over the image now, the bones are still not available for painting.
 
 The **Polygon2D** node needs to store bone painting information. To create this, push the *"Sync Bones to Polygon"* button. If you later add, remove or reparent nodes, you will need to push this button again. This will ensure that the minimum possible paint information is lost each time the skeleton hierarchy is modified.
 

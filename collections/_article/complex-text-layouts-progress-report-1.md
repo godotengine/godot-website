@@ -9,7 +9,7 @@ date: 2020-10-14 14:20:00
 
 # Introduction
 
-Hello! [bruvzg](https://github.com/bruvzg) here, I got hired by the Godot team to work on the complex text layouts and BiDi aware UI implementation. This is the first part that focuses on TextServer API implementation. 
+Hello! [bruvzg](https://github.com/bruvzg) here, I got hired by the Godot team to work on the complex text layouts and BiDi aware UI implementation. This is the first part that focuses on TextServer API implementation.
 
 See [GH-1180](https://github.com/godotengine/godot-proposals/issues/1180), [GH-1181](https://github.com/godotengine/godot-proposals/issues/1181), [GH-1182](https://github.com/godotengine/godot-proposals/issues/1182), [GH-1183](https://github.com/godotengine/godot-proposals/issues/1183) on GitHub for detailed information on CTL proposals and feedback.
 
@@ -103,7 +103,7 @@ Wrapper class for the GDNative text server implementations.
 * SIL Graphite homepage - https://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_home
 * Approaches to full justification - https://www.w3.org/International/articles/typography/justification
 * Kashida expansion priorities - https://web.archive.org/web/20160304113846/http://www.microsoft.com/middleeast/msdn/JustifyingText-CSS.aspx
- 
+
 ## Future
 
 Stay tuned for the next progress report. Next part will focus on UI mirroring and related changes.

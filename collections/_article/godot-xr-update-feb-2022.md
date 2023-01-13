@@ -57,7 +57,7 @@ The plugin can be downloaded from the [Asset Library](https://godotengine.org/as
 #### Next steps
 
 The contributors are mainly focused on improving the logic that is already in the plugin and improving compatibility with different systems out there.
-Work is also progressing on some of the newer OpenXR features that are currently still in experimental builds such as supporting the new [Meta Spatial Anchors API](https://developer.oculus.com/experimental/spatial-anchors-overview/). 
+Work is also progressing on some of the newer OpenXR features that are currently still in experimental builds such as supporting the new [Meta Spatial Anchors API](https://developer.oculus.com/experimental/spatial-anchors-overview/).
 
 #### Reporting issues
 

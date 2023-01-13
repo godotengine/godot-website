@@ -24,17 +24,17 @@ Here is some example code on how to fill the buffer with a sine wave:
 
 ```
 func _fill_buffer():
-        var increment = (1.0 / (hz / pulse_hz)) 
-                
+        var increment = (1.0 / (hz / pulse_hz))
+
         var to_fill = playback.get_frames_available()
         while (to_fill > 0):
-                playback.push_frame( Vector2(1.0,1.0) * sin(phase * (PI * 2.0)) 
+                playback.push_frame( Vector2(1.0,1.0) * sin(phase * (PI * 2.0))
                 phase = fmod((phase + increment), 1.0)
                 to_fill-=1;
 
 ```
 
-Just call this function before AudioStreamPlayer.play() (to ensure buffer is full before playback begins), 
+Just call this function before AudioStreamPlayer.play() (to ensure buffer is full before playback begins),
 and then call it from _process(), to ensure it remains full.
 
 
@@ -63,7 +63,7 @@ Here is a simple example for drawing a spectrum, using linear frequencies:
 ```
     var w = WIDTH / VU_COUNT
     var prev_hz = 0
-    for i in range(1,VU_COUNT+1):   
+    for i in range(1,VU_COUNT+1):
         var hz = i * FREQ_MAX / VU_COUNT;
         var f = spectrum.get_magnitude_for_frequency_range(prev_hz,hz)
         var energy = clamp((MIN_DB + linear2db(f.length()))/MIN_DB,0,1)

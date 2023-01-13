@@ -21,7 +21,7 @@ Work on porting the rendering engine to Vulkan continues at a steady pace.
 
 ### 3D Rendering
 
-Work on 3D rendering has begun. This month was mostly spent on refactoring and modifying the core rendering architecture. 
+Work on 3D rendering has begun. This month was mostly spent on refactoring and modifying the core rendering architecture.
 
 One of the main goals for Godot 4.0 is to make it possible to replace the core rendering class with as less rewriting as possible. The default 3D renderer will be as good as possible, but if some game requires a completely different one (because of very specific requirements), the idea is that just re-implementing some functions should be enough to achieve this.
 

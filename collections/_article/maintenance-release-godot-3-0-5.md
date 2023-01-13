@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5b4/266/3cc/5b42663cc18a0730946172.png
 date: 2018-07-08 00:00:00
 ---
 
-Oh hello, I didn't see you there. Come in and join us at the dinner table with Godot 3.0.5. This is another relatively small release but many people were bitten by the Google Play privacy policy issue. This is why we decided to release sooner rather than later. In this release the placeholder permissions are gone and exported APKs are clean. 
+Oh hello, I didn't see you there. Come in and join us at the dinner table with Godot 3.0.5. This is another relatively small release but many people were bitten by the Google Play privacy policy issue. This is why we decided to release sooner rather than later. In this release the placeholder permissions are gone and exported APKs are clean.
 
 If you use any of the following permissions: `CALENDAR, CAMERA, CONTACTS, LOCATION, MICROPHONE, PHONE, SENSORS, SMS, STORAGE` you **must add a privacy policy to your Google Play account**. This is not a Godot requirement but a Google requirement. If you do not use any of these permissions with Godot 3.0.5 and later you don't need to do anything.
 
@@ -15,7 +15,7 @@ Other than this we've fixed an error on exported C# projects and fixed some othe
 
 As usual you can go directly to our [Download](/download) page to download the new release. Itch.io and Steam releases will be updated soon **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
 
-As always this release would not have been possible without the laserlike focus of our wonderful contributors. 
+As always this release would not have been possible without the laserlike focus of our wonderful contributors.
 
 ## What's new in this release
 

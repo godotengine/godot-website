@@ -17,7 +17,7 @@ Update: the Kickstarter is live! **[Check it out now](https://www.kickstarter.co
 
 Hey there, I'm GDquest. I make [game creation tutorials](http://gdquest.com/tutorial/) with open source technologies. The developers and I decided to collaborate to fund and produce the first game creation course for the upcoming Godot 3. A professional training costs a lot to make, and because of that it has to be crowdfunded. We asked you, the community, if you were interested, and the response was extremely positive!
 
-So, it's happening. The project will be up **on Kickstarter next Monday, on May 22, at 12PM CEST!** 
+So, it's happening. The project will be up **on Kickstarter next Monday, on May 22, at 12PM CEST!**
 
 ## The course's content
 
@@ -30,7 +30,7 @@ Once we reach the initial funding goal, you'll get **at least 40 exclusive tutor
 
 The series will revolve around a 2D Zelda-like, as the mechanics we'll look at are directly applicable to all kinds of games. But the goal is to teach you much more than that! It will give you a better understanding of the engine, of the game creation workflow, and how to write solid code! Fellow developers and teachers offered to give advice and share insights to elevate the content even more.
 
-Oh, and as you might expect, the higher the funding, the more content you will get, regardless of your pledge. **Every single cent will be spent on the course**. 
+Oh, and as you might expect, the higher the funding, the more content you will get, regardless of your pledge. **Every single cent will be spent on the course**.
 
 
 ## 30 days tutorial challenge

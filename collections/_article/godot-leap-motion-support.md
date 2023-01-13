@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5b2/78c/51c/5b278c51c79b7843614393.jpg
 date: 2018-06-19 12:35:32
 ---
 
-Support for the [Leap Motion](http://www.leapmotion.com/) sensor was added as a [GDNative plugin](https://godotengine.org/asset-library/asset/215) a few months back however full support for this sensor required changes made in Godot 3.0.3. 
+Support for the [Leap Motion](http://www.leapmotion.com/) sensor was added as a [GDNative plugin](https://godotengine.org/asset-library/asset/215) a few months back however full support for this sensor required changes made in Godot 3.0.3.
 
 With Godot 3.0.3 officially released we can now announce support for this wonderful device. The module uses Leap Motions latest LeapC libraries which are a big improvement on their older API. This new API has only been released for Windows at this point in time so there is no support for Linux and Mac yet.
 

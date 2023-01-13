@@ -73,6 +73,6 @@ Try to create something from the Add Node Menu:
 
 ## Future
 
-Eventually as we get feedback, the shader editor will keep improving. 
+Eventually as we get feedback, the shader editor will keep improving.
 
 Remember that all this is possible thanks to the infinite generosity of our patrons. If you haven't already, please don't hesitate to [become one](https://www.patreon.com/godotengine)!

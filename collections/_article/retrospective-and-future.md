@@ -47,7 +47,7 @@ Usability remained as the main complaint, though. Users still had to go through 
 
 ### Godot starts growing
 
-Users were beginning to be happy with 2D, so I moved focus to improving the 3D part of the engine, modernizing it and implementing physically based rendering and some more modern features. At the same time, the amount of issues and pull request opened kept growing and I was starting to lose grasp of everything (remember that, at the time, I was doing consulting as my main full time job, and working on Godot on the side). 
+Users were beginning to be happy with 2D, so I moved focus to improving the 3D part of the engine, modernizing it and implementing physically based rendering and some more modern features. At the same time, the amount of issues and pull request opened kept growing and I was starting to lose grasp of everything (remember that, at the time, I was doing consulting as my main full time job, and working on Godot on the side).
 
 In parallel, the project was blessed by the arrival of Rémi Verschelde in 2015, who quickly took over project management and the interaction with all contributors. That allowed the project to start expanding in code, docs, etc. much faster than before. Rémi took over release management, which meant maintenance releases for stable branches (2.0 was the first release to get 2.0.x maintenance versions).
 
@@ -70,7 +70,7 @@ To be completely honest, my plan up to this point remained unchanged. I wanted t
 
 But life often [slaps you in the face](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) and shows that you are wrong, and I realized that others were already doing Godot-based consulting jobs or successful Kickstarters to create tutorials.
 
-We set up a Patreon and started asking for donations so I could work [full-time](https://www.patreon.com/godotengine). Goal was met quickly. 
+We set up a Patreon and started asking for donations so I could work [full-time](https://www.patreon.com/godotengine). Goal was met quickly.
 
 This was an extremely hard decision to make, because at the time, my experience (been making games and technology since the 90s) was paid a lot more, and I was receiving extremely good job offers from companies around the world due to my work on Godot. Still, the fact that the project became so important for many and the hope that it will continue growing made me change plans yet again.
 
@@ -86,7 +86,7 @@ In fact, thanks to community and company donations, Godot now employs many of ou
 
 ### Godot 3.0 and a dose of realism
 
-Back to the retrospective, something unexpected happened during the late part of Godot 3.0 development. We decided to use OpenGL ES 3.0 / OpenGL 3.3 for Godot 3. It looked like a great choice, having a very nice API and it would work perfectly on desktop and mobile. Reality has [shown us otherwise](/article/abandoning-gles3-vulkan-and-gles2), so only a month after releasing 3.0 we realized we would need to leave OpenGL behind. 
+Back to the retrospective, something unexpected happened during the late part of Godot 3.0 development. We decided to use OpenGL ES 3.0 / OpenGL 3.3 for Godot 3. It looked like a great choice, having a very nice API and it would work perfectly on desktop and mobile. Reality has [shown us otherwise](/article/abandoning-gles3-vulkan-and-gles2), so only a month after releasing 3.0 we realized we would need to leave OpenGL behind.
 
 
 
@@ -121,7 +121,7 @@ And then a decade has gone by. The almost six years since Godot was open-sourced
 
 Today, Godot has over a thousand contributors and an amazing user community. The new 3.2 version will hopefully be released this month (January 2020), with even better and improved usability and stability, and putting an end to our best release cycle yet.
 
-Afterwards, the Vulkan branch will become master (it will be pretty unstable for a while, so definitely not advised for production). The plan is to not add a lot of new general features in 4.0 and focus exclusively on bringing rendering quality and performance on par with mainstream game engines. 
+Afterwards, the Vulkan branch will become master (it will be pretty unstable for a while, so definitely not advised for production). The plan is to not add a lot of new general features in 4.0 and focus exclusively on bringing rendering quality and performance on par with mainstream game engines.
 
 Of course, as always, keep in mind that all this is done with ease of use as our first priority, as Godot is designed so that small and medium sized teams, as well as individual developers, have the best possible tool for the games they want to make.
 

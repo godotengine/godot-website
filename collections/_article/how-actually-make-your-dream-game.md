@@ -13,7 +13,7 @@ Today I'm reinstalling my development computer, so I can't do much programming. 
 
 The motivation for this article is that many devs asked me to write it for a long time. Despite being the lead developer of Godot, I have almost 20 years of experience developing and shipping games, and a decade of experience as technical consultant.
 
-Generally, my responsibility ranged from programmer to project owner, but most of the time as technical director or technical consultant. 
+Generally, my responsibility ranged from programmer to project owner, but most of the time as technical director or technical consultant.
 
 I also owned several companies and helped others on the business side so I believe I have a clear enough picture of the whole process (which does not meant it's failure proof, it never is).
 
@@ -31,21 +31,21 @@ Developing games _is_ difficult. It covers many disciplines but can't borrow muc
 
 From the artistic and creative side, artists (painters, musicians, writers) will usually conceptualize something and later add depth to it. In game development, your initial implementation of gameplay is always broken, and needs iteration to improve. In many situations, it's just impossible to get it to work and realizing it has to be abandoned in favor of something else is a very difficult decision to make.
 
-From the technical side, the processes taught in university don't generally apply. Software engineering is based on listing requirements and developing use cases from them. From the use cases, all interactions are conceptualized. This does not work in game programming, because you are more concerned about how the player feels than what he or she will do. 
+From the technical side, the processes taught in university don't generally apply. Software engineering is based on listing requirements and developing use cases from them. From the use cases, all interactions are conceptualized. This does not work in game programming, because you are more concerned about how the player feels than what he or she will do.
 
 ### Design patterns, or lack thereof
 
-Even applying standard design patterns isn't warranted to work. One situation I've seen repeated over and over as a consultant is having to deal with engineers that lie to themselves about successfully applying MVC to their game architecture (and making a complete dish of spaghetti and meatballs as a result). Another case is engineers claiming they find success in not using OOP design (while they use it anyway, without realizing it or admitting it). I've seen this so many times I can't count it with my fingers. 
+Even applying standard design patterns isn't warranted to work. One situation I've seen repeated over and over as a consultant is having to deal with engineers that lie to themselves about successfully applying MVC to their game architecture (and making a complete dish of spaghetti and meatballs as a result). Another case is engineers claiming they find success in not using OOP design (while they use it anyway, without realizing it or admitting it). I've seen this so many times I can't count it with my fingers.
 
 This overlaps with another situation I've seen countless times, which is programmers caring too much about "doing things correctly" and "good practices". This often results in code with excess encapsulation, which in turn results in codebases that become a severe pain to modify when your spec changes.
 
 If you are writing a game, just write things as fast as you can and as simple as you can. Do not bother with design. Don't apply design patterns or encapsulation for the sake of it. Make it quick and dirty and just get it to work. If you are planning to make the code cleaner at some point, it has to be because it gets difficult to work with it. If it doesn't, don't touch it.
 
-A common excuse for this is teamwork and many programmers working on a game. Lead programmers require clean and organized code, which results in very slow development. The rationale is "We should be able to replace programmers at any time, so code must be readable and maintainable". In reality, it takes way longer to develop this way and it's hardly cheaper in the long term. 
+A common excuse for this is teamwork and many programmers working on a game. Lead programmers require clean and organized code, which results in very slow development. The rationale is "We should be able to replace programmers at any time, so code must be readable and maintainable". In reality, it takes way longer to develop this way and it's hardly cheaper in the long term.
 
 Just make it clear that every programmer in the team has a clear role and area of responsibility. Let them work the way they like, quick and dirty, but just make sure they write clean APIs to communicate with other programmers. What you lose in organization, you win by orders of magnitude in development speed.
 
-When I work on Godot, I make sure the design and architecture are as flawless as possible. When I work on a game, I want to get things done as quick as possible. 
+When I work on Godot, I make sure the design and architecture are as flawless as possible. When I work on a game, I want to get things done as quick as possible.
 
 At this point, many readers might have noticed that Godot was created to develop games this way. It encourages productivity above all else in the design. The way the scene system works allows to apply a "divide and conquer" approach to developing games (instead of caring about meaningless things like MVC, subdividing in components, etc.). The simplicity of GDScript allows to just write large chunks of code that "just work" and once it does, you don't really touch them again. Achieving that "feeling" that things just fit into place was something we worked a lot with Ariel Manzur over the years, before Godot was open sourced.
 
@@ -62,7 +62,7 @@ The first big mistake most developers make is starting with pretty art, making a
 * Game goes well, but it just feels like so many things could be implemented, yet creating assets for it feels like a hurdle at this point, making it really demotivating.
 * For the game to be made, the need to get investment appears due to the unexpected complexity.
 
-These are common scenarios and the reason most projects fail. I'm sure many of them sound pretty familiar. 
+These are common scenarios and the reason most projects fail. I'm sure many of them sound pretty familiar.
 Let's start over the process and make it right this time, from conceptualizing to publishing!
 
 ### Starting over, is the game commercially viable?
@@ -71,7 +71,7 @@ Wait, shouldn't a prototype come first? After a good idea, the most natural acti
 
 Well not really. This is where 99.99% of indie developers and studios make their main and most fatal mistake.
 
-And no, it's not the scope that makes the game viable or inviable. A lot of articles you read about making a successful game will tell you to keep your scope small to avoid risks. This is bad and inexperienced advice. 
+And no, it's not the scope that makes the game viable or inviable. A lot of articles you read about making a successful game will tell you to keep your scope small to avoid risks. This is bad and inexperienced advice.
 Don't follow it. Without risk there is no gain in this world. The key is understanding how to manage this risk.
 
 Just do the scope you want to do. It will be the development process in itself that will reveal, based on your strengths and limitations, what your boundaries are. Ambition is needed to succeed, don't cut your wings early.
@@ -101,27 +101,27 @@ Just try to understand this very well before going to the next question, which i
 
 This is where things start getting difficult. Let's develop the cases from above:
 
-**A Casual Game**: Simple, casual games (like Angry Birds, 2048, runners, etc.) are often played by everyone. Yes, your market is huge, billions of players are your potential customers... so, you just make it and publish it... voilà? Not really, the asset stores are so saturated that anything you publish will immediately go unnoticed. 
+**A Casual Game**: Simple, casual games (like Angry Birds, 2048, runners, etc.) are often played by everyone. Yes, your market is huge, billions of players are your potential customers... so, you just make it and publish it... voilà? Not really, the asset stores are so saturated that anything you publish will immediately go unnoticed.
 
 Publicity for a mobile game is out of the question, it's too expensive. You can get a publisher, but most mobile publishers are scammers. If they tell you they will gladly publish your game, don't believe them! They will just launch your game with banners that point to games they own (that actually do make money) via cross promotion. Yes, they will launch your game and use it for their own benefit, not yours.
 
 True mobile publishers will ask you this question: "What are you KPIs?" or more like "What are the conversion and retention rates for your game?". That's a real mobile publisher! That's the one that will invest money in your game.
 
-Unfortunately this is a very difficult question to answer positively. To give you an idea, the most popular way to make money in mobile is via the "free-to-play" (a.k.a. "in-app purchases") model. Anything else does not work. Paid games (free or with paywalled content) don't make money and banners make so little that it's not even enough for you to survive (even if they get millions of downloads). Yes, the only way to economical succeed is to make your game  "free to play", which means that download is free but in-game content is sold to the player to a) make the game easier b) get cool customization options. 
+Unfortunately this is a very difficult question to answer positively. To give you an idea, the most popular way to make money in mobile is via the "free-to-play" (a.k.a. "in-app purchases") model. Anything else does not work. Paid games (free or with paywalled content) don't make money and banners make so little that it's not even enough for you to survive (even if they get millions of downloads). Yes, the only way to economical succeed is to make your game  "free to play", which means that download is free but in-game content is sold to the player to a) make the game easier b) get cool customization options.
 
 This is pretty complex to explain and beyond the scope of this article, but the idea is that, in the free to play model, the "players" (called "users" in the trade) need to be purchased. There are companies that for, say $5, will get _one_ user to play your game. This is not a joke and it generally costs even more. Most users won't spend a dime inside your game, but some (called "whales") will spend a lot more than $5. That moves the average income per user up considerably.
 
-The term "Conversion" means how much on average you make per player per amount spent on it. If you spend $5 per player, but get $8 on average, you have a positive conversion rate of 1.6. Once you have a positive conversion rate, your game literally becomes a money printing machine. 
+The term "Conversion" means how much on average you make per player per amount spent on it. If you spend $5 per player, but get $8 on average, you have a positive conversion rate of 1.6. Once you have a positive conversion rate, your game literally becomes a money printing machine.
 
-This is where you can easily find publishers to invest on "UA" (short for "User Acquisition", or just purchasing users for you for a % cut). Needless to say, reaching this point is incredibly difficult without enough investment and these types of games spend years in development, at a loss, while tweaked until their conversion rates go positive. 
+This is where you can easily find publishers to invest on "UA" (short for "User Acquisition", or just purchasing users for you for a % cut). Needless to say, reaching this point is incredibly difficult without enough investment and these types of games spend years in development, at a loss, while tweaked until their conversion rates go positive.
 
-To make it short, your chances of being successful on mobile with casual games are slim to nonexistent (even though now and then miracles happen). Just don't do it unless it's for fun and/or learning. 
+To make it short, your chances of being successful on mobile with casual games are slim to nonexistent (even though now and then miracles happen). Just don't do it unless it's for fun and/or learning.
 
 Marketing experts will always tell you that, contrary to common sense, the broader the market, the more difficult it is to reach.
 
-**A Mainstream Game**: These games sell with a lot of investment in publicity to reach their users (and they also cost a lot of money to make). If you have enough experience developing games, you can attempt to go this route. 
+**A Mainstream Game**: These games sell with a lot of investment in publicity to reach their users (and they also cost a lot of money to make). If you have enough experience developing games, you can attempt to go this route.
 
-**A Niche Game**: Niches are generally easy to reach. There are dedicated sites, forums, Facebook groups, etc. There are also specialized publishers in each genre (i.e., turn based strategy, adventure, etc.), that can tell you numbers about their reach if you ask. 
+**A Niche Game**: Niches are generally easy to reach. There are dedicated sites, forums, Facebook groups, etc. There are also specialized publishers in each genre (i.e., turn based strategy, adventure, etc.), that can tell you numbers about their reach if you ask.
 
 **An Indie or Experimental Game**: Steam, GOG, etc. are still a good place for this, provided your game is interesting enough (more on this topic in question 4). Keep in mind most games either sell well or don't sell, there is no middle ground you can aspire to.
 
@@ -130,7 +130,7 @@ Marketing experts will always tell you that, contrary to common sense, the broad
 
 You need to think about how the game will need to be financed. I will explain below what are common approaches to get funding:
 
-**Publisher**: You can get financing from publishers relatively easily if you follow the right steps (this is because pretty much no one does... but rest assured, this will be explained in sections below). 
+**Publisher**: You can get financing from publishers relatively easily if you follow the right steps (this is because pretty much no one does... but rest assured, this will be explained in sections below).
 
 The most common way is that publishers will give you an advance in sales and also take a cut. You will only see money after the publisher recovers the advance (this is a typical return of investment).
 
@@ -148,7 +148,7 @@ Finally, the most important question and the most difficult one to answer:
 
 ##### 4) What makes your game different?
 
-If your game is not different enough to what is out there (in some very clear way), it will fail. People will not play it, publishers will not be interested in it, and no community will form around it. 
+If your game is not different enough to what is out there (in some very clear way), it will fail. People will not play it, publishers will not be interested in it, and no community will form around it.
 
 What makes things worse, you must be able to communicate this differentiator very easily and with just one sentence, image or short video. If it fails to impress, it will most likely fail. If it looks too similar to other games, it will also most likely fail. It needs to be different.
 
@@ -163,13 +163,13 @@ I've met a lot of designers that could easily bet money on their ideas working, 
 Your artwork (or sound) might not be final here. Your code can be incredibly sloppy too. This is not a problem.
 What matters is that _the experience_ feels great. Usability wise, the prototype must feel final or near final. It must convey your idea as best as possible.
 
-Iterating in this phase before moving to the next is vital. Don't leave any core functions left to test, and keep doing changes to it until it feels perfect. 
+Iterating in this phase before moving to the next is vital. Don't leave any core functions left to test, and keep doing changes to it until it feels perfect.
 
 Anything core not resolved here will be a pain to fix later on. This means that controls have to feel smooth and action rewarding. It has to click and show your idea.
 
 Ask for feedback as much as possible here!
 
-Money wise, the prototype stage is the best to find seed capital investment. These type of investors will give you enough money to develop a vertical slice (next section), and will ask for a considerable chunk of your gross earnings (usually around 30/40%). 
+Money wise, the prototype stage is the best to find seed capital investment. These type of investors will give you enough money to develop a vertical slice (next section), and will ask for a considerable chunk of your gross earnings (usually around 30/40%).
 
 The rationale behind seed capital investment is that they invest tiny amounts on a large amount of unproven, high-risk projects. If one of them is a critical success, they make a huge amount of money.
 
@@ -179,7 +179,7 @@ If you are making the whole game on your own, on your free time, or have some in
 
 The idea of a vertical slice is to have a small chunk of your game, but this chunk must be _final quality_.
 
-As an example, if your game has 30 levels (missions, scenes, locations, etc), you make 2 or 3 of them. They need to be absolute and final quality. Even references to the rest of the content must be there and visible, even if trying to access it does not work. 
+As an example, if your game has 30 levels (missions, scenes, locations, etc), you make 2 or 3 of them. They need to be absolute and final quality. Even references to the rest of the content must be there and visible, even if trying to access it does not work.
 
 They don't need to be the first parts of the game, it can be random sections (though a good intro scene can be really good, even if more difficult to achieve).
 
@@ -191,7 +191,7 @@ Investment is all about risk. The lowest the risk, the highest the chance to get
 
 ##### 2) It makes the development cost estimation reliable
 
-Up to this point, you should know how much did it cost and how long did it take to make the vertical slice. 
+Up to this point, you should know how much did it cost and how long did it take to make the vertical slice.
 
 This makes extrapolation possible: If creating 10% of the game (the scope of the vertical slice) costs $20k, you can easily estimate that the final cost (100% of the game) will be around $200k.
 
@@ -203,7 +203,7 @@ Many publishers and investors may not have enough money available to make a game
 
 This is where most developers make another fatal mistake. **Do not** add any more final assets (art, sound, etc.) until you hit the *Alpha* stage. Always use placeholder art. The only exception here, if the type of game requires it (e.g. a fighting game), is animation.
 
-The whole game, as in, all the content *must* be developed with placeholders (i.e. rough sketches, blocks, CSG, etc.). 
+The whole game, as in, all the content *must* be developed with placeholders (i.e. rough sketches, blocks, CSG, etc.).
 
 I know it can be very frustrating, as seeing things come to life is enormously rewarding. Still, however, the temptation must be resisted.
 
@@ -211,7 +211,7 @@ There are many key reasons for doing this:
 
 ##### 1) Gameplay is top priority
 
-What defines your game is good gameplay. It must work as best as possible, so it only makes sense to develop all the content first. Make sure all features are implemented and that the game can be played from start to finish. Control must feel great, usability must feel great. 
+What defines your game is good gameplay. It must work as best as possible, so it only makes sense to develop all the content first. Make sure all features are implemented and that the game can be played from start to finish. Control must feel great, usability must feel great.
 
 Ironing out all problems here is cheap because the art does not need to be redone.
 
@@ -233,7 +233,7 @@ Beta is pretty much finishing the whole, entire final game (save for bugs and ma
 
 This stage is very rewarding and enjoyable, but it's pretty difficult. From a large company to a sole indie developer, filling the game with the final assets is always done near the end of development.
 
-For indies, this is the right time to hire someone to do the art, music, vfx, etc. You know that requirements (and the game itself) won't change so you will spend less money. You will be able to ask for precise budgets and sign specific contracts for the content that needs to be done. 
+For indies, this is the right time to hire someone to do the art, music, vfx, etc. You know that requirements (and the game itself) won't change so you will spend less money. You will be able to ask for precise budgets and sign specific contracts for the content that needs to be done.
 
 This avoids the very common problem of having to hire an artist on a monthly basis and then running out of money to pay him/her because development took longer than expected.
 
@@ -266,7 +266,7 @@ The only case where you might hear this is when making work for hire games for t
 
 Self publishing is extremely difficult. Doing all the promotion work can take a long time, even if you learn how to do it. I know some smaller publishers can do this in exchange of sales cuts (or a monthly pay). I feel most are scammers though, so just check how well did their other published games do. SteamSpy can be a great tool.
 
-### Closing words 
+### Closing words
 
 As you see, the whole process of making a game is incredibly complex and success is not warranted, but this article hopefully got you through the most important parts of the process (any feedback welcome from those with more experience).
 

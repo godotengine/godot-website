@@ -44,9 +44,9 @@ They include:
 -   Showcases of the use-cases, workflows, and features of Godot
 -   Comparisons of Godot with other game engines to debunk myths
 -   Tutorials to help beginners get started with gamedev on Godot
-    
 
-Then Go Godot Jam will have the game jam while the events continue. The game jam is open to everyone. 
+
+Then Go Godot Jam will have the game jam while the events continue. The game jam is open to everyone.
 
 **We will announce the themes of the Jam before the start.**
 
@@ -62,7 +62,7 @@ The Go Godot Jam timeline in a nutshell is:
     -   Voting Period
 -   June 9:
     -   Online Award Ceremony
-    
+
 
 ### How do I join?
 
@@ -71,7 +71,7 @@ We prepared everything at [gogodotjam.com](https://gogodotjam.com). Here you wil
 -   The complete Go Godot Jam timeline with links to all content
 -   Jam-specific information: rules, themes, submission, etc.
 -   Learning resources from our partners and many more
-    
+
 We only ask you to uphold the [rules](https://gogodotjam.com/contest/) of the Jam and the Godot's [code of conduct](https://godotengine.org/code-of-conduct).
 
 ### Wait, is this for me?

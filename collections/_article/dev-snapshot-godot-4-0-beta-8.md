@@ -4,7 +4,7 @@ excerpt: "Another weekly beta snapshot for Godot 4.0! And on a Friday, because t
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/639/34f/741/63934f741900a568331508.jpg
-image_caption_title: Sandfire 
+image_caption_title: Sandfire
 image_caption_description: A game by Kmitt
 date: 2022-12-09 16:04:53
 ---

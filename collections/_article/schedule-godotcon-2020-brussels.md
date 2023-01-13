@@ -113,7 +113,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 
 <div class="speaker">
 <div class="speaker-text">
-    Aurélien (France) is not a professional developer but he has designed several successful serious games in the legal sector. He is currently working on a 3D game project with Godot, displaying the adventures of a blue rabbit. 
+    Aurélien (France) is not a professional developer but he has designed several successful serious games in the legal sector. He is currently working on a 3D game project with Godot, displaying the adventures of a blue rabbit.
 </div>
 <div class="speaker-img">
     <img alt="Aurélien - The Blue Rabbit Game" src="/storage/app/uploads/public/5e3/6fc/337/5e36fc3371744070492297.jpg" />
@@ -184,11 +184,11 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 <style>
 div.speaker {
     display: table;
-    padding: 5px; 
+    padding: 5px;
     width: 100%;
     margin: 5px 0; /* you can change/remove margin */
 }
-div.speaker-text { 
+div.speaker-text {
     vertical-align: middle;
     display: table-cell;
     text-align: justify;
@@ -200,7 +200,7 @@ div.speaker .speaker-img{
     display: table-cell;
     width: 100px; /* you can change width */
 }
-div.speaker-img img{ 
+div.speaker-img img{
     width: 100%;
     height: 100px; /* you can change height */
     vertical-align: middle;

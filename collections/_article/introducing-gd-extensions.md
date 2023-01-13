@@ -70,7 +70,7 @@ linux.64 = "bin/x11/libgdexample.so"
 windows.64 = "bin/win64/libgdexample.dll"
 ```
 
-Under `configuration`, we define the name of the function in our plugin that will initialise our plugin. 
+Under `configuration`, we define the name of the function in our plugin that will initialise our plugin.
 
 Under `libraries`, we specify the name of the dynamic library for each platform.
 
@@ -134,7 +134,7 @@ void Example::_bind_methods() {
 
 ```
 The first two lines of code register our getter and setter function with Godot. Note that we also name the setter method's parameter.
-This is how you register any method of your class. 
+This is how you register any method of your class.
 The third line however turns this into a property called `custom_position`.
 
 The getter and setter method logic is just plain C++ code – nothing special to highlight there:

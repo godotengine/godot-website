@@ -9,7 +9,7 @@ date: 2018-05-25 00:00:00
 
 After games being published using Godot on Google Play for almost 8 years with no problems, Google decided they don't like the format we use for exporting any more and is suspending many published games.
 
-The problem comes from Godot using placeholder permissions in the APK, which are replaced by real permissions on export. Google never really had a problem with this approach, and I made sure to talk to Google representatives years ago to make sure this was not a problem. 
+The problem comes from Godot using placeholder permissions in the APK, which are replaced by real permissions on export. Google never really had a problem with this approach, and I made sure to talk to Google representatives years ago to make sure this was not a problem.
 
 At some point, it seems they changed their mind and started removing already published games. We got in contact with them to see if it can be solved from their end, but in the meantime we are publishing this guide that explains how to solve the problem manually.
 

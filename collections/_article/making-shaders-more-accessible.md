@@ -31,7 +31,7 @@ After calling `glDrawArrays`, the vertex program (also called vertex shader in D
 
 ![](/storage/app/media/devlog/shaders/tuto_shader1.png)
 
-This code no longer runs in the CPU, in fact it runs on the GPU! Again, it is executed per vertex. The output of the vertex program must fit in a "box" of size -1 to +1 in X, Y and Z. The vertices become primitives (in this case, a triangle fan, two triangles that are drawn as a quad) and any primitive that goes beyond the -1 to +1 range is clipped. As such, this is called "Clip Space". 
+This code no longer runs in the CPU, in fact it runs on the GPU! Again, it is executed per vertex. The output of the vertex program must fit in a "box" of size -1 to +1 in X, Y and Z. The vertices become primitives (in this case, a triangle fan, two triangles that are drawn as a quad) and any primitive that goes beyond the -1 to +1 range is clipped. As such, this is called "Clip Space".
 
 All we need to know is that we must convert the screen coordinates (for a screen size of 1024x768) to this space, so the natural way of doing this is:
 
@@ -40,7 +40,7 @@ All we need to know is that we must convert the screen coordinates (for a screen
 3. Substract (1, 1)
 4. Result is the sprite vertices in the -1 to +1 clip space coordinates.
 
-These triangles are then drawn to the screen (remember, again the screen can be of any size, but OpenGL will respresent it in the -1 .. +1 range for drawing). 
+These triangles are then drawn to the screen (remember, again the screen can be of any size, but OpenGL will respresent it in the -1 .. +1 range for drawing).
 
 For each pixel drawn to the screen, OpenGL will interpolate the outputs that were generated from the vertex program and use them to fill the triangle. In this case, the UV coordinate (for reading the texture). This process is done in the fragment program (pixel shader in DirectX terminology).
 
@@ -67,7 +67,7 @@ This gets quite messy. Don't believe me? This is how long Godot's default 3D sha
 
 It's about 1300 lines of code, you can read all of it [here](https://github.com/godotengine/godot/blob/0b12ebb/drivers/gles2/shaders/material.glsl).
 
-Truth is, however, that far most of the times a programmer wants to write a shader, it only intends to change a few parameters such as how the texture is drawn, changing colors, material properties, etc. Because of this, Godot comes with a simplified shader language (very loosely based on OpenGL ES 2.0 shading language). Users can write the vertex, fragment and lighting shader using a lot of pre-existing information. 
+Truth is, however, that far most of the times a programmer wants to write a shader, it only intends to change a few parameters such as how the texture is drawn, changing colors, material properties, etc. Because of this, Godot comes with a simplified shader language (very loosely based on OpenGL ES 2.0 shading language). Users can write the vertex, fragment and lighting shader using a lot of pre-existing information.
 
 As an example, to draw a sprite with a texture in Godot, only this is required:
 

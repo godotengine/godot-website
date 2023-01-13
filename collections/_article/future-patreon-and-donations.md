@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5bf/830/34b/5bf83034b703a356470749.png
 date: 2018-11-23 00:00:00
 ---
 
-It has been a year since we started actively [asking for donations](https://www.patreon.com/godotengine) on Patreon (and other means). Thanks to that, I could work paid for an entire year so far (which has resulted in dozens of new features and me helping a huge amount of contributors). 
+It has been a year since we started actively [asking for donations](https://www.patreon.com/godotengine) on Patreon (and other means). Thanks to that, I could work paid for an entire year so far (which has resulted in dozens of new features and me helping a huge amount of contributors).
 
 Thanks to that, also, Rémi could also work full time since March and help ease the big chaos of our large number of contributors, as well as many of his dedicated project manager tasks which, as you can see, keep growing and growing:
 
@@ -33,7 +33,7 @@ As always, we do everything through the [Software Freedom Conservancy](https://s
 
 We discussed all this year how we could make better use of donations (as in, besides hiring me and Rémi). We are always careful with asking for more (even though our community keeps growing) because we want to warrant that the money will be used efficiently and fairly.
 
-While doing part-time hires worked well up to now, we don't feel that this is fair to the community as a regular Patreon goal, as these hires don't always work in areas that benefit everyone who is donating. 
+While doing part-time hires worked well up to now, we don't feel that this is fair to the community as a regular Patreon goal, as these hires don't always work in areas that benefit everyone who is donating.
 
 At the same time, we are still short on developers who can work more as generalists, diving into most Godot subsystems to do fixes and improvements. This can be evidenced by the large amount of issues [assigned to me](https://github.com/godotengine/godot/issues/21855). As many of our contributors come and go (as in, for different life reasons they can contribute only for a limited amount of time or at a limited time of the year), we lack more time from veteran developers who can do work as needed in the many different engine areas. This often makes me and the other generalists the bottleneck when fixing issues for stabilizing the engine for new releases.
 
@@ -45,7 +45,7 @@ As a result, we believe it will be in the best interest of the project and commu
 
 Besides the above, both Rémi and I will be asking you, the community, for a small raise. We are currently at USD 3000/month (though you have to consider the high income taxes and cost of living in our respective countries, our families, and that Conservancy -like any charity- takes a 10% cut of the gross donation income too). We included that 10% share in the Patreon goals to clarify the numbers.
 
-On paper, our contract is for 6-hour workdays. In reality, we work close to twice that much. 
+On paper, our contract is for 6-hour workdays. In reality, we work close to twice that much.
 
 We work weekdays like any regular job, and we also tend to work on evenings and/or weekends (because this is when most Godot contributors have free time and we need to be there to help them the most), thus, devoting a big part of our life to the project. As soon as funds are available, we will ask Conservancy to raise our work hours on paper from 6 to 8 (so from USD 3000 to 4000/month) and not ask for further raises unless project funds grow considerably and we can hire a good amount of other full-time contributors.
 
@@ -61,7 +61,7 @@ We now want to hire Pedro J. Estébanez ([RandomShaper](https://github.com/Rando
 
 ## Funding demo projects
 
-The Blender project has successfully crowdfunded many open movies, where they use the donations to make an open source high quality movie for everyone to see and learn how it is made. In the same vein (though probably a bit more in the future when Godot's feature set is more stable and we are focusing even more on polish and usability), we thought it could be really cool to explore this venue. 
+The Blender project has successfully crowdfunded many open movies, where they use the donations to make an open source high quality movie for everyone to see and learn how it is made. In the same vein (though probably a bit more in the future when Godot's feature set is more stable and we are focusing even more on polish and usability), we thought it could be really cool to explore this venue.
 
 Seeing the source code and asset workflow of big commercial games is a rarity, so opening up this process more to Godot users (and at the same time, ensuring Godot works as best as possible in these workflows) would definitely be fantastic.
 

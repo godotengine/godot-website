@@ -61,7 +61,7 @@ The main highlights in this maintenance release are:
 * Fix 'Quit to Project Manager' not stopping the running application
 * Fix shader editor syntax coloring
 * Fix to avoid video texture scaling
-* GridMap: Fix backwards rotate hotkeys 
+* GridMap: Fix backwards rotate hotkeys
 * Keep editable instances data when replacing tree root node
 * Made trackpad behaviour optional in 3D mode
 * Reimplement key input events in Emscripten export

@@ -13,7 +13,7 @@ Most of the work is currently done, only pending bugfixes and visual improvement
 
 ## The old inspector
 
-Godot grew organically. At the beginning, it made sense to make the inspector using the Tree control. For the few special types, a pop-up would be used instead. For sub-resources, editing would also go into a separate view. 
+Godot grew organically. At the beginning, it made sense to make the inspector using the Tree control. For the few special types, a pop-up would be used instead. For sub-resources, editing would also go into a separate view.
 
 There was not much of anything and it more or less did the job, so it kind of made sense at the time (image below: Godot circa 2008):
 

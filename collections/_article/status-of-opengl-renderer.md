@@ -15,7 +15,7 @@ At the time of writing this article, all planned 2D features and most basic 3D f
 
 Our goal is for the OpenGL 3 renderer to have broad compatibility and good performance on a wide range of hardware. Accordingly, it won't receive all the fancy new features that the Vulkan-based renderers bring.
 
-In many ways, the current OpenGL 3 renderer resembles the GLES2 renderer from Godot 3.x. It makes similar compromises to ensure compatibility with as many devices as possible. For example, like the GLES2 renderer, the OpenGL 3 renderer renders in sRGB-space (this is a simplification, but is roughly true). This means you will see a difference in lighting when using the OpenGL 3 backend, compared to the others which use proper linear-space lighting. 
+In many ways, the current OpenGL 3 renderer resembles the GLES2 renderer from Godot 3.x. It makes similar compromises to ensure compatibility with as many devices as possible. For example, like the GLES2 renderer, the OpenGL 3 renderer renders in sRGB-space (this is a simplification, but is roughly true). This means you will see a difference in lighting when using the OpenGL 3 backend, compared to the others which use proper linear-space lighting.
 
 In 3D, only basic rendering is supported right now. Thus far, we've prioritized the 2D rendering engine to ensure that it is ready for the release of 4.0. We anticipate most users of the OpenGL backend will be using it for 2D development. For 3D, we have quickly added the basic features (drawing objects, lights, sky etc.) so that users can get something drawing on the screen, but we haven't added any advanced features or optimization. Accordingly, the current OpenGL 3 3D renderer is still a shell of what it will be.
 

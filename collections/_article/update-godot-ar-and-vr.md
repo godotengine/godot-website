@@ -17,13 +17,13 @@ That Godot has AR and VR support isn't widely known but there is a slowly growin
 
 GDC proved very interesting for us, see [Juan's status report](/article/status-godot-gdc-2019).
 
-[Collabora](https://www.collabora.com) showed off their [Monado](https://www.collabora.com/news-and-blog/news-and-events/introducing-monado.html) [OpenXR](https://www.khronos.org/openxr) platform with a demo using an early OpenXR plugin for Godot made by the people behind [OpenHMD](http://www.openhmd.net). 
+[Collabora](https://www.collabora.com) showed off their [Monado](https://www.collabora.com/news-and-blog/news-and-events/introducing-monado.html) [OpenXR](https://www.khronos.org/openxr) platform with a demo using an early OpenXR plugin for Godot made by the people behind [OpenHMD](http://www.openhmd.net).
 
 We also talked to Oculus about the support we've added to Godot for the Rift headset and were met with great enthusiasm.
 
 ## ARKit
 
-But let's start with talking about AR first. An ARKit interface has been available unofficially for well over a year. One of the more interesting projects to come out of this is [Torch](https://www.torch.app), an AR prototyping tool worth checking out. In the beginning of this year we made great strides with this interface implementing some of the ARKit 2.0 features Apple added in. There are now 3 companies we are aware of that are building products for ARKit using Godot. 
+But let's start with talking about AR first. An ARKit interface has been available unofficially for well over a year. One of the more interesting projects to come out of this is [Torch](https://www.torch.app), an AR prototyping tool worth checking out. In the beginning of this year we made great strides with this interface implementing some of the ARKit 2.0 features Apple added in. There are now 3 companies we are aware of that are building products for ARKit using Godot.
 
 You can follow the development of this interface here: http://github.com/godotengine/godot/pull/24227
 
@@ -56,18 +56,18 @@ You can follow development of the Oculus interface here: http://github.com/Godot
 You can download the official plugin from the asset library here: [Godot Oculus plugin](http://godotengine.org/asset-library/asset/164)
 
 Gear VR, Oculus Go and Oculus Quest however use a different set of libraries running on top of Android. Last year we made a push as part of the Google Summer of Code but unfortunately this work got stuck due to problems with the GLES3 drivers on these devices and GLES2 becoming available too late.
-We're hoping to pick up where we have left off soon. 
+We're hoping to pick up where we have left off soon.
 
 ## OpenHMD
 
-OpenHMD as a project has been growing steadily over the last year adding many interesting headsets to the list of devices they support, while many are still in development. Godot has had an interface for OpenHMD for some time now which works well but needs a compositor, something we hope to tackle in the near future. 
+OpenHMD as a project has been growing steadily over the last year adding many interesting headsets to the list of devices they support, while many are still in development. Godot has had an interface for OpenHMD for some time now which works well but needs a compositor, something we hope to tackle in the near future.
 You can follow development of the OpenHMD interface here: http://github.com/GodotVR/godot_openhmd
 
 ## OpenVR
 
 ![Drive-VR.png](/storage/app/uploads/public/5c9/b33/609/5c9b3360913bc868056222.png)
 
-OpenVR has been working well and has several teams working on various projects using this driver. We have yet to look at some of the new additions and support for the new knuckles controllers. 
+OpenVR has been working well and has several teams working on various projects using this driver. We have yet to look at some of the new additions and support for the new knuckles controllers.
 
 The problem with HDR remains, Godot renders to high detail buffers for its HDR support and OpenVR does not like these.
 There is a PR in the official [godot_openvr](http://github.com/GodotVR/godot_openvr) repository that contains a fix, but for the official release of the plugin, HDR still needs to be turned off or the GLES2 renderer needs to be used.
@@ -78,7 +78,7 @@ You can download the official plugin from the asset library here: [Godot OpenVR 
 
 We've already talked about [OpenXR](https://www.khronos.org/openxr), this is a specification that has been worked on for a couple of years now, but this year's GDC finally reached a milestone where example source code has become available. The specification was also released in version 0.9.
 
-The interface that was used during the Monado demonstration is based on the OpenHMD drivers. You can follow its development here: https://gitlab.freedesktop.org/monado/godot_openxr 
+The interface that was used during the Monado demonstration is based on the OpenHMD drivers. You can follow its development here: https://gitlab.freedesktop.org/monado/godot_openxr
 
 ## GLES2
 

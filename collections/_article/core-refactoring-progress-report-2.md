@@ -11,7 +11,7 @@ As promised in my previous post, the core refactoring work I am undertaking took
 
 ### Core refactoring
 
-Core refactoring is mostly work on the most low level, critical and shared parts of the engine. This work is done only on major versions because it implies breaking compatibility and introducing instability and bugs (because of all the new added code), which is actually the case right now. The major refactoring undertaken for Godot 3.x, two years ago, changed a large part of the internals, but we were unable to do everything we wanted to do. 
+Core refactoring is mostly work on the most low level, critical and shared parts of the engine. This work is done only on major versions because it implies breaking compatibility and introducing instability and bugs (because of all the new added code), which is actually the case right now. The major refactoring undertaken for Godot 3.x, two years ago, changed a large part of the internals, but we were unable to do everything we wanted to do.
 
 The migration to Vulkan already implied breaking compatibility and, together with all the user feedback we got since 3.x was released, we have a very good idea of what needed to change in this time.
 
@@ -24,7 +24,7 @@ One of the largest singletons in Godot is the [OS](https://docs.godotengine.org/
 This was cumbersome for many reasons and also imposed limitations, such as:
 
 * Having a large, bloated OS class on every platform.
-* Inability to support different display APIs in a single binary. This is specially visible in Desktop Unixes, where you can use X11, Wayland or even EGL directly on Raspberry PI. 
+* Inability to support different display APIs in a single binary. This is specially visible in Desktop Unixes, where you can use X11, Wayland or even EGL directly on Raspberry PI.
 * Proper support for multiple windows. This not only allows the editor to make some docks float so you can move them to another monitor (a very requested feature by users). This is also useful for games developed for certain types of dedicated hardware, or just for tools created with Godot as the base platform (which is something several users do).
 * Impossible to run the engine as headless (with a dummy display driver) in all platforms. The "server" platform had to be used as a workaround (and will now be deprecated).
 * Difficult to abstract window management functions to users, which had to access the OS class directly (and which is not as user friendly as working with nodes).
@@ -68,7 +68,7 @@ If, for debug purposes, you want to run the editor (or your game) using subwindo
 
 The Godot scene system is known for its ease of use and its ability to represent your mental map as a data and file structure. That said, many node names were not clear or confusing. This is mainly evidenced when comparing their 2D and 3D counterparts.
 
-Contrary to what many believe, Godot started as a 3D engine, but soon migrated to be a 2D one. This is why the 3D nodes don't have any suffix (like Area) while the 2D ones do (Area2D). This made it very misleading for users, where its not always obvious whether you are using the 2D or 3D versions. 
+Contrary to what many believe, Godot started as a 3D engine, but soon migrated to be a 2D one. This is why the 3D nodes don't have any suffix (like Area) while the 2D ones do (Area2D). This made it very misleading for users, where its not always obvious whether you are using the 2D or 3D versions.
 
 To solve this, Godot 4.0 will rename all 3D nodes and give them proper suffixes. Nodes like "Area","RigidBody" or "Light" will become "Area3D", "RigidBody3D" and "Light3D" respectively.
 

@@ -9,7 +9,7 @@ date: 2018-07-17 00:00:00
 
 ## KinematicBody
 
-One of the features that make Godot stand out is how easy it is to use the physics engine for non-physics games. 
+One of the features that make Godot stand out is how easy it is to use the physics engine for non-physics games.
 KinematicBody allows controlling a character entity around with a single function (`move_and_slide`). Simply pass a linear velocity, and it will be returned back adjusted while the player moves around the level.
 
 ```
@@ -26,7 +26,7 @@ After the call, detecting if a character is on floor can be done with a call to:
 
 ```
 is_on_floor()
-``` 
+```
 
 Likewise for walls. This allows adjusting the player animation accordingly. Godot also detects if the floor below is moving, and it will adjust the character accordingly too.
 
@@ -48,7 +48,7 @@ The snap argument is a simple vector pointing towards a direction and length (ho
 
 ```
 # snap 32 pixels down
-velocity = move_and_slide_with_snap(velocity, Vector2(0, -1), Vector2(0, 32)) 
+velocity = move_and_slide_with_snap(velocity, Vector2(0, -1), Vector2(0, 32))
 ```
 
 This works very well in practice:
@@ -67,10 +67,10 @@ if is_on_floor() and Input.is_action_just_pressed("jump"):
     # can jump only when on floor
     velocity.y = -100
     jumping = true
-    
+
 # disable jumping when character is falling again
 if jumping and velocity.y > 0:
-    jumping = false 
+    jumping = false
 
 # preset for snap, 32 pixels down
 var snap = Vector2(0, 32)
@@ -78,13 +78,13 @@ var snap = Vector2(0, 32)
 # oh, but are we jumping? no snap then
 if jumping:
     snap = Vector2()
-    
-velocity = move_and_slide_with_snap(velocity, Vector2(0, -1), snap) 
+
+velocity = move_and_slide_with_snap(velocity, Vector2(0, -1), snap)
 ```
 
 ## RayCast Shapes
 
-Another common situation (when using `move_and_slide()`) is that the character incurs more effort going up slopes than it does going down. 
+Another common situation (when using `move_and_slide()`) is that the character incurs more effort going up slopes than it does going down.
 
 ![samp_snap.gif](/storage/app/uploads/public/5b4/ddd/89c/5b4ddd89cf5ab658278686.gif)
 
@@ -113,7 +113,7 @@ As you can see in the picture above, the right slope is so steep that it hits th
 
 When a KinematicBody is moved around (be it using `move_and_slide`, or just moved around by modifying the `position`, `rotation`, etc. properties), it automatically computes its linear and angular velocity. This means that if either a box with physics (RigidBody) or a KinematicBody (that moves with `move_and_slide`) are standing over it, they will be moved along together.
 
-This makes KinematicBody also very useful for moving platforms, elevators, scripted doors, etc. 
+This makes KinematicBody also very useful for moving platforms, elevators, scripted doors, etc.
 
 The main limitation until now is that, when used as moving platform, its motion was always a frame ahead than the physics, so the character appears to slowly slide over it:
 
@@ -132,6 +132,6 @@ When enabled, objects will appear in sync with the KinematicBody:
 
 After these functions are well tested, they will be ported to the 3D engine, where they should work in the exact same way.
 
-Once again, please remember that all this done with love for everyone. Our aim is to make a 100% free and open source game engine where the games you make with it are truly yours. 
+Once again, please remember that all this done with love for everyone. Our aim is to make a 100% free and open source game engine where the games you make with it are truly yours.
 
 This progress is made possible thanks to the infinite generosity of our patrons. If you are not one yet, please consider [becoming our Patron](https://www.patreon.com/godotengine). This way, you don't need to be an expert engine programmer to aid with Godot development :)

@@ -49,7 +49,7 @@ Tiles with invalid IDs are drawn using a dedicated texture, modulated with a ran
 
 ## Atlases setup
 
-The TileSet editor, only supporting atlases right now, has received a few updates. 
+The TileSet editor, only supporting atlases right now, has received a few updates.
 
 First of all, atlases now allow creating "alternative tiles". Those alternative tiles share the same texture region as their base tile but can have different properties. This will mainly allow for rotated/flipped versions of the base tile, but any other property could be different too:
 
@@ -74,7 +74,7 @@ That's it for now. However, if you want to try all of this by yourself, early bu
 **IMPORTANT WARNING: Opening an existing project with these builds will make this project incompatible with any other Godot version. Try these build with a new project or create a backup of existing ones.**
 
 Early builds:
-- [Linux](https://github.com/godotengine/godot/suites/1976656758/artifacts/39318069) 
+- [Linux](https://github.com/godotengine/godot/suites/1976656758/artifacts/39318069)
 - [Windows](https://github.com/godotengine/godot/suites/1976656765/artifacts/39308065)
 - [MacOS](https://github.com/godotengine/godot/suites/1976656764/artifacts/39307911)
 

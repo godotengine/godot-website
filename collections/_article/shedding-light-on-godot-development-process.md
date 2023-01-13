@@ -18,7 +18,7 @@ We constantly get questions about who is the boss. Several community members als
 
 As an entepreneur myself, and having owned many small companies in the past, I can assess that the relationship between open source developers is completely different to that in a corporate culture. An employee gets paid to do his or her job, but an open source contributor helps the project because of his or her own impulse to do it.
 
-In open source projects, most developers work on their free time, on whathever they want, and when they want. No one has any authority over them, be it moral or monetary, and this is for the best. The code they give to the project is also still owned by them (under the same permissive license). 
+In open source projects, most developers work on their free time, on whathever they want, and when they want. No one has any authority over them, be it moral or monetary, and this is for the best. The code they give to the project is also still owned by them (under the same permissive license).
 
 This may seem chaotic, but it works very well. Godot does not have to compete with companies for mindshare, we have some of the brightest minds working for the project.
 
