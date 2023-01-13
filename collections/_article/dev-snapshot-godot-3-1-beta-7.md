@@ -2,7 +2,7 @@
 title: "Dev snapshot: Godot 3.1 beta 7"
 excerpt: "As bugfixing is going at a steady pace towards Godot 3.1 stable, we plan to release beta builds frequently to have broad testing on the latest fixes and spot any regression. So we're now publishing Godot 3.1 beta 7 with close to 25 commits made since beta 6 a few days ago. This is also the first Godot released to have code signed binaries on Windows!"
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5c7/2a2/0bb/5c72a20bb6843627788761.jpg
 date: 2019-02-24 00:00:00
 ---
@@ -11,7 +11,7 @@ As bugfixing is going at a steady pace towards Godot 3.1 stable, we plan to rele
 
 See the changes between [3.1 beta 6 and 3.1 beta 7](https://github.com/godotengine/godot/compare/30a4723d9c974daaaf6b8af581b2d66c6b31b119...e30ce69cb44cd31933dc81700d16db2c80727015). This beta is built from commit [e30ce69](https://github.com/godotengine/godot/commit/e30ce69cb44cd31933dc81700d16db2c80727015).
 
-A big change in this release is that the Windows binaries are now **properly code signed**. Our release manager [Hein-Pieter van Braam-Stewart](https://github.com/hpvb) is now signing binaries with his own company's certificate. From now on, you should thus expect (and can trust) our official binaries signed by **[Prehensile Tales B.V.](https://www.prehensile-tales.com/)**. macOS binaries will be signed at a later time.
+A big change in this release is that the Windows binaries are now **properly code signed**. Our release manager [HP van Braam](https://github.com/hpvb) is now signing binaries with their own company's certificate. From now on, you should thus expect (and can trust) our official binaries signed by **[Prehensile Tales B.V.](https://www.prehensile-tales.com/)**. macOS binaries will be signed at a later time.
 
 Contrarily to our [3.0.x maintenance releases](/article/maintenance-release-godot-3-0-6), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs](/devblog). It's been over a year since the 3.0 release and over 6,500 commits, so expect a lot of nice things in the final 3.1 version!
 
@@ -35,7 +35,7 @@ The download links are not featured on the [Download](/download) page to avoid c
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.1/beta7) (GDScript, GDNative, VisualScript)
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.1/beta7/mono) (C# support + all the above). You need to have MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version; it comes bundled with Mono 5.18.
 
-**Important:** As mentioned above, Windows binaries are now signed by **Prehensile Tales B.V.**, the company of our release manager [Hein-Pieter van Braam-Stewart](https://github.com/hpvb). You can trust this signature and accept any warning that Windows may issue due to the novelty of this certificate. As more users accept it, the certificate will be recognized as trusted for future releases.
+**Important:** As mentioned above, Windows binaries are now signed by **Prehensile Tales B.V.**, the company of our release manager [HP van Braam](https://github.com/hpvb). You can trust this signature and accept any warning that Windows may issue due to the novelty of this certificate. As more users accept it, the certificate will be recognized as trusted for future releases.
 
 ## Bug reports
 

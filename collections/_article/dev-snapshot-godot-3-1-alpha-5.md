@@ -2,7 +2,7 @@
 title: "Dev snapshot: Godot 3.1 alpha 5"
 excerpt: "Godot 3.1 alpha 5 is released, with 31 PRs merged since the previous alpha last week. This is the last alpha, we're now moving into the beta stage, where only critical bug fixes will be considered for merging until we are happy with the overall stability of the master branch."
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5c2/cbd/8e3/5c2cbd8e3bcdd214188243.png
 date: 2019-01-02 00:00:00
 ---

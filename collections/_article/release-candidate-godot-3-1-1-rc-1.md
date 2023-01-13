@@ -2,7 +2,7 @@
 title: "Release candidate: Godot 3.1.1 RC 1"
 excerpt: "Welcome to Godot 3.1.1-rc1. In this release candidate we fix a security issue, add many nice new features, and fix many bugs. Please test and let us know how we did!"
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5cb/f0a/f71/5cbf0af719498893498887.png
 date: 2019-04-23 00:00:00
 ---

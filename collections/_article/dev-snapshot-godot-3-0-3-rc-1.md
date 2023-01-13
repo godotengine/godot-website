@@ -2,7 +2,7 @@
 title: "Dev snapshot: Godot 3.0.3 RC 1"
 excerpt: "This is the first release candidate for what will become Godot 3.0.3. In this release we have initial support for Mono export for desktop platforms. Please test this release and report bugs!"
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5ae/a42/707/5aea427070767889266673.png
 date: 2018-05-02 23:06:38
 ---

@@ -214,7 +214,7 @@ I'm looking forward to contribute and work upon things that I missed post-GSoC a
 
 - **Project:** Asynchronous Cached File Access
 - **Student:** Raghav Shankar ([WarpspeedSCP](https://gist.github.com/WarpspeedSCP))
-- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and Hein-Pieter van Braam ([hpvb](https://github.com/hpvb))
+- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and HP van Braam ([hpvb](https://github.com/hpvb))
 - **Repository:** https://github.com/WarpspeedSCP/godot-cacheserv
 
 ### Motivation

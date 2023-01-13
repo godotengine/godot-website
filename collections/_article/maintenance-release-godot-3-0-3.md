@@ -2,7 +2,7 @@
 title: "Maintenance release: Godot 3.0.3"
 excerpt: "Godot 3.0.3! In this release we've enable C# exporting for desktop platforms and fixed many bugs."
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b2/146/640/5b214664037c0726907530.png
 date: 2018-06-13 13:00:00
 ---

@@ -243,7 +243,7 @@ If you don't add any permission that justifies it, you don't need a privacy poli
 
 ## Future
 
-[Hein-Pieter/TMM](https://github.com/hpvb) is working on a fix to to be integrated in Godot 2.1.5 and Godot 3.0.3 so that you can continue setting the permissions you want without having those leftover placeholders.
+[HP/TMM](https://github.com/hpvb) is working on a fix to to be integrated in Godot 2.1.5 and Godot 3.0.3 so that you can continue setting the permissions you want without having those leftover placeholders.
 
 Godot 3.1 will use a different export approach where you will have more control over the manifest file.
 

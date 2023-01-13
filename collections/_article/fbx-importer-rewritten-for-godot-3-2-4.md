@@ -114,7 +114,7 @@ After researching these methods for pivots and various parts of the skinning, I 
 
 * Everyone at [IMVU Inc](https://about.imvu.com/), you did an amazing job helping with FBX and ensuring its success. You made Godot have a commercial-grade FBX importer, thank you so much for spending the time and money getting this to be a reality for 2020.
 * All the people who helped me debug issues, who helped with various logic and also to the Godot core development team.
-* A big shoutout to [Prehensile Tales](https://prehensile-tales.com/) for helping me through the tough FBX project, especially Hein-Pieter van Braam-Stewart who has been an amazing employer and great person to me personally and professionally.
+* A big shoutout to [Prehensile Tales](https://prehensile-tales.com/) for helping me through the tough FBX project, especially HP van Braam who has been an amazing employer and great person to me personally and professionally.
 * Andrea Catania for his amazing work improving our mesh creation code and helping fix hard to find bugs.
 * Ernest Lee for his continued support and information, along with helping me get to grips with Godot codebase and many many other things, including the first prototype for the importer :)
 * Juan Linietsky for being there when I needed to ask complex questions on his time.

@@ -2,12 +2,12 @@
 title: "Introduction and Godot 3.0.1-rc1"
 excerpt: "We've released the release candidate for the first patch release of the Godot 3.0 branch. This is what is going to be 3.0.1. We've added many fixes and some enhancements to make your lives as Godot users (even) better. Please see the article for details on the release and we'd like to ask all our users to test!"
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5a9/078/f91/5a9078f917e6e405671833.png
 date: 2018-02-23 21:21:34
 ---
 
-Hi Godot! My name is Hein-Pieter van Braam-Stewart. Some of you might know me on IRC/Discord/Matrix as 'TMM' and on GitHub as '[hpvb](https://github.com/hpvb)'. To help Rémi ([Akien](https://github.com/akien-mga)) focus on making sure the *master* branch is as good as it can be, I'm looking after the stable branch. Currently the stable branch is the *3.0* branch.
+Hi Godot! My name is HP van Braam. Some of you might know me on IRC/Discord/Matrix as 'TMM' and on GitHub as '[hpvb](https://github.com/hpvb)'. To help Rémi ([Akien](https://github.com/akien-mga)) focus on making sure the *master* branch is as good as it can be, I'm looking after the stable branch. Currently the stable branch is the *3.0* branch.
 
 I'm very happy to have been given this responsibility and I hope to work with all of you to make the Godot stable branches, well, just that! Stable!
 

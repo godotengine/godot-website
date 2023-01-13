@@ -2,7 +2,7 @@
 title: "Maintenance release: Godot 3.0.4"
 excerpt: "Godot 3.0.4 is a small release that fixes a crasher in the asset library on Windows. If you were affected by this please upgrade. Otherwise we'll come back with a larger 3.0.5 soon!"
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b2/d2f/118/5b2d2f118951e820036835.png
 date: 2018-06-22 00:00:00
 ---
