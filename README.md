@@ -60,11 +60,35 @@ Building may take several minutes to finish.
 As this is a static website, it can be served locally using any server stack you want.
 
 - It is possible to use Jekyll and `bundle` to immediately serve the pages upon building it. To do this, replace the final build
-step with `bundle exec jekyll serve`. With Docker you can use `build-and-serve.sh`.
+step with `bundle exec jekyll serve`.
+   - When using Docker, you need to add a new argument to the `docker run` command, `-p 4000:4000`, and change
+   the shell script to `build-and-serve.sh`.
+
+      ```shell
+      docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:stable ./build-and-serve.sh
+      ```
+      or
+      ```shell
+      docker run --rm --volume="%CD%:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:stable ./build-and-serve.sh
+      ```
 - You can also use Python, which is likely pre-installed on your system. To serve the pages with its local server, run
 `python -m http.server 4000 -d ./_site`.
 
 After following either one of these steps the site will be available at `http://localhost:4000`.
+
+### Deployment
+
+The project is built automatically by GitHub Actions whenever the `master` branch receives a new commit. The `master` branch
+itself should not be deployed, as it only contains the source files. The build version of the website is available as the
+`published` branch instead.
+
+This branch has a detached history and always contains the single commit with the most recent build. As such simple `git pull`
+doesn't work with it. To deploy it you must either pull the branch anew, removing and recreating your local branch, or reset
+the local branch with `git reset --hard`. Make sure to perform `git fetch` beforehand to receive the latest changelog from
+the remote.
+
+Note, that this is not needed for local development. Locally you would build the website in place and then serve the `_site`
+folder. See the detailed instructions above.
 
 ## Project structure
 
@@ -123,14 +147,9 @@ generated using Markdown collections and layouts.
 - `storage` contains media and other files uploaded for use in dynamic content pages, such as the blog, the showcase,
 the events. **Some files may be obsolete and unused.**
 
-### Buildsystem and service files
+### Build system
 
-This project is build with Jekyll, with most of the build instructions located in `Gemfile` and `_config.yml`.
-The following folders contain extra files and scripts on top of that.
-
-- `_migration` contains files used when migrating from the previous version of the website. Namely, there is a
-database of posts extracted from the old website. It was used to generate the new Markdown articles. We are keeping
-it for now in case there are some issues with the migration.
+This project is build with Jekyll, with the build instructions located in `Gemfile` and `_config.yml`.
 
 ## Content update guidelines
 
