@@ -41,9 +41,9 @@ There are two main use cases for this feature:
 
 #### Education
 
-Besides being proposed by tutorial makers, this feature was suggested several times by professionals in education, who teach Godot at schools and universities. 
+Besides being proposed by tutorial makers, this feature was suggested several times by professionals in education, who teach Godot at schools and universities.
 
-It allows students to use a simplified version of the editor which helps reduce confusion by focusing only on what needs to be taught. 
+It allows students to use a simplified version of the editor which helps reduce confusion by focusing only on what needs to be taught.
 
 The profile system for this feature can be used to set the progress of the course, by gradually enabling more functions as they are learned.
 

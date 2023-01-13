@@ -54,7 +54,7 @@ You will find the relevant options in `Editor -> Editor Settings` under the sect
 * `Http Port` defines the port the HTTP server will listen to.
 * `Use Ssl` will enable HTTPS for the server.
 * `Ssl Key` and `Ssl Certificate` can be optionally specified to provide your own SSL certificate and key (otherwise, a self-signed certificate will be generated).
- 
+
 
 More news coming soon
 ===

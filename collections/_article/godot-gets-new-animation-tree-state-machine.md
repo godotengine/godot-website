@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5b3/2ca/354/5b32ca3546bbf512292209.png
 date: 2018-06-26 00:00:00
 ---
 
-After a long time coming, and as part of the trend of modernizing many old Godot subsystems, the animation tree has been rewritten from scratch and it's now brand new, with plenty of new features. 
+After a long time coming, and as part of the trend of modernizing many old Godot subsystems, the animation tree has been rewritten from scratch and it's now brand new, with plenty of new features.
 
 This was one of the main missing features in Godot, which makes it now much more apt for complex 3D games.
 
@@ -44,7 +44,7 @@ It is also possible to use blend spaces, state machines and even other blend tre
 
 ### Blend Space 1D and 2D
 
-With the help of karroffel, both 1D and 2D blend spaces are supported in Godot. 
+With the help of karroffel, both 1D and 2D blend spaces are supported in Godot.
 
 
 
@@ -60,7 +60,7 @@ For the 2D version, an automatic triangulation option is set by default (which c
 
 ### State Machine
 
-Finally, Godot introduces a state machine. This state machine is rather simple but very efficient, and relies on the concept of travel. 
+Finally, Godot introduces a state machine. This state machine is rather simple but very efficient, and relies on the concept of travel.
 
 
 ![state_machine2.gif](/storage/app/uploads/public/5b3/2c5/498/5b32c54986e4b288072264.gif)
@@ -89,6 +89,6 @@ The old animation system (AnimationTreePlayer) has now been deprecated and will 
 
 ### Future
 
-This lays the foundation for a new animation system, which will hopefully keep being worked on and improved over time. 
+This lays the foundation for a new animation system, which will hopefully keep being worked on and improved over time.
 
 As always, everything is done for everyone with love, so again please consider becoming [our patron](https://www.patreon.com/godotengine)!

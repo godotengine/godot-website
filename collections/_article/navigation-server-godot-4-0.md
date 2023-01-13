@@ -170,12 +170,12 @@ extends NavigationRegion
 func _ready():
     # Wait 10 seconds.
 	yield(get_tree().create_timer(10.0), "timeout")
-	
+
 	# Create the ramp and add it into the world.
 	# 'RampPosition' is a Position3D added as child to NavigationMeshInstance2.
 	var ramp = load("res://Ramp.tscn").instance()
 	$RampPosition.add_child(ramp)
-	
+
 	# Bake the navigation mesh of this region.
 	bake_navigation_mesh()
 ```
@@ -239,7 +239,7 @@ func _physics_process(_delta):
 
 	# Calculate the velocity.
 	var vel = (target - pos).slide(n).normalized() * velocity
-	
+
 	# Tell the agent the velocity.
 	$NavigationAgent.set_velocity(vel)
 
@@ -251,7 +251,7 @@ func _on_NavigationAgent_velocity_computed(safe_velocity):
 
 Now you can play the scene, and voilà:
 
-![Final demonstration with collision avoidance from moving obstacles](/storage/app/media/navigation/navigation_4.gif) 
+![Final demonstration with collision avoidance from moving obstacles](/storage/app/media/navigation/navigation_4.gif)
 
 **Note:** Collision avoidance behavior can be tweaked per agent, by changing the `NavigationAgent` settings. You can change velocity, time of response to obstacles, and some other useful things.
 

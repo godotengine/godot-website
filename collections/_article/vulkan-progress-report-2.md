@@ -23,7 +23,7 @@ In [our latest episode](https://godotengine.org/article/vulkan-progress-report-1
 
 ### Lighting and shadows
 
-2D Lighting was introduced in Godot 2.0, with support for 2D shadow mapping and basic normalmapping. While it [looks pretty nice](https://www.youtube.com/watch?v=q7Zwr8JjUvU&t=4s), users quickly found its limitations. 
+2D Lighting was introduced in Godot 2.0, with support for 2D shadow mapping and basic normalmapping. While it [looks pretty nice](https://www.youtube.com/watch?v=q7Zwr8JjUvU&t=4s), users quickly found its limitations.
 
 The main problem with this system is that performance was never very good. The reason is that lighting was done in an additive way, requiring an extra pass (drawing all 2D content again) for every light in the scene. This ensured maximum compatibility with all hardware, but quickly restricted the amount of lights.
 
@@ -52,7 +52,7 @@ Another fantastic effect of the new shader system is that, unlike Godot 3.x, sha
 
 ## Multi-threading
 
-Thanks to the fact that all new work on Godot 4.0 is done using C++11, many interesting advances were done with regard to multi-threading. Shader compilation is now done fully threaded (versions are compiled in threads), greatly improving performance. 
+Thanks to the fact that all new work on Godot 4.0 is done using C++11, many interesting advances were done with regard to multi-threading. Shader compilation is now done fully threaded (versions are compiled in threads), greatly improving performance.
 
 Loading resources in threads is now much more efficient, because both textures and meshes can be created in sub-threads at no cost at all for the main thread. This paves the way to multithreaded resource loading, which will be implemented later. Access to RIDs (internal resource IDs) was made thread safe for some key types thanks to spinlocks. Spinlock usage will also be extended to other engine areas to vastly improve performance when using multiple threads.
 

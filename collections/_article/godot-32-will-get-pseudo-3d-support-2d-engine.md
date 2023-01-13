@@ -27,7 +27,7 @@ Godot 2D engine already has a node named [CanvasLayer](https://docs.godotengine.
 
 Using this node is a common practice to make user interfaces, because they won´t scroll together with the rest of the Viewport, as layers can move independently.
 
-Yet, moving together with the viewport may actually be desired, so a new option was added: "Follow Viewport". Toggling it on will ensure that this layer will move together with the actual viewport when using a [Camera2D](https://docs.godotengine.org/en/3.1/classes/class_camera2d.html). 
+Yet, moving together with the viewport may actually be desired, so a new option was added: "Follow Viewport". Toggling it on will ensure that this layer will move together with the actual viewport when using a [Camera2D](https://docs.godotengine.org/en/3.1/classes/class_camera2d.html).
 
 ### Adding depth
 

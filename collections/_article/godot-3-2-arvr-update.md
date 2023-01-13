@@ -38,7 +38,7 @@ Not to leave out Android developers for AR support, ARCore is nearly working as 
 
 HTC Vive support through OpenVR was one of the first platforms Godot supported and it will come as no surprise that the Valve Index works fine with the current drivers.
 
-What is missing is support for the new Index controllers, formally known as knuckles controllers. These controllers have full finger tracking support and this will require enhancements to both the Godot core and the OpenVR driver to fully support this new feature. For now they only support the standard controller functions. 
+What is missing is support for the new Index controllers, formally known as knuckles controllers. These controllers have full finger tracking support and this will require enhancements to both the Godot core and the OpenVR driver to fully support this new feature. For now they only support the standard controller functions.
 
 Valve has reached out to the Godot team and offered help so this will likely be our next big addition.
 

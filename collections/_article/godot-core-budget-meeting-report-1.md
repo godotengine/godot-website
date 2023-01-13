@@ -9,7 +9,7 @@ date: 2020-06-11 00:00:00
 
 The funding situation of Godot has been evolving in the past months, as we received more grants and donations, and reorganizing where the funding is going, deciding hires, etc., takes considerable time as well as requires the right timing.
 
-Because of this, we have started organizing meetings with the core Godot contributors to discuss and decide how to best allocate our available budget in the best interest of the project. To these meetings we invite long standing Godot contributors who we know and trust and who have made significant contributions to the project over the years. 
+Because of this, we have started organizing meetings with the core Godot contributors to discuss and decide how to best allocate our available budget in the best interest of the project. To these meetings we invite long standing Godot contributors who we know and trust and who have made significant contributions to the project over the years.
 
 Based on the outcome of these meetings, the [<abbr title="Project Leadership Committee">PLC</abbr>](https://godotengine.org/contact#plc) (which still has the final say regarding the use of Godot funds) will set things in motion with our legal and fiscal home [Software Freedom Conservancy](https://sfconservancy.org) to apply these decisions. The idea is to publish a brief of what was discussed in the meeting, so that the community and those donating can have more transparency on what funds are being used for (although remember that, in the end and whatever we decide, Software Freedom Conservancy's charitable mission ensures that our funds are solely used for the benefit of the project).
 

@@ -25,7 +25,7 @@ A new `JavaScriptObject` class has been added that wraps around native JavaScrip
 
 You can access a JavaScript object via two new methods in the [`JavaScript`](https://docs.godotengine.org/en/latest/classes/class_javascript.html) singleton:
 
-* `JavaScript.get_interface()`: Retrieves and wraps around an object in the global scope by calling a new method. 
+* `JavaScript.get_interface()`: Retrieves and wraps around an object in the global scope by calling a new method.
 
 ```gdscript
 extends Node

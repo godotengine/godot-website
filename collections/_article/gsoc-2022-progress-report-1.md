@@ -31,7 +31,7 @@ They've all been doing outstanding work so far, and we're looking forward to int
 * PRs: [#62075](https://github.com/godotengine/godot/pull/62075), [#62910](https://github.com/godotengine/godot/pull/62910)
 
 ### Project description
- 
+
 RGB, HSV and Raw modes of `ColorPicker` were never properly separated, resulting in lots of messy code like this:
 
 ```c++
@@ -84,7 +84,7 @@ Firstly, I will complete the UX part, then the next goal is to reimplement picke
 <a id="multiwindow"></a>
 ## Multi window code editors
 
-* Project: Allow undocking the Script editor and the Shader editor 
+* Project: Allow undocking the Script editor and the Shader editor
 * Student: [trollodel](https://github.com/trollodel)
 * Mentors: Hugo Locurcio ([Calinou](https://github.com/Calinou)), Michael Alexsander ([Yeldham](https://github.com/YeldhamDev))
 * Branch: [`trollodel/gsoc_2022_multiwindow`](https://github.com/trollodel/godot/tree/gsoc_2022_multiwindow)
@@ -92,7 +92,7 @@ Firstly, I will complete the UX part, then the next goal is to reimplement picke
 
 ### Introduction
 
-Undocking parts of the Godot editor UI is something quite desired in the community. For things like the Script editor, this means you can move it to another screen, move the undocked window to be side-by-side with the main window, or just using <kbd>Alt+Tab</kbd> to change between the main window and the undocked one. 
+Undocking parts of the Godot editor UI is something quite desired in the community. For things like the Script editor, this means you can move it to another screen, move the undocked window to be side-by-side with the main window, or just using <kbd>Alt+Tab</kbd> to change between the main window and the undocked one.
 
 In this project, I'll focus to make the Script editor and the Shader editor undockable, and keep the undocked windows after editor restarts.
 
@@ -109,7 +109,7 @@ Along with the basic feature and controls, some integrations were done:
 - When the Script editor is undocked, the last selected Viewport is shown.
 - When the Script button is clicked and the Script editor is undocked, the Script editor window is focused.
 - Undocking the code editors can be done using shortcuts and command palette too.
-  
+
 ![Command palette](/storage/app/media/gsoc/2022-1/multiwindow-command-palette.png)
 
 #### Window save and restore
@@ -136,7 +136,7 @@ After them, I plan to work on the following tasks:
 * Student: Priyansh Rathi ([techiepriyansh](https://github.com/techiepriyansh))
 * Mentors: Clay John ([clayjohn](https://github.com/clayjohn)), Joan Fons Sanchez ([jfons](https://github.com/jfons))
 * PRs:
-  * [Multi Image Atlases](https://github.com/godotengine/godot/pull/61861) (merged) 
+  * [Multi Image Atlases](https://github.com/godotengine/godot/pull/61861) (merged)
   * [Soft Shadows](https://github.com/godotengine/godot/pull/62054) (merged)
   * [UV2 Texel Density Debug Draw Mode](https://github.com/godotengine/godot/pull/62987)
 
@@ -149,7 +149,7 @@ Godot 4.0 announced its new GPU lightmapper back in 2020. It's been two years si
 #### Multi-image atlases
 
 Previously every `LightmapGI` node used to store its lightmap atlas in a single large image. This meant that the larger scenes might refuse to bake because they don't fit within the size limits of an image. I modified the implementation to allow saving the lightmap atlas as multiple images if it doesn't fit inside a single image.
-  
+
 #### Soft shadows
 
 The general idea behind soft shadows is to take into account the light source's size instead of treating the light source as a point. When one also takes the contribution of light rays from parts of the light source other than its centre, there is a gradual transition from shadowed to fully lit instead of an abrupt change.
@@ -164,7 +164,7 @@ I added support for soft shadows to the GPU lightmapper by incorporating this id
 
 This will be a draw mode that previews the texel density of lightmaps (without actually (re)baking them). It will aid users in adjusting the lightmap scale of their objects.
 
-**How do you show the texel density visually?**  
+**How do you show the texel density visually?**
 
 The idea is to overlay a checkerboard pattern with the same square size (in texels) on the textures of all the meshes. Upon rendering, the checkerboard pattern will appear diminished in the regions with high texel density, and magnified in the regions with low texel density.
 

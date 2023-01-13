@@ -28,9 +28,9 @@ The Godot Sprint will take place at the Lleialtat Santsenca space in Barcelona.
 
 ### Godot User Meeting - June 4, 2022 (10:00 to 20:00)
 
-The first official Godot User Meeting will be a full day event, taking place on June 4th at the Lleialtat Santsenca space in Barcelona. It will be a meeting point for Godot users and engine contributors in which to share experiences and get to know each other. 
+The first official Godot User Meeting will be a full day event, taking place on June 4th at the Lleialtat Santsenca space in Barcelona. It will be a meeting point for Godot users and engine contributors in which to share experiences and get to know each other.
 
-We mostly invite Godot users from Barcelona and the neighboring regions to join us for a day, meet each other and core contributors after the Sprint. There will be some space for game demos and a few talks by community members, which we will detail as the event gets closer. 
+We mostly invite Godot users from Barcelona and the neighboring regions to join us for a day, meet each other and core contributors after the Sprint. There will be some space for game demos and a few talks by community members, which we will detail as the event gets closer.
 
 ## Practical information
 

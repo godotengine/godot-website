@@ -42,7 +42,7 @@ One of the most important additions not covered by those articles is the introdu
 
 ## Rendering {#rendering}
 
-We know many users are excited about the coming improvements to 2D and 3D rendering in 4.0. Over the last few years we have completely overhauled the Godot renders. They now target Vulkan by default and we have created them with future support for [Direct3D 12](https://github.com/godotengine/godot/pull/64304) and other rendering APIs in mind. We also have created an OpenGL-based compatibility renderer aimed at supporting older and low-end devices that do not support Vulkan or other modern GPU APIs. As much as we love exciting new features, we also want to see people create games on the full spectrum of devices for everyone to enjoy. 
+We know many users are excited about the coming improvements to 2D and 3D rendering in 4.0. Over the last few years we have completely overhauled the Godot renders. They now target Vulkan by default and we have created them with future support for [Direct3D 12](https://github.com/godotengine/godot/pull/64304) and other rendering APIs in mind. We also have created an OpenGL-based compatibility renderer aimed at supporting older and low-end devices that do not support Vulkan or other modern GPU APIs. As much as we love exciting new features, we also want to see people create games on the full spectrum of devices for everyone to enjoy.
 
 <video autoplay loop muted>
   <source src="/storage/app/media/4.0/beta1/rendering-reflections.mp4?1" type="video/mp4">
@@ -50,7 +50,7 @@ We know many users are excited about the coming improvements to 2D and 3D render
 
 Notably, Godot's global illumination systems have been remade from scratch in the new release. *GIProbe* has been replaced by the **VoxelGI** node, which is a real-time solution fit for small and medium-scale environments. For the first time ever, Godot also comes with a GI technique that can be used with large open worlds — signed distance field global illumination (**SDFGI**). It's a novel technique created and implemented by Juan, it works in real-time, and you can learn a lot more about it [here](https://godotengine.org/article/godot-40-gets-sdf-based-real-time-global-illumination). If you are looking to add that extra bit of quality when running on high-end devices, rendering contributor Clay John ([clayjohn](https://github.com/clayjohn)) brings you [Screen Space Indirect Lighting](https://github.com/godotengine/godot/pull/51206). This feature adds more detail to existing GI techniques by using screen-space sampling, similar to SSAO. Last but not least, *lightmaps baking* is now [done using the GPU](https://github.com/godotengine/godot/pull/38386) to speed up the process significantly.
 
-To help improve fidelity of your 3D scenes, we have worked on a couple of exciting and long-anticipated features. [Volumetric fog](https://github.com/godotengine/godot/pull/41213) is making its first appearance in Godot 4, balancing a realistic look and fast performance, thanks to the use of *temporal reprojection*. You can configure the effect globally, or define specific areas with [FogVolume nodes](https://github.com/godotengine/godot/pull/53353). You can even create complex dynamic effects by writing custom shaders that operate on FogVolume nodes. 
+To help improve fidelity of your 3D scenes, we have worked on a couple of exciting and long-anticipated features. [Volumetric fog](https://github.com/godotengine/godot/pull/41213) is making its first appearance in Godot 4, balancing a realistic look and fast performance, thanks to the use of *temporal reprojection*. You can configure the effect globally, or define specific areas with [FogVolume nodes](https://github.com/godotengine/godot/pull/53353). You can even create complex dynamic effects by writing custom shaders that operate on FogVolume nodes.
 
 For other atmospheric effects, Godot 4.0 is introducing sky shaders which allow users to create dynamic skies that update in real time (including reflections). For more information see the article introducing [sky shaders](https://godotengine.org/article/custom-sky-shaders-godot-4-0).
 
@@ -68,11 +68,11 @@ Other exciting additions to shaders include support for [uniform arrays](https:/
   <source src="/storage/app/media/4.0/beta1/vshaders-butterflies.mp4?1" type="video/mp4">
 </video>
 
-For the photography-minded users, we have added support for using physical light units in Godot 4.0 which allow you to use realistic units for the intensity of lights as well as use standard camera settings (like aperture, shutter speed, and ISO) to control the brightness of the final scene. Physical light units are turned off by default but can be enabled in the project settings. 
+For the photography-minded users, we have added support for using physical light units in Godot 4.0 which allow you to use realistic units for the intensity of lights as well as use standard camera settings (like aperture, shutter speed, and ISO) to control the brightness of the final scene. Physical light units are turned off by default but can be enabled in the project settings.
 
-Don't worry, though, you will be able to reap the benefits of these new features without sacrificing your game's performance. Several new optimization techniques are also at your disposal, such as [occlusion culling](https://github.com/godotengine/godot/pull/48050), [automatic mesh LOD](https://github.com/godotengine/godot/pull/44468), and manual <abbr title="Hierarchical LOD">HLOD</abbr> using [visibility ranges](https://github.com/godotengine/godot/pull/48847), made possible by Joan Fons ([JFonS](https://github.com/JFonS)), and Juan. 
+Don't worry, though, you will be able to reap the benefits of these new features without sacrificing your game's performance. Several new optimization techniques are also at your disposal, such as [occlusion culling](https://github.com/godotengine/godot/pull/48050), [automatic mesh LOD](https://github.com/godotengine/godot/pull/44468), and manual <abbr title="Hierarchical LOD">HLOD</abbr> using [visibility ranges](https://github.com/godotengine/godot/pull/48847), made possible by Joan Fons ([JFonS](https://github.com/JFonS)), and Juan.
 
-Similarly support for AMD’s [Fidelity FX Super Resolution 1.0](https://github.com/godotengine/godot/pull/51679) (FSR 1.0) has been added by [Je06jm](https://github.com/Je06jm). Support for FSR 2.1 is planned for a future beta release. 
+Similarly support for AMD’s [Fidelity FX Super Resolution 1.0](https://github.com/godotengine/godot/pull/51679) (FSR 1.0) has been added by [Je06jm](https://github.com/Je06jm). Support for FSR 2.1 is planned for a future beta release.
 
 If you are using Godot to develop apps, you should be pleased to learn that Godot 4 supports multiple windows per running application. You will notice it with the editor itself, and you can enable the same behavior in your projects, globally or per sub-viewport.
 
@@ -187,7 +187,7 @@ Text rendering changes couldn't have happened without an overhaul in how fonts a
 
 Speaking of themes, the default project theme has been modernized to provide a cleaner look and get rid of embedded images, which should slightly reduce the size of exported projects. You can thank our core contributor Hugo Locurcio ([Calinou](https://github.com/Calinou)) for that.
 
-## Audio {#audio} 
+## Audio {#audio}
 
 Sound design and music is another area that is important to get right. It is also the area that requires a lot of specialized knowledge to properly support in the engine. Luckily, our contributor Ellen Poe ([ellenhp](https://github.com/ellenhp)) has exactly what it takes, and her work on Godot 4 helped to fix a large amount of withstanding issues with the audio system.
 
@@ -234,7 +234,7 @@ Overall editor usability is also always improving, and you will likely see a few
 
 The editor will store the editor version last used to edit a project inside the `project.godot` file. This way you will be able to quickly check what version of Godot a project is created with. Additionally, the project manager will show a warning if you try to edit a project made with a different version of Godot, or a project made using unavailable engine features.
 
-The much loved “default_env.tres” which added a fallback environment to all projects has been removed in favor of having an in-editor default DirectionalLight3D and WorldEnvironment. This makes it easy to tweak lighting and effects for previewing assets in the editor without the hassle of having to remember to manually disable your in-editor nodes at runtime. For more information, see the 
+The much loved “default_env.tres” which added a fallback environment to all projects has been removed in favor of having an in-editor default DirectionalLight3D and WorldEnvironment. This makes it easy to tweak lighting and effects for previewing assets in the editor without the hassle of having to remember to manually disable your in-editor nodes at runtime. For more information, see the
 [blog post](https://godotengine.org/article/editor-improvements-godot-40).
 
 And finally, a new release doesn't feel new without an updated look for the editor. Just like the new project theme, the [new editor theme](https://github.com/godotengine/godot/pull/45607) was made by Hugo to give it a more modern feeling and improve color schemes for better accessibility. The editor also benefits from the improved text rendering and right-to-left support, which should open the doors of gamedev for developers from many more regions.
@@ -245,11 +245,11 @@ Among many other improvements to the web platform, Fabio has added the necessary
 
 ## Should I upgrade my project now?
 
-Right now, it is still a bit risky to upgrade projects that are in the late-stages of development. We anticipate that all users will face bugs that make development more challenging than it should be and may even face engine crashes. However, as we do not anticipate making many more breaking changes, the API should be relatively stable from this point on. That means now is a good time to try out the engine and maybe even try porting a small side-project to see how the process goes. 
+Right now, it is still a bit risky to upgrade projects that are in the late-stages of development. We anticipate that all users will face bugs that make development more challenging than it should be and may even face engine crashes. However, as we do not anticipate making many more breaking changes, the API should be relatively stable from this point on. That means now is a good time to try out the engine and maybe even try porting a small side-project to see how the process goes.
 
-During the alphas we introduced a Godot 3 to 4 project upgrader tool which is now available in the Project Manager. Please try it out and report back any issues you face. 
+During the alphas we introduced a Godot 3 to 4 project upgrader tool which is now available in the Project Manager. Please try it out and report back any issues you face.
 
-As always, if you plan on upgrading your project, please make a backup copy of your project before you attempt the upgrade. We don’t anticipate that anything will break your project, but it pays to be safe. 
+As always, if you plan on upgrading your project, please make a backup copy of your project before you attempt the upgrade. We don’t anticipate that anything will break your project, but it pays to be safe.
 
 ## Downloads {#downloads}
 
@@ -260,7 +260,7 @@ The downloads for this beta can be found directly on our repository:
 
 ## Known issues {#known-issues}
 
-As this is the first beta we anticipate that there will be many bugs. 
+As this is the first beta we anticipate that there will be many bugs.
 See the Github issue tracker for a [list of bugs in the 4.0 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+).
 
 Some noteworthy issues you might run into in this beta 1:

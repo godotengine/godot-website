@@ -25,7 +25,7 @@ We published two games with Godot already, [Deep Sixed](https://store.steampower
 
 ### Why did you choose Godot for your project?
 
-Well, we've been using Godot for years and have grown very familiar with every little nook and cranny of the engine. Whenever the topic of switching comes up, we look around and it's clear that this free, open-source, incredibly versatile engine meets all our needs and we can't think of a good reason why we would need to. The node and scene architecture lets us design our games based on what we think makes sense for development, rather than forcing us into how an engine would want us to structure things.  
+Well, we've been using Godot for years and have grown very familiar with every little nook and cranny of the engine. Whenever the topic of switching comes up, we look around and it's clear that this free, open-source, incredibly versatile engine meets all our needs and we can't think of a good reason why we would need to. The node and scene architecture lets us design our games based on what we think makes sense for development, rather than forcing us into how an engine would want us to structure things.
 
 ### Which parts of the game development process did you enjoy the most while working on your project?
 
@@ -54,7 +54,7 @@ There's a short-list of GDScript optimizations we're looking forward to and impr
 ### Would you use Godot for a future project?
 
 You can count on it and we have already broken ground on the next big thing in Godot. In our opinion, there are no perfect engines, just preferred tools for certain kinds of jobs. For us, Godot has always been our preferred tool for the kinds of games we like to develop.
- 
+
  ___
- 
+
 *Rogue State Revolution can be wishlisted on [Steam](https://store.steampowered.com/app/1145340/Rogue_State_Revolution/) and will be available on Windows and Linux.*

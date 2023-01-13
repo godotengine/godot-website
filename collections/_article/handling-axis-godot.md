@@ -34,11 +34,11 @@ The examples above show how limited gamepad mapping is: When using an analog axi
 
 After many months of discussion on Github, and almost going with a scheme more similar to other engines, we finally settled on a simpler solution: An analog value was added to every action (along with the existing boolean one).
 
-This means that, besides being able to check on the *pressed* state, actions will now report a *strength*. This is represented as a single floating point value ranging from 0.0 to 1.0. 
+This means that, besides being able to check on the *pressed* state, actions will now report a *strength*. This is represented as a single floating point value ranging from 0.0 to 1.0.
 
 For basic buttons or keys, strength will always return either 0 or 1. For Joypad axes, intermediate values will be reported, depending on how far away the stick or trigger is from the *deadzone*.
 
-This leads to a simpler API, as almost no changes to the project settings input mapping were required. 
+This leads to a simpler API, as almost no changes to the project settings input mapping were required.
 
 To retreive an action strength, just use the following new API:
 
@@ -60,7 +60,7 @@ var horizontal = Input.get_action_strength("right") - Input.get_action_strength(
 ```
 ## Deadzones
 
-Sometimes, when using analog axes, a threshold is required for activating an action. When moving a character left of right, this threshold is usually small. When moving through UI menu options a larger one is desired. 
+Sometimes, when using analog axes, a threshold is required for activating an action. When moving a character left of right, this threshold is usually small. When moving through UI menu options a larger one is desired.
 
 To actions to be triggered when moving tiny amounts, a single parameter *deadzone* was added to Input mapping. This deazone corresponds to how much a joypad stick (or trigger) needs to be moved before the action is considered *pressed* (and thus the action strength > 0).
 
@@ -90,7 +90,7 @@ func _input(event):
 
 and this will handle buttons, keys, axes, triggers, etc. transparently.
 
-Dealing with two separate systems (actions and axis mapping) would have led to many complex GUI settings (up to 15 in Unity) and as considerably more complexity in the Input mapping API. 
+Dealing with two separate systems (actions and axis mapping) would have led to many complex GUI settings (up to 15 in Unity) and as considerably more complexity in the Input mapping API.
 
 The solution presented above was implemented by a minimal amount of added lines of code to the existing action system. It requires a tiny bit more code to read an axis, but it makes remapping and action management incredibly easy!
 

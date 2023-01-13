@@ -9,7 +9,7 @@ date: 2020-11-10 08:00:00
 
 # Introduction
 
-This is the second part of my work on Complex Text Layouts for Godot 4.0, focusing on Fonts and UI mirroring. 
+This is the second part of my work on Complex Text Layouts for Godot 4.0, focusing on Fonts and UI mirroring.
 
 See [godot-proposals#1180](https://github.com/godotengine/godot-proposals/issues/1180), [godot-proposals#1181](https://github.com/godotengine/godot-proposals/issues/1181), [godot-proposals#1182](https://github.com/godotengine/godot-proposals/issues/1182), and [godot-proposals#1183](https://github.com/godotengine/godot-proposals/issues/1183) on GitHub for detailed information on <abbr title="Complex Text Layouts">CTL</abbr> proposals and feedback.
 

@@ -29,7 +29,7 @@ Please understand that we need to keep the engine size as small as possible. Thi
 
 Even if a feature is small (say, a few kilobytes), we get several requests of them per week. If we were to accept/merge all of them as a general rule, Godot would grow several megabytes bigger over time.
 
-And even if size was not a problem, more code means more difficulty for potential contributors and users to understand how the engine works, as well as more surface area for potential bugs. 
+And even if size was not a problem, more code means more difficulty for potential contributors and users to understand how the engine works, as well as more surface area for potential bugs.
 
 We really do our best effort to keep it simple and small, help us with this!
 
@@ -47,7 +47,7 @@ Just adding a feature because it seems like it would be a cool addition does not
 
 #### Does this feature cover a common use case?
 
-Is this something you need to use often for your project? Will other users also find it often useful? If a feature covers a common use case and it's needed very often, then it may be worth considering for addition. 
+Is this something you need to use often for your project? Will other users also find it often useful? If a feature covers a common use case and it's needed very often, then it may be worth considering for addition.
 
 Even if it's not needed often but implementing it from the user's side is difficult, then it may also be worth considering for addition.
 

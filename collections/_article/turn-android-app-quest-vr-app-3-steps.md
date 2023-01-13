@@ -45,11 +45,11 @@ Within the app's `build.gradle` file, add the following dependencies:
 ```
 dependencies {
     ...
-    
+
     implementation "io.github.m4gr3d:godot:3.4.4.stable"
     implementation "io.github.m4gr3d:godot-openxr:1.3.0.beta5"
     implementation "io.github.m4gr3d:gast-xrapp:0.2.0"
-    
+
     ...
 }
 ```
@@ -85,9 +85,9 @@ Add the following tag to the main Activity's `intent-filter`: `<category android
 
     <intent-filter>
         <action android:name="android.intent.action.MAIN" />
-        
+
         <category android:name="com.oculus.intent.category.VR" />
-        
+
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 

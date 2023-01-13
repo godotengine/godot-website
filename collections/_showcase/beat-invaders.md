@@ -25,7 +25,7 @@ featured_in_home: true
 ---
 
 <p>
-  <strong>Beat Invaders</strong> is a space-themed action roguelite shoot-em-up!<br>  
+  <strong>Beat Invaders</strong> is a space-themed action roguelite shoot-em-up!<br>
   Shoot your path through waves of enemies playing as one of three Pilots, each with their own Ship Class.
   Combine <strong>upgrades, ship hacks, and specials to unleash an insane devastation</strong> on your enemies!
   Protect your freighters, beat the bosses and survive intense events to make your delivery.

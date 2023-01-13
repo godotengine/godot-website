@@ -56,12 +56,12 @@ Please understand it as just an extra tool, not as a replacement to programming.
 
 ## Binding new languages
 
-There currently is a lot of demand for additional languages, such as Java, Haxe, Swift, Object Pascal, etc. As Godot 2.2 will focus on new languages, this a great time to help us develop and improve the binding API. Of course it may seem like a challenging effort. 
+There currently is a lot of demand for additional languages, such as Java, Haxe, Swift, Object Pascal, etc. As Godot 2.2 will focus on new languages, this a great time to help us develop and improve the binding API. Of course it may seem like a challenging effort.
 
 Officially, our supported languages for now will be GDScript, Mono, VisualScript and C++. If you want to help integrate another language, you should first of all contact us (see contact info at the bottom of the site or use IRC: [#godotengine-devel on Freenode](https://webchat.freenode.net/?channels=godotengine-devel)). The process to add new languages is more or less the following:
 
 1. **Re-create Godot's basic types in your new language**: These are types such as `Vector3`, `int`, `float`, `String`, etc. Many of these are usually provided already.
-2. **Create a module**: A C++ module that creates binding code needs to be done ([creating modules in C++ is well documented](http://docs.godotengine.org/en/latest/reference/custom_modules_in_c++.html)). The entire exposed Godot API can be accessed via the static functions in `ObjectTypeDB`. 
+2. **Create a module**: A C++ module that creates binding code needs to be done ([creating modules in C++ is well documented](http://docs.godotengine.org/en/latest/reference/custom_modules_in_c++.html)). The entire exposed Godot API can be accessed via the static functions in `ObjectTypeDB`.
 3. **Generate binding code** in your new language that accesses the exposed functions in the `MethodBind` class (there is one for each exposed method).
 4. **Create a `ScriptLanguage`** class and supply the neccesary methods exposed for debugging, profiling, etc. You can supply symbols, code completion helpers, etc. if this language is meant to be edited inside Godot.
 

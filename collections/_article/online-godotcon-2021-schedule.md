@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/600/97d/d65/60097dd655b97035169712.png
 date: 2021-01-21 19:45:00
 ---
 
-Hello fellow Godoters! 
+Hello fellow Godoters!
 
 Our online GodotCon meetup for contributors, users and game developers, will happen online **this Saturday, January 23rd**, from 8:45 UTC to 16:00 UTC. We hope to have you join us for this long-awaited moment of knowledge sharing!
 
@@ -26,14 +26,14 @@ If you are unfortunately unavailable to attend the live streaming, don't worry: 
 
 Watching the conferences is great, but many of you may also want to discuss the contents together and perhaps ask questions to the speakers. As the talks are pre-recorded, you will not be able to ask your questions live after the talks, especially since some speakers may be out of the timezone at the time of their talk.
 
-This is why, in addition to the live streaming we have set up a [**Rocket.chat platform that you can join freely**](https://chat.godotengine.org/). There, you'll find one room for each talk. You can join each room to discuss and eventually ask your questions. In some cases, the speaker can be online too and will answer your questions directly! 
+This is why, in addition to the live streaming we have set up a [**Rocket.chat platform that you can join freely**](https://chat.godotengine.org/). There, you'll find one room for each talk. You can join each room to discuss and eventually ask your questions. In some cases, the speaker can be online too and will answer your questions directly!
 
 We chose [Rocket.chat](https://rocket.chat/) because of the common nature of our projects lying on open-source models. It was also important for us to respect everyone's privacy and data by keeping it under control, enabling and including everyone to join us without having to sign up to a potentially privacy-invasive service. All this in regards to our [Privacy Policy](https://godotengine.org/privacy-policy), which has been [updated to include the new platform](https://github.com/godotengine/godot-website/commit/fd831efdc0f3d6c42a2bb9c63cd25cdeb07f8536).
 
 We also want to immensely thank [Prehensile Tales](https://prehensile-tales.com/) for providing us with this Rocket.chat service!
 
 [**Join the Rocket.chat instance already**](https://chat.godotengine.org) and join the rooms corresponding to the talks. You can log in using your pre-existing accounts for many platforms (Discord, GitHub, GitLab, etc.), or create a new account (please note that email verification is necessary, be sure to check your spam folder!).
-		
+
 # The schedule
 
 Check out the talks list and their respective schedules [**on this Google spreadsheet**](https://docs.google.com/spreadsheets/d/1An_ENNE0mH5vgPQVRtZlU0o-OU1Hs7QO8a7EckEQFr0/edit?usp=sharing). Note that times are given in the UTC timezone by default, you can make a copy of the document to change it to your own timezone.

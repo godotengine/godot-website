@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5fc/e5b/f98/5fce5bf98e348880445902.png
 date: 2020-12-07 15:00:00
 ---
 
-We are proud to announce the [official Godot showcase](https://godotengine.org/showcase) is making a return after 3 years of absence! 
+We are proud to announce the [official Godot showcase](https://godotengine.org/showcase) is making a return after 3 years of absence!
 The new showcase focuses on high-quality, published projects but also features a few projects that had successful crowdfunding campaigns.
 
 We're thrilled to be able to finally showcase the most amazing projects from the Godot community on our website. Thanks to all the developers involved for letting us use their work to promote the engine.
@@ -23,7 +23,7 @@ Please note we have a much higher quality barrier compared to before.
 The aim for the showcase is to show that high quality games and applications can be made using Godot, to give potential users a good impression of what they might be able to achieve with our engine.
 
 Your project needs to be already published and must obey the following criteria:
-    
+
 - For a desktop game, 25 reviews on Steam or an equivalent platform.
 - For a mobile game, 5,000 downloads on any given platform's app store.
 

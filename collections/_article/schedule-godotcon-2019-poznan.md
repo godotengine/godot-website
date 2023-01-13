@@ -203,11 +203,11 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 <style>
 div.speaker {
     display: table;
-    padding: 5px; 
+    padding: 5px;
     width: 100%;
     margin: 5px 0; /* you can change/remove margin */
 }
-div.speaker-text { 
+div.speaker-text {
     vertical-align: middle;
     display: table-cell;
     text-align: justify;
@@ -219,7 +219,7 @@ div.speaker .speaker-img{
     display: table-cell;
     width: 100px; /* you can change width */
 }
-div.speaker-img img{ 
+div.speaker-img img{
     width: 100%;
     height: 100px; /* you can change height */
     vertical-align: middle;

@@ -4,7 +4,7 @@ excerpt: "We released Godot 4.0 beta 1 two weeks ago! That was a big milestone o
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: ["/storage/app/uploads/public/633/69f/d37/63369fd37cc17811993052.jpg"]
-image_caption_title: Penitent 
+image_caption_title: Penitent
 image_caption_description: A game by devmar
 date: 2022-09-29 18:20:56
 ---

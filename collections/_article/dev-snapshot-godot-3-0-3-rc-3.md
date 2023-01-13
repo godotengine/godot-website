@@ -24,7 +24,7 @@ As always, you will find the binaries for your platform on our mirrors:
 - Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0.3/rc3)]
 - Mono version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0.3/rc3/mono)]
 
-Mono versions require **Mono 5.12.0** on all platforms. 
+Mono versions require **Mono 5.12.0** on all platforms.
 
 ## Known incompatibilities with Godot 3.0.2
 

@@ -52,7 +52,7 @@ The backport was done while attempting to preserve API compatibility within reas
 
 Godot can render at frame rates independent from the fixed physics tick rate. This can lead to problems where the movement of objects (which tends to occur on physics ticks) does not line up with the rendered frames, causing unsightly jitter.
 
-Thanks to [lawnjelly](https://github.com/lawnjelly)'s expertise, you can now find the new `physics/common/physics_interpolation` option in the project settings. Enable this setting and Godot will automatically interpolate objects, smoothing out rendered frames. 
+Thanks to [lawnjelly](https://github.com/lawnjelly)'s expertise, you can now find the new `physics/common/physics_interpolation` option in the project settings. Enable this setting and Godot will automatically interpolate objects, smoothing out rendered frames.
 
 Move your objects and run your game logic in `_physics_process()` to benefit from the new physics interpolation. This ensures your game will run the same on all machines. [Full details are available in the updated docs.](https://docs.godotengine.org/en/3.5/tutorials/physics/interpolation/index.html)
 
@@ -74,7 +74,7 @@ Both features were implemented by our text rendering expert Pāvels Nadtočajevs
 
 <video autoplay loop muted>
   <source src="/storage/app/media/3.5/label3D.mp4?1" type="video/mp4">
-</video> 
+</video>
 
 ### Access nodes by unique names
 
@@ -82,7 +82,7 @@ Godot 3.5 adds the concept of "scene unique names" for nodes to help with the co
 
 <video autoplay loop muted>
   <source src="/storage/app/media/3.5/selector.mp4?1" type="video/mp4">
-</video> 
+</video>
 
 ### New flow containers
 
@@ -130,7 +130,7 @@ With [helpful input](https://github.com/godotengine/godot/pull/55604#issuecommen
 
 ### Material Overlay
 
-[fbcosentino](https://github.com/fbcosentino) has worked hard to add the new `material_overlay` property to `MeshInstance`s in both 3.5 and 4.0 simultaneously. The `material_overlay` property allows you to assign a material that will be used to render all surfaces of the mesh again with that material. It functions the same as the `next_pass` material in a `SpatialMaterial`, but it applies to all surfaces of a mesh instead of only the surface to which the `SpatialMaterial` is applied. 
+[fbcosentino](https://github.com/fbcosentino) has worked hard to add the new `material_overlay` property to `MeshInstance`s in both 3.5 and 4.0 simultaneously. The `material_overlay` property allows you to assign a material that will be used to render all surfaces of the mesh again with that material. It functions the same as the `next_pass` material in a `SpatialMaterial`, but it applies to all surfaces of a mesh instead of only the surface to which the `SpatialMaterial` is applied.
 
 To illustrate, here is the same material applied to our dear enemy with the three different locations:
 

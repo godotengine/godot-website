@@ -15,7 +15,7 @@ The most important new feature for this release is initial support for Mono expo
 
 Note that some early users have reported some issues with the Mono downloads. This is being investigated.
 
-Please test this release with your existing projects and as usual: Any breakage of existing projects after upgrading is a bug. If we somehow missed something please [report a bug](https://github.com/godotengine/godot/issues/new). 
+Please test this release with your existing projects and as usual: Any breakage of existing projects after upgrading is a bug. If we somehow missed something please [report a bug](https://github.com/godotengine/godot/issues/new).
 
 I'd like to thank our wonderful community for smothering us in the warm glow of their pull requests and bug reports. This is looking like another great release!
 

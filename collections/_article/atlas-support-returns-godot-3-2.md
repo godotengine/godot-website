@@ -41,7 +41,7 @@ Using atlases ensures that, before placing all the animation frames in a single 
 
 ## How to use atlases in Godot
 
-Using atlases in Godot is _extremely_ easy. Just select all the files that you want to _pack together_ in the _Filesystem Dock_, then change the import type to "Texture Atlas". 
+Using atlases in Godot is _extremely_ easy. Just select all the files that you want to _pack together_ in the _Filesystem Dock_, then change the import type to "Texture Atlas".
 
 When the new file type is selected, change the "atlas file" setting to the image you will want to create, then push the "Re-Import" button. All your assets will be re-imported and added to an atlas. (The editor will restart afterwards, as the images may be in use, to ensure everything is re-opened in a clean state).
 

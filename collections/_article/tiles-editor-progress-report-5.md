@@ -19,7 +19,7 @@ Here comes a new progress report about the Tiles editor rework. This is most lik
 
 ### Tile atlas editing
 
-Some improvements were made to the tile atlas editor. 
+Some improvements were made to the tile atlas editor.
 
 I first reorganized the tiles creation menus, which are now split into 3 modes. The first mode allows editing the atlas properties and creating/removing base tiles, the second one allows selecting and editing tiles properties, and the last one is to paint properties over the tiles.
 
@@ -27,7 +27,7 @@ In this third mode, I implemented a dedicated editor for tile shapes (collision 
 
 ![Tile Atlases editing modes](/storage/app/uploads/public/614/857/1a2/6148571a28c42903499672.gif)
 
-Since my previous implementation of panning was not working great in the atlas editor, I reworked it a little bit. The view is not constrained anymore and panning can be done with the right click. 
+Since my previous implementation of panning was not working great in the atlas editor, I reworked it a little bit. The view is not constrained anymore and panning can be done with the right click.
 
 ### Backward compatibility improvements
 
@@ -37,7 +37,7 @@ To improve backward compatibility, tiles from 3.x in the `SINGLE_TILE` mode will
 
 As the atlas merging tool is only modifying the TileSet resource, using it might have made all TileMaps using the modified TileSet point to missing atlases. Hopefully, I implemented a way to solve this problem.
 
-TileSet now features a system of *tile proxies*. Thoses proxies are basically a mapping table, that allows notifying the TileMap using a given TileSet that a given set of tile identifiers should be replaced by another one. Tile proxies are automatically set up when merging different atlases, but they can also be set manually thanks to a dedicated interface. This may become useful when you changed an atlas ID or want to replace all tiles from an atlas by the ones from another atlas. Note that, when editing a TileMap, you can replace all cells by their corresponding mapped value. 
+TileSet now features a system of *tile proxies*. Thoses proxies are basically a mapping table, that allows notifying the TileMap using a given TileSet that a given set of tile identifiers should be replaced by another one. Tile proxies are automatically set up when merging different atlases, but they can also be set manually thanks to a dedicated interface. This may become useful when you changed an atlas ID or want to replace all tiles from an atlas by the ones from another atlas. Note that, when editing a TileMap, you can replace all cells by their corresponding mapped value.
 
 ### TileMap layers
 
@@ -59,7 +59,7 @@ With both the TileMap layers and TileSet layers implemented, the limitations of 
 
 This will allow exposing or moving out from dedicated editors a lot of properties. For example, items from an ItemList node could be moved back to the inspector.
 
-### Other 
+### Other
 
 Aside from a lot of bug fixes and small UX improvements, all tiles-related classes are now documented.
 

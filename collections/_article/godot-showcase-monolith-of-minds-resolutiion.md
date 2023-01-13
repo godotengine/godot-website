@@ -49,7 +49,7 @@ Having such a full fetched editor run on Linux was probably a big selling point 
 
 ### Which challenges have you encountered when using Godot?
 
-None, haha. 
+None, haha.
 
 ### Which features would you like to see in future versions of Godot?
 

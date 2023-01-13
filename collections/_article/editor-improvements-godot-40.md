@@ -77,7 +77,7 @@ In the new importer, this process is done via manual steps, so the user has more
 
 ![importer_assets.jpeg](/storage/app/uploads/public/606/23a/e6d/60623ae6de535875757353.jpeg)
 
-As a result, it's more obvious where everything goes and what's happening during the import process. 
+As a result, it's more obvious where everything goes and what's happening during the import process.
 
 The new system also solves the problem of assigning external materials to replace the ones in the imported file in a very elegant way, allowing to either make the materials that come with the asset external, or just replace them by existing external ones.
 
@@ -97,6 +97,6 @@ This results in a performance improvement of over ten times (if you have a moder
 
 ### Future
 
-With the editor work done, I will now go back to working on rendering for the next month to finalize the missing bits and pieces pending in my TODO list. Afterwards, it will be time to start working towards our first Godot 4.0 alpha! And again, remember we do this out of love for you and the game development community so you can have the best possible engine we can make with the same freedom as if you made it yourself. 
+With the editor work done, I will now go back to working on rendering for the next month to finalize the missing bits and pieces pending in my TODO list. Afterwards, it will be time to start working towards our first Godot 4.0 alpha! And again, remember we do this out of love for you and the game development community so you can have the best possible engine we can make with the same freedom as if you made it yourself.
 
 If you are not, please consider [becoming our patron](https://www.patreon.com/godotengine)!

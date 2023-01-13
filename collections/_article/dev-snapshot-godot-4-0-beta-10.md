@@ -58,7 +58,7 @@ Some of the most notables feature changes in this update are:
 - Input: Include the follow-viewport-transform into `CanvasLayer` transform calculations ([GH-59682](https://github.com/godotengine/godot/pull/59682)).
 - Navigation: Add signal to NavigationAgent when entering a link ([GH-67111](https://github.com/godotengine/godot/pull/67111)).
 - Navigation: Change `GridMap` `navigation_layers` to per `mesh_library` item ([GH-69351](https://github.com/godotengine/godot/pull/69351)).
-- Navigation: Use `TileSet` navigation layer layers when `TileMap` generates navigation polygons 
+- Navigation: Use `TileSet` navigation layer layers when `TileMap` generates navigation polygons
 ([GH-69349](https://github.com/godotengine/godot/pull/69349)).
 - Navigation: Stop `NavigationAgents` without a target from moving to world origin ([GH-69688](https://github.com/godotengine/godot/pull/69688)).
 - Navigation: Fix typo and ensure backwards compatibility for changed property names ([GH-70244](https://github.com/godotengine/godot/pull/70244)).

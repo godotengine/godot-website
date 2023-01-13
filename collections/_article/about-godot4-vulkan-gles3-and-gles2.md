@@ -45,7 +45,7 @@ To put it simply: In Godot 3.x the GLES2 renderer is designed for older hardware
 
 The GLES3 implementation in Godot 4.1 will be a hybrid. It will have a design more similar to the GLES2 renderer in Godot 3.x (so it will achieve better performance in old devices), but it will still take advantage of the added features to scale better for more complex scenes. Some more advanced features such as decals or Real-Time GI, present on the Vulkan renderer, will not be supported, though.
 
-Still, if you are making a high-end mobile game, keep in mind that we will support a mobile optimized version of the Vulkan renderer. Vulkan runs on all high end phones that were shipped in the past several years. 
+Still, if you are making a high-end mobile game, keep in mind that we will support a mobile optimized version of the Vulkan renderer. Vulkan runs on all high end phones that were shipped in the past several years.
 
 # What if I can't run GLES3 or Vulkan?
 

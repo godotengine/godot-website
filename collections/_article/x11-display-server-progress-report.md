@@ -165,7 +165,7 @@ As a workaround, based on the work made for the keyboard inputs, I've made fixes
 
 #### 1. Delay when pasting from Godot into other apps
 
-When working with X11, clipboard data is not just saved in the system and sent to an app when pasting is requested. Instead, communication is needed with the app that the data comes from in order to convert it to the desired format and send it through the X server to the other app. 
+When working with X11, clipboard data is not just saved in the system and sent to an app when pasting is requested. Instead, communication is needed with the app that the data comes from in order to convert it to the desired format and send it through the X server to the other app.
 
 The steps for copy/pasting are as follows:
 - Copy happens in App A, which is registered as the clipboard owner

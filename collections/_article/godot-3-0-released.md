@@ -17,7 +17,7 @@ Godot 3.0 ended up being a much, much bigger release than we initially expected.
 
 A year ago, we decided to skip the release of Godot 2.2 (which would have included new multiplayer networking, visual scripting and many other improvements) because we realized that projects using the new features would no longer work in 3.0, and that we'd better focus fully on 3.0 instead of spending 3 months stabilizing the 2.2 work.
 
-Afterwards, as we realized that we were going to fully break compatibility with the 3.0 release, we decided to take the chance to look at our long list of features and bug fixes that could not be implemented because it involved breaking compatibility. We decided to just give it a go and fix everything that had to be fixed. 
+Afterwards, as we realized that we were going to fully break compatibility with the 3.0 release, we decided to take the chance to look at our long list of features and bug fixes that could not be implemented because it involved breaking compatibility. We decided to just give it a go and fix everything that had to be fixed.
 
 This also become a perfect opportunity for contributors to propose (and submit) deep changes and improvements to how Godot works, as this was not possible since Godot was open-sourced in our aim to preserve compatibility.
 
@@ -35,7 +35,7 @@ Patreon has proven to be an excellent solution for funding the project and allow
 
 As we always want to be crystal clear with how donations are handled and used, we registered on Patreon via our fiscal sponsor, the [Software Freedom Conservancy](https://sfconservancy.org) (which is the high-profile, US-based non-profit charity which handles our finances and legal questions).
 
-After meeting the initial goal, we hired [karroffel](https://github.com/karroffel) to continue her work on GDNative (more about this below) and work on a new rendering backend. 
+After meeting the initial goal, we hired [karroffel](https://github.com/karroffel) to continue her work on GDNative (more about this below) and work on a new rendering backend.
 
 We are currently aiming to hire Rémi Verschelde ([Akien](https://github.com/akien-mga)), our project manager, as full time project manger and representative (you can read more about this [here](/article/next-patreon-goal-help-us-hire-remi-verschelde-akien-full-time)). We need your help, as we are more than halfway there!
 
@@ -93,7 +93,7 @@ It's a long read, so here's a table of contents to easily get to a specific sect
 
 ![Examples of 3D scenes with PBR](/storage/app/media/3.0%20release/new_3d_renderer.jpg)
 
-Godot 3.0 comes with a brand new renderer. For many years, when you read about Godot on the Internet, usual comments were along the lines of: 
+Godot 3.0 comes with a brand new renderer. For many years, when you read about Godot on the Internet, usual comments were along the lines of:
 
 *"The 2D engine is very good, but 3D is still basic, lacking and nowhere comparable to XXX 3D or YYY Engine".*
 
@@ -157,7 +157,7 @@ Unfortunately, the visual material editor from Godot 2.1 was removed in the comp
 
 ![Example of spatial shader code](/storage/app/media/devlog/rendering/render_shader.png)
 
-In other engines, you have to provide many shader variants, mix HLSL with a metalanguage, error reporting is terrible and writing shaders is difficult in general. In Godot 3.0, writing shaders is very easy! It uses a custom language that supports most of the GLSL specification. It parses your code and automatically understands what you are trying to do (such as writing to alpha for transparency, reading from screen, etc.) and it generates internal shader variants for all rendering methods automatically and transparently (forward, clustered, vertex-lit, depth-pass, etc.). 
+In other engines, you have to provide many shader variants, mix HLSL with a metalanguage, error reporting is terrible and writing shaders is difficult in general. In Godot 3.0, writing shaders is very easy! It uses a custom language that supports most of the GLSL specification. It parses your code and automatically understands what you are trying to do (such as writing to alpha for transparency, reading from screen, etc.) and it generates internal shader variants for all rendering methods automatically and transparently (forward, clustered, vertex-lit, depth-pass, etc.).
 
 All this within a convenient editor supporting full auto-completion!
 

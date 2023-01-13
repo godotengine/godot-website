@@ -33,7 +33,7 @@ As for maintenance releases of the previous 2.0.x stable branch, the aim of thos
 - Dozens of bug fixes
 - Many class reference documentation updates
 - Editor translation updates
- 
+
 ### Other notable changes
 
 The [full list of changes](http://download.tuxfamily.org/godotengine/2.1.1/Godot_v2.1.1-stable_changelog.txt) is of course much lenghtier, as we had 271 commits cherry-picked for the stable since the 2.1 release, but here is a selection of some of the most interesting ones (minus the ones mentioned in the above highlights):

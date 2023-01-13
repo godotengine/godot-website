@@ -15,13 +15,13 @@ If you haven't become our patron yet, please [consider it](https://www.patreon.c
 
 ## Our goals so far
 
-So far, since the first goal was met (hiring me), I was able to spend a lot more time working on Godot. Most of my new time was used to help existing developers and contributors, as well as helping guide new ones get familiar with the code. 
+So far, since the first goal was met (hiring me), I was able to spend a lot more time working on Godot. Most of my new time was used to help existing developers and contributors, as well as helping guide new ones get familiar with the code.
 
-Thanks, in large part, to this, the amount of contributions and active developers skyrocketed and we ended up adding a lot more functions to the upcoming 3.0 (which *will* be released this month). 
+Thanks, in large part, to this, the amount of contributions and active developers skyrocketed and we ended up adding a lot more functions to the upcoming 3.0 (which *will* be released this month).
 
 ![](/storage/app/media/3.0/godot_contributions_december.png)
 
-The second goal was met recently, and we could hire karroffel, who is the author of GDNative, to continue working on it and also start working on an OpenGL ES 2.0 rendering backend. This new backend will allow Godot 3.1 to recover the high compatibility and performance with every mobile device, low-end PC and WebGL that Godot 2.1 always had. 
+The second goal was met recently, and we could hire karroffel, who is the author of GDNative, to continue working on it and also start working on an OpenGL ES 2.0 rendering backend. This new backend will allow Godot 3.1 to recover the high compatibility and performance with every mobile device, low-end PC and WebGL that Godot 2.1 always had.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Default GUI works now! The Editor is using custom materials so it's not looking good currently, but baby steps :) <a href="https://t.co/v9VvfeZnS9">pic.twitter.com/v9VvfeZnS9</a></p>— @karroffel <a href="https://twitter.com/karroffel/status/948920286921068544?ref_src=twsrc%5Etfw">January 4, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -46,7 +46,7 @@ Part of the reason why this happens is that Godot is very new, and games usually
 
 To begin changing this, we need to participate more in industry events, getting to meet more companies, education institutions, press events, etc. For this, we need a *project representative*, a real human who can be a reference point for the industry to contact. Someone who can speak on behalf of the project, who knows everyone of us working on it.
 
-As much as I would love to do this, my time is better spent programming and helping other developers. I also live in Buenos Aires, so I'm very far away from most of the industry. 
+As much as I would love to do this, my time is better spent programming and helping other developers. I also live in Buenos Aires, so I'm very far away from most of the industry.
 
 Rémi lives in Europe, speaks French, English and German fluently, and knows all of us working on Godot. This is why we (the Godot <abbr title="Project Leadership Committee">PLC</abbr> and other contributors we discussed with) want him to take on this role.
 

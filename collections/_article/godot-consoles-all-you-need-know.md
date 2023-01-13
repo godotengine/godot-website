@@ -27,7 +27,7 @@ This means that, on the whole public Internet, **you will not be able to find** 
 
 * Any **detailed public documentation** on how consoles work (that was not reverse engineered).
 * Any **official tools or libraries** that let you develop or run your game on consoles.
-* Any **downloadable game engines** that, out of the box, include support for developing or exporting to consoles. 
+* Any **downloadable game engines** that, out of the box, include support for developing or exporting to consoles.
 
 This **includes game engines such as Unity or Unreal**. To obtain the console versions of those, you **must get licensed**, sign the NDA, get approved and then download the version that lets you develop on consoles from a secret console development portal. It is a common misconception that you can download a game engine and start using it to develop for consoles without previously being approved by the console manufacturer.
 
@@ -35,7 +35,7 @@ The only exception at some point was exporting to the UWP platform which _could_
 
 ### Where does Godot fit is in all this?
 
-Godot is a free and open source (FOSS) game engine, published under the MIT license. Development is made entirely in the open. Because of this, it **is impossible for Godot to include first-party console support** out of the box. Even if someone would contribute it, we simply **could not host this code** legally in our Git repository for anyone to use. 
+Godot is a free and open source (FOSS) game engine, published under the MIT license. Development is made entirely in the open. Because of this, it **is impossible for Godot to include first-party console support** out of the box. Even if someone would contribute it, we simply **could not host this code** legally in our Git repository for anyone to use.
 
 Additionally, it would **not be possible to distribute** this code under the same license that Godot uses (MIT) because this is in direct conflict with the proprietary licenses and non-disclosure terms that console manufacturers require to have access to the knowledge needed to write this code.
 
@@ -66,7 +66,7 @@ In all, supporting consoles properly **is very costly** and beyond the possibili
 
 ### So, how do I get my Godot game into consoles anyway?
 
-The best way to do this right now is to work with companies that will port and publish your Godot game to consoles. Because these companies act as the publishers, they are **not required to license the technology to you** (and thus avoid the costly process of becoming middleware providers). For most independent developers also, porting to consoles is not easy because they need to meet a lot of technical requirements, so working with a company that does for them is generally still desired. 
+The best way to do this right now is to work with companies that will port and publish your Godot game to consoles. Because these companies act as the publishers, they are **not required to license the technology to you** (and thus avoid the costly process of becoming middleware providers). For most independent developers also, porting to consoles is not easy because they need to meet a lot of technical requirements, so working with a company that does for them is generally still desired.
 
 Links to companies that do console porting for Godot titles:
 * [Lone Wolf Technology](https://lonewolftechnology.com/)

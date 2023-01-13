@@ -20,7 +20,7 @@ To create a Soft Ball is to add a *SoftBody* node and add a mesh to it, in this 
 
 ![Selection_001.png](/storage/app/uploads/public/5b5/8c1/c41/5b58c1c419ef5398570134.png)
 
-As you can see above, many parameters are supported in order to obtain the simulation results wanted. 
+As you can see above, many parameters are supported in order to obtain the simulation results wanted.
 
 > ###### Note 1
 > Be careful with some parameters, as this can lead to strange simulation results. As an example, if the shape is not completely closed and you set pressure to more than 0.

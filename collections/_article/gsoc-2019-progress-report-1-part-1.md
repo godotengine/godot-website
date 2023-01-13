@@ -40,7 +40,7 @@ Here is the list of projects and students with links to the relevant sections.
 - **Project:** Version Control Systems (VCS) editor integration framework and Git plugin
 - **Student:** Twarit Waikar ([IronicallySerious](https://github.com/IronicallySerious))
 - **Mentors:** Gilles Roudiere ([groud](https://github.com/groud)) and Jairo Honorio ([jahd2602](https://github.com/jahd2602))
-- **Repositories:** 
+- **Repositories:**
   * Godot's framework for VCS integration:
      - Dev: https://github.com/IronicallySerious/godot/tree/vcs-api-expand
      - Final (PR candidate): https://github.com/IronicallySerious/godot/tree/add-vcs-integration
@@ -48,7 +48,7 @@ Here is the list of projects and students with links to the relevant sections.
 
 ### Introduction
 
-Since Godot is gradually entering the competitive market, dominated by only a handful of fully featured engines, it is only intuitive that it should support Godot game developers with a strong version control integration from within the editor. This project aims at creating a GUI interface to the user's version control system deployed on their project and create a versioning system agnostic API that caters to all version control systems (VCSs) at once. 
+Since Godot is gradually entering the competitive market, dominated by only a handful of fully featured engines, it is only intuitive that it should support Godot game developers with a strong version control integration from within the editor. This project aims at creating a GUI interface to the user's version control system deployed on their project and create a versioning system agnostic API that caters to all version control systems (VCSs) at once.
 
 This integration can further be used to create more in-depth interactions to a VCS like viewing file diffs right in the editor, committing code with a simple click, resetting to a previous state almost instantly without leaving the Godot editor.
 
@@ -81,7 +81,7 @@ Our target for minimally complete support is focused on Git currently. By the en
 
 ### How do we plan to manage distributed and centralised VCS?
 
-We plan to split the API into two when the time comes to implement a centralised VCS. This is a development style decision amongst many others as suggested by my mentors, Groud and jahd, so that we make as much progress as we can without worrying about a problem that will only come once in the future. 
+We plan to split the API into two when the time comes to implement a centralised VCS. This is a development style decision amongst many others as suggested by my mentors, Groud and jahd, so that we make as much progress as we can without worrying about a problem that will only come once in the future.
 
 ### Which VCS are planned for support?
 
@@ -105,7 +105,7 @@ You can also have a look at my [personal devlogs](https://github.com/IronicallyS
 - **Mentors:** Juan Linietsky ([reduz](https://github.com/reduz))
 - **Repository:** https://github.com/DanielMatarov/godot/tree/Interactive-Music/modules/InteractiveMusic
 
-Hi! My name is Daniel and I am working on implementing a feature for interactive music in Godot, as part of the Google Summer of Code programme. 
+Hi! My name is Daniel and I am working on implementing a feature for interactive music in Godot, as part of the Google Summer of Code programme.
 
 ### Project overview and what I have done so far
 
@@ -133,7 +133,7 @@ The next class is called `AudioStreamTransitioner`, which is what I am currently
 
 Initially the user interface was supposed to go on the bottom panel, however after discussions with reduz, it was decided it would be better to have it all go in the inspector. To accommodate this use I am considering changing some of the functionalities so it fits solely into the inspector. The way I see it working would be to not have a list of clips in the class, and rather have a list of transitions and a starting clip which is triggered when the class starts. Each transition will have a clip which is transitioned to (maybe called `to_clip`), fade out beats, which specifies for how many beats the previous stream fade out for, based on bpm, fade in beats, which specifies for how long the new stream will fade in for. Fade in and fade out can be different lengths and there won't be restrictions on either being longer than the other which will make the transitioner quite flexible for music makers.
 
-I have written some pseudocode for the behind the scenes mix logic which can be found [here](https://snipsave.com/danielmatarov/#/snippet/4f146cGYQg51SXx9ST). This will likely change in the future but I think it is a good initial representation of how it will likely end up working. 
+I have written some pseudocode for the behind the scenes mix logic which can be found [here](https://snipsave.com/danielmatarov/#/snippet/4f146cGYQg51SXx9ST). This will likely change in the future but I think it is a good initial representation of how it will likely end up working.
 
 ### Challenges encountered
 
@@ -145,11 +145,11 @@ As mentioned previously I am dealing with a memory leak which is yet to be ident
   <source src="/storage/app/media/gsoc/2019-1/interactive-music-ram-test.mp4" type="video/mp4">
 </video>
 
-Through discussions on the IRC channel it was discovered that the code just crashes on a Linux system (I use Windows). When I ran it through VS 2017's debugger it seemed to be a case of `generate_preview()` being called constantly, however I could not quite identify why that is happening. Currently I have disabled the preview generator in order to be able to work and for a while that problem still persisted until I added some safeguards in my playlist mix logic, but when the generator is turned on it still creates that problem. It will likely be something I try to fix later on, potentially by disabling the preview generator for playlist and probably transitioner specifically, instead of disabling it for all streams. I don't see a need for these classes to have a waveform preview displayed below `AudioStreamPlayer`, since they contain multiple audio files, rather than one. 
+Through discussions on the IRC channel it was discovered that the code just crashes on a Linux system (I use Windows). When I ran it through VS 2017's debugger it seemed to be a case of `generate_preview()` being called constantly, however I could not quite identify why that is happening. Currently I have disabled the preview generator in order to be able to work and for a while that problem still persisted until I added some safeguards in my playlist mix logic, but when the generator is turned on it still creates that problem. It will likely be something I try to fix later on, potentially by disabling the preview generator for playlist and probably transitioner specifically, instead of disabling it for all streams. I don't see a need for these classes to have a waveform preview displayed below `AudioStreamPlayer`, since they contain multiple audio files, rather than one.
 
 ### What is next
 
-I aim to have transitioner functional by the beginning of August which will give me time to debug any potential issues and come up with a fix for the memory leak. Some of the things I wrote about here such as changes to how transitioner will be layed out need to be further discussed and approved by my mentor reduz. I will also aim to create an example project that displays the functionalities of the new feature, probably something simple such as pressing a few different buttons playing different music loops fading in and out. I think it will be a nice way to show it working and also give an example of the functions exposed to GDScript being used in context. 
+I aim to have transitioner functional by the beginning of August which will give me time to debug any potential issues and come up with a fix for the memory leak. Some of the things I wrote about here such as changes to how transitioner will be layed out need to be further discussed and approved by my mentor reduz. I will also aim to create an example project that displays the functionalities of the new feature, probably something simple such as pressing a few different buttons playing different music loops fading in and out. I think it will be a nice way to show it working and also give an example of the functions exposed to GDScript being used in context.
 
 -----
 

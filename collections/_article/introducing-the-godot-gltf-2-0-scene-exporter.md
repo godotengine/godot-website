@@ -44,7 +44,7 @@ glTF allows the creation of extensions for any purpose. For example, VRM allows 
 <video title="Alicia, an example of the VRM extension for glTF 2.0" width="1280" height="720" controls>
   <source src="/storage/app/media/4.0/vrm_gltf_2_0_extensions_2_sp_go.mp4" type="video/mp4">
   Sorry, your browser doesn't support embedded videos.
-</video> 
+</video>
 
 Work from [@viridflow on Twitter](https://twitter.com/viridflow) and the sample model [Alicia from VRM](https://github.com/vrm-c/UniVRM/tree/master/Tests/Models/Alicia_vrm-0.51).
 
@@ -64,7 +64,7 @@ We started work on glTF export in 2019, but Blender was misreading our output.
 
 Marios Staikopoulos fixed the glTF2 skeleton interpretation. (Thank you so much!)
 
-Afterwards, the [Blender import/export plugin](https://github.com/KhronosGroup/glTF-Blender-IO) before version 2.83 could not import any glTF correctly, and it was fixed thanks to scurest's work. (Note that Blender versions older than 2.83 are not supported.) 
+Afterwards, the [Blender import/export plugin](https://github.com/KhronosGroup/glTF-Blender-IO) before version 2.83 could not import any glTF correctly, and it was fixed thanks to scurest's work. (Note that Blender versions older than 2.83 are not supported.)
 
 We had trouble with Godot instanced scenes. When a skeleton was in the scene multiple times it became merged, which was fixed.
 
@@ -87,7 +87,7 @@ We will add support for these features along the way:
 
 I want to thank the following people for contributing to glTF import/export:
 
-- Marios Staikopulos - https://github.com/marstaik 
+- Marios Staikopulos - https://github.com/marstaik
 - scurest - https://github.com/scurest
 - Lyuma - https://github.com/lyuma/ - https://twitter.com/Lyuma2d
 - Godot Engine team - https://github.com/godotengine

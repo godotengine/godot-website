@@ -11,20 +11,20 @@ date: 2017-08-03 00:00:00
 
 [glTF 2.0](https://github.com/KhronosGroup/glTF) was introduced two months ago by [Khronos](https://www.khronos.org/), the body behind Vulkan and OpenGL.
 
-Today, this format was added to Godot, which now supports the full specification. The reasoning behind this late feature addition is that, now that we released 3.0 alpha1, users need more content to test with the new 3D engine. 
+Today, this format was added to Godot, which now supports the full specification. The reasoning behind this late feature addition is that, now that we released 3.0 alpha1, users need more content to test with the new 3D engine.
 
 Sites like [Sketchfab](https://sketchfab.com/) provide plenty of PBR-ready assets for downloading, and [plugins](https://sketchfab.com/exporters/unity) that export scenes from other popular game engines to this format.
 
 ![](/storage/app/media/dh.jpg)
 
-The surprise, though, is how good this format is for video game asset exchange. Nothing as good existed before, and it solves a problem that we, as an industry, have been struggling with for a long time. 
+The surprise, though, is how good this format is for video game asset exchange. Nothing as good existed before, and it solves a problem that we, as an industry, have been struggling with for a long time.
 
 Khronos, with glTF 2.0, has given us a fantastic chance to standardize a smooth workflow between 3D modelling software and game engines. To better understand why, a list of previous attempts will be explained and why they failed.
 
 
 ### OBJ / 3DS
 
-The first formats used for asset exchange were Wavefrom .OBJ and Autodesk .3DS. Both are formats from the early days of 3D computer graphics (late 80s, early 90s). Despite their popularity, they only support basic geometry, and .OBJ does not even support object transforms. 
+The first formats used for asset exchange were Wavefrom .OBJ and Autodesk .3DS. Both are formats from the early days of 3D computer graphics (late 80s, early 90s). Despite their popularity, they only support basic geometry, and .OBJ does not even support object transforms.
 
 
 ### Collada
@@ -39,18 +39,18 @@ Despite supporting almost everything a modern game engine needs, the format fell
 * Collada is a text format, so loading large files is slow.
 * Autodesk (willingly or unwillingly) worked against the format adoption by including an incomplete and buggy exporter in their products. To this day, a large amount of developers believe Collada is not capable of a lot of functions that it actually is.
 * Blender (willingly or unwillingly) worked against the format by adopting an incomplete exporter.
- 
-While many factors worked against it, the truth is that Collada was never good enough. 
+
+While many factors worked against it, the truth is that Collada was never good enough.
 
 ### FBX
 
-One would assume (given its popularity) that FBX is pretty much the industry standard... except there isn't any standard published by Autodesk about it. 
+One would assume (given its popularity) that FBX is pretty much the industry standard... except there isn't any standard published by Autodesk about it.
 
-FBX is used via the FBX SDK, which has a very restrictive license. This license makes it very hard to use in open source projects (an EULA must be accepted by the user unless a special license is purchased from Autodesk). 
+FBX is used via the FBX SDK, which has a very restrictive license. This license makes it very hard to use in open source projects (an EULA must be accepted by the user unless a special license is purchased from Autodesk).
 
-Besides the legal issues, implementing the library is rather difficult and suffers many of the same format ambiguity issues Collada does. One could argue, though, that the main technical advantage about it (besides working with the most popular 3D modelling applications) is that the file format is binary, so parsing it is fast. 
+Besides the legal issues, implementing the library is rather difficult and suffers many of the same format ambiguity issues Collada does. One could argue, though, that the main technical advantage about it (besides working with the most popular 3D modelling applications) is that the file format is binary, so parsing it is fast.
 
-That said, as an industry, we should look for true standards to work with. As useful as FBX may be, Autodesk alone controls its future. 
+That said, as an industry, we should look for true standards to work with. As useful as FBX may be, Autodesk alone controls its future.
 
 ### OpenGEX
 
@@ -80,14 +80,14 @@ Comparing the size (in lines of code) of both Godot's glTF 2.0 and Collada impor
 
 * Collada: ~5000 loc
 * glTF 2.0: ~2000 loc
- 
+
 Godot does not even use third party libraries to parse these files. This makes it more evident how simple the format is in comparison.
 
 Theoretically, glTF2 should be less efficient to parse than Collada, as it requires parsing the whole JSON into memory. Collada can be streamed in by using a SAX XML parser but, in practice, glTF beats Collada hands down. This is because (besides many Collada exporters not obeying the specification, so they can't be parsed as SAX anyway) glTF has *yet* another killer feature:
 
 ##### Separate binary blob for arrays
 
-glTF allows specifying an external file for the big data, in binary format. It even supports many common GPU data types, so in practice this file can be moved in chunks directly to the GPU memory. Yes, glTF is the *first* of these formats that can even be used efficiently as *in-engine data*. 
+glTF allows specifying an external file for the big data, in binary format. It even supports many common GPU data types, so in practice this file can be moved in chunks directly to the GPU memory. Yes, glTF is the *first* of these formats that can even be used efficiently as *in-engine data*.
 
 Even if engines would prefer to import to their own format, like Godot does, glTF is extremely fast to export and import. This makes it ideal for making changes to a complex file in the 3D software and updating them to the 3D engine almost instantly.
 
@@ -103,7 +103,7 @@ There is also no support for different coordinate systems or units, and this is 
 * The units for all linear distances are meters.
 * All angles are in radians.
 * Positive rotation is counterclockwise.
- 
+
 Just one simple use case to care about. No extra conversions. All work is left to the exporter. As there are usually way more importers than exporters, this is an excellent design decision.
 
 ##### Modern features
@@ -140,6 +140,6 @@ glTF is an open standard and the development process is also [transparent](https
 
 For glTF to succeed, it needs strong developer adoption. Ask your favorite 3D modelling software or engine developer to support it!
 
-Currently, the Blender exporter is in the works and not complete, and there is no support at all for Autodesk products (export plug-ins need to be written). 
+Currently, the Blender exporter is in the works and not complete, and there is no support at all for Autodesk products (export plug-ins need to be written).
 
 This is the best chance we'll ever have in a long time for a proper, open standard. Let's work together to make it happen!

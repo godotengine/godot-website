@@ -36,7 +36,7 @@ Godot 3.0 will come with a new particle system. As times change, the main differ
 You can have hundreds of thousands of particles on legacy CPUs or mobile.. or several million particles on modern desktop GPUs.
 
 ![](/storage/app/media/devlog/progress6/htparts.gif)
- 
+
 ### Customization
 
 While we offer a default particles material (which is very powerful and customizable), it is possible to write your own particle logic entirely in a shader. It is also possible to convert a particle system to a shader and do further modifications to it by yourself, manually.
@@ -55,15 +55,15 @@ The fact that so many particles can be used thanks to GPU processing allows for 
 
 ![](/storage/app/media/devlog/progress6/part_trails.gif)
 
-And finally, more powerful emission volumes can be provided such as box, sphere and mesh surface or volume. Mesh surfaces can also emit directed by normals: 
+And finally, more powerful emission volumes can be provided such as box, sphere and mesh surface or volume. Mesh surfaces can also emit directed by normals:
 
 ![](/storage/app/media/devlog/progress6/part_directed.gif)
- 
+
 We wanted to include skeletal transform support to emission meshes, as it's not a lot more complex, but this will have to wait for 3.1 :(
 
 ## Godot 3.0 alpha
 
-With this, all major funtionalities planned for 3.0 are implemented. We will be releasing an alpha build soon for everyone to start playing with them and finding bugs. Stay tuned! 
+With this, all major funtionalities planned for 3.0 are implemented. We will be releasing an alpha build soon for everyone to start playing with them and finding bugs. Stay tuned!
 
 ## Seeing the code
 

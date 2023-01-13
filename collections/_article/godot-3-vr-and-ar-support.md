@@ -85,7 +85,7 @@ The module we are building for Godot is still very experimental and incomplete b
 
 ### ARKit
 
-Godot fully supports ARKit but it is unlikely to be added into the core any time soon. The biggest issue holding us back with ARKit is Apple's requirement to compile the source code against iOS 11 and that means dropping support for the iPhone 5. Also Apple does not allow dynamic libraries being deployed over the AppStore, removing GDNative as an option (though potential workarounds for this are being discussed). 
+Godot fully supports ARKit but it is unlikely to be added into the core any time soon. The biggest issue holding us back with ARKit is Apple's requirement to compile the source code against iOS 11 and that means dropping support for the iPhone 5. Also Apple does not allow dynamic libraries being deployed over the AppStore, removing GDNative as an option (though potential workarounds for this are being discussed).
 
 If you want to give ARKit a try the only option is to compile Godot yourself. You can locally merge the [pull request](https://github.com/godotengine/godot/pull/9967) with the ARKit implementation, or simply clone the [ARKit branch](https://github.com/BastiaanOlij/godot/tree/arkit) on my GitHub fork.
 

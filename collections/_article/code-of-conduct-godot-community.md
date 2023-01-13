@@ -22,7 +22,7 @@ While we agreed many months ago with core contributors to introduce a Code of Co
 
 Visit the **[Code of Conduct](/code-of-conduct)** page of this website to read the full guidelines.
 
-The page also includes the contact details for the [Code of Conduct team](/code-of-conduct#coc-team) and its members, who are in charge of reviewing and acting upon any reports of participants breaching the Code of Conduct. 
+The page also includes the contact details for the [Code of Conduct team](/code-of-conduct#coc-team) and its members, who are in charge of reviewing and acting upon any reports of participants breaching the Code of Conduct.
 
 The document was written by the Godot [Project Leadership Committee](/contact#plc) with help and reviews from various other core contributors and platform moderators.
 

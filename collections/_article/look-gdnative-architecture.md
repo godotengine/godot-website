@@ -38,9 +38,9 @@ All the entries will be checked from top to bottom and entries with a non-existi
 ## Singleton libraries
 
 One of the properties of a GDNativeLibrary is whether that library is supposed to be used as a singleton library or not.
-A singleton library gets loaded at Godot's startup, as early as possible, and the `gdnative_singleton` function inside that library will be called. 
+A singleton library gets loaded at Godot's startup, as early as possible, and the `gdnative_singleton` function inside that library will be called.
 This can be used when a library offers functionality that needs tight integration into Godot. This is usually done via *GDNative extensions* - more on those later.
-  
+
 
 
 # GDNative
@@ -68,7 +68,7 @@ That struct lives inside of Godot and contains versioning information, fields fo
     	godot_gdnative_api_version version;
     	const godot_gdnative_api_struct *next;
     };
-    
+
     struct godot_gdnative_core_api_struct {
     	unsigned int type;
     	godot_gdnative_api_version version;

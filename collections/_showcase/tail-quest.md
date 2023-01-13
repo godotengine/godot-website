@@ -24,7 +24,7 @@ featured_in_home: true
 
 
 TailQuest Defense is an action packed tower defense game in which you play as Nell who tries to defend his world from the invasion of Nands - robots which are kidnapping fluffy inhabitants of the Riventail - a divided world floating in the sky.
-Stop invaders by placing towers at strategic points around colorful landscapes. Collect hidden treasures, use the environment to your advantage and most importantly, save Nell’s fluffy friends! 
+Stop invaders by placing towers at strategic points around colorful landscapes. Collect hidden treasures, use the environment to your advantage and most importantly, save Nell’s fluffy friends!
 
 - Best game for couch co-op play!
 - Defeat hundreds of enemies and protect your friends!

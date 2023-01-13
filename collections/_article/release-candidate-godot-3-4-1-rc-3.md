@@ -9,7 +9,7 @@ date: 2021-12-15 11:06:27
 
 [Godot 3.4](/article/godot-3-4-is-released) was released a month ago, and it went fairly smoothly! Many thanks to all the contributors who worked on it, including all testers who tried beta and RC releases to ensure that the 3.4-stable branch would be an easy and worthwhile upgrade path for all users.
 
-No software release is perfect though, so there will always be some things to iron out, which is why we usually provide maintenance releases for stable branches, focusing on bugfixing and preserving compatibility (see our [release policy](https://docs.godotengine.org/en/stable/about/release_policy.html)). A number of fixes have been queued already in the `3.4` branch for Godot 3.4.1, so here's a new [release candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) to validate them. 
+No software release is perfect though, so there will always be some things to iron out, which is why we usually provide maintenance releases for stable branches, focusing on bugfixing and preserving compatibility (see our [release policy](https://docs.godotengine.org/en/stable/about/release_policy.html)). A number of fixes have been queued already in the `3.4` branch for Godot 3.4.1, so here's a new [release candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) to validate them.
 
 This RC 3 notably adds a change for the terminal handling on Windows to work around a design limitation of Windows 11's new default Windows Terminal ([GH-54076](https://github.com/godotengine/godot/issues/54076)). Please test it on Windows (any version) to confirm that editing a project from the project manager, and running a project from the editor, both work fine.
 

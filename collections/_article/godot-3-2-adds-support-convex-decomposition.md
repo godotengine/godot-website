@@ -17,7 +17,7 @@ Triangle mesh shapes ([ConcavePolygonShape](https://docs.godotengine.org/ko/late
 
 The obvious problem with them is that they only really work well for *convex geometry*. When geometry is not convex, the usual workflow is to create more than one shape to cover the desired concave area. Doing this is tedious and the results are often not great (specially for complex geometry).
 
-Here is an example of adding collision shapes to Suzanne by using standard shapes (two capsules, a sphere and a box): 
+Here is an example of adding collision shapes to Suzanne by using standard shapes (two capsules, a sphere and a box):
 
 
 ![suzanne_convex.png](/storage/app/uploads/public/5ca/e74/dd1/5cae74dd1fcc2070593034.png)

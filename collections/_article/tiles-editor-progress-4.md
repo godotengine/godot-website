@@ -51,7 +51,7 @@ Aside from that, a few other improvements were implemented. For example the Tile
 
 ### What's next
 
-Once I am done with the tile property painting tools, I plan to work on two things. First, while I wanted to implement full support for single tiles, this is likely too much work for 4.0. So instead, we decided that each 3.x single tile will be imported as a single atlas, then you will be able to merge several atlases together into a bigger atlas. 
+Once I am done with the tile property painting tools, I plan to work on two things. First, while I wanted to implement full support for single tiles, this is likely too much work for 4.0. So instead, we decided that each 3.x single tile will be imported as a single atlas, then you will be able to merge several atlases together into a bigger atlas.
 
 Then, even if I was not sure about its usefulness, I decided to implement TileMap layers. While I think they do not bring a lot of value at runtime or make the API simpler, the fact is that implementing TileMap layers allows simplifying a lot the workflow when editing several layers. It will, for example, allow copy-pasting from one layer to another, or dim unselected layers in the editor. So we decided it was worth the work.
 

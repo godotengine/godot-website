@@ -30,7 +30,7 @@ Here are the main changes since 3.4.1-stable:
 - macOS: Fix OpenGL flickering regression ([GH-56059](https://github.com/godotengine/godot/pull/56059)).
 - Rendering: GLES2: Fix `trunc` shader function compilation on Android ([GH-56061](https://github.com/godotengine/godot/pull/56061)).
 - XR: Fix size issue for ARVR managed viewport ([GH-56072](https://github.com/godotengine/godot/pull/56072)).
-- Thirdparty library updates: mbedtls 2.16.12. 
+- Thirdparty library updates: mbedtls 2.16.12.
 - API documentation and translation updates.
 
 ## Known incompatibilities

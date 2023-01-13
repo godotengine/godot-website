@@ -23,7 +23,7 @@ Long story short, the first version was tricky to use. Although it was available
 
 ## Better, Faster, Stronger: Godot Slides 2.0
 
-Slides 2.0 is a **complete makeover** of the slideshow system: it is now entirely **drag-and-drop**, it's **modular and extensible**, it uses Godot's built-in translation system, the engine's UI system, and it's easier than ever to insert game demos inside of your slides! 
+Slides 2.0 is a **complete makeover** of the slideshow system: it is now entirely **drag-and-drop**, it's **modular and extensible**, it uses Godot's built-in translation system, the engine's UI system, and it's easier than ever to insert game demos inside of your slides!
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JO2TvlLGf8Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 

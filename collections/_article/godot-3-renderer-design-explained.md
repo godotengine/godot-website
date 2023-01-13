@@ -101,7 +101,7 @@ Added to that, several elements make shaders in Godot easy and a joy to write:
 * Descriptive error reporting (not just generic errors on a given line like in other popular game engines..).
 * Ability to bundle shaders inside materials.
 * Ability to convert a Spatial Shader (or Shader Graph) to code in a single click, to customize it or learn how it works.
- 
+
 Shaders are, then, translated to native language (real GLSL) and fitted inside the engine's main shader.
 
 This approach also has several more advantages. Given the high control we have over the shader compiler, we can:
@@ -113,11 +113,11 @@ This approach also has several more advantages. Given the high control we have o
 * Detect when shaders modify a vertex offset or use "discard". If none of this happens, we can use a generic opaque material for depth prepass or shadow passes. This reduces state changes hugely and speeds up depth rendering.
 
 And all the above happens transparently to the user! With Godot 3, we expect far more users will be writing shader code in proportion to other game engines given how easy it is.
- 
- 
+
+
 ## Rendering design
 
-For Godot 3, after long discussions, we decided that we won't use a deferred renderer. Forward rendering-based optimizations for high amount of lights are now mature and well tested in production. This also makes Godot depart from the way that popular game engines set to follow many years ago. 
+For Godot 3, after long discussions, we decided that we won't use a deferred renderer. Forward rendering-based optimizations for high amount of lights are now mature and well tested in production. This also makes Godot depart from the way that popular game engines set to follow many years ago.
 
 The most obvious advantages of leaving deferred rendering are:
 
@@ -138,7 +138,7 @@ Then there are also less obvious advantages, but which are high priority for us:
 The main disadvantages are:
 
 * A very high number of lights is still expensive, though it can be worked around using additive blending for very far/small ones.
-* Custom light code, per light, is not possible. 
+* Custom light code, per light, is not possible.
 * Light types are more limited.
 
 #### On temporal antialiasing
@@ -163,7 +163,7 @@ Balancing pros and cons, it's probably not worth implementing it, but the door i
 
 Godot uses the following framebuffer layout:
 
-For MSAA rendering: 
+For MSAA rendering:
 
 | Depth      | R                     | G                       | B                      | A             |
 |------------|-----------------------|-------------------------|------------------------|---------------|
@@ -219,7 +219,7 @@ Up to this point, keep in mind that only diffuse + ambient light has been resolv
 
 ###### 7. Perform Subsurface Scattering
 
-A separable convolution is performed to blur the diffuse + ambient buffers, using the Subsurface Scattering buffer as reference of where this effect is applied. This effect looks correct in Godot, given it must only be applied to diffuse and ambient light. 
+A separable convolution is performed to blur the diffuse + ambient buffers, using the Subsurface Scattering buffer as reference of where this effect is applied. This effect looks correct in Godot, given it must only be applied to diffuse and ambient light.
 
 Again, keep in mind that only diffuse + ambient light has been resolved here.
 
@@ -286,7 +286,7 @@ In a single, final compositing stage, the following happens:
 * Linear->SRGB conversion
 * Final adjustments (BCS, color correction, etc.)
 
-And that's it! 
+And that's it!
 
 ![](/storage/app/media/devlog/rendering/final_quality.jpg)
 

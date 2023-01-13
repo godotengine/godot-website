@@ -189,15 +189,15 @@ After discussion with Camille Mohr-Daurat ([pouleyKetchoupp](https://github.com/
 
 The first task will resolve a discrepancy between those features offered for rigid bodies and those offered for soft bodies. Currently, one can override the gravity vector in an area occupied by a rigid body and see it faithfully applied to the rigid body. This fails for soft bodies, which ignore the change in gravity.
 
-The second task will introduce a new object for the simulation of wind. The jet-force object will allow one to specify, much as one might for a camera, a location (origin) and direction of the jet. Additional parameters include jet strength and jet attenuation, which describes how the force decays with distance. 
+The second task will introduce a new object for the simulation of wind. The jet-force object will allow one to specify, much as one might for a camera, a location (origin) and direction of the jet. Additional parameters include jet strength and jet attenuation, which describes how the force decays with distance.
 
-These two tasks are interrelated in that they both focus on the application of forces (body and external) to soft bodies, and I hope that their completion will illuminate a more general pattern by which this is best accomplished for future soft body improvements. 
+These two tasks are interrelated in that they both focus on the application of forces (body and external) to soft bodies, and I hope that their completion will illuminate a more general pattern by which this is best accomplished for future soft body improvements.
 
 ### Overview and progress
 
 The first thing I've done is create a simple scene for use as a test case. The scene has a single soft body cloth with a coarse mesh that is fixed along one edge. Global gravity is applied in the negative Y direction, and an area is created encapsulating the cloth to allow for the specification of a new gravity vector that overrides the global gravity, instead acting in the positive Y direction.
 
-To correctly apply the new gravity vector, the narrow phase collision detection routine in Godot must be modified to account for soft body / area intersection and to send notifications when this occurs. Then the motion prediction for soft bodies must be modified to account for all areas affecting it. 
+To correctly apply the new gravity vector, the narrow phase collision detection routine in Godot must be modified to account for soft body / area intersection and to send notifications when this occurs. Then the motion prediction for soft bodies must be modified to account for all areas affecting it.
 
 I have completed these tasks, and the result is a cloth that falls upward despite a downward global gravity:
 

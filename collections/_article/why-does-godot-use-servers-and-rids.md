@@ -21,9 +21,9 @@ This most likely seems really odd to you if you are a programmer, but there is q
 
 ### Multi-threading
 
-Previous engines we have developed (we as in Juan Linietsky and Ariel Manzur) did not really use this architecture and everything was provided via simple classes with inheritance and polymorphism. 
+Previous engines we have developed (we as in Juan Linietsky and Ariel Manzur) did not really use this architecture and everything was provided via simple classes with inheritance and polymorphism.
 
-This was fine, as our engine ran in a single thread (which was common, as most CPU architectures were single-core back then). As multiple core CPUs made it to the mass-market, however, it became obvious that Godot had to go multi-threaded. 
+This was fine, as our engine ran in a single thread (which was common, as most CPU architectures were single-core back then). As multiple core CPUs made it to the mass-market, however, it became obvious that Godot had to go multi-threaded.
 
 Before going into optimizing for multiple threads, let's first take a look at the typical order of execution of the main blocks of a game engine.
 
@@ -36,13 +36,13 @@ Research on game engine optimization for multiple threads at the time resulted i
 The idea behind this technique is not to alter the sequence order, but to make every stage as parallel as possible.
 How is this achieved? Rendering, while mostly a sequential process (GPUs are sequential), can be parallelized in a few places, like frustum culling and (in modern APIs such as Vulkan, Metal or DirectX12) creation of command lists.
 
-For Physics, it's a bit more difficult. Physics engines divide their work per frame in the following stages: 
+For Physics, it's a bit more difficult. Physics engines divide their work per frame in the following stages:
 
 * Force Integration: Compute gravity and external forces and apply them to velocity
 * Broad Phase: Finding pairs of close objects
 * Near Phase: Generating collision information of overlapping objects
 * Solver: Iterative or LCP approximation to collision resolution
-* Velocity Integration: Move the objects 
+* Velocity Integration: Move the objects
 
 Of those, mainly the near phase and the solver steps can be highly parallelized. Physics engines do this via the creation of *islands*, which are standalone group of objects that don't interact with other groups. This allows to process them in parallel.
 
@@ -82,7 +82,7 @@ This results in multi-threading, in a way that is transparent to the programmer:
 ![](/storage/app/media/devlog/image/dl_image6.png)
 
 Basically, the concept of "frame time" (doing everything in less that 1/60 seconds), no longer exists with this approach. Logic, Physics and Rendering have the whole frame time for themselves, and they don't run in sync (i.e. Rendering will process the frame "later", and both Logic and Physics will process their frame at the same time and only spend a bit syncing).
- 
+
 This sounds great in theory, but in implementation it's chaos. It means both Physics and Rendering must receive commands, and that commands need to be buffered somehow. With traditional OOP and C++ this is a recipe for spaghetti code. Passing around objects that may not execute functions when you call them is weird.
 
 

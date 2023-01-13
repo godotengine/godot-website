@@ -11,7 +11,7 @@ date: 2017-12-14 00:00:00
 
 A considerable number of users requested a more efficient way to have GI (Global Illumination) in their projects. Godot 3.0 currenty offers the GIProbe node, which provides a real-time approximation to GI. This generally works and looks pretty, but it's quite shader intensive, which makes it not work on mobile or low end GPUs. The newly added VR support also suffers with GIProbe, as it has to render in very high resolutions.
 
-The solution to these problems is to add support for a more traditional lightmapper (pre-baked light texture). Light is precomputed offline and rendered to a texture, which is then used by the geometry. 
+The solution to these problems is to add support for a more traditional lightmapper (pre-baked light texture). Light is precomputed offline and rendered to a texture, which is then used by the geometry.
 
 I thought it may not be too difficult to add one, so I started work on Sunday and completed it on Wednesday.
 
@@ -48,7 +48,7 @@ Also, if you are reusing a mesh in the scene, keep in mind that UVs will be gene
 
 #### Setting up the BakedLight node
 
-Once the scene is imported, make sure to create a BakedLightmap node: 
+Once the scene is imported, make sure to create a BakedLightmap node:
 ![](/storage/app/media/lightmap/lm6.png)
 
 Lightmap needs an approximate volume of the area affected, because it uses it to lit dynamic objects inside (more on that later). Just cover the scene with the volume, as you do with GIProbe:
@@ -67,7 +67,7 @@ Lightmap generation has a few options, which will be described below:
 
 ![](/storage/app/media/lightmap/lm9.png)
 
-* **Bake Subdiv**: Godot lightmapper uses a grid to transfer light information around. The default value is fine and should work for most cases. Increase it in case you want better lighting on very small details or your scene is very large. 
+* **Bake Subdiv**: Godot lightmapper uses a grid to transfer light information around. The default value is fine and should work for most cases. Increase it in case you want better lighting on very small details or your scene is very large.
 * **Capture Subdiv**: This is the grid used for real-time capture information (lighting dynamic objects). Default value is generally OK, it's usually smaller than Bake Subdiv and can't be larger than it.
 * **Bake Quality**: Three bake quality modes are provided, Low, Medium and High. Obviously each takes less and more time.
 * **Bake Mode**: The baker can use two different techniques: *Voxel Cone Tracing* (fast but approximate), or *RayTracing* (slow, but accurate).

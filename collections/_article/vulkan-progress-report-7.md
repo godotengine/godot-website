@@ -61,7 +61,7 @@ As you can see in the image below, shadows "just work", with no visible gaps or 
 
 ## Soft Shadows
 
-Godot 4.0 will support soft shadows in all its light types. For Omni and Spot shadows, a "size" parameter was added to the settings. 
+Godot 4.0 will support soft shadows in all its light types. For Omni and Spot shadows, a "size" parameter was added to the settings.
 
 ![softshadow1.png](/storage/app/uploads/public/5ea/ca2/9c9/5eaca29c9c577395303319.png)
 

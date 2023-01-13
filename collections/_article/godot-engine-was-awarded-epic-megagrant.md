@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5e3/86b/c31/5e386bc31db0b649571269.png
 date: 2020-02-03 00:00:00
 ---
 
-With great excitement, today we want to officially announce the great honor of having been awarded an Epic MegaGrant! 
+With great excitement, today we want to officially announce the great honor of having been awarded an Epic MegaGrant!
 
 This is a huge honor for us and greatly helps to keep on improving Godot development at an even greater pace. We want to personally thank Tim Sweeney for the encouragement and support, and for sharing the belief that open source software makes the world a better place.
 

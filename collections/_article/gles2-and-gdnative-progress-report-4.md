@@ -54,18 +54,18 @@ Old way:
 ```cpp
 class MovingSprite : public GodotScript<Sprite> {
     GODOT_CLASS(MovingSprite)
-    
+
     Vector2 direction = Vector2(1.0, 0.0);
     float speed = 50.0; // pixels per second
 public:
-    
+
     void _init() {}
-    
+
     void _process(float delta) {
         Vector2 motion = direction * speed * delta;
         owner->set_position(owner->get_position() + motion);
     }
-    
+
     static void _register_methods() {
         register_method("_process", &MovingSprite::_process);
     }
@@ -76,22 +76,22 @@ New way:
 ```cpp
 class MovingSprite : public Sprite {
     GODOT_CLASS(MovingSprite, Sprite)
-    
+
     Vector2 direction = Vector2(1.0, 0.0);
     float speed = 50.0; // pixels per second
 public:
 
     void _init() {}
-    
+
     void _process(float delta) {
         Vector2 motion = direction * speed * delta;
         set_position(get_position() + motion);
     }
-    
+
     static void _register_methods() {
         register_method("_process", &MovingSprite::_process);
     }
-    
+
 };
 ```
 
@@ -144,7 +144,7 @@ In the GLES3 renderer, material parameters get assigned an offset in a UBO, then
 
 In GLES2 however, UBOs do not exist. Every *uniform* (a "global" value accessible in all shaders) has to be set individually for each shader.
 
-This is where many iteration and refactoring have been focussed on. Do those values get set when the material changes? No, drawing might happen later in time and the uniform value lost. Do the values get saved in the shader and the shader sets them up when needed? This is rather complex when user-defined shaders come into play, it's possible, but it doesn't feel right and caused many bugs. 
+This is where many iteration and refactoring have been focussed on. Do those values get set when the material changes? No, drawing might happen later in time and the uniform value lost. Do the values get saved in the shader and the shader sets them up when needed? This is rather complex when user-defined shaders come into play, it's possible, but it doesn't feel right and caused many bugs.
 
 After all those iterations, I settled for an approach where the shader gets a reference to the material that will be used, and then, only when the shader will be used for drawing, the shader will set all uniform values accordingly.
 
@@ -179,7 +179,7 @@ The RenderList gives much flexibility while also making simple optimizations ver
 
 Another under-the-hood development was the initial work on Skeleton resources. At that point, a skeleton could not deform a mesh yet and wasn't very useful, but the basic storage for [bone transforms](https://en.wikipedia.org/wiki/Skeletal_animation) was already in place. Depending on the hardware that Godot is running on, the bone information might be stored in different ways, so the skeleton resource might be handled in different ways.
 
-Because the GLES2 renderer will run on a lot of low-end hardware, I chose a more software-oriented than hardware/GPU-oriented approach to store the bone transforms, but more on that in the next 
+Because the GLES2 renderer will run on a lot of low-end hardware, I chose a more software-oriented than hardware/GPU-oriented approach to store the bone transforms, but more on that in the next
 
 ## Future
 
