@@ -3,7 +3,7 @@ title: "Godot for AA/AAA game development - What's missing?"
 excerpt: "Godot 4.0 is coming out soon. It includes major improvements all across the board in both features, performance and usability. Still, one of the biggest questions the community has is: How does it compare with mainstream commercial offerings?"
 categories: ["news"]
 author: Juan Linietsky
-image: /storage/blog/covers/whats-missing-in-godot-for-aaa.png
+image: /storage/blog/covers/whats-missing-in-godot-for-aaa.jpg
 date: 2023-01-16 00:00:00
 ---
 
