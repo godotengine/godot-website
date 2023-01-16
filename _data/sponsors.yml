@@ -5,6 +5,9 @@ platinum:
   - name: "Spiffcode"
     url: "http://spiffcode.com/"
     image: "/assets/home/sponsors/spiffcode.png"
+  - name: "Heroic Labs"
+    url: "https://heroiclabs.com/"
+    image: "/assets/home/sponsors/heroiclabs.png"
 gold:
   - name: "Affray Interactive"
     url: "https://scp.games/pandemic/"
