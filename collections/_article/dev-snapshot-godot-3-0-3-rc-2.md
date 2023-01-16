@@ -2,7 +2,7 @@
 title: "Dev snapshot: Godot 3.0.3 RC 2"
 excerpt: "This is the second release candidate for what will become Godot 3.0.3. In this release we overhauled the new buildsystem (again) and fixed quite a few bugs. Please go forth and test!"
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5af/9dd/ac8/5af9ddac832c9548534486.png
 date: 2018-05-14 19:03:45
 ---

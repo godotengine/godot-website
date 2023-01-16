@@ -23,7 +23,7 @@ Feature wise it is a great replacement for both the OpenVR and Oculus Desktop pl
 
 Windows Mixed Reality headsets are currently only supported through SteamVR as WMR natively only supports DirectX game engines.
 
-We're looking at Android and native Oculus Quest support for the near future. 
+We're looking at Android and native Oculus Quest support for the near future.
 
 The source for this plugin can be found [here](https://github.com/GodotVR/godot_openxr).
 Further documentation on the plugin can be found [here](https://github.com/GodotVR/godot_openxr/wiki).
@@ -32,7 +32,7 @@ Further documentation on the plugin can be found [here](https://github.com/Godot
 
 One of the bigger changes we did to enabled XR support in Godot 4 is implementing multiview support into the rendering engine.
 
-Multiview allows rendering of the images for both eyes simultaniously removing a lot of the overhead compared to rendering the two images in sequence as Godot 3 did. 
+Multiview allows rendering of the images for both eyes simultaniously removing a lot of the overhead compared to rendering the two images in sequence as Godot 3 did.
 
 The implementation within the mobile renderer was merged into master while support for the clustered rendering is functional but has a number of loose ends to tie up and can currently be evaluated through this [draft PR](https://github.com/godotengine/godot/pull/49092).
 
@@ -49,7 +49,7 @@ The disadvantage becomes apparent when multiple passes are needed as we need to 
 At the start of the next pass we again process everything one tile at a time but now we need to read the data from the render buffer into the tile before we can render further geometry.
 We introduce not only a fair bit of overhead writing to and then reading from the render buffer, we're also introducing bottlenecks in waiting for one pass to finish before continuing to the next even when things can be handled in parallel.
 
-Subpasses to the rescue! 
+Subpasses to the rescue!
 
 Subpasses allow us to provide the GPU with information about how each pass relates to another.
 It now knows if subsequent passes write to the same buffer and continue working on the same tile.

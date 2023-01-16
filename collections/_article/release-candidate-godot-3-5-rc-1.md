@@ -9,7 +9,7 @@ date: 2022-05-18 15:21:50
 
 The upcoming **Godot 3.5** is now considered feature complete, and has received a lot of bugfixes and improvements over the past weeks thanks to all the testers and developers who reported and fixed issues. It's now time to move to the [**Release Candidate**](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) stage so that we can release 3.5-stable for all users.
 
-At this stage we need people to test this release (and potential follow-up RCs) on as many codebases as possible, to make sure that we catch non-obvious regressions that might have gone unnoticed until now. If you run into any issue, please make sure to [report it on GitHub](https://github.com/godotengine/godot/issues) so that we can know about it and fix it! 
+At this stage we need people to test this release (and potential follow-up RCs) on as many codebases as possible, to make sure that we catch non-obvious regressions that might have gone unnoticed until now. If you run into any issue, please make sure to [report it on GitHub](https://github.com/godotengine/godot/issues) so that we can know about it and fix it!
 
 [Jump to the **Downloads** section.](#downloads)
 

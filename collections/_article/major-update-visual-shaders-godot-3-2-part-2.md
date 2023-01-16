@@ -141,7 +141,7 @@ This node is perfectly designed to be used with the `Switch` node, since it acce
 
 ![Compare node](/storage/app/media/vshader2019/compare4.png)
 
-Be careful not to use it too frequently since it may significantly decrease the shader performance. 
+Be careful not to use it too frequently since it may significantly decrease the shader performance.
 
 ### Global expressions
 
@@ -160,7 +160,7 @@ This `Is` node is used to check whether the scalar variable is `INFINITY` or `Na
 ### Switch for scalars
 
 Boolean switch to choose from one of the scalars depending on the boolean value.
-Be careful not to use it too frequently since it may significantly decrease the shader performance. 
+Be careful not to use it too frequently since it may significantly decrease the shader performance.
 
 ![Scalar Switch](/storage/app/media/vshader2019/scalar_switch.png)
 

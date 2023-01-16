@@ -4,7 +4,7 @@ excerpt: "In parallel to our work on the upcoming feature releases Godot 3.5 and
 categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/621/e42/95a/621e4295a0f3f285158210.jpg
-image_caption_title: Fishards 
+image_caption_title: Fishards
 image_caption_description: A game by Rivernotch Game Studio
 date: 2022-02-25 11:00:00
 ---

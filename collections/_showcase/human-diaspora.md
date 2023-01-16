@@ -1,6 +1,5 @@
 ---
 description: "Human Diaspora showcase page"
-layout: "showcase-item"
 date: 2020-09-01 00:00:00 +0000
 
 title: Human Diaspora
@@ -8,7 +7,7 @@ author: Leocesar3D
 website: https://twitter.com/Leocesar3D
 release_date: September 2020 (Early Access)
 
-image: "/assets/showcase/human-diaspora.jpg"
+image: "/assets/showcase/human-diaspora-header.jpg"
 gallery: [
 	"/assets/showcase/human-diaspora.jpg"
 ]

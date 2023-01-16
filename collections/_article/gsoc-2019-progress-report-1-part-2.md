@@ -42,7 +42,7 @@ Here is the list of projects and students with links to the relevant sections.
 
 Light maps are a really easy way to improve performance on statically lit scenes. Instead of computing the amount of light that reaches a certain surface every frame for every light source, we precompute all this information and store it in a single texture. This means having lots of lights no longer creates a performance hit on the rendering pipeline, since all we need to do is sample a single texture and we get the amount of light coming from all light sources.
 
-Godot's 3.1 light mapper is based on the same approach used in [global illumination](https://docs.godotengine.org/en/3.1/tutorials/3d/gi_probes.html). That means the whole scene is subdivided in a regular grid of voxels and, for each of these voxels, we compute the amount of light reaching it. This allows us to have some great results for computing real time illumination, but the discretization of the scene has various downsides (e.g. some walls may be thinner than the size of a voxel, therefore they can leak light through them). 
+Godot's 3.1 light mapper is based on the same approach used in [global illumination](https://docs.godotengine.org/en/3.1/tutorials/3d/gi_probes.html). That means the whole scene is subdivided in a regular grid of voxels and, for each of these voxels, we compute the amount of light reaching it. This allows us to have some great results for computing real time illumination, but the discretization of the scene has various downsides (e.g. some walls may be thinner than the size of a voxel, therefore they can leak light through them).
 
 The main goal of my GSoC project is to completely rewrite the light mapper in Godot and, instead of a voxel approach, use ray tracing to compute the scene lighting.  This will hopefully give better looking light maps and will reduce the amount of artifacts such as self occlusions or light leaks.
 
@@ -90,7 +90,7 @@ Within the time frame of this GSoC, these are the static checks that can be expe
 - Check to ensure that a script does not refer to a non-existent method/property in the node (this can be a problem when there is a change type operation).
 - Check to ensure that the arity and type of arguments declared in a function connected to a signal are correct.
 
-However, this is not an exhaustive list and hopefully many more can be completed by the time GSoC ends. 
+However, this is not an exhaustive list and hopefully many more can be completed by the time GSoC ends.
 
 ### Current state
 
@@ -154,7 +154,7 @@ We started off by collecting datasets for testing while reduz worked on the UI o
 
 Just before the first evaluation [*ed.* after one month of coding], I successfully added KDTree and KNN search to the `AnimationNodeMotionMatch`.
 
-During the evaluation period, I tried making a simple future trajectory prediction models. 
+During the evaluation period, I tried making a simple future trajectory prediction models.
 
 After that, I started implementing *Pose and Trajectory Matching* (i.e. calculating the cost function using pose and root trajectory comparisons) without including KDTrees yet (just as a brute force attempt). I'm still working on fixing the crashes in this matching.
 
@@ -172,7 +172,7 @@ After that, I started implementing *Pose and Trajectory Matching* (i.e. calculat
 * Adding Velocity Matching too so that the matching gets more natural.
 * Taking past data into account during matching, so that we won't ignore weight-shifts and get a natural looking animation.
 * Replacing the brute force approach with KNN search using KDTrees.
-* Adding sliders for parameters such as Pose and Trajectory, etc. 
+* Adding sliders for parameters such as Pose and Trajectory, etc.
 * Many more additions needed to the UI.
 
 -----
@@ -182,7 +182,7 @@ After that, I started implementing *Pose and Trajectory Matching* (i.e. calculat
 
 - **Project:** Asynchronous Cached File Access
 - **Student:** Raghav Shankar ([WarpspeedSCP](https://gist.github.com/WarpspeedSCP))
-- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and Hein-Pieter van Braam ([hpvb](https://github.com/hpvb))
+- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and HP van Braam ([hpvb](https://github.com/hpvb))
 - **Repository:** https://github.com/WarpspeedSCP/godot/tree/wip-patch
 
 ### About this project

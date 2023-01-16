@@ -13,7 +13,7 @@ date: 2016-11-01 00:00:00
 
 As many of you have probably heard, a new rendering backend is being worked on for Godot. One of the most common comments from potential users evaluating Godot is that, for 2D, Godot is awesome but for 3D it's pretty far from the mainstream alternatives.
 
-For Godot 3.0 (our upcoming release) we are working hard to change this. 
+For Godot 3.0 (our upcoming release) we are working hard to change this.
 
 Our goal is to have a modern, clustered renderer that supports everything mainstream engines support, including PBR, global illumination and flexible shader editing. As always, honoring the Godot tradition, this renderer will be super easy to use and run on as many platforms as possible.
 
@@ -119,7 +119,7 @@ In the ES 2.0 backend, they were both transformed using the CPU, resulting in a 
 
 #### Instancing (MultiMesh) in OpenGL ES 2.0 vs 3.0
 
-OpenGL ES 3.0 provides hardware instancing (`glDrawArraysInstanced`), which means that MultiMesh can be drawn using a single draw call in 3.0, vs multiple calls in 2.0. 
+OpenGL ES 3.0 provides hardware instancing (`glDrawArraysInstanced`), which means that MultiMesh can be drawn using a single draw call in 3.0, vs multiple calls in 2.0.
 
 As a result, some stuff such as foliage (grass), gridmaps, etc. can get a huge performance boost.
 
@@ -193,13 +193,13 @@ Texture and color information edited by users exists only in the SRGB colorspace
 
 To make lighting more realistic, all computations must happen in a linear color space, then converted to Gamma at the end via tonemapping.
 
-Godot 2.x already supported linear space rendering, but this was optional. In 3.0, as we are aiming to a more realistic and high quality backend, the only supported rendering mode is linear. 
+Godot 2.x already supported linear space rendering, but this was optional. In 3.0, as we are aiming to a more realistic and high quality backend, the only supported rendering mode is linear.
 
 ### Investigate Physically Based Rendering (PBR), using GGX and alternatives
 
-Thorough investigation was carried out on more modern rendering techniques for Godot. 
+Thorough investigation was carried out on more modern rendering techniques for Godot.
 
-As a result, we decided to use the [Disney PBR](https://disney-animation.s3.amazonaws.com/library/s2012_pbs_disney_brdf_notes_v2.pdf) specification. 
+As a result, we decided to use the [Disney PBR](https://disney-animation.s3.amazonaws.com/library/s2012_pbs_disney_brdf_notes_v2.pdf) specification.
 
 Godot will use a similar parameter set for materials and shaders.
 
@@ -225,7 +225,7 @@ The minimum required parameters for PBR are implemented and working:
 * Specular
 * Roughness
 * Environment (skybox)
- 
+
 ### Convert gizmos to use the new FixedMaterial
 
 All gizmos were converted to use the new FixedSceneMaterial, as mentioned before.

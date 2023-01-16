@@ -1,6 +1,6 @@
 ---
 title: "Godot Engine to go public in 2019"
-excerpt: "APRIL FOOLS' DAY JOKE! -- We hear you and we understand your concerns. You feel like Godot, in the end, is not \"public\" enough. 
+excerpt: "APRIL FOOLS' DAY JOKE! -- We hear you and we understand your concerns. You feel like Godot, in the end, is not \"public\" enough.
 Worry no longer! Today we announce that Godot will go public this year."
 categories: ["news"]
 author: Juan Linietsky
@@ -12,7 +12,7 @@ date: 2019-04-01 00:00:00
 
 -----
 
-We hear you and we understand your concerns. You feel like Godot, in the end, is not "public" enough. Even though there are over [800 contributors](https://github.com/godotengine/godot/graphs/contributors) pushing code (surpassing any other engine, open or closed, on GitHub), Godot still doesn't feel *corporate* enough. You miss the excitement of trading company shares, that can only happen when a company goes public. 
+We hear you and we understand your concerns. You feel like Godot, in the end, is not "public" enough. Even though there are over [800 contributors](https://github.com/godotengine/godot/graphs/contributors) pushing code (surpassing any other engine, open or closed, on GitHub), Godot still doesn't feel *corporate* enough. You miss the excitement of trading company shares, that can only happen when a company goes public.
 
 Worry no longer! Today we announce that Godot will go public this year. Starting today, we are launching an IPO!
 

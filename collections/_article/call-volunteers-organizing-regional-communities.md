@@ -14,7 +14,7 @@ Each of them usually has their own model and activities, but often suffer of vis
 
 ## Connecting the communities
 
-After much discussion, we decided it could be useful for them if we could keep track of what they do and publicize their existence and activities in our official channels. This way, nearby users can find about those groups and engage in their activities, or use other groups as models to create their own if none exists. 
+After much discussion, we decided it could be useful for them if we could keep track of what they do and publicize their existence and activities in our official channels. This way, nearby users can find about those groups and engage in their activities, or use other groups as models to create their own if none exists.
 
 Additionally, having a better idea of where Godot communities are can make sure the project can help them in a more "official" way, from encouraging and helping them to participate in local gamedev events, to creating materials they can use for workshops and talks.
 
@@ -37,7 +37,7 @@ Our initial idea for tasks in the Regional Communities team would be:
 * Work on a local map of communities and representatives, similar [to this one](https://www.gamedevmap.com/), that we can put in our [community page](https://godotengine.org/community).
 * Make the [user groups](https://godotengine.org/community/user-groups/) page a more fancy portal, and help fill missing content.
 * Investigate video game development events around the world, large or small. Some may require asking people from different regions. Contact the event organizers to propose them Godot talks, then see who from our community would be willing to speak at each event.
-* Help local communities organize Godot events, game jams, workshops, etc. 
+* Help local communities organize Godot events, game jams, workshops, etc.
 * Help communities share materials they created for use by other communities.
 
 ## Volunteer profile

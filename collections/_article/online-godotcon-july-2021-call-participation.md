@@ -17,7 +17,7 @@ We had plenty of great talk proposals that we couldn't fit in this first online 
 
 *Online GodotCon July 2021* will again consist of pre-recorded talks with optional Q&A for the speakers.
 
-As usual for Godot events, the conference will be **free of charge**, and the video streams will be available to replay after the event. 
+As usual for Godot events, the conference will be **free of charge**, and the video streams will be available to replay after the event.
 
 ## Timetable
 
@@ -34,9 +34,9 @@ Last GodotCon was on an extremely tight schedule, both for us organizers, and fo
 **The call for participation starts on the 2nd of April 2021, and finishes on the 25st of April 2021.**
 
 We encourage anyone interested to send us a proposal for a talk, workshop or any other format of knowledge sharing that you have in mind.
-We are looking forward to see any topic that relates to Godot in some form. You could showcase your project, talk about some nifty tools that you have developed, detail your process for game development with Godot and so on. 
+We are looking forward to see any topic that relates to Godot in some form. You could showcase your project, talk about some nifty tools that you have developed, detail your process for game development with Godot and so on.
 
-We hope to receive again a variety of different topics, from community topics, to art topics, to programming, etc. 
+We hope to receive again a variety of different topics, from community topics, to art topics, to programming, etc.
 
 When we opened the previous call for participation, we received an astounding amount of very good proposals, most of which we couldn't fit in the 8 hours schedule that we had planned. **It is absolutely fine, and even encouraged, to re-submit your proposal for this GodotCon.**
 

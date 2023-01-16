@@ -9,7 +9,7 @@ date: 2018-05-25 00:00:00
 
 After games being published using Godot on Google Play for almost 8 years with no problems, Google decided they don't like the format we use for exporting any more and is suspending many published games.
 
-The problem comes from Godot using placeholder permissions in the APK, which are replaced by real permissions on export. Google never really had a problem with this approach, and I made sure to talk to Google representatives years ago to make sure this was not a problem. 
+The problem comes from Godot using placeholder permissions in the APK, which are replaced by real permissions on export. Google never really had a problem with this approach, and I made sure to talk to Google representatives years ago to make sure this was not a problem.
 
 At some point, it seems they changed their mind and started removing already published games. We got in contact with them to see if it can be solved from their end, but in the meantime we are publishing this guide that explains how to solve the problem manually.
 
@@ -243,7 +243,7 @@ If you don't add any permission that justifies it, you don't need a privacy poli
 
 ## Future
 
-[Hein-Pieter/TMM](https://github.com/hpvb) is working on a fix to to be integrated in Godot 2.1.5 and Godot 3.0.3 so that you can continue setting the permissions you want without having those leftover placeholders.
+[HP/TMM](https://github.com/hpvb) is working on a fix to to be integrated in Godot 2.1.5 and Godot 3.0.3 so that you can continue setting the permissions you want without having those leftover placeholders.
 
 Godot 3.1 will use a different export approach where you will have more control over the manifest file.
 

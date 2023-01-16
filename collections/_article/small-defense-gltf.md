@@ -9,7 +9,7 @@ date: 2017-08-24 00:00:00
 
 ## What is this and why?
 
-A few weeks ago, I wrote [an article](https://godotengine.org/article/we-should-all-use-gltf-20-export-3d-assets-game-engines) about why I believe [glTF 2.0](https://www.khronos.org/gltf) to be a great format and that we should encourage its widespread adoption. I also compared it to other formats, including Eric Lengyel's OpenGEX. 
+A few weeks ago, I wrote [an article](https://godotengine.org/article/we-should-all-use-gltf-20-export-3d-assets-game-engines) about why I believe [glTF 2.0](https://www.khronos.org/gltf) to be a great format and that we should encourage its widespread adoption. I also compared it to other formats, including Eric Lengyel's OpenGEX.
 
 As I mentioned on the original article, I think OpenGEX is a very good format. My main criticism to the format was that development is not lead in what today would be considered an open fashion. Eric alone maintains control of it. In contrast, glTF is a true standard developed by a non profit and an [open development process](https://github.com/KhronosGroup/glTF).
 

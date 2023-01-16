@@ -4,7 +4,7 @@ excerpt: "Maintenance release to provide a handful of bug fixes to users of the 
 categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/62e/8ee/3bb/62e8ee3bbe08d090000998.jpg
-image_caption_title: BLASTRONAUT 
+image_caption_title: BLASTRONAUT
 image_caption_description: A game by Perfoon
 date: 2022-08-02 09:22:27
 ---

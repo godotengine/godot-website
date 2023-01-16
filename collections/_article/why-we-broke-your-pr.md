@@ -2,7 +2,7 @@
 title: "Why we broke your PR"
 excerpt: "As some of you probably noticed a lot of PRs on the backlog now need a rebase because of PR 20137"
 categories: ["progress-report"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b5/90c/f2d/5b590cf2dac47927219311.jpg
 date: 2018-07-25 23:30:00
 ---
@@ -19,7 +19,7 @@ for (int i = 0; i < MAX_INT; ++i) {
 Vector<int> vec2 = vec1;
 ```
 
-Is basically free, vec1 and vec2 will share memory and this basically takes no time. Also please don't write this code :). 
+Is basically free, vec1 and vec2 will share memory and this basically takes no time. Also please don't write this code :).
 
 Of course someone may take a a copy of a vector and modify it, or the original owner of the vector may want to write to it. At this point CoW comes into play. As soon as a write happens to either vec1 or vec2 we copy the contents and make the vectors unique.
 

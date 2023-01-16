@@ -117,7 +117,7 @@ array = {1, 2, 3};
 
 #### Array passing to functions
 
-You can finally pass an array of any supported type (including structs) to functions: 
+You can finally pass an array of any supported type (including structs) to functions:
 
 ```
 shader_type spatial;

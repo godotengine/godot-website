@@ -21,7 +21,7 @@ Here are the 6 projects/students with links to the relevant sections in this pos
 - [Version Control Systems improvements](#vcs-improvements) by Meru Patel ([janglee123](https://github.com/janglee123))
 - [VisualScript improvements](#visualscript-improvements) by Swarnim Arun ([swarnimarun](https://github.com/swarnimarun))
 
-They've all been doing outstanding work so far, and we're looking forward to integrating all those changes in the engine (some parts have already been merged in `master` branch for Godot 4.0). 
+They've all been doing outstanding work so far, and we're looking forward to integrating all those changes in the engine (some parts have already been merged in `master` branch for Godot 4.0).
 
 -----
 

@@ -55,7 +55,7 @@ A detailed list of all the work done in this GSoC project.
 
 - The graph for the **Visual Script has been unified**, that is, all the functions are shown in the graph simultaneously. As of now, there's a default function behind the scenes that makes this possible. It's supposed to be changed to refactoring the ownership model of the Visual Script graph by making the VisualScript nodes held by a list inside the graph and not inside the functions.
 - The VisualScript nodes figure out which function they belong to from the connections that they have.
-- **Port connection swapping** was also added as a minor UX improvement. Basically, the nodes are aware of whether the changed port already had a connection or not; if it does then the connections are swapped on reconnection, otherwise it's ignored. 
+- **Port connection swapping** was also added as a minor UX improvement. Basically, the nodes are aware of whether the changed port already had a connection or not; if it does then the connections are swapped on reconnection, otherwise it's ignored.
 - There's also **auto constructor addition** to the graph in case there's a need for type conversion, completely incompatible type ports don't connect which makes committing silly mistakes much more difficult but the `Any` type can still connect to all the ports.
 - Then there are **in-graph editable nodes**, which provide a simple yet powerful UX improvement to the Visual Script. These nodes need to inherit from the `VisualScriptLists` virtual class which has certain conditions for itself hardcoded in the editor that provide the Node with editable input and output value ports.
 - A **right-click "popup" search menu** was also added, and the sidebar was mostly moved to the top providing more room for the member list and the graph as well.
@@ -139,7 +139,7 @@ But things can always be better ;)
 
 To be honest things went a lot better than I had expected, other than a few minor setbacks and changes in the plan most of the work has been completed and we're getting close to having the PR for the graph unification merged. I know there will be bugs but there always are...
 
-I enjoyed every single day I spent working on the project (apart maybe from the mindless debugging :)), and especially following a more thoughtful method of working on project goals.  
+I enjoyed every single day I spent working on the project (apart maybe from the mindless debugging :)), and especially following a more thoughtful method of working on project goals.
 
 #### Is anything else left?
 
@@ -214,36 +214,36 @@ I'm looking forward to contribute and work upon things that I missed post-GSoC a
 
 - **Project:** Asynchronous Cached File Access
 - **Student:** Raghav Shankar ([WarpspeedSCP](https://gist.github.com/WarpspeedSCP))
-- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and Hein-Pieter van Braam ([hpvb](https://github.com/hpvb))
+- **Mentors:** Ariel Manzur ([punto-](https://github.com/punto-)) and HP van Braam ([hpvb](https://github.com/hpvb))
 - **Repository:** https://github.com/WarpspeedSCP/godot-cacheserv
 
 ### Motivation
 
-The goal of my project was to replace the already existing `FileAccessBuffered` class with a more flexible and robust solution for caching IO without relying on the OS, on any platform including desktop and consoles. 
+The goal of my project was to replace the already existing `FileAccessBuffered` class with a more flexible and robust solution for caching IO without relying on the OS, on any platform including desktop and consoles.
 
-The old solution to the problem of cached IO was to use `FileAccessBuffered`. This was a problem because `FileAccessBuffered` only supported reading ahead and did not allow for seeking. 
+The old solution to the problem of cached IO was to use `FileAccessBuffered`. This was a problem because `FileAccessBuffered` only supported reading ahead and did not allow for seeking.
 
 ### Current state
 
 The solution I have developed is to provide a separate "cache server" module to allow for caching within the engine. This module's functionality is focussed around two classes: `FileAccessCached` and `FileCacheManager`. `FileCacheManager` is a custom server class that performs the caching and manages all the cached files. It acts as a middleman between the engine and the OS.
 
-`FileAccessCached` is the interface through which the engine interacts with `FileCacheManager`. It provides an interface similar to the built in `FileAccess` API and supports all operations that can be performed on a normal `FileAccess`. 
+`FileAccessCached` is the interface through which the engine interacts with `FileCacheManager`. It provides an interface similar to the built in `FileAccess` API and supports all operations that can be performed on a normal `FileAccess`.
 
 Though `FileCacheManager` has only one front end, it is possible to use any class that inherits from `FileAccess` as the backing interface. Ideally, the user would want to use an unbuffered interface on the backend (like the `FileAccessUnbufferedUnix` class I've included in the module as an example). It should even be possible to use classes such as `FileAccessNetwork` with this module.
 
-Currently, there is no way to select the backing file interface in `FileCacheManager`, but I will include a way to do that soon. I also need to finish the implementation of `FileAccessWindows`, and there's still at least one bug left to solve. 
+Currently, there is no way to select the backing file interface in `FileCacheManager`, but I will include a way to do that soon. I also need to finish the implementation of `FileAccessWindows`, and there's still at least one bug left to solve.
 
 This project is by no means complete, but it's getting there. I'll continue working on it to get it in a better state.
 
 If you'd like a clearer picture of how the module works, I suggest you look in the [GitHub repository](https://github.com/warpspeedscp/godot-cacheserv).
 
-There's also a [test repository](https://github.com/WarpspeedSCP/godot-cacheserv-test-project) I made to sort of stress-test the module. 
+There's also a [test repository](https://github.com/WarpspeedSCP/godot-cacheserv-test-project) I made to sort of stress-test the module.
 
 *Beware, the code in the repo is not currently in a ready state, and it will spew a ton of log messages at you if you try it out.*
 
 ### A brief history
 
-This project had quite a bumpy beginning. While the design I'd envisioned used a technique known as [paging](https://en.wikipedia.org/wiki/Paging) to provide the caching behaviour, what I started out with was quite off the mark; it was more akin to [memory management](https://en.wikipedia.org/wiki/Memory_management) than paging. Punto caught me out on this when I talked to him about it, and from there, I got started with the module in earnest. 
+This project had quite a bumpy beginning. While the design I'd envisioned used a technique known as [paging](https://en.wikipedia.org/wiki/Paging) to provide the caching behaviour, what I started out with was quite off the mark; it was more akin to [memory management](https://en.wikipedia.org/wiki/Memory_management) than paging. Punto caught me out on this when I talked to him about it, and from there, I got started with the module in earnest.
 
 A similar thing happened later on as well when I tried to make a very convoluted system to handle the problem of keeping files cached even if the backing source was closed.
 
@@ -251,7 +251,7 @@ Throughout June, the basic framework of the module was established. In July, I f
 
 ### Bugs
 
-Speaking of bugs, the one major bug that's blocking me right now has to do with the read operation. 
+Speaking of bugs, the one major bug that's blocking me right now has to do with the read operation.
 
 `FileCacheManager` internally uses a Multiple-Producer Single-Consumer (MPSC) queue to atomically send messages for reads and writes to the IO thread from other threads. In certain cases, successive read operations which are pushed onto the queue seem to overwrite each other.
 
@@ -299,7 +299,7 @@ This wonderful feature needs to be included in Godot!
 
 ### How to use this?
 
-Here is a small tutorial on how to use it... It's still not stable and needs a lot of optimization. 
+Here is a small tutorial on how to use it... It's still not stable and needs a lot of optimization.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TSyEniSzVfo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -318,7 +318,7 @@ Here is a small tutorial on how to use it... It's still not stable and needs a l
 ### How it went!
 
 **Community bonding period**<br>
-I started getting familiar with Godot's API and trying to implement simple projects in it. I also got familiar with my mentor and other developers. 
+I started getting familiar with Godot's API and trying to implement simple projects in it. I also got familiar with my mentor and other developers.
 
 **Coding period #1 (May 27, 2019 - June 24, 2019)**<br>
 We started by collecting datasets for testing while reduz worked on the UI of the editor. By mid-June, reduz made a basic structure where I needed to plugin my functions in. And by the time of the first evaluation, I had a barebones KDTree and KNNSearch up and running!
@@ -328,18 +328,18 @@ I then tried implementing a basic future trajectory prediction function.
 I started building a Simple Pose and Trajectory Matching System which uses a brute force approach and added some UI improvements. Started working on some small crashes and minor details.
 
 **Coding period #3 (July 26, 2019 - August 19, 2019)**<br>
-Started working on exposing needed parameters to the users. 
+Started working on exposing needed parameters to the users.
 Bugs persisted but I worked my best to fix stuff. Tried to replace brute force approach with KDTrees. It worked but was considerably heavy, with a **strong need for optimization**. Started working on fixing parameter issues (*it is not choosing while playing the scene because of these errors)*, which I kept struggling with during the final work submission period.
 
 ### My thoughts about this project
 
 Godot and its people are amazing! I enjoyed working with them a lot! My mentors were especially very helpful. They taught me even the smallest of things, patiently. I'm very thankful for giving me a chance to work on this project.
 
-Coming to the project: Understanding the awesome Godot API was a good experience. Initially, I thought that motion matching could be completed in a considerably short time. But it turned out to be more complicated than I expected. 
+Coming to the project: Understanding the awesome Godot API was a good experience. Initially, I thought that motion matching could be completed in a considerably short time. But it turned out to be more complicated than I expected.
 
 #### Challenges I faced
 
-- Implementing KDTrees and KNN search was itself a challenging task. I tried my best but was unable to optimize it. 
+- Implementing KDTrees and KNN search was itself a challenging task. I tried my best but was unable to optimize it.
 - Choosing a proper prediction function took some thinking. Implementing a simple trajectory and pose choosing system was easier.
 - Filling tracks with incomplete keyframes.
 - Making a way through which the user can set the velocity.
@@ -449,7 +449,7 @@ Thanks to this project and my last year's work I have managed to secure intervie
 - **Project:** Version Control Systems (VCS) editor integration framework and Git plugin
 - **Student:** Twarit Waikar ([IronicallySerious](https://github.com/IronicallySerious))
 - **Mentors:** Gilles Roudiere ([groud](https://github.com/groud)) and Jairo Honorio ([jahd2602](https://github.com/jahd2602))
-- **Repositories:** 
+- **Repositories:**
   * Godot's framework for VCS integration: [GH-31461](https://github.com/godotengine/godot/pull/31461) (merged!)
   * Git API GDNative plugin: https://github.com/godotengine/godot-git-plugin
 
@@ -478,15 +478,15 @@ When the project loads up, you are greeted with the Godot editor that you know a
 
 *If you are not able to see a `GitAPI` option then this means that you don't have the addon binaries present in your project folder.*
 
-3. Open the `Commit` tab that you can see alongside the `Inspector` and `Node` tabs. At first, you will see that every file in the project folder is counted as a new addition to the repository since we have started from a VCS-less project. If you already have Git running on your project then the addon should be able to just use your existing repository. 
+3. Open the `Commit` tab that you can see alongside the `Inspector` and `Node` tabs. At first, you will see that every file in the project folder is counted as a new addition to the repository since we have started from a VCS-less project. If you already have Git running on your project then the addon should be able to just use your existing repository.
 
 ![Staging area in the Commit tab](/storage/app/media/gsoc/2019-3/vcs-003.png)
 
   * The `.gitignore` and `.gitattributes` are Git-specific configuration files and creating them in the project folder is handled by the Git addon, without consult from the Godot editor. You can edit them afterwards for a customized Git experience. If you are using an existing Git repository then the Git addon will use your existing Git configuration files by default.
 
-  * To manually enforce a change in the project files, we have also provided a `Refresh` button that detects changes manually. If your file change is not showing up in the staging area, then consider checking `.gitignore` to see if your file has been ignored by Git in the first place. 
+  * To manually enforce a change in the project files, we have also provided a `Refresh` button that detects changes manually. If your file change is not showing up in the staging area, then consider checking `.gitignore` to see if your file has been ignored by Git in the first place.
 
-4. Stage the files that you would like to commit in the next version by checking the required files and clicking `Stage Selected`. If you are working in a new Git repository then `Stage All` will stage all the files present in the staging area. 
+4. Stage the files that you would like to commit in the next version by checking the required files and clicking `Stage Selected`. If you are working in a new Git repository then `Stage All` will stage all the files present in the staging area.
 
 5. After staging, the staging area will acknowledge the file changes with a green tick.
 
@@ -520,7 +520,7 @@ You would have also noticed the `Version Control` dock at the bottom of the Godo
 
 ![Version Control bottom dock](/storage/app/media/gsoc/2019-3/vcs-007.png)
 
-While staging files to the next version, you can view the file changes in the diff viewer. Just click on the file name in the Staging Area and you will see the diff appear in the bottom Version Control dock. Git doesn't show a diff for new files, thus to test this you will have to commit a file first before making changes to it. 
+While staging files to the next version, you can view the file changes in the diff viewer. Just click on the file name in the Staging Area and you will see the diff appear in the bottom Version Control dock. Git doesn't show a diff for new files, thus to test this you will have to commit a file first before making changes to it.
 
 For example, let's say we committed `new_script.gd` once, and then made some changes to it. After saving the changes, we shall see the following view.
 
@@ -557,7 +557,7 @@ While making medium to large scale games in Godot, many small bugs start to cree
 
 ### Current state
 
-So far, it will still take a bit of work to merge with the main branch, however I will continue working on it to ensure that it will be done as soon as I can. 
+So far, it will still take a bit of work to merge with the main branch, however I will continue working on it to ensure that it will be done as soon as I can.
 
 ### Work done in the GSoC period
 

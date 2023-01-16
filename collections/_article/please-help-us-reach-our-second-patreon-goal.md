@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5a1/5de/ee5/5a15deee52d15217381472.png
 date: 2017-11-22 14:15:00
 ---
 
-*Edit:* When this post was written we were slightly below our second goal of $4,500 - thanks to a soon-to-be-announced Platinum sponsor, we already reached this second goal and are well on our way to the third one! More infos on our plans for this third goal soon. 
+*Edit:* When this post was written we were slightly below our second goal of $4,500 - thanks to a soon-to-be-announced Platinum sponsor, we already reached this second goal and are well on our way to the third one! More infos on our plans for this third goal soon.
 
 ## Godot and Patreon so far
 
@@ -28,7 +28,7 @@ If you help us reach our next Patreon goal (and exceed it, as we need a certain 
 
 As a lot of new additions to Godot are based on her work, we need her fully focused on making it work as good as possible.
 
-But this is not all. karroffel will also have a second area of responsibility. 
+But this is not all. karroffel will also have a second area of responsibility.
 
 
 ## More hands in rendering
@@ -37,13 +37,13 @@ But this is not all. karroffel will also have a second area of responsibility.
 
 While, as mentioned above, we are slowly getting more external developers to help, there is an area where we are having a high amount of difficulty finding contributors. This is *rendering*.
 
-Almost all the rendering work has been done by me. While rendering is only a small part of Godot (no more than 5% of the engine), it's one of the most complex areas. 
+Almost all the rendering work has been done by me. While rendering is only a small part of Godot (no more than 5% of the engine), it's one of the most complex areas.
 
 Render engineers are few and one of the most valued positions in the game industry (and yes, I'm tired of turning down juicy job offers for companies all around the world just because I love working on Godot for all of you :P).
 
 The few experienced developers in these areas are working for big companies and under strict contracts, non competes and NDAs, so it's very difficult for them to lend a hand even if they wanted.
 
-As we failed over time to find this type of contributor, karroffel will work on becoming an additional rendering engineer for the project. I will mentor her as best as I can. Her first task will be to create an OpenGL ES 2.0 renderer for Godot 3.1. 
+As we failed over time to find this type of contributor, karroffel will work on becoming an additional rendering engineer for the project. I will mentor her as best as I can. Her first task will be to create an OpenGL ES 2.0 renderer for Godot 3.1.
 
 This will make Godot work properly again on older hardware and mobile devices (where 2.1 works great, but 3.0 is slow), because the new renderer is too high-end for them.
 

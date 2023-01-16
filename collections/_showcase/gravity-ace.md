@@ -1,14 +1,13 @@
 ---
 description: "Gravity Ace showcase page"
-layout: "showcase-item"
-date: 2020-09-01 00:00:00 +0000
+date: 2020-10-01 00:00:00 +0000
 
 title: Gravity Ace
 author: John Watson
 website: https://gravityace.com/
 release_date: October 2020 (Early Access)
 
-image: "/assets/showcase/gravity-ace.png"
+image: "/assets/showcase/gravity-ace-header.jpg"
 gallery: [
 	"/assets/showcase/gravity-ace.png"
 ]

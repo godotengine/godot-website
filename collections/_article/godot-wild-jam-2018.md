@@ -27,7 +27,7 @@ Kati, the group’s designer, created the jam page, while Krystof designed the j
 
 This was the first time any member of Stern Flowers had hosted a game jam. We shared our jam page in every Godot-related space we could, and this gave us a lot of feedback. We listened and updated. By the end of our first game jam, we had 100+ participants around the world and 20 awesome games to play.
 
-Now, we are about to start our second round of Godot Wild Jam. It has and will continue to be an amazing journey. We are proud to see the Godot Wild Jam community grow and are extremely thankful to our participants. We are also honored by the Godot Developers who have chosen to highlight our work. 
+Now, we are about to start our second round of Godot Wild Jam. It has and will continue to be an amazing journey. We are proud to see the Godot Wild Jam community grow and are extremely thankful to our participants. We are also honored by the Godot Developers who have chosen to highlight our work.
 
 **We will see you at the next [Godot Wild Jam](http://www.godotwild.com). The next theme. The next game.**
 

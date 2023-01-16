@@ -21,7 +21,7 @@ This post starts off with a high-level description of what FogVolumes are and ho
 
 ## Volumetric fog
 
-Volumetric Fog uses a 3-dimensional buffer to calculate and store fog density values allowing fog to interact with light and shadows in a way that the previous non-volumetric fog never could. Volumetric Fog adds a new dimension of realism to 3D scenes. 
+Volumetric Fog uses a 3-dimensional buffer to calculate and store fog density values allowing fog to interact with light and shadows in a way that the previous non-volumetric fog never could. Volumetric Fog adds a new dimension of realism to 3D scenes.
 
 For example, here is a view of Crytek's popular Sponza scene (well, popular among graphics developers).
 
@@ -31,7 +31,7 @@ Turning on Volumetric Fog, we can instantly make it a little more interesting!
 
 ![Sponza scene with volumetric fog](/storage/app/media/4.0/Fog%20Volumes/Screenshot%20from%202022-06-30%2022-59-57.png)
 
-As you can see, Volumetric Fog responds to both light and shadow automatically. It also updates in real time! 
+As you can see, Volumetric Fog responds to both light and shadow automatically. It also updates in real time!
 
 <video controls>
 <source src="/storage/app/media/4.0/Fog%20Volumes/fog4.mp4" type="video/mp4">
@@ -86,7 +86,7 @@ Volumetric Fog uses an optimized algorithm to calculate fog based on the approac
 
 The Wronski approach to volumetric scattering is widely used by many engines, so we won't go into depth into it. The important thing to take away is that we calculate the volumetric lighting in a large 3-dimensional buffer called a "froxel buffer". Froxels are **fr**ustum-aligned v**oxels**. Another way to think about it is grid-aligned and scaled with the camera's frustum. Therefore, cells close to the camera are quite small and the cells grow larger as they get further from the camera due to perspective projection. By default, we use a 64×64×64 froxel buffer, but this can be adjusted in the Project Settings. What makes the approach so fast is that you only calculate lighting for the cells in the froxel buffer and then, when drawing meshes, you only need to look up the fog value from the froxel buffer.
 
-To make rendering FogVolumes efficient, we render them to the froxel buffer used for Volumetric Fog instead of rendering each volume independently. 
+To make rendering FogVolumes efficient, we render them to the froxel buffer used for Volumetric Fog instead of rendering each volume independently.
 
 This allows us to detach light rendering from FogVolume rendering and support huge numbers of lights, independent from the number of FogVolumes.
 

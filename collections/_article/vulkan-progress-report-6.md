@@ -40,7 +40,7 @@ As always, huge thanks to Matias Goldberg for pointing me towards the right dire
 
 ### Rewritten glow / bloom
 
-The glow and bloom code was rewritten. It was working well already in Godot 3.x, so not a lot has changed. 
+The glow and bloom code was rewritten. It was working well already in Godot 3.x, so not a lot has changed.
 
 The main addition is a new *Mix* mode which, while probably not entirely physically correct, makes it easier for artists to use this effect and obtain visually pleasing results.
 
@@ -49,7 +49,7 @@ The main addition is a new *Mix* mode which, while probably not entirely physica
 
 ### New depth of field effect
 
-There is a new depth of field (DOF) effect available. It is considerably faster and better looking than the one present in Godot 3.x. By default, it uses an approximated hexagonal Bokeh shape, with an optional (but more expensive) circular one for higher end devices. 
+There is a new depth of field (DOF) effect available. It is considerably faster and better looking than the one present in Godot 3.x. By default, it uses an approximated hexagonal Bokeh shape, with an optional (but more expensive) circular one for higher end devices.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RIiRHD2Aoz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

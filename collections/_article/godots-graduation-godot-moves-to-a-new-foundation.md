@@ -12,11 +12,11 @@ to share their decision that the Godot project has reached a level of
 success for which it makes sense for Godot to have its own independent
 foundation.*
 
-When Godot was first open-sourced in 2014, it was a very small project mostly developed by Ariel and Juan. Even after open-sourcing, contributions to Godot were almost exclusively made by volunteers. Over time, and to our surprise, many users expressed a wish to contribute financially to the project to speed up development. 
+When Godot was first open-sourced in 2014, it was a very small project mostly developed by Ariel and Juan. Even after open-sourcing, contributions to Godot were almost exclusively made by volunteers. Over time, and to our surprise, many users expressed a wish to contribute financially to the project to speed up development.
 
 Creating a foundation at the time would have been too costly and difficult, so we turned to Ton Roosendaal for advice. Ton introduced us to the Software Freedom Conservancy (SFC), which is a charity located in New York.
 
-The SFC was a fantastic fit for Godot. They work as a non-profit home for several high profile FOSS projects (such as Git, Samba, Wine, etc) and they have tested and proven rules to ensure that donations are only used for the benefit of projects, as well as rules to avoid conflicts of interest. They allow open-source projects to grow and prosper and focus on their project while the SFC handles non-profit governance, accounting, and legal issues (including successfully walking back on Non Disclosure Agreements to ensure that all our work can happen in the open); essentially aggregating the work required for the operation of a not-for-profit organization. 
+The SFC was a fantastic fit for Godot. They work as a non-profit home for several high profile FOSS projects (such as Git, Samba, Wine, etc) and they have tested and proven rules to ensure that donations are only used for the benefit of projects, as well as rules to avoid conflicts of interest. They allow open-source projects to grow and prosper and focus on their project while the SFC handles non-profit governance, accounting, and legal issues (including successfully walking back on Non Disclosure Agreements to ensure that all our work can happen in the open); essentially aggregating the work required for the operation of a not-for-profit organization.
 
 Ariel and Juan signed a fiscal sponsorship agreement with the SFC, allowing them to receive donations on behalf of the project. They also managed the creation and growth of the Godot PLC (Project Leadership Committee), formed by some of the most veteran contributors at the time.
 
@@ -36,7 +36,7 @@ Examples of this are crowdfunding campaigns (like Blender or Krita do), the high
 
 Having our own foundation will also project a stronger image of the Godot Project, which will allow us to have stronger footing when negotiating big donations with donors. The SFC has done a stellar job at negotiating for us so far, showing us how to ensure that the FOSS nature of Godot is never compromised in those agreements. We intend to continue with the same passion and dedication to FOSS that the SFC has shown us in all those years.
 
-Ultimately, we want the Foundation to serve as a home for community initiatives, by allowing it to have its own funding lines (this means, so they can raise funding on their own for a specific goal, but the Foundation receives and uses it according to what was agreed), such as initiatives to promote education, communication and diversity.  
+Ultimately, we want the Foundation to serve as a home for community initiatives, by allowing it to have its own funding lines (this means, so they can raise funding on their own for a specific goal, but the Foundation receives and uses it according to what was agreed), such as initiatives to promote education, communication and diversity.
 
 We plan to regularly post public reports of our financial situation and the usage of funds, similarly to what the Blender Foundation does.
 
@@ -55,7 +55,7 @@ Additionally, the Godot Foundation is adopting most of the policies from the Sof
 
 ## What’s next?
 
-We have just started the process of moving to the Foundation. For now all of Godot’s funding and contractors are still managed by the SFC. The SFC will gradually reduce its work for Godot and the new foundation will slowly ramp up. Stay tuned for announcements in the future as we finalize the Foundation’s organizational structure and officially begin operations. 
+We have just started the process of moving to the Foundation. For now all of Godot’s funding and contractors are still managed by the SFC. The SFC will gradually reduce its work for Godot and the new foundation will slowly ramp up. Stay tuned for announcements in the future as we finalize the Foundation’s organizational structure and officially begin operations.
 
 If you have any questions, please reach out to contact@godotengine.org. We will compile a list of questions and update this page with an FAQ shortly after.
 

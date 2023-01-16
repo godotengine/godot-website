@@ -18,7 +18,7 @@ After the jam, an enthusiastic supporter went out of his way to make a compilati
 
 Stern Flowers can’t thank our participants enough for the support and community we have begun building around the Godot Engine. Not only are we impressed with the polish from these game jam submissions, but we are inspired and excited to learn from other game developers.
 
-Again, be sure to [sign up](https://itch.io/jam/godot-wild-jam-3) for the third Godot Wild Jam! Your submission will be featured in our next compilation video. 
+Again, be sure to [sign up](https://itch.io/jam/godot-wild-jam-3) for the third Godot Wild Jam! Your submission will be featured in our next compilation video.
 
 **You** could be the next Godot Wildling.
 

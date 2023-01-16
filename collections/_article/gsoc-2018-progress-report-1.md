@@ -114,7 +114,7 @@ Here is a link to my branch and the code I’ve written so far: https://github.c
 
 - **Project:** GDNative plugins for video decoding
 - **Student:** [Anish Bhobe](https://github.com/KidRigger)
-- **Mentors:** [Hein-Pieter van Braam](https://github.com/hpvb) and [karroffel](https://github.com/karroffel)
+- **Mentors:** [HP van Braam](https://github.com/hpvb) and [karroffel](https://github.com/karroffel)
 - **Repository:** https://github.com/KidRigger/godot-videodecoder and https://github.com/KidRigger/godot/commits/gsoc-pr
 
 ### What's the project?
@@ -122,7 +122,7 @@ Here is a link to my branch and the code I’ve written so far: https://github.c
 The project is to make an interface that can be exposed to GDNative so that anyone can easily add video decoders to Godot by means of GDNative libraries. (Lets call them plugins, shall we?) Along with this, the plans are to release a small set of plugins that can take care of as many popular codecs as possible.
 We are using [FFmpeg](https://ffmpeg.org/) for the codecs in the plugins.
 
-This project is a part of Google Summer of Code program which makes it a learning opportunity for me (Anish Bhobe) under my mentors Hein-Pieter van Braam and karroffel.
+This project is a part of Google Summer of Code program which makes it a learning opportunity for me (Anish Bhobe) under my mentors HP van Braam and karroffel.
 
 ### Scope of the project
 

@@ -1,11 +1,10 @@
 ---
-layout: "showcase-item"
 description: "Until Then showcase page"
 date: 2021-06-02 00:00:00 +0000
 
 title: "Until Then"
 author: "Polychroma Games"
-image: "/assets/showcase/until-then.png"
+
 gallery: [
 	"/assets/showcase/until-then.png"
 ]

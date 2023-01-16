@@ -11,7 +11,7 @@ Godot has been running on the Oculus Quest since early this year. We've been har
 
 Late last year a new team member joined who has taken Quest support under his wing, so a special shout out to Fredia Huya-Kouadio ([m4gr3d](https://github.com/m4gr3d)), all credit goes to him. Also a quick shout out to Holger Dammertz ([NeoSpark314](https://github.com/NeoSpark314)) who has been doing a lot of testing, building examples and really pushing the limits of what Godot can do on the Quest.
 
-Oculus themselves started showing an interest in the work as well and have been very supportive of our efforts including providing hardware to core team members. 
+Oculus themselves started showing an interest in the work as well and have been very supportive of our efforts including providing hardware to core team members.
 
 The Quest seems uniquely positioned for those who enjoy working with Godot. Due to the stand alone nature of the device and it building ontop of Android you don't need a lot more to get going. Whether you are on Windows, macOS or Linux, if your machine runs Godot you can develop for the Quest.
 
@@ -38,8 +38,8 @@ Copy the addons folder from the Oculus Mobile asset into your Godot project. You
 
 Now we can start building our main scene. To keep things simple we'll stick to the bare minimum.
 
-* We add an `ARVROrigin` node first. 
-* Then we add three child nodes to the origin node, one `ARVRCamera` and two `ARVRControllers`. 
+* We add an `ARVROrigin` node first.
+* Then we add three child nodes to the origin node, one `ARVRCamera` and two `ARVRControllers`.
 * Assign controller id 1 to the first `ARVRController` and rename that to `LeftHand`.
 * Assign controller id 2 to the second `ARVRController` and rename that to `RightHand`.
 * Finally we'll add a `MeshInstance` as a child node to our first `ARVRController` and create a box shape, resize the box so each side is set to 0.1. Now duplicate the `MeshInstance` and move it to the second `ARVRController` node. These will stand in for our controllers, we're keeping things really simple.
@@ -60,7 +60,7 @@ func _ready():
 	var interface = ARVRServer.find_interface("OVRMobile")
 	if interface:
 		ovr_init_config.set_render_target_size_multiplier(1)
-		
+
 		if interface.initialize():
 			get_viewport().arvr = true
 

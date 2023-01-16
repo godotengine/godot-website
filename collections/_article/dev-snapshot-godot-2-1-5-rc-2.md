@@ -11,7 +11,7 @@ Yes, you read correctly: Godot 2.1.5 is still being worked on, four months after
 
 I planned to release it much sooner, but 3.0 and its subsequent maintenance releases happened, and I could only dedicate a few hours every now and then to the old stable branch.
 
-On top of that, I decided to wait for this RC2 to have a proper fix for the [Android placeholder permissions issue](/article/fixing-godot-games-published-google-play) that crept up on Google Play in May and affected many published 2.1 games. Hein-Pieter's [APK fixer tool](/article/godot-apk-fixer-tool) could already be used to fix those games, but I wanted 2.1.5 to export correct APKs out of the box. The proper fix was [merged a few days ago](https://github.com/godotengine/godot/pull/20082), so I'm now considering 2.1.5 ready to go stable.
+On top of that, I decided to wait for this RC2 to have a proper fix for the [Android placeholder permissions issue](/article/fixing-godot-games-published-google-play) that crept up on Google Play in May and affected many published 2.1 games. HP's [APK fixer tool](/article/godot-apk-fixer-tool) could already be used to fix those games, but I wanted 2.1.5 to export correct APKs out of the box. The proper fix was [merged a few days ago](https://github.com/godotengine/godot/pull/20082), so I'm now considering 2.1.5 ready to go stable.
 
 ## Download and test
 

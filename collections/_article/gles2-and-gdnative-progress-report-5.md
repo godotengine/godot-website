@@ -40,7 +40,7 @@ A skeleton in computer graphics is usually a tree-structure of bones, where each
 
 In order to deform the mesh according to the bone transforms, each vertex (generally "point of a triangle") can be influenced by up to 4 bones. The actual deformation usually happens in the *vertex shader*, where the bone transforms get looked up from a *texture*. (In rendering, textures are used for sooo many things. Everything is a texture if you're brave enough)
 
-Because the new OpenGL ES 2.0 backend is supposed to run on old hardware, there are some problems with hardware support for that: not all GPUs allow textures to be used in vertex shaders. 
+Because the new OpenGL ES 2.0 backend is supposed to run on old hardware, there are some problems with hardware support for that: not all GPUs allow textures to be used in vertex shaders.
 
 In Godot 2.1, [this was solved](https://github.com/godotengine/godot/blob/f8c36e226686dd5c8c95bfeca2dd8b6a118b40d2/drivers/gles2/rasterizer_gles2.cpp#L5136) by having copies of the meshdata, then modifying the mesh itself with the bone transform information.
 
@@ -58,7 +58,7 @@ This approach of dealing with skeletons works on all relevant hardware, but it i
 ### stabilize 3D rendering (unshaded workflow)
 
 I spent quite a lot of days fixing up things to make the existing 3D rendering more stable and usable. Those things were usually quite small, but it did add up in the end. Because it's all relatively minor stuff, here's short list of the things I did instead of detailed destriptions:
- 
+
  - make shaders more lightweight by using more preprocessor defines
  - added TIME uniform to all "scriptable" shaders
  - added ALPHA_SCISSOR support for spatial shaders
@@ -96,7 +96,7 @@ One cruicial missing feature in the NativeScript API was the ability to perform 
 
 In the initial [NativeScript 1.1 extension](https://github.com/godotengine/godot/pull/16514) support for script type-tags was added. Those could be used to ensure that a given script is actually from the same library/language and class you expected it to be. The problem is that this functionality stopped there: it can only test for script classes.
 
-The functionality of adding *global type tags* [was added](https://github.com/godotengine/godot/pull/17980) so that *every* object can be asked for a type and can be safely checked and casted. 
+The functionality of adding *global type tags* [was added](https://github.com/godotengine/godot/pull/17980) so that *every* object can be asked for a type and can be safely checked and casted.
 
 The [C++ bindings](https://github.com/GodotNativeTools/godot-cpp/tree/nativescript-1.1) already implement this on the `nativescript-1.1` branch, so following code will now work:
 

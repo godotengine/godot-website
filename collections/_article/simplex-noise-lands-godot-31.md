@@ -9,7 +9,7 @@ date: 2018-09-19 10:00:00
 
 *Make some noise for Godot 3.1!*
 
-Simplex noise generation [has just landed](https://github.com/godotengine/godot/pull/21569) in Godot 3.1! This noise generation algorithm, originally invented by Ken Perlin, is fast and has really good results but it is still encumbered by some patents. That's why Godot will use [OpenSimplex](https://github.com/smcameron/open-simplex-noise-in-c) noise, a public domain and unencumbered alternative. 
+Simplex noise generation [has just landed](https://github.com/godotengine/godot/pull/21569) in Godot 3.1! This noise generation algorithm, originally invented by Ken Perlin, is fast and has really good results but it is still encumbered by some patents. That's why Godot will use [OpenSimplex](https://github.com/smcameron/open-simplex-noise-in-c) noise, a public domain and unencumbered alternative.
 
 ## Applications
 

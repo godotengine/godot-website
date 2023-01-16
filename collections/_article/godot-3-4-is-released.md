@@ -128,7 +128,7 @@ To simplify some of the most common constructs in input handling code for charac
 var walk = WALK_FORCE * (Input.get_action_strength("move_right") - Input.get_action_strength("move_left"))
 
 var velocity = Vector2(
-    Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 
+    Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
     Input.get_action_strength("move_back") - Input.get_action_strength("move_forward")
 ).normalized()
 ```
@@ -162,7 +162,7 @@ Thanks to lawnjelly, Godot 3.4 introduces [portal occlusion culling](https://git
 
 <video autoplay loop>
   <source src="/storage/app/media/3.4/portal-occlusion.mp4" type="video/mp4">
-</video> 
+</video>
 
 In addition the ability to add simple geometrical occluders to scenes is being rolled out, starting with spherical occluders which are available in 3.4.
 

@@ -13,9 +13,9 @@ Last month, I was invited to Tokyo to present Godot at a local game developer's 
 
 The engine isn't popular yet in Japan. This is likely due to the lack of learning resources in Japanese. Also, the community is still small in the country. So to grow a thriving community and to attract translators and tutorial creators, **we first need to raise awareness**: introduce Godot to local developers and try to poke their curiosity.
 
-People need information to know whether or not Godot is a good fit for their projects. Things like Godot's friendly plug-in API, a big time-saver for teams. 
+People need information to know whether or not Godot is a good fit for their projects. Things like Godot's friendly plug-in API, a big time-saver for teams.
 
-With Godot, you can **code tools the same way you code your games**. It's really convenient. Every game developer on the team can contribute to tools that enhance everyone's workflow easily! 
+With Godot, you can **code tools the same way you code your games**. It's really convenient. Every game developer on the team can contribute to tools that enhance everyone's workflow easily!
 
 Also, Godot tries to integrate all tools that you need to make a game almost out-of-the-box, from essentials like the off-line code reference to the new animation state machine in version 3.1. The ability to reload code and scenes while running the game, including on remote devices, is also a unique feature worth knowing about.
 
@@ -25,7 +25,7 @@ Also, Godot tries to integrate all tools that you need to make a game almost out
 
 ...I feel that the Japanese are not ready to switch from Unity to Godot just yet.
 
-**Almost no one had ever heard about the engine besides the event's organizers**. The educational resources are not on par yet and switching engines is an involved job. 
+**Almost no one had ever heard about the engine besides the event's organizers**. The educational resources are not on par yet and switching engines is an involved job.
 
 But at least, this 5 minutes intro seems to have poked the audience's curiosity. Hopefully, a few persons will try it and, over time, more Japanese developers will give a hand with translations and start creating tutorials.
 

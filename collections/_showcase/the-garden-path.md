@@ -1,11 +1,10 @@
 ---
-layout: "showcase-item"
 description: "The Garden Path showcase page"
 date: 2021-06-01 00:00:00 +0000
 
 title: "The Garden Path"
 author: "carrotcake.studio"
-image: "/assets/showcase/the-garden-path.jpg"
+image: "/assets/showcase/the-garden-path-header.jpg"
 gallery: [
 	"/assets/showcase/the-garden-path.jpg"
 ]

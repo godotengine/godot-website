@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5c7/00c/63e/5c700c63eb56b196889234.png
 date: 2019-02-22 16:30:00
 ---
 
-Are you proud of your Godot-made game or tool (published or work in progress) and would you like us to showcase it in Godot's 2019 showreel? Please send us a short video (10-15 secs) for us to include it! 
+Are you proud of your Godot-made game or tool (published or work in progress) and would you like us to showcase it in Godot's 2019 showreel? Please send us a short video (10-15 secs) for us to include it!
 
 Requirements:
 

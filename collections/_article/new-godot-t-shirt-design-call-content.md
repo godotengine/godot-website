@@ -33,7 +33,7 @@ The general requirements for the design are:
 
 ## How to submit
 
-You can send your finished proposals to `artwork at godotengine·org` before **December 27th**. The email must include: 
+You can send your finished proposals to `artwork at godotengine·org` before **December 27th**. The email must include:
 
   * Design(s) in vector format (SVG preferentially)
   * Chosen license

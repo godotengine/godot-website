@@ -31,7 +31,7 @@ It is important to note, though, that as with any X.0 release, there will still 
 
 In June this year, we held our first [Godot Sprint](https://godotengine.org/article/godot-sprint-and-user-meeting-barcelona-june-2022) since the pandemic started (previous one being in Brussels, January 2020).
 
-It was an excellent way to get back in touch with everyone. As much as Godot is developed very efficiently online, the main developers meeting personally is a great way to move forward with a lot of issues that are difficult to discuss online. 
+It was an excellent way to get back in touch with everyone. As much as Godot is developed very efficiently online, the main developers meeting personally is a great way to move forward with a lot of issues that are difficult to discuss online.
 
 Even if we do online calls often, we are all very tired after an hour or two, but meeting in person is a blast where we can have fun all day discussing Godot topics.
 
@@ -65,7 +65,7 @@ This year, there were several hit games published with Godot, such as [Dome Keep
 
 On a personal level, this year was a turning point for me. As a Godot creator and having pushed countless hours majorly churning code for the project since its inception, this is the year where I finally stopped working on large features and moved on to helping other contributors and a more administrative role.
 
-I worked hard towards this happening, increasingly delegating engine areas to trusted and talented contributors over the years. Nowadays, pretty much all the major areas have dedicated maintainers who understand the code better than I do. 
+I worked hard towards this happening, increasingly delegating engine areas to trusted and talented contributors over the years. Nowadays, pretty much all the major areas have dedicated maintainers who understand the code better than I do.
 
 Of course, I still help them out with feedback and code reviews and will still contribute new features from time to time but, as time passes, it is (and always was) my intention that Godot is a project that can stand on its own and thrive.
 

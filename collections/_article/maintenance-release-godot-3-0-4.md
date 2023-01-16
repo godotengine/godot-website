@@ -2,12 +2,12 @@
 title: "Maintenance release: Godot 3.0.4"
 excerpt: "Godot 3.0.4 is a small release that fixes a crasher in the asset library on Windows. If you were affected by this please upgrade. Otherwise we'll come back with a larger 3.0.5 soon!"
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5b2/d2f/118/5b2d2f118951e820036835.png
 date: 2018-06-22 00:00:00
 ---
 
-Welcome to Godot 3.0.4. This is a bit of a [brown paper bag](http://www.catb.org/jargon/html/B/brown-paper-bag-bug.html) release. There is a bug in 3.0.3 causing crashing of the asset library on systems with low threadcount CPUs. This was missed as I did testing only with machines of 8 threads and higher. This bug in itself wouldn't be the worst but for many new users this is the first interaction with Godot they have. This is why we decided on this tiny release. 
+Welcome to Godot 3.0.4. This is a bit of a [brown paper bag](http://www.catb.org/jargon/html/B/brown-paper-bag-bug.html) release. There is a bug in 3.0.3 causing crashing of the asset library on systems with low threadcount CPUs. This was missed as I did testing only with machines of 8 threads and higher. This bug in itself wouldn't be the worst but for many new users this is the first interaction with Godot they have. This is why we decided on this tiny release.
 
 We took this opportunity to add some documentation fixes as well as a fix for Bullet physics to allow Marc Gilleron [(Zylann)](https://github.com/Zylann)'s [terrain plugin](https://github.com/Zylann/godot_terrain_plugin) to function with Godot 3.0.4.
 

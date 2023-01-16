@@ -53,7 +53,7 @@ The `PhysicalSkyMaterial` is made to be fast and easy to tweak. There are more r
 
 # Sky Shaders
 
-We anticipate that most users will be fine using one of the above three sky materials. But if you need more flexibility, or want to do something more complex (e.g. clouds or nebula) the Sky Shader system is designed to allow you to create whatever you need. 
+We anticipate that most users will be fine using one of the above three sky materials. But if you need more flexibility, or want to do something more complex (e.g. clouds or nebula) the Sky Shader system is designed to allow you to create whatever you need.
 
 Sky Shaders are another type of shader that can be used in a `ShaderMaterial`.
 
@@ -61,7 +61,7 @@ Sky Shaders are another type of shader that can be used in a `ShaderMaterial`.
 shader_type sky;
 ```
 
-Everything in Sky Shaders takes place in the `fragment()` function. The output is a single color value, `COLOR`. 
+Everything in Sky Shaders takes place in the `fragment()` function. The output is a single color value, `COLOR`.
 
 The simplest Sky Shader is:
 
@@ -73,7 +73,7 @@ void fragment() {
 }
 ```
 
-Most Sky Shaders will rely on the view direction which is named `EYEDIR`. Shaders also provide `POSITION` which is the position of the active camera in world space. This can be used to change the sky depending on the location of the camera. 
+Most Sky Shaders will rely on the view direction which is named `EYEDIR`. Shaders also provide `POSITION` which is the position of the active camera in world space. This can be used to change the sky depending on the location of the camera.
 
 Sky Shaders draw to the background and to the radiance cubemap. This allows the scene to receive real-time lighting updates from changes to the sky.
 
@@ -101,7 +101,7 @@ void fragment() {
 }
 ```
 
-Finally, Sky Shaders provide access to information about the first 4 `DirectionalLight`s in the scene. 
+Finally, Sky Shaders provide access to information about the first 4 `DirectionalLight`s in the scene.
 * `LIGHT0_DIRECTION`: Direction of the first `DirectionalLight`.
 * `LIGHT0_ENABLED`: `true` when there is at least one `DirectionalLight` in the scene.
 * `LIGHT3_COLOR`: Color of the fourth light in the scene. If `LIGHT3_ENABLED` is `false`, this value is undetermined.
@@ -121,7 +121,7 @@ Users should also try to perform expensive calculations in the subpass buffers a
 
 ## Conclusion
 
-Please note, if you have existing scenes using the `ProceduralSky` or `PanoramaSky`, this change will break them and you will have to create a `ProceduralSkyMaterial` or a `PanoramaSkyMaterial.` 
+Please note, if you have existing scenes using the `ProceduralSky` or `PanoramaSky`, this change will break them and you will have to create a `ProceduralSkyMaterial` or a `PanoramaSkyMaterial.`
 
 Since this devlog hasn't felt very devloggy, here is an in-progess screenshot as a reward for reading! This comes from hunting a bug that arose while working on reading from the radiance cubemap properly.
 ![Cubemap issue in sky shader](/storage/app/media/4.0/Sky-Shaders/Godot4-sky-shaders-cubemap.png)

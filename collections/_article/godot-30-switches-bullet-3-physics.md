@@ -19,7 +19,7 @@ Over time this became quite a hassle, because maintaining a physics engine and k
 
 ## Introducing Bullet
 
-Godot always supported an abstract physics interface, so Andrea Catania (Odino) volunteered to add Bullet support as a backend. I initially though it would not be possible to replicate Godot's API in Bullet faithfully, but Andrea proved me wrong and did a fantastic job. He also finished before the Beta deadline, so his work was just merged and will be present in Godot 3.0. 
+Godot always supported an abstract physics interface, so Andrea Catania (Odino) volunteered to add Bullet support as a backend. I initially though it would not be possible to replicate Godot's API in Bullet faithfully, but Andrea proved me wrong and did a fantastic job. He also finished before the Beta deadline, so his work was just merged and will be present in Godot 3.0.
 
 Physics should work just like before, and no code should change, except Bullet is being used internally.
 Godot's old physics engine is provided for compatibility and can be selected in the project settings, but will likely be removed by the time 3.1 is out.

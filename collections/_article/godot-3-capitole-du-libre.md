@@ -1,6 +1,6 @@
 ---
 title: "Godot 3 at the Capitole du libre"
-excerpt: "We met with Julian and Gilles at the Capitole du Libre 2017 in Toulouse. It's one of the largest French events dedicated to Free Software. 
+excerpt: "We met with Julian and Gilles at the Capitole du Libre 2017 in Toulouse. It's one of the largest French events dedicated to Free Software.
 We went there to showcase Godot 3 and try to introduce new users to it. Here's our report, with a bonus presentation."
 categories: ["events"]
 author: Nathan GDQuest
@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5a2/678/7be/5a26787bebf13417068091.jpg
 date: 2017-12-05 12:00:00
 ---
 
-We gathered with [Julian](https://github.com/StraToN) and [Gilles](https://github.com/groud) at the [Capitole du Libre 2017](https://2017.capitoledulibre.org/) in Toulouse. It's one of the largest French events dedicated to Free Software. We went there to showcase Godot 3 and try to introduce new users to it. Here's our event report. 
+We gathered with [Julian](https://github.com/StraToN) and [Gilles](https://github.com/groud) at the [Capitole du Libre 2017](https://2017.capitoledulibre.org/) in Toulouse. It's one of the largest French events dedicated to Free Software. We went there to showcase Godot 3 and try to introduce new users to it. Here's our event report.
 
 Passing the word to Gilles Roudière himself.
 
@@ -16,7 +16,7 @@ Passing the word to Gilles Roudière himself.
 
 Julian (*StraToN*) and I (Gilles a.k.a. *Groud*) spent most of our time at the Godot stand. We used Fracteed's demo to showcase the engine, along with Zylann's Wallrider.
 
-We met a lot of friendly people interested in Godot. Enthusiasts, hobbyists, and even some Unity users looking for an alterative to their game engine! 
+We met a lot of friendly people interested in Godot. Enthusiasts, hobbyists, and even some Unity users looking for an alterative to their game engine!
 
 More importantly, we met people who are deeply involved into the game developpment community. Especially those from the Toulouse Game Dev association, which regroups both hobbyists and professional game developers in Toulouse. They even asked us to organize a presentation of the engine. Besides, we managed to sell some shirts, bringing 152€ to the project.
 

@@ -11,6 +11,8 @@ exclude:
   ]
 permalink: pretty
 
+baseurl: "https://godotengine.org"
+
 collections_dir: collections
 collections:
   article:
@@ -27,6 +29,11 @@ defaults:
     values:
       layout: "article"
       og_type: "article"
+  - scope:
+      path: ""
+      type: "showcase"
+    values:
+      layout: "showcase-item"
   - scope:
       path: ""
       type: "download"

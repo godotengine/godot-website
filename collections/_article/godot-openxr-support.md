@@ -9,7 +9,7 @@ date: 2021-03-18 11:57:39
 
 [OpenXR](https://www.khronos.org/openxr/) is a new open standard for interacting with <abbr title="Extended Reality, i.e. Virtual Reality, Augmented Reality, and Mixed Reality">XR</abbr> hardware by the wonderful people at Khronos. This has been one of these rare cases where all the industry leaders have come together and come up with a standard that combines all the best practices of the different solutions available so far.
 
-With the announcement of the 0.9 specification roughly two years ago Microsoft showed off their runtime as well as [Collabora](https://www.collabora.com) with their open source Linux based OpenXR runtime called Monado. 
+With the announcement of the 0.9 specification roughly two years ago Microsoft showed off their runtime as well as [Collabora](https://www.collabora.com) with their open source Linux based OpenXR runtime called Monado.
 Last year both Oculus and Valve introduced their runtimes and while still officially in beta they are fully functional at the time of writing this blog post.
 
 ## Godot 3.3 OpenXR plugin

@@ -19,7 +19,7 @@ After another two weeks since our [previous beta build](/article/dev-snapshot-go
 
 A month ago, we attempted to upgrade our Mono version to 6.6.0 (from 5.18.1.3) which is necessary for the WebAssembly target. It brought some issues with the cross-compilation and packaging of our binaries, so the Windows and macOS Mono builds were not functional in beta 2, and we skipped Mono builds altogether in beta 3.
 
-Since then, [Hein-Pieter](https://github.com/hpvb) spent some time debugging and fixing our cross-compilation issues. He has some work-in-progress patches that will be contributed back to the upstream Mono project, but for now we used a workaround using [Wine](http://www.winehq.org/).
+Since then, [HP](https://github.com/hpvb) spent some time debugging and fixing our cross-compilation issues. He has some work-in-progress patches that will be contributed back to the upstream Mono project, but for now we used a workaround using [Wine](http://www.winehq.org/).
 
 Apart from fixing Mono builds, there have been various important changes since beta 3. Here's a short selection:
 

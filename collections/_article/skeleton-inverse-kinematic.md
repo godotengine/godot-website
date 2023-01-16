@@ -18,5 +18,5 @@ Thanks to a new node, SkeletonIK, it is possible to procedurally change a skelet
 The project shown in the video can be downloaded from the [following link](https://downloads.tuxfamily.org/godotengine/demos/inverse_kinematics.zip).
 
 > Thanks to these two guys who made the rifles.
-> - Rifle1 model by skartemka 
+> - Rifle1 model by skartemka
 > - Rifle2 model by AlanBah

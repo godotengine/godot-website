@@ -17,7 +17,7 @@ It is without a doubt a fantastic time of the year if you are a video game devel
 
 We took Godot to GDC with a number of goals, mainly to see the industry feedback to it (see how we can improve) and to find sponsoring for its development by the big companies.
 
-We spent most of the week meeting with programmers, artists, designers, company representatives, etc. Went to parties, talks and more. 
+We spent most of the week meeting with programmers, artists, designers, company representatives, etc. Went to parties, talks and more.
 
 On the sponsoring side, we have many promising leads but it's probably too early to write about it.
 

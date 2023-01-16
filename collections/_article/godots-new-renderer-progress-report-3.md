@@ -33,7 +33,7 @@ Here's the list of tasks for the current milestone and the next one:
 
 ## Glow Processor
 
-Glow effects are most commonly done by taking the whole screen, shrinking it, blurring it and then blending it back (using screen, additive or soflight blending modes). 
+Glow effects are most commonly done by taking the whole screen, shrinking it, blurring it and then blending it back (using screen, additive or soflight blending modes).
 
 Godot 2.0 already supported this in a more or less limited fashion, so the challenge for 3.0 was, how to make glow much better? how to make it totally awesome?
 
@@ -73,7 +73,7 @@ For the FAR depth of field, Godot 3.0 implements the typical weighted blur based
 
 ![](/storage/app/media/devlog/progress3/nrpr4.jpg)
 
-NEAR DOF is considerably more difficult to implement, and correct implementations are usually demanding in GPU (two separable convolution buffers must exist in parallel). 
+NEAR DOF is considerably more difficult to implement, and correct implementations are usually demanding in GPU (two separable convolution buffers must exist in parallel).
 
 As the aim of Godot is to run nicely on low end hardware, a novel algorithm was implemented, which allows high quality bluring of near objects in a single separable pass:
 
@@ -91,7 +91,7 @@ The new GI probe implementation in Godot is a game changer, and gives Godot 3.0 
 
 GIProbe is a new node that is placed in the scene in a similar way as you place a reflection probe. It must be pre-baked for dynamic scenario geometry, but it offers support for full dynamic lights and dynamic objects.
 
-It works by implementing [voxel cone tracing](http://on-demand.gputechconf.com/gtc/2012/presentations/SB134-Voxel-Cone-Tracing-Octree-Real-Time-Illumination.pdf) in a way that is friendlier with low end GPUs and high end mobile. 
+It works by implementing [voxel cone tracing](http://on-demand.gputechconf.com/gtc/2012/presentations/SB134-Voxel-Cone-Tracing-Octree-Real-Time-Illumination.pdf) in a way that is friendlier with low end GPUs and high end mobile.
 
 The light voxel is computed on CPU, allowing all types of dynamic lights, then uploaded to a 3D texture (with optional real-time compression, to improve memory usage and performance) used by the shader:
 

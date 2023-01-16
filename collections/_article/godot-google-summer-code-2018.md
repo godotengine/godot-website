@@ -21,7 +21,7 @@ Without further ado, let's go through the list of accepted proposals:
 
 This project will be about creating an interface into GDNative so custom video decoders can be added without the need of recompiling the engine. It'll enable Godot to support several video formats that are hard to integrate because of patents or licenses, while also avoiding the bloat in the base engine for those who don't need it.
 
-[Anish Bhobe (KidRigger)](https://github.com/KidRigger) will work on this project with the help of [karroffel](https://github.com/karroffel) and [Hein-Pieter van Braam (TMM/hpvb)](https://github.com/hpvb).
+[Anish Bhobe (KidRigger)](https://github.com/KidRigger) will work on this project with the help of [karroffel](https://github.com/karroffel) and [HP van Braam (TMM/hpvb)](https://github.com/hpvb).
 
 ## WebRTC support for multiplayer games
 

@@ -13,7 +13,7 @@ Another year, another showreel. As every year, the amount of quality games being
 
 The idea of the reel is to include games both published and in development.
 
-We got well over a hundred submissions this year, 3 or 4 more times than last year. Most of them are fantastic, but it became impossible to put all of them in the official reel, not even in the extended one. 
+We got well over a hundred submissions this year, 3 or 4 more times than last year. Most of them are fantastic, but it became impossible to put all of them in the official reel, not even in the extended one.
 
 After discussing, we decided to split into two, one for Mobile and one for Desktop/Console games, so have a seat, grab a drink and enjoy the 2019 showreels!
 

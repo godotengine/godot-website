@@ -69,7 +69,7 @@ Since directional lights span **the whole scene**, they need their own separate 
 
 `OmniLight`s need more information than just a single view. They reach around in a spherical way, so what the GLES2 backend does is render into a [cubemap](https://en.wikipedia.org/wiki/Cube_mapping) (6 images, arranged like the faces of a cube). Because using 6 images would take quite a lot of storage space, the cubemap gets converted into a *"dual paraboloid"*, which is essentially like two fish-eye-lens pictures.
 
-A `DirectionalLight` needs their own space, but using single textures for each other light would be pretty wasteful, so what is used as an optimization is a *Shadow Atlas*. Using a ShadowAtlas lets us pack multiple images into one, and even give them more or less space depending on distance from the camera to achieve better detail. 
+A `DirectionalLight` needs their own space, but using single textures for each other light would be pretty wasteful, so what is used as an optimization is a *Shadow Atlas*. Using a ShadowAtlas lets us pack multiple images into one, and even give them more or less space depending on distance from the camera to achieve better detail.
 
 There is a nice article about lights and shadows on the documentation pages, you can find it [here](http://docs.godotengine.org/en/3.0/tutorials/3d/lights_and_shadows.html#shadow-atlas).
 

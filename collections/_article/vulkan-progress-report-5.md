@@ -68,7 +68,7 @@ Likewise, dynamic objects will also make use of real-time voxel AO, so it is pos
 ![dynamic_ao.gif](/storage/app/uploads/public/5db/e28/abc/5dbe28abcb0d6853104408.gif)
 
 
-The voxelization technique used for real-time objects is very fast (you can have dozens of dynamic objects at little to no cost in a medium or low end dedicated GPU) and also very innovative, as it voxelizes supersampled objects. This allows moving dynamic objects around the scene without creating sudden changes in lighting (which was always a problem with most other implementations of voxel cone tracing, and made dynamic objects barely usable). 
+The voxelization technique used for real-time objects is very fast (you can have dozens of dynamic objects at little to no cost in a medium or low end dedicated GPU) and also very innovative, as it voxelizes supersampled objects. This allows moving dynamic objects around the scene without creating sudden changes in lighting (which was always a problem with most other implementations of voxel cone tracing, and made dynamic objects barely usable).
 
 
 

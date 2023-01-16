@@ -50,7 +50,7 @@ ___
 
 #### [Lumencraft](https://store.steampowered.com/app/1713810/Lumencraft/)
 
-Recently revealed but going strongly, here's 
+Recently revealed but going strongly, here's
 [Lumencraft](https://twitter.com/Lumencraft_game) by Godot contributor [@KoBeWi_](https://twitter.com/KoBeWi_) together with [@lrzepecki](https://twitter.com/lrzepecki) [@JohnMeadow3](https://twitter.com/JohnMeadow3) [@PawelMogila](https://twitter.com/PawelMogila) [@DamianWiech](https://twitter.com/DamianWiech).
 
 [![Lumencraft](https://cdn.cloudflare.steamstatic.com/steam/apps/1713810/ss_8b5ebca3bc88871c3276fadca55573439bce1a2f.1920x1080.jpg?t=1633107527)](https://store.steampowered.com/app/1713810/Lumencraft/)
@@ -92,7 +92,7 @@ ___
 #### [Seedlings](https://store.steampowered.com/app/1575510/Seedlings/)
 
 Bardsley Creative's [@Seedlings_Game](https://twitter.com/Seedlings_Game) is probably the game featuring the most realistic nature graphics you've seen in a while - as they're all derived from photos of the beautiful Aotearoa New Zealand Bird.
- 
+
 [![Seedlings](https://cdn.cloudflare.steamstatic.com/steam/apps/1575510/ss_6ffd2a3e5b23dbb9af6bedead5d8d26ac9fc0f15.1920x1080.jpg?t=1630896378)](https://store.steampowered.com/app/1575510/Seedlings/)
 
 ___
@@ -110,7 +110,7 @@ ___
 #### [Birb Café](https://store.steampowered.com/app/1579300/Birb_Caf/)
 
 Birb Café by [@birbgames](https://twitter.com/birbgames) has you, a birb, make coffee for furry and feathery customers (who would have guessed)! It's a visual novel with branching paths and multiple endings. We don't know yet if it features skating birbs, we'll see!
- 
+
 [![Birb Café](https://cdn.cloudflare.steamstatic.com/steam/apps/1579300/ss_2b47690c27a8e66928fe6f86f8eb5a15f1fa1a7a.1920x1080.jpg?t=1627442736)](https://store.steampowered.com/app/1579300/Birb_Caf/)
 
 ___
@@ -118,7 +118,7 @@ ___
 #### [Woodland Empire](https://store.steampowered.com/app/1419150/Woodland_Empire/)
 
 Woodland Empire by [@obvlong](https://twitter.com/obvlong) describes itself as an ANTI-citybuilder – control the elements and help your forest grow with thriving fauna and flora.
- 
+
 [![Woodland Empire](https://cdn.cloudflare.steamstatic.com/steam/apps/1419150/ss_f6c558bc94c217997bf213635a44d49e193f86bd.1920x1080.jpg?t=1633354826)](https://store.steampowered.com/app/1419150/Woodland_Empire/)
 
 ___
@@ -126,7 +126,7 @@ ___
 #### [Smelted Kin: Inhuman Impact](https://store.steampowered.com/app/1604050/Smelted_Kin_Inhuman_Impact/)
 
 Smelted Kin: Inhuman Impact by [@MicrobatStudio](https://twitter.com/MicrobatStudio) is a 2D shooter in a sci-fi environment, which has you play both a human character and an armored vehicle.
- 
+
 [![Smelted Kin: Inhuman Impact](https://cdn.cloudflare.steamstatic.com/steam/apps/1604050/ss_20f4b1c7ea21164c6148ee8cfeede27a5baa26b8.1920x1080.jpg?t=1631177612)](https://store.steampowered.com/app/1604050/Smelted_Kin_Inhuman_Impact/)
 
 ___

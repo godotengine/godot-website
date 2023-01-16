@@ -196,7 +196,7 @@ Notes:
  1. Betsy q = 1 is medium quality
  1. Betsy q = 2 is maximum quality
  1. It is unknown why ConvectionKernels some RSMLE increased in ETC2 over ETC1. It could be a CVTT bug, or a difference in how CVTT measures error vs how I measured it.
- 
+
 ## ETC1 RGB
 
 |             | Betsy (q = 1) | Betsy (q = 2) | ConvectionKernels | etc2comp |

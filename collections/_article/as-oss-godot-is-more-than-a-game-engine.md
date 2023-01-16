@@ -65,7 +65,7 @@ It may not make sense what's special about this at first, but once you start usi
 
 ### The Open Source Difference
 
-The open source development process is something beautiful. Once you get it, it becomes clear why. Once a project is set in motion and starts getting traction, it becomes unstoppable. 
+The open source development process is something beautiful. Once you get it, it becomes clear why. Once a project is set in motion and starts getting traction, it becomes unstoppable.
 
 It may not make sense to most developers how a bunch of guys working in their free time and without getting paid can create quality software that, very often, matches or surpasses it's commercial counterparts.
 
@@ -75,11 +75,11 @@ Projects such as Linux, gcc, LLVM, Python, Videolan, Blender, git, etc. are proo
 
 Many confuse *Open Source* with *Shared Source*, or making the source available.
 
-When you read about *Open Source* somewhere, it's always about the [OSI definition](https://opensource.org/) of it. 
+When you read about *Open Source* somewhere, it's always about the [OSI definition](https://opensource.org/) of it.
 
-It means that a special license is used so everyone collaborating  will benefit equally, making the development truly open. 
+It means that a special license is used so everyone collaborating  will benefit equally, making the development truly open.
 
-When companies make the source available, they will often do it together with a license where they clearly state that they benefit more from it than anyone that contributes. Alternative, some companies make part of their code open while keeping the rest as closed or under a more restrictive license. 
+When companies make the source available, they will often do it together with a license where they clearly state that they benefit more from it than anyone that contributes. Alternative, some companies make part of their code open while keeping the rest as closed or under a more restrictive license.
 
 This is what makes Godot different to engines such as Unreal, Xenko, Cocos2D, Lumberyard, etc. Anyone who contributes to Godot, benefits equally from other's contributions.
 
@@ -95,7 +95,7 @@ This process is led by our large user community, who usually sets our priorities
 
 This development process, which involves several thousands individuals, is extremely efficient and ensured that, in a bit less than 3 years, Godot went from being completely unknown to appear on the map on the most important developer communities. No other game related technology has grown so quickly!
 
-To add to that, Godot gives you the safety that we are just individuals working towards making the best game engine possible. 
+To add to that, Godot gives you the safety that we are just individuals working towards making the best game engine possible.
 
 Godot does not need to survive by selling you new features constantly that you probably don't need and just bloat the engine because they are implemented in a hurry. The small 20mb download size is a testament to this.
 

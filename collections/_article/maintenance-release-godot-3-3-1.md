@@ -5,7 +5,7 @@ Godot 3.3.1 focuses purely on bug fixes, and aims to preserve compatibility."
 categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/60a/3f2/4d6/60a3f24d6f559187028182.png
-image_caption_title: Scrabdackle 
+image_caption_title: Scrabdackle
 image_caption_description: Upcoming game by jakefriend made with Godot Engine
 date: 2021-05-18 17:18:42
 ---

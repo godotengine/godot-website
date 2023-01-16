@@ -13,7 +13,7 @@ I went to GDC yet again (this time GDC 2018) trying to see how Godot is doing at
 
 Before anything, I'm sure that many reading this article don't really know what GDC is.
 
-GDC stands for "Game Developers Conference", and it's the biggest industry wide event for game developers. Almost 100k developers (companies and indies) meet in San Francisco every year in March to showcase their work, make business meetings, socialize, have fun, etc. This event is not mainly about showcasing games, like E3 or Gamescom, but entirely for developers themselves. 
+GDC stands for "Game Developers Conference", and it's the biggest industry wide event for game developers. Almost 100k developers (companies and indies) meet in San Francisco every year in March to showcase their work, make business meetings, socialize, have fun, etc. This event is not mainly about showcasing games, like E3 or Gamescom, but entirely for developers themselves.
 
 There are also talks about technology, production or any other aspect one can think about related to game development.
 
@@ -39,7 +39,7 @@ To recap a bit. I will quote from GDC blog posts I wrote in past years:
 
 ### Enter GDC 2018
 
-This time, thanks to your [infinite generosity](https://www.patreon.com/godotengine), I can work full time for the project. I decided to do the economical effort to go to GDC and spend it entirely for Godot. 
+This time, thanks to your [infinite generosity](https://www.patreon.com/godotengine), I can work full time for the project. I decided to do the economical effort to go to GDC and spend it entirely for Godot.
 
 Even if I had to go booth by booth, person by person, I was determined to let everyone know that Godot exists.
 
@@ -57,7 +57,7 @@ This is a ton of information, so I will try to break it down a bit.
 
 Reasons why a company may be interested in leaving their current technology may be varied (will expand on that later), but until recently they really had not much of an alternative.
 
-Thanks to the effort of all our contributors, Godot is becoming more and more amazing every year. There seems to be no limit to how good it can become, and the hard work from everyone paid off. 
+Thanks to the effort of all our contributors, Godot is becoming more and more amazing every year. There seems to be no limit to how good it can become, and the hard work from everyone paid off.
 
 Godot (and mainly since verson 3.0) is now robust, has amazing features, great documentation, and the source code is very polished.
 
@@ -69,7 +69,7 @@ This is not an overstatement. A large part of the meetings I had with were with 
 
 In that industry, it seems Godot got a head start. Many are already using it and many more are already developing with it.
 
-The reason for this is, as I was told, that other commercial engines have a pretty expensive gambling license and their source code is pretty difficult to deal with. 
+The reason for this is, as I was told, that other commercial engines have a pretty expensive gambling license and their source code is pretty difficult to deal with.
 
 As a result, Godot is the next logical choice for them.
 
@@ -82,14 +82,14 @@ I discussed with many companies that are moving to Godot and tried to understand
 
 * Many companies (mostly from Europe and Latin America) simply love open source and, just for this fact, will pick Godot whenever possible.
 * Companies that used to develop their own technology moved to Unity/Unreal because it allowed them to cut largely on development costs. Yet, they definitely miss flexibility. Godot gives them back this flexibility while still helping them cut costs.
-* Many medium (and large) sized companies told me they are angry at the major player in this industry for trying to abuse its dominant position by using analytics and telemetry built into their closed engine to force them pay for per seat licenses. Some even called it "Being forced to pay the game development tax". 
+* Many medium (and large) sized companies told me they are angry at the major player in this industry for trying to abuse its dominant position by using analytics and telemetry built into their closed engine to force them pay for per seat licenses. Some even called it "Being forced to pay the game development tax".
 * People usually says "If my game makes it big, I would gladly pay 5% of revenue share". Yet for companies, 5% is actually a lot (games are not a commodity, and most are made at loss, so paying 5% of an actually successful game is a lot).
 
 ### Small companies are still uninterested in Godot
 
 Most small and indie companies I discussed with are uninterested in Godot. Their current technology suits their needs fine because they are not doing anything too complex and they don't plan to grow either.
 
-Still, at the indie booth, I found many companies that were doing the switch to Godot and were interested about it (mostly, because by chance, they had the chance to try it out and that is usually enough). 
+Still, at the indie booth, I found many companies that were doing the switch to Godot and were interested about it (mostly, because by chance, they had the chance to try it out and that is usually enough).
 
 A large part of them (maybe about half?) still didn't even know about it either. I wish we could improve on this.
 
@@ -99,7 +99,7 @@ Many schools and universities have found that Godot is a lot more efficient to t
 
 It filled me with joy to hear stories that, once they learn Godot, students prefer to keep using it because it's closer to how they like to think about developing games.
 
-The open source nature in Godot is also very appealing to students (the dozens of GSoC applications we are getting are also proof of this too, I guess). 
+The open source nature in Godot is also very appealing to students (the dozens of GSoC applications we are getting are also proof of this too, I guess).
 
 Picking issues from our GitHub issue tracker and trying to fix them is a great learning excercise in programming and how game engines work.
 
@@ -116,16 +116,16 @@ Thanks to the huge generosity from GitHub, we organized a meetup at their office
 
 As mentioned before. Most companies that decided to give Godot a try for their next projects are still completing projects in their current technology, or just begun to use it very recently.
 
-It will be a long time until we start see a considerably larger amount of games published that were made with Godot. 
+It will be a long time until we start see a considerably larger amount of games published that were made with Godot.
 
 Growth is slow and it will take many years, but I believe we are finally begining to be a significant player in the industry.
 
 ### Again, please donate
 
-We hope in the near future, as more companies are using Godot, more companies will be able to sponsor the project. 
+We hope in the near future, as more companies are using Godot, more companies will be able to sponsor the project.
 
 In the meanwhile, we are still dreamers that are spending our lifes trying to make game development a better place for everyone. We couldn't do this without your help, so (if you are not already) consider becoming [our patron](https://www.patreon.com/godotengine)!
 
-Rémi, who has been doing an incredible job as project manager, is *this* close to becoming our project representative. 
+Rémi, who has been doing an incredible job as project manager, is *this* close to becoming our project representative.
 
 Your donations will help him spend of time going around the world, meeting companies, going to game development events (so I can stay at home programming Godot instead of travelling :-P) , organizing communities, etc. Please help make it happen!

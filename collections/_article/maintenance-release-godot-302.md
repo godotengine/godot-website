@@ -2,7 +2,7 @@
 title: "Maintenance release: Godot 3.0.2"
 excerpt: "We've found several small regressions in Godot 3.0.1. This maintenance release addresses these and also add some features for our C# users."
 categories: ["release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5a9/bbf/1e2/5a9bbf1e2b04f446577255.jpg
 date: 2018-03-04 10:40:06
 ---
@@ -28,7 +28,7 @@ Here are some of the highlights of this release. See the [full changelog](http:/
 
 Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.2/Godot_v3.0.2-stable_changelog.txt) for details.
 
-* Running a scene from a project with a main scene now works again (regression in 3.0.1). 
+* Running a scene from a project with a main scene now works again (regression in 3.0.1).
 * Correct line spacing in RichTextLabel (regression in 3.0.1).
 * TextureProgress now correctly displays when progress > 62 (regression in 3.0.1).
 * The editor no longer complains about using an enum from an autoloaded resource (regression in 3.0.1).

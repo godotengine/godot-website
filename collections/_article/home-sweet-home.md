@@ -12,7 +12,7 @@ Here it is: [Godot Engine's new homepage](/)! Some of you might have been awaiti
 
 Thanks enormously to Andrea Calabró, Alket Rexhepi, Hugo Locurcio (Calinou) and Rémi Verschelde (Akien) for their hard work!
 
-**Note:** The old forums (and rest of the OpenProject website) can still be accessed for now on [op.godotengine.org](http://op.godotengine.org/projects/godot-engine). 
+**Note:** The old forums (and rest of the OpenProject website) can still be accessed for now on [op.godotengine.org](http://op.godotengine.org/projects/godot-engine).
 
 ## Why change again?
 

@@ -189,7 +189,7 @@ Support for *root motion* as well as the ability to write your own custom blend 
 <a id="axis-handling"></a>
 ### New axis handling system
 
-After several months of deliberation and prototypes, we settled on a really good approach to [axis mapping](/article/handling-axis-godot), courtesy of Gilles Roudiere ([Groud](https://github.com/groud)). Instead of going the way other game engines do it with axis definitions, Godot 3.1 uses the novel concept of "action strength". 
+After several months of deliberation and prototypes, we settled on a really good approach to [axis mapping](/article/handling-axis-godot), courtesy of Gilles Roudiere ([Groud](https://github.com/groud)). Instead of going the way other game engines do it with axis definitions, Godot 3.1 uses the novel concept of "action strength".
 
 While it may take a bit of time to sink in, this approach allows using actions for all use cases and it makes it very easy to create in-game customizable mappings and customization screens.
 
@@ -271,7 +271,7 @@ These nodes do particle processing using the CPU (and draw using the MultiMesh A
 
 Ignacio Etcheverry ([neikeq](https://github.com)) and other contributors have done a tremendous work since Godot 3.0 to improve the C# integration in Godot. As of 3.1, C# projects can be exported to Linux, macOS and Windows. Support for Android, iOS and HTML5 will come further down the road, with Android being the current priority.
 
-Both Ignacio and Hein-Pieter van Braam ([hpvb](https://github.com/hpvb)) did great work to improve our Mono builds and remove some of its previous hurdles, such as being tied to a specific Mono version. The relevant bits from the Mono SDK are now included directly with the editor binary, and you only need to install MSBuild to build and ship C# games.
+Both Ignacio and HP van Braam ([hpvb](https://github.com/hpvb)) did great work to improve our Mono builds and remove some of its previous hurdles, such as being tied to a specific Mono version. The relevant bits from the Mono SDK are now included directly with the editor binary, and you only need to install MSBuild to build and ship C# games.
 
 
 <a id="networking"></a>

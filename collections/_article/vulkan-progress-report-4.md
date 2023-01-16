@@ -19,7 +19,7 @@ Over the course of September 2019, I continued working on Vulkan all day long, a
 6. [Vulkan progress report #6](https://godotengine.org/article/vulkan-progress-report-6)
 7. [Vulkan progress report #7](https://godotengine.org/article/vulkan-progress-report-7)
 
-### Materials 
+### Materials
 
 3D materials are now working again. Post processes are still mostly missing, but the *material testers* demo is fully functioning.
 
@@ -47,7 +47,7 @@ Note that old SpatialMaterials will still work in Godot 4.0 and their data will 
 
 ### Visual Frame Profiler
 
-Another very requested feature for 2D and 3D is performance analysis tools. Users often run on CPU or GPU side performance bottlenecks and it is not always obvious what the source of the problem is. 
+Another very requested feature for 2D and 3D is performance analysis tools. Users often run on CPU or GPU side performance bottlenecks and it is not always obvious what the source of the problem is.
 
 To better find what is going on, a new visual frame profiler was added. This profiler shows all the steps that take place during rendering a frame and their cost in both CPU and GPU. Inspecting the frame history is also possible, so going back in time to find what caused a peak is done the same way as with the script profiler.
 
@@ -64,7 +64,7 @@ Most real-time lighting code has already been implemented, so the 3D platformer 
 
 ### Basis Universal
 
-While not strictly Vulkan based, Basis Universal was added to Godot as an optional import format. 
+While not strictly Vulkan based, Basis Universal was added to Godot as an optional import format.
 
 Basis Universal is mostly useful for 3D games and results in 75% smaller textures, at the cost of much slower import time (so, won't want to use it until deploy)  and slightly worse visual quality and loading times.
 

@@ -8,7 +8,7 @@ date: 2022-11-29 17:02:10
 ---
 
 **TL;DR:** We are getting closer than ever to releasing Godot 4.0. After years of development and countless hours spent by our contributors, we believe it’s finally ready for production use. But no matter the amount of time dedicated to testing and profiling — bugs and issues are inevitable. We believe that the Godot community understands this and expects as much. Still, we intend to quickly follow 4.0 with bug fix releases as we are dedicated to ensuring a stable experience as soon as possible.
- 
+
 As those of you following the beta posts know, the work to finalize Godot 4.0 prior to release is in full swing. We have been in [feature freeze](https://godotengine.org/article/godot-4-0-development-enters-feature-freeze) since mid-August and have been focused on fixing workflow breaking bugs since then (well, we have accepted some small features and enhancements on occasion).
 
 In this post, we hope to shed some light on our expectations for version 4.0 and the future of Godot 4.x. To get a better perspective, let us first explain a few things about Godot 3 and the release of its first iteration. As the community has grown exponentially over the past few years, many current users may not remember the release of 3.0.
@@ -20,8 +20,8 @@ The process of creating version 3.0 of the engine was very similar to the proces
 * No support for exporting games created with C#
 * Countless bugs
 * Poor performance (especially on low-end/less common hardware)
-* 
-That is to say, Godot 3.0 was not representative of what we aspired for Godot 3. After 3.0, each new release came with important features, optimizations, and, most importantly, many bug fixes. 
+*
+That is to say, Godot 3.0 was not representative of what we aspired for Godot 3. After 3.0, each new release came with important features, optimizations, and, most importantly, many bug fixes.
 
 Each release brought new users with new hardware and new projects. Naturally, this exposed bugs that we did not catch during betas or release candidates. As an open source project without a dedicated quality assurance team, we rely on user feedback in order to catch bugs. As a result, we cannot fix everything prior to release.
 Contributors have continued to iterate on Godot 3.x, to the point where version 3.5 almost feels like a different engine than Godot 3.0. We are incredibly proud of [the state of Godot 3.5](https://godotengine.org/article/godot-3-5-cant-stop-wont-stop) and we are eager to finish and share its direct successor, version 3.6 with you.
@@ -31,11 +31,11 @@ Contributors have continued to iterate on Godot 3.x, to the point where version 
 The path to Godot 4.0 has been longer than the path to Godot 3.0. This is in part because the engine has grown in size, and in part because we overhauled many more core components this time around. We have big aspirations for Godot 4, but we expect that version 4.0 will follow a similar path to 3.0. That is to say, **4.0 is only the beginning of Godot 4**. We expect users will encounter workflow-breaking bugs (especially on less common hardware), many workflows will feel unpolished, and performance won’t quite reach the goals we have set.
 Rest assured, we plan to publish bugfix releases quickly and regularly (as we have with the Alphas and Betas). So you can expect versions 4.0.1, 4.0.2, etc. to come shortly after the nominal “4.0-stable” release.
 
-## 4.x release cycle 
+## 4.x release cycle
 
-To alleviate pressure on contributors and to avoid delays, starting with version 4.1, we aim to have quicker release cycles for feature updates (4.1, 4.2, etc., i.e. “4.x” releases). The plan is to start with a fixed period of merging new features, then transition to a short period where we only merge bug fixes, then release and return to merging features again. 
+To alleviate pressure on contributors and to avoid delays, starting with version 4.1, we aim to have quicker release cycles for feature updates (4.1, 4.2, etc., i.e. “4.x” releases). The plan is to start with a fixed period of merging new features, then transition to a short period where we only merge bug fixes, then release and return to merging features again.
 
-Some features may miss the window for merging, and will be postponed until the next version. But due to quicker iteration times the wait would be much shorter for users, and for contributors — their work won’t go stale. We believe this will help us maintain momentum and ensure that the engine stabilizes quickly (a special thank you to Miguel de Icaza for your insight and encouragement that led us to this decision). At this point we are unsure exactly how long the release cycle will be, you can expect we will experiment a bit to see what works best for contributors. 
+Some features may miss the window for merging, and will be postponed until the next version. But due to quicker iteration times the wait would be much shorter for users, and for contributors — their work won’t go stale. We believe this will help us maintain momentum and ensure that the engine stabilizes quickly (a special thank you to Miguel de Icaza for your insight and encouragement that led us to this decision). At this point we are unsure exactly how long the release cycle will be, you can expect we will experiment a bit to see what works best for contributors.
 
 ## 4.1 will focus on stability, performance improvements, and usability
 

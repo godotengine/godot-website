@@ -98,7 +98,7 @@ Shooters often have what is called a *turbulence texture*, which is a texture th
 
 #### 4. Making regular materials interact with the environment
 
-This is often very overlooked. We think materials are edited and that's it, but that's not always the case. Imagine it starts raining and you want your objects to become wet. You need to change the metallic and roughness factors. For floors you want to draw droplets splashing, for walls you want to draw the water pouring down. 
+This is often very overlooked. We think materials are edited and that's it, but that's not always the case. Imagine it starts raining and you want your objects to become wet. You need to change the metallic and roughness factors. For floors you want to draw droplets splashing, for walls you want to draw the water pouring down.
 
 <video controls>
 <source src="/storage/app/media/global_uniforms/zelda_wet.mp4" type="video/mp4">

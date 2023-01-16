@@ -51,10 +51,10 @@ Each of these operates on the parent CSG node, in order. Supported operations ar
 
 ##### Process order
 
-Every CSG node will first process it's children nodes (an their operation: union, intersection substraction), in tree order and apply them to itself one after the other. 
+Every CSG node will first process it's children nodes (an their operation: union, intersection substraction), in tree order and apply them to itself one after the other.
 
 There is a special CSGCombiner node that is pretty much an empty shape. It will only combine children nodes. It's used for organization mostly.
- 
+
 ##### Polygon and lofting
 
 The CSGPolygon node is very convenient, a Polygon is drawn in 2D (in X,Y coordinates), and it can be extruded in the following ways:
@@ -64,7 +64,7 @@ The CSGPolygon node is very convenient, a Polygon is drawn in 2D (in X,Y coordin
 * **Path**: Extruded along a Path node. This operation is commonly called *lofting*.
 
 ![](/storage/app/media/csg/csg3.png)
- 
+
 ##### Custom meshes
 
 Any mesh can be used for CSG, this makes it easier to implement some types of custom shapes. Even multiple materials will be properly supported. There are some restrictions for geometry, though:
@@ -91,13 +91,13 @@ As many libraries seemed to exist for this, I decided to pick one and put it in 
 * Designed for 3D modelling or mathematics, so they used very tuned algorithms dealing with avoiding precision errors.
 
 Nothing was really meant for games. This led me to write a custom one for Godot, with focus exclusively on performance.
- 
-The current implementation is really simple. It does brute force clipping of triangles without relying on vertex IDs, or isolating edges to detect interior faces. Instead the implementation in Godot does triangle-triangle raytracing to detect which halves ended up inside the intersection. 
- 
+
+The current implementation is really simple. It does brute force clipping of triangles without relying on vertex IDs, or isolating edges to detect interior faces. Instead the implementation in Godot does triangle-triangle raytracing to detect which halves ended up inside the intersection.
+
 This is expensive per se, but it's optimized by doing a pre-aabb intersection and balanced binary trees to minimize the amount of ray tests. As a result, the performance is really good.
- 
+
 As the implementation is pure brute force, some visual artifacts may rarely appear in some cases if you look well, but truth is that they don't have any practical impact as CSG in Godot is mostly meant for level prototyping. In fact I'm sure for some types of game CSG could easily be usable in production.
- 
+
 ### Future
 
 The main missing feature now is the ability to export the scene to a 3D modelling software (likely via GLTF2), so the process of replacing CSG art by final art can be done by a professional artist. This will be added soon.

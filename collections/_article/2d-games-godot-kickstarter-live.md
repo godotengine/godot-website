@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/592/29d/1fe/59229d1fe233b092175821.jpg
 date: 2017-05-22 10:00:00
 ---
 
-## Learn to create your own 2d game inspired by Zelda! 
+## Learn to create your own 2d game inspired by Zelda!
 
 GDquest is on Kickstarter again, and we're doing this in collaboration with the Godot developers. We want to bring you **the first professional course for our favourite Free and Open Source Game Engine!**
 

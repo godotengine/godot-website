@@ -2,7 +2,7 @@
 title: "Dev snapshot: Godot 3.0.3 RC 1"
 excerpt: "This is the first release candidate for what will become Godot 3.0.3. In this release we have initial support for Mono export for desktop platforms. Please test this release and report bugs!"
 categories: ["pre-release"]
-author: Hein-Pieter van Braam
+author: HP van Braam
 image: /storage/app/uploads/public/5ae/a42/707/5aea427070767889266673.png
 date: 2018-05-02 23:06:38
 ---
@@ -15,7 +15,7 @@ The most important new feature for this release is initial support for Mono expo
 
 Note that some early users have reported some issues with the Mono downloads. This is being investigated.
 
-Please test this release with your existing projects and as usual: Any breakage of existing projects after upgrading is a bug. If we somehow missed something please [report a bug](https://github.com/godotengine/godot/issues/new). 
+Please test this release with your existing projects and as usual: Any breakage of existing projects after upgrading is a bug. If we somehow missed something please [report a bug](https://github.com/godotengine/godot/issues/new).
 
 I'd like to thank our wonderful community for smothering us in the warm glow of their pull requests and bug reports. This is looking like another great release!
 

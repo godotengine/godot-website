@@ -1,6 +1,5 @@
 ---
 description: "Pingo Adventure showcase page"
-layout: "showcase-item"
 date: 2022-06-01 00:00:00 +0000
 
 title: Pingo Adventure
@@ -8,7 +7,7 @@ author: Orb Square Studio
 website: https://orb-square.com
 release_date: TBD
 
-image: "/assets/showcase/pingo-adventure.jpg"
+image: "/assets/showcase/pingo-adventure-header.jpg"
 gallery: [
 	"/assets/showcase/pingo-adventure.jpg"
 ]

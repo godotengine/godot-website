@@ -22,7 +22,7 @@ This is mostly an internal change that most users won't see outright but, beside
 
 #### Removed PoolArrays (PoolVector in C++), replaced by PackedArrays
 
-Godot offered PoolArray as a type of variable, which was useful for storing large arrays in a compact way. They were designed for 32 bits CPUs with small address space, to allow packing memory and avoiding memory fragmentation. 
+Godot offered PoolArray as a type of variable, which was useful for storing large arrays in a compact way. They were designed for 32 bits CPUs with small address space, to allow packing memory and avoiding memory fragmentation.
 
 Given pretty much all mainstream platforms are now 64 bits, this optimization is no longer required (64 bits operating systems have efficient memory allocation for large objects, putting them on opposite ends of the address space, which reduces memory fragmentation to the point of making it not a problem).
 
@@ -40,9 +40,9 @@ Besides this, this change allows to improve the internal C++ binding system, tak
 
 #### Support for named binds in Skin.
 
-Skin system was added in Godot 3.2, but it lacked named binds. This avoided you from merging objects with similar skeletons together (as an example, clothing exported as a separate scene to use for customizing a character). 
+Skin system was added in Godot 3.2, but it lacked named binds. This avoided you from merging objects with similar skeletons together (as an example, clothing exported as a separate scene to use for customizing a character).
 
-Named binds ensure that, as long as the bone name exists, the mesh will be able to bind to it. This improvement may eventually be cherry picked to Godot 3.x branch too. 
+Named binds ensure that, as long as the bone name exists, the mesh will be able to bind to it. This improvement may eventually be cherry picked to Godot 3.x branch too.
 
 This is not strictly a core change, but was requested by users due to the limitations of the new system.
 
@@ -50,7 +50,7 @@ This is not strictly a core change, but was requested by users due to the limita
 
 A lot of APIs in Godot use StringNames instead of Strings. StringNames are special types that contain a unique pointer to a string. When assigned a String, the pointer is always assumed to be the same for that string (no matter when it was assigned), ensuring comparisons are much faster than actual string comparisons (because it's just a pointer comparison).
 
-There are plenty of APIs in Godot that do this for efficiency, like names, method names, property names, class names, animation names, shader parameter names, skeleton bone names, translations keys, etc (the list is very long actually). 
+There are plenty of APIs in Godot that do this for efficiency, like names, method names, property names, class names, animation names, shader parameter names, skeleton bone names, translations keys, etc (the list is very long actually).
 
 Unfortunately GDScript and the binder (for C# and other languages) did not support this type, and all these functions received regular strings, which where very inefficiently converted to StringNames on each call.
 
@@ -58,7 +58,7 @@ With this change, users can pass StringNames directly to the Godot API and impro
 
 #### Support for integer vector types
 
-This was a widely requested feature by our users, specially for GDScript. It's useful for games which require cell based integer vector logic in 2D and 3D. Using floats for vector types in these types of games was wasteful and prone to error. 
+This was a widely requested feature by our users, specially for GDScript. It's useful for games which require cell based integer vector logic in 2D and 3D. Using floats for vector types in these types of games was wasteful and prone to error.
 
 The following new types were added:
 
@@ -68,7 +68,7 @@ The following new types were added:
 
 Users often complained that PoolArrays were immutable types, so accessing them inside sub-arrays, dictionaries, etc. or passing them to/from functions would always create copies.
 
-In the 4.x branch, besides no longer being pool based, they became references. 
+In the 4.x branch, besides no longer being pool based, they became references.
 
 #### Packed float and int arrays support 64 bit versions
 
