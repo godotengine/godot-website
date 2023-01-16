@@ -17,7 +17,7 @@ permalink: /rss.xml
 		<title>{{ post.title }}</title>
 		<link>https://godotengine.org{{ post.url }}</link>
 		<description>{{ post.content | xml_escape }}</description>
-		<pubDate>{{ post.date | date: "%a, %e %b %Y %X +0000" }}</pubDate>
+		<pubDate>{{ post.date | date: "%a, %d %b %Y %X +0000" }}</pubDate>
 	</item>
 	{% endfor %}
 
