@@ -31,7 +31,7 @@ Several features were added to Godot Physics since 3.x, such as softbodies and c
 
 The custom physics engine still has a considerable amount of issues remaining but we are working hard to ensure it is in a state deem for shipping when 4.0 reaches stability. It will continue seeing improvements afterwards, during the 4.1+ releases.
 
-That said, Godot 4.0 introduces the ability to bind custom physics engines in runtime (without recompiling Godot) via GDExtension, so its perfectly possibly for the community to integrate other engines such as PhysX, Jolt or Box2D if need to be.
+That said, Godot 4.0 introduces the ability to bind custom physics engines in runtime (without recompiling Godot) via GDExtension, so it's perfectly possible for the community to integrate other engines such as PhysX, Jolt or Box2D if need to be.
 
 ### Scripting
 
@@ -73,9 +73,9 @@ This is handled nowadays by a type of technology called "streaming". It means th
 * **Audio streaming**: Similar to animation streaming, it requires storing the first second or two of audio and then stream the rest directly from disk.
 
 
-Of the avobe, most are relatively straightforward to implement. The most complex is *mesh streaming*, which generally needs to be implemented together with a GPU culling strategy to ensure that very large amounts of models can be drawn at no CPU cost. This is more or less what techniques like *Nanite* do in Unreal, although Godot does not need to implement something that complex to be of use in most cases.
+Of the above, most are relatively straightforward to implement. The most complex is *mesh streaming*, which generally needs to be implemented together with a GPU culling strategy to ensure that very large amounts of models can be drawn at no CPU cost. This is more or less what techniques like *Nanite* do in Unreal, although Godot does not need to implement something that complex to be of use in most cases.
 
-Streaming is the most important feature missing for managing large scenes or open worlds. Without it, Godot users are subject to long loading times (as every texture, model and animation has to load before anything is shown). There is also a risk running out of memory if too many asets are used instead of streaming them.
+Streaming is the most important feature missing for managing large scenes or open worlds. Without it, Godot users are subject to long loading times (as every texture, model and animation has to load before anything is shown). There is also a risk running out of memory if too many assets are used instead of streaming them.
 
 ### Low level rendering access
 
@@ -93,7 +93,7 @@ Still, the scene system (which uses those servers), despite several usability im
 
 Scenes nodes in Godot are mostly intended to carry complex high level behaviors (such as animation trees, kinematic characters, IK, skeletons, etc) for limited amounts of objects (in the hundreds at much). Currently, no threading happens at all and only a single CPU core is used. This makes it very inefficient.
 
-This makes it is an ideal target for optimizing with multithreading. There is [an initial proposal](https://github.com/godotengine/godot-proposals/issues/4962) on threaded processing for scene nodes, which should give complex scenes a very significant performance boost.
+This makes it an ideal target for optimizing with multithreading. There is [an initial proposal](https://github.com/godotengine/godot-proposals/issues/4962) on threaded processing for scene nodes, which should give complex scenes a very significant performance boost.
 
 ### Swarms
 
@@ -101,7 +101,7 @@ Scenes, as mentioned before, are designed complex high level behaviors in the hu
 
 This is needed for some types of game mechanics such as:
 
-* Projectiles (bullet hell as example)
+* Projectiles (bullet hell for example)
 * Units in some types of strategy games with thousands of entitites roaming across a map.
 * Cars/People in city simulators, where thousands appear all across the city.
 * Sandbox style simulations.
