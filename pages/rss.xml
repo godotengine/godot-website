@@ -15,9 +15,9 @@ permalink: /rss.xml
 	{% for post in latest_posts limit:24 %}
 	<item>
 		<title>{{ post.title }}</title>
-		<link>{{ post.url }}</link>
+		<link>https://godotengine.org{{ post.url }}</link>
 		<description>{{ post.content | xml_escape }}</description>
-		<pubDate>{{ post.date | date: "%a, %B %e %Y %X +0000" }}</pubDate>
+		<pubDate>{{ post.date | date: "%a, %e %b %Y %X +0000" }}</pubDate>
 	</item>
 	{% endfor %}
 
