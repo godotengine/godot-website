@@ -73,19 +73,19 @@ collection: article
 	<div class="flex pagination">
 		{% if paginator.previous_page %}
 		<a class="pagination-previous"
-			href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">← Previous</a>
+			href="{{ paginator.previous_page_path | prepend: site.url | replace: 'index.html', '' }}">← Previous</a>
 		{% endif %}
 
 		{% if paginator.page_trail %}
 		{% for trail in paginator.page_trail %}
 		<a {% if page.url==trail.path %}class="active" {% endif %} title="{{trail.title}}"
-			href="{{ trail.path | prepend: site.baseurl | replace: 'index.html', '' }}">{{ trail.num }}</a>
+			href="{{ trail.path | prepend: site.url | replace: 'index.html', '' }}">{{ trail.num }}</a>
 		{% endfor %}
 		{% endif %}
 
 		{% if paginator.next_page %}
 		<a class="pagination-next"
-			href="{{ paginator.next_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">Next →</a>
+			href="{{ paginator.next_page_path | prepend: site.url | replace: 'index.html', '' }}">Next →</a>
 		{% endif %}
 	</div>
 	<div class="posts">
@@ -110,19 +110,19 @@ collection: article
 	<div class="flex pagination">
 		{% if paginator.previous_page %}
 		<a class="pagination-previous"
-			href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">← Previous</a>
+			href="{{ paginator.previous_page_path | prepend: site.url | replace: 'index.html', '' }}">← Previous</a>
 		{% endif %}
 
 		{% if paginator.page_trail %}
 		{% for trail in paginator.page_trail %}
 		<a {% if page.url==trail.path %}class="active" {% endif %} title="{{trail.title}}"
-			href="{{ trail.path | prepend: site.baseurl | replace: 'index.html', '' }}">{{ trail.num }}</a>
+			href="{{ trail.path | prepend: site.url | replace: 'index.html', '' }}">{{ trail.num }}</a>
 		{% endfor %}
 		{% endif %}
 
 		{% if paginator.next_page %}
 		<a class="pagination-next"
-			href="{{ paginator.next_page_path | prepend: site.baseurl | replace: 'index.html', '' }}">Next →</a>
+			href="{{ paginator.next_page_path | prepend: site.url | replace: 'index.html', '' }}">Next →</a>
 		{% endif %}
 	</div>
 </div>

@@ -7,15 +7,15 @@ permalink: /rss.xml
 	<channel>
 
 	<title>Godot Engine Official</title>
-	<link>{{ site.baseurl }}</link>
+	<link>{{ site.url }}</link>
 	<description>Godot is a 2D and 3D free and open source game engine developed by a community of contributors. It provides a huge set of common tools, so you can just focus on making your game without reinventing the wheel.</description>
-	<atom:link href="{{ site.baseurl }}/rss.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
 
 	{% assign latest_posts = site.article | sort:"date" | reverse %}
 	{% for post in latest_posts limit:24 %}
 	<item>
 		<title>{{ post.title }}</title>
-		<link>{{ site.baseurl }}{{ post.url }}</link>
+		<link>{{ site.url }}{{ post.url }}</link>
 		<description>{{ post.content | xml_escape }}</description>
 		<pubDate>{{ post.date | date: "%a, %d %b %Y %X +0000" }}</pubDate>
 	</item>
