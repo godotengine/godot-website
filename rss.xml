@@ -10,6 +10,142 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.0 beta 13</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-13/</link>
+		<description>&lt;p&gt;With the first Godot 4.0 Release Candidate on the horizon we continue to release beta snapshots frequently and relentlessly! Such cadence allows us to better measure the overall stability and quickly catch regressions, especially when a lot of features are worked on at the same time.&lt;/p&gt;
+
+&lt;p&gt;This week we release a new batch of improvements and fixes, as well as some new features. Unfortunately, we also have to rollback one of the core animations features. After a lot of testing and consideration we’ve decided to postpone improvements to the inverse kinematics system until a future Godot 4.x release, removing the currently unstable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SkeletonModificationStack3D&lt;/code&gt;. This decision allows us to better focus efforts of the Animation team on stabilizing other features.&lt;/p&gt;
+
+&lt;p&gt;This beta includes a few big changes which may interest a lot of users:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SkeletonModificationStack3D&lt;/code&gt; has been removed, with the 3D inverse kinematic API being more or less reset to the state of Godot 3.x. We will focus on fixing regressions in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SkeletonIK3D&lt;/code&gt; for the remaining time, and work has already started on an improved IK system for a future Godot 4.x version (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71137&quot;&gt;GH-71137&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can now deploy your projects to all desktop platforms over SSH, as well as run a remote debug session similar to what we already offered for Android and Web. This is especially useful for the developers targeting the Steam Deck, as you can configure it to have one-click deploy to your device. As the number of remote debug options is quite big by now, we’ve packed them neatly in a single drop-down menu (&lt;a href=&quot;https://github.com/godotengine/godot/pull/63312&quot;&gt;GH-63312&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/70701&quot;&gt;GH-70701&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Several breaking changes were made to the C# API to bring it closer to the engine core and make it more consistent overall (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71445&quot;&gt;GH-71445&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71458&quot;&gt;GH-71458&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71423&quot;&gt;GH-71423&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71431&quot;&gt;GH-71431&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71424&quot;&gt;GH-71424&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71456&quot;&gt;GH-71456&lt;/a&gt;). There’s been a number of documentation improvements related to C# too, as a part of our &lt;a href=&quot;/article/godot-4-0-docs-sprint/&quot;&gt;ongoing documentation sprint&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Methods for drawing 2D lines and primitive shapes that take width as a parameter have been fixed and can now correctly handle widths at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.0&lt;/code&gt; or below (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69851&quot;&gt;GH-69851&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The list of all global script classes (and their icons) is no longer stored in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;project.godot&lt;/code&gt; file. It is now saved to a dedicated file inside of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.godot&lt;/code&gt; folder (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70557&quot;&gt;GH-70557&lt;/a&gt;). This should improve VCS diffs for your projects.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you’re exporting your project from the command line and don’t have the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.godot&lt;/code&gt; folder available, you currently need to make sure to run the editor at least once (in the headless mode) before trying to export it, similarly to what is required to import resources. &lt;a href=&quot;https://github.com/godotengine/godot/issues/69511&quot;&gt;This is a bug&lt;/a&gt; and should be solved eventually (so that you can &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--export-debug&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--export-release&lt;/code&gt; directly from a Git checkout without &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.godot&lt;/code&gt; folder).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;#downloads&quot;&gt;Jump to the &lt;strong&gt;Downloads&lt;/strong&gt; section.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also &lt;a href=&quot;https://editor.godotengine.org/releases/4.0.beta13/godot.editor.html&quot;&gt;try the Web editor&lt;/a&gt; (early testing, it’s still slow and unstable).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The illustration picture for this article is from&lt;/em&gt; &lt;a href=&quot;https://store.steampowered.com/app/2211930/Lone_Knight/&quot;&gt;&lt;strong&gt;Lone Knight&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Jean Makes Games. The project is currently being ported to Godot 4 beta. Follow Jean Makes Games on &lt;a href=&quot;https://twitter.com/Pixl_Jean&quot;&gt;Twitter&lt;/a&gt; for updates.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-new&quot;&gt;What’s new&lt;/h2&gt;
+
+&lt;p&gt;If you’re interested in an overview of what’s new in Godot 4.0 beta in general, have a look at the detailed release notes for &lt;a href=&quot;/article/dev-snapshot-godot-4-0-beta-1&quot;&gt;4.0 beta 1&lt;/a&gt;. In this blog post, we will only cover the main changes since the previous beta release.&lt;/p&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/godotengine/godot/compare/3c9bf4bc210a8e6a208f30ca59de4d4d7e18c04d...caacade569eb7a541aaa7a8cdc3eedffca1422d9&quot;&gt;&lt;strong&gt;changelog on GitHub&lt;/strong&gt;&lt;/a&gt;, or the &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-13T10%3A00..2023-01-17T13%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0&quot;&gt;&lt;strong&gt;list of merged PRs&lt;/strong&gt;&lt;/a&gt;, for an overview of all changes since 4.0 beta 12 (88 commits – excluding merge commits ― from 39 contributors).&lt;/p&gt;
+
+&lt;p&gt;While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-13T10%3A00..2023-01-17T13%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;breaks compat&lt;/code&gt; label&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;p&gt;Some of the most notables feature changes in this update are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Animation: Reset animation on playback stop (&lt;a href=&quot;https://github.com/godotengine/godot/pull/33733&quot;&gt;GH-33733&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SkeletonModificationStack3D&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Skeleton3D&lt;/code&gt; API cleanup (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71137&quot;&gt;GH-71137&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Implement toggling pause / stop button to AnimationPlayerEditor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71321&quot;&gt;GH-71321&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Buildsystem: Fix feature build profile being parsed too late (and rename the option to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build_profile&lt;/code&gt;) (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71508&quot;&gt;GH-71508&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IsFinite&lt;/code&gt; to C# Variants (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71339&quot;&gt;GH-71339&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IsZeroApprox&lt;/code&gt; to C# vectors (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71343&quot;&gt;GH-71343&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;includeBorders&lt;/code&gt; parameter from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rect2i.Intersects&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AABB.Intersects&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71423&quot;&gt;GH-71423&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Sync &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Basis&lt;/code&gt; with Core (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71424&quot;&gt;GH-71424&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rotation&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scale&lt;/code&gt; properties with get methods (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71431&quot;&gt;GH-71431&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Add missing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Transform{2D,3D}&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Basis&lt;/code&gt; constructors (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71445&quot;&gt;GH-71445&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Sync &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plane&lt;/code&gt; with Core (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71456&quot;&gt;GH-71456&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Make &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Length&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LengthSquared&lt;/code&gt; into methods in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Quaternion&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71458&quot;&gt;GH-71458&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Implement &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mathf.SinCos&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71496&quot;&gt;GH-71496&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Core: Move global script class cache to separate file (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70557&quot;&gt;GH-70557&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Core: Refactor &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ProjectSetting&lt;/code&gt; overrides and make them work in the editor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71325&quot;&gt;GH-71325&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Core: Fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;change_scene&lt;/code&gt; memory leak due to duplicate instantiation (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71459&quot;&gt;GH-71459&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Fix contextual visibility of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TileSet&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TileMap&lt;/code&gt; editors (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65370&quot;&gt;GH-65370&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Implement &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROPERTY_HINT_MULTILINE_TEXT&lt;/code&gt; support for Array[String] and Dictionary (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70540&quot;&gt;GH-70540&lt;/a&gt;).
+    &lt;ul&gt;
+      &lt;li&gt;This also means you can now use an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@export_multiline&lt;/code&gt; annotation with such array and dictionary properties in GDScript.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Editor: Keep terrain choice when changing layer in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TileMap&lt;/code&gt; editor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70601&quot;&gt;GH-70601&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Move remote debug buttons to a single menu (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70701&quot;&gt;GH-70701&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Fix recursive resource inclusion check (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71229&quot;&gt;GH-71229&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TileSet&lt;/code&gt; atlas merging not working correctly (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71335&quot;&gt;GH-71335&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Fix editor progress dialog having wrong GUI theme (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71360&quot;&gt;GH-71360&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Fix node preview crashes after updating visual shader node (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71385&quot;&gt;GH-71385&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Make keyboard shortcuts in tile data editors consistent with tilemap editor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71517&quot;&gt;GH-71517&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Export: Add one-click deploy over SSH for the desktop exports (&lt;a href=&quot;https://github.com/godotengine/godot/pull/63312&quot;&gt;GH-63312&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Make script annotations be placed before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class_name&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extends&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/67774&quot;&gt;GH-67774&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Fix auto-complete not suggesting custom class names on identifiers (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69970&quot;&gt;GH-69970&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Fix typing of iterator in for loop (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71279&quot;&gt;GH-71279&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Fix infinite recursion in resolution of enum values (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71329&quot;&gt;GH-71329&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Fix cyclic reference errors while reducing identifiers (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71434&quot;&gt;GH-71434&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Calculate the mouse focus inverse transform only when needed (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69598&quot;&gt;GH-69598&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Button shortcuts no longer “press” the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Button&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71328&quot;&gt;GH-71328&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Add expand mode compatibility to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TextureRect&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71347&quot;&gt;GH-71347&lt;/a&gt;).
+    &lt;ul&gt;
+      &lt;li&gt;This ensures that projects made &lt;strong&gt;prior to beta 12&lt;/strong&gt; don’t have their &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TextureRect&lt;/code&gt;s suddenly grow out of proportions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GUI: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WINDOW_FLAG_MOUSE_PASSTHROUGH&lt;/code&gt; flag and enable it for tooltips (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71502&quot;&gt;GH-71502&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Input: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Key::CTRL_OR_CMD&lt;/code&gt; and use it to fix shortcut for tilemap painting tools on macOS (&lt;a href=&quot;https://github.com/godotengine/godot/pull/64021&quot;&gt;GH-64021&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Multiplayer: Fix nested spawning during “ready” (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71534&quot;&gt;GH-71534&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Plugins: Retry loading addons after filesystem scan (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70668&quot;&gt;GH-70668&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Fix polyline not supporting closed polygons and not having a uniform width (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62236&quot;&gt;GH-62236&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Fix scaling issue in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;draw_line&lt;/code&gt; and similar methods (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69851&quot;&gt;GH-69851&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Fix GPUParticles2D not recomputing transforms each frame (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71520&quot;&gt;GH-71520&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Properly initialize &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;directional_light_count&lt;/code&gt; in RD sky shaders (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71526&quot;&gt;GH-71526&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Update ImmediateMesh to use octohedral encoded normals (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71529&quot;&gt;GH-71529&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;As well as many &lt;a href=&quot;/article/godot-4-0-docs-sprint/&quot;&gt;improvements to the documentation&lt;/a&gt; and several new test suites for the engine.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This release is built from commit &lt;a href=&quot;https://github.com/godotengine/godot/commit/caacade569eb7a541aaa7a8cdc3eedffca1422d9&quot;&gt;caacade56&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;downloads&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;downloads&quot;&gt;Downloads&lt;/h2&gt;
+
+&lt;p&gt;The downloads for this dev snapshot can be found directly on our repository:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta13/&quot;&gt;Standard build&lt;/a&gt; (GDScript, GDExtension).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta13/mono&quot;&gt;.NET 6 build&lt;/a&gt; (C#, GDScript, GDExtension).
+    &lt;ul&gt;
+      &lt;li&gt;Requires &lt;a href=&quot;https://dotnet.microsoft.com/en-us/download/dotnet/6.0&quot;&gt;.NET SDK 6.0&lt;/a&gt; installed in a standard location. .NET 7.0 is not supported yet, so make sure to install .NET 6.0 specifically.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known issues&lt;/h2&gt;
+
+&lt;p&gt;As we are still in the early beta phase of development, there are still many issues to fix, some of which have already been reported and are being worked on. See the GitHub issue tracker for a list of &lt;a href=&quot;https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+&quot;&gt;known bugs in the 4.0 milestone&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;bug-reports&quot;&gt;Bug reports&lt;/h2&gt;
+
+&lt;p&gt;As a tester, you are encouraged to &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;open bug reports&lt;/a&gt; if you experience issues with this release. Please check first the &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;existing issues on GitHub&lt;/a&gt;, using the search function with relevant keywords, to ensure that the bug you experience is not known already.&lt;/p&gt;
+
+&lt;p&gt;As in any major release there are going to be compatibility breaking changes. However, we still try to provide a migration path for your projects. If you experience a regression without a known migration path or workaround, do not hesitate to report it.&lt;/p&gt;
+
+&lt;h2 id=&quot;support&quot;&gt;Support&lt;/h2&gt;
+
+&lt;p&gt;Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;donations from the Godot community&lt;/a&gt;. A big thankyou to everyone who has contributed &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/AUTHORS.md&quot;&gt;their time&lt;/a&gt; or &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/DONORS.md&quot;&gt;financial support&lt;/a&gt; to the project!&lt;/p&gt;
+
+&lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so on &lt;a href=&quot;https://www.patreon.com/godotengine&quot;&gt;Patreon&lt;/a&gt; or &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;PayPal&lt;/a&gt;.&lt;/p&gt;
+</description>
+		<pubDate>Tue, 17 Jan 2023 17:00:00 +0000</pubDate>
+	</item>
+	
+	<item>
 		<title>Godot for AA/AAA game development - What's missing?</title>
 		<link>https://godotengine.org/article/whats-missing-in-godot-for-aaa/</link>
 		<description>&lt;p&gt;Godot 4.0 is coming out soon. It includes major improvements all across the board in features, performance, and usability. Still, one of the biggest questions the community has is: How does it compare with mainstream commercial offerings?&lt;/p&gt;
@@ -2141,183 +2277,6 @@ float some_float2 = float(some_double - double(some_float1));
 &lt;h2 id=&quot;thank-you&quot;&gt;Thank you!!&lt;/h2&gt;
 </description>
 		<pubDate>Thu, 06 Oct 2022 15:17:15 +0000</pubDate>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 2</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-2/</link>
-		<description>&lt;p&gt;We released &lt;a href=&quot;/article/dev-snapshot-godot-4-0-beta-1&quot;&gt;Godot 4.0 beta 1&lt;/a&gt; two weeks ago! That was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven’t yet, for an overview of some of the main highlight of Godot 4.0.&lt;/p&gt;
-
-&lt;p&gt;But the “1” in beta 1 means that it’s only the first step of the journey, and like for the alpha phase, we’re going to release new beta snapshots roughly every other week. So here’s beta 2!&lt;/p&gt;
-
-&lt;p&gt;The reception of beta 1 was surprisingly good – we’re happy to see the community tinker with the beta, report bugs and provide feedback on the new features. Many bugs have been fixed in just two weeks, with close to &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2022-09-15..2022-09-29+milestone%3A4.0+is%3Amerged+&quot;&gt;250 PRs merged&lt;/a&gt;, many of which fixed bugs reported by beta testers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#downloads&quot;&gt;Jump to the &lt;strong&gt;Downloads&lt;/strong&gt; section.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;The illustration picture for this article is a screenshot of &lt;a href=&quot;https://twitter.com/devinthewater&quot;&gt;devmar&lt;/a&gt;’s game&lt;/em&gt; &lt;strong&gt;Penitent&lt;/strong&gt;, &lt;em&gt;which is being developed with Godot 4.0. Check out devmar’s amazing devlogs and tutorials &lt;a href=&quot;https://www.youtube.com/channel/UCc25HR6YVwwA0lFkvqXBtGA/featured&quot;&gt;on YouTube&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;major-changes&quot;&gt;Major changes&lt;/h2&gt;
-
-&lt;p&gt;This beta 2 is not only bugfixes though! There were a few very important features that we didn’t manage to review in time for beta 1, and which have now been implemented in beta 2.&lt;/p&gt;
-
-&lt;h3 id=&quot;exporting-custom-resources&quot;&gt;Exporting custom resources&lt;/h3&gt;
-
-&lt;p&gt;Most notably a much improved support for exporting user-defined custom resources (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62411&quot;&gt;GH-62411&lt;/a&gt;), which used to be our &lt;a href=&quot;https://github.com/godotengine/godot-proposals/issues/18&quot;&gt;#1 most requested feature&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;You can now export your custom resources (named with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class_name&lt;/code&gt;) using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@export var some_res: MyCustomRes&lt;/code&gt;, and the Inspector will let you create and load instances of that resource type easily. There’s still more work needed to integrate this properly in e.g. the Quick Load menu, for which we need to solve performance issues with the parsing of global classes.&lt;/p&gt;
-
-&lt;p&gt;This is all thanks to Will Nations (&lt;a href=&quot;https://github.com/willnationsdev&quot;&gt;willnationsdev&lt;/a&gt;) whom we can’t thank enough for his dedication and perseverance with this feature. It’s been in the pipeline for a long time and went through multiple iterations until we finally merged the current one. And there’s more work pending to improve the underlying core components to make things more performant and easier to integrate in various parts of the editor and plugins.&lt;/p&gt;
-
-&lt;h3 id=&quot;filedirectory-wrappers-replaced-by-fileaccessdiraccess&quot;&gt;File/Directory wrappers replaced by FileAccess/DirAccess&lt;/h3&gt;
-
-&lt;p&gt;Thanks to the combined work of Tomasz Chabora (&lt;a href=&quot;https://github.com/KoBeWi&quot;&gt;KoBeWi&lt;/a&gt;) and Pāvels Nadtočajevs (&lt;a href=&quot;https://github.com/bruvzg&quot;&gt;bruvzg&lt;/a&gt;), we could replace the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;File&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Directory&lt;/code&gt; wrappers that we had to use to expose underlying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FileAccess&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DirAccess&lt;/code&gt; APIs, which are the ones Godot uses internally (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65271&quot;&gt;GH-65271&lt;/a&gt;). &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FileAccess&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DirAccess&lt;/code&gt; were made reference counted, and given a lot of convenient static methods.&lt;/p&gt;
-
-&lt;p&gt;Check the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FileAccess&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DirAccess&lt;/code&gt; documentation in the editor for details, but to get you started, you should replace this kind of code:&lt;/p&gt;
-
-&lt;div class=&quot;language-gdscript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;user://save_game.dat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;user://save_game.dat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WRITE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;store_var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;With this, using the new static method and class name:&lt;/p&gt;
-&lt;div class=&quot;language-gdscript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAccess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;user://save_game.dat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAccess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;user://save_game.dat&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileAccess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WRITE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;store_var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# No need for close(), `file` is reference counted and will be closed when going out of scope.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;xr-improvements-all-around&quot;&gt;XR improvements all around&lt;/h3&gt;
-
-&lt;p&gt;Contributors in the XR area have been busy, and a lot of their work got merged these past two weeks!&lt;/p&gt;
-
-&lt;p&gt;While XR maintainer Bastiaan Olij (&lt;a href=&quot;https://github.com/BastiaanOlij&quot;&gt;BastiaanOlij&lt;/a&gt;) was busy finalizing OpenXR hand tracking (&lt;a href=&quot;https://github.com/godotengine/godot/pull/60313&quot;&gt;GH-60313&lt;/a&gt;) and palm pose extension support (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66282&quot;&gt;GH-66282&lt;/a&gt;), other contributors have been working magic:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Gergely Kis (&lt;a href=&quot;https://github.com/kisg&quot;&gt;kisg&lt;/a&gt;) and &lt;a href=&quot;https://github.com/korompg&quot;&gt;korompg&lt;/a&gt; implemented support for dynamically loading the OpenXR loader on Android (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65798&quot;&gt;GH-65798&lt;/a&gt;). This makes it possible to load the Meta Quest OpenXR loader on Meta devices.&lt;/li&gt;
-  &lt;li&gt;David Snopek (&lt;a href=&quot;https://github.com/dsnopek&quot;&gt;dsnopek&lt;/a&gt;) got WebXR minimally working again (&lt;a href=&quot;https://github.com/godotengine/godot/pull/64514&quot;&gt;GH-64514&lt;/a&gt;) using the WebGL 2 renderer implemented by Clay John (&lt;a href=&quot;https://github.com/clayjohn&quot;&gt;clayjohn&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/konczg&quot;&gt;konczg&lt;/a&gt; implemented the OpenXR passthrough extension wrapper (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65898&quot;&gt;GH-65898&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;and-more&quot;&gt;And more!&lt;/h3&gt;
-
-&lt;p&gt;And there’s a lot more, but I’m running out of time to describe it and I want to release this beta today :P so please read on and check the PRs referenced below for details.&lt;/p&gt;
-
-&lt;p&gt;One thing worth noting though: With the beta phase, we’re mostly done with feature implementation and we’re doing our best to preserve compatibility so that beta users can easily move to future betas and stable builds. That being said, there are still occasions where changing an API before committing to it for the whole 4.x lifetime is worth it (e.g. the File/FileAccess change above), so some minor porting from beta to beta might still be needed.&lt;/p&gt;
-
-&lt;p&gt;We’re trying to be reasonable with it and it shouldn’t take more than a few minutes each time, if and when there are compat breaking changes. We’re going to carefully apply the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;breaks compat&lt;/code&gt; label to PRs which do break compatibility from now on, so you can always review that list to see if any change impacts your projects. Here’s the list of &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2022-09-15..2022-09-28+is%3Amerged+milestone%3A4.0+label%3A%22breaks+compat%22&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;breaks compat&lt;/code&gt; changes made between beta 1 and beta 2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;whats-new&quot;&gt;What’s new&lt;/h2&gt;
-
-&lt;p&gt;If you’re interested in an overview of what’s new in Godot 4.0 beta in general, have a look at the detailed release notes for &lt;a href=&quot;/article/dev-snapshot-godot-4-0-beta-1&quot;&gt;4.0 beta 1&lt;/a&gt;. In this beta 2 blog post, we will only cover the main changes since the previous beta release.&lt;/p&gt;
-
-&lt;p&gt;See the &lt;a href=&quot;https://github.com/godotengine/godot/compare/4ba934bf3d1e697d8f332b5e8cfd694cdf49a7ba...f8745f2f71c79972df66f17a3da75f6e328bc55d&quot;&gt;&lt;strong&gt;changelog on GitHub&lt;/strong&gt;&lt;/a&gt; for an overview of all changes since 4.0 beta 1 (236 commits – excluding merge commits ― from 67 contributors).&lt;/p&gt;
-
-&lt;p&gt;Some of the most notables feature changes in this update are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Animation: Allow negative &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;speed_scale&lt;/code&gt; in AnimatedSprite2D &amp;amp; 3D (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65148&quot;&gt;GH-65148&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Buildsystem: Refactor handling of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;production&lt;/code&gt; flag and per-platform LTO defaults (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65745&quot;&gt;GH-65745&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;C#: Don’t marshal multidimensional arrays (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65946&quot;&gt;GH-65946&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;C#: Guard against null assemblies (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66253&quot;&gt;GH-66253&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Introduce more static methods to directory API (&lt;a href=&quot;https://github.com/godotengine/godot/pull/60408&quot;&gt;GH-60408&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Make ImageFormatLoader extensible (&lt;a href=&quot;https://github.com/godotengine/godot/pull/63594&quot;&gt;GH-63594&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Replace File/Directory with FileAccess/DirAccess (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65271&quot;&gt;GH-65271&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Treat JSON as resource files (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65295&quot;&gt;GH-65295&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Use variadic template in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vformat()&lt;/code&gt; (allow more than 5 arguments) (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65760&quot;&gt;GH-65760&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Add missing initial window flags and window mode to the project settings (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65816&quot;&gt;GH-65816&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Add QuadMesh back as a subclass of PlaneMesh (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65918&quot;&gt;GH-65918&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Change UndoRedo to use Callables (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66070&quot;&gt;GH-66070&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Core: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Callable.callv&lt;/code&gt; method (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66177&quot;&gt;GH-66177&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Editor: Reorganize connection dialog (&lt;a href=&quot;https://github.com/godotengine/godot/pull/60478&quot;&gt;GH-60478&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Editor: Script-class-aware Inspector &amp;amp; related controls (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62413&quot;&gt;GH-62413&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Editor: Show override icon in script editor gutter (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65535&quot;&gt;GH-65535&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Editor: Rename editor run/pause/stop shortcuts and tooltips for consistency (&lt;a href=&quot;https://github.com/godotengine/godot/pull/64756&quot;&gt;GH-64756&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Editor: Print an error if trying to run a self-contained editor in a project folder (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66200&quot;&gt;GH-66200&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Export: Fix sub-scene root nodes not getting the correct inheritance chain when exporting (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66289&quot;&gt;GH-66289&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GDExtension: Implement support for typed arrays (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65817&quot;&gt;GH-65817&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GDExtension: Add macros to generate wrappers for module functions (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66492&quot;&gt;GH-66492&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GDScript: Add support for exportign user-defined resource types (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62411&quot;&gt;GH-62411&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GDScript: Fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;preload&lt;/code&gt; fails in standalone builds unless files are present in directory (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65152&quot;&gt;GH-65152&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GDScript: Fix loading/updating scripts after external changes on disk (manually or via LSP) (&lt;a href=&quot;https://github.com/godotengine/godot/pull/63224&quot;&gt;GH-63224&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/66405&quot;&gt;GH-66405&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GUI: Implement Tree recursive folding (like SceneTreeDock) (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62666&quot;&gt;GH-62666&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GUI: Use embedding viewport instead of parent viewport to determine popup rect (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65550&quot;&gt;GH-65550&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GUI: Fix minimum size calculation for TabContainer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66012&quot;&gt;GH-66012&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;GUI: Add option to apply built-in RichTextLabel effects to the individual connected glyphs (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66068&quot;&gt;GH-66068&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Import: Add 16-bits TGA support (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65717&quot;&gt;GH-65717&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Input: Fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MOUSE_MODE_CAPTURED&lt;/code&gt; not working correctly with popups (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65496&quot;&gt;GH-65496&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;macOS: Fix redraw lag at the edge of the resizing window (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65831&quot;&gt;GH-65831&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;macOS: Add scene/project name to the editor title, improve window button placement (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66152&quot;&gt;GH-66152&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/66254&quot;&gt;GH-66254&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;macOS: Process menu callback after event processing step to avoid event queue corruption (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66377&quot;&gt;GH-66377&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Navigation: Add NavigationPathQuery objects and NavigationServer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;query_path()&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62429&quot;&gt;GH-62429&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Networking: HTTP: Implement streaming decompression (&lt;a href=&quot;https://github.com/godotengine/godot/pull/63740&quot;&gt;GH-63740&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Physics: Turn on recovery as collisions only for floor snapping (&lt;a href=&quot;https://github.com/godotengine/godot/pull/64728&quot;&gt;GH-64728&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Physics: Add recovery as collision in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;move_and_collide&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test_move&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65931&quot;&gt;GH-65931&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Split rendering driver project setting into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rendering_method&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rendering/*/driver&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65541&quot;&gt;GH-65541&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Fix/restore BackBufferCopy (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65794&quot;&gt;GH-65794&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Restore fog in the Vulkan mobile renderer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65915&quot;&gt;GH-65915&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Fix SpotLight3D and OmniLight3D project not working (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66065&quot;&gt;GH-66065&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Move deband to end of tonemapping (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66317&quot;&gt;GH-66317&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Fix broken 2D light blending (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66370&quot;&gt;GH-66370&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Fix unshaded CanvasItem mode for Vulkan (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66394&quot;&gt;GH-66394&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Rendering: Take FXAA samples from half-pixel coordinates to improve quality (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66466&quot;&gt;GH-66466&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;TextServer: Always prefer main font over fallbacks, regardless of script/language support (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66418&quot;&gt;GH-66418&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Web: Add feature detection helpers to JS Engine class (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65975&quot;&gt;GH-65975&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Windows: Fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WM_CHAR&lt;/code&gt; processing code using Unicode char instead of Virtual key (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66295&quot;&gt;GH-66295&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Windows: Fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make_dir()&lt;/code&gt; choking on “..” (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66467&quot;&gt;GH-66467&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;XR: Add OpenXR hand tracking support (&lt;a href=&quot;https://github.com/godotengine/godot/pull/60313&quot;&gt;GH-60313&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;XR: Get WebXR minimally working again in Godot 4 (&lt;a href=&quot;https://github.com/godotengine/godot/pull/64514&quot;&gt;GH-64514&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/65800&quot;&gt;GH-65800&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;XR: Dynamic loading of OpenXR Loader on Android (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65798&quot;&gt;GH-65798&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;XR: Add passthrough extension wrapper (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65898&quot;&gt;GH-65898&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;XR: Add OpenXR palm pose extension support (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66282&quot;&gt;GH-66282&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Thirdparty libraries: libpng 1.6.38.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This release is built from commit &lt;a href=&quot;https://github.com/godotengine/godot/commit/f8745f2f71c79972df66f17a3da75f6e328bc55d&quot;&gt;f8745f2f7&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&quot;downloads&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;downloads&quot;&gt;Downloads&lt;/h2&gt;
-
-&lt;p&gt;The downloads for this dev snapshot can be found directly on our repository:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta2/&quot;&gt;Standard build&lt;/a&gt; (GDScript, GDExtension).&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta2/mono&quot;&gt;.NET 6 build&lt;/a&gt; (C#, GDScript, GDExtension).
-    &lt;ul&gt;
-      &lt;li&gt;Requires &lt;a href=&quot;https://dotnet.microsoft.com/en-us/download/dotnet/6.0&quot;&gt;.NET SDK 6.0&lt;/a&gt; installed in a standard location.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;known-issues&quot;&gt;Known issues&lt;/h2&gt;
-
-&lt;p&gt;As we are still in the early beta phase of development, there are still many issues to fix, some of which have already been reported and are being worked on. See the GitHub issue tracker for a list of &lt;a href=&quot;https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+&quot;&gt;known bugs in the 4.0 milestone&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Some noteworthy issues you might run into in this beta 2:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Exporting a Web build fails on Windows due to some file locking issue (&lt;a href=&quot;https://github.com/godotengine/godot/issues/65660&quot;&gt;GH-65660&lt;/a&gt;).
-    &lt;ul&gt;
-      &lt;li&gt;See the issue for a potential workaround.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Following &lt;a href=&quot;https://github.com/godotengine/godot/pull/65541&quot;&gt;GH-65541&lt;/a&gt;, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rendering/renderer/rendering_method.mobile&lt;/code&gt; project setting wrongly defaults to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forward_plus&lt;/code&gt;, which means using the high-end forward+ rendering method on mobile. Change it to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mobile&lt;/code&gt; if you want to export projects to Android or iOS.&lt;/li&gt;
-  &lt;li&gt;LightmapGI and VoxelGI are reported to be broken in this beta (&lt;a href=&quot;https://github.com/godotengine/godot/issues/66618&quot;&gt;GH-66618&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/issues/66639&quot;&gt;GH-66639&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bug-reports&quot;&gt;Bug reports&lt;/h2&gt;
-
-&lt;p&gt;As a tester, you are encouraged to &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;open bug reports&lt;/a&gt; if you experience issues with this release. Please check first the &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;existing issues on GitHub&lt;/a&gt;, using the search function with relevant keywords, to ensure that the bug you experience is not known already.&lt;/p&gt;
-
-&lt;p&gt;As in any major release there are going to be compatibility breaking changes. However, we still try to provide a migration path for your projects. If you experience a regression without a known migration path or workaround, do not hesitate to report it.&lt;/p&gt;
-
-&lt;h2 id=&quot;support&quot;&gt;Support&lt;/h2&gt;
-
-&lt;p&gt;Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;donations from the Godot community&lt;/a&gt;. A big thankyou to everyone who has contributed &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/AUTHORS.md&quot;&gt;their time&lt;/a&gt; or &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/DONORS.md&quot;&gt;financial support&lt;/a&gt; to the project!&lt;/p&gt;
-
-&lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so on &lt;a href=&quot;https://www.patreon.com/godotengine&quot;&gt;Patreon&lt;/a&gt; or &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;PayPal&lt;/a&gt;.&lt;/p&gt;
-</description>
-		<pubDate>Thu, 29 Sep 2022 18:20:56 +0000</pubDate>
 	</item>
 	
 
