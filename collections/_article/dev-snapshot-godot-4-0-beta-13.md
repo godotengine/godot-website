@@ -4,8 +4,8 @@ excerpt: "Beta snapshots are getting out quicker to ensure stability and quickly
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-4-0-beta-13.jpg
-image_caption_title: ""
-image_caption_description: ""
+image_caption_title: "Lone Knight"
+image_caption_description: "A game by Jean Makes Games"
 date: 2023-01-17 00:00:00
 ---
 
@@ -30,7 +30,7 @@ This beta includes a few big changes which may interest a lot of users:
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.beta13/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from* ...
+*The illustration picture for this article is from* [**Lone Knight**](https://store.steampowered.com/app/2211930/Lone_Knight/) *by Jean Makes Games. The project is currently being ported to Godot 4 beta. Follow Jean Makes Games on [Twitter](https://twitter.com/Pixl_Jean) for updates.*
 
 ## What's new
 
