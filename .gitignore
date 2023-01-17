@@ -6,3 +6,9 @@ vendor/
 
 # Code editors
 .vscode/
+
+# Website sections not tracked in this repo
+.htaccess
+asset-library/
+mirrorlist/
+qa/

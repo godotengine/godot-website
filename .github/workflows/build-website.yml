@@ -46,5 +46,3 @@ jobs:
         git-config-email: '<>'
         # Remove outdated files from the target directory.
         clean: true
-        # Don't keep the history.
-        single-commit: true
