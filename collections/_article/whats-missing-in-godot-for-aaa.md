@@ -53,7 +53,7 @@ Several other areas got improvements, like the editor (which has been vastly rew
 
 Do not be mistaken: A lot is still missing from Godot in order to be used comfortably for large projects and teams. That said, what remains is now much less work than it was for Godot 3.x.
 
-First of all, most of the new features still have significant bugs and performance problems that will not be solved in time for the upcoming 4.0 release (there is just too much new code that needs to be tested throughly).
+First of all, most of the new features still have significant bugs and performance problems that will not be solved in time for the upcoming 4.0 release (there is just too much new code that needs to be tested thoroughly).
 
 These problems will be fixed across the 4.x point releases (which we are now intending to do more often, allowing several releases per year). It may be an extra year or even two until everything feels as solid and fast as everyone expects. [See this article](https://godotengine.org/article/release-management-4-0-and-beyond) about our plans for 4.0 and beyond.
 
