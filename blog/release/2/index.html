@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="Free and open source 2D and 3D game engine">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="Blog - Release - Page 2">
+	<meta property="og:description" content="Free and open source 2D and 3D game engine">
+	<meta property="og:image" content="https://godotengine.org/assets/og_image.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Blog - Release - Page 2</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	<input type="checkbox" id="nav_toggle_cb">
+<header>
+	<div class="container flex align-center">
+		<div id="nav_head">
+			<a href="/" id="logo-link">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			</a>
+			<label for="nav_toggle_cb" id="nav_toggle_btn">
+				<img src="/assets/hamburger.svg" width="24" height="24" alt="">
+			</label>
+		</div>
+
+		<nav id="nav">
+			<ul class="left">
+				<li><a href="/showcase">Showcase</a></li>
+				<div class="only-on-mobile" style="width: 100%">
+					<li><a href="/features">Features</a></li>
+				</div>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Community</a></li>
+				<li><a href="/contact">About</a></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+			</ul>
+
+			<ul class="right">
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://docs.godotengine.org">Learn</a></li>
+				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
+				
+				<li class="fund"><a href="/donate">❤&#xFE0E; Donate</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+
+<style>
+	.posts {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	@media (min-width: 768px) {
+		.posts {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.posts {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+</style>
+
+<div class="head">
+	<div class="container flex eqsize responsive">
+		<div class="main">
+			<h1 class="intro-title">Blog</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<!-- Search -->
+	<form class="search-bar" method="get" action="https://duckduckgo.com/">
+		<input type="hidden" name="sites" value="godotengine.org/article" />
+		<input type="text" name="q" maxlength="300" placeholder="Search articles" />
+		<button class="btn search-bar-btn" type="submit">
+			<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
+		</button>
+	</form>
+
+	<!-- Categories -->
+
+	<h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
+
+	<div class="tags">
+		<a href="/blog" title="Show all categories">
+			<div class="tag tag--default ">All</div>
+		</a>
+
+		
+		
+		<a href="/blog/news" title="General news that don't fit in other categories.">
+			<div class="tag tag-- ">
+				News</div>
+		</a>
+		
+		
+		
+		<a href="/blog/progress-report" title="Progress report about a specific engine subsystem in Godot.">
+			<div class="tag tag-- ">
+				Progress Report</div>
+		</a>
+		
+		
+		
+		<a href="/blog/events" title="Physical and online Godot-related event announcements.">
+			<div class="tag tag-- ">
+				Events</div>
+		</a>
+		
+		
+		
+		<a href="/blog/release" title="Godot stable release announcements. See Pre-release category for alphas, betas and release candidates.">
+			<div class="tag tag--  active ">
+				Release</div>
+		</a>
+		
+		
+		
+		<a href="/blog/pre-release" title="Godot pre-release announcement (alpha, beta or release candidate).">
+			<div class="tag tag-- ">
+				Pre-release</div>
+		</a>
+		
+		
+		
+		<a href="/blog/showcase" title="Showreel video postings and showcase interviews. Showreel-related announcements are in the News category.">
+			<div class="tag tag-- ">
+				Showcase</div>
+		</a>
+		
+		
+	</div>
+	
+	<h3 style="margin-top: 1rem;">Filtered by: Release</h3>
+	
+
+	<!-- Posts -->
+	<div class="flex pagination">
+		
+		<a class="pagination-previous"
+			href="https://godotengine.org/blog/release/">← Previous</a>
+		
+
+		
+		
+		<a  title="Blog - Release"
+			href="https://godotengine.org/blog/release/">1</a>
+		
+		<a class="active"  title="Blog - Release - Page 2"
+			href="https://godotengine.org/blog/release/2/">2</a>
+		
+		
+
+		
+	</div>
+	<div class="posts">
+		
+		<a href="/article/maintenance-release-godot-3-0-5/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5b4/266/3cc/5b42663cc18a0730946172.png');" href="/article/maintenance-release-godot-3-0-5/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">HP van Braam </span>
+						<span class="date">&nbsp;-&nbsp; 8 July 2018</span>
+					</div>
+					<h3>Maintenance release: Godot 3.0.5</h3>
+					<p class="excerpt">In Godot 3.0.5 we've fixed the Android APK export issue, a C# bug that only appeared on exported games, and several other small things. Get it while the gettin's good!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-3-0-4/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5b2/d2f/118/5b2d2f118951e820036835.png');" href="/article/maintenance-release-godot-3-0-4/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">HP van Braam </span>
+						<span class="date">&nbsp;-&nbsp;22 June 2018</span>
+					</div>
+					<h3>Maintenance release: Godot 3.0.4</h3>
+					<p class="excerpt">Godot 3.0.4 is a small release that fixes a crasher in the asset library on Windows. If you were affected by this please upgrade. Otherwise we'll come back with a larger 3.0.5 soon!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-3-0-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5b2/146/640/5b214664037c0726907530.png');" href="/article/maintenance-release-godot-3-0-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">HP van Braam </span>
+						<span class="date">&nbsp;-&nbsp;13 June 2018</span>
+					</div>
+					<h3>Maintenance release: Godot 3.0.3</h3>
+					<p class="excerpt">Godot 3.0.3! In this release we've enable C# exporting for desktop platforms and fixed many bugs.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-302/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5a9/bbf/1e2/5a9bbf1e2b04f446577255.jpg');" href="/article/maintenance-release-godot-302/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">HP van Braam </span>
+						<span class="date">&nbsp;-&nbsp; 4 March 2018</span>
+					</div>
+					<h3>Maintenance release: Godot 3.0.2</h3>
+					<p class="excerpt">We've found several small regressions in Godot 3.0.1. This maintenance release addresses these and also add some features for our C# users.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-3-0-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5a9/2f7/557/5a92f75575e65533435326.jpg');" href="/article/maintenance-release-godot-3-0-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">HP van Braam </span>
+						<span class="date">&nbsp;-&nbsp;25 February 2018</span>
+					</div>
+					<h3>Maintenance release: Godot 3.0.1</h3>
+					<p class="excerpt">We are pretty happy with the overall stability of Godot 3.0, that we released in late January. Still, we want to provide the best level of support to our users, so we are going to make regular maintenance releases for the 3.0 branch, to bring backward-compatible bug fixes and enhancements to all users. Our aim is that you should be able to just upgrade to 3.0.1 and continue developing your 3.0 projects without any change (apart from C# support, which is still in alpha and thus a moving target).
+Check the detailed release notes to see what's new in Godot 3.0.1, and what bugs have been fixed.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-3-0-released/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5a6/f92/d3f/5a6f92d3f0d1d382442473.jpg');" href="/article/godot-3-0-released/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;29 January 2018</span>
+					</div>
+					<h3>Godot 3.0 is out and ready for the big leagues</h3>
+					<p class="excerpt">After more than 18 months of development, all Godot Engine contributors are proud to present our biggest release so far, Godot 3.0! It brings a brand new rendering engine with state-of-the-art PBR workflow for 3D, an improved assets pipeline, GDNative to load native code as plugins, C# 7.0 support, and many other features!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-2-1-4/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/59a/6e8/e45/59a6e8e45038d813649865.png');" href="/article/maintenance-release-godot-2-1-4/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;30 August 2017</span>
+					</div>
+					<h3>Maintenance release: Godot 2.1.4</h3>
+					<p class="excerpt">Godot 2.1.4 is released and brings a good number of enhancements and bug fixes, as well as some new features backported from the master branch. There is now (beta) support for Universal Windows Platform, advanced string format in GDScript, one-way collisions for TileMaps, an improved debugger, and many other changes which should stay fully compatible with existing 2.1.x projects.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-2-1-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/58e/e76/0ca/58ee760ca31aa290366551.png');" href="/article/maintenance-release-godot-2-1-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;12 April 2017</span>
+					</div>
+					<h3>Maintenance release: Godot 2.1.3</h3>
+					<p class="excerpt">Here's the newest maintenance release in the current stable branch, Godot 2.1.3. It features various bug fixes and usability improvements, as well as some new features such as enums in GDScript, the ability to change the cost function in the A-star algorithm, various API additions and a (work in progress) tool to convert 2.1.x projects to the format expected by Godot 3.0 alpha.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-2-1-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/588/3a8/eb2/5883a8eb2f2ba003798173.png');" href="/article/maintenance-release-godot-2-1-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;21 January 2017</span>
+					</div>
+					<h3>Maintenance release: Godot 2.1.2</h3>
+					<p class="excerpt">Here comes a new maintenance release in the current stable branch, Godot 2.1.2. It features various bug fixes and usability improvements, as well as brand new IPv6 support in the networking API, a better audio driver initialization reducing the latency, ternary operators in GDScript and out of the box split screen mode for 2D!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-2-1-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/582/e11/fe3/582e11fe32c47456712354.jpg');" href="/article/maintenance-release-godot-2-1-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;17 November 2016</span>
+					</div>
+					<h3>Maintenance release: Godot 2.1.1</h3>
+					<p class="excerpt">Three months after the release of Godot 2.1, we finally have the first maintenance release in the current stable branch. Rich of 271 new commits, it brings many bug fixes, enhancements and even some new features backported for the master branch! Highlights are OSX gamepad support, AStar implementation and some advanced drag and drop features in the editor!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-reaches-2-1-stable/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/57a/886/5d5/57a8865d5dc44195460713.png');" href="/article/godot-reaches-2-1-stable/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp; 9 August 2016</span>
+					</div>
+					<h3>Godot reaches 2.1 stable!</h3>
+					<p class="excerpt">After almost six months of hard work, we are proudly presenting you the marvellous Godot Engine 2.1. Just like 2.0, this version focuses almost exclusively on further improving usability and the editor interface.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-2-0-4/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/578/177/7be/5781777bede24096930798.png');" href="/article/maintenance-release-godot-2-0-4/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 9 July 2016</span>
+					</div>
+					<h3>Maintenance release: Godot 2.0.4.1</h3>
+					<p class="excerpt">Godot 2.0.4 is released, with many bug fixes and improvements, as well as greatly enhanced documentation and new versions for embedded libraries!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-2-0-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/573/5fc/35d/5735fc35d361c195318911.png');" href="/article/maintenance-release-godot-2-0-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;13 May 2016</span>
+					</div>
+					<h3>Maintenance release: Godot 2.0.3</h3>
+					<p class="excerpt">Godot 2.0.3 is released, with many bug fixes and improvements, updated documentation, and various interesting distribution changes!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-2-0-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/570/778/0a5/5707780a5a4e5946541256.png');" href="/article/maintenance-release-godot-2-0-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 8 April 2016</span>
+					</div>
+					<h3>Maintenance release: Godot 2.0.2</h3>
+					<p class="excerpt">Features various bug fixes and editor usability improvements, notably in the script editor. This time, the official binaries are also built without OpenSSL and not compressed with UPX.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-engine-reaches-2-0-stable/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/56c/bd3/9db/56cbd39dbdddc275301297.png');" href="/article/godot-engine-reaches-2-0-stable/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;23 February 2016</span>
+					</div>
+					<h3>Godot Engine reaches 2.0 stable</h3>
+					<p class="excerpt">Godot 2.0 is out! This release is special because our team has grown a lot. We have more regular contributors, a documentation team, a bug triage team and a much larger community! Godot keeps growing and becoming more and more awesome.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-1-1-out/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/56c/317/b3c/56c317b3ce725271162621.png');" href="/article/godot-1-1-out/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;21 May 2015</span>
+					</div>
+					<h3>Godot 1.1 is out!</h3>
+					<p class="excerpt">After many months of hard work (and many more of bug fixing), Godot 1.1 is out!! This release brings a completely new 2D engine and more features (feature list below). At this point Godot is one of the most advanced 2D engines out there.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-engine-reaches-1-0/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/56b/bb7/aac/56bbb7aac6e8e274384118.png');" href="/article/godot-engine-reaches-1-0/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;15 December 2014</span>
+					</div>
+					<h3>Godot Engine reaches 1.0, first stable release</h3>
+					<p class="excerpt">After 10 months of hard work following the open sourcing of Godot, we are proud to release our first stable version, Godot 1.0!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/first-public-release/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/57f/218/5f6/57f2185f638af084238366.svg');" href="/article/first-public-release/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;14 January 2014</span>
+					</div>
+					<h3>First public release!</h3>
+					<p class="excerpt">Writing a game engine is a really difficult process which takes a long time and we realize a life is not enough to add every single feature we’d like to it. Godot has been an in-house engine for a long time and the priority of new features were always linked to what was needed for each game and the priorities of our clients.
+Because of this we are opening the engine to the community so anyone can develop games using Godot and benefit from it’s amazing workflow design. We are also opening the source code with the most generous license, MIT with the hope that other developers will contribute to it and publish their games without any restriction.</p>
+				</div>
+			</article>
+		</a>
+		
+	</div>
+	<div class="flex pagination">
+		
+		<a class="pagination-previous"
+			href="https://godotengine.org/blog/release/">← Previous</a>
+		
+
+		
+		
+		<a  title="Blog - Release"
+			href="https://godotengine.org/blog/release/">1</a>
+		
+		<a class="active"  title="Blog - Release - Page 2"
+			href="https://godotengine.org/blog/release/2/">2</a>
+		
+		
+
+		
+	</div>
+</div>
+
+
+</main>
+
+<footer>
+	<div class="container flex">
+		<div id="copyright">
+			<p>
+				© 2007-2023 Juan Linietsky, Ariel Manzur and <a
+					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
+					rel="noopener">contributors</a><br>
+				Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom
+					Conservancy</a>.<br>
+				Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
+				<a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on
+					GitHub</a>.
+			</p>
+		</div>
+		<div id="sitemap">
+			<ul class="sitemap-group">
+				<li><strong>Get Godot</strong></li>
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Public Relations</strong></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Communities and Events</a></li>
+				<li><a href="/press">Press Kit</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>About Godot</strong></li>
+				<li><a href="/features">Features</a></li>
+				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/education">Education</a></li>
+				<li><a href="/license">License</a></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
+				<li><a href="/donate">Donate</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>Project Team</strong></li>
+				<li><a href="/governance">Governance</a></li>
+				<li><a href="/teams">Teams</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Extra Resources</strong></li>
+				<li><a href="/asset-library/asset">Asset Library</a></li>
+				<li><a href="https://docs.godotengine.org">Documentation</a></li>
+				<li><a href="https://github.com/godotengine">Code Repository</a></li>
+			</ul>
+		</div>
+		<div id="social" class="dark-desaturate">
+			<h4 class="text-right"><a href="/contact">Contact us</a></h4>
+			<div class="flex justify-space-between">
+				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+				</a>
+				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+				</a>
+				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
+					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+				</a>
+				<a href="/rss.xml" target="_blank" rel="noopener">
+					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		document.querySelectorAll('pre code').forEach((block) => {
+			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('.content-article img').forEach((articleImg) => {
+			// Add lightbox elements in blog articles for Tobii.
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		});
+	});
+
+	// Update any download link to point to identified user's OS.
+	const links = document.querySelectorAll('.set-os-download-url');
+	for (let i = 0; i < links.length; i++) {
+		const link = links[i];
+		link.href = "/download/windows";
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link.href = "/download/macos";
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link.href = "/download/linux";
+		}
+	}
+</script>
+
+
+</body>
+
+</html>

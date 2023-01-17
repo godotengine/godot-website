@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="Free and open source 2D and 3D game engine">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="Windows downloads - Godot Engine">
+	<meta property="og:description" content="Free and open source 2D and 3D game engine">
+	<meta property="og:image" content="https://godotengine.org/assets/og_image.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Windows downloads - Godot Engine</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	
+
+<input type="checkbox" id="nav_toggle_cb">
+<header>
+	<div class="container flex align-center">
+		<div id="nav_head">
+			<a href="/" id="logo-link">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			</a>
+			<label for="nav_toggle_cb" id="nav_toggle_btn">
+				<img src="/assets/hamburger.svg" width="24" height="24" alt="">
+			</label>
+		</div>
+
+		<nav id="nav">
+			<ul class="left">
+				<li><a href="/showcase">Showcase</a></li>
+				<div class="only-on-mobile" style="width: 100%">
+					<li><a href="/features">Features</a></li>
+				</div>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Community</a></li>
+				<li><a href="/contact">About</a></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+			</ul>
+
+			<ul class="right">
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://docs.godotengine.org">Learn</a></li>
+				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
+				
+				<li class="fund"><a href="/donate">❤&#xFE0E; Donate</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+
+<style>
+	.btn.btn-version-download {
+		background-color: var(--primary-color);
+		color: white;
+		display: inline-flex;
+		flex-basis: content;
+		padding: 0px;
+		margin-bottom: 8px;
+	}
+
+	.btn.btn-version-download a {
+		color: white;
+		text-decoration: none;
+		padding: 10px 20px;
+		width: auto;
+	}
+
+	.digital-stores {
+		width: 85%;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 12px;
+		margin-bottom: 24px;
+	}
+
+	.digital-stores-download {
+		display: flex;
+		align-items: center;
+		margin-top: 16px;
+		color: var(--dark-color-text-hl);
+		font-size: 16px;
+		text-decoration: none;
+	}
+
+	.digital-stores-logo {
+		background-color: var(--digital-store-background-color);
+		padding: 8px 8px;
+	}
+
+	.digital-stores-logo img {
+		vertical-align: middle;
+	}
+
+	.digital-stores-name {
+		color: var(--base-color-text-hl);
+		font-family: "Montserrat", sans-serif;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 8px 16px;
+	}
+
+	.version-overview {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 50px;
+	}
+
+	.version-overview h2 {
+		margin-top: 16px;
+		margin-bottom: 0px;
+	}
+
+	.version-overview .version-link {
+		color: var(--primary-color);
+		font-style: normal;
+		margin-left: 16px;
+		text-decoration: none;
+	}
+
+	.version-overview .date {
+		margin-top: 8px;
+	}
+
+	.version-overview img {
+		filter: drop-shadow(var(--base-shadow));
+	}
+
+	.platform-details hr {
+		border-top-color: rgba(0, 0, 0, 0.15);
+	}
+
+	.platform-details pre {
+		background-color: var(--platform-code-background-color);
+	}
+
+	.extras .card {
+		margin-bottom: 16px;
+	}
+
+	.extras .card p {
+		margin-bottom: 0px;
+	}
+
+	.subheader {
+		margin-top: 32px;
+	}
+
+	/* hide tab icons by default */
+	.tab img {
+		display: none;
+		filter: invert(100%);
+	}
+
+	@media (max-width: 1060px) {
+
+		/* hide tab text only show icons */
+		.tab img {
+			display: block;
+		}
+
+		/* hide tab text, except for active tabs */
+		.tab:not(.active) span {
+			display: none;
+		}
+	}
+</style>
+
+<div class="head">
+	<div class="container flex responsive justify-space-between">
+		<div class="main">
+			<h1 class="intro-title">Download</h1>
+		</div>
+		<div class="tabs snap-tabs">
+			<a href="/download/linux" class="tab title-font ">
+				<img width="24" height="24" src="/assets/icons/linux.svg" title="Linux" alt="Linux" />
+				<span>Linux</span>
+			</a>
+			<a href="/download/macos" class="tab title-font ">
+				<img width="24" height="24" src="/assets/icons/macos.svg" title="macOS" alt="macOS" />
+				<span>macOS</span>
+			</a>
+			<a href="/download/windows" class="tab title-font  active ">
+				<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
+				<span>Windows</span>
+			</a>
+			<a href="/download/server" class="tab title-font ">
+				<img width="24" height="24" src="/assets/icons/server.svg" title="Linux Server" alt="Linux Server" />
+				<span>Linux Server</span>
+			</a>
+			<a href="/download/android" class="tab title-font ">
+				<img width="24" height="24" src="/assets/icons/android.svg" title="Android" alt="Android" />
+				<span>Android</span>
+			</a>
+			<a href="https://editor.godotengine.org/releases/latest/" class="tab title-font">
+				<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
+				<span>Web Editor</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+	<div class="flex responsive eqsize">
+		<div class="version-overview">
+			<img src="/assets/download/godot_logo.svg" width="200" height="200" alt="logo">
+			<h2>Godot <a class="version-link" href="#links">3.5.1</a></h2>
+			<i class="date">released 28 September 2022</i>
+
+			<div style="margin-top:32px; line-height: 1.6; font-size: 85%">
+				You can find previous releases on the
+				<a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.<br>
+				Slow download? Try the mirror on <a href="https://github.com/godotengine/godot/releases">GitHub
+					Releases</a>.<br>
+				<br>
+				Also available on digital distribution platforms:
+			</div>
+			<div class="digital-stores">
+				<a class="digital-stores-download card" href="https://godotengine.itch.io/godot"
+					title="Godot Engine on itch.io">
+					<div class="digital-stores-logo">
+						<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
+					</div>
+					<div class="digital-stores-name">itch.io</div>
+				</a>
+				<a class="digital-stores-download card" href="https://store.steampowered.com/app/404790"
+					title="Godot Engine on Steam">
+					<div class="digital-stores-logo">
+						<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
+					</div>
+					<div class="digital-stores-name">Steam</div>
+				</a>
+			</div>
+		</div>
+
+		<div id="links" class="platform-details">
+			<div class="card">
+				<div class="base-padding">
+					<h4>Standard version</h4>
+					
+					<div class="btn btn-version-download">
+						<a
+							href="https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_win64.exe.zip">64-bit (x86_64)</a>
+					</div>
+					
+					<div class="btn btn-version-download">
+						<a
+							href="https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_win32.exe.zip">32-bit (x86)</a>
+					</div>
+					
+					<h4 style="margin-top: 2rem">Mono version (C# support)</h4>
+					
+					<div class="btn btn-version-download">
+						<a
+							href="https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_win64.zip">64-bit (x86_64)</a>
+					</div>
+					
+					<div class="btn btn-version-download">
+						<a
+							href="https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_win32.zip">32-bit (x86)</a>
+					</div>
+					
+					<p><strong>Note:</strong> The 32-bit Mono binaries do not run on 64-bit Windows systems at the time being. Make sure to export 64-bit Mono binaries for your 64-bit target platforms.</p>
+				</div>
+
+				<hr>
+				<div class="base-padding">
+					<h4>Requirements</h4>
+					<ul>
+						<li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
+						
+						<li>
+							<strong>For the Mono version:</strong> <a href="https://dotnet.microsoft.com/download">.NET SDK</a> or the
+							<a href="https://www.mono-project.com/download/stable/">Mono SDK</a>
+						</li>
+						
+					</ul>
+				</div>
+
+				<hr>
+				<div class="base-padding">
+					<h4 id="instructions">Instructions</h4>
+<ul>
+  <li>Extract and run. Godot is self-contained and does not require installation.</li>
+  <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
+</ul>
+
+<p>You can also get Godot with <a href="https://scoop.sh/">Scoop</a>.</p>
+
+<pre><code class="hljs csharp">scoop bucket <span class="hljs-keyword">add</span> extras
+scoop install godot</code></pre>
+
+<p>Windows executables are code-signed by <em>Prehensile Tales B.V.</em></p>
+
+				</div>
+
+				<div class="footer base-padding" style="line-height: 1.6; font-size: 90%">
+					Learn how to use Godot with the <a
+						href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/">Step by Step tutorial</a>.<br>
+					Give a try to <a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">demo
+						projects</a> showcasing some of the engine features.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="flex responsive eqsize padded">
+		<div class="extras">
+
+			<a class="card"
+				href="https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_export_templates.tpz">
+				<div class="base-padding">
+					<h3>Export templates (standard)</h3>
+					<p>Used to export your games to all supported platforms.</p>
+				</div>
+			</a>
+
+			<a class="card"
+				href="https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_export_templates.tpz">
+				<div class="base-padding">
+					<h3>Export templates (Mono / C#)</h3>
+					<p>
+						Used to export your C# games to the supported platforms.<br>
+						Currently, the C# version can export to desktop platforms (Linux, macOS and Windows), Android, iOS, and
+						HTML5/WebAssembly.
+					</p>
+				</div>
+			</a>
+
+			<a class="card"
+				href="https://downloads.tuxfamily.org/godotengine/3.5.1/godot-lib.3.5.1.stable.release.aar">
+				<div class="base-padding">
+					<h3>AAR library for Android plugins (standard)</h3>
+					<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
+				</div>
+			</a>
+
+			<a class="card"
+				href="https://downloads.tuxfamily.org/godotengine/3.5.1/mono/godot-lib.3.5.1.stable.mono.release.aar">
+				<div class="base-padding">
+					<h3>AAR library for Android plugins (Mono / C#)</h3>
+					<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
+				</div>
+			</a>
+
+			<a href="https://github.com/godotengine/godot-blender-exporter" class="base-padding card">
+				<div>
+					<h3>Blender ESCN exporter</h3>
+					<p>
+						Blender add-on to export scenes to Godot's scene format directly.<br>
+						Godot also supports glTF 2.0 and OBJ.
+					</p>
+				</div>
+			</a>
+
+		</div>
+
+		<div class="text-center base-padding">
+			<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="">
+			<p>
+				Godot's development is <strong>open</strong>. This means that you can
+				fix or improve any part of the engine yourself and choose
+				whether to contribute it back or keep it private.
+			</p>
+			<p>
+				New features are always available to use and test, without the need of
+				having to wait for the next major release. Compiling Godot from source
+				is <em>very easy</em> and the process is well-documented for each platform.
+				To obtain the source code, please visit the
+				<a href="https://github.com/godotengine/godot">GitHub project page</a>.
+			</p>
+		</div>
+
+	</div>
+</div>
+
+</main>
+
+<footer>
+	<div class="container flex">
+		<div id="copyright">
+			<p>
+				© 2007-2023 Juan Linietsky, Ariel Manzur and <a
+					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
+					rel="noopener">contributors</a><br>
+				Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom
+					Conservancy</a>.<br>
+				Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
+				<a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on
+					GitHub</a>.
+			</p>
+		</div>
+		<div id="sitemap">
+			<ul class="sitemap-group">
+				<li><strong>Get Godot</strong></li>
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Public Relations</strong></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Communities and Events</a></li>
+				<li><a href="/press">Press Kit</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>About Godot</strong></li>
+				<li><a href="/features">Features</a></li>
+				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/education">Education</a></li>
+				<li><a href="/license">License</a></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
+				<li><a href="/donate">Donate</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>Project Team</strong></li>
+				<li><a href="/governance">Governance</a></li>
+				<li><a href="/teams">Teams</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Extra Resources</strong></li>
+				<li><a href="/asset-library/asset">Asset Library</a></li>
+				<li><a href="https://docs.godotengine.org">Documentation</a></li>
+				<li><a href="https://github.com/godotengine">Code Repository</a></li>
+			</ul>
+		</div>
+		<div id="social" class="dark-desaturate">
+			<h4 class="text-right"><a href="/contact">Contact us</a></h4>
+			<div class="flex justify-space-between">
+				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+				</a>
+				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+				</a>
+				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
+					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+				</a>
+				<a href="/rss.xml" target="_blank" rel="noopener">
+					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		document.querySelectorAll('pre code').forEach((block) => {
+			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('.content-article img').forEach((articleImg) => {
+			// Add lightbox elements in blog articles for Tobii.
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		});
+	});
+
+	// Update any download link to point to identified user's OS.
+	const links = document.querySelectorAll('.set-os-download-url');
+	for (let i = 0; i < links.length; i++) {
+		const link = links[i];
+		link.href = "/download/windows";
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link.href = "/download/macos";
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link.href = "/download/linux";
+		}
+	}
+</script>
+
+
+</body>
+
+</html>

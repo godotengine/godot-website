@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="Free and open source 2D and 3D game engine">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="Godot Engine - Blog - Page 5">
+	<meta property="og:description" content="Free and open source 2D and 3D game engine">
+	<meta property="og:image" content="https://godotengine.org/assets/og_image.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Godot Engine - Blog - Page 5</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	<input type="checkbox" id="nav_toggle_cb">
+<header>
+	<div class="container flex align-center">
+		<div id="nav_head">
+			<a href="/" id="logo-link">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			</a>
+			<label for="nav_toggle_cb" id="nav_toggle_btn">
+				<img src="/assets/hamburger.svg" width="24" height="24" alt="">
+			</label>
+		</div>
+
+		<nav id="nav">
+			<ul class="left">
+				<li><a href="/showcase">Showcase</a></li>
+				<div class="only-on-mobile" style="width: 100%">
+					<li><a href="/features">Features</a></li>
+				</div>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Community</a></li>
+				<li><a href="/contact">About</a></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+			</ul>
+
+			<ul class="right">
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://docs.godotengine.org">Learn</a></li>
+				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
+				
+				<li class="fund"><a href="/donate">❤&#xFE0E; Donate</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+
+<style>
+	.posts {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	@media (min-width: 768px) {
+		.posts {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.posts {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+</style>
+
+<div class="head">
+	<div class="container flex eqsize responsive">
+		<div class="main">
+			<h1 class="intro-title">Blog</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<!-- Search -->
+	<form class="search-bar" method="get" action="https://duckduckgo.com/">
+		<input type="hidden" name="sites" value="godotengine.org/article" />
+		<input type="text" name="q" maxlength="300" placeholder="Search articles" />
+		<button class="btn search-bar-btn" type="submit">
+			<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
+		</button>
+	</form>
+
+	<!-- Categories -->
+
+	<h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
+
+	<div class="tags">
+		<a href="/blog" title="Show all categories">
+			<div class="tag tag--default active">All</div>
+		</a>
+
+		
+		
+		<a href="/blog/news" title="General news that don't fit in other categories.">
+			<div class="tag tag-- ">
+				News</div>
+		</a>
+		
+		
+		
+		<a href="/blog/progress-report" title="Progress report about a specific engine subsystem in Godot.">
+			<div class="tag tag-- ">
+				Progress Report</div>
+		</a>
+		
+		
+		
+		<a href="/blog/events" title="Physical and online Godot-related event announcements.">
+			<div class="tag tag-- ">
+				Events</div>
+		</a>
+		
+		
+		
+		<a href="/blog/release" title="Godot stable release announcements. See Pre-release category for alphas, betas and release candidates.">
+			<div class="tag tag-- ">
+				Release</div>
+		</a>
+		
+		
+		
+		<a href="/blog/pre-release" title="Godot pre-release announcement (alpha, beta or release candidate).">
+			<div class="tag tag-- ">
+				Pre-release</div>
+		</a>
+		
+		
+		
+		<a href="/blog/showcase" title="Showreel video postings and showcase interviews. Showreel-related announcements are in the News category.">
+			<div class="tag tag-- ">
+				Showcase</div>
+		</a>
+		
+		
+	</div>
+	
+
+	<!-- Posts -->
+	<div class="flex pagination">
+		
+		<a class="pagination-previous"
+			href="https://godotengine.org/blog/4/">← Previous</a>
+		
+
+		
+		
+		<a  title="Godot Engine - Blog - Page 3"
+			href="https://godotengine.org/blog/3/">3</a>
+		
+		<a  title="Godot Engine - Blog - Page 4"
+			href="https://godotengine.org/blog/4/">4</a>
+		
+		<a class="active"  title="Godot Engine - Blog - Page 5"
+			href="https://godotengine.org/blog/5/">5</a>
+		
+		<a  title="Godot Engine - Blog - Page 6"
+			href="https://godotengine.org/blog/6/">6</a>
+		
+		<a  title="Godot Engine - Blog - Page 7"
+			href="https://godotengine.org/blog/7/">7</a>
+		
+		
+
+		
+		<a class="pagination-next"
+			href="https://godotengine.org/blog/6/">Next →</a>
+		
+	</div>
+	<div class="posts">
+		
+		<a href="/article/animation-data-redesign-40/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/618/06c/42a/61806c42af0f7814469862.png');" href="/article/animation-data-redesign-40/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp; 1 November 2021</span>
+					</div>
+					<h3>Animation data rework for 4.0</h3>
+					<p class="excerpt">One of the last areas pending for redesign in upcoming Godot 4.0 has now been completed, resulting in much improved usability when dealing animation data.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/multiplayer-changes-godot-4-0-report-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/617/989/cf8/617989cf82e64600038831.png');" href="/article/multiplayer-changes-godot-4-0-report-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">Fabio Alessandrelli </span>
+						<span class="date">&nbsp;-&nbsp;27 October 2021</span>
+					</div>
+					<h3>Multiplayer in Godot 4.0: ENet wrappers, WebRTC</h3>
+					<p class="excerpt">A more powerful ENet interface for better multiplayer in Godot 4, updates about WebRTC, hints at the new scene replication API.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/release-candidate-godot-3-4-rc-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/617/913/881/617913881aa25087367439.jpg');" href="/article/release-candidate-godot-3-4-rc-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;27 October 2021</span>
+					</div>
+					<h3>Release candidate: Godot 3.4 RC 2</h3>
+					<p class="excerpt">The upcoming Godot 3.4 release will provide a number of new features which have been backported from the 4.0 development branch. With this second Release Candidate, we have frozen feature development and are nearly ready to release the stable version.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/release-candidate-godot-3-4-rc-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/616/e85/0d7/616e850d7ecf5684336903.jpg');" href="/article/release-candidate-godot-3-4-rc-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;19 October 2021</span>
+					</div>
+					<h3>Release candidate: Godot 3.4 RC 1</h3>
+					<p class="excerpt">The upcoming Godot 3.4 release will provide a number of new features which have been backported from the 4.0 development branch. With this first Release Candidate, we completely freezes feature development, and comes after a long series of beta builds to fix a number of bugs reported against previous builds (as well as against previous stable branches).</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-4-beta-6/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/615/db4/6c2/615db46c275e9053218403.jpg');" href="/article/dev-snapshot-godot-3-4-beta-6/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 6 October 2021</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.4 beta 6</h3>
+					<p class="excerpt">One step closer to releasing Godot 3.4 with this new beta, which may be the final one before Release Candidate. The feature set for 3.4 is already pretty packed and it's more than time to get it released in the wild.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-games-steam-next-fest-oct-2021/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/615/c8d/d24/615c8dd245136034621315.png');" href="/article/godot-games-steam-next-fest-oct-2021/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/ilaria.jpg" alt="" loading="lazy">
+						<span class="by">Ilaria Cislaghi </span>
+						<span class="date">&nbsp;-&nbsp; 5 October 2021</span>
+					</div>
+					<h3>Godot games in the Steam Next Fest (October 2021)</h3>
+					<p class="excerpt">As the days passes and the team and contributors work hard to deliver Godot 4.x and Godot 3.4, we want to shine a light on the amazing projects that are made using Godot.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-3-3-4/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/615/6f0/e4d/6156f0e4d51a0814323028.jpg');" href="/article/maintenance-release-godot-3-3-4/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 1 October 2021</span>
+					</div>
+					<h3>Maintenance release: Godot 3.3.4</h3>
+					<p class="excerpt">Godot 3.3.4 is a maintenance release and a recommended update for all Godot 3.x users. It includes various bug fixes, most notably a fix for a potential editor crash in 3.3.3.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/release-candidate-godot-3-3-4-rc-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/615/486/4c4/6154864c4a604989513584.jpg');" href="/article/release-candidate-godot-3-3-4-rc-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;29 September 2021</span>
+					</div>
+					<h3>Release candidate: Godot 3.3.4 RC 1</h3>
+					<p class="excerpt">Preparing a tiny maintenance update for the 3.3 stable branch, most notably to fix a potential crash introduced in 3.3.3 for users of the GDScript LSP with Visual Studio Code.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/introducing-gd-extensions/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/615/1af/2c5/6151af2c5f132737201406.png');" href="/article/introducing-gd-extensions/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/bastiaan.jpg" alt="" loading="lazy">
+						<span class="by">Bastiaan Olij </span>
+						<span class="date">&nbsp;-&nbsp;27 September 2021</span>
+					</div>
+					<h3>Introducing GDNative's successor, GDExtension</h3>
+					<p class="excerpt">Godot is getting a new plugin interface called GDExtension, an evolution of GDNative.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/multiplayer-changes-godot-4-0-report-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/615/766/117/6157661176579529840022.png');" href="/article/multiplayer-changes-godot-4-0-report-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">Fabio Alessandrelli </span>
+						<span class="date">&nbsp;-&nbsp;25 September 2021</span>
+					</div>
+					<h3>Multiplayer in Godot 4.0: RPC syntax, channels, ordering</h3>
+					<p class="excerpt">New RPC syntax and features in Godot 4.0. Introducing channels and ordered transfer mode.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/tiles-editor-progress-report-5/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/614/c7e/bea/614c7ebea3c55854871647.png');" href="/article/tiles-editor-progress-report-5/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/groud.png" alt="" loading="lazy">
+						<span class="by">Gilles Roudiere </span>
+						<span class="date">&nbsp;-&nbsp;23 September 2021</span>
+					</div>
+					<h3>Tiles editor progress report #5</h3>
+					<p class="excerpt">New progress report on the tiles editors rework. Compatibility with 3.x got improved, TileMap layers and physics shape editing are now implemented. Also, a new property arrays editor is now available in the inspector.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-4-beta-5/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/614/c51/9dd/614c519dd6d84245838038.jpg');" href="/article/dev-snapshot-godot-3-4-beta-5/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;22 September 2021</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.4 beta 5</h3>
+					<p class="excerpt">A new beta build towards Godot 3.4, with a month's worth of bugfixes and backported features. Notable additions are the promotion of object validity checks to release builds, initial support for Android Play Asset Delivery, and a new ACES Fitted high quality tonemapper.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/agile-input-processing-is-here-for-smoother-gameplay/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/612/136/3cc/6121363ccb95e735957693.png');" href="/article/agile-input-processing-is-here-for-smoother-gameplay/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/pedro.png" alt="" loading="lazy">
+						<span class="by">Pedro J. Estébanez </span>
+						<span class="date">&nbsp;-&nbsp;21 August 2021</span>
+					</div>
+					<h3>Agile input processing is here for smoother, more responsive gameplay</h3>
+					<p class="excerpt"></p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/maintenance-release-godot-3-3-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/611/e5d/cfc/611e5dcfc09f2518746576.png');" href="/article/maintenance-release-godot-3-3-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;19 August 2021</span>
+					</div>
+					<h3>Maintenance release: Godot 3.3.3</h3>
+					<p class="excerpt">Godot 3.3.3 is a maintenance release and a recommend update for all 3.3.x users. It includes important bug fixes, as well as support for new Google Play requirements for Android games.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-4-beta-4/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/611/e44/723/611e447232422337080043.jpg');" href="/article/dev-snapshot-godot-3-4-beta-4/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;19 August 2021</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.4 beta 4</h3>
+					<p class="excerpt">Another beta build for the upcoming Godot 3.4, which adds partial support for Android scoped storage and API level 30, better input responsiveness on Android, various physics and rendering fixes, and more!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/release-candidate-godot-3-3-3-rc-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/611/ab1/02a/611ab102a5d72741292286.jpg');" href="/article/release-candidate-godot-3-3-3-rc-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;16 August 2021</span>
+					</div>
+					<h3>Release candidate: Godot 3.3.3 RC 2</h3>
+					<p class="excerpt">Another release candidate for the upcoming Godot 3.3.3, notably with Android builds now targeting the API level 30 (Android 11), which is required for new games on Google Play (and will be required for updates starting November 2021).</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-4-beta-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/610/d3d/7c7/610d3d7c75b4e999613924.jpg');" href="/article/dev-snapshot-godot-3-4-beta-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 6 August 2021</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.4 beta 3</h3>
+					<p class="excerpt">We released 3.4 beta 2 ten days ago as a first testing build for the upcoming Godot 3.4 (yes, beta 1 was skipped). Since then, many bugs have been fixed, including some related to upgrading our build environments. This beta 3 should be a lot stabler.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/multiplayer-changes-godot-4-0-report-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/610/918/f3e/610918f3ec53b713518837.png');" href="/article/multiplayer-changes-godot-4-0-report-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">Fabio Alessandrelli </span>
+						<span class="date">&nbsp;-&nbsp; 5 August 2021</span>
+					</div>
+					<h3>Multiplayer in Godot 4.0: On servers, RSETs and state updates</h3>
+					<p class="excerpt">News about running Godot on servers, and hints at upcoming networking changes in Godot 4.0.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/release-candidate-godot-3-3-3-rc-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/610/a74/76f/610a7476f0ddd438980306.jpg');" href="/article/release-candidate-godot-3-3-3-rc-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 4 August 2021</span>
+					</div>
+					<h3>Release candidate: Godot 3.3.3 RC 1</h3>
+					<p class="excerpt">Godot 3.3.3 will be a maintenance release in the stable 3.3 branch, providing various bug fixes while preserving compatibility for existing Godot 3.3 projects. This first release candidate aims at validating those fixes and ensuring that the update will be regression free.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/gsoc-2021-progress-report-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/610/43f/11b/61043f11b5388567890116.png');" href="/article/gsoc-2021-progress-report-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;30 July 2021</span>
+					</div>
+					<h3>GSoC 2021 - Progress report #1</h3>
+					<p class="excerpt">For the 2021 edition of the Google Summer of Code, we have 5 students working on great features for Godot Engine: DAP backend, pseudolocalization, soft-body improvements, auto-layout in GraphEdit, and a command palette!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-4-beta-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/610/012/b82/610012b827c7a703515304.jpg');" href="/article/dev-snapshot-godot-3-4-beta-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;27 July 2021</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.4 beta 2</h3>
+					<p class="excerpt">Here's a first official dev snapshot for the upcoming Godot 3.4, with a lot of important improvements such as portal-based occlusion culling, lightmapper soft shadows, physics fixes, fixes to iOS C# support, Mono support for macOS ARM64, a whole new theme editor, and more!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-showcase-garden-path-developer-talks-about-his-experience/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/60f/9a7/b1e/60f9a7b1eb0ca060142976.jpg');" href="/article/godot-showcase-garden-path-developer-talks-about-his-experience/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/calinou.png" alt="" loading="lazy">
+						<span class="by">Hugo Locurcio </span>
+						<span class="date">&nbsp;-&nbsp;22 July 2021</span>
+					</div>
+					<h3>Godot Showcase - The Garden Path developer talks about his experience</h3>
+					<p class="excerpt">This week, we are interviewing Louis Durrant about his game The Garden Path. It will be released in Autumn/Winter 2021 for Windows, macOS and Linux.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/about-godot4-vulkan-gles3-and-gles2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/60f/438/4ca/60f4384ca5805220006247.png');" href="/article/about-godot4-vulkan-gles3-and-gles2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/ilaria.jpg" alt="" loading="lazy">
+						<span class="by">Ilaria Cislaghi </span>
+						<span class="date">&nbsp;-&nbsp;18 July 2021</span>
+					</div>
+					<h3>About Godot 4, Vulkan, GLES3 and GLES2</h3>
+					<p class="excerpt">As the alpha of Godot 4.0 comes closer and closer, we wanted to spend some words to clarify the direction that Godot 4 has taken in regard of rendering back-ends.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/godot-community-poll-2021/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/60e/dd3/367/60edd3367a79e493301061.jpg');" href="/article/godot-community-poll-2021/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;13 July 2021</span>
+					</div>
+					<h3>Godot Community Poll 2021</h3>
+					<p class="excerpt">It's this time of the year! Help us learn more about our community by taking part in the 2021 Godot Community Poll!</p>
+				</div>
+			</article>
+		</a>
+		
+	</div>
+	<div class="flex pagination">
+		
+		<a class="pagination-previous"
+			href="https://godotengine.org/blog/4/">← Previous</a>
+		
+
+		
+		
+		<a  title="Godot Engine - Blog - Page 3"
+			href="https://godotengine.org/blog/3/">3</a>
+		
+		<a  title="Godot Engine - Blog - Page 4"
+			href="https://godotengine.org/blog/4/">4</a>
+		
+		<a class="active"  title="Godot Engine - Blog - Page 5"
+			href="https://godotengine.org/blog/5/">5</a>
+		
+		<a  title="Godot Engine - Blog - Page 6"
+			href="https://godotengine.org/blog/6/">6</a>
+		
+		<a  title="Godot Engine - Blog - Page 7"
+			href="https://godotengine.org/blog/7/">7</a>
+		
+		
+
+		
+		<a class="pagination-next"
+			href="https://godotengine.org/blog/6/">Next →</a>
+		
+	</div>
+</div>
+
+
+</main>
+
+<footer>
+	<div class="container flex">
+		<div id="copyright">
+			<p>
+				© 2007-2023 Juan Linietsky, Ariel Manzur and <a
+					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
+					rel="noopener">contributors</a><br>
+				Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom
+					Conservancy</a>.<br>
+				Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
+				<a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on
+					GitHub</a>.
+			</p>
+		</div>
+		<div id="sitemap">
+			<ul class="sitemap-group">
+				<li><strong>Get Godot</strong></li>
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Public Relations</strong></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Communities and Events</a></li>
+				<li><a href="/press">Press Kit</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>About Godot</strong></li>
+				<li><a href="/features">Features</a></li>
+				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/education">Education</a></li>
+				<li><a href="/license">License</a></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
+				<li><a href="/donate">Donate</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>Project Team</strong></li>
+				<li><a href="/governance">Governance</a></li>
+				<li><a href="/teams">Teams</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Extra Resources</strong></li>
+				<li><a href="/asset-library/asset">Asset Library</a></li>
+				<li><a href="https://docs.godotengine.org">Documentation</a></li>
+				<li><a href="https://github.com/godotengine">Code Repository</a></li>
+			</ul>
+		</div>
+		<div id="social" class="dark-desaturate">
+			<h4 class="text-right"><a href="/contact">Contact us</a></h4>
+			<div class="flex justify-space-between">
+				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+				</a>
+				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+				</a>
+				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
+					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+				</a>
+				<a href="/rss.xml" target="_blank" rel="noopener">
+					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		document.querySelectorAll('pre code').forEach((block) => {
+			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('.content-article img').forEach((articleImg) => {
+			// Add lightbox elements in blog articles for Tobii.
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		});
+	});
+
+	// Update any download link to point to identified user's OS.
+	const links = document.querySelectorAll('.set-os-download-url');
+	for (let i = 0; i < links.length; i++) {
+		const link = links[i];
+		link.href = "/download/windows";
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link.href = "/download/macos";
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link.href = "/download/linux";
+		}
+	}
+</script>
+
+
+</body>
+
+</html>

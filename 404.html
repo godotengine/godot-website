@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="The requested resource is not available on the server.">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="404 - Page not found">
+	<meta property="og:description" content="The requested resource is not available on the server.">
+	<meta property="og:image" content="https://godotengine.org/assets/og_image.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>404 - Page not found</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	<style>
+	body {
+		background-color: var(--base-color);
+		color: var(--base-color-text);
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 30px;
+		box-sizing: border-box;
+	}
+
+	@media (min-width: 768px) {
+		main {
+			height: 100vh;
+		}
+	}
+
+	.message {
+		text-align: center;
+	}
+
+	.error {
+		max-width: 900px;
+	}
+
+	.error-logo {
+		height: 138px;
+	}
+
+	.alternatives {
+		display: grid;
+		/* grid-template-columns: 1fr 1fr; */
+		gap: 30px;
+	}
+
+	.alternatives div {
+		background-color: var(--card-background-color);
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 0 5px 30px -9px #1c1c1c9e;
+		border-radius: 16px;
+	}
+
+	.alternatives .help {
+		/* use two columns */
+		grid-column: span 2;
+	}
+
+	.search-bar {
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		box-shadow: none;
+	}
+
+	.search-bar input {
+		background-color: var(--base-color);
+	}
+</style>
+
+
+<main>
+	<div class="error">
+		<div class="message">
+			<img class="error-logo" src="/assets/error_logo.svg" alt="Godot Engine Error">
+			<h1>404 - Page not found</h1>
+		</div>
+
+		<div class="alternatives">
+			<div>
+				<p>You can try searching:</p>
+				<form class="search-bar" method="get" action="https://duckduckgo.com/">
+					<input type="hidden" name="sites" value="godotengine.org/" />
+					<input type="text" name="q" maxlength="300" placeholder="Search articles" />
+					<button class="btn search-bar-btn" type="submit">
+						<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
+					</button>
+				</form>
+
+				<p>Or visit:</p>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/download">Download</a></li>
+					<li><a href="https://docs.godotengine.org/en/stable/">Documentation</a></li>
+					<li><a href="/community">Community</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="help" style="opacity: 0.8;">
+			<p>To report an issue with the website, please open an <a
+					href="https://github.com/godotengine/godot-website/">issue on GitHub</a>.</p>
+		</div>
+	</div>
+
+</body>
+
+</html>

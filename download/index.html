@@ -1,0 +1,16 @@
+<html>
+
+<body>
+	Redirecting...
+	<script type="text/javascript">
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			window.location = "/download/macos";
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			window.location = "/download/linux";
+		} else { // default to windows
+			window.location = "/download/windows";
+		}
+	</script>
+</body>
+
+</html>

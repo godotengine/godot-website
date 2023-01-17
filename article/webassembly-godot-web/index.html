@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="Free and open source 2D and 3D game engine">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="WebAssembly: Godot on the web?">
+	<meta property="og:description" content="Free and open source 2D and 3D game engine">
+	<meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/56b/c4b/20e/56bc4b20e9832821396846.jpg">
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>WebAssembly: Godot on the web?</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	<input type="checkbox" id="nav_toggle_cb">
+<header>
+	<div class="container flex align-center">
+		<div id="nav_head">
+			<a href="/" id="logo-link">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			</a>
+			<label for="nav_toggle_cb" id="nav_toggle_btn">
+				<img src="/assets/hamburger.svg" width="24" height="24" alt="">
+			</label>
+		</div>
+
+		<nav id="nav">
+			<ul class="left">
+				<li><a href="/showcase">Showcase</a></li>
+				<div class="only-on-mobile" style="width: 100%">
+					<li><a href="/features">Features</a></li>
+				</div>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Community</a></li>
+				<li><a href="/contact">About</a></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+			</ul>
+
+			<ul class="right">
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://docs.godotengine.org">Learn</a></li>
+				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
+				
+				<li class="fund"><a href="/donate">❤&#xFE0E; Donate</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+
+<style>
+	body {
+		background-color: var(--background-color);
+	}
+
+	h1 {
+		margin-bottom: 8px;
+		margin-top: 32px;
+	}
+
+	:not(pre)>code {
+		background: var(--code-background-color);
+		padding: 1px 4px;
+		font-size: 0.95em;
+		border-radius: 3px;
+	}
+
+	pre {
+		background: var(--codeblock-background-color);
+		color: var(--codeblock-color);
+	}
+
+	pre code {
+		display: block;
+		overflow-x: auto;
+		padding: .5em;
+	}
+
+	.date-big {
+		line-height: 2;
+		margin-left: 32px;
+	}
+
+	article {
+		background-color: var(--base-color);
+		box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	figure img {
+		margin: 0;
+	}
+
+	article img,
+	article video {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: auto;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	article h1 {
+		margin-top: 64px;
+	}
+
+	article h2,
+	article h3,
+	article h4 {
+		margin-top: 42px;
+	}
+
+	.author {
+		margin-top: 0px;
+		margin-bottom: 64px;
+	}
+
+	.tag.active {
+		filter: saturate(0.75);
+	}
+
+	@media screen and (min-width: 900px) {
+		article .content {
+			width: 70%;
+			margin: auto;
+		}
+	}
+
+	@media (max-width: 900px) {
+		body {
+			background-color: var(--base-color);
+		}
+
+		article {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		article img:first-child,
+		article video:first-child {
+			max-width: 100%;
+		}
+	}
+</style>
+
+<link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
+
+<div class="container">
+	<article class="flex padded">
+		<div class="content content-article">
+			<figure>
+				<img src="/storage/app/uploads/public/56b/c4b/20e/56bc4b20e9832821396846.jpg" title=""
+					alt=" " class="rounded-lg"
+					style="width: 100%; height: auto" />
+				<figcaption style="opacity: 0.8; line-height: 1.5">
+					<strong></strong>
+					<span style="margin-left: 0.75rem; font-size: 90%"></span>
+				</figcaption>
+			</figure>
+
+			<div class="info">
+				<h1>
+					WebAssembly: Godot on the web?
+				</h1>
+				<h4 class="author">
+					By: Juan Linietsky
+					<span class="date"> 25 June 2015</span>
+				</h4>
+
+				<div class="tags">
+					
+					<a href="/blog/news">
+						<div class="tag active">News</div>
+					</a>
+					
+				</div>
+			</div>
+
+			<h2 id="running-native-on-the-web">Running native on the web</h2>
+
+<p>Godot has a long story on attempts trying to make it run on the web. We always wanted this to happen, we tried many approaches, it may finally happen. This article will be a small recap of our experiences with this matter.</p>
+
+<h2 id="atmosphir">Atmosphir</h2>
+
+<p>A long time ago Ariel and I wrote a game named Atmosphir as contractors. It was one of the first voxel games and a Minecraft precursor. Although far from what Godot is now (almost the entire codebase is different at this point), the game+engine combo were written almost from scratch in seven months and Atmosphir got a warm welcome by the community.</p>
+
+<p>As it <a href="http://techcrunch.com/2008/09/10/tc50-atmosphir-the-build-it-yourself-gaming-platform/">did well</a>, investors wanted to expand the game and one of their first ideas was to make it a web based game to run it in Kongregate (which was trendy). They were set on this idea and completely convinced that downloadable games were a thing of the past (a common idea at the time, Steam did not exist yet and Minecraft was a year or two away from proving them wrong).</p>
+
+<h2 id="first-attempt-native-plugin">First attempt, native plugin</h2>
+
+<p>We did research on how to make the game run on a browser and researched NPAPI and similar technologies and even made prototypes, but reality was that we believed it was a huge security risk to do this, as plugins don’t have any sort of protection against attacks (reason why now they are being removed from Chrome and Edge).</p>
+
+<p>Finally It was decided that the game was to be ported to Unity so it could run on the web. Unity at the time was a very immature engine and Atmosphir was probably one of the biggest projects made with it, if not the largest. Still, it had a great web plugin with a decent userbase. At the time we had other priorities so we ceased involvement with the project.</p>
+
+<h2 id="second-attempt-native-client">Second attempt, native client</h2>
+
+<p>Shortly afterwards, Google announced Native Client. Native Client works by allowing developers to compile “safe” binaries that run on the Browser. You had to compile a binary for each processor by yourself, but that wasn’ t too bad. We believed it was a great idea, as it was a safe way to run native code on the web. Ariel did a very early port of Godot to it and it worked fantastic.</p>
+
+<p>At the time, Google started experimenting with Pepper API (PPAPI), proposing it as an open safe (sandboxed) plugin interface. Mozilla was interested too so so we believed this was the future (Hey, if both Firefox and Chrome had it working, Microsoft would have been forced to implement it, right?). Unfortunately, Mozilla <a href="https://wiki.mozilla.org/NPAPI:Pepper">changed course</a> and decided not to go that route (no PPAPI) and, as a Chrome-only plugin would not be very useful, we abandoned it to.</p>
+
+<p>Failure. A shame because PNaCL was not going to get support either, as a great of an idea as it was. Thanks Mozilla.</p>
+
+<h2 id="third-attempt-flash">Third attempt, Flash</h2>
+
+<p>Fast forward to Farmville. Making games in Flash became all the rage and the most popular way to make games on Facebook. On the peak of it’ s glory, Adobe announced a cool internal project called “<a href="http://www.adobe.com/devnet-docs/flascc/docs/samples.html">FlasCC</a>“, later renamed to “Project Alchemy” and finally settled as “Adobe CrossBridge”. This technology allowed to compile C++ to run on the FlashVM.</p>
+
+<p>At the time, It was still immature and it needed some work, but it showed promise. “This is it!” we thought again, this is how to run Godot on the web.  We met with Adobe privately at GDC and worked with them in the closed beta with the hopes to have a nice flash exporter.</p>
+
+<p>Unfortunately, one day Steve Jobs decided that “<a href="https://www.apple.com/hotnews/thoughts-on-flash/">Flash is dead</a>” and killed it. It was a simple as that. Can’t complain about it as it was probably a good thing, but efforts to bring Godot to the web failed again as Adobe abandoned both Flash and Cross Bridge. Thanks Apple.</p>
+
+<h2 id="fourth-attempt-asmjs">Fourth attempt, ASM.JS</h2>
+
+<p>When I first heard that someone made a compiler that <a href="http://asmjs.org/">converted C++ to JavaScript</a>, I laughed a lot and ignored it for about a year. Finally, one day, decided to gave it a try and I was surprised that it worked. It had a lot of limitations but it could run Godot. Firefox ran it flawlessly and perfectly, but not Chrome and much less Internet Explorer. The situation improved the following years, with support somehow improving in all major browsers and Microsoft deciding to adopt it for Edge.</p>
+
+<p>Unfortunately, the process of detecting asm.js and pre-parsing it efficiently seems it’s too much of a hack to implement by browser vendors other than Mozilla. Despite it being adopted by Unity and Unreal too, ASM.JS is still hit or miss. It requires a huge amount of resources to compile the Javascript blob, a large pre-allocated chunk of memory (to serve as process memory), and a relatively fast computer to run it. Forget about mobile web. This back-end is still in the works in Godot, but we were mainly waiting for browser vendors to make it not suck. This may never happen.</p>
+
+<h2 id="fifth-attempt-webassembly">Fifth attempt, WebAssembly</h2>
+
+<p>Some days ago, <a href="https://github.com/WebAssembly/design">WebAssembly was announced</a>. It’s a bytecode specification to run code that converts to native on the browser. On paper it’s great and provides every single thing that Godot needs. It’s still in diapers and we might not see support for it until next year, but it’ cool because this time Unity and Unreal are in our same boat and they have more lobby power than us.</p>
+
+<p>In fact, all this is probably because they freaked after Google decided to deprecate NPAPI from Chrome and Microsoft decided to stop supporting plugins on Edge. Will we succeed this time? I hope so, but i we do it will definitely be thanks to Google and Microsoft this time! Thanks for having the balls to deprecate native plugins!</p>
+
+<p>As soon as there is an initial implementation of this technology in all major browsers, we will definitely be giving it a try! Stay tuned!</p>
+
+		</div>
+	</article>
+</div>
+
+
+
+</main>
+
+<footer>
+	<div class="container flex">
+		<div id="copyright">
+			<p>
+				© 2007-2023 Juan Linietsky, Ariel Manzur and <a
+					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
+					rel="noopener">contributors</a><br>
+				Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom
+					Conservancy</a>.<br>
+				Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
+				<a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on
+					GitHub</a>.
+			</p>
+		</div>
+		<div id="sitemap">
+			<ul class="sitemap-group">
+				<li><strong>Get Godot</strong></li>
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Public Relations</strong></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Communities and Events</a></li>
+				<li><a href="/press">Press Kit</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>About Godot</strong></li>
+				<li><a href="/features">Features</a></li>
+				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/education">Education</a></li>
+				<li><a href="/license">License</a></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
+				<li><a href="/donate">Donate</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>Project Team</strong></li>
+				<li><a href="/governance">Governance</a></li>
+				<li><a href="/teams">Teams</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Extra Resources</strong></li>
+				<li><a href="/asset-library/asset">Asset Library</a></li>
+				<li><a href="https://docs.godotengine.org">Documentation</a></li>
+				<li><a href="https://github.com/godotengine">Code Repository</a></li>
+			</ul>
+		</div>
+		<div id="social" class="dark-desaturate">
+			<h4 class="text-right"><a href="/contact">Contact us</a></h4>
+			<div class="flex justify-space-between">
+				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+				</a>
+				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+				</a>
+				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
+					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+				</a>
+				<a href="/rss.xml" target="_blank" rel="noopener">
+					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		document.querySelectorAll('pre code').forEach((block) => {
+			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('.content-article img').forEach((articleImg) => {
+			// Add lightbox elements in blog articles for Tobii.
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		});
+	});
+
+	// Update any download link to point to identified user's OS.
+	const links = document.querySelectorAll('.set-os-download-url');
+	for (let i = 0; i < links.length; i++) {
+		const link = links[i];
+		link.href = "/download/windows";
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link.href = "/download/macos";
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link.href = "/download/linux";
+		}
+	}
+</script>
+
+
+</body>
+
+</html>

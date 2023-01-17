@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="Free and open source 2D and 3D game engine">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="Godot Engine - Blog - Page 12">
+	<meta property="og:description" content="Free and open source 2D and 3D game engine">
+	<meta property="og:image" content="https://godotengine.org/assets/og_image.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Godot Engine - Blog - Page 12</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	<input type="checkbox" id="nav_toggle_cb">
+<header>
+	<div class="container flex align-center">
+		<div id="nav_head">
+			<a href="/" id="logo-link">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			</a>
+			<label for="nav_toggle_cb" id="nav_toggle_btn">
+				<img src="/assets/hamburger.svg" width="24" height="24" alt="">
+			</label>
+		</div>
+
+		<nav id="nav">
+			<ul class="left">
+				<li><a href="/showcase">Showcase</a></li>
+				<div class="only-on-mobile" style="width: 100%">
+					<li><a href="/features">Features</a></li>
+				</div>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Community</a></li>
+				<li><a href="/contact">About</a></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+			</ul>
+
+			<ul class="right">
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://docs.godotengine.org">Learn</a></li>
+				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
+				
+				<li class="fund"><a href="/donate">❤&#xFE0E; Donate</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+
+<style>
+	.posts {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	@media (min-width: 768px) {
+		.posts {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.posts {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+</style>
+
+<div class="head">
+	<div class="container flex eqsize responsive">
+		<div class="main">
+			<h1 class="intro-title">Blog</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<!-- Search -->
+	<form class="search-bar" method="get" action="https://duckduckgo.com/">
+		<input type="hidden" name="sites" value="godotengine.org/article" />
+		<input type="text" name="q" maxlength="300" placeholder="Search articles" />
+		<button class="btn search-bar-btn" type="submit">
+			<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
+		</button>
+	</form>
+
+	<!-- Categories -->
+
+	<h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
+
+	<div class="tags">
+		<a href="/blog" title="Show all categories">
+			<div class="tag tag--default active">All</div>
+		</a>
+
+		
+		
+		<a href="/blog/news" title="General news that don't fit in other categories.">
+			<div class="tag tag-- ">
+				News</div>
+		</a>
+		
+		
+		
+		<a href="/blog/progress-report" title="Progress report about a specific engine subsystem in Godot.">
+			<div class="tag tag-- ">
+				Progress Report</div>
+		</a>
+		
+		
+		
+		<a href="/blog/events" title="Physical and online Godot-related event announcements.">
+			<div class="tag tag-- ">
+				Events</div>
+		</a>
+		
+		
+		
+		<a href="/blog/release" title="Godot stable release announcements. See Pre-release category for alphas, betas and release candidates.">
+			<div class="tag tag-- ">
+				Release</div>
+		</a>
+		
+		
+		
+		<a href="/blog/pre-release" title="Godot pre-release announcement (alpha, beta or release candidate).">
+			<div class="tag tag-- ">
+				Pre-release</div>
+		</a>
+		
+		
+		
+		<a href="/blog/showcase" title="Showreel video postings and showcase interviews. Showreel-related announcements are in the News category.">
+			<div class="tag tag-- ">
+				Showcase</div>
+		</a>
+		
+		
+	</div>
+	
+
+	<!-- Posts -->
+	<div class="flex pagination">
+		
+		<a class="pagination-previous"
+			href="https://godotengine.org/blog/11/">← Previous</a>
+		
+
+		
+		
+		<a  title="Godot Engine - Blog - Page 10"
+			href="https://godotengine.org/blog/10/">10</a>
+		
+		<a  title="Godot Engine - Blog - Page 11"
+			href="https://godotengine.org/blog/11/">11</a>
+		
+		<a class="active"  title="Godot Engine - Blog - Page 12"
+			href="https://godotengine.org/blog/12/">12</a>
+		
+		<a  title="Godot Engine - Blog - Page 13"
+			href="https://godotengine.org/blog/13/">13</a>
+		
+		<a  title="Godot Engine - Blog - Page 14"
+			href="https://godotengine.org/blog/14/">14</a>
+		
+		
+
+		
+		<a class="pagination-next"
+			href="https://godotengine.org/blog/13/">Next →</a>
+		
+	</div>
+	<div class="posts">
+		
+		<a href="/article/dev-snapshot-godot-3-2-beta-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5dd/7f7/f3b/5dd7f7f3b7de4872680557.jpg');" href="/article/dev-snapshot-godot-3-2-beta-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;22 November 2019</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.2 beta 2</h3>
+					<p class="excerpt">We now release Godot 3.2 beta 2 with two weeks of bug fixes over the previous snapshot. Notable changes include the addition of WebAssembly export templates for the Mono build, as well as C# 8 support via Mono 6.6.0 Preview.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/interblock-supports-godot-development/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5dd/555/69a/5dd55569a6e5d003811414.png');" href="/article/interblock-supports-godot-development/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;20 November 2019</span>
+					</div>
+					<h3>Interblock supports Godot development</h3>
+					<p class="excerpt">We are happy to announce that Interblock is now supporting Godot's development as Platinum sponsor! For this occasion, we asked them to share some words about the company, why they choose to support Godot and their plans to use the engine for their products.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/csharp-wasm-aot/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5dc/e01/229/5dce01229c795712716182.png');" href="/article/csharp-wasm-aot/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/ignacio.png" alt="" loading="lazy">
+						<span class="by">Ignacio Roldán Etcheverry </span>
+						<span class="date">&nbsp;-&nbsp;15 November 2019</span>
+					</div>
+					<h3>C# progress report: WebAssembly, MonoDevelop and AOT</h3>
+					<p class="excerpt">Godot 3.2 brings WebAssembly support for C# games. There is also a new extension for Visual Studio for Mac and MonoDevelop and preliminary support for AOT compilation.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/release-candidate-godot-3-1-2-rc-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5dc/bf1/454/5dcbf1454c1cc840552545.jpg');" href="/article/release-candidate-godot-3-1-2-rc-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;13 November 2019</span>
+					</div>
+					<h3>Release candidate: Godot 3.1.2 RC 1</h3>
+					<p class="excerpt">It's been over 6 months since Godot 3.1.1-stable, so the upcoming 3.1.2 release is both long overdue and accordingly packed with important bug fixes and enhancements. As we cherry-picked close to 400 commits to the 3.1 branch since the previous release, extensive testing is necessary to ensure that no regression crept in under disguise of a bugfix. This is why we publish this release candidate for 3.1.2 to gather test reports from the community.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/major-update-visual-shaders-godot-3-2-part-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5dc/1aa/e06/5dc1aae06d7f4636917764.png');" href="/article/major-update-visual-shaders-godot-3-2-part-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">Yuri Roubinsky </span>
+						<span class="date">&nbsp;-&nbsp;11 November 2019</span>
+					</div>
+					<h3>Major update for Visual Shaders in Godot 3.2 (part 2)</h3>
+					<p class="excerpt">This is the second blog post describing enhancements for visual shaders and shader scripts landed in Godot 3.2. Much time and effort was spent adding a lot of new things to enhance the overall experience developing shaders.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-2-beta-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5dc/2d4/f59/5dc2d4f59ea0f935451715.jpg');" href="/article/dev-snapshot-godot-3-2-beta-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 6 November 2019</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.2 beta 1</h3>
+					<p class="excerpt">After three well-tested and quite stable alpha builds, we're now ready to enter the beta stage for the upcoming Godot 3.2 release. The beta stage corresponds for us to a release freeze, which means that we will only consider critical bug fixes for merging in the master branch, and that until Godot 3.2 is released.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/code-of-conduct-godot-community/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5dc/019/1f9/5dc0191f92385004371530.svg');" href="/article/code-of-conduct-godot-community/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 4 November 2019</span>
+					</div>
+					<h3>Code of Conduct for the Godot community</h3>
+					<p class="excerpt">The Godot community now has a Code of Conduct, which applies to all users and contributors on all Godot community platforms, both online and at Godot-related events. It defines common sense guidelines to ensure that our community platforms are a safe and welcoming environment for all Godot users. By interacting with other participants in the Godot community, you agree to respect the terms of the Code of Conduct.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/vulkan-progress-report-5/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5db/e26/e58/5dbe26e58c5b1549900965.jpeg');" href="/article/vulkan-progress-report-5/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp; 2 November 2019</span>
+					</div>
+					<h3>Vulkan progress report #5</h3>
+					<p class="excerpt">Another month, another Vulkan progress report! October was a busy month, as most of it was split between working on the new Global Illumination system and Godotcon/GIC in Poland.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dtls-report-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5db/87c/7eb/5db87c7eb83ec156927495.png');" href="/article/dtls-report-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">Fabio Alessandrelli </span>
+						<span class="date">&nbsp;-&nbsp;29 October 2019</span>
+					</div>
+					<h3>DTLS progress report #1</h3>
+					<p class="excerpt">A sneak peak at DTLS support in Godot 4.0 .</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-2-alpha-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5db/1c0/ec6/5db1c0ec6cf8e490600367.png');" href="/article/dev-snapshot-godot-3-2-alpha-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;24 October 2019</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.2 alpha 3</h3>
+					<p class="excerpt">While many core contributors were busy with the Godot Sprint and GodotCon last week, the rest of the world has not been idle and we got lots of nice contributions fixing bugs and improving usability. We thus publish Godot 3.2 alpha 3 as our next iteration, fixing various issues from the last build. 150 commits have been merged since 3.2 alpha 2.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/vulkan-progress-report-4/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5da/236/c28/5da236c281af8007391866.jpeg');" href="/article/vulkan-progress-report-4/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;12 October 2019</span>
+					</div>
+					<h3>Vulkan progress report #4</h3>
+					<p class="excerpt">Over the course of September month, I continued working on Vulkan all day long, and several improvements have been made.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-2-alpha-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5da/0d6/c19/5da0d6c198b34564377170.jpg');" href="/article/dev-snapshot-godot-3-2-alpha-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;11 October 2019</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.2 alpha 2</h3>
+					<p class="excerpt">It's been less than a week since we published Godot 3.2 alpha 1 as a first development snapshot towards the stable release. But as mentioned, we want to have builds frequently to iterate and improve the stability on a weekly basis, so here comes 3.2 alpha 2. As that branch is already quite mature, this should allow us to publish Godot 3.2-stable in a few weeks.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/schedule-godotcon-2019-poznan/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d9/f48/9c4/5d9f489c43a54009438616.png');" href="/article/schedule-godotcon-2019-poznan/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;10 October 2019</span>
+					</div>
+					<h3>Schedule for GodotCon 2019 in Poznań</h3>
+					<p class="excerpt">The GodotCon 2019 in Poznań, Poland is nearing, so here is the preliminary schedule of talks and demos, as well as presentations of the speakers. Content will be updated with the actual time schedule for the two days of GodotCon, and possibly additional talks.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/cfp-game-development-room-fosdem-2020/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d9/dea/c0b/5d9deac0ba681055155639.png');" href="/article/cfp-game-development-room-fosdem-2020/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">George Marques </span>
+						<span class="date">&nbsp;-&nbsp; 9 October 2019</span>
+					</div>
+					<h3>CFP: Game Development room at FOSDEM 2020</h3>
+					<p class="excerpt">We organize a devroom focused on free and open source Game Development at the FOSDEM 2020 in Brussels, on February 1-2, 2020. We ask any interested developer or user of FOSS game development tools or games to send us their talk proposals until December 1, 2019.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/dev-snapshot-godot-3-2-alpha-1/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d9/9bd/66b/5d99bd66b58c5678103264.jpg');" href="/article/dev-snapshot-godot-3-2-alpha-1/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 6 October 2019</span>
+					</div>
+					<h3>Dev snapshot: Godot 3.2 alpha 1</h3>
+					<p class="excerpt">After close to 7 months of development and over 4,000 commits since the 3.1 release, we are now happy to release Godot 3.2 alpha 1, our first milestone towards the next stable installment of our free and open source game engine. It brings new features such as an Android plugin/custom build system, C# support for Android, WebRTC support and WebSocket improvements, a fully reworked Visual Shader editor, ARKit and Oculus Go/Quest support and many more.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/heroic-labs-supports-godot-development/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d9/4ea/c8a/5d94eac8a8423458863414.jpg');" href="/article/heroic-labs-supports-godot-development/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 2 October 2019</span>
+					</div>
+					<h3>Heroic Labs supports Godot development</h3>
+					<p class="excerpt">We are happy to announce that Heroic Labs is now supporting Godot's development as Platinum sponsor! For this occasion, we asked Heroic Labs co-founder Mo Firouz to write some words about the company, why they choose to support Godot and their plans to integrate Nakama with our engine.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/basic-cryptography-ssl-improvements/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d8/f4b/b0a/5d8f4bb0a3174096196968.png');" href="/article/basic-cryptography-ssl-improvements/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">Fabio Alessandrelli </span>
+						<span class="date">&nbsp;-&nbsp;28 September 2019</span>
+					</div>
+					<h3>Basic cryptography, SSL improvements</h3>
+					<p class="excerpt">As part of the MOSS project sponsored by Mozilla, during July I worked on some new features regarding cryptography and SSL to improve the quality and security of Godot networking.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/george-marques-will-be-working-full-time-project/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d8/25c/62c/5d825c62cc1e4431380963.png');" href="/article/george-marques-will-be-working-full-time-project/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp;18 September 2019</span>
+					</div>
+					<h3>George Marques will be working full time for the project</h3>
+					<p class="excerpt">After some months, the project has received enough funding to be able to do a new full time hire! Thanks hugely to everyone who is supporting us, as your help has allowed us reaching this far!</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/gsoc-2019-progress-report-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d7/52f/458/5d752f4583d2e116311872.png');" href="/article/gsoc-2019-progress-report-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp; 8 September 2019</span>
+					</div>
+					<h3>GSoC 2019 progress report #3</h3>
+					<p class="excerpt">For the second time, Godot took part in the Google Summer of Code (GSoC) programme, which lets students from all over the world work for three months on specific projects thanks to a Google stipend. We had 8 students working for on great new features all around the engine, and in this third and last progress report, they outline the final state of their GSoC work, how to use it (when relevant) and future steps that they might envision for the feature they worked on.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/introducing-godot-proposals-repository/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d7/025/084/5d70250842430761259264.png');" href="/article/introducing-godot-proposals-repository/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp; 4 September 2019</span>
+					</div>
+					<h3>Introducing the Godot Proposals repository</h3>
+					<p class="excerpt">The past two years, the project kept growing at a steady pace. One of the most important consequences of this growth process is that our GitHub issue tracker has exploded with ideas, proposals and bug reports.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/vulkan-progress-report-3/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d6/d05/e0f/5d6d05e0f08ee642246147.jpeg');" href="/article/vulkan-progress-report-3/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp; 2 September 2019</span>
+					</div>
+					<h3>Vulkan progress report #3</h3>
+					<p class="excerpt">Work on porting the rendering engine to Vulkan continues at a steady pace.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/websocket-updates-udp-multicast/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d5/ea9/151/5d5ea9151801b115754281.png');" href="/article/websocket-updates-udp-multicast/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="" loading="lazy">
+						<span class="by">Fabio Alessandrelli </span>
+						<span class="date">&nbsp;-&nbsp;22 August 2019</span>
+					</div>
+					<h3>WebSocket updates, UDP multicast</h3>
+					<p class="excerpt">UDP multicast support, WebSocket updates, demos, a new tutorial.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/gsoc-2019-progress-report-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d5/d4e/904/5d5d4e9043f37492937462.png');" href="/article/gsoc-2019-progress-report-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="" loading="lazy">
+						<span class="by">Rémi Verschelde </span>
+						<span class="date">&nbsp;-&nbsp;21 August 2019</span>
+					</div>
+					<h3>GSoC 2019 progress report #2</h3>
+					<p class="excerpt">Godot takes part in the Google Summer of Code for the second year, and this time we have 8 students working on awesome features for the engine. With the programme coming close to an end, they each share their recent progress since the first report with a short devlog. A final report will be posted in coming weeks with an overview of the work done and how to get started using the features they worked on.</p>
+				</div>
+			</article>
+		</a>
+		
+		<a href="/article/vulkan-progress-report-2/" style="text-decoration: none">
+			<article class="article-card">
+				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5d4/604/0cd/5d46040cdd2b1294169859.png');" href="/article/vulkan-progress-report-2/"></div>
+				<div class="content">
+					<div class="info">
+						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						<span class="by">Juan Linietsky </span>
+						<span class="date">&nbsp;-&nbsp; 3 August 2019</span>
+					</div>
+					<h3>Vulkan progress report #2</h3>
+					<p class="excerpt">In our latest episode, I was just barely getting Vulkan to work. A month later, many things happened!</p>
+				</div>
+			</article>
+		</a>
+		
+	</div>
+	<div class="flex pagination">
+		
+		<a class="pagination-previous"
+			href="https://godotengine.org/blog/11/">← Previous</a>
+		
+
+		
+		
+		<a  title="Godot Engine - Blog - Page 10"
+			href="https://godotengine.org/blog/10/">10</a>
+		
+		<a  title="Godot Engine - Blog - Page 11"
+			href="https://godotengine.org/blog/11/">11</a>
+		
+		<a class="active"  title="Godot Engine - Blog - Page 12"
+			href="https://godotengine.org/blog/12/">12</a>
+		
+		<a  title="Godot Engine - Blog - Page 13"
+			href="https://godotengine.org/blog/13/">13</a>
+		
+		<a  title="Godot Engine - Blog - Page 14"
+			href="https://godotengine.org/blog/14/">14</a>
+		
+		
+
+		
+		<a class="pagination-next"
+			href="https://godotengine.org/blog/13/">Next →</a>
+		
+	</div>
+</div>
+
+
+</main>
+
+<footer>
+	<div class="container flex">
+		<div id="copyright">
+			<p>
+				© 2007-2023 Juan Linietsky, Ariel Manzur and <a
+					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
+					rel="noopener">contributors</a><br>
+				Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom
+					Conservancy</a>.<br>
+				Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
+				<a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on
+					GitHub</a>.
+			</p>
+		</div>
+		<div id="sitemap">
+			<ul class="sitemap-group">
+				<li><strong>Get Godot</strong></li>
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Public Relations</strong></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Communities and Events</a></li>
+				<li><a href="/press">Press Kit</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>About Godot</strong></li>
+				<li><a href="/features">Features</a></li>
+				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/education">Education</a></li>
+				<li><a href="/license">License</a></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
+				<li><a href="/donate">Donate</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>Project Team</strong></li>
+				<li><a href="/governance">Governance</a></li>
+				<li><a href="/teams">Teams</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Extra Resources</strong></li>
+				<li><a href="/asset-library/asset">Asset Library</a></li>
+				<li><a href="https://docs.godotengine.org">Documentation</a></li>
+				<li><a href="https://github.com/godotengine">Code Repository</a></li>
+			</ul>
+		</div>
+		<div id="social" class="dark-desaturate">
+			<h4 class="text-right"><a href="/contact">Contact us</a></h4>
+			<div class="flex justify-space-between">
+				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+				</a>
+				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+				</a>
+				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
+					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+				</a>
+				<a href="/rss.xml" target="_blank" rel="noopener">
+					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		document.querySelectorAll('pre code').forEach((block) => {
+			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('.content-article img').forEach((articleImg) => {
+			// Add lightbox elements in blog articles for Tobii.
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		});
+	});
+
+	// Update any download link to point to identified user's OS.
+	const links = document.querySelectorAll('.set-os-download-url');
+	for (let i = 0; i < links.length; i++) {
+		const link = links[i];
+		link.href = "/download/windows";
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link.href = "/download/macos";
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link.href = "/download/linux";
+		}
+	}
+</script>
+
+
+</body>
+
+</html>
