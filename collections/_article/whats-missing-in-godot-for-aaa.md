@@ -127,7 +127,7 @@ Unless the support for this is solid, using Godot in large teams will remain dif
 
 While for very large studios this is not an area of interest, medium-sized studios still rely on significant amounts of assets and pre-made functionality. The Asset Library currently existing in Godot only links to open source resources (e.g. hosted on GitHub or GitLab) and is unable to be used for commercial assets.
 
-For the Godot project, a commercial asset store would be a great way to add an extra source of income, but it was not legally possible given our legal status until recently. With the move to the [Godot Foundation](https://godotengine.org/en/article/godots-graduation-godot-moves-to-a-new-foundation), this is a new possibility that opens up.
+For the Godot project, a commercial asset store would be a great way to add an extra source of income, but it was not legally possible given our legal status until recently. With the move to the [Godot Foundation](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation), this is a new possibility that opens up.
 
 ## Is solving these problems enough for Godot to become a top AA / AAA game engine?
 
