@@ -36,6 +36,7 @@ To build the website locally, follow these steps:
 2. Clone this repository.
 3. Install the necessary dependencies: `bundle install`.
 4. Build the site: `bundle exec jekyll build`.
+   - Append `--config _config.yml,_config.development.yml` to use the development config with your build.
 
 For simplicity, these two commands are also available as a `build.sh` script in this repository.
 
@@ -149,7 +150,8 @@ the events. **Some files may be obsolete and unused.**
 
 ### Build system
 
-This project is build with Jekyll, with the build instructions located in `Gemfile` and `_config.yml`.
+This project is build with Jekyll, with the build instructions located in `Gemfile` and `_config.yml`. When building
+locally, some configuration options may need to be different. To define those, `_config.development.yml` is used.
 
 ## Content update guidelines
 

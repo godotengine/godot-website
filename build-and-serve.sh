@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 bundle install
-bundle exec jekyll serve --host 0.0.0.0
+bundle exec jekyll serve --config _config.yml,_config.development.yml --host 0.0.0.0

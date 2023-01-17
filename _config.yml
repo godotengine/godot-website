@@ -2,7 +2,7 @@
 exclude: [".github", "Gemfile", "Gemfile.lock", "build.sh", "build-and-serve.sh", "README.md"]
 permalink: pretty
 
-baseurl: "https://godotengine.org"
+url: "https://godotengine.org"
 
 collections_dir: collections
 collections:
