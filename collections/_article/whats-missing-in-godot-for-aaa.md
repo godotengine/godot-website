@@ -135,7 +135,7 @@ The answer is "it depends". Godot, at its core, is and will always be (by design
 
 In contrast, other types of game engines already come with a lot of high level and ready to use components and behaviors.
 
-I don't meant to say that Godot should not support any of that in the future. If it does, though, it will most certainly be as official extensions.
+I don't mean to say that Godot should not support any of that in the future. If it does, though, it will most certainly be as official extensions.
 
 So, what kind of features are we talking about? Well..
 
