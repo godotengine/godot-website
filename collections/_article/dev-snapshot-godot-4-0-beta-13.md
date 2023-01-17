@@ -6,7 +6,7 @@ author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-4-0-beta-13.jpg
 image_caption_title: "Lone Knight"
 image_caption_description: "A game by Jean Makes Games"
-date: 2023-01-17 00:00:00
+date: 2023-01-17 17:00:00
 ---
 
 With the first Godot 4.0 Release Candidate on the horizon we continue to release beta snapshots frequently and relentlessly! Such cadence allows us to better measure the overall stability and quickly catch regressions, especially when a lot of features are worked on at the same time.
@@ -36,7 +36,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
 
-See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/3c9bf4bc210a8e6a208f30ca59de4d4d7e18c04d...caacade569eb7a541aaa7a8cdc3eedffca1422d9), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-13T10%3A00..2023-01-17T13%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 12 (XX commits – excluding merge commits ― from YY contributors).
+See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/3c9bf4bc210a8e6a208f30ca59de4d4d7e18c04d...caacade569eb7a541aaa7a8cdc3eedffca1422d9), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-13T10%3A00..2023-01-17T13%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 12 (88 commits – excluding merge commits ― from 39 contributors).
 
 While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the [`breaks compat` label](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-13T10%3A00..2023-01-17T13%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22) for details.
 
