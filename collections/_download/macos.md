@@ -1,11 +1,10 @@
 ---
 title: MacOS downloads - Godot Engine
-platform: macos
+platform: MacOS
 downloads:
   - caption: Universal 64-bit (x86_64 + Apple Silicon)
     url: osx.universal.zip
-downloads_mono:
-  - caption: Universal 64-bit (x86_64 + Apple Silicon)
+  - caption: Mono Universal 64-bit (x86_64 + Apple Silicon)
     url: mono_osx.universal.zip
 redirect_from:
   - /download/osx

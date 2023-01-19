@@ -1,17 +1,15 @@
 ---
 title: Linux server downloads - Godot Engine
-platform: server
+platform: Linux Server
 
 downloads:
   - caption: Headless (64-bit, x86_64)
     url: linux_headless.64.zip
   - caption: Server (64-bit, x86_64)
     url: linux_server.64.zip
-
-downloads_mono:
-  - caption: Headless (64-bit, x86_64)
+  - caption: Mono Headless (64-bit, x86_64)
     url: mono_linux_headless_64.zip
-  - caption: Server (64-bit, x86_64)
+  - caption: Mono Server (64-bit, x86_64)
     url: mono_linux_server_64.zip
 
 ---

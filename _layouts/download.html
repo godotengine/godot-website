@@ -15,6 +15,10 @@ layout: default
 		margin-bottom: 8px;
 	}
 
+	.btn.btn-version-download.dot-net {
+		background-color: #7a7f84;
+	}
+
 	.btn.btn-version-download a {
 		color: white;
 		text-decoration: none;
@@ -106,10 +110,17 @@ layout: default
 		margin-top: 32px;
 	}
 
+	.tabs {
+		margin-bottom: -1px;
+	}
 	/* hide tab icons by default */
 	.tab img {
 		display: none;
 		filter: invert(100%);
+	}
+
+	.tab.active {
+		background: var(--card-background-color);
 	}
 
 	@media (max-width: 1060px) {
@@ -126,93 +137,114 @@ layout: default
 	}
 </style>
 
-<div class="head">
+<style>
+	.main {
+		width: 100%;
+	}
+	.main h1 {
+		text-align: center;
+	}
+	.head .btn.btn-version-download img {
+		display: inline-block;
+		width: 15px;
+		position: relative;
+		top: 2px;
+		filter: invert();
+		margin-right: 11px;
+	}
+	.main .downloads {
+		max-width: 600px;
+		margin: 40px auto;
+		display: grid;
+		text-align: center;
+	}
+	.main .downloads .details {
+		margin-top: 0;
+		font-size: 14px;
+		opacity: 0.6;
+	}
+
+	.main .downloads {
+		display: grid;
+		gap: 40px;
+	}
+</style>
+<div class="head" style="background-image: url('/assets/download/download-background.jpg'); background-size: cover; background-position: center;">
 	<div class="container flex responsive justify-space-between">
 		<div class="main">
-			<h1 class="intro-title">Download</h1>
-		</div>
-		<div class="tabs snap-tabs">
-			<a href="/download/linux" class="tab title-font {% if page.platform == 'linux' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/linux.svg" title="Linux" alt="Linux" />
-				<span>Linux</span>
-			</a>
-			<a href="/download/macos" class="tab title-font {% if page.platform == 'macos' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/macos.svg" title="macOS" alt="macOS" />
-				<span>macOS</span>
-			</a>
-			<a href="/download/windows" class="tab title-font {% if page.platform == 'windows' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
-				<span>Windows</span>
-			</a>
-			<a href="/download/server" class="tab title-font {% if page.platform == 'server' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/server.svg" title="Linux Server" alt="Linux Server" />
-				<span>Linux Server</span>
-			</a>
-			<a href="/download/android" class="tab title-font {% if page.platform == 'android' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/android.svg" title="Android" alt="Android" />
-				<span>Android</span>
-			</a>
-			<a href="https://editor.godotengine.org/releases/latest/" class="tab title-font">
-				<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
-				<span>Web Editor</span>
-			</a>
+			<h1 class="intro-title">Download Godot</h1>
+
+			<div class="downloads">
+				<div>
+					<div class="btn btn-version-download">
+						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_{{ download.url }}">
+						<img src="/assets/icons/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
+							Godot Engine {{site.stable_version}}
+						</a>
+					</div>
+					<p class="details">{{ page.platform }} · {% if page.platform == "MacOS" %}Intel/Apple Silicon{% else %}64 bit{% endif %} · {{ site.stable_version_date }} </p>
+				</div>
+
+				<div>
+					<div class="btn btn-version-download dot-net">
+						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_{{ download.url }}">
+						<img src="/assets/icons/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
+							Godot Engine - C# - {{site.stable_version}}
+						</a>
+					</div>
+					<p class="details">Mono version (C# support)</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 <div class="container">
-
-	<div class="flex responsive eqsize">
-		<div class="version-overview">
-			<img src="/assets/download/godot_logo.svg" width="200" height="200" alt="logo">
-			<h2>Godot <a class="version-link" href="#links">{{ site.stable_version }}</a></h2>
-			<i class="date">released {{ site.stable_version_date }}</i>
-
-			<div style="margin-top:32px; line-height: 1.6; font-size: 85%">
-				You can find previous releases on the
-				<a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.<br>
-				Slow download? Try the mirror on <a href="https://github.com/godotengine/godot/releases">GitHub
-					Releases</a>.<br>
-				<br>
-				Also available on digital distribution platforms:
-			</div>
-			<div class="digital-stores">
-				<a class="digital-stores-download card" href="https://godotengine.itch.io/godot"
-					title="Godot Engine on itch.io">
-					<div class="digital-stores-logo">
-						<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
-					</div>
-					<div class="digital-stores-name">itch.io</div>
-				</a>
-				<a class="digital-stores-download card" href="https://store.steampowered.com/app/404790"
-					title="Godot Engine on Steam">
-					<div class="digital-stores-logo">
-						<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
-					</div>
-					<div class="digital-stores-name">Steam</div>
-				</a>
-			</div>
-		</div>
-
+	<h2>Looking for other platforms?</h2>
+	
+	<div class="tabs snap-tabs">
+		<a href="/download/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
+			<img width="24" height="24" src="/assets/icons/linux.svg" title="Linux" alt="Linux" />
+			<span>Linux</span>
+		</a>
+		<a href="/download/macos" class="tab title-font {% if page.platform == 'MacOS' %} active {% endif %}">
+			<img width="24" height="24" src="/assets/icons/macos.svg" title="MacOS" alt="MacOS" />
+			<span>MacOS</span>
+		</a>
+		<a href="/download/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
+			<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
+			<span>Windows</span>
+		</a>
+		<a href="/download/server" class="tab title-font {% if page.platform == 'Linux Server' %} active {% endif %}">
+			<img width="24" height="24" src="/assets/icons/linux-server.svg" title="Linux Server" alt="Linux Server" />
+			<span>Linux Server</span>
+		</a>
+		<a href="/download/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
+			<img width="24" height="24" src="/assets/icons/android.svg" title="Android" alt="Android" />
+			<span>Android</span>
+		</a>
+		<a href="https://editor.godotengine.org/releases/latest/" target="_blank" class="tab title-font">
+			<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
+			<span>Web Editor</span>
+		</a>
+	</div>
+	<div class="">
 		<div id="links" class="platform-details">
 			<div class="card">
 				<div class="base-padding">
-					<h4>Standard version</h4>
+					<h4>Downloads</h4>
 					{% for download in page.downloads %}
-					<div class="btn btn-version-download">
+					<div class="">
 						<a
 							href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_{{ download.url }}">{{ download.caption }}</a>
 					</div>
 					{% endfor %}
-					<h4 style="margin-top: 2rem">Mono version (C# support)</h4>
-					{% for download in page.downloads_mono %}
-					<div class="btn btn-version-download">
-						<a
-							href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_{{ download.url }}">{{
-							download.caption }}</a>
-					</div>
-					{% endfor %}
-					{{ page.mono_note }}
+					{{ page.note }}
+				</div>
+
+				<hr>
+				<div class="base-padding">
+					{{ content }}
 				</div>
 
 				<hr>
@@ -229,88 +261,114 @@ layout: default
 					</ul>
 				</div>
 
-				<hr>
-				<div class="base-padding">
-					{{ content }}
-				</div>
-
-				<div class="footer base-padding" style="line-height: 1.6; font-size: 90%">
+				<!-- MOVE THIS TO THE TANK YOU PAGE -->
+				<!-- <div class="footer base-padding" style="line-height: 1.6; font-size: 90%">
 					Learn how to use Godot with the <a
 						href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/">Step by Step tutorial</a>.<br>
 					Give a try to <a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">demo
 						projects</a> showcasing some of the engine features.
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
 
-	<div class="flex responsive eqsize padded">
+	<div class="">
+		<div style="">
+			You can find previous releases on <a href="https://github.com/godotengine/godot/releases">GitHub</a> or the <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
+		</div>
+		
+		<div>Also available on digital distribution platforms:</div>
+		<div class="digital-stores">
+			<a class="digital-stores-download card" href="https://godotengine.itch.io/godot"
+				title="Godot Engine on itch.io">
+				<div class="digital-stores-logo">
+					<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
+				</div>
+				<div class="digital-stores-name">itch.io</div>
+			</a>
+			<a class="digital-stores-download card" href="https://store.steampowered.com/app/404790"
+				title="Godot Engine on Steam">
+				<div class="digital-stores-logo">
+					<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
+				</div>
+				<div class="digital-stores-name">Steam</div>
+			</a>
+		</div>
+	</div>
+
+	<style>
+		.extras {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
+			max-width: 100%;
+		}
+		@media (min-width: 768px) {
+			.extras {
+				grid-template-columns: 1fr 1fr 1fr; 
+			}
+		}
+		.other-download-card {
+			background: var(--card-background-color);
+			border-radius: 6px;
+			padding: 26px 35px;
+		}
+	</style>
+
+	<div class="padded">
+		<h2>Other Godot downloads</h2>
 		<div class="extras">
 
-			<a class="card"
-				href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_export_templates.tpz">
-				<div class="base-padding">
-					<h3>Export templates (standard)</h3>
-					<p>Used to export your games to all supported platforms.</p>
-				</div>
-			</a>
+			<div class="other-download-card">
+				<h3>Export templates</h3>
+				<p>Used to export your games to all supported platforms.</p>
+				<p>
+					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_export_templates.tpz">Export templates (standard)</a>
+				</p>
+				<p>
+					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_mono_export_templates.tpz">Export templates (Mono / C#)</a>
+				</p>
+			</div>
 
-			<a class="card"
-				href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_mono_export_templates.tpz">
-				<div class="base-padding">
-					<h3>Export templates (Mono / C#)</h3>
-					<p>
-						Used to export your C# games to the supported platforms.<br>
-						Currently, the C# version can export to desktop platforms (Linux, macOS and Windows), Android, iOS, and
-						HTML5/WebAssembly.
-					</p>
-				</div>
-			</a>
+			<div class="other-download-card">
+				<h3>AAR library for Android</h3>
+				<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
+				<p>
+					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/godot-lib.{{site.stable_version}}.stable.release.aar">
+					AAR library (standard)</a>
+				</p>
+				<p>
+					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/godot-lib.{{site.stable_version}}.stable.mono.release.aar">AAR library (Mono / C#)</a>
+				</p>
+			</div>
 
-			<a class="card"
-				href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/godot-lib.{{site.stable_version}}.stable.release.aar">
-				<div class="base-padding">
-					<h3>AAR library for Android plugins (standard)</h3>
-					<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
-				</div>
-			</a>
-
-			<a class="card"
-				href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/godot-lib.{{site.stable_version}}.stable.mono.release.aar">
-				<div class="base-padding">
-					<h3>AAR library for Android plugins (Mono / C#)</h3>
-					<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
-				</div>
-			</a>
-
-			<a href="https://github.com/godotengine/godot-blender-exporter" class="base-padding card">
-				<div>
-					<h3>Blender ESCN exporter</h3>
-					<p>
-						Blender add-on to export scenes to Godot's scene format directly.<br>
-						Godot also supports glTF 2.0 and OBJ.
-					</p>
-				</div>
-			</a>
+			<div class="other-download-card">
+				<h3>Blender ESCN exporter</h3>
+				<p>
+					Blender add-on to export scenes to Godot's scene format directly.<br>
+					Godot also supports glTF 2.0 and OBJ.
+				</p>
+				<a href="https://github.com/godotengine/godot-blender-exporter" class="">Blender exporter</a>
+			</div>
 
 		</div>
 
-		<div class="text-center base-padding">
-			<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="">
-			<p>
-				Godot's development is <strong>open</strong>. This means that you can
-				fix or improve any part of the engine yourself and choose
-				whether to contribute it back or keep it private.
-			</p>
-			<p>
-				New features are always available to use and test, without the need of
-				having to wait for the next major release. Compiling Godot from source
-				is <em>very easy</em> and the process is well-documented for each platform.
-				To obtain the source code, please visit the
-				<a href="https://github.com/godotengine/godot">GitHub project page</a>.
-			</p>
-		</div>
+	</div>
 
+	<div class="text-center base-padding">
+		<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="">
+		<p>
+			Godot's development is <strong>open</strong>. This means that you can
+			fix or improve any part of the engine yourself and choose
+			whether to contribute it back or keep it private.
+		</p>
+		<p>
+			New features are always available to use and test, without the need of
+			having to wait for the next major release. Compiling Godot from source
+			is <em>very easy</em> and the process is well-documented for each platform.
+			To obtain the source code, please visit the
+			<a href="https://github.com/godotengine/godot">GitHub project page</a>.
+		</p>
 	</div>
 </div>
 

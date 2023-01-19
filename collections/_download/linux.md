@@ -1,17 +1,15 @@
 ---
 title: Linux downloads - Godot Engine
-platform: linux
+platform: Linux
 
 downloads:
   - caption: 64-bit (x86_64)
     url: x11.64.zip
   - caption: 32-bit (x86)
     url: x11.32.zip
-
-downloads_mono:
-  - caption: 64-bit (x86_64)
+  - caption: Mono 64-bit (x86_64)
     url: mono_x11_64.zip
-  - caption: 32-bit (x86)
+  - caption: Mono 32-bit (x86)
     url: mono_x11_32.zip
 ---
 

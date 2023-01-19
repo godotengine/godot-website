@@ -1,20 +1,19 @@
 ---
-title: Windows downloads - Godot Engine
-platform: windows
+title: Download - Godot Engine
+platform: Windows
 
 downloads:
   - caption: 64-bit (x86_64)
     url: win64.exe.zip
+    type: main
   - caption: 32-bit (x86)
     url: win32.exe.zip
-
-downloads_mono:
-  - caption: 64-bit (x86_64)
+  - caption: Mono 64-bit (x86_64)
     url: mono_win64.zip
-  - caption: 32-bit (x86)
+  - caption: Mono 32-bit (x86)
     url: mono_win32.zip
 
-mono_note: "<p><strong>Note:</strong> The 32-bit Mono binaries do not run on 64-bit Windows systems at the time being. Make sure to export 64-bit Mono binaries for your 64-bit target platforms.</p>"
+note: "<p><strong>Note:</strong> The 32-bit Mono binaries do not run on 64-bit Windows systems at the time being. Make sure to export 64-bit Mono binaries for your 64-bit target platforms.</p>"
 ---
 
 #### Instructions

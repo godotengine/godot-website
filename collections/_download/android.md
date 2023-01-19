@@ -1,10 +1,10 @@
 ---
 title: Android download - Godot Engine
-platform: android
+platform: Android
 downloads:
   - caption: Universal (ARM64 + ARMv7 + x86_64 + x86)
     url: android_editor.apk
-mono_note:  <em>C# support is not available in the Android editor. </em>
+note: <p><strong>Note:</strong> C# support is not available in the Android editor.</p>
 ---
 
 #### Instructions
