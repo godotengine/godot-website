@@ -31,7 +31,7 @@ Several features were added to Godot Physics since 3.x, such as soft bodies and 
 
 The custom physics engine still has a considerable amount of issues remaining but we are working hard to ensure it is in a decent state for shipping when 4.0 reaches stability. It will continue seeing improvements afterwards, during the following 4.x release cycles.
 
-That said, Godot 4.0 introduces the ability to bind custom physics engines at runtime (without recompiling Godot) via GDExtension, so it's perfectly possible for the community to integrate other engines such as PhysX, Jolt, or Box2D if need to be.
+That said, Godot 4.0 introduces the ability to bind custom physics engines at runtime (without recompiling Godot) via GDExtension, so it's perfectly possible for the community to integrate other engines such as PhysX, Jolt, or Box2D if needs be.
 
 ### Scripting
 
@@ -39,7 +39,7 @@ Godot 4.0 has a new version of GDScript, which is far more powerful and overcome
 
 ### Core engine
 
-The core engine has been significantly optimized, especially on the memory and data-oriented areas. Core and Variant have been massively cleaned up and made more extensible. Besides being faster and more modern, the core codebase is now significantly easier to maintain and extend.
+The core engine has been significantly optimized, especially in the memory and data-oriented areas. Core and Variant have been massively cleaned up and made more extensible. Besides being faster and more modern, the core codebase is now significantly easier to maintain and extend.
 
 ### GDExtension
 
@@ -68,8 +68,8 @@ Many games still use this approach nowadays (after all, if it's not broken, don'
 This is handled nowadays by a type of technology called "streaming". It means that assets are pulled from disk on demand (loaded only at the time they are needed), rather than as a part of a larger stage. The most common types of streaming are:
 
 * **Texture streaming**: All textures are loaded in a tiny size by default. As textures get closer to the camera, higher resolution versions (or mip-maps) are streamed from disk. Textures which haven't been used for some frames are freed instead. At any given time, the textures loaded (and their detail) closely reflect the place the player is in.
-* **Mesh streaming**: Models are loaded as low detail (few vertices). As they gradually approach the camera, higher resolution versions are streamed from disk. Models that were not used (displayed) since a while are often just freed and will be loaded again when needed.
-* **Animation streaming**: Modern games have long cinematics, which require a lot of animation data. Loading those animations require a lot of memory and loading them takes a lot of time. To avoid this, animations are streamed by generally keeping the first second or two in memory and then new sections are loaded on demand as the animation plays. Godot 4.0 supports strong animation compression and animation pages, so most of the work is already done.
+* **Mesh streaming**: Models are loaded as low detail (few vertices). As they gradually approach the camera, higher resolution versions are streamed from disk. Models that were not used (displayed) for a while are often just freed and will be loaded again when needed.
+* **Animation streaming**: Modern games have long cinematics, which require a lot of animation data. Loading those animations requires a lot of memory and loading them takes a lot of time. To avoid this, animations are streamed by generally keeping the first second or two in memory and then new sections are loaded on demand as the animation plays. Godot 4.0 supports strong animation compression and animation pages, so most of the work is already done.
 * **Audio streaming**: Similar to animation streaming, it requires storing the first second or two of audio and then streaming the rest directly from disk.
 
 Of the above, most are relatively straightforward to implement. The most complex is *mesh streaming*, which generally needs to be implemented together with a GPU culling strategy to ensure that very large amounts of models can be drawn at no CPU cost. This is more or less what techniques like *Nanite* do in Unreal, although Godot does not need to implement something that complex to be of use in most cases.
@@ -86,11 +86,11 @@ As such, this means that low level access to all the rendering server structures
 
 ### Scene job system
 
-Most of the work done for the Godot 4.0 involved large feature and performance improvements to all the servers (rendering, physics, navigation, etc.). Servers are also now multithreaded and optimized. Even asset loading can now be done multithreaded (using multiple threads to load multiple assets).
+Most of the work done for Godot 4.0 involved large feature and performance improvements to all the servers (rendering, physics, navigation, etc.). Servers are also now multithreaded and optimized. Even asset loading can now be done multithreaded (using multiple threads to load multiple assets).
 
 Still, the scene system (which uses those servers), despite several usability improvements, has not seen significant optimization.
 
-Scenes nodes in Godot are mostly intended to carry complex high level behaviors (such as animation trees, kinematic characters, IK, skeletons, etc.) for limited amounts of objects (in the hundreds at most). Currently, no threading happens at all and only a single CPU core is used. This makes it very inefficient.
+Scene nodes in Godot are mostly intended to carry complex high level behaviors (such as animation trees, kinematic characters, IK, skeletons, etc.) for limited amounts of objects (in the hundreds at most). Currently, no threading happens at all and only a single CPU core is used. This makes it very inefficient.
 
 This makes it an ideal target for optimizing with multithreading. There is [an initial proposal](https://github.com/godotengine/godot-proposals/issues/4962) on threaded processing for scene nodes, which should give complex scenes a very significant performance boost.
 
@@ -109,7 +109,7 @@ This is needed for some types of game mechanics such as:
 
 More experienced programmers can use the servers directly or even plug C++ code to do the heavy lifting. ECS is often also proposed as a solution for this. Even GPU Compute (which is fully supported in Godot) can be easily used to solve this pattern.
 
-But for the sake of keeping Godot accessible and easy to use, the idea is to create a [swarm system](https://github.com/godotengine/godot-proposals/issues/2380) that takes care of the rendering/physics/etc. in large amounts of those objects and the user only has to fill in the code logic.
+But for the sake of keeping Godot accessible and easy to use, the idea is to create a [swarm system](https://github.com/godotengine/godot-proposals/issues/2380) that takes care of the rendering and physics in large amounts of those objects and the user only has to fill in the code logic.
 
 ### Large team VCS support
 
@@ -127,7 +127,7 @@ Unless the support for this is solid, using Godot in large teams will remain dif
 
 While for very large studios this is not an area of interest, medium-sized studios still rely on significant amounts of assets and pre-made functionality. The Asset Library currently existing in Godot only links to open source resources (e.g. hosted on GitHub or GitLab) and is unable to be used for commercial assets.
 
-For the Godot project, a commercial asset store would be a great way to add an extra source of income, but it was not legally possible given our legal status until recently. With the move to the [Godot Foundation](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation), this is a new possibility that opens up.
+For the Godot project, a commercial asset store would be a great way to add an extra source of income, but it was not possible given our legal status until recently. With the move to the [Godot Foundation](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation), this is a new possibility that opens up.
 
 ## Is solving these problems enough for Godot to become a top AA / AAA game engine?
 
@@ -141,7 +141,7 @@ So, what kind of features are we talking about? Well..
 
 ### Game specific templates and behaviors
 
-As an example, Unreal comes with a player controller, environment controller, and a lot of tools to manage the game pacing and flow. Most likely aimed at TPS/FPS games, which is the most popular game type made with the engine.
+As an example, Unreal comes with a player controller, environment controller, and a lot of tools to manage the game pacing and flow. These are most likely aimed at TPS/FPS games, which are the most popular game types made with the engine.
 
 Some of these can be found as templates in Godot's Asset Library but are nowhere close to that functionality. Eventually, official ones should be created that are more powerful and complete.
 
@@ -178,13 +178,13 @@ In contrast, engines like Unreal have entirely dedicated and isolated interfaces
 
 Sure, they are monolithic and hence less flexible, but for a large team with high amounts of specialization, an artist does not need to understand as much in-depth how the engine works in order to produce content with it.
 
-This shows the fundamental difference of target user between engines. If Godot wants to appeal to larger studios, it needs to provide simpler and more monolithic interfaces for artists to be able to do their job without requiring significant more time investment in learning the technology.
+This shows the fundamental difference of target user between engines. If Godot wants to appeal to larger studios, it needs to provide simpler and more monolithic interfaces for artists to be able to do their job without requiring significant time investment in learning the technology.
 
 This could, again, be supplied via official add-ons and, like the sections above, would require a significant amount of research to understand how to build it, since without actual feedback from artists we would only be guessing what is needed. But the question here is, is it worth it?
 
 ## So, are we not even close?
 
-While the goal of this article is to make clear how significant is the work remaining to make Godot an offering closer to the ones in the commercial segment, it is important to not forget one key detail:
+While the goal of this article is to make clear how significant the work remaining is to make Godot an offering closer to the ones in the commercial segment, it is important to not forget one key detail:
 
 **Godot is Free and Open Source Software.** And as such, it can be modified by anyone to fit any purpose.
 
