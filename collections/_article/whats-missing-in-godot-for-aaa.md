@@ -31,7 +31,7 @@ Several features were added to Godot Physics since 3.x, such as soft bodies and 
 
 The custom physics engine still has a considerable amount of issues remaining but we are working hard to ensure it is in a decent state for shipping when 4.0 reaches stability. It will continue seeing improvements afterwards, during the following 4.x release cycles.
 
-That said, Godot 4.0 introduces the ability to bind custom physics engines at runtime (without recompiling Godot) via GDExtension, so it's perfectly possible for the community to integrate other engines such as PhysX, Jolt, or Box2D if needs be.
+That said, Godot 4.0 introduces the ability to bind custom physics engines at runtime (without recompiling Godot) via GDExtension, so it's perfectly possible for the community to integrate other engines such as PhysX, Jolt, or Box2D if needed.
 
 ### Scripting
 
