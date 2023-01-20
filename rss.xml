@@ -10,6 +10,113 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.0 beta 14</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-14/</link>
+		<description>&lt;p&gt;With the first Godot 4.0 Release Candidate on the horizon we continue to release beta snapshots frequently and relentlessly! Such cadence allows us to better measure the overall stability and quickly catch regressions, especially when a lot of features are worked on at the same time.&lt;/p&gt;
+
+&lt;p&gt;This beta includes a few big changes which may interest a lot of users:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixes to CanvasItem draw methods to better handled lines of different widths and filled rectangles (&lt;a href=&quot;https://github.com/godotengine/godot/pull/41239&quot;&gt;GH-41239&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71623&quot;&gt;GH-71623&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71679&quot;&gt;GH-71679&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;A lot of minor fixes and improvements to TileMap and TileSet, both feature wise and in the editor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71604&quot;&gt;GH-71604&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71615&quot;&gt;GH-71615&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71618&quot;&gt;GH-71618&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71626&quot;&gt;GH-71626&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71630&quot;&gt;GH-71630&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71664&quot;&gt;GH-71664&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Add next/reset function to AnimationStateMachine (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71264&quot;&gt;GH-71264&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71418&quot;&gt;GH-71418&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Add astcenc compression and decompression (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70363&quot;&gt;GH-70363&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Fix issue where failed start of OpenXR causes issues (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71450&quot;&gt;GH-71450&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;For shaders, we removed the now-redundant &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SCREEN_TEXTURE&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DEPTH_TEXTURE&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NORMAL_ROUGHNESS_TEXTURE&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70967&quot;&gt;GH-70967&lt;/a&gt;). The PR and in-editor errors give instructions on what’s the new way to access these features via hints.&lt;/li&gt;
+  &lt;li&gt;BiDi overrides are now properly handled to better display complex texts in the GDScript editor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71598&quot;&gt;GH-71598&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;#downloads&quot;&gt;Jump to the &lt;strong&gt;Downloads&lt;/strong&gt; section.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also &lt;a href=&quot;https://editor.godotengine.org/releases/4.0.beta14/godot.editor.html&quot;&gt;try the Web editor&lt;/a&gt; (early testing, it’s still slow and unstable).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The illustration picture for this article is from&lt;/em&gt; &lt;strong&gt;Dauphin&lt;/strong&gt;, &lt;em&gt;a 2D RPG in development by &lt;a href=&quot;https://www.youtube.com/c/devduck&quot;&gt;Ben / devduck&lt;/a&gt; which was recently ported to Godot 4.0 beta. You can follow development via Ben’s awesome &lt;a href=&quot;https://www.youtube.com/c/devduck&quot;&gt;YouTube devlogs&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/_devduck&quot;&gt;Twitter&lt;/a&gt; account.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-new&quot;&gt;What’s new&lt;/h2&gt;
+
+&lt;p&gt;If you’re interested in an overview of what’s new in Godot 4.0 beta in general, have a look at the detailed release notes for &lt;a href=&quot;/article/dev-snapshot-godot-4-0-beta-1&quot;&gt;4.0 beta 1&lt;/a&gt;. In this blog post, we will only cover the main changes since the previous beta release.&lt;/p&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/godotengine/godot/compare/caacade569eb7a541aaa7a8cdc3eedffca1422d9...28a24639c3c6a95b5b9828f5f02bf0dc2f5ce54b&quot;&gt;&lt;strong&gt;changelog on GitHub&lt;/strong&gt;&lt;/a&gt;, or the &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-17T13%3A00..2023-01-20T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0&quot;&gt;&lt;strong&gt;list of merged PRs&lt;/strong&gt;&lt;/a&gt;, for an overview of all changes since 4.0 beta 13 (73 commits – excluding merge commits ― from 40 contributors).&lt;/p&gt;
+
+&lt;p&gt;While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-17T13%3A00..2023-01-20T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;breaks compat&lt;/code&gt; label&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;p&gt;Some of the most notables feature changes in this update are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2D: Fix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CanvasItem.draw_rect()&lt;/code&gt; function with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filled = false&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/41239&quot;&gt;GH-41239&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;2D: Clamp &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CanvasItem.draw_arc()&lt;/code&gt; angle difference so arc won’t overlap itself (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71623&quot;&gt;GH-71623&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;2D: Support thin polylines drawn using line strip in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CanvasItem.draw_polyline()&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71679&quot;&gt;GH-71679&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;2D: Various fixes and enhancements to TileMap and TileSet (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71604&quot;&gt;GH-71604&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71615&quot;&gt;GH-71615&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71618&quot;&gt;GH-71618&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71626&quot;&gt;GH-71626&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71630&quot;&gt;GH-71630&lt;/a&gt;, &lt;a href=&quot;https://github.com/godotengine/godot/pull/71664&quot;&gt;GH-71664&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Tweak the name for new animations in the editor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/48570&quot;&gt;GH-48570&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Add next/reset function to AnimationStateMachine (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71264&quot;&gt;GH-71264&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Allow AnimationStateMachine / AnimationNode to restart when transitioning to the same state (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71418&quot;&gt;GH-71418&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;keep_state&lt;/code&gt; argument to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AnimationPlayer.stop()&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71619&quot;&gt;GH-71619&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Make property accessors internal (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71516&quot;&gt;GH-71516&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Sync C# vectors with Core (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71569&quot;&gt;GH-71569&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Core: Fix using Resource objects as keys in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tres&lt;/code&gt; format (&lt;a href=&quot;https://github.com/godotengine/godot/pull/64812&quot;&gt;GH-64812&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Core: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OS.unset_environment()&lt;/code&gt;, better validate input (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71514&quot;&gt;GH-71514&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Increase default size of docks (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71627&quot;&gt;GH-71627&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Clean up EditorFileSystem script parsing (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71628&quot;&gt;GH-71628&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDExtension: Add missing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;is_bitfield&lt;/code&gt; field for global enum in extension API JSON (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71400&quot;&gt;GH-71400&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Implement BiDi override mode for GDScript source (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71598&quot;&gt;GH-71598&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Allow unindent without selection in CodeEdit (&lt;a href=&quot;https://github.com/godotengine/godot/pull/60904&quot;&gt;GH-60904&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Prevent infinite cascade of re-layout after label text reshaping (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71553&quot;&gt;GH-71553&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Import: Fixes cases where the runtime ResourceLoader cannot load gltf images (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69181&quot;&gt;GH-69181&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Import: Add astcenc compression and decompression (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70363&quot;&gt;GH-70363&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Import: Avoid importing MSVC obj files (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71662&quot;&gt;GH-71662&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Linux/Windows: Force disable Vulkan overlays in the editor and project manager (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71515&quot;&gt;GH-71515&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Physics: Implement analytic collision normals (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71447&quot;&gt;GH-71447&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Plugins: Make EditorResourceConversionPlugin usable (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71443&quot;&gt;GH-71443&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SCREEN_TEXTURE&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DEPTH_TEXTURE&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NORMAL_ROUGHNESS_TEXTURE&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70967&quot;&gt;GH-70967&lt;/a&gt;).
+    &lt;ul&gt;
+      &lt;li&gt;See the PR for details on the rationale and how to adapt your code. Note that there’s a helpful error in the shader editor telling you how to port code, but there’s a typo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filter_linear_mipmaps&lt;/code&gt; should be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filter_linear_mipmap&lt;/code&gt; (no ‘s’).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rendering: Decompress &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RA_AS_RG&lt;/code&gt; formats on Web platform in GLES3 renderer and disable texture swizzling (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71574&quot;&gt;GH-71574&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Remove light from dynamic light list when removing scenario (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71584&quot;&gt;GH-71584&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Web: User FS (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user://&lt;/code&gt;) now correctly uses project name (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71599&quot;&gt;GH-71599&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Windows: Fix sub-window initial transparency and always-on-top state (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71660&quot;&gt;GH-71660&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;XR: Fix issue where failed start of OpenXR causes issues (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71450&quot;&gt;GH-71450&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;XR: Get OpenXR with OpenGL working on SteamVR (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71708&quot;&gt;GH-71708&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;As well as many &lt;a href=&quot;/article/godot-4-0-docs-sprint/&quot;&gt;improvements to the documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This release is built from commit &lt;a href=&quot;https://github.com/godotengine/godot/commit/28a24639c3c6a95b5b9828f5f02bf0dc2f5ce54b&quot;&gt;28a24639c&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;downloads&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;downloads&quot;&gt;Downloads&lt;/h2&gt;
+
+&lt;p&gt;The downloads for this dev snapshot can be found directly on our repository:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta14/&quot;&gt;Standard build&lt;/a&gt; (GDScript, GDExtension).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta14/mono&quot;&gt;.NET 6 build&lt;/a&gt; (C#, GDScript, GDExtension).
+    &lt;ul&gt;
+      &lt;li&gt;Requires &lt;a href=&quot;https://dotnet.microsoft.com/en-us/download/dotnet/6.0&quot;&gt;.NET SDK 6.0&lt;/a&gt; installed in a standard location. .NET 7.0 is not supported yet, so make sure to install .NET 6.0 specifically.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known issues&lt;/h2&gt;
+
+&lt;p&gt;As we are still in the early beta phase of development, there are still many issues to fix, some of which have already been reported and are being worked on. See the GitHub issue tracker for a list of &lt;a href=&quot;https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+&quot;&gt;known bugs in the 4.0 milestone&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;bug-reports&quot;&gt;Bug reports&lt;/h2&gt;
+
+&lt;p&gt;As a tester, you are encouraged to &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;open bug reports&lt;/a&gt; if you experience issues with this release. Please check first the &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;existing issues on GitHub&lt;/a&gt;, using the search function with relevant keywords, to ensure that the bug you experience is not known already.&lt;/p&gt;
+
+&lt;p&gt;As in any major release there are going to be compatibility breaking changes. However, we still try to provide a migration path for your projects. If you experience a regression without a known migration path or workaround, do not hesitate to report it.&lt;/p&gt;
+
+&lt;h2 id=&quot;support&quot;&gt;Support&lt;/h2&gt;
+
+&lt;p&gt;Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;donations from the Godot community&lt;/a&gt;. A big thankyou to everyone who has contributed &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/AUTHORS.md&quot;&gt;their time&lt;/a&gt; or &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/DONORS.md&quot;&gt;financial support&lt;/a&gt; to the project!&lt;/p&gt;
+
+&lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so on &lt;a href=&quot;https://www.patreon.com/godotengine&quot;&gt;Patreon&lt;/a&gt; or &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;PayPal&lt;/a&gt;.&lt;/p&gt;
+</description>
+		<pubDate>Fri, 20 Jan 2023 14:00:00 +0000</pubDate>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.0 beta 13</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-13/</link>
 		<description>&lt;p&gt;With the first Godot 4.0 Release Candidate on the horizon we continue to release beta snapshots frequently and relentlessly! Such cadence allows us to better measure the overall stability and quickly catch regressions, especially when a lot of features are worked on at the same time.&lt;/p&gt;
@@ -2245,38 +2352,6 @@ float some_float2 = float(some_double - double(some_float1));
 &lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so on &lt;a href=&quot;https://www.patreon.com/godotengine&quot;&gt;Patreon&lt;/a&gt; or &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;PayPal&lt;/a&gt;.&lt;/p&gt;
 </description>
 		<pubDate>Fri, 14 Oct 2022 12:07:27 +0000</pubDate>
-	</item>
-	
-	<item>
-		<title>Announcing the Godot 2022 showreels!</title>
-		<link>https://godotengine.org/article/announcing-godot-2022-showreels/</link>
-		<description>&lt;p&gt;We bring you three brand-new videos showcasing what the Godot Engine can do. As always we have separate videos for games targeting desktop/console and games targeting mobile devices. This year we are proud to introduce a new category called “Apps &amp;amp; Tools” to highlight non-game creations made with Godot. This is a field that has been growing a lot, so we wanted to shine a light on the great projects released or under development.&lt;/p&gt;
-
-&lt;p&gt;Many of our core contributors and maintainers voted to make the final list in each category, and this year was particularly hard. There were way too many good projects, and we couldn’t include them all to keep the videos at a reasonable length and pace – but don’t be discouraged if your entry didn’t make it, we’ll have more opportunities to showcase great projects, including next year’s showreels.&lt;/p&gt;
-
-&lt;h2 id=&quot;desktopconsole-showreel&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=UAS_pUTFA7o&quot;&gt;Desktop/Console showreel&lt;/a&gt;&lt;/h2&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UAS_pUTFA7o&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Edited by Emi. Music track: &lt;a href=&quot;https://www.scottbuckley.com.au/library/race-the-sun/&quot;&gt;Race The Sun - Scott Buckley&lt;/a&gt; (CC-BY 4.0).&lt;/p&gt;
-
-&lt;h2 id=&quot;mobile-showreel&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xF3QiQfQxeQ&quot;&gt;Mobile showreel&lt;/a&gt;&lt;/h2&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xF3QiQfQxeQ&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Edited by Brandon. Music track: &lt;a href=&quot;https://brokeforfree.bandcamp.com/track/melt&quot;&gt;Melt - Broke For Free&lt;/a&gt; (CC-BY 3.0).&lt;/p&gt;
-
-&lt;h2 id=&quot;apps--tools-showreel&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9kKp0oguzr8&quot;&gt;Apps &amp;amp; Tools showreel&lt;/a&gt;&lt;/h2&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9kKp0oguzr8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Edited by Emi. Music track: &lt;a href=&quot;https://www.octomuseproduction.com/&quot;&gt;Tango - Octomuse&lt;/a&gt; (Used with permission).&lt;/p&gt;
-
-&lt;p&gt;Check the description of the YouTube videos for details on all the showcased projects and links to their relevant pages.&lt;/p&gt;
-
-&lt;h2 id=&quot;thank-you&quot;&gt;Thank you!!&lt;/h2&gt;
-</description>
-		<pubDate>Thu, 06 Oct 2022 15:17:15 +0000</pubDate>
 	</item>
 	
 
