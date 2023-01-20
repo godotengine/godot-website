@@ -62,6 +62,9 @@
   --teams-subteams-color: rgba(255, 255, 255, 0.4);
 
   --table-divider-color: rgba(0, 0, 0, 0.1);
+
+  --warning-background-color: #ffedcc;
+  --warning-color: #404040;
 }
 
 .nav-logo.dark-logo {
@@ -132,6 +135,9 @@
     --teams-subteams-color: rgba(0, 0, 0, 0.2);
 
     --table-divider-color: rgba(255, 255, 255, 0.1);
+
+    --warning-background-color: #444033;
+    --warning-color: #ffeeaf;
   }
 
   /* Use logo with white text for dark navbar. */
@@ -790,6 +796,11 @@ p.small {
 
 .card .footer {
   background-color: var(--card-footer-color);
+}
+
+.card-warning {
+  background: var(--warning-background-color);
+  color: var(--warning-color);
 }
 
 a.card {
