@@ -256,7 +256,7 @@
 
 <ol>
   <li><strong>Re-create Godot’s basic types in your new language</strong>: These are types such as <code class="language-plaintext highlighter-rouge">Vector3</code>, <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">String</code>, etc. Many of these are usually provided already.</li>
-  <li><strong>Create a module</strong>: A C++ module that creates binding code needs to be done (<a href="http://docs.godotengine.org/en/latest/reference/custom_modules_in_c++.html">creating modules in C++ is well documented</a>). The entire exposed Godot API can be accessed via the static functions in <code class="language-plaintext highlighter-rouge">ObjectTypeDB</code>.</li>
+  <li><strong>Create a module</strong>: A C++ module that creates binding code needs to be done (<a href="https://docs.godotengine.org/en/latest/contributing/development/core_and_modules/custom_modules_in_cpp.html">creating modules in C++ is well documented</a>). The entire exposed Godot API can be accessed via the static functions in <code class="language-plaintext highlighter-rouge">ObjectTypeDB</code>.</li>
   <li><strong>Generate binding code</strong> in your new language that accesses the exposed functions in the <code class="language-plaintext highlighter-rouge">MethodBind</code> class (there is one for each exposed method).</li>
   <li><strong>Create a <code class="language-plaintext highlighter-rouge">ScriptLanguage</code></strong> class and supply the neccesary methods exposed for debugging, profiling, etc. You can supply symbols, code completion helpers, etc. if this language is meant to be edited inside Godot.</li>
 </ol>
