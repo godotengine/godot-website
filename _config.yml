@@ -11,7 +11,7 @@ exclude:
   ]
 permalink: pretty
 
-baseurl: "https://godotengine.org"
+url: "https://godotengine.org"
 
 collections_dir: collections
 collections:

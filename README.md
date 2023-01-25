@@ -36,6 +36,7 @@ To build the website locally, follow these steps:
 2. Clone this repository.
 3. Install the necessary dependencies: `bundle install`.
 4. Build the site: `bundle exec jekyll build`.
+   - Append `--config _config.yml,_config.development.yml` to use the development config with your build.
 
 For simplicity, these two commands are also available as a `build.sh` script in this repository.
 
@@ -82,12 +83,7 @@ The project is built automatically by GitHub Actions whenever the `master` branc
 itself should not be deployed, as it only contains the source files. The build version of the website is available as the
 `published` branch instead.
 
-This branch has a detached history and always contains the single commit with the most recent build. As such simple `git pull`
-doesn't work with it. To deploy it you must either pull the branch anew, removing and recreating your local branch, or reset
-the local branch with `git reset --hard`. Make sure to perform `git fetch` beforehand to receive the latest changelog from
-the remote.
-
-Note, that this is not needed for local development. Locally you would build the website in place and then serve the `_site`
+Note, that this is not relevant for local development. Locally you would build the website in place and then serve the `_site`
 folder. See the detailed instructions above.
 
 ## Project structure
@@ -149,7 +145,8 @@ the events. **Some files may be obsolete and unused.**
 
 ### Build system
 
-This project is build with Jekyll, with the build instructions located in `Gemfile` and `_config.yml`.
+This project is build with Jekyll, with the build instructions located in `Gemfile` and `_config.yml`. When building
+locally, some configuration options may need to be different. To define those, `_config.development.yml` is used.
 
 ## Content update guidelines
 
