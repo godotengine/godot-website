@@ -200,6 +200,11 @@
 				</div>
 			</div>
 
+			
+
+
+
+
 			<p><strong>Update 2019-12-21 @ 10:00 UTC:</strong> Two packaging issues have been fixed with the Mono builds:</p>
 <ul>
   <li>The Mono export templates <code class="language-plaintext highlighter-rouge">.tpz</code> lacked the Windows and Unix-specific base class libraries, so it was not possible to export Linux/macOS binaries from Windows and the other way around. This is now fixed in the <a href="https://downloads.tuxfamily.org/godotengine/3.2/beta4/mono/Godot_v3.2-beta4_mono_export_templates.tpz">export templates</a> for new downloads. Users who already installed the Mono templates can simply get this <a href="https://downloads.tuxfamily.org/godotengine/3.2/beta4/mono/Godot_v3.2-beta4_mono_desktop_bcl_hotfix.tpz">hotfix archive</a> and install it from the editor on top of the existing templates (it should add <code class="language-plaintext highlighter-rouge">net_4_x</code> and <code class="language-plaintext highlighter-rouge">net_4_x_win</code> folders in the templates <code class="language-plaintext highlighter-rouge">bcl</code> folder).</li>

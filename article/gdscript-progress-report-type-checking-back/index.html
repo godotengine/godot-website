@@ -200,6 +200,23 @@
 				</div>
 			</div>
 
+			
+
+
+
+	<div class="card card-warning base-padding">
+		<p>
+		
+			This article is from <strong>July 2020</strong>, some of its contents might be outdated and no longer accurate.<br><br>
+			You can find up-to-date information about the engine in the <a href="https://docs.godotengine.org/en/stable/">official documentation</a>.
+		
+		</p>
+	</div>
+
+
+
+
+
 			<p>After completing the new <a href="https://godotengine.org/article/gdscript-progress-report-writing-tokenizer">tokenizer</a> and <a href="https://godotengine.org/article/gdscript-progress-report-writing-new-parser">parser</a> as mentioned in the previous reports, I started working on the code analyzer, which is responsible for type checking and also for used for other features like warnings and some optimizations.</p>
 
 <p>This was done before as a second pass inside the parser but it was now moved to another class to make it clear that it doesn’t happen at the same pass thus avoiding issues with functions being called out of order (which happened by a few contributions that missed this detail).</p>
