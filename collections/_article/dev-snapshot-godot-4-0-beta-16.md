@@ -47,7 +47,7 @@ Some of the most notables feature changes in this update are:
 - Animation: Make AnimatedSprite's playback API consistent with AnimationPlayer ([GH-71907](https://github.com/godotengine/godot/pull/71907)).
 - Audio: Disable OGG and MP3 looping by default on import ([GH-71858](https://github.com/godotengine/godot/pull/71858)).
 - C#: Renames to follow .NET naming conventions ([GH-69547](https://github.com/godotengine/godot/pull/69547)).
-  * These renames break compatibility and will likely affect most projects. Check the PR for details. We recommend deleting the `res://.godot/dotnet/` folder before using this beta, to ensure that no older assemblies are used.
+  * These renames break compatibility and will likely affect most projects. Check the PR for details. We recommend deleting the `res://.godot/mono/` folder before using this beta, to ensure that no older assemblies are used.
 - C#: Lookup signals and methods in Get method ([GH-71356](https://github.com/godotengine/godot/pull/71356)).
 - C#: Skip methods with pointer parameters ([GH-71535](https://github.com/godotengine/godot/pull/71535)).
 - C#: Add float and double overloads to Mathf ([GH-71583](https://github.com/godotengine/godot/pull/71583)).
