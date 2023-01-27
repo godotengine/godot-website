@@ -10,6 +10,139 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.0 beta 16</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-16/</link>
+		<description>&lt;p&gt;We’re now just days away from the Release Candidate, working at full capacity on finalizing as many of the remaining high priority issues as we can. The beta snapshots cadence allows us to better measure the overall stability and quickly catch regressions, especially when a lot of features are worked on at the same time.&lt;/p&gt;
+
+&lt;p&gt;This beta includes quite a few big changes which may interest a lot of users:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make AnimatedSprite’s playback API consistent with AnimationPlayer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71907&quot;&gt;GH-71907&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Disable OGG and MP3 looping by default on import (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71858&quot;&gt;GH-71858&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Initial .NET 7 support (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71825&quot;&gt;GH-71825&lt;/a&gt;), C# API renames to follow .NET naming conventions (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69547&quot;&gt;GH-69547&lt;/a&gt;), and more! Still a lot of compatibility breaking changes as we harmonize the C# API with now mostly stabilized core API.&lt;/li&gt;
+  &lt;li&gt;Add method picker to signal connect dialog (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66313&quot;&gt;GH-66313&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Fix position of tooltips (&lt;a href=&quot;https://github.com/godotengine/godot/pull/68627&quot;&gt;GH-68627&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Match RichTextLabel minimum size calculation with Label (proper content fitting) (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71330&quot;&gt;GH-71330&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Handle mipmaps and VRAM compression for glTF binary images (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62499&quot;&gt;GH-62499&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Flag dirty dependencies when GeometryInstance dependencies change in renderer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71581&quot;&gt;GH-71581&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Fix a handful of regressions from some of the bigger input and animation changes merged for beta 15.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the last few betas, as we tie up some loose ends, you may have noticed an increase in last minute &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-24T10%3A00..2023-01-27T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22&quot;&gt;compatibility breaking changes&lt;/a&gt;. Those typically shouldn’t add instability to the engine, but may require doing some changes in your scripts, scenes, and shaders if you were using the affected APIs. At this stage, we’re trying to avoid unnecessary compat breakage, and focus on issues which cause user confusion and which can be solved with better naming or behavior of the APIs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#downloads&quot;&gt;Jump to the &lt;strong&gt;Downloads&lt;/strong&gt; section.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also &lt;a href=&quot;https://editor.godotengine.org/releases/4.0.beta16/godot.editor.html&quot;&gt;try the Web editor&lt;/a&gt; (early testing, it’s still slow and unstable).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The illustration picture for this article is from&lt;/em&gt; &lt;a href=&quot;https://store.steampowered.com/app/2218750/Halls_of_Torment/&quot;&gt;&lt;strong&gt;Halls of Torment&lt;/strong&gt;&lt;/a&gt;, &lt;em&gt;a roguelite action RPG with retro late-90s pre-rendered 2D graphics. It is developed by &lt;a href=&quot;https://twitter.com/chasing_carrots&quot;&gt;Chasing Carrots&lt;/a&gt; using Godot 4.0 beta, and you can &lt;a href=&quot;https://store.steampowered.com/app/2218750/Halls_of_Torment/&quot;&gt;wishlist it on Steam&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-new&quot;&gt;What’s new&lt;/h2&gt;
+
+&lt;p&gt;If you’re interested in an overview of what’s new in Godot 4.0 beta in general, have a look at the detailed release notes for &lt;a href=&quot;/article/dev-snapshot-godot-4-0-beta-1&quot;&gt;4.0 beta 1&lt;/a&gt;. In this blog post, we will only cover the main changes since the previous beta release.&lt;/p&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/godotengine/godot/compare/4fa6edc888cfacd5346bf08afa14b5f5a9bd6d0c...518b9e5801a19229805fe837d7d0cf92920ad413&quot;&gt;&lt;strong&gt;changelog on GitHub&lt;/strong&gt;&lt;/a&gt;, or the &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-24T10%3A00..2023-01-27T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0&quot;&gt;&lt;strong&gt;list of merged PRs&lt;/strong&gt;&lt;/a&gt;, for an overview of all changes since 4.0 beta 15 (105 commits – excluding merge commits ― from 40 contributors).&lt;/p&gt;
+
+&lt;p&gt;While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the &lt;a href=&quot;https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-24T10%3A00..2023-01-27T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;breaks compat&lt;/code&gt; label&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;p&gt;Some of the most notables feature changes in this update are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;3D: Make &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SurfaceTool.generate_normals()&lt;/code&gt; behave consistently with smoothing groups (&lt;a href=&quot;https://github.com/godotengine/godot/pull/68034&quot;&gt;GH-68034&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Android: Fix Android editor crash when returning from the launched and running game (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72106&quot;&gt;GH-72106&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Transition progress display in Animation State Machine Editor (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71284&quot;&gt;GH-71284&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Animation: Make AnimatedSprite’s playback API consistent with AnimationPlayer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71907&quot;&gt;GH-71907&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Audio: Disable OGG and MP3 looping by default on import (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71858&quot;&gt;GH-71858&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Renames to follow .NET naming conventions (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69547&quot;&gt;GH-69547&lt;/a&gt;).
+    &lt;ul&gt;
+      &lt;li&gt;These renames break compatibility and will likely affect most projects. Check the PR for details. We recommend deleting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;res://.godot/dotnet/&lt;/code&gt; folder before using this beta, to ensure that no older assemblies are used.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;C#: Lookup signals and methods in Get method (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71356&quot;&gt;GH-71356&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Skip methods with pointer parameters (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71535&quot;&gt;GH-71535&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Add float and double overloads to Mathf (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71583&quot;&gt;GH-71583&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Restore &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scale&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rotation&lt;/code&gt; properties (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71787&quot;&gt;GH-71787&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Allow use of .NET 7 (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71825&quot;&gt;GH-71825&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Better error display in debugger panel (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71943&quot;&gt;GH-71943&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Sync GD with Core (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71946&quot;&gt;GH-71946&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Sync C# Dictionary with Core (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71984&quot;&gt;GH-71984&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Seal C# attributes (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71988&quot;&gt;GH-71988&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Implement disposable pattern and seal GodotSynchronizationContext class and related (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72053&quot;&gt;GH-72053&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;C#: Annotate API with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[MustBeVariant]&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72057&quot;&gt;GH-72057&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Core: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROPERTY_USAGE_NEVER_DUPLICATE&lt;/code&gt; flag and use for script (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71142&quot;&gt;GH-71142&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Core: Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@GlobalScope&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;is_same(a, b)&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Variant::identity_compare()&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71758&quot;&gt;GH-71758&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Rearrange &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor/naming/*&lt;/code&gt; project settings (&lt;a href=&quot;https://github.com/godotengine/godot/pull/65137&quot;&gt;GH-65137&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Add method picker to signal connect dialog (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66313&quot;&gt;GH-66313&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Editor: Add gesture to ViewPanner and simplify a bit its API (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71685&quot;&gt;GH-71685&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Export: Run ssh/scp in non interactive mode, and suppress banner display (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72165&quot;&gt;GH-72165&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Allow standalone ternary expressions (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71120&quot;&gt;GH-71120&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Disallow type inference with untyped initializer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71349&quot;&gt;GH-71349&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GDScript: Allow constant expressions in annotations (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71634&quot;&gt;GH-71634&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Fix SubViewportContainer processing events before other Control nodes (&lt;a href=&quot;https://github.com/godotengine/godot/pull/58334&quot;&gt;GH-58334&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Fix Control rect coordinate system inconsistency (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66688&quot;&gt;GH-66688&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Include the Window transform into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Viewport.get_final_transform()&lt;/code&gt; (&lt;a href=&quot;https://github.com/godotengine/godot/pull/66692&quot;&gt;GH-66692&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Fix position of tooltips (&lt;a href=&quot;https://github.com/godotengine/godot/pull/68627&quot;&gt;GH-68627&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Improve clarity of Tree’s activated/double-clicked signals (&lt;a href=&quot;https://github.com/godotengine/godot/pull/70290&quot;&gt;GH-70290&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Match RichTextLabel minimum size calculation with Label (proper content fitting) (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71330&quot;&gt;GH-71330&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Remove size restrictions from StyleBoxTexture (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72124&quot;&gt;GH-72124&lt;/a&gt;).
+    &lt;ul&gt;
+      &lt;li&gt;As a side-effect, projects that used StyleBoxTexture for controls that relied on the old center rect code, such as ScrollBars, will need readjustment. Now content margin properties are respected, just like in any other control, and you need to use those to give your stylebox a min size.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GUI: Fix char offset calculation when processing RichTextLabel line caches (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72149&quot;&gt;GH-72149&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;GUI: Fix LineEdit and TextEdit context menus not customizable (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72167&quot;&gt;GH-72167&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Import: Handle mipmaps and VRAM compression for glTF binary images (&lt;a href=&quot;https://github.com/godotengine/godot/pull/62499&quot;&gt;GH-62499&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Import: Avoid nested skeletons, and handle skinned meshes with children (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72158&quot;&gt;GH-72158&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Import: Make BoneAttachment3D and Skeleton3D names consistent (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72162&quot;&gt;GH-72162&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Input: Make &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputEventAction.as_text()&lt;/code&gt; return the text of the first valid event for the action (&lt;a href=&quot;https://github.com/godotengine/godot/pull/67783&quot;&gt;GH-67783&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Input: Make &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Input.get_vector()&lt;/code&gt; check for plain strength instead of the raw one (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69028&quot;&gt;GH-69028&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Navigation: Rename Navigation uses of ‘location’ to ‘position’ (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69689&quot;&gt;GH-69689&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Flag dirty dependencies when GeometryInstance dependencies change in renderer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71581&quot;&gt;GH-71581&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Add dependency tracker info on geometry create on mobile renderer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72064&quot;&gt;GH-72064&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Fix LCD font AA on OpenGL renderer (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72125&quot;&gt;GH-72125&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Rendering: Properly append global uniform buffer name in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gl_compatibility&lt;/code&gt; shaders (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72138&quot;&gt;GH-72138&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Shaders: Several shader preprocessor parser fixes and improvements (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72058&quot;&gt;GH-72058&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Shaders: Add derivative functions with precision to shaders (&lt;a href=&quot;https://github.com/godotengine/godot/pull/72109&quot;&gt;GH-72109&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;XR: Make screen texture and depth texture work in Multiview (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71455&quot;&gt;GH-71455&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;XR: Correctly apply &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;world_scale&lt;/code&gt; in WebXR (Godot 4) (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71948&quot;&gt;GH-71948&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;As well as many &lt;a href=&quot;/article/godot-4-0-docs-sprint/&quot;&gt;improvements to the documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This release is built from commit &lt;a href=&quot;https://github.com/godotengine/godot/commit/518b9e5801a19229805fe837d7d0cf92920ad413&quot;&gt;518b9e580&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&quot;downloads&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;downloads&quot;&gt;Downloads&lt;/h2&gt;
+
+&lt;p&gt;The downloads for this dev snapshot can be found directly on our repository:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta16/&quot;&gt;Standard build&lt;/a&gt; (GDScript, GDExtension).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.tuxfamily.org/godotengine/4.0/beta16/mono&quot;&gt;.NET 6 build&lt;/a&gt; (C#, GDScript, GDExtension).
+    &lt;ul&gt;
+      &lt;li&gt;Requires &lt;a href=&quot;https://dotnet.microsoft.com/en-us/download/dotnet/6.0&quot;&gt;.NET SDK 6.0&lt;/a&gt; or &lt;a href=&quot;https://dotnet.microsoft.com/en-us/download/dotnet/7.0&quot;&gt;7.0&lt;/a&gt; installed in a standard location. .NET 7.0 support was just merged and requires testing, please report any issue you experience with either version.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;known-issues&quot;&gt;Known issues&lt;/h2&gt;
+
+&lt;p&gt;As we are still in the early beta phase of development, there are still many issues to fix, some of which have already been reported and are being worked on. See the GitHub issue tracker for a list of &lt;a href=&quot;https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+&quot;&gt;known bugs in the 4.0 milestone&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;bug-reports&quot;&gt;Bug reports&lt;/h2&gt;
+
+&lt;p&gt;As a tester, you are encouraged to &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;open bug reports&lt;/a&gt; if you experience issues with this release. Please check first the &lt;a href=&quot;https://github.com/godotengine/godot/issues&quot;&gt;existing issues on GitHub&lt;/a&gt;, using the search function with relevant keywords, to ensure that the bug you experience is not known already.&lt;/p&gt;
+
+&lt;p&gt;As in any major release there are going to be compatibility breaking changes. However, we still try to provide a migration path for your projects. If you experience a regression without a known migration path or workaround, do not hesitate to report it.&lt;/p&gt;
+
+&lt;h2 id=&quot;support&quot;&gt;Support&lt;/h2&gt;
+
+&lt;p&gt;Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;donations from the Godot community&lt;/a&gt;. A big thankyou to everyone who has contributed &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/AUTHORS.md&quot;&gt;their time&lt;/a&gt; or &lt;a href=&quot;https://github.com/godotengine/godot/blob/master/DONORS.md&quot;&gt;financial support&lt;/a&gt; to the project!&lt;/p&gt;
+
+&lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so on &lt;a href=&quot;https://www.patreon.com/godotengine&quot;&gt;Patreon&lt;/a&gt; or &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;PayPal&lt;/a&gt;.&lt;/p&gt;
+</description>
+		<pubDate>Fri, 27 Jan 2023 15:00:00 +0000</pubDate>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.0 beta 15</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-15/</link>
 		<description>&lt;p&gt;We’re getting dangerously close to the first Release Candidate for Godot 4.0, and focus on finalizing many of the remaining high priority issues. The beta snapshots cadence allows us to better measure the overall stability and quickly catch regressions, especially when a lot of features are worked on at the same time.&lt;/p&gt;
@@ -2193,141 +2326,6 @@ foundation.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;See the &lt;a href=&quot;https://sfconservancy.org/news/2022/nov/01/godot-graduates/&quot;&gt;Software Freedom Conservancy’s blog post&lt;/a&gt; to read more.&lt;/p&gt;
 </description>
 		<pubDate>Tue, 01 Nov 2022 20:02:21 +0000</pubDate>
-	</item>
-	
-	<item>
-		<title>Emulating Double Precision on the GPU to Render Large Worlds</title>
-		<link>https://godotengine.org/article/emulating-double-precision-gpu-render-large-worlds/</link>
-		<description>&lt;p&gt;One of the problems with developing games with large game worlds is that objects start to jitter and teleport around as you move away from the world origin. This post is about how we overcame one challenge in particular and what we did.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-problem&quot;&gt;The Problem&lt;/h3&gt;
-
-&lt;p&gt;By default Godot uses single-precision floating point numbers to store things like object positions. While GDScript typically allows users to do user-space calculations with double precision, those calculations get truncated as soon as they are stored in Godot internal objects (like Vector3’s).&lt;/p&gt;
-
-&lt;p&gt;This has been a problem for users who want to do things like make games that take place in a to-scale solar system. Users quickly hit floating point precision errors and noticed that movement becomes jittery and objects become scattered.&lt;/p&gt;
-
-&lt;p&gt;As an example, take a look at this simple scene, we have a bunch of Godot’s scattered randomly and a person running back and forth across the screen.&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot;&gt;
-  &lt;source src=&quot;/storage/app/media/4.0/Doubles-on-GPU/origin.mp4?1&quot; type=&quot;video/mp4&quot; /&gt;
-&lt;/video&gt;
-
-&lt;p&gt;&lt;em&gt;The character asset and animation are from GDQuest’s “godot-3d-mannequin” &lt;a href=&quot;https://github.com/GDQuest/godot-3d-mannequin&quot;&gt;project&lt;/a&gt; and the ground texture is from Kenney’s “Prototype Textures” &lt;a href=&quot;https://www.kenney.nl/assets/prototype-textures&quot;&gt;bundle&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Close to the scene origin this looks totally fine, but once we move this same scene 10,000 kilometers  away something terrible happens. The Godots clump together and the character teleports from point to point. The diameter of the earth is 12,742 km for reference.&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot;&gt;
-  &lt;source src=&quot;/storage/app/media/4.0/Doubles-on-GPU/single.mp4?1&quot; type=&quot;video/mp4&quot; /&gt;
-&lt;/video&gt;
-
-&lt;p&gt;10,000 km is 10 million units away from the origin. At 10 million units we have about &lt;a href=&quot;https://blog.demofox.org/2017/11/21/&quot;&gt;1 unit of precision&lt;/a&gt;. That means that there is about 1 meter between each position our Vector3 can store. As you can see in the video above, the clumps are centered on each meter. At 1,000 km we still only have 6.25 cm of precision, which is still not enough for even a simple scene like this.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-solution&quot;&gt;The Solution&lt;/h3&gt;
-
-&lt;p&gt;I said above that the problem came from using single-precision in Godot’s internal classes, so the solution should be to use double precision instead. Right?&lt;/p&gt;
-
-&lt;p&gt;In Godot 4.0 we introduced the ability to compile the engine with double precision floats instead so that all these calculations happen with much higher precision.&lt;/p&gt;
-
-&lt;p&gt;Let’s switch to a doubles build and see what happens to our scene.&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot;&gt;
-  &lt;source src=&quot;/storage/app/media/4.0/Doubles-on-GPU/doubles-without-emulation.mp4?1&quot; type=&quot;video/mp4&quot; /&gt;
-&lt;/video&gt;
-
-&lt;p&gt;Despite all our calculations using fancy double-precision floats, this looks the exact same. What is going on?&lt;/p&gt;
-
-&lt;p&gt;What is happening here is that the positions are being downcast into single-precision floats before being sent to the GPU for rendering. So on the GPU we are still using single-precision and the end result as far as rendering goes is the same as if we were using single-precision.&lt;/p&gt;
-
-&lt;p&gt;The solution should be easy, let’s just use doubles in all of our shaders!&lt;/p&gt;
-
-&lt;h3 id=&quot;doubles-in-shaders&quot;&gt;Doubles in Shaders&lt;/h3&gt;
-
-&lt;p&gt;First of all, we don’t need &lt;em&gt;all&lt;/em&gt; calculations to be in doubles, most of the work done by the GPU only requires single-precision floats. Additionally, GPUs still pay a performance premium when using doubles. So we can restrict our use of doubles to only those operations that need to be in doubles.&lt;/p&gt;
-
-&lt;p&gt;We actually only need doubles in the calculation of our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MODELVIEW_MATRIX&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;As a reminder, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MODELVIEW_MATRIX&lt;/code&gt; combines two operations:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The transformation from object space to world space, and&lt;/li&gt;
-  &lt;li&gt;The transformation from world space to camera space&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Both of these operations need double precision because we are using a large world. We don’t need double precision in object space or camera space because our models are not large and nothing is very far from the camera. The rest of the shader is in camera space, so we don’t need the extra precision.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MODELVIEW_MATRIX&lt;/code&gt; is assembled in the vertex shader by combining the object’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MODEL_MATRIX&lt;/code&gt; and the camera’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIEW_MATRIX&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Can we get away with just passing those two matrices in as doubles?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NO&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;For starters, Metal (the graphics API used on all Apple devices) doesn’t support using doubles in shaders, so this wouldn’t work on Apple devices.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;How about we just don’t support this on Apple devices?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NO&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Many non-Apple devices still struggle with double precision on the GPU. For example, when running on the Intel integrated graphics GPU on my laptop, Godot crashes whenever a shader using double precision is used.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Okay, how about we restrict this to dedicated GPUs only?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NO&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Restricting this feature to dedicated GPUs is not suitable as it leaves our user base in a lurch. Typical Godot users want to create a game on their hardware and trust that the game will work on most devices. We try to avoid features that come with a long list of exceptions. Further, we would also end up adding significant complexibility to user-space shaders. Users would have to reason about whether the built-in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MODEL_MATRIX&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIEW_MATRIX&lt;/code&gt; are exposed as doubles or floats.&lt;/p&gt;
-
-&lt;p&gt;In developing Godot we aim for a user experience where things “just work”. At times this involves making difficult judgment calls with respect to performance/usability tradeoffs. This was a case where we just can’t accept a tradeoff that leaves the feature useless to a significant portion of users.&lt;/p&gt;
-
-&lt;p&gt;So in the end, we can’t simply “turn” on doubles and have everything magically work. But perhaps we can still get things to “just work” another way.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-real-solution&quot;&gt;The Real Solution&lt;/h3&gt;
-
-&lt;p&gt;The solution we ultimately went with was Juan’s (reduz) idea. He noted that:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;We don’t need doubles to do an operation with high precision, instead we can emulate double precision using two-single precision floating point numbers, and&lt;/li&gt;
-  &lt;li&gt;We don’t have to calculate the full &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MODELVIEW_MATRIX&lt;/code&gt; in double precision, we can separate out the rotation/scale transform from the translation transform and only do the translation in double precision.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://andrewthall.org/papers/df64_qf128.pdf&quot;&gt;Smarter people&lt;/a&gt; than me have already worked out how to do many ordinary operations in near double precision using just a pair of single precision floats. The same basic trick can even be used to create arbitrary precision out of floats or doubles. For example, libraries like &lt;a href=&quot;https://github.com/gcc-mirror/gcc/tree/master/libquadmath&quot;&gt;LibQuadMath&lt;/a&gt;  emulate 128 bits of precision using two doubles.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;So how does it work?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;First, outside of the shader we split the double into two floats like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;float some_float1 = float(some_double); // This truncates the double to the nearest float.
-
-// The second float is the difference between double and the truncated value.
-float some_float2 = float(some_double - double(some_float1));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This relies on the fact that doubles are a superset of floats. I.e. all floats can be converted to doubles without losing precision. Because the second float is much closer to 0, it has way more precision than the first float and together they are pretty close to the original double.&lt;/p&gt;
-
-&lt;p&gt;Since we only need this for the translation operation, we just have to pass in an extra &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vector3&lt;/code&gt; with the camera matrix and an extra &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vector3&lt;/code&gt; with the model matrix. Then, when doing the model to camera space transformation instead of calculating the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MODELVIEW_MATRIX&lt;/code&gt;, we separate the transformation into individual components and do the rotation/scale separately from the translation.&lt;/p&gt;
-
-&lt;p&gt;With this added, the scene looks the same as it did at the world origin.&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot; muted=&quot;&quot;&gt;
-  &lt;source src=&quot;/storage/app/media/4.0/Doubles-on-GPU/double-emulated.mp4?1&quot; type=&quot;video/mp4&quot; /&gt;
-&lt;/video&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Are we done?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Yes, this is the solution we settled on and we are happy with the tradeoffs we ended up with. This solution should work on all our supported hardware and should only reduce performance by a small amount. However, there are a couple limitations:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;It doesn’t work with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;skip_vertex_transform&lt;/code&gt; render mode: In other words, users have to use the default path where Godot handles your model to view space transformation,&lt;/li&gt;
-  &lt;li&gt;Users can’t do shader math in world space: User shaders will still be limited by single-precision floating point, so world space calculations will still be subject to low-precision artifacts,&lt;/li&gt;
-  &lt;li&gt;This only applies to precision issues from object positions. In other words, it won’t fix your earth-sized sphere, for model vertex positions, you still need to work around single-precision floating point limitations.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Overall, we are quite happy with how this solution turned out. We think it is the closest to “just works” that we can get.&lt;/p&gt;
-
-&lt;p&gt;Note: This change has already been merged into the engine, however it is only available in the “doubles” version of the engine, so to take advantage of it, you will still have to build the engine yourself using the compile flag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;precision=double&lt;/code&gt; (formerly &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float=64&lt;/code&gt;).&lt;/p&gt;
-
-&lt;h2 id=&quot;support&quot;&gt;Support&lt;/h2&gt;
-
-&lt;p&gt;Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to donations from the Godot community. A big thankyou to everyone who has contributed their time or financial support to the project!&lt;/p&gt;
-
-&lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so on &lt;a href=&quot;https://www.patreon.com/godotengine&quot;&gt;Patreon&lt;/a&gt; or &lt;a href=&quot;https://godotengine.org/donate&quot;&gt;PayPal&lt;/a&gt;.&lt;/p&gt;
-</description>
-		<pubDate>Mon, 17 Oct 2022 17:31:04 +0000</pubDate>
 	</item>
 	
 
