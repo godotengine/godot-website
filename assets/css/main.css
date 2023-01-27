@@ -800,7 +800,10 @@ p.small {
 
 .card-warning {
   background: var(--warning-background-color);
+  border-radius: 4px 4px;
   color: var(--warning-color);
+  font-size: 90%;
+  padding: 0 12px;
 }
 
 a.card {

@@ -54,7 +54,7 @@
   &lt;li&gt;Audio: Disable OGG and MP3 looping by default on import (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71858&quot;&gt;GH-71858&lt;/a&gt;).&lt;/li&gt;
   &lt;li&gt;C#: Renames to follow .NET naming conventions (&lt;a href=&quot;https://github.com/godotengine/godot/pull/69547&quot;&gt;GH-69547&lt;/a&gt;).
     &lt;ul&gt;
-      &lt;li&gt;These renames break compatibility and will likely affect most projects. Check the PR for details. We recommend deleting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;res://.godot/dotnet/&lt;/code&gt; folder before using this beta, to ensure that no older assemblies are used.&lt;/li&gt;
+      &lt;li&gt;These renames break compatibility and will likely affect most projects. Check the PR for details. We recommend deleting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;res://.godot/mono/&lt;/code&gt; folder before using this beta, to ensure that no older assemblies are used.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;C#: Lookup signals and methods in Get method (&lt;a href=&quot;https://github.com/godotengine/godot/pull/71356&quot;&gt;GH-71356&lt;/a&gt;).&lt;/li&gt;
