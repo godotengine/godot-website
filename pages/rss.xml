@@ -16,12 +16,12 @@ permalink: /rss.xml
 	<item>
 		<title>{{ post.title }}</title>
 		<link>{{ site.url }}{{ post.url }}</link>
-		<description>{{ post.content | xml_escape }}</description>
+		<description>{{ post.excerpt }}</description>
 		{% for category in post.categories %}
 		<category>{{ site.data.categories[category][0].name }}</category>
 		{% endfor %}
 		<guid>{{ site.url }}{{ post.url }}</guid>
-		<author>{{ post.author }}</author>
+		<dc:creator>{{ post.author }}</dc:creator>
 		<pubDate>{{ post.date | date: "%a, %d %b %Y %X +0000" }}</pubDate>
 		<image>{{ site.url }}{{ post.image }}</image>
 	</item>
