@@ -7,7 +7,6 @@ exclude:
     "build.sh",
     "build-and-serve.sh",
     "README.md",
-    "storage",
   ]
 permalink: pretty
 
