@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot XR update - January 2023</title>
+		<link>https://godotengine.org/article/godot-xr-progress-update-jan-2023/</link>
+		<description>Updates on various things XR in Godot as per January 2023. New Godot XR Tools, new documentation for Godot 4, new supported renderers and devices.</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/godot-xr-progress-update-jan-2023/</guid>
+		<dc:creator>Bastiaan Olij</dc:creator>
+		<pubDate>Tue, 31 Jan 2023 13:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godot-xr-progress-update-jan-2023.jpg</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.0 beta 16</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-16/</link>
 		<description>We're now just days away from the Release Candidate, working at full capacity on finalizing as many of the remaining high priority issues as we can. This beta includes .NET 7 support, better RichTextLabel minimum size calculation, and a lot of general quality of life improvements.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 04 Nov 2022 16:02:54 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/636/537/ac4/636537ac48c8e789384743.jpg</image>
-	</item>
-	
-	<item>
-		<title>Godot’s Graduation: Godot moves to a new Foundation</title>
-		<link>https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/</link>
-		<description>Software Freedom Conservancy and the Godot leadership are excited to share their decision that the Godot project has reached a level of success for which makes sense for Godot to have its own independent foundation.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/</guid>
-		<dc:creator>Juan Linietsky</dc:creator>
-		<pubDate>Tue, 01 Nov 2022 20:02:21 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/636/176/88b/63617688b5cec969138693.png</image>
 	</item>
 	
 
