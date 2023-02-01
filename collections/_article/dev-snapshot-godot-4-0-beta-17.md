@@ -33,7 +33,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
 
-See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/518b9e5801a19229805fe837d7d0cf92920ad413...c40020513ac8201a449b5ae2eeb58fef0ce0a2a4), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-27T12%3A00..2023-02-01T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 15 (159 commits – excluding merge commits ― from 58 contributors).
+See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/518b9e5801a19229805fe837d7d0cf92920ad413...c40020513ac8201a449b5ae2eeb58fef0ce0a2a4), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-27T12%3A00..2023-02-01T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 16 (159 commits – excluding merge commits ― from 58 contributors).
 
 While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the [`breaks compat` label](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-27T12%3A00..2023-02-01T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22) for details.
 
@@ -111,8 +111,8 @@ This release is built from commit [c40020513](https://github.com/godotengine/god
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/beta16/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0/beta16/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/beta17/) (GDScript, GDExtension).
+* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0/beta17/mono) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location. .NET 7.0 support was recently merged and requires testing, please report any issue you experience with either version.
 
 ## Known issues
