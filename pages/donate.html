@@ -1,76 +1,322 @@
 ---
+title: Donate - Godot Engine
 permalink: /donate/index.html
 layout: default
+paypal_link: https://www.paypal.com/donate/?hosted_button_id=H3V5K8J3QYZBU
 ---
 
 {% include header.html %}
 
-<div class="head">
-	<div class="container flex eqsize" style="flex-direction: column">
-		<div class="main">
-			<h1 class="intro-title">Donate</h1>
-			<p class="small">
-				Godot&nbsp;Engine is a not-for-profit, community-driven free and open source project.
-				It is legally represented by the <a href="https://sfconservancy.org/">Software Freedom Conservancy</a>,
-				a USA-based charity that helps promote, improve, develop, and defend <abbr
-					title="Free, Libre, and Open Source Software">FLOSS</abbr> projects.
-			</p>
+<link rel="stylesheet" href="/assets/css/transparent-nav.css">
+<style>
+	.hero {
+		padding: 124px 0 60px;
+		background: url('/assets/images/donate/hero.png');
+		background-size: cover;
+	}
+
+	.hero h1 {
+		font-size: 60px;
+		text-shadow: 0 0 28px #00000080;
+		margin-bottom: 20px;
+		color: white;
+	}
+
+	.hero .button-container {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		padding-top: 40px;
+	}
+
+	.hero p {
+		font-size: 20px;
+		line-height: 1.5;
+		max-width: 550px;
+		text-shadow: 0 0 28px #00000080;
+		color: white;
+	}
+
+	.hero .wrapper {
+		flex-direction: column;
+		text-align: center;
+		max-width: 580px;
+		margin: 0 auto;
+	}
+
+	.donate-button {
+		text-decoration: none;
+		color: white;
+		background: #478cbf;
+		padding: 12px 24px;
+		box-shadow: var(--base-shadow);
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+
+	.patreon-button {
+		background: #e64850;
+	}
+
+	.container .options {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding-top: 50px;
+		text-align: center;
+		max-width: 960px;
+		gap: 30px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		.container .options {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.card-transfer {
+		background-color: rgba(120, 120, 120, 0.15);
+		background: #2f2f2f;
+		margin-top: 50px;
+		padding: 43px 50px;
+		border-radius: 11px;
+		box-shadow: 0 11px 10px -10px #00000042;
+	}
+
+	@media (prefers-color-scheme: light) {
+		.card-transfer {
+			background-color: rgba(160, 160, 160, 0.15);
+		}
+	}
+	
+	.card-transfer .details {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	@media (min-width: 768px) {
+		.card-transfer .details {
+			grid-template-columns: 1fr 1fr;
+			gap: 50px;
+		}
+		.bank-transfer .details {
+			padding: 0 30px;
+		}
+		.paypal-transfer .details p,
+		.patreon-transfer .details p {
+			margin-top: 0;
+		}
+	}
+
+	@media (min-width: 768px) {
+		ul.goals {
+			columns: 2;
+		}
+	}
+</style>
+
+
+<div class="hero">
+	<div class="wrapper">
+		<h1>Fund the Future of Godot</h1>
+		<p>
+			Support the progress of the Open Source engine
+		</p>
+		<div>
+			<a class="donate-button" style="margin-top: 30px;" target="_blank" href="{{ page.paypal_link }}">Donate Now</a>
 		</div>
 	</div>
 </div>
 
 <div class="container">
-	<h3 class="title">User and company donations</h3>
-	<p>
-		The project is sustained by the free time of its contributors and donations from the community.
-		All our donations are processed by the Software Freedom Conservancy.
-	</p>
 
-	<p>We use donations for:</p>
-	<ul>
-		<li>Hiring developers so that they can work part-time or full-time on Godot&nbsp;Engine, making the project progress
-			faster.</li>
-		<li>Hiring artists to create high quality demo artwork under a permissive license.</li>
-		<li>Purchasing hardware required to develop Godot.</li>
-		<li>Paying for hosting of some web services.</li>
-		<li>Covering travel costs to some important industry events (e.g. GDC, Gamescom).</li>
-		<li>Producing merchandise for events (T-shirts, banners, stickers, etc.).</li>
-	</ul>
+	<div class="padded">
+		<h3>The Godot Foundation</h3>
+		<p style="max-width: 772px; margin-bottom: 40px;">Your donations will be received by the Godot Foundation, a non-profit organization that manages the funds for the Godot project. Our Patreon is still handled by Software Freedom Conservancy on behalf of the Godot project. Whichever method you choose, the funds will be used to support Godot development. If in doubt, we recommend a recurring donation <a target="_blank" href="{{ page.paypal_link }}">via PayPal</a>. For more information see the foundation page at <a href="https://godot.foundation" target="_blank">https://godot.foundation</a></p>
+		<h4>Thanks to your support we are able to:</h4>
+		<ul class="goals">
+			<li>Hire developers to work part-time or full-time on Godot&nbsp;Engine.</li>
+			<li>Create high quality demo artwork under a permissive license.</li>
+			<li>Purchase hardware required to develop Godot.</li>
+			<li>Pay for hosting of some web services.</li>
+			<li>Cover travel costs to notable industry events (e.g. GDC, Gamescom).</li>
+			<li>Produce merchandise for events (T-shirts, banners, stickers, etc.).</li>
+		</ul>
+	</div>
 
-	<p>
-		You can donate monthly via <a href="https://www.patreon.com/godotengine">Patreon</a>,
-		or directly via PayPal.
-	</p>
+	<div class="paypal-transfer card-transfer" id="paypal">
+		<h2>Paypal <span title="Preferred way">⭐️</span></h2>
 
-	<h3 class="title">Patreon</h3>
+		<div class="details">
+			<div>
+				<p>
+					The Godot Foundation accepts donations via PayPal. Funds may be directed to <strong>payal@godot.foundation</strong>. Please consider making a recurring donation.
+				</p>
+			</div>
+			<div>
+				<a class="donate-button" target="_blank" href="{{ page.paypal_link }}">Donate via PayPal</a>
+			</div>
+		</div>
+	</div>
 
-	<p>
-		Patreon is a platform for creators to crowdfund their work via monthly donations. Godot&nbsp;Engine launched a <a
-			href="https://www.patreon.com/godotengine">Patreon page</a> with the aim to collect enough money each month to
-		hire
-		some of its developers part-time or full-time, starting with its lead developer Juan Linietsky
-	</p>
+	<div class="patreon-transfer card-transfer" id="patreon">
+		<h2>Patreon</h2>
 
-	<a class="patronImgLink" href="https://www.patreon.com/bePatron?u=5597979"><img alt="Become a patron!" height="37px"
-			src="/assets/community/become_a_patron_button.png"> </a>
+		<div class="details">
+			<div>
+				<p>
+					The Patreon donations are processed by the <a href="https://sfconservancy.org/"
+					target="_blank">Software Freedom Conservancy</a>. We are currently transitioning to the Godot Foundation, you can learn more about it in <a href="https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/"
+					target="_blank">our blog post</a> or the <a href="https://sfconservancy.org/news/2022/nov/01/godot-graduates/" target="_blank">SFC's announcement</a>.
+				</p>
+			</div>
+			<div>
+				<a class="donate-button patreon-button"
+				href="https://www.patreon.com/godotengine">Join our Patreon</a>
+			</div>
+		</div>
+	</div>
 
-	<p>
-		The Patreon donations are processed by Conservancy, which then uses them to hire developers based on contracts made
-		transparent to all supporters.
-	</p>
+	<div class="bank-transfer card-transfer" id="bank">
+		<h2>Bank Transfer</h2>
 
-	<h3 class="title">PayPal direct donation</h3>
-	<p>Donations can be made to our PayPal account managed by Conservancy:</p>
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-		<input type="hidden" name="cmd" value="_s-xclick">
-		<input type="hidden" name="hosted_button_id" value="XS2JCYXMHV9KJ">
-		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit"
-			alt="PayPal - The safer, easier way to pay online!">
-		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-	</form>
+		<p>
+			If you are sending from the EU, or if you want to make a large donation, you can make a direct bank transfer.<br>For questions, contact <a href="mailto:contact@godot.foundation" target="_blank">contact@godot.foundation</a>.
+		</p>
 
-	(If you cannot see the PayPal button, disable your ad blocker temporarily.)
+		<h3>Send payments to:</h3>
 
+		<div class="details">
+			<div>
+				<strong>Stichting Godot</strong><br>
+				Spoorlaan 5</br>
+				1911HA Uitgeest<br>
+				The Netherlands<br>
+				<br>
+				BIC/Swift code:<strong>TRIONL2U</strong><br>
+				IBAN: <strong>NL12 TRIO 0320 5613 48</strong><br>
+			</div>
+			<div>
+				Bank: <strong>Triodos Bank</strong><br>
+				<strong>Postbus 55</strong><br>
+				<strong>3700 AB Zeist</strong><br>
+				<strong>The Netherlands</strong><br>
+				
+			</div>
+		</div>
+	</div>
+	
 </div>
+
+
+<style>
+	section.sponsors .grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+		padding-left: 80px;
+	}
+
+	@media (min-width: 768px) {
+		section.sponsors .grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		section.sponsors .grid.gold {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	
+		section.sponsors .grid.silver {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+
+	.sponsor-card {
+		width: 100%;
+		display: grid;
+		align-items: center;
+		padding: 17px;
+		border-radius: 7px;
+		box-sizing: border-box;
+	}
+
+	.sponsor-card.platinum {
+		background-color: var(--sponsor-platinum-background-color);
+	}
+
+	.sponsor-card.gold {
+		background-color: var(--sponsor-gold-background-color);
+	}
+
+	.sponsor-card.silver {
+		background-color: var(--sponsor-silver-background-color);
+	}
+
+	.sponsor-card img {
+		max-width: 100%;
+		mix-blend-mode: multiply;
+		width: auto;
+		max-height: 80px;
+		margin: 0 auto;
+	}
+
+	.gold img {
+		max-height: 60px;
+	}
+
+	.silver img {
+		max-height: 40px;
+	}
+
+	.sponsors h3 {
+		margin-top: 50px;
+		font-weight: 400;
+	}
+
+	.sponsors h3 a {
+		font-size: 15px;
+		opacity: 0.5;
+		text-decoration: none;
+		color: inherit;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	}
+
+	.learn-more {
+		display: none;
+	}
+</style>
+
+<section class="sponsors padded" id="supporters">
+	<div class="container">
+		<h2>Current Sponsors</h2>
+		<h3>Platinum</h3>
+		<div class="grid platinum">
+			{% for sponsor in site.data.sponsors.platinum %}
+			<a class="sponsor-card platinum" href="{{ sponsor.url }}" target="_blank" rel="noopener">
+				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
+			</a>
+			{% endfor %}
+		</div>
+		<h3>Gold</h3>
+		<div class="grid gold">
+			{% for sponsor in site.data.sponsors.gold %}
+			<a class="sponsor-card gold" href="{{ sponsor.url }}" target="_blank" rel="noopener">
+				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
+			</a>
+			{% endfor %}
+		</div>
+		<h3>Silver</h3>
+		<div class="grid silver">
+			{% for sponsor in site.data.sponsors.silver %}
+			<a class="sponsor-card silver" href="{{ sponsor.url }}" target="_blank" rel="noopener">
+				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
 
 {% include footer.html %}
