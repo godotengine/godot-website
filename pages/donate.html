@@ -2,6 +2,7 @@
 title: Donate - Godot Engine
 permalink: /donate/index.html
 layout: default
+paypal_link: https://www.paypal.com/donate/?hosted_button_id=H3V5K8J3QYZBU
 ---
 
 {% include header.html %}
@@ -99,11 +100,13 @@ layout: default
 	@media (min-width: 768px) {
 		.card-transfer .details {
 			grid-template-columns: 1fr 1fr;
+			gap: 50px;
 		}
 		.bank-transfer .details {
 			padding: 0 30px;
 		}
-		.paypal-transfer .details p {
+		.paypal-transfer .details p,
+		.patreon-transfer .details p {
 			margin-top: 0;
 		}
 	}
@@ -112,16 +115,6 @@ layout: default
 		ul.goals {
 			columns: 2;
 		}
-	}
-
-
-
-	p.subtitle {
-		font-size: 14px;
-		opacity: 0.8;
-		text-align: center;
-		max-width: 220px;
-    margin: 0 auto;
 	}
 </style>
 
@@ -132,36 +125,18 @@ layout: default
 		<p>
 			Support the progress of the Open Source engine
 		</p>
+		<div>
+			<a class="donate-button" style="margin-top: 30px;" target="_blank" href="{{ page.paypal_link }}">Donate Now</a>
+		</div>
 	</div>
 </div>
 
 <div class="container">
 
-	<div class="options">
-		<div class="patreon">
-			<h2>Recurrent donation</h2>
-			<!-- <p>
-				You can pledge a monthly donation to support the Godot Foundation to work on the Godot Engine.
-			</p> -->
-			<a class="donate-button patreon-button" href="https://www.patreon.com/godotengine">Join our Patreon</a>
-			<p class="subtitle">
-				The Patreon donations are currently processed by the <a href="https://sfconservancy.org/"
-					target="_blank">SFC</a>.
-			</p>
-		</div>
-		<div class="one-time">
-			<h2>One-time donation</h2>
-			<a class="donate-button"
-				href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XS2JCYXMHV9KJ">Donate
-				via PayPal</a>
-				<p class="subtitle">
-					Or a regular <a href="#bank-transfer">bank transfer</a>.
-				</p>
-		</div>
-	</div>
-
 	<div class="padded">
-		<h3 class="title">Thanks to your support we are able to:</h3>
+		<h3>The Godot Foundation</h3>
+		<p style="max-width: 772px; margin-bottom: 40px;">Your donations will be received by the Godot Foundation, a non-profit organization that manages the funds for the Godot project. Our Patreon is still handled by Software Freedom Conservancy on behalf of the Godot project. Whichever method you choose, the funds will be used to support Godot development. If in doubt, we recommend a recurring donation <a target="_blank" href="{{ page.paypal_link }}">via PayPal</a>. For more information see the foundation page at <a href="https://godot.foundation" target="_blank">https://godot.foundation</a></p>
+		<h4>Thanks to your support we are able to:</h4>
 		<ul class="goals">
 			<li>Hire developers to work part-time or full-time on Godot&nbsp;Engine.</li>
 			<li>Create high quality demo artwork under a permissive license.</li>
@@ -172,47 +147,44 @@ layout: default
 		</ul>
 	</div>
 
-	<!-- <h3>Choose your membership</h3>
-	<div class="tier">
-		<h4>Bronze</h4>
-		<p>$ 100 / month</p>
-	</div>
-	<div class="tier">
-		<h4>Silver</h4>
-		<p>$ 500 / month</p>
-	</div>
-	<div class="tier">
-		<h4>Gold</h4>
-		<p>$ 1,500 / month</p>
-	</div>
-	<div class="tier">
-		<h4>Platinum</h4>
-		<p>$ 3,000 / month</p>
-	</div> -->
-
-	<div class="paypal-transfer card-transfer" id="paypal-transfer">
-		<h2>Paypal</h2>
+	<div class="paypal-transfer card-transfer" id="paypal">
+		<h2>Paypal <span title="Preferred way">⭐️</span></h2>
 
 		<div class="details">
 			<div>
 				<p>
-					The Godot Foundation accepts donations via PayPal.<br>
-					Funds may be directed to <strong>payal@godot.foundation</strong>
+					The Godot Foundation accepts donations via PayPal. Funds may be directed to <strong>payal@godot.foundation</strong>. Please consider making a recurring donation.
 				</p>
 			</div>
 			<div>
-				<a class="donate-button"
-				href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XS2JCYXMHV9KJ">Donate
-				via PayPal</a>
+				<a class="donate-button" target="_blank" href="{{ page.paypal_link }}">Donate via PayPal</a>
 			</div>
 		</div>
 	</div>
 
-	<div class="bank-transfer card-transfer" id="bank-transfer">
+	<div class="patreon-transfer card-transfer" id="patreon">
+		<h2>Patreon</h2>
+
+		<div class="details">
+			<div>
+				<p>
+					The Patreon donations are processed by the <a href="https://sfconservancy.org/"
+					target="_blank">Software Freedom Conservancy</a>. We are currently transitioning to the Godot Foundation, you can learn more about it in <a href="https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/"
+					target="_blank">our blog post</a> or the <a href="https://sfconservancy.org/news/2022/nov/01/godot-graduates/" target="_blank">SFC's announcement</a>.
+				</p>
+			</div>
+			<div>
+				<a class="donate-button patreon-button"
+				href="https://www.patreon.com/godotengine">Join our Patreon</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="bank-transfer card-transfer" id="bank">
 		<h2>Bank Transfer</h2>
 
 		<p>
-			If you are sending from the EU, or if you want to make a large donation, you can make a direct bank transfer. For questions, contact contact@godot.foundation
+			If you are sending from the EU, or if you want to make a large donation, you can make a direct bank transfer.<br>For questions, contact <a href="mailto:contact@godot.foundation" target="_blank">contact@godot.foundation</a>.
 		</p>
 
 		<h3>Send payments to:</h3>
@@ -220,19 +192,19 @@ layout: default
 		<div class="details">
 			<div>
 				<strong>Stichting Godot</strong><br>
-				Randomstreet 123</br>
-				1234 Amsterdam, the Netherlands<br>
+				Spoorlaan 5</br>
+				1911HA Uitgeest<br>
+				The Netherlands<br>
 				<br>
-				Account number: 1234567<br>
-				Tax number 12312312<br>
+				BIC/Swift code:<strong>TRIONL2U</strong><br>
+				IBAN: <strong>NL12 TRIO 0320 5613 48</strong><br>
 			</div>
 			<div>
-				Bank: <strong>XXXXXX</strong><br>
-				<strong>Banksrandomstreet 123</strong><br>
-				<strong>1234 Amsterdam, the Netherlands</strong><br>
-				<br>
-				BIC/Swift code:<strong>XXXXXX</strong><br>
-				IBAN: <strong>XXXXXXXXXXX</strong><br>
+				Bank: <strong>Triodos Bank</strong><br>
+				<strong>Postbus 55</strong><br>
+				<strong>3700 AB Zeist</strong><br>
+				<strong>The Netherlands</strong><br>
+				
 			</div>
 		</div>
 	</div>
@@ -312,65 +284,37 @@ layout: default
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	}
 
-	.sponsors .you {
-		display: grid;
-		align-content: center;
-		text-align: center;
-		border: 4px dashed #e2ebfa;
-		border-radius: 9px;
-		text-decoration: none;
-		font-size: 26px;
-		color: #e2ebfa;
-	}
-	@media (prefers-color-scheme: light) {
-		.sponsors .you {
-			border-color: #2d3748;
-			color: #2d3748;
-		}
+	.learn-more {
+		display: none;
 	}
 </style>
 
 <section class="sponsors padded" id="supporters">
 	<div class="container">
 		<h2>Current Sponsors</h2>
-		<h3>Platinum <a href="">Learn more</a></h3>
+		<h3>Platinum</h3>
 		<div class="grid platinum">
 			{% for sponsor in site.data.sponsors.platinum %}
 			<a class="sponsor-card platinum" href="{{ sponsor.url }}" target="_blank" rel="noopener">
 				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
 			</a>
 			{% endfor %}
-			<a href="" class="you">
-				<p>
-					Your logo?
-				</p>
-			</a>
 		</div>
-		<h3>Gold <a href="">Learn more</a></h3>
+		<h3>Gold</h3>
 		<div class="grid gold">
 			{% for sponsor in site.data.sponsors.gold %}
 			<a class="sponsor-card gold" href="{{ sponsor.url }}" target="_blank" rel="noopener">
 				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
 			</a>
 			{% endfor %}
-			<a href="" class="you">
-				<p>
-					Your logo?
-				</p>
-			</a>
 		</div>
-		<h3>Silver <a href="">Learn more</a></h3>
+		<h3>Silver</h3>
 		<div class="grid silver">
 			{% for sponsor in site.data.sponsors.silver %}
 			<a class="sponsor-card silver" href="{{ sponsor.url }}" target="_blank" rel="noopener">
 				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
 			</a>
 			{% endfor %}
-			<a href="" class="you">
-				<p>
-					Your logo?
-				</p>
-			</a>
 		</div>
 	</div>
 </section>
