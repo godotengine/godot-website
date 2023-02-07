@@ -119,7 +119,7 @@ As mentioned above, the current UX closely replicates the user experience of des
 The effort of porting the Godot Editor to Android brings more benefits than editing your projects on phones and tablets. Many XR devices run on Android-based OS, and thanks to the great work of [Bastiaan Olij](https://github.com/BastiaanOlij) and XR contributors, Godot comes with native support for standalone XR devices, such as Meta Quest. This means that in future you will be able to run the Godot Editor on your XR device, editing and debugging games and applications directly in Virtual Reality while leveraging the unique strengths of the medium.
 
 <video controls muted>
-  <source src="/storage/app/media/android/godot_xr_editor_preview.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/android/godot_xr_editor_recording.mp4?1" type="video/mp4">
 </video>
 
 Development of this feature is currently happening on GitHub, and we have been making solid progress toward enabling and running the Godot XR Editor on the Meta Quest and on PCVR devices. If you're interested in helping out with testing or even contributing to the XR editor, please at a look at [this pull-request](https://github.com/godotengine/godot/pull/67736).
