@@ -4,7 +4,7 @@ excerpt: "Godot Engine arrives to the Google Play Store with an official beta re
 categories: ["pre-release"]
 author: Fredia Huya-Kouadio
 image: /storage/blog/covers/android-godot-editor-play-store-beta-release-cover.png
-date: 2023-02-03 15:00:00
+date: 2023-02-07 15:00:00
 ---
 
 You've probably heard it before, that Godot's own editor is "built with the Godot Engine", and in a certain way it is true. Another fact is that Godot supports the Android platform, and many developers have been using it to create [amazing mobile games](https://www.youtube.com/watch?v=xF3QiQfQxeQ) in the last few years. The natural conclusion of these two factoids is a question: "Can I run the Godot Editor on my Android device to make games and app on the go?".
