@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot Editor (Beta) arrives to the Play Store</title>
+		<link>https://godotengine.org/article/android_godot_editor_play_store_beta_release/</link>
+		<description>Godot Engine arrives to the Google Play Store with an official beta release of the Godot Editor for Android! With the UI adjusted to work better on a tiny screen, you can try your hand at making games on the go.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/android_godot_editor_play_store_beta_release/</guid>
+		<dc:creator>Fredia Huya-Kouadio</dc:creator>
+		<pubDate>Fri, 03 Feb 2023 15:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/android-godot-editor-play-store-beta-release-cover.png</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.0 beta 17</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-17/</link>
 		<description>We're now just days away from the Release Candidate, working at full capacity on finalizing as many of the remaining high priority issues as we can. This beta adds audio blending in AnimationTree, fixes GDScript typed arrays, and refactors high quality texture import to enable ASTC support.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Hugo Locurcio</dc:creator>
 		<pubDate>Mon, 14 Nov 2022 16:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/636/942/fed/636942feda67c584924051.png</image>
-	</item>
-	
-	<item>
-		<title>Animation Retargeting in Godot 4.0</title>
-		<link>https://godotengine.org/article/animation-retargeting-in-godot-4-0/</link>
-		<description>Godot 4.0 comes with an animation retargeting system to allow for easy sharing of animations between similar models.</description>
-		
-		<category>Progress Report</category>
-		
-		<guid>https://godotengine.org/article/animation-retargeting-in-godot-4-0/</guid>
-		<dc:creator>Silc Renew</dc:creator>
-		<pubDate>Mon, 07 Nov 2022 17:52:41 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/636/2a3/36e/6362a336e23be482773873.png</image>
 	</item>
 	
 
