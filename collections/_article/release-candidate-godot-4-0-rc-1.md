@@ -9,9 +9,9 @@ image_caption_description: "An upcoming demo by GDQuest"
 date: 2023-02-08 13:00:00
 ---
 
-This has been a long road, but the exciting times are upon us! Thanks to our excellent contributors and our brave volunteer beta testers we are reaching the biggest milestone in the history of Godot so far. We are about to release Godot 4.0 stable. We are very proud of how it has shaped, about features and enhancements that has been implemented, and most of all, we are proud to have collected such a brilliant team of talented individuals who have carried this major release on their wide and mighty shoulders.
+This has been a long road, but the exciting times are upon us! Thanks to our excellent contributors and our brave volunteer beta testers we are reaching the biggest milestone in the history of Godot so far. We are about to release Godot 4.0 stable. We are very proud of how it has shaped up, the features and enhancements that have been implemented, and most of all, we are proud to have collected such a brilliant team of talented individuals who have carried this major release on their wide and mighty shoulders.
 
-But before we can cut the ribbon and break out the champagne, there are still a few preview releases we must go through, to establish, with your help, that we are truly ready. What you can expect from the next couple of weeks is the same cadence of official builds, aiming to minimize the iteration time between fixing bugs and checking for regressions. We will no longer be making any breaking changes, or include further enhancements. New features will have to [wait for Godot 4.1 later this year](/article/release-management-4-0-and-beyond). Instead, we will be coming down on the last critical issues we want to be resolved before we ship the first stable release of Godot 4.
+But before we can cut the ribbon and break out the champagne, there are still a few preview releases we must go through, to establish, with your help, that we are truly ready. What you can expect from the next couple of weeks is the same cadence of official builds, aiming to minimize the iteration time between fixing bugs and checking for regressions. We will no longer make any breaking changes or include further enhancements. New features will have to [wait for Godot 4.1 later this year](/article/release-management-4-0-and-beyond). Instead, we will be coming down on the last critical issues we want to be resolved before we ship the first stable release of Godot 4.
 
 There certainly will be remaining bugs, and your experience won't be as frictionless as it is in the current stable version of Godot 3. It will take time to get to the same level of polish, but hopefully less time than before, thanks to our extended team of developers, and also new members learning about Godot only now and sharing their valuable feedback.
 
@@ -19,11 +19,11 @@ We are committed to evolving the engine further, and hope to see more of your am
 
 ## Highlights
 
-As we keep iterating from previous beta releases, these release notes are focused on the most recent changes (since beta 17). If you're interested in what major features come in Godot 4.0, check out our blog post for [beta 1](/article/dev-snapshot-godot-4-0-beta-1). Stay tuned for more articles about new features as we get closer to the stable version.
+As we keep iterating from previous beta releases, these release notes are focused on the most recent changes (since beta 17). If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1](/article/dev-snapshot-godot-4-0-beta-1). Stay tuned for more articles about new features as we get closer to the stable version.
 
 This release candidate includes some big changes which may interest a lot of users:
 
-- A large number of invalid behaviors is now correctly validated and reported in GDScript files ([GH-72608](https://github.com/godotengine/godot/pull/72608)). This includes some behaviors that previously appeared as working correctly, but were never actually supported by the engine (such as override/shadowing of the engine's native methods). You can turn errors into warnings, or disable them completely, if you need to.
+- A large number of invalid behaviors is now correctly validated and reported in GDScript files ([GH-72608](https://github.com/godotengine/godot/pull/72608)). This includes some behaviors that previously appeared as working correctly but were never actually supported by the engine (such as override/shadowing of the engine's native methods). You can turn errors into warnings, or disable them completely if you need to.
 
 - `CanvasGroup` nodes will no longer appear darker than they should due to an incorrect shading logic ([GH-72695](https://github.com/godotengine/godot/pull/72695)).
 
@@ -39,21 +39,21 @@ This release candidate includes some big changes which may interest a lot of use
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.rc1/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from* Sophia's Rainbow, *an upcoming open-source 3D platformer controller demo. It's being created in Godot 4.0 beta by [GDQuest](https://www.gdquest.com/), and you can check out their existing [tutorials](https://www.youtube.com/c/gdquest) and [projects](https://github.com/GDQuest/) in the meantime.*
+*The illustration picture for this article is from* **Sophia's Rainbow**, *an upcoming open-source 3D platformer controller demo. It's being created in Godot 4.0 beta by [GDQuest](https://www.gdquest.com/), and you can check out their existing [tutorials](https://www.youtube.com/c/gdquest) and [projects](https://github.com/GDQuest/) in the meantime.*
 
 ## What's new
 
-See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/c40020513ac8201a449b5ae2eeb58fef0ce0a2a4...8843d9ad347e5c3be5130153aeecdf48e4fe5a14), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 17 (XX commits – excluding merge commits ― from YY contributors).
+See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/c40020513ac8201a449b5ae2eeb58fef0ce0a2a4...c4fb119f03477ad9a494ba6cdad211b35a8efcce), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T11%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 17 (136 commits – excluding merge commits ― from 53 contributors).
 
-While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the [`breaks compat` label](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22) for details.
+The first Release Candidate concludes the beta stage, and thus it still includes a few API changes which may impact your Godot 4 projects. See the list of PRs with the [`breaks compat` label](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T11%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22) for details.
 
-Some of the most notables feature changes in this update are:
+Some of the most notable feature changes in this update are:
 
 - Android: Rename Godot's 'custom build' to 'gradle build' to better reflect the underlying build process ([GH-72552](https://github.com/godotengine/godot/pull/72552)).
-- Android: Improve Vulkan capability detection on Android ([GH-72780](https://github.com/godotengine/godot/pull/72780), [GH-72806](https://github.com/godotengine/godot/pull/72806)).
+- Android: Improve Vulkan capability detection on Android ([GH-72780](https://github.com/godotengine/godot/pull/72780), [GH-72806](https://github.com/godotengine/godot/pull/72806), [GH-72816](https://github.com/godotengine/godot/pull/72816)).
 - Animation: Improve naming consistency of animation nodes ([GH-72509](https://github.com/godotengine/godot/pull/72509)).
 - Animation: Fix AnimationNodeTransition initialization and AnimationNode remapping method ([GH-72722](https://github.com/godotengine/godot/pull/72722)).
-- Animation: Fixed animation audio to play considering time when seeking ([GH-72727](https://github.com/godotengine/godot/pull/72727)).
+- Animation: Fix animation audio to play considering time when seeking ([GH-72727](https://github.com/godotengine/godot/pull/72727)).
 - Animation: Fix AnimationTrackEditor doesn't open when selecting `AnimationPlayer` node while another editor is open ([GH-72805](https://github.com/godotengine/godot/pull/72805)).
 - Animation: Fix AnimationEditor ignoring region of `Sprite2D` ([GH-72812](https://github.com/godotengine/godot/pull/72812)).
 - C#: Sync C# Array with Core ([GH-71786](https://github.com/godotengine/godot/pull/71786)).
@@ -125,7 +125,7 @@ Some of the most notables feature changes in this update are:
 - Windows: Update `last_focused_window` when the focused subwindow is deleted ([GH-72624](https://github.com/godotengine/godot/pull/72624)).
 - XR: Add XR environment blend mode support ([GH-72604](https://github.com/godotengine/godot/pull/72604)).
 
-This release is built from commit [8843d9ad3](https://github.com/godotengine/godot/commit/8843d9ad347e5c3be5130153aeecdf48e4fe5a14).
+This release is built from commit [c4fb119f0](https://github.com/godotengine/godot/commit/c4fb119f03477ad9a494ba6cdad211b35a8efcce).
 
 <a id="downloads"></a>
 ## Downloads
@@ -140,14 +140,16 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a list of [known bugs in the 4.0 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+).
 
+You will likely see this list reduced drastically over the coming days as we continue to re-triage those issues and postpone the ones that are not critical for the 4.0 release.
+
 ## Bug reports
 
 As a tester, you are encouraged to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check first the [existing issues on GitHub](https://github.com/godotengine/godot/issues), using the search function with relevant keywords, to ensure that the bug you experience is not known already.
 
-As in any major release there are going to be compatibility breaking changes. However, we still try to provide a migration path for your projects. If you experience a regression without a known migration path or workaround, do not hesitate to report it.
+As in any major release, there are going to be compatibility-breaking changes. However, we still try to provide a migration path for your projects. If you experience a regression without a known migration path or workaround, do not hesitate to report it.
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](https://godotengine.org/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](https://godotengine.org/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
 If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](https://godotengine.org/donate).
