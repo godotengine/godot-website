@@ -6,7 +6,7 @@ author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-0-rc-1.jpg
 image_caption_title: ""
 image_caption_description: ""
-date: 2023-02-08 12:00:00
+date: 2023-02-08 14:00:00
 ---
 
 This has been a long road, but the exciting times are upon us! Thanks to our excellent contributors and our brave volunteer beta testers we are reaching the biggest milestone in the history of Godot so far. We are about to release Godot 4.0 stable. We are very proud of how it has shaped, about features and enhancements that has been implemented, and most of all, we are proud to have collected such a brilliant team of talented individuals who have carried this major release on their wide and mighty shoulders.
@@ -33,15 +33,15 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.rc
 
 ## What's new
 
-See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/c40020513ac8201a449b5ae2eeb58fef0ce0a2a4...xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 17 (XX commits – excluding merge commits ― from YY contributors).
+See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/c40020513ac8201a449b5ae2eeb58fef0ce0a2a4...8843d9ad347e5c3be5130153aeecdf48e4fe5a14), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 17 (XX commits – excluding merge commits ― from YY contributors).
 
-While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the [`breaks compat` label](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22) for details.
+While we do our best to minimize compatibility breaking changes for existing beta users, there are still occasional changes in the API which may impact your Godot 4 projects. See the list of PRs with the [`breaks compat` label](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-01T12%3A00..2023-02-08T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0+label%3A%22breaks+compat%22) for details.
 
 Some of the most notables feature changes in this update are:
 
 - AREA: Description ([GH-00000](https://github.com/godotengine/godot/pull/00000)).
 
-This release is built from commit [xxxxxxxxx](https://github.com/godotengine/godot/commit/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx).
+This release is built from commit [8843d9ad3](https://github.com/godotengine/godot/commit/8843d9ad347e5c3be5130153aeecdf48e4fe5a14).
 
 <a id="downloads"></a>
 ## Downloads
