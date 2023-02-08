@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0 RC 1</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-1/</link>
+		<description>The wait is almost over! With Godot 4.0 coming close to stable, we finalize our efforts to fix the remaining critical issues and add the last coat of polish with the first Release Candidate.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-1/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Wed, 08 Feb 2023 13:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-1.jpg</image>
+	</item>
+	
+	<item>
 		<title>Godot Editor (Beta) arrives to the Play Store</title>
 		<link>https://godotengine.org/article/android_godot_editor_play_store_beta_release/</link>
 		<description>Godot Engine arrives to the Google Play Store with an official beta release of the Godot Editor for Android! With the UI adjusted to work better on a tiny screen, you can try your hand at making games on the go.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Wed, 16 Nov 2022 16:38:34 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/637/517/5b5/6375175b5be6f234103652.jpg</image>
-	</item>
-	
-	<item>
-		<title>Movie Maker mode arrives in Godot 4.0</title>
-		<link>https://godotengine.org/article/movie-maker-mode-arrives-in-godot-4/</link>
-		<description>With the addition of non-real-time video recording, Godot opens itself to new use cases such as architecture visualization and cutscene rendering.</description>
-		
-		<category>Progress Report</category>
-		
-		<guid>https://godotengine.org/article/movie-maker-mode-arrives-in-godot-4/</guid>
-		<dc:creator>Hugo Locurcio</dc:creator>
-		<pubDate>Mon, 14 Nov 2022 16:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/636/942/fed/636942feda67c584924051.png</image>
 	</item>
 	
 
