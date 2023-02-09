@@ -5,8 +5,66 @@ layout: default
 
 {% include header.html %}
 
+<link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <style>
-	.btn.btn-version-download {
+	.hero {
+		padding: 124px 0 60px;
+		background: url('/assets/download/download-background.jpg');
+		background-size: cover;
+		background-position: center;
+		position: relative;
+	}
+
+	.hero h1 {
+		font-size: 60px;
+		text-shadow: 0 0 28px #00000080;
+		margin-bottom: 20px;
+		color: white;
+	}
+
+	.hero .hero-wrapper {
+		flex-direction: column;
+		text-align: center;
+		max-width: 580px;
+		margin: 0 auto;
+	}
+
+	.hero .main-downloads {
+		max-width: 600px;
+		margin: 40px auto;
+		display: grid;
+		gap: 24px;
+		text-align: center;
+	}
+	.hero .main-download-details {
+		color: var(--download-main-details-color);
+		font-size: 14px;
+		margin-top: 0;
+		opacity: 0.6;
+	}
+
+	.hero .previous-releases {
+		color: var(--download-hero-color);
+		font-size: 95%;
+	}
+
+	.hero .other-platforms {
+		color: var(--download-hero-color);
+		font-weight: 600;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 8px;
+	}
+
+	.hero .other-platforms .other-platforms-wrapper {
+		max-width: 1200px;
+		margin: auto;
+	}
+
+	.btn.btn-download-main,
+	.btn.btn-download-main2 {
 		background-color: var(--primary-color);
 		color: white;
 		display: inline-flex;
@@ -14,319 +72,334 @@ layout: default
 		padding: 0px;
 		margin-bottom: 8px;
 	}
-
-	.btn.btn-version-download.dot-net {
-		background-color: #7a7f84;
+	.btn.btn-download-main2 {
+		background-color: rgb(111 111 111 / 27%);
+		-webkit-backdrop-filter: blur(4px);
+		backdrop-filter: blur(4px);
 	}
 
-	.btn.btn-version-download a {
-		color: white;
-		text-decoration: none;
-		padding: 10px 20px;
-		width: auto;
+	.btn.btn-download-main img,
+	.btn.btn-download-main2 img {
+		display: inline-block;
+		filter: invert();
+		margin-right: 10px;
+		width: 20px;
+		vertical-align: text-bottom;
 	}
 
-	.digital-stores {
-		width: 85%;
-		display: flex;
-		justify-content: center;
-		flex-direction: row;
-		align-items: flex-start;
-		gap: 12px;
-		margin-bottom: 24px;
+	.btn.btn-download-main .download-hint,
+	.btn.btn-download-main2 .download-hint {
+		background-color: var(--primary-color-text-title);
+		color: var(--dark-color);
+		line-height: 32px;
+		padding: 12px 16px;
 	}
 
-	.digital-stores-download {
-		display: flex;
-		align-items: center;
-		margin-top: 16px;
-		color: var(--dark-color-text-hl);
-		font-size: 16px;
-		text-decoration: none;
+	.btn.btn-download-main .download-title,
+	.btn.btn-download-main2 .download-title {
+		color: var(--primary-color-text-title);
+		font-size: 20px;
+		line-height: 32px;
+		padding: 12px 32px 12px 24px;
 	}
 
-	.digital-stores-logo {
-		background-color: var(--digital-store-background-color);
-		padding: 8px 8px;
-	}
-
-	.digital-stores-logo img {
-		vertical-align: middle;
-	}
-
-	.digital-stores-name {
-		color: var(--base-color-text-hl);
-		font-family: "Montserrat", sans-serif;
-		font-size: 14px;
-		font-weight: 600;
-		padding: 8px 16px;
-	}
-
-	.version-overview {
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 50px;
-	}
-
-	.version-overview h2 {
-		margin-top: 16px;
-		margin-bottom: 0px;
-	}
-
-	.version-overview .version-link {
-		color: var(--primary-color);
-		font-style: normal;
-		margin-left: 16px;
-		text-decoration: none;
-	}
-
-	.version-overview .date {
-		margin-top: 8px;
-	}
-
-	.version-overview img {
-		filter: drop-shadow(var(--base-shadow));
-	}
-
-	.platform-details hr {
-		border-top-color: rgba(0, 0, 0, 0.15);
+	.platform-details .card {
+		margin-top: 32px;
 	}
 
 	.platform-details pre {
 		background-color: var(--platform-code-background-color);
 	}
 
-	.extras .card {
-		margin-bottom: 16px;
+	.platform-details .download {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		margin-bottom: 8px;
 	}
 
-	.extras .card p {
-		margin-bottom: 0px;
+	.platform-details .download-details {
+		color: var(--secondary-color-text);
+		font-size: 14px;
+		padding: 0 12px;
 	}
 
-	.subheader {
-		margin-top: 32px;
+	.platform-details .download-note {
+		padding: 16px 12px;
+		font-size: 92%;
+		background-color: var(--platform-note-background-color);
+		margin-top: 28px;
 	}
 
-	.tabs {
+	.platform-details .download-note p {
+		margin: 0;
+	}
+
+	.platform-details .platform-split {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+	}
+	@media (max-width: 1200px) {
+		.platform-details .platform-split {
+			grid-template-columns: 1fr;
+			gap: 0;
+		}
+	}
+
+	.other-download {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+		max-width: 100%;
+	}
+	@media (min-width: 768px) {
+		.other-download {
+			grid-template-columns: 1fr 1fr 1fr; 
+		}
+	}
+
+	.other-download-card {
+		background: var(--card-background-color);
+		border-radius: 6px;
+		padding: 26px 35px;
+	}
+
+	.platform-tabs {
 		margin-bottom: -1px;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
-	/* hide tab icons by default */
-	.tab img {
-		display: none;
-		filter: invert(100%);
+	
+	.platform-tabs .tab img {
+		display: block;
+	}
+	@media (prefers-color-scheme: dark) {
+		.platform-tabs .tab img {
+			filter: invert(100%);
+		}
 	}
 
-	.tab.active {
+	.platform-tabs .tab:not(.active):hover {
+		background: var(--card-background-color);
+		color: var(--base-color-text-hl);
+	}
+
+	.platform-tabs .tab.active {
 		background: var(--card-background-color);
 	}
 
-	@media (max-width: 1060px) {
-
-		/* hide tab text only show icons */
-		.tab img {
-			display: block;
-		}
-
-		/* hide tab text, except for active tabs */
-		.tab:not(.active) span {
-			display: none;
-		}
-	}
-</style>
-
-<style>
-	.main {
-		width: 100%;
-	}
-	.main h1 {
-		text-align: center;
-	}
-	.head .btn.btn-version-download img {
-		display: inline-block;
-		width: 15px;
-		position: relative;
-		top: 2px;
-		filter: invert();
-		margin-right: 11px;
-	}
-	.main .downloads {
-		max-width: 600px;
-		margin: 40px auto;
+	.digital-stores {
 		display: grid;
-		text-align: center;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
 	}
-	.main .downloads .details {
+	@media (max-width: 1200px) {
+		.digital-stores {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.digital-stores p {
 		margin-top: 0;
-		font-size: 14px;
-		opacity: 0.6;
 	}
 
-	.main .downloads {
-		display: grid;
-		gap: 40px;
+	.digital-stores .digital-store-list {
+		display: flex;
+		justify-content: center;
+		gap: 16px;
+	}
+
+	.btn.btn-digital-store {
+		background-color: var(--primary-color);
+		color: var(--dark-color-text-title);
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+		padding: 12px 24px;
 	}
 </style>
-<div class="head" style="background-image: url('/assets/download/download-background.jpg'); background-size: cover; background-position: center;">
-	<div class="container flex responsive justify-space-between">
-		<div class="main">
-			<h1 class="intro-title">Download Godot</h1>
 
-			<div class="downloads">
-				<div>
-					<div class="btn btn-version-download">
-						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_{{ download.url }}">
-						<img src="/assets/icons/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
-							Godot Engine {{site.stable_version}}
-						</a>
-					</div>
-					<p class="details">{{ page.platform }} · {% if page.platform == "MacOS" %}Intel/Apple Silicon{% else %}64 bit{% endif %} · {{ site.stable_version_date }} </p>
-				</div>
+<div class="hero">
+	<div class="hero-wrapper">
+		<h1>Download Godot for {{ page.platform }}</h1>
 
-				<div>
-					<div class="btn btn-version-download dot-net">
-						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_{{ download.url }}">
+		<div class="main-downloads">
+			{% assign featured_downloads = page.downloads | where: "featured", "true" %}
+			{% for download in featured_downloads %}
+
+			{% capture download_url %}
+				https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+			{% endcapture %}
+
+			<div class="main-download">
+				<a href="{{ download_url }}" class="btn btn-download btn-download-main{% if forloop.index > 1 %}2{% endif %}">
+					<div class="download-title">
 						<img src="/assets/icons/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
-							Godot Engine - C# - {{site.stable_version}}
-						</a>
+						Godot Engine{% if download.featured_flavor %} - {{ download.featured_flavor }}{% endif %}
 					</div>
-					<p class="details">Mono version (C# support)</p>
-				</div>
+					<div class="download-hint">{{ site.stable_version }}</div>
+				</a>
+				<p class="main-download-details">
+					{{ page.platform }}<strong>{% for tag in download.tags %} · {{ tag }}{% endfor %}</strong> · {{ site.stable_version_date }}
+				</p>
 			</div>
+
+			{% endfor %}
+
+			<p class="previous-releases">
+				You can find previous releases on <a href="https://github.com/godotengine/godot/releases">GitHub</a> or the <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
+			</p>
+		</div>
+	</div>
+
+	<div class="other-platforms">
+		<div class="other-platforms-wrapper">
+			Looking for other platforms? <a href="#platforms">See below!</a>
 		</div>
 	</div>
 </div>
 
 <div class="container">
-	<h2>Looking for other platforms?</h2>
-	
-	<div class="tabs snap-tabs">
-		<a href="/download/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
-			<img width="24" height="24" src="/assets/icons/linux.svg" title="Linux" alt="Linux" />
-			<span>Linux</span>
-		</a>
-		<a href="/download/macos" class="tab title-font {% if page.platform == 'MacOS' %} active {% endif %}">
-			<img width="24" height="24" src="/assets/icons/macos.svg" title="MacOS" alt="MacOS" />
-			<span>MacOS</span>
-		</a>
-		<a href="/download/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
-			<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
-			<span>Windows</span>
-		</a>
-		<a href="/download/server" class="tab title-font {% if page.platform == 'Linux Server' %} active {% endif %}">
-			<img width="24" height="24" src="/assets/icons/linux-server.svg" title="Linux Server" alt="Linux Server" />
-			<span>Linux Server</span>
-		</a>
-		<a href="/download/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
-			<img width="24" height="24" src="/assets/icons/android.svg" title="Android" alt="Android" />
-			<span>Android</span>
-		</a>
-		<a href="https://editor.godotengine.org/releases/latest/" target="_blank" class="tab title-font">
-			<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
-			<span>Web Editor</span>
-		</a>
-	</div>
-	<div class="">
-		<div id="links" class="platform-details">
-			<div class="card">
-				<div class="base-padding">
-					<h4>Downloads</h4>
-					{% for download in page.downloads %}
-					<div class="">
-						<a
-							href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_{{ download.url }}">{{ download.caption }}</a>
-					</div>
-					{% endfor %}
-					{{ page.note }}
-				</div>
+	<div id="links" class="platform-details">
+		<div class="card base-padding">
+			<h3>Requirements</h3>
+			
+			<ul>
+				<li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
+				{% unless page.ignore_mono %}
+				<li>
+					<strong>For the .NET version:</strong> <a href="https://dotnet.microsoft.com/download">.NET SDK</a> or the
+					<a href="https://www.mono-project.com/download/stable/">Mono SDK</a>
+				</li>
+				{% endunless %}
+			</ul>
+		</div>
 
-				<hr>
-				<div class="base-padding">
-					{{ content }}
-				</div>
+		<div class="platform-split">
+			<div class="card base-padding">
+				<h3>All downloads</h3>
 
-				<hr>
-				<div class="base-padding">
-					<h4>Requirements</h4>
-					<ul>
-						<li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
-						{% if platform != 'android' %}
-						<li>
-							<strong>For the Mono version:</strong> <a href="https://dotnet.microsoft.com/download">.NET SDK</a> or the
-							<a href="https://www.mono-project.com/download/stable/">Mono SDK</a>
-						</li>
-						{% endif %}
-					</ul>
-				</div>
+				{% for download in page.downloads %}
 
-				<!-- MOVE THIS TO THE TANK YOU PAGE -->
-				<!-- <div class="footer base-padding" style="line-height: 1.6; font-size: 90%">
-					Learn how to use Godot with the <a
-						href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/">Step by Step tutorial</a>.<br>
-					Give a try to <a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">demo
-						projects</a> showcasing some of the engine features.
-				</div> -->
+				{% capture download_url %}
+					https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+				{% endcapture %}
+
+				<div class="download">
+					<a href="{{ download_url }}">{{ download.caption }}</a>
+					<span class="download-details">{% for tag in download.tags %}{% if forloop.index > 1 %} · {% endif %}{{ tag }}{% endfor %}</span>
+				</div>
+				{% endfor %}
+
+				<div class="download">
+					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_export_templates.tpz">
+						Export templates (Standard)
+					</a>
+					<span class="download-details">Used to export your games to all supported platforms</span>
+				</div>
+				{% unless page.ignore_mono %}
+				<div class="download">
+					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_mono_export_templates.tpz">
+						Export templates (.NET)
+					</a>
+					<span class="download-details">Used to export your games to all supported platforms · C# support</span>
+				</div>
+				{% endunless %}
+
+				{% if page.content_note %}
+				<div class="download-note">
+					{{ page.content_note }}
+				</div>
+				{% endif %}
+			</div>
+
+			<div class="card base-padding">
+				<h3>Instructions</h3>
+
+				{{ page.content_instructions }}
+			</div>
+		</div>
+
+		<div id="digital-stores" class="card base-padding digital-stores">
+			<div>
+				<p>Godot Engine is also available on digital distribution platforms:</p>
+			
+				<div class="digital-store-list">
+					<a class="btn btn-digital-store" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
+						<div class="digital-store-logo">
+							<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
+						</div>
+						<div class="digital-store-name">itch.io</div>
+					</a>
+					<a class="btn btn-digital-store" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
+						<div class="digital-store-logo">
+							<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
+						</div>
+						<div class="digital-store-name">Steam</div>
+					</a>
+				</div>
+			</div>
+			<div>
+				<ul>
+					<li>Digital store versions <strong>do not</strong> include .NET/C# support.</li>
+					<li><strong>Steam</strong> version includes full set of export templates and demo projects.</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 
-	<div class="">
-		<div style="">
-			You can find previous releases on <a href="https://github.com/godotengine/godot/releases">GitHub</a> or the <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
-		</div>
+	<div id="platforms" class="padded">
+		<h2>Supported platforms</h2>
 		
-		<div>Also available on digital distribution platforms:</div>
-		<div class="digital-stores">
-			<a class="digital-stores-download card" href="https://godotengine.itch.io/godot"
-				title="Godot Engine on itch.io">
-				<div class="digital-stores-logo">
-					<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
-				</div>
-				<div class="digital-stores-name">itch.io</div>
+		<div class="tabs platform-tabs">
+			<a href="/download/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
+				<img width="24" height="24" src="/assets/icons/android.svg" title="Android" alt="Android" />
+				<span>Android</span>
 			</a>
-			<a class="digital-stores-download card" href="https://store.steampowered.com/app/404790"
-				title="Godot Engine on Steam">
-				<div class="digital-stores-logo">
-					<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
-				</div>
-				<div class="digital-stores-name">Steam</div>
+			<a href="/download/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
+				<img width="24" height="24" src="/assets/icons/linux.svg" title="Linux" alt="Linux" />
+				<span>Linux</span>
+			</a>
+			<a href="/download/macos" class="tab title-font {% if page.platform == 'MacOS' %} active {% endif %}">
+				<img width="24" height="24" src="/assets/icons/macos.svg" title="MacOS" alt="MacOS" />
+				<span>MacOS</span>
+			</a>
+			<a href="/download/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
+				<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
+				<span>Windows</span>
+			</a>
+			<a href="/download/server" class="tab title-font {% if page.platform == 'Linux Server' %} active {% endif %}">
+				<img width="24" height="24" src="/assets/icons/linux-server.svg" title="Linux Server" alt="Linux Server" />
+				<span>Linux Server</span>
+			</a>
+			<a href="https://editor.godotengine.org/releases/{{site.stable_version}}.stable/" target="_blank" class="tab title-font">
+				<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
+				<span>Web Editor</span>
 			</a>
 		</div>
 	</div>
 
-	<style>
-		.extras {
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: 30px;
-			max-width: 100%;
-		}
-		@media (min-width: 768px) {
-			.extras {
-				grid-template-columns: 1fr 1fr 1fr; 
-			}
-		}
-		.other-download-card {
-			background: var(--card-background-color);
-			border-radius: 6px;
-			padding: 26px 35px;
-		}
-	</style>
-
-	<div class="padded">
+	<div id="extras" class="padded" style="padding-top: 0">
 		<h2>Other Godot downloads</h2>
-		<div class="extras">
+
+		<div class="other-download">
 
 			<div class="other-download-card">
-				<h3>Export templates</h3>
-				<p>Used to export your games to all supported platforms.</p>
+				<h3>Godot demo projects</h3>
 				<p>
-					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_export_templates.tpz">Export templates (standard)</a>
+                    Give a try to demo projects showcasing some of the engine features.
 				</p>
 				<p>
-					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_mono_export_templates.tpz">Export templates (Mono / C#)</a>
+					<a href="https://github.com/godotengine/godot-demo-projects">
+						Demo projects on GitHub
+					</a>
+				</p>
+				<p>
+					<a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">
+						Demo projects in Asset Library
+					</a>
 				</p>
 			</div>
 
@@ -334,11 +407,14 @@ layout: default
 				<h3>AAR library for Android</h3>
 				<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
 				<p>
-					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/godot-lib.{{site.stable_version}}.stable.release.aar">
-					AAR library (standard)</a>
+					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/godot-lib.{{site.stable_version}}.stable.release.aar">
+						AAR library (standard)
+					</a>
 				</p>
 				<p>
-					<a class="" href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/godot-lib.{{site.stable_version}}.stable.mono.release.aar">AAR library (Mono / C#)</a>
+					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/godot-lib.{{site.stable_version}}.stable.mono.release.aar">
+						AAR library (.NET / C#)
+					</a>
 				</p>
 			</div>
 
@@ -346,16 +422,15 @@ layout: default
 				<h3>Blender ESCN exporter</h3>
 				<p>
 					Blender add-on to export scenes to Godot's scene format directly.<br>
-					Godot also supports glTF 2.0 and OBJ.
+					Godot 3 also supports glTF 2.0 and OBJ.
 				</p>
-				<a href="https://github.com/godotengine/godot-blender-exporter" class="">Blender exporter</a>
+				<a href="https://github.com/godotengine/godot-blender-exporter">Godot Blender exporter</a>
 			</div>
 
 		</div>
-
 	</div>
 
-	<div class="text-center base-padding">
+	<div id="open-source" class="text-center base-padding">
 		<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="">
 		<p>
 			Godot's development is <strong>open</strong>. This means that you can
