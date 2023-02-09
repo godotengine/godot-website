@@ -1,6 +1,7 @@
 # Build artifacts and cache
 .bundle/
 .jekyll-cache
+.jekyll-metadata
 _site
 vendor/
 

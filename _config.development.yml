@@ -1,2 +1,7 @@
 # Overrides from the main config
 url: "http://localhost:4000"
+
+# Enables incremental builds to speed up iteration times.
+incremental: true
+# Switch to polling instead of I/O watching, solves Docker issues.
+force_polling: true
