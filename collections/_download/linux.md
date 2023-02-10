@@ -1,5 +1,6 @@
 ---
-title: Download - Godot Engine
+title: Download for Linux - Godot Engine
+description: Download the latest stable version of the Godot Engine for Linux
 platform: Linux
 
 downloads:

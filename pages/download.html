@@ -1,19 +1,23 @@
 ---
 permalink: /download/index.html
+title: "Download - Godot Engine"
+description: "Download the latest stable version of the Godot Engine for Linux, macOS, Windows, or Android"
+layout: default
 ---
-<html>
 
-<body>
-	Redirecting...
-	<script type="text/javascript">
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			window.location = "/download/macos";
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			window.location = "/download/linux";
-		} else { // default to windows
-			window.location = "/download/windows";
-		}
-	</script>
-</body>
+<div style="padding: 16px 32px">
+	<h3>Redirecting...</h3>
+	<p>
+		If you are not being redirected automatically, <a href="/download/windows" class="set-os-download-url">click here</a>.
+	</p>
+</div>
 
-</html>
+<script type="text/javascript">
+	if (navigator.platform.indexOf('Mac') !== -1) {
+		window.location = "/download/macos";
+	} else if (navigator.platform.indexOf('Linux') !== -1) {
+		window.location = "/download/linux";
+	} else { // default to windows
+		window.location = "/download/windows";
+	}
+</script>

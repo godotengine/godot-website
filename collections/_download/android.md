@@ -1,5 +1,6 @@
 ---
-title: Download - Godot Engine
+title: Download for Android - Godot Engine
+description: Download the latest stable version of the Godot Engine for Android
 platform: Android
 
 downloads:
