@@ -1,26 +1,43 @@
 ---
-title: Linux server downloads - Godot Engine
-platform: server
+title: Download - Godot Engine
+platform: Linux Server
 
 downloads:
-  - caption: Headless (64-bit, x86_64)
-    url: linux_headless.64.zip
-  - caption: Server (64-bit, x86_64)
-    url: linux_server.64.zip
+  - caption: Standard (x86_64)
+    slug: linux_server.64.zip
+    featured: true
+    tags:
+      - 64 bit
 
-downloads_mono:
-  - caption: Headless (64-bit, x86_64)
-    url: mono_linux_headless_64.zip
-  - caption: Server (64-bit, x86_64)
-    url: mono_linux_server_64.zip
+  - caption: Headless (x86_64)
+    slug: linux_headless.64.zip
+    tags:
+      - 64 bit
+      - headless
 
+  - caption: .NET Standard (x86_64)
+    slug: mono_linux_server_64.zip
+    mono: true
+    featured: true
+    featured_flavor: .NET
+    tags:
+      - 64 bit
+      - C# support
+
+  - caption: .NET Headless (x86_64)
+    slug: mono_linux_headless_64.zip
+    mono: true
+    tags:
+      - 64 bit
+      - headless
+      - C# support
+
+content_instructions: |
+  <ul>
+    <li>Extract and run. Godot is self-contained and does not require installation.</li>
+    <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
+
+    <li>The <strong>headless</strong> build includes the editor tool functionality that enables it to run tests and export projects in an automated manner.</li>
+    <li>The <strong>standard</strong> build is optimized to run dedicated game servers and does not include editor tools, graphics or audio support.</li>
+  </ul>
 ---
-
-#### Instructions
-
-
-- Extract and run. Godot is self-contained and does not require installation.
-- If you run into an issue, check the [Troubleshooting](https://docs.godotengine.org/en/stable/about/troubleshooting.html) page for common issues and their solutions.
-
-- The _headless_ build includes the editor tool functionality that enables it to run tests and export projects in an automated manner.
-- The _server_ build is optimized to run dedicated game servers and does not include editor tools, graphics or audio support.

@@ -1,20 +1,38 @@
 ---
-title: Linux downloads - Godot Engine
-platform: linux
+title: Download - Godot Engine
+platform: Linux
 
 downloads:
-  - caption: 64-bit (x86_64)
-    url: x11.64.zip
-  - caption: 32-bit (x86)
-    url: x11.32.zip
+  - caption: Standard (x86_64)
+    slug: x11.64.zip
+    featured: true
+    tags:
+      - 64 bit
 
-downloads_mono:
-  - caption: 64-bit (x86_64)
-    url: mono_x11_64.zip
-  - caption: 32-bit (x86)
-    url: mono_x11_32.zip
+  - caption: Standard (x86)
+    slug: x11.32.zip
+    tags:
+      - 32 bit
+  
+  - caption: .NET (x86_64)
+    slug: mono_x11_64.zip
+    mono: true
+    featured: true
+    featured_flavor: .NET
+    tags:
+      - 64 bit
+      - C# support
+  
+  - caption: .NET (x86)
+    slug: mono_x11_32.zip
+    mono: true
+    tags:
+      - 32 bit
+      - C# support
+
+content_instructions: |
+  <ul>
+    <li>Extract and run. Godot is self-contained and does not require installation.</li>
+    <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
+  </ul>
 ---
-
-#### Instructions
-- Extract and run. Godot is self-contained and does not require installation.
-- If you run into an issue, check the [Troubleshooting](https://docs.godotengine.org/en/stable/about/troubleshooting.html) page for common issues and their solutions.
