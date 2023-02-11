@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --transparent-cover: rgb(51, 63, 103, 0.4);
   --transparent-cover-darker: rgba(51, 63, 103, 0.9);
 
