@@ -1,5 +1,6 @@
 ---
-title: Download - Godot Engine
+title: Download for Windows - Godot Engine
+description: Download the latest stable version of the Godot Engine for Windows
 platform: Windows
 
 downloads:

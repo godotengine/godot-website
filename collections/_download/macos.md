@@ -1,6 +1,7 @@
 ---
-title: Download - Godot Engine
-platform: MacOS
+title: Download for macOS - Godot Engine
+description: Download the latest stable version of the Godot Engine for macOS
+platform: macOS
 
 downloads:
   - caption: Universal (x86_64 + Apple Silicon)
