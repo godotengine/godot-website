@@ -20,7 +20,7 @@ The process of creating version 3.0 of the engine was very similar to the proces
 * No support for exporting games created with C#
 * Countless bugs
 * Poor performance (especially on low-end/less common hardware)
-*
+
 That is to say, Godot 3.0 was not representative of what we aspired for Godot 3. After 3.0, each new release came with important features, optimizations, and, most importantly, many bug fixes.
 
 Each release brought new users with new hardware and new projects. Naturally, this exposed bugs that we did not catch during betas or release candidates. As an open source project without a dedicated quality assurance team, we rely on user feedback in order to catch bugs. As a result, we cannot fix everything prior to release.
