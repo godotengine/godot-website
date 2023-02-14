@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0 RC 2</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-2/</link>
+		<description>Tightening a few bolts here and there, Godot 4.0 RC 2 brings us one step closer to the stable release. We're now counting in days!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-2/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Tue, 14 Feb 2023 18:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-2.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0 RC 1</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-1/</link>
 		<description>The wait is almost over! With Godot 4.0 coming close to stable, we finalize our efforts to fix the remaining critical issues and add the last coat of polish with the first Release Candidate.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Emi</dc:creator>
 		<pubDate>Mon, 21 Nov 2022 15:57:35 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/637/7ba/bc4/6377babc4a7b4211213425.png</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 5</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-5/</link>
-		<description>Another beta release on the way to Godot 4.0, with a lot of interesting changes! Undo/redo history dock, many GDScript bugs fixed with inner classes, SVG support in OpenType fonts, a lot of rendering fixes and new OpenGL3 features, and a first very early usable version of the Web editor!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-5/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Wed, 16 Nov 2022 16:38:34 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/637/517/5b5/6375175b5be6f234103652.jpg</image>
 	</item>
 	
 
