@@ -2,46 +2,29 @@
 title: Donate - Godot Engine
 permalink: /donate/index.html
 layout: default
-paypal_link: https://www.paypal.com/donate/?hosted_button_id=H3V5K8J3QYZBU
+paypal_link: 
+  generic: "https://www.paypal.com/donate/?hosted_button_id=H3V5K8J3QYZBU"
+  tier_1: "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2WJ9357147676934KMPVWXII"
+  tier_2: "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-8Y972472JP621620EMPVW3PY"
+  tier_3: "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-8WT04749N77339043MPVW4LY"
+  tier_4: "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6FJ39677GN942052SMPVW43A"
+  tier_5: "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-81N616577M781570HMPVYFKI"
+  tier_6: "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-93985038K9055505BMPVYFQQ"
 ---
 
 {% include header.html %}
 
-<link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <style>
-	.hero {
-		padding: 124px 0 60px;
-		background: url('/assets/images/donate/hero.png');
-		background-size: cover;
+	.col-2 {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
 	}
-
-	.hero h1 {
-		font-size: 60px;
-		text-shadow: 0 0 28px #00000080;
-		margin-bottom: 20px;
-		color: white;
-	}
-
-	.hero .button-container {
-		display: flex;
-		gap: 20px;
-		justify-content: center;
-		padding-top: 40px;
-	}
-
-	.hero p {
-		font-size: 20px;
-		line-height: 1.5;
-		max-width: 550px;
-		text-shadow: 0 0 28px #00000080;
-		color: white;
-	}
-
-	.hero .wrapper {
-		flex-direction: column;
-		text-align: center;
-		max-width: 580px;
-		margin: 0 auto;
+	@media (min-width: 768px) {
+		.col-2 {
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+		}
 	}
 
 	.donate-button {
@@ -116,67 +99,267 @@ paypal_link: https://www.paypal.com/donate/?hosted_button_id=H3V5K8J3QYZBU
 			columns: 2;
 		}
 	}
+
+	.tiers {
+		background: #2f2f2f;
+		margin-top: 50px;
+		border-radius: 11px;
+		box-shadow: 0 11px 10px -10px #00000042;
+	}
+	@media (prefers-color-scheme: light) {
+		.tiers {
+			background: rgba(160, 160, 160, 0.15);
+		}
+		.tier img {
+			filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+		}
+		.tier img.softer {
+			filter: drop-shadow(1px 1px 2px rgba(170, 170, 170, 0.7));
+		}
+	}
+
+	.tiers .copy {
+		padding: 43px 50px 0;
+		text-align: center;
+	}
+
+	.tiers .copy h2 {
+		margin-bottom: 0;
+	}
+
+	.tiers .copy p {
+		opacity: 0.6;
+	}
+
+	.tiers-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 43px 30px 60px;
+		max-width: 300px;
+		margin: 0 auto;
+		gap: 50px;
+	}
+
+	@media (min-width: 768px) {
+		.tiers-grid {
+			grid-template-columns: 1fr 1fr;
+			padding: 43px 50px 60px;
+			max-width: 660px;
+		}
+	}
+
+	@media (min-width: 1048px) {
+		.tiers-grid {
+			grid-template-columns: 1fr 1fr 1fr;
+			max-width: 916px;
+		}
+	}
+
+	.tier {
+		display: grid;
+		grid-template-columns: 50px 1fr;
+		gap: 20px;
+		text-decoration: none;
+	}
+
+	.tier .info {
+		width: 200px;
+	}
+
+	.tier .info span.popular {
+		display: inline-block;
+		background: #37ae66;
+		color: white;
+		padding: 5px 10px;
+		border-radius: 5px;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 10px;
+		position: absolute;
+		left: 211px;
+		top: -13px;
+	}
+
+	.tier .info span.donate-button {
+		width: 100%;
+		text-align: center;
+		box-sizing: border-box;
+	}
+
+	.tier .info p {
+		padding: 0;
+		line-height: 1;
+		margin: 0;
+		text-align: center;
+		color: var(--base-color-text);
+	}
+
+	.tier img {
+		width: 50px;
+	}
+
+	p.for-more {
+		text-align: center;
+		opacity: 0.8;
+	}
+
+	.about-support {
+		padding: 30px;
+	}
+	@media (min-width: 768px) {
+		.about-support {
+			padding: 70px;
+		}
+		ul.goals li {
+			max-width: 95%;
+		}
+	}
+
+	.foundation {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.foundation .image {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	.foundation .image img{
+		max-width: 100%;
+	}
+	.foundation p {
+		max-width: 772px;
+		margin-bottom: 40px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (prefers-color-scheme: dark) {
+		.if-light {
+			display: none;
+		}
+
+		.if-dark {
+			display: block;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		.if-light {
+			display: block;
+		}
+
+		.if-dark {
+			display: none;
+		}
+	}
 </style>
 
 
-<div class="hero">
-	<div class="wrapper">
-		<h1>Fund the Future of Godot</h1>
-		<p>
-			Support the progress of the Open Source engine
-		</p>
-		<div>
-			<a class="donate-button" style="margin-top: 30px;" target="_blank" href="{{ page.paypal_link }}">Donate Now</a>
+<div class="container">
+	
+	<div class="tiers">
+		<div class="copy">
+			<h2>Make a recurrent donation</h2>
+			<p>Your support helps us continue the development of the Godot Engine.</p>
+		</div>
+		<div class="tiers-grid">
+			<a target="_blank" href="{{ page.paypal_link.tier_1 }}" class="tier">
+				<img src="/assets/images/donate/bronze.png" alt="">
+				<div class="info">
+					<span class="donate-button">Bronze</span>
+					<p>€5 / month</p>
+				</div>
+			</a>
+
+			<a target="_blank" href="{{ page.paypal_link.tier_2 }}" class="tier">
+				<img src="/assets/images/donate/silver.png" alt="">
+				<div class="info">
+					<span class="donate-button">Silver</span>
+					<p>€10 / month</p>
+				</div>
+			</a>
+
+			<a target="_blank" href="{{ page.paypal_link.tier_3 }}" class="tier">
+				<img src="/assets/images/donate/gold.png" alt="">
+				<div class="info">
+					<span class="popular">Popular</span>
+					<span class="donate-button">Gold</span>
+					<p>€25 / month</p>
+				</div>
+			</a>
+
+			<a target="_blank" href="{{ page.paypal_link.tier_4 }}" class="tier">
+				<img class="softer" src="/assets/images/donate/platinum.png" alt="">
+				<div class="info">
+					<span class="donate-button">Platinum</span>
+					<p>€50 / month</p>
+				</div>
+			</a>
+
+			<a target="_blank" href="{{ page.paypal_link.tier_5 }}" class="tier">
+				<img class="softer" src="/assets/images/donate/titanium.png" alt="">
+				<div class="info">
+					<span class="donate-button">Titanium</span>
+					<p>€100 / month</p>
+				</div>
+			</a>
+
+			<a target="_blank" href="{{ page.paypal_link.tier_6 }}" class="tier">
+				<img src="/assets/images/donate/diamond.png" alt="">
+				<div class="info">
+					<span class="donate-button">Diamond</span>
+					<p>€250 / month</p>
+				</div>
+			</a>
+		</div>
+
+		<p class="for-more">For corporate sponsorships please write to <a href="mailto:contact@godot.foundation">contact@godot.foundation</a>.</p>
+
+		<div class="about-support">
+			<h4>Thanks to your support we are able to:</h4>
+			<ul class="goals">
+				<li>Hire developers to work part-time or full-time on Godot&nbsp;Engine.</li>
+				<li>Create high quality demo artwork under a permissive license.</li>
+				<li>Purchase hardware required to develop Godot.</li>
+				<li>Pay for hosting of some web services.</li>
+				<li>Cover travel costs to notable industry events (e.g. GDC, Gamescom).</li>
+				<li>Produce merchandise for events (T-shirts, banners, stickers, etc.).</li>
+			</ul>
 		</div>
 	</div>
+	
 </div>
 
-<div class="container">
+<div class="container padded">
 
-	<div class="padded">
-		<h3>The Godot Foundation</h3>
-		<p style="max-width: 772px; margin-bottom: 40px;">Your donations will be received by the Godot Foundation, a non-profit organization that manages the funds for the Godot project. Our Patreon is still handled by Software Freedom Conservancy on behalf of the Godot project. Whichever method you choose, the funds will be used to support Godot development. If in doubt, we recommend a recurring donation <a target="_blank" href="{{ page.paypal_link }}">via PayPal</a>. For more information see the foundation page at <a href="https://godot.foundation" target="_blank">https://godot.foundation</a></p>
-		<h4>Thanks to your support we are able to:</h4>
-		<ul class="goals">
-			<li>Hire developers to work part-time or full-time on Godot&nbsp;Engine.</li>
-			<li>Create high quality demo artwork under a permissive license.</li>
-			<li>Purchase hardware required to develop Godot.</li>
-			<li>Pay for hosting of some web services.</li>
-			<li>Cover travel costs to notable industry events (e.g. GDC, Gamescom).</li>
-			<li>Produce merchandise for events (T-shirts, banners, stickers, etc.).</li>
-		</ul>
-	</div>
-
-	<div class="paypal-transfer card-transfer" id="paypal">
-		<h2>Paypal <span title="Preferred way">⭐️</span></h2>
-
-		<div class="details">
-			<div>
-				<p>
-					The Godot Foundation accepts donations via PayPal. Funds may be directed to <strong>paypal@godot.foundation</strong>. Please consider making a recurring donation.
-				</p>
-			</div>
-			<div>
-				<a class="donate-button" target="_blank" href="{{ page.paypal_link }}">Donate via PayPal</a>
-			</div>
+	<div class="foundation">
+		<div class="image">
+			<a href="https://godot.foundation" target="_blank">
+				<img class="if-dark" src="https://godot.foundation/assets/godot-foundation-logo.svg" alt="The Godot Foundation">
+				<img class="if-light" src="https://godot.foundation/assets/godot-foundation-logo-light.svg" alt="The Godot Foundation">
+			</a>
 		</div>
+		<p>Your donations will be received by the <a href="https://godot.foundation" target="_blank">Godot Foundation</a>, a non-profit organization that manages the funds for the Godot project. Our Patreon is still handled by Software Freedom Conservancy on behalf of the Godot project. Whichever method you choose, the funds will be used to support Godot development.
 	</div>
 
-	<div class="patreon-transfer card-transfer" id="patreon">
-		<h2>Patreon</h2>
+	<div class="col-2">
+		<div class="patreon-transfer card-transfer" id="patreon">
+			<h2>Patreon</h2>
+			<p>
+				The Patreon donations are processed by the <a href="https://sfconservancy.org/"
+				target="_blank">Software Freedom Conservancy</a>. We are transitioning to the Godot Foundation, you can learn more about it in <a href="https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/"
+				target="_blank">our blog post</a> or the <a href="https://sfconservancy.org/news/2022/nov/01/godot-graduates/" target="_blank">SFC's announcement</a>.
+			</p>
+			<a class="donate-button patreon-button"
+			href="https://www.patreon.com/godotengine">Join our Patreon</a>
+		</div>
 
-		<div class="details">
-			<div>
-				<p>
-					The Patreon donations are processed by the <a href="https://sfconservancy.org/"
-					target="_blank">Software Freedom Conservancy</a>. We are currently transitioning to the Godot Foundation, you can learn more about it in <a href="https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/"
-					target="_blank">our blog post</a> or the <a href="https://sfconservancy.org/news/2022/nov/01/godot-graduates/" target="_blank">SFC's announcement</a>.
-				</p>
-			</div>
-			<div>
-				<a class="donate-button patreon-button"
-				href="https://www.patreon.com/godotengine">Join our Patreon</a>
-			</div>
+		<div class="paypal-transfer card-transfer" id="paypal">
+			<h2>Paypal</h2>
+			<p>
+				The Godot Foundation accepts donations via PayPal. Funds may be directed to <strong>paypal@godot.foundation</strong>. Please consider making a recurring donation.
+			</p>
+			<a class="donate-button" target="_blank" href="{{ page.paypal_link.generic }}">Donate via PayPal</a>
 		</div>
 	</div>
 
