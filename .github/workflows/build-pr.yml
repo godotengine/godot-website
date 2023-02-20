@@ -1,0 +1,30 @@
+name: 🌌 Test Build
+
+on: [pull_request]
+
+# Make sure jobs cannot overlap (e.g. one from push and one from schedule).
+concurrency:
+  group: pr-${{github.actor}}-${{github.head_ref || github.run_number}}-${{github.ref}}-ci
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build sources from the PR branch
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # Configure the build environment.
+
+    - name: Install Ruby 3.1
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        # Runs 'bundle install' and caches installed gems automatically
+        bundler-cache: true
+
+    # Build the website.
+
+    - name: Build the static website
+      run: bundle exec jekyll build
