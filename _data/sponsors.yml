@@ -20,5 +20,5 @@ gold:
     image: "/assets/home/sponsors/robot-gentleman.png"
 silver:
   - name: "Striked"
-    url: "https://developers.join-striked.com/home"
+    url: "https://striked.gg/"
     image: "/assets/home/sponsors/striked.png"
