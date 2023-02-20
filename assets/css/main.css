@@ -31,6 +31,9 @@
   --footer-link-underline-color: rgba(200, 210, 250, 0.3);
   --tab-active-color: var(--primary-color);
 
+  --big-button-color: #478cbf;
+  --patreon-color: #e64850;
+
   --fund-color: #ef6767;
   --fund-color-hl: #e53e3e;
 
@@ -105,6 +108,9 @@
     --footer-link-color: hsla(0, 0%, 100%, 0.85);
     --footer-link-underline-color: hsla(0, 0%, 100%, 0.25);
     --tab-active-color: white;
+
+    --big-button-color: #478cbf;
+    --patreon-color: #e64850;
 
     --fund-color: #ef6767;
     --fund-color-hl: #e53e3e;

@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?101">
+	<link rel="stylesheet" href="/assets/css/main.css?102">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -284,6 +284,115 @@
 		gap: 16px;
 		padding: 12px 24px;
 	}
+
+	.thankyou-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.45);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+	}
+
+	.thankyou {
+		background: var(--base-color);
+		box-shadow: var(--more-shadow);
+		padding: 40px 60px 26px 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+	}
+
+	.thankyou-reading {
+		font-size: 16px;
+	}
+
+	.thankyou-reading-list {
+		font-size: 16px;
+		margin: 0;
+		margin-left: 48px;
+		padding-left: 0;
+	}
+
+	.thankyou-donate {
+		margin-bottom: 24px;
+		text-align: center;
+	}
+
+	.btn.btn-donate {
+		background-color: var(--primary-color);
+		color: hsla(0, 0%, 100%, 0.9);
+		font-size: 22px;
+		font-weight: 600;
+		margin-bottom: 26px;
+	}
+
+	.btn-back-to-downloads {
+		cursor: pointer;
+		position: absolute;
+		top: 12px;
+		right: 12px;
+	}
+
+	@media (prefers-color-scheme: light) {
+		.btn-back-to-downloads img {
+			filter: invert(1);
+			opacity: 0.75;
+		}
+	}
+
+	.thankyou h2 {
+		text-shadow: var(--base-shadow);
+		font-size: 36px;
+		font-weight: 600;
+		margin-bottom: 12px;
+	}
+	.thankyou h3 {
+		font-size: 24px;
+		margin-bottom: 0;
+	}
+
+	.thankyou p {
+		max-width: 620px;
+	}
+
+	.thankyou hr {
+		margin: 28px 0 8px 0;
+	}
+
+	@media (max-width: 768px) {
+		.thankyou-wrapper {
+			display: block;
+		}
+
+		.thankyou {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: scroll;
+			padding: 30px 40px 18px 40px;
+		}
+
+		.thankyou-reading-list {
+			margin-left: 24px;
+		}
+
+		.btn-back-to-downloads {
+			width: 48px;
+			height: 48px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 </style>
 
 <div class="hero">
@@ -372,7 +481,7 @@
 				<div class="download">
 					<a href="
 					https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_osx.universal.zip
-				">Universal (x86_64 + Apple Silicon)</a>
+				" class="download-link">Universal (x86_64 + Apple Silicon)</a>
 					<span class="download-details">Intel/Apple Silicon · 64 bit</span>
 				</div>
 				
@@ -382,7 +491,7 @@
 				<div class="download">
 					<a href="
 					https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_osx.universal.zip
-				">.NET Universal (x86_64 + Apple Silicon)</a>
+				" class="download-link">.NET Universal (x86_64 + Apple Silicon)</a>
 					<span class="download-details">Intel/Apple Silicon · 64 bit · C# support</span>
 				</div>
 				
@@ -556,6 +665,77 @@
 			To obtain the source code, please visit the
 			<a href="https://github.com/godotengine/godot">GitHub project page</a>.
 		</p>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const thankYouWrapper = document.getElementById('thank-you');
+		// Close itself, when clicked outside of the popup area.
+		thankYouWrapper.addEventListener('click', (e) => {
+			if (e.target === thankYouWrapper) {
+				thankYouWrapper.style.display = 'none';
+			}
+		});
+
+		// Close with a close button.
+		const thankYouBackButton = document.querySelector('.btn-back-to-downloads');
+		thankYouBackButton.addEventListener('click', () => {
+			thankYouWrapper.style.display = 'none';
+		});
+		
+		// Open from the main download buttons.
+		const downloadButtons = document.querySelectorAll('.btn-download');
+		downloadButtons.forEach((it) => {
+			it.addEventListener('click', () => {
+				thankYouWrapper.style.display = '';
+			});
+		});
+
+		// Open from the all downloads list.
+		const downloadLinks = document.querySelectorAll('.download-link');
+		downloadLinks.forEach((it) => {
+			it.addEventListener('click', () => {
+				thankYouWrapper.style.display = '';
+			});
+		});
+	});
+</script>
+
+<div class="thankyou-wrapper" id="thank-you" style="display:none">
+	<div class="thankyou">
+		<h2>Godot is downloading!</h2>
+
+		<p class="thankyou-donate">
+			Godot exists thanks to people like you! Consider supporting continued development of the engine with a donation.
+		</p>
+		<a href="/donate" class="btn btn-donate">
+			Make a Donation
+		</a>
+
+		<h3>Thank you!</h3>
+
+		<hr style="width:65%">
+
+		<p class="thankyou-reading">
+			If this is your first time using the Godot Engine, take a look at our beginner resources:
+		</p>
+		<ul class="thankyou-reading-list">
+			<li>
+				A comprehensive
+				<a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/">Step by Step tutorial</a>
+				for 2D and 3D.
+			</li>
+			<li>
+				A collection of
+				<a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">official demo projects</a>
+				showcasing some of the engine features.
+			</li>
+		</ul>
+
+		<div class="btn-back-to-downloads">
+			<img src="/assets/cross.svg" width="24" height="24" alt="">
+		</div>
 	</div>
 </div>
 
