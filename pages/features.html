@@ -12,19 +12,38 @@ layout: default
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background-color: var(--dark-color);
 	}
 
 	.features-why h2 {
+		color: var(--dark-color-text-title);
 		font-size: 40px;
-		margin: 36px 54px;
+		margin: 36px 54px 8px 54px;
 	}
 
 	.feature-container {
 		display: grid;
 		justify-content: center;
-		align-items: center;
 		gap: 16px;
+		grid-template-columns: 1fr;
+		margin: auto;
 		margin-bottom: 32px;
+		width: 1200px;
+		max-width: 1200px;
+	}
+	@media (max-width: 1250px) {
+		.feature-container {
+			width: auto;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+	@media (max-width: 900px) {
+		.feature-container {
+			width: auto;
+			overflow: auto;
+			flex-direction: column;
+		}
 	}
 
 	.feature-container h3 {
@@ -38,6 +57,14 @@ layout: default
 	.feature-container.feature-container-2x h3 {
 		grid-column: span 2;
 	}
+	@media (max-width: 1020px) {
+		.feature-container.feature-container-2x {
+			grid-template-columns: 1fr;
+		}
+		.feature-container.feature-container-2x h3 {
+			grid-column: span 1;
+		}
+	}
 	
 	.feature-container.feature-container-3x {
 		grid-template-columns: 1fr 1fr 1fr;
@@ -45,16 +72,56 @@ layout: default
 	.feature-container.feature-container-3x h3 {
 		grid-column: span 3;
 	}
+	@media (max-width: 1020px) {
+		.feature-container.feature-container-3x {
+			grid-template-columns: 1fr 1fr;
+		}
+		.feature-container.feature-container-3x h3 {
+			grid-column: span 2;
+		}
+	}
+	@media (max-width: 800px) {
+		.feature-container.feature-container-3x {
+			grid-template-columns: 1fr;
+		}
+		.feature-container.feature-container-3x h3 {
+			grid-column: span 1;
+		}
+	}
 
 	.feature-card {
 		background-color: var(--card-background-color);
 		border-radius: 12px;
 	}
 
+	.feature-card p {
+		margin-top: 24px;
+		margin-bottom: 12px;
+	}
+
+	.feature-card strong {
+		color: var(--navbar-link-current-color);
+	}
+
+	.features-showreel {
+		background-color: var(--dark-color);
+		color: var(--dark-color-text-hl);
+		padding: 24px 32px 28px 32px;
+	}
+
+	.features-showreel p {
+		margin-top: 0;
+		margin-bottom: 8px;
+	}
+
 	.features-complete-list {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.features-complete-list .btn.btn-flat.btn-flat-white {
+		color: var(--base-color-text-title);
 	}
 
 	.features-download {
@@ -64,9 +131,16 @@ layout: default
 		align-items: center;
 		gap: 16px;
 		background-color: var(--dark-color);
+		padding: 16px;
+	}
+	@media (max-width: 900px) {
+		.features-download {
+			padding: 16px;
+		}
 	}
 
 	.features-download p {
+		color: var(--dark-color-text-title);
 		margin: 0;
 	}
 
@@ -76,8 +150,14 @@ layout: default
 		align-items: center;
 		gap: 32px;
 	}
+	@media (max-width: 800px) {
+		.features-download-ready {
+			flex-direction: column;
+		}
+	}
 
 	.features-download-ready h2 {
+		color: var(--dark-color-text-title);
 		font-weight: 600;
 		margin: 0;
 	}
@@ -87,6 +167,9 @@ layout: default
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		background-color: var(--dark-color);
+		color: var(--dark-color-text-hl);
+		margin-bottom: 24px;
 	}
 
 	@media (max-width: 900px) {
@@ -98,7 +181,7 @@ layout: default
 	.showcase-carousel {
 		position: relative;
 		width: 100%;
-		max-width: 720px;
+		max-width: 780px;
 		aspect-ratio: 16/9;
 	}
 
@@ -135,7 +218,7 @@ layout: default
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--base-color);
+		background-color: var(--dark-color);
 		width: 100%;
 		height: 100%;
 	}
@@ -271,7 +354,7 @@ layout: default
 		<h2>Main features</h2>
 	</div>
 
-	<div class="container feature-container feature-container-2x" id="design">
+	<div class="feature-container feature-container-2x" id="design">
 		<h3>Intuitive scene-driven design</h3>
 
 		<div class="card base-padding feature-card">
@@ -293,45 +376,116 @@ layout: default
 		</div>
 	</div>
 
-	<div class="container feature-container feature-container-3x" id="script">
-		<h3>Scripting</h3>
+	<div class="feature-container feature-container-3x" id="script">
+		<h3>Coding tools that fit your needs</h3>
 
 		<div class="card base-padding feature-card">
-			<strong>GDScript is easy</strong>
+			<strong>Write code without hurdles with a high-level scripting language</strong>
 			<p>
 				...
 			</p>
 		</div>
 
 		<div class="card base-padding feature-card">
-			<strong>C# is first-class</strong>
+			<strong>Leverage your C# experience to feel right at home</strong>
 			<p>
 				...
 			</p>
 		</div>
 
 		<div class="card base-padding feature-card">
-			<strong>GDExtension and modules</strong>
+			<strong>Go with another language or modify the engine itself</strong>
 			<p>
 				...
 			</p>
 		</div>
 	</div>
 
-	<div class="container feature-container" id="features_2d">
-		<h3>3D features</h3>
+	<div class="feature-container feature-container-2x" id="features_3d">
+		<h3>Simple yet powerful 3D engine</h3>
+
+		<div class="card base-padding feature-card">
+			<strong>Support both high and low-end devices</strong>
+			<p>
+				...
+			</p>
+		</div>
+
+		<div class="card base-padding feature-card">
+			<strong>Seamlessly integrate with your asset pipeline</strong>
+			<p>
+				...
+			</p>
+		</div>
 	</div>
 
-	<div class="container feature-container" id="features_3d">
-		<h3>2D and GUI features</h3>
+	<div class="feature-container feature-container-3x" id="features_2d">
+		<h3>Specialized 2D workflow for games and apps</h3>
+
+		<div class="card base-padding feature-card">
+			<strong>Work with real 2D and pixel-based unit system</strong>
+			<p>
+				...
+			</p>
+		</div>
+
+		<div class="card base-padding feature-card">
+			<strong>Save time creating worlds with a tile map editor</strong>
+			<p>
+				...
+			</p>
+		</div>
+
+		<div class="card base-padding feature-card">
+			<strong>Master usability with a flexible GUI system</strong>
+			<p>
+				...
+			</p>
+		</div>
 	</div>
 
-	<div class="container feature-container" id="deploy">
-		<h3>Portability</h3>
+	<div class="feature-container features-showreel">
+		<p>
+			Watch our annual showreel videos to see more examples of projects using Godot!
+		</p>
+
+		{% include showreel-shelf.html %}
 	</div>
 
-	<div class="container feature-container" id="open_source">
-		<h3>Openness</h3>
+	<div class="feature-container feature-container-2x" id="deploy">
+		<h3>Cross-platform support with one project</h3>
+
+		<div class="card base-padding feature-card">
+			<strong>Deliver your game to desktop and mobile</strong>
+			<p>
+				...
+			</p>
+		</div>
+
+		<div class="card base-padding feature-card">
+			<strong>Partner with a publisher to target consoles</strong>
+			<p>
+				...
+			</p>
+		</div>
+	</div>
+
+	<div class="feature-container feature-container-2x" id="open_source">
+		<h3>Completely open and free</h3>
+
+		<div class="card base-padding feature-card">
+			<strong>Download and create with no contracts or hidden fees</strong>
+			<p>
+				...
+			</p>
+		</div>
+
+		<div class="card base-padding feature-card">
+			<strong>Find the logic behind any system in open source codebase</strong>
+			<p>
+				...
+			</p>
+		</div>
 	</div>
 
 	<div class="features-complete-list">
@@ -342,7 +496,7 @@ layout: default
 
 </div>
 
-<div id="call-to-action" class="container card base-padding features-download">
+<div id="call-to-action" class="container card features-download">
 	<div class="features-download-ready">
 		<h2>Ready to start?</h2>
 		<div>
