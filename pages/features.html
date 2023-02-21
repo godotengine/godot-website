@@ -7,12 +7,16 @@ layout: default
 
 {% include header.html %}
 
+<link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <style>
 	.features-why {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--dark-color);
+		background: radial-gradient(ellipse closest-side at 50% 45%, #6469ac, #364b7c, #12122b);
+		padding-top: 60px;
+		margin-bottom: 24px;
 	}
 
 	.features-why h2 {
@@ -24,10 +28,11 @@ layout: default
 	.feature-container {
 		display: grid;
 		justify-content: center;
-		gap: 16px;
+		column-gap: 28px;
+		row-gap: 24px;
 		grid-template-columns: 1fr;
 		margin: auto;
-		margin-bottom: 32px;
+		margin-bottom: 42px;
 		width: 1200px;
 		max-width: 1200px;
 	}
@@ -92,15 +97,23 @@ layout: default
 	.feature-card {
 		background-color: var(--card-background-color);
 		border-radius: 12px;
+		padding: 20px;
 	}
 
 	.feature-card p {
+		font-size: 95%;
 		margin-top: 24px;
 		margin-bottom: 12px;
 	}
 
 	.feature-card strong {
 		color: var(--navbar-link-current-color);
+	}
+
+	.feature-card code {
+		background-color: #0f172e36;
+		border-radius: 3px;
+		padding: 1px 4px;
 	}
 
 	.features-showreel {
@@ -118,6 +131,7 @@ layout: default
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 12px;
 	}
 
 	.features-complete-list .btn.btn-flat.btn-flat-white {
@@ -131,11 +145,13 @@ layout: default
 		align-items: center;
 		gap: 16px;
 		background-color: var(--dark-color);
-		padding: 16px;
+		padding: 24px;
+		width: auto;
+		max-width: 100%;
 	}
 	@media (max-width: 900px) {
 		.features-download {
-			padding: 16px;
+			padding: 20px;
 		}
 	}
 
@@ -169,7 +185,6 @@ layout: default
 		justify-content: center;
 		background-color: var(--dark-color);
 		color: var(--dark-color-text-hl);
-		margin-bottom: 24px;
 	}
 
 	@media (max-width: 900px) {
@@ -197,6 +212,7 @@ layout: default
 		background-size: cover;
 		background-repeat: no-repeat;
 		cursor: pointer;
+		filter: drop-shadow(var(--more-shadow));
 		z-index: 5;
 	}
 	.showcase-flip-left {
@@ -260,9 +276,6 @@ layout: default
 	<h2>
 		Why Godot is right for you
 	</h2>
-</div>
-
-<div class="features-wrapper">
 
 	<div class="features-showcase" id="showcase">
 		<p>
@@ -349,6 +362,9 @@ layout: default
 			See more projects made with Godot
 		</a>
 	</div>
+</div>
+
+<div class="features-wrapper">
 
 	<div class="container" id="features">
 		<h2>Main features</h2>
@@ -357,7 +373,7 @@ layout: default
 	<div class="feature-container feature-container-2x" id="design">
 		<h3>Intuitive scene-driven design</h3>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Build your game from simple blocks</strong>
 			<p>
 				Use building blocks called nodes to create complex and reusable scenes.
@@ -367,7 +383,7 @@ layout: default
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Extend beyond features provided by the engine</strong>
 			<p>
 				Make your scenes into full-featured components, with tools for your
@@ -380,7 +396,7 @@ layout: default
 	<div class="feature-container feature-container-3x" id="script">
 		<h3>Coding tools that fit your needs</h3>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Write code without hurdles with a high-level scripting language</strong>
 			<p>
 				Get things done quickly with Godot's built-in scripting language GDScript.
@@ -390,26 +406,26 @@ layout: default
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Leverage your C# experience to feel right at home</strong>
 			<p>
 				If you're an experienced C# user, Godot offers to you first-class
 				support for the .NET platform. Power your game with familiar libraries
 				and give them performance boost, while still benefiting from close
 				engine integration.
-				<br>
+				<br><br>
 				(.NET support is provided as a dedicated engine executable.)
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Go with another language or modify the engine itself</strong>
 			<p>
 				Godot is built to be extended, and that means you can choose
 				a programming language not provided by the Godot team itself.
 				Thanks to our community there are many language bindings for
 				popular tools like Rust, Nim, Python, and JavaScript.
-				<br>
+				<br><br>
 				You can also code in C++, and make custom engine modules to gain
 				every last drop of performance.
 			</p>
@@ -419,7 +435,7 @@ layout: default
 	<div class="feature-container feature-container-2x" id="features_3d">
 		<h3>Simple yet powerful 3D engine</h3>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Support both high and low-end devices</strong>
 			<p>
 				Make beautiful 3D games for a range of devices, starting
@@ -429,7 +445,7 @@ layout: default
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Seamlessly integrate with your asset pipeline</strong>
 			<p>
 				Bring your Blender models into your game world with a robust
@@ -444,7 +460,7 @@ layout: default
 	<div class="feature-container feature-container-3x" id="features_2d">
 		<h3>Specialized 2D workflow for games and apps</h3>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Work with real 2D and pixel-based unit system</strong>
 			<p>
 				Thanks to a dedicated 2D pipeline you can forget about Z axis,
@@ -453,7 +469,7 @@ layout: default
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Save time creating worlds with a tile map editor</strong>
 			<p>
 				Whether you want procedural generation or a meticulously hand-crafted
@@ -463,13 +479,13 @@ layout: default
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Master usability with a flexible GUI system</strong>
 			<p>
 				Build scalable and adaptive user interfaces with Godot's unique
 				GUI system. Created specifically to power layouts common to games
 				it is also capable of handling complex UI applications and tools.
-				<br>
+				<br><br>
 				(For an example of what Godot's UI system is capable of see the Godot editor itself!)
 			</p>
 		</div>
@@ -486,7 +502,7 @@ layout: default
 	<div class="feature-container feature-container-2x" id="deploy">
 		<h3>Cross-platform support with one project</h3>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Deliver your game to desktop and mobile</strong>
 			<p>
 				Develop and publish your project on any modern desktop platform.
@@ -496,7 +512,7 @@ layout: default
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Partner with a publisher to target consoles</strong>
 			<p>
 				If you want to release to a console, you can find several
@@ -510,7 +526,7 @@ layout: default
 	<div class="feature-container feature-container-2x" id="open_source">
 		<h3>Completely open and free</h3>
 
-		<div class="card base-padding feature-card">
+		<div class="card feature-card">
 			<strong>Download and create with no contracts or hidden fees</strong>
 			<p>
 				Godot is free under the MIT license. This means you don't owe
@@ -520,8 +536,8 @@ layout: default
 			</p>
 		</div>
 
-		<div class="card base-padding feature-card">
-			<strong>Find the logic behind any system in open source codebase</strong>
+		<div class="card feature-card">
+			<strong>Find the logic behind any system in an open source codebase</strong>
 			<p>
 				No need to wait for a support team to respond, when you can read
 				the source code. Godot is an open book, and you can figure out everything
