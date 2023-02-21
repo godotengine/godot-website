@@ -1,6 +1,6 @@
 ---
 title: "Release candidate: Godot 4.0 RC 3"
-excerpt: ""
+excerpt: "We're almost ready to release Godot 4.0! Barring any last minute critical regression, this RC should reflect what the 4.0-stable release will be."
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/release-candidate-godot-4-0-rc-3.jpg
