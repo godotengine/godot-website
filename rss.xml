@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0 RC 3</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-3/</link>
+		<description></description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-3/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Tue, 21 Feb 2023 17:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-3.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0 RC 2</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-2/</link>
 		<description>Tightening a few bolts here and there, Godot 4.0 RC 2 brings us one step closer to the stable release. We're now counting in days!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Wed, 23 Nov 2022 17:45:59 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/637/e52/f4e/637e52f4ea8c3720079853.jpg</image>
-	</item>
-	
-	<item>
-		<title>See you in San Francisco!</title>
-		<link>https://godotengine.org/article/godot-at-gdc-2023/</link>
-		<description>We are excited to announce that the Godot Engine will attend the 2023 Game Developers Conference (March 20-24).</description>
-		
-		<category>Events</category>
-		
-		<guid>https://godotengine.org/article/godot-at-gdc-2023/</guid>
-		<dc:creator>Emi</dc:creator>
-		<pubDate>Mon, 21 Nov 2022 15:57:35 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/637/7ba/bc4/6377babc4a7b4211213425.png</image>
 	</item>
 	
 
