@@ -19,6 +19,13 @@ layout: default
 		margin-bottom: 24px;
 	}
 
+	@media (max-width: 900px) {
+		.features-why {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+
 	.features-why h2 {
 		color: var(--dark-color-text-title);
 		font-size: 40px;
@@ -183,21 +190,30 @@ layout: default
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--dark-color);
 		color: var(--dark-color-text-hl);
-	}
-
-	@media (max-width: 900px) {
-		.features-showcase {
-			padding: 0 16px;
-		}
+		width: 100%;
 	}
 
 	.showcase-carousel {
 		position: relative;
 		width: 100%;
-		max-width: 780px;
+		max-width: 720px;
 		aspect-ratio: 16/9;
+		margin: 90px 0 40px 0;
+	}
+	@media (max-width: 540px) {
+		.showcase-carousel {
+			margin-top: 60px;
+		}
+	}
+
+	.showcase-frame {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		aspect-ratio: 16/9;
+		transform: scale(165%);
+		filter: brightness(0.85) saturate(0.75);
 	}
 
 	.showcase-flip-left,
@@ -243,7 +259,6 @@ layout: default
 	}
 
 	.showcase-item img {
-		border-radius: 8px;
 		width: 100%;
 	}
 
@@ -298,23 +313,29 @@ layout: default
 				const showcaseItems = document.querySelectorAll('.showcase-item');
 				let currentIndex = Math.floor(Math.random() * showcaseItems.length);
 
-				const setItemByIndex = (itemIndex) => {
+				const setItemByIndex = (itemIndex, firstTime = false) => {
 					const prevIndex = wrapIndex(currentIndex - 1);
 					const nextIndex = wrapIndex(currentIndex + 1);
 
 					showcaseItems.forEach((item, index) => {
 						if (index === itemIndex) {
-							item.classList.add('showcase-item-transition');
+							if (!firstTime) {
+								item.classList.add('showcase-item-transition');
+							}
 							item.style.zIndex = '2';
 							item.style.transform = 'translateX(0)';
 						}
 						else if (index === prevIndex) {
-							item.classList.add('showcase-item-transition');
+							if (!firstTime) {
+								item.classList.add('showcase-item-transition');
+							}
 							item.style.zIndex = '3';
 							item.style.transform = 'translateX(-100%)';
 						}
 						else if (index === nextIndex) {
-							item.classList.add('showcase-item-transition');
+							if (!firstTime) {
+								item.classList.add('showcase-item-transition');
+							}
 							item.style.zIndex = '3';
 							item.style.transform = 'translateX(100%)';
 						}
@@ -325,7 +346,7 @@ layout: default
 						}
 					});
 				}
-				setItemByIndex(currentIndex);
+				setItemByIndex(currentIndex, true);
 
 				const prevItemButton = document.querySelector('.showcase-flip-left');
 				prevItemButton.addEventListener('click', () => {
@@ -339,7 +360,10 @@ layout: default
 				});
 			});
 		</script>
+
 		<div class="showcase-carousel">
+			<img src="/assets/features/editor-frame.png" class="showcase-frame" />
+
 			<div class="showcase-items">
 				{% for project in site.showcase %}
 				{% if project.featured_in_home %}
@@ -358,6 +382,7 @@ layout: default
 			<div class="showcase-flip-left"></div>
 			<div class="showcase-flip-right"></div>
 		</div>
+
 		<a href="/showcase" class="btn btn-flat btn-flat-white">
 			See more projects made with Godot
 		</a>
