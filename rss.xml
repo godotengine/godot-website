@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Multiplayer in Godot 4.0: Scene Replication</title>
+		<link>https://godotengine.org/article/multiplayer-in-godot-4-0-scene-replication/</link>
+		<description>Create multiplayer games in an instance (pun intended) with the new MultiplayerSpawner and MultiplayerSynchronizer nodes. Check out the key concepts, and get started with a quick tutorial on how to make a simple game using Godot multiplayer features!</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/multiplayer-in-godot-4-0-scene-replication/</guid>
+		<dc:creator>Fabio Alessandrelli</dc:creator>
+		<pubDate>Thu, 23 Feb 2023 11:30:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/multiplayer-in-godot-4-0-scene-replication.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0 RC 3</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-3/</link>
 		<description>We're almost ready to release Godot 4.0! Barring any last minute critical regression, this RC should reflect what the 4.0-stable release will be.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Clay John</dc:creator>
 		<pubDate>Tue, 29 Nov 2022 17:02:10 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/638/55e/dad/63855edad2371754303509.png</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 6</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-6/</link>
-		<description>After biweekly Godot 4.0 beta snapshots, we've decided to accelerate the cadence to release a new snapshot every week, to get even faster feedback on our bugfixes and potential regressions. Beta 6 fixes infamous issues around cyclic dependencies in GDScript, as well as other nice goodies!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-6/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Wed, 23 Nov 2022 17:45:59 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/637/e52/f4e/637e52f4ea8c3720079853.jpg</image>
 	</item>
 	
 
