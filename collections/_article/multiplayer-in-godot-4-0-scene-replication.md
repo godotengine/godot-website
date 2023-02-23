@@ -5,7 +5,7 @@ Check out the key concepts, and get started with a quick tutorial on how to make
 categories: ["progress-report"]
 author: Fabio Alessandrelli
 image: /storage/blog/covers/multiplayer-in-godot-4-0-scene-replication.jpg
-date: 2023-02-18 18:00:00
+date: 2023-02-23 11:30:00
 ---
 
 Howdy Godotters! It's been more than a year since I last wrote on this blog, "... blah blah, blah blah, blah" (cf. [C. L. C. Chuckie](https://en.wikipedia.org/wiki/LeChuck)), and with Godot 4.0 nearing release, it's time to write something to jumpstart you into creating your own multiplayer experience with Godot.
