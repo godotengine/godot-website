@@ -400,7 +400,7 @@ func _process(delta):
 
 <p>We handle jumping with a reliable RPC (we don’t want to miss the player jumping action!), while we use the synchronizer itself to constantly sync the direction the user wants to go.</p>
 
-<p>When can then move the player character on the main authority by reading the synchronized input state:</p>
+<p>We can then move the player character on the main authority by reading the synchronized input state:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># player.gd
 extends CharacterBody3D
