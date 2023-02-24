@@ -339,7 +339,11 @@ layout: default
 			{% for download in featured_downloads %}
 
 			{% capture download_url %}
-				https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+				{% if download.custom %}
+					{{download.custom}}
+				{% else %}
+					https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+				{% endif %}
 			{% endcapture %}
 
 			<div class="main-download">
@@ -393,7 +397,11 @@ layout: default
 				{% for download in page.downloads %}
 
 				{% capture download_url %}
-					https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+					{% if download.custom %}
+						{{download.custom}}
+					{% else %}
+						https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+					{% endif %}
 				{% endcapture %}
 
 				<div class="download">
@@ -402,19 +410,21 @@ layout: default
 				</div>
 				{% endfor %}
 
-				<div class="download">
-					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_export_templates.tpz">
-						Export templates (Standard)
-					</a>
-					<span class="download-details">Used to export your games to all supported platforms</span>
-				</div>
-				{% unless page.ignore_mono %}
-				<div class="download">
-					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_mono_export_templates.tpz">
-						Export templates (.NET)
-					</a>
-					<span class="download-details">Used to export your games to all supported platforms · C# support</span>
-				</div>
+				{% unless page.ignore_export %}
+					<div class="download">
+						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_export_templates.tpz">
+							Export templates (Standard)
+						</a>
+						<span class="download-details">Used to export your games to all supported platforms</span>
+					</div>
+					{% unless page.ignore_mono %}
+					<div class="download">
+						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_mono_export_templates.tpz">
+							Export templates (.NET)
+						</a>
+						<span class="download-details">Used to export your games to all supported platforms · C# support</span>
+					</div>
+					{% endunless %}
 				{% endunless %}
 
 				{% if page.content_note %}
