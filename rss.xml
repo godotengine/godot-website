@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0 RC 5</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-5/</link>
+		<description>Three RCs in a row! Yesterday's build introduced a GDScript regression, so here's a new release candidate to fix that.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-5/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Fri, 24 Feb 2023 18:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-5.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0 RC 4</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-4/</link>
 		<description>As the stable release is imminent, release candidates become more frequent to validate the last minutes fixes we had to make.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 09 Dec 2022 16:04:53 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/639/34f/741/63934f741900a568331508.jpg</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 7</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-7/</link>
-		<description>Another weekly beta snapshot on the road to Godot 4.0! Includes Android GLES3 support, Z index and Y sort are now available in Controls, and both C# and GDScript got a ton of fixes.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-7/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Thu, 01 Dec 2022 16:47:59 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/638/8d9/a60/6388d9a60ac95864295672.jpg</image>
 	</item>
 	
 
