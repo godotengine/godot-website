@@ -199,7 +199,7 @@ func _process(delta):
 
 We handle jumping with a reliable RPC (we don't want to miss the player jumping action!), while we use the synchronizer itself to constantly sync the direction the user wants to go.
 
-When can then move the player character on the main authority by reading the synchronized input state:
+We can then move the player character on the main authority by reading the synchronized input state:
 
 ```
 # player.gd
