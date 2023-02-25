@@ -226,7 +226,11 @@
   <li>Export: Default to exporting S3TC + BPTC for PC platforms (<a href="https://github.com/godotengine/godot/pull/73829">GH-73829</a>).</li>
   <li>Export: Fix editor resource preview deadlocking with –headless mode (<a href="https://github.com/godotengine/godot/pull/73838">GH-73838</a>).</li>
   <li>GDScript: Fix range regression (<a href="https://github.com/godotengine/godot/pull/73841">GH-73841</a>).</li>
-  <li>GDScript: Fix groups and categories been seen as members (<a href="https://github.com/godotengine/godot/pull/73870">GH-73870</a>).</li>
+  <li>GDScript: Fix groups and categories been seen as members (<a href="https://github.com/godotengine/godot/pull/73870">GH-73870</a>).
+    <ul>
+      <li><em>Edit:</em> This introduced a regression for some <code class="language-plaintext highlighter-rouge">@tool</code> scripts, which will be fixed in the next build (<a href="https://github.com/godotengine/godot/issues/73905">GH-73905</a>).</li>
+    </ul>
+  </li>
   <li>Rendering: Fixing issues with SSIL artifacts (<a href="https://github.com/godotengine/godot/pull/73859">GH-73859</a>).</li>
 </ul>
 
@@ -248,6 +252,10 @@
 <h2 id="known-issues">Known issues</h2>
 
 <p>With every release we accept that there are going to be various issues, which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a list of <a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+">known bugs in the 4.0 milestone</a>.</p>
+
+<ul>
+  <li>One of the changes in this RC was found to introduce a regression for <code class="language-plaintext highlighter-rouge">@tool</code> scripts, which can lead to corrupt .tres files for custom resources (<a href="https://github.com/godotengine/godot/issues/73905">GH-73905</a>). This will be fixed for the next RC.</li>
+</ul>
 
 <h2 id="bug-reports">Bug reports</h2>
 
