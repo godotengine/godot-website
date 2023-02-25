@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>What's new in C# for Godot 4.0</title>
+		<link>https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/</link>
+		<description>All about changes and improvements that Godot 4.0 offers to C# developers.</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/</guid>
+		<dc:creator>Raul Santos</dc:creator>
+		<pubDate>Sat, 25 Feb 2023 17:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/whats-new-in-csharp-for-godot-4-0.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0 RC 5</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-5/</link>
 		<description>Three RCs in a row! Yesterday's build introduced a GDScript regression, so here's a new release candidate to fix that.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Thu, 15 Dec 2022 13:16:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/639/ae1/461/639ae14617279697513369.jpg</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 8</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-8/</link>
-		<description>Another weekly beta snapshot for Godot 4.0! And on a Friday, because that's the best day for releasing software!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-8/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Fri, 09 Dec 2022 16:04:53 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/639/34f/741/63934f741900a568331508.jpg</image>
 	</item>
 	
 
