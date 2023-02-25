@@ -30,6 +30,7 @@ Some of the most notable feature changes in this update are:
 - Export: Fix editor resource preview deadlocking with --headless mode ([GH-73838](https://github.com/godotengine/godot/pull/73838)).
 - GDScript: Fix range regression ([GH-73841](https://github.com/godotengine/godot/pull/73841)).
 - GDScript: Fix groups and categories been seen as members ([GH-73870](https://github.com/godotengine/godot/pull/73870)).
+  * *Edit:* This introduced a regression for some `@tool` scripts, which will be fixed in the next build ([GH-73905](https://github.com/godotengine/godot/issues/73905)).
 - Rendering: Fixing issues with SSIL artifacts ([GH-73859](https://github.com/godotengine/godot/pull/73859)).
 
 This release is built from commit [6296b4600](https://github.com/godotengine/godot/commit/6296b46008fb8d8e5cb9b60af05fa1ea26b8f600).
@@ -45,6 +46,8 @@ The downloads for this dev snapshot can be found directly on our repository:
 ## Known issues
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a list of [known bugs in the 4.0 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+).
+
+- One of the changes in this RC was found to introduce a regression for `@tool` scripts, which can lead to corrupt .tres files for custom resources ([GH-73905](https://github.com/godotengine/godot/issues/73905)). This will be fixed for the next RC.
 
 ## Bug reports
 
