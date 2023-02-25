@@ -518,37 +518,36 @@ footer {
   padding-bottom: 32px;
 }
 
-footer ul {
-  list-style: none;
-  margin: 0px;
-  float: left;
-  overflow-wrap: break-word;
-  margin-left: 32px;
-  padding-left: 0px;
-}
-
 footer a {
   color: var(--footer-link-color);
   text-decoration-color: var(--footer-link-underline-color);
 }
+
 #copyright {
   flex: 2;
 }
 #copyright > p:first-child {
   margin-top: 0;
 }
-#sitemap {
-  flex: 3;
 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+#sitemap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+	gap: 24px;
+	margin-left: 16px;
 }
-#sitemap li {
+#sitemap .sitemap-group {
+  float: left;
+  list-style: none;
+  margin: 0px;
+  overflow-wrap: break-word;
+  padding-left: 0px;
+}
+#sitemap .sitemap-group li {
   line-height: 20px;
   margin-bottom: 10px;
 }
-#sitemap strong {
+#sitemap .sitemap-group strong {
   color: var(--footer-link-color);
 }
 #social {
@@ -1041,6 +1040,28 @@ pre > code {
   }
 }
 
+@media (max-width: 1020px) {
+  footer {
+    text-align: center;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+
+  #social {
+    margin: auto;
+    width: 30%;
+    min-width: 250px;
+    margin-top: 32px;
+  }
+  #social h4 {
+    text-align: center;
+  }
+  #social > div {
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 900px) {
   a.patreonLink,
   a.patreonLink > .patreon {
@@ -1091,32 +1112,6 @@ pre > code {
     display: none;
   }
 
-  footer {
-    text-align: center;
-  }
-  #sitemap {
-    flex-direction: column;
-    align-items: center;
-
-    margin-left: 0;
-  }
-  #sitemap .sitemap-group {
-    margin-top: 32px;
-    margin-left: 0;
-  }
-  #social {
-    margin: auto;
-    width: 30%;
-    min-width: 250px;
-    margin-top: 32px;
-  }
-  #social h4 {
-    text-align: center;
-  }
-  #social > div {
-    justify-content: space-around;
-  }
-
   .tabs {
     overflow: auto;
     scroll-behavior: smooth;
@@ -1130,6 +1125,15 @@ pre > code {
     padding-left: 0;
   }
 }
+
+@media (max-width: 720px) {
+	#sitemap {
+		grid-template-columns: 1fr;
+		gap: 12px;
+		margin-left: 0;
+	}
+}
+
 @media (max-width: 500px) {
   #sfc_graphic {
     width: 100%;
