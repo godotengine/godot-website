@@ -3,47 +3,65 @@ var headings = document.querySelectorAll("h2, h3, h4, h5");
 // Loop through each heading
 for (var i = 0; i < headings.length; i++) {
     var heading = headings[i];
-    var parent = heading.parentElement;
 
-    // Check if the heading and its parent chain do not have an anchor link
-    while (parent) {
-        if (parent.tagName === "A") {
-            break;
-        }
-        parent = parent.parentElement;
-    }
-    if (!parent && heading.tagName !=="A") {
-        // Creating an id for the heading based on its content
-        var headingId = heading.textContent.toLowerCase().replace(/ /g, "-");
-        heading.id = headingId;
+    // Creating a new anchor link
+    var anchor = document.createElement("a");
+    anchor.setAttribute("href", "#" + heading.id);
+    anchor.setAttribute("class", "anchor-link");
+    anchor.setAttribute("title", "Click to copy link to this section");
+    anchor.innerHTML = "🔗";
 
-        // Creating a new anchor link
-        var anchor = document.createElement("a");
-        anchor.setAttribute("href", "#" + headingId);
-        anchor.setAttribute("class", "anchor-link");
-        anchor.setAttribute("title", "This is the anchor link to this heading");
-        anchor.innerHTML = "🔗";
-
-        // Adding the anchor link to the heading
-        heading.insertAdjacentElement("beforeend", anchor);
-    }
+    // Adding the anchor link to the heading
+    heading.insertAdjacentElement("beforeend", anchor);
+        
+    // Add click event listener to anchor link to copy link to clipboard
+    anchor.addEventListener("click", function(event) {
+        event.preventDefault();
+        var anchorLink = window.location.href.split("#")[0] + event.target.getAttribute("href");
+        navigator.clipboard.writeText(anchorLink).then(function() {
+            // Create a new toast element and add it to the DOM
+            var toast = document.createElement("div");
+            toast.setAttribute("class", "toast");
+            toast.innerHTML = "Anchor link copied to clipboard";
+            document.body.appendChild(toast);
+ 
+            // Remove the toast element after 3 seconds
+            setTimeout(function() {
+                toast.remove();
+            }, 2000);
+        }, function() {
+            console.log("Copy failed");
+        });
+    });
 }
 
-// Add styles for the anchor links
 var style = document.createElement("style");
 style.innerHTML = `
     .anchor-link {
-    display: none;
-    font-size: 16px;
-    line-height: .8;
-    vertical-align: top;
+        display: none;
+        font-size: 16px;
+        line-height: .8;
+        vertical-align: top;
+
     }
 
     h2:hover .anchor-link,
     h3:hover .anchor-link,
     h4:hover .anchor-link,
     h5:hover .anchor-link {
-    display: inline;
+        display: inline;
+    }
+
+    .toast {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        padding: 16px;
+        background-color: #444444;
+        color: #FFF;
+        font-size: 12px;
+        border-radius: 24px;
+        transform: translateX(-50%);
     }
 `;
 
