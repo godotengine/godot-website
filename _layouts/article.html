@@ -101,21 +101,6 @@ layout: default
 			max-width: 100%;
 		}
 	}
-
-	.anchor-link {
-		display: none;
-		font-size: 16px;
-		line-height: .8;
-		vertical-align: top;
-	}
-
-	h2:hover .anchor-link,
-	h3:hover .anchor-link,
-	h4:hover .anchor-link,
-	h5:hover .anchor-link {
-		display: inline;
-	}
-
 </style>
 
 <link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
@@ -152,7 +137,8 @@ layout: default
 			</div>
 
 			{% include outdated_article_notice.html %}
-			{% include anchor_to_headings.html html=content%}
+
+			{{ content }}
 		</div>
 	</article>
 </div>
