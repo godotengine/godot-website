@@ -226,7 +226,8 @@ func _ready():
 	if player == multiplayer.get_unique_id():
 		$Camera3D.current = true
 	# Only process on server.
-	set_physics_process(multiplayer.is_server())
+	# EDIT: Let the client simulate player movement too to compesate network input latency.
+	# set_physics_process(multiplayer.is_server())
 
 
 func _physics_process(delta):
@@ -253,7 +254,7 @@ func _physics_process(delta):
 	move_and_slide()
 ```
 
-We will then use the server synchronizer to keep the position in sync and to set the player id on spawn (which will in turn configure the appropriate input authority).
+We will then use the server synchronizer to keep the position and velocity in sync and to set the player id on spawn (which will in turn configure the appropriate input authority).
 
 ![Server synchronizer](/storage/blog/multiplayer-in-godot-4-0-scene-replication/player_server_sync.png)
 
