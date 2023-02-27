@@ -8,16 +8,14 @@ layout: default
 <link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <link rel="stylesheet" href="/assets/css/download.css">
 <style>
-	.hero {
-		background-image: url('/assets/download/download-background-4.x.jpg');
-	}
+
 </style>
 
-{% assign stable_version = site.data.versions.godot_4 | find: "flavor", "stable" %}
+{% assign stable_version = site.data.versions.godot_3 | find: "flavor", "stable" %}
 
 <div class="hero">
 	<div class="hero-wrapper">
-		<h1>Download Godot&nbsp;4 for {{ page.platform }}</h1>
+		<h1>Download Godot&nbsp;3 for {{ page.platform }}</h1>
 
 		<div class="main-downloads">
 			{% assign featured_downloads = page.downloads | where: "featured", "true" %}
@@ -47,7 +45,7 @@ layout: default
 			{% endfor %}
 
 			<p class="previous-releases">
-				<strong class="previous-releases-featured">For the LTS version, <a href="/download/3.x/windows" class="set-os-download-url" data-version="3">Download Godot 3</a>.</strong>
+				<strong class="previous-releases-featured">For the latest version, <a href="/download/windows" class="set-os-download-url" data-version="4">Download Godot 4</a>.</strong>
 				<br>
 				You can find previous releases on <a href="https://github.com/godotengine/godot/releases">GitHub</a> or the <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
 			</p>
@@ -67,15 +65,15 @@ layout: default
 			<h3>Requirements</h3>
 			
 			<ul>
-				<li><strong>Recommended:</strong> Vulkan 1.0 compatible hardware</li>
-				<li><strong>Minimal:</strong> OpenGL 3.3 / OpenGL ES 3.0 compatible hardware</li>
+				<li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
 			</ul>
 
 			{% unless page.ignore_mono %}
 			<p>Additional requirements for the .NET version:</p>
 			<ul>
 				<li>
-					<a href="https://dotnet.microsoft.com/download">.NET SDK</a>
+					<a href="https://dotnet.microsoft.com/download">.NET SDK</a> or the
+					<a href="https://www.mono-project.com/download/stable/">Mono SDK</a>
 				</li>
 			</ul>
 			{% endunless %}
@@ -154,7 +152,7 @@ layout: default
 			<div>
 				<ul>
 					<li>Digital store versions <strong>do not</strong> include .NET/C# support.</li>
-					<li><strong>Steam</strong> version is available as a <code>stable-4.0</code> beta branch.</li>
+					<li><strong>Steam</strong> version includes full set of export templates and demo projects.</li>
 				</ul>
 			</div>
 		</div>
@@ -166,21 +164,25 @@ layout: default
 		<h2>Supported platforms</h2>
 		
 		<div class="tabs platform-tabs">
-			<a href="/download/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
+			<a href="/download/3.x/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
 				<img width="24" height="24" src="/assets/icons/android.svg" title="Android" alt="Android" />
 				<span>Android</span>
 			</a>
-			<a href="/download/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
+			<a href="/download/3.x/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
 				<img width="24" height="24" src="/assets/icons/linux.svg" title="Linux" alt="Linux" />
 				<span>Linux</span>
 			</a>
-			<a href="/download/macos" class="tab title-font {% if page.platform == 'MacOS' %} active {% endif %}">
+			<a href="/download/3.x/macos" class="tab title-font {% if page.platform == 'MacOS' %} active {% endif %}">
 				<img width="24" height="24" src="/assets/icons/macos.svg" title="MacOS" alt="MacOS" />
 				<span>MacOS</span>
 			</a>
-			<a href="/download/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
+			<a href="/download/3.x/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
 				<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
 				<span>Windows</span>
+			</a>
+			<a href="/download/3.x/server" class="tab title-font {% if page.platform == 'Linux Server' %} active {% endif %}">
+				<img width="24" height="24" src="/assets/icons/linux-server.svg" title="Linux Server" alt="Linux Server" />
+				<span>Linux Server</span>
 			</a>
 			<a href="https://editor.godotengine.org/releases/{{stable_version.name}}.stable/" target="_blank" class="tab title-font">
 				<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />

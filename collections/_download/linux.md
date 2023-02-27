@@ -5,18 +5,18 @@ platform: Linux
 
 downloads:
   - caption: Standard (x86_64)
-    slug: x11.64.zip
+    slug: linux.x86_64.zip
     featured: true
     tags:
       - 64 bit
 
   - caption: Standard (x86)
-    slug: x11.32.zip
+    slug: linux.x86_32.zip
     tags:
       - 32 bit
   
   - caption: .NET (x86_64)
-    slug: mono_x11_64.zip
+    slug: mono_linux_x86_64.zip
     mono: true
     featured: true
     featured_flavor: .NET
@@ -25,7 +25,7 @@ downloads:
       - C# support
   
   - caption: .NET (x86)
-    slug: mono_x11_32.zip
+    slug: mono_linux_x86_32.zip
     mono: true
     tags:
       - 32 bit

@@ -20,6 +20,9 @@ collections:
     output: true
   download:
     output: true
+  download_3:
+    output: true
+    permalink: /download/3.x/:name/index.html
 
 defaults:
   - scope:
@@ -38,6 +41,11 @@ defaults:
       type: "download"
     values:
       layout: "download"
+  - scope:
+      path: ""
+      type: "download_3"
+    values:
+      layout: "download-3"
 
 # Plugins
 plugins:

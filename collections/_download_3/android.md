@@ -1,11 +1,11 @@
 ---
 title: Download for Android - Godot Engine
-description: Download the latest stable version of the Godot Engine for Android
+description: Download the latest stable version of the Godot Engine 3 for Android
 platform: Android
 
 downloads:
   - caption: Universal - Play Store (ARM64 + ARMv7 + x86_64 + x86)
-    custom: https://play.google.com/store/apps/details?id=org.godotengine.editor.v4
+    custom: https://play.google.com/store/apps/details?id=org.godotengine.editor.v3
     featured: true
     featured_flavor: Play Store
     tags:
