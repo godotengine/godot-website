@@ -1,0 +1,8 @@
+godot_3:
+  - name: "3.5.1"
+    flavor: "stable"
+    release_date: "28 September 2022"
+godot_4:
+  - name: "4.0"
+    flavor: "stable"
+    release_date: "1 March 2023"

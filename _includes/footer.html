@@ -102,11 +102,18 @@
 	const links = document.querySelectorAll('.set-os-download-url');
 	for (let i = 0; i < links.length; i++) {
 		const link = links[i];
-		link.href = "/download/windows";
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link.href = "/download/macos";
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link.href = "/download/linux";
+		let link_slug = 'download';
+		if ('version' in link.dataset && link.dataset['version'] === '3') {
+			link_slug = 'download-3.x';
 		}
+
+		let link_platform = 'windows';
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link_platform = 'macos';
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link_platform = 'linux';
+		}
+
+		link.href = `/${link_slug}/${link_platform}`;
 	}
 </script>

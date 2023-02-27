@@ -50,10 +50,6 @@ languages: ["en", "es"]
 exclude_from_localizations: ["assets", "storage"]
 default_lang: "en"
 
-# Godot download version
-stable_version: "3.5.1"
-stable_version_date: "28 September 2022"
-
 # Pagination (used by the blog)
 pagination:
   # Site-wide kill switch, disabled here it doesn't run at all

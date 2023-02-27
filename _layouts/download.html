@@ -330,6 +330,9 @@ layout: default
 	}
 </style>
 
+{% assign stable_version_3 = site.data.versions.godot_3 | find: "flavor", "stable" %}
+{% assign stable_version_4 = site.data.versions.godot_4 | find: "flavor", "stable" %}
+
 <div class="hero">
 	<div class="hero-wrapper">
 		<h1>Download Godot for {{ page.platform }}</h1>
@@ -342,7 +345,7 @@ layout: default
 				{% if download.custom %}
 					{{download.custom}}
 				{% else %}
-					https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+					https://downloads.tuxfamily.org/godotengine/{{stable_version_3.name}}/{% if download.mono %}mono/{% endif %}Godot_v{{stable_version_3.name}}-stable_{{ download.slug }}
 				{% endif %}
 			{% endcapture %}
 
@@ -352,10 +355,10 @@ layout: default
 						<img src="/assets/icons/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
 						Godot Engine{% if download.featured_flavor %} - {{ download.featured_flavor }}{% endif %}
 					</div>
-					<div class="download-hint">{{ site.stable_version }}</div>
+					<div class="download-hint">{{ stable_version_3.name }}</div>
 				</a>
 				<p class="main-download-details">
-					{{ page.platform }}<strong>{% for tag in download.tags %} · {{ tag }}{% endfor %}</strong> · {{ site.stable_version_date }}
+					<strong>{% for tag in download.tags %}{{ tag }} · {% endfor %}</strong>{{ stable_version_3.release_date }}
 				</p>
 			</div>
 
@@ -400,7 +403,7 @@ layout: default
 					{% if download.custom %}
 						{{download.custom}}
 					{% else %}
-						https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/{% if download.mono %}mono/{% endif %}Godot_v{{site.stable_version}}-stable_{{ download.slug }}
+						https://downloads.tuxfamily.org/godotengine/{{stable_version_3.name}}/{% if download.mono %}mono/{% endif %}Godot_v{{stable_version_3.name}}-stable_{{ download.slug }}
 					{% endif %}
 				{% endcapture %}
 
@@ -412,14 +415,14 @@ layout: default
 
 				{% unless page.ignore_export %}
 					<div class="download">
-						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/Godot_v{{site.stable_version}}-stable_export_templates.tpz">
+						<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version_3.name}}/Godot_v{{stable_version_3.name}}-stable_export_templates.tpz">
 							Export templates (Standard)
 						</a>
 						<span class="download-details">Used to export your games to all supported platforms</span>
 					</div>
 					{% unless page.ignore_mono %}
 					<div class="download">
-						<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/Godot_v{{site.stable_version}}-stable_mono_export_templates.tpz">
+						<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version_3.name}}/mono/Godot_v{{stable_version_3.name}}-stable_mono_export_templates.tpz">
 							Export templates (.NET)
 						</a>
 						<span class="download-details">Used to export your games to all supported platforms · C# support</span>
@@ -493,7 +496,7 @@ layout: default
 				<img width="24" height="24" src="/assets/icons/linux-server.svg" title="Linux Server" alt="Linux Server" />
 				<span>Linux Server</span>
 			</a>
-			<a href="https://editor.godotengine.org/releases/{{site.stable_version}}.stable/" target="_blank" class="tab title-font">
+			<a href="https://editor.godotengine.org/releases/{{stable_version_3.name}}.stable/" target="_blank" class="tab title-font">
 				<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
 				<span>Web Editor</span>
 			</a>
@@ -526,12 +529,12 @@ layout: default
 				<h3>AAR library for Android</h3>
 				<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
 				<p>
-					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/godot-lib.{{site.stable_version}}.stable.release.aar">
+					<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version_3.name}}/godot-lib.{{stable_version_3.name}}.stable.release.aar">
 						AAR library (standard)
 					</a>
 				</p>
 				<p>
-					<a href="https://downloads.tuxfamily.org/godotengine/{{site.stable_version}}/mono/godot-lib.{{site.stable_version}}.stable.mono.release.aar">
+					<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version_3.name}}/mono/godot-lib.{{stable_version_3.name}}.stable.mono.release.aar">
 						AAR library (.NET / C#)
 					</a>
 				</p>
