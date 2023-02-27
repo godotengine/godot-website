@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0 RC 6</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-6/</link>
+		<description>One more time! We've now fixed all critical regressions we are aware of, so things are looking great for the stable release!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-6/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Mon, 27 Feb 2023 10:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-6.jpg</image>
+	</item>
+	
+	<item>
 		<title>What's new in C# for Godot 4.0</title>
 		<link>https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/</link>
 		<description>All about changes and improvements that Godot 4.0 offers to C# developers.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Mon, 19 Dec 2022 14:26:01 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/63a/070/ed6/63a070ed63208559579129.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 3.5.2 RC 1</title>
-		<link>https://godotengine.org/article/release-candidate-godot-3-5-2-rc-1/</link>
-		<description>While all contributors are busy finalizing Godot 4.0 for a stable release in the near future, we're still updating the current stable 3.5 branch with relevant bugfixes. This is the first Release Candidate for an upcoming 3.5.2 maintenance release.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-3-5-2-rc-1/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Thu, 15 Dec 2022 13:16:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/639/ae1/461/639ae14617279697513369.jpg</image>
 	</item>
 	
 
