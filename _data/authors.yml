@@ -15,7 +15,7 @@
 - name: Ernest Lee
   image: /assets/images/authors/default_avatar.svg
 - name: Fabio Alessandrelli
-  image: /assets/images/authors/default_avatar.svg
+  image: /assets/images/authors/faless.jpg
 - name: Fredia Huya-Kouadio
   image: /assets/images/authors/default_avatar.svg
 - name: George Marques
@@ -50,6 +50,8 @@
   image: /assets/images/authors/default_avatar.svg
 - name: Pedro J. Estébanez
   image: /assets/images/authors/pedro.png
+- name: Raul Santos
+  image: /assets/images/authors/raulsantos.jpg
 - name: Rémi Verschelde
   image: /assets/images/authors/akien.jpg
 - name: Silc Renew
