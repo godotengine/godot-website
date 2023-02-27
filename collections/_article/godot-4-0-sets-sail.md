@@ -2,7 +2,7 @@
 title: "Godot 4.0 sets sail: All aboard for new horizons"
 excerpt: "Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we're thrilled to say: Welcome to the start of Godot 4!" 
 categories: ["release"]
-author: Rémi Verschelde
+author: "2000+ Godot contributors"
 image: /storage/blog/covers/godot-4-0-sets-sail.webp
 date: 2023-02-26 18:00:00
 ---
