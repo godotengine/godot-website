@@ -4,7 +4,7 @@ excerpt: "It's official. Today marks the beginning of a new era for Godot. After
 categories: ["release"]
 author: "2000+ Godot contributors"
 image: /storage/blog/covers/godot-4-0-sets-sail.webp
-date: 2023-03-01 17:00:00
+date: 2023-03-01 12:00:00
 ---
 
 It's official. Today marks the beginning of a new era for Godot.
