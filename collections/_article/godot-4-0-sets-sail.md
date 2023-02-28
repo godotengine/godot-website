@@ -62,7 +62,6 @@ This said, the amount of new features is nothing short of mind-boggling so here'
 	 - [Multithreading & Performance Optimization](#multithreading-performance-optimization)
 	 - [Better Physics API](#better-physics-api)
 	 - [Higher Simulation Stability](#higher-simulation-stability)
-	 - [Remarks](#remarks)
  - [UI & Text](#ui-text)
 	 - [Multiple Window Support](#multiple-window-support)
 	 - [UI Editor Improvements](#ui-editor-improvements)
@@ -83,7 +82,6 @@ This said, the amount of new features is nothing short of mind-boggling so here'
  - [Navigation](#navigation)
 	 - [Server-Based Navigation System](#server-based-navigation-system)
 	 - [Extended Complex Navigation Support](#extended-complex-navigation-support)
-	 - [Important Remarks:](#important-remarks)
  - [XR](#xr)
 	 - [Wider Headset & Platform Support](#wider-headset-platform-support)
 	 - [Godot XR Tools](#godot-xr-tools)
@@ -146,7 +144,8 @@ Lastly, we were never quite satisfied with how shadows looked in Godot 3. Godot 
 <a id="new-rendering-optimization-techniques"></a>
 ### New Rendering Optimization Techniques
 
-Godot 4 puts at your disposal several new rendering optimization techniques, made possible by Joan Fons ([JFonS](https://github.com/JFonS)) and Juan.  
+Godot 4 puts at your disposal several new rendering optimization techniques, made possible by Joan Fons ([JFonS](https://github.com/JFonS)) and Juan.
+
 The new automatic [occlusion culling](https://github.com/godotengine/godot/pull/48050) can detect models hidden by other geometry and dynamically remove them to increase both CPU and GPU rendering performance.
 
 ![Outdoor scene with purple wireframes representing occluder shapes](/storage/blog/godot-4-0-sets-sail/02-3d-occlusion-culling.webp)
