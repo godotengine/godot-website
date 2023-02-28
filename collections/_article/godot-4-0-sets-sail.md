@@ -9,7 +9,7 @@ date: 2023-02-26 18:00:00
 
 It's official. Today marks the beginning of a new era for Godot.
 
-After 3+ years of breaking and rebuilding from the ground up, a complete core overhaul and a full engine rewrite, through 17 alphas, 17 betas and 5 release candidates, we're thrilled to say:
+After 3+ years of breaking and rebuilding from the ground up, a complete core overhaul and a full engine rewrite, through 17 alphas, 17 betas and 6 release candidates, we're thrilled to say:
 
 Welcome to the start of Godot 4! Time to reach new heights together.
 
