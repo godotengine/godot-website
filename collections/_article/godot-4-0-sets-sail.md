@@ -1,10 +1,10 @@
 ---
 title: "Godot 4.0 sets sail: All aboard for new horizons"
-excerpt: "Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we're thrilled to say: Welcome to the start of Godot 4!" 
+excerpt: "It's official. Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we're thrilled to say: Welcome to the start of Godot 4!" 
 categories: ["release"]
 author: "2000+ Godot contributors"
 image: /storage/blog/covers/godot-4-0-sets-sail.webp
-date: 2023-02-26 18:00:00
+date: 2023-03-01 17:00:00
 ---
 
 It's official. Today marks the beginning of a new era for Godot.
@@ -147,7 +147,7 @@ Lastly, we were never quite satisfied with how shadows looked in Godot 3. Godot 
 ### New Rendering Optimization Techniques
 
 Godot 4 puts at your disposal several new rendering optimization techniques, made possible by Joan Fons ([JFonS](https://github.com/JFonS)) and Juan.  
-In addition to manual [occlusion culling](https://github.com/godotengine/godot/pull/48050) which we backported to Godot 3.5, the new automatic occlusion culling can scan your scene and detect models hidden by other geometry.
+The new automatic [occlusion culling](https://github.com/godotengine/godot/pull/48050) can detect models hidden by other geometry and dynamically remove them to increase both CPU and GPU rendering performance.
 
 ![Outdoor scene with purple wireframes representing occluder shapes](/storage/blog/godot-4-0-sets-sail/02-3d-occlusion-culling.webp)
 
@@ -288,7 +288,7 @@ Despite growing in features, the GDScript runtime is much faster and more stable
 
 The much-anticipated port to .NET 6 now allows users to target a newer framework that brings optimizations and new APIs. With .NET 6, projects use C# 10 by default and all features are available.
 
-Of course, the 4.0 release is also a great opportunity to break compatibility and improve the API. If you’re a C# user we highly recommend checking out this [blog post by Raul Santos, to find out all that’s new in C# for Godot 4.0](https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/).
+Of course, the 4.0 release is also a great opportunity to break compatibility and improve the API. If you’re a C# user we highly recommend checking out this [blog post by Raul Santos](https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/), to find out all that’s new in C# for Godot 4.0.
 
 One of the most notable changes is the use of 64-bit types as scalar values. This means many APIs that used int or float now use long and double with the most noticeable being the _Process method. A Variant type is also now implemented in every API that takes variants where  System.Object was used in the past. This brings some improvements such as avoiding boxing the values.
 
@@ -362,8 +362,7 @@ A new release is not just new features. A significant effort went into fixing pr
   <source src="/storage/blog/godot-4-0-sets-sail/06-physics-kicking-ball.mp4" type="video/mp4">
 </video>
 
-<a id="remarks"></a>
-### Remarks
+**Important remarks:**
 
 Going forward on the development roadmap for Godot 4, Godot Physics is an area that will continue to receive ongoing effort. Further performance optimization is in store, and you may still encounter a few kinks we're aware of that will be ironed out in future releases.
 
@@ -398,7 +397,7 @@ Besides supporting ligatures, font families and other OpenType features, font re
 <a id="new-theme-theme-editor"></a>
 ### New Theme & Theme Editor
 
-Speaking of themes, the new theme editor gives you more control and simplifies your UI design workflow. You can now access your local fonts directly in the editor.  Finally, the default project theme has been modernized to provide a cleaner look and get rid of embedded images, which should slightly reduce the size of exported projects. We have our core contributor Hugo Locurcio ([Calinou](https://github.com/Calinou)) to thank for this. If you've been using Godot 3.5, you will have noted that some of these improvements have already been backported to Godot 3.
+Speaking of themes, the new theme editor gives you better tools for creating complex looks and simplifies your UI design workflow. You can now access fonts installed to your local system directly in the editor. Finally, the default project theme has been modernized to provide a cleaner look and get rid of embedded images, which should slightly reduce the size of exported projects. We have our core contributors Hugo Locurcio ([Calinou](https://github.com/Calinou)) and [Yuri Sizov](https://github.com/YuriSizov) to thank for this. If you've been using Godot 3.5, you will have noted that some of these improvements have already been backported to Godot 3.
 
 ![](/storage/blog/godot-4-0-sets-sail/08-ui-theme-editor.png)
 
@@ -523,8 +522,7 @@ In Godot 4.0, [Navigation links](https://github.com/godotengine/godot/pull/63479
 
 As we have continuously reiterated throughout this article, 4.0 is only the start of the Godot 4 journey. Exciting work is ongoing to further [improve avoidance algorithms to support complex scenarios](https://github.com/godotengine/godot/pull/69988). Upcoming releases will bring additional workflow refinements and more performance optimization.
 
-<a id="important-remarks"></a>
-### Important Remarks:
+**Important remarks:**
 
 -   The current API is still marked as experimental. It's reasonable to continue to expect breaking changes.
 
@@ -661,7 +659,7 @@ We haven't forgotten web-based games. Among many other improvements to the web p
 
 One limitation of our philosophy of inclusiveness is that it works best when everyone practices it. That is not the case with console manufacturers, who typically do not open-source their SDKs.
 
-You can of course create games in Godot 3 for XBox One, PS4, Nintendo Switch, and more with the help of third parties. Several teams are already working on console support for Godot 4, hoping to make it more accessible to everyone.
+You can of course create games in Godot 3 for Xbox, PlayStation, Nintendo Switch, and more with the help of third parties. Several teams are already working on console support for Godot 4, hoping to make it more accessible to everyone.
 
 This said, if your project is destined for consoles, regardless of the engine you use, you will ultimately have to register with console manufacturers and do the difficult work of adapting your game to follow their many guidelines and pass their strict QA.
 
