@@ -7,11 +7,9 @@ image: /storage/blog/covers/godot-4-0-sets-sail.webp
 date: 2023-03-01 12:00:00
 ---
 
-It's official. Today marks the beginning of a new era for Godot.
-
 After 3+ years of breaking and rebuilding from the ground up, a complete core overhaul and a full engine rewrite, through 17 alphas, 17 betas and 6 release candidates, we're thrilled to say:
 
-Welcome to the start of Godot 4! Time to reach new heights together.
+**Welcome to the start of Godot 4! Time to reach new heights together.**
 
 We're extremely excited but most of all, we're humbled by the experience. There's no other way to put it: This project is the stuff of case studies as one of the most incredible examples of open collaboration and co-development. So here's to each and every member of our brilliant community of contributors and testers. We're proud to work with you. Godot 4.0 is the culmination of years of your time and effort. Together, we've built a strong new base, one that opens up new horizons and gives Godot the wings it needed to ride the winds of change, to grow with new tech and continue to meet evolving user needs.
 
