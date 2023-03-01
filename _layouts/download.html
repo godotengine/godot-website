@@ -27,7 +27,7 @@ layout: default
 				{% if download.custom %}
 					{{download.custom}}
 				{% else %}
-					https://downloads.tuxfamily.org/godotengine/{{stable_version.name}}/{% if download.mono %}mono/{% endif %}Godot_v{{stable_version.name}}-stable_{{ download.slug }}
+					https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_{{ download.slug }}
 				{% endif %}
 			{% endcapture %}
 
