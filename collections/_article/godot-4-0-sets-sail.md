@@ -11,17 +11,13 @@ After 3+ years of breaking and rebuilding from the ground up, a complete core ov
 
 **Welcome to the start of Godot 4! Time to reach new heights together.**
 
-We're extremely excited but most of all, we're humbled by the experience. There's no other way to put it: This project is the stuff of case studies as one of the most incredible examples of open collaboration and co-development. So here's to each and every member of our brilliant community of contributors and testers. We're proud to work with you. Godot 4.0 is the culmination of years of your time and effort. Together, we've built a strong new base, one that opens up new horizons and gives Godot the wings it needed to ride the winds of change, to grow with new tech and continue to meet evolving user needs.
+We're extremely excited but most of all, we're humbled by the experience. We believe that this project is one of the most incredible examples of open collaboration and co-development. So here's to each and every member of our brilliant community of contributors and testers!
 
-From this point onward, we build on a fresh foundation and focus our upcoming efforts on polishing and performance improvements.
+We're proud to work with you. Godot 4.0 is the culmination of years of your time and effort. Together, we've built a strong new base. One that opens up new horizons and gives Godot the wings to ride the winds of change, to grow with new tech and continue to meet evolving user needs. From this point onward, we build on this foundation and focus our upcoming efforts on usability and performance improvements.
 
-**As it was with Godot 3.0, Godot 4.0 is only the beginning of Godot 4**. We still expect users to encounter workflow-breaking bugs (especially on less common hardware). Some workflows will still feel somewhat unpolished, and performance won't be optimized yet in this first stable release. But rest assured, we plan to publish releases frequently and regularly (as we have with the Alphas and Betas). So you can expect versions 4.0.1, 4.0.2, etc. to follow very soon.
+**As it was with Godot 3.0, Godot 4.0 is only the beginning of Godot 4**. We still expect users to encounter workflow-breaking bugs (especially on less common hardware). Some workflows will still feel somewhat unpolished, and performance won't be optimized yet in this first stable release. But rest assured, we plan to publish releases frequently and regularly (as we have with the Alphas and Betas). So you can expect versions 4.0.1, 4.0.2, etc. to follow very soon, with new features and bigger improvements [coming later this year in Godot 4.1](https://godotengine.org/article/release-management-4-0-and-beyond).
 
-We're also working on a publicly available [benchmark suite](https://github.com/godotengine/godot-benchmarks) in which we will be tracking progressive performance changes throughout development. Bit by bit, with your help, we'll close in on our shared vision for Godot 4.
-
-As a contributor, going forward in the short term, you will find we still won't be looking at rolling in any breaking changes or integrating new features. Those will have to [wait for Godot 4.1 later this year](https://godotengine.org/article/release-management-4-0-and-beyond).
-
-As for Godot 3 users, needless to say, you'll continue to receive a lot of care as we backport relevant features and bugfixes to the upcoming Godot 3.6. In fact, you will notice a few of the implementations developed for Godot 4 have already made it into Godot 3.5.
+As for Godot 3 users, needless to say, you'll continue to receive a lot of care as we backport relevant features and bugfixes to the upcoming Godot 3.6. This is going to be our long-term support (LTS) release, that we plan to maintain for the foreseeable future to enable existing Godot 3 project. Throughout the development of Godot 4 we've been backporting a lot of compatible and relevant work, and you will notice a few of new features have already made it into Godot 3.4 and 3.5.
 
 Without further ado, feel free to jump straight to the [download page](https://godotengine.org/download)!
 
