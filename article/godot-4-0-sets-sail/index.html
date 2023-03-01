@@ -540,8 +540,6 @@
 
 <p>Another change worth mentioning is the ability to declare signals as C# events. Declaring signals is done by writing a delegate with the [Signal] attribute like in the past, but now the delegate name must end with the EventHandler suffix and an event will be generated. It can be used to connect to and disconnect from the signal. Speaking of signals, connecting them is easier than ever now that you can use C# lambdas without having to spread your code around files.</p>
 
-<p>One of the big changes is support for writing GDExtensions in C#. With GDExtension, C# classes are registered in the engine and work as the built-in classes do, which should improve the support of C# nodes and resources throughout the engine.</p>
-
 <p>Finally, Godot 4 moves away from reflection, relying instead on source generators to improve performance, moving a lot of the work that we used to do at runtime to compile time. This also allows us to find and report errors when building the project instead of failing when running the game. We hope the new analyzers will help users write better code and avoid common pitfalls such as unsupported types in exported properties.</p>
 
 <p>Currently, the .NET version of Godot still requires a separate build of Godot but a unified editor is planned for future releases.</p>
