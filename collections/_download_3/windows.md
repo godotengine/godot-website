@@ -1,6 +1,6 @@
 ---
 title: Download for Windows - Godot Engine
-description: Download the latest stable version of the Godot Engine for Windows
+description: Download the latest stable version of the Godot Engine 3 for Windows
 platform: Windows
 
 downloads:
@@ -41,6 +41,13 @@ content_instructions: |
     <li>Extract and run. Godot is self-contained and does not require installation.</li>
     <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
   </ul>
+
+  <p>
+    You can also get Godot with <a href="https://scoop.sh/">Scoop</a>.
+
+    <pre><code class="hljs csharp">scoop bucket <span class="hljs-keyword">add</span> extras
+      scoop install godot</code></pre>
+  </p>
 
   <p>
     Windows executables are code-signed by <em>Prehensile Tales B.V.</em>

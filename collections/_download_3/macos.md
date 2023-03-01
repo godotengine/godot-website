@@ -1,18 +1,18 @@
 ---
 title: Download for macOS - Godot Engine
-description: Download the latest stable version of the Godot Engine for macOS
+description: Download the latest stable version of the Godot Engine 3 for macOS
 platform: macOS
 
 downloads:
   - caption: Universal (x86_64 + Apple Silicon)
-    slug: macos.universal.zip
+    slug: osx.universal.zip
     featured: true
     tags:
       - Intel/Apple Silicon
       - 64 bit
 
   - caption: .NET Universal (x86_64 + Apple Silicon)
-    slug: mono_macos.universal.zip
+    slug: mono_osx.universal.zip
     mono: true
     featured: true
     featured_flavor: .NET
@@ -20,9 +20,6 @@ downloads:
       - Intel/Apple Silicon
       - 64 bit
       - C# support
-      
-redirect_from:
-  - /download/osx
 
 content_instructions: |
   <ul>
@@ -31,10 +28,20 @@ content_instructions: |
   </ul>
 
   <p>
-    Godot is code-signed and notarized for macOS. This means it should run out of the box even if Gatekeeper is enabled on the system (which is the default).
+    Since Godot 3.3, Godot is code-signed and notarized for macOS. This means it should run out of the box even if Gatekeeper is enabled on the system (which is the default).
   </p>
 
   <p>
     For older Godot versions, see the last section of <a href="https://support.apple.com/en-us/HT202491">this page</a> for instructions on allowing Godot to run anyway. Alternatively, you can install <a href="https://store.steampowered.com/app/404790">Godot from Steam</a> and switch to an older branch in the Steam application settings to work around this.
+  </p>
+
+  <p>
+    You can also get Godot with <a href="https://brew.sh/">Homebrew</a>
+
+    <pre><code class="hljs lua">brew install <span class="hljs-comment">--cask godot</span></code></pre>
+
+    or <a href="https://www.macports.org">MacPorts</a>
+
+    <pre><code class="hljs nginx"><span class="hljs-attribute">sudo</span> port install godot</code></pre>
   </p>
 ---
