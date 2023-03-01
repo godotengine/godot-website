@@ -1,6 +1,6 @@
 ---
 title: "Godot 4.0 sets sail: All aboard for new horizons"
-excerpt: "It's official. Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we're thrilled to say: Welcome to the start of Godot 4!" 
+excerpt: "It's official. Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we're thrilled to say: Welcome to the start of Godot 4!"
 categories: ["release"]
 author: "2000+ Godot contributors"
 image: /storage/blog/covers/godot-4-0-sets-sail.webp
@@ -15,19 +15,31 @@ We're extremely excited but most of all, we're humbled by the experience. We bel
 
 We're proud to work with you. Godot 4.0 is the culmination of years of your time and effort. Together, we've built a strong new base. One that opens up new horizons and gives Godot the wings to ride the winds of change, to grow with new tech and continue to meet evolving user needs. From this point onward, we build on this foundation and focus our upcoming efforts on usability and performance improvements.
 
-**As it was with Godot 3.0, Godot 4.0 is only the beginning of Godot 4**. We still expect users to encounter workflow-breaking bugs (especially on less common hardware). Some workflows will still feel somewhat unpolished, and performance won't be optimized yet in this first stable release. But rest assured, we plan to publish releases frequently and regularly (as we have with the Alphas and Betas). So you can expect versions 4.0.1, 4.0.2, etc. to follow very soon, with new features and bigger improvements [coming later this year in Godot 4.1](https://godotengine.org/article/release-management-4-0-and-beyond).
+**As it was with Godot 3.0, Godot 4.0 is only the beginning of the Godot 4 journey.** We still expect users to encounter workflow-breaking bugs (especially on less common hardware). Some workflows will still feel somewhat unpolished, and performance won't be optimized yet in this first stable release. But rest assured, we plan to publish releases frequently and regularly (as we have with the Alphas and Betas). So you can expect versions 4.0.1, 4.0.2, etc. to follow very soon, with new features and bigger improvements [coming later this year in Godot 4.1](/article/release-management-4-0-and-beyond).
 
 As for Godot 3 users, needless to say, you'll continue to receive a lot of care as we backport relevant features and bugfixes to the upcoming Godot 3.6. This is going to be our long-term support (LTS) release, that we plan to maintain for the foreseeable future to enable existing Godot 3 project. Throughout the development of Godot 4 we've been backporting a lot of compatible and relevant work, and you will notice a few of new features have already made it into Godot 3.4 and 3.5.
 
-Without further ado, feel free to jump straight to the [download page](https://godotengine.org/download)!
+Without further ado, feel free to jump straight to the [download page](/download)!
 
-Alternatively, for those of you who have missed our pre-release progress reports, grab a cup of something strong and enjoy browsing through the massive list of new features.
+Our friends at [GDQuest](https://www.gdquest.com/) prepared a wonderful video to highlight just how huge the Godot 4.0 release is. They also took the lead on writing this blog post, enabling the contributors from the Production team to focus on technical aspects of this release. The GDQuest team makes amazing [open source demos](https://github.com/gdquest-demos/godot-4.0-new-features) and [YouTube tutorials](https://www.youtube.com/@GDQuest), and they make [professional courses for Godot](https://gdquest.mavenseed.com/courses/)!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/chXAjMQrcZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+For more details, grab a cup of something strong and enjoy browsing through the massive list of new features.
+
+## Giving back<!-- omit in toc -->
+
+As a community effort, Godot relies on individual contributors to improve. In recent years, [user and company donations](/donate/) enabled us to hire a number of core contributors to work more hours on the engine, and allow us to finalize the Godot 4.0 release faster. We still need a lot of [extra donation income](/donate/) to be able to sustain the pace we've had for the 4.0 development cycle, and to hire more contributors to focus on key areas which are currently missing a maintainer.
+
+Besides financial support, you can also give back by: writing high-quality bug reports, contributing to the code base, writing documentation, writing tutorials (for the docs or on your own space), and supporting others on the various [community platforms](https://docs.godotengine.org/en/latest/community/channels.html) by answering questions and providing helpful tips.
+
+Last but not least, making games with Godot and crediting the engine goes a long way to help raise its popularity, and thus the number of active contributors who make it better on a daily basis. Remember, we are all in this together and Godot requires community support in every area in order to thrive.
 
 # New features of Godot 4.0<!-- omit in toc -->
 
 Considering it's our biggest release to date and the longest in making, Godot 4.0 is more of a great rebuild than a regular update.
 
-Many of the internal changes are difficult to showcase and much of the early development time went toward refactoring and rewriting existing features. If you're curious to learn a bit more about it, Godot's lead developer Juan Linietsky ([reduz](https://github.com/reduz)) covered some of the bigger improvements made in the engine core in earlier blog posts: [1](https://godotengine.org/article/core-refactoring-progress-report-1), [2](https://godotengine.org/article/core-refactoring-progress-report-2).
+Many of the internal changes are difficult to showcase and much of the early development time went toward refactoring and rewriting existing features. If you're curious to learn a bit more about it, Godot's lead developer Juan Linietsky ([reduz](https://github.com/reduz)) covered some of the bigger improvements made in the engine core in earlier blog posts: [1](/article/core-refactoring-progress-report-1), [2](/article/core-refactoring-progress-report-2).
 
 This said, the amount of new features is nothing short of mind-boggling so here's a table of content to help you navigate to the areas that matter most to you:
 
@@ -96,7 +108,6 @@ This said, the amount of new features is nothing short of mind-boggling so here'
 	 - [Android & Web Support](#android-web-support)
 	 - [More Exporting Options](#more-exporting-options)
  - [Future](#future)
- - [Giving back](#giving-back)
 
 ---
 
@@ -121,7 +132,7 @@ With [Je06jm](https://github.com/Je06jm)‘s contribution, you can now also take
 
 For starters, Godot's global illumination systems have been remade from scratch.
 
-For the first time ever, Godot 4 introduces a novel real-time global illumination technique for large open worlds. **SDFGI** - or Signed Distance Field Global Illumination was created and implemented by Juan and you can learn a lot more about it [here](https://godotengine.org/article/godot-40-gets-sdf-based-real-time-global-illumination).
+For the first time ever, Godot 4 introduces a novel real-time global illumination technique for large open worlds. **SDFGI** - or Signed Distance Field Global Illumination was created and implemented by Juan and you can learn a lot more about it [here](/article/godot-40-gets-sdf-based-real-time-global-illumination).
 
 ![GDBot the robot standing face camera in front of two trees](/storage/blog/godot-4-0-sets-sail/02-3d-gi-sdfgi.webp)
 
@@ -147,7 +158,7 @@ The new automatic [occlusion culling](https://github.com/godotengine/godot/pull/
 In open environments, few objects overlap so occlusion culling doesn't help as much. There, you can leverage the new [automatic mesh LOD](https://github.com/godotengine/godot/pull/44468) or use manual HLOD with full control over [visibility ranges](https://github.com/godotengine/godot/pull/48847).
 
 <a id="enhanced-mid-post-processing-"></a>
-### Enhanced Mid & Post-Processing  
+### Enhanced Mid & Post-Processing
 
 If you're looking to add that extra bit of quality when running on high-end devices, rendering contributor Clay John ([clayjohn](https://github.com/clayjohn)) brings you [Screen Space Indirect Lighting](https://github.com/godotengine/godot/pull/51206).
 
@@ -179,7 +190,7 @@ Tileset textures are automatically expanded to prevent gaps from appearing betwe
 
 In short, there's a bit of an initial learning curve but you can probably build half a game with tiles alone! Once again, this is 4.0, so as with any big new change, we'll be incorporating user feedback to improve UX in upcoming versions of Godot 4.
 
-For more detail on the new tiles editor, you can Read Gilles' multiple progress reports: [1](https://godotengine.org/article/tiles-editor-rework), [2](https://godotengine.org/article/tiles-editor-progress-report-2), [3](https://godotengine.org/article/tiles-editor-progress-3), [4](https://godotengine.org/article/tiles-editor-progress-4), [5](https://godotengine.org/article/tiles-editor-progress-report-5).
+For more detail on the new tiles editor, you can Read Gilles' multiple progress reports: [1](/article/tiles-editor-rework), [2](/article/tiles-editor-progress-report-2), [3](/article/tiles-editor-progress-3), [4](/article/tiles-editor-progress-4), [5](/article/tiles-editor-progress-report-5).
 
 <a id="new-2d-rendering-options"></a>
 ### New 2D Rendering Options
@@ -211,7 +222,7 @@ To help improve the fidelity of your 3D scenes, we have worked on some exciting 
 
 You can configure the effect globally, or define specific areas with [FogVolume nodes](https://github.com/godotengine/godot/pull/53353). You can even create complex dynamic effects by writing custom shaders that operate on FogVolume nodes.
 
-For other atmospheric effects, Godot 4.0 is introducing sky shaders which allow users to create dynamic skies that update in real time (including reflections). For more information see the article introducing [sky shaders](https://godotengine.org/article/custom-sky-shaders-godot-4-0).
+For other atmospheric effects, Godot 4.0 is introducing sky shaders which allow users to create dynamic skies that update in real time (including reflections). For more information see the article introducing [sky shaders](/article/custom-sky-shaders-godot-4-0).
 
 ![Starry night sky over an island. The Godot editor interface surrounds the scene, with a color picker open](/storage/blog/godot-4-0-sets-sail/04-vfx-sky-shaders.webp)
 
@@ -245,7 +256,7 @@ The introduction of all these new features once again created an opportunity to 
 <a id="extended-shader-language"></a>
 ### Extended Shader Language
 
-Yuri Rubinsky ([Chaosus](https://github.com/Chaosus)) poured a lot of love into making the shader language and visual shaders more accessible and versatile. Check out his and Juan's blog posts on some of the improvements: [1](https://godotengine.org/article/improvements-shaders-visual-shaders-godot-4), [2](https://godotengine.org/article/godot-40-gets-global-and-instance-shader-uniforms).
+Yuri Rubinsky ([Chaosus](https://github.com/Chaosus)) poured a lot of love into making the shader language and visual shaders more accessible and versatile. Check out his and Juan's blog posts on some of the improvements: [1](/article/improvements-shaders-visual-shaders-godot-4), [2](/article/godot-40-gets-global-and-instance-shader-uniforms).
 
 Some exciting additions include support for [uniform arrays](https://github.com/godotengine/godot/pull/62513) and [fragment-to-light varyings](https://github.com/godotengine/godot/pull/44698), as well as new syntax features, such as [structs](https://github.com/godotengine/godot/pull/35249), [preprocessor macros and shader includes](https://github.com/godotengine/godot/pull/62513).
 
@@ -272,16 +283,16 @@ Error reporting improved considerably with the compiler's ability to report many
 
 ![Screenshot of a GDScript file with multiple errors highlighted in red](/storage/blog/godot-4-0-sets-sail/05-scripting-multiple-errors.png)
 
-To top it off, your scripts can now automatically generate documentation in the built-in help and the Inspector dock tooltips. This practical and time-saving feature was implemented by a student, Thakee Nathees ([ThakeeNathees](https://github.com/ThakeeNathees)), during the 2020 Google Summer of Code. You can read their report [here](https://godotengine.org/article/gsoc-2020-progress-report-1#gdscript-doc).
+To top it off, your scripts can now automatically generate documentation in the built-in help and the Inspector dock tooltips. This practical and time-saving feature was implemented by a student, Thakee Nathees ([ThakeeNathees](https://github.com/ThakeeNathees)), during the 2020 Google Summer of Code. You can read their report [here](/article/gsoc-2020-progress-report-1#gdscript-doc).
 
-Despite growing in features, the GDScript runtime is much faster and more stable in Godot 4. This was achieved by a complete rewrite of the language backend by our main scripting maintainer George Marques ([vnen](https://github.com/vnen)). If you are interested in further reading, George provided several detailed reports on the new language features ([1](https://godotengine.org/article/gdscript-progress-report-new-gdscript-now-merged), [2](https://godotengine.org/article/gdscript-progress-report-feature-complete-40)) and on the decision-making process for the new language parser and runtime ([1](https://godotengine.org/article/gdscript-progress-report-writing-tokenizer), [2](https://godotengine.org/article/gdscript-progress-report-writing-new-parser), [3](https://godotengine.org/article/gdscript-progress-report-type-checking-back), [4](https://godotengine.org/article/gdscript-progress-report-typed-instructions)).
+Despite growing in features, the GDScript runtime is much faster and more stable in Godot 4. This was achieved by a complete rewrite of the language backend by our main scripting maintainer George Marques ([vnen](https://github.com/vnen)). If you are interested in further reading, George provided several detailed reports on the new language features ([1](/article/gdscript-progress-report-new-gdscript-now-merged), [2](/article/gdscript-progress-report-feature-complete-40)) and on the decision-making process for the new language parser and runtime ([1](/article/gdscript-progress-report-writing-tokenizer), [2](/article/gdscript-progress-report-writing-new-parser), [3](/article/gdscript-progress-report-type-checking-back), [4](/article/gdscript-progress-report-typed-instructions)).
 
 <a id="c"></a>
 ### C\#
 
 The much-anticipated port to .NET 6 now allows users to target a newer framework that brings optimizations and new APIs. With .NET 6, projects use C# 10 by default and all features are available.
 
-Of course, the 4.0 release is also a great opportunity to break compatibility and improve the API. If you’re a C# user we highly recommend checking out this [blog post by Raul Santos](https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/), to find out all that’s new in C# for Godot 4.0.
+Of course, the 4.0 release is also a great opportunity to break compatibility and improve the API. If you’re a C# user we highly recommend checking out this [blog post by Raul Santos](/article/whats-new-in-csharp-for-godot-4-0/), to find out all that’s new in C# for Godot 4.0.
 
 One of the most notable changes is the use of 64-bit types as scalar values. This means many APIs that used int or float now use long and double with the most noticeable being the _Process method. A Variant type is also now implemented in every API that takes variants where  System.Object was used in the past. This brings some improvements such as avoiding boxing the values.
 
@@ -310,12 +321,12 @@ With Godot 4, we introduce a new system called **GDExtension**. By design, it ta
 
 The code that you make with GDExtension can be ported into the engine if need be, and vice versa: Some engine parts can be made into a GDExtension library, reducing engine bloat. It also offers tighter integration into the editor now as you can expose your extension code as nodes and the engine will automatically generate help pages.
 
-GDExtention was implemented by Juan and George, and further improved by many contributors, especially while porting the [official godot-cpp C++ bindings](https://github.com/godotengine/godot-cpp). Resident XR enthusiast and Godot contributor Bastiaan Olij ([BastiaanOlij](https://github.com/BastiaanOlij)) took the time to write a blog post to [introduce GDExtensions](https://godotengine.org/article/introducing-gd-extensions).
+GDExtention was implemented by Juan and George, and further improved by many contributors, especially while porting the [official godot-cpp C++ bindings](https://github.com/godotengine/godot-cpp). Resident XR enthusiast and Godot contributor Bastiaan Olij ([BastiaanOlij](https://github.com/BastiaanOlij)) took the time to write a blog post to [introduce GDExtensions](/article/introducing-gd-extensions).
 
 **Important remarks:**
 
 -   This feature is still experimental so it's reasonable to expect breaking changes as the API gets polished.
--   Godot 3 GDNative libraries are not automatically compatible.  
+-   Godot 3 GDNative libraries are not automatically compatible.
 -   Documentation is still a work in progress.
 
 <a id="physics"></a>
@@ -349,7 +360,7 @@ Scripting properties is simpler now as well. In previous engine versions, proper
 <a id="higher-simulation-stability"></a>
 ### Higher Simulation Stability
 
-A new release is not just new features. A significant effort went into fixing previous issues causing jitter and imprecise computations. So you can look forward to higher simulation stability. For more on this effort, contributors Camille Mohr-Daurat ([pouleyKetchoupp](https://github.com/pouleyKetchoupp)), [lawnjelly](https://github.com/lawnjelly), and Fabrice Cipolla ([fabriceci](https://github.com/fabriceci)) have documented their work in [this blog post](https://godotengine.org/article/physics-progress-report-1).
+A new release is not just new features. A significant effort went into fixing previous issues causing jitter and imprecise computations. So you can look forward to higher simulation stability. For more on this effort, contributors Camille Mohr-Daurat ([pouleyKetchoupp](https://github.com/pouleyKetchoupp)), [lawnjelly](https://github.com/lawnjelly), and Fabrice Cipolla ([fabriceci](https://github.com/fabriceci)) have documented their work in [this blog post](/article/physics-progress-report-1).
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/godot-4-0-sets-sail/06-physics-kicking-ball.mp4" type="video/mp4">
@@ -383,7 +394,7 @@ The UI editor itself has improved in multiple ways that simplify your workflow a
 
 Your text rendering options have also drastically leveled up. Our talented contributor Pāvels Nadtočajevs ([bruvzg](https://github.com/bruvzg)) has re-implemented Godot's text rendering systems under the umbrella of the **TextServer**. This backend solution does the heavy lifting for everything related to displaying textual information on the screen. You now have more control over text wrapping, trimming, and your text will appear crisp at any resolution thanks to multichannel signed distance field oversampling.
 
-For those of you creating apps or games using Arabic Scripts or East Asian logograms, you will find that right-to-left languages work just as you'd expect them to — ligatures, complex graphemes and all. You can read Pāvels' detailed reports on the improvements made: [1](https://godotengine.org/article/complex-text-layouts-progress-report-1), [2](https://godotengine.org/article/complex-text-layouts-progress-report-2), [3](https://godotengine.org/article/complex-text-layouts-progress-report-3).
+For those of you creating apps or games using Arabic Scripts or East Asian logograms, you will find that right-to-left languages work just as you'd expect them to — ligatures, complex graphemes and all. You can read Pāvels' detailed reports on the improvements made: [1](/article/complex-text-layouts-progress-report-1), [2](/article/complex-text-layouts-progress-report-2), [3](/article/complex-text-layouts-progress-report-3).
 
 Besides supporting ligatures, font families and other OpenType features, font resources have two important differences from Godot 3. The first one is proper multilevel fallback logic, which helps to cover a wider range of characters than would be possible with a single font resource. The second is font size variation. The size of the font is no longer tied to the font itself, which means it can be easily changed on the fly. In fact, all Control nodes that have configurable fonts now allow you to vary the size in their theme properties.
 
@@ -413,7 +424,7 @@ The second challenge of distributing your project to a wider audience is, of cou
 
 Godot 4's translation system is now context-aware. It allows you to have multiple translations of the same string depending on the context. It also supports plurals allowing for correct translation depending on the quantity.
 
-Your localization efforts are further assisted by a built-in pseudolocalization tool. Implemented by Angad Kambli ([angad-k](https://github.com/angad-k)), a Google Summer of Code 2021 student, it allows to easily test the effects of diacritics and other font permutations on your UI without having to rely on actual translations to stress test your project. You can learn more about pseudolocalization features in the student's report [here](https://godotengine.org/article/gsoc-2021-progress-report-1#pseudolocalization).
+Your localization efforts are further assisted by a built-in pseudolocalization tool. Implemented by Angad Kambli ([angad-k](https://github.com/angad-k)), a Google Summer of Code 2021 student, it allows to easily test the effects of diacritics and other font permutations on your UI without having to rely on actual translations to stress test your project. You can learn more about pseudolocalization features in the student's report [here](/article/gsoc-2021-progress-report-1#pseudolocalization).
 
 <a id="editor-ux"></a>
 ## Editor & UX
@@ -442,9 +453,9 @@ Give it up to K. S. Ernest Lee ([fire](https://github.com/fire)), who brought in
 
 You will notice a myriad of new editor features and widgets created to simplify your workflow and give you better control.
 
-The new command palette, added by a student during Godot Summer of Code this year, provides quick access to a lot of editor operations for keyboard-proficient users. Read a report by Bhuvaneshwar ([Bhu1-V](https://github.com/Bhu1-V)) [here](https://godotengine.org/article/gsoc-2021-progress-report-1#command-palette) to learn more about this feature.
+The new command palette, added by a student during Godot Summer of Code this year, provides quick access to a lot of editor operations for keyboard-proficient users. Read a report by Bhuvaneshwar ([Bhu1-V](https://github.com/Bhu1-V)) [here](/article/gsoc-2021-progress-report-1#command-palette) to learn more about this feature.
 
-The “default_env.tres” which added a fallback environment to all projects has been replaced by an in-editor default DirectionalLight3D and WorldEnvironment. This makes it easy to tweak lighting and effects and preview assets in the editor without the hassle of having to remember to manually disable your in-editor nodes at runtime. For more information, see the [blog post](https://godotengine.org/article/editor-improvements-godot-40).
+The “default_env.tres” which added a fallback environment to all projects has been replaced by an in-editor default DirectionalLight3D and WorldEnvironment. This makes it easy to tweak lighting and effects and preview assets in the editor without the hassle of having to remember to manually disable your in-editor nodes at runtime. For more information, see the [blog post](/article/editor-improvements-godot-40).
 
 The new color pickers with different picker shapes and color modes allow you to quickly select or update your project's color palette.
 
@@ -502,7 +513,7 @@ Finally, because design deeply matters when you're staring at your screen for ho
 
 Godot 4 features a new navigation system to breathe more life into physical bodies. Previous versions were entirely node-based, which limited their usability and performance. Thanks to work initiated by [Andrea Catania](https://github.com/AndreaCatania) and continued by [smix8](https://github.com/smix8), the navigation system now uses a server-based approach.
 
-This more efficient implementation has already been backported to Godot 3.5 and you can read more about it in [Andrea's practical example](https://godotengine.org/article/navigation-server-godot-4-0).
+This more efficient implementation has already been backported to Godot 3.5 and you can read more about it in [Andrea's practical example](/article/navigation-server-godot-4-0).
 
 <a id="extended-complex-navigation-support"></a>
 ### Extended Complex Navigation Support
@@ -538,7 +549,7 @@ Thanks to the work of our [XR contributors](https://github.com/GodotVR/godot_ope
 
 
 
-Contributor [Teddybear082](https://github.com/teddybear082/) has used Godot XR Tools to implement VR ports of various open-source projects. This shows how easy it is to use. [Check out his port](https://twitter.com/Flat2VR/status/1617699586155638784) of the highly successful [Cruelty Squad](https://godotengine.org/showcase/cruelty-squad/)!
+Contributor [Teddybear082](https://github.com/teddybear082/) has used Godot XR Tools to implement VR ports of various open-source projects. This shows how easy it is to use. [Check out his port](https://twitter.com/Flat2VR/status/1617699586155638784) of the highly successful [Cruelty Squad](/showcase/cruelty-squad/)!
 
 In upcoming Godot 4 releases, you can look forward to a new player controller that makes it easier to drop XR support into an existing first-person game.
 
@@ -569,7 +580,7 @@ You can also run headless builds with placeholder assets which greatly reduces m
 
 In addition, many requested networking features, like setting timeouts and limiting network bandwidth are now possible.
 
-We have Fabio in particular to thank for many of these features. If you want to read more on the subject, [this series of posts](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-1) is a good place to start.
+We have Fabio in particular to thank for many of these features. If you want to read more on the subject, [this series of posts](/article/multiplayer-changes-godot-4-0-report-1) is a good place to start.
 
 Going forward, we will be relying on this vastly more stable, simpler and more powerful foundation to build exciting higher-level features. As is often the case with new implementations, documentation lags behind development but that doesn't mean we won't get to it shortly.
 
@@ -608,7 +619,7 @@ With input from Juan, Gilles, as well as contributions by François Belair ([Raz
 <a id="improved-3d-animation-workflow"></a>
 ### Improved 3D Animation Workflow
 
-3D animations have seen an internal overhaul, allowing for compression to reduce memory usage. Dedicated position, rotation, and scale tracks have replaced united transforms. You can also switch between rotation modes and change the rotation axis order for fine control over object rotations. For more about these new implementations, we recommend [this blog post](https://godotengine.org/article/animation-data-redesign-40) by Juan.
+3D animations have seen an internal overhaul, allowing for compression to reduce memory usage. Dedicated position, rotation, and scale tracks have replaced united transforms. You can also switch between rotation modes and change the rotation axis order for fine control over object rotations. For more about these new implementations, we recommend [this blog post](/article/animation-data-redesign-40) by Juan.
 
 <a id="animation-libraries-retargeting-system"></a>
 ### Animation Libraries & Retargeting System
@@ -648,7 +659,7 @@ As always, inclusiveness is a pillar of Godot. With Godot 4, we continue to stri
 
 Of course, you want your games or apps to be accessible to everyone too. To this end, Godot 4 presents you with new first-class build system support for multiple CPU architectures. If you have the builds compiled, you can now target devices such as Raspberry Pi, Microsoft Volterra, Surface Pro X, Pine Phone, VisionFive, ARM Chromebooks, and Asahi Linux without much manual hassle. This is in addition to the existing support Godot has for x86 Windows & Linux, and various architectures on Android, iOS, and macOS.
 
-We haven't forgotten web-based games. Among many other improvements to the web platform, Fabio has added the necessary tooling to allow [remote profiling of HTML5 exports](https://godotengine.org/article/html5-export-profiling). This means you can run the debugger/profiler on web exports as you would on the desktop platform making it much easier to polish and optimize your web-based games.
+We haven't forgotten web-based games. Among many other improvements to the web platform, Fabio has added the necessary tooling to allow [remote profiling of HTML5 exports](/article/html5-export-profiling). This means you can run the debugger/profiler on web exports as you would on the desktop platform making it much easier to polish and optimize your web-based games.
 
 One limitation of our philosophy of inclusiveness is that it works best when everyone practices it. That is not the case with console manufacturers, who typically do not open-source their SDKs.
 
@@ -659,18 +670,10 @@ This said, if your project is destined for consoles, regardless of the engine yo
 <a id="future"></a>
 ## Future
 
-Did we mention Godot 4.0 is only the beginning? We kept reiterating this because we're sharply aware that after 3 years of development, a major release feels like the end of a long wait. The reality is that Godot 4 starts now and we're eager to polish it with a [fast paced release cycle](https://godotengine.org/article/release-management-4-0-and-beyond). We'll iterate quickly on the more modern and flexible architecture that we've built for this major branch. Godot 4.0 is by no means a silver bullet - it's a stable base for us to build upon, and for you to start developing new projects which will mature alongside Godot 4.x.
+Did we mention Godot 4.0 is only the beginning? We kept reiterating this because we're sharply aware that after 3 years of development, a major release feels like the end of a long wait. The reality is that Godot 4 starts now and we're eager to polish it with a [fast paced release cycle](/article/release-management-4-0-and-beyond). We'll iterate quickly on the more modern and flexible architecture that we've built for this major branch. Godot 4.0 is by no means a silver bullet - it's a stable base for us to build upon, and for you to start developing new projects which will mature alongside Godot 4.x.
 
 We're working on a precise roadmap that we'll publish at a later date.
 
 This is not the end of the 3.x branch either. Godot 3.6 is on the way to wrap up current developments. You can expect some more backports coming from Godot 4.0 and the beginning of a Long Term Support 3.x branch that will live in parallel to 4.x stable releases, and mostly receive bugfixes.
 
-<a id="giving-back"></a>
-## Giving back
-
-As a community effort, Godot relies on individual contributors to improve. In addition to becoming a [donor](https://godotengine.org/donate/), please consider giving back by: writing high-quality bug reports, contributing to the code base, writing documentation, writing tutorials (for the docs or on your own space), and supporting others on the various [community platforms](https://docs.godotengine.org/en/latest/community/channels.html) by answering questions and providing helpful tips.
-
-Last but not least, making games with Godot and crediting the engine goes a long way to help raise its popularity, and thus the number of active contributors who make it better on a daily basis. Remember, we are all in this together and Godot requires community support in every area in order to thrive.
-
-[Enjoy Godot 4.0!](https://godotengine.org/download)
-
+[Enjoy Godot 4.0!](/download)
