@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?103">
+	<link rel="stylesheet" href="/assets/css/main.css?104">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -46,9 +46,9 @@
 
 		<nav id="nav">
 			<ul class="left">
-				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/features">Features</a></li>
 				<div class="only-on-mobile" style="width: 100%">
-					<li><a href="/features">Features</a></li>
+					<li><a href="/showcase">Showcase</a></li>
 				</div>
 				<li><a href="/blog">Blog</a></li>
 				<li><a href="/community">Community</a></li>
@@ -71,333 +71,18 @@
 
 
 <link rel="stylesheet" href="/assets/css/transparent-nav.css">
+<link rel="stylesheet" href="/assets/css/download.css">
 <style>
 	.hero {
-		padding: 124px 0 60px;
-		background: url('/assets/download/download-background.jpg');
-		background-size: cover;
-		background-position: center;
-		position: relative;
-	}
-
-	.hero h1 {
-		font-size: 60px;
-		text-shadow: 0 0 28px #00000080;
-		margin-bottom: 20px;
-		color: white;
-	}
-
-	.hero .hero-wrapper {
-		flex-direction: column;
-		text-align: center;
-		max-width: 580px;
-		margin: 0 auto;
-	}
-
-	.hero .main-downloads {
-		max-width: 600px;
-		margin: 40px auto;
-		display: grid;
-		gap: 24px;
-		text-align: center;
-	}
-	.hero .main-download-details {
-		color: var(--download-main-details-color);
-		font-size: 14px;
-		margin-top: 0;
-		opacity: 0.6;
-	}
-
-	.hero .previous-releases {
-		color: var(--download-hero-color);
-		font-size: 95%;
-	}
-
-	.hero .other-platforms {
-		color: var(--download-hero-color);
-		font-weight: 600;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: 8px;
-	}
-
-	.hero .other-platforms .other-platforms-wrapper {
-		max-width: 1200px;
-		margin: auto;
-	}
-
-	.btn.btn-download-main,
-	.btn.btn-download-main2 {
-		background-color: var(--primary-color);
-		color: white;
-		display: inline-flex;
-		flex-basis: content;
-		padding: 0px;
-		margin-bottom: 8px;
-	}
-	.btn.btn-download-main2 {
-		background-color: rgb(111 111 111 / 27%);
-		-webkit-backdrop-filter: blur(4px);
-		backdrop-filter: blur(4px);
-	}
-
-	.btn.btn-download-main img,
-	.btn.btn-download-main2 img {
-		display: inline-block;
-		filter: invert();
-		margin-right: 10px;
-		width: 20px;
-		vertical-align: text-bottom;
-	}
-
-	.btn.btn-download-main .download-hint,
-	.btn.btn-download-main2 .download-hint {
-		background-color: var(--primary-color-text-title);
-		color: var(--dark-color);
-		line-height: 32px;
-		padding: 12px 16px;
-	}
-
-	.btn.btn-download-main .download-title,
-	.btn.btn-download-main2 .download-title {
-		color: var(--primary-color-text-title);
-		font-size: 20px;
-		line-height: 32px;
-		padding: 12px 32px 12px 24px;
-	}
-
-	.platform-details .card {
-		margin-top: 32px;
-	}
-
-	.platform-details pre {
-		background-color: var(--platform-code-background-color);
-	}
-
-	.platform-details .download {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-		margin-bottom: 8px;
-	}
-
-	.platform-details .download-details {
-		color: var(--secondary-color-text);
-		font-size: 14px;
-		padding: 0 12px;
-	}
-
-	.platform-details .download-note {
-		padding: 16px 12px;
-		font-size: 92%;
-		background-color: var(--platform-note-background-color);
-		margin-top: 28px;
-	}
-
-	.platform-details .download-note p {
-		margin: 0;
-	}
-
-	.platform-details .platform-split {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 24px;
-	}
-	@media (max-width: 1200px) {
-		.platform-details .platform-split {
-			grid-template-columns: 1fr;
-			gap: 0;
-		}
-	}
-
-	.other-download {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 30px;
-		max-width: 100%;
-	}
-	@media (min-width: 768px) {
-		.other-download {
-			grid-template-columns: 1fr 1fr 1fr; 
-		}
-	}
-
-	.other-download-card {
-		background: var(--card-background-color);
-		border-radius: 6px;
-		padding: 26px 35px;
-	}
-
-	.platform-tabs {
-		margin-bottom: -1px;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	
-	.platform-tabs .tab img {
-		display: block;
-	}
-	@media (prefers-color-scheme: dark) {
-		.platform-tabs .tab img {
-			filter: invert(100%);
-		}
-	}
-
-	.platform-tabs .tab:not(.active):hover {
-		background: var(--card-background-color);
-		color: var(--base-color-text-hl);
-	}
-
-	.platform-tabs .tab.active {
-		background: var(--card-background-color);
-	}
-
-	.digital-stores {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 24px;
-	}
-	@media (max-width: 1200px) {
-		.digital-stores {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	.digital-stores p {
-		margin-top: 0;
-	}
-
-	.digital-stores .digital-store-list {
-		display: flex;
-		justify-content: center;
-		gap: 16px;
-	}
-
-	.btn.btn-digital-store {
-		background-color: var(--primary-color);
-		color: var(--dark-color-text-title);
-		display: inline-flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 16px;
-		padding: 12px 24px;
-	}
-
-	.thankyou-wrapper {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.45);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		z-index: 10;
-	}
-
-	.thankyou {
-		background: var(--base-color);
-		box-shadow: var(--more-shadow);
-		padding: 40px 60px 26px 60px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		position: relative;
-	}
-
-	.thankyou-reading {
-		font-size: 16px;
-	}
-
-	.thankyou-reading-list {
-		font-size: 16px;
-		margin: 0;
-		margin-left: 48px;
-		padding-left: 0;
-	}
-
-	.thankyou-donate {
-		margin-bottom: 24px;
-		text-align: center;
-	}
-
-	.btn.btn-donate {
-		background-color: var(--primary-color);
-		color: hsla(0, 0%, 100%, 0.9);
-		font-size: 22px;
-		font-weight: 600;
-		margin-bottom: 26px;
-	}
-
-	.btn-back-to-downloads {
-		cursor: pointer;
-		position: absolute;
-		top: 12px;
-		right: 12px;
-	}
-
-	@media (prefers-color-scheme: light) {
-		.btn-back-to-downloads img {
-			filter: invert(1);
-			opacity: 0.75;
-		}
-	}
-
-	.thankyou h2 {
-		text-shadow: var(--base-shadow);
-		font-size: 36px;
-		font-weight: 600;
-		margin-bottom: 12px;
-	}
-	.thankyou h3 {
-		font-size: 24px;
-		margin-bottom: 0;
-	}
-
-	.thankyou p {
-		max-width: 620px;
-	}
-
-	.thankyou hr {
-		margin: 28px 0 8px 0;
-	}
-
-	@media (max-width: 768px) {
-		.thankyou-wrapper {
-			display: block;
-		}
-
-		.thankyou {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			overflow: scroll;
-			padding: 30px 40px 18px 40px;
-		}
-
-		.thankyou-reading-list {
-			margin-left: 24px;
-		}
-
-		.btn-back-to-downloads {
-			width: 48px;
-			height: 48px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+		background-image: url('/assets/download/download-background-4.x.jpg');
 	}
 </style>
 
+
+
 <div class="hero">
 	<div class="hero-wrapper">
-		<h1>Download Godot for Windows</h1>
+		<h1>Download Godot&nbsp;4 for Windows</h1>
 
 		<div class="main-downloads">
 			
@@ -408,17 +93,17 @@
 			<div class="main-download">
 				<a href="
 				
-					https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_win64.exe.zip
+					https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_win64.exe.zip
 				
 			" class="btn btn-download btn-download-main">
 					<div class="download-title">
 						<img src="/assets/icons/windows.svg" alt="(Windows)">
 						Godot Engine
 					</div>
-					<div class="download-hint">3.5.1</div>
+					<div class="download-hint">4.0</div>
 				</a>
 				<p class="main-download-details">
-					Windows<strong> · 64 bit</strong> · 28 September 2022
+					<strong>64 bit · </strong>1 March 2023
 				</p>
 			</div>
 
@@ -429,23 +114,25 @@
 			<div class="main-download">
 				<a href="
 				
-					https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_win64.zip
+					https://downloads.tuxfamily.org/godotengine/4.0/mono/Godot_v4.0-stable_mono_win64.zip
 				
 			" class="btn btn-download btn-download-main2">
 					<div class="download-title">
 						<img src="/assets/icons/windows.svg" alt="(Windows)">
 						Godot Engine - .NET
 					</div>
-					<div class="download-hint">3.5.1</div>
+					<div class="download-hint">4.0</div>
 				</a>
 				<p class="main-download-details">
-					Windows<strong> · 64 bit · C# support</strong> · 28 September 2022
+					<strong>64 bit · C# support · </strong>1 March 2023
 				</p>
 			</div>
 
 			
 
 			<p class="previous-releases">
+				<strong class="previous-releases-featured">For the LTS version, <a href="/download/3.x/windows" class="set-os-download-url" data-version="3">Download Godot 3</a>.</strong>
+				<br>
 				You can find previous releases on <a href="https://github.com/godotengine/godot/releases">GitHub</a> or the <a href="https://downloads.tuxfamily.org/godotengine">download repository</a>.
 			</p>
 		</div>
@@ -464,14 +151,18 @@
 			<h3>Requirements</h3>
 			
 			<ul>
-				<li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
-				
-				<li>
-					<strong>For the .NET version:</strong> <a href="https://dotnet.microsoft.com/download">.NET SDK</a> or the
-					<a href="https://www.mono-project.com/download/stable/">Mono SDK</a>
-				</li>
-				
+				<li><strong>Recommended:</strong> Vulkan 1.0 compatible hardware</li>
+				<li><strong>Minimal:</strong> OpenGL 3.3 / OpenGL ES 3.0 compatible hardware</li>
 			</ul>
+
+			
+			<p>Additional requirements for the .NET version:</p>
+			<ul>
+				<li>
+					<a href="https://dotnet.microsoft.com/download">.NET SDK</a>
+				</li>
+			</ul>
+			
 		</div>
 
 		<div class="platform-split">
@@ -485,7 +176,7 @@
 				<div class="download">
 					<a href="
 					
-						https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_win64.exe.zip
+						https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_win64.exe.zip
 					
 				" class="download-link">Standard (x86_64)</a>
 					<span class="download-details">64 bit</span>
@@ -497,7 +188,7 @@
 				<div class="download">
 					<a href="
 					
-						https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_win32.exe.zip
+						https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_win32.exe.zip
 					
 				" class="download-link">Standard (x86)</a>
 					<span class="download-details">32 bit</span>
@@ -509,7 +200,7 @@
 				<div class="download">
 					<a href="
 					
-						https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_win64.zip
+						https://downloads.tuxfamily.org/godotengine/4.0/mono/Godot_v4.0-stable_mono_win64.zip
 					
 				" class="download-link">.NET (x86_64)</a>
 					<span class="download-details">64 bit · C# support</span>
@@ -521,7 +212,7 @@
 				<div class="download">
 					<a href="
 					
-						https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_win32.zip
+						https://downloads.tuxfamily.org/godotengine/4.0/mono/Godot_v4.0-stable_mono_win32.zip
 					
 				" class="download-link">.NET (x86)</a>
 					<span class="download-details">32 bit · C# support</span>
@@ -530,14 +221,14 @@
 
 				
 					<div class="download">
-						<a href="https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_export_templates.tpz">
+						<a href="https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_export_templates.tpz">
 							Export templates (Standard)
 						</a>
 						<span class="download-details">Used to export your games to all supported platforms</span>
 					</div>
 					
 					<div class="download">
-						<a href="https://downloads.tuxfamily.org/godotengine/3.5.1/mono/Godot_v3.5.1-stable_mono_export_templates.tpz">
+						<a href="https://downloads.tuxfamily.org/godotengine/4.0/mono/Godot_v4.0-stable_mono_export_templates.tpz">
 							Export templates (.NET)
 						</a>
 						<span class="download-details">Used to export your games to all supported platforms · C# support</span>
@@ -562,13 +253,6 @@
   <li>Extract and run. Godot is self-contained and does not require installation.</li>
   <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
 </ul>
-
-<p>
-  You can also get Godot with <a href="https://scoop.sh/">Scoop</a>.
-
-  <pre><code class="hljs csharp">scoop bucket <span class="hljs-keyword">add</span> extras
-    scoop install godot</code></pre>
-</p>
 
 <p>
   Windows executables are code-signed by <em>Prehensile Tales B.V.</em>
@@ -599,13 +283,15 @@
 			<div>
 				<ul>
 					<li>Digital store versions <strong>do not</strong> include .NET/C# support.</li>
-					<li><strong>Steam</strong> version includes full set of export templates and demo projects.</li>
+					<li><strong>Steam</strong> version is available as a <code>stable-4.0</code> beta branch.</li>
 				</ul>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<div id="platforms" class="padded">
+<div class="platforms-wrapper">
+	<div id="platforms" class="container">
 		<h2>Supported platforms</h2>
 		
 		<div class="tabs platform-tabs">
@@ -625,17 +311,15 @@
 				<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
 				<span>Windows</span>
 			</a>
-			<a href="/download/server" class="tab title-font ">
-				<img width="24" height="24" src="/assets/icons/linux-server.svg" title="Linux Server" alt="Linux Server" />
-				<span>Linux Server</span>
-			</a>
-			<a href="https://editor.godotengine.org/releases/3.5.1.stable/" target="_blank" class="tab title-font">
+			<a href="https://editor.godotengine.org/releases/4.0.stable/" target="_blank" class="tab title-font">
 				<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
 				<span>Web Editor</span>
 			</a>
 		</div>
 	</div>
+</div>
 
+<div class="container">
 	<div id="extras" class="padded" style="padding-top: 0">
 		<h2>Other Godot downloads</h2>
 
@@ -644,7 +328,7 @@
 			<div class="other-download-card">
 				<h3>Godot demo projects</h3>
 				<p>
-                    Give a try to demo projects showcasing some of the engine features.
+					Give a try to demo projects showcasing some of the engine features.
 				</p>
 				<p>
 					<a href="https://github.com/godotengine/godot-demo-projects">
@@ -652,7 +336,9 @@
 					</a>
 				</p>
 				<p>
-					<a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">
+					
+
+					<a href="https://godotengine.org/asset-library/asset?category=10&godot_version=4.0&support[official]=1">
 						Demo projects in Asset Library
 					</a>
 				</p>
@@ -662,12 +348,12 @@
 				<h3>AAR library for Android</h3>
 				<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
 				<p>
-					<a href="https://downloads.tuxfamily.org/godotengine/3.5.1/godot-lib.3.5.1.stable.release.aar">
+					<a href="https://downloads.tuxfamily.org/godotengine/4.0/godot-lib.4.0.stable.release.aar">
 						AAR library (standard)
 					</a>
 				</p>
 				<p>
-					<a href="https://downloads.tuxfamily.org/godotengine/3.5.1/mono/godot-lib.3.5.1.stable.mono.release.aar">
+					<a href="https://downloads.tuxfamily.org/godotengine/4.0/mono/godot-lib.4.0.stable.mono.release.aar">
 						AAR library (.NET / C#)
 					</a>
 				</p>
@@ -877,12 +563,19 @@
 	const links = document.querySelectorAll('.set-os-download-url');
 	for (let i = 0; i < links.length; i++) {
 		const link = links[i];
-		link.href = "/download/windows";
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link.href = "/download/macos";
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link.href = "/download/linux";
+		let link_slug = 'download';
+		if ('version' in link.dataset && link.dataset['version'] === '3') {
+			link_slug = 'download/3.x';
 		}
+
+		let link_platform = 'windows';
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link_platform = 'macos';
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link_platform = 'linux';
+		}
+
+		link.href = `/${link_slug}/${link_platform}`;
 	}
 </script>
 

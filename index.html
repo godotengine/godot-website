@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?103">
+	<link rel="stylesheet" href="/assets/css/main.css?104">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -44,9 +44,9 @@
 
 		<nav id="nav">
 			<ul class="left">
-				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/features">Features</a></li>
 				<div class="only-on-mobile" style="width: 100%">
-					<li><a href="/features">Features</a></li>
+					<li><a href="/showcase">Showcase</a></li>
 				</div>
 				<li><a href="/blog">Blog</a></li>
 				<li><a href="/community">Community</a></li>
@@ -71,7 +71,39 @@
 <link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <style>
 	.main-download {
+		display: flex;
+		align-items: flex-start;
+		gap: 48px;
 		margin-top: 48px;
+	}
+
+	.main-download-links {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.main-download-links .btn-download {
+		width: 100%;
+	}
+	.main-download-links .btn-download:nth-of-type(2n) {
+		background-color: rgb(132 151 174 / 68%);
+		-webkit-backdrop-filter: blur(4px);
+		backdrop-filter: blur(4px);
+	}
+	.main-download-links .btn-download:nth-of-type(2n) .download-title {
+		color: #f7f7f7;
+	}
+	.main-download-links .btn-download:nth-of-type(2n) .download-hint {
+		background-color: var(--primary-color-subdued);
+	}
+
+	@media (max-width: 900px) {
+		.main-download {
+			align-items: center;
+			flex-direction: column;
+			gap: 36px;
+		}
 	}
 
 	#donations {
@@ -198,6 +230,13 @@
 		color: var(--dark-color-text-title);
 	}
 
+	.features-learn-more {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 16px;
+	}
+
 	.img-auto-size {
 		width: 100%;
 		height: auto;
@@ -207,16 +246,10 @@
 		background-color: rgb(111 111 111 / 27%);
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
+		margin: 0;
 	}
 
 	@media (max-width: 900px) {
-		.main-download {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-wrap: wrap;
-		}
-
 		.features-grid {
 			grid-template-columns: 1fr;
 		}
@@ -250,10 +283,23 @@
 				3D games.</p>
 
 			<div class="main-download">
-				<a href="/download/windows" class="btn btn-download set-os-download-url">
-					<div class="download-title">Download</div>
-					<div class="download-hint">3.5.1</div>
-				</a>
+				
+				
+
+				<div class="main-download-links">
+					<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"
+						title="Download the latest version of Godot 4">
+						<div class="download-title">Download Latest</div>
+						<div class="download-hint">4.0</div>
+					</a>
+
+					<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
+						title="Download the long-term support version of Godot 3">
+						<div class="download-title">Download LTS</div>
+						<div class="download-hint">3.5.1</div>
+					</a>
+				</div>
+
 				<a href="/features" class="btn btn-flat btn-flat-white btn-hero-learn-more">Learn more</a>
 			</div>
 		</div>
@@ -414,6 +460,10 @@
 				</div>
 			</div>
 		</a>
+	</div>
+
+	<div class="features-learn-more">
+		<a href="/features" class="btn btn-flat btn-flat-white">Learn more about using Godot</a>
 	</div>
 </section>
 
@@ -816,12 +866,19 @@
 	const links = document.querySelectorAll('.set-os-download-url');
 	for (let i = 0; i < links.length; i++) {
 		const link = links[i];
-		link.href = "/download/windows";
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link.href = "/download/macos";
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link.href = "/download/linux";
+		let link_slug = 'download';
+		if ('version' in link.dataset && link.dataset['version'] === '3') {
+			link_slug = 'download/3.x';
 		}
+
+		let link_platform = 'windows';
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link_platform = 'macos';
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link_platform = 'linux';
+		}
+
+		link.href = `/${link_slug}/${link_platform}`;
 	}
 </script>
 

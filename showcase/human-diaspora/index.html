@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?103">
+	<link rel="stylesheet" href="/assets/css/main.css?104">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -44,9 +44,9 @@
 
 		<nav id="nav">
 			<ul class="left">
-				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/features">Features</a></li>
 				<div class="only-on-mobile" style="width: 100%">
-					<li><a href="/features">Features</a></li>
+					<li><a href="/showcase">Showcase</a></li>
 				</div>
 				<li><a href="/blog">Blog</a></li>
 				<li><a href="/community">Community</a></li>
@@ -329,12 +329,19 @@
 	const links = document.querySelectorAll('.set-os-download-url');
 	for (let i = 0; i < links.length; i++) {
 		const link = links[i];
-		link.href = "/download/windows";
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link.href = "/download/macos";
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link.href = "/download/linux";
+		let link_slug = 'download';
+		if ('version' in link.dataset && link.dataset['version'] === '3') {
+			link_slug = 'download/3.x';
 		}
+
+		let link_platform = 'windows';
+		if (navigator.platform.indexOf('Mac') !== -1) {
+			link_platform = 'macos';
+		} else if (navigator.platform.indexOf('Linux') !== -1) {
+			link_platform = 'linux';
+		}
+
+		link.href = `/${link_slug}/${link_platform}`;
 	}
 </script>
 
