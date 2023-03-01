@@ -29,7 +29,7 @@ For more details, grab a cup of something strong and enjoy browsing through the 
 
 ## Giving back<!-- omit in toc -->
 
-As a community effort, Godot relies on individual contributors to improve. In recent years, [user and company donations](/donate/) enabled us to hire a number of core contributors to work more hours on the engine, and allow us to finalize the Godot 4.0 release faster. We still need a lot of [extra donation income](/donate/) to be able to sustain the pace we've had for the 4.0 development cycle, and to hire more contributors to focus on key areas which are currently missing a maintainer.
+As a community effort, Godot relies on individual contributors to improve. In recent years, [user and company donations](/donate/) enabled us to also hire a number of core contributors to work more hours on the engine, and allow us to finalize the Godot 4.0 release faster. As a result, our monthly expenses are higher than our monthly income and we have relied on large one-time donations to fund development. Currently, we need a lot more [monthly donations](/donate/) to be able to sustain the pace we've had for the 4.0 development cycle, not to mention the need to hire more contributors to focus on key areas which are currently missing a maintainer.
 
 Besides financial support, you can also give back by: writing high-quality bug reports, contributing to the code base, writing documentation, writing tutorials (for the docs or on your own space), and supporting others on the various [community platforms](https://docs.godotengine.org/en/latest/community/channels.html) by answering questions and providing helpful tips.
 
