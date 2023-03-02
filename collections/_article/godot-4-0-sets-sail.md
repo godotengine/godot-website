@@ -134,7 +134,7 @@ For starters, Godot's global illumination systems have been remade from scratch.
 
 For the first time ever, Godot 4 introduces a novel real-time global illumination technique for large open worlds. **SDFGI** - or Signed Distance Field Global Illumination - was created and implemented by Juan and you can learn a lot more about it [here](/article/godot-40-gets-sdf-based-real-time-global-illumination).
 
-![GDBot the robot standing face camera in front of two trees](/storage/blog/godot-4-0-sets-sail/02-3d-gi-sdfgi.webp)
+![GDBot the robot standing face to the camera in front of two trees](/storage/blog/godot-4-0-sets-sail/02-3d-gi-sdfgi.webp)
 
 GIProbe has been replaced by the **VoxelGI** node, a real-time solution fit for small and medium-scale environments with particularly good results for interiors. Of course, you can still use lightmaps to pre-render lighting and shadows on low-end devices but lightmap baking now uses the GPU for much faster rendering.
 
