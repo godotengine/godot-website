@@ -21,7 +21,7 @@ As for Godot 3 users, needless to say, you'll continue to receive a lot of care 
 
 Without further ado, feel free to jump straight to the [download page](/download)!
 
-Our friends at [GDQuest](https://www.gdquest.com/) prepared a wonderful video to highlight just how huge the Godot 4.0 release is. They also took the lead on writing this blog post, enabling the contributors from the Production team to focus on technical aspects of this release. The GDQuest team make amazing [open source demos](https://github.com/gdquest-demos/godot-4.0-new-features) and [YouTube tutorials](https://www.youtube.com/@GDQuest), and they make [professional courses for Godot](https://gdquest.mavenseed.com/courses/)!
+Our friends at [GDQuest](https://www.gdquest.com/) prepared a wonderful video to highlight just how huge the Godot 4.0 release is. They also took the lead on writing this blog post, enabling the contributors from the Production team to focus on technical aspects of this release. The GDQuest team makes amazing [open source demos](https://github.com/gdquest-demos/godot-4.0-new-features) and [YouTube tutorials](https://www.youtube.com/@GDQuest). They also make [professional courses for Godot](https://gdquest.mavenseed.com/courses/).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/chXAjMQrcZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -132,7 +132,7 @@ With [Je06jm](https://github.com/Je06jm)‘s contribution, you can now also take
 
 For starters, Godot's global illumination systems have been remade from scratch.
 
-For the first time ever, Godot 4 introduces a novel real-time global illumination technique for large open worlds. **SDFGI** or Signed Distance Field Global Illumination was created and implemented by Juan and you can learn a lot more about it [here](/article/godot-40-gets-sdf-based-real-time-global-illumination).
+For the first time ever, Godot 4 introduces a novel real-time global illumination technique for large open worlds. **SDFGI** - or Signed Distance Field Global Illumination - was created and implemented by Juan and you can learn a lot more about it [here](/article/godot-40-gets-sdf-based-real-time-global-illumination).
 
 ![GDBot the robot standing face camera in front of two trees](/storage/blog/godot-4-0-sets-sail/02-3d-gi-sdfgi.webp)
 
@@ -585,7 +585,7 @@ Going forward, we will be relying on this vastly more stable, simpler and more p
 <a id="audio"></a>
 ## Audio
 
-Sound design and music is another area that has benefited from several refinements in Godot 4.0. It also happens to be an area that requires a lot of specialized knowledge to properly support in the engine. Luckily, our contributor Ellen Poe ([ellenhp](https://github.com/ellenhp)) has exactly what it takes, and her work on Godot 4 helped fix a large amount of longstanding issues with the audio system.
+Sound design and music is another area that has benefited from several refinements in Godot 4.0. It also happens to be an area that requires a lot of specialized knowledge to properly support in the engine. Luckily, our contributor Ellen Poe ([ellenhp](https://github.com/ellenhp)) has exactly what it takes, and her work on Godot 4 helped fix a large amount of remaining issues with the audio system.
 
 <a id="cleaner-sound"></a>
 ### Cleaner Sound
