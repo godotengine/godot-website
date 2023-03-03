@@ -294,7 +294,7 @@ The much-anticipated port to .NET 6 now allows users to target a newer framework
 
 Of course, the 4.0 release is also a great opportunity to break compatibility and improve the API. If you’re a C# user we highly recommend checking out this [blog post by Raul Santos](/article/whats-new-in-csharp-for-godot-4-0/), to find out all that’s new in C# for Godot 4.0.
 
-One of the most notable changes is the use of 64-bit types as scalar values. This means many APIs that used int or float now use long and double with the most noticeable being the _Process method. A Variant type is also now implemented in every API that takes variants where System.Object was used in the past. This brings some improvements such as avoiding boxing the values.
+One of the most notable changes is the use of 64-bit types as scalar values. This means many APIs that used int or float now use long and double with the most noticeable being the `_Process` method. A Variant type is also now implemented in every API that takes variants where `System.Object` was used in the past. This brings some improvements such as avoiding boxing the values.
 
 Another change worth mentioning is the ability to declare signals as C# events. Declaring signals is done by writing a delegate with the [Signal] attribute like in the past, but now the delegate name must end with the EventHandler suffix and an event will be generated. It can be used to connect to and disconnect from the signal. Speaking of signals, connecting them is easier than ever now that you can use C# lambdas without having to spread your code around files.
 
