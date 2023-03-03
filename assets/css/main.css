@@ -735,6 +735,11 @@ p.small {
 .btn.btn-flat.btn-flat-white {
   color: hsla(0, 0%, 100%, 0.95);
 }
+.btn.btn-flat.btn-flat-frosted {
+  background-color: rgb(111 111 111 / 27%);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
 
 .btn.btn-download {
   display: flex;
