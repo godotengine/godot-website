@@ -17,11 +17,11 @@ We're proud to work with you. Godot 4.0 is the culmination of years of your time
 
 **As it was with Godot 3.0, Godot 4.0 is only the beginning of the Godot 4 journey.** We still expect users to encounter workflow-breaking bugs (especially on less common hardware). Some workflows will still feel somewhat unpolished, and performance won't be optimized yet in this first stable release. But rest assured, we plan to publish releases frequently and regularly (as we have with the Alphas and Betas). So you can expect versions 4.0.1, 4.0.2, etc. to follow very soon, with new features and bigger improvements [coming later this year in Godot 4.1](/article/release-management-4-0-and-beyond).
 
-As for Godot 3 users, needless to say, you'll continue to receive a lot of care as we backport relevant features and bugfixes to the upcoming Godot 3.6. This is going to be our long-term support (LTS) release, that we plan to maintain for the foreseeable future to enable existing Godot 3 project. Throughout the development of Godot 4 we've been backporting a lot of compatible and relevant work, and you will notice a few of new features have already made it into Godot 3.4 and 3.5.
+As for Godot 3 users, needless to say, you'll continue to receive a lot of care as we backport relevant features and bugfixes to the upcoming Godot 3.6. This is going to be our long-term support (LTS) release, that we plan to maintain for the foreseeable future to enable existing Godot 3 projects. Throughout the development of Godot 4 we've been backporting a lot of compatible and relevant work, and you will notice a few of the new features have already made it into Godot 3.4 and 3.5.
 
 Without further ado, feel free to jump straight to the [download page](/download)!
 
-Our friends at [GDQuest](https://www.gdquest.com/) prepared a wonderful video to highlight just how huge the Godot 4.0 release is. They also took the lead on writing this blog post, enabling the contributors from the Production team to focus on technical aspects of this release. The GDQuest team makes amazing [open source demos](https://github.com/gdquest-demos/godot-4.0-new-features) and [YouTube tutorials](https://www.youtube.com/@GDQuest), and they make [professional courses for Godot](https://gdquest.mavenseed.com/courses/)!
+Our friends at [GDQuest](https://www.gdquest.com/) prepared a wonderful video to highlight just how huge the Godot 4.0 release is. They also took the lead on writing this blog post, enabling the contributors from the Production team to focus on technical aspects of this release. The GDQuest team makes amazing [open source demos](https://github.com/gdquest-demos/godot-4.0-new-features) and [YouTube tutorials](https://www.youtube.com/@GDQuest). They also make [professional courses for Godot](https://gdquest.mavenseed.com/courses/).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/chXAjMQrcZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -41,7 +41,7 @@ Considering it's our biggest release to date and the longest in making, Godot 4.
 
 Many of the internal changes are difficult to showcase and much of the early development time went toward refactoring and rewriting existing features. If you're curious to learn a bit more about it, Godot's lead developer Juan Linietsky ([reduz](https://github.com/reduz)) covered some of the bigger improvements made in the engine core in earlier blog posts: [1](/article/core-refactoring-progress-report-1), [2](/article/core-refactoring-progress-report-2).
 
-This said, the amount of new features is nothing short of mind-boggling so here's a table of content to help you navigate to the areas that matter most to you:
+This said, the amount of new features is nothing short of mind-boggling, so here's a table of content to help you navigate to the areas that matter most to you:
 
  - [3D & General Rendering Overhaul](#3d-general-rendering-overhaul)
 	 - [Vulkan & New Renderers](#vulkan-new-renderers)
@@ -132,9 +132,9 @@ With [Je06jm](https://github.com/Je06jm)‘s contribution, you can now also take
 
 For starters, Godot's global illumination systems have been remade from scratch.
 
-For the first time ever, Godot 4 introduces a novel real-time global illumination technique for large open worlds. **SDFGI** - or Signed Distance Field Global Illumination was created and implemented by Juan and you can learn a lot more about it [here](/article/godot-40-gets-sdf-based-real-time-global-illumination).
+For the first time ever, Godot 4 introduces a novel real-time global illumination technique for large open worlds. **SDFGI** - or Signed Distance Field Global Illumination - was created and implemented by Juan and you can learn a lot more about it [here](/article/godot-40-gets-sdf-based-real-time-global-illumination).
 
-![GDBot the robot standing face camera in front of two trees](/storage/blog/godot-4-0-sets-sail/02-3d-gi-sdfgi.webp)
+![GDBot the robot standing face to the camera in front of two trees](/storage/blog/godot-4-0-sets-sail/02-3d-gi-sdfgi.webp)
 
 GIProbe has been replaced by the **VoxelGI** node, a real-time solution fit for small and medium-scale environments with particularly good results for interiors. Of course, you can still use lightmaps to pre-render lighting and shadows on low-end devices but lightmap baking now uses the GPU for much faster rendering.
 
@@ -294,7 +294,7 @@ The much-anticipated port to .NET 6 now allows users to target a newer framework
 
 Of course, the 4.0 release is also a great opportunity to break compatibility and improve the API. If you’re a C# user we highly recommend checking out this [blog post by Raul Santos](/article/whats-new-in-csharp-for-godot-4-0/), to find out all that’s new in C# for Godot 4.0.
 
-One of the most notable changes is the use of 64-bit types as scalar values. This means many APIs that used int or float now use long and double with the most noticeable being the _Process method. A Variant type is also now implemented in every API that takes variants where  System.Object was used in the past. This brings some improvements such as avoiding boxing the values.
+One of the most notable changes is the use of 64-bit types as scalar values. This means many APIs that used int or float now use long and double with the most noticeable being the `_Process` method. A Variant type is also now implemented in every API that takes variants where `System.Object` was used in the past. This brings some improvements such as avoiding boxing the values.
 
 Another change worth mentioning is the ability to declare signals as C# events. Declaring signals is done by writing a delegate with the [Signal] attribute like in the past, but now the delegate name must end with the EventHandler suffix and an event will be generated. It can be used to connect to and disconnect from the signal. Speaking of signals, connecting them is easier than ever now that you can use C# lambdas without having to spread your code around files.
 
@@ -319,7 +319,7 @@ With Godot 4, we introduce a new system called **GDExtension**. By design, it ta
 
 The code that you make with GDExtension can be ported into the engine if need be, and vice versa: Some engine parts can be made into a GDExtension library, reducing engine bloat. It also offers tighter integration into the editor now as you can expose your extension code as nodes and the engine will automatically generate help pages.
 
-GDExtention was implemented by Juan and George, and further improved by many contributors, especially while porting the [official godot-cpp C++ bindings](https://github.com/godotengine/godot-cpp). Resident XR enthusiast and Godot contributor Bastiaan Olij ([BastiaanOlij](https://github.com/BastiaanOlij)) took the time to write a blog post to [introduce GDExtensions](/article/introducing-gd-extensions).
+GDExtension was implemented by Juan and George, and further improved by many contributors, especially while porting the [official godot-cpp C++ bindings](https://github.com/godotengine/godot-cpp). Resident XR enthusiast and Godot contributor Bastiaan Olij ([BastiaanOlij](https://github.com/BastiaanOlij)) took the time to write a blog post to [introduce GDExtensions](/article/introducing-gd-extensions).
 
 **Important remarks:**
 
@@ -358,7 +358,7 @@ Scripting properties is simpler now as well. In previous engine versions, proper
 <a id="higher-simulation-stability"></a>
 ### Higher Simulation Stability
 
-A new release is not just new features. A significant effort went into fixing previous issues causing jitter and imprecise computations. So you can look forward to higher simulation stability. For more on this effort, contributors Camille Mohr-Daurat ([pouleyKetchoupp](https://github.com/pouleyKetchoupp)), [lawnjelly](https://github.com/lawnjelly), and Fabrice Cipolla ([fabriceci](https://github.com/fabriceci)) have documented their work in [this blog post](/article/physics-progress-report-1).
+A new release is not just new features. A significant effort went into fixing previous issues causing jitter and imprecise computations. With Godot 4 you can look forward to higher simulation stability. For more on this effort, contributors Camille Mohr-Daurat ([pouleyKetchoupp](https://github.com/pouleyKetchoupp)), [lawnjelly](https://github.com/lawnjelly), and Fabrice Cipolla ([fabriceci](https://github.com/fabriceci)) have documented their work in [this blog post](/article/physics-progress-report-1).
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/godot-4-0-sets-sail/06-physics-kicking-ball.mp4" type="video/mp4">
@@ -536,14 +536,14 @@ As we have continuously reiterated throughout this article, 4.0 is only the star
 
 OpenXR is now embedded in the engine's core, so you no longer need a plugin to build your XR projects. OpenXR action maps allow you to bind inputs and outputs on various types of XR controllers to named actions. All major PC headsets that work through SteamVR, Oculus, or Monado are supported on Windows and Linux.
 
-If your project is destined for Android devices, an official plugin extends support for the Meta Quest and PICO 4 VR headsets. You can also already use the Magic Leap 2 headset, OpenXR-compliant HTC headsets, and the new Lynx R1 AR headset though support for these is still being fine-tuned.
+If your project is destined for Android devices, an official plugin extends support for the Meta Quest and PICO 4 VR headsets. You can also already use the Magic Leap 2 headset, OpenXR-compliant HTC headsets, and the new Lynx R1 AR headset, though support for these is still being fine-tuned.
 
 If you're building XR games or apps for the browser, you'll be happy to know that Godot 4.0 supports WebXR.
 
 <a id="godot-xr-tools"></a>
 ### Godot XR Tools
 
-Thanks to the work of our [XR contributors](https://github.com/GodotVR/godot_openxr/blob/e4af8c7b7168a7748a4e4929bc6779bb422baca7/CONTRIBUTORS.md), Godot 4 allows you to accelerate development on your XR projects. With [Godot XR Tools](https://github.com/GodotVR/godot-xr-tools) which you can find in the asset library, you now have access to a [well-documented toolkit](https://godotvr.github.io/godot-xr-tools/) that puts many popular XR mechanics at your disposal. You can start with the [project template](https://github.com/GodotVR/godot-xr-template) and use the toolkit to add components to move around in VR space, display hands that synchronize with the player's controllers, grab objects, etc.
+Thanks to the work of our [XR contributors](https://github.com/GodotVR/godot_openxr/blob/e4af8c7b7168a7748a4e4929bc6779bb422baca7/CONTRIBUTORS.md), Godot 4 allows you to accelerate development on your XR projects. With [Godot XR Tools](https://github.com/GodotVR/godot-xr-tools), which you can find in the asset library, you now have access to a [well-documented toolkit](https://godotvr.github.io/godot-xr-tools/) that puts many popular XR mechanics at your disposal. You can start with the [project template](https://github.com/GodotVR/godot-xr-template) and use the toolkit to add components to move around in VR space, display hands that synchronize with the player's controllers, grab objects, etc.
 
 
 
@@ -564,7 +564,7 @@ While some of the features and improvements are new in Godot 4, many important f
 <a id="simplified-multiplayer-development-workflow"></a>
 ### Simplified Multiplayer Development Workflow
 
-With the changes in GDScript, Remote Procedure Calls (RPCs) can now be configured using the new annotations for clearer syntax and code performance is generally improved.
+With the changes in GDScript, Remote Procedure Calls (RPCs) can now be configured using the new annotations for clearer syntax, and code performance is generally improved.
 
 ![](/storage/blog/godot-4-0-sets-sail/13-networking-rpcs.png)
 
@@ -585,7 +585,7 @@ Going forward, we will be relying on this vastly more stable, simpler and more p
 <a id="audio"></a>
 ## Audio
 
-Sound design and music is another area that has benefited from several refinements in Godot 4.0. It also happens to be an area that requires a lot of specialized knowledge to properly support in the engine. Luckily, our contributor Ellen Poe ([ellenhp](https://github.com/ellenhp)) has exactly what it takes, and her work on Godot 4 helped fix a large amount of withstanding issues with the audio system.
+Sound design and music is another area that has benefited from several refinements in Godot 4.0. It also happens to be an area that requires a lot of specialized knowledge to properly support in the engine. Luckily, our contributor Ellen Poe ([ellenhp](https://github.com/ellenhp)) has exactly what it takes, and her work on Godot 4 helped fix a large amount of remaining issues with the audio system.
 
 <a id="cleaner-sound"></a>
 ### Cleaner Sound
@@ -648,7 +648,7 @@ Finally, you will find tween animation much easier to set up with the new Tween 
 <a id="android-web-support"></a>
 ### Android & Web Support
 
-As always, inclusiveness is a pillar of Godot. With Godot 4, we continue to strive to enable and empower the widest possible pool of game and app developers all over the world. Your hardware preferences and even the state of the devices available to you should not constitute a barrier to creating your projects. In line with this, we're pleased to announce that Godot 4.0 runs on Android devices and in the web browser, in addition to Windows, MacOS, and Linux.
+As always, inclusiveness is a pillar of Godot. With Godot 4, we continue to strive to enable and empower the widest possible pool of game and app developers all over the world. Your hardware preferences and even the state of the devices available to you should not constitute a barrier to creating your projects. In line with this, we're pleased to announce that Godot 4.0 runs on Android devices and in the web browser, in addition to Windows, macOS, and Linux.
 
 ![Screenshot of a Godot project running on an Android tablet, with mobile controls](/storage/blog/godot-4-0-sets-sail/16-godot-on-android.webp)
 
