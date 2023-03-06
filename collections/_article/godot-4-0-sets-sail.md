@@ -35,7 +35,7 @@ Besides financial support, you can also give back by: writing high-quality bug r
 
 Last but not least, making games with Godot and crediting the engine goes a long way to help raise its popularity, and thus the number of active contributors who make it better on a daily basis. Remember, we are all in this together and Godot requires community support in every area in order to thrive.
 
-# New features of Godot 4.0<!-- omit in toc -->
+## New features of Godot 4.0<!-- omit in toc -->
 
 Considering it's our biggest release to date and the longest in making, Godot 4.0 is more of a great rebuild than a regular update.
 

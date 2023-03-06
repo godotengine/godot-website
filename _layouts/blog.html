@@ -48,8 +48,7 @@ collection: article
 	</form>
 
 	<!-- Categories -->
-
-	<h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
+	<h3 style="margin-top: 1rem">Categories</h3>
 
 	<div class="tags">
 		<a href="/blog" title="Show all categories">
@@ -95,8 +94,12 @@ collection: article
 				<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
 				<div class="content">
 					<div class="info">
-						<img class="avatar" width="25" height="25" src="{% for author in site.data.authors %}{% if author.name == post.author %}{{ author.image }}{% endif %}{%
-						endfor %}" alt="" loading="lazy">
+						{% assign post_author = site.data.authors | find: "name", post.author %}
+						{% if post_author %}
+							<img class="avatar" width="25" height="25" src="{{ post_author.image }}" alt="{{ post.author }}" loading="lazy">
+						{% else %}
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="{{ post.author }}" loading="lazy">
+						{% endif %}
 						<span class="by">{{ post.author }} </span>
 						<span class="date">&nbsp;-&nbsp;{{ post.date | date: "%e %B %Y" }}</span>
 					</div>

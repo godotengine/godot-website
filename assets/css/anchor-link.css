@@ -1,0 +1,44 @@
+.anchored-link {
+    display: none;
+    background-image: url(/assets/icons/link.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+}
+.anchored-link:hover {
+    opacity: 0.9;
+}
+
+@media (prefers-color-scheme: light) {
+    .anchored-link {
+        filter: invert(1);
+    }
+    .anchored-link:hover {
+        filter: invert(1);
+    }
+}
+
+.anchored:hover .anchored-link {
+    display: inline-block;
+}
+
+.anchored-toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-color);
+    border-radius: 24px;
+    color: var(--dark-color-text-hl);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 18px;
+    text-align: center;
+    z-index: 100;
+}

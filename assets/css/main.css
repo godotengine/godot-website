@@ -8,7 +8,7 @@
   --base-color-text: #4a5365;
   --base-color-text-hl: #454b59;
   --base-color-text-title: #546b99;
-  --base-color-text-subtitle: #8a9cc2;
+  --base-color-text-subtitle: #778ab3;
   --base-color-text-subtitle-date: #9aacd2;
 
   --dark-color: #333f67;
@@ -772,23 +772,6 @@ p.small {
   color: #8f9db9;
 }
 
-.author {
-  color: var(--base-color-text-subtitle);
-  text-transform: none;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.author .date {
-  color: var(--base-color-text-subtitle-date);
-  padding-left: 24px;
-}
-
-.tags {
-  margin-top: -3rem;
-  margin-bottom: 3rem;
-}
-
 .tags > a {
   border-radius: 1000px;
   display: inline-block;
@@ -1137,12 +1120,6 @@ pre > code {
     scroll-behavior: smooth;
     scrollbar-width: none;
     justify-content: normal;
-  }
-
-  .author .date {
-    display: block;
-    margin-top: 0.25rem;
-    padding-left: 0;
   }
 }
 
