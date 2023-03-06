@@ -57,7 +57,7 @@ Register for the event [here](https://lu.ma/2sz7890o).
 
 We understand that coming to the GDC is not something that everybody can afford, so we would like to give you the opportunity to showcase your game even if you are not able to attend. We prepared a form for you to [submit your game](https://forms.gle/ZVD1hR4sLr9nYMJC9) and we will select some of those to showcase at our booth.
 
-We are honored to be joined by the games and de developers of:
+We are honored to be joined by the games and the developers of:
 
 <div class="row-2">
 	<a class="media" href="/showcase/dome-keeper/">
