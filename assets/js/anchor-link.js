@@ -18,6 +18,7 @@ for (var i = 0; i < headings.length; i++) {
     anchor.addEventListener("click", function(event) {
         event.preventDefault();
         var anchorLink = window.location.href.split("#")[0] + event.target.getAttribute("href");
+        history.pushState(null, null, event.target.getAttribute("href"));
         navigator.clipboard.writeText(anchorLink).then(function() {
             // Create a new toast element and add it to the DOM
             var toast = document.createElement("div");
@@ -40,9 +41,9 @@ style.innerHTML = `
     .anchor-link {
         display: none;
         font-size: 16px;
-        line-height: .8;
-        vertical-align: top;
-
+        vertical-align: middle;
+        text-decoration: none;
+        margin-left: 10px;
     }
 
     h2:hover .anchor-link,
