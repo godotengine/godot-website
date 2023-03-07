@@ -1,69 +1,50 @@
-var headings = document.querySelectorAll("h2, h3, h4, h5");
+window.applyAnchorLinks = (baseSelector) => {
+    const baseNode = document.querySelector(baseSelector);
+    if (typeof baseNode === "undefined") {
+        return;
+    }
 
-// Loop through each heading
-for (var i = 0; i < headings.length; i++) {
-    var heading = headings[i];
+    const headings = baseNode.querySelectorAll("h2, h3, h4, h5");
+    for (let i = 0; i < headings.length; i++) {
+        const headingNode = headings[i];
+        if (headingNode.classList.contains("anchored")) {
+            continue; // Already handled.
+        }
+        headingNode.classList.add("anchored");
 
-    // Creating a new anchor link
-    var anchor = document.createElement("a");
-    anchor.setAttribute("href", "#" + heading.id);
-    anchor.setAttribute("class", "anchor-link");
-    anchor.setAttribute("title", "Click to copy link to this section");
-    anchor.innerHTML = "🔗";
+        // Create a new anchor link.
+        var anchorNode = document.createElement("a");
+        anchorNode.setAttribute("href", "#" + headingNode.id);
+        anchorNode.setAttribute("title", "Click to copy a link to this section.");
+        anchorNode.classList.add("anchored-link");
 
-    // Adding the anchor link to the heading
-    heading.insertAdjacentElement("beforeend", anchor);
+        // Add the anchor link to the heading.
+        headingNode.insertAdjacentElement("beforeend", anchorNode);
+
+        // Add click event listener to anchor link to copy link to clipboard.
+        anchorNode.addEventListener("click", (event) => {
+            event.preventDefault();
+            // Imitate default behavior that we just cancelled.
+            history.pushState(null, null, event.target.getAttribute("href"));
+
+            const anchorLink = window.location.href.split("#")[0] + event.target.getAttribute("href");
+            navigator.clipboard
+                .writeText(anchorLink)
+                .then(() => {
+                    // Create a new toast element and add it to the DOM.
+                    const toast = document.createElement("div");
+                    toast.classList.add("anchored-toast");
+                    toast.textContent = "Section link copied to the clipboard";
+                    document.body.appendChild(toast);
         
-    // Add click event listener to anchor link to copy link to clipboard
-    anchor.addEventListener("click", function(event) {
-        event.preventDefault();
-        var anchorLink = window.location.href.split("#")[0] + event.target.getAttribute("href");
-        history.pushState(null, null, event.target.getAttribute("href"));
-        navigator.clipboard.writeText(anchorLink).then(function() {
-            // Create a new toast element and add it to the DOM
-            var toast = document.createElement("div");
-            toast.setAttribute("class", "toast");
-            toast.innerHTML = "Anchor link copied to clipboard";
-            document.body.appendChild(toast);
- 
-            // Remove the toast element after 3 seconds
-            setTimeout(function() {
-                toast.remove();
-            }, 2000);
-        }, function() {
-            console.log("Copy failed");
+                    // Remove the toast element after 2 seconds.
+                    setTimeout(() => {
+                        toast.remove();
+                    }, 2000);
+                })
+                .catch(() => {
+                    console.error("Failed to copy an anchor link to the clipboard.");
+                });
         });
-    });
-}
-
-var style = document.createElement("style");
-style.innerHTML = `
-    .anchor-link {
-        display: none;
-        font-size: 16px;
-        vertical-align: middle;
-        text-decoration: none;
-        margin-left: 10px;
     }
-
-    h2:hover .anchor-link,
-    h3:hover .anchor-link,
-    h4:hover .anchor-link,
-    h5:hover .anchor-link {
-        display: inline;
-    }
-
-    .toast {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        padding: 16px;
-        background-color: #444444;
-        color: #FFF;
-        font-size: 12px;
-        border-radius: 24px;
-        transform: translateX(-50%);
-    }
-`;
-
-document.head.appendChild(style);
+};

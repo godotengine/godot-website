@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?104">
+	<link rel="stylesheet" href="/assets/css/main.css?105">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -134,9 +134,49 @@
 		margin-top: 42px;
 	}
 
-	.author {
-		margin-top: 0px;
-		margin-bottom: 64px;
+	.article-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.article-metadata {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		font-family: var(--header-font-family);
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 900px) {
+		.article-metadata {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+
+	.article-author {
+		color: var(--base-color-text-subtitle-date);
+		font-weight: 700;
+		font-size: 18px;
+		flex-grow: 1;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.article-author .avatar {
+		border-radius: 100%;
+		margin: 0;
+	}
+
+	.article-author .by {
+		color: var(--base-color-text-subtitle);
+	}
+	
+	.article-metadata .date {
+		color: var(--base-color-text-subtitle-date);
 	}
 
 	.tag.active {
@@ -170,26 +210,31 @@
 <link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
 
 <div class="container">
-	<article class="flex padded">
-		<div class="content content-article">
-			<figure>
+	<article class="padded">
+		<div class="content article-container">
+			<figure class="article-cover">
+				
+
 				<img src="/storage/app/uploads/public/630/52d/76e/63052d76e024a243584746.png" title=""
 					alt=" " class="rounded-lg"
 					style="width: 100%; height: auto" />
-				<figcaption style="opacity: 0.8; line-height: 1.5">
-					<strong></strong>
-					<span style="margin-left: 0.75rem; font-size: 90%"></span>
-				</figcaption>
 			</figure>
 
-			<div class="info">
+			<div class="article-info">
 				<h1>
 					Godot 4.0 will discontinue VisualScript
 				</h1>
-				<h4 class="author">
-					By: Juan Linietsky
+				<div class="article-metadata">
+					<div class="article-author">
+						<span>By: </span>
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
+						
+						<span class="by">Juan Linietsky</span>
+					</div>
 					<span class="date"> 23 August 2022</span>
-				</h4>
+				</div>
 
 				<div class="tags">
 					
@@ -212,7 +257,8 @@
 
 
 
-			<p>Godot’s visual scripting language, VisualScript, was introduced in Godot 3.0, almost five years ago. Despite our continuous effort, it never gained traction and the path to improve it was never clear. Because of this, for Godot 4.0, we decided to accept that the approach we took from the start was simply not the right one and decided to remove it from the engine. If enough volunteer interest exists, it may be moved to an extension.</p>
+			<div class="article-body">
+				<p>Godot’s visual scripting language, VisualScript, was introduced in Godot 3.0, almost five years ago. Despite our continuous effort, it never gained traction and the path to improve it was never clear. Because of this, for Godot 4.0, we decided to accept that the approach we took from the start was simply not the right one and decided to remove it from the engine. If enough volunteer interest exists, it may be moved to an extension.</p>
 
 <p>To be clear, this refers to the <strong>VisualScript</strong> scripting language, and not to visual shaders. Visual shaders are working well and appreciated by many users, so they’re not going anywhere.</p>
 
@@ -266,11 +312,29 @@ With this information, VisualScript was created and published for Godot 3.0.</p>
 
 <p>The VisualScript removal from the core engine will happen before Beta (which is now very close!). Even though it’s gone, we are still thankful to all the effort that many contributors put on it over the past years to try to keep it alive, even if ultimately we were unable to make it user-friendly enough to attract user interest!</p>
 
+			</div>
 		</div>
 	</article>
 </div>
 
+<link rel="stylesheet" href="/assets/css/anchor-link.css">
 <script src="/assets/js/anchor-link.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Add icons to easily copy section links.
+		window.applyAnchorLinks('.article-body');
+
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+	});
+</script>
 
 </main>
 
@@ -356,40 +420,30 @@ With this information, VisualScript was created and published for Godot 3.0.</p>
 			hljs.highlightBlock(block);
 		});
 
-		document.querySelectorAll('.content-article img').forEach((articleImg) => {
-			// Add lightbox elements in blog articles for Tobii.
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
-
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,
 		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}`;
+		}
 	});
-
-	// Update any download link to point to identified user's OS.
-	const links = document.querySelectorAll('.set-os-download-url');
-	for (let i = 0; i < links.length; i++) {
-		const link = links[i];
-		let link_slug = 'download';
-		if ('version' in link.dataset && link.dataset['version'] === '3') {
-			link_slug = 'download/3.x';
-		}
-
-		let link_platform = 'windows';
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link_platform = 'macos';
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link_platform = 'linux';
-		}
-
-		link.href = `/${link_slug}/${link_platform}`;
-	}
 </script>
 
 

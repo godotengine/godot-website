@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?104">
+	<link rel="stylesheet" href="/assets/css/main.css?105">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -134,9 +134,49 @@
 		margin-top: 42px;
 	}
 
-	.author {
-		margin-top: 0px;
-		margin-bottom: 64px;
+	.article-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.article-metadata {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		font-family: var(--header-font-family);
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 900px) {
+		.article-metadata {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+
+	.article-author {
+		color: var(--base-color-text-subtitle-date);
+		font-weight: 700;
+		font-size: 18px;
+		flex-grow: 1;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.article-author .avatar {
+		border-radius: 100%;
+		margin: 0;
+	}
+
+	.article-author .by {
+		color: var(--base-color-text-subtitle);
+	}
+	
+	.article-metadata .date {
+		color: var(--base-color-text-subtitle-date);
 	}
 
 	.tag.active {
@@ -170,26 +210,31 @@
 <link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
 
 <div class="container">
-	<article class="flex padded">
-		<div class="content content-article">
-			<figure>
+	<article class="padded">
+		<div class="content article-container">
+			<figure class="article-cover">
+				
+
 				<img src="/storage/app/uploads/public/5a9/2f7/557/5a92f75575e65533435326.jpg" title=""
 					alt=" " class="rounded-lg"
 					style="width: 100%; height: auto" />
-				<figcaption style="opacity: 0.8; line-height: 1.5">
-					<strong></strong>
-					<span style="margin-left: 0.75rem; font-size: 90%"></span>
-				</figcaption>
 			</figure>
 
-			<div class="info">
+			<div class="article-info">
 				<h1>
 					Maintenance release: Godot 3.0.1
 				</h1>
-				<h4 class="author">
-					By: HP van Braam
+				<div class="article-metadata">
+					<div class="article-author">
+						<span>By: </span>
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="HP van Braam" loading="lazy">
+						
+						<span class="by">HP van Braam</span>
+					</div>
 					<span class="date"> 25 February 2018</span>
-				</h4>
+				</div>
 
 				<div class="tags">
 					
@@ -205,7 +250,8 @@
 
 
 
-			<p>Since we haven’t found any major issues in <a href="/article/dev-snapshot-godot-3-0-1-rc1">our release candidate</a>, we are now releasing Godot 3.0.1! The only regression reported was a renaming issue on Windows which we fixed.</p>
+			<div class="article-body">
+				<p>Since we haven’t found any major issues in <a href="/article/dev-snapshot-godot-3-0-1-rc1">our release candidate</a>, we are now releasing Godot 3.0.1! The only regression reported was a renaming issue on Windows which we fixed.</p>
 
 <p>If you were eagerly waiting for 3.0.1, you can go directly to our <a href="/download">Download</a> page and get the benefits of all the fixes! Both the <a href="https://godotengine.itch.io/godot">itch.io</a> and <a href="https://store.steampowered.com/app/404790">Steam</a> distributions are updated.</p>
 
@@ -298,11 +344,29 @@
 
 <p><em>The <a href="https://twitter.com/yafd/status/948271213868019712">illustration picture</a> is courtesy of John Watson (<a href="https://twitter.com/yafd">@yafd</a>), who does nice PBR scenes using the new features of Godot 3.0.</em></p>
 
+			</div>
 		</div>
 	</article>
 </div>
 
+<link rel="stylesheet" href="/assets/css/anchor-link.css">
 <script src="/assets/js/anchor-link.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Add icons to easily copy section links.
+		window.applyAnchorLinks('.article-body');
+
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+	});
+</script>
 
 </main>
 
@@ -388,40 +452,30 @@
 			hljs.highlightBlock(block);
 		});
 
-		document.querySelectorAll('.content-article img').forEach((articleImg) => {
-			// Add lightbox elements in blog articles for Tobii.
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
-
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,
 		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}`;
+		}
 	});
-
-	// Update any download link to point to identified user's OS.
-	const links = document.querySelectorAll('.set-os-download-url');
-	for (let i = 0; i < links.length; i++) {
-		const link = links[i];
-		let link_slug = 'download';
-		if ('version' in link.dataset && link.dataset['version'] === '3') {
-			link_slug = 'download/3.x';
-		}
-
-		let link_platform = 'windows';
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link_platform = 'macos';
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link_platform = 'linux';
-		}
-
-		link.href = `/${link_slug}/${link_platform}`;
-	}
 </script>
 
 

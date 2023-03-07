@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?104">
+	<link rel="stylesheet" href="/assets/css/main.css?105">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -134,9 +134,49 @@
 		margin-top: 42px;
 	}
 
-	.author {
-		margin-top: 0px;
-		margin-bottom: 64px;
+	.article-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.article-metadata {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		font-family: var(--header-font-family);
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 900px) {
+		.article-metadata {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+
+	.article-author {
+		color: var(--base-color-text-subtitle-date);
+		font-weight: 700;
+		font-size: 18px;
+		flex-grow: 1;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.article-author .avatar {
+		border-radius: 100%;
+		margin: 0;
+	}
+
+	.article-author .by {
+		color: var(--base-color-text-subtitle);
+	}
+	
+	.article-metadata .date {
+		color: var(--base-color-text-subtitle-date);
 	}
 
 	.tag.active {
@@ -170,26 +210,31 @@
 <link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
 
 <div class="container">
-	<article class="flex padded">
-		<div class="content content-article">
-			<figure>
+	<article class="padded">
+		<div class="content article-container">
+			<figure class="article-cover">
+				
+
 				<img src="/storage/app/uploads/public/633/d85/6c0/633d856c08477650100797.png" title=""
 					alt=" " class="rounded-lg"
 					style="width: 100%; height: auto" />
-				<figcaption style="opacity: 0.8; line-height: 1.5">
-					<strong></strong>
-					<span style="margin-left: 0.75rem; font-size: 90%"></span>
-				</figcaption>
 			</figure>
 
-			<div class="info">
+			<div class="article-info">
 				<h1>
 					Announcing the Godot 2022 showreels!
 				</h1>
-				<h4 class="author">
-					By: Emi
+				<div class="article-metadata">
+					<div class="article-author">
+						<span>By: </span>
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/emi.png" alt="Emi" loading="lazy">
+						
+						<span class="by">Emi</span>
+					</div>
 					<span class="date">  6 October 2022</span>
-				</h4>
+				</div>
 
 				<div class="tags">
 					
@@ -205,7 +250,8 @@
 
 
 
-			<p>We bring you three brand-new videos showcasing what the Godot Engine can do. As always we have separate videos for games targeting desktop/console and games targeting mobile devices. This year we are proud to introduce a new category called “Apps &amp; Tools” to highlight non-game creations made with Godot. This is a field that has been growing a lot, so we wanted to shine a light on the great projects released or under development.</p>
+			<div class="article-body">
+				<p>We bring you three brand-new videos showcasing what the Godot Engine can do. As always we have separate videos for games targeting desktop/console and games targeting mobile devices. This year we are proud to introduce a new category called “Apps &amp; Tools” to highlight non-game creations made with Godot. This is a field that has been growing a lot, so we wanted to shine a light on the great projects released or under development.</p>
 
 <p>Many of our core contributors and maintainers voted to make the final list in each category, and this year was particularly hard. There were way too many good projects, and we couldn’t include them all to keep the videos at a reasonable length and pace – but don’t be discouraged if your entry didn’t make it, we’ll have more opportunities to showcase great projects, including next year’s showreels.</p>
 
@@ -231,11 +277,29 @@
 
 <h2 id="thank-you">Thank you!!</h2>
 
+			</div>
 		</div>
 	</article>
 </div>
 
+<link rel="stylesheet" href="/assets/css/anchor-link.css">
 <script src="/assets/js/anchor-link.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Add icons to easily copy section links.
+		window.applyAnchorLinks('.article-body');
+
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+	});
+</script>
 
 </main>
 
@@ -321,40 +385,30 @@
 			hljs.highlightBlock(block);
 		});
 
-		document.querySelectorAll('.content-article img').forEach((articleImg) => {
-			// Add lightbox elements in blog articles for Tobii.
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
-
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,
 		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}`;
+		}
 	});
-
-	// Update any download link to point to identified user's OS.
-	const links = document.querySelectorAll('.set-os-download-url');
-	for (let i = 0; i < links.length; i++) {
-		const link = links[i];
-		let link_slug = 'download';
-		if ('version' in link.dataset && link.dataset['version'] === '3') {
-			link_slug = 'download/3.x';
-		}
-
-		let link_platform = 'windows';
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link_platform = 'macos';
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link_platform = 'linux';
-		}
-
-		link.href = `/${link_slug}/${link_platform}`;
-	}
 </script>
 
 

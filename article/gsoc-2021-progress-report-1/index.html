@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?104">
+	<link rel="stylesheet" href="/assets/css/main.css?105">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -134,9 +134,49 @@
 		margin-top: 42px;
 	}
 
-	.author {
-		margin-top: 0px;
-		margin-bottom: 64px;
+	.article-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.article-metadata {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		font-family: var(--header-font-family);
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 900px) {
+		.article-metadata {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+
+	.article-author {
+		color: var(--base-color-text-subtitle-date);
+		font-weight: 700;
+		font-size: 18px;
+		flex-grow: 1;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.article-author .avatar {
+		border-radius: 100%;
+		margin: 0;
+	}
+
+	.article-author .by {
+		color: var(--base-color-text-subtitle);
+	}
+	
+	.article-metadata .date {
+		color: var(--base-color-text-subtitle-date);
 	}
 
 	.tag.active {
@@ -170,26 +210,31 @@
 <link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
 
 <div class="container">
-	<article class="flex padded">
-		<div class="content content-article">
-			<figure>
+	<article class="padded">
+		<div class="content article-container">
+			<figure class="article-cover">
+				
+
 				<img src="/storage/app/uploads/public/610/43f/11b/61043f11b5388567890116.png" title=""
 					alt=" " class="rounded-lg"
 					style="width: 100%; height: auto" />
-				<figcaption style="opacity: 0.8; line-height: 1.5">
-					<strong></strong>
-					<span style="margin-left: 0.75rem; font-size: 90%"></span>
-				</figcaption>
 			</figure>
 
-			<div class="info">
+			<div class="article-info">
 				<h1>
 					GSoC 2021 - Progress report #1
 				</h1>
-				<h4 class="author">
-					By: Rémi Verschelde
+				<div class="article-metadata">
+					<div class="article-author">
+						<span>By: </span>
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="Rémi Verschelde" loading="lazy">
+						
+						<span class="by">Rémi Verschelde</span>
+					</div>
 					<span class="date"> 30 July 2021</span>
-				</h4>
+				</div>
 
 				<div class="tags">
 					
@@ -217,7 +262,8 @@
 
 
 
-			<p>Like in previous years, Godot is participating again in the <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> program for its 2021 edition.</p>
+			<div class="article-body">
+				<p>Like in previous years, Godot is participating again in the <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> program for its 2021 edition.</p>
 
 <p>We selected 5 projects back in May, and the 5 students and their mentors have now been working on their projects for almost two months. We omitted to announce the projects formally (sorry about that!), but this first progress report written by each student will make up for it by giving a direct glimpse into their work.</p>
 
@@ -520,11 +566,29 @@
 
 <p>A big thankyou to all students for their quality work and creative ideas to implement or improve those features in Godot, and thanks to all the mentors who support them!</p>
 
+			</div>
 		</div>
 	</article>
 </div>
 
+<link rel="stylesheet" href="/assets/css/anchor-link.css">
 <script src="/assets/js/anchor-link.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Add icons to easily copy section links.
+		window.applyAnchorLinks('.article-body');
+
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+	});
+</script>
 
 </main>
 
@@ -610,40 +674,30 @@
 			hljs.highlightBlock(block);
 		});
 
-		document.querySelectorAll('.content-article img').forEach((articleImg) => {
-			// Add lightbox elements in blog articles for Tobii.
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
-
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,
 		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}`;
+		}
 	});
-
-	// Update any download link to point to identified user's OS.
-	const links = document.querySelectorAll('.set-os-download-url');
-	for (let i = 0; i < links.length; i++) {
-		const link = links[i];
-		let link_slug = 'download';
-		if ('version' in link.dataset && link.dataset['version'] === '3') {
-			link_slug = 'download/3.x';
-		}
-
-		let link_platform = 'windows';
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link_platform = 'macos';
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link_platform = 'linux';
-		}
-
-		link.href = `/${link_slug}/${link_platform}`;
-	}
 </script>
 
 

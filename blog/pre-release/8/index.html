@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?104">
+	<link rel="stylesheet" href="/assets/css/main.css?105">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -107,8 +107,7 @@
 	</form>
 
 	<!-- Categories -->
-
-	<h3 style="margin-top: 1rem; margin-bottom: 4rem">Categories</h3>
+	<h3 style="margin-top: 1rem">Categories</h3>
 
 	<div class="tags">
 		<a href="/blog" title="Show all categories">
@@ -198,7 +197,10 @@
 				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5c2/b4e/fd9/5c2b4efd9c609153795934.png');" href="/article/godot-1-1-rc3/"></div>
 				<div class="content">
 					<div class="info">
-						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
+						
 						<span class="by">Juan Linietsky </span>
 						<span class="date">&nbsp;-&nbsp;17 May 2015</span>
 					</div>
@@ -213,7 +215,10 @@
 				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5c2/b4e/efe/5c2b4eefec8e1414325294.png');" href="/article/godot-1-1-rc2/"></div>
 				<div class="content">
 					<div class="info">
-						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
+						
 						<span class="by">Juan Linietsky </span>
 						<span class="date">&nbsp;-&nbsp; 5 May 2015</span>
 					</div>
@@ -228,7 +233,10 @@
 				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/5c2/b4e/d97/5c2b4ed97851f986256536.jpg');" href="/article/godot-1-1-rc1/"></div>
 				<div class="content">
 					<div class="info">
-						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
+						
 						<span class="by">Juan Linietsky </span>
 						<span class="date">&nbsp;-&nbsp; 1 May 2015</span>
 					</div>
@@ -243,7 +251,10 @@
 				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/56c/315/11c/56c31511c9034056347215.png');" href="/article/godot-1-1-beta1-out/"></div>
 				<div class="content">
 					<div class="info">
-						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
+						
 						<span class="by">Juan Linietsky </span>
 						<span class="date">&nbsp;-&nbsp; 2 April 2015</span>
 					</div>
@@ -258,7 +269,10 @@
 				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/56c/31d/5fd/56c31d5fdcbc7419338592.png');" href="/article/godot-10-rc1-here/"></div>
 				<div class="content">
 					<div class="info">
-						<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="" loading="lazy">
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
+						
 						<span class="by">Juan Linietsky </span>
 						<span class="date">&nbsp;-&nbsp; 2 December 2014</span>
 					</div>
@@ -383,40 +397,30 @@
 			hljs.highlightBlock(block);
 		});
 
-		document.querySelectorAll('.content-article img').forEach((articleImg) => {
-			// Add lightbox elements in blog articles for Tobii.
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
-
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,
 		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}`;
+		}
 	});
-
-	// Update any download link to point to identified user's OS.
-	const links = document.querySelectorAll('.set-os-download-url');
-	for (let i = 0; i < links.length; i++) {
-		const link = links[i];
-		let link_slug = 'download';
-		if ('version' in link.dataset && link.dataset['version'] === '3') {
-			link_slug = 'download/3.x';
-		}
-
-		let link_platform = 'windows';
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link_platform = 'macos';
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link_platform = 'linux';
-		}
-
-		link.href = `/${link_slug}/${link_platform}`;
-	}
 </script>
 
 

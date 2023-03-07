@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?104">
+	<link rel="stylesheet" href="/assets/css/main.css?105">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -134,9 +134,49 @@
 		margin-top: 42px;
 	}
 
-	.author {
-		margin-top: 0px;
-		margin-bottom: 64px;
+	.article-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.article-metadata {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		font-family: var(--header-font-family);
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 900px) {
+		.article-metadata {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+
+	.article-author {
+		color: var(--base-color-text-subtitle-date);
+		font-weight: 700;
+		font-size: 18px;
+		flex-grow: 1;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.article-author .avatar {
+		border-radius: 100%;
+		margin: 0;
+	}
+
+	.article-author .by {
+		color: var(--base-color-text-subtitle);
+	}
+	
+	.article-metadata .date {
+		color: var(--base-color-text-subtitle-date);
 	}
 
 	.tag.active {
@@ -170,26 +210,36 @@
 <link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
 
 <div class="container">
-	<article class="flex padded">
-		<div class="content content-article">
-			<figure>
-				<img src="/storage/app/uploads/public/61c/308/fac/61c308facf562571710350.jpg" title="Quest Of Graal"
-					alt="Quest Of Graal A game by Pixel-Archipel" class="rounded-lg"
-					style="width: 100%; height: auto" />
+	<article class="padded">
+		<div class="content article-container">
+			<figure class="article-cover">
+				
 				<figcaption style="opacity: 0.8; line-height: 1.5">
 					<strong>Quest Of Graal</strong>
 					<span style="margin-left: 0.75rem; font-size: 90%">A game by Pixel-Archipel</span>
 				</figcaption>
+				
+
+				<img src="/storage/app/uploads/public/61c/308/fac/61c308facf562571710350.jpg" title="Quest Of Graal"
+					alt="Quest Of Graal A game by Pixel-Archipel" class="rounded-lg"
+					style="width: 100%; height: auto" />
 			</figure>
 
-			<div class="info">
+			<div class="article-info">
 				<h1>
 					Maintenance release: Godot 3.4.2
 				</h1>
-				<h4 class="author">
-					By: Rémi Verschelde
+				<div class="article-metadata">
+					<div class="article-author">
+						<span>By: </span>
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/akien.jpg" alt="Rémi Verschelde" loading="lazy">
+						
+						<span class="by">Rémi Verschelde</span>
+					</div>
 					<span class="date"> 22 December 2021</span>
-				</h4>
+				</div>
 
 				<div class="tags">
 					
@@ -205,7 +255,8 @@
 
 
 
-			<p>We released <a href="/article/maintenance-release-godot-3-4-1">Godot 3.4.1</a> just a few days ago with a huge array of bugfixes, but a regression was then found for macOS rendering which could cause flickering.</p>
+			<div class="article-body">
+				<p>We released <a href="/article/maintenance-release-godot-3-4-1">Godot 3.4.1</a> just a few days ago with a huge array of bugfixes, but a regression was then found for macOS rendering which could cause flickering.</p>
 
 <p>This new <strong>Godot 3.4.2</strong> is a hotfix release to solve this and a few other minor issues that were fixed in the meantime. Godot 3.4.2 is a <strong>recommended upgrade for all Godot 3.4 and 3.4.1 users</strong>.</p>
 
@@ -250,11 +301,29 @@
 
 <p><em>The illustration picture is from</em> <a href="https://store.steampowered.com/app/1765700/Quest_Of_Graal/"><strong>Quest Of Graal</strong></a>, <em>a fast-paced combat platformer where up to 4 players race to catch the golden chalice. It is developed by <a href="https://pixel-boy.itch.io/">Pixel-Archipel</a> and scheduled to release in early 2022. <a href="https://store.steampowered.com/app/1765700/Quest_Of_Graal/"><strong>Wishlist it on Steam</strong></a>, and see <a href="https://pixel-boy.itch.io/">Pixel-Archipel’s itch page</a> for relevant links.</em></p>
 
+			</div>
 		</div>
 	</article>
 </div>
 
+<link rel="stylesheet" href="/assets/css/anchor-link.css">
 <script src="/assets/js/anchor-link.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Add icons to easily copy section links.
+		window.applyAnchorLinks('.article-body');
+
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+	});
+</script>
 
 </main>
 
@@ -340,40 +409,30 @@
 			hljs.highlightBlock(block);
 		});
 
-		document.querySelectorAll('.content-article img').forEach((articleImg) => {
-			// Add lightbox elements in blog articles for Tobii.
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
-
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,
 		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}`;
+		}
 	});
-
-	// Update any download link to point to identified user's OS.
-	const links = document.querySelectorAll('.set-os-download-url');
-	for (let i = 0; i < links.length; i++) {
-		const link = links[i];
-		let link_slug = 'download';
-		if ('version' in link.dataset && link.dataset['version'] === '3') {
-			link_slug = 'download/3.x';
-		}
-
-		let link_platform = 'windows';
-		if (navigator.platform.indexOf('Mac') !== -1) {
-			link_platform = 'macos';
-		} else if (navigator.platform.indexOf('Linux') !== -1) {
-			link_platform = 'linux';
-		}
-
-		link.href = `/${link_slug}/${link_platform}`;
-	}
 </script>
 
 
