@@ -48,7 +48,7 @@ We would love to meet you! Come and chat with the team behind Godot, as well as 
 
 ## Godot Meetup
 
-If you are interested in meeting us and other Godot developers outside of the GDC, on Wednesday, March 22 from 6:30 pm to 9:30 pm we are hosting an event at GitHub HQ open to anyone interested in Godot Engine: AAA, indie, and hobbyist developers of all levels are welcome. Snacks, drinks, talks, and Godot!
+If you are interested in meeting the team behind the engine, as well as other Godot developers, outside of the GDC show floor, there is going to be a less formal event as well! On Wednesday, March 22 from 6:30 PM to 9:30 PM we are holding an event at GitHub HQ open to anyone interested in Godot Engine: AAA, indie, and hobbyist developers of all levels are welcome. Snacks, drinks, talks, and Godot!
 
 Register for the event [here](https://lu.ma/2sz7890o).
 
