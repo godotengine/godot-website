@@ -1,6 +1,6 @@
 ---
 title: "Godot & Friends at GDC 2023"
-excerpt: "We are going to be at the Games Developer Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th."
+excerpt: "We are going to be at the Game Developers Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th."
 categories: ["events"]
 author: Emi
 image: /storage/blog/covers/gdc2023.jpg
