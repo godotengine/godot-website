@@ -40,7 +40,7 @@ future: true
 </style>
 
 
-We are going to be at the Games Developer Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th.
+As we [announced at the end of the last year](/article/godot-at-gdc-2023/), Godot is going to be at the Game Developers Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th.
 
 At GDC 2023, we will have our own booth where we will be hosting game developers who will be showcasing their latest games.
 
