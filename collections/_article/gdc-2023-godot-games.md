@@ -4,7 +4,7 @@ excerpt: "We are going to be at the Game Developers Conference (GDC) 2023, which
 categories: ["events"]
 author: Emi
 image: /storage/blog/covers/gdc2023.jpg
-date: 2023-03-06 09:00:00
+date: 2023-03-07 14:00:00
 future: true
 ---
 
