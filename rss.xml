@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot & Friends at GDC 2023</title>
+		<link>https://godotengine.org/article/gdc-2023-godot-games/</link>
+		<description>We are going to be at the Game Developers Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th.</description>
+		
+		<category>Events</category>
+		
+		<guid>https://godotengine.org/article/gdc-2023-godot-games/</guid>
+		<dc:creator>Emi</dc:creator>
+		<pubDate>Mon, 06 Mar 2023 09:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/gdc2023.jpg</image>
+	</item>
+	
+	<item>
 		<title>Godot 4.0 sets sail: All aboard for new horizons</title>
 		<link>https://godotengine.org/article/godot-4-0-sets-sail/</link>
 		<description>It's official. Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we're thrilled to say: Welcome to the start of Godot 4!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 23 Dec 2022 16:04:50 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/63a/5cb/0f4/63a5cb0f48e88945485049.jpg</image>
-	</item>
-	
-	<item>
-		<title>Status of the OpenGL 3 renderer</title>
-		<link>https://godotengine.org/article/status-of-opengl-renderer/</link>
-		<description>Godot 4.0 will ship with an OpenGL-based renderer designed for older and low-end devices, but it won't be totally feature-complete at the time 4.0 is released.</description>
-		
-		<category>Progress Report</category>
-		
-		<guid>https://godotengine.org/article/status-of-opengl-renderer/</guid>
-		<dc:creator>Clay John</dc:creator>
-		<pubDate>Tue, 20 Dec 2022 16:37:18 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/63a/182/5cd/63a1825cd2443916160270.png</image>
 	</item>
 	
 
