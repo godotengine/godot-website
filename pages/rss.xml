@@ -14,14 +14,14 @@ permalink: /rss.xml
 	{% assign latest_posts = site.article | sort:"date" | reverse %}
 	{% for post in latest_posts limit:24 %}
 	<item>
-		<title>{{ post.title }}</title>
+		<title>{{ post.title | escape }}</title>
 		<link>{{ site.url }}{{ post.url }}</link>
-		<description>{{ post.excerpt }}</description>
+		<description>{{ post.excerpt | escape }}</description>
 		{% for category in post.categories %}
 		<category>{{ site.data.categories[category][0].name }}</category>
 		{% endfor %}
 		<guid>{{ site.url }}{{ post.url }}</guid>
-		<dc:creator>{{ post.author }}</dc:creator>
+		<dc:creator>{{ post.author | escape }}</dc:creator>
 		<pubDate>{{ post.date | date: "%a, %d %b %Y %X +0000" }}</pubDate>
 		<image>{{ site.url }}{{ post.image }}</image>
 	</item>
