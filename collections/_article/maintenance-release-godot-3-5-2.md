@@ -17,7 +17,7 @@ As such, it's natural that existing Godot 3.5 users would prefer to stay on that
 
 [**Download Godot 3.5.2 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.5.2.stable/).
 
-*The illustration picture is from* [**Lumencraft**](https://store.steampowered.com/app/1713810/Lumencraft/), *a top-down, roguelike shooter with base building and tower defense elements. It is developed by [2Dyanmic Games](https://2dynamic.games/), and recently published its full [1.0 public release](https://store.steampowered.com/news/app/1713810/view/3682292957317510884) with a single-player Story mode, and a lot of gameplay improvements. You can find the game on [Steam](https://store.steampowered.com/app/1713810/Lumencraft/), [Epic Games Store](https://store.epicgames.com/en-US/p/lumencraft-abc105), [GOG](https://gog.com/en/game/lumencraft), and the [Mac App Store](https://apps.apple.com/us/app/lumencraft/id1671189271).*
+*The illustration picture is from* [**Lumencraft**](https://store.steampowered.com/app/1713810/Lumencraft/), *a top-down, roguelike shooter with base building and tower defense elements. It is developed by [2Dynamic Games](https://2dynamic.games/), and recently published its full [1.0 public release](https://store.steampowered.com/news/app/1713810/view/3682292957317510884) with a single-player Story mode, and a lot of gameplay improvements. You can find the game on [Steam](https://store.steampowered.com/app/1713810/Lumencraft/), [Epic Games Store](https://store.epicgames.com/en-US/p/lumencraft-abc105), [GOG](https://gog.com/en/game/lumencraft), and the [Mac App Store](https://apps.apple.com/us/app/lumencraft/id1671189271).*
 
 ## Changes
 
