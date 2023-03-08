@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Maintenance release: Godot 3.5.2</title>
+		<link>https://godotengine.org/article/maintenance-release-godot-3-5-2/</link>
+		<description>We&#39;ve just released Godot 4.0 after 3+ years of intense development, but we also still support the existing 3.5 stable branch. This maintenance release fixes a handful of issues which have been solved in the past few months, and could be backported to the 3.5 branch.</description>
+		
+		<category>Release</category>
+		
+		<guid>https://godotengine.org/article/maintenance-release-godot-3-5-2/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Wed, 08 Mar 2023 13:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-5-2.jpg</image>
+	</item>
+	
+	<item>
 		<title>Godot &amp; Friends at GDC 2023</title>
 		<link>https://godotengine.org/article/gdc-2023-godot-games/</link>
 		<description>We are going to be at the Game Developers Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Juan Linietsky</dc:creator>
 		<pubDate>Sat, 31 Dec 2022 23:20:19 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/63a/ebf/03e/63aebf03e854b249543216.png</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 10</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-10/</link>
-		<description>Happy holidays! After 3 months of frequent beta builds, we&#39;re taking a short break for the end of the year - and we leave you with 4.0 beta 10, with notable improvements to Animation, Navigation, Rendering, GDScript... a well-rounded snapshot for the holidays!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-10/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Fri, 23 Dec 2022 16:04:50 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/63a/5cb/0f4/63a5cb0f48e88945485049.jpg</image>
 	</item>
 	
 
