@@ -152,8 +152,8 @@ locally, some configuration options may need to be different. To define those, `
 
 ### Updating Godot download version
 
-When a new stable build of the engine is released, you need to update the number and date in the `/_config.yml` file.
-This looks like this:
+When a new stable build of the engine is released, you need to update the number and date in the `data/_versions.yml`
+file. This looks like this:
 
 ```
 # Godot download version
