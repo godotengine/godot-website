@@ -10,7 +10,7 @@
 	
 	
 	<item>
-		<title>Godot & Friends at GDC 2023</title>
+		<title>Godot &amp; Friends at GDC 2023</title>
 		<link>https://godotengine.org/article/gdc-2023-godot-games/</link>
 		<description>We are going to be at the Game Developers Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th.</description>
 		
@@ -25,7 +25,7 @@
 	<item>
 		<title>Godot 4.0 sets sail: All aboard for new horizons</title>
 		<link>https://godotengine.org/article/godot-4-0-sets-sail/</link>
-		<description>It's official. Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we're thrilled to say: Welcome to the start of Godot 4!</description>
+		<description>It&#39;s official. Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we&#39;re thrilled to say: Welcome to the start of Godot 4!</description>
 		
 		<category>Release</category>
 		
@@ -38,7 +38,7 @@
 	<item>
 		<title>Release candidate: Godot 4.0 RC 6</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-6/</link>
-		<description>One more time! We've now fixed all critical regressions we are aware of, so things are looking great for the stable release!</description>
+		<description>One more time! We&#39;ve now fixed all critical regressions we are aware of, so things are looking great for the stable release!</description>
 		
 		<category>Pre-release</category>
 		
@@ -49,7 +49,7 @@
 	</item>
 	
 	<item>
-		<title>What's new in C# for Godot 4.0</title>
+		<title>What&#39;s new in C# for Godot 4.0</title>
 		<link>https://godotengine.org/article/whats-new-in-csharp-for-godot-4-0/</link>
 		<description>All about changes and improvements that Godot 4.0 offers to C# developers.</description>
 		
@@ -64,7 +64,7 @@
 	<item>
 		<title>Release candidate: Godot 4.0 RC 5</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-5/</link>
-		<description>Three RCs in a row! Yesterday's build introduced a GDScript regression, so here's a new release candidate to fix that.</description>
+		<description>Three RCs in a row! Yesterday&#39;s build introduced a GDScript regression, so here&#39;s a new release candidate to fix that.</description>
 		
 		<category>Pre-release</category>
 		
@@ -103,7 +103,7 @@
 	<item>
 		<title>Release candidate: Godot 4.0 RC 3</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-3/</link>
-		<description>We're almost ready to release Godot 4.0! Barring any last minute critical regression, this RC should reflect what the 4.0-stable release will be.</description>
+		<description>We&#39;re almost ready to release Godot 4.0! Barring any last minute critical regression, this RC should reflect what the 4.0-stable release will be.</description>
 		
 		<category>Pre-release</category>
 		
@@ -116,7 +116,7 @@
 	<item>
 		<title>Release candidate: Godot 4.0 RC 2</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-2/</link>
-		<description>Tightening a few bolts here and there, Godot 4.0 RC 2 brings us one step closer to the stable release. We're now counting in days!</description>
+		<description>Tightening a few bolts here and there, Godot 4.0 RC 2 brings us one step closer to the stable release. We&#39;re now counting in days!</description>
 		
 		<category>Pre-release</category>
 		
@@ -155,7 +155,7 @@
 	<item>
 		<title>Dev snapshot: Godot 4.0 beta 17</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-17/</link>
-		<description>We're now just days away from the Release Candidate, working at full capacity on finalizing as many of the remaining high priority issues as we can. This beta adds audio blending in AnimationTree, fixes GDScript typed arrays, and refactors high quality texture import to enable ASTC support.</description>
+		<description>We&#39;re now just days away from the Release Candidate, working at full capacity on finalizing as many of the remaining high priority issues as we can. This beta adds audio blending in AnimationTree, fixes GDScript typed arrays, and refactors high quality texture import to enable ASTC support.</description>
 		
 		<category>Pre-release</category>
 		
@@ -181,7 +181,7 @@
 	<item>
 		<title>Dev snapshot: Godot 4.0 beta 16</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-16/</link>
-		<description>We're now just days away from the Release Candidate, working at full capacity on finalizing as many of the remaining high priority issues as we can. This beta includes .NET 7 support, better RichTextLabel minimum size calculation, and a lot of general quality of life improvements.</description>
+		<description>We&#39;re now just days away from the Release Candidate, working at full capacity on finalizing as many of the remaining high priority issues as we can. This beta includes .NET 7 support, better RichTextLabel minimum size calculation, and a lot of general quality of life improvements.</description>
 		
 		<category>Pre-release</category>
 		
@@ -194,7 +194,7 @@
 	<item>
 		<title>Dev snapshot: Godot 4.0 beta 15</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-15/</link>
-		<description>We're getting dangerously close to Release Candidate, finalizing many of the remaining high priority issues. This beta adds support Unicode identifiers in GDScript, custom resources in the Quick Open menu, multiple active plugins in parallel, and more!</description>
+		<description>We&#39;re getting dangerously close to Release Candidate, finalizing many of the remaining high priority issues. This beta adds support Unicode identifiers in GDScript, custom resources in the Quick Open menu, multiple active plugins in parallel, and more!</description>
 		
 		<category>Pre-release</category>
 		
@@ -231,7 +231,7 @@
 	</item>
 	
 	<item>
-		<title>Godot for AA/AAA game development - What's missing?</title>
+		<title>Godot for AA/AAA game development - What&#39;s missing?</title>
 		<link>https://godotengine.org/article/whats-missing-in-godot-for-aaa/</link>
 		<description>Godot 4.0 is coming out soon. It includes major improvements all across the board in both features, performance and usability. Still, one of the biggest questions the community has is: How does it compare with mainstream commercial offerings?</description>
 		
@@ -259,7 +259,7 @@
 	<item>
 		<title>Release candidate: Godot 3.5.2 RC 2</title>
 		<link>https://godotengine.org/article/release-candidate-godot-3-5-2-rc-2/</link>
-		<description>While all contributors are on the deck working to finalize the Godot 4.0 release, some of us are still backporting important bugfixes to the current stable branch, Godot 3.5. We're getting ready to release 3.5.2, now with a second Release Candidate available for testing.</description>
+		<description>While all contributors are on the deck working to finalize the Godot 4.0 release, some of us are still backporting important bugfixes to the current stable branch, Godot 3.5. We&#39;re getting ready to release 3.5.2, now with a second Release Candidate available for testing.</description>
 		
 		<category>Pre-release</category>
 		
@@ -272,7 +272,7 @@
 	<item>
 		<title>Godot 4.0 Documentation Sprint</title>
 		<link>https://godotengine.org/article/godot-4-0-docs-sprint/</link>
-		<description>We're starting a docs sprints to get the documentation ready for Godot Engine 4.0 release! Together, we can improve everyone's experience using the new version.</description>
+		<description>We&#39;re starting a docs sprints to get the documentation ready for Godot Engine 4.0 release! Together, we can improve everyone&#39;s experience using the new version.</description>
 		
 		<category>Events</category>
 		
@@ -285,7 +285,7 @@
 	<item>
 		<title>Dev snapshot: Godot 4.0 beta 11</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-11/</link>
-		<description>First snapshot of the year, Godot 4.0 beta 11! We took a bit longer to prepare this beta as there were a number of fairly big GDScript refactoring PRs (needed to fix many bugs), which we wanted to merge all at once. As such we expect that this beta 11 might introduce some new GDScript regressions, which we'll aim to fix for beta 12 next week.</description>
+		<description>First snapshot of the year, Godot 4.0 beta 11! We took a bit longer to prepare this beta as there were a number of fairly big GDScript refactoring PRs (needed to fix many bugs), which we wanted to merge all at once. As such we expect that this beta 11 might introduce some new GDScript regressions, which we&#39;ll aim to fix for beta 12 next week.</description>
 		
 		<category>Pre-release</category>
 		
@@ -311,7 +311,7 @@
 	<item>
 		<title>Dev snapshot: Godot 4.0 beta 10</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-10/</link>
-		<description>Happy holidays! After 3 months of frequent beta builds, we're taking a short break for the end of the year - and we leave you with 4.0 beta 10, with notable improvements to Animation, Navigation, Rendering, GDScript... a well-rounded snapshot for the holidays!</description>
+		<description>Happy holidays! After 3 months of frequent beta builds, we&#39;re taking a short break for the end of the year - and we leave you with 4.0 beta 10, with notable improvements to Animation, Navigation, Rendering, GDScript... a well-rounded snapshot for the holidays!</description>
 		
 		<category>Pre-release</category>
 		
