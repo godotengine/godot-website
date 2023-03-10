@@ -9,6 +9,7 @@ platinum:
     url: "https://heroiclabs.com/"
     image: "/assets/home/sponsors/heroiclabs.png"
 gold:
+silver:
   - name: "Affray Interactive"
     url: "https://scp.games/pandemic/"
     image: "/assets/home/sponsors/affray-interactive.png"
@@ -18,7 +19,9 @@ gold:
   - name: "Robot Gentleman"
     url: "http://robotgentleman.com/"
     image: "/assets/home/sponsors/robot-gentleman.png"
-silver:
   - name: "Striked"
     url: "https://striked.gg/"
     image: "/assets/home/sponsors/striked.png"
+  - name: "Zenva"
+    url: "https://academy.zenva.com/product/godot-4-game-development-mini-degree/?zva_src=godotengineorg-godot4md"
+    image: "/assets/home/sponsors/zenva.png"
