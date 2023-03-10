@@ -518,6 +518,21 @@
 		font-family: var(--default-font-family);
 	}
 
+	.sponsor-empty {
+		border: 3px dashed;
+		border-radius: 10px;
+		padding: 17px;
+		color: inherit;
+		text-decoration: none;
+		line-height: 1.4em;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.sponsor-empty:hover {
+		background-color: #8484841c;
+	}
+
 	.learn-more {
 		display: none;
 	}
@@ -545,30 +560,50 @@
 		<h3>Corporate Gold</h3>
 		<div class="grid gold">
 			
-			<a class="sponsor-card gold" href="https://scp.games/pandemic/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/affray-interactive.png" alt="Affray Interactive" loading="lazy">
-			</a>
-			
-			<a class="sponsor-card gold" href="https://playfulstudios.com/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/playful-studios.png" alt="Playful Studios" loading="lazy">
-			</a>
-			
-			<a class="sponsor-card gold" href="http://robotgentleman.com/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/robot-gentleman.png" alt="Robot Gentleman" loading="lazy">
-			</a>
-			
 		</div>
 		<h3>Corporate Silver</h3>
 		<div class="grid silver">
+			
+			<a class="sponsor-card silver" href="https://scp.games/pandemic/" target="_blank" rel="noopener">
+				<img src="/assets/home/sponsors/affray-interactive.png" alt="Affray Interactive" loading="lazy">
+			</a>
+			
+			<a class="sponsor-card silver" href="https://playfulstudios.com/" target="_blank" rel="noopener">
+				<img src="/assets/home/sponsors/playful-studios.png" alt="Playful Studios" loading="lazy">
+			</a>
+			
+			<a class="sponsor-card silver" href="http://robotgentleman.com/" target="_blank" rel="noopener">
+				<img src="/assets/home/sponsors/robot-gentleman.png" alt="Robot Gentleman" loading="lazy">
+			</a>
 			
 			<a class="sponsor-card silver" href="https://striked.gg/" target="_blank" rel="noopener">
 				<img src="/assets/home/sponsors/striked.png" alt="Striked" loading="lazy">
 			</a>
 			
+			<a class="sponsor-card silver" href="https://academy.zenva.com/product/godot-4-game-development-mini-degree/?zva_src=godotengineorg-godot4md" target="_blank" rel="noopener">
+				<img src="/assets/home/sponsors/zenva.png" alt="Zenva" loading="lazy">
+			</a>
+			
 		</div>
-		<p class="for-more" style="margin-top: 50px; text-align: left; opacity: 0.5;">For corporate sponsorships please write to <a href="mailto:contact@godot.foundation">contact@godot.foundation</a>.</p>
+		<p class="for-more" style="margin-top: 50px; text-align: left; opacity: 0.8;">For corporate sponsorships please write to <a href="mailto:contact@godot.foundation">contact@godot.foundation</a>.</p>
 	</div>
 </section>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Adding a prompt for empty sponsor grids.
+		const grids = document.querySelectorAll('.sponsors .grid');
+		grids.forEach(grid => {
+			if (grid.children.length === 0) {
+				const prompt = document.createElement('a');
+				prompt.classList.add('sponsor-empty');
+				prompt.setAttribute('href', 'mailto:contact@godot.foundation');
+				prompt.innerHTML = "Your logo here?<br>Get in touch!";
+				grid.appendChild(prompt);
+			}
+		});
+	});
+</script>
 
 </main>
 
