@@ -25,7 +25,7 @@ layout: default
 				{% if download.custom %}
 					{{download.custom}}
 				{% else %}
-					https://downloads.tuxfamily.org/godotengine/{{stable_version.name}}/{% if download.mono %}mono/{% endif %}Godot_v{{stable_version.name}}-stable_{{ download.slug }}
+					https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_{{ download.slug }}
 				{% endif %}
 			{% endcapture %}
 
@@ -89,7 +89,7 @@ layout: default
 					{% if download.custom %}
 						{{download.custom}}
 					{% else %}
-						https://downloads.tuxfamily.org/godotengine/{{stable_version.name}}/{% if download.mono %}mono/{% endif %}Godot_v{{stable_version.name}}-stable_{{ download.slug }}
+						https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_{{ download.slug }}
 					{% endif %}
 				{% endcapture %}
 
@@ -101,14 +101,14 @@ layout: default
 
 				{% unless page.ignore_export %}
 					<div class="download">
-						<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version.name}}/Godot_v{{stable_version.name}}-stable_export_templates.tpz">
+						<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_export_templates.tpz">
 							Export templates (Standard)
 						</a>
 						<span class="download-details">Used to export your games to all supported platforms</span>
 					</div>
 					{% unless page.ignore_mono %}
 					<div class="download">
-						<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version.name}}/mono/Godot_v{{stable_version.name}}-stable_mono_export_templates.tpz">
+						<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_mono_export_templates.tpz">
 							Export templates (.NET)
 						</a>
 						<span class="download-details">Used to export your games to all supported platforms · C# support</span>
@@ -221,12 +221,12 @@ layout: default
 				<h3>AAR library for Android</h3>
 				<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
 				<p>
-					<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version.name}}/godot-lib.{{stable_version.name}}.stable.release.aar">
+					<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/godot-lib.{{stable_version.name}}.stable.release.aar">
 						AAR library (standard)
 					</a>
 				</p>
 				<p>
-					<a href="https://downloads.tuxfamily.org/godotengine/{{stable_version.name}}/mono/godot-lib.{{stable_version.name}}.stable.mono.release.aar">
+					<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/godot-lib.{{stable_version.name}}.stable.mono.release.aar">
 						AAR library (.NET / C#)
 					</a>
 				</p>
