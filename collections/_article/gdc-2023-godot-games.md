@@ -5,7 +5,6 @@ categories: ["events"]
 author: Emi
 image: /storage/blog/covers/gdc2023.jpg
 date: 2023-03-07 14:00:00
-future: true
 ---
 
 <style>

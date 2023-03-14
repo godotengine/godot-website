@@ -4,8 +4,9 @@ excerpt: "Following the biggest Godot release ever we've collected several criti
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-0-1-rc-1.jpg
+image_caption_title: "Abandoned Spaceship"
+image_caption_description: "A demo scene by Jaanus Jaggo (Perfoon)"
 date: 2023-03-15 12:00:00
-future: true
 ---
 
 Two weeks ago we have published the biggest release in the history of Godot — [Godot 4.0](/article/godot-4-0-sets-sail). It marked the beginning of a new journey for the engine and its users, like yourself. And as is the case with every new beginning, some problems have been reported, some points of frictions have been identified, and so fixes and improvements are in order.
@@ -16,7 +17,7 @@ Please give it a try if you can. It should be safe to migrate your existing proj
 
 ## Highlights
 
-This release candidate includes some big changes which may interest a lot of users:
+This release candidate includes some changes which may interest a lot of users:
 
 - Multiple conditions for crashes and freezes have been addressed throughout the editor and the engine.
 
@@ -27,6 +28,10 @@ This release candidate includes some big changes which may interest a lot of use
 [Jump to the **Downloads** section.](#downloads)
 
 As usual, you can try it live with the [**online version of the Godot editor**](https://editor.godotengine.org/releases/4.0.1.rc1/) updated for this release.
+
+-----
+
+*The illustration picture is from* [**Abandoned Spaceship**](https://www.youtube.com/watch?v=Fm9a6FGBWbs) *by [Jaanus Jaggo (Perfoon)](https://twitter.com/JaanusJaggo), a beautiful demo scene made with Godot 4. Download and star this project on [GitHub](https://github.com/perfoon/Abandoned-Spaceship-Godot-Demo) or get it from the [Asset Library](https://godotengine.org/asset-library/asset/1733). Also follow Jaanus on [Twitter](https://twitter.com/JaanusJaggo) to see more of their work and maybe catch a glimpse of the next update to* [**BLASTRONAUT**](https://store.steampowered.com/app/1392650/BLASTRONAUT/) *!*
 
 ## What's new
 

@@ -24,6 +24,9 @@ collections:
     output: true
     permalink: /download/3.x/:name/index.html
 
+# Build collection items with a future date.
+future: true
+
 defaults:
   - scope:
       path: ""
