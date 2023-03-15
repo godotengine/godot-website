@@ -6,7 +6,7 @@ author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-0-1-rc-1.jpg
 image_caption_title: "Abandoned Spaceship"
 image_caption_description: "A demo scene by Jaanus Jaggo (Perfoon)"
-date: 2023-03-15 12:00:00
+date: 2023-03-15 10:00:00
 ---
 
 Two weeks ago we have published the biggest release in the history of Godot — [Godot 4.0](/article/godot-4-0-sets-sail). It marked the beginning of a new journey for the engine and its users, like yourself. And as is the case with every new beginning, some problems have been reported, some points of frictions have been identified, and so fixes and improvements are in order.
@@ -35,7 +35,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 
 ## What's new
 
-See the full changelog [on GitHub](https://github.com/godotengine/godot/compare/4.0-stable...fc7adaab7b3856a7831d402ea2bbb27efe7b7d8a), or in a text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/4.0.1/rc1/Godot_v4.0.1-rc1_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/4.0.1/rc1/Godot_v4.0.1-rc1_changelog_chrono.txt)) for an overview of all changes since 4.0-stable (102 commits – excluding merge commits ― from 49 contributors).
+See the full changelog [on GitHub](https://github.com/godotengine/godot/compare/4.0-stable...d23922ffebe48f29126c003411495737d07e5a9f) for an overview of all changes since 4.0-stable (103 commits – excluding merge commits ― from 49 contributors).
 
 Some of the most notable feature changes in this update are:
 
@@ -101,7 +101,7 @@ Some of the most notable feature changes in this update are:
 - Tiles editor: Fix TileSetEditor painting `texture_origin` Vector2i ([GH-73514](https://github.com/godotengine/godot/pull/73514)).
 - Tiles editor: Remember previously selected TileMap tile ([GH-74039](https://github.com/godotengine/godot/pull/74039)).
 
-This release is built from commit [`fc7adaab7`](https://github.com/godotengine/godot/commit/fc7adaab7b3856a7831d402ea2bbb27efe7b7d8a) (see [README](https://downloads.tuxfamily.org/godotengine/4.0.1/rc1/README.txt)).
+This release is built from commit [`d23922ffe`](https://github.com/godotengine/godot/commit/d23922ffebe48f29126c003411495737d07e5a9f) (see [README](https://downloads.tuxfamily.org/godotengine/4.0.1/rc1/README.txt)).
 
 ## Downloads
 
