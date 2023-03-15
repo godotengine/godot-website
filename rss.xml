@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0.1 RC 1</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-1-rc-1/</link>
+		<description>Following the biggest Godot release ever we&#39;ve collected several critical fixes and smaller usability improvements to make your experience with 4.0 more pleasant. This is the first release candidate for early adopters to test the changes, with the stable 4.0.1 release coming soon after.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-1-rc-1/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Wed, 15 Mar 2023 10:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-1-rc-1.jpg</image>
+	</item>
+	
+	<item>
 		<title>Maintenance release: Godot 3.5.2</title>
 		<link>https://godotengine.org/article/maintenance-release-godot-3-5-2/</link>
 		<description>We&#39;ve just released Godot 4.0 after 3+ years of intense development, but we also still support the existing 3.5 stable branch. This maintenance release fixes a handful of issues which have been solved in the past few months, and could be backported to the 3.5 branch.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Tue, 10 Jan 2023 15:51:50 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/63b/d87/318/63bd873180f42194998123.jpg</image>
-	</item>
-	
-	<item>
-		<title>2022: A Retrospective</title>
-		<link>https://godotengine.org/article/2022-retrospective/</link>
-		<description>The year 2022 was very special for us. We reached a lot of milestones within Godot and also in the community. This blog post will offer a small retrospective of the year.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/2022-retrospective/</guid>
-		<dc:creator>Juan Linietsky</dc:creator>
-		<pubDate>Sat, 31 Dec 2022 23:20:19 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/63a/ebf/03e/63aebf03e854b249543216.png</image>
 	</item>
 	
 
