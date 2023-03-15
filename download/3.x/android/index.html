@@ -73,7 +73,14 @@
 <link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <link rel="stylesheet" href="/assets/css/download.css">
 <style>
-
+	.digital-stores .digital-store-list {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 768px) {
+		.digital-stores .digital-store-list {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>
 
 
@@ -241,6 +248,7 @@
 			<div>
 				<ul>
 					<li>Digital store versions <strong>do not</strong> include .NET/C# support.</li>
+					<li><strong>Steam</strong> version is available as a <code>stable-3.5.2</code> beta branch.</li>
 					<li><strong>Steam</strong> version includes full set of export templates and demo projects.</li>
 				</ul>
 			</div>
@@ -249,7 +257,7 @@
 </div>
 
 <div class="platforms-wrapper">
-	<div id="platforms" class="container">
+	<div id="platforms" class="container" style="overflow: hidden;">
 		<h2>Supported platforms</h2>
 		
 		<div class="tabs platform-tabs">

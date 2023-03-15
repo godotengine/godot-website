@@ -212,9 +212,22 @@
 }
 
 .digital-stores .digital-store-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: 16px;
+}
+@media (max-width: 1200px) {
+    .digital-stores .digital-store-list {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .digital-stores .digital-store-list {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
 
 .btn.btn-digital-store {
@@ -225,6 +238,22 @@
     align-items: center;
     gap: 16px;
     padding: 12px 24px;
+}
+@media (max-width: 1200px) {
+    .btn.btn-digital-store {
+        justify-content: center;
+        gap: 12px;
+        min-width: 50%;
+    }
+}
+
+.digital-store-name {
+    font-weight: 600;
+    font-size: 105%;
+}
+
+.digital-store-logo img {
+    vertical-align: text-bottom;
 }
 
 .thankyou-wrapper {
