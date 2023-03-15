@@ -152,13 +152,14 @@ locally, some configuration options may need to be different. To define those, `
 
 ### Updating Godot download version
 
-When a new stable build of the engine is released, you need to update the number and date in the `data/_versions.yml`
-file. This looks like this:
+When a new stable build of the engine is released, you need to add its number and date to the `data/_versions.yml`
+file. It has several lists, one for each maintained major version of Godot. Pick the correct one, and **at the top of the list**
+add something similar to the following:
 
 ```
-# Godot download version
-stable_version: "3.5.1"
-stable_version_date: "28 September 2022"
+  - name: "4.0.1"
+    flavor: "stable"
+    release_date: "17 March 2023"
 ```
 
 After this change is merged and the website is built, everything referencing the engine version should be updated
