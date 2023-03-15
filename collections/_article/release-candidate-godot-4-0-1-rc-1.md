@@ -27,7 +27,7 @@ This release candidate includes some changes which may interest a lot of users:
 
 [Jump to the **Downloads** section.](#downloads)
 
-As usual, you can try it live with the [**online version of the Godot editor**](https://editor.godotengine.org/releases/4.0.1.rc1/) updated for this release.
+As usual, you can try it live with the [**online version of the Godot editor**](https://editor.godotengine.org/releases/4.0.1.rc1/godot.editor.html) updated for this release.
 
 -----
 
