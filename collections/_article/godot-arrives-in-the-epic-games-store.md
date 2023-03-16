@@ -7,7 +7,7 @@ image: /storage/blog/covers/godot-epic-games-store.jpg
 date: 2023-03-17 14:00:00
 ---
 
-We are honored to announce that Epic Games is offering Godot Engine a place on its own digital distribution platform, the Epic Games Store. Starting today, you can choose to use EGS to [download the engine](https://store.epicgames.com/p/godot-engine) and keep it up to date with every release.
+We are honored to announce that Epic Games is offering Godot Engine a place on the Epic Games Store. Starting today, you can choose to use EGS to [download the engine](https://store.epicgames.com/p/godot-engine) and keep it up to date with every release.
 
 Epic Games is a long-time supporter of Godot, and thanks to [their contributions](https://godotengine.org/article/godot-engine-was-awarded-epic-megagrant) we have been able to improve our rendering pipeline as well as our built-in scripting language, GDScript – the fruits of that work are now visible in the newly released Godot 4.0!
 
