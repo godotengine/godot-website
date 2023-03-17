@@ -1,6 +1,6 @@
 ---
 title: "Godot Arrives in the Epic Games Store"
-excerpt: "We are honored to announce that Epic Games is offering Godot Engine a place on its own digital distribution platform, the Epic Games Store."
+excerpt: "We are honored to announce that Epic Games is offering Godot Engine a place on Epic Game's own digital distribution platform, the Epic Games Store."
 categories: ["news"]
 author: Emi
 image: /storage/blog/covers/godot-epic-games-store.jpg
