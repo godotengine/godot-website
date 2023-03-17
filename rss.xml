@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot Arrives in the Epic Games Store</title>
+		<link>https://godotengine.org/article/godot-arrives-in-the-epic-games-store/</link>
+		<description>We are honored to announce that Epic Games is offering Godot Engine a place on its own digital distribution platform, the Epic Games Store.</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/godot-arrives-in-the-epic-games-store/</guid>
+		<dc:creator>Emi</dc:creator>
+		<pubDate>Fri, 17 Mar 2023 16:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godot-epic-games-store.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0.1 RC 2</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-1-rc-2/</link>
 		<description>Adding finishing touches to the first patch release of Godot 4, here comes 4.0.1 Release Candidate 2. It brings even more urgent fixes, and documentation improvements.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Thu, 12 Jan 2023 18:37:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/app/uploads/public/63c/053/77e/63c05377eaa1e774008524.jpg</image>
-	</item>
-	
-	<item>
-		<title>Godot 4.0 Documentation Sprint</title>
-		<link>https://godotengine.org/article/godot-4-0-docs-sprint/</link>
-		<description>We&#39;re starting a docs sprints to get the documentation ready for Godot Engine 4.0 release! Together, we can improve everyone&#39;s experience using the new version.</description>
-		
-		<category>Events</category>
-		
-		<guid>https://godotengine.org/article/godot-4-0-docs-sprint/</guid>
-		<dc:creator>Max Hilbrunner</dc:creator>
-		<pubDate>Wed, 11 Jan 2023 13:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/63b/eba/ed6/63bebaed69c6c649257378.png</image>
 	</item>
 	
 
