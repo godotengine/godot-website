@@ -4,7 +4,7 @@ excerpt: "We are honored to announce that Epic Games is offering Godot Engine a 
 categories: ["news"]
 author: Emi
 image: /storage/blog/covers/godot-epic-games-store.jpg
-date: 2023-03-17 14:00:00
+date: 2023-03-17 16:00:00
 ---
 
 We are honored to announce that Epic Games is offering Godot Engine a place on the Epic Games Store. Starting today, you can choose to use EGS to [download the engine](https://store.epicgames.com/p/godot-engine) and keep it up to date with every release.
