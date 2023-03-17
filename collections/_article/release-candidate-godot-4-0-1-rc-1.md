@@ -31,7 +31,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 
 -----
 
-*The illustration picture is from* [**Abandoned Spaceship**](https://www.youtube.com/watch?v=Fm9a6FGBWbs) *by [Jaanus Jaggo (Perfoon)](https://twitter.com/JaanusJaggo), a beautiful demo scene made with Godot 4. Download and star this project on [GitHub](https://github.com/perfoon/Abandoned-Spaceship-Godot-Demo) or get it from the [Asset Library](https://godotengine.org/asset-library/asset/1733). Also follow Jaanus on [Twitter](https://twitter.com/JaanusJaggo) to see more of their work and maybe catch a glimpse of the next update to* [**BLASTRONAUT**](https://store.steampowered.com/app/1392650/BLASTRONAUT/) *!*
+*The illustration picture is from* [**Abandoned Spaceship**](https://www.youtube.com/watch?v=Fm9a6FGBWbs) *by [Jaanus Jaggo (Perfoon)](https://twitter.com/JaanusJaggo), a beautiful demo scene made with Godot 4. Download and star this project on [GitHub](https://github.com/perfoon/Abandoned-Spaceship-Godot-Demo) or get it from the [Asset Library](https://godotengine.org/asset-library/asset/1733). Also follow Jaanus on [Twitter](https://twitter.com/JaanusJaggo) to see more of their work and maybe catch a glimpse of the next update to* [**BLASTRONAUT**](https://store.steampowered.com/app/1392650/BLASTRONAUT/)!
 
 ## What's new
 
