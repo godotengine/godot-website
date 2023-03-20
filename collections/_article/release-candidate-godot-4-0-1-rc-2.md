@@ -35,7 +35,7 @@ See the full changelog [on GitHub](https://github.com/godotengine/godot/compare/
 Some of the most notable feature changes in this update are:
 
 - Editor: Fix MultiNodeEdit not cleared after deleting nodes ([GH-74795](https://github.com/godotengine/godot/pull/74795)).
-- Editor: Disallow creating a project in the Home or Documents folder ([GH-74974](https://github.com/godotengine/godot/pull/74964)).
+- Editor: Disallow creating a project in the Home or Documents folder ([GH-74964](https://github.com/godotengine/godot/pull/74964)).
 - Editor: Fix error when opening Inspector's dots menu ([GH-74974](https://github.com/godotengine/godot/pull/74974)).
 - Input: Fix InputEventConfigurationDialog modifies original event ([GH-74858](https://github.com/godotengine/godot/pull/74858)).
 - Navigation: Allow negative NavigationAgent2D path debug line_width for thin lines ([GH-74800](https://github.com/godotengine/godot/pull/74800)).
