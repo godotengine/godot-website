@@ -1,7 +1,7 @@
 ---
 title: "Updates on the release cycle – and Godot 2.0.1"
 excerpt: "After the lengthy development of Godot 2.0, we decided to try to have a shorter release cycle (therefore with several releases in the 2.x branch instead of the massive 2.1 release planned up to now) and to provide maintenance releases for the current stable branch. As a start, Godot 2.0.1 is released with several usability enhancements and bug fixes."
-categories: ["pre-release"]
+categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/56d/dbf/0e0/56ddbf0e04286898440859.png
 date: 2016-03-07 00:00:00
