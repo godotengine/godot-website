@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/623/0c7/a89/6230c7a89237e646159568.jpg
 date: 2022-03-15 17:06:49
 ---
 
-It's already been 2 months since [3.5 beta 1](/article/dev-snapshot-3-5-beta-2)! Between biweekly [4.0 alpha](/article/dev-snapshot-godot-4-0-alpha-4) builds and maintenance releases for the stable branch ([3.4.3](/article/maintenance-release-godot-3-4-3), [3.4.4 RC 1](/article/release-candidate-godot-3-4-4-rc-1)), the release team – i.e. me – is spread thin... but these two months gave time for a lot of improvements in the `3.x` branch and this new **3.5 beta 2** should be worth the wait!
+It's already been 2 months since [3.5 beta 1](/article/dev-snapshot-godot-3-5-beta-1)! Between biweekly [4.0 alpha](/article/dev-snapshot-godot-4-0-alpha-4) builds and maintenance releases for the stable branch ([3.4.3](/article/maintenance-release-godot-3-4-3), [3.4.4 RC 1](/article/release-candidate-godot-3-4-4-rc-1)), the release team – i.e. me – is spread thin... but these two months gave time for a lot of improvements in the `3.x` branch and this new **3.5 beta 2** should be worth the wait!
 
 This is a big update with close to 350 commits from 82 contributors since the previous beta! Some of the main highlights added in beta 2 are physics interpolation for 3D, and a new OccluderShapePolygon for your 3D occlusion needs.
 
