@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0.2 RC 1</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-2-rc-1/</link>
+		<description>With the GDC 2023 past us, we are getting ready to officially being the 4.1 dev cycle. But that doesn&#39;t mean current Godot 4.0 users have to wait long, because here&#39;s a release candidate for 4.0.2, with a handful of fixes and extra enhancements!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-2-rc-1/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Fri, 31 Mar 2023 15:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-2-rc-1.jpg</image>
+	</item>
+	
+	<item>
 		<title>Maintenance release: Godot 4.0.1</title>
 		<link>https://godotengine.org/article/maintenance-release-godot-4-0-1/</link>
 		<description>The first of many, Godot 4.0.1 comes with important fixes and usability improvements to Godot 4.0. Multiple crashes, bugs, and smaller annoyances have been addressed in this patch release, and we recommend all Godot 4 users to update.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Juan Linietsky</dc:creator>
 		<pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/whats-missing-in-godot-for-aaa.jpg</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 12</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-12/</link>
-		<description>We released a massive 4.0 beta 11 on Tuesday, and users found a lot of regressions – as we expected! Contributors fixed many of the new regressions quickly, and we merged another big batch of changes. As the pace intensifies in the lead-up to the first Release Candidate, we decided to make more frequent beta snapshots for testing.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-12/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Fri, 13 Jan 2023 15:53:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/app/uploads/public/63c/17e/368/63c17e3689796351687911.jpg</image>
 	</item>
 	
 
