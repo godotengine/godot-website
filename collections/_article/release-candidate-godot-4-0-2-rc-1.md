@@ -1,6 +1,6 @@
 ---
 title: "Release candidate: Godot 4.0.2 RC 1"
-excerpt: "With the GDC 2023 past us, we are getting ready to officially being the 4.1 dev cycle. But that doesn't mean current Godot 4.0 users have to wait long, because here's a release candidate for 4.0.2, with a handful of fixes and extra enhancements!"
+excerpt: "With the GDC 2023 past us, we are getting ready for the 4.1 dev cycle. But that doesn't mean current Godot 4.0 users have to wait, because here's a release candidate for 4.0.2, with a handful of fixes and extra enhancements!"
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-0-2-rc-1.jpg
@@ -9,9 +9,9 @@ image_caption_description: "A 3D physics demo by GDQuest"
 date: 2023-03-31 15:00:00
 ---
 
-This March was all about GDC for the majority of Godot maintainers. We had a blast [hosting multiple Godot game developers](/article/gdc-2023-godot-games) and talking to people in the industry about our little open source engine! We have a lot to tell you about the future of Godot, and we have a lot of plans for the work that needs to be done. Be sure to keep an eye on this blog and our social accounts for more news and stories to come.
+This March was all about GDC for the majority of Godot maintainers. We had a blast [hosting multiple Godot game developers](/article/gdc-2023-godot-games) and talking to people in the community and industry about our little open source engine! We have a lot to tell you about the future of Godot, and we have a lot of plans for the work that needs to be done. Be sure to keep an eye on this blog and our social accounts for more news and stories to come.
 
-The conference and the events around it were happening, but the development of the engine itself didn't stop for a day! Thanks to relentless contributors we have release [Godot 4.0.1 two weeks ago](/article/maintenance-release-godot-4-0-1), and now we are getting ready to release a second patch release. With it we keep focusing on the immediate issues, crashes, and smaller usability improvements, that can be safely made available to you right now.
+While the conference and the events around it were happening, the development of the engine itself didn't stop for a day! Thanks to tireless contributors we have release [Godot 4.0.1 two weeks ago](/article/maintenance-release-godot-4-0-1), and now we are getting ready to release a second patch release. With it we keep focusing on the immediate issues, crashes, and smaller usability improvements, that can be safely made available to you right now.
 
 As this is a [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate), we don't expect any new problems and encourage you to give it a try. It should be safe to migrate your existing projects to 4.0.2, but to make sure of that we need your help testing the changes. If there are no significant regressions reported with release candidates, a stable version is going to be published soon. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
 
@@ -21,7 +21,7 @@ This release candidate includes some changes which may interest a lot of users:
 
 - macOS users have been experiencing editor crashes when trying to save scenes with a key combination or from the top menu, which has now been fixed ([GH-75254](https://github.com/godotengine/godot/pull/75254)).
 - There were several reports on Windows of the editor randomly ignoring keys after alt-tabbing or pressing the Win key; this has also been fixed ([GH-75172](https://github.com/godotengine/godot/pull/75172)).
-- Android platform has received a number of improvements, including support for SDK 33 (Android 13) ([GH-75203](https://github.com/godotengine/godot/pull/75203)).
+- The Android platform has received a number of improvements, including support for SDK 33 (Android 13) ([GH-75203](https://github.com/godotengine/godot/pull/75203)).
 - The engine will no longer try to load unsupported compressed texture formats in exported projects ([GH-74684](https://github.com/godotengine/godot/pull/74684)).
 
 [Jump to the **Downloads** section.](#downloads)
@@ -30,7 +30,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 
 -----
 
-*The illustration picture is from* **3D Balls Pool** *— one of many playable demos made by the team at [GDQuest](https://www.gdquest.com/) to showcase the new features of Godot 4. You have probably seen many of them, while reading the [Godot 4.0 release post](/article/godot-4-0-sets-sail). The entire collection is available on [GitHub](https://github.com/gdquest-demos/godot-4.0-new-features), and you can download it, learn how it all works, and play around yourself! GDQuest folks also produce quality [YouTube tutorials](https://www.youtube.com/@GDQuest) and [professional courses](https://gdquest.mavenseed.com/courses/) for Godot.*
+*The illustration picture is from* **3D Balls Pool** *— one of many playable demos made by the team at [GDQuest](https://www.gdquest.com/) to showcase the new features of Godot 4. You have probably seen many of them in the [Godot 4.0 release post](/article/godot-4-0-sets-sail). The entire collection is available on [GitHub](https://github.com/gdquest-demos/godot-4.0-new-features), and you can download it, learn how it all works, and play around yourself! The GDQuest folks also produce quality [YouTube tutorials](https://www.youtube.com/@GDQuest) and [professional courses](https://gdquest.mavenseed.com/courses/) for Godot.*
 
 ## What's new
 
