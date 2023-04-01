@@ -146,6 +146,14 @@ Germany:
     links:
       - title: Facebook
         url: https://www.facebook.com/groups/359812631518879
+  - name: Godot User Group Berlin
+    links:
+      - title: Meetup
+        url: https://www.meetup.com/godot-user-group-berlin/
+      - title: Mastodon
+        url: https://mastodon.gamedev.place/@GodotUserGroupBerlin
+      - title: Discord
+        url: https://discord.gg/Sm3CgrqqQa
 India:
   - name: Godot India
     links:
