@@ -147,6 +147,9 @@ Germany:
       - title: Facebook
         url: https://www.facebook.com/groups/359812631518879
   - name: Godot User Group Berlin
+    coordinates:
+      - 52.51279
+      - 13.44978
     links:
       - title: Meetup
         url: https://www.meetup.com/godot-user-group-berlin/
