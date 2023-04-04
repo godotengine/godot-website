@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Maintenance release: Godot 4.0.2</title>
+		<link>https://godotengine.org/article/maintenance-release-godot-4-0-2/</link>
+		<description>As the work on Godot 4.1 continues, more fixes and enhancements become available to existing 4.0 users as patch releases. Meet Godot 4.0.2, addressing more of your reports, including several regressions from 4.0.1, and improving platform support for Android, macOS, and Windows!</description>
+		
+		<category>Release</category>
+		
+		<guid>https://godotengine.org/article/maintenance-release-godot-4-0-2/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Tue, 04 Apr 2023 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-2.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0.2 RC 1</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-2-rc-1/</link>
 		<description>With the GDC 2023 past us, we are getting ready for the 4.1 dev cycle. But that doesn&#39;t mean current Godot 4.0 users have to wait, because here&#39;s a release candidate for 4.0.2, with a handful of fixes and extra enhancements!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Tue, 17 Jan 2023 17:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-0-beta-13.jpg</image>
-	</item>
-	
-	<item>
-		<title>Godot for AA/AAA game development - What&#39;s missing?</title>
-		<link>https://godotengine.org/article/whats-missing-in-godot-for-aaa/</link>
-		<description>Godot 4.0 is coming out soon. It includes major improvements all across the board in both features, performance and usability. Still, one of the biggest questions the community has is: How does it compare with mainstream commercial offerings?</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/whats-missing-in-godot-for-aaa/</guid>
-		<dc:creator>Juan Linietsky</dc:creator>
-		<pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/whats-missing-in-godot-for-aaa.jpg</image>
 	</item>
 	
 
