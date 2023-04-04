@@ -9,7 +9,7 @@ image_caption_description: A demo scene by Raffaele Picca
 date: 2023-03-20 12:00:00
 ---
 
-Just three weeks ago we have [published Godot 4.0](/article/godot-4-0-sets-sail), the biggest body of work Godot contributors have managed to produce in the engine's entire history. A backlog of bugs and enhancements comes with that territory, and we've been working hard and fast on the most critical fixes during that time. On some smaller and easy-to-implement enhancements too!
+Just three weeks ago we [published Godot 4.0](/article/godot-4-0-sets-sail), the biggest body of work Godot contributors have managed to produce in the engine's entire history. A backlog of bugs and enhancements comes with that territory, and we've been working hard and fast on the most critical fixes during that time. On some smaller and easy-to-implement enhancements too!
 
 The result of this work is **Godot 4.0.1**, the first patch release for Godot 4, available now! This version addresses several conditions for crashes and freezes, improves the project converter, and updates the engine documentation and translations. All these improvements will also be available in the future 4.1 release later this year. And as Godot contributors continue their work on Godot 4.1, some more fixes and improvements will trickle down to future 4.0.x releases.
 
