@@ -6,6 +6,9 @@ godot_3:
     flavor: "stable"
     release_date: "28 September 2022"
 godot_4:
+  - name: "4.0.2"
+    flavor: "stable"
+    release_date: "4 April 2023"
   - name: "4.0.1"
     flavor: "stable"
     release_date: "20 March 2023"
