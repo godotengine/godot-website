@@ -4,7 +4,7 @@ excerpt: "We attended the Game Developers Conference (GDC) in San Francisco this
 categories: ["events"]
 author: Clay John
 image: /storage/blog/covers/gdc-2023-retrospective.jpg
-date: 2023-04-05 14:00:00
+date: 2023-04-06 14:00:00
 ---
 
 For the first time ever, Godot had a booth at the [Game Developers Conference](https://gdconf.com/) in San Francisco. In the past we never considered having a booth as the cost is totally prohibitive for us. However, this year the booth was graciously donated by W4 Games. Without this huge donation, it would not have been possible to have the kind of presence we had.
