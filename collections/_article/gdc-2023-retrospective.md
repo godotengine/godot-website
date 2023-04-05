@@ -3,7 +3,7 @@ title: "GDC 2023: Retrospective"
 excerpt: "We attended the Game Developers Conference (GDC) in San Francisco this year."
 categories: ["events"]
 author: Clay John
-image: /storage/blog/covers/gdc2023.jpg
+image: /storage/blog/covers/gdc-2023-retrospective.jpg
 date: 2023-04-05 14:00:00
 ---
 
@@ -20,6 +20,8 @@ One thing that was very clear throughout the week is that the industry is ready 
 
 ## What went well
 
+![](/storage/blog/gdc/2023/crowd.jpg)
+
 **The booth:** The booth was an amazing place to hang out, chat, and play a few games. From the time the expo hall opened until it closed each day, the booth was full of people. We were very pleased to see the number of people interested in Godot and games made with Godot!
 
 **The Godot party:** Thank you to GitHub for sponsoring the Godot Party at GitHub HQ. They were truly wonderful hosts who went above and beyond. At the party, we had dinner, Godot-themed drinks, and lovely talks from both [Nathan (GDQuest)](https://www.youtube.com/watch?v=ZRFv2rTJLUY) and [Juan (reduz)](https://www.youtube.com/watch?v=XduuHNOGGqI). The Godot Party was an excellent opportunity to mingle with other Godot community members and unwind after a busy day.
@@ -29,6 +31,8 @@ One thing that was very clear throughout the week is that the industry is ready 
 **The pins:** We purchased small pins to give away at the booth and they were a huge hit. People loved them and we loved giving them away. We had many people track down the booth after seeing someone else displaying a Godot pin.
 
 ## What we can improve
+
+![](/storage/blog/gdc/2023/gh-event.jpg)
 
 **More pins:** We ordered 1000 pins to giveaway at the booth and when meeting other folks in the industry. Fortunately for us Ariel Manzur (through Ramatak) ordered 1000 more for us. The pins went fast and they drew a lot of people to the booth. Next year we would like to seek sponsors in advance specifically to buy pins (and maybe other swag).
 
@@ -44,15 +48,14 @@ One thing that was very clear throughout the week is that the industry is ready 
 
 ## Final thoughts
 
+![](/storage/blog/gdc/2023/booth.jpg)
+
 Overall, GDC was fun, exhausting, and productive. We have been given a lot think about and discuss as we look forward to the next year of development. In the coming months expect some exciting announcements as well as more detailed plans for development of Godot 3.6 and 4.1.
 
-## Support
-
 While Godot is now starting to have a large presence in the industry, we do so on a shoestring budget. The cost to the Godot Foundation for attending GDC was only a few thousand dollars (spent on the pins, t-shirts, and reimbursements for some volunteers and exhibitors). Large events like this aren’t generally possible for us unless a company brings us along (like W4 did this year). Despite the huge amount of support we received to attend GDC we still rely on donations to fund development.
+
+## Support
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors in their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
 If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
-
-
-
