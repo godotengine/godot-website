@@ -34,7 +34,7 @@ Two things became very clear to us throughout the week. The first is that the in
 
 ![Godot GitHub party](/storage/blog/gdc/2023/gh-event.jpg)
 
-**More pins:** We ordered 1000 pins to giveaway at the booth and when meeting other folks in the industry. Fortunately for us, Ariel Manzur (through Ramatak) ordered 1,000 more for the booth. The pins went fast and they drew a lot of people to the booth. Next year we would like to seek sponsors in advance specifically to buy pins (and maybe other swag).
+**More pins:** We ordered 1,000 pins to giveaway at the booth and when meeting other folks in the industry. Fortunately for us, Ariel Manzur (through Ramatak) ordered 1,000 more for the booth. The pins went fast and they drew a lot of people to the booth. Next year we would like to seek sponsors in advance specifically to buy pins (and maybe other swag).
 
 **T-shirts:** We ordered T-shirts for all the volunteers who would be staffing the booth. While not at the booth, many of us were approached by Godot users and fans who noticed the shirt. Next year we would like to have the Godot logo on the front and the back of the shirt to be seen by even more people!
 
