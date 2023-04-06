@@ -16,7 +16,7 @@ To give you a taste of what the booth (and our experience at GDC) was like, here
 Edited by Emi. Music track: [Builder - QUEEN JAZZ](https://queenjazz.bandcamp.com/album/bops) (used with permission).
 
 In this post we would like to discuss our experience from the perspective of the project and highlight what went well and what we could have improved.
-Two things thing became very clear to us throughout the week. The first is that the industry is ready for an open source game engine to stand shoulder-to-shoulder with the giants in the industry. The second is that people are overwhelmingly rooting for our continued success. A special thank you to everyone who cares about the project and wants us to succeed; we do this for you.
+Two things became very clear to us throughout the week. The first is that the industry is ready for an open source game engine to stand shoulder-to-shoulder with the giants in the industry. The second is that people are overwhelmingly rooting for our continued success. A special thank you to everyone who cares about the project and wants us to succeed; we do this for you.
 
 ## What went well
 
@@ -50,7 +50,7 @@ Two things thing became very clear to us throughout the week. The first is that 
 
 ![Godot GDC booth](/storage/blog/gdc/2023/booth.jpg)
 
-Overall, GDC was fun, exhausting, and productive. We have been given a lot think about and discuss as we look forward to the next year of development. In the coming months expect some exciting announcements as well as more detailed plans for development of Godot 3.6 and 4.1.
+Overall, GDC was fun, exhausting, and productive. We have been given a lot to think about and discuss as we look forward to the next year of development. In the coming months expect some exciting announcements as well as more detailed plans for development of Godot 3.6 and 4.1.
 
 While Godot is now starting to have a large presence in the industry, we do so on a shoestring budget. The cost to the Godot Foundation for attending GDC was only a few thousand dollars (spent on the pins, t-shirts, and reimbursements for some volunteers and exhibitors). Large events like this aren’t generally possible for us unless a company brings us along (like W4 did this year). Despite the huge amount of support we received to attend GDC, we still rely on donations to fund development.
 
