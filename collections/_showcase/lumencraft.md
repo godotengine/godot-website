@@ -9,11 +9,13 @@ release_date: February 2023
 
 image: "/assets/showcase/lumencraft-header.jpg"
 gallery: [
+  "/assets/showcase/lumen-showcase.jpg",
 	"/assets/showcase/lumencraft-1.jpg",
-  "/assets/showcase/lumencraft-2.jpg",
   "/assets/showcase/lumencraft-3.jpg",
 ]
 youtube_id: "LC29HveHImg"
+
+featured_in_home: true
 
 windows: true
 linux: true
