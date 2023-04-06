@@ -153,6 +153,18 @@ layout: default
 				</a>
 				{% endif %}
 
+				{% if page.appstore %}
+				<a href="{{ page.appstore }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+					View on App Store
+				</a>
+				{% endif %}
+
+				{% if page.googleplay %}
+				<a href="{{ page.googleplay }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+					View on Google Play
+				</a>
+				{% endif %}
+
 				{% if page.custom %}
 				<a href="{{ page.custom }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
 					Learn More
