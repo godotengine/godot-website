@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 3.6 beta 1"
-excerpt: ""
+excerpt: "It's time to start testing the next feature release of Godot 3, packed with over 500 fixes and enhancements which don't require any compatibility breaking changes!"
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-1.jpg
@@ -9,11 +9,11 @@ image_caption_description: A game by Ivy Sly
 date: 2023-04-13 15:00:00
 ---
 
-Our biggest milestone in 4 years, Godot 4.0, has just been [released a month ago](/article/godot-4-0-sets-sail/) (and already got [a couple](/article/maintenance-release-godot-4-0-1/) maintenance [fixes](/article/maintenance-release-godot-4-0-2/)). The reception has been great, and we're already hard at work on the 4.1 milestone with a bunch of improvements.
+Our biggest milestone in 4 years, Godot 4.0, has just been [released a month ago](/article/godot-4-0-sets-sail/). The reception has been great, and we're already hard at work on the 4.1 milestone with a bunch of improvements. But that doesn't mean we're forgetting Godot 3 users and their projects, which they plan to maintain for months or years to come.
 
-But we're not forgetting about users with Godot 3 projects, which they plan to maintain for months or years to come. The previous stable branch, Godot 3.5, is still receiving [maintenance updates](/article/maintenance-release-godot-3-5-2/), and last but not least, we're working on Godot 3.6 as a feature update to the 3.x branch.
+The current stable Godot 3 version, 3.5, has just received a new [maintenance update](/article/maintenance-release-godot-3-5-2/), addressing several reported issues. At the same time we've been working on the next feature update to the 3.x branch — Godot 3.6.
 
-Development on Godot 3.6 is slower paced, as most contributors focus on the 4.x branch, which is where the future of Godot lies. But little by little, improvements and bugfixes are being backported to the 3.x branch and we've accumulated enough of those now to propose a **3.6 beta 1** to start the testing phase leading to the stable release.
+The development is slower paced, as most contributors focus on the 4.x branch, which is where the future of Godot lies. But little by little, improvements and bugfixes are being backported and we've accumulated enough of those now to propose a **3.6 beta 1**, to start the testing phase leading to the stable release.
 
 [Jump to the **Downloads** section.](#downloads)
 
@@ -80,12 +80,12 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 ## Bug reports
 
-As a tester, you are encouraged to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check first the [existing issues on GitHub](https://github.com/godotengine/godot/issues), using the search function with relevant keywords, to ensure that the bug you experience is not known already.
+As a tester, you are encouraged to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
 
-In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 3.5.x no longer works in 3.6 beta 1).
+In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 3.5.x, but no longer works in 3.6 beta 1).
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](https://godotengine.org/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](https://godotengine.org/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
