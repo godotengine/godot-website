@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 3.6 beta 1</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/</link>
+		<description>It&#39;s time to start testing the next feature release of Godot 3, packed with over 500 fixes and enhancements which don&#39;t require any compatibility breaking changes!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Thu, 13 Apr 2023 15:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-1.jpg</image>
+	</item>
+	
+	<item>
 		<title>GDC 2023: Retrospective</title>
 		<link>https://godotengine.org/article/gdc-2023-retrospective/</link>
 		<description>We attended the Game Developers Conference (GDC) in San Francisco this year.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Wed, 25 Jan 2023 10:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-0-beta-15.jpg</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 14</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-14/</link>
-		<description>Beta snapshots are getting out quicker to ensure stability and quickly spot regressions! This time around there are improvements to CanvasItem draw methods, TileMap, AnimationStateMachine, and more!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-14/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Fri, 20 Jan 2023 14:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-0-beta-14.jpg</image>
 	</item>
 	
 
