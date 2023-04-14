@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Direct3D 12: Adventures in Shaderland</title>
+		<link>https://godotengine.org/article/d3d12-adventures-in-shaderland/</link>
+		<description>Godot is about to get a Direct3D 12 rendering driver. This is a discussion on the exotic approaches taken to face some of the challenges posed in the area of shaders.</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/d3d12-adventures-in-shaderland/</guid>
+		<dc:creator>Pedro J. Estébanez</dc:creator>
+		<pubDate>Fri, 14 Apr 2023 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/d3d12-adventures-in-shaderland.jpg</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 3.6 beta 1</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/</link>
 		<description>It&#39;s time to start testing the next feature release of Godot 3, packed with over 500 fixes and enhancements which don&#39;t require any compatibility breaking changes!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 27 Jan 2023 15:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-0-beta-16.jpg</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.0 beta 15</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-15/</link>
-		<description>We&#39;re getting dangerously close to Release Candidate, finalizing many of the remaining high priority issues. This beta adds support Unicode identifiers in GDScript, custom resources in the Quick Open menu, multiple active plugins in parallel, and more!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-0-beta-15/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Wed, 25 Jan 2023 10:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-0-beta-15.jpg</image>
 	</item>
 	
 
