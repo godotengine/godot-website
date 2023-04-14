@@ -5,14 +5,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">
-	<meta name="description" content="{{ page.description | default: 'Free and open source 2D and 3D game engine' }}">
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Free and open source 2D and 3D game engine{% endif %}">
 	<meta name="theme-color" content="#3d8fcc">
 	<meta property="og:site_name" content="Godot Engine">
 	<meta property="og:url" content="{{ site.url }}{{ page.url | replace_first: 'index.html', '' }}">
 	<meta name="twitter:site" content="@godotengine">
 
 	<meta property="og:title" content="{{ page.title | default: 'Godot Engine' }}">
-	<meta property="og:description" content="{{ page.description | default: 'Free and open source 2D and 3D game engine' }}">
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Free and open source 2D and 3D game engine{% endif %}">
 	<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/og_image.png' }}">
 	<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 	<meta name="twitter:card" content="summary_large_image">
