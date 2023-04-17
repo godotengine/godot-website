@@ -21,7 +21,7 @@ Please note these are aspirational: we hope to have all of the following finishe
 
 1. **Identify bottlenecks in 3D rendering (i.e. main scene shader)**
 
-    Right now when profiling rendering on both mobile and desktop, we notice that the depth-only passes (depth prepass and shadow pass) are taking much longer than they should. The opaque pass also appears slower than it should, even in less complex scenes. While most users are noticing overall performance improvements with Godot 4.0, we suspect that performance should be even better.
+    Right now, when profiling rendering on both mobile and desktop, we notice that the depth-only passes (depth prepass and shadow pass) are taking much longer than they should. The opaque pass also appears slower than it should, even in less complex scenes. While most users are noticing overall performance improvements with Godot 4.0, we suspect that performance should be even better.
 
     Early profiling indicates that we have a bottleneck in the vertex shader (which may explain why the issue exists in depth-only passes as well) which is likely memory-bound. Typical solutions to a memory bound vertex shader include reducing <abbr title="Vector General-Purpose Register">VGPR</abbr> usage to improve occupancy, reducing the amount of data accessed by the vertex shader, improve vertex shader access patterns to ensure we are not thrashing the cache.
 
