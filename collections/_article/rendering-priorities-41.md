@@ -15,21 +15,21 @@ As explained [earlier](https://godotengine.org/article/release-management-4-0-an
 
 Below I list some of our top priorities on the [rendering team](https://godotengine.org/teams/#rendering) for Godot 4.1 along with a brief description. These are presented in no particular order and are grouped based on whether they relate to performance improvements, stability, or usability.
 
-Please note these are aspirational, we hope to have all of the following finished in time for 4.1, but we may not. We don’t demand contributors work on anything specific, nor will we turn away useful contributions not on the roadmap. If you are interested in contributing to the rendering side of Godot, but none of these topics are interesting to you or if you feel something else should have higher priority, please contribute anyway. We will still be merging and reviewing feature PRs and bugfixes not listed on this page.
+Please note these are aspirational: we hope to have all of the following finished in time for 4.1, but we may not. We don’t demand contributors work on anything specific, nor will we turn away useful contributions not on the roadmap. If you are interested in contributing to the rendering side of Godot, but none of these topics are interesting to you or if you feel something else should have higher priority, please contribute anyway. We will still be merging and reviewing feature PRs and bug fixes not listed on this page.
 
 #### Performance
 
 1. **Identify bottlenecks in 3D rendering (i.e. main scene shader)**
 
-    Right now when profiling rendering on both mobile and desktop we notice that the depth-only passes (depth prepass and shadow pass) are taking much longer than they should and that the opaque pass is appearing slower than it should even in lower complexity scenes. While most users are noticing overall performance improvements with Godot 4.0, we suspect that performance should be even better.
+    Right now when profiling rendering on both mobile and desktop, we notice that the depth-only passes (depth prepass and shadow pass) are taking much longer than they should. The opaque pass also appears slower than it should, even in less complex scenes. While most users are noticing overall performance improvements with Godot 4.0, we suspect that performance should be even better.
 
-    Early profiling indicates that we have a bottleneck in the vertex shader (which may explain why the issue exists in depth-only passes as well) which is likely memory-bound. Typical solutions to a memory bound vertex shader include reducing VGPR usage to improve occupancy, reducing the amount of data accessed by the vertex shader, improve vertex shader access patterns to ensure we are not thrashing the cache.
+    Early profiling indicates that we have a bottleneck in the vertex shader (which may explain why the issue exists in depth-only passes as well) which is likely memory-bound. Typical solutions to a memory bound vertex shader include reducing <abbr title="Vector General-Purpose Register">VGPR</abbr> usage to improve occupancy, reducing the amount of data accessed by the vertex shader, improve vertex shader access patterns to ensure we are not thrashing the cache.
 
     **Assigned:** [Bastiaan](https://github.com/BastiaanOlij) and [I](https://github.com/clayjohn) have been looking into this and we welcome anyone else who would also like to help.
 
 2. **Time slicing DirectionalLight3D shadows**
 
-    DirectionalLight3D shadows are camera dependent. Unfortunately, this means they have to update every frame. When rendering shadows with 4 splits this creates an awful lot of draw calls and work for the GPU each frame. Our plan is to add optional "time slicing" to allow updating further splits less frequently. For example, split 3 and 4 could alternate frames to update. This will reduce the overall work submitted to the GPU each frame, and if implemented well, can be done without noticeable quality loss.
+    DirectionalLight3D shadows are camera-dependent. Unfortunately, this means they have to update every frame. When rendering shadows with 4 splits, this creates an awful lot of draw calls and work for the GPU each frame. Our plan is to add optional "time slicing" to allow updating further splits less frequently. For example, split 3 and 4 could alternate frames to update. This will reduce the overall work submitted to the GPU each frame. If implemented well, this can be done without a noticeable quality loss.
 
     **Assigned:** [Bastiaan](https://github.com/BastiaanOlij) will be looking into this within the coming weeks.
 
@@ -49,7 +49,7 @@ Please note these are aspirational, we hope to have all of the following finishe
 
 2. **Proper multi-threading in the RenderingDevice**
 
-    Currently the RenderingDevice isn't properly thread safe (our usage of it is though). In some places it is overly restrictive while in others it isn't restrictive enough. We need to remove the restrictions where they are unnecessary and implement proper locking in places that can't be made thread safe.
+    Currently the RenderingDevice isn't properly thread-safe (our usage of it is though). In some places it is overly restrictive, while in others it isn't restrictive enough. We need to remove the restrictions where they are unnecessary and implement proper locking in places that can't be made thread-safe.
 
     This work is necessary to ensure that users don't run into threading bugs as they make more advanced use of the RenderingDevice API. It is also necessary to implement background pipeline compilation as described above.
 
