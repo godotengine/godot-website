@@ -15,7 +15,9 @@ As explained [earlier](https://godotengine.org/article/release-management-4-0-an
 
 Below I list some of our top priorities on the [rendering team](https://godotengine.org/teams/#rendering) for Godot 4.1 along with a brief description. These are presented in no particular order and are grouped based on whether they relate to performance improvements, stability, or usability.
 
-Please note these are aspirational: we hope to have all of the following finished in time for 4.1, but we may not. We don’t demand contributors work on anything specific, nor will we turn away useful contributions not on the roadmap. If you are interested in contributing to the rendering side of Godot, but none of these topics are interesting to you or if you feel something else should have higher priority, please contribute anyway. We will still be merging and reviewing feature PRs and bug fixes not listed on this page.
+Please note these priorities are aspirational: we hope to have all of the following finished in time for 4.1, but we may not. Rest assured work will continue and anything that doesn't make it into 4.1 will make it into subsequent releases.
+
+Also note that we will still be merging and reviewing feature PRs and bug fixes not listed on this page. This list is intended to communicate what the maintainers will be prioritizing and what we hope volunteers prioritize too. If you are interested in contributing to the rendering side of Godot, but none of these topics are interesting to you or if you feel something else should have higher priority, please contribute anyway.
 
 #### Performance
 
