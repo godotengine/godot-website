@@ -3,8 +3,8 @@ title: "Godot 4.1 Rendering Priorities"
 excerpt: "For 4.1 the rendering team will be focusing on performance, stability, and usability."
 categories: ["progress-report"]
 author: Clay John
-image: /storage/blog/covers/.jpg
-date: 2023-04-17 14:00:00
+image: /storage/blog/covers/rendering-priorities-4-1.png
+date: 2023-04-18 20:00:00
 ---
 
 Now that Godot 4.0 is out we have the chance think about our priorities for 4.1. In particular, we have been discussing how our intention for 4.0 was to create a stable base to build upon. The rendering internals have been totally overhauled and many new features have been added. Leading up to the betas we focused on getting everything implemented. In other words, some features are still lacking polish and optimization. We are confident that the current state of the rendering internals gives us a lot of room to grow, but we are aware that we have a lot of work to do to get stability and performance in line with our goals and with user expectations.
@@ -27,7 +27,7 @@ Also note that we will still be merging and reviewing feature PRs and bug fixes 
 
     Early profiling indicates that we have a bottleneck in the vertex shader (which may explain why the issue exists in depth-only passes as well) which is likely memory-bound. Typical solutions to a memory bound vertex shader include reducing <abbr title="Vector General-Purpose Register">VGPR</abbr> usage to improve occupancy, reducing the amount of data accessed by the vertex shader, improve vertex shader access patterns to ensure we are not thrashing the cache.
 
-    **Assigned:** [Bastiaan](https://github.com/BastiaanOlij) and [I](https://github.com/clayjohn) have been looking into this and we welcome anyone else who would also like to help.
+    **Assigned:** [Bastiaan](https://github.com/BastiaanOlij) and [Clay](https://github.com/clayjohn) have been looking into this and we welcome anyone else who would also like to help.
 
 2. **Time slicing DirectionalLight3D shadows**
 
@@ -55,7 +55,7 @@ Also note that we will still be merging and reviewing feature PRs and bug fixes 
 
     This work is necessary to ensure that users don't run into threading bugs as they make more advanced use of the RenderingDevice API. It is also necessary to implement background pipeline compilation as described above.
 
-    **Assigned:** [Pedro](https://github.com/RandomShaper) and [I](https://github.com/clayjohn) are working on this.
+    **Assigned:** [Pedro](https://github.com/RandomShaper) and [Clay](https://github.com/clayjohn) are working on this.
 
 #### Usability
 
@@ -65,7 +65,7 @@ Also note that we will still be merging and reviewing feature PRs and bug fixes 
 
     As mentioned in an [earlier post](https://godotengine.org/article/status-of-opengl-renderer/), we had time to finish the 2D renderer, but did not have time to finish the 3D renderer. For 4.1, we would like to finish the 3D renderer.
 
-    **Assigned:** [I](https://github.com/clayjohn) will be responsible to ensure this work is done before 4.1 releases. But I welcome anyone who would like to work on this in the meantime.
+    **Assigned:** [Clay](https://github.com/clayjohn) will be responsible to ensure this work is done before 4.1 releases, but contributions are welcome in the meantime.
 
 2. **FSR 2.2 / TAA improvements**
 
@@ -73,5 +73,5 @@ Also note that we will still be merging and reviewing feature PRs and bug fixes 
 
     At the same time, we will be integrating many of our effects (SSAO, SSR, Shadows, etc.) with TAA so that quality is automatically improved when TAA is enabled. To be clear, this will not impact the quality of these effects when TAA is disabled. We still intend for all effects to be usable without TAA. This will just enhance these effects when TAA is used.
 
-    **Assigned:** [I](https://github.com/clayjohn) will be working on this, but am happy to pass responsibility over to someone who is motivated and has the time to work on it sooner.
+    **Assigned:** [Clay](https://github.com/clayjohn) will be working on this, but can pass responsibility over to someone who is motivated and has the time to work on it sooner.
 
