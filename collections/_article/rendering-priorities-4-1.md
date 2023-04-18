@@ -75,3 +75,9 @@ Also note that we will still be merging and reviewing feature PRs and bug fixes 
 
     **Assigned:** [Clay](https://github.com/clayjohn) will be working on this, but can pass responsibility over to someone who is motivated and has the time to work on it sooner.
 
+
+## Support
+
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](https://godotengine.org/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](https://godotengine.org/donate).
