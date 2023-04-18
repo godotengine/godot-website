@@ -7,7 +7,7 @@ image: /storage/blog/covers/rendering-priorities-4-1.png
 date: 2023-04-18 20:00:00
 ---
 
-Now that Godot 4.0 is out, the we had the chance to think about our priorities for 4.1. In particular, we have been discussing how our intention for 4.0 was to create a stable base to build upon. The rendering internals have been totally overhauled and many new features have been added. Leading up to the betas we focused on getting everything implemented. In other words, some features are still lacking polish and optimization. We are confident that the current state of the rendering internals gives us a lot of room to grow, but we are aware that we have a lot of work to do to get stability and performance in line with our goals and with user expectations.
+Now that Godot 4.0 is out, we have had the chance to think about our priorities for 4.1. In particular, we have been discussing how our intention for 4.0 was to create a stable base to build upon. The rendering internals have been totally overhauled and many new features have been added. Leading up to the betas we focused on getting everything implemented. In other words, some features are still lacking polish and optimization. We are confident that the current state of the rendering internals gives us a lot of room to grow, but we are aware that we have a lot of work to do to get stability and performance in line with our goals and with user expectations.
 
 [As explained earlier](https://godotengine.org/article/release-management-4-0-and-beyond/) we are aiming to have a quicker release cycle and we expect to release 4.1 later this year. The engine-wide focus for 4.1 will be on stability, usability, and performance.
 
