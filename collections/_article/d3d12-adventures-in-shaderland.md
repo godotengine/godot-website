@@ -15,7 +15,7 @@ In this article I'd like to discuss specifically how I faced some of the challen
 
 ## Translation of GLSL/SPIR-V to DXIL
 
-Godot rendering architecture is built with the industry standard Vulkan graphics API in mind. And that's great! However, once you want to plug new rendering APIs into the engine, you'll find that some elements need to be wired in a manner that they work with the alternative API (Direct3D 12 in this case).
+Godot's rendering architecture is built with the industry standard Vulkan graphics API in mind. And that's great! However, once you want to plug new rendering APIs into the engine, you'll find that some elements need to be wired in a manner that they work with the alternative API (Direct3D 12 in this case).
 
 Shaders in Godot are written in its custom, very **GLSL**-like language. (The builtin shaders are already GLSL in the source code.) Shader code in this language is compiled by the engine (thanks to **glslang**) into SPIR-V, which is a well-defined format that stores the binary representation of a shader.
 
