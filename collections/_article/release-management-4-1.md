@@ -1,15 +1,17 @@
 ---
 title: "Release Management Post Godot 4.0"
-excerpt: "We plan on releasing Godot 4.1 at the end of June after three months of feature merging and one month of bug fixing."
+excerpt: "We outline our plan for future Godot releases and Godot 4.1 specifically, which you can expect at the end of June, after three months of feature merging and one month of bug fixing."
 categories: ["news"]
 author: Clay John
 image: /storage/app/uploads/public/638/55e/dad/63855edad2371754303509.png
 date: 2023-04-19 14:00:00
 ---
 
-Now that [Godot 4.0 is out](https://godotengine.org/article/godot-4-0-sets-sail/) and we have all returned from [GDC](https://godotengine.org/article/gdc-2023-retrospective/) we can finally take the time to solidify our release management plan for the 4.x releases (starting with 4.1). In our [earlier blog post](https://godotengine.org/article/release-management-4-0-and-beyond/) we mentioned that we would like to shift to smaller, more regular releases. Our hope is that we can avoid some of the crunch that comes with trying to squeeze big features into the next release and the resulting long alpha/beta periods that result from cramming in too many big features into a release. 
+Now that [Godot 4.0 is out](https://godotengine.org/article/godot-4-0-sets-sail/) and we have all returned from [GDC](https://godotengine.org/article/gdc-2023-retrospective/) we can finally take the time to solidify our release management plan for the 4.x releases (starting with 4.1). In our [earlier blog post](https://godotengine.org/article/release-management-4-0-and-beyond/) on the matter we mentioned that we would like to shift to smaller, more regular releases.
 
-The current plan is to organize releases into two phases: the feature merging phase and the bug fixing phase. 
+Our hope is that we can avoid some of the crunch that comes with trying to squeeze bigger features into the upcoming release, not knowing when the next opportunity may appear. This should also help us avoid prolonged beta testing periods, required when too many features are crammed into a single release and even more being constantly added during testing.
+
+The current plan is to dedicate a set short timeframe to each release, where the development of the next version starts right after the previous one is released. To dedicate time more effectively and provide a focused environment for contributors we want to organize releases into two phases: the feature merging phase and the bug fixing phase.
 
 ## Feature Merging Phase
 
@@ -43,11 +45,11 @@ Since this is a new process, don't be surprised if we make adjustments to the pl
 
 If we follow the above schedule, we will be making around 3 minor releases per year. We expect that it will quickly become difficult to cherry-pick safe bug fixes back to all previous minor releases. In the Godot 3.x cycle we restricted cherry-picking to only the latest minor release and we only updated older releases when needed to fix critical issues.
 
-Our intention for the 4.x release cycle is that the upgrade path between releases will be even smoother than in 3.x with less breaking changes, so there will be less reason to remain on older minor releases. Accordingly, for the time being we will be start by restricting cherry-picks to the latest minor release. In practical terms this means that once 4.1 releases our focus will turn to 4.1.1 and 4.2.0 and we won't plan any more 4.0.x releases.
+Our intention for the 4.x release cycle is that the upgrade path between releases will be even smoother than in 3.x with less breaking changes, so there will be less reason to remain on older minor releases. Accordingly, for the time being we will start by restricting cherry-picks to the latest minor release. In practical terms this means that once 4.1 releases our focus will turn to 4.1.1 and 4.2 and we won't plan any more 4.0.x releases.
 
 ## Godot 3.6
 
-We released released the first [beta for Godot 3.6](https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/) and we plan on releasing Godot 3.6 in the next few months. We don't have an exact release date in mind, but we will be continuing to merge pull requests to the 3.x branch and will release 3.6 when it is ready. 
+We have just released the first [beta for Godot 3.6](https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/) and we plan on releasing the stable version in the next few months. As the main focus of contributors is on Godot 4 and beyond, the development process for Godot 3 is becoming slower. As such, we don't have an exact release date in mind, but we will be continuing to merge pull requests into the 3.x branch and will release 3.6 when it is ready. 
 
 Once we release 3.6, we don't intend to make another minor release in the 3.x series. We will continue releasing 3.6.x bug fix updates for as long as we receive contributions to 3.6.
 
