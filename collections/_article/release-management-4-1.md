@@ -51,7 +51,7 @@ If we follow the above schedule, we will be making around 3 minor releases per y
 
 We intend to minimize breaking changes in the 4.x release cycle, ideally there will be little reason to remain on older minor releases. However, we still want to ensure that users on older releases benefit from compatible bug fixes for as long as possible.
 
-Right now we are unsure how many versions we can maintain in tandem. For now, we are committed to providing 4.0.x releases as we work on 4.1.0. Once 4.1.0 releases and our development focus shifts to 4.2.0, we will likely continue providing 4.0.x and 4.1.x releases with safe bug fixes. Once 4.2.0 releases we will be re-evaluating how many version back we can go with bug fix releases. At that point, development of 4.0.x may stop. 
+Right now we are unsure how many versions we can maintain in tandem. For now, we are committed to providing 4.0.x releases as we work on 4.1. Once 4.1 releases and our development focus shifts to 4.2, we will likely continue providing 4.0.x and 4.1.x releases with safe bug fixes. Once 4.2 releases we will be re-evaluating how many version back we can go with bug fix releases. At that point, development of 4.0.x may stop. 
 
 As always, we welcome feedback from the community and will be keeping a close eye on how many projects choose to remain on 4.0.x. If many projects choose to remain on 4.0.x, then that will influence how long we continue to provide 4.0.x releases.
 
