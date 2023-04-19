@@ -3,15 +3,19 @@ title: "Release Management Post Godot 4.0"
 excerpt: "We outline our plan for future Godot releases and Godot 4.1 specifically, which you can expect at the end of June, after three months of feature merging and one month of bug fixing."
 categories: ["news"]
 author: Clay John
-image: /storage/app/uploads/public/638/55e/dad/63855edad2371754303509.png
+image: /storage/blog/covers/release-management-4-1.jpg
 date: 2023-04-19 14:00:00
 ---
 
-Now that [Godot 4.0 is out](https://godotengine.org/article/godot-4-0-sets-sail/) and we have all returned from [GDC](https://godotengine.org/article/gdc-2023-retrospective/) we can finally take the time to solidify our release management plan for the 4.x releases (starting with 4.1). In our [earlier blog post](https://godotengine.org/article/release-management-4-0-and-beyond/) on the matter we mentioned that we would like to shift to smaller, more regular releases.
+Now that [Godot 4.0 is out](https://godotengine.org/article/godot-4-0-sets-sail/) and we have all returned from [GDC](https://godotengine.org/article/gdc-2023-retrospective/) we can finally take the time to solidify our release management plan for the 4.x releases (starting with 4.1). In our [earlier blog post](https://godotengine.org/article/release-management-4-0-and-beyond/) on the matter, we mentioned that we would like to shift to smaller, more regular releases.
 
-Our hope is that we can avoid some of the crunch that comes with trying to squeeze bigger features into the upcoming release, not knowing when the next opportunity may appear. This should also help us avoid prolonged beta testing periods, required when too many features are crammed into a single release and even more being constantly added during testing.
+During the 3.x development cycle we noticed two concerning trends:
+1. Contributors were crunching shortly before planned releases to add big features to those releases as they expected the next release would be a long ways away. This created a "now or never" mentality that led to us optimistically merging PRs that were not ready.
+2. Our "feature freeze" periods ended up being quite long as we often had a lot of big features crammed in quickly towards the end, and we continued to merge risky changes during our feature freeze period.
 
-The current plan is to dedicate a set short timeframe to each release, where the development of the next version starts right after the previous one is released. To dedicate time more effectively and provide a focused environment for contributors we want to organize releases into two phases: the feature merging phase and the bug fixing phase.
+Our hope is to avoid both of these issues with our new approach to release management. We want to decrease the stress felt by both contributors and maintainers as we approach releases. We also want to be more cautious about merging big changes.
+
+To address these concerns our plan is to shorten the release cycle and provide clear dates in advance. At the same time, we want to organize releases into two phases: the feature merging phase and the bug fixing phase. At the conclusion of the bug fixing phase we will release a new minor version and repeat the process.
 
 ## Feature Merging Phase
 
@@ -45,7 +49,11 @@ Since this is a new process, don't be surprised if we make adjustments to the pl
 
 If we follow the above schedule, we will be making around 3 minor releases per year. We expect that it will quickly become difficult to cherry-pick safe bug fixes back to all previous minor releases. In the Godot 3.x cycle we restricted cherry-picking to only the latest minor release and we only updated older releases when needed to fix critical issues.
 
-Our intention for the 4.x release cycle is that the upgrade path between releases will be even smoother than in 3.x with less breaking changes, so there will be less reason to remain on older minor releases. Accordingly, for the time being we will start by restricting cherry-picks to the latest minor release. In practical terms this means that once 4.1 releases our focus will turn to 4.1.1 and 4.2 and we won't plan any more 4.0.x releases.
+We intend to minimize breaking changes in the 4.x release cycle, ideally there will be little reason to remain on older minor releases. However, we still want to ensure that users on older releases benefit from compatible bug fixes for as long as possible.
+
+Right now we are unsure how many versions we can maintain in tandem. For now, we are committed to providing 4.0.x releases as we work on 4.1.0. Once 4.1.0 releases and our development focus shifts to 4.2.0, we will likely continue providing 4.0.x and 4.1.x releases with safe bug fixes. Once 4.2.0 releases we will be re-evaluating how many version back we can go with bug fix releases. At that point, development of 4.0.x may stop. 
+
+As always, we welcome feedback from the community and will be keeping a close eye on how many projects choose to remain on 4.0.x. If many projects choose to remain on 4.0.x, then that will influence how long we continue to provide 4.0.x releases.
 
 ## Godot 3.6
 
