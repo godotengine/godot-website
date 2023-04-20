@@ -49,6 +49,8 @@
   --button-background-color: #ffffff;
   --footer-color: rgb(175, 180, 220);
   --footer-background-color: #414d69;
+  --pagination-active-color: #284786;
+  --placeholder-text-color: #7a87a2;
 
   --code-background-color: #dcdfe2;
   --codeblock-background-color: #282b2e;
@@ -134,6 +136,8 @@
     --button-background-color: #333639;
     --footer-color: hsla(0, 0%, 100%, 0.625);
     --footer-background-color: #333639;
+    --pagination-active-color: #4080ff;
+    --placeholder-text-color: #a6a6a6;
 
     --code-background-color: #333639;
     --codeblock-background-color: #333639;
@@ -593,7 +597,7 @@ footer a {
 }
 
 .pagination a.active {
-  background-color: hsl(220, 100%, 62.5%);
+  background-color: var(--pagination-active-color);
   color: white;
 }
 
@@ -912,9 +916,10 @@ pre > code {
   display: flex;
   height: 40px;
   margin-bottom: 2rem;
-  box-shadow: var(--base-shadow);
-  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
   overflow: hidden;
+  min-width: 65%;
 }
 .search-bar input {
   flex-grow: 1;
@@ -923,8 +928,11 @@ pre > code {
   font-size: 18px;
   border: none;
   border-right: 1px solid var(--transparent-cover);
-  background-color: var(--card-background-color);
+  background-color: var(--card-footer-color);
   color: var(--base-color-text);
+}
+.search-bar input::placeholder {
+  color: var(--placeholder-text-color);
 }
 .search-bar .search-bar-btn {
   cursor: pointer;
@@ -932,8 +940,7 @@ pre > code {
   width: 3rem;
   padding: 0;
   margin: 0;
-  /* background-color: hsl(220, 100%, 62.5%); */
-  background-color: var(--primary-color);
+  background-color: var(--pagination-active-color);
   color: var(--primary-color-text-title);
 }
 .search-bar .search-bar-btn img {
