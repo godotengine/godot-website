@@ -9,7 +9,7 @@ date: 2023-04-20 11:00:00
 
 Now that [Godot 4.0 is out](/article/godot-4-0-sets-sail/) and we have all returned from [GDC](/article/gdc-2023-retrospective/) we can finally take the time to solidify our release management plan for the 4.x releases (starting with 4.1). In our [earlier blog post](/article/release-management-4-0-and-beyond/) on the matter, we mentioned that we would like to shift to smaller, more regular releases.
 
-During the 4.0 development cycle we noticed two concerning trends:
+During the 3.x development cycle we noticed two concerning trends:
 1. Contributors were crunching shortly before planned releases to add big features to those releases as they expected the next release would be a long ways away. This created a "now or never" mentality that led to us optimistically merging PRs that were not ready.
 2. Our "feature freeze" periods ended up being quite long as we often had a lot of big features crammed in quickly towards the end, and we continued to merge risky changes during our feature freeze period.
 
