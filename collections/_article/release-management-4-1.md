@@ -4,7 +4,7 @@ excerpt: "We outline our plan for future Godot releases and Godot 4.1 specifical
 categories: ["news"]
 author: Clay John
 image: /storage/blog/covers/release-management-4-1.jpg
-date: 2023-04-19 14:00:00
+date: 2023-04-20 11:00:00
 ---
 
 Now that [Godot 4.0 is out](https://godotengine.org/article/godot-4-0-sets-sail/) and we have all returned from [GDC](https://godotengine.org/article/gdc-2023-retrospective/) we can finally take the time to solidify our release management plan for the 4.x releases (starting with 4.1). In our [earlier blog post](https://godotengine.org/article/release-management-4-0-and-beyond/) on the matter, we mentioned that we would like to shift to smaller, more regular releases.
