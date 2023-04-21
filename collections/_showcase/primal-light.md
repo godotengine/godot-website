@@ -22,7 +22,7 @@ xbox: true
 
 steam: https://store.steampowered.com/app/771420/Primal_Light/
 nintendo: https://www.nintendo.com/store/products/primal-light-switch/
-xbox: https://www.xbox.com/en-US/games/store/primal-light/9N2XZFRWG6R8
+microsoft: https://www.xbox.com/en-US/games/store/primal-light/9N2XZFRWG6R8
 
 
 developer_interview:

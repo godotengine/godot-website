@@ -16,6 +16,8 @@ collections_dir: collections
 collections:
   article:
     output: true
+  event:
+    output: false
   showcase:
     output: true
   download:
@@ -34,6 +36,11 @@ defaults:
     values:
       layout: "article"
       og_type: "article"
+  - scope:
+      path: ""
+      type: "event"
+    values:
+      layout: "event"
   - scope:
       path: ""
       type: "showcase"
