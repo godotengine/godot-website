@@ -11,9 +11,9 @@ date: 2023-04-21 16:00:00
 
 As we have [announced earlier this week](/article/release-management-4-1/) Godot development is ramping up and you can expect Godot Engine 4.1 to be stable before mid-Summer this year. Right now we are in the middle of the feature merging phase, with the main focus being on improving usability, performance, and the feature set of the engine based on [your feedback](https://github.com/godotengine/godot/issues) and [our prioritized plans](/article/rendering-priorities-4-1/).
 
-Many of you have told us how they enjoyed regular preview builds of the engine during the later stages of the Godot 4.0 development. And we have enjoyed getting quick response, reports of new issues and regressions, and opinions about recently implemented features. So we are going to continue this practice going forward, and to start things of today we're releasing the first dev snapshot of Godot 4.1.
+Many of you have told us how you enjoyed regular preview builds of the engine during the later stages of the Godot 4.0 development. And we have enjoyed getting quick responses, reports of new issues and regressions, and opinions about recently implemented features. So we are going to continue this practice going forward, and to start things off today we're releasing the first dev snapshot of Godot 4.1.
 
-Unlike our previous release cycles, 4.1-dev builds are an official part of the process, and you will receive new versions regularly leading up to the beginning of the testing phase and the first beta. Beware that these builds are not guaranteed to be stable or bug-free. Make sure to back up your work or, better yet, to use a version control system.
+Unlike our previous release cycles, 4.1-dev builds are an official part of the process, and you will receive new versions regularly leading up to the beginning of the testing phase and the first beta. Beware that these builds are not guaranteed to be stable or bug-free and may contain features that have only been lightly tested. Make sure to back up your work or, better yet, to use a version control system.
 
 That's enough for the introduction! [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about included changes.
 
@@ -120,7 +120,7 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 ## Bug reports
 
-As a tester, you are encouraged to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
+As a tester, we encourage you to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
 
 In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 4.0.x, but no longer works in 4.1 dev 1).
 
