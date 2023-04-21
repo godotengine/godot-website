@@ -1,17 +1,21 @@
 ---
 title: "Dev snapshot: Godot 4.1 dev 1"
-excerpt: "EXCERPT IS MISSING"
+excerpt: "Here be dragons! First development snapshot for the upcoming Godot Engine 4.1 is available to early adopters and adventurous types."
 categories: ["pre-release"]
-author: Rémi Verschelde
+author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-1-dev-1.jpg
 image_caption_title: Aether's Edge
 image_caption_description: A game by Ancient Stone Studios
-date: 2023-04-21 14:00:00
+date: 2023-04-21 16:00:00
 ---
 
-INTRODUCTION IS MISSING
+As we have [announced earlier this week](/article/release-management-4-1/) Godot development is ramping up and you can expect Godot Engine 4.1 to be stable before mid-Summer this year. Right now we are in the middle of the feature merging phase, with the main focus being on improving usability, performance, and the feature set of the engine based on [your feedback](https://github.com/godotengine/godot/issues) and [our prioritized plans](/article/rendering-priorities-4-1/).
 
-[Jump to the **Downloads** section.](#downloads)
+Many of you have told us how they enjoyed regular preview builds of the engine during the later stages of the Godot 4.0 development. And we have enjoyed getting quick response, reports of new issues and regressions, and opinions about recently implemented features. So we are going to continue this practice going forward, and to start things of today we're releasing the first dev snapshot of Godot 4.1.
+
+Unlike our previous release cycles, 4.1-dev builds are an official part of the process, and you will receive new versions regularly leading up to the beginning of the testing phase and the first beta. Beware that these builds are not guaranteed to be stable or bug-free. Make sure to back up your work or, better yet, to use a version control system. Still, our expectation is that they will be about as stable as Godot 4.0 betas were, so you can use that as your point of reference.
+
+That's enough for the introduction! [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about included changes.
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.1.dev1/).
 
@@ -19,7 +23,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.1.de
 
 ## What's new
 
-We now have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/) you can use to review all 500 changes since Godot 4.0 more extensively, with convenient links to the relevant PRs on GitHub.
+We now have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/) you can use to review all 500 or so changes since Godot 4.0 more extensively, with convenient links to the relevant PRs on GitHub.
 
 Here are some of the main changes you might be interested in:
 
