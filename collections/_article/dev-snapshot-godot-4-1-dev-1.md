@@ -13,7 +13,7 @@ As we have [announced earlier this week](/article/release-management-4-1/) Godot
 
 Many of you have told us how they enjoyed regular preview builds of the engine during the later stages of the Godot 4.0 development. And we have enjoyed getting quick response, reports of new issues and regressions, and opinions about recently implemented features. So we are going to continue this practice going forward, and to start things of today we're releasing the first dev snapshot of Godot 4.1.
 
-Unlike our previous release cycles, 4.1-dev builds are an official part of the process, and you will receive new versions regularly leading up to the beginning of the testing phase and the first beta. Beware that these builds are not guaranteed to be stable or bug-free. Make sure to back up your work or, better yet, to use a version control system. Still, our expectation is that they will be about as stable as Godot 4.0 betas were, so you can use that as your point of reference.
+Unlike our previous release cycles, 4.1-dev builds are an official part of the process, and you will receive new versions regularly leading up to the beginning of the testing phase and the first beta. Beware that these builds are not guaranteed to be stable or bug-free. Make sure to back up your work or, better yet, to use a version control system.
 
 That's enough for the introduction! [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about included changes.
 
