@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot Showcase - Cassette Beasts</title>
+		<link>https://godotengine.org/article/godot-showcase-cassette-beasts/</link>
+		<description>We interviewed Jay and Tom from Bytten Studio about Cassette Beasts.</description>
+		
+		<category>Showcase</category>
+		
+		<guid>https://godotengine.org/article/godot-showcase-cassette-beasts/</guid>
+		<dc:creator>Emi</dc:creator>
+		<pubDate>Wed, 26 Apr 2023 15:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/cassette-beasts.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.1 dev 1</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-1-dev-1/</link>
 		<description>Here be dragons! First development snapshot for the upcoming Godot Engine 4.1 is available to early adopters and adventurous types.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Yuri Sizov</dc:creator>
 		<pubDate>Wed, 08 Feb 2023 13:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-1.jpg</image>
-	</item>
-	
-	<item>
-		<title>Godot Editor (Beta) arrives to the Play Store</title>
-		<link>https://godotengine.org/article/android_godot_editor_play_store_beta_release/</link>
-		<description>Godot Engine arrives to the Google Play Store with an official beta release of the Godot Editor for Android! With the UI adjusted to work better on a tiny screen, you can try your hand at making games on the go.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/android_godot_editor_play_store_beta_release/</guid>
-		<dc:creator>Fredia Huya-Kouadio</dc:creator>
-		<pubDate>Tue, 07 Feb 2023 15:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/android-godot-editor-play-store-beta-release-cover.png</image>
 	</item>
 	
 
