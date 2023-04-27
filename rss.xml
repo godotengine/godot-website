@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0.3 RC 1</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-1/</link>
+		<description>More improvements come to the stable version of Godot 4 with the 4.0.3 patch release. Here&#39;s the first release candidate to test the changes before they go live.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-1/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Thu, 27 Apr 2023 13:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-1.jpg</image>
+	</item>
+	
+	<item>
 		<title>Godot Showcase - Cassette Beasts</title>
 		<link>https://godotengine.org/article/godot-showcase-cassette-beasts/</link>
 		<description>We interviewed Jay and Tom from Bytten Studio about Cassette Beasts.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Tue, 14 Feb 2023 18:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-2.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.0 RC 1</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-1/</link>
-		<description>The wait is almost over! With Godot 4.0 coming close to stable, we finalize our efforts to fix the remaining critical issues and add the last coat of polish with the first Release Candidate.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-1/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Wed, 08 Feb 2023 13:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-1.jpg</image>
 	</item>
 	
 
