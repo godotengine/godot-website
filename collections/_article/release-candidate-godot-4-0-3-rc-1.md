@@ -25,7 +25,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 
 ## What's new
 
-67 contributors made 149 pull-requests (or 154 commits) since Godot 4.0.2. We now have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/) you can use to review all these changes more extensively, with convenient links to the relevant PRs on GitHub.
+67 contributors made 149 pull-requests (or 154 commits) since Godot 4.0.2. We now have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.0.3-rc1) you can use to review all these changes more extensively, with convenient links to the relevant PRs on GitHub.
 
 Some of the most notable feature changes in this update are:
 
