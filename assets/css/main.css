@@ -908,7 +908,7 @@ pre > code {
   margin: 0px !important;
 }
 
-#sfc_graphic {
+#foundation_graphic {
   width: 400px;
 }
 
@@ -1139,7 +1139,7 @@ pre > code {
 }
 
 @media (max-width: 500px) {
-  #sfc_graphic {
+  #foundation_graphic {
     width: 100%;
   }
 }
