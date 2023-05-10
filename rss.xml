@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.1 dev 2</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-1-dev-2/</link>
+		<description>We&#39;re well into the development phase for Godot 4.1, with a little less than a month left before we move to beta. So here&#39;s a second dev snapshot to test recent changes!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-4-1-dev-2/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Wed, 10 May 2023 16:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-2.jpg</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.0.3 RC 1</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-1/</link>
 		<description>More improvements come to the stable version of Godot 4 with the 4.0.3 patch release. Here&#39;s the first release candidate to test the changes before they go live.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Tue, 21 Feb 2023 17:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-3.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.0 RC 2</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-2/</link>
-		<description>Tightening a few bolts here and there, Godot 4.0 RC 2 brings us one step closer to the stable release. We&#39;re now counting in days!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-2/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Tue, 14 Feb 2023 18:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-2.jpg</image>
 	</item>
 	
 
