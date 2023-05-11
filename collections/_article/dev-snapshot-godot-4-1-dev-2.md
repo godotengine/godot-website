@@ -68,7 +68,7 @@ Here are some of the main changes you might be interested in:
 - GDScript: Improve GDScript documentation generation & behavior ([GH-72095](https://github.com/godotengine/godot/pull/72095)).
 - GDScript: Add support for static variables in GDScript ([GH-76264](https://github.com/godotengine/godot/pull/76264)).
 - GDScript: Reorganize and unify warnings ([GH-76412](https://github.com/godotengine/godot/pull/76412)).
-- GDScript: Don't fail when freed object is return ([GH-76483](https://github.com/godotengine/godot/pull/76483)).
+- GDScript: Don't fail when freed object is returned ([GH-76483](https://github.com/godotengine/godot/pull/76483)).
 - GUI: Add support for multiline cells to `Tree` ([GH-61714](https://github.com/godotengine/godot/pull/61714)).
 - GUI: Add `center_grabber` theme property to Slider ([GH-69053](https://github.com/godotengine/godot/pull/69053)).
 - GUI: Add `icon_modulate` set/get functionality to PopupMenu ([GH-70286](https://github.com/godotengine/godot/pull/70286)).
