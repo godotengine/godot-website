@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.0.3 RC 2</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-2/</link>
+		<description>Another round of cherry-picks for the upcoming Godot 4.0.3, fixing a few regressions reported against RC 1 and backporting more important fixes.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-2/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Fri, 12 May 2023 16:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-2.jpg</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.1 dev 2</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-1-dev-2/</link>
 		<description>We&#39;re well into the development phase for Godot 4.1, with a little less than a month left before we move to beta. So here&#39;s a second dev snapshot to test recent changes!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Fabio Alessandrelli</dc:creator>
 		<pubDate>Thu, 23 Feb 2023 11:30:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/multiplayer-in-godot-4-0-scene-replication.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.0 RC 3</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-3/</link>
-		<description>We&#39;re almost ready to release Godot 4.0! Barring any last minute critical regression, this RC should reflect what the 4.0-stable release will be.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-3/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Tue, 21 Feb 2023 17:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-3.jpg</image>
 	</item>
 	
 
