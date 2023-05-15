@@ -18,7 +18,7 @@ layout: default
 	}
 </style>
 
-{% assign stable_version = site.data.versions.godot_3 | find: "flavor", "stable" %}
+{% assign stable_version = site.data.versions | find: "featured", "3" %}
 
 <div class="hero">
 	<div class="hero-wrapper">
@@ -28,26 +28,28 @@ layout: default
 			{% assign featured_downloads = page.downloads | where: "featured", "true" %}
 			{% for download in featured_downloads %}
 
-			{% capture download_url %}
-				{% if download.custom %}
-					{{download.custom}}
-				{% else %}
-					https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_{{ download.slug }}
-				{% endif %}
-			{% endcapture %}
+				{% capture download_url %}
+					{% if download.custom %}
+						{{ download.custom }}
+					{% else %}
+						{{ stable_version | make_download: download.platform, download.mono }}
+					{% endif %}
+				{% endcapture %}
 
-			<div class="main-download">
-				<a href="{{ download_url }}" class="btn btn-download btn-download-main{% if forloop.index > 1 %}2{% endif %}">
-					<div class="download-title">
-						<img src="/assets/icons/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
-						Godot Engine{% if download.featured_flavor %} - {{ download.featured_flavor }}{% endif %}
-					</div>
-					<div class="download-hint">{{ stable_version.name }}</div>
-				</a>
-				<p class="main-download-details">
-					<strong>{% for tag in download.tags %}{{ tag }} · {% endfor %}</strong>{{ stable_version.release_date }}
-				</p>
-			</div>
+				{% assign platform_info = site.data.download_platforms | find: "name", download.platform %}
+
+				<div class="main-download">
+					<a href="{{ download_url }}" class="btn btn-download btn-download-main{% if forloop.index > 1 %}2{% endif %}">
+						<div class="download-title">
+							<img src="/assets/images/platforms/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
+							Godot Engine{% if download.featured_flavor %} - {{ download.featured_flavor }}{% endif %}
+						</div>
+						<div class="download-hint">{{ stable_version.name }}</div>
+					</a>
+					<p class="main-download-details">
+						<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}{% if download.mono %}C# support · {% endif %}</strong>{{ stable_version.release_date }}
+					</p>
+				</div>
 
 			{% endfor %}
 
@@ -70,7 +72,7 @@ layout: default
 	<div id="links" class="platform-details">
 		<div class="card base-padding">
 			<h3>Requirements</h3>
-			
+
 			<ul>
 				<li>OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</li>
 			</ul>
@@ -92,34 +94,51 @@ layout: default
 
 				{% for download in page.downloads %}
 
-				{% capture download_url %}
-					{% if download.custom %}
-						{{download.custom}}
-					{% else %}
-						https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_{{ download.slug }}
-					{% endif %}
-				{% endcapture %}
+					{% capture download_url %}
+						{% if download.custom %}
+							{{ download.custom }}
+						{% else %}
+							{{ stable_version | make_download: download.platform, download.mono }}
+						{% endif %}
+					{% endcapture %}
 
-				<div class="download">
-					<a href="{{ download_url }}" class="download-link">{{ download.caption }}</a>
-					<span class="download-details">{% for tag in download.tags %}{% if forloop.index > 1 %} · {% endif %}{{ tag }}{% endfor %}</span>
-				</div>
+					{% assign platform_info = site.data.download_platforms | find: "name", download.platform %}
+
+					<div class="download">
+						<a href="{{ download_url }}" class="download-link">
+							{{ platform_info.title }}{% if download.mono %} - .NET{% endif %}
+							{% unless platform_info.caption == empty %} - {{ platform_info.caption }}{% endunless %}
+						</a>
+						<span class="download-details">
+							{% for tag in platform_info.tags %}{% if forloop.index > 1 %} · {% endif %}{{ tag }}{% endfor %}
+							{% if download.mono %} · C# support{% endif %}
+						</span>
+					</div>
+
 				{% endfor %}
 
 				{% unless page.ignore_export %}
+					{% assign templates_info = site.data.download_platforms | find: "name", "templates" %}
+
 					<div class="download">
-						<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_export_templates.tpz">
-							Export templates (Standard)
+						<a href="{{ stable_version | make_download: "templates", false }}">
+							{{ templates_info.title }}
+							{% unless templates_info.caption == empty %} - {{ templates_info.caption }}{% endunless %}
 						</a>
-						<span class="download-details">Used to export your games to all supported platforms</span>
+						<span class="download-details">
+							{% for tag in templates_info.tags %}{% if forloop.index > 1 %} · {% endif %}{{ tag }}{% endfor %}
+						</span>
 					</div>
 					{% unless page.ignore_mono %}
-					<div class="download">
-						<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/Godot_v{{stable_version.name}}-stable_mono_export_templates.tpz">
-							Export templates (.NET)
-						</a>
-						<span class="download-details">Used to export your games to all supported platforms · C# support</span>
-					</div>
+						<div class="download">
+							<a href="{{ stable_version | make_download: "templates", true }}">
+								{{ templates_info.title }} - .NET
+								{% unless templates_info.caption == empty %} - {{ templates_info.caption }}{% endunless %}
+							</a>
+							<span class="download-details">
+								{% for tag in templates_info.tags %}{{ tag }} · {% endfor %}C# support
+							</span>
+						</div>
 					{% endunless %}
 				{% endunless %}
 
@@ -140,7 +159,7 @@ layout: default
 		<div id="digital-stores" class="card base-padding digital-stores">
 			<div>
 				<p>Godot Engine is also available on digital distribution platforms:</p>
-			
+
 				<div class="digital-store-list">
 					<a class="btn btn-digital-store" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
 						<div class="digital-store-logo">
@@ -156,7 +175,7 @@ layout: default
 					</a>
 				</div>
 			</div>
-			<div>
+			<div class="digital-stores-notes">
 				<ul>
 					<li>Digital store versions <strong>do not</strong> include .NET/C# support.</li>
 					<li><strong>Steam</strong> version is available as a <code>stable-3.5</code> beta branch.</li>
@@ -170,30 +189,30 @@ layout: default
 <div class="platforms-wrapper">
 	<div id="platforms" class="container" style="overflow: hidden;">
 		<h2>Supported platforms</h2>
-		
+
 		<div class="tabs platform-tabs">
 			<a href="/download/3.x/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/android.svg" title="Android" alt="Android" />
+				<img width="24" height="24" src="/assets/images/platforms/android.svg" title="Android" alt="Android" />
 				<span>Android</span>
 			</a>
 			<a href="/download/3.x/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/linux.svg" title="Linux" alt="Linux" />
+				<img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" />
 				<span>Linux</span>
 			</a>
 			<a href="/download/3.x/macos" class="tab title-font {% if page.platform == 'macOS' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/macos.svg" title="macOS" alt="macOS" />
+				<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" />
 				<span>macOS</span>
 			</a>
 			<a href="/download/3.x/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/windows.svg" title="Windows" alt="Windows" />
+				<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" />
 				<span>Windows</span>
 			</a>
 			<a href="/download/3.x/server" class="tab title-font {% if page.platform == 'Linux Server' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/icons/linux-server.svg" title="Linux Server" alt="Linux Server" />
+				<img width="24" height="24" src="/assets/images/platforms/linux-server.svg" title="Linux Server" alt="Linux Server" />
 				<span>Linux Server</span>
 			</a>
 			<a href="https://editor.godotengine.org/releases/{{stable_version.name}}.stable/" target="_blank" class="tab title-font">
-				<img width="24" height="24" src="/assets/icons/html5.svg" title="Web Editor" alt="Web Editor" />
+				<img width="24" height="24" src="/assets/images/platforms/web.svg" title="Web Editor" alt="Web Editor" />
 				<span>Web Editor</span>
 			</a>
 		</div>
@@ -226,16 +245,20 @@ layout: default
 			</div>
 
 			<div class="other-download-card">
+				{% assign aar_library_info = site.data.download_platforms | find: "name", "aar_library" %}
+
 				<h3>AAR library for Android</h3>
 				<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
 				<p>
-					<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/godot-lib.{{stable_version.name}}.stable.release.aar">
-						AAR library (standard)
+					<a href="{{ stable_version | make_download: "aar_library", false }}">
+						{{ aar_library_info.title }}
+						{% unless aar_library_info.caption == empty %} - {{ aar_library_info.caption }}{% endunless %}
 					</a>
 				</p>
 				<p>
-					<a href="https://github.com/godotengine/godot/releases/download/{{stable_version.name}}-stable/godot-lib.{{stable_version.name}}.stable.mono.release.aar">
-						AAR library (.NET / C#)
+					<a href="{{ stable_version | make_download: "aar_library", true }}">
+						{{ aar_library_info.title }} - .NET / C#
+						{% unless aar_library_info.caption == empty %} {{ aar_library_info.caption }}{% endunless %}
 					</a>
 				</p>
 			</div>
@@ -252,20 +275,43 @@ layout: default
 		</div>
 	</div>
 
-	<div id="open-source" class="text-center base-padding">
-		<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="">
-		<p>
-			Godot's development is <strong>open</strong>. This means that you can
-			fix or improve any part of the engine yourself and choose
-			whether to contribute it back or keep it private.
-		</p>
-		<p>
-			New features are always available to use and test, without the need of
-			having to wait for the next major release. Compiling Godot from source
-			is <em>very easy</em> and the process is well-documented for each platform.
-			To obtain the source code, please visit the
-			<a href="https://github.com/godotengine/godot">GitHub project page</a>.
-		</p>
+	<div class="unstable-downloads">
+		<div id="previews" class="unstable-download-previews">
+			<h2>Preview builds</h2>
+
+			<p>
+				Godot is continuously being developed with several minor releases
+				being published every year. To ensure high quality and stability
+				of each release, we also publish preview builds at various stages of
+				development.
+			</p>
+			<p>
+				Help test Godot's new features or be the first to benefit from upcoming
+				improvements by downloading a preview build!
+			</p>
+
+			<a class="btn" href="/download/preview">
+				See latest preview builds
+			</a>
+		</div>
+
+		<div id="open-source" class="unstable-download-source">
+			<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="A GitHub logo">
+			<div>
+				<p>
+					Don't want to wait for official releases? You can compile Godot from source!
+				</p>
+				<ul>
+					<li>
+						Get the source code from the <a href="https://github.com/godotengine/godot">GitHub project page</a>.
+					</li>
+					<li>
+						Follow the instructions from the
+						<a href="https://docs.godotengine.org/en/3.5/development/compiling/index.html">official documentation</a>.
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -284,7 +330,7 @@ layout: default
 		thankYouBackButton.addEventListener('click', () => {
 			thankYouWrapper.style.display = 'none';
 		});
-		
+
 		// Open from the main download buttons.
 		const downloadButtons = document.querySelectorAll('.btn-download');
 		downloadButtons.forEach((it) => {
@@ -335,7 +381,7 @@ layout: default
 		</ul>
 
 		<div class="btn-back-to-downloads">
-			<img src="/assets/cross.svg" width="24" height="24" alt="">
+			<img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup">
 		</div>
 	</div>
 </div>

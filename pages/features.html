@@ -68,7 +68,7 @@ layout: default
 		font-size: 22px;
 		margin-bottom: 4px;
 	}
-	
+
 	.feature-container.feature-container-2x {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -83,7 +83,7 @@ layout: default
 			grid-column: span 1;
 		}
 	}
-	
+
 	.feature-container.feature-container-3x {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
@@ -175,6 +175,7 @@ layout: default
 		gap: 16px;
 		background-color: var(--dark-color);
 		padding: 24px;
+		padding-bottom: 60px;
 		width: auto;
 		max-width: 100%;
 	}
@@ -259,7 +260,7 @@ layout: default
 		width: 20px;
 		height: 36px;
 		transform: translateY(-50%);
-		background-image: url('/assets/arrow-flip.svg');
+		background-image: url('/assets/icons/arrow-flip.svg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		cursor: pointer;
@@ -301,7 +302,7 @@ layout: default
 		position: absolute;
 		bottom: 12px;
 		right: 16px;
-		background: #1a1a1a7a;
+		background: var(--hero-text-background-color);
 		border-radius: 8px;
 		padding: 2px 10px;
 	}
@@ -319,6 +320,10 @@ layout: default
 
 	.showcase-credits a {
 		text-decoration: none;
+	}
+
+	footer {
+		margin-top: 0;
 	}
 </style>
 
@@ -677,8 +682,8 @@ layout: default
 	<h2>Ready to start?</h2>
 
 	<div class="features-download-ready">
-		{% assign stable_version_3 = site.data.versions.godot_3 | find: "flavor", "stable" %}
-		{% assign stable_version_4 = site.data.versions.godot_4 | find: "flavor", "stable" %}
+		{% assign stable_version_3 = site.data.versions | find: "featured", "3" %}
+		{% assign stable_version_4 = site.data.versions | find: "featured", "4" %}
 
 		<p>Download the <strong>latest version of Godot 4</strong> right now and begin your creative journey!</p>
 		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"

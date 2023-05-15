@@ -59,7 +59,8 @@
 }
 
 .btn.btn-download-main,
-.btn.btn-download-main2 {
+.btn.btn-download-main2,
+.btn.btn-download-primary {
     background-color: var(--primary-color);
     color: white;
     display: inline-flex;
@@ -74,16 +75,18 @@
 }
 
 .btn.btn-download-main img,
-.btn.btn-download-main2 img {
+.btn.btn-download-main2 img,
+.btn.btn-download-primary img {
     display: inline-block;
     filter: invert();
     margin-right: 10px;
-    width: 20px;
+    width: 22px;
     vertical-align: text-bottom;
 }
 
 .btn.btn-download-main .download-hint,
-.btn.btn-download-main2 .download-hint {
+.btn.btn-download-main2 .download-hint,
+.btn.btn-download-primary .download-hint {
     background-color: var(--primary-color-text-title);
     color: var(--dark-color);
     line-height: 32px;
@@ -91,7 +94,8 @@
 }
 
 .btn.btn-download-main .download-title,
-.btn.btn-download-main2 .download-title {
+.btn.btn-download-main2 .download-title,
+.btn.btn-download-primary .download-title {
     color: var(--primary-color-text-title);
     font-size: 20px;
     line-height: 32px;
@@ -109,6 +113,7 @@
 .platform-details .download {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 6px;
     margin-bottom: 8px;
 }
@@ -150,7 +155,7 @@
 }
 @media (min-width: 768px) {
     .other-download {
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -254,6 +259,45 @@
 
 .digital-store-logo img {
     vertical-align: text-bottom;
+}
+
+.digital-stores-notes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.digital-stores-notes ul {
+    margin: 0;
+}
+
+.digital-stores-notes ul li:last-child {
+    margin-bottom: 0;
+}
+
+.unstable-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.unstable-download-previews {
+    max-width: 768px;
+}
+.unstable-download-previews .btn {
+    margin-top: 16px;
+}
+
+.unstable-download-source {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+@media (max-width: 768px) {
+    .unstable-download-source {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
 
 .thankyou-wrapper {

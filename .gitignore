@@ -13,3 +13,29 @@ vendor/
 asset-library/
 mirrorlist/
 qa/
+
+# OS-specific files
+
+# Linux
+*~
+.directory
+
+# macOS
+.DS_Store
+__MACOSX
+
+# Windows
+# https://github.com/github/gitignore/blob/main/Global/Windows.gitignore
+[Tt]humbs.db
+[Tt]humbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk

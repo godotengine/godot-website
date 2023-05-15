@@ -4,32 +4,18 @@ description: Download the latest stable version of the Godot Engine for Linux
 platform: Linux
 
 downloads:
-  - caption: Standard (x86_64)
-    slug: linux.x86_64.zip
+  - platform: "linux.64"
     featured: true
-    tags:
-      - 64 bit
 
-  - caption: Standard (x86)
-    slug: linux.x86_32.zip
-    tags:
-      - 32 bit
-  
-  - caption: .NET (x86_64)
-    slug: mono_linux_x86_64.zip
+  - platform: "linux.32"
+
+  - platform: "linux.64"
     mono: true
     featured: true
     featured_flavor: .NET
-    tags:
-      - 64 bit
-      - C# support
-  
-  - caption: .NET (x86)
-    slug: mono_linux_x86_32.zip
+
+  - platform: "linux.32"
     mono: true
-    tags:
-      - 32 bit
-      - C# support
 
 content_instructions: |
   <ul>

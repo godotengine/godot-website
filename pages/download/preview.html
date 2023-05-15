@@ -1,0 +1,454 @@
+---
+permalink: /download/preview/index.html
+title: "Download Godot preview builds - Godot Engine"
+description: "Download the latest preview version of the Godot Engine 3 and Godot Engine 4 for Linux, macOS, Windows, or Android"
+layout: default
+---
+
+{% include header.html %}
+
+<link rel="stylesheet" href="/assets/css/transparent-nav.css">
+<link rel="stylesheet" href="/assets/css/download.css">
+<style>
+	.hero {
+		background-image: url('/assets/download/download-background-preview.jpg');
+	}
+
+	.hero-blurb {
+		color: var(--download-hero-color);
+	}
+
+	.preview-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.preview-download {
+		border-radius: 12px;
+	}
+
+	.preview-download h3 {
+		margin-bottom: 4px;
+	}
+
+	.preview-download-meta {
+		color: var(--secondary-color-text);
+		font-size: 17px;
+		margin: 0;
+	}
+
+	.preview-download-primary {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		gap: 60px;
+		margin-top: 20px;
+	}
+	@media (max-width: 900px) {
+		.preview-download-primary {
+			grid-template-columns: 1fr;
+			gap: 36px;
+		}
+	}
+
+	.preview-notes {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+
+	.notes-summary {
+		display: grid;
+		gap: 24px;
+		width: 100%;
+	}
+
+	.notes-thumbnail {
+		background-position: center;
+		background-size: cover;
+		background-color: var(--card-background-color);
+		border-radius: 7px;
+		box-shadow: 0 5px 10px -3px #00000078;
+		aspect-ratio: 16 / 9;
+		max-height: 260px;
+	}
+
+	.notes-excerpt {
+		color: var(--base-color-text);
+		opacity: 0.8;
+	}
+
+	.notes-buttons {
+		display: flex;
+		align-items: center;
+		gap: 42px;
+		min-height: 54px;
+	}
+	@media (max-width: 768px) {
+		.notes-buttons {
+			flex-direction: column;
+			gap: 36px;
+			width: 100%;
+		}
+	}
+
+	.btn.btn-release-notes {
+		background-color: var(--button-card-background-color);
+		color: var(--base-color-text);
+	}
+
+	.btn.btn-release-changelog {
+		background: transparent;
+		box-shadow: none;
+		color: var(--link-color);
+		padding: 2px 4px;
+	}
+
+	.download-primaries {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 8px;
+	}
+
+	.download-primaries .btn-download-primary {
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	.download-primaries .btn-download-primary:nth-child(2n) {
+		background-color: rgb(132 151 174 / 68%);
+		-webkit-backdrop-filter: blur(4px);
+		backdrop-filter: blur(4px);
+	}
+	.download-primaries .btn-download-primary:nth-child(2n) .download-title {
+		color: #f7f7f7;
+	}
+	.download-primaries .btn-download-primary:nth-child(2n) .download-hint {
+		background-color: var(--primary-color-subdued);
+        color: var(--text-color);
+	}
+
+	.download-primaries .btn.btn-download-primary .download-title {
+		font-size: 18px;
+		line-height: 24px;
+		white-space: nowrap;
+	}
+	@media (max-width: 900px) {
+		.download-primaries .btn.btn-download-primary .download-title {
+			line-height: 28px;
+		}
+	}
+
+	.preview-download-toggle {
+		display: flex;
+		justify-content: flex-end;
+	}
+	@media (max-width: 900px) {
+		.preview-download-toggle {
+			justify-content: flex-start;
+		}
+	}
+
+	.preview-download-toggle h4 {
+		color: var(--link-color);
+		cursor: pointer;
+		margin-top: 32px;
+		text-align: right;
+		/* Prevent color transitions from being too fast (for epilepsy). */
+		transition: 0.1s filter;
+		filter: brightness(100%);
+	}
+	.preview-download-toggle h4:hover {
+		filter: brightness(117.5%);
+	}
+	.preview-download-toggle h4:active {
+		filter: brightness(82.5%);
+	}
+	@media (max-width: 900px) {
+		.preview-download-toggle h4 {
+			text-align: left;
+		}
+	}
+
+	.preview-download-links {
+		background-color: var(--download-table-color);
+		border-left: 6px solid var(--accent-color);
+		padding: 4px 16px;
+		display: none;
+	}
+	.preview-download-toggle.active + .preview-download-links {
+		display: block;
+	}
+
+	.preview-download-links .download {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: flex-end;
+		gap: 6px;
+		border-bottom: 1px dashed var(--table-divider-color);
+		margin-bottom: 8px;
+		padding: 2px 0;
+	}
+	@media (max-width: 900px) {
+		.preview-download-links .download {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.preview-download-links .download-details {
+		color: var(--secondary-color-text);
+		font-size: 14px;
+		padding: 0 12px;
+	}
+
+	.stable-download {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		background-color: var(--dark-color);
+		padding: 24px;
+		padding-bottom: 60px;
+		width: auto;
+		max-width: 100%;
+	}
+	@media (max-width: 900px) {
+		.stable-download {
+			padding: 20px;
+		}
+	}
+
+	.stable-download h2 {
+		color: var(--dark-color-text-title);
+		font-weight: 600;
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	.stable-download p {
+		color: var(--dark-color-text);
+		margin: 0;
+	}
+
+	.stable-download-ready {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 26px;
+	}
+
+	.stable-download-ready .btn-download {
+		min-width: 310px;
+	}
+
+	.stable-download-ready .btn-download:nth-of-type(2n) {
+		background-color: rgb(132 151 174 / 68%);
+		-webkit-backdrop-filter: blur(4px);
+		backdrop-filter: blur(4px);
+	}
+	.stable-download-ready .btn-download:nth-of-type(2n) .download-title {
+		color: #f7f7f7;
+	}
+	.stable-download-ready .btn-download:nth-of-type(2n) .download-hint {
+		background-color: var(--primary-color-subdued);
+	}
+
+	footer {
+		margin-top: 0;
+	}
+</style>
+
+<div class="hero">
+	<div class="hero-wrapper">
+		<h1>Download Godot preview builds</h1>
+
+		<div class="hero-blurb">
+			<p>
+				Help test the upcoming release of the engine,
+				<br />
+				and be the first to benefit from new features.
+			</p>
+		</div>
+	</div>
+
+	<div class="other-platforms">
+		<div class="other-platforms-wrapper">
+			Looking for the stable version? <a href="#stable">See below!</a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="padded" style="padding-top:0;margin-top:32px">
+		<h2>Lastest preview builds</h2>
+
+		{% assign stable_versions = site.data.versions | where: "flavor", "stable" %}
+
+		<div class="preview-cards">
+			{% for version in site.data.versions %}
+				{% unless stable_versions contains version %}
+
+					<div class="card base-padding preview-download">
+						<h3 id="{{ version.name }}-{{ version.flavor }}">
+							Godot {{ version.name }}-{{ version.flavor }}
+						</h3>
+
+						<p class="preview-download-meta">
+							{% unless version.release_date == empty %}
+								<span>{{ version.release_date }}</span>
+							{% endunless %}
+						</p>
+
+						<div class="preview-download-primary">
+							<div class="preview-notes">
+								{% unless version.release_notes == empty %}
+									{% assign release_article = site.article | find: "url", version.release_notes %}
+
+									{% unless release_article == empty %}
+										<div class="notes-summary">
+											<div class="notes-thumbnail" style="background-image: url('{{ release_article.image }}');"></div>
+											<div class="notes-excerpt">
+												{{ release_article.excerpt }}
+											</div>
+										</div>
+									{% endunless %}
+								{% else %}
+									<div class="notes-excerpt">
+										Release notes are not ready yet. You can check the complete list of changes using our interactive changelog.
+									</div>
+								{% endunless %}
+
+								<div class="notes-buttons">
+									{% unless version.release_notes == empty %}
+										{% assign release_article = site.article | find: "url", version.release_notes %}
+										{% unless release_article == empty %}
+											<a class="btn btn-release-notes" href="{{ release_article.url }}">Read more</a>
+										{% endunless %}
+									{% endunless %}
+
+									<a class="btn btn-release-changelog" href="https://godotengine.github.io/godot-interactive-changelog/#{{ version.name }}-{{ version.flavor }}">View complete changelog</a>
+								</div>
+
+							</div>
+
+							<div>
+								<h4>Main downloads</h4>
+								<div class="download-primaries">
+									{% assign download_primary = version | get_download_primary: false %}
+									{% for primary in download_primary %}
+										{% comment %}
+											When iterating over a hash, you get an array. 0-th item is the key, and
+											1-st item is the value.
+										{% endcomment %}
+										{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
+
+										<a href="{{ version | make_download: primary[1], false, "tuxfamily" }}" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/{{ primary[0] | split: "_" | join: "-" }}.svg" title="{{ platform_info.title }}" alt="{{ platform_info.title }}" />
+												{{ platform_info.title }}
+											</div>
+										</a>
+
+										{% assign mono_download = version | make_download: primary[1], true, "tuxfamily" %}
+										{% if mono_download == "#" %}
+											<div></div>
+										{% else %}
+											<a href="{{ mono_download }}" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+
+						<div class="preview-download-toggle">
+							<h4>Show all downloads</h4>
+						</div>
+
+						<div class="preview-download-links">
+							{% assign download_platforms = version | get_download_platforms: false %}
+							{% for platform in download_platforms %}
+								{% assign platform_info = site.data.download_platforms | find: "name", platform %}
+
+								<div class="download">
+									<span>
+										<a href="{{ version | make_download: platform, false, "tuxfamily" }}">
+											{{ platform_info.title }}
+											{% unless platform_info.caption == empty %} - {{ platform_info.caption }}{% endunless %}
+										</a>
+									</span>
+									<span class="download-details">
+										{% for tag in platform_info.tags %}{% if forloop.index > 1 %} · {% endif %}{{ tag }}{% endfor %}
+									</span>
+								</div>
+
+								{% assign mono_download = version | make_download: platform, true, "tuxfamily" %}
+								{% unless mono_download == "#" %}
+									<div class="download">
+										<a href="{{ mono_download }}">
+											{{ platform_info.title }} - .NET
+											{% unless platform_info.caption == empty %} - {{ platform_info.caption }}{% endunless %}
+										</a>
+										<span class="download-details">
+											{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}C# support
+										</span>
+									</div>
+								{% endunless %}
+							{% endfor %}
+						</div>
+					</div>
+
+				{% endunless %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const downloadToggles = document.querySelectorAll('.preview-download-toggle');
+		downloadToggles.forEach((item) => {
+			const toggleLink = item.querySelector('h4');
+			toggleLink.addEventListener('click', (e) => {
+				if (item.classList.contains('active')) {
+					item.classList.remove('active');
+					toggleLink.textContent = 'Show all downloads';
+				} else {
+					item.classList.add('active');
+					toggleLink.textContent = 'Hide all downloads';
+				}
+			});
+		});
+	});
+</script>
+
+<div id="stable" class="container card stable-download">
+	<h2>Need a stable version?</h2>
+
+	<div class="stable-download-ready">
+		{% assign stable_version_3 = site.data.versions | find: "featured", "3" %}
+		{% assign stable_version_4 = site.data.versions | find: "featured", "4" %}
+
+		<p>Download the <strong>latest version of Godot 4</strong> right now and begin your creative journey!</p>
+		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"
+			title="Download the latest version of Godot 4">
+			<div class="download-title">Download Latest</div>
+			<div class="download-hint">{{ stable_version_4.name }}</div>
+		</a>
+
+		<p>Want to stick to the <strong>true and trusted Godot 3</strong>? Download the long-term support version!</p>
+		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
+			title="Download the long-term support version of Godot 3">
+			<div class="download-title">Download LTS</div>
+			<div class="download-hint">{{ stable_version_3.name }}</div>
+		</a>
+	</div>
+</div>
+
+{% include footer.html %}
