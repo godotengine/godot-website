@@ -182,17 +182,6 @@ Italy:
         url: https://discord.gg/7YuUqJB
       - title: Facebook
         url: https://www.facebook.com/groups/1926189904375792/
-Iraq:
-  - name: Baghdad Game Lab
-    links:
-      - title: Website
-        url: https://www.baghdadgamelab.com/
-      - title: Discord
-        url: https://discord.gg/8DJh4Uxcyv
-      - title: Instagram
-        url: https://www.instagram.com/bgl.iq/
-      - title: Linkedin
-        url: https://www.linkedin.com/company/bgh-iq
         
 Iran:
   - name: Godot Iran (گودو ایران)
@@ -209,6 +198,18 @@ Iran:
         url: https://discord.gg/n3BX6ujU5f
       - title: Telegram
         url: https://t.me/world_of_godot
+Iraq:
+  - name: Baghdad Game Lab
+    links:
+      - title: Website
+        url: https://www.baghdadgamelab.com/
+      - title: Discord
+        url: https://discord.gg/8DJh4Uxcyv
+      - title: Instagram
+        url: https://www.instagram.com/bgl.iq/
+      - title: Linkedin
+        url: https://www.linkedin.com/company/bgh-iq
+        
 Israel:
   - name: Godot Israel
     links:
