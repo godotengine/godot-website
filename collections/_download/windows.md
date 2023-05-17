@@ -4,32 +4,20 @@ description: Download the latest stable version of the Godot Engine for Windows
 platform: Windows
 
 downloads:
-  - caption: Standard (x86_64)
-    slug: win64.exe.zip
+  - platform:  "windows.64"
     featured: true
     tags:
       - 64 bit
 
-  - caption: Standard (x86)
-    slug: win32.exe.zip
-    tags:
-      - 32 bit
-  
-  - caption: .NET (x86_64)
-    slug: mono_win64.zip
+  - platform:  "windows.32"
+
+  - platform:  "windows.64"
     mono: true
     featured: true
     featured_flavor: .NET
-    tags:
-      - 64 bit
-      - C# support
-  
-  - caption: .NET (x86)
-    slug: mono_win32.zip
+
+  - platform:  "windows.32"
     mono: true
-    tags:
-      - 32 bit
-      - C# support
 
 content_note: |
   <p>

@@ -220,8 +220,8 @@ layout: default
 				3D games.</p>
 
 			<div class="main-download">
-				{% assign stable_version_3 = site.data.versions.godot_3 | find: "flavor", "stable" %}
-				{% assign stable_version_4 = site.data.versions.godot_4 | find: "flavor", "stable" %}
+				{% assign stable_version_3 = site.data.versions | find: "featured", "3" %}
+				{% assign stable_version_4 = site.data.versions | find: "featured", "4" %}
 
 				<div class="main-download-links">
 					<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"
@@ -254,7 +254,7 @@ layout: default
 		{% for post in latest_posts limit:1 %}
 		<a href="{{ post.url }}" style="text-decoration: none">
 			<article class="article-card">
-				<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
+				<div class="thumbnail" style="background-image: url('{{ post.image }}');"></div>
 				<div class="content">
 					<h3>{{ post.title }}</h3>
 					<p class="excerpt">{{ post.excerpt }}</p>

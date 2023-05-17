@@ -152,18 +152,34 @@ locally, some configuration options may need to be different. To define those, `
 
 ### Updating Godot download version
 
-When a new stable build of the engine is released, you need to add its number and date to the `data/_versions.yml`
-file. It has several lists, one for each maintained major version of Godot. Pick the correct one, and **at the top of the list**
-add something similar to the following:
+All download information on the website is data-driven. This means that to change the information about the current
+stable version, or on-going version previews, you don't need to modify pages directly. Instead, data files must be
+updated.
+
+The main file for keeping track of every official version is `data/_versions.yml`. It contains exactly one record
+per each official release, including pre-releases. This file should be updated every time there is a new official
+build available for download.
+
+To create a new version, add the following block to the file:
 
 ```
-  - name: "4.0.1"
-    flavor: "stable"
-    release_date: "17 March 2023"
+- name: "4.0.1"
+  flavor: "stable"
+  release_date: "20 March 2023"
+  release_notes: "/article/maintenance-release-godot-4-0-1/"
 ```
 
-After this change is merged and the website is built, everything referencing the engine version should be updated
-automatically, including download links for every platform.
+Make sure to order entries correctly, with the higher version number being closer to the top. Use the `flavor` field
+to mark release as stable or as one of the pre-release builds. Make sure to always fill out the release date, and the release
+notes link, if available.
+
+When a new build for an existing version is published, update its corresponding block, changing the flavor and the release
+information. Make sure to update this information when publishing the release notes.
+
+There are two additional files providing data for download pages and links: `_data/download_configs.yml` and
+`_data/download_platforms.yml`. These files don't normally require changes and are used as a static reference table.
+They define descriptions, tags, and filename slugs for all downloadable builds, as well as order for downloads on
+some pages.
 
 ## Resources
 

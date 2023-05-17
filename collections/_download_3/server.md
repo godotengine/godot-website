@@ -4,34 +4,18 @@ description: Download the latest stable version of the Godot Engine 3 for Linux 
 platform: Linux Server
 
 downloads:
-  - caption: Standard (x86_64)
-    slug: linux_server.64.zip
+  - platform: "linux_server.64"
     featured: true
-    tags:
-      - 64 bit
 
-  - caption: Headless (x86_64)
-    slug: linux_headless.64.zip
-    tags:
-      - 64 bit
-      - headless
+  - platform: "linux_server.headless.64"
 
-  - caption: .NET Standard (x86_64)
-    slug: mono_linux_server_64.zip
+  - platform: "linux_server.64"
     mono: true
     featured: true
     featured_flavor: .NET
-    tags:
-      - 64 bit
-      - C# support
 
-  - caption: .NET Headless (x86_64)
-    slug: mono_linux_headless_64.zip
+  - platform: "linux_server.headless.64"
     mono: true
-    tags:
-      - 64 bit
-      - headless
-      - C# support
 
 content_instructions: |
   <ul>

@@ -11,3 +11,8 @@ trim_trailing_whitespace = true
 [*.{yml,yaml}]
 indent_style = space
 indent_size = 2
+
+# Ruby scripts and plugins for Jekyll
+[*.rb]
+indent_style = space
+indent_size = 2
