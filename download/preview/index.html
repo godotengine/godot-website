@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="Download the latest preview version of the Godot Engine 3 and Godot Engine 4 for Linux, macOS, Windows, or Android">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org/download/preview/">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="Download Godot preview builds - Godot Engine">
+	<meta property="og:description" content="Download the latest preview version of the Godot Engine 3 and Godot Engine 4 for Linux, macOS, Windows, or Android">
+	<meta property="og:image" content="https://godotengine.org/assets/og_image.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Download Godot preview builds - Godot Engine</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css?106">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	<input type="checkbox" id="nav_toggle_cb">
+<header>
+	<div class="container flex align-center">
+		<div id="nav_head">
+			<a href="/" id="logo-link">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			</a>
+			<label for="nav_toggle_cb" id="nav_toggle_btn">
+				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="Main menu">
+			</label>
+		</div>
+
+		<nav id="nav">
+			<ul class="left">
+				<li><a href="/features">Features</a></li>
+				<div class="only-on-mobile" style="width: 100%">
+					<li><a href="/showcase">Showcase</a></li>
+				</div>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Community</a></li>
+				<li><a href="/contact">About</a></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+			</ul>
+
+			<ul class="right">
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://docs.godotengine.org">Learn</a></li>
+				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
+				
+				<li class="fund"><a href="/donate">❤&#xFE0E; Donate</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+
+<link rel="stylesheet" href="/assets/css/transparent-nav.css">
+<link rel="stylesheet" href="/assets/css/download.css">
+<style>
+	.hero {
+		background-image: url('/assets/download/download-background-preview.jpg');
+	}
+
+	.hero-blurb {
+		color: var(--download-hero-color);
+	}
+
+	.preview-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.preview-download {
+		border-radius: 12px;
+	}
+
+	.preview-download h3 {
+		margin-bottom: 4px;
+	}
+
+	.preview-download-meta {
+		color: var(--secondary-color-text);
+		font-size: 17px;
+		margin: 0;
+	}
+
+	.preview-download-primary {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		gap: 60px;
+		margin-top: 20px;
+	}
+	@media (max-width: 900px) {
+		.preview-download-primary {
+			grid-template-columns: 1fr;
+			gap: 36px;
+		}
+	}
+
+	.preview-notes {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+
+	.notes-summary {
+		display: grid;
+		gap: 24px;
+		width: 100%;
+	}
+
+	.notes-thumbnail {
+		background-position: center;
+		background-size: cover;
+		background-color: var(--card-background-color);
+		border-radius: 7px;
+		box-shadow: 0 5px 10px -3px #00000078;
+		aspect-ratio: 16 / 9;
+		max-height: 260px;
+	}
+
+	.notes-excerpt {
+		color: var(--base-color-text);
+		opacity: 0.8;
+	}
+
+	.notes-buttons {
+		display: flex;
+		align-items: center;
+		gap: 42px;
+		min-height: 54px;
+	}
+	@media (max-width: 768px) {
+		.notes-buttons {
+			flex-direction: column;
+			gap: 36px;
+			width: 100%;
+		}
+	}
+
+	.btn.btn-release-notes {
+		background-color: var(--button-card-background-color);
+		color: var(--base-color-text);
+	}
+
+	.btn.btn-release-changelog {
+		background: transparent;
+		box-shadow: none;
+		color: var(--link-color);
+		padding: 2px 4px;
+	}
+
+	.download-primaries {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 8px;
+	}
+
+	.download-primaries .btn-download-primary {
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	.download-primaries .btn-download-primary:nth-child(2n) {
+		background-color: rgb(132 151 174 / 68%);
+		-webkit-backdrop-filter: blur(4px);
+		backdrop-filter: blur(4px);
+	}
+	.download-primaries .btn-download-primary:nth-child(2n) .download-title {
+		color: #f7f7f7;
+	}
+	.download-primaries .btn-download-primary:nth-child(2n) .download-hint {
+		background-color: var(--primary-color-subdued);
+        color: var(--text-color);
+	}
+
+	.download-primaries .btn.btn-download-primary .download-title {
+		font-size: 18px;
+		line-height: 24px;
+		white-space: nowrap;
+	}
+	@media (max-width: 900px) {
+		.download-primaries .btn.btn-download-primary .download-title {
+			line-height: 28px;
+		}
+	}
+
+	.preview-download-toggle {
+		display: flex;
+		justify-content: flex-end;
+	}
+	@media (max-width: 900px) {
+		.preview-download-toggle {
+			justify-content: flex-start;
+		}
+	}
+
+	.preview-download-toggle h4 {
+		color: var(--link-color);
+		cursor: pointer;
+		margin-top: 32px;
+		text-align: right;
+		/* Prevent color transitions from being too fast (for epilepsy). */
+		transition: 0.1s filter;
+		filter: brightness(100%);
+	}
+	.preview-download-toggle h4:hover {
+		filter: brightness(117.5%);
+	}
+	.preview-download-toggle h4:active {
+		filter: brightness(82.5%);
+	}
+	@media (max-width: 900px) {
+		.preview-download-toggle h4 {
+			text-align: left;
+		}
+	}
+
+	.preview-download-links {
+		background-color: var(--download-table-color);
+		border-left: 6px solid var(--accent-color);
+		padding: 4px 16px;
+		display: none;
+	}
+	.preview-download-toggle.active + .preview-download-links {
+		display: block;
+	}
+
+	.preview-download-links .download {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: flex-end;
+		gap: 6px;
+		border-bottom: 1px dashed var(--table-divider-color);
+		margin-bottom: 8px;
+		padding: 2px 0;
+	}
+	@media (max-width: 900px) {
+		.preview-download-links .download {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.preview-download-links .download-details {
+		color: var(--secondary-color-text);
+		font-size: 14px;
+		padding: 0 12px;
+	}
+
+	.stable-download {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		background-color: var(--dark-color);
+		padding: 24px;
+		padding-bottom: 60px;
+		width: auto;
+		max-width: 100%;
+	}
+	@media (max-width: 900px) {
+		.stable-download {
+			padding: 20px;
+		}
+	}
+
+	.stable-download h2 {
+		color: var(--dark-color-text-title);
+		font-weight: 600;
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	.stable-download p {
+		color: var(--dark-color-text);
+		margin: 0;
+	}
+
+	.stable-download-ready {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 26px;
+	}
+
+	.stable-download-ready .btn-download {
+		min-width: 310px;
+	}
+
+	.stable-download-ready .btn-download:nth-of-type(2n) {
+		background-color: rgb(132 151 174 / 68%);
+		-webkit-backdrop-filter: blur(4px);
+		backdrop-filter: blur(4px);
+	}
+	.stable-download-ready .btn-download:nth-of-type(2n) .download-title {
+		color: #f7f7f7;
+	}
+	.stable-download-ready .btn-download:nth-of-type(2n) .download-hint {
+		background-color: var(--primary-color-subdued);
+	}
+
+	footer {
+		margin-top: 0;
+	}
+</style>
+
+<div class="hero">
+	<div class="hero-wrapper">
+		<h1>Download Godot preview builds</h1>
+
+		<div class="hero-blurb">
+			<p>
+				Help test the upcoming release of the engine,
+				<br />
+				and be the first to benefit from new features.
+			</p>
+		</div>
+	</div>
+
+	<div class="other-platforms">
+		<div class="other-platforms-wrapper">
+			Looking for the stable version? <a href="#stable">See below!</a>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="padded" style="padding-top:0;margin-top:32px">
+		<h2>Lastest preview builds</h2>
+
+		
+
+		<div class="preview-cards">
+			
+				
+
+					<div class="card base-padding preview-download">
+						<h3 id="4.1-dev2">
+							Godot 4.1-dev2
+						</h3>
+
+						<p class="preview-download-meta">
+							
+								<span>10 May 2023</span>
+							
+						</p>
+
+						<div class="preview-download-primary">
+							<div class="preview-notes">
+								
+									
+
+									
+										<div class="notes-summary">
+											<div class="notes-thumbnail" style="background-image: url('/storage/blog/covers/dev-snapshot-godot-4-1-dev-2.jpg');"></div>
+											<div class="notes-excerpt">
+												We're well into the development phase for Godot 4.1, with a little less than a month left before we move to beta. So here's a second dev snapshot to test recent changes!
+											</div>
+										</div>
+									
+								
+
+								<div class="notes-buttons">
+									
+										
+										
+											<a class="btn btn-release-notes" href="/article/dev-snapshot-godot-4-1-dev-2/">Read more</a>
+										
+									
+
+									<a class="btn btn-release-changelog" href="https://godotengine.github.io/godot-interactive-changelog/#4.1-dev2">View complete changelog</a>
+								</div>
+
+							</div>
+
+							<div>
+								<h4>Main downloads</h4>
+								<div class="download-primaries">
+									
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_android_editor.apk" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/android.svg" title="Android" alt="Android" />
+												Android
+											</div>
+										</a>
+
+										
+										
+											<div></div>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_linux.x86_64.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" />
+												Linux
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_macos.universal.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" />
+												macOS
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_macos.universal.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_win64.exe.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" />
+												Windows
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_win64.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_web_editor.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/web.svg" title="Web editor" alt="Web editor" />
+												Web editor
+											</div>
+										</a>
+
+										
+										
+											<div></div>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_export_templates.tpz" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/templates.svg" title="Export templates" alt="Export templates" />
+												Export templates
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_export_templates.tpz" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="preview-download-toggle">
+							<h4>Show all downloads</h4>
+						</div>
+
+						<div class="preview-download-links">
+							
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_android_editor.apk">
+											Android
+											 - Universal APK (ARM64 + ARMv7 + x86_64 + x86)
+										</a>
+									</span>
+									<span class="download-details">
+										APK download · ARM64/v7 · x86 (64 & 32 bit)
+									</span>
+								</div>
+
+								
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_linux.x86_64.zip">
+											Linux
+											 - Standard (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_linux_x86_64.zip">
+											Linux - .NET
+											 - Standard (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_linux.x86_32.zip">
+											Linux
+											 - Standard (x86)
+										</a>
+									</span>
+									<span class="download-details">
+										32 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_linux_x86_32.zip">
+											Linux - .NET
+											 - Standard (x86)
+										</a>
+										<span class="download-details">
+											32 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_macos.universal.zip">
+											macOS
+											 - Universal (x86_64 + Apple Silicon)
+										</a>
+									</span>
+									<span class="download-details">
+										Intel/Apple Silicon · 64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_macos.universal.zip">
+											macOS - .NET
+											 - Universal (x86_64 + Apple Silicon)
+										</a>
+										<span class="download-details">
+											Intel/Apple Silicon · 64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_win64.exe.zip">
+											Windows
+											 - Standard (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_win64.zip">
+											Windows - .NET
+											 - Standard (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_win32.exe.zip">
+											Windows
+											 - Standard (x86)
+										</a>
+									</span>
+									<span class="download-details">
+										32 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_win32.zip">
+											Windows - .NET
+											 - Standard (x86)
+										</a>
+										<span class="download-details">
+											32 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_web_editor.zip">
+											Web editor
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Self-hosted · Cross-platform
+									</span>
+								</div>
+
+								
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/Godot_v4.1-dev2_export_templates.tpz">
+											Export templates
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Used to export your games to all supported platforms
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/mono/Godot_v4.1-dev2_mono_export_templates.tpz">
+											Export templates - .NET
+											
+										</a>
+										<span class="download-details">
+											Used to export your games to all supported platforms · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.1/dev2/godot-lib.4.1.dev2.template_release.aar">
+											AAR library
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Android plugins · Java · Kotlin
+									</span>
+								</div>
+
+								
+								
+							
+						</div>
+					</div>
+
+				
+			
+				
+
+					<div class="card base-padding preview-download">
+						<h3 id="4.0.3-rc2">
+							Godot 4.0.3-rc2
+						</h3>
+
+						<p class="preview-download-meta">
+							
+								<span>12 May 2023</span>
+							
+						</p>
+
+						<div class="preview-download-primary">
+							<div class="preview-notes">
+								
+									
+
+									
+										<div class="notes-summary">
+											<div class="notes-thumbnail" style="background-image: url('/storage/blog/covers/release-candidate-godot-4-0-3-rc-2.jpg');"></div>
+											<div class="notes-excerpt">
+												Another round of cherry-picks for the upcoming Godot 4.0.3, fixing a few regressions reported against RC 1 and backporting more important fixes.
+											</div>
+										</div>
+									
+								
+
+								<div class="notes-buttons">
+									
+										
+										
+											<a class="btn btn-release-notes" href="/article/release-candidate-godot-4-0-3-rc-2/">Read more</a>
+										
+									
+
+									<a class="btn btn-release-changelog" href="https://godotengine.github.io/godot-interactive-changelog/#4.0.3-rc2">View complete changelog</a>
+								</div>
+
+							</div>
+
+							<div>
+								<h4>Main downloads</h4>
+								<div class="download-primaries">
+									
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_android_editor.apk" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/android.svg" title="Android" alt="Android" />
+												Android
+											</div>
+										</a>
+
+										
+										
+											<div></div>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_linux.x86_64.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" />
+												Linux
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_macos.universal.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" />
+												macOS
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_macos.universal.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_win64.exe.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" />
+												Windows
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_win64.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_web_editor.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/web.svg" title="Web editor" alt="Web editor" />
+												Web editor
+											</div>
+										</a>
+
+										
+										
+											<div></div>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_export_templates.tpz" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/templates.svg" title="Export templates" alt="Export templates" />
+												Export templates
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_export_templates.tpz" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="preview-download-toggle">
+							<h4>Show all downloads</h4>
+						</div>
+
+						<div class="preview-download-links">
+							
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_android_editor.apk">
+											Android
+											 - Universal APK (ARM64 + ARMv7 + x86_64 + x86)
+										</a>
+									</span>
+									<span class="download-details">
+										APK download · ARM64/v7 · x86 (64 & 32 bit)
+									</span>
+								</div>
+
+								
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_linux.x86_64.zip">
+											Linux
+											 - Standard (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_linux_x86_64.zip">
+											Linux - .NET
+											 - Standard (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_linux.x86_32.zip">
+											Linux
+											 - Standard (x86)
+										</a>
+									</span>
+									<span class="download-details">
+										32 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_linux_x86_32.zip">
+											Linux - .NET
+											 - Standard (x86)
+										</a>
+										<span class="download-details">
+											32 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_macos.universal.zip">
+											macOS
+											 - Universal (x86_64 + Apple Silicon)
+										</a>
+									</span>
+									<span class="download-details">
+										Intel/Apple Silicon · 64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_macos.universal.zip">
+											macOS - .NET
+											 - Universal (x86_64 + Apple Silicon)
+										</a>
+										<span class="download-details">
+											Intel/Apple Silicon · 64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_win64.exe.zip">
+											Windows
+											 - Standard (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_win64.zip">
+											Windows - .NET
+											 - Standard (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_win32.exe.zip">
+											Windows
+											 - Standard (x86)
+										</a>
+									</span>
+									<span class="download-details">
+										32 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_win32.zip">
+											Windows - .NET
+											 - Standard (x86)
+										</a>
+										<span class="download-details">
+											32 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_web_editor.zip">
+											Web editor
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Self-hosted · Cross-platform
+									</span>
+								</div>
+
+								
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/Godot_v4.0.3-rc2_export_templates.tpz">
+											Export templates
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Used to export your games to all supported platforms
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono/Godot_v4.0.3-rc2_mono_export_templates.tpz">
+											Export templates - .NET
+											
+										</a>
+										<span class="download-details">
+											Used to export your games to all supported platforms · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/godot-lib.4.0.3.rc2.template_release.aar">
+											AAR library
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Android plugins · Java · Kotlin
+									</span>
+								</div>
+
+								
+								
+							
+						</div>
+					</div>
+
+				
+			
+				
+			
+				
+			
+				
+			
+				
+
+					<div class="card base-padding preview-download">
+						<h3 id="3.6-beta1">
+							Godot 3.6-beta1
+						</h3>
+
+						<p class="preview-download-meta">
+							
+								<span>13 April 2023</span>
+							
+						</p>
+
+						<div class="preview-download-primary">
+							<div class="preview-notes">
+								
+									
+
+									
+										<div class="notes-summary">
+											<div class="notes-thumbnail" style="background-image: url('/storage/blog/covers/dev-snapshot-godot-3-6-beta-1.jpg');"></div>
+											<div class="notes-excerpt">
+												It's time to start testing the next feature release of Godot 3, packed with over 500 fixes and enhancements which don't require any compatibility breaking changes!
+											</div>
+										</div>
+									
+								
+
+								<div class="notes-buttons">
+									
+										
+										
+											<a class="btn btn-release-notes" href="/article/dev-snapshot-godot-3-6-beta-1/">Read more</a>
+										
+									
+
+									<a class="btn btn-release-changelog" href="https://godotengine.github.io/godot-interactive-changelog/#3.6-beta1">View complete changelog</a>
+								</div>
+
+							</div>
+
+							<div>
+								<h4>Main downloads</h4>
+								<div class="download-primaries">
+									
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_android_editor.apk" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/android.svg" title="Android" alt="Android" />
+												Android
+											</div>
+										</a>
+
+										
+										
+											<div></div>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_x11.64.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" />
+												Linux
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_x11_64.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_osx.universal.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" />
+												macOS
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_osx.universal.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_win64.exe.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" />
+												Windows
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_win64.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_linux_headless.64.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/linux-server.svg" title="Linux Server" alt="Linux Server" />
+												Linux Server
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_linux_headless_64.zip" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_web_editor.zip" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/web.svg" title="Web editor" alt="Web editor" />
+												Web editor
+											</div>
+										</a>
+
+										
+										
+											<div></div>
+										
+									
+										
+										
+
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_export_templates.tpz" class="btn btn-download btn-download-primary">
+											<div class="download-title">
+												<img width="24" height="24" src="/assets/images/platforms/templates.svg" title="Export templates" alt="Export templates" />
+												Export templates
+											</div>
+										</a>
+
+										
+										
+											<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_export_templates.tpz" class="btn btn-download btn-download-primary">
+												<div class="download-title">
+													.NET
+												</div>
+											</a>
+										
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="preview-download-toggle">
+							<h4>Show all downloads</h4>
+						</div>
+
+						<div class="preview-download-links">
+							
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_android_editor.apk">
+											Android
+											 - Universal APK (ARM64 + ARMv7 + x86_64 + x86)
+										</a>
+									</span>
+									<span class="download-details">
+										APK download · ARM64/v7 · x86 (64 & 32 bit)
+									</span>
+								</div>
+
+								
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_x11.64.zip">
+											Linux
+											 - Standard (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_x11_64.zip">
+											Linux - .NET
+											 - Standard (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_x11.32.zip">
+											Linux
+											 - Standard (x86)
+										</a>
+									</span>
+									<span class="download-details">
+										32 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_x11_32.zip">
+											Linux - .NET
+											 - Standard (x86)
+										</a>
+										<span class="download-details">
+											32 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_osx.universal.zip">
+											macOS
+											 - Universal (x86_64 + Apple Silicon)
+										</a>
+									</span>
+									<span class="download-details">
+										Intel/Apple Silicon · 64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_osx.universal.zip">
+											macOS - .NET
+											 - Universal (x86_64 + Apple Silicon)
+										</a>
+										<span class="download-details">
+											Intel/Apple Silicon · 64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_win64.exe.zip">
+											Windows
+											 - Standard (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_win64.zip">
+											Windows - .NET
+											 - Standard (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_win32.exe.zip">
+											Windows
+											 - Standard (x86)
+										</a>
+									</span>
+									<span class="download-details">
+										32 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_win32.zip">
+											Windows - .NET
+											 - Standard (x86)
+										</a>
+										<span class="download-details">
+											32 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_linux_headless.64.zip">
+											Linux Server
+											 - Headless (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit · Headless
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_linux_headless_64.zip">
+											Linux Server - .NET
+											 - Headless (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · Headless · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_linux_server.64.zip">
+											Linux Server
+											 - Standard (x86_64)
+										</a>
+									</span>
+									<span class="download-details">
+										64 bit
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_linux_server_64.zip">
+											Linux Server - .NET
+											 - Standard (x86_64)
+										</a>
+										<span class="download-details">
+											64 bit · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_web_editor.zip">
+											Web editor
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Self-hosted · Cross-platform
+									</span>
+								</div>
+
+								
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/Godot_v3.6-beta1_export_templates.tpz">
+											Export templates
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Used to export your games to all supported platforms
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/Godot_v3.6-beta1_mono_export_templates.tpz">
+											Export templates - .NET
+											
+										</a>
+										<span class="download-details">
+											Used to export your games to all supported platforms · C# support
+										</span>
+									</div>
+								
+							
+								
+
+								<div class="download">
+									<span>
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/godot-lib.3.6.beta1.release.aar">
+											AAR library
+											
+										</a>
+									</span>
+									<span class="download-details">
+										Android plugins · Java · Kotlin
+									</span>
+								</div>
+
+								
+								
+									<div class="download">
+										<a href="https://downloads.tuxfamily.org/godotengine/3.6/beta1/mono/godot-lib.3.6.beta1.mono.release.aar">
+											AAR library - .NET
+											
+										</a>
+										<span class="download-details">
+											Android plugins · Java · Kotlin · C# support
+										</span>
+									</div>
+								
+							
+						</div>
+					</div>
+
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const downloadToggles = document.querySelectorAll('.preview-download-toggle');
+		downloadToggles.forEach((item) => {
+			const toggleLink = item.querySelector('h4');
+			toggleLink.addEventListener('click', (e) => {
+				if (item.classList.contains('active')) {
+					item.classList.remove('active');
+					toggleLink.textContent = 'Show all downloads';
+				} else {
+					item.classList.add('active');
+					toggleLink.textContent = 'Hide all downloads';
+				}
+			});
+		});
+	});
+</script>
+
+<div id="stable" class="container card stable-download">
+	<h2>Need a stable version?</h2>
+
+	<div class="stable-download-ready">
+		
+		
+
+		<p>Download the <strong>latest version of Godot 4</strong> right now and begin your creative journey!</p>
+		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"
+			title="Download the latest version of Godot 4">
+			<div class="download-title">Download Latest</div>
+			<div class="download-hint">4.0.2</div>
+		</a>
+
+		<p>Want to stick to the <strong>true and trusted Godot 3</strong>? Download the long-term support version!</p>
+		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
+			title="Download the long-term support version of Godot 3">
+			<div class="download-title">Download LTS</div>
+			<div class="download-hint">3.5.2</div>
+		</a>
+	</div>
+</div>
+
+</main>
+
+<footer>
+	<div class="container flex footer-container">
+		<div id="copyright">
+			<p>
+				© 2007-2023 Juan Linietsky, Ariel Manzur and <a
+					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
+					rel="noopener">contributors</a><br>
+				Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom
+					Conservancy</a>.<br>
+				Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
+				<a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on
+					GitHub</a>.
+			</p>
+		</div>
+		<div id="sitemap">
+			<ul class="sitemap-group">
+				<li><strong>Get Godot</strong></li>
+				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Public Relations</strong></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/community">Communities and Events</a></li>
+				<li><a href="/press">Press Kit</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>About Godot</strong></li>
+				<li><a href="/features">Features</a></li>
+				<li><a href="/showcase">Showcase</a></li>
+				<li><a href="/education">Education</a></li>
+				<li><a href="/license">License</a></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a></li>
+				<li><a href="/privacy-policy">Privacy Policy</a></li>
+				<li><a href="/donate">Donate</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>Project Team</strong></li>
+				<li><a href="/governance">Governance</a></li>
+				<li><a href="/teams">Teams</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Extra Resources</strong></li>
+				<li><a href="/asset-library/asset">Asset Library</a></li>
+				<li><a href="https://docs.godotengine.org">Documentation</a></li>
+				<li><a href="https://github.com/godotengine">Code Repository</a></li>
+			</ul>
+		</div>
+		<div id="social" class="dark-desaturate">
+			<h4 class="text-right"><a href="/contact">Contact us</a></h4>
+			<div class="flex justify-space-between" style="gap: 3px;">
+				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+				</a>
+				<a href="https://mastodon.gamedev.place/@godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/mastodon_logo.svg" width="32" height="32" alt="Mastodon">
+				</a>
+				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+				</a>
+				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
+					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+				</a>
+				<a href="/rss.xml" target="_blank" rel="noopener">
+					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		document.querySelectorAll('pre code').forEach((block) => {
+			hljs.highlightBlock(block);
+		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}`;
+		}
+	});
+</script>
+
+
+</body>
+
+</html>

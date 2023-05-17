@@ -21,7 +21,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?105">
+	<link rel="stylesheet" href="/assets/css/main.css?106">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
@@ -38,7 +38,7 @@
 				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
 			</a>
 			<label for="nav_toggle_cb" id="nav_toggle_btn">
-				<img src="/assets/hamburger.svg" width="24" height="24" alt="">
+				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="Main menu">
 			</label>
 		</div>
 
@@ -129,7 +129,7 @@
 		font-size: 22px;
 		margin-bottom: 4px;
 	}
-	
+
 	.feature-container.feature-container-2x {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -144,7 +144,7 @@
 			grid-column: span 1;
 		}
 	}
-	
+
 	.feature-container.feature-container-3x {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
@@ -236,6 +236,7 @@
 		gap: 16px;
 		background-color: var(--dark-color);
 		padding: 24px;
+		padding-bottom: 60px;
 		width: auto;
 		max-width: 100%;
 	}
@@ -320,7 +321,7 @@
 		width: 20px;
 		height: 36px;
 		transform: translateY(-50%);
-		background-image: url('/assets/arrow-flip.svg');
+		background-image: url('/assets/icons/arrow-flip.svg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		cursor: pointer;
@@ -362,7 +363,7 @@
 		position: absolute;
 		bottom: 12px;
 		right: 16px;
-		background: #1a1a1a7a;
+		background: var(--hero-text-background-color);
 		border-radius: 8px;
 		padding: 2px 10px;
 	}
@@ -380,6 +381,10 @@
 
 	.showcase-credits a {
 		text-decoration: none;
+	}
+
+	footer {
+		margin-top: 0;
 	}
 </style>
 
