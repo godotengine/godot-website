@@ -5,7 +5,7 @@ categories: ["release"]
 author: Yuri Sizov
 image: /storage/blog/covers/maintenance-release-godot-4-0-3.jpg
 image_caption_title: Godot Juice
-image_caption_description: A course about making a juicy game in Godot 4 by MrEliptik
+image_caption_description: A Godot 4 course by MrEliptik
 date: 2023-05-19 13:00:00
 ---
 
