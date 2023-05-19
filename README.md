@@ -176,6 +176,16 @@ notes link, if available.
 When a new build for an existing version is published, update its corresponding block, changing the flavor and the release
 information. Make sure to update this information when publishing the release notes.
 
+Stable releases featured across the website, must be marked with the `featured` field and the corresponding major version number. Only one record must be marked as featured per version, so don't forget to remove it from the current holder of the mark.
+
+```
+- name: "4.0.3"
+  flavor: "stable"
+  release_date: "19 May 2023"
+  release_notes: "/article/maintenance-release-godot-4-0-3/"
+  featured: "4"
+```
+
 There are two additional files providing data for download pages and links: `_data/download_configs.yml` and
 `_data/download_platforms.yml`. These files don't normally require changes and are used as a static reference table.
 They define descriptions, tags, and filename slugs for all downloadable builds, as well as order for downloads on
