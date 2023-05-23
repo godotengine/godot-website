@@ -1,0 +1,80 @@
+- name: "templates"
+  title: "Export templates"
+  caption: ""
+  tags:
+    - "Used to export your games to all supported platforms"
+
+- name: "aar_library"
+  title: "AAR library"
+  caption: ""
+  tags:
+    - Android plugins
+    - Java
+    - Kotlin
+
+- name: "android.apk"
+  title: "Android"
+  caption: "Universal APK (ARM64 + ARMv7 + x86_64 + x86)"
+  tags:
+    - APK download
+    - ARM64/v7
+    - x86 (64 & 32 bit)
+
+- name: "android.playstore"
+  title: "Android"
+  caption: "Play Store Universal (ARM64 + ARMv7 + x86_64 + x86)"
+  tags:
+    - Play Store
+    - ARM64/v7
+    - x86 (64 & 32 bit)
+
+- name: "linux.32"
+  title: "Linux"
+  caption: "Standard (x86)"
+  tags:
+    - 32 bit
+
+- name: "linux.64"
+  title: "Linux"
+  caption: "Standard (x86_64)"
+  tags:
+    - 64 bit
+
+- name: "linux_server.64"
+  title: "Linux Server"
+  caption: "Standard (x86_64)"
+  tags:
+    - 64 bit
+
+- name: "linux_server.headless.64"
+  title: "Linux Server"
+  caption: "Headless (x86_64)"
+  tags:
+    - 64 bit
+    - Headless
+
+- name: "macos.universal"
+  title: "macOS"
+  caption: "Universal (x86_64 + Apple Silicon)"
+  tags:
+    - Intel/Apple Silicon
+    - 64 bit
+
+- name: "web"
+  title: "Web editor"
+  caption: ""
+  tags:
+    - Self-hosted
+    - Cross-platform
+
+- name: "windows.32"
+  title: "Windows"
+  caption: "Standard (x86)"
+  tags:
+    - 32 bit
+
+- name: "windows.64"
+  title: "Windows"
+  caption: "Standard (x86_64)"
+  tags:
+    - 64 bit

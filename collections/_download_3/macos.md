@@ -4,22 +4,13 @@ description: Download the latest stable version of the Godot Engine 3 for macOS
 platform: macOS
 
 downloads:
-  - caption: Universal (x86_64 + Apple Silicon)
-    slug: osx.universal.zip
+  - platform: "macos.universal"
     featured: true
-    tags:
-      - Intel/Apple Silicon
-      - 64 bit
 
-  - caption: .NET Universal (x86_64 + Apple Silicon)
-    slug: mono_osx.universal.zip
+  - platform: "macos.universal"
     mono: true
     featured: true
     featured_flavor: .NET
-    tags:
-      - Intel/Apple Silicon
-      - 64 bit
-      - C# support
 
 content_instructions: |
   <ul>

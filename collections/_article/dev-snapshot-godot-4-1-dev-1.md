@@ -23,7 +23,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.1.de
 
 ## What's new
 
-We now have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/) you can use to review all 500 or so changes since Godot 4.0 more extensively, with convenient links to the relevant PRs on GitHub.
+We now have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1-dev1) you can use to review all 500 or so changes since Godot 4.0 more extensively, with convenient links to the relevant PRs on GitHub.
 
 Here are some of the main changes you might be interested in:
 
