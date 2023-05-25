@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 3.6 beta 2</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-2/</link>
+		<description>Another beta build for Godot 3.6, implementing important bug fixes and some new features for existing games in production.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-2/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Thu, 25 May 2023 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-2.jpg</image>
+	</item>
+	
+	<item>
 		<title>Maintenance release: Godot 4.0.3</title>
 		<link>https://godotengine.org/article/maintenance-release-godot-4-0-3/</link>
 		<description>A fresh portion of stability improvements and bugfixes for Godot 4.0 projects, 4.0.3 covers almost every area of the engine. It also comes with a massive bump in documentation coverage thanks to the newly updated rendering docs!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 24 Feb 2023 18:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-5.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.0 RC 4</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-0-rc-4/</link>
-		<description>As the stable release is imminent, release candidates become more frequent to validate the last minutes fixes we had to make.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-0-rc-4/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Thu, 23 Feb 2023 18:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-4.jpg</image>
 	</item>
 	
 
