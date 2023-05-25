@@ -32,11 +32,11 @@ This dev snapshot comes with a bouquet of fixes, optimizations, and usability tw
 
 That's quite a lot for one dev release, isn't it? [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about included changes.
 
-You can also [try the Web editor](https://editor.godotengine.org/releases/4.1.dev2/).
+You can also [try the Web editor](https://editor.godotengine.org/releases/4.1.dev3/).
 
 We created a separate Play Store release for the Godot 4.1 dev snapshots, so that interested users can test it easily and provide us with feedback and automated reports on potential issues. [You can join the testing group here to get access.](https://groups.google.com/g/godot-testers)
 
-*The illustration picture for this article is from **Liminal Tower**, an experimental project by [lowraiz](https://twitter.com/lowraiz) being developed in Godot 4. It has liminal spaces, portals, and it works in VR! You can follow lowraiz on [Twitter](https://twitter.com/lowraiz) for more work-in-progress screenshots and clips, and other experiments.*
+*The illustration picture for this article is from* **Liminal Tower**, *an experimental project by [lowraiz](https://twitter.com/lowraiz) being developed in Godot 4. It has liminal spaces, portals, and it works in VR! You can follow lowraiz on [Twitter](https://twitter.com/lowraiz) for more work-in-progress screenshots and clips, and other experiments.*
 
 ## What's new
 
@@ -103,7 +103,6 @@ Here are some of the main changes you might be interested in:
 - Rendering: Fix calculation of skinned AABB for unused bones ([GH-77265](https://github.com/godotengine/godot/pull/77265)).
 - Rendering: Take 3D resolution scaling into account for mesh LOD ([GH-77294](https://github.com/godotengine/godot/pull/77294)).
 - Rendering: Fix various issues with blend modes in the OpenGL 3 renderer ([GH-77409](https://github.com/godotengine/godot/pull/77409)).
-- Thirdparty: glad: Re-generate files with glad 2.0.4 ([GH-77350](https://github.com/godotengine/godot/pull/77350)).
 - Thirdparty: astcenc 4.4.0, basis_universal 1.16.4, brotli ed1995b6b, doctest 2.4.11, recast 1.6.0, ThorVG 0.9.0, tinyexr 1.0.2, wslay 0e7d106ff, zstd 1.5.5.
 - Unit test updates.
 - Documentation and translation updates.
@@ -122,9 +121,9 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a list of [known bugs in the 4.1 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.1+label%3Abug+). Of note:
 
-- `ExtResource` IDs in existing scenes might change when using this build, causing some diffs for your version control. It's not clear yet whether it's an intentional, one off change to the id system, or a regression that would be fixed in a future build ([GH-77172](https://github.com/godotengine/godot/pull/77172)).
+- `ExtResource` IDs in existing scenes might change when using this build, causing some diffs for your version control. It's not clear yet whether it's an intentional, one off change to the id system, or a regression that would be fixed in a future build ([GH-77172](https://github.com/godotengine/godot/issues/77172)).
 
-- During the import process you may see a lot of the "Attempting to parent and popup a dialog that already has a parent" messages. This error has no effect on the importing process and should be fixed in the next build ([GH-77433](https://github.com/godotengine/godot/pull/77433)).
+- During the import process you may see a lot of the "Attempting to parent and popup a dialog that already has a parent" messages. This error has no effect on the importing process and should be fixed in the next build ([GH-77426](https://github.com/godotengine/godot/issues/77426)).
 
 ## Bug reports
 
