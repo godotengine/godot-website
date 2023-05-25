@@ -23,7 +23,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/3.6.be
 
 ## What's new
 
-See the [curated changelog](https://github.com/godotengine/godot/blob/3.x/CHANGELOG.md) for a selection of some of the main changes since Godot 3.5.2. We now also have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/) you can use to review all 500+ changes since Godot 3.5 more extensively, with convenient links to the relevant PRs on GitHub.
+See the [curated changelog](https://github.com/godotengine/godot/blob/3.x/CHANGELOG.md) for a selection of some of the main changes since Godot 3.5.2. We now also have a great [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#3.6-beta1) you can use to review all 500+ changes since Godot 3.5 more extensively, with convenient links to the relevant PRs on GitHub.
 
 Here are some of the main changes you might be interested in:
 
@@ -80,7 +80,7 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 ## Bug reports
 
-As a tester, you are encouraged to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
+As a tester, we encourage you to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
 
 In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 3.5.x, but no longer works in 3.6 beta 1).
 
