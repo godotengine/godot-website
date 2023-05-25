@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 4.1 dev 3"
-excerpt: ""
+excerpt: "The end of May means the approach of the feature freeze for Godot 4.1, and this dev snapshot aims to give you as many new features to test as possible."
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-1-dev-3.jpg
