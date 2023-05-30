@@ -3,7 +3,7 @@ name: "Godot Meetup Valencia 2023"
 name_short: "Godot User Meetup"
 
 # Dates in human-readable format.
-dates: "Sat 3 June"
+dates: "Sat 3 June @ 10:00 am"
 dates_short: "3 June"
 
 # The first date of the event in ISO format, used for sorting.
