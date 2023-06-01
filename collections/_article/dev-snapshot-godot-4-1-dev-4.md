@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 4.1 dev 4"
-excerpt: "This snapshot signifies that Godot 4.1 is now in \"feature freeze\" and will only receive bug fixes going forward. Enjoy this final package of new features and enhancements and give them a good shake!"
+excerpt: "This snapshot signifies that Godot 4.1 is now in feature freeze and will only receive bug fixes going forward. Enjoy this final package of new features and enhancements and give them a good shake!"
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-1-dev-4.jpg
