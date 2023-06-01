@@ -11,7 +11,7 @@ date: 2023-06-01 17:00:00
 
 With the release of Godot 4.1 dev 4 we are closing the [feature merging phase](/article/release-management-4-1/), and the project enters a "feature freeze". This means that the next official build is going to be the first beta of 4.1, and starting with that release we are only going to be focusing on bug fixes and documentation improvements.
 
-We've been very happy with how the outlined release schedule has been coming to live, and we think that after 3 months of development Godot 4.1 is turning out to be a significant improvement to 4.0. If you have a chance, please give this and the following pre-release builds a test. With your help we hope to iron out remaining bugs and publish the stable version in early July.
+We've been very happy with how the outlined release schedule has been coming to live, and we think that after 3 months of development Godot 4.1 is turning out to be a significant improvement to 4.0. If you have a chance, please give this and the following pre-release builds a test. With your help, we hope to iron out remaining bugs and publish the stable version in early July.
 
 The feature freeze starts now, but before that Godot contributors have managed to finalize a few more highly requested and important features. So what are they?
 
@@ -19,7 +19,7 @@ The feature freeze starts now, but before that Godot contributors have managed t
 
 - Many active Godot users long have voiced their need for better project organization options in the project manager. While there are multiple ways in which we can improve the UI to help with that, at the core of many of them lies some sort of tagging system. So this is where we've started, adding a system for assigning custom tags to your Godot projects ([GH-75047](https://github.com/godotengine/godot/pull/75047)). Make sure to give us your feedback on the usability of this new feature and feel free to open proposals regarding possible improvements to it!
 
-- While GDExtension API allows for a low level access and extension of the engine and its capabilities, it previously lacked a way to register new editor plugins. This has now been implemented ([GH-77010](https://github.com/godotengine/godot/pull/77010)), so you can create efficient and fast plugins in any language that is available to you.
+- While GDExtension API allows for a low-level access and extension of the engine and its capabilities, it previously lacked a way to register new editor plugins. This has now been implemented ([GH-77010](https://github.com/godotengine/godot/pull/77010)), so you can create efficient and fast plugins in any language that is available to you.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about included changes. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.dev4/).
 
