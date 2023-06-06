@@ -1,0 +1,272 @@
+{
+	"title": "Godot Engine Official",
+	"description": "Godot is a 2D and 3D free and open source game engine developed by a community of contributors. It provides a huge set of common tools, so you can just focus on making your game without reinventing the wheel.",
+	"items": [
+	
+		
+		{
+			"title": "Dev snapshot: Godot 4.1 dev 4",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-4/",
+			"description": "This snapshot signifies that Godot 4.1 is now in feature freeze and will only receive bug fixes going forward. Enjoy this final package of new features and enhancements and give them a good shake!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-4/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Thu, 01 Jun 2023 17:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-4.jpg"
+		},
+		
+		{
+			"title": "Dev snapshot: Godot 4.1 dev 3",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-3/",
+			"description": "The end of May means the approach of the feature freeze for Godot 4.1, and this dev snapshot aims to give you as many new features to test as possible.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-3/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Thu, 25 May 2023 16:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-3.jpg"
+		},
+		
+		{
+			"title": "Dev snapshot: Godot 3.6 beta 2",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-2/",
+			"description": "Another beta build for Godot 3.6, implementing important bug fixes and some new features for existing games in production.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-2/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Thu, 25 May 2023 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-2.jpg"
+		},
+		
+		{
+			"title": "Maintenance release: Godot 4.0.3",
+			"link": "https://godotengine.org/article/maintenance-release-godot-4-0-3/",
+			"description": "A fresh portion of stability improvements and bugfixes for Godot 4.0 projects, 4.0.3 covers almost every area of the engine. It also comes with a massive bump in documentation coverage thanks to the newly updated rendering docs!",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/maintenance-release-godot-4-0-3/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Fri, 19 May 2023 13:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-3.jpg"
+		},
+		
+		{
+			"title": "Release candidate: Godot 4.0.3 RC 2",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-0-3-rc-2/",
+			"description": "Another round of cherry-picks for the upcoming Godot 4.0.3, fixing a few regressions reported against RC 1 and backporting more important fixes.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-0-3-rc-2/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Fri, 12 May 2023 16:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-2.jpg"
+		},
+		
+		{
+			"title": "Dev snapshot: Godot 4.1 dev 2",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-2/",
+			"description": "We&#39;re well into the development phase for Godot 4.1, with a little less than a month left before we move to beta. So here&#39;s a second dev snapshot to test recent changes!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-2/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Wed, 10 May 2023 16:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-2.jpg"
+		},
+		
+		{
+			"title": "Release candidate: Godot 4.0.3 RC 1",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-0-3-rc-1/",
+			"description": "More improvements come to the stable version of Godot 4 with the 4.0.3 patch release. Here&#39;s the first release candidate to test the changes before they go live.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-0-3-rc-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Thu, 27 Apr 2023 13:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-1.jpg"
+		},
+		
+		{
+			"title": "Godot Showcase - Cassette Beasts",
+			"link": "https://godotengine.org/article/godot-showcase-cassette-beasts/",
+			"description": "We interviewed Jay and Tom from Bytten Studio about Cassette Beasts.",
+			"categories": ["Showcase"],
+			"guid": "https://godotengine.org/article/godot-showcase-cassette-beasts/",
+			"dc:creator": "Emi",
+			"pubDate": "Wed, 26 Apr 2023 15:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/cassette-beasts.webp"
+		},
+		
+		{
+			"title": "Dev snapshot: Godot 4.1 dev 1",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-1/",
+			"description": "Here be dragons! First development snapshot for the upcoming Godot Engine 4.1 is available to early adopters and adventurous types.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Fri, 21 Apr 2023 16:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-1.jpg"
+		},
+		
+		{
+			"title": "Release Management Post Godot 4.0",
+			"link": "https://godotengine.org/article/release-management-4-1/",
+			"description": "We outline our plan for future Godot releases and Godot 4.1 specifically, which you can expect at the end of June, after three months of feature merging and one month of bug fixing.",
+			"categories": ["News"],
+			"guid": "https://godotengine.org/article/release-management-4-1/",
+			"dc:creator": "Clay John",
+			"pubDate": "Thu, 20 Apr 2023 11:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-management-4-1.jpg"
+		},
+		
+		{
+			"title": "Godot 4.1 Rendering Priorities",
+			"link": "https://godotengine.org/article/rendering-priorities-4-1/",
+			"description": "For 4.1 the rendering team will be focusing on performance, stability, and usability.",
+			"categories": ["Progress Report"],
+			"guid": "https://godotengine.org/article/rendering-priorities-4-1/",
+			"dc:creator": "Clay John",
+			"pubDate": "Tue, 18 Apr 2023 20:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/rendering-priorities-4-1.png"
+		},
+		
+		{
+			"title": "Direct3D 12: Adventures in Shaderland",
+			"link": "https://godotengine.org/article/d3d12-adventures-in-shaderland/",
+			"description": "Godot is about to get a Direct3D 12 rendering driver. This is a discussion on the exotic approaches taken to face some of the challenges posed in the area of shaders.",
+			"categories": ["Progress Report"],
+			"guid": "https://godotengine.org/article/d3d12-adventures-in-shaderland/",
+			"dc:creator": "Pedro J. Estébanez",
+			"pubDate": "Fri, 14 Apr 2023 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/d3d12-adventures-in-shaderland.jpg"
+		},
+		
+		{
+			"title": "Dev snapshot: Godot 3.6 beta 1",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/",
+			"description": "It&#39;s time to start testing the next feature release of Godot 3, packed with over 500 fixes and enhancements which don&#39;t require any compatibility breaking changes!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Thu, 13 Apr 2023 15:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-1.jpg"
+		},
+		
+		{
+			"title": "GDC 2023: Retrospective",
+			"link": "https://godotengine.org/article/gdc-2023-retrospective/",
+			"description": "We attended the Game Developers Conference (GDC) in San Francisco this year.",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/gdc-2023-retrospective/",
+			"dc:creator": "Clay John",
+			"pubDate": "Thu, 06 Apr 2023 14:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/gdc-2023-retrospective.jpg"
+		},
+		
+		{
+			"title": "Maintenance release: Godot 4.0.2",
+			"link": "https://godotengine.org/article/maintenance-release-godot-4-0-2/",
+			"description": "As the work on Godot 4.1 continues, more fixes and enhancements become available to existing 4.0 users as patch releases. Meet Godot 4.0.2, addressing more of your reports, including several regressions from 4.0.1, and improving platform support for Android, macOS, and Windows!",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/maintenance-release-godot-4-0-2/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Tue, 04 Apr 2023 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-2.jpg"
+		},
+		
+		{
+			"title": "Release candidate: Godot 4.0.2 RC 1",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-0-2-rc-1/",
+			"description": "With the GDC 2023 past us, we are getting ready for the 4.1 dev cycle. But that doesn&#39;t mean current Godot 4.0 users have to wait, because here&#39;s a release candidate for 4.0.2, with a handful of fixes and extra enhancements!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-0-2-rc-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Fri, 31 Mar 2023 15:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-2-rc-1.jpg"
+		},
+		
+		{
+			"title": "Maintenance release: Godot 4.0.1",
+			"link": "https://godotengine.org/article/maintenance-release-godot-4-0-1/",
+			"description": "The first of many, Godot 4.0.1 comes with important fixes and usability improvements to Godot 4.0. Multiple crashes, bugs, and smaller annoyances have been addressed in this patch release, and we recommend all Godot 4 users to update.",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/maintenance-release-godot-4-0-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Mon, 20 Mar 2023 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-1.jpg"
+		},
+		
+		{
+			"title": "Godot Arrives in the Epic Games Store",
+			"link": "https://godotengine.org/article/godot-arrives-in-the-epic-games-store/",
+			"description": "We are honored to announce that Epic Games is offering Godot Engine a place on Epic Games&#39; own digital distribution platform, the Epic Games Store.",
+			"categories": ["News"],
+			"guid": "https://godotengine.org/article/godot-arrives-in-the-epic-games-store/",
+			"dc:creator": "Emi",
+			"pubDate": "Fri, 17 Mar 2023 16:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/godot-epic-games-store.jpg"
+		},
+		
+		{
+			"title": "Release candidate: Godot 4.0.1 RC 2",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-0-1-rc-2/",
+			"description": "Adding finishing touches to the first patch release of Godot 4, here comes 4.0.1 Release Candidate 2. It brings even more urgent fixes, and documentation improvements.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-0-1-rc-2/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Fri, 17 Mar 2023 10:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-1-rc-2.jpg"
+		},
+		
+		{
+			"title": "Release candidate: Godot 4.0.1 RC 1",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-0-1-rc-1/",
+			"description": "Following the biggest Godot release ever we&#39;ve collected several critical fixes and smaller usability improvements to make your experience with 4.0 more pleasant. This is the first release candidate for early adopters to test the changes, with the stable 4.0.1 release coming soon after.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-0-1-rc-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Wed, 15 Mar 2023 10:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-1-rc-1.jpg"
+		},
+		
+		{
+			"title": "Maintenance release: Godot 3.5.2",
+			"link": "https://godotengine.org/article/maintenance-release-godot-3-5-2/",
+			"description": "We&#39;ve just released Godot 4.0 after 3+ years of intense development, but we also still support the existing 3.5 stable branch. This maintenance release fixes a handful of issues which have been solved in the past few months, and could be backported to the 3.5 branch.",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/maintenance-release-godot-3-5-2/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Wed, 08 Mar 2023 13:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-5-2.jpg"
+		},
+		
+		{
+			"title": "Godot &amp; Friends at GDC 2023",
+			"link": "https://godotengine.org/article/gdc-2023-godot-games/",
+			"description": "We are going to be at the Game Developers Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th.",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/gdc-2023-godot-games/",
+			"dc:creator": "Emi",
+			"pubDate": "Tue, 07 Mar 2023 14:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/gdc2023.jpg"
+		},
+		
+		{
+			"title": "Godot 4.0 sets sail: All aboard for new horizons",
+			"link": "https://godotengine.org/article/godot-4-0-sets-sail/",
+			"description": "It&#39;s official. Today marks the beginning of a new era for Godot. After 3+ years of breaking and rebuilding from the ground up, we&#39;re thrilled to say: Welcome to the start of Godot 4!",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/godot-4-0-sets-sail/",
+			"dc:creator": "2000+ Godot contributors",
+			"pubDate": "Wed, 01 Mar 2023 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/godot-4-0-sets-sail.webp"
+		},
+		
+		{
+			"title": "Release candidate: Godot 4.0 RC 6",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-0-rc-6/",
+			"description": "One more time! We&#39;ve now fixed all critical regressions we are aware of, so things are looking great for the stable release!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-0-rc-6/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Mon, 27 Feb 2023 10:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-rc-6.jpg"
+		}
+		
+	]
+}
