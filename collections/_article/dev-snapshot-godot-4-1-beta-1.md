@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.1 beta 1"
 excerpt: "Switching gears into the bug-fixing mode here's the first beta of Godot 4.1, and a great opportunity to try the new version of the engine ahead of the official release."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-1.jpg
+image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-1.webp
 image_caption_title: "Halls of Torment"
 image_caption_description: "A game by Chasing Carrots"
 date: 2023-06-07 17:00:00
@@ -47,7 +47,9 @@ Another area of C# development that received attention during this release cycle
 
 ### Editor
 
-Many developers have a multi-monitor setup and long have been requesting that the Godot editor supports such environments better. With the release of Godot 4.0 it became possible to create multi-window applications with Godot, and the editor itself acquired this feature as well. In Godot 4.1 we expand on this functionality and introduce the ability to detach code editors. Thanks to the Google Summer of Code 2022 project by [trollodel](https://github.com/trollodel) both the script editor and the shader editor can now be removed from the main window and placed elsewhere in your desktop environment.
+Many developers have a multi-monitor setup and long have been requesting that the Godot editor supports such environments better. With the release of Godot 4.0 it became possible to create multi-window applications with Godot, and the editor itself acquired this feature as well. In Godot 4.1 we expand on this functionality and introduce the ability to detach code editors. Thanks to the Google Summer of Code 2022 project by [trollodel](https://github.com/trollodel) both the script editor and the shader editor can now be removed from the main window and placed elsewhere in your desktop environment ([GH-62378](https://github.com/godotengine/godot/pull/62378)).
+
+![Detachable script editor in the Godot editor](/storage/blog/godot-4-1-features/multiwindow-editor.webp)
 
 This is the latest addition to the arsenal of editor customization options available to Godot users. With such an adjustable interface it's important that the configuration changes are persistent between launches. Which is why [Hendrik Brucker](https://github.com/Geometror) and [Tomasz Chabora](https://github.com/KoBeWi) worked on improving how editor state is maintained and stored ([GH-72277](https://github.com/godotengine/godot/pull/72277), [GH-74682](https://github.com/godotengine/godot/pull/74682), [GH-75563](https://github.com/godotengine/godot/pull/75563)). As a result of their work, launching Godot 4.1 you should much more often find yourself exactly where you've left off.
 
@@ -78,6 +80,8 @@ Godot 4.1 is the first in a line of releases that are aiming to aid developers i
 ### Navigation
 
 The existing implementation of obstacle avoidance in Godot's navigation has its limitations and is mainly suitable for very simplified scenarios. The reciprocal velocity obstacle (RVO) avoidance system only considers a flat plane that ignores the navigation mesh and cannot have defined logical layers akin to those of rendering and physics engines. This is where [smix8](https://github.com/smix8)'s navigation avoidance rework comes in ([GH-69988](https://github.com/godotengine/godot/pull/69988)). It boasts dedicated 2D and 3D RVO avoidance systems, a new static obstacle avoidance mechanism, a system of layers and masks for obstacles and agents, and better debug tools, among many other changes and fixes.
+
+![An example of interactive multi-layered RVO avoidance](/storage/blog/godot-4-1-features/rvo-avoidance.webp)
 
 To help you get started with the navigation server smix8 has prepared an [updated documentation](https://docs.godotengine.org/en/latest/tutorials/navigation/index.html) for both 2D and 3D navigation.
 
