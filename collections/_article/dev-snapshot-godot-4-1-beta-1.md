@@ -6,7 +6,7 @@ author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-1.webp
 image_caption_title: "Halls of Torment"
 image_caption_description: "A game by Chasing Carrots"
-date: 2023-06-07 17:00:00
+date: 2023-06-07 18:00:00
 ---
 
 After [3 months of improvements](/article/release-management-4-1) made to the engine Godot 4.1 is ready for beta testing!
