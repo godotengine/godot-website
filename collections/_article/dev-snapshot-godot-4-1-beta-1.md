@@ -107,6 +107,8 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a list of [known bugs in the 4.1 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.1+label%3Abug+).
 
+- Windows users with an AMD GPU might find the OpenGL renderer crashing, notably affecting the project manager which defaults to OpenGL ([GH-77760](https://github.com/godotengine/godot/issues/77760)). The regression was introduced in 4.1 dev 4 and was fixed shortly after the beta 1 release, so it will be solved in the upcoming beta 2 build. As a workaround, you can force opening the project manager with Vulkan using `Godot_v4.1-beta1_win64.exe --rendering-driver vulkan` on the command line.
+
 ## Bug reports
 
 As a tester, we encourage you to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
