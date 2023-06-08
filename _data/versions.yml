@@ -1,6 +1,6 @@
 - name: "4.1"
   flavor: "beta1"
-  release_date: "7 June 2023"
+  release_date: "8 June 2023"
   release_notes: "/article/dev-snapshot-godot-4-1-beta-1/"
 
 - name: "4.0.3"
