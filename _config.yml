@@ -6,6 +6,7 @@ exclude:
     "Gemfile.lock",
     "build.sh",
     "build-and-serve.sh",
+    "build-and-watch.sh",
     "README.md",
   ]
 permalink: pretty
