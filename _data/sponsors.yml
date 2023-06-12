@@ -22,6 +22,3 @@ silver:
   - name: "Striked"
     url: "https://striked.gg/"
     image: "/assets/home/sponsors/striked.png"
-  - name: "Zenva"
-    url: "https://academy.zenva.com/product/godot-game-development-mini-degree/?zva_src=godotengineorg-godot4md"
-    image: "/assets/home/sponsors/zenva.png"
