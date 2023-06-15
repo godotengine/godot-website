@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot at BIG Festival 2023</title>
+		<link>https://godotengine.org/article/godot-at-big-festival-2023/</link>
+		<description>Godot will have a booth and a talk at BIG Festival 2023, which takes place in São Paulo, Brazil from June 28th to July 2nd</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/godot-at-big-festival-2023/</guid>
+		<dc:creator>George Marques</dc:creator>
+		<pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/big-2023.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.1 beta 2</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-1-beta-2/</link>
 		<description>Continuing on our planned schedule for Godot 4.1, we&#39;re advancing through the beta phase and getting ready for a stable release in early July.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Wed, 08 Mar 2023 13:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-5-2.jpg</image>
-	</item>
-	
-	<item>
-		<title>Godot &amp; Friends at GDC 2023</title>
-		<link>https://godotengine.org/article/gdc-2023-godot-games/</link>
-		<description>We are going to be at the Game Developers Conference (GDC) 2023, which will take place in San Francisco from March 20th to March 24th.</description>
-		
-		<category>Events</category>
-		
-		<guid>https://godotengine.org/article/gdc-2023-godot-games/</guid>
-		<dc:creator>Emi</dc:creator>
-		<pubDate>Tue, 07 Mar 2023 14:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/gdc2023.jpg</image>
 	</item>
 	
 
