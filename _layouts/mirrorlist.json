@@ -1,0 +1,10 @@
+{
+	"mirrors": [
+		{% for mirror in page.version_mirrors %}
+		{
+			"name": "{{ mirror.name }}",
+			"url": "{{ mirror.url }}"
+		}{% unless forloop.last %},{% endunless %}
+		{% endfor %}
+	]
+}
