@@ -1,0 +1,10 @@
+{
+	"mirrors": [
+		
+		{
+			"name": "Official TuxFamily mirror",
+			"url": "https://downloads.tuxfamily.org/godotengine/2.1.3/Godot_v2.1.3-stable_export_templates.tpz"
+		}
+		
+	]
+}

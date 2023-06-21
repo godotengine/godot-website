@@ -1,0 +1,10 @@
+{
+	"mirrors": [
+		
+		{
+			"name": "Official TuxFamily mirror",
+			"url": "https://downloads.tuxfamily.org/godotengine/3.5/rc8/Godot_v3.5-rc8_export_templates.tpz"
+		}
+		
+	]
+}

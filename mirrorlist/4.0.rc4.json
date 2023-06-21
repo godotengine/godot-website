@@ -1,0 +1,15 @@
+{
+	"mirrors": [
+		
+		{
+			"name": "Official GitHub Releases mirror",
+			"url": "https://github.com/GodotBuilder/godot-builds/releases/download/4.0-prerelease-templates/Godot_v4.0-rc4_export_templates.tpz"
+		},
+		
+		{
+			"name": "Official TuxFamily mirror",
+			"url": "https://downloads.tuxfamily.org/godotengine/4.0/rc4/Godot_v4.0-rc4_export_templates.tpz"
+		}
+		
+	]
+}

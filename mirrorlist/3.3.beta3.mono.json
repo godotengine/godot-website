@@ -1,0 +1,10 @@
+{
+	"mirrors": [
+		
+		{
+			"name": "Official TuxFamily mirror",
+			"url": "https://downloads.tuxfamily.org/godotengine/3.3/beta3/mono/Godot_v3.3-beta3_mono_export_templates.tpz"
+		}
+		
+	]
+}
