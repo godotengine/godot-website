@@ -191,6 +191,25 @@ There are two additional files providing data for download pages and links: `_da
 They define descriptions, tags, and filename slugs for all downloadable builds, as well as order for downloads on
 some pages.
 
+### Adding a mirrorlist host
+
+If a new host needs to be supported by the mirrorlist, it needs to be added in a few places. For the data side of
+things you need to update `_data/mirrorlist_configs.yml` and add another record for the major-minor version code.
+
+```
+  - name: "4.1"
+    stable: [ "github", "tuxfamily" ]
+    preview: [ "github_builder", "tuxfamily" ]
+```
+
+The `stable` key refers to hosts available for the stable release of that version, while the `preview` key refers
+to all pre-releases and dev snapshots, which typically share all their characteristics. If in future there is a
+need for finer control, some overrides system needs to be implemented.
+
+For the logic side of things the new host needs to be supported by the `_plugins/make_download.rb` script. Refer
+to how other hosts are handled in that file and do the necessary adjustments. We assume that the final filenames
+are standard across all hosts, so `_data/download_configs.yml` is respected.
+
 ## Resources
 
 - Join the discussion on Godot Contributors Chat in the [#website](https://chat.godotengine.org/channel/website)
