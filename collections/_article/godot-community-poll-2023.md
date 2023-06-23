@@ -3,8 +3,9 @@ title: "Godot community poll 2023"
 excerpt: "It's this time of the year! Godot Community Poll 2023 is now out!"
 categories: ["news"]
 author: Clay John
-image: /storage/app/uploads/public/62b/5a0/79b/62b5a079b2b24464427790.png
-date: 2023-06-22 00:00:00
+image: /storage/blog/covers/quiz-2023.png
+image_caption_description: Illustration by André Marí Coppola
+date: 2023-06-23 14:00:00
 ---
 
 As we do every year, we would like to take a short poll to gather some basic information about the Godot community. We have a short list of questions and we hope you will take the time to fill them out!
