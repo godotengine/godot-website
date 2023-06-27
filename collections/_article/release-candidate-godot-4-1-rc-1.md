@@ -6,12 +6,12 @@ author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-1-rc-1.webp
 image_caption_title: "Katana Dragon"
 image_caption_description: "A game by Tsunoa Games"
-date: 2023-06-27 15:00:00
+date: 2023-06-27 14:00:00
 ---
 
 Godot 4.1 is shaping up to be ready [right on schedule](/article/release-management-4-1). Since the release of beta 3 we have identified all remaining regressions, thanks in a large part to your reports and extensive testing, and with the necessary fixes implemented we are publishing the first [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) today.
 
-This is a great opportunity to give the new version of the engine a try. As the name suggests, a release candidate represents a build that we consider stable but want to be absolutely sure before making it official, — with your help. If there are no significant regressions reported with release candidates, a stable version of Godot 4.1 is going to be published soon.
+This is a great opportunity to give the new version of the engine a try. As the name suggests, a release candidate represents a build that we consider stable but want to be absolutely sure before making it official — with your help. If there are no significant regressions reported with release candidates, a stable version of Godot 4.1 is going to be published soon.
 
 This release contains a [number of improvements](/article/dev-snapshot-godot-4-1-beta-1/#highlights) compared to Godot 4.0 published earlier this year. Some systems have also been reworked, which means projects that rely on those need to be updated. However, for most games and apps made with 4.0 it should be safe to migrate to 4.1. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
 
@@ -23,7 +23,7 @@ This release contains a [number of improvements](/article/dev-snapshot-godot-4-1
 
 ## What's new
 
-41 contributor submitted around 70 improvements for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1-rc1), which contains links to relevant commits and PRs for this and every previous release.
+41 contributors submitted around 70 improvements for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1-rc1), which contains links to relevant commits and PRs for this and every previous release.
 
 There is a number of major changes in Godot 4.1, and you can read more about them in our [earlier announcement](/article/dev-snapshot-godot-4-1-beta-1/). Below are the most notable changes compared to 4.1 beta 3:
 
@@ -76,9 +76,11 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 ## Known issues
 
-There are currently no known issues introduced by this release.
-
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a list of [known bugs in the 4.1 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.1+label%3Abug+).
+
+Some notable issues are still tracked for a potential fix before 4.1-stable:
+- The processing order for internal and normal node processing was mistakenly changed, causing issues such as [GH-77548](https://github.com/godotengine/godot/issues/77548). You can help us test [GH-78745](https://github.com/godotengine/godot/pull/78745) to validate that it solves the issue without further regression.
+- The editor output dock doesn't update its scrollbar properly in some cases ([GH-78434](https://github.com/godotengine/godot/issues/78434)). A potential solution is identified but we're not sure yet that it's safe to include in 4.1 at this late stage given the risk of regression.
 
 ## Bug reports
 
