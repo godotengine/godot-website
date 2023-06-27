@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.1 RC 1</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-1-rc-1/</link>
+		<description>After 4 months of development, Godot 4.1 is only days away. To make sure it doesn&#39;t miss the mark, here&#39;s the first release candidate for your testing!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-1-rc-1/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Tue, 27 Jun 2023 14:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-rc-1.webp</image>
+	</item>
+	
+	<item>
 		<title>Godot community poll 2023</title>
 		<link>https://godotengine.org/article/godot-community-poll-2023/</link>
 		<description>It&#39;s this time of the year! Godot Community Poll 2023 is now out!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Emi</dc:creator>
 		<pubDate>Fri, 17 Mar 2023 16:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/godot-epic-games-store.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.0.1 RC 2</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-0-1-rc-2/</link>
-		<description>Adding finishing touches to the first patch release of Godot 4, here comes 4.0.1 Release Candidate 2. It brings even more urgent fixes, and documentation improvements.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-0-1-rc-2/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Fri, 17 Mar 2023 10:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-1-rc-2.jpg</image>
 	</item>
 	
 
