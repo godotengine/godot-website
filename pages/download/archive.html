@@ -7,75 +7,25 @@ layout: default
 
 {% include header.html %}
 
-<link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <link rel="stylesheet" href="/assets/css/download.css?2">
+<link rel="stylesheet" href="/assets/css/download-version-archive.css">
 <style>
 	.hero {
-		background-image: url('');
+		background-image: none;
+	}
+	.hero h1 {
+		text-shadow: none;
+		color: var(--base-color-text-title);
 	}
 
 	.hero-blurb {
-		color: var(--download-hero-color);
+		color: var(--base-color-text);
 	}
 
-	.preview-cards {
+	.archive-cards {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 16px;
-	}
-
-	.stable-download {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 16px;
-		background-color: var(--dark-color);
-		padding: 24px;
-		padding-bottom: 60px;
-		width: auto;
-		max-width: 100%;
-	}
-	@media (max-width: 900px) {
-		.stable-download {
-			padding: 20px;
-		}
-	}
-
-	.stable-download h2 {
-		color: var(--dark-color-text-title);
-		font-weight: 600;
-		margin: 0;
-		margin-bottom: 16px;
-	}
-
-	.stable-download p {
-		color: var(--dark-color-text);
-		margin: 0;
-	}
-
-	.stable-download-ready {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 26px;
-	}
-
-	.stable-download-ready .btn-download {
-		min-width: 310px;
-	}
-
-	.stable-download-ready .btn-download:nth-of-type(2n) {
-		background-color: rgb(132 151 174 / 68%);
-		-webkit-backdrop-filter: blur(4px);
-		backdrop-filter: blur(4px);
-	}
-	.stable-download-ready .btn-download:nth-of-type(2n) .download-title {
-		color: #f7f7f7;
-	}
-	.stable-download-ready .btn-download:nth-of-type(2n) .download-hint {
-		background-color: var(--primary-color-subdued);
 	}
 
 	footer {
@@ -99,21 +49,28 @@ layout: default
 	<div class="padded" style="padding-top:0;margin-top:32px">
 		<h2>Official releases</h2>
 
-		<div class="preview-cards">
+		<div class="archive-cards">
 			{% for version in site.data.versions %}
 
-				{% include download-version.html version=version %}
+				<div class="card base-padding archive-download">
+					<h3 id="{{ version.name }}">
+						Godot {{ version.name }}
+					</h3>
 
-				{% for release in version.releases %}
+					<div class="archive-releases">
+						{% include download-version-archive.html version=version %}
 
-					{% include download-version.html version=version release=release %}
+						{% for release in version.releases %}
 
-				{% endfor %}
+							{% include download-version-archive.html version=version release=release %}
+
+						{% endfor %}
+					</div>
+				</div>
+
 			{% endfor %}
 		</div>
 	</div>
 </div>
-
-{% include download-version-script.html %}
 
 {% include footer.html %}

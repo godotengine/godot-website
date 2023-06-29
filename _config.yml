@@ -53,6 +53,10 @@ defaults:
     values:
       layout: "download-3"
   - scope:
+      type: "download_archive"
+    values:
+      layout: "download-archive"
+  - scope:
       type: "mirrorlist"
     values:
       layout: "mirrorlist"
