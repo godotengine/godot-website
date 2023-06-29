@@ -3,7 +3,7 @@
   release_date: "30 June 2023"
   release_notes: ""
   releases:
-    - flavor: "rc1"
+    - name: "rc1"
       release_date: "27 June 2023"
       release_notes: "/article/release-candidate-godot-4-1-rc-1/"
     - name: "beta3"
