@@ -1,0 +1,119 @@
+---
+permalink: /download/archive/index.html
+title: "Godot download archive - Godot Engine"
+description: "Download any officially published version of Godot for Linux, macOS, Windows, or Android"
+layout: default
+---
+
+{% include header.html %}
+
+<link rel="stylesheet" href="/assets/css/transparent-nav.css">
+<link rel="stylesheet" href="/assets/css/download.css?2">
+<style>
+	.hero {
+		background-image: url('');
+	}
+
+	.hero-blurb {
+		color: var(--download-hero-color);
+	}
+
+	.preview-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.stable-download {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		background-color: var(--dark-color);
+		padding: 24px;
+		padding-bottom: 60px;
+		width: auto;
+		max-width: 100%;
+	}
+	@media (max-width: 900px) {
+		.stable-download {
+			padding: 20px;
+		}
+	}
+
+	.stable-download h2 {
+		color: var(--dark-color-text-title);
+		font-weight: 600;
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	.stable-download p {
+		color: var(--dark-color-text);
+		margin: 0;
+	}
+
+	.stable-download-ready {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 26px;
+	}
+
+	.stable-download-ready .btn-download {
+		min-width: 310px;
+	}
+
+	.stable-download-ready .btn-download:nth-of-type(2n) {
+		background-color: rgb(132 151 174 / 68%);
+		-webkit-backdrop-filter: blur(4px);
+		backdrop-filter: blur(4px);
+	}
+	.stable-download-ready .btn-download:nth-of-type(2n) .download-title {
+		color: #f7f7f7;
+	}
+	.stable-download-ready .btn-download:nth-of-type(2n) .download-hint {
+		background-color: var(--primary-color-subdued);
+	}
+
+	footer {
+		margin-top: 0;
+	}
+</style>
+
+<div class="hero">
+	<div class="hero-wrapper">
+		<h1>Godot download archive</h1>
+
+		<div class="hero-blurb">
+			<p>
+				Download any officially published release of the engine.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="padded" style="padding-top:0;margin-top:32px">
+		<h2>Official releases</h2>
+
+		<div class="preview-cards">
+			{% for version in site.data.versions %}
+
+				{% include download-version.html version=version %}
+
+				{% for release in version.releases %}
+
+					{% include download-version.html version=version release=release %}
+
+				{% endfor %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% include download-version-script.html %}
+
+{% include footer.html %}

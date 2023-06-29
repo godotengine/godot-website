@@ -83,7 +83,15 @@ module MakeDownloadFilter
     if platform == "aar_library"
       download_file = "godot-lib.#{version_name}.#{version_flavor}.#{download_slug}"
     else
-      download_file = "Godot_v#{version_name}-#{version_flavor}_#{download_slug}"
+      version_bits = version_name.split(".")
+      version_majmin = "#{version_bits[0]}.#{version_bits[1]}"
+
+      # Format was slightly different up until 2.1.
+      if version_bits[0] == "1" or (version_bits[0] == "2" and version_bits[1] == "0")
+        download_file = "Godot_v#{version_name}_#{version_flavor}_#{download_slug}"
+      else
+        download_file = "Godot_v#{version_name}-#{version_flavor}_#{download_slug}"
+      end
     end
 
     if host == "github"
@@ -97,6 +105,19 @@ module MakeDownloadFilter
         return "#{HOST_TUXFAMILY}/#{version_name}/#{version_flavor}#{mono_slug}/#{download_file}"
       end
     end
+  end
+
+  def make_release_version(input, release)
+    if release.nil?
+      return input
+    end
+
+    new_version = input.dup
+    new_version["flavor"] = release["name"]
+    new_version["release_date"] = release["release_date"]
+    new_version["release_notes"] = release["release_notes"]
+
+    return new_version
   end
 
   private
