@@ -9,7 +9,7 @@ dates_short: "3 June"
 # The first date of the event in ISO format, used for sorting.
 date: 2023-06-03 00:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: "Hotel Primus. Carrer de Menorca, 22, 46023 València, Valencia"
 location_short: "Valencia, Spain"

@@ -6,7 +6,7 @@ dates: "Wed 31 May through Fri 2 June @ 10:00 am"
 dates_short: "31 May, 1 & 2 June"
 
 date: 2023-05-31 00:00:00
-date_passed: false
+date_passed: true
 
 location: "Hotel Primus. Carrer de Menorca, 22, 46023 València, Valencia"
 location_short: "Valencia, Spain"
