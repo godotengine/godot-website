@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Release candidate: Godot 4.1 RC 2",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-1-rc-2/",
+			"description": "A few more regressions were fixed, and we should now be ready for the Godot 4.1 release. Help us confirm that by testing RC 2!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-1-rc-2/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Fri, 30 Jun 2023 11:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-rc-2.webp"
+		},
+		
+		{
 			"title": "Release candidate: Godot 4.1 RC 1",
 			"link": "https://godotengine.org/article/release-candidate-godot-4-1-rc-1/",
 			"description": "After 4 months of development, Godot 4.1 is only days away. To make sure it doesn&#39;t miss the mark, here&#39;s the first release candidate for your testing!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Yuri Sizov",
 			"pubDate": "Mon, 20 Mar 2023 12:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-1.jpg"
-		},
-		
-		{
-			"title": "Godot Arrives in the Epic Games Store",
-			"link": "https://godotengine.org/article/godot-arrives-in-the-epic-games-store/",
-			"description": "We are honored to announce that Epic Games is offering Godot Engine a place on Epic Games&#39; own digital distribution platform, the Epic Games Store.",
-			"categories": ["News"],
-			"guid": "https://godotengine.org/article/godot-arrives-in-the-epic-games-store/",
-			"dc:creator": "Emi",
-			"pubDate": "Fri, 17 Mar 2023 16:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/godot-epic-games-store.jpg"
 		}
 		
 	]
