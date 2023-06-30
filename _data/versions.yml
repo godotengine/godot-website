@@ -1,7 +1,7 @@
 - name: "4.1"
   flavor: "rc2"
   release_date: "30 June 2023"
-  release_notes: ""
+  release_notes: "/article/release-candidate-godot-4-1-rc-2/"
   releases:
     - name: "rc1"
       release_date: "27 June 2023"
