@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.1 RC 3</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-1-rc-3/</link>
+		<description>A few more critical regressions were fixed, and the milestone is now 100% complete. Let&#39;s confirm that 4.1 is ready with a (final?) RC.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-1-rc-3/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Tue, 04 Jul 2023 11:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-rc-3.webp</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.1 RC 2</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-1-rc-2/</link>
 		<description>A few more regressions were fixed, and we should now be ready for the Godot 4.1 release. Help us confirm that by testing RC 2!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Yuri Sizov</dc:creator>
 		<pubDate>Fri, 31 Mar 2023 15:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-2-rc-1.jpg</image>
-	</item>
-	
-	<item>
-		<title>Maintenance release: Godot 4.0.1</title>
-		<link>https://godotengine.org/article/maintenance-release-godot-4-0-1/</link>
-		<description>The first of many, Godot 4.0.1 comes with important fixes and usability improvements to Godot 4.0. Multiple crashes, bugs, and smaller annoyances have been addressed in this patch release, and we recommend all Godot 4 users to update.</description>
-		
-		<category>Release</category>
-		
-		<guid>https://godotengine.org/article/maintenance-release-godot-4-0-1/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Mon, 20 Mar 2023 12:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-1.jpg</image>
 	</item>
 	
 
