@@ -1,27 +1,23 @@
 ---
 title: "Godot 4.1 is here, smoother, more reliable, and with plenty of new features"
-excerpt: "Four months after the release of Godot 4.0 in march 2023, we are happy to bring you Godot 4.1, an update that follows our pledge with a focus on stability, performance, and polish."
+excerpt: "Four months after the release of Godot 4.0, we are excited to bring you Godot 4.1 — an update with a focus on stability, performance, and polish."
 categories: ["release"]
 author: "Godot contributors"
 image: /storage/blog/covers/godot-4-1-is-here.webp
 date: 2023-07-06 12:00:00
 ---
 
-Four months after the release of Godot 4.0 in march 2023, we are happy to bring you Godot 4.1, an update that follows our pledge with a focus on stability, performance, and polish.
+After [four months of work](/article/godot-4-0-sets-sail), we are excited to bring you Godot 4.1! It's an update that follows our pledge to improve upon Godot 4.0 with frequent incremental releases — with a focus on stability, performance, and polish.
 
-As always, this version comes with welcome new features, like the improved AI avoidance and the ability to detach script editors and put them on other monitors.
+As always, a new release comes with a bunch of welcome new features, like the improved AI navigation avoidance and the ability to detach code editors and put them on other displays.
 
 ![The code editor detached from the main editor window](/storage/blog/godot-4-1-is-here/detached-code-editor.png)
 
-Still, we took great care to prioritize the bugs you encountered in Godot 4.0. This update fixes over 1,000 of them and should feel more reliable overall. We will keep this effort going throughout the year to make Godot one of the most stable general-purpose game engines out there.
+Still, we took great care to prioritize the bugs you have encountered in 4.0. This update fixes over 900 issues that users have reported from using Godot 4 or while helping contributors test 4.1 with pre-release builds. The engine should feel more reliable overall. We will continue improving stability, performance, and workflows with every upcoming feature release of Godot 4.
 
-If you wish to get straight into action, you can [download Godot 4.1 now](https://godotengine.org/download/).
+For most games and apps made with 4.0 it should be relatively safe to migrate to 4.1. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
 
-This release was made possible by our dedicated core development team and the help of over 300 contributors! We warmly thank you all for your work and dedication.
-
-For an exhaustive list of all the bug fixes and improvements, head on over to our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1).
-
-Once again, you can get the main highlights in this video.
+**If you wish to get straight into the action, you can [download Godot 4.1 now](https://godotengine.org/download/).** Or stick around and read more about the most notable changes of this release. You can also watch this great highlights video by [GDQuest](https://www.gdquest.com/):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PAtG_fHhIx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -35,9 +31,15 @@ Besides financial support, you can also give back by: writing detailed bug repor
 
 Last but not least, making games with Godot and crediting the engine goes a long way to help make it more popular and convince more people to contribute and improve Godot for everyone. Remember, we are all in this together and Godot requires community support in every area to thrive.
 
+## Highlights
+
+This release was made possible thanks to submissions from over 300 contributors! We warmly thank you all for your work and dedication, including those who help us test the engine before the release and submit bug reports.
+
+For an exhaustive list of all the bug fixes and improvements, head on over to our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1).
+
 Without further ado, here's a breakdown of the main changes and new features.
 
-## Performance
+### Performance
 
 Godot games are built as a tree of nodes, which are the engine's base building block for game entities. Adding and removing nodes are operations the engine needs to do extremely often, so they need to be as fast as possible.
 
@@ -59,7 +61,7 @@ This improvement doesn't address all possible causes of stalls, but it's a first
 
 More work will follow on the performance front throughout the year.
 
-## Core
+### Core
 
 When importing models into Godot, there was often the problem that they ended up facing backward.
 
@@ -71,9 +73,9 @@ When importing models into Godot, there was often the problem that they ended up
 
 This update also brings frame delta smoothing to Godot 4, by [lawnjelly](https://github.com/lawnjelly). This can significantly improve the fluidity of motion and give smoother gameplay. This option is enabled by default, though please note that it only works when VSync is also enabled.
 
-## Scripting
+### Scripting
 
-### GDScript
+#### GDScript
 
 Until now, in GDScript, you needed to use a resource or an autoload to share data between multiple instances of the same script.
 
@@ -93,7 +95,7 @@ This version includes a rework of the system by [ocean](https://github.com/anvil
 var my_variable = 10 ## This is an inline docstring
 ```
 
-### C\#/.NET
+#### C\#/.NET
 
 The focus in this release was on bringing feature parity between C# and GDScript.
 
@@ -101,7 +103,7 @@ When using GDScript, you can define a new node type to use in the editor by addi
 
 From Godot 4.1, this is also possible in C# by adding the GlobalClass attribute to your file, thanks to [Raul Santos](https://github.com/raulsntos) and [Will Nations](https://github.com/willnationsdev). You can also use the Icon attribute to give your global class a unique icon.
 
-### GDExtension
+#### GDExtension
 
 Godot comes with a unique technology to use low-level languages like C++ as a game scripting language, without having to recompile the engine.
 
@@ -113,7 +115,7 @@ The team also implemented a backward compatibility system to help ensure that co
 
 All the above resulted from the teamwork of [David Snopek](https://github.com/dsnopek), [Juan Linietsky](https://github.com/reduz), [RedworkDE](https://github.com/RedworkDE), [Yuri Rubinsky](https://github.com/Chaosus), and [Yuri Sizov](https://github.com/YuriSizov).
 
-## Editor
+### Editor
 
 Godot 4 has support for multiple windows which we use for the project and editor settings and various pop-ups. Starting with this version, you can now also detach docs into floating windows and detach script editors, including the shader editor, and place them on a separate monitor.
 
@@ -133,7 +135,7 @@ The project manager now allows you to assign tags to individual projects and fil
 
 ![A list of projects with custom tags assigned to them](/storage/blog/godot-4-1-is-here/editor-project-manager-tags.png)
 
-## Rendering
+### Rendering
 
 Particle turbulence got reworked in this version based on artists' feedback to offer greater creative control. Turbulence is used extensively to create these rich sprawling effects seen in many modern games. Big thanks to [KdotJPG](https://github.com/KdotJPG) and [Raffaele Picca](https://github.com/RPicster) for this contribution.
 
@@ -147,7 +149,7 @@ NoiseTexture3D can also be used to create particle attractor vector fields, whic
 
 Work by [Lasuch](https://github.com/Lasuch69) and [Clay John](https://github.com/clayjohn).
 
-## Navigation
+### Navigation
 
 Godot 4.0 introduced real-time avoidance for AI navigation, but it was limited to a single plane.
 
@@ -160,6 +162,14 @@ On top of that, you can now use layers to control which agents avoid which and a
 ![A demo of multiple navigation agents with varied priorities](/storage/blog/godot-4-1-is-here/navigation-priority.png)
 
 Check out the [updated documentation](https://docs.godotengine.org/en/stable/tutorials/navigation/index.html) to learn more about how the improved navigation works.
+
+## Known issues
+
+With every release we acknowledge that there are going to be problems which we couldn't resolve in time. Some of these problems have been identified and fixes are being worked on as we speak, while others remain unknown until someone runs into the issue. You can follow our [bug tracker](https://github.com/godotengine/godot/issues) to learn if the problem that you're experiencing has been reported. We appreciate new reports and confirmations of existing reports, as that helps us prioritize fixing specific issues.
+
+Here are notable issues that have already been identified that you might experience in Godot 4.1:
+
+- The newly added API for defining custom configuration properties for export presets does not persist user configurations. Configuration options get reset and lost on editor restarts. The fix is going to be available in 4.1.1 (see [GH-79025](https://github.com/godotengine/godot/pull/79025)).
 
 ## On to the next release!
 
