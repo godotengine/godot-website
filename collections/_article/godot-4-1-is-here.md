@@ -53,7 +53,7 @@ As mentioned, the feature is currently marked experimental as it needs extensive
 
 Also on the multithreading front, [Pedro J. Estébanez](https://github.com/RandomShaper) worked hard on fixing a large amount of multi-threaded loading issues and limitations.
 
-On the rendering side, the Vulkan renderer got a shader cache to help prevent stalls due to shaders compiling at runtime. After the first compilation, the shader will be pulled directly from the cache. This cache can be toggled off in the project settings and is on by default in Godot 4.1.
+On the rendering side, the Vulkan renderer got a pipeline cache. While Godot already cached shaders to reduce shader compilation stutter, compiling pipelines still lead to some stuttering and slower load times. While the pipeline compilation stuttering issue is far from solved, this represents a step in the right direction and should also lead to a slight decrease in load times when using one of the RenderingDevice-based rendering backends. This cache can be toggled off in the project settings and is on by default in Godot 4.1.
 
 ![Shader cache project settings](/storage/blog/godot-4-1-is-here/shader-cache-setting.png)
 
