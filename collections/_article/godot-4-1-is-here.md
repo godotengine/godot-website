@@ -15,7 +15,7 @@ As always, a new release comes with a bunch of welcome new features, like the im
 
 Still, we took great care to prioritize the bugs you have encountered in 4.0. This update fixes over 900 issues that users have reported from using Godot 4 or while helping contributors test 4.1 with pre-release builds. The engine should feel more reliable overall. We will continue improving stability, performance, and workflows with every upcoming feature release of Godot 4.
 
-For most games and apps made with 4.0 it should be relatively safe to migrate to 4.1. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
+For most games and apps made with 4.0 it should be relatively safe to migrate to 4.1. We are [preparing a migration guide](https://github.com/godotengine/godot-docs/pull/7611) that outlines everything you need to pay attention to when migrating your project. Some incompatibilities are expected for C# and GDExtension users specifically, however we are working on making sure to avoid that in future releases. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
 
 **If you wish to get straight into the action, you can [download Godot 4.1 now](https://godotengine.org/download/).** Or stick around and read more about the most notable changes of this release. You can also watch this great highlights video by [GDQuest](https://www.gdquest.com/):
 
