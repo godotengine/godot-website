@@ -67,7 +67,7 @@ When importing models into Godot, there was often the problem that they ended up
 
 ![A model facing backwards (before the change)](/storage/blog/godot-4-1-is-here/model-facing-back.webp)
 
-[Juan Linietsky](https://github.com/reduz), [Tokage](https://github.com/TokageItLab), and [Aaron Franke](https://github.com/aaronfranke) addressed the issue by swapping the front and back camera directions in the editor. Also, the `look_at()` function now has an argument to use the model space as the reference for looking forward instead of the camera's minus Z axis. These changes also help fix a long-standing bug with path following.
+[Juan Linietsky](https://github.com/reduz), [Tokage](https://github.com/TokageItLab), and [Aaron Franke](https://github.com/aaronfranke) worked on a number of ways to address this issue. One of the implemented changes swaps the front and back camera directions in the editor. Also, the `look_at()` function now has an argument to use the model space as the reference for looking forward instead of the camera's minus Z axis. These changes also help fix a long-standing bug with path following.
 
 ![A model facing forward (after the change)](/storage/blog/godot-4-1-is-here/model-facing-front.webp)
 
