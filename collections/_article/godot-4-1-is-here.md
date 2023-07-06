@@ -67,7 +67,7 @@ When importing models into Godot, there was often the problem that they ended up
 
 ![A model facing backwards (before the change)](/storage/blog/godot-4-1-is-here/model-facing-back.webp)
 
-[Juan Linietsky](https://github.com/reduz), [Tokage](https://github.com/TokageItLab), and [Aaron Franke](https://github.com/aaronfranke) addressed the issue by swapping the front and back camera directions in the editor. Also, the look_at() function now has an argument to use the model space as the reference for looking forward instead of the camera's minus z-axis. These changes also help fix a long-standing bug with path following.
+[Juan Linietsky](https://github.com/reduz), [Tokage](https://github.com/TokageItLab), and [Aaron Franke](https://github.com/aaronfranke) addressed the issue by swapping the front and back camera directions in the editor. Also, the `look_at()` function now has an argument to use the model space as the reference for looking forward instead of the camera's minus Z axis. These changes also help fix a long-standing bug with path following.
 
 ![A model facing forward (after the change)](/storage/blog/godot-4-1-is-here/model-facing-front.webp)
 
@@ -113,7 +113,9 @@ While the technology is still in beta for this release, GDExtension is now even 
 
 ![An example of using a custom visual shader node from GDExtension](/storage/blog/godot-4-1-is-here/gdextension-visual-shader-node.png)
 
-The team also implemented a backward compatibility system to help ensure that code written for Godot 4.1 keeps working even if the API changes in future releases. Finally, a lot of work was done on the architecture once again to make the GDExtension API extensible in the future.
+The team also implemented a backward compatibility system to help ensure that code written for Godot 4.1 keeps working even if the API changes in future releases. However, a significant compatibility breakage was necessary to do in 4.1 to fix critical issues in GDExtension, so existing Godot 4.0 extensions will need to be ported and recompiled for 4.1.
+
+Finally, a lot of work was done on the architecture once again to make the GDExtension API extensible in the future.
 
 All the above resulted from the teamwork of [David Snopek](https://github.com/dsnopek), [Juan Linietsky](https://github.com/reduz), [RedworkDE](https://github.com/RedworkDE), [Yuri Rubinsky](https://github.com/Chaosus), and [Yuri Sizov](https://github.com/YuriSizov).
 
@@ -131,7 +133,7 @@ Godot 4.0 introduced the option to define and export typed arrays, and to export
 
 ![An array of nodes exported as a custom property](/storage/blog/godot-4-1-is-here/editor-exported-node-array.png)
 
-This work was done by Tomasz and [Timothe Bonhoure](https://github.com/ajreckof)
+This work was done by Tomasz and [Timothé Bonhoure](https://github.com/ajreckof)
 
 The project manager now allows you to assign tags to individual projects and filter projects by tags. It makes it much easier to search through dozens, if not hundreds of Godot projects.
 
