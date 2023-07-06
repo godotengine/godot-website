@@ -33,7 +33,7 @@ Last but not least, making games with Godot and crediting the engine goes a long
 
 ## Highlights
 
-This release was made possible thanks to submissions from over 300 contributors! We warmly thank you all for your work and dedication, including those who help us test the engine before the release and submit bug reports.
+This release was made possible thanks to submissions from over 300 contributors! We warmly thank you all for your work and dedication, including those who helped us test the engine before the release and submit bug reports.
 
 For an exhaustive list of all the bug fixes and improvements, head on over to our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1).
 
@@ -101,7 +101,9 @@ The focus in this release was on bringing feature parity between C# and GDScript
 
 When using GDScript, you can define a new node type to use in the editor by adding a global class name to your script.
 
-From Godot 4.1, this is also possible in C# by adding the GlobalClass attribute to your file, thanks to [Raul Santos](https://github.com/raulsntos) and [Will Nations](https://github.com/willnationsdev). You can also use the Icon attribute to give your global class a unique icon.
+Starting from Godot 4.1, this is also possible in C# by adding the `[GlobalClass]` attribute to your file, thanks to [Raul Santos](https://github.com/raulsntos) and [Will Nations](https://github.com/willnationsdev). You can also use the `[Icon]` attribute to give your global class a unique icon.
+
+Note that as of this release projects made with C# still cannot be exported to mobile and web platforms. We are working on providing the support as soon as possible, but the resolution of this limitation will likely depend on the release of .NET 8 at the end of 2023. This means that the work on enabling mobile and web platforms can only truly start later this year.
 
 #### GDExtension
 
@@ -141,13 +143,11 @@ Particle turbulence got reworked in this version based on artists' feedback to o
 
 ![An effect driven by the updated particle turbulence system](/storage/blog/godot-4-1-is-here/render-particles-turbulence.png)
 
-Using the new 3D noise textures you can control the density of volumetric fog easily, and make it thinner in certain areas.
-
-NoiseTexture3D can also be used to create particle attractor vector fields, which is useful to simulate wind that affects particles.
+Using the new 3D noise textures you can control the density of volumetric fog easily, and make it thinner in certain areas. NoiseTexture3D can also be used to create particle attractor vector fields, which is useful to simulate wind that affects particles. [Lasuch](https://github.com/Lasuch69) and [Clay John](https://github.com/clayjohn) implemented this feature.
 
 ![A more complex fog volume using the new 3D noise](/storage/blog/godot-4-1-is-here/render-3d-noise.png)
 
-Work by [Lasuch](https://github.com/Lasuch69) and [Clay John](https://github.com/clayjohn).
+While there are still many [planned improvements](https://godotengine.org/article/rendering-priorities-4-1/) to Godot's renderers, most will be present in future releases. The rendering team (and all rendering contributors) prioritized bug fixing and stability over new features. Notably, the 3D GLES3 renderer is not yet complete, but will see substantial work over the coming months.
 
 ### Navigation
 
@@ -162,6 +162,14 @@ On top of that, you can now use layers to control which agents avoid which and a
 ![A demo of multiple navigation agents with varied priorities](/storage/blog/godot-4-1-is-here/navigation-priority.png)
 
 Check out the [updated documentation](https://docs.godotengine.org/en/stable/tutorials/navigation/index.html) to learn more about how the improved navigation works.
+
+### Platform support
+
+We are as committed as ever to have Godot games on all popular platforms, and 4.1 still offers the same capabilities as did Godot 4.0. You can export to all desktop platforms with both standard and .NET version of the engine, and you can export to mobile and web if you don't use C# in your projects.
+
+As of 4.1 web exports still have some limitations due to poor vendor support of certain modern features. Browsers with bad WebGL 2 support, such as Chrome on macOS, unfortunately suffer from issues which we cannot address without a fix from Google or a significant amount of effort put into supporting a dedicated WebGL 1 / GLES2 renderer.
+
+We are also aware of the complexity setting up web games on hosting platforms which don't let you set the required CORS headers for SharedArrayBuffer support. This mostly depends on Safari implementing the `coep:credentialless` header support, while Chromium-based browsers and Firefox already work fine (especially if you publish on itch.io). There is a [possible workaround](https://github.com/godotengine/godot-proposals/issues/6616) that we are investigating.
 
 ## Known issues
 
