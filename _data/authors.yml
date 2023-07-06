@@ -62,5 +62,7 @@
   image: /assets/images/authors/yuri.jpeg
 - name: "2000+ Godot contributors"
   image: /assets/images/authors/everyone.jpg
+- name: "Godot contributors"
+  image: /assets/images/authors/everyone.jpg
 - name: default
   image: /assets/images/authors/default_avatar.svg
