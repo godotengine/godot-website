@@ -8,6 +8,10 @@ image_caption_description: Illustration by André Marí Coppola
 date: 2023-06-23 14:00:00
 ---
 
+**Update:** This poll is now over. [You can view the results here.](https://docs.google.com/forms/d/e/1FAIpQLSeXRE1nF64PUilO6fA7Pevh2lWukJtpdBvc2_A3fGfuciy-gQ/viewanalytics)
+
+___
+
 As we do every year, we would like to take a short poll to gather some basic information about the Godot community. We have a short list of questions and we hope you will take the time to fill them out!
 
 The poll is completely anonymous, and you can see the results after submitting your answers (we will also post a link to the results directly once the poll has closed). It will remain open for a week. Completing the poll should only take a few minutes.
