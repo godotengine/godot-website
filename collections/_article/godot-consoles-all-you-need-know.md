@@ -73,6 +73,7 @@ Links to companies that do console porting for Godot titles:
 * [Pineapple Works](https://pineapple.works/)
 * [GOTM](https://gotm.io/about/gpp)
 * [Flynn's Arcade](https://www.flynnsarcades.com/)
+* [Nejcraft](https://nejcraft.cz/publishing)
 
 Most smaller studios working on games with Unity and Unreal also rely on third party companies to ensure that their ports are done properly and pass all the console comformance requirements.
 
