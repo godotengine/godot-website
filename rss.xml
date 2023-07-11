@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot Funding Breakdown &amp; Hiring Process</title>
+		<link>https://godotengine.org/article/funding-breakdown-and-hiring-process/</link>
+		<description>This article aims to shed light on the current status of Godot&#39;s funding, hiring, and our plans for sustainable funding long term.</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/funding-breakdown-and-hiring-process/</guid>
+		<dc:creator>Godot Foundation</dc:creator>
+		<pubDate>Tue, 11 Jul 2023 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/funding-breakdown-and-hiring-process.webp</image>
+	</item>
+	
+	<item>
 		<title>Godot 4.1 is here, smoother, more reliable, and with plenty of new features</title>
 		<link>https://godotengine.org/article/godot-4-1-is-here/</link>
 		<description>Four months after the release of Godot 4.0, we are excited to bring you Godot 4.1 — an update with a focus on stability, performance, and polish.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Clay John</dc:creator>
 		<pubDate>Thu, 06 Apr 2023 14:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/gdc-2023-retrospective.jpg</image>
-	</item>
-	
-	<item>
-		<title>Maintenance release: Godot 4.0.2</title>
-		<link>https://godotengine.org/article/maintenance-release-godot-4-0-2/</link>
-		<description>As the work on Godot 4.1 continues, more fixes and enhancements become available to existing 4.0 users as patch releases. Meet Godot 4.0.2, addressing more of your reports, including several regressions from 4.0.1, and improving platform support for Android, macOS, and Windows!</description>
-		
-		<category>Release</category>
-		
-		<guid>https://godotengine.org/article/maintenance-release-godot-4-0-2/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Tue, 04 Apr 2023 12:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-2.jpg</image>
 	</item>
 	
 
