@@ -64,5 +64,7 @@
   image: /assets/images/authors/everyone.jpg
 - name: "Godot contributors"
   image: /assets/images/authors/everyone.jpg
+- name: "Godot Foundation"
+  image: /assets/images/authors/foundation.png
 - name: default
   image: /assets/images/authors/default_avatar.svg
