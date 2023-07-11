@@ -85,7 +85,7 @@ With the new Godot Foundation, it is expected that the Godot Project should be a
 - Paid asset store (taking a percentage of sales).
 - Merchandise.
 
-But these are still in the early planning phases as our priority until now has been to get the donation platform operational. To be clear, we do not anticipate that we will be able to sustain the project through the asset store and merchandise alone as we will intentionally operate them with very thin margins. We are a not-for-profit project first and foremost and we will not compromise that.
+These are still in the early planning phases as our priority until now has been to get the donation platform operational. To be clear, we do not anticipate that we will be able to sustain the project through the asset store and merchandise alone as we will intentionally operate them with very thin margins. We are a not-for-profit project first and foremost and we will not compromise that.
 
 ### Transparency Reports
 
