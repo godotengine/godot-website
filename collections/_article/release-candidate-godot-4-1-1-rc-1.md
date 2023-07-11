@@ -26,7 +26,7 @@ INTRODUCTION
 
 ## What's new
 
-AAA contributors submitted BBB improvements for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1.1-rc1), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes:
+46 contributors submitted over 70 improvements for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1.1-rc1), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes:
 
 - 2D: Improve string drawing in the tiledata editor ([GH-78522](https://github.com/godotengine/godot/pull/78522)).
 - 2D: Make sure the shortcut key respects the context in `TileSetAtlasSourceEditor` ([GH-78920](https://github.com/godotengine/godot/pull/78920)).
@@ -75,7 +75,7 @@ One previously accepted change was reverted in this release due to regressions.
 
 - GUI: Revert "Fix focusloss of non-exclusive `AcceptDialog` with `close_on_escape`" ([GH-79084](https://github.com/godotengine/godot/pull/79084)).
 
-This release is built from commit [`xxxxxxxxx`](https://github.com/godotengine/godot/commit/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) (see [README](https://downloads.tuxfamily.org/godotengine/4.1.1/rc1/README.txt)).
+This release is built from commit [`e709ad4d6`](https://github.com/godotengine/godot/commit/e709ad4d6407e52dc62f00a471d13eb6c89f2c4c) (see [README](https://downloads.tuxfamily.org/godotengine/4.1.1/rc1/README.txt)).
 
 ## Downloads
 
