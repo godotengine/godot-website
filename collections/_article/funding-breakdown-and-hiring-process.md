@@ -13,32 +13,32 @@ This article aims to shed light on the current status of Godot's funding, hiring
 
 ### State of Godot's funding
 
-Godot is sustained completely by donations. To date, those donations have taken the form of Patreon pledges, PayPal transfers, and one-time grants. By nature, only the Patreon donations are recurring (although some choose to make recurring payments through PayPal) and even then, we can't totally rely on them as the month-to-month amount fluctuates (at the time of writing it is just under $14,000 USD per month, but the amount we receive after fees is much less).
+Godot is sustained completely by donations. To date, those donations have taken the form of Patreon pledges, PayPal transfers, and one-time grants. By nature, only the Patreon donations are recurring (although some choose to make recurring payments through PayPal). Even then, we can't totally rely on them as the month-to-month amount fluctuates. At the time of writing, it is just under $14,000 USD per month, but the amount we receive after fees is much less.
 
-To account for the temporary nature of donations, we have been cautious about expanding the team and, in the past, we waited until we had enough funds on hand to pay for a full year contract for a person before signing a contract with them.
+To account for the temporary nature of donations, we have been cautious about expanding the team. In the past, we waited until we had enough funds on hand to pay for a full year contract for a person before signing a contract with them.
 
-Additionally, when the project was much smaller than it is now, Godot was receiving more funds than it could use due to difficulties in finding suitable candidates for hiring and we were cautious about expanding the team. This led to Godot carrying funds over year-to-year.
+Additionally, when the project was much smaller than it is now, Godot was receiving more funds than it could use due to difficulties in finding suitable candidates for hiring. As a result, we were cautious about expanding the team. This led to Godot carrying funds over year-to-year.
 
 In the past two years, however, the amount of contributors has grown significantly, and more individuals that met the project requirements became available for hire. This, combined with the pressing need to turn the Godot 4.0 development into a stable release, resulted in an increased number of hires and a level a spending greater than our current level of month-to-month donations.
 
 We want to keep the current group of paid contributors, but we need more funding in order to do so.
 
-This amount of hires, at the current level of funding, is not sustainable long term. Thanks to the regular income from Patreon and PayPal we aren't going to immediately run out of funds, but we are spending more each month than we take in. Therefore, to keep the current group of paid contributors and to maintain the current development pace, the project needs to increase the amount of funding it receives.
+This amount of hires, at the current level of funding, is not sustainable long term. Thanks to the regular income from Patreon and PayPal, we aren't going to immediately run out of funds, but we are spending more each month than we take in. Therefore, to keep the current group of paid contributors and to maintain the current development pace, the project needs to increase the amount of funding it receives.
 
 ### Current and future hires
 
-The foundation currently has 10 contractors (some part-time some full-time) for a total cost of roughly 40,000$ USD per month. These people work in a variety of fields that benefit the engine such as editor UX, rendering, production, fundraising, C# integration, and GDScript development.
+The foundation currently has 10 contractors (some part-time, some full-time) for a total cost of roughly 40,000 USD per month. These people work in a variety of fields that benefit the engine such as editor UX, rendering, production, fundraising, C# integration, and GDScript development.
 
 At the time of writing the Godot project (through the SFC and the Foundation) currently has contracts with the following people:
 
 * Bastiaan Olij (BastiaanOlij)
 * Emilio Coppola (Emi)
-* George Marques(vnen)
+* George Marques (vnen)
 * Hugo Locurcio (Calinou)
 * Ignacio Etcheverry (neikeq)
 * Juan Linietsky (reduz)
 * Pāvels Nadtočajevs (bruvzg)
-* Remi Verschelde(akien-mga)
+* Remi Verschelde (akien-mga)
 * Tomasz Chabora (KoBeWi)
 * Yuri Sizov (YuriSizov)
 
@@ -58,7 +58,7 @@ We would like to touch on the hiring process for paid Godot contributors.
 
 The hiring process for Godot works differently than it does for traditional software companies. In traditional software companies, job postings are listed and candidates are evaluated until one is eventually hired. New hires need to go through an on-boarding process and it takes time for them to fully understand and get familiar with how the current project works. This process often requires significant assistance from their peers (preventing them from doing their own work) until the new hire feels comfortable and productive. It is possible that this new person will never fully onboard or perform as expected and companies accept this cost.
 
-For Godot, the process works differently. We typically do not make public job postings, we identify individuals who are already knowledgeable about Godot, have experience in areas that need more contributions, and work well with other contributors. As Godot is a highly popular FOSS software project (nearing 2000 contributors), it is typically not difficult for us to find such individuals for most areas of the engine.
+For Godot, the process works differently. We typically do not make public job postings, we identify individuals who are already knowledgeable about Godot, have experience in areas that need more contributions, and work well with other contributors. As Godot is a highly popular FOSS software project (nearing 2,000 contributors), it is typically not difficult for us to find such individuals for most areas of the engine.
 
 This way, when enough funding is available, we can ask these contributors if they would like to work full (or part) time for the Godot project so they can continue working on what they are already working on, but dedicate several more hours to Godot as well. This significantly accelerates the pace of Godot development and ensures that donation funds are always used on hires that will maximize the return on investment.
 
