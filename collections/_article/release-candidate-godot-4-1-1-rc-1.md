@@ -1,6 +1,6 @@
 ---
 title: "Release candidate: Godot 4.1.1 RC 1"
-excerpt: ""
+excerpt: "The first round of bugfixes and usability improvements for Godot 4.1 is ready for your consideration!"
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-1-1-rc-1.webp
@@ -9,7 +9,17 @@ image_caption_description: ""
 date: 2023-07-12 12:00:00
 ---
 
-INTRODUCTION
+It was a busy weekend in the Godot-land, as the [newly released Godot 4.1](/article/godot-4-1-is-here) was being viewed, tested, and tried by thousands of developers. The annual [GMTK Game Jam](https://itch.io/jam/gmtk-2023) by the popular YouTube channel [Game Maker's Toolkit]() did help quite a lot in that regard! Of course, where there is a lot of users, there is also a lot of highly appreciated reports and suggestions. Plus we had some ready to go from before 4.1 was sealed and shipped.
+
+As always with the first maintenance release (also known as "patch release") the focus is on quickly addressing urgent concerns and issues, possible regressions and crashes, as well as some aliasing in various workflows. Some of the most important changes include:
+
+- Fix for a crash due to an infinite loop in `AnimationStateMachine` ([GH-79141](https://github.com/godotengine/godot/pull/79141)). It was a gnarly issue because it was easy to trigger with a bare minimum configuration. Now circular dependencies are correctly detected preventing infinite looping.
+
+- Command-line export of C#/.NET projects should no longer drop random files ([GH-79173](https://github.com/godotengine/godot/pull/79173)). Your exports may had arbitrary resources missing (not C# scripts, but images, for instance), if you were exporting your project with CLI. This should no longer happen.
+
+- Custom export options which you can define with an `EditorExportPlugin` are now correctly restored on the editor restart ([GH-79025](https://github.com/godotengine/godot/pull/79025)). Previously the usability of this freshly added feature was limited due to data loss between sessions.
+
+- For Linux users there is a potential fix for freezes when interacting with menus on Wayland ([GH-79143](https://github.com/godotengine/godot/pull/79143)). This had been a hard to identify and debug issue, but our local Wayland enthusiasts managed to pinpoint the likely cause and validate that the unwanted behavior was addressed.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.1.rc1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
