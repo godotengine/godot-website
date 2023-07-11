@@ -29,7 +29,7 @@ This amount of hires, at the current level of funding, is not sustainable long t
 
 The foundation currently has 10 contractors (some part-time, some full-time) for a total cost of roughly 40,000 USD per month. These people work in a variety of fields that benefit the engine such as editor UX, rendering, production, fundraising, C# integration, and GDScript development.
 
-At the time of writing the Godot project (through the SFC and the Foundation) currently has contracts with the following people:
+At the time of writing, the Godot project (through the SFC and the Foundation) has contracts with the following people:
 
 * Bastiaan Olij (BastiaanOlij)
 * Emilio Coppola (Emi)
