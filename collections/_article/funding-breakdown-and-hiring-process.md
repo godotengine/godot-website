@@ -58,7 +58,7 @@ We would like to touch on the hiring process for paid Godot contributors.
 
 The hiring process for Godot works differently than it does for traditional software companies. In traditional software companies, job postings are listed and candidates are evaluated until one is eventually hired. New hires need to go through an on-boarding process and it takes time for them to fully understand and get familiar with how the current project works. This process often requires significant assistance from their peers (preventing them from doing their own work) until the new hire feels comfortable and productive. It is possible that this new person will never fully onboard or perform as expected and companies accept this cost.
 
-For Godot, the process works differently. We typically do not make public job postings, we identify individuals who are already knowledgeable about Godot, have experience in areas that need more contributions, and work well with other contributors. As Godot is a highly popular FOSS software project (nearing 2,000 contributors), it is typically not difficult for us to find such individuals for most areas of the engine.
+For Godot, the process works differently. We typically do not make public job postings, we identify individuals who are already knowledgeable about Godot, have experience in areas that need more contributions, and work well with other contributors. As Godot is a highly popular FOSS software project (over 2,000 contributors), it is typically not difficult for us to find such individuals for most areas of the engine.
 
 This way, when enough funding is available, we can ask these contributors if they would like to work full (or part) time for the Godot project so they can continue working on what they are already working on, but dedicate several more hours to Godot as well. This significantly accelerates the pace of Godot development and ensures that donation funds are always used on hires that will maximize the return on investment.
 
@@ -72,17 +72,17 @@ This approach to hiring has scaled well with the growth of the project and we ho
 
 We are launching a [Godot Development Fund page](https://fund.godotengine.org/), taking inspiration from our friends at Blender and the amazing Blender Development Fund. The Godot Development Fund will operate much the same way allowing users to make recurring or one-time donations from a centralized location.
 
-We decided on offering this new donation platform as it became increasingly clear that using a third party tool (like Patreon) was costing too much relative to the service it offers (with taxes, payment processing fees and other costs, Godot is receiving substantially less than what is donated through the platform). At the same time, there are few similar services that cater to not for profits operating on the scale of Godot. Ultimately, we have decided to follow in the footsteps of our friends at Blender and Krita.
+We decided on offering this new donation platform as it became increasingly clear that using a third-party tool like Patreon was costing too much relative to the service it offers. Due to taxes, payment processing fees and other costs, Godot is receiving substantially less than what is donated through the platform. At the same time, there are few similar services that cater to not-for-profits operating on the scale of Godot. Ultimately, we have decided to follow in the footsteps of our friends at Blender and Krita.
 
-The new donation platform is mostly ready and you can already use it to set up a recurring donation via PayPal if you would like! In the coming weeks we expect to finalize the donation platform and we will have a big announcement post once it is 100% finished.
+The new donation platform is mostly ready; you can already use it to set up a recurring donation via PayPal if you would like! In the coming weeks, we expect to finalize the donation platform and we will have a big announcement post once it is 100% finished.
 
-We will keep the Patreon operational for the foreseeable future as we heavily rely on the current donations we receive through it. But for future donations please consider using the Development Fund as it results in more of your donation going towards development.
+We will keep the Patreon operational for the foreseeable future as we heavily rely on the current donations we receive through it. But for future donations, please consider using the Development Fund as it results in more of your donation going towards development.
 
 ### Diversification of funding sources
 
 With the new Godot Foundation, it is expected that the Godot Project should be able to further diversify its funding, going into areas such as:
 
-- Paid asset store (taking a % of sales).
+- Paid asset store (taking a percentage of sales).
 - Merchandise.
 
 But these are still in the early planning phases as our priority until now has been to get the donation platform operational. To be clear, we do not anticipate that we will be able to sustain the project through the asset store and merchandise alone as we will intentionally operate them with very thin margins. We are a not-for-profit project first and foremost and we will not compromise that.
