@@ -95,7 +95,7 @@ The SFC publishes its own [transparency reports](https://sfconservancy.org/about
 
 The Godot Foundation will publish its own transparency reports in 2024 covering its inception in 2022 until the end of 2023 based on its own funding and cash flows. This will overlap with the SFC's 2022 and 2023 reports. As the report will cover Godot exclusively, it can cover more details than what the SFC reports can cover. Particularly, interested readers can expect to find clear breakdowns of sources of funding and categories of expenses.
 
-While it may be desirable to publish this information more often, please understand that these reports have to be audited to comply with local law and can be expensive and time consuming to prepare. We will. however, be able to post up to date information about our monthly funding thanks to the new donation platform.
+While it may be desirable to publish this information more often, please understand that these reports have to be audited to comply with local law and can be expensive and time consuming to prepare. We will, however, be able to post up to date information about our monthly funding thanks to the new donation platform.
 
 ## Future
 
