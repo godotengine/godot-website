@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 4.1.1 RC 1</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-1-1-rc-1/</link>
+		<description>The first round of bugfixes and usability improvements for Godot 4.1 is ready for your consideration!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-1-1-rc-1/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Wed, 12 Jul 2023 10:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-1-rc-1.webp</image>
+	</item>
+	
+	<item>
 		<title>Godot Funding Breakdown &amp; Hiring Process</title>
 		<link>https://godotengine.org/article/funding-breakdown-and-hiring-process/</link>
 		<description>This article aims to shed light on the current status of Godot&#39;s funding, hiring, and our plans for sustainable funding long term.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Thu, 13 Apr 2023 15:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-1.jpg</image>
-	</item>
-	
-	<item>
-		<title>GDC 2023: Retrospective</title>
-		<link>https://godotengine.org/article/gdc-2023-retrospective/</link>
-		<description>We attended the Game Developers Conference (GDC) in San Francisco this year.</description>
-		
-		<category>Events</category>
-		
-		<guid>https://godotengine.org/article/gdc-2023-retrospective/</guid>
-		<dc:creator>Clay John</dc:creator>
-		<pubDate>Thu, 06 Apr 2023 14:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/gdc-2023-retrospective.jpg</image>
 	</item>
 	
 
