@@ -6,7 +6,7 @@ author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-1-1-rc-1.webp
 image_caption_title: "GMTK Game Jam entries"
 image_caption_description: ""
-date: 2023-07-12 12:00:00
+date: 2023-07-12 10:00:00
 ---
 
 It was a busy weekend in the Godot-land, as the [newly released Godot 4.1](/article/godot-4-1-is-here) was being viewed, tested, and tried by thousands of developers. The annual [GMTK Game Jam](https://itch.io/jam/gmtk-2023) by the popular YouTube channel [Game Maker's Toolkit]() did help quite a lot in that regard! Of course, where there is a lot of users, there is also a lot of highly appreciated reports and suggestions. Plus we had some ready to go from before 4.1 was sealed and shipped.
@@ -89,11 +89,14 @@ This release is built from commit [`e709ad4d6`](https://github.com/godotengine/g
 
 ## Downloads
 
-The downloads for this dev snapshot can be found directly on our repository:
+The downloads for this pre-release build can be found in our GitHub repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.1.1/rc1/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.1.1/rc1/mono) (C#, GDScript, GDExtension).
-  - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
+* [**Download Godot 4.1.1 RC 1**](https://github.com/godotengine/godot-builds/releases/tag/4.1.1-rc1).
+
+**Standard build** includes support for GDScript and GDExtension.
+
+**.NET 6 build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
+- .NET build requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues
 
