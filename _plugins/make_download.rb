@@ -57,6 +57,9 @@ module MakeDownloadFilter
     version_name = input["name"]
     version_flavor = input["flavor"]
 
+    version_bits = version_name.split(".")
+    version_majmin = "#{version_bits[0]}.#{version_bits[1]}"
+
     slugs_defaults = get_download_slugs(input, mono)
     if slugs_defaults.nil?
       return "#"
@@ -83,9 +86,6 @@ module MakeDownloadFilter
     if platform == "aar_library"
       download_file = "godot-lib.#{version_name}.#{version_flavor}.#{download_slug}"
     else
-      version_bits = version_name.split(".")
-      version_majmin = "#{version_bits[0]}.#{version_bits[1]}"
-
       # Format was slightly different up until 2.1.
       if version_bits[0] == "1" or (version_bits[0] == "2" and version_bits[1] == "0")
         download_file = "Godot_v#{version_name}_#{version_flavor}_#{download_slug}"
@@ -97,7 +97,7 @@ module MakeDownloadFilter
     if host == "github"
       return "#{HOST_GITHUB}/#{version_name}-#{version_flavor}/#{download_file}"
     elsif host == "github_builder"
-      return "#{HOST_GITHUB_BUILDER}/#{version_name}-prerelease-templates/#{download_file}"
+      return "#{HOST_GITHUB_BUILDER}/#{version_majmin}-prerelease-templates/#{download_file}"
     elsif host == "tuxfamily"
       if version_flavor == "stable"
         return "#{HOST_TUXFAMILY}/#{version_name}#{mono_slug}/#{download_file}"
