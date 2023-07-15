@@ -19,7 +19,7 @@ To account for the temporary nature of donations, we have been cautious about ex
 
 Additionally, when the project was much smaller than it is now, Godot was receiving more funds than it could use due to difficulties in finding suitable candidates for hiring. As a result, we were cautious about expanding the team. This led to Godot carrying funds over year-to-year.
 
-In the past two years, however, the amount of contributors has grown significantly, and more individuals that met the project requirements became available for hire. This, combined with the pressing need to turn the Godot 4.0 development into a stable release, resulted in an increased number of hires and a level a spending greater than our current level of month-to-month donations.
+In the past two years, however, the amount of contributors has grown significantly, and more individuals that met the project requirements became available for hire. This, combined with the pressing need to turn the Godot 4.0 development into a stable release, resulted in an increased number of hires and a level of spending greater than our current level of month-to-month donations.
 
 We want to keep the current group of paid contributors, but we need more funding in order to do so.
 
@@ -95,7 +95,7 @@ The SFC publishes its own [transparency reports](https://sfconservancy.org/about
 
 The Godot Foundation will publish its own transparency reports in 2024 covering its inception in 2022 until the end of 2023 based on its own funding and cash flows. This will overlap with the SFC's 2022 and 2023 reports. As the report will cover Godot exclusively, it can cover more details than what the SFC reports can cover. Particularly, interested readers can expect to find clear breakdowns of sources of funding and categories of expenses.
 
-While it may be desirable to publish this information more often, please understand that these reports have to be audited to comply with local law and can be expensive and time consuming to prepare. We will, however, be able to post up to date information about our monthly funding thanks to the new donation platform.
+While it may be desirable to publish this information more often, please understand that these reports have to be audited to comply with local law and can be expensive and time consuming to prepare. We will, however, be able to post up-to-date information about our monthly funding thanks to the new donation platform.
 
 ## Future
 
