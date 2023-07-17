@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Maintenance release: Godot 4.1.1",
+			"link": "https://godotengine.org/article/maintenance-release-godot-4-1-1/",
+			"description": "Hot on the heels of its parent release, here&#39;s Godot 4.1.1 — the first maintenance release of the 4.1 branch, with more stability and workflow improvements.",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/maintenance-release-godot-4-1-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Mon, 17 Jul 2023 17:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-1-1.webp"
+		},
+		
+		{
 			"title": "Release candidate: Godot 4.1.1 RC 1",
 			"link": "https://godotengine.org/article/release-candidate-godot-4-1-1-rc-1/",
 			"description": "The first round of bugfixes and usability improvements for Godot 4.1 is ready for your consideration!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Pedro J. Estébanez",
 			"pubDate": "Fri, 14 Apr 2023 12:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/d3d12-adventures-in-shaderland.jpg"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 3.6 beta 1",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/",
-			"description": "It&#39;s time to start testing the next feature release of Godot 3, packed with over 500 fixes and enhancements which don&#39;t require any compatibility breaking changes!",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/",
-			"dc:creator": "Rémi Verschelde",
-			"pubDate": "Thu, 13 Apr 2023 15:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-1.jpg"
 		}
 		
 	]

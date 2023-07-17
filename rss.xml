@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Maintenance release: Godot 4.1.1</title>
+		<link>https://godotengine.org/article/maintenance-release-godot-4-1-1/</link>
+		<description>Hot on the heels of its parent release, here&#39;s Godot 4.1.1 — the first maintenance release of the 4.1 branch, with more stability and workflow improvements.</description>
+		
+		<category>Release</category>
+		
+		<guid>https://godotengine.org/article/maintenance-release-godot-4-1-1/</guid>
+		<dc:creator>Yuri Sizov</dc:creator>
+		<pubDate>Mon, 17 Jul 2023 17:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-1-1.webp</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.1.1 RC 1</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-1-1-rc-1/</link>
 		<description>The first round of bugfixes and usability improvements for Godot 4.1 is ready for your consideration!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Pedro J. Estébanez</dc:creator>
 		<pubDate>Fri, 14 Apr 2023 12:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/d3d12-adventures-in-shaderland.jpg</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 3.6 beta 1</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/</link>
-		<description>It&#39;s time to start testing the next feature release of Godot 3, packed with over 500 fixes and enhancements which don&#39;t require any compatibility breaking changes!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Thu, 13 Apr 2023 15:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-1.jpg</image>
 	</item>
 	
 
