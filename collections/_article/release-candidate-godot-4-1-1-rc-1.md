@@ -15,7 +15,7 @@ As always with the first maintenance release (also known as "patch release") the
 
 - Fix for a crash due to an infinite loop in `AnimationStateMachine` ([GH-79141](https://github.com/godotengine/godot/pull/79141)). It was a gnarly issue because it was easy to trigger with a bare minimum configuration. Now circular dependencies are correctly detected preventing infinite looping.
 
-- Command-line export of C#/.NET projects should no longer drop random files ([GH-79173](https://github.com/godotengine/godot/pull/79173)). Your exports may had arbitrary resources missing (not C# scripts, but images, for instance), if you were exporting your project with CLI. This should no longer happen.
+- Command-line export of C#/.NET projects should no longer drop random files ([GH-79173](https://github.com/godotengine/godot/pull/79173)). Your exports may have had arbitrary resources missing (not C# scripts, but images, for instance), if you were exporting your project with CLI. This should no longer happen.
 
 - Custom export options which you can define with an `EditorExportPlugin` are now correctly restored on the editor restart ([GH-79025](https://github.com/godotengine/godot/pull/79025)). Previously the usability of this freshly added feature was limited due to data loss between sessions.
 
