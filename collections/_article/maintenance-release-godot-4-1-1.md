@@ -9,7 +9,7 @@ image_caption_description: A game by Firebelley
 date: 2023-07-17 17:00:00
 ---
 
-The release of Godot 4.1 has been [just a couple of weeks ago](/article/godot-4-1-is-here), and we are ready for the first maintenance release, — addressing some of the bugs and annoyances that have slipped into the stable build.
+The release of Godot 4.1 was [just a couple of weeks ago](/article/godot-4-1-is-here) and we are ready for the first maintenance release — addressing some of the bugs and annoyances that have slipped into the stable build.
 
 Deciding where to draw the line and mark a release as stable is a tricky thing. On the one hand, there are always unresolved issues. But on the other, not every issue is critical enough to block all other improvements and fixes from shipping. With our current [release management plan](/article/release-management-4-1/) we put the effort into reducing the number of changes the closer we are to the planned release date, as this ensures we don't get an unexpected breakage or regressions. Contributors, however, remain determined to improve Godot, so by the time the first maintenance release comes around, we have plenty of goodies to include!
 
@@ -21,7 +21,7 @@ Some of the most important changes in this release include:
 
 - Custom export options which you can define with an `EditorExportPlugin` are now correctly restored on the editor restart ([GH-79025](https://github.com/godotengine/godot/pull/79025)). Previously the usability of this freshly added feature was limited due to data loss between sessions.
 
-- For Linux users there is a potential fix for freezes when interacting with menus on Wayland ([GH-79143](https://github.com/godotengine/godot/pull/79143)). This had been a hard to identify and debug issue, but our local Wayland enthusiasts managed to pinpoint the likely cause and validate that the unwanted behavior was addressed.
+- For Linux users there is a potential fix for freezes when interacting with menus on Wayland ([GH-79143](https://github.com/godotengine/godot/pull/79143)). This was a hard to identify and debug issue, but our local Wayland enthusiasts managed to pinpoint the likely cause and validate that the unwanted behavior was addressed.
 
 [**Download Godot 4.1.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.1.stable/).
 
