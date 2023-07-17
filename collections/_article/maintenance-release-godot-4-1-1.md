@@ -1,17 +1,19 @@
 ---
-title: "Release candidate: Godot 4.1.1 RC 1"
-excerpt: "The first round of bugfixes and usability improvements for Godot 4.1 is ready for your consideration!"
-categories: ["pre-release"]
+title: "Maintenance release: Godot 4.1.1"
+excerpt: "Hot on the heels of its parent release, here's Godot 4.1.1 — the first maintenance release of the 4.1 branch, with more stability and workflow improvements."
+categories: ["release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-1-1-rc-1.webp
-image_caption_title: "GMTK Game Jam entries"
-image_caption_description: ""
-date: 2023-07-12 10:00:00
+image: /storage/blog/covers/maintenance-release-godot-4-1-1.webp
+image_caption_title: Gunforged
+image_caption_description: A game by Firebelley
+date: 2023-07-17 17:00:00
 ---
 
-It was a busy weekend in the Godot-land, as the [newly released Godot 4.1](/article/godot-4-1-is-here) was being viewed, tested, and tried by thousands of developers. The annual [GMTK Game Jam](https://itch.io/jam/gmtk-2023) by the popular YouTube channel [Game Maker's Toolkit]() did help quite a lot in that regard! Of course, where there is a lot of users, there is also a lot of highly appreciated reports and suggestions. Plus we had some ready to go from before 4.1 was sealed and shipped.
+The release of Godot 4.1 has been [just a couple of weeks ago](/article/godot-4-1-is-here), and we are ready for the first maintenance release, — addressing some of the bugs and annoyances that have slipped into the stable build.
 
-As always with the first maintenance release (also known as "patch release") the focus is on quickly addressing urgent concerns and issues, possible regressions and crashes, as well as some aliasing in various workflows. Some of the most important changes include:
+Deciding where to draw the line and mark a release as stable is a tricky thing. On the one hand, there are always unresolved issues. But on the other, not every issue is critical enough to block all other improvements and fixes from shipping. With our current [release management plan](/article/release-management-4-1/) we put the effort into reducing the number of changes the closer we are to the planned release date, as this ensures we don't get an unexpected breakage or regressions. Contributors, however, remain determined to improve Godot, so by the time the first maintenance release comes around, we have plenty of goodies to include!
+
+Some of the most important changes in this release include:
 
 - Fix for a crash due to an infinite loop in `AnimationStateMachine` ([GH-79141](https://github.com/godotengine/godot/pull/79141)). It was a gnarly issue because it was easy to trigger with a bare minimum configuration. Now circular dependencies are correctly detected preventing infinite looping.
 
@@ -21,22 +23,15 @@ As always with the first maintenance release (also known as "patch release") the
 
 - For Linux users there is a potential fix for freezes when interacting with menus on Wayland ([GH-79143](https://github.com/godotengine/godot/pull/79143)). This had been a hard to identify and debug issue, but our local Wayland enthusiasts managed to pinpoint the likely cause and validate that the unwanted behavior was addressed.
 
-[Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.1.rc1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
+[**Download Godot 4.1.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.1.stable/).
 
------
+*The illustration picture used in this announcement comes from* [**Gunforged**](https://store.steampowered.com/app/2258480/Gunforged/) *— a 2D roguelite shooter where, you've guessed it, construct your weaponry from a huge number of different parts. The game is being made by [Firebelley](https://twitter.com/firebelley) with Godot 4 using its excellent C# language support, and is planned to be released later this year. But no need to wait, because you can play a demo on Steam [right now](https://store.steampowered.com/app/2258480/Gunforged/)! You can also subscribe to Firebelley on [YouTube](https://www.youtube.com/@FirebelleyGames), where they share tutorials and devlogs.*
 
-*The illustration picture for this article showcases six amazing entries from the recent [GMTK Game Jam](https://itch.io/jam/gmtk-2023), — all made with Godot! Give them a try, leave a comment to the developer, and, of course, consider giving them your vote ❤️ Many more game developers chose Godot for this game jam, so make sure to check the full list of entries and support your fellow creators. Games illustrated in the cover image are as follows:*
+## Changes
 
-- [**Yeti Upsetti**](https://miltage.itch.io/yeti-upsetti) *— a reimagination of classic SkiFree; made with Godot 4.1.*
-- [**Making the Game**](https://kindanice.itch.io/making-the-game) *lets you make game design decisions and suffer the consequences; powered by Godot 3.5.1.*
-- [**Tama-Get-Out!**](https://jrileyh.itch.io/tama-get-out) *makes you fill the shoes of a pocket pet; developed in Godot 4.1.*
-- [**Levelrinth**](https://dunkelgrau.itch.io/gmtk23) *— a puzzle platformer where you are the level; created with Godot 4.1.*
-- [**poki**](https://slimewitch.itch.io/poki) *— a creative puzzle game that lets you reconstruct levels before solving them; made with Godot 4.1.*
-- [**Video Editor's Toolkit**](https://patrickgh3.itch.io/video-editors-toolkit) *makes you responsible for creating a video covering GMTK Game Jam 2023; developed in Godot 3.5.2.*
+**48 contributors** made **83 pull-requests** (or **87 commits**) as a part of this release. See the [**curated changelog**](https://github.com/godotengine/godot/blob/4.1.1-stable/CHANGELOG.md) for a list of most notable differences, or browse our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.1.1) for a complete list of changes with links to relevant PRs and commits.
 
-## What's new
-
-46 contributors submitted over 70 improvements for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1.1-rc1), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes:
+Here are the main changes since 4.1-stable:
 
 - 2D: Improve string drawing in the tiledata editor ([GH-78522](https://github.com/godotengine/godot/pull/78522)).
 - 2D: Make sure the shortcut key respects the context in `TileSetAtlasSourceEditor` ([GH-78920](https://github.com/godotengine/godot/pull/78920)).
@@ -44,6 +39,7 @@ As always with the first maintenance release (also known as "patch release") the
 - 3D: Fix 3D viewport grid disappearing on scene tab changes ([GH-78694](https://github.com/godotengine/godot/pull/78694)).
 - Animation: Fix infinite loop state check in `AnimationStateMachine` ([GH-79141](https://github.com/godotengine/godot/pull/79141)).
 - Animation: Add 3.x compatibility for animation loop mode ([GH-79155](https://github.com/godotengine/godot/pull/79155)).
+- Animation: Fix `tween_property` on `Basis` to properly update its value ([GH-79426](https://github.com/godotengine/godot/pull/79426)).
 - Buildsystem: Linux: Allow unbundling brotli to use system library ([GH-79101](https://github.com/godotengine/godot/pull/79101)).
 - C#: Update the RiderPathLocator to support the JetBrains Toolbox 2.0 ([GH-78832](https://github.com/godotengine/godot/pull/78832)).
 - C#: Compare symbol names without null flow state ([GH-79094](https://github.com/godotengine/godot/pull/79094)).
@@ -57,6 +53,8 @@ As always with the first maintenance release (also known as "patch release") the
 - Editor: Project converter: Use same rendering driver as Project Manager ([GH-78795](https://github.com/godotengine/godot/pull/78795)).
 - Editor: Fix dropping files from `res://` to `res://` ([GH-78914](https://github.com/godotengine/godot/pull/78914)).
 - Editor: Do not change a node unique name to the same name ([GH-78925](https://github.com/godotengine/godot/pull/78925)).
+- Editor: Fix `ui_cancel` action not closing `FindReplaceBar` ([GH-79079](https://github.com/godotengine/godot/pull/79079)).
+- Editor: Emit `history_changed` on merged UndoRedo actions ([GH-79484](https://github.com/godotengine/godot/pull/79484)).
 - Export: Fix export options of scripted `EditorExportPlugin`s ([GH-79025](https://github.com/godotengine/godot/pull/79025)).
 - GDScript: Fix regression with GDScript enum descriptions now showing up in documentation ([GH-78953](https://github.com/godotengine/godot/pull/78953)).
 - GUI: Fix cursor behavior for multiselect in Tree while holding CTRL ([GH-71024](https://github.com/godotengine/godot/pull/71024)).
@@ -81,34 +79,17 @@ As always with the first maintenance release (also known as "patch release") the
 - Shaders: Fix shader language float literal precision truncation ([GH-78972](https://github.com/godotengine/godot/pull/78972)).
 - Shaders: Fix comments and indentation in `.gdshaderinc` files ([GH-79158](https://github.com/godotengine/godot/pull/79158)).
 
-One previously accepted change was reverted in this release due to regressions.
+- As well as many improvements to the documentation.
+
+One previously accepted change was reverted in this release due to regressions:
 
 - GUI: Revert "Fix focus loss of non-exclusive `AcceptDialog` with `close_on_escape`" ([GH-79084](https://github.com/godotengine/godot/pull/79084)).
 
-This release is built from commit [`e709ad4d6`](https://github.com/godotengine/godot/commit/e709ad4d6407e52dc62f00a471d13eb6c89f2c4c) (see [README](https://downloads.tuxfamily.org/godotengine/4.1.1/rc1/README.txt)).
+## Known incompatibilities
 
-## Downloads
+As of now, there are no known incompatibilities with the Godot 4.1 release. **We encourage all users to upgrade to 4.1.1.**
 
-The downloads for this pre-release build can be found in our GitHub repository:
-
-* [**Download Godot 4.1.1 RC 1**](https://github.com/godotengine/godot-builds/releases/tag/4.1.1-rc1).
-
-**Standard build** includes support for GDScript and GDExtension.
-
-**.NET 6 build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
-- .NET build requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
-
-## Known issues
-
-There are currently no known issues introduced by this release.
-
-With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
-
-## Bug reports
-
-As a tester, we encourage you to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
-
-In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in the 4.1 release, but no longer works in 4.1.1 RC 1).
+If you experience any unexpected behavior change in your projects after upgrading to 4.1.1, please [file an issue on GitHub](https://github.com/godotengine/godot/issues).
 
 ## Support
 
