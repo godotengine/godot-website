@@ -265,7 +265,7 @@
     <p>Fix for a crash due to an infinite loop in <code class="language-plaintext highlighter-rouge">AnimationStateMachine</code> (<a href="https://github.com/godotengine/godot/pull/79141">GH-79141</a>). It was a gnarly issue because it was easy to trigger with a bare minimum configuration. Now circular dependencies are correctly detected preventing infinite looping.</p>
   </li>
   <li>
-    <p>Command-line export of C#/.NET projects should no longer drop random files (<a href="https://github.com/godotengine/godot/pull/79173">GH-79173</a>). Your exports may had arbitrary resources missing (not C# scripts, but images, for instance), if you were exporting your project with CLI. This should no longer happen.</p>
+    <p>Command-line export of C#/.NET projects should no longer drop random files (<a href="https://github.com/godotengine/godot/pull/79173">GH-79173</a>). Your exports may have had arbitrary resources missing (not C# scripts, but images, for instance), if you were exporting your project with CLI. This should no longer happen.</p>
   </li>
   <li>
     <p>Custom export options which you can define with an <code class="language-plaintext highlighter-rouge">EditorExportPlugin</code> are now correctly restored on the editor restart (<a href="https://github.com/godotengine/godot/pull/79025">GH-79025</a>). Previously the usability of this freshly added feature was limited due to data loss between sessions.</p>
