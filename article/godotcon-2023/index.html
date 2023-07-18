@@ -5,18 +5,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">
-	<meta name="description" content="Free and open source 2D and 3D game engine">
+	<meta name="description" content="We are happy to announce that we are going to be hosting the 2023 GodotCon in Munich, Germany. ">
 	<meta name="theme-color" content="#3d8fcc">
 	<meta property="og:site_name" content="Godot Engine">
-	<meta property="og:url" content="https://godotengine.org/blog/25/">
+	<meta property="og:url" content="https://godotengine.org/article/godotcon-2023/">
 	<meta name="twitter:site" content="@godotengine">
 
-	<meta property="og:title" content="Godot Engine - Blog - Page 25">
-	<meta property="og:description" content="Free and open source 2D and 3D game engine">
-	<meta property="og:image" content="https://godotengine.org/assets/share-image.jpg">
-	<meta property="og:type" content="website">
+	<meta property="og:title" content="Join us at the Godot Conference 2023!">
+	<meta property="og:description" content="We are happy to announce that we are going to be hosting the 2023 GodotCon in Munich, Germany. ">
+	<meta property="og:image" content="https://godotengine.org/storage/blog/covers/godotcon-2023.webp">
+	<meta property="og:type" content="article">
 	<meta name="twitter:card" content="summary_large_image">
-	<title>Godot Engine - Blog - Page 25</title>
+	<title>Join us at the Godot Conference 2023!</title>
 
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
@@ -69,231 +69,245 @@
 
 
 <style>
-	.posts {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 30px;
+	body {
+		background-color: var(--background-color);
 	}
 
-	@media (min-width: 768px) {
-		.posts {
-			grid-template-columns: 1fr 1fr;
-		}
+	h1 {
+		margin-bottom: 8px;
+		margin-top: 32px;
 	}
 
-	@media (min-width: 1024px) {
-		.posts {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
+	:not(pre)>code {
+		background: var(--code-background-color);
+		padding: 1px 4px;
+		font-size: 0.95em;
+		border-radius: 3px;
 	}
 
-	.head .main {
-		display: grid;
-		gap: 30px;
-		padding: 20px 0 39px;
+	pre {
+		background: var(--codeblock-background-color);
+		color: var(--codeblock-color);
 	}
-	.head .main > :last-child,  
-	.head .main > :first-child {
+
+	pre code {
+		display: block;
+		overflow-x: auto;
+		padding: .5em;
+	}
+
+	.date-big {
+		line-height: 2;
+		margin-left: 32px;
+	}
+
+	article {
+		background-color: var(--base-color);
+		box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	figure {
 		margin: 0;
 	}
-	@media (min-width: 902px) {
-		.head .main {
-			height: 120px;
-			grid-template-columns: 1fr 1fr;
-			align-content: center;
-			padding: 0;
-		}
-		.head .main .search-bar {
-			margin-top: 6px;
-			justify-self: end;
-		}
+
+	figure img {
+		margin: 0;
 	}
 
-	.tags {
+	article img,
+	article video {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: auto;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	article h1 {
+		margin-top: 64px;
+	}
+
+	article h2,
+	article h3,
+	article h4 {
+		margin-top: 42px;
+	}
+
+	.article-info {
 		display: flex;
-		align-items: baseline;
-		gap: 10px;
-		flex-wrap: wrap;
+		flex-direction: column;
+		gap: 8px;
 	}
 
-	.tags h3 {
-		margin-top: 1rem;
-		display: inline-block;
+	.article-metadata {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		font-family: var(--header-font-family);
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 900px) {
+		.article-metadata {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+
+	.article-author {
+		color: var(--base-color-text-subtitle-date);
+		font-weight: 700;
+		font-size: 18px;
+		flex-grow: 1;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.article-author .avatar {
+		border-radius: 100%;
 		margin: 0;
-		font-size: 19px;
+	}
+
+	.article-author .by {
+		color: var(--base-color-text-subtitle);
+	}
+	
+	.article-metadata .date {
+		color: var(--base-color-text-subtitle-date);
+	}
+
+	.tag.active {
+		filter: saturate(0.75);
+	}
+
+	@media screen and (min-width: 900px) {
+		article .content {
+			width: 70%;
+			margin: auto;
+		}
+	}
+
+	@media (max-width: 900px) {
+		body {
+			background-color: var(--base-color);
+		}
+
+		article {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		article img:first-child,
+		article video:first-child {
+			max-width: 100%;
+		}
 	}
 </style>
 
-<div class="head">
-	<div class="container flex eqsize responsive">
-		<div class="main">
-			<h1 class="intro-title">Blog</h1>
-			<form class="search-bar" method="get" action="https://duckduckgo.com/">
-				<input type="hidden" name="sites" value="godotengine.org/article" />
-				<input type="text" name="q" maxlength="300" placeholder="Search articles" />
-				<button class="btn search-bar-btn" type="submit">
-					<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
-				</button>
-			</form>
-		</div>
-	</div>
-</div>
+<link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
 
 <div class="container">
-	<!-- Search -->
-	
+	<article class="padded">
+		<div class="content article-container">
+			<figure class="article-cover">
+				
 
-	<!-- Categories -->
-	
-	<div class="tags">
-		<h3>Categories </h3>
-		<a href="/blog" title="Show all categories">
-			<div class="tag tag--default active">All</div>
-		</a>
+				<img src="/storage/blog/covers/godotcon-2023.webp" title=""
+					alt=" " class="rounded-lg"
+					style="width: 100%; height: auto" />
+			</figure>
 
-		
-		
-		<a href="/blog/news" title="General news that don't fit in other categories.">
-			<div class="tag tag-- ">
-				News</div>
-		</a>
-		
-		
-		
-		<a href="/blog/progress-report" title="Progress report about a specific engine subsystem in Godot.">
-			<div class="tag tag-- ">
-				Progress Report</div>
-		</a>
-		
-		
-		
-		<a href="/blog/events" title="Physical and online Godot-related event announcements.">
-			<div class="tag tag-- ">
-				Events</div>
-		</a>
-		
-		
-		
-		<a href="/blog/release" title="Godot stable release announcements. See Pre-release category for alphas, betas and release candidates.">
-			<div class="tag tag-- ">
-				Release</div>
-		</a>
-		
-		
-		
-		<a href="/blog/pre-release" title="Godot pre-release announcement (alpha, beta or release candidate).">
-			<div class="tag tag-- ">
-				Pre-release</div>
-		</a>
-		
-		
-		
-		<a href="/blog/showcase" title="Showreel video postings and showcase interviews. Showreel-related announcements are in the News category.">
-			<div class="tag tag-- ">
-				Showcase</div>
-		</a>
-		
-		
-	</div>
-	
-
-	<!-- Posts -->
-	<div class="flex pagination">
-		
-		<a class="pagination-previous"
-			href="https://godotengine.org/blog/24/">← Previous</a>
-		
-
-		
-		
-		<a  title="Godot Engine - Blog - Page 21"
-			href="https://godotengine.org/blog/21/">21</a>
-		
-		<a  title="Godot Engine - Blog - Page 22"
-			href="https://godotengine.org/blog/22/">22</a>
-		
-		<a  title="Godot Engine - Blog - Page 23"
-			href="https://godotengine.org/blog/23/">23</a>
-		
-		<a  title="Godot Engine - Blog - Page 24"
-			href="https://godotengine.org/blog/24/">24</a>
-		
-		<a class="active"  title="Godot Engine - Blog - Page 25"
-			href="https://godotengine.org/blog/25/">25</a>
-		
-		
-
-		
-	</div>
-	<div class="posts">
-		
-		<a href="/article/godot-history-images/" style="text-decoration: none">
-			<article class="article-card">
-				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/57f/215/a0e/57f215a0e3c2a359176299.png');" href="/article/godot-history-images/"></div>
-				<div class="content">
-					<div class="info">
+			<div class="article-info">
+				<h1>
+					Join us at the Godot Conference 2023!
+				</h1>
+				<div class="article-metadata">
+					<div class="article-author">
+						<span>By: </span>
 						
 						
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/emi.png" alt="Emi" loading="lazy">
 						
-						<span class="by">Juan Linietsky </span>
-						<span class="date">&nbsp;-&nbsp;15 January 2014</span>
+						<span class="by">Emi</span>
 					</div>
-					<h3>Godot history in images!</h3>
-					<p class="excerpt">How does more than a decade of engine development look like?</p>
+					<span class="date"> 18 July 2023</span>
 				</div>
-			</article>
-		</a>
-		
-		<a href="/article/first-public-release/" style="text-decoration: none">
-			<article class="article-card">
-				<div class="thumbnail" style="background-image: url('/storage/app/uploads/public/57f/218/5f6/57f2185f638af084238366.svg');" href="/article/first-public-release/"></div>
-				<div class="content">
-					<div class="info">
-						
-						
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/reduzio.jpg" alt="Juan Linietsky" loading="lazy">
-						
-						<span class="by">Juan Linietsky </span>
-						<span class="date">&nbsp;-&nbsp;14 January 2014</span>
-					</div>
-					<h3>First public release!</h3>
-					<p class="excerpt">Writing a game engine is a really difficult process which takes a long time and we realize a life is not enough to add every single feature we’d like to it. Godot has been an in-house engine for a long time and the priority of new features were always linked to what was needed for each game and the priorities of our clients.
-Because of this we are opening the engine to the community so anyone can develop games using Godot and benefit from it’s amazing workflow design. We are also opening the source code with the most generous license, MIT with the hope that other developers will contribute to it and publish their games without any restriction.</p>
+
+				<div class="tags">
+					
+					<a href="/blog/events">
+						<div class="tag active">Events</div>
+					</a>
+					
 				</div>
-			</article>
-		</a>
-		
-	</div>
-	<div class="flex pagination">
-		
-		<a class="pagination-previous"
-			href="https://godotengine.org/blog/24/">← Previous</a>
-		
+			</div>
 
-		
-		
-		<a  title="Godot Engine - Blog - Page 21"
-			href="https://godotengine.org/blog/21/">21</a>
-		
-		<a  title="Godot Engine - Blog - Page 22"
-			href="https://godotengine.org/blog/22/">22</a>
-		
-		<a  title="Godot Engine - Blog - Page 23"
-			href="https://godotengine.org/blog/23/">23</a>
-		
-		<a  title="Godot Engine - Blog - Page 24"
-			href="https://godotengine.org/blog/24/">24</a>
-		
-		<a class="active"  title="Godot Engine - Blog - Page 25"
-			href="https://godotengine.org/blog/25/">25</a>
-		
-		
+			
 
-		
-	</div>
+
+
+
+
+
+
+			<div class="article-body">
+				<p>We are thrilled to announce the much-anticipated GodotCon 2023, set to take place in Munich, Germany. Mark your calendars for <strong>November 4th and 5th</strong> (10 am - 6 pm), as these two days will be packed with talks, Godot games, workshops, and the chance to meet your fellow Godot contributors in person! No matter if you’re a beginner or an experienced Godot user, there’s something for everyone.</p>
+
+<p>There will soon be a <strong>Call for Proposals</strong> so that anyone can propose a talk, a workshop or any kind of activity that we could do during those two days. This will be the biggest Godot event to date, and we want to make sure that everyone can participate in some way.</p>
+
+<p>If you are not able to come, we plan on recording the talks and workshops and making them available online. We’ll try to also stream the event so you can watch it live wherever you are, but we can’t promise anything yet.</p>
+
+<h2 id="location">Location</h2>
+
+<p>With heartfelt appreciation, we extend our thanks to a passionate team of Munich locals who have been instrumental in organizing this event. Their dedication and support have made it possible for us to be hosted at <a href="https://developer.microsoft.com/en-us/games/">Microsoft</a> Germany, whose generous offer of their space allows us to bring this remarkable event to life.</p>
+
+<p>📍 Address: <a href="https://www.openstreetmap.org/way/428992680">Walter-Gropius-Str. 5, 80807 München, Germany</a>.</p>
+
+<h2 id="tickets">Tickets</h2>
+
+<p>Tickets will be available soon - but they will be limited! Subscribe to our mailing list below to get informed when the ticket sale starts, and to get any future communication regarding the conference.</p>
+
+<form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
+    <div>
+        <input type="hidden" name="nonce" />
+        <input type="email" name="email" required="" placeholder="E-mail" style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);" />
+        <p style="display:none;">
+          <input id="6e6e9" type="checkbox" name="l" checked="" value="6e6e9ba4-732b-4528-b4cd-71bbe6850f8d" />
+          <label for="6e6e9">Godot Conference</label>
+        </p>
+				<input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
+    </div>
+</form>
+
+<h3 id="-see-you-there">👋 See you there!</h3>
+
+
+			</div>
+		</div>
+	</article>
 </div>
 
+<link rel="stylesheet" href="/assets/css/anchor-link.css">
+<script src="/assets/js/anchor-link.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Add icons to easily copy section links.
+		window.applyAnchorLinks('.article-body');
+
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+	});
+</script>
 
 </main>
 

@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Join us at the Godot Conference 2023!",
+			"link": "https://godotengine.org/article/godotcon-2023/",
+			"description": "We are happy to announce that we are going to be hosting the 2023 GodotCon in Munich, Germany. ",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/godotcon-2023/",
+			"dc:creator": "Emi",
+			"pubDate": "Tue, 18 Jul 2023 17:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/godotcon-2023.webp"
+		},
+		
+		{
 			"title": "Maintenance release: Godot 4.1.1",
 			"link": "https://godotengine.org/article/maintenance-release-godot-4-1-1/",
 			"description": "Hot on the heels of its parent release, here&#39;s Godot 4.1.1 — the first maintenance release of the 4.1 branch, with more stability and workflow improvements.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Clay John",
 			"pubDate": "Tue, 18 Apr 2023 20:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/rendering-priorities-4-1.png"
-		},
-		
-		{
-			"title": "Direct3D 12: Adventures in Shaderland",
-			"link": "https://godotengine.org/article/d3d12-adventures-in-shaderland/",
-			"description": "Godot is about to get a Direct3D 12 rendering driver. This is a discussion on the exotic approaches taken to face some of the challenges posed in the area of shaders.",
-			"categories": ["Progress Report"],
-			"guid": "https://godotengine.org/article/d3d12-adventures-in-shaderland/",
-			"dc:creator": "Pedro J. Estébanez",
-			"pubDate": "Fri, 14 Apr 2023 12:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/d3d12-adventures-in-shaderland.jpg"
 		}
 		
 	]

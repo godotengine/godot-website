@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Join us at the Godot Conference 2023!</title>
+		<link>https://godotengine.org/article/godotcon-2023/</link>
+		<description>We are happy to announce that we are going to be hosting the 2023 GodotCon in Munich, Germany. </description>
+		
+		<category>Events</category>
+		
+		<guid>https://godotengine.org/article/godotcon-2023/</guid>
+		<dc:creator>Emi</dc:creator>
+		<pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godotcon-2023.webp</image>
+	</item>
+	
+	<item>
 		<title>Maintenance release: Godot 4.1.1</title>
 		<link>https://godotengine.org/article/maintenance-release-godot-4-1-1/</link>
 		<description>Hot on the heels of its parent release, here&#39;s Godot 4.1.1 — the first maintenance release of the 4.1 branch, with more stability and workflow improvements.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Clay John</dc:creator>
 		<pubDate>Tue, 18 Apr 2023 20:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/rendering-priorities-4-1.png</image>
-	</item>
-	
-	<item>
-		<title>Direct3D 12: Adventures in Shaderland</title>
-		<link>https://godotengine.org/article/d3d12-adventures-in-shaderland/</link>
-		<description>Godot is about to get a Direct3D 12 rendering driver. This is a discussion on the exotic approaches taken to face some of the challenges posed in the area of shaders.</description>
-		
-		<category>Progress Report</category>
-		
-		<guid>https://godotengine.org/article/d3d12-adventures-in-shaderland/</guid>
-		<dc:creator>Pedro J. Estébanez</dc:creator>
-		<pubDate>Fri, 14 Apr 2023 12:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/d3d12-adventures-in-shaderland.jpg</image>
 	</item>
 	
 
