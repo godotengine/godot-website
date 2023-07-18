@@ -3,7 +3,7 @@ name: "GodotCon Munich 2023"
 name_short: "GodotCon Munich"
 
 # Dates in human-readable format.
-dates: "Sat 4 & Sun 5 November"
+dates: "Sat 4 & Sun 5 November, 10 am - 6 pm both days"
 dates_short: "4 & 5 November"
 
 # The first date of the event in ISO format, used for sorting.

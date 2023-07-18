@@ -7,7 +7,7 @@ image: /storage/blog/covers/godotcon-2023.webp
 date: 2023-07-18 17:00:00
 ---
 
-We are thrilled to announce the much-anticipated GodotCon 2023, set to take place in Munich, Germany. Mark your calendars for **November 4th and 5th**, 2023, as these two days will be packed with talks, Godot games, workshops, and the chance to meet your fellow Godot contributors in person! No matter if you're a beginner or an experienced Godot user, there’s something for everyone.
+We are thrilled to announce the much-anticipated GodotCon 2023, set to take place in Munich, Germany. Mark your calendars for **November 4th and 5th** (10 am - 6 pm), as these two days will be packed with talks, Godot games, workshops, and the chance to meet your fellow Godot contributors in person! No matter if you're a beginner or an experienced Godot user, there’s something for everyone.
 
 There will soon be a **Call for Proposals** so that anyone can propose a talk, a workshop or any kind of activity that we could do during those two days. This will be the biggest Godot event to date, and we want to make sure that everyone can participate in some way.
 
