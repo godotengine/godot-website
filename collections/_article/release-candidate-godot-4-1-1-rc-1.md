@@ -9,7 +9,7 @@ image_caption_description: ""
 date: 2023-07-12 10:00:00
 ---
 
-It was a busy weekend in the Godot-land, as the [newly released Godot 4.1](/article/godot-4-1-is-here) was being viewed, tested, and tried by thousands of developers. The annual [GMTK Game Jam](https://itch.io/jam/gmtk-2023) by the popular YouTube channel [Game Maker's Toolkit]() did help quite a lot in that regard! Of course, where there is a lot of users, there is also a lot of highly appreciated reports and suggestions. Plus we had some ready to go from before 4.1 was sealed and shipped.
+It was a busy weekend in the Godot-land, as the [newly released Godot 4.1](/article/godot-4-1-is-here) was being viewed, tested, and tried by thousands of developers. The annual [GMTK Game Jam](https://itch.io/jam/gmtk-2023) by the popular YouTube channel [Game Maker's Toolkit](https://www.youtube.com/@GMTK) did help quite a lot in that regard! Of course, where there is a lot of users, there is also a lot of highly appreciated reports and suggestions. Plus we had some ready to go from before 4.1 was sealed and shipped.
 
 As always with the first maintenance release (also known as "patch release") the focus is on quickly addressing urgent concerns and issues, possible regressions and crashes, as well as some aliasing in various workflows. Some of the most important changes include:
 
