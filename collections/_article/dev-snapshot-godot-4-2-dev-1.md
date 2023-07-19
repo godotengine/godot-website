@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 4.2 dev 1"
-excerpt: ""
+excerpt: "We are ready to share the first batch of improvements coming to Godot 4.2 later this year with the release of the first dev snapshot!"
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-1.webp
@@ -9,7 +9,11 @@ image_caption_description: "A tool for 3D terrain creation by Outobugi Games and
 date: 2023-07-19 15:00:00
 ---
 
-INTRODUCTION
+Two weeks ago we wrapped up the development of [Godot 4.1](/article/godot-4-1-is-here), bringing more polish and stability to the Godot 4 series, and just two days ago we shipped its [first maintenance release](/article/maintenance-release-godot-4-1-1), addressing some of the more urgent issues that slipped in. In preparation to both of these releases many improvements were temporarily put aside to ensure stability and lack of last minute regressions.
+
+Today, we are ready to share these improvements with you with **4.2 dev 1** being available for public testing (read about most notable changes [below](#whats-new)). This first development snapshot marks the proper start of the new development cycle, which means in the coming weeks the engine will be changed aggressively as contributors implement new features and fix long-standing bugs. You should expect a dev snapshot every 1 or 2 weeks, depending on how stable the development branch is after any given series of merges.
+
+Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.2.dev1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
@@ -36,7 +40,7 @@ Below are the most notable changes compared to 4.1.1-stable:
 - C#: Add missing `useModelFront` parameter to GodotSharp Basis and Transform ([GH-79082](https://github.com/godotengine/godot/pull/79082)).
 - Core: Fix `Image.convert()` overwriting custom mipmaps ([GH-74238](https://github.com/godotengine/godot/pull/74238)).
 - Core: Add command-line option to run a `MainLoop` by its global class name ([GH-78045](https://github.com/godotengine/godot/pull/78045)).
-- Core: Added `Image::load_svg_from_(buffer|string)` ([GH-78248](https://github.com/godotengine/godot/pull/78248)).
+- Core: Add `Image::load_svg_from_(buffer|string)` ([GH-78248](https://github.com/godotengine/godot/pull/78248)).
 - Core: Unify and streamline connecting to Resource changes ([GH-78993](https://github.com/godotengine/godot/pull/78993)).
   - This change makes obsolete existing `resource_changed` methods on some classes. You need to convert your code to use signals instead.
 - Core: Fix range error for `Array.slice` ([GH-79103](https://github.com/godotengine/godot/pull/79103)).
