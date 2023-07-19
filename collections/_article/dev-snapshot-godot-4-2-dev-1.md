@@ -4,8 +4,8 @@ excerpt: ""
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-1.webp
-image_caption_title: ""
-image_caption_description: ""
+image_caption_title: "Terrain3D"
+image_caption_description: "A tool for 3D terrain creation by Outobugi Games and Tokisan Games"
 date: 2023-07-19 15:00:00
 ---
 
@@ -15,7 +15,7 @@ INTRODUCTION
 
 -----
 
-*The illustration picture for this article* ...
+*The illustration picture for this article is from* [**Terrain3D**](https://github.com/outobugi/Terrain3D) *— an editor plugin for 3D terrain sculpting and painting, created by [Roope Palmroos](https://github.com/outobugi) ([Outobugi Games](https://outobugi.com/)) and [Cory Petkovsek](https://github.com/TokisanGames) ([Tokisan Games](https://tokisan.com/)). This is an essential tool for any open world 3D game, and it's made from the ground up for Godot 4. The project is in alpha, but stable enough for public testing — so download it now from [GitHub](https://github.com/outobugi/Terrain3D)! Also follow Roope ([Twitter](https://twitter.com/outobugi), [YouTube](https://www.youtube.com/@outobugi)) and Cory ([Twitter](https://twitter.com/TokisanGames), [YouTube](https://www.youtube.com/@TokisanGames)) on social for more updates on their ongoing projects, built with Terrain3D.*
 
 ## What's new
 
