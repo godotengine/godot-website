@@ -13,7 +13,7 @@ Two weeks ago we wrapped up the development of [Godot 4.1](/article/godot-4-1-is
 
 Today, we are ready to share these improvements with you with **4.2 dev 1** being available for public testing (you can read about the most notable changes [below](#whats-new)). This first development snapshot marks the proper start of the new development cycle, which means in the coming weeks we will be quickly merging many changes as contributors implement new features and fix long-standing bugs. You should expect a dev snapshot every 1 or 2 weeks, depending on how stable the development branch is after any given series of merges.
 
-Please note that dev1 includes many changes that just barely missed being included in 4.1, so expect it to be a little bit more feature packed than normal dev builds. 
+Please note that dev 1 includes many changes that just barely missed being included in 4.1, so expect it to be a little bit more feature packed than normal dev builds.
 
 Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
 
@@ -77,7 +77,7 @@ Below are the most notable changes compared to 4.1.1-stable:
 - Particles: Add `finished` signal to CPUParticles and GPUParticles ([GH-76853](https://github.com/godotengine/godot/pull/76853), [GH-76859](https://github.com/godotengine/godot/pull/76859)).
 - Physics: Add `hit_back_faces` property to `RayCast3D` ([GH-79330](https://github.com/godotengine/godot/pull/79330)).
 - Porting: Implement native file selection dialog support ([GH-47499](https://github.com/godotengine/godot/pull/47499), [GH-79574](https://github.com/godotengine/godot/pull/79574)).
-  - This is only implemented for macOS and Windows so far. The macOS implementation requires the app to be sandboxed.
+  - This is only implemented for macOS and Windows so far. This feature is especially important for sandboxed apps on macOS.
 - Porting: Android: Refactor Godot Android architecture ([GH-76821](https://github.com/godotengine/godot/pull/76821)).
 - Porting: macOS: Fix uncapped frame rate for windows in the non-active workspaces ([GH-79572](https://github.com/godotengine/godot/pull/79572)).
 - Rendering: Draw frustum splices on top of direction shadow atlas for debug purposes ([GH-77085](https://github.com/godotengine/godot/pull/77085)).
