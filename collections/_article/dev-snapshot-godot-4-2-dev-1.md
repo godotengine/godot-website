@@ -9,9 +9,11 @@ image_caption_description: "A tool for 3D terrain creation by Outobugi Games and
 date: 2023-07-19 15:00:00
 ---
 
-Two weeks ago we wrapped up the development of [Godot 4.1](/article/godot-4-1-is-here), bringing more polish and stability to the Godot 4 series, and just two days ago we shipped its [first maintenance release](/article/maintenance-release-godot-4-1-1), addressing some of the more urgent issues that slipped in. In preparation to both of these releases many improvements were temporarily put aside to ensure stability and lack of last minute regressions.
+Two weeks ago we wrapped up the development of [Godot 4.1](/article/godot-4-1-is-here), bringing more polish and stability to the Godot 4 series, and just two days ago we shipped its [first maintenance release](/article/maintenance-release-godot-4-1-1), addressing some of the more urgent issues that slipped in. In preparation for both of these releases we temporarily put aside many improvements to ensure stability and to avoid any last minute regressions.
 
-Today, we are ready to share these improvements with you with **4.2 dev 1** being available for public testing (read about most notable changes [below](#whats-new)). This first development snapshot marks the proper start of the new development cycle, which means in the coming weeks the engine will be changed aggressively as contributors implement new features and fix long-standing bugs. You should expect a dev snapshot every 1 or 2 weeks, depending on how stable the development branch is after any given series of merges.
+Today, we are ready to share these improvements with you with **4.2 dev 1** being available for public testing (you can read about the most notable changes [below](#whats-new)). This first development snapshot marks the proper start of the new development cycle, which means in the coming weeks we will be quickly merging many changes as contributors implement new features and fix long-standing bugs. You should expect a dev snapshot every 1 or 2 weeks, depending on how stable the development branch is after any given series of merges.
+
+Please note that dev1 includes many changes that just barely missed being included in 4.1, so expect it to be a little bit more feature packed than normal dev builds. 
 
 Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
 
@@ -80,7 +82,7 @@ Below are the most notable changes compared to 4.1.1-stable:
 - Porting: macOS: Fix uncapped frame rate for windows in the non-active workspaces ([GH-79572](https://github.com/godotengine/godot/pull/79572)).
 - Rendering: Draw frustum splices on top of direction shadow atlas for debug purposes ([GH-77085](https://github.com/godotengine/godot/pull/77085)).
 - Rendering: Split raster barrier into vertex and fragment barrier ([GH-77420](https://github.com/godotengine/godot/pull/77420)).
-  - This change currently breaks compatibility by modifying some of the values for the `BarrierMask` enumeration.
+  - This change currently breaks compatibility by modifying some of the values for the `BarrierMask` enumeration. If you don't rely on the values of `BarrierMask`, no modifications are necessary.
 - Rendering: Replace sampler arrays with constant sampler elements ([GH-77740](https://github.com/godotengine/godot/pull/77740)).
 - Rendering: Use Gaussian approximation for backbuffer mipmaps in GL Compatibility renderer ([GH-78168](https://github.com/godotengine/godot/pull/78168)).
 - Shaders: Add `DEPTH` to the visual shader output (for spatial mode) ([GH-73691](https://github.com/godotengine/godot/pull/73691)).
