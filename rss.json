@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Dev snapshot: Godot 4.2 dev 1",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-1/",
+			"description": "We are ready to share the first batch of improvements coming to Godot 4.2 later this year with the release of the first dev snapshot!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Wed, 19 Jul 2023 15:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-1.webp"
+		},
+		
+		{
 			"title": "Join us at the Godot Conference 2023!",
 			"link": "https://godotengine.org/article/godotcon-2023/",
 			"description": "We are happy to announce that we are going to be hosting the 2023 GodotCon in Munich, Germany. ",
@@ -255,17 +266,6 @@
 			"dc:creator": "Clay John",
 			"pubDate": "Thu, 20 Apr 2023 11:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-management-4-1.jpg"
-		},
-		
-		{
-			"title": "Godot 4.1 Rendering Priorities",
-			"link": "https://godotengine.org/article/rendering-priorities-4-1/",
-			"description": "For 4.1 the rendering team will be focusing on performance, stability, and usability.",
-			"categories": ["Progress Report"],
-			"guid": "https://godotengine.org/article/rendering-priorities-4-1/",
-			"dc:creator": "Clay John",
-			"pubDate": "Tue, 18 Apr 2023 20:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/rendering-priorities-4-1.png"
 		}
 		
 	]
