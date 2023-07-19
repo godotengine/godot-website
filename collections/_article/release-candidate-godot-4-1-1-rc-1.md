@@ -85,7 +85,7 @@ One previously accepted change was reverted in this release due to regressions.
 
 - GUI: Revert "Fix focus loss of non-exclusive `AcceptDialog` with `close_on_escape`" ([GH-79084](https://github.com/godotengine/godot/pull/79084)).
 
-This release is built from commit [`e709ad4d6`](https://github.com/godotengine/godot/commit/e709ad4d6407e52dc62f00a471d13eb6c89f2c4c) (see [README](https://downloads.tuxfamily.org/godotengine/4.1.1/rc1/README.txt)).
+This release is built from commit [`e709ad4d6`](https://github.com/godotengine/godot/commit/e709ad4d6407e52dc62f00a471d13eb6c89f2c4c) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.1.1-rc1/README.txt)).
 
 ## Downloads
 
