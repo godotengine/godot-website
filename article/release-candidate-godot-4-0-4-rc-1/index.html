@@ -281,7 +281,11 @@
   <li>2D: Fix various crashes in the tileset editor (<a href="https://github.com/godotengine/godot/pull/77382">GH-77382</a>, <a href="https://github.com/godotengine/godot/pull/78165">GH-78165</a>, <a href="https://github.com/godotengine/godot/pull/78796">GH-78796</a>).</li>
   <li>3D: Fix CSGPolygon3D in path mode disappearing at runtime (<a href="https://github.com/godotengine/godot/pull/77118">GH-77118</a>).</li>
   <li>Animation: Adjust BoneAttachment3D children/meshes during rest fixer (<a href="https://github.com/godotengine/godot/pull/77123">GH-77123</a>).</li>
-  <li>Animation: Fix <code class="language-plaintext highlighter-rouge">get_bone_pose_global_no_override()</code> returning incorrect values (<a href="https://github.com/godotengine/godot/pull/77194">GH-77194</a>).</li>
+  <li>Animation: Fix <code class="language-plaintext highlighter-rouge">get_bone_pose_global_no_override()</code> returning incorrect values (<a href="https://github.com/godotengine/godot/pull/77194">GH-77194</a>).
+    <ul>
+      <li>If you have relied on the previous behavior of this method, this change may lead to unexpected issues. You can fix them by replacing calls to <code class="language-plaintext highlighter-rouge">get_bone_global_pose_no_override(bone)</code> with <code class="language-plaintext highlighter-rouge">get_bone_global_pose(get_bone_parent(bone)) * get_bone_pose(bone)</code>, which should give you the same value as before.</li>
+    </ul>
+  </li>
   <li>Animation: Improve <code class="language-plaintext highlighter-rouge">Skeleton3D::find_bone()</code> performance (<a href="https://github.com/godotengine/godot/pull/77307">GH-77307</a>).</li>
   <li>Animation: Fix for SkeletonIK3D interpolation and bone roll (<a href="https://github.com/godotengine/godot/pull/77469">GH-77469</a>).</li>
   <li>Animation: Fix AnimationPlayer cumulative <code class="language-plaintext highlighter-rouge">speed_scale</code> (<a href="https://github.com/godotengine/godot/pull/77500">GH-77500</a>).</li>
