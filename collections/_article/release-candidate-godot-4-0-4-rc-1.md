@@ -5,7 +5,7 @@ categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-0-4-rc-1.webp
 image_caption_title: "Sunken Shadows"
-image_caption_description: "A game by Alghost et al"
+image_caption_description: "A game by Milan Gruner et al"
 date: 2023-07-21 16:00:00
 ---
 
@@ -20,7 +20,7 @@ This is a Release Candidate, which means that we don't expect regressions or new
 
 -----
 
-*The illustration picture for this article is from a game called* [**Sunken Shadows**](https://alghost.itch.io/sunken-shadows). *It's a 32-bit first person roguelike created by a team of [Alghost](https://twitter.com/algh0st) and friends with Godot 4. Fight aquatic creatures with your trusty knife which doubles as a grappling hook, and learn what lurks down below! You can get the game, currently in development, from [itch.io](https://alghost.itch.io/sunken-shadows). And make sure to follow Alghost for more updates, or just to chat, on [Twitter](https://twitter.com/algh0st) or [Mastodon](https://mastodon.gamedev.place/@alghost).*
+*The illustration picture for this article is from a game called* [**Sunken Shadows**](https://alghost.itch.io/sunken-shadows). *It's a 32-bit first person roguelike created by a team of [Milan Gruner](https://gruner.tech/) and friends with Godot 4. Fight aquatic creatures with your trusty knife which doubles as a grappling hook, and learn what lurks down below! You can get the game, currently in development, from [itch.io](https://alghost.itch.io/sunken-shadows). And make sure to follow Milan for more updates, or just to chat, on [Twitter](https://twitter.com/algh0st) or [Mastodon](https://mastodon.gamedev.place/@alghost).*
 
 ## What's new
 
