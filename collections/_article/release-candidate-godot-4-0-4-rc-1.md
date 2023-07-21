@@ -33,6 +33,7 @@ This is a Release Candidate, which means that we don't expect regressions or new
 - Animation: Adjust BoneAttachment3D children/meshes during rest fixer ([GH-77123](https://github.com/godotengine/godot/pull/77123)).
 - Animation: Fix `get_bone_pose_global_no_override()` returning incorrect values ([GH-77194](https://github.com/godotengine/godot/pull/77194)).
   - If you have relied on the previous behavior of this method, this change may lead to unexpected issues. You can fix them by replacing calls to `get_bone_global_pose_no_override(bone)` with `get_bone_global_pose(get_bone_parent(bone)) * get_bone_pose(bone)`, which should give you the same value as before.
+  - This change may be reverted before going stable as behavioral changes, even to fix bugs, are out of scope for maintenance releases for this very reason.
 - Animation: Improve `Skeleton3D::find_bone()` performance ([GH-77307](https://github.com/godotengine/godot/pull/77307)).
 - Animation: Fix for SkeletonIK3D interpolation and bone roll ([GH-77469](https://github.com/godotengine/godot/pull/77469)).
 - Animation: Fix AnimationPlayer cumulative `speed_scale` ([GH-77500](https://github.com/godotengine/godot/pull/77500)).
