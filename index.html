@@ -119,54 +119,6 @@
 		color: var(--dark-color-text-title);
 	}
 
-	#sponsors .flex {
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	#sponsors .sponsor {
-		background-color: var(--sponsor-background-color);
-		border: 14px solid var(--sponsor-background-color);
-		border-radius: 8px 8px;
-		display: flex;
-		align-items: center;
-		height: 80px;
-		box-sizing: border-box;
-		margin-bottom: 8px;
-		margin-left: 8px;
-		overflow: auto;
-		opacity: 0.85;
-		transition: opacity 0.2s;
-	}
-
-	#sponsors .sponsor:hover {
-		filter: brightness(105%);
-		opacity: 1.0;
-	}
-
-	#sponsors img {
-		mix-blend-mode: multiply;
-		width: inherit;
-		height: 100%;
-	}
-
-	#sponsors .silver .sponsor {
-		background-color: var(--sponsor-silver-background-color);
-		border-color: var(--sponsor-silver-background-color);
-		height: 68px;
-	}
-
-	#sponsors .gold .sponsor {
-		background-color: var(--sponsor-gold-background-color);
-		border-color: var(--sponsor-gold-background-color);
-	}
-
-	#sponsors .platinum .sponsor {
-		background-color: var(--sponsor-platinum-background-color);
-		border-color: var(--sponsor-platinum-background-color);
-		height: 100px;
-	}
-
 	.feature-link {
 		text-decoration: none;
 	}
@@ -518,55 +470,65 @@
 			class="img-auto-size" loading="lazy">
 		</a>
 		<p class="small auto-margin">
-			You don't need to be an engine developer to help Godot. Consider donating to speed up development and make
-			Godot&nbsp;Engine even more awesome!
+			You don't need to be an engine developer to help Godot. Join the <a href="https://fund.godotengine.org/">development fund</a> and help us make the Godot&nbsp;Engine even more awesome!
 		</p>
 
-		<a href="/donate" class="btn btn-flat btn-flat-white btn-flat-frosted">Donate</a>
+		<a href="https://fund.godotengine.org/" class="btn btn-flat btn-flat-white btn-flat-frosted">Donate</a>
 	</div>
 </section>
 
-<section id="sponsors">
-	<div class="container sm-full padded">
-		<h2 class="text-center">Sponsored by</h2>
-
-		<div class="platinum flex">
+<section class="sponsors padded" id="sponsors">
+	<div class="container">
+		<h2>Godot is sponsored by:</h2>
+		<h3>Corporate Platinum</h3>
+		<div class="grid platinum">
 			
-			<a class="sponsor card" href="https://www.gamblify.com/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/gamblify.png" alt="Gamblify" loading="lazy">
+			<a class="sponsor-card platinum" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/gamblify.png" alt="Gamblify" loading="lazy">
 			</a>
 			
-			<a class="sponsor card" href="http://spiffcode.com/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/spiffcode.png" alt="Spiffcode" loading="lazy">
+			<a class="sponsor-card platinum" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/spiffcode.png" alt="Spiffcode" loading="lazy">
 			</a>
 			
-			<a class="sponsor card" href="https://heroiclabs.com/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/heroiclabs.png" alt="Heroic Labs" loading="lazy">
+			<a class="sponsor-card platinum" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/heroiclabs.png" alt="Heroic Labs" loading="lazy">
 			</a>
 			
-		</div>
-		<div class="gold flex">
-			
-		</div>
-		<div class="silver flex">
-			
-			<a class="sponsor card" href="https://scp.games/pandemic/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/affray-interactive.png" alt="Affray Interactive" loading="lazy">
+			<a class="sponsor-card platinum" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/w4.png" alt="W4 Games" loading="lazy">
 			</a>
 			
-			<a class="sponsor card" href="https://playfulstudios.com/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/playful-studios.png" alt="Playful Studios" loading="lazy">
-			</a>
-			
-			<a class="sponsor card" href="http://robotgentleman.com/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/robot-gentleman.png" alt="Robot Gentleman" loading="lazy">
-			</a>
-			
-			<a class="sponsor card" href="https://striked.gg/" target="_blank" rel="noopener">
-				<img src="/assets/home/sponsors/striked.png" alt="Striked" loading="lazy">
+			<a class="sponsor-card platinum" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/ramatak.png" alt="Ramatak" loading="lazy">
 			</a>
 			
 		</div>
+		<h3>Corporate Gold</h3>
+		<div class="grid gold">
+			
+			<a class="sponsor-card gold" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/pt.png" alt="Prehensile Tales" loading="lazy">
+			</a>
+			
+		</div>
+		<h3>Corporate Silver</h3>
+		<div class="grid silver">
+			
+			<a class="sponsor-card silver" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/affray-interactive.png" alt="Affray Interactive" loading="lazy">
+			</a>
+			
+			<a class="sponsor-card silver" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/playful-studios.png" alt="Playful Studios" loading="lazy">
+			</a>
+			
+			<a class="sponsor-card silver" href="" target="_blank" rel="noopener">
+				<img src="https://fund.godotengine.org/static/logos/robot-gentleman.png" alt="Robot Gentleman" loading="lazy">
+			</a>
+			
+		</div>
+		<p class="for-more" style="margin-top: 50px; text-align: left; opacity: 0.8;">If you want to sponsor the project, please write to <a href="mailto:contact@godot.foundation">contact@godot.foundation</a>.</p>
 	</div>
 </section>
 
@@ -790,12 +752,9 @@
 			<p>
 				© 2007-2023 Juan Linietsky, Ariel Manzur and <a
 					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
-					rel="noopener">contributors</a><br>
-				Godot is a member of the <a href="https://sfconservancy.org/" target_="_blank" rel="noopener">Software Freedom
-					Conservancy</a>.<br>
-				Kindly hosted by <a href="https://tuxfamily.org" target="_blank" rel="noopener">TuxFamily.org</a>.<br>
-				<a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">Website source code on
-					GitHub</a>.
+					rel="noopener">contributors</a>.<br>
+				Hosted by the <a href="https://godot.foundation/" target="_blank" rel="noopener">Godot Foundation</a>.<br>
+				Website <a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">source code on  GitHub</a>.
 			</p>
 		</div>
 		<div id="sitemap">
