@@ -36,7 +36,7 @@ As always with the first maintenance release (also known as "patch release") the
 
 ## What's new
 
-46 contributors submitted over 70 improvements for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1.1-rc1), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes:
+**46 contributors** submitted over **70 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1.1-rc1), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes:
 
 - 2D: Improve string drawing in the tiledata editor ([GH-78522](https://github.com/godotengine/godot/pull/78522)).
 - 2D: Make sure the shortcut key respects the context in `TileSetAtlasSourceEditor` ([GH-78920](https://github.com/godotengine/godot/pull/78920)).
