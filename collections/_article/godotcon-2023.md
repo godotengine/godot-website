@@ -4,6 +4,7 @@ excerpt: "We are happy to announce that we are going to be hosting the 2023 Godo
 categories: ["events"]
 author: Emi
 image: /storage/blog/covers/godotcon-2023.webp
+image_caption_description: Image by Raffaele Picca
 date: 2023-07-18 17:00:00
 ---
 

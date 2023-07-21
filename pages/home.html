@@ -59,54 +59,6 @@ layout: default
 		color: var(--dark-color-text-title);
 	}
 
-	#sponsors .flex {
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	#sponsors .sponsor {
-		background-color: var(--sponsor-background-color);
-		border: 14px solid var(--sponsor-background-color);
-		border-radius: 8px 8px;
-		display: flex;
-		align-items: center;
-		height: 80px;
-		box-sizing: border-box;
-		margin-bottom: 8px;
-		margin-left: 8px;
-		overflow: auto;
-		opacity: 0.85;
-		transition: opacity 0.2s;
-	}
-
-	#sponsors .sponsor:hover {
-		filter: brightness(105%);
-		opacity: 1.0;
-	}
-
-	#sponsors img {
-		mix-blend-mode: multiply;
-		width: inherit;
-		height: 100%;
-	}
-
-	#sponsors .silver .sponsor {
-		background-color: var(--sponsor-silver-background-color);
-		border-color: var(--sponsor-silver-background-color);
-		height: 68px;
-	}
-
-	#sponsors .gold .sponsor {
-		background-color: var(--sponsor-gold-background-color);
-		border-color: var(--sponsor-gold-background-color);
-	}
-
-	#sponsors .platinum .sponsor {
-		background-color: var(--sponsor-platinum-background-color);
-		border-color: var(--sponsor-platinum-background-color);
-		height: 100px;
-	}
-
 	.feature-link {
 		text-decoration: none;
 	}
@@ -434,41 +386,14 @@ layout: default
 			class="img-auto-size" loading="lazy">
 		</a>
 		<p class="small auto-margin">
-			You don't need to be an engine developer to help Godot. Consider donating to speed up development and make
-			Godot&nbsp;Engine even more awesome!
+			You don't need to be an engine developer to help Godot. Join the <a href="https://fund.godotengine.org/">development fund</a> and help us make the Godot&nbsp;Engine even more awesome!
 		</p>
 
-		<a href="/donate" class="btn btn-flat btn-flat-white btn-flat-frosted">Donate</a>
+		<a href="https://fund.godotengine.org/" class="btn btn-flat btn-flat-white btn-flat-frosted">Donate</a>
 	</div>
 </section>
 
-<section id="sponsors">
-	<div class="container sm-full padded">
-		<h2 class="text-center">Sponsored by</h2>
-
-		<div class="platinum flex">
-			{% for sponsor in site.data.sponsors.platinum %}
-			<a class="sponsor card" href="{{ sponsor.url }}" target="_blank" rel="noopener">
-				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
-			</a>
-			{% endfor %}
-		</div>
-		<div class="gold flex">
-			{% for sponsor in site.data.sponsors.gold %}
-			<a class="sponsor card" href="{{ sponsor.url }}" target="_blank" rel="noopener">
-				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
-			</a>
-			{% endfor %}
-		</div>
-		<div class="silver flex">
-			{% for sponsor in site.data.sponsors.silver %}
-			<a class="sponsor card" href="{{ sponsor.url }}" target="_blank" rel="noopener">
-				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
-			</a>
-			{% endfor %}
-		</div>
-	</div>
-</section>
+{% include sponsors.html %}
 
 
 <script>

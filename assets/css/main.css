@@ -1374,3 +1374,89 @@ article.article-card .info span {
   font-size: 14px;
   color: var(--secondary-color-text);
 }
+
+section.sponsors .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding-left: 80px;
+}
+
+@media (min-width: 768px) {
+  section.sponsors .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section.sponsors .grid.gold {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section.sponsors .grid.silver {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.sponsor-card {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  padding: 17px;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+.sponsor-card.platinum {
+  background-color: var(--sponsor-platinum-background-color);
+}
+
+.sponsor-card.gold {
+  background-color: var(--sponsor-gold-background-color);
+}
+
+.sponsor-card.silver {
+  background-color: var(--sponsor-silver-background-color);
+}
+
+.sponsor-card img {
+  max-width: 100%;
+  mix-blend-mode: multiply;
+  width: auto;
+  max-height: 80px;
+  margin: 0 auto;
+}
+
+.gold img {
+  max-height: 60px;
+}
+
+.silver img {
+  max-height: 40px;
+}
+
+.sponsors h3 {
+  margin-top: 50px;
+  font-weight: 400;
+}
+
+.sponsors h3 a {
+  font-size: 15px;
+  opacity: 0.5;
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--default-font-family);
+}
+
+.sponsor-empty {
+  border: 3px dashed;
+  border-radius: 10px;
+  padding: 17px;
+  color: inherit;
+  text-decoration: none;
+  line-height: 1.4em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.sponsor-empty:hover {
+  background-color: #8484841c;
+}
