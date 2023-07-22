@@ -17,6 +17,9 @@ downloads:
   - platform: "linux_server.headless.64"
     mono: true
 
+redirect_from:
+  - /download/server
+
 content_instructions: |
   <ul>
     <li>Extract and run. Godot is self-contained and does not require installation.</li>
