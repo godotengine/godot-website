@@ -25,7 +25,7 @@ Below I list some of the top priorities identified by the [rendering team](https
 
 #### Performance
 
-1. **Split Dynamic/Static Light3D shadows**
+**1. Split Dynamic/Static Light3D shadows**
 
     This is, in part, a carry-over from the last post. At first our idea was to add time slicing to DirectionalLight3D shadows only. But once implemented, we noticed significant visual artifacts when objects moved in the further shadow splits. Accordingly, we realized that we would need to split static and dynamic shadow maps for this optimization to work well and look acceptable.
 
