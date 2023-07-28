@@ -91,7 +91,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 - Shaders: Make the dragging connections more user-friendly in visual shaders ([GH-78547](https://github.com/godotengine/godot/pull/78547)).
 - XR: Compile OpenXR into MacOS build ([GH-79614](https://github.com/godotengine/godot/pull/79614)).
 
-This release is built from commit [``](https://github.com/godotengine/godot/commit/) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.2-dev2/README.txt)).
+This release is built from commit [`da81ca62a`](https://github.com/godotengine/godot/commit/da81ca62a5f6d615516929896caa0b6b09ceccfc) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.2-dev2/README.txt)).
 
 ## Downloads
 
