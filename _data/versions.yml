@@ -1,7 +1,11 @@
 - name: "4.2"
-  flavor: "dev1"
-  release_data: "19 July 2023"
-  release_notes: "/article/dev-snapshot-godot-4-2-dev-1/"
+  flavor: "dev2"
+  release_data: "28 July 2023"
+  release_notes: "/article/dev-snapshot-godot-4-2-dev-2/"
+  releases:
+    - name: "dev1"
+      release_data: "19 July 2023"
+      release_notes: "/article/dev-snapshot-godot-4-2-dev-1/"
 
 - name: "4.1.1"
   flavor: "stable"

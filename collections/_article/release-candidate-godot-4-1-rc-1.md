@@ -27,9 +27,9 @@ This release contains a [number of improvements](/article/dev-snapshot-godot-4-1
 
 There is a number of major changes in Godot 4.1, and you can read more about them in our [earlier announcement](/article/dev-snapshot-godot-4-1-beta-1/). Below are the most notable changes compared to 4.1 beta 3:
 
-- 2D: Tilemap: Update indices after removing custom data layers ([GH-78492](https://github.com/godotengine/godot/pull/78492)).
-- 2D: Tilemap: Fix tile resizing towards atlas boundary ([GH-76152](https://github.com/godotengine/godot/pull/76152)).
 - 2D: Fix click-selecting Sprites with repeated texture ([GH-78566](https://github.com/godotengine/godot/pull/78566)).
+- 2D: Tilemaps: Fix tile resizing towards atlas boundary ([GH-76152](https://github.com/godotengine/godot/pull/76152)).
+- 2D: Tilemaps: Update indices after removing custom data layers ([GH-78492](https://github.com/godotengine/godot/pull/78492)).
 - C#: Fix editor integration breaking and causing error spam when reloading assemblies fails ([GH-75533](https://github.com/godotengine/godot/pull/75533)).
 - C#: Fix condition blocking .NET project build ([GH-78488](https://github.com/godotengine/godot/pull/78488)).
 - Core: Ensure `RID`, `Callable`, and `Signal` are stored as strings ([GH-78517](https://github.com/godotengine/godot/pull/78517)).

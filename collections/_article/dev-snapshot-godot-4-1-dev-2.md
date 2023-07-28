@@ -40,7 +40,7 @@ We now have a great [interactive changelog](https://godotengine.github.io/godot-
 Here are some of the main changes you might be interested in:
 
 - 2D: Add proper snapping to tile polygon editor ([GH-70488](https://github.com/godotengine/godot/pull/70488)).
-- 2D: TileMap: Add method to fetch the layer for a given body ([GH-76246](https://github.com/godotengine/godot/pull/76246)).
+- 2D: Tilemaps: Add method to fetch the layer for a given body ([GH-76246](https://github.com/godotengine/godot/pull/76246)).
 - 2D: Improve reliability of 2D shape editor redrawing ([GH-76492](https://github.com/godotengine/godot/pull/76492)).
 - 3D: Fixes to CSG robustness ([GH-74771](https://github.com/godotengine/godot/pull/74771)).
 - 3D: Fix infinite loop in CSG `Build2DFaces::_find_edge_intersections` ([GH-76521](https://github.com/godotengine/godot/pull/76521)).
