@@ -6,7 +6,7 @@ author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-2.webp
 image_caption_title: "Design visualization system"
 image_caption_description: "A VR tool by Dan Silden"
-date: 2023-07-28 16:00:00
+date: 2023-07-28 13:00:00
 ---
 
 These final days of July mark the end of the first month of the Godot 4.2 development cycle, and things are starting to pick up steam. With Godot contributors having had a few weeks to agree on, work on, review, and approve some of the new features, bigger changes are starting to appear in the upcoming dev snapshots.
