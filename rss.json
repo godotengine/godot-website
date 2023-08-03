@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Maintenance release: Godot 4.0.4",
+			"link": "https://godotengine.org/article/maintenance-release-godot-4-0-4/",
+			"description": "A fresh pack of stability and documentation improvements for teams still using Godot 4.0 is officially out!",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/maintenance-release-godot-4-0-4/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Thu, 03 Aug 2023 13:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-4.webp"
+		},
+		
+		{
 			"title": "Dev snapshot: Godot 4.2 dev 2",
 			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-2/",
 			"description": "Closing the first month of development of Godot 4.2, the second development snapshot includes both smaller improvements and bigger features.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Yuri Sizov",
 			"pubDate": "Thu, 27 Apr 2023 13:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-1.jpg"
-		},
-		
-		{
-			"title": "Godot Showcase - Cassette Beasts",
-			"link": "https://godotengine.org/article/godot-showcase-cassette-beasts/",
-			"description": "We interviewed Jay and Tom from Bytten Studio about Cassette Beasts.",
-			"categories": ["Showcase"],
-			"guid": "https://godotengine.org/article/godot-showcase-cassette-beasts/",
-			"dc:creator": "Emi",
-			"pubDate": "Wed, 26 Apr 2023 15:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/cassette-beasts.webp"
 		}
 		
 	]
