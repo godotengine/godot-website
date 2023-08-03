@@ -54,9 +54,13 @@
       release_notes: "/article/dev-snapshot-godot-4-1-dev-1/"
 
 - name: "4.0.4"
-  flavor: "rc1"
-  release_date: "21 July 2023"
-  release_notes: "/article/release-candidate-godot-4-0-4-rc-1/"
+  flavor: "stable"
+  release_date: "3 August 2023"
+  release_notes: "/article/maintenance-release-godot-4-0-4/"
+  releases:
+    - name: "rc1"
+      release_date: "21 July 2023"
+      release_notes: "/article/release-candidate-godot-4-0-4-rc-1/"
 
 - name: "4.0.3"
   flavor: "stable"
