@@ -4,8 +4,8 @@ excerpt: "A fresh pack of stability and documentation improvements for teams sti
 categories: ["release"]
 author: Yuri Sizov
 image: /storage/blog/covers/maintenance-release-godot-4-0-4.webp
-image_caption_title:
-image_caption_description:
+image_caption_title: Sky Runner
+image_caption_description: A game by Leon Stansfield
 date: 2023-08-03 13:00:00
 ---
 
@@ -13,11 +13,11 @@ It has been a busy few months since the release of [Godot 4.0.3](/article/mainte
 
 And so it's our goal to improve said stability as long as we can manage it. Godot 4.0.4 contains a multitude of changes — addressing reported issues, performance problems and some frictions in the usability department. It also adds some of the missing documentation, and corrects a few mistakes in existing descriptions.
 
-One important change in this release is a security fix for a potential denial of service when using ENet. If your project uses `ENetMultiplayerPeer` or low level `ENetConnection`, then we strongly recommend updating to this version. Thanks to [Facundo Fernández](https://github.com/Facundo15) for reporting this vulnerability. A patch has been submitted to the upstream ENet repository as well.
+One important change in this release is a security fix for a potential denial of service when using ENet. If your project uses `ENetMultiplayerPeer` or the low-level `ENetConnection`, then we strongly recommend updating to this version. Thanks to [Facundo Fernández](https://github.com/Facundo15) for reporting this vulnerability. A patch has been submitted to the upstream ENet repository as well.
 
 [**Download Godot 4.0.4 now**](https://github.com/godotengine/godot/releases/tag/4.0.4-stable) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.4.stable/).
 
-*The illustration picture used for this release is from*
+*The illustration picture used for this release is from* [**Sky Runner**](https://leon-stansfield.itch.io/sky-runner) *— a speed running game by [Leon Stansfield](https://twitter.com/Leonstansfield0) where your goal is simple: get from point A to point B... across a set of sky islands with some tricks up your sleeve. It's being made with Godot 4 and you get try out the demo on [itch.io](https://leon-stansfield.itch.io/sky-runner) right now! You should also follow Leon on [Twitter](https://twitter.com/Leonstansfield0) or [Mastodon](https://mastodon.gamedev.place/@leonstansfield) for updates and other demos and experiments that he creates with Godot.*
 
 ## Changes
 
