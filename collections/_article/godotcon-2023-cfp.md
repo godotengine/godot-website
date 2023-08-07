@@ -8,8 +8,8 @@ image_caption_description: Image by Raffaele Picca
 date: 2023-08-06 17:00:00
 ---
 
-We are organizing the annual Godot Conference that will happen [live in Munich](https://godotengine.org/article/godotcon-2023/) for the 
-first time since the last occurrence. We are really thrilled to meet again fellow Godot users and developers to share experiences during the 2 days of the event.
+We are organizing the annual Godot Conference that will happen [live in Munich](/article/godotcon-2023/) on November 4th and 5th 2023 for the 
+first time since [the last occurrence in 2020](/article/meet-community-fosdem-and-godotcon-2020/). We are really thrilled to meet again fellow Godot users and developers to share experiences during the two days of the event.
 
 ## Call for speakers & workshop
 
