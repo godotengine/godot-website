@@ -9,11 +9,11 @@ date: 2023-08-06 17:00:00
 ---
 
 We are organizing the annual Godot Conference that will happen [live in Munich](/article/godotcon-2023/) on November 4th and 5th 2023 for the 
-first time since [the last occurrence in 2020](/article/meet-community-fosdem-and-godotcon-2020/). We are really thrilled to meet again fellow Godot users and developers to share experiences during the two days of the event.
+first time since [our last conference in 2020](/article/meet-community-fosdem-and-godotcon-2020/). We are really thrilled to meet fellow Godot users and developers again and to share experiences during the two days of the event.
 
 ## Call for speakers & workshop
 
-We would like to propose all kinds of presentations during the event, and we need you for this! If you are interested in 
+We would like to include all kinds of presentations during the event, and we need you for this! If you are interested in 
 sharing your project or experience that could interest Godot users, feel free to propose a dedicated talk or workshop on [our dedicated platform](https://events.godotengine.org/).
 
 We are opening 2 tracks: 
