@@ -27,7 +27,7 @@ Please note that depending on the number of proposals we receive and the number 
 
 This track is open to talks for various topics. We would like to see anything Godot-related or even not directly related to Godot but still relevant for game or engine developers.
 
-This track lasts the two whole days of the event. We propose two talk durations: **20 minutes or 50 minutes (+ 5-10 min Q&A)**, though if you need a different duration, you may express your needs in your proposal. When possible, we will change your talk duration accordingly.
+This track lasts the two whole days of the event. We propose two talk durations: **30 minutes or 60 minutes (each including 5-10 min Q&A)**, though if you need a different duration, you may express your needs in your proposal. When possible, we will change your talk duration accordingly.
 
 Here are a few examples from last year's online GodotCon event:
 
