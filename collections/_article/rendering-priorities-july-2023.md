@@ -29,43 +29,43 @@ Below I list some of the top priorities identified by the [rendering team](https
 
 **1. Split Dynamic/Static Light3D shadows**
 
-    This is, in part, a carry-over from the last post. At first our idea was to add time slicing to DirectionalLight3D shadows only. But once implemented, we noticed significant visual artifacts when objects moved in splits where time slicing was active. Accordingly, we realized that we would need to split static and dynamic shadow maps for this optimization to work well and look acceptable.
+This is, in part, a carry-over from the last post. At first our idea was to add time slicing to DirectionalLight3D shadows only. But once implemented, we noticed significant visual artifacts when objects moved in splits where time slicing was active. Accordingly, we realized that we would need to split static and dynamic shadow maps for this optimization to work well and look acceptable.
 
-    Bastiaan worked super hard on this and had both systems nearly ready for 4.1, but unfortunately didn't complete the work in time to be included with 4.1's release as more testing is needed. We expect this work will be merged soon and will be available for testing and feedback prior to 4.2's release. We ended up needing to introduce a few more settings than expected, so we really need community feedback to make sure the system is intuitive and helpful.
+Bastiaan worked super hard on this and had both systems nearly ready for 4.1, but unfortunately didn't complete the work in time to be included with 4.1's release as more testing is needed. We expect this work will be merged soon and will be available for testing and feedback prior to 4.2's release. We ended up needing to introduce a few more settings than expected, so we really need community feedback to make sure the system is intuitive and helpful.
 
 **2. Background pipeline compilation**
 
-    This is also a carry-over from the last post. We still would like to implement this ASAP. 4.1 introduced pipeline caching which further helps reduce stalls from pipeline compilation. Background pipeline compilation will help further reduce stalls.
+This is also a carry-over from the last post. We still would like to implement this ASAP. 4.1 introduced pipeline caching which further helps reduce stalls from pipeline compilation. Background pipeline compilation will help further reduce stalls.
 
 **3. Shader compilation groups**
 
-    This is a new priority which was identified as necessary foundational work before we implement background pipeline compilation.
+This is a new priority which was identified as necessary foundational work before we implement background pipeline compilation.
 
-    Essentially, right now when we compile shaders we compile all possible variations of the shader that may be composed at run time. For 4.0 we drastically reduced the number of possible variations. And now the variations that are left come from a few dynamic global settings, in particular TAA, XR, Lightmaps, screen-space reflections (for a total of 16 permutations).
+Essentially, right now when we compile shaders we compile all possible variations of the shader that may be composed at run time. For 4.0 we drastically reduced the number of possible variations. And now the variations that are left come from a few dynamic global settings, in particular TAA, XR, Lightmaps, screen-space reflections (for a total of 16 permutations).
 
-    For many games only one of the 16 permutations will be used. With this change, we will compile and cache only the shader versions of the settings in use, then compile the others as needed. This should reduce shader compilation time by a factor of about 1/8. To be clear, this is shader compilation time not pipeline compilation time which means it will help improve load times, not runtime stutters (as shaders are compiled when the material is loaded, not when the material first appears in the scene).
+For many games only one of the 16 permutations will be used. With this change, we will compile and cache only the shader versions of the settings in use, then compile the others as needed. This should reduce shader compilation time by a factor of about 1/8. To be clear, this is shader compilation time not pipeline compilation time which means it will help improve load times, not runtime stutters (as shaders are compiled when the material is loaded, not when the material first appears in the scene).
 
 #### Stability
 
 **1. Fixing Bugs**
 
-    Please continue to help reduce the number of bugs in the engine by contributing bug fixes, and contributing issue reports with clear, reproducible test projects. We made huge strides on fixing bugs in 4.1 and we hope that following releases maintain the same increase in quality.
+Please continue to help reduce the number of bugs in the engine by contributing bug fixes, and contributing issue reports with clear, reproducible test projects. We made huge strides on fixing bugs in 4.1 and we hope that following releases maintain the same increase in quality.
 
 **2. Proper multi-threading in the RenderingDevice**
 
-    Another carry-over. As a reminder, this comes from the fact that our RenderingDevice API mostly uses mutexes to ensure proper thread safety across the API surface. In practice this limits our ability to take advantage of Vulkan's ability to be accessed from multiple threads and introduces unnecessary synchronization, resulting in worse than optimal performance. This is a restriction we want to lift as soon as possible to ensure that we can optimize the RenderingDevice-based renderers as much as possible.
+Another carry-over. As a reminder, this comes from the fact that our RenderingDevice API mostly uses mutexes to ensure proper thread safety across the API surface. In practice this limits our ability to take advantage of Vulkan's ability to be accessed from multiple threads and introduces unnecessary synchronization, resulting in worse than optimal performance. This is a restriction we want to lift as soon as possible to ensure that we can optimize the RenderingDevice-based renderers as much as possible.
 
 #### Usability
 
 **1. GL Compatibility renderer - 3D**
 
-    This is something I really hoped to have finished in 4.1, but didn't make it in time. I finished 3D shadows shortly before the feature freeze window, but felt the implementation needed more performance profiling and testing before being merged, so this work has been delayed.
+This is something I really hoped to have finished in 4.1, but didn't make it in time. I finished 3D shadows shortly before the feature freeze window, but felt the implementation needed more performance profiling and testing before being merged, so this work has been delayed.
 
     Finishing the GL Compatibility renderer remains a top priority for the rendering team.
 
 **2. FSR 2.2 and TAA improvements**
 
-    This was the closest thing to a new feature in the previous blog post and, of the topics, was the most aspirational. We really want to have FSR 2.2 implemented in the engine soon and we would like to implement the corresponding enhancements that come with using FSR.
+This was the closest thing to a new feature in the previous blog post and, of the topics, was the most aspirational. We really want to have FSR 2.2 implemented in the engine soon and we would like to implement the corresponding enhancements that come with using FSR.
 
 #### Customization
 
