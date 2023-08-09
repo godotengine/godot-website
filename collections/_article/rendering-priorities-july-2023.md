@@ -4,7 +4,7 @@ excerpt: "The Godot rendering team continues to focus on stability, performance 
 categories: ["progress-report"]
 author: Clay John
 image: /storage/blog/covers/rendering-priorities-july-2023.webp
-date: 2023-07-25 20:00:00
+date: 2023-08-09 20:00:00
 ---
 
 Now that 4.1 is out and in the hands of users, it is time for the rendering team to re-evaluate our priorities and set our sights on the future of Godot development. Overall, our priorities are not changing much from what we identified in [our April 2023 progress report](https://godotengine.org/article/rendering-priorities-4-1/).
