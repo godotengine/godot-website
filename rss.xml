@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot Rendering Priorities: July 2023</title>
+		<link>https://godotengine.org/article/rendering-priorities-july-2023/</link>
+		<description>The Godot rendering team continues to focus on stability, performance and usability</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/rendering-priorities-july-2023/</guid>
+		<dc:creator>Clay John</dc:creator>
+		<pubDate>Wed, 09 Aug 2023 20:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/rendering-priorities-july-2023.webp</image>
+	</item>
+	
+	<item>
 		<title>Maintenance release: Godot 4.0.4</title>
 		<link>https://godotengine.org/article/maintenance-release-godot-4-0-4/</link>
 		<description>A fresh pack of stability and documentation improvements for teams still using Godot 4.0 is officially out!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Wed, 10 May 2023 16:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-2.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.0.3 RC 1</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-1/</link>
-		<description>More improvements come to the stable version of Godot 4 with the 4.0.3 patch release. Here&#39;s the first release candidate to test the changes before they go live.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-1/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Thu, 27 Apr 2023 13:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-1.jpg</image>
 	</item>
 	
 
