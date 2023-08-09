@@ -7,6 +7,8 @@ image: /storage/blog/covers/rendering-priorities-july-2023.webp
 date: 2023-08-09 20:00:00
 ---
 
+_Note: This article was written a few weeks before it was published which is why it references July 2023 while it was published in August 2023. The information within is accurate for both July and August 2023._
+
 Now that 4.1 is out and in the hands of users, it is time for the rendering team to re-evaluate our priorities and set our sights on the future of Godot development. Overall, our priorities are not changing much from what we identified in [our April 2023 progress report](https://godotengine.org/article/rendering-priorities-4-1/).
 
 As we anticipated, we were unable to finish all of our priorities in time for 4.1. In part this was due to the short timeframe (we made the post on April 18, and entered feature freeze on June 8), but it was also the result of spending more time fixing bugs than we planned (hooray for fixed bugs!) and a few key changes taking much longer than expected, notably: GLES3 3D shadows, and time slicing DirectionalLight3D shadows.
