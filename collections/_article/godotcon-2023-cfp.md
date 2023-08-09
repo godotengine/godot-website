@@ -2,7 +2,7 @@
 title: "Godot Conference 2023: Call for Participations"
 excerpt: "GodotCon 2023 needs participations"
 categories: ["events"]
-author: Julian
+author: Julian Murgia
 image: /storage/blog/covers/godotcon-2023.webp
 image_caption_description: Image by Raffaele Picca
 date: 2023-08-06 17:00:00
@@ -14,7 +14,7 @@ first time since [our last conference in 2020](/article/meet-community-fosdem-an
 ## Call for speakers & workshop
 
 We would like to include all kinds of presentations during the event, and we need you for this! If you are interested in 
-sharing your project or experience that could interest Godot users, feel free to propose a dedicated talk or workshop on [our dedicated platform](https://events.godotengine.org/).
+sharing your project or experience that could interest Godot users, feel free to propose a dedicated talk or workshop on [our dedicated platform](https://events.godotengine.org/conferences/godotcon2023/program/proposals/new).
 
 We are opening 2 tracks: 
 
@@ -64,23 +64,34 @@ But we are not limited to these roles! If you think you can contribute, please d
   
 We understand volunteers may be interested in participating in the event as well. Therefore, volunteer duties will not last all event long - unless you expressively tell us so.
 
-If you are interested in one of the above roles, please send us an email at [godotcon2023\@godotengine.org](mailto:godotcon2023@godotengine.org?subject=Volunteering Inquiry).
+If you are interested in one of the above roles, please send us an email at [contact@godotengine.org](mailto:contact@godotengine.org?subject=Volunteering Inquiry).
 
 
 # Sponsoring 
 
 To enable an event for about 300 participants and to keep ticket prices low, we have to gather some external funds, mainly for the venue, security, catering, documentation, swag, speaker support, etc. Therefore we are still looking for new sponsors to help us make it happen.
 
-As a sponsor you have a distinctive chance to support this conference, which offers a remarkable developer relations and marketing opportunity. This opportunity comes with the added advantage of relatively low investment. If you wish to sponsor this event, please send us an email at [godotcon2023\@godotengine.org](mailto:godotcon2023@godotengine.org?subject=Sponsorship Inquiry) and provide some detail on how or what you would like to sponsor. For more informations, please have a look at our [Sponsorship Page](https://galvanized-slope-59b.notion.site/Public-GodotCon-Sponsorship-Page-acd1185de6594982943682caf4840d67).
+As a sponsor you have a distinctive chance to support this conference, which offers a remarkable developer relations and marketing opportunity. This opportunity comes with the added advantage of relatively low investment. If you wish to sponsor this event, please send us an email at [contact@godotengine.org](mailto:contact@godotengine.org?subject=Sponsorship Inquiry) and provide some detail on how or what you would like to sponsor. For more informations, please have a look at our [Sponsorship Page](https://galvanized-slope-59b.notion.site/Public-GodotCon-Sponsorship-Page-acd1185de6594982943682caf4840d67).
 
 We would like to address a big thank you to our current sponsors without whom this event would not be possible:
 
-* Microsoft Deutschland
-
-![Microsoft logo](/storage/blog/godotcon2023/Microsoft_logo_%282012%29.svg)
-
-* DU&I 
-  
-![DU&I logo](/storage/blog/godotcon2023/DU&I_LOGO_new.png)
+<section class="sponsors">
+	<style>
+		.sponsor-card .lightbox {
+			pointer-events: none;
+		}
+		.sponsor-card {
+			background-color: #fff;
+		}
+	</style>
+	<div class="grid" style="padding-left: 0px;">
+		<a class="sponsor-card" href="https://developer.microsoft.com/en-us/games/" target="_blank" rel="noopener">
+			<img src="/storage/blog/godotcon2023/microsoft.png" style="background-color: none;" alt="Microsoft">
+		</a>
+		<a class="sponsor-card" href="https://www.duandigames.com/" target="_blank" rel="noopener">
+			<img src="/storage/blog/godotcon2023/DU&I.png" style="background-color: none;" alt="DU&I">
+		</a>
+	</div>
+</section>
 
 ### 👋 See you there!
