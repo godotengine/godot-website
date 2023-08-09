@@ -61,7 +61,7 @@ Another carry-over. As a reminder, this comes from the fact that our RenderingDe
 
 This is something I really hoped to have finished in 4.1, but didn't make it in time. I finished 3D shadows shortly before the feature freeze window, but felt the implementation needed more performance profiling and testing before being merged, so this work has been delayed.
 
-    Finishing the GL Compatibility renderer remains a top priority for the rendering team.
+Finishing the GL Compatibility renderer remains a top priority for the rendering team.
 
 **2. FSR 2.2 and TAA improvements**
 
