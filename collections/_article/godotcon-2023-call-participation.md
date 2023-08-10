@@ -3,7 +3,7 @@ title: "Godot Conference 2023: Call for Participations"
 excerpt: "GodotCon 2023 needs participations"
 categories: ["events"]
 author: Julian Murgia
-image: /storage/blog/covers/godotcon-2023.webp
+image: /storage/blog/covers/godotcon-2023-we-need-you.webp
 image_caption_description: Image by Raffaele Picca
 date: 2023-08-06 17:00:00
 ---
@@ -64,7 +64,7 @@ But we are not limited to these roles! If you think you can contribute, please d
   
 We understand volunteers may be interested in participating in the event as well. Therefore, volunteer duties will not last all event long - unless you expressively tell us so.
 
-If you are interested in one of the above roles, please send us an email at [contact@godotengine.org](mailto:contact@godotengine.org?subject=Volunteering Inquiry).
+If you are interested in one of the above roles, please send us an email at [godotcon@proton.me](mailto:godotcon@proton.me?subject=Volunteering Inquiry) or join the [GodotCon 2023 Discord server](https://discord.gg/Qrj28UMQPj).
 
 
 # Sponsoring 
