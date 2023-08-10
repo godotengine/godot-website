@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Godot Conference 2023: Call for Participations",
+			"link": "https://godotengine.org/article/godotcon-2023-call-participation/",
+			"description": "GodotCon 2023 needs participations",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/godotcon-2023-call-participation/",
+			"dc:creator": "Julian Murgia",
+			"pubDate": "Thu, 10 Aug 2023 17:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/godotcon-2023-we-need-you.webp"
+		},
+		
+		{
 			"title": "Godot Rendering Priorities: July 2023",
 			"link": "https://godotengine.org/article/rendering-priorities-july-2023/",
 			"description": "The Godot rendering team continues to focus on stability, performance and usability",
@@ -13,17 +24,6 @@
 			"dc:creator": "Clay John",
 			"pubDate": "Wed, 09 Aug 2023 20:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/rendering-priorities-july-2023.webp"
-		},
-		
-		{
-			"title": "Godot Conference 2023: Call for Participations",
-			"link": "https://godotengine.org/article/godotcon-2023-call-participation/",
-			"description": "GodotCon 2023 needs participations",
-			"categories": ["Events"],
-			"guid": "https://godotengine.org/article/godotcon-2023-call-participation/",
-			"dc:creator": "Julian Murgia",
-			"pubDate": "Sun, 06 Aug 2023 17:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/godotcon-2023-we-need-you.webp"
 		},
 		
 		{
