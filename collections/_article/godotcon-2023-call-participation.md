@@ -5,7 +5,7 @@ categories: ["events"]
 author: Julian Murgia
 image: /storage/blog/covers/godotcon-2023-we-need-you.webp
 image_caption_description: Image by Raffaele Picca
-date: 2023-08-06 17:00:00
+date: 2023-08-10 17:00:00
 ---
 
 We are organizing the annual Godot Conference that will happen [live in Munich](/article/godotcon-2023/) on November 4th and 5th 2023 for the 
