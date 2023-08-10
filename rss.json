@@ -16,6 +16,17 @@
 		},
 		
 		{
+			"title": "Godot Conference 2023: Call for Participations",
+			"link": "https://godotengine.org/article/godotcon-2023-call-participation/",
+			"description": "GodotCon 2023 needs participations",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/godotcon-2023-call-participation/",
+			"dc:creator": "Julian Murgia",
+			"pubDate": "Sun, 06 Aug 2023 17:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/godotcon-2023-we-need-you.webp"
+		},
+		
+		{
 			"title": "Maintenance release: Godot 4.0.4",
 			"link": "https://godotengine.org/article/maintenance-release-godot-4-0-4/",
 			"description": "A fresh pack of stability and documentation improvements for teams still using Godot 4.0 is officially out!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Fri, 12 May 2023 16:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-2.jpg"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 4.1 dev 2",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-2/",
-			"description": "We&#39;re well into the development phase for Godot 4.1, with a little less than a month left before we move to beta. So here&#39;s a second dev snapshot to test recent changes!",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-1-dev-2/",
-			"dc:creator": "Rémi Verschelde",
-			"pubDate": "Wed, 10 May 2023 16:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-2.jpg"
 		}
 		
 	]
