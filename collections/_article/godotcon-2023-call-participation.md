@@ -1,6 +1,6 @@
 ---
 title: "Godot Conference 2023: Call for Participations"
-excerpt: "GodotCon 2023 needs participations"
+excerpt: "Looking to share your expertise through a talk or workshop? Join us and make this an event to remember!"
 categories: ["events"]
 author: Julian Murgia
 image: /storage/blog/covers/godotcon-2023-we-need-you.webp
