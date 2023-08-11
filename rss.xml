@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.2 dev 3</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-2-dev-3/</link>
+		<description>One month into the release cycle for Godot 4.2, things are well under way. This third dev snapshot features a lot of improvements to C# and rendering.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-4-2-dev-3/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Fri, 11 Aug 2023 14:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-3.webp</image>
+	</item>
+	
+	<item>
 		<title>Godot Conference 2023: Call for Participations</title>
 		<link>https://godotengine.org/article/godotcon-2023-call-participation/</link>
 		<description>GodotCon 2023 needs participations</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Yuri Sizov</dc:creator>
 		<pubDate>Fri, 19 May 2023 13:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-0-3.jpg</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.0.3 RC 2</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-2/</link>
-		<description>Another round of cherry-picks for the upcoming Godot 4.0.3, fixing a few regressions reported against RC 1 and backporting more important fixes.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-0-3-rc-2/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Fri, 12 May 2023 16:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-0-3-rc-2.jpg</image>
 	</item>
 	
 
