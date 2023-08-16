@@ -4,12 +4,12 @@ excerpt: ""
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-3.webp
-image_caption_title:
-image_caption_description:
+image_caption_title: "Robotherapy"
+image_caption_description: "A game by Lucas Molina"
 date: 2023-08-16 16:00:00
 ---
 
-The core of the Godot development focus in on the upcoming Godot 4.2, currently with a [3rd dev snapshot](/article/dev-snapshot-godot-4-2-dev-3/). But we haven't forgotten about the 3.6 release, which has a slow but steady influx of important bug fixes, platform improvements, and rendering features. Godot 3 is still very important for a significant part of the ecosystem - notably people with released games, games close to being released, or who need to target OpenGL 2 / WebGL 1 to maximize device compatibility.
+The core of the Godot development focus is on the upcoming Godot 4.2, currently with a [3rd dev snapshot](/article/dev-snapshot-godot-4-2-dev-3/). But we haven't forgotten about the 3.6 release, which has a slow but steady influx of important bug fixes, platform improvements, and rendering features. Godot 3 is still very important for a significant part of the ecosystem - notably people with released games, games close to being released, or who need to target OpenGL 2 / WebGL 1 to maximize device compatibility.
 
 It's been a long time since the earlier 3.6 beta snapshots, so check the [beta 1](/article/dev-snapshot-godot-3-6-beta-1/) and [beta 2](/article/dev-snapshot-godot-3-6-beta-2/) announcements for details on what changed since 3.5.
 
@@ -18,6 +18,10 @@ A lot of work is also being done to improve the Android editor port. We're looki
 [Jump to the **Downloads** section.](#downloads)
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/3.6.beta3/).
+
+---
+
+*The illustration picture for this article showcases* [**Robotherapy**](https://store.steampowered.com/app/1895970/Robotherapy/), *an emotional dark comedy about robots doing therapy. It was developed by [Lucas Molina](https://twitter.com/AD1337) with Godot 3.5, and just got released on [**Steam**](https://store.steampowered.com/app/1895970/Robotherapy/)!*
 
 ## Highlights
 
@@ -31,9 +35,9 @@ Hierarchical culling defaults to on, but can be switched back to the legacy ("It
 
 ### 2D physics interpolation
 
-Godot 3.5 introduced 3D physics interpolation with great success, and users have been awaiting its 2D counterpart, so here it comes! This initial version of 2D physics interpolation supports most objects, including `CPUParticles2D`, but is a work in progress that will depend on your feedback. Notably `GPUParticles2D` is not yet supported, but the initial version should be good for experimentation. There will be bugs and special cases for lawnjelly to fix, please report these on GitHub.
+Godot 3.5 introduced 3D physics interpolation with great success, and users have been awaiting its 2D counterpart, so here it comes! This initial version of 2D physics interpolation supports most objects, including `CPUParticles2D`, but is a work in progress that will depend on your feedback. Notably (GPU) `Particles2D` is not yet supported, but the initial version should be good for experimentation. There will be bugs and special cases for lawnjelly to fix, please report these on GitHub.
 
-Some preliminary documentation can be found here: [2D FTI docs](https://github.com/lawnjelly/Misc/blob/master/FTIDocs/fti_2D.md).
+Some preliminary documentation can be found here: [2D FTI docs](https://github.com/lawnjelly/Misc/blob/master/FTIDocs/fti_2D.md). Note that physics interpolation is disabled by default, [refer to the docs](https://docs.godotengine.org/en/3.6/tutorials/physics/interpolation/index.html) for how to enable it.
 
 ## What's new
 
