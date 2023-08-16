@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 3.6 beta 3"
-excerpt: ""
+excerpt: "Slowly but surely, Godot 3.6 is shaping up to be a great release. This third snapshot adds long awaited 2D physics interpolation, and another great optimization with 2D hierarchical culling."
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-3.webp
