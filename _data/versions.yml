@@ -225,12 +225,15 @@
       release_notes: "/article/dev-snapshot-godot-4-0-alpha-1/"
 
 - name: "3.6"
-  flavor: "beta2"
-  release_date: "25 May 2023"
-  release_notes: "/article/dev-snapshot-godot-3-6-beta-2/"
+  flavor: "beta3"
+  release_date: "16 August 2023"
+  release_notes: "/article/dev-snapshot-godot-3-6-beta-3/"
   releases:
+    - name: "beta2"
+      release_date: "25 May 2023"
+      release_notes: "/article/dev-snapshot-godot-3-6-beta-2/"
     - name: "beta1"
-      release_date: ""
+      release_date: "13 April 2023"
       release_notes: "/article/dev-snapshot-godot-3-6-beta-1/"
 
 - name: "3.5.2"
