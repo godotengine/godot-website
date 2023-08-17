@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "gamescom, here we go!",
+			"link": "https://godotengine.org/article/godot-at-gamescom-2023/",
+			"description": "Join us next week at the Godot booth during gamescom in Cologne from Wednesday the 23rd, to Friday the 25th. Don&#39;t miss the chance to say hello to the Godot team!",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/godot-at-gamescom-2023/",
+			"dc:creator": "Emi",
+			"pubDate": "Thu, 17 Aug 2023 15:57:35 +0000",
+			"image": "https://godotengine.org/storage/blog/gamescom/2023/gamescom-cover.webp"
+		},
+		
+		{
 			"title": "Dev snapshot: Godot 3.6 beta 3",
 			"link": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-3/",
 			"description": "Slowly but surely, Godot 3.6 is shaping up to be a great release. This third snapshot adds long awaited 2D physics interpolation, and another great optimization with 2D hierarchical culling.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Yuri Sizov",
 			"pubDate": "Thu, 25 May 2023 16:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-dev-3.jpg"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 3.6 beta 2",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-2/",
-			"description": "Another beta build for Godot 3.6, implementing important bug fixes and some new features for existing games in production.",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-2/",
-			"dc:creator": "Rémi Verschelde",
-			"pubDate": "Thu, 25 May 2023 12:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-2.jpg"
 		}
 		
 	]
