@@ -23,7 +23,7 @@ cover_image: "/storage/blog/gamescom/2023/gamescom-cover.webp"
 
 ---
 
-Gamescom is a trade fair for video games held annually at the Koelnmesse in Cologne, North Rhine-Westphalia. Gamescom is the world's largest gaming event (measured by exhibition space and number of visitors), with 370,000 visitors and 1037 exhibitors from 56 countries attending the show in 2018.
+gamescom is a trade fair for video games held annually at the Koelnmesse in Cologne, North Rhine-Westphalia. It is the world's largest gaming event (measured by exhibition space and number of visitors), with 370,000 visitors and 1037 exhibitors from 56 countries attending the show in 2018.
 
 We'll be at the Godot booth in the Business Area, Hall 2.2, Stand C-042.
 
