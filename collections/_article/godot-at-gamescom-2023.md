@@ -11,7 +11,7 @@ Next week, we'll be attending our first [gamescom](https://www.gamescom.global) 
 
 Gamescom is a trade fair for video games held annually at the Koelnmesse in Cologne, North Rhine-Westphalia. Gamescom is the world's largest gaming event (measured by exhibition space and number of visitors), with 370,000 visitors and 1037 exhibitors from 56 countries attending the show in 2018.
 
-Thanks to [Ramatak](https://ramatak.com/) and [W4 Games](https://w4games.com/) who are donating it, the Godot Engine will have a booth. This is an excellent opportunity if you want to meet us, or other like-minded folks, so feel free to hang out and get some free swag ;)
+Thanks to [Ramatak](https://ramatak.com/) and [W4 Games](https://w4games.com/) who are donating it, the Godot Engine will have a booth. This is an excellent opportunity to meet us, and like-minded folks. Come hang out around the booth and get some free swag!
 
 
 ## Event details

@@ -27,5 +27,4 @@ Gamescom is a trade fair for video games held annually at the Koelnmesse in Colo
 
 We'll be at the Godot booth in the Business Area, Hall 2.2, Stand C-042.
 
-Thanks to [Ramatak](https://ramatak.com/) and [W4 Games](https://w4games.com/) who are donating it, the Godot Engine will have a booth. This is an excellent opportunity if you want to meet us, or other like-minded folks, so feel free to hang out and get some free swag ;)
-
+Thanks to [Ramatak](https://ramatak.com/) and [W4 Games](https://w4games.com/) who are donating it, the Godot Engine will have a booth. This is an excellent opportunity to meet us, and like-minded folks. Come hang out around the booth and get some free swag!
