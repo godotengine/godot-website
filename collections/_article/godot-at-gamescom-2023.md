@@ -25,7 +25,7 @@ You can visit the [official gamescom website](https://www.gamescom.global/en/fai
 - Thursday 10:00 - 20:00
 - Friday 10:00 - 20:00
 
-### 📍 Where is the stand located?
+### 📍 Where is the Godot booth located?
 
 The location of our booth is Hall 2.2, Stand C-042. You can find the hall plan [here](https://www.gamescom.global/en/fair-visit/hall-plan).
 ![](/storage/blog/gamescom/2023/gamescom-map.webp)
