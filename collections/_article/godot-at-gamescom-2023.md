@@ -15,7 +15,7 @@ Thanks to [Ramatak](https://ramatak.com/) and [W4 Games](https://w4games.com/) w
 
 
 ## Event details
-You can visit the [official website](https://www.gamescom.global/en/fair-visit) for more information about the event.
+You can visit the [official gamescom website](https://www.gamescom.global/en/fair-visit) for more information about the event.
 
 ### 🗺️ Location
 [Koelnmesse](https://www.koelnmesse.de/), Messepl. 1, 50679 Köln, Germany ([Show on map](https://www.openstreetmap.org/?mlat=50.94590&mlon=6.98034map%3D16%2F50.9441%2F6.9798#map=16/50.9455/6.9805&layers=N))
