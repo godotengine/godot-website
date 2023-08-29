@@ -346,3 +346,8 @@ United States:
     links:
       - title: Discord
         url: https://discord.gg/MjA6HUzzAE
+Other:
+  - name: Godot Community
+    links:
+      - title: Website
+        url: https://godot.community/
