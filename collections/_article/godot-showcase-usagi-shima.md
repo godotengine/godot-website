@@ -7,7 +7,7 @@ image: /storage/blog/covers/usagi-shima.webp
 date: 2023-09-01 15:00:00
 ---
 
-Most of the games we highlighted so far on our blog are PC/Console games, but today we are going to talk about a mobile game! Usagi Shima is a relaxing, idle bunny collecting game made by Jess, a solo indie developer. We had the chance to interview her about her experience of developing the game using the Godot Engine.
+Most of the games we highlighted so far on our blog are PC/console games, but today we are going to talk about a mobile game! Usagi Shima is a relaxing, idle bunny collecting game made by Jess, a solo indie developer. We had the chance to interview her about her experience of developing the game using the Godot Engine.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FWOKjCe9Ljw" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
 
