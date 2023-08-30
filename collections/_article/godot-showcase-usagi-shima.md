@@ -36,7 +36,7 @@ If I had a Godot wishlist, it would be a first-class plugin for Google Play Game
 
 ## How did you discover Godot? What made you pick it for your project?
 
-I was already coming from an open source background when I worked on Linux, so it felt very natural for me to pick an open source game engine. The open source aspect is a big draw for me as I’m used to looking through source code and discussions on Github if I get stuck on an issue. In addition I’m pretty sure it was recommended on /r/gamedev for being a solid, intuitive engine for newcomers as well. I was also able to hit the ground running with Godot just after just watching [Heartbeast’s beginner RPG series](https://www.youtube.com/watch?v=mAbG8Oi-SvQ). I just love how intuitive the node structure is and Godot’s ease-of-use - it was so easy to prototype things with GDScript!
+I was already coming from an open source background when I worked on Linux, so it felt very natural for me to pick an open source game engine. The open source aspect is a big draw for me as I’m used to looking through source code and discussions on Github if I get stuck on an issue. In addition I’m pretty sure it was recommended on [/r/gamedev](https://www.reddit.com/r/gamedev/) for being a solid, intuitive engine for newcomers as well. I was also able to hit the ground running with Godot just after just watching [Heartbeast’s beginner RPG series](https://www.youtube.com/watch?v=mAbG8Oi-SvQ). I just love how intuitive the node structure is and Godot’s ease-of-use - it was so easy to prototype things with GDScript!
 
 ![](/assets/showcase/usagi-shima-5.webp)
 
