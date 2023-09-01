@@ -5,18 +5,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">
-	<meta name="description" content="Updates on various things XR in Godot, a new version of the OpenXR plugin, a new version of the tools library and an update on Godot 4 support.">
+	<meta name="description" content="A relaxing, idle bunny collecting game made by Jess, a solo indie developer">
 	<meta name="theme-color" content="#3d8fcc">
 	<meta property="og:site_name" content="Godot Engine">
-	<meta property="og:url" content="https://godotengine.org/article/godot-xr-update-feb-2022/">
+	<meta property="og:url" content="https://godotengine.org/article/godot-showcase-usagi-shima/">
 	<meta name="twitter:site" content="@godotengine">
 
-	<meta property="og:title" content="Godot XR update - February 2022">
-	<meta property="og:description" content="Updates on various things XR in Godot, a new version of the OpenXR plugin, a new version of the tools library and an update on Godot 4 support.">
-	<meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/621/e46/b59/621e46b59f6a8102188120.jpg">
+	<meta property="og:title" content="Godot Showcase - Usagi Shima">
+	<meta property="og:description" content="A relaxing, idle bunny collecting game made by Jess, a solo indie developer">
+	<meta property="og:image" content="https://godotengine.org/storage/blog/covers/usagi-shima.webp">
 	<meta property="og:type" content="article">
 	<meta name="twitter:card" content="summary_large_image">
-	<title>Godot XR update - February 2022</title>
+	<title>Godot Showcase - Usagi Shima</title>
 
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
@@ -215,31 +215,31 @@
 			<figure class="article-cover">
 				
 
-				<img src="/storage/app/uploads/public/621/e46/b59/621e46b59f6a8102188120.jpg" title=""
+				<img src="/storage/blog/covers/usagi-shima.webp" title=""
 					alt=" " class="rounded-lg"
 					style="width: 100%; height: auto" />
 			</figure>
 
 			<div class="article-info">
 				<h1>
-					Godot XR update - February 2022
+					Godot Showcase - Usagi Shima
 				</h1>
 				<div class="article-metadata">
 					<div class="article-author">
 						<span>By: </span>
 						
 						
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/bastiaan.jpg" alt="Bastiaan Olij" loading="lazy">
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/emi.png" alt="Emi" loading="lazy">
 						
-						<span class="by">Bastiaan Olij</span>
+						<span class="by">Emi</span>
 					</div>
-					<span class="date"> 27 February 2022</span>
+					<span class="date">  1 September 2023</span>
 				</div>
 
 				<div class="tags">
 					
-					<a href="/blog/progress-report">
-						<div class="tag active">Progress Report</div>
+					<a href="/blog/showcase">
+						<div class="tag active">Showcase</div>
 					</a>
 					
 				</div>
@@ -249,122 +249,62 @@
 
 
 
-	<div class="card card-warning">
-		<p>
-		
-			This article is from <strong>February 2022</strong>, some of its contents might be outdated and no longer accurate.<br>
-			You can find up-to-date information about the engine in the <a href="https://docs.godotengine.org/en/stable/">official documentation</a>.
-		
-		</p>
-	</div>
-
-
-
-
 
 			<div class="article-body">
-				<p>Lots of things are happening on the XR front with Godot, so time for a long overdue update blog post.</p>
+				<p>Most of the games we highlighted so far on our blog are PC/console games, but today we are going to talk about a mobile game! Usagi Shima is a relaxing, idle bunny collecting game made by Jess, a solo indie developer. We had the chance to interview her about her experience of developing the game using the Godot Engine.</p>
 
-<h3 id="godot-4-xr">Godot 4 XR</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FWOKjCe9Ljw" frameborder="0" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
 
-<h4 id="highlights">Highlights</h4>
+<h2 id="could-you-tell-us-a-bit-about-yourself-and-how-you-got-started-in-game-development">Could you tell us a bit about yourself and how you got started in game development?</h2>
 
-<p>At the end of last year, we had rounded off most of the core changes in Godot 4 to support XR. We had XR fully working through OpenVR/SteamVR and, except for a pesky timing issue, had OpenXR up and running.</p>
+<p>Hi, I’m Jess! I’m a solo indie developer working on Usagi Shima. I actually started out as a Linux developer and worked on operating system internals for 5 years before I decided to make the leap to game development. Back in 2019 I made a Stardew Valley mod for my partner’s birthday and since then, I have craved for more creative and artistic work. Thus began my journey into digital art, animation, and game development - a perfect blend of technical and creative work!</p>
 
-<p>It initially seemed the timing issue was related to issues with the original Vulkan implementation on OpenXR. OpenXR had already moved to a new approach, where OpenXR takes over managing the Vulkan instance. Switching to this new approach however required embedding OpenXR support into the core of Godot. With the <a href="https://godotengine.org/article/godot-engine-receiving-new-grant-meta-reality-labs">Meta grant</a> securing the funding to switch to the new approach, the whole implementation was ported to the core.</p>
+<h2 id="can-you-tell-us-a-bit-about-your-game">Can you tell us a bit about your game?</h2>
 
-<p>While we would later discover the cause of the timing issue was fixable in the plugin, the new approach is far more future-proof. It will make it much easier to implement various XR features including the editor features we have on the roadmap.</p>
+<p>Usagi Shima is a relaxing, idle bunny collecting game. It started out as my passion project that I’d work on evenings and weekends while juggling a full time job as a Software Developer. Its premise is simple - decorate an empty island, and bunnies will come visit you! Pet, feed, and play hide and seek with your bunnies! You can even put hats on them!</p>
 
-<p>The initial version of this work was merged this week. For details, check the <a href="https://github.com/godotengine/godot/pull/56394">Core OpenXR PR</a>. Currently, only desktop VR is supported as we are waiting on Meta to adopt the official Khronos OpenXR loader.</p>
+<p>Usagi Shima was inspired by my childhood love of rabbits and pet simulator games. It is also heavily inspired by cozy games like Animal Crossing and Neko Atsume. I wanted to make a cute, calming game where the player can just relax and decorate with their virtual bunny friends!</p>
 
-<p>An example project to try out can be found <a href="https://github.com/BastiaanOlij/godot4_openxr_demo">here</a>.</p>
+<p><img src="/assets/showcase/usagi-shima-4.webp" alt="" /></p>
 
-<h4 id="known-issues">Known issues</h4>
+<h2 id="what-were-some-of-the-biggest-challenges-you-faced-during-the-development-process-and-how-did-you-overcome-them">What were some of the biggest challenges you faced during the development process, and how did you overcome them?</h2>
 
-<p>There is a known issue with the brightness of the output. This is being worked on.</p>
+<p>By far the biggest challenge for me was not even making the game itself, but integrating the game with each platform’s ecosystem. That means integration with Admob, Google Play Game Services, Google Play Billing, iCloud, Game Center, etc. I was juggling this mixture of third party plugins and SDKs, and that honestly makes me a bit nervous about potential difficulties ahead maintaining the game long term.</p>
 
-<h4 id="next-steps">Next steps</h4>
+<p>Keeping up with Google Play’s constantly changing requirements and policies was also challenging. Sometimes I had to keep my eyes on open issues on Godot’s Github page to see when a required Android change would land in the next release so that I could ensure my app would remain compliant with Google Play policies. A similar issue arose when Google Play started to enforce a new minimum version of the Google Play Billing library, but the latest official release from the Godot Google Play Billing plugin was still behind.</p>
 
-<p>The team is currently working on:</p>
+<p>Indeed, having been part of the Linux community in my past job, I completely understand the growing pains of any open source community. Maintainers are often overworked and stretched super thin. But at the same time, what’s totally awesome about open source is how other users can step up and help each other and contribute to the project. That was the case with the Google Play Billing plugin where one user kindly created a release candidate that fixed the minimum library version requirement. I’m still using that rc and am hoping the repo gets an official update at some point 😉</p>
 
-<ul>
-  <li>A UI for editing the OpenXR action map.</li>
-  <li>Variable Rate Shading support to enable <a href="https://en.wikipedia.org/wiki/Foveated_rendering">foveated rendering</a> on all platforms. This will provide significant rendering performance improvements, and will also be available for non-VR usage eventually.</li>
-  <li>Porting extension logic from the Godot 3 plugin.</li>
-</ul>
+<p>If I had a Godot wishlist, it would be a first-class plugin for Google Play Game Services, and maybe even a dedicated maintainer for all things Android/Google Play plugin related. Although the community has done a fantastic job creating plugins, I worry that third-party plugins will stop being maintained and as mobile devs we’ll thus be forced to switch to yet another plugin, that may or may not be actively maintained in the future.</p>
 
-<h3 id="godot-openxr-plugin-120-release">Godot OpenXR plugin 1.2.0 release</h3>
+<h2 id="how-did-you-discover-godot-what-made-you-pick-it-for-your-project">How did you discover Godot? What made you pick it for your project?</h2>
 
-<p>The <a href="https://github.com/GodotVR/godot_openxr/blob/e4af8c7b7168a7748a4e4929bc6779bb422baca7/CONTRIBUTORS.md">Godot XR Contributors</a> have been hard at work preparing another release of the plugin that addresses a few critical issues and has a number of QOL improvements. The team would like to specifically express their thanks to the many developers helping out in testing these changes.</p>
+<p>I was already coming from an open source background when I worked on Linux, so it felt very natural for me to pick an open source game engine. The open source aspect is a big draw for me as I’m used to looking through source code and discussions on Github if I get stuck on an issue. In addition I’m pretty sure it was recommended on <a href="https://www.reddit.com/r/gamedev/">/r/gamedev</a> for being a solid, intuitive engine for newcomers as well. I was also able to hit the ground running with Godot just after just watching <a href="https://www.youtube.com/watch?v=mAbG8Oi-SvQ">Heartbeast’s beginner RPG series</a>. I just love how intuitive the node structure is and Godot’s ease-of-use - it was so easy to prototype things with GDScript!</p>
 
-<h4 id="download">Download</h4>
+<p><img src="/assets/showcase/usagi-shima-5.webp" alt="" /></p>
 
-<p>The plugin can be downloaded from the <a href="https://godotengine.org/asset-library/asset/986">Asset Library</a></p>
+<h2 id="what-advice-would-you-give-to-aspiring-game-developers-who-are-just-starting-out-in-the-field">What advice would you give to aspiring game developers who are just starting out in the field?</h2>
 
-<p><strong>Requires Godot 3.4 or higher.</strong></p>
+<p>If you’re working alone and just starting out, I definitely recommend a solid programming foundation! Copying code from tutorials can only go so far. Don’t be afraid of tinkering and just make things! Make ridiculously simple games first and take the lessons learned with you onto bigger projects. And lastly, your estimated time to complete your game is always more than you initially thought. Always.</p>
 
-<h4 id="highlights-1">Highlights</h4>
+<h2 id="what-was-your-experience-when-working-on-a-mobile-first-game">What was your experience when working on a mobile-first game?</h2>
 
-<ul>
-  <li>Fixes the way swapchains are created ensuring consistant color gradients between different systems and preventing the banding issue on the Meta Quest. This also fixes the issues reported by users using the Meta Quest and Quest 2 over (air) link.
-    <ul>
-      <li>There is a regression in the desktop version where the on screen preview is too dark which we are aware of. This requires a fix in Godot itself. A workaround is available.</li>
-    </ul>
-  </li>
-  <li>Fixes an important issue in the returned trigger and grip values when analogue input was requested.</li>
-  <li>Adds support for the HP Reverb G2 controllers.</li>
-  <li>Improves upon the timing used for predictive tracking. This ensures controller positions are more accurate. Added HUD elements to your camera node are now positioned correctly.</li>
-  <li>Adds an API to return information about the confidence of the tracking data. Poses will now provide information on whether the controllers are accurately tracked or whether the controllers are (partially) obscured and the tracking is predictive.</li>
-</ul>
+<p>Making a mobile game was very challenging! Mobile has a variety of different challenges compared to PC games. Both the App Store and Google Play have review processes that can be frustrating and cryptic at times. Additionally, developers need to make sure their app is continually compliant with each platform’s policies in order to stay on their respective stores. Especially with Google Play, it’s important to keep up-to-date with their policies.</p>
 
-<h4 id="next-steps-1">Next steps</h4>
+<p>Performance was also a big challenge on Android. Your mobile game has to be able to run across a wide spectrum of devices. I had some performance issues with lighting and large sprites in the game, especially on lower-end Android devices. I had to experiment with things like multithreaded loading and splitting up large sprites to reduce overdraw in order to gain some frames back.</p>
 
-<p>The contributors are mainly focused on improving the logic that is already in the plugin and improving compatibility with different systems out there.
-Work is also progressing on some of the newer OpenXR features that are currently still in experimental builds such as supporting the new <a href="https://developer.oculus.com/experimental/spatial-anchors-overview/">Meta Spatial Anchors API</a>.</p>
+<p>Monetization is also completely different on mobile. Mobile players have come to expect games to be free, so developers tend to monetize using other strategies. There’s also a lot of integration with third-party SDKs in order to make your game work with ads, achievements, analytics, and in-app purchases. Additionally, mobile publishers and platforms like Google Play often want your KPI statistics to be considered for a publishing deal or featuring, respectively.
+All-in-all, mobile is definitely a different beast compared to releasing a PC game on Steam!</p>
 
-<h4 id="reporting-issues">Reporting issues</h4>
+<h2 id="finally-what-do-you-hope-players-will-take-away-from-your-game-and-how-do-you-see-it-contributing-to-the-broader-gaming-landscape">Finally, what do you hope players will take away from your game, and how do you see it contributing to the broader gaming landscape?</h2>
 
-<p>For any issues encountered while using the Godot OpenXR plugin, or for any clarifications/improvements to the Godot XR documentation, feel free to open <a href="https://github.com/GodotVR/godot_openxr/issues">a github issue under the Godot OpenXR github page</a>!</p>
+<p>I hope mobile games make a comeback as a reputable platform for gaming, and that one day it could also be a place where indies can shine. I really like mobile as a platform because it opens up new and different genres by virtue of having a device that is constantly in your pocket. It’s a platform that accompanies players throughout their days, unlike a console or PC. Not only that, it’s massively accessible too - while not everybody has a PS5 or Switch, nearly everybody has access to a smartphone these days.</p>
 
-<p>The list of current known issues can be found <a href="https://github.com/GodotVR/godot_openxr/issues?q=is%3Aopen+is%3Aissue+label%3Abug">here</a>.</p>
+<p>Admittedly, mobile games are not as common a target platform for indie game developers compared to PC and console. Mobile games have earned a negative reputation because of how aggressively they are usually monetized (e.g. microtransactions), and because of how the mobile market is unfortunately plagued with poor quality apps, shovelware, and clones. I hope to one day contribute to the idea that mobile can be a viable platform for indie developers to thrive too!</p>
 
-<h3 id="godot-xr-tools-230">Godot XR Tools 2.3.0</h3>
+<p><img src="/assets/showcase/usagi-shima-scr03.webp" alt="" /></p>
 
-<p>The <a href="https://github.com/GodotVR/godot-xr-tools/blob/master/addons/godot-xr-tools/CONTRIBUTORS.md">Godot XR Tools Contributors</a> welcome new contributor <a href="https://github.com/Malcolmnixon">Malcolm Nixon</a>. Many of the improvements in this release were executed by Malcolm closely working together with project lead <a href="https://github.com/BastiaanOlij">Bastiaan Olij</a>.</p>
-
-<p>The plugin can be downloaded from the <a href="https://godotengine.org/asset-library/asset/214">Asset Library</a></p>
-
-<p>Documentation can be found <a href="https://github.com/GodotVR/godot-xr-tools/wiki">on the repository’s wiki</a>.</p>
-
-<p><strong>Requires Godot 3.4 or higher.</strong></p>
-
-<h4 id="highlights-2">Highlights</h4>
-
-<ul>
-  <li>The bulk of the changes center around the movement implementation in the plugin. There is a lot more flexibility in moving your player around including climbing mechanics, glide mechanics, wind mechanics, etc. This change does introduce a separate player object that needs to be added into your project however the plugin will attempt to do so automatically. <em>This means some settings have moved so this could lead to minor breakage on existing projects.</em></li>
-  <li>The pickup and throw mechanics have been greatly improved.</li>
-  <li>There is now a vignette implementation that includes an automatic mode that will vary the vignette based on the players movement.</li>
-</ul>
-
-<h4 id="godot-4-port">Godot 4 port</h4>
-
-<p>The port of this module to Godot 4 is well under way and used in the test project mentioned above. You can follow the work being done <a href="https://github.com/GodotVR/godot-xr-tools/pull/42">here</a>.</p>
-
-<h4 id="next-steps-2">Next steps</h4>
-
-<p>The team is currently working on a <a href="https://www.youtube.com/watch?v=9QjeJ6XRYcY">virtual keyboard implementation</a>, a <a href="https://www.youtube.com/watch?v=FPjDXQio9Ao">whiteboard implementation</a>, a <a href="https://www.youtube.com/watch?v=-vhM1bMl8lE">door interaction implementation</a> and on an implementation for supporting physical interactions with viewports using the users fingers as an alternative of the laser pointer.</p>
-
-<h4 id="reporting-issues-1">Reporting issues</h4>
-
-<p>For any issues encountered while using the Godot XR tools plugin, or for any clarifications/improvements to the wiki documentation, feel free to open <a href="https://github.com/GodotVR/godot-xr-tools/issues">a github issue under the Godot XR tools github page</a>!</p>
-
-<p>The list of current known issues can be found <a href="https://github.com/GodotVR/godot-xr-tools/issues?q=is%3Aopen+is%3Aissue+label%3Abug">here</a>.</p>
-
-<h3 id="community">Community</h3>
-
-<p>If you need help, want to help or just like to chill with those who are making stuff with Godot XR, the best place to come and hang out is on the <a href="https://discord.com/invite/4JBkykG">Godot Engine Discord server</a> in the XR channel.</p>
-
-<p>If you’re interested in contributing to either the plugins or the core functionality, come and hang out on the <a href="https://chat.godotengine.org/">Godot Contributors chat server</a> in the XR channel to discuss ideas.</p>
+<p>Usagi Shima is available in the <a href="https://apps.apple.com/us/app/usagi-shima/id1632728038">App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.pank0.usagishima">Google Play Store</a>. You can also find more about the game on <a href="https://usagishima.net/">their website</a>.</p>
 
 			</div>
 		</div>
