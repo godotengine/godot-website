@@ -9,13 +9,13 @@ image_caption_description: "A plugin by CookieBadger"
 date: 2023-09-05 16:00:00
 ---
 
-We're making great progress in the development branch for Godot 4.2! The faster paced release cycle we started following after the 4.0 release seems to be working well, with pull requests being opened, reviewed, and merged at a steady state. This fourth dev snapshot contains nearly 250 PRs merged in a little over 3 weeks since the [dev 3 snapshot](/article/dev-snapshot-godot-4-2-dev-3/).
+We're making great progress in the development branch for Godot 4.2! The faster paced release cycle we started following after the 4.0 release seems to be working well, with pull requests being opened, reviewed, and merged at a steady rate. This fourth dev snapshot contains nearly 250 PRs merged in a little over 3 weeks since the [dev 3 snapshot](/article/dev-snapshot-godot-4-2-dev-3/).
 
-We're slightly behind our internal release schedule on that build, but only because we had some unplanned maintenance of the build server. Otherwise the overall state of the `master` branch seems pretty good and on track for reaching the beta stage at the start of October, and stable in early November 2023.
+The overall state of the `master` branch seems pretty good and on track for reaching the beta stage at the start of October, and stable in early November 2023.
 
 This snapshot brings a lot of goodies! Here are some of the highlights, with a bigger list available [below](#whats-new):
 
-- The initial support for C# on Android merged for dev 3 ([GH-73257](https://github.com/godotengine/godot/pull/73257)) is now ready for mass testing! Official export templates are provided in the .NET ("Mono") build, so you can start exporting your C# projects to Android and give us feedback on what works and what doesn't. Keep in mind that this feature requires using .NET 7.0 as the target framework, which you can set in the `.csproj` file with `<TargetFramework>net7.0</TargetFramework>. It's still a work in progress, with caveats outlined in the PR, notably we already know that it's not working on the arm32 architecture.
+- The initial support for C# on Android merged for dev 3 ([GH-73257](https://github.com/godotengine/godot/pull/73257)) is now ready for mass testing! Official export templates are provided in the .NET ("Mono") build, so you can start exporting your C# projects to Android and give us feedback on what works and what doesn't. Keep in mind that this feature requires using .NET 7.0 as the target framework, which you can set in the `.csproj` file with `<TargetFramework>net7.0</TargetFramework>`. It's still a work in progress, with caveats outlined in the PR. Notably, we already know that it's not working on the arm32 architecture.
 
 - A number of rendering bugfixes and improvements were merged for this snapshot, including:
   * Motion vectors for skeletons/blend shapes and particles ([GH-80618](https://github.com/godotengine/godot/pull/80618) and [GH-80688](https://github.com/godotengine/godot/pull/80688)). This is the last bit of work necessary before we implement AMD's FSR 2.2 into Godot. On that note, there is already a PR for FSR 2.2 support ([GH-81197](https://github.com/godotengine/godot/pull/81197)), so please test it out and give us your feedback.
