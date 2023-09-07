@@ -16,13 +16,15 @@ If you are not able to come, we plan on recording the talks and workshops and ma
 
 ## Location
 
-With heartfelt appreciation, we extend our thanks to a passionate team of Munich locals who have been instrumental in organizing this event. Their dedication and support have made it possible for us to be hosted at [Microsoft](https://developer.microsoft.com/en-us/games/) Germany, whose generous offer of their space allows us to bring this remarkable event to life.  
+With heartfelt appreciation, we extend our thanks to a passionate team of Munich locals who have been instrumental in organizing this event. Their dedication and support have made it possible for us to be hosted at [Microsoft](https://developer.microsoft.com/en-us/games/) Germany, whose generous offer of their space allows us to bring this remarkable event to life.
 
 📍 Address: [Walter-Gropius-Str. 5, 80807 München, Germany](https://www.openstreetmap.org/way/428992680).
 
 ## Tickets
 
-Tickets will be available soon - but they will be limited! Subscribe to our mailing list below to get informed when the ticket sale starts, and to get any future communication regarding the conference.
+~~Tickets will be available soon - but they will be limited! Subscribe to our mailing list below to get informed when the ticket sale starts, and to get any future communication regarding the conference.~~
+
+**Edit:** Tickets have been sold out as of September 5th. In case there is enough cancellations until the event to justify it, we'll procede to sell these tickets. Please subscribe to our mailing list below to get informed if such ticket sale starts, and to get any future communication regarding the conference.
 
 
 <form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
