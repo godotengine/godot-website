@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidate: Godot 3.5.3 RC 1</title>
+		<link>https://godotengine.org/article/release-candidate-godot-3-5-3-rc-1/</link>
+		<description>A new maintenance update is in the works for the 3.5 stable branch, to update Android templates to target Android 13, and fix a number of other platform porting bugs.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-3-5-3-rc-1/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Fri, 08 Sep 2023 11:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-3-5-3-rc-1.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.2 dev 4</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-2-dev-4/</link>
 		<description>Progressing steadily towards the beta stage, the fourth dev snapshot brings a lot of improvements all around.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Wed, 14 Jun 2023 13:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-beta-2.webp</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.1 beta 1</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-1-beta-1/</link>
-		<description>Switching gears into the bug-fixing mode, here&#39;s the first beta of Godot 4.1, and a great opportunity to try the new version of the engine ahead of the official release.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-1-beta-1/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Thu, 08 Jun 2023 10:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-beta-1.webp</image>
 	</item>
 	
 
