@@ -91,7 +91,7 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 As a tester, we encourage you to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
 
-In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 3.5.x, but no longer works in 3.6 beta 3).
+In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 3.5.x no longer works in 3.6 beta 3).
 
 ## Support
 
