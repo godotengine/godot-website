@@ -33,7 +33,7 @@ Moving forward, the platform will give automated rewards, like a special Discord
 By relying more on user-funded contributions, we reduce our dependence on large grants from corporations. This financial independence empowers us to prioritize the needs and interests of our community and the open-source principles at the core of our projects. Your help ensures that we can create our own journey, uphold our core values, and continue to evolve the engine in ways that truly benefit you, the users.
 
 
-## A Heartfelt Thanks
+## A heartfelt thanks
 
 We would like to take a moment to express our deepest gratitude for your ongoing support, dedication, and passion for Godot. It's thanks to you and our amazing community that the Godot Engine is what it is today. Let's continue to make it the game engine of choice for developers worldwide!
 
