@@ -1,6 +1,6 @@
 ---
 title: "Introducing the new Godot Development Fund"
-excerpt: "A direct way to support the development of Godot."
+excerpt: "We are excited to introduce a major improvement in terms of funding the development efforts of the Godot Engine."
 categories: ["news"]
 author: Emi
 image: /storage/blog/covers/developer-fund.jpg
