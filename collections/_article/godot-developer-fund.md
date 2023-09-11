@@ -18,7 +18,7 @@ If you are currently supporting us [through Patreon](https://www.patreon.com/god
 
 ## Giving back to the community
 
-The support of the community is what keeps making it possible to reach [new heights](https://godotengine.org/article/godot-4-0-sets-sail/).With you, we can achieve even more!
+The support of the community is what keeps making it possible to reach [new heights](https://godotengine.org/article/godot-4-0-sets-sail/). With you, we can achieve even more!
 
 Every donation, no matter the size, helps us immensely! With your help we can hire more developers, create high quality demos, pay for hosting services and infrastructure, and make the best possible Godot Engine. The more funds we have, the more we can give back to you and the entire gamedev community.
 
