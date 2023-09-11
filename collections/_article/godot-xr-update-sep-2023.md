@@ -6,7 +6,7 @@ author: Bastiaan Olij
 image: /storage/blog/covers/godot-xr-update-sep-2023.webp
 image_caption_title: Badaboom
 image_caption_description: Badaboom by Decacis
-date: 2023-09-01 11:00:00
+date: 2023-09-11 11:00:00
 ---
 
 XR work has slowed down this year due to the XR-specific line of funding running out. However, there is still plenty happening on the XR front to warrant another update.
@@ -89,3 +89,9 @@ We are also looking into the feasibility of supporting various vendor extensions
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RG5Nw5KRnAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 * Nub's Western Gun Slinger game
+
+## Support
+
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](https://fund.godotengine.org). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+
+If you'd like to support the project financially and help us secure our future hires, you can do so on [the Godot Development Fund](https://fund.godotengine.org) or [PayPal](https://godotengine.org/donate).
