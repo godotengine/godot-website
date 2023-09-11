@@ -22,7 +22,7 @@ The support of the community is what keeps making it possible to reach [new heig
 
 Every donation, no matter the size, helps us immensely! With your help we can hire more developers, create high quality demos, pay for hosting services and infrastructure, and make the best possible Godot Engine. The more funds we have, the more we can give back to you and the entire gamedev community.
 
-## Future Enhancements
+## Future enhancements
 
 While this is a good, fully functioning starting point for the platform, we will keep improving the Developer Fund.
 
