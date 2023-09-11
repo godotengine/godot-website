@@ -16,7 +16,7 @@ The Development Fund will make The Godot Project more sustainable and independen
 
 If you are currently supporting us [through Patreon](https://www.patreon.com/godotengine), we encourage you to switch to the [Godot Development Fund](https://fund.godotengine.org) to increase the effectiveness of your donations.
 
-## Giving Back to the Community
+## Giving back to the community
 
 The support of the community is what keeps making it possible to reach [new heights](https://godotengine.org/article/godot-4-0-sets-sail/).With you, we can achieve even more!
 
