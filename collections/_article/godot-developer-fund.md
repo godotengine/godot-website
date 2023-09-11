@@ -10,7 +10,7 @@ date: 2023-09-12 11:51:10
 We are excited to introduce a major improvement in terms of funding the development efforts of the Godot Engine - the [Godot Development Fund](https://fund.godotengine.org)! The goal for the Development Fund is to create a direct way for everyone to help us keep the project alive.
  
 
-## Reducing Platform Fees, Amplifying Impact
+## Reducing platform fees, amplifying impact
 
 The Development Fund will make The Godot Project more sustainable and independent. This new platform lets us significantly reduce platform fees, so your contributions go directly towards the development and improvement of the Godot Engine itself.
 
