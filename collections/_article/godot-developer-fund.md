@@ -12,7 +12,7 @@ We are excited to introduce a major improvement in funding the development effor
 
 ## Reducing platform fees, amplifying impact
 
-The Development Fund will make The Godot Project more sustainable and independent. This new platform lets us significantly reduce platform fees, so your contributions go directly towards the development and improvement of the Godot Engine itself.
+The Development Fund will make the Godot Project more sustainable and independent. This new platform lets us significantly reduce platform fees, so your contributions go directly towards the development and improvement of the Godot Engine itself.
 
 If you are currently supporting us [through Patreon](https://www.patreon.com/godotengine), we encourage you to switch to the [Godot Development Fund](https://fund.godotengine.org) to increase the effectiveness of your donations.
 
