@@ -30,7 +30,7 @@ In the future, the platform will give automated rewards, like a special Discord 
 
 ## Freedom and independence
 
-By relying more on user-funded contributions, we reduce our dependence on large grants from corporations. This financial independence empowers us to prioritize the needs and interests of our community and the open-source principles at the core of our projects. Your help ensures that we can create our own journey, uphold our core values, and continue to evolve the engine in ways that truly benefit you, the users.
+By relying more on recurring user-funded contributions and company sponsorships, we reduce our dependence on large one-time grants from corporations. This financial independence empowers us to prioritize the needs and interests of our community and the open source principles at the core of our projects. Your help ensures that we can create our own journey, uphold our core values, and continue to evolve the engine in ways that truly benefit you, the users.
 
 
 ## A heartfelt thanks
