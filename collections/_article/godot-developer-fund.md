@@ -26,7 +26,7 @@ Every donation, no matter the size, helps us immensely! With your help we can hi
 
 While this is a good, fully functioning starting point for the platform, we will keep improving the Developer Fund.
 
-In the future, the platform will give automated rewards, like a special Discord role, and you'll be able to showcase your contribution level next to your username on our main platforms. 
+In the future, the platform will give automated rewards, like a special Discord role, and you'll be able to showcase your contribution level next to your username on our main platforms.
 
 ## Freedom and independence
 
