@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Dev snapshot: Godot 4.2 dev 5",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-5/",
+			"description": "Penultimate 4.2 dev snapshot brings improvements to Android plugin API, the Tilemap editor, and, well, practically everything else — making it ready for beta testing next month.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-5/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Tue, 19 Sep 2023 10:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-5.webp"
+		},
+		
+		{
 			"title": "Introducing the new Godot Development Fund",
 			"link": "https://godotengine.org/article/godot-developer-fund/",
 			"description": "We are excited to introduce a major improvement in terms of funding the development efforts of the Godot Engine.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Clay John",
 			"pubDate": "Fri, 23 Jun 2023 14:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/quiz-2023.png"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 4.1 beta 3",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-4-1-beta-3/",
-			"description": "We are getting confident in the state of Godot 4.1! To wrap things up here&#39;s the last beta release, bringing more fixes to reported issues.",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-1-beta-3/",
-			"dc:creator": "Yuri Sizov",
-			"pubDate": "Wed, 21 Jun 2023 13:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-1-beta-3.webp"
 		}
 		
 	]

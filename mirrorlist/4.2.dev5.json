@@ -1,0 +1,10 @@
+{
+	"mirrors": [
+		
+		{
+			"name": "Official GitHub Releases mirror",
+			"url": "https://github.com/GodotBuilder/godot-builds/releases/download/4.2-prerelease-templates/Godot_v4.2-dev5_export_templates.tpz"
+		}
+		
+	]
+}
