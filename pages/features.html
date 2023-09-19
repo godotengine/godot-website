@@ -402,13 +402,13 @@ layout: default
 		</script>
 
 		<div class="showcase-carousel">
-			<img src="/assets/features/editor-frame.png?2" class="showcase-frame" />
+			<img src="/assets/features/editor-frame.png?2" class="showcase-frame" decoding="async" />
 
 			<div class="showcase-items">
 				{% for project in site.showcase %}
 				{% if project.featured_in_home %}
 				<div class="showcase-item">
-					<img src="{{ project.gallery[0] }}" load="lazy" alt="{{ project.title }} - {{ project.author }}" />
+					<img src="{{ project.gallery[0] }}" load="lazy" loading="lazy" decoding="async" alt="{{ project.title }} - {{ project.author }}" />
 					<div class="showcase-credits">
 						<a href="{{ project.url }}">
 							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">- {{ project.author }}</span>

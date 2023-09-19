@@ -72,7 +72,7 @@
 				<h3>{{ event.name }}</h3>
 
 				{% unless event.cover_image == empty %}
-					<img src="{{ event.cover_image }}" alt="{{ event.name }} event banner">
+					<img src="{{ event.cover_image }}" alt="{{ event.name }} event banner" decoding="async">
 				{% endunless %}
 
 				{{ event.content }}
