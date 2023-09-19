@@ -720,6 +720,7 @@ p.small {
 
 .btn {
   background-color: var(--button-background-color);
+  border-radius: 7px;
   box-shadow: var(--base-shadow);
   font-size: 18px;
   padding: 16px 32px 16px 32px;
@@ -764,6 +765,7 @@ p.small {
 }
 .btn.btn-download > .download-hint {
   background-color: var(--primary-color);
+  border-radius: 0px 7px 7px 0px;
   color: var(--primary-color-text-title);
   display: inline-block;
   padding: 16px 16px 16px 16px;
