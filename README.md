@@ -25,9 +25,9 @@ When working on new features, keep in mind this website only supports _evergreen
 
 **Internet Explorer isn't supported.**
 
-## Development
+## Developmen
 
-NOTE: The size of this project is 1.5GB!
+CRITICAL NOTICE: Currently, the project's size stands at a whopping 2.71 gigabytes!
 
 ### Building
 
