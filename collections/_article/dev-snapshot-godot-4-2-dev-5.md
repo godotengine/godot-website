@@ -1,27 +1,27 @@
 ---
 title: "Dev snapshot: Godot 4.2 dev 5"
-excerpt: "Penultimate 4.2 dev snapshot brings improvements to ..."
+excerpt: "Penultimate 4.2 dev snapshot brings improvements to Android plugin API, the Tilemap editor, and, well, practically everything else — making it ready for beta testing next month."
 categories: ["pre-release"]
 author: Yuri Sizov
 image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-5.webp
 image_caption_title: "Starter Kit 3D Platformer"
 image_caption_description: "A template project by Kenney"
-date: 2023-09-18 16:00:00
+date: 2023-09-19 10:00:00
 ---
 
 We are entering the final stretch of the feature development for this dev cycle. There is probably one more Godot 4.2 dev snapshot left before the project enters the feature freeze and all efforts turn towards fixing remaining bugs and stabilizing the release. In the [past 2 months](/article/dev-snapshot-godot-4-2-dev-1) contributors have been shaping what Godot 4.2 is going to be, and we will soon pass the mark of [1000 changes](https://godotengine.github.io/godot-interactive-changelog/#4.2).
 
-A significant part of this snapshot contains changes aimed at improving the user experience throughout the editor. We are also introducing a new version of the Godot Android plugins. As always, many bugs and crashes have been squashed and other issues resolved. Here's a short highlights section, ahead of a more complete list [below](#whats-new):
+A significant part of this snapshot contains changes aimed at improving the user experience throughout the editor. We are also introducing a new version of the Godot Android plugin API. As always, many bugs and crashes have been squashed and other issues resolved. Here's a short highlights section, ahead of a more complete list [below](#whats-new):
 
 * The 3D viewport received a de-cluttering and will now display auxiliary visual information only for selected objects ([GH-75303](https://github.com/godotengine/godot/pull/75303)). At the same time elements like decals and fog volumes now have extra indicators which make them easier to select via the viewport ([GH-81554](https://github.com/godotengine/godot/pull/81554)). Various parts of the inspector and signal docks were enhanced with documentation tooltips and related bugfixes ([GH-81221](https://github.com/godotengine/godot/pull/81221)). Code region support was added to the code editor, allowing you to define parts of the script to fold them and help with navigation within longer scripts ([GH-74843](https://github.com/godotengine/godot/pull/74843)). And if you are working on editor plugins, you can now preview the current editor theme on your GUI elements directly in the 2D viewport ([GH-81130](https://github.com/godotengine/godot/pull/81130)).
 
 * Two very important issues related to tilemaps and the tilemap editor were addressed for this release. You can now flip and rotate tiles and entire tile patterns when placing them in the world ([GH-80144](https://github.com/godotengine/godot/pull/80144)). A significant boost to performance, thanks to smart tile grouping and other optimizations, should make larger tilemaps considerably less laggy ([GH-81070](https://github.com/godotengine/godot/pull/81070)).
 
-* Godot aims to be as version-control-friendly as possible, and contributors are well aware of several issues related to sporadic resource id changes. In this snapshot we're shipping one of the fixes that aims to address the issue ([GH-65011](https://github.com/godotengine/godot/pull/65011)). Related to this, multiple problems with renamed and moved files causing crashes and scene corruption have been fixed ([GH-80503](https://github.com/godotengine/godot/pull/80503), [GH-81657](https://github.com/godotengine/godot/pull/81657)).
+* Godot aims to be as version-control-friendly as possible, and contributors are well aware of several issues related to sporadic resource ID changes. In this snapshot we're shipping one of the fixes that aims to address the issue ([GH-65011](https://github.com/godotengine/godot/pull/65011)). Related to this, multiple problems with renamed and moved files causing crashes and scene corruption have been fixed ([GH-80503](https://github.com/godotengine/godot/pull/80503), [GH-81657](https://github.com/godotengine/godot/pull/81657)).
 
 * A new version of the Godot Android plugin framework is introduced in this release ([GH-80740](https://github.com/godotengine/godot/pull/80740), [GH-81368](https://github.com/godotengine/godot/pull/81368)). Please make sure to test these changes and provide feedback to our Android platform maintainers who want to ensure a smooth migration process. You can refer to [this draft documentation PR](https://github.com/godotengine/godot-docs/pull/7884) for more information about the changes and new requirements.
 
-* Speaking of Android, this release adds Android Stylus pressure and tilt support ([GH-80644](https://github.com/godotengine/godot/pull/80644)). This compliments Apple Pencil support added in Godot 4.0.
+* Speaking of Android, this release adds Android Stylus pressure and tilt support ([GH-80644](https://github.com/godotengine/godot/pull/80644)). This complements Apple Pencil support added in Godot 4.0.
 
 * If you're relying on `GraphEdit` in your games and tools, you will be happy to know that this snapshot concludes the main part of the refactoring of the node ([GH-79307](https://github.com/godotengine/godot/pull/79307), [GH-79308](https://github.com/godotengine/godot/pull/79308), [GH-79311](https://github.com/godotengine/godot/pull/79311)). Please make sure to give it a test and see if everything is working as expected. For the time being the comment node feature has been removed — to be reintroduced later as a dedicated node with improved behavior together with other nodes. Until the feature freeze there may still be smaller compatibility breaking changes, so make sure to read future release notes.
 
@@ -31,7 +31,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*The illustration picture for this article is taken from* [**Starter Kit 3D Platformer**](https://github.com/KenneyNL/Starter-Kit-3D-Platformer), *a template project made by [Kenney](https://kenney.nl/) for Godot 4. Kenney is a one-man powerhouse producing game assets, tools, and template projects like this one, and sharing them for free. Kenney's assets come in all popular formats, so even if something is not made for Godot specifically you can still import it and kickstart your fun gamedev adventure by focusing on the gameplay and what makes your game interesting and unique! You can follow Kenney on social ([Twitter](https://twitter.com/KenneyNL), [Mastodon](https://mastodon.gamedev.place/@kenney)) to get updates on and help shape new asset packs. And please consider [sponsoring his work](https://kenney.nl/donate) which benefits everyone in the gamedev community!*
+*The illustration picture for this article is taken from* [**Starter Kit 3D Platformer**](https://github.com/KenneyNL/Starter-Kit-3D-Platformer), *a template project made by [Kenney](https://kenney.nl/) for Godot 4. Kenney is a one-man powerhouse producing game assets, tools, and template projects like this one, and sharing them for free. Kenney's assets come in all popular formats, so even if something is not made for Godot specifically you can still import it and kickstart your fun gamedev adventure by focusing on the gameplay and what makes your game interesting and unique! You can follow Kenney on social networks ([Twitter](https://twitter.com/KenneyNL), [Mastodon](https://mastodon.gamedev.place/@kenney)) to get updates on and help shape new asset packs. And please consider [sponsoring his work](https://kenney.nl/donate) which benefits everyone in the gamedev community!*
 
 ## What's new
 
@@ -114,7 +114,7 @@ The downloads for this pre-release build can be found in our GitHub repository:
 **Standard build** includes support for GDScript and GDExtension.
 
 **.NET build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
-- .NET build requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location. To export to Android, .NET 7.0 is required, and should be set as the target framework in the `.csproj` file.
+- .NET build requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location. To export to Android, .NET 7.0 is required, and should be set as the target framework in the `.csproj` file. .NET 8.0 is not supported yet.
 
 ## Known issues
 
