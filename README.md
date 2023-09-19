@@ -27,6 +27,8 @@ When working on new features, keep in mind this website only supports _evergreen
 
 ## Development
 
+NOTE: The size of this project is 1.5GB!
+
 ### Building
 
 To build the website locally, follow these steps:
