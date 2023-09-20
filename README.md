@@ -199,7 +199,7 @@ things you need to update `_data/mirrorlist_configs.yml` and add another record 
 ```
   - name: "4.1"
     stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builder", "tuxfamily" ]
+    preview: [ "github_builds", "tuxfamily" ]
 ```
 
 The `stable` key refers to hosts available for the stable release of that version, while the `preview` key refers

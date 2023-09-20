@@ -4,7 +4,7 @@
 
 HOST_TUXFAMILY = "https://downloads.tuxfamily.org/godotengine"
 HOST_GITHUB = "https://github.com/godotengine/godot/releases/download"
-HOST_GITHUB_BUILDER = "https://github.com/GodotBuilder/godot-builds/releases/download"
+HOST_GITHUB_BUILDS = "https://github.com/godotengine/godot-builds/releases/download"
 
 module MakeDownloadFilter
   def get_download_platforms(input, mono = false)
@@ -96,8 +96,8 @@ module MakeDownloadFilter
 
     if host == "github"
       return "#{HOST_GITHUB}/#{version_name}-#{version_flavor}/#{download_file}"
-    elsif host == "github_builder"
-      return "#{HOST_GITHUB_BUILDER}/#{version_majmin}-prerelease-templates/#{download_file}"
+    elsif host == "github_builds"
+      return "#{HOST_GITHUB_BUILDS}/#{version_name}-#{version_flavor}/#{download_file}"
     elsif host == "tuxfamily"
       if version_flavor == "stable"
         return "#{HOST_TUXFAMILY}/#{version_name}#{mono_slug}/#{download_file}"

@@ -54,14 +54,14 @@
 					{% endcomment %}
 					{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
 
-					<a href="{{ release_version | make_download: primary[1], false, "tuxfamily" }}" class="btn btn-download btn-download-primary">
+					<a href="{{ release_version | make_download: primary[1], false, "github_builds" }}" class="btn btn-download btn-download-primary">
 						<div class="download-title">
 							<img width="24" height="24" src="/assets/images/platforms/{{ primary[0] | split: "_" | join: "-" }}.svg" title="{{ platform_info.title }}" alt="{{ platform_info.title }}" />
 							{{ platform_info.title }}
 						</div>
 					</a>
 
-					{% assign mono_download = release_version | make_download: primary[1], true, "tuxfamily" %}
+					{% assign mono_download = release_version | make_download: primary[1], true, "github_builds" %}
 					{% if mono_download == "#" %}
 						<div></div>
 					{% else %}
@@ -87,7 +87,7 @@
 
 			<div class="download">
 				<span>
-					<a href="{{ release_version | make_download: platform, false, "tuxfamily" }}">
+					<a href="{{ release_version | make_download: platform, false, "github_builds" }}">
 						{{ platform_info.title }}
 						{% unless platform_info.caption == empty %} - {{ platform_info.caption }}{% endunless %}
 					</a>
@@ -97,7 +97,7 @@
 				</span>
 			</div>
 
-			{% assign mono_download = release_version | make_download: platform, true, "tuxfamily" %}
+			{% assign mono_download = release_version | make_download: platform, true, "github_builds" %}
 			{% unless mono_download == "#" %}
 				<div class="download">
 					<a href="{{ mono_download }}">
