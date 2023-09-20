@@ -3,7 +3,12 @@
 		
 		{
 			"name": "Official GitHub Releases mirror",
-			"url": "https://github.com/GodotBuilder/godot-builds/releases/download/4.2-prerelease-templates/Godot_v4.2-dev2_export_templates.tpz"
+			"url": "https://github.com/godotengine/godot-builds/releases/download/4.2-dev2/Godot_v4.2-dev2_export_templates.tpz"
+		},
+		
+		{
+			"name": "Official TuxFamily mirror",
+			"url": "https://downloads.tuxfamily.org/godotengine/4.2/dev2/Godot_v4.2-dev2_export_templates.tpz"
 		}
 		
 	]
