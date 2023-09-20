@@ -19,6 +19,9 @@ downloads:
   - platform:  "windows.32"
     mono: true
 
+redirect_from:
+  - /download/4.x/windows/
+
 content_note: |
   <p>
     <strong>Note:</strong> The 32-bit .NET binaries do not run on 64-bit Windows systems at the time being. Make sure to export 64-bit .NET binaries for your 64-bit target platforms.

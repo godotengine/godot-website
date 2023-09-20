@@ -13,7 +13,8 @@ downloads:
     featured_flavor: .NET
 
 redirect_from:
-  - /download/osx
+  - /download/4.x/macos/
+  - /download/osx/
 
 content_instructions: |
   <ul>

@@ -17,6 +17,9 @@ downloads:
   - platform: "linux.32"
     mono: true
 
+redirect_from:
+  - /download/4.x/linux/
+
 content_instructions: |
   <ul>
     <li>Extract and run. Godot is self-contained and does not require installation.</li>

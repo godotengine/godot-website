@@ -25,7 +25,7 @@ collections:
     output: true
   download_3:
     output: true
-    permalink: /download/3.x/:name/index.html
+    permalink: /download/3.x/:name/
 
 # Build collection items with a future date.
 future: true

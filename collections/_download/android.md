@@ -16,6 +16,9 @@ downloads:
 ignore_export: true
 ignore_mono: true
 
+redirect_from:
+  - /download/4.x/android/
+
 content_note: |
   <p>
     <strong>Note:</strong> C# support is not available in the Android editor.

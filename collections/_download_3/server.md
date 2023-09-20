@@ -18,7 +18,7 @@ downloads:
     mono: true
 
 redirect_from:
-  - /download/server
+  - /download/server/
 
 content_instructions: |
   <ul>
