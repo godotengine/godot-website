@@ -35,7 +35,7 @@ This is, in part, a carry-over from the last post. At first our idea was to add 
 
 Bastiaan worked super hard on this and had both systems nearly ready for 4.1, but unfortunately didn't complete the work in time to be included with 4.1's release as more testing is needed. We expect this work will be merged soon and will be available for testing and feedback prior to 4.2's release. We ended up needing to introduce a few more settings than expected, so we really need community feedback to make sure the system is intuitive and helpful.
 
-_edit: In testing we have identified performance issues that stop us from merging this work. Accordingly, this will not make it into 4.2. The work is ongoing and hopefully we will have something we are happy with ready for a later release._
+_September 2023 edit: In testing we have identified performance issues that stop us from merging this work. Accordingly, this will not make it into 4.2. The work is ongoing and hopefully we will have something we are happy with ready for a later release._
 
 **2. Background pipeline compilation**
 
