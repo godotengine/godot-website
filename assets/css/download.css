@@ -353,8 +353,6 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    background-color: transparent;
-    border: none;
 }
 
 @media (prefers-color-scheme: light) {

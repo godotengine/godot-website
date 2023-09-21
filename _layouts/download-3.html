@@ -330,6 +330,17 @@ layout: default
 		thankYouBackButton.addEventListener('click', () => {
 			thankYouWrapper.style.display = 'none';
 		});
+		thankYouBackButton.addEventListener('keypress', (event) => {
+			// Support button enter and space interactions
+			switch (event.code.toUpperCase()) {
+				case "ENTER":
+				case "SPACE":
+					thankYouWrapper.style.display = 'none';
+					break;
+				default:
+					break;
+			}
+		});
 
 		// Open from the main download buttons.
 		const downloadButtons = document.querySelectorAll('.btn-download');
@@ -380,9 +391,9 @@ layout: default
 			</li>
 		</ul>
 
-		<button class="btn-back-to-downloads">
+		<a href="#" class="btn-back-to-downloads" tabindex="0">
 			<img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup">
-		</button>
+		</a>
 	</div>
 </div>
 
