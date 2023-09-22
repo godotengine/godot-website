@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Release candidate: Godot 4.1.2 RC 1",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-1-2-rc-1/",
+			"description": "It&#39;s long overdue for the second Godot 4.1 patch release! This release candidate contains a number of important fixes, including performance and stability improvements, so let&#39;s give it a good test.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-1-2-rc-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Fri, 22 Sep 2023 14:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-2-rc-1.webp"
+		},
+		
+		{
 			"title": "Dev snapshot: Godot 4.2 dev 5",
 			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-5/",
 			"description": "Penultimate 4.2 dev snapshot brings improvements to Android plugin API, the Tilemap editor, and, well, practically everything else — making it ready for beta testing next month.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Yuri Sizov",
 			"pubDate": "Tue, 27 Jun 2023 14:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-rc-1.webp"
-		},
-		
-		{
-			"title": "Godot community poll 2023",
-			"link": "https://godotengine.org/article/godot-community-poll-2023/",
-			"description": "It&#39;s this time of the year! Godot Community Poll 2023 is now out!",
-			"categories": ["News"],
-			"guid": "https://godotengine.org/article/godot-community-poll-2023/",
-			"dc:creator": "Clay John",
-			"pubDate": "Fri, 23 Jun 2023 14:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/quiz-2023.png"
 		}
 		
 	]
