@@ -6,7 +6,7 @@ author: Yuri Sizov
 image: /storage/blog/covers/release-candidate-godot-4-1-2-rc-1.webp
 image_caption_title: "Fisk"
 image_caption_description: "A game by Kristian Nilsen"
-date: 2023-09-22 16:00:00
+date: 2023-09-22 14:00:00
 ---
 
 We have had quite a pause since [Godot 4.1.1](https://godotengine.org/article/maintenance-release-godot-4-1-1/) — two months without a new patch release (blame the summer break!). So it's long overdue we have one, starting of course with a release candidate to validate that everything is in order and no new changes introduce regressions.
@@ -21,7 +21,7 @@ Maintenance releases are expected to be safe for an upgrade, but we recommend to
 
 -----
 
-*The illustration picture for this article comes from* [**Fisk**](http://fiskthegame.com/) *— an open world survival horror game with Lovecraftian vibes currently being developed by [Kristian Nilsen](https://twitter.com/sajbear666) with Godot 4. (It uses* [**Qodot**](https://github.com/QodotPlugin/Qodot/) *for creating geometry, by the way, which deserves its own shoutout!) You can follow Kristian on [Twitter](https://twitter.com/sajbear666) for more updates and you can download Fisk today from the website.*
+*The illustration picture for this article comes from* [**Fisk**](http://fiskthegame.com/) *— an open world survival horror game with Lovecraftian vibes currently being developed by [Kristian Nilsen](https://twitter.com/sajbear666) with Godot 4. (It uses* [**Qodot**](https://github.com/QodotPlugin/Qodot/) *for creating geometry, by the way, which deserves its own shoutout!) You can follow Kristian on [Twitter](https://twitter.com/sajbear666) for more updates and you can download Fisk today from [its website](http://fiskthegame.com/).*
 
 ## What's new
 
