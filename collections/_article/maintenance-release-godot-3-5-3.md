@@ -11,7 +11,7 @@ date: 2023-09-25 14:00:00
 
 Long time no see, Godot 3.5! While our development focus since [Godot 4.0](/article/godot-4-0-sets-sail/) in March has been to release new 4.x versions at a steady pace (with [Godot 4.1](/article/godot-4-1-is-here/) in July, and Godot 4.2 scheduled for November), we're not forgetting about users who are still using Godot 3.5.
 
-Everyone seemed pretty happy with the [3.5.2 release](/article/maintenance-release-godot-3-5-2/), and it's the one most 3.x games have been published with in the past few months. But there's still a number of issues that are worth addressing in that branch, including notably some improvements for platform support such as targeting Android 13 by default. Also, we're still working on the upcoming Godot 3.6 feature release, which should soon reach the release candidate stage.
+Everyone seemed pretty happy with the [3.5.2 release](/article/maintenance-release-godot-3-5-2/). In the 6 months since the 3.5.2 release, hundreds of games have been released with this version. But there are still a number of issues that are worth addressing in that branch, including notably some improvements for platform support such as targeting Android 13 by default. Also, we're still working on the upcoming Godot 3.6 feature release, which should soon reach the release candidate stage.
 
 **This is a safe and recommended update for all Godot 3.5.x users.** It should have no major impact on your projects, even complex ones in production, if you're already using 3.5.2-stable.
 
