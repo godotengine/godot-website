@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Maintenance release: Godot 3.5.3",
+			"link": "https://godotengine.org/article/maintenance-release-godot-3-5-3/",
+			"description": "It&#39;s been way too long since our previous 3.5 maintenance release! This new Godot 3.5.3 fixes a number of important issues and adjusts to changing platform requirements.",
+			"categories": ["Release"],
+			"guid": "https://godotengine.org/article/maintenance-release-godot-3-5-3/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Mon, 25 Sep 2023 14:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-5-3.webp"
+		},
+		
+		{
 			"title": "Release candidate: Godot 4.1.2 RC 1",
 			"link": "https://godotengine.org/article/release-candidate-godot-4-1-2-rc-1/",
 			"description": "It&#39;s long overdue for the second Godot 4.1 patch release! This release candidate contains a number of important fixes, including performance and stability improvements, so let&#39;s give it a good test.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Fri, 30 Jun 2023 11:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-rc-2.webp"
-		},
-		
-		{
-			"title": "Release candidate: Godot 4.1 RC 1",
-			"link": "https://godotengine.org/article/release-candidate-godot-4-1-rc-1/",
-			"description": "After 4 months of development, Godot 4.1 is only days away. To make sure it doesn&#39;t miss the mark, here&#39;s the first release candidate for your testing!",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/release-candidate-godot-4-1-rc-1/",
-			"dc:creator": "Yuri Sizov",
-			"pubDate": "Tue, 27 Jun 2023 14:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-rc-1.webp"
 		}
 		
 	]
