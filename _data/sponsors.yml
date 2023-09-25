@@ -1,4 +1,7 @@
 platinum:
+  - name: "OSS Capital"
+    link: "https://oss.capital/"
+    image: "https://fund.godotengine.org/static/logos/ossc-logo.svg"
   - name: "Gamblify"
     link: "https://www.gamblify.com/"
     image: "https://fund.godotengine.org/static/logos/gamblify.png"
@@ -14,10 +17,16 @@ platinum:
   - name: "Ramatak"
     link: "https://ramatak.com/"
     image: "https://fund.godotengine.org/static/logos/ramatak.png"
+  - name: "Re-Logic"
+    link: "https://re-logic.com/"
+    image: "https://fund.godotengine.org/static/logos/re-logic.png"
 gold:
   - name: "Prehensile Tales"
     link: "https://prehensile-tales.com"
     image: "https://fund.godotengine.org/static/logos/pt.png"
+  - name: "Robot Gentleman"
+    link: "http://robotgentleman.com/"
+    image: "https://fund.godotengine.org/static/logos/robot-gentleman.png"
 silver:
   - name: "Affray Interactive"
     link: "https://scp.games/pandemic/"
@@ -25,6 +34,3 @@ silver:
   - name: "Playful Studios"
     link: "https://playfulstudios.com/"
     image: "https://fund.godotengine.org/static/logos/playful-studios.png"
-  - name: "Robot Gentleman"
-    link: "http://robotgentleman.com/"
-    image: "https://fund.godotengine.org/static/logos/robot-gentleman.png"
