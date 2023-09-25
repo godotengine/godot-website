@@ -1377,7 +1377,6 @@ section.sponsors .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  padding-left: 80px;
 }
 
 @media (min-width: 768px) {
