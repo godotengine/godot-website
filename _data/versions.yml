@@ -20,15 +20,19 @@
       release_notes: "/article/dev-snapshot-godot-4-2-dev-1/"
 
 - name: "4.1.2"
-  flavor: "rc1"
-  release_date: "22 September 2023"
-  release_notes: "/article/release-candidate-godot-4-1-2-rc-1/"
+  flavor: "stable"
+  release_date: "4 October 2023"
+  release_notes: "/article/maintenance-release-godot-4-1-2/"
+  featured: "4"
+  releases:
+    - flavor: "rc1"
+      release_date: "22 September 2023"
+      release_notes: "/article/release-candidate-godot-4-1-2-rc-1/"
 
 - name: "4.1.1"
   flavor: "stable"
   release_date: "17 July 2023"
   release_notes: "/article/maintenance-release-godot-4-1-1/"
-  featured: "4"
   releases:
     - name: "rc1"
       release_date: "12 July 2023"
