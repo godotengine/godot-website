@@ -71,7 +71,7 @@ collection: article
 			<h1 class="intro-title">Blog</h1>
 			<form class="search-bar" method="get" action="https://duckduckgo.com/">
 				<input type="hidden" name="sites" value="godotengine.org/article" />
-				<input type="text" name="q" maxlength="300" placeholder="Search articles" />
+				<input type="search" name="q" maxlength="300" placeholder="Search articles" />
 				<button class="btn search-bar-btn" type="submit">
 					<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
 				</button>
@@ -133,9 +133,9 @@ collection: article
 					<div class="info">
 						{% assign post_author = site.data.authors | find: "name", post.author %}
 						{% if post_author %}
-							<img class="avatar" width="25" height="25" src="{{ post_author.image }}" alt="{{ post.author }}" loading="lazy">
+							<img class="avatar" width="25" height="25" src="{{ post_author.image }}" alt="{{ post.author }}" loading="lazy" decoding="async">
 						{% else %}
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="{{ post.author }}" loading="lazy">
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="{{ post.author }}" loading="lazy" decoding="async">
 						{% endif %}
 						<span class="by">{{ post.author }} </span>
 						<span class="date">&nbsp;-&nbsp;{{ post.date | date: "%e %B %Y" }}</span>
