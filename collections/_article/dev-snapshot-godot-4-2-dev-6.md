@@ -37,7 +37,7 @@ Here's a selection of some of the biggest changes since our previous [4.2 dev 5 
 
   - After some fixes in previous snapshots, the Web platform should now support loading dynamic libraries, i.e. GDExtension support! The latest fix was just merged ([GH-82633](https://github.com/godotengine/godot/pull/82633)) and still needs user testing, so please let us know if you can compile a GDExtension for the Web and load it successfully in your Godot project.
 
-* GDScript also got a number of new features, such as raw string literals ([GH-74995](https://github.com/godotengine/godot/pull/74995)), pattern guards for match statement ([GH-80085](https://github.com/godotengine/godot/pull/80085)), and a new `--lsp-port` command line argument that will be useful for authors of LSP plugins to support both Godot 3.x and 4.x, as well as multiple editor instances.
+* GDScript also got a number of new features, such as raw string literals ([GH-74995](https://github.com/godotengine/godot/pull/74995)), pattern guards for `match` statements ([GH-80085](https://github.com/godotengine/godot/pull/80085)), and a new `--lsp-port` command line argument that will be useful for authors of LSP plugins to support both Godot 3.x and 4.x, as well as multiple editor instances.
 
 * Lots of improvements in the editor, such as an overhaul of the Gradient editor ([GH-71915](https://github.com/godotengine/godot/pull/71915)), the ability to select where to install the assets that you're downloading from the Asset Library ([GH-81620](https://github.com/godotengine/godot/pull/81620)), and various fixes to the script editor and FileSystem docks, among others.
 
