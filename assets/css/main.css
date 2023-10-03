@@ -417,21 +417,20 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
-#nav_toggle_cb,
 #nav_toggle_btn {
   display: none;
+  border: 0;
   line-height: 0px;
+  background-color: transparent;
   cursor: pointer;
   /* Prevent double-clicking the button from highlighting the icon as selected text on desktop. */
   user-select: none;
 }
 
 nav {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-right: 1rem;
+  width: 100%;
 }
 
 nav a {
@@ -465,25 +464,19 @@ nav ul {
 }
 
 nav > ul {
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
-  height: 100%;
-}
-
-nav > ul > :first-child {
-  padding-left: 0;
-}
-
-nav > ul > :last-child {
-  padding-right: 0;
+  margin-left: -1rem;
 }
 
 nav > ul li {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 0;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav-split {
+  margin-right: auto;
 }
 
 nav li.active > a {
@@ -1001,23 +994,34 @@ pre > code {
     margin-top: 0.25rem;
   }
   #nav_toggle_btn {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
     display: block;
     /* Make the navbar toggle button easier to click. */
     padding: 1.25rem;
     margin-top: -0.2rem;
     margin-right: -1rem;
   }
-  #nav_toggle_btn:hover {
+  .no-js #nav_toggle_btn {
+    display: none;
+  }
+  #nav_toggle_btn:hover,
+  #nav_toggle_btn:focus {
     background-color: hsla(0, 0%, 50%, 0.15);
   }
   #nav_toggle_btn:active {
     background-color: hsla(0, 0%, 50%, 0.25);
   }
-  #nav_toggle_cb:checked ~ header nav {
-    display: block;
-  }
   #nav {
+    position: relative;
+  }
+  #nav > ul {
     display: none;
+  }
+  .nav-is-open #nav > ul,
+  .no-js #nav > ul {
+    display: block;
   }
   nav ul {
     align-items: flex-start;

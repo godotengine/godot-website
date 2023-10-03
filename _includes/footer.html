@@ -75,7 +75,23 @@
 <script defer src="/assets/js/highlight.min.js?1"></script>
 <script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
 <script>
+	document.body.classList.remove('no-js');
+	document.body.classList.add('js');
 	document.addEventListener('DOMContentLoaded', () => {
+		// Handle mobile navigation toggle
+		const navToggle = document.querySelector('#nav_toggle_btn');
+		const header = document.querySelector('#header');
+
+		navToggle.addEventListener('click', () => {
+			if (header.classList.contains('nav-is-open')) {
+				navToggle.setAttribute('aria-expanded', 'false');
+				header.classList.remove('nav-is-open');
+			} else {
+				navToggle.setAttribute('aria-expanded', 'true');
+				header.classList.add('nav-is-open');
+			}
+		});
+
 		// This needs to be done on page load but also after page changes,
 		// in case a code block appears in an article.
 		document.querySelectorAll('pre code').forEach((block) => {

@@ -1,29 +1,23 @@
-<input type="checkbox" id="nav_toggle_cb">
-<header>
+<header id="header">
 	<div class="container flex align-center">
 		<div id="nav_head">
 			<a href="/" id="logo-link">
 				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
 				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
 			</a>
-			<label for="nav_toggle_cb" id="nav_toggle_btn">
-				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="Main menu">
-			</label>
 		</div>
 
 		<nav id="nav">
-			<ul class="left">
+			<button id="nav_toggle_btn" type="button" title="Main menu" aria-label="Main menu" aria-expanded="false" aria-controls="nav-menu">
+				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="" aria-hidden="true">
+			</button>
+			<ul id="nav-menu">
 				<li><a href="/features">Features</a></li>
-				<div class="only-on-mobile" style="width: 100%">
-					<li><a href="/showcase">Showcase</a></li>
-				</div>
+				<li class="only-on-mobile"><a href="/showcase">Showcase</a></li>
 				<li><a href="/blog">Blog</a></li>
 				<li><a href="/community">Community</a></li>
 				<li><a href="/contact">About</a></li>
-				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
-			</ul>
-
-			<ul class="right">
+				<li class="nav-split"><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
 				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
 				<li><a href="https://docs.godotengine.org">Learn</a></li>
 				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>

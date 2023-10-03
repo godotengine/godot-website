@@ -8,7 +8,8 @@ header {
 }
 
 @media (max-width: 1200px) {
-	input#nav_toggle_cb:checked~header {
+	header.nav-is-open,
+  .no-js header {
 		background-color: var(--navbar-background-color);
 	}
 }
@@ -45,15 +46,17 @@ nav#nav .fund a {
 		color: var(--navbar-link-color);
 	}
 
-	input#nav_toggle_cb:checked~header #nav_head #nav_toggle_btn {
+	#nav_toggle_btn[aria-expanded=true] {
 		filter: none;
 	}
 
-	input#nav_toggle_cb:checked~header #nav_head .nav-logo {
+	.nav-is-open .nav-logo,
+	.no-js .nav-logo {
 		display: inline;
 	}
 
-	input#nav_toggle_cb:checked~header #nav_head .nav-logo.dark-logo {
+	.nav-is-open .nav-logo.dark-logo,
+  .no-js .nav-logo.dark-logo {
 		display: none;
 	}
 }
