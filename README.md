@@ -25,7 +25,9 @@ When working on new features, keep in mind this website only supports _evergreen
 
 **Internet Explorer isn't supported.**
 
-## Development
+## Developmen
+
+It's good to know that cloning the entire history of this repository may be costly on your internet bandwidth. If only the latest copy of the project is needed, please read the instructions below to learn how to shallow clone this repository.
 
 ### Building
 
@@ -34,6 +36,8 @@ To build the website locally, follow these steps:
 1. Install [Jekyll prerequisites](https://jekyllrb.com/docs/installation/).
    - Make sure `bundle` is available from the command line.
 2. Clone this repository.
+   - Entire history clone: `git clone https://github.com/godotengine/godot-website.git`.
+   - Shallow clone: `git clone --depth 1 https://github.com/godotengine/godot-website.git`.
 3. Install the necessary dependencies: `bundle install`.
 4. Build the site: `bundle exec jekyll build`.
    - Append `--config _config.yml,_config.development.yml` to use the development config with your build.
