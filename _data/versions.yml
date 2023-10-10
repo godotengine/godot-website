@@ -25,7 +25,7 @@
   release_notes: "/article/maintenance-release-godot-4-1-2/"
   featured: "4"
   releases:
-    - flavor: "rc1"
+    - name: "rc1"
       release_date: "22 September 2023"
       release_notes: "/article/release-candidate-godot-4-1-2-rc-1/"
 
