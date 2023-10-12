@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Dev snapshot: Godot 4.2 beta 1",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/",
+			"description": "With all planned major and minor features implemented, Godot 4.2 is ready for beta testing!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Thu, 12 Oct 2023 14:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-1.webp"
+		},
+		
+		{
 			"title": "Maintenance release: Godot 4.1.2",
 			"link": "https://godotengine.org/article/maintenance-release-godot-4-1-2/",
 			"description": "As Godot 4.2 enters feature freeze this week, a new Godot 4.1 maintenance release arrives with a handful of improvements to stability and performance!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Godot Foundation",
 			"pubDate": "Tue, 11 Jul 2023 12:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/funding-breakdown-and-hiring-process.webp"
-		},
-		
-		{
-			"title": "Godot 4.1 is here, smoother, more reliable, and with plenty of new features",
-			"link": "https://godotengine.org/article/godot-4-1-is-here/",
-			"description": "Four months after the release of Godot 4.0, we are excited to bring you Godot 4.1 — an update with a focus on stability, performance, and polish.",
-			"categories": ["Release"],
-			"guid": "https://godotengine.org/article/godot-4-1-is-here/",
-			"dc:creator": "Godot contributors",
-			"pubDate": "Thu, 06 Jul 2023 12:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/godot-4-1-is-here.webp"
 		}
 		
 	]

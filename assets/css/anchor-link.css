@@ -3,13 +3,14 @@
     background-image: url(/assets/icons/link.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20px 20px;
-    font-size: 16px;
+    background-size: 100% 100%;
     text-decoration: none;
     margin-left: 10px;
     vertical-align: middle;
-    width: 24px;
-    height: 24px;
+    width: 0.8em;
+    height: 0.8em;
+    max-width: 24px;
+    max-height: 24px;
 }
 .anchored-link:hover {
     opacity: 0.9;
