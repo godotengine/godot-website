@@ -157,6 +157,15 @@ Germany:
         url: https://mastodon.gamedev.place/@GodotUserGroupBerlin
       - title: Discord
         url: https://discord.gg/Sm3CgrqqQa
+  - name: Godot Stammtisch Karlsruhe
+    coordinates:
+      - 49.00688
+      - 8.40365
+    links:
+      - title: Meetup
+        url: https://www.meetup.com/de-DE/godot-stammtisch-karlsruhe/
+      - title: Discord
+        url: https://discord.gg/JFzUhpEt6Q
 India:
   - name: Godot India
     links:
@@ -181,7 +190,7 @@ Italy:
       - title: Discord
         url: https://discord.gg/7YuUqJB
       - title: Facebook
-        url: https://www.facebook.com/groups/1926189904375792/ 
+        url: https://www.facebook.com/groups/1926189904375792/
 Iran:
   - name: Godot Iran (گودو ایران)
     links:
@@ -208,7 +217,7 @@ Iraq:
         url: https://www.instagram.com/bgl.iq/
       - title: Linkedin
         url: https://www.linkedin.com/company/bgh-iq
-        
+
 Israel:
   - name: Godot Israel
     links:
