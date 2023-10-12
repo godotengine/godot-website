@@ -273,7 +273,7 @@ Godot 4.2 features support for AMD's <abbr title="FidelityFX Super Resolution">F
 
 Darío also implemented a new lightmapper denoising approach to replace the old, extremely bulky and slow <abbr title="OpenImage Denoise">OIDN</abbr> denoiser. Although a newer and improved version of OIDN is available, we were unfortunately stuck with an older one due to technical incompatibilities. The new <abbr title="Joint Non-Local Means">JNLM</abbr> denoiser avoids similar issues. It is also much faster as it utilizes compute shaders (and thus your GPU), and it's significantly more lightweight ([GH-81659](https://github.com/godotengine/godot/pull/81659)).
 
-While the quality decrease can be noticeable under some circumstances, thanks to drastically reduced baking times, you can now use higher resolution maps to counteract that. If you would prefer to use OIDN, this is still possible by configuring the editor to use an external OIDN executable, giving access to the latest versions with support for GPU denoising ([GH-82832](https://github.com/godotengine/godot/pull/82832) by [Pāvels Nadtočajevs](https://github.com/bruvzg)).
+While the quality may decrease in some situations (and increase in others), you can use higher quality options to increase the overall quality thanks to drastically reduced denoise times. If you would prefer to use OIDN, this is still possible by configuring the editor to use an external OIDN executable, giving access to the latest versions with support for GPU denoising ([GH-82832](https://github.com/godotengine/godot/pull/82832) by [Pāvels Nadtočajevs](https://github.com/bruvzg)).
 
 ![The result of using the new JNLM denoiser](/storage/blog/godot-4-2-beta/jnlm-denoiser.webp)
 
