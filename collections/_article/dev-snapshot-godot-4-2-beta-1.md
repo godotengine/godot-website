@@ -118,7 +118,7 @@ We start with the code editor, which now supports code regions (for GDScript). C
 
 #### 3D viewport and tools
 
-In Godot 4.0 [Ryan Roden-Corrent](https://github.com/rcorre) added convenient hotkeys to the 3D viewport which any Blender user would find familiar. Blender-style transforms, using keys like `G`, `R`, or `S`, are now improved with support for numeric inputs for each operation, and mouse wrapping ([GH-58389](https://github.com/godotengine/godot/pull/58389), [GH-59467](https://github.com/godotengine/godot/pull/59467)).
+In Godot 4.0 [Ryan Roden-Corrent](https://github.com/rcorre) added convenient hotkeys to the 3D viewport which any Blender user would find familiar. Blender-style transforms (i.e. using `G`, `R`, or `S` for translation, rotation, and scale) are now improved with support for numeric inputs for each operation, and mouse wrapping ([GH-58389](https://github.com/godotengine/godot/pull/58389), [GH-59467](https://github.com/godotengine/godot/pull/59467)). Note that hotkeys for these operations are not bound by default and need to be configured in the editor settings.
 
 If you rely more on on-screen gizmos, you will love this next feature developed by [Tomasz Chabora](https://github.com/KoBeWi). As you probably know, box collision shapes are defined as a center point and symmetrical extents, which has long limited how they can be edited. But no longer, as each side can now be extended individually within the editor viewport ([GH-71092](https://github.com/godotengine/godot/pull/71092)).
 
