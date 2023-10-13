@@ -35,3 +35,6 @@ silver:
   - name: "Gamblify"
     link: "https://www.gamblify.com/"
     image: "https://fund.godotengine.org/static/logos/gamblify.png"
+  - name: "Orbital Knight"
+    link: "https://www.orbitalknight.com/"
+    image: "https://fund.godotengine.org/static/logos/orbital-knight.png"
