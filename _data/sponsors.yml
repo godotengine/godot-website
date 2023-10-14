@@ -38,3 +38,6 @@ silver:
   - name: "Orbital Knight"
     link: "https://www.orbitalknight.com/"
     image: "https://fund.godotengine.org/static/logos/orbital-knight.png"
+  - name: "Broken Rules"
+    link: "https://brokenrul.es"
+    image: "https://fund.godotengine.org/static/logos/broken-rules.svg"
