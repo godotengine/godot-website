@@ -298,6 +298,12 @@
   <li>The new <code class="language-plaintext highlighter-rouge">AnimationMixer</code> node is added as an intermediate class for <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> and <code class="language-plaintext highlighter-rouge">AnimationTree</code> (<a href="https://github.com/godotengine/godot/pull/80813">GH-80813</a>).</li>
   <li><code class="language-plaintext highlighter-rouge">GraphEdit</code> and <code class="language-plaintext highlighter-rouge">GraphNode</code> nodes are reworked with multiple renames, temporary removal of comment nodes, and introduction of <code class="language-plaintext highlighter-rouge">GraphElement</code> (<a href="https://github.com/godotengine/godot/pull/79307">GH-79307</a>, <a href="https://github.com/godotengine/godot/pull/79308">GH-79308</a>, <a href="https://github.com/godotengine/godot/pull/79311">GH-79311</a>, <a href="https://github.com/godotengine/godot/pull/81582">GH-81582</a>).</li>
   <li>An optimization that required splitting raster barriers into vertex and fragment components changes relevant enumerations (<a href="https://github.com/godotengine/godot/pull/77420">GH-77420</a>). It’s unlikely that this affects your project, unless you rely on specific numeric values and store them somewhere.</li>
+  <li>Several changes in the GLTF importer can lead to nodes in imported scenes having slightly different names, compared to Godot 4.1 and before. We are looking for a way to preserve compatibility for existing assets and should introduce it in later beta releases.
+    <ul>
+      <li>Camera nodes were previously called <code class="language-plaintext highlighter-rouge">Camera3D</code>. They are going to be called <code class="language-plaintext highlighter-rouge">Camera</code> now (<a href="https://github.com/godotengine/godot/pull/81264">GH-81264</a>).</li>
+      <li>Some nodes previously had numeric suffixes added to them even if they had no duplicates. They should be imported with their original name now (<a href="https://github.com/godotengine/godot/pull/80270">GH-80270</a>).</li>
+    </ul>
+  </li>
   <li>Renaming an audio bus no longer emits the <code class="language-plaintext highlighter-rouge">bus_layout_changed</code> signal in <code class="language-plaintext highlighter-rouge">AudioServer</code>; use the new <code class="language-plaintext highlighter-rouge">bus_renamed</code> signal (<a href="https://github.com/godotengine/godot/pull/81641">GH-81641</a>).</li>
   <li>Default base part of the Android package name was changed from <code class="language-plaintext highlighter-rouge">org.godotengine</code> to <code class="language-plaintext highlighter-rouge">com.example</code> (<a href="https://github.com/godotengine/godot/pull/80761">GH-80761</a>).</li>
 </ul>
@@ -332,7 +338,7 @@
 
 <h4 id="navigation">Navigation</h4>
 
-<p>Exciting additions have been cooking in the navigation system of the engine by Godot’s resident navigation maintainer <a href="https://github.com/smix8">smix8</a>. At the top of the list is navigation mesh baking for 2D, bringing it to parity with 3D navigation (<a href="https://github.com/godotengine/godot/pull/80796">GH-80796</a>). It is capable of handling physics bodies, mesh instances, plain polygons, and, of course, tilemaps (<a href="https://github.com/godotengine/godot/pull/82465">GH-82465</a>).</p>
+<p>Exciting additions have been cooking in the navigation system of the engine by Godot’s resident navigation maintainer <a href="https://github.com/smix8">smix8</a>. At the top of the list is navigation mesh baking for 2D, bringing it to parity with 3D navigation (<a href="https://github.com/godotengine/godot/pull/80796">GH-80796</a>). It is capable of handling physics bodies, mesh instances, plain polygons, and, of course, tilemaps (<a href="https://github.com/godotengine/godot/pull/82465">GH-82465</a>, see this for more details).</p>
 
 <p>On top of that, both 2D and 3D navigation servers now support multi-threading when baking the navigation mesh (<a href="https://github.com/godotengine/godot/pull/79972">GH-79972</a>), removing stutters and bringing performance to a whole new level.</p>
 
