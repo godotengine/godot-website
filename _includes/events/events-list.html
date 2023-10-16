@@ -29,7 +29,7 @@
 			Print the currently tracked year.
 			{% endcomment %}
 
-			{% include events-year.html year=year shortlist=shortlist fulllist=fulllist %}
+			{% include events/events-year.html year=year shortlist=shortlist fulllist=fulllist %}
 
 			{% comment %}
 			Reset the tracking variables and set the currently tracked year.
@@ -97,7 +97,7 @@
 	{% endcomment %}
 
 	{% if year != "" %}
-		{% include events-year.html year=year shortlist=shortlist fulllist=fulllist %}
+		{% include events/events-year.html year=year shortlist=shortlist fulllist=fulllist %}
 	{% endif %}
 
 </section>

@@ -1,0 +1,30 @@
+<div class="archive-list-item">
+	{% assign release_version = include.version | make_release_version: include.release %}
+
+	<div class="archive-release">
+		<a class="archive-version" href="/download/archive/{{ release_version.name }}-{{ release_version.flavor }}" title="Open downloads page">
+			<h4 id="{{ release_version.name }}-{{ release_version.flavor }}">
+				{{ release_version.name }}-{{ release_version.flavor }}
+			</h4>
+
+			<p class="archive-download-meta">
+				{% unless release_version.release_date == empty %}
+					<span>{{ release_version.release_date }}</span>
+				{% endunless %}
+			</p>
+		</a>
+	</div>
+
+	<a class="btn btn-release-download" href="/download/archive/{{ release_version.name }}-{{ release_version.flavor }}">Download</a>
+
+	{% unless release_version.release_notes == empty %}
+		{% assign release_article = site.article | find: "url", release_version.release_notes %}
+
+		{% unless release_article == empty %}
+			<a class="btn btn-release-notes" href="{{ release_article.url }}" title="Read release announcement">News</a>
+		{% endunless %}
+	{% endunless %}
+
+	<a class="btn btn-release-changelog" href="https://godotengine.github.io/godot-interactive-changelog/#{{ release_version.name }}-{{ release_version.flavor }}" title="View complete changelog">Changelog</a>
+
+</div>

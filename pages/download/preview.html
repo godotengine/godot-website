@@ -114,7 +114,7 @@ layout: default
 			{% for version in site.data.versions %}
 				{% unless stable_versions contains version %}
 
-					{% include download-version.html version=version %}
+					{% include download/version-card.html version=version %}
 
 				{% endunless %}
 			{% endfor %}

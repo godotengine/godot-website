@@ -9,6 +9,7 @@ layout: default
 <style>
 	.hero {
 		background-image: none;
+		padding-top: 54px;
 	}
 	.hero h1 {
 		text-shadow: none;
@@ -50,7 +51,7 @@ layout: default
 	<div class="padded" style="padding-top:0;margin-top:32px">
 		<div class="preview-cards">
 
-			{% include download-version.html version=page.version %}
+			{% include download/version-card.html version=page.version %}
 
 		</div>
 	</div>

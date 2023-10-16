@@ -8,10 +8,12 @@ layout: default
 {% include header.html %}
 
 <link rel="stylesheet" href="/assets/css/download.css?2">
-<link rel="stylesheet" href="/assets/css/download-version-archive.css">
+<link rel="stylesheet" href="/assets/css/download-archive.css">
 <style>
 	.hero {
 		background-image: none;
+		padding-top: 54px;
+		padding-bottom: 30px;
 	}
 	.hero h1 {
 		text-shadow: none;
@@ -22,12 +24,6 @@ layout: default
 		color: var(--base-color-text);
 	}
 
-	.archive-cards {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 16px;
-	}
-
 	footer {
 		margin-top: 0;
 	}
@@ -35,7 +31,7 @@ layout: default
 
 <div class="hero">
 	<div class="hero-wrapper">
-		<h1>Godot download archive</h1>
+		<h1>Godot archive</h1>
 
 		<div class="hero-blurb">
 			<p>
@@ -49,23 +45,33 @@ layout: default
 	<div class="padded" style="padding-top:0;margin-top:32px">
 		<h2>Official releases</h2>
 
-		<div class="archive-cards">
+		<div class="archive-list">
 			{% for version in site.data.versions %}
 
-				<div class="card base-padding archive-download">
-					<h3 id="{{ version.name }}">
-						Godot {{ version.name }}
-					</h3>
+				<div class="archive-group">
+					<div>
+						<h3 id="{{ version.name }}">
+							Godot {{ version.name }}
+						</h3>
 
-					<div class="archive-releases">
-						{% include download-version-archive.html version=version %}
-
-						{% for release in version.releases %}
-
-							{% include download-version-archive.html version=version release=release %}
-
-						{% endfor %}
+						<span>Current state:</span> <span class="archive-version-flavor">{{ version.flavor }}</span>
 					</div>
+				</div>
+
+				<div class="card base-padding archive-releases">
+					{% assign flavor_hint = version.flavor | slice: 0, 2 %}
+					{% include download/archive-list-item.html version=version %}
+
+					{% for release in version.releases %}
+						{% assign next_hint = release.name | slice: 0, 2 %}
+						{% if flavor_hint != next_hint %}
+							<hr>
+							{% assign flavor_hint = next_hint %}
+						{% endif %}
+
+						{% include download/archive-list-item.html version=version release=release %}
+
+					{% endfor %}
 				</div>
 
 			{% endfor %}
