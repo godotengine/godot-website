@@ -50,6 +50,9 @@ This release is built from commit [`b1371806a`](https://github.com/godotengine/g
 - The new `AnimationMixer` node is added as an intermediate class for `AnimationPlayer` and `AnimationTree` ([GH-80813](https://github.com/godotengine/godot/pull/80813)).
 - `GraphEdit` and `GraphNode` nodes are reworked with multiple renames, temporary removal of comment nodes, and introduction of `GraphElement` ([GH-79307](https://github.com/godotengine/godot/pull/79307), [GH-79308](https://github.com/godotengine/godot/pull/79308), [GH-79311](https://github.com/godotengine/godot/pull/79311), [GH-81582](https://github.com/godotengine/godot/pull/81582)).
 - An optimization that required splitting raster barriers into vertex and fragment components changes relevant enumerations ([GH-77420](https://github.com/godotengine/godot/pull/77420)). It's unlikely that this affects your project, unless you rely on specific numeric values and store them somewhere.
+- Several changes in the GLTF importer can lead to nodes in imported scenes having slightly different names, compared to Godot 4.1 and before. We are looking for a way to preserve compatibility for existing assets and should introduce it in later beta releases.
+  - Camera nodes were previously called `Camera3D`. They are going to be called `Camera` now ([GH-81264](https://github.com/godotengine/godot/pull/81264)).
+  - Some nodes previously had numeric suffixes added to them even if they had no duplicates. They should be imported with their original name now ([GH-80270](https://github.com/godotengine/godot/pull/80270)).
 - Renaming an audio bus no longer emits the `bus_layout_changed` signal in `AudioServer`; use the new `bus_renamed` signal ([GH-81641](https://github.com/godotengine/godot/pull/81641)).
 - Default base part of the Android package name was changed from `org.godotengine` to `com.example` ([GH-80761](https://github.com/godotengine/godot/pull/80761)).
 
@@ -85,7 +88,7 @@ The animation team is hard at work improving robustness of the animation system,
 
 #### Navigation
 
-Exciting additions have been cooking in the navigation system of the engine by Godot's resident navigation maintainer [smix8](https://github.com/smix8). At the top of the list is navigation mesh baking for 2D, bringing it to parity with 3D navigation ([GH-80796](https://github.com/godotengine/godot/pull/80796)). It is capable of handling physics bodies, mesh instances, plain polygons, and, of course, tilemaps ([GH-82465](https://github.com/godotengine/godot/pull/82465)).
+Exciting additions have been cooking in the navigation system of the engine by Godot's resident navigation maintainer [smix8](https://github.com/smix8). At the top of the list is navigation mesh baking for 2D, bringing it to parity with 3D navigation ([GH-80796](https://github.com/godotengine/godot/pull/80796)). It is capable of handling physics bodies, mesh instances, plain polygons, and, of course, tilemaps ([GH-82465](https://github.com/godotengine/godot/pull/82465), see this for more details).
 
 On top of that, both 2D and 3D navigation servers now support multi-threading when baking the navigation mesh ([GH-79972](https://github.com/godotengine/godot/pull/79972)), removing stutters and bringing performance to a whole new level.
 
