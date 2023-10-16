@@ -5,14 +5,14 @@
 		Godot {{ release_version.name }}-{{ release_version.flavor }}
 	</h3>
 
-	<p class="preview-download-meta">
-		{% unless release_version.release_date == empty %}
-			<span>{{ release_version.release_date }}</span>
-		{% endunless %}
-	</p>
-
 	<div class="preview-download-primary">
 		<div class="preview-notes">
+			<p class="preview-download-meta">
+				{% unless release_version.release_date == empty %}
+					<span>{{ release_version.release_date }}</span>
+				{% endunless %}
+			</p>
+
 			{% unless release_version.release_notes == empty %}
 				{% assign release_article = site.article | find: "url", release_version.release_notes %}
 
@@ -34,17 +34,19 @@
 				{% unless release_version.release_notes == empty %}
 					{% assign release_article = site.article | find: "url", release_version.release_notes %}
 					{% unless release_article == empty %}
-						<a class="btn btn-release-notes" href="{{ release_article.url }}">Read more</a>
+						<a class="btn btn-release-notes" href="{{ release_article.url }}" title="Read full release announcement">Read more</a>
 					{% endunless %}
 				{% endunless %}
 
-				<a class="btn btn-release-changelog" href="https://godotengine.github.io/godot-interactive-changelog/#{{ release_version.name }}-{{ release_version.flavor }}">View complete changelog</a>
+				<a class="btn btn-release-changelog" href="https://godotengine.github.io/godot-interactive-changelog/#{{ release_version.name }}-{{ release_version.flavor }}" title="View complete changelog">View changelog</a>
 			</div>
 
 		</div>
 
 		<div>
-			<h4>Main downloads</h4>
+			<h4>Supported platforms</h4>
+			{% assign has_mono = false %}
+
 			<div class="download-primaries">
 				{% assign download_primary = release_version | get_download_primary: false %}
 				{% for primary in download_primary %}
@@ -54,10 +56,18 @@
 					{% endcomment %}
 					{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
 
+					{% if primary[1] == "templates" %}
+						<hr>
+					{% endif %}
+
+					<div class="download-platform">
+						<img width="24" height="24" src="/assets/images/platforms/{{ primary[0] | split: "_" | join: "-" }}.svg" title="{{ platform_info.title }}" alt="{{ platform_info.title }}" class="dark-invert" />
+						{{ platform_info.title }}
+					</div>
+
 					<a href="{{ release_version | make_download: primary[1], false, "github_builds" }}" class="btn btn-download btn-download-primary">
 						<div class="download-title">
-							<img width="24" height="24" src="/assets/images/platforms/{{ primary[0] | split: "_" | join: "-" }}.svg" title="{{ platform_info.title }}" alt="{{ platform_info.title }}" />
-							{{ platform_info.title }}
+							Standard
 						</div>
 					</a>
 
@@ -65,13 +75,20 @@
 					{% if mono_download == "#" %}
 						<div></div>
 					{% else %}
-						<a href="{{ mono_download }}" class="btn btn-download btn-download-primary">
+						{% assign has_mono = true %}
+						<a href="{{ mono_download }}" class="btn btn-download btn-download-primary btn-download-primary--mono">
 							<div class="download-title">
 								.NET
 							</div>
 						</a>
 					{% endif %}
 				{% endfor %}
+
+				{% if has_mono %}
+					<div class="download-mono-note">
+						.NET builds offer support for C# as a scripting language.
+					</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>

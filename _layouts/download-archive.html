@@ -20,6 +20,15 @@ layout: default
 		color: var(--base-color-text);
 	}
 
+	.hero-version-flavor {
+		background-color: var(--primary-color);
+		border-radius: 1000px;
+		color: var(--dark-color-text-title);
+		font-size: 90%;
+		font-weight: 600;
+		padding: 0.35rem 1.25rem;
+	}
+
 	.other-platforms-wrapper {
 		color: var(--base-color-text);
 	}
@@ -37,7 +46,7 @@ layout: default
 
 <div class="hero">
 	<div class="hero-wrapper">
-		<h1>Download<br>Godot {{ page.version_name }} ({{ page.version_flavor }})</h1>
+		<h1>Download<br>Godot {{ page.version_name }} <span class="hero-version-flavor">{{ page.version_flavor }}</span></h1>
 	</div>
 
 	<div class="other-platforms">
