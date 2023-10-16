@@ -9,7 +9,7 @@ dates_short: "23-25 August"
 # The first date of the event in ISO format, used for sorting.
 date: 2023-08-23 00:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: "[Koelnmesse](https://www.koelnmesse.de/), Messepl. 1, 50679 Köln, Germany"
 location_short: "Cologne, Germany"
