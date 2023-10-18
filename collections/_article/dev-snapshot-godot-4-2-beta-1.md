@@ -345,7 +345,7 @@ To close things off for GDScript, a contribution to the language server from [Ry
 
 Godot's lead XR maintainer [Bastiaan Olij](https://github.com/BastiaanOlij) recently [published a progress report](/article/godot-xr-update-sep-2023) on new and upcoming XR features, which you should definitely read! Some highlights from the list of changes, implemented by Bastiaan himself, include foveated rendering support, ported from Godot 3.x ([GH-80881](https://github.com/godotengine/godot/pull/80881)), and access to raw hand-tracking data ([GH-78032](https://github.com/godotengine/godot/pull/78032)).
 
-On top of that, a significant contribution from [konczg](https://github.com/konczg) opens up the OpenXR module to be extended and interacted with from the GDExtension API ([GH-68259](https://github.com/godotengine/godot/pull/68259)). We can't wait for your projects utilizing this capability to its fullest!
+On top of that, a significant contribution by [konczg](https://github.com/konczg) from [Migeran](https://github.com/migeran) opens up the OpenXR module to be extended and interacted with from the GDExtension API ([GH-68259](https://github.com/godotengine/godot/pull/68259)). We can't wait for your projects utilizing this capability to its fullest!
 
 
 -----
