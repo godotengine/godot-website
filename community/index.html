@@ -67,6 +67,97 @@
 
 <main>
 
+<style>
+	.card {
+		height: 100%;
+	}
+
+	a.card {
+		display: block;
+		text-decoration: none;
+	}
+
+	.card img {
+		width: 100%;
+		height: auto;
+	}
+
+	.community-list {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.community-list h2 {
+		margin-top: 12px;
+		margin-bottom: 0;
+	}
+
+	.community-list .community-short-block {
+		grid-column-end: span 2;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.community-list .community-short-block .card {
+		height: auto;
+		flex: 1;
+		margin-bottom: 16px;
+	}
+
+	.community-list .community-short-block .card:last-child {
+		margin-bottom: 0;
+	}
+
+	.community-list .community-block .card h3 {
+		margin-bottom: 16px;
+	}
+
+	.community-list .community-block .card h3 a {
+		text-decoration: none;
+	}
+
+	.community-list .community-block .card p {
+		margin: 0;
+	}
+
+	#user-groups {
+		background-color: var(--dark-color);
+		color: var(--dark-color-text);
+	}
+
+	#user-groups h3 {
+		color: var(--dark-color-text-title);
+		margin-bottom: 0;
+	}
+
+	#events {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0;
+	}
+
+	#events>div {
+		padding: 16px;
+	}
+
+	#events .events-upcoming {
+		background-color: var(--transparent-cover-darker);
+		color: var(--dark-color-text-title);
+		display: flex;
+		flex-direction: column;
+		font-size: 90%;
+		text-align: right;
+	}
+
+	#events .events-upcoming span:nth-child(2) {
+		font-family: var(--header-font-family);
+		font-weight: 700;
+		font-size: 120%;
+		margin-top: 24px;
+	}
+</style>
 
 <div class="head">
 	<div class="container flex eqsize">
@@ -80,111 +171,25 @@
 	</div>
 </div>
 
-<div class="container">
-	<style>
-		.card {
-			height: 100%;
-		}
+<div class="container community-list">
+	<div class="community-block">
+		<a href="/events" class="card base-padding" id="events">
+			<div>
+				<h3>Events</h3>
+				<p>Upcoming community and past events.</p>
+			</div>
+			<div class="events-upcoming">
+				<span>Next event:</span>
+				<span>GodotCon</span>
+				<span>November 2023</span>
+			</div>
+		</a>
+	</div>
 
-		a.card {
-			display: block;
-			text-decoration: none;
-		}
+	<h2>Official communities</h2>
 
-		.card img {
-			width: 100%;
-			height: auto;
-		}
-
-		h3 a {
-			text-decoration: none;
-		}
-
-		#user-groups {
-			background-color: var(--dark-color);
-			color: var(--dark-color-text);
-		}
-
-		#user-groups h3 {
-			color: var(--dark-color-text-title);
-			margin-bottom: 0;
-		}
-
-		#events {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			padding: 0;
-		}
-
-		#events>div {
-			padding: 16px;
-		}
-
-		#events .events-upcoming {
-			background-color: var(--transparent-cover-darker);
-			color: var(--dark-color-text-title);
-			display: flex;
-			flex-direction: column;
-			font-size: 90%;
-			text-align: right;
-		}
-
-		#events .events-upcoming span:nth-child(2) {
-			font-family: var(--header-font-family);
-			font-weight: 700;
-			font-size: 120%;
-			margin-top: 24px;
-		}
-
-		.extras {
-			grid-column-end: span 2;
-			display: flex;
-			flex-direction: column;
-		}
-
-		.extras .card {
-			height: auto;
-			flex: 1;
-			margin-bottom: 16px;
-		}
-
-		.extras .card:last-child {
-			margin-bottom: 0;
-		}
-
-		@media (max-width: 600px) {
-			.extras {
-				grid-column-end: span 1;
-			}
-		}
-	</style>
-
-	<div class="flex grid">
-
-		<div class="extras">
-			<a href="/community/user-groups" class="card base-padding" id="user-groups">
-				<h3>User groups</h3>
-				<p>Find local Godot user groups run by community members.</p>
-			</a>
-			<a href="/events" class="card base-padding" id="events">
-				<div>
-					<h3>Events</h3>
-					<p>Upcoming community and past events.</p>
-				</div>
-				<div class="events-upcoming">
-					<span>Next event:</span>
-					<span>GodotCon</span>
-					<span>November 2023</span>
-				</div>
-			</a>
-			<a href="https://docs.godotengine.org/en/stable/community/tutorials.html" class="card base-padding">
-				<h3>Tutorials</h3>
-				<p>Find tutorials and guides written by the community.</p>
-			</a>
-		</div>
-
-		<div>
+	<div class="grid">
+		<div class="community-block">
 			<div class="card">
 				<a href="https://ask.godotengine.org/">
 					<img src="/assets/community/icon_qa.png" width="350" height="215" alt=""
@@ -198,7 +203,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="community-block">
 			<div class="card">
 				<a href="https://discord.gg/4JBkykG">
 					<img src="/assets/community/icon_discord.png" width="350" height="215" alt=""
@@ -212,21 +217,7 @@
 			</div>
 		</div>
 
-		<div>
-			<div class="card">
-				<a href="https://chat.godotengine.org">
-					<img src="/assets/community/icon_godot_contributors_chat.png" width="350" height="215" alt=""
-						style="background: linear-gradient(90deg, #31363f 13%, #31363f 20%, #20242a 64%, #202429 94%)"
-						loading="lazy">
-				</a>
-				<div class="base-padding">
-					<h3><a href="https://chat.godotengine.org">Godot Contributors Chat</a></h3>
-					<p>Chat for engine contributors and developers based on Rocket.Chat.</p>
-				</div>
-			</div>
-		</div>
-
-		<div>
+		<div class="community-block">
 			<div class="card">
 				<a href="https://www.reddit.com/r/godot">
 					<img src="/assets/community/icon_reddit.png" width="350" height="215" alt="" style="background-color: #4492e6"
@@ -239,49 +230,7 @@
 			</div>
 		</div>
 
-		<div>
-			<div class="card">
-				<a href="https://github.com/godotengine/godot">
-					<img src="/assets/community/icon_github.png" width="350" height="215" alt=""
-						style="background: linear-gradient(90deg, #e2e2e3 30%, #e2e2e3 45%, #e3e4e4 80%, #d5d7d7 91%)"
-						loading="lazy">
-				</a>
-				<div class="base-padding">
-					<h3><a href="https://github.com/godotengine/godot">GitHub</a></h3>
-					<p>Send bug reports here. To request features, use the <a
-							href="https://github.com/godotengine/godot-proposals">Godot proposals</a> repository instead.</p>
-				</div>
-			</div>
-		</div>
-
-		<div>
-			<div class="card">
-				<a href="https://twitter.com/godotengine">
-					<img src="/assets/community/icon_twitter.png" width="350" height="215" alt=""
-						style="background: linear-gradient(90deg, #fbfbfc 2%, #fbfbfc 9%, #edf1ef 92%, #fbfbfc 99%)" loading="lazy">
-				</a>
-				<div class="base-padding">
-					<h3><a href="https://twitter.com/godotengine">Twitter</a></h3>
-					<p>Get small bits of development news.</p>
-				</div>
-			</div>
-		</div>
-
-		<div>
-			<div class="card">
-				<a href="https://www.youtube.com/c/GodotEngineOfficial">
-					<img src="/assets/community/icon_youtube.png" width="350" height="215" alt=""
-						style="background: linear-gradient(90deg, #cdbcc5 24%, #cdbcc5 57%, #cdbcc5 66%, #cab8c1 92%)"
-						loading="lazy">
-				</a>
-				<div class="base-padding">
-					<h3><a href="https://www.youtube.com/c/GodotEngineOfficial">YouTube</a></h3>
-					<p>Channel for official Godot videos.</p>
-				</div>
-			</div>
-		</div>
-
-		<div>
+		<div class="community-block">
 			<div class="card">
 				<a href="https://www.facebook.com/groups/godotengine/">
 					<img src="/assets/community/icon_facebook.png" width="350" height="215" alt=""
@@ -294,22 +243,56 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div>
+	<h2>Official social networks</h2>
+
+	<div class="grid">
+		<div class="community-block">
 			<div class="card">
-				<a href="https://steamcommunity.com/app/404790">
-					<img src="/assets/community/icon_steam.png" width="350" height="215" alt=""
-						style="background: linear-gradient(90deg, #1b232d 2%, #1b232d 52%, #131920 78%, #1b232d 98%)"
-						loading="lazy">
+				<a href="https://twitter.com/godotengine">
+					<img src="/assets/community/icon_twitter.png" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #fbfbfc 2%, #fbfbfc 9%, #edf1ef 92%, #fbfbfc 99%)" loading="lazy">
 				</a>
 				<div class="base-padding">
-					<h3><a href="https://steamcommunity.com/app/404790">Steam Community</a></h3>
-					<p>Discuss and share tips with other developers on Steam.</p>
+					<h3><a href="https://twitter.com/godotengine">Twitter</a></h3>
+					<p>Get small bits of development news.</p>
 				</div>
 			</div>
 		</div>
 
-		<div>
+		<div class="community-block">
+			<div class="card">
+				<a href="https://mastodon.gamedev.place/@godotengine">
+					<img src="/assets/community/icon_mastodon.png" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #fbfbfc 2%, #fbfbfc 9%, #edf1ef 92%, #fbfbfc 99%)" loading="lazy">
+				</a>
+				<div class="base-padding">
+					<h3><a href="https://mastodon.gamedev.place/@godotengine">Mastodon</a></h3>
+					<p>Connect with us in the Fediverse.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="community-block">
+			<div class="card">
+				<a href="https://www.youtube.com/c/GodotEngineOfficial">
+					<img src="/assets/community/icon_youtube.png" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #cdbcc5 24%, #cdbcc5 57%, #cdbcc5 66%, #cab8c1 92%)"
+						loading="lazy">
+				</a>
+				<div class="base-padding">
+					<h3><a href="https://www.youtube.com/c/GodotEngineOfficial">YouTube</a></h3>
+					<p>Channel for official Godot videos.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2>User-supported communities</h2>
+
+	<div class="grid">
+		<div class="community-block">
 			<div class="card">
 				<a href="https://godotforums.org">
 					<img src="/assets/community/community-forums.jpg" width="350" height="215" alt=""
@@ -323,31 +306,54 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="community-short-block">
+			<a href="/community/user-groups" class="card base-padding" id="user-groups">
+				<h3>User groups</h3>
+				<p>Find local Godot user groups run by community members.</p>
+			</a>
+
+			<a href="https://docs.godotengine.org/en/stable/community/tutorials.html" class="card base-padding">
+				<h3>Tutorials</h3>
+				<p>Find tutorials and guides written by the community.</p>
+			</a>
+
+			<a href="https://matrix.to/#/#godot-space:matrix.org" class="card base-padding">
+				<h3>Matrix</h3>
+				<p>Libre decentralized chat with advanced features, IRC compatible.</p>
+			</a>
+		</div>
+	</div>
+
+	<h2>Looking to contribute?</h2>
+
+	<div class="grid">
+		<div class="community-block">
 			<div class="card">
-				<a href="https://mastodon.gamedev.place/@godotengine">
-					<img src="/assets/community/icon_mastodon.png" width="350" height="215" alt=""
-						style="background: linear-gradient(90deg, #fbfbfc 2%, #fbfbfc 9%, #edf1ef 92%, #fbfbfc 99%)" loading="lazy">
+				<a href="https://chat.godotengine.org">
+					<img src="/assets/community/icon_godot_contributors_chat.png" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #31363f 13%, #31363f 20%, #20242a 64%, #202429 94%)"
+						loading="lazy">
 				</a>
 				<div class="base-padding">
-					<h3><a href="https://mastodon.gamedev.place/@godotengine">Mastodon</a></h3>
-					<p>Connect with us in the Fediverse.</p>
+					<h3><a href="https://chat.godotengine.org">Godot Contributors Chat</a></h3>
+					<p>Chat for engine contributors and developers based on Rocket.Chat.</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="extras">
-			<a href="https://web.libera.chat/#godotengine" class="card base-padding">
-				<h3>IRC</h3>
-				<p>
-					Old-fashioned but reliable chat platform. Significantly less active than Discord. <span
-						style="font-family: monospace; opacity: 0.7;">#godotengine@libera.chat</span>
-				</p>
-			</a>
-			<a href="https://matrix.to/#/#godot:feneas.org" class="card base-padding">
-				<h3>Matrix</h3>
-				<p>Libre decentralized chat with advanced features, IRC compatible.</p>
-			</a>
+		<div class="community-block">
+			<div class="card">
+				<a href="https://github.com/godotengine/godot">
+					<img src="/assets/community/icon_github.png" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #e2e2e3 30%, #e2e2e3 45%, #e3e4e4 80%, #d5d7d7 91%)"
+						loading="lazy">
+				</a>
+				<div class="base-padding">
+					<h3><a href="https://github.com/godotengine/godot">GitHub</a></h3>
+					<p>Send bug reports here. To request features, use the <a
+							href="https://github.com/godotengine/godot-proposals">Godot proposals</a> repository instead.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
