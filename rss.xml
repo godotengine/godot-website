@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.2 beta 2</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-2-beta-2/</link>
+		<description>After last week&#39;s 4.2 beta 1 release, we introduced fixes for a number of bugs reported by the community, which are now ready to test in beta 2.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-4-2-beta-2/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Thu, 19 Oct 2023 13:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-2.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.2 beta 1</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/</link>
 		<description>With all planned major and minor features implemented, Godot 4.2 is ready for beta testing!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Yuri Sizov</dc:creator>
 		<pubDate>Wed, 12 Jul 2023 10:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-1-rc-1.webp</image>
-	</item>
-	
-	<item>
-		<title>Godot Funding Breakdown &amp; Hiring Process</title>
-		<link>https://godotengine.org/article/funding-breakdown-and-hiring-process/</link>
-		<description>This article aims to shed light on the current status of Godot&#39;s funding, hiring, and our plans for sustainable funding long term.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/funding-breakdown-and-hiring-process/</guid>
-		<dc:creator>Godot Foundation</dc:creator>
-		<pubDate>Tue, 11 Jul 2023 12:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/funding-breakdown-and-hiring-process.webp</image>
 	</item>
 	
 
