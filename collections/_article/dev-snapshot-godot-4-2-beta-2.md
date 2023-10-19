@@ -5,7 +5,7 @@ categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-2.webp
 image_caption_title: ENDLESS EXPRESS
-image_caption_description: A game by jijigiri Games
+image_caption_description: A game by jijigri Games
 date: 2023-10-19 13:00:00
 ---
 
@@ -17,7 +17,7 @@ Since that first beta release, we fixed a number of bugs reported by the communi
 
 -----
 
-*The illustration picture for this article is taken from* [**ENDLESS EXPRESS**](https://jijigri.itch.io/endless-express), *a fast-paced pixel art run & gun by [jijigiri Games](https://twitter.com/jijigriGames). It was made with Godot 4 and has just been released for free [on itch.io](https://jijigri.itch.io/endless-express). You can follow the developer on [Twitter](https://twitter.com/jijigriGames) for updates and future game projects.*
+*The illustration picture for this article is taken from* [**ENDLESS EXPRESS**](https://jijigri.itch.io/endless-express), *a fast-paced pixel art run & gun by [jijigri Games](https://twitter.com/jijigriGames). It was made with Godot 4 and has just been released for free [on itch.io](https://jijigri.itch.io/endless-express). You can follow the developer on [Twitter](https://twitter.com/jijigriGames) for updates and future game projects.*
 
 ## What's new
 
