@@ -4,7 +4,7 @@ excerpt: "An update on the current state of the particle system in Godot, and so
 categories: ["progress-report"]
 author: Ilaria Cislaghi
 image: /storage/blog/covers/progress-report-state-of-particles.webp
-date: 2023-10-23 15:00:00
+date: 2023-10-23 13:00:00
 ---
 
 _TL;DR: In 4.2 GPUParticles were refactored and lots of new features were added. Due to high maintenance cost and bug surface, CPUParticles will keep the current feature set._
