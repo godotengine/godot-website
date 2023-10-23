@@ -75,7 +75,7 @@ Velocity changes include:
 - `velocity_limit`: a curve defining a hard limit for the particles' velocity following their lifetime.
 - `scale_over_velocity`: a curve that allows to scale particles on a given axis.
 
-On top of that an optional separation between alpha over lifetime and emission over lifetime was added. Note that emission over lifetime just multiplies the `COLOR` value of the particle by a given value. This needs to be properly read in the display shader.
+On top of that, an optional separation between alpha over lifetime and emission over lifetime was added. Note that emission over lifetime just multiplies the `COLOR` value of the particle by a given value. This needs to be properly read in the display shader.
 
 You can also check out [GH-79527](https://github.com/godotengine/godot/pull/79527), which covers the bulk of these changes.
 
