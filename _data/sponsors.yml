@@ -41,3 +41,6 @@ silver:
   - name: "Broken Rules"
     link: "https://brokenrul.es"
     image: "https://fund.godotengine.org/static/logos/broken-rules.svg"
+  - name: "Chasing Carrots"
+    link: "https://www.chasing-carrots.com"
+    image: "https://fund.godotengine.org/static/logos/chasing-carrots.webp"
