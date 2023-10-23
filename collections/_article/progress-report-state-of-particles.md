@@ -82,7 +82,7 @@ You can also check out [GH-79527](https://github.com/godotengine/godot/pull/7952
 I can't wait to see all that you'll make with it! In the meantime, enjoy these VFX made by the testers of the PR.
 
 <video autoplay loop muted playsinline title="A compilation of various effects created by community members during testing">
-  <source src="/storage/blog/2023-oct-state-of-particles/particle-fiesta-by-community.mp4" type="video/mp4">
+  <source src="/storage/blog/2023-oct-state-of-particles/particle-fiesta-by-community.mp4?1" type="video/mp4">
 </video>
 
 _Various particle effects created by community members to help test the rework. Credits go to [Thibaud](https://gotibo.fr/), [Calinou](https://github.com/Calinou), and myself, [QbieShay](https://social.sparkles.cafe/@qbie)_
