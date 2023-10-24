@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Dev snapshot: Godot 4.2 beta 3",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-3/",
+			"description": "We continue iterating quickly on beta snapshots for Godot 4.2 to ensure that we can solve regressions before the stable release.",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-3/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Tue, 24 Oct 2023 15:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-3.webp"
+		},
+		
+		{
 			"title": "State of particles and future updates",
 			"link": "https://godotengine.org/article/progress-report-state-of-particles/",
 			"description": "An update on the current state of the particle system in Godot, and some hints about what the future holds!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Emi",
 			"pubDate": "Tue, 18 Jul 2023 17:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/godotcon-2023.webp"
-		},
-		
-		{
-			"title": "Maintenance release: Godot 4.1.1",
-			"link": "https://godotengine.org/article/maintenance-release-godot-4-1-1/",
-			"description": "Hot on the heels of its parent release, here&#39;s Godot 4.1.1 — the first maintenance release of the 4.1 branch, with more stability and workflow improvements.",
-			"categories": ["Release"],
-			"guid": "https://godotengine.org/article/maintenance-release-godot-4-1-1/",
-			"dc:creator": "Yuri Sizov",
-			"pubDate": "Mon, 17 Jul 2023 17:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-1-1.webp"
 		}
 		
 	]
