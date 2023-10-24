@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 4.2 beta 3"
-excerpt: "We continue iterating quickly on beta snapshots for Godot 4.2, to ensure that we can solve regressions before the stable release."
+excerpt: "We continue iterating quickly on beta snapshots for Godot 4.2 to ensure that we can solve regressions before the stable release."
 categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-3.webp
@@ -13,15 +13,17 @@ We entered the beta phase for Godot 4.2 a couple of weeks ago, with [4.2 beta 1]
 
 Since the start of the beta phase, we fixed a number of bugs reported by the community, so we're publishing further beta snapshots to validate those fixes, and iterate closer to the release candidate stage.
 
-This third beta notably fixes a porting issue for 3D Godot 4.1 projects following our changes to the [mesh vertices and attributes compression format](https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/#rendering-particles-and-shaders). This beta provides a helpful dialog when you first open a pre-existing project, that lets you choose to upgrade and re-save all the meshes in your projects to make them compatible with Godot 4.2.
+Notably, this third beta improves support for 3D projects made with Godot 4.1 when migrating them to Godot 4.2. Following our changes to the [mesh vertices and attributes compression format](https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/#rendering-particles-and-shaders), we are now introducing a helpful dialog when you first open a pre-existing project. It lets you choose to upgrade and re-save all the meshes in your projects to make them compatible with Godot 4.2.
 
-This release also [updates the toolchains](https://github.com/godotengine/build-containers/pull/128) used to build official binaries, notably for Windows, macOS, iOS and JavaScript. This should be mostly transparent to end users, but toolchain bugs are a possibility, so please report if anything seems off compared to the previous beta build in terms of performance, or outright crashing.
+This release also [updates the toolchains](https://github.com/godotengine/build-containers/pull/128) used to build official binaries, notably for Windows, macOS, iOS and JavaScript. This should be mostly transparent to end users, but toolchain bugs are a possibility. So please report if anything seems off compared to the previous beta build in terms of performance, or outright crashing.
+
+For C# users, the .NET 8.0 release is set to be launched this November. Make sure to try the current preview release ([`8.0.0-rc.2`](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) with Godot to make sure everything works as expected. This Godot beta release includes a fix to [support preview releases](https://github.com/godotengine/godot/pull/83325) so give it a try and report any bugs that you find.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.2.beta3/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
 -----
 
-*The illustration picture for this article is taken from* [**The Last Game**](https://twitter.com/TheLastGame__), *a roguelite twin-stick shooter by Frédéric Julian made with Godot 4.1. It was recently released on [App Store](https://apps.apple.com/us/app/the-last-game/id6466296603), [Google Play](https://play.google.com/store/apps/details?id=com.frju.thelastgame), [Steam](https://store.steampowered.com/app/2563800/The_Last_Game/) and [itch.io](https://frju.itch.io/the-last-game). You can follow the development on [Twitter](https://twitter.com/TheLastGame__) or [Discord](https://discord.gg/J4VQtvEb9W).*
+*The illustration picture for this article is taken from* [**The Last Game**](https://twitter.com/TheLastGame__), *a roguelite twin-stick shooter by Frédéric Julian made with Godot 4.1. It was recently released on [App Store](https://apps.apple.com/us/app/the-last-game/id6466296603), [Google Play](https://play.google.com/store/apps/details?id=com.frju.thelastgame), [Steam](https://store.steampowered.com/app/2563800/The_Last_Game/), and [itch.io](https://frju.itch.io/the-last-game). You can follow the development on [Twitter](https://twitter.com/TheLastGame__) or [Discord](https://discord.gg/J4VQtvEb9W).*
 
 ## What's new
 
@@ -90,7 +92,7 @@ For an overview of what's new overall in Godot 4.2, have a look at the release n
 - Thirdparty: mbedTLS: Update to version 2.18.5 ([GH-83721](https://github.com/godotengine/godot/pull/83721)).
 - Thirdparty: openxr: Revert to 1.0.28, newer versions crash on Windows/Mingw-GCC ([GH-83829](https://github.com/godotengine/godot/pull/83829)).
 
-This release is built from commit [`e8d57afae`](https://github.com/godotengine/godot/commit/e8d57afaeccf0d9f9726746f49936eb93aa0039b) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.2-beta3/README.txt)).
+This release is built from commit [`e8d57afae`](https://github.com/godotengine/godot/commit/e8d57afaeccf0d9f9726746f49936eb93aa0039b).
 
 ## Downloads
 
@@ -102,6 +104,7 @@ The downloads for this pre-release build can be found in our GitHub repository:
 
 **.NET build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
 - .NET build requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
+  - [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) should also be supported, but keep in mind this version of the .NET SDK is still in preview. Give it a try and let us know if you find any bugs.
 - To export to Android, .NET 7.0 or later is required. To export to iOS, .NET 8.0 is required. Make sure to set the target framework in the `.csproj` file.
 
 <div class="card card-warning">
