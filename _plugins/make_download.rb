@@ -108,14 +108,35 @@ module MakeDownloadFilter
   end
 
   def make_release_version(input, release)
-    if release.nil?
-      return input
+    site_data = @context.registers[:site].data
+
+    version_data = input
+    # Input can be a version string, e.g. 4.1. Try to match it against version data.
+    if input.is_a? String
+      version_data = site_data["versions"].find { |item| item["name"] == input }
+    end
+    if version_data.nil?
+      return nil
     end
 
-    new_version = input.dup
-    new_version["flavor"] = release["name"]
-    new_version["release_date"] = release["release_date"]
-    new_version["release_notes"] = release["release_notes"]
+    release_data = release
+    # Release name can be a string as well. Try to match it with the current version flavor
+    # or with one of previous releases.
+    if release.is_a? String
+      if version_data["flavor"] == release
+        release_data = nil
+      elsif version_data.key?("releases")
+        release_data = version_data["releases"].find { |item| item["name"] == release }
+      end
+    end
+    if release_data.nil?
+      return version_data
+    end
+
+    new_version = version_data.dup
+    new_version["flavor"] = release_data["name"]
+    new_version["release_date"] = release_data["release_date"]
+    new_version["release_notes"] = release_data["release_notes"]
 
     return new_version
   end

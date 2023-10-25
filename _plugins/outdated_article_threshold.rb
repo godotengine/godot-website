@@ -2,7 +2,7 @@
 # Articles that have a date older than this at build time
 # are considered outdated.
 #
-# See also `_includes/outdated_article_notice.html`.
+# See also `_includes/articles/outdated_notice.html`.
 
 AVERAGE_SECONDS_PER_MONTH = 2628000
 OUTDATED_THRESHOLD_IN_MONTHS = 18

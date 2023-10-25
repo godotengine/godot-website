@@ -352,9 +352,7 @@ On top of that, a significant contribution by [konczg](https://github.com/konczg
 
 ## Downloads
 
-The downloads for this pre-release build can be found in our GitHub repository:
-
-* [**Download Godot 4.2 beta 1**](https://github.com/godotengine/godot-builds/releases/tag/4.2-beta1).
+{% include articles/download_card.html version="4.2" release="beta1" article=page %}
 
 **Standard build** includes support for GDScript and GDExtension.
 
@@ -362,11 +360,7 @@ The downloads for this pre-release build can be found in our GitHub repository:
 - .NET build requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 - To export to Android, .NET 7.0 or later is required. To export to iOS, .NET 8.0 is required. Make sure to set the target framework in the `.csproj` file.
 
-<div class="card card-warning">
-	<p>
-	While engine maintainers try their best to ensure that each beta release is stable, this is by definition <strong>a pre-release piece of software</strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
-	</p>
-</div>
+{% include articles/prerelease_notice.html %}
 
 ## Known issues
 
