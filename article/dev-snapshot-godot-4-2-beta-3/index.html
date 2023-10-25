@@ -345,11 +345,125 @@
 
 <h2 id="downloads">Downloads</h2>
 
-<p>The downloads for this pre-release build can be found in our GitHub repository:</p>
+<div class="card card-download">
+	<a class="card-download-link" href="/download/archive/4.2-beta3">
+		Download Godot 4.2 beta3
+	</a>
 
-<ul>
-  <li><a href="https://github.com/godotengine/godot-builds/releases/tag/4.2-beta3"><strong>Download Godot 4.2 beta 3</strong></a>.</li>
-</ul>
+	<div class="card-download-details">
+		
+			<img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-2-beta-3.webp" />
+		
+
+		<div class="card-download-platforms">
+			
+			
+				
+
+				
+			
+				
+
+				
+					
+
+					<div class="download-platform">
+						<img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
+						Linux
+					</div>
+
+					<a href="https://github.com/godotengine/godot-builds/releases/download/4.2-beta3/Godot_v4.2-beta3_linux.x86_64.zip" class="btn btn-download btn-download-primary">
+						<div class="download-title">
+							Standard
+						</div>
+					</a>
+
+					
+					
+						
+						<a href="https://github.com/godotengine/godot-builds/releases/download/4.2-beta3/Godot_v4.2-beta3_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono">
+							<div class="download-title">
+								.NET
+							</div>
+						</a>
+					
+				
+			
+				
+
+				
+					
+
+					<div class="download-platform">
+						<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
+						macOS
+					</div>
+
+					<a href="https://github.com/godotengine/godot-builds/releases/download/4.2-beta3/Godot_v4.2-beta3_macos.universal.zip" class="btn btn-download btn-download-primary">
+						<div class="download-title">
+							Standard
+						</div>
+					</a>
+
+					
+					
+						
+						<a href="https://github.com/godotengine/godot-builds/releases/download/4.2-beta3/Godot_v4.2-beta3_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono">
+							<div class="download-title">
+								.NET
+							</div>
+						</a>
+					
+				
+			
+				
+
+				
+					
+
+					<div class="download-platform">
+						<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
+						Windows
+					</div>
+
+					<a href="https://github.com/godotengine/godot-builds/releases/download/4.2-beta3/Godot_v4.2-beta3_win64.exe.zip" class="btn btn-download btn-download-primary">
+						<div class="download-title">
+							Standard
+						</div>
+					</a>
+
+					
+					
+						
+						<a href="https://github.com/godotengine/godot-builds/releases/download/4.2-beta3/Godot_v4.2-beta3_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono">
+							<div class="download-title">
+								.NET
+							</div>
+						</a>
+					
+				
+			
+				
+
+				
+			
+				
+
+				
+			
+		</div>
+	</div>
+
+	<div class="card-download-sublinks">
+		<a class="card-download-other" href="/download/archive/4.2-beta3">
+			Export templates and other downloads
+		</a>
+		<a class="card-download-donate" href="/donate">
+			Make a Donation
+		</a>
+	</div>
+
+</div>
 
 <p><strong>Standard build</strong> includes support for GDScript and GDExtension.</p>
 
@@ -393,6 +507,7 @@
 </div>
 
 <link rel="stylesheet" href="/assets/css/anchor-link.css?1">
+<link rel="stylesheet" href="/assets/css/article-cards.css">
 <script src="/assets/js/anchor-link.js"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
@@ -401,6 +516,10 @@
 
 		// Add lightbox elements in blog articles for Tobii.
 		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			if (articleImg.classList.contains('lightbox-ignore')) {
+				return;
+			}
+
 			const lightbox = document.createElement('a');
 			lightbox.href = articleImg.src;
 			lightbox.classList.add('lightbox');

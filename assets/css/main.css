@@ -37,6 +37,7 @@
 
   --fund-color: #ef6767;
   --fund-color-hl: #e53e3e;
+  --fund-color-faint: #ff9d9d;
 
   --base-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -69,6 +70,7 @@
   --download-table-color: rgba(160, 160, 160, 0.05);
   --platform-note-background-color: rgb(48 86 210 / 9%);
   --platform-code-background-color: #e5ebf1;
+  --download-mono-background-color: rgb(43 58 76 / 82%);
 
   --feature-heading-color: #2d76ad;
   --feature-note-color: #e53e3e;
@@ -128,6 +130,7 @@
 
     --fund-color: #ef6767;
     --fund-color-hl: #e53e3e;
+    --fund-color-faint: #ef6767;
 
     --base-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -157,6 +160,7 @@
     --download-table-color: rgba(0, 0, 0, 0.2);
     --platform-note-background-color: rgb(255 255 255 / 9%);
     --platform-code-background-color: #282b2e;
+    --download-mono-background-color: rgb(132 151 174 / 68%);
 
     --feature-heading-color: #57b3f8;
     --feature-note-color: #ef6767;
@@ -815,24 +819,13 @@ p.small {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
+a.card {
+  display: block;
+  text-decoration: none;
+}
+
 .card .footer {
   background-color: var(--card-footer-color);
-}
-
-.card-warning {
-  background: var(--warning-background-color);
-  border-radius: 4px 4px;
-  color: var(--warning-color);
-  font-size: 90%;
-  padding: 0 12px;
-}
-
-a.card {
-  text-decoration: none;
-  display: flex;
-}
-.steam-download:hover {
-  color: hsla(0, 0%, 100%);
 }
 
 .tabs {

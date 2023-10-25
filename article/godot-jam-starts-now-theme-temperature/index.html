@@ -312,6 +312,7 @@ The jam starts today (Friday 15 June) at 19:30 UTC and will end on Monday 18 Jun
 </div>
 
 <link rel="stylesheet" href="/assets/css/anchor-link.css?1">
+<link rel="stylesheet" href="/assets/css/article-cards.css">
 <script src="/assets/js/anchor-link.js"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
@@ -320,6 +321,10 @@ The jam starts today (Friday 15 June) at 19:30 UTC and will end on Monday 18 Jun
 
 		// Add lightbox elements in blog articles for Tobii.
 		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			if (articleImg.classList.contains('lightbox-ignore')) {
+				return;
+			}
+
 			const lightbox = document.createElement('a');
 			lightbox.href = articleImg.src;
 			lightbox.classList.add('lightbox');

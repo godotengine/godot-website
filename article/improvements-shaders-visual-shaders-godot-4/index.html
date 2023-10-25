@@ -749,6 +749,7 @@ After placing it, you can resize it and use the context menu to modify the heade
 </div>
 
 <link rel="stylesheet" href="/assets/css/anchor-link.css?1">
+<link rel="stylesheet" href="/assets/css/article-cards.css">
 <script src="/assets/js/anchor-link.js"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
@@ -757,6 +758,10 @@ After placing it, you can resize it and use the context menu to modify the heade
 
 		// Add lightbox elements in blog articles for Tobii.
 		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			if (articleImg.classList.contains('lightbox-ignore')) {
+				return;
+			}
+
 			const lightbox = document.createElement('a');
 			lightbox.href = articleImg.src;
 			lightbox.classList.add('lightbox');
