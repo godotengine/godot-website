@@ -9,7 +9,7 @@ image_caption_description: "A game by Kristian Nilsen"
 date: 2023-09-22 14:00:00
 ---
 
-We have had quite a pause since [Godot 4.1.1](https://godotengine.org/article/maintenance-release-godot-4-1-1/) — two months without a new patch release (blame the summer break!). So it's long overdue we have one, starting of course with a release candidate to validate that everything is in order and no new changes introduce regressions.
+We have had quite a pause since [Godot 4.1.1](/article/maintenance-release-godot-4-1-1) — two months without a new patch release (blame the summer break!). So it's long overdue we have one, starting of course with a release candidate to validate that everything is in order and no new changes introduce regressions.
 
 Godot 4.1.2 contains a number of stability improvements, addressing crashes related to threading, editor features, networking, GUI, and rendering. A significant bug related to allocations of plain objects has been fixed as well, which should improve performance and memory usage, especially at scale ([GH-81037](https://github.com/godotengine/godot/pull/81037)). There are also a number of performance fixes in GUI nodes, such as `Tree` and `RichTextLabel`, which make parts of the editor UI more responsive ([GH-79325](https://github.com/godotengine/godot/pull/79325), [GH-80857](https://github.com/godotengine/godot/pull/80857)). Several optimizations have been made to rendering backends as well.
 
