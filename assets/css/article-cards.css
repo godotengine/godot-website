@@ -75,7 +75,7 @@
 @media (max-width: 768px) {
 	.card-download-details img, article .content .card-download-details img {
 		max-height: 220px;
-		max-width: inherit;
+		max-width: 95%;
 	}
 }
 
@@ -130,6 +130,6 @@
 @media (max-width: 900px) {
 	.card-download-platforms .btn.btn-download-primary .download-title {
 		line-height: 28px;
-		padding: 12px 20px;
+		padding: 12px 14px;
 	}
 }
