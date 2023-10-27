@@ -9,9 +9,9 @@ image_caption_description: "A game by shawcat"
 date: 2023-10-27 15:00:00
 ---
 
-While Godot 4.2 is enjoying its last leg of the development cycle (check out [beta 3](/article/dev-snapshot-godot-4-2-beta-3)!), we have an opportunity to compile yet another batch of changes fitting for Godot 4.1. Make sure to give this release candidate a test, so the stable version can be made available shorty.
+While Godot 4.2 is enjoying its last leg of the development cycle (check out [beta 3](/article/dev-snapshot-godot-4-2-beta-3)!), we have an opportunity to compile yet another batch of changes fitting for Godot 4.1. Make sure to give this release candidate a test, so the stable version can be made available shortly.
 
-The third maintenance release for Godot 4.1 contains a number of fixes for the rendering system, including issues in all rendering backends, in lightmap and voxel GI systems, and in particles. Various problems were addressed in the editor UI, and in the GUI system in general. The Input team improved controller support and resolved a couple of problems specific to the Android platform. And, finally, several documentation mistakes have been corrected, plus there is new documentation available for `RenderingDevice`.
+The third maintenance release for Godot 4.1 contains a number of fixes for the rendering system, including issues in all rendering backends, in lightmap and voxel GI systems, and in particles. Various problems were addressed in the editor UI, and in the GUI system in general. The Input team improved controller support and resolved a couple of problems specific to the Android platform. And finally, several documentation mistakes have been corrected, plus there is new documentation available for `RenderingDevice`.
 
 Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
 
