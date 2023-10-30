@@ -82,8 +82,15 @@
 				<ul class="event-details">
 					<li><strong>Date:</strong> {{ event.dates }}</li>
 					<li><strong>Location:</strong> {{ event.location | markdownify }}{% unless event.location_map == empty %} (<a href="{{ event.location_map }}">Show on map</a>){% endunless %}</li>
+					{% if event.entrance_fee %}
 					<li><strong>Entrance fee:</strong> {{ event.entrance_fee | markdownify }}</li>
+					{% endif %}
+					{% if event.registration %}
 					<li><strong>Registration:</strong> {{ event.registration | markdownify }}</li>
+					{% endif %}
+					{% if event.website %}
+					<li><strong>Website:</strong> <a href="{{ event.website }}">{{ event.website }}</a></li>
+					{% endif %}
 				</ul>
 			</div>
 

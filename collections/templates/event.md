@@ -17,6 +17,7 @@ location_map: "<OpenStreetMap location link>"
 
 entrance_fee: "<entrance fee description; supports Markdown>"
 registration: "<registration description; supports Markdown>"
+website: "<website URL>"
 
 cover_image: "/storage/app/media/events/<image filepath>.jpg"
 
