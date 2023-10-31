@@ -9,7 +9,7 @@ image_caption_description: A game by Hannes Rahm
 date: 2023-10-31 12:00:00
 ---
 
-We're well into the beta phase for Godot 4.2, with [4.2 beta 1](/article/dev-snapshot-godot-4-2-beta-1/) released 3 weeks ago, with new beta snapshots every week since. If you missed that release, have a look at the [release notes](/article/dev-snapshot-godot-4-2-beta-1/) for an overview of the key changes in Godot 4.2.
+We're well into the beta phase for Godot 4.2, with the first beta released 3 weeks ago, and new beta snapshots every week since. Have a look at the [4.2 beta 1 release notes](/article/dev-snapshot-godot-4-2-beta-1/) for an overview of the key changes in Godot 4.2.
 
 Since the start of the beta phase, we fixed a number of bugs reported by the community, so we're publishing further beta snapshots to validate those fixes, and iterate closer to the release candidate stage.
 
