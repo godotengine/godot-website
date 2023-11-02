@@ -114,7 +114,7 @@ Here are the main changes since 4.1.1-stable:
 One regression was identified for iOS export when using Xcode 14 or earlier ([GH-83085](https://github.com/godotengine/godot/issues/83085)), caused by a fix to support the new Xcode 15.
 The regression fix ([GH-83088](https://github.com/godotengine/godot/pull/83088)) was applied directly to the export templates archive, so users who downloaded 4.1.2 export templates prior to October 11, 2023 should re-download them if they intend to export projects to iOS with Xcode 14 or earlier.
 
-Aside from the above, there are no known incompatibilities with the Godot 4.1 release. **We encourage all users to upgrade to 4.1.2.**
+Aside from the above, there are no known incompatibilities with previous Godot 4.1.x releases. **We encourage all users to upgrade to 4.1.2.**
 
 If you experience any unexpected behavior change in your projects after upgrading to 4.1.2, please [file an issue on GitHub](https://github.com/godotengine/godot/issues).
 
