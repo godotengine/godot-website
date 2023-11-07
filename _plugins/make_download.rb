@@ -7,6 +7,7 @@ HOST_GITHUB = "https://github.com/godotengine/godot/releases/download"
 HOST_GITHUB_BUILDS = "https://github.com/godotengine/godot-builds/releases/download"
 
 module MakeDownloadFilter
+  # Input should be a value from versions.yml or the output of make_release_version().
   def get_download_platforms(input, mono = false)
     slugs_defaults = get_download_slugs(input, mono)
     if slugs_defaults.nil?
@@ -29,6 +30,7 @@ module MakeDownloadFilter
     return platforms
   end
 
+  # Input should be a value from versions.yml or the output of make_release_version().
   def get_download_primary(input, mono = false)
     slugs_defaults = get_download_slugs(input, mono)
     if slugs_defaults.nil?
@@ -53,8 +55,9 @@ module MakeDownloadFilter
     return primary
   end
 
+  # Input should be a value from versions.yml or the output of make_release_version().
   def make_download(input, platform, mono = false, host = "github")
-    version_name = input["name"]
+    version_name = get_version_name(input)
     version_flavor = input["flavor"]
 
     version_bits = version_name.split(".")
@@ -107,19 +110,22 @@ module MakeDownloadFilter
     end
   end
 
+  # Input and release should be values from versions.yml or strings.
   def make_release_version(input, release)
     site_data = @context.registers[:site].data
 
-    version_data = input
+    version_data = nil
     # Input can be a version string, e.g. 4.1. Try to match it against version data.
     if input.is_a? String
       version_data = site_data["versions"].find { |item| item["name"] == input }
+    else
+      version_data = input
     end
     if version_data.nil?
       return nil
     end
 
-    release_data = release
+    release_data = nil
     # Release name can be a string as well. Try to match it with the current version flavor
     # or with one of previous releases.
     if release.is_a? String
@@ -128,6 +134,8 @@ module MakeDownloadFilter
       elsif version_data.key?("releases")
         release_data = version_data["releases"].find { |item| item["name"] == release }
       end
+    else
+      release_data = release
     end
     if release_data.nil?
       return version_data
@@ -135,6 +143,7 @@ module MakeDownloadFilter
 
     new_version = version_data.dup
     new_version["flavor"] = release_data["name"]
+    new_version["release_version"] = release_data.key?("release_version") ? release_data["release_version"] : version_data["name"]
     new_version["release_date"] = release_data["release_date"]
     new_version["release_notes"] = release_data["release_notes"]
 
@@ -143,8 +152,15 @@ module MakeDownloadFilter
 
   private
 
+  # Input should be a value from versions.yml or the output of make_release_version().
+  def get_version_name(input)
+      return input.key?("release_version") ? input["release_version"] : input["name"]
+  end
+
+  # Input should be a value from versions.yml or the output of make_release_version().
   def get_download_slugs(input, mono = false)
-    version_major = input["name"].split(".")[0].to_i
+    version_name = get_version_name(input)
+    version_major = version_name.split(".")[0].to_i
 
     # Access the site data for the slug reference table.
     site_data = @context.registers[:site].data

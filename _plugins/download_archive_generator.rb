@@ -3,7 +3,11 @@ module DownloadArchiveGeneratorPlugin
 	  safe true
 
 	  def generate(site)
+		puts "Generating download archive pages..."
+
 		site.data["versions"].each do |version|
+		  version_name = version["name"]
+		  puts "    Rendering version '#{version_name}'."
 
 		  # Generate files for the current main flavor (stable or latest pre-release).
 		  site.pages << DownloadArchivePage.new(site, version, nil)
@@ -15,6 +19,8 @@ module DownloadArchiveGeneratorPlugin
 			end
 		  end
 		end
+
+		puts "Finished generating the download archive."
 	  end
 	end
 
@@ -24,11 +30,11 @@ module DownloadArchiveGeneratorPlugin
 		@site = site
 		@base = site.source
 
-		release_version = make_release_version(version, release)
+		version_data = make_release_version(version, release)
 
 		# Generate the version identificator.
-		version_name = release_version["name"]
-		version_flavor = release_version["flavor"]
+		version_name = version_data["name"]
+		version_flavor = version_data["flavor"]
 		version_id = "#{version_name}-#{version_flavor}"
 
 		version_bits = version_name.split(".")
@@ -44,7 +50,7 @@ module DownloadArchiveGeneratorPlugin
 		@data = {
 		  'title' => "Download Godot #{version_name} (#{version_flavor}) - Godot Engine",
 		  'description' => "Download Godot Engine version #{version_name} (#{version_flavor}) for Linux, macOS, Windows, or Android",
-		  'version' => release_version,
+		  'version' => version_data,
 		  'version_name' => version_name,
 		  'version_flavor' => version_flavor,
 		}
@@ -63,6 +69,7 @@ module DownloadArchiveGeneratorPlugin
 
 		new_version = version.dup
 		new_version["flavor"] = release["name"]
+		new_version["release_version"] = release.key?("release_version") ? release["release_version"] : version["name"]
 		new_version["release_date"] = release["release_date"]
 		new_version["release_notes"] = release["release_notes"]
 

@@ -3,7 +3,11 @@ module MirrorlistGeneratorPlugin
 	  safe true
 
 	  def generate(site)
+		puts "Generating mirrorlist pages..."
+
 		site.data["versions"].each do |version|
+		  version_name = version["name"]
+		  puts "    Rendering version '#{version_name}'."
 
 		  # Generate files for the current main flavor (stable or latest pre-release).
 		  site.pages << MirrorlistPage.new(site, version, false)
@@ -12,8 +16,10 @@ module MirrorlistGeneratorPlugin
 		  # Iterate through previous releases and generate files for them as well.
 		  if version.key?("releases")
 			version["releases"].each do |release|
+				version_name = release.key?("release_version") ? release["release_version"] : version["name"]
+
 				prerelease = {
-					'name' => version["name"],
+					'name' => version_name,
 					'flavor' => release["name"]
 				}
 				site.pages << MirrorlistPage.new(site, prerelease, false)
@@ -21,6 +27,8 @@ module MirrorlistGeneratorPlugin
 			end
 		  end
 		end
+
+		puts "Finished generating the mirrorlist."
 	  end
 	end
 
