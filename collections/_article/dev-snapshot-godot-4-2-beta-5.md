@@ -9,9 +9,9 @@ image_caption_description: A game by Luke Miller
 date: 2023-11-07 12:00:00
 ---
 
-Hope you've had a great weekend! We certainly enjoyed hosting a conference for our community — [GodotCon 2023](https://conference.godotengine.org/), with two dozen talks and workshops, giving insights into using the engine, and building it as well. The talks are available online over at our partners at [Chaos Computer Club](https://media.ccc.de/c/godotcon2023), and soon will be uploaded to the [official YouTube channel](https://www.youtube.com/@GodotEngineOfficial/videos) as well.
+Hope you've had a great weekend! We certainly enjoyed hosting a conference for our community — [GodotCon 2023](https://conference.godotengine.org/), with two dozen talks and workshops, giving insights into using the engine, and building it as well. The talks are available online over at the site of our partners, the [Chaos Computer Club](https://media.ccc.de/c/godotcon2023), and soon will be uploaded to the [official YouTube channel](https://www.youtube.com/@GodotEngineOfficial/videos) as well.
 
-But now it's back to business for Godot contributors, as we're entering another week of beta testing for Godot 4.2. Beta 5 addresses a large number of crashes across all engine and editor systems. You should also have less problems when moving Godot 4.1 projects over to 4.2, thanks to a rework to the mesh format conversion tool and new compatibility options for imported glTF scenes.
+But now it's back to business for Godot contributors, as we're entering another week of beta testing for Godot 4.2. Beta 5 addresses a large number of crashes across all engine and editor systems. You should also have fewer problems when moving Godot 4.1 projects over to 4.2, thanks to a rework to the mesh format conversion tool and new compatibility options for imported glTF scenes.
 
 This release also includes two compatibility breaking changes. While they are unlikely to affect any existing projects, it's still worth a mention. A previously unutilized notification, `NOTIFICATION_NODE_RECACHE_REQUESTED`, was completely removed from the engine (besides being unutilized it also conflicted with some other notifications, causing problems for some GDExtensions). Additionally, `AnimationLibrary` erroneously had its internal data property exposed, which was corrected.
 
