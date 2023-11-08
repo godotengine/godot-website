@@ -44,3 +44,6 @@ silver:
   - name: "Chasing Carrots"
     link: "https://www.chasing-carrots.com"
     image: "https://fund.godotengine.org/static/logos/chasing-carrots.webp"
+  - name: "Null"
+    link: "https://null.com/"
+    image: "https://fund.godotengine.org/static/logos/null.svg"
