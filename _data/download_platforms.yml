@@ -40,6 +40,20 @@
   tags:
     - 64 bit
 
+- name: "linux.arm32"
+  title: "Linux"
+  caption: "Standard (ARM32)"
+  tags:
+    - ARM32
+    - 32 bit
+
+- name: "linux.arm64"
+  title: "Linux"
+  caption: "Standard (ARM64)"
+  tags:
+    - ARM64
+    - 64 bit
+
 - name: "linux_server.64"
   title: "Linux Server"
   caption: "Standard (x86_64)"
