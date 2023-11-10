@@ -25,6 +25,9 @@ gold:
   - name: "Robot Gentleman"
     link: "http://robotgentleman.com/"
     image: "https://fund.godotengine.org/static/logos/robot-gentleman.png"
+  - name: "Mega Crit"
+    link: "https://www.megacrit.com/"
+    image: "https://fund.godotengine.org/static/logos/megacrit.png"
 silver:
   - name: "Affray Interactive"
     link: "https://scp.games/pandemic/"
