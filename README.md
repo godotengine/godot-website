@@ -5,9 +5,9 @@ Welcome to the source code for the Godot Engine website. This is a static websit
 
 ## Contributing
 
-Contributions are always welcome! Godot website, just like Godot engine, is open source.
+Contributions are always welcome! Godot's website is open source, just like Godot Engine.
 
-However, when contributing to the website, it is important to keep in mind that it acts as a public face of Godot
+However, when contributing to the website, it is important to keep in mind that it acts as a public face of the Godot
 organization and community. Thus, substantial changes must be discussed ahead of time. You don't necessarily need to
 open a formal Godot improvement proposal like you do with engine features, but starting an issue on this repository
 or joining the discussion on the [Godot Contributors Chat](https://chat.godotengine.org/channel/website) is a good
@@ -80,10 +80,10 @@ After following either one of these steps the site will be available at `http://
 ### Deployment
 
 The project is built automatically by GitHub Actions whenever the `master` branch receives a new commit. The `master` branch
-itself should not be deployed, as it only contains the source files. The build version of the website is available as the
+itself should not be deployed, as it only contains the source files. The built version of the website is available as the
 `published` branch instead.
 
-Note, that this is not relevant for local development. Locally you would build the website in place and then serve the `_site`
+Note that this is not relevant for local development. Locally you would build the website in place and then serve the `_site`
 folder. See the detailed instructions above.
 
 ## Project structure
@@ -91,7 +91,7 @@ folder. See the detailed instructions above.
 ### Content data and metadata
 
 The following folders contain data files, used for generating more dynamic parts of the website, such as the blog,
-the showcase, the downloads page. These pages are written in Markdown and contain a metadata header used by the
+the showcase, and the downloads page. These pages are written in Markdown and contain a metadata header used by the
 generator. Markdown files form Jekyll collections with the same name as their containing folder. To create a new
 Markdown document, you can start by copying an existing one and then change its content.
 
@@ -206,7 +206,7 @@ The `stable` key refers to hosts available for the stable release of that versio
 to all pre-releases and dev snapshots, which typically share all their characteristics. If in future there is a
 need for finer control, some overrides system needs to be implemented.
 
-For the logic side of things the new host needs to be supported by the `_plugins/make_download.rb` script. Refer
+For the logic side of things, the new host needs to be supported by the `_plugins/make_download.rb` script. Refer
 to how other hosts are handled in that file and do the necessary adjustments. We assume that the final filenames
 are standard across all hosts, so `_data/download_configs.yml` is respected.
 
@@ -214,5 +214,5 @@ are standard across all hosts, so `_data/download_configs.yml` is respected.
 
 - Join the discussion on Godot Contributors Chat in the [#website](https://chat.godotengine.org/channel/website)
   channel.
-- Please, consider the [website usage stats](https://stats.tuxfamily.org/godotengine.org) when relying on modern
+- Please consider [website usage stats](https://caniuse.com/) when relying on modern
   web technologies (web standards support, file type support, etc).
