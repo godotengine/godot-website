@@ -49,6 +49,10 @@ Canada:
     links:
       - title: MeetUp
         url: https://www.meetup.com/Godot-Toronto/
+  - name: Godot Québec
+    links:
+      - title: Discord
+        url: https://discord.gg/AemZhPjqyM
 China:
   - name: Godot China
     links:
