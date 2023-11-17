@@ -11,9 +11,9 @@ date: 2023-11-17 15:00:00
 
 We are happy to announce that all major issues identified during the beta testing phase have been resolved, and Godot 4.2 starts to look seaworthy. This means it is time for the first Release Candidate of the cycle.
 
-As always, please, remember that this is still pre-production software. We don't expect any new blockers to appear at this stage, but we still need to verify, with your help, that Godot 4.2 is ready. You are encouraged to give it a try, and if all goes according to the plan the final release should reach the shelves of your local store before the end of the next week.
+As always, please, remember that this is still pre-production software. We don't expect any new blockers to appear at this stage, but we still need to verify, with your help, that Godot 4.2 is ready. You are encouraged to give it a try, and if all goes according to plan the final release should reach the shelves of your local store before the end of next week.
 
-A number of crashes and regressions from previous changes was fixed for RC1. Keep an eye for improvements in animation, navigation, and tilemaps. We also reverted one change introduced as early as [dev snapshot 1](/article/dev-snapshot-godot-4-2-dev-1)! The default shortcut for saving scripts and shaders is no longer overriding the shortcut for saving scenes. You can still configure whichever behavior you prefer in the editor settings.
+A number of crashes and regressions from previous changes were fixed for RC1. Keep an eye for improvements in animation, navigation, and tilemaps. We also reverted one change introduced as early as [dev snapshot 1](/article/dev-snapshot-godot-4-2-dev-1)! The default shortcut for saving scripts and shaders is no longer overriding the shortcut for saving scenes. You can still configure whichever behavior you prefer in the editor settings.
 
 There is also one announcement that we have never made in the previous two releases. Starting with Godot 4.2 we are providing official builds for the Linux ARM platform. This is not a new platform for Godot to support, but it has been lacking official builds, waiting for us to update our buildsystem. If you use Linux on ARM, make sure to give this release candidate a go!
 
