@@ -1,19 +1,27 @@
 ---
 title: "Release candidate: Godot 4.2 RC 1"
-excerpt: ""
+excerpt: "With every critical bug identified and squashed, we are making our last turn and preparing to sprint to the finish line with Godot 4.2!"
 categories: ["pre-release"]
-author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-1-rc-2.webp
-image_caption_title: ""
-image_caption_description: ""
-date: 2023-11-17 13:00:00
+author: Yuri Sizov
+image: /storage/blog/covers/release-candidate-godot-4-2-rc-1.webp
+image_caption_title: "Forest River 2"
+image_caption_description: "A concept scene by Beau Seymour"
+date: 2023-11-17 15:00:00
 ---
+
+We are happy to announce that all major issues identified during the beta testing phase have been resolved, and Godot 4.2 starts to look seaworthy. This means it is time for the first Release Candidate of the cycle.
+
+As always, please, remember that this is still pre-production software. We don't expect any new blockers to appear at this stage, but we still need to verify, with your help, that Godot 4.2 is ready. You are encouraged to give it a try, and if all goes according to the plan the final release should reach the shelves of your local store before the end of the next week.
+
+A number of crashes and regressions from previous changes was fixed for RC1. Keep an eye for improvements in animation, navigation, and tilemaps. We also reverted one change introduced as early as [dev snapshot 1](/article/dev-snapshot-godot-4-2-dev-1)! The default shortcut for saving scripts and shaders is no longer overriding the shortcut for saving scenes. You can still configure whichever behavior you prefer in the editor settings.
+
+There is also one announcement that we have never made in the previous two releases. Starting with Godot 4.2 we are providing official builds for the Linux ARM platform. This is not a new platform for Godot to support, but it has been lacking official builds, waiting for us to update our buildsystem. If you use Linux on ARM, make sure to give this release candidate a go!
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.2.rc1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
 -----
 
-**
+*The illustration for this article is taken from a concept scene by [Beau Seymour](https://www.youtube.com/@BeauSeymour) called* [**Forest River 2**](https://www.youtube.com/watch?v=r5QWM04ggRU). *Beau loves to experiment with Godot, and that of course extends to the bleeding edge of Godot 4.2. You can find more cool concepts, insightful experiments (warning: might contain potatoes), and also tutorials on his [YouTube channel](https://www.youtube.com/@BeauSeymour). Make sure to follow Beau on social networks as well ([Twitter](https://twitter.com/Bimbam_tm), [Mastodon](https://mastodon.gamedev.place/@Bimbam_tm)).*
 
 ## What's new
 
