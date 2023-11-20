@@ -7,7 +7,7 @@ image: /storage/blog/covers/godot-showreel-2023.webp
 date: 2023-11-20 00:00:00
 ---
 
-Showcase your Godot Engine 2023 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2023 Showreeel.
+Showcase your Godot Engine 2023 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2023 Showreel.
 
 The showreels are an informative and celebratory showcase, to highlight the wide array of projects developed using the Godot Engine. If you want to participate and share your Godot-made game, app or tool submit your entry starting now.
 
