@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Submissions open for Godot 2023 showreel!</title>
+		<link>https://godotengine.org/article/submissions-open-godot-2023-showreel/</link>
+		<description>Showcase your Godot creations in 2023! We&#39;re inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don&#39;t miss this chance to be a part of it!</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/submissions-open-godot-2023-showreel/</guid>
+		<dc:creator>Emi</dc:creator>
+		<pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godot-showreel-2023.webp</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.2 RC 1</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-2-rc-1/</link>
 		<description>With every critical bug identified and squashed, we are making our last turn and preparing to sprint to the finish line with Godot 4.2!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 11 Aug 2023 14:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-3.webp</image>
-	</item>
-	
-	<item>
-		<title>Godot Conference 2023: Call for Participations</title>
-		<link>https://godotengine.org/article/godotcon-2023-call-participation/</link>
-		<description>Looking to share your expertise through a talk or workshop? Join us and make this an event to remember!</description>
-		
-		<category>Events</category>
-		
-		<guid>https://godotengine.org/article/godotcon-2023-call-participation/</guid>
-		<dc:creator>Julian Murgia</dc:creator>
-		<pubDate>Thu, 10 Aug 2023 17:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/godotcon-2023-we-need-you.webp</image>
 	</item>
 	
 
