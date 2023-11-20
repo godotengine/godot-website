@@ -18,7 +18,7 @@ You can submit your entry in our [Godot Showreel website](https://showreel.godot
 - 📋 **[Submission guidelines](https://showreel.godotengine.org/about)**
 - 📅 **Submissions close on December 17th 2023 at 23:59 UTC**
 
-## Need Inspiration?
+## Need inspiration?
 Check out our [showreel playlist](https://www.youtube.com/watch?v=UAS_pUTFA7o&list=PLeG_dAglpVo6EpaO9A1nkwJZOwrfiLdQ8) for some creative sparks and see what makes a great submission!
 
 ![2022 Showreel thumbnails](/storage/app/media/showreels.jpg)
