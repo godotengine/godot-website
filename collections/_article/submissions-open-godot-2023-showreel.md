@@ -9,7 +9,7 @@ date: 2023-11-20 00:00:00
 
 Showcase your Godot Engine 2023 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2023 Showreel.
 
-The showreels are an informative and celebratory showcase, to highlight the wide array of projects developed using the Godot Engine. If you want to participate and share your Godot-made game, app or tool submit your entry starting now.
+The showreels are an informative and celebratory showcase, to highlight the wide array of projects developed using the Godot Engine. If you want to participate and share your Godot-made game, app or tool submit your entry starting today.
 
 ## How to submit
 You can submit your entry in our [Godot Showreel website](https://showreel.godotengine.org/). You can use your Godot account or any other account (GitHub, Discord, etc.) to log in. Before submitting, please read the [submission guidelines](https://showreel.godotengine.org/about).
