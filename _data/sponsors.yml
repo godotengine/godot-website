@@ -18,6 +18,9 @@ platinum:
   - name: "Ramatak"
     link: "https://ramatak.com/"
     image: "https://fund.godotengine.org/static/logos/ramatak.png"
+  - name: "V-Sekai"
+    link: "https://github.com/V-Sekai"
+    image: "https://fund.godotengine.org/static/logos/v-sekai.png"
 gold:
   - name: "Prehensile Tales"
     link: "https://prehensile-tales.com"
