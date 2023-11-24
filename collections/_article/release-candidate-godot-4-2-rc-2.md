@@ -6,19 +6,19 @@ author: Rémi Verschelde
 image: /storage/blog/covers/release-candidate-godot-4-2-rc-2.webp
 image_caption_title: "2D platformer prototype"
 image_caption_description: "An open source game by Securas"
-date: 2023-11-24 17:00:00
+date: 2023-11-24 20:00:00
 ---
 
-Since our first release candidate for Godot 4.2 a week ago, a number of regressions have been reported by new testers who were starting to test using Godot 4.2 in production. So we've been busy this week triaging, testing, debugging, and fixing regressions to reach a point where we're confident that we're ready for the stable release.
+Since our [first release candidate for Godot 4.2](/article/release-candidate-godot-4-2-rc-1/) a week ago, a number of regressions have been reported by new testers who were starting to use Godot 4.2 in production. So we've been busy this week triaging, testing, debugging, and fixing regressions to reach a point where we're confident that we're ready for the stable release.
 
 That's where this second release candidate comes in, polished as much as we can and ready to be trialed on all your Godot 4.1 projects, hopefully as a smooth upgrade! If you notice anything off that's not already listed under the [known issues](#known-issues) below, please make sure to report it quickly so we can keep track of it in our release planning.
 
 This release candidate includes a number of big changes that warrant particular attention:
 
-- Many users have been running into spurious `slot >= slot_max` errors in their release exports in Godot 4.0 and 4.1, typically around changing scenes or otherwise manipulating nodes in the scene tree. We finally managed to debug and fix it properly ([GH-85280](https://github.com/godotengine/godot/pull/85280)), which should solve a lot of issues, including crashes on Windows. This change should find its way in a 4.1.x maintenance release too.
-- For Windows builds, we kept running into issues with MinGW's implementation of `std::thread` and related threading classes. We replaced it with the third-party [mingw-std-threads](https://github.com/meganz/mingw-std-threads) library, which seems to solve the issues we had, and should also improve performance. Integrating such a library so late in the release cycle is a risky change, but we ran out of alternative to workaround those threading issues, and the first test results are promising. Please make sure to test our Windows builds heavily on projects using multithreading.
-- The tool we made to upgrade 4.1 mesh surfaces to the new 4.2 format works well, but the way it showed itself as an immediate dialog could cause some rendering deadlocks in the editor. So we changed it to a less intrusive warning, which will encourage you to run the tool yourself via the 'Project > Tools > Upgrade Mesh Surfaces..' entry. It's easier to miss, but it's better than a frozen editor.
-- As a reminder, since beta 5, we provide pre-compiled ARM64 and ARM32 Linux binaries (editor and templates). This RC 2 improves this new set of binaries by temporarily disabling <abbr title="Link Time Optimization">LTO</abbr>, which seemed to cause crashes on at least Raspberry Pi OS. Please try it out if you have such ARM Linux systems!
+- Many users have been running into spurious `slot >= slot_max` errors in their release exports in Godot 4.0 and 4.1, typically around changing scenes or otherwise manipulating nodes in the scene tree. We finally managed to debug and fix this properly ([GH-85280](https://github.com/godotengine/godot/pull/85280)), which should solve a lot of issues, including crashes on Windows. This change should find its way in a 4.1.x maintenance release too.
+- For Windows builds, we kept running into issues with MinGW's implementation of `std::thread` and related threading classes. We replaced it with the third-party [mingw-std-threads](https://github.com/meganz/mingw-std-threads) library, which seems to solve the issues we had, and should also improve performance. Integrating such a library so late in the release cycle is a risky change, but we ran out of alternatives to workaround those threading issues, and the first test results are promising. Please make sure to test our Windows builds heavily on projects using multithreading.
+- The tool we made to upgrade 4.1 mesh surfaces to the new 4.2 format works well, but the way it showed itself as an immediate dialog could cause some rendering deadlocks in the editor. So we changed it to a less intrusive warning, which will encourage you to run the tool yourself via the 'Project > Tools > Upgrade Mesh Surfaces...' entry. It's easier to miss, but it's better than a frozen editor.
+- As a reminder, since beta 5, we provide pre-compiled ARM64 and ARM32 Linux binaries (editor and templates). RC 2 improves this new set of binaries by temporarily disabling <abbr title="Link Time Optimization">LTO</abbr>, which seemed to cause crashes on at least Raspberry Pi OS. Please try it out if you have such ARM Linux systems!
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.2.rc2/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
@@ -35,9 +35,7 @@ For an overview of what's new overall in Godot 4.2, have a look at the release n
 - Animation: Fix seeking bug in AnimationPlayerEditor ([GH-85193](https://github.com/godotengine/godot/pull/85193)).
 - Animation: Clear seeked/started flag after seeking/advancing in AnimationPlayer ([GH-85221](https://github.com/godotengine/godot/pull/85221)).
 - Animation: Bind `_reset`/`_restore` in AnimationMixer ([GH-85254](https://github.com/godotengine/godot/pull/85254)).
-- Animation: Fix TrackCache memory crash ([GH-85266](https://github.com/godotengine/godot/pull/85266)).
-- Animation: Perform safe copies in `AnimatedValuesBackup::get_cache_copy()` ([GH-85302](https://github.com/godotengine/godot/pull/85302)).
-- Animation: Fix a crash when trying to restore uncopyable animation tracks ([GH-85308](https://github.com/godotengine/godot/pull/85308)).
+- Animation: Fix TrackCache memory crash ([GH-85266](https://github.com/godotengine/godot/pull/85266), [GH-85302](https://github.com/godotengine/godot/pull/85302), [GH-85308](https://github.com/godotengine/godot/pull/85308)).
 - Core: Let scene replacement benefit from certain late pieces of frame logic ([GH-85184](https://github.com/godotengine/godot/pull/85184)).
 - Core: Prevent read-after-free in the queued CallableCustomStaticMethodPointer, fixes `slot >= slot_max` errors in release templates ([GH-85280](https://github.com/godotengine/godot/pull/85280)).
 - Documentation: Enhance `SceneTree.change_scene*()` methods' docs ([GH-85279](https://github.com/godotengine/godot/pull/85279)).
@@ -80,10 +78,10 @@ This release is built from commit [`1ba920fad`](https://github.com/godotengine/g
 
 ## Known issues
 
-We are aware of some regressions which still affect this release candidate, but which we may not be able to solve in time for the stable release. They're still tracked as high priority and should be fixed soon after the release with backports to 4.2.x maintenance releases.
+We are aware of some regressions which still affect this release candidate, but which we may not be able to solve in time for the stable release. They're still tracked as high priority and should be fixed soon in 4.2.x maintenance releases.
 
 - TileMap editing performance on macOS got significantly worse when using the ANGLE backend for the Compatibility renderer ([GH-84591](https://github.com/godotengine/godot/issues/84591)). We have good hunches for what causes the issue but it will take some time to solve properly. In the meantime, you can change the `rendering/gl_compatibility/driver.macos` project setting to `opengl3` instead of the new default `opengl3_angle` to restore the 4.1 behavior if you are affected by this regression.
-- Capture track in animations no longer work after the unification of the AnimationPlayer and AnimationTree processing in AnimationMixer ([GH-83166](https://github.com/godotengine/godot/issues/83166)). This feature was specific to AnimationPlayer and was lost in the refactoring. We're evaluating what's needed to restore this feature.
+- Capture tracks in animations no longer work after the unification of the AnimationPlayer and AnimationTree processing in AnimationMixer ([GH-83166](https://github.com/godotengine/godot/issues/83166)). This feature was specific to AnimationPlayer and was lost in the refactoring. We're evaluating what's needed to restore this feature.
 - Another animation issue with audio clips starting at negative times no longer playing back ([GH-85088](https://github.com/godotengine/godot/issues/85088)). This should be easy to workaround until we restore that functionality.
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
