@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Release candidate: Godot 4.2 RC 2",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-2-rc-2/",
+			"description": "The first release candidate brought another crop of regression reports, which we&#39;ve now fixed!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-2-rc-2/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Fri, 24 Nov 2023 20:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-rc-2.webp"
+		},
+		
+		{
 			"title": "Submissions open for Godot 2023 showreel!",
 			"link": "https://godotengine.org/article/submissions-open-godot-2023-showreel/",
 			"description": "Showcase your Godot creations in 2023! We&#39;re inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don&#39;t miss this chance to be a part of it!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Wed, 16 Aug 2023 16:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-3.webp"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 4.2 dev 3",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-3/",
-			"description": "One month into the release cycle for Godot 4.2, things are well under way. This third dev snapshot features a lot of improvements to C# and rendering.",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-3/",
-			"dc:creator": "Rémi Verschelde",
-			"pubDate": "Fri, 11 Aug 2023 14:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-3.webp"
 		}
 		
 	]
