@@ -9,7 +9,7 @@ dates_short: "4 & 5 November"
 # The first date of the event in ISO format, used for sorting.
 date: 2023-11-04 00:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: "[Microsoft Germany](https://developer.microsoft.com/en-us/games/), Walter-Gropius-Str. 5, 80807 München, Germany"
 location_short: "Munich, Germany"
