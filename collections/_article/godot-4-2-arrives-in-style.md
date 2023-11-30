@@ -71,6 +71,8 @@ To be properly diligent we describe below all the changes that require your atte
 - The default base part of the Android package name was changed from `org.godotengine` to `com.example` ([GH-80761](https://github.com/godotengine/godot/pull/80761)).
 - A previously unutilized notification, `NOTIFICATION_NODE_RECACHE_REQUESTED`, was completely removed from the engine ([GH-84419](https://github.com/godotengine/godot/pull/84419)).
 
+To help you with the upgrade process Godot contributors are also working on a [migration guide for 4.2](https://docs.godotengine.org/en/4.2/tutorials/migrating/upgrading_to_godot_4.2.html). This is a live document and it will receive updates as they identify more areas deserving of your attention. You can help too by reporting missing steps to the [bug tracker](https://github.com/godotengine/godot-docs/issues).
+
 
 ### Core and systems
 
@@ -288,9 +290,9 @@ In turn, the iOS platform gets some love and parity with Android with the additi
 
 #### Linux
 
-Linux support comes naturally in open source, as many Godot contributors daily-drive various Linux distributions. One of the more obscure variations that the engine supports is Linux for ARM processors. While the engine could always be built for this target, we never provided official distributions for Linux on ARM. But thanks to an effort from [Rémi Verschelde](https://github.com/akien-mga) to update our build toolchains ([GHBC-128](https://github.com/godotengine/build-containers/pull/128), [GHBC-131](https://github.com/godotengine/build-containers/pull/131)), we now can.
+Linux support comes naturally in open source, as many Godot contributors daily-drive various Linux distributions. One of the more obscure variations that the engine supports is Linux for ARM processors. While the engine could always be built for this target, we never provided official distributions for Linux on ARM. But thanks to an effort from [HP van Braam](https://github.com/hpvb) and [Rémi Verschelde](https://github.com/akien-mga) to update our build toolchains ([GHBC-128](https://github.com/godotengine/build-containers/pull/128), [GHBC-131](https://github.com/godotengine/build-containers/pull/131)), we now can.
 
-You can find the link to the ARM version of the editor (both 32 and 64-bit) on the list of downloads on the [release page](/download/archive/4.2-stable). Export templates automatically include this platform. Since this is a relatively new version of the engine, some initial issues are highly likely. Please, treat this as an experimental feature and make sure to report problems if you run into any!
+You can find the link to the ARM version of the editor (both 32 and 64-bit) on the list of downloads on the [release page](/download/archive/4.2-stable). Export templates automatically include this platform. Since this is a relatively new version of the engine, some initial issues are highly likely – in fact, we're already aware of issues running executables on Raspberry Pi OS. Please, treat this as an experimental feature and make sure to report problems if you run into any!
 
 
 ### Rendering, particles, and shaders
