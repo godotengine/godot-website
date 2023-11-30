@@ -27,13 +27,16 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: flex-start;
 	gap: 12px;
+	background: var(--download-table-color);
+	margin: 0 -16px -10px -16px;
+	padding: 10px 16px;
 	width: 100%;
 }
 @media (max-width: 768px) {
 	.card-download-sublinks {
 		flex-direction: column;
-		width: auto;
 	}
 }
 
@@ -66,11 +69,12 @@
 	}
 }
 
-.card-download-details img, article .content .card-download-details img {
+.card-download-details > img, article .content .card-download-details > img {
 	background-color: transparent;
 	display: inline-block;
 	margin: 0;
-	max-width: 200px;
+	min-width: 0;
+	max-height: 150px;
 }
 @media (max-width: 768px) {
 	.card-download-details img, article .content .card-download-details img {
@@ -80,15 +84,15 @@
 }
 
 .card-download-platforms {
-	display: flex;
-	flex-direction: row;
-	gap: 4px;
-}
-
-.card-download-platforms {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 8px;
+}
+
+.card-download-platforms img, article .content .card-download-platforms img {
+	background-color: transparent;
+	display: inline-block;
+	margin: 0;
 }
 
 .card-download-platforms .download-platform {
@@ -97,6 +101,7 @@
 	align-items: center;
 	gap: 12px;
 	font-weight: 700;
+	min-width: 120px;
 }
 
 .download-platform img {

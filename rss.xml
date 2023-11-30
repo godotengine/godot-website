@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot 4.2 arrives in style!</title>
+		<link>https://godotengine.org/article/godot-4-2-arrives-in-style/</link>
+		<description>Godot 4.2 brings more rendering features and better platform support, it&#39;s also faster, easier to use, and more reliable!</description>
+		
+		<category>Release</category>
+		
+		<guid>https://godotengine.org/article/godot-4-2-arrives-in-style/</guid>
+		<dc:creator>Godot contributors</dc:creator>
+		<pubDate>Thu, 30 Nov 2023 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godot-4-2-arrives-in-style.webp</image>
+	</item>
+	
+	<item>
 		<title>Release candidate: Godot 4.2 RC 2</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-2-rc-2/</link>
 		<description>The first release candidate brought another crop of regression reports, which we&#39;ve now fixed!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Emi</dc:creator>
 		<pubDate>Thu, 17 Aug 2023 15:57:35 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/gamescom/2023/gamescom-cover.webp</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 3.6 beta 3</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-3/</link>
-		<description>Slowly but surely, Godot 3.6 is shaping up to be a great release. This third snapshot adds long awaited 2D physics interpolation, and another great optimization with 2D hierarchical culling.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-3/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Wed, 16 Aug 2023 16:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-3.webp</image>
 	</item>
 	
 
