@@ -25,4 +25,6 @@ Of course, our current increase in funding is not enough to sustain all these ex
 
 This year has marked significant milestones for the Godot Foundation, and it's all thanks to the incredible support from our community. To maintain this momentum and achieve more ambitious goals, we would like to invite you to contribute to the [Godot Development Fund](https://fund.godotengine.org/). Your donations will help us to sustain our current growth and enable us to hire more talented individuals, to make the Godot Engine and community the best it can be.
 
+If you represent a company interested in joining the Godot Development Fund as a corporate sponsor, [please get in touch](mailto:contact@godot.foundation).
+
 Thank you 💙
