@@ -7,7 +7,7 @@ image: /storage/blog/covers/godot-foundation-update-2023.jpg
 date: 2023-12-05 12:00:00
 ---
 
-This has been a monumental year for the Godot Foundation. We [announced](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/) the Foundation one year ago and have been busy since getting all the legalities  in place and transferring over all our assets from the SFC.
+This has been a monumental year for the Godot Foundation. We [announced](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/) the Foundation one year ago and have been busy since getting all the legalities in place and transferring over all our assets from the [Software Freedom Conservancy](https://sfconservancy.org/).
 
 On September 12, 2023 we officially [introduced](https://godotengine.org/article/godot-developer-fund/) the [Godot Development Fund](https://fund.godotengine.org/) which we had teased [earlier in the year](https://godotengine.org/article/funding-breakdown-and-hiring-process/). At the time we had an informal goal of reaching €50,000 per month which would allow us to cover our current costs while opening up enough room to hire 1-2 more developers. We reached our goal much faster than expected, we also ended up receiving a sizable one-time donation of [$100,000 from Re-logic](https://twitter.com/Terraria_Logic/status/1704227519027651016).
 
