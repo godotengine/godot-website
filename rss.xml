@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Godot Foundation Update 2023</title>
+		<link>https://godotengine.org/article/godot-foundation-update-2023/</link>
+		<description>This year has marked significant milestones for the Godot Foundation, and it&#39;s all thanks to the incredible support from our community.</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/godot-foundation-update-2023/</guid>
+		<dc:creator>Godot Foundation</dc:creator>
+		<pubDate>Tue, 05 Dec 2023 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godot-foundation-update-2023.jpg</image>
+	</item>
+	
+	<item>
 		<title>Godot 4.2 arrives in style!</title>
 		<link>https://godotengine.org/article/godot-4-2-arrives-in-style/</link>
 		<description>Godot 4.2 brings more rendering features and better platform support, it&#39;s also faster, easier to use, and more reliable!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Emi</dc:creator>
 		<pubDate>Fri, 01 Sep 2023 15:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/usagi-shima.webp</image>
-	</item>
-	
-	<item>
-		<title>gamescom, here we go!</title>
-		<link>https://godotengine.org/article/godot-at-gamescom-2023/</link>
-		<description>Join us next week at the Godot booth during gamescom in Cologne from Wednesday the 23rd, to Friday the 25th. Don&#39;t miss the chance to say hello to the Godot team!</description>
-		
-		<category>Events</category>
-		
-		<guid>https://godotengine.org/article/godot-at-gamescom-2023/</guid>
-		<dc:creator>Emi</dc:creator>
-		<pubDate>Thu, 17 Aug 2023 15:57:35 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/gamescom/2023/gamescom-cover.webp</image>
 	</item>
 	
 
