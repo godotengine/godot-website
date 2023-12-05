@@ -19,7 +19,7 @@ When we launched the funding drive, our largest priorities were and continue to 
 4. Web infrastructure, website, asset store
 5. Communications, community management, and event planning 
 
-We have already onboarded André Buse ([winston-yallow](<https://github.com/winston-yallow>)), a long time Godot user and contributor) to focus on web infrastructure. We are currently onboarding Adam Scott ([adamscott](<https://github.com/adamscott>)) to focus on production tasks, and K. S. Ernest Lee ([fire](https://github.com/fire)) to work on asset import and asset workflow. We have people in mind for some of the remaining roles and are currently busy exploring whether that will lead to new hires.
+We have already onboarded André Buse ([winston-yallow](<https://github.com/winston-yallow>), a long time Godot user and contributor) to focus on web infrastructure. We are currently onboarding Adam Scott ([adamscott](<https://github.com/adamscott>)) to focus on production tasks, and K. S. Ernest Lee ([fire](https://github.com/fire)) to work on asset import and asset workflow. We have people in mind for some of the remaining roles and are currently busy exploring whether that will lead to new hires.
 
 Of course, our current increase in funding is not enough to sustain all these extra roles. At the same time, thanks to the sizable one-time donations we received, we also have savings in the bank that we can use for project-based funding without putting ourselves into a permanent cash flow negative situation. Our idea is to start hiring for short and medium-term contracts in order to address high-priority areas quickly and continue to grow the team with any future increase in monthly donations.
 
