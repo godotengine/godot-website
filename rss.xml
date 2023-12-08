@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Introducing the new Godot Forum</title>
+		<link>https://godotengine.org/article/introducing-new-forum/</link>
+		<description>We are finally unveiling the new Godot forum which replaces our Q&amp;A platform while unlocking many new features.</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/introducing-new-forum/</guid>
+		<dc:creator>Winston Yallow</dc:creator>
+		<pubDate>Fri, 08 Dec 2023 15:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/introducing-new-forum.webp</image>
+	</item>
+	
+	<item>
 		<title>Godot Foundation Update 2023</title>
 		<link>https://godotengine.org/article/godot-foundation-update-2023/</link>
 		<description>This year has marked significant milestones for the Godot Foundation, and it&#39;s all thanks to the incredible support from our community.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Tue, 05 Sep 2023 16:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-4.webp</image>
-	</item>
-	
-	<item>
-		<title>Godot Showcase - Usagi Shima</title>
-		<link>https://godotengine.org/article/godot-showcase-usagi-shima/</link>
-		<description>A relaxing, idle bunny collecting game made by Jess, a solo indie developer</description>
-		
-		<category>Showcase</category>
-		
-		<guid>https://godotengine.org/article/godot-showcase-usagi-shima/</guid>
-		<dc:creator>Emi</dc:creator>
-		<pubDate>Fri, 01 Sep 2023 15:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/usagi-shima.webp</image>
 	</item>
 	
 
