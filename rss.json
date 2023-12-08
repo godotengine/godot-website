@@ -16,6 +16,17 @@
 		},
 		
 		{
+			"title": "Release candidate: Godot 4.2.1 RC 1",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-2-1-rc-1/",
+			"description": "Godot 4.2 was released one week ago, and as is customary with feature updates, we have a late harvest of regression fixes to offer!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-2-1-rc-1/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Fri, 08 Dec 2023 13:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-1-rc-1.webp"
+		},
+		
+		{
 			"title": "Godot Foundation Update 2023",
 			"link": "https://godotengine.org/article/godot-foundation-update-2023/",
 			"description": "This year has marked significant milestones for the Godot Foundation, and it&#39;s all thanks to the incredible support from our community.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Fri, 08 Sep 2023 11:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-3-5-3-rc-1.webp"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 4.2 dev 4",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-4/",
-			"description": "Progressing steadily towards the beta stage, the fourth dev snapshot brings a lot of improvements all around.",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-dev-4/",
-			"dc:creator": "Rémi Verschelde",
-			"pubDate": "Tue, 05 Sep 2023 16:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-4.webp"
 		}
 		
 	]
