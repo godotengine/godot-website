@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Maintenance release: Godot 4.2.1</title>
+		<link>https://godotengine.org/article/maintenance-release-godot-4-2-1/</link>
+		<description>This first maintenance release fixes a number of platform compatibility issues introduced in Godot 4.2, which should make it much easier to upgrade from 4.1 or start new projects on all platforms.</description>
+		
+		<category>Release</category>
+		
+		<guid>https://godotengine.org/article/maintenance-release-godot-4-2-1/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Tue, 12 Dec 2023 13:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-2-1.webp</image>
+	</item>
+	
+	<item>
 		<title>Introducing the new Godot Forum</title>
 		<link>https://godotengine.org/article/introducing-new-forum/</link>
 		<description>We are finally unveiling the new Godot forum which replaces our Q&amp;A platform while unlocking many new features.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Bastiaan Olij</dc:creator>
 		<pubDate>Mon, 11 Sep 2023 11:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/godot-xr-update-sep-2023.webp</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 3.5.3 RC 1</title>
-		<link>https://godotengine.org/article/release-candidate-godot-3-5-3-rc-1/</link>
-		<description>A new maintenance update is in the works for the 3.5 stable branch, to update Android templates to target Android 13, and fix a number of other platform porting bugs.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-3-5-3-rc-1/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Fri, 08 Sep 2023 11:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-3-5-3-rc-1.webp</image>
 	</item>
 	
 
