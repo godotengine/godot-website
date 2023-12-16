@@ -7,6 +7,10 @@ image: /storage/app/uploads/public/5e9/927/545/5e9927545d809505894099.png
 date: 2020-04-17 00:00:00
 ---
 
+***Update (2023-12-16):** Up-to-date instructions on setting up per-instance uniforms can be found in the [Shading language](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shading_language.html#per-instance-uniforms) documentation.*
+
+___
+
 Work towards the complete 4.0 feature set continues at a vibrant pace (stay tuned for the progress report at the end of the month!). Today I will discuss a new feature that most likely takes a bit more time to understand than just looking at the above image.
 
 ## Per instance global what?
