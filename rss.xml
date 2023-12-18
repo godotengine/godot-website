@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Prepare to hear a lot more from us!</title>
+		<link>https://godotengine.org/article/communications-update-2023/</link>
+		<description>The Godot Foundation is onboarding a person in charge of Community &amp; Communications, and there is a feedback form for you to fill out.</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/communications-update-2023/</guid>
+		<dc:creator>Godot Foundation</dc:creator>
+		<pubDate>Mon, 18 Dec 2023 15:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/comms-update-18122023.jpg</image>
+	</item>
+	
+	<item>
 		<title>Announcing a collaboration with Google and The Forge</title>
 		<link>https://godotengine.org/article/collaboration-with-google-forge-2023/</link>
 		<description>We are excited to announce that we have partnered with Google and The Forge to bring some helpful performance optimizations to our Vulkan mobile backend.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Yuri Sizov</dc:creator>
 		<pubDate>Tue, 19 Sep 2023 10:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-5.webp</image>
-	</item>
-	
-	<item>
-		<title>Introducing the new Godot Development Fund</title>
-		<link>https://godotengine.org/article/godot-developer-fund/</link>
-		<description>We are excited to introduce a major improvement in terms of funding the development efforts of the Godot Engine.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/godot-developer-fund/</guid>
-		<dc:creator>Emi</dc:creator>
-		<pubDate>Tue, 12 Sep 2023 11:51:10 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/developer-fund.jpg</image>
 	</item>
 	
 
