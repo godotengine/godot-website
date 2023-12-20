@@ -20,6 +20,6 @@ downloads:
 content_instructions: |
   <ul>
     <li>Extract and run. Godot is self-contained and does not require installation.</li>
-    <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
+    <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
   </ul>
 ---
