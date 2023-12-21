@@ -66,7 +66,6 @@ Some of the most important fixes in this release are:
 - Editor: Fix issue with 3D scene drag and drop preview node ([GH-85087](https://github.com/godotengine/godot/pull/85087)).
 - Editor: Fix SnapGrid is almost invisible in light theme ([GH-85585](https://github.com/godotengine/godot/pull/85585)).
 - Editor: Fix theme application in various editor dialogs ([GH-85745](https://github.com/godotengine/godot/pull/85745)).
-- Editor: Cherry-picks for the 4.2 branch (future 4.2.1) - 2nd batch ([GH-86026](https://github.com/godotengine/godot/pull/86026)).
 - Export: Fix order of operations for macOS template check ([GH-84990](https://github.com/godotengine/godot/pull/84990)).
 - Export: iOS: Use `mdfind` to check if Xcode is installed in one-click deploy code ([GH-85774](https://github.com/godotengine/godot/pull/85774)).
 - GDExtension: Fix updating cached singletons when reloading GDScripts ([GH-85373](https://github.com/godotengine/godot/pull/85373)).
@@ -75,7 +74,7 @@ Some of the most important fixes in this release are:
 - GDScript: Filter groups and categories from autocompletion ([GH-85196](https://github.com/godotengine/godot/pull/85196)).
 - GUI: Enable scrolling of output with UI scale changes ([GH-82079](https://github.com/godotengine/godot/pull/82079)).
 - GUI: VideoPlayer: Fix reloading translation remapped stream ([GH-84794](https://github.com/godotengine/godot/pull/84794)).
-- GUI: Restored Control properties when you undo a parenting of a Control to a Container ([GH-85181](https://github.com/godotengine/godot/pull/85181)).
+- GUI: Restore Control properties when you undo a parenting of a Control to a Container ([GH-85181](https://github.com/godotengine/godot/pull/85181)).
 - GUI: Make sure `Window`'s title is respected before we compute the size ([GH-85312](https://github.com/godotengine/godot/pull/85312)).
 - GUI: RTL: Fix CharFX character offset calculation ([GH-85363](https://github.com/godotengine/godot/pull/85363)).
 - GUI: Limit window size updates on title change ([GH-85542](https://github.com/godotengine/godot/pull/85542)).
