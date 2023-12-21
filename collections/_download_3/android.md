@@ -23,7 +23,7 @@ content_note: |
 
 content_instructions: |
   <ul>
-    <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/about/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
+    <li>If you run into an issue, check the <a href="https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html">Troubleshooting</a> page for common issues and their solutions.</li>
   </ul>
 
   <p>
