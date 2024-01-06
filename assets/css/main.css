@@ -240,7 +240,7 @@ body {
 
   margin: 0px;
   width: 100vw;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -390,6 +390,7 @@ header {
   z-index: 2;
 
   width: 100vw;
+  max-width: 100%;
   height: 64px;
   background-color: var(--navbar-background-color);
   display: flex;
