@@ -7,7 +7,7 @@ image: /storage/blog/covers/rendering-priorities-jan-2024.webp
 date: 2024-01-11 20:00:00
 ---
 
-We released [Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/) on November 30 2023  with many exciting features and countless fixes and improvements. Godot 4.2 is starting to look like what we had envisioned for Godot 4. Accordingly, we are spending more time thinking and talking about what the future holds for the rendering team.
+We released [Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/) on November 30 2023  with many exciting features and countless fixes and improvements. Godot 4.2 is starting to look like what we had envisioned for Godot 4. Accordingly, we are spending more time thinking and talking about what the future holds for the [rendering team](https://godotengine.org/teams/#rendering).
 
 At GodotCon this year I spoke about new features that the rendering team would like to see implemented in the future. While not all of these features will make it in, it's a pretty good overview of what we are thinking and talking about.
 
@@ -15,11 +15,11 @@ At GodotCon this year I spoke about new features that the rendering team would l
 
 Also, a reminder for those interested in contributing, the rendering team meets weekly and all are welcome to join the meetings ([calender link](https://calendar.google.com/calendar/u/0/r?cid=dXBwOGIwZXU0a3BlZjFjNTB2dTJmM2tjOGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)).
 
-Also come join us in the `#rendering` channel on [chat.godotengine.org](chat.godotengine.org)!
+Also come join us in the `#rendering` channel on [chat.godotengine.org](https://chat.godotengine.org)!
 
-## Update on Previous Priorities and 4.2
+## Update on previous priorities and 4.2
 
-The below are the priorities we identified in July 2023 with a short description of their current state.
+The below are the priorities we identified in [July 2023](https://godotengine.org/article/rendering-priorities-july-2023) with a short description of their current state.
 
 ### Performance
 
@@ -33,7 +33,7 @@ This remains a high priority and has only been pushed back due to other foundati
 
 **3. Shader compilation groups ([GH-79606](https://github.com/godotengine/godot/pull/79606)) (done)**
 
-We completed this and it was included in the 4.2 release! As a reminder, this optimization decreases shader compilation time for most 3D materials and should result in faster startup times an less stuttering in many games. 
+We completed this and it was included in the 4.2 release! As a reminder, this optimization decreases shader compilation time for most 3D materials and should result in faster startup times and less stuttering in many games.
 
 ### Stability
 
@@ -49,19 +49,19 @@ This was delayed due to foundational work on the RenderingDevice backend. But th
 
 **1. GL Compatibility renderer - 3D (in progress)**
 
-We added shadows to the compatibility renderer in time for 4.2, as well as many other smaller features and improvements. We have already merged support for MSAA, lightmaps, and 3D scaling for 4.3 and will continue adding the remaining features. we aim to support Glow, ReflectionProbes, and post process adjustments as soon as possible.
+We added shadows to the compatibility renderer in time for 4.2, as well as many other smaller features and improvements. We have already merged support for MSAA, lightmaps, and 3D scaling for 4.3 and will continue adding the remaining features. We aim to support Glow, ReflectionProbes, and post-process adjustments as soon as possible.
 
 **2. FSR 2.2 / TAA improvements ([GH-81197](https://github.com/godotengine/godot/pull/81197)) (done)**
 
-We merged FSR2.2 during the 4.2 dev cycle as well as a host of other TAA enhancements. We have kept our current TAA as it is has less of a performance impact and can be useful when you aren't using upscaling. Our goal is to continue improving the performance and appearance of our TAA solution to offer a cheaper alternative to FSR2.2.
+We merged FSR 2.2 during the 4.2 dev cycle as well as a host of other TAA enhancements. We have kept our current TAA as it is has less of a performance impact and can be useful when you aren't using upscaling. Our goal is to continue improving the performance and appearance of our TAA solution to offer a cheaper alternative to FSR 2.2.
 
-## Others
+### Others
 
 4.2 also brought a lot of exciting changes. Among them:
 
 **1. Overhauled ParticlesProcessMaterial ([GH-79527](https://github.com/godotengine/godot/pull/79527))**
 
-**2. TextureRD ([GH-79288](https://github.com/godotengine/godot/pull/79288)) (official demo)**
+**2. TextureRD ([GH-79288](https://github.com/godotengine/godot/pull/79288)) ([official demo](https://github.com/godotengine/godot-demo-projects/tree/master/compute/texture))**
 
 **3. Significant LightmapGI enhancements to both performance and quality**
 
@@ -69,38 +69,38 @@ We merged FSR2.2 during the 4.2 dev cycle as well as a host of other TAA enhance
 
 **5. 2D HDR to support using 3D glow in 2D ([GH-80215](https://github.com/godotengine/godot/pull/80215))**
 
-**6. Optional ANGLE backend to support low end devices ([GH-72831](https://github.com/godotengine/godot/pull/72831))**
+**6. Optional ANGLE backend to support low-end devices ([GH-72831](https://github.com/godotengine/godot/pull/72831))**
 
 For more information, check out the "Rendering, particles, and shaders" section of the [4.2 release blog post](https://godotengine.org/article/godot-4-2-arrives-in-style/#rendering-particles-and-shaders).
 
 
-## Priorities
+## Current Priorities
 
-Below I list some of the top priorities identified by the [rendering team](https://godotengine.org/teams/#rendering). These priorities are:
+Below I list some of the top priorities identified by the rendering team. These priorities are:
 
-**1. D3D12 rendering driver ([GH-70315](https://github.com/godotengine/godot/pull/70315)) (merged for 4.3)**
+**1. Direct3D 12 rendering driver ([GH-70315](https://github.com/godotengine/godot/pull/70315)) (merged for 4.3)**
 
-In December we merged support for a D3D12 rendering driver. This is the GPU backend of choice for Window's devices. Currently users need to [compile Godot from source](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12) to include support for D3D12, but we are investigating ways that we could provide D3D12 support out of the box.
+In December we merged support for a D3D12 rendering driver. This is the GPU backend of choice for Windows devices. Currently users need to [compile Godot from source](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12) to include support for D3D12, but we are investigating ways that we could provide D3D12 support out of the box.
 
 **2. RenderingDeviceDriver refactor ([GH-83452](https://github.com/godotengine/godot/pull/83452)) (merged for 4.3)**
 
-In preparing the D3D12 rendering driver, Pedro noticed that a significant amount of code needed to be shared between the Vulkan implementation of RenderingDevice and the D3D12 implementation of RenderingDevice. He proposed that we divide RenderingDevice into two pieces: 1) an API agnostic layer that contains all the shared code and 2) a thin layer that only includes API-specific code (the RenderingDeviceDriver). This has allowed us to save thousands of lines of duplicate code which will make porting to new platforms easier (e.g. Metal, WebGPU) and will make maintaining our current backend easier. 
+In preparing the D3D12 rendering driver, Pedro noticed that a significant amount of code needed to be shared between the Vulkan implementation of RenderingDevice and the D3D12 implementation of RenderingDevice. He proposed that we divide RenderingDevice into two pieces: 1) an API-agnostic layer that contains all the shared code, and 2) a thin layer that only includes API-specific code (the RenderingDeviceDriver). This has allowed us to save thousands of lines of duplicate code which will make porting to new platforms easier (e.g. Metal, WebGPU) and will make maintaining our current backend easier. 
 
 **3. Acyclic render graph optimization ([GH-84976](https://github.com/godotengine/godot/pull/84976)) (merged for 4.3)**
 
-This is both an optimization and a feature. The Acyclic Render Graph (ARG) is a tool to automatically record and re-order rendering commands in the RenderingDevice backend. This is extremely beneficial for 2 reasons: 1) it enables optimizations that are otherwise not possible in a general purpose renderer and 2) it simplifies the RenderingDevice API to make it much easier to use (this benefits us and users who use the RenderingDevice API directly). So far this PR has shown promising performance improvements on a range of devices and especially when many particle systems are in use. 
+This is both an optimization and a feature. The Acyclic Render Graph (ARG) is a tool to automatically record and re-order rendering commands in the RenderingDevice backend. This is extremely beneficial for 2 reasons: 1) it enables optimizations that are otherwise not possible in a general purpose renderer, and 2) it simplifies the RenderingDevice API to make it much easier to use (this benefits us and users who use the RenderingDevice API directly). So far this PR has shown promising performance improvements on a range of devices and especially when many particle systems are in use. 
 
-**4. Rendering Hooks ([GH-80214](https://github.com/godotengine/godot/pull/80214))**
+**4. Rendering hooks ([GH-80214](https://github.com/godotengine/godot/pull/80214))**
 
-Rendering hooks are our way of allowing users to insert custom RenderingDevice code in between draw passes in the built in renderer. This paves the way for many custom effects that rely on accessing internal resources or that take place during rendering. Particularly, this will open up a channel to create custom post processing effects. The implementation is still quite low-level and requires using the RenderingDevice API directly, but we consider this a first step in allowing users much greater control over rendering.
+Rendering hooks are our way of allowing users to insert custom RenderingDevice code in-between draw passes in the built-in renderer. This paves the way for many custom effects that rely on accessing internal resources or that take place during rendering. Particularly, this will open up a channel to create custom post-processing effects. The implementation is still quite low-level and requires using the RenderingDevice API directly, but we consider this a first step in allowing users much greater control over rendering.
 
 **5. Metal rendering driver**
 
-Recently Stuart Carnie began work on a Metal backend for Godot. The work is significantly underway and is already showing a lot of promise. A Metal backend will allow us to massively improve user experience on Apple devices (both iOS and MacOS). Including fixing outstanding bugs and improving performance.
+Recently Stuart Carnie began work on a Metal backend for Godot. The work is significantly underway and is already showing a lot of promise. A Metal backend will allow us to massively improve the user experience on Apple devices (both iOS and macOS), including fixing outstanding bugs and improving performance.
 
 **6. SDFGI refactor ([GH-86267](https://github.com/godotengine/godot/pull/86267))**
 
-After initially writing SDFGI, Juan had many ideas to improve it which we discussed at length. He captured his ideas in a handly slideshow which we shared publicly in the Fall of 2022 (https://www.docdroid.net/YNntL0e/godot-sdfgi-pdf). Juan has now begun work on those ideas and they led him to a slightly different approach to GI, using the Heirarchical Digital Differential Analyzer (HDDA) algorithm instead of Signed Distance Fields (SDF). Accordingly, we will be renaming SDFGI to "Dynamic GI" to make the name independent of the algorithm used. The settings will change slightly in this refactor, but both performance and quality will increase. The end goal is to provide settings that will make this run fast enough for use on integrated graphics cards.
+After initially writing SDFGI, Juan had many ideas to improve it which we discussed at length. He captured his ideas in a handy slideshow which we shared publicly in the Fall of 2022 (https://www.docdroid.net/YNntL0e/godot-sdfgi-pdf). Juan has now begun work on those ideas and they led him to a slightly different approach to GI, using the Heirarchical Digital Differential Analyzer (HDDA) algorithm instead of Signed Distance Fields (SDF). Accordingly, we will be renaming SDFGI to "Dynamic GI" to make the name independent of the algorithm used. The settings will change slightly in this refactor, but both performance and quality will increase. The end goal is to provide settings that will make this run fast enough for use on integrated graphics cards.
 
 ## Conclusion
 
