@@ -74,7 +74,7 @@ We merged FSR 2.2 during the 4.2 dev cycle as well as a host of other TAA enhanc
 For more information, check out the "Rendering, particles, and shaders" section of the [4.2 release blog post](https://godotengine.org/article/godot-4-2-arrives-in-style/#rendering-particles-and-shaders).
 
 
-## Current Priorities
+## Current priorities
 
 Below I list some of the top priorities identified by the rendering team. These priorities are:
 
