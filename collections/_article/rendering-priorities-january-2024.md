@@ -100,7 +100,7 @@ Recently Stuart Carnie began work on a Metal backend for Godot. The work is sign
 
 **6. SDFGI refactor ([GH-86267](https://github.com/godotengine/godot/pull/86267))**
 
-After initially writing SDFGI, Juan had many ideas to improve it which we discussed at length. He captured his ideas in a handy slideshow which we shared publicly in the Fall of 2022 (https://www.docdroid.net/YNntL0e/godot-sdfgi-pdf). Juan has now begun work on those ideas and they led him to a slightly different approach to GI, using the Heirarchical Digital Differential Analyzer (HDDA) algorithm instead of Signed Distance Fields (SDF). Accordingly, we will be renaming SDFGI to "Dynamic GI" to make the name independent of the algorithm used. The settings will change slightly in this refactor, but both performance and quality will increase. The end goal is to provide settings that will make this run fast enough for use on integrated graphics cards.
+After initially writing SDFGI, Juan had many ideas to improve it which we discussed at length. He captured his ideas in a handy slideshow which we shared publicly in November 2022 (https://www.docdroid.net/YNntL0e/godot-sdfgi-pdf). Juan has now begun work on those ideas and they led him to a slightly different approach to GI, using the Heirarchical Digital Differential Analyzer (HDDA) algorithm instead of Signed Distance Fields (SDF). Accordingly, we will be renaming SDFGI to "Dynamic GI" to make the name independent of the algorithm used. The settings will change slightly in this refactor, but both performance and quality will increase. The end goal is to provide settings that will make this run fast enough for use on integrated graphics cards.
 
 ## Conclusion
 
