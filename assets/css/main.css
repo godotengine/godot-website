@@ -457,14 +457,20 @@ header #logo-link {
 	margin-left: -1rem;
 }
 
-nav li.fund > a {
-	display: unset;
-	height: unset;
-  color: var(--fund-color);
+nav li.fund {
+	margin-right: -1rem;
+
+	> a {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: var(--fund-color);
+	}
 }
 
 nav li.fund > a:hover {
-  color: var(--fund-color-hl);
+  color: var(--fund-color-hl) !important;
 }
 
 nav li.fund.active > a {
