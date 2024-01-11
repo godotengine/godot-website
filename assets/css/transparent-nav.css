@@ -66,6 +66,7 @@ nav#nav .fund a {
 
 		a {
 			color: var(--fund-color);
+			transition: color 100ms ease-in-out;
 			background-color: var(--base-color);
 			border-radius: 9px;
 			box-shadow: inset 0 0 0 2px var(--fund-color);
