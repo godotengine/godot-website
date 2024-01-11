@@ -53,3 +53,6 @@ silver:
   - name: "Null"
     link: "https://null.com/"
     image: "https://fund.godotengine.org/static/logos/null.svg"
+  - name: "Indoor Astronaut"
+    link: "https://indoorastronaut.ch/"
+    image: "https://fund.godotengine.org/static/logos/indoor-astronaut.png"
