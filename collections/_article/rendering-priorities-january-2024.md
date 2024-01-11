@@ -7,7 +7,7 @@ image: /storage/blog/covers/rendering-priorities-jan-2024.webp
 date: 2024-01-11 20:00:00
 ---
 
-We released [Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/) on November 30 2023  with many exciting features and countless fixes and improvements. Godot 4.2 is starting to look like what we had envisioned for Godot 4. Accordingly, we are spending more time thinking and talking about what the future holds for the [rendering team](https://godotengine.org/teams/#rendering).
+We released [Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/) on November 30, 2023 with many exciting features and countless fixes and improvements. Godot 4.2 is starting to look like what we had envisioned for Godot 4. Accordingly, we are spending more time thinking and talking about what the future holds for the [rendering team](https://godotengine.org/teams/#rendering).
 
 At GodotCon this year I spoke about new features that the rendering team would like to see implemented in the future. While not all of these features will make it in, it's a pretty good overview of what we are thinking and talking about.
 
@@ -25,7 +25,7 @@ The below are the priorities we identified in [July 2023](https://godotengine.or
 
 **1. Split Dynamic/Static Light3D shadows (on hold)**
 
-This work has been put on hold for the time being. We haven't been able to implement it in a way that sufficiently improves performance enough to justify the additional complexity to user's workflow and to our codebase. We intend to return to this in the future.
+This work has been put on hold for the time being. We haven't been able to implement it in a way that sufficiently improves performance enough to justify the additional complexity to users' workflow and to our codebase. We intend to return to this in the future.
 
 **2. Background pipeline compilation (in progress)**
 
@@ -53,7 +53,7 @@ We added shadows to the compatibility renderer in time for 4.2, as well as many 
 
 **2. FSR 2.2 / TAA improvements ([GH-81197](https://github.com/godotengine/godot/pull/81197)) (done)**
 
-We merged FSR 2.2 during the 4.2 dev cycle as well as a host of other TAA enhancements. We have kept our current TAA as it is has less of a performance impact and can be useful when you aren't using upscaling. Our goal is to continue improving the performance and appearance of our TAA solution to offer a cheaper alternative to FSR 2.2.
+We merged FSR 2.2 during the 4.2 dev cycle as well as a host of other TAA enhancements. We have kept our current TAA as it has less of a performance impact and can be useful when you aren't using upscaling. Our goal is to continue improving the performance and appearance of our TAA solution to offer a cheaper alternative to FSR 2.2.
 
 ### Others
 
@@ -100,7 +100,7 @@ Recently Stuart Carnie began work on a Metal backend for Godot. The work is sign
 
 **6. SDFGI refactor ([GH-86267](https://github.com/godotengine/godot/pull/86267))**
 
-After initially writing SDFGI, Juan had many ideas to improve it which we discussed at length. He captured his ideas in a handy slideshow which we shared publicly in November 2022 (https://www.docdroid.net/YNntL0e/godot-sdfgi-pdf). Juan has now begun work on those ideas and they led him to a slightly different approach to GI, using the Heirarchical Digital Differential Analyzer (HDDA) algorithm instead of Signed Distance Fields (SDF). Accordingly, we will be renaming SDFGI to "Dynamic GI" to make the name independent of the algorithm used. The settings will change slightly in this refactor, but both performance and quality will increase. The end goal is to provide settings that will make this run fast enough for use on integrated graphics cards.
+After initially writing SDFGI, Juan had many ideas to improve it which we discussed at length. He captured his ideas in a handy slideshow which we shared publicly in November 2022 (https://www.docdroid.net/YNntL0e/godot-sdfgi-pdf). Juan has now begun work on those ideas and they led him to a slightly different approach to GI, using the Hierarchical Digital Differential Analyzer (HDDA) algorithm instead of Signed Distance Fields (SDF). Accordingly, we will be renaming SDFGI to "Dynamic GI" to make the name independent of the algorithm used. The settings will change slightly in this refactor, but both performance and quality will increase. The end goal is to provide settings that will make this run fast enough for use on integrated graphics cards.
 
 ## Conclusion
 
