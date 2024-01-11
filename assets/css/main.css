@@ -390,37 +390,29 @@ header {
   z-index: 2;
 
   width: 100vw;
-  height: 64px;
   background-color: var(--navbar-background-color);
   display: flex;
-  align-items: center;
   box-shadow: var(--base-shadow);
 }
 
 header > div.container {
+	overflow: initial;
   width: 100%;
+	padding: 0;
 }
 
-header .container {
-  overflow: initial;
-}
 
 .only-on-mobile {
   display: none;
 }
 
-#logo-link {
-  margin-right: 36px;
-  /* Make the logo's clickable area as tall as for other navigation links. */
-  padding: 0.2rem 0.5rem;
-  margin-top: 0.25rem;
-  margin-left: -0.5rem;
-}
 #nav_head {
   display: flex;
   align-items: center;
   justify-content: space-between;
+	height: 64px;
 }
+
 #nav_toggle_cb,
 #nav_toggle_btn {
   display: none;
@@ -432,6 +424,7 @@ header .container {
 
 nav {
   width: 100%;
+	height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -443,21 +436,37 @@ nav a {
   font-size: 16px;
   font-weight: bold;
   color: var(--navbar-link-color);
-  /* Make links easier to click. */
-  padding: 1.3175rem 1rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 1rem;
 }
 
-nav a:hover,
+nav li:hover,
 #logo-link:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
 
+header #logo-link {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 1rem;
+	margin-left: -1rem;
+}
+
 nav li.fund > a {
+	display: unset;
+	height: unset;
   color: var(--fund-color);
 }
+
 nav li.fund > a:hover {
   color: var(--fund-color-hl);
 }
+
 nav li.fund.active > a {
   color: var(--fund-color-hl);
 }
@@ -483,11 +492,13 @@ nav > ul > :last-child {
 }
 
 nav > ul li {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 0;
-  margin-left: -1rem;
-  margin-right: -1rem;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-content: baseline;
+	align-items: center;
+	place-content: center;
+	height: 100%;
 }
 
 nav li.active > a {
@@ -982,60 +993,70 @@ pre > code {
   header {
     height: auto;
   }
+
   header > div {
     flex-direction: column;
   }
 
-  #logo-link {
+	header > div:first-of-type #logo-link {
     margin: 0;
   }
+
   #nav_head {
     width: 100%;
-    margin-top: 0.25rem;
   }
+
   #nav_toggle_btn {
     display: block;
-    /* Make the navbar toggle button easier to click. */
     padding: 1.25rem;
-    margin-top: -0.2rem;
-    margin-right: -1rem;
   }
+
   #nav_toggle_btn:hover {
     background-color: hsla(0, 0%, 50%, 0.15);
   }
+
   #nav_toggle_btn:active {
     background-color: hsla(0, 0%, 50%, 0.25);
   }
+
   #nav_toggle_cb:checked ~ header nav {
     display: block;
   }
+
   #nav {
     display: none;
+		height: auto;
   }
+
+	nav a {
+		padding: 16px;
+		width: 100%;
+	}
+
   nav ul {
     align-items: flex-start;
     flex-direction: column;
     height: auto;
   }
+
   nav > ul {
     margin-bottom: 16px;
   }
+
   nav ul li {
-    padding: 0;
-    padding-top: 16px;
-    width: 100%;
+		width: 100%;
+		align-items: start;
   }
-  nav ul a {
-    width: 100%;
-    display: block;
-    /* Make links easier to click but still close to each other. */
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-top: -0.4375rem;
-    margin-bottom: -0.4375rem;
-  }
+
+	nav li.fund {
+		margin: 0;
+		width: 100%;
+	}
+
+	nav li.fund > a{
+		display: block;
+	}
+
   a.patreonLink {
     text-decoration: none;
     height: 64px !important;

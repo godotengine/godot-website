@@ -59,15 +59,22 @@ nav#nav .fund a {
 }
 
 @media (min-width: 1200px) {
-	nav#nav .fund {
-		margin-right: 0px;
+	nav li.fund {
+		padding: 0 1rem;
+		margin-right: -1rem;
 	}
 
-	nav#nav .fund a {
+	nav li.fund:hover
+	{
+		/*Remove hover background-color*/
+		background-color: unset;
+	}
+
+	nav .fund a {
 		color: var(--fund-color);
 		background-color: var(--base-color);
 		border-radius: 9px;
 		box-shadow: inset 0 0 0 2px var(--fund-color);
-		padding: 13px;
+		padding: 10px;
 	}
 }
