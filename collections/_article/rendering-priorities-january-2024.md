@@ -43,7 +43,7 @@ We fixed over [200](https://github.com/godotengine/godot/pulls?q=is%3Apr+milesto
 
 **2. Proper multi-threading in the RenderingDevice (in progress)**
 
-This was delayed due to foundational work on the RenderingDevice backend. But the work is currently underway and is showing promising [results](https://x.com/dariosamo/status/1735363059202375819?s=20) already!
+This was delayed due to foundational work on the RenderingDevice backend. But the work is currently underway and is showing promising [results](https://twitter.com/dariosamo/status/1735363059202375819) already!
 
 ### Usability
 
