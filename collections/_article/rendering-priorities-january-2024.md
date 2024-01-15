@@ -106,7 +106,7 @@ After initially writing SDFGI, Juan had many ideas to improve it which we discus
 
 A lot has happened since our last update. Notably we have made a lot of improvements to our rendering backend that pave the way for further features and enhancements while improving performance and stability. Our development effort is starting to shift towards new features that unblock current users who want to push Godot a little bit further, but we are still focused on improving the current set of features.
 
-Please remember that this is merely a list of things that the rendering teams feels are priorities. Both the rendering team and interested contributors can and will continue to work on other tasks.
+Please keep in mind that this is simply a list of things the rendering team deems a priority. Both the rendering team and interested contributors can and will continue to work on other tasks.
 
 ## Support
 
