@@ -4,7 +4,7 @@ excerpt: "4.2 brought a lot of improvements to Godot's renderer and ongoing work
 categories: ["progress-report"]
 author: Clay John
 image: /storage/blog/covers/rendering-priorities-jan-2024.webp
-date: 2024-01-11 20:00:00
+date: 2024-01-16 12:00:00
 ---
 
 We released [Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/) on November 30, 2023 with many exciting features and countless fixes and improvements. Godot 4.2 is starting to look like what we had envisioned for Godot 4. Accordingly, we are spending more time thinking and talking about what the future holds for the [rendering team](https://godotengine.org/teams/#rendering).
