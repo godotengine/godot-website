@@ -20,7 +20,7 @@ linux: true
 steam: https://store.steampowered.com/app/1863080/Beat_Invaders/
 
 
-featured_in_home: true
+featured_in_home: false
 ---
 
 <p>

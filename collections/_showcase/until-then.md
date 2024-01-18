@@ -7,13 +7,13 @@ author: "Polychroma Games"
 
 image: "/assets/showcase/until-then-header.jpg"
 gallery: [
-	"/assets/showcase/until-then-1.jpg",
 	"/assets/showcase/until-then-2.jpg",
+	"/assets/showcase/until-then-1.jpg",
 	"/assets/showcase/until-then-3.jpg",
 	"/assets/showcase/until-then-4.jpg",
 ]
 website: https://untilthengame.com/
-release_date: "2024"
+release_date: "TBD"
 youtube_id: "YeMs2y37yxA"
 windows: true
 macos: true
@@ -22,7 +22,7 @@ playstation: true
 
 steam: https://store.steampowered.com/app/1574820/Until_Then/
 
-featured_in_home: false
+featured_in_home: true
 ---
 
 _"The world hasn't ended yet."_
