@@ -36,7 +36,7 @@ developer_interview:
 </p>"
 
 
-featured_in_home: true
+featured_in_home: false
 ---
 
 <p>
