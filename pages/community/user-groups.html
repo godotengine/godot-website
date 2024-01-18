@@ -44,6 +44,7 @@ layout: default
 				'Indonesia': [-2.548926, 118.0148634],
 				'Italy': [42.504154, 12.646361],
 				'Iran': [32.4207423, 53.6830157],
+				'Iraq': [33.223191, 43.679291],
 				'Israel': [31.53131, 34.86677],
 				'Japan': [36.57484, 139.23942],
 				'Latvia': [56.959065, 24.862593],
@@ -139,6 +140,11 @@ layout: default
 
 				// Add markers for online communities with merged tooltips.
 				Object.keys(onlinePoints).forEach((country, index) => {
+					if (countryCoordinates[country] == null) {
+						console.warn(`Coordinates of "${country}" are missing, skipping.`);
+						return;
+					}
+
 					let markerPopup = '';
 					onlinePoints[country].forEach((point, index2) => {
 						// Add a line separation between online communities.
