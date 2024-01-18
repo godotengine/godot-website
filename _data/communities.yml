@@ -46,10 +46,16 @@ Bulgaria:
         url: https://discord.gg/j3KRdV3b4P
 Canada:
   - name: Godot Toronto
+    coordinates:
+      - 43.65348
+      - -79.38394
     links:
       - title: MeetUp
         url: https://www.meetup.com/Godot-Toronto/
   - name: Godot Québec
+    coordinates:
+      - 45.50318
+      - -73.56981
     links:
       - title: Discord
         url: https://discord.gg/AemZhPjqyM
