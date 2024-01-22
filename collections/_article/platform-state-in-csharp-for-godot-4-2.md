@@ -13,19 +13,19 @@ With the recent release of Godot [4.2](/article/godot-4-2-arrives-in-style), pro
 
 First a bit of history. Godot 3 supports exporting C# projects to all the platforms supported by the engine. The C# implementation uses the [Mono embedding APIs](https://www.mono-project.com/docs/advanced/embedding/) and the [Mono runtime](https://www.mono-project.com/docs/advanced/runtime/). **Mono** is an open source cross-platform implementation of the Windows-only .NET Framework.
 
-With the [4.0 release](https://godotengine.org/article/godot-4-0-sets-sail/), the C# integration moved away from the Mono embedding APIs and replaced it with the .NET Core hosting APIs (using the `hostfxr` library). This allowed us to modernize the codebase and prepare for [.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/), the first release in the .NET unification journey. Unfortunately, in this move C# projects lost the ability to export to platforms other than Desktop (Windows, MacOS and Linux).
+With the [4.0 release](https://godotengine.org/article/godot-4-0-sets-sail/), the C# integration moved away from the Mono embedding APIs and replaced it with the .NET Core hosting APIs (using the `hostfxr` library). This allowed us to modernize the codebase and prepare for [.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/), the first release in the .NET unification journey. Unfortunately, in this move C# projects lost the ability to export to platforms other than Desktop (Windows, macOS and Linux).
 
 Before **.NET unification** there was the Windows-only .NET Framework and the cross-platform Mono and .NET Core. Unification means there will be just one .NET going forward, so the next release after .NET Core 3.0 was named .NET 5, and Mono and .NET Framework won't have any new major releases.
 
 The term **Mono** can be used to refer to a collection of technologies. With .NET unification, the Mono framework is deprecated, but the runtime is still supported. Unified .NET uses both the CoreCLR and the Mono runtimes, but Mono is the only runtime that supports mobile and web platforms.
 
-However, in .NET 7.0 a new runtime became available, [**NativeAOT**](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot), which allows publishing native binaries built for a specific platform, instead of the JIT-based portable binaries. In .NET 7.0, NativeAOT only supports Windows and Linux, but in .NET 8.0 it adds support for MacOS and experimental support for Android and iOS. This means in .NET 8.0 NativeAOT can be used as an alternative to Mono for mobile platforms.
+However, in .NET 7.0 a new runtime became available, [**NativeAOT**](https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot), which allows publishing native binaries built for a specific platform, instead of the JIT-based portable binaries. In .NET 7.0, NativeAOT only supports Windows and Linux, but in .NET 8.0 it adds support for macOS and experimental support for Android and iOS. This means in .NET 8.0 NativeAOT can be used as an alternative to Mono for mobile platforms.
 
 ## Platform support in 4.2
 
-Thanks to the amazing work by [RedworkDE](https://github.com/RedworkDE) and [Andreia Gaita](https://github.com/shana), C# projects in Godot [4.2](/article/godot-4-2-arrives-in-style) have _experimental_ support for exporting to **Android** and **iOS**.
+Thanks to amazing work by [RedworkDE](https://github.com/RedworkDE) and [Andreia Gaita](https://github.com/shana), C# projects in Godot [4.2](/article/godot-4-2-arrives-in-style) have _experimental_ support for exporting to **Android** and **iOS**.
 
-This initial implementation has some limitations which is why they are still marked experimental, we want to make sure the platform support is production-ready when we remove the experimental label. The platform limitations are documented in the [C# documentation](https://docs.godotengine.org/en/4.2/tutorials/scripting/c_sharp/index.html#c-platform-support), but we'll go over each platform here.
+These initial implementations have some limitations which is why they are still marked experimental. We want to make sure the platform support is production-ready before we remove the experimental label. The platform limitations are documented in the [C# documentation](https://docs.godotengine.org/en/4.2/tutorials/scripting/c_sharp/index.html#c-platform-support), but we'll go over each platform here.
 
 ### Android
 
@@ -33,9 +33,9 @@ Android support was implemented in [GH-73257](https://github.com/godotengine/god
 
 Exporting to Android requires .NET **7.0** or higher, uses the [**linux-bionic**](https://github.com/dotnet/runtime/pull/66147) Mono runtime, and only supports the `arm64` and `x64` architectures.
 
-The **linux-bionic** runtime is a linux runtime using the Android C library (so it's basically Android but without the JNI). This means that the Android bindings are not available, so some APIs (such as [SSL](https://github.com/godotengine/godot/issues/84559)) will crash the game, use the Godot APIs when possible to avoid these issues.
+The **linux-bionic** runtime is a Linux runtime using the Android C library, so it's basically Android but without the JNI. This means that the Android bindings are not available, so some APIs (such as [SSL](https://github.com/godotengine/godot/issues/84559)) will crash the game. Use the Godot APIs when possible to avoid these issues.
 
-Using NativeAOT should also be supported in theory, but it requires using .NET **8.0** and some manual work, you can read more about using NativeAOT with Android bionic in the [Microsoft documentation](https://github.com/dotnet/runtime/blob/v8.0.0/src/coreclr/nativeaot/docs/android-bionic.md).
+Using NativeAOT should also be supported in theory, but it requires using .NET **8.0** and some manual work. You can read more about using NativeAOT with Android bionic in the [Microsoft documentation](https://github.com/dotnet/runtime/blob/v8.0.0/src/coreclr/nativeaot/docs/android-bionic.md).
 
 ### iOS
 
@@ -43,7 +43,7 @@ iOS support was implemented in [GH-82729](https://github.com/godotengine/godot/p
 
 NativeAOT uses trimming and Godot still uses reflection in parts of the codebase, so we are rooting the Godot bindings and the game project's assemblies but some reflection usage may still break at runtime.
 
-Exporting to iOS is only supported from a MacOS device and requires using Xcode to build the final binaries.
+Exporting to iOS is only supported from a macOS device and requires using Xcode to build the final binaries.
 
 The official export template for the iOS simulator only supports the `x64` architecture.
 
@@ -51,7 +51,7 @@ The official export template for the iOS simulator only supports the `x64` archi
 
 The web platform is still **not supported** in 4.2, but progress has been made in loading GDExtensions which has some similarities.
 
-Godot uses [Emscripten](https://emscripten.org/) to compile C++ code to [Web Assembly](https://webassembly.org/) (WASM) that can be run as "native code" in web browsers. The Godot WASM acts as the main module and it's able to load other WASMs that are built as side modules, GDExtensions that are used in web exports are built as WASM side modules so Godot can load them dynamically.
+Godot uses [Emscripten](https://emscripten.org/) to compile C++ code to [Web Assembly](https://webassembly.org/) (WASM) that can be run as "native code" in web browsers. The Godot WASM acts as the main module and it's able to load other WASMs that are built as side modules. GDExtensions that are used in web exports are built as WASM side modules so Godot can load them dynamically.
 
 When building C# projects for the web platform, the built WASM expects .NET to be the main entry point and doesn't support [dynamic linking](https://github.com/dotnet/runtime/issues/75257). This is because, currently, the .NET runtime can only be built as a main module. So, unlike GDExtensions, the resulting WASM can't be loaded by Godot.
 
@@ -59,7 +59,7 @@ When building C# projects for the web platform, the built WASM expects .NET to b
 
 Desktop platforms have been supported since 4.0, but what some users may not know is that those platforms support all .NET runtimes. This is not new to 4.2 and, in fact, has been supported since 4.0. Godot's C# integration uses standard .NET so everything that works in a normal C# project should work in Godot too. To use a different runtime from the default (which is CoreCLR), users have to modify the C# project file (`.csproj`) as documented in the Microsoft documentation.
 
-To enable NativeAOT in desktop platforms make sure to target .NET 7.0 or higher and set the `<PublishAOT>` property to true. Also, since Godot uses reflection, make sure to root the assemblies (this is done automatically for you when exporting to iOS because NativeAOT is currently the only supported runtime). Here's an example C# project:
+To enable NativeAOT in desktop platforms, make sure to target .NET 7.0 or higher and set the `<PublishAOT>` property to true. Also, since Godot uses reflection, make sure to root the assemblies (this is done automatically for you when exporting to iOS because NativeAOT is currently the only supported runtime). Here's an example C# project:
 
 ```xml
 <Project Sdk="Godot.NET.Sdk/4.2.0">
@@ -92,7 +92,7 @@ As a summary, the current platform support as of 4.2 is described in the table b
 
 ## What's next?
 
-As new releases of .NET become available, platform support gets better. NativeAOT support for mobile platforms is still experimental, and there's currently no support for the web platform. The .NET 9.0 release is set to include some improvements to NativeAOT and we may see initial support for the web platform, we'll see what makes it into the release in November 2024.
+As new releases of .NET become available, platform support gets better. NativeAOT support for mobile platforms is still experimental, and there's currently no support for the web platform. The .NET 9.0 release is set to include some improvements to NativeAOT and we may see initial support for the web platform. We'll see what makes it into the release in November 2024.
 
 Using NativeAOT is only one of the ways in which we can add support for more platforms to Godot C# projects, using the Mono runtime is another possibility. For a future Godot release, we want to explore bringing back some of the Mono embedding that was available in Godot 3 as an alternative way to support mobile and web platforms.
 
