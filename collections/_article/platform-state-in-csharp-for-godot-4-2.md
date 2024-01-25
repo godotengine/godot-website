@@ -49,11 +49,13 @@ The official export template for the iOS simulator only supports the `x64` archi
 
 ### Web
 
-The web platform is still **not supported** in 4.2, but progress has been made in loading GDExtensions which has some similarities.
+The web platform is still **not supported** in 4.2.
 
-Godot uses [Emscripten](https://emscripten.org/) to compile C++ code to [Web Assembly](https://webassembly.org/) (WASM) that can be run as "native code" in web browsers. The Godot WASM acts as the main module and it's able to load other WASMs that are built as side modules. GDExtensions that are used in web exports are built as WASM side modules so Godot can load them dynamically.
+For non-C# projects, Godot uses [Emscripten](https://emscripten.org/) to compile C++ code to [Web Assembly](https://webassembly.org/) (WASM) that can be run as "native code" in web browsers. The Godot WASM acts as the main module and it's able to load other WASMs that are built as side modules. GDExtensions that are used in web exports are built as WASM side modules so Godot can load them dynamically.
 
-When building C# projects for the web platform, the built WASM expects .NET to be the main entry point and doesn't support [dynamic linking](https://github.com/dotnet/runtime/issues/75257). This is because, currently, the .NET runtime can only be built as a main module. So, unlike GDExtensions, the resulting WASM can't be loaded by Godot.
+When building C# projects for the web platform, .NET is able to build a WASM but this can't be used by Godot because .NET expects to be the main entry point and doesn't support [dynamic linking](https://github.com/dotnet/runtime/issues/75257). This is because, currently, the .NET runtime can only be built as a main module. So, unlike GDExtensions, the resulting WASM can't be loaded by Godot.
+
+Future upstream improvements may allow using the WASM built by the .NET workload.
 
 ### Desktop
 
