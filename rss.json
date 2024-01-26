@@ -16,6 +16,17 @@
 		},
 		
 		{
+			"title": "Release candidates: Godot 4.1.4 RC 1 &amp; 4.2.2 RC 1",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/",
+			"description": "As a double-feature release, Godot 4.1.4 and 4.2.2 are ready for testing with their respective release candidates!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/",
+			"dc:creator": "Yuri Sizov",
+			"pubDate": "Fri, 26 Jan 2024 16:30:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-1.webp"
+		},
+		
+		{
 			"title": "Dev snapshot: Godot 3.6 beta 4",
 			"link": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-4/",
 			"description": "Godot 3.6 is still in development, slowly but steadily! This snapshot updates toolchains for official builds and adds official Linux ARM binaries, among other improvements.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Thu, 19 Oct 2023 13:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-2.webp"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 4.2 beta 1",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/",
-			"description": "With all planned major and minor features implemented, Godot 4.2 is ready for beta testing!",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/",
-			"dc:creator": "Yuri Sizov",
-			"pubDate": "Thu, 12 Oct 2023 14:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-1.webp"
 		}
 		
 	]
