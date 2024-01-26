@@ -1,10 +1,10 @@
 ---
 title: "Current state of C# platform support in Godot 4.2"
-excerpt: "Progress update about the platforms supported by C# projects as of Godot 4.2."
+excerpt: "How the transition to a unified .NET has impacted platform support, and re-adding the ability to port to mobile."
 categories: ["progress-report"]
 author: Raul Santos
-image: /storage/blog/covers/platform-state-in-csharp-for-godot-4-2.jpg
-date: 2023-11-25 17:00:00
+image: /storage/blog/covers/progress-update-csharp-2.webp
+date: 2024-01-26 17:00:00
 ---
 
 With the recent release of Godot [4.2](/article/godot-4-2-arrives-in-style), projects that use C# can now export to Android and iOS. Let's take a look at the current platform support for C# projects and what to expect from future releases beyond 4.2.
