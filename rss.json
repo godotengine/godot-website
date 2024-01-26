@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Current state of C# platform support in Godot 4.2",
+			"link": "https://godotengine.org/article/platform-state-in-csharp-for-godot-4-2/",
+			"description": "How the transition to a unified .NET has impacted platform support, and re-adding the ability to port to mobile.",
+			"categories": ["Progress Report"],
+			"guid": "https://godotengine.org/article/platform-state-in-csharp-for-godot-4-2/",
+			"dc:creator": "Raul Santos",
+			"pubDate": "Fri, 26 Jan 2024 17:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/progress-update-csharp-2.webp"
+		},
+		
+		{
 			"title": "Dev snapshot: Godot 3.6 beta 4",
 			"link": "https://godotengine.org/article/dev-snapshot-godot-3-6-beta-4/",
 			"description": "Godot 3.6 is still in development, slowly but steadily! This snapshot updates toolchains for official builds and adds official Linux ARM binaries, among other improvements.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Yuri Sizov",
 			"pubDate": "Thu, 12 Oct 2023 14:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-1.webp"
-		},
-		
-		{
-			"title": "Maintenance release: Godot 4.1.2",
-			"link": "https://godotengine.org/article/maintenance-release-godot-4-1-2/",
-			"description": "As Godot 4.2 enters feature freeze this week, a new Godot 4.1 maintenance release arrives with a handful of improvements to stability and performance!",
-			"categories": ["Release"],
-			"guid": "https://godotengine.org/article/maintenance-release-godot-4-1-2/",
-			"dc:creator": "Yuri Sizov",
-			"pubDate": "Wed, 04 Oct 2023 11:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-1-2.webp"
 		}
 		
 	]
