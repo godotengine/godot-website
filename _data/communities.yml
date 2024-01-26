@@ -352,6 +352,13 @@ Turkey:
       - title: Discord
         url: https://discord.gg/B48HBJM
 United States:
+  - name: Boston Godot Developers Group
+    coordinates:
+      - 42.3616283
+      - -71.081069
+    links:
+      - title: Meetup
+        url: https://www.meetup.com/bostongamedev/events/298734856/
   - name: Godot Southwest US
     links:
       - title: Discord
