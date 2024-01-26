@@ -99,3 +99,28 @@ As new releases of .NET become available, platform support gets better. NativeAO
 Using NativeAOT is only one of the ways in which we can add support for more platforms to Godot C# projects, using the Mono runtime is another possibility. For a future Godot release, we want to explore bringing back some of the Mono embedding that was available in Godot 3 as an alternative way to support mobile and web platforms.
 
 Please, give Godot [4.2](/article/godot-4-2-arrives-in-style) a try and let us know if you find any bugs.
+
+<style>
+  .article-body table {
+    width: 100%;
+  }
+  .article-body table tr:nth-child(odd) td{
+    background: #80808021;
+  }
+  .article-body table tr:nth-child(even) td{
+    background: #80808047;
+  }
+  .article-body table td {
+    padding: 10px;
+  }
+  .article-body table thead tr {
+    background: var(--background-color);
+    height: 43px;
+  }
+  .article-body table thead tr th {
+    text-align: center !important;
+  }
+  .article-body table tbody tr td {
+    text-align: center !important;
+  }
+</style>
