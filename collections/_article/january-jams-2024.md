@@ -66,7 +66,7 @@ A staple in our community that takes place during the second week of every month
 
 📅 January 12th - January 27th
 
-A jam organized by Game Developer & Twitch Streamer [Pirate Software](https://twitter.com/PirateSoftware). Unique compared to the other events in this list is the requirement to provide a Game Design Document for your entry. On top of that, you can almost always find co-work companions in his live streams.
+A jam organized by game developer & Twitch streamer [Pirate Software](https://twitter.com/PirateSoftware). Unique compared to the other events in this list is the requirement to provide a game design document for your entry. On top of that, you can almost always find co-work companions in his live streams.
 
 ### 8. GlobalGameJam
 
