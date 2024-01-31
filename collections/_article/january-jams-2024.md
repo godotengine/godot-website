@@ -42,7 +42,7 @@ While there are a plethora of “niche” game jams at any given time, it seems 
 
 📅 January 1st  - January 15th
 
-The Squid Games of the game dev world. The previous sentence is taken straight from their own branding, albeit it does seem nobody dies in this rendition and the price is a T-shirt. Every participant is sorted into one of five teams, spearheaded by the organizers themselves, which each adds a unique modifier to the common challenge.
+The Squid Games of the game dev world. The previous sentence is taken straight from their own branding, albeit it does seem nobody dies in this rendition and the prize is a T-shirt. Every participant is sorted into one of five teams, spearheaded by the organizers themselves, which each adds a unique modifier to the common challenge.
 
 ### 5. New Year, New Skills Game Jam
 
