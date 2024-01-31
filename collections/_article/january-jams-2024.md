@@ -16,7 +16,7 @@ Below you can find a list of our ten personal favorites from this busy month (in
 
 🔗 [https://itch.io/jam/gaming-like-its-1928](https://itch.io/jam/gaming-like-its-1928)
 
-📅 Janurary 1st - February 1st
+📅 January 1st - February 1st
 
 Did you hear about Mickey Mouse entering the public domain this year? How is that relevant to this jam you ask, well… you can now include the character in your games without fear of repercussions. This is precisely what the organizers turned into a creative challenge, to use the newly freed IPs from 1928 (exactly 95 years ago, the current protection period) to make a digital or analog game.
 
