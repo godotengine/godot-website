@@ -1368,6 +1368,14 @@ article.article-card .info span {
   color: var(--secondary-color-text);
 }
 
+figure.article-cover figcaption {
+  opacity: 0.8;
+  line-height: 1.5
+}
+figure.article-cover figcaption a {
+  color: inherit;
+}
+
 section.sponsors .grid {
   display: grid;
   grid-template-columns: 1fr;

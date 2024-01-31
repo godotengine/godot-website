@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>January Jams</title>
+		<link>https://godotengine.org/article/january-jams-2024/</link>
+		<description>Looking back at a month of game jams, we curated a list of ten events that you might or might not have heard of before.</description>
+		
+		<category>Events</category>
+		
+		<guid>https://godotengine.org/article/january-jams-2024/</guid>
+		<dc:creator>Nathalie Galla</dc:creator>
+		<pubDate>Wed, 31 Jan 2024 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godot-jam.webp</image>
+	</item>
+	
+	<item>
 		<title>Current state of C# platform support in Godot 4.2</title>
 		<link>https://godotengine.org/article/platform-state-in-csharp-for-godot-4-2/</link>
 		<description>How the transition to a unified .NET has impacted platform support, and re-adding the ability to port to mobile.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Ilaria Cislaghi</dc:creator>
 		<pubDate>Mon, 23 Oct 2023 13:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/progress-report-state-of-particles.webp</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.2 beta 2</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-2-beta-2/</link>
-		<description>After last week&#39;s 4.2 beta 1 release, we introduced fixes for a number of bugs reported by the community, which are now ready to test in beta 2.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-2-beta-2/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Thu, 19 Oct 2023 13:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-2.webp</image>
 	</item>
 	
 

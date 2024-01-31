@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "January Jams",
+			"link": "https://godotengine.org/article/january-jams-2024/",
+			"description": "Looking back at a month of game jams, we curated a list of ten events that you might or might not have heard of before.",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/january-jams-2024/",
+			"dc:creator": "Nathalie Galla",
+			"pubDate": "Wed, 31 Jan 2024 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/godot-jam.webp"
+		},
+		
+		{
 			"title": "Current state of C# platform support in Godot 4.2",
 			"link": "https://godotengine.org/article/platform-state-in-csharp-for-godot-4-2/",
 			"description": "How the transition to a unified .NET has impacted platform support, and re-adding the ability to port to mobile.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Ilaria Cislaghi",
 			"pubDate": "Mon, 23 Oct 2023 13:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/progress-report-state-of-particles.webp"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 4.2 beta 2",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-2/",
-			"description": "After last week&#39;s 4.2 beta 1 release, we introduced fixes for a number of bugs reported by the community, which are now ready to test in beta 2.",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-2/",
-			"dc:creator": "Rémi Verschelde",
-			"pubDate": "Thu, 19 Oct 2023 13:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-2.webp"
 		}
 		
 	]
