@@ -26,7 +26,7 @@ Did you hear about Mickey Mouse entering the public domain this year? How is tha
 
 📅 January 1st  - February 4th
 
-Be honest, how high is your stack of unfinished games that you once were sure would see the light of day? This particular game jam caters to your new year’s resolution to”Finally Finish Something” and hence allows you to submit any game you have previously been working on, as long as you have used the month of January to complete the project.
+Be honest, how high is your stack of unfinished games that you once were sure would see the light of day? This particular game jam caters to your new year’s resolution to ”Finally Finish Something” and hence allows you to submit any game you have previously been working on, as long as you have used the month of January to complete the project.
 
 ### 3. Queer Vampire Jam
 
