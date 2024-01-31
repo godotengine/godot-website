@@ -1,6 +1,6 @@
 ---
 title: "January Jams"
-excerpt: "Looking back at a month of GameJams, we curated a list of ten events that you might or might not have heard of before."
+excerpt: "Looking back at a month of game jams, we curated a list of ten events that you might or might not have heard of before."
 categories: ["events"]
 author: Nathalie Galla
 image: /storage/blog/covers/godot-jam.webp
