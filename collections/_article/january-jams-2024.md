@@ -96,6 +96,6 @@ Is it possible to make a game in just three hours? The hosts of this fast paced 
 
 ----
 
-Did you join any game jams this month? Then don’t miss out on the opportunity to self-promote your projects under our __#JamJanuary__ posts which you can find here: [https://linkin.bio/godot](linkin.bio/godot).
+Did you join any game jams this month? Then don’t miss out on the opportunity to self-promote your projects under our __#JamJanuary__ posts which you can find here: [linkin.bio/godot](https://linkin.bio/godot).
 
 
