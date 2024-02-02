@@ -115,6 +115,19 @@ layout: default
 		color: var(--base-color-text-subtitle-date);
 	}
 
+	.article-metadata .date.post-recent-highlight {
+		color: var(--post-recent-highlight-color);
+		opacity: 0.8;
+	}
+
+	.article-metadata .date.post-recent-highlight::after {
+		font-size: 80%;
+		content: "NEW";
+		border: 2px solid var(--post-recent-highlight-color);
+		padding: 2px 3px;
+		margin-left: 8px;
+	}
+
 	.tag.active {
 		filter: saturate(0.75);
 	}
@@ -176,7 +189,7 @@ layout: default
 						{% endif %}
 						<span class="by">{{ page.author }}</span>
 					</div>
-					<span class="date"> {{ page.date | date: "%e %B %Y" }}</span>
+					<span class="date" data-post-date="{{ page.date }}"> {{ page.date | date: "%e %B %Y" }}</span>
 				</div>
 
 				<div class="tags">
