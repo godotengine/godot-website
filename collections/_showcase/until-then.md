@@ -11,9 +11,8 @@ gallery: [
 ]
 website: https://untilthengame.com/
 release_date: "TBD"
-youtube_id: "YeMs2y37yxA"
+youtube_id: "ktd33TPsGlA"
 windows: true
-macos: true
 linux: true
 switch: true
 
