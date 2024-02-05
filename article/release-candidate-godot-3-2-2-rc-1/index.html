@@ -181,6 +181,19 @@ This new RC 1 build should be quite stable and we hope that many Godot 3.2.x use
 		color: var(--base-color-text-subtitle-date);
 	}
 
+	.article-metadata .date.post-recent-highlight {
+		color: var(--post-recent-highlight-color);
+		opacity: 0.8;
+	}
+
+	.article-metadata .date.post-recent-highlight::after {
+		font-size: 80%;
+		content: "NEW";
+		border: 2px solid var(--post-recent-highlight-color);
+		padding: 2px 3px;
+		margin-left: 8px;
+	}
+
 	.tag.active {
 		filter: saturate(0.75);
 	}
@@ -235,7 +248,7 @@ This new RC 1 build should be quite stable and we hope that many Godot 3.2.x use
 						
 						<span class="by">Rémi Verschelde</span>
 					</div>
-					<span class="date"> 12 June 2020</span>
+					<span class="date" data-post-date="2020-06-12 14:02:56 +0000"> 12 June 2020</span>
 				</div>
 
 				<div class="tags">
@@ -518,6 +531,13 @@ In the upcoming Godot 4.0, this bug was fixed with a more comprehensive approach
 		// in case a code block appears in an article.
 		document.querySelectorAll('pre code').forEach((block) => {
 			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+			// Highlight post dates that are less than 48 hours old.
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+				postDate.classList.add("post-recent-highlight");
+			};
 		});
 
 		// Initialize lightbox.

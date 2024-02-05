@@ -270,6 +270,7 @@
 				<div class="content">
 					<h3>January Jams</h3>
 					<p class="excerpt">Looking back at a month of game jams, we curated a list of ten events that you might or might not have heard of before.</p>
+					<span class="date" data-post-date="2024-01-31 12:00:00 +0000">31 January 2024</span>
 				</div>
 			</article>
 		</a>
@@ -285,6 +286,7 @@
 						<div>
 							<h3>Current state of C# platform support in Godot 4.2</h3>
 							<p class="excerpt">How the transition to a unified .NET has impacted platform support, and re-adding the ability to por...</p>
+							<span class="date" data-post-date="2024-01-26 17:00:00 +0000">26 January 2024</span>
 						</div>
 					</article>
 				</a>
@@ -297,6 +299,7 @@
 						<div>
 							<h3>Release candidates: Godot 4.1.4 RC 1 & 4.2.2 RC 1</h3>
 							<p class="excerpt">As a double-feature release, Godot 4.1.4 and 4.2.2 are ready for testing with their respective relea...</p>
+							<span class="date" data-post-date="2024-01-26 16:30:00 +0000">26 January 2024</span>
 						</div>
 					</article>
 				</a>
@@ -309,6 +312,7 @@
 						<div>
 							<h3>Dev snapshot: Godot 3.6 beta 4</h3>
 							<p class="excerpt">Godot 3.6 is still in development, slowly but steadily! This snapshot updates toolchains for officia...</p>
+							<span class="date" data-post-date="2024-01-25 14:00:00 +0000">25 January 2024</span>
 						</div>
 					</article>
 				</a>
@@ -861,6 +865,13 @@
 		// in case a code block appears in an article.
 		document.querySelectorAll('pre code').forEach((block) => {
 			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+			// Highlight post dates that are less than 48 hours old.
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+				postDate.classList.add("post-recent-highlight");
+			};
 		});
 
 		// Initialize lightbox.

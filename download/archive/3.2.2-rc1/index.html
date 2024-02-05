@@ -735,6 +735,13 @@ This new RC 1 build should be quite stable and we hope that many Godot 3.2.x use
 			hljs.highlightBlock(block);
 		});
 
+		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+			// Highlight post dates that are less than 48 hours old.
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+				postDate.classList.add("post-recent-highlight");
+			};
+		});
+
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,

@@ -181,6 +181,19 @@ Check the detailed release notes to see what's new in Godot 3.0.1, and what bugs
 		color: var(--base-color-text-subtitle-date);
 	}
 
+	.article-metadata .date.post-recent-highlight {
+		color: var(--post-recent-highlight-color);
+		opacity: 0.8;
+	}
+
+	.article-metadata .date.post-recent-highlight::after {
+		font-size: 80%;
+		content: "NEW";
+		border: 2px solid var(--post-recent-highlight-color);
+		padding: 2px 3px;
+		margin-left: 8px;
+	}
+
 	.tag.active {
 		filter: saturate(0.75);
 	}
@@ -235,7 +248,7 @@ Check the detailed release notes to see what's new in Godot 3.0.1, and what bugs
 						
 						<span class="by">HP van Braam</span>
 					</div>
-					<span class="date"> 25 February 2018</span>
+					<span class="date" data-post-date="2018-02-25 20:59:56 +0000"> 25 February 2018</span>
 				</div>
 
 				<div class="tags">
@@ -457,6 +470,13 @@ Check the detailed release notes to see what's new in Godot 3.0.1, and what bugs
 		// in case a code block appears in an article.
 		document.querySelectorAll('pre code').forEach((block) => {
 			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+			// Highlight post dates that are less than 48 hours old.
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+				postDate.classList.add("post-recent-highlight");
+			};
 		});
 
 		// Initialize lightbox.

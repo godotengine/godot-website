@@ -308,6 +308,13 @@ The more decorated your refuge, the more popular it will be, allowing you to dri
 			hljs.highlightBlock(block);
 		});
 
+		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+			// Highlight post dates that are less than 48 hours old.
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+				postDate.classList.add("post-recent-highlight");
+			};
+		});
+
 		// Initialize lightbox.
 		new Tobii({
 			zoom: false,

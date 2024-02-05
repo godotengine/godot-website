@@ -183,6 +183,19 @@ Now they have decided to use Godot for such development work! The switch from th
 		color: var(--base-color-text-subtitle-date);
 	}
 
+	.article-metadata .date.post-recent-highlight {
+		color: var(--post-recent-highlight-color);
+		opacity: 0.8;
+	}
+
+	.article-metadata .date.post-recent-highlight::after {
+		font-size: 80%;
+		content: "NEW";
+		border: 2px solid var(--post-recent-highlight-color);
+		padding: 2px 3px;
+		margin-left: 8px;
+	}
+
 	.tag.active {
 		filter: saturate(0.75);
 	}
@@ -237,7 +250,7 @@ Now they have decided to use Godot for such development work! The switch from th
 						
 						<span class="by">Pedro J. Estébanez</span>
 					</div>
-					<span class="date">  9 December 2017</span>
+					<span class="date" data-post-date="2017-12-09 08:30:00 +0000">  9 December 2017</span>
 				</div>
 
 				<div class="tags">
@@ -398,6 +411,13 @@ Now they have decided to use Godot for such development work! The switch from th
 		// in case a code block appears in an article.
 		document.querySelectorAll('pre code').forEach((block) => {
 			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+			// Highlight post dates that are less than 48 hours old.
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+				postDate.classList.add("post-recent-highlight");
+			};
 		});
 
 		// Initialize lightbox.
