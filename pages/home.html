@@ -210,6 +210,7 @@ layout: default
 				<div class="content">
 					<h3>{{ post.title }}</h3>
 					<p class="excerpt">{{ post.excerpt }}</p>
+					<span class="date" data-post-date="{{ post.date }}">{{ post.date | date: "%e %B %Y" }}</span>
 				</div>
 			</article>
 		</a>
@@ -225,6 +226,7 @@ layout: default
 						<div>
 							<h3>{{ post.title }}</h3>
 							<p class="excerpt">{{ post.excerpt | truncate: 103 }}</p>
+							<span class="date" data-post-date="{{ post.date }}">{{ post.date | date: "%e %B %Y" }}</span>
 						</div>
 					</article>
 				</a>

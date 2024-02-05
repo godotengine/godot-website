@@ -24,6 +24,7 @@
   --accent-color: #f57389;
 
   --secondary-color-text: #546b99;
+  --post-recent-highlight-color: #ea580c;
 
   --link-color: hsl(206, 58%, 50%);
   --link-underline-color: hsla(206, 58%, 50%, 0.3);
@@ -117,6 +118,7 @@
     --accent-color: #5b5491;
 
     --secondary-color-text: #a6a6a6;
+    --post-recent-highlight-color: #fb923c;
 
     --link-color: hsl(200, 60%, 70%);
     --link-underline-color: hsla(200, 60%, 70%, 0.3);
@@ -1336,6 +1338,23 @@ article.article-card p.excerpt {
   font-size: 16px;
   opacity: 0.8;
   margin-top: 0;
+  margin-bottom: 6px;
+}
+article.article-card span.date {
+  color: var(--base-color-text);
+  font-size: 15px;
+  opacity: 0.65;
+}
+article.article-card span.date.post-recent-highlight {
+  color: var(--post-recent-highlight-color);
+  opacity: 1.0;
+}
+article.article-card span.date.post-recent-highlight::after {
+  font-size: 80%;
+  content: "NEW";
+  border: 1px solid var(--post-recent-highlight-color);
+  padding: 2px 3px;
+  margin-left: 8px;
 }
 article.article-card h3 {
   font-size: 22px;
