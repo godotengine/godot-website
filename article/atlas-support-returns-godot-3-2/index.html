@@ -449,7 +449,7 @@ As always, if you are not yet, please consider <a href="https://www.patreon.com/
 
 		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
 			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
 				postDate.classList.add("post-recent-highlight");
 			};
 		});

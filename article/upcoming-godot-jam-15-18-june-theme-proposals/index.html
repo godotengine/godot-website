@@ -430,7 +430,7 @@ Then 3.0 was released, a lot of backlog had to be worked on post-release, and th
 
 		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
 			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
 				postDate.classList.add("post-recent-highlight");
 			};
 		});

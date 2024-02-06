@@ -505,7 +505,7 @@ This update also re-adds UWP templates which we missing in beta 1 and beta 2 due
 
 		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
 			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
 				postDate.classList.add("post-recent-highlight");
 			};
 		});

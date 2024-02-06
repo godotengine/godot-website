@@ -575,7 +575,7 @@ final_albedo = 0011 1111 011 1 111 1111 11 01 1011 1111  // R = 0.248; G = 1.0; 
 
 		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
 			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
 				postDate.classList.add("post-recent-highlight");
 			};
 		});

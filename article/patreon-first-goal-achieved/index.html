@@ -426,7 +426,7 @@ Our next goals (set at USD 4,500 and $6,000) will be to hire some of our core de
 
 		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
 			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 96)) {
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
 				postDate.classList.add("post-recent-highlight");
 			};
 		});
