@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Dev snapshot: Godot 4.3 dev 3",
+			"link": "https://godotengine.org/article/dev-snapshot-godot-4-3-dev-3/",
+			"description": "A month&#39;s worth of development means a lot of new features to test, such as single-threaded web exports and Wayland support!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-3-dev-3/",
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Thu, 08 Feb 2024 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-3-dev-3.webp"
+		},
+		
+		{
 			"title": "January Jams",
 			"link": "https://godotengine.org/article/january-jams-2024/",
 			"description": "Looking back at a month of game jams, we curated a list of ten events that you might or might not have heard of before.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Tue, 24 Oct 2023 15:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-3.webp"
-		},
-		
-		{
-			"title": "State of particles and future updates",
-			"link": "https://godotengine.org/article/progress-report-state-of-particles/",
-			"description": "An update on the current state of the particle system in Godot, and some hints about what the future holds!",
-			"categories": ["Progress Report"],
-			"guid": "https://godotengine.org/article/progress-report-state-of-particles/",
-			"dc:creator": "Ilaria Cislaghi",
-			"pubDate": "Mon, 23 Oct 2023 13:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/progress-report-state-of-particles.webp"
 		}
 		
 	]
