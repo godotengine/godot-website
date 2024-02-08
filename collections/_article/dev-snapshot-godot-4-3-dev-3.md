@@ -35,7 +35,7 @@ This snapshot comes loaded with new features and important fixes, after close to
 
 For Godot 4.0, we modernized the engine to make heavier use of multi-threading. The web was the last platform where multi-threading wasn't a given, but support for the required [SharedArrayBuffer](https://caniuse.com/sharedarraybuffer) feature finally seemed widespread (reaching Safari at last), so we decided to go all in and also make Godot's Web export multi-threaded by default, solving a number of audio issues we had in Godot 3.
 
-Experience has proven that even though SharedArrayBuffer *is* supported by all browsers nowaday, the condition it imposes on the web server that host the games are too difficult to uphold. For people who self-host, it's easy enough, but for people who distribute their games on publishing platforms like itch.io or CrazyGames, it's often outside their control. The requirements for SharedArrayBuffer (for security reasons) are also at odds with web game monetization options, such as advertisement or payment processing.
+Experience has proven that even though SharedArrayBuffer *is* supported by all browsers nowadays, the conditions it imposes on the web server that host the games are too difficult to uphold. For people who self-host, it's easy enough, but for people who distribute their games on publishing platforms like itch.io or CrazyGames, it's often outside their control. The requirements for SharedArrayBuffer (for security reasons) are also at odds with web game monetization options, such as advertisement or payment processing.
 
 So we've had to change course and do the work to re-add a single-threaded mode to Godot ([GH-85939](https://github.com/godotengine/godot/pull/85939)). The engine can now be compiled with `threads=no`, which disables all threading use and runs all logic on the main thread.
 
@@ -49,7 +49,7 @@ Wayland is a window system protocol for Linux and \*BSD platforms which aims at 
 
 The implementation we merged was a massive undertaking led by Riteo ([GH-86180](https://github.com/godotengine/godot/pull/86180)), spanning 2 years of development with extensive testing and contributions by many others. This built upon previous attempts ([GH-23426](https://github.com/godotengine/godot/pull/23426), [GH-27463](https://github.com/godotengine/godot/pull/27463)) which came at a time where Godot's architecture wasn't ready for it yet, notably before the 4.0 split between OS (platform) and DisplayServer responsibilities.
 
-As with everything introduced in these dev snapshots, this is a **work in progress** and the early days of Wayland support in the main branch, which we will iterate upon in coming months to ensure that we eventually have feature parity with the X11 backend, which is still the default currently.
+As with everything introduced in these dev snapshots, this is a **work in progress** and the early days of Wayland support in the main branch. We will iterate upon this work in coming months to ensure that we eventually have feature parity with the X11 backend, which is still the default currently.
 
 We need interested users to test the opt-in Wayland support and report any issues. Eventually, once we're confident that things are reliable, we intend to make Wayland the default display server for games running in a Wayland environment – this is not expected to happen in 4.3, but likely in a later release. When that change of default backend is made, your Godot Linux exports will automatically select Wayland when running on Wayland, X11 when running on X11, and the user experience should be similar in both cases.
 
@@ -66,7 +66,7 @@ In the [4.3 dev 1 snapshot](/article/dev-snapshot-godot-4-3-dev-1/), we introduc
 
 In this build however, we enabled Direct3D 12 support in our official builds, including the open source Mesa NIR library and Godot's D3D12 implementation. `dxil.dll` is still required, but not provided, so by default you will still only have access to the Vulkan backend. To enable the D3D12 support, you need to download the [DirectX Shader Compiler](https://github.com/Microsoft/DirectXShaderCompiler/releases), and copy the relevant `dxil.dll` file for your architecture next to your Godot editor or exported project's executable.
 
-We are still evaluating options for being able to provide a D3D12 support that works out of the box, without proprietary component. But for now to test things you will have to do this manual step (or [compile from source](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12), which does it for you).
+We are still evaluating options for being able to provide a D3D12 support that works out of the box, without a proprietary component. But for now to test things you will have to do this manual step (or [compile from source](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12), which does it for you).
 
 ### Editor theme and UX improvements
 
@@ -87,7 +87,7 @@ The above section is already too long for "just" a dev snapshot, but that's how 
 - Add colors to the command-line help ([GH-36252](https://github.com/godotengine/godot/pull/36252)).
 - Add option to reverse FlowContainer fill direction (HFlow bottom-to-top, VFlow right-to-left) ([GH-74195](https://github.com/godotengine/godot/pull/74195)).
 - Support detecting and mapping Ctrl/Alt/Shift/Meta by their left/right physical location ([GH-80231](https://github.com/godotengine/godot/pull/80231)).
-- New VS project generation ([GH-84885](https://github.com/godotengine/godot/pull/84885)).
+- New Visual Studio project generation ([GH-84885](https://github.com/godotengine/godot/pull/84885)).
 - Implement audio stream playback parameters ([GH-86473](https://github.com/godotengine/godot/pull/86473)).
 - Promote CowData to 64 bits ([GH-86730](https://github.com/godotengine/godot/pull/86730)).
 - Lots of C# improvements when it comes to reloading scripts/assemblies ([GH-82113](https://github.com/godotengine/godot/pull/82113), [GH-85504](https://github.com/godotengine/godot/pull/85504), [GH-87550](https://github.com/godotengine/godot/pull/87550), [GH-87838](https://github.com/godotengine/godot/pull/87838)). More fixes are in the pipeline for future snapshots already!
