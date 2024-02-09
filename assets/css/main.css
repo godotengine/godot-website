@@ -166,33 +166,6 @@
     --warning-color: #ffeeaf;
   }
 
-	/*
-	1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-	2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-	This can trigger a poorly considered lint error in some tools but is included by design.
-	*/
-
-	img,
-	svg,
-	video,
-	canvas,
-	audio,
-	iframe,
-	embed,
-	object {
-		display: block;
-		vertical-align: middle;
-	}
-
-	/*
-	Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-	*/
-	img,
-	video {
-		max-width: 100%;
-		height: auto;
-	}
-
   /* Use logo with white text for dark navbar. */
   .nav-logo {
     display: none;
@@ -290,6 +263,33 @@ body a:active,
 .btn.flat:active,
 .search-bar-btn:active {
   filter: brightness(82.5%);
+}
+
+/*
+	1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+	2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+	This can trigger a poorly considered lint error in some tools but is included by design.
+	*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+	vertical-align: middle;
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+img,
+video {
+	max-width: 100%;
+	height: auto;
 }
 
 h1,
@@ -681,7 +681,6 @@ article .content img {
   border: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
 }
 
 svg.icon {

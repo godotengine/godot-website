@@ -6,25 +6,35 @@ layout: default
 
 <style>
 	.showcase-video-image {
-		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		img {
+			width: 100%;
+			background:  linear-gradient(90deg, #947451 12%, #a8885f 29%, #8c8977 65%, #d2ba9f 98%)
+		}
+
+		.youtube {
+			border: 0;
+		}
 	}
 
 	.showcase-developer-quote {
 		font-style: italic;
 		color: var(--base-color-text-title);
 
-	}
+		p:first-child::before {
+			content: '“';
+			font-size: 150%;
+			margin-right: -0.1rem;
+		}
 
-	.showcase-developer-quote p:first-child::before {
-		content: '“';
-		font-size: 150%;
-		margin-right: -0.1rem;
-	}
-
-	.showcase-developer-quote p:last-child::after {
-		content: '”';
-		font-size: 150%;
-		margin-left: -0.1rem;
+		p:last-child::after {
+			content: '”';
+			font-size: 150%;
+			margin-left: -0.1rem;
+		}
 	}
 
 	.showcase-intro-icons {
@@ -37,13 +47,6 @@ layout: default
 		img {
 			width: 24px;
 			height: 24px;
-		}
-	}
-
-	@media (min-width: 900px) {
-		.showcase-video-image {
-			margin-left: 1rem;
-			margin-top: 0;
 		}
 	}
 
@@ -115,7 +118,7 @@ layout: default
 </div>
 
 <div class="container">
-	<section class="flex eqsize responsive">
+	<section class="flex eqsize responsive" style="gap: 1rem;">
 		<article>
 			{{ content }}
 
@@ -192,7 +195,7 @@ layout: default
 			<div class="card youtube" style="padding-bottom: 56.25%">
 				<iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen="" frameborder="0">
+					allowfullscreen="">
 				</iframe>
 			</div>
 			{% endif %}
@@ -200,8 +203,7 @@ layout: default
 			{% for image in page.gallery %}
 			<a href="{{ image }}" class="lightbox" data-group="showcase">
 				<img class="rounded-lg" src="{{ image }}" alt="Screenshot of {{ page.title }} by {{ page.author }}"
-					style="width: 100%; height: auto; margin-top: 1rem; background:  linear-gradient(90deg, #947451 12%, #a8885f 29%, #8c8977 65%, #d2ba9f 98%) "
-					width="16" height="9">
+					width="16" height="9" onload="removeFeatureImgBackground(this)">
 			</a>
 			{% endfor %}
 		</article>
@@ -223,4 +225,12 @@ layout: default
 	{% endif %}
 </div>
 
+<script>
+	// Used for removing img background after loading, this is necessary to avoid edge color bleeding
+	function removeFeatureImgBackground(el) {
+		el.style.background = 'unset';
+		el.style.backgroundColor = 'unset';
+		el.style.border = 'unset';
+	}
+</script>
 {% include footer.html %}
