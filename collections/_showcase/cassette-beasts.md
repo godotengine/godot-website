@@ -7,7 +7,7 @@ author: Bytten Studio
 website: https://www.cassettebeasts.com
 release_date: April 2023
 
-image: "/assets/showcase/cassette-beasts-header.jpg"
+image: "/assets/showcase/cassette-beasts-header.webp"
 gallery: [
   "/assets/showcase/cassette-beasts-3.webp",
   "/assets/showcase/cassette-beasts-2.webp",

@@ -8,7 +8,7 @@ website: https://twitter.com/R0dZill4
 release_date: October 2019
 
 gallery: [
-	"/assets/showcase/material-maker.png"
+	"/assets/showcase/material-maker.webp"
 ]
 youtube_id: "PY-fCt1j2Ag"
 

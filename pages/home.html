@@ -84,26 +84,20 @@ layout: default
 	}
 
 	.feature img {
-		display: block;
 		width: 100%;
-		height: auto;
-		position: relative;
-		background-color: #607080;
 		aspect-ratio: 3/2;
 		object-fit: cover;
 		object-position: top center;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
 	}
 
 	.feature {
-		position: relative;
-		overflow: hidden;
 		transition: transform 200ms ease-in-out;
 		height: 100%;
-		border-radius: 8px;
-	}
-
-	.feature.dark {
-		background-color: var(--transparent-cover-darker);
+		background-color: unset;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.feature h4 {
@@ -116,6 +110,10 @@ layout: default
 
 	.feature .body {
 		padding: 24px;
+		flex: 1;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+		background-color: var(--transparent-cover-darker);
 	}
 
 	.feature .dark h4 {
@@ -131,7 +129,6 @@ layout: default
 
 	.img-auto-size {
 		width: 100%;
-		height: auto;
 	}
 
 	.btn.btn-flat.btn-hero-learn-more {
@@ -161,10 +158,16 @@ layout: default
 			text-align: left;
 		}
 	}
+
+	.get-involved-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 </style>
 
 <section class="hero">
-	<div class="background-image" style="background-image: url()"></div>
+	<div class="background-image"></div>
 	<div class="wrapper">
 		<div class="copy container">
 			<h1>The game engine you've been waiting&nbsp;for.</h1>
@@ -206,7 +209,7 @@ layout: default
 		{% for post in latest_posts limit:1 %}
 		<a href="{{ post.url }}" style="text-decoration: none">
 			<article class="article-card">
-				<div class="thumbnail" style="background-image: url('{{ post.image }}');"></div>
+				<img class="thumbnail" src="{{ post.image }}" alt="">
 				<div class="content">
 					<h3>{{ post.title }}</h3>
 					<p class="excerpt">{{ post.excerpt }}</p>
@@ -222,7 +225,7 @@ layout: default
 				{% if post != posts[0] %}
 				<a href="{{ post.url }}" style="text-decoration: none;">
 					<article class="article-card row">
-						<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
+						<img class="thumbnail" src="{{ post.image }}" alt="" href="{{ post.url }}">
 						<div>
 							<h3>{{ post.title }}</h3>
 							<p class="excerpt">{{ post.excerpt | truncate: 103 }}</p>
@@ -248,7 +251,9 @@ layout: default
 		<a class="feature-link" href="/features#design" data-barba-prevent>
 			<div class="feature dark">
 				<img src="/assets/home/features/innovative.webp" alt="" width="1" height="1"
-					style="background: linear-gradient(90deg, #333747 11%, #2d3342 50%, #2d3342 68%, #272d3c 87%)" loading="lazy">
+					style="background: linear-gradient(90deg, #333747 11%, #2d3342 50%, #2d3342 68%, #272d3c 87%)" loading="lazy"
+					onload="removeFeatureImgBackground(this)"
+				>
 				<div class="body">
 					<h4>Innovative design</h4>
 					<p>
@@ -262,7 +267,9 @@ layout: default
 		<a class="feature-link" href="/features#script" data-barba-prevent>
 			<div class="feature dark">
 				<img src="/assets/home/features/language.webp" alt="" width="1" height="1"
-					style="background: linear-gradient(90deg, #252a35 46%, #252a35 53%, #202630 76%, #202630 89%)" loading="lazy">
+					style="background: linear-gradient(90deg, #252a35 46%, #252a35 53%, #202630 76%, #202630 89%)" loading="lazy"
+					onload="removeFeatureImgBackground(this)"
+				>
 				<div class="body">
 					<h4>Use the right language for the job</h4>
 					<p>
@@ -276,10 +283,13 @@ layout: default
 				</div>
 			</div>
 		</a>
+
 		<a class="feature-link" href="/features#features_2d" data-barba-prevent>
 			<div class="feature dark">
-				<img src="/assets/home/features/2d.webp" alt="" width="1" height="1"
-					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)" loading="lazy">
+				<img src="/assets/home/features/2d.webp" alt="" width="1" height="1" loading="lazy"
+					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)"
+					onload="removeFeatureImgBackground(this)"
+				>
 				<div class="body">
 					<h4>Dedicated 2D engine</h4>
 					<p>
@@ -292,8 +302,10 @@ layout: default
 
 		<a class="feature-link" href="/features#features_3d" data-barba-prevent>
 			<div class="feature dark">
-				<img src="/assets/home/features/3d.webp" alt="" width="1" height="1"
-					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)" loading="lazy">
+				<img src="/assets/home/features/3d.webp" alt="" width="1" height="1" loading="lazy"
+					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)"
+					onload="removeFeatureImgBackground(this)"
+				>
 				<div class="body">
 					<h4>Simple and powerful 3D</h4>
 					<p>
@@ -307,7 +319,7 @@ layout: default
 		<a class="feature-link" href="/features#deploy" data-barba-prevent>
 			<div class="feature dark">
 				<img src="/assets/home/features/cross-platform.svg" alt="" width="1" height="1"
-					style="background-color: #333667" loading="lazy">
+					style="background-color: #333667" loading="lazy" onload="removeFeatureImgBackground(this)">
 				<div class="body">
 					<h4>Release on all platforms</h4>
 					<p>
@@ -321,7 +333,7 @@ layout: default
 		<a class="feature-link" href="#get_involved" data-barba-prevent>
 			<div class="feature dark">
 				<img src="/assets/home/features/oss.svg" alt="" width="1" height="1" style="background-color: #333667"
-					loading="lazy">
+					loading="lazy" onload="removeFeatureImgBackground(this)">
 				<div class="body">
 					<h4>Open Source</h4>
 					<p>
@@ -346,36 +358,40 @@ layout: default
 
 	<div class="flex eqsize responsive">
 
-		<div class="text-center base-padding">
+		<div class="text-center base-padding get-involved-item">
 			<img src="/assets/home/code.svg" alt="" width="250" height="250" loading="lazy">
 			<h4>Code</h4>
 			<p>
 				If you know how to code, you can help by fixing bugs and working with engine contributors towards the
 				implementation of new features.
 			</p>
+			<span class="grow"></span>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 
-		<div class="text-center base-padding">
+		<div class="text-center base-padding get-involved-item">
 			<img src="/assets/home/document.svg" alt="" width="250" height="250" loading="lazy">
 			<h4>Document</h4>
 			<p>
 				Documentation quality is essential in a game engine; help make it better by updating the API reference, writing
 				new guides or submitting corrections.
 			</p>
+			<span>
+				<span class="grow"></span>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 
-		<div class="text-center base-padding">
+		<div class="text-center base-padding get-involved-item">
 			<img src="/assets/home/report.svg" alt="" width="250" height="250" loading="lazy">
 			<h4>Report</h4>
 			<p>
 				Found a problem with the engine? Don't forget to report it so that developers can track it down.
 			</p>
+			<span class="grow"></span>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues"
-				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
+				 class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 
 	</div>
@@ -403,54 +419,62 @@ layout: default
 		// Updating the hero on the home page
 		// get the current html lang attribute
 		const htmlLang = document.documentElement.lang;
-		if (window.location.pathname === '/' || window.location.pathname === '/' + htmlLang || window.location.pathname === '/' + htmlLang + '/') {
-			const authors = [
-				{% for project in site.showcase %}
-				{% if project.featured_in_home %}
-				{
-					game: '{{ project.title }}',
-					by: '{{ project.author }}',
-					url: '{{ project.url }}',
-					image: '{{ project.gallery[0] }}',
-				},
-				{% endif %}
-				{% endfor %}
-			];
+		const isHome = window.location.pathname === '/' || window.location.pathname === '/' + htmlLang || window.location.pathname === '/' + htmlLang + '/'
+		if (isHome) {
+			loadHero();
+		}
+	});
 
-		let author = authors[Math.floor(Math.random() * authors.length)];
+	function loadHero() {
+		const authors = [
+			{% for project in site.showcase %}
+			{% if project.featured_in_home %}
+			{
+				game: '{{ project.title }}',
+				by: '{{ project.author }}',
+				url: '{{ project.url }}',
+				image: '{{ project.gallery[0] }}',
+			},
+			{% endif %}
+			{% endfor %}
+		];
+
+		const author = authors[Math.floor(Math.random() * authors.length)];
 		document.querySelector('.hero .background-image').style.backgroundImage = `url(${author.image})`;
 		document.querySelector('.hero .credits a').href = author.url;
 		document.querySelector('.hero .credits a span.game').innerText = author.game;
 		document.querySelector('.hero .credits a span.by').innerText = ' - ' + author.by;
+		setupHeroParallaxEffect();
+	}
 
+	function setupHeroParallaxEffect() {
 		// Parallax effect: On page scroll move background-position up.
 		// This effect is disabled if user opted to have reduced motion in browser/OS settings.
-		const reducedMotionCheck = window.matchMedia('(prefers-reduced-motion)');
-		if (!reducedMotionCheck.matches) {
+		const reducedMotionIsActive = window.matchMedia('(prefers-reduced-motion)').matches;
+		if (reducedMotionIsActive) return;
 
+		const parallaxImage = document.querySelector('section.hero .background-image');
+		const parallaxMinWidth = 768;
+		const parallaxSpeed = 0.4;
+
+		function tick() {
 			// Parallax effect lags on mobile, so we disable it based on the window resolution.
-			const parallaxImage = document.querySelector('section.hero .background-image');
-			const parallaxMinWidth = 768;
-			const parallaxSpeed = 0.4;
-
-			const parallaxTick = () => {
-				if (window.innerWidth > parallaxMinWidth) {
-					parallaxImage.style.transform = `translateY(${window.pageYOffset * parallaxSpeed}px)`;
-				} else {
-					parallaxImage.style.transform = 'none';
-				}
+			if (window.innerWidth > parallaxMinWidth) {
+				parallaxImage.style.transform = `translateY(${window.scrollY * parallaxSpeed}px)`;
+			} else {
+				parallaxImage.style.transform = 'none';
 			}
-
-			window.addEventListener("scroll", () => {
-				window.requestAnimationFrame(parallaxTick)
-			});
-
-			window.addEventListener("resize", () => {
-				window.requestAnimationFrame(parallaxTick)
-			});
 		}
+
+		window.addEventListener("scroll", tick);
+		window.addEventListener("resize", tick);
 	}
-	});
+
+	// Used for removing img background after loading, this is necessary to avoid edge color bleeding
+	function removeFeatureImgBackground(el) {
+		el.style.background = 'unset';
+		el.style['background-color'] = 'unset';
+	}
 </script>
 
 {% include footer.html %}

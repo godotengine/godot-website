@@ -7,10 +7,10 @@ author: Humble Reeds
 website: https://www.kamaeru.com/
 release_date: TBD
 
-image: "/assets/showcase/kamaeru-header.png"
+image: "/assets/showcase/kamaeru-header.webp"
 gallery: [
-	"/assets/showcase/kamaeru-1.png",
-	"/assets/showcase/kamaeru-2.png",
+	"/assets/showcase/kamaeru-1.webp",
+	"/assets/showcase/kamaeru-2.webp",
 ]
 youtube_id: "BzMuM8ohdB8"
 
@@ -28,7 +28,7 @@ You are helping an old friend to restore the wetlands of your childhood, and bui
 
 ### Collect frogs 🐸
 The ultimate goal of the game is to collect them all! Take pictures, feed them and breed them to have a chance of meeting every single one of the possible 500 frogs 🐸
-Some frogs can only be met under certain conditions though, and rare colors only available through breeding! 
+Some frogs can only be met under certain conditions though, and rare colors only available through breeding!
 
 
 ### Restore wetlands 🌾
@@ -37,5 +37,5 @@ Dig ponds to let water roam the land again, and plant native wetlands species to
 
 
 ### Customize your frog refuge 🎨
-When you place furniture in your refuge, frogs tend to appear. Some furniture will attract certain types of frogs! 
+When you place furniture in your refuge, frogs tend to appear. Some furniture will attract certain types of frogs!
 The more decorated your refuge, the more popular it will be, allowing you to drive attention and new visitors, that will unlock new recipes, crops and types of furniture. You will even be able to recolor the furniture to your heart’s content!

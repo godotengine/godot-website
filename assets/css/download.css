@@ -178,9 +178,9 @@
 }
 
 .platform-tabs {
-    margin-bottom: -1px;
-    justify-content: center;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
 }
 
 .platform-tabs .tab {
@@ -188,8 +188,9 @@
 }
 
 .platform-tabs .tab img {
-    display: block;
-    filter: invert(100%);
+	width: 24px;
+	height: 24px;
+	filter: invert(100%);
 }
 
 .platform-tabs .tab:not(.active):hover {

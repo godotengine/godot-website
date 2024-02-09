@@ -7,11 +7,11 @@ author: Save Sloth Studios
 website: https://twitter.com/saveslothstudio
 release_date: December 2022
 
-image: "/assets/showcase/gnome-header.jpg"
+image: "/assets/showcase/gnome-header.webp"
 gallery: [
-  "/assets/showcase/gnome-1.jpg",
-  "/assets/showcase/gnome-2.jpg",
-  "/assets/showcase/gnome-3.jpg",
+  "/assets/showcase/gnome-1.webp",
+  "/assets/showcase/gnome-2.webp",
+  "/assets/showcase/gnome-3.webp",
 ]
 youtube_id: "grovGK4WOJw"
 
@@ -25,7 +25,7 @@ steam: https://store.steampowered.com/app/2089710/A_Most_Extraordinary_Gnome/
 featured_in_home: true
 ---
 
-### A short adventure awaits! 
+### A short adventure awaits!
 
 Waking up every day as the forest's only protector is not an easy job for anyone. There's not only every animal's personal problem a gnome has to deal with — as mysteriously dark, unprecedented things start happening in the forest; the source of which no one really understands. Fear, escaping and destruction taint the previously peaceful life of the animals. Seemingly only one can stop this — but what can a single gnome really do to save the world?
 
@@ -44,4 +44,4 @@ A Most Extraordinary Gnome is a short, narrative-driven game, which combines cha
 
 As a rare sight in gaming, the entire adventure comes alive with the help of paper. Anything you see in the game is made by hand, stacking layers of colorful paper on each other to create this flat, but heavily detailed aesthetic the game. Utilizing traditional stop-motion techniques wherever necessary, the movements also get a unique flair specific to this game.
 
-We hope you enjoy this hand-crafted adventure! 
+We hope you enjoy this hand-crafted adventure!

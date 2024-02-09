@@ -5,12 +5,12 @@ date: 2021-06-02 00:00:00 +0000
 title: "Until Then"
 author: "Polychroma Games"
 
-image: "/assets/showcase/until-then-header.jpg"
+image: "/assets/showcase/until-then-header.webp"
 gallery: [
-	"/assets/showcase/until-then-2.jpg",
-	"/assets/showcase/until-then-1.jpg",
-	"/assets/showcase/until-then-3.jpg",
-	"/assets/showcase/until-then-4.jpg",
+	"/assets/showcase/until-then-2.webp",
+	"/assets/showcase/until-then-1.webp",
+	"/assets/showcase/until-then-3.webp",
+	"/assets/showcase/until-then-4.webp",
 ]
 website: https://untilthengame.com/
 release_date: "TBD"
@@ -47,4 +47,4 @@ Insert a flash drive—oh wait, wrong way—nope, it was right the first time. F
 Witness an intriguing narrative uniquely presented in eye-catching hand-drawn pixel art and immerse yourself in the warm colors and music of a world trying to move on from tragedy. Characters, landscapes, and props blend in 3D. Shadows, reflections, and lighting set the tone in a lovingly crafted experience.
 
 ### Experience a World Inspired by Philippine Locations and Culture
-Traverse Philippine-inspired landscapes in search for the truth. From the heart of the bustling capital to long bus rides past grass fields and coast towns, explore the world of Until Then set in a fictional version of the Philippines. Interior spaces are shaped by the mannerisms of the locals, setting the scene for a recent past. 
+Traverse Philippine-inspired landscapes in search for the truth. From the heart of the bustling capital to long bus rides past grass fields and coast towns, explore the world of Until Then set in a fictional version of the Philippines. Interior spaces are shaped by the mannerisms of the locals, setting the scene for a recent past.

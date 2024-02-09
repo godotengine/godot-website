@@ -3,16 +3,16 @@ description: "Slay hordes of terrifying monsters in this horde survival roguelit
 date: 2023-04-24 00:00:00 +0000
 
 title: Halls of Torment
-author: Chasing Carrots	
+author: Chasing Carrots
 website: https://www.chasing-carrots.com/
 release_date: May 2023
 
-image: "/assets/showcase/halls-of-torment.jpg"
+image: "/assets/showcase/halls-of-torment.webp"
 gallery: [
-	"/assets/showcase/halls-of-torment-1.jpg",
-	"/assets/showcase/halls-of-torment-2.jpg",
-	"/assets/showcase/halls-of-torment-3.jpg",
-	"/assets/showcase/halls-of-torment-4.jpg",
+	"/assets/showcase/halls-of-torment-1.webp",
+	"/assets/showcase/halls-of-torment-2.webp",
+	"/assets/showcase/halls-of-torment-3.webp",
+	"/assets/showcase/halls-of-torment-4.webp",
 ]
 youtube_id: "GCVIaeK504g"
 
@@ -52,4 +52,4 @@ Halls of Torment is a horde survival game in a pre rendered retro look reminisce
 - 500+ traits that upgrade characters and abilities
 - 150+ quests to complete
 
-This is the content the early access will start with and will be expanded on until the final release. 
+This is the content the early access will start with and will be expanded on until the final release.

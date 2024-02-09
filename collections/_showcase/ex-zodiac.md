@@ -7,9 +7,9 @@ author: Ben Hickling
 website: https://twitter.com/benhickling
 release_date: July 2021 (Early Access)
 
-image: "/assets/showcase/ex-zodiac-header.jpg"
+image: "/assets/showcase/ex-zodiac-header.webp"
 gallery: [
-	"/assets/showcase/ex-zodiac.png"
+	"/assets/showcase/ex-zodiac.webp"
 ]
 youtube_id: "7sJJW_x6Xg4"
 

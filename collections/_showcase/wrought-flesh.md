@@ -4,9 +4,9 @@ date: 2021-12-01 00:00:00 +0000
 
 title: "Wrought Flesh"
 author: "Miziziziz"
-image: "/assets/showcase/wrought-flesh-header.jpg"
+image: "/assets/showcase/wrought-flesh-header.webp"
 gallery: [
-	"/assets/showcase/wrought-flesh-1.jpg"
+	"/assets/showcase/wrought-flesh-1.webp"
 ]
 website: https://twitter.com/miziziziz
 release_date: "December 2021"
@@ -31,4 +31,4 @@ Features:
 - 8 guns
 - 3 boss fights
 - dozens of quests
-- 3 biomes to explore 
+- 3 biomes to explore

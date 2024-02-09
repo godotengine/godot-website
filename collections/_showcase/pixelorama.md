@@ -8,7 +8,7 @@ website: https://twitter.com/OramaInteractiv
 release_date: August 2019
 
 gallery: [
-	"/assets/showcase/pixelorama.png"
+	"/assets/showcase/pixelorama.webp"
 ]
 youtube_id: "sM1v5uaBSrM"
 

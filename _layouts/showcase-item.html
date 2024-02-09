@@ -27,6 +27,19 @@ layout: default
 		margin-left: -0.1rem;
 	}
 
+	.showcase-intro-icons {
+		filter: invert(100%);
+		opacity: 0.75;
+		margin-top: 1rem;
+		display: flex;
+		gap: 0.5rem;
+
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
 	@media (min-width: 900px) {
 		.showcase-video-image {
 			margin-left: 1rem;
@@ -56,47 +69,43 @@ layout: default
 				| {% if page.release_date == "TBD" %}Release date: <abbr title="To Be Determined">TBD</abbr>{% else %}{{
 				page.release_date }}{% endif %}
 			</h3>
-			<div style="filter: invert(100%); opacity: 0.75; margin-top: 1rem">
+			<div class="showcase-intro-icons">
 
 
 				{% if page.windows %}
-				<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" width="24" height="24">
 				{% endif %}
 
 				{% if page.macos %}
-				<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" width="24" height="24">
 				{% endif %}
 
 				{% if page.linux %}
-				<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" width="24" height="24">
 				{% endif %}
 
 				{% if page.switch %}
-				<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" width="24" height="24">
 				{% endif %}
 
 				{% if page.html5 %}
-				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" width="24" height="24">
 				{% endif %}
 
 				{% if page.android %}
-				<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" height="24">
 				{% endif %}
 
 				{% if page.ios %}
-				<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" width="24" height="24">
 				{% endif %}
 
 				{% if page.playstation %}
-				<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-					width="24" height="24">
+				<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" width="24" height="24">
 				{% endif %}
 
 				{% if page.xbox %}
-				<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox"width="24" height="24">
 				{% endif %}
 
 			</div>

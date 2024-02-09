@@ -7,9 +7,9 @@ author: Binogure Studio
 website: https://www.binogure-studio.com/
 release_date: August 2021
 
-image: "/assets/showcase/city-game-studio-header.jpg"
+image: "/assets/showcase/city-game-studio-header.webp"
 gallery: [
-	"/assets/showcase/city-game-studio.png"
+	"/assets/showcase/city-game-studio.webp"
 ]
 youtube_id: "hcRDBdvtuVQ"
 
