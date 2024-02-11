@@ -202,8 +202,7 @@ layout: default
 
 			{% for image in page.gallery %}
 			<a href="{{ image }}" class="lightbox" data-group="showcase">
-				<img class="rounded-lg" src="{{ image }}" alt="Screenshot of {{ page.title }} by {{ page.author }}"
-					width="16" height="9" onload="removeFeatureImgBackground(this)">
+				{% picture {{image}} class="rounded-lg" alt="Screenshot of {{ page.title }} by {{ page.author }}" onload="removeFeatureImgBackground(this)" %}
 			</a>
 			{% endfor %}
 		</article>
@@ -225,7 +224,14 @@ layout: default
 	{% endif %}
 </div>
 
+<link rel="stylesheet" href="/assets/css/tobii.min.css">
+<script defer src="/assets/js/tobii.min.js"></script>
 <script>
+	// Initialize lightbox.
+	new Tobii({
+		zoom: false,
+	})
+
 	// Used for removing img background after loading, this is necessary to avoid edge color bleeding
 	function removeFeatureImgBackground(el) {
 		el.style.background = 'unset';

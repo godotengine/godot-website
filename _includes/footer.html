@@ -71,46 +71,32 @@
 	</div>
 </footer>
 
-<script defer src="/assets/js/tobii.min.js"></script>
-<script defer src="/assets/js/highlight.min.js?1"></script>
-<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
-		// This needs to be done on page load but also after page changes,
-		// in case a code block appears in an article.
-		document.querySelectorAll('pre code').forEach((block) => {
-			hljs.highlightBlock(block);
-		});
-
-		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
-			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
-				postDate.classList.add("post-recent-highlight");
-			};
-		});
-
-		// Initialize lightbox.
-		new Tobii({
-			zoom: false,
-		});
-
-		// Update any download link to point to identified user's OS.
-		const links = document.querySelectorAll('.set-os-download-url');
-		for (let i = 0; i < links.length; i++) {
-			const link = links[i];
-			let link_slug = 'download';
-			if ('version' in link.dataset && link.dataset['version'] === '3') {
-				link_slug = 'download/3.x';
-			}
-
-			let link_platform = 'windows';
-			if (navigator.platform.indexOf('Mac') !== -1) {
-				link_platform = 'macos';
-			} else if (navigator.platform.indexOf('Linux') !== -1) {
-				link_platform = 'linux';
-			}
-
-			link.href = `/${link_slug}/${link_platform}`;
+	// 48 hours
+	const oldPostDate = Date.now() - 1000 * 60 * 60 * 48;
+	document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+		// Highlight post dates that are less than 48 hours old.
+		if (Date.parse(postDate.dataset.postDate) > oldPostDate) {
+			postDate.classList.add("post-recent-highlight");
 		}
 	});
+
+	// Update any download link to point to identified user's OS.
+	const links = document.querySelectorAll('.set-os-download-url');
+	const platformName = (navigator?.userAgentData?.platform ?? navigator?.platform).toLowerCase();
+	let platformLink = 'windows';
+	if (platformName.includes('mac')) {
+		platformLink = 'macos';
+	} else if (platformName.includes('linux')) {
+		platformLink = 'linux';
+	}
+
+	for (let i = 0; i < links.length; i++) {
+		const link = links[i];
+		let link_slug = 'download';
+		if ('version' in link.dataset && link.dataset['version'] === '3') {
+			link_slug = 'download/3.x';
+		}
+		link.href = `/${link_slug}/${platformLink}`;
+	}
 </script>

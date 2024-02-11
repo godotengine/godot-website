@@ -212,26 +212,33 @@ layout: default
 
 <link rel="stylesheet" href="/assets/css/anchor-link.css?1">
 <link rel="stylesheet" href="/assets/css/article-cards.css?2">
+<link rel="stylesheet" href="/assets/css/tobii.min.css">
+<script src="/assets/js/highlight.min.js?1"></script>
+<script src="/assets/js/highlight.gdscript.min.js?1"></script>
 <script src="/assets/js/anchor-link.js"></script>
+<script src="/assets/js/tobii.min.js"></script>
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
-		// Add icons to easily copy section links.
-		window.applyAnchorLinks('.article-body');
+	// This needs to be done on page load but also after page changes,
+	// in case a code block appears in an article.
+	hljs.highlightAll();
 
-		// Add lightbox elements in blog articles for Tobii.
-		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
-			if (articleImg.classList.contains('lightbox-ignore')) {
-				return;
-			}
+	// Add icons to easily copy section links.
+	window.applyAnchorLinks('.article-body');
 
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
+	// Add lightbox elements in blog articles for Tobii.
+	document.querySelectorAll('.article-cover img:not(.lightbox-ignore), .article-body img:not(.lightbox-ignore)').forEach((articleImg) => {
+		const lightbox = document.createElement('a');
+		lightbox.href = articleImg.src;
+		lightbox.classList.add('lightbox');
+		lightbox.dataset.group = 'article';
+		articleImg.parentNode.appendChild(lightbox);
+		lightbox.appendChild(articleImg);
 	});
+
+	// Initialize lightbox.
+	new Tobii({
+		zoom: false,
+	})
 </script>
 
 {% include footer.html %}

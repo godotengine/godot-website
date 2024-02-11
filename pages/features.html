@@ -336,79 +336,13 @@ layout: default
 		<p>
 			A picture is worth a thousand words, and these developers have chosen Godot for their projects:
 		</p>
-
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				// We assume that it can't be wrapped more than once.
-				const wrapIndex = (index) => {
-					if (index < 0) {
-						return showcaseItems.length + index;
-					}
-					if (index >= showcaseItems.length) {
-						return showcaseItems.length - index;
-					}
-					return index;
-				};
-
-				const showcaseItems = document.querySelectorAll('.showcase-item');
-				let currentIndex = Math.floor(Math.random() * showcaseItems.length);
-
-				const setItemByIndex = (itemIndex, firstTime = false) => {
-					const prevIndex = wrapIndex(currentIndex - 1);
-					const nextIndex = wrapIndex(currentIndex + 1);
-
-					showcaseItems.forEach((item, index) => {
-						if (index === itemIndex) {
-							if (!firstTime) {
-								item.classList.add('showcase-item-transition');
-							}
-							item.style.zIndex = '2';
-							item.style.transform = 'translateX(0)';
-						}
-						else if (index === prevIndex) {
-							if (!firstTime) {
-								item.classList.add('showcase-item-transition');
-							}
-							item.style.zIndex = '3';
-							item.style.transform = 'translateX(-100%)';
-						}
-						else if (index === nextIndex) {
-							if (!firstTime) {
-								item.classList.add('showcase-item-transition');
-							}
-							item.style.zIndex = '3';
-							item.style.transform = 'translateX(100%)';
-						}
-						else  {
-							item.classList.remove('showcase-item-transition');
-							item.style.zIndex = '1';
-							item.style.transform = 'translateX(0)';
-						}
-					});
-				}
-				setItemByIndex(currentIndex, true);
-
-				const prevItemButton = document.querySelector('.showcase-flip-left');
-				prevItemButton.addEventListener('click', () => {
-					currentIndex = wrapIndex(currentIndex - 1);
-					setItemByIndex(currentIndex);
-				});
-				const nextItemButton = document.querySelector('.showcase-flip-right');
-				nextItemButton.addEventListener('click', () => {
-					currentIndex = wrapIndex(currentIndex + 1);
-					setItemByIndex(currentIndex);
-				});
-			});
-		</script>
-
 		<div class="showcase-carousel">
-			<img src="/assets/features/editor-frame.png?2" class="showcase-frame" />
-
+			{% picture showcase-carousel-frame "assets/features/editor-frame.png" class="showcase-frame" alt="" %}
 			<div class="showcase-items">
-				{% for project in site.showcase %}
+				{% for project in site.showcase  %}
 				{% if project.featured_in_home %}
 				<div class="showcase-item">
-					<img src="{{ project.gallery[0] }}" load="lazy" alt="{{ project.title }} - {{ project.author }}" />
+					{% picture showcase-carousel {{ project.gallery[0] }} alt="{{ project.title }} - {{ project.author }}" loading="lazy" %}
 					<div class="showcase-credits">
 						<a href="{{ project.url }}">
 							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">- {{ project.author }}</span>
@@ -422,6 +356,69 @@ layout: default
 			<div class="showcase-flip-left"></div>
 			<div class="showcase-flip-right"></div>
 		</div>
+		<script>
+			// We assume that it can't be wrapped more than once.
+			const wrapIndex = (index) => {
+				if (index < 0) {
+					return showcaseItems.length + index;
+				}
+				if (index >= showcaseItems.length) {
+					return showcaseItems.length - index;
+				}
+				return index;
+			};
+
+			const setItemByIndex = (itemIndex, isFirstTime = false) => {
+				const prevIndex = wrapIndex(currentIndex - 1);
+				const nextIndex = wrapIndex(currentIndex + 1);
+
+				showcaseItems.forEach((item, index) => {
+					if (index === itemIndex) {
+						if (!isFirstTime) {
+							item.classList.add('showcase-item-transition');
+						}
+						item.style.zIndex = '2';
+						item.style.transform = 'translateX(0)';
+					}
+					else if (index === prevIndex) {
+						if (!isFirstTime) {
+							item.classList.add('showcase-item-transition');
+						}
+						item.style.zIndex = '3';
+						item.style.transform = 'translateX(-100%)';
+					}
+					else if (index === nextIndex) {
+						if (!isFirstTime) {
+							item.classList.add('showcase-item-transition');
+						}
+						item.style.zIndex = '3';
+						item.style.transform = 'translateX(100%)';
+					}
+					else  {
+						item.classList.remove('showcase-item-transition');
+						item.style.zIndex = '1';
+						// Translate outside the window to prevent loading before the image is actually visible
+						item.style.transform = 'translateX(200vw)';
+					}
+				});
+			}
+
+			const showcaseItems = document.querySelectorAll('.showcase-item');
+			let currentIndex = Math.floor(Math.random() * showcaseItems.length);
+
+			setItemByIndex(currentIndex, true);
+
+			const prevItemButton = document.querySelector('.showcase-flip-left');
+			prevItemButton.addEventListener('click', () => {
+				currentIndex = wrapIndex(currentIndex - 1);
+				setItemByIndex(currentIndex);
+			});
+			const nextItemButton = document.querySelector('.showcase-flip-right');
+			nextItemButton.addEventListener('click', () => {
+				currentIndex = wrapIndex(currentIndex + 1);
+				setItemByIndex(currentIndex);
+			});
+		</script>
 
 		<a href="/showcase" class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">
 			See more projects made with Godot
@@ -610,7 +607,7 @@ layout: default
 				Watch our annual showreel videos to see more examples of projects using Godot!
 			</p>
 
-			{% include showreel-shelf.html %}
+			{% include showreel-shelf.html lazyload=true %}
 		</div>
 	</div>
 

@@ -15,17 +15,29 @@
 <section class="flex grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
 	<a href="https://www.youtube.com/watch?v=UAS_pUTFA7o" target="_blank">
 		<article class="showreel-video">
-			<img src="/assets/showcase/desktop-showcase.webp" alt="Showreel: 2022 Godot Desktop Games">
+			{% if include.lazyload %}
+				{% picture showcase assets/showcase/desktop-showcase.jpg alt="Showreel: 2022 Godot Desktop Games" loading="lazy" %}
+			{% else %}
+				{% picture showcase assets/showcase/desktop-showcase.jpg alt="Showreel: 2022 Godot Desktop Games" %}
+			{% endif %}
 		</article>
 	</a>
 	<a href="https://www.youtube.com/watch?v=xF3QiQfQxeQ" target="_blank">
 		<article class="showreel-video">
-			<img src="/assets/showcase/mobile-showcase.webp" alt="Showreel: 2022 Godot Mobile Games">
+			{% if include.lazyload %}
+				{% picture showcase assets/showcase/mobile-showcase.jpg alt="Showreel: 2022 Godot Mobile Games" loading="lazy" %}
+			{% else %}
+				{% picture showcase assets/showcase/mobile-showcase.jpg alt="Showreel: 2022 Godot Mobile Games" %}
+			{% endif %}
 		</article>
 	</a>
 	<a href="https://www.youtube.com/watch?v=9kKp0oguzr8" target="_blank">
 		<article class="showreel-video">
-			<img src="/assets/showcase/apps-showcase.webp" alt="Showreel: 2022 Godot Apps &amp; Tools">
+			{% if include.lazyload %}
+				{% picture showcase assets/showcase/apps-showcase.jpg alt="Showreel: 2022 Godot Apps &amp; Tools" loading="lazy" %}
+			{% else %}
+				{% picture showcase assets/showcase/apps-showcase.jpg alt="Showreel: 2022 Godot Apps &amp; Tools" %}
+			{% endif %}
 		</article>
 	</a>
 </section>

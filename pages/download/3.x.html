@@ -13,11 +13,12 @@ layout: default
 </div>
 
 <script type="text/javascript">
-	if (navigator.platform.indexOf('Mac') !== -1) {
+	const platformName = (navigator?.userAgentData?.platform ?? navigator?.platform).toLowerCase();
+	if (platformName.includes('mac')) {
 		window.location = "/download/3.x/macos";
-	} else if (navigator.platform.indexOf('Linux') !== -1) {
+	} else if (platformName.includes('linux')) {
 		window.location = "/download/3.x/linux";
-	} else { // default to windows
+	} else {
 		window.location = "/download/3.x/windows";
 	}
 </script>

@@ -1,0 +1,113 @@
+media_queries:
+  sm: 'max-width: 640px'
+  md: 'max-width: 768px'
+  lg: 'max-width: 1024px'
+  xl: 'min-width: 1025px'
+
+presets:
+  default:
+    formats: [webp]
+    widths: [400, 800, 1200, 1400]
+    fallback_format: webp
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+
+  featured-hero-home:
+    markup: direct_url
+    fallback_width: 1920
+    fallback_format: webp
+    format_quality:
+      webp: 80
+
+  featured-hero-download:
+    markup: direct_url
+    fallback_width: 1920
+    fallback_format: webp
+    format_quality:
+      webp: 90
+
+  showcase:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 600, 1200 ]
+    format_quality:
+      webp: 90
+    dimension_attributes: true
+    sizes:
+      md: 100vw
+      xl: 400px
+
+  showcase-thumbnail:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 460, 700 ]
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+    sizes:
+      md: calc(100vw - 2rem)
+      xl: 400px
+
+  showcase-carousel:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 800, 1200 ]
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+    sizes:
+      md: 100vw
+      xl: 720px
+
+  showcase-carousel-frame:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 1100, 1500 ]
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+    sizes:
+      md: 100vw
+      xl: 1200px
+
+  latest-news-header:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 800, 1000, 1400 ]
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+    sizes:
+      md: 100vw
+      xl: 600px
+
+  latest-news:
+    formats: [ webp ]
+    fallback_format: webp
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+    base_width: 500
+    pixel_ratios: [ 1, 1.5, 2 ]
+
+
+  home-feature:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 800, 1200]
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+    sizes:
+      md: 100vw
+      xl: 400px
+
+  blog-thumbnail:
+    formats: [ webp ]
+    fallback_format: webp
+    format_quality:
+      webp: 85
+    dimension_attributes: true
+    base_width: 1200
+    pixel_ratios: [ 1, 1.5, 2 ]

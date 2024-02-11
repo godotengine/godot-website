@@ -66,6 +66,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-redirect-from
   # - jekyll-multiple-languages-plugin
+  - jekyll_picture_tag
 
 # Internationalization
 languages: ["en", "es"]
@@ -91,3 +92,6 @@ pagination:
   category: "posts"
   tag: ""
   locale: ""
+
+picture:
+  suppress_warnings: true

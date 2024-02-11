@@ -209,7 +209,7 @@ layout: default
 		{% for post in latest_posts limit:1 %}
 		<a href="{{ post.url }}" style="text-decoration: none">
 			<article class="article-card">
-				<img class="thumbnail" src="{{ post.image }}" alt="">
+				{% picture latest-news-header {{ post.image }} class="thumbnail" alt="" %}
 				<div class="content">
 					<h3>{{ post.title }}</h3>
 					<p class="excerpt">{{ post.excerpt }}</p>
@@ -225,7 +225,7 @@ layout: default
 				{% if post != posts[0] %}
 				<a href="{{ post.url }}" style="text-decoration: none;">
 					<article class="article-card row">
-						<img class="thumbnail" src="{{ post.image }}" alt="" href="{{ post.url }}">
+						{% picture latest-news {{ post.image }} class="thumbnail" alt="" href="{{ post.url }} %}
 						<div>
 							<h3>{{ post.title }}</h3>
 							<p class="excerpt">{{ post.excerpt | truncate: 103 }}</p>
@@ -250,10 +250,15 @@ layout: default
 	<div class="features-grid">
 		<a class="feature-link" href="/features#design" data-barba-prevent>
 			<div class="feature dark">
-				<img src="/assets/home/features/innovative.webp" alt="" width="1" height="1"
-					style="background: linear-gradient(90deg, #333747 11%, #2d3342 50%, #2d3342 68%, #272d3c 87%)" loading="lazy"
+				{%
+					picture
+					home-feature
+					"assets/home/features/innovative.webp"
+					style="background: linear-gradient(90deg, #333747 11%, #2d3342 50%, #2d3342 68%, #272d3c 87%)"
+					alt=""
+					loading="lazy"
 					onload="removeFeatureImgBackground(this)"
-				>
+				%}
 				<div class="body">
 					<h4>Innovative design</h4>
 					<p>
@@ -266,10 +271,15 @@ layout: default
 
 		<a class="feature-link" href="/features#script" data-barba-prevent>
 			<div class="feature dark">
-				<img src="/assets/home/features/language.webp" alt="" width="1" height="1"
-					style="background: linear-gradient(90deg, #252a35 46%, #252a35 53%, #202630 76%, #202630 89%)" loading="lazy"
+				{%
+					picture
+					home-feature
+					"assets/home/features/language.webp"
+					style="background: linear-gradient(90deg, #252a35 46%, #252a35 53%, #202630 76%, #202630 89%)"
+					alt=""
+					loading="lazy"
 					onload="removeFeatureImgBackground(this)"
-				>
+				%}
 				<div class="body">
 					<h4>Use the right language for the job</h4>
 					<p>
@@ -286,10 +296,15 @@ layout: default
 
 		<a class="feature-link" href="/features#features_2d" data-barba-prevent>
 			<div class="feature dark">
-				<img src="/assets/home/features/2d.webp" alt="" width="1" height="1" loading="lazy"
+				{%
+					picture
+					home-feature
+					"assets/home/features/2d.webp"
 					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)"
+					alt=""
+					loading="lazy"
 					onload="removeFeatureImgBackground(this)"
-				>
+				%}
 				<div class="body">
 					<h4>Dedicated 2D engine</h4>
 					<p>
@@ -302,10 +317,15 @@ layout: default
 
 		<a class="feature-link" href="/features#features_3d" data-barba-prevent>
 			<div class="feature dark">
-				<img src="/assets/home/features/3d.webp" alt="" width="1" height="1" loading="lazy"
+				{%
+					picture
+					home-feature
+					"assets/home/features/3d.webp"
 					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)"
+					alt=""
+					loading="lazy"
 					onload="removeFeatureImgBackground(this)"
-				>
+				%}
 				<div class="body">
 					<h4>Simple and powerful 3D</h4>
 					<p>
@@ -413,17 +433,14 @@ layout: default
 
 {% include sponsors.html %}
 
-
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
-		// Updating the hero on the home page
-		// get the current html lang attribute
-		const htmlLang = document.documentElement.lang;
-		const isHome = window.location.pathname === '/' || window.location.pathname === '/' + htmlLang || window.location.pathname === '/' + htmlLang + '/'
-		if (isHome) {
-			loadHero();
-		}
-	});
+	// Updating the hero on the home page
+	// get the current html lang attribute
+	const htmlLang = document.documentElement.lang;
+	const isHome = window.location.pathname === '/' || window.location.pathname === '/' + htmlLang || window.location.pathname === '/' + htmlLang + '/'
+	if (isHome) {
+		loadHero();
+	}
 
 	function loadHero() {
 		const authors = [
@@ -433,12 +450,11 @@ layout: default
 				game: '{{ project.title }}',
 				by: '{{ project.author }}',
 				url: '{{ project.url }}',
-				image: '{{ project.gallery[0] }}',
+				image: '{% picture featured-hero-home {{ project.gallery[0] }} %}',
 			},
 			{% endif %}
 			{% endfor %}
 		];
-
 		const author = authors[Math.floor(Math.random() * authors.length)];
 		document.querySelector('.hero .background-image').style.backgroundImage = `url(${author.image})`;
 		document.querySelector('.hero .credits a').href = author.url;
