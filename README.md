@@ -35,7 +35,8 @@ To build the website locally, follow these steps:
    - Make sure `bundle` is available from the command line.
 2. Clone this repository.
 3. Install the necessary dependencies: `bundle install`.
-4. Build the site: `bundle exec jekyll build`.
+4. Install the `libvips` dependencie necessary for [jekyll_picture_tag](https://rbuchberger.github.io/jekyll_picture_tag/users/installation.html).
+5. Build the site: `bundle exec jekyll build`.
    - Append `--config _config.yml,_config.development.yml` to use the development config with your build.
 
 For simplicity, these two commands are also available as a `build.sh` script in this repository.
