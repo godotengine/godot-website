@@ -7,9 +7,9 @@ author: Kodera Software
 website: https://games.kodera.pl/dv/
 release_date: August 2019 (Early Access)
 
-image: "/assets/showcase/delta-v-rings-of-saturn-header.webp"
+image: "/assets/showcase/delta-v-rings-of-saturn-header.jpg"
 gallery: [
-  "/assets/showcase/delta-v-rings-of-saturn.webp"
+  "/assets/showcase/delta-v-rings-of-saturn.jpg"
 ]
 youtube_id: "7rE4ZTYLkVA"
 

@@ -7,9 +7,9 @@ author: Bippinbits
 website: https://bippinbits.com/
 release_date: September 2022
 
-image: "/assets/showcase/dome-keeper-header.webp"
+image: "/assets/showcase/dome-keeper-header.jpg"
 gallery: [
-	"/assets/showcase/dome-keeper.webp"
+	"/assets/showcase/dome-keeper.jpg"
 ]
 youtube_id: "qTnGtmh8eTE"
 
@@ -22,6 +22,7 @@ steam: https://store.steampowered.com/app/1637320/Dome_Keeper/
 
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/dome-keeper.webp"
 ---
 
 <p>

@@ -7,11 +7,11 @@ author: Perfoon
 website: https://twitter.com/jaanusjaggo
 release_date: July 2022
 
-image: "/assets/showcase/blastronaut-header.webp"
+image: "/assets/showcase/blastronaut-header.png"
 gallery: [
-	"/assets/showcase/blastronaut-1.webp",
-	"/assets/showcase/blastronaut-2.webp",
-	"/assets/showcase/blastronaut-3.webp",
+	"/assets/showcase/blastronaut-1.jpg",
+	"/assets/showcase/blastronaut-2.jpg",
+	"/assets/showcase/blastronaut-3.jpg",
 ]
 youtube_id: "egEuehFcGkE"
 
@@ -24,6 +24,7 @@ steam: https://store.steampowered.com/app/1392650/BLASTRONAUT/
 
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/blastronaut-1.webp"
 ---
 
 ## Mine resources! Upgrade your gear! Make Profit!

@@ -7,11 +7,11 @@ author: Kivano Games
 website: https://kivano.games/
 release_date: "June 2023"
 
-image: "/assets/showcase/tail-quest-header.webp"
+image: "/assets/showcase/tail-quest-header.jpg"
 gallery: [
-	"/assets/showcase/tail-quest.webp",
-	"/assets/showcase/tailquest-1.webp",
-	"/assets/showcase/tailquest-2.webp"
+	"/assets/showcase/tail-quest.jpg",
+	"/assets/showcase/tailquest-1.jpg",
+	"/assets/showcase/tailquest-2.jpg"
 ]
 youtube_id: "Q-v0vL83ylg"
 
@@ -22,6 +22,7 @@ steam: https://store.steampowered.com/app/824090/TailQuest_Defense/
 gog: https://www.gog.com/pl/game/tailquest_defense
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/tail-quest.webp"
 ---
 
 

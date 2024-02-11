@@ -7,11 +7,11 @@ author: Save Sloth Studios
 website: https://twitter.com/saveslothstudio
 release_date: December 2022
 
-image: "/assets/showcase/gnome-header.webp"
+image: "/assets/showcase/gnome-header.jpg"
 gallery: [
-  "/assets/showcase/gnome-1.webp",
-  "/assets/showcase/gnome-2.webp",
-  "/assets/showcase/gnome-3.webp",
+  "/assets/showcase/gnome-1.jpg",
+  "/assets/showcase/gnome-2.jpg",
+  "/assets/showcase/gnome-3.jpg",
 ]
 youtube_id: "grovGK4WOJw"
 
@@ -23,6 +23,7 @@ macos: false
 steam: https://store.steampowered.com/app/2089710/A_Most_Extraordinary_Gnome/
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/gnome-1.webp"
 ---
 
 ### A short adventure awaits!

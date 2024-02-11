@@ -8,7 +8,7 @@ website: https://dungeondraft.net/
 release_date: February 2020
 
 gallery: [
-	"/assets/showcase/dungeondraft.webp"
+	"/assets/showcase/dungeondraft.jpg"
 ]
 youtube_id: "LYTHVRpihKg"
 

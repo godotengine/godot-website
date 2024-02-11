@@ -7,11 +7,11 @@ author: pank0
 website: https://twitter.com/_pank0
 release_date: "September 2023"
 
-image: "/assets/showcase/usagi-shima-header.webp"
+image: "/assets/showcase/usagi-shima-header.png"
 gallery: [
 	"/assets/showcase/usagi-shima-5.webp",
-	"/assets/showcase/usagi-shima.webp",
-	"/assets/showcase/usagi-shima-1.webp",
+	"/assets/showcase/usagi-shima.png",
+	"/assets/showcase/usagi-shima-1.png",
 ]
 youtube_id: "FWOKjCe9Ljw"
 
@@ -23,6 +23,7 @@ googleplay: https://play.google.com/store/apps/details?id=com.pank0.usagishima
 custom: https://usagishima.net/
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/tail-quest.webp"
 ---
 
 Usagi Shima『うさぎしま』is a relaxing, idle bunny collecting game developed by solo developer pank0 (aka Jess Yu).

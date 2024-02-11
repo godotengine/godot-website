@@ -5,12 +5,12 @@ date: 2021-06-02 00:00:00 +0000
 title: "Until Then"
 author: "Polychroma Games"
 
-image: "/assets/showcase/until-then-header.webp"
+image: "/assets/showcase/until-then-header.jpg"
 gallery: [
-	"/assets/showcase/until-then-2.webp",
-	"/assets/showcase/until-then-1.webp",
-	"/assets/showcase/until-then-3.webp",
-	"/assets/showcase/until-then-4.webp",
+	"/assets/showcase/until-then-2.jpg",
+	"/assets/showcase/until-then-1.jpg",
+	"/assets/showcase/until-then-3.jpg",
+	"/assets/showcase/until-then-4.jpg",
 ]
 website: https://untilthengame.com/
 release_date: "TBD"
@@ -23,6 +23,7 @@ playstation: true
 steam: https://store.steampowered.com/app/1574820/Until_Then/
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/until-then-2.webp"
 ---
 
 _"The world hasn't ended yet."_

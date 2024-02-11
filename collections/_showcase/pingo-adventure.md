@@ -7,9 +7,9 @@ author: Orb Square Studio
 website: https://orb-square.com
 release_date: TBD
 
-image: "/assets/showcase/pingo-adventure-header.webp"
+image: "/assets/showcase/pingo-adventure-header.jpg"
 gallery: [
-	"/assets/showcase/pingo-adventure.webp"
+	"/assets/showcase/pingo-adventure.jpg"
 ]
 youtube_id: "H8x_SR623fw"
 
@@ -21,6 +21,7 @@ steam: https://store.steampowered.com/app/2015830/Pingo_Adventure/
 itch: https://orb-square.itch.io/pingo-adventure
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/pingo-adventure.webp"
 ---
 
 <p>

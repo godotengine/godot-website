@@ -4,9 +4,9 @@ date: 2022-10-01 00:00:00 +0000
 
 title: "Endoparasitic"
 author: "Miziziziz"
-image: "/assets/showcase/endoparasitic-header.webp"
+image: "/assets/showcase/endoparasitic-header.jpg"
 gallery: [
-	"/assets/showcase/endoparasitic.webp"
+	"/assets/showcase/endoparasitic.jpg"
 ]
 website: https://twitter.com/miziziziz
 release_date: "October 2022"

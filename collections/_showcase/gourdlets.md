@@ -4,7 +4,7 @@ date: 2021-05-01 00:00:00 +0000
 
 title: "Gourdlets"
 author: "AuntyGames"
-image: "/assets/showcase/gourdlets-header.webp"
+image: "/assets/showcase/gourdlets-header.jpg"
 gallery: [
 	"/assets/showcase/gourdlets-1.webp",
 	"/assets/showcase/gourdlets-2.webp",

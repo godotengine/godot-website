@@ -7,11 +7,11 @@ author: Blobfish
 website: https://www.blobfish.dev/
 release_date: September 2022
 
-image: "/assets/showcase/brotato-header.webp"
+image: "/assets/showcase/brotato-header.jpg"
 gallery: [
-  "/assets/showcase/brotato-2.webp",
-	"/assets/showcase/brotato-1.webp",
-  "/assets/showcase/brotato-3.webp",
+  "/assets/showcase/brotato-2.jpg",
+	"/assets/showcase/brotato-1.jpg",
+  "/assets/showcase/brotato-3.jpg",
 ]
 youtube_id: "bXEhKX41WRk"
 
@@ -22,6 +22,7 @@ steam: https://store.steampowered.com/app/1942280/Brotato/
 
 
 featured_in_home: true
+featured_image: "/assets/images/featured-home/brotato-2.webp"
 ---
 
 A spaceship from Potato World crashes onto an alien planet. The sole survivor: Brotato, the only potato capable of handling 6 weapons at the same time. Waiting to be rescued by his mates, Brotato must survive in this hostile environment.

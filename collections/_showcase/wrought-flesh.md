@@ -4,9 +4,9 @@ date: 2021-12-01 00:00:00 +0000
 
 title: "Wrought Flesh"
 author: "Miziziziz"
-image: "/assets/showcase/wrought-flesh-header.webp"
+image: "/assets/showcase/wrought-flesh-header.jpg"
 gallery: [
-	"/assets/showcase/wrought-flesh-1.webp"
+	"/assets/showcase/wrought-flesh-1.jpg"
 ]
 website: https://twitter.com/miziziziz
 release_date: "December 2021"
