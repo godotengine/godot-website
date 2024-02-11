@@ -55,31 +55,29 @@
 
 .card-download-details {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
 	gap: 12px;
 	width: 100%;
 }
+
 @media (max-width: 768px) {
 	.card-download-details {
 		flex-direction: column;
-		align-items: center;
+		align-items: stretch;
 		gap: 20px;
 	}
 }
 
 .card-download-details > img, article .content .card-download-details > img {
-	background-color: transparent;
-	display: inline-block;
 	margin: 0;
-	min-width: 0;
-	max-height: 150px;
+	flex: 1;
+	max-width: 311px;
 }
+
 @media (max-width: 768px) {
-	.card-download-details img, article .content .card-download-details img {
-		max-height: 220px;
-		max-width: 95%;
+	.card-download-details > img, article .content .card-download-details > img {
+		max-width: 100%;
 	}
 }
 

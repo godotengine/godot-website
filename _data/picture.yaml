@@ -1,0 +1,251 @@
+media_queries:
+  showcase-showreel-thumbnail-sm: 'max-width: 711px'
+  showcase-showreel-thumbnail-md: 'max-width: 1027px'
+  showcase-showreel-thumbnail-lg: 'min-width: 1028px'
+  showcase-thumbnail-sm: 'max-width: 763px'
+  showcase-thumbnail-md: 'max-width: 978px'
+  showcase-thumbnail-lg: 'min-width: 979px'
+  showcase-thumbnail-details-sm: 'max-width: 900px'
+  showcase-thumbnail-details-lg: 'min-width: 901px'
+  showcase-carousel-md: 'max-width: 766px'
+  showcase-carousel-lg: 'min-width: 767px'
+  showcase-carousel-frame-md: 'max-width: 803px'
+  showcase-carousel-frame-lg: 'min-width: 804px'
+  latest-news-header-sm: 'max-width: 900px'
+  latest-news-header-md: 'max-width: 1246px'
+  latest-news-header-lg: 'min-width: 1247px'
+  latest-news-md: 'max-width: 767px'
+  latest-news-lg: 'min-width: 768px'
+  home-feature-sm: 'max-width: 900px'
+  home-feature-md: 'max-width: 1250px'
+  home-feature-lg: 'min-width: 1251px'
+  blog-thumbnail-sm: 'max-width: 767px'
+  blog-thumbnail-md: 'max-width: 1023px'
+  blog-thumbnail-lg: 'min-width: 1024px'
+  blog-article-header-sm: 'max-width: 900px'
+  blog-article-header-md: 'max-width: 1250px'
+  blog-article-header-lg: 'min-width: 1251px'
+  article-card-download-md: 'max-width: 768px'
+  article-card-download-lg: 'min-width: 769px'
+
+
+presets:
+  default:
+    formats: []
+    widths: []
+    fallback_width: 0
+
+  featured-hero-home:
+    markup: direct_url
+    fallback_width: 1920
+    fallback_format: webp
+    format_quality:
+      webp: 80
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+
+  featured-hero-download:
+    markup: direct_url
+    fallback_width: 1920
+    fallback_format: webp
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+
+  showcase-showreel-thumbnail:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      showcase-showreel-thumbnail-sm: 100vw
+      showcase-showreel-thumbnail-md: calc((100vw - 64px) / 2)
+      showcase-showreel-thumbnail-lg: calc((1200px - 32px) / 3)
+
+  showcase-thumbnail:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      showcase-thumbnail-sm: calc(100vw - 32px)
+      showcase-thumbnail-md: calc((100vw - 32px - 16px) / 2)
+      showcase-thumbnail-lg: calc(calc(min(1200px, calc(100vw - 32px)) - 32px) / 3)
+
+  showcase-thumbnail-details:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      showcase-thumbnail-details-sm: calc(100vw - 32px)
+      showcase-thumbnail-details-lg: calc(min(1200px, calc(100vw - 32px)) - 748px)
+
+  lightbox-expanded-thumbnail:
+    markup: direct_url
+    fallback_width: 1920
+    fallback_format: webp
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+
+  showcase-carousel:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      showcase-carousel-md: calc(100vw - 32px)
+      showcase-carousel-lg: 720px
+
+  showcase-carousel-frame:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      showcase-carousel-frame-md: calc(100vw + 413px) # 413px is how much the image overflows on the sides
+      showcase-carousel-frame-lg: 1224px
+
+  latest-news-header:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      latest-news-header-sm: calc(100vw - 16px)
+      latest-news-header-md: calc((100vw - 62px) / 2)
+      latest-news-header-lg: 585px
+
+  latest-news:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 80, 96, 128, 170, 200, 240 ]
+    fallback_width: 80
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      latest-news-md: 80px
+      latest-news-lg: 160px
+
+  home-feature:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      home-feature-sm: calc(100vw - 16px)
+      home-feature-md: calc((min(1200px, calc(100vw - 32px)) - 40px) / 3)
+      home-feature-lg: calc((min(1200px, calc(100vw - 32px)) - 40px) / 3)
+
+  blog-thumbnail:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      blog-thumbnail-sm: calc(100vw - 32px)
+      blog-thumbnail-md: calc((100vw - 32px - 30px) / 2)
+      blog-thumbnail-lg: calc(calc(min(1200px, calc(100vw - 32px)) - 60px) / 3)
+
+  blog-article-header:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      blog-article-header-sm: calc(100vw - 32px)
+      blog-article-header-md: calc(70vw - 32px)
+      blog-article-header-lg: 840px
+
+  article-card-download:
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
+    sizes:
+      article-card-download-md: calc(100vw - 64)
+      article-card-download-lg: 311px

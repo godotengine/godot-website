@@ -169,9 +169,16 @@ layout: default
 				</figcaption>
 				{% endif %}
 
-				<img src="{{ page.image }}" title="{{ page.image_caption_title }}"
-					alt="{{ page.image_caption_title }} {{ page.image_caption_description }}" class="rounded-lg"
-					style="width: 100%; height: auto; background-color: transparent;" />
+				{%
+					picture
+					blog-article-header
+					{{ page.image }}
+					id="article-cover-img"
+					title="{{ page.image_caption_title }}"
+					alt="{{ page.image_caption_title }} {{ page.image_caption_description }}"
+					class="rounded-lg"
+					style="background-color: transparent;"
+				%}
 			</figure>
 
 			<div class="article-info">
@@ -214,22 +221,26 @@ layout: default
 <link rel="stylesheet" href="/assets/css/article-cards.css?2">
 <script src="/assets/js/anchor-link.js"></script>
 <script>
+	function addLightboxToImage(el, href) {
+		const lightbox = document.createElement('a');
+		lightbox.href = href;
+		lightbox.classList.add('lightbox');
+		lightbox.dataset.group = 'article';
+		el.parentNode.appendChild(lightbox);
+		lightbox.appendChild(el);
+	}
+
 	document.addEventListener('DOMContentLoaded', () => {
 		// Add icons to easily copy section links.
 		window.applyAnchorLinks('.article-body');
 
-		// Add lightbox elements in blog articles for Tobii.
-		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
-			if (articleImg.classList.contains('lightbox-ignore')) {
-				return;
-			}
+		const articleCoverImgHref = '{% picture lightbox-expanded-thumbnail {{ page.image }} %}';
+		const articleCoverImg = document.getElementById('article-cover-img');
+		addLightboxToImage(articleCoverImg, articleCoverImgHref);
 
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-body img:not(.lightbox-ignore)').forEach((articleImg) => {
+			addLightboxToImage(articleImg, articleImg.src);
 		});
 	});
 </script>
