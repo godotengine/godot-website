@@ -22,7 +22,6 @@ steam: https://store.steampowered.com/app/1637320/Dome_Keeper/
 
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/dome-keeper.webp"
 ---
 
 <p>

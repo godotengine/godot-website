@@ -24,7 +24,6 @@ itch: https://pixeljam.itch.io/ex-zodiac
 
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/ex-zodiac.webp"
 ---
 
 <p>

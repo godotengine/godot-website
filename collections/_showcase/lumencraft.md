@@ -16,7 +16,6 @@ gallery: [
 youtube_id: "LC29HveHImg"
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/lumen-showcase.webp"
 
 windows: true
 linux: true

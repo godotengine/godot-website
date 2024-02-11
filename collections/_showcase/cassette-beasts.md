@@ -25,7 +25,6 @@ steam: https://store.steampowered.com/app/1321440/Cassette_Beasts/
 
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/cassette-beasts-3.webp"
 ---
 
 Welcome to New Wirral, a remote island inhabited by strange creatures you’ve only dreamed of, nightmares you hopefully haven’t, and a cast of brave folks who use cassette tapes to transform for battle. To find a way home you’ll need to explore every inch of the island, and record monsters to your trusty cassette tapes to gain their abilities!

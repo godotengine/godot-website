@@ -24,7 +24,6 @@ steam: https://store.steampowered.com/app/2218750/Halls_of_Torment/
 
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/halls-of-torment-1.webp"
 ---
 
 Halls of Torment is a horde survival game in a pre rendered retro look reminiscent of RPGs from the late 90s. Choose one of many hero characters and descend into the deadly Halls of Torment. Fight unholy horrors from beyond and survive wave after wave until you face one of the tormented lords. Advance your hero with character traits, abilities, and items. Create a new powerful build during each run. Explore various underground expanses and find new powerful items that enable you to venture even deeper into the abyss.

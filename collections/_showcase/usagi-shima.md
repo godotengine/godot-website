@@ -23,7 +23,6 @@ googleplay: https://play.google.com/store/apps/details?id=com.pank0.usagishima
 custom: https://usagishima.net/
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/tail-quest.webp"
 ---
 
 Usagi Shima『うさぎしま』is a relaxing, idle bunny collecting game developed by solo developer pank0 (aka Jess Yu).

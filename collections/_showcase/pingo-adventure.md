@@ -21,7 +21,6 @@ steam: https://store.steampowered.com/app/2015830/Pingo_Adventure/
 itch: https://orb-square.itch.io/pingo-adventure
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/pingo-adventure.webp"
 ---
 
 <p>

@@ -23,7 +23,6 @@ macos: false
 steam: https://store.steampowered.com/app/2089710/A_Most_Extraordinary_Gnome/
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/gnome-1.webp"
 ---
 
 ### A short adventure awaits!

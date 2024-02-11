@@ -24,7 +24,6 @@ steam: https://store.steampowered.com/app/1392650/BLASTRONAUT/
 
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/blastronaut-1.webp"
 ---
 
 ## Mine resources! Upgrade your gear! Make Profit!

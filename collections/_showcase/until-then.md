@@ -23,7 +23,6 @@ playstation: true
 steam: https://store.steampowered.com/app/1574820/Until_Then/
 
 featured_in_home: true
-featured_image: "/assets/images/featured-home/until-then-2.webp"
 ---
 
 _"The world hasn't ended yet."_
