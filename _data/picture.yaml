@@ -113,7 +113,7 @@ presets:
     dimension_attributes: true
     sizes:
       showcase-thumbnail-details-sm: calc(100vw - 32px)
-      showcase-thumbnail-details-lg: calc(min(1200px, calc(100vw - 32px)) - 748px)
+      showcase-thumbnail-details-lg: calc(min(600px, calc(50vw - 32px)))
 
   lightbox-expanded-thumbnail:
     markup: direct_url
