@@ -33,9 +33,11 @@ To build the website locally, follow these steps:
 
 1. Install [Jekyll prerequisites](https://jekyllrb.com/docs/installation/).
    - Make sure `bundle` is available from the command line.
-2. Clone this repository.
-3. Install the necessary dependencies: `bundle install`.
-4. Build the site: `bundle exec jekyll build`.
+2. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify).
+	- Make sure `minify` is available from the command line.
+3. Clone this repository.
+4. Install the necessary dependencies: `bundle install`.
+5. Build the site: `bundle exec jekyll build`.
    - Append `--config _config.yml,_config.development.yml` to use the development config with your build.
 
 For simplicity, these two commands are also available as a `build.sh` script in this repository.
