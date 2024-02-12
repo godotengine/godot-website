@@ -31,9 +31,17 @@ media_queries:
 
 presets:
   default:
-    formats: []
-    widths: []
-    fallback_width: 0
+    formats: [ webp ]
+    fallback_format: webp
+    widths: [ 640, 768, 1024, 1366, 1600, 1920 ]
+    fallback_width: 640
+    format_quality:
+      webp: 85
+    image_options:
+      webp:
+        smart_subsample: true
+        effort: 6
+    dimension_attributes: true
 
   featured-hero-home:
     markup: direct_url
