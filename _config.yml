@@ -95,3 +95,4 @@ pagination:
 
 picture:
   suppress_warnings: true
+  disabled: development
