@@ -23,7 +23,7 @@ Other than that, we are also planning a Godot get-together at GitHub HQ on March
 
 ## Where can I stay up to date?
 
-This blog is the right place. In addition, we put out a forum post <link> asking the community who plans to attend, to give you the chance to connect and make plans together. Lastly, don’t forget to follow our [socials](https://linkin.bio/godot), where we are sure to post some pictures during the event as well.
+This blog is the right place. In addition, we put out a [forum post](https://forum.godotengine.org/t/are-you-attending-gdc-2024-we-are/47386?u=godot_team) asking the community who plans to attend, to give you the chance to connect and make plans together. Lastly, don’t forget to follow our [socials](https://linkin.bio/godot), where we are sure to post some pictures during the event as well.
 
 ## I can't come…
 
