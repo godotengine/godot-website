@@ -402,13 +402,12 @@ layout: default
 		</script>
 
 		<div class="showcase-carousel">
-			<img src="/assets/features/editor-frame.png?2" class="showcase-frame" />
-
+			{% picture showcase-carousel-frame "assets/features/editor-frame.png" class="showcase-frame" alt="" %}
 			<div class="showcase-items">
-				{% for project in site.showcase %}
+				{% for project in site.showcase  %}
 				{% if project.featured_in_home %}
 				<div class="showcase-item">
-					<img src="{{ project.gallery[0] }}" load="lazy" alt="{{ project.title }} - {{ project.author }}" />
+					{% picture showcase-carousel {{ project.gallery[0] }} alt="{{ project.title }} - {{ project.author }}" loading="lazy" %}
 					<div class="showcase-credits">
 						<a href="{{ project.url }}">
 							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">- {{ project.author }}</span>
@@ -610,7 +609,7 @@ layout: default
 				Watch our annual showreel videos to see more examples of projects using Godot!
 			</p>
 
-			{% include showreel-shelf.html %}
+			{% include showreel-shelf.html lazyload=true %}
 		</div>
 	</div>
 

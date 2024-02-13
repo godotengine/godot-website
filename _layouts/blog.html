@@ -33,7 +33,7 @@ collection: article
 		gap: 30px;
 		padding: 20px 0 39px;
 	}
-	.head .main > :last-child,  
+	.head .main > :last-child,
 	.head .main > :first-child {
 		margin: 0;
 	}
@@ -58,7 +58,6 @@ collection: article
 	}
 
 	.tags h3 {
-		margin-top: 1rem;
 		display: inline-block;
 		margin: 0;
 		font-size: 19px;
@@ -128,7 +127,7 @@ collection: article
 		{% for post in paginator.posts %}
 		<a href="{{ post.url }}" style="text-decoration: none">
 			<article class="article-card">
-				<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
+				{% picture blog-thumbnail {{ post.image }} class="thumbnail" alt="" loading="lazy" href="{{ post.url }}"%}
 				<div class="content">
 					<div class="info">
 						{% assign post_author = site.data.authors | find: "name", post.author %}

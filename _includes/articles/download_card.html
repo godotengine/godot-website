@@ -12,7 +12,7 @@
 
 	<div class="card-download-details">
 		{% unless release_article == empty %}
-			<img class="lightbox-ignore" src="{{ release_article.image }}" />
+			{% picture article-card-download {{ release_article.image }} alt="" class="lightbox-ignore" loading="lazy" %}
 		{% endunless %}
 
 		<div class="card-download-platforms">

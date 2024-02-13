@@ -26,69 +26,7 @@ layout: default
 		Every year, we make a series of videos highlighting the best games made with Godot. Here are the latest ones:
 	</p>
 
-	{% include showreel-shelf.html %}
-
-	<style>
-		.showcase-card h3 {
-			font-size: 33px;
-			margin-bottom: 0px;
-		}
-
-		.showcase-card p {
-			font-size: 14px;
-			margin: 0;
-			color: var(--secondary-color-text);
-		}
-
-		.showcase-card img.thumbnail {
-			max-width: 100%;
-			border-radius: 7px;
-			background-color: var(--card-background-color);
-			box-shadow: 0 5px 10px -3px #00000078;
-			display: block;
-			margin-bottom: 6px;
-		}
-
-		.showcase-card-caption {
-			display: flex;
-			column-gap: 12px;
-			justify-content: space-between;
-			margin: 0 14px;
-		}
-
-		.showcase-card-authors {
-			display: grid;
-			align-content: center;
-		}
-
-		.showcase-card-icons {
-			filter: none;
-			padding: 7px 0px 0px;
-			opacity: 0.5;
-		}
-
-		@media (prefers-color-scheme: dark) {
-			.showcase-card-icons {
-				filter: invert();
-			}
-		}
-
-		.showcase-card .no-capsule {
-			aspect-ratio: 92 / 43;
-			background-size: cover;
-			background-position: center;
-			border-radius: 6px;
-			box-shadow: 0 5px 10px -3px #00000078;
-			margin-bottom: 7px;
-			text-align: center;
-			display: grid;
-			align-content: center;
-		}
-
-		.showcase-card .no-capsule h3 {
-			text-shadow: 0 4px 5px black;
-		}
-	</style>
+	{% include showreel-shelf.html lazyload=false %}
 
 	<!-- Filter will go here -->
 
@@ -101,54 +39,53 @@ layout: default
 		<a href="{{ project.url }}" style="text-decoration: none;">
 			<article class="showcase-card">
 				{% if project.image %}
-				<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+					{% picture showcase-thumbnail {{ project.image }} class="thumbnail" alt="{{ project.title }}" loading="lazy" %}
 				{% else %}
-				<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+				<div style="position: relative">
 					<h3>{{ project.title }}</h3>
+					{% picture showcase-thumbnail {{ project.gallery[0]  }} class="thumbnail" alt="{{ project.title }}" loading="lazy" %}
 				</div>
 				{% endif %}
 				<div class="showcase-card-caption">
 					<div class="showcase-card-icons">
 						{% if project.windows %}
-						<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.macos %}
-						<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
+						<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" width="24" height="24">
 						{% endif %}
 
 						{% if project.linux %}
-						<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.switch %}
-						<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem"
-							width="24" height="24">
+						<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" width="24" height="24">
 						{% endif %}
 
 						{% if project.html5 %}
-						<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.android %}
-						<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.ios %}
-						<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
+						<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" width="24" height="24">
 						{% endif %}
 
 						{% if project.playstation %}
-						<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-							width="24" height="24">
+						<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" width="24" height="24">
 						{% endif %}
 
 						{% if project.xbox %}
-						<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
+						<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" width="24" height="24">
 						{% endif %}
 					</div>
 					<div class="showcase-card-authors">
@@ -170,54 +107,53 @@ layout: default
 		<a href="{{ project.url }}" style="text-decoration: none;">
 			<article class="showcase-card">
 				{% if project.image %}
-				<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+					{% picture showcase-thumbnail {{ project.image }} class="thumbnail" alt="{{ project.title }}" loading="lazy" %}
 				{% else %}
-				<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+				<div style="position: relative">
 					<h3>{{ project.title }}</h3>
+					{% picture showcase-thumbnail {{ project.gallery[0] }} class="thumbnail" alt="{{ project.title }}" loading="lazy" %}
 				</div>
 				{% endif %}
 				<div class="showcase-card-caption">
 					<div class="showcase-card-icons">
 						{% if project.windows %}
-						<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.macos %}
-						<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
+						<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" width="24" height="24">
 						{% endif %}
 
 						{% if project.linux %}
-						<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.switch %}
-						<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem"
-							width="24" height="24">
+						<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" width="24" height="24">
 						{% endif %}
 
 						{% if project.html5 %}
-						<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.android %}
-						<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
+						<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" width="24"
 							height="24">
 						{% endif %}
 
 						{% if project.ios %}
-						<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
+						<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" width="24" height="24">
 						{% endif %}
 
 						{% if project.playstation %}
-						<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-							width="24" height="24">
+						<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" width="24" height="24">
 						{% endif %}
 
 						{% if project.xbox %}
-						<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
+						<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" width="24" height="24">
 						{% endif %}
 					</div>
 					<div class="showcase-card-authors">
@@ -238,10 +174,11 @@ layout: default
 		<a href="{{ project.url }}" style="text-decoration: none;">
 			<article class="showcase-card">
 				{% if project.image %}
-				<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+					{% picture showcase-thumbnail {{ project.image }} class="thumbnail" alt="{{ project.title }}" loading="lazy" %}
 				{% else %}
-				<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+				<div style="position: relative">
 					<h3>{{ project.title }}</h3>
+					{% picture showcase-thumbnail {{ project.gallery[0] }} class="thumbnail" alt="{{ project.title }}" loading="lazy" %}
 				</div>
 				{% endif %}
 				<div class="showcase-card-caption">
@@ -263,5 +200,70 @@ layout: default
 			form</a>.
 	</p>
 </div>
+
+<style>
+	.showcase-card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		gap: 6px;
+
+		h3 {
+			font-size: 33px;
+			margin-bottom: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-shadow: 0 4px 5px black;
+		}
+
+		p {
+			font-size: 14px;
+			margin: 0;
+			color: var(--secondary-color-text);
+		}
+
+		.thumbnail {
+			width: 100%;
+			aspect-ratio: 92/43;
+			background-color: var(--card-background-color);
+			border-radius: 7px;
+			box-shadow: 0 5px 10px -3px #00000078;
+		}
+	}
+
+	.showcase-card-caption {
+		display: flex;
+		column-gap: 12px;
+		justify-content: space-between;
+		padding: 0.5rem 0.9rem;
+	}
+
+	.showcase-card-authors {
+		display: grid;
+		align-content: center;
+	}
+
+	.showcase-card-icons {
+		filter: none;
+		opacity: 0.5;
+		display: flex;
+		gap: 0.5rem;
+
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.showcase-card-icons {
+			filter: invert();
+		}
+	}
+</style>
 
 {% include footer.html %}

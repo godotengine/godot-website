@@ -16,6 +16,9 @@ layout: default
 			grid-template-columns: 1fr;
 		}
 	}
+	.hero {
+		background-image: url('{% picture featured-hero-download "assets/download/download-background.jpg" %}');
+	}
 </style>
 
 {% assign stable_version = site.data.versions | find: "featured", "3" %}
