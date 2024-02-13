@@ -7,7 +7,7 @@ image: /storage/blog/gdc/2024/gdc-thumbnail.webp
 date: 2024-02-13 12:00:00
 ---
 
-Since we had a great & productive time last year, and 2,000 pins dispersed around the world to prove it, we are attending the [Game Developer Conference](https://gdconf.com/) (GDC) again, which is taking place March 18-22 in San Francisco, California. 
+Since we had a great & productive time last year, and 2,000 pins dispersed around the world to prove it, we are attending the [Game Developer Conference](https://gdconf.com/) (GDC) again. It is taking place March 18-22 in San Francisco, California. 
 
 ## What can you expect? 
 
