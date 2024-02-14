@@ -7,9 +7,9 @@ author: Little Red Dog Games
 website: https://www.littlereddoggames.com/
 release_date: May 2019
 
-image: "/assets/showcase/precipice-header.jpg"
+image: "/assets/showcase/precipice-header.webp"
 gallery: [
-	"/assets/showcase/precipice.png"
+	"/assets/showcase/precipice.webp"
 ]
 youtube_id: "Ri0Pc5xvJkM"
 

@@ -7,11 +7,11 @@ author: 2Dynamic Games
 website: https://twitter.com/Lumencraft_game
 release_date: February 2023
 
-image: "/assets/showcase/lumencraft-header.jpg"
+image: "/assets/showcase/lumencraft-header.webp"
 gallery: [
   "/assets/showcase/lumen-showcase.jpg",
-	"/assets/showcase/lumencraft-1.jpg",
-  "/assets/showcase/lumencraft-3.jpg",
+	"/assets/showcase/lumencraft-1.webp",
+  "/assets/showcase/lumencraft-3.webp",
 ]
 youtube_id: "LC29HveHImg"
 

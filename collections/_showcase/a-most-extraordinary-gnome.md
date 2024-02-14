@@ -7,11 +7,11 @@ author: Save Sloth Studios
 website: https://twitter.com/saveslothstudio
 release_date: December 2022
 
-image: "/assets/showcase/gnome-header.jpg"
+image: "/assets/showcase/gnome-header.webp"
 gallery: [
-  "/assets/showcase/gnome-1.jpg",
-  "/assets/showcase/gnome-2.jpg",
-  "/assets/showcase/gnome-3.jpg",
+  "/assets/showcase/gnome-1.webp",
+  "/assets/showcase/gnome-2.webp",
+  "/assets/showcase/gnome-3.webp",
 ]
 youtube_id: "grovGK4WOJw"
 

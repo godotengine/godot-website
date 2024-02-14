@@ -5,12 +5,12 @@ date: 2021-06-02 00:00:00 +0000
 title: "Until Then"
 author: "Polychroma Games"
 
-image: "/assets/showcase/until-then-header.jpg"
+image: "/assets/showcase/until-then-header.webp"
 gallery: [
-	"/assets/showcase/until-then-2.jpg",
-	"/assets/showcase/until-then-1.jpg",
-	"/assets/showcase/until-then-3.jpg",
-	"/assets/showcase/until-then-4.jpg",
+	"/assets/showcase/until-then-2.webp",
+	"/assets/showcase/until-then-1.webp",
+	"/assets/showcase/until-then-3.webp",
+	"/assets/showcase/until-then-4.webp",
 ]
 website: https://untilthengame.com/
 release_date: "TBD"

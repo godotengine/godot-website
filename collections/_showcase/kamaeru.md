@@ -7,10 +7,10 @@ author: Humble Reeds
 website: https://www.kamaeru.com/
 release_date: TBD
 
-image: "/assets/showcase/kamaeru-header.png"
+image: "/assets/showcase/kamaeru-header.webp"
 gallery: [
-	"/assets/showcase/kamaeru-1.png",
-	"/assets/showcase/kamaeru-2.png",
+	"/assets/showcase/kamaeru-1.webp",
+	"/assets/showcase/kamaeru-2.webp",
 ]
 youtube_id: "BzMuM8ohdB8"
 

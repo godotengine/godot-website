@@ -17,7 +17,7 @@ I'm also giving a **conference dedicated to Godot 3**, on Saturday 18/11, from 1
 
 The presentation itself is made in Godot. It's going to be open source and available to the entire community. This way if you want to give a talk anywhere in the world, you don't have to start from scratch. Although it's in French, it's designed to be easy to translate.
 
-![A slide from the presentation, made in Godot, with snow falling on the screen](/storage/app/media/events/capitole-du-libre/2017/rpg-in-a-box.png)
+![A slide from the presentation, made in Godot, with snow falling on the screen](/storage/app/media/events/capitole-du-libre/2017/rpg-in-a-box.webp)
 
 The event is **completely free to attend**. There will be a lot of developers, artists and FOSS game creation enthusiasts. If you want to meet, feel free to ping us on social media.
 
