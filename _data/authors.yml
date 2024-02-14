@@ -5,11 +5,11 @@
 - name: Bartleby Lawnjelly
   image: /assets/images/authors/default_avatar.svg
 - name: Bastiaan Olij
-  image: /assets/images/authors/bastiaan.webp
+  image: /assets/images/authors/bastiaan.jpg
 - name: Camille Mohr-Daurat
   image: /assets/images/authors/default_avatar.svg
 - name: Clay John
-  image: /assets/images/authors/clayjohn.webp
+  image: /assets/images/authors/clayjohn.jpg
 - name: Emi
   image: /assets/images/authors/emi.webp
 - name: Ernest Lee
@@ -21,13 +21,13 @@
 - name: George Marques
   image: /assets/images/authors/vnen.webp
 - name: Gilles Roudiere
-  image: /assets/images/authors/groud.webp
+  image: /assets/images/authors/groud.png
 - name: Gordon MacPherson
   image: /assets/images/authors/default_avatar.svg
 - name: HP van Braam
   image: /assets/images/authors/default_avatar.svg
 - name: Hugo Locurcio
-  image: /assets/images/authors/calinou.webp
+  image: /assets/images/authors/calinou.png
 - name: Ignacio Roldán Etcheverry
   image: /assets/images/authors/ignacio.webp
 - name: Ilaria Cislaghi
@@ -57,7 +57,7 @@
 - name: Rémi Verschelde
   image: /assets/images/authors/akien.webp
 - name: Silc Renew
-  image: /assets/images/authors/tokage.webp
+  image: /assets/images/authors/tokage.png
 - name: Winston Yallow
   image: /assets/images/authors/winston.png
 - name: Yuri Roubinsky
