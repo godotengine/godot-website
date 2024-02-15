@@ -269,9 +269,3 @@ Debugging is the weak point of this approach: when dealing with native Vulkan or
 Considering how little abstraction the graph requires, it is entirely possible to apply this approach to other projects that don't use Godot at all. The implementation of the technique has been kept as isolated and general purpose as possible, affecting very little of the rest of the Godot codebase except for removing code that is no longer required. Following this approach turned out to be very important, as being able to change the implementation of the graph itself or disable it completely was vital to debugging any problems introduced by implementation errors. While there are no plans to make this a general-purpose library, it could be a very interesting idea to integrate this mechanism into a generic rendering framework.
 
 Look forward to testing this feature out in the 4.3-dev snapshots and future releases! Please let us know if you have any issues so they can be fixed in time for the first stable release.
-
-## Support
-
-Godot is a non-profit, open source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
-
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
