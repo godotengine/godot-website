@@ -8,7 +8,7 @@ website: https://hivetime.twolofbees.com/
 release_date: December 2019
 
 gallery: [
-  "/assets/showcase/hive-time.png"
+  "/assets/showcase/hive-time.webp"
 ]
 youtube_id: "w4M6-zkLN6Y"
 

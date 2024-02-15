@@ -7,9 +7,9 @@ author: Richard Hörnig
 website: https://twitter.com/haiki_game
 release_date: October 2021 (Early Access)
 
-image: "/assets/showcase/haiki-header.jpg"
+image: "/assets/showcase/haiki-header.webp"
 gallery: [
-  "/assets/showcase/haiki.png"
+  "/assets/showcase/haiki.webp"
 ]
 youtube_id: "oJG80se4D_I"
 

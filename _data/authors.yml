@@ -11,15 +11,15 @@
 - name: Clay John
   image: /assets/images/authors/clayjohn.jpg
 - name: Emi
-  image: /assets/images/authors/emi.png
+  image: /assets/images/authors/emi.webp
 - name: Ernest Lee
   image: /assets/images/authors/default_avatar.svg
 - name: Fabio Alessandrelli
-  image: /assets/images/authors/faless.jpg
+  image: /assets/images/authors/faless.webp
 - name: Fredia Huya-Kouadio
   image: /assets/images/authors/default_avatar.svg
 - name: George Marques
-  image: /assets/images/authors/vnen.jpg
+  image: /assets/images/authors/vnen.webp
 - name: Gilles Roudiere
   image: /assets/images/authors/groud.png
 - name: Gordon MacPherson
@@ -29,33 +29,33 @@
 - name: Hugo Locurcio
   image: /assets/images/authors/calinou.png
 - name: Ignacio Roldán Etcheverry
-  image: /assets/images/authors/ignacio.png
+  image: /assets/images/authors/ignacio.webp
 - name: Ilaria Cislaghi
-  image: /assets/images/authors/ilaria.jpg
+  image: /assets/images/authors/ilaria.webp
 - name: Joan Fons
-  image: /assets/images/authors/joan.png
+  image: /assets/images/authors/joan.webp
 - name: Juan Linietsky
-  image: /assets/images/authors/reduzio.jpg
+  image: /assets/images/authors/reduzio.webp
 - name: Julian Murgia
-  image: /assets/images/authors/julian.jpg
+  image: /assets/images/authors/julian.webp
 - name: karroffel
   image: /assets/images/authors/default_avatar.svg
 - name: Nathalie Galla
   image: /assets/images/authors/nathalie.jpg
 - name: Nathan GDQuest
-  image: /assets/images/authors/nathan.png
+  image: /assets/images/authors/nathan.webp
 - name: Matias Goldberg
   image: /assets/images/authors/default_avatar.svg
 - name: Max Hilbrunner
-  image: /assets/images/authors/maxhilbrunner.png
+  image: /assets/images/authors/maxhilbrunner.webp
 - name: Pāvels Nadtočajevs
   image: /assets/images/authors/default_avatar.svg
 - name: Pedro J. Estébanez
-  image: /assets/images/authors/pedro.png
+  image: /assets/images/authors/pedro.webp
 - name: Raul Santos
-  image: /assets/images/authors/raulsantos.jpg
+  image: /assets/images/authors/raulsantos.webp
 - name: Rémi Verschelde
-  image: /assets/images/authors/akien.jpg
+  image: /assets/images/authors/akien.webp
 - name: Silc Renew
   image: /assets/images/authors/tokage.png
 - name: Winston Yallow
@@ -65,10 +65,10 @@
 - name: Yuri Sizov
   image: /assets/images/authors/yuri.jpeg
 - name: "2000+ Godot contributors"
-  image: /assets/images/authors/everyone.jpg
+  image: /assets/images/authors/everyone.webp
 - name: "Godot contributors"
-  image: /assets/images/authors/everyone.jpg
+  image: /assets/images/authors/everyone.webp
 - name: "Godot Foundation"
-  image: /assets/images/authors/foundation.png
+  image: /assets/images/authors/foundation.webp
 - name: default
   image: /assets/images/authors/default_avatar.svg
