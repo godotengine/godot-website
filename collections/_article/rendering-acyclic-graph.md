@@ -3,8 +3,8 @@ title: "GPU synchronization in Godot 4.3 is getting a major upgrade"
 excerpt: "Say goodbye to placing barriers, hello to the new acyclic graph"
 categories: ["progress-report"]
 author: Darío Banini
-image: /storage/blog/covers/todo.webp
-date: 2024-02-14 9:00:00
+image: /storage/blog/covers/gpu-sync-progress-report.webp
+date: 2024-02-16 9:00:00
 ---
 
 *Darío, the author of this article, is a new face around this blog who was hired by **W4 Games** last summer to start contributing to the project. His work was kindly sponsored and donated to the Godot Engine project by **W4 Games**. You can find more of his contributions to the engine in his [GitHub profile](https://github.com/DarioSamo).*
