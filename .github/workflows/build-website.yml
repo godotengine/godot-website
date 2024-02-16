@@ -29,10 +29,8 @@ jobs:
         # Runs 'bundle install' and caches installed gems automatically
         bundler-cache: true
 
-
     - name: Install Minify
       run: sudo apt-get update && sudo apt-get install minify
-
 
     # Build the website.
 
