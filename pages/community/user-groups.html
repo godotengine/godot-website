@@ -21,7 +21,6 @@ layout: default
 	</div>
 	<div class="container">
 
-		<link rel="stylesheet" href="/assets/leaflet/leaflet.css">
 		<script defer src="/assets/leaflet/leaflet.js"></script>
 		<script>
 			const points = {{ site.data.communities | jsonify }};
@@ -92,6 +91,19 @@ layout: default
 					noWrap: true,
 					bounds,
 				}).addTo(myMap);
+
+				// Leaflet sometimes uses wrong path, so we have to provide a default icon
+				L.Marker.prototype.options.icon = L.icon({
+					iconUrl: '/assets/leaflet/images/marker-icon.webp',
+					iconRetinaUrl: '/assets/leaflet/images/marker-icon-2x.webp',
+					iconSize: [25, 41],
+					iconAnchor: [12, 41],
+					shadowUrl: '/assets/leaflet/images/marker-shadow.png',
+					shadowSize: [41, 41],
+					shadowAnchor: [13, 41],
+					popupAnchor: [1, -34],
+					tooltipAnchor: [16, -28],
+				});
 
 				// The icon to use for physical venues.
 				const physicalIcon = L.icon({
@@ -202,3 +214,5 @@ layout: default
 	</div>
 </main>
 {% include footer.html %}
+
+{% preload_async_css href="/assets/leaflet/leaflet.css" %}

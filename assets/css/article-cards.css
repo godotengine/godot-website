@@ -106,6 +106,8 @@
 
 .download-platform img {
 	filter: invert(100%);
+	width: 24px;
+	height: 24px;
 }
 
 .card-download-platforms .btn-download-primary {

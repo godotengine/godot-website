@@ -47,70 +47,57 @@
 			<h4 class="text-right"><a href="/contact">Contact us</a></h4>
 			<div class="flex justify-space-between" style="gap: 3px;">
 				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
-					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub" fetchpriority="low">
 				</a>
 				<a href="https://mastodon.gamedev.place/@godotengine" target="_blank" rel="noopener">
-					<img src="/assets/footer/mastodon_logo.svg" width="32" height="32" alt="Mastodon">
+					<img src="/assets/footer/mastodon_logo.svg" width="32" height="32" alt="Mastodon" fetchpriority="low">
 				</a>
 				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
-					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter" fetchpriority="low">
 				</a>
 				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
-					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook" fetchpriority="low">
 				</a>
 				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
 					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
-					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit" fetchpriority="low">
 				</a>
 				<a href="/rss.xml" target="_blank" rel="noopener">
 					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
-					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed" fetchpriority="low">
 				</a>
 			</div>
 		</div>
 	</div>
 </footer>
-
-<script defer src="/assets/js/tobii.min.js"></script>
-<script defer src="/assets/js/highlight.min.js?1"></script>
-<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		// This needs to be done on page load but also after page changes,
-		// in case a code block appears in an article.
-		document.querySelectorAll('pre code').forEach((block) => {
-			hljs.highlightBlock(block);
-		});
-
+		const before48Hours = (Date.now() - 1000 * 60 * 60 * 48);
 		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
 			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
+			if (Date.parse(postDate.dataset.postDate) > before48Hours) {
 				postDate.classList.add("post-recent-highlight");
-			};
-		});
-
-		// Initialize lightbox.
-		new Tobii({
-			zoom: false,
+			}
 		});
 
 		// Update any download link to point to identified user's OS.
 		const links = document.querySelectorAll('.set-os-download-url');
 		for (let i = 0; i < links.length; i++) {
 			const link = links[i];
-			let link_slug = 'download';
-			if ('version' in link.dataset && link.dataset['version'] === '3') {
-				link_slug = 'download/3.x';
+			let lingSlug = 'download';
+			if (link.dataset['version'] === '3') {
+				lingSlug = 'download/3.x';
 			}
 
-			let link_platform = 'windows';
-			if (navigator.platform.indexOf('Mac') !== -1) {
-				link_platform = 'macos';
-			} else if (navigator.platform.indexOf('Linux') !== -1) {
-				link_platform = 'linux';
+			const platformName = (navigator?.userAgentData?.platform ?? navigator?.platform).toLowerCase();
+			let platformLink = 'windows';
+			if (platformName.includes('mac')) {
+				platformLink = 'macos';
+			} else if (platformName.includes('linux')) {
+				platformLink = 'linux';
 			}
 
-			link.href = `/${link_slug}/${link_platform}`;
+			link.href = `/${lingSlug}/${platformLink}`;
 		}
 	});
 </script>

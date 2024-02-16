@@ -1,10 +1,196 @@
+<style>
+	header {
+		/* Show on top of GodotCon banner (if any). */
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		height: 64px;
+		box-shadow: var(--base-shadow);
+		background-color: var(--navbar-background-color);
+		contain: strict;
+		contain-intrinsic-size: auto 100vw auto 64px;
+	}
+
+	header > .container {
+		height: 100%;
+	}
+
+	#nav_head {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+
+	#nav_head #logo-link {
+		padding: 0 1rem;
+		margin-left: -1rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	#nav_toggle_cb,
+	#nav_toggle_btn {
+		display: none;
+		line-height: 0;
+		cursor: pointer;
+		/* Prevent double-clicking the button from highlighting the icon as selected text on desktop. */
+		user-select: none;
+	}
+
+	nav {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	nav a {
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+		color: var(--navbar-link-color);
+		padding: 0 1rem;
+		display: flex;
+		flex-direction: column;
+		place-content: center;
+		height: 100%;
+		line-height: normal;
+	}
+
+	nav li:hover,
+	#logo-link:hover {
+		background-color: hsla(0, 0%, 50%, 0.1);
+	}
+
+	.nav-logo.dark-logo {
+		display: none;
+	}
+
+	nav li {
+		margin: 0;
+		height: 100%;
+	}
+
+	nav li.fund {
+		margin-right: -1rem;
+	}
+
+	nav li.fund > a {
+		color: var(--fund-color) !important;
+	}
+
+	nav li.fund > a:hover {
+		color: var(--fund-color-hl) !important;
+	}
+
+	nav li.fund.active > a {
+		color: var(--fund-color-hl);
+	}
+
+	nav ul {
+		margin: 0;
+		height: 100%;
+		display: flex;
+		padding-left: 0;
+		list-style: none;
+		align-items: center;
+	}
+
+	nav > ul > :first-child {
+		padding-left: 0;
+	}
+
+	nav > ul > :last-child {
+		padding-right: 0;
+	}
+
+	nav li.active > a {
+		color: var(--navbar-link-current-color);
+	}
+
+	@media (max-width: 1200px) {
+		header {
+			height: auto;
+			contain: content;
+		}
+
+		header > .container {
+			flex-direction: column;
+			padding: 0;
+		}
+
+		#nav_head {
+			width: 100%;
+		}
+
+		#nav_head #logo-link {
+			margin-left: 0;
+		}
+
+		#nav {
+			display: none;
+		}
+
+		nav a {
+			padding: 1rem;
+		}
+
+		nav ul {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+		nav ul li {
+			width: 100%;
+			align-items: start;
+		}
+
+		nav li.fund {
+			margin: 0;
+			width: 100%;
+		}
+
+		#nav_toggle_btn {
+			display: block;
+			padding: 1.25rem;
+		}
+
+		#nav_toggle_btn:hover {
+			background-color: hsla(0, 0%, 50%, 0.15);
+		}
+
+		#nav_toggle_btn:active {
+			background-color: hsla(0, 0%, 50%, 0.25);
+		}
+
+		#nav_toggle_cb:checked ~ header nav {
+			display: block;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		/* Use logo with white text for dark navbar. */
+		.nav-logo {
+			display: none;
+		}
+
+		.nav-logo.dark-logo {
+			display: initial;
+		}
+
+		/* Invert hamburger menu button on mobile to be visible on dark navbar. */
+		#nav_toggle_btn {
+			filter: invert(100%) saturate(0%) brightness(120%);
+		}
+	}
+</style>
 <input type="checkbox" id="nav_toggle_cb">
 <header>
-	<div class="container flex align-center">
+	<div class="container flex">
 		<div id="nav_head">
-			<a href="/" id="logo-link">
-				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
-				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			<a href="/" id="logo-link" title="Godot Engine">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine" fetchpriority="low" decoding="async">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine" fetchpriority="low" decoding="async">
 			</a>
 			<label for="nav_toggle_cb" id="nav_toggle_btn">
 				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="Main menu">
@@ -14,9 +200,7 @@
 		<nav id="nav">
 			<ul class="left">
 				<li><a href="/features">Features</a></li>
-				<div class="only-on-mobile" style="width: 100%">
-					<li><a href="/showcase">Showcase</a></li>
-				</div>
+				<li class="only-on-mobile"><a href="/showcase">Showcase</a></li>
 				<li><a href="/blog">Blog</a></li>
 				<li><a href="/community">Community</a></li>
 				<li><a href="/contact">About</a></li>

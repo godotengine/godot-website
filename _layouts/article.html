@@ -2,6 +2,17 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="/assets/css/anchor-link.css?1">
+<link rel="stylesheet" href="/assets/css/article-cards.css?2">
+
+{% preload_async_css href="/assets/css/highlight.obsidian.min.css" %}
+{% preload_async_css href="/assets/css/tobii.min.css" %}
+
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/anchor-link.js"></script>
+
 {% include header.html %}
 
 <style>
@@ -210,28 +221,29 @@ layout: default
 	</article>
 </div>
 
-<link rel="stylesheet" href="/assets/css/anchor-link.css?1">
-<link rel="stylesheet" href="/assets/css/article-cards.css?2">
-<script src="/assets/js/anchor-link.js"></script>
+{% include footer.html %}
+
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		hljs.highlightAll();
+
 		// Add icons to easily copy section links.
 		window.applyAnchorLinks('.article-body');
 
 		// Add lightbox elements in blog articles for Tobii.
-		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
-			if (articleImg.classList.contains('lightbox-ignore')) {
-				return;
-			}
-
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
+		document.querySelectorAll('.article-cover img:not(.lightbox-ignore), .article-body img:not(.lightbox-ignore)').forEach((articleImg) => {
+			const template = document.createElement('template');
+			template.innerHTML = `<a href="${articleImg.src}" class="lightbox" data-group="article"/>`
+			const a = template.content.firstChild
+			articleImg.parentNode.appendChild(a);
+			a.appendChild(articleImg);
 		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		})
 	});
 </script>
-
-{% include footer.html %}

@@ -190,6 +190,7 @@
 .platform-tabs .tab img {
     display: block;
     filter: invert(100%);
+    height: 24px;
 }
 
 .platform-tabs .tab:not(.active):hover {

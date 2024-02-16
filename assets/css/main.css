@@ -79,13 +79,10 @@
   --warning-background-color: #ffedcc;
   --warning-color: #404040;
 
-  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --default-font-family:  system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --header-font-family: "Montserrat", sans-serif;
 }
 
-.nav-logo.dark-logo {
-  display: none;
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -166,25 +163,6 @@
     --warning-color: #ffeeaf;
   }
 
-  /* Use logo with white text for dark navbar. */
-  .nav-logo {
-    display: none;
-  }
-
-  .nav-logo.dark-logo {
-    display: initial;
-  }
-
-  /* Fade Patreon widget a little to be less distracting. */
-  .patreon {
-    opacity: 0.85;
-  }
-
-  /* Invert hamburger menu button on mobile to be visible on dark navbar. */
-  #nav_toggle_btn {
-    filter: invert(100%) saturate(0%) brightness(120%);
-  }
-
   .dark-invert {
     filter: invert(100%);
   }
@@ -200,7 +178,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
     url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
@@ -210,7 +189,8 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"),
+    url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
     url("../fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 
@@ -263,6 +243,33 @@ body a:active,
 .btn.flat:active,
 .search-bar-btn:active {
   filter: brightness(82.5%);
+}
+
+/*
+	1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+	2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+	This can trigger a poorly considered lint error in some tools but is included by design.
+	*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+	vertical-align: middle;
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+img,
+video {
+	max-width: 100%;
+	height: auto;
 }
 
 h1,
@@ -365,6 +372,10 @@ hr {
   margin-bottom: 0;
 }
 
+.grow {
+	flex-grow: 1;
+}
+
 .base-padding {
   padding: 16px;
 }
@@ -375,117 +386,8 @@ hr {
   padding-right: 0px;
 }
 
-header {
-  /* Show on top of GodotCon banner (if any). */
-  position: relative;
-  z-index: 2;
-
-  width: 100vw;
-  height: 64px;
-  background-color: var(--navbar-background-color);
-  display: flex;
-  align-items: center;
-  box-shadow: var(--base-shadow);
-}
-
-header > div.container {
-  width: 100%;
-}
-
-header .container {
-  overflow: initial;
-}
 
 .only-on-mobile {
-  display: none;
-}
-
-#logo-link {
-  margin-right: 36px;
-  /* Make the logo's clickable area as tall as for other navigation links. */
-  padding: 0.2rem 0.5rem;
-  margin-top: 0.25rem;
-  margin-left: -0.5rem;
-}
-#nav_head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#nav_toggle_cb,
-#nav_toggle_btn {
-  display: none;
-  line-height: 0px;
-  cursor: pointer;
-  /* Prevent double-clicking the button from highlighting the icon as selected text on desktop. */
-  user-select: none;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--navbar-link-color);
-  /* Make links easier to click. */
-  padding: 1.3175rem 1rem;
-}
-
-nav a:hover,
-#logo-link:hover {
-  background-color: hsla(0, 0%, 50%, 0.1);
-}
-
-nav li.fund > a {
-  color: var(--fund-color);
-}
-nav li.fund > a:hover {
-  color: var(--fund-color-hl);
-}
-nav li.fund.active > a {
-  color: var(--fund-color-hl);
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-nav > ul {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-nav > ul > :first-child {
-  padding-left: 0;
-}
-
-nav > ul > :last-child {
-  padding-right: 0;
-}
-
-nav > ul li {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 0;
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
-nav li.active > a {
-  color: var(--navbar-link-current-color);
-}
-
-nav > ul ul {
   display: none;
 }
 
@@ -569,6 +471,10 @@ footer a {
 #social {
   flex: 1;
   margin-left: 32px;
+}
+
+#social img {
+  max-width: unset;
 }
 
 .pagination {
@@ -970,63 +876,6 @@ pre > code {
     width: 100%;
   }
 
-  header {
-    height: auto;
-  }
-  header > div {
-    flex-direction: column;
-  }
-
-  #logo-link {
-    margin: 0;
-  }
-  #nav_head {
-    width: 100%;
-    margin-top: 0.25rem;
-  }
-  #nav_toggle_btn {
-    display: block;
-    /* Make the navbar toggle button easier to click. */
-    padding: 1.25rem;
-    margin-top: -0.2rem;
-    margin-right: -1rem;
-  }
-  #nav_toggle_btn:hover {
-    background-color: hsla(0, 0%, 50%, 0.15);
-  }
-  #nav_toggle_btn:active {
-    background-color: hsla(0, 0%, 50%, 0.25);
-  }
-  #nav_toggle_cb:checked ~ header nav {
-    display: block;
-  }
-  #nav {
-    display: none;
-  }
-  nav ul {
-    align-items: flex-start;
-    flex-direction: column;
-    height: auto;
-  }
-  nav > ul {
-    margin-bottom: 16px;
-  }
-  nav ul li {
-    padding: 0;
-    padding-top: 16px;
-    width: 100%;
-  }
-  nav ul a {
-    width: 100%;
-    display: block;
-    /* Make links easier to click but still close to each other. */
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-top: -0.4375rem;
-    margin-bottom: -0.4375rem;
-  }
   a.patreonLink {
     text-decoration: none;
     height: 64px !important;
@@ -1350,12 +1199,12 @@ article.article-card h3 {
   margin-bottom: 10px;
 }
 article.article-card .thumbnail {
+  width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 7px;
-  background-position: center;
-  background-size: cover;
-  background-color: var(--card-background-color);
   box-shadow: 0 5px 10px -3px #00000078;
+  background-color: var(--card-background-color);
+  background-size: cover;
 }
 article.article-card .info {
   display: flex;

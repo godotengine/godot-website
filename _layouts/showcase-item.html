@@ -2,17 +2,49 @@
 layout: default
 ---
 
+{% if page.youtube_id %}
+<link rel="preload" href="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}" as="document" fetchpriority="high"/>
+{% endif %}
+
+<script>
+	// Initialize lightbox.
+	function initTobbi() {
+		new Tobii({
+			zoom: false,
+		})
+	}
+
+	// Used for removing img background after loading, this is necessary to avoid edge color bleeding
+	function removeFeatureImgBackground(el) {
+		el.style.background = 'unset';
+		el.style.backgroundColor = 'unset';
+	}
+</script>
+<script defer src="/assets/js/tobii.min.js" onload="initTobbi()"></script>
+
 {% include header.html %}
 
 <style>
 	.showcase-video-image {
-		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		flex: 1;
+	}
+
+	.showcase-video-image img {
+		width: 100%;
+		background:  linear-gradient(90deg, #947451 12%, #a8885f 29%, #8c8977 65%, #d2ba9f 98%)
+	}
+
+	.showcase-video-image img .youtube {
+		border: 0;
+		padding-bottom: 56.25%;
 	}
 
 	.showcase-developer-quote {
 		font-style: italic;
 		color: var(--base-color-text-title);
-
 	}
 
 	.showcase-developer-quote p:first-child::before {
@@ -27,16 +59,34 @@ layout: default
 		margin-left: -0.1rem;
 	}
 
-	@media (min-width: 900px) {
-		.showcase-video-image {
-			margin-left: 1rem;
-			margin-top: 0;
-		}
+	.showcase-intro-icons {
+		filter: invert(100%);
+		opacity: 0.75;
+		margin-top: 1rem;
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.showcase-intro-icons img {
+		width: 24px;
+		height: 24px;
+	}
+
+	#info-buttons {
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	article h3 {
 		margin-bottom: 0;
 		margin-top: 30px;
+	}
+
+	#info-buttons a {
+		white-space: nowrap;
 	}
 </style>
 
@@ -56,47 +106,41 @@ layout: default
 				| {% if page.release_date == "TBD" %}Release date: <abbr title="To Be Determined">TBD</abbr>{% else %}{{
 				page.release_date }}{% endif %}
 			</h3>
-			<div style="filter: invert(100%); opacity: 0.75; margin-top: 1rem">
-
-
+			<div class="showcase-intro-icons">
 				{% if page.windows %}
-				<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" width="24" height="24">
 				{% endif %}
 
 				{% if page.macos %}
-				<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" width="24" height="24">
 				{% endif %}
 
 				{% if page.linux %}
-				<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" width="24" height="24">
 				{% endif %}
 
 				{% if page.switch %}
-				<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" width="24" height="24">
 				{% endif %}
 
 				{% if page.html5 %}
-				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" width="24" height="24">
 				{% endif %}
 
 				{% if page.android %}
-				<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" height="24">
 				{% endif %}
 
 				{% if page.ios %}
-				<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" width="24" height="24">
 				{% endif %}
 
 				{% if page.playstation %}
-				<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-					width="24" height="24">
+				<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" width="24" height="24">
 				{% endif %}
 
 				{% if page.xbox %}
-				<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox"width="24" height="24">
 				{% endif %}
 
 			</div>
@@ -106,93 +150,95 @@ layout: default
 </div>
 
 <div class="container">
-	<section class="flex eqsize responsive">
-		<article>
+	<section class="flex responsive" style="gap: 1rem;">
+		<article style="flex: 1">
 			{{ content }}
 
-			<div class="flex responsive" style="justify-content: center; margin-top: 2rem">
+			<div id="info-buttons" class="flex responsive">
 				{% if page.steam %}
-				<a href="{{ page.steam }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.steam }}" class="btn" target="_blank">
 					View on Steam
 				</a>
 				{% endif %}
 
 				{% if page.itch %}
-				<a href="{{ page.itch }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.itch }}" class="btn" target="_blank">
 					View on itch.io
 				</a>
 				{% endif %}
 
 				{% if page.humble %}
-				<a href="{{ page.humble }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.humble }}" class="btn" target="_blank">
 					View on Humble Store
 				</a>
 				{% endif %}
 
 				{% if page.gog %}
-				<a href="{{ page.gog }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.gog }}" class="btn" target="_blank">
 					View on GOG.com
 				</a>
 				{% endif %}
 
 				{% if page.nintendo %}
-				<a href="{{ page.nintendo }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.nintendo }}" class="btn" target="_blank">
 					View on Nintendo Switch
 				</a>
 				{% endif %}
 
 				{% if page.microsoft %}
-				<a href="{{ page.microsoft }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.microsoft }}" class="btn" target="_blank">
 					View on Xbox
 				</a>
 				{% endif %}
 
 				{% if page.sony %}
-				<a href="{{ page.sony }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.sony }}" class="btn" target="_blank">
 					View on PlayStation
 				</a>
 				{% endif %}
 
 				{% if page.github %}
-				<a href="{{ page.github }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.github }}" class="btn" target="_blank">
 					View on GitHub
 				</a>
 				{% endif %}
 
 				{% if page.appstore %}
-				<a href="{{ page.appstore }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.appstore }}" class="btn" target="_blank">
 					View on App Store
 				</a>
 				{% endif %}
 
 				{% if page.googleplay %}
-				<a href="{{ page.googleplay }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.googleplay }}" class="btn" target="_blank">
 					View on Google Play
 				</a>
 				{% endif %}
 
 				{% if page.custom %}
-				<a href="{{ page.custom }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+				<a href="{{ page.custom }}" class="btn" target="_blank">
 					Learn More
 				</a>
 				{% endif %}
 			</div>
-		</article>
+		</article >
 		<article class="showcase-video-image">
 			{% if page.youtube_id %}
-			<div class="card youtube" style="padding-bottom: 56.25%">
+			<div class="card youtube">
 				<iframe src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen="" frameborder="0">
+					allowfullscreen="">
 				</iframe>
 			</div>
 			{% endif %}
 
 			{% for image in page.gallery %}
 			<a href="{{ image }}" class="lightbox" data-group="showcase">
-				<img class="rounded-lg" src="{{ image }}" alt="Screenshot of {{ page.title }} by {{ page.author }}"
-					style="width: 100%; height: auto; margin-top: 1rem; background:  linear-gradient(90deg, #947451 12%, #a8885f 29%, #8c8977 65%, #d2ba9f 98%) "
-					width="16" height="9">
+				{% if forloop.index <= 3 %}
+					<img class="rounded-lg" src="{{ image }}" alt="Screenshot of {{ page.title }} by {{ page.author }}" width="16" height="9" onload="removeFeatureImgBackground(this)">
+				{% else %}
+					<img class="rounded-lg" src="{{ image }}" alt="Screenshot of {{ page.title }} by {{ page.author }}" width="16" height="9" loading="lazy" onload="removeFeatureImgBackground(this)">
+				{% endif%}
 			</a>
 			{% endfor %}
 		</article>
@@ -215,3 +261,5 @@ layout: default
 </div>
 
 {% include footer.html %}
+
+{% preload_async_css href="/assets/css/tobii.min.css" %}
