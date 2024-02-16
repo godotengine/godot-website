@@ -89,12 +89,6 @@
 	gap: 8px;
 }
 
-.card-download-platforms img, article .content .card-download-platforms img {
-	background-color: transparent;
-	display: inline-block;
-	margin: 0;
-}
-
 .card-download-platforms .download-platform {
 	color: var(--primary-color-text-title);
 	display: flex;
@@ -104,8 +98,10 @@
 	min-width: 120px;
 }
 
-.download-platform img {
-	filter: invert(100%);
+.download-platform svg {
+	fill: white;
+	width: 24px;
+	height: 24px;
 }
 
 .card-download-platforms .btn-download-primary {

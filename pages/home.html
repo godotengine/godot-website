@@ -51,6 +51,12 @@ layout: default
 		color: var(--dark-color-text);
 		overflow: auto;
 		text-align: center;
+		display: grid;
+		place-items: center;
+	}
+
+	#donations img {
+		display: inline;
 	}
 
 	#donations h1,
@@ -160,6 +166,12 @@ layout: default
 		.news-list .button-container {
 			text-align: left;
 		}
+	}
+
+	.get-involved-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 </style>
 
@@ -307,7 +319,7 @@ layout: default
 		<a class="feature-link" href="/features#deploy" data-barba-prevent>
 			<div class="feature dark">
 				<img src="/assets/home/features/cross-platform.svg" alt="" width="1" height="1"
-					style="background-color: #333667" loading="lazy">
+					 style="background-color: #333667;" loading="lazy">
 				<div class="body">
 					<h4>Release on all platforms</h4>
 					<p>
@@ -320,8 +332,8 @@ layout: default
 
 		<a class="feature-link" href="#get_involved" data-barba-prevent>
 			<div class="feature dark">
-				<img src="/assets/home/features/oss.svg" alt="" width="1" height="1" style="background-color: #333667"
-					loading="lazy">
+				<img src="/assets/home/features/oss.svg" alt="" width="1" height="1"
+					 style="background-color: #333667;" loading="lazy">
 				<div class="body">
 					<h4>Open Source</h4>
 					<p>
@@ -344,36 +356,40 @@ layout: default
 		Join the community and help create a game engine that belongs to everybody.
 	</p>
 
+
 	<div class="flex eqsize responsive">
 
-		<div class="text-center base-padding">
+		<div class="text-center base-padding get-involved-item">
 			<img src="/assets/home/code.svg" alt="" width="250" height="250" loading="lazy">
 			<h4>Code</h4>
 			<p>
 				If you know how to code, you can help by fixing bugs and working with engine contributors towards the
 				implementation of new features.
 			</p>
+			<span class="grow"></span>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 
-		<div class="text-center base-padding">
+		<div class="text-center base-padding get-involved-item">
 			<img src="/assets/home/document.svg" alt="" width="250" height="250" loading="lazy">
 			<h4>Document</h4>
 			<p>
 				Documentation quality is essential in a game engine; help make it better by updating the API reference, writing
 				new guides or submitting corrections.
 			</p>
+			<span class="grow"></span>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 
-		<div class="text-center base-padding">
+		<div class="text-center base-padding get-involved-item">
 			<img src="/assets/home/report.svg" alt="" width="250" height="250" loading="lazy">
 			<h4>Report</h4>
 			<p>
 				Found a problem with the engine? Don't forget to report it so that developers can track it down.
 			</p>
+			<span class="grow"></span>
 			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
@@ -383,9 +399,9 @@ layout: default
 
 <section id="donations" class="padded">
 	<div class="container sm-full">
-		<a href="https://godot.foundation" target="_blank" style="display: inline-block;">
+		<a href="https://godot.foundation" target="_blank" title="Godot Foundation">
 			<img id="foundation_graphic" src="/assets/home/foundation/godot-foundation-logo-dark.svg" alt="Godot Foundation logo" width="1" height="1"
-			class="img-auto-size" loading="lazy">
+				 class="img-auto-size" loading="lazy">
 		</a>
 		<p class="small auto-margin">
 			You don't need to be an engine developer to help Godot. Join the <a href="https://fund.godotengine.org/">development fund</a> and help us make the Godot&nbsp;Engine even more awesome!

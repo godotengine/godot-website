@@ -63,8 +63,15 @@ layout: default
 
 		.showcase-card-icons {
 			filter: none;
-			padding: 7px 0px 0px;
+			padding: 7px 0 0;
 			opacity: 0.5;
+			display: flex;
+			gap: 0.5rem;
+		}
+
+		.showcase-card-icons svg {
+			width: 24px;
+			height: 24px;
 		}
 
 		@media (prefers-color-scheme: dark) {
@@ -109,47 +116,15 @@ layout: default
 				{% endif %}
 				<div class="showcase-card-caption">
 					<div class="showcase-card-icons">
-						{% if project.windows %}
-						<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.macos %}
-						<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
-						{% endif %}
-
-						{% if project.linux %}
-						<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.switch %}
-						<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem"
-							width="24" height="24">
-						{% endif %}
-
-						{% if project.html5 %}
-						<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.android %}
-						<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.ios %}
-						<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
-						{% endif %}
-
-						{% if project.playstation %}
-						<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-							width="24" height="24">
-						{% endif %}
-
-						{% if project.xbox %}
-						<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
-						{% endif %}
+						{% if project.windows %}<svg><use href="#windows-platform-icon"></use></svg>{% endif %}
+						{% if project.macos %}<svg><use href="#macos-platform-icon"></use></svg>{% endif %}
+						{% if project.linux %}<svg><use href="#linux-platform-icon"></use></svg>{% endif %}
+						{% if project.switch %}<svg><use href="#switch-platform-icon"></use></svg>{% endif %}
+						{% if project.html5 %}<svg><use href="#web-platform-icon"></use></svg>{% endif %}
+						{% if project.android %}<svg><use href="#android-platform-icon"></use></svg>{% endif %}
+						{% if project.ios %}<svg><use href="#ios-platform-icon"></use></svg>{% endif %}
+						{% if project.playstation %}<svg><use href="#playstation-platform-icon"></use></svg>{% endif %}
+						{% if project.xbox %}<svg><use href="#xbox-platform-icon"></use></svg>{% endif %}
 					</div>
 					<div class="showcase-card-authors">
 						<p>{{ project.author }}</p>
@@ -178,47 +153,15 @@ layout: default
 				{% endif %}
 				<div class="showcase-card-caption">
 					<div class="showcase-card-icons">
-						{% if project.windows %}
-						<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.macos %}
-						<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
-						{% endif %}
-
-						{% if project.linux %}
-						<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.switch %}
-						<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem"
-							width="24" height="24">
-						{% endif %}
-
-						{% if project.html5 %}
-						<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.android %}
-						<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
-							height="24">
-						{% endif %}
-
-						{% if project.ios %}
-						<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
-						{% endif %}
-
-						{% if project.playstation %}
-						<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-							width="24" height="24">
-						{% endif %}
-
-						{% if project.xbox %}
-						<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
-						{% endif %}
+						{% if project.windows %}<svg><use href="#windows-platform-icon"></use></svg>{% endif %}
+						{% if project.macos %}<svg><use href="#macos-platform-icon"></use></svg>{% endif %}
+						{% if project.linux %}<svg><use href="#linux-platform-icon"></use></svg>{% endif %}
+						{% if project.switch %}<svg><use href="#switch-platform-icon"></use></svg>{% endif %}
+						{% if project.html5 %}<svg><use href="#web-platform-icon"></use></svg>{% endif %}
+						{% if project.android %}<svg><use href="#android-platform-icon"></use></svg>{% endif %}
+						{% if project.ios %}<svg><use href="#ios-platform-icon"></use></svg>{% endif %}
+						{% if project.playstation %}<svg><use href="#playstation-platform-icon"></use></svg>{% endif %}
+						{% if project.xbox %}<svg><use href="#xbox-platform-icon"></use></svg>{% endif %}
 					</div>
 					<div class="showcase-card-authors">
 						<p>{{ project.author }}</p>
@@ -265,3 +208,15 @@ layout: default
 </div>
 
 {% include footer.html %}
+
+<div style="width: 0;height: 0;">
+	{% inline_svg assets/images/platforms/windows.svg %}
+	{% inline_svg assets/images/platforms/macos.svg %}
+	{% inline_svg assets/images/platforms/linux.svg %}
+	{% inline_svg assets/images/platforms/switch.svg %}
+	{% inline_svg assets/images/platforms/web.svg %}
+	{% inline_svg assets/images/platforms/android.svg %}
+	{% inline_svg assets/images/platforms/ios.svg %}
+	{% inline_svg assets/images/platforms/playstation.svg %}
+	{% inline_svg assets/images/platforms/xbox.svg %}
+</div>

@@ -61,7 +61,8 @@
 					{% endif %}
 
 					<div class="download-platform">
-						<img width="24" height="24" src="/assets/images/platforms/{{ primary[0] | split: "_" | join: "-" }}.svg" title="{{ platform_info.title }}" alt="{{ platform_info.title }}" class="dark-invert" />
+						{% assign platform = primary[0] | split: "_" | join: "-" %}
+						<svg class="dark-invert"><use href="#{{ platform }}-platform-icon"></use></svg>
 						{{ platform_info.title }}
 					</div>
 
@@ -129,3 +130,20 @@
 		{% endfor %}
 	</div>
 </div>
+
+{% comment %}
+The version-card can be used multiple times in a single page
+This check makes sure we don't declare the svg multiple times
+{% endcomment %}
+{% unless has_setup_platform_icons == true %}
+<div style="width: 0;height: 0;">
+	{% inline_svg assets/images/platforms/windows.svg %}
+	{% inline_svg assets/images/platforms/macos.svg %}
+	{% inline_svg assets/images/platforms/linux.svg %}
+	{% inline_svg assets/images/platforms/linux-server.svg %}
+	{% inline_svg assets/images/platforms/web.svg %}
+	{% inline_svg assets/images/platforms/android.svg %}
+	{% inline_svg assets/images/platforms/templates.svg %}
+</div>
+{% endunless %}
+{% assign has_setup_platform_icons = true %}

@@ -27,7 +27,8 @@
 					{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
 
 					<div class="download-platform">
-						<img width="24" height="24" src="/assets/images/platforms/{{ primary[0] | split: "_" | join: "-" }}.svg" title="{{ platform_info.title }}" alt="{{ platform_info.title }}" class="lightbox-ignore" />
+						{% assign platform = primary[0] | split: "_" | join: "-" %}
+						{% inline_svg assets/images/platforms/{{ platform }}.svg %}
 						{{ platform_info.title }}
 					</div>
 

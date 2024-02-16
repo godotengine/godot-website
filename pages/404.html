@@ -37,11 +37,11 @@ description: "The requested resource is not available on the server."
 
 	.error-logo {
 		height: 138px;
+		display: inline;
 	}
 
 	.alternatives {
 		display: grid;
-		/* grid-template-columns: 1fr 1fr; */
 		gap: 30px;
 	}
 
@@ -68,7 +68,7 @@ description: "The requested resource is not available on the server."
 	<div class="error">
 		<div class="message">
 			<a href="/" style="display:block">
-				<img class="error-logo" src="/assets/error_logo.svg" alt="Godot Engine Error">
+				{% inline_svg assets/error_logo.svg class="error-logo" %}
 			</a>
 			<h1>404 - Page not found</h1>
 		</div>
@@ -80,7 +80,7 @@ description: "The requested resource is not available on the server."
 					<input type="hidden" name="sites" value="godotengine.org/" />
 					<input type="text" name="q" maxlength="300" placeholder="Search articles" />
 					<button class="btn search-bar-btn" type="submit">
-						<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
+						{% inline_svg assets/icons/search.svg width="24" height="24" title="search" %}
 					</button>
 				</form>
 
