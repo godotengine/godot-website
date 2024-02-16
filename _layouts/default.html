@@ -23,6 +23,20 @@
 	</script>
 	{% endif %}
 
+	<!--features.html-->
+	{% if page.name == "features.html" %}
+	<link rel="preload" as="image" href="/assets/features/editor-frame.webp?2" fetchpriority="high">
+	<script>
+		{% assign featured_projects = site.showcase | where: 'featured_in_home', true | map: 'image' %}
+		const featuredProjects = [{% for project in featured_projects  %}'{{ project }}',{% endfor %}];
+
+		let currentIndex = Math.floor(Math.random() * featuredProjects.length);
+		const template = document.createElement('template');
+		template.innerHTML = `<link rel="preload" as="image" href="${featuredProjects[currentIndex]}" fetchpriority="high"/>`
+		document.head.appendChild(template.content.firstChild);
+	</script>
+	{% endif %}
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">

@@ -43,11 +43,11 @@ layout: default
 		column-gap: 28px;
 		row-gap: 24px;
 		grid-template-columns: 1fr;
-		margin: auto;
-		margin-bottom: 42px;
+		margin: auto auto 42px;
 		width: 1200px;
 		max-width: 1200px;
 	}
+
 	@media (max-width: 1250px) {
 		.feature-container {
 			width: auto;
@@ -55,6 +55,7 @@ layout: default
 			padding-right: 16px;
 		}
 	}
+
 	@media (max-width: 900px) {
 		.feature-container {
 			width: auto;
@@ -71,9 +72,11 @@ layout: default
 	.feature-container.feature-container-2x {
 		grid-template-columns: 1fr 1fr;
 	}
+
 	.feature-container.feature-container-2x h3 {
 		grid-column: span 2;
 	}
+
 	@media (max-width: 1020px) {
 		.feature-container.feature-container-2x {
 			grid-template-columns: 1fr;
@@ -86,9 +89,11 @@ layout: default
 	.feature-container.feature-container-3x {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
+
 	.feature-container.feature-container-3x h3 {
 		grid-column: span 3;
 	}
+
 	@media (max-width: 1020px) {
 		.feature-container.feature-container-3x {
 			grid-template-columns: 1fr 1fr;
@@ -97,6 +102,7 @@ layout: default
 			grid-column: span 2;
 		}
 	}
+
 	@media (max-width: 800px) {
 		.feature-container.feature-container-3x {
 			grid-template-columns: 1fr;
@@ -112,6 +118,7 @@ layout: default
 		padding: 20px;
 		transition: 0.1s filter;
 	}
+
 	.feature-card:hover {
 		filter: brightness(112.5%);
 	}
@@ -173,11 +180,11 @@ layout: default
 		align-items: center;
 		gap: 16px;
 		background-color: var(--dark-color);
-		padding: 24px;
-		padding-bottom: 60px;
+		padding: 24px 24px 60px;
 		width: auto;
 		max-width: 100%;
 	}
+
 	@media (max-width: 900px) {
 		.features-download {
 			padding: 20px;
@@ -187,8 +194,7 @@ layout: default
 	.features-download h2 {
 		color: var(--dark-color-text-title);
 		font-weight: 600;
-		margin: 0;
-		margin-bottom: 16px;
+		margin: 0 0 16px;
 	}
 
 	.features-download p {
@@ -213,9 +219,11 @@ layout: default
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
 	}
+
 	.features-download-ready .btn-download:nth-of-type(2n) .download-title {
 		color: #f7f7f7;
 	}
+
 	.features-download-ready .btn-download:nth-of-type(2n) .download-hint {
 		background-color: var(--primary-color-subdued);
 	}
@@ -236,6 +244,7 @@ layout: default
 		aspect-ratio: 16/9;
 		margin: 100px 0 60px 0;
 	}
+
 	@media (max-width: 540px) {
 		.showcase-carousel {
 			margin-top: 60px;
@@ -246,55 +255,53 @@ layout: default
 		position: absolute;
 		max-width: 100%;
 		max-height: 100%;
-		aspect-ratio: 16/8;
-		transform: scale(1.7) translate(1.46%, 3.1%);
+		transform: scale(1.7) translate(1.425%, 3%);
 		filter: brightness(0.85) saturate(0.75);
 	}
 
-	.showcase-flip-left,
-	.showcase-flip-right {
-		position: absolute;
+	#showcase-flip-left,
+	#showcase-flip-right {
 		top: 50%;
-		left: 12px;
+		z-index: 5;
+		right: 12px;
 		width: 20px;
 		height: 36px;
-		transform: translateY(-50%);
-		background-image: url('/assets/icons/arrow-flip.svg');
-		background-size: cover;
-		background-repeat: no-repeat;
 		cursor: pointer;
+		position: absolute;
+		transform: translateY(-50%);
 		filter: drop-shadow(var(--more-shadow));
-		z-index: 5;
-	}
-	.showcase-flip-left {
-		transform: translateY(-50%) scaleX(-1.0);
-	}
-	.showcase-flip-right {
-		left: auto;
-		right: 12px;
 	}
 
-	.showcase-items {
+	#showcase-flip-left {
+		left: 12px;
+		right: 0;
+		transform: translateY(-50%) scaleX(-1.0);
+	}
+
+	#showcase-items {
 		position: relative;
 		overflow: hidden;
 		aspect-ratio: 16/9;
+		contain: content;
 	}
 
 	.showcase-item {
 		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: grid;
+		place-items: center;
 		background-color: var(--dark-color);
 		width: 100%;
 		height: 100%;
-	}
-	.showcase-item-transition {
-		transition: transform 0.4s ease-in-out, z-index 0.1s linear 0.4s;
+		/*By moving the images offscreen we prevent them from being decoded all at once thus saving cpu performance*/
+		transform: translateX(200vw);
 	}
 
 	.showcase-item img {
 		width: 100%;
+	}
+
+	.showcase-item-transition {
+		transition: transform 0.4s ease-in-out, z-index 0.1s linear 0.4s;
 	}
 
 	.showcase-credits {
@@ -336,8 +343,27 @@ layout: default
 			A picture is worth a thousand words, and these developers have chosen Godot for their projects:
 		</p>
 
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
+		<div class="showcase-carousel">
+			<img src="/assets/features/editor-frame.webp?2" alt="" class="showcase-frame" width="1655" height="843"/>
+			<div id="showcase-items">
+				{% for project in site.showcase %}
+				{% if project.featured_in_home %}
+				<div class="showcase-item">
+					<img src="{{ project.gallery[0] }}" alt="{{ project.title }} - {{ project.author }}" width="720" height="405" fetchpriority="low"/>
+					<div class="showcase-credits">
+						<a href="{{ project.url }}">
+							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">- {{ project.author }}</span>
+						</a>
+					</div>
+				</div>
+				{% endif %}
+				{% endfor %}
+				<svg id="showcase-flip-left" height="24" viewBox="0 0 16 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m12.327 12.002-4.695-8.132c-.554-.96-.227-2.178.732-2.732.96-.554 2.178-.228 2.732.732l5.272 9.13c.182.316.269.661.269 1 .001.341-.086.686-.269 1.003l-5.272 9.131c-.554.959-1.772 1.286-2.732.732-.959-.554-1.286-1.773-.732-2.732z" fill="#fff" fill-rule="nonzero" transform="translate(-4 -.001735)"/></svg>
+				<svg id="showcase-flip-right" height="24" viewBox="0 0 16 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m12.327 12.002-4.695-8.132c-.554-.96-.227-2.178.732-2.732.96-.554 2.178-.228 2.732.732l5.272 9.13c.182.316.269.661.269 1 .001.341-.086.686-.269 1.003l-5.272 9.131c-.554.959-1.772 1.286-2.732.732-.959-.554-1.286-1.773-.732-2.732z" fill="#fff" fill-rule="nonzero" transform="translate(-4 -.001735)"/></svg>
+			</div>
+			<script>
+				const showcaseItems = document.querySelectorAll('.showcase-item');
+
 				// We assume that it can't be wrapped more than once.
 				const wrapIndex = (index) => {
 					if (index < 0) {
@@ -349,79 +375,59 @@ layout: default
 					return index;
 				};
 
-				const showcaseItems = document.querySelectorAll('.showcase-item');
-				let currentIndex = Math.floor(Math.random() * showcaseItems.length);
-
-				const setItemByIndex = (itemIndex, firstTime = false) => {
+				const setItemByIndex = (itemIndex, isFirstTime = false) => {
 					const prevIndex = wrapIndex(currentIndex - 1);
 					const nextIndex = wrapIndex(currentIndex + 1);
 
 					showcaseItems.forEach((item, index) => {
-						if (index === itemIndex) {
-							if (!firstTime) {
-								item.classList.add('showcase-item-transition');
-							}
-							item.style.zIndex = '2';
-							item.style.transform = 'translateX(0)';
-						}
-						else if (index === prevIndex) {
-							if (!firstTime) {
-								item.classList.add('showcase-item-transition');
-							}
-							item.style.zIndex = '3';
-							item.style.transform = 'translateX(-100%)';
-						}
-						else if (index === nextIndex) {
-							if (!firstTime) {
-								item.classList.add('showcase-item-transition');
-							}
-							item.style.zIndex = '3';
-							item.style.transform = 'translateX(100%)';
-						}
-						else  {
-							item.classList.remove('showcase-item-transition');
-							item.style.zIndex = '1';
-							item.style.transform = 'translateX(0)';
+						switch (index) {
+							case itemIndex:
+								if (!isFirstTime) {
+									item.classList.add('showcase-item-transition');
+								}
+								item.style.zIndex = '2';
+								item.style.transform = 'translateX(0)';
+								break;
+							case prevIndex:
+								if (!isFirstTime) {
+									item.classList.add('showcase-item-transition');
+								}
+								item.style.zIndex = '3';
+								item.style.transform = 'translateX(-100%)';
+								break;
+							case nextIndex:
+								if (!isFirstTime) {
+									item.classList.add('showcase-item-transition');
+								}
+								item.style.zIndex = '3';
+								item.style.transform = 'translateX(100%)';
+								break;
+							default:
+								item.classList.remove('showcase-item-transition');
+								item.style.zIndex = '1';
+								/*By moving the images offscreen we prevent them from being decoded all at once thus saving cpu performance*/
+								item.style.transform = 'translateX(200vw)';
+								break;
 						}
 					});
 				}
+
+				// currentIndex is declared inside _layouts/default.html
 				setItemByIndex(currentIndex, true);
 
-				const prevItemButton = document.querySelector('.showcase-flip-left');
+				const prevItemButton = document.getElementById('showcase-flip-left');
 				prevItemButton.addEventListener('click', () => {
 					currentIndex = wrapIndex(currentIndex - 1);
 					setItemByIndex(currentIndex);
 				});
-				const nextItemButton = document.querySelector('.showcase-flip-right');
+
+				const nextItemButton = document.getElementById('showcase-flip-right');
 				nextItemButton.addEventListener('click', () => {
 					currentIndex = wrapIndex(currentIndex + 1);
 					setItemByIndex(currentIndex);
 				});
-			});
-		</script>
-
-		<div class="showcase-carousel">
-			<img src="/assets/features/editor-frame.webp?2" class="showcase-frame" />
-
-			<div class="showcase-items">
-				{% for project in site.showcase %}
-				{% if project.featured_in_home %}
-				<div class="showcase-item">
-					<img src="{{ project.gallery[0] }}" load="lazy" alt="{{ project.title }} - {{ project.author }}" />
-					<div class="showcase-credits">
-						<a href="{{ project.url }}">
-							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">- {{ project.author }}</span>
-						</a>
-					</div>
-				</div>
-				{% endif %}
-				{% endfor %}
-			</div>
-
-			<div class="showcase-flip-left"></div>
-			<div class="showcase-flip-right"></div>
+			</script>
 		</div>
-
 		<a href="/showcase" class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">
 			See more projects made with Godot
 		</a>
@@ -609,7 +615,7 @@ layout: default
 				Watch our annual showreel videos to see more examples of projects using Godot!
 			</p>
 
-			{% include showreel-shelf.html %}
+			{% include showreel-shelf.html lazyload=true %}
 		</div>
 	</div>
 

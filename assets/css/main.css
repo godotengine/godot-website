@@ -889,6 +889,10 @@ pre > code {
   }
 }
 
+#social h3 {
+  font-size: 22px;
+}
+
 @media (max-width: 1020px) {
   footer {
     text-align: center;
@@ -898,14 +902,15 @@ pre > code {
   }
 
   #social {
-    margin: auto;
     width: 30%;
     min-width: 250px;
-    margin-top: 32px;
+    margin: 32px auto auto;
   }
-  #social h4 {
+
+  #social h3 {
     text-align: center;
   }
+
   #social > div {
     justify-content: space-around;
   }
