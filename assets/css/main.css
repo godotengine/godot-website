@@ -80,7 +80,7 @@
   --warning-color: #404040;
 
   --default-font-family:  system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --header-font-family: "Montserrat", sans-serif;
+  --header-font-family: "Montserrat", "Montserrat-fallback";
 }
 
 
@@ -194,6 +194,24 @@
     url("../fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Montserrat-fallback";
+  font-weight: 700;
+  src: local("Arial Bold");
+  size-adjust: 98%;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+
+@font-face {
+  font-family: "Montserrat-fallback";
+  font-weight: 800;
+  src: local("Arial Black");
+  size-adjust: 100%;
+  ascent-override: 100%;
+  descent-override: 22%;
+}
+
 *:focus {
   /* More visible outline for better keyboard navigation. */
   outline: 0.125rem solid hsl(220, 100%, 62.5%);
@@ -205,10 +223,8 @@
 body {
   font-family: var(--default-font-family);
   font-size: 18px;
-
   background-color: var(--base-color);
   color: var(--base-color-text);
-
   margin: 0px;
   width: 100vw;
   max-width: 100vw;
@@ -434,6 +450,20 @@ footer {
   margin-top: 64px;
   padding-top: 32px;
   padding-bottom: 32px;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 100vw auto 240px;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    contain-intrinsic-size: auto 100vw auto 449.37px;
+  }
+}
+
+@media (max-width: 721px) {
+  footer {
+    contain-intrinsic-size: auto 100vw auto 953.37px;
+  }
 }
 
 footer a {
@@ -1204,7 +1234,6 @@ article.article-card .thumbnail {
   border-radius: 7px;
   box-shadow: 0 5px 10px -3px #00000078;
   background-color: var(--card-background-color);
-  background-size: cover;
 }
 article.article-card .info {
   display: flex;

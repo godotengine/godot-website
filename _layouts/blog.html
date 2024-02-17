@@ -7,6 +7,10 @@ enabled: true
 collection: article
 ---
 
+{% for post in paginator.posts limit: 6 %}
+<link rel="preload" as="image" href="{{ post.image }}" fetchpriority="high">
+{% endfor %}
+
 {% include header.html %}
 
 <style>
@@ -14,6 +18,10 @@ collection: article
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 30px;
+	}
+
+	.posts > a {
+		text-decoration: none;
 	}
 
 	@media (min-width: 768px) {
@@ -33,7 +41,7 @@ collection: article
 		gap: 30px;
 		padding: 20px 0 39px;
 	}
-	.head .main > :last-child,  
+	.head .main > :last-child,
 	.head .main > :first-child {
 		margin: 0;
 	}
@@ -57,11 +65,15 @@ collection: article
 		flex-wrap: wrap;
 	}
 
-	.tags h3 {
-		margin-top: 1rem;
+	.tags > h2 {
 		display: inline-block;
 		margin: 0;
 		font-size: 19px;
+	}
+
+	#bottom-pagination {
+		content-visibility: auto;
+		contain-intrinsic-size: auto calc(min(100vw - 2rem, 1200px)) auto 41.39px;
 	}
 </style>
 
@@ -73,7 +85,7 @@ collection: article
 				<input type="hidden" name="sites" value="godotengine.org/article" />
 				<input type="text" name="q" maxlength="300" placeholder="Search articles" />
 				<button class="btn search-bar-btn" type="submit">
-					<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" />
+					<img width="24" height="24" src="/assets/icons/search.svg" alt="search" title="search" fetchpriority="low" decoding="async"/>
 				</button>
 			</form>
 		</div>
@@ -81,13 +93,8 @@ collection: article
 </div>
 
 <div class="container">
-	<!-- Search -->
-	
-
-	<!-- Categories -->
-	
 	<div class="tags">
-		<h3>Categories </h3>
+		<h2>Categories</h2>
 		<a href="/blog" title="Show all categories">
 			<div class="tag tag--default {% if page.category == 'all' %}active{% endif %}">All</div>
 		</a>
@@ -96,7 +103,8 @@ collection: article
 		{% for tag in category[1] %}
 		<a href="/blog/{{ tag.slug }}" title="{{ tag.description }}">
 			<div class="tag tag--{{ category.slug }} {% if tag.slug == page.category %} active {% endif %}">
-				{{ tag.name }}</div>
+				{{ tag.name }}
+			</div>
 		</a>
 		{% endfor%}
 		{% endfor %}
@@ -126,18 +134,40 @@ collection: article
 	</div>
 	<div class="posts">
 		{% for post in paginator.posts %}
-		<a href="{{ post.url }}" style="text-decoration: none">
+		<a href="{{ post.url }}">
 			<article class="article-card">
-				<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
+				<img
+					class="thumbnail"
+					src="{{ post.image }}"
+					alt=""
+					href="{{ post.url }}"
+					width="16"
+					height="9"
+					decoding="async"
+					{% if forloop.index > 9 %}
+						loading="lazy"
+					{% endif %}
+				>
 				<div class="content">
 					<div class="info">
 						{% assign post_author = site.data.authors | find: "name", post.author %}
 						{% if post_author %}
-							<img class="avatar" width="25" height="25" src="{{ post_author.image }}" alt="{{ post.author }}" loading="lazy">
+							<img
+								class="avatar"
+								src="{{ post_author.image }}"
+								width="25"
+								height="25"
+								alt="{{ post.author }}"
+								fetchpriority="low"
+								decoding="async"
+								{% if forloop.index > 9 %}
+									loading="lazy"
+								{% endif %}
+							>
 						{% else %}
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="{{ post.author }}" loading="lazy">
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="{{ post.author }}" decoding="async">
 						{% endif %}
-						<span class="by">{{ post.author }} </span>
+						<span>{{ post.author }} </span>
 						<span class="date">&nbsp;-&nbsp;{{ post.date | date: "%e %B %Y" }}</span>
 					</div>
 					<h3>{{ post.title }}</h3>
@@ -147,7 +177,7 @@ collection: article
 		</a>
 		{% endfor %}
 	</div>
-	<div class="flex pagination">
+	<div id="bottom-pagination" class="flex pagination">
 		{% if paginator.previous_page %}
 		<a class="pagination-previous"
 			href="{{ paginator.previous_page_path | prepend: site.url | replace: 'index.html', '' }}">← Previous</a>
