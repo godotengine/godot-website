@@ -1,0 +1,107 @@
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Godot Engine"><meta name=description content="As part of the MOSS project sponsored by Mozilla, during July I worked on some new features regarding cryptography and SSL to improve the quality and security of Godot networking."><meta name=theme-color content="#3d8fcc"><meta property="og:site_name" content="Godot Engine"><meta property="og:url" content="https://godotengine.org/article/basic-cryptography-ssl-improvements/"><meta name=twitter:site content="@godotengine"><meta property="og:title" content="Basic cryptography, SSL improvements"><meta property="og:description" content="As part of the MOSS project sponsored by Mozilla, during July I worked on some new features regarding cryptography and SSL to improve the quality and security of Godot networking."><meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/5d8/f4b/b0a/5d8f4bb0a3174096196968.png"><meta property="og:type" content="article"><meta name=twitter:card content="summary_large_image"><title>Basic cryptography, SSL improvements</title><link rel=alternate type=application/rss+xml title="Godot News" href=/rss.xml><link rel=icon href=/assets/favicon.png sizes=any><link rel=icon href=/assets/favicon.svg type=image/svg+xml><link rel=stylesheet href=/assets/css/main.css?111><link rel=stylesheet href=/assets/css/tobii.min.css><link rel=preload as=font href=/assets/fonts/Montserrat-Bold.woff2 crossorigin><link rel=preload as=font href=/assets/fonts/Montserrat-ExtraBold.woff2 crossorigin><link rel=me href=https://mastodon.gamedev.place/@godotengine><input type=checkbox id=nav_toggle_cb><header><div class="container flex align-center"><div id=nav_head><a href=/ id=logo-link><img class=nav-logo src=/assets/logo.svg width=136 height=48 alt="Godot Engine">
+<img class="nav-logo dark-logo" src=/assets/logo_dark.svg width=136 height=48 alt="Godot Engine"></a>
+<label for=nav_toggle_cb id=nav_toggle_btn><img src=/assets/icons/hamburger.svg width=24 height=24 alt="Main menu"></label></div><nav id=nav><ul class=left><li><a href=/features>Features</a><li class=only-on-mobile><a href=/showcase>Showcase</a><li><a href=/blog>Blog</a><li><a href=/community>Community</a><li><a href=/contact>About</a><li><a href=https://godotengine.org/asset-library/asset>Assets</a></ul><ul class=right><li><a href=/download/windows class=set-os-download-url>Download</a><li><a href=https://docs.godotengine.org>Learn</a><li><a href=https://docs.godotengine.org/en/stable/community/contributing/index.html>Contribute</a><li class=fund><a href=https://fund.godotengine.org>❤&#xFE0E; Donate</a></ul></nav></div></header><main><style>body{background-color:var(--background-color)}h1{margin-bottom:8px;margin-top:32px}:not(pre)>code{background:var(--code-background-color);padding:1px 4px;font-size:.95em;border-radius:3px}pre{background:var(--codeblock-background-color);color:var(--codeblock-color)}pre code{display:block;overflow-x:auto;padding:.5em}.date-big{line-height:2;margin-left:32px}article{background-color:var(--base-color);box-shadow:0 3px 2px rgba(0,0,0,.15)}figure{margin:0}figure img{margin:0}article img,article video{max-width:100%;height:auto;display:block;margin:auto;margin-top:16px;margin-bottom:16px}article h1{margin-top:64px}article h2,article h3,article h4{margin-top:42px}.article-info{display:flex;flex-direction:column;gap:8px}.article-metadata{display:flex;gap:24px;align-items:center;font-family:var(--header-font-family);margin-bottom:12px}@media(max-width:900px){.article-metadata{flex-direction:column;align-items:flex-start;gap:16px}}.article-author{color:var(--base-color-text-subtitle-date);font-weight:700;font-size:18px;flex-grow:1;display:flex;gap:12px;align-items:center}.article-author .avatar{border-radius:100%;margin:0}.article-author .by{color:var(--base-color-text-subtitle)}.article-metadata .date{color:var(--base-color-text-subtitle-date)}.article-metadata .date.post-recent-highlight{color:var(--post-recent-highlight-color);opacity:.8}.article-metadata .date.post-recent-highlight::after{font-size:80%;content:"NEW";border:2px solid var(--post-recent-highlight-color);padding:2px 3px;margin-left:8px}.tag.active{filter:saturate(.75)}@media screen and (min-width:900px){article .content{width:70%;margin:auto}}@media(max-width:900px){body{background-color:var(--base-color)}article{background-color:initial;box-shadow:none}article img:first-child,article video:first-child{max-width:100%}}</style><link rel=stylesheet href=/assets/css/highlight.obsidian.min.css><div class=container><article class=padded><div class="content article-container"><figure class=article-cover><img src=/storage/app/uploads/public/5d8/f4b/b0a/5d8f4bb0a3174096196968.png title alt=" " class=rounded-lg style=width:100%;height:auto;background-color:initial></figure><div class=article-info><h1>Basic cryptography, SSL improvements</h1><div class=article-metadata><div class=article-author><span>By:</span>
+<img class=avatar width=25 height=25 src=/assets/images/authors/faless.webp alt="Fabio Alessandrelli" loading=lazy>
+<span class=by>Fabio Alessandrelli</span></div><span class=date data-post-date="2019-09-28 12:15:00 +0000">28 September 2019</span></div><div class=tags><a href=/blog/progress-report><div class="tag active">Progress Report</div></a></div></div><div class="card card-warning"><p>This article is from <strong>September 2019</strong>, some of its contents might be outdated and no longer accurate.<br>You can find up-to-date information about the engine in the <a href=https://docs.godotengine.org/en/stable/>official documentation</a>.</div><div class=article-body><p>As part of the MOSS project sponsored by Mozilla, during July I worked on some new features regarding cryptography and SSL to improve the quality and security of Godot networking.<h2 id=certificates-and-keys-as-resources>Certificates and keys as resources</h2><p>SSL certificates (in the form of <code class="language-plaintext highlighter-rouge">*.crt</code> files) and private keys (in the form of <code class="language-plaintext highlighter-rouge">*.key</code> files) are now treated as resources in Godot. This means they will be exported automatically and they can be loaded via the GDScript <code class="language-plaintext highlighter-rouge">load()</code> function.<h2 id=crypto-class>Crypto class</h2><p>A new <a href=http://docs.godotengine.org/en/latest/classes/class_crypto.html><code class="language-plaintext highlighter-rouge">Crypto</code></a> class was introduced that allows to access some basic cryptographic functions.<ul><li>You can generate cryptographically secure random bytes via the <code class="language-plaintext highlighter-rouge">generate_random_bytes()</code> function. The bytes are returned in a <code class="language-plaintext highlighter-rouge">PoolByteArray</code>.<li>You can generate RSA keys that can be used by <code class="language-plaintext highlighter-rouge">StreamPeerSSL</code> to act as a server.<li>You can generate SSL self-signed certificates that again, can be used by <code class="language-plaintext highlighter-rouge">StreamPeerSSL</code> to act as a server.</ul><h2 id=hashing-context>Hashing Context</h2><p>A new <a href=http://docs.godotengine.org/en/latest/classes/class_hashingcontext.html><code class="language-plaintext highlighter-rouge">HashingContext</code></a> class now provides an interface for computing cryptographic hashes (MD5, SHA-1, SHA-256) over multiple iterations.<p>This is useful for example when computing hashes of big files (so you don’t have to load them all in memory), network streams, and data streams in general (so you don’t have to hold buffers). Here is an example of how it works:<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>const CHUNK_SIZE = 1024
+
+func hash_file(path):
+	var ctx = HashingContext.new()
+	var file = File.new()
+	# Start a SHA-256 context.
+	ctx.start(HashingContext.HASH_SHA256)
+	# Check that file exists.
+	if not file.file_exists(path):
+	    return
+	# Open the file to hash.
+	file.open(path, File.READ)
+	# Update the context after reading each chunk.
+	while not file.eof_reached():
+	    ctx.update(file.get_buffer(CHUNK_SIZE))
+	# Get the computed hash.
+	var res = ctx.finish()
+	# Print the result as hex string and array.
+	printt(res.hex_encode(), Array(res))
+</code></pre></div></div><h2 id=ssl-improvements>SSL improvements</h2><p><a href=http://docs.godotengine.org/en/latest/classes/class_streampeerssl.html><code class="language-plaintext highlighter-rouge">StreamPeerSSL</code></a> can now use a per-object SSL certificate (i.e. you no longer have to set the trusted certificates om project settings), you can specify the valid certificate by passing an <code class="language-plaintext highlighter-rouge">X509Certificate</code> as last parameter in <code class="language-plaintext highlighter-rouge">connect_to_stream()</code>.<p><code class="language-plaintext highlighter-rouge">StreamPeerSSL</code> can now act as a server. The new <code class="language-plaintext highlighter-rouge">accept_stream()</code> function, which accepts a private key, a certificate, and an optional CA chain, will try to establish a connection with the given stream acting as a server. This will soon also allow us to support acting as a WebSocket server over TLS.<p>Here is an example of a test HTTPS server made in GDScript… not meant to be used in production ;-)<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>extends Node
+
+# A class that represents a client accepted by our server.
+class Client extends Reference:
+	# The SSL stream of this client.
+	var ssl = StreamPeerSSL.new()
+	# Received request.
+	var recv = ""
+
+	# Set the stream for this client.
+	func set_stream(stream, key, cert):
+		ssl.blocking_handshake = false
+		ssl.accept_stream(stream, key, cert)
+
+	# Process network operations for this client.
+	func process():
+		if ssl.get_status() == StreamPeerSSL.STATUS_HANDSHAKING:
+			# Still performing handshake.
+			ssl.poll()
+			return
+		if ssl.get_status() != StreamPeerSSL.STATUS_CONNECTED:
+			# Disconnected.
+			return
+		ssl.poll()
+		# Read available bytes.
+		if ssl.get_available_bytes() &gt; 0:
+			recv += ssl.get_data(ssl.get_available_bytes())[1].get_string_from_utf8()
+		# Send response if request is complete.
+		if recv.ends_with("\r\n\r\n"):
+			ssl.put_data(("HTTP/1.0 200 OK\r\nContent-Type: text/html\r\n\r\n" + \
+						"&lt;h2&gt;Godot TLS Test Server&lt;/h2&gt;\r\n" + \
+						"&lt;p&gt;Successful connection using SSL&lt;/p&gt;\r\n").to_utf8())
+			ssl.disconnect_from_stream()
+
+	func is_disconnected():
+		return ssl.get_status() != StreamPeerSSL.STATUS_HANDSHAKING and \
+		    ssl.get_status() != StreamPeerSSL.STATUS_CONNECTED
+
+# Our TCP server.
+var _server = TCP_Server.new()
+# A list of connected clients.
+var _clients = []
+
+# Our private key and certificate.
+var _key = null
+var _cert = null
+
+func _ready():
+	var crypto = Crypto.new()
+	# Generate an RSA key (this should be done in a thread to avoid blocking).
+	_key = crypto.generate_rsa(4096)
+	# Generate a self signed certificate to use with our server.
+	_cert = crypto.generate_self_signed_certificate(_key, "CN=example.com,O=A Game Company,C=IT")
+	# Start listening on "*:4343".
+	_server.listen(4343)
+
+func _process(delta):
+	# Take new connections.
+	if _server.is_connection_available():
+		var c = Client.new()
+		c.set_stream(_server.take_connection(), _key, _cert)
+		_clients.append(c)
+
+	# Take note of disconnected clients.
+	var to_rem = []
+	# Process clients and send response when done.
+	for c in _clients:
+		c.process()
+		if c.is_disconnected():
+			to_rem.append(c)
+
+	# Remove disconnected clients.
+	for c in to_rem:
+		_clients.erase(c)
+</code></pre></div></div><h2 id=future-work>Future work</h2><p>This has been quite a long work, and included some refactoring of the <code class="language-plaintext highlighter-rouge">core</code> code to use a single library for cryptography (mbedTLS) instead of multiple specific libraries for hashing algorithms and AES. This work will allow us to introduce support for AES encryption and more at scripting level in future versions.<p>Additionally, the SSL overhaul helped a lot in developing the upcoming DTLS implementation.<h2 id=references>References</h2><ul><li><a href=https://github.com/godotengine/godot/pull/30239>PR refactoring the <code class="language-plaintext highlighter-rouge">core</code> crypto code</a><li><a href=https://github.com/godotengine/godot/pull/29871>PR adding Crypto class, Hashing contexts, SSL server</a><li><a href=https://github.com/godotengine/godot/pull/32285>PR adding documentation for above-mentioned additions</a></ul></div></div></article></div><link rel=stylesheet href=/assets/css/anchor-link.css?1><link rel=stylesheet href=/assets/css/article-cards.css?2><script src=/assets/js/anchor-link.js></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{window.applyAnchorLinks('.article-body'),document.querySelectorAll('.article-cover img, .article-body img').forEach(b=>{if(b.classList.contains('lightbox-ignore'))return;const a=document.createElement('a');a.href=b.src,a.classList.add('lightbox'),a.dataset.group='article',b.parentNode.appendChild(a),a.appendChild(b)})})</script></main><footer><div class="container flex footer-container"><div id=copyright><p>© 2007-2024 Juan Linietsky, Ariel Manzur and <a href=https://github.com/godotengine/godot/blob/master/AUTHORS.md target=_blank rel=noopener>contributors</a>.<br>Hosted by the <a href=https://godot.foundation/ target=_blank rel=noopener>Godot Foundation</a>.<br>Website <a href=https://github.com/godotengine/godot-website target=_blank rel=noopener>source code on GitHub</a>.</div><div id=sitemap><ul class=sitemap-group><li><strong>Get Godot</strong><li><a href=/download/windows class=set-os-download-url>Download</a><li><a href=https://editor.godotengine.org/releases/latest/>Web Editor</a><li>&nbsp;<li><strong>Public Relations</strong><li><a href=/blog>Blog</a><li><a href=/community>Communities and Events</a><li><a href=/press>Press Kit</a></ul><ul class=sitemap-group><li><strong>About Godot</strong><li><a href=/features>Features</a><li><a href=/showcase>Showcase</a><li><a href=/education>Education</a><li><a href=/license>License</a><li><a href=/code-of-conduct>Code of Conduct</a><li><a href=/privacy-policy>Privacy Policy</a><li><a href=https://fund.godotengine.org>Donate</a></ul><ul class=sitemap-group><li><strong>Project Team</strong><li><a href=/governance>Governance</a><li><a href=/teams>Teams</a><li>&nbsp;<li><strong>Extra Resources</strong><li><a href=/asset-library/asset>Asset Library</a><li><a href=https://docs.godotengine.org>Documentation</a><li><a href=https://github.com/godotengine>Code Repository</a></ul></div><div id=social class=dark-desaturate><h4 class=text-right><a href=/contact>Contact us</a></h4><div class="flex justify-space-between" style=gap:3px><a href=https://github.com/godotengine target=_blank rel=noopener><img src=/assets/footer/github_logo.svg width=32 height=32 alt=GitHub></a>
+<a href=https://mastodon.gamedev.place/@godotengine target=_blank rel=noopener><img src=/assets/footer/mastodon_logo.svg width=32 height=32 alt=Mastodon></a>
+<a href=https://twitter.com/godotengine target=_blank rel=noopener><img src=/assets/footer/twitter_logo.svg width=32 height=32 alt=Twitter></a>
+<a href=https://www.facebook.com/groups/godotengine/ target=_blank rel=noopener><img src=/assets/footer/facebook_logo.svg width=32 height=32 alt=Facebook></a>
+<a href=https://www.reddit.com/r/godot target=_blank rel=noopener><img src=/assets/footer/reddit_logo.svg width=32 height=32 alt=Red​dit></a>
+<a href=/rss.xml target=_blank rel=noopener><img src=/assets/footer/feed_logo.svg width=32 height=32 alt="RSS feed"></a></div></div></div></footer><script defer src=/assets/js/tobii.min.js></script>
+<script defer src=/assets/js/highlight.min.js?1></script>
+<script defer src=/assets/js/highlight.gdscript.min.js?1></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('pre code').forEach(a=>{hljs.highlightBlock(a)}),document.querySelectorAll('[data-post-date]').forEach(a=>{Date.parse(a.dataset.postDate)>Date.now()-1e3*60*60*48&&a.classList.add("post-recent-highlight")}),new Tobii({zoom:!1});const a=document.querySelectorAll('.set-os-download-url');for(let b=0;b<a.length;b++){const c=a[b];let e='download';'version'in c.dataset&&c.dataset.version==='3'&&(e='download/3.x');let d='windows';navigator.platform.indexOf('Mac')!==-1?d='macos':navigator.platform.indexOf('Linux')!==-1&&(d='linux'),c.href=`/${e}/${d}`}})</script>

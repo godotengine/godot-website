@@ -1,0 +1,207 @@
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Godot Engine"><meta name=description content="Create multiplayer games in an instance (pun intended) with the new MultiplayerSpawner and MultiplayerSynchronizer nodes. Check out the key concepts, and get started with a quick tutorial on how to make a simple game using Godot multiplayer features!"><meta name=theme-color content="#3d8fcc"><meta property="og:site_name" content="Godot Engine"><meta property="og:url" content="https://godotengine.org/article/multiplayer-in-godot-4-0-scene-replication/"><meta name=twitter:site content="@godotengine"><meta property="og:title" content="Multiplayer in Godot 4.0: Scene Replication"><meta property="og:description" content="Create multiplayer games in an instance (pun intended) with the new MultiplayerSpawner and MultiplayerSynchronizer nodes. Check out the key concepts, and get started with a quick tutorial on how to make a simple game using Godot multiplayer features!"><meta property="og:image" content="https://godotengine.org/storage/blog/covers/multiplayer-in-godot-4-0-scene-replication.jpg"><meta property="og:type" content="article"><meta name=twitter:card content="summary_large_image"><title>Multiplayer in Godot 4.0: Scene Replication</title><link rel=alternate type=application/rss+xml title="Godot News" href=/rss.xml><link rel=icon href=/assets/favicon.png sizes=any><link rel=icon href=/assets/favicon.svg type=image/svg+xml><link rel=stylesheet href=/assets/css/main.css?111><link rel=stylesheet href=/assets/css/tobii.min.css><link rel=preload as=font href=/assets/fonts/Montserrat-Bold.woff2 crossorigin><link rel=preload as=font href=/assets/fonts/Montserrat-ExtraBold.woff2 crossorigin><link rel=me href=https://mastodon.gamedev.place/@godotengine><input type=checkbox id=nav_toggle_cb><header><div class="container flex align-center"><div id=nav_head><a href=/ id=logo-link><img class=nav-logo src=/assets/logo.svg width=136 height=48 alt="Godot Engine">
+<img class="nav-logo dark-logo" src=/assets/logo_dark.svg width=136 height=48 alt="Godot Engine"></a>
+<label for=nav_toggle_cb id=nav_toggle_btn><img src=/assets/icons/hamburger.svg width=24 height=24 alt="Main menu"></label></div><nav id=nav><ul class=left><li><a href=/features>Features</a><li class=only-on-mobile><a href=/showcase>Showcase</a><li><a href=/blog>Blog</a><li><a href=/community>Community</a><li><a href=/contact>About</a><li><a href=https://godotengine.org/asset-library/asset>Assets</a></ul><ul class=right><li><a href=/download/windows class=set-os-download-url>Download</a><li><a href=https://docs.godotengine.org>Learn</a><li><a href=https://docs.godotengine.org/en/stable/community/contributing/index.html>Contribute</a><li class=fund><a href=https://fund.godotengine.org>❤&#xFE0E; Donate</a></ul></nav></div></header><main><style>body{background-color:var(--background-color)}h1{margin-bottom:8px;margin-top:32px}:not(pre)>code{background:var(--code-background-color);padding:1px 4px;font-size:.95em;border-radius:3px}pre{background:var(--codeblock-background-color);color:var(--codeblock-color)}pre code{display:block;overflow-x:auto;padding:.5em}.date-big{line-height:2;margin-left:32px}article{background-color:var(--base-color);box-shadow:0 3px 2px rgba(0,0,0,.15)}figure{margin:0}figure img{margin:0}article img,article video{max-width:100%;height:auto;display:block;margin:auto;margin-top:16px;margin-bottom:16px}article h1{margin-top:64px}article h2,article h3,article h4{margin-top:42px}.article-info{display:flex;flex-direction:column;gap:8px}.article-metadata{display:flex;gap:24px;align-items:center;font-family:var(--header-font-family);margin-bottom:12px}@media(max-width:900px){.article-metadata{flex-direction:column;align-items:flex-start;gap:16px}}.article-author{color:var(--base-color-text-subtitle-date);font-weight:700;font-size:18px;flex-grow:1;display:flex;gap:12px;align-items:center}.article-author .avatar{border-radius:100%;margin:0}.article-author .by{color:var(--base-color-text-subtitle)}.article-metadata .date{color:var(--base-color-text-subtitle-date)}.article-metadata .date.post-recent-highlight{color:var(--post-recent-highlight-color);opacity:.8}.article-metadata .date.post-recent-highlight::after{font-size:80%;content:"NEW";border:2px solid var(--post-recent-highlight-color);padding:2px 3px;margin-left:8px}.tag.active{filter:saturate(.75)}@media screen and (min-width:900px){article .content{width:70%;margin:auto}}@media(max-width:900px){body{background-color:var(--base-color)}article{background-color:initial;box-shadow:none}article img:first-child,article video:first-child{max-width:100%}}</style><link rel=stylesheet href=/assets/css/highlight.obsidian.min.css><div class=container><article class=padded><div class="content article-container"><figure class=article-cover><img src=/storage/blog/covers/multiplayer-in-godot-4-0-scene-replication.jpg title alt=" " class=rounded-lg style=width:100%;height:auto;background-color:initial></figure><div class=article-info><h1>Multiplayer in Godot 4.0: Scene Replication</h1><div class=article-metadata><div class=article-author><span>By:</span>
+<img class=avatar width=25 height=25 src=/assets/images/authors/faless.webp alt="Fabio Alessandrelli" loading=lazy>
+<span class=by>Fabio Alessandrelli</span></div><span class=date data-post-date="2023-02-23 11:30:00 +0000">23 February 2023</span></div><div class=tags><a href=/blog/progress-report><div class="tag active">Progress Report</div></a></div></div><div class=article-body><p>Howdy Godotters! It’s been more than a year since I last wrote on this blog, “… blah blah, blah blah, blah” (cf. <a href=https://en.wikipedia.org/wiki/LeChuck>C. L. C. Chuckie</a>), and with Godot 4.0 nearing release, it’s time to write something to jumpstart you into creating your own multiplayer experience with Godot.<p>Since the <a href=/article/multiplayer-changes-godot-4-0-report-4>last blog post</a>, we rewrote the scene replication API to be more user-friendly, adding two “configuration” nodes:<ul><li>The <a href=https://docs.godotengine.org/en/latest/classes/class_multiplayerspawner.html><code class="language-plaintext highlighter-rouge">MultiplayerSpawner</code></a> node to configure where nodes can be remotely instantiated by which peer.<li>The <a href=https://docs.godotengine.org/en/latest/classes/class_multiplayersynchronizer.html><code class="language-plaintext highlighter-rouge">MultiplayerSynchronizer</code></a> node to configure which node properties can be synchronized by which peer.</ul><p>So, without further ado let’s see how to create a simple multiplayer game using these new features (jump to the bottom for the full project).<h2 id=scene-setup>Scene setup</h2><p>First of all, let’s setup our multiplayer scene:<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/multiplayer-ui.png alt="Scene Tree of UI nodes for starting client or server"><p>And wire up the signals to start a server or client:<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code># multiplayer.gd
+extends Node
+
+const PORT = 4433
+
+func _ready():
+	# Start paused.
+	get_tree().paused = true
+	# You can save bandwidth by disabling server relay and peer notifications.
+	multiplayer.server_relay = false
+
+	# Automatically start the server in headless mode.
+	if DisplayServer.get_name() == "headless":
+		print("Automatically starting dedicated server.")
+		_on_host_pressed.call_deferred()
+
+
+func _on_host_pressed():
+	# Start as server.
+	var peer = ENetMultiplayerPeer.new()
+	peer.create_server(PORT)
+	if peer.get_connection_status() == MultiplayerPeer.CONNECTION_DISCONNECTED:
+		OS.alert("Failed to start multiplayer server.")
+		return
+	multiplayer.multiplayer_peer = peer
+	start_game()
+
+
+func _on_connect_pressed():
+	# Start as client.
+	var txt : String = $UI/Net/Options/Remote.text
+	if txt == "":
+		OS.alert("Need a remote to connect to.")
+		return
+	var peer = ENetMultiplayerPeer.new()
+	peer.create_client(txt, PORT)
+	if peer.get_connection_status() == MultiplayerPeer.CONNECTION_DISCONNECTED:
+		OS.alert("Failed to start multiplayer client.")
+		return
+	multiplayer.multiplayer_peer = peer
+	start_game()
+
+
+func start_game():
+	# Hide the UI and unpause to start the game.
+	$UI.hide()
+	get_tree().paused = false
+</code></pre></div></div><p>Then setup our world scene with some physics objects, and add it to the multiplayer scene:<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/multiplayer-level.png alt="Scene Tree and 3D view of the multiplayer scene"><h2 id=synchronizing-properties>Synchronizing properties</h2><p>So, now that we have our scene set up and peers can connect, let’s add a <a href=https://docs.godotengine.org/en/latest/classes/class_multiplayersynchronizer.html>MultiplayerSynchronizer</a> to our object scene and configure it to sync some of its properties.<p>Synchronized properties can be configured by selecting them from a list or entering their path.<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/multiplayer-synchronizer.png alt="Editor view of a scene with a MultiplayerSynchronizer"><p>Running the game now you will notice that the objects start synchronizing as soon as the client connects.<p><em>Tip:</em> You can run and debug multiple instances simultaneously from the editor by changing the value in <code class="language-plaintext highlighter-rouge">Debug -> Run Multiple Instances</code>.<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/debug-multiple-instances.png alt="Editor debug menu"><h2 id=spawning-and-despawning-scenes>Spawning and despawning scenes</h2><p>The <a href=https://docs.godotengine.org/en/latest/classes/class_multiplayerspawner.html>MultiplayerSpawner</a> node automates the process of replicating dynamically instantiated nodes across peers, including when joining mid-game or reconnecting.<p>This mostly boils down to the following MultiplayerSpawner properties:<ul><li><code class="language-plaintext highlighter-rouge">spawn_path</code>: Defines the path where the spawner will add the nodes it instantiates.<li><code class="language-plaintext highlighter-rouge">Auto Spawn List</code>: Defines the scenes to be automatically replicated when added as a child of <code class="language-plaintext highlighter-rouge">spawn_path</code> by the authority (server by default).<li><code class="language-plaintext highlighter-rouge">spawn_function</code>: (Optional) Defines a function to be called on all peers when using the <code class="language-plaintext highlighter-rouge">spawn</code> custom instantiation method.</ul><p>You can use the <a href=https://docs.godotengine.org/en/latest/classes/class_node.html#class-node-method-set-multiplayer-authority><code class="language-plaintext highlighter-rouge">set_multiplayer_authority()</code></a> method to control which peer is allowed to instantiate scenes via the spawner (the server by default).<h2 id=selecting-levels>Selecting levels</h2><p>Currently, using <code class="language-plaintext highlighter-rouge">get_tree().change_scene_to_packed()</code> (or <code class="language-plaintext highlighter-rouge">change_scene_to_file()</code>) during a multiplayer session can be problematic when players join mid-game or re-join a match. While we are working on supporting the <code class="language-plaintext highlighter-rouge">change_scene*</code> methods out of the box in future Godot releases, it is currently possible to simulate the behavior using a MultiplayerSpawner to spawn the level scene.<p>This ensures that if our game needs to change the active level, the appropriate one will also be instantiated on connected clients as well as on newly connected ones.<p>To do that, let’s remove our static world from the multiplayer scene, add a MultiplayerSpawner node, and configure it with our level(s) in the “Auto Spawn List”.<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/level_spawner.png alt="Level spawner"><p>Now let’s add a <code class="language-plaintext highlighter-rouge">change_level()</code> function which instantiates the (selected) level and call it from the <code class="language-plaintext highlighter-rouge">start_game()</code> function.<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>func start_game():
+	# Hide the UI and unpause to start the game.
+	$UI.hide()
+	get_tree().paused = false
+	# Only change level on the server.
+	# Clients will instantiate the level via the spawner.
+	if multiplayer.is_server():
+		change_level.call_deferred(load("res://level.tscn"))
+
+
+# Call this function deferred and only on the main authority (server).
+func change_level(scene: PackedScene):
+	# Remove old level if any.
+	var level = $Level
+	for c in level.get_children():
+		level.remove_child(c)
+		c.queue_free()
+	# Add new level.
+	level.add_child(scene.instantiate())
+
+
+# The server can restart the level by pressing Home.
+func _input(event):
+	if not multiplayer.is_server():
+		return
+	if event.is_action("ui_home") and Input.is_action_just_pressed("ui_home"):
+		change_level.call_deferred(load("res://level.tscn"))
+</code></pre></div></div><p>Now the level will be instantiated by the server as soon as it starts, and clients will instantiate it as soon as they connect.<p>The server can also call <code class="language-plaintext highlighter-rouge">change_level()</code> at any moment to restart the current level, or to select a different one (as long as the selected level is in the “Auto Spawn List” of all peers).<p>Additionally, when scenes controlled by a multiplayer spawner contain a multiplayer synchronizer referencing the root node of the scene, the configured “Spawn” properties will be automatically set on remote peers during the spawning process.<p>Similarly to what we did in the multiplayer scene, we could add one or more MultiplayerSpawner to the level scene to replicate nodes that have a dynamic lifecycle like bullets, powerups, etc.<p><em>Tip:</em> You can further customize the number of nodes that can be spawned remotely at any given time via the <code class="language-plaintext highlighter-rouge">spawn_limit</code> property. In this case we can set <code class="language-plaintext highlighter-rouge">spawn_limit = 1</code> since only one level is allowed to be active at any given time.<h2 id=spawning-players>Spawning players</h2><p>For the player characters we usually need to transfer part of the authority over to the peer which each character represents.<p>In this scenario it is good practice to use a child node dedicated to the player inputs, and leave the multiplayer authority of the character nodes to the server. This helps maintaining proper isolation between controls and game logic, making the setup less error-prone.<p>Keeping that in mind, let’s create the player scene with a synchronizer for the character itself, and a synchronizer for the player input.<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/player_input_sync.png alt="Player synchronizer"><p>We then attach a script to the player input synchronizer and configure it to gather the local input based on the configured authority.<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code># player_input.gd
+extends MultiplayerSynchronizer
+
+# Set via RPC to simulate is_action_just_pressed.
+@export var jumping := false
+
+# Synchronized property.
+@export var direction := Vector2()
+
+func _ready():
+	# Only process for the local player.
+	set_process(get_multiplayer_authority() == multiplayer.get_unique_id())
+
+
+@rpc("call_local")
+func jump():
+	jumping = true
+
+
+func _process(delta):
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	if Input.is_action_just_pressed("ui_accept"):
+		jump.rpc()
+</code></pre></div></div><p>We handle jumping with a reliable RPC (we don’t want to miss the player jumping action!), while we use the synchronizer itself to constantly sync the direction the user wants to go.<p>We can then move the player character on the main authority by reading the synchronized input state:<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code># player.gd
+extends CharacterBody3D
+
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+# Set by the authority, synchronized on spawn.
+@export var player := 1 :
+	set(id):
+		player = id
+		# Give authority over the player input to the appropriate peer.
+		$PlayerInput.set_multiplayer_authority(id)
+
+# Player synchronized input.
+@onready var input = $PlayerInput
+
+func _ready():
+	# Set the camera as current if we are this player.
+	if player == multiplayer.get_unique_id():
+		$Camera3D.current = true
+	# Only process on server.
+	# EDIT: Let the client simulate player movement too to compesate network input latency.
+	# set_physics_process(multiplayer.is_server())
+
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+
+	# Handle jump.
+	if input.jumping and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Reset jump state.
+	input.jumping = false
+
+	# Handle movement.
+	var direction = (transform.basis * Vector3(input.direction.x, 0, input.direction.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+	move_and_slide()
+</code></pre></div></div><p>We will then use the server synchronizer to keep the position and velocity in sync and to set the player id on spawn (which will in turn configure the appropriate input authority).<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/player_server_sync.png alt="Server synchronizer"><p>Finally, we can add a multiplayer spawner to our level, and use it to spawn players as they connect.<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/player_spawner.png alt="Player spawner"><div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code># level.gd
+extends Node3D
+
+const SPAWN_RANDOM := 5.0
+
+func _ready():
+	# We only need to spawn players on the server.
+	if not multiplayer.is_server():
+		return
+
+	multiplayer.peer_connected.connect(add_player)
+	multiplayer.peer_disconnected.connect(del_player)
+
+	# Spawn already connected players.
+	for id in multiplayer.get_peers():
+		add_player(id)
+
+	# Spawn the local player unless this is a dedicated server export.
+	if not OS.has_feature("dedicated_server"):
+		add_player(1)
+
+
+func _exit_tree():
+	if not multiplayer.is_server():
+		return
+	multiplayer.peer_connected.disconnect(add_player)
+	multiplayer.peer_disconnected.disconnect(del_player)
+
+
+func add_player(id: int):
+	var character = preload("res://player.tscn").instantiate()
+	# Set player id.
+	character.player = id
+	# Randomize character position.
+	var pos := Vector2.from_angle(randf() * 2 * PI)
+	character.position = Vector3(pos.x * SPAWN_RANDOM * randf(), 0, pos.y * SPAWN_RANDOM * randf())
+	character.name = str(id)
+	$Players.add_child(character, true)
+
+
+func del_player(id: int):
+	if not $Players.has_node(str(id)):
+		return
+	$Players.get_node(str(id)).queue_free()
+</code></pre></div></div><p>We can now run the game and test that connecting to a host will correctly spawn the appropriate level and players, give us control of our character, and properly synchronize the object positions.<p><img src=/storage/blog/multiplayer-in-godot-4-0-scene-replication/client_server_side_by_side.png alt="Client and server"><p>Here is the <a href=/storage/blog/multiplayer-in-godot-4-0-scene-replication/project.zip>full project source</a>, compatible with current 4.0 RC releases.<p>And that’s it for this long awaited introductory post to the new replication system. More advanced topics like bandwidth optimizations, spawning customized scenes and the visibility system will be discussed in a separate tutorial.<h2 id=reference-work>Reference work</h2><p>Design proposals: <a href=https://github.com/godotengine/godot-proposals/issues/3359>#3359</a> and <a href=https://github.com/godotengine/godot-proposals/issues/3459>#3459</a>.<p>Initial implementation: <a href=https://github.com/godotengine/godot/pull/55950>#55950</a>.<p>And yes, as the top image hints we are adding multiplayer features to the TPS demo, so as always stay tuned for more ;).</div></div></article></div><link rel=stylesheet href=/assets/css/anchor-link.css?1><link rel=stylesheet href=/assets/css/article-cards.css?2><script src=/assets/js/anchor-link.js></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{window.applyAnchorLinks('.article-body'),document.querySelectorAll('.article-cover img, .article-body img').forEach(b=>{if(b.classList.contains('lightbox-ignore'))return;const a=document.createElement('a');a.href=b.src,a.classList.add('lightbox'),a.dataset.group='article',b.parentNode.appendChild(a),a.appendChild(b)})})</script></main><footer><div class="container flex footer-container"><div id=copyright><p>© 2007-2024 Juan Linietsky, Ariel Manzur and <a href=https://github.com/godotengine/godot/blob/master/AUTHORS.md target=_blank rel=noopener>contributors</a>.<br>Hosted by the <a href=https://godot.foundation/ target=_blank rel=noopener>Godot Foundation</a>.<br>Website <a href=https://github.com/godotengine/godot-website target=_blank rel=noopener>source code on GitHub</a>.</div><div id=sitemap><ul class=sitemap-group><li><strong>Get Godot</strong><li><a href=/download/windows class=set-os-download-url>Download</a><li><a href=https://editor.godotengine.org/releases/latest/>Web Editor</a><li>&nbsp;<li><strong>Public Relations</strong><li><a href=/blog>Blog</a><li><a href=/community>Communities and Events</a><li><a href=/press>Press Kit</a></ul><ul class=sitemap-group><li><strong>About Godot</strong><li><a href=/features>Features</a><li><a href=/showcase>Showcase</a><li><a href=/education>Education</a><li><a href=/license>License</a><li><a href=/code-of-conduct>Code of Conduct</a><li><a href=/privacy-policy>Privacy Policy</a><li><a href=https://fund.godotengine.org>Donate</a></ul><ul class=sitemap-group><li><strong>Project Team</strong><li><a href=/governance>Governance</a><li><a href=/teams>Teams</a><li>&nbsp;<li><strong>Extra Resources</strong><li><a href=/asset-library/asset>Asset Library</a><li><a href=https://docs.godotengine.org>Documentation</a><li><a href=https://github.com/godotengine>Code Repository</a></ul></div><div id=social class=dark-desaturate><h4 class=text-right><a href=/contact>Contact us</a></h4><div class="flex justify-space-between" style=gap:3px><a href=https://github.com/godotengine target=_blank rel=noopener><img src=/assets/footer/github_logo.svg width=32 height=32 alt=GitHub></a>
+<a href=https://mastodon.gamedev.place/@godotengine target=_blank rel=noopener><img src=/assets/footer/mastodon_logo.svg width=32 height=32 alt=Mastodon></a>
+<a href=https://twitter.com/godotengine target=_blank rel=noopener><img src=/assets/footer/twitter_logo.svg width=32 height=32 alt=Twitter></a>
+<a href=https://www.facebook.com/groups/godotengine/ target=_blank rel=noopener><img src=/assets/footer/facebook_logo.svg width=32 height=32 alt=Facebook></a>
+<a href=https://www.reddit.com/r/godot target=_blank rel=noopener><img src=/assets/footer/reddit_logo.svg width=32 height=32 alt=Red​dit></a>
+<a href=/rss.xml target=_blank rel=noopener><img src=/assets/footer/feed_logo.svg width=32 height=32 alt="RSS feed"></a></div></div></div></footer><script defer src=/assets/js/tobii.min.js></script>
+<script defer src=/assets/js/highlight.min.js?1></script>
+<script defer src=/assets/js/highlight.gdscript.min.js?1></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('pre code').forEach(a=>{hljs.highlightBlock(a)}),document.querySelectorAll('[data-post-date]').forEach(a=>{Date.parse(a.dataset.postDate)>Date.now()-1e3*60*60*48&&a.classList.add("post-recent-highlight")}),new Tobii({zoom:!1});const a=document.querySelectorAll('.set-os-download-url');for(let b=0;b<a.length;b++){const c=a[b];let e='download';'version'in c.dataset&&c.dataset.version==='3'&&(e='download/3.x');let d='windows';navigator.platform.indexOf('Mac')!==-1?d='macos':navigator.platform.indexOf('Linux')!==-1&&(d='linux'),c.href=`/${e}/${d}`}})</script>
