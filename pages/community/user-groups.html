@@ -5,7 +5,47 @@ description: "Find local Godot user groups run by community members."
 layout: default
 ---
 
+<link rel="preload" href="/assets/leaflet/leaflet.js" as="script" fetchpriority="high"/>
+{% comment %}
+Preload the first visible map tiles
+{% endcomment %}
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/3/2.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/4/2.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/3/3.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/4/3.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/3/1.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/4/1.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/2/2.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/5/2.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/2/3.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/5/3.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/3/4.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/4/4.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/2/1.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/5/1.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/2/4.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/5/4.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/1/2.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/6/2.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/1/3.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/6/3.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/1/1.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/6/1.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/1/4.png" fetchpriority="high" type="image/png"/>
+<link rel="preload" as="image" href="https://tile.openstreetmap.org/3/6/4.png" fetchpriority="high" type="image/png"/>
+
+{% preload_async_css href="/assets/leaflet/leaflet.css" %}
+
 {% include header.html %}
+
+<style>
+	#community-map {
+		height: 35rem;
+		position: relative;
+		contain: strict;
+		contain-intrinsic-size: auto calc(min(100vw - 2rem, 1200px)) auto 35rem;
+	}
+</style>
 
 <main>
 	<div class="head">
@@ -21,167 +61,180 @@ layout: default
 	</div>
 	<div class="container">
 
-		<script defer src="/assets/leaflet/leaflet.js"></script>
-		<script>
-			const points = {{ site.data.communities | jsonify }};
-			const countryCoordinates = {
-				// Full country name: [latitude, longitude]
-				// Use <https://latitude.to/> to find GPS coordinates.
-				'Algeria': [28.00003, 2.99998],
-				'Argentina': [-38.4192641, -63.5989206],
-				'Brazil': [-14.240073, -53.180502],
-				'Bulgaria': [42.60740, 25.48566],
-				'Canada': [56.130366, -106.346771],
-				'China': [35.486703, 101.901875],
-				'Croatia': [45.815399, 15.966568],
-				'Czech Republic and Slovakia': [50.073658, 14.418540],
-				'Ecuador': [-1.160171, -78.432915],
-				'Finland': [62.777754, 26.199539],
-				'France or French-speaking': [47.824905, 2.618787],
-				'Germany': [51.133481, 10.018343],
-				'India': [22.199166, 78.476681],
-				'Indonesia': [-2.548926, 118.0148634],
-				'Italy': [42.504154, 12.646361],
-				'Iran': [32.4207423, 53.6830157],
-				'Iraq': [33.223191, 43.679291],
-				'Israel': [31.53131, 34.86677],
-				'Japan': [36.57484, 139.23942],
-				'Latvia': [56.959065, 24.862593],
-				'Pakistan': [30.3894, 69.353220],
-				'Philippines': [14.583333, 120.966667],
-				'Poland': [51.9189046, 19.1343786],
-				'Portugal': [40.03326, -7.88963],
-				'Russia': [55.751400, 37.620900],
-				'Saudi Arabia': [25.62426, 42.35283],
-				'South Korea': [36.638392, 127.6961188],
-				'Spain': [40.2085, -3.713],
-				'Sweden': [64.964875, 17.675409],
-				'Taiwan': [23.44265, 120.50237],
-				'Turkey': [39.908606, 32.784806],
-				'United States': [39.78373, -100.44588],
-			}
-
-			function escapeXml(unsafe) {
-				return unsafe.replace(/[<>&'"]/g, function (character) {
-					switch (character) {
-						case '<': return '&lt;';
-						case '>': return '&gt;';
-						case '&': return '&amp;';
-						case "'": return '&apos;';
-						case '"': return '&quot;';
-					}
-				});
-			}
-
-			window.addEventListener('DOMContentLoaded', () => {
-				const bounds = L.latLngBounds(L.latLng(90, -180), L.latLng(-90, 180));
-				const myMap = L.map('community-map', {
-					// Show the whole world (centered around Europe) when loading.
-					center: [40, 0],
-					zoom: 3,
-					maxBounds: bounds,
-					maxBoundsViscosity: 1,
-				});
-
-				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-					attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
-					// Use more reasonable zoom level limits where tiles are still displayed.
-					minZoom: 2,
-					maxZoom: 18,
-					noWrap: true,
-					bounds,
-				}).addTo(myMap);
-
-				// Leaflet sometimes uses wrong path, so we have to provide a default icon
-				L.Marker.prototype.options.icon = L.icon({
-					iconUrl: '/assets/leaflet/images/marker-icon.webp',
-					iconRetinaUrl: '/assets/leaflet/images/marker-icon-2x.webp',
-					iconSize: [25, 41],
-					iconAnchor: [12, 41],
-					shadowUrl: '/assets/leaflet/images/marker-shadow.png',
-					shadowSize: [41, 41],
-					shadowAnchor: [13, 41],
-					popupAnchor: [1, -34],
-					tooltipAnchor: [16, -28],
-				});
-
-				// The icon to use for physical venues.
-				const physicalIcon = L.icon({
-					iconUrl: '/assets/leaflet/images/physical-marker-icon.webp',
-					iconRetinaUrl: '/assets/leaflet/images/physical-marker-icon-2x.webp',
-					iconSize: [25, 41],
-					iconAnchor: [12, 41],
-					shadowUrl: '/assets/leaflet/images/marker-shadow.png',
-					shadowSize: [41, 41],
-					shadowAnchor: [13, 41],
-					popupAnchor: [1, -34],
-					tooltipAnchor: [16, -28],
-				});
-
-				// Object with country names as key, array of points as value.
-				const onlinePoints = {};
-
-				// Flatten the object while looping over it.
-				Object.keys(points).forEach((country, index) => {
-					points[country].forEach((point, index2) => {
-						// Store the country so we can get the coordinates for online communities.
-						point.country = country;
-						if (point.coordinates) {
-							// Physical community.
-							const marker = L.marker(point.coordinates, {
-								title: point.name,
-								icon: physicalIcon,
-							});
-							marker.bindPopup(`
-            <strong>${escapeXml(point.name)}</strong><br>
-            ${point.links.map((link) => ` <a href="${escapeXml(link.url)}">${escapeXml(link.title)}</a>`)}
-          `).openPopup();
-							marker.addTo(myMap);
-						} else {
-							// Online community.
-							// We only want one marker per country (with a merged tooltip, see below).
-							// Therefore, we don't add the marker here directly.
-							if (!onlinePoints[point.country]) {
-								onlinePoints[point.country] = []
-							}
-
-							onlinePoints[point.country].push(point);
-						}
-					});
-				});
-
-				// Add markers for online communities with merged tooltips.
-				Object.keys(onlinePoints).forEach((country, index) => {
-					if (countryCoordinates[country] == null) {
-						console.warn(`Coordinates of "${country}" are missing, skipping.`);
-						return;
-					}
-
-					let markerPopup = '';
-					onlinePoints[country].forEach((point, index2) => {
-						// Add a line separation between online communities.
-						markerPopup += `
-            ${index2 >= 1 ? '<hr>' : ''}
-            <strong>${escapeXml(point.name)}</strong><br>
-            ${point.links.map((link) => ` <a href="${escapeXml(link.url)}">${escapeXml(link.title)}</a>`)}
-        `;
-					});
-
-					const marker = L.marker(countryCoordinates[country], {
-						title: country,
-					});
-					marker.bindPopup(markerPopup).openPopup();
-					marker.addTo(myMap);
-				});
-			});
-		</script>
-
 		<h2 class="title">Community map</h2>
 		<p>
 			This map lists all physical venues and online community hosted by community members.
 			Scroll down to view a list of online communities.
 		</p>
-		<div id="community-map" style="height: 35rem"></div>
+		<div id="community-map"></div>
+		<script>
+			function yieldToMainThread () {
+				return new Promise(resolve => {
+					setTimeout(resolve, 0);
+				});
+			}
+
+			async function loadMap() {
+				function initMap() {
+					const bounds = L.latLngBounds(L.latLng(90, -180), L.latLng(-90, 180));
+					return L.map('community-map', {
+						// Show the whole world (centered around Europe) when loading.
+						center: [40, 0],
+						zoom: 3,
+						maxBounds: bounds,
+						maxBoundsViscosity: 1,
+						fadeAnimation: false,
+						layers: [
+							L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+								attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+								// Use more reasonable zoom level limits where tiles are still displayed.
+								minZoom: 2,
+								maxZoom: 18,
+								noWrap: true,
+								bounds,
+							})
+						]
+					});
+				}
+
+				function initMarkers(myMap) {
+					const points = {{ site.data.communities | jsonify }};
+					const countryCoordinates = {
+						// Full country name: [latitude, longitude]
+						// Use <https://latitude.to/> to find GPS coordinates.
+						'Algeria': [28.00003, 2.99998],
+						'Argentina': [-38.4192641, -63.5989206],
+						'Brazil': [-14.240073, -53.180502],
+						'Bulgaria': [42.60740, 25.48566],
+						'Canada': [56.130366, -106.346771],
+						'China': [35.486703, 101.901875],
+						'Croatia': [45.815399, 15.966568],
+						'Czech Republic and Slovakia': [50.073658, 14.418540],
+						'Ecuador': [-1.160171, -78.432915],
+						'Finland': [62.777754, 26.199539],
+						'France or French-speaking': [47.824905, 2.618787],
+						'Germany': [51.133481, 10.018343],
+						'India': [22.199166, 78.476681],
+						'Indonesia': [-2.548926, 118.0148634],
+						'Italy': [42.504154, 12.646361],
+						'Iran': [32.4207423, 53.6830157],
+						'Iraq': [33.223191, 43.679291],
+						'Israel': [31.53131, 34.86677],
+						'Japan': [36.57484, 139.23942],
+						'Latvia': [56.959065, 24.862593],
+						'Pakistan': [30.3894, 69.353220],
+						'Philippines': [14.583333, 120.966667],
+						'Poland': [51.9189046, 19.1343786],
+						'Portugal': [40.03326, -7.88963],
+						'Russia': [55.751400, 37.620900],
+						'Saudi Arabia': [25.62426, 42.35283],
+						'South Korea': [36.638392, 127.6961188],
+						'Spain': [40.2085, -3.713],
+						'Sweden': [64.964875, 17.675409],
+						'Taiwan': [23.44265, 120.50237],
+						'Turkey': [39.908606, 32.784806],
+						'United States': [39.78373, -100.44588],
+					}
+
+					// Sometimes Leaflet uses the wrong path, so we have to provide a default icon
+					L.Marker.prototype.options.icon = L.icon({
+						iconUrl: '/assets/leaflet/images/marker-icon.webp',
+						iconRetinaUrl: '/assets/leaflet/images/marker-icon-2x.webp',
+						iconSize: [25, 41],
+						iconAnchor: [12, 41],
+						shadowUrl: '/assets/leaflet/images/marker-shadow.png',
+						shadowSize: [41, 41],
+						shadowAnchor: [13, 41],
+						popupAnchor: [1, -34],
+						tooltipAnchor: [16, -28],
+					});
+
+					// The icon to use for physical venues.
+					const physicalIcon = L.icon({
+						iconUrl: '/assets/leaflet/images/physical-marker-icon.webp',
+						iconRetinaUrl: '/assets/leaflet/images/physical-marker-icon-2x.webp',
+						iconSize: [25, 41],
+						iconAnchor: [12, 41],
+						shadowUrl: '/assets/leaflet/images/marker-shadow.png',
+						shadowSize: [41, 41],
+						shadowAnchor: [13, 41],
+						popupAnchor: [1, -34],
+						tooltipAnchor: [16, -28],
+					});
+
+					function escapeXml(unsafe) {
+						return unsafe.replace(/[<>&'"]/g, function (character) {
+							switch (character) {
+								case '<': return '&lt;';
+								case '>': return '&gt;';
+								case '&': return '&amp;';
+								case "'": return '&apos;';
+								case '"': return '&quot;';
+							}
+						});
+					}
+
+					// Object with country names as key, array of points as value.
+					const onlinePoints = {};
+
+					// Flatten the object while looping over it.
+					Object.keys(points).forEach((country) => {
+						points[country].forEach((point) => {
+							// Store the country so we can get the coordinates for online communities.
+							point.country = country;
+							if (point.coordinates) {
+								// Physical community.
+								const marker = L.marker(point.coordinates, {
+									title: point.name,
+									icon: physicalIcon,
+								});
+								marker.bindPopup(`
+									<strong>${escapeXml(point.name)}</strong><br>
+									${point.links.map((link) => ` <a href="${escapeXml(link.url)}">${escapeXml(link.title)}</a>`)}
+							  	`).openPopup();
+								marker.addTo(myMap);
+							} else {
+								// Online community.
+								// We only want one marker per country (with a merged tooltip, see below).
+								// Therefore, we don't add the marker here directly.
+								if (!onlinePoints[point.country]) {
+									onlinePoints[point.country] = []
+								}
+
+								onlinePoints[point.country].push(point);
+							}
+						});
+					});
+
+					// Add markers for online communities with merged tooltips.
+					Object.keys(onlinePoints).forEach((country) => {
+						let markerPopup = '';
+						onlinePoints[country].forEach((point, index) => {
+							// Add a line separation between online communities.
+							markerPopup += `
+								${index >= 1 ? '<hr>' : ''}
+								<strong>${escapeXml(point.name)}</strong><br>
+								${point.links.map((link) => ` <a href="${escapeXml(link.url)}">${escapeXml(link.title)}</a>`)}
+							`;
+						});
+
+						const marker = L.marker(countryCoordinates[country], {
+							title: country,
+						});
+						marker.bindPopup(markerPopup).openPopup();
+						marker.addTo(myMap);
+					});
+				}
+
+				// https://web.dev/articles/optimize-long-tasks#use_asyncawait_to_create_yield_points
+				// First init map then place the markers
+				// If we do the both at the same time it can freeze slower devices
+				const myMap = initMap();
+				await yieldToMainThread();
+				initMarkers(myMap);
+			}
+		</script>
+		<script async defer src="/assets/leaflet/leaflet.js" onload="loadMap()"></script>
 		<p>
 			<!-- Color legend. -->
 			<span
@@ -199,8 +252,12 @@ layout: default
 			{% for community in country[1] %}
 			<li>
 				{{community.name }}
-				({% for link in community.links %}<a href="{{ link.url }}" target="_blank">{{ link.title }}</a>{% unless
-				forloop.last %}, {% endunless %}{% endfor %})
+				({% for link in community.links %}
+					<a href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+					{% unless forloop.last %}
+					,
+					{% endunless %}
+				{% endfor %})
 			</li>
 			{% endfor%}
 		</ul>
@@ -213,6 +270,5 @@ layout: default
 		</p>
 	</div>
 </main>
-{% include footer.html %}
 
-{% preload_async_css href="/assets/leaflet/leaflet.css" %}
+{% include footer.html %}

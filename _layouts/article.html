@@ -8,11 +8,6 @@ layout: default
 {% preload_async_css href="/assets/css/highlight.obsidian.min.css" %}
 {% preload_async_css href="/assets/css/tobii.min.css" %}
 
-<script defer src="/assets/js/highlight.min.js?1"></script>
-<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
-<script defer src="/assets/js/tobii.min.js"></script>
-<script defer src="/assets/js/anchor-link.js"></script>
-
 {% include header.html %}
 
 <style>
@@ -223,6 +218,10 @@ layout: default
 
 {% include footer.html %}
 
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/anchor-link.js"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
 		// This needs to be done on page load but also after page changes,
@@ -230,7 +229,7 @@ layout: default
 		hljs.highlightAll();
 
 		// Add icons to easily copy section links.
-		window.applyAnchorLinks('.article-body');
+		applyAnchorLinks('.article-body');
 
 		// Add lightbox elements in blog articles for Tobii.
 		document.querySelectorAll('.article-cover img:not(.lightbox-ignore), .article-body img:not(.lightbox-ignore)').forEach((articleImg) => {
