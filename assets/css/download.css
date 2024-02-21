@@ -1,6 +1,5 @@
 .hero {
     padding: 124px 0 60px;
-    background-image: url('/assets/download/download-background.webp');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -140,6 +139,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
+
+.platform-details h2 {
+    font-size: 28px;
+    margin-bottom: 28px;
+}
+
 @media (max-width: 1200px) {
     .platform-details .platform-split {
         grid-template-columns: 1fr;

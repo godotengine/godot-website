@@ -36,23 +36,25 @@
 }
 
 .preview-notes .notes-summary {
-	display: grid;
-	gap: 24px;
 	width: 100%;
 	margin-top: 4px;
 }
 
 .preview-notes .notes-thumbnail {
-	background-position: center;
-	background-size: cover;
 	background-color: var(--card-background-color);
 	border-radius: 7px;
 	box-shadow: 0 5px 10px -3px #00000078;
 	aspect-ratio: 16 / 9;
 	max-height: 260px;
+	width: auto;
+}
+
+.preview-notes .notes-thumbnail img {
+	border-radius: 7px;
 }
 
 .preview-notes .notes-excerpt {
+	margin-top: 24px;
 	color: var(--base-color-text);
 	opacity: 0.8;
 }
@@ -99,6 +101,7 @@
 .download-primaries .download-platform img {
 	width: 24px;
 	height: 24px;
+	min-width: 24px;
 }
 
 .download-primaries .btn-download-primary {

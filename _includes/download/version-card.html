@@ -18,7 +18,16 @@
 
 				{% unless release_article == empty %}
 					<div class="notes-summary">
-						<div class="notes-thumbnail" style="background-image: url('{{ release_article.image }}');"></div>
+						<div class="notes-thumbnail">
+							<img
+								alt=""
+								width="1280"
+								height="720"
+								src="{{ release_article.image }}"
+								decoding="async"
+								{% if include.lazyload %}loading="lazy"{% endif %}
+							>
+						</div>
 						<div class="notes-excerpt">
 							{{ release_article.excerpt }}
 						</div>

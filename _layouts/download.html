@@ -1,21 +1,16 @@
 ---
 layout: default
 ---
-{% assign platform = page.platform %}
 
+<link rel="preload" as="image" href="/assets/download/download-background-4.x.webp" fetchpriority="high" type="image/webp">
+<link rel="preload" as="style" href="/assets/css/download.css?2" fetchpriority="high" type="text/css">
 <link rel="stylesheet" href="/assets/css/download.css?2">
 
 {% include transparent-header.html %}
 
-<style>
-	.hero {
-		background-image: url('/assets/download/download-background-4.x.webp');
-	}
-</style>
-
+{% assign platform = page.platform %}
 {% assign stable_version = site.data.versions | find: "featured", "4" %}
-
-<div class="hero">
+<div class="hero" style="background-image: url('/assets/download/download-background-4.x.webp');">
 	<div class="hero-wrapper">
 		<h1>Download Godot&nbsp;4 for {{ page.platform }}</h1>
 
@@ -66,7 +61,7 @@ layout: default
 <div class="container">
 	<div id="links" class="platform-details">
 		<div class="card base-padding">
-			<h3>Requirements</h3>
+			<h2>Requirements</h2>
 
 			<ul>
 				<li><strong>Recommended:</strong> Vulkan 1.0 compatible hardware</li>
@@ -85,7 +80,7 @@ layout: default
 
 		<div class="platform-split">
 			<div class="card base-padding">
-				<h3>All downloads</h3>
+				<h2>All downloads</h2>
 
 				{% for download in page.downloads %}
 
@@ -158,19 +153,19 @@ layout: default
 				<div class="digital-store-list">
 					<a class="btn btn-digital-store" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
 						<div class="digital-store-logo">
-							<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
+							<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="">
 						</div>
 						<div class="digital-store-name">itch.io</div>
 					</a>
 					<a class="btn btn-digital-store" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
 						<div class="digital-store-logo">
-							<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
+							<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="">
 						</div>
 						<div class="digital-store-name">Steam</div>
 					</a>
 					<a class="btn btn-digital-store" href="https://store.epicgames.com/p/godot-engine" title="Godot Engine on Epic Games Store">
 						<div class="digital-store-logo">
-							<img src="/assets/download/epic_logo.svg" width="28" height="28" alt="Epic Games Store logo">
+							<img src="/assets/download/epic_logo.svg" width="28" height="28" alt="">
 						</div>
 						<div class="digital-store-name">EGS</div>
 					</a>
@@ -191,23 +186,23 @@ layout: default
 
 		<div class="tabs platform-tabs">
 			<a href="/download/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/android.svg" title="Android" alt="Android" />
+				<img width="24" height="24" src="/assets/images/platforms/android.svg" alt=""/>
 				<span>Android</span>
 			</a>
 			<a href="/download/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" />
+				<img width="24" height="24" src="/assets/images/platforms/linux.svg" alt=""/>
 				<span>Linux</span>
 			</a>
 			<a href="/download/macos" class="tab title-font {% if page.platform == 'macOS' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" />
+				<img width="24" height="24" src="/assets/images/platforms/macos.svg" alt=""/>
 				<span>macOS</span>
 			</a>
 			<a href="/download/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" />
+				<img width="24" height="24" src="/assets/images/platforms/windows.svg" alt=""/>
 				<span>Windows</span>
 			</a>
 			<a href="https://editor.godotengine.org/releases/{{stable_version.name}}.stable/godot.editor.html" target="_blank" class="tab title-font">
-				<img width="24" height="24" src="/assets/images/platforms/web.svg" title="Web Editor" alt="Web Editor" />
+				<img width="24" height="24" src="/assets/images/platforms/web.svg" alt=""/>
 				<span>Web Editor</span>
 			</a>
 		</div>
