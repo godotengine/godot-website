@@ -842,6 +842,7 @@ pre > code {
 .search-bar .search-bar-btn img {
   margin: 8px;
   filter: invert(100%);
+  display: inline;
 }
 
 @media (min-width: 1400px) {

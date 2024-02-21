@@ -84,9 +84,9 @@
 		const links = document.querySelectorAll('.set-os-download-url');
 		for (let i = 0; i < links.length; i++) {
 			const link = links[i];
-			let lingSlug = 'download';
+			let linkSlug = 'download';
 			if (link.dataset['version'] === '3') {
-				lingSlug = 'download/3.x';
+				linkSlug = 'download/3.x';
 			}
 
 			const platformName = (navigator?.userAgentData?.platform ?? navigator?.platform).toLowerCase();
@@ -97,7 +97,7 @@
 				platformLink = 'linux';
 			}
 
-			link.href = `/${lingSlug}/${platformLink}`;
+			link.href = `/${linkSlug}/${platformLink}`;
 		}
 	});
 </script>
