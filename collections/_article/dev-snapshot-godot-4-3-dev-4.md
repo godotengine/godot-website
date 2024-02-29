@@ -40,11 +40,11 @@ As a reminder, this section only covers changes made since the previous [4.3 dev
 
 AnimationMixer continues to receive several fixes and enhancements after being introduced in 4.2 to bring it up to parity with AnimationPlayer.
 
-- [GH-86629](https://github.com/godotengine/godot/pull/86629) adds a `CallbackModeDiscrete` option to AnimationMixer to significantly improve the behaviour when blending continuous and discrete tracks.
+- [GH-86629](https://github.com/godotengine/godot/pull/86629) adds a `CallbackModeDiscrete` option to AnimationMixer to significantly improve the behavior when blending continuous and discrete tracks.
 
 - [GH-86661](https://github.com/godotengine/godot/pull/86661) introduces several fixes to how audio is handled by AnimationPlayers.
 
-- [GH-86715](https://github.com/godotengine/godot/pull/86715) expands the AnimationMixer and AnimationPlayer APIs with `AnimationMixer::capture()` and `AnimationPlayer::play_with_capture()` which can substitute the old capture update mode. The capture update mode has been difficult to use and prone to issues for awhile now. The introduction of AnimationMixer highlighted many of those issues. The new `capture()` and `play_with_capture()` functions allow you to do the same things as before in a way that is much more aligned with Godot's API and should work much better in general.
+- [GH-86715](https://github.com/godotengine/godot/pull/86715) expands the AnimationMixer and AnimationPlayer APIs with `AnimationMixer::capture()` and `AnimationPlayer::play_with_capture()` which can substitute the old capture update mode. The capture update mode has been difficult to use and prone to issues for a while now. The introduction of AnimationMixer highlighted many of those issues. The new `capture()` and `play_with_capture()` functions allow you to do the same things as before in a way that is much more aligned with Godot's API and should work much better in general.
 
 
 Additionally, [GH-87250](https://github.com/godotengine/godot/pull/87250) adds support for selecting, copying, pasting, and duplicating keyframes within the AnimationPlayer.
@@ -53,7 +53,7 @@ Additionally, [GH-87250](https://github.com/godotengine/godot/pull/87250) adds s
 
 C# received several fixes and usability improvements in this development release. Among them are [GH-87890](https://github.com/godotengine/godot/pull/87890) which improves the handling of C# generic types. With this base scripts are shown in the "Add Node" and "Create Resource" dialogs even when they are generic types. Between [GH-88469](https://github.com/godotengine/godot/pull/88469) and [GH-88570](https://github.com/godotengine/godot/pull/88570) there has been a lot of cleanup of diagnostic rules and warnings resulting in a much smoother experience. 
 
-As a temporary workaround, we have disabled the ability to generate a signal callback in C# from the editor ([GH-87952](https://github.com/godotengine/godot/pull/87952)). This feature has long been broken for C# and has led to a lof of confusion. We will re-enable this once we have it working reliably (including for external editors).
+As a temporary workaround, we have disabled the ability to generate a signal callback in C# from the editor ([GH-87952](https://github.com/godotengine/godot/pull/87952)). This feature has long been broken for C# and has led to a lot of confusion. We will re-enable this once we have it working reliably (including for external editors).
 
 ### Fixes for invalid/corrupt scenes
 
