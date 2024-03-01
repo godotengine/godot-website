@@ -1,7 +1,7 @@
 ---
 title: "Godot at BIG Festival 2023"
 excerpt: "Godot will have a booth and a talk at BIG Festival 2023, which takes place in São Paulo, Brazil from June 28th to July 2nd"
-categories: ["news"]
+categories: ["events"]
 author: George Marques
 date: 2023-06-15 00:00:00
 
