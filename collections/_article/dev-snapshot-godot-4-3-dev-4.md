@@ -63,7 +63,7 @@ Another bugfix on the GDScript side may also help solve situations where using `
 
 ### Add UFBX for importing FBX files without FBX2glTF
 
-This monumental effort incorporates the popular UFBX library into Godot to allow for seamlessly importing FBX files ([GH-82554](https://github.com/godotengine/godot/pull/82554)). Previously users would have to download the FBX2glTF tool separately and Godot would invoke it to convert FBX files to glTF files in order to import them. UFBX allows us to avoid this process and import FBX files directly. This is a huge change and the FBX file format is notoriously difficult to work with, so please test this carefully and report any bugs you find.
+This monumental effort incorporates the popular UFBX library into Godot to allow for seamlessly importing FBX files ([GH-81746](https://github.com/godotengine/godot/pull/81746)). Previously users would have to download the FBX2glTF tool separately and Godot would invoke it to convert FBX files to glTF files in order to import them. UFBX allows us to avoid this process and import FBX files directly. This is a huge change and the FBX file format is notoriously difficult to work with, so please test this carefully and report any bugs you find.
 
 ### Huge improvement to pixel stability for pixel art games
 
