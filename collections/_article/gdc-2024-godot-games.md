@@ -23,7 +23,9 @@ Register for the event [here](https://lu.ma/zymqufq0). There are **limited spots
 
 ## Games made with Godot
 
-Just like last year, we invited Godot developers to join us on our travels and exhibit their games at our booth. Check out the list below, and schedule some time for live playtesting when you are around! On the 21st of March, we will be joined by a senior class of students from a local public school. As part of their Game Design Academy program - which was started 15 years ago - the teams are currently developing games for their final presentations. At our booth, they will present their current prototypes and aim to gather some feedback from industry veterans.
+Just like last year, we invited Godot developers to join us on our travels and exhibit their games at our booth. Check out the list below, and schedule some time for live playtesting when you are around!
+
+On the 21st of March, we will be joined by a senior class of students from a local public school. As part of their Game Design Academy program - which was started 15 years ago - the teams are currently developing games for their final presentations. At our booth, they will present their current prototypes and aim to gather some feedback from industry veterans.
 
 <div class="row-2">
 	<a class="media" target="_blank" href="https://store.steampowered.com/app/2218750/Halls_of_Torment/">
