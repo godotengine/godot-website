@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Introducing our GDC Line-up",
+			"link": "https://godotengine.org/article/gdc-2024-godot-games/",
+			"description": "Like we announced a while ago, the team is preparing to head over to the US for this year’s GDC. We will have a booth on the expo floor, and would love to welcome you there!",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/gdc-2024-godot-games/",
+			"dc:creator": "Nathalie Galla",
+			"pubDate": "Fri, 01 Mar 2024 16:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/gdc/2024/gdc2.webp"
+		},
+		
+		{
 			"title": "Dev snapshot: Godot 4.3 dev 4",
 			"link": "https://godotengine.org/article/dev-snapshot-godot-4-3-dev-4/",
 			"description": "Another 4.3 dev release means that many more fixes and improvements are on their way!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Yuri Sizov",
 			"pubDate": "Tue, 07 Nov 2023 12:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-5.webp"
-		},
-		
-		{
-			"title": "Maintenance release: Godot 4.1.3",
-			"link": "https://godotengine.org/article/maintenance-release-godot-4-1-3/",
-			"description": "With stability in mind, Godot contributors offer yet another set of changes for Godot 4.1 users, addressing a variety of bugs related to rendering, input, GUI, and platform support.",
-			"categories": ["Release"],
-			"guid": "https://godotengine.org/article/maintenance-release-godot-4-1-3/",
-			"dc:creator": "Yuri Sizov",
-			"pubDate": "Thu, 02 Nov 2023 11:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-1-3.webp"
 		}
 		
 	]
