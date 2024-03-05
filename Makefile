@@ -21,10 +21,10 @@ serve-no-reload:
 install-tools:
 	cd ./tools/generators && npm install
 
-update-mirrorList:
+update-mirrorList: install-tools
 	node ./tools/generators/src/mirror_list_generator.js
 
-update-download-archive:
+update-download-archive: install-tools
 	node ./tools/generators/src/download_archive_generator.js
 
 index-articles:
