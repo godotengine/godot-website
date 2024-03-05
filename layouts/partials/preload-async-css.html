@@ -1,0 +1,8 @@
+{{ $href := .href }}
+{{ $priority := default "low" .priority }}
+{{ $css := resources.Get $href | resources.Minify | resources.Fingerprint }}
+<link rel="preload" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" as="style"
+      fetchpriority="{{ $priority }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</noscript>

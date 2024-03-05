@@ -1,0 +1,258 @@
+{{ define "main" }}
+  <main class="showcase-list-page">
+    <div class="head">
+      <div class="head-wrapper">
+        <div class="main">
+          <h1 class="intro-title">{{ T "page.showcase.header.titleText" }}</h1>
+        </div>
+        <div class="tabs">
+          <a href="{{ relLangURL "features/" }}" class="title-font ">
+            {{- T "page.showcase.header.tab.features" -}}
+          </a>
+          <a
+            href="{{ relLangURL "showcase/" }}" class="title-font active ">
+            {{- T "page.showcase.header.tab.showcase" -}}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="showreel-videos">
+        <h2>{{ T "page.showcase.showreelVideos.titleText" }}</h2>
+
+        <p>{{ T "page.showcase.showreelVideos.subtitleText" }}</p>
+
+        {{ partialCached "showcase/showreel-shelf.html" . }}
+      </div>
+
+      <!-- Filter will go here -->
+
+      <h2 class="title">{{ T "page.showcase.madeWithGodot" }}</h2>
+
+      {{ $projects := (where .Site.RegularPages "Section" "showcase").ByDate.Reverse }}
+
+      <section class="showcase-cards">
+        {{ $releasedGameProjects := where (where $projects "Params.release_date" "!=" "TBD") "Params.tool" "!=" true}}
+        {{ range $index, $project := $releasedGameProjects }}
+          {{ $params := $project.Params }}
+          <a href="{{ $project.RelPermalink }}">
+            <article class="showcase-card">
+              {{ if $params.image }}
+                <img
+                  class="thumbnail"
+                  src="{{ (resources.Get $params.image).RelPermalink }}"
+                  alt="{{ $params.title }}"
+                  {{ if le $index 9 }}fetchpriority="high" {{ else }}loading="lazy" {{ end }}
+                >
+              {{ else }}
+                <div style="position: relative">
+                  <h3>{{ $params.title }}</h3>
+                  {{ partial "responsive-img" (dict
+                  "src" (index $params.gallery 0)
+                  "class" "thumbnail"
+                  "sizes" "(min-width: 964px) calc((min(1200px, 100vw - 4rem) / 3), (min-width: 648px) calc((100vw - 3rem) / 2), 100vw"
+                  "alt" $params.title
+                  "loading" (cond (gt $index 9) "lazy" "eager")
+                  "decoding" (cond (gt $index 9) "async" "sync")
+                  "fetchpriority" (cond (le $index 9) "high" "")
+                  )}}
+                </div>
+              {{ end }}
+              <div class="showcase-card-caption">
+                <div class="showcase-card-icons">
+                  {{ if $params.windows }}
+                    <img src="/assets/images/platforms/windows.svg" alt="Windows"
+                         title="Windows"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.macos }}
+                    <img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.linux }}
+                    <img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.switch }}
+                    <img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch"
+                         title="Switch"
+                         width="24" height="24">
+                  {{ end }}
+
+                  {{ if $params.html5 }}
+                    <img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.android }}
+                    <img src="/assets/images/platforms/android.svg" alt="Android"
+                         title="Android"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.ios }}
+                    <img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.playstation }}
+                    <img src="/assets/images/platforms/playstation.svg" alt="PlayStation"
+                         title="PlayStation"
+                         width="24" height="24">
+                  {{ end }}
+
+                  {{ if $params.xbox }}
+                    <img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox"
+                         width="24"
+                         height="24">
+                  {{ end }}
+                </div>
+                <p>{{ $params.author }}</p>
+              </div>
+            </article>
+          </a>
+        {{ end }}
+      </section>
+
+      <h2 class="title">{{ T "page.showcase.appsAndTools" }}</h2>
+
+      <section class="showcase-cards">
+        {{ $toolProjects := where $projects "Params.tool" true }}
+        {{ range $index, $project := $toolProjects }}
+          {{ $params := $project.Params }}
+          <a href="{{ $project.RelPermalink }}">
+            <article class="showcase-card">
+              {{ if $params.image }}
+                <img
+                  class="thumbnail"
+                  src="{{ (resources.Get $params.image).RelPermalink }}"
+                  alt="{{ $params.title }}"
+                  loading="lazy">
+              {{ else }}
+                <div style="position: relative">
+                  <h3>{{ $params.title }}</h3>
+                  {{ partial "responsive-img" (dict
+                  "src" (index $params.gallery 0)
+                  "class" "thumbnail"
+                  "sizes" "(min-width: 964px) calc((min(1200px, 100vw - 4rem) / 3), (min-width: 648px) calc((100vw - 3rem) / 2), 100vw"
+                  "alt" $params.title
+                  "decoding" "async"
+                  "loading" "lazy"
+                  )}}
+                </div>
+              {{ end }}
+              <div class="showcase-card-caption">
+                <div class="showcase-card-icons">
+                  {{ if $params.windows }}
+                    <img src="/assets/images/platforms/windows.svg" alt="Windows" width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.macos }}
+                    <img src="/assets/images/platforms/macos.svg" alt="Mac" width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.linux }}
+                    <img src="/assets/images/platforms/linux.svg" alt="Linux" width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.switch }}
+                    <img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.html5 }}
+                    <img src="/assets/images/platforms/web.svg" alt="HTML5" width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.android }}
+                    <img src="/assets/images/platforms/android.svg" alt="Android" width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.ios }}
+                    <img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.playstation }}
+                    <img src="/assets/images/platforms/playstation.svg" alt="PlayStation"
+                         width="24"
+                         height="24">
+                  {{ end }}
+
+                  {{ if $params.xbox }}
+                    <img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox"
+                         width="24"
+                         height="24">
+                  {{ end }}
+                </div>
+                <p>{{ $params.author }}</p>
+              </div>
+            </article>
+          </a>
+        {{ end }}
+      </section>
+
+      <h2 class="title">{{ T "page.showcase.comingSoon" }}</h2>
+      <section class="showcase-cards">
+        {{ $TBDProjects := where $projects "Params.release_date" "TBD" }}
+        {{ range $project := $TBDProjects }}
+          {{ $params := $project.Params }}
+          <a href="{{ $project.RelPermalink }}">
+            <article class="showcase-card">
+              {{ if $params.image }}
+                <img
+                  class="thumbnail"
+                  src="{{ (resources.Get $params.image).RelPermalink }}"
+                  alt="{{ $params.title }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+              {{ else }}
+                <div class="relative">
+                  <h3>{{ $params.title }}</h3>
+                  <img
+                    class="thumbnail"
+                    src="{{ index $params.gallery 0 }}"
+                    alt="{{ $params.title }}"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+              {{ end }}
+              <div class="showcase-card-caption">
+                <div></div>
+                <p>{{ $params.author }}</p>
+              </div>
+            </article>
+          </a>
+        {{ end }}
+      </section>
+
+      <p id="submit-project">
+        {{ $link :=
+        "https://docs.google.com/forms/d/e/1FAIpQLSdhNEywWfk7tm4ABSxmPfnJrKwGPAoYbzRfZlHmu9iZ5CJ5Pw/viewform?usp=sf_link"
+        }}
+        {{ T "page.showcase.submitYourGameText"
+        (dict "linkOpen" (printf "<a href=%s>" $link) "linkClose" "</a>") | safeHTML
+        }}
+      </p>
+    </div>
+  </main>
+{{ end }}

@@ -1,0 +1,107 @@
+.sponsors {
+  --card-padding: 17px;
+
+  & .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+
+    & .sponsor-card {
+      background-color: white;
+      border-radius: 7px;
+      display: grid;
+      padding: var(--card-padding);
+      place-items: center;
+
+      & img {
+        mix-blend-mode: multiply;
+        width: auto;
+      }
+    }
+
+    &.patron {
+      grid-auto-rows: calc(100px + (var(--card-padding) * 2));
+
+      & img {
+        max-height: 100px;
+      }
+    }
+
+    &.platinum {
+      grid-auto-rows: calc(80px + (var(--card-padding) * 2));
+
+      & img {
+        max-height: 80px;
+      }
+    }
+
+    &.gold {
+      grid-auto-rows: calc(60px + (var(--card-padding) * 2));
+
+      & img {
+        max-height: 60px;
+      }
+    }
+
+    &.silver {
+      grid-auto-rows: calc(40px + (var(--card-padding) * 2));
+
+      & img {
+        max-height: 40px;
+      }
+    }
+  }
+
+  & h3 {
+    font-weight: 400;
+    margin-top: 3.125rem;
+
+    & a {
+      color: inherit;
+      font-family: var(--default-font-family);
+      font-size: 0.938rem;
+      opacity: 0.5;
+      text-decoration: none;
+    }
+  }
+
+  & .sponsor-the-project {
+    margin-top: 3.125rem;
+    opacity: 0.8;
+    text-align: left;
+  }
+}
+
+@container main (width >= 768px) {
+  .sponsors .grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    &.platinum {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.gold {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.silver {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+.sponsor-empty {
+  border: 3px dashed;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: inherit;
+  line-height: 1.4em;
+  padding: 17px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #8484841c;
+  }
+}

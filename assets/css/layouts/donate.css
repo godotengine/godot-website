@@ -1,0 +1,138 @@
+.donate-page {
+  & .col-2 {
+    display: grid;
+    gap: 1.875rem;
+    grid-template-columns: 1fr;
+  }
+
+  & .donate-button {
+    background: var(--big-button-color);
+    box-shadow: var(--base-shadow);
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  & .wrapper .options {
+    display: grid;
+    gap: 1.875rem;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 960px;
+    padding-top: 3.125rem;
+    text-align: center;
+  }
+
+  & .card-transfer {
+    background: #2f2f2f;
+    border-radius: 11px;
+    box-shadow: 0 11px 10px -10px #00000042;
+    margin-top: 3.125rem;
+    padding: 2.688rem 3.125rem;
+
+    & .details {
+      display: grid;
+      gap: 1.875rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  & .development-fund {
+    background: #363a4f;
+  }
+
+  & p.for-more {
+    opacity: 0.8;
+    text-align: center;
+  }
+
+  & .about-support {
+    padding: 1.875rem;
+  }
+
+  & .foundation {
+    margin-bottom: 3.125rem;
+    margin-top: 3.125rem;
+    text-align: center;
+
+    & .image {
+      margin: 0 auto;
+      max-width: 300px;
+
+      & img {
+        & p {
+          margin-bottom: 2.5rem;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 772px;
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .donate-page {
+    & .if-light {
+      display: none;
+    }
+
+    & .if-dark {
+      display: block;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .donate-page {
+    & .card-transfer {
+      background-color: rgba(160, 160, 160, 0.15);
+    }
+
+    & .development-fund {
+      background: #dae0ff;
+    }
+
+    & .if-light {
+      display: block;
+    }
+
+    & .if-dark {
+      display: none;
+    }
+  }
+}
+
+@container main (width >= 768px) {
+  .donate-page {
+    & .col-2 {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    & .wrapper .options {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    & .about-support {
+      padding: 4.375rem;
+    }
+
+    & .card-transfer .details {
+      grid-template-columns: 1fr 1fr;
+      gap: 3.125rem;
+    }
+
+    & .bank-transfer .details {
+      padding: 0 1.875rem;
+    }
+
+    & .development-fund .details p {
+      margin-top: 0;
+    }
+  }
+}

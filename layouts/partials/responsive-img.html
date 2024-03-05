@@ -1,0 +1,47 @@
+{{/* Refer to https://web.dev/learn/design/responsive-images for a good understanding of responsive images */}}
+{{/* Refer to https://gohugo.io/content-management/image-processing/ for understanding what the code bellow does */}}
+
+{{ $class := default "" .class }}
+{{ $id := default "" .id }}
+{{ $src := .src }}
+{{ $alt := default "" .alt }}
+{{ $loading := default "eager" .loading }}
+{{ $decoding := default "sync" .decoding }}
+{{ $fetchpriority := default "" .fetchpriority }}
+{{ $image := (resources.Get $src) }}
+{{ $width := default $image.Width .width }}
+{{ $height := default $image.Height .height }}
+{{ $srcset := default (slice "640" "768" "1024" "1366" "1600" "1920") .srcset }}
+{{/* The srcset sizes, ex: (min-width: 50em) 50vw, (min-width: 20em) 100vw */}}
+{{ $sizes := .sizes }}
+{{ $images := slice }}
+{{ $csrcset := "" }}
+
+{{ range $srcset }}
+  {{/*Skip if the image is already smaller than the desired size*/}}
+  {{ if lt (int $width) (int .) }}
+    {{ continue }}
+  {{ end }}
+
+  {{ $link := ($image.Process (printf "resize %sx Lanczos" . )).RelPermalink }}
+  {{ $images = $images | append $link }}
+  {{ if $csrcset }}
+    {{ $csrcset = (printf "%s, %s %sw" $csrcset $link .) }}
+  {{ else }}
+    {{ $csrcset = (printf "%s %sw" $link .) }}
+  {{ end }}
+{{ end }}
+
+<img
+  {{ with $id }}id="{{ . }}"{{ end }}
+  {{ with $class }}class="{{ . }}"{{ end }}
+  src="{{ index $images 0 }}"
+  width="{{ $width }}"
+  height="{{ $height }}"
+  alt="{{ $alt }}"
+  {{ with $loading }}loading="{{ . }}"{{ end }}
+  {{ with $decoding }}decoding="{{ . }}"{{ end }}
+  {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}
+  srcset="{{ $csrcset }}"
+  sizes="{{ $sizes }}"
+>

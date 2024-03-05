@@ -1,0 +1,29 @@
+{{ $paginator := . }}
+
+<div class="pagination">
+  {{ if $paginator.HasPrev }}
+    <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">← {{ T "partials.paginator.previous" }}</a>
+  {{ end }}
+
+  {{ $trailsPerSide := 2 }}
+  {{ $pageCount := len $paginator.Pagers }}
+
+  {{ range $paginator.Pagers }}
+    {{ $activePageNumber := $paginator.PageNumber }}
+
+    {{ if and (ge .PageNumber (sub (math.Min $activePageNumber (sub $pageCount $trailsPerSide)) $trailsPerSide)) (lt
+    .PageNumber $activePageNumber) }}
+      <a href="{{ .URL }}">{{ .PageNumber }}</a>
+    {{ else if eq . $paginator }}
+      <a class="active" href="{{ .URL  }}">{{ .PageNumber }}</a>
+    {{ else if (and (le .PageNumber (add (math.Max $activePageNumber (add $trailsPerSide 1)) $trailsPerSide)) (gt
+    .PageNumber $activePageNumber)) }}
+      <a href="{{ .URL }}">{{ .PageNumber }}</a>
+    {{ end }}
+
+  {{ end }}
+
+  {{ if $paginator.HasNext }}
+    <a class="pagination-next" href="{{ $paginator.Next.URL }}">{{ T "partials.paginator.next" }} →</a>
+  {{ end }}
+</div>

@@ -1,0 +1,6 @@
+{{ $name := .name }}
+{{ $flavor := .flavor }}
+{{ $gCtx := .gCtx }}
+
+{{ $versions := where $gCtx.Site.RegularPages "Type" "download/archive" }}
+{{ return (index (where (where $versions "Params.name" $name) "Params.flavor" $flavor | first 1) 0).Params }}

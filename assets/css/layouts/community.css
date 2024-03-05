@@ -1,0 +1,75 @@
+.community-page {
+  & .card {
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  & .community-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    & h2 {
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  & .community-short-block {
+    grid-column-end: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & .card {
+      height: auto;
+      flex: 1;
+    }
+
+    & p {
+      margin-top: 1rem;
+    }
+  }
+
+  & .community-block {
+    & a {
+      text-decoration: none;
+    }
+
+    & .card {
+      & h3 {
+        margin-bottom: 1rem;
+      }
+      
+      & p {
+        margin: 0;
+      }
+    }
+
+    & p {
+      margin-top: 1rem;
+    }
+  }
+
+  & #user-groups {
+    background-color: var(--dark-color);
+    color: var(--dark-color-text);
+
+    & h3 {
+      color: var(--dark-color-text-title);
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@container main (width < 768px  ) {
+  & .user-supported-communities {
+    gap: 0;
+    grid-row-gap: 1rem;
+  }
+}

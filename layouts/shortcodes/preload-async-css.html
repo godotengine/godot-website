@@ -1,0 +1,4 @@
+{{ $href := .Get "href" }}
+{{ $priority := default "low" (.Get "priority") }}
+
+{{ partial "preload-async-css.html" (dict "href" $href "priority" $priority) }}

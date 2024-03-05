@@ -1,0 +1,48 @@
+{{ $version := .version }}
+{{ $versionNumber := index (split $version.name ".") 0 }}
+{{ $currentPlatform := .currentPlatform }}
+
+<div class="platforms-wrapper">
+  <div id="platforms" class="wrapper" style="overflow: hidden;">
+    <h2>{{ T "partials.platforms.supportedPlatforms" }}</h2>
+
+    <div class="tabs platform-tabs">
+      {{ $middlePath := "" }}
+      {{ if eq $versionNumber "3" }}
+        {{ $middlePath = "3.x/" }}
+      {{ end }}
+      <a href="{{ relLangURL "download" }}/{{ $middlePath }}android/"
+         class="tab title-font {{ if eq $currentPlatform "Android" }} active {{ end }}">
+        <img width="24" height="24" src="/assets/images/platforms/android.svg" alt="" decoding="async"/>
+        <span>Android</span>
+      </a>
+      <a href="{{ relLangURL "download" }}/{{ $middlePath }}linux/"
+         class="tab title-font {{ if eq $currentPlatform "Linux" }} active {{ end }}">
+        <img width="24" height="24" src="/assets/images/platforms/linux.svg" alt="" decoding="async"/>
+        <span>Linux</span>
+      </a>
+      <a href="{{ relLangURL "download" }}/{{ $middlePath }}macos/"
+         class="tab title-font {{ if eq $currentPlatform "macOS" }} active {{ end }}">
+        <img width="24" height="24" src="/assets/images/platforms/macos.svg" alt="" decoding="async"/>
+        <span>macOS</span>
+      </a>
+      <a href="{{ relLangURL "download" }}/{{ $middlePath }}windows/"
+         class="tab title-font {{ if eq $currentPlatform "Windows" }} active {{ end }}">
+        <img width="24" height="24" src="/assets/images/platforms/windows.svg" alt="" decoding="async"/>
+        <span>Windows</span>
+      </a>
+      {{ if eq $versionNumber "3" }}
+        <a href="{{ relLangURL "download" }}/3.x/server/"
+           class="tab title-font {{ if eq $currentPlatform "Linux Server" }} active {{ end }}">
+          <img width="24" height="24" src="/assets/images/platforms/linux-server.svg" alt="" decoding="async"/>
+          <span>{{ T "page.download.supportedPlatforms.linuxServer" }}</span>
+        </a>
+      {{ end }}
+      <a href="https://editor.godotengine.org/releases/{{ $version.name }}.stable/" target="_blank"
+         class="tab title-font">
+        <img width="24" height="24" src="/assets/images/platforms/web.svg" alt="" decoding="async"/>
+        <span>{{ T "common.webEditor" }}</span>
+      </a>
+    </div>
+  </div>
+</div>

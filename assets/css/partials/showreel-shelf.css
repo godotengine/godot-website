@@ -1,0 +1,9 @@
+.showreel-shelf {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  & img {
+    background-color: var(--card-background-color);
+    border-radius: 7px;
+    box-shadow: 0 5px 10px -3px #00000078;
+  }
+}

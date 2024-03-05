@@ -1,0 +1,1 @@
+{{ return where (where .Site.Sites.First.RegularPages "Section" "showcase") "Params.featured_in_home" "eq" true }}

@@ -1,0 +1,137 @@
+{{ define "main" }}
+  <main class="community-page">
+    <div class="head">
+      <div class="wrapper flex eqsize">
+        <div class="main">
+          <h1 class="intro-title">{{ T "page.community.header.titleText" }}</h1>
+          <p class="small">{{ T "page.community.header.subTitleText" | safeHTML }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper community-list">
+      <div class="community-block">
+        <a href="{{ relLangURL "events/" }}" class="card base-padding" id="events">
+          <div>
+            <h3>{{ T "page.community.events.titleText" }}</h3>
+            <p> {{ T "page.community.events.subtitleText" }} </p>
+          </div>
+        </a>
+      </div>
+
+      <h2>{{ T "page.community.officialCommunities.titleText" }}</h2>
+
+      <div class="grid">
+        {{ range .Site.Data.community.official_communities }}
+          <div class="community-block">
+            <div class="card">
+              <a href="{{ .link }}">
+                <img src="{{ .image }}" width="350" height="215" alt=""
+                     style="background: linear-gradient(90deg, #2f3c63 5%, #2f3c63 25%, #2f3c63 65%, #2f3c63 82%)"
+                     loading="lazy">
+              </a>
+              <div class="base-padding">
+                <h3><a href="{{ .link }}">{{ T .title }}</a></h3>
+                <p> {{ T .body }} </p>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+
+      <h2>{{ T "page.community.officialSocialNetworks.titleText" }}</h2>
+
+      <div class="grid">
+        {{ range .Site.Data.community.official_social_networks }}
+          <div class="community-block">
+            <div class="card">
+              <a href="{{ .link }}">
+                <img src="{{ .image }}" width="350" height="215" alt=""
+                     style="background: linear-gradient(90deg, #2f3c63 5%, #2f3c63 25%, #2f3c63 65%, #2f3c63 82%)"
+                     loading="lazy">
+              </a>
+              <div class="base-padding">
+                <h3><a href="{{ .link }}">{{ T .title }}</a></h3>
+                <p> {{ T .body }} </p>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+
+      <h2>{{ T "page.community.userSupportedCommunities.titleText" }}</h2>
+
+      <div class="grid user-supported-communities">
+        <div class="community-block">
+          <div class="card">
+            <a href="https://godotforums.org">
+              <img src="/assets/community/community-forums.webp" width="350" height="215" alt=""
+                   style="background: linear-gradient(90deg, #e3eaf1 2%, #e3eaf1 28%, #e3eaf1 57%, #e3eaf1 90%)"
+                   loading="lazy">
+            </a>
+            <div class="base-padding">
+              <h3><a
+                  href="https://godotforums.org">{{ T "page.community.userSupportedCommunities.forums.titleText" }}</a>
+              </h3>
+              <p> {{ T "page.community.userSupportedCommunities.forums.bodyText" }} </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="community-short-block">
+          <a href="{{ relLangURL "community/user-groups/" }}" class="card base-padding" id="user-groups">
+            <h3>{{ T "page.community.userSupportedCommunities.userGroups.titleText" }}</h3>
+            <p> {{ T "page.community.userSupportedCommunities.userGroups.bodyText" }} </p>
+          </a>
+
+          <a href="https://docs.godotengine.org/en/stable/community/tutorials.html" class="card base-padding">
+            <h3>{{ T "page.community.userSupportedCommunities.tutorials.titleText" }}</h3>
+            <p> {{ T "page.community.userSupportedCommunities.tutorials.bodyText" }} </p>
+          </a>
+
+          <a href="https://matrix.to/#/#godot-space:matrix.org" class="card base-padding">
+            <h3>{{ T "page.community.userSupportedCommunities.matrix.titleText" }}</h3>
+            <p> {{ T "page.community.userSupportedCommunities.matrix.bodyText" }} </p>
+          </a>
+        </div>
+      </div>
+
+      <h2>{{ T "page.community.lookingToContribute.titleText" }}</h2>
+
+      <div class="grid">
+        <div class="community-block">
+          <div class="card">
+            <a href="https://chat.godotengine.org">
+              <img src="/assets/community/icon_godot_contributors_chat.webp" width="350" height="215"
+                   alt=""
+                   style="background: linear-gradient(90deg, #31363f 13%, #31363f 20%, #20242a 64%, #202429 94%)"
+                   loading="lazy">
+            </a>
+            <div class="base-padding">
+              <h3><a
+                  href="https://chat.godotengine.org">{{ T "page.community.lookingToContribute.godotContributorsChat.titleText" }}</a>
+              </h3>
+              <p>{{ T "page.community.lookingToContribute.godotContributorsChat.bodyText" }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="community-block">
+          <div class="card">
+            <a href="https://github.com/godotengine/godot">
+              <img src="/assets/community/icon_github.webp" width="350" height="215" alt=""
+                   style="background: linear-gradient(90deg, #e2e2e3 30%, #e2e2e3 45%, #e3e4e4 80%, #d5d7d7 91%)"
+                   loading="lazy">
+            </a>
+            <div class="base-padding">
+              <h3><a
+                  href="https://github.com/godotengine/godot">{{ T "page.community.lookingToContribute.github.titleText" }}</a>
+              </h3>
+              <p> {{ T "page.community.lookingToContribute.github.bodyText" (dict "link" "<a href='https://github.com/godotengine/godot-proposals'>Godot proposals</a>") | safeHTML }} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{{ end }}

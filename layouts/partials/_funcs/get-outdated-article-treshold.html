@@ -1,0 +1,1 @@
+{{ return time.Now.AddDate 0 (int (mul .Site.Params.articleOutdatedWarning.thresholdInMonths -1)) 0 }}

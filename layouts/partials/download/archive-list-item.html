@@ -1,0 +1,43 @@
+{{ $version := .version }}
+{{ $gCtx := .gCtx }}
+
+{{ $downloadLink := relLangURL (printf "download/archive/%s-%s/" $version.name $version.flavor) }}
+<div class="archive-list-item">
+  <div class="archive-release">
+    <a class="archive-version" href="{{ $downloadLink }}"
+       title="{{ T "partials.archiveListItem.link.download.titleText" }}">
+      <h4 id="{{ $version.name }}-{{ $version.flavor }}">{{ $version.name }}-{{ $version.flavor }}</h4>
+      <p class="archive-download-meta">
+        {{- with $version.release_date -}}
+          <span>{{ time.Format ":date_long" . }}</span>
+        {{- end -}}
+      </p>
+    </a>
+  </div>
+
+  <a
+    class="btn btn-release-download"
+    href="{{ $downloadLink }}"
+    title="{{ T "partials.archiveListItem.link.download.titleText" }}">
+    {{- T "partials.archiveListItem.link.download.contentText" -}}
+  </a>
+
+  {{ with $version.release_notes }}
+    {{ $releaseArticle := $gCtx.Site.GetPage . }}
+    {{ with $releaseArticle }}
+      <a
+        class="btn btn-release-notes"
+        href="{{ relLangURL $releaseArticle.RelPermalink }}"
+        title="{{- T "partials.archiveListItem.link.news.titleText" -}}">
+        {{- T "partials.archiveListItem.link.news.contentText" -}}
+      </a>
+    {{ end }}
+  {{ end }}
+
+  <a
+    class="btn btn-release-changelog"
+    href="https://godotengine.github.io/godot-interactive-changelog/#{{ $version.name }}-{{ $version.flavor }}"
+    title="{{ T "partials.archiveListItem.link.changelog.titleText" }}">
+    {{- T "partials.archiveListItem.link.changelog.contentText" -}}
+  </a>
+</div>

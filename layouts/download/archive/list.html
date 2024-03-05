@@ -1,0 +1,57 @@
+{{ define "main" }}
+  <main class="archive-page-list">
+    <div class="hero">
+      <h1>{{ T "page.downloadArchiveList.hero.titleText" }}</h1>
+
+      <div class="hero-blurb">
+        <p>
+          {{ T "page.downloadArchiveList.hero.subtitleText" }}
+        </p>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="padded" style="padding-top:0;margin-top:2rem">
+        <h2>{{ T "page.downloadArchiveList.officialReleases" }}</h2>
+
+        <div class="archive-list">
+          {{ $versions := where .Site.RegularPages "Type" "download/archive" }}
+
+          {{ range ($versions.GroupByParam "name").Reverse }}
+            {{ $pages := (.Pages.ByParam "release_date").Reverse }}
+            {{ $version := (index $pages 0).Params }}
+
+            <div class="archive-group">
+              <div>
+                <h3 id="{{ .Key }}">
+                  Godot {{ .Key }}
+                </h3>
+
+                <span>{{ T "page.downloadArchiveList.currentState" }}</span> <span
+                  class="archive-version-flavor">{{ $version.flavor }}</span>
+              </div>
+            </div>
+
+
+            <div class="card base-padding archive-releases">
+              {{ partial "download/archive-list-item.html" (dict "gCtx" $ "version" $version) }}
+
+              {{ $flavorHint := slicestr $version.flavor 0 2 }}
+
+              {{ range $index, $page := after 1 $pages }}
+                {{ $release := $page.Params }}
+                {{ $nextHint := slicestr $release.flavor 0 2 }}
+                {{ if ne $flavorHint $nextHint }}
+                  <hr>
+                  {{ $flavorHint = $nextHint }}
+                {{ end }}
+                {{ partial "download/archive-list-item.html" (dict "gCtx" $ "version" $release ) }}
+              {{ end }}
+            </div>
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+  </main>
+{{ end }}

@@ -1,0 +1,99 @@
+{{ define "head" }}
+  {{ partialCached "css/article-bundle.html" . }}
+{{ end }}
+
+{{ define "main" }}
+
+  <main class="article-page" data-pagefind-body>
+    <div class="wrapper">
+      <article class="padded">
+        <div class="content article-container">
+          <figure class="article-cover">
+            {{ if or .Params.image_caption_title .Params.image_caption_description }}
+              <figcaption>
+                <strong>{{ .Params.image_caption_title | safeHTML }}</strong>
+                <span
+                  style="margin-left: 0.75rem; font-size: 90%">{{ .Params.image_caption_description | safeHTML }}</span>
+              </figcaption>
+            {{ end }}
+
+            <img
+              src="{{ .Params.image }}"
+              title="{{ .Params.image_caption_title }}"
+              alt="{{ .Params.image_caption_title }} {{ .Params.image_caption_description }}"
+              class="rounded-lg"
+              data-pagefind-meta="image[src]"
+            />
+          </figure>
+
+          <div class="article-info">
+            <h1 data-pagefind-meta="title">
+              {{ .Params.title }}
+            </h1>
+            <div class="article-metadata">
+              <div class="article-author">
+                <span>By: </span>
+                {{ $postAuthor := index (where .Site.Data.authors "name" .Params.author | first 1) 0 }}
+                {{ if $postAuthor }}
+                  <img class="avatar" width="25" height="25" src="{{ $postAuthor.image }}"
+                       alt="{{ .Params.author }}" loading="lazy"
+                       data-pagefind-meta="authorAvatarImage[src], authorAvatarImageAlt[alt]">
+                {{ else }}
+                  <img class="avatar" width="25" height="25"
+                       src="/assets/images/authors/default_avatar.svg"
+                       alt="{{ .Params.author }}" loading="lazy"
+                       data-pagefind-meta="authorAvatarImage[src], authorAvatarImageAlt[alt]">
+                {{ end }}
+                <span class="by" data-pagefind-meta="author">{{ .Params.author }}</span>
+              </div>
+              <span class="date" data-pagefind-meta="date" data-pagefind-sort="date:{{.Params.date}}"
+                    data-post-date="{{ .Params.date }}"> {{ time.Format ":date_long" .Params.date }}</span>
+              <span style="display: none;" aria-hidden="true"
+                    data-pagefind-meta="excerpt:{{ .Params.excerpt }}"></span>
+            </div>
+
+            <div class="tags">
+              {{ range $category := .Params.categories }}
+                <a href="{{ relLangURL "blog/" }}{{ $category }}/">
+                  {{ $categoryName := (index (index ($.Site.Data.categories) $category) 0).name}}
+                  <div data-pagefind-filter="category:{{ $category }}"
+                       class="tag active">{{ T (printf "%s.%s" "page.blog.category" $categoryName) }}</div>
+                </a>
+              {{ end }}
+            </div>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            {{ partial "articles/outdated-notice.html" . }}
+          </div>
+
+          <div class="article-body">
+            {{ .Content }}
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Add icons to easily copy section links.
+        applyAnchorLinks('.article-body');
+
+        // Add lightbox elements in blog articles for Tobii.
+        document.querySelectorAll('.article-cover img:not(.lightbox-ignore), .article-body img:not(.lightbox-ignore)').forEach((articleImg) => {
+          const template = document.createElement('template');
+          template.innerHTML = `<a href="${articleImg.src}" class="lightbox" data-group="article"/>`
+          const a = template.content.firstChild
+          articleImg.parentNode.appendChild(a);
+          a.appendChild(articleImg);
+        });
+
+        // Initialize lightbox.
+        new Tobii({
+          zoom: false,
+        })
+      });
+    </script>
+    {{ partialCached "js/article-bundle.html" . }}
+  </main>
+{{ end }}

@@ -1,9 +1,7 @@
 # Build artifacts and cache
-.bundle/
-.jekyll-cache
-.jekyll-metadata
-_site
-vendor/
+public
+tools/generators/node_modules
+resources
 
 # Code editors
 .vscode/

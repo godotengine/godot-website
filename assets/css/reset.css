@@ -1,0 +1,69 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+textarea {
+  resize: vertical;
+}
+
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+
+h2,
+h3 {
+  page-break-after: avoid;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: revert;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+/*
+	1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+	2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+	This can trigger a poorly considered lint error in some tools but is included by design.
+	*/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+img,
+video {
+  block-size: auto;
+  height: auto;
+  max-inline-size: 100%;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:has(:target) {
+  scroll-padding-top: 2rem;
+}

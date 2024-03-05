@@ -1,0 +1,644 @@
+page:
+  home:
+    header:
+      titleText: The game engine you've been waiting&nbsp;for.
+      subtitleText: The Godot Engine is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D and 3D games.
+
+    features:
+      titleText: A different way to make games
+      design:
+        titleText: Innovative design
+        bodyText: Godot's Node and Scene system gives you both power and flexibility to create anything.
+      script:
+        titleText: Use the right language for the job
+        bodyText: Keep your code modular with an object-oriented API using Godot's own GDScript, C#, C++, or bring your own using GDExtension.
+        disclaimerText: C# support is currently only available for desktop and mobile platforms as of Godot 4.2.<br>Use Godot 3 to run C# on the Web platform.
+      2D:
+        titleText: Dedicated 2D engine
+        bodyText: Make crisp and performant 2D games with Godot's dedicated 2D rendering engine with real 2D pixel coordinates and 2D nodes.
+      3D:
+        titleText: Simple and powerful 3D
+        bodyText: Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds and characters.
+      deploy:
+        titleText: Release on all platforms
+        bodyText: Deploy your game on desktop, mobile, and the web in seconds. Godot even supports consoles through third party publishers.
+      getInvolved:
+        titleText: Open Source
+        bodyText: "Truly open development: anyone who contributes to Godot benefits equally from others’ contributions."
+      button:
+        learnMoreAboutUsingGodot: Learn more about using Godot
+
+    getInvolved:
+      titleText: Get involved
+      subtitleText: Join the community and help create a game engine that belongs to everybody.
+      code:
+        titleText: Code
+        bodyText: If you know how to code, you can help by fixing bugs and working with engine contributors towards the
+          implementation of new features.
+      document:
+        titleText: Document
+        bodyText: Documentation quality is essential in a game engine; help make it better by updating the API reference, writing
+          new guides or submitting corrections.
+      report:
+        titleText: Report
+        bodyText: Found a problem with the engine? Don't forget to report it so that developers can track it down.
+
+    donate:
+      donateText: You don't need to be an engine developer to help Godot. Join the {{ .developmentFundLinkBefore }}development fund{{ .developmentFundLinkAfter }} and help us make the Godot&nbsp;Engine even more awesome!
+
+  features:
+    header:
+      titleText: Why Godot is right for you
+      subtitleText: "A picture is worth a thousand words, and these developers have chosen Godot for their projects:"
+      button:
+        seeMoreProjectsMadeWithGodot: See more projects made with Godot
+
+    mainFeatures:
+      titleText: Main features
+      intuitiveSceneDrivenDesign:
+        titleText: Intuitive scene-driven design
+        buildYourGameFromSimpleBlocs:
+          titleText: Build your game from simple blocks
+          bodyText: Use building blocks called nodes to create more complex and reusable
+            scenes. Add scripts to your scenes and customize built-in behavior to
+            implement your unique game mechanics. Rely on composition and node hierarchy
+            to make game logic clear at a glance.
+        extendBeyondFeaturesProvidedByTheEngine:
+          titleText: Extend beyond features provided by the engine
+          bodyText: Make your scenes into full-featured components, with tools for your
+            designers to tweak and adjust the look and function. Share your components
+            with the community of like-minded developers as addons and templates.
+        createDataDrivenElementsWithCustomResources:
+          titleText: Create data-driven elements with custom resources
+          bodyText: <strong>New in 4.0:</strong> Define scriptable objects called resources
+            to describe characters, entities, and data structures in your game. Use
+            your custom objects directly in the editor by assigning them to nodes.
+            Resources come with a high-level API to store and read them, and they support
+            every Godot type, including other resources.
+
+      codingToolsThatFitYourNeeds:
+        titleText: Coding tools that fit your needs
+        writeCodeWithoutHurdlesWithAHighLevelScriptingLanguage:
+          titleText: Write code without hurdles with a high-level scripting language
+          bodyText:
+            Get things done quickly with Godot's built-in scripting language GDScript.
+            Inspired by Python and other languages, it is easy to pick up even if you
+            are a beginner. Tight engine integration allows it to express game logic
+            in a clear and natural form.
+            <br><br>
+            <strong>New in 4.0:</strong> GDScript offers optional static typing support,
+            boosting your coding efficiency and runtime performance. Powerful language
+            features and first-class functions allow for expressive yet concise code.
+        leverageYourC#ExperienceToFeelRightAtHome:
+          titleText: Leverage your C# experience to feel right at home
+          bodyText:
+            If you're an experienced C# user, Godot offers you first-class support
+            for the .NET platform. Power your game with familiar libraries and give
+            them performance boost, while still benefiting from close engine integration.
+            <br><br>
+            <strong>Note:</strong> .NET support is provided as a dedicated engine executable.
+            <a href="https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support">C# support is available for desktop and mobile platforms as of Godot 4.2.</a>
+            Web support should be added in the future, but until then,
+            <a href="/download/3.x">Godot 3</a> remains a supported option.
+        pickFromAVarietyOfCommunitySupportedLanguages:
+          titleText: Pick from a variety of community-supported languages
+          bodyText:
+            Godot is built to be extended, and that means you can choose
+            a programming language not provided by the Godot team itself.
+            Thanks to our community there are many language bindings for
+            popular tools like Rust, Nim, Python, and JavaScript.
+            <br><br>
+            <strong>New in 4.0:</strong> C++ supports comes officially in the form of
+            GDExtension API, which gives you a way to script and program your game
+            components for maximum performance without having to recompile the engine.
+        modifyTheEngineItselfAndIntegrateWith3rdPartyLibraries:
+          titleText: Modify the engine itself and integrate with 3rd party libraries
+          bodyText:
+            Thanks to the modular structure and a straightforward build process of Godot
+            you can create your own engine modules. Gain every last drop of performance
+            or integrate with many 3rd party libraries with low-level C++ code.
+
+      simpleYetPowerful3DEngine:
+        titleText: Simple yet powerful 3D engine
+        supportBothHighAndLowEndDevices:
+          titleText: Support both high and low-end devices
+          bodyText: Make beautiful 3D games for a range of devices, starting
+            from desktop computers and ending with mid-range Android
+            phones. Powered by OpenGL, Godot allows your projects
+            to run on most modern GPUs, including integrated graphics.
+            <br><br>
+            <strong>New in 4.0:</strong> With the new Vulkan renderer
+            and a set of modern graphical features, bring your worlds
+            to life and harvest the power of gaming GPUs for your
+            benefit.
+        seamlesslyIntegrateWithYourAssetPipeline:
+          titleText: Seamlessly integrate with your asset pipeline
+          bodyText:
+            Bring your 3D models into your game world with a robust
+            importing pipeline. Take entire scenes — with animated models,
+            lighting, cameras, and physics objects, — and customize how
+            the engine views them. Modify your assets and see changes
+            in the engine immediately.
+            <br><br>
+            <strong>New in 4.0:</strong> Import Blender files directly
+            for fast iterations or keep using familiar glTF and FBX formats.
+        createAnimatedVideosAndPreRenderedCutscenesInEngine:
+          titleText: Create animated videos and pre-rendered cutscenes in engine
+          bodyText:
+            <strong>New in 4.0:</strong> With the new movie maker mode you
+            can record gameplay and scripted scenes from your project at
+            a stable framerate and guaranteed simulation speed. Together
+            with Godot's animation capabilities, make the most out of the
+            engine's visuals.
+
+      specialized2DWorkflowForGamesAndApps:
+        titleText: Specialized 2D workflow for games and apps
+        workWithReal2DAndPixelBasedUnitSystems:
+          titleText: Work with real 2D and pixel-based unit system
+          bodyText:
+            Thanks to a dedicated 2D pipeline you can forget about Z axis,
+            and simplify your game logic. Think in pixels and screen coordinates,
+            while the engine does the rest.
+        saveTimeCreating2DWorldsWithATileMapEditor:
+          titleText: Save time creating 2D worlds with a tile map editor
+          bodyText:
+            Whether you want procedural generation or a meticulously hand-crafted
+            level, with Godot's built-in tile map editor you can achieve every goal.
+            Import a sprite and convert it into a database of building blocks for
+            your 2D worlds.
+        masterUsabilityWithAFlexibleGUISystem:
+          titleText: Master usability with a flexible GUI System
+          bodyText:
+            Build scalable and adaptive user interfaces with Godot's unique
+            GUI system. Created specifically to power layouts common to games,
+            it is also capable of handling complex UI applications and tools.
+            <br><br>
+            <em>For an example of what Godot's UI system is capable of see the Godot editor itself!</em>
+
+      crossPlatformSupport:
+        titleText: Cross-platform support with one project
+        deliverYourGameToDesktopAndMobile:
+          titleText: Deliver your game to desktop and mobile
+          bodyText: Develop and publish your project on any modern desktop platform.
+            Let everyone play your game by deploying to web and mobile.
+            Make your game handle various forms of inputs and share the same
+            project between every release.
+        testDirectlyOnYourTargetDevice:
+          titleText: Test directly on your target device
+          bodyText:
+            <strong>New in 4.0:</strong> Iterate on real hardware, or with
+            an emulator by deploying your game directly to the target device
+            over SSH. Run any project on a mobile device, on another desktop,
+            or on your favorite Linux-based handheld with full debug and inspect
+            capabilities.
+        partnerWithAPublisherToTargetConsoles:
+          titleText: Partner with a publisher to target consoles
+          bodyText:
+            If you want to release to a console, you can find several
+            3rd party publishers which specialize on that. Godot games
+            can run on any modern hardware, all you need to worry about
+            is your performance and controls.
+
+      completelyOpenAndFree:
+        titleText: Completely open and free
+        downloadAndCreateWithNoContractsOrHiddenFees:
+          titleText: Download and create with no contracts or hidden fees
+          bodyText:
+            Godot is free under the MIT license. This means you don't owe
+            us anything (other than a friendly mention), and can do with your
+            project or even the engine itself whatever you want. Build your game
+            or build your own engine on top of it — it's all in your hands.
+        findTheLogicBehindAnySystemInAnOpenSourceCodebase:
+          titleText: Find the logic behind any system in an open source codebase
+          bodyText:
+            No need to wait for a support team to respond when you can read
+            the source code. Godot is an open book, and you can figure out everything
+            that is not yet documented after a single <code>git checkout</code>.
+            If you find and fix an issue, we will appreciate a PR upstream too.
+
+      button:
+        viewACompleteListOfFeatures: View a complete list of features
+
+    showreel:
+      titleText: Choice of many developers
+      bodyText: Watch our annual showreel videos to see more examples of projects using Godot!
+
+    readyToStart:
+      titleText: Ready to start?
+      downloadGodot4Text: Download the <strong>latest version of Godot 4</strong> right now and begin your creative journey!
+      downloadGodot3Text: Want to stick to the <strong>true and trusted Godot 3</strong>? Download the long-term support version!
+
+  community:
+    header:
+      titleText: Community
+      subTitleText:
+        Godot has a very active community across multiple channels.<br>
+        By joining Godot communities, you agree to follow Godot's <a href="/code-of-conduct">Code of Conduct</a>.
+
+    events:
+      titleText: Events
+      subtitleText: Upcoming community and past events.
+
+    officialCommunities:
+      titleText: Official communities
+      godotForum:
+        titleText: Godot Forum
+        bodyText: A place for the Godot community to meet, ask questions, share their work, and provide help to other users.
+      discord:
+        titleText: Discord
+        bodyText: A vibrant community for discussion, user support, showcases... and custom emoji!
+      reddit:
+        titleText: Reddit
+        bodyText: A community for discussion and support in development with the game engine.
+      facebook:
+        titleText: Facebook
+        bodyText: Large community for discussions around Godot.
+
+    officialSocialNetworks:
+      titleText: Official social networks
+      twitter:
+        titleText: Twitter
+        bodyText: Get small bits of development news.
+      mastodon:
+        titleText: Mastodon
+        bodyText: Connect with us in the Fediverse.
+      youtube:
+        titleText: YouTube
+        bodyText: Channel for official Godot videos.
+
+    userSupportedCommunities:
+      titleText: User-supported communities
+      forums:
+        titleText: Forums
+        bodyText: Community forum for all Godot developers.
+      userGroups:
+        titleText: User groups
+        bodyText: Find local Godot user groups run by community members.
+      tutorials:
+        titleText: Tutorials
+        bodyText: Find tutorials and guides written by the community.
+      matrix:
+        titleText: Matrix
+        bodyText: Libre decentralized chat with advanced features, IRC compatible.
+
+    lookingToContribute:
+      titleText: Looking to contribute?
+      godotContributorsChat:
+        titleText: Godot Contributors Chat
+        bodyText: Chat for engine contributors and developers based on Rocket.Chat.
+      github:
+        titleText: GitHub
+        bodyText: Send bug reports here. To request features, use the {{ .link }} repository instead.
+
+  events:
+    header:
+      titleText: Events
+      subtitleText:
+        You can meet Godot developers at various professional and casual events.<br/>
+        Sometimes our team also organizes meetups and conferences.
+    upcomingEvents:
+      titleText: Upcoming events
+      subtitleText: There are currently no future events planned.
+    pastEvents:
+      titleText: Past events
+      subtitleText: There are currently no past events.
+    eventDetails:
+      titleText: Event details
+      imgAlt: "{{ .eventName }} event banner"
+      date: "Date:"
+      location: "Location:"
+      entranceFee: "Entrance fee:"
+      registration: "Registration:"
+      website: "Website:"
+      showOnMap: Show on map
+
+  userGroups:
+    header:
+      titleText: User Groups
+      subtitleText:
+        Some community members manage local Godot user groups.
+        Anyone is welcome to join or create a local community!
+    communityMap:
+      titleText: Community map
+      subtitleText:
+        This map lists all physical venues and online community hosted by community members.
+        Scroll down to view a list of online communities.
+      physicalCommunity: Physical community
+      onlineCommunity: Online community
+    submitYourCommunityText:
+      If you run a local community and would like to have it listed here,
+      please send an email to {{ .link }}.
+    country:
+      algeria: Algeria
+      argentina: Argentina
+      brazil: Brazil
+      belgium: Belgium
+      bulgaria: Bulgaria
+      canada: Canada
+      china: China
+      croatia: Croatia
+      czechRepublicAndSlovakia: Czech Republic and Slovakia
+      ecuador: Ecuador
+      egypt: Egypt
+      finland: Finland
+      franceOrFrenchSpeaking: France or French-speaking
+      germany: Germany
+      india: India
+      indonesia: Indonesia
+      italy: Italy
+      iran: Iran
+      iraq: Iraq
+      israel: Israel
+      japan: Japan
+      latvia: Latvia
+      pakistan: Pakistan
+      philippines: Philippines
+      poland: Poland
+      portugal: Portugal
+      russia: Russia
+      saudiArabia: Saudi Arabia
+      southKorea: South Korea
+      spain: Spain
+      sweden: Sweden
+      taiwan: Taiwan
+      turkey: Turkey
+      unitedStates: United States
+
+  showcase:
+    header:
+      titleText: Showcase
+      tab:
+        features: Features
+        showcase: Showcase
+    showreelVideos:
+      titleText: Showreel videos
+      subtitleText: "Every year, we make a series of videos highlighting the best games made with Godot. Here are the latest ones:"
+    madeWithGodot: Made with Godot
+    appsAndTools: Apps & Tools
+    comingSoon: Coming Soon
+    submitYourGameText: <strong>Interested in showcasing your published game on this page?</strong> Use {{ .linkOpen }}this form{{ .linkClose }}
+
+  blog:
+    header:
+      titleText: Blog
+      searchInput:
+        placeholderText: Search articles
+        altText: Search
+    categories: Categories
+    showAllCategories: Show all categories
+    category:
+      all: All
+      events: Events
+      news: News
+      preRelease: Pre-release
+      progressReport: Progress Report
+      release: Release
+      showcase: Showcase
+
+  download:
+    header:
+      downloadGodotFor: Download Godot {{ .version }} for {{ .platform }}
+      forTheLTSVersionDownloadGodot: For the LTS version, {{ .linkOpen }}Download Godot {{ .version }}{{ .linkClose }}.
+      forTheLatestVersionDownloadGodot: For the latest version, {{ .linkOpen }}Download Godot {{ .version }}{{ .linkClose }}.
+      youCanFindPreviousReleasesInTheDownloadArchive: You can find previous releases in the {{ .linkOpen }}download archive{{ .linkClose }}.
+      lookingForOtherPlatformsSeeBellow: Looking for other platforms? {{ .linkOpen }}See below!{{ .linkClose }}
+    c#Support: C# support
+    requirements:
+      titleText: Requirements
+      v4:
+        recommendedText: <strong>Recommended:</strong> Vulkan 1.0 compatible hardware
+        minimalText: <strong>Minimal:</strong> OpenGL 3.3 / OpenGL ES 3.0 compatible hardware
+      v3:
+        minimalText: OpenGL 2.1 / OpenGL ES 2.0 compatible hardware
+        netSDKOrTheMonoSDK: "{{ .netLinkOpen }}.NET SDK{{ .netLinkClose }} or the {{ .monoLinkOpen }}Mono SDK{{ .monoLinkClose }}"
+      additionRequirementsText: "Additional requirements for the .NET version:"
+    allDownloads:
+      titleText: All downloads
+    instructions:
+      titleText: Instructions
+    digitalPlatforms:
+      titleText: "Godot Engine is also available on digital distribution platforms:"
+      c#SupportDisclaimerText: Digital store versions <strong>do not</strong> include .NET/C# support.
+      steamStableBranchContextText: <strong>Steam</strong> version is available as a <code>stable-3.5</code> beta branch.
+      steamTemplatesContextText: <strong>Steam</strong> version includes full set of export templates and demo projects.
+    supportedPlatforms:
+      titleText: Supported platforms
+      linuxServer: Linux Server
+    otherGodotDownloads:
+      titleText: Other Godot downloads
+      godotDemoProjects:
+        titleText: Godot demo projects
+        bodyText: Give a try to demo projects showcasing some of the engine features.
+        demoProjectsOnGithub: Demo projects on GitHub
+        demoProjectsInAssetLibrary: Demo projects in Asset Library
+      aarLibraryForAndroid:
+        titleText: AAR library for Android
+        bodyText: Use it to develop Android plugins in Java or Kotlin using the Godot API.
+      blenderESCNExporter:
+        titleText: Blender ESCN exporter
+        bodyText:
+          Blender add-on to export scenes to Godot's scene format directly.<br>
+          Godot {{ .version }} also supports glTF 2.0 and OBJ.
+        godotBlenderExporter: Godot Blender exporter
+    unstableDownloads:
+      previewBuilds:
+        titleText: Preview builds
+        bodyText:
+          Godot is continuously being developed with several minor releases
+          being published every year. To ensure high quality and stability
+          of each release, we also publish preview builds at various stages of
+          development.
+        helpTextNewFeaturesText:
+          Help test Godot's new features or be the first to benefit from upcoming
+          improvements by downloading a preview build!
+        seeLatestPreviewBuilds: See latest preview builds
+      openSource:
+        titleText: Don't want to wait for official releases? You can compile Godot from source!
+        getTheSourceCodeFromTheGithubProjectPage: Get the source code from the {{ .linkOpen }}GitHub project page{{ .linkClose }}.
+        followTheInstructionsFromTheOfficialDocumentation: Follow the instructions from the {{ .linkOpen }}official documentation{{ .linkClose }}.
+    modal:
+      thankYou:
+        godotIsDownloading: Godot is downloading!
+        considerDonatingText: Godot exists thanks to people like you! Consider supporting continued development of the engine with a donation.
+        thankYou: Thank you!
+        reading:
+          titleText: "If this is your first time using the Godot Engine, take a look at our beginner resources:"
+          comprehensiveTutorialText: A comprehensive {{ .linkOpen }}Step by Step tutorial{{ .linkClose }} for 2D and 3D.
+          demoProjectsCollectionText: A collection of {{ .linkOpen }}official demo projects{{ .linkClose }} showcasing some of the engine features.
+
+    redirect:
+      titleText: Redirecting...
+      bodyText: If you are not being redirected automatically, {{ .linkOpen }}click here{{ .linkClose }}.
+
+  downloadArchive:
+    header:
+      titleText: Download<br>Godot {{ .version }} {{ .flavor }}
+      subtitleText: Looking for another version? {{ .linkOpen }}Open the archive index!{{ .linkClose }}
+
+  downloadArchiveList:
+    hero:
+      titleText: Godot archive
+      subtitleText: Download any officially published release of the engine.
+    officialReleases: Official releases
+    currentState: "Current state:"
+
+  downloadPreview:
+    header:
+      titleText: Download Godot preview builds
+      subtitleText:
+        Help test the upcoming release of the engine,<br/>
+        and be the first to benefit from new features.
+      lookingForOtherPlatformsText: Looking for the stable version? {{ .linkOpen }}See below!{{ .linkClose }}
+    latestPreviewBuilds: Latest preview builds
+    needAStableVersion: Need a stable version?
+
+  donate:
+    paypal:
+      titleText: Paypal
+      bodyText: The Godot Foundation accepts donations via PayPal. Funds may be directed to <strong>{{ .paypal }}</strong>.
+      button:
+        oneTimeDonation: One-time donation
+    developmentFund:
+      titleText: Development Fund
+      bodyText: Join the Development Fund and make a recurrent donation to support core Godot development.
+      button:
+        recurringDonation: Recurring donation
+    bankTransfer:
+      titleText: Bank Transfer
+      bodyText:
+        If you are sending from the EU, or if you want to make a large donation, you can make a direct bank transfer.<br>
+        For questions, contact {{ .email }}.
+      sendPaymentsTo: "Send payments to:"
+      bicSwiftCode: "BIC/Swift code:"
+      bank: "Bank:"
+    foundation:
+      bodyText:
+        Your donations will be received by the {{ .godotFoundation }}, a non-profit organization that manages the funds
+        for the Godot project. Whichever method you choose, the funds will be used to support Godot development.
+
+  about:
+    head:
+      contact: Contact
+      codeOfConduct: Code of Conduct
+      privacy: Privacy
+      governance: Governance
+      teams: Teams
+      license: License
+
+  maintenance:
+    head:
+      titleText: Website under maintenance
+
+partials:
+  sponsors:
+    titleText: "Godot is sponsored by:"
+    patron: Patron
+    sponsorPlatinum: Sponsor Platinum
+    sponsorGold: Sponsor Gold
+    sponsorSilver: Sponsor Silver
+    sponsorProjectText: If you want to sponsor the project, please write to {{ .email }}.
+
+  paginator:
+    previous: Previous
+    next: Next
+
+  outdatedNotice:
+    bodyText:
+      This article is from <strong>{{ .date }}</strong>, some of its contents might be outdated and no longer accurate.<br>
+      You can find up-to-date information about the engine in the {{ .linkOpen }}official documentation{{ .linkClose }}.
+
+  archiveListItem:
+    link:
+      download:
+        titleText: Open downloads page
+        contentText: Download
+      changelog:
+        titleText: View complete changelog
+        contentText: Changelog
+      news:
+        titleText: Read release announcement
+        contentText: News
+
+  footer:
+    copyRightText: © 2007-{{ .year }} Juan Linietsky, Ariel Manzur and {{ .linkOpen }}contributors{{ .linkClose }}.
+    hostedByTheGodotFoundation: Hosted by the {{ .linkOpen }}Godot Foundation{{ .linkClose }}.
+    websiteSourceCodeOnGithub: Website {{ .linkOpen }}source code on GitHub{{ .linkClose }}.
+    getGodot:
+      titleText: Get Godot
+      download: Download
+    publicRelations:
+      titleText: Public Relations
+      communitiesAndEvents: Communities and Events
+      pressKit: Press Kit
+    aboutGodot:
+      titleText: About Godot
+      education: Education
+      license: License
+      codeOfConduct: Code of Conduct
+      privacyPolicy: Privacy Policy
+    projectTeam:
+      titleText: Project Team
+      governance: Governance
+      teams: Teams
+    extraResources:
+      titleText: Extra Resources
+      assetLibrary: Asset Library
+      documentation: Documentation
+      codeRepository: Code Repository
+    contactUs: Contact us
+
+  downloadVersion:
+    showAllDownloads: Show all downloads
+    hideAllDownloads: Hide all downloads
+
+  prereleaseNotice:
+    contentText:
+      While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable,
+      this is by definition <strong>a pre-release piece of software</strong>. Be sure to make frequent backups, or use a
+      version control system such as Git, to preserve your projects in a case of corruption or data loss.
+
+  downloadCard:
+    downloadGodot: Download Godot {{ .name }} {{ .flavor }}
+    standard: Standard
+    exportTemplatesAndOtherDownloads: Export templates and other downloads
+    makeADonation: Make a Donation
+
+  platforms:
+    supportedPlatforms: Supported platforms
+
+  versionCard:
+    releaseNotesAreNotReadyText:
+      Release notes are not ready yet. You can check the complete list of changes using our interactive changelog.
+    link:
+      readMore: Read more
+      viewChangelog: View changelog
+    standard: Standard
+    monoSupportNoteText: .NET builds offer support for C# as a scripting language.
+
+common:
+  button:
+    downloadLatest:
+      titleText: Download the latest version of Godot 4
+      contentText: Download Latest
+    downloadLts:
+      titleText: Download the long-term support version of Godot 3
+      contentText: Download LTS
+    learnMore: Learn more
+    latestNews: Latest news
+    moreNews: More news
+    donate: Donate
+    makeADonation: Make a Donation
+
+  webEditor: Web Editor
+  features: Features
+  showcase: Showcase
+  blog: Blog
+  community: Community
+  about: About
+  assets: Assets
+  download: Download
+  learn: Learn
+  contribute: Contribute
+  donate: Donate
+  documentation: Documentation
+

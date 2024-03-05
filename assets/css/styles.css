@@ -1,0 +1,182 @@
+:root {
+  --pagination-active-color: #284786;
+
+  --tab-active-color: var(--primary-color);
+  --button-background-color: #ffffff;
+  --card-background-color: #ffffff;
+
+  --code-background-color: #dcdfe2;
+  --codeblock-background-color: #282b2e;
+  --footer-background-color: #414d69;
+  --head-background-color: var(--primary-color);
+  --navbar-background-color: #ffffff;
+  --warning-background-color: #ffedcc;
+
+  --big-button-color: #478cbf;
+  --button-card-background-color: #d7dee6;
+  --platform-code-background-color: #e5ebf1;
+  --accent-color: #f57389;
+
+  --background-color: #d5daea;
+  --base-color: #eff1f5;
+  --codeblock-color: #e0e2e4;
+  --dark-color: #333f67;
+  --footer-color: rgb(175, 180, 220);
+  --fund-color: #ef6767;
+
+  --link-color: hsl(206, 58%, 50%);
+  --primary-color: hsl(206, 58%, 52%);
+
+  --warning-color: #404040;
+  --fund-color-faint: #ff9d9d;
+  --fund-color-hl: #e53e3e;
+  color-scheme: light dark;
+  --primary-color-subdued: #1f3c5e;
+  --base-color-text: #4a5365;
+  --dark-color-text: lightsteelblue;
+
+  --primary-color-text: #d4edff;
+
+  --secondary-color-text: #546b99;
+  --base-color-text-hl: #454b59;
+  --dark-color-text-hl: #d4e3f6;
+
+  --primary-color-text-hl: white;
+  --base-color-text-subtitle: #778ab3;
+  --base-color-text-subtitle-date: #9aacd2;
+  --base-color-text-title: #546b99;
+  --dark-color-text-title: white;
+  --primary-color-text-title: white;
+  --transparent-cover: rgb(51, 63, 103, 0.4);
+  --transparent-cover-darker: rgba(51, 63, 103, 0.9);
+  --table-divider-color: rgba(0, 0, 0, 0.1);
+  --teams-even-color: rgba(160, 160, 160, 0.05);
+  --default-font-family: system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", ui-sans-serif, sans-serif;
+  --header-font-family: "Montserrat", "Montserrat-fallback";
+  --card-footer-color: #eeeeee;
+
+  --feature-heading-color: #2d76ad;
+
+  --header-height: 4rem;
+  --download-hero-color: hsla(0, 0%, 100%, 0.9);
+  --text-l: 2.25rem;
+
+  --footer-link-color: rgb(200, 210, 250);
+  --navbar-link-color: var(--dark-color);
+  --navbar-link-current-color: var(--primary-color);
+  --footer-link-underline-color: rgba(200, 210, 250, 0.3);
+  --text-m: 1.75rem;
+  --download-main-details-color: #f1f1f1;
+
+  --download-mono-background-color: rgb(43 58 76 / 82%);
+  --platform-note-background-color: rgb(48 86 210 / 9%);
+
+  --feature-note-color: #e53e3e;
+  --teams-odd-color: rgba(160, 160, 160, 0.15);
+  --page-padding: 1rem;
+
+  --max-page-wrap-width: 1200px;
+
+  --post-recent-highlight-color: #ea580c;
+  --text-s: 1.375rem;
+
+  --base-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  --teams-subteams-color: rgba(255, 255, 255, 0.4);
+  --download-table-color: rgba(22, 22, 22, 0.08);
+  --hero-text-background-color: #1a1a1a7a;
+  --placeholder-text-color: #7a87a2;
+
+  --link-underline-color: hsla(206, 58%, 50%, 0.3);
+  --text-xl: 2.625rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pagination-active-color: #4080ff;
+    --tab-active-color: white;
+
+    --button-background-color: #333639;
+    --card-background-color: #333639;
+    --code-background-color: #333639;
+    --codeblock-background-color: #333639;
+    --footer-background-color: #333639;
+    --head-background-color: #232f57;
+
+    --navbar-background-color: #333639;
+    --warning-background-color: #444033;
+    --big-button-color: #478cbf;
+    --button-card-background-color: #55595e;
+
+    --platform-code-background-color: #282b2e;
+    --accent-color: #5b5491;
+    --background-color: #202326;
+    --base-color: #25282b;
+    --codeblock-color: hsla(0, 0%, 100%, 0.9);
+    --dark-color: #263256;
+
+    --footer-color: hsla(0, 0%, 100%, 0.625);
+    --fund-color: #ef6767;
+
+    --link-color: hsl(200, 60%, 70%);
+    --primary-color: #4d9fdc;
+    --warning-color: #ffeeaf;
+    --fund-color-faint: #ef6767;
+    --fund-color-hl: #e53e3e;
+    --primary-color-subdued: #1f3c5e;
+    --base-color-text: hsla(0, 0%, 100%, 0.9);
+
+    --dark-color-text: lightsteelblue;
+
+    --primary-color-text: #d4edff;
+    --secondary-color-text: #a6a6a6;
+    --base-color-text-hl: hsla(0, 0%, 100%, 1);
+
+    --dark-color-text-hl: #d4e3f6;
+    --primary-color-text-hl: white;
+    --base-color-text-subtitle: hsla(200, 00%, 100%, 0.7);
+    --base-color-text-subtitle-date: hsla(200, 00%, 100%, 0.5);
+    --base-color-text-title: hsla(200, 00%, 100%, 0.85);
+    --dark-color-text-title: white;
+    --primary-color-text-title: white;
+    --transparent-cover: rgb(51, 63, 103, 0.4);
+    --transparent-cover-darker: rgba(51, 63, 103, 0.9);
+    --table-divider-color: rgba(255, 255, 255, 0.1);
+    --teams-even-color: rgba(120, 120, 120, 0.05);
+    --card-footer-color: #505356;
+    --feature-heading-color: #57b3f8;
+
+    --download-hero-color: hsla(0, 0%, 100%, 0.9);
+    --footer-link-color: hsla(0, 0%, 100%, 0.85);
+    --navbar-link-color: hsla(0, 0%, 100%, 0.9);
+
+    --navbar-link-current-color: hsl(200, 100%, 80%);
+    --footer-link-underline-color: hsla(0, 0%, 100%, 0.25);
+    --download-main-details-color: #f1f1f1;
+    --download-mono-background-color: rgb(132 151 174 / 68%);
+    --platform-note-background-color: rgb(255 255 255 / 9%);
+    --feature-note-color: #ef6767;
+
+    --teams-odd-color: rgba(120, 120, 120, 0.15);
+    --post-recent-highlight-color: #fb923c;
+
+    --base-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    --teams-subteams-color: rgba(0, 0, 0, 0.2);
+
+    --download-table-color: rgba(0, 0, 0, 0.2);
+
+    --placeholder-text-color: #a6a6a6;
+    --link-underline-color: hsla(200, 60%, 70%, 0.3);
+  }
+
+  .dark-invert {
+    filter: invert(100%);
+  }
+
+  .dark-desaturate {
+    filter: saturate(0%);
+  }
+}

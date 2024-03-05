@@ -1,0 +1,41 @@
+{{ $version := . }}
+{{ $versionNumber := index (split $version.name ".") 0 }}
+
+<div id="digital-stores" class="card base-padding digital-stores">
+  <div>
+    <p>{{ T "page.download.digitalPlatforms.titleText" }}</p>
+
+    <div class="digital-store-list">
+      <a class="btn btn-digital-store" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
+        <div class="digital-store-logo">
+          <img src="/assets/download/itch_logo.svg" width="28" height="28" alt="">
+        </div>
+        <div class="digital-store-name">itch.io</div>
+      </a>
+      <a class="btn btn-digital-store" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
+        <div class="digital-store-logo">
+          <img src="/assets/download/steam_logo.svg" width="28" height="28" alt="">
+        </div>
+        <div class="digital-store-name">Steam</div>
+      </a>
+      {{ if eq $versionNumber "4" }}
+        <a class="btn btn-digital-store" href="https://store.epicgames.com/p/godot-engine"
+           title="Godot Engine on Epic Games Store">
+          <div class="digital-store-logo">
+            <img src="/assets/download/epic_logo.svg" width="28" height="28" alt="">
+          </div>
+          <div class="digital-store-name">EGS</div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+  <div class="digital-stores-notes">
+    <ul>
+      <li>{{ T "page.download.digitalPlatforms.c#SupportDisclaimerText" | safeHTML }}</li>
+      {{ if eq $versionNumber "3" }}
+        <li>{{ T "page.download.digitalPlatforms.steamStableBranchContextText" | safeHTML }}</li>
+        <li>{{ T "page.download.digitalPlatforms.steamTemplatesContextText" | safeHTML }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

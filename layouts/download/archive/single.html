@@ -1,0 +1,37 @@
+{{ define "head" }}
+  <style>
+    footer {
+      margin-top: 0;
+    }
+  </style>
+{{ end }}
+
+{{ define "main" }}
+  <main class="archive-page">
+    <div class="hero">
+      <div class="hero-wrapper">
+        <h1>
+          {{- T "page.downloadArchive.header.titleText" (dict
+          "version" .Params.name
+          "flavor" (printf "<span class='hero-version-flavor'>%s</span>" .Params.flavor)) | safeHTML
+          -}}
+        </h1>
+      </div>
+
+      <div class="other-platforms">
+        {{- T "page.downloadArchive.header.subtitleText" (dict
+        "linkOpen" (printf "<a href='%s'>" (relLangURL "download/archive/"))
+        "linkClose" "</a>") | safeHTML
+        -}}
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="padded" style="padding-top:0;margin-top:2rem">
+        <div class="preview-cards">
+          {{ partial "download/version-card.html" (dict "gCtx" $ "version" .Params ) }}
+        </div>
+      </div>
+    </div>
+  </main>
+{{ end }}

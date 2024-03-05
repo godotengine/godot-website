@@ -1,0 +1,47 @@
+/* Some styles come from common.css */
+
+.download-preview-page {
+  & .hero {
+    background-image: url('/assets/download/download-background-preview.webp');
+  }
+
+  & .hero-blurb {
+    color: var(--download-hero-color);
+  }
+
+  & .preview-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  & .stable-download {
+    align-items: center;
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 100%;
+    padding: 24px 24px 60px;
+    width: auto;
+
+    & h2 {
+      color: var(--dark-color-text-title);
+      font-weight: 600;
+      margin: 0 0 1rem;
+    }
+
+    & p {
+      color: var(--dark-color-text);
+    }
+  }
+}
+
+@container main (width < 900px) {
+  .download-preview-page {
+    & .stable-download {
+      padding: 20px;
+    }
+  }
+}

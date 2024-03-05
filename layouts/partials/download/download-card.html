@@ -1,0 +1,55 @@
+{{ $gCtx := .gCtx }}
+
+{{ $version := partial "_funcs/get-release-version" (dict "gCtx" $gCtx "name" .version "flavor" .release) }}
+{{ $releaseArticle := $gCtx.Site.GetPage $version.release_notes }}
+
+<div class="card card-download">
+  <a class="card-download-link" href="{{ relLangURL "download/archive/" }}/{{ $version.name }}-{{ $version.flavor }}">
+    {{- T "partials.downloadCard.downloadGodot" (dict "name" $version.name "flavor" $version.flavor) -}}
+  </a>
+
+  <div class="card-download-details">
+    {{ with $releaseArticle }}
+      <img class="lightbox-ignore" src="{{ .Params.image }}" alt=""/>
+    {{ end }}
+
+    <div class="card-download-platforms">
+
+      {{ $platforms := slice "linux" "macos" "windows" }}
+      {{ $primaryPlatforms := partial "_funcs/get-primary-download-platforms.html" (dict "gCtx" $gCtx "version" $version "platforms" $platforms "host" "github_builds") }}
+
+      {{ range $platform := $primaryPlatforms }}
+        <div class="download-platform">
+          <img width="24" height="24" src="/assets/images/platforms/{{ replace $platform.name "_" "-" }}.svg"
+               alt="{{ $platform.title }}" class="lightbox-ignore"/>
+          {{ $platform.title }}
+        </div>
+
+        <a href="{{ $platform.regularLink }}" class="btn btn-download btn-download-primary">
+          <div class="download-title">{{- T "partials.downloadCard.standard" -}}</div>
+        </a>
+
+        {{ if eq $platform.monoLink "#" }}
+          <div></div>
+        {{ else }}
+          <a href="{{ $platform.monoLink }}"
+             class="btn btn-download btn-download-primary btn-download-primary--mono">
+            <div class="download-title">
+              .NET
+            </div>
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="card-download-sublinks">
+    <a class="card-download-other"
+       href="{{ relLangURL "download/archive/" }}{{ $version.name }}-{{ $version.flavor }}">
+      {{- T "partials.downloadCard.exportTemplatesAndOtherDownloads" -}}
+    </a>
+    <a class="card-download-donate" href="{{ relLangURL "donate/" }}">
+      {{- T "partials.downloadCard.makeADonation" -}}
+    </a>
+  </div>
+</div>

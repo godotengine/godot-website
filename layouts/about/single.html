@@ -1,0 +1,57 @@
+{{ define "main" }}
+  <main class="about-page">
+    <div class="head">
+      <div class="wrapper flex eqsize" style="flex-direction: column">
+        <div class="main">
+          <h1 class="intro-title">{{ .Params.header_text }}</h1>
+        </div>
+
+        <div id="tabs" class="tabs">
+          <a id="tabs-contact" href="{{ relLangURL "contact/" }}"
+             class="title-font {{ if eq .Params.current_tab "contact" }} active {{ end }}">
+            {{ T "page.about.head.contact" }}
+          </a>
+          <a id="tabs-code-of-conduct" href="{{ relLangURL "code-of-conduct/" }}"
+             class="title-font {{ if eq .Params.current_tab "code-of-conduct" }} active {{ end }}">
+            {{ T "page.about.head.codeOfConduct" }}
+          </a>
+          <a id="tabs-privacy-policy" href="{{ relLangURL "privacy-policy/" }}"
+             class="title-font {{ if eq .Params.current_tab "privacy-policy" }} active {{ end }}">
+            {{ T "page.about.head.privacy" }}
+          </a>
+          <a id="tabs-governance" href="{{ relLangURL "governance/" }}"
+             class="title-font {{ if eq .Params.current_tab "governance" }} active {{ end }}">
+            {{ T "page.about.head.governance" }}
+          </a>
+          <a id="tabs-teams" href="{{ relLangURL "teams/" }}"
+             class="title-font {{ if eq .Params.current_tab "teams" }} active {{ end }}">
+            {{ T "page.about.head.teams" }}
+          </a>
+          <a id="tabs-license" href="{{ relLangURL "license/" }}"
+             class="title-font {{ if eq .Params.current_tab "license" }} active {{ end }}">
+            {{ T "page.about.head.license" }}
+          </a>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            (function scrollToCurrentTab() {
+              const tabs = document.getElementById('tabs');
+              const currentTab = document.getElementById('tabs-{{ .Params.current_tab }}')
+              const padding = 16;
+              const reducedMotionIsActive = window.matchMedia('(prefers-reduced-motion)').matches;
+              tabs.scrollTo({
+                left: currentTab.offsetLeft - padding,
+                behavior: reducedMotionIsActive ? 'instant' : 'smooth'
+              })
+            })();
+          });
+        </script>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container-text">
+        {{ .Content }}
+      </div>
+    </div>
+  </main>
+{{ end }}

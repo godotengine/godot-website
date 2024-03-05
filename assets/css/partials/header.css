@@ -1,0 +1,266 @@
+header {
+  /* Show on top of GodotCon banner (if any). */
+  background-color: var(--navbar-background-color);
+  box-shadow: var(--base-shadow);
+  container-name: main;
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  /*Fix focus border*/
+
+  & a {
+    outline-offset: -2px;
+  }
+
+  & > div {
+    height: var(--header-height);
+    margin-inline: auto;
+    max-width: var(--max-page-wrap-width);
+  }
+
+  & #nav_head {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+
+    & #logo-link {
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  & nav {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+
+    & a {
+      color: var(--navbar-link-color);
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      font-weight: bold;
+      height: 100%;
+      padding: 0 1rem;
+      place-content: center;
+      text-decoration: none;
+    }
+
+    & li {
+      height: 100%;
+      margin: 0;
+
+      &:hover, & #logo-link {
+        background-color: hsla(0, 0%, 50%, 0.1);
+      }
+
+      &.active > a {
+        color: var(--navbar-link-current-color);
+      }
+    }
+
+    & ul {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+
+      & > :first-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  & .fund {
+    margin-right: -1rem;
+
+    & > a {
+      color: var(--fund-color) !important;
+
+      &:hover {
+        color: var(--fund-color-hl) !important;
+      }
+    }
+
+    &.active > a {
+      color: var(--fund-color-hl);
+    }
+  }
+
+  & #nav_toggle_cb,
+  & #nav_toggle_btn {
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    /* Prevent double-clicking the button from highlighting the icon as selected text on desktop. */
+    user-select: none;
+  }
+}
+
+@container main (width < 1200px) {
+  header {
+    & > div {
+      flex-direction: column;
+      height: auto;
+      contain: content;
+    }
+
+    & #nav_head {
+      width: 100%;
+
+      > a {
+        margin-left: 1rem;
+      }
+    }
+
+    & nav {
+      display: none;
+
+      & a {
+        padding: 1rem;
+      }
+
+      & ul {
+        align-items: flex-start;
+        flex-direction: column;
+
+        & li {
+          width: 100%;
+          align-items: start;
+
+          & .fund {
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    & #nav_toggle_btn {
+      display: block;
+      padding: 1.25rem;
+
+      &:hover {
+        background-color: hsla(0, 0%, 50%, 0.15);
+      }
+
+      &:active {
+        background-color: hsla(0, 0%, 50%, 0.25);
+      }
+    }
+
+    & #nav_toggle_cb:checked ~ div #nav {
+      display: block;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  header {
+    /* Use logo with white text for dark navbar. */
+
+    & .nav-logo {
+      display: none;
+
+      &.dark-logo {
+        display: initial;
+      }
+    }
+
+    /* Invert hamburger menu button on mobile to be visible on dark navbar. */
+
+    & #nav_toggle_btn {
+      filter: invert(100%) saturate(0%) brightness(120%);
+    }
+  }
+}
+
+
+/*-------Transparent Header-------*/
+header[data-transparent="true"] {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: rgb(134 144 154 / 15%);
+  box-shadow: none;
+  margin-bottom: -70px;
+
+  & nav {
+    & a {
+      color: white;
+    }
+  }
+
+  & .fund {
+    height: initial;
+    margin-right: 0;
+
+    & > a {
+      padding-right: 1rem
+    }
+  }
+
+  & .nav-logo {
+    display: none;
+
+    &.dark-logo {
+      display: inline;
+    }
+  }
+
+  & #nav_toggle_btn {
+    filter: invert(100%) saturate(0%) brightness(120%);
+  }
+}
+
+@container main (width >= 1200px) {
+  header[data-transparent="true"] nav .fund a {
+    color: var(--fund-color);
+    background-color: var(--base-color);
+    border-radius: 9px;
+    box-shadow: inset 0 0 0 2px var(--fund-color);
+    padding: 0.7rem;
+  }
+}
+
+@container main (width < 1200px) {
+  header[data-transparent="true"] {
+    & nav .fund a {
+      background-color: transparent;
+    }
+
+    & input#nav_toggle_cb:checked ~ div {
+      background-color: var(--navbar-background-color);
+    }
+  }
+
+  @media header (prefers-color-scheme: light) {
+  header[data-transparent="true"] {
+    & nav a {
+      color: var(--navbar-link-color);
+    }
+
+    & input#nav_toggle_cb:checked ~ div #nav_head #nav_toggle_btn {
+      filter: none;
+    }
+
+    & input#nav_toggle_cb:checked ~ div #nav_head .nav-logo {
+      display: inline;
+    }
+
+    & input#nav_toggle_cb:checked ~ div #nav_head .nav-logo.dark-logo {
+      display: none;
+    }
+  }
+}
+}
+

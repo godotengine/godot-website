@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <main class="events-page">
+    <div class="head">
+      <div class="wrapper flex eqsize responsive">
+        <div class="main">
+          <h1 class="intro-title">{{ T "page.events.header.titleText" }}</h1>
+          <p class="small">{{ T "page.events.header.subtitleText" | safeHTML }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h2 class="upcoming" id="upcoming">{{ T "page.events.upcomingEvents.titleText" }}</h2>
+
+      {{ $upcomingEvents := (where .Pages "Params.date_passed" "!=" true).ByDate.Reverse }}
+      {{ with $upcomingEvents }}
+        {{ partial "events/events-list.html" . }}
+      {{ else }}
+        <p>{{ T "page.events.upcomingEvents.subtitleText" }}</p>
+      {{ end }}
+
+      <h2 class="past" id="past">{{ T "page.events.pastEvents.titleText" }}</h2>
+
+      {{ $pastEvents := (where .Pages "Params.date_passed" true).ByDate.Reverse }}
+      {{ with $pastEvents }}
+        {{ partial "events/events-list.html" . }}
+      {{ else }}
+        <p>{{ T "page.events.pastEvents.titleText" }}</p>
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

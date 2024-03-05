@@ -1,0 +1,21 @@
+{{ $shouldShowOutdatedNotice := ne .Params.no_outdated_notice true }}
+
+{{ if $shouldShowOutdatedNotice }}
+  {{ $isValidCategory := gt (len (.Params.categories | intersect .Site.Params.articleOutdatedWarning.relevantCategories)) 0 }}
+  {{ $isOutdated := lt .Params.date (partial "_funcs/get-outdated-article-treshold.html" .) }}
+
+  {{ if and $isValidCategory $isOutdated }}
+    <div class="card card-warning">
+      <p>
+        {{ with .Params.outdated_notice_text }}
+          {{ . }}
+        {{ else }}
+          {{ $date := time.Format ":date_long" .Params.date }}
+          {{ T "partials.outdatedNotice.bodyText"
+          (dict "date" $date "linkOpen" "<a href='https://docs.godotengine.org/en/stable/'>" "linkClose" "</a>") | safeHTML
+          }}
+        {{ end }}
+      </p>
+    </div>
+  {{ end }}
+{{ end }}

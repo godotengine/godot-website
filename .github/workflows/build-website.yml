@@ -5,47 +5,67 @@ on:
   push:
     branches: [ master ]
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 # Make sure jobs cannot overlap (e.g. one from push and one from schedule).
 concurrency:
   group: published-ci
   cancel-in-progress: true
 
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     name: Build and deploy to the published branch
     runs-on: ubuntu-latest
-
+    env:
+      HUGO_VERSION: 0.123.0
     steps:
-    - uses: actions/checkout@v3
-      with:
-        ref: 'master'
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-    # Configure the build environment.
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: 'master'
+          submodules: recursive
+          fetch-depth: 0
 
-    - name: Install Ruby 3.1
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1'
-        # Runs 'bundle install' and caches installed gems automatically
-        bundler-cache: true
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
 
-    - name: Install Minify
-      run: sudo apt-get update && sudo apt-get install minify
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
-    # Build the website.
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: make build
 
-    - name: Build the static website
-      run: bundle exec jekyll build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
 
-    # Publish the build results
-
-    - name: Deploy to the published branch 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: published
-        folder: _site
-        # Configure the commit author.
-        git-config-name: 'Godot Organization'
-        git-config-email: '<>'
-        # Remove outdated files from the target directory.
-        clean: true
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3

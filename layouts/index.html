@@ -1,0 +1,282 @@
+{{ define "head" }}
+  <script>
+    /**
+     * @typedef Project
+     * @type {object}
+     * @property {string} game
+     * @property {string} by
+     * @property {string} url
+     * @property {string} image
+     */
+
+    /** Project[] */
+    const featuredProjects = [
+      {{ range partialCached "_funcs/featured-showcase-pages.html" $ }}
+      {
+        game: '{{ .Params.title }}',
+        by: '{{ .Params.author }}',
+        url: '{{ .Params.url }}',
+        image: '{{ (resources.Get (index .Params.gallery 0)).RelPermalink }}',
+
+      },
+      {{ end }}
+    ];
+    const featuredProject = featuredProjects[Math.floor(Math.random() * featuredProjects.length)];
+    const imageLink = featuredProject.image;
+    const imageFormat = imageLink.split('.').pop();
+
+    (function preloadHeroImage() {
+      const template = document.createElement('template');
+      template.innerHTML = `<link rel="preload" as="image" href="${featuredProject.image}" fetchpriority="high" type="image/${imageFormat}"/>`
+      document.head.appendChild(template.content.firstChild);
+    })();
+
+    // Used for removing img background after loading, this is necessary to avoid edge color bleeding
+    function removeImgBackground(el) {
+      el.style.background = 'initial';
+    }
+  </script>
+{{ end }}
+
+{{ define "header" }}
+  {{ partialCached "transparent-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="index-page">
+    {{/* ----------Hero Download----------*/}}
+    <section class="hero">
+      <div id="hero-background-image" class="background-image" style="contain: content;"></div>
+      <div class="hero-wrapper wrapper">
+        <div class="copy">
+          <h1>{{ T "page.home.header.titleText" | safeHTML }}</h1>
+          <p>{{ T "page.home.header.subtitleText" }}</p>
+
+          <div class="main-download">
+            <div class="main-download-links">
+              {{ partialCached "common/download-latest-button.html" . }}
+              {{ partialCached "common/download-lts-button.html" . }}
+            </div>
+
+            <a href="{{ relLangURL "features/" }}"
+               class="btn btn-flat btn-flat-white btn-flat-frosted btn-hero-learn-more">{{ T "common.button.learnMore" }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="credits">
+        <a href="{{ relLangURL "" }}"><span class="game"></span> <span class="by" style="opacity: 0.6;"></span></a>
+      </div>
+      <script>
+        const heroBackgroundImage = document.getElementById('hero-background-image');
+
+        (function loadHeroFeaturedProject() {
+          // featuredProject is declared at the top of the file
+          heroBackgroundImage.style.backgroundImage = `url(${featuredProject.image})`;
+          document.querySelector('.hero .credits a').href = featuredProject.url;
+          document.querySelector('.hero .credits a span.game').innerText = featuredProject.game;
+          document.querySelector('.hero .credits a span.by').innerText = ' - ' + featuredProject.by;
+        })();
+
+        (function setupHeroParallaxEffect() {
+          // Parallax effect: On page scroll move background-position up.
+          // This effect is disabled if user opted to have reduced motion in browser/OS settings.
+          const reducedMotionIsActive = window.matchMedia('(prefers-reduced-motion)').matches;
+          if (reducedMotionIsActive) return;
+
+          const parallaxImage = heroBackgroundImage;
+          const parallaxMinWidth = 768;
+          const parallaxSpeed = 0.4;
+
+          function tick() {
+            parallaxImage.style.transform = `translateY(${window.scrollY * parallaxSpeed}px)`;
+          }
+
+          function requestTick() {
+            // Only animate if the image is visible
+            if (window.scrollY < heroBackgroundImage.offsetHeight) {
+              window.requestAnimationFrame(tick)
+            }
+          }
+
+          window.addEventListener("scroll", requestTick);
+          window.addEventListener("resize", requestTick);
+        })();
+      </script>
+    </section>
+
+    {{/* ----------News----------*/}}
+    <section class="wrapper padded">
+      <h2>{{ T "common.button.latestNews" }}</h2>
+      <div class="news flex eqsize responsive" style="gap: 1.875rem;">
+
+        {{ $lastestArticles := (where .Sites.First.RegularPages "Section" "article").ByDate.Reverse.Limit 4 }}
+        {{ range $lastestArticles | first 1}}
+          <a href="{{ .RelPermalink }}">
+            <article class="article-card">
+              <img src="{{ .Params.image }}" class="thumbnail" alt="" decoding="async" width="16"
+                   height="9">
+              <div class="content">
+                <h3>{{ .Params.title }}</h3>
+                <p class="excerpt">{{ .Params.excerpt }}</p>
+                <span class="date"
+                      data-post-date="{{ .Params.date }}">{{ time.Format ":date_long" .Params.date }}</span>
+              </div>
+            </article>
+          </a>
+        {{ end }}
+
+        <div class="news__list__container">
+          <div class="news__list">
+            {{ range after 1 $lastestArticles }}
+              <a href="{{ .RelPermalink }}">
+                <article class="article-card row">
+                  <img src="{{ .Params.image }}" class="thumbnail" alt="" href="{{ .Params.url }}"
+                       fetchpriority="low" decoding="async" width="16" height="9">
+                  <h3>{{ .Params.title }}</h3>
+                  <div style="display: flex;flex-direction: column;">
+                    <h3>{{ .Params.title }}</h3>
+                    <p class="excerpt">{{ .Params.excerpt | truncate 102 }}</p>
+                    <div class="grow"></div>
+
+                    <span class="date"
+                          data-post-date="{{ .Params.date }}">{{ time.Format ":date_long" .Params.date }}</span>
+                  </div>
+                </article>
+              </a>
+            {{ end }}
+            <div class="button-container">
+              <a href="{{ relLangURL "blog/" }}"
+                 class="btn no-margin">{{ T "common.button.moreNews" }}</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {{/* ----------Features----------*/}}
+    <section id="features" class="wrapper padded">
+      <h2>{{ T "page.home.features.titleText" }}</h2>
+
+      <div class="features-grid">
+        {{ $design := dict
+        "link" "features#design"
+        "image" "/assets/home/features/innovative.webp"
+        "title" "page.home.features.design.titleText"
+        "body" "page.home.features.design.bodyText"
+        }}
+        {{ $script := dict
+        "link" "features#script"
+        "image" "/assets/home/features/language.webp"
+        "title" "page.home.features.script.titleText"
+        "body" "page.home.features.script.bodyText"
+        "disclaimer" "page.home.features.script.disclaimerText"
+        }}
+        {{ $features2D := dict
+        "link" "features#features_2d"
+        "image" "/assets/home/features/2d.webp"
+        "title" "page.home.features.2D.titleText"
+        "body" "page.home.features.2D.bodyText"
+        }}
+        {{ $features3D := dict
+        "link" "features#features_3d"
+        "image" "/assets/home/features/3d.webp"
+        "title" "page.home.features.3D.titleText"
+        "body" "page.home.features.3D.bodyText"
+        }}
+        {{ $deploy := dict
+        "link" "features#deploy"
+        "image" "/assets/home/features/cross-platform.svg"
+        "title" "page.home.features.deploy.titleText"
+        "body" "page.home.features.deploy.bodyText"
+        }}
+        {{ $getInvolved := dict
+        "link" "#get_involved"
+        "image" "/assets/home/features/oss.svg"
+        "title" "page.home.features.getInvolved.titleText"
+        "body" "page.home.features.getInvolved.bodyText"
+        }}
+        {{ $features := slice $design $script $features2D $features3D $deploy $getInvolved }}
+        {{ range $features }}
+          <a class="feature-link" href="{{ relLangURL .link }}" data-instant-target="true">
+            <div class="feature dark">
+              <img src="{{ .image }}" alt="" width="1" height="1" loading="lazy"
+                   onload="removeImgBackground(this)" decoding="async">
+              <div class="body">
+                <h3 class="text-s">{{ T .title }}</h3>
+                <p>
+                  {{ T .body }}
+                  {{ with .disclaimer }}
+                <div class="feature__disclaimer">
+                  {{ T . | safeHTML }}
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+
+      <div class="features-learn-more">
+        <a href="{{ relLangURL "features/" }}" class="btn btn-flat btn-flat-white btn-flat-frosted">
+          {{- T "page.home.features.button.learnMoreAboutUsingGodot" -}}
+        </a>
+      </div>
+    </section>
+
+    {{/* ----------Get Involved----------*/}}
+    <section id="get_involved" class="get-involved wrapper padded">
+      <h2>{{ T "page.home.getInvolved.titleText" }}</h2>
+      <p>{{ T "page.home.getInvolved.subtitleText" }}</p>
+
+      <div class="flex eqsize responsive">
+        {{ $code := dict
+        "link" "https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code"
+        "image" "/assets/home/code.svg"
+        "title" "page.home.getInvolved.code.titleText"
+        "body" "page.home.getInvolved.code.bodyText"
+        }}
+        {{ $document := dict
+        "link" "https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation"
+        "image" "/assets/home/document.svg"
+        "title" "page.home.getInvolved.document.titleText"
+        "body" "page.home.getInvolved.document.bodyText"
+        }}
+        {{ $report := dict
+        "link" "https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues"
+        "image" "/assets/home/report.svg"
+        "title" "page.home.getInvolved.report.titleText"
+        "body" "page.home.getInvolved.report.bodyText"
+        }}
+        {{ $envolvementActions := slice $code $document $report }}
+        {{ range $envolvementActions }}
+          <div class="text-center base-padding get-involved-item">
+            <img src="{{ .image }}" alt="" width="250" height="250" loading="lazy">
+            <h3 class="text-s">{{ T .title }}</h3>
+            <p>{{ T .body }}</p>
+            <div class="grow"></div>
+            <a href="{{ .link }}" class="btn btn-flat btn-flat-frosted" target="_blank"
+               rel="noopener">{{ T "common.button.learnMore" }}</a>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    {{/* ----------Donations----------*/}}
+    <section id="donations" class="padded">
+      <div class="wrapper">
+        <a href="https://godot.foundation" target="_blank" style="display: inline-block;">
+          <img id="foundation_graphic" src="/assets/home/foundation/godot-foundation-logo-dark.svg"
+               alt="Godot Foundation logo" width="1" height="1" loading="lazy">
+        </a>
+        <p
+          class="small auto-margin">{{ T "page.home.donate.donateText" (dict "developmentFundLinkBefore" "<a href='https://fund.godotengine.org/'>" "developmentFundLinkAfter" "</a>") | safeHTML }}</p>
+
+        <a href="https://fund.godotengine.org/"
+           class="btn btn-flat btn-flat-white btn-flat-frosted">{{ T "common.button.donate" }}</a>
+      </div>
+    </section>
+
+    {{ partialCached "sponsors.html" . }}
+  </main>
+{{ end }}

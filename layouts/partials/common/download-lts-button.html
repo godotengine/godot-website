@@ -1,0 +1,6 @@
+{{ $stableVersion3 := partialCached "_funcs/stable-version-3.html" . }}
+<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
+   title="{{ T "common.button.downloadLts.titleText" }}">
+  <div class="download-title">{{ T "common.button.downloadLts.contentText" }}</div>
+  <div class="download-hint">{{ $stableVersion3.name }}</div>
+</a>

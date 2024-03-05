@@ -1,0 +1,208 @@
+{{ define "main" }}
+
+  {{ if .Params.youtube_id }}
+    <link rel="prefetch" href="https://www.youtube-nocookie.com/embed/{{ .Params.youtube_id }}" fetchpriority="high"
+          as="document"/>
+  {{ end }}
+
+  <main class="showcase-page">
+    <div class="head">
+      <div class="wrapper flex eqsize responsive">
+        <div class="main">
+          <a href="{{ relLangURL "showcase/" }}"><strong>&lt;</strong>&nbsp;&nbsp;Back to showcase</a>
+          <div>
+            <h1 class="intro-title">{{ .Params.title }}</h1>
+            <h3 style="opacity: 0.75; margin-top: 0.5rem;">
+              by <a href="{{ .Params.website }}" target="_blank"
+                    style="text-decoration: underline; text-decoration-thickness: 0.125rem; text-decoration-color: hsla(0, 0%, 100%, 0.5)">
+                {{- .Params.author -}}</a><span> | </span>
+              {{- if eq .Params.release_date "TBD" -}}
+                Release date: <abbr title="To Be Determined">TBD</abbr>
+              {{- else -}}
+                {{- .Params.release_date -}}
+              {{ end }}
+            </h3>
+          </div>
+          <div class="showcase-intro-icons">
+            {{ if .Params.windows }}
+              <img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows"
+                   width="24"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.macos }}
+              <img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" width="24"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.linux }}
+              <img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" width="24"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.switch }}
+              <img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch"
+                   width="24"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.html5 }}
+              <img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" width="24"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.android }}
+              <img src="/assets/images/platforms/android.svg" alt="Android" title="Android"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.ios }}
+              <img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" width="24"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.playstation }}
+              <img src="/assets/images/platforms/playstation.svg" alt="PlayStation"
+                   title="PlayStation" width="24"
+                   height="24">
+            {{ end }}
+
+            {{ if .Params.xbox }}
+              <img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" width="24"
+                   height="24">
+            {{ end }}
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <section class="flex responsive game-info" style="gap: 1rem;">
+        <article style="flex: 1">
+          {{ .Content }}
+
+          <div id="info-buttons" class="info-buttons">
+            {{ if .Params.steam }}
+              <a href="{{ .Params.steam }}" class="btn" target="_blank">
+                View on Steam
+              </a>
+            {{ end }}
+
+            {{ if .Params.itch }}
+              <a href="{{ .Params.itch }}" class="btn" target="_blank">
+                View on itch.io
+              </a>
+            {{ end }}
+
+            {{ if .Params.humble }}
+              <a href="{{ .Params.humble }}" class="btn" target="_blank">
+                View on Humble Store
+              </a>
+            {{ end }}
+
+            {{ if .Params.gog }}
+              <a href="{{ .Params.gog }}" class="btn" target="_blank">
+                View on GOG.com
+              </a>
+            {{ end }}
+
+            {{ if .Params.nintendo }}
+              <a href="{{ .Params.nintendo }}" class="btn" target="_blank">
+                View on Nintendo Switch
+              </a>
+            {{ end }}
+
+            {{ if .Params.microsoft }}
+              <a href="{{ .Params.microsoft }}" class="btn" target="_blank">
+                View on Xbox
+              </a>
+            {{ end }}
+
+            {{ if .Params.sony }}
+              <a href="{{ .Params.sony }}" class="btn" target="_blank">
+                View on PlayStation
+              </a>
+            {{ end }}
+
+            {{ if .Params.github }}
+              <a href="{{ .Params.github }}" class="btn" target="_blank">
+                View on GitHub
+              </a>
+            {{ end }}
+
+            {{ if .Params.appstore }}
+              <a href="{{ .Params.appstore }}" class="btn" target="_blank">
+                View on App Store
+              </a>
+            {{ end }}
+
+            {{ if .Params.googleplay }}
+              <a href="{{ .Params.googleplay }}" class="btn" target="_blank">
+                View on Google Play
+              </a>
+            {{ end }}
+
+            {{ if .Params.custom }}
+              <a href="{{ .Params.custom }}" class="btn" target="_blank">
+                Learn More
+              </a>
+            {{ end }}
+          </div>
+        </article>
+        <article class="showcase-video-image">
+          {{ if .Params.youtube_id }}
+            <div class="card youtube">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/{{ .Params.youtube_id }}"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen="">
+              </iframe>
+            </div>
+          {{ end }}
+
+          {{ range $index, $image := .Params.gallery }}
+            <a href="{{ (resources.Get $image).RelPermalink }}" class="lightbox" data-group="showcase">
+              {{ partial "responsive-img" (dict
+              "src" $image
+              "class" "rounded-lg"
+              "sizes" "(min-width: 915px) calc((min(1200px, 100vw - 3rem) / 2), 100vw"
+              "alt" (printf "Screenshot of %s by %s" $.Params.title $.Params.author)
+              "decoding" (cond (ge $index 1) "async" "sync")
+              "loading" (cond (ge $index 2) "lazy" "eager")
+              )}}
+            </a>
+          {{ end }}
+        </article>
+      </section>
+      {{ if .Params.developer_interview }}
+        <section style="margin-top: 3rem">
+          <h3>{{ .Params.developer_interview.title | safeHTML }}</h3>
+
+          <blockquote class="showcase-developer-quote">
+            {{ .Params.developer_interview.text | safeHTML }}
+          </blockquote>
+
+          {{ if .Params.developer_interview.url }}
+            <a href="{{ .Params.developer_interview.url }}">{{ .Params.developer_interview.context | safeHTML }}</a>
+          {{ else }}
+            <p>{{ .Params.developer_interview.context | safeHTML }}</p>
+          {{ end }}
+        </section>
+      {{ end }}
+    </div>
+
+    {{ partial "preload-async-css.html" (dict "href" "css/third-party/tobii.min.css") }}
+    <script>
+      function initLightbox() {
+        new Tobii({
+          zoom: false,
+        })
+      }
+    </script>
+    {{ $tobiiJS := resources.Get "js/tobii.min.js" | resources.Fingerprint }}
+    <script defer src="{{ $tobiiJS.RelPermalink }}" integrity="{{ $tobiiJS.Data.Integrity }}"
+            onload="initLightbox()"></script>
+  </main>
+{{ end }}

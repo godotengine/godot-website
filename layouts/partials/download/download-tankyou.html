@@ -1,0 +1,59 @@
+<div class="thankyou-wrapper" id="thankyou-wrapper" style="display:none">
+  <div class="thankyou">
+    <h2>{{ T "page.download.modal.thankYou.godotIsDownloading" }}</h2>
+
+    <p class="thankyou-donate">{{ T "page.download.modal.thankYou.considerDonatingText" }}</p>
+
+    <a href="{{ relLangURL "donate/" }}" class="btn btn-donate">{{ T "common.button.makeADonation" }}</a>
+
+    <h3>{{ T "page.download.modal.thankYou.thankYou" }}</h3>
+
+    <hr style="width:65%">
+
+    <p class="thankyou-reading">{{ T "page.download.modal.thankYou.reading.titleText" }}</p>
+    <ul class="thankyou-reading-list">
+      <li>
+        {{- T "page.download.modal.thankYou.reading.comprehensiveTutorialText"
+        (dict "linkOpen" "<a href='https://docs.godotengine.org/en/stable/getting_started/step_by_step/'>" "linkClose" "</a>") | safeHTML
+        -}}
+      </li>
+      <li>
+        {{- T "page.download.modal.thankYou.reading.demoProjectsCollectionText"
+        (dict "linkOpen" "<a href='https://godotengine.org/asset-library/asset?category=10&support[official]=1'>" "linkClose" "</a>") | safeHTML
+        -}}
+      </li>
+    </ul>
+
+    <div class="btn-back-to-downloads">
+      <img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup">
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const thankYouWrapper = document.getElementById('thankyou-wrapper');
+
+    function openModal() {
+      thankYouWrapper.style.display = '';
+    }
+
+    function closeModal() {
+      thankYouWrapper.style.display = 'none';
+    }
+
+    // Close itself, when clicked outside the popup area.
+    thankYouWrapper.addEventListener('click', (e) => {
+      if (e.target === thankYouWrapper) {
+        closeModal();
+      }
+    });
+
+    // Close with a close button.
+    const thankYouBackButton = document.querySelector('.btn-back-to-downloads');
+    thankYouBackButton.addEventListener('click', closeModal);
+
+    // Open from the main download buttons and all downloads list.
+    const downloadButtons = document.querySelectorAll('.btn-download, .download-link');
+    downloadButtons.forEach((it) => it.addEventListener('click', openModal));
+  });
+</script>

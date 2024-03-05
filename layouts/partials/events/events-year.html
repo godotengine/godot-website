@@ -1,0 +1,67 @@
+{{ $groupStartIndex := .groupStartIndex }}
+{{ $year := .year }}
+{{ $events := .events }}
+
+<div class="events-shortlist__wrap">
+  <div class="events-shortlist__anchor">
+    <h2 id="{{ $year }}">{{ $year }}</h2>
+
+    <ul class="events-shortlist">
+      {{ range $index, $event := $events }}
+        {{ $params := $event.Params }}
+        <li>
+          <span class="events-shortlist__bulletpoint">{{ $params.dates_short }}</span>
+          <a href="#{{ (printf "%s-%s" $params.name (string (add $groupStartIndex $index))) | anchorize }}">
+            <em>{{ $params.name_short }}</em>
+          </a>
+          <span>{{ $params.location_short }}</span>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+
+<div class="events-fulllist">
+  {{ range $index, $event := $events }}
+    {{ $params := $event.Params }}
+    <div class="card base-padding event-card"
+         id="{{ (printf "%s-%s" $params.name (string (add $groupStartIndex $index))) | anchorize }}">
+      <h3>{{ $params.name }}</h3>
+
+      {{ $eventYear := time.Format "2006" $params.date }}
+      {{ with $params.cover_image }}
+        <img
+          src="{{ . }}"
+          alt="{{ T "page.events.eventDetails.imgAlt" (dict "eventName" $params.name) }}"
+          {{ if gt (add $groupStartIndex $index) 1 }}
+            loading="lazy"
+            decoding="async"
+          {{ end }}
+        >
+      {{ end }}
+
+      {{ $event.Content }}
+
+      <h4>{{ T "page.events.eventDetails.titleText" }}</h4>
+
+      <ul class="event-details">
+        <li><strong>{{ T "page.events.eventDetails.date" }} </strong>{{ $params.dates }}</li>
+        <li><strong>{{ T "page.events.eventDetails.location" }} </strong>
+          {{- $params.location | markdownify -}}
+          {{- with $params.location_map -}}
+            (<a href="{{ . }}">{{ T "page.events.eventDetails.showOnMap" }}</a>)
+          {{- end -}}
+        </li>
+        {{ with $params.entrance_fee }}
+          <li><strong>{{ T "page.events.eventDetails.entranceFee" }} </strong>{{ . | markdownify }}</li>
+        {{ end }}
+        {{ with $params.registration }}
+          <li><strong>{{ T "page.events.eventDetails.registration" }} </strong>{{ . | markdownify }}</li>
+        {{ end }}
+        {{ with $params.website }}
+          <li><strong>{{ T "page.events.eventDetails.website" }} </strong><a href="{{ . }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
+</div>

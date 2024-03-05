@@ -1,0 +1,60 @@
+{{ define "header" }}
+  {{ partialCached "transparent-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="download-page">
+    {{ $stableVersion4 := partialCached "_funcs/stable-version-4.html" . }}
+    {{ partial "download/hero.html" (dict "gCtx" $ "version" $stableVersion4 "downloads" $.Params.downloads "platform"
+    $.Params.platform) }}
+    <div class="wrapper">
+      <div id="links" class="platform-details">
+        <div class="card base-padding">
+          <h3>{{ T "page.download.requirements.titleText" }}</h3>
+          <ul>
+            <li>{{ T "page.download.requirements.v4.recommendedText" | safeHTML }}</li>
+            <li>{{ T "page.download.requirements.v4.minimalText" | safeHTML }}</li>
+          </ul>
+
+          {{ if not $.Params.ignore_mono }}
+            <p>{{ T "page.download.requirements.additionRequirementsText" }}</p>
+            <ul>
+              <li>
+                <a href="https://dotnet.microsoft.com/download">.NET SDK</a>
+              </li>
+            </ul>
+          {{ end }}
+        </div>
+
+        <div class="platform-split">
+          {{ partial "download/all-downloads" (dict
+          "gCtx" $
+          "version" $stableVersion4
+          "ignoreExport" .Params.ignore_export
+          "ignoreMono" .Params.ignore_mono
+          "downloads" .Params.downloads
+          "contentNote" .Params.content_note)
+          }}
+
+          <div class="card base-padding">
+            <h3>{{ T "page.download.instructions.titleText" }}</h3>
+            {{ $.Params.content_instructions | safeHTML }}
+          </div>
+        </div>
+        {{ partial "download/digital-distribution-platforms.html" $stableVersion4 }}
+      </div>
+    </div>
+
+    {{ partial "download/platforms.html" (dict "version" $stableVersion4 "currentPlatform" .Params.platform) }}
+
+    <div class="wrapper">
+      <div id="extras">
+        <h2>{{ T "page.download.otherGodotDownloads.titleText" }}</h2>
+        {{ partial "download/other-downloads.html" (dict "gCtx" $ "version" $stableVersion4) }}
+      </div>
+      {{ partial "download/preview-builds.html" (dict "version" "4") }}
+    </div>
+
+    {{ partialCached "download/download-tankyou.html" . }}
+  </main>
+{{ end }}

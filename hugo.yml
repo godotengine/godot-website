@@ -1,0 +1,67 @@
+# Base
+baseURL: 'https://godotengine.org/'
+languageCode: 'en'
+title: 'Godot Engine'
+
+disableKinds: [ 'taxonomy','term' ]
+
+# Ignored when building
+ignorefiles: [
+  'static/storage',
+  'tools',
+  '.editorconfig',
+  '.gitattributes',
+  '.gitignore',
+  '.github',
+  'makefile',
+  'README.md',
+]
+
+# Pagination
+paginate: 24
+paginatePath: ''
+
+# Security
+security:
+  enableInlineShortcodes: true # https://gohugo.io/templates/shortcode-templates/#inline-shortcodes
+
+# Markup
+markup:
+  goldmark:
+    attribute:
+      block: true # https://gohugo.io/getting-started/configuration-markup/#parserattributeblock
+    renderer:
+      unsafe: true # https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+  highlight:
+    noClasses: false
+    linenos: true
+    guessSyntax: true
+
+# Global Params
+params:
+  articleOutdatedWarning:
+    thresholdInMonths: 18 # Any relevant article older than 18 months will have a warning in it
+    relevantCategories: [ 'progress-report', 'news', 'events' ]
+
+# Formats
+outputFormats:
+  rss:
+    baseName: rss
+
+# Language
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+enableMissingTranslationPlaceholders: true
+languages:
+  en:
+    contentDir: content/en
+    title: Godot Engine
+    languageCode: en
+    languageName: English
+    weight: 1
+
+# Minify
+minify:
+  tdewolff:
+    js:
+      version: 0

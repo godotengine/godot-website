@@ -1,0 +1,24 @@
+news:
+  - name: news
+    slug: news
+    description: General news that don't fit in other categories.
+progress-report:
+  - name: progressReport
+    slug: progress-report
+    description: Progress report about a specific engine subsystem in Godot.
+events:
+  - name: events
+    slug: events
+    description: Physical and online Godot-related event announcements.
+release:
+  - name: release
+    slug: release
+    description: Godot stable release announcements. See Pre-release category for alphas, betas and release candidates.
+pre-release:
+  - name: preRelease
+    slug: pre-release
+    description: Godot pre-release announcement (alpha, beta or release candidate).
+showcase:
+  - name: showcase
+    slug: showcase
+    description: Showreel video postings and showcase interviews. Showreel-related announcements are in the News category.

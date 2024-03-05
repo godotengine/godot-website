@@ -1,0 +1,169 @@
+.archive-page-list {
+  & .hero {
+    padding: 54px 0 30px;
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+
+    & > h1 {
+      text-shadow: none;
+      color: var(--base-color-text-title);
+      font-size: 3.75rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  & .hero-blurb {
+    color: var(--base-color-text);
+  }
+
+  & .archive-list {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    row-gap: 3em;
+  }
+
+  & .archive-group {
+    padding-right: 1rem;
+    width: 240px;
+
+    & > div {
+      position: sticky;
+      top: 24px;
+
+      & > h3 {
+        margin-bottom: 8px;
+      }
+
+      & > span {
+        opacity: 0.64;
+      }
+    }
+
+    & .archive-version-flavor {
+      background-color: var(--button-background-color);
+      border-radius: 1000px;
+      color: var(--base-color-text-subtitle);
+      font-size: 90%;
+      font-weight: 600;
+      opacity: 1;
+      padding: 2px 12px;
+    }
+  }
+
+  & .archive-releases {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    & hr {
+      border-color: var(--button-card-background-color);
+      width: 100%;
+    }
+  }
+
+  /* Archive version item */
+
+  & .archive-list-item {
+    display: grid;
+    grid-template-columns: 1fr 200px 140px 160px;
+    align-items: center;
+    gap: 12px;
+    transition: 0.1s filter;
+    filter: brightness(95%);
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+
+  & .archive-version {
+    display: inline-block;
+    text-decoration: none;
+
+    & > h4 {
+      color: inherit;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+  }
+
+  & .archive-download-meta {
+    color: var(--secondary-color-text);
+    font-size: 90%;
+    margin: 0;
+  }
+
+  & .btn-release-download {
+    background-color: var(--button-card-background-color);
+    color: var(--base-color-text);
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  & .btn.btn-release-notes, & .btn.btn-release-changelog {
+    background: var(--button-background-color);
+    box-shadow: none;
+    color: var(--link-color);
+    padding: 10px 12px;
+    text-align: center;
+  }
+}
+
+@container main (width < 1024px) {
+  .archive-page-list {
+    & .archive-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 2em;
+    }
+
+    & .archive-group {
+      & > div {
+        position: static;
+      }
+    }
+
+    & .archive-releases {
+      gap: 30px;
+    }
+  }
+}
+
+@container main (width < 800px) {
+  .archive-page-list {
+    & .archive-list-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+
+      & + .archive-list-item {
+        border-top: 2px solid var(--background-color);
+        padding-top: 24px;
+      }
+    }
+
+    & .archive-release {
+      grid-column: span 2;
+    }
+
+    & .archive-version {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      & > h4 {
+        font-size: 1.625rem;
+      }
+    }
+
+    & .archive-download-meta {
+      font-size: 100%;
+    }
+
+    & .btn-release-download {
+      grid-column: span 2;
+    }
+  }
+}

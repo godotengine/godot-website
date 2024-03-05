@@ -1,0 +1,26 @@
+{{ $version := .version }}
+{{ $platforms := default slice .platforms }}
+{{ $host := default "github" .host }}
+{{ $gCtx := .gCtx }}
+
+{{ $params := ($gCtx.Site.GetPage (printf "/download/archive/%s-%s" $version.name $version.flavor)).Params }}
+{{ $primaryPlatforms := $params.primaryPlatforms }}
+
+{{ $result := slice }}
+
+{{ range $platform := $primaryPlatforms }}
+  {{ $data := index $params.links $platform }}
+
+  {{/* Convert from 'linux.64' to 'linux' */}}
+  {{ $platformName := index (split $platform ".") 0 }}
+  {{ $hosts := $data.hosts }}
+
+  {{ if or (eq (len $platforms) 0 ) (in $platforms $platformName) }}
+    {{ $host := index $hosts $host }}
+    {{ $regularLink := index $host "regular" }}
+    {{ $monoLink := index $host "mono" }}
+    {{ $result = $result | append (dict "name" $platformName "regularLink" $regularLink "monoLink" $monoLink "title" $data.title "tags" $data.tags "caption" $data.caption) }}
+  {{ end }}
+{{ end }}
+
+{{ return $result }}

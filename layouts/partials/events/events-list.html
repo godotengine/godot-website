@@ -1,0 +1,24 @@
+<section class="events">
+  {{ $events := . }}
+  {{ $currentEventGroupYear := time.Format "2006" (index $events 0).Params.date }}
+  {{ $currentEvents := slice }}
+  {{ $groupStartIndex := 0 }}
+
+  {{ range $index, $event := $events }}
+    {{ $eventYear := time.Format "2006" $event.Params.date }}
+
+    {{ if ne $eventYear $currentEventGroupYear }}
+      {{ partial "events/events-year.html" (dict "groupStartIndex" $groupStartIndex "year" $currentEventGroupYear "events" $currentEvents) }}
+      {{ $currentEventGroupYear = $eventYear }}
+      {{ $currentEvents = slice }}
+      {{ $groupStartIndex = $index }}
+    {{ end }}
+
+    {{ $currentEvents = $currentEvents | append $event }}
+
+    {{ if ge (add $index 1) ($events | len) }}
+      {{/* Final year group */}}
+      {{ partial "events/events-year.html" (dict "groupStartIndex" $groupStartIndex "year" $currentEventGroupYear "events" $currentEvents) }}
+    {{ end }}
+  {{ end }}
+</section>

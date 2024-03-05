@@ -1,0 +1,266 @@
+{{ define "head" }}
+  <style>
+    footer {
+      margin-top: 0 !important;
+    }
+  </style>
+  <link rel="preload" as="image" href="/assets/features/editor-frame.webp" fetchpriority="high" type="image/webp">
+{{ end }}
+
+{{ define "header" }}
+  {{ partialCached "transparent-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="features-page">
+    <div class="features-why">
+      <h2 class="text-light">{{ T "page.features.header.titleText" }}</h2>
+
+      <div class="features-showcase" id="showcase">
+        <p>{{ T "page.features.header.subtitleText" }}</p>
+
+        <div class="showcase-carousel">
+          <img src="/assets/features/editor-frame.webp" class="showcase-frame" width="1655" height="843"/>
+          <div class="showcase-items">
+            {{ range partialCached "_funcs/featured-showcase-pages.html" . }}
+              <div class="showcase-item">
+                {{ partial "responsive-img" (dict
+                "src" (index .Params.gallery 0)
+                "sizes" "(min-width: 768px) 1024px, 100vw"
+                "alt" (printf "%s - %s" .Params.title .Params.author)
+                "fetchpriority" "high"
+                )}}
+
+                <div class="showcase-credits">
+                  <a href="{{ .Params.url }}">
+                    <span class="showcase-title">{{.Params.title }}</span><span
+                      class="showcase-author">- {{ .Params.author }}</span>
+                  </a>
+                </div>
+              </div>
+            {{ end }}
+            <img id="showcase-flip-left" src="/assets/icons/arrow-flip.svg" height="24" width="16" alt="">
+            <img id="showcase-flip-right" src="/assets/icons/arrow-flip.svg" height="24" width="16" alt="">
+          </div>
+          <script>
+            const showcaseItems = document.querySelectorAll('.showcase-item');
+            const featuredProjects = [{{ range partialCached "_funcs/featured-showcase-pages.html" .}}'{{ (resources.Get .Params.image).RelPermalink }}',{{ end }}];
+            let currentIndex = Math.floor(Math.random() * featuredProjects.length);
+
+            function debounceCarouselImageSwitch(func, timeout) {
+              let timer;
+              return () => {
+                if (!timer) {
+                  func.apply();
+                }
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                  timer = undefined;
+                }, timeout);
+              };
+            }
+
+            // We assume that it can't be wrapped more than once.
+            const wrapIndex = (index) => {
+              if (index < 0) {
+                return showcaseItems.length + index;
+              }
+              if (index >= showcaseItems.length) {
+                return showcaseItems.length - index;
+              }
+              return index;
+            };
+
+            const setItemByIndex = (itemIndex) => {
+              const prevIndex = wrapIndex(currentIndex - 1);
+              const nextIndex = wrapIndex(currentIndex + 1);
+
+              showcaseItems.forEach((item, index) => {
+                switch (index) {
+                  case itemIndex:
+                    item.classList.add('showcase-item-transition');
+                    item.style.transform = 'translateX(0)';
+                    break;
+                  case prevIndex:
+                    item.style.transform = 'translateX(-100%)';
+                    break;
+                  case nextIndex:
+                    item.style.transform = 'translateX(100%)';
+                    break;
+                  default:
+                    item.classList.remove('showcase-item-transition')
+                    /*By moving the images offscreen we prevent them from being decoded all at once thus saving cpu performance*/
+                    item.style.transform = 'translateX(200vw)';
+                    break;
+                }
+              });
+            }
+
+            // currentIndex is declared inside _layouts/default.html
+            setItemByIndex(currentIndex);
+            const debounceCooldownMs = 300;
+
+            const prevItemButton = document.getElementById('showcase-flip-left');
+            prevItemButton.addEventListener('click', debounceCarouselImageSwitch(() => {
+              currentIndex = wrapIndex(currentIndex - 1);
+              setItemByIndex(currentIndex);
+            }, debounceCooldownMs));
+
+            const nextItemButton = document.getElementById('showcase-flip-right');
+            nextItemButton.addEventListener('click', debounceCarouselImageSwitch(() => {
+              currentIndex = wrapIndex(currentIndex + 1);
+              setItemByIndex(currentIndex);
+            }, debounceCooldownMs));
+          </script>
+
+        </div>
+        <a href="{{ relLangURL "showcase/" }}"
+           class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">
+          {{ T "page.features.header.button.seeMoreProjectsMadeWithGodot" }}
+        </a>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div id="features">
+        <h2>{{ T "page.features.mainFeatures.titleText" }}</h2>
+      </div>
+
+      <div class="feature-container feature-container-3x" id="design">
+        <h3>{{ T "page.features.mainFeatures.intuitiveSceneDrivenDesign.titleText" }}</h3>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.intuitiveSceneDrivenDesign.buildYourGameFromSimpleBlocs.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.intuitiveSceneDrivenDesign.buildYourGameFromSimpleBlocs.bodyText" }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.intuitiveSceneDrivenDesign.extendBeyondFeaturesProvidedByTheEngine.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.intuitiveSceneDrivenDesign.extendBeyondFeaturesProvidedByTheEngine.bodyText" }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.intuitiveSceneDrivenDesign.createDataDrivenElementsWithCustomResources.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.intuitiveSceneDrivenDesign.createDataDrivenElementsWithCustomResources.bodyText" | safeHTML }}</p>
+        </div>
+      </div>
+
+      <div class="feature-container feature-container-2x" id="script">
+        <h3>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.titleText" }}</h3>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.writeCodeWithoutHurdlesWithAHighLevelScriptingLanguage.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.writeCodeWithoutHurdlesWithAHighLevelScriptingLanguage.bodyText" | safeHTML }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.leverageYourC#ExperienceToFeelRightAtHome.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.leverageYourC#ExperienceToFeelRightAtHome.bodyText" | safeHTML }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.pickFromAVarietyOfCommunitySupportedLanguages.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.pickFromAVarietyOfCommunitySupportedLanguages.bodyText" | safeHTML }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.modifyTheEngineItselfAndIntegrateWith3rdPartyLibraries.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.codingToolsThatFitYourNeeds.modifyTheEngineItselfAndIntegrateWith3rdPartyLibraries.bodyText" | safeHTML }}</p>
+        </div>
+      </div>
+
+      <div class="feature-container feature-container-3x" id="features_3d">
+        <h3>{{ T "page.features.mainFeatures.simpleYetPowerful3DEngine.titleText" }}</h3>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.simpleYetPowerful3DEngine.supportBothHighAndLowEndDevices.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.simpleYetPowerful3DEngine.supportBothHighAndLowEndDevices.bodyText" | safeHTML }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.simpleYetPowerful3DEngine.seamlesslyIntegrateWithYourAssetPipeline.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.simpleYetPowerful3DEngine.seamlesslyIntegrateWithYourAssetPipeline.bodyText" | safeHTML }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.simpleYetPowerful3DEngine.createAnimatedVideosAndPreRenderedCutscenesInEngine.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.simpleYetPowerful3DEngine.createAnimatedVideosAndPreRenderedCutscenesInEngine.bodyText" | safeHTML }}</p>
+        </div>
+      </div>
+
+      <div class="feature-container feature-container-3x" id="features_2d">
+        <h3>{{ T "page.features.mainFeatures.specialized2DWorkflowForGamesAndApps.titleText" }}</h3>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.specialized2DWorkflowForGamesAndApps.workWithReal2DAndPixelBasedUnitSystems.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.specialized2DWorkflowForGamesAndApps.workWithReal2DAndPixelBasedUnitSystems.bodyText" }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.specialized2DWorkflowForGamesAndApps.saveTimeCreating2DWorldsWithATileMapEditor.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.specialized2DWorkflowForGamesAndApps.saveTimeCreating2DWorldsWithATileMapEditor.bodyText" }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.specialized2DWorkflowForGamesAndApps.masterUsabilityWithAFlexibleGUISystem.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.specialized2DWorkflowForGamesAndApps.masterUsabilityWithAFlexibleGUISystem.bodyText" | safeHTML }}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="features-showreel">
+      <div class="wrapper">
+        <h3>{{ T "page.features.showreel.titleText" }}</h3>
+        <p>{{ T "page.features.showreel.bodyText" }}</p>
+
+        {{ partialCached "showcase/showreel-shelf.html" . }}
+      </div>
+    </div>
+
+    <div class="wrapper">
+
+      <div class="feature-container feature-container-3x" id="deploy">
+        <h3>{{ T "page.features.mainFeatures.crossPlatformSupport.titleText" }}</h3>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.crossPlatformSupport.deliverYourGameToDesktopAndMobile.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.crossPlatformSupport.deliverYourGameToDesktopAndMobile.bodyText" }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.crossPlatformSupport.testDirectlyOnYourTargetDevice.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.crossPlatformSupport.testDirectlyOnYourTargetDevice.bodyText" | safeHTML }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.crossPlatformSupport.partnerWithAPublisherToTargetConsoles.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.crossPlatformSupport.partnerWithAPublisherToTargetConsoles.bodyText" }}</p>
+        </div>
+      </div>
+
+      <div class="feature-container feature-container-2x" id="open_source">
+        <h3>{{ T "page.features.mainFeatures.completelyOpenAndFree.titleText" }}</h3>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.completelyOpenAndFree.downloadAndCreateWithNoContractsOrHiddenFees.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.completelyOpenAndFree.downloadAndCreateWithNoContractsOrHiddenFees.bodyText" }}</p>
+        </div>
+
+        <div class="card feature-card">
+          <h4>{{ T "page.features.mainFeatures.completelyOpenAndFree.findTheLogicBehindAnySystemInAnOpenSourceCodebase.titleText" }}</h4>
+          <p>{{ T "page.features.mainFeatures.completelyOpenAndFree.findTheLogicBehindAnySystemInAnOpenSourceCodebase.bodyText" | safeHTML}}</p>
+        </div>
+      </div>
+
+      <div class="features-complete-list">
+        <a href="https://docs.godotengine.org/en/stable/about/list_of_features.html"
+           class="btn btn-flat btn-flat-white btn-flat-frosted">
+          {{ T "page.features.mainFeatures.button.viewACompleteListOfFeatures" }}
+        </a>
+      </div>
+    </div>
+
+    {{ partial "common/call-to-action.html" (dict "gCtx" $ "title" (T "page.features.readyToStart.titleText")) }}
+  </main>
+{{ end }}

@@ -1,0 +1,54 @@
+{{ $version := .version }}
+{{ $gCtx := .gCtx }}
+{{ $versionNumber := index (split $version.name ".") 0 }}
+
+<div class="other-download">
+
+  <div class="other-download-card">
+    <h3>{{ T "page.download.otherGodotDownloads.godotDemoProjects.titleText" }}</h3>
+    <p>{{ T "page.download.otherGodotDownloads.godotDemoProjects.bodyText" }}</p>
+    <p>
+      <a href="https://github.com/godotengine/godot-demo-projects">
+        {{- T "page.download.otherGodotDownloads.godotDemoProjects.demoProjectsOnGithub" -}}
+      </a>
+    </p>
+    <p>
+      {{ $stableVersionComp := split $version.name "." }}
+      <a
+        href="https://godotengine.org/asset-library/asset?category=10&godot_version={{index $stableVersionComp 0}}.{{index $stableVersionComp 1}}&support[official]=1">
+        {{- T "page.download.otherGodotDownloads.godotDemoProjects.demoProjectsInAssetLibrary" -}}
+      </a>
+    </p>
+  </div>
+
+  <div class="other-download-card">
+    {{ $aarLibraryInfo := index (where (index ($gCtx.Site.Data) $gCtx.Site.Language.Lang).download_platforms "name" "aar_library" | first 1) 0 }}
+
+    <h3>{{ T "page.download.otherGodotDownloads.aarLibraryForAndroid.titleText" }}</h3>
+    <p>{{ T "page.download.otherGodotDownloads.aarLibraryForAndroid.bodyText" }}</p>
+    <p>
+      {{ $link := partial "_funcs/get-download-url.html" (dict "gCtx" $ "version" $version "platform" "aar_library" "mono" false)}}
+      <a href="{{ $link }}">
+        {{ $aarLibraryInfo.title }}
+        {{ with $aarLibraryInfo.caption }} - {{ . }}{{ end }}
+      </a>
+    </p>
+    {{ if eq $versionNumber "3" }}
+      <p>
+        {{ $link := partial "_funcs/get-download-url.html" (dict "gCtx" $ "version" $version "platform" "aar_library" "mono" true)}}
+        <a href="{{ $link }}">
+          {{ $aarLibraryInfo.title }} - .NET / C#
+          {{ with $aarLibraryInfo.caption }} - {{ . }}{{ end }}
+        </a>
+      </p>
+    {{ end }}
+  </div>
+
+  <div class="other-download-card">
+    <h3>{{ T "page.download.otherGodotDownloads.blenderESCNExporter.titleText" }}</h3>
+    <p>{{ T "page.download.otherGodotDownloads.blenderESCNExporter.bodyText" (dict "version" $versionNumber) | safeHTML }}</p>
+    <a href="https://github.com/godotengine/godot-blender-exporter">
+      {{- T "page.download.otherGodotDownloads.blenderESCNExporter.godotBlenderExporter" -}}
+    </a>
+  </div>
+</div>

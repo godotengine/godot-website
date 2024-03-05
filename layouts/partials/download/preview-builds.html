@@ -1,0 +1,36 @@
+{{ $version := .version }}
+
+<div class="unstable-downloads">
+  <div id="previews" class="unstable-download-previews">
+    <h2>{{ T "page.download.unstableDownloads.previewBuilds.titleText" }}</h2>
+    <p>{{ T "page.download.unstableDownloads.previewBuilds.bodyText" }}</p>
+    <p>{{ T "page.download.unstableDownloads.previewBuilds.helpTextNewFeaturesText" }}</p>
+    <a class="btn"
+       href="{{ relLangURL "download/preview/" }}">{{ T "page.download.unstableDownloads.previewBuilds.seeLatestPreviewBuilds" }}</a>
+  </div>
+
+  <div id="open-source" class="unstable-download-source">
+    <img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200"
+         alt="GitHub logo" decoding="async">
+    <div>
+      <p>{{ T "page.download.unstableDownloads.openSource.titleText" }}</p>
+      <ul>
+        <li>
+          {{- T "page.download.unstableDownloads.openSource.getTheSourceCodeFromTheGithubProjectPage"
+          (dict "linkOpen" "<a href='https://github.com/godotengine/godot'>" "linkClose" "</a>") | safeHTML
+          -}}
+        </li>
+        <li>
+          {{ $link := "https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html" }}
+          {{ if eq $version "3" }}
+            {{ $link = "https://docs.godotengine.org/en/3.5/contributing/development/compiling/index.html" }}
+          {{ end }}
+
+          {{- T "page.download.unstableDownloads.openSource.followTheInstructionsFromTheOfficialDocumentation"
+          (dict "linkOpen" (printf "<a href=%s>" $link) "linkClose" "</a>")  | safeHTML
+          -}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

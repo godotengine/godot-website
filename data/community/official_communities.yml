@@ -1,0 +1,19 @@
+- title: page.community.officialCommunities.godotForum.titleText
+  body: page.community.officialCommunities.godotForum.bodyText
+  link: https://forum.godotengine.org/
+  image: /assets/community/icon_forum.png
+
+- title: page.community.officialCommunities.discord.titleText
+  body: page.community.officialCommunities.discord.bodyText
+  link: https://discord.gg/4JBkykG
+  image: /assets/community/icon_discord.webp
+
+- title: page.community.officialCommunities.reddit.titleText
+  body: page.community.officialCommunities.reddit.bodyText
+  link: https://www.reddit.com/r/godot
+  image: /assets/community/icon_reddit.webp
+
+- title: page.community.officialCommunities.facebook.titleText
+  body: page.community.officialCommunities.facebook.bodyText
+  link: https://www.facebook.com/groups/godotengine/
+  image: /assets/community/icon_facebook.webp

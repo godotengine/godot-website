@@ -1,0 +1,14 @@
+- title: page.community.officialSocialNetworks.twitter.titleText
+  body: page.community.officialSocialNetworks.twitter.bodyText
+  link: https://twitter.com/godotengine
+  image: /assets/community/icon_twitter.webp
+
+- title: page.community.officialSocialNetworks.mastodon.titleText
+  body: page.community.officialSocialNetworks.mastodon.bodyText
+  link: https://mastodon.gamedev.place/@godotengine
+  image: /assets/community/icon_mastodon.webp
+
+- title: page.community.officialSocialNetworks.youtube.titleText
+  body: page.community.officialSocialNetworks.youtube.bodyText
+  link: https://www.youtube.com/c/GodotEngineOfficial
+  image: /assets/community/icon_youtube.webp

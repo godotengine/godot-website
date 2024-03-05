@@ -1,0 +1,70 @@
+{{ define "main" }}
+  <main class="donate-page">
+    <div class="wrapper">
+      <div class="col-2">
+        <div class="paypal-transfer card-transfer" id="paypal">
+          <h2>{{ T "page.donate.paypal.titleText" }}</h2>
+          <p>{{ T "page.donate.paypal.bodyText" (dict "paypal" "paypal@godot.foundation") | safeHTML }}</p>
+          <a class="donate-button" target="_blank"
+             href="https://www.paypal.com/donate/?hosted_button_id=H3V5K8J3QYZBU">
+            {{- T "page.donate.paypal.button.oneTimeDonation" -}}
+          </a>
+        </div>
+
+        <div class="development-fund card-transfer" id="patreon">
+          <h2>{{ T "page.donate.developmentFund.titleText" }}</h2>
+          <p>{{ T "page.donate.developmentFund.bodyText" }}</p>
+          <a class="donate-button"
+             href="https://fund.godotengine.org">{{ T "page.donate.developmentFund.button.recurringDonation" }}</a>
+        </div>
+      </div>
+
+      <div class="bank-transfer card-transfer" id="bank">
+        <h2>{{T "page.donate.bankTransfer.titleText" }}</h2>
+
+        <p>
+          {{- T "page.donate.bankTransfer.bodyText"
+          (dict "email" "<a href='mailto:contact@godot.foundation' target='_blank'>contact@godot.foundation</a>") | safeHTML
+          -}}
+        </p>
+
+        <h3>{{ T "page.donate.bankTransfer.sendPaymentsTo" }}</h3>
+
+        <div class="details">
+          <div>
+            <strong>Stichting Godot</strong><br>
+            Spoorlaan 5</br>
+            1911HA Uitgeest<br>
+            The Netherlands<br>
+            <br>
+            {{T "page.donate.bankTransfer.bicSwiftCode" }} <strong>TRIONL2U</strong><br>
+            IBAN: <strong>NL12 TRIO 0320 5613 48</strong><br>
+          </div>
+          <div>
+            {{T "page.donate.bankTransfer.bank" }} <strong>Triodos Bank</strong><br>
+            <strong>Postbus 55</strong><br>
+            <strong>3700 AB Zeist</strong><br>
+            <strong>The Netherlands</strong><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="foundation">
+        <div class="image">
+          <a href="https://godot.foundation" target="_blank">
+            <img class="if-dark" src="https://godot.foundation/assets/godot-foundation-logo.svg"
+                 alt="The Godot Foundation">
+            <img class="if-light" src="https://godot.foundation/assets/godot-foundation-logo-light.svg"
+                 alt="The Godot Foundation">
+          </a>
+        </div>
+        <p>
+          {{- T "page.donate.foundation.bodyText"
+          (dict "godotFoundation" "<a href='https://godot.foundation' target='_blank'>Godot Foundation</a>") | safeHTML
+          -}}
+        </p>
+      </div>
+    </div>
+    {{ partialCached "sponsors.html" . }}
+  </main>
+{{ end }}

@@ -1,0 +1,24 @@
+{{ define "head" }}
+  <script>
+    const platformName = (navigator?.userAgentData?.platform ?? navigator?.platform).toLowerCase();
+    if (platformName.includes('mac')) {
+      window.location = "{{ relLangURL "download/3.x/macos/" }}";
+    } else if (platformName.includes('linux')) {
+      window.location = "{{ relLangURL "download/3.x/linux/" }}";
+    } else {
+      window.location = "{{ relLangURL "download/3.x/windows/" }}";
+    }
+  </script>
+{{ end }}
+{{ define "main" }}
+  <main>
+    <div style="padding: 1rem 2rem">
+      <h3>{{ T "page.download.redirect.titleText" }}</h3>
+      <p>
+        {{- T "page.download.redirect.bodyText"
+        (dict "linkOpen" (printf "<a href=%s class='set-os-download-url' data-version='3'>" (relLangURL "download/3.x/windows/")) "linkClose" "</a>")
+        -}}
+      </p>
+    </div>
+  </main>
+{{ end }}

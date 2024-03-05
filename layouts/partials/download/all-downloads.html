@@ -1,0 +1,63 @@
+{{ $gCtx := .gCtx }}
+{{ $version := .version }}
+{{ $ignoreExport := .ignoreExport }}
+{{ $ignoreMono := .ignoreMono }}
+{{ $downloads := .downloads }}
+{{ $contentNote := .contentNote }}
+
+<div class="card base-padding">
+  <h3>{{ T "page.download.allDownloads.titleText" }}</h3>
+
+  {{ range $download := $downloads }}
+    {{ $downloadUrl := "" }}
+    {{ with $download.custom }}
+      {{ $downloadUrl = . }}
+    {{ else }}
+      {{ $downloadUrl = partial "_funcs/get-download-url.html" (dict "gCtx" $gCtx "version" $version "platform" $download.platform "mono" $download.mono) }}
+    {{ end }}
+
+    {{ $platformInfo := index (where (index ($gCtx.Site.Data) $gCtx.Site.Language.Lang).download_platforms "name" $download.platform | first 1) 0 }}
+
+    <div class="download">
+      <a href="{{ $downloadUrl }}" class="download-link">
+        {{ $platformInfo.title }}{{ if $download.mono }} - .NET{{ end }}
+        {{ with $platformInfo.caption }} - {{ . }}{{ end }}
+      </a>
+      <span class="download-details">
+				{{ range $index, $tag := $platformInfo.tags }}{{ if gt $index 0 }} · {{ end }}{{ $tag }}{{ end }}
+        {{ if $download.mono }} · {{ T "page.download.c#Support" }}{{ end }}
+			</span>
+    </div>
+
+  {{ end }}
+
+  {{ if not $ignoreExport }}
+    {{ $templatesInfo := index (where (index ($gCtx.Site.Data) $gCtx.Site.Language.Lang).download_platforms "name" "templates" | first 1) 0 }}
+    <div class="download">
+      {{ $link := partial "_funcs/get-download-url.html" (dict "gCtx" $gCtx "version" $version "platform" "templates") }}
+      <a href="{{ $link }}">
+        {{- $templatesInfo.title }}
+        {{ with $templatesInfo.caption }} - {{ . }}{{ end -}}
+      </a>
+      <span class="download-details">
+				{{- range $index, $tag := $templatesInfo.tags }}{{ if gt $index 0 }} · {{ end }}{{ $tag }}{{ end -}}
+			</span>
+    </div>
+    {{ if not $ignoreMono }}
+      <div class="download">
+        {{ $link := partial "_funcs/get-download-url.html" (dict "gCtx" $gCtx "version" $version "platform" "templates" "mono" true)}}
+        <a href="{{ $link }}">
+          {{- $templatesInfo.title }} - .NET
+          {{ with $templatesInfo.caption }} - {{ . }}{{ end -}}
+        </a>
+        <span class="download-details">
+					{{- range $tag := $templatesInfo.tags }}{{ $tag }} · {{ end }}{{ T "page.download.c#Support" -}}
+				</span>
+      </div>
+    {{ end }}
+  {{ end }}
+
+  {{ with $contentNote | safeHTML }}
+    <div class="download-note">{{ . }}</div>
+  {{ end }}
+</div>

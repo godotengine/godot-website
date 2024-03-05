@@ -1,0 +1,103 @@
+h1,
+h2,
+h3,
+h4,
+nav a,
+.btn,
+.title-font {
+  color: var(--base-color-text-title);
+  font-family: var(--header-font-family);
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.text-l {
+  font-size: var(--text-l);
+}
+
+.text-m {
+  font-size: var(--text-m);
+}
+
+.text-s {
+  font-size: var(--text-s);
+}
+
+h1 {
+  font-size: var(--text-xl);
+}
+
+h2 {
+  font-size: var(--text-l);
+}
+
+h3 {
+  font-size: var(--text-m);
+}
+
+h4 {
+  font-size: var(--text-s);
+}
+
+.text-light {
+  color: var(--dark-color-text-title);
+}
+
+.title {
+  margin-top: 48px;
+}
+
+p,
+ul,
+ol {
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+code {
+  font-family: monospace;
+}
+
+pre {
+  background-color: var(--code-background-color);
+  border-radius: 2px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-y: auto;
+  padding: 8px;
+  white-space: pre-wrap;
+}
+
+.dark {
+  background-color: var(--dark-color);
+  color: var(--dark-color-text);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+  color: var(--dark-color-text-title);
+}
+
+.date-big {
+  color: #b6bfd1;
+  font-size: 4rem;
+}
+
+.date-small {
+  color: #8f9db9;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.head h1,
+.head h2,
+.head h3 {
+  color: var(--primary-color-text-title);
+}

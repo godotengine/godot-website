@@ -1,0 +1,10 @@
+{{ $image := resources.Get (add "/static" (.Destination | safeURL)) }}
+<img
+        src="{{ .Destination | safeURL }}"
+        loading="lazy"
+        decoding="async"
+        {{- with $image }}width="{{ $image.Width }}"{{ end -}}
+        {{- with $image }}height="{{ $image.Height }}"{{ end -}}
+        {{- with .Text }} alt="{{ . }}"{{ end -}}
+        {{- with .Title }} title="{{ . }}"{{ end -}}
+/>

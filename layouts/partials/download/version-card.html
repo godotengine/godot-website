@@ -1,0 +1,149 @@
+{{ $version := .version }}
+{{ $gCtx := .gCtx }}
+
+{{ if not ($gCtx.Page.Scratch.Get "hasVersionCardLoaded") }}
+  {{ $css := resources.Get "css/partials/download-version.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="preload" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" as="style"
+        fetchpriority="high">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ end }}
+
+<div class="card base-padding preview-download">
+  <h3 id="{{ $version.name }}-{{ $version.flavor }}">
+    Godot {{ $version.name }}-{{ $version.flavor }}
+  </h3>
+
+  <div class="preview-download-primary">
+    <div class="preview-notes">
+      <p class="preview-download-meta">
+        {{ with $version.release_date }}
+          <span>{{ time.Format ":date_long" . }}</span>
+        {{ end }}
+      </p>
+
+      {{ $releaseArticle := "" }}
+      {{ with $version.release_notes }}
+        {{ $releaseArticle = $gCtx.Site.GetPage . }}
+
+        {{ with $releaseArticle }}
+          <div class="notes-summary">
+            <div class="notes-thumbnail" style="background-image: url('{{ .Params.image }}');"></div>
+            <p class="notes-excerpt">
+              {{ .Params.excerpt }}
+            </p>
+          </div>
+        {{ end }}
+      {{ else }}
+        <p class="notes-excerpt">{{ T "partials.versionCard.releaseNotesAreNotReadyYetText" }}</p>
+      {{ end }}
+
+      <div class="notes-buttons">
+        {{ with $releaseArticle }}
+          <a class="btn btn-release-notes"
+             href="{{ relLangURL .RelPermalink }}"
+          >
+            {{ T "partials.versionCard.link.readMore" }}
+          </a>
+        {{ end }}
+
+        <a class="btn btn-release-changelog"
+           href="https://godotengine.github.io/godot-interactive-changelog/#{{ $version.name }}-{{ $version.flavor }}"
+        >
+          {{ T "partials.versionCard.link.viewChangelog" }}
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Supported platforms</h4>
+      {{ $hasMonoSupport := false }}
+
+      <div class="primaries">
+        {{ $platforms := partial "_funcs/get-primary-download-platforms.html" (dict "gCtx" $gCtx "version" $version "host" "github_builds") }}
+
+        {{ range $platform := $platforms }}
+          {{ if eq $platform.name "templates" }}
+            <hr>{{ end }}
+
+          <div class="download-platform">
+            <img width="24" height="24"
+                 src="/assets/images/platforms/{{ replace $platform.name "_" "-" }}.svg"
+                 alt="{{ $platform.title }}" class="dark-invert"/>
+            {{ $platform.title }}
+          </div>
+
+          <a href="{{ $platform.regularLink }}" class="btn btn-download btn-download-primary">
+            <span class="download-title">{{ T "partials.versionCard.standard" }}</span>
+          </a>
+
+          {{ if eq $platform.monoLink "#" }}
+            <div></div>
+          {{ else }}
+            {{ $hasMonoSupport = true }}
+            <a href="{{ $platform.monoLink }}"
+               class="btn btn-download btn-download-primary btn-download-primary--mono">
+              <span class="download-title">.NET</span>
+            </a>
+          {{ end }}
+        {{ end }}
+
+        {{ if $hasMonoSupport }}
+          <div class="download-mono-note">
+            {{ T "partials.versionCard.monoSupportNoteText" }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="preview-download-toggle"
+    data-open-target="all-downloads-{{ $version.name }}-{{ $version.flavor }}"
+    data-close-target="{{ $version.name }}-{{ $version.flavor }}"
+  >
+    <h4>{{ T "partials.downloadVersion.showAllDownloads" }}</h4>
+  </div>
+
+  <div id="all-downloads-{{ $version.name }}-{{ $version.flavor }}" class="preview-download-links">
+    {{ $allPlatforms := partial "_funcs/get-download-platforms.html" (dict "gCtx" $gCtx "version" $version "host" "github_builds") }}
+
+    {{ range $platform := $allPlatforms }}
+      <div class="download">
+        <span>
+          <a href="{{ $platform.regularLink }}">
+              {{- $platform.title }}{{ with $platform.caption }} - {{ . }}{{ end -}}
+          </a>
+        </span>
+        <span class="download-details">
+            {{- range $index, $tag := $platform.tags }}
+              {{- if gt $index 0 }} · {{ end }}
+              {{- $tag }}
+            {{- end -}}
+        </span>
+      </div>
+
+      {{ if ne $platform.monoLink "#" }}
+        <div class="download">
+          <a href="{{ $platform.monoLink }}">
+            {{- $platform.title }} - .NET{{ with $platform.caption }} - {{ . }}{{ end -}}
+          </a>
+          <span class="download-details">
+              {{- range $index, $tag := $platform.tags }}
+                {{ $tag }} ·
+              {{ end -}}{{- T "page.download.c#Support" -}}
+          </span>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+{{ if not ($gCtx.Page.Scratch.Get "hasVersionCardLoaded") }}
+  {{ $downloadVersionJS := resources.Get "js/download-version.js" | resources.ExecuteAsTemplate (printf "%s/js/download-version.js" $gCtx.Site.Language.Lang ) . | resources.Minify | resources.Fingerprint }}
+
+  <script defer src="{{ $downloadVersionJS.RelPermalink }}"
+          integrity="{{ $downloadVersionJS.Data.Integrity }}"></script>
+{{ end }}
+
+{{/* Prevent resources from being imported multiple times if the component appears multiple times in the same page*/}}
+{{ $gCtx.Page.Scratch.Set "hasVersionCardLoaded" true }}

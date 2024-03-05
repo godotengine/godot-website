@@ -1,0 +1,4 @@
+{{ $version := .Get "version" }}
+{{ $release := .Get "release" }}
+
+{{ partial "download/download-card.html" (dict "gCtx" . "version" $version "release" $release) }}

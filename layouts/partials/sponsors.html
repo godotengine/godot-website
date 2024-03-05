@@ -1,0 +1,77 @@
+<section class="sponsors padded" id="sponsors">
+  <div class="wrapper">
+    <h2>{{ T "partials.sponsors.titleText" }}</h2>
+    <h3>{{ T "partials.sponsors.patron" }}</h3>
+    <div class="grid patron">
+      {{ $image := "" }}
+      {{ range $sponsor := .Site.Data.sponsors.patron }}
+        {{ with resources.GetRemote $sponsor.image }}
+          <a class="sponsor-card patron" href="{{ $sponsor.link }}" target="_blank" rel="noopener">
+            {{ if ne .MediaType.SubType "svg" }}
+              {{ $image := .Process "resize x150 Lanczos" }}
+              <img src="{{ $image.RelPermalink }}" alt="{{ $sponsor.name }}"
+                   height="{{ $image.Height }}" width="{{ $image.Width }}" fetchpriority="low" decoding="async">
+            {{ else }}
+              <img src="{{ .RelPermalink }}" alt="{{ $sponsor.name }}" height="1"
+                   width="1" fetchpriority="low" decoding="async">
+            {{ end }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <h3>{{ T "partials.sponsors.sponsorPlatinum" }}</h3>
+    <div class="grid platinum">
+      {{ range $sponsor := .Site.Data.sponsors.platinum }}
+        {{ with resources.GetRemote $sponsor.image }}
+          <a class="sponsor-card platinum" href="{{ $sponsor.link }}" target="_blank" rel="noopener">
+            {{ if ne .MediaType.SubType "svg" }}
+              {{ $image := .Process "resize x120 Lanczos" }}
+              <img src="{{ $image.RelPermalink }}" alt="{{ $sponsor.name }}"
+                   height="{{ $image.Height }}" width="{{ $image.Width }}" fetchpriority="low" decoding="async">
+            {{ else }}
+              <img src="{{ .RelPermalink }}" alt="{{ $sponsor.name }}" height="1"
+                   width="1" fetchpriority="low" decoding="async">
+            {{ end }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <h3>{{ T "partials.sponsors.sponsorGold" }}</h3>
+    <div class="grid gold">
+      {{ range $sponsor := .Site.Data.sponsors.gold }}
+        {{ with resources.GetRemote $sponsor.image }}
+          <a class="sponsor-card gold" href="{{ $sponsor.link }}" target="_blank" rel="noopener">
+            {{ if ne .MediaType.SubType "svg" }}
+              {{ $image := .Process "resize x90 Lanczos" }}
+              <img src="{{ $image.RelPermalink }}" alt="{{ $sponsor.name }}"
+                   height="{{ $image.Height }}" width="{{ $image.Width }}" fetchpriority="low" decoding="async">
+            {{ else }}
+              <img src="{{ .RelPermalink }}" alt="{{ $sponsor.name }}" height="1"
+                   width="1" fetchpriority="low" decoding="async">
+            {{ end }}
+          </a>
+        {{ end }}
+
+      {{ end }}
+    </div>
+    <h3>{{ T "partials.sponsors.sponsorSilver" }}</h3>
+    <div class="grid silver">
+      {{ range $sponsor := .Site.Data.sponsors.silver }}
+        {{ with resources.GetRemote $sponsor.image }}
+          <a class="sponsor-card silver" href="{{ $sponsor.link }}" target="_blank" rel="noopener">
+            {{ if ne .MediaType.SubType "svg" }}
+              {{ $image := .Process "resize x60 Lanczos" }}
+              <img src="{{ $image.RelPermalink }}" alt="{{ $sponsor.name }}"
+                   height="{{ $image.Height }}" width="{{ $image.Width }}" fetchpriority="low" decoding="async">
+            {{ else }}
+              <img src="{{ .RelPermalink }}" alt="{{ $sponsor.name }}" height="1"
+                   width="1" fetchpriority="low" decoding="async">
+            {{ end }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <p
+      class="sponsor-the-project">{{ T "partials.sponsors.sponsorProjectText" (dict "email" "<a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>") | safeHTML }}</p>
+  </div>
+</section>

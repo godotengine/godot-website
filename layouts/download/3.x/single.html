@@ -1,0 +1,76 @@
+{{ define "head" }}
+  <style>
+    .digital-stores .digital-store-list {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @container (width < 768px) {
+      .digital-stores .digital-store-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+{{ end }}
+
+{{ define "header" }}
+  {{ partialCached "transparent-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{ $stableVersion3 := partialCached "_funcs/stable-version-3.html" . }}
+  <main class="download-page">
+    {{ partial "download/hero.html" (dict "gCtx" $ "version" $stableVersion3 "downloads" $.Params.downloads "platform" $.Params.platform) }}
+    <div class="wrapper">
+      <div id="links" class="platform-details">
+        <div class="card base-padding">
+          <h3>{{ T "page.download.requirements.titleText" }}</h3>
+
+          <ul>
+            <li>{{ T "page.download.requirements.v3.minimalText" }}</li>
+          </ul>
+
+          {{ if not $.Params.ignore_mono }}
+            <p>{{ T "page.download.requirements.additionRequirementsText" }}</p>
+            <ul>
+              <li>
+                {{ T "page.download.requirements.v3.netSDKOrTheMonoSDK" (dict
+                "netLinkOpen" "<a href='https://dotnet.microsoft.com/download'>" "netLinkClose" "</a>"
+                "monoLinkOpen" "<a href='https://www.mono-project.com/download/stable/'>" "monoLinkClose" "</a>") | safeHTML
+                }}
+              </li>
+            </ul>
+          {{ end }}
+        </div>
+
+        <div class="platform-split">
+          {{ partial "download/all-downloads" (dict
+          "gCtx" $
+          "version" $stableVersion3
+          "ignoreExport" .Params.ignore_export
+          "ignoreMono" .Params.ignore_mono
+          "downloads" .Params.downloads
+          "contentNote" .Params.content_note)
+          }}
+
+          <div class="card base-padding">
+            <h3>{{ T "page.download.instructions.titleText" }}</h3>
+            {{ $.Params.content_instructions | safeHTML }}
+          </div>
+        </div>
+        {{ partial "download/digital-distribution-platforms.html" $stableVersion3 }}
+      </div>
+    </div>
+
+    {{ partial "download/platforms.html" (dict "version" $stableVersion3 "currentPlatform" .Params.platform) }}
+
+    <div class="wrapper">
+      <div id="extras">
+        <h2>{{ T "page.download.otherGodotDownloads.titleText" }}</h2>
+        {{ partial "download/other-downloads.html" (dict "gCtx" $ "version" $stableVersion3) }}
+      </div>
+      {{ partial "download/preview-builds.html" (dict "version" "3") }}
+    </div>
+
+    {{ partial "download/download-tankyou.html" . }}
+  </main>
+{{ end }}

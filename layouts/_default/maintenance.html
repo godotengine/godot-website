@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+  <meta charset="utf-8">
+  <title>Godot Engine - {{ T "page.maintenance.titleText "}}</title>
+</head>
+
+<body style="color: #303030; font-family: sans-serif; max-width: var(--max-page-wrap-width); margin: 0 auto">
+
+{{ block "main" . }}
+  {{ .Content }}
+{{ end }}
+
+</body>
+
+</html>

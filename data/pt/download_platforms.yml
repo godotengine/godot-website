@@ -1,0 +1,94 @@
+- name: "templates"
+  title: "Modelos de exportação"
+  caption: ""
+  tags:
+    - "Utilizado para exportar os seus jogos para todas as plataformas suportadas"
+
+- name: "aar_library"
+  title: "Biblioteca de AAR"
+  caption: ""
+  tags:
+    - Android plugins
+    - Java
+    - Kotlin
+
+- name: "android.apk"
+  title: "Android"
+  caption: "APK Universal (ARM64 + ARMv7 + x86_64 + x86)"
+  tags:
+    - APK download
+    - ARM64/v7
+    - x86 (64 & 32 bit)
+
+- name: "android.playstore"
+  title: "Android"
+  caption: "Universal da Play Store (ARM64 + ARMv7 + x86_64 + x86)"
+  tags:
+    - Play Store
+    - ARM64/v7
+    - x86 (64 & 32 bit)
+
+- name: "linux.32"
+  title: "Linux"
+  caption: "Padrão (x86)"
+  tags:
+    - 32 bit
+
+- name: "linux.64"
+  title: "Linux"
+  caption: "Padrão (x86_64)"
+  tags:
+    - 64 bit
+
+- name: "linux.arm32"
+  title: "Linux"
+  caption: "Padrão (ARM32)"
+  tags:
+    - ARM32
+    - 32 bit
+
+- name: "linux.arm64"
+  title: "Linux"
+  caption: "Padrão (ARM64)"
+  tags:
+    - ARM64
+    - 64 bit
+
+- name: "linux_server.64"
+  title: "Servidor Linux"
+  caption: "Padrão (x86_64)"
+  tags:
+    - 64 bit
+
+- name: "linux_server.headless.64"
+  title: "Linux Server"
+  caption: "Headless (x86_64)"
+  tags:
+    - 64 bit
+    - Headless
+
+- name: "macos.universal"
+  title: "macOS"
+  caption: "Universal (x86_64 + Silício da Apple)"
+  tags:
+    - Intel/Apple Silicon
+    - 64 bit
+
+- name: "web"
+  title: "Editor Web"
+  caption: ""
+  tags:
+    - Self-hosted
+    - Cross-platform
+
+- name: "windows.32"
+  title: "Windows"
+  caption: "Padrão (x86)"
+  tags:
+    - 32 bit
+
+- name: "windows.64"
+  title: "Windows"
+  caption: "Padrão (x86_64)"
+  tags:
+    - 64 bit

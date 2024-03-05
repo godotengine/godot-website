@@ -1,0 +1,64 @@
+{{ define "head" }}
+  <link rel="preload" as="image" href="/assets/download/download-background-preview.webp" fetchpriority="high"
+        type="image/webp"/>
+  <style>
+    footer {
+      margin-top: 0 !important;
+    }
+  </style>
+{{ end }}
+
+{{ define "header" }}
+  {{ partialCached "transparent-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="download-preview-page">
+    <div class="hero">
+      <div class="hero-wrapper">
+        <h1>{{ T "page.downloadPreview.header.titleText" }}</h1>
+
+        <div class="hero-blurb">
+          <p>{{ T "page.downloadPreview.header.subtitleText" | safeHTML }}</p>
+        </div>
+      </div>
+
+      <div class="other-platforms">
+        <div class="other-platforms-wrapper">
+          {{ T "page.downloadPreview.header.lookingForOtherPlatformsText" (dict
+          "linkOpen" "<a href='#call-to-action'>"
+          "linkClose" "</a>") | safeHTML
+          }}
+        </div>
+      </div>
+    </div>
+
+    {{ $versions := where .Site.RegularPages "Type" "download/archive" }}
+
+    <div class="wrapper">
+      <div class="padded" style="padding-top:0;margin-top:2rem">
+        <h2>{{ T "page.downloadPreview.latestPreviewBuilds" }}</h2>
+
+        <div class="preview-cards">
+          {{ $stableVersions := where $versions "Params.flavor" "stable" }}
+          {{ $stableVersionsNames := slice }}
+
+          {{ range $version := $stableVersions }}
+            {{ $stableVersionsNames = $stableVersionsNames | append $version.Params.name }}
+          {{ end }}
+
+          {{ $previewVersions := ((where $versions "Params.name" "not in" $stableVersionsNames).ByParam
+          "Params.release_date").Reverse }}
+
+          {{ range ($previewVersions.GroupByParam "name").Reverse }}
+            {{ range .Pages | first 1 }}
+              {{ partial "download/version-card.html" (dict "gCtx" $ "version" .Params ) }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ partial "common/call-to-action.html" (dict "gCtx" $ "title" (T "page.downloadPreview.needAStableVersion")) }}
+  </main>
+{{ end }}

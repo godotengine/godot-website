@@ -1,0 +1,14 @@
+{{ $gCtx := .gCtx }}
+{{ $title := .title }}
+
+
+<div id="call-to-action" class="container card cta">
+  <h2>{{ $title }}</h2>
+
+  <div class="cta-buttons">
+    <p> {{ T "page.features.readyToStart.downloadGodot4Text" | safeHTML }} </p>
+    {{ partialCached "common/download-latest-button.html" $gCtx }}
+    <p> {{ T "page.features.readyToStart.downloadGodot3Text" | safeHTML }} </p>
+    {{ partialCached "common/download-lts-button.html" $gCtx }}
+  </div>
+</div>
