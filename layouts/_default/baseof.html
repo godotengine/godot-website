@@ -2,68 +2,68 @@
 <html lang="{{ .Site.Language.Lang }}">
 
 <head>
-    {{ $description := "" }}
-    {{ if .Description }}
-        {{ $description = .Description }}
-    {{ else if .Params.excerpt }}
-        {{ $description = .Params.excerpt }}
-    {{ else }}
-        {{ $description = "Free and open source 2D and 3D game engine" }}
-    {{ end }}
+  {{ $description := "" }}
+  {{ if .Description }}
+    {{ $description = .Description }}
+  {{ else if .Params.excerpt }}
+    {{ $description = .Params.excerpt }}
+  {{ else }}
+    {{ $description = "Free and open source 2D and 3D game engine" }}
+  {{ end }}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Godot Engine">
-    <meta name="description" content="{{ $description }}">
-    <meta name="theme-color" content="#3d8fcc">
-    <meta property="og:site_name" content="Godot Engine">
-    <meta property="og:url" content="{{ absLangURL "" }}">
-    <meta name="twitter:site" content="@godotengine">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Godot Engine">
+  <meta name="description" content="{{ $description }}">
+  <meta name="theme-color" content="#3d8fcc">
+  <meta property="og:site_name" content="Godot Engine">
+  <meta property="og:url" content="{{ absLangURL "" }}">
+  <meta name="twitter:site" content="@godotengine">
 
-    <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:description" content="{{ $description }}">
-    <meta property="og:image" content="{{ absURL (default "assets/share-image.webp" .Params.image) }}">
-    <meta property="og:type" content="{{ default "website" .Params.og_type }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>{{ .Title }}</title>
-    <link rel="icon" href="/assets/favicon.png" sizes="any">
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:image" content="{{ absURL (default "assets/share-image.webp" .Params.image) }}">
+  <meta property="og:type" content="{{ default "website" .Params.og_type }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>{{ .Title }}</title>
+  <link rel="icon" href="/assets/favicon.png" sizes="any">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="me" href="https://mastodon.gamedev.place/@godotengine">
 
-    {{ block "head" . }}
-    {{ end }}
+  {{ block "head" . }}
+  {{ end }}
 
-    {{ partialCached "css/main-bundle.html" . }}
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+  {{ partialCached "css/main-bundle.html" . }}
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
 </head>
 
 <body>
 {{ block "header" . }}
-    {{ partialCached "solid-header.html" . }}
+  {{ partialCached "solid-header.html" . }}
 {{ end }}
 
 {{ block "main" . }}
-    {{ .Content }}
+  {{ .Content }}
 {{ end }}
 
 {{ block "footer" . }}
-    {{ partialCached "footer.html" . }}
+  {{ partialCached "footer.html" . }}
 {{ end }}
 
 {{/* Prefetch and prerender relevant pages https://github.com/GoogleChromeLabs/quicklink */}}
 {{ $quicklinkJS := resources.Get "quicklink/quicklink.js" | resources.Fingerprint }}
 <script defer src="{{ $quicklinkJS.RelPermalink }}" integrity="{{ $quicklinkJS.Data.Integrity }}"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const regex = RegExp(/(archive)|(rss)|(#)/);
-        quicklink.listen({
-            prerenderAndPrefetch: true,
-            ignores: [
-                uri => regex.test(uri),
-            ],
-        });
+  document.addEventListener('DOMContentLoaded', () => {
+    const regex = RegExp(/(archive)|(rss)|(#)/);
+    quicklink.listen({
+      prerenderAndPrefetch: true,
+      ignores: [
+        uri => regex.test(uri),
+      ],
     });
+  });
 </script>
 </body>
 </html>

@@ -89,10 +89,13 @@
     }
 
     & .digital-store-list {
-      display: grid;
+      display: flex;
       gap: 1rem;
-      grid-template-columns: 1fr 1fr 1fr;
       justify-content: center;
+
+      & > .btn {
+        flex: 1;
+      }
 
       & img {
         height: 28px;
@@ -318,7 +321,6 @@
       grid-template-columns: 1fr;
 
       & .digital-store-list {
-        justify-content: center;
         gap: 0.75rem;
       }
     }
@@ -354,6 +356,12 @@
       gap: 8px;
     }
 
+    & .unstable-download-previews {
+      & .btn {
+        width: 100%;
+      }
+    }
+
     & .thankyou-wrapper {
       display: block;
     }
@@ -381,8 +389,7 @@
     }
 
     & .digital-stores .digital-store-list {
-      grid-template-columns: 1fr;
-      justify-content: stretch;
+      flex-direction: column;
     }
   }
 }

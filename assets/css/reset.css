@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  color-scheme: dark light;
-}
-
 textarea {
   resize: vertical;
 }
