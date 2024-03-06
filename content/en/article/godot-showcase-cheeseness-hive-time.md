@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/602/e98/120/602e98120ec23097807599.png
 date: 2021-02-18 15:30:00
 ---
 
-Welcome to the third developer interview following the [introduction of the Godot Showcase page](https://godotengine.org/article/new-showcase-for-projects-made-with-godot)! This week, we've interviewed Cheeseness about his project [*Hive Time*](https://godotengine.org /images/showcase/hive-time).
+Welcome to the third developer interview following the [introduction of the Godot Showcase page]({{% ref "article/new-showcase-for-projects-made-with-godot" %}})! This week, we've interviewed Cheeseness about his project [*Hive Time*](https://godotengine.org /images/showcase/hive-time).
 
 ___
 

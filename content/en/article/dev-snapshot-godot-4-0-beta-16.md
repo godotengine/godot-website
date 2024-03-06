@@ -33,7 +33,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/4fa6edc888cfacd5346bf08afa14b5f5a9bd6d0c...518b9e5801a19229805fe837d7d0cf92920ad413), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-24T10%3A00..2023-01-27T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 15 (105 commits – excluding merge commits ― from 40 contributors).
 
@@ -92,7 +92,7 @@ Some of the most notables feature changes in this update are:
 - Shaders: Add derivative functions with precision to shaders ([GH-72109](https://github.com/godotengine/godot/pull/72109)).
 - XR: Make screen texture and depth texture work in Multiview ([GH-71455](https://github.com/godotengine/godot/pull/71455)).
 - XR: Correctly apply `world_scale` in WebXR (Godot 4) ([GH-71948](https://github.com/godotengine/godot/pull/71948)).
-- As well as many [improvements to the documentation](/article/godot-4-0-docs-sprint/).
+- As well as many [improvements to the documentation]({{% ref "article/godot-4-0-docs-sprint" %}}).
 
 This release is built from commit [518b9e580](https://github.com/godotengine/godot/commit/518b9e5801a19229805fe837d7d0cf92920ad413).
 

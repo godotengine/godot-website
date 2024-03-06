@@ -9,7 +9,7 @@ image_caption_description: "A demo scene by Amazon Lumberyard and Logan Preshaw"
 date: 2023-03-17 10:00:00
 ---
 
-The first patch release of Godot 4 is almost ready. Following on the heels of [the biggest release in the history of Godot](/article/godot-4-0-sets-sail), 4.0.1 is focused on the most critical issues, as well as smaller usability improvements that we can fit with confidence they will not introduce any new problems and regressions. A couple of days ago we released the first Release Candidate, and it's already the time for another preview, with the stable release being just around the corner.
+The first patch release of Godot 4 is almost ready. Following on the heels of [the biggest release in the history of Godot]({{% ref "article/godot-4-0-sets-sail" %}}), 4.0.1 is focused on the most critical issues, as well as smaller usability improvements that we can fit with confidence they will not introduce any new problems and regressions. A couple of days ago we released the first Release Candidate, and it's already the time for another preview, with the stable release being just around the corner.
 
 Please give it a try if you can. It should be safe to migrate your existing projects to 4.0.1, but to make sure of that we need your help testing the changes. If there are no significant regressions reported with release candidates, a stable version is going to be published soon. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
 
@@ -30,7 +30,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 
 ## What's new
 
-See the full changelog [on GitHub](https://github.com/godotengine/godot/compare/d23922ffebe48f29126c003411495737d07e5a9f...6970257cffc6790f4d7e847e87e5cab9e252874e) for an overview of all changes [since 4.0.1-rc1](/article/release-candidate-godot-4-0-1-rc-1) (13 commits – excluding merge commits ― from 11 contributors).
+See the full changelog [on GitHub](https://github.com/godotengine/godot/compare/d23922ffebe48f29126c003411495737d07e5a9f...6970257cffc6790f4d7e847e87e5cab9e252874e) for an overview of all changes [since 4.0.1-rc1]({{% ref "article/release-candidate-godot-4-0-1-rc-1" %}}) (13 commits – excluding merge commits ― from 11 contributors).
 
 Some of the most notable feature changes in this update are:
 
@@ -67,6 +67,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

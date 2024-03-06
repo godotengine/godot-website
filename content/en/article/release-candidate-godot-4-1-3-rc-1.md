@@ -9,7 +9,7 @@ image_caption_description: "A game by shawcat"
 date: 2023-10-27 15:00:00
 ---
 
-While Godot 4.2 is enjoying its last leg of the development cycle (check out [beta 3](/article/dev-snapshot-godot-4-2-beta-3)!), we have an opportunity to compile yet another batch of changes fitting for Godot 4.1. Make sure to give this release candidate a test, so the stable version can be made available shortly.
+While Godot 4.2 is enjoying its last leg of the development cycle (check out [beta 3]({{% ref "article/dev-snapshot-godot-4-2-beta-3" %}})!), we have an opportunity to compile yet another batch of changes fitting for Godot 4.1. Make sure to give this release candidate a test, so the stable version can be made available shortly.
 
 The third maintenance release for Godot 4.1 contains a number of fixes for the rendering system, including issues in all rendering backends, in lightmap and voxel GI systems, and in particles. Various problems were addressed in the editor UI, and in the GUI system in general. The Input team improved controller support and resolved a couple of problems specific to the Android platform. And finally, several documentation mistakes have been corrected, plus there is new documentation available for `RenderingDevice`.
 
@@ -130,4 +130,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5ca/f3f/2b5/5caf3f2b5f75b989378173.png
 date: 2019-04-11 13:05:11
 ---
 
-We are delighted to announce that Godot Engine has been awarded **USD 50,000** by [Mozilla](https://www.mozilla.org) as part of the Mozilla Open Source Support (MOSS) [*Mission Partners*](https://www.mozilla.org/en-US/moss/mission-partners/) program. This is the second time that Godot receives a MOSS award, after a [first award of USD 20,000](/article/mozilla-awards-godot-engine-part-moss-mission-partners-program) in 2016.
+We are delighted to announce that Godot Engine has been awarded **USD 50,000** by [Mozilla](https://www.mozilla.org) as part of the Mozilla Open Source Support (MOSS) [*Mission Partners*](https://www.mozilla.org/en-US/moss/mission-partners/) program. This is the second time that Godot receives a MOSS award, after a [first award of USD 20,000]({{% ref "article/mozilla-awards-godot-engine-part-moss-mission-partners-program" %}}) in 2016.
 
 This award will be used to fund the work of some of our core contributors on three different work packages, all linked with Mozilla's mission of furthering an open and accessible Web. For Godot, this means making sure that everyone can build and play networked and browser-based games with open source technology.
 

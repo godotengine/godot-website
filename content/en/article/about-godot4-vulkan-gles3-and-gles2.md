@@ -19,7 +19,7 @@ OpenGL will most likely not be supported at the time Godot 4.0 is out. The rende
 
 # What version of OpenGL will Godot support?
 
-In the beginning, we wanted to support [Vulkan alongside GLES2](https://godotengine.org/article/abandoning-gles3-vulkan-and-gles2), which is why in the project manager you can see a disabled option for GLES2.
+In the beginning, we wanted to support [Vulkan alongside GLES2]({{% ref "article/abandoning-gles3-vulkan-and-gles2" %}}), which is why in the project manager you can see a disabled option for GLES2.
 
 ![Screenshot_2021-07-18_13-51-44.png](/storage/app/uploads/public/60f/417/813/60f4178135e5d096534571.png)
 

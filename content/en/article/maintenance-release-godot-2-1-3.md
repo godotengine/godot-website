@@ -7,11 +7,11 @@ image: /storage/app/uploads/public/58e/e76/0ca/58ee760ca31aa290366551.png
 date: 2017-04-12 18:46:54
 ---
 
-Short of three months after the release of [Godot 2.1.2](/article/maintenance-release-godot-2-1-2), the community is proud to announce this new maintenance update in the stable branch, Godot 2.1.3!
+Short of three months after the release of [Godot 2.1.2]({{% ref "article/maintenance-release-godot-2-1-2" %}}), the community is proud to announce this new maintenance update in the stable branch, Godot 2.1.3!
 
-Due to the long development process of the upcoming Godot 3.0 (see our [Devblog](/devblog) for technical posts about its impressive progress), many contributors took a renewed interest in the 2.1 branch. This release therefore brings various new features to GDScript, the editor, some nodes' API – but we tried to ensure that compatibility with earlier 2.1.x releases would be fully preserved.
+Due to the long development process of the upcoming Godot 3.0 (see our [Devblog]({{% ref "blog" %}}) for technical posts about its impressive progress), many contributors took a renewed interest in the 2.1 branch. This release therefore brings various new features to GDScript, the editor, some nodes' API – but we tried to ensure that compatibility with earlier 2.1.x releases would be fully preserved.
 
-[Download it now](/download), and read on for details on the update!
+[Download it now]({{% ref "download" %}}), and read on for details on the update!
 
 A big thankyou to all the contributors who worked on this release by implementing bug fixes or features, or testing the changes to spot potential regressions and help debug issues.
 

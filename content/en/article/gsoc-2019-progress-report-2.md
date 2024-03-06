@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/5d5/d4e/904/5d5d4e9043f37492937462.png
 date: 2019-08-21 14:01:20
 ---
 
-[As announced previously](https://godotengine.org/article/godot-google-summer-code-2019), Godot is participating for the second time in the [Google Summer of Code](https://summerofcode.withgoogle.com) (GSoC) programme, which lets students from all over the world work for three months on specific projects thanks to a Google stipend.
+[As announced previously]({{% ref "article/godot-google-summer-code-2019" %}}), Godot is participating for the second time in the [Google Summer of Code](https://summerofcode.withgoogle.com) (GSoC) programme, which lets students from all over the world work for three months on specific projects thanks to a Google stipend.
 
-The GSoC coding period is close to the finish line, and our 8 students are hard at work to finalize their projects as best as they can, while writing their final evaluation report. Yet, I've asked them for a quick update on what they've been working on over the past few weeks since the first progress report (read [part 1](/article/gsoc-2019-progress-report-1-part-1) and [part 2](/article/gsoc-2019-progress-report-1-part-2)).
+The GSoC coding period is close to the finish line, and our 8 students are hard at work to finalize their projects as best as they can, while writing their final evaluation report. Yet, I've asked them for a quick update on what they've been working on over the past few weeks since the first progress report (read [part 1]({{% ref "article/gsoc-2019-progress-report-1-part-1" %}}) and [part 2]({{% ref "article/gsoc-2019-progress-report-1-part-2" %}})).
 
 This second progress report is shorter so we can fit everything in one article. At the end of GSoC, we'll have a final progress report where each student will outline how to get started using their project, and share their impressions of the experience as a whole.
 
@@ -198,7 +198,7 @@ Our major task for now is fixing bugs within the current implementation and merg
 
 ### Current progress
 
-For those who are not familiar with the project I suggest you check out [last month's blog post](/article/gsoc-2019-progress-report-1-part-1) so you are brought up to speed with what the project entails.
+For those who are not familiar with the project I suggest you check out [last month's blog post]({{% ref "article/gsoc-2019-progress-report-1-part-1" %}}) so you are brought up to speed with what the project entails.
 
 First I will begin with an update on how I've dealt with some of the issues I mentioned last time, specifically the memory leak crash in `AudioStreamPlaylist`, which was causing the preview generator to generate an endless preview.
 Thanks to last month's blog post I got in contact with a game developer who was interested in the feature and we started having a back and forth conversation about the project. I sent him the most current build and after he tested it I got a question about why playlist is looping indefinitely and I realised that it's not actually meant to do that. After looking at the code, I noticed that the line which updates the current stream did not have a safety check:

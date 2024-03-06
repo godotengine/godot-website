@@ -9,7 +9,7 @@ date: 2020-08-28 12:00:00
 
 Howdy Godotters! It's time for a long overdue update on the status of the HTML5 export and the web version of Godot in general.
 
-Many of the improvements made for the Web editor's [early prototype](/article/godot-editor-running-web-browser) have been merged in the `master` branch and backported to the `3.2` branch. Support for [`SceneTree.quit()`](https://docs.godotengine.org/en/stable/classes/class_scenetree.html#class-scenetree-method-quit) and drag and drop of files via the [`files_dropped`](https://docs.godotengine.org/en/stable/classes/class_scenetree.html#signals) signal are already in the upcoming 3.2.3 release.
+Many of the improvements made for the Web editor's [early prototype]({{% ref "article/godot-editor-running-web-browser" %}}) have been merged in the `master` branch and backported to the `3.2` branch. Support for [`SceneTree.quit()`](https://docs.godotengine.org/en/stable/classes/class_scenetree.html#class-scenetree-method-quit) and drag and drop of files via the [`files_dropped`](https://docs.godotengine.org/en/stable/classes/class_scenetree.html#signals) signal are already in the upcoming 3.2.3 release.
 
 The HTML5 export is also getting further improvements in the upcoming point releases:
 

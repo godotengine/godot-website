@@ -9,7 +9,7 @@ image_caption_description: A game by Tomasz Chabora
 date: 2023-12-12 13:00:00
 ---
 
-We released [Godot 4.2](/article/godot-4-2-arrives-in-style/) two weeks ago, with major improvements and bug fixes all around the engine. Like any big feature release, it had a few rough edges which we've been focusing on addressing in the past couple of weeks. This allows us to already publish this first maintenance release, Godot 4.2.1, which irons out some of those issues while fully preserving compatibility.
+We released [Godot 4.2]({{% ref "article/godot-4-2-arrives-in-style" %}}) two weeks ago, with major improvements and bug fixes all around the engine. Like any big feature release, it had a few rough edges which we've been focusing on addressing in the past couple of weeks. This allows us to already publish this first maintenance release, Godot 4.2.1, which irons out some of those issues while fully preserving compatibility.
 
 Some of the most important fixes in this release are:
 
@@ -25,7 +25,7 @@ Some of the most important fixes in this release are:
 
 - Recent Emscripten releases changed their default stack size, which caused issues for Web export in Godot 4.2 when using certain APIs. We added the needed linker flags to restore the behavior from older Emscripten versions, ensuring that Godot can run successfully after being compiled by the latest Emscripten releases ([GH-86036](https://github.com/godotengine/godot/pull/86036)).
 
-[**Download Godot 4.2.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.2.1.stable/).
+[**Download Godot 4.2.1 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/4.2.1.stable/).
 
 {{< articles/download-card version="4.2.1" release="stable" >}}
 
@@ -119,4 +119,4 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

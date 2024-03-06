@@ -25,7 +25,7 @@ The code reference is down to **73% complete at the time of writing**. We want t
 
 ![godot-refs-missing-entries.jpg](/storage/app/uploads/public/5cf/4ba/2eb/5cf4ba2eb33b0449628922.jpg)
 
-We can do this together. [Back in 2017](/article/first-godot-3-docs-sprint-sept-9), in the months leading to the release of Godot 3.0 and with the help of dedicated contributors, we took the reference from 30% to 70% complete in just a few weeks! The manual got its great [Getting Started](https://docs.godotengine.org/en/latest/getting_started/step_by_step/index.html) section at that time, with a lot of work from KidsCanCode, among others.
+We can do this together. [Back in 2017]({{% ref "article/first-godot-3-docs-sprint-sept-9" %}}), in the months leading to the release of Godot 3.0 and with the help of dedicated contributors, we took the reference from 30% to 70% complete in just a few weeks! The manual got its great [Getting Started](https://docs.godotengine.org/en/latest/getting_started/step_by_step/index.html) section at that time, with a lot of work from KidsCanCode, among others.
 
 ## Let's get started together ##
 

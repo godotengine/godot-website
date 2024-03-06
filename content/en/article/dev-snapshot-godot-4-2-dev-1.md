@@ -9,7 +9,7 @@ image_caption_description: "A tool for 3D terrain creation by Outobugi Games and
 date: 2023-07-19 15:00:00
 ---
 
-Two weeks ago we wrapped up the development of [Godot 4.1](/article/godot-4-1-is-here), bringing more polish and stability to the Godot 4 series, and just two days ago we shipped its [first maintenance release](/article/maintenance-release-godot-4-1-1), addressing some of the more urgent issues that slipped in. In preparation for both of these releases we temporarily put aside many improvements to ensure stability and to avoid any last minute regressions.
+Two weeks ago we wrapped up the development of [Godot 4.1]({{% ref "article/godot-4-1-is-here" %}}), bringing more polish and stability to the Godot 4 series, and just two days ago we shipped its [first maintenance release]({{% ref "article/maintenance-release-godot-4-1-1" %}}), addressing some of the more urgent issues that slipped in. In preparation for both of these releases we temporarily put aside many improvements to ensure stability and to avoid any last minute regressions.
 
 Today, we are ready to share these improvements with you with **4.2 dev 1** being available for public testing (you can read about the most notable changes [below](#whats-new)). This first development snapshot marks the proper start of the new development cycle, which means in the coming weeks we will be quickly merging many changes as contributors implement new features and fix long-standing bugs. You should expect a dev snapshot every 1 or 2 weeks, depending on how stable the development branch is after any given series of merges.
 
@@ -25,7 +25,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 ## What's new
 
-**83 contributors** submitted over **200 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-dev1), which contains links to relevant commits and PRs for this and every previous release. Some of the changes present in this release are also available in [Godot 4.1.1](/article/maintenance-release-godot-4-1-1).
+**83 contributors** submitted over **200 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-dev1), which contains links to relevant commits and PRs for this and every previous release. Some of the changes present in this release are also available in [Godot 4.1.1]({{% ref "article/maintenance-release-godot-4-1-1" %}}).
 
 Below are the most notable changes compared to 4.1.1-stable:
 
@@ -121,4 +121,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

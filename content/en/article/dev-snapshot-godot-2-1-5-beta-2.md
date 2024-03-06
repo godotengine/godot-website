@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5aa/a32/458/5aaa324584dc2378307816.png
 date: 2018-03-15 09:01:21
 ---
 
-As mentioned in a [previous blog post](/article/dev-snapshot-godot-2-1-5-beta-1), we plan to continue supporting the 2.1.x branch for a while - at least until 3.1 is released, bringing back support for low and mid-end mobile and low-end desktop GPUs via OpenGL ES 2.0 / OpenGL 2.1.
+As mentioned in a [previous blog post]({{% ref "article/dev-snapshot-godot-2-1-5-beta-1" %}}), we plan to continue supporting the 2.1.x branch for a while - at least until 3.1 is released, bringing back support for low and mid-end mobile and low-end desktop GPUs via OpenGL ES 2.0 / OpenGL 2.1.
 
 The feedback on the previous 2.1.5 beta 1 build was relatively good, and many fixes have been done since, especially to the (still imperfect, but better) tool to convert 2.1 projects to the Godot 3 API.
 
@@ -26,7 +26,7 @@ Happy bug hunting!
 
 In parallel, work on Godot 3.1 is still ongoing. Support for OpenGL ES 2.0 / OpenGL 2.1 **for 2D** was merged in the *master* branch recently, and [karroffel](https://github.com/karroffel) is now focusing on the more complex 3D part.
 
-Juan ([reduz](https://github.com/reduz)) implemented initial support for 2D meshes, and is now quite busy with preparations for GDC, where he will meet many companies as well as give a talk during our [GDC Meetup](https://godotengine.org/article/join-us-gdc-during-godot-meetup-2018) at the GitHub HQ.
+Juan ([reduz](https://github.com/reduz)) implemented initial support for 2D meshes, and is now quite busy with preparations for GDC, where he will meet many companies as well as give a talk during our [GDC Meetup]({{% ref "article/join-us-gdc-during-godot-meetup-2018" %}}) at the GitHub HQ.
 
 Other contributors are still quite active, and we're slowly but surely reducing our backlog of [awesome pull requests](https://github.com/godotengine/godot/pulls) done by the community over the last couple of months.
 
@@ -34,7 +34,7 @@ There is still no ETA for 3.1, but basically we will wrap it up as soon as the 3
 
 ## Godot 3.0.3 in a few weeks
 
-We will continue pushing bug fixes and improvements in a forward compatible way to the 3.0 branch (i.e. you should be able to use the newer versions on your existing 3.0.x project without logic change). Hein-Peter ([TMM](https://github.com/hpvb)) did a great job so far on [3.0.1](/article/maintenance-release-godot-3-0-1) and [3.0.2](/article/maintenance-release-godot-302), and will continue doing so!
+We will continue pushing bug fixes and improvements in a forward compatible way to the 3.0 branch (i.e. you should be able to use the newer versions on your existing 3.0.x project without logic change). Hein-Peter ([TMM](https://github.com/hpvb)) did a great job so far on [3.0.1]({{% ref "article/maintenance-release-godot-3-0-1" %}}) and [3.0.2]({{% ref "article/maintenance-release-godot-302" %}}), and will continue doing so!
 
 Unless regressions or critical bugs dictate it, we plan to have maintenance releases once a month or so, to keep you up-to-date with the latest and greatest in the stable branch.
 

@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5f2/1bb/011/5f21bb0114081243850484.png
 date: 2020-07-29 18:18:56
 ---
 
-As we announced [a few months ago](/article/student-applications-gsoc-2020-open-today), Godot is participating again in the [Google Summer of Code](https://summerofcode.withgoogle.com/) program for its 2020 edition.
+As we announced [a few months ago]({{% ref "article/student-applications-gsoc-2020-open-today" %}}), Godot is participating again in the [Google Summer of Code](https://summerofcode.withgoogle.com/) program for its 2020 edition.
 
 We selected 6 projects back in May, and the 6 students and their mentors have now been working on their projects for almost two months. We omitted to announce the projects formally (sorry about that!), but this first progress report written by each student will make up for it by giving a direct glimpse into their work.
 

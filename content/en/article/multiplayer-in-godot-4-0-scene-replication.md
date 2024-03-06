@@ -10,7 +10,7 @@ date: 2023-02-23 11:30:00
 
 Howdy Godotters! It's been more than a year since I last wrote on this blog, "... blah blah, blah blah, blah" (cf. [C. L. C. Chuckie](https://en.wikipedia.org/wiki/LeChuck)), and with Godot 4.0 nearing release, it's time to write something to jumpstart you into creating your own multiplayer experience with Godot.
 
-Since the [last blog post](/article/multiplayer-changes-godot-4-0-report-4), we rewrote the scene replication API to be more user-friendly, adding two "configuration" nodes:
+Since the [last blog post]({{% ref "article/multiplayer-changes-godot-4-0-report-4" %}}), we rewrote the scene replication API to be more user-friendly, adding two "configuration" nodes:
 
 - The [`MultiplayerSpawner`](https://docs.godotengine.org/en/latest/classes/class_multiplayerspawner.html) node to configure where nodes can be remotely instantiated by which peer.
 - The [`MultiplayerSynchronizer`](https://docs.godotengine.org/en/latest/classes/class_multiplayersynchronizer.html) node to configure which node properties can be synchronized by which peer.
@@ -37,7 +37,7 @@ func _ready():
 	get_tree().paused = true
 	# You can save bandwidth by disabling server relay and peer notifications.
 	multiplayer.server_relay = false
-	
+
 	# Automatically start the server in headless mode.
 	if DisplayServer.get_name() == "headless":
 		print("Automatically starting dedicated server.")

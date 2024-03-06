@@ -45,7 +45,7 @@ The equivalent of a signal declaration in C# is a delegate declaration with a `S
 
 In .NET, the common way to implement the observer pattern is using [events](https://docs.microsoft.com/en-us/dotnet/standard/events/). Compared to events, C# code that uses Godot signals looks foreign.
 
-Last month, motivated by the new [Callable](https://godotengine.org/article/core-refactoring-progress-report-1) type, I decided to re-think the implementation of signals in C#. The goal this time is to expose them as events. It's not finished, but the initial results are looking great.
+Last month, motivated by the new [Callable]({{% ref "article/core-refactoring-progress-report-1" %}}) type, I decided to re-think the implementation of signals in C#. The goal this time is to expose them as events. It's not finished, but the initial results are looking great.
 
 ![Code completion for signals events](/storage/app/media/mono/csharp_signals_as_events.png)
 _Code-completion of signals events for the `Godot.CheckBox` class_

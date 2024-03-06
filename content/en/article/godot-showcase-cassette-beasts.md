@@ -41,7 +41,7 @@ I first started making games in my bedroom as a kid, using Delphi (I don't know 
 
 Engine code is often optimised to be fast enough in the most common cases, at the expense of poor performance in highly specific cases. Cassette Beasts actually hit several of those poor-performance cases in Godot, and I had to patch engine code in a few places to claw back a few frames. However, I think that this is a strength of Godot. No code can be perfectly optimised for every case. Optimising for better general performance in the most common cases, while allowing game developers to customise the engine for weird cases, is exactly what engine developers should be doing.
 
-![](/assets/images/showcase/cassette-beasts-1.webp)
+![](/images/showcase/cassette-beasts-1.webp)
 
 ### How did you discover Godot? What made you pick it for your project?
 
@@ -63,7 +63,7 @@ But a massively undersold advantage Godot has over other engines, in my opinion,
 
 Obviously, I'll submit pull requests for whatever I can when I get time, because that's how open source software works - and I expect the situation will naturally improve over time as larger and larger projects are built in Godot. But I'd still like to see a bigger effort by the project's leadership to bring down the number of serious bugs.
 
-![](/assets/images/showcase/cassette-beasts-2.webp)
+![](/images/showcase/cassette-beasts-2.webp)
 
 ### What advice would you give to aspiring game developers who are just starting out in the field?
 
@@ -93,6 +93,6 @@ I can't go into the details of what it's like to port to consoles unfortunately.
 
 <strong class="tom">Tom:</strong> Hopefully developers who see our game will see that Godot is ready for more than just small projects! I also hope developers see that you can mix fantasy, comedy, horror, and genuine heartwarming moments, AND wrap it all up in whimsy and mystery, without it coming across as indecision. Because I'm bored of playing monotone games. And because if I'm wrong then Cassette Beasts probably won't do very well. 🙂
 
-![](/assets/images/showcase/cassette-beasts-3.webp)
+![](/images/showcase/cassette-beasts-3.webp)
 
 *[Cassette Beast](https://www.cassettebeasts.com/) is available on [Steam](https://store.steampowered.com/app/1321440/Cassette_Beasts/) for Windows, Linux and Steam Deck. You can join their Discord server [here](https://discord.gg/byttenstudio).*

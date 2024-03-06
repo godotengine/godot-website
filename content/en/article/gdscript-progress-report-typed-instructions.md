@@ -7,16 +7,16 @@ image: /storage/app/uploads/public/5f9/17e/9ec/5f917e9ecf2a2049515486.png
 date: 2020-10-22 00:00:00
 ---
 
-It's been a while since [my last report](https://godotengine.org/article/gdscript-progress-report-new-gdscript-now-merged) because this particular task took me more time than I anticipated. GDScript now got a much needed [optimization](https://github.com/godotengine/godot/pull/43004).
+It's been a while since [my last report]({{% ref "article/gdscript-progress-report-new-gdscript-now-merged" %}}) because this particular task took me more time than I anticipated. GDScript now got a much needed [optimization](https://github.com/godotengine/godot/pull/43004).
 
 *See other articles in this Godot 4.0 GDScript series:*
 
-1. [GDScript progress report: Writing a tokenizer](https://godotengine.org/article/gdscript-progress-report-writing-tokenizer)
-2. [GDScript progress report: Writing a new parser](https://godotengine.org/article/gdscript-progress-report-writing-new-parser)
-3. [GDScript progress report: Type checking is back](https://godotengine.org/article/gdscript-progress-report-type-checking-back)
-4. [GDScript progress report: New GDScript is now merged](https://godotengine.org/article/gdscript-progress-report-new-gdscript-now-merged)
-5. (you are here) [GDScript progress report: Typed instructions](https://godotengine.org/article/gdscript-progress-report-typed-instructions)
-6. [GDScript progress report: Feature-complete for 4.0](https://godotengine.org/article/gdscript-progress-report-feature-complete-40)
+1. [GDScript progress report: Writing a tokenizer]({{% ref "article/gdscript-progress-report-writing-tokenizer" %}})
+2. [GDScript progress report: Writing a new parser]({{% ref "article/gdscript-progress-report-writing-new-parser" %}})
+3. [GDScript progress report: Type checking is back]({{% ref "article/gdscript-progress-report-type-checking-back" %}})
+4. [GDScript progress report: New GDScript is now merged]({{% ref "article/gdscript-progress-report-new-gdscript-now-merged" %}})
+5. (you are here) [GDScript progress report: Typed instructions]({{% ref "article/gdscript-progress-report-typed-instructions" %}})
+6. [GDScript progress report: Feature-complete for 4.0]({{% ref "article/gdscript-progress-report-feature-complete-40" %}})
 
 ## Bug fixes
 

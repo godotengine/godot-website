@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/620/3d3/0e0/6203d30e0bda9846826159.jpg
 date: 2022-02-09 14:44:55
 ---
 
-Two weeks ago we finally released [Godot 4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1) ― the first official [*alpha*](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) build of our upcoming major milestone, enabling all interested users to try it out and report bugs, as well as provide feedback on the new features.
+Two weeks ago we finally released [Godot 4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}) ― the first official [*alpha*](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) build of our upcoming major milestone, enabling all interested users to try it out and report bugs, as well as provide feedback on the new features.
 
 We got [lots of bug reports](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+milestone%3A4.0+) and many have been fixed already in these two weeks! To keep iterating on stabilizing the 4.0 branch, we're going to release new alpha builds every other week, so that testers can always have a recent version to test the latest changes.
 
@@ -23,7 +23,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 2 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 2 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/31a7ddbf838572e50415159a56720275f9523262...79077e6c10db9e8e53a8134f72e326f3ffb9c51c) for an overview of all changes since 4.0 alpha 1 (260 commits – excluding merge commits ― from 48 contributors).
 

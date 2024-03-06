@@ -39,7 +39,7 @@ After many months of hard work (and many more of bug fixing), Godot 1.1 is out!!
 
 ## Download
 
-Godot 1.1 can be obtained at the [Download](/download) section.
+Godot 1.1 can be obtained at the [Download]({{% ref "download" %}}) section.
 
 ## Future
 

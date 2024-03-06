@@ -7,16 +7,16 @@ image: /storage/app/uploads/public/615/766/117/6157661176579529840022.png
 date: 2021-09-25 14:00:00
 ---
 
-Howdy Godotters! Time for [another update](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-1) on Godot 4.0's multiplayer networking.
+Howdy Godotters! Time for [another update]({{% ref "article/multiplayer-changes-godot-4-0-report-1" %}}) on Godot 4.0's multiplayer networking.
 
 We have been really busy working on the foundation of the networking and multiplayer classes lately, and there are quite a few new features to talk about. In this post, we'll start by showing some of the new RPC syntax and features.
 
 *See other articles in this Godot 4.0 networking series:*
 
-1. [Multiplayer in Godot 4.0: On servers, RSETs and state updates](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-1)
-2. (you are here) [Multiplayer in Godot 4.0: RPC syntax, channels, ordering](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-2)
-3. [Multiplayer in Godot 4.0: ENet wrappers, WebRTC](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-3)
-4. [Multiplayer in Godot 4.0: Scene Replication (part 1)](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-4)
+1. [Multiplayer in Godot 4.0: On servers, RSETs and state updates]({{% ref "article/multiplayer-changes-godot-4-0-report-1" %}})
+2. (you are here) [Multiplayer in Godot 4.0: RPC syntax, channels, ordering]({{% ref "article/multiplayer-changes-godot-4-0-report-2" %}})
+3. [Multiplayer in Godot 4.0: ENet wrappers, WebRTC]({{% ref "article/multiplayer-changes-godot-4-0-report-3" %}})
+4. [Multiplayer in Godot 4.0: Scene Replication (part 1)]({{% ref "article/multiplayer-changes-godot-4-0-report-4" %}})
 
 ### Simplified RPC configuration
 

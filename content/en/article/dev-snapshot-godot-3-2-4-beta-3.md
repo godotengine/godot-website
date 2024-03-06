@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/5fc/0f4/eac/5fc0f4eac186e790380821.jpg
 date: 2020-11-27 12:46:50
 ---
 
-While development keeps going at full speed towards Godot 4.0 (see recent devblogs on [GDScript typed instructions](/article/gdscript-progress-report-typed-instructions) and [Complex Text Layout](/article/complex-text-layouts-progress-report-2)), a lot of work is also being done on the `3.2` branch for the upcoming Godot 3.2.4.
+While development keeps going at full speed towards Godot 4.0 (see recent devblogs on [GDScript typed instructions]({{% ref "article/gdscript-progress-report-typed-instructions" %}}) and [Complex Text Layout]({{% ref "article/complex-text-layouts-progress-report-2" %}})), a lot of work is also being done on the `3.2` branch for the upcoming Godot 3.2.4.
 
-This new **beta 3** build comes shortly after [last week's beta 2](/article/dev-snapshot-godot-3-2-4-beta-2) to fix some of the regressions and bugs reported against that release.
+This new **beta 3** build comes shortly after [last week's beta 2]({{% ref "article/dev-snapshot-godot-3-2-4-beta-2" %}}) to fix some of the regressions and bugs reported against that release.
 
 The only big change is that the classical build for macOS is now a universal binary, with **both `x86_64` and `arm64`** architectures included (to support the new ARM-based Apple M1 chip natively).
 This update also re-adds UWP templates which we missing in beta 1 and beta 2 due to a temporary buildsystem issue.
@@ -21,8 +21,8 @@ The main changes coming in Godot 3.2.4 and included in this beta are:
 - [Android App Bundle](https://github.com/godotengine/godot-proposals/issues/342) and [subview embedding](https://github.com/godotengine/godot-proposals/issues/1064) support.
 - [2D batching for GLES3](https://github.com/godotengine/godot/pull/42119) (it was implemented for GLES2 in 3.2.2), and improvements to GLES2's batching.
 - [A new software skinning for MeshInstance](https://github.com/godotengine/godot/pull/40313) to replace the slow GPU skinning on devices that don't support the fast GPU skinning (especially mobile).
-- [Rewritten and greatly improved FBX importer](/article/fbx-importer-rewritten-for-godot-3-2-4).
-- [Improved Web editor prototype](/article/godot-web-progress-report-3) and [AudioWorklet support for multithreaded HTML5 builds](https://github.com/godotengine/godot/pull/43454).
+- [Rewritten and greatly improved FBX importer]({{% ref "article/fbx-importer-rewritten-for-godot-3-2-4" %}}).
+- [Improved Web editor prototype]({{% ref "article/godot-web-progress-report-3" %}}) and [AudioWorklet support for multithreaded HTML5 builds](https://github.com/godotengine/godot/pull/43454).
 - [New option to snap 2D transforms to whole coordinates](https://github.com/godotengine/godot/pull/43554), helps prevent jitter on pixel art camera motions.
 - [Configurable amount of lights per object](https://github.com/godotengine/godot/pull/43606), now defaulting to 32 instead of 8.
 - [macOS ARM64 support](https://github.com/godotengine/godot/pull/39788) in official binaries for Apple M1 chip (new in 3.2.4 beta 3, only classical build for now).
@@ -101,7 +101,7 @@ This release is built from commit [b9b773c3f0e7d895b2aaf2c8712b7d55ad0a05dd](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Standard build](https://downloads.tuxfamily.org/godotengine/3.2.4/beta3/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.4/beta3/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.12.0.111 are included in this build.
@@ -114,6 +114,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

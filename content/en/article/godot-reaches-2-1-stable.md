@@ -9,11 +9,11 @@ date: 2016-08-09 19:38:43
 
 ## Godot 2.1 stable is here!
 
-After almost six months of hard work, we are proudly presenting you [the marvellous Godot Engine 2.1](/download). [Just like 2.0](/article/godot-engine-reaches-2-0-stable), this version focuses almost exclusively on further improving usability and the editor interface.
+After almost six months of hard work, we are proudly presenting you [the marvellous Godot Engine 2.1]({{% ref "download" %}}). [Just like 2.0]({{% ref "article/godot-engine-reaches-2-0-stable" %}}), this version focuses almost exclusively on further improving usability and the editor interface.
 
 This release marks the conclusion of a series focusing on usability improvements. We have listened to and worked with our awesome community to make Godot one of the easiest game development environments to use. Our goal is and will always be to aim for the top in the *ease of use* vs *power* ratio.
 
-**[Download it now](/download)** while you read on!
+**[Download it now]({{% ref "download" %}})** while you read on!
 
 There are countless new features in this version (see the full changelog, [chronological](http://download.tuxfamily.org/godotengine/2.1/Godot_v2.1-stable_changelog_chrono.txt) or [listed by contributor](http://download.tuxfamily.org/godotengine/2.1/Godot_v2.1-stable_changelog_authors.txt)). The most important ones are:
 

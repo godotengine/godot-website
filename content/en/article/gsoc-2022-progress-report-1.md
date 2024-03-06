@@ -170,7 +170,7 @@ This will be a draw mode that previews the texel density of lightmaps (without a
 
 The idea is to overlay a checkerboard pattern with the same square size (in texels) on the textures of all the meshes. Upon rendering, the checkerboard pattern will appear diminished in the regions with high texel density, and magnified in the regions with low texel density.
 
-For this to work, the `lightmap_size` of each object would need to be read from the draw mode's godot shader. We can conveniently use [Godot 4.0's per-instance uniforms](/article/godot-40-gets-global-and-instance-shader-uniforms) to make this work.
+For this to work, the `lightmap_size` of each object would need to be read from the draw mode's godot shader. We can conveniently use [Godot 4.0's per-instance uniforms]({{% ref "article/godot-40-gets-global-and-instance-shader-uniforms" %}}) to make this work.
 
 I have created a crude proof of concept for this. Here's a sneak peek:
 

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/607/b66/7e9/607b667e93a46491184773.png
 date: 2021-04-18 14:50:00
 ---
 
-Welcome to another developer interview following the [introduction of the Godot Showcase page](https://godotengine.org/article/new-showcase-for-projects-made-with-godot)! This week, we are interviewing John Watson about the game [*Gravity Ace*](https://godotengine.org /images/showcase/gravity-ace).
+Welcome to another developer interview following the [introduction of the Godot Showcase page]({{% ref "article/new-showcase-for-projects-made-with-godot" %}})! This week, we are interviewing John Watson about the game [*Gravity Ace*](https://godotengine.org /images/showcase/gravity-ace).
 
 ___
 

@@ -7,11 +7,11 @@ image: /storage/app/uploads/public/5b8/588/37e/5b858837eb859451189783.png
 date: 2018-08-28 17:42:36
 ---
 
-After our [GodotCon in Brussels in February 2018](/article/godotcon-2018-venue-and-call-proposals), we're preparing a new Godot Convention (GodotCon), this time in **Poznań, Poland** on **Wed 10 & Thu 11 October 2018**.
+After our [GodotCon in Brussels in February 2018]({{% ref "article/godotcon-2018-venue-and-call-proposals" %}}), we're preparing a new Godot Convention (GodotCon), this time in **Poznań, Poland** on **Wed 10 & Thu 11 October 2018**.
 
 **TL;DR:**
 
-- [Events page with all details](/events).
+- [Events page with all details]({{% ref "events" %}}).
 - [Registration form for GodotCon Poznań](https://framaforms.org/registration-godotcon-poznan-2018-1535467892).
 - We need speakers for the event; contact me (Rémi) if you'd like to be one.
 - Contact me if you want a discount code for [Game Industry Conference](https://gic.gd) passes (also in Poznań right after GodotCon).
@@ -26,7 +26,7 @@ This is an international event, and as such we invite all Godot users and contri
 
 ## Practical information
 
-[**See our Events page**](/events) for the details and pratical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
+[**See our Events page**]({{% ref "events" %}}) for the details and pratical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
 
 The GodotCon will be free of charge, but we ask you to [**register via this form**](https://framaforms.org/registration-godotcon-poznan-2018-1535467892) so that we know who to expect, and how many attendees will be there.
 

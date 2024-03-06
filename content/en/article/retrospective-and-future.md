@@ -30,7 +30,7 @@ Things did not really go as planned though. Even though the company had a stella
 
 At the time (around 2014), I was just planning to move away and start over somewhere else, in a region with a more stable economy. In the meantime, I went back to work as a consultant (and started specializing in game business consulting too) and Ariel remained working as his own company (Lone Wolf Technology). For me, Godot became more or less a hobby. It was fun to get feedback from users, which would often complain about how terrible usability was (of course, Godot had always been a licensed and in-house engine). Almost no one would contribute code for a long time, so all I did was fix the issues reported by users in my free time.
 
-After a year, [version 1.0 was released](/article/godot-engine-reaches-1-0). This was cool but users really complained about the many limitations of the 2D engine (and 3D being outright unusable), so many months of work resulted in a 1.1 release with [improved 2D features](/article/godot-1-1-out).
+After a year, [version 1.0 was released]({{% ref "article/godot-engine-reaches-1-0" %}}). This was cool but users really complained about the many limitations of the 2D engine (and 3D being outright unusable), so many months of work resulted in a 1.1 release with [improved 2D features]({{% ref "article/godot-1-1-out" %}}).
 
 
 
@@ -38,7 +38,7 @@ After a year, [version 1.0 was released](/article/godot-engine-reaches-1-0). Thi
 *Godot 1.0, released in December 2014*
 
 
-Usability remained as the main complaint, though. Users still had to go through a lot of steps to do things that were simpler in other engines. Their feedback was heard and, several months later, [Godot 2.0 came out](/article/godot-engine-reaches-2-0-stable). The work on improving usability continued until [2.1 finally came out](/article/godot-reaches-2-1-stable) at the end of 2016.
+Usability remained as the main complaint, though. Users still had to go through a lot of steps to do things that were simpler in other engines. Their feedback was heard and, several months later, [Godot 2.0 came out]({{% ref "article/godot-engine-reaches-2-0-stable" %}}). The work on improving usability continued until [2.1 finally came out]({{% ref "article/godot-reaches-2-1-stable" %}}) at the end of 2016.
 
 
 ![Screenshot of Godot 2.0](/storage/app/uploads/public/5e0/b86/b5e/5e0b86b5e5873141503256.png)
@@ -86,7 +86,7 @@ In fact, thanks to community and company donations, Godot now employs many of ou
 
 ### Godot 3.0 and a dose of realism
 
-Back to the retrospective, something unexpected happened during the late part of Godot 3.0 development. We decided to use OpenGL ES 3.0 / OpenGL 3.3 for Godot 3. It looked like a great choice, having a very nice API and it would work perfectly on desktop and mobile. Reality has [shown us otherwise](/article/abandoning-gles3-vulkan-and-gles2), so only a month after releasing 3.0 we realized we would need to leave OpenGL behind.
+Back to the retrospective, something unexpected happened during the late part of Godot 3.0 development. We decided to use OpenGL ES 3.0 / OpenGL 3.3 for Godot 3. It looked like a great choice, having a very nice API and it would work perfectly on desktop and mobile. Reality has [shown us otherwise]({{% ref "article/abandoning-gles3-vulkan-and-gles2" %}}), so only a month after releasing 3.0 we realized we would need to leave OpenGL behind.
 
 
 
@@ -97,7 +97,7 @@ Still, the explosion in new users and contributors, and the fact it took us a ye
 
 Additionally, OpenGL ES 3.0 was barely working for a lot of mobile hardware, so we had to go back to add an OpenGL ES 2.0 / OpenGL 2.1 renderer again, but still using the new PBR design of Godot 3.0.
 
-After a very intense year of work, we finally managed to release [Godot 3.1](/article/godot-3-1-released), which then again contributed to another boost in the amount of users, given that the engine was a lot more stable and usable.
+After a very intense year of work, we finally managed to release [Godot 3.1]({{% ref "article/godot-3-1-released" %}}), which then again contributed to another boost in the amount of users, given that the engine was a lot more stable and usable.
 
 
 ![Interest over time in "Godot Engine" on Google Trends](/storage/app/uploads/public/5e0/b88/c66/5e0b88c660334537087053.png)
@@ -108,7 +108,7 @@ After a very intense year of work, we finally managed to release [Godot 3.1](/ar
 
 As the project started growing, Godot Conferences started being organized, this way most of the core contributors could meet face to face. This greatly improved discussions and decision-making in key areas.
 
-Nowadays, we meet several times a year in Europe. In fact you are welcome to [join us next month](/article/meet-community-fosdem-and-godotcon-2020) in Brussels!
+Nowadays, we meet several times a year in Europe. In fact you are welcome to [join us next month]({{% ref "article/meet-community-fosdem-and-godotcon-2020" %}}) in Brussels!
 
 
 ### New goals

@@ -9,7 +9,7 @@ date: 2016-07-24 21:40:26
 
 Our first release candidate is out! This means, if nothing important changes, that this build will become Godot 2.1.
 
-Godot 2.1 continues to improve on the usability trend, taking care of several aspects that were left out of 2.0 due to time constraints. [Grab it now](/download) while you read on the list of new features below (short version!).
+Godot 2.1 continues to improve on the usability trend, taking care of several aspects that were left out of 2.0 due to time constraints. [Grab it now]({{% ref "download" %}}) while you read on the list of new features below (short version!).
 
 Same as in Beta, a quick and incomplete list of new features follows (a proper post will be written for the stable release):
 
@@ -30,6 +30,6 @@ Same as in Beta, a quick and incomplete list of new features follows (a proper p
 * **Improved thumbnailer**: Previews are updated in real-time, and thumbnails of resources will appear in the inspector.
 * **New AnimatedSprite features**: Labelled animations, and the ability to play animations without an AnimationPlayer.
 
-With these changes, Godot has become a true joy to use. [Please help us with testing](/download) so we can make sure 2.1 is a solid release! This is the time to [report your favorite bugs](https://github.com/godotengine/godot/issues/), or add a comment to existing ones so we give them more priority.
+With these changes, Godot has become a true joy to use. [Please help us with testing]({{% ref "download" %}}) so we can make sure 2.1 is a solid release! This is the time to [report your favorite bugs](https://github.com/godotengine/godot/issues/), or add a comment to existing ones so we give them more priority.
 
 For the most adventurous, you can check the [complete git changelog](http://download.tuxfamily.org/godotengine/2.1-dev/rc1/Godot_v2.1_rc1_changelog_from_2.0.txt) of the more than 1,200 commits (excluding merge commits) that were done so far for this new release! If you've tried the betas already, you can also consult the (much shorter) [git changelog since the previous beta build](http://download.tuxfamily.org/godotengine/2.1-dev/rc1/Godot_v2.1_rc1_changelog_from_beta.txt).

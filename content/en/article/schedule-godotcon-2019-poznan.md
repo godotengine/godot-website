@@ -13,7 +13,7 @@ Livesteam of the event is **[online on YouTube](https://www.youtube.com/c/GodotE
 
 -----
 
-As announced [a few months back](/article/meet-community-godotcon-poznan-2019), we are organizing a Godot Conference (**GodotCon**) in **Poznań, Poland** next week, on 16 & 17 Oct 2019. We expect close to 90 attendees, so this should be a great event!
+As announced [a few months back]({{% ref "article/meet-community-godotcon-poznan-2019" %}}), we are organizing a Godot Conference (**GodotCon**) in **Poznań, Poland** next week, on 16 & 17 Oct 2019. We expect close to 90 attendees, so this should be a great event!
 
 Thanks again to the organizers of the [Game Industry Conference](https://gic.gd) for hosting us as a pre-GIC event, as well as hosting the **Godot Sprint** on 14 & 15 Oct at the same venue, where engine contributors will meet to work together, discuss the roadmap for 4.0 and future releases and many other technical topics :)
 

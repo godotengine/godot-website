@@ -17,7 +17,7 @@ Here's a small [platformer demo](http://godot.eska.me/pub/wasm-platformer/) you 
 
 ## GDNative
 
-We recently wrote an article about [GDNative](https://godotengine.org/article/dlscript-here) (initially named *DLScript* but [renamed](https://github.com/godotengine/godot/issues/8312) to avoid confusion). Let me tell you that this amazing new feature by [karroffel](https://github.com/karroffel) and Bojidar Marinov ([bojidar-bg](https://github.com/bojidar-bg)) is the real deal. It allows way too many amazing things:
+We recently wrote an article about [GDNative]({{% ref "article/dlscript-here" %}}) (initially named *DLScript* but [renamed](https://github.com/godotengine/godot/issues/8312) to avoid confusion). Let me tell you that this amazing new feature by [karroffel](https://github.com/karroffel) and Bojidar Marinov ([bojidar-bg](https://github.com/bojidar-bg)) is the real deal. It allows way too many amazing things:
 
 1. Add Godot objects made in C++, without recompiling Godot or the editor. Before this, a module had to be created, which implies recompiling everything.
 2. Optimize any part of your game by rewriting it transparently in C++, or any language that can compiled to native code for the target platform, wihout recompiling the engine or templates.

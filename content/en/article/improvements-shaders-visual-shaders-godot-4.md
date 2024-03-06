@@ -429,7 +429,7 @@ They correspond to new functions which were added in [#43886](https://github.com
 
 #### Sky shader mode
 
-To correspond to the implementation of [sky shaders](/article/custom-sky-shaders-godot-4-0), I've also provided the interface for them in visual shaders.
+To correspond to the implementation of [sky shaders]({{% ref "article/custom-sky-shaders-godot-4-0" %}}), I've also provided the interface for them in visual shaders.
 
 ![Sky shader mode](/storage/app/media/4.0/Shaders/vs_sky_shader.png)
 

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5b5/88a/3f1/5b588a3f134c0077195925.png
 date: 2018-07-25 14:34:11
 ---
 
-For the first time this year, [Godot participates](/article/godot-google-summer-code-2018) in the Google Summer of Code ([GSoC](https://summerofcode.withgoogle.com/)). We have five students working on some great projects to add new features to the engine, either via C++ modules, GDNative plugins or external plugins. See [our previous announcement](https://summerofcode.withgoogle.com/) for a quick presentation of each topic.
+For the first time this year, [Godot participates]({{% ref "article/godot-google-summer-code-2018" %}}) in the Google Summer of Code ([GSoC](https://summerofcode.withgoogle.com/)). We have five students working on some great projects to add new features to the engine, either via C++ modules, GDNative plugins or external plugins. See [our previous announcement](https://summerofcode.withgoogle.com/) for a quick presentation of each topic.
 
 I've asked all students to write a short progress report about their projects, which are all in the last stages of development for the GSoC internship. We'll have another progress report next month once their work has been finalized and integrated in the engine. Here are short links to the reports on the five projects:
 

@@ -9,11 +9,11 @@ image_caption_description: A Godot 4 course by MrEliptik
 date: 2023-05-19 13:00:00
 ---
 
-With the [Godot 4.1 release on the horizon](/article/release-management-4-1), contributors have been hard at work on major and exciting improvements to the engine. But we appreciate that many of you would like to have your experience a little less _exciting_ and a bit more _stable_ when using Godot 4 in production. To that end, we try to backport as many useful fixes as we can to improve your workflows, and the new Godot 4.0.3 release is the result of these efforts.
+With the [Godot 4.1 release on the horizon]({{% ref "article/release-management-4-1" %}}), contributors have been hard at work on major and exciting improvements to the engine. But we appreciate that many of you would like to have your experience a little less _exciting_ and a bit more _stable_ when using Godot 4 in production. To that end, we try to backport as many useful fixes as we can to improve your workflows, and the new Godot 4.0.3 release is the result of these efforts.
 
 Almost every area was touched upon with bugfixes and stability improvements. This includes multiple crashes and glitches eliminated in constructive solid geometry (CSG), GDScript language server, importing of assets, and all things related to rendering and visuals. Several reported platform-specific crashes and freezes were addressed, especially on Android and Windows. And of course there were improvements to the overall user experience and documentation. The latter received a massive bump in completeness thanks to a serious effort from [Calinou](https://github.com/Calinou), who updated a lot of descriptions in the rendering API.
 
-[**Download Godot 4.0.3 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.3.stable/).
+[**Download Godot 4.0.3 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.3.stable/).
 
 *The illustration picture for this release comes from the* [**Godot Juice**](https://mreliptik.itch.io/learn-how-to-make-juicy-games-with-godot-4) *course by [MrEliptik](https://twitter.com/mreliptik). It's a great primer on adding juicy visual effects to your Godot 4 projects from the creator of [Dashpong](https://www.playdashpong.com/), and you can be sure it's based on practical experience! It's available on [itch.io](https://mreliptik.itch.io/learn-how-to-make-juicy-games-with-godot-4) and [Udemy](https://www.udemy.com/course/learn-how-to-make-a-game-juicy-in-godot-4/?referralCode=1652C74B848551E05DAE).*
 
@@ -114,6 +114,6 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

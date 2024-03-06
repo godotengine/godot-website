@@ -7,7 +7,7 @@ image: /storage/blog/covers/godot-4-1-is-here.webp
 date: 2023-07-06 12:00:00
 ---
 
-After [four months of work](/article/godot-4-0-sets-sail), we are excited to bring you Godot 4.1! It's an update that follows our pledge to improve upon Godot 4.0 with frequent incremental releases — with a focus on stability, performance, and polish.
+After [four months of work]({{% ref "article/godot-4-0-sets-sail" %}}), we are excited to bring you Godot 4.1! It's an update that follows our pledge to improve upon Godot 4.0 with frequent incremental releases — with a focus on stability, performance, and polish.
 
 As always, a new release comes with a bunch of welcome new features, like the improved AI navigation avoidance and the ability to detach code editors and put them on other displays.
 
@@ -151,7 +151,7 @@ Using the new 3D noise textures you can control the density of volumetric fog ea
 
 ![A more complex fog volume using the new 3D noise](/storage/blog/godot-4-1-is-here/render-3d-noise.png)
 
-While there are still many [planned improvements](https://godotengine.org/article/rendering-priorities-4-1/) to Godot's renderers, most will be present in future releases. The rendering team (and all rendering contributors) prioritized bug fixing and stability over new features. Notably, the 3D GLES3 renderer is not yet complete, but will see substantial work over the coming months.
+While there are still many [planned improvements]({{% ref "article/rendering-priorities-4-1" %}}) to Godot's renderers, most will be present in future releases. The rendering team (and all rendering contributors) prioritized bug fixing and stability over new features. Notably, the 3D GLES3 renderer is not yet complete, but will see substantial work over the coming months.
 
 ### Navigation
 

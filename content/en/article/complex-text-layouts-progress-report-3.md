@@ -13,7 +13,7 @@ This is the third part of my work on Complex Text Layouts for Godot 4.0.
 
 See [godot-proposals#1180](https://github.com/godotengine/godot-proposals/issues/1180), [godot-proposals#1181](https://github.com/godotengine/godot-proposals/issues/1181), [godot-proposals#1182](https://github.com/godotengine/godot-proposals/issues/1182), and [godot-proposals#1183](https://github.com/godotengine/godot-proposals/issues/1183) on GitHub for detailed information on <abbr title="Complex Text Layouts">CTL</abbr> proposals and feedback.
 
-See also the [previous progress report](https://godotengine.org/article/complex-text-layouts-progress-report-2) for UI mirroring details and the [first part](https://godotengine.org/article/complex-text-layouts-progress-report-1) for the `TextServer` API implementation details.
+See also the [previous progress report]({{% ref "article/complex-text-layouts-progress-report-2" %}}) for UI mirroring details and the [first part]({{% ref "article/complex-text-layouts-progress-report-1" %}}) for the `TextServer` API implementation details.
 
 # Changes to the RichTextLabel control
 

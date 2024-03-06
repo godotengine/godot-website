@@ -10,7 +10,7 @@ date: 2019-11-13 12:05:15
 
 It's been over 6 months since Godot 3.1.1-stable, so the upcoming **3.1.2** release is both long overdue and accordingly packed with important bug fixes and enhancements.
 
-We intended to have 3.1.x releases more regularly (every other month or so), but our release manager for the stable branches, HP, has been quite busy the past few months and thus less available for Godot contributions. So now that the 3.2 pipeline is well oiled (see [3.2 beta 1](/article/dev-snapshot-godot-3-2-beta-1)), I'm going back to the stable branches to provide new releases. I also plan to release 3.0.7 in coming weeks for those of you who are still using the 3.0 branch for specific projects.
+We intended to have 3.1.x releases more regularly (every other month or so), but our release manager for the stable branches, HP, has been quite busy the past few months and thus less available for Godot contributions. So now that the 3.2 pipeline is well oiled (see [3.2 beta 1]({{% ref "article/dev-snapshot-godot-3-2-beta-1" %}})), I'm going back to the stable branches to provide new releases. I also plan to release 3.0.7 in coming weeks for those of you who are still using the 3.0 branch for specific projects.
 
 As we cherry-picked close to 400 commits to the 3.1 branch since 3.1.1-stable, extensive testing is necessary to ensure that no regression crept in under disguise of a bugfix. This is why we publish this **release candidate** for 3.1.2 to gather test reports from the community.
 
@@ -18,13 +18,13 @@ As we cherry-picked close to 400 commits to the 3.1 branch since 3.1.1-stable, e
 
 Before checking the changelog for this release, a short clarification on the release branches that we use for those not familiar with Godot's versioning.
 
-Our next stable branch, developing the Git `master` branch, is Godot 3.2. This version is currently in beta and should become stable within a few weeks. Most of the [devblogs](/devblog) published since the 3.1 release cover features which have been merged in the `master` branch and will be included in Godot 3.2.
+Our next stable branch, developing the Git `master` branch, is Godot 3.2. This version is currently in beta and should become stable within a few weeks. Most of the [devblogs]({{% ref "blog" %}}) published since the 3.1 release cover features which have been merged in the `master` branch and will be included in Godot 3.2.
 
 In parallel, we also work in the `vulkan` branch on version 4.0 which will come sometime next year with Vulkan support. We increase the "major" version number (3 to 4) as there will be some compatibility breakage.
 
 Our current maintained stable branches are 3.1 (latest release 3.1.1), 3.0 (latest 3.0.6) and 2.1 (latest 2.1.6). Each of those branches is tracked separately in a Git branch, where we cherry-pick relevant commits from the `master` branch for future maintenance releases. The upcoming 3.1.2 release is thus going to be a maintenance release for the 3.1 branch, with the same feature set that 3.1 already had, but less bugs and some usability and documentation enhancements.
 
-So if you're looking for the latest and greatest, check [3.2 beta 1](/article/dev-snapshot-godot-3-2-beta-1), but if you have game in production using Godot 3.1.1, you might be interested in upgrading to 3.1.2 and helping us test this release candidate.
+So if you're looking for the latest and greatest, check [3.2 beta 1]({{% ref "article/dev-snapshot-godot-3-2-beta-1" %}}), but if you have game in production using Godot 3.1.1, you might be interested in upgrading to 3.1.2 and helping us test this release candidate.
 
 ## Changes
 

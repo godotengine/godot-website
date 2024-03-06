@@ -27,7 +27,7 @@ During the design phase, we researched a solution that provides:
 - Multi-threading safety.
 - Backward compatibility.
 
-So, the idea to improve the Godot navigation was to integrate a new server that would provide all the above functionalities; so was the `NavigationServer` born. If you're unfamiliar with the concept of "servers" used in the Godot architecture, you can refer to [this past devblog](/article/why-does-godot-use-servers-and-rids) and [the documentation](https://docs.godotengine.org/en/3.2/tutorials/optimization/using_servers.html).
+So, the idea to improve the Godot navigation was to integrate a new server that would provide all the above functionalities; so was the `NavigationServer` born. If you're unfamiliar with the concept of "servers" used in the Godot architecture, you can refer to [this past devblog]({{% ref "article/why-does-godot-use-servers-and-rids" %}}) and [the documentation](https://docs.godotengine.org/en/3.2/tutorials/optimization/using_servers.html).
 
 ## What's new
 

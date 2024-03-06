@@ -16,7 +16,7 @@ Before going over some hand-picked changes, we'd like to welcome new contributor
 
 ## GDNative
 
-Since [the last blog post](/article/dlscript-here), a lot of development happened on GDNative (one of the most visible change being its renaming from DLScript to GDNative to avoid confusion about its nature).
+Since [the last blog post]({{% ref "article/dlscript-here" %}}), a lot of development happened on GDNative (one of the most visible change being its renaming from DLScript to GDNative to avoid confusion about its nature).
 
 The GDNative core API is getting more and more complete, thanks to Emmanuel (touilleMan) and Ben (sheepandshepherd).
 Many different things like printing to the editor console and other small things were added to the API.

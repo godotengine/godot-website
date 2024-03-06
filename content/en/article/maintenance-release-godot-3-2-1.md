@@ -8,11 +8,11 @@ image: /storage/app/uploads/public/5e6/76e/b88/5e676eb885595988806573.jpg
 date: 2020-03-10 13:46:49
 ---
 
-Our current stable version, Godot 3.2, was released at the [end of January](/article/here-comes-godot-3-2) as a major upgrade to all features and the usability of the engine. But as with any software release, there are always things that can still be improved and bugs that can be fixed, and as such we plan to release frequent maintenance releases for the 3.2 branch, to make it ever more enjoyable and reliable to work with.
+Our current stable version, Godot 3.2, was released at the [end of January]({{% ref "article/here-comes-godot-3-2" %}}) as a major upgrade to all features and the usability of the engine. But as with any software release, there are always things that can still be improved and bugs that can be fixed, and as such we plan to release frequent maintenance releases for the 3.2 branch, to make it ever more enjoyable and reliable to work with.
 
 In particular, among the [2000](https://github.com/godotengine/godot/issues?q=is%3Aissue+milestone%3A3.2+-label%3Aarchived+is%3Aclosed) bugfixes and enhancements new in Godot 3.2, a few regressions stealthily made it to the final release, and this first **Godot 3.2.1** release aims to address the main ones. A big thankyou to all contributors who helped fix bugs, enhance usability and write documentation for this release.
 
-[**Download Godot 3.2.1**](/download) now and read on about the changes in this update.
+[**Download Godot 3.2.1**]({{% ref "download" %}}) now and read on about the changes in this update.
 
 *Note: <a href="#credits">Illustration credits</a> at the bottom of this page.*
 

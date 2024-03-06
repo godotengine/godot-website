@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/618/3cb/37c/6183cb37cfc00462223157.png
 date: 2021-11-04 11:00:00
 ---
 
-After five months from the [first GoGodotJam](https://godotengine.org/article/announcing-gogodotjam), the event is back!
+After five months from the [first GoGodotJam]({{% ref "article/announcing-gogodotjam" %}}), the event is back!
 
 [**GoGodotJam**](https://gogodotjam.com/) is a month-long festival ending with a game jam. During the event, you can expect tutorials and interviews with Godot creators on a daily basis.
 This time, the event is also organizing a [fundraiser](https://gogodotjam.com/fundraiser/), in which 50% of the proceeds should be donated to Godot!

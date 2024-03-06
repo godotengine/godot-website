@@ -7,13 +7,13 @@ image: /storage/app/uploads/public/5a6/856/519/5a685651987ce263514865.png
 date: 2018-01-24 09:48:06
 ---
 
-Here's another *Release Candidate* (RC) build on the way to 3.0 stable, fixing most of the remaining blocking bugs from [RC 2](/article/dev-snapshot-godot-3-0-rc-2).
+Here's another *Release Candidate* (RC) build on the way to 3.0 stable, fixing most of the remaining blocking bugs from [RC 2]({{% ref "article/dev-snapshot-godot-3-0-rc-2" %}}).
 
 This RC 3 build corresponds to commit [d50c0ef](https://github.com/godotengine/godot/commit/d50c0efd2c352b1e03fea1425e01e120dab8f2bb) for the classical build, and commit [59e83af](https://github.com/godotengine/godot/commit/59e83af201af5a93c7a13750d781c050c2275c07) for the Mono build. The classical build is thus already a couple days old, due to the system we currently use to produce binaries being particularly slow lately (this will be worked on after 3.0 to improve the release workflow).
 
 Note that no release can be bug-free, even if we label it "stable", so don't be offended if the bugs you report are assigned to the 3.1 milestone - at this stage we focus only on the most critical stuff, but we still welcome your reports to know all that is not working perfectly. Many non-critical bug fixes and enhancements will be included in 3.0.x maintenance releases, the first one likely coming in February.
 
-As mentioned in the [RC 2 announcement](/article/dev-snapshot-godot-3-0-rc-3), the export pipeline hasn't been finalized yet for Mono projects, and has therefore been postponed to 3.0.1. You can use 3.0 for Mono projects nevertheless, but you won't be able to export them as standalone release binaries just yet.
+As mentioned in the [RC 2 announcement]({{% ref "article/dev-snapshot-godot-3-0-rc-3" %}}), the export pipeline hasn't been finalized yet for Mono projects, and has therefore been postponed to 3.0.1. You can use 3.0 for Mono projects nevertheless, but you won't be able to export them as standalone release binaries just yet.
 
 Keep in mind that C# support is a *work in progress*, and your critical feedback will help greatly to shape the C# support in later releases. Even though the rest of Godot 3.0 is quite stable, users of the C# version should be aware of potential feature-specific instabilities.
 

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5ab/69c/f4c/5ab69cf4c700d643288675.png
 date: 2018-03-24 18:53:08
 ---
 
-As mentioned in a [previous blog post](/article/dev-snapshot-godot-2-1-5-beta-1), we plan to continue supporting the 2.1.x branch for a while - at least until 3.1 is released, bringing back support for low and mid-end mobile and low-end desktop GPUs via OpenGL ES 2.0 / OpenGL 2.1.
+As mentioned in a [previous blog post]({{% ref "article/dev-snapshot-godot-2-1-5-beta-1" %}}), we plan to continue supporting the 2.1.x branch for a while - at least until 3.1 is released, bringing back support for low and mid-end mobile and low-end desktop GPUs via OpenGL ES 2.0 / OpenGL 2.1.
 
 The feedback on the previous 2.1.5 beta 1 and 2 builds was relatively good, and many fixes have been done since, especially to the (still imperfect, but better) tool to convert 2.1 projects to the Godot 3 API.
 

@@ -9,15 +9,15 @@ image_caption_description: A demo scene by Raffaele Picca
 date: 2023-03-20 12:00:00
 ---
 
-Just three weeks ago we [published Godot 4.0](/article/godot-4-0-sets-sail), the biggest body of work Godot contributors have managed to produce in the engine's entire history. A backlog of bugs and enhancements comes with that territory, and we've been working hard and fast on the most critical fixes during that time. On some smaller and easy-to-implement enhancements too!
+Just three weeks ago we [published Godot 4.0]({{% ref "article/godot-4-0-sets-sail" %}}), the biggest body of work Godot contributors have managed to produce in the engine's entire history. A backlog of bugs and enhancements comes with that territory, and we've been working hard and fast on the most critical fixes during that time. On some smaller and easy-to-implement enhancements too!
 
 The result of this work is **Godot 4.0.1**, the first patch release for Godot 4, available now! This version addresses several conditions for crashes and freezes, improves the project converter, and updates the engine documentation and translations. All these improvements will also be available in the future 4.1 release later this year. And as Godot contributors continue their work on Godot 4.1, some more fixes and improvements will trickle down to future 4.0.x releases.
 
 One notable change in Godot 4.0.1 that is worth a dedicated mention is related to the project manager. We have received several reports of users accidentally creating a new Godot project in their user directory, which has led to unfortunate issues. The most critical of these issues is an accidental deletion of the entire user directory when deleting a project from the project manager. We will be revising the UI and UX of the related features, but to offer an immediate solution, we have removed the ability to create projects in a non-empty folder (and in home/documents folders specifically). We have also disabled the ability to delete project files alongside the removal of the project from the project list.
 
-[**Download Godot 4.0.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.1.stable/).
+[**Download Godot 4.0.1 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.1.stable/).
 
-*The illustration picture is from a new, fairytale-like demo scene created by [Raffaele Picca](https://campsite.bio/raffa) with Godot 4.0 —* [**Lost Desert Temple**](https://twitter.com/MV_Raffa/status/1632745048621154305). *Raffaele plans to release it as an open source project, so follow him on [Twitter](https://twitter.com/MV_Raffa) to make sure you don't miss that. And if you're visiting GDC this week, [come by the Godot booth](/article/gdc-2023-godot-games/)! You can find Raffaele there and chat about his use of the engine, as well as play a session of* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/)!
+*The illustration picture is from a new, fairytale-like demo scene created by [Raffaele Picca](https://campsite.bio/raffa) with Godot 4.0 —* [**Lost Desert Temple**](https://twitter.com/MV_Raffa/status/1632745048621154305). *Raffaele plans to release it as an open source project, so follow him on [Twitter](https://twitter.com/MV_Raffa) to make sure you don't miss that. And if you're visiting GDC this week, [come by the Godot booth]({{% ref "article/gdc-2023-godot-games" %}})! You can find Raffaele there and chat about his use of the engine, as well as play a session of* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/)!
 
 ## Changes
 
@@ -103,6 +103,6 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

@@ -11,7 +11,7 @@ GitHub [has announced](https://github.com/blog/2451-game-off-our-annual-game-jam
 
 The main feature of Game Off is its focus on **free and open source** tools for game development, and this is obviously something that we consider highly in the Godot Engine community, as a fully libre 2D and 3D game engine.
 
-We encourage all existing and aspiring game developers to participate in this jam using our current stable release [Godot 2.1.4](/download). For newcomers, this blog post lists some of the great learning resources created by the community to help you get started with Godot.
+We encourage all existing and aspiring game developers to participate in this jam using our current stable release [Godot 2.1.4]({{% ref "download" %}}). For newcomers, this blog post lists some of the great learning resources created by the community to help you get started with Godot.
 
 This is also a great opportunity to discover new FOSS tools such as [Blender](https://www.blender.org), [Krita](https://krita.org), [Inkscape](https://inkscape.org), [GIMP](https://www.gimp.org), [Audacity](http://www.audacityteam.org), [LMMS](https://lmms.io/)... or any of the hundreds of libre tools listed on [awesome-gamedev](https://github.com/Calinou/awesome-gamedev).
 

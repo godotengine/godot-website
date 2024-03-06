@@ -7,11 +7,11 @@ image: /storage/app/uploads/public/63c/053/77e/63c05377eaa1e774008524.jpg
 date: 2023-01-12 18:37:00
 ---
 
-While all contributors are on the deck working to finalize the Godot 4.0 release (currently at [beta 11](/article/dev-snapshot-godot-4-0-beta-11)), some of us are still backporting important bugfixes to the current stable branch, Godot 3.5.
+While all contributors are on the deck working to finalize the Godot 4.0 release (currently at [beta 11]({{% ref "article/dev-snapshot-godot-4-0-beta-11" %}})), some of us are still backporting important bugfixes to the current stable branch, Godot 3.5.
 
-It had its first stable release in [early August](/article/godot-3-5-cant-stop-wont-stop), and a first maintenance release in [late September](/article/maintenance-release-godot-3-5-1), and so far so good, most users seem to be pretty happy with 3.5.1.
+It had its first stable release in [early August]({{% ref "article/godot-3-5-cant-stop-wont-stop" %}}), and a first maintenance release in [late September]({{% ref "article/maintenance-release-godot-3-5-1" %}}), and so far so good, most users seem to be pretty happy with 3.5.1.
 
-But since then, quite a few bugfixes have been queued in the `3.5` branch, so it's time to wrap up a new 3.5.2 maintenance release. We had a first [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) on [December 15](/content/en/articlecle/release-candidate-godot-3-5-2-rc-1.md), and after fixing one regression and backporting a few other fixes, it's time for a second RC build to validate the update.
+But since then, quite a few bugfixes have been queued in the `3.5` branch, so it's time to wrap up a new 3.5.2 maintenance release. We had a first [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) on [December 15]({{% ref "article/release-candidate-godot-3-5-2-rc-1" %}}), and after fixing one regression and backporting a few other fixes, it's time for a second RC build to validate the update.
 
 Please give it a try if you can. It should be as safe to use as 3.5.1-stable is, but we still need a significant number of users to try it out and report how it goes to make sure that the few changes in this update are working as intended and not introducing new regressions.
 
@@ -81,6 +81,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

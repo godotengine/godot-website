@@ -22,4 +22,4 @@ Again, be sure to [sign up](https://itch.io/jam/godot-wild-jam-3) for the third 
 
 **You** could be the next Godot Wildling.
 
-*Thanks for hosting the jam! For more about Stern Flowers and the Godot Wild Jam, see the [first blogpost](https://godotengine.org/article/godot-wild-jam-2018). In other news, Hacktoberfest is still ongoing for a few more days, so if you ever thought about contributing to Godot Engine and Open Source - this is the time to [get started](https://godotengine.org/article/become-godot-contributor-hacktoberfest-2018)!*
+*Thanks for hosting the jam! For more about Stern Flowers and the Godot Wild Jam, see the [first blogpost]({{% ref "article/godot-wild-jam-2018" %}}). In other news, Hacktoberfest is still ongoing for a few more days, so if you ever thought about contributing to Godot Engine and Open Source - this is the time to [get started]({{% ref "article/become-godot-contributor-hacktoberfest-2018" %}})!*

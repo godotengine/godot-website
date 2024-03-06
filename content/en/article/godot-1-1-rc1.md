@@ -11,4 +11,4 @@ After 1.1 Beta a month ago, our first release candidate is here. A huge amount o
 
 If you didn’t report your favorite bugs, this is the time before it’s too late! If you reported them and they were not fixed yet, it’s your chance to pester the developers (just add comments to the issues you want fixed reminding them). If nothing comes up, this will become 1.1 stable.
 
-Get the binaries at the [Download](/download) section!
+Get the binaries at the [Download]({{% ref "download" %}}) section!

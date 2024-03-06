@@ -34,7 +34,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 This snapshot comes loaded with new features and important fixes, after three weeks of further development.
 
-As a reminder, this section only covers changes made since the previous [4.3 dev 3 snapshot](/article/dev-snapshot-godot-4-3-dev-3/). For a more comprehensive overview of what's new in Godot 4.3 compared to 4.2, you'll have to wait for the first beta release, or refer to our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.3).
+As a reminder, this section only covers changes made since the previous [4.3 dev 3 snapshot]({{% ref "article/dev-snapshot-godot-4-3-dev-3" %}}). For a more comprehensive overview of what's new in Godot 4.3 compared to 4.2, you'll have to wait for the first beta release, or refer to our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.3).
 
 ### AnimationMixer feature parity and other animation goodies
 
@@ -137,4 +137,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

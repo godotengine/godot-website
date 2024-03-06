@@ -7,11 +7,11 @@ image: /storage/app/uploads/public/5b5/073/2f9/5b50732f9b7ce697339594.jpg
 date: 2018-07-19 11:22:40
 ---
 
-Yes, you read correctly: Godot 2.1.5 is still being worked on, four months after the [previous release candidate](/article/dev-snapshot-godot-2-1-5-rc-1) and close to one year after the [2.1.4 stable release](/article/maintenance-release-godot-2-1-4)!
+Yes, you read correctly: Godot 2.1.5 is still being worked on, four months after the [previous release candidate]({{% ref "article/dev-snapshot-godot-2-1-5-rc-1" %}}) and close to one year after the [2.1.4 stable release]({{% ref "article/maintenance-release-godot-2-1-4" %}})!
 
 I planned to release it much sooner, but 3.0 and its subsequent maintenance releases happened, and I could only dedicate a few hours every now and then to the old stable branch.
 
-On top of that, I decided to wait for this RC2 to have a proper fix for the [Android placeholder permissions issue](/article/fixing-godot-games-published-google-play) that crept up on Google Play in May and affected many published 2.1 games. HP's [APK fixer tool](/article/godot-apk-fixer-tool) could already be used to fix those games, but I wanted 2.1.5 to export correct APKs out of the box. The proper fix was [merged a few days ago](https://github.com/godotengine/godot/pull/20082), so I'm now considering 2.1.5 ready to go stable.
+On top of that, I decided to wait for this RC2 to have a proper fix for the [Android placeholder permissions issue]({{% ref "article/fixing-godot-games-published-google-play" %}}) that crept up on Google Play in May and affected many published 2.1 games. HP's [APK fixer tool]({{% ref "article/godot-apk-fixer-tool" %}}) could already be used to fix those games, but I wanted 2.1.5 to export correct APKs out of the box. The proper fix was [merged a few days ago](https://github.com/godotengine/godot/pull/20082), so I'm now considering 2.1.5 ready to go stable.
 
 ## Download and test
 
@@ -25,7 +25,7 @@ Note that contrarily to 3.0 which can download the export templates for you auto
 
 ## Why do we still do 2.1.x releases again?
 
-As mentioned in a [previous blog post](/article/dev-snapshot-godot-2-1-5-beta-1), since Godot 3.0 requires OpenGL 3.3 on desktop and OpenGL ES 3.0 on mobile, some developers are sticking to the 2.1.x branch for now while waiting for Godot 3.1, which will bring support for OpenGL 2.1 and OpenGL ES 2.0 again.
+As mentioned in a [previous blog post]({{% ref "article/dev-snapshot-godot-2-1-5-beta-1" %}}), since Godot 3.0 requires OpenGL 3.3 on desktop and OpenGL ES 3.0 on mobile, some developers are sticking to the 2.1.x branch for now while waiting for Godot 3.1, which will bring support for OpenGL 2.1 and OpenGL ES 2.0 again.
 
 Moreover, some developers started big projects with Godot 2.1 before Godot 3.0 was released, and it might not be worth it for them to port their project over to Godot 3 for the time being, due to the important amount of work required to port/rewrite non-trivial projects in Godot 3.
 

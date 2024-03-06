@@ -65,4 +65,4 @@ Here's the complete list of channels, you can just click on them and then press 
 
 # Don't forget the showreel!
 
-There are a few days left to submit your [game to the showreel](https://godotengine.org/article/submissions-open-godot-2021-showreel)! We love to see what you make!
+There are a few days left to submit your [game to the showreel]({{% ref "article/submissions-open-godot-2021-showreel" %}})! We love to see what you make!

@@ -9,7 +9,7 @@ image_caption_description: "A game by Guy and Daisy Games"
 date: 2024-01-26 16:30:00
 ---
 
-While we are [staying firmly on track](/article/dev-snapshot-godot-4-3-dev-2) with the upcoming **Godot 4.3** release, previous versions continue to receive patches and fixes to ensure that you have the best possible experience, should you choose to remain using them.
+While we are [staying firmly on track]({{% ref "article/dev-snapshot-godot-4-3-dev-2" %}}) with the upcoming **Godot 4.3** release, previous versions continue to receive patches and fixes to ensure that you have the best possible experience, should you choose to remain using them.
 
 Godot's development practices make each release an iteration on the previous one, which allows us to relatively easy cherry-pick and backport many critical improvements without fear of regression and broken compatibility. Thanks to this environment today we can try something new, and publish two release candidates simultaneously, offering an upgrade for both **Godot 4.1** and **Godot 4.2** users.
 
@@ -126,4 +126,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

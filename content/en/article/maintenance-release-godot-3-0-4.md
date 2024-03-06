@@ -15,7 +15,7 @@ If you are not affected by the asset library bug and do not need the terrain plu
 
 We're planning for a larger 3.0.5 soon with Android exporting fixed and other bug/feature PRs merged.
 
-As usual you can go directly to our [Download](/download) page to download the new release. Itch.io and Steam releases have been updated too. **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
+As usual you can go directly to our [Download]({{% ref "download" %}}) page to download the new release. Itch.io and Steam releases have been updated too. **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
 
 I'd like to thank everyone involved in this release. I'll be the one wearing the brown paper bag.
 
@@ -57,6 +57,6 @@ None
 * `Vector3.snapped()` does not work and just returns the original Vector3. Fixing this would have meant breaking ABI between Godot 3.0 and 3.0.2 so this function will remain non-functional.
 * `move_and_slide()` doesn't quite work correctly. An easy workaround is to increase the safe margin to 0.05 (or higher if required). It is not yet clear how to implement the proper fix without impacting users who already implemented this workaround in their projects. See [issue #16459](https://github.com/godotengine/godot/issues/16459) for an explanation.
 * When exporting to iOS you get an error about missing or corrupt templates if the App Store Team Id or Required Icons are not set even if the templates are installed.
-* APKs exported using the editor have placeholder permissions. If you don't have a privacy policy for your game it will be rejected from the App store. [We have a tool to work around this issue available.](https://godotengine.org/article/godot-apk-fixer-tool)
+* APKs exported using the editor have placeholder permissions. If you don't have a privacy policy for your game it will be rejected from the App store. [We have a tool to work around this issue available.]({{% ref "article/godot-apk-fixer-tool" %}})
 
 *The illustration picture is a screenshot of Zylann's [terrain plugin](https://godotengine.org/asset-library/asset/231) with a sheep in it.*

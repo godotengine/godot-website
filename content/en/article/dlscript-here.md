@@ -40,7 +40,7 @@ You can call GDScript functions from a Native script and vice versa. When C# wil
 
 I want to keep this section short. A Native script is not a module.
 Modules have access to all the C++ classes available in Godot and can extend engine functionality.
-You want a different renderer? Module. You want to add networking capabilities to all nodes ([*ahem*](/article/godots-new-high-level-networking-preview))? Modules.
+You want a different renderer? Module. You want to add networking capabilities to all nodes ([*ahem*]({{% ref "article/godots-new-high-level-networking-preview" %}}))? Modules.
 
 "A Native script", as in "a script you're writing", is just a script, just like a GDScript file, so it doesn't have access to those classes, it also can't extend engine functionality.
 But it has access to the whole script API (aka the class API you know from the [docs](http://docs.godotengine.org/en/latest/classes/)).

@@ -35,7 +35,7 @@ This project report falls a little bit shorter, as much of the work was less "fr
 
 ### C++ bindings for NativeScript 1.1
 
-As talked about in the [last progress report](https://godotengine.org/article/gles2-and-gdnative-progress-report-3), a new extension to the NativeScript API has been added. Now it was time to make use of those new functions in the [C++ bindings](https://github.com/GodotNativeTools/godot-cpp).
+As talked about in the [last progress report]({{% ref "article/gles2-and-gdnative-progress-report-3" %}}), a new extension to the NativeScript API has been added. Now it was time to make use of those new functions in the [C++ bindings](https://github.com/GodotNativeTools/godot-cpp).
 
 The biggest user-facing change in the bindings is, that user-created classes can now directly inherit from engine types. This is being implemented by facilitating object *instance binding data*.
 

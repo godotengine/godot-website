@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5c8/292/cb2/5c8292cb21bbd133370967.png
 date: 2019-03-08 22:21:55
 ---
 
-After over one year of work, 5 alpha releases, 11 betas and 7000 commits by close to 500 contributors, we're finally ready to wrap up the 3.1 version and let you all benefit from the hundreds of new features, enhancements and bug fixes that have been worked on by the community since [January 2018](/article/godot-3-0-released).
+After over one year of work, 5 alpha releases, 11 betas and 7000 commits by close to 500 contributors, we're finally ready to wrap up the 3.1 version and let you all benefit from the hundreds of new features, enhancements and bug fixes that have been worked on by the community since [January 2018]({{% ref "article/godot-3-0-released" %}}).
 
 We're therefore publishing this first release candidate, **Godot 3.1 RC 1**, to let all of you test it thoroughly and check if any showstoppers remain. We might have several RC builds if need be while the last blockers get fixed, until we get one RC build that we consider ready to ship. After the two-month beta phase that we had with 11 releases and hundreds of bug fixes, the path to the stable release should be quite short.
 
@@ -31,7 +31,7 @@ The documentation's [*latest* branch](http://docs.godotengine.org/en/latest/) in
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
+The download links are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
 
 - [**Classic build**](https://downloads.tuxfamily.org/godotengine/3.1/rc1) (GDScript, GDNative, VisualScript)
 - [**Mono build**](https://downloads.tuxfamily.org/godotengine/3.1/rc1/mono) (C# support + all the above). You need to have MSbuild installed to use the Mono build.

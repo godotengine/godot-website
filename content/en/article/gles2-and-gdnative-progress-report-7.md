@@ -153,7 +153,7 @@ To catch some breath after all this debugging madness, I took a shot at implemen
 
 ![Screenshot from 2018-06-22 19-31-03.png](/storage/app/uploads/public/5b5/598/dc0/5b5598dc0ada4668331903.png)
 
-You can read more about the new animation system [here](https://godotengine.org/article/godot-gets-new-animation-tree-state-machine)!
+You can read more about the new animation system [here]({{% ref "article/godot-gets-new-animation-tree-state-machine" %}})!
 
 The code for that can be found [here](https://github.com/godotengine/godot/blob/17b44e44b9a34e540cf48ee0a7335ecefcd0c3b7/scene/animation/animation_blend_space_1d.cpp).
 

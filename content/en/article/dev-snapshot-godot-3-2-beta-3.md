@@ -14,12 +14,12 @@ date: 2019-12-04 20:02:09
 
 ---
 
-Again close to two weeks since [beta 2](/article/dev-snapshot-godot-3-2-beta-2), time runs fast! Many fixes have been made in the `master` branch since then, so it's time for a new build with **Godot 3.2 beta 3**!
+Again close to two weeks since [beta 2]({{% ref "article/dev-snapshot-godot-3-2-beta-2" %}}), time runs fast! Many fixes have been made in the `master` branch since then, so it's time for a new build with **Godot 3.2 beta 3**!
 
 *Note: Illustration credits at the bottom of this page.*
 
 With beta 2, we upgraded Mono to version 6.6.0 (from 5.18.1.3), but this proved to be more problematic than expected. The Mono build for beta 2 did not run properly on Windows, and we are still hard at work trying to solve that together with upstream. Our buildsystem implies cross-compiling most platforms from Linux containers, and this worked fine until now, but Mono 6.x brings some issues with cross-compilation.
-A proper fix is in the works and will be contributed back upstream, and in the meantime this beta 3 comes **without Mono build**. C# users should for now stay on [3.2 beta 1](/article/dev-snapshot-godot-3-2-beta-1), or wait for 3.2 beta 4 which should have fixed Mono 6.x binaries.
+A proper fix is in the works and will be contributed back upstream, and in the meantime this beta 3 comes **without Mono build**. C# users should for now stay on [3.2 beta 1]({{% ref "article/dev-snapshot-godot-3-2-beta-1" %}}), or wait for 3.2 beta 4 which should have fixed Mono 6.x binaries.
 
 There are still many important changes in this beta which are worth testing in the classical build:
 
@@ -49,7 +49,7 @@ For changes since the last beta build, see [the list of commits](https://github.
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/beta3/) (GDScript, GDNative, VisualScript).
 - ~~Mono build~~ Unavailable this time, see above note. Use [3.2 beta 1](https://downloads.tuxfamily.org/godotengine/3.2/beta1) in the meantime or [compile it from source](https://docs.godotengine.org/en/latest/development/compiling/compiling_with_mono.html).

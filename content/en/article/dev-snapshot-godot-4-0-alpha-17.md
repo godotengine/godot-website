@@ -28,7 +28,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 17 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 17 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/86dd3f312c4ff8ef8be04b9a210415d21f2ca269...22a09fef5d56fc7c37d70118532509076ebd7b12) for an overview of all changes since 4.0 alpha 16 (90 commits – excluding merge commits ― from 34 contributors).
 

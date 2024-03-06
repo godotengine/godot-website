@@ -13,7 +13,7 @@ date: 2019-12-18 00:00:00
 
 ---
 
-After another two weeks since our [previous beta build](/article/dev-snapshot-godot-3-2-beta-3), here comes Godot **3.2 beta 4**, bringing back the Mono build for all supported platforms (including Android and WebAssembly, new in Godot 3.2).
+After another two weeks since our [previous beta build]({{% ref "article/dev-snapshot-godot-3-2-beta-3" %}}), here comes Godot **3.2 beta 4**, bringing back the Mono build for all supported platforms (including Android and WebAssembly, new in Godot 3.2).
 
 *Note: Illustration credits at the bottom of this page.*
 
@@ -60,7 +60,7 @@ For changes since the last beta build, see [the list of commits](https://github.
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/beta4/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/beta4/mono) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.160 are included in this build.

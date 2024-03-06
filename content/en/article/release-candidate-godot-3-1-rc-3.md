@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5c8/7c8/5f1/5c87c85f18d8a373377035.jpg
 date: 2019-03-12 16:23:51
 ---
 
-All good things come in threes, so after our [first](/article/release-candidate-godot-3-1-rc-1) [two](/article/release-candidate-godot-3-1-rc-2) release candidates, here is Godot 3.1 **RC 3**. We've reached a state which we think should be good to release as the stable branch, so if no critical regression is found, the next build should be *3.1 stable*!
+All good things come in threes, so after our [first]({{% ref "article/release-candidate-godot-3-1-rc-1" %}}) [two]({{% ref "article/release-candidate-godot-3-1-rc-2" %}}) release candidates, here is Godot 3.1 **RC 3**. We've reached a state which we think should be good to release as the stable branch, so if no critical regression is found, the next build should be *3.1 stable*!
 
 Please give it a try on various devices and platforms, and ensure that no critical issues have been missed.
 
@@ -28,7 +28,7 @@ The documentation's [*latest* branch](http://docs.godotengine.org/en/latest/) in
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
+The download links are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
 
 - [**Standard build**](https://downloads.tuxfamily.org/godotengine/3.1/rc3) (GDScript, GDNative, VisualScript)
 - [**Mono build**](https://downloads.tuxfamily.org/godotengine/3.1/rc3/mono) (C# support + all the above). You need to have MSbuild installed to use the Mono build.

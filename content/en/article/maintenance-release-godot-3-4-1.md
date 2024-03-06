@@ -9,11 +9,11 @@ image_caption_description: A game by Ben Lega
 date: 2021-12-17 19:17:54
 ---
 
-[Godot 3.4](/article/godot-3-4-is-released) was released a month ago, and it went fairly smoothly! Many thanks to all the contributors who worked on it, including all testers who tried beta and RC releases to ensure that the 3.4-stable branch would be an easy and worthwhile upgrade path for all users.
+[Godot 3.4]({{% ref "article/godot-3-4-is-released" %}}) was released a month ago, and it went fairly smoothly! Many thanks to all the contributors who worked on it, including all testers who tried beta and RC releases to ensure that the 3.4-stable branch would be an easy and worthwhile upgrade path for all users.
 
 No software release is perfect though, so there will always be some things to iron out, which is why we provide maintenance releases for stable branches, focusing on bugfixing and preserving compatibility (see our [release policy](https://docs.godotengine.org/en/3.4/about/release_policy.html)). Godot 3.4.1 is the first maintenance release in the 3.4 stable branch, and a **recommended upgrade for all Godot 3.4 users**.
 
-[**Download Godot 3.4.1 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.1.stable/).
+[**Download Godot 3.4.1 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.1.stable/).
 
 ## Changes
 
@@ -94,13 +94,13 @@ Here are the main changes since 3.4-stable:
 
 ## Known incompatibilities
 
-*Edit 2021-12-22:* One regression has been found which causes flickering on macOS (affects both using the editor on macOS, and games exported to macOS). All users are advised to upgrade to [Godot 3.4.2](/article/maintenance-release-godot-3-4-2) which fixes that issue.
+*Edit 2021-12-22:* One regression has been found which causes flickering on macOS (affects both using the editor on macOS, and games exported to macOS). All users are advised to upgrade to [Godot 3.4.2]({{% ref "article/maintenance-release-godot-3-4-2" %}}) which fixes that issue.
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ---
 

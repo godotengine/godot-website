@@ -9,7 +9,7 @@ image_caption_description: "A plotting addon by fenix-hub"
 date: 2023-08-11 14:00:00
 ---
 
-Development is well under way for our next milestone, Godot 4.2. After our [dev 2 snapshot](/article/dev-snapshot-godot-4-2-dev-2/), we kept merging new features and important bug fixes, and gathered quite a number of them — so now we're ready for the third dev snapshot to put those under broader user testing. It's been around a month since we started this release cycle, with roughly two months to go until 4.2 beta 1, and then another month to reach stable in early November 2023.
+Development is well under way for our next milestone, Godot 4.2. After our [dev 2 snapshot]({{% ref "article/dev-snapshot-godot-4-2-dev-2" %}}), we kept merging new features and important bug fixes, and gathered quite a number of them — so now we're ready for the third dev snapshot to put those under broader user testing. It's been around a month since we started this release cycle, with roughly two months to go until 4.2 beta 1, and then another month to reach stable in early November 2023.
 
 I'd like to outline the amazing work done by the [Production team](https://godotengine.org/teams/#production), and especially by Yuri Sizov, who took care of PR reviews, merges, and the whole release process while I was on holiday in the second half of July. Godot 4.1.1, the first two dev snapshots for 4.2, and 4.0.4 — all were fully handled by Yuri. While I used to be the only one responsible for making and publishing releases, we're now fully sharing the role of release manager. That should enable us to keep this sustained pace with a high quality standard.
 
@@ -146,4 +146,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

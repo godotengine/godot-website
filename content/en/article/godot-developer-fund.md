@@ -8,8 +8,8 @@ date: 2023-09-12 11:51:10
 ---
 
 We are excited to introduce a major improvement in funding the development efforts of the Godot Engine – the [Godot Development Fund](https://fund.godotengine.org)! The goal for the Development Fund is to create a direct way for everyone to help us secure stable funding and ensure the longevity of the project.
- 
-The Development Fund was [soft-launched in July](/article/funding-breakdown-and-hiring-process/) and already welcomed a lot of new and old sponsors, but we need to take it to the next level to sustain the current development pace, and increase it with new hires.
+
+The Development Fund was [soft-launched in July]({{% ref "article/funding-breakdown-and-hiring-process" %}}) and already welcomed a lot of new and old sponsors, but we need to take it to the next level to sustain the current development pace, and increase it with new hires.
 
 ## Reducing platform fees, amplifying impact
 
@@ -19,7 +19,7 @@ If you are currently supporting us [through Patreon](https://www.patreon.com/god
 
 ## Giving back to the community
 
-The support of the community is what keeps making it possible to reach [new heights](https://godotengine.org/article/godot-4-0-sets-sail/). With you, we can achieve even more!
+The support of the community is what keeps making it possible to reach [new heights]({{% ref "article/godot-4-0-sets-sail" %}}). With you, we can achieve even more!
 
 Every donation, no matter the size, helps us immensely! With your help we can hire more developers, create high quality demos, pay for hosting services and infrastructure, and make the best possible Godot Engine. The more funds we have, the more we can give back to you and the entire gamedev community.
 

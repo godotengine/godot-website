@@ -9,7 +9,7 @@ image_caption_description: A game by Kmitt
 date: 2022-12-09 16:04:53
 ---
 
-Godot 4.0 has been in beta for [over two months](/article/dev-snapshot-godot-4-0-beta-1), and the overall feature completeness, stability and usability have improved a lot during that time.
+Godot 4.0 has been in beta for [over two months]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}), and the overall feature completeness, stability and usability have improved a lot during that time.
 
 We initially had beta snapshots every other week, and now we've decided to accelerate the cadence to release a new snapshot every week, to get even faster feedback on our bugfixes, and the potential regressions they may introduce.
 
@@ -21,7 +21,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/0ff8742919af72c7412e63ef0f646cb4e7bd7d8f...c6e40e1c01200052450df10d9126f8ea7f57de30), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2022-11-30..2022-12-08+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 7 (149 commits – excluding merge commits ― from 49 contributors).
 

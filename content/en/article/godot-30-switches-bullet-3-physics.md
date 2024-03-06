@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/59f/f1b/66d/59ff1b66d1fbe773318157.png
 date: 2017-11-05 00:00:00
 ---
 
-***Update:** Due to several circumstances (such as a shift of focus from upstream Bullet developers away from game development), Godot 4.0 is going back to its in-house physics engine for 3D (GodotPhysics). Bullet is no longer available in Godot 4.0, but it (or other physics engines like [Jolt](https://github.com/godot-jolt/godot-jolt)) may be implemented as an add-on using [GDExtension](https://godotengine.org/article/introducing-gd-extensions).*
+***Update:** Due to several circumstances (such as a shift of focus from upstream Bullet developers away from game development), Godot 4.0 is going back to its in-house physics engine for 3D (GodotPhysics). Bullet is no longer available in Godot 4.0, but it (or other physics engines like [Jolt](https://github.com/godot-jolt/godot-jolt)) may be implemented as an add-on using [GDExtension]({{% ref "article/introducing-gd-extensions" %}}).*
 
 ___
 

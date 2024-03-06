@@ -8,13 +8,13 @@ image: /storage/app/uploads/public/5c3/f7a/c66/5c3f7ac66e008154491407.png
 date: 2019-03-13 16:25:30
 ---
 
-After [a bit more than one year](/article/godot-3-0-released) of work, the Godot developers and contributors are delighted to get their new release out the door, **Godot 3.1**! It brings much-requested improvements to usability and many important features.
+After [a bit more than one year]({{% ref "article/godot-3-0-released" %}}) of work, the Godot developers and contributors are delighted to get their new release out the door, **Godot 3.1**! It brings much-requested improvements to usability and many important features.
 
 Godot 3.0 was a massive release, which required large rewrites of the engine codebase and breaking backwards compatibility significantly. This new version builds upon it by improving it and finishing the pending work.
 
 As a result, Godot 3.1 feels more mature and easy to use, and it does away with many hurdles introduced in the previous versions.
 
-[**Download Godot 3.1**](/download) now and keep on reading about the great features added in this version.
+[**Download Godot 3.1**]({{% ref "download" %}}) now and keep on reading about the great features added in this version.
 
 
 ## Patreon
@@ -106,7 +106,7 @@ However, dynamically typed languages have some limitations that can be a hassle:
 * Does not always catch errors during compile (or write) time.
 * Code can be less readable and difficult to refactor.
 
-Our contributor George Marques ([vnen](https://github.com/vnen)) did a fantastic job [implementing optional typing](/article/optional-typing-gdscript) in GDScript to tackle these problems. For Godot 3.1, optional typing is a parser-only feature. The plan is, afterwards, to include typed instructions in the state machine to greatly optimize performance.
+Our contributor George Marques ([vnen](https://github.com/vnen)) did a fantastic job [implementing optional typing]({{% ref "article/optional-typing-gdscript" %}}) in GDScript to tackle these problems. For Godot 3.1, optional typing is a parser-only feature. The plan is, afterwards, to include typed instructions in the state machine to greatly optimize performance.
 
 One nice implementation detail is that the code editor will now show which lines are safe with a slight highlight of the line number. This will be vital in the future to optimize small pieces of code which may require more performance.
 
@@ -118,7 +118,7 @@ This work also enabled GDScript warnings, which will now be raised by the parser
 
 ![inspector.png](/storage/app/uploads/public/5c3/f74/a27/5c3f74a27a588387820381.png)
 
-The Godot inspector has been [rewritten from scratch](/article/godot-gets-new-inspector). It is now a lot more comfortable to use. Among some of the nice new features are proper vector field editing, sub-inspectors for resource editing (no longer needed to switch to a separate one when editing resources), better custom visual editors for many types of objects, very comfortable to use spin-slider controls, better array and dictionary editing and many many more features.
+The Godot inspector has been [rewritten from scratch]({{% ref "article/godot-gets-new-inspector" %}}). It is now a lot more comfortable to use. Among some of the nice new features are proper vector field editing, sub-inspectors for resource editing (no longer needed to switch to a separate one when editing resources), better custom visual editors for many types of objects, very comfortable to use spin-slider controls, better array and dictionary editing and many many more features.
 
 
 <a id="2d-editor"></a>
@@ -142,7 +142,7 @@ The tileset creation workflow in Godot had always been a major pain point for us
 
 ![newfs.png](/storage/app/uploads/public/5c3/f9b/6e0/5c3f9b6e030d4266079135.png)
 
-Another fine piece of work by contributor Gilles Roudiere ([Groud](https://github.com/groud)) and sponsored by [Gamblify](https://www.gamblify.com). The [new filesystem dock](/article/godot-gets-new-filesystem-dock-3-1) has been rewritten and now supports a single tree + files view by default, with thumbnails for the files. It makes it easy to navigate projects and understand where everything is.
+Another fine piece of work by contributor Gilles Roudiere ([Groud](https://github.com/groud)) and sponsored by [Gamblify](https://www.gamblify.com). The [new filesystem dock]({{% ref "article/godot-gets-new-filesystem-dock-3-1" %}}) has been rewritten and now supports a single tree + files view by default, with thumbnails for the files. It makes it easy to navigate projects and understand where everything is.
 
 
 <a id="kinematicbody"></a>
@@ -150,7 +150,7 @@ Another fine piece of work by contributor Gilles Roudiere ([Groud](https://githu
 
 ![mp.gif](/storage/app/uploads/public/5c3/f75/277/5c3f75277e3f5854362839.gif)
 
-Kinematic bodies are among Godot's most useful nodes. They allow creating very game-like character motion with little effort. For Godot 3.1 they have been [considerably improved](/article/godot-31-will-get-many-improvements-kinematicbody):
+Kinematic bodies are among Godot's most useful nodes. They allow creating very game-like character motion with little effort. For Godot 3.1 they have been [considerably improved]({{% ref "article/godot-31-will-get-many-improvements-kinematicbody" %}}):
 
 * Support for snapping the body to the floor.
 * Support for RayCast shapes in kinematic bodies.
@@ -162,7 +162,7 @@ Kinematic bodies are among Godot's most useful nodes. They allow creating very g
 
 ![animeditor.png](/storage/app/uploads/public/5c3/f74/400/5c3f74400246a282442718.png)
 
-The animation editor has also been [completely rewritten](/article/godot-gets-brand-new-animation-editor-cinematic-support) to ensure a much better experience. Some of the more outstanding features are:
+The animation editor has also been [completely rewritten]({{% ref "article/godot-gets-brand-new-animation-editor-cinematic-support" %}}) to ensure a much better experience. Some of the more outstanding features are:
 
 * Friendlier layout, with less clutter.
 * Key previews for most types of keys allow seeing the key values within the track.
@@ -181,7 +181,7 @@ The animation editor has also been [completely rewritten](/article/godot-gets-br
 
 ![oneshot.gif](/storage/app/uploads/public/5c3/f73/e98/5c3f73e989658606893298.gif)
 
-The old `AnimationTreePlayer` has been deprecated in favor of the [new  `AnimationTree` node](/article/godot-gets-new-animation-tree-state-machine). Besides improving the blend tree, it also supports blend spaces (1D and 2D), a state machine, and a modular approach that allows you to combine all modes hierarchially to better reflect your gameplay.
+The old `AnimationTreePlayer` has been deprecated in favor of the [new  `AnimationTree` node]({{% ref "article/godot-gets-new-animation-tree-state-machine" %}}). Besides improving the blend tree, it also supports blend spaces (1D and 2D), a state machine, and a modular approach that allows you to combine all modes hierarchially to better reflect your gameplay.
 
 Support for *root motion* as well as the ability to write your own custom blend nodes has also been added.
 
@@ -189,7 +189,7 @@ Support for *root motion* as well as the ability to write your own custom blend 
 <a id="axis-handling"></a>
 ### New axis handling system
 
-After several months of deliberation and prototypes, we settled on a really good approach to [axis mapping](/article/handling-axis-godot), courtesy of Gilles Roudiere ([Groud](https://github.com/groud)). Instead of going the way other game engines do it with axis definitions, Godot 3.1 uses the novel concept of "action strength".
+After several months of deliberation and prototypes, we settled on a really good approach to [axis mapping]({{% ref "article/handling-axis-godot" %}}), courtesy of Gilles Roudiere ([Groud](https://github.com/groud)). Instead of going the way other game engines do it with axis definitions, Godot 3.1 uses the novel concept of "action strength".
 
 While it may take a bit of time to sink in, this approach allows using actions for all use cases and it makes it very easy to create in-game customizable mappings and customization screens.
 
@@ -199,7 +199,7 @@ While it may take a bit of time to sink in, this approach allows using actions f
 
 ![visualshader.png](/storage/app/uploads/public/5c3/f73/59e/5c3f7359e012c474162440.png)
 
-The visual shader editor has made a comeback. This was a pending feature to re-implement in Godot 3.0, but it couldn't be done in time back then. The new version has a [lot of niceties](/article/visual-shader-editor-back), such as PBR outputs, port previews, and easier to use mapping to inputs.
+The visual shader editor has made a comeback. This was a pending feature to re-implement in Godot 3.0, but it couldn't be done in time back then. The new version has a [lot of niceties]({{% ref "article/visual-shader-editor-back" %}}), such as PBR outputs, port previews, and easier to use mapping to inputs.
 
 
 <a id="2d-skeletons"></a>
@@ -231,7 +231,7 @@ Just like the 2D editor, the 3D editor has also been considerably improved. Joan
 
 ![cape.gif](/storage/app/uploads/public/5c3/f79/77a/5c3f7977a9b1a752764862.gif)
 
-Andrea Catania ([Odino](https://github.com/AndreaCatania)), who integrated Bullet to Godot 3.0, has added support for [soft bodies](/article/soft-body) in Godot 3.1. This is a very easy to use implementation supporting many nice features.
+Andrea Catania ([Odino](https://github.com/AndreaCatania)), who integrated Bullet to Godot 3.0, has added support for [soft bodies]({{% ref "article/soft-body" %}}) in Godot 3.1. This is a very easy to use implementation supporting many nice features.
 
 
 <a id="ragdoll"></a>
@@ -239,7 +239,7 @@ Andrea Catania ([Odino](https://github.com/AndreaCatania)), who integrated Bulle
 
 ![physicalbone.gif](/storage/app/uploads/public/5af/b06/c69/5afb06c693617870253401.gif)
 
-Also by Andrea Catania ([Odino](https://github.com/AndreaCatania)), there is a new [PhysicalBone](/article/godot-ragdoll-system) node used for easy ragdoll setups, as well as a [SkeletonIK system](/article/skeleton-inverse-kinematic) which allows creating simple Inverse Kinematics (IK) chains for existing skeletons and toggling bones from regular to IK mode.
+Also by Andrea Catania ([Odino](https://github.com/AndreaCatania)), there is a new [PhysicalBone]({{% ref "article/godot-ragdoll-system" %}}) node used for easy ragdoll setups, as well as a [SkeletonIK system]({{% ref "article/skeleton-inverse-kinematic" %}}) which allows creating simple Inverse Kinematics (IK) chains for existing skeletons and toggling bones from regular to IK mode.
 
 
 <a id="csg"></a>
@@ -247,7 +247,7 @@ Also by Andrea Catania ([Odino](https://github.com/AndreaCatania)), there is a n
 
 ![csg7.gif](/storage/app/uploads/public/5c3/f75/af2/5c3f75af2e35c316515966.gif)
 
-[CSG tools have been added](/article/godot-gets-csg-support) for fast level prototyping, allowing generic primitives and custom meshes to be combined via boolean operations to generate more complex shapes. They can also become colliders to test together with physics.
+[CSG tools have been added]({{% ref "article/godot-gets-csg-support" %}}) for fast level prototyping, allowing generic primitives and custom meshes to be combined via boolean operations to generate more complex shapes. They can also become colliders to test together with physics.
 
 
 <a id="opensimplex"></a>
@@ -255,7 +255,7 @@ Also by Andrea Catania ([Odino](https://github.com/AndreaCatania)), there is a n
 
 ![osimp.png](/storage/app/uploads/public/5c3/f79/d2c/5c3f79d2ca8d7308662871.png)
 
-Support [has been added for OpenSimplex](/article/simplex-noise-lands-godot-31) (another very requested feature from users) by Joan Fons Sanchez ([JFonS](https://github.com/JFonS)). Additionally, a noise texture can now be used as a resource, which generates noise on the fly.
+Support [has been added for OpenSimplex]({{% ref "article/simplex-noise-lands-godot-31" %}}) (another very requested feature from users) by Joan Fons Sanchez ([JFonS](https://github.com/JFonS)). Additionally, a noise texture can now be used as a resource, which generates noise on the fly.
 
 
 <a id="cpu-particles"></a>

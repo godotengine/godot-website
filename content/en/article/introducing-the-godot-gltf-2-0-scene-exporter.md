@@ -19,7 +19,7 @@ glTF 2.0 (*GL Transmission Format*) is a fully open-source, widely implemented i
 
 glTF can be used in many diverse ways to import or export models across existing industry-standard tools, either through native glTF support or through third-party plugins.
 
-Godot has had support for importing glTF 2.0 files since Godot 3.0, and we strongly expressed [our support of this open format](https://godotengine.org/article/we-should-all-use-gltf-20-export-3d-assets-game-engines). This support has gradually improved over the years and is now quite mature, at the same time as exporters in software like Blender have also reached a very good state.
+Godot has had support for importing glTF 2.0 files since Godot 3.0, and we strongly expressed [our support of this open format]({{% ref "article/we-should-all-use-gltf-20-export-3d-assets-game-engines" %}}). This support has gradually improved over the years and is now quite mature, at the same time as exporters in software like Blender have also reached a very good state.
 
 ## A collaborative 3D workflow
 
@@ -115,7 +115,7 @@ We expect to fix issues along the road. If you have any problems, please report 
 
 The standards body behind glTF 2.0, Khronos, is also behind Collada (`.dae`). The Collada format has limits that could not be overcome without an entirely new standard.
 
-More information in this article: [*Why we should all support glTF 2.0 as THE standard asset exchange format for game engines*](https://godotengine.org/article/we-should-all-use-gltf-20-export-3d-assets-game-engines).
+More information in this article: [*Why we should all support glTF 2.0 as THE standard asset exchange format for game engines*]({{% ref "article/we-should-all-use-gltf-20-export-3d-assets-game-engines" %}}).
 
 - The Collada specification was very ambiguous in many aspects.
 - Most Collada exporters are, to this day, broken and why the Godot developers made the [Better Collada](https://github.com/godotengine/collada-exporter) Blender add-on.

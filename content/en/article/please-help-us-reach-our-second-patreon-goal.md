@@ -19,7 +19,7 @@ However, while many of the areas being worked on can be approached reasonably by
 
 ![](/storage/app/media/gdnative.png)
 
-If you help us reach our next Patreon goal (and exceed it, as we need a certain margin of safety), we plan to hire [karroffel](https://github.com/karroffel) part-time. She's the brilliant mind behind what is probably one of the best additions in 3.0, [*GDNative*](/article/dlscript-here). Thanks to her work, it's possible to do all sorts of amazing things, such as:
+If you help us reach our next Patreon goal (and exceed it, as we need a certain margin of safety), we plan to hire [karroffel](https://github.com/karroffel) part-time. She's the brilliant mind behind what is probably one of the best additions in 3.0, [*GDNative*]({{% ref "article/dlscript-here" %}}). Thanks to her work, it's possible to do all sorts of amazing things, such as:
 
 * Develop using C++ for all platforms without recompiling the engine.
 * Bind Godot to all sort of cool external libraries and frameworks (like Steam, SQLite, mobile SDKs, etc.) without recompiling the engine (and which can be simply downloaded from our asset library).

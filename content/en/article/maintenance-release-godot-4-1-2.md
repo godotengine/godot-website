@@ -9,7 +9,7 @@ image_caption_description: A game by Nozomu Games
 date: 2023-10-04 11:00:00
 ---
 
-Godot 4.1 is celebrating its [3 month anniversary](/article/godot-4-1-is-here) this week, and that means Godot 4.2 is entering the beta testing phase shortly after. This development cycle has been packed with bugfixes and other improvements. As always, we take the safest of these contributions and we compile them into a patch release for the current stable version of the engine.
+Godot 4.1 is celebrating its [3 month anniversary]({{% ref "article/godot-4-1-is-here" %}}) this week, and that means Godot 4.2 is entering the beta testing phase shortly after. This development cycle has been packed with bugfixes and other improvements. As always, we take the safest of these contributions and we compile them into a patch release for the current stable version of the engine.
 
 Such is the case of Godot 4.1.2, which is officially available starting today! Engine contributors provided fixes for almost every area of the engine, so make sure to read the changelog [below](#changes). Here's a short summary of some of the more interesting changes.
 
@@ -23,7 +23,7 @@ Such is the case of Godot 4.1.2, which is officially available starting today! E
 
 - As many game developers compile Godot and its custom forks by themselves, it's important for us to ensure buildsystem stability and flexibility as well as that of the rest of the engine — even for previous releases. This version includes fixes to XCode 15 compatibility ([GH-82458](https://github.com/godotengine/godot/pull/82458)), a number of changes reducing build times ([GH-80612](https://github.com/godotengine/godot/pull/80612), [GH-80482](https://github.com/godotengine/godot/pull/80482), [GH-81144](https://github.com/godotengine/godot/pull/81144)), as well as Visual Studio and MSVC quality-of-life improvements ([GH-79238](https://github.com/godotengine/godot/pull/79238)).
 
-[**Download Godot 4.1.2 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.2.stable/).
+[**Download Godot 4.1.2 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.2.stable/).
 
 *The illustration picture used in this announcement comes from* **Robot Detour** *— a puzzle game by [Nozomu Games](https://twitter.com/NozomuGames) made with Godot 4. Flex your brains as you operate cute robots attached to a stretchy string through challenges and traps, and don't get entangled, because the demo comes out later this year! For now, you can follow Nozomu Games on [Twitter](https://twitter.com/NozomuGames) for more updates and check out their previous games on [itch.io](https://nozomu57.itch.io/).*
 
@@ -122,4 +122,4 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

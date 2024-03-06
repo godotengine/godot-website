@@ -9,7 +9,7 @@ date: 2018-01-29 22:54:34
 
 After more than 18 months of development, all Godot Engine contributors are proud to present our biggest release so far, Godot 3.0! It brings a brand new rendering engine with state-of-the-art PBR workflow for 3D, an improved assets pipeline, GDNative to load native code as plugins, C# 7.0 support, Bullet as the 3D physics engine, and many other features which are <a href="#features">described in depth below</a>.
 
-Impatient users can put an end to 18 months of waiting by jumping directly to our [Download](/download) page and start playing with Godot 3.0!
+Impatient users can put an end to 18 months of waiting by jumping directly to our [Download]({{% ref "download" %}}) page and start playing with Godot 3.0!
 
 # The long road to 3.0
 
@@ -37,7 +37,7 @@ As we always want to be crystal clear with how donations are handled and used, w
 
 After meeting the initial goal, we hired [karroffel](https://github.com/karroffel) to continue her work on GDNative (more about this below) and work on a new rendering backend.
 
-We are currently aiming to hire Rémi Verschelde ([Akien](https://github.com/akien-mga)), our project manager, as full time project manger and representative (you can read more about this [here](/article/next-patreon-goal-help-us-hire-remi-verschelde-akien-full-time)). We need your help, as we are more than halfway there!
+We are currently aiming to hire Rémi Verschelde ([Akien](https://github.com/akien-mga)), our project manager, as full time project manger and representative (you can read more about this [here]({{% ref "article/next-patreon-goal-help-us-hire-remi-verschelde-akien-full-time" %}})). We need your help, as we are more than halfway there!
 
 If you haven't yet, please help us reach this goal by [becoming our patron](https://www.patreon.com/godotengine)! Even a bit is a tremendous help to the project.
 
@@ -104,7 +104,7 @@ The new 3D renderer is state-of-the-art, with features rarely see in game engine
 <a id="pbr-bsdf"></a>
 #### Full principled BSDF
 
-Godot is the first engine to offer the full range of Disney's principled BSDF for physically-based rendering. Due to its [innovative rendering architecture](/article/godot-3-renderer-design-explained), it can offer very complex materials at no extra cost.
+Godot is the first engine to offer the full range of Disney's principled BSDF for physically-based rendering. Due to its [innovative rendering architecture]({{% ref "article/godot-3-renderer-design-explained" %}}), it can offer very complex materials at no extra cost.
 
 This means that besides the typical Albedo, Metalness, Ambient Occlusion and Roughness features, Godot offers Rim, Anisotropy, Subsurface Scattering, Clearcoat, Refraction and Transmission. They are all ready to use out-of-the-box and tightly integrated to the render pipeline.
 
@@ -188,7 +188,7 @@ The 3D asset workflow has also seen great improvements. It is possible to either
 <a id="assets-gltf2"></a>
 #### glTF 2.0 support
 
-Godot now supports importing glTF 2.0 scenes. This is a new open standard by Khronos which we [encourage you](/article/we-should-all-use-gltf-20-export-3d-assets-game-engines) to use and support.
+Godot now supports importing glTF 2.0 scenes. This is a new open standard by Khronos which we [encourage you]({{% ref "article/we-should-all-use-gltf-20-export-3d-assets-game-engines" %}}) to use and support.
 
 ![glTF 2.0 scene imported in Godot](/storage/app/media/3.0%20release/gltf.png)
 
@@ -217,7 +217,7 @@ Using GDNative, it's possible to easily extend Godot in C/C++ without recompilin
 
 But that's not all. GDNative allows setting up extra scripting languages and using them on the fly without recompiling the engine, with pretty much native performance. Currently, work is in an advanced state for community-maintained [Python](https://github.com/touilleMan/godot-python) (via the PluginScript interface), [Nim](https://pragmagic.github.io/godot-nim/master/index.html) and [D](https://github.com/GodotNativeTools/godot-d) support, as well of course as official [C++](https://github.com/GodotNativeTools/godot-cpp) bindings; others might follow if community members are interested in working on it.
 
-You can read more about it on its [original announcement](/article/dlscript-here) and a later [in-depth look at its architecture](/article/look-gdnative-architecture).
+You can read more about it on its [original announcement]({{% ref "article/dlscript-here" %}}) and a later [in-depth look at its architecture]({{% ref "article/look-gdnative-architecture" %}}).
 
 <a id="csharp"></a>
 ## Mono / C# support
@@ -226,7 +226,7 @@ You can read more about it on its [original announcement](/article/dlscript-here
 
 Thanks to a generous grant from Microsoft, Ignacio Roldán Etcheverry ([neikeq](https://github.com/neikeq)) did a fantastic job and implemented Mono support in Godot.
 
-It is now possible to fully script [Godot using C#](/article/introducing-csharp-godot), using your favorite IDE and the latest version of the language.
+It is now possible to fully script [Godot using C#]({{% ref "article/introducing-csharp-godot" %}}), using your favorite IDE and the latest version of the language.
 
 Due to popular demand, we also implemented an API mostly conformant with the C# conventions, so for C# users, the API is mostly PascalCase (instead of snake_case). The generated C# code API includes the full documentation embedded, so code completion works very well with it.
 

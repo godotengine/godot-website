@@ -11,7 +11,7 @@ date: 2023-06-21 13:00:00
 
 An important part of the new release schedule for Godot is the change in mentality. Instead of working towards "the one true" release, such as has been the case with Godot 4.0, we aim to bring incremental changes to the engine at regular intervals. Godot 4.1 builds on top of the foundation created by the previous release, and we are getting confident in its current state.
 
-This means that 4.1 beta 3 is likely to be the final beta release of this cycle, and the first release candidate is soon to follow. Please make sure to give these builds a good test. If you find an issue that affects your work, please give one of the [previous releases](/article/dev-snapshot-godot-4-1-beta-2/) a try as well, and [Godot 4.0.3](/article/maintenance-release-godot-4-0-3/) too for good measure. Engine contributors are after regressions at this point, so testing your case with multiple releases ensures that what you're experiencing is new and thus critical. Don't hesitate to open bug reports in any case, every bit helps!
+This means that 4.1 beta 3 is likely to be the final beta release of this cycle, and the first release candidate is soon to follow. Please make sure to give these builds a good test. If you find an issue that affects your work, please give one of the [previous releases]({{% ref "article/dev-snapshot-godot-4-1-beta-2" %}}) a try as well, and [Godot 4.0.3]({{% ref "article/maintenance-release-godot-4-0-3" %}}) too for good measure. Engine contributors are after regressions at this point, so testing your case with multiple releases ensures that what you're experiencing is new and thus critical. Don't hesitate to open bug reports in any case, every bit helps!
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.beta3/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
@@ -104,6 +104,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

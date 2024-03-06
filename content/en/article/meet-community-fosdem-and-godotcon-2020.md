@@ -15,8 +15,8 @@ Like last year, we will have three events next to each other:
 
 - **Godot Sprint** on Thu 30 and Fri 31 January 2020, where core contributors meet to work together, exchange on all kinds of topics related to the Godot project: technical proposals, roadmap for future releases and common work, community management, etc. Everyone interested in Godot's development is welcome to attend, but be aware that it's primarily too technical-oriented work days for contributors.
 - [**FOSDEM 2020**](https://fosdem.org/2020) on Sat 1 and Sun 2 February 2020, where we have a [**Godot stand**](https://fosdem.org/2020/news/2019-11-19-accepted-stands/) where you can meet community members, buy a Godot T-shirt or get free goodies like stickers or metal pins.<br />
-For the first time, some of us will also organize a [**Game Development devroom**](https://fosdem.org/2020/news/2019-10-01-accepted-developer-rooms/) on Sat 1, with a series of talks about Free and Open Source game development tools and games. If you missed [our CFP posted a couple of months ago](https://godotengine.org/article/cfp-game-development-room-fosdem-2020), you still have a few days to submit talk proposals (but be quick, we're already past our planned deadline but we still have a few slots we can allocate).
-- **GodotCon Brussels 2020** on Mon 3 and Tue 4 February 2020, which is our convention for all members of the Godot community, with talks, demos and workshops of interesting projects. For examples of the kind of talks that we have at the GodotCon, you can check the schedules of past events ([Poznań 2018](/article/schedule-godotcon-2018-poznan), [Brussels 2019](/article/schedule-godotcon-2019-brussels), [Poznań 2019](/article/schedule-godotcon-2019-poznan)). See below for our **Call for Participations** to propose your own talk.
+For the first time, some of us will also organize a [**Game Development devroom**](https://fosdem.org/2020/news/2019-10-01-accepted-developer-rooms/) on Sat 1, with a series of talks about Free and Open Source game development tools and games. If you missed [our CFP posted a couple of months ago]({{% ref "article/cfp-game-development-room-fosdem-2020" %}}), you still have a few days to submit talk proposals (but be quick, we're already past our planned deadline but we still have a few slots we can allocate).
+- **GodotCon Brussels 2020** on Mon 3 and Tue 4 February 2020, which is our convention for all members of the Godot community, with talks, demos and workshops of interesting projects. For examples of the kind of talks that we have at the GodotCon, you can check the schedules of past events ([Poznań 2018]({{% ref "article/schedule-godotcon-2018-poznan" %}}), [Brussels 2019]({{% ref "article/schedule-godotcon-2019-brussels" %}}), [Poznań 2019]({{% ref "article/schedule-godotcon-2019-poznan" %}})). See below for our **Call for Participations** to propose your own talk.
 
 Like previous years, the venue for Godot Sprint and GodotCon will be [**Ludus Académie**](http://www.ludus-academie.com), Quai du Commerce 48, Brussels ([OpenStreetMap](https://www.openstreetmap.org/?mlat=50.85717&mlon=4.34818#map=19/50.85717/4.34818)). Thanks to them for hosting us once again!
 
@@ -30,7 +30,7 @@ If you're lost among the three events listed above, **GodotCon** on **Mon 3 and 
 
 ## Where do I sign up?
 
-[All three events](/events) are free of charge for everyone, and for the FOSDEM you do not even need to register: just show up and say hi at the Godot stand!
+[All three events]({{% ref "events" %}}) are free of charge for everyone, and for the FOSDEM you do not even need to register: just show up and say hi at the Godot stand!
 
 For the Godot Sprint and GodotCon however, **registration is mandatory** as we need to know how many persons will be there to find appropriate venues in Brussels. To help us with the organization, we ask that you [register as soon as possible](https://framaforms.org/registration-for-godotcon-godot-sprint-brussels-2020-1575555632).
 
@@ -45,7 +45,7 @@ As mentioned above, depending on the events, there are two different venues:
 - Godot Sprint and GodotCon will be held at Ludus Académie, Quai du Commerce 48, Brussels
 - FOSDEM is held at the ULB Solbosch Campus, see their [practical information](https://fosdem.org/2020/practical/).
 
-The [**Events**](/events) page on this website is the reference if you need up-to-date information on the events (both before and during the event).
+The [**Events**]({{% ref "events" %}}) page on this website is the reference if you need up-to-date information on the events (both before and during the event).
 
 ## Call for participations for GodotCon
 
@@ -64,6 +64,6 @@ Please send your proposals to remi at godotengine · org, with the following inf
 
 Don't overthink the above too much, I'd prefer to know ASAP who may give a talk, and we can fill in more details later on.
 
-For inspiration, feel free to review the schedules of past events for a glimpse at the kind of activities that we usually have ([Poznań 2018](/article/schedule-godotcon-2018-poznan), [Brussels 2019](/article/schedule-godotcon-2019-brussels), [Poznań 2019](/article/schedule-godotcon-2019-poznan)).
+For inspiration, feel free to review the schedules of past events for a glimpse at the kind of activities that we usually have ([Poznań 2018]({{% ref "article/schedule-godotcon-2018-poznan" %}}), [Brussels 2019]({{% ref "article/schedule-godotcon-2019-brussels" %}}), [Poznań 2019]({{% ref "article/schedule-godotcon-2019-poznan" %}})).
 
 Looking forward to meeting some of you in Brussels!

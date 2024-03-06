@@ -7,15 +7,15 @@ image: /storage/app/uploads/public/5ef/477/2d8/5ef4772d8ab2c844046542.jpg
 date: 2020-06-26 12:15:57
 ---
 
-Godot contributors released the [**Godot 3.2 stable branch**](/article/here-comes-godot-3-2) in January 2020 as a major update to our free and open source game engine. The main development effort then moved towards our future major version, Godot 4.0 (see Godot's [Devblog](/devblog) for a preview of some things to come). But Godot 4.0 is still a long way off, and in the meantime we want to provide the best support possible to all Godot users, so the `3.2` branch is worked on in parallel and receives minor updates to fix bugs, improve usability and occasionally add some compatible features.
+Godot contributors released the [**Godot 3.2 stable branch**]({{% ref "article/here-comes-godot-3-2" %}}) in January 2020 as a major update to our free and open source game engine. The main development effort then moved towards our future major version, Godot 4.0 (see Godot's [Devblog]({{% ref "blog" %}}) for a preview of some things to come). But Godot 4.0 is still a long way off, and in the meantime we want to provide the best support possible to all Godot users, so the `3.2` branch is worked on in parallel and receives minor updates to fix bugs, improve usability and occasionally add some compatible features.
 
-We thus released [**Godot 3.2.1**](/article/maintenance-release-godot-3-2-1) in March 2020 with a focus on fixing the main issues surfaced in Godot 3.2.
+We thus released [**Godot 3.2.1**]({{% ref "article/maintenance-release-godot-3-2-1" %}}) in March 2020 with a focus on fixing the main issues surfaced in Godot 3.2.
 
 After fixing the most urgent issues in 3.2.1, we could take the time to add some new features to the `3.2` branch which we believe are important improvements to the Godot 3.2 experience (especially since we expect at least one year of development before 4.0 is released). Some of those features had already been partially implemented before the 3.2 release, but not merged to avoid delaying the release (any new feature involves new issues and a certain amount of time to improve and stabilize its implementation).
 
-This brings us to [**Godot 3.2.2**](/download) released today, which includes a number of big new features that have been merged and tested over the past few months, on top of the usual batch of bug fixes, usability enhancements, documentation and translation updates.
+This brings us to [**Godot 3.2.2**]({{% ref "download" %}}) released today, which includes a number of big new features that have been merged and tested over the past few months, on top of the usual batch of bug fixes, usability enhancements, documentation and translation updates.
 
-[**Download Godot 3.2.2**](/download) now and read on about the changes in this update.
+[**Download Godot 3.2.2**]({{% ref "download" %}}) now and read on about the changes in this update.
 
 *Note: [Illustration credits](#credits) at the bottom of this page.*
 
@@ -25,7 +25,7 @@ Among its more than 800 new commits, Godot 3.2.2 includes 5 major features:
 
 #### C# support for the iOS platform
 
-Thanks to our Mono/C# maintainer Ignacio ([neikeq](https://github.com/neikeq)) and the sponsorship of Microsoft, [**C# projects can now be exported to iOS**](/article/csharp-ios-signals-events). This nearly completes the platform support for C# projects in Godot (only UWP support is still missing).
+Thanks to our Mono/C# maintainer Ignacio ([neikeq](https://github.com/neikeq)) and the sponsorship of Microsoft, [**C# projects can now be exported to iOS**]({{% ref "article/csharp-ios-signals-events" %}}). This nearly completes the platform support for C# projects in Godot (only UWP support is still missing).
 
 iOS export templates are now included in the Mono build. Exporting C# projects to iOS should be done from macOS using the [classical workflow](http://docs.godotengine.org/en/3.2/getting_started/workflow/export/exporting_for_ios.html), and the scripts will be automatically compiled Ahead-of-Time (AOT) for iOS.
 
@@ -37,7 +37,7 @@ iOS export templates are now included in the Mono build. Exporting C# projects t
 
 While most rendering work was postponed for the 4.0 release with its new Vulkan-based renderer, our contributors [lawnjelly](https://github.com/lawnjelly) and Clay ([clayjohn](https://github.com/clayjohn)) decided to give some more attention to the `3.2` branch.
 
-Among a wide array of bug fixes to the GLES2 and GLES3 renderer, they also designed and implemented a [**2D batching system for GLES2**](/article/gles2-renderer-optimization-2d-batching), which greatly optimizes the 2D rendering performance in many situations. This drastically reduces drawcall-related bottlenecks and can give massive gains in specific scenarios (drawing lots of sprites, big TileMaps, text rendering). It's not magical, and projects have to fulfill some conditions to benefit from it (and actually have a drawcall-related bottleneck). Lawnjelly and Clay are working on some documentation to help you make the best use of the new batching - it will soon be in the main docs, but until then you can refer to the [current draft](https://github.com/lawnjelly/Misc/blob/master/Batching/batching.md).
+Among a wide array of bug fixes to the GLES2 and GLES3 renderer, they also designed and implemented a [**2D batching system for GLES2**]({{% ref "article/gles2-renderer-optimization-2d-batching" %}}), which greatly optimizes the 2D rendering performance in many situations. This drastically reduces drawcall-related bottlenecks and can give massive gains in specific scenarios (drawing lots of sprites, big TileMaps, text rendering). It's not magical, and projects have to fulfill some conditions to benefit from it (and actually have a drawcall-related bottleneck). Lawnjelly and Clay are working on some documentation to help you make the best use of the new batching - it will soon be in the main docs, but until then you can refer to the [current draft](https://github.com/lawnjelly/Misc/blob/master/Batching/batching.md).
 
 *Left is without batching, right is with. Can you spot the difference?*
 
@@ -60,9 +60,9 @@ The [Android plugin documentation](https://docs.godotengine.org/en/3.2/tutorials
 
 #### DTLS support and ENet integration
 
-Our networking maintainer [Fabio](https://github.com/Faless) has been working for over a year on networking features and the HTML5 platform thanks to an [award from Mozilla](/article/godot-engine-awarded-50000-mozilla-open-source-support-program). Almost all of the networking improvements made their way into Godot 3.2, but [DTLS support and its ENet integration](/article/enet-dtls-encryption) came a bit close to the release date and was postponed to 3.2.2.
+Our networking maintainer [Fabio](https://github.com/Faless) has been working for over a year on networking features and the HTML5 platform thanks to an [award from Mozilla]({{% ref "article/godot-engine-awarded-50000-mozilla-open-source-support-program" %}}). Almost all of the networking improvements made their way into Godot 3.2, but [DTLS support and its ENet integration]({{% ref "article/enet-dtls-encryption" %}}) came a bit close to the release date and was postponed to 3.2.2.
 
-This is now included and ready to use! See the [dedicated devblog](/article/enet-dtls-encryption) for usage examples.
+This is now included and ready to use! See the [dedicated devblog]({{% ref "article/enet-dtls-encryption" %}}) for usage examples.
 
 **Note:** We recently found out that Godot's `UDPServer` (and thus `DTLSServer`) [do not work on Windows](https://github.com/godotengine/godot/issues/39832). Fabio is working on a fix which should be included in Godot 3.2.3.
 

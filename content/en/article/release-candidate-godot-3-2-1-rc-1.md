@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/5e5/10f/1c7/5e510f1c7000c476919180.jpg
 date: 2020-02-22 11:24:30
 ---
 
-Godot 3.2 was released [a few weeks ago](/article/here-comes-godot-3-2) as a major update to our free and open source engine, bringing close to one year of development to our users.
+Godot 3.2 was released [a few weeks ago]({{% ref "article/here-comes-godot-3-2" %}}) as a major update to our free and open source engine, bringing close to one year of development to our users.
 
-Since then, [work has begun](/article/headsup-vulkan-merged-master-branch-unstable) in Godot's `master` branch to merge the preliminary Vulkan support and start the rework of the engine internals that we had planned over the past two years. All this work is for our future Godot 4.0 and will not be included in maintenance 3.2.x releases to preserve compatibility and stability.
+Since then, [work has begun]({{% ref "article/headsup-vulkan-merged-master-branch-unstable" %}}) in Godot's `master` branch to merge the preliminary Vulkan support and start the rework of the engine internals that we had planned over the past two years. All this work is for our future Godot 4.0 and will not be included in maintenance 3.2.x releases to preserve compatibility and stability.
 
 But the [`3.2` branch](https://github.com/godotengine/godot/commits/3.2) is not forgotten, and many fixes to 3.2 issues have been merged in the `master` branch and cherry-picked (backported) to the `3.2` branch for future maintenance releases. This includes some fixes to regressions (things that worked in 3.1.x but broke in 3.2) which should help everyone safely port their projects from 3.1 to 3.2.
 
@@ -35,7 +35,7 @@ Some new/improved features are planned further down the road for the 3.2.x relea
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2.1/rc1/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.1/rc1/mono) (C# support + all the above). You need to have MSBuild and .NET Framework 4.7 installed to use the Mono build. Relevant parts of Mono 6.6.0.161 are included in this build.

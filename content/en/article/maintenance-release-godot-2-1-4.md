@@ -7,11 +7,11 @@ image: /storage/app/uploads/public/59a/6e8/e45/59a6e8e45038d813649865.png
 date: 2017-08-30 16:29:01
 ---
 
-It has been four months already since our previous stable release, [Godot 2.1.3](/article/maintenance-release-godot-2-1-3) - and one year since the release of our stable 2.1 branch and the start of the work on Godot 3.0, which should soon see a new [alpha build](/article/dev-snapshot-godot-3-0-alpha-1).
+It has been four months already since our previous stable release, [Godot 2.1.3]({{% ref "article/maintenance-release-godot-2-1-3" %}}) - and one year since the release of our stable 2.1 branch and the start of the work on Godot 3.0, which should soon see a new [alpha build]({{% ref "article/dev-snapshot-godot-3-0-alpha-1" %}}).
 
-This exceptionally long development cycle for Godot 3.0 has encouraged many Godot users to contribute new features to the stable branch, in order to bring them faster to end users and to their projects. The side effect is that such features can introduce regressions, which we absolutely don't want in the stable branch, so this 2.1.4 release required a [good deal more testing](/article/tests-needed-godot-2-1-4-beta) than the previous one. But as a result, it's actually a pretty exciting "maintenance" release with various new features and a great deal of bug fixes.
+This exceptionally long development cycle for Godot 3.0 has encouraged many Godot users to contribute new features to the stable branch, in order to bring them faster to end users and to their projects. The side effect is that such features can introduce regressions, which we absolutely don't want in the stable branch, so this 2.1.4 release required a [good deal more testing]({{% ref "article/tests-needed-godot-2-1-4-beta" %}}) than the previous one. But as a result, it's actually a pretty exciting "maintenance" release with various new features and a great deal of bug fixes.
 
-[Download it now](/download), and read on for details on the update!
+[Download it now]({{% ref "download" %}}), and read on for details on the update!
 
 A big thankyou to all the contributors who worked on this release by implementing bug fixes or features, or testing the changes to spot potential regressions and help debug issues.
 For this release, there were 337 commits made by 81 contributors! Let's see what they bring us.
@@ -84,4 +84,4 @@ If you'd like to support Godot's development, apart from making cool games with 
 
 ------
 
-The illustration image ([full size](/storage/app/uploads/public/59a/6e8/e45/59a6e8e45038d813649865.png)) is a screenshot from [GOLTORUS](https://github.com/Bauxitedev/goltorus), an open source Game of Life simulation on the surface of a torus, using [Godot 3.0 alpha1](/article/dev-snapshot-godot-3-0-alpha-1)'s nice glow feature. Made by [Bauxite](https://twitter.com/bauxitedev/status/901863482026590209).
+The illustration image ([full size](/storage/app/uploads/public/59a/6e8/e45/59a6e8e45038d813649865.png)) is a screenshot from [GOLTORUS](https://github.com/Bauxitedev/goltorus), an open source Game of Life simulation on the surface of a torus, using [Godot 3.0 alpha1]({{% ref "article/dev-snapshot-godot-3-0-alpha-1" %}})'s nice glow feature. Made by [Bauxite](https://twitter.com/bauxitedev/status/901863482026590209).

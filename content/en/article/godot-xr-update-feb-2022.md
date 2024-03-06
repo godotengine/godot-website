@@ -15,7 +15,7 @@ Lots of things are happening on the XR front with Godot, so time for a long over
 
 At the end of last year, we had rounded off most of the core changes in Godot 4 to support XR. We had XR fully working through OpenVR/SteamVR and, except for a pesky timing issue, had OpenXR up and running.
 
-It initially seemed the timing issue was related to issues with the original Vulkan implementation on OpenXR. OpenXR had already moved to a new approach, where OpenXR takes over managing the Vulkan instance. Switching to this new approach however required embedding OpenXR support into the core of Godot. With the [Meta grant](https://godotengine.org/article/godot-engine-receiving-new-grant-meta-reality-labs) securing the funding to switch to the new approach, the whole implementation was ported to the core.
+It initially seemed the timing issue was related to issues with the original Vulkan implementation on OpenXR. OpenXR had already moved to a new approach, where OpenXR takes over managing the Vulkan instance. Switching to this new approach however required embedding OpenXR support into the core of Godot. With the [Meta grant]({{% ref "article/godot-engine-receiving-new-grant-meta-reality-labs" %}}) securing the funding to switch to the new approach, the whole implementation was ported to the core.
 
 While we would later discover the cause of the timing issue was fixable in the plugin, the new approach is far more future-proof. It will make it much easier to implement various XR features including the editor features we have on the roadmap.
 

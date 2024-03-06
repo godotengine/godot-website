@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5ae/a42/707/5aea427070767889266673.png
 date: 2018-05-02 23:06:38
 ---
 
-**Note: [Release candidate 2](https://godotengine.org/article/dev-snapshot-godot-3-0-3-rc-2) is out now!**
+**Note: [Release candidate 2]({{% ref "article/dev-snapshot-godot-3-0-3-rc-2" %}}) is out now!**
 
 This is the first release candiate for what will become Godot 3.0.3. This release has over 100 bugfixes and new features. A full human-readable changelog is still to be created but the git shortlog [can be downloaded here](https://downloads.tuxfamily.org/godotengine/3.0.3/rc1/Godot_v3.0.3-rc1_changelog.txt).
 

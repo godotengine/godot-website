@@ -9,9 +9,9 @@ image_caption_description: "A game by Chasing Carrots"
 date: 2023-06-08 10:00:00
 ---
 
-After [3 months of improvements](/article/release-management-4-1) made to the engine, Godot 4.1 is ready for beta testing!
+After [3 months of improvements]({{% ref "article/release-management-4-1" %}}) made to the engine, Godot 4.1 is ready for beta testing!
 
-The main focus of this release is gradual changes that polish user experience and stabilize features added in [Godot 4.0](/article/godot-4-0-sets-sail). At the same time, engine contributors managed to implement quite a few exciting new tools, as well as majorly rework some of the existing systems to make creating games and apps with Godot even more convenient.
+The main focus of this release is gradual changes that polish user experience and stabilize features added in [Godot 4.0]({{% ref "article/godot-4-0-sets-sail" %}}). At the same time, engine contributors managed to implement quite a few exciting new tools, as well as majorly rework some of the existing systems to make creating games and apps with Godot even more convenient.
 
 The beta testing stage is dedicated to fixing bugs and making sure that Godot 4.1 is ready for its formal release next month. As such, this is a great opportunity to put it to test and report any issues that you may find. Make sure to back up your projects before migrating to a new version of the engine, or use a version control system such as Git so you can easily restore if anything goes wrong.
 
@@ -37,7 +37,7 @@ Another core design aspect of Godot is its coordinate system. The engine uses -Z
   - Switch "front" and "back" camera views in the editor to be consistent with itself ([GH-76052](https://github.com/godotengine/godot/pull/76052)).
   - Fix a long-standing `PathFollow` issue with the forward direction ([GH-72842](https://github.com/godotengine/godot/pull/72842)).
 
-Finally, Godot 4.1 brings back frame delta smoothing, first introduced in Godot 3.4 ([GH-52314](https://github.com/godotengine/godot/pull/52314)) by [lawnjelly](https://github.com/lawnjelly). You can read more about it in our [3.4 release blog post](/article/godot-3-4-is-released).
+Finally, Godot 4.1 brings back frame delta smoothing, first introduced in Godot 3.4 ([GH-52314](https://github.com/godotengine/godot/pull/52314)) by [lawnjelly](https://github.com/lawnjelly). You can read more about it in our [3.4 release blog post]({{% ref "article/godot-3-4-is-released" %}}).
 
 ### C#
 
@@ -87,7 +87,7 @@ To help you get started with the navigation server smix8 has prepared an [update
 
 ### Rendering
 
-In April we published a list of [rendering priorities](/article/rendering-priorities-4-1) for Godot 4.1 and future 4.x releases. As expected, many of these tasks were not finished in time to be included in 4.1, but they will remain priorities for the 4.2 dev cycle and beyond if necessary. We spent more time than expected on bug fixing and investigating performance issues, but we are still quite happy with what we accomplished. One of the more notable improvements in this release is the newly implemented Vulkan pipeline cache ([GH-76348](https://github.com/godotengine/godot/pull/76348)) by [Alexander Streng](https://github.com/warriormaster12). While Godot already cached shaders to reduce shader compilation stutter, compiling pipelines still lead to some stuttering and slower load times. While the pipeline compilation stuttering issue is far from solved, this represents a step in the right direction and should also lead to a slight decrease in load times when using one of the RenderingDevice-based rendering backends.
+In April we published a list of [rendering priorities]({{% ref "article/rendering-priorities-4-1" %}}) for Godot 4.1 and future 4.x releases. As expected, many of these tasks were not finished in time to be included in 4.1, but they will remain priorities for the 4.2 dev cycle and beyond if necessary. We spent more time than expected on bug fixing and investigating performance issues, but we are still quite happy with what we accomplished. One of the more notable improvements in this release is the newly implemented Vulkan pipeline cache ([GH-76348](https://github.com/godotengine/godot/pull/76348)) by [Alexander Streng](https://github.com/warriormaster12). While Godot already cached shaders to reduce shader compilation stutter, compiling pipelines still lead to some stuttering and slower load times. While the pipeline compilation stuttering issue is far from solved, this represents a step in the right direction and should also lead to a slight decrease in load times when using one of the RenderingDevice-based rendering backends.
 
 Particles are another part of the visual tech behind the engine that has received a lot of attention in this release. The particle turbulence system originally introduced in 4.0 has been reworked to better empower technical artists to create impressive and beautiful dynamic effects ([GH-64606](https://github.com/godotengine/godot/pull/64606), [GH-77154](https://github.com/godotengine/godot/pull/77154)). It took a bit of deliberation and time, but [KdotJPG](https://github.com/KdotJPG) and [Raffaele Picca](https://github.com/RPicster) were able to get everything just right and the team cannot wait to see your upcoming creations!
 
@@ -117,6 +117,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

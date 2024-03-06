@@ -9,7 +9,7 @@ date: 2023-08-09 20:00:00
 
 _Note: This article was written a few weeks before it was published which is why it references July 2023 while it was published in August 2023. The information within is accurate for both July and August 2023._
 
-Now that 4.1 is out and in the hands of users, it is time for the rendering team to re-evaluate our priorities and set our sights on the future of Godot development. Overall, our priorities are not changing much from what we identified in [our April 2023 progress report](https://godotengine.org/article/rendering-priorities-4-1/).
+Now that 4.1 is out and in the hands of users, it is time for the rendering team to re-evaluate our priorities and set our sights on the future of Godot development. Overall, our priorities are not changing much from what we identified in [our April 2023 progress report]({{% ref "article/rendering-priorities-4-1" %}}).
 
 As we anticipated, we were unable to finish all of our priorities in time for 4.1. In part this was due to the short timeframe (we made the post on April 18, and entered feature freeze on June 8), but it was also the result of spending more time fixing bugs than we planned (hooray for fixed bugs!) and a few key changes taking much longer than expected, notably: GLES3 3D shadows, and time slicing DirectionalLight3D shadows.
 
@@ -17,13 +17,13 @@ As we anticipated, we were unable to finish all of our priorities in time for 4.
 
 As a quick reminder before jumping into the meat of this article, Godot is a non-profit, open source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.
 
 ## Priorities
 
 I want to address what I consider to be a failure of communication in the last rendering priorities post. The previous post was not clear about whether it was a roadmap for 4.1, or if it was a list of things that were important to the rendering team. While the content of the post said not to expect everything to be done for 4.1, the title made it sound like everything on the list was planned to be finished for 4.1. My intention in writing the post was not to promise anything for 4.1, but rather to highlight things that the rendering team is currently working on (and it just so happened that 4.1 would be the next release). Going forward, I hope to be more clear that the list of priorities is not tied into any specific release.
 
-Similarly, as a reminder that even when we have a feature ready or nearly ready before a release window, the feature still may be delayed to a subsequent release if more testing is needed, or if contributors identify issues with the feature before it is merged. That is to say, even if we say we will have a feature ready before a particular release, it only means that the Pull Request will be made before the release, we can't promise that any change will make it into the next release until that change is actually merged into the engine. 
+Similarly, as a reminder that even when we have a feature ready or nearly ready before a release window, the feature still may be delayed to a subsequent release if more testing is needed, or if contributors identify issues with the feature before it is merged. That is to say, even if we say we will have a feature ready before a particular release, it only means that the Pull Request will be made before the release, we can't promise that any change will make it into the next release until that change is actually merged into the engine.
 
 Below I list some of the top priorities identified by the [rendering team](https://godotengine.org/teams/#rendering) along with a brief description. These are presented in no particular order and are grouped based on whether they relate to performance improvements, stability, usability, or a new topic, customization. Many of these items are carried forward from the last post. We hope some of these will make it into 4.2, but we can't promise anything.
 

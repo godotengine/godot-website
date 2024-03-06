@@ -48,7 +48,7 @@ A signaling server (for example a WebSocket server) to which peers connects and 
 
 ## Current work on supporting WebRTC in Godot
 
-During the last month, I've spent most of my time (paid by the Software Freedom Conservancy thanks to [a grant by Mozilla Foundation](/article/mozilla-awards-godot-engine-part-moss-mission-partners-program)) working on a WebRTC implementation for Godot Engine. Part of the work, was already done by Brandon Makin during [GSoC 2018](/article/gsoc-2018-progress-report-1).
+During the last month, I've spent most of my time (paid by the Software Freedom Conservancy thanks to [a grant by Mozilla Foundation]({{% ref "article/mozilla-awards-godot-engine-part-moss-mission-partners-program" %}})) working on a WebRTC implementation for Godot Engine. Part of the work, was already done by Brandon Makin during [GSoC 2018]({{% ref "article/gsoc-2018-progress-report-1" %}}).
 
 I focused on getting the Javascript version ready, and porting the work of Brandon Makin to GDNative (to support WebRTC in native exports, without having to bundle the huge WebRTC Native Code reference library into Godot sources).
 So, while the WebAssembly export will have WebRTC support out of the box, native exports (e.g. GNU/Linux, Windows, macOS, Android, etc.) will need a GDNative library to work.

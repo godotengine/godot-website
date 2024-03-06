@@ -9,13 +9,13 @@ image_caption_description: A game by Pixel-Archipel
 date: 2021-12-22 11:56:21
 ---
 
-We released [Godot 3.4.1](/article/maintenance-release-godot-3-4-1) just a few days ago with a huge array of bugfixes, but a regression was then found for macOS rendering which could cause flickering.
+We released [Godot 3.4.1]({{% ref "article/maintenance-release-godot-3-4-1" %}}) just a few days ago with a huge array of bugfixes, but a regression was then found for macOS rendering which could cause flickering.
 
 This new **Godot 3.4.2** is a hotfix release to solve this and a few other minor issues that were fixed in the meantime. Godot 3.4.2 is a **recommended upgrade for all Godot 3.4 and 3.4.1 users**.
 
-For a detailed overview of the changes that 3.4.1 included and which are also part of this new release, please read the [3.4.1 release notes](/article/maintenance-release-godot-3-4-1).
+For a detailed overview of the changes that 3.4.1 included and which are also part of this new release, please read the [3.4.1 release notes]({{% ref "article/maintenance-release-godot-3-4-1" %}}).
 
-[**Download Godot 3.4.2 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.2.stable/).
+[**Download Godot 3.4.2 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.2.stable/).
 
 ## Changes
 
@@ -41,9 +41,9 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ---
 

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/60f/9a7/b1e/60f9a7b1eb0ca060142976.jpg
 date: 2021-07-22 16:30:00
 ---
 
-Welcome to another developer interview following the [introduction of the Godot Showcase page](https://godotengine.org/article/new-showcase-for-projects-made-with-godot)! This week, we are interviewing Louis Durrant about his game [*The Garden Path*](https://godotengine.org /images/showcase/the-garden-path).
+Welcome to another developer interview following the [introduction of the Godot Showcase page]({{% ref "article/new-showcase-for-projects-made-with-godot" %}})! This week, we are interviewing Louis Durrant about his game [*The Garden Path*](https://godotengine.org /images/showcase/the-garden-path).
 
 ___
 

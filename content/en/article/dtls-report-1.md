@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5db/87c/7eb/5db87c7eb83ec156927495.png
 date: 2019-10-29 17:30:00
 ---
 
-Hello Godotters, as part of my August work (sponsored, as always, [by Mozilla](https://godotengine.org/article/godot-engine-awarded-50000-mozilla-open-source-support-program)) I've been working on integrating DTLS in Godot.
+Hello Godotters, as part of my August work (sponsored, as always, [by Mozilla]({{% ref "article/godot-engine-awarded-50000-mozilla-open-source-support-program" %}})) I've been working on integrating DTLS in Godot.
 Sadly, the work is not yet finished (although usable), and since it requires some API changes in `PacketPeerUDP` to make it performs well (avoiding extra buffering) it will be pushed to the `4.0` release.
 But what is DTLS? Why is it important to have? And how will users benefit from it?
 

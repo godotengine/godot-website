@@ -11,7 +11,7 @@ date: 2023-02-21 17:00:00
 
 For this release candidate we picked a calm, relaxing illustration picture, because that's what all contributors need now after months and months of hard work to finalize this release. What's currently in this third release candidate is pretty much what 4.0 stable will be. With all the amazing new features that we've often described on this blog and on social media, and with all the remaining bugs and usability issues that we want to iron out for future 4.x releases.
 
-Open source software works best with a *release early, release often* strategy, and after more than 3 years of foundational work on Godot 4.0, we're eager to move back to [faster paced release cycles](https://godotengine.org/article/release-management-4-0-and-beyond) to iterate quickly on the more modern and flexible architecture that we've built for this major branch. So don't expect the imminent 4.0 release to be a silver bullet -- it will be a stable base for us to build upon, and a good start for you to start developing new projects which will mature alongside Godot 4.x.
+Open source software works best with a *release early, release often* strategy, and after more than 3 years of foundational work on Godot 4.0, we're eager to move back to [faster paced release cycles]({{% ref "article/release-management-4-0-and-beyond" %}}) to iterate quickly on the more modern and flexible architecture that we've built for this major branch. So don't expect the imminent 4.0 release to be a silver bullet -- it will be a stable base for us to build upon, and a good start for you to start developing new projects which will mature alongside Godot 4.x.
 
 [Jump to the **Downloads** section.](#downloads)
 
@@ -21,7 +21,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.rc
 
 ## What's new
 
-As usual, this blog post only details the most recent changes since the last build, 4.0 RC 2. If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1](/article/dev-snapshot-godot-4-0-beta-1).
+As usual, this blog post only details the most recent changes since the last build, 4.0 RC 2. If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}).
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/d2699dc7ab96fbd75faccc1f32f55baebf1d84dc...7e79aead99a53ee7cdf383add9a6a2aea4f15beb), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-14T11%3A00..2023-02-21T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 RC 2 (139 commits – excluding merge commits ― from 68 contributors).
 

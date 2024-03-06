@@ -9,17 +9,17 @@ date: 2016-07-09 00:00:00
 
 **Edit (2016-07-10 8:00 UTC):** A regression was found in 2.0.4 and is being worked on, please continue using 2.0.3 until we push fixed builds.
 
-**Edit (2016-07-10 16:30 UTC):** A hotfix 2.0.4.1 version is now available and should fix the regression in the previous 2.0.4 binaries. You can [download it](/download) as usual.
+**Edit (2016-07-10 16:30 UTC):** A hotfix 2.0.4.1 version is now available and should fix the regression in the previous 2.0.4 binaries. You can [download it]({{% ref "download" %}}) as usual.
 
 ---
 
-Short of two months [since our previous maintenance release](/article/maintenance-release-godot-2-0-3), and as the development branch for Godot 2.1 is getting production-ready, we are glad to announce the release of a new bugfix version in the 2.0 stable branch, Godot 2.0.4.1!
+Short of two months [since our previous maintenance release]({{% ref "article/maintenance-release-godot-2-0-3" %}}), and as the development branch for Godot 2.1 is getting production-ready, we are glad to announce the release of a new bugfix version in the 2.0 stable branch, Godot 2.0.4.1!
 
 As for the previous maintenance releases, we cherry-picked non-intrusive bug fixes and usability enhancements from the master branch to provide you with a slightly better stable version while we're waiting for the upcoming 2.1 release and [its great new features](https://etherpad.net/p/godot-2.1-changelog). We consider the 2.0 branch production-ready at all times, so it's safe to deploy your existing projects with 2.0.4.1.
 
 Please note that this will likely be the last release in the 2.0 branch, as we expect our next stable version, Godot 2.1, to be released within a few weeks.
 
-See below for more details about the fixes and enhancements in this new version, and [go download it](/download) without waiting!
+See below for more details about the fixes and enhancements in this new version, and [go download it]({{% ref "download" %}}) without waiting!
 
 ## Distribution changes
 
@@ -35,7 +35,7 @@ The main highlights in this maintenance release are:
 
 **Enhancements:**
 
-- **Many new classes documented!** Thanks to all those that got involved [after our call for contributors](/article/fill-blank-class-reference)! Feel free to join us as there's still a lot to do, but the progress is heart-warming!
+- **Many new classes documented!** Thanks to all those that got involved [after our call for contributors]({{% ref "article/fill-blank-class-reference" %}})! Feel free to join us as there's still a lot to do, but the progress is heart-warming!
 - Updated libraries: GLEW 1.13.0, libogg 1.3.2, libvorbis 1.3.5, libtheora 1.1.1, libpng 1.5.27
 - Ability to rotate controls using tool
 - Added classes' short descriptions as tooltips in the create dialog
@@ -84,7 +84,7 @@ The main highlights in this maintenance release are:
 - Windows: prevent freeze while moving or resizing the game window.
 - *And many other nice changes that we can't possibly list here without boring you to the end of times!*
 
-See the [full changelog](http://download.tuxfamily.org/godotengine/2.0.4.1/Godot_v2.0.4.1_stable_changelog.txt) for more details, and head towards the [Download page](/download) to get it!
+See the [full changelog](http://download.tuxfamily.org/godotengine/2.0.4.1/Godot_v2.0.4.1_stable_changelog.txt) for more details, and head towards the [Download page]({{% ref "download" %}}) to get it!
 
 ---
 

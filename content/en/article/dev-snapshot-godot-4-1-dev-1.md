@@ -9,7 +9,7 @@ image_caption_description: A game by Ancient Stone Studios
 date: 2023-04-21 16:00:00
 ---
 
-As we have [announced earlier this week](/article/release-management-4-1/) Godot development is ramping up and you can expect Godot Engine 4.1 to be stable before mid-Summer this year. Right now we are in the middle of the feature merging phase, with the main focus being on improving usability, performance, and the feature set of the engine based on [your feedback](https://github.com/godotengine/godot/issues) and [our prioritized plans](/article/rendering-priorities-4-1/).
+As we have [announced earlier this week]({{% ref "article/release-management-4-1" %}}) Godot development is ramping up and you can expect Godot Engine 4.1 to be stable before mid-Summer this year. Right now we are in the middle of the feature merging phase, with the main focus being on improving usability, performance, and the feature set of the engine based on [your feedback](https://github.com/godotengine/godot/issues) and [our prioritized plans]({{% ref "article/rendering-priorities-4-1" %}}).
 
 Many of you have told us how you enjoyed regular preview builds of the engine during the later stages of the Godot 4.0 development. And we have enjoyed getting quick responses, reports of new issues and regressions, and opinions about recently implemented features. So we are going to continue this practice going forward, and to start things off today we're releasing the first dev snapshot of Godot 4.1.
 
@@ -126,6 +126,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

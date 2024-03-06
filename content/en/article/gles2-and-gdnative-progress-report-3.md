@@ -36,7 +36,7 @@ Another month, another progress report! This time with the early beginnings of 3
 
 ### meet with other developers at FOSDEM and GodotCon
 
-As announced in an earlier blog post, the [GodotCon](https://godotengine.org/article/get-ready-fosdem-and-godotcon-2018) took place in Brussels (right after the FOSDEM), where a lot of cool and interesting people showed up. It was a joy to be there and talk with other people about things we love - free and open source software and game development!
+As announced in an earlier blog post, the [GodotCon]({{% ref "article/get-ready-fosdem-and-godotcon-2018" %}}) took place in Brussels (right after the FOSDEM), where a lot of cool and interesting people showed up. It was a joy to be there and talk with other people about things we love - free and open source software and game development!
 
 As this is a progress report and not an event report I'll keep this section short, but I had a great time hacking with other people and getting to know more Godot users.
 

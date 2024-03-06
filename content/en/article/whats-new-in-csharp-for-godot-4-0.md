@@ -7,7 +7,7 @@ image: /storage/blog/covers/whats-new-in-csharp-for-godot-4-0.jpg
 date: 2023-02-25 17:00:00
 ---
 
-The Godot 4.0 release contains [multiple changes](/article/dev-snapshot-godot-4-0-beta-1) to almost every area of the engine, and first-party support for C# and .NET is no exception. The main focus of this release has been on modernizing the runtime environment and updating the C# API to be more in line with the engine core. We took care not to sacrifice that aspect of familiarity that many of you seek when picking C# as your main scripting language.
+The Godot 4.0 release contains [multiple changes]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}) to almost every area of the engine, and first-party support for C# and .NET is no exception. The main focus of this release has been on modernizing the runtime environment and updating the C# API to be more in line with the engine core. We took care not to sacrifice that aspect of familiarity that many of you seek when picking C# as your main scripting language.
 
 In this article, we'll go into more detail about each of the most important changes.
 
@@ -324,7 +324,7 @@ Consuming APIs provided by a GDExtension is also currently unsupported. We'll ke
 
 #### Relevant links
 
-- [Introducing GDNative's successor, GDExtension](https://godotengine.org/article/introducing-gd-extensions/).
+- [Introducing GDNative's successor, GDExtension]({{% ref "article/introducing-gd-extensions" %}}).
 
 ### Improve source generators extensibility
 

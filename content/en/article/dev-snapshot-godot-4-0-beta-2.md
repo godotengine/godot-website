@@ -9,7 +9,7 @@ image_caption_description: A game by devmar
 date: 2022-09-29 18:20:56
 ---
 
-We released [Godot 4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1) two weeks ago! That was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
+We released [Godot 4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}) two weeks ago! That was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
 
 But the "1" in beta 1 means that it's only the first step of the journey, and like for the alpha phase, we're going to release new beta snapshots roughly every other week. So here's beta 2!
 
@@ -74,7 +74,7 @@ We're trying to be reasonable with it and it shouldn't take more than a few minu
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this beta 2 blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this beta 2 blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/4ba934bf3d1e697d8f332b5e8cfd694cdf49a7ba...f8745f2f71c79972df66f17a3da75f6e328bc55d) for an overview of all changes since 4.0 beta 1 (236 commits – excluding merge commits ― from 67 contributors).
 

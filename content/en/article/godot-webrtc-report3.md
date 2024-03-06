@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5d0/a2c/54a/5d0a2c54aaced070739095.png
 date: 2019-06-19 14:50:00
 ---
 
-In the [last](https://godotengine.org/article/godot-webrtc-report2) two [reports](https://godotengine.org/article/godot-webrtc-report1) we laid out the basis for building a Godot application that uses WebRTC to communicate with other peers.
+In the [last]({{% ref "article/godot-webrtc-report2" %}}) two [reports]({{% ref "article/godot-webrtc-report1" %}}) we laid out the basis for building a Godot application that uses WebRTC to communicate with other peers.
 
 Now, the **WebRTC module got an interface to the High Level Multiplayer API**, so it can be used as a transport for **RPCs/RSETs**. The implementation is a **full p2p mesh**, meaning every player is connected with each other via a "direct" connection, and there is no need for a player to act as a server.
 

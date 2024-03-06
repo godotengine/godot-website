@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5cc/42f/af6/5cc42faf61a5d075621243.png
 date: 2019-04-27 00:00:00
 ---
 
-It's been about a month and a half since the [release of 3.1-stable](https://godotengine.org/article/godot-3-1-released), and our contributors have worked hard to get you, most valued users, bugfixes, new features, and documentation updates. So on this nice and sunny [Dutch King's Day](https://en.wikipedia.org/wiki/Koningsdag) we're happy to announce the availability of the first maintenance release in the 3.1 series **Godot 3.1.1-Stable**. Hail to the king, baby!
+It's been about a month and a half since the [release of 3.1-stable]({{% ref "article/godot-3-1-released" %}}), and our contributors have worked hard to get you, most valued users, bugfixes, new features, and documentation updates. So on this nice and sunny [Dutch King's Day](https://en.wikipedia.org/wiki/Koningsdag) we're happy to announce the availability of the first maintenance release in the 3.1 series **Godot 3.1.1-Stable**. Hail to the king, baby!
 
 With the *-stable* releases we offer you the backwards compatible changes and bugfixes. However in this release we had to break some compatibility with networking due to a [security issue](https://github.com/godotengine/godot/issues/27395). See the [Known incompatibilities](#known-incompatibilites) section of this blog post. If we inadvertently changed behavior for your project started with **Godot 3.1-stable** please [report a bug](https://github.com/godotengine/godot/issues/new).
 
@@ -23,7 +23,7 @@ If you enjoy our work please consider [becoming our Patron](https://www.patreon.
 * `OS.get_unique_id()` was fixed on Android.
 * A `HeightMapShape` was added to the Bullet physics engine implementation.
 * [FPS snapping in the Animation player](https://twitter.com/reduzio/status/1117513556847726594) was added to the engine, along with [other quality of life improvements](https://twitter.com/reduzio/status/1117631934497206272).
-* [New audio features for 3.2](https://godotengine.org/article/godot-32-will-get-new-audio-features) were backported.
+* [New audio features for 3.2]({{% ref "article/godot-32-will-get-new-audio-features" %}}) were backported.
 * New menu options for the Sprite editor were added: "Convert to Mesh2D", "Convert to Polygon2D", "Create CollisionPolygon2D Sibling" and "Create LightOccluder2D Sibling".
 * `AnimatedSprite` can now play backwards.
 * [Emission Mask](https://github.com/godotengine/godot/pull/27238) was added to CPUParticles2D.

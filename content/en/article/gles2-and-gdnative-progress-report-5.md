@@ -128,7 +128,7 @@ The PR for that can be found [here](https://github.com/godotengine/godot/pull/17
 
 ### godot-rust low-level registering PR
 
-As mentioned in the [last progress report](https://godotengine.org/article/gles2-and-gdnative-progress-report-4), some work on the [`godot-rust`](https://github.com/GodotNativeTools/godot-rust) repository has been prepared but not PR'd to the main repository yet. This is what I did, so [here's the PR](https://github.com/GodotNativeTools/godot-rust/pull/81) which got merged recently! This wasn't too big of a change, but I hope that the bindings, which are under more active development (but help is still appreciated :P ), will become more transparent.
+As mentioned in the [last progress report]({{% ref "article/gles2-and-gdnative-progress-report-4" %}}), some work on the [`godot-rust`](https://github.com/GodotNativeTools/godot-rust) repository has been prepared but not PR'd to the main repository yet. This is what I did, so [here's the PR](https://github.com/GodotNativeTools/godot-rust/pull/81) which got merged recently! This wasn't too big of a change, but I hope that the bindings, which are under more active development (but help is still appreciated :P ), will become more transparent.
 
 ## Future
 

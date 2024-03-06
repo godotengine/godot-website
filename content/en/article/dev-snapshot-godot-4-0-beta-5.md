@@ -9,7 +9,7 @@ image_caption_description: A game by Vedg Studio / NoirosL
 date: 2022-11-16 16:38:34
 ---
 
-We released [Godot 4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1) in September, and that was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
+We released [Godot 4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}) in September, and that was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
 
 Since then, we've been releasing new beta snapshots every other week, and this is now the 5th beta.
 Some of the most notable changes in this update include:
@@ -26,7 +26,7 @@ Some of the most notable changes in this update include:
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this beta 5 blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this beta 5 blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/e6751549cf7247965d1744b8c464f5e901006f21...89a33d28f00fec579184fb7193790d40aa09b45b), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2022-11-02..2022-11-16+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 4 (227 commits – excluding merge commits ― from 70 contributors).
 

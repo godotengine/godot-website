@@ -9,11 +9,11 @@ image_caption_description: A game by Hannes Rahm
 date: 2023-10-31 12:00:00
 ---
 
-We're well into the beta phase for Godot 4.2, with the first beta released 3 weeks ago, and new beta snapshots every week since. Have a look at the [4.2 beta 1 release notes](/article/dev-snapshot-godot-4-2-beta-1/) for an overview of the key changes in Godot 4.2.
+We're well into the beta phase for Godot 4.2, with the first beta released 3 weeks ago, and new beta snapshots every week since. Have a look at the [4.2 beta 1 release notes]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}) for an overview of the key changes in Godot 4.2.
 
 Since the start of the beta phase, we fixed a number of bugs reported by the community, so we're publishing further beta snapshots to validate those fixes, and iterate closer to the release candidate stage.
 
-This fourth beta snapshot fixes a number of regressions around rendering and the handling of [mesh compression upgrades](https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/#rendering-particles-and-shaders), compatibility issues with the refactored particles system, and exporting projects to Android.
+This fourth beta snapshot fixes a number of regressions around rendering and the handling of [mesh compression upgrades]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}#rendering-particles-and-shaders), compatibility issues with the refactored particles system, and exporting projects to Android.
 
 For C# users, the .NET 8.0 release is set to be launched this November. Make sure to try the current preview release ([`8.0.0-rc.2`](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) with Godot to make sure everything works as expected. Note that you need to set the `DOTNET_ROLL_FORWARD_TO_PRERELEASE` environment variable to `1` to be able to use the release candidate version of .NET 8.0.
 
@@ -25,7 +25,7 @@ For C# users, the .NET 8.0 release is set to be launched this November. Make sur
 
 ## What's new
 
-For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1](/article/dev-snapshot-godot-4-2-beta-1/), which cover a lot of the changes. This blog post only covers the changes between beta 3 and beta 4.
+For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}), which cover a lot of the changes. This blog post only covers the changes between beta 3 and beta 4.
 
 **52 contributors** submitted **110 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-beta4), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes compared to 4.2-beta3:
 
@@ -153,4 +153,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

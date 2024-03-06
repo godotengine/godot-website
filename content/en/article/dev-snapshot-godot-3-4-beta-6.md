@@ -68,7 +68,7 @@ All these need to be thoroughly tested to ensure that they work as intended in t
 
 Here's a curated changelog with links to the relevant pull requests for details. The list is not exhaustive and will be completed in the future to include more noteworthy changes.
 
-Note that some of the changes in 3.4 have already been backported and published in [Godot 3.3.1](https://godotengine.org/article/maintenance-release-godot-3-3-1) and [3.3.2](https://godotengine.org/article/maintenance-release-godot-3-3-2), and therefore they were not listed here again. You can refer to the changelogs of those maintenance releases for details on what you might have missed since 3.3-stable.
+Note that some of the changes in 3.4 have already been backported and published in [Godot 3.3.1]({{% ref "article/maintenance-release-godot-3-3-1" %}}) and [3.3.2]({{% ref "article/maintenance-release-godot-3-3-2" %}}), and therefore they were not listed here again. You can refer to the changelogs of those maintenance releases for details on what you might have missed since 3.3-stable.
 
 - Android: Add partial support for Android scoped storage ([GH-50359](https://github.com/godotengine/godot/pull/50359)).
   * This also means we're now targeting API level 30 as required to publish new apps on Google Play.
@@ -352,6 +352,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

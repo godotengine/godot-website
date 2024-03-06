@@ -9,7 +9,7 @@ date: 2018-02-12 21:50:59
 
 ## Introduction
 
-Almost one month has passed since the last [progress report](https://godotengine.org/article/gles2-and-gdnative-progress-report-1) and the month of January happens to be the month in which [Godot 3.0 got released](https://godotengine.org/article/godot-3-0-released)!
+Almost one month has passed since the last [progress report]({{% ref "article/gles2-and-gdnative-progress-report-1" %}}) and the month of January happens to be the month in which [Godot 3.0 got released]({{% ref "article/godot-3-0-released" %}})!
 
 Because of the big release there have been many GDNative related tasks that needed to be addressed. Apart from that, the month was mostly spent on implementing more 2D items in the renderer as well as working on getting custom shaders running.
 
@@ -97,7 +97,7 @@ public:
 
 ### add line rendering
 
-As mentioned in the [last progress report](https://godotengine.org/article/gles2-and-gdnative-progress-report-1), 2D rendering is done by processing a series of "items" that tell the rendering backend which kind of 2D element should be rendered and in what way.
+As mentioned in the [last progress report]({{% ref "article/gles2-and-gdnative-progress-report-1" %}}), 2D rendering is done by processing a series of "items" that tell the rendering backend which kind of 2D element should be rendered and in what way.
 
 There were still quite a few item rendering implementations missing, one of them is basic line rendering.
 
@@ -149,7 +149,7 @@ With that done, the editor almost rendered correctly, except for some incorrect 
 
 ### start work on shader compiler
 
-As written about in a past dev-blog, the Godot [shader language got reworked completely](https://godotengine.org/article/making-shaders-more-accessible) for the 3.0 release, meaning that the new GLES2 renderer needs to support that language as well.
+As written about in a past dev-blog, the Godot [shader language got reworked completely]({{% ref "article/making-shaders-more-accessible" %}}) for the 3.0 release, meaning that the new GLES2 renderer needs to support that language as well.
 
 This is done by using the Godot built-in shader parser and compiler which outputs an [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) which can be used for further processing.
 

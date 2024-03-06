@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/63a/182/5cd/63a1825cd2443916160270.png
 date: 2022-12-20 16:37:18
 ---
 
-[Last year](https://godotengine.org/article/about-godot4-vulkan-gles3-and-gles2) we announced that we were planning on creating an OpenGL-based renderer to complement the current Vulkan-based renderers. At that time, we thought that we wouldn't have it ready until 4.1. However, we are now confident that we will be shipping 4.0 with an OpenGL-based renderer; it just won't be feature complete.
+[Last year]({{% ref "article/about-godot4-vulkan-gles3-and-gles2" %}}) we announced that we were planning on creating an OpenGL-based renderer to complement the current Vulkan-based renderers. At that time, we thought that we wouldn't have it ready until 4.1. However, we are now confident that we will be shipping 4.0 with an OpenGL-based renderer; it just won't be feature complete.
 
 As a reminder, an OpenGL-based renderer is still crucial so we can support older platforms, and Web export. There is a Vulkan-like web API called WebGPU in development, but it currently isn't widely supported yet, so WebGL remains the best option for targetting web games.
 
@@ -30,7 +30,7 @@ The big missing features that are planned are:
 7. Vertex shading mode
 8. Various optimizations
 
-Individually, each of these features won't take long to implement. However, if we tried to get them all finished before 4.0, we would have to delay the release of 4.0. Accordingly, these likely won't make it in time for 4.0, but [will be included in future releases](https://godotengine.org/article/release-management-4-0-and-beyond).
+Individually, each of these features won't take long to implement. However, if we tried to get them all finished before 4.0, we would have to delay the release of 4.0. Accordingly, these likely won't make it in time for 4.0, but [will be included in future releases]({{% ref "article/release-management-4-0-and-beyond" %}}).
 
 For now, the focus remains on bug fixing and ensuring that we can release 4.0 soon.
 

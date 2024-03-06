@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/610/012/b82/610012b827c7a703515304.jpg
 date: 2021-07-27 14:08:23
 ---
 
-It's finally time for some extensive testing of the upcoming Godot 3.4 release, which is already quite feature-packed a mere 3 months after the [3.3 release](https://godotengine.org/article/godot-3-3-has-arrived)!
+It's finally time for some extensive testing of the upcoming Godot 3.4 release, which is already quite feature-packed a mere 3 months after the [3.3 release]({{% ref "article/godot-3-3-has-arrived" %}})!
 
 And you read correctly, this is 3.4 **beta 2**, even though we never had a formal beta 1 announcement on this blog. [3.4 beta 1 is available for download](https://downloads.tuxfamily.org/godotengine/3.4/beta1/) for comparison purposes, but since it had a major regression on [C# support on Windows](https://github.com/godotengine/godot/issues/50486), I skipped its blog post...
 
@@ -55,7 +55,7 @@ All these need to be thoroughly tested to ensure that they work as intended in t
 
 Here's a curated changelog with links to the relevant pull requests for details. The list is not exhaustive and will be completed in the future to include more noteworthy changes.
 
-Note that some of the changes in 3.4 have already been backported and published in [Godot 3.2.1](https://godotengine.org/article/maintenance-release-godot-3-2-1) and [3.2.2](https://godotengine.org/article/maintenance-release-godot-3-2-2), and therefore they were not listed here again. You can refer to the changelogs of those maintenance releases for details on what you might have missed since 3.3-stable.
+Note that some of the changes in 3.4 have already been backported and published in [Godot 3.2.1]({{% ref "article/maintenance-release-godot-3-2-1" %}}) and [3.2.2]({{% ref "article/maintenance-release-godot-3-2-2" %}}), and therefore they were not listed here again. You can refer to the changelogs of those maintenance releases for details on what you might have missed since 3.3-stable.
 
 - Android: Add basic user data backup option ([GH-49070](https://github.com/godotengine/godot/pull/49070)).
 - Android: Add GDNative libraries to Android custom Gradle builds ([GH-49912](https://github.com/godotengine/godot/pull/49912)).
@@ -200,7 +200,7 @@ This release is built from commit [a71169c0e0ed7644b959189522535337bdb6cb2b](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Standard build](https://downloads.tuxfamily.org/godotengine/3.4/beta2/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.4/beta2/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.147** are included in this build.
@@ -213,6 +213,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

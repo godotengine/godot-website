@@ -9,11 +9,11 @@ image_caption_description: A game by Rivernotch Game Studio
 date: 2022-02-25 11:00:00
 ---
 
-In parallel to our work on the upcoming feature releases Godot 3.5 ([with a first beta](/article/dev-snapshot-godot-3-5-beta-1)) and 4.0 ([now at alpha 3!](/article/dev-snapshot-godot-4-0-alpha-3)), we backport important fixes to the stable 3.4 branch for use in production.
+In parallel to our work on the upcoming feature releases Godot 3.5 ([with a first beta]({{% ref "article/dev-snapshot-godot-3-5-beta-1" %}})) and 4.0 ([now at alpha 3!]({{% ref "article/dev-snapshot-godot-4-0-alpha-3" %}})), we backport important fixes to the stable 3.4 branch for use in production.
 
-A number of such fixes have been queued in the two months since the [3.4.2 release](/article/maintenance-release-godot-3-4-2), and we after a couple of Release Candidates (thanks to all testers!), we're now ready to release **Godot 3.4.3-stable** as a maintenance update to the current stable branch.
+A number of such fixes have been queued in the two months since the [3.4.2 release]({{% ref "article/maintenance-release-godot-3-4-2" %}}), and we after a couple of Release Candidates (thanks to all testers!), we're now ready to release **Godot 3.4.3-stable** as a maintenance update to the current stable branch.
 
-[**Download Godot 3.4.3 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.3.stable/).
+[**Download Godot 3.4.3 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.3.stable/).
 
 ## Changes
 
@@ -94,15 +94,15 @@ Some regressions have been found in the 3.4.3 version after its release, which m
 - HTTPRequest CORS header error on HTML5 ([GH-58615](https://github.com/godotengine/godot/issues/58615)).
 - PitchShift audio bus effect cannot be dynamically changed ([GH-58647](https://github.com/godotengine/godot/issues/58647)).
 
-These issues are fixed in [Godot 3.4.4](/article/maintenance-release-godot-3-4-4).
+These issues are fixed in [Godot 3.4.4]({{% ref "article/maintenance-release-godot-3-4-4" %}}).
 
 If you experience any unexpected behavior change in your projects after upgrading to 3.4.3, please [file an issue on GitHub](https://github.com/godotengine/godot/issues).
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ----
 

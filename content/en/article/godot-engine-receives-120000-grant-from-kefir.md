@@ -15,7 +15,7 @@ Kefir is known for hit survival games such as [*Last Day on Earth*](https://kefi
 
 <p style="text-align:right;">– Alyosha Stalin, Chief Business Development Officer, <a href="https://kefirgames.ru/">Kefir</a></p>
 
-Like all grants, sponsoring and [donations](/donate) given to the not-for-profit Godot project, these funds are managed by our legal and fiscal sponsor [Software Freedom Conservancy](https://sfconservancy.org), and will be used to accelerate development of our free and open source game engine.
+Like all grants, sponsoring and [donations]({{% ref "donate" %}}) given to the not-for-profit Godot project, these funds are managed by our legal and fiscal sponsor [Software Freedom Conservancy](https://sfconservancy.org), and will be used to accelerate development of our free and open source game engine.
 
 Such funding enables us to hire more contributors to work on the areas which need it most, as well as renew contracts for the currently hired contractors – always with the guarantee that all the work done by contractors is under Godot's MIT license and beneficial to the community as a whole.
 

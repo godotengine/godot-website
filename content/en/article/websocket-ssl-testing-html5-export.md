@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5de/044/c15/5de044c1559cf429683529.png
 date: 2019-11-28 10:30:00
 ---
 
-Hello Godotters, as part of my September work (sponsored, as always, by [Mozilla](https://godotengine.org/article/godot-engine-awarded-50000-mozilla-open-source-support-program)) I've been working on better documentation for the [Crypto](http://docs.godotengine.org/en/latest/classes/class_crypto.html) class, further improving WebSocket support, and an HTTP server integrated in the editor for testing out HTML5 export builds.
+Hello Godotters, as part of my September work (sponsored, as always, by [Mozilla]({{% ref "article/godot-engine-awarded-50000-mozilla-open-source-support-program" %}})) I've been working on better documentation for the [Crypto](http://docs.godotengine.org/en/latest/classes/class_crypto.html) class, further improving WebSocket support, and an HTTP server integrated in the editor for testing out HTML5 export builds.
 
 SSL for WebSocketServer
 =======================

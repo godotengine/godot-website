@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/582/b4e/3d2/582b4e3d2aa2d842351907.jpg
 date: 2016-11-15 17:46:31
 ---
 
-As already noticed by those of you who follow the development effort closely, we had a change of [roadmap](/article/godots-new-renderer-progress-report-1) since what was announced [when Godot 2.1 was released](/article/godot-reaches-2-1-stable).
+As already noticed by those of you who follow the development effort closely, we had a change of [roadmap]({{% ref "article/godots-new-renderer-progress-report-1" %}}) since what was announced [when Godot 2.1 was released]({{% ref "article/godot-reaches-2-1-stable" %}}).
 
 Indeed, we decided to **skip the planned 2.2 release** and head on directly towards **Godot 3.0**, the long-awaited upgrade that should bring brand new 2D and 3D renderers based on OpenGL ES 3.0 (mobile) and OpenGL 3.3 (desktop).
 
@@ -33,7 +33,7 @@ Still, this planned compatibility breakage and new renderer means that some of t
 
 #### Using the funds from the MOSS award efficiently
 
-Last but not least, you might know that we were [awarded a hefty sum by Mozilla](/article/mozilla-awards-godot-engine-part-moss-mission-partners-program) as part of its MOSS Mission Partners program. This award was aimed at helping us improve Godot's HTML5 export by implementing the brand new WebGL 2.0 and WebAssembly technologies. As the former is basically the same API as GLES 3.0, it's best for us to work on both of them at the same time, so that we can ensure that GLES 3.0 / GL 3.3 and WebGL 2.0 will behave similarly.
+Last but not least, you might know that we were [awarded a hefty sum by Mozilla]({{% ref "article/mozilla-awards-godot-engine-part-moss-mission-partners-program" %}}) as part of its MOSS Mission Partners program. This award was aimed at helping us improve Godot's HTML5 export by implementing the brand new WebGL 2.0 and WebAssembly technologies. As the former is basically the same API as GLES 3.0, it's best for us to work on both of them at the same time, so that we can ensure that GLES 3.0 / GL 3.3 and WebGL 2.0 will behave similarly.
 
 Therefore, we decided, together with our non-profit home [Software Freedom Conservancy](https://sfconservancy.org/) to hire Juan Linietsky full-time for 6 months to work on the objectives funded by the MOSS award. This encompasses in particular the new renderer that will be done for 3.0, and extensive work on the HTML5 platform that might be done partly for 3.0 and in full for 3.1. As Juan is the project leader and our more prolific contributor, this will enable Godot to grow even faster than it has over the last couple of years.
 

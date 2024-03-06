@@ -21,7 +21,7 @@ Summary:
 
 ### GodotCon - Oct 16 & 17, 2019
 
-We already had three GodotCons (short for Godot Conference) in Brussels ([2017](/article/meet-us-fosdem-2017-and-godotcon), [2018](/article/get-ready-fosdem-and-godotcon-2018) and [2019](https://godotengine.org/article/meet-community-fosdem-and-godotcon-2019)) and once in Poznań ([2018](/article/meet-community-godotcon-poznan-2018)) over the past few years. GodotCon is an event for all Godot community members, both curious newcomers and power users, to meet other users and contributors to the engine and exchange knowledge and experience. We typically have talks and workshops during the two days, and those who wish so also hang out together for dinner in the evenings.
+We already had three GodotCons (short for Godot Conference) in Brussels ([2017]({{% ref "article/meet-us-fosdem-2017-and-godotcon" %}}), [2018]({{% ref "article/get-ready-fosdem-and-godotcon-2018" %}}) and [2019]({{% ref "article/meet-community-fosdem-and-godotcon-2019" %}})) and once in Poznań ([2018]({{% ref "article/meet-community-godotcon-poznan-2018" %}})) over the past few years. GodotCon is an event for all Godot community members, both curious newcomers and power users, to meet other users and contributors to the engine and exchange knowledge and experience. We typically have talks and workshops during the two days, and those who wish so also hang out together for dinner in the evenings.
 
 Like last year, our event is graciously hosted as a side event of the [Game Industry Conference](https://gic.gd), which will start with a nice party on the last evening of the GodotCon (October 17). The venue will be the [MTP Poznań Expo](https://www.mtp.pl/en), which is located centrally in the city and is also the venue for the (much bigger) GIC and PGA events.
 
@@ -41,7 +41,7 @@ The venue is yet to be confirmed, but might also be at the MTP or nearby.
 
 ## Practical information
 
-[**See our Events page**](/events) for the details and pratical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
+[**See our Events page**]({{% ref "events" %}}) for the details and pratical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
 
 Both the GodotCon and Godot Sprint have free entry, but we ask you to [**register via this form**](https://framaforms.org/registration-for-godotcon-godot-sprint-poznan-2019-1563906147) so that we know who to expect, and how many attendees will be there.
 
@@ -64,4 +64,4 @@ Please send your proposals to *remi at godotengine · org*, with the following i
 
 Don't overthink the above too much, I'd prefer to know *ASAP* who may give a talk, and we can fill in more details later on.
 
-For inspiration, feel free to review the schedules of the [past](/article/schedule-godotcon-2019-brussels) [two](/article/schedule-godotcon-2018-poznan) events for a glimpse at the kind of activities that we usually have.
+For inspiration, feel free to review the schedules of the [past]({{% ref "article/schedule-godotcon-2019-brussels" %}}) [two]({{% ref "article/schedule-godotcon-2018-poznan" %}}) events for a glimpse at the kind of activities that we usually have.

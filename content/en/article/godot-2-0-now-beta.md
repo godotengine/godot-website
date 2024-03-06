@@ -13,4 +13,4 @@ Godot 2.0 Beta features a new interface, and a huge amount of usability improvem
 
 Please test this version out heavily and report any bugs you find! If your favorite bug has not been fixed, please post it to GitHub or (if already there) update it expressing your desire for it getting fixed for 2.0 stable.
 
-Give it a try in the [Download](/download) section!
+Give it a try in the [Download]({{% ref "download" %}}) section!

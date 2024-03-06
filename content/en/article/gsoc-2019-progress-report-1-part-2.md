@@ -8,18 +8,18 @@ image: /storage/app/uploads/public/5d3/04f/f48/5d304ff480b0c840286811.png
 date: 2019-07-18 10:56:18
 ---
 
-As mentioned in the [first part of this progress report](/article/gsoc-2019-progress-report-1-part-1), Godot is taking part in the Google Summer of Code (GSoC) programme for the second time, and we have 8 students working on specific projects for Godot Engine.
+As mentioned in the [first part of this progress report]({{% ref "article/gsoc-2019-progress-report-1-part-1" %}}), Godot is taking part in the Google Summer of Code (GSoC) programme for the second time, and we have 8 students working on specific projects for Godot Engine.
 
-We're now in the middle of the GSoC 3-months coding period, and we asked students to write a progress report to present their project and the work done so far. The 8 reports are split over two posts, the first 4 of which [was posted yesterday](/article/gsoc-2019-progress-report-1-part-1). This second post will cover the remaining 4 projects.
+We're now in the middle of the GSoC 3-months coding period, and we asked students to write a progress report to present their project and the work done so far. The 8 reports are split over two posts, the first 4 of which [was posted yesterday]({{% ref "article/gsoc-2019-progress-report-1-part-1" %}}). This second post will cover the remaining 4 projects.
 
 Here is the list of projects and students with links to the relevant sections.
 
-**Part 1 ([previous post](/article/gsoc-2019-progress-report-1-part-1)):**
+**Part 1 ([previous post]({{% ref "article/gsoc-2019-progress-report-1-part-1" %}})):**
 
-- <a href="/article/gsoc-2019-progress-report-1-part-1#vcs-integration">Version Control Systems Integration</a> by Twarit Waikar
-- <a href="/article/gsoc-2019-progress-report-1-part-1#interactive-music">Interactive Music</a> by Daniel Matarov
-- <a href="/article/gsoc-2019-progress-report-1-part-1#gdscript-lsp">GDScript Language Server</a> by Ankit Priyarup
-- <a href="/article/gsoc-2019-progress-report-1-part-1#visual-scripting">Improvements to the Visual Scripting System</a> by Swarnim Arun
+- <a href="{{% ref "article/gsoc-2019-progress-report-1-part-1" %}}#vcs-integration">Version Control Systems Integration</a> by Twarit Waikar
+- <a href="{{% ref "article/gsoc-2019-progress-report-1-part-1" %}}#interactive-music">Interactive Music</a> by Daniel Matarov
+- <a href="{{% ref "article/gsoc-2019-progress-report-1-part-1" %}}#gdscript-lsp">GDScript Language Server</a> by Ankit Priyarup
+- <a href="{{% ref "article/gsoc-2019-progress-report-1-part-1" %}}#visual-scripting">Improvements to the Visual Scripting System</a> by Swarnim Arun
 
 **Part 2 (this post):**
 
@@ -239,6 +239,6 @@ I also think this module could serve as a basis for streamlining the asset loadi
 
 -----
 
-That's it for this second batch of progress reports from our GSoC students. The first four reports will be can be read in the [previous blog post](/article/gsoc-2019-progress-report-1-part-1), and we should have a second progress report from all students towards the end of the coding period.
+That's it for this second batch of progress reports from our GSoC students. The first four reports will be can be read in the [previous blog post]({{% ref "article/gsoc-2019-progress-report-1-part-1" %}}), and we should have a second progress report from all students towards the end of the coding period.
 
 We hope that you will find good use cases for all the features that are being worked on, and we thank all students and mentors for their dedicated work on these projects!

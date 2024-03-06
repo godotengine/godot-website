@@ -9,13 +9,13 @@ image_caption_description: Godot plugin by Emilio Coppola
 date: 2021-05-24 18:51:43
 ---
 
-[Godot 3.3 was released a month ago](/article/godot-3-3-has-arrived), and we had a first maintenance release [last week with Godot 3.3.1](/article/maintenance-release-godot-3-3-1). A few regressions made their way among the many bug fixes of 3.3.1, so here's another maintenance release to fix them.
+[Godot 3.3 was released a month ago]({{% ref "article/godot-3-3-has-arrived" %}}), and we had a first maintenance release [last week with Godot 3.3.1]({{% ref "article/maintenance-release-godot-3-3-1" %}}). A few regressions made their way among the many bug fixes of 3.3.1, so here's another maintenance release to fix them.
 
 Notably, Windows users could experience crashes when baking lightmaps. Games exported with a ZIP data package could also trigger a crash on exit. Additionally, this release includes a number of non-regression bug fixes to various areas of the engine.
 
 Godot 3.3.2, [like all future 3.3.x releases](https://docs.godotengine.org/en/3.3/about/release_policy.html), focuses purely on bug fixes, and aims to preserve compatibility. It is a recommended upgrade for all Godot 3.3 users.
 
-[**Download Godot 3.3.2 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.3.2.stable/).
+[**Download Godot 3.3.2 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.3.2.stable/).
 
 *Note: [Illustration credits](#credits) at the bottom of this page.*
 
@@ -23,7 +23,7 @@ Godot 3.3.2, [like all future 3.3.x releases](https://docs.godotengine.org/en/3.
 
 See the [**curated changelog**](https://github.com/godotengine/godot/blob/3.3.2-stable/CHANGELOG.md), or the full [commit history on GitHub](https://github.com/godotengine/godot/compare/3.3.1-stable...3.3.2-stable) for an exhaustive overview of the fixes in this release.
 
-If you're upgrading from Godot 3.3-stable, you may want to also read the more consequent changes included in [last week's 3.3.1 release](/article/maintenance-release-godot-3-3-1).
+If you're upgrading from Godot 3.3-stable, you may want to also read the more consequent changes included in [last week's 3.3.1 release]({{% ref "article/maintenance-release-godot-3-3-1" %}}).
 
 Here are the the main changes since 3.3.1-stable:
 
@@ -55,9 +55,9 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ---
 

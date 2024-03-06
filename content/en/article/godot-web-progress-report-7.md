@@ -9,7 +9,7 @@ date: 2021-04-16 17:00:00
 
 Howdy Godotters! It's time for another brief update on the status of Godot on the Web.
 
-If you read through the [last post](https://godotengine.org/article/godot-web-progress-report-6), you already got the spoiler that Godot `3.3` is getting **experimental virtual keyboard support on the Web**. This has been a highly requested feature, but also a hard one to implement (as you might also guess by the fact that most engines, even famous ones, do not support that). It is still in experimental state, and comes with limitations, but should be enough to allow your users to insert their high-score name, or simple chat messages.
+If you read through the [last post]({{% ref "article/godot-web-progress-report-6" %}}), you already got the spoiler that Godot `3.3` is getting **experimental virtual keyboard support on the Web**. This has been a highly requested feature, but also a hard one to implement (as you might also guess by the fact that most engines, even famous ones, do not support that). It is still in experimental state, and comes with limitations, but should be enough to allow your users to insert their high-score name, or simple chat messages.
 
 ### Experimental virtual keybaord
 

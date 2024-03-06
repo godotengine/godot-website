@@ -9,9 +9,9 @@ image_caption_description: "A game by Lucas Molina"
 date: 2023-08-16 16:00:00
 ---
 
-The core of the Godot development focus is on the upcoming Godot 4.2, currently with a [3rd dev snapshot](/article/dev-snapshot-godot-4-2-dev-3/). But we haven't forgotten about the 3.6 release, which has a slow but steady influx of important bug fixes, platform improvements, and rendering features. Godot 3 is still very important for a significant part of the ecosystem - notably people with released games, games close to being released, or who need to target OpenGL 2 / WebGL 1 to maximize device compatibility.
+The core of the Godot development focus is on the upcoming Godot 4.2, currently with a [3rd dev snapshot]({{% ref "article/dev-snapshot-godot-4-2-dev-3" %}}). But we haven't forgotten about the 3.6 release, which has a slow but steady influx of important bug fixes, platform improvements, and rendering features. Godot 3 is still very important for a significant part of the ecosystem - notably people with released games, games close to being released, or who need to target OpenGL 2 / WebGL 1 to maximize device compatibility.
 
-It's been a long time since the earlier 3.6 beta snapshots, so check the [beta 1](/article/dev-snapshot-godot-3-6-beta-1/) and [beta 2](/article/dev-snapshot-godot-3-6-beta-2/) announcements for details on what changed since 3.5.
+It's been a long time since the earlier 3.6 beta snapshots, so check the [beta 1]({{% ref "article/dev-snapshot-godot-3-6-beta-1" %}}) and [beta 2]({{% ref "article/dev-snapshot-godot-3-6-beta-2" %}}) announcements for details on what changed since 3.5.
 
 A lot of work is also being done to improve the Android editor port. We're looking for interested users to help test the beta snapshots via Google Play, and provide us with feedback and automated reports on potential issues. [You can join the testing group here to get access.](https://groups.google.com/g/godot-testers)
 
@@ -97,4 +97,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

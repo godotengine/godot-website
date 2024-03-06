@@ -9,7 +9,7 @@ date: 2021-12-22 16:00:35
 
 We are delighted to announce that the Godot Engine project is receiving a new grant from [Meta's Reality Labs](https://about.facebook.com/realitylabs/) to support our work on the XR capabilities of the engine.
 
-This renews Reality Labs' engagement to support the free and open source Godot game engine, [after a first grant in December 2020](/article/godot-engine-receiving-support-funded-facebook-reality-labs). This grant will enable us to continue our efforts in providing a high quality, free and open source all-in-one solution for AR and VR applications.
+This renews Reality Labs' engagement to support the free and open source Godot game engine, [after a first grant in December 2020]({{% ref "article/godot-engine-receiving-support-funded-facebook-reality-labs" %}}). This grant will enable us to continue our efforts in providing a high quality, free and open source all-in-one solution for AR and VR applications.
 
 We designed an XR work package for 2022 which is funded thanks to this generous grant. Like all Godot [donations and corporate sponsoring](https://godotengine.org/donate), this grant is administered by our legal and fiscal sponsor [Software Freedom Conservancy](https://sfconservancy.org/), a not-for-profit charity that promotes software freedom.
 
@@ -17,11 +17,11 @@ We designed an XR work package for 2022 which is funded thanks to this generous 
 
 The previous grant allowed Bastiaan Olij to dedicate his time working on XR support in Godot.
 
-During the year he worked on a new mobile version of the Vulkan renderer, added stereoscopic rendering support through Multiview and rewrote a large part of the core of the XR system in Godot 4 ([devblog](/article/godot-xr-progress-update-june-2021)).
+During the year he worked on a new mobile version of the Vulkan renderer, added stereoscopic rendering support through Multiview and rewrote a large part of the core of the XR system in Godot 4 ([devblog]({{% ref "article/godot-xr-progress-update-june-2021" %}})).
 
-During the year we also introduced a new implementation of GDNative called GDExtension. As Godot's XR support heavily relies on this plugin architecture, this became a big focus of development ([devblog](/article/introducing-gd-extensions)).
+During the year we also introduced a new implementation of GDNative called GDExtension. As Godot's XR support heavily relies on this plugin architecture, this became a big focus of development ([devblog]({{% ref "article/introducing-gd-extensions" %}})).
 
-Most importantly, changing conditions in the XR market led us to bring development of the OpenXR capabilities of Godot forward, adding full OpenGL-based OpenXR support to Godot 3 ([devblog](/article/godot-openxr-support)).
+Most importantly, changing conditions in the XR market led us to bring development of the OpenXR capabilities of Godot forward, adding full OpenGL-based OpenXR support to Godot 3 ([devblog]({{% ref "article/godot-openxr-support" %}})).
 
 With the [OpenXR plugin 1.1.0](https://github.com/GodotVR/godot_openxr/releases/tag/1.1.0) release Godot 3 now supports the Meta Quest 1 and 2, Meta Desktop XR (including Link) on Windows, and SteamVR on both Windows and Linux. The upcoming OpenXR plugin 1.1.1 release sees added support for the much anticipated passthrough mode on the Quest alongside various fixes and quality of life improvements.
 

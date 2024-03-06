@@ -28,13 +28,13 @@ Godot XR Tools can be found on the [asset library](https://godotengine.org/asset
 
 ### Godot documentation sprint
 
-[Engine developers have organized a documentation sprint this January](https://godotengine.org/article/godot-4-0-docs-sprint/) to ensure the documentation for Godot 4 was brought up to spec in anticipation of Godot 4's stable release. XR of course was part of this sprint. Various documentation pages were completed and are now under review; others are still being worked on. Expect to see new pages added to the documentation soon.
+[Engine developers have organized a documentation sprint this January]({{% ref "article/godot-4-0-docs-sprint" %}}) to ensure the documentation for Godot 4 was brought up to spec in anticipation of Godot 4's stable release. XR of course was part of this sprint. Various documentation pages were completed and are now under review; others are still being worked on. Expect to see new pages added to the documentation soon.
 
 ### New backends in Godot 4
 
 #### OpenGL XR support in Godot 4
 
-For low-end devices with limited Vulkan support, [OpenGL was added as a backend to Godot 4](https://godotengine.org/article/status-of-opengl-renderer/). This implementation of OpenGL is based on OpenGL ES 3.0, but its architecture is more friendly to low-end/mobile devices compared to Godot 3's GLES3 backend.
+For low-end devices with limited Vulkan support, [OpenGL was added as a backend to Godot 4]({{% ref "article/status-of-opengl-renderer" %}}). This implementation of OpenGL is based on OpenGL ES 3.0, but its architecture is more friendly to low-end/mobile devices compared to Godot 3's GLES3 backend.
 
 While there are a few loose ends, contributor David Snopek has added stereoscopic rendering support to the OpenGL renderer. This has proven to be a very efficient solution for XR. This is an upgrade for anyone using the GLES2 renderer in Godot 3 to consider. This implementation takes advantage of the improvements in OpenGL ES 3, but does *not* make use of Godot 3 GLES3 renderer technniques that were detrimental to performance on mobile XR. The only footnote is that the implementation *requires* the OpenGL multiview extension.
 
@@ -68,7 +68,7 @@ Godot 4.1 will get a Direct3D 12 backend. This backend doesn't support stereosco
 
 ### Godot VR Editor
 
-2022 kept us far busier than expected to get Godot 4.0 to a [state we can release it in](https://godotengine.org/article/release-management-4-0-and-beyond/). As such, work on the VR editor was pushed back. A start has now been made on this interesting feature.
+2022 kept us far busier than expected to get Godot 4.0 to a [state we can release it in]({{% ref "article/release-management-4-0-and-beyond" %}}). As such, work on the VR editor was pushed back. A start has now been made on this interesting feature.
 
 Noteworthy to mention here as well is the work that was done on getting the Godot editor to run on an Android device. This way, game development can be performed on tablets and similar devices. Much of this work is instrumental for getting the VR editor to work. In fact people have already successfully tried running this version of the editor on the Meta Quest!
 

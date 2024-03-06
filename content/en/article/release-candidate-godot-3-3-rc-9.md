@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/607/71c/2db/60771c2db6fd6123159683.jpg
 date: 2021-04-14 16:47:00
 ---
 
-*In case you missed the recent news, we decided to [change our versioning for Godot 3.x](/article/versioning-change-godot-3x) and **rename the upcoming version 3.2.4 to Godot 3.3**, thereby starting a new stable branch. Check the [dedicated blog post](/article/versioning-change-godot-3x) for details.*
+*In case you missed the recent news, we decided to [change our versioning for Godot 3.x]({{% ref "article/versioning-change-godot-3x" %}}) and **rename the upcoming version 3.2.4 to Godot 3.3**, thereby starting a new stable branch. Check the [dedicated blog post]({{% ref "article/versioning-change-godot-3x" %}}) for details.*
 
-Here's another [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) for Godot 3.3! Keeping this post short as there wasn't much change, just a handful of fixes - refer to the [3.3 RC 7 post](/article/release-candidate-godot-3-3-rc-7) for details on new features.
+Here's another [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) for Godot 3.3! Keeping this post short as there wasn't much change, just a handful of fixes - refer to the [3.3 RC 7 post]({{% ref "article/release-candidate-godot-3-3-rc-7" %}}) for details on new features.
 
 We're pretty confident about this candidate (Famous Last Words™) so if no new regression is found, the next build should hopefully be the stable release (yes, we said that for RC8 too)! If you haven't tried 3.3 RC builds yet, now would be a great time to do it to help us ensure everything upgrades smoothly from 3.2.3 to 3.3.
 
@@ -27,7 +27,7 @@ This release is built from commit [00d087e47d9f1d9ae358a19a9ac0862349d391ce](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Standard build](https://downloads.tuxfamily.org/godotengine/3.3/rc9/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.3/rc9/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build. (Note: Builds prior to 3.3 RC 7 used Mono 6.12.0.114.)
@@ -40,6 +40,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

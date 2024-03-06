@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/600/74c/0ca/60074c0ca1012683594514.png
 date: 2021-01-19 20:30:00
 ---
 
-Welcome to the second developer interview following the [introduction of the new Showcase page](https://godotengine.org/article/new-showcase-for-projects-made-with-godot)! This week, we've interviewed Monolith of Minds about their latest game [*Resolutiion*](https://godotengine.org /images/showcase/resolutiion).
+Welcome to the second developer interview following the [introduction of the new Showcase page]({{% ref "article/new-showcase-for-projects-made-with-godot" %}})! This week, we've interviewed Monolith of Minds about their latest game [*Resolutiion*](https://godotengine.org /images/showcase/resolutiion).
 
 ___
 

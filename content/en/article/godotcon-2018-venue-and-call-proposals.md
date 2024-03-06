@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5a5/62a/afb/5a562aafb05c4537748115.png
 date: 2018-01-10 15:02:27
 ---
 
-Last month [we announced](/article/get-ready-fosdem-and-godotcon-2018) the date of our big community event in Europe, GodotCon 2018, which will take place in Brussels on **5 & 6 February 2018**, right after the [FOSDEM](https://fosdem.org/2018/) (where we will also have a [stand](https://fosdem.org/2018/stands/) and give a [presentation of Godot 3](https://fosdem.org/2018/schedule/event/godot3/)).
+Last month [we announced]({{% ref "article/get-ready-fosdem-and-godotcon-2018" %}}) the date of our big community event in Europe, GodotCon 2018, which will take place in Brussels on **5 & 6 February 2018**, right after the [FOSDEM](https://fosdem.org/2018/) (where we will also have a [stand](https://fosdem.org/2018/stands/) and give a [presentation of Godot 3](https://fosdem.org/2018/schedule/event/godot3/)).
 
 ## The venue
 
@@ -15,7 +15,7 @@ At that time we hadn't found a venue yet, as we were unsure about our numbers. W
 
 Make sure to bring your laptop to the event, as a big part of the fun is hacking away with Godot together in between talks, so you will definitely want to have your own device at hand.
 
-Always refer to our [events page](https://godotengine.org/events) for updated information about the GodotCon (and FOSDEM before that), and feel free to [contact us](/contact) if you have any question.
+Always refer to our [events page](https://godotengine.org/events) for updated information about the GodotCon (and FOSDEM before that), and feel free to [contact us]({{% ref "contact" %}}) if you have any question.
 
 ## Call for Proposals
 

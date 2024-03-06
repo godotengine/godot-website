@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5cb/f0a/f71/5cbf0af719498893498887.png
 date: 2019-04-23 00:00:00
 ---
 
-Welcome to the first [release candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) of what will shortly become **Godot 3.1.1-stable**. After the [release of 3.1-stable](https://godotengine.org/article/godot-3-1-released) about a month and a half ago we didn't sit on our laurels. No sirre, not at all! Many bugs were fixed, improvements made, and documentation was written.
+Welcome to the first [release candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) of what will shortly become **Godot 3.1.1-stable**. After the [release of 3.1-stable]({{% ref "article/godot-3-1-released" %}}) about a month and a half ago we didn't sit on our laurels. No sirre, not at all! Many bugs were fixed, improvements made, and documentation was written.
 
 With the *-stable* releases we offer you the backwards compatible changes and bugfixes. However in this release we had to break some compatibility with networking due to a [security issue](https://github.com/godotengine/godot/issues/27395). See below for details.
 
@@ -23,7 +23,7 @@ I invite you, dear reader, to take a moment to close your eyes and silently than
 * `OS.get_unique_id()` was fixed on Android.
 * A `HeightMapShape` was added to the Bullet physics engine implementation.
 * [FPS snapping in the Animation player](https://twitter.com/reduzio/status/1117513556847726594) was added to the engine, along with [other quality of life improvements](https://twitter.com/reduzio/status/1117631934497206272).
-* [New audio features for 3.2](https://godotengine.org/article/godot-32-will-get-new-audio-features) were backported.
+* [New audio features for 3.2]({{% ref "article/godot-32-will-get-new-audio-features" %}}) were backported.
 * New menu options for the Sprite editor: "Convert to Mesh2D", "Convert to Polygon2D", "Create CollisionPolygon2D Sibling" and "Create LightOccluder2D Sibling".
 * `AnimatedSprite` can now play backwards.
 * [Emission Mask](https://github.com/godotengine/godot/pull/27238) added to CPUParticles2D.

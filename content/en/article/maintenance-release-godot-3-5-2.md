@@ -9,13 +9,13 @@ image_caption_description: A game by 2Dynamic Games
 date: 2023-03-08 13:00:00
 ---
 
-We've just released [Godot 4.0](/article/godot-4-0-sets-sail/) after 3+ years of intense development! This is the start of the Godot 4 journey, and there is still need for a few iterations for the 4.x branch to be as stable and reliable as the existing 3.5 branch.
+We've just released [Godot 4.0]({{% ref "article/godot-4-0-sets-sail" %}}) after 3+ years of intense development! This is the start of the Godot 4 journey, and there is still need for a few iterations for the 4.x branch to be as stable and reliable as the existing 3.5 branch.
 
 As such, it's natural that existing Godot 3.5 users would prefer to stay on that version for a while, and we're determined to provide them with bugfix releases. This 3.5.2 maintenance release fixes a handful of issues which have been solved in the past few months in parallel to Godot 4.0 development, and could be backported to the 3.5 branch. Nothing fancy, but a welcome upgrade from 3.5.1.
 
 **This is a safe and recommended update for all Godot 3.5.x users.** It should have no major impact on your projects, even complex ones in production, if you're already using 3.5.1-stable.
 
-[**Download Godot 3.5.2 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.5.2.stable/).
+[**Download Godot 3.5.2 now**]({{% ref "download/3.x" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.5.2.stable/).
 
 *The illustration picture is from* [**Lumencraft**](https://store.steampowered.com/app/1713810/Lumencraft/), *a top-down, roguelike shooter with base building and tower defense elements. It is developed by [2Dynamic Games](https://2dynamic.games/), and recently published its full [1.0 public release](https://store.steampowered.com/news/app/1713810/view/3682292957317510884) with a single-player Story mode, and a lot of gameplay improvements. You can find the game on [Steam](https://store.steampowered.com/app/1713810/Lumencraft/), [Epic Games Store](https://store.epicgames.com/en-US/p/lumencraft-abc105), [GOG](https://gog.com/en/game/lumencraft), and the [Mac App Store](https://apps.apple.com/us/app/lumencraft/id1671189271).*
 

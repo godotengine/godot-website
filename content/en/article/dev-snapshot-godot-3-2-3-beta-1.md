@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5f1/564/d56/5f1564d569884631328374.jpg
 date: 2020-07-20 09:23:47
 ---
 
-Godot 3.2.2 was [released on June 26](/article/maintenance-release-godot-3-2-2) with over 3 months' worth of development, including many bugfixes and a handful of features. Some regressions were noticed after the release though, so we decided that Godot 3.2.3 would focus mainly on fixing those new bugs to ensure that all Godot users can have the most stable experience possible.
+Godot 3.2.2 was [released on June 26]({{% ref "article/maintenance-release-godot-3-2-2" %}}) with over 3 months' worth of development, including many bugfixes and a handful of features. Some regressions were noticed after the release though, so we decided that Godot 3.2.3 would focus mainly on fixing those new bugs to ensure that all Godot users can have the most stable experience possible.
 
 ## Changes
 
@@ -55,7 +55,7 @@ This release is built from commit [89f57ae12244f3269c9e3fe4684e16ec1fd2c989](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2.3/beta1/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.3/beta1/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.
@@ -68,6 +68,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

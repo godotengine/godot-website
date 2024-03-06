@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5a1/578/034/5a1578034db00415708461.png
 date: 2017-11-22 13:23:24
 ---
 
-[Since Godot 2.1](/article/mir-godot-habla-dein-language-desormais), we have support for translating the Godot editor, and recent stable releases have almost complete translations in Spanish, German, French, Russian, Chinese Simplified, Korean and many others!
+[Since Godot 2.1]({{% ref "article/mir-godot-habla-dein-language-desormais" %}}), we have support for translating the Godot editor, and recent stable releases have almost complete translations in Spanish, German, French, Russian, Chinese Simplified, Korean and many others!
 
 As we are nearing the 3.0 release, it's the right time to contribute to the localisation effort and make sure that your native language has an accurate and complete translation upon release.
 

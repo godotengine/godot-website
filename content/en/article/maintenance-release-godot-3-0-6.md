@@ -13,7 +13,7 @@ The issue was found by our very own [Fabio Alessandrelli](https://github.com/Fal
 
 In addition to this important security update this release also adds some bugfixes, some Mono fixes, and we introduce a new download type called 'headless'. We had a variety of users trying to use the 'server' releases to do importing of assets or exporting as part of a CI pipeline. For performance reasons as of 3.0.3 the 'server' release actually no longer had this functionality. To retain the performance improvement for users who use the server release as, well, a server we have now added the 'headless' download. This download has all of the tools included and should work in a CI pipeline.
 
-As usual you can go directly to our [Download](/download) page to download the new release. Itch.io and Steam releases will be updated soon **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
+As usual you can go directly to our [Download]({{% ref "download" %}}) page to download the new release. Itch.io and Steam releases will be updated soon **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
 
 Please join me in an *exuberant* standing ovation to our dashingly beautiful contributors and their near impossible dedication to making Godot the best game engine it can be!
 

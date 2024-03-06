@@ -11,9 +11,9 @@ date: 2017-11-30 14:48:18
 Godot 3.0's development officially entered the *beta* stage last week, which coincides for us with what we name the *feature freeze*: from now on, no new features will be merged in the *master* branch, as the focus will be fully on fixing existing issues to stabilize the current feature set.
 Don't worry though, Godot 3.1 will arrive soon after the 3.0 release to bring all the nice features that contributors are already working on.
 
-To get broader testing of the feature-frozen branch, we're releasing an official build, Godot 3.0 *beta 1*, just one month after the [previous alpha 2](/article/dev-snapshot-godot-3-0-alpha-2).
+To get broader testing of the feature-frozen branch, we're releasing an official build, Godot 3.0 *beta 1*, just one month after the [previous alpha 2]({{% ref "article/dev-snapshot-godot-3-0-alpha-2" %}}).
 
-It notably includes [Bullet](http://bulletphysics.org) as the [new 3D physics engine](/article/godot-30-switches-bullet-3-physics), [onion skinning](/article/introducing-onion-skinning-godot-game-engine), autotiling for 2D tilemaps, an enhanced debugger with remote SceneTree edit, and nice usability improvements such as code folding in the script editor, PascalCase builtins for C#, and many others.
+It notably includes [Bullet](http://bulletphysics.org) as the [new 3D physics engine]({{% ref "article/godot-30-switches-bullet-3-physics" %}}), [onion skinning]({{% ref "article/introducing-onion-skinning-godot-game-engine" %}}), autotiling for 2D tilemaps, an enhanced debugger with remote SceneTree edit, and nice usability improvements such as code folding in the script editor, PascalCase builtins for C#, and many others.
 
 But more importantly, it also brings tons of bug fixes compared to alpha 2, and we will continue to hunt down the remaining issues to guarantee a nice experience with Godot 3.0 stable. The documentation and translation have also been updated thanks to the work of our many contributors.
 
@@ -25,7 +25,7 @@ There will still be many fixes and enhancements done before the final release, a
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
 
 - Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/beta1)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/beta1)]
 - Mono version (requires the Mono SDK): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/beta1/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/beta1/mono)]

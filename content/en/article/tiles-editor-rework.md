@@ -13,11 +13,11 @@ All the work presented here is based on [the proposal](https://github.com/godote
 
 *See other articles in this Godot 4.0 tiles editor series:*
 
-1. (you are here) [Tiles editor progress report #1](https://godotengine.org/article/tiles-editor-rework)
-2. [Tiles editor progress report #2](https://godotengine.org/article/tiles-editor-progress-report-2)
-3. [Tiles editor progress report #3](https://godotengine.org/article/tiles-editor-progress-3)
-4. [Tiles editor progress report #4](https://godotengine.org/article/tiles-editor-progress-4)
-5. [Tiles editor progress report #5](https://godotengine.org/article/tiles-editor-progress-report-5)
+1. (you are here) [Tiles editor progress report #1]({{% ref "article/tiles-editor-rework" %}})
+2. [Tiles editor progress report #2]({{% ref "article/tiles-editor-progress-report-2" %}})
+3. [Tiles editor progress report #3]({{% ref "article/tiles-editor-progress-3" %}})
+4. [Tiles editor progress report #4]({{% ref "article/tiles-editor-progress-4" %}})
+5. [Tiles editor progress report #5]({{% ref "article/tiles-editor-progress-report-5" %}})
 
 ## Merging the TileSet and TileMap editors together
 

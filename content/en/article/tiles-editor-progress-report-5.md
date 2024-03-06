@@ -7,15 +7,15 @@ image: /storage/app/uploads/public/614/c7e/bea/614c7ebea3c55854871647.png
 date: 2021-09-23 13:00:00
 ---
 
-Here comes a new progress report about the Tiles editor rework. This is most likely the last progress report before the 4.0 alpha. The previous blog post can be found [here](https://godotengine.org/article/tiles-editor-progress-4).
+Here comes a new progress report about the Tiles editor rework. This is most likely the last progress report before the 4.0 alpha. The previous blog post can be found [here]({{% ref "article/tiles-editor-progress-4" %}}).
 
 *See other articles in this Godot 4.0 tiles editor series:*
 
-1. [Tiles editor progress report #1](https://godotengine.org/article/tiles-editor-rework)
-2. [Tiles editor progress report #2](https://godotengine.org/article/tiles-editor-progress-report-2)
-3. [Tiles editor progress report #3](https://godotengine.org/article/tiles-editor-progress-3)
-4. [Tiles editor progress report #4](https://godotengine.org/article/tiles-editor-progress-4)
-5. (you are here) [Tiles editor progress report #5](https://godotengine.org/article/tiles-editor-progress-report-5)
+1. [Tiles editor progress report #1]({{% ref "article/tiles-editor-rework" %}})
+2. [Tiles editor progress report #2]({{% ref "article/tiles-editor-progress-report-2" %}})
+3. [Tiles editor progress report #3]({{% ref "article/tiles-editor-progress-3" %}})
+4. [Tiles editor progress report #4]({{% ref "article/tiles-editor-progress-4" %}})
+5. (you are here) [Tiles editor progress report #5]({{% ref "article/tiles-editor-progress-report-5" %}})
 
 ### Tile atlas editing
 

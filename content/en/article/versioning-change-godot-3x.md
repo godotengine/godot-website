@@ -11,9 +11,9 @@ As you may know, the current development focus for Godot contributors (in our [`
 
 There's still some way to go before Godot 4.0 is ready to release, and in the meantime we're doing our best to support the Godot 3.x users who are developing and releasing games with the stable version.
 
-When we released [Godot 3.2 in January 2020](/article/here-comes-godot-3-2) and shifted our focus to Godot 4.0, we expected that the 3.2 stable branch would be the last milestone before 4.0. The 3.2 branch would receive maintenance updates (bugfixes, usability enhancements) but major features would have to wait for the next major milestone.
+When we released [Godot 3.2 in January 2020]({{% ref "article/here-comes-godot-3-2" %}}) and shifted our focus to Godot 4.0, we expected that the 3.2 stable branch would be the last milestone before 4.0. The 3.2 branch would receive maintenance updates (bugfixes, usability enhancements) but major features would have to wait for the next major milestone.
 
-Yet there's a number of new features which could be safely backported, and we accepted to merge a significant number of those in the `3.2` branch. We've actually released a quite [feature-packed Godot 3.2.2 update](/article/maintenance-release-godot-3-2-2), blurring the line somewhat regarding what to expect of such 3.2.x releases. And now after 6 months of development, the [upcoming Godot 3.2.4](/article/release-candidate-godot-3-2-4-rc-4) is looking to be a huge feature release - still preserving backwards compatibility with 3.2.3, but the amount of new functionality is huge and not well-served by a "patch" version bump.
+Yet there's a number of new features which could be safely backported, and we accepted to merge a significant number of those in the `3.2` branch. We've actually released a quite [feature-packed Godot 3.2.2 update]({{% ref "article/maintenance-release-godot-3-2-2" %}}), blurring the line somewhat regarding what to expect of such 3.2.x releases. And now after 6 months of development, the [upcoming Godot 3.2.4]({{% ref "article/release-candidate-godot-3-2-4-rc-4" %}}) is looking to be a huge feature release - still preserving backwards compatibility with 3.2.3, but the amount of new functionality is huge and not well-served by a "patch" version bump.
 
 As such we decided to change our [**release policy**](https://docs.godotengine.org/en/latest/about/release_policy.html) for Godot 3.x, and to go back closer to a semantic versioning as we used to follow prior to 3.2.
 
@@ -26,6 +26,6 @@ Once it's released, we'll have two separate actively maintained branches for God
 
 All current users of Godot 3.2.x are strongly encouraged to upgrade to Godot 3.3 once it's released, as it's designed to be a fully compatible upgrade (since it was initially intended to be 3.2.4).
 
-Also note that this doesn't mean that we're reopening the feature development for Godot 3.3 - we were already at our [5th Release Candidate](/article/release-candidate-godot-3-2-4-rc-5) for 3.2.4, and the next build will be 3.3 RC 6. So aside from a few needed documentation updates, there shouldn't be significant delay to this upcoming release, nor changes compared to the latest RC.
+Also note that this doesn't mean that we're reopening the feature development for Godot 3.3 - we were already at our [5th Release Candidate]({{% ref "article/release-candidate-godot-3-2-4-rc-5" %}}) for 3.2.4, and the next build will be 3.3 RC 6. So aside from a few needed documentation updates, there shouldn't be significant delay to this upcoming release, nor changes compared to the latest RC.
 
 See our updated [**release policy**](https://docs.godotengine.org/en/latest/about/release_policy.html) for details.

@@ -9,7 +9,7 @@ image_caption_description: "An open source game by Securas"
 date: 2023-11-24 20:00:00
 ---
 
-Since our [first release candidate for Godot 4.2](/article/release-candidate-godot-4-2-rc-1/) a week ago, a number of regressions have been reported by new testers who were starting to use Godot 4.2 in production. So we've been busy this week triaging, testing, debugging, and fixing regressions to reach a point where we're confident that we're ready for the stable release.
+Since our [first release candidate for Godot 4.2]({{% ref "article/release-candidate-godot-4-2-rc-1" %}}) a week ago, a number of regressions have been reported by new testers who were starting to use Godot 4.2 in production. So we've been busy this week triaging, testing, debugging, and fixing regressions to reach a point where we're confident that we're ready for the stable release.
 
 That's where this second release candidate comes in, polished as much as we can and ready to be trialed on all your Godot 4.1 projects, hopefully as a smooth upgrade! If you notice anything off that's not already listed under the [known issues](#known-issues) below, please make sure to report it quickly so we can keep track of it in our release planning.
 
@@ -28,7 +28,7 @@ This release candidate includes a number of big changes that warrant particular 
 
 ## What's new
 
-For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1](/article/dev-snapshot-godot-4-2-beta-1/), which cover a lot of the changes. This blog post only covers the changes between RC 1 and RC 2.
+For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}), which cover a lot of the changes. This blog post only covers the changes between RC 1 and RC 2.
 
 **13 contributors** submitted **34 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-rc2), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes compared to 4.2-rc1:
 
@@ -96,4 +96,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

@@ -14,10 +14,10 @@ This new **RC 3** build fixes a couple recent regressions. It's now considered r
 
 Notably, Godot 3.2.2 is going to add 5 major features:
 
-- [C# support for the iOS platform](/article/csharp-ios-signals-events), courtesy of Ignacio ([neikeq](https://github.com/neikeq)).
-- [2D batching for the GLES2 renderer](/article/gles2-renderer-optimization-2d-batching), thanks to [lawnjelly](https://github.com/lawnjelly) and Clay ([clayjohn](https://github.com/clayjohn)).
+- [C# support for the iOS platform]({{% ref "article/csharp-ios-signals-events" %}}), courtesy of Ignacio ([neikeq](https://github.com/neikeq)).
+- [2D batching for the GLES2 renderer]({{% ref "article/gles2-renderer-optimization-2d-batching" %}}), thanks to [lawnjelly](https://github.com/lawnjelly) and Clay ([clayjohn](https://github.com/clayjohn)).
 - [Re-architecture of the Android plugin system](https://github.com/godotengine/godot/pull/36336), by Fredia ([m4gr3d](https://github.com/m4gr3d)).
-- [DTLS support and ENET integration](/article/enet-dtls-encryption), developed by Fabio ([Faless](https://github.com/Faless)).
+- [DTLS support and ENET integration]({{% ref "article/enet-dtls-encryption" %}}), developed by Fabio ([Faless](https://github.com/Faless)).
 - [Fix for the dangling Variant bug](https://github.com/godotengine/godot/pull/38119), kudos to Pedro ([RandomShaper](https://github.com/RandomShaper)).
   * While this is not a feature per se, it fixes a major annoyance that users have had with pointers to freed objects unexpectedly being re-assigned to new objects, causing hard-to-debug issues.
 
@@ -51,9 +51,9 @@ See [this Pull Request](https://github.com/godotengine/godot/pull/36336) and [th
 
 #### DTLS support and ENet integration
 
-[Fabio's work on DTLS support](/article/enet-dtls-encryption) was nearly done by the time 3.2 was released, but came too late to be thoroughly tested. Testing has happened since then both in the `master` branch and in the pending `3.2` Pull Request, so we're now confident to include it in this beta build for further testing.
+[Fabio's work on DTLS support]({{% ref "article/enet-dtls-encryption" %}}) was nearly done by the time 3.2 was released, but came too late to be thoroughly tested. Testing has happened since then both in the `master` branch and in the pending `3.2` Pull Request, so we're now confident to include it in this beta build for further testing.
 
-See the [dedicated devblog](/article/enet-dtls-encryption) for usage examples.
+See the [dedicated devblog]({{% ref "article/enet-dtls-encryption" %}}) for usage examples.
 
 #### Fix for the dangling Variant bug
 
@@ -147,7 +147,7 @@ Godot 3.2.2 RC 3 is built from commit [1468c0b4d4592406502c7e4eaa2121f1d0a7e5f6]
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [**Classical build**](https://downloads.tuxfamily.org/godotengine/3.2.2/rc3/) (GDScript, GDNative, VisualScript).
 - [**Mono build**](https://downloads.tuxfamily.org/godotengine/3.2.2/rc3/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/609/941/01d/60994101d3862403610937.jpg
 date: 2021-05-10 14:19:50
 ---
 
-We [released Godot 3.3 a couple of weeks ago](/article/godot-3-3-has-arrived), and feedback so far has been pretty good! But like with any major milestone, there are some bugs which are worth addressing with low-risk maintenance releases to further improve the experience for all Godot users.
+We [released Godot 3.3 a couple of weeks ago]({{% ref "article/godot-3-3-has-arrived" %}}), and feedback so far has been pretty good! But like with any major milestone, there are some bugs which are worth addressing with low-risk maintenance releases to further improve the experience for all Godot users.
 
 The upcoming Godot 3.3.1, [like all future 3.3.x releases](https://docs.godotengine.org/en/3.3/about/release_policy.html), focuses purely on bug fixes, and aims to preserve compatibility. This [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) should help us validate the fixes done so far, and ensure that the release is ready to publish. As there is no new feature and only bug fixes, this RC 1 should be as stable as 3.3-stable and can be used in production if you need one of the fixes it includes.
 
@@ -45,7 +45,7 @@ This release is built from commit [140cf0f2cb7b51d7866e63aba1aa6d8029cf540b](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Standard build](https://downloads.tuxfamily.org/godotengine/3.3.1/rc1/) (GDScript, GDNative, VisualScript).
   * Note: UWP export templates are missing from this build, will be re-added in the next build.
@@ -59,6 +59,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

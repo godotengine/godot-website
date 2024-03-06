@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/56d/dbf/0e0/56ddbf0e04286898440859.png
 date: 2016-03-07 00:00:00
 ---
 
-The [stable release of Godot 2.0](/article/godot-engine-reaches-2-0-stable) was nine months in the making and brought a great deal of new features and bug fixes alike. Some of our users had been testing the alpha and beta versions, but others had decided to stay on the stable 1.1 version and thus had to wait quite a long time for bug fixes.
+The [stable release of Godot 2.0]({{% ref "article/godot-engine-reaches-2-0-stable" %}}) was nine months in the making and brought a great deal of new features and bug fixes alike. Some of our users had been testing the alpha and beta versions, but others had decided to stay on the stable 1.1 version and thus had to wait quite a long time for bug fixes.
 
 We therefore decided two important things for our release cycle:
 
@@ -25,7 +25,7 @@ In the meantime, we plan to release bugfix versions of our latest stable release
 
 ### Godot 2.0.1
 
-And to get started with these maintenance releases, we announce the availability of [Godot 2.0.1](/download)! It contains some non-critical bug fixes and a few usability improvements, that should improve the overall experience of Godot 2.0 users.
+And to get started with these maintenance releases, we announce the availability of [Godot 2.0.1]({{% ref "download" %}})! It contains some non-critical bug fixes and a few usability improvements, that should improve the overall experience of Godot 2.0 users.
 
 The main fixes in this release are:
 
@@ -45,6 +45,6 @@ The main fixes in this release are:
 - Fixed transform localization event in mouse motion
 - Fixed closing a scene tab when it was not the current tab
 
-See the [full changelog](http://downloads.tuxfamily.org/godotengine/2.0.1/Godot_v2.0.1_stable_changelog.txt) for more details, and head towards the [Download page](/download) to get it!
+See the [full changelog](http://downloads.tuxfamily.org/godotengine/2.0.1/Godot_v2.0.1_stable_changelog.txt) for more details, and head towards the [Download page]({{% ref "download" %}}) to get it!
 
-For this release, we also used a new buildsystem to create and deploy the binaries, so please [contact us](/community) if you experience any regression relatively to 2.0 stable.
+For this release, we also used a new buildsystem to create and deploy the binaries, so please [contact us]({{% ref "community" %}}) if you experience any regression relatively to 2.0 stable.

@@ -35,6 +35,6 @@ New features include:
 
 Please remember that this new version is BETA, so this is your time to report everything that doesn’t work to GitHub as Issues, contribute PRs with fixes or annoy Juan and Ariel to fix what is not working for you.
 
-Godot 1.1 Beta1 can be obtained in the [Download](/download) section, or source cloned at [GitHub](https://github.com/godotengine/godot).
+Godot 1.1 Beta1 can be obtained in the [Download]({{% ref "download" %}}) section, or source cloned at [GitHub](https://github.com/godotengine/godot).
 
 Happy Testing!

@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5df/241/9c3/5df2419c346b5198207421.png
 date: 2019-12-12 13:37:33
 ---
 
-Every year Godot contributors and users meet at various conferences and events. The biggest one is usually the [GodotCon](/article/meet-community-fosdem-and-godotcon-2020) that takes place at the beginning of February in Brussels. During 6 days, there is a Godot development sprint, a Godot conference and finally FOSDEM, one of the biggest open source meetups in Europe. [See details and register if you want to join us!](/article/meet-community-fosdem-and-godotcon-2020)
+Every year Godot contributors and users meet at various conferences and events. The biggest one is usually the [GodotCon]({{% ref "article/meet-community-fosdem-and-godotcon-2020" %}}) that takes place at the beginning of February in Brussels. During 6 days, there is a Godot development sprint, a Godot conference and finally FOSDEM, one of the biggest open source meetups in Europe. [See details and register if you want to join us!]({{% ref "article/meet-community-fosdem-and-godotcon-2020" %}})
 
 To mark the occasion, we print a new T-shirt design each year. During GodotCon and at our stand in FOSDEM, we sell the T-shirts to raise some funds for the project. As February is approaching, it is time to choose this year's T-shirt design, and we decided to change things a bit this year. Instead of coming up with something among the core contributors, we want to make this a community effort.
 

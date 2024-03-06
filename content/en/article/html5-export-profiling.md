@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5e0/78b/00a/5e078b00a7171714583829.png
 date: 2019-12-28 15:09:29
 ---
 
-Hello Godotters, as part of my October work (sponsored, as always, by [Mozilla](https://godotengine.org/article/godot-engine-awarded-50000-mozilla-open-source-support-program)) I've been working on getting the script debugger and profiler to work with HTML5 exports. This, along with the ability to [run HTML5 exports in debug mode](https://godotengine.org/article/websocket-ssl-testing-html5-export), is a powerful new tool in the hand of Godot users who want to develop or port the game and applications to run inside the browser.
+Hello Godotters, as part of my October work (sponsored, as always, by [Mozilla]({{% ref "article/godot-engine-awarded-50000-mozilla-open-source-support-program" %}})) I've been working on getting the script debugger and profiler to work with HTML5 exports. This, along with the ability to [run HTML5 exports in debug mode]({{% ref "article/websocket-ssl-testing-html5-export" %}}), is a powerful new tool in the hand of Godot users who want to develop or port the game and applications to run inside the browser.
 
 The following section is a brief technical excursus on the internals of godot debugging and profiling. You can jump to the next section to see all the cool things that will be available for HTML5 debug exports.
 
@@ -22,7 +22,7 @@ This will likely change in the future, but in the meantime, I focused on extract
 
 First, two new interfaces where created: `ScriptDebuggerConnection` and `ScriptEditorDebuggerServer`. Their implemention, provides access to the low level network connection, without the need to know about serialization and messages. Both a `ScriptDebuggerTCP` and a `ScriptEditorDebuggerTCP` where created as default, and the websocket module now provides its own `ScriptDebuggerWebsocket` and `ScriptEditorDebuggerWebsocket` implementation.
 
-The Javascript platform, and javascript ["run native"](https://godotengine.org/article/websocket-ssl-testing-html5-export) will automatically select websocket for you.
+The Javascript platform, and javascript ["run native"]({{% ref "article/websocket-ssl-testing-html5-export" %}}) will automatically select websocket for you.
 
 Supported features
 ==================

@@ -15,7 +15,7 @@ That Godot has AR and VR support isn't widely known but there is a slowly growin
 
 ## GDC 2019
 
-GDC proved very interesting for us, see [Juan's status report](/article/status-godot-gdc-2019).
+GDC proved very interesting for us, see [Juan's status report]({{% ref "article/status-godot-gdc-2019" %}}).
 
 [Collabora](https://www.collabora.com) showed off their [Monado](https://www.collabora.com/news-and-blog/news-and-events/introducing-monado.html) [OpenXR](https://www.khronos.org/openxr) platform with a demo using an early OpenXR plugin for Godot made by the people behind [OpenHMD](http://www.openhmd.net).
 

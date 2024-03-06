@@ -9,7 +9,7 @@ date: 2016-12-31 00:00:00
 
 # Introduction
 
-It's been a month since the [second progress report](/article/godots-new-renderer-progress-report-2), and progress continues towards the new Godot renderer. This milestone was (and will likely be) the most difficult, due to the techniques that had to be implemented.
+It's been a month since the [second progress report]({{% ref "article/godots-new-renderer-progress-report-2" %}}), and progress continues towards the new Godot renderer. This milestone was (and will likely be) the most difficult, due to the techniques that had to be implemented.
 
 As a result, many of the goals for it were not met (will have to be moved to a new Milestone 4), but hopefully everything that remains is simpler.
 

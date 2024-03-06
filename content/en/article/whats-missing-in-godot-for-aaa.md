@@ -55,7 +55,7 @@ Do not be mistaken: A lot is still missing from Godot in order to be used comfor
 
 First of all, most of the new features still have significant bugs and performance problems that will not be solved in time for the upcoming 4.0 release (there is just too much new code that needs to be tested thoroughly).
 
-These problems will be fixed across the 4.x point releases (which we are now intending to do more often, allowing several releases per year). It may be an extra year or even two until everything feels as solid and fast as everyone expects. [See this article](https://godotengine.org/article/release-management-4-0-and-beyond) about our plans for 4.0 and beyond.
+These problems will be fixed across the 4.x point releases (which we are now intending to do more often, allowing several releases per year). It may be an extra year or even two until everything feels as solid and fast as everyone expects. [See this article]({{% ref "article/release-management-4-0-and-beyond" %}}) about our plans for 4.0 and beyond.
 
 But other than that, there are still some fundamental aspects missing in Godot. The following is an incomplete list of the most important ones:
 
@@ -127,7 +127,7 @@ Unless the support for this is solid, using Godot in large teams will remain dif
 
 While for very large studios this is not an area of interest, medium-sized studios still rely on significant amounts of assets and pre-made functionality. The Asset Library currently existing in Godot only links to open source resources (e.g. hosted on GitHub or GitLab) and is unable to be used for commercial assets.
 
-For the Godot project, a commercial asset store would be a great way to add an extra source of income, but it was not possible given our legal status until recently. With the move to the [Godot Foundation](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation), this is a new possibility that opens up.
+For the Godot project, a commercial asset store would be a great way to add an extra source of income, but it was not possible given our legal status until recently. With the move to the [Godot Foundation]({{% ref "article/godots-graduation-godot-moves-to-a-new-foundation" %}}), this is a new possibility that opens up.
 
 ## Is solving these problems enough for Godot to become a top AA / AAA game engine?
 
@@ -147,7 +147,7 @@ Some of these can be found as templates in Godot's Asset Library but are nowhere
 
 ### Visual scripting
 
-While Godot had visual scripting in the past, we found that the form we had implemented didn't really prove adequate for the needs of the community, so it was [discontinued](https://godotengine.org/article/godot-4-will-discontinue-visual-scripting).
+While Godot had visual scripting in the past, we found that the form we had implemented didn't really prove adequate for the needs of the community, so it was [discontinued]({{% ref "article/godot-4-will-discontinue-visual-scripting" %}}).
 
 What we realized is that visual scripting really shines when combined together with the premade behaviors mentioned in the previous section. Without a significant amount of high level behaviors available, visual scripting is cumbersome to use as it requires a lot of work to achieve simple things by itself.
 

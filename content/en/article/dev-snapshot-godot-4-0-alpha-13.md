@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/62e/2d8/d50/62e2d8d50baa2930461492.png
 date: 2022-07-28 18:43:35
 ---
 
-We just announced that we'll enter [*feature freeze* next week](https://godotengine.org/article/godot-4-0-development-enters-feature-freeze) to focus on stabilizing the existing functionality in Godot 4.0 and prepare the first beta release. But we're not there yet and we'll keep having frequent alpha builds until we're ready to slap the *beta* label on the engine. So here we go with **4.0 alpha 13**!
+We just announced that we'll enter [*feature freeze* next week]({{% ref "article/godot-4-0-development-enters-feature-freeze" %}}) to focus on stabilizing the existing functionality in Godot 4.0 and prepare the first beta release. But we're not there yet and we'll keep having frequent alpha builds until we're ready to slap the *beta* label on the engine. So here we go with **4.0 alpha 13**!
 
 **Update 2022-07-29 @ 10:30 UTC:** A regression was found in the original build that prevented exporting projects to Windows and Linux with official templates. All editor builds for this alpha have been [updated with a hotfix](https://github.com/godotengine/godot/pull/63614). If you downloaded alpha 13 before this update, you can re-download the editor build for your platform. Export templates are unimpacted so you don't need to update them.
 
@@ -34,7 +34,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 13 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 13 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/2c11e6d9efc42370a8d7537eaff8b1ea78a283e5...82811367cb36d3124d4e8c0a9c4c7f82dc64f9e4) for an overview of all changes since 4.0 alpha 12 (204 commits – excluding merge commits ― from 66 contributors).
 

@@ -9,7 +9,7 @@ image_caption_description: "A plugin by CookieBadger"
 date: 2023-09-05 16:00:00
 ---
 
-We're making great progress in the development branch for Godot 4.2! The faster paced release cycle we started following after the 4.0 release seems to be working well, with pull requests being opened, reviewed, and merged at a steady rate. This fourth dev snapshot contains nearly 250 PRs merged in a little over 3 weeks since the [dev 3 snapshot](/article/dev-snapshot-godot-4-2-dev-3/).
+We're making great progress in the development branch for Godot 4.2! The faster paced release cycle we started following after the 4.0 release seems to be working well, with pull requests being opened, reviewed, and merged at a steady rate. This fourth dev snapshot contains nearly 250 PRs merged in a little over 3 weeks since the [dev 3 snapshot]({{% ref "article/dev-snapshot-godot-4-2-dev-3" %}}).
 
 The overall state of the `master` branch seems pretty good and on track for reaching the beta stage at the start of October, and stable in early November 2023.
 
@@ -20,7 +20,7 @@ This snapshot brings a lot of goodies! Here are some of the highlights, with a b
 - A number of rendering bugfixes and improvements were merged for this snapshot, including:
   * Motion vectors for skeletons/blend shapes and particles ([GH-80618](https://github.com/godotengine/godot/pull/80618) and [GH-80688](https://github.com/godotengine/godot/pull/80688)). This is the last bit of work necessary before we implement AMD's FSR 2.2 into Godot. On that note, there is already a PR for FSR 2.2 support ([GH-81197](https://github.com/godotengine/godot/pull/81197)), so please test it out and give us your feedback.
   * Fixing a crash caused by having more than 204 Lights/Decals/ReflectionProbes in a scene at once ([GH-80845](https://github.com/godotengine/godot/pull/80845)). This bug stopped users from fully flexing the strength of the Forward+ renderer as it limited users to a combined 204 OmniLight3Ds/SpotLight3Ds/Decals/ReflectionProbes (by default). Now users are free to use up to 512 of each in the default configuration (this limit can be increased).
-  * Additionally, rendering contributors have been busy removing barriers and preparing to implement more items from the list of [rendering priorities](https://godotengine.org/article/rendering-priorities-july-2023).
+  * Additionally, rendering contributors have been busy removing barriers and preparing to implement more items from the list of [rendering priorities]({{% ref "article/rendering-priorities-july-2023" %}}).
 
 - A solution was finally merged ([GH-80859](https://github.com/godotengine/godot/pull/80859)) for an infamous input bug affecting the typical input action combinations used for character movement (e.g. WASD + D-Pad). We're expecting potential regressions (and already found one, with a pending fix as [GH-81170](https://github.com/godotengine/godot/pull/81170)), so please test it thoroughly and report any issue.
 
@@ -197,4 +197,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

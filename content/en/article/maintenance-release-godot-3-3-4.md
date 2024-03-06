@@ -9,15 +9,15 @@ image_caption_description: A game by ambai and kogeume
 date: 2021-10-01 13:38:29
 ---
 
-While we're busy working on both the upcoming Godot 4.0 and 3.4 releases (with a dev snapshot for [3.4 beta 5](/article/dev-snapshot-godot-3-4-beta-5) available now), we still cherry-pick important bug fixes to the 3.3 branch regularly for maintenance releases (see our [release policy](https://docs.godotengine.org/en/3.3/about/release_policy.html)).
+While we're busy working on both the upcoming Godot 4.0 and 3.4 releases (with a dev snapshot for [3.4 beta 5]({{% ref "article/dev-snapshot-godot-3-4-beta-5" %}}) available now), we still cherry-pick important bug fixes to the 3.3 branch regularly for maintenance releases (see our [release policy](https://docs.godotengine.org/en/3.3/about/release_policy.html)).
 
-[Godot 3.3.3](/article/maintenance-release-godot-3-3-3) was released a month ago, and a handful of important fixes have been queued in the [`3.3` branch](https://github.com/godotengine/godot/tree/3.3) since then. Most notably, users of the GDScript LSP in Visual Studio Code have been experiencing crashes in 3.3.3, which are fixed in this new **Godot 3.3.4**.
+[Godot 3.3.3]({{% ref "article/maintenance-release-godot-3-3-3" %}}) was released a month ago, and a handful of important fixes have been queued in the [`3.3` branch](https://github.com/godotengine/godot/tree/3.3) since then. Most notably, users of the GDScript LSP in Visual Studio Code have been experiencing crashes in 3.3.3, which are fixed in this new **Godot 3.3.4**.
 
 **Note:** Version numbers can be confusing with three branches worked on in parallel - this release is **3.3.4**, i.e. a maintenance update to the 3.3 branch. This is not the upcoming *3.4* feature release.
 
 Godot 3.3.4, [like all future 3.3.x releases](https://docs.godotengine.org/en/3.3/about/release_policy.html), focuses purely on bug fixes, and aims to preserve compatibility. It is a recommended upgrade for all Godot 3.3 users.
 
-[**Download Godot 3.3.4 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.3.4.stable/).
+[**Download Godot 3.3.4 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.3.4.stable/).
 
 ## Changes
 
@@ -57,9 +57,9 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ---
 

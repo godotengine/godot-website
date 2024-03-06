@@ -15,7 +15,7 @@ We designed a work package for VR and mobile rendering which we are now able to 
 
 ## VR support in Godot
 
-Godot has had initial VR support since [version 3.0 in 2018](https://godotengine.org/article/godot-3-0-released#vr), thanks to the dedication of our contributor [Bastiaan Olij](https://github.com/BastiaanOlij) who implemented all AR and VR features in the engine. As of Godot 3.2, many VR devices are supported through the official [OpenVR](https://godotengine.org/asset-library/asset/150), [Oculus VR](https://godotengine.org/asset-library/asset/164) and [Oculus Mobile VR](https://godotengine.org/asset-library/asset/500) implementations. A vibrant community of VR developers is now actively working with Godot on VR titles for most platforms.
+Godot has had initial VR support since [version 3.0 in 2018]({{% ref "article/godot-3-0-released" %}}#vr), thanks to the dedication of our contributor [Bastiaan Olij](https://github.com/BastiaanOlij) who implemented all AR and VR features in the engine. As of Godot 3.2, many VR devices are supported through the official [OpenVR](https://godotengine.org/asset-library/asset/150), [Oculus VR](https://godotengine.org/asset-library/asset/164) and [Oculus Mobile VR](https://godotengine.org/asset-library/asset/500) implementations. A vibrant community of VR developers is now actively working with Godot on VR titles for most platforms.
 
 ## VR work package for 2021
 

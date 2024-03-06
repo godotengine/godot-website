@@ -9,7 +9,7 @@ date: 2018-08-31 07:16:09
 
 Long awaited, Godot **3.1 alpha 1** is our first milestone towards the stable release of Godot 3.1, packed with 7 months of development since Godot 3.0 (over 3,500 commits!).
 
-Contrarily to our [3.0.x maintenance releases](/article/maintenance-release-godot-3-0-6), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs](/devblog).
+Contrarily to our [3.0.x maintenance releases]({{% ref "article/maintenance-release-godot-3-0-6" %}}), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs]({{% ref "blog" %}}).
 
 The *alpha* stage corresponds for us to a *feature freeze*, as [announced on GitHub](https://github.com/godotengine/godot/issues/21490) a few days ago, which means that we will no longer consider pull requests with new features for merge in the *master* branch, and that until Godot 3.1 is released. This way, we can focus on what we already have, finish and polish the major features which are still in progress (e.g. OpenGL ES 2.0 support), and fix many of the old and new bugs reported by the community.
 
@@ -23,19 +23,19 @@ There is still a long way of bug fixing and usability improvement until we can r
 
 There is also no guarantee that projects started with the alpha 1 build will still work in alpha 2 or later builds, as we reserve the right to do necessary breaking adjustments up to the *beta* stage (albeit compatibility breaking changes at this stage should be very minimal, if any).
 
-**Note:** New Godot users should *not* use this build to start their learning. [Godot 3.0.x](/download) is our current stable branch and still received frequent updates.
+**Note:** New Godot users should *not* use this build to start their learning. [Godot 3.0.x]({{% ref "download" %}}) is our current stable branch and still received frequent updates.
 
 ## The features
 
 Release notes are not written yet, but you can refer to the [detailed changelog](https://gist.github.com/Calinou/49aefe52ce8f67ffa3f743932123d14f) that our contributor [Hugo Locurcio](https://github.com/Calinou) is working on.
 
-As mentioned previously, [our past devblogs](/devblog) should also give you an idea of the main highlights of the upcoming release.
+As mentioned previously, [our past devblogs]({{% ref "blog" %}}) should also give you an idea of the main highlights of the upcoming release.
 
 Documentation writers are hard at work to catch up with the new features, and the [*latest* branch](http://docs.godotengine.org/en/latest/) should already include details on many of the new 3.1 features.
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical](https://downloads.tuxfamily.org/godotengine/3.1/alpha1)
 - [Mono (*alpha* C# support)](https://downloads.tuxfamily.org/godotengine/3.1/alpha1/mono) - you need Mono SDK **5.12.0** for this alpha

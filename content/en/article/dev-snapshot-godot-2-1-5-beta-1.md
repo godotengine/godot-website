@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5a8/af9/b4c/5a8af9b4c4f7e372924442.png
 date: 2018-02-19 16:34:00
 ---
 
-Godot 3.0 was [released a few weeks ago](/article/godot-3-0-released), and the feedback we are getting so far is incredible. The new version is of course not perfect, but for a major compatibility breaking release with over 18 months of development, it seems to be pretty usable and satisfactory for most users.
+Godot 3.0 was [released a few weeks ago]({{% ref "article/godot-3-0-released" %}}), and the feedback we are getting so far is incredible. The new version is of course not perfect, but for a major compatibility breaking release with over 18 months of development, it seems to be pretty usable and satisfactory for most users.
 
 Still, we still have many users who depend on the previous stable branch, 2.1, for various reasons:
 

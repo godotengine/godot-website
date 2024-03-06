@@ -12,7 +12,7 @@ I'm Gordon MacPherson ([RevoluPowered](https://github.com/RevoluPowered)), a C++
 
 ## First importer in 3.2, now rewritten
 
-The first version of our FBX importer was [added in Godot 3.2](https://godotengine.org/article/here-comes-godot-3-2#3d-assets), and relied on the Open Asset Importer library ([Assimp](https://github.com/assimp/assimp/)). A lot of work was done at that time directly in the upstream Assimp project to improve the FBX support, but we hit roadblocks with the compatibility with Maya's FBX exports. Maya is one of the most used 3D assets creation tools in the game industry, and IMVU needed good support for its FBX files.
+The first version of our FBX importer was [added in Godot 3.2]({{% ref "article/here-comes-godot-3-2" %}}#3d-assets), and relied on the Open Asset Importer library ([Assimp](https://github.com/assimp/assimp/)). A lot of work was done at that time directly in the upstream Assimp project to improve the FBX support, but we hit roadblocks with the compatibility with Maya's FBX exports. Maya is one of the most used 3D assets creation tools in the game industry, and IMVU needed good support for its FBX files.
 
 Due to these roadblocks, we decided to rewrite the importer fully and tailor it to Godot, instead of trying to keep things generic as done in Assimp - Assimp can importer dozens of file formats, which is great, but imposes many restrictions on the support of individual complex formats like FBX, especially for animations. In the game industry, a lot of people assume that FBX works with traditional animation algorithms but we found that it is simply not the case. FBX has its own standard for handling animations which has not been fully reverse engineered correctly by *any* open source importer/exporter, so we had to start from scratch and only keep the FBX file parser from Assimp.
 
@@ -30,7 +30,7 @@ This complete rewrite has now been merged in the `3.2` branch with [GH-42941](ht
 
 ## So, for the uninitiated, what is FBX?
 
-FBX is the industry-standard 3D asset exchange file format for games. It is developed by Autodesk as a proprietary format and thus not a great philosophical match for Godot, but given its widespread use, we want to support it nevertheless. We're also [hyped about and support glTF 2.0](/article/we-should-all-use-gltf-20-export-3d-assets-game-engines), which is the open source new kid on the block, and thus brilliant for our engine (and especially the Blender pipeline). But a caveat of glTF 2.0 is that it's not officially supported by Autodesk software, which many use for content creation in the game industry.
+FBX is the industry-standard 3D asset exchange file format for games. It is developed by Autodesk as a proprietary format and thus not a great philosophical match for Godot, but given its widespread use, we want to support it nevertheless. We're also [hyped about and support glTF 2.0]({{% ref "article/we-should-all-use-gltf-20-export-3d-assets-game-engines" %}}), which is the open source new kid on the block, and thus brilliant for our engine (and especially the Blender pipeline). But a caveat of glTF 2.0 is that it's not officially supported by Autodesk software, which many use for content creation in the game industry.
 
 **FBX has been through 24 years of usage in the game industry.** With its [first revision being back in 1996](
 https://en.wikipedia.org/wiki/FBX), this means it's super well tested and pretty much available everywhere by default.

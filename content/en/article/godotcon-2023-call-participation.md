@@ -8,15 +8,15 @@ image_caption_description: Image by Raffaele Picca
 date: 2023-08-10 17:00:00
 ---
 
-We are organizing the annual Godot Conference that will happen [live in Munich](/article/godotcon-2023/) on November 4th and 5th 2023 for the 
-first time since [our last conference in 2020](/article/meet-community-fosdem-and-godotcon-2020/). We are really thrilled to meet fellow Godot users and developers again and to share experiences during the two days of the event.
+We are organizing the annual Godot Conference that will happen [live in Munich]({{% ref "article/godotcon-2023" %}}) on November 4th and 5th 2023 for the
+first time since [our last conference in 2020]({{% ref "article/meet-community-fosdem-and-godotcon-2020" %}}). We are really thrilled to meet fellow Godot users and developers again and to share experiences during the two days of the event.
 
 ## Call for speakers & workshop
 
-We would like to include all kinds of presentations during the event, and we need you for this! If you are interested in 
+We would like to include all kinds of presentations during the event, and we need you for this! If you are interested in
 sharing your project or experience that could interest Godot users, feel free to propose a dedicated talk or workshop on [our dedicated platform](https://events.godotengine.org/conferences/godotcon2023/program/proposals/new).
 
-We are opening 2 tracks: 
+We are opening 2 tracks:
 
 * Main track
 * Workshops
@@ -61,13 +61,13 @@ A great event cannot happen without great staff to help us manage some tasks dur
 * Meet 2 Match Host
 
 But we are not limited to these roles! If you think you can contribute, please do reach out.
-  
+
 We understand volunteers may be interested in participating in the event as well. Therefore, volunteer duties will not last all event long - unless you expressively tell us so.
 
 If you are interested in one of the above roles, please send us an email at [godotcon@proton.me](mailto:godotcon@proton.me?subject=Volunteering Inquiry) or join the [GodotCon 2023 Discord server](https://discord.gg/Qrj28UMQPj).
 
 
-# Sponsoring 
+# Sponsoring
 
 To enable an event for about 300 participants and to keep ticket prices low, we have to gather some external funds, mainly for the venue, security, catering, documentation, swag, speaker support, etc. Therefore we are still looking for new sponsors to help us make it happen.
 

@@ -1,6 +1,6 @@
 ---
 title: "Godot's new renderer, progress report #2"
-excerpt: "It's been a month since the first [progress report](https://godotengine.org/article/godots-new-renderer-progress-report-1), and progress continues towards the new Godot renderer. Little by little every system falls into place, and rendering starts feeling a lot more mature."
+excerpt: "It's been a month since the first [progress report](article/godots-new-renderer-progress-report-1), and progress continues towards the new Godot renderer. Little by little every system falls into place, and rendering starts feeling a lot more mature."
 categories: ["progress-report"]
 author: Juan Linietsky
 image: /storage/app/uploads/public/584/4da/2c0/5844da2c08826494171869.png
@@ -9,7 +9,7 @@ date: 2016-12-04 01:00:00
 
 # Introduction
 
-It's been a month since the first [progress report](/article/godots-new-renderer-progress-report-1), and progress continues towards the new Godot renderer. Little by little every system falls into place, and rendering starts feeling a lot more mature.
+It's been a month since the first [progress report]({{% ref "article/godots-new-renderer-progress-report-1" %}}), and progress continues towards the new Godot renderer. Little by little every system falls into place, and rendering starts feeling a lot more mature.
 
 That said, there is still a lot missing. Unfortunately, some tasks initially planned for Milestone #2 could not be completed yet, so they will be pushed to the next milestone.
 

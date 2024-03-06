@@ -9,13 +9,13 @@ image_caption_description: A game by yofrancisco
 date: 2023-11-02 11:00:00
 ---
 
-After about a week of testing, Godot 4.1.3 is ready for production use. As Godot 4.2 [is being finalized](/article/dev-snapshot-godot-4-2-beta-4) we stay committed to providing support for users remaining on the current stable version of the engine. Our architecture and approach to release management allow us to easily pick many bugfixes and smaller improvements from the upcoming release and apply them to previous releases without compromising their stability.
+After about a week of testing, Godot 4.1.3 is ready for production use. As Godot 4.2 [is being finalized]({{% ref "article/dev-snapshot-godot-4-2-beta-4" %}}) we stay committed to providing support for users remaining on the current stable version of the engine. Our architecture and approach to release management allow us to easily pick many bugfixes and smaller improvements from the upcoming release and apply them to previous releases without compromising their stability.
 
 The third maintenance release for Godot 4.1 contains a number of fixes for the rendering system, addressing issues across all rendering backends, in lightmap and voxel global illumination systems, and in GPU particles. Various problems were resolved in the editor UI, and in the engine's GUI system in general. The Input team improved controller support and solved a couple of issues specific to the Android platform. An important fix was also added to improve support for Android 14, as well as fixes for various bugs on other target platforms.
 
 Finally, several documentation mistakes have been corrected, plus there is new documentation available for the `RenderingDevice` class.
 
-[**Download Godot 4.1.3 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.3.stable/).
+[**Download Godot 4.1.3 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.3.stable/).
 
 {{< articles/download-card version="4.1.3" release="stable" >}}
 
@@ -116,4 +116,4 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

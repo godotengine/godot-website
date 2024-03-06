@@ -9,7 +9,7 @@ date: 2018-11-07 14:54:00
 
 Winter is coming upon those of us in Europe, and it's time to plan our biggest yearly community meetup again, **GodotCon Brussels**!
 
-Like the [past](/article/meet-us-fosdem-2017-and-godotcon) [two](/article/get-ready-fosdem-and-godotcon-2018) years, we will attend [**FOSDEM 2019**](https://fosdem.org/2019) in Brussels, Belgium (**Sat 2 & Sun 3 February 2019**). And like the past two years, we'll hold our own **Godot Conference** (GodotCon) event right after (**Mon 4 & Tue 5 February**), so that you can plan to attend both events and get your fill of <abbr title="Free and Open Source Software">FOSS</abbr> and Godot.
+Like the [past]({{% ref "article/meet-us-fosdem-2017-and-godotcon" %}}) [two]({{% ref "article/get-ready-fosdem-and-godotcon-2018" %}}) years, we will attend [**FOSDEM 2019**](https://fosdem.org/2019) in Brussels, Belgium (**Sat 2 & Sun 3 February 2019**). And like the past two years, we'll hold our own **Godot Conference** (GodotCon) event right after (**Mon 4 & Tue 5 February**), so that you can plan to attend both events and get your fill of <abbr title="Free and Open Source Software">FOSS</abbr> and Godot.
 
 And on top of that, we're also going to meet *before* FOSDEM (**Thu 31 January & Fri 1 February**) with engine and documentation contributors for our first **Godot Sprint**: since both FOSDEM and GodotCon are always quite hectic, we want to take our time with existing and aspiring contributors to actually get some work done. The sprint will be focused on discussing features and important bug reports with core devs, reviewing Pull Requests, discussing the roadmap for the next versions, writing documentation, etc.
 
@@ -17,7 +17,7 @@ Our lead developer Juan "reduz" Linietsky will be flying over from Buenos Aires 
 
 ## Where do I sign up?
 
-[All three events](/events) are free of charge for everyone, and for the FOSDEM you do not even need to register: just show up and say hi at the Godot stand!
+[All three events]({{% ref "events" %}}) are free of charge for everyone, and for the FOSDEM you do not even need to register: just show up and say hi at the Godot stand!
 
 For the Godot Sprint and GodotCon however, **registration is mandatory** as we need to know how many persons will be there to find appropriate venues in Brussels. To help us with the organization, we ask that you [register as soon as possible](https://framaforms.org/registration-for-godotcon-godot-sprint-brussels-2019-1541594499).
 
@@ -34,7 +34,7 @@ There *might* be Godot-related talks, but we are still waiting for a confirmatio
 
 The FOSDEM is a great opportunity to discover new projects from top-notch free software contributors. It will also be the occasion to meet other Godot users and contributors, at our stand or around a few Belgian beers :)
 
-**Practical infos** (location, schedule, etc.): See [FOSDEM.org](https://fosdem.org) and our [Events](/events) page.
+**Practical infos** (location, schedule, etc.): See [FOSDEM.org](https://fosdem.org) and our [Events]({{% ref "events" %}}) page.
 
 ## GodotCon Brussels 2019
 
@@ -48,7 +48,7 @@ The exact venue is still to be determined, as soon as we have a good overview ab
 
 *Edit:* The venue will be <a href="http://www.ludus-academie.com">Ludus Académie</a>, Quai du Commerce 48, Brussels.
 
-**Practical infos:** See our [Events](/events) page.
+**Practical infos:** See our [Events]({{% ref "events" %}}) page.
 
 ## Godot Sprint
 
@@ -60,6 +60,6 @@ The venue is still to be determined. Depending on our numbers it might be the sa
 
 *Edit:* The venue will be <a href="http://www.ludus-academie.com">Ludus Académie</a>, Quai du Commerce 48, Brussels.
 
-**Practical infos:** See our [Events](/events) page.
+**Practical infos:** See our [Events]({{% ref "events" %}}) page.
 
 Looking forward to meeting some of you in Brussels!

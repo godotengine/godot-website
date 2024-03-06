@@ -9,7 +9,7 @@ image: /storage/app/uploads/public/5a2/add/15e/5a2add15ea3c5631753661.png
 date: 2017-12-08 19:02:08
 ---
 
-Since our [Godot 3.0 beta 1](/article/dev-snapshot-godot-3-0-beta-1) release last week, there have been [more than 70 bugs fixed](https://github.com/godotengine/godot/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+closed%3A2017-11-29..2017-12-08+-label%3Aarchived) and over 100 bug reports created!
+Since our [Godot 3.0 beta 1]({{% ref "article/dev-snapshot-godot-3-0-beta-1" %}}) release last week, there have been [more than 70 bugs fixed](https://github.com/godotengine/godot/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+closed%3A2017-11-29..2017-12-08+-label%3Aarchived) and over 100 bug reports created!
 
 Both testers and developers are doing a great job, but we need to go ever faster to get Godot 3.0 out as soon as possible - especially now that the *master* branch is in feature freeze, meaning that new features will have to wait for Godot 3.1 to be merged.
 

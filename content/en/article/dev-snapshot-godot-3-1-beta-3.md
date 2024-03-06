@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5c4/b93/a45/5c4b93a45047f384045358.png
 date: 2019-01-27 00:00:00
 ---
 
-We've been hard at work fixing bugs since the Godot [3.1 beta 2](/article/dev-snapshot-godot-3-1-beta-2) last week, and our new **beta 3** snapshot is a lot closer to what we want the final 3.1 to be like.
+We've been hard at work fixing bugs since the Godot [3.1 beta 2]({{% ref "article/dev-snapshot-godot-3-1-beta-2" %}}) last week, and our new **beta 3** snapshot is a lot closer to what we want the final 3.1 to be like.
 
 There were over 600 bugs listed for the 3.1 milestone at the start of the month, but we've been reviewed them tirelessly over the last few weeks, and many of them have been fixed, or postponed to the next milestone when they were not critical. The GLES2 backend is getting more and more mature, especially for the web and mobile platforms where severe issues have been fixed.
 
@@ -15,7 +15,7 @@ If all goes well, we may have a first release candidate next week :)
 
 See the changes between [3.1 beta 2 and 3.1 beta 3](https://github.com/godotengine/godot/compare/1efd37f1b77d71c652fe28a50f42c5284d5ef4ec...a8510331c0115eeee2d6ac0a4acbeb5d4df833b3). This beta is built from commit [a851033](https://github.com/godotengine/godot/commit/a8510331c0115eeee2d6ac0a4acbeb5d4df833b3).
 
-Contrarily to our [3.0.x maintenance releases](/article/maintenance-release-godot-3-0-6), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs](/devblog). It's been almost a year since the 3.0 release and over 6,000 commits, so expect a lot of nice things in the final 3.1 version!
+Contrarily to our [3.0.x maintenance releases]({{% ref "article/maintenance-release-godot-3-0-6" %}}), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs]({{% ref "blog" %}}). It's been almost a year since the 3.0 release and over 6,000 commits, so expect a lot of nice things in the final 3.1 version!
 
 ## Disclaimer
 
@@ -26,13 +26,13 @@ There will still be many fixes made before the final release, and we will need y
 ## The features
 
 Release notes are drafted already, but we don't want to spoil the surprise of the 3.1 release announcement ;)
-In the meantime, you can refer to the [detailed changelog](https://gist.github.com/Calinou/49aefe52ce8f67ffa3f743932123d14f) that our contributor [Hugo Locurcio](https://github.com/Calinou) is maintaining, as well as [past devblogs](/devblog).
+In the meantime, you can refer to the [detailed changelog](https://gist.github.com/Calinou/49aefe52ce8f67ffa3f743932123d14f) that our contributor [Hugo Locurcio](https://github.com/Calinou) is maintaining, as well as [past devblogs]({{% ref "blog" %}}).
 
 Documentation writers are hard at work to catch up with the new features, and the [*latest* branch](http://docs.godotengine.org/en/latest/) should already include details on many of the new 3.1 features. Juan added several tutorials on new 3.1 features this month ([2D meshes](http://docs.godotengine.org/en/latest/tutorials/2d/2d_meshes.html), [2D skeletons](http://docs.godotengine.org/en/latest/tutorials/animation/2d_skeletons.html) and [AnimationTree](http://docs.godotengine.org/en/latest/tutorials/animation/animation_tree.html) docs).
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
+The download links are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.1/beta3) (GDScript, GDNative, VisualScript)
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.1/beta3/mono) (C# support + all the above). You need to have Nuget and MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version; it comes bundled with Mono 5.18.

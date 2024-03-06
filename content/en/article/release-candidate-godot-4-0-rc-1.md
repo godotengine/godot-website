@@ -11,7 +11,7 @@ date: 2023-02-08 13:00:00
 
 This has been a long road, but the exciting times are upon us! Thanks to our excellent contributors and our brave volunteer beta testers we are reaching the biggest milestone in the history of Godot so far. We are about to release Godot 4.0 stable. We are very proud of how it has shaped up, the features and enhancements that have been implemented, and most of all, we are proud to have collected such a brilliant team of talented individuals who have carried this major release on their wide and mighty shoulders.
 
-But before we can cut the ribbon and break out the champagne, there are still a few preview releases we must go through, to establish, with your help, that we are truly ready. What you can expect from the next couple of weeks is the same cadence of official builds, aiming to minimize the iteration time between fixing bugs and checking for regressions. We will no longer make any breaking changes or include further enhancements. New features will have to [wait for Godot 4.1 later this year](/article/release-management-4-0-and-beyond). Instead, we will be coming down on the last critical issues we want to be resolved before we ship the first stable release of Godot 4.
+But before we can cut the ribbon and break out the champagne, there are still a few preview releases we must go through, to establish, with your help, that we are truly ready. What you can expect from the next couple of weeks is the same cadence of official builds, aiming to minimize the iteration time between fixing bugs and checking for regressions. We will no longer make any breaking changes or include further enhancements. New features will have to [wait for Godot 4.1 later this year]({{% ref "article/release-management-4-0-and-beyond" %}}). Instead, we will be coming down on the last critical issues we want to be resolved before we ship the first stable release of Godot 4.
 
 There certainly will be remaining bugs, and your experience won't be as frictionless as it is in the current stable version of Godot 3. It will take time to get to the same level of polish, but hopefully less time than before, thanks to our extended team of developers, and also new members learning about Godot only now and sharing their valuable feedback.
 
@@ -19,7 +19,7 @@ We are committed to evolving the engine further, and hope to see more of your am
 
 ## Highlights
 
-As we keep iterating from previous beta releases, these release notes are focused on the most recent changes (since beta 17). If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1](/article/dev-snapshot-godot-4-0-beta-1). Stay tuned for more articles about new features as we get closer to the stable version.
+As we keep iterating from previous beta releases, these release notes are focused on the most recent changes (since beta 17). If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). Stay tuned for more articles about new features as we get closer to the stable version.
 
 This release candidate includes some big changes which may interest a lot of users:
 

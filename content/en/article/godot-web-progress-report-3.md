@@ -9,7 +9,7 @@ date: 2020-10-27 21:30:00
 
 Howdy Godotters! It's-a me! Fabio! It is time for an update on the Godot export for the Web.
 
-In the last few months, a lot has been going on regarding the Godot export for the Web. Most of the enhancements mentioned in the [previous report](/article/godot-web-progress-report-2) have now been merged into the `master` branch, and backported to `3.2` (included in [3.2.4 beta 1](/article/dev-snapshot-godot-3-2-4-beta-1)).
+In the last few months, a lot has been going on regarding the Godot export for the Web. Most of the enhancements mentioned in the [previous report]({{% ref "article/godot-web-progress-report-2" %}}) have now been merged into the `master` branch, and backported to `3.2` (included in [3.2.4 beta 1]({{% ref "article/dev-snapshot-godot-3-2-4-beta-1" %}})).
 
 This sadly does not yet include the virtual keyboard support, since implementing it without impacting the experience on touchscreen-enabled devices that also have a physical keyboard has proven harder than expected.
 
@@ -25,7 +25,7 @@ Change includes a lot of stability and usability improvements, the ability to do
 
 ![webtools.png](/storage/app/uploads/public/5f9/883/f4c/5f9883f4cbca6695990935.png)
 
-All this work, as mentioned in the [initial report](/article/godot-editor-running-web-browser), also resulted in various improvements to games exported for the Web including a much more reliable user file system for saving persistent game data on the end user browser (`user://`) and more work on audio processing.
+All this work, as mentioned in the [initial report]({{% ref "article/godot-editor-running-web-browser" %}}), also resulted in various improvements to games exported for the Web including a much more reliable user file system for saving persistent game data on the end user browser (`user://`) and more work on audio processing.
 
 # Getting closer to GDNative support on the Web
 

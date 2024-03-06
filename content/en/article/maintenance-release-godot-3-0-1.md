@@ -9,9 +9,9 @@ image: /storage/app/uploads/public/5a9/2f7/557/5a92f75575e65533435326.jpg
 date: 2018-02-25 20:59:56
 ---
 
-Since we haven't found any major issues in [our release candidate](/article/dev-snapshot-godot-3-0-1-rc1), we are now releasing Godot 3.0.1! The only regression reported was a renaming issue on Windows which we fixed.
+Since we haven't found any major issues in [our release candidate]({{% ref "article/dev-snapshot-godot-3-0-1-rc1" %}}), we are now releasing Godot 3.0.1! The only regression reported was a renaming issue on Windows which we fixed.
 
-If you were eagerly waiting for 3.0.1, you can go directly to our [Download](/download) page and get the benefits of all the fixes! Both the [itch.io](https://godotengine.itch.io/godot) and [Steam](https://store.steampowered.com/app/404790) distributions are updated.
+If you were eagerly waiting for 3.0.1, you can go directly to our [Download]({{% ref "download" %}}) page and get the benefits of all the fixes! Both the [itch.io](https://godotengine.itch.io/godot) and [Steam](https://store.steampowered.com/app/404790) distributions are updated.
 
 We have added many new features to the editor (and several to GDScript) in this release which we think will make your use of Godot even better. We've also fixed several nagging issues and generally put together a really nice update for our users of the stable branch. Please note that this is not the much-expected 3.1 release, so OpenGL ES 2.0 is not yet supported. Adding GLES2 support will necessitate some breakage for existing projects, so we will not merge that in this series of stable releases.
 
@@ -78,7 +78,7 @@ To make things clear as many users seem confused about it, we currently support 
 
 That means that our next releases will be (not in a chronological order):
 
-- 2.1.5: We released a [Beta 1 build](/article/dev-snapshot-godot-2-1-5-beta-1) a week ago. A Beta 2 build will come in the following days to address the main shortcomings reported in the first beta. The 2.1 branch will be supported until the 3.1 release, so at least a few months more, and afterwards with security fixes for games in production.
+- 2.1.5: We released a [Beta 1 build]({{% ref "article/dev-snapshot-godot-2-1-5-beta-1" %}}) a week ago. A Beta 2 build will come in the following days to address the main shortcomings reported in the first beta. The 2.1 branch will be supported until the 3.1 release, so at least a few months more, and afterwards with security fixes for games in production.
 - 3.0.2: More backward-compatible bug fixes and enhancements to the current stable branch. C# support is still in alpha so backward-incompatible improvements are still allowed in this branch (and will happen).
 - 3.1: As soon as the OpenGL ES 2.0 renderer is finalized, we will work on stabilizing the new features and release 3.1-stable.
 

@@ -42,7 +42,7 @@ Please send your proposals to godotcon *at* godotengine *·* org with the follow
 
 Don't overthink the above too much, we'd prefer to know ASAP who may give a talk, and we can fill in more details later on.
 
-For inspiration, feel free to review the schedules of past events for a glimpse at the kind of activities that we usually have ([Brussels 2019](/article/schedule-godotcon-2019-brussels), [Poznań 2019](/article/schedule-godotcon-2019-poznan), [Brussels 2020](/article/schedule-godotcon-2020-brussels)).
+For inspiration, feel free to review the schedules of past events for a glimpse at the kind of activities that we usually have ([Brussels 2019]({{% ref "article/schedule-godotcon-2019-brussels" %}}), [Poznań 2019]({{% ref "article/schedule-godotcon-2019-poznan" %}}), [Brussels 2020]({{% ref "article/schedule-godotcon-2020-brussels" %}}).
 
 We will schedule the event as soon as possible and get back to you if we accept your presentation so you can start working on it. Please, try to send your proposals **before the 31st of December** so there is plenty of time to schedule and prepare it.
 

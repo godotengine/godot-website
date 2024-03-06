@@ -23,7 +23,7 @@ This release also includes two compatibility breaking changes. While they are un
 
 ## What's new
 
-For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1](/article/dev-snapshot-godot-4-2-beta-1/), which cover a lot of the changes. This blog post only covers the changes between beta 4 and beta 5.
+For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}), which cover a lot of the changes. This blog post only covers the changes between beta 4 and beta 5.
 
 **27 contributors** submitted **58 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-beta5), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes compared to 4.2-beta4:
 
@@ -91,4 +91,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

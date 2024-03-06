@@ -9,9 +9,9 @@ image_caption_description: "A demo by GDQuest"
 date: 2023-04-27 13:00:00
 ---
 
-The development of Godot 4.1 is going strong, with many performance improvements, new features, and usability enhancements in the works. An early preview of the upcoming minor release [is available now](/article/dev-snapshot-godot-4-1-dev-1), and we can't wait to show you more of what's cooking [in the weeks to come](/article/release-management-4-1).
+The development of Godot 4.1 is going strong, with many performance improvements, new features, and usability enhancements in the works. An early preview of the upcoming minor release [is available now]({{% ref "article/dev-snapshot-godot-4-1-dev-1" %}}), and we can't wait to show you more of what's cooking [in the weeks to come]({{% ref "article/release-management-4-1" %}}).
 
-Godot has strong foundations, and this means that many improvements can be done without breaking compatibility. Thanks to that, we've been able to release 2 patch releases for Godot 4.0 so far, with the latest one being published [just 3 weeks ago](/article/maintenance-release-godot-4-0-2). And now it's time for the third one, Godot 4.0.3. With patch releases for stable versions of the engine our focus is on the immediate issues, crashes, and smaller usability improvements, that can be safely made available to you right now.
+Godot has strong foundations, and this means that many improvements can be done without breaking compatibility. Thanks to that, we've been able to release 2 patch releases for Godot 4.0 so far, with the latest one being published [just 3 weeks ago]({{% ref "article/maintenance-release-godot-4-0-2" %}}). And now it's time for the third one, Godot 4.0.3. With patch releases for stable versions of the engine our focus is on the immediate issues, crashes, and smaller usability improvements, that can be safely made available to you right now.
 
 This is a [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) to help us finalize the release before going live. We don't expect any new problems and encourage you to give it a try. It should be safe to migrate your existing projects to 4.0.3, but to make sure of that we need your help testing the changes. If there are no significant regressions reported with release candidates, a stable version is going to be published soon. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
 
@@ -21,7 +21,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 
 -----
 
-*The illustration picture is from* **Animation Retargeting** *— one of many playable demos made by the team at [GDQuest](https://www.gdquest.com/) to showcase the new features of Godot 4. You have probably seen many of them in the [Godot 4.0 release post](/article/godot-4-0-sets-sail). The entire collection is available on [GitHub](https://github.com/gdquest-demos/godot-4.0-new-features), and you can download it, learn how it all works, and play around yourself!*
+*The illustration picture is from* **Animation Retargeting** *— one of many playable demos made by the team at [GDQuest](https://www.gdquest.com/) to showcase the new features of Godot 4. You have probably seen many of them in the [Godot 4.0 release post]({{% ref "article/godot-4-0-sets-sail" %}}). The entire collection is available on [GitHub](https://github.com/gdquest-demos/godot-4.0-new-features), and you can download it, learn how it all works, and play around yourself!*
 
 ## What's new
 
@@ -121,6 +121,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

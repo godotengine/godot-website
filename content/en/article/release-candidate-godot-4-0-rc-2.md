@@ -9,7 +9,7 @@ image_caption_description: "A game by BRANE"
 date: 2023-02-14 18:00:00
 ---
 
-The Godot 4.0 release is mere days away! We've had a [first release candidate](/article/release-candidate-godot-4-0-rc-1/) last week, and since then our contributors have been fully focused on fixing regressions and critical bugs to ensure that the upcoming 4.0 release will be a [great foundation to build upon](https://godotengine.org/article/release-management-4-0-and-beyond).
+The Godot 4.0 release is mere days away! We've had a [first release candidate]({{% ref "article/release-candidate-godot-4-0-rc-1" %}}) last week, and since then our contributors have been fully focused on fixing regressions and critical bugs to ensure that the upcoming 4.0 release will be a [great foundation to build upon]({{% ref "article/release-management-4-0-and-beyond" %}}).
 
 The Production team has been hard at work assessing the remaining PRs and issues in the 4.0 milestone, pushing non-critical or risky changes to the 4.1 milestone, or prioritizing what could actually still be done so close to the release. Astute watchers of the [4.0 milestone](https://github.com/godotengine/godot/milestone/9)'s completion ratio will have noticed a significant increase, but that doesn't mean that all issues are being solved. Some will be fixed in time for 4.1, and cherry-picked for 4.0.x maintenance releases along the way.
 
@@ -23,7 +23,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.rc
 
 ## What's new
 
-As usual, this blog post only details the most recent changes since the last build, 4.0 RC 1. If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1](/article/dev-snapshot-godot-4-0-beta-1).
+As usual, this blog post only details the most recent changes since the last build, 4.0 RC 1. If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}).
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/c4fb119f03477ad9a494ba6cdad211b35a8efcce...d2699dc7ab96fbd75faccc1f32f55baebf1d84dc), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-08T11%3A00..2023-02-14T11%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 RC 1 (136 commits – excluding merge commits ― from 72 contributors).
 

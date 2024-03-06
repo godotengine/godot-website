@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/59f/8c3/c91/59f8c3c91a87f065753289.png
 date: 2017-10-31 18:23:17
 ---
 
-A little treat (or is it a trick?) for our community on this Halloween eve: Godot 3.0 *alpha 2* is out, ready for your testing! It's already been 3 months since our previous [official development snapshot](/article/dev-snapshot-godot-3-0-alpha-1), and lots of bugs have been fixed, making us one big step closer to the final 3.0 *stable* release.
+A little treat (or is it a trick?) for our community on this Halloween eve: Godot 3.0 *alpha 2* is out, ready for your testing! It's already been 3 months since our previous [official development snapshot]({{% ref "article/dev-snapshot-godot-3-0-alpha-1" %}}), and lots of bugs have been fixed, making us one big step closer to the final 3.0 *stable* release.
 
-It's also the first build to include the long awaited support for the C# programming language using [Mono](http://mono-project.com/)! This is of course still pretty rough, though usable, and we are looking forward to your feedback and bug reports. Some caveats are documented below as well as in the [introduction blog post](/article/introducing-csharp-godot), so make sure to read them before filing issues.
+It's also the first build to include the long awaited support for the C# programming language using [Mono](http://mono-project.com/)! This is of course still pretty rough, though usable, and we are looking forward to your feedback and bug reports. Some caveats are documented below as well as in the [introduction blog post]({{% ref "article/introducing-csharp-godot" %}}), so make sure to read them before filing issues.
 
 ## Disclaimer
 
@@ -25,7 +25,7 @@ There is also no guarantee that projects started with the alpha 2 build will sti
 
 Since the previous alpha build, there have been hundreds of bugs fixed, as well as many usability enhancements to make the new features as easy to use as possible.
 
-There was also a [strong focus on the documentation](https://godotengine.org/article/first-godot-3-docs-sprint-sept-9), with the Class Reference close to 70% complete now (which is already much higher than the completion level of the 2.x API documentation).
+There was also a [strong focus on the documentation]({{% ref "article/first-godot-3-docs-sprint-sept-9" %}}), with the Class Reference close to 70% complete now (which is already much higher than the completion level of the 2.x API documentation).
 
 ### Quick Mono howto
 
@@ -37,7 +37,7 @@ If you installed Mono in a specific directory, things might get a bit more compl
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
 
 - Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/alpha2)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/alpha2)]
 - Mono version (requires the Mono SDK): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/alpha2/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/alpha2/mono)]

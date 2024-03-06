@@ -9,7 +9,7 @@ date: 2018-02-26 00:00:00
 
 *Edit:* Changed post title for clarity (previously *Abandoning OpenGL ES 3.0 for Vulkan (and ES 2.0)*). We are not abandoning the current OpenGL ES 3.0 backend *right now*: as outlined in the post, we will start working on a Vulkan backend, which will eventually coexist with the OpenGL ES 2.0 and 3.0 backends - and eventually we might deprecate the OpenGL ES 3.0 backend if Vulkan cuts it.
 
-*Edit 2:* **This article is now outdated.** See [About Godot 4, Vulkan, GLES3 and GLES2](https://godotengine.org/article/about-godot4-vulkan-gles3-and-gles2) for up-to-date information about the planned rendering backends transition.
+*Edit 2:* **This article is now outdated.** See [About Godot 4, Vulkan, GLES3 and GLES2]({{% ref "article/about-godot4-vulkan-gles3-and-gles2" %}}) for up-to-date information about the planned rendering backends transition.
 
 -----
 

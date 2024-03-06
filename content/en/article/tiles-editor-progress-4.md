@@ -7,17 +7,17 @@ image: /storage/app/uploads/public/60c/b75/209/60cb75209c854804584350.png
 date: 2021-06-17 00:00:00
 ---
 
-This is the part 4 of the progress reports about the TileMap and TileSet editors rework. You can find the previous report [here](https://godotengine.org/article/tiles-editor-progress-3).
+This is the part 4 of the progress reports about the TileMap and TileSet editors rework. You can find the previous report [here]({{% ref "article/tiles-editor-progress-3" %}}).
 
 We are close to the end of this huge work. Hopefully in the coming few weeks, the Tiles editors should be ready to be included in the first 4.0 alpha. Some improvements still have to be done, but we are getting close to feature completeness. Until then, here is the summary of the work done during the last two months.
 
 *See other articles in this Godot 4.0 tiles editor series:*
 
-1. [Tiles editor progress report #1](https://godotengine.org/article/tiles-editor-rework)
-2. [Tiles editor progress report #2](https://godotengine.org/article/tiles-editor-progress-report-2)
-3. [Tiles editor progress report #3](https://godotengine.org/article/tiles-editor-progress-3)
-4. (you are here) [Tiles editor progress report #4](https://godotengine.org/article/tiles-editor-progress-4)
-5. [Tiles editor progress report #5](https://godotengine.org/article/tiles-editor-progress-report-5)
+1. [Tiles editor progress report #1]({{% ref "article/tiles-editor-rework" %}})
+2. [Tiles editor progress report #2]({{% ref "article/tiles-editor-progress-report-2" %}})
+3. [Tiles editor progress report #3]({{% ref "article/tiles-editor-progress-3" %}})
+4. (you are here) [Tiles editor progress report #4]({{% ref "article/tiles-editor-progress-4" %}})
+5. [Tiles editor progress report #5]({{% ref "article/tiles-editor-progress-report-5" %}})
 
 ### Terrain painting
 

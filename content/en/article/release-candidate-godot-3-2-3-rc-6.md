@@ -7,11 +7,11 @@ image: /storage/app/uploads/public/5f5/89f/2b4/5f589f2b46587026501332.jpg
 date: 2020-09-09 09:23:51
 ---
 
-Godot 3.2.2 was [released on June 26](/article/maintenance-release-godot-3-2-2) with over 3 months' worth of development, including many bugfixes and a handful of features. Some regressions were noticed after the release though, so we decided that Godot 3.2.3 would focus mainly on fixing those new bugs to ensure that all Godot users can have the most stable experience possible.
+Godot 3.2.2 was [released on June 26]({{% ref "article/maintenance-release-godot-3-2-2" %}}) with over 3 months' worth of development, including many bugfixes and a handful of features. Some regressions were noticed after the release though, so we decided that Godot 3.2.3 would focus mainly on fixing those new bugs to ensure that all Godot users can have the most stable experience possible.
 
 Here's a sixth [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) for the upcoming Godot 3.2.3 release. Please help us test it to ensure that no new regressions have slipped through code review and testing.
 
-The main differences with the previous [RC 5](/article/release-candidate-godot-3-2-3-rc-5) are C# fixes following the backport of the `csproj` and Godot.NET.Sdk changes.
+The main differences with the previous [RC 5]({{% ref "article/release-candidate-godot-3-2-3-rc-5" %}}) are C# fixes following the backport of the `csproj` and Godot.NET.Sdk changes.
 
 3.2.3 is taking its time to reach `stable`, but we want to ensure that it's the best release for use in production by all Godot users.
 
@@ -86,7 +86,7 @@ This release is built from commit [8c5ed688476da64cbea17b34f1eacc76bac1d9c7](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Standard build](https://downloads.tuxfamily.org/godotengine/3.2.3/rc6/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.3/rc6/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.
@@ -99,6 +99,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

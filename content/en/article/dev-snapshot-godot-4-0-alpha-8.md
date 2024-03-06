@@ -10,7 +10,7 @@ date: 2022-05-12 10:53:54
 Another fortnight, another alpha snapshot of the development branch, this time with **4.0 alpha 8**!
 It includes notably Text-to-Speech support on all platforms (as a feature for games/applications, the Godot editor itself doesn't make use of it for now), and a refactoring of the module/extension initialization levels to allow more flexibility for third-party code.
 
-See past alpha releases for details ([alpha 1](/article/dev-snapshot-godot-4-0-alpha-1), [2](/article/dev-snapshot-godot-4-0-alpha-2), [3](/article/dev-snapshot-godot-4-0-alpha-3), [4](/article/dev-snapshot-godot-4-0-alpha-4), [5](/article/dev-snapshot-godot-4-0-alpha-5), [6](/article/dev-snapshot-godot-4-0-alpha-6), [7](/article/dev-snapshot-godot-4-0-alpha-7)).
+See past alpha releases for details ([alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}), [2]({{% ref "article/dev-snapshot-godot-4-0-alpha-2" %}}), [3]({{% ref "article/dev-snapshot-godot-4-0-alpha-3" %}}), [4]({{% ref "article/dev-snapshot-godot-4-0-alpha-4" %}}), [5]({{% ref "article/dev-snapshot-godot-4-0-alpha-5" %}}), [6]({{% ref "article/dev-snapshot-godot-4-0-alpha-6" %}}), [7]({{% ref "article/dev-snapshot-godot-4-0-alpha-7" %}})).
 
 Be aware that during the alpha stage the engine is still not feature-complete or stable. **There will likely be breaking changes between this release and the first [*beta* release](https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta).** Only the beta will mark the so-called "feature freeze".
 
@@ -22,7 +22,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 8 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 8 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/3e9ead05f2e87e46b5982cc9a140e172ee98c227...917fd65748957304c987414c63d54ef4f6972394) for an overview of all changes since 4.0 alpha 7 (157 commits – excluding merge commits ― from 55 contributors).
 
@@ -62,7 +62,7 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 As we are still in the alpha phase of development, there are still many issues to fix, some of which have already been reported and are being worked on.
 
-- macOS builds in 4.0 alpha 8 are crashing on Apple M1, we're investigating why. In the meantime, you can keep using [4.0 alpha 7](/article/dev-snapshot-godot-4-0-alpha-7) which should work fine.
+- macOS builds in 4.0 alpha 8 are crashing on Apple M1, we're investigating why. In the meantime, you can keep using [4.0 alpha 7]({{% ref "article/dev-snapshot-godot-4-0-alpha-7" %}}) which should work fine.
   * *Edit:* A new macOS editor binary has been uploaded which should work fine. Export templates for ARM64 might still be broken.
 
 See the GitHub issue tracker for a list of [known bugs in the 4.0 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+).

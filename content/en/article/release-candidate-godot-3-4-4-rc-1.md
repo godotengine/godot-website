@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/622/7be/93b/6227be93b17ef513033459.jpg
 date: 2022-03-08 20:38:42
 ---
 
-[Godot 3.4.3 was released less than 2 weeks ago](/article/maintenance-release-godot-3-4-3), but a few significant regressions were found in that release, so we're fast-tracking the release of Godot 3.4.4 to solve those.
+[Godot 3.4.3 was released less than 2 weeks ago]({{% ref "article/maintenance-release-godot-3-4-3" %}}), but a few significant regressions were found in that release, so we're fast-tracking the release of Godot 3.4.4 to solve those.
 
 This [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) adds a handful of fixes, including several regression fixes. Please make sure to test it on your projects and to report any issue, so that we can release 3.4.4 stable in the coming days.
 
@@ -60,6 +60,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

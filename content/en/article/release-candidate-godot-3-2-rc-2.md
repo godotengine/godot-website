@@ -10,7 +10,7 @@ date: 2020-01-20 09:55:02
 
 At long last, Godot 3.2 is nearing completion and we are happy to publish this second **Release Candidate**, to encourage a broad testing of what should become Godot 3.2-stable in coming days.
 
-The [first RC build](/article/release-candidate-godot-3-2-rc-1) last Friday appeared to be problematic for some users with the GLES3 backend, as calculations for the irradiance map were taking too much time for some drivers (leading to a GPU hang). This is now fixed by reducing the complexity of the calculations, while still slightly improving quality.
+The [first RC build]({{% ref "article/release-candidate-godot-3-2-rc-1" %}}) last Friday appeared to be problematic for some users with the GLES3 backend, as calculations for the irradiance map were taking too much time for some drivers (leading to a GPU hang). This is now fixed by reducing the complexity of the calculations, while still slightly improving quality.
 
 Notable changes since RC 1:
 
@@ -40,7 +40,7 @@ For changes since the last RC build, see [the list of commits](https://github.co
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/rc2/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/rc2/mono) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.161 are included in this build.

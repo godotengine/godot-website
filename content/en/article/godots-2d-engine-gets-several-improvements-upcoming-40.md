@@ -124,6 +124,6 @@ The 2D GPU particle system will support particle collisions against the whole sc
 
 ### Future
 
-More work is also going towards the 2D engine. [Gilles Roudiere](https://godotengine.org/article/announcing-new-hire-gilles-roudiere) is working on a new 2D tilemap system an editor that will hopefully overcome most of the limitations with the current one. You can follow his progress on this [twitter account](https://twitter.com/gr0ud).
+More work is also going towards the 2D engine. [Gilles Roudiere]({{% ref "article/announcing-new-hire-gilles-roudiere" %}}) is working on a new 2D tilemap system an editor that will hopefully overcome most of the limitations with the current one. You can follow his progress on this [twitter account](https://twitter.com/gr0ud).
 
 As always, keep in mind that we make Godot out of love for you and the whole game development community. We want to make the best and easiest to use game engine, and make it so free and open that you can feel that you made it yourself. If you are not, please consider [becoming our patron](https://www.patreon.com/godotengine) to help us out!

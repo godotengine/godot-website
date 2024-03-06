@@ -33,11 +33,11 @@ In order to make the process easier for fixing issues, I've also spent some time
 
 A lot has been done already to make Godot Physics more stable. Credits for that are shared, as many contributors have helped reporting, testing and fixing issues in physics. So thanks to all involved!
 
-You can find more details about the fixes that are part of the recent 3.3 release in the [announcement blog post](https://godotengine.org/article/godot-3-3-has-arrived#physics).
+You can find more details about the fixes that are part of the recent 3.3 release in the [announcement blog post]({{% ref "article/godot-3-3-has-arrived" %}}#physics).
 
 ### Godot Physics features
 
-As announced [before](https://godotengine.org/article/camille-mohr-daurat-hired-work-physics), Godot Physics will become the default physics engine for Godot 4.0. As a result, Bullet ([which has been the default since 3.0](https://godotengine.org/article/godot-30-switches-bullet-3-physics)) will be supported with an official plugin.
+As announced [before]({{% ref "article/camille-mohr-daurat-hired-work-physics" %}}), Godot Physics will become the default physics engine for Godot 4.0. As a result, Bullet ([which has been the default since 3.0]({{% ref "article/godot-30-switches-bullet-3-physics" %}})) will be supported with an official plugin.
 
 The transition requires adding missing features that were supported only with Bullet. This makes sure there's no regression when switching to Godot Physics.
 
@@ -119,7 +119,7 @@ There are still areas in the physics step that cause bottlenecks and will be add
 
 #### Broadphase optimization
 
-The broadphase optimization is based on the work already made by the contributor [lawnjelly](https://github.com/lawnjelly) for Godot 3.3. The contribution brings a new dynamic BVH for 3D physics and rendering (see [here](https://godotengine.org/article/godot-3-3-has-arrived#dynamic-bvh) for more details).
+The broadphase optimization is based on the work already made by the contributor [lawnjelly](https://github.com/lawnjelly) for Godot 3.3. The contribution brings a new dynamic BVH for 3D physics and rendering (see [here]({{% ref "article/godot-3-3-has-arrived" %}}#dynamic-bvh) for more details).
 
 Now the same spatial partioning is also used for the broadphase in Godot Physics 2D. Both 2D and 3D physics will benefit from the performance improvements.
 
@@ -136,6 +136,6 @@ When Godot Physics reaches a state where it's stable and reliable enough to be u
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

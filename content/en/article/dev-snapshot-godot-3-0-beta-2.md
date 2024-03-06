@@ -11,9 +11,9 @@ date: 2017-12-21 22:48:33
 
 -----
 
-Three weeks after our [3.0 beta 1 development snapshot](/article/dev-snapshot-godot-3-0-beta-1), it's time for another beta release to bring us closer to the final 3.0 version.
+Three weeks after our [3.0 beta 1 development snapshot]({{% ref "article/dev-snapshot-godot-3-0-beta-1" %}}), it's time for another beta release to bring us closer to the final 3.0 version.
 
-We initially hoped for a stable release around Christmas, but given that we're publishing 3.0 *beta 2* today, you can probably assume that 3.0 *stable* will be an early 2018 release instead. And that's just as well, since a lot of work continues to be done every day to fix issues in the master branch and improve usability, and Juan even took the time to sneak in a couple past-deadline but very requested features, like a [lightmapper](/article/introducing-new-last-minute-lightmapper) for static light baking (to provide an alternative to the real-time but resource-heavy GIProbe).
+We initially hoped for a stable release around Christmas, but given that we're publishing 3.0 *beta 2* today, you can probably assume that 3.0 *stable* will be an early 2018 release instead. And that's just as well, since a lot of work continues to be done every day to fix issues in the master branch and improve usability, and Juan even took the time to sneak in a couple past-deadline but very requested features, like a [lightmapper]({{% ref "article/introducing-new-last-minute-lightmapper" %}}) for static light baking (to provide an alternative to the real-time but resource-heavy GIProbe).
 
 This release fixes many of the issues that you reported while testing *beta 1*, so it should be a lot more stable. There are definitely still bugs here and there, so please report anything you might stumble upon.
 
@@ -25,7 +25,7 @@ There will still be many fixes and enhancements done before the final release, a
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
 
 - Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/beta2)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/beta2)]
 - Mono version (requires the Mono SDK): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/beta2/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/beta2/mono)]

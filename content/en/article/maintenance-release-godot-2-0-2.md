@@ -9,9 +9,9 @@ date: 2016-04-08 00:00:00
 
 **Edit (2016-04-11 20:44 CEST):** New binaries were uploaded for the 2.0.2 release to [include a late fix](https://github.com/godotengine/godot/commit/e8a0b2462b11528838ad5890f2146a84a9e70f93) for a bug causing a memory overflow on some platforms, notably iOS.
 
-As mentioned in [an earlier announcement](article/updates-on-the-release-cycle-and-godot-2-0-1), while working on our future major version 2.1, we intend to provide maintenance releases every once in a while for the currently supported version (branch 2.0).
+As mentioned in [an earlier announcement]({{% ref "article/updates-on-the-release-cycle-and-godot-2-0-1" %}}), while working on our future major version 2.1, we intend to provide maintenance releases every once in a while for the currently supported version (branch 2.0).
 
-So one month after the release of Godot 2.0.1, [here's version 2.0.2](/download) with some non-critical bug fixes and some usability improvements. [Grab it now!](/download)
+So one month after the release of Godot 2.0.1, [here's version 2.0.2]({{% ref "download" %}}) with some non-critical bug fixes and some usability improvements. [Grab it now!]({{% ref "download" %}})
 
 ## Distribution changes
 
@@ -65,4 +65,4 @@ The main highlights in this maintenance release are:
 - OSX: Fix inverted horizontal scrolling
 - **Hotfix (2016-04-11):** Use non-templated `nearest_power_of_2` (workaround for iOS out-of-memory crash)
 
-See the [full changelog](http://downloads.tuxfamily.org/godotengine/2.0.2/Godot_v2.0.2_stable_changelog.txt) for more details, and head towards the [Download page](/download) to get it!
+See the [full changelog](http://downloads.tuxfamily.org/godotengine/2.0.2/Godot_v2.0.2_stable_changelog.txt) for more details, and head towards the [Download page]({{% ref "download" %}}) to get it!

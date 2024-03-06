@@ -8,7 +8,7 @@ date: 2023-06-15 00:00:00
 image: /storage/blog/covers/big-2023.webp
 ---
 
-Following our success [at the GDC](https://godotengine.org/article/gdc-2023-retrospective/) earlier this year, Godot will have a booth at the [BIG Festival](https://bigfestival.com.br/o-festival/) for the first time. BIG will happen between **June 28th** and **July 2nd**, so it is right around the corner.
+Following our success [at the GDC]({{% ref "article/gdc-2023-retrospective" %}}) earlier this year, Godot will have a booth at the [BIG Festival](https://bigfestival.com.br/o-festival/) for the first time. BIG will happen between **June 28th** and **July 2nd**, so it is right around the corner.
 
 BIG Festival is a huge event for indie game developers that happens yearly in Brazil since 2012. It is one of the biggest in Latin America and gathers out many big players in the industry, not only from Brazil but also from the rest of the world. It has a good amount space for showcasing games, an awards ceremony, and industry-related talks.
 

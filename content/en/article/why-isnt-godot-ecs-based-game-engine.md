@@ -112,7 +112,7 @@ Godot uses plenty of data-oriented optimizations for physics, rendering, audio, 
 
 Most (if not all) technologies that utilize ECS do it at the core engine level, by serving as the base architecture and building everything else (physics, rendering, audio, etc.) over it.
 
-Godot instead, those subsystems are all separate and isolated (and fit inside of [*Servers*](/article/why-does-godot-use-servers-and-rids)). I find this makes code simpler and easier to maintain and optimize (a testament to this is how tiny Godot's codebase is compared to other game engines, while providing similar levels of functionality).
+Godot instead, those subsystems are all separate and isolated (and fit inside of [*Servers*]({{% ref "article/why-does-godot-use-servers-and-rids" %}})). I find this makes code simpler and easier to maintain and optimize (a testament to this is how tiny Godot's codebase is compared to other game engines, while providing similar levels of functionality).
 
 The scene system in Godot (nodes) is generally very *high level* when compared to a traditional ECS system. Most of what goes on happens via *signal callbacks* (as in, objects collided, something needs to be repainted, button was pressed, etc.). The situations where something needs to be processed every frame in Godot from the user side are very rare, as the engine will manage this internally, taking the complexity away from the user.
 
@@ -151,7 +151,7 @@ Still, this may not be enough for your game, or too much of a hassle. In this ca
 
 #### Using Servers directly
 
-As mentioned before, Godot puts most of the high performance/low level parts of the engine in [*Servers*](/article/why-does-godot-use-servers-and-rids). The APIs to servers are fully exposed in and allow you to control the whole engine at the very low level.
+As mentioned before, Godot puts most of the high performance/low level parts of the engine in [*Servers*]({{% ref "article/why-does-godot-use-servers-and-rids" %}}). The APIs to servers are fully exposed in and allow you to control the whole engine at the very low level.
 
 Most of the time, even using the servers from GDScript, C# or C++ via GDNative (or modules) is more than enough for the type of games mentioned above. While they might require high performance code for the core game loop, the logic is rarely so complex that a full-blown framework is required for it.
 

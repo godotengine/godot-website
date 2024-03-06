@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/639/ae1/461/639ae14617279697513369.jpg
 date: 2022-12-15 13:16:00
 ---
 
-All contributors are incredibly busy working on Godot 4.0, which is having weekly beta releases (currently [beta 8](/article/dev-snapshot-godot-4-0-beta-8), beta 9 likely tomorrow). Some of us are also doing significant work to prepare a first beta release of Godot 3.6, which will likely the last feature release in the 3.x series (expected to be finalized *after* the 4.0 release).
+All contributors are incredibly busy working on Godot 4.0, which is having weekly beta releases (currently [beta 8]({{% ref "article/dev-snapshot-godot-4-0-beta-8" %}}), beta 9 likely tomorrow). Some of us are also doing significant work to prepare a first beta release of Godot 3.6, which will likely the last feature release in the 3.x series (expected to be finalized *after* the 4.0 release).
 
-But we're not forgetting about the current stable branch, Godot 3.5, which had its first stable release in [early August](/article/godot-3-5-cant-stop-wont-stop), and a first maintenance release in [late September](/article/maintenance-release-godot-3-5-1).
+But we're not forgetting about the current stable branch, Godot 3.5, which had its first stable release in [early August]({{% ref "article/godot-3-5-cant-stop-wont-stop" %}}), and a first maintenance release in [late September]({{% ref "article/maintenance-release-godot-3-5-1" %}}).
 
 Since then, quite a few bugfixes have been queued in the `3.5` branch, so it's time to wrap up a new 3.5.2 maintenance release. But first, let's validate that those changes do not introduce regressions with a [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate).
 
@@ -75,6 +75,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

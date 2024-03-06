@@ -9,7 +9,7 @@ date: 2018-10-07 17:17:27
 
 **Update: Watch the GodotCon Livestream [here](https://www.youtube.com/watch?v=G2c_kL23yI8).**
 
-[As announced a few weeks back](https://godotengine.org/article/meet-community-godotcon-poznan-2018), we're organizing a [Godot Convention](https://godotengine.org/events) (**GodotCon**) in Poznań, Poland, on **10 & 11 October 2018**.
+[As announced a few weeks back]({{% ref "article/meet-community-godotcon-poznan-2018" %}}), we're organizing a [Godot Convention](https://godotengine.org/events) (**GodotCon**) in Poznań, Poland, on **10 & 11 October 2018**.
 
 The organizers of the [Game Industry Conference](https://gic.gd/boards-committees/) (which is also in Poznań just after GodotCon) are letting us use their great venue, and it will be a great opportunity to get together with Godot users and core developers (our lead dev Juan Linietsky is coming from Argentina).
 

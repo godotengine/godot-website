@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5e1/9ae/32b/5e19ae32b8b87812018580.png
 date: 2020-01-11 11:15:39
 ---
 
-After a very busy week with many important bug fixes (plus a bunch of low risk enhancements and a lot of documentation updates), here's **Godot 3.2 beta 6**! As mentioned in the [previous post](/article/dev-snapshot-godot-3-2-beta-5), we're close to the Release Candidate stage and I hesitated to name this build as such. Since there were a number of big changes though I opted for making it another beta, and if all goes well testing it we should have a RC 1 in coming days.
+After a very busy week with many important bug fixes (plus a bunch of low risk enhancements and a lot of documentation updates), here's **Godot 3.2 beta 6**! As mentioned in the [previous post]({{% ref "article/dev-snapshot-godot-3-2-beta-5" %}}), we're close to the Release Candidate stage and I hesitated to name this build as such. Since there were a number of big changes though I opted for making it another beta, and if all goes well testing it we should have a RC 1 in coming days.
 
 *Note: Illustration credits at the bottom of this page.*
 
@@ -31,7 +31,7 @@ For changes since the last beta build, see [the list of commits](https://github.
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/beta6/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/beta6/mono) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.161 are included in this build.

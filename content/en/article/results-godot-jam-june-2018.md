@@ -50,7 +50,7 @@ Emilio and Andre Mari's 2<sup>nd</sup> place is all the more impressive given th
 
 We decided to celebrate this very successful game jam with some goodies for the winners, as well as for a couple randomly-selected participants (using GDScript's `randi()` for the selection of course!).
 
-We have nice Godot T-shirts from the previous [GodotCon](/article/get-ready-fosdem-and-godotcon-2018) with [the Godot 3.0 design](https://github.com/godotengine/godot-design/blob/master/goodies/shirt/godot_tshirt_2018.png) that we will send to our 3 jam winners, but there's more!
+We have nice Godot T-shirts from the previous [GodotCon]({{% ref "article/get-ready-fosdem-and-godotcon-2018" %}}) with [the Godot 3.0 design](https://github.com/godotengine/godot-design/blob/master/goodies/shirt/godot_tshirt_2018.png) that we will send to our 3 jam winners, but there's more!
 
 Chris Bradfield, one of the main contributors to Godot's official documentation, as well as the guy behind the great [KidsCanCode](https://www.youtube.com/channel/UCNaPQ5uLX5iIEHUCLmfAgKg/playlists) tutorials channel, has just published the [*Godot Engine Game Development Projects*](https://www.packtpub.com/game-development/godot-game-engine-projects) book with [Packt Publishing](https://www.packtpub.com). It was sent for printing [today](https://twitter.com/KidsCanCode/status/1013681695965376513) and should be available in paper format and ebook within a week. I had the opportunity to have a look at the book and it should be a pretty good learning resource, teaching how to use Godot hands-on with 5 different projects implemented from scratch, each introducing more advanced features of the engine to master.
 

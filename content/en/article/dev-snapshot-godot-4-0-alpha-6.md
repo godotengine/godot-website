@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/624/da1/f3c/624da1f3cff67769282589.jpg
 date: 2022-04-06 14:23:07
 ---
 
-We're continuing on our <abbr title="Yes, biweekly is a cursed word in English so that's the next best adjective to say 'once every two weeks'.">fortnightly</abbr> release schedule for [*alpha*](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) snapshots of Godot 4.0 - this time with **4.0 alpha 6**. See past alpha releases for details ([alpha 1](/article/dev-snapshot-godot-4-0-alpha-1), [2](/article/dev-snapshot-godot-4-0-alpha-2), [3](/article/dev-snapshot-godot-4-0-alpha-3), [4](/article/dev-snapshot-godot-4-0-alpha-4), [5](/article/dev-snapshot-godot-4-0-alpha-5)).
+We're continuing on our <abbr title="Yes, biweekly is a cursed word in English so that's the next best adjective to say 'once every two weeks'.">fortnightly</abbr> release schedule for [*alpha*](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) snapshots of Godot 4.0 - this time with **4.0 alpha 6**. See past alpha releases for details ([alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}), [2]({{% ref "article/dev-snapshot-godot-4-0-alpha-2" %}}), [3]({{% ref "article/dev-snapshot-godot-4-0-alpha-3" %}}), [4]({{% ref "article/dev-snapshot-godot-4-0-alpha-4" %}}), [5]({{% ref "article/dev-snapshot-godot-4-0-alpha-5" %}})).
 
 Be aware that during the alpha stage the engine is still not feature-complete or stable. **There will likely be breaking changes between this release and the first [*beta* release](https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta).** Only the beta will mark the so-called "feature freeze".
 
@@ -19,7 +19,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 6 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 6 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/d7d528c15f0e858b52bb0f510ff47e65c2341de1...e4f0fc50f79336cf76beec40e5e8e5164b288714) for an overview of all changes since 4.0 alpha 5 (166 commits – excluding merge commits ― from 55 contributors).
 

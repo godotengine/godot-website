@@ -9,15 +9,15 @@ date: 2020-12-24 17:00:00
 
 Howdy Godotters! The year is almost over and it's about time we give you some news about the Web Editor and the HTML5 export.
 
-It's been a very fruitful year for Godot on the Web since the announcement of the first [web editor prototype](https://godotengine.org/article/godot-editor-running-web-browser).
-As expected in the rationale of the original post, this has produced a lot of improvements to the HTML5 export in general, including support for threads, file drag and drop, <abbr title="Link-Time Optimization">LTO</abbr> for smaller and faster builds, low-processor mode with optional lower framerate, and better control over audio output latency and mix rate. See the [second](https://godotengine.org/article/godot-web-progress-report-2) and [third](https://godotengine.org/article/godot-web-progress-report-3) reports for more details.
+It's been a very fruitful year for Godot on the Web since the announcement of the first [web editor prototype]({{% ref "article/godot-editor-running-web-browser" %}}).
+As expected in the rationale of the original post, this has produced a lot of improvements to the HTML5 export in general, including support for threads, file drag and drop, <abbr title="Link-Time Optimization">LTO</abbr> for smaller and faster builds, low-processor mode with optional lower framerate, and better control over audio output latency and mix rate. See the [second]({{% ref "article/godot-web-progress-report-2" %}}) and [third]({{% ref "article/godot-web-progress-report-3" %}}) reports for more details.
 
 With this new report, as you may know if you checked out the last [Godot Live Q&A](https://www.youtube.com/watch?v=zGmCbnE0UqA), we're happy to announce that we have added optional **GDNative support** in HTML5 exports, that the optional **Thread support** now comes with an improved audio driver using the **AudioWorklet API**, and that the **Web Editor has reached the beta stage**.
 
 Optional GDNative/Threads support
 =================================
 
-If you tried out Godot [3.2.4 beta 4](https://godotengine.org/article/dev-snapshot-godot-3-2-4-beta-4) you might have noticed that the HTML5 export now has a new option called `Export Type`, which allows you to select either the `Regular`, `Threads`, or `GDNative` build.
+If you tried out Godot [3.2.4 beta 4]({{% ref "article/dev-snapshot-godot-3-2-4-beta-4" %}}) you might have noticed that the HTML5 export now has a new option called `Export Type`, which allows you to select either the `Regular`, `Threads`, or `GDNative` build.
 Sadly, as of now, it is not possible to have an export that supports both GDNative and Threads. This is a [documentated limitation](https://github.com/emscripten-core/emscripten/wiki/Linking#pthreads-support) of the toolchain used to create the web export, and the WebAssembly specification itself. We are still investigating a workaround for that, but it's going to take some more time.
 
 ![Selecting HTML5 export template type](/storage/app/uploads/public/5fe/0b6/6f9/5fe0b66f9ef85260274295.png)
@@ -36,7 +36,7 @@ Web Editor beta
 
 A new version of the web editor has been published at [this temporary address](https://godotengine.org/editor/).
 
-This is the first release tagged as "official" and based on the exact same sources of the other [3.2.4 beta 4](https://godotengine.org/article/dev-snapshot-godot-3-2-4-beta-4) builds. The goal is to keep the editor in sync with stable builds (starting from 3.2.4 stable). Old versions will still be available at dedicated locations.
+This is the first release tagged as "official" and based on the exact same sources of the other [3.2.4 beta 4]({{% ref "article/dev-snapshot-godot-3-2-4-beta-4" %}}) builds. The goal is to keep the editor in sync with stable builds (starting from 3.2.4 stable). Old versions will still be available at dedicated locations.
 
 
 ![Web editor landing page](/storage/app/uploads/public/5fe/0b7/741/5fe0b77416fd2727783264.png)

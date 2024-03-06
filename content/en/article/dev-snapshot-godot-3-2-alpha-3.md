@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5db/1c0/ec6/5db1c0ec6cf8e490600367.png
 date: 2019-10-24 15:25:07
 ---
 
-While many core contributors were busy with the Godot Sprint and GodotCon [last week](/article/schedule-godotcon-2019-poznan), the rest of the world has not been idle and we got lots of nice contributions fixing bugs and improving usability.
+While many core contributors were busy with the Godot Sprint and GodotCon [last week]({{% ref "article/schedule-godotcon-2019-poznan" %}}), the rest of the world has not been idle and we got lots of nice contributions fixing bugs and improving usability.
 
 We thus publish **Godot 3.2 alpha 3** as our next iteration, fixing various issues from the last build. [150 commits](https://github.com/godotengine/godot/compare/3cc94b2c0b90ec1136937e2c02b9d7901d3d28b8...35944aebdeb4c3b5869aaeedaaded02397b7ce92) have been merged since 3.2 alpha 2. This release is built from commit [35944ae](https://github.com/godotengine/godot/commit/35944aebdeb4c3b5869aaeedaaded02397b7ce92).
 
@@ -36,7 +36,7 @@ For changes since the previous alpha build, see [the list of commits](https://gi
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/alpha3/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/alpha3/mono/) (C# support + all the above). You need to have MSbuild installed to use the Mono build. Relevant parts of Mono 5.18.1.3 are included in this build.

@@ -7,9 +7,9 @@ image: /storage/blog/covers/godot-foundation-update-2023.jpg
 date: 2023-12-05 12:00:00
 ---
 
-This has been a monumental year for the Godot Foundation. We [announced](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation/) the Foundation one year ago and have been busy since getting all the legalities in place and transferring over all our assets from the [Software Freedom Conservancy](https://sfconservancy.org/).
+This has been a monumental year for the Godot Foundation. We [announced]({{% ref "article/godots-graduation-godot-moves-to-a-new-foundation" %}}) the Foundation one year ago and have been busy since getting all the legalities in place and transferring over all our assets from the [Software Freedom Conservancy](https://sfconservancy.org/).
 
-On September 12, 2023 we officially [introduced](https://godotengine.org/article/godot-developer-fund/) the [Godot Development Fund](https://fund.godotengine.org/) which we had teased [earlier in the year](https://godotengine.org/article/funding-breakdown-and-hiring-process/). At the time we had an informal goal of reaching €50,000 per month which would allow us to cover our current costs while opening up enough room to hire 1-2 more developers. We reached our goal much faster than expected, and we also received a sizable one-time donation of [$100,000 from Re-Logic](https://twitter.com/Terraria_Logic/status/1704227519027651016)! We are incredibly grateful to all the individuals and companies who joined our fundraising effort to make Godot's development sustainable.
+On September 12, 2023 we officially [introduced]({{% ref "article/godot-developer-fund" %}}) the [Godot Development Fund](https://fund.godotengine.org/) which we had teased [earlier in the year]({{% ref "article/funding-breakdown-and-hiring-process" %}}). At the time we had an informal goal of reaching €50,000 per month which would allow us to cover our current costs while opening up enough room to hire 1-2 more developers. We reached our goal much faster than expected, and we also received a sizable one-time donation of [$100,000 from Re-Logic](https://twitter.com/Terraria_Logic/status/1704227519027651016)! We are incredibly grateful to all the individuals and companies who joined our fundraising effort to make Godot's development sustainable.
 
 When we launched the funding drive, our largest priorities were and continue to be (in no particular order):
 
@@ -17,7 +17,7 @@ When we launched the funding drive, our largest priorities were and continue to 
 2. A dedicated C# maintainer
 3. Asset import and asset workflow
 4. Web infrastructure, website, asset store
-5. Communications, community management, and event planning 
+5. Communications, community management, and event planning
 
 We have already onboarded Winston Yallow ([winston-yallow](<https://github.com/winston-yallow>), a long time Godot user and contributor) to focus on web infrastructure. We are currently onboarding Adam Scott ([adamscott](<https://github.com/adamscott>)) to focus on production tasks, and K. S. Ernest Lee ([fire](https://github.com/fire)) to work on asset import and asset workflow. We have people in mind for some of the remaining roles and are currently busy exploring whether that will lead to new hires.
 

@@ -14,11 +14,11 @@ date: 2016-11-17 20:33:41
 
 --------
 
-Already three months since the release of Godot 2.1! That was plenty of time for us to prepare a good [version 2.1.1](/download) with various bug fixes (but not so many, looks like Godot 2.1 was a pretty stable release) and tons of usability enhancements.
+Already three months since the release of Godot 2.1! That was plenty of time for us to prepare a good [version 2.1.1]({{% ref "download" %}}) with various bug fixes (but not so many, looks like Godot 2.1 was a pretty stable release) and tons of usability enhancements.
 
-*[Download it now!](/download)* (or wait a bit if you're on Steam for the auto-update ;))
+*[Download it now!]({{% ref "download" %}})* (or wait a bit if you're on Steam for the auto-update ;))
 
-As announced in our [previous blog post](/article/onward-new-3d-renderer), we decided to skip the 2.2 release we had planned initially to focus on Godot 3.0, and therefore we will be supporting Godot 2.1.x for some more time. We also considered that some non-breaking new features such as the new AStar API could be safely backported to the stable branch, so that you don't have to wait until 3.0 for every new developments.
+As announced in our [previous blog post]({{% ref "article/onward-new-3d-renderer" %}}), we decided to skip the 2.2 release we had planned initially to focus on Godot 3.0, and therefore we will be supporting Godot 2.1.x for some more time. We also considered that some non-breaking new features such as the new AStar API could be safely backported to the stable branch, so that you don't have to wait until 3.0 for every new developments.
 
 As for maintenance releases of the previous 2.0.x stable branch, the aim of those releases is to bring you a slightly enhanced version of the current stable one which you can use to further develop and/or publish your games started in Godot 2.x. We do not expect any particular difficulty in migrating projects from Godot 2.1 to 2.1.1 (import API fixes are noted below).
 

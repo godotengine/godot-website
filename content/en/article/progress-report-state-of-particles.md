@@ -13,7 +13,7 @@ _TL;DR: In 4.2 GPUParticles were refactored and lots of new features were added.
 
 Godot 4 offers a great opportunity to make some long-requested and much needed changes in many areas, and one of those areas is particle nodes and resources. Before 4.0 some settings used to be a bit confusing and clunky to work with. Now a lot of things have changed: parameters are set with a range using min and max boundaries instead of value and random deviation; there's a particle collision system; there's a turbulence system, there are sub-emitters, and much more.
 
-All around, particles already received a lot of love during the development of Godot 4. However, a number of key features were still missing as of 4.1. Below I go into detail about additions and improvements made to the particle system in the last few months, which you can test already in the [beta release of Godot 4.2](/article/dev-snapshot-godot-4-2-beta-1/).
+All around, particles already received a lot of love during the development of Godot 4. However, a number of key features were still missing as of 4.1. Below I go into detail about additions and improvements made to the particle system in the last few months, which you can test already in the [beta release of Godot 4.2]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}).
 
 <video autoplay loop muted playsinline title="A countdown with particle effects by Rensei">
   <source src="/storage/blog/2023-oct-state-of-particles/final-countdown.mp4" type="video/mp4">

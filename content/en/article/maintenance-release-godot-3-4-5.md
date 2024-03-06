@@ -9,9 +9,9 @@ image_caption_description: A game by Perfoon
 date: 2022-08-02 09:22:27
 ---
 
-It's been a while since our [last stable release](/article/maintenance-release-godot-3-4-4)! And this is not the long anticipated 3.5, nor 4.0, but simply a **Godot 3.4.5** maintenance release to fix a handful of issues in the current 3.4 stable branch.
+It's been a while since our [last stable release]({{% ref "article/maintenance-release-godot-3-4-4" %}})! And this is not the long anticipated 3.5, nor 4.0, but simply a **Godot 3.4.5** maintenance release to fix a handful of issues in the current 3.4 stable branch.
 
-But don't worry – the feature release 3.5 is just around the corner (and you can use it now via its [last release candidate](/article/release-candidate-godot-3-5-rc-8)), and [4.0 beta is not far off either](/article/godot-4-0-development-enters-feature-freeze).
+But don't worry – the feature release 3.5 is just around the corner (and you can use it now via its [last release candidate]({{% ref "article/release-candidate-godot-3-5-rc-8" %}})), and [4.0 beta is not far off either]({{% ref "article/godot-4-0-development-enters-feature-freeze" %}}).
 
 **This is a safe and recommended update for all Godot 3.4.x users.** It should have no major incidence on your projects, even complex ones in production, if you're already using 3.4.4-stable.
 
@@ -20,7 +20,7 @@ Notable changes that motivate this release include:
 - Update mbedtls and zlib libraries to fix security vulnerabilities.
 - Ignore support of S3TC compression format on mobile devices to ensure the use of ETC2 for GLES3 (fixes issues with Meta Quest 2 after a recent system update).
 
-[**Download Godot 3.4.5 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.5.stable/).
+[**Download Godot 3.4.5 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.5.stable/).
 
 ## Changes
 
@@ -87,9 +87,9 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ---
 

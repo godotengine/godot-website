@@ -9,7 +9,7 @@ image_caption_description: An interactive course by Bramwell
 date: 2022-11-04 16:02:54
 ---
 
-We released [Godot 4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1) in September, and that was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
+We released [Godot 4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}) in September, and that was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
 
 But the "1" in beta 1 means that it's only the first step of the journey, and like for the alpha phase, we're going to release new beta snapshots roughly every other week.
 
@@ -21,7 +21,7 @@ We're now at beta 4, slightly delayed as I was on holiday, but all the more inte
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this beta 4 blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this beta 4 blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/01ae26d31befb6679ecd92cd3c73aa5a76162e95...e6751549cf7247965d1744b8c464f5e901006f21), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2022-10-14..2022-11-01+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 3 (209 commits – excluding merge commits ― from 78 contributors).
 

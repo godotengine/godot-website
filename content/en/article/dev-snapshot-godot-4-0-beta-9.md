@@ -9,7 +9,7 @@ image_caption_description: 3D model by Raffaele Picca
 date: 2022-12-19 14:26:01
 ---
 
-Godot 4.0 has been in beta for [over three months](/article/dev-snapshot-godot-4-0-beta-1), and the overall feature completeness, stability and usability have improved a lot during that time.
+Godot 4.0 has been in beta for [over three months]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}), and the overall feature completeness, stability and usability have improved a lot during that time.
 
 We continue to release a new snapshot every week to get fast feedback on our bugfixes, and potential regressions they may introduce. Thank you for your rigorous testing and timely reports!
 
@@ -24,11 +24,11 @@ This beta includes a few big changes which may interest a lot of users:
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.beta9/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from [Raffaele Picca](https://campsite.bio/raffa)'s [car scene](https://twitter.com/MV_Raffa/status/1603697398920118272), rendered in Godot 4.0 using the [Movie Maker mode](/article/movie-maker-mode-arrives-in-godot-4), for the main menu of the upcoming* [**FRANZ FURY**](https://store.steampowered.com/app/1513960/FRANZ_FURY/) *game (made with Godot 3.x). Also check out Raffaele's* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/) *released earlier this year.*
+*The illustration picture for this article is from [Raffaele Picca](https://campsite.bio/raffa)'s [car scene](https://twitter.com/MV_Raffa/status/1603697398920118272), rendered in Godot 4.0 using the [Movie Maker mode]({{% ref "article/movie-maker-mode-arrives-in-godot-4" %}}), for the main menu of the upcoming* [**FRANZ FURY**](https://store.steampowered.com/app/1513960/FRANZ_FURY/) *game (made with Godot 3.x). Also check out Raffaele's* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/) *released earlier this year.*
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/c6e40e1c01200052450df10d9126f8ea7f57de30...e780dc332a0a3f642a6daf8548cb211d79a2cc45), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2022-12-09..2022-12-18+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 8 (178 commits – excluding merge commits ― from 63 contributors).
 

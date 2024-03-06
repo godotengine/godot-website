@@ -13,9 +13,9 @@ While most development focus is on our upcoming Godot 4.0 release, many contribu
 
 **Godot 3.5 is compatible with Godot 3.4.x projects and is a recommended upgrade for all 3.4.x users.**
 
-## [Download](/download)
+## [Download]({{% ref "download" %}})
 
-[**Download Godot 3.5 now**](/download) and read on to learn more about the <a href="#features">many new features</a> in this update.
+[**Download Godot 3.5 now**]({{% ref "download" %}}) and read on to learn more about the <a href="#features">many new features</a> in this update.
 
 You can try it live with the [**Web Editor**](https://editor.godotengine.org/releases/3.5.stable/) too!
 
@@ -105,7 +105,7 @@ Keep in mind that this feature is not a silver bullet and its effectiveness depe
 
 ### OccluderShapePolygon (3D)
 
-Following on from the addition of [OccluderShapeSphere in 3.4](/article/godot-3-4-is-released#portal-occlusion-culling), [lawnjelly](https://github.com/lawnjelly) now brings us a more adaptable and easy way to add basic occlusion culling in the form of the OccluderShapePolygon. Add an Occluder node to your scene, and choose to create an OccluderShapePolygon. This should show up initially as a quad.
+Following on from the addition of [OccluderShapeSphere in 3.4]({{% ref "article/godot-3-4-is-released" %}}#portal-occlusion-culling), [lawnjelly](https://github.com/lawnjelly) now brings us a more adaptable and easy way to add basic occlusion culling in the form of the OccluderShapePolygon. Add an Occluder node to your scene, and choose to create an OccluderShapePolygon. This should show up initially as a quad.
 
 You can move the polygon with the node transform, drag the corners to reshape it, add delete points. Anything behind the polygon will be culled from view.
 
@@ -121,7 +121,7 @@ Two years ago (!), [thebestnom](https://github.com/thebestnom) started working o
 
 With a lot of testing from interested users, things progressed slowly but steadily and our Android maintainer Fredia Huya-Kouadio ([m4gr3d](https://github.com/m4gr3d)) put the finishing touches to get this work merged for Godot 3.5 ([GH-57747](https://github.com/godotengine/godot/pull/57747/)). The current version doesn't have a lot of mobile specific changes, so it's only really usable on a tablet with keyboard and mouse - but the foundation is there to improve upon, and we're interested in your feedback and ideas on how to make the Godot experience more mobile friendly!
 
-From now on you'll find APK builds of the Android editor [on our Download page](/download#android)!
+From now on you'll find APK builds of the Android editor [on our Download page]({{% ref "download" %}}#android)!
 Note that builds are currently not signed, so you will get a warning on install.
 
 This first release is **experimental**. There are a number of known issues with the port currently, and it isn't optimized for use with touch input or virtual keyboards (as such it's recommended to try it with a mouse and physical keyboard). We plan to refine the experience further for Godot 3.6 to make it more usable.
@@ -154,7 +154,7 @@ As usual, many new features and bug fixes have been added to the renderer, many 
 
 ### Big improvements to VCS UI ([GH-53900](https://github.com/godotengine/godot/pull/53900))
 
-Aged like fine wine, Meru Patel ([Janglee123](https://github.com/Janglee123))'s work from [Google Summer of Code 2020](https://godotengine.org/article/gsoc-2020-progress-report-1#vcs-improvements) has been continued and updated by [GSoC 2019 alumnus](https://godotengine.org/article/gsoc-2019-progress-report-3#vcsch-integration) Twarit Waikar ([ChronicallySerious](https://github.com/ChronicallySerious))!
+Aged like fine wine, Meru Patel ([Janglee123](https://github.com/Janglee123))'s work from [Google Summer of Code 2020]({{% ref "article/gsoc-2020-progress-report-1" %}}#vcs-improvements) has been continued and updated by [GSoC 2019 alumnus]({{% ref "article/gsoc-2019-progress-report-3" %}}#vcsch-integration) Twarit Waikar ([ChronicallySerious](https://github.com/ChronicallySerious))!
 
 What is it? A lot of new features for Version Control Systems (VCS) integration in the Godot editor, such as push, pull, and fetch operations, as well as a very nice diff view UI. All these features have been implemented in the official [Git integration plugin](https://github.com/godotengine/godot-git-plugin). Check out the [Releases page](https://github.com/godotengine/godot-git-plugin/releases) for the latest 2.x plugin release supporting Godot 3.5.
 
@@ -183,7 +183,7 @@ Godot is a complex piece of software and is not bug-free. Our contributors do th
 
 This is not the end of the 3.x branch. A new 3.6 milestone already exists so you can expect some more backports coming from Godot 4.0, and continuous support for your 3.5 projects.
 
-As Godot 4.0 is [getting close to beta](/article/godot-4-0-development-enters-feature-freeze), most contributors are now focusing on that branch, and rightly so. So expect less feature work and backports for the 3.x branch in the future. The planned 3.6 milestone will mostly serve to wrap up current developments and prepare a **Long Term Support** 3.x branch that will live in parallel to 4.x stable releases, and mostly receive bugfixes.
+As Godot 4.0 is [getting close to beta]({{% ref "article/godot-4-0-development-enters-feature-freeze" %}}), most contributors are now focusing on that branch, and rightly so. So expect less feature work and backports for the 3.x branch in the future. The planned 3.6 milestone will mostly serve to wrap up current developments and prepare a **Long Term Support** 3.x branch that will live in parallel to 4.x stable releases, and mostly receive bugfixes.
 
 ## Giving back
 
@@ -191,4 +191,4 @@ As a community effort, Godot relies on individual contributors to improve. In ad
 
 Last but not least, making games with Godot and crediting the engine goes a long way to help raise its popularity, and thus the number of active contributors who make it better on a daily basis. Remember, we are all in this together and Godot requires community support in every area in order to thrive.
 
-[Now go and have fun with 3.5!](/download)
+[Now go and have fun with 3.5!]({{% ref "download" %}})

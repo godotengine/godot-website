@@ -7,7 +7,7 @@ image: /storage/blog/covers/rendering-priorities-jan-2024.webp
 date: 2024-01-16 9:00:00
 ---
 
-We released [Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/) on November 30, 2023 with many exciting features and countless fixes and improvements. Godot 4.2 is starting to look like what we had envisioned for Godot 4. Accordingly, we are spending more time thinking and talking about what the future holds for the [rendering team](https://godotengine.org/teams/#rendering).
+We released [Godot 4.2]({{% ref "article/godot-4-2-arrives-in-style" %}}) on November 30, 2023 with many exciting features and countless fixes and improvements. Godot 4.2 is starting to look like what we had envisioned for Godot 4. Accordingly, we are spending more time thinking and talking about what the future holds for the [rendering team]({{% ref "teams" %}}#rendering).
 
 At GodotCon this year I spoke about new features that the rendering team would like to see implemented in the future. While not all of these features will make it in, it's a pretty good overview of what we are thinking and talking about.
 
@@ -19,7 +19,7 @@ Also come join us in the `#rendering` channel on [chat.godotengine.org](https://
 
 ## Update on previous priorities and 4.2
 
-The below are the priorities we identified in [July 2023](https://godotengine.org/article/rendering-priorities-july-2023) with a short description of their current state.
+The below are the priorities we identified in [July 2023]({{% ref "article/rendering-priorities-july-2023" %}}) with a short description of their current state.
 
 ### Performance
 
@@ -39,7 +39,7 @@ We completed this and it was included in the 4.2 release! As a reminder, this op
 
 * **BUGS (in progress, always)**
 
-We fixed over [200](https://github.com/godotengine/godot/pulls?q=is%3Apr+milestone%3A4.2+is%3Aclosed+label%3Atopic%3Arendering%2Ctopic%3Ashaders%2Ctopic%3Aparticles+label%3Abug) rendering related bugs in 4.2! 
+We fixed over [200](https://github.com/godotengine/godot/pulls?q=is%3Apr+milestone%3A4.2+is%3Aclosed+label%3Atopic%3Arendering%2Ctopic%3Ashaders%2Ctopic%3Aparticles+label%3Abug) rendering related bugs in 4.2!
 
 * **Proper multi-threading in the RenderingDevice (in progress)**
 
@@ -71,7 +71,7 @@ We merged FSR 2.2 during the 4.2 dev cycle as well as a host of other TAA enhanc
 
 * Optional ANGLE backend to support low-end devices ([GH-72831](https://github.com/godotengine/godot/pull/72831))
 
-For more information, check out the "Rendering, particles, and shaders" section of the [4.2 release blog post](https://godotengine.org/article/godot-4-2-arrives-in-style/#rendering-particles-and-shaders).
+For more information, check out the "Rendering, particles, and shaders" section of the [4.2 release blog post]({{% ref "article/godot-4-2-arrives-in-style" %}}#rendering-particles-and-shaders).
 
 
 ## Current priorities
@@ -80,7 +80,7 @@ Below I list some of the top priorities identified by the rendering team. These 
 
 * **Acyclic render graph optimization ([GH-84976](https://github.com/godotengine/godot/pull/84976)) (merged for 4.3)**
 
-This is both an optimization and a feature. The Acyclic Render Graph (ARG) is a tool to automatically record and re-order rendering commands in the RenderingDevice backend. This is extremely beneficial for 2 reasons: 1) it enables optimizations that are otherwise not possible in a general purpose renderer, and 2) it simplifies the RenderingDevice API to make it much easier to use (this benefits us and users who use the RenderingDevice API directly). So far this PR has shown promising performance improvements on a range of devices and especially when many particle systems are in use. 
+This is both an optimization and a feature. The Acyclic Render Graph (ARG) is a tool to automatically record and re-order rendering commands in the RenderingDevice backend. This is extremely beneficial for 2 reasons: 1) it enables optimizations that are otherwise not possible in a general purpose renderer, and 2) it simplifies the RenderingDevice API to make it much easier to use (this benefits us and users who use the RenderingDevice API directly). So far this PR has shown promising performance improvements on a range of devices and especially when many particle systems are in use.
 
 * **Direct3D 12 rendering driver ([GH-70315](https://github.com/godotengine/godot/pull/70315)) (merged for 4.3)**
 
@@ -93,7 +93,7 @@ Recently Stuart Carnie began work on a Metal backend for Godot. The work is sign
 
 * **RenderingDeviceDriver refactor ([GH-83452](https://github.com/godotengine/godot/pull/83452)) (merged for 4.3)**
 
-In preparing the D3D12 rendering driver, Pedro noticed that a significant amount of code needed to be shared between the Vulkan implementation of RenderingDevice and the D3D12 implementation of RenderingDevice. He proposed that we divide RenderingDevice into two pieces: 1) an API-agnostic layer that contains all the shared code, and 2) a thin layer that only includes API-specific code (the RenderingDeviceDriver). This has allowed us to save thousands of lines of duplicate code which will make porting to new platforms easier (e.g. Metal, WebGPU) and will make maintaining our current backend easier. 
+In preparing the D3D12 rendering driver, Pedro noticed that a significant amount of code needed to be shared between the Vulkan implementation of RenderingDevice and the D3D12 implementation of RenderingDevice. He proposed that we divide RenderingDevice into two pieces: 1) an API-agnostic layer that contains all the shared code, and 2) a thin layer that only includes API-specific code (the RenderingDeviceDriver). This has allowed us to save thousands of lines of duplicate code which will make porting to new platforms easier (e.g. Metal, WebGPU) and will make maintaining our current backend easier.
 
 * **Rendering hooks ([GH-80214](https://github.com/godotengine/godot/pull/80214)) (in progress)**
 
@@ -113,5 +113,5 @@ Please keep in mind that this is simply a list of things the rendering team deem
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.
 

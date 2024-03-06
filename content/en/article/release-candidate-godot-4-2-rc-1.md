@@ -13,7 +13,7 @@ We are happy to announce that all major issues identified during the beta testin
 
 As always, please, remember that this is still pre-production software. We don't expect any new blockers to appear at this stage, but we still need to verify, with your help, that Godot 4.2 is ready. You are encouraged to give it a try, and if all goes according to plan the final release should reach the shelves of your local store before the end of next week.
 
-A number of crashes and regressions from previous changes were fixed for RC1. Keep an eye for improvements in animation, navigation, and tilemaps. We also reverted one change introduced as early as [dev snapshot 1](/article/dev-snapshot-godot-4-2-dev-1)! The default shortcut for saving scripts and shaders is no longer overriding the shortcut for saving scenes. You can still configure whichever behavior you prefer in the editor settings.
+A number of crashes and regressions from previous changes were fixed for RC1. Keep an eye for improvements in animation, navigation, and tilemaps. We also reverted one change introduced as early as [dev snapshot 1]({{% ref "article/dev-snapshot-godot-4-2-dev-1" %}})! The default shortcut for saving scripts and shaders is no longer overriding the shortcut for saving scenes. You can still configure whichever behavior you prefer in the editor settings.
 
 There is also one announcement that we have never made in the previous two releases. Starting with Godot 4.2 we are providing official builds for the Linux ARM platform. This is not a new platform for Godot to support, but it has been lacking official builds, waiting for us to update our buildsystem. If you use Linux on ARM, make sure to give this release candidate a go!
 
@@ -25,7 +25,7 @@ There is also one announcement that we have never made in the previous two relea
 
 ## What's new
 
-For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1](/article/dev-snapshot-godot-4-2-beta-1/), which cover a lot of the changes. This blog post only covers the changes between beta 6 and RC 1.
+For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}), which cover a lot of the changes. This blog post only covers the changes between beta 6 and RC 1.
 
 **23 contributors** submitted **37 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-rc1), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes compared to 4.2-beta6:
 
@@ -89,4 +89,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

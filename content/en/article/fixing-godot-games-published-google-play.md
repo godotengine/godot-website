@@ -19,7 +19,7 @@ A new 2.1 release is coming along to fix this problem (and Godot 3.1 will use a 
 
 - A) You use Godot 2.1.x and don't need any specific Android permissions: We've built a new 2.1.4-stable template with all placeholder permissions removed, so you can use it as custom template to export your game.
 - B) You need specific Android permissions, you usually build your own template to include thirdparty modules, or you are using Godot 3.0 or later: You will have to build from source and edit the Android manifest yourself.
-- C) Use our [Godot APK fixer tool](https://godotengine.org/article/godot-apk-fixer-tool) on an already exported game. This will work for 2.x and 3.x exported APKs.
+- C) Use our [Godot APK fixer tool]({{% ref "article/godot-apk-fixer-tool" %}}) on an already exported game. This will work for 2.x and 3.x exported APKs.
 
 Details for each situation are given below.
 

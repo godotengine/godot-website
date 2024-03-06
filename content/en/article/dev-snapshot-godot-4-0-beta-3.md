@@ -9,7 +9,7 @@ image_caption_description: A game by Raisel Edwards
 date: 2022-10-14 12:07:27
 ---
 
-We released [Godot 4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1) one month ago! That was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
+We released [Godot 4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}) one month ago! That was a big milestone on our journey to finalize our next major release – be sure to check out that blog post if you haven't yet, for an overview of some of the main highlight of Godot 4.0.
 
 But the "1" in beta 1 means that it's only the first step of the journey, and like for the alpha phase, we're going to release new beta snapshots roughly every other week.
 
@@ -35,7 +35,7 @@ This can be quite handy to insert, select, copy and paste text on several differ
 
 ### Improved ColorPicker UX ([GH-62910](https://github.com/godotengine/godot/pull/62910))
 
-Vitika Soni ([Vitika9](https://github.com/Vitika9/)) reworked the features and user experience of Godot's ColorPicker during Google Summer of Code 2022. The second part of her work has just been merged, and should significantly improve the ColorPicker's UX. You can read more about it in the [GSoC 2022 progress report](/article/gsoc-2022-progress-report-1#colorpicker). This implementation was [based on wireframes](https://github.com/godotengine/godot-proposals/issues/4353#issuecomment-1098934700) contributed by Taylor Wright ([redlamp](https://github.com/redlamp)).
+Vitika Soni ([Vitika9](https://github.com/Vitika9/)) reworked the features and user experience of Godot's ColorPicker during Google Summer of Code 2022. The second part of her work has just been merged, and should significantly improve the ColorPicker's UX. You can read more about it in the [GSoC 2022 progress report]({{% ref "article/gsoc-2022-progress-report-1" %}}#colorpicker). This implementation was [based on wireframes](https://github.com/godotengine/godot-proposals/issues/4353#issuecomment-1098934700) contributed by Taylor Wright ([redlamp](https://github.com/redlamp)).
 
 ![Improved UX of ColorPicker](/storage/app/uploads/public/634/949/641/6349496418665542315794.png)
 
@@ -67,7 +67,7 @@ And for people doing engine development, there's a new `dev_build` option which 
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this beta 3 blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this beta 3 blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/f8745f2f71c79972df66f17a3da75f6e328bc55d...01ae26d31befb6679ecd92cd3c73aa5a76162e95) for an overview of all changes since 4.0 beta 2 (274 commits – excluding merge commits ― from 88 contributors).
 

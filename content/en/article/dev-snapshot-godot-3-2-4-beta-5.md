@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5ff/6f7/246/5ff6f724691ad311133792.jpg
 date: 2021-01-07 13:51:24
 ---
 
-While development keeps going at full speed towards Godot 4.0 (see recent devblogs on [glTF 2.0 scene exporter](/article/introducing-the-godot-gltf-2-0-scene-exporter), [Complex Text Layout](/article/complex-text-layouts-progress-report-3), [Web export improvements](https://godotengine.org/article/godot-web-export-progress-report-4), and a [physics work package](https://godotengine.org/article/camille-mohr-daurat-hired-work-physics)), a lot of work is also being done on the `3.2` branch for the upcoming Godot 3.2.4.
+While development keeps going at full speed towards Godot 4.0 (see recent devblogs on [glTF 2.0 scene exporter]({{% ref "article/introducing-the-godot-gltf-2-0-scene-exporter" %}}), [Complex Text Layout]({{% ref "article/complex-text-layouts-progress-report-3" %}}), [Web export improvements]({{% ref "article/godot-web-export-progress-report-4" %}}), and a [physics work package]({{% ref "article/camille-mohr-daurat-hired-work-physics" %}})), a lot of work is also being done on the `3.2` branch for the upcoming Godot 3.2.4.
 
 This new **beta 5** comes with 4 weeks' worth of bugfixes and enhancements over the previous dev snapshots, as well as some nice new features.
 
@@ -22,8 +22,8 @@ The main changes coming in Godot 3.2.4 and included in this beta are:
 - [Android App Bundle](https://github.com/godotengine/godot-proposals/issues/342) and [subview embedding](https://github.com/godotengine/godot-proposals/issues/1064) support.
 - [2D batching for GLES3](https://github.com/godotengine/godot/pull/42119) (it was implemented for GLES2 in 3.2.2), and improvements to GLES2's batching.
 - [A new software skinning for MeshInstance](https://github.com/godotengine/godot/pull/40313) to replace the slow GPU skinning on devices that don't support the fast GPU skinning (especially mobile).
-- [Rewritten and greatly improved FBX importer](/article/fbx-importer-rewritten-for-godot-3-2-4).
-- [Improved Web editor prototype](/article/godot-web-progress-report-3) and [AudioWorklet support for multithreaded HTML5 builds](https://github.com/godotengine/godot/pull/43454).
+- [Rewritten and greatly improved FBX importer]({{% ref "article/fbx-importer-rewritten-for-godot-3-2-4" %}}).
+- [Improved Web editor prototype]({{% ref "article/godot-web-progress-report-3" %}}) and [AudioWorklet support for multithreaded HTML5 builds](https://github.com/godotengine/godot/pull/43454).
 - [New option to snap 2D transforms to whole coordinates](https://github.com/godotengine/godot/pull/43554), helps prevent jitter on pixel art camera motions.
 - [Configurable amount of lights per object](https://github.com/godotengine/godot/pull/43606), now defaulting to 32 instead of 8.
 - [macOS ARM64 support](https://github.com/godotengine/godot/pull/39788) in official binaries for Apple M1 chip (only classical build for now).
@@ -121,7 +121,7 @@ This release is built from commit [a18df71789a36b318c40d691efdb4da1e574bbfd](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Standard build](https://downloads.tuxfamily.org/godotengine/3.2.4/beta5/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.4/beta5/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.12.0.114 are included in this build.
@@ -134,6 +134,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

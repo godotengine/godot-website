@@ -29,7 +29,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/caacade569eb7a541aaa7a8cdc3eedffca1422d9...28a24639c3c6a95b5b9828f5f02bf0dc2f5ce54b), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-17T13%3A00..2023-01-20T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 13 (73 commits – excluding merge commits ― from 40 contributors).
 
@@ -69,7 +69,7 @@ Some of the most notables feature changes in this update are:
 - Windows: Fix sub-window initial transparency and always-on-top state ([GH-71660](https://github.com/godotengine/godot/pull/71660)).
 - XR: Fix issue where failed start of OpenXR causes issues ([GH-71450](https://github.com/godotengine/godot/pull/71450)).
 - XR: Get OpenXR with OpenGL working on SteamVR ([GH-71708](https://github.com/godotengine/godot/pull/71708)).
-- As well as many [improvements to the documentation](/article/godot-4-0-docs-sprint/).
+- As well as many [improvements to the documentation]({{% ref "article/godot-4-0-docs-sprint" %}}).
 
 This release is built from commit [28a24639c](https://github.com/godotengine/godot/commit/28a24639c3c6a95b5b9828f5f02bf0dc2f5ce54b).
 

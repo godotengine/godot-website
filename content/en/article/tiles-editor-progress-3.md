@@ -7,15 +7,15 @@ image: /storage/app/uploads/public/607/066/eee/607066eee70c4289567474.png
 date: 2021-04-12 08:34:53
 ---
 
-It's time for a third progress report on the TileMap and TileSet editors rework! Updates are likely less visually appealing than in the [previous progress report](https://godotengine.org/article/tiles-editor-progress-report-2), but a lot of groundwork has been done since then.
+It's time for a third progress report on the TileMap and TileSet editors rework! Updates are likely less visually appealing than in the [previous progress report]({{% ref "article/tiles-editor-progress-report-2" %}}), but a lot of groundwork has been done since then.
 
 *See other articles in this Godot 4.0 tiles editor series:*
 
-1. [Tiles editor progress report #1](https://godotengine.org/article/tiles-editor-rework)
-2. [Tiles editor progress report #2](https://godotengine.org/article/tiles-editor-progress-report-2)
-3. (you are here) [Tiles editor progress report #3](https://godotengine.org/article/tiles-editor-progress-3)
-4. [Tiles editor progress report #4](https://godotengine.org/article/tiles-editor-progress-4)
-5. [Tiles editor progress report #5](https://godotengine.org/article/tiles-editor-progress-report-5)
+1. [Tiles editor progress report #1]({{% ref "article/tiles-editor-rework" %}})
+2. [Tiles editor progress report #2]({{% ref "article/tiles-editor-progress-report-2" %}})
+3. (you are here) [Tiles editor progress report #3]({{% ref "article/tiles-editor-progress-3" %}})
+4. [Tiles editor progress report #4]({{% ref "article/tiles-editor-progress-4" %}})
+5. [Tiles editor progress report #5]({{% ref "article/tiles-editor-progress-report-5" %}})
 
 ### TileSet rework
 

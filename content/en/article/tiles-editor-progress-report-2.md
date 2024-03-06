@@ -7,15 +7,15 @@ image: /storage/app/uploads/public/601/d5d/1e6/601d5d1e6adec835022302.png
 date: 2021-02-05 14:32:20
 ---
 
-Two months have passed since [my last progress report](https://godotengine.org/article/tiles-editor-rework) on the tiles editor rework. A lot of things have been implemented since then. Here are the news.
+Two months have passed since [my last progress report]({{% ref "article/tiles-editor-rework" %}}) on the tiles editor rework. A lot of things have been implemented since then. Here are the news.
 
 *See other articles in this Godot 4.0 tiles editor series:*
 
-1. [Tiles editor progress report #1](https://godotengine.org/article/tiles-editor-rework)
-2. (you are here) [Tiles editor progress report #2](https://godotengine.org/article/tiles-editor-progress-report-2)
-3. [Tiles editor progress report #3](https://godotengine.org/article/tiles-editor-progress-3)
-4. [Tiles editor progress report #4](https://godotengine.org/article/tiles-editor-progress-4)
-5. [Tiles editor progress report #5](https://godotengine.org/article/tiles-editor-progress-report-5)
+1. [Tiles editor progress report #1]({{% ref "article/tiles-editor-rework" %}})
+2. (you are here) [Tiles editor progress report #2]({{% ref "article/tiles-editor-progress-report-2" %}})
+3. [Tiles editor progress report #3]({{% ref "article/tiles-editor-progress-3" %}})
+4. [Tiles editor progress report #4]({{% ref "article/tiles-editor-progress-4" %}})
+5. [Tiles editor progress report #5]({{% ref "article/tiles-editor-progress-report-5" %}})
 
 ## TileMap tools
 

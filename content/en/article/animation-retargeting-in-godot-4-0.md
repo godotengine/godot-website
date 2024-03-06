@@ -35,7 +35,7 @@ Godot has a simple animation system. If you know a little about that, you might 
 
 Bones have a Transform that indicates their position and orientation in 3D space. A Bone's Transform with no pose applied exists in Godot as "Bone Rest", and in Blender as "Edit Bone Orientation" determined from Head and Tail coordinates and Roll value.
 
-[Godot 3 and Godot 4 have different bone animation systems](https://godotengine.org/article/animation-data-redesign-40), but in any case, animations cannot be easily shared between models with different bone rests, even if the silhouettes are the same.
+[Godot 3 and Godot 4 have different bone animation systems]({{% ref "article/animation-data-redesign-40" %}}), but in any case, animations cannot be easily shared between models with different bone rests, even if the silhouettes are the same.
 
 Simply said, "Retargeting" is the workflow to apply animations between different models, but it is composed of many processes internally.
 

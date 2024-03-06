@@ -7,12 +7,12 @@ image: /storage/app/uploads/public/5e9/c16/331/5e9c16331c02c557914246.png
 date: 2020-04-19 09:14:17
 ---
 
-After refining our [Godot 3.2 release](/article/here-comes-godot-3-2) with bug fixes in [3.2.1 last month](/article/maintenance-release-godot-3-2-1), it's time to integrate some of the new features that didn't make it into the 3.2 merge window but have been further developed and backported since.
+After refining our [Godot 3.2 release]({{% ref "article/here-comes-godot-3-2" %}}) with bug fixes in [3.2.1 last month]({{% ref "article/maintenance-release-godot-3-2-1" %}}), it's time to integrate some of the new features that didn't make it into the 3.2 merge window but have been further developed and backported since.
 
 Notably, Godot 3.2.2 is going to add three major features:
 
-- [C# support for the iOS platform](/article/csharp-ios-signals-events), courtesy of Ignacio ([neikeq](https://github.com/neikeq)).
-- [2D batching for the GLES2 renderer](/article/gles2-renderer-optimization-2d-batching), thanks to [lawnjelly](https://github.com/lawnjelly) and Clay ([clayjohn](https://github.com/clayjohn)).
+- [C# support for the iOS platform]({{% ref "article/csharp-ios-signals-events" %}}), courtesy of Ignacio ([neikeq](https://github.com/neikeq)).
+- [2D batching for the GLES2 renderer]({{% ref "article/gles2-renderer-optimization-2d-batching" %}}), thanks to [lawnjelly](https://github.com/lawnjelly) and Clay ([clayjohn](https://github.com/clayjohn)).
 - [Re-architecture of the Android plugin system](https://github.com/godotengine/godot/pull/36336), by Fredia ([m4gr3d](https://github.com/m4gr3d)).
 
 We need your help to test and validate these changes before publishing 3.2.2-stable, which is why we publish this beta build now. If you find any new issue with this build, especially related to one of the listed big changes, please [report it on GitHub](https://github.com/godotengine/godot/issues), ideally including a minimal project that can be used to reproduce the issue.
@@ -73,7 +73,7 @@ See the [full changelog on GitHub](https://github.com/godotengine/godot/compare/
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2.2/beta1/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.2/beta1/mono/) (C# support + all the above). You need to have MSBuild (and on Windows .NET Framework 4.7) installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.

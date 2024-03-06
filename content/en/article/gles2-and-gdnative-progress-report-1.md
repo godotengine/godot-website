@@ -70,7 +70,7 @@ After this is done, OpenGL 2.1 functions can be used.
 
 Juan's work on the GLES 3.0 renderer a little bit over a year ago contained changes to the class architecture used for the rendering backends. With Godot 2.1 and before, all the rendering related code was contained in one [`RasterizerGLES2`](https://github.com/godotengine/godot/blob/2.1/drivers/gles2/rasterizer_gles2.h) class.
 
-In 3.0 this architecture has been revisited and split up over multiple classes, as explained in [Juan's first progress report](https://godotengine.org/article/godots-new-renderer-progress-report-1).
+In 3.0 this architecture has been revisited and split up over multiple classes, as explained in [Juan's first progress report]({{% ref "article/godots-new-renderer-progress-report-1" %}}).
 
 Because of that it's not possible to re-use much of the 2.1 rendering code (although a lot of it is still relevant and helpful as a reference).
 

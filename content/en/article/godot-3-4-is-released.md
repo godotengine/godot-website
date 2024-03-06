@@ -14,9 +14,9 @@ While most development focus is on our upcoming Godot 4.0 release, many contribu
 **Godot 3.4 is compatible with Godot 3.3.x projects and is a recommended upgrade for all 3.3.x users.**
 
 
-## [Download](/download)
+## [Download]({{% ref "download" %}})
 
-[**Download Godot 3.4 now**](/download) and read on to learn more about the <a href="#features">many new features</a> in this update.
+[**Download Godot 3.4 now**]({{% ref "download" %}}) and read on to learn more about the <a href="#features">many new features</a> in this update.
 
 You can try it live with the [**Web Editor**](https://editor.godotengine.org/releases/3.4.stable/) too!
 
@@ -98,7 +98,7 @@ This is not an exhaustive list of changes in this release, so we advise interest
 
 Most Godot users have run into situations where an `Object` instance gets deleted (e.g. by calling `queue_free()`) but is still accessed somewhere else in a script. Such use-after-free access needs to be guarded with `is_instance_valid(obj)`, but this has been surprisingly difficult to get right due to a number of bugs and inconsistencies between *debug* and *release* builds.
 
-Pedro J. Estébanez ([RandomShaper](https://github.com/RandomShaper)) has become an expert on this topic and made a number of improvements included in [Godot 3.2.2](/article/maintenance-release-godot-3-2-2#dangling-variant) and [Godot 3.3](/article/godot-3-3-has-arrived#deleted-objects-debug). With this new change, the checks which were already performed in *debug* builds have been [promoted to also run in *release* builds](https://github.com/godotengine/godot/pull/51796), solving a discrepancy which was the source of much trouble for Godot users. This has a theoretical performance cost for release builds, but it was found not to be significant.
+Pedro J. Estébanez ([RandomShaper](https://github.com/RandomShaper)) has become an expert on this topic and made a number of improvements included in [Godot 3.2.2]({{% ref "article/maintenance-release-godot-3-2-2" %}}#dangling-variant) and [Godot 3.3]({{% ref "article/godot-3-3-has-arrived" %}}#deleted-objects-debug). With this new change, the checks which were already performed in *debug* builds have been [promoted to also run in *release* builds](https://github.com/godotengine/godot/pull/51796), solving a discrepancy which was the source of much trouble for Godot users. This has a theoretical performance cost for release builds, but it was found not to be significant.
 
 <a id="large-files"></a>
 #### Large files support (> 2.0 GiB)
@@ -191,7 +191,7 @@ Ilaria Cislaghi ([QbieShay](https://github.com/QbieShay)) implemented a new [rin
 <a id="shader-language"></a>
 #### Shader language features
 
-Our shader language maintainer Yuri Roubinsky ([Chaosus](https://github.com/Chaosus)) is busy [doing magic on the development branch](/article/improvements-shaders-visual-shaders-godot-4) for Godot 4.0, but with the help of [lyuma](https://github.com/lyuma) some of the most-requested features could be backported to Godot 3.4.
+Our shader language maintainer Yuri Roubinsky ([Chaosus](https://github.com/Chaosus)) is busy [doing magic on the development branch]({{% ref "article/improvements-shaders-visual-shaders-godot-4" %}}) for Godot 4.0, but with the help of [lyuma](https://github.com/lyuma) some of the most-requested features could be backported to Godot 3.4.
 
 This includes support for [structs and fragment-to-light varyings](https://github.com/godotengine/godot/pull/48075), as well as [global const arrays](https://github.com/godotengine/godot/pull/50889). The `TIME` built-in uniform was also made [available in custom functions](https://github.com/godotengine/godot/pull/49509) by default.
 
@@ -221,7 +221,7 @@ Fredia Huya-Kouadio ([m4gr3d](https://github.com/m4gr3d)) implemented initial su
 
 Initial support was also implemented for Android's [Play Asset Delivery](https://github.com/godotengine/godot/pull/52526), which replaces APK's expansion files (OBBs) for Android App Bundle (AAB) binaries.
 
-Pedro added an option for [agile input processing](/article/agile-input-processing-is-here-for-smoother-gameplay), which can help increase responsiveness for input on lower-end mobile devices, so you can keep games playable even if the framerate isn't at a steady 60 FPS.
+Pedro added an option for [agile input processing]({{% ref "article/agile-input-processing-is-here-for-smoother-gameplay" %}}), which can help increase responsiveness for input on lower-end mobile devices, so you can keep games playable even if the framerate isn't at a steady 60 FPS.
 
 
 <a id="html5"></a>
@@ -229,9 +229,9 @@ Pedro added an option for [agile input processing](/article/agile-input-processi
 
 Our HTML5 platform maintainer Fabio kept doing a lot of work for this platform in the 3.4 development branch, which brings us a number of new features and improvements.
 
-Godot Web projects can now optionally include support for being [installed as Progressive Web Apps](https://godotengine.org/article/godot-web-progress-report-8).
+Godot Web projects can now optionally include support for being [installed as Progressive Web Apps]({{% ref "article/godot-web-progress-report-8" %}}).
 
-A new `JavaScriptObject` was exposed to provide an [interface between Godot and JavaScript](https://godotengine.org/article/godot-web-progress-report-9), enabling you to call JavaScript methods directly from your Godot scripts. This makes it much easier to use JavaScript APIs in your Web projects.
+A new `JavaScriptObject` was exposed to provide an [interface between Godot and JavaScript]({{% ref "article/godot-web-progress-report-9" %}}), enabling you to call JavaScript methods directly from your Godot scripts. This makes it much easier to use JavaScript APIs in your Web projects.
 
 {{< highlight gdscript >}}
 extends Node
@@ -290,7 +290,7 @@ The [layer grid widget](https://github.com/godotengine/godot/pull/51040) has bee
 <a id="bvh-physics-2d"></a>
 #### Dynamic BVH for Godot Physics 2D
 
-Based on the most part on the work [lawnjelly](https://github.com/lawnjelly) already did [for 3D](https://godotengine.org/article/godot-3-3-has-arrived#dynamic-bvh), [pouleyKetchoupp](https://github.com/pouleyKetchoupp) has added support for using a dynamic BVH for the broadphase in 2D physics: [GH-48314](https://github.com/godotengine/godot/pull/48314).
+Based on the most part on the work [lawnjelly](https://github.com/lawnjelly) already did [for 3D]({{% ref "article/godot-3-3-has-arrived" %}}#dynamic-bvh), [pouleyKetchoupp](https://github.com/pouleyKetchoupp) has added support for using a dynamic BVH for the broadphase in 2D physics: [GH-48314](https://github.com/godotengine/godot/pull/48314).
 
 Like the 3D version, it generally has better performance and is more reliable, but it's still possible to switch back to the old HashGrid in project settings if needed.
 
@@ -407,4 +407,4 @@ As a community effort, Godot relies on individual contributors to improve. In ad
 
 Last but not least, making games with Godot and crediting the engine goes a long way to help raise its popularity, and thus the number of active contributors who make it better on a daily basis. Remember, we are all in this together and Godot requires community support in every area in order to thrive.
 
-[Now go and have fun with 3.4!](/download)
+[Now go and have fun with 3.4!]({{% ref "download" %}})

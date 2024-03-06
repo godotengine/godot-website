@@ -21,7 +21,7 @@ Usagi Shima is a relaxing, idle bunny collecting game. It started out as my pass
 
 Usagi Shima was inspired by my childhood love of rabbits and pet simulator games. It is also heavily inspired by cozy games like Animal Crossing and Neko Atsume. I wanted to make a cute, calming game where the player can just relax and decorate with their virtual bunny friends!
 
-![](/assets/images/showcase/usagi-shima-4.webp)
+![](/images/showcase/usagi-shima-4.webp)
 
 ## What were some of the biggest challenges you faced during the development process, and how did you overcome them?
 
@@ -38,7 +38,7 @@ If I had a Godot wishlist, it would be a first-class plugin for Google Play Game
 
 I was already coming from an open source background when I worked on Linux, so it felt very natural for me to pick an open source game engine. The open source aspect is a big draw for me as I’m used to looking through source code and discussions on Github if I get stuck on an issue. In addition I’m pretty sure it was recommended on [/r/gamedev](https://www.reddit.com/r/gamedev/) for being a solid, intuitive engine for newcomers as well. I was also able to hit the ground running with Godot just after just watching [Heartbeast’s beginner RPG series](https://www.youtube.com/watch?v=mAbG8Oi-SvQ). I just love how intuitive the node structure is and Godot’s ease-of-use - it was so easy to prototype things with GDScript!
 
-![](/assets/images/showcase/usagi-shima-5.webp)
+![](/images/showcase/usagi-shima-5.webp)
 
 ## What advice would you give to aspiring game developers who are just starting out in the field?
 
@@ -62,6 +62,6 @@ I hope mobile games make a comeback as a reputable platform for gaming, and that
 
 Admittedly, mobile games are not as common a target platform for indie game developers compared to PC and console. Mobile games have earned a negative reputation because of how aggressively they are usually monetized (e.g. microtransactions), and because of how the mobile market is unfortunately plagued with poor quality apps, shovelware, and clones. I hope to one day contribute to the idea that mobile can be a viable platform for indie developers to thrive too!
 
-![](/assets/images/showcase/usagi-shima-scr03.webp)
+![](/images/showcase/usagi-shima-scr03.webp)
 
 Usagi Shima is available in the [App Store](https://apps.apple.com/us/app/usagi-shima/id1632728038) and [Google Play Store](https://play.google.com/store/apps/details?id=com.pank0.usagishima). You can also find more about the game on [their website](https://usagishima.net/).

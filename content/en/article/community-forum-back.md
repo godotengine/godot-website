@@ -14,7 +14,7 @@ The community asked for it, and the community made it! The new [Godot Developers
 
 [![godot-developers.png](/storage/app/uploads/public/570/208/99e/57020899e86fe515554457.png)](http://forum.godotdevelopers.org)
 
-Godot used to have an official forum alongside the [other community channels](/community), but when designing [our new website](/article/home-sweet-home), it was decided to publish it even though we did not have the time and infrastructure to setup a new forum (and most importantly to migrate the old posts into the new database).
+Godot used to have an official forum alongside the [other community channels]({{% ref "community" %}}), but when designing [our new website]({{% ref "article/home-sweet-home" %}}), it was decided to publish it even though we did not have the time and infrastructure to setup a new forum (and most importantly to migrate the old posts into the new database).
 
 Still, many members of the community [expressed their wish](/qa/560/anybody-interested-in-an-unofficial-godot-forum) for a traditional forum to use for general discussion about Godot, advanced support requests and to showcase projects. Some community members thus decided to setup a forum themselves, on their own hosting and using [SMF](http://www.simplemachines.org). With the blessing of the core Godot developers, they did an impressive work to migrate the old database and design cool features and branding for their forum.
 

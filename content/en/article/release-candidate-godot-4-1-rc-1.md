@@ -9,11 +9,11 @@ image_caption_description: "A game by Tsunoa Games"
 date: 2023-06-27 14:00:00
 ---
 
-Godot 4.1 is shaping up to be ready [right on schedule](/article/release-management-4-1). Since the release of beta 3 we have identified all remaining regressions, thanks in a large part to your reports and extensive testing, and with the necessary fixes implemented we are publishing the first [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) today.
+Godot 4.1 is shaping up to be ready [right on schedule]({{% ref "article/release-management-4-1" %}}). Since the release of beta 3 we have identified all remaining regressions, thanks in a large part to your reports and extensive testing, and with the necessary fixes implemented we are publishing the first [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) today.
 
 This is a great opportunity to give the new version of the engine a try. As the name suggests, a release candidate represents a build that we consider stable but want to be absolutely sure before making it official — with your help. If there are no significant regressions reported with release candidates, a stable version of Godot 4.1 is going to be published soon.
 
-This release contains a [number of improvements](/article/dev-snapshot-godot-4-1-beta-1/#highlights) compared to Godot 4.0 published earlier this year. Some systems have also been reworked, which means projects that rely on those need to be updated. However, for most games and apps made with 4.0 it should be safe to migrate to 4.1. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
+This release contains a [number of improvements]({{% ref "article/dev-snapshot-godot-4-1-beta-1" %}}#highlights) compared to Godot 4.0 published earlier this year. Some systems have also been reworked, which means projects that rely on those need to be updated. However, for most games and apps made with 4.0 it should be safe to migrate to 4.1. Don't forget to always make backups when moving versions, even minor. Better yet, prefer using a version control system, such as Git, and commit a version of your project before the migration.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.rc1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
@@ -25,7 +25,7 @@ This release contains a [number of improvements](/article/dev-snapshot-godot-4-1
 
 41 contributors submitted around 70 improvements for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1-rc1), which contains links to relevant commits and PRs for this and every previous release.
 
-There is a number of major changes in Godot 4.1, and you can read more about them in our [earlier announcement](/article/dev-snapshot-godot-4-1-beta-1/). Below are the most notable changes compared to 4.1 beta 3:
+There is a number of major changes in Godot 4.1, and you can read more about them in our [earlier announcement]({{% ref "article/dev-snapshot-godot-4-1-beta-1" %}}). Below are the most notable changes compared to 4.1 beta 3:
 
 - 2D: Fix click-selecting Sprites with repeated texture ([GH-78566](https://github.com/godotengine/godot/pull/78566)).
 - 2D: Tilemaps: Fix tile resizing towards atlas boundary ([GH-76152](https://github.com/godotengine/godot/pull/76152)).
@@ -90,6 +90,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

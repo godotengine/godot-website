@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5ce/3e2/cdb/5ce3e2cdb9f4f320495518.png
 date: 2019-05-21 13:30:00
 ---
 
-In the [last report](https://godotengine.org/article/godot-webrtc-report1) we introduced WebRTC and the reasons why it's being added to the list of web standards (and thus to Godot). As mentioned there, the WebRTC protocol supports a wide variety of applications: from VoIP, to video streaming, to custom data transfers. The interface that allows you to send custom data is called a *data channel* and is now exposed in Godot via a new `WebRTCDataChannel` interface (more on that later).
+In the [last report]({{% ref "article/godot-webrtc-report1" %}}) we introduced WebRTC and the reasons why it's being added to the list of web standards (and thus to Godot). As mentioned there, the WebRTC protocol supports a wide variety of applications: from VoIP, to video streaming, to custom data transfers. The interface that allows you to send custom data is called a *data channel* and is now exposed in Godot via a new `WebRTCDataChannel` interface (more on that later).
 
 
 ## Data Channels

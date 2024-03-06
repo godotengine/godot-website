@@ -31,7 +31,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/518b9e5801a19229805fe837d7d0cf92920ad413...c40020513ac8201a449b5ae2eeb58fef0ce0a2a4), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-27T12%3A00..2023-02-01T12%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 16 (159 commits – excluding merge commits ― from 58 contributors).
 
@@ -102,7 +102,7 @@ Some of the most notables feature changes in this update are:
 - Rendering: Avoid crash when CanvasTexture used with light decal atlas ([GH-72433](https://github.com/godotengine/godot/pull/72433)).
 - Shaders: Fix several shader preprocessor include issues ([GH-72174](https://github.com/godotengine/godot/pull/72174)).
 - Windows: Fix confined mouse mode not updating on resize ([GH-71174](https://github.com/godotengine/godot/pull/71174)).
-- As well as many [improvements to the documentation](/article/godot-4-0-docs-sprint/).
+- As well as many [improvements to the documentation]({{% ref "article/godot-4-0-docs-sprint" %}}).
 
 This release is built from commit [c40020513](https://github.com/godotengine/godot/commit/c40020513ac8201a449b5ae2eeb58fef0ce0a2a4).
 

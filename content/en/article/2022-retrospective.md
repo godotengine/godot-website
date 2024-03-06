@@ -21,15 +21,15 @@ As a result, and with many contributors interested in improving and modernizing 
 
 As far as 2021, the status of the 4.0 was a mess. A lot of work was done, but almost nothing worked and so many features were unfinished. As a result, 2022 became a year of focus on stabilizing and finishing all major remaining issues.
 
-Early in the year, we released [Godot 4.0 Alpha](https://godotengine.org/article/dev-snapshot-godot-4-0-alpha-1). After it, 17 alphas followed in total. Things improved a lot, but eventually it was time to do feature freeze and focus on bug fixing. In September, the [first betas](https://godotengine.org/article/dev-snapshot-godot-4-0-beta-1) rolled out and, since then, the stability of the master branch has improved enormously thanks to contributors changing their mindset to fixing bugs.
+Early in the year, we released [Godot 4.0 Alpha]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). After it, 17 alphas followed in total. Things improved a lot, but eventually it was time to do feature freeze and focus on bug fixing. In September, the [first betas]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}) rolled out and, since then, the stability of the master branch has improved enormously thanks to contributors changing their mindset to fixing bugs.
 
 We will not end the year with a stable release, but we are very close. We are still aiming to release the first stable version of Godot 4.0 during the first months of 2023.
 
-It is important to note, though, that as with any X.0 release, there will still be significant stability, usability and performance related issues. All these will improve significantly in the [upcoming point releases](https://godotengine.org/article/release-management-4-0-and-beyond) (just like it happened after Godot 3.0).
+It is important to note, though, that as with any X.0 release, there will still be significant stability, usability and performance related issues. All these will improve significantly in the [upcoming point releases]({{% ref "article/release-management-4-0-and-beyond" %}}) (just like it happened after Godot 3.0).
 
 ### First Godot Sprint after Covid
 
-In June this year, we held our first [Godot Sprint](https://godotengine.org/article/godot-sprint-and-user-meeting-barcelona-june-2022) since the pandemic started (previous one being in Brussels, January 2020).
+In June this year, we held our first [Godot Sprint]({{% ref "article/godot-sprint-and-user-meeting-barcelona-june-2022" %}}) since the pandemic started (previous one being in Brussels, January 2020).
 
 It was an excellent way to get back in touch with everyone. As much as Godot is developed very efficiently online, the main developers meeting personally is a great way to move forward with a lot of issues that are difficult to discuss online.
 
@@ -43,11 +43,11 @@ The success of Godot is largely due to the support provided by the Software Free
 
 As Godot continued to grow, we realized that we needed the autonomy, control, and flexibility of an organization specifically dedicated to Godot.
 
-Because of this, the [Godot Foundation was launched last month](https://godotengine.org/article/godots-graduation-godot-moves-to-a-new-foundation). It's still not fully operational, as there is still some bureaucracy remaining, but the plan is to do a gradual move from the Conservancy to it during all of next year.
+Because of this, the [Godot Foundation was launched last month]({{% ref "article/godots-graduation-godot-moves-to-a-new-foundation" %}}). It's still not fully operational, as there is still some bureaucracy remaining, but the plan is to do a gradual move from the Conservancy to it during all of next year.
 
 ### The 2022 showreels were published
 
-We published our [2022 showreels](https://godotengine.org/article/announcing-godot-2022-showreels), and they looks amazing! The quality and quantity of games published using Godot keep growing significantly every year. This year, we also added the tools category! Thanks to its powerful UI system and architecture, Godot is becoming a go-to platform to create applications and tools that are graphically intensive.
+We published our [2022 showreels]({{% ref "article/announcing-godot-2022-showreels" %}}), and they looks amazing! The quality and quantity of games published using Godot keep growing significantly every year. This year, we also added the tools category! Thanks to its powerful UI system and architecture, Godot is becoming a go-to platform to create applications and tools that are graphically intensive.
 
 ![](/storage/app/media/showreels.jpg)
 

@@ -33,8 +33,8 @@ The minimum requirement for a valid jam entry is thus to provide the full source
 
 ## Have fun!
 
-The main purpose of this jam is to have fun together as a community of Godot users. If you are beginning with Godot, don't hesitate to ask any question [on our various community channels](/community); there are no silly questions, so go ahead!
+The main purpose of this jam is to have fun together as a community of Godot users. If you are beginning with Godot, don't hesitate to ask any question [on our various community channels]({{% ref "community" %}}); there are no silly questions, so go ahead!
 
-If you are more experienced, why not take this opportunity to try to discover new [features](/features) of Godot that you might not be using yet (e.g. shaders, particles)? You may also use the [current development version of Godot 2.1](https://github.com/godotengine/godot) to do some alpha-testing while working on your jam game.
+If you are more experienced, why not take this opportunity to try to discover new [features]({{% ref "features" %}}) of Godot that you might not be using yet (e.g. shaders, particles)? You may also use the [current development version of Godot 2.1](https://github.com/godotengine/godot) to do some alpha-testing while working on your jam game.
 
 Good luck everyone, and enjoy the jam!

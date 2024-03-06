@@ -9,7 +9,7 @@ image_caption_description: "A game by Milan Gruner et al"
 date: 2023-07-21 16:00:00
 ---
 
-We are committed to providing support for multiple minor versions of Godot at the same time, as long as we have the capacity to do the work and there are fixes that can be safely backported. So even if your project cannot be migrated to [Godot 4.1](/article/maintenance-release-godot-4-1-1) right now, we still want to share with you some positive changes.
+We are committed to providing support for multiple minor versions of Godot at the same time, as long as we have the capacity to do the work and there are fixes that can be safely backported. So even if your project cannot be migrated to [Godot 4.1]({{% ref "article/maintenance-release-godot-4-1-1" %}}) right now, we still want to share with you some positive changes.
 
 It has been a few weeks since the release of Godot 4.0.3, which means it's high time for the next maintenance version! As is always the case with patch releases, 4.0.4 is focused on stability and bug fixes, as well as adding missing documentation. One important change in this release is a security fix for a potential denial of service when using ENet:
 - If your project uses `ENetMultiplayerPeer` or the low-level `ENetConnection`, then we strongly recommend updating to this version once it is released as stable. Be sure to test the build right now to prepare and have a smooth transition. Thanks to [Facundo Fernández](https://github.com/Facundo15) for reporting this vulnerability. A patch has been submitted to the upstream ENet repository as well.
@@ -103,4 +103,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

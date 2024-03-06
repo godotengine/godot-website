@@ -9,7 +9,7 @@ date: 2022-11-29 17:02:10
 
 **TL;DR:** We are getting closer than ever to releasing Godot 4.0. After years of development and countless hours spent by our contributors, we believe it’s finally ready for production use. But no matter the amount of time dedicated to testing and profiling — bugs and issues are inevitable. We believe that the Godot community understands this and expects as much. Still, we intend to quickly follow 4.0 with bug fix releases as we are dedicated to ensuring a stable experience as soon as possible.
 
-As those of you following the beta posts know, the work to finalize Godot 4.0 prior to release is in full swing. We have been in [feature freeze](https://godotengine.org/article/godot-4-0-development-enters-feature-freeze) since mid-August and have been focused on fixing workflow breaking bugs since then (well, we have accepted some small features and enhancements on occasion).
+As those of you following the beta posts know, the work to finalize Godot 4.0 prior to release is in full swing. We have been in [feature freeze]({{% ref "article/godot-4-0-development-enters-feature-freeze" %}}) since mid-August and have been focused on fixing workflow breaking bugs since then (well, we have accepted some small features and enhancements on occasion).
 
 In this post, we hope to shed some light on our expectations for version 4.0 and the future of Godot 4.x. To get a better perspective, let us first explain a few things about Godot 3 and the release of its first iteration. As the community has grown exponentially over the past few years, many current users may not remember the release of 3.0.
 
@@ -24,7 +24,7 @@ The process of creating version 3.0 of the engine was very similar to the proces
 That is to say, Godot 3.0 was not representative of what we aspired for Godot 3. After 3.0, each new release came with important features, optimizations, and, most importantly, many bug fixes.
 
 Each release brought new users with new hardware and new projects. Naturally, this exposed bugs that we did not catch during betas or release candidates. As an open source project without a dedicated quality assurance team, we rely on user feedback in order to catch bugs. As a result, we cannot fix everything prior to release.
-Contributors have continued to iterate on Godot 3.x, to the point where version 3.5 almost feels like a different engine than Godot 3.0. We are incredibly proud of [the state of Godot 3.5](https://godotengine.org/article/godot-3-5-cant-stop-wont-stop) and we are eager to finish and share its direct successor, version 3.6 with you.
+Contributors have continued to iterate on Godot 3.x, to the point where version 3.5 almost feels like a different engine than Godot 3.0. We are incredibly proud of [the state of Godot 3.5]({{% ref "article/godot-3-5-cant-stop-wont-stop" %}}) and we are eager to finish and share its direct successor, version 3.6 with you.
 
 ## Godot 4.0
 

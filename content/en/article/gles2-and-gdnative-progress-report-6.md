@@ -39,7 +39,7 @@ The GLES2 backend is getting closer and closer to completion, this progress repo
 
 ### environment reflections
 
-At the end of [last month](https://godotengine.org/article/gles2-and-gdnative-progress-report-5) I was able to load and show a skybox as a background. The next step is to get reflecting materials to show that sky. Or more specifically: the light reflected from a surface should include radiance from the sky.
+At the end of [last month]({{% ref "article/gles2-and-gdnative-progress-report-5" %}}) I was able to load and show a skybox as a background. The next step is to get reflecting materials to show that sky. Or more specifically: the light reflected from a surface should include radiance from the sky.
 
 The first step to getting something like that shown is to know where in the world you actually are. This is a screenshot that displays the object-space position of each pixel as the color.
 

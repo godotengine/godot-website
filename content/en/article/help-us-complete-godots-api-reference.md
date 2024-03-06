@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/578/778/e37/578778e37372a436221460.png
 date: 2016-07-14 00:00:00
 ---
 
-A bit less than 3 months ago, we made a call for contributors to [help us work on filling the class reference](/article/fill-blank-class-reference). We got a handful of new documentation writers who [did a great job](https://github.com/godotengine/godot/commits/master/doc/base/classes.xml), helping document some of the most important classes for the upcoming 2.1 release. Many of those improvements were backported to the stable 2.0 branch too and are available in the [freshly released 2.0.4.1](/article/maintenance-release-godot-2-0-4) and on the [online documentation](http://docs.godotengine.org) already.
+A bit less than 3 months ago, we made a call for contributors to [help us work on filling the class reference]({{% ref "article/fill-blank-class-reference" %}}). We got a handful of new documentation writers who [did a great job](https://github.com/godotengine/godot/commits/master/doc/base/classes.xml), helping document some of the most important classes for the upcoming 2.1 release. Many of those improvements were backported to the stable 2.0 branch too and are available in the [freshly released 2.0.4.1]({{% ref "article/maintenance-release-godot-2-0-4" %}}) and on the [online documentation](http://docs.godotengine.org) already.
 
 ## What's the current status?
 
@@ -21,6 +21,6 @@ As you can see on the above graph, the progress has been impressive lately, but 
 
 If we can grow the team and get more regular contributors, this would reduce the load for everyone and we should be able to close the gap pretty fast.
 
-To write documentation for Godot, you don't have to be a power user, but mostly you need to have some time available. So if you do, please consider helping us with the effort! Check the [previous blog post on this topic](/article/fill-blank-class-reference) for all the details about the workflow. Note the link to the [class reference status](https://etherpad.net/p/godot-classref-status) which shows the current progress and who's working on what.
+To write documentation for Godot, you don't have to be a power user, but mostly you need to have some time available. So if you do, please consider helping us with the effort! Check the [previous blog post on this topic]({{% ref "article/fill-blank-class-reference" %}}) for all the details about the workflow. Note the link to the [class reference status](https://etherpad.net/p/godot-classref-status) which shows the current progress and who's working on what.
 
 If you have any questions, get in touch with the Documentation team on Freenode IRC, [channel #godotengine-doc](http://webchat.freenode.net/?channels=godotengine-doc).

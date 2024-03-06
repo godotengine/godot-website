@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5b1/7f6/458/5b17f6458fa5c055437751.jpg
 date: 2018-06-06 14:57:11
 ---
 
-*The following post is a guest article by Michael Bridges of [GameDev.tv](https://www.gamedev.tv), where he runs the Blender course among other things. He is collaborating with Yann Burrett and Ben Tristem on their [upcoming Godot course on Udemy](/article/ben-tristem-gamedevtv-are-kickstarting-godot-course), and offered to share a tutorial on how to import 3D assets from Blender using Godot's "Better" Collada exporter.*
+*The following post is a guest article by Michael Bridges of [GameDev.tv](https://www.gamedev.tv), where he runs the Blender course among other things. He is collaborating with Yann Burrett and Ben Tristem on their [upcoming Godot course on Udemy]({{% ref "article/ben-tristem-gamedevtv-are-kickstarting-godot-course" %}}), and offered to share a tutorial on how to import 3D assets from Blender using Godot's "Better" Collada exporter.*
 
 ## Importing 3D assets
 

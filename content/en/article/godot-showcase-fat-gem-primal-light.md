@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/604/11f/d88/60411fd88eb88947959052.png
 date: 2021-03-04 17:00:00
 ---
 
-Welcome to the fourth developer interview following the [introduction of the Godot Showcase page](https://godotengine.org/article/new-showcase-for-projects-made-with-godot)! This week, we are interviewing the studio Fat Gem about their first game *Primal Light*.
+Welcome to the fourth developer interview following the [introduction of the Godot Showcase page]({{% ref "article/new-showcase-for-projects-made-with-godot" %}})! This week, we are interviewing the studio Fat Gem about their first game *Primal Light*.
 
 ___
 

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5ca/c31/576/5cac315766846559086274.png
 date: 2019-05-22 08:48:46
 ---
 
-With the Godot 3.1 release, the [Visual Shader editor](/article/visual-shader-editor-back) was recreated from the ashes of its Godot 2.x ancestor. While usable and packed with visual features, Visual Shaders lacked many features from their Shader (script) big brother. A new update has been prepared for Godot 3.2 to solve this problem.
+With the Godot 3.1 release, the [Visual Shader editor]({{% ref "article/visual-shader-editor-back" %}}) was recreated from the ashes of its Godot 2.x ancestor. While usable and packed with visual features, Visual Shaders lacked many features from their Shader (script) big brother. A new update has been prepared for Godot 3.2 to solve this problem.
 
 My name is Chaosus, I'm the one of the core contributors of Godot, and I'm gladly presenting this update to our beloved engine. So, let's begin reviewing the new features.
 

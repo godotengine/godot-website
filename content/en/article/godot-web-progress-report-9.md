@@ -9,7 +9,7 @@ date: 2021-06-30 16:20:00
 
 Howdy Godotters!
 
-It hasn't been long since the [last Web progress report](https://godotengine.org/article/godot-web-progress-report-8), but it's finally time for the blog entry you have probably been waiting for... time to talk about **integrating Godot with third-party JavaScript APIs on the Web**.
+It hasn't been long since the [last Web progress report]({{% ref "article/godot-web-progress-report-8" %}}), but it's finally time for the blog entry you have probably been waiting for... time to talk about **integrating Godot with third-party JavaScript APIs on the Web**.
 
 ### Motivation
 

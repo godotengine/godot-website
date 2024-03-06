@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/62f/3cf/f69/62f3cff699de5885323719.png
 date: 2022-08-11 09:33:06
 ---
 
-We're working towards finalizing the feature set for 4.0 beta, reviewing many PRs which have been opened prior to our roadmap [feature freeze](/article/godot-4-0-development-enters-feature-freeze) announced a couple of weeks ago. While this process is ongoing, we'll keep releasing alpha builds so here's **4.0 alpha 14**! Same deal as usual, lots of bugs fixed and more refactoring and feature work.
+We're working towards finalizing the feature set for 4.0 beta, reviewing many PRs which have been opened prior to our roadmap [feature freeze]({{% ref "article/godot-4-0-development-enters-feature-freeze" %}}) announced a couple of weeks ago. While this process is ongoing, we'll keep releasing alpha builds so here's **4.0 alpha 14**! Same deal as usual, lots of bugs fixed and more refactoring and feature work.
 
 Some noteworthy changes in this release:
 
@@ -27,7 +27,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 14 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 14 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/82811367cb36d3124d4e8c0a9c4c7f82dc64f9e4...106b6805018649b13da9e9508e80611f62ed660a) for an overview of all changes since 4.0 alpha 13 (288 commits – excluding merge commits ― from 93 contributors).
 

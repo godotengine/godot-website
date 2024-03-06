@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5cf/69b/132/5cf69b132699d052649367.png
 date: 2019-06-04 17:28:31
 ---
 
-It's been a long time since [our previous release](/article/maintenance-release-godot-2-1-5) in the 2.1 branch!
+It's been a long time since [our previous release]({{% ref "article/maintenance-release-godot-2-1-5" %}}) in the 2.1 branch!
 
 "Wait," I hear you say, "is the 2.1 branch still maintained 3 years after its first release?"
 
@@ -23,7 +23,7 @@ Apple Store now requires binaries compiled against the iOS SDK 12.1 or later to 
 
 As mentioned above, this new release is made for people using Godot 2.1.x in production. Many users started projects years ago with Godot 2.1 and are still developing them, about to release them or need to ship updates. Upgrading to Godot 3.0 or later is not straightforward due to various compatibility breakages that we did at the time, so these users need long term support.
 
-If you want to start a new project, there is no reason to use Godot 2.1.6 which is based on a 3 years old code branch. You should instead use the [latest stable release](/download) to benefit from all the new features and bug fixes included over the years.
+If you want to start a new project, there is no reason to use Godot 2.1.6 which is based on a 3 years old code branch. You should instead use the [latest stable release]({{% ref "download" %}}) to benefit from all the new features and bug fixes included over the years.
 
 ### Download
 

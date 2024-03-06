@@ -13,10 +13,10 @@ This time, we are going to dig a bit deeper into the low-level territory, showin
 
 *See other articles in this Godot 4.0 networking series:*
 
-1. [Multiplayer in Godot 4.0: On servers, RSETs and state updates](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-1)
-2. [Multiplayer in Godot 4.0: RPC syntax, channels, ordering](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-2)
-3. (you are here) [Multiplayer in Godot 4.0: ENet wrappers, WebRTC](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-3)
-4. [Multiplayer in Godot 4.0: Scene Replication (part 1)](https://godotengine.org/article/multiplayer-changes-godot-4-0-report-4)
+1. [Multiplayer in Godot 4.0: On servers, RSETs and state updates]({{% ref "article/multiplayer-changes-godot-4-0-report-1" %}})
+2. [Multiplayer in Godot 4.0: RPC syntax, channels, ordering]({{% ref "article/multiplayer-changes-godot-4-0-report-2" %}})
+3. (you are here) [Multiplayer in Godot 4.0: ENet wrappers, WebRTC]({{% ref "article/multiplayer-changes-godot-4-0-report-3" %}})
+4. [Multiplayer in Godot 4.0: Scene Replication (part 1)]({{% ref "article/multiplayer-changes-godot-4-0-report-4" %}})
 
 Lower-level ENet
 ---

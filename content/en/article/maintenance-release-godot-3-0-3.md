@@ -7,11 +7,11 @@ image: /storage/app/uploads/public/5b2/146/640/5b214664037c0726907530.png
 date: 2018-06-13 13:00:00
 ---
 
-We are proud to announce the availability of Godot 3.0.3. Thanks to Ignacio Etcheverry ([neikeq](https://github.com/neikeq)) it is now possible to export C# based projects to Windows, Linux, and MacOSX! This release, however, still has the [APK permission problem](https://godotengine.org/article/fixing-godot-games-published-google-play). We're hoping to fix this problem soon. In the meantime we have a [tool that can fix your APKs after export available.](https://godotengine.org/article/godot-apk-fixer-tool)
+We are proud to announce the availability of Godot 3.0.3. Thanks to Ignacio Etcheverry ([neikeq](https://github.com/neikeq)) it is now possible to export C# based projects to Windows, Linux, and MacOSX! This release, however, still has the [APK permission problem]({{% ref "article/fixing-godot-games-published-google-play" %}}). We're hoping to fix this problem soon. In the meantime we have a [tool that can fix your APKs after export available.]({{% ref "article/godot-apk-fixer-tool" %}})
 
 Apart from the C# export fixes we've also fixed many bugs (we pulled in over 350 patches into this release!) and have a new universal touch to mouse translation system written by Pedro J. Estébanez ([RandomShaper](https://github.com/RandomShaper)).
 
-As usual you can go directly to our [Download](/download) page to download the new release. Itch.io and Steam releases are still in the process of being updated. Please check back later. **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
+As usual you can go directly to our [Download]({{% ref "download" %}}) page to download the new release. Itch.io and Steam releases are still in the process of being updated. Please check back later. **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
 
 I'd like to use this space to thank our contributors. The effort they put into Godot makes the building of the pyramids look like building a sandcastle.
 
@@ -67,6 +67,6 @@ None
 * `move_and_slide()` doesn't quite work correctly. An easy workaround is to increase the safe margin to 0.05 (or higher if required). It is not yet clear how to implement the proper fix without impacting users who already implemented this workaround in their projects. See [issue #16459](https://github.com/godotengine/godot/issues/16459) for an explanation.
 * When exporting to iOS you get an error about missing or corrupt templates if the App Store Team Id or Required Icons are not set even if the templates are installed.
 * There are some issues with the asset library browser when moving the window while images are loading, this sometimes leads to a crash on Windows.
-* APKs exported using the editor have placeholder permissions. If you don't have a privacy policy for your game it will be rejected from the App store. [We have a tool to work around this issue available.](https://godotengine.org/article/godot-apk-fixer-tool)
+* APKs exported using the editor have placeholder permissions. If you don't have a privacy policy for your game it will be rejected from the App store. [We have a tool to work around this issue available.]({{% ref "article/godot-apk-fixer-tool" %}})
 
 *The illustration picture is courtesy of FireBelly (http://tenaciousgame.com/), who is making a game called 'Tenacious' which is a loot-heavy 2D dungeon crawler with rogue-like elements using Godot written in C#.*

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5bb/dcb/46c/5bbdcb46c6eee640012032.png
 date: 2018-10-10 10:19:58
 ---
 
-While the [GodotCon](https://godotengine.org/article/schedule-godotcon-2018-poznan) in Poznań is ongoing ([Livestream here!](https://www.youtube.com/watch?v=G2c_kL23yI8)), our awesome community could not wait for the next official Godot Jam and just got one started on their own: [The Godot Wild Jam](http://www.godotwild.com/).
+While the [GodotCon]({{% ref "article/schedule-godotcon-2018-poznan" %}}) in Poznań is ongoing ([Livestream here!](https://www.youtube.com/watch?v=G2c_kL23yI8)), our awesome community could not wait for the next official Godot Jam and just got one started on their own: [The Godot Wild Jam](http://www.godotwild.com/).
 
 Conveniently starting right after GodotCon, the second iteration of their monthly community jam already has lots of signups on [itch.io](https://itch.io/jam/godot-wild-jam-2) - and because we always love community members stepping up to create things for others to enjoy, we encourage you to join them and have fun!
 

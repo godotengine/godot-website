@@ -9,13 +9,13 @@ image_caption_description: A visual novel by SenAm Games
 date: 2023-09-25 14:00:00
 ---
 
-Long time no see, Godot 3.5! While our development focus since [Godot 4.0](/article/godot-4-0-sets-sail/) in March has been to release new 4.x versions at a steady pace (with [Godot 4.1](/article/godot-4-1-is-here/) in July, and Godot 4.2 scheduled for November), we're not forgetting about users who are still using Godot 3.5.
+Long time no see, Godot 3.5! While our development focus since [Godot 4.0]({{% ref "article/godot-4-0-sets-sail" %}}) in March has been to release new 4.x versions at a steady pace (with [Godot 4.1]({{% ref "article/godot-4-1-is-here" %}}) in July, and Godot 4.2 scheduled for November), we're not forgetting about users who are still using Godot 3.5.
 
-Everyone seemed pretty happy with the [3.5.2 release](/article/maintenance-release-godot-3-5-2/). In the 6 months since the 3.5.2 release, hundreds of games have been released with this version. But there are still a number of issues that are worth addressing in that branch, including notably some improvements for platform support such as targeting Android 13 by default. Also, we're still working on the upcoming Godot 3.6 feature release, which should soon reach the release candidate stage.
+Everyone seemed pretty happy with the [3.5.2 release]({{% ref "article/maintenance-release-godot-3-5-2" %}}). In the 6 months since the 3.5.2 release, hundreds of games have been released with this version. But there are still a number of issues that are worth addressing in that branch, including notably some improvements for platform support such as targeting Android 13 by default. Also, we're still working on the upcoming Godot 3.6 feature release, which should soon reach the release candidate stage.
 
 **This is a safe and recommended update for all Godot 3.5.x users.** It should have no major impact on your projects, even complex ones in production, if you're already using 3.5.2-stable.
 
-[**Download Godot 3.5.3 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.5.3.stable/).
+[**Download Godot 3.5.3 now**]({{% ref "download/3.x" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.5.3.stable/).
 
 *The illustration picture is from* [**Hauma**](https://store.steampowered.com/app/1443470/Hauma__A_Detective_Noir_Story/), *a deduction visual novel with a noir story set in Munich. It was developed in Godot 3.5 by [SenAm Games](https://www.senam-games.com/) and published by [Assemble Entertainment](https://twitter.com/AssembleTeam). It was released [on Steam](https://store.steampowered.com/app/1443470/Hauma__A_Detective_Noir_Story/) a couple of weeks ago, so you can play it right now and enjoy this deep story with a gorgeous comic-inspired art direction.*
 
@@ -82,4 +82,4 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

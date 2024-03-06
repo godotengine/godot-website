@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/610/a74/76f/610a7476f0ddd438980306.jpg
 date: 2021-08-04 11:06:53
 ---
 
-While we're busy working on both the upcoming Godot 4.0 and 3.4 releases (with a dev snapshot for [3.4 beta 2](/article/dev-snapshot-godot-3-4-beta-2) available now), we still cherry-pick important bug fixes to the 3.3 branch regularly for maintenance releases (see our [release policy](https://docs.godotengine.org/en/3.3/about/release_policy.html)).
+While we're busy working on both the upcoming Godot 4.0 and 3.4 releases (with a dev snapshot for [3.4 beta 2]({{% ref "article/dev-snapshot-godot-3-4-beta-2" %}}) available now), we still cherry-pick important bug fixes to the 3.3 branch regularly for maintenance releases (see our [release policy](https://docs.godotengine.org/en/3.3/about/release_policy.html)).
 
-[Godot 3.3.2](/article/maintenance-release-godot-3-3-2) was released in May, and a number of useful fixes have been queued in the [`3.3` branch](https://github.com/godotengine/godot/tree/3.3) since then, so now's a good time to push them in production.
+[Godot 3.3.2]({{% ref "article/maintenance-release-godot-3-3-2" %}}) was released in May, and a number of useful fixes have been queued in the [`3.3` branch](https://github.com/godotengine/godot/tree/3.3) since then, so now's a good time to push them in production.
 
 As there is no new feature and only bug fixes, this RC 1 should be as stable as 3.3.2-stable and can be used in production if you need one of the fixes it includes.
 
@@ -64,7 +64,7 @@ This release is built from commit [f6c29d1cf5eddebbace38172c0f30b6d4ab5e5f2](htt
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Standard build](https://downloads.tuxfamily.org/godotengine/3.3.3/rc1/) (GDScript, GDNative, VisualScript).
   * Note: UWP export templates are missing from this build, will be re-added in the next build.
@@ -78,6 +78,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

@@ -17,6 +17,6 @@ There is still a lot of work remaining and also upcoming tasks like ensuring God
 
 ## Next funding goal
 
-We announced a [funding reorganization](/article/donation-changes) some days ago and we are soon going to announce new hires that will start working full-time in the coming months. To ensure that the project has sufficient funds to hire Ignacio in the long term (or at least until the new grant can be worked out), we are hopeful you can help us reach the [next funding goal](https://www.patreon.com/godotengine) at **$15,000**.
+We announced a [funding reorganization]({{% ref "article/donation-changes" %}}) some days ago and we are soon going to announce new hires that will start working full-time in the coming months. To ensure that the project has sufficient funds to hire Ignacio in the long term (or at least until the new grant can be worked out), we are hopeful you can help us reach the [next funding goal](https://www.patreon.com/godotengine) at **$15,000**.
 
 We are counting on you for this!

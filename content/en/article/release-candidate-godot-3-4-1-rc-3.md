@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/61b/9cc/311/61b9cc311bc89101425616.jpg
 date: 2021-12-15 11:06:27
 ---
 
-[Godot 3.4](/article/godot-3-4-is-released) was released a month ago, and it went fairly smoothly! Many thanks to all the contributors who worked on it, including all testers who tried beta and RC releases to ensure that the 3.4-stable branch would be an easy and worthwhile upgrade path for all users.
+[Godot 3.4]({{% ref "article/godot-3-4-is-released" %}}) was released a month ago, and it went fairly smoothly! Many thanks to all the contributors who worked on it, including all testers who tried beta and RC releases to ensure that the 3.4-stable branch would be an easy and worthwhile upgrade path for all users.
 
 No software release is perfect though, so there will always be some things to iron out, which is why we usually provide maintenance releases for stable branches, focusing on bugfixing and preserving compatibility (see our [release policy](https://docs.godotengine.org/en/stable/about/release_policy.html)). A number of fixes have been queued already in the `3.4` branch for Godot 3.4.1, so here's a new [release candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) to validate them.
 
@@ -88,7 +88,7 @@ Here are some of the main changes since 3.4-stable:
 
 See the full changelog since 3.4-stable [on GitHub](https://github.com/godotengine/godot/compare/3.4-stable...69585b051629ec9f8be63a1b5212510f98b81e6f), or in text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.4.1/rc3/Godot_v3.4.1-rc3_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.4.1/rc3/Godot_v3.4.1-rc3_changelog_chrono.txt)).
 
-If you reviewed changes in [3.4.1 RC 2](/article/release-candidate-godot-3-4-1-rc-2) already, here's the [changelog between RC 2 and RC 3](https://github.com/godotengine/godot/compare/d5aa00c2cb6e240ec1ec572e3d4bd9c5325ff219...69585b051629ec9f8be63a1b5212510f98b81e6f).
+If you reviewed changes in [3.4.1 RC 2]({{% ref "article/release-candidate-godot-3-4-1-rc-2" %}}) already, here's the [changelog between RC 2 and RC 3](https://github.com/godotengine/godot/compare/d5aa00c2cb6e240ec1ec572e3d4bd9c5325ff219...69585b051629ec9f8be63a1b5212510f98b81e6f).
 
 This release is built from commit [`69585b051`](https://github.com/godotengine/godot/commit/69585b051629ec9f8be63a1b5212510f98b81e6f) (see [README](https://downloads.tuxfamily.org/godotengine/3.4.1/rc3/README.txt)).
 
@@ -108,6 +108,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

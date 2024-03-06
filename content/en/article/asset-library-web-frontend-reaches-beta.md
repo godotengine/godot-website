@@ -61,7 +61,7 @@ We will provide more information about this in the docs in the coming weeks, but
 
 Keep in mind that assets are unzipped directly at the root of your project's folder. Therefore, for plugins, you should use a `addons/yourassetname/` folder in your git repository.
 
-If you are in doubt, don't hesitate to ask for guidance on one of the many [community channels](/community)!
+If you are in doubt, don't hesitate to ask for guidance on one of the many [community channels]({{% ref "community" %}})!
 
 ## Future developments
 

@@ -13,7 +13,7 @@ If you use any of the following permissions: `CALENDAR, CAMERA, CONTACTS, LOCATI
 
 Other than this we've fixed an error on exported C# projects and fixed some other small issues. I expect the next release to be a bit meatier.
 
-As usual you can go directly to our [Download](/download) page to download the new release. Itch.io and Steam releases will be updated soon **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
+As usual you can go directly to our [Download]({{% ref "download" %}}) page to download the new release. Itch.io and Steam releases will be updated soon **Please note that for the Mono releases you *must* use Mono 5.12.0 on all platforms.**
 
 As always this release would not have been possible without the laserlike focus of our wonderful contributors.
 

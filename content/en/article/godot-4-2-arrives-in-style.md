@@ -7,7 +7,7 @@ image: /storage/blog/covers/godot-4-2-arrives-in-style.webp
 date: 2023-11-30 12:00:00
 ---
 
-Earlier this year we stepped into the future of Godot with the [release of Godot 4.0](/article/godot-4-0-sets-sail), and 4 months later we followed it up with [Godot 4.1](/article/godot-4-1-is-here) which was full of new features and improvements. Today we are proud to announce the release of Godot 4.2, our latest and greatest offering to game developers looking for a free and open engine that inspires joy and creativity!
+Earlier this year we stepped into the future of Godot with the [release of Godot 4.0]({{% ref "article/godot-4-0-sets-sail" %}}), and 4 months later we followed it up with [Godot 4.1]({{% ref "article/godot-4-1-is-here" %}}) which was full of new features and improvements. Today we are proud to announce the release of Godot 4.2, our latest and greatest offering to game developers looking for a free and open engine that inspires joy and creativity!
 
 Over the course of the last 5 months **359 contributors** submitted more than **1800 improvements** for this release, and we cannot thank each of them enough for their dedication and relentless spirit, their trust in the project, and their generosity. We also must express our love for everyone reporting issues during the testing period and helping us make sure that thousands of Godot users get the best version of the engine we can collectively create.
 
@@ -292,7 +292,7 @@ In turn, the iOS platform gets some love and parity with Android with the additi
 
 Linux support comes naturally in open source, as many Godot contributors daily-drive various Linux distributions. One of the more obscure variations that the engine supports is Linux for ARM processors. While the engine could always be built for this target, we never provided official distributions for Linux on ARM. But thanks to an effort from [HP van Braam](https://github.com/hpvb) and [Rémi Verschelde](https://github.com/akien-mga) to update our build toolchains ([GHBC-128](https://github.com/godotengine/build-containers/pull/128), [GHBC-131](https://github.com/godotengine/build-containers/pull/131)), we now can.
 
-You can find the link to the ARM version of the editor (both 32 and 64-bit) on the list of downloads on the [release page](/download/archive/4.2-stable). Export templates automatically include this platform. Since this is a relatively new version of the engine, some initial issues are highly likely – in fact, we're already aware of issues running executables on Raspberry Pi OS. Please, treat this as an experimental feature and make sure to report problems if you run into any!
+You can find the link to the ARM version of the editor (both 32 and 64-bit) on the list of downloads on the [release page]({{% ref "download/archive/4.2-stable" %}}). Export templates automatically include this platform. Since this is a relatively new version of the engine, some initial issues are highly likely – in fact, we're already aware of issues running executables on Raspberry Pi OS. Please, treat this as an experimental feature and make sure to report problems if you run into any!
 
 
 ### Rendering, particles, and shaders
@@ -398,7 +398,7 @@ To close things off for GDScript, a contribution to the language server from [Ry
 
 ### XR
 
-Godot's lead XR maintainer [Bastiaan Olij](https://github.com/BastiaanOlij) recently [published a progress report](/article/godot-xr-update-sep-2023) on new and upcoming XR features, which you should definitely read! Some highlights from the list of changes, implemented by Bastiaan himself, include foveated rendering support, ported from Godot 3.x ([GH-80881](https://github.com/godotengine/godot/pull/80881)), and access to raw hand-tracking data ([GH-78032](https://github.com/godotengine/godot/pull/78032)).
+Godot's lead XR maintainer [Bastiaan Olij](https://github.com/BastiaanOlij) recently [published a progress report]({{% ref "article/godot-xr-update-sep-2023" %}}) on new and upcoming XR features, which you should definitely read! Some highlights from the list of changes, implemented by Bastiaan himself, include foveated rendering support, ported from Godot 3.x ([GH-80881](https://github.com/godotengine/godot/pull/80881)), and access to raw hand-tracking data ([GH-78032](https://github.com/godotengine/godot/pull/78032)).
 
 On top of that, a significant contribution by [konczg](https://github.com/konczg) from [Migeran](https://github.com/migeran) opens up the OpenXR module to be extended and interacted with from the GDExtension API ([GH-68259](https://github.com/godotengine/godot/pull/68259)). We can't wait for your projects utilizing this capability to its fullest!
 

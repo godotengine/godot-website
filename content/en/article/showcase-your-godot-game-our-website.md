@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/577/10f/154/57710f154bf65180806121.png
 date: 2016-06-27 00:00:00
 ---
 
-As a relatively young game engine on the market (at least with regards to our open sourcing [two years ago](/article/first-public-release)), we are often asked to showcase what are the features of the engine. But an engine such as Godot has hundreds of features catering to different use cases, and it's obviously difficult to do them all justice; especially when cool new features keep incoming in the [development branch](https://github.com/godotengine/godot/commits/master)!
+As a relatively young game engine on the market (at least with regards to our open sourcing [two years ago]({{% ref "article/first-public-release" %}})), we are often asked to showcase what are the features of the engine. But an engine such as Godot has hundreds of features catering to different use cases, and it's obviously difficult to do them all justice; especially when cool new features keep incoming in the [development branch](https://github.com/godotengine/godot/commits/master)!
 
 ## Showcasing Godot-made games
 

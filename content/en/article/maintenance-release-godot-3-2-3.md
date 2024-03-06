@@ -9,11 +9,11 @@ image_caption_description: Game by Leocesar3D made with Godot Engine
 date: 2020-09-17 13:22:53
 ---
 
-Godot contributors are proud to release **Godot 3.2.3** as a maintenance update to the stable `3.2` branch. The main development focus for this version was to fix regressions reported against the fairly big [3.2.2 release](/article/maintenance-release-godot-3-2-2) from June, but in the process many other bugfixes for older issues have been merged.
+Godot contributors are proud to release **Godot 3.2.3** as a maintenance update to the stable `3.2` branch. The main development focus for this version was to fix regressions reported against the fairly big [3.2.2 release]({{% ref "article/maintenance-release-godot-3-2-2" %}}) from June, but in the process many other bugfixes for older issues have been merged.
 
 There's one big change for C# users though, which is that the `.csproj` project definition now uses a more modern format relying on a new `Godot.NET.Sdk`, which should help solve many build issues. This also enables changing the target .NET framework: by default, it is still .NET Framework 4.7.2, but it can be changed manually to .NET Standard 2.0 or greater.
 
-[**Download Godot 3.2.3**](/download) now and read on about the changes in this update.
+[**Download Godot 3.2.3**]({{% ref "download" %}}) now and read on about the changes in this update.
 
 *Note: [Illustration credits](#credits) at the bottom of this page.*
 
@@ -101,15 +101,15 @@ While we strive to preserve compatibility in the 3.2 branch, there's a lot of su
 - Physics: The fixes to the damping implementation for Bullet physics may impact how your 3D physics behave, if you relied on that feature. See [GH-42051](https://github.com/godotengine/godot/issues/42051#issuecomment-692132877) for advice on how to change your damping values to reproduce the pre-3.2.3 behavior.
 - Sprite3D: The ``material_override`` now overrides the ``texture`` when drawing. So when using a ``material_override`` you will have to set the ``Sprite3D``'s ``texture`` and the ``albedo_texture`` to the same texture.
 
-If you upgrade from 3.2 or 3.2.1, be sure to also check the [changes from 3.2.2](/article/maintenance-release-godot-3-2-2) which might impact your project.
+If you upgrade from 3.2 or 3.2.1, be sure to also check the [changes from 3.2.2]({{% ref "article/maintenance-release-godot-3-2-2" %}}) which might impact your project.
 
 If you experience any unexpected behavior change in your projects after upgrading from a previous version to 3.2.3, please [file an issue on GitHub](https://github.com/godotengine/godot/issues).
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 -----
 

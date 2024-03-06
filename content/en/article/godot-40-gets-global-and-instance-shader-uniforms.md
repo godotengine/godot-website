@@ -116,7 +116,7 @@ This is often very overlooked. We think materials are edited and that's it, but 
 
 You could control this with regular uniforms, but imagine setting this on every material when it starts raining! Again, this can be easily done with global uniforms.
 
-So, to make it short, global uniforms are extremely useful and can help you add a lot of detail to your game. In Godot, they work for every shader type, including the recently introduced [sky shaders](https://godotengine.org/article/custom-sky-shaders-godot-4-0).
+So, to make it short, global uniforms are extremely useful and can help you add a lot of detail to your game. In Godot, they work for every shader type, including the recently introduced [sky shaders]({{% ref "article/custom-sky-shaders-godot-4-0" %}}).
 
 ## Per instance uniforms
 

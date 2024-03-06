@@ -9,7 +9,7 @@ date: 2020-07-08 00:01:00
 
 ## Status
 
-The project situation changed a lot for the better in the past few months, with a steady growth in the amount of users and contributors, and a nice boost to our funding situation thanks to an [Epic MegaGrant](https://godotengine.org/article/godot-engine-was-awarded-epic-megagrant) which will cover my (Juan) and George's work for the next two years, freeing donation funds for new purposes. Therefore, we discussed with core contributors that this is a good time to change how the project manages donations, and give our whole crowdfunding a much-needed update.
+The project situation changed a lot for the better in the past few months, with a steady growth in the amount of users and contributors, and a nice boost to our funding situation thanks to an [Epic MegaGrant]({{% ref "article/godot-engine-was-awarded-epic-megagrant" %}}) which will cover my (Juan) and George's work for the next two years, freeing donation funds for new purposes. Therefore, we discussed with core contributors that this is a good time to change how the project manages donations, and give our whole crowdfunding a much-needed update.
 
 ## Goals changed
 
@@ -19,7 +19,7 @@ Similar to how Blender is now doing, we will be changing goals to increments of 
 
 ## Profiles
 
-In May, we had [a first budget meeting](https://godotengine.org/article/godot-core-budget-meeting-report-1) with core contributors to discuss what future work we want to fund using project donations, be it full-time contracts for area maintainers or project-specific work packages. Some of those will be covered by funds which we already accumulated from previous months of excess funding, while others are dependent on reach a sustainable level of monthly income through Patreon and corporate sponsorship.
+In May, we had [a first budget meeting]({{% ref "article/godot-core-budget-meeting-report-1" %}}) with core contributors to discuss what future work we want to fund using project donations, be it full-time contracts for area maintainers or project-specific work packages. Some of those will be covered by funds which we already accumulated from previous months of excess funding, while others are dependent on reach a sustainable level of monthly income through Patreon and corporate sponsorship.
 
 Listing the names of the contributors who we intend to hire is difficult for the reasons mentioned before, but we will instead post the profiles of those who we are looking forward to hire. If you want to guess who the person may be from there on it's up to you :) So far, the profiles we will be putting up will be:
 

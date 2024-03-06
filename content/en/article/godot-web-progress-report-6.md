@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/605/23a/448/60523a448123d203397950.png
 date: 2021-03-20 18:30:00
 ---
 
-Howdy Godotters! Quite a lot happened since my [last update](https://godotengine.org/article/godot-web-progress-report-5). Beside working on the [custom HTML shell improvements](https://github.com/godotengine/godot-proposals/issues/2182), and the long awaited fixes for HiDPI/fullscreen, I took some time to make the [Web Editor](https://editor.godotengine.org) a Progressive Web App as requested by many users. While I was there, I took some more time to rework the loading process of the engine and make it load faster on the Web.
+Howdy Godotters! Quite a lot happened since my [last update]({{% ref "article/godot-web-progress-report-5" %}}). Beside working on the [custom HTML shell improvements](https://github.com/godotengine/godot-proposals/issues/2182), and the long awaited fixes for HiDPI/fullscreen, I took some time to make the [Web Editor](https://editor.godotengine.org) a Progressive Web App as requested by many users. While I was there, I took some more time to rework the loading process of the engine and make it load faster on the Web.
 
 ### Web Editor PWA
 

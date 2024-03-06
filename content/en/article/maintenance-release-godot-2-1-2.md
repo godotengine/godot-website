@@ -9,9 +9,9 @@ date: 2017-01-21 18:33:51
 
 Five months after the release of Godot 2.1, and two months after 2.1.1, it's the right time for another maintenance release in the stable branch!
 
-While we are all looking with avid eyes at the awesome developments for Godot 3.0 shown on our [Devblog](/devblog) or [Juan's Twitter](https://twitter.com/reduzio), you won't find much of them in this release... but it should already have some quality of life improvements and important bug fixes that you will definitely want for your published and WIP projects.
+While we are all looking with avid eyes at the awesome developments for Godot 3.0 shown on our [Devblog]({{% ref "blog" %}}) or [Juan's Twitter](https://twitter.com/reduzio), you won't find much of them in this release... but it should already have some quality of life improvements and important bug fixes that you will definitely want for your published and WIP projects.
 
-[Download it now!](/download)
+[Download it now!]({{% ref "download" %}})
 
 ## Highlights
 

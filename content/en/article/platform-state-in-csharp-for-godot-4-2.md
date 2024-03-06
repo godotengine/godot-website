@@ -7,13 +7,13 @@ image: /storage/blog/covers/progress-update-csharp-2.webp
 date: 2024-01-26 17:00:00
 ---
 
-With the recent release of Godot [4.2](/article/godot-4-2-arrives-in-style), projects that use C# can now export to Android and iOS. Let's take a look at the current platform support for C# projects and what to expect from future releases beyond 4.2.
+With the recent release of Godot [4.2]({{% ref "article/godot-4-2-arrives-in-style" %}}), projects that use C# can now export to Android and iOS. Let's take a look at the current platform support for C# projects and what to expect from future releases beyond 4.2.
 
 ## Background
 
 First a bit of history. Godot 3 supports exporting C# projects to all the platforms supported by the engine. The C# implementation uses the [Mono embedding APIs](https://www.mono-project.com/docs/advanced/embedding/) and the [Mono runtime](https://www.mono-project.com/docs/advanced/runtime/). **Mono** is an open source cross-platform implementation of the Windows-only .NET Framework.
 
-With the [4.0 release](https://godotengine.org/article/godot-4-0-sets-sail/), the C# integration moved away from the Mono embedding APIs and replaced it with the .NET Core hosting APIs (using the `hostfxr` library). This allowed us to modernize the codebase and prepare for [.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/), the first release in the .NET unification journey. Unfortunately, in this move C# projects lost the ability to export to platforms other than Desktop (Windows, macOS and Linux).
+With the [4.0 release]({{% ref "article/godot-4-0-sets-sail" %}}), the C# integration moved away from the Mono embedding APIs and replaced it with the .NET Core hosting APIs (using the `hostfxr` library). This allowed us to modernize the codebase and prepare for [.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/), the first release in the .NET unification journey. Unfortunately, in this move C# projects lost the ability to export to platforms other than Desktop (Windows, macOS and Linux).
 
 Before **.NET unification** there was the Windows-only .NET Framework and the cross-platform Mono and .NET Core. Unification means there will be just one .NET going forward, so the next release after .NET Core 3.0 was named .NET 5, and Mono and .NET Framework won't have any new major releases.
 
@@ -23,7 +23,7 @@ However, in .NET 7.0 a new runtime became available, [**NativeAOT**](https://lea
 
 ## Platform support in 4.2
 
-Thanks to amazing work by [RedworkDE](https://github.com/RedworkDE) and [Andreia Gaita](https://github.com/shana), C# projects in Godot [4.2](/article/godot-4-2-arrives-in-style) have _experimental_ support for exporting to **Android** and **iOS**.
+Thanks to amazing work by [RedworkDE](https://github.com/RedworkDE) and [Andreia Gaita](https://github.com/shana), C# projects in Godot [4.2]({{% ref "article/godot-4-2-arrives-in-style" %}}) have _experimental_ support for exporting to **Android** and **iOS**.
 
 These initial implementations have some limitations which is why they are still marked experimental. We want to make sure the platform support is production-ready before we remove the experimental label. The platform limitations are documented in the [C# documentation](https://docs.godotengine.org/en/4.2/tutorials/scripting/c_sharp/index.html#c-platform-support), but we'll go over each platform here.
 
@@ -132,4 +132,4 @@ As new releases of .NET become available, platform support gets better. NativeAO
 
 Using NativeAOT is only one of the ways in which we can add support for more platforms to Godot C# projects, using the Mono runtime is another possibility. For a future Godot release, we want to explore bringing back some of the Mono embedding that was available in Godot 3 as an alternative way to support mobile and web platforms.
 
-Please, give Godot [4.2](/article/godot-4-2-arrives-in-style) a try and let us know if you find any bugs.
+Please, give Godot [4.2]({{% ref "article/godot-4-2-arrives-in-style" %}}) a try and let us know if you find any bugs.

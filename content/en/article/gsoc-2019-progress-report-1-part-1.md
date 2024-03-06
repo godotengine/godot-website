@@ -8,9 +8,9 @@ image: /storage/app/uploads/public/5d2/f37/8f4/5d2f378f489ad333505584.png
 date: 2019-07-17 14:58:28
 ---
 
-[As announced previously](https://godotengine.org/article/godot-google-summer-code-2019), Godot is participating for the second time in the [Google Summer of Code](https://summerofcode.withgoogle.com) (GSoC) programme, which lets students from all over the world work for three months on specific projects thanks to a Google stipend.
+[As announced previously]({{% ref "article/godot-google-summer-code-2019" %}}), Godot is participating for the second time in the [Google Summer of Code](https://summerofcode.withgoogle.com) (GSoC) programme, which lets students from all over the world work for three months on specific projects thanks to a Google stipend.
 
-In 2018 we had 5 students working on various features for Godot Engine, and you can read about their work in [last year's progress report](https://godotengine.org/article/gsoc-2018-progress-report-1).
+In 2018 we had 5 students working on various features for Godot Engine, and you can read about their work in [last year's progress report]({{% ref "article/gsoc-2018-progress-report-1" %}}).
 
 This year we had the opportunity to select 10 students to work on many interesting projects. I missed the chance to blog about their projects and present them when the coding period started in late May, sorry about that. We'll make up for this in this progress report where each student will present themselves and their project. We are now at the middle of the coding period, so students have around 6 weeks left in the GSoC programme.
 
@@ -25,7 +25,7 @@ Here is the list of projects and students with links to the relevant sections.
 - <a href="#gdscript-lsp">GDScript Language Server</a> by Ankit Priyarup
 - <a href="#visual-scripting">Improvements to the Visual Scripting System</a> by Swarnim Arun
 
-**Part 2 ([next post](/article/gsoc-2019-progress-report-1-part-2)):**
+**Part 2 ([next post]({{% ref "article/gsoc-2019-progress-report-1-part-2" %}})):**
 
 - <a href="/article/gsoc-2019-progress-report-1-part-2#lightmapper">Rewriting Godot's Light Mapper</a> by Joan Fons Sanchez
 - <a href="/article/gsoc-2019-progress-report-1-part-2#static-analyzer">Static Analyzer for GDScript</a> by Suhas Prasanna
@@ -280,6 +280,6 @@ Tasks planned that still remain are:
 
 -----
 
-That's it for this first batch of progress reports from our GSoC students. Four more reports are in the [part 2 blog post](/article/gsoc-2019-progress-report-1-part-2), and we should have a second progress report from all students towards the end of the coding period.
+That's it for this first batch of progress reports from our GSoC students. Four more reports are in the [part 2 blog post]({{% ref "article/gsoc-2019-progress-report-1-part-2" %}}), and we should have a second progress report from all students towards the end of the coding period.
 
 We hope that you will find good use cases for all the features that are being worked on, and we thank all students and mentors for their dedicated work on these projects!

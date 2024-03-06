@@ -9,7 +9,7 @@ date: 2021-06-16 16:00:00
 
 Howdy Godotters! Time for another update on the status of Godot on the web.
 
-It's been a while since [the last web report](https://godotengine.org/article/godot-web-progress-report-7) as we were busy releasing [Godot 3.3](https://godotengine.org/article/godot-3-3-has-arrived) and the following hotfixes, but as we move onto preparing for Godot `3.4` and the first alpha of Godot `4.0` (soon™), I'm happy to announce that starting from Godot `3.4` you will finally be able to export your HTML5 game as a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) (PWA)!
+It's been a while since [the last web report]({{% ref "article/godot-web-progress-report-7" %}}) as we were busy releasing [Godot 3.3]({{% ref "article/godot-3-3-has-arrived" %}}) and the following hotfixes, but as we move onto preparing for Godot `3.4` and the first alpha of Godot `4.0` (soon™), I'm happy to announce that starting from Godot `3.4` you will finally be able to export your HTML5 game as a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) (PWA)!
 
 PWA
 ===

@@ -9,7 +9,7 @@ image_caption_description: A demo scene by Wrobot
 date: 2023-10-12 14:00:00
 ---
 
-Over the course of [the last 3 months](/article/godot-4-1-is-here) **295 contributors** submitted more than **1300 improvements** for the Godot 4.2 release!
+Over the course of [the last 3 months]({{% ref "article/godot-4-1-is-here" %}}) **295 contributors** submitted more than **1300 improvements** for the Godot 4.2 release!
 
 Among these changes are both necessary bugfixes and exciting new features, turning Godot 4 into an even better and more polished tool for you to realize your game and app ideas. There are many more improvements to come, but for now we draw the line here and turn our efforts towards stabilizing the engine so it can be released officially at the start of November.
 
@@ -343,7 +343,7 @@ To close things off for GDScript, a contribution to the language server from [Ry
 
 ### XR
 
-Godot's lead XR maintainer [Bastiaan Olij](https://github.com/BastiaanOlij) recently [published a progress report](/article/godot-xr-update-sep-2023) on new and upcoming XR features, which you should definitely read! Some highlights from the list of changes, implemented by Bastiaan himself, include foveated rendering support, ported from Godot 3.x ([GH-80881](https://github.com/godotengine/godot/pull/80881)), and access to raw hand-tracking data ([GH-78032](https://github.com/godotengine/godot/pull/78032)).
+Godot's lead XR maintainer [Bastiaan Olij](https://github.com/BastiaanOlij) recently [published a progress report]({{% ref "article/godot-xr-update-sep-2023" %}}) on new and upcoming XR features, which you should definitely read! Some highlights from the list of changes, implemented by Bastiaan himself, include foveated rendering support, ported from Godot 3.x ([GH-80881](https://github.com/godotengine/godot/pull/80881)), and access to raw hand-tracking data ([GH-78032](https://github.com/godotengine/godot/pull/78032)).
 
 On top of that, a significant contribution by [konczg](https://github.com/konczg) from [Migeran](https://github.com/migeran) opens up the OpenXR module to be extended and interacted with from the GDExtension API ([GH-68259](https://github.com/godotengine/godot/pull/68259)). We can't wait for your projects utilizing this capability to its fullest!
 
@@ -378,4 +378,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

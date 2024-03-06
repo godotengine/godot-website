@@ -7,16 +7,16 @@ image: /storage/app/uploads/public/60b/4f2/b0a/60b4f2b0a8130694314324.png
 date: 2021-06-02 00:00:00
 ---
 
-It has been a while since my last report. In my [last post](https://godotengine.org/article/gdscript-progress-report-typed-instructions), I've mentioned GDNative, but since I've done only a bunch of "boring" stuff, I ended up not writing anything about it. Work on GDNative is not completed yet, so maybe I'll have something interesting to report later on. For now, let me show what was done on GDScript.
+It has been a while since my last report. In my [last post]({{% ref "article/gdscript-progress-report-typed-instructions" %}}), I've mentioned GDNative, but since I've done only a bunch of "boring" stuff, I ended up not writing anything about it. Work on GDNative is not completed yet, so maybe I'll have something interesting to report later on. For now, let me show what was done on GDScript.
 
 *See other articles in this Godot 4.0 GDScript series:*
 
-1. [GDScript progress report: Writing a tokenizer](https://godotengine.org/article/gdscript-progress-report-writing-tokenizer)
-2. [GDScript progress report: Writing a new parser](https://godotengine.org/article/gdscript-progress-report-writing-new-parser)
-3. [GDScript progress report: Type checking is back](https://godotengine.org/article/gdscript-progress-report-type-checking-back)
-4. [GDScript progress report: New GDScript is now merged](https://godotengine.org/article/gdscript-progress-report-new-gdscript-now-merged)
-5. [GDScript progress report: Typed instructions](https://godotengine.org/article/gdscript-progress-report-typed-instructions)
-6. (you are here) [GDScript progress report: Feature-complete for 4.0](https://godotengine.org/article/gdscript-progress-report-feature-complete-40)
+1. [GDScript progress report: Writing a tokenizer]({{% ref "article/gdscript-progress-report-writing-tokenizer" %}})
+2. [GDScript progress report: Writing a new parser]({{% ref "article/gdscript-progress-report-writing-new-parser" %}})
+3. [GDScript progress report: Type checking is back]({{% ref "article/gdscript-progress-report-type-checking-back" %}})
+4. [GDScript progress report: New GDScript is now merged]({{% ref "article/gdscript-progress-report-new-gdscript-now-merged" %}})
+5. [GDScript progress report: Typed instructions]({{% ref "article/gdscript-progress-report-typed-instructions" %}})
+6. (you are here) [GDScript progress report: Feature-complete for 4.0]({{% ref "article/gdscript-progress-report-feature-complete-40" %}})
 
 ### Typed arrays
 

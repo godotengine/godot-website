@@ -19,7 +19,7 @@ This beta includes a few big changes which may interest a lot of users:
 
 - You can now deploy your projects to all desktop platforms over SSH, as well as run a remote debug session similar to what we already offered for Android and Web. This is especially useful for the developers targeting the Steam Deck, as you can configure it to have one-click deploy to your device. As the number of remote debug options is quite big by now, we've packed them neatly in a single drop-down menu ([GH-63312](https://github.com/godotengine/godot/pull/63312), [GH-70701](https://github.com/godotengine/godot/pull/70701)).
 
-- Several breaking changes were made to the C# API to bring it closer to the engine core and make it more consistent overall ([GH-71445](https://github.com/godotengine/godot/pull/71445), [GH-71458](https://github.com/godotengine/godot/pull/71458), [GH-71423](https://github.com/godotengine/godot/pull/71423), [GH-71431](https://github.com/godotengine/godot/pull/71431), [GH-71424](https://github.com/godotengine/godot/pull/71424), [GH-71456](https://github.com/godotengine/godot/pull/71456)). There's been a number of documentation improvements related to C# too, as a part of our [ongoing documentation sprint](/article/godot-4-0-docs-sprint/).
+- Several breaking changes were made to the C# API to bring it closer to the engine core and make it more consistent overall ([GH-71445](https://github.com/godotengine/godot/pull/71445), [GH-71458](https://github.com/godotengine/godot/pull/71458), [GH-71423](https://github.com/godotengine/godot/pull/71423), [GH-71431](https://github.com/godotengine/godot/pull/71431), [GH-71424](https://github.com/godotengine/godot/pull/71424), [GH-71456](https://github.com/godotengine/godot/pull/71456)). There's been a number of documentation improvements related to C# too, as a part of our [ongoing documentation sprint]({{% ref "article/godot-4-0-docs-sprint" %}}).
 
 - Methods for drawing 2D lines and primitive shapes that take width as a parameter have been fixed and can now correctly handle widths at `1.0` or below ([GH-69851](https://github.com/godotengine/godot/pull/69851)).
 
@@ -34,7 +34,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/3c9bf4bc210a8e6a208f30ca59de4d4d7e18c04d...caacade569eb7a541aaa7a8cdc3eedffca1422d9), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-13T10%3A00..2023-01-17T13%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 12 (88 commits – excluding merge commits ― from 39 contributors).
 
@@ -87,7 +87,7 @@ Some of the most notables feature changes in this update are:
 - Rendering: Fix GPUParticles2D not recomputing transforms each frame ([GH-71520](https://github.com/godotengine/godot/pull/71520)).
 - Rendering: Properly initialize `directional_light_count` in RD sky shaders ([GH-71526](https://github.com/godotengine/godot/pull/71526)).
 - Rendering: Update ImmediateMesh to use octohedral encoded normals ([GH-71529](https://github.com/godotengine/godot/pull/71529)).
-- As well as many [improvements to the documentation](/article/godot-4-0-docs-sprint/) and several new test suites for the engine.
+- As well as many [improvements to the documentation]({{% ref "article/godot-4-0-docs-sprint" %}}) and several new test suites for the engine.
 
 This release is built from commit [caacade56](https://github.com/godotengine/godot/commit/caacade569eb7a541aaa7a8cdc3eedffca1422d9).
 

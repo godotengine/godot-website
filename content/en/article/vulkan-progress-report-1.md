@@ -13,13 +13,13 @@ I plan on creating more in-depth technical devblogs on how this work is being do
 
 *See other articles in this Godot 4.0 Vulkan series:*
 
-1. (you are here) [Vulkan progress report #1](https://godotengine.org/article/vulkan-progress-report-1)
-2. [Vulkan progress report #2](https://godotengine.org/article/vulkan-progress-report-2)
-3. [Vulkan progress report #3](https://godotengine.org/article/vulkan-progress-report-3)
-4. [Vulkan progress report #4](https://godotengine.org/article/vulkan-progress-report-4)
-5. [Vulkan progress report #5](https://godotengine.org/article/vulkan-progress-report-5)
-6. [Vulkan progress report #6](https://godotengine.org/article/vulkan-progress-report-6)
-7. [Vulkan progress report #7](https://godotengine.org/article/vulkan-progress-report-7)
+1. (you are here) [Vulkan progress report #1]({{% ref "article/vulkan-progress-report-1" %}})
+2. [Vulkan progress report #2]({{% ref "article/vulkan-progress-report-2" %}})
+3. [Vulkan progress report #3]({{% ref "article/vulkan-progress-report-3" %}})
+4. [Vulkan progress report #4]({{% ref "article/vulkan-progress-report-4" %}})
+5. [Vulkan progress report #5]({{% ref "article/vulkan-progress-report-5" %}})
+6. [Vulkan progress report #6]({{% ref "article/vulkan-progress-report-6" %}})
+7. [Vulkan progress report #7]({{% ref "article/vulkan-progress-report-7" %}})
 
 ## Initialization
 

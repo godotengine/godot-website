@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/61e/04e/00d/61e04e00d599a636911489.jpg
 date: 2022-01-13 16:06:35
 ---
 
-Godot 3.4 was [released 2 months ago](/article/godot-3-4-is-released), and some of the major planned features for Godot 3.5 have since been merged and are now ready for wider testing.
+Godot 3.4 was [released 2 months ago]({{% ref "article/godot-3-4-is-released" %}}), and some of the major planned features for Godot 3.5 have since been merged and are now ready for wider testing.
 
 So we're starting the [beta testing](https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta) phase with this already significant set of changes, and we'll have frequent beta builds to polish them for the stable release. Some more features are still being worked on and will be included in future beta builds.
 
@@ -39,7 +39,7 @@ The backport was done while attempting to preserve API compatibility within reas
 
 ### Add push, pull, fetch and improved diff view to VCS UI ([GH-53900](https://github.com/godotengine/godot/pull/53900))
 
-Aged like fine wine, Meru Patel ([Janglee123](https://github.com/Janglee123))'s work from [Google Summer of Code 2020](https://godotengine.org/article/gsoc-2020-progress-report-1#vcs-improvements) has been continued and updated by [GSoC 2019 alumni](https://godotengine.org/article/gsoc-2019-progress-report-3#vcs-integration) Twarit Waikar ([ChronicallySerious](https://github.com/ChronicallySerious))!
+Aged like fine wine, Meru Patel ([Janglee123](https://github.com/Janglee123))'s work from [Google Summer of Code 2020]({{% ref "article/gsoc-2020-progress-report-1" %}}#vcs-improvements) has been continued and updated by [GSoC 2019 alumni]({{% ref "article/gsoc-2019-progress-report-3" %}}#vcs-integration) Twarit Waikar ([ChronicallySerious](https://github.com/ChronicallySerious))!
 
 What is it? A lot of new features for Version Control Systems (VCS) integration in the Godot editor, such as push, pull, and fetch operations, as well as a very nice diff view UI. All these features have been implemented in the official [Git integration plugin](https://github.com/godotengine/godot-git-plugin). Watch the [Releases page](https://github.com/godotengine/godot-git-plugin/releases) for upcoming testing builds of the Git plugin to use with 3.5 beta 1!
 
@@ -82,6 +82,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

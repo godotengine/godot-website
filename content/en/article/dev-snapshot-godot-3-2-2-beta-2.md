@@ -7,15 +7,15 @@ image: /storage/app/uploads/public/5eb/400/0dd/5eb4000ddf0d8512778590.png
 date: 2020-05-07 14:08:24
 ---
 
-After refining our [Godot 3.2 release](/article/here-comes-godot-3-2) with bug fixes in [3.2.1](/article/maintenance-release-godot-3-2-1), we're now looking at integrating some new features that didn't make it into the 3.2 merge window but have been further developed and backported since. We published a [first beta](/article/dev-snapshot-godot-3-2-2-beta-1) a few weeks ago, and here's the next round with Godot 3.2.2 beta 2.
+After refining our [Godot 3.2 release]({{% ref "article/here-comes-godot-3-2" %}}) with bug fixes in [3.2.1]({{% ref "article/maintenance-release-godot-3-2-1" %}}), we're now looking at integrating some new features that didn't make it into the 3.2 merge window but have been further developed and backported since. We published a [first beta]({{% ref "article/dev-snapshot-godot-3-2-2-beta-1" %}}) a few weeks ago, and here's the next round with Godot 3.2.2 beta 2.
 
 Notably, Godot 3.2.2 is going to add 5 major features:
 
-- [C# support for the iOS platform](/article/csharp-ios-signals-events), courtesy of Ignacio ([neikeq](https://github.com/neikeq)).
-- [2D batching for the GLES2 renderer](/article/gles2-renderer-optimization-2d-batching), thanks to [lawnjelly](https://github.com/lawnjelly) and Clay ([clayjohn](https://github.com/clayjohn)).
+- [C# support for the iOS platform]({{% ref "article/csharp-ios-signals-events" %}}), courtesy of Ignacio ([neikeq](https://github.com/neikeq)).
+- [2D batching for the GLES2 renderer]({{% ref "article/gles2-renderer-optimization-2d-batching" %}}), thanks to [lawnjelly](https://github.com/lawnjelly) and Clay ([clayjohn](https://github.com/clayjohn)).
   * Several regressions and pre-existing GLES2 issues have additionally been fixed since 3.2.2 beta 1.
 - [Re-architecture of the Android plugin system](https://github.com/godotengine/godot/pull/36336), by Fredia ([m4gr3d](https://github.com/m4gr3d)).
-- [DTLS support and ENET integration](/article/enet-dtls-encryption), developed by Fabio ([Faless](https://github.com/Faless)) (*added in 3.2.2 beta 2*).
+- [DTLS support and ENET integration]({{% ref "article/enet-dtls-encryption" %}}), developed by Fabio ([Faless](https://github.com/Faless)) (*added in 3.2.2 beta 2*).
 - [Fix for the dangling Variant bug](https://github.com/godotengine/godot/pull/38119), kudos to Pedro ([RandomShaper](https://github.com/RandomShaper)) (*added in 3.2.2 beta 2*).
   * While this is not a feature per se, it fixes a major annoyance that users have had with pointers to freed objects unexpectedly being re-assigned to new objects, causing hard-to-debug issues.
 
@@ -47,9 +47,9 @@ See [this Pull Request](https://github.com/godotengine/godot/pull/36336) and [th
 
 #### DTLS support and ENet integration
 
-[Fabio's work on DTLS support](/article/enet-dtls-encryption) was nearly done by the time 3.2 was released, but came too late to be thoroughly tested. Testing has happened since then both in the `master` branch and in the pending `3.2` Pull Request, so we're now confident to include it in this beta build for further testing.
+[Fabio's work on DTLS support]({{% ref "article/enet-dtls-encryption" %}}) was nearly done by the time 3.2 was released, but came too late to be thoroughly tested. Testing has happened since then both in the `master` branch and in the pending `3.2` Pull Request, so we're now confident to include it in this beta build for further testing.
 
-See the [dedicated devblog](/article/enet-dtls-encryption) for usage examples.
+See the [dedicated devblog]({{% ref "article/enet-dtls-encryption" %}}) for usage examples.
 
 #### Fix for the dangling Variant bug
 
@@ -105,7 +105,7 @@ See the full changelog on GitHub ([part 1](https://github.com/godotengine/godot/
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2.2/beta2/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.2/beta2/mono/) (C# support + all the above). You need to have MSBuild (and on Windows .NET Framework 4.7) installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.

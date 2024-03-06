@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/585/28c/770/58528c770b44a828339905.png
 date: 2016-12-15 12:30:02
 ---
 
-After the success of our previous games jams in [March 2016](/article/godot-gamejam-march-2016) and [June 2016](/article/godot-gamejam-june-2016), and since the community seemed pretty motivated for a new one, we are organizing a new Godot Community Game Jam that will run from **16 December 2016 to 31 January 2017**.
+After the success of our previous games jams in March 2016 and [June 2016]({{% ref "article/godot-gamejam-june-2016" %}}), and since the community seemed pretty motivated for a new one, we are organizing a new Godot Community Game Jam that will run from **16 December 2016 to 31 January 2017**.
 
 As the previous one, it is an informal jam with relatively loose rules, and not much to gain apart from international fame within the Godot community and more experience with using our great engine! This is why this jam will run for a month and a half, giving everyone plenty of time to experiment with the engine to create something new, beginners and experienced users alike.
 
@@ -33,8 +33,8 @@ The minimum requirement for a valid jam entry is thus to provide the full source
 
 ## Have fun!
 
-The main purpose of this jam is to have fun together as a community of Godot users. If you are beginning with Godot, don't hesitate to ask any question [on our various community channels](/community); there are no silly questions, so go ahead!
+The main purpose of this jam is to have fun together as a community of Godot users. If you are beginning with Godot, don't hesitate to ask any question [on our various community channels]({{% ref "community" %}}); there are no silly questions, so go ahead!
 
-If you are more experienced, why not take this opportunity to try to discover new [features](/features) of Godot that you might not be using yet (e.g. shaders, particles)? You may also use the current development version of Godot 3.0 (no GLES 3 support yet in the master branch though) to do some alpha-testing while working on your jam game.
+If you are more experienced, why not take this opportunity to try to discover new [features]({{% ref "features" %}}) of Godot that you might not be using yet (e.g. shaders, particles)? You may also use the current development version of Godot 3.0 (no GLES 3 support yet in the master branch though) to do some alpha-testing while working on your jam game.
 
 Good luck everyone, and enjoy the jam!

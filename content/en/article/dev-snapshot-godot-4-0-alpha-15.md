@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/630/e31/8a8/630e318a80525807224115.png
 date: 2022-08-30 16:26:29
 ---
 
-We're working towards finalizing the feature set for 4.0 beta, reviewing many PRs which have been opened prior to our roadmap [feature freeze](/article/godot-4-0-development-enters-feature-freeze) announced a month ago. While this process is ongoing, we'll keep releasing alpha builds so here's **4.0 alpha 15**! Same deal as usual, lots of bugs fixed and more refactoring and feature work.
+We're working towards finalizing the feature set for 4.0 beta, reviewing many PRs which have been opened prior to our roadmap [feature freeze]({{% ref "article/godot-4-0-development-enters-feature-freeze" %}}) announced a month ago. While this process is ongoing, we'll keep releasing alpha builds so here's **4.0 alpha 15**! Same deal as usual, lots of bugs fixed and more refactoring and feature work.
 
 Some noteworthy changes in this release:
 
@@ -30,7 +30,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 15 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 15 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/106b6805018649b13da9e9508e80611f62ed660a...432b25d3649319517827dbf7bc275e81e0a2b92e) for an overview of all changes since 4.0 alpha 14 (362 commits – excluding merge commits ― from 73 contributors).
 
@@ -86,7 +86,7 @@ Some of the most notables feature changes in this update are:
 - Rendering: Add font LCD sub-pixel anti-aliasing support ([GH-64422](https://github.com/godotengine/godot/pull/64422)).
 - Shaders: Quality of life Visual Shaders updates ([GH-63999](https://github.com/godotengine/godot/pull/63999)).
 - Shaders: Implement custom non-trivial Visual Shader nodes ([GH-64248](https://github.com/godotengine/godot/pull/64248)).
-- VisualScript: Remove VisualScript module [as announced on the blog](https://godotengine.org/article/godot-4-will-discontinue-visual-scripting) ([GH-64822](https://github.com/godotengine/godot/pull/64822)).
+- VisualScript: Remove VisualScript module [as announced on the blog]({{% ref "article/godot-4-will-discontinue-visual-scripting" %}}) ([GH-64822](https://github.com/godotengine/godot/pull/64822)).
 
 This release is built from commit [432b25d36](https://github.com/godotengine/godot/commit/432b25d3649319517827dbf7bc275e81e0a2b92e).
 

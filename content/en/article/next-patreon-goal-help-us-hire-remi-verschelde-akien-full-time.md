@@ -40,7 +40,7 @@ By hiring him, the project will not only gain a full time project manager but al
 
 ## Project representative
 
-As I wrote many [times](https://godotengine.org/article/godot-30-new-progress-report-and-gdc) [before](https://godotengine.org/article/godot-gdc-2016-aftermath), Godot is growing very fast and our community is much larger each year, yet our presence in the video game industry is tiny. Not many big budget games are being made with Godot.
+As I wrote many [times]({{% ref "article/godot-30-new-progress-report-and-gdc" %}}) [before]({{% ref "article/godot-gdc-2016-aftermath" %}}), Godot is growing very fast and our community is much larger each year, yet our presence in the video game industry is tiny. Not many big budget games are being made with Godot.
 
 Part of the reason why this happens is that Godot is very new, and games usually take several years to be complete, but the main problem we face is visibility. It's not that companies are not interested in Godot, it's just that they simply have never heard of it. The same happens with education institutions and video game industry events, we have zero visibility in there. Even the industry press has never mentioned Godot.
 

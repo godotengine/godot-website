@@ -18,7 +18,7 @@ SDFGI stands for Signed Distance Field Global Illumination. It means this techni
 
 While implementation is not final, and there will probably be many improvements to quality and performance, it seems to be good enough for general use now.
 
-I would like to thank hugely Matias Goldberg for his enormous help on this, our [patrons](https://www.patreon.com/godotengine) for their continued support, and Tim Sweeney and Epic Games for their confidence in helping us finance our research via [Epic Megagrant](/article/godot-engine-was-awarded-epic-megagrant). This new technique was developed entirely in the open and implemented under our MIT license, so anyone is welcome to use it in their own engines and games.
+I would like to thank hugely Matias Goldberg for his enormous help on this, our [patrons](https://www.patreon.com/godotengine) for their continued support, and Tim Sweeney and Epic Games for their confidence in helping us finance our research via [Epic Megagrant]({{% ref "article/godot-engine-was-awarded-epic-megagrant" %}}). This new technique was developed entirely in the open and implemented under our MIT license, so anyone is welcome to use it in their own engines and games.
 
 ## What can it do?
 

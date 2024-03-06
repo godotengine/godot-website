@@ -9,7 +9,7 @@ date: 2020-06-25 07:30:19
 
 Yet another release candidate for Godot 3.2.2, including a few new bugfixes that warrant some testing before we can confidently tag it as `3.2.2-stable`.
 
-I won't list all the changes in 3.2.2 again, so please refer to the [3.2.2 RC 3](/article/release-candidate-godot-3-2-2-rc-3) blog post for details.
+I won't list all the changes in 3.2.2 again, so please refer to the [3.2.2 RC 3]({{% ref "article/release-candidate-godot-3-2-2-rc-3" %}}) blog post for details.
 
 Here's the list of [changes between RC 3 and RC 4](https://github.com/godotengine/godot/compare/1468c0b4d4592406502c7e4eaa2121f1d0a7e5f6...087a83fd54974fc03acf0ea571c505ea1456dd5c) (26 commits).
 
@@ -26,7 +26,7 @@ If all goes well, I intend to release `3.2.2-stable` in a day or two (Famous Las
 
 ## Downloads
 
-The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
+The download links for dev snapshots are not featured on the [Download]({{% ref "download" %}}) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
 - [**Classical build**](https://downloads.tuxfamily.org/godotengine/3.2.2/rc4/) (GDScript, GDNative, VisualScript).
 - [**Mono build**](https://downloads.tuxfamily.org/godotengine/3.2.2/rc4/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.

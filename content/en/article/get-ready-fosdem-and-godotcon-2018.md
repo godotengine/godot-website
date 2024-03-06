@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/5a2/eed/6e1/5a2eed6e1cc88595174491.png
 date: 2017-12-11 20:44:35
 ---
 
-[Last year in February](/article/meet-us-fosdem-2017-and-godotcon), we attended the [FOSDEM](https://fosdem.org/) and organized our very own **GodotCon** (a.k.a. *GDC*, the GoDot Convention), and it was a great community time for all who could attend in Brussels, Belgium.
+[Last year in February]({{% ref "article/meet-us-fosdem-2017-and-godotcon" %}}), we attended the [FOSDEM](https://fosdem.org/) and organized our very own **GodotCon** (a.k.a. *GDC*, the GoDot Convention), and it was a great community time for all who could attend in Brussels, Belgium.
 
-For the coming year, we are lucky to be selected again to have a [Godot stand](https://fosdem.org/2018/stands/) at the [FOSDEM 2018](https://fosdem.org/2018/) on **3 & 4 February 2018** in Brussels, and we will organize another bigger [GodotCon](/events) on **5 & 6 February 2018**, also in Brussels.
+For the coming year, we are lucky to be selected again to have a [Godot stand](https://fosdem.org/2018/stands/) at the [FOSDEM 2018](https://fosdem.org/2018/) on **3 & 4 February 2018** in Brussels, and we will organize another bigger [GodotCon]({{% ref "events" %}}) on **5 & 6 February 2018**, also in Brussels.
 
 And it gets better: our lead developer Juan "reduz" Linietsky is coming all the way from Buenos Aires to Europe to spend those four days with the community, so it's a great opportunity to meet one of the minds behind Godot Engine!
 
@@ -31,11 +31,11 @@ There *might* be some Godot-related talks, but we are still waiting for a confir
 
 The FOSDEM is a great opportunity to discover new projects ([see the stands](https://fosdem.org/2018/stands/)) and attend great talks ([see the schedule](https://fosdem.org/2018/schedule/) - still in progress) from top-notch free software contributors. It will also be the occasion to meet other Godot users and contributors, at our stand or around a few Belgian beers :)
 
-**Practical infos** (location, schedule, etc.): See [FOSDEM.org](https://fosdem.org) and our [Events](/events) page.
+**Practical infos** (location, schedule, etc.): See [FOSDEM.org](https://fosdem.org) and our [Events]({{% ref "events" %}}) page.
 
 ## GodotCon 2018
 
-*Update 10.01.2018:* [See this blog post](/article/godotcon-2018-venue-and-call-proposals) for information about the GodotCon venue as well as our Call for Proposals.
+*Update 10.01.2018:* [See this blog post]({{% ref "article/godotcon-2018-venue-and-call-proposals" %}}) for information about the GodotCon venue as well as our Call for Proposals.
 
 ![GodotCon 2018 banner](/storage/app/uploads/public/5a5/62a/afb/5a562aafb05c4537748115.png)
 
@@ -47,6 +47,6 @@ There will soon be a **Call for Proposals** so that everyone can propose a talk,
 
 The exact venue is still to be determined, as soon as we have a good overview about our numbers.
 
-**Practical infos:** See our [Events](/events) page.
+**Practical infos:** See our [Events]({{% ref "events" %}}) page.
 
 Looking forward to meeting some of you in Brussels!

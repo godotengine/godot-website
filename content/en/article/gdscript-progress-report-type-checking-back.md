@@ -7,18 +7,18 @@ image: /storage/app/uploads/public/5f0/390/8aa/5f03908aa71d6900240172.png
 date: 2020-07-06 00:00:00
 ---
 
-After completing the new [tokenizer](https://godotengine.org/article/gdscript-progress-report-writing-tokenizer) and [parser](https://godotengine.org/article/gdscript-progress-report-writing-new-parser) as mentioned in the previous reports, I started working on the code analyzer, which is responsible for type checking and also for used for other features like warnings and some optimizations.
+After completing the new [tokenizer]({{% ref "article/gdscript-progress-report-writing-tokenizer" %}}) and [parser]({{% ref "article/gdscript-progress-report-writing-new-parser" %}}) as mentioned in the previous reports, I started working on the code analyzer, which is responsible for type checking and also for used for other features like warnings and some optimizations.
 
 This was done before as a second pass inside the parser but it was now moved to another class to make it clear that it doesn't happen at the same pass thus avoiding issues with functions being called out of order (which happened by a few contributions that missed this detail).
 
 *See other articles in this Godot 4.0 GDScript series:*
 
-1. [GDScript progress report: Writing a tokenizer](https://godotengine.org/article/gdscript-progress-report-writing-tokenizer)
-2. [GDScript progress report: Writing a new parser](https://godotengine.org/article/gdscript-progress-report-writing-new-parser)
-3. (you are here) [GDScript progress report: Type checking is back](https://godotengine.org/article/gdscript-progress-report-type-checking-back)
-4. [GDScript progress report: New GDScript is now merged](https://godotengine.org/article/gdscript-progress-report-new-gdscript-now-merged)
-5. [GDScript progress report: Typed instructions](https://godotengine.org/article/gdscript-progress-report-typed-instructions)
-6. [GDScript progress report: Feature-complete for 4.0](https://godotengine.org/article/gdscript-progress-report-feature-complete-40)
+1. [GDScript progress report: Writing a tokenizer]({{% ref "article/gdscript-progress-report-writing-tokenizer" %}})
+2. [GDScript progress report: Writing a new parser]({{% ref "article/gdscript-progress-report-writing-new-parser" %}})
+3. (you are here) [GDScript progress report: Type checking is back]({{% ref "article/gdscript-progress-report-type-checking-back" %}})
+4. [GDScript progress report: New GDScript is now merged]({{% ref "article/gdscript-progress-report-new-gdscript-now-merged" %}})
+5. [GDScript progress report: Typed instructions]({{% ref "article/gdscript-progress-report-typed-instructions" %}})
+6. [GDScript progress report: Feature-complete for 4.0]({{% ref "article/gdscript-progress-report-feature-complete-40" %}})
 
 ## Inferred by default
 

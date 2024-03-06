@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/63b/eba/ed6/63bebaed69c6c649257378.png
 date: 2023-01-11 13:00:00
 ---
 
-With the release candidate for Godot Engine 4.0 being [just around the corner](/article/release-management-4-0-and-beyond), we want to make sure that the community is fully prepared and can dive right into it as soon as the new version is available. To that end, this is a call to action — to help in completing the documentation for Godot 4.
+With the release candidate for Godot Engine 4.0 being [just around the corner]({{% ref "article/release-management-4-0-and-beyond" %}}), we want to make sure that the community is fully prepared and can dive right into it as soon as the new version is available. To that end, this is a call to action — to help in completing the documentation for Godot 4.
 
 Everyone is welcome! New contributors, we're happy to help you get started. Seasoned participants, please take this chance to document all the awesome work you and your teammates have been doing on Godot. Helping each other is highly encouraged, filling the gaps and reviewing contributions to make sure they are factual and well written.
 

@@ -9,7 +9,7 @@ image_caption_description: "A behavior tree plugin by bitbrain"
 date: 2023-06-14 13:00:00
 ---
 
-Continuing on our planned schedule for Godot 4.1, we're advancing through the beta phase and getting ready for a stable release in early July. The feature freeze happened in late May, and we had a first beta release last week. If you missed them, have a look at the [4.1 beta 1 release notes](/article/dev-snapshot-godot-4-1-beta-1/) for a great write-up by Yuri on what's new in this milestone.
+Continuing on our planned schedule for Godot 4.1, we're advancing through the beta phase and getting ready for a stable release in early July. The feature freeze happened in late May, and we had a first beta release last week. If you missed them, have a look at the [4.1 beta 1 release notes]({{% ref "article/dev-snapshot-godot-4-1-beta-1" %}}) for a great write-up by Yuri on what's new in this milestone.
 
 For this beta 2 build specifically, we've outlined a number of relevant changes below. Some key highlights you might want to pay particular attention to:
 
@@ -124,6 +124,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5da/0d6/c19/5da0d6c198b34564377170.jpg
 date: 2019-10-11 19:46:27
 ---
 
-We released a [first alpha build](/article/dev-snapshot-godot-3-2-alpha-1) last week, and we want to keep a relatively short iteration cycle on future alpha and beta builds until the final 3.2 release.
+We released a [first alpha build]({{% ref "article/dev-snapshot-godot-3-2-alpha-1" %}}) last week, and we want to keep a relatively short iteration cycle on future alpha and beta builds until the final 3.2 release.
 The new official buildsystem that our contributor HP van Braam ([hpvb](https://github.com/hpvb/)) set up for us is now quite efficient, so we can roll out builds fast and easily.
 
 We thus publish **Godot 3.2 alpha 2** as a second snapshot, fixing various issues from the last build. [152 commits](https://github.com/godotengine/godot/compare/1d9233c3882afe888b9396f7f2aac917d4dcac4d...3cc94b2c0b90ec1136937e2c02b9d7901d3d28b8) have been merged since 3.2 alpha 1. This release is built from commit [3cc94b2](https://github.com/godotengine/godot/commit/3cc94b2c0b90ec1136937e2c02b9d7901d3d28b8).
@@ -36,7 +36,7 @@ For changes since the previous alpha build, see [the list of commits](https://gi
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/alpha2/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/alpha2/mono/) (C# support + all the above). You need to have MSbuild installed to use the Mono build. Relevant parts of Mono 5.18.1.3 are included in this build.

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5fd/8c9/92b/5fd8c992b68a7578144586.jpg
 date: 2020-12-15 14:30:00
 ---
 
-Welcome to the first developer interview following the [introduction of the new Showcase page](https://godotengine.org/article/new-showcase-for-projects-made-with-godot)! This week, we've interviewed [Little Red Dog Games](https://www.littlereddoggames.com/)' lead developer Ryan Hewer about their latest project, [*Rogue State Revolution*](https://godotengine.org /images/showcase/rogue-state-revolution).
+Welcome to the first developer interview following the [introduction of the new Showcase page]({{% ref "article/new-showcase-for-projects-made-with-godot" %}})! This week, we've interviewed [Little Red Dog Games](https://www.littlereddoggames.com/)' lead developer Ryan Hewer about their latest project, [*Rogue State Revolution*](https://godotengine.org /images/showcase/rogue-state-revolution).
 
 ___
 

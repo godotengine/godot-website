@@ -41,4 +41,4 @@ We are looking for a way to officialise Godot as a non profit so it can stand on
 
 ## Participate and make noise!
 
-If you are using Godot, plan to use Godot or are you just interested about it and want to support it, make sure to join our [amazing community](/community)! The [Facebook group](https://www.facebook.com/groups/godotengine/) and [IRC](irc://irc.freenode.net/#godotengine) are always active, as well as the forum (*Edit:* replaced by [Q&A](/qa) in the new website). Remember that we don’t have millions to spend in marketing and PR, so we rely on you to talk about Godot and spread the love!
+If you are using Godot, plan to use Godot or are you just interested about it and want to support it, make sure to join our [amazing community]({{% ref "community" %}})! The [Facebook group](https://www.facebook.com/groups/godotengine/) and [IRC](irc://irc.freenode.net/#godotengine) are always active, as well as the forum (*Edit:* replaced by [Q&A](/qa) in the new website). Remember that we don’t have millions to spend in marketing and PR, so we rely on you to talk about Godot and spread the love!

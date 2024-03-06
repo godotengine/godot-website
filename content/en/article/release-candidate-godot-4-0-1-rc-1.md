@@ -9,7 +9,7 @@ image_caption_description: "A demo scene by Jaanus Jaggo (Perfoon)"
 date: 2023-03-15 10:00:00
 ---
 
-Two weeks ago we have published the biggest release in the history of Godot — [Godot 4.0](/article/godot-4-0-sets-sail). It marked the beginning of a new journey for the engine and its users, like yourself. And as is the case with every new beginning, some problems have been reported, some points of frictions have been identified, and so fixes and improvements are in order.
+Two weeks ago we have published the biggest release in the history of Godot — [Godot 4.0]({{% ref "article/godot-4-0-sets-sail" %}}). It marked the beginning of a new journey for the engine and its users, like yourself. And as is the case with every new beginning, some problems have been reported, some points of frictions have been identified, and so fixes and improvements are in order.
 
 For the time being we are primarily focusing on changes that address critical issues (such as crashes and regressions), as well as small self-contained fixes to various parts of the engine and documentation improvements. This allows us to publish this patch release quickly and with a lot of confidence that it doesn't introduce new problems and regressions in the process. As such, we are starting directly with a [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate).
 
@@ -125,6 +125,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

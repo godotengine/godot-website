@@ -14,12 +14,12 @@ Godot 3.2 is a major improvement over our previous 3.1 installment, bringing doz
 
 ## Download
 
-[**Download Godot 3.2 now**](/download) and read on to learn more about <a href="#history">its history</a>, our <a href="#support">support plans</a> and the <a href="#features">many new features</a> in this update.
+[**Download Godot 3.2 now**]({{% ref "download" %}}) and read on to learn more about <a href="#history">its history</a>, our <a href="#support">support plans</a> and the <a href="#features">many new features</a> in this update.
 
 <a id="history"></a>
 ## Small release grown big
 
-Godot 3.2 was initially planned to have a short release cycle (4 to 6 months), with few new features and mostly fixes for some of the main issues of our previous main release, [Godot 3.1](https://godotengine.org/article/godot-3-1-released) (March 2019). And indeed, shortly after releasing 3.1 and having written a handful of new features intended for 3.2, our lead developer [Juan Linietsky](https://github.com/reduz) moved on to developing the upcoming Vulkan renderer for Godot 4.0 in a [separate branch](https://github.com/godotengine/godot/commits/vulkan).
+Godot 3.2 was initially planned to have a short release cycle (4 to 6 months), with few new features and mostly fixes for some of the main issues of our previous main release, [Godot 3.1]({{% ref "article/godot-3-1-released" %}}) (March 2019). And indeed, shortly after releasing 3.1 and having written a handful of new features intended for 3.2, our lead developer [Juan Linietsky](https://github.com/reduz) moved on to developing the upcoming Vulkan renderer for Godot 4.0 in a [separate branch](https://github.com/godotengine/godot/commits/vulkan).
 
 But the rest of us engine contributors did not stay idle in the meantime, and a strong focus was put on fixing as many issues as we could to make Godot 3.2 a long-lasting release. Many new features introduced in Godot 3.0 (January 2018) and 3.1 still needed refinement, and thus a lot of work was poured into those areas to improve the usability, implement missing components and fix bugs reported by our growing userbase.
 
@@ -27,7 +27,7 @@ While the development branch was *feature frozen* (i.e. no big new features acce
 
 And thus, without notice, the "small" 3.2 release organically grew into something nearly as big as its 3.1 predecessor, pushing the release ETA to sometime in November 2019, and after factoring in the usual delay of 2-3 months past our best guesstimate, here we are!
 
-As a matter of fact, today's release marks the second anniversary of Godot 3.0, which was released on [January 29th, 2018](https://godotengine.org/article/godot-3-0-released). It's an unexpected but nice way to kickstart the development journey towards our next major achievement, Godot 4.0!
+As a matter of fact, today's release marks the second anniversary of Godot 3.0, which was released on [January 29th, 2018]({{% ref "article/godot-3-0-released" %}}). It's an unexpected but nice way to kickstart the development journey towards our next major achievement, Godot 4.0!
 
 We hope that you will all enjoy the 3.2 version as much as we enjoyed developing it!
 
@@ -42,7 +42,7 @@ For users who choose to stay on the 3.1 branch, we will keep maintaining it with
 
 Before trying to give an overview of the most prominent new features in Godot 3.2, let's answer a question that many of you may have: what kind of support can you expect for the 3.2 branch, and what will be the next milestones?
 
-As some of you may know, our next major milestone is Godot 4.0, which will bring a new [**Vulkan-based rendering backend**](https://godotengine.org/article/abandoning-gles3-vulkan-and-gles2) in lieu of the current OpenGL ES 3.0 / OpenGL 3.3 backend. The lower end OpenGL ES 2.0 / OpenGL 2.1 backend will be kept and ported over to the new architecture for Godot 4.0. The curious among you may read Juan's progress reports for details on this new architecture and rendering features implemented for 4.0 (reports [1](https://godotengine.org/article/vulkan-progress-report-1), [2](https://godotengine.org/article/vulkan-progress-report-2), [3](https://godotengine.org/article/vulkan-progress-report-3), [4](https://godotengine.org/article/vulkan-progress-report-4), [5](https://godotengine.org/article/vulkan-progress-report-5), and [6](https://godotengine.org/article/vulkan-progress-report-6)).
+As some of you may know, our next major milestone is Godot 4.0, which will bring a new [**Vulkan-based rendering backend**]({{% ref "article/abandoning-gles3-vulkan-and-gles2" %}}) in lieu of the current OpenGL ES 3.0 / OpenGL 3.3 backend. The lower end OpenGL ES 2.0 / OpenGL 2.1 backend will be kept and ported over to the new architecture for Godot 4.0. The curious among you may read Juan's progress reports for details on this new architecture and rendering features implemented for 4.0 (reports [1]({{% ref "article/vulkan-progress-report-1" %}}), [2]({{% ref "article/vulkan-progress-report-2" %}}), [3]({{% ref "article/vulkan-progress-report-3" %}}), [4]({{% ref "article/vulkan-progress-report-4" %}}), [5]({{% ref "article/vulkan-progress-report-5" %}}), and [6]({{% ref "article/vulkan-progress-report-6" %}})).
 
 The new rendering architecture will be completely rewritten to modernize the current 10-year-old design and fit  the latest graphics APIs, but will involve a significant compatibility breakage with 3.x projects. We have many other areas where compatibility-breaking changes have been queued for years in expectation of the next major release, which will be done in 4.0 too.
 
@@ -50,7 +50,7 @@ For this reason, upgrading projects from Godot 3.2 over to Godot 4.0 will requir
 
 For that reason, we will provide **long-term support for the 3.2 branch**, like we have done for Godot 2.1 from 2016 to 2019 (and still do on an "as needed" basis). There will be regular maintenance releases (3.2.x) bringing important bug fixes, usability enhancements, and some new features.
 
-Many of the features which have been contributed over the past 6 months could not be merged in Godot 3.1 to keep its scope manageable, but they will be reviewed, merged and potentially cherry-picked for 3.2.x maintenance releases if they do not impact the stability and compatibility of the 3.2 branch. To give a few examples, features such as [AOT compilation](https://github.com/godotengine/godot/pull/33603) and [iOS support](https://github.com/godotengine/godot/issues/20268) for C# projects, [ARCore support](https://github.com/godotengine/godot/pull/26221), or [DTLS support](https://godotengine.org/article/dtls-report-1), will likely be integrated in future 3.2.x maintenance releases, once they are ready.
+Many of the features which have been contributed over the past 6 months could not be merged in Godot 3.1 to keep its scope manageable, but they will be reviewed, merged and potentially cherry-picked for 3.2.x maintenance releases if they do not impact the stability and compatibility of the 3.2 branch. To give a few examples, features such as [AOT compilation](https://github.com/godotengine/godot/pull/33603) and [iOS support](https://github.com/godotengine/godot/issues/20268) for C# projects, [ARCore support](https://github.com/godotengine/godot/pull/26221), or [DTLS support]({{% ref "article/dtls-report-1" %}}), will likely be integrated in future 3.2.x maintenance releases, once they are ready.
 
 ## Supporting the project
 
@@ -104,14 +104,14 @@ For the first time, Godot's documentation is also available in several languages
 <a id="csharp"></a>
 ### Mono/C#: Android and WebAssembly support
 
-C# support was initially implemented in [Godot 3.0](https://godotengine.org/article/godot-3-0-released#csharp) using [Mono](https://www.mono-project.com/), with support for running projects in the editor. [Godot 3.1](https://godotengine.org/article/godot-3-1-released#csharp) added support for exporting projects to desktop platforms (Linux, macOS and Windows).
+C# support was initially implemented in [Godot 3.0]({{% ref "article/godot-3-0-released" %}}#csharp) using [Mono](https://www.mono-project.com/), with support for running projects in the editor. [Godot 3.1]({{% ref "article/godot-3-1-released" %}}#csharp) added support for exporting projects to desktop platforms (Linux, macOS and Windows).
 
-For Godot 3.2, our C# maintainer Ignacio Etcheverry ([neikeq](https://github.com/neikeq)) has been quite busy, first implementing support [**for Android**](https://godotengine.org/article/csharp-android-support), and later [**for WebAssembly**](https://godotengine.org/article/csharp-wasm-aot). Initial support for <abbr title="Ahead-of-Time">AOT</abbr> compilation was [also merged](https://github.com/godotengine/godot/pull/33603), but it is not enabled yet in Godot 3.2 as additional testing and packaging changes are necessary. AOT will enable better performance for the WebAssembly port (currently using the interpreter) and is also a prerequisite for the upcoming iOS platform support, which should be included in a later 3.2.x release.
+For Godot 3.2, our C# maintainer Ignacio Etcheverry ([neikeq](https://github.com/neikeq)) has been quite busy, first implementing support [**for Android**]({{% ref "article/csharp-android-support" %}}), and later [**for WebAssembly**]({{% ref "article/csharp-wasm-aot" %}}). Initial support for <abbr title="Ahead-of-Time">AOT</abbr> compilation was [also merged](https://github.com/godotengine/godot/pull/33603), but it is not enabled yet in Godot 3.2 as additional testing and packaging changes are necessary. AOT will enable better performance for the WebAssembly port (currently using the interpreter) and is also a prerequisite for the upcoming iOS platform support, which should be included in a later 3.2.x release.
 
 ![C# version of the Dodge the Creeps demo running in Friefox](/storage/app/media/mono_wasm_demo.opt.gif)
 *C# version of the [Dodge the Creeps demo](https://github.com/godotengine/godot-demo-projects/tree/master/mono/DodgeTheCreepsCS) running in Firefox.*
 
-Other noteworthy improvements are the support for [MonoDevelop/Visual Studio for Mac](https://godotengine.org/article/csharp-wasm-aot) as well as [Jetbrains Rider](https://github.com/godotengine/godot/pull/34181) as external editors, C# 8.0 support via Mono 6.6, the switch to .NET Framework 4.7 as default target, and the rewrite of the Mono-specific [editor code in C#](https://github.com/godotengine/godot/pull/30282) (ported from C++). Additionally, dozens of bugs have been fixed, making the C# experience in Godot much more mature.
+Other noteworthy improvements are the support for [MonoDevelop/Visual Studio for Mac]({{% ref "article/csharp-wasm-aot" %}}) as well as [Jetbrains Rider](https://github.com/godotengine/godot/pull/34181) as external editors, C# 8.0 support via Mono 6.6, the switch to .NET Framework 4.7 as default target, and the rewrite of the Mono-specific [editor code in C#](https://github.com/godotengine/godot/pull/30282) (ported from C++). Additionally, dozens of bugs have been fixed, making the C# experience in Godot much more mature.
 
 We're thankful to Microsoft for funding Ignacio's work on C# support.
 
@@ -120,9 +120,9 @@ We're thankful to Microsoft for funding Ignacio's work on C# support.
 
 Our prolific AR and VR maintainer [Bastiaan Olij](https://github.com/BastiaanOlij) has been able to finalize and merge a lot of long-running development efforts for Godot 3.2.
 
-His first work on [**ARKit support**](https://godotengine.org/article/godot-3-2-arvr-update) for iOS dates back to [2017](https://github.com/godotengine/godot/pull/9967), and it took a couple years of iterations to come to the right design that would fit well in Godot's architecture, especially with regards to the underlying [CameraServer API](https://github.com/godotengine/godot/pull/10643). On the Android front, [ARCore integration](https://github.com/godotengine/godot/pull/26221) is yet unmerged, but is already functional. Once distribution hurdles are solved, we should be able to include it in a future 3.2.x release.
+His first work on [**ARKit support**]({{% ref "article/godot-3-2-arvr-update" %}}) for iOS dates back to [2017](https://github.com/godotengine/godot/pull/9967), and it took a couple years of iterations to come to the right design that would fit well in Godot's architecture, especially with regards to the underlying [CameraServer API](https://github.com/godotengine/godot/pull/10643). On the Android front, [ARCore integration](https://github.com/godotengine/godot/pull/26221) is yet unmerged, but is already functional. Once distribution hurdles are solved, we should be able to include it in a future 3.2.x release.
 
-2019 was the big year for Godot's VR support, with both Oculus and Valve reaching out to us to support our effort with hardware and technical contacts. Bastiaan released the [**Oculus mobile**](https://github.com/GodotVR/godot_oculus_mobile) VR plugin, and quickly got help from experienced [**Oculus Quest**](https://godotengine.org/article/godot-oculus-quest-support) users to co-maintain the plugin and improve the overall integration (especially [Fredia Huya-Kouadio](https://github.com/m4gr3d) and [Holger Dammertz](https://github.com/NeoSpark314)). There is a burgeoning community of Quest VR developers already publishing interesting Godot-based prototypes, and the stable 3.2 release should boost it. Stay tuned for updates as Bastiaan will soon upload pre-compiled VR plugins for all supported headsets to our [Asset Library](https://godotengine.org/asset-library), and likely post an update on this blog when he does, with instructions on how to get started.
+2019 was the big year for Godot's VR support, with both Oculus and Valve reaching out to us to support our effort with hardware and technical contacts. Bastiaan released the [**Oculus mobile**](https://github.com/GodotVR/godot_oculus_mobile) VR plugin, and quickly got help from experienced [**Oculus Quest**]({{% ref "article/godot-oculus-quest-support" %}}) users to co-maintain the plugin and improve the overall integration (especially [Fredia Huya-Kouadio](https://github.com/m4gr3d) and [Holger Dammertz](https://github.com/NeoSpark314)). There is a burgeoning community of Quest VR developers already publishing interesting Godot-based prototypes, and the stable 3.2 release should boost it. Stay tuned for updates as Bastiaan will soon upload pre-compiled VR plugins for all supported headsets to our [Asset Library](https://godotengine.org/asset-library), and likely post an update on this blog when he does, with instructions on how to get started.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N-UReOuxAP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 *Holger Dammertz's [Voxel Works Quest](https://neospark314.itch.io/voxel-works-quest) prototype made with Godot for Oculus Quest.*
@@ -130,15 +130,15 @@ His first work on [**ARKit support**](https://godotengine.org/article/godot-3-2-
 <a id="visual-shaders"></a>
 ### Visual Shaders overhaul
 
-[Godot 3.1](https://godotengine.org/article/godot-3-1-released#visual-shader) introduced a new graph-based editor to edit shaders visually, reimplemented from the previous version that was included in Godot 2.1.
+[Godot 3.1]({{% ref "article/godot-3-1-released" %}}#visual-shader) introduced a new graph-based editor to edit shaders visually, reimplemented from the previous version that was included in Godot 2.1.
 
-For Godot 3.2, our contributor [Yuri Roubinsky](https://github.com/Chaosus) did a huge rework of the [**new visual shader's UX**](https://godotengine.org/article/major-update-for-visual-shader-in-godot-3-2), and eventually assumed full maintainership of the feature. Beyond improving usability and fixing bugs, he implemented many additional useful nodes to write more advanced shaders with greater flexibility.
+For Godot 3.2, our contributor [Yuri Roubinsky](https://github.com/Chaosus) did a huge rework of the [**new visual shader's UX**]({{% ref "article/major-update-for-visual-shader-in-godot-3-2" %}}), and eventually assumed full maintainership of the feature. Beyond improving usability and fixing bugs, he implemented many additional useful nodes to write more advanced shaders with greater flexibility.
 
 ![Better workflow for the Visual Shader editor](/storage/app/media/vshader2019/vs_copy_paste.gif)
 
-Read his progress reports ([part 1](https://godotengine.org/article/major-update-for-visual-shader-in-godot-3-2) and [part 2](https://godotengine.org/article/major-update-visual-shaders-godot-3-2-part-2)) for details on all the new features.
+Read his progress reports ([part 1]({{% ref "article/major-update-for-visual-shader-in-godot-3-2" %}}) and [part 2]({{% ref "article/major-update-visual-shaders-godot-3-2-part-2" %}})) for details on all the new features.
 
-Yuri did not stop there, as he also implemented many additional features for the [**classical script shaders**](https://godotengine.org/article/major-update-visual-shaders-godot-3-2-part-2), such as support for constants, arrays and varyings. Many shader builtins specific to the GLES 3 backend have been ported over to GLES 2, while a number of features which cannot be implemented in GLES 2 due to restrictions on the GLSL support have been identified as such and will properly raise compilation errors.
+Yuri did not stop there, as he also implemented many additional features for the [**classical script shaders**]({{% ref "article/major-update-visual-shaders-godot-3-2-part-2" %}}), such as support for constants, arrays and varyings. Many shader builtins specific to the GLES 3 backend have been ported over to GLES 2, while a number of features which cannot be implemented in GLES 2 due to restrictions on the GLSL support have been identified as such and will properly raise compilation errors.
 
 <a id="rendering"></a>
 ### Graphics/Rendering improvements
@@ -177,24 +177,24 @@ Should you have any issues with any assets being imported, please [file a bug re
 <a id="networking"></a>
 ### Networking: WebRTC and WebSocket
 
-Thanks to a [generous award by Mozilla](https://godotengine.org/article/godot-engine-awarded-50000-mozilla-open-source-support-program), our networking maintainer [Fabio Alessandrelli](https://github.com/Faless) has been able to work continuously on networking improvements during the Godot 3.2 release cycle.
+Thanks to a [generous award by Mozilla]({{% ref "article/godot-engine-awarded-50000-mozilla-open-source-support-program" %}}), our networking maintainer [Fabio Alessandrelli](https://github.com/Faless) has been able to work continuously on networking improvements during the Godot 3.2 release cycle.
 
-The first part of his work covered implementing **WebRTC support**, which is detailed in his progress reports ([1](https://godotengine.org/article/godot-webrtc-report1), [2](https://godotengine.org/article/godot-webrtc-report2), and [3](https://godotengine.org/article/godot-webrtc-report3)).
+The first part of his work covered implementing **WebRTC support**, which is detailed in his progress reports ([1]({{% ref "article/godot-webrtc-report1" %}}), [2]({{% ref "article/godot-webrtc-report2" %}}), and [3]({{% ref "article/godot-webrtc-report3" %}})).
 
-Other networking changes involve the support for [UDP multicast](https://godotengine.org/article/websocket-updates-udp-multicast), [WebSocket demos and tutorials](https://godotengine.org/article/websocket-updates-udp-multicast), a [WebSocket SSL server](https://godotengine.org/article/websocket-ssl-testing-html5-export) and [basic cryptographic features](https://godotengine.org/article/basic-cryptography-ssl-improvements).
+Other networking changes involve the support for [UDP multicast]({{% ref "article/websocket-updates-udp-multicast" %}}), [WebSocket demos and tutorials]({{% ref "article/websocket-updates-udp-multicast" %}}), a [WebSocket SSL server]({{% ref "article/websocket-ssl-testing-html5-export" %}}) and [basic cryptographic features]({{% ref "article/basic-cryptography-ssl-improvements" %}}).
 
 On the debugging front, our contributor [Joan Fons Sanchez](https://github.com/JFonS) added a new [**network profiler**](https://github.com/godotengine/godot/pull/31870), which will help you monitor the bandwidth usage of your game in real time. You will see the amount of uploaded and downloaded data per second, as well as an RPC counter. The counter view can be very useful when trying to optimize your networking communications, since you will be able to identify which nodes in your game are doing the biggest amount of networked function calls.
 
 ![network profiler.png](/storage/app/uploads/public/5e3/167/117/5e3167117c8c3991279770.png)
 
-While keeping the maintainership of our networking features, Fabio will now move on to another Mozilla-funded work package to improve the WebAssembly/HTML5 port and bring the Godot editor to the Web! He already started with a much needed enhancement included in this release, which is the addition of a [local HTTP server](https://godotengine.org/article/websocket-ssl-testing-html5-export) used by the editor to run WebAssembly exports.
+While keeping the maintainership of our networking features, Fabio will now move on to another Mozilla-funded work package to improve the WebAssembly/HTML5 port and bring the Godot editor to the Web! He already started with a much needed enhancement included in this release, which is the addition of a [local HTTP server]({{% ref "article/websocket-ssl-testing-html5-export" %}}) used by the editor to run WebAssembly exports.
 
 ![Simple HTML server run by the editor](/storage/app/uploads/public/5de/045/0f1/5de0450f18d4a943481630.png)
 
 <a id="android"></a>
 ### Android build and plugin systems
 
-Before moving onto Vulkan development, Juan had time to implement a long-awaited refactoring of the [**Android plugin and export systems**](https://godotengine.org/article/godot-3-2-will-get-new-android-plugin-system).
+Before moving onto Vulkan development, Juan had time to implement a long-awaited refactoring of the [**Android plugin and export systems**]({{% ref "article/godot-3-2-will-get-new-android-plugin-system" %}}).
 
 Many users want to be able to build their own Android templates with custom Java modules adding support for third-party social features, monetization platforms, etc. The previous workflow forced them to build their own Godot APK from source using custom modules, which can be tedious.
 
@@ -211,11 +211,11 @@ The Android port also got a massive refactoring by a new contributor, [Fredia Hu
 
 Godot's editor is the main interface for the engine, and thus it got a ton of attention from all contributors. The following are just a handful of noteworthy changes.
 
-It is now possible to [**disable editor features**](https://godotengine.org/article/godot-32-will-allow-disabling-editor-features). This allows to hide features that you don't intend to use to simplify the interface. This can be useful for tutors or companies who might want to restrict the access to some areas of the editor to let their students/teams focus on a specific subset.
+It is now possible to [**disable editor features**]({{% ref "article/godot-32-will-allow-disabling-editor-features" %}}). This allows to hide features that you don't intend to use to simplify the interface. This can be useful for tutors or companies who might want to restrict the access to some areas of the editor to let their students/teams focus on a specific subset.
 
 ![Managing editor features](/storage/app/uploads/public/5ca/bcb/9a1/5cabcb9a1a4ab072608872.png)
 
-Initial integration for [<abbr title="Version Control Systems">VCS</abbr> support](https://godotengine.org/article/gsoc-2019-progress-report-3#vcs-integration) has been merged, and there is a [**Git plugin**](https://github.com/godotengine/godot-git-plugin) which can be used to enable basic Git support in the editor. This is the result of [Twarit Waikar](https://github.com/IronicallySerious)'s work for <abbr title="Google Summer of Code">GSoC</abbr> 2019.
+Initial integration for [<abbr title="Version Control Systems">VCS</abbr> support]({{% ref "article/gsoc-2019-progress-report-3" %}}#vcs-integration) has been merged, and there is a [**Git plugin**](https://github.com/godotengine/godot-git-plugin) which can be used to enable basic Git support in the editor. This is the result of [Twarit Waikar](https://github.com/IronicallySerious)'s work for <abbr title="Google Summer of Code">GSoC</abbr> 2019.
 
 [Erik Selecký](https://github.com/rxlecky) implemented a feature to [**override the camera**](https://github.com/godotengine/godot/pull/27742) of the running game with that of the editor viewport. That means that you can explore your running game using the editor features (freelook, inspection of nodes, etc.).
 
@@ -241,16 +241,16 @@ There were also many improvements to the built-in GDScript editor:
 
 ![Type icons for autocompletion options](https://user-images.githubusercontent.com/6964556/59157685-7ebb7580-8ae1-11e9-95c0-2b2179985fa8.gif)
 
-Finally, there were many [**VisualScript improvements**](https://godotengine.org/article/gsoc-2019-progress-report-3#visual-scripting)) from another <abbr title="Google Summer of Code">GSoC</abbr> 2019 student, [Swarnim Arun](https://github.com/swarnimarun), which should greatly improve usability.
+Finally, there were many [**VisualScript improvements**]({{% ref "article/gsoc-2019-progress-report-3" %}}#visual-scripting) from another <abbr title="Google Summer of Code">GSoC</abbr> 2019 student, [Swarnim Arun](https://github.com/swarnimarun), which should greatly improve usability.
 
 <a id="2d-features"></a>
 ### 2D: Pseudo 3D, Texture atlas, AStar2D
 
-Juan implemented a "[**pseudo 3D**](https://godotengine.org/article/godot-32-will-get-pseudo-3d-support-2d-engine)" feature which enables an easy way to add depth to 2D games by using several canvas layers, making them follow the main viewport and scale automatically to fake perspective.
+Juan implemented a "[**pseudo 3D**]({{% ref "article/godot-32-will-get-pseudo-3d-support-2d-engine" %}})" feature which enables an easy way to add depth to 2D games by using several canvas layers, making them follow the main viewport and scale automatically to fake perspective.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CWZvPZ5mGmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Support for [**texture atlases**](https://godotengine.org/article/atlas-support-returns-godot-3-2) also comes back to Godot with 3.2, with an easy way to generate deterministic atlases directly from the editor.
+Support for [**texture atlases**]({{% ref "article/atlas-support-returns-godot-3-2" %}}) also comes back to Godot with 3.2, with an easy way to generate deterministic atlases directly from the editor.
 
 Along with various performance optimizations for Godot's AStar implementation, an [AStar2D variant](https://github.com/godotengine/godot/pull/27237) was implemented to simplify its use for 2D pathfinding.
 
@@ -268,12 +268,12 @@ An unexpected but very cool feature was implemented by [Eoin O'Neill](https://gi
 <a id="audio-features"></a>
 ### Audio generators and spectrum analyzer
 
-To add to the 3.2 feature set before diving into Vulkan, Juan implemented [**audio stream generators**](https://godotengine.org/article/godot-32-will-get-new-audio-features) which let you easily generate sound waves by pushing individual frames or a buffer, and a [**spectrum analyzer**](https://godotengine.org/article/godot-32-will-get-new-audio-features).
+To add to the 3.2 feature set before diving into Vulkan, Juan implemented [**audio stream generators**]({{% ref "article/godot-32-will-get-new-audio-features" %}}) which let you easily generate sound waves by pushing individual frames or a buffer, and a [**spectrum analyzer**]({{% ref "article/godot-32-will-get-new-audio-features" %}}).
 
 <a id="convex-decomp"></a>
 ### Improved convex decomposition
 
-Using the [V-HACD](https://github.com/kmammou/v-hacd) library, Godot can now [decompose concave meshes](https://godotengine.org/article/godot-3-2-adds-support-convex-decomposition) into precise and simplified convex parts.
+Using the [V-HACD](https://github.com/kmammou/v-hacd) library, Godot can now [decompose concave meshes]({{% ref "article/godot-3-2-adds-support-convex-decomposition" %}}) into precise and simplified convex parts.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jVmG7nVxvoA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -7,13 +7,13 @@ image: /storage/app/uploads/public/5dd/7f7/f3b/5dd7f7f3b7de4872680557.jpg
 date: 2019-11-22 15:00:53
 ---
 
-**Update:** It turns out that the update to Mono 6.x did not go as smoothly as we hoped. The Mono binaries in this beta appear not to work properly on Windows and macOS, so unless you're running Linux, it is recommended to stay with [3.2 beta 1](/article/dev-snapshot-godot-3-2-beta-1) or [compile from the `master` branch](https://docs.godotengine.org/en/latest/development/compiling/compiling_with_mono.html) if you use C#. If you don't use C#, the classical build still works as usual.
+**Update:** It turns out that the update to Mono 6.x did not go as smoothly as we hoped. The Mono binaries in this beta appear not to work properly on Windows and macOS, so unless you're running Linux, it is recommended to stay with [3.2 beta 1]({{% ref "article/dev-snapshot-godot-3-2-beta-1" %}}) or [compile from the `master` branch](https://docs.godotengine.org/en/latest/development/compiling/compiling_with_mono.html) if you use C#. If you don't use C#, the classical build still works as usual.
 
 ---
 
-We published a first beta build for Godot 3.2 [two weeks ago](/article/dev-snapshot-godot-3-2-beta-1), and many bug fixes and improvements have been merged in the meantime. It's time for **Godot 3.2 beta 2**!
+We published a first beta build for Godot 3.2 [two weeks ago]({{% ref "article/dev-snapshot-godot-3-2-beta-1" %}}), and many bug fixes and improvements have been merged in the meantime. It's time for **Godot 3.2 beta 2**!
 
-The most notable is the **WebAssembly support for Mono exports**, which means that C# projects can now run on the Web! See [Ignacio's progress report](/article/csharp-wasm-aot) for details. I spent most of my time the past week working on the buildsystem to be able to ship Wasm templates for Mono, with a lot of help from Ignacio to iron out issues with both Emscripten and Mono. At long last, we managed to get a working build which is included in the Mono export templates for this beta!
+The most notable is the **WebAssembly support for Mono exports**, which means that C# projects can now run on the Web! See [Ignacio's progress report]({{% ref "article/csharp-wasm-aot" %}}) for details. I spent most of my time the past week working on the buildsystem to be able to ship Wasm templates for Mono, with a lot of help from Ignacio to iron out issues with both Emscripten and Mono. At long last, we managed to get a working build which is included in the Mono export templates for this beta!
 
 Another noteworthy change for the Mono version is that we now use Mono 6.6.0 Preview, which provides support for C# 8 and many other enhancements. While 6.6.0 has not been labelled stable yet, this should happen soon and we needed a very recent version for proper WebAssembly support in Mono, which has matured a lot over the past few months.
 
@@ -41,7 +41,7 @@ For changes since the last alpha build, see [the list of commits](https://github
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/beta2/) (GDScript, GDNative, VisualScript).
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/beta2/mono/) (C# support + all the above). You need to have MSbuild installed to use the Mono build. Relevant parts of Mono 6.6.0 Preview are included in this build.

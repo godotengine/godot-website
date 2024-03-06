@@ -9,15 +9,15 @@ image_caption_description: Developed by Let's GameDev, NoFuel Games, and techel.
 date: 2021-08-19 16:36:13
 ---
 
-While we're busy working on both the upcoming Godot 4.0 and 3.4 releases (with a dev snapshot for [3.4 beta 4](/article/dev-snapshot-godot-3-4-beta-4) available now), we still cherry-pick important bug fixes to the 3.3 branch regularly for maintenance releases (see our [release policy](https://docs.godotengine.org/en/3.3/about/release_policy.html)).
+While we're busy working on both the upcoming Godot 4.0 and 3.4 releases (with a dev snapshot for [3.4 beta 4]({{% ref "article/dev-snapshot-godot-3-4-beta-4" %}}) available now), we still cherry-pick important bug fixes to the 3.3 branch regularly for maintenance releases (see our [release policy](https://docs.godotengine.org/en/3.3/about/release_policy.html)).
 
-Since the release of [Godot 3.3.2 in May](/article/maintenance-release-godot-3-3-2), there have been a number of bug fixes which are worth including in a new stable release for all Godot users.
+Since the release of [Godot 3.3.2 in May]({{% ref "article/maintenance-release-godot-3-3-2" %}}), there have been a number of bug fixes which are worth including in a new stable release for all Godot users.
 
 Additionally, this release fulfills a new [Google Play requirement](https://developer.android.com/distribute/best-practices/develop/target-sdk) for Android to target the API level 30 (Android 11). This includes partial support for Android scoped storage, which will be expanded in future releases.
 
 Godot 3.3.3, [like all future 3.3.x releases](https://docs.godotengine.org/en/3.3/about/release_policy.html), focuses purely on bug fixes, and aims to preserve compatibility. It is a recommended upgrade for all Godot 3.3 users.
 
-[**Download Godot 3.3.3 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.3.3.stable/).
+[**Download Godot 3.3.3 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.3.3.stable/).
 
 ## Changes
 
@@ -74,15 +74,15 @@ Here are the main changes since 3.3.2-stable:
 
 ## Known incompatibilities
 
-*Update:* One regression has been found which could cause crashes when using the GDScript LSP in Visual Studio Code. This bug has been fixed in [Godot 3.3.4](/article/maintenance-release-godot-3-3-4), which is a recommended update for all users.
+*Update:* One regression has been found which could cause crashes when using the GDScript LSP in Visual Studio Code. This bug has been fixed in [Godot 3.3.4]({{% ref "article/maintenance-release-godot-3-3-4" %}}), which is a recommended update for all users.
 
 If you experience any unexpected behavior change in your projects after upgrading to 3.3.3, please [file an issue on GitHub](https://github.com/godotengine/godot/issues).
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our current and future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ---
 

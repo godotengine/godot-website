@@ -16,19 +16,19 @@ While most development focus is on our upcoming Godot 4.0 release, many contribu
 **Godot 3.3 is compatible with Godot 3.2.x and is a recommended upgrade for all 3.2.x users.**
 
 
-## [Download](/download)
+## [Download]({{% ref "download" %}})
 
-[**Download Godot 3.3 now**](/download) and read on to learn more about our <a href="#versioning">versioning update</a>, our <a href="#support">plans for support</a>, and of course the <a href="#features">many new features</a> in this update.
+[**Download Godot 3.3 now**]({{% ref "download" %}}) and read on to learn more about our <a href="#versioning">versioning update</a>, our <a href="#support">plans for support</a>, and of course the <a href="#features">many new features</a> in this update.
 
 
 <a id="versioning"></a>
 ## Versioning change
 
-When we released [Godot 3.2](/article/here-comes-godot-3-2) in January 2020, we switched the development focus towards the **upcoming Godot 4.0**, which is a major, compatibility-breaking rewrite of the engine's core and rendering.
+When we released [Godot 3.2]({{% ref "article/here-comes-godot-3-2" %}}) in January 2020, we switched the development focus towards the **upcoming Godot 4.0**, which is a major, compatibility-breaking rewrite of the engine's core and rendering.
 
-We knew this would take a while, so we decided to make the 3.2 branch a **long-term support** branch, which would receive 3.2.x updates with bug fixes, but also new features as long as they don't require breaking compatibility. This led us to have a quite [feature-packed 3.2.2 release](/article/maintenance-release-godot-3-2-2), and for over 6 months we'd been working on another feature-heavy 3.2.4 milestone.
+We knew this would take a while, so we decided to make the 3.2 branch a **long-term support** branch, which would receive 3.2.x updates with bug fixes, but also new features as long as they don't require breaking compatibility. This led us to have a quite [feature-packed 3.2.2 release]({{% ref "article/maintenance-release-godot-3-2-2" %}}), and for over 6 months we'd been working on another feature-heavy 3.2.4 milestone.
 
-Along the way, we realized that our versioning scheme was too confusing and limiting, and that it could benefit from a change. So what was planned to be Godot 3.2.4 has been [**renamed to 3.3**](/article/versioning-change-godot-3x), and this is the release we're publishing today.
+Along the way, we realized that our versioning scheme was too confusing and limiting, and that it could benefit from a change. So what was planned to be Godot 3.2.4 has been [**renamed to 3.3**]({{% ref "article/versioning-change-godot-3x" %}}), and this is the release we're publishing today.
 
 As such, Godot 3.3 is fully compatible with Godot 3.2.x (like you'd expect from a release named 3.2.4) and is a **recommended upgrade** for all users.
 
@@ -126,12 +126,12 @@ Again, this is not an exhaustive list of changes in this release, so we advise i
 
 Fabio Alessandrelli ([Faless](https://github.com/Faless)) has done a lot of work to enable running the Godot editor on the Web, using the same export code as for Godot-made games (since the Godot editor is developed 100% with the Godot API). These changes have led to countless improvements for Web exports (see below).
 
-Building upon the [initial prototype](/article/godot-editor-running-web-browser), we've now reached a state where we're happy to release the Web editor in sync with the native version, so you can find the latest stable version on [**editor.godotengine.org**](https://editor.godotengine.org/).
+Building upon the [initial prototype]({{% ref "article/godot-editor-running-web-browser" %}}), we've now reached a state where we're happy to release the Web editor in sync with the native version, so you can find the latest stable version on [**editor.godotengine.org**](https://editor.godotengine.org/).
 
 ![Web editor running in Firefox 90](/storage/app/media/3.3/web-editor.png)
 *Web editor running the "Ninja Adventure" demo from the eponymous CC0 [asset pack by Pixel-Boy and AAA](https://pixel-boy.itch.io/ninja-adventure-asset-pack).*
 
-See Fabio's various progress reports to know more about the rationale, use case and implementation details: [first prototype](/article/godot-editor-running-web-browser), [second prototype](/article/godot-web-progress-report-3), [beta version](/article/godot-web-export-progress-report-4), [release candidate](/article/godot-web-progress-report-5), [Progressive Web App](https://godotengine.org/article/godot-web-progress-report-6).
+See Fabio's various progress reports to know more about the rationale, use case and implementation details: [first prototype]({{% ref "article/godot-editor-running-web-browser" %}}), [second prototype]({{% ref "article/godot-web-progress-report-3" %}}), [beta version]({{% ref "article/godot-web-export-progress-report-4" %}}), [release candidate]({{% ref "article/godot-web-progress-report-5" %}}), [Progressive Web App]({{% ref "article/godot-web-progress-report-6" %}}).
 
 <a id="android"></a>
 #### Android: App Bundle, subview, signing
@@ -151,7 +151,7 @@ Similarly, we've updated the signing logic to use `apksigner` instead of the now
 <a id="ios"></a>
 #### iOS: New plugin API
 
-[Godot 3.2.2](/article/maintenance-release-godot-3-2-2#android-plugins) introduced a new API for Android plugins which allow building and distributing them easily to end users.
+[Godot 3.2.2]({{% ref "article/maintenance-release-godot-3-2-2" %}}#android-plugins) introduced a new API for Android plugins which allow building and distributing them easily to end users.
 
 For 3.3, [Sergey Minakov](https://github.com/naithar) implemented the [same interface for iOS plugins](https://github.com/godotengine/godot/pull/41340). This made it possible to move iOS plugins such as ARKit, GameCenter, InAppStore, etc. to a separate, first-party [godot-ios-plugins](https://github.com/godotengine/godot-ios-plugins) repository, so they can be improved independently of Godot itself.
 
@@ -168,7 +168,7 @@ As such Godot 3.3 comes with three different export templates, see [Exporting fo
 
 The "threads" build additionally benefits from support for the [AudioWorklet API](https://github.com/godotengine/godot/pull/43454), which allows better audio output without blocking the main thread.
 
-Fabio also greatly improved support for [gamepads](/article/godot-web-progress-report-5) and [virtual keyboards](https://godotengine.org/article/godot-web-progress-report-7) in the Web export... and tons of other things which would be impossible to mention exhaustively here. But in short, 3.3 is a *massive* release for the Web export.
+Fabio also greatly improved support for [gamepads]({{% ref "article/godot-web-progress-report-5" %}}) and [virtual keyboards]({{% ref "article/godot-web-progress-report-7" %}}) in the Web export... and tons of other things which would be impossible to mention exhaustively here. But in short, 3.3 is a *massive* release for the Web export.
 
 ![New Web export configuration options](/storage/app/media/3.3/web-export-options.png)
 
@@ -205,7 +205,7 @@ The new BVH is used by default, but [there are project settings](https://github.
 <a id="deleted-objects-debug"></a>
 #### Raise errors when accessing deleted objects in debug
 
-Most Godot users are familiar with the infamous situation of attempting to access a reference to an Object after it has been freed. The reference does not evaluate to `null`, yet it can't be safely dereferenced, leading to the risk of crashes in release builds if such dereferencing is not verified with `is_instance_valid()`. There were [several fixes around this in 3.2.2](/article/maintenance-release-godot-3-2-2#dangling-variant), and some follow-ups in 3.2.3 but going one step too far: in debug builds in 3.2.3, such references to freed objects *would* evaluation as `null`, thus leading to tricky situations where a game runs fine in the editor (debug) but would error out or crash once exported in release mode.
+Most Godot users are familiar with the infamous situation of attempting to access a reference to an Object after it has been freed. The reference does not evaluate to `null`, yet it can't be safely dereferenced, leading to the risk of crashes in release builds if such dereferencing is not verified with `is_instance_valid()`. There were [several fixes around this in 3.2.2]({{% ref "article/maintenance-release-godot-3-2-2" %}}#dangling-variant), and some follow-ups in 3.2.3 but going one step too far: in debug builds in 3.2.3, such references to freed objects *would* evaluation as `null`, thus leading to tricky situations where a game runs fine in the editor (debug) but would error out or crash once exported in release mode.
 
 Godot 3.3 solves this by [no longer decaying references to freed objects to `null` in debug builds](https://github.com/godotengine/godot/pull/41866), so you should properly get errors in the editor that let you identify which code is problematic.
 
@@ -217,7 +217,7 @@ Godot 3.3 solves this by [no longer decaying references to freed objects to `nul
 <a id="2d-batching"></a>
 #### Unified 2D batching
 
-After implementing [2D batching in GLES2 in 3.2.2](/article/maintenance-release-godot-3-2-2#gles2-batching) and 3.2.3, [lawnjelly](https://github.com/lawnjelly) has [overhauled the system](https://github.com/godotengine/godot/pull/42119) with a common intermediate layer allowing it to operate in GLES3 as well as GLES2. In addition batching has been expanded to cover many other primitives (polys, lines, ninepatches) as well as the rects featured in earlier versions.
+After implementing [2D batching in GLES2 in 3.2.2]({{% ref "article/maintenance-release-godot-3-2-2" %}}#gles2-batching) and 3.2.3, [lawnjelly](https://github.com/lawnjelly) has [overhauled the system](https://github.com/godotengine/godot/pull/42119) with a common intermediate layer allowing it to operate in GLES3 as well as GLES2. In addition batching has been expanded to cover many other primitives (polys, lines, ninepatches) as well as the rects featured in earlier versions.
 
 New vertex formats allow many more custom shaders and cases to take advantage of batching than before, and optional 2D software skinning has been added which should allow using 2D skeletal animation on a far wider range of hardware than was previously available.
 
@@ -278,7 +278,7 @@ Here too, there are still a number of known issues to address, and this will be 
 <a id="godotphysics-cylinder"></a>
 #### Cylinder collision shape for GodotPhysics
 
-[As part of his Godot 4.0 work](/article/camille-mohr-daurat-hired-work-physics), Camille is implementing missing features in the GodotPhysics 3D backend to reach feature parity with Bullet. One of these was the support for [Cylinder collision shapes](https://github.com/godotengine/godot/pull/45854), which has been implemented for Godot 4.0 and backported to 3.3. This is an *experimental* feature as of 3.3, as it hasn't received extensive testing yet and there are some known bugs in edge cases, so you can expect further fixes in Godot 3.4.
+[As part of his Godot 4.0 work]({{% ref "article/camille-mohr-daurat-hired-work-physics" %}}), Camille is implementing missing features in the GodotPhysics 3D backend to reach feature parity with Bullet. One of these was the support for [Cylinder collision shapes](https://github.com/godotengine/godot/pull/45854), which has been implemented for Godot 4.0 and backported to 3.3. This is an *experimental* feature as of 3.3, as it hasn't received extensive testing yet and there are some known bugs in edge cases, so you can expect further fixes in Godot 3.4.
 
 
 
@@ -378,7 +378,7 @@ There's also been [extensive](https://github.com/godotengine/godot/pull/44373) [
 <a id="fbx-importer"></a>
 #### Improved FBX importer
 
-Gordon MacPherson ([RevoluPowered](https://github.com/RevoluPowered)) rewrote the prototypical Assimp-based FBX importer that we had in Godot 3.2 to support a lot of the more advanced features used in professional FBX-based workflows. You can read his [devblog about it](/article/fbx-importer-rewritten-for-godot-3-2-4) for details.
+Gordon MacPherson ([RevoluPowered](https://github.com/RevoluPowered)) rewrote the prototypical Assimp-based FBX importer that we had in Godot 3.2 to support a lot of the more advanced features used in professional FBX-based workflows. You can read his [devblog about it]({{% ref "article/fbx-importer-rewritten-for-godot-3-2-4" %}}) for details.
 
 ![Amazon Lumberyard "Bistro" scene imported as FBX](/storage/app/media/3.3/bistro-fbx.jpg)
 
@@ -395,7 +395,7 @@ VR developers got a nice surprise back in September when David Snopek ([dsnopek]
 <a id="openxr"></a>
 #### OpenXR plugin
 
-As one of his first tasks as a new full-time developer, Bastiaan Olij ([BastiaanOlij](https://github.com/BastiaanOlij)) worked on an OpenXR plugin for Godot 3.3, before focusing on rendering optimization for mobile Vulkan in the 4.0 branch. He built on the pre-existing effort by Christoph Haag ([ChristophHaag](https://github.com/ChristophHaag)), porting the Linux-only plugin to Windows, and implementing a first version of the the OpenXR action system. You can [read more in this devblog](https://godotengine.org/article/godot-openxr-support).
+As one of his first tasks as a new full-time developer, Bastiaan Olij ([BastiaanOlij](https://github.com/BastiaanOlij)) worked on an OpenXR plugin for Godot 3.3, before focusing on rendering optimization for mobile Vulkan in the 4.0 branch. He built on the pre-existing effort by Christoph Haag ([ChristophHaag](https://github.com/ChristophHaag)), porting the Linux-only plugin to Windows, and implementing a first version of the the OpenXR action system. You can [read more in this devblog]({{% ref "article/godot-openxr-support" %}}).
 
 You can [download the GDNative plugin](https://github.com/GodotVR/godot_openxr/releases) directly from its GitHub repository.
 
@@ -447,4 +447,4 @@ As a community effort, Godot relies on individual contributors to improve. In ad
 
 Last but not least, making games with Godot and crediting the engine goes a long way to help raise its popularity, and thus the number of active contributors who make it better on a daily basis. Remember, we are all in this together and Godot requires community support in every area in order to thrive.
 
-[Now go and have fun with 3.3!](/download)
+[Now go and have fun with 3.3!]({{% ref "download" %}})

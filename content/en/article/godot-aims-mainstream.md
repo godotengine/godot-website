@@ -9,11 +9,11 @@ date: 2016-04-01 00:00:00
 
 **Edit: This was of course a joke for April Fools' Day 2016.** Stay tuned for some real news though, as an asset sharing platform *is* being worked on for Godot 2.1.
 
-[After attending this year's GDC](/article/godot-gdc-2016-aftermath), we realized that Godot, though a good engine that we believe ready for the industry, is still hardly known by professional game developers.
+[After attending this year's GDC]({{% ref "article/godot-gdc-2016-aftermath" %}}), we realized that Godot, though a good engine that we believe ready for the industry, is still hardly known by professional game developers.
 
 The most important feedback we got is that Godot is different from the most popular game engines, and thus confusing. So in order to become more popular we decided to make Godot more like the other mainstream engines. This should leave everyone happy since, after all, half the planet uses the same game engine.
 
-We started this work a year ago by [making Godot really free](/article/godot-now-really-free). Today, we want to announce our plans to follow up on this work.
+We started this work a year ago by [making Godot really free]({{% ref "article/godot-now-really-free" %}}). Today, we want to announce our plans to follow up on this work.
 
 #### Download size
 

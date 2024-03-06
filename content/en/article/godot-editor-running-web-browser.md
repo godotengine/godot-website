@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5ec/fac/efa/5ecfacefaeb1e933757325.png
 date: 2020-05-29 10:00:00
 ---
 
-Hello Godotters! It's-a me, Fabio! In the last few months, thanks to the great sponsorship of [Mozilla](https://godotengine.org/article/godot-engine-awarded-50000-mozilla-open-source-support-program) I've been working on a big surprise for Godot 4.0, namely making the editor available as an HTML5 application.
+Hello Godotters! It's-a me, Fabio! In the last few months, thanks to the great sponsorship of [Mozilla]({{% ref "article/godot-engine-awarded-50000-mozilla-open-source-support-program" %}}) I've been working on a big surprise for Godot 4.0, namely making the editor available as an HTML5 application.
 
 This **DOES NOT** mean that we will move completely to the Web like other engines did. It will only be provided as a complementary option to the native editor, as a way to lower the entry barrier. Let me explain further.
 

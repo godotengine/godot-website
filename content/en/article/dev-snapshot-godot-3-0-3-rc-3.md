@@ -11,7 +11,7 @@ We're pleased to announce the third release candidate for what will become Godot
 
 This release also restores the Javascript export templates. These were broken for rc2.
 
-Please note that this release still has the [Android Google Play bug](https://godotengine.org/article/fixing-godot-games-published-google-play). We will do an rc4 shortly with a fix. A tool will be released soon to fix existing APKs. I've had some trouble with getting signing to work reliably from a third-party tool.
+Please note that this release still has the [Android Google Play bug]({{% ref "article/fixing-godot-games-published-google-play" %}}). We will do an rc4 shortly with a fix. A tool will be released soon to fix existing APKs. I've had some trouble with getting signing to work reliably from a third-party tool.
 
 Please test this release with your existing projects and as usual: Any breakage of existing projects after upgrading is a bug. If we somehow missed something please [report a bug](https://github.com/godotengine/godot/issues/new).
 

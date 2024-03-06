@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5c1/8f7/f3c/5c18f7f3cc9b6563814474.png
 date: 2018-12-18 13:34:46
 ---
 
-Last month [we announced the **GodotCon 2019**](/article/meet-community-fosdem-and-godotcon-2019) in Brussels (4-5 Feb 2019), as well as a contributors-focused **Godot Sprint** (31 Jan & 1 Feb 2019) and our stand at the [**FOSDEM 2019**](https://fosdem.org) (2-3 Feb 2019).
+Last month [we announced the **GodotCon 2019**]({{% ref "article/meet-community-fosdem-and-godotcon-2019" %}}) in Brussels (4-5 Feb 2019), as well as a contributors-focused **Godot Sprint** (31 Jan & 1 Feb 2019) and our stand at the [**FOSDEM 2019**](https://fosdem.org) (2-3 Feb 2019).
 
 We have a few updates since then:
 

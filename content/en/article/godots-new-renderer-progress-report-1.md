@@ -26,10 +26,10 @@ To add more insights, here is a roadmap about the things that need to be done to
 #### Done for Milestone #1 (October 2016):
 
 * Make Godot compile against GLES 3.
-* [Refactor the Image class to include modern data types](/article/change-image).
+* [Refactor the Image class to include modern data types]({{% ref "article/change-image" %}}).
 * Refactor the texture API to include more modern texture compression formats.
 * Refactor the rendering API to make it easier to understand (and contribute to!).
-* [Write a more flexible, GLES 3 GLSL compatible shader language](/article/making-shaders-more-accessible).
+* [Write a more flexible, GLES 3 GLSL compatible shader language]({{% ref "article/making-shaders-more-accessible" %}}).
 * Write a more efficient Mesh format, which allows faster loading/saving.
 * Optimize scene rendering to use less function calls.
 * Make rendering always happen in Linear colorspace.
@@ -131,7 +131,7 @@ As the above features are implemented in the following milestone, more work will
 
 ### Refactor Image class to include modern data types
 
-The Image class had to be refactored for more modern data types. There is a nice [devblog post](https://godotengine.org/article/change-image) explaining what was done.
+The Image class had to be refactored for more modern data types. There is a nice [devblog post]({{% ref "article/change-image" %}}) explaining what was done.
 
 ### Refactor texture API to include more modern texture compression formats
 
@@ -139,7 +139,7 @@ This is covered in the above-mentioned devblog post too.
 
 ### Refactor the rendering API to make it easier to understand
 
-The rendering API itself (VisualServer class) will not change much. There is also another [devblog post](https://godotengine.org/article/why-does-godot-use-servers-and-rids) explaining the rationale behind it.
+The rendering API itself (VisualServer class) will not change much. There is also another [devblog post]({{% ref "article/why-does-godot-use-servers-and-rids" %}}) explaining the rationale behind it.
 
 That said, what did change is the internals of it. For the GLES 2.0 renderer, every single feature was packed into a [single file](https://github.com/godotengine/godot/blob/2.1/drivers/gles2/rasterizer_gles2.cpp). For Godot 3.0, we are splitting it into [several files](https://github.com/godotengine/godot/tree/gles3/drivers/gles3).
 
@@ -161,7 +161,7 @@ Each element is explained below:
 
 ### Write a more flexible, GLES 3 GLSL compatible shader language
 
-A [devblog entry](https://godotengine.org/article/making-shaders-more-accessible) about this was already written, should be informative enough.
+A [devblog entry]({{% ref "article/making-shaders-more-accessible" %}}) about this was already written, should be informative enough.
 
 ### Write a more efficient Mesh format, which allows faster loading/saving
 

@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5dc/1aa/e06/5dc1aae06d7f4636917764.png
 date: 2019-11-11 11:52:01
 ---
 
-This is the second blog post describing enhancements for visual shaders and shader scripts landed in Godot 3.2. You can read the [first part here](https://godotengine.org/article/major-update-for-visual-shader-in-godot-3-2).
+This is the second blog post describing enhancements for visual shaders and shader scripts landed in Godot 3.2. You can read the [first part here]({{% ref "article/major-update-for-visual-shader-in-godot-3-2" %}}).
 Since the previous update, I've (Chaosus) spent much time and effort adding a lot of new things to enhance the overall experience developing shaders.
 
 ## Shader changes

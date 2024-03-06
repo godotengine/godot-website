@@ -26,7 +26,7 @@ He is one of the longest standing and most reliable contributors and an excellen
 
 Besides continued work on GDScript (on his schedule is the addition of typed instructions, which will massively improve run-time performance, and eventually compilation of scripts to C), he will work together with Rémi, our project manager, doing general bug-fixing and code reviews, helping alleviate our large bottleneck in this area.
 
-On a side note, please remember that for C# support, Ignacio Roldán is [already working full time](https://godotengine.org/article/csharp-android-support) for the project thanks to a generous grant from Microsoft.
+On a side note, please remember that for C# support, Ignacio Roldán is [already working full time]({{% ref "article/csharp-android-support" %}}) for the project thanks to a generous grant from Microsoft.
 
 ### Future
 

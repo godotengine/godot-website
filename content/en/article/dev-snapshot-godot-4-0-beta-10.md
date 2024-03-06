@@ -9,7 +9,7 @@ image_caption_description: A game by bitbrain
 date: 2022-12-23 16:04:50
 ---
 
-Happy holidays! We have been enjoing Godot 4.0 betas for [over three months](/article/dev-snapshot-godot-4-0-beta-1) now, and we are glad to see it get more stable and usable every week. Every beta release so far has included a lot of fixes in one or more key areas, and the next major version of the engine starts to finally look complete.
+Happy holidays! We have been enjoing Godot 4.0 betas for [over three months]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}) now, and we are glad to see it get more stable and usable every week. Every beta release so far has included a lot of fixes in one or more key areas, and the next major version of the engine starts to finally look complete.
 
 Beta 10 will be the last dev snapshot of the year 2022, as a lot of our contributors will no doubt be slowing down for the end of year celebrations and some quality family time. We will continue our work on the engine and will release a new snapshot every week in the upcoming year, just as before, to get fast feedback on bugfixes, and potential regressions they may introduce. Thank you for being an integral part of the dev process with your rigorous testing and timely reports!
 
@@ -27,7 +27,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/e780dc332a0a3f642a6daf8548cb211d79a2cc45...d0398f62f08ce0cfba80990b21c6af4181f93fe9), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2022-12-19..2022-12-23+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 9 (90 commits – excluding merge commits ― from 40 contributors).
 

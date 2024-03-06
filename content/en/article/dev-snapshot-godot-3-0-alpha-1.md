@@ -21,13 +21,13 @@ There is also no guarantee that projects started with the alpha1 build will stil
 
 ## The features
 
-Now, there are still some cool features that can already be played with in this alpha1 build, and we are looking forward to seeing what you will come up with using the new 3D renderer. There is no exhaustive listing of all the new features to experiment with, but you can read past articles of [this blog](/news) and check Juan's [Twitter feed](https://twitter.com/reduzio) for some teasers :)
+Now, there are still some cool features that can already be played with in this alpha1 build, and we are looking forward to seeing what you will come up with using the new 3D renderer. There is no exhaustive listing of all the new features to experiment with, but you can read past articles of [this blog]({{% ref "blog" %}}) and check Juan's [Twitter feed](https://twitter.com/reduzio) for some teasers :)
 
-Please use the [community channels](/community) to discuss with existing users and learn how to use the new workflows of Godot 3.0 - as of this writing there is almost no documentation on the new features, but this alpha1 build should serve as a starting point for documentation writers.
+Please use the [community channels]({{% ref "community" %}}) to discuss with existing users and learn how to use the new workflows of Godot 3.0 - as of this writing there is almost no documentation on the new features, but this alpha1 build should serve as a starting point for documentation writers.
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
 
 - [Mirror 1 (HTTPS)](https://downloads.tuxfamily.org/godotengine/3.0/alpha1)
 - [Mirror 2 (HTTP)](http://op.godotengine.org:81/downloads/3.0/alpha1)

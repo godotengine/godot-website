@@ -10,7 +10,7 @@ date: 2019-01-29 22:40:35
 
 January is coming to an end, and we're about to have great Godot events in the coming days in **Brussels**, Belgium, with the **Godot Sprint** (for contributors), [**FOSDEM**](http://fosdem.org) (for thousands of free software users and developers) and our biggest **GodotCon** so far (for everyone!).
 
-If you missed our [previous](/article/meet-community-fosdem-and-godotcon-2019) [announcements](/article/call-participation-godotcon-2019), see the [**Events**](/events) page for details. You can still register and join us at either event :)
+If you missed our [previous]({{% ref "article/meet-community-fosdem-and-godotcon-2019" %}}) [announcements]({{% ref "article/call-participation-godotcon-2019" %}}), see the [**Events**]({{% ref "events" %}}) page for details. You can still register and join us at either event :)
 
 ## GodotCon schedule
 

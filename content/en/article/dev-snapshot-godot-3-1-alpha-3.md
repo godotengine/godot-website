@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/5c0/d20/8fb/5c0d208fb9e4c913419803.png
 date: 2018-12-12 11:38:58
 ---
 
-Already more than a month since [our previous alpha](/article/dev-snapshot-godot-3-1-alpha-2), yet we haven't been idle in the meantime. Hundreds of fixes and enhancements have been done in the *master* branch, which we are pleased to bring to you as Godot **3.1 alpha 3**. This new development snapshot brings us one step closer to the *beta* stage, which we should reach before Christmas.
+Already more than a month since [our previous alpha]({{% ref "article/dev-snapshot-godot-3-1-alpha-2" %}}), yet we haven't been idle in the meantime. Hundreds of fixes and enhancements have been done in the *master* branch, which we are pleased to bring to you as Godot **3.1 alpha 3**. This new development snapshot brings us one step closer to the *beta* stage, which we should reach before Christmas.
 
-Contrarily to our [3.0.x maintenance releases](/article/maintenance-release-godot-3-0-6), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs](/devblog). It's been over 10 months since the 3.0 release and over 5,000 commits, so expect a lot of nice things in the final 3.1 version!
+Contrarily to our [3.0.x maintenance releases]({{% ref "article/maintenance-release-godot-3-0-6" %}}), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs]({{% ref "blog" %}}). It's been over 10 months since the 3.0 release and over 5,000 commits, so expect a lot of nice things in the final 3.1 version!
 
 The *alpha* stage corresponds for us to a *feature freeze* (see [announcement on GitHub](https://github.com/godotengine/godot/issues/21490)), which means that we will no longer consider pull requests with new features for merge in the *master* branch, and that until Godot 3.1 is released. This way, we can focus on what we already have, finish and polish the major features which are still in progress (e.g. OpenGL ES 2.0 support), and fix many of the old and new bugs reported by the community.
 
@@ -23,13 +23,13 @@ There is still a long way of bug fixing and usability improvement until we can r
 
 There is also no guarantee that projects started with the alpha 3 build will still work in later builds, as we reserve the right to do necessary breaking adjustments up to the *beta* stage (albeit compatibility breaking changes at this stage should be very minimal, if any).
 
-**Note:** New Godot users should not use this build to start their learning. [Godot 3.0.x](/download) is our current stable branch and still receives frequent updates.
+**Note:** New Godot users should not use this build to start their learning. [Godot 3.0.x]({{% ref "download" %}}) is our current stable branch and still receives frequent updates.
 
 ## The features
 
 Release notes are not written yet, but you can refer to the [detailed changelog](https://gist.github.com/Calinou/49aefe52ce8f67ffa3f743932123d14f) that our contributor [Hugo Locurcio](https://github.com/Calinou) is working on.
 
-As mentioned previously, [our past devblogs](/devblog) should also give you an idea of the main highlights of the upcoming release.
+As mentioned previously, [our past devblogs]({{% ref "blog" %}}) should also give you an idea of the main highlights of the upcoming release.
 
 This alpha 3 comes with an impressive amount of bug fixes all around the engine, with Juan spending most of the month of November focusing on that. See this [Patreon post](https://www.patreon.com/posts/23181942) for details on what happened since alpha 2.
 
@@ -37,7 +37,7 @@ Documentation writers are hard at work to catch up with the new features, and th
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary and export templates that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary and export templates that matches your platform:
 
 - [Classical](https://downloads.tuxfamily.org/godotengine/3.1/alpha3)
 - [Mono (*alpha* C# support)](https://downloads.tuxfamily.org/godotengine/3.1/alpha3/mono) - you need Mono SDK **5.12.0** for this alpha (5.14 or newer won't work)

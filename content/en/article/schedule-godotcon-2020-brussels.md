@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5e2/e08/63a/5e2e0863aaadc002576427.png
 date: 2020-01-26 21:47:26
 ---
 
-As announced [a few months back](/article/meet-community-fosdem-and-godotcon-2020), we are organizing a Godot Conference (**GodotCon**) in **Brussels, Belgium** in a week, on 3 & 4 Feb 2020. We expect about 75 attendees, so this should be a great event!
+As announced [a few months back]({{% ref "article/meet-community-fosdem-and-godotcon-2020" %}}), we are organizing a Godot Conference (**GodotCon**) in **Brussels, Belgium** in a week, on 3 & 4 Feb 2020. We expect about 75 attendees, so this should be a great event!
 
 As usual, this GodotCon will follow the [FOSDEM](https://fosdem.org/2020/) which also takes place in Brussels, and where we'll have a [Godot stand](https://fosdem.org/2020/stands/) as well as a few Godot-related talks in the [Game Development devroom](https://fosdem.org/2020/schedule/track/game_development/) which some of us co-organize. Namely: [Python for Godot](https://fosdem.org/2020/schedule/event/gamedev_python_for_godot/) by Emmanuel Leblond, [Benefits of porting Godot Engine to Vulkan](https://fosdem.org/2020/schedule/event/benefits_porting_godot_engine_vulkan/) by Juan Linietsky, and [Reloading Escoria](https://fosdem.org/2020/schedule/event/gamedev_reloading_escoria/) by Julian Murgia.
 

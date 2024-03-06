@@ -9,7 +9,7 @@ image_caption_description: A game by Kenny Park
 date: 2023-01-13 15:53:00
 ---
 
-After a short end-of-year break, and then a lot of heavy merging work prior to [4.0 beta 11](/article/dev-snapshot-godot-4-0-beta-11), we found a lot of regressions – as we expected!
+After a short end-of-year break, and then a lot of heavy merging work prior to [4.0 beta 11]({{% ref "article/dev-snapshot-godot-4-0-beta-11" %}}), we found a lot of regressions – as we expected!
 
 Our contributors could fix many of the new regressions quickly, and we merged another big batch of important fixes and improvements. As the pace intensifies in the lead-up to the first Release Candidate, we decided to make more frequent beta snapshots for testing.
 
@@ -34,7 +34,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.be
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1](/article/dev-snapshot-godot-4-0-beta-1). In this blog post, we will only cover the main changes since the previous beta release.
+If you're interested in an overview of what's new in Godot 4.0 beta in general, have a look at the detailed release notes for [4.0 beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}). In this blog post, we will only cover the main changes since the previous beta release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/91713ced81792b10fdc9367b7f355738e5d52777...3c9bf4bc210a8e6a208f30ca59de4d4d7e18c04d), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-01-10T16%3A00..2023-01-13T10%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 beta 11 (76 commits – excluding merge commits ― from 39 contributors).
 

@@ -9,7 +9,7 @@ date: 2023-04-18 20:00:00
 
 Now that Godot 4.0 is out, we have had the chance to think about our priorities for 4.1. In particular, we have been discussing how our intention for 4.0 was to create a stable base to build upon. The rendering internals have been totally overhauled and many new features have been added. Leading up to the betas we focused on getting everything implemented. In other words, some features are still lacking polish and optimization. We are confident that the current state of the rendering internals gives us a lot of room to grow, but we are aware that we have a lot of work to do to get stability and performance in line with our goals and with user expectations.
 
-[As explained earlier](https://godotengine.org/article/release-management-4-0-and-beyond/) we are aiming to have a quicker release cycle and we expect to release 4.1 later this year. The engine-wide focus for 4.1 will be on stability, usability, and performance.
+[As explained earlier]({{% ref "article/release-management-4-0-and-beyond" %}}) we are aiming to have a quicker release cycle and we expect to release 4.1 later this year. The engine-wide focus for 4.1 will be on stability, usability, and performance.
 
 ## Priorities
 
@@ -63,7 +63,7 @@ Also note that we will still be merging and reviewing feature PRs and bug fixes 
 
     Godot 4.0 shipped with a low-end focused renderer which targets OpenGL 3.3 / OpenGL ES 3.0 / WebGL 2 devices. The GL Compatibility renderer (as we call it) is written with low-end and mobile devices in mind and should run much more efficiently on those devices than the GLES3 renderer in Godot 3.x.
 
-    As mentioned in an [earlier post](https://godotengine.org/article/status-of-opengl-renderer/), we had time to finish the 2D renderer, but did not have time to finish the 3D renderer. For 4.1, we would like to finish the 3D renderer.
+    As mentioned in an [earlier post]({{% ref "article/status-of-opengl-renderer" %}}), we had time to finish the 2D renderer, but did not have time to finish the 3D renderer. For 4.1, we would like to finish the 3D renderer.
 
     **Assigned:** [Clay](https://github.com/clayjohn) will be responsible to ensure this work is done before 4.1 releases, but contributions are welcome in the meantime.
 

@@ -8,7 +8,7 @@ image: /storage/app/uploads/public/5a6/3ae/e17/5a63aee174d80543898745.png
 date: 2018-01-20 21:07:35
 ---
 
-The final release of Godot 3.0 is getting closer and closer! We had a first *Release Candidate* (RC) [last week](/article/dev-snapshot-godot-3-0-rc-1), quite stable already but with some remaining blockers and late regressions.
+The final release of Godot 3.0 is getting closer and closer! We had a first *Release Candidate* (RC) [last week]({{% ref "article/dev-snapshot-godot-3-0-rc-1" %}}), quite stable already but with some remaining blockers and late regressions.
 
 After a week of bugfixing with a tight control of what gets merged and what must wait for the 3.1 development cycle, we should now have a pretty good RC 2.
 

@@ -7,14 +7,14 @@ image: /storage/app/uploads/public/5e5/166/6a0/5e51666a0d8b2890019310.png
 date: 2020-02-25 15:40:15
 ---
 
-Hello Godotters, as part of my November work (sponsored, as always, by [Mozilla](/article/godot-engine-awarded-50000-mozilla-open-source-support-program)) I've been working on finalizing DTLS support I wrote about in a [previous report](/article/dtls-report-1), and implementing a custom ENet socket layer that uses it.
+Hello Godotters, as part of my November work (sponsored, as always, by [Mozilla]({{% ref "article/godot-engine-awarded-50000-mozilla-open-source-support-program" %}})) I've been working on finalizing DTLS support I wrote about in a [previous report]({{% ref "article/dtls-report-1" %}}), and implementing a custom ENet socket layer that uses it.
 
 This allows for optional, transparent, easy-to-use encryption of the high level Multiplayer API when using the ENet peer (`NetworkedMultiplayerENet`). If you want to try these features in 3.2, and don't mind compiling the engine yourself, check out the end of this post.
 
 DTLS support
 ============
 
-DTLS support is now merged in the `master` branch. To know more about DTLS support in Godot 4.0 and DTLS in general you can read the [previous blog post on the subject](/article/dtls-report-1).
+DTLS support is now merged in the `master` branch. To know more about DTLS support in Godot 4.0 and DTLS in general you can read the [previous blog post on the subject]({{% ref "article/dtls-report-1" %}}).
 
 Additionally, documentation for all the new classes with small code samples has been added, the documentation is not yet synced with the online version, so here is a simple script (included in the docs) that shows how to make a DTLS server and client:
 

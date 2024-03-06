@@ -9,7 +9,7 @@ date: 2023-02-07 15:00:00
 
 You've probably heard it before, that Godot's own editor is "built with the Godot Engine", and in a certain way it is true. Another fact is that Godot supports the Android platform, and many developers have been using it to create [amazing mobile games](https://www.youtube.com/watch?v=xF3QiQfQxeQ) in the last few years. The natural conclusion of these two factoids is a question: "Can I run the Godot Editor on my Android device to make games and app on the go?".
 
-Yes, you can! Since [our announcement last year](/article/dev-snapshot-godot-3-5-beta-3/), we have been hard at work demonstrating this capability and have been making significant progress developing, refining, and polishing the port of the Godot Editor on Android devices.
+Yes, you can! Since [our announcement last year]({{% ref "article/dev-snapshot-godot-3-5-beta-3" %}}), we have been hard at work demonstrating this capability and have been making significant progress developing, refining, and polishing the port of the Godot Editor on Android devices.
 
 *Note that the same tenets apply to other platforms supported by the Godot Engine, like iOS; the implementation is left as an exercise to the reader :).*
 
@@ -88,7 +88,7 @@ _**Note**: The debugger functionality is only available on large form factor And
 The Godot Editor for Android supports the ability to import, open, and edit existing Godot projects.
 For example, a user can start a Godot project on their desktop machine, transfer it to their Android tablet (via file sync, version control, or other means), and continue working on the project while on the go.
 
-Do note, that while all renderers provided by Godot are available, for performance reasons we recommend using the [OpenGL ES 2.0](https://docs.godotengine.org/en/stable/tutorials/rendering/gles2_gles3_differences.html) renderer with Godot 3.x and the [Compatibility](https://godotengine.org/article/status-of-opengl-renderer/) renderer with Godot 4.0 if you intend to run or edit your project on an Android device.
+Do note, that while all renderers provided by Godot are available, for performance reasons we recommend using the [OpenGL ES 2.0](https://docs.godotengine.org/en/stable/tutorials/rendering/gles2_gles3_differences.html) renderer with Godot 3.x and the [Compatibility]({{% ref "article/status-of-opengl-renderer" %}}) renderer with Godot 4.0 if you intend to run or edit your project on an Android device.
 
 ### Exporting Godot projects
 
@@ -100,7 +100,7 @@ The Android version is still in development and has various limitations, usabili
 
 ### Godot 4.0 performance
 
-As Godot 4 is still [in development](/article/release-management-4-0-and-beyond/) and will take several releases to get to the point of optimal performance and stability, the 4.0 version of the Godot Editor for Android is also less stable and performant, compared to its 3.x counterpart. This is an area we’re planning to take a closer look at as Godot 4 gets closer to the prime time ready status.
+As Godot 4 is still [in development]({{% ref "article/release-management-4-0-and-beyond" %}}) and will take several releases to get to the point of optimal performance and stability, the 4.0 version of the Godot Editor for Android is also less stable and performant, compared to its 3.x counterpart. This is an area we’re planning to take a closer look at as Godot 4 gets closer to the prime time ready status.
 
 For users interested in testing and willing to troubleshoot the bleeding edge, we provide the ability to install both versions of the editor side by side on the same Android device. **Do note that Godot 4 projects are not backward compatible with Godot 3.**
 

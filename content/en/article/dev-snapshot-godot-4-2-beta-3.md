@@ -9,11 +9,11 @@ image_caption_description: A game by Frédéric Julian
 date: 2023-10-24 15:00:00
 ---
 
-We entered the beta phase for Godot 4.2 a couple of weeks ago, with [4.2 beta 1](/article/dev-snapshot-godot-4-2-beta-1/). If you missed that release, have a look at the [release notes](/article/dev-snapshot-godot-4-2-beta-1/) for an overview of the key changes in Godot 4.2.
+We entered the beta phase for Godot 4.2 a couple of weeks ago, with [4.2 beta 1]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}). If you missed that release, have a look at the [release notes]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}) for an overview of the key changes in Godot 4.2.
 
 Since the start of the beta phase, we fixed a number of bugs reported by the community, so we're publishing further beta snapshots to validate those fixes, and iterate closer to the release candidate stage.
 
-Notably, this third beta improves support for 3D projects made with Godot 4.1 when migrating them to Godot 4.2. Following our changes to the [mesh vertices and attributes compression format](https://godotengine.org/article/dev-snapshot-godot-4-2-beta-1/#rendering-particles-and-shaders), we are now introducing a helpful dialog when you first open a pre-existing project. It lets you choose to upgrade and re-save all the meshes in your projects to make them compatible with Godot 4.2.
+Notably, this third beta improves support for 3D projects made with Godot 4.1 when migrating them to Godot 4.2. Following our changes to the [mesh vertices and attributes compression format]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}#rendering-particles-and-shaders), we are now introducing a helpful dialog when you first open a pre-existing project. It lets you choose to upgrade and re-save all the meshes in your projects to make them compatible with Godot 4.2.
 
 This release also [updates the toolchains](https://github.com/godotengine/build-containers/pull/128) used to build official binaries, notably for Windows, macOS, iOS and JavaScript. This should be mostly transparent to end users, but toolchain bugs are a possibility. So please report if anything seems off compared to the previous beta build in terms of performance, or outright crashing.
 
@@ -27,7 +27,7 @@ For C# users, the .NET 8.0 release is set to be launched this November. Make sur
 
 ## What's new
 
-For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1](/article/dev-snapshot-godot-4-2-beta-1/), which cover a lot of the changes. This blog post only covers the changes between beta 2 and beta 3.
+For an overview of what's new overall in Godot 4.2, have a look at the release notes for [4.2 beta 1]({{% ref "article/dev-snapshot-godot-4-2-beta-1" %}}), which cover a lot of the changes. This blog post only covers the changes between beta 2 and beta 3.
 
 **44 contributors** submitted **74 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-beta3), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes compared to 4.2-beta2:
 
@@ -123,4 +123,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

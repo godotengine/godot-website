@@ -22,7 +22,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.rc
 
 ## What's new
 
-As usual, this blog post only details the most recent changes since the last build, 4.0 RC 5. If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1](/article/dev-snapshot-godot-4-0-beta-1).
+As usual, this blog post only details the most recent changes since the last build, 4.0 RC 5. If you're interested in what major features ship with Godot 4.0, check out our blog post for [beta 1]({{% ref "article/dev-snapshot-godot-4-0-beta-1" %}}).
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/6296b46008fb8d8e5cb9b60af05fa1ea26b8f600...0cd148313213e2923004be65bafd6a3781c917ec), or the [**list of merged PRs**](https://github.com/godotengine/godot/pulls?q=is%3Apr+merged%3A2023-02-24T15%3A00..2023-02-26T22%3A00+is%3Amerged+sort%3Acreated-asc+milestone%3A4.0), for an overview of all changes since 4.0 RC 5 (22 commits – excluding merge commits ― from 15 contributors).
 

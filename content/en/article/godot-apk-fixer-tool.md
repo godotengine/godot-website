@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5b1/962/b00/5b1962b00413a990510141.png
 date: 2018-06-07 00:00:00
 ---
 
-As previously mentioned [in this blog post](https://godotengine.org/article/fixing-godot-games-published-google-play) the Godot placeholder permissions are causing some issues on the play store. We are working on fixing this for future versions of Godot but games stuck on older versions have to do a bit of work to get their games showing up on the Play store again.
+As previously mentioned [in this blog post]({{% ref "article/fixing-godot-games-published-google-play" %}}) the Godot placeholder permissions are causing some issues on the play store. We are working on fixing this for future versions of Godot but games stuck on older versions have to do a bit of work to get their games showing up on the Play store again.
 
 To aid developers with these types of games we've created a tool that can fix an existing APK without any need to rebuild it. The tool can be downloaded at [https://downloads.tuxfamily.org/godotengine/apkfixer/](https://downloads.tuxfamily.org/godotengine/apkfixer/) for Windows, Linux, and Mac.
 

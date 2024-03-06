@@ -10,7 +10,7 @@ date: 2024-03-01 16:00:00
 <style>article .row-2{display:grid;gap:10px}@media (min-width: 768px){article .row-2{grid-template-columns:1fr 1fr;gap:30px}}article .row-2 h3{margin-top:10px;margin-bottom:-5px}article .media{display:grid}article .media a.lightbox{pointer-events:none}article .media img{max-width:100%;border-radius:7px;background-color:var(--card-background-color);box-shadow:0 5px 10px -3px #00000078;display:block;margin-bottom:6px}</style>
 
 
-Like we announced [a while ago](https://godotengine.org/article/godot-at-gdc-2024/), the team is preparing to head over to the US for this year’s GDC! In case you have not heard about the conference before, you can read more about it here: [gdconf.com](https://gdconf.com/)
+Like we announced [a while ago]({{% ref "article/godot-at-gdc-2024" %}}), the team is preparing to head over to the US for this year’s GDC! In case you have not heard about the conference before, you can read more about it here: [gdconf.com](https://gdconf.com/)
 
 We will have a booth on the expo floor, and would love to welcome you there! You can play games (more about those below), chat with [our sponsors](https://w4games.com/2024/01/31/dive-into-the-godot-ecosystem-at-gdc-2024/), meet contributors to the engine and ask your burning questions to the Foundation members staffing the place. There might even be pins to snatch up 👀
 

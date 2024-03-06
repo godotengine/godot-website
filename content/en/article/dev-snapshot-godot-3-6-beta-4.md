@@ -9,11 +9,11 @@ image_caption_description: "A game by Mad Cookies Studio"
 date: 2024-01-25 14:00:00
 ---
 
-Long time no see, Godot 3.x! While our main focus is on Godot 4.x with frequent feature releases (with the recent release of [Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/) in November), we still have a number of changes backported to the `3.x` branch or written specifically for that version, which we plan to release as Godot 3.6 in the near future.
+Long time no see, Godot 3.x! While our main focus is on Godot 4.x with frequent feature releases (with the recent release of [Godot 4.2]({{% ref "article/godot-4-2-arrives-in-style" %}}) in November), we still have a number of changes backported to the `3.x` branch or written specifically for that version, which we plan to release as Godot 3.6 in the near future.
 
 Godot 3 is still very important for a significant part of the ecosystem – notably people with released games, games close to being released, or who need to target OpenGL 2 / WebGL 1 to maximize device compatibility.
 
-The last 3.6 beta snapshot was [back in August](/article/dev-snapshot-godot-3-6-beta-3/), so this new one is somewhat overdue... but better late than never, and it includes a lot of important bug fixes to platform compatibility, rendering, and thirdparty libraries. This beta 4 should be a good baseline to see where we stand in the 3.6 development, and plan what's left before the complete feature freeze and release candidate stage.
+The last 3.6 beta snapshot was [back in August]({{% ref "article/dev-snapshot-godot-3-6-beta-3" %}}), so this new one is somewhat overdue... but better late than never, and it includes a lot of important bug fixes to platform compatibility, rendering, and thirdparty libraries. This beta 4 should be a good baseline to see where we stand in the 3.6 development, and plan what's left before the complete feature freeze and release candidate stage.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/3.6.beta4/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
@@ -23,7 +23,7 @@ The last 3.6 beta snapshot was [back in August](/article/dev-snapshot-godot-3-6-
 
 ## Highlights
 
-Despite the long time span since the previous beta 3, we haven't added major features in this snapshot, but mostly polished things by backporting a lot of bug fixes throughout the engine. Have a look at past 3.6 beta blog posts to see what new features were added previously and should be ready to test more thoroughly in this snapshot ([beta 1](https://godotengine.org/article/dev-snapshot-godot-3-6-beta-1/), [beta 2](https://godotengine.org/article/dev-snapshot-godot-3-6-beta-2/), [beta 3](https://godotengine.org/article/dev-snapshot-godot-3-6-beta-3/)).
+Despite the long time span since the previous beta 3, we haven't added major features in this snapshot, but mostly polished things by backporting a lot of bug fixes throughout the engine. Have a look at past 3.6 beta blog posts to see what new features were added previously and should be ready to test more thoroughly in this snapshot ([beta 1]({{% ref "article/dev-snapshot-godot-3-6-beta-1" %}}), [beta 2]({{% ref "article/dev-snapshot-godot-3-6-beta-2" %}}), [beta 3]({{% ref "article/dev-snapshot-godot-3-6-beta-3" %}})).
 
 Still, there are a few important changes in this snapshot worth pointing out:
 
@@ -47,7 +47,7 @@ In practice this shouldn't change much, aside from getting some better compile a
 
 ### Official Linux ARM builds
 
-[Just like Godot 4.2](https://godotengine.org/article/godot-4-2-arrives-in-style/#linux), we now have official Linux ARM builds (`arm32` and `arm64`) of Godot 3.6. This should allow both running the Godot editor on ARM devices (such as Raspberry Pi) and Chromebooks with the Linux subsystem, and exporting Godot projects to them. The Linux export template now lets you select the architecture at export time among the four options supported in 3.6: `x86_64` (default), `x86_32`, `arm64`, `arm32`.
+[Just like Godot 4.2]({{% ref "article/godot-4-2-arrives-in-style" %}}#linux), we now have official Linux ARM builds (`arm32` and `arm64`) of Godot 3.6. This should allow both running the Godot editor on ARM devices (such as Raspberry Pi) and Chromebooks with the Linux subsystem, and exporting Godot projects to them. The Linux export template now lets you select the architecture at export time among the four options supported in 3.6: `x86_64` (default), `x86_32`, `arm64`, `arm32`.
 
 ### Update to minimal supported versions for Apple platforms
 
@@ -103,4 +103,4 @@ In particular, any change that would cause a regression in your projects is very
 
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate]({{% ref "donate" %}}) which you may find more suitable.

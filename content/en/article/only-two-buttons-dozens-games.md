@@ -30,7 +30,7 @@ A great looking 3D runner featuring Astrid, a witch's cute black cat running on 
 
 ![astrid.png](/storage/app/uploads/public/58a/2b0/3ba/58a2b03ba2c8f570113490.png)
 
-We were so fond of the game that we used it at [our FOSDEM booth](/article/meet-us-fosdem-2017-and-godotcon) to showcase the editor and the fact that yes, you can do 3D games with Godot (it's not PBR yet, but for a demo it was already quite nice). We had to tweak the game's difficulty a bit to make it easier to play by forum visitors without having to lose 10 times to get the gist of it ;)
+We were so fond of the game that we used it at [our FOSDEM booth]({{% ref "article/meet-us-fosdem-2017-and-godotcon" %}}) to showcase the editor and the fact that yes, you can do 3D games with Godot (it's not PBR yet, but for a demo it was already quite nice). We had to tweak the game's difficulty a bit to make it easier to play by forum visitors without having to lose 10 times to get the gist of it ;)
 
 ![astrid2.png](/storage/app/uploads/public/58a/2b0/7d6/58a2b07d6a0d3283866737.png)
 

@@ -7,9 +7,9 @@ image: /storage/app/uploads/public/5bd/cb6/df6/5bdcb6df6ba77895463474.jpg
 date: 2018-11-02 21:33:49
 ---
 
-Two months after [our previous alpha](/article/dev-snapshot-godot-3-1-alpha-1), we are pleased to release Godot **3.1 alpha 2**, a new development snapshot of the *master* branch, moving slowly but steadily towards the *beta* status.
+Two months after [our previous alpha]({{% ref "article/dev-snapshot-godot-3-1-alpha-1" %}}), we are pleased to release Godot **3.1 alpha 2**, a new development snapshot of the *master* branch, moving slowly but steadily towards the *beta* status.
 
-Contrarily to our [3.0.x maintenance releases](/article/maintenance-release-godot-3-0-6), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs](/devblog). It's been 9 months since the 3.0 release and close to 5,000 commits, so expect a lot of nice things in the final 3.1 version!
+Contrarily to our [3.0.x maintenance releases]({{% ref "article/maintenance-release-godot-3-0-6" %}}), which include only thoroughly reviewed and backwards-compatible bug fixes, the 3.1 version includes all the new features (and subsequent bugs!) merged in the *master* branch since January 2018, and especially all those showcased on [our past devblogs]({{% ref "blog" %}}). It's been 9 months since the 3.0 release and close to 5,000 commits, so expect a lot of nice things in the final 3.1 version!
 
 The *alpha* stage corresponds for us to a *feature freeze* (see [announcement on GitHub](https://github.com/godotengine/godot/issues/21490)), which means that we will no longer consider pull requests with new features for merge in the *master* branch, and that until Godot 3.1 is released. This way, we can focus on what we already have, finish and polish the major features which are still in progress (e.g. OpenGL ES 2.0 support), and fix many of the old and new bugs reported by the community.
 
@@ -23,13 +23,13 @@ There is still a long way of bug fixing and usability improvement until we can r
 
 There is also no guarantee that projects started with the alpha 2 build will still work in alpha 3 or later builds, as we reserve the right to do necessary breaking adjustments up to the *beta* stage (albeit compatibility breaking changes at this stage should be very minimal, if any).
 
-**Note:** New Godot users should *not* use this build to start their learning. [Godot 3.0.x](/download) is our current stable branch and still receives frequent updates.
+**Note:** New Godot users should *not* use this build to start their learning. [Godot 3.0.x]({{% ref "download" %}}) is our current stable branch and still receives frequent updates.
 
 ## The features
 
 Release notes are not written yet, but you can refer to the [detailed changelog](https://gist.github.com/Calinou/49aefe52ce8f67ffa3f743932123d14f) that our contributor [Hugo Locurcio](https://github.com/Calinou) is working on.
 
-As mentioned previously, [our past devblogs](/devblog) should also give you an idea of the main highlights of the upcoming release.
+As mentioned previously, [our past devblogs]({{% ref "blog" %}}) should also give you an idea of the main highlights of the upcoming release.
 
 This alpha 2 comes with an impressive amount of bug fixes compared to the previous alpha 1. The OpenGL ES 2.0 backend has also seen a lot of work to push it towards feature-completion -- it's not done yet, but it's getting close.
 
@@ -37,7 +37,7 @@ Documentation writers are hard at work to catch up with the new features, and th
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical](https://downloads.tuxfamily.org/godotengine/3.1/alpha2)
 - [Mono (*alpha* C# support)](https://downloads.tuxfamily.org/godotengine/3.1/alpha2/mono) - you need Mono SDK **5.12.0** for this alpha (5.14 or newer won't work)

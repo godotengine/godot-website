@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/604/a91/97d/604a9197d1523072023513.jpg
 date: 2021-03-11 21:00:00
 ---
 
-Welcome to another developer interview following the [introduction of the Godot Showcase page](https://godotengine.org/article/new-showcase-for-projects-made-with-godot)! This week, we are interviewing Leonardo "Leocesar3D" Veloso about their game [*Human Diaspora*](https://godotengine.org /images/showcase/human-diaspora).
+Welcome to another developer interview following the [introduction of the Godot Showcase page]({{% ref "article/new-showcase-for-projects-made-with-godot" %}})! This week, we are interviewing Leonardo "Leocesar3D" Veloso about their game [*Human Diaspora*](https://godotengine.org /images/showcase/human-diaspora).
 
 ___
 

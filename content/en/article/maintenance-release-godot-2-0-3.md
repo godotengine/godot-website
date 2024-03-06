@@ -7,15 +7,15 @@ image: /storage/app/uploads/public/573/5fc/35d/5735fc35d361c195318911.png
 date: 2016-05-13 00:00:00
 ---
 
-It's been a bit over one month [since the release of Godot 2.0.2](/article/maintenance-release-godot-2-0-2), and a lot of work has been done in both the master branch and the stable 2.0 branch.
+It's been a bit over one month [since the release of Godot 2.0.2]({{% ref "article/maintenance-release-godot-2-0-2" %}}), and a lot of work has been done in both the master branch and the stable 2.0 branch.
 
-We will soon post more details about the cool new features which are cooking up in the master branch (such as drag and drop support and editor localisation), but in the meantime, let's treat ourselves a nice bugfix release that also comes with interesting usability improvements. [Grab it now](/download), and read along!
+We will soon post more details about the cool new features which are cooking up in the master branch (such as drag and drop support and editor localisation), but in the meantime, let's treat ourselves a nice bugfix release that also comes with interesting usability improvements. [Grab it now]({{% ref "download" %}}), and read along!
 
 ## Distribution changes
 
 ### OpenSSL support re-enabled
 
-In the [previous release](/article/maintenance-release-godot-2-0-2), we had to disable the support for the built-in OpenSSL library due to various security vulnerabilities. Thanks to the work of [@mrezai](https://github.com/mrezai), we could update our built-in version to the latest and thus most secure upstream version, 1.0.2h. So OpenSSL support has been re-enabled in the official binaries, which is especially useful for games that need to communicate with a server.
+In the [previous release]({{% ref "article/maintenance-release-godot-2-0-2" %}}), we had to disable the support for the built-in OpenSSL library due to various security vulnerabilities. Thanks to the work of [@mrezai](https://github.com/mrezai), we could update our built-in version to the latest and thus most secure upstream version, 1.0.2h. So OpenSSL support has been re-enabled in the official binaries, which is especially useful for games that need to communicate with a server.
 
 ### Windows binaries built with MSVC
 
@@ -35,7 +35,7 @@ The main highlights in this maintenance release are:
 
 **Enhancements:**
 
-* **Many new classes documented!** Thanks to all those that got involved [after our call for contributors](/article/fill-blank-class-reference)! Feel free to join us as there's still a lot to do, but the progress is heart-warming!
+* **Many new classes documented!** Thanks to all those that got involved [after our call for contributors]({{% ref "article/fill-blank-class-reference" %}})! Feel free to join us as there's still a lot to do, but the progress is heart-warming!
 * Ability to shrink all images x2 on load
 * Add preview of the Camera2D's screen boundaries
 * Allow dragging on only one (global) axis when holding down shift
@@ -68,7 +68,7 @@ The main highlights in this maintenance release are:
 * Rotation APIs: Better exposure for degrees methods
 * Tabs: various usability fixes
 
-See the [full changelog](https://downloads.tuxfamily.org/godotengine/2.0.3/Godot_v2.0.3_stable_changelog.txt) for more details, and head towards the [Download page](/download) to get it!
+See the [full changelog](https://downloads.tuxfamily.org/godotengine/2.0.3/Godot_v2.0.3_stable_changelog.txt) for more details, and head towards the [Download page]({{% ref "download" %}}) to get it!
 
 ---
 

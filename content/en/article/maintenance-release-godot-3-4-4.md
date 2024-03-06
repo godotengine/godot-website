@@ -9,11 +9,11 @@ image_caption_description: A game by Raffaele Picca
 date: 2022-03-23 14:50:00
 ---
 
-In parallel to our work on the upcoming feature releases Godot 3.5 ([with a second beta](/article/dev-snapshot-godot-3-5-beta-2)) and 4.0 ([now at alpha 4!](/article/dev-snapshot-godot-4-0-alpha-4)), we backport important fixes to the stable 3.4 branch for use in production.
+In parallel to our work on the upcoming feature releases Godot 3.5 ([with a second beta]({{% ref "article/dev-snapshot-godot-3-5-beta-2" %}})) and 4.0 ([now at alpha 4!]({{% ref "article/dev-snapshot-godot-4-0-alpha-4" %}})), we backport important fixes to the stable 3.4 branch for use in production.
 
-Last month's [3.4.3 release](/article/maintenance-release-godot-3-4-3) was found to have a few regressions that could affect a lot of users, so we've been working on a bugfix-only release to solve those issues and a few other pre-existing issues. All users are advised to upgrade to Godot 3.4.4 for the best possible experience.
+Last month's [3.4.3 release]({{% ref "article/maintenance-release-godot-3-4-3" %}}) was found to have a few regressions that could affect a lot of users, so we've been working on a bugfix-only release to solve those issues and a few other pre-existing issues. All users are advised to upgrade to Godot 3.4.4 for the best possible experience.
 
-[**Download Godot 3.4.4 now**](/download) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.4.stable/).
+[**Download Godot 3.4.4 now**]({{% ref "download" %}}) or try the [online version of the Godot editor](https://editor.godotengine.org/3.4.4.stable/).
 
 **Note:** The Windows editor binaries are signed with an expired certificate. We will re-sign them as soon as a new certificate is available.
 
@@ -60,9 +60,9 @@ If you experience any unexpected behavior change in your projects after upgradin
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community](/donate). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thankyou to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).
 
 ----
 

@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/601/ad2/3e5/601ad23e55ddd872740322.png
 date: 2021-02-03 16:44:47
 ---
 
-Godot has [many communication platforms](/community) used by the community to talk about the engine and their projects: [GitHub](https://github.com/godotengine/godot/) for development, the <a href="/qa" data-barba-prevent>Q&A</a> for technical questions, [Reddit](https://www.reddit.com/r/godot/), [Discord](https://discord.gg/4JBkykG), and several others for user discussions, [Twitter](https://twitter.com/godotengine) for announcements, etc.
+Godot has [many communication platforms]({{% ref "community" %}}) used by the community to talk about the engine and their projects: [GitHub](https://github.com/godotengine/godot/) for development, the <a href="/qa" data-barba-prevent>Q&A</a> for technical questions, [Reddit](https://www.reddit.com/r/godot/), [Discord](https://discord.gg/4JBkykG), and several others for user discussions, [Twitter](https://twitter.com/godotengine) for announcements, etc.
 
 Up until recently, engine contributors favored the [tried and trusted](https://xkcd.com/1782/) <abbr title="Internet Relay Chat">IRC</abbr> protocol on [Freenode](https://freenode.net/) as their main chat communication platform, but we are now moving all developer channels to the new [**Godot Contributors Chat**](https://chat.godotengine.org/):
 
@@ -40,7 +40,7 @@ Finally, we'd like to reiterate that this platform is the communication platform
 
 Everyone interested in contributing to Godot, be it with code, documentation, bug reports, or general feedback on technical discussions, is very welcome to join us there!
 
-For general user support, sharing projects, and other non contribution-related Godot topics, we keep the many platforms listed on the [Community](/community) page.
+For general user support, sharing projects, and other non contribution-related Godot topics, we keep the many platforms listed on the [Community]({{% ref "community" %}}) page.
 
 ## How does it work?
 

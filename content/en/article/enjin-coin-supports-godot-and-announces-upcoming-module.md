@@ -6,8 +6,7 @@ author: Rémi Verschelde
 image: /storage/app/uploads/public/5a1/8a8/a92/5a18a8a92779a993178386.png
 date: 2017-11-24 23:30:00
 ---
-
-Right after [our announcement](/article/please-help-us-reach-our-second-patreon-goal-so-we-can-hire-thomas-part-time) that we want to hire a second contributor part-time, our [Patreon campaign](https://patreon.com/godotengine) got a huge boost beyond that goal and towards the next.
+Right after our announcement that we want to hire a second contributor part-time, our [Patreon campaign](https://patreon.com/godotengine) got a huge boost beyond that goal and towards the next.
 
 It was in fact due to arrival of our first Platinum sponsor, [Enjin Coin](https://enjincoin.io/), bringing us an additional USD 1,500 of funding every month!
 

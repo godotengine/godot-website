@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/629/89b/e37/62989be37c03a908985630.jpg
 date: 2022-06-02 11:15:51
 ---
 
-Straight out of the [Godot Sprint](/article/godot-sprint-and-user-meeting-barcelona-june-2022) in Barcelona, here's another alpha snapshot of the development branch, this time with **4.0 alpha 9**! See past alpha releases for details ([alpha 1](/article/dev-snapshot-godot-4-0-alpha-1), [2](/article/dev-snapshot-godot-4-0-alpha-2), [3](/article/dev-snapshot-godot-4-0-alpha-3), [4](/article/dev-snapshot-godot-4-0-alpha-4), [5](/article/dev-snapshot-godot-4-0-alpha-5), [6](/article/dev-snapshot-godot-4-0-alpha-6), [7](/article/dev-snapshot-godot-4-0-alpha-7), [8](/article/dev-snapshot-godot-4-0-alpha-8)).
+Straight out of the [Godot Sprint]({{% ref "article/godot-sprint-and-user-meeting-barcelona-june-2022" %}}) in Barcelona, here's another alpha snapshot of the development branch, this time with **4.0 alpha 9**! See past alpha releases for details ([alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}), [2]({{% ref "article/dev-snapshot-godot-4-0-alpha-2" %}}), [3]({{% ref "article/dev-snapshot-godot-4-0-alpha-3" %}}), [4]({{% ref "article/dev-snapshot-godot-4-0-alpha-4" %}}), [5]({{% ref "article/dev-snapshot-godot-4-0-alpha-5" %}}), [6]({{% ref "article/dev-snapshot-godot-4-0-alpha-6" %}}), [7]({{% ref "article/dev-snapshot-godot-4-0-alpha-7" %}}), [8]({{% ref "article/dev-snapshot-godot-4-0-alpha-8" %}})).
 
 Be aware that during the alpha stage the engine is still not feature-complete or stable. **There will likely be breaking changes between this release and the first [*beta* release](https://en.wikipedia.org/wiki/Software_release_life_cycle#Beta).** Only the beta will mark the so-called "feature freeze".
 
@@ -19,7 +19,7 @@ Most importantly: **Make backups before opening any existing project in Godot 4.
 
 ## What's new
 
-If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1](/article/dev-snapshot-godot-4-0-alpha-1). In this alpha 9 blog post, we will only cover the main changes since the previous alpha release.
+If you're interested in an overview of what's new in Godot 4.0 alpha in general, have a look at the detailed release notes for [4.0 alpha 1]({{% ref "article/dev-snapshot-godot-4-0-alpha-1" %}}). In this alpha 9 blog post, we will only cover the main changes since the previous alpha release.
 
 See the [**changelog on GitHub**](https://github.com/godotengine/godot/compare/917fd65748957304c987414c63d54ef4f6972394...d9daf3869f27e2afdacb2744168052ce0d4ae43b) for an overview of all changes since 4.0 alpha 8 (255 commits – excluding merge commits ― from 60 contributors).
 

@@ -9,7 +9,7 @@ image_caption_description: A game by Dillon Steyl
 date: 2023-05-10 16:00:00
 ---
 
-The development phase for Godot 4.1 is well under way, still aiming for the [stable release by the end of June / early July](/article/release-management-4-1/). We had a [first dev snapshot](/article/dev-snapshot-godot-4-1-dev-1/) a few weeks ago, and it's now time for the second one.
+The development phase for Godot 4.1 is well under way, still aiming for the [stable release by the end of June / early July]({{% ref "article/release-management-4-1" %}}). We had a [first dev snapshot]({{% ref "article/dev-snapshot-godot-4-1-dev-1" %}}) a few weeks ago, and it's now time for the second one.
 
 This build includes a number of big PRs which you might want to test specifically:
 
@@ -118,6 +118,6 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community](/donate). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers hired thanks to [donations from the Godot community]({{% ref "donate" %}}). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal](/donate).
+If you'd like to support the project financially and help us secure our future hires, you can do so on [Patreon](https://www.patreon.com/godotengine) or [PayPal]({{% ref "donate" %}}).

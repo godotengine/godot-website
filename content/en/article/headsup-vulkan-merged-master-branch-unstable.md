@@ -27,7 +27,7 @@ So we need everything in the main branch to stop limiting ourselves.
 
 ## What changes?
 
-The `vulkan` branch includes the preliminary support for the Vulkan graphics API, which Juan has been covering in many [devblogs](/devblog) (see e.g. [last progress report](https://godotengine.org/article/vulkan-progress-report-6)).
+The `vulkan` branch includes the preliminary support for the Vulkan graphics API, which Juan has been covering in many [devblogs]({{% ref "blog" %}}) (see e.g. [last progress report]({{% ref "article/vulkan-progress-report-6" %}})).
 
 In its current state, the Vulkan port works on Linux, macOS and Windows only. Support for other platforms will be restored in coming months prior to the 4.0 alpha release.
 

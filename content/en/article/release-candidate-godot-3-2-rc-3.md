@@ -9,7 +9,7 @@ date: 2020-01-24 08:37:42
 
 At long last, Godot 3.2 is nearing completion and we are happy to publish this third **Release Candidate**, to encourage a broad testing of what should become Godot 3.2-stable in coming days.
 
-The [second RC build](/article/release-candidate-godot-3-2-rc-2) on Monday fared fairly well and had no new regression. Various important fixes have been made since, so this third release candidate will allow to validate them and ensure that 3.2 stable can be released with confidence :)
+The [second RC build]({{% ref "article/release-candidate-godot-3-2-rc-2" %}}) on Monday fared fairly well and had no new regression. Various important fixes have been made since, so this third release candidate will allow to validate them and ensure that 3.2 stable can be released with confidence :)
 
 Notable changes since RC 2:
 
@@ -46,7 +46,7 @@ For changes since the last RC build, see [the list of commits](https://github.co
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
+The download links are not featured on the [Download]({{% ref "download" %}}) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
 - [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/rc3/) (GDScript, GDNative, VisualScript). Note: UWP templates are missing from this build.
 - [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/rc3/mono) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.161 are included in this build.
