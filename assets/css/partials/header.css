@@ -34,6 +34,10 @@ header {
         height: 100%;
       }
     }
+
+    & .dark-logo {
+      display: none;
+    }
   }
 
   & nav {
@@ -169,11 +173,13 @@ header {
   header {
     /* Use logo with white text for dark navbar. */
 
-    & .nav-logo {
-      display: none;
+    & #nav_head {
+      & .nav-logo {
+        display: none;
 
-      &.dark-logo {
-        display: initial;
+        &.dark-logo {
+          display: initial;
+        }
       }
     }
 
@@ -194,6 +200,16 @@ header[data-transparent="true"] {
   box-shadow: none;
   margin-bottom: -70px;
 
+  & #nav_head {
+    & .nav-logo {
+      display: none;
+
+      &.dark-logo {
+        display: initial;
+      }
+    }
+  }
+
   & nav {
     & a {
       color: white;
@@ -206,14 +222,6 @@ header[data-transparent="true"] {
 
     & > a {
       padding-right: 1rem
-    }
-  }
-
-  & .nav-logo {
-    display: none;
-
-    &.dark-logo {
-      display: inline;
     }
   }
 
