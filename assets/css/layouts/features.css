@@ -101,6 +101,10 @@
     & h3 {
       font-size: 1.375rem;
       margin-bottom: 0.25rem;
+
+      @media (prefers-color-scheme: light) {
+        color: var(--dark-color-text-title);
+      }
     }
 
     & > div {
