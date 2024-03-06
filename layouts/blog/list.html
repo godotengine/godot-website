@@ -1,7 +1,14 @@
 {{ define "head" }}
-  {{ $articleSerach := resources.Get "js/article-search.js" | resources.ExecuteAsTemplate (printf "%s/js/article-search.js" .Site.Language.Lang ) . | resources.Minify | resources.Fingerprint }}
-  <script type="module" defer src="{{ $articleSerach.RelPermalink }}"
-          integrity="{{ $articleSerach.Data.Integrity }}"></script>
+  {{ $articleSearch := resources.Get "js/article-search.js"
+  | resources.ExecuteAsTemplate (printf "%s/js/article-search.js" .Site.Language.Lang ) .
+  | resources.Minify
+  | resources.Fingerprint
+  }}
+  <script
+    type="module"
+    defer src="{{ $articleSearch.RelPermalink }}"
+    integrity="{{ $articleSearch.Data.Integrity }}">
+  </script>
 {{ end }}
 
 {{ define "main" }}
@@ -14,7 +21,7 @@
                 style="display: none;" aria-hidden="true">
             <input type="text" autocapitalize="none" enterkeyhint="search" maxlength="300"
                    placeholder="{{ T "page.blog.header.searchInput.placeholderText" }}" autocomplete="off"
-                   autofocus/>
+                   autofocus>
             <button class="btn search-bar-btn" type="submit">
               <img width="24" height="24" src="/assets/icons/search.svg"
                    alt="{{ T "page.blog.header.searchInput.altText" }}" fetchpriority="low"
@@ -26,7 +33,7 @@
               <input type="hidden" name="sites" value="godotengine.org/article"/>
               <input type="text" name="q" maxlength="300" autocapitalize="none" enterkeyhint="search"
                      autocomplete="off"
-                     placeholder="{{ T "page.blog.header.searchInput.placeholderText" }}"/>
+                     placeholder="{{ T "page.blog.header.searchInput.placeholderText" }}">
               <button class="btn search-bar-btn" type="submit">
                 <img width="24" height="24" src="/assets/icons/search.svg"
                      alt="{{ T "page.blog.header.searchInput.altText" }}" fetchpriority="low"

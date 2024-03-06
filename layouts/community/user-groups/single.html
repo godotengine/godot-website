@@ -1,7 +1,12 @@
 {{ define "head" }}
-  {{ $leafletJS := resources.Get "leaflet/leaflet.js" | resources.Fingerprint }}
-  <script defer src="{{ $leafletJS.RelPermalink }}" integrity="{{ $leafletJS.Data.Integrity }}"
-          onload="loadMap()"></script>
+  {{ $leafletJS := resources.Get "third-party/leaflet/leaflet.js" | resources.Fingerprint }}
+  <script
+    defer
+    src="{{ $leafletJS.RelPermalink }}"
+    integrity="{{ $leafletJS.Data.Integrity }}"
+    onload="loadMap()"
+  >
+  </script>
 
   {{/* Preload the first visible map tiles (whole world centered around Europe)*/}}
   {{ $mapTiles := slice
@@ -13,10 +18,15 @@
   "3/6/1" "3/6/2" "3/6/3" "3/6/4"
   }}
   {{ range $mapTiles }}
-    <link rel="preload" as="image" href="https://tile.openstreetmap.org/{{.}}.png" fetchpriority="high"
-          type="image/png"/>
+    <link
+      rel="preload"
+      as="image"
+      href="https://tile.openstreetmap.org/{{.}}.png"
+      fetchpriority="high"
+      type="image/png"
+    >
   {{ end }}
-  {{ partial "preload-async-css.html" (dict "href" "leaflet/leaflet.css") }}
+  {{ partial "preload-async-css.html" (dict "href" "third-party/leaflet/leaflet.css") }}
 {{ end }}
 {{ define "main" }}
   <main class="user-groups-page">
@@ -89,7 +99,7 @@
              */
             const communityCountries = {{ .Site.Data.communities }}
             const countryCoordinates = {
-              // Full country name: [latitude, longitude]
+              // Country Alpha 2 ISO Code: [latitude, longitude]
               // Use <https://latitude.to/> to find GPS coordinates.
               'DZ': [28.00003, 2.99998],
               'AR': [-38.4192641, -63.5989206],
@@ -129,11 +139,11 @@
 
             // Sometimes Leaflet uses the wrong path, so we have to provide a default icon
             L.Marker.prototype.options.icon = L.icon({
-              iconUrl: '/assets/leaflet/images/marker-icon.webp',
-              iconRetinaUrl: '/assets/leaflet/images/marker-icon-2x.webp',
+              iconUrl: '/assets/third-party/leaflet/images/marker-icon.webp',
+              iconRetinaUrl: '/assets/third-party/leaflet/images/marker-icon-2x.webp',
               iconSize: [25, 41],
               iconAnchor: [12, 41],
-              shadowUrl: '/assets/leaflet/images/marker-shadow.png',
+              shadowUrl: '/assets/third-party/leaflet/images/marker-shadow.png',
               shadowSize: [41, 41],
               shadowAnchor: [13, 41],
               popupAnchor: [1, -34],
@@ -142,11 +152,11 @@
 
             // The icon to use for physical venues.
             const physicalIcon = L.icon({
-              iconUrl: '/assets/leaflet/images/physical-marker-icon.webp',
-              iconRetinaUrl: '/assets/leaflet/images/physical-marker-icon-2x.webp',
+              iconUrl: '/assets/third-party/leaflet/images/physical-marker-icon.webp',
+              iconRetinaUrl: '/assets/third-party/leaflet/images/physical-marker-icon-2x.webp',
               iconSize: [25, 41],
               iconAnchor: [12, 41],
-              shadowUrl: '/assets/leaflet/images/marker-shadow.png',
+              shadowUrl: '/assets/third-party/leaflet/images/marker-shadow.png',
               shadowSize: [41, 41],
               shadowAnchor: [13, 41],
               popupAnchor: [1, -34],

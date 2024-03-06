@@ -2,9 +2,17 @@
 {{ $gCtx := .gCtx }}
 
 {{ if not ($gCtx.Page.Scratch.Get "hasVersionCardLoaded") }}
-  {{ $css := resources.Get "css/partials/download-version.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="preload" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" as="style"
-        fetchpriority="high">
+  {{ $css := resources.Get "css/partials/download-version.css"
+  | resources.Minify
+  | resources.Fingerprint
+  }}
+  <link
+    rel="preload"
+    href="{{ $css.RelPermalink }}"
+    integrity="{{ $css.Data.Integrity }}"
+    as="style"
+    fetchpriority="high"
+  >
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{ end }}
 
@@ -139,10 +147,17 @@
 </div>
 
 {{ if not ($gCtx.Page.Scratch.Get "hasVersionCardLoaded") }}
-  {{ $downloadVersionJS := resources.Get "js/download-version.js" | resources.ExecuteAsTemplate (printf "%s/js/download-version.js" $gCtx.Site.Language.Lang ) . | resources.Minify | resources.Fingerprint }}
+  {{ $downloadVersionJS := resources.Get "js/download-version.js"
+  | resources.ExecuteAsTemplate (printf "%s/js/download-version.js" $gCtx.Site.Language.Lang ) .
+  | resources.Minify
+  | resources.Fingerprint
+  }}
 
-  <script defer src="{{ $downloadVersionJS.RelPermalink }}"
-          integrity="{{ $downloadVersionJS.Data.Integrity }}"></script>
+  <script
+    defer
+    src="{{ $downloadVersionJS.RelPermalink }}"
+    integrity="{{ $downloadVersionJS.Data.Integrity }}">
+  </script>
 {{ end }}
 
 {{/* Prevent resources from being imported multiple times if the component appears multiple times in the same page*/}}

@@ -58,71 +58,71 @@ We understand that coming to the GDC is not something that everybody can afford,
 We are honored to be joined by the games and the developers of:
 
 <div class="row-2">
-	<a class="media" href=" /images/showcase/dome-keeper/">
-		<img src="/assets/images/showcase/dome-keeper-header.webp">
+	<a class="media" href="{{% ref "showcase/dome-keeper" %}}">
+		<img src={{% get-image "images/showcase/dome-keeper-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Dome Keeper</h3>
 		<p>Defend your dome from wave after wave of monsters in this innovative roguelike survival miner, Dome Keeper. Use the time between each attack to dig beneath the surface in search of valuable resources and artifacts – use them carefully to choose powerful upgrades and bonuses.</p>
 	</div>
-	<a class="media" href=" /images/showcase/usagi-shima/">
-		<img src="/assets/images/showcase/usagi-shima-header.webp">
+	<a class="media" href="{{% ref "showcase/usagi-shima" %}}">
+		<img src={{% get-image "images/showcase/usagi-shima-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Usagi Shima</h3>
 		<p>You’ve been tasked as caretaker of an abandoned island — as you decorate it over time, curious (but adorable!) bunny visitors start to appear! Buy toys, plants, and build structures on an abandoned island to entice curious bun tourists to pay your island a visit.</p>
 	</div>
-	<a class="media" href=" /images/showcase/pingo-adventure/">
-		<img src="/assets/images/showcase/pingo-adventure-header.webp">
+	<a class="media" href="{{% ref "showcase/pingo-adventure" %}}">
+		<img src={{% get-image "images/showcase/pingo-adventure-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Pingo Adventure</h3>
 		<p>Pingo Adventure is a cute 3D platformer with interesting physics simulation. Follow Pingo to explore the world, solve puzzles, play mini games and even customize your Pingo with the costumes unlocked from the adventures!</p>
 	</div>
-	<a class="media" href=" /images/showcase/fist-of-the-forgotten">
-		<img src="/assets/images/showcase/fist-of-the-forgotten-header.webp">
+	<a class="media" href="{{% ref "showcase/fist-of-the-forgotten" %}}">
+		<img src={{% get-image "images/showcase/fist-of-the-forgotten-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Fist of the Forgotten</h3>
 		<p>Fist of the Forgotten is a platformer set in a harsh, dark world, but that doesn't mean you're helpless. Relics passed down from your family allow you to interact with forgotten technology and fight your way forward.</p>
 	</div>
-	<a class="media" href=" /images/showcase/blastronaut">
-		<img src="/assets/images/showcase/blastronaut-header.webp">
+	<a class="media" href="{{% ref "showcase/blastronaut" %}}">
+		<img src={{% get-image "images/showcase/blastronaut-header.webp" %}}>
 	</a>
 	<div>
 		<h3>BLASTRONAUT</h3>
 		<p>It is a dangerous but lucrative job. Explore this vast procedurally generated world with your jetpack. Extract the minerals with an explosive gel. Expand your mining platform. But most importantly: stay alive.</p>
 	</div>
-	<a class="media" href=" /images/showcase/endoparasitic">
-		<img src="/assets/images/showcase/endoparasitic-header.webp">
+	<a class="media" href="{{% ref "showcase/endoparasitic" %}}">
+		<img src={{% get-image "images/showcase/endoparasitic-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Endoparasitic</h3>
 		<p>Three limbs ripped off, infected with a deadly parasite, you must save your research. Drag yourself through the corridors of a secret research lab on a remote asteroid, fight off horribly mutated monsters, inject countless syringes of vaccines, and survive at all costs.</p>
 	</div>
-	<a class="media" href=" /images/showcase/kamaeru">
-		<img src="/assets/images/showcase/kamaeru-header.webp">
+	<a class="media" href="{{% ref "showcase/kamaeru" %}}">
+		<img src={{% get-image "images/showcase/kamaeru-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Kamaeru</h3>
 		<p>Kamaeru is a cozy farming sim where you collect and breed frogs, customize your environment, and restore biodiversity in the wetlands.</p>
 	</div>
-	<a class="media" href=" /images/showcase/brotato">
-		<img src="/assets/images/showcase/brotato-header.webp">
+	<a class="media" href="{{% ref "showcase/brotato" %}}">
+		<img src={{% get-image "images/showcase/brotato-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Brotato</h3>
 		<p>A spaceship from Potato World crashes onto an alien planet. The sole survivor: Brotato, the only potato capable of handling 6 weapons at the same time. Waiting to be rescued by his mates, Brotato must survive in this hostile environment.</p>
 	</div>
-	<a class="media" href=" /images/showcase/circle-of-kerzoven/">
-		<img src="/assets/images/showcase/kerzoven-header.webp">
+	<a class="media" href="{{% ref "showcase/circle-of-kerzoven" %}}">
+		<img src={{% get-image "images/showcase/kerzoven-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Circle of Kerzoven</h3>
 		<p>Circle of Kerzoven is a charming settlement-building strategy game paired with a rich simulation experience. Every animal and plant tries to find their place in nature while you lead your villagers to their future. Expand to different regions and trade with local factions to gain needed resources.</p>
 	</div>
 	<a class="media" href="https://www.cassettebeasts.com/" target="_blank">
-		<img src="/assets/images/showcase/cassette-beasts-header.webp">
+		<img src={{% get-image "images/showcase/cassette-beasts-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Cassette Beasts</h3>
@@ -135,29 +135,29 @@ We are honored to be joined by the games and the developers of:
 		<h3>Gawr Gura: Quest for Bread</h3>
 		<p>Gawr Gura: Quest for Bread is a time-traveling, action-platforming fan game. Play through a comedic storyline featuring a cast of quirky characters and a blend of fluid platforming with snappy combat. Help Gura reunite with her bread!</p>
 	</div>
-	<a class="media" href=" /images/showcase/beat-invaders/">
-		<img src="/assets/images/showcase/beat-invaders-header.webp">
+	<a class="media" href="{{% ref "showcase/beat-invaders" %}}">
+		<img src={{% get-image "images/showcase/beat-invaders-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Beat Invaders</h3>
 		<p>Beat Invaders is a unique space action roguelite! Blast your way through enemy fleets, unlock skills, items, ships, and upgrade them! Blast away to a pushing soundtrack and neon visuals.</p>
 	</div>
-	<a class="media" href=" /images/showcase/gourdlets/">
-		<img src="/assets/images/showcase/gourdlets-header.webp">
+	<a class="media" href="{{% ref "showcase/gourdlets" %}}">
+		<img src={{% get-image "images/showcase/gourdlets-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Gourdlets</h3>
 		<p>Gourdlets is a city-building sandbox. Place buildings and scenery, and then watch visiting gourdlets arrive and interact with the world. No objectives, no points, just building.</p>
 	</div>
-	<a class="media" href=" /images/showcase/tail-quest/">
-		<img src="/assets/images/showcase/tail-quest-header.webp">
+	<a class="media" href="{{% ref "showcase/tail-quest" %}}">
+		<img src={{% get-image "images/showcase/tail-quest-header.webp" %}}>
 	</a>
 	<div>
 		<h3>TailQuest: Defense</h3>
 		<p>Explore a tiny world, defeat hundreds of enemies, experiment with the environment, find all secrets and enjoy the Adventure with a friend or in single player mode.</p>
 	</div>
-	<a class="media" href=" /images/showcase/until-then">
-		<img src="/assets/images/showcase/until-then-header.webp">
+	<a class="media" href="{{% ref "showcase/until-then" %}}">
+		<img src={{% get-image "images/showcase/until-then-header.webp" %}}>
 	</a>
 	<div>
 		<h3>Until Then</h3>

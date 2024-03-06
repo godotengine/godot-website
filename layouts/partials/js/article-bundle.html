@@ -1,7 +1,11 @@
-{{ $tobiiJS := resources.Get "js/tobii.min.js" }}
+{{ $tobiiJS := resources.Get "third-party/tobii/tobii.min.js" }}
 {{ $anchorLinkJS := resources.Get "js/anchor-link.js" }}
 
 {{ $allJS := slice $tobiiJS $anchorLinkJS }}
-{{ $jsBundle := $allJS | resources.Concat "js/article-bundle.js" | resources.Minify | resources.Fingerprint }}
+{{ $jsBundle := $allJS
+| resources.Concat "js/article-bundle.js"
+| resources.Minify
+| resources.Fingerprint
+}}
 
 <script defer src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>

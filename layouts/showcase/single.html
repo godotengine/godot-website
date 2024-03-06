@@ -193,7 +193,7 @@
       {{ end }}
     </div>
 
-    {{ partial "preload-async-css.html" (dict "href" "css/third-party/tobii.min.css") }}
+    {{ partial "preload-async-css.html" (dict "href" "third-party/tobii/tobii.min.css") }}
     <script>
       function initLightbox() {
         new Tobii({
@@ -201,7 +201,7 @@
         })
       }
     </script>
-    {{ $tobiiJS := resources.Get "js/tobii.min.js" | resources.Fingerprint }}
+    {{ $tobiiJS := resources.Get "third-party/tobii/tobii.min.js" | resources.Fingerprint }}
     <script defer src="{{ $tobiiJS.RelPermalink }}" integrity="{{ $tobiiJS.Data.Integrity }}"
             onload="initLightbox()"></script>
   </main>

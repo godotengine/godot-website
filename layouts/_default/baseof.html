@@ -52,7 +52,7 @@
 {{ end }}
 
 {{/* Prefetch and prerender relevant pages https://github.com/GoogleChromeLabs/quicklink */}}
-{{ $quicklinkJS := resources.Get "quicklink/quicklink.js" | resources.Fingerprint }}
+{{ $quicklinkJS := resources.Get "third-party/quicklink/quicklink.js" | resources.Fingerprint }}
 <script defer src="{{ $quicklinkJS.RelPermalink }}" integrity="{{ $quicklinkJS.Data.Integrity }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
