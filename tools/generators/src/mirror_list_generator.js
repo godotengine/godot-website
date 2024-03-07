@@ -1,12 +1,13 @@
 import yaml from 'js-yaml';
 import fs from 'fs';
-import {generateLink} from './url_util.js';
+import {COMMON_PLATFORM, generateLink, HOST} from './url_util.js';
 
-const exportPath = 'content/en/mirrorlist';
+const DATA_VERSIONS_PATH = 'data/versions.yml';
+const MIRROR_LIST_CONFIGS_PATH = 'data/mirrorlist_configs.yml';
+const EXPORT_PATH = 'content/en/mirrorlist';
 
 (function main() {
-  const fileContents = fs.readFileSync(`data/versions.yml`, 'utf8');
-  const versions = yaml.load(fileContents);
+  const versions = loadVersions();
 
   for (let i = 0; i < versions.length; i++) {
     const version = versions[i];
@@ -31,9 +32,7 @@ const exportPath = 'content/en/mirrorlist';
 })();
 
 /**
- * @param {Object} version
- * @param {string} version.name
- * @param {string} version.flavor
+ * @param {Version} version
  * @param {Object} mirrorList
  * @param {boolean} isMono
  */
@@ -43,11 +42,12 @@ function writeMirrorList(version, mirrorList, isMono) {
   if (version.name === '3.0') {
     fileName = `${version.name}-${version.flavor}`;
   }
+
   if (isMono) {
     fileName = `${fileName}.mono`;
   }
 
-  fs.writeFile(`${exportPath}/${fileName}.json`, JSON.stringify(mirrorList), (err) => {
+  fs.writeFile(`${EXPORT_PATH}/${fileName}.json`, JSON.stringify(mirrorList), (err) => {
     if (err) throw err;
   });
 }
@@ -60,14 +60,12 @@ function writeMirrorList(version, mirrorList, isMono) {
  * @param {boolean} isMono
  */
 function createMirrorList(version, isMono) {
-  const versionBits = version.name.split('.');
-  const versionMajMin = `${versionBits[0]}.${versionBits[1]}`;
-
   const mirrors = []
-
-  const mirrorListConfigs = loadMirrorListConfig();
+  const mirrorListConfigs = loadMirrorListConfigs();
   const mirrorListHosts = mirrorListConfigs.hosts;
 
+  const versionBits = version.name.split('.');
+  const versionMajMin = `${versionBits[0]}.${versionBits[1]}`;
   const versionDefaults = mirrorListConfigs.defaults.find((mirror) => mirror.name === versionMajMin);
 
   if (versionDefaults) {
@@ -76,7 +74,7 @@ function createMirrorList(version, isMono) {
     for (let i = 0; i < mirrorHosts.length; i++) {
       const hostName = mirrorHosts[i];
       const mirrorHost = mirrorListHosts.find((host) => host.name === hostName);
-      const mirrorUrl = generateLink(version, 'templates', isMono, hostName);
+      const mirrorUrl = generateLink(version, COMMON_PLATFORM.templates, isMono, hostName);
 
       if (mirrorUrl !== '#') {
         const mirror = {
@@ -87,8 +85,8 @@ function createMirrorList(version, isMono) {
       }
     }
   } else {
-    const mirrorHost = mirrorListHosts.find((host) => host.name === 'tuxfamily');
-    const mirrorUrl = generateLink(version, 'templates', isMono, 'tuxfamily');
+    const mirrorHost = mirrorListHosts.find((host) => host.name === HOST.tuxfamily);
+    const mirrorUrl = generateLink(version, COMMON_PLATFORM.templates, isMono, HOST.tuxfamily);
 
     if (mirrorUrl !== '#') {
       const mirror = {
@@ -125,7 +123,33 @@ function createMirrorList(version, isMono) {
 /**
  * @returns {MirrorListConfig}
  */
-function loadMirrorListConfig() {
-  const fileContents = fs.readFileSync('data/mirrorlist_configs.yml', 'utf8');
+function loadMirrorListConfigs() {
+  const fileContents = fs.readFileSync(MIRROR_LIST_CONFIGS_PATH, 'utf8');
   return yaml.load(fileContents);
 }
+
+/**
+ * @typedef {Object} VersionRelease
+ * @property {string} name
+ * @property {string} release_date
+ * @property {string} release_notes
+ */
+
+/**
+ * @typedef {Object} Version
+ * @property {string} name
+ * @property {string} falvor
+ * @property {string} release_date
+ * @property {string} release_notes
+ * @property {boolean} featured
+ * @property {VersionRelease[]} releases
+ */
+
+/**
+ * @returns {Version[]}
+ */
+function loadVersions() {
+  const versions = fs.readFileSync(DATA_VERSIONS_PATH, 'utf8')
+  return yaml.load(versions);
+}
+

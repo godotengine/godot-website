@@ -1,16 +1,31 @@
 import yaml from 'js-yaml';
 import fs from 'fs';
 
-const HOST_TUXFAMILY = "https://downloads.tuxfamily.org/godotengine"
-const HOST_GITHUB = "https://github.com/godotengine/godot/releases/download"
-const HOST_GITHUB_BUILDS = "https://github.com/godotengine/godot-builds/releases/download"
+const DATA_DOWNLOAD_CONGIG_PATH = 'data/download_configs.yml';
 
 const FLAVOR_MATRIX = {
-  "dev": 1,
-  "alpha": 2,
-  "beta": 3,
-  "rc": 4,
-  "stable": 10
+  'dev': 1,
+  'alpha': 2,
+  'beta': 3,
+  'rc': 4,
+  'stable': 10
+}
+
+export const COMMON_PLATFORM = {
+  templates: 'templates',
+  aarLibrary: 'aar_library',
+}
+
+export const HOST = {
+  github: 'github',
+  githubBuilds: 'github_builds',
+  tuxfamily: 'tuxfamily',
+}
+
+const HOST_BASE_URL = {
+  github: 'https://github.com/godotengine/godot/releases/download',
+  githubBuilds: 'https://github.com/godotengine/godot-builds/releases/download',
+  tuxfamily: 'https://downloads.tuxfamily.org/godotengine',
 }
 
 /**
@@ -27,57 +42,82 @@ const FLAVOR_MATRIX = {
  * @param {string} host
  * @return {string}
  */
-export function generateLink(version, platform, isMono = false, host = "github") {
+export function generateLink(version, platform, isMono = false, host = HOST.github) {
   const versionName = getVersionName(version);
-  const versionFlavor = version.flavor;
 
-  const versionBits = versionName.split(".");
+  const versionBits = versionName.split('.');
   const slugsDefaults = getDownloadSlugs(version, isMono);
 
   if (!slugsDefaults) {
     return '#';
   }
 
-  let monoSlug = '';
-  if (isMono) {
-    monoSlug = '/mono';
+  const slug = getDownloadSlug(platform, slugsDefaults);
+  const file = getDownloadFileName(platform, versionName, version.flavor, versionBits, slug);
+  return getUrlFromHost(host, versionName, version.flavor, file, isMono);
+}
+
+function getDownloadSlug(platform, slugsDefaults) {
+  if (platform === COMMON_PLATFORM.templates && slugsDefaults.templates) {
+    return slugsDefaults[platform];
   }
 
-  let downloadSlug = '';
-  if (platform === 'templates' && slugsDefaults.templates) {
-    downloadSlug = slugsDefaults[platform];
-  } else if (slugsDefaults.editor.primary[platform]) {
-    downloadSlug = slugsDefaults.editor.primary[platform];
-  } else if (slugsDefaults.editor.secondary[platform]) {
-    downloadSlug = slugsDefaults.editor.secondary[platform];
-  } else if (slugsDefaults.extras && slugsDefaults.extras[platform]) {
-    downloadSlug = slugsDefaults.extras[platform];
-  } else {
-    // Unknown platform key, abort.
-    return '#';
+  if (slugsDefaults.editor.primary[platform]) {
+    return slugsDefaults.editor.primary[platform];
   }
 
-  let downloadFile = '';
-  if (platform === 'aar_library') {
-    downloadFile = `godot-lib.${versionName}.${versionFlavor}.${downloadSlug}`;
+  if (slugsDefaults.editor.secondary[platform]) {
+    return slugsDefaults.editor.secondary[platform];
+  }
+
+  if (slugsDefaults.extras && slugsDefaults.extras[platform]) {
+    return slugsDefaults.extras[platform];
+  }
+
+  // Unknown platform key.
+  return '#';
+}
+
+/**
+ * @param {string} platform
+ * @param {string} versionName
+ * @param {string} versionFlavor
+ * @param {string[]} versionBits
+ * @param {string} downloadSlug
+ * @return {string}
+ */
+function getDownloadFileName(platform, versionName, versionFlavor, versionBits, downloadSlug) {
+  if (platform === COMMON_PLATFORM.aarLibrary) {
+    return `godot-lib.${versionName}.${versionFlavor}.${downloadSlug}`;
   } else {
     if (versionBits[0] === '1' || (versionBits[0] === '2' && versionBits[1] === '0')) {
-      downloadFile = `Godot_v${versionName}_${versionFlavor}_${downloadSlug}`;
+      return `Godot_v${versionName}_${versionFlavor}_${downloadSlug}`;
     } else {
-      downloadFile = `Godot_v${versionName}-${versionFlavor}_${downloadSlug}`;
+      return `Godot_v${versionName}-${versionFlavor}_${downloadSlug}`;
     }
   }
+}
 
+/**
+ * @param {string} host
+ * @param {string} versionName
+ * @param {string} versionFlavor
+ * @param {string} downloadFileName
+ * @param {boolean} isMono
+ * @return {string}
+ */
+function getUrlFromHost(host, versionName, versionFlavor, downloadFileName, isMono) {
   switch (host) {
-    case 'github':
-      return `${HOST_GITHUB}/${versionName}-${versionFlavor}/${downloadFile}`;
-    case 'github_builds':
-      return `${HOST_GITHUB_BUILDS}/${versionName}-${versionFlavor}/${downloadFile}`;
-    case 'tuxfamily':
+    case HOST.github:
+      return `${HOST_BASE_URL.github}/${versionName}-${versionFlavor}/${downloadFileName}`;
+    case HOST.githubBuilds:
+      return `${HOST_BASE_URL.githubBuilds}/${versionName}-${versionFlavor}/${downloadFileName}`;
+    case HOST.github.tuxfamily:
+      const monoSlug = isMono ? '/mono' : '';
       if (versionFlavor === 'stable') {
-        return `${HOST_TUXFAMILY}/${versionName}${monoSlug}/${downloadFile}`;
+        return `${HOST_BASE_URL.tuxfamily}/${versionName}${monoSlug}/${downloadFileName}`;
       } else {
-        return `${HOST_TUXFAMILY}/${versionName}/${versionFlavor}${monoSlug}/${downloadFile}`;
+        return `${HOST_BASE_URL.tuxfamily}/${versionName}/${versionFlavor}${monoSlug}/${downloadFileName}`;
       }
   }
 }
@@ -93,17 +133,17 @@ export function getVersionName(version) {
 /**
  * @param {Version} version
  * @param {boolean} isMono
- * @return {Object}
+ * @return {Object|null}
  */
 export function getDownloadSlugs(version, isMono = false) {
   const versionName = getVersionName(version);
-  const versionMajor = versionName.split(".")[0];
+  const versionMajor = versionName.split('.')[0];
 
   const downloadConfigs = loadDownloadConfig();
   let slugsData = downloadConfigs.defaults[versionMajor];
 
   if (!slugsData) {
-    return null
+    return null;
   }
 
   if (downloadConfigs.overrides) {
@@ -150,7 +190,7 @@ export function getVersionBitsHash(versionBits) {
  */
 export function parseVersionName(versionName) {
   const parsedVersion = [0, 0, 0, 0];
-  const versionBits = versionName.split(".");
+  const versionBits = versionName.split('.');
 
   for (let i = 0; i < parsedVersion.length; i++) {
     if (versionBits[i]) {
@@ -231,7 +271,7 @@ export function isInVersionRange(versionBitsHash, flavorBitsHash, versionRange) 
  * @param {string} versionString
  */
 export function parseVersionString(versionString) {
-  const stringBits = versionString.split("-");
+  const stringBits = versionString.split('-');
   const versionBits = parseVersionName(stringBits[0]);
   const flavorBits = parseVersionFlavor(stringBits[1]);
 
@@ -242,16 +282,22 @@ export function parseVersionString(versionString) {
 }
 
 /**
+ * @typedef {Object} DownloadConfigEditor
+ * @property {Object} primary
+ * @property {Object} secondary
+ */
+
+/**
  * @typedef {Object} DownloadConfigMono
  * @property {string} templates
- * @property {Object} editor
+ * @property {DownloadConfigEditor} editor
  * @property {Object} extras
  */
 
 /**
  * @typedef {Object} DownloadConfig
  * @property {string} templates
- * @property {Object} editor
+ * @property {DownloadConfigEditor} editor
  * @property {Object} extras
  * @property {DownloadConfigMono} mono
  */
@@ -281,6 +327,6 @@ export function parseVersionString(versionString) {
  * @returns {DownloadConfigs}
  */
 export function loadDownloadConfig() {
-  const fileContents = fs.readFileSync('data/download_configs.yml', 'utf8');
+  const fileContents = fs.readFileSync(DATA_DOWNLOAD_CONGIG_PATH, 'utf8');
   return yaml.load(fileContents);
 }
