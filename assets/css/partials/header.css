@@ -10,23 +10,23 @@ header {
 
   /*Fix focus border*/
 
-  & a {
+  a {
     outline-offset: -2px;
   }
 
-  & > div {
+  > div {
     height: var(--header-height);
     margin-inline: auto;
     max-width: var(--max-page-wrap-width);
   }
 
-  & #nav_head {
+  #nav_head {
     align-items: stretch;
     display: flex;
     justify-content: space-between;
     margin-right: 2rem;
 
-    & #logo-link {
+    #logo-link {
       display: flex;
       justify-content: center;
 
@@ -35,18 +35,18 @@ header {
       }
     }
 
-    & .dark-logo {
+    .dark-logo {
       display: none;
     }
   }
 
-  & nav {
+  nav {
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: space-between;
 
-    & a {
+    a {
       color: var(--navbar-link-color);
       display: flex;
       flex-direction: column;
@@ -58,7 +58,7 @@ header {
       text-decoration: none;
     }
 
-    & li {
+    li {
       height: 100%;
       margin: 0;
 
@@ -71,7 +71,7 @@ header {
       }
     }
 
-    & ul {
+    ul {
       align-items: center;
       display: flex;
       height: 100%;
@@ -79,16 +79,16 @@ header {
       margin: 0;
       padding-left: 0;
 
-      & > :first-child {
+      > :first-child {
         padding-left: 0;
       }
     }
   }
 
-  & .fund {
+  .fund {
     margin-right: -1rem;
 
-    & > a {
+    > a {
       color: var(--fund-color) !important;
 
       &:hover {
@@ -113,13 +113,13 @@ header {
 
 @container main (width < 1200px) {
   header {
-    & > div {
+    > div {
       flex-direction: column;
       height: auto;
       contain: content;
     }
 
-    & #nav_head {
+    #nav_head {
       width: 100%;
 
       > a {
@@ -127,22 +127,22 @@ header {
       }
     }
 
-    & nav {
+    nav {
       display: none;
 
-      & a {
+      a {
         padding: 1rem;
       }
 
-      & ul {
+      ul {
         align-items: flex-start;
         flex-direction: column;
 
-        & li {
+        li {
           width: 100%;
           align-items: start;
 
-          & .fund {
+          .fund {
             margin: 0;
             width: 100%;
           }
@@ -150,7 +150,7 @@ header {
       }
     }
 
-    & #nav_toggle_btn {
+    #nav_toggle_btn {
       display: block;
       padding: 1.25rem;
 
@@ -163,7 +163,7 @@ header {
       }
     }
 
-    & #nav_toggle_cb:checked ~ div #nav {
+    #nav_toggle_cb:checked ~ div #nav {
       display: block;
     }
   }
@@ -173,8 +173,8 @@ header {
   header {
     /* Use logo with white text for dark navbar. */
 
-    & #nav_head {
-      & .nav-logo {
+    #nav_head {
+      .nav-logo {
         display: none;
 
         &.dark-logo {
@@ -185,7 +185,7 @@ header {
 
     /* Invert hamburger menu button on mobile to be visible on dark navbar. */
 
-    & #nav_toggle_btn {
+    #nav_toggle_btn {
       filter: invert(100%) saturate(0%) brightness(120%);
     }
   }
@@ -200,8 +200,8 @@ header[data-transparent="true"] {
   box-shadow: none;
   margin-bottom: -70px;
 
-  & #nav_head {
-    & .nav-logo {
+  #nav_head {
+    .nav-logo {
       display: none;
 
       &.dark-logo {
@@ -210,22 +210,22 @@ header[data-transparent="true"] {
     }
   }
 
-  & nav {
-    & a {
+  nav {
+    a {
       color: white;
     }
   }
 
-  & .fund {
+  .fund {
     height: initial;
     margin-right: 0;
 
-    & > a {
+    > a {
       padding-right: 1rem
     }
   }
 
-  & #nav_toggle_btn {
+  #nav_toggle_btn {
     filter: invert(100%) saturate(0%) brightness(120%);
   }
 }
@@ -242,30 +242,30 @@ header[data-transparent="true"] {
 
 @container main (width < 1200px) {
   header[data-transparent="true"] {
-    & nav .fund a {
+    nav .fund a {
       background-color: transparent;
     }
 
-    & input#nav_toggle_cb:checked ~ div {
+    input#nav_toggle_cb:checked ~ div {
       background-color: var(--navbar-background-color);
     }
   }
 
   @media header (prefers-color-scheme: light) {
   header[data-transparent="true"] {
-    & nav a {
+    nav a {
       color: var(--navbar-link-color);
     }
 
-    & input#nav_toggle_cb:checked ~ div #nav_head #nav_toggle_btn {
+    input#nav_toggle_cb:checked ~ div #nav_head #nav_toggle_btn {
       filter: none;
     }
 
-    & input#nav_toggle_cb:checked ~ div #nav_head .nav-logo {
+    input#nav_toggle_cb:checked ~ div #nav_head .nav-logo {
       display: inline;
     }
 
-    & input#nav_toggle_cb:checked ~ div #nav_head .nav-logo.dark-logo {
+    input#nav_toggle_cb:checked ~ div #nav_head .nav-logo.dark-logo {
       display: none;
     }
   }

@@ -86,34 +86,33 @@ To enable NativeAOT in desktop platforms, make sure to target .NET 7.0 or higher
 <style>
   .article-body table:not(.lntable) {
     width: 100%;
+  }
 
-    & tr:nth-child(odd) td{
-      background: #80808021;
-    }
+  .article-body table:not(.lntable) tr:nth-child(odd) td {
+    background: #80808021;
+  }
 
-    & tr:nth-child(even) td{
-      background: #80808047;
-    }
+  .article-body table:not(.lntable) tr:nth-child(even) td {
+    background: #80808047;
+  }
 
-    & td {
-      padding: 10px;
-    }
+  .article-body table:not(.lntable) td {
+    padding: 10px;
+  }
 
-    & thead tr {
-      background: var(--background-color);
-      height: 43px;
-    }
+  .article-body table:not(.lntable) thead tr {
+    background: var(--background-color);
+    height: 43px;
+  }
 
-    & thead tr th {
-      text-align: center !important;
-    }
+  .article-body table:not(.lntable) thead tr th {
+    text-align: center !important;
+  }
 
-    & tbody tr td {
-      text-align: center !important;
-    }
+  .article-body table:not(.lntable) tbody tr td {
+    text-align: center !important;
   }
 </style>
-
 
 As a summary, the current platform support as of 4.2 is described in the table below:
 

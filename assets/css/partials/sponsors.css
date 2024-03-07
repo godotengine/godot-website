@@ -1,18 +1,18 @@
 .sponsors {
   --card-padding: 17px;
 
-  & .grid {
+  .grid {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
     margin-top: 2rem;
 
-    & .sponsor-card {
+    .sponsor-card {
       background-color: white;
       border-radius: 7px;
       padding: var(--card-padding);
 
-      & img {
+      img {
         height: 100%;
         margin: auto;
         mix-blend-mode: multiply;
@@ -38,11 +38,11 @@
     }
   }
 
-  & h3 {
+  h3 {
     font-weight: 400;
     margin-top: 3.125rem;
 
-    & a {
+    a {
       color: inherit;
       font-family: var(--default-font-family);
       font-size: 0.938rem;
@@ -51,7 +51,7 @@
     }
   }
 
-  & .sponsor-the-project {
+  .sponsor-the-project {
     margin-top: 3.125rem;
     opacity: 0.8;
     text-align: left;

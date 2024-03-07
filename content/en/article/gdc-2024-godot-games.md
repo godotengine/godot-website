@@ -96,49 +96,48 @@ On the 21st of March, we will be joined by a senior class of students from a loc
 ## Schedule
 
 <style>
-
-.article-body table:not(.lntable) {
+  .article-table {
     width: 100%;
+  }
 
-    & tr:nth-child(odd) td{
-      background: #80808021;
-    }
+  .article-table tr:nth-child(odd) td {
+    background: #80808021;
+  }
 
-    & tr:nth-child(even) td{
-      background: #80808047;
-    }
+  .article-table tr:nth-child(even) td {
+    background: #80808047;
+  }
 
-    & td {
-      padding: 10px;
-    }
+  .article-table td {
+    padding: 10px;
+  }
 
-    & thead tr {
-      background: var(--background-color);
-      height: 43px;
-    }
+  .article-table thead tr {
+    background: var(--background-color);
+    height: 43px;
+  }
 
-    & thead tr th {
-      text-align: center !important;
-    }
+  .article-table thead tr th {
+    text-align: center !important;
+  }
 
-    & tbody tr td {
-      text-align: center !important;
-    }
+  .article-table tbody tr td {
+    text-align: center !important;
+  }
 
-    & .tdate {
-      width: 100px;
-      height: 42px;
-    }
+  .article-table .tdate {
+    width: 100px;
+    height: 42px;
   }
 
 	@media (min-width: 768px) {
-		.article-body table:not(.lntable) .tdate {
+		.article-table .tdate {
 			width: 200px;
 		}
 	}
 </style>
 
-<table>
+<table class="article-table">
 	<tr>
 		<th class="tdate">Wednesday 20th</th>
 		<th>Games</th>
@@ -153,7 +152,7 @@ On the 21st of March, we will be joined by a senior class of students from a loc
 	</tr>
 </table>
 
-<table>
+<table class="article-table">
 	<tr>
 		<th class="tdate">Thursday 21st</th>
 		<th></th>
@@ -168,7 +167,7 @@ On the 21st of March, we will be joined by a senior class of students from a loc
 	</tr>
 </table>
 
-<table>
+<table class="article-table">
 	<tr>
 		<th class="tdate">Friday 22nd</th>
 		<th></th>

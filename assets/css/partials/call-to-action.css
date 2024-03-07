@@ -6,24 +6,24 @@
   place-items: center;
   text-align: center;
 
-  & h2 {
+  h2 {
     color: var(--dark-color-text-title);
     font-weight: 600;
     margin: 0;
   }
 
-  & p {
+  p {
     color: var(--dark-color-text);
     margin: 0;
   }
 
-  & .cta-buttons {
+  .cta-buttons {
     display: grid;
     gap: 1.625rem;
     margin-top: 1rem;
     place-items: center;
 
-    & .btn-download {
+    .btn-download {
       min-width: 310px;
 
       &:nth-of-type(2n) {
@@ -31,11 +31,11 @@
         backdrop-filter: blur(4px);
         background-color: rgba(132, 151, 174, 68%);
 
-        & .download-title {
+        .download-title {
           color: #f7f7f7;
         }
 
-        & .download-hint {
+        .download-hint {
           background-color: var(--primary-color-subdued);
         }
       }

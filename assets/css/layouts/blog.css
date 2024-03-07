@@ -1,8 +1,8 @@
 .blog-page {
   /*----------Head----------*/
 
-  & .head {
-    & .main {
+  .head {
+    .main {
       gap: 30px;
       grid-template-columns: 1fr;
     }
@@ -14,17 +14,17 @@
 
   /*----------Posts----------*/
 
-  & .posts {
+  .posts {
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr;
 
-    & > a {
+    > a {
       text-decoration: none;
     }
   }
 
-  & .loading-indicator {
+  .loading-indicator {
     animation: loading-indicator-rotate 1s linear infinite;
     border: 4px solid white;
     border-radius: 50%;
@@ -34,8 +34,6 @@
     margin: 20rem auto;
     width: 50px;
   }
-
-
 }
 
 @keyframes loading-indicator-rotate {
@@ -46,8 +44,8 @@
 
 @container main (width >= 768px) {
   .blog-page {
-    & .head {
-      & .main {
+    .head {
+      .main {
         grid-template-columns: 1fr 400px;
         align-items: center;
       }
@@ -61,10 +59,10 @@
 
 @container main (width >= 902px) {
   .blog-page .head {
-    & .main {
+    .main {
     }
 
-    & .search-bar {
+    .search-bar {
     }
   }
 }

@@ -1,13 +1,13 @@
 .about-page {
-  & .main {
+  .main {
     padding: 0;
   }
 
-  & .intro-title {
+  .intro-title {
     margin: 32px 0;
   }
 
-  & .container-text {
+  .container-text {
     --padding: 24px;
     margin-inline: auto;
     margin-top: 4rem;
@@ -16,19 +16,19 @@
     --max-width: 800px;
     width: min(var(--max-width), 100% - (var(--padding) * 2));
 
-    & h2 {
+    h2 {
       margin-top: 80px;
     }
 
-    & h3 {
+    h3 {
       margin-top: 60px;
     }
 
-    & > :first-child {
+    > :first-child {
       margin-top: 0 !important;
     }
 
-    & h4 {
+    h4 {
       margin-bottom: 20px;
       margin-top: 40px;
     }
@@ -36,7 +36,7 @@
 
   /*----------Teams subpage----------*/
 
-  & .teams-team-section {
+  .teams-team-section {
     background-color: var(--teams-odd-color);
     margin: 2.5rem 0;
     padding: 1.25rem 1rem;
@@ -45,16 +45,16 @@
       background-color: var(--teams-even-color);
     }
 
-    & + .teams-team-section {
+    + .teams-team-section {
       margin-top: 0.5rem;
     }
 
-    & > h4 {
+    > h4 {
       margin-top: 0;
     }
   }
 
-  & .teams-subteams {
+  .teams-subteams {
     background-color: var(--teams-subteams-color);
     border-left: 0.375rem solid var(--accent-color);
     margin-top: 30px;
@@ -62,12 +62,12 @@
     table-layout: fixed;
     width: 100%;
 
-    & th {
+    th {
       border-right: 1px dashed var(--table-divider-color);
       padding: 1rem;
     }
 
-    & td {
+    td {
       padding: 1rem 0 1rem 0.75rem;
     }
 
@@ -83,12 +83,12 @@
     }
   }
 
-  & .teams-subteam-name {
+  .teams-subteam-name {
     text-align: left;
     width: 25%;
   }
 
-  & .teams-subteam-leader {
+  .teams-subteam-leader {
     font-weight: 700;
 
     &:before {

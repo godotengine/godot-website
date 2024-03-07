@@ -1,16 +1,16 @@
 .article-page {
   .article-cover {
-    & figcaption {
+    figcaption {
       line-height: 1.5;
       opacity: 0.8;
 
-      & a {
+      a {
         color: inherit;
       }
     }
   }
 
-  & h1 {
+  h1 {
     margin-bottom: 8px;
     margin-top: 2rem;
   }
@@ -19,12 +19,12 @@
     margin-top: 2.625rem;
   }
 
-  & .date-big {
+  .date-big {
     line-height: 2;
     margin-left: 2rem;
   }
 
-  & article {
+  article {
     background-color: var(--base-color);
     box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
 
@@ -33,24 +33,24 @@
     }
   }
 
-  & figure {
+  figure {
     margin: 0;
   }
 
-  & .article-info {
+  .article-info {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  & .article-metadata {
+  .article-metadata {
     align-items: center;
     display: flex;
     font-family: var(--header-font-family);
     gap: 1.5rem;
     margin-bottom: 0.75rem;
 
-    & .date {
+    .date {
       color: var(--base-color-text-subtitle-date);
 
       &.post-recent-highlight {
@@ -68,7 +68,7 @@
     }
   }
 
-  & .article-author {
+  .article-author {
     align-items: center;
     color: var(--base-color-text-subtitle-date);
     display: flex;
@@ -77,23 +77,23 @@
     font-weight: 700;
     gap: 0.75rem;
 
-    & .avatar {
+    .avatar {
       border-radius: 100%;
       margin: 0;
     }
 
-    & .by {
+    .by {
       color: var(--base-color-text-subtitle);
     }
   }
 
-  & .tag.active {
+  .tag.active {
     filter: saturate(0.75);
   }
 
   /*CARDS */
 
-  & .card-download {
+  .card-download {
     align-items: flex-start;
     background: var(--head-background-color);
     border-radius: 4px 4px;
@@ -101,7 +101,7 @@
     flex-direction: column;
     gap: 1rem;
 
-    & .card-download-link {
+    .card-download-link {
       color: var(--dark-color-text-title);
       font-size: 135%;
       font-weight: 700;
@@ -109,7 +109,7 @@
       text-decoration-color: var(--dark-color-text);
     }
 
-    & .card-download-details {
+    .card-download-details {
       align-items: flex-start;
       display: flex;
       flex-direction: row;
@@ -118,7 +118,7 @@
       padding: 0 1rem;
       width: 100%;
 
-      & > img {
+      > img {
         background-color: transparent;
         display: inline-block;
         margin: 0;
@@ -127,13 +127,13 @@
       }
     }
 
-    & .card-download-platforms {
+    .card-download-platforms {
       display: grid;
       gap: 8px;
       grid-template-columns: 1fr 1fr 1fr;
     }
 
-    & .download-platform {
+    .download-platform {
       align-items: center;
       color: var(--primary-color-text-title);
       display: flex;
@@ -141,7 +141,7 @@
       gap: 0.75rem;
       min-width: 120px;
 
-      & img {
+      img {
         background-color: transparent;
         display: inline-block;
         filter: invert(100%);
@@ -151,11 +151,11 @@
       }
     }
 
-    & .btn-download-primary {
+    .btn-download-primary {
       margin-bottom: 0;
       text-align: left;
 
-      & .download-title {
+      .download-title {
         font-size: 1.125rem;
         line-height: 24px;
         padding: 10px 1rem;
@@ -163,22 +163,22 @@
       }
     }
 
-    & .btn-download-primary--mono {
+    .btn-download-primary--mono {
       -webkit-backdrop-filter: blur(4px);
       backdrop-filter: blur(4px);
       background-color: var(--download-mono-background-color);
 
-      & .download-title {
+      .download-title {
         color: #f7f7f7;
       }
 
-      & .download-hint {
+      .download-hint {
         background-color: var(--primary-color-subdued);
         color: var(--text-color);
       }
     }
 
-    & .card-download-sublinks {
+    .card-download-sublinks {
       align-items: flex-start;
       background: var(--download-table-color);
       display: flex;
@@ -196,7 +196,7 @@
         text-decoration-thickness: 1px;
       }
 
-      & .card-download-donate {
+      .card-download-donate {
         color: var(--fund-color-faint);
         font-weight: 600;
         text-decoration-color: var(--fund-color-faint);
@@ -224,7 +224,7 @@ body:has(.article-page) {
 
 @container main (width < 900px) {
   .article-page {
-    & .article-metadata {
+    .article-metadata {
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
@@ -244,18 +244,18 @@ body:has(.article-page) {
 
 @container main (width < 768px) {
   .article-page .card-download {
-    & .card-download-details {
+    .card-download-details {
       flex-direction: column;
       align-items: center;
       gap: 20px;
 
-      & img {
+      img {
         max-height: 220px;
         max-width: 95%;
       }
     }
 
-    & .card-download-sublinks {
+    .card-download-sublinks {
       flex-direction: column;
     }
   }

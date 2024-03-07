@@ -7,7 +7,7 @@
     }
 
     .not-found-page {
-      & > div {
+      > div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -17,27 +17,27 @@
         height: 100%;
       }
 
-      & .message {
+      .message {
         text-align: center;
 
-        & img {
+        img {
           display: inline;
         }
       }
 
-      & .error {
+      .error {
         max-width: 900px;
       }
 
-      & .error-logo {
+      .error-logo {
         height: 138px;
       }
 
-      & .alternatives {
+      .alternatives {
         display: grid;
         gap: 1.875rem;
 
-        & div {
+        div {
           background-color: var(--card-background-color);
           padding: 1.25rem;
           box-sizing: border-box;
@@ -45,13 +45,13 @@
           border-radius: 1rem;
         }
 
-        & .help {
+        .help {
           /* use two columns */
           grid-column: span 2;
         }
       }
 
-      & .search-bar input {
+      .search-bar input {
         background-color: var(--base-color);
       }
     }

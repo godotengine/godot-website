@@ -1,11 +1,11 @@
 .donate-page {
-  & .col-2 {
+  .col-2 {
     display: grid;
     gap: 1.875rem;
     grid-template-columns: 1fr;
   }
 
-  & .donate-button {
+  .donate-button {
     background: var(--big-button-color);
     box-shadow: var(--base-shadow);
     color: white;
@@ -17,7 +17,7 @@
     text-transform: uppercase;
   }
 
-  & .wrapper .options {
+  .wrapper .options {
     display: grid;
     gap: 1.875rem;
     grid-template-columns: 1fr;
@@ -27,44 +27,44 @@
     text-align: center;
   }
 
-  & .card-transfer {
+  .card-transfer {
     background: #2f2f2f;
     border-radius: 11px;
     box-shadow: 0 11px 10px -10px #00000042;
     margin-top: 3.125rem;
     padding: 2.688rem 3.125rem;
 
-    & .details {
+    .details {
       display: grid;
       gap: 1.875rem;
       grid-template-columns: 1fr;
     }
   }
 
-  & .development-fund {
+  .development-fund {
     background: #363a4f;
   }
 
-  & p.for-more {
+  p.for-more {
     opacity: 0.8;
     text-align: center;
   }
 
-  & .about-support {
+  .about-support {
     padding: 1.875rem;
   }
 
-  & .foundation {
+  .foundation {
     margin-bottom: 3.125rem;
     margin-top: 3.125rem;
     text-align: center;
 
-    & .image {
+    .image {
       margin: 0 auto;
       max-width: 300px;
 
-      & img {
-        & p {
+      img {
+        p {
           margin-bottom: 2.5rem;
           margin-left: auto;
           margin-right: auto;
@@ -77,11 +77,11 @@
 
 @media (prefers-color-scheme: dark) {
   .donate-page {
-    & .if-light {
+    .if-light {
       display: none;
     }
 
-    & .if-dark {
+    .if-dark {
       display: block;
     }
   }
@@ -89,19 +89,19 @@
 
 @media (prefers-color-scheme: light) {
   .donate-page {
-    & .card-transfer {
+    .card-transfer {
       background-color: rgba(160, 160, 160, 0.15);
     }
 
-    & .development-fund {
+    .development-fund {
       background: #dae0ff;
     }
 
-    & .if-light {
+    .if-light {
       display: block;
     }
 
-    & .if-dark {
+    .if-dark {
       display: none;
     }
   }
@@ -109,29 +109,29 @@
 
 @container main (width >= 768px) {
   .donate-page {
-    & .col-2 {
+    .col-2 {
       grid-template-columns: 1fr 1fr;
       gap: 60px;
     }
 
-    & .wrapper .options {
+    .wrapper .options {
       grid-template-columns: 1fr 1fr;
     }
 
-    & .about-support {
+    .about-support {
       padding: 4.375rem;
     }
 
-    & .card-transfer .details {
+    .card-transfer .details {
       grid-template-columns: 1fr 1fr;
       gap: 3.125rem;
     }
 
-    & .bank-transfer .details {
+    .bank-transfer .details {
       padding: 0 1.875rem;
     }
 
-    & .development-fund .details p {
+    .development-fund .details p {
       margin-top: 0;
     }
   }

@@ -39,14 +39,14 @@
   padding: 0;
   text-align: center;
 
-  & > .download-title {
+  > .download-title {
     color: var(--dark-color);
     display: inline-block;
     flex-grow: 1;
     padding: 1rem 2rem;
   }
 
-  & > .download-hint {
+  > .download-hint {
     background-color: var(--primary-color);
     color: var(--primary-color-text-title);
     display: inline-block;

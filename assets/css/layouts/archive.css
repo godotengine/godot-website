@@ -2,20 +2,20 @@
 
 /*----------Hero----------*/
 .archive-page {
-  & .hero {
+  .hero {
     padding: 3.375rem var(--page-padding) 0.3rem;
 
-    & h1 {
+    h1 {
       color: var(--base-color-text-title);
       text-shadow: none;
     }
   }
 
-  & .hero-blurb {
+  .hero-blurb {
     color: var(--base-color-text);
   }
 
-  & .hero-version-flavor {
+  .hero-version-flavor {
     background-color: var(--primary-color);
     border-radius: 1000px;
     color: var(--dark-color-text-title);
@@ -26,7 +26,7 @@
 
   /*----------Preview Cards----------*/
 
-  & .preview-cards {
+  .preview-cards {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;

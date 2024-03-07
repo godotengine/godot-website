@@ -3,32 +3,32 @@
 .download-page {
   /*----------Hero----------*/
 
-  & .hero {
-    & .main-downloads {
+  .hero {
+    .main-downloads {
       display: grid;
       gap: 1.125rem;
       margin: 2.5rem auto 4.1rem auto;
       max-width: 600px;
       text-align: center;
 
-      & .btn-download {
+      .btn-download {
         margin-bottom: 0.5rem;
       }
     }
 
-    & .main-download-details {
+    .main-download-details {
       color: var(--download-main-details-color);
       font-size: 0.875rem;
       margin-top: 0;
       opacity: 0.6;
     }
 
-    & .previous-releases {
+    .previous-releases {
       color: var(--download-hero-color);
       font-size: 95%;
     }
 
-    & .previous-releases-featured {
+    .previous-releases-featured {
       font-size: 110%;
       line-height: 36px;
     }
@@ -36,16 +36,16 @@
 
   /*----------Platform Details----------*/
 
-  & .platform-details {
-    & .card {
+  .platform-details {
+    .card {
       margin-top: 2rem;
     }
 
-    & pre {
+    pre {
       background-color: var(--platform-code-background-color);
     }
 
-    & .download {
+    .download {
       align-items: flex-start;
       display: flex;
       flex-direction: column;
@@ -53,24 +53,24 @@
       margin-bottom: 8px;
     }
 
-    & .download-details {
+    .download-details {
       color: var(--secondary-color-text);
       font-size: 0.875rem;
       padding: 0 0.75rem;
     }
 
-    & .download-note {
+    .download-note {
       background-color: var(--platform-note-background-color);
       font-size: 92%;
       margin-top: 28px;
       padding: 1rem 0.75rem;
 
-      & p {
+      p {
         margin: 0;
       }
     }
 
-    & .platform-split {
+    .platform-split {
       display: grid;
       gap: 24px;
       grid-template-columns: 1fr 1fr;
@@ -79,32 +79,32 @@
 
   /*----------Digital Stores----------*/
 
-  & .digital-stores {
+  .digital-stores {
     display: grid;
     gap: 24px;
     grid-template-columns: 1fr 1fr;
 
-    & p {
+    p {
       margin-top: 0;
     }
 
-    & .digital-store-list {
+    .digital-store-list {
       display: flex;
       gap: 1rem;
       justify-content: center;
 
-      & > .btn {
+      > .btn {
         flex: 1;
       }
 
-      & img {
+      img {
         height: 28px;
         width: 28px;
       }
     }
   }
 
-  & .btn.btn-digital-store {
+  .btn.btn-digital-store {
     align-items: center;
     background-color: var(--primary-color);
     color: var(--dark-color-text-title);
@@ -114,24 +114,24 @@
     padding: 0.75rem 24px;
   }
 
-  & .digital-store-name {
+  .digital-store-name {
     font-size: 105%;
     font-weight: 600;
   }
 
-  & .digital-store-logo img {
+  .digital-store-logo img {
     vertical-align: text-bottom;
   }
 
-  & .digital-stores-notes {
+  .digital-stores-notes {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
-    & ul {
+    ul {
       margin: 0;
 
-      & li:last-child {
+      li:last-child {
         margin-bottom: 0;
       }
     }
@@ -139,27 +139,27 @@
 
   /*----------Supported Platforms----------*/
 
-  & .platforms-wrapper {
+  .platforms-wrapper {
     background-color: var(--dark-color);
     margin: 40px 0;
     max-width: 100%;
     padding: 24px 24px;
     width: auto;
 
-    & h2 {
+    h2 {
       color: var(--dark-color-text-title);
     }
   }
 
-  & .platform-tabs {
+  .platform-tabs {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: -1px;
 
-    & .tab {
+    .tab {
       color: var(--dark-color-text);
 
-      & img {
+      img {
         filter: invert(100%);
         height: 24px;
       }
@@ -178,38 +178,38 @@
 
   /*----------Other Downloads----------*/
 
-  & #extras {
+  #extras {
     padding-bottom: 4rem;
   }
 
-  & .other-download {
+  .other-download {
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr;
     max-width: 100%;
   }
 
-  & .other-download-card {
+  .other-download-card {
     background: var(--card-background-color);
     border-radius: 6px;
     padding: 26px 35px;
   }
 
-  & .unstable-downloads {
+  .unstable-downloads {
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
 
-  & .unstable-download-previews {
+  .unstable-download-previews {
     max-width: 768px;
 
-    & .btn {
+    .btn {
       margin-top: 1rem;
     }
   }
 
-  & .unstable-download-source {
+  .unstable-download-source {
     align-items: center;
     display: flex;
     gap: 28px;
@@ -217,7 +217,7 @@
 
   /*----------Thank you Modal----------*/
 
-  & .thankyou-wrapper {
+  .thankyou-wrapper {
     align-items: center;
     background: rgba(0, 0, 0, 0.45);
     bottom: 0;
@@ -231,7 +231,7 @@
     z-index: 10;
   }
 
-  & .thankyou {
+  .thankyou {
     align-items: center;
     background: var(--base-color);
     box-shadow: var(--more-shadow);
@@ -240,7 +240,7 @@
     padding: 40px 60px 26px 60px;
     position: relative;
 
-    & .btn.btn-donate {
+    .btn.btn-donate {
       background-color: var(--primary-color);
       color: hsla(0, 0%, 100%, 0.9);
       font-size: 1.375rem;
@@ -248,45 +248,45 @@
       margin-bottom: 26px;
     }
 
-    & .btn-back-to-downloads {
+    .btn-back-to-downloads {
       cursor: pointer;
       position: absolute;
       right: 0.75rem;
       top: 0.75rem;
     }
 
-    & h2 {
+    h2 {
       font-size: 2.25rem;
       font-weight: 600;
       margin-bottom: 0.75rem;
       text-shadow: var(--base-shadow);
     }
 
-    & h3 {
+    h3 {
       font-size: 1.5rem;
       margin-bottom: 0;
     }
 
-    & p {
+    p {
       max-width: 620px;
     }
 
-    & hr {
+    hr {
       margin: 28px 0 8px 0;
     }
   }
 
-  & .thankyou-reading {
+  .thankyou-reading {
     font-size: 1rem;
   }
 
-  & .thankyou-reading-list {
+  .thankyou-reading-list {
     font-size: 1rem;
     margin: 0 0 0 48px;
     padding-left: 0;
   }
 
-  & .thankyou-donate {
+  .thankyou-donate {
     margin-bottom: 24px;
     text-align: center;
   }
@@ -296,7 +296,7 @@
 
 @media (prefers-color-scheme: light) {
   .download-page {
-    & .btn-back-to-downloads img {
+    .btn-back-to-downloads img {
       filter: invert(1);
       opacity: 0.75;
     }
@@ -307,7 +307,7 @@
 
 @container main (width >= 768px) {
   .download-page {
-    & .other-download {
+    .other-download {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -317,21 +317,21 @@
 
 @container main (width < 1200px) {
   .download-page {
-    & .digital-stores {
+    .digital-stores {
       grid-template-columns: 1fr;
 
-      & .digital-store-list {
+      .digital-store-list {
         gap: 0.75rem;
       }
     }
 
-    & .btn.btn-digital-store {
+    .btn.btn-digital-store {
       justify-content: center;
       gap: 0.75rem;
       min-width: 50%;
     }
 
-    & .platform-details .platform-split {
+    .platform-details .platform-split {
       grid-template-columns: 1fr;
       gap: 0;
     }
@@ -342,31 +342,31 @@
 
 @container main (width < 768px) {
   .download-page {
-    & .platform-tabs {
+    .platform-tabs {
       flex-direction: column;
       justify-content: stretch;
 
-      & > .tab {
+      > .tab {
         width: 100%;
       }
     }
 
-    & .unstable-download-source {
+    .unstable-download-source {
       flex-direction: column;
       gap: 8px;
     }
 
-    & .unstable-download-previews {
-      & .btn {
+    .unstable-download-previews {
+      .btn {
         width: 100%;
       }
     }
 
-    & .thankyou-wrapper {
+    .thankyou-wrapper {
       display: block;
     }
 
-    & .thankyou {
+    .thankyou {
       position: absolute;
       top: 0;
       left: 0;
@@ -376,11 +376,11 @@
       padding: 30px 40px 18px 40px;
     }
 
-    & .thankyou-reading-list {
+    .thankyou-reading-list {
       margin-left: 24px;
     }
 
-    & .btn-back-to-downloads {
+    .btn-back-to-downloads {
       width: 48px;
       height: 48px;
       display: flex;
@@ -388,7 +388,7 @@
       align-items: center;
     }
 
-    & .digital-stores .digital-store-list {
+    .digital-stores .digital-store-list {
       flex-direction: column;
     }
   }

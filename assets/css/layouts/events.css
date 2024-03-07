@@ -1,18 +1,18 @@
 .events-page {
-  & .events {
+  .events {
     display: grid;
     grid-template-columns: 360px 1fr;
     margin-top: 1.5rem;
     row-gap: 3rem;
   }
 
-  & .event-card {
-    & h4 {
+  .event-card {
+    h4 {
       margin-bottom: 0;
       margin-top: 36px;
     }
 
-    & img {
+    img {
       border-radius: 4px;
       margin: 1.5rem 0;
       max-height: 360px;
@@ -20,44 +20,44 @@
     }
   }
 
-  & .events-fulllist {
+  .events-fulllist {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
   }
 
-  & .events-shortlist__wrap {
+  .events-shortlist__wrap {
     padding-right: 1rem;
     width: 320px;
   }
 
-  & .events-shortlist__anchor {
+  .events-shortlist__anchor {
     position: sticky;
     top: 24px;
 
-    & > h2 {
+    > h2 {
       line-height: 0.8em;
     }
   }
 
-  & .events-shortlist {
+  .events-shortlist {
     margin-top: 1.5rem;
 
-    & > li {
+    > li {
       display: flex;
       flex-direction: column;
 
-      & > a {
+      > a {
         font-size: 110%;
       }
 
-      & > span:last-child {
+      > span:last-child {
         opacity: 0.64;
       }
     }
   }
 
-  & .events-shortlist__bulletpoint {
+  .events-shortlist__bulletpoint {
     position: relative;
 
     &:before {
@@ -69,15 +69,15 @@
     }
   }
 
-  & .event-details {
+  .event-details {
     margin: 1rem 0;
 
-    & > li p {
+    > li p {
       display: inline;
     }
   }
 
-  & #past {
+  #past {
     margin-top: 30px;
   }
 }

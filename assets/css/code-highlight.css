@@ -17,7 +17,7 @@
 
   --member-variable-color: #bce0ff;
 
-  & .lntable {
+  .lntable {
     display: block;
     overflow-x: auto;
   }

@@ -6,18 +6,18 @@
     position: relative;
   }
 
-  & .map-color-legends {
+  .map-color-legends {
     column-gap: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
     row-gap: 0.5rem;
 
-    & p {
+    p {
       margin: 0;
     }
 
-    & span {
+    span {
       border-radius: 50%;
       display: inline-block;
       height: 0.75rem;

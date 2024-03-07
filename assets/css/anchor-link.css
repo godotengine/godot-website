@@ -1,18 +1,18 @@
 .anchored-link {
-  display: none;
   background-image: url(/assets/icons/link.svg);
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: 100% 100%;
-  text-decoration: none;
+  display: none;
+  height: 0.8em;
   margin-left: 10px;
+  max-height: 24px;
+  max-width: 24px;
+  text-decoration: none;
   vertical-align: middle;
   width: 0.8em;
-  height: 0.8em;
-  max-width: 24px;
-  max-height: 24px;
 
-  & .anchored-link:hover {
+  .anchored-link:hover {
     opacity: 0.9;
   }
 }
@@ -32,16 +32,16 @@
 }
 
 .anchored-toast {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: var(--dark-color);
   border-radius: 24px;
   color: var(--dark-color-text-hl);
   font-size: 0.875rem;
   font-weight: 600;
+  left: 50%;
   padding: 12px 18px;
+  position: fixed;
   text-align: center;
+  top: 20px;
+  transform: translateX(-50%);
   z-index: 100;
 }

@@ -28,11 +28,11 @@ p.small {
   box-sizing: border-box;
   color: var(--base-color-text);
 
-  & :hover {
+  &:hover {
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
   }
 
-  & .footer {
+  .footer {
     background-color: var(--card-footer-color);
   }
 }
@@ -47,13 +47,13 @@ a.card {
   display: flex;
   justify-content: flex-end;
 
-  & > * {
+  > * {
     padding: 1rem 24px 1rem 24px;
     text-align: center;
     text-decoration: none;
   }
 
-  & a {
+  a {
     color: inherit;
     white-space: nowrap;
 
@@ -63,7 +63,7 @@ a.card {
     }
   }
 
-  & .active {
+  .active {
     background-color: var(--base-color);
     color: var(--tab-active-color);
   }
@@ -90,7 +90,7 @@ a.card {
     width: 0;
   }
 
-  & > .tab {
+  > .tab {
     display: flex;
     flex: 0 0 auto;
     overscroll-behavior-y: contain;
@@ -165,12 +165,6 @@ body a:active,
   right: 0;
   top: 0;
   width: 100%;
-}
-
-@container main (width < 1250px) {
-  body {
-    width: auto;
-  }
 }
 
 @container main (width < 1200px) {
