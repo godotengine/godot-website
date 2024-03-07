@@ -2,6 +2,7 @@
 public
 tools/generators/node_modules
 resources
+node_modules
 
 # Code editors
 .vscode/
