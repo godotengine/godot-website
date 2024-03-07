@@ -1,6 +1,7 @@
 {{ $href := .href }}
 {{ $priority := default "low" .priority }}
 {{ $css := resources.Get $href
+| resources.PostCSS
 | resources.Minify
 | resources.Fingerprint
 }}

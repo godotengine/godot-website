@@ -32,6 +32,7 @@
 }}
 {{ $cssBundle := $allCSS
 | resources.Concat "css/bundle.css"
+| resources.PostCSS
 | resources.Minify
 | resources.Fingerprint
 }}

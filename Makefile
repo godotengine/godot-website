@@ -1,4 +1,4 @@
-build: build-hugo index-articles
+build: install-main-packages build-hugo index-articles
 
 build-hugo: install-tools update-mirrorList update-download-archive
 	hugo --gc --minify
@@ -17,6 +17,9 @@ serve-profile:
 
 serve-no-reload:
 	hugo server --disableLiveReload
+
+install-main-packages:
+	npm install
 
 install-tools:
 	cd ./tools/generators && npm install

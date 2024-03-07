@@ -5,6 +5,7 @@
 {{ $allCSS := slice $anchorLinksCSS $codeHighlightCSS $tobiiCSS }}
 {{ $cssBundle := $allCSS
 | resources.Concat "css/article-bundle.css"
+| resources.PostCSS
 | resources.Minify
 | resources.Fingerprint
 }}
