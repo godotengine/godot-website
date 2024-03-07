@@ -1,113 +1,103 @@
-.showcase-list-page {
-  .head {
-    .head-wrapper {
-      display: flex;
-      justify-content: space-between;
-      margin-inline: auto;
-      width: min(var(--max-page-wrap-width), 100% - (var(--page-padding) * 2));
-    }
-  }
+.showcase-list-page .head .head-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: min(var(--max-page-wrap-width), 100% - (var(--page-padding) * 2));
+}
 
-  .showreel-videos {
-    margin-top: 3rem;
+.showcase-list-page .showreel-videos {
+  margin-top: 3rem;
+}
 
-    .showreel-shelf {
-      margin-top: 1rem;
-    }
-  }
+.showcase-list-page .showreel-videos .showreel-shelf {
+  margin-top: 1rem;
+}
 
-  .showcase-cards {
-    --showcase-cards-h-gap: 1rem;
-    display: grid;
-    grid-gap: 1.2rem var(--showcase-cards-h-gap);
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    margin-top: 2rem;
+.showcase-list-page .showcase-cards {
+  --showcase-cards-h-gap: 1rem;
+  display: grid;
+  grid-gap: 1.2rem var(--showcase-cards-h-gap);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 2rem;
+}
 
-    > a {
-      text-decoration: none;
-    }
-  }
+.showcase-list-page .showcase-cards > a {
+  text-decoration: none;
+}
 
-  .showcase-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    height: 100%;
+.showcase-list-page .showcase-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  height: 100%;
+}
 
-    h3 {
-      font-size: 2.063rem;
-      left: 50%;
-      margin-bottom: 0;
-      position: absolute;
-      text-align: center;
-      text-shadow: 0 4px 5px black;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-    }
+.showcase-list-page .showcase-card h3 {
+  font-size: 2.063rem;
+  left: 50%;
+  margin-bottom: 0;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 4px 5px black;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
 
-    p {
-      color: var(--secondary-color-text);
-      display: grid;
-      font-size: 0.875rem;
-      margin: 0;
-      place-items: center;
-    }
+.showcase-list-page .showcase-card p {
+  color: var(--secondary-color-text);
+  display: grid;
+  font-size: 0.875rem;
+  margin: 0;
+  place-items: center;
+}
 
-    .thumbnail {
-      aspect-ratio: 92/43;
-      background-color: var(--card-background-color);
-      border-radius: 7px;
-      box-shadow: 0 5px 10px -3px #00000078;
-      width: 100%;
-    }
-  }
+.showcase-list-page .showcase-card .thumbnail {
+  aspect-ratio: 92/43;
+  background-color: var(--card-background-color);
+  border-radius: 7px;
+  box-shadow: 0 5px 10px -3px #00000078;
+  width: 100%;
+}
 
-  .showcase-card-caption {
-    column-gap: 0.75rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.9rem;
-    width: 100%;
-  }
+.showcase-list-page .showcase-card-caption {
+  column-gap: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.9rem;
+  width: 100%;
+}
 
-  .showcase-card-icons {
-    display: flex;
-    filter: none;
-    gap: 0.5rem;
-    opacity: 0.5;
+.showcase-list-page .showcase-card-icons {
+  display: flex;
+  filter: none;
+  gap: 0.5rem;
+  opacity: 0.5;
+}
 
-    img {
-      height: 1.5rem;
-      width: 1.5rem;
-    }
-  }
+.showcase-list-page .showcase-card-icons img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
 
-  #submit-project {
-    margin: 3rem 0 0;
-  }
+.showcase-list-page #submit-project {
+  margin: 3rem 0 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  .showcase-list-page {
-    .showcase-card-icons {
-      filter: invert();
-    }
+  .showcase-list-page .showcase-card-icons {
+    filter: invert();
   }
 }
 
 @container main (width < 900px) {
-  .showcase-list-page {
-    .head {
-      .head-wrapper {
-        width: unset;
-        margin-inline: unset;
-        flex-direction: column;
+  .showcase-list-page .head .head-wrapper {
+    width: unset;
+    margin-inline: unset;
+    flex-direction: column;
+  }
 
-        .main {
-          padding-inline: var(--page-padding);
-        }
-      }
-    }
+  .showcase-list-page .head .head-wrapper .main {
+    padding-inline: var(--page-padding);
   }
 }

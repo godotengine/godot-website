@@ -163,10 +163,9 @@
           {{ end }}
 
           {{ range $index, $image := .Params.gallery }}
-            <a href="{{ (resources.Get $image).RelPermalink }}" class="lightbox" data-group="showcase">
+            <a href="{{ (resources.Get $image).RelPermalink }}" class="showcase-image lightbox" data-group="showcase">
               {{ partial "responsive-img" (dict
               "src" $image
-              "class" "rounded-lg"
               "sizes" "(min-width: 915px) calc((min(1200px, 100vw - 3rem) / 2), 100vw"
               "alt" (printf "Screenshot of %s by %s" $.Params.title $.Params.author)
               "decoding" (cond (ge $index 1) "async" "sync")

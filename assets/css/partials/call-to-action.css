@@ -5,44 +5,43 @@
   padding: 1.5rem 1.5rem 3.75rem;
   place-items: center;
   text-align: center;
-
-  h2 {
-    color: var(--dark-color-text-title);
-    font-weight: 600;
-    margin: 0;
-  }
-
-  p {
-    color: var(--dark-color-text);
-    margin: 0;
-  }
-
-  .cta-buttons {
-    display: grid;
-    gap: 1.625rem;
-    margin-top: 1rem;
-    place-items: center;
-
-    .btn-download {
-      min-width: 310px;
-
-      &:nth-of-type(2n) {
-        -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
-        background-color: rgba(132, 151, 174, 68%);
-
-        .download-title {
-          color: #f7f7f7;
-        }
-
-        .download-hint {
-          background-color: var(--primary-color-subdued);
-        }
-      }
-    }
-  }
 }
 
+.cta h2 {
+  color: var(--dark-color-text-title);
+  font-weight: 600;
+  margin: 0;
+}
+
+.cta p {
+  color: var(--dark-color-text);
+  margin: 0;
+}
+
+.cta .cta-buttons {
+  display: grid;
+  gap: 1.625rem;
+  margin-top: 1rem;
+  place-items: center;
+}
+
+.cta .cta-buttons .btn-download {
+  min-width: 310px;
+}
+
+.cta .cta-buttons .btn-download:nth-of-type(2n) {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: rgba(132, 151, 174, 68%);
+}
+
+.cta .cta-buttons .btn-download:nth-of-type(2n) .download-title {
+  color: #f7f7f7;
+}
+
+.cta .cta-buttons .btn-download:nth-of-type(2n) .download-hint {
+  background-color: var(--primary-color-subdued);
+}
 
 @container main (width < 900px) {
   .cta {

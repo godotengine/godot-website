@@ -1,78 +1,78 @@
 .sponsors {
   --card-padding: 17px;
+}
 
-  .grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
-    margin-top: 2rem;
+.sponsors .grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
 
-    .sponsor-card {
-      background-color: white;
-      border-radius: 7px;
-      padding: var(--card-padding);
+.sponsors .grid .sponsor-card {
+  background-color: white;
+  border-radius: 7px;
+  padding: var(--card-padding);
+}
 
-      img {
-        height: 100%;
-        margin: auto;
-        mix-blend-mode: multiply;
-        object-fit: contain;
-        width: auto;
-      }
-    }
+.sponsors .grid .sponsor-card img {
+  height: 100%;
+  margin: auto;
+  mix-blend-mode: multiply;
+  object-fit: contain;
+  width: auto;
+}
 
-    &.patron {
-      grid-auto-rows: calc(100px + (var(--card-padding) * 2));
-    }
+.sponsors .grid.patron {
+  grid-auto-rows: calc(100px + (var(--card-padding) * 2));
+}
 
-    &.platinum {
-      grid-auto-rows: calc(80px + (var(--card-padding) * 2));
-    }
+.sponsors .grid.platinum {
+  grid-auto-rows: calc(80px + (var(--card-padding) * 2));
+}
 
-    &.gold {
-      grid-auto-rows: calc(60px + (var(--card-padding) * 2));
-    }
+.sponsors .grid.gold {
+  grid-auto-rows: calc(60px + (var(--card-padding) * 2));
+}
 
-    &.silver {
-      grid-auto-rows: calc(40px + (var(--card-padding) * 2));
-    }
-  }
+.sponsors .grid.silver {
+  grid-auto-rows: calc(40px + (var(--card-padding) * 2));
+}
 
-  h3 {
-    font-weight: 400;
-    margin-top: 3.125rem;
+.sponsors h3 {
+  font-weight: 400;
+  margin-top: 3.125rem;
+}
 
-    a {
-      color: inherit;
-      font-family: var(--default-font-family);
-      font-size: 0.938rem;
-      opacity: 0.5;
-      text-decoration: none;
-    }
-  }
+.sponsors h3 a {
+  color: inherit;
+  font-family: var(--default-font-family);
+  font-size: 0.938rem;
+  opacity: 0.5;
+  text-decoration: none;
+}
 
-  .sponsor-the-project {
-    margin-top: 3.125rem;
-    opacity: 0.8;
-    text-align: left;
-  }
+.sponsors .sponsor-the-project {
+  margin-top: 3.125rem;
+  opacity: 0.8;
+  text-align: left;
 }
 
 @container main (width >= 768px) {
   .sponsors .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
 
-    &.platinum {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .sponsors .grid.platinum {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    &.gold {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .sponsors .grid.gold {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-    &.silver {
-      grid-template-columns: repeat(5, 1fr);
-    }
+  .sponsors .grid.silver {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -85,8 +85,8 @@
   padding: 17px;
   text-align: center;
   text-decoration: none;
+}
 
-  &:hover {
-    background-color: #8484841c;
-  }
+.sponsor-empty:hover {
+  background-color: #8484841c;
 }

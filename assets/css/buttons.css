@@ -5,10 +5,10 @@
   font-size: 1.125rem;
   padding: 1rem 2rem;
   text-decoration: none;
+}
 
-  &:hover {
-    box-shadow: var(--more-shadow);
-  }
+.btn:hover {
+  box-shadow: var(--more-shadow);
 }
 
 .btn-flat {
@@ -16,10 +16,10 @@
   box-shadow: none;
   color: var(--link-color);
   margin: 1rem 2rem;
+}
 
-  &:hover {
-    background-color: hsla(0, 0%, 50%, 0.1);
-  }
+.btn-flat:hover {
+  background-color: hsla(0, 0%, 50%, 0.1);
 }
 
 .btn-flat-white {
@@ -38,19 +38,20 @@
   flex-wrap: nowrap;
   padding: 0;
   text-align: center;
-
-  > .download-title {
-    color: var(--dark-color);
-    display: inline-block;
-    flex-grow: 1;
-    padding: 1rem 2rem;
-  }
-
-  > .download-hint {
-    background-color: var(--primary-color);
-    color: var(--primary-color-text-title);
-    display: inline-block;
-    min-width: 48px;
-    padding: 1rem;
-  }
 }
+
+.btn-download > .download-title {
+  color: var(--dark-color);
+  display: inline-block;
+  flex-grow: 1;
+  padding: 1rem 2rem;
+}
+
+.btn-download > .download-hint {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text-title);
+  display: inline-block;
+  min-width: 48px;
+  padding: 1rem;
+}
+

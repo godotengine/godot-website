@@ -61,5 +61,6 @@ p {
 }
 
 :has(:target) {
+  /*Increase element top padding when scrolling to it*/
   scroll-padding-top: 2rem;
 }

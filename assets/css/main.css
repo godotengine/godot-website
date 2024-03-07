@@ -27,14 +27,14 @@ p.small {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   color: var(--base-color-text);
+}
 
-  &:hover {
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
-  }
+.card:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
+}
 
-  .footer {
-    background-color: var(--card-footer-color);
-  }
+.card .footer {
+  background-color: var(--card-footer-color);
 }
 
 a.card {
@@ -46,27 +46,27 @@ a.card {
   align-items: flex-end;
   display: flex;
   justify-content: flex-end;
+}
 
-  > * {
-    padding: 1rem 24px 1rem 24px;
-    text-align: center;
-    text-decoration: none;
-  }
+.tabs > * {
+  padding: 1rem 24px 1rem 24px;
+  text-align: center;
+  text-decoration: none;
+}
 
-  a {
-    color: inherit;
-    white-space: nowrap;
+.tabs a {
+  color: inherit;
+  white-space: nowrap;
+}
 
-    &:not(.active):hover {
-      background-color: hsla(0, 0%, 100%, 0.1);
-      color: var(--primary-color-text-title);
-    }
-  }
+.tabs a:not(.active):hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: var(--primary-color-text-title);
+}
 
-  .active {
-    background-color: var(--base-color);
-    color: var(--tab-active-color);
-  }
+.tabs .active {
+  background-color: var(--base-color);
+  color: var(--tab-active-color);
 }
 
 .tab {
@@ -84,18 +84,18 @@ a.card {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+}
 
-  &::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
+.snap-tabs::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
 
-  > .tab {
-    display: flex;
-    flex: 0 0 auto;
-    overscroll-behavior-y: contain;
-    scroll-snap-align: center;
-  }
+.snap-tabs > .tab {
+  display: flex;
+  flex: 0 0 auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-align: center;
 }
 
 *:focus-visible {
@@ -150,20 +150,18 @@ body a:active,
 
 .youtube {
   aspect-ratio: 16 / 9;
+  border: 0;
   border-radius: 0.5rem;
   overflow: hidden;
+  padding-bottom: 56.25%;
   position: relative;
 }
 
 .youtube iframe {
   background-color: black;
   border: 0;
-  bottom: 0;
   height: 100%;
-  left: 0;
   position: absolute;
-  right: 0;
-  top: 0;
   width: 100%;
 }
 

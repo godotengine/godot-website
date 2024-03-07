@@ -1,169 +1,161 @@
-.archive-page-list {
-  .hero {
-    margin: 0 auto;
-    max-width: 620px;
-    padding: 54px 0 30px;
-    text-align: center;
+.archive-page-list .hero {
+  margin: 0 auto;
+  max-width: 620px;
+  padding: 54px 0 30px;
+  text-align: center;
+}
 
-    > h1 {
-      color: var(--base-color-text-title);
-      font-size: 3.75rem;
-      margin-bottom: 20px;
-      text-shadow: none;
-    }
-  }
+.archive-page-list .hero > h1 {
+  color: var(--base-color-text-title);
+  font-size: 3.75rem;
+  margin-bottom: 20px;
+  text-shadow: none;
+}
 
-  .hero-blurb {
-    color: var(--base-color-text);
-  }
+.archive-page-list .hero-blurb {
+  color: var(--base-color-text);
+}
 
-  .archive-list {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    row-gap: 3em;
-  }
+.archive-page-list .archive-list {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  row-gap: 3em;
+}
 
-  .archive-group {
-    padding-right: 1rem;
-    width: 240px;
+.archive-page-list .archive-group {
+  padding-right: 1rem;
+  width: 240px;
+}
 
-    > div {
-      position: sticky;
-      top: 24px;
+.archive-page-list .archive-group > div {
+  position: sticky;
+  top: 24px;
+}
 
-      > h3 {
-        margin-bottom: 8px;
-      }
+.archive-page-list .archive-group > div > h3 {
+  margin-bottom: 8px;
+}
 
-      > span {
-        opacity: 0.64;
-      }
-    }
+.archive-page-list .archive-group > div > span {
+  opacity: 0.64;
+}
 
-    .archive-version-flavor {
-      background-color: var(--button-background-color);
-      border-radius: 1000px;
-      color: var(--base-color-text-subtitle);
-      font-size: 90%;
-      font-weight: 600;
-      opacity: 1;
-      padding: 2px 12px;
-    }
-  }
+.archive-page-list .archive-group .archive-version-flavor {
+  background-color: var(--button-background-color);
+  border-radius: 1000px;
+  color: var(--base-color-text-subtitle);
+  font-size: 90%;
+  font-weight: 600;
+  opacity: 1;
+  padding: 2px 12px;
+}
 
-  .archive-releases {
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.archive-page-list .archive-releases {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    hr {
-      border-color: var(--button-card-background-color);
-      width: 100%;
-    }
-  }
+.archive-page-list .archive-releases hr {
+  border-color: var(--button-card-background-color);
+  width: 100%;
+}
 
-  /* Archive version item */
+/* Archive version item */
+.archive-page-list .archive-list-item {
+  align-items: center;
+  display: grid;
+  filter: brightness(95%);
+  gap: 12px;
+  grid-template-columns: 1fr 200px 140px 160px;
+  transition: 0.1s filter;
+}
 
-  .archive-list-item {
-    align-items: center;
-    display: grid;
-    filter: brightness(95%);
-    gap: 12px;
-    grid-template-columns: 1fr 200px 140px 160px;
-    transition: 0.1s filter;
+.archive-page-list .archive-list-item:hover {
+  filter: brightness(110%);
+}
 
-    &:hover {
-      filter: brightness(110%);
-    }
-  }
+.archive-page-list .archive-version {
+  display: inline-block;
+  text-decoration: none;
+}
 
-  .archive-version {
-    display: inline-block;
-    text-decoration: none;
+.archive-page-list .archive-version > h4 {
+  color: inherit;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
 
-    > h4 {
-      color: inherit;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-  }
+.archive-page-list .archive-download-meta {
+  color: var(--secondary-color-text);
+  font-size: 90%;
+  margin: 0;
+}
 
-  .archive-download-meta {
-    color: var(--secondary-color-text);
-    font-size: 90%;
-    margin: 0;
-  }
+.archive-page-list .btn-release-download {
+  background-color: var(--button-card-background-color);
+  color: var(--base-color-text);
+  padding: 10px 12px;
+  text-align: center;
+}
 
-  .btn-release-download {
-    background-color: var(--button-card-background-color);
-    color: var(--base-color-text);
-    padding: 10px 12px;
-    text-align: center;
-  }
-
-  & .btn.btn-release-notes, & .btn.btn-release-changelog {
-    background: var(--button-background-color);
-    box-shadow: none;
-    color: var(--link-color);
-    padding: 10px 12px;
-    text-align: center;
-  }
+.archive-page-list .btn.btn-release-notes,
+.archive-page-list .btn.btn-release-changelog {
+  background: var(--button-background-color);
+  box-shadow: none;
+  color: var(--link-color);
+  padding: 10px 12px;
+  text-align: center;
 }
 
 @container main (width < 1024px) {
-  .archive-page-list {
-    .archive-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 2em;
-    }
+  .archive-page-list .archive-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
 
-    .archive-group {
-      > div {
-        position: static;
-      }
-    }
+  .archive-page-list .archive-group > div {
+    position: static;
+  }
 
-    .archive-releases {
-      gap: 30px;
-    }
+  .archive-page-list .archive-releases {
+    gap: 30px;
   }
 }
 
 @container main (width < 800px) {
-  .archive-page-list {
-    .archive-list-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+  .archive-page-list .archive-list-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
 
-      + .archive-list-item {
-        border-top: 2px solid var(--background-color);
-        padding-top: 24px;
-      }
-    }
+  .archive-page-list .archive-list-item + .archive-list-item {
+    border-top: 2px solid var(--background-color);
+    padding-top: 24px;
+  }
 
-    .archive-release {
-      grid-column: span 2;
-    }
+  .archive-page-list .archive-release {
+    grid-column: span 2;
+  }
 
-    .archive-version {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+  .archive-page-list .archive-version {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-      > h4 {
-        font-size: 1.625rem;
-      }
-    }
+  .archive-page-list .archive-version > h4 {
+    font-size: 1.625rem;
+  }
 
-    .archive-download-meta {
-      font-size: 100%;
-    }
+  .archive-page-list .archive-download-meta {
+    font-size: 100%;
+  }
 
-    .btn-release-download {
-      grid-column: span 2;
-    }
+  .archive-page-list .btn-release-download {
+    grid-column: span 2;
   }
 }

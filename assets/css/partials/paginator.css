@@ -1,27 +1,27 @@
 .pagination {
-  margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .pagination a,
 .pagination-disabled {
-  color: inherit;
   background-color: var(--button-background-color);
+  box-shadow: var(--base-shadow);
+  color: inherit;
+  display: grid;
   font-size: initial;
   font-weight: 600;
+  min-height: 40px;
+  min-width: 45px;
+  place-items: center;
   text-align: center;
   text-decoration: none;
-  box-shadow: var(--base-shadow);
-  min-width: 45px;
-  min-height: 40px;
-  display: grid;
-  place-items: center;
 }
 
 .pagination-disabled {
-  opacity: 50%;
+  opacity: 0.5;
   user-select: none;
 }
 
@@ -34,8 +34,7 @@
   border-right: 1px solid var(--card-footer-color);
 }
 
-.pagination a.pagination-previous,
-.pagination a.pagination-next {
+.pagination a.pagination-previous, .pagination a.pagination-next {
   padding-left: 1.2rem;
   padding-right: 1.2rem;
 }

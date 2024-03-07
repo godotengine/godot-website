@@ -1,34 +1,35 @@
-/* Some styles come from common.css */
+/* Some styles are applied from common.css */
 
 /*----------Hero----------*/
-.archive-page {
-  .hero {
-    padding: 3.375rem var(--page-padding) 0.3rem;
+.archive-page .hero {
+  padding: 3.375rem var(--page-padding) 0.3rem;
+}
 
-    h1 {
-      color: var(--base-color-text-title);
-      text-shadow: none;
-    }
-  }
+.archive-page .hero h1 {
+  color: var(--base-color-text-title);
+  text-shadow: none;
+}
 
-  .hero-blurb {
-    color: var(--base-color-text);
-  }
+.archive-page .hero-blurb {
+  color: var(--base-color-text);
+}
 
-  .hero-version-flavor {
-    background-color: var(--primary-color);
-    border-radius: 1000px;
-    color: var(--dark-color-text-title);
-    font-size: 90%;
-    font-weight: 600;
-    padding: 0.35rem 1.25rem;
-  }
+.archive-page .hero-version-flavor {
+  background-color: var(--primary-color);
+  border-radius: 1000px;
+  color: var(--dark-color-text-title);
+  font-size: 90%;
+  font-weight: 600;
+  padding: 0.35rem 1.25rem;
+}
 
-  /*----------Preview Cards----------*/
+.archive-page .hero .other-platforms {
+  color: var(--base-color-text);
+}
 
-  .preview-cards {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
+/*----------Preview Cards----------*/
+.archive-page .preview-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
 }

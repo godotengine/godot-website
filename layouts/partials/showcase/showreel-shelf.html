@@ -1,38 +1,32 @@
 <section class="showreel-shelf flex grid">
   {{ $imgSrcSizes := "(min-width: 964px) calc((min(var(--max-page-wrap-width), 100vw - 4rem) / 3), (min-width: 648px) calc((100vw - 3rem) / 2), 100vw" }}
   <article>
-    <div>
-      <a href="https://www.youtube.com/watch?v=UAS_pUTFA7o" target="_blank">
-        {{ partial "responsive-img" (dict
-        "src" "images/showcase/desktop-showcase.webp"
-        "sizes" $imgSrcSizes
-        "alt" "Showreel: 2022 Godot Desktop Games"
-        )}}
-      </a>
-    </div>
+    <a href="https://www.youtube.com/watch?v=UAS_pUTFA7o" target="_blank">
+      {{ partial "responsive-img" (dict
+      "src" "images/showcase/desktop-showcase.webp"
+      "sizes" $imgSrcSizes
+      "alt" "Showreel: 2022 Godot Desktop Games"
+      )}}
+    </a>
   </article>
 
   <article>
-    <div>
-      <a href="https://www.youtube.com/watch?v=xF3QiQfQxeQ" target="_blank">
-        {{ partial "responsive-img" (dict
-        "src" "images/showcase/mobile-showcase.webp"
-        "sizes" $imgSrcSizes
-        "alt" "Showreel: 2022 Godot Mobile Games"
-        )}}
-      </a>
-    </div>
+    <a href="https://www.youtube.com/watch?v=xF3QiQfQxeQ" target="_blank">
+      {{ partial "responsive-img" (dict
+      "src" "images/showcase/mobile-showcase.webp"
+      "sizes" $imgSrcSizes
+      "alt" "Showreel: 2022 Godot Mobile Games"
+      )}}
+    </a>
   </article>
 
   <article>
-    <div>
-      <a href="https://www.youtube.com/watch?v=9kKp0oguzr8" target="_blank">
-        {{ partial "responsive-img" (dict
-        "src" "images/showcase/apps-showcase.webp"
-        "sizes" $imgSrcSizes
-        "alt" "Showreel: 2022 Godot Apps &amp; Tools"
-        )}}
-      </a>
-    </div>
+    <a href="https://www.youtube.com/watch?v=9kKp0oguzr8" target="_blank">
+      {{ partial "responsive-img" (dict
+      "src" "images/showcase/apps-showcase.webp"
+      "sizes" $imgSrcSizes
+      "alt" "Showreel: 2022 Godot Apps &amp; Tools"
+      )}}
+    </a>
   </article>
 </section>

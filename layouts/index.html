@@ -30,11 +30,6 @@
       template.innerHTML = `<link rel="preload" as="image" href="${featuredProject.image}" fetchpriority="high" type="image/${imageFormat}"/>`
       document.head.appendChild(template.content.firstChild);
     })();
-
-    // Used for removing img background after loading, this is necessary to avoid edge color bleeding
-    function removeImgBackground(el) {
-      el.style.background = 'initial';
-    }
   </script>
 {{ end }}
 
@@ -200,16 +195,14 @@
         {{ range $features }}
           <a class="feature-link" href="{{ relLangURL .link }}" data-instant-target="true">
             <div class="feature dark">
-              <img src="{{ .image }}" alt="" width="1" height="1" loading="lazy"
-                   onload="removeImgBackground(this)" decoding="async">
+              <img src="{{ .image }}" alt="" width="1" height="1" loading="lazy" decoding="async">
               <div class="body">
                 <h3 class="text-s">{{ T .title }}</h3>
-                <p>
-                  {{ T .body }}
-                  {{ with .disclaimer }}
-                <div class="feature__disclaimer">
-                  {{ T . | safeHTML }}
-                </div>
+                <p>{{ T .body }}</p>
+                {{ with .disclaimer }}
+                  <div class="feature__disclaimer">
+                    {{ T . | safeHTML }}
+                  </div>
                 {{ end }}
               </div>
             </div>

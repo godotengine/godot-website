@@ -11,19 +11,19 @@
   text-decoration: none;
   vertical-align: middle;
   width: 0.8em;
+}
 
-  .anchored-link:hover {
-    opacity: 0.9;
-  }
+.anchored-link:hover {
+  opacity: 0.9;
 }
 
 @media (prefers-color-scheme: light) {
   .anchored-link {
     filter: invert(1);
+  }
 
-    &:hover {
-      filter: invert(1);
-    }
+  .anchored-link:hover {
+    filter: invert(1);
   }
 }
 

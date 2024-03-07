@@ -1,36 +1,34 @@
-.user-groups-page {
-  #community-map {
-    contain: strict;
-    contain-intrinsic-size: auto calc(min(100vw - 2rem, var(--max-page-wrap-width))) auto 35rem;
-    height: 35rem;
-    position: relative;
-  }
+.user-groups-page #community-map {
+  contain: strict;
+  contain-intrinsic-size: auto calc(min(100vw - 2rem, var(--max-page-wrap-width))) auto 35rem;
+  height: 35rem;
+  position: relative;
+}
 
-  .map-color-legends {
-    column-gap: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-    row-gap: 0.5rem;
+.user-groups-page .map-color-legends {
+  column-gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  row-gap: 0.5rem;
+}
 
-    p {
-      margin: 0;
-    }
+.user-groups-page .map-color-legends p {
+  margin: 0;
+}
 
-    span {
-      border-radius: 50%;
-      display: inline-block;
-      height: 0.75rem;
-      margin-right: 0.4rem;
-      width: 0.75rem;
+.user-groups-page .map-color-legends span {
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.75rem;
+  margin-right: 0.4rem;
+  width: 0.75rem;
+}
 
-      &.red-legend {
-        background-color: #b7422c;
-      }
+.user-groups-page .map-color-legends span.red-legend {
+  background-color: #b7422c;
+}
 
-      &.blue-legend {
-        background-color: #257eca;
-      }
-    }
-  }
+.user-groups-page .map-color-legends span.blue-legend {
+  background-color: #257eca;
 }

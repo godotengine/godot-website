@@ -3,7 +3,6 @@
 
 {{ if not ($gCtx.Page.Scratch.Get "hasVersionCardLoaded") }}
   {{ $css := resources.Get "css/partials/download-version.css"
-  | resources.PostCSS
   | resources.Minify
   | resources.Fingerprint
   }}

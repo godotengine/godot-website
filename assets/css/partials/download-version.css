@@ -15,59 +15,59 @@
   display: grid;
   gap: 8px;
   grid-template-columns: 2fr 1fr 1fr;
+}
 
-  .download-platform {
-    align-items: center;
-    display: flex;
-    font-weight: 700;
-    gap: 12px;
+.primaries .download-platform {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  gap: 12px;
+}
 
-    img {
-      height: 24px;
-      width: 24px;
-    }
-  }
+.primaries .download-platform img {
+  height: 24px;
+  width: 24px;
+}
 
-  .btn-download-primary {
-    margin-bottom: 0;
-    text-align: left;
-  }
+.primaries .btn-download-primary {
+  margin-bottom: 0;
+  text-align: left;
+}
 
-  .btn-download-primary.btn-download-primary--mono {
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    background-color: rgb(132 151 174 / 68%);
+.primaries .btn-download-primary.btn-download-primary--mono {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: rgba(132, 151, 174, 0.68);
+}
 
-    .download-title {
-      color: #f7f7f7;
-    }
+.primaries .btn-download-primary.btn-download-primary--mono .download-title {
+  color: #f7f7f7;
+}
 
-    .download-hint {
-      background-color: var(--primary-color-subdued);
-      color: var(--text-color);
-    }
-  }
+.primaries .btn-download-primary.btn-download-primary--mono .download-hint {
+  background-color: var(--primary-color-subdued);
+  color: var(--text-color);
+}
 
-  .btn.btn-download-primary .download-title {
-    font-size: 1.125rem;
-    line-height: 24px;
-    padding: 10px 1rem;
-    white-space: nowrap;
-  }
+.primaries .btn.btn-download-primary .download-title {
+  font-size: 1.125rem;
+  line-height: 24px;
+  padding: 10px 1rem;
+  white-space: nowrap;
+}
 
-  .download-mono-note {
-    color: var(--base-color-text);
-    font-size: 95%;
-    grid-column: span 3;
-    opacity: 0.64;
-    padding-top: 8px;
-  }
+.primaries .download-mono-note {
+  color: var(--base-color-text);
+  font-size: 95%;
+  grid-column: span 3;
+  opacity: 0.64;
+  padding-top: 8px;
+}
 
-  hr {
-    border-color: var(--button-card-background-color);
-    grid-column: span 3;
-    width: 100%;
-  }
+.primaries hr {
+  border-color: var(--button-card-background-color);
+  grid-column: span 3;
+  width: 100%;
 }
 
 @container main (width < 900px) {
@@ -82,44 +82,45 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
 
-  .notes-summary {
-    display: grid;
-    gap: 24px;
-    margin-top: 4px;
-    width: 100%;
-  }
+.preview-notes .notes-summary {
+  display: grid;
+  gap: 24px;
+  margin-top: 4px;
+  width: 100%;
+}
 
-  .notes-thumbnail {
-    aspect-ratio: 16 / 9;
-    background-color: var(--card-background-color);
-    background-position: center;
-    background-size: cover;
-    border-radius: 7px;
-    box-shadow: 0 5px 10px -3px #00000078;
-    max-height: 260px;
-  }
+.preview-notes .notes-thumbnail {
+  aspect-ratio: 16/9;
+  background-color: var(--card-background-color);
+  background-position: center;
+  background-size: cover;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px -3px #00000078;
+  max-height: 260px;
+}
 
-  .notes-excerpt {
-    color: var(--base-color-text);
-    margin: 0;
-    opacity: 0.8;
-  }
+.preview-notes .notes-excerpt {
+  color: var(--base-color-text);
+  line-height: 1.1;
+  margin: 0;
+  opacity: 0.8;
+}
 
-  .notes-buttons {
-    align-items: center;
-    display: flex;
-    gap: 42px;
-    min-height: 54px;
-  }
+.preview-notes .notes-buttons {
+  align-items: center;
+  display: flex;
+  gap: 42px;
+  min-height: 54px;
 }
 
 .preview-download {
   border-radius: 12px;
+}
 
-  h3 {
-    margin-bottom: 4px;
-  }
+.preview-download h3 {
+  margin-bottom: 4px;
 }
 
 .preview-download-meta {
@@ -132,34 +133,34 @@
   display: grid;
   gap: 60px;
   grid-template-columns: 3fr 2fr;
+}
 
-  h4 {
-    margin-bottom: 1rem;
-  }
+.preview-download-primary h4 {
+  margin-bottom: 1rem;
 }
 
 .preview-download-toggle {
   display: flex;
   justify-content: flex-end;
   user-select: none;
+}
 
-  h4 {
-    color: var(--link-color);
-    cursor: pointer;
-    filter: brightness(100%);
-    margin-top: 2rem;
-    /* Prevent color transitions from being too fast (for epilepsy). */
-    text-align: right;
-    transition: 0.1s filter;
-  }
+.preview-download-toggle h4 {
+  color: var(--link-color);
+  cursor: pointer;
+  filter: brightness(100%);
+  margin-top: 2rem;
+  text-align: right;
+  /* Prevent color transitions from being too fast (for epilepsy). */
+  transition: 0.1s filter;
+}
 
-  &:hover {
-    filter: brightness(117.5%);
-  }
+.preview-download-toggle:hover {
+  filter: brightness(117.5%);
+}
 
-  &:active {
-    filter: brightness(82.5%);
-  }
+.preview-download-toggle:active {
+  filter: brightness(82.5%);
 }
 
 .preview-download-links {
@@ -167,28 +168,28 @@
   border-left: 6px solid var(--accent-color);
   display: none;
   padding: 4px 1rem;
+}
 
-  .download {
-    align-items: flex-end;
-    border-bottom: 1px dashed var(--table-divider-color);
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 8px;
-    padding: 2px 0;
-  }
+.preview-download-links .download {
+  align-items: flex-end;
+  border-bottom: 1px dashed var(--table-divider-color);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 8px;
+  padding: 2px 0;
+}
 
-  .download-details {
-    color: var(--secondary-color-text);
-    font-size: 0.875rem;
-  }
+.preview-download-links .download-details {
+  color: var(--secondary-color-text);
+  font-size: 0.875rem;
 }
 
 .preview-download-toggle.active + .preview-download-links {
   display: block;
 }
 
-@container (width < 900px) {
+@container(width < 900px) {
   .preview-download-primary {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -196,26 +197,22 @@
 
   .preview-download-toggle {
     justify-content: flex-start;
-
-    h4 {
-      text-align: left;
-    }
   }
 
-  .preview-download-links {
-    .download {
-      grid-template-columns: 1fr;
-      gap: 8px;
-    }
+  .preview-download-toggle h4 {
+    text-align: left;
+  }
+
+  .preview-download-links .download {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
 
 @container main (width < 768px) {
-  .preview-notes {
-    .notes-buttons {
-      flex-direction: column;
-      gap: 36px;
-      width: 100%;
-    }
+  .preview-notes .notes-buttons {
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
   }
 }

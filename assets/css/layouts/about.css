@@ -1,104 +1,102 @@
-.about-page {
-  .main {
-    padding: 0;
-  }
+.about-page .main {
+  padding: 0;
+}
 
-  .intro-title {
-    margin: 32px 0;
-  }
+.about-page .intro-title {
+  margin: 32px 0;
+}
 
-  .container-text {
-    --padding: 24px;
-    margin-inline: auto;
-    margin-top: 4rem;
-    overflow: visible;
+.about-page .container-text {
+  --padding: 24px;
+  margin-inline: auto;
+  margin-top: 4rem;
+  overflow: visible;
 
-    --max-width: 800px;
-    width: min(var(--max-width), 100% - (var(--padding) * 2));
+  --max-width: 800px;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+}
 
-    h2 {
-      margin-top: 80px;
-    }
+.about-page .container-text h2 {
+  margin-top: 80px;
+}
 
-    h3 {
-      margin-top: 60px;
-    }
+.about-page .container-text h3 {
+  margin-top: 60px;
+}
 
-    > :first-child {
-      margin-top: 0 !important;
-    }
+.about-page .container-text > :first-child {
+  margin-top: 0 !important;
+}
 
-    h4 {
-      margin-bottom: 20px;
-      margin-top: 40px;
-    }
-  }
+.about-page .container-text h4 {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
 
-  /*----------Teams subpage----------*/
+/*----------Teams subpage----------*/
 
-  .teams-team-section {
-    background-color: var(--teams-odd-color);
-    margin: 2.5rem 0;
-    padding: 1.25rem 1rem;
+.about-page .teams-team-section {
+  background-color: var(--teams-odd-color);
+  margin: 2.5rem 0;
+  padding: 1.25rem 1rem;
+}
 
-    &:nth-of-type(2n) {
-      background-color: var(--teams-even-color);
-    }
+.about-page .teams-team-section:nth-of-type(2n) {
+  background-color: var(--teams-even-color);
+}
 
-    + .teams-team-section {
-      margin-top: 0.5rem;
-    }
+.about-page .teams-team-section + .teams-team-section {
+  margin-top: 0.5rem;
+}
 
-    > h4 {
-      margin-top: 0;
-    }
-  }
+.about-page .teams-team-section > h4 {
+  margin-top: 0;
+}
 
-  .teams-subteams {
-    background-color: var(--teams-subteams-color);
-    border-left: 0.375rem solid var(--accent-color);
-    margin-top: 30px;
-    padding: 0.25rem 0.625rem;
-    table-layout: fixed;
-    width: 100%;
+.about-page .teams-subteams {
+  background-color: var(--teams-subteams-color);
+  border-left: 0.375rem solid var(--accent-color);
+  margin-top: 30px;
+  padding: 0.25rem 0.625rem;
+  table-layout: fixed;
+  width: 100%;
+}
 
-    th {
-      border-right: 1px dashed var(--table-divider-color);
-      padding: 1rem;
-    }
+.about-page .teams-subteams th {
+  border-right: 1px dashed var(--table-divider-color);
+  padding: 1rem;
+}
 
-    td {
-      padding: 1rem 0 1rem 0.75rem;
-    }
+.about-page .teams-subteams td {
+  padding: 1rem 0 1rem 0.75rem;
+}
 
-    & th,
-    & td {
-      border-bottom: 1px dashed var(--table-divider-color);
-      border-collapse: collapse;
-    }
+.about-page .teams-subteams th,
+.about-page .teams-subteams td {
+  border-bottom: 1px dashed var(--table-divider-color);
+  border-collapse: collapse;
+}
 
-    & tr:last-of-type td,
-    & tr:last-of-type th {
-      border-bottom: 0;
-    }
-  }
+.about-page .teams-subteams tr:last-of-type td,
+.about-page .teams-subteams tr:last-of-type th {
+  border-bottom: 0;
+}
 
-  .teams-subteam-name {
-    text-align: left;
-    width: 25%;
-  }
+.about-page .teams-subteam-name {
+  text-align: left;
+  width: 25%;
+}
 
-  .teams-subteam-leader {
-    font-weight: 700;
+.about-page .teams-subteam-leader {
+  font-weight: 700;
+}
 
-    &:before {
-      content: "⭐ ";
-    }
-  }
+.about-page .teams-subteam-leader:before {
+  content: "⭐ ";
+}
 
-  & .teams-subteam-leader,
-  & .teams-subteam-members {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+.about-page .teams-subteam-leader,
+.about-page .teams-subteam-members {
+  font-size: 1rem;
+  line-height: 1.6;
 }

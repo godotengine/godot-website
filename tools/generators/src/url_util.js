@@ -53,6 +53,10 @@ export function generateLink(version, platform, isMono = false, host = HOST.gith
   }
 
   const slug = getDownloadSlug(platform, slugsDefaults);
+  if (slug === '#') {
+    return '#';
+  }
+
   const file = getDownloadFileName(platform, versionName, version.flavor, versionBits, slug);
   return getUrlFromHost(host, versionName, version.flavor, file, isMono);
 }

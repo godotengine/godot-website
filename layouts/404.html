@@ -6,54 +6,52 @@
       font-family: var(--default-font-family);
     }
 
-    .not-found-page {
-      > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1.875rem;
-        box-sizing: border-box;
-        height: 100%;
-      }
+    .not-found-page > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.875rem;
+      box-sizing: border-box;
+      height: 100%;
+    }
 
-      .message {
-        text-align: center;
+    .not-found-page .message {
+      text-align: center;
+    }
 
-        img {
-          display: inline;
-        }
-      }
+    .not-found-page .message img {
+      display: inline;
+    }
 
-      .error {
-        max-width: 900px;
-      }
+    .not-found-page .error {
+      max-width: 900px;
+    }
 
-      .error-logo {
-        height: 138px;
-      }
+    .not-found-page .error-logo {
+      height: 138px;
+    }
 
-      .alternatives {
-        display: grid;
-        gap: 1.875rem;
+    .not-found-page .alternatives {
+      display: grid;
+      gap: 1.875rem;
+    }
 
-        div {
-          background-color: var(--card-background-color);
-          padding: 1.25rem;
-          box-sizing: border-box;
-          box-shadow: 0 5px 30px -9px #1c1c1c9e;
-          border-radius: 1rem;
-        }
+    .not-found-page .alternatives div {
+      background-color: var(--card-background-color);
+      padding: 1.25rem;
+      box-sizing: border-box;
+      box-shadow: 0 5px 30px -9px #1c1c1c9e;
+      border-radius: 1rem;
+    }
 
-        .help {
-          /* use two columns */
-          grid-column: span 2;
-        }
-      }
+    .not-found-page .alternatives .help {
+      /* use two columns */
+      grid-column: span 2;
+    }
 
-      .search-bar input {
-        background-color: var(--base-color);
-      }
+    .not-found-page .search-bar input {
+      background-color: var(--base-color);
     }
 
     @container (width >= 768px) {

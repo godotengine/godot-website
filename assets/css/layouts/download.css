@@ -1,396 +1,368 @@
-/* Some styles come from common.css */
-
-.download-page {
-  /*----------Hero----------*/
-
-  .hero {
-    .main-downloads {
-      display: grid;
-      gap: 1.125rem;
-      margin: 2.5rem auto 4.1rem auto;
-      max-width: 600px;
-      text-align: center;
-
-      .btn-download {
-        margin-bottom: 0.5rem;
-      }
-    }
-
-    .main-download-details {
-      color: var(--download-main-details-color);
-      font-size: 0.875rem;
-      margin-top: 0;
-      opacity: 0.6;
-    }
-
-    .previous-releases {
-      color: var(--download-hero-color);
-      font-size: 95%;
-    }
-
-    .previous-releases-featured {
-      font-size: 110%;
-      line-height: 36px;
-    }
-  }
-
-  /*----------Platform Details----------*/
-
-  .platform-details {
-    .card {
-      margin-top: 2rem;
-    }
-
-    pre {
-      background-color: var(--platform-code-background-color);
-    }
-
-    .download {
-      align-items: flex-start;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-
-    .download-details {
-      color: var(--secondary-color-text);
-      font-size: 0.875rem;
-      padding: 0 0.75rem;
-    }
-
-    .download-note {
-      background-color: var(--platform-note-background-color);
-      font-size: 92%;
-      margin-top: 28px;
-      padding: 1rem 0.75rem;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .platform-split {
-      display: grid;
-      gap: 24px;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  /*----------Digital Stores----------*/
-
-  .digital-stores {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: 1fr 1fr;
-
-    p {
-      margin-top: 0;
-    }
-
-    .digital-store-list {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-
-      > .btn {
-        flex: 1;
-      }
-
-      img {
-        height: 28px;
-        width: 28px;
-      }
-    }
-  }
-
-  .btn.btn-digital-store {
-    align-items: center;
-    background-color: var(--primary-color);
-    color: var(--dark-color-text-title);
-    display: inline-flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0.75rem 24px;
-  }
-
-  .digital-store-name {
-    font-size: 105%;
-    font-weight: 600;
-  }
-
-  .digital-store-logo img {
-    vertical-align: text-bottom;
-  }
-
-  .digital-stores-notes {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    ul {
-      margin: 0;
-
-      li:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  /*----------Supported Platforms----------*/
-
-  .platforms-wrapper {
-    background-color: var(--dark-color);
-    margin: 40px 0;
-    max-width: 100%;
-    padding: 24px 24px;
-    width: auto;
-
-    h2 {
-      color: var(--dark-color-text-title);
-    }
-  }
-
-  .platform-tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: -1px;
-
-    .tab {
-      color: var(--dark-color-text);
-
-      img {
-        filter: invert(100%);
-        height: 24px;
-      }
-
-      &:not(.active):hover {
-        background: rgba(255 255 255 / 7.5%);
-        color: var(--dark-color-text-hl);
-      }
-
-      &.active {
-        background: rgba(255 255 255 / 15%);
-        color: var(--dark-color-text-title);
-      }
-    }
-  }
-
-  /*----------Other Downloads----------*/
-
-  #extras {
-    padding-bottom: 4rem;
-  }
-
-  .other-download {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
-  .other-download-card {
-    background: var(--card-background-color);
-    border-radius: 6px;
-    padding: 26px 35px;
-  }
-
-  .unstable-downloads {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .unstable-download-previews {
-    max-width: 768px;
-
-    .btn {
-      margin-top: 1rem;
-    }
-  }
-
-  .unstable-download-source {
-    align-items: center;
-    display: flex;
-    gap: 28px;
-  }
-
-  /*----------Thank you Modal----------*/
-
-  .thankyou-wrapper {
-    align-items: center;
-    background: rgba(0, 0, 0, 0.45);
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 10;
-  }
-
-  .thankyou {
-    align-items: center;
-    background: var(--base-color);
-    box-shadow: var(--more-shadow);
-    display: flex;
-    flex-direction: column;
-    padding: 40px 60px 26px 60px;
-    position: relative;
-
-    .btn.btn-donate {
-      background-color: var(--primary-color);
-      color: hsla(0, 0%, 100%, 0.9);
-      font-size: 1.375rem;
-      font-weight: 600;
-      margin-bottom: 26px;
-    }
-
-    .btn-back-to-downloads {
-      cursor: pointer;
-      position: absolute;
-      right: 0.75rem;
-      top: 0.75rem;
-    }
-
-    h2 {
-      font-size: 2.25rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      text-shadow: var(--base-shadow);
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0;
-    }
-
-    p {
-      max-width: 620px;
-    }
-
-    hr {
-      margin: 28px 0 8px 0;
-    }
-  }
-
-  .thankyou-reading {
-    font-size: 1rem;
-  }
-
-  .thankyou-reading-list {
-    font-size: 1rem;
-    margin: 0 0 0 48px;
-    padding-left: 0;
-  }
-
-  .thankyou-donate {
-    margin-bottom: 24px;
-    text-align: center;
-  }
+/* Some styles are applied from common.css */
+/*----------Hero----------*/
+.download-page .hero .main-downloads {
+  display: grid;
+  gap: 1.125rem;
+  margin: 2.5rem auto 4.1rem;
+  max-width: 600px;
+  text-align: center;
 }
 
-/*----------@media light----------*/
+.download-page .hero .main-downloads .btn-download {
+  margin-bottom: .5rem;
+}
+
+.download-page .hero .main-download-details {
+  color: var(--download-main-details-color);
+  font-size: 0.875rem;
+  margin-top: 0;
+  opacity: 0.6;
+}
+
+.download-page .hero .previous-releases {
+  color: var(--download-hero-color);
+  font-size: 95%;
+}
+
+.download-page .hero .previous-releases-featured {
+  font-size: 110%;
+  line-height: 36px;
+}
+
+/*----------Platform Details----------*/
+.download-page .platform-details .card {
+  margin-top: 2rem;
+}
+
+.download-page .platform-details pre {
+  background-color: var(--platform-code-background-color);
+}
+
+.download-page .platform-details .download {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.download-page .platform-details .download-details {
+  color: var(--secondary-color-text);
+  font-size: 0.875rem;
+  padding: 0 0.75rem;
+}
+
+.download-page .platform-details .download-note {
+  background-color: var(--platform-note-background-color);
+  font-size: 92%;
+  margin-top: 28px;
+  padding: 1rem 0.75rem;
+}
+
+.download-page .platform-details .download-note p {
+  margin: 0;
+}
+
+.download-page .platform-details .platform-split {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*----------Digital Stores----------*/
+.download-page .digital-stores {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.download-page .digital-stores p {
+  margin-top: 0;
+}
+
+.download-page .digital-stores .digital-store-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.download-page .digital-stores .digital-store-list > .btn {
+  flex: 1;
+}
+
+.download-page .digital-stores .digital-store-list img {
+  height: 28px;
+  width: 28px;
+}
+
+.download-page .btn.btn-digital-store {
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--dark-color-text-title);
+  display: inline-flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.75rem 24px;
+}
+
+.download-page .digital-store-name {
+  font-size: 105%;
+  font-weight: 600;
+}
+
+.download-page .digital-store-logo img {
+  vertical-align: text-bottom;
+}
+
+.download-page .digital-stores-notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/*----------Supported Platforms----------*/
+.download-page .digital-stores-notes ul {
+  margin: 0;
+}
+
+.download-page .digital-stores-notes ul li:last-child {
+  margin-bottom: 0
+}
+
+.download-page .platforms-wrapper {
+  background-color: var(--dark-color);
+  margin: 40px 0;
+  max-width: 100%;
+  padding: 24px;
+  width: auto;
+}
+
+.download-page .platforms-wrapper h2 {
+  color: var(--dark-color-text-title);
+}
+
+.download-page .platform-tabs {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -1px;
+}
+
+.download-page .platform-tabs .tab {
+  color: var(--dark-color-text);
+}
+
+.download-page .platform-tabs .tab img {
+  filter: invert(100%);
+  height: 24px;
+}
+
+.download-page .platform-tabs .tab:not(.active):hover {
+  background: rgba(255, 255, 255, 0.075);
+  color: var(--dark-color-text-hl);
+}
+
+.download-page .platform-tabs .tab.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--dark-color-text-title);
+}
+
+/*----------Other Downloads----------*/
+.download-page #extras {
+  padding-bottom: 4rem;
+}
+
+.download-page .other-download {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+}
+
+.download-page .other-download-card {
+  background: white;
+  background: var(--card-background-color);
+  border-radius: 6px;
+  padding: 26px 35px;
+}
+
+.download-page .unstable-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.download-page .unstable-download-previews {
+  max-width: 768px;
+}
+
+.download-page .unstable-download-previews .btn {
+  margin-top: 1rem;
+}
+
+.download-page .unstable-download-source {
+  align-items: center;
+  display: flex;
+  gap: 28px;
+}
+
+
+/*----------Thank you Modal----------*/
+.download-page .thankyou-wrapper {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.download-page .thankyou {
+  align-items: center;
+  background: #eff1f5;
+  background: var(--base-color);
+  box-shadow: var(--more-shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60px 26px;
+  position: relative;
+}
+
+.download-page .thankyou .btn.btn-donate {
+  background-color: var(--primary-color);
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 26px;
+}
+
+.download-page .thankyou .btn-back-to-downloads {
+  cursor: pointer;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+}
+
+.download-page .thankyou h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-shadow: var(--base-shadow);
+}
+
+.download-page .thankyou h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.download-page .thankyou p {
+  max-width: 620px;
+}
+
+.download-page .thankyou hr {
+  margin: 28px 0 8px;
+}
+
+.download-page .thankyou-reading {
+  font-size: 1rem;
+}
+
+.download-page .thankyou-reading-list {
+  font-size: 1rem;
+  margin: 0 0 0 48px;
+  padding-left: 0;
+}
+
+.download-page .thankyou-donate {
+  margin-bottom: 24px;
+  text-align: center;
+}
 
 @media (prefers-color-scheme: light) {
-  .download-page {
-    .btn-back-to-downloads img {
-      filter: invert(1);
-      opacity: 0.75;
-    }
+  .download-page .btn-back-to-downloads img {
+    filter: invert(1);
+    opacity: 0.75
   }
 }
-
-/*----------@media min-width: 768px----------*/
 
 @container main (width >= 768px) {
-  .download-page {
-    .other-download {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+  .download-page .other-download {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-/*----------@media max-width: 1200px----------*/
 
 @container main (width < 1200px) {
-  .download-page {
-    .digital-stores {
-      grid-template-columns: 1fr;
+  .download-page .digital-stores {
+    grid-template-columns: 1fr;
+  }
 
-      .digital-store-list {
-        gap: 0.75rem;
-      }
-    }
+  .download-page .digital-stores .digital-store-list {
+    gap: 0.75rem;
+  }
 
-    .btn.btn-digital-store {
-      justify-content: center;
-      gap: 0.75rem;
-      min-width: 50%;
-    }
+  .download-page .btn.btn-digital-store {
+    justify-content: center;
+    gap: 0.75rem;
+    min-width: 50%;
+  }
 
-    .platform-details .platform-split {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
+  .download-page .platform-details .platform-split {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
-/*----------@media max-width: 768px----------*/
-
 @container main (width < 768px) {
-  .download-page {
-    .platform-tabs {
-      flex-direction: column;
-      justify-content: stretch;
+  .download-page .platform-tabs {
+    flex-direction: column;
+    justify-content: stretch;
+  }
 
-      > .tab {
-        width: 100%;
-      }
-    }
+  .download-page .platform-tabs > .tab {
+    width: 100%;
+  }
 
-    .unstable-download-source {
-      flex-direction: column;
-      gap: 8px;
-    }
+  .download-page .unstable-download-source {
+    flex-direction: column;
+    gap: 8px;
+  }
 
-    .unstable-download-previews {
-      .btn {
-        width: 100%;
-      }
-    }
+  .download-page .unstable-download-previews .btn {
+    width: 100%;
+  }
 
-    .thankyou-wrapper {
-      display: block;
-    }
+  .download-page .thankyou-wrapper {
+    display: block;
+  }
 
-    .thankyou {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: scroll;
-      padding: 30px 40px 18px 40px;
-    }
+  .download-page .thankyou {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    padding: 30px 40px 18px 40px;
+  }
 
-    .thankyou-reading-list {
-      margin-left: 24px;
-    }
+  .download-page .thankyou-reading-list {
+    margin-left: 24px;
+  }
 
-    .btn-back-to-downloads {
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .download-page .btn-back-to-downloads {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .digital-stores .digital-store-list {
-      flex-direction: column;
-    }
+  .download-page .digital-stores .digital-store-list {
+    flex-direction: column;
   }
 }
 

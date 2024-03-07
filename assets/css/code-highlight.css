@@ -16,11 +16,11 @@
   --node-reference-color: #63c259;
 
   --member-variable-color: #bce0ff;
+}
 
-  .lntable {
-    display: block;
-    overflow-x: auto;
-  }
+.chroma .lntable {
+  display: block;
+  overflow-x: auto;
 }
 
 pre.chroma {
