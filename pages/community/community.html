@@ -54,6 +54,19 @@ layout: default
 		margin: 0;
 	}
 
+	.community-list .community-stack {
+		display: grid;
+		gap: 16px;
+		width: 100%;
+
+		grid-auto-rows: 1fr;
+		grid-auto-columns: unset;
+	}
+
+	.community-list .community-stack .community-block {
+		grid-column: 1 / 2;
+	}
+
 	#user-groups {
 		background-color: var(--dark-color);
 		color: var(--dark-color-text);
@@ -90,6 +103,18 @@ layout: default
 		font-size: 120%;
 		margin-top: 24px;
 	}
+
+	@media screen and (min-width: 992px) {
+		.community-list .community-stack {
+			grid-auto-rows: unset;
+			grid-auto-columns: 1fr;
+		}
+
+		.community-list .community-stack .community-block {
+			grid-column: unset;
+			grid-row: 1 / 2;
+		}
+	}
 </style>
 
 <div class="head">
@@ -105,20 +130,30 @@ layout: default
 </div>
 
 <div class="container community-list">
-	<div class="community-block">
-		<a href="/events" class="card base-padding" id="events">
-			<div>
-				<h3>Events</h3>
-				<p>Upcoming community and past events.</p>
-			</div>
-			<!--
-			<div class="events-upcoming">
-				<span>Next event:</span>
-				<span>GodotCon</span>
-				<span>November 2023</span>
-			</div>
-			-->
-		</a>
+	<div class="community-stack">
+		<div class="community-block">
+			<a href="/events" class="card base-padding" id="events">
+				<div>
+					<h3>Events</h3>
+					<p>Upcoming community and past events.</p>
+				</div>
+				<!--
+				<div class="events-upcoming">
+					<span>Next event:</span>
+					<span>GodotCon</span>
+					<span>November 2023</span>
+				</div>
+				-->
+			</a>
+		</div>
+		<div class="community-block">
+			<a href="https://links.godotengine.org" class="card base-padding" id="links">
+				<div>
+					<h3>Links</h3>
+					<p>Official links page.</p>
+				</div>
+			</a>
+		</div>
 	</div>
 
 	<h2>Official communities</h2>
