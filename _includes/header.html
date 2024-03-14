@@ -3,11 +3,11 @@
 	<div class="container flex align-center">
 		<div id="nav_head">
 			<a href="/" id="logo-link">
-				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
-				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+				{% inline_svg assets/logo.svg class="nav-logo" width="136" height="48" %}
+				{% inline_svg assets/logo_dark.svg class="nav-logo dark-logo" width="136" height="48" %}
 			</a>
 			<label for="nav_toggle_cb" id="nav_toggle_btn">
-				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="Main menu">
+				{% inline_svg assets/icons/hamburger.svg title="Main menu" %}
 			</label>
 		</div>
 

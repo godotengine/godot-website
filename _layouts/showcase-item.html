@@ -38,6 +38,19 @@ layout: default
 		margin-bottom: 0;
 		margin-top: 30px;
 	}
+
+	.platform-icons {
+		display: flex;
+		gap: 0.5rem;
+		filter: invert(100%);
+		opacity: 0.75;
+		margin-top: 1rem
+	}
+
+	.platform-icons svg {
+		width: 24px;
+		height: 24px;
+	}
 </style>
 
 <div class="head">
@@ -56,49 +69,16 @@ layout: default
 				| {% if page.release_date == "TBD" %}Release date: <abbr title="To Be Determined">TBD</abbr>{% else %}{{
 				page.release_date }}{% endif %}
 			</h3>
-			<div style="filter: invert(100%); opacity: 0.75; margin-top: 1rem">
-
-
-				{% if page.windows %}
-				<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
-					height="24">
-				{% endif %}
-
-				{% if page.macos %}
-				<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
-				{% endif %}
-
-				{% if page.linux %}
-				<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24" height="24">
-				{% endif %}
-
-				{% if page.switch %}
-				<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem" width="24"
-					height="24">
-				{% endif %}
-
-				{% if page.html5 %}
-				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24" height="24">
-				{% endif %}
-
-				{% if page.android %}
-				<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
-					height="24">
-				{% endif %}
-
-				{% if page.ios %}
-				<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
-				{% endif %}
-
-				{% if page.playstation %}
-				<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-					width="24" height="24">
-				{% endif %}
-
-				{% if page.xbox %}
-				<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
-				{% endif %}
-
+			<div class="platform-icons">
+				{% if page.windows %}{% inline_svg assets/images/platforms/windows.svg %}{% endif %}
+				{% if page.macos %}{% inline_svg assets/images/platforms/macos.svg %}{% endif %}
+				{% if page.linux %}{% inline_svg assets/images/platforms/linux.svg %}{% endif %}
+				{% if page.switch %}{% inline_svg assets/images/platforms/switch.svg %}{% endif %}
+				{% if page.html5 %}{% inline_svg assets/images/platforms/web.svg %}{% endif %}
+				{% if page.android %}{% inline_svg assets/images/platforms/android.svg %}{% endif %}
+				{% if page.ios %}{% inline_svg assets/images/platforms/ios.svg %}{% endif %}
+				{% if page.playstation %}{% inline_svg assets/images/platforms/playstation.svg %}{% endif %}
+				{% if page.xbox %}{% inline_svg assets/images/platforms/xbox.svg %}{% endif %}
 			</div>
 
 		</div>

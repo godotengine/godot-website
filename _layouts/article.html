@@ -105,6 +105,8 @@ layout: default
 	.article-author .avatar {
 		border-radius: 100%;
 		margin: 0;
+		width: 25px;
+		height: 25px;
 	}
 
 	.article-author .by {
@@ -185,7 +187,7 @@ layout: default
 						{% if post_author %}
 							<img class="avatar" width="25" height="25" src="{{ post_author.image }}" alt="{{ page.author }}" loading="lazy">
 						{% else %}
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="{{ page.author }}" loading="lazy">
+							{% inline_svg assets/images/authors/default_avatar.svg class="avatar" title="{{ page.author }}" %}
 						{% endif %}
 						<span class="by">{{ page.author }}</span>
 					</div>

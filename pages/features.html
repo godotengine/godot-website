@@ -237,6 +237,7 @@ layout: default
 		aspect-ratio: 16/9;
 		margin: 100px 0 60px 0;
 	}
+
 	@media (max-width: 540px) {
 		.showcase-carousel {
 			margin-top: 60px;
@@ -252,27 +253,25 @@ layout: default
 		filter: brightness(0.85) saturate(0.75);
 	}
 
-	.showcase-flip-left,
-	.showcase-flip-right {
-		position: absolute;
+	#showcase-flip-left,
+	#showcase-flip-right {
 		top: 50%;
-		left: 12px;
+		z-index: 5;
+		right: 12px;
 		width: 20px;
 		height: 36px;
-		transform: translateY(-50%);
-		background-image: url('/assets/icons/arrow-flip.svg');
-		background-size: cover;
-		background-repeat: no-repeat;
 		cursor: pointer;
+		position: absolute;
+		transform: translateY(-50%);
 		filter: drop-shadow(var(--more-shadow));
-		z-index: 5;
+		/*Makes it easier to click*/
+		padding: 7px;
 	}
-	.showcase-flip-left {
+
+	#showcase-flip-left {
+		left: 12px;
+		right: 0;
 		transform: translateY(-50%) scaleX(-1.0);
-	}
-	.showcase-flip-right {
-		left: auto;
-		right: 12px;
 	}
 
 	.showcase-items {
@@ -388,12 +387,12 @@ layout: default
 				}
 				setItemByIndex(currentIndex, true);
 
-				const prevItemButton = document.querySelector('.showcase-flip-left');
+				const prevItemButton = document.querySelector('#showcase-flip-left');
 				prevItemButton.addEventListener('click', () => {
 					currentIndex = wrapIndex(currentIndex - 1);
 					setItemByIndex(currentIndex);
 				});
-				const nextItemButton = document.querySelector('.showcase-flip-right');
+				const nextItemButton = document.querySelector('#showcase-flip-right');
 				nextItemButton.addEventListener('click', () => {
 					currentIndex = wrapIndex(currentIndex + 1);
 					setItemByIndex(currentIndex);
@@ -417,10 +416,9 @@ layout: default
 				</div>
 				{% endif %}
 				{% endfor %}
+				{% inline_svg assets/icons/arrow-flip.svg id="showcase-flip-left" %}
+				{% inline_svg assets/icons/arrow-flip.svg id="showcase-flip-right" %}
 			</div>
-
-			<div class="showcase-flip-left"></div>
-			<div class="showcase-flip-right"></div>
 		</div>
 
 		<a href="/showcase" class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">

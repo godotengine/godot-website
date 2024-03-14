@@ -192,6 +192,10 @@
   .dark-desaturate {
     filter: saturate(0%);
   }
+
+  .github-logo path {
+    fill: white;
+  }
 }
 
 /* Montserrat Bold */
@@ -212,6 +216,36 @@
   font-display: swap;
   src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
     url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+}
+
+/*
+  1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+  2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+     This can trigger a poorly considered lint error in some tools but is included by design.
+  */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 *:focus {
@@ -363,6 +397,10 @@ hr {
   min-width: unset;
   margin-right: 0;
   margin-bottom: 0;
+}
+
+.grow {
+	flex-grow: 1;
 }
 
 .base-padding {
@@ -570,6 +608,10 @@ footer a {
   flex: 1;
   margin-left: 32px;
 }
+#social svg {
+  width: 32px;
+  height: 32px;
+}
 
 .pagination {
   margin: 2rem 0;
@@ -759,6 +801,13 @@ p.small {
   padding: 16px 32px 16px 32px;
   flex-grow: 1;
 }
+
+.btn.btn-download > .download-title svg {
+  display: inline;
+  width: 24px;
+  height: 24px;
+}
+
 .btn.btn-download > .download-hint {
   background-color: var(--primary-color);
   color: var(--primary-color-text-title);
@@ -899,7 +948,7 @@ pre > code {
 }
 
 #foundation_graphic {
-  width: 400px;
+   max-width: 400px;
 }
 
 .search-bar {
@@ -933,9 +982,11 @@ pre > code {
   background-color: var(--pagination-active-color);
   color: var(--primary-color-text-title);
 }
-.search-bar .search-bar-btn img {
-  margin: 8px;
+.search-bar .search-bar-btn svg {
+  display: inline;
   filter: invert(100%);
+  width: 24px;
+  height: 24px;
 }
 
 @media (min-width: 1400px) {
@@ -1049,10 +1100,9 @@ pre > code {
   }
 
   #social {
-    margin: auto;
     width: 30%;
     min-width: 250px;
-    margin-top: 32px;
+    margin: 32px auto auto;
   }
   #social h4 {
     text-align: center;

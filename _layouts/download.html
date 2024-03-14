@@ -36,7 +36,8 @@ layout: default
 				<div class="main-download">
 					<a href="{{ download_url }}" class="btn btn-download btn-download-main{% if forloop.index > 1 %}2{% endif %}">
 						<div class="download-title">
-							<img src="/assets/images/platforms/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
+							{% assign platform = page.platform | slugify %}
+							<svg><use href="#{{ platform }}-platform-icon"></use></svg>
 							Godot Engine{% if download.featured_flavor %} - {{ download.featured_flavor }}{% endif %}
 						</div>
 						<div class="download-hint">{{ stable_version.name }}</div>
@@ -158,19 +159,19 @@ layout: default
 				<div class="digital-store-list">
 					<a class="btn btn-digital-store" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
 						<div class="digital-store-logo">
-							<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
+							{% inline_svg assets/download/itch_logo.svg %}
 						</div>
 						<div class="digital-store-name">itch.io</div>
 					</a>
 					<a class="btn btn-digital-store" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
 						<div class="digital-store-logo">
-							<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
+							{% inline_svg assets/download/steam_logo.svg %}
 						</div>
 						<div class="digital-store-name">Steam</div>
 					</a>
 					<a class="btn btn-digital-store" href="https://store.epicgames.com/p/godot-engine" title="Godot Engine on Epic Games Store">
 						<div class="digital-store-logo">
-							<img src="/assets/download/epic_logo.svg" width="28" height="28" alt="Epic Games Store logo">
+							{% inline_svg assets/download/epic_logo.svg %}
 						</div>
 						<div class="digital-store-name">EGS</div>
 					</a>
@@ -191,23 +192,23 @@ layout: default
 
 		<div class="tabs platform-tabs">
 			<a href="/download/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/android.svg" title="Android" alt="Android" />
+				<svg><use href="#android-platform-icon"></use></svg>
 				<span>Android</span>
 			</a>
 			<a href="/download/linux" class="tab title-font {% if page.platform == 'Linux' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" />
+				<svg><use href="#linux-platform-icon"></use></svg>
 				<span>Linux</span>
 			</a>
 			<a href="/download/macos" class="tab title-font {% if page.platform == 'macOS' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" />
+				<svg><use href="#macos-platform-icon"></use></svg>
 				<span>macOS</span>
 			</a>
 			<a href="/download/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
-				<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" />
+				<svg><use href="#windows-platform-icon"></use></svg>
 				<span>Windows</span>
 			</a>
 			<a href="https://editor.godotengine.org/releases/{{stable_version.name}}.stable/godot.editor.html" target="_blank" class="tab title-font">
-				<img width="24" height="24" src="/assets/images/platforms/web.svg" title="Web Editor" alt="Web Editor" />
+				<svg><use href="#web-platform-icon"></use></svg>
 				<span>Web Editor</span>
 			</a>
 		</div>
@@ -285,7 +286,7 @@ layout: default
 		</div>
 
 		<div id="open-source" class="unstable-download-source">
-			<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="A GitHub logo">
+			{% inline_svg assets/download/github_logo.svg class="github-logo" width="200" height="200" %}
 			<div>
 				<p>
 					Don't want to wait for official releases? You can compile Godot from source!
@@ -370,9 +371,17 @@ layout: default
 		</ul>
 
 		<div class="btn-back-to-downloads">
-			<img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup">
+			{% inline_svg assets/icons/cross.svg width="24" height="24" title="Close this popup" %}
 		</div>
 	</div>
 </div>
 
 {% include footer.html %}
+
+<div style="width: 0;height: 0;">
+	{% inline_svg assets/images/platforms/windows.svg %}
+	{% inline_svg assets/images/platforms/macos.svg %}
+	{% inline_svg assets/images/platforms/linux.svg %}
+	{% inline_svg assets/images/platforms/web.svg %}
+	{% inline_svg assets/images/platforms/android.svg %}
+</div>

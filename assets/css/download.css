@@ -74,10 +74,9 @@
     backdrop-filter: blur(4px);
 }
 
-.btn.btn-download-main img,
-.btn.btn-download-main2 img,
-.btn.btn-download-primary img {
-    display: inline-block;
+.btn.btn-download-main svg,
+.btn.btn-download-main2 svg,
+.btn.btn-download-primary svg {
     filter: invert();
     margin-right: 10px;
     width: 22px;
@@ -187,9 +186,10 @@
     color: var(--dark-color-text);
 }
 
-.platform-tabs .tab img {
-    display: block;
-    filter: invert(100%);
+.platform-tabs .tab svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
 }
 
 .platform-tabs .tab:not(.active):hover {
@@ -257,8 +257,9 @@
     font-size: 105%;
 }
 
-.digital-store-logo img {
-    vertical-align: text-bottom;
+.digital-store-logo svg {
+    width: 28px;
+    height: 28px;
 }
 
 .digital-stores-notes {
@@ -356,7 +357,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-    .btn-back-to-downloads img {
+    .btn-back-to-downloads svg {
         filter: invert(1);
         opacity: 0.75;
     }
