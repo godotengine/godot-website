@@ -5,11 +5,15 @@ description: "Download the latest preview version of the Godot Engine 3 and Godo
 layout: default
 ---
 
-{% include header.html %}
-
-<link rel="stylesheet" href="/assets/css/transparent-nav.css">
+<link rel="preload" as="image" href="/assets/download/download-background-preview.webp" fetchpriority="high" type="image/webp">
+<link rel="preload" as="style" href="/assets/css/download.css?2" fetchpriority="high" type="text/css">
+<link rel="preload" as="style" href="/assets/css/download-version.css?2" fetchpriority="high" type="text/css">
+<link rel="preload" href="/assets/js/download-version.js" as="script" fetchpriority="high"/>
 <link rel="stylesheet" href="/assets/css/download.css?2">
 <link rel="stylesheet" href="/assets/css/download-version.css?2">
+
+{% include transparent-header.html %}
+
 <style>
 	.hero {
 		background-image: url('/assets/download/download-background-preview.webp');
@@ -32,8 +36,7 @@ layout: default
 		align-items: center;
 		gap: 16px;
 		background-color: var(--dark-color);
-		padding: 24px;
-		padding-bottom: 60px;
+		padding: 24px 24px 60px;
 		width: auto;
 		max-width: 100%;
 	}
@@ -46,8 +49,7 @@ layout: default
 	.stable-download h2 {
 		color: var(--dark-color-text-title);
 		font-weight: 600;
-		margin: 0;
-		margin-bottom: 16px;
+		margin: 0 0 16px;
 	}
 
 	.stable-download p {
@@ -113,16 +115,16 @@ layout: default
 		<div class="preview-cards">
 			{% for version in site.data.versions %}
 				{% unless stable_versions contains version %}
-
-					{% include download/version-card.html version=version %}
-
+					{% if forloop.index >= 3 %}
+						{% include download/version-card.html version=version lazyload=true %}
+					{% else %}
+						{% include download/version-card.html version=version %}
+					{% endif %}
 				{% endunless %}
 			{% endfor %}
 		</div>
 	</div>
 </div>
-
-<script src="/assets/js/download-version.js"></script>
 
 <div id="stable" class="container card stable-download">
 	<h2>Need a stable version?</h2>
@@ -148,3 +150,5 @@ layout: default
 </div>
 
 {% include footer.html %}
+
+<script defer src="/assets/js/download-version.js"></script>
