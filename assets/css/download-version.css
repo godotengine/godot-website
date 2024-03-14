@@ -96,6 +96,11 @@
 	font-weight: 700;
 }
 
+.download-primaries .download-platform img {
+	width: 24px;
+	height: 24px;
+}
+
 .download-primaries .btn-download-primary {
 	margin-bottom: 0;
 	text-align: left;
