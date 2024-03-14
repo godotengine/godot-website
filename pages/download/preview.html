@@ -5,11 +5,11 @@ description: "Download the latest preview version of the Godot Engine 3 and Godo
 layout: default
 ---
 
-{% include header.html %}
-
-<link rel="stylesheet" href="/assets/css/transparent-nav.css">
 <link rel="stylesheet" href="/assets/css/download.css?2">
 <link rel="stylesheet" href="/assets/css/download-version.css?2">
+
+{% include transparent-header.html %}
+
 <style>
 	.hero {
 		background-image: url('/assets/download/download-background-preview.webp');
@@ -32,8 +32,7 @@ layout: default
 		align-items: center;
 		gap: 16px;
 		background-color: var(--dark-color);
-		padding: 24px;
-		padding-bottom: 60px;
+		padding: 24px 24px 60px;
 		width: auto;
 		max-width: 100%;
 	}
@@ -122,8 +121,6 @@ layout: default
 	</div>
 </div>
 
-<script src="/assets/js/download-version.js"></script>
-
 <div id="stable" class="container card stable-download">
 	<h2>Need a stable version?</h2>
 
@@ -148,3 +145,5 @@ layout: default
 </div>
 
 {% include footer.html %}
+
+<script defer src="/assets/js/download-version.js"></script>

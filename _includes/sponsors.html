@@ -5,7 +5,7 @@
 		<div class="grid patron">
 			{% for sponsor in site.data.sponsors.patron %}
 			<a class="sponsor-card patron" href="{{ sponsor.link }}" target="_blank" rel="noopener">
-				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
+				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" fetchpriority="low" height="1" width="1">
 			</a>
 			{% endfor %}
 		</div>
@@ -13,7 +13,7 @@
 		<div class="grid platinum">
 			{% for sponsor in site.data.sponsors.platinum %}
 			<a class="sponsor-card platinum" href="{{ sponsor.link }}" target="_blank" rel="noopener">
-				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
+				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" fetchpriority="low" height="1" width="1">
 			</a>
 			{% endfor %}
 		</div>
@@ -21,7 +21,7 @@
 		<div class="grid gold">
 			{% for sponsor in site.data.sponsors.gold %}
 			<a class="sponsor-card gold" href="{{ sponsor.link }}" target="_blank" rel="noopener">
-				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
+				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" fetchpriority="low" height="1" width="1">
 			</a>
 			{% endfor %}
 		</div>
@@ -29,7 +29,7 @@
 		<div class="grid silver">
 			{% for sponsor in site.data.sponsors.silver %}
 			<a class="sponsor-card silver" href="{{ sponsor.link }}" target="_blank" rel="noopener">
-				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy">
+				<img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" loading="lazy" height="1" width="1">
 			</a>
 			{% endfor %}
 		</div>
