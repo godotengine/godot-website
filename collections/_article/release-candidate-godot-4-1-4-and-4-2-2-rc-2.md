@@ -6,7 +6,7 @@ author: Clay John
 image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-2.webp
 image_caption_title: "The Last Seed"
 image_caption_description: "A jam game by bitbrain, Andrea Baroni and Lucia La Rezza"
-date: 2024-03-15 13:00:00
+date: 2024-03-15 12:00:00
 ---
 
 Many core team members are heading to the Game Developers Conference next week (see our [past announcement](/article/godot-at-gdc-2024/), and the [line-up of games](/article/gdc-2024-godot-games/) we'll be showcasing), and preparing for this event in parallel to working on the upcoming Godot 4.3 release has kept us really busy!
