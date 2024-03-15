@@ -39,8 +39,8 @@ The biggest change compared to previous APIs is that synchronization between com
 
 The order of execution of the recorded commands inside a command buffer **is NOT guaranteed to complete in the order they were submitted**: the GPU can reorder these commands in whatever order it thinks is best to complete the job as quickly as possible. To compensate for this, the programmer must manually insert **[synchronization barriers](https://gpuopen.com/learn/vulkan-barriers-explained/)** in the command buffer that allow specifying in detail which commands should be completed or started by specifying the scope **before** and **after**. The scope includes multiple concepts such as the execution stage (e.g. drawing, compute, transfer), the type of access (e.g. read or write) and the affected memory regions (globally, buffers or textures). On top of that, barriers are capable of transitioning textures from one memory layout to another, which is a requirement to be able to use textures in different commands optimally.
 
-| ![](/storage/blog/acyclic-graph/barriers.webp) |
-|:--:| 
+|  ![](/storage/blog/acyclic-graph/barriers.webp){: loading="lazy" width="1322" height="342" }   |
+|:----------------------------------------------------------------------------------------------:| 
 | *A barrier can establish a dependency between commands by specifying a synchronization scope.* |
 
 Beginners will have a hard time understanding this mechanism, but even experts or hardware vendors are not safe from making mistakes. A run of the [Vulkan Validation Layers](https://github.com/KhronosGroup/Vulkan-ValidationLayers) in *synchronization* mode will reveal multiple issues on most Godot projects or even commercial games available in the market. These are among the most frustrating issues to understand as they won't even appear consistently depending on hardware vendor or hardware speed. Since eliminating these problems was one of the main goals behind the introduction of the acyclic graph, extensive use was made of these validation tools to ensure that no synchronization errors remained.
@@ -51,9 +51,9 @@ Beginners will have a hard time understanding this mechanism, but even experts o
 
 The commands exposed by this class are what you usually expect out of a rendering API: creating resources, copying, clearing, drawing, dispatching compute work, etc. However, the point of interest is how both rendering geometry and compute passes are organized. Godot already has the concept of "draw lists" and "compute lists": essentially batches of commands describing what to do inside a render pass or a compute pass. The one-to-one correlation between lists and passes is very important, as it significantly reduced the number of nodes an automatic graph would have to create.
 
-| ![](/storage/blog/acyclic-graph/draw-compute-lists.webp) |
-|:--:| 
-| *Draw lists and compute lists are considered a single unit of work in the rendering pipeline.* |
+| ![](/storage/blog/acyclic-graph/draw-compute-lists.webp){: loading="lazy" width="902" height="344" } |
+|:----------------------------------------------------------------------------------------------------:| 
+|    *Draw lists and compute lists are considered a single unit of work in the rendering pipeline.*    |
 
 While Rendering Device attempted to hide many of the difficulties that Vulkan introduced, there are a few that slipped through that made writing rendering code for Godot 4 more difficult than anticipated.
 
@@ -93,16 +93,16 @@ The initial redesign was laid out in *reduz*'s [draft](https://gist.github.com/r
 
 The unique aspect of the implemented graph is that its construction is completely invisible to the programmer using RenderingDevice. Commands requested from the class are logged internally and each command maintains an adjacency list that is updated as new dependencies are detected. Since these adjacencies only work one way and older commands cannot depend on future commands, it is virtually impossible for cyclic dependencies to form (hence the "acyclic" part of the graph). While a graph can be constructed in many ways, a list of vertices and an adjacency list are sufficient. Render commands play the role of vertices, and commands store the indices of their adjacent commands.
 
-| ![](/storage/blog/acyclic-graph/command-graph.webp) |
-|:--:| 
-| *The rendering operations of a frame and their dependencies represented as a graph.* |
+| ![](/storage/blog/acyclic-graph/command-graph.webp){: loading="lazy" width="782" height="784" } |
+|:-----------------------------------------------------------------------------------------------:| 
+|      *The rendering operations of a frame and their dependencies represented as a graph.*       |
 
 An important decision that was made to allow this structure to scale more effectively is that each instance of a draw list or a compute list are considered as **one node in the graph**. There is no benefit to allowing reordering within these structures and Godot already has a clear concept of what these lists are used for. Games often draw a lot of geometry, but they don't create tons of render passes per frame, as that doesn't result in efficient use of the GPU. To put it in numbers, one of the benchmark scenes used during testing could easily reach hundreds of thousands of nodes if each individual command was recorded into the graph. Making the distinction to correlate render passes to individual nodes brought this number down to about **300 nodes per frame**. Operating with a graph of this scale was a very good sign that the performance overhead would be very small.
 
 Once all commands for the frame have been recorded, a [topological sort](https://en.wikipedia.org/wiki/Topological_sorting) is performed on the graph to get an ordered list of commands. During this step the "levels" of the commands are detected to determine how they can be grouped and where synchronization points (barriers) should be introduced. All commands belonging to a particular level in the graph can be executed in parallel as no dependencies have been detected between them, meaning that no barriers are required until the next level is reached. This sorting step is where the magic behind the performance gains happens.
 
-| ![](/storage/blog/acyclic-graph/command-graph-levels.webp) |
-|:--:| 
+|                   ![](/storage/blog/acyclic-graph/command-graph-levels.webp){: loading="lazy" width="882" height="806" }                    |
+|:-------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *After sorting, all commands that belong to the same level can be executed in any order, resulting in multiple possible command sequences.* |
 
 One important detail that resulted in frametime reductions during this step was to take into account the type of command as a sorting factor: grouping together operations based on whether they were related to copying data, drawing or compute dispatches provided some noticeable increases in performance. While the exact reason behind this has not been determined, it seems likely that GPUs prefer to change the type of pipeline they need to use within a command buffer as little as possible.
@@ -115,8 +115,8 @@ The resources used by RenderingDevice in Godot are buffers or textures. While th
 
 Whenever a resource is created, a new "tracker" structure is introduced to store the information relevant to the graph construction during command recording. The tracker holds references to which commands are writing or reading from the resource and modifies these lists accordingly as more commands are recorded. It also stores a "usage" variable that indicates what the current use of the resource is at the time of recording. Usages are both classified as "read" or "read-write" operations, and which one is used has strong implications for how dependencies between commands will be detected. For example, a command that reads from Resource A can be executed in parallel with another command that reads from Resource A, but that will not be valid if the other command can write to Resource A. In this case, a dependency is inserted between the two commands to ensure that the first command can finish reading the resource correctly before the next command modifies it.
 
-| ![](/storage/blog/acyclic-graph/resource-tracking.webp) |
-|:--:| 
+|                                ![](/storage/blog/acyclic-graph/resource-tracking.webp){: loading="lazy" width="1284" height="302" }                                 |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *The tracker holds the current usage of a resource and determines whether it is necessary to perform a transition based on the type of command that references it.* |
 
 Textures also have a particular requirement: changing the usage implies a memory layout transition even if it's just for read-only operations. For example, there's different layouts for a texture being used as the source of a copy operation and for a texture being used for sampling in a shader. While this distinction might not necessarily be true at the hardware level, it is actually possible to witness texture corruption if these transitions are not performed correctly depending on the GPU's architecture (AMD is really good for testing these out!). Therefore, any change in usage when textures are involved is usually considered a write operation as most of them require a particular layout. This introduces some dependencies between commands that might not be very obvious but are completely required for the operations to work correctly: continuing with the previous example, it's not possible to use the optimal memory layout for copying a texture and sampling it in a shader in parallel, even if both are read-only operations.
@@ -129,8 +129,8 @@ Since the graph construction is automatic and there's no input from the programm
 * When a command uses a resource as read-write, a reference to the command is stored the resource tracker, replacing the previous one and clearing the list of commands that were reading from the resource. A reference to the command is placed on the adjacency list of all operations that were either reading or writing to the resource.
 * An exception is made for textures: if an operation must change the type of usage, the operation is considered as if it's writing to the resource because a memory layout transition is required. **It does not matter if both operations are read-only**: a write dependency will be established regardless. This is worth keeping in mind as the graph considers the operations to be dependent if the texture's usage changes often.
 
-| ![](/storage/blog/acyclic-graph/dependency-tracking-animated.webp) |
-|:--:| 
+|                                                           ![](/storage/blog/acyclic-graph/dependency-tracking-animated.webp){: loading="lazy" width="1016" height="564" }                                                           |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *Animated example of how dependency tracking is used to build the graph. Blue and red represent how the command modifies the lists inside the trackers and green indicates which values it reads from to build the adjacency list.* |
 
 Older operations are discarded from the tracker's lists to avoid increasing them endlessly and causing performance bottlenecks in the process. As write operations can't be done in parallel and no information is known about the range of data that is modified (a potential future improvement), then it's only necessary to store a reference to one command at all times. This system requires more detailed tracking once texture slices are later introduced, but the strategy remains largely the same.
@@ -143,8 +143,8 @@ Resource tracking can quickly become a performance bottleneck as the solution do
 
 But Godot doesn't currently know what resources are static. Users can modify these resources freely at any time, even from GDScript! Resources are not considered to be immutable or marked as such during the import process. Other engines typically mark nodes as static for additional optimizations, but Godot avoids this concept to keep the engine easy to use and not overwhelm beginners with settings whose purpose they may not yet understand. This turned out to be a big problem that was debated internally for a while, as introducing a new "immutable" attribute was the most attractive option with the downside that it would mean a lot of extra work for end users.
 
-| ![](/storage/blog/acyclic-graph/complex-scene.webp) |
-|:--:| 
+|                       ![](/storage/blog/acyclic-graph/complex-scene.webp){: loading="lazy" width="900" height="490" }                        |
+|:--------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *Complex game scenes often contain a lot of static geometry. Tracking these resources generates a lot of overhead without any real benefit.* |
 
 Fortunately, a quick solution was found that allowed trackers to be greatly reduced without the need for user intervention: during resource creation, a couple of flags are checked to see if a tracker should be created or not. If the resource is created with some initial data and no explicit flags are set for modification, then it is considered to be read-only and no tracker is created for it. If at some point an operation attempts to modify the resource, a full synchronization is introduced in the graph and the tracker is created. Synchronization is required because it's not possible to know which commands in the frame were reading from the resource beforehand. Full synchronization implies all previous commands must be adjacent to the command that created the resource tracker, so the graph degrades to the behavior of the previous version of Godot on that particular command for one frame. This was considered to be an acceptable and very minor performance degradation that bypassed the need to introduce the "immutable" flag to the engine.
@@ -157,8 +157,8 @@ While textures are most commonly associated with containing two dimensions, it i
 
 This usually doesn't pose any additional trouble if the engine sticks to using a texture during commands in only one particular way, but the problem does not stop there: Godot can and will use different parts of the same texture for completely different purposes, even within the same command. This is possible because [RenderingDevice can create "shared" textures from slices](https://docs.godotengine.org/en/stable/classes/class_renderingdevice.html#class-renderingdevice-method-texture-create-shared-from-slice). While the original texture may only have one resource tracker, all shared slices are considered different textures with their own resource trackers that can be referenced independently in commands. A common use case is mipmap creation: a lower level mipmap of the texture can be set as the render target, while a higher resolution level is used for sampling, effectively creating the chain of mipmaps from the texture's highest quality level.
 
-| ![](/storage/blog/acyclic-graph/texture-slices.webp) |
-|:--:| 
+|                                 ![](/storage/blog/acyclic-graph/texture-slices.webp){: loading="lazy" width="1062" height="704" }                                 |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *The anatomy of a cubemap texture that uses both mipmaps and array layers. Godot can create slices of a texture that reference only a range of its subresources.* |
 
 Tracking texture slices effectively required the implementation of a set of strict rules to verify that the programmer using the RenderingDevice does not perform operations with undefined behavior.
@@ -183,8 +183,8 @@ The other major benefit is that a lot of hard to identify bugs that were caused 
 
 The results are generally positive. No performance regressions have been identified in any scene as far as GPU performance is concerned, and in virtually most scenarios an improvement can be expected depending on their contents.
 
-| ![](/storage/blog/acyclic-graph/benchmark-projects.png) |
-|:--:| 
+|         ![](/storage/blog/acyclic-graph/benchmark-projects.png){: loading="lazy" width="600" height="447" }         |
+|:-------------------------------------------------------------------------------------------------------------------:| 
 | *Results gathered from running various projects with an NVIDIA GeForce RTX 3090 Ti at 1920x1080. Higher is better.* |
 
 * Legend of the Nuku Warriors: Internal demo scene by W4 Games.
@@ -194,9 +194,9 @@ The results are generally positive. No performance regressions have been identif
 
 The biggest gains by far could be identified in projects with multiple GPU particle systems, where the execution can now take place in parallel wherever it's possible. A dedicated particles benchmark makes this difference much more obvious.
 
-| ![](/storage/blog/acyclic-graph/benchmark-particles.png) |
-|:--:| 
-| *Results gathered from running the benchmark with NVIDIA GeForce RTX 3090 Ti. Higher is better.* |
+| ![](/storage/blog/acyclic-graph/benchmark-particles.png){: loading="lazy" width="600" height="447" } |
+|:----------------------------------------------------------------------------------------------------:| 
+|   *Results gathered from running the benchmark with NVIDIA GeForce RTX 3090 Ti. Higher is better.*   |
 
 * [Particles benchmark](https://github.com/Geometror/godot-tests-and-benchmarks/tree/main/benchmark_particles) by [Geometror](https://github.com/Geometror).
 
@@ -224,8 +224,8 @@ With the introduction of the directed acyclic graph and with a [few more abstrac
 
 Pavlo Muratov's [article](https://levelup.gitconnected.com/organizing-gpu-work-with-directed-acyclic-graphs-f3fd5f2c2af3) that was used as the main inspiration behind this change contains a very interesting proposal in how to submit and synchronize GPU work across the multiple queues exposed by the hardware. Godot could potentially leverage these extra queues (e.g. dedicated compute queues), to be more explicit about what work should be executed in parallel. Finding paths that could be executed in parallel in the graph would require some elaborate detection of the dependencies between the commands, the possible paths that are independent and where the synchronization points need to be placed.
 
-| ![](/storage/blog/acyclic-graph/multi-queue.webp) |
-|:--:| 
+|                                                                   ![](/storage/blog/acyclic-graph/multi-queue.webp){: loading="lazy" width="1744" height="682" }                                                                    |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *A heavily simplified example of a potential multiqueue submission scheme that could be detected by the graph. Many portions of the compute work in Godot could be processed while other parts of the rendering pipeline are busy.* |
 
 As pointed out before when talking about using primary command buffers as an alternative to secondary command buffers, command queue submissions are not free: there must be a good balance between partitioning work to be executed in parallel when compared to just submitting everything into a single command queue.
@@ -234,26 +234,26 @@ As pointed out before when talking about using primary command buffers as an alt
 
 Multisample anti-aliasing (MSAA) is a feature that requires explicit commands to "resolve" the result of the anti-aliasing into a texture that can be used by other steps in the rendering pipeline. The anti-aliased result is not actually computed during the time of drawing but either when a [resolve command is issued or a render pass defines a resolve operation in a subpass](https://docs.vulkan.org/samples/latest/samples/performance/msaa/README.html).
 
-| ![](/storage/blog/acyclic-graph/msaa-resolve-manual.webp) |
-|:--:| 
+|                             ![](/storage/blog/acyclic-graph/msaa-resolve-manual.webp){: loading="lazy" width="1302" height="104" }                             |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *It's not possible for Godot to know if something will draw again to the target, so it must resolve the result manually when it needs to sample the resource.* |
 
 With how flexible of an engine Godot is, determining where this step should go can be very tricky: the operation should be placed only when it's absolutely necessary or as part of the last render pass that draws to the MSAA texture. This is an area that the graph could aim to resolve automatically by simplifying the implementation of MSAA in the renderers and lead to further performance improvements. Reducing the amount of resolve operations to the minimum and the bandwidth required for MSAA could be very beneficial for the Mobile renderer in particular.
 
-| ![](/storage/blog/acyclic-graph/msaa-resolve-solution.webp) |
-|:--:| 
+|                                     ![](/storage/blog/acyclic-graph/msaa-resolve-solution.webp){: loading="lazy" width="1102" height="104" }                                     |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *Since the graph can detect if the render pass is the last one in the frame, it can automatically insert a resolve in the render pass, saving lots of bandwidth in the process.* |
 
 ### Graph visualization
 
 While this wouldn't provide a direct benefit to end users, building a visualizer for the graph could help the Godot developers have a clear overview of the rendering pipeline of a given frame and identify bottlenecks more easily. During development, a few compute passes were identified that weren't being parallelized correctly due to implementation errors. For example, GPU particle systems were binding an unused buffer for write operations even if they never wrote to it, which led to the commands being identified as being dependent of each other due to having to synchronize with the potential "write" performed by the previous system.
 
-| ![](/storage/blog/acyclic-graph/particle-error.webp) |
-|:--:| 
+|                                                  ![](/storage/blog/acyclic-graph/particle-error.webp){: loading="lazy" width="962" height="442" }                                                   |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *Due to an implementation error, even after implementing the graph, the execution of the particle systems was mostly linear, as they all reused the same temporary buffer for reading and writing.* |
 
-| ![](/storage/blog/acyclic-graph/particle-error-fix.webp) |
-|:--:| 
+|                                            ![](/storage/blog/acyclic-graph/particle-error-fix.webp){: loading="lazy" width="762" height="742" }                                             |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 | *After fixing the error by assigning each system their own buffers, the graph automatically reordered and executed the particle systems in parallel, leading to huge gains in performance.* |
 
 While a more obvious case like this one was identified since it did not meet expectations at first, there could be more subtle instances of this behavior yet to be found in the codebase that could be easily exposed by building better debugging tools.
