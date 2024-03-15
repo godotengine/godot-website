@@ -1,5 +1,5 @@
 ---
-title: "Dev snapshot: Godot 4.3 dev 4"
+title: "Dev snapshot: Godot 4.3 dev 5"
 excerpt: "Sneaking one more dev release in for testing before the team heads to GDC!"
 categories: ["pre-release"]
 author: Rémi Verschelde
