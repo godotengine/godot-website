@@ -6,7 +6,7 @@ author: Clay John
 image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-5.webp
 image_caption_title: "Béton Sanglant"
 image_caption_description: "A game by MrEliptik"
-date: 2024-03-15 18:00:00
+date: 2024-03-15 16:00:00
 ---
 
 4.3 dev 5 is following quickly behind 4.3 dev 4 since we want to get something into your hands before we head over to the [Game Developers Conference](https://godotengine.org/article/godot-at-gdc-2024/) next week. Please test out this development release and give us lots of feedback, so that we can enter the beta phase shortly after we return!
@@ -27,23 +27,19 @@ As a reminder, this section only covers changes made since the previous [4.3 dev
 
 Here are just a few of the exciting changes that have come in the last couple of weeks!
 
-- GDScript: Add @export_custom annotation ([GH-72912](https://github.com/godotengine/godot/pull/72912)).
-
-- GDScript: Allow @exported Arrays to set property hints for their elements ([GH-82952](https://github.com/godotengine/godot/pull/82952)).
-
+- GDScript: Add `@export_custom` annotation ([GH-72912](https://github.com/godotengine/godot/pull/72912)).
+- GDScript: Allow `@exported` Arrays to set property hints for their elements ([GH-82952](https://github.com/godotengine/godot/pull/82952)).
 - Add multi-selection for SpriteFramesEditor ([GH-85494](https://github.com/godotengine/godot/pull/85494)).
-
 - Add new Parallax2D node ([GH-87391](https://github.com/godotengine/godot/pull/87391)). This supersedes the current ParallaxLayer/ParallaxBackground nodes and removes many limitations that we had with them. You can even convert ParallaxLayers and ParallaxBackgrounds into Parallax2D nodes conveniently in the editor. Going forward we recommend always using Parallax2D for your parallax needs. We think that the Parallax2D does everything that ParallaxLayer/ParallaxBackground could do and more! If you find something that ParallaxLayer/ParallaxBackground can do that Parallax2D can't, please let us know as soon as possible.
-
 - Add methods to get argument count of methods ([GH-87680](https://github.com/godotengine/godot/pull/87680)).
 
 And many more! Please see the [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for more, there has been a lot of great work this release and the shortness of these release notes are not an indication of the amount of great stuff coming.
 
 ## Changelog
 
-**93 contributors** submitted **242 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for the complete list of changes since the previous 4.3-dev4 snapshot. You can also review [all changes included in 4.3](https://godotengine.github.io/godot-interactive-changelog/#4.3) compared to the previous 4.2 feature release.
+**99 contributors** submitted **279 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for the complete list of changes since the previous 4.3-dev4 snapshot. You can also review [all changes included in 4.3](https://godotengine.github.io/godot-interactive-changelog/#4.3) compared to the previous 4.2 feature release.
 
-This release is built from commit [`da945ce62`](https://github.com/godotengine/godot/commit/da945ce6266ce27ba63b6b08dc0eb2414594f7cb).
+This release is built from commit [`89f70e98d`](https://github.com/godotengine/godot/commit/89f70e98d209563abb4dbc1f8cd5d76c81eb7940).
 
 ## Downloads
 
