@@ -3,13 +3,15 @@ title: "Dev snapshot: Godot 4.3 dev 4"
 excerpt: "Sneaking one more dev release in for testing before the team heads to GDC!"
 categories: ["pre-release"]
 author: Clay John
-image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-4.webp
-image_caption_title: "Todo"
-image_caption_description: "Todo"
-date: 2024-03-14 18:00:00
+image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-5.webp
+image_caption_title: "Béton Sanglant"
+image_caption_description: "A game by MrEliptik"
+date: 2024-03-15 18:00:00
 ---
 
 4.3 dev 5 is following quickly behind 4.3 dev 4 since we want to get something into your hands before we head over to the [Game Developers Conference](https://godotengine.org/article/godot-at-gdc-2024/) next week. Please test out this development release and give us lots of feedback, so that we can enter the beta phase shortly after we return!
+
+Importantly, you will notice the development pace slow a little bit as many of the core developers are away for the week and taking a much needed vacation the following week.
 
 Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
 
@@ -17,10 +19,9 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*Todo*
+*The cover illustration is from* [**Béton Sanglant**](https://mreliptik.itch.io/beton-sanglant), *a fast paced arena FPS where you need to survive waves of enemies. It is developed by [MrEliptik](https://twitter.com/mreliptik). While the game is still a work in progress, you can download it now on [itch.io](https://mreliptik.itch.io/beton-sanglant).*
 
 ## Highlights
-
 
 As a reminder, this section only covers changes made since the previous [4.3 dev 4 snapshot](/article/dev-snapshot-godot-4-3-dev-4/). For a more comprehensive overview of what's new in Godot 4.3 compared to 4.2, you'll have to wait for the first beta release, or refer to our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.3).
 
@@ -36,11 +37,11 @@ Here are just a few of the exciting changes that have come in the last couple of
 
 - Add methods to get argument count of methods ([GH-87680](https://github.com/godotengine/godot/pull/87680)).
 
-And many more! Please see the [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for more.
+And many more! Please see the [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for more, there has been a lot of great work this release and the shortness of these release notes are not an indication of the amount of great stuff coming.
 
 ## Changelog
 
-**x contributors** submitted **x improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for the complete list of changes since the previous 4.3-dev4 snapshot. You can also review [all changes included in 4.3](https://godotengine.github.io/godot-interactive-changelog/#4.3) compared to the previous 4.2 feature release.
+**93 contributors** submitted **242 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for the complete list of changes since the previous 4.3-dev4 snapshot. You can also review [all changes included in 4.3](https://godotengine.github.io/godot-interactive-changelog/#4.3) compared to the previous 4.2 feature release.
 
 This release is built from commit [`da945ce62`](https://github.com/godotengine/godot/commit/da945ce6266ce27ba63b6b08dc0eb2414594f7cb).
 
