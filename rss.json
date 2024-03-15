@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Release candidates: Godot 4.1.4 RC 2 &amp; 4.2.2 RC 2",
+			"link": "https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-2/",
+			"description": "Another round of release candidates for Godot 4.1.4 and 4.2.2, just before we head off to GDC!",
+			"categories": ["Pre-release"],
+			"guid": "https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-2/",
+			"dc:creator": "Clay John",
+			"pubDate": "Fri, 15 Mar 2024 12:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-2.webp"
+		},
+		
+		{
 			"title": "Introducing our GDC Line-up",
 			"link": "https://godotengine.org/article/gdc-2024-godot-games/",
 			"description": "Like we announced a while ago, the team is preparing to head over to the US for this year’s GDC. We will have a booth on the expo floor, and would love to welcome you there!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Mon, 13 Nov 2023 16:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-6.webp"
-		},
-		
-		{
-			"title": "Dev snapshot: Godot 4.2 beta 5",
-			"link": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-5/",
-			"description": "More critical fixes are coming your way on the road to Godot 4.2 stable, including smoother transition for 3D projects made in 4.1.",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/dev-snapshot-godot-4-2-beta-5/",
-			"dc:creator": "Yuri Sizov",
-			"pubDate": "Tue, 07 Nov 2023 12:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-5.webp"
 		}
 		
 	]
