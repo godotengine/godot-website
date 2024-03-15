@@ -1,29 +1,27 @@
 ---
-title: "Release candidates: Godot 4.1.4 RC 1 & 4.2.2 RC 1"
-excerpt: "As a double-feature release, Godot 4.1.4 and 4.2.2 are ready for testing with their respective release candidates!"
+title: "Release candidates: Godot 4.1.4 RC 2 & 4.2.2 RC 2"
+excerpt: ""
 categories: ["pre-release"]
-author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-1.webp
-image_caption_title: "Crossroad OS"
-image_caption_description: "A game by Guy and Daisy Games"
-date: 2024-01-26 16:30:00
+author: Rémi Verschelde
+image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-2.webp
+image_caption_title: "The Last Seed"
+image_caption_description: "A jam game by bitbrain, Andrea Baroni and Lucia La Rezza"
+date: 2024-03-14 13:00:00
 ---
 
-While we are [staying firmly on track](/article/dev-snapshot-godot-4-3-dev-2) with the upcoming **Godot 4.3** release, previous versions continue to receive patches and fixes to ensure that you have the best possible experience, should you choose to remain using them.
+Many core team members are heading to the Game Developers Conference next week (see our [past announcement](/article/godot-at-gdc-2024/), and the [line-up of games](/article/gdc-2024-godot-games/) we'll be showcasing), and preparing for this event in parallel to working on the upcoming Godot 4.3 release has kept us really busy!
 
-Godot's development practices make each release an iteration on the previous one, which allows us to relatively easy cherry-pick and backport many critical improvements without fear of regression and broken compatibility. Thanks to this environment today we can try something new, and publish two release candidates simultaneously, offering an upgrade for both **Godot 4.1** and **Godot 4.2** users.
+So maintenance releases for 4.1 and 4.2 users fell through the cracks temporarily, but we're getting back on track with a new set of release candidates for both 4.1.4 and 4.2.2.
 
-Both versions have received a number of stability and performance improvements, as well as corrections and polish to documentation. You will find notable changes in their respective highlight sections below.
+Since the previous [RC 1 snapshots](/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/), we've merged a lot of additional important bug fixes, which warrant a good amount of testing. So please give it a try on your projects, and let us know if you run into any problem!
 
-Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
-
-[Jump to the **Downloads** section](#downloads), and give the new releases a spin right now, or continue reading to learn more about improvements. You can also try the **Web editor** ([**4.1.4 RC 1**](https://editor.godotengine.org/releases/4.1.4.rc1/), [**4.2.2 RC 1**](https://editor.godotengine.org/releases/4.2.2.rc1/)) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
+[Jump to the **Downloads** section](#downloads), and give the new releases a spin right now, or continue reading to learn more about improvements. You can also try the **Web editor** ([**4.1.4 RC2**](https://editor.godotengine.org/releases/4.1.4.rc2/), [**4.2.2 RC2**](https://editor.godotengine.org/releases/4.2.2.rc2/)) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
 -----
 
-*The illustration picture for this article comes from* [**Crossroad OS**](https://store.steampowered.com/app/1783800/Crossroad_OS/) — *a puzzle adventure game by [Guy](https://twitter.com/guyunger_nl) and [Daisy Games](https://twitter.com/DaisyGames3) where you get to explore the world inside of a mysterious operating system. It's built with Godot 4.1, and you can get it right now on [Steam](https://store.steampowered.com/app/1783800/Crossroad_OS/), including a demo! Consider following the developers on their social media accounts for more content, and joining [Daisy Games' Discord community](https://discord.gg/wcbmH4VVEp).*
+*The illustration picture for this article comes from* [**The Last Seed**](https://bitbrain.itch.io/the-last-seed), *a submission to Global Game Jam 2023 by [bitbrain](https://twitter.com/bitbrain), Andrea Baroni and [Lucia La Rezza](https://twitter.com/lu_la_re). bitbrain is also working on an untitled RPG with Godot, and maintains a number of [open source plugins](https://twitter.com/bitbrain/status/1747945565462085768) you may be interested in.*
 
-## Highlights of 4.1.4 RC 1
+## Highlights of 4.1.4 RC 2
 
 **66 contributors** submitted around **120 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.1.4-rc1), which contains links to relevant commits and PRs for this and every previous release.
 
@@ -57,7 +55,7 @@ As Godot 4.1 reaches its fourth maintenance release, the main focus of 4.1.4 is 
 
 This release is built from commit [`b9008f3d5`](https://github.com/godotengine/godot/commit/b9008f3d517c3ceea565a3467064a15fdd91efca).
 
-## Highlights of 4.2.2 RC 1
+## Highlights of 4.2.2 RC 2
 
 **75 contributors** submitted around **140 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2.2-rc1), which contains links to relevant commits and PRs for this and every previous release.
 
@@ -93,14 +91,14 @@ This release is built from commit [`c7fb0645a`](https://github.com/godotengine/g
 
 ## Downloads
 
-{% include articles/download_card.html version="4.1.4" release="rc1" article=page %}
+{% include articles/download_card.html version="4.1.4" release="rc2" article=page %}
 
 **Standard build** includes support for GDScript and GDExtension.
 
 **.NET 6 build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
 - .NET build requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
-{% include articles/download_card.html version="4.2.2" release="rc1" article=page %}
+{% include articles/download_card.html version="4.2.2" release="rc2" article=page %}
 
 **Standard build** includes support for GDScript and GDExtension.
 
