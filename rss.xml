@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.3 dev 4</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-5/</link>
+		<description>Sneaking one more dev release in for testing before the team heads to GDC!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-5/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Fri, 15 Mar 2024 15:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-3-dev-5.webp</image>
+	</item>
+	
+	<item>
 		<title>Release candidates: Godot 4.1.4 RC 2 &amp; 4.2.2 RC 2</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-2/</link>
 		<description>Another round of release candidates for Godot 4.1.4 and 4.2.2, just before we head off to GDC!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Yuri Sizov</dc:creator>
 		<pubDate>Fri, 17 Nov 2023 15:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-rc-1.webp</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.2 beta 6</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-2-beta-6/</link>
-		<description>We&#39;re almost ready for a release candidate! This 6th beta fixes a number of regressions via some relatively core changes which will need thorough testing.</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-2-beta-6/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Mon, 13 Nov 2023 16:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-beta-6.webp</image>
 	</item>
 	
 
