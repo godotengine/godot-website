@@ -2,11 +2,11 @@
 title: "Dev snapshot: Godot 4.3 dev 4"
 excerpt: "Sneaking one more dev release in for testing before the team heads to GDC!"
 categories: ["pre-release"]
-author: Clay John
+author: Rémi Verschelde
 image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-5.webp
 image_caption_title: "Béton Sanglant"
 image_caption_description: "A game by MrEliptik"
-date: 2024-03-15 16:00:00
+date: 2024-03-15 15:00:00
 ---
 
 4.3 dev 5 is following quickly behind 4.3 dev 4 since we want to get something into your hands before we head over to the [Game Developers Conference](https://godotengine.org/article/godot-at-gdc-2024/) next week. Please test out this development release and give us lots of feedback, so that we can enter the beta phase shortly after we return!
@@ -27,11 +27,25 @@ As a reminder, this section only covers changes made since the previous [4.3 dev
 
 Here are just a few of the exciting changes that have come in the last couple of weeks!
 
+- 2D: Add new Parallax2D node ([GH-87391](https://github.com/godotengine/godot/pull/87391)). This supersedes the current ParallaxLayer/ParallaxBackground nodes and removes many limitations that we had with them. You can even convert ParallaxLayers and ParallaxBackgrounds into Parallax2D nodes conveniently in the editor. Going forward we recommend always using Parallax2D for your parallax needs. We think that the Parallax2D does everything that ParallaxLayer/ParallaxBackground could do and more! If you find something that ParallaxLayer/ParallaxBackground can do that Parallax2D can't, please let us know as soon as possible.
+- Animation: Add multi-selection for SpriteFrames editor ([GH-85494](https://github.com/godotengine/godot/pull/85494)).
+- Audio: Add interactive music support ([GH-64488](https://github.com/godotengine/godot/pull/64488)). This feature was 5 years in the making, starting with the work of Daniel Matarov during [GSoC 2019](/article/gsoc-2019-progress-report-3/#interactive-music), continued by Juan Linietsky in 2022, and finalized this year!
+- Audio: Fix audio crackling issues on Windows using certain DACs due to incorrect WASAPI buffer size ([GH-89283](https://github.com/godotengine/godot/pull/89283)).
+- Core: Add methods to get argument count of methods ([GH-87680](https://github.com/godotengine/godot/pull/87680)).
+- Core: Merge `uid_cache.bin` and `global_script_class_cache.cfg` after mounting PCKs ([GH-82084](https://github.com/godotengine/godot/pull/82084)).
+- Editor: Automatically create folder in project manager create and import ([GH-56420](https://github.com/godotengine/godot/pull/56420)).
+- Editor: Fix custom resource icons in FileSystem ([GH-77932](https://github.com/godotengine/godot/pull/77932)).
 - GDScript: Add `@export_custom` annotation ([GH-72912](https://github.com/godotengine/godot/pull/72912)).
 - GDScript: Allow `@exported` Arrays to set property hints for their elements ([GH-82952](https://github.com/godotengine/godot/pull/82952)).
-- Add multi-selection for SpriteFramesEditor ([GH-85494](https://github.com/godotengine/godot/pull/85494)).
-- Add new Parallax2D node ([GH-87391](https://github.com/godotengine/godot/pull/87391)). This supersedes the current ParallaxLayer/ParallaxBackground nodes and removes many limitations that we had with them. You can even convert ParallaxLayers and ParallaxBackgrounds into Parallax2D nodes conveniently in the editor. Going forward we recommend always using Parallax2D for your parallax needs. We think that the Parallax2D does everything that ParallaxLayer/ParallaxBackground could do and more! If you find something that ParallaxLayer/ParallaxBackground can do that Parallax2D can't, please let us know as soon as possible.
-- Add methods to get argument count of methods ([GH-87680](https://github.com/godotengine/godot/pull/87680)).
+- GDScript: Allow LSP to process multiple messages per poll ([GH-89284](https://github.com/godotengine/godot/pull/89284)).
+- GUI: Fix mouse entered notifications ([GH-88992](https://github.com/godotengine/godot/pull/88992)).
+- Import: Add "skip file" import option to skip (and exclude from export) importable formats ([GH-87972](https://github.com/godotengine/godot/pull/87972)).
+- Linux: Wayland: Restore tablet support and handle multiple tools ([GH-88744](https://github.com/godotengine/godot/pull/88744)).
+- macOS: Enable input from controllers in the background ([GH-88978](https://github.com/godotengine/godot/pull/88978)).
+- Particles: Fix early activation of particle trail sections ([GH-89042](https://github.com/godotengine/godot/pull/89042)).
+- Rendering: Fix Volumetric Fog VoxelGI updates ([GH-86023](https://github.com/godotengine/godot/pull/86023)).
+- Thirdparty: Updates to astcenc 4.7.0, clipper2 1.3.0, harfbuzz 8.3.0, libpng 1.6.43, thorvg 0.12.7, pcre2 10.43.
+- And a lot of documentation improvements!
 
 And many more! Please see the [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-dev5) for more, there has been a lot of great work this release and the shortness of these release notes are not an indication of the amount of great stuff coming.
 
