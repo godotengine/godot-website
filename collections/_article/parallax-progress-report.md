@@ -81,6 +81,6 @@ With any effect that is based on perception, there are some tricky areas. A few 
 
 ### Thank you
 
-Thanks to those who helped make this feature, especially: [MewPurPur](https://github.com/MewPurPur), [Mickeon](https://github.com/Mickeon), [KoBeWi](https://github.com/KoBeWi), [AThousandShips](https://github.com/AThousandShips), and [adamscott](https://github.com/adamscott), not to mention a dozen others that helped with feedback and testing. If you have any suggestions for improvement for `Parallax2D`, please make a proposal or start a discussion. If you've got a good idea or see room for improvement and are hesitant to start contributing, don't be! Even if you see a misspelled word in the docs or a something you think might be too small, it's not!
+Thanks to those who helped make this feature, especially: [MewPurPur](https://github.com/MewPurPur), [Mickeon](https://github.com/Mickeon), [KoBeWi](https://github.com/KoBeWi), [AThousandShips](https://github.com/AThousandShips), [adamscott](https://github.com/adamscott), and [Mr. Dink](https://github.com/markdibarry), not to mention a dozen others that helped with feedback and testing. If you have any suggestions for improvement for `Parallax2D`, please make a proposal or start a discussion. If you've got a good idea or see room for improvement and are hesitant to start contributing, don't be! Even if you see a misspelled word in the docs or a something you think might be too small, it's not!
 
 Thanks again, and we'll see you in 4.3!
