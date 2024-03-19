@@ -15,7 +15,7 @@ Simulating depth with backgrounds is a staple of 2D games. Godot's parallax syst
 
 ### A fresh start
 
-`Parallax2D` is a new node intended as an all-in-one replacement for `ParallaxBackground` and `ParallaxLayer`. It has feature-parity with the old system along with some new goodies! This is only the beginning, though; There's tons of improvements that can still be made! It's flagged as experimental in 4.3 and is subject to change while we get some more feedback. The plan is to eventually deprecate (not remove) the old nodes, but rest assured, they won't be deprecated until we are confident they are fully superseded by `Parallax2D`. New features will be focused on `Parallax2D`, but we will still be accepting bug fixes for the old nodes.
+`Parallax2D` is a new node intended as an all-in-one replacement for `ParallaxBackground` and `ParallaxLayer`. It has feature-parity with the old system along with some new goodies! This is only the beginning, though; there's tons of improvements that can still be made! It's flagged as experimental in 4.3 and is subject to change while we get some more feedback. The plan is to eventually deprecate (not remove) the old nodes, but rest assured, they won't be deprecated until we are confident they are fully superseded by `Parallax2D`. New features will be focused on `Parallax2D`, but we will still be accepting bug fixes for the old nodes.
 
 You can convert your current `ParallaxBackground` and `ParallaxLayer`s by clicking on your `ParallaxBackground` node in the scene tree, then `Convert to Parallax2D` from the context dropdown. Please give it a try!
 
@@ -29,7 +29,7 @@ There have been a lot of proposals and issues regarding Godot's parallax system 
   <source src="/storage/blog/parallax2d/lights.mp4" type="video/mp4">
 </video>
 
-To achieve this lighting effect, my system uses `GradientTexture2D`'s to mask an overlay or foreground objects using a screen-reading shader. For this to work, both the mask and the target need to be in the same `CanvasLayer`. This is normally the case for nodes like `Sprite2D` or `TextureRect`, but `ParallaxLayer` is restricted to being a direct child of `ParallaxBackground`. Not only this (even worse), `ParallaxBackground`'s base class is `CanvasLayer`, making it completely incompatible with this technique. How *inflexible!*
+To achieve this lighting effect, my system uses `GradientTexture2D`'s to mask an overlay or foreground objects using a screen-reading shader. For this to work, both the mask and the target need to be in the same `CanvasLayer`. This is normally the case for nodes like `Sprite2D` or `TextureRect`, but `ParallaxLayer` is restricted to being a direct child of `ParallaxBackground`. Not only this (even worse), `ParallaxBackground`'s base class is `CanvasLayer`, making it completely incompatible with this technique. GROSS.
 
 To understand why this is the case, we need to point out that `ParallaxLayer` not only provides a parallax effect, but also an incredibly popular "infinite scrolling" bonus effect. Of course, actual infinite scrolling isn't possible (right?), so, behind the scenes, Godot performs a bit of visual trickery (dramatization):
 
@@ -37,7 +37,9 @@ To understand why this is the case, we need to point out that `ParallaxLayer` no
   <source src="/storage/blog/parallax2d/secret.mp4" type="video/mp4">
 </video>
 
-The textures are repeated and their position zips back when it gets too far to appear like it's wrapping around. Originally, `ParallaxBackground` was intentionally made a `CanvasLayer` to take advantage of a quirk of the rendering system: each layer is processed one at a time. This provides space to repeat entire branches multiple times, achieving `ParallaxLayer`'s "infinite scrolling" effect. This isn't ideal, though. We want to allow this *anywhere* in the tree, not just at the root of a layer. By passing a field (unique to `ParallaxLayer`) further down in the renderer, we can have the same effect on a sub-branch. This also reveals something else significant: without the need for `ParallaxBackground` to be a `CanvasLayer`, there's not much of a need for `ParallaxBackground` at all! Aw man! This is starting to sound like a breaking change.
+The textures are repeated by a value you set and their position zips back when it scrolls too far. This makes it appear like it's repeating forever, deceiving the viewer! Godot is practically an illusionist!
+
+Originally, `ParallaxBackground` was intentionally made a `CanvasLayer` (stay with me here) to take advantage of a quirk of the rendering system: each layer is processed one at a time. This provides space to repeat entire branches multiple times, achieving `ParallaxLayer`'s "infinite scrolling" effect. This isn't ideal, though. We want to allow this *anywhere* in the tree, not just at the root of a layer. By passing a field unique to `ParallaxLayer` further down in the renderer, we can have the same effect on a sub-branch. This also reveals something else significant: without the need for `ParallaxBackground` to be a `CanvasLayer`, there's not much of a need for `ParallaxBackground` at all! Aw man! This is starting to sound like a breaking change.
 
 After consulting with a few other contributors, it was clear there were two options:
 1. Wait until 5.0 and make these changes directly to `ParallaxLayer` and retire `ParallaxBackground`.
@@ -97,11 +99,11 @@ Increasing the `repeat_times` will allow for the number of repeats to grow and s
 
 With any effect that is based on perception, there are some tricky areas (since the entire effect is a trick!). A few of the same drawbacks to `ParallaxBackground` still apply to `Parallax2D`. For example, multiple cameras aren't directly supported (booo!). This makes sense because `Parallax2D` follows the same concept as `ParallaxBackground`: textures move at different speeds relative to the viewport. If you have multiple viewports, the textures can't move relative to all of them and can't be in two places at once! Just like in `ParallaxBackground`, as a workaround, you can clone the `Parallax2D`s and place each in a separate viewport.
 
-Additionally, even though `Parallax2D` is a `Node2D`, you should still take caution when moving or scaling any parent nodes. It can be a delicate effect, so its recommended to be careful in complex setups.
+Additionally, even though `Parallax2D` is a `Node2D`, you should still take caution when moving or scaling any parent nodes. It can be a delicate effect, so it's recommended to be careful in complex setups.
 
 ### Thanks!
 
-Thanks to those who helped make this feature, especially: [MewPurPur](https://github.com/MewPurPur) for their lightning-fast SVG skills, [Mickeon](https://github.com/Mickeon) for championing this feature from the get-go, [KoBeWi](https://github.com/KoBeWi), [AThousandShips](https://github.com/AThousandShips), and [adamscott](https://github.com/adamscott) for jumping in with detailed reviews and constant questions to make sure it covered all corner cases and was *just right*... not to mention a dozen others that helped with feedback and testing. I'm [Mark](https://github.com/markdibarry) (a.k.a. Mr. Dink in the Godot community). I've been contributing to the Godot engine for the last few years, but this is my first "big feature" contribution.
+Thanks to those who helped make this feature, especially: [MewPurPur](https://github.com/MewPurPur) for their lightning-fast SVG skills, [Mickeon](https://github.com/Mickeon) and [clayjohn](https://github.com/clayjohn) for championing this feature from the get-go, and [KoBeWi](https://github.com/KoBeWi), [AThousandShips](https://github.com/AThousandShips), and [adamscott](https://github.com/adamscott) for jumping in with detailed reviews and constant questions to make sure it covered all corner cases and was *just right*... not to mention a dozen others that helped with feedback and testing. I'm [Mark](https://github.com/markdibarry) (a.k.a. Mr. Dink in the Godot community). I've been contributing to the Godot engine for the last few years, but this is my first "big feature" contribution. I hope you like it!
 
 If you have any suggestions for improvement for `Parallax2D`, feel free to make a proposal or start a discussion. If you've got a good idea or see room for improvement and are hesitant to start contributing, don't be! Even if you see a misspelled word in the docs or a something you think might be too small, it's not! We wouldn't be where we are without our community willing to jump in and get their hands dirty... so join in!
 
