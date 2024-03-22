@@ -4,10 +4,10 @@ excerpt: "A new node is on its way to help with parallax in 2D."
 categories: ["progress-report"]
 author: "Mark DiBarry"
 image: /storage/blog/covers/progress-report-parallax2d.webp
-date: 2024-03-19 12:00:00
+date: 2024-03-22 12:00:00
 ---
 
-Simulating depth with backgrounds is a staple of 2D games. Godot's parallax system has been part of the core node set before Godot even went open source. With all of Godot's advancements in the last decade, the parallax system has remained (mostly) the same. In the upcoming 4.3 release, it's time for it to get some love and attention too!
+Simulating depth with backgrounds is a staple of 2D games. Godot's parallax system has been part of the core node set even before Godot went open source. With all of Godot's advancements in the last decade, the parallax system has remained (mostly) the same. In the upcoming 4.3 release, it's time for it to get some love and attention too!
 
 <video autoplay loop muted playsinline title="An example of the parallax effect">
   <source src="/storage/blog/parallax2d/scroll.mp4" type="video/mp4">
@@ -15,7 +15,7 @@ Simulating depth with backgrounds is a staple of 2D games. Godot's parallax syst
 
 ### A fresh start
 
-`Parallax2D` is a new node intended as an all-in-one replacement for `ParallaxBackground` and `ParallaxLayer`. It has feature-parity with the old system along with some new goodies! This is only the beginning, though; there's tons of improvements that can still be made! It's flagged as experimental in 4.3 and is subject to change while we get some more feedback. The plan is to eventually deprecate (not remove) the old nodes, but rest assured, they won't be deprecated until we are confident they are fully superseded by `Parallax2D`. New features will be focused on `Parallax2D`, but we will still be accepting bug fixes for the old nodes.
+`Parallax2D` is a new node intended as an all-in-one replacement for `ParallaxBackground` and `ParallaxLayer`. It has feature-parity with the old system along with some new goodies! It's flagged as experimental in 4.3 and is subject to change while we get some more feedback. The plan is to eventually deprecate (not remove) the old nodes, but rest assured, they won't be deprecated until we are confident they are fully superseded by `Parallax2D`. New features will be focused on `Parallax2D`, but we will still be accepting bug fixes for the old nodes.
 
 You can convert your current `ParallaxBackground` and `ParallaxLayer`s by clicking on your `ParallaxBackground` node in the scene tree, then `Convert to Parallax2D` from the context dropdown. Please give it a try!
 
@@ -39,7 +39,7 @@ To understand why this is the case, we need to point out that `ParallaxLayer` no
 
 The textures are repeated by a value you set and their position zips back when it scrolls too far. This makes it appear like it's repeating forever, deceiving the viewer! Godot is practically an illusionist!
 
-Originally, `ParallaxBackground` was intentionally made a `CanvasLayer` (stay with me here) to take advantage of a quirk of the rendering system: each layer is processed one at a time. This provides space to repeat entire branches multiple times, achieving `ParallaxLayer`'s "infinite scrolling" effect. This isn't ideal, though. We want to allow this *anywhere* in the tree, not just at the root of a layer. By passing a field unique to `ParallaxLayer` further down in the renderer, we can have the same effect on a sub-branch. This also reveals something else significant: without the need for `ParallaxBackground` to be a `CanvasLayer`, there's not much of a need for `ParallaxBackground` at all! Aw man! This is starting to sound like a breaking change.
+Originally, `ParallaxBackground` was intentionally made a `CanvasLayer` (stay with me here) to take advantage of a quirk of the rendering system: each layer is processed one at a time. This provides space to repeat entire branches multiple times, achieving `ParallaxLayer`'s "infinite scrolling" effect. This isn't ideal, though. We want to allow this *anywhere* in the tree, not just at the root of a layer. By passing a field unique to `ParallaxLayer` further down in the renderer, we can have the same effect on a sub-branch. This also reveals something else significant: without the need for `ParallaxBackground` to be a `CanvasLayer`, there's not much of a need for `ParallaxBackground` at all! Aw man! This is starting to sound like a breaking change...
 
 After consulting with a few other contributors, it was clear there were two options:
 1. Wait until 5.0 and make these changes directly to `ParallaxLayer` and retire `ParallaxBackground`.
@@ -49,15 +49,15 @@ BIG SURPRISE: we decided to go with the second option! Having duplicate features
 
 ### Bells *and* whistles
 
-With the big breaking change being up front (inheriting `Node2D`, and consolidating the nodes), it'll be much easier to add features or fixes without breaking changes in the future. Here is a list of some of the most common issues and *hotly* requested features we've supported for `Parallax2D`:
+With the big change up front (inheriting `Node2D`, and consolidating the nodes), it'll be much easier to add features or fixes without breaking changes in the future. Here is a list of some of the most common issues and *hotly* requested features we've supported for `Parallax2D`:
 
+- Simplified workflow
 - Ability to follow camera rotation
 - Compatibility with `CanvasGroup` and `BackBufferCopy`
 - Support for zooming out with a `Camera2D`
-- A simpler workflow
 - Autoscroll
+- Improved documentation
 - Performance improvements
-- Better documentation
 
 #### Reogranization
 
@@ -67,9 +67,9 @@ The inspector properties are now reorganized and categorized. Notice that the li
 
 #### Consolidation
 
-Requiring two nodes in a strict hierarchy has been a point of confusion and frustration for users in the past, with it not always being the clearest which node is responsible for what. With the `CanvasLayer` trick no longer required for the "infinite repeat" effect, it frees us up for some simplification. We discussed this decision in depth, and have a few reasons for it.
+Requiring two nodes in a strict hierarchy has been a point of confusion and frustration for users in the past, with it not always being the clearest *which* node is responsible for *what*. With the `CanvasLayer` trick no longer required for the "infinite repeat" effect, it frees us up for some simplification. We discussed this decision in depth and have a few reasons for it.
 
-If the new `Parallax2D` were required to be a direct child of something like `ParallaxBackground`, the only purpose it'd serve is to run a for-loop over all its children for setting values. A nice shortcut, but it isn't enough to warrant a whole separate core node and enforce that relationship. Some new handy editor shortcuts were provided in the years since the parallax system was first put in place, like the ability to select multiple of the same node and update shared properties all at once. If a user wants to update all the nodes via code, they'd need to write a script for it anyway... not to mention it'd reintroduce the hard coupled parent/child relationship we removed, so it's best left up to the user to choose on a case-by-case basis. I'm also not opposed to making an add-on if no one beats me to it!
+If the new `Parallax2D` were required to be a direct child of something like `ParallaxBackground`, the only purpose it'd serve is to run a for-loop over all its children to set values. A nice shortcut, but not enough to warrant a whole separate core node and enforce that relationship. Some new handy editor shortcuts were provided in the years since the parallax system was first put in place, like the ability to select multiple of the same node and update shared properties all at once. Alternatively, if a user wants to update all the nodes via code, they'd need to write a script for it anyway... not to mention it'd reintroduce the hard coupled parent/child relationship we removed, so it's best left up to the user to choose on a case-by-case basis. I'm also not opposed to making an add-on if no one beats me to it!
 
 #### `CanvasLayer` to `Node2D`
 
@@ -89,7 +89,7 @@ This shouldn't come up often, but the new `repeat_times` property is being intro
   <source src="/storage/blog/parallax2d/zoom_out.mp4" type="video/mp4">
 </video>
 
-Increasing the `repeat_times` will allow for the number of repeats to grow and spread outward, so that you can zoom out and not reveal the magic going on behind the scenes. Eventually, it'd be nice to have a flag to have this adjust automatically, but this is a good start!
+Increasing the `repeat_times` will allow for the number of repeats to grow and spread outward, so that you can zoom out and not reveal the magic going on behind the scenes. Eventually, it'd be nice to have a flag to adjust this automatically, but this is a good start! Bear in mind that this repeats *all* children of the `Parallax2D` node. If you want only one of the children to repeat, it might be preferable to use the `texture_repeat` property and `Sprite2D`'s region to prepare your background.
 
 #### What else?
 
@@ -97,14 +97,16 @@ Increasing the `repeat_times` will allow for the number of repeats to grow and s
 
 ### Caveats and future
 
-With any effect that is based on perception, there are some tricky areas (since the entire effect is a trick!). A few of the same drawbacks to `ParallaxBackground` still apply to `Parallax2D`. For example, multiple cameras aren't directly supported (booo!). This makes sense because `Parallax2D` follows the same concept as `ParallaxBackground`: textures move at different speeds relative to the viewport. If you have multiple viewports, the textures can't move relative to all of them and can't be in two places at once! Just like in `ParallaxBackground`, as a workaround, you can clone the `Parallax2D`s and place each in a separate viewport.
+With any effect that is based on perception, there are some tricky areas (since the entire effect is a trick!). A few of the same drawbacks to `ParallaxBackground` still apply to `Parallax2D`. For example, multiple cameras aren't directly supported (booo!). This makes sense because `Parallax2D` follows the same concept as `ParallaxBackground`: the textures' positions are modified directly and move at different speeds relative to the viewport. If you have multiple viewports, the textures can't move relative to all of them and can't be in two places at once! Just like in `ParallaxBackground`, as a workaround, you can clone the `Parallax2D`s and place each in a separate viewport.
 
-Additionally, even though `Parallax2D` is a `Node2D`, you should still take caution when moving or scaling any parent nodes. It can be a delicate effect, so it's recommended to be careful in complex setups.
+There's a known trick you can perform with `ParallaxBackground` by scaling the entire `CanvasLayer` up or down to create the impression of depth using the `follow_viewport_scale` property. This techinque also makes it easier to preview your effect in the editor. This is still available with `Parallax2D` if you place it in a `CanvasLayer`, but (just like using it with `ParallaxBackground`) it has some flaws. It scales both size *and* speed, which may not be desired, and might not be suitable for some pixel art styles that avoid scaling textures. The *better* option is to provide an officially-supported way to preview the parallax effect in the editor, and a few contributors have already shown progress on providing this in the form of an add-on or editor tool. Can you believe that? *4.3 isn't even out yet!* The sheer *power* of this community.
+
+Additionally, even though `Parallax2D` is a `Node2D`, you should still take caution when moving or scaling any parent nodes. It can be a delicate effect, so it's recommended to be cautious in complex setups.
 
 ### Thanks!
 
 Thanks to those who helped make this feature, especially: [MewPurPur](https://github.com/MewPurPur) for their lightning-fast SVG skills, [Mickeon](https://github.com/Mickeon) and [clayjohn](https://github.com/clayjohn) for championing this feature from the get-go, and [KoBeWi](https://github.com/KoBeWi), [AThousandShips](https://github.com/AThousandShips), and [adamscott](https://github.com/adamscott) for jumping in with detailed reviews and constant questions to make sure it covered all corner cases and was *just right*... not to mention a dozen others that helped with feedback and testing. I'm [Mark](https://github.com/markdibarry) (a.k.a. Mr. Dink in the Godot community). I've been contributing to the Godot engine for the last few years, but this is my first "big feature" contribution. I hope you like it!
 
-If you have any suggestions for improvement for `Parallax2D`, feel free to make a proposal or start a discussion. If you've got a good idea or see room for improvement and are hesitant to start contributing, don't be! Even if you see a misspelled word in the docs or a something you think might be too small, it's not! We wouldn't be where we are without our community willing to jump in and get their hands dirty... so join in!
+If you have any suggestions for improvement for `Parallax2D`, feel free to make a proposal or start a discussion. We already have some bug fixes on the way, so be sure to check the backlog first! If you've got a good idea or see room for improvement and are hesitant to start contributing, don't be! Even if you see a misspelled word in the docs or a something you think might be too small, it's not! We wouldn't be where we are without the willingness of our community to jump in and get their hands dirty... so join in!
 
 Thanks again, and we'll see you in 4.3!
