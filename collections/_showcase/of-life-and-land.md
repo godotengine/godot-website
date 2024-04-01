@@ -1,24 +1,28 @@
 ---
-description: "Circle of Kerzoven is a charming settlement-building strategy game paired with a rich simulation experience. Every animal and plant tries to find their place in nature while you lead your villagers to their future. Expand to different regions and trade with local factions to gain needed resources."
-date: 2021-12-01 00:00:00 +0000
+description: "Of Life and Land is a charming settlement-building strategy game paired with a rich simulation experience. Every animal and plant tries to find their place in nature while you lead your villagers to their future. Expand to different regions and trade with local factions to gain needed resources. "
+date: 2024-04-02 00:00:00 +0000
 
-title: "Circle of Kerzoven"
+title: "Of Life and Land"
 author: "Kerzoven"
-image: "/assets/showcase/kerzoven-header.webp"
+image: "/assets/showcase/of-life-and-land-header.webp"
 gallery: [
-	"/assets/showcase/kerzoven-1.webp",
-	"/assets/showcase/kerzoven-2.webp"
+	"/assets/showcase/of-life-and-land-1.webp",
+	"/assets/showcase/of-life-and-land-2.webp",
+	"/assets/showcase/of-life-and-land-3.webp",
+	"/assets/showcase/of-life-and-land-4.webp"
 ]
 website: https://www.kerzoven.com/
-release_date: TBD
-youtube_id: "wrl6BASU938"
+release_date: April 2024
+youtube_id: "md-g0UNTBV4"
 
 windows: true
 linux: true
 
-steam: https://store.steampowered.com/app/1733110/Circle_of_Kerzoven/
+steam: https://store.steampowered.com/app/1733110/Of_Life_and_Land/
 
 featured_in_home: false
+redirect_from:
+  - /showcase/circle-of-kerzoven/
 ---
 
 Take the role of a leader delegated to build new settlements in remote, unknown corners of the empire. In those forgotten places, nature is wild and legends are more real and vivid than one may think. Experience the challenges of different seasons and climates in a world, where every animal and every plant tries to find their place in nature, while you lead your villagers. How much will you share with nature? Will you strive for balance or even enforce the extinction of certain animals? Follow the old paths… or find your own.
