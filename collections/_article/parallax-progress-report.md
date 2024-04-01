@@ -4,7 +4,7 @@ excerpt: "A new node is on its way to help with parallax in 2D."
 categories: ["progress-report"]
 author: "Mark DiBarry"
 image: /storage/blog/covers/progress-report-parallax2d.webp
-date: 2024-03-22 12:00:00
+date: 2024-04-02 12:00:00
 ---
 
 Simulating depth with backgrounds is a staple of 2D games. Godot's parallax system has been part of the core node set even before Godot went open source. With all of Godot's advancements in the last decade, the parallax system has remained (mostly) the same. In the upcoming 4.3 release, it's time for it to get some love and attention too!
