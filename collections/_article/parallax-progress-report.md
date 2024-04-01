@@ -45,7 +45,7 @@ After consulting with a few other contributors, it was clear there were two opti
 1. Wait until 5.0 and make these changes directly to `ParallaxLayer` and retire `ParallaxBackground`.
 2. Make a new node and provide a conversion tool.
 
-BIG SURPRISE: we decided to go with the second option! Having duplicate features could be confusing to users, but because 4.0 only came out a year ago, users may be waiting a long time for these fixes if we push it out to a major release. Though... an entirely new node means we can make *even more* changes!
+As you can see, we went with the second option. While duplicate features could be confusing to users, 4.0 only came out a year ago, so users may be waiting a long time for these fixes if we push it out to a major release. By creating an entirely new node we have the freedom to make these changes immediately, and *even more* of them!
 
 ### Bells *and* whistles
 
@@ -63,7 +63,7 @@ With the big change up front (inheriting `Node2D`, and consolidating the nodes),
 
 ![The Parallax2D inspector](/storage/blog/parallax2d/inspector.webp)
 
-The inspector properties are now reorganized and categorized. Notice that the limits now follow the same logic as `Camera2D` limits. How *standardized!* There are notes in the previous parallax system's documentation clarifying that `mirroring` doesn't actually mirror anything, but rather just repeats. The name has been changed to `repeat_size` to better reflect (ha!) what it actually does.
+The inspector properties are now reorganized and categorized. Notice that the limits now follow the same logic as `Camera2D` limits. How *standardized!* There are notes in the previous parallax system's documentation clarifying that `mirroring` doesn't actually mirror anything, but rather just repeats. The name has been changed to `repeat_size` to better reflect what it actually does.
 
 #### Consolidation
 
@@ -97,7 +97,7 @@ Increasing the `repeat_times` will allow for the number of repeats to grow and s
 
 ### Caveats and future
 
-With any effect that is based on perception, there are some tricky areas (since the entire effect is a trick!). A few of the same drawbacks to `ParallaxBackground` still apply to `Parallax2D`. For example, multiple cameras aren't directly supported (booo!). This makes sense because `Parallax2D` follows the same concept as `ParallaxBackground`: the textures' positions are modified directly and move at different speeds relative to the viewport. If you have multiple viewports, the textures can't move relative to all of them and can't be in two places at once! Just like in `ParallaxBackground`, as a workaround, you can clone the `Parallax2D`s and place each in a separate viewport.
+With any effect that is based on perception, there are some tricky areas (since the entire effect is a trick!). A few of the same drawbacks to `ParallaxBackground` still apply to `Parallax2D`. For example, multiple cameras aren't directly supported. This makes sense because `Parallax2D` follows the same concept as `ParallaxBackground`: the textures' positions are modified directly and move at different speeds relative to the viewport. If you have multiple viewports, the textures can't move relative to all of them and can't be in two places at once! Just like in `ParallaxBackground`, as a workaround, you can clone the `Parallax2D`s and place each in a separate viewport.
 
 There's a known trick you can perform with `ParallaxBackground` by scaling the entire `CanvasLayer` up or down to create the impression of depth using the `follow_viewport_scale` property. This techinque also makes it easier to preview your effect in the editor. This is still available with `Parallax2D` if you place it in a `CanvasLayer`, but (just like using it with `ParallaxBackground`) it has some flaws. It scales both size *and* speed, which may not be desired, and might not be suitable for some pixel art styles that avoid scaling textures. The *better* option is to provide an officially-supported way to preview the parallax effect in the editor, and a few contributors have already shown progress on providing this in the form of an add-on or editor tool. Can you believe that? *4.3 isn't even out yet!* The sheer *power* of this community.
 
@@ -105,8 +105,6 @@ Additionally, even though `Parallax2D` is a `Node2D`, you should still take caut
 
 ### Thanks!
 
-Thanks to those who helped make this feature, especially: [MewPurPur](https://github.com/MewPurPur) for their lightning-fast SVG skills, [Mickeon](https://github.com/Mickeon) and [clayjohn](https://github.com/clayjohn) for championing this feature from the get-go, and [KoBeWi](https://github.com/KoBeWi), [AThousandShips](https://github.com/AThousandShips), and [adamscott](https://github.com/adamscott) for jumping in with detailed reviews and constant questions to make sure it covered all corner cases and was *just right*... not to mention a dozen others that helped with feedback and testing. I'm [Mark](https://github.com/markdibarry) (a.k.a. Mr. Dink in the Godot community). I've been contributing to the Godot engine for the last few years, but this is my first "big feature" contribution. I hope you like it!
+Thanks to those who helped make this feature, especially: [MewPurPur](https://github.com/MewPurPur) for their lightning-fast SVG skills, [Mickeon](https://github.com/Mickeon) and [clayjohn](https://github.com/clayjohn) for championing this feature from the get-go, and [KoBeWi](https://github.com/KoBeWi), [AThousandShips](https://github.com/AThousandShips), and [adamscott](https://github.com/adamscott) for jumping in with detailed reviews and constant questions to make sure it covered all corner cases and was *just right*... not to mention a dozen others that helped with feedback and testing. I'm [Mark DiBarry](https://github.com/markdibarry) (a.k.a. Mr. Dink in the Godot community). I've been contributing to the Godot engine for the last few years, but this is my first "big feature" contribution. I hope you like it!
 
-If you have any suggestions for improvement for `Parallax2D`, feel free to make a proposal or start a discussion. We already have some bug fixes on the way, so be sure to check the backlog first! If you've got a good idea or see room for improvement and are hesitant to start contributing, don't be! Even if you see a misspelled word in the docs or a something you think might be too small, it's not! We wouldn't be where we are without the willingness of our community to jump in and get their hands dirty... so join in!
-
-Thanks again, and we'll see you in 4.3!
+Do you see room for improvement or felt the spark of an idea while reading this? We're always looking for more contributors and would love it if you'd join in. Don't worry about the size of your first submission; Many of us started with rectifying spelling errors in the docs. We wouldn't be where we are without the willingness of our community to jump in and get their hands dirty. What are you waiting for?
