@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Parallax2D Progress Report</title>
+		<link>https://godotengine.org/article/parallax-progress-report/</link>
+		<description>A new node is on its way to help with parallax in 2D.</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/parallax-progress-report/</guid>
+		<dc:creator>Mark DiBarry</dc:creator>
+		<pubDate>Tue, 02 Apr 2024 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/progress-report-parallax2d.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.3 dev 5</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-5/</link>
 		<description>Sneaking one more dev release in for testing before the team heads to GDC!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Emi</dc:creator>
 		<pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/godot-showreel-2023.webp</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.2 RC 1</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-2-rc-1/</link>
-		<description>With every critical bug identified and squashed, we are making our last turn and preparing to sprint to the finish line with Godot 4.2!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-2-rc-1/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Fri, 17 Nov 2023 15:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-rc-1.webp</image>
 	</item>
 	
 
