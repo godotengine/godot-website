@@ -59,7 +59,7 @@ With the big change up front (inheriting `Node2D`, and consolidating the nodes),
 - Improved documentation
 - Performance improvements
 
-#### Reogranization
+#### Reorganization
 
 ![The Parallax2D inspector](/storage/blog/parallax2d/inspector.webp)
 
