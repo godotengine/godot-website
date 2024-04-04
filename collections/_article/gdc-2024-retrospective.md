@@ -19,7 +19,7 @@ Notably, we heard from a significant number of people who recently transitioned 
 
 ![Exhibitors at the Godot booth](/storage/blog/gdc/2024/booth.png)
 
-Of course, you cannot attend a big industry gathering without scheduling a fair share of meetings, so the Foundation did just that. One goal was to secure funding to keep the project running and be able to hire more core developers. Another recurring topic in such conversations were possible integrations and better industry support for Godot developers - we cannot wait to show you what is brewing in that area.
+Of course, you cannot attend a big industry gathering without scheduling a fair share of meetings, so the Foundation did just that. One goal was to secure funding to keep the project running and be able to hire more core developers. Another recurring topic in such conversations were possible integrations and better industry support for Godot developers — we cannot wait to show you what is brewing in that area.
 
 __If you or your company had packed schedules already or could not attend GDC, but want to talk to us about similar topics, please reach out to [contact@godotengine.org](mailto:contact@godotengine.org)__
 
