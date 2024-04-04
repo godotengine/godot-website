@@ -6,9 +6,6 @@ patron:
     link: "https://re-logic.com/"
     image: "https://fund.godotengine.org/static/logos/re-logic.png"
 platinum:
-  - name: "Spiffcode"
-    link: "http://spiffcode.com/"
-    image: "https://fund.godotengine.org/static/logos/spiffcode.png"
   - name: "Heroic Labs"
     link: "https://heroiclabs.com/"
     image: "https://fund.godotengine.org/static/logos/heroiclabs.png"
