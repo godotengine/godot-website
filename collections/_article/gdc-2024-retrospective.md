@@ -23,7 +23,7 @@ Of course, you cannot attend a big industry gathering without scheduling a fair 
 
 __If you or your company had packed schedules already or could not attend GDC, but want to talk to us about similar topics, please reach out to [contact@godotengine.org](mailto:contact@godotengine.org).__
 
-Our gathering at GitHub HQ also proved successful, with many Godot users, content creators, and contributors chatting about their personal projects with us. The vegan food seemed to be a hit as well. Afterwards we were told it was one of the most relaxed evenings of the week for some of our guests. We are grateful to GitHub that we could provide this kind of space to the Godot community, and are looking forward to GodotCon in that regard (TBA).
+Our gathering at GitHub HQ also proved successful, with many Godot users, content creators, and contributors chatting about their personal projects with us. The vegan food seemed to be a hit as well. Afterwards, we were told it was one of the most relaxed evenings of the week for some of our guests. We are grateful to GitHub that we could provide this kind of space to the Godot community, and are looking forward to GodotCon in that regard (TBA).
 
 ![Assorted pictures from the week](/storage/blog/gdc/2024/collage.png)
 
