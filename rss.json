@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "GDC 2024: Retrospective",
+			"link": "https://godotengine.org/article/gdc-2024-retrospective/",
+			"description": "We have returned from the Game Developers Conference (GDC) in San Francisco, so let&#39;s talk about it!",
+			"categories": ["Events"],
+			"guid": "https://godotengine.org/article/gdc-2024-retrospective/",
+			"dc:creator": "Nathalie Galla",
+			"pubDate": "Fri, 05 Apr 2024 14:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/gdc-2024-retrospective.jpg"
+		},
+		
+		{
 			"title": "Parallax2D Progress Report",
 			"link": "https://godotengine.org/article/parallax-progress-report/",
 			"description": "A new node is on its way to help with parallax in 2D.",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Fri, 24 Nov 2023 20:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-rc-2.webp"
-		},
-		
-		{
-			"title": "Submissions open for Godot 2023 showreel!",
-			"link": "https://godotengine.org/article/submissions-open-godot-2023-showreel/",
-			"description": "Showcase your Godot creations in 2023! We&#39;re inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don&#39;t miss this chance to be a part of it!",
-			"categories": ["News"],
-			"guid": "https://godotengine.org/article/submissions-open-godot-2023-showreel/",
-			"dc:creator": "Emi",
-			"pubDate": "Mon, 20 Nov 2023 00:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/godot-showreel-2023.webp"
 		}
 		
 	]

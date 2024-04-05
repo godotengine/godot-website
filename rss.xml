@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>GDC 2024: Retrospective</title>
+		<link>https://godotengine.org/article/gdc-2024-retrospective/</link>
+		<description>We have returned from the Game Developers Conference (GDC) in San Francisco, so let&#39;s talk about it!</description>
+		
+		<category>Events</category>
+		
+		<guid>https://godotengine.org/article/gdc-2024-retrospective/</guid>
+		<dc:creator>Nathalie Galla</dc:creator>
+		<pubDate>Fri, 05 Apr 2024 14:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/gdc-2024-retrospective.jpg</image>
+	</item>
+	
+	<item>
 		<title>Parallax2D Progress Report</title>
 		<link>https://godotengine.org/article/parallax-progress-report/</link>
 		<description>A new node is on its way to help with parallax in 2D.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 24 Nov 2023 20:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-rc-2.webp</image>
-	</item>
-	
-	<item>
-		<title>Submissions open for Godot 2023 showreel!</title>
-		<link>https://godotengine.org/article/submissions-open-godot-2023-showreel/</link>
-		<description>Showcase your Godot creations in 2023! We&#39;re inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don&#39;t miss this chance to be a part of it!</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/submissions-open-godot-2023-showreel/</guid>
-		<dc:creator>Emi</dc:creator>
-		<pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/godot-showreel-2023.webp</image>
 	</item>
 	
 
