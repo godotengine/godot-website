@@ -31,6 +31,9 @@ gold:
   - name: "Mega Crit"
     link: "https://www.megacrit.com/"
     image: "https://fund.godotengine.org/static/logos/megacrit.png"
+  - name: "Pirate Software"
+    link: "https://gopiratesoftware.com/"
+    image: "https://fund.godotengine.org/static/logos/piratesoftware.webp"
 silver:
   - name: "Affray Interactive"
     link: "https://scp.games/pandemic/"
