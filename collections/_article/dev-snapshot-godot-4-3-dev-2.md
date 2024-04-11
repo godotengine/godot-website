@@ -23,7 +23,7 @@ So the past couple of weeks have been focused on merging many of the pull reques
 
 - Shoutout to [Mickeon](https://github.com/Mickeon) who has done an outstanding overhaul of the Node ([GH-68560](https://github.com/godotengine/godot/pull/68560)) and OS ([GH-80282](https://github.com/godotengine/godot/pull/80282)) classes' documentation, as well as adding more autocompletion hints to a lot of engine APIs, which should make your scripting experience much nicer when using methods whose parameters can be inferred from the project's context.
 
-Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
+Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.3.dev2/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 

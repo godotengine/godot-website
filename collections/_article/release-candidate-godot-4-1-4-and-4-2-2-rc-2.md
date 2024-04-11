@@ -15,7 +15,7 @@ So maintenance releases for 4.1 and 4.2 users fell through the cracks temporaril
 
 Since the previous [RC 1 snapshots](/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/), we've merged a lot of additional important bug fixes, which warrant a good amount of testing. So please give it a try on your projects, and let us know if you run into any problem!
 
-Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
+Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
 [Jump to the **Downloads** section](#downloads), and give the new releases a spin right now, or continue reading to learn more about improvements. You can also try the **Web editor** ([**4.1.4 RC 2**](https://editor.godotengine.org/releases/4.1.4.rc2/), [**4.2.2 RC 2**](https://editor.godotengine.org/releases/4.2.2.rc2/)) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 

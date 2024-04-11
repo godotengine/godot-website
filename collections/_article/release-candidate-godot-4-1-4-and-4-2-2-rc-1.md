@@ -15,7 +15,7 @@ Godot's development practices make each release an iteration on the previous one
 
 Both versions have received a number of stability and performance improvements, as well as corrections and polish to documentation. You will find notable changes in their respective highlight sections below.
 
-Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
+Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
 [Jump to the **Downloads** section](#downloads), and give the new releases a spin right now, or continue reading to learn more about improvements. You can also try the **Web editor** ([**4.1.4 RC 1**](https://editor.godotengine.org/releases/4.1.4.rc1/), [**4.2.2 RC 1**](https://editor.godotengine.org/releases/4.2.2.rc1/)) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
