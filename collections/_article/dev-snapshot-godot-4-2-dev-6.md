@@ -47,7 +47,7 @@ Here's a selection of some of the biggest changes since our previous [4.2 dev 5 
 
 * Visual shaders got some nice improvements with the addition of drop-down list properties to custom nodes ([GH-81688](https://github.com/godotengine/godot/pull/81688)), and output ports for vector types are now expandable by default ([GH-82088](https://github.com/godotengine/godot/pull/82088)).
 
-Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
+Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.2.dev6/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 

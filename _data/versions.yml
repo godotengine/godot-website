@@ -17,10 +17,13 @@
       release_notes: "/article/dev-snapshot-godot-4-3-dev-1/"
 
 - name: "4.2.2"
-  flavor: "rc2"
-  release_date: "15 March 2024"
-  release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-2/"
+  flavor: "rc3"
+  release_date: "11 April 2024"
+  release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/"
   releases:
+    - name: "rc2"
+      release_date: "15 March 2024"
+      release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-2/"
     - name: "rc1"
       release_date: "26 January 2024"
       release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/"
@@ -84,10 +87,13 @@
       release_notes: "/article/dev-snapshot-godot-4-2-dev-1/"
 
 - name: "4.1.4"
-  flavor: "rc2"
-  release_date: "15 March 2024"
-  release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-2/"
+  flavor: "rc3"
+  release_date: "11 April 2024"
+  release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/"
   releases:
+    - name: "rc2"
+      release_date: "15 March 2024"
+      release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-2/"
     - name: "rc1"
       release_date: "26 January 2024"
       release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/"

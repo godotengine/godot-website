@@ -15,7 +15,7 @@ Godot 4.1.2 contains a number of stability improvements, addressing crashes rela
 
 We have received reports of issues with saving projects on the web platform, and this release resolves these issues ([GH-79866](https://github.com/godotengine/godot/pull/79866)), as well as a few other platform-specific bugs. Another important problem fixed in 4.1.2 is doubled input events coming from gamepads when using Steam Input ([GH-76045](https://github.com/godotengine/godot/pull/76045)). And as always there is a bunch of smaller, but no less crucial changes and updates!
 
-Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
+Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.2.rc1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 

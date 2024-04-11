@@ -13,7 +13,7 @@ While Godot 4.2 is enjoying its last leg of the development cycle (check out [be
 
 The third maintenance release for Godot 4.1 contains a number of fixes for the rendering system, including issues in all rendering backends, in lightmap and voxel GI systems, and in particles. Various problems were addressed in the editor UI, and in the GUI system in general. The Input team improved controller support and resolved a couple of problems specific to the Android platform. And finally, several documentation mistakes have been corrected, plus there is new documentation available for `RenderingDevice`.
 
-Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in a case of corruption or data loss.
+Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.3.rc1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
