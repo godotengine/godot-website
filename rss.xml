@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Release candidates: Godot 4.1.4 RC 2 &amp; 4.2.2 RC 3</title>
+		<link>https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/</link>
+		<description>Last round of release candidates for the upcoming maintenance releases.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Thu, 11 Apr 2024 10:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-3.webp</image>
+	</item>
+	
+	<item>
 		<title>GDC 2024: Retrospective</title>
 		<link>https://godotengine.org/article/gdc-2024-retrospective/</link>
 		<description>We have returned from the Game Developers Conference (GDC) in San Francisco, so let&#39;s talk about it!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Godot contributors</dc:creator>
 		<pubDate>Thu, 30 Nov 2023 12:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/godot-4-2-arrives-in-style.webp</image>
-	</item>
-	
-	<item>
-		<title>Release candidate: Godot 4.2 RC 2</title>
-		<link>https://godotengine.org/article/release-candidate-godot-4-2-rc-2/</link>
-		<description>The first release candidate brought another crop of regression reports, which we&#39;ve now fixed!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/release-candidate-godot-4-2-rc-2/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Fri, 24 Nov 2023 20:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-rc-2.webp</image>
 	</item>
 	
 
