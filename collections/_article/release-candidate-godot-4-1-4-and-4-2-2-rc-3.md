@@ -6,7 +6,7 @@ author: Rémi Verschelde
 image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-3.webp
 image_caption_title: "Sunken Shadows"
 image_caption_description: "A game by Sunrise Glitch Games"
-date: 2024-04-11 10:00:00
+date: 2024-04-12 09:00:00
 ---
 
 Here's the final round of release candidates for Godot 4.1.4 and 4.2.2, which I aim to release as stable in a few days.
