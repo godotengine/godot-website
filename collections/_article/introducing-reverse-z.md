@@ -3,11 +3,11 @@ title: "Introducing Reverse Z (AKA I'm sorry for breaking your shader)"
 excerpt: "We are breaking compatibility for some custom shaders. Here is why."
 categories: ["news"]
 author: Clay John
-image: /storage/blog/covers/TODO.webp
+image: /storage/blog/covers/reverse-z.webp
 date: 2024-04-19 15:00:00
 ---
 
-After extensive discussion, we have decided to implement the reverse z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into z-fighting and other depth buffer precision artifacts. 
+After extensive discussion, we have decided to implement the reverse z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into z-fighting and other depth buffer precision artifacts. NVIDIA has an [excellent article](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse z, please read it for more technical info.
 
 I am writing this post because, unfortunately, implementing reverse z naturally breaks compatibility for some shaders. We try to avoid compatibility breakage as much as possible, but in some cases it is unavoidable, or the benefits of doing so far outweigh the cost. The rendering team felt in this case that the benefits sufficiently outweighed the costs.
 
