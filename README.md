@@ -85,6 +85,10 @@ The project is built automatically by GitHub Actions whenever the `master` branc
 itself should not be deployed, as it only contains the source files. The built version of the website is available as the
 `published` branch instead.
 
+The deployed website has to serve a file for the editor to read and check if there are new versions of the Engine available to 
+download. This file is `_data/versions.yml`. It gets copied to `_site/versions.yml` when the website is built using the GitHub
+Action described in `.github/workflows/build-website.yml`.
+
 Note that this is not relevant for local development. Locally you would build the website in place and then serve the `_site`
 folder. See the detailed instructions above.
 
