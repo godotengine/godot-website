@@ -41,7 +41,7 @@ This release is built from commit [`bb5ea0d24`](https://github.com/godotengine/g
 As usual, everything in 4.1.4 RC 3 also made it into 4.2.2 RC 3, but 4.2.2 RC 3 has a number of additional changes.
 
 - Animation: Fix AnimationPlaybackTrack seeking behavior overall ([GH-89794](https://github.com/godotengine/godot/pull/89794)).
-- C#: Use get_instance_binding instead of set ([GH-84947](https://github.com/godotengine/godot/pull/84947)).
+- C#: Use `get_instance_binding` instead of set ([GH-84947](https://github.com/godotengine/godot/pull/84947)).
 - C#: Fix return type hint for methods ([GH-86972](https://github.com/godotengine/godot/pull/86972)).
 - Core: Fix `ResourceLoader.load` cache with relative paths ([GH-90038](https://github.com/godotengine/godot/pull/90038)).
 - Editor: Don't abort loading scenes when `ext_resource` is missing ([GH-85159](https://github.com/godotengine/godot/pull/85159), [GH-90269](https://github.com/godotengine/godot/pull/90269)).
