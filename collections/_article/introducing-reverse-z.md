@@ -13,7 +13,7 @@ I am writing this post because, unfortunately, implementing reverse Z naturally 
 
 We are certain that the vast majority of users will not run into any compatibility breakage. For most people this change is all good with no downside. 
 
-You may need to tweak your shaders if you use a custom spatial Shader that:
+You may need to tweak your shaders if you use a custom spatial shader that:
 
 - Writes to ``POSITION`` in the vertex processor function
 
