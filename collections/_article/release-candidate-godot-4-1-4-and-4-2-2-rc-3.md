@@ -1,5 +1,5 @@
 ---
-title: "Release candidates: Godot 4.1.4 RC 2 & 4.2.2 RC 3"
+title: "Release candidates: Godot 4.1.4 RC 3 & 4.2.2 RC 3"
 excerpt: "Last round of release candidates for the upcoming maintenance releases."
 categories: ["pre-release"]
 author: Rémi Verschelde
