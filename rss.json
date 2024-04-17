@@ -5,18 +5,18 @@
 	
 		
 		{
-			"title": "",
+			"title": "Maintenance release: Godot 4.2.2 &amp; 4.1.4",
 			"link": "https://godotengine.org/article/maintenance-release-godot-4-2-2-and-4-1-4/",
-			"description": "",
-			"categories": [],
+			"description": "It&#39;s been a while since our last update for the 4.2 and 4.1 branches, but the wait should be worth it!",
+			"categories": ["Release"],
 			"guid": "https://godotengine.org/article/maintenance-release-godot-4-2-2-and-4-1-4/",
-			"dc:creator": "",
-			"pubDate": "Wed, 17 Apr 2024 17:36:44 +0000",
-			"image": "https://godotengine.org"
+			"dc:creator": "Rémi Verschelde",
+			"pubDate": "Wed, 17 Apr 2024 17:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-2-2-and-4-1-4.webp"
 		},
 		
 		{
-			"title": "Release candidates: Godot 4.1.4 RC 2 &amp; 4.2.2 RC 3",
+			"title": "Release candidates: Godot 4.1.4 RC 3 &amp; 4.2.2 RC 3",
 			"link": "https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/",
 			"description": "Last round of release candidates for the upcoming maintenance releases.",
 			"categories": ["Pre-release"],

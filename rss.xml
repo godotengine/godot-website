@@ -10,18 +10,20 @@
 	
 	
 	<item>
-		<title></title>
+		<title>Maintenance release: Godot 4.2.2 &amp; 4.1.4</title>
 		<link>https://godotengine.org/article/maintenance-release-godot-4-2-2-and-4-1-4/</link>
-		<description></description>
+		<description>It&#39;s been a while since our last update for the 4.2 and 4.1 branches, but the wait should be worth it!</description>
+		
+		<category>Release</category>
 		
 		<guid>https://godotengine.org/article/maintenance-release-godot-4-2-2-and-4-1-4/</guid>
-		<dc:creator></dc:creator>
-		<pubDate>Wed, 17 Apr 2024 17:36:44 +0000</pubDate>
-		<image>https://godotengine.org</image>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Wed, 17 Apr 2024 17:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-2-2-and-4-1-4.webp</image>
 	</item>
 	
 	<item>
-		<title>Release candidates: Godot 4.1.4 RC 2 &amp; 4.2.2 RC 3</title>
+		<title>Release candidates: Godot 4.1.4 RC 3 &amp; 4.2.2 RC 3</title>
 		<link>https://godotengine.org/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/</link>
 		<description>Last round of release candidates for the upcoming maintenance releases.</description>
 		
