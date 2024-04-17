@@ -20,6 +20,7 @@
   flavor: "stable"
   release_date: "17 April 2024"
   release_notes: "/article/maintenance-release-godot-4-2-2-and-4-1-4/"
+  featured: "4"
   releases:
     - name: "rc3"
       release_date: "12 April 2024"
@@ -35,7 +36,6 @@
   flavor: "stable"
   release_date: "12 December 2023"
   release_notes: "/article/maintenance-release-godot-4-2-1/"
-  featured: "4"
   releases:
     - name: "rc1"
       release_date: "8 December 2023"
