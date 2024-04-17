@@ -30,19 +30,19 @@ Let's look at the cases one-by-one to see what sort of shaders will break and ho
 
 ### Writes to ``POSITION``
 
-When you write to ``POSITION`` in Godot, you are bypassing the built in vertex transformation and writing a clip space position directly. This can be helpful to optimize a vertex shader, or to achieve certain effects (like having a mesh stay fixed in the camera view). Commonly users wrote the following line:
+When you write to ``POSITION`` in Godot, you are bypassing the built-in vertex transformation and writing a clip space position directly. This can be helpful to optimize a vertex shader, or to achieve certain effects (like having a mesh stay fixed in the camera view). Commonly users wrote the following line:
 
 ```
 POSITION = vec4(VERTEX, 1.0);
 ```
 
-This line is even reproduced in our [documentation](https://docs.godotengine.org/en/4.2/tutorials/shaders/advanced_postprocessing.html). It relies on user supplying a QuadMesh with a width and height of 2 to fill the entire screen. The code assumes that:
+This line is even reproduced in our [documentation](https://docs.godotengine.org/en/4.2/tutorials/shaders/advanced_postprocessing.html). It relies on users supplying a QuadMesh with a width and height of 2 to fill the entire screen. The code assumes that:
 
-1. All vertices of the mesh have a z-coordinate of 0 (which is true for the QuadMesh) and
+1. All vertices of the mesh have a z-coordinate of 0 (which is true for the QuadMesh), and
 
 2. A clip space value of 0 corresponds to the near plane.
 
-We have broken assumption 2 by flipping the definition of the near plane and the far plane. so this code no longer works. Instead, users need to write:
+We have broken assumption 2 by flipping the definition of the near plane and the far plane, so this code no longer works. Instead, users need to write:
 
 ```
 POSITION = vec4(VERTEX.xy, 1.0, 1.0);
@@ -110,7 +110,7 @@ if (clip_pos < depth) {
 }
 ```
 
-This reflects the fact that the near plane is now at a clip space z position of 1.0 instead of 0.0. other similar cases will arise. For example, you may instead be looking at the difference between the depth buffer and your vertex position:
+This reflects the fact that the near plane is now at a clip space z position of 1.0 instead of 0.0. Other similar cases will arise. For example, you may instead be looking at the difference between the depth buffer and your vertex position:
 
 ```
 float depth_mask = smoothstep(0.1, 0.3, clip_pos.z - depth);
@@ -120,7 +120,7 @@ You will have to modify the function manually, either using ``depth - clip_pos.z
 
 ### Operations in clip space
 
-The above depth buffer operations are an example of the types of operations users might do in clip space. Ultimately, most operations should not be done in clip space as it is a non-linear space (i.e. relative distances will change depending on the camera's distance to the object). We recommend that, if you are doing operations in clip space (like in the above example) you switch to doing those operations in view space instead. If you know what you are doing and insist on continuing your operations in clip space then:
+The above depth buffer operations are an example of the types of operations users might do in clip space. Ultimately, most operations should not be done in clip space as it is a non-linear space (i.e. relative distances will change depending on the camera's distance to the object). We recommend that, if you are doing operations in clip space (like in the above example), you switch to doing those operations in view space instead. If you know what you are doing and insist on continuing your operations in clip space then:
 
 1. I'm sorry we broke your shader
 
@@ -132,4 +132,4 @@ The above depth buffer operations are an example of the types of operations user
 
 We know that some shaders will break with this change and we are sorry to break compatibility in this way. However, we carefully weighed our options and we decided that now was the best time to implement reverse z. Our other option was to wait until Godot 5.0. We chose not to wait as we intend to continue working on 4.x for many, many years and we anticipate that with all the upgrades coming to the 3D renderer in the coming years, reverse z will become a necessity for many games. Further, we are continuing to expose more ways to customize rendering, including allowing users to access the raw depth texture outside of shaders using [CompositorEffects](https://github.com/godotengine/godot/pull/80214). Accordingly, the negative impact of compatibility breakage will only get worse as time goes on. 
 
-If you run into a situation where your shader breaks and its not covered here, please consider making a post on the [Godot Forum](https://forum.godotengine.org/). We can troubleshoot the issue together and leave our notes for other users to find through search engines. 
+If you run into a situation where your shader breaks and it's not covered here, please consider making a post on the [Godot Forum](https://forum.godotengine.org/). We can troubleshoot the issue together and leave our notes for other users to find through search engines. 
