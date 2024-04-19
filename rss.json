@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Update on the Collaboration with Google and The Forge",
+			"link": "https://godotengine.org/article/update-on-google-forge-2024/",
+			"description": "The collaboration with Google and The Forge has concluded successfully!",
+			"categories": ["News"],
+			"guid": "https://godotengine.org/article/update-on-google-forge-2024/",
+			"dc:creator": "Clay John",
+			"pubDate": "Fri, 19 Apr 2024 18:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/godot-and-android-and-vulkan.webp"
+		},
+		
+		{
 			"title": "Maintenance release: Godot 4.2.2 &amp; 4.1.4",
 			"link": "https://godotengine.org/article/maintenance-release-godot-4-2-2-and-4-1-4/",
 			"description": "It&#39;s been a while since our last update for the 4.2 and 4.1 branches, but the wait should be worth it!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Rémi Verschelde",
 			"pubDate": "Fri, 08 Dec 2023 13:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-1-rc-1.webp"
-		},
-		
-		{
-			"title": "Godot Foundation Update 2023",
-			"link": "https://godotengine.org/article/godot-foundation-update-2023/",
-			"description": "This year has marked significant milestones for the Godot Foundation, and it&#39;s all thanks to the incredible support from our community.",
-			"categories": ["News"],
-			"guid": "https://godotengine.org/article/godot-foundation-update-2023/",
-			"dc:creator": "Godot Foundation",
-			"pubDate": "Tue, 05 Dec 2023 12:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/godot-foundation-update-2023.jpg"
 		}
 		
 	]

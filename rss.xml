@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Update on the Collaboration with Google and The Forge</title>
+		<link>https://godotengine.org/article/update-on-google-forge-2024/</link>
+		<description>The collaboration with Google and The Forge has concluded successfully!</description>
+		
+		<category>News</category>
+		
+		<guid>https://godotengine.org/article/update-on-google-forge-2024/</guid>
+		<dc:creator>Clay John</dc:creator>
+		<pubDate>Fri, 19 Apr 2024 18:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/godot-and-android-and-vulkan.webp</image>
+	</item>
+	
+	<item>
 		<title>Maintenance release: Godot 4.2.2 &amp; 4.1.4</title>
 		<link>https://godotengine.org/article/maintenance-release-godot-4-2-2-and-4-1-4/</link>
 		<description>It&#39;s been a while since our last update for the 4.2 and 4.1 branches, but the wait should be worth it!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Fri, 08 Dec 2023 13:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-1-rc-1.webp</image>
-	</item>
-	
-	<item>
-		<title>Godot Foundation Update 2023</title>
-		<link>https://godotengine.org/article/godot-foundation-update-2023/</link>
-		<description>This year has marked significant milestones for the Godot Foundation, and it&#39;s all thanks to the incredible support from our community.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/godot-foundation-update-2023/</guid>
-		<dc:creator>Godot Foundation</dc:creator>
-		<pubDate>Tue, 05 Dec 2023 12:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/godot-foundation-update-2023.jpg</image>
 	</item>
 	
 
