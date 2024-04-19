@@ -3,8 +3,8 @@ title: "Update on the Collaboration with Google and The Forge"
 excerpt: "The collaboration with Google and The Forge has concluded successfully!"
 categories: ["news"]
 author: Clay John
-image: /storage/blog/covers/android-and-vulkan.webp
-date: 2023-12-18 15:00:00
+image: /storage/blog/covers/godot-and-android-and-vulkan.webp
+date: 2024-04-19 18:00:00
 ---
 
 Our [collaboration with Google and The Forge](https://godotengine.org/article/collaboration-with-google-forge-2023) has achieved its original goal of improving performance in the Vulkan backend and enhancing our Vulkan API usage. The work started in mid-November and I have to say, the last few months went by very fast. Overall, I am happy to report that we finished everything that had been planned for this collaboration. 
