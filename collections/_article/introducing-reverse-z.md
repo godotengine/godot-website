@@ -7,7 +7,7 @@ image: /storage/blog/covers/reverse-z.webp
 date: 2024-04-19 15:00:00
 ---
 
-After extensive discussion, we have decided to implement the reverse Z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into z-fighting and other depth buffer precision artifacts. NVIDIA has an [excellent article](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse Z, please read it for more technical info.
+After extensive discussion, we have decided to implement the reverse Z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into Z-fighting and other depth buffer precision artifacts. NVIDIA has an [excellent article](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse Z, please read it for more technical info.
 
 I am writing this post because, unfortunately, implementing reverse Z naturally breaks compatibility for some shaders. We try to avoid compatibility breakage as much as possible, but in some cases it is unavoidable, or the benefits of doing so far outweigh the cost. The rendering team felt in this case that the benefits sufficiently outweighed the costs.
 
@@ -38,7 +38,7 @@ POSITION = vec4(VERTEX, 1.0);
 
 This line is even reproduced in our [documentation](https://docs.godotengine.org/en/4.2/tutorials/shaders/advanced_postprocessing.html). It relies on users supplying a QuadMesh with a width and height of 2 to fill the entire screen. The code assumes that:
 
-1. All vertices of the mesh have a z-coordinate of 0 (which is true for the QuadMesh), and
+1. All vertices of the mesh have a Z-coordinate of 0 (which is true for the QuadMesh), and
 
 2. A clip space value of 0 corresponds to the near plane.
 
@@ -110,7 +110,7 @@ if (clip_pos < depth) {
 }
 ```
 
-This reflects the fact that the near plane is now at a clip space z position of 1.0 instead of 0.0. Other similar cases will arise. For example, you may instead be looking at the difference between the depth buffer and your vertex position:
+This reflects the fact that the near plane is now at a clip space Z position of 1.0 instead of 0.0. Other similar cases will arise. For example, you may instead be looking at the difference between the depth buffer and your vertex position:
 
 ```
 float depth_mask = smoothstep(0.1, 0.3, clip_pos.z - depth);
