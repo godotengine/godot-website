@@ -4,7 +4,7 @@ excerpt: "We are breaking compatibility for some custom shaders. Here is why."
 categories: ["news"]
 author: Clay John
 image: /storage/blog/covers/reverse-z.webp
-date: 2024-04-24 15:00:00
+date: 2024-04-29 15:00:00
 ---
 
 After extensive discussion, we have decided to implement the reverse Z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into Z-fighting and other depth buffer precision artifacts. NVIDIA has an [excellent article](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse Z; please read it for more technical information.
@@ -23,14 +23,14 @@ You may need to tweak your shaders if you use a custom spatial shader that:
 
 - Operates in clip space
 
-In most cases when working with `POSITION`, `DEPTH`, or the `depth_texture`, you won't need to make any shader changes as long as you are transforming the values into/out of clip space using the ``PROJECTION_MATRIX`` or the ``INV_PROJECTION_MATRIX``. In those cases, the transformation is handled for you and your shader will continue to work. 
+In most cases when working with `POSITION`, `DEPTH`, or the `depth_texture`, you won't need to make any shader changes as long as you are transforming the values into/out of clip space using the `PROJECTION_MATRIX` or the `INV_PROJECTION_MATRIX`. In those cases, the transformation is handled for you and your shader will continue to work. 
 
 Let's look at the cases one-by-one to see what sort of shaders will break and how to fix them.
 
 
-### Writes to ``POSITION``
+### Writes to `POSITION`
 
-When you write to ``POSITION`` in Godot, you are bypassing the built-in vertex transformation and writing a clip space position directly. This can be helpful to optimize a vertex shader, or to achieve certain effects (like having a mesh stay fixed in the camera view). Commonly users wrote the following line:
+When you write to `POSITION` in Godot, you are bypassing the built-in vertex transformation and writing a clip space position directly. This can be helpful to optimize a vertex shader, or to achieve certain effects (like having a mesh stay fixed in the camera view). Commonly users wrote the following line:
 
 ```
 POSITION = vec4(VERTEX, 1.0);
