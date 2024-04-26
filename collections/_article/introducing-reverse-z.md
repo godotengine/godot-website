@@ -7,7 +7,7 @@ image: /storage/blog/covers/reverse-z.webp
 date: 2024-04-24 15:00:00
 ---
 
-After extensive discussion, we have decided to implement the reverse Z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into Z-fighting and other depth buffer precision artifacts. NVIDIA has an [excellent article](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse Z, please read it for more technical info.
+After extensive discussion, we have decided to implement the reverse Z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into Z-fighting and other depth buffer precision artifacts. NVIDIA has an [excellent article](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse Z; please read it for more technical information.
 
 I am writing this post because, unfortunately, implementing reverse Z naturally breaks compatibility for some shaders. We try to avoid compatibility breakage as much as possible, but in some cases it is unavoidable, or the benefits of doing so far outweigh the cost. The rendering team felt in this case that the benefits sufficiently outweighed the costs.
 
@@ -15,15 +15,15 @@ We are certain that the vast majority of users will not run into any compatibili
 
 You may need to tweak your shaders if you use a custom spatial shader that:
 
-- Writes to ``POSITION`` in the vertex processor function
+- Writes to `POSITION` in the vertex processor function
 
-- Writes to ``DEPTH``  in the fragment processor function
+- Writes to `DEPTH`  in the fragment processor function
 
-- Reads from depth_texture
+- Reads from `depth_texture`
 
 - Operates in clip space
 
-In most cases when working with ``POSITION``, ``DEPTH``, or the depth_texture, you won't need to make any shader changes as long as you are transforming the values into/out of clip space using the ``PROJECTION_MATRIX`` or the ``INV_PROJECTION_MATRIX``. In those cases, the transformation is handled for you and your shader will continue to work. 
+In most cases when working with `POSITION`, `DEPTH`, or the `depth_texture`, you won't need to make any shader changes as long as you are transforming the values into/out of clip space using the ``PROJECTION_MATRIX`` or the ``INV_PROJECTION_MATRIX``. In those cases, the transformation is handled for you and your shader will continue to work. 
 
 Let's look at the cases one-by-one to see what sort of shaders will break and how to fix them.
 
@@ -52,27 +52,27 @@ And that's it!
 
 Since this code is used so widely, we are adding a special [warning](https://github.com/godotengine/godot/pull/90587) for it so the engine can give you a heads up if your code will potentially break in 4.3.
 
-Importantly, writes to ``POSITION`` will only break if they are writing values in directly in clip space. If you are transforming values from view space using the ``PROJECTION_MATRIX``, no code changes are necessary. For example, the following code will continue to work:
+Importantly, writes to `POSITION` will only break if they are writing values in directly in clip space. If you are transforming values from view space using the `PROJECTION_MATRIX`, no code changes are necessary. For example, the following code will continue to work:
 
 ```
 POSITION = PROJECTION_MATRIX * MODELVIEW_MATRIX * vec4(VERTEX, 1.0);
 ```
 
-### Writes to ``DEPTH``
+### Writes to `DEPTH`
 
-Writing to ``DEPTH`` comes with the same warnings as writing to ``POSITION``. If the clip space value comes from transforming a view space value with the ``PROJECTION_MATRIX``, then no changes are necessary. 
+Writing to `DEPTH` comes with the same warnings as writing to `POSITION`. If the clip space value comes from transforming a view space value with the `PROJECTION_MATRIX`, then no changes are necessary. 
 
 ```
-// This will continue to work
+// This will continue to work.
 vec4 clip_pos = PROJECTION_MATRIX * vec4(VERTEX, 1.0);
 clip_space.xyz /= clip_space.w;
 DEPTH = clip_space.z;
 
-// This will need to change
-DEPTH = 0.0; // Needs to change to 1.0
+// This will need to change.
+DEPTH = 0.0;  // Needs to change to 1.0.
 ```
 
-### Reads from depth_texture
+### Reads from `depth_texture`
 
 This is potentially the area where the most changes will be necessary. Like the above two cases, as long as you are doing your operations in another space (e.g. view space), you don't need to worry. The following very common code ([from the documentation](https://docs.godotengine.org/en/4.2/tutorials/shaders/screen-reading_shaders.html#depth-texture)) will continue to work as before:
 
@@ -116,17 +116,15 @@ This reflects the fact that the near plane is now at a clip space Z position of 
 float depth_mask = smoothstep(0.1, 0.3, clip_pos.z - depth);
 ```
 
-You will have to modify the function manually, either using ``depth - clip_pos.z`` or ``abs(clip_pos.z - depth)``.
+You will have to modify the function manually, either using `depth - clip_pos.z` or `abs(clip_pos.z - depth)`.
 
 ### Operations in clip space
 
 The above depth buffer operations are an example of the types of operations users might do in clip space. Ultimately, most operations should not be done in clip space as it is a non-linear space (i.e. relative distances will change depending on the camera's distance to the object). We recommend that, if you are doing operations in clip space (like in the above example), you switch to doing those operations in view space instead. If you know what you are doing and insist on continuing your operations in clip space then:
 
-1. I'm sorry we broke your shader
-
-2. I trust you know how to fix your shader
-
-3. We promise not to break your shader again by changing the definition of clip space anytime soon
+1. I'm sorry we broke your shader.
+2. I trust you know how to fix your shader.
+3. We promise not to break your shader again by changing the definition of clip space anytime soon.
 
 ### Summary
 
