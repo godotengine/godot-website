@@ -17,7 +17,7 @@ You may need to tweak your shaders if you use a custom spatial shader that:
 
 - Writes to `POSITION` in the vertex processor function
 
-- Writes to `DEPTH`  in the fragment processor function
+- Writes to `DEPTH` in the fragment processor function
 
 - Reads from `depth_texture`
 
