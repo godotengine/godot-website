@@ -5,6 +5,17 @@
 	
 		
 		{
+			"title": "Introducing Reverse Z (AKA I&#39;m sorry for breaking your shader)",
+			"link": "https://godotengine.org/article/introducing-reverse-z/",
+			"description": "We are breaking compatibility for some custom shaders. Here is why.",
+			"categories": ["News"],
+			"guid": "https://godotengine.org/article/introducing-reverse-z/",
+			"dc:creator": "Clay John",
+			"pubDate": "Mon, 29 Apr 2024 13:00:00 +0000",
+			"image": "https://godotengine.org/storage/blog/covers/introducing-reverse-z.webp"
+		},
+		
+		{
 			"title": "Update on the Collaboration with Google and The Forge",
 			"link": "https://godotengine.org/article/update-on-google-forge-2024/",
 			"description": "The collaboration with Google and The Forge has concluded successfully!",
@@ -255,17 +266,6 @@
 			"dc:creator": "Winston Yallow",
 			"pubDate": "Fri, 08 Dec 2023 15:00:00 +0000",
 			"image": "https://godotengine.org/storage/blog/covers/introducing-new-forum.webp"
-		},
-		
-		{
-			"title": "Release candidate: Godot 4.2.1 RC 1",
-			"link": "https://godotengine.org/article/release-candidate-godot-4-2-1-rc-1/",
-			"description": "Godot 4.2 was released one week ago, and as is customary with feature updates, we have a late harvest of regression fixes to offer!",
-			"categories": ["Pre-release"],
-			"guid": "https://godotengine.org/article/release-candidate-godot-4-2-1-rc-1/",
-			"dc:creator": "Rémi Verschelde",
-			"pubDate": "Fri, 08 Dec 2023 13:00:00 +0000",
-			"image": "https://godotengine.org/storage/blog/covers/release-candidate-godot-4-2-1-rc-1.webp"
 		}
 		
 	]
