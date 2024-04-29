@@ -3,24 +3,21 @@ title: "Introducing Reverse Z (AKA I'm sorry for breaking your shader)"
 excerpt: "We are breaking compatibility for some custom shaders. Here is why."
 categories: ["news"]
 author: Clay John
-image: /storage/blog/covers/reverse-z.webp
-date: 2024-04-29 15:00:00
+image: /storage/blog/covers/introducing-reverse-z.webp
+date: 2024-04-29 13:00:00
 ---
 
 After extensive discussion, we have decided to implement the reverse Z depth buffer technique in Godot 4.3. This is an exciting change as it brings a massive improvement to depth buffer precision at no performance or memory cost. This technique is used everywhere in 3D games these days. In practical terms, it significantly reduces the chances of running into Z-fighting and other depth buffer precision artifacts. NVIDIA has an [excellent article](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse Z; please read it for more technical information.
 
 I am writing this post because, unfortunately, implementing reverse Z naturally breaks compatibility for some shaders. We try to avoid compatibility breakage as much as possible, but in some cases it is unavoidable, or the benefits of doing so far outweigh the cost. The rendering team felt in this case that the benefits sufficiently outweighed the costs.
 
-We are certain that the vast majority of users will not run into any compatibility breakage. For most people this change is all good with no downside. 
+We are certain that the vast majority of users will not run into any compatibility breakage. For most people this change is all good with no downside.
 
 You may need to tweak your shaders if you use a custom spatial shader that:
 
 - Writes to `POSITION` in the vertex processor function
-
 - Writes to `DEPTH` in the fragment processor function
-
 - Reads from `depth_texture`
-
 - Operates in clip space
 
 In most cases when working with `POSITION`, `DEPTH`, or the `depth_texture`, you won't need to make any shader changes as long as you are transforming the values into/out of clip space using the `PROJECTION_MATRIX` or the `INV_PROJECTION_MATRIX`. In those cases, the transformation is handled for you and your shader will continue to work. 
