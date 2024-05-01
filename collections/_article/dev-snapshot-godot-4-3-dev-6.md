@@ -31,13 +31,13 @@ As a reminder, this section only covers changes made since the previous [4.3 dev
 
 ### 2D physics interpolation
 
-Fixed timestep a.k.a. physics interpolation is now implemented for 2D (https://github.com/godotengine/godot/pull/88424), forward-ported from the version merged for Godot 3.6 last year (https://github.com/godotengine/godot/pull/76252).
+Fixed timestep a.k.a. physics interpolation is now implemented for 2D ([GH-88424](https://github.com/godotengine/godot/pull/88424)), forward-ported from the version merged for Godot 3.6 last year ([GH-76252](https://github.com/godotengine/godot/pull/76252)).
 
 This will help address cases of position/camera jitter in 2D games, and should complement some of the pixel-art focused changes made in the [4.3 dev 4 snapshot](/article/dev-snapshot-godot-4-3-dev-4/#huge-improvement-to-pixel-stability-for-pixel-art-games).
 
 ### TileMap layers as nodes
 
-TileMap layers are now exposed as individual TileMapLayer nodes (https://github.com/godotengine/godot/pull/89179), which means less clutter in the inspector, a simpler API, and is also more in line with common Godot design patterns.
+TileMap layers are now exposed as individual TileMapLayer nodes ([GH-89179](https://github.com/godotengine/godot/pull/89179))	, which means less clutter in the inspector, a simpler API, and is also more in line with common Godot design patterns.
 
 To avoid the small drawbacks that would come with that change, we added new editor features, for example the ability to select all layers in the currently edited scene. The TileMap node itself is marked as deprecated but will stay for a while (it will not get any new features though).
 
