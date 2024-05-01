@@ -45,15 +45,15 @@ To help with the transition, you can automatically transform a TileMap node to a
 
 ### PackedByteArrays saved with base64 encoding
 
-One common annoyance with Godot's text-based scene/resource format (`tscn`/`tres`) is that the serialization of PackedByteArray properties takes a lot of space, leading to inflated file sizes, and noisy diffs. To help with that, we changed the serialization of PackedByteArrays to use base64 encoding, which is more compact, especially for bigger arrays (https://github.com/godotengine/godot/pull/89186).
+One common annoyance with Godot's text-based scene/resource format (`tscn`/`tres`) is that the serialization of PackedByteArray properties takes a lot of space, leading to inflated file sizes, and noisy diffs. To help with that, we changed the serialization of PackedByteArrays to use base64 encoding, which is more compact, especially for bigger arrays ([GH-89186](https://github.com/godotengine/godot/pull/89186)).
 
-This change however means that the scene format changed in a way that can't be parsed by earlier Godot releases. To ease this transition, we made it so that Godot 4.3 only saves scenes and resources using this new format if they contain a PackedByteArray (https://github.com/godotengine/godot/pull/90889). Additionally, we are backporting support for parsing the new format to the upcoming Godot 4.2.3 and 4.1.5 releases (https://github.com/godotengine/godot/pull/91250), so that it would still be possible for users to roll back to these versions if they need to.
+This change however means that the scene format changed in a way that can't be parsed by earlier Godot releases. To ease this transition, we made it so that Godot 4.3 only saves scenes and resources using this new format if they contain a PackedByteArray ([GH-90889](https://github.com/godotengine/godot/pull/90889)). Additionally, we are backporting support for parsing the new format to the upcoming Godot 4.2.3 and 4.1.5 releases ([GH-91250](https://github.com/godotengine/godot/pull/91250)), so that it would still be possible for users to roll back to these versions if they need to.
 
-Finally, we also changed the name of the Editor Settings config file to make it specific to each Godot minor version (https://github.com/godotengine/godot/pull/90875). This avoids losing configuration when going back and forth between slightly incompatible Godot branches. The first time you use a new Godot minor branch (e.g. 4.3), it will port settings from the previous version (e.g. 4.2), but from there on the two config files stay separate.
+Finally, we also changed the name of the Editor Settings config file to make it specific to each Godot minor version ([GH-90875](https://github.com/godotengine/godot/pull/90875)). This avoids losing configuration when going back and forth between slightly incompatible Godot branches. The first time you use a new Godot minor branch (e.g. 4.3), it will port settings from the previous version (e.g. 4.2), but from there on the two config files stay separate.
 
 ### Automatic checking for engine updates
 
-We finally implemented a long-requested feature in the project manager to check for new Godot versions (https://github.com/godotengine/godot/pull/75916). This is convenient both when testing pre-release versions like this one, to be notified when beta 1 or future releases are published, but also for new maintenance or feature releases in stable branches.
+We finally implemented a long-requested feature in the project manager to check for new Godot versions ([GH-75916](https://github.com/godotengine/godot/pull/75916)). This is convenient both when testing pre-release versions like this one, to be notified when beta 1 or future releases are published, but also for new maintenance or feature releases in stable branches.
 
 Out of concern for users' privacy, this feature is not enabled by default, but can be toggled easily by enabling the "Online" network mode in the project manager's settings.
 
@@ -65,40 +65,40 @@ See [this blog post](/article/introducing-reverse-z/) for details on the change,
 
 ### And more!
 
-- Animation: Implement a base class `SkeletonModifier3D` as refactoring for nodes that may modify `Skeleton3D` (GH-87888)
-- Audio: Add AudioEffectHardLimiter as a rework of audio limiter effect (GH-89088).
-- Core: Add typed array support for binary serialization (GH-78219).
-- Core: Refactor OS exit code to be `EXIT_SUCCESS` by default (GH-89229).
-- Core: Use WorkerThreadPool for Server threads (GH-90268).
-- C#: Fix serialization of delegates capturing variables (GH-83217).
-- C#: Throw exception when solution file is missing during exporting (GH-87829).
-- C#: Implement InvariantCulture on Variant strings (GH-89547).
-- C#: Add DebugView for Array and Dictionary (GH-90060).
-- C#: Change order of operation for C# types reloading (GH-90837).
-- Editor: Allow docks to be closed and opened (GH-89017).
-- GDExtension: Add renaming of PDB files to avoid blocking them (GH-87117).
-- GDScript: Fix errors when renaming/moving/deleting global scripts (GH-90186).
-- GUI: Implement GraphFrame and integrate it in VisualShader (GH-88014).
-- GUI: Add text tooltip for TabBar & TabContainer (GH-89247).
-- Import: Tweak environment in the Advanced Import Settings dialog (GH-75787).
-- Import: Add secondary light to 3D Advanced Import Settings (GH-76140).
-- Navigation: Make 2D navigation mesh baking parse all TileMapLayers (GH-85856).
-- Navigation: Add a partial path return option for AStar (GH-88047).
-- Navigation: Change 2D navigation mesh baking to use floating point coordinates (GH-89929).
-- Navigation: Add navigation path simplification (GH-90434).
-- Navigation: Add navigation mesh source geometry parsers and callbacks (GH-90876).
-- Particles: Fix CPU/GPUParticles2D bugs on Compatibility Rendering (GLES3) on Adreno 3XX devices (GH-88816).
-- Physics: Add HeightMapShape3D update with Image data (GH-87889).
-- Physics: Fix `move_and_slide` wall slide acceleration (3D) (GH-90915).
-- Porting: Implement pipe API for executed processes IO redirection (GH-89206).
-- Rendering: Add option to bake a mesh from blend shape mix (GH-76725).
-- Rendering: Add reflection probe support to compatibility renderer (GH-88056).
-- Rendering: Shadow fade for omni lights actually stops the shadow from updating while faded out to improve performance (GH-89729).
-- Rendering: Exit light calculation early when pixel outside of light bounding rectangle (GH-90920).
-- Rendering: Add `LIGHT_VERTEX` to fragment shader (GH-91136).
-- Rendering: Add adjustments and color correction to Compatibility renderer (GH-91176).
-- Shaders: Implement documentation comments and tooltips for shader uniform in the inspector (GH-90161).
-- XR: Rework XR Trackers to have a common ancestor (GH-90645).
+- Animation: Implement a base class `SkeletonModifier3D` as refactoring for nodes that may modify `Skeleton3D` ([GH-87888](https://github.com/godotengine/godot/pull/87888))
+- Audio: Add AudioEffectHardLimiter as a rework of audio limiter effect ([GH-89088](https://github.com/godotengine/godot/pull/89088)).
+- Core: Add typed array support for binary serialization ([GH-78219](https://github.com/godotengine/godot/pull/78219)).
+- Core: Refactor OS exit code to be `EXIT_SUCCESS` by default ([GH-89229](https://github.com/godotengine/godot/pull/89229)).
+- Core: Use WorkerThreadPool for Server threads ([GH-90268](https://github.com/godotengine/godot/pull/90268)).
+- C#: Fix serialization of delegates capturing variables ([GH-83217](https://github.com/godotengine/godot/pull/83217)).
+- C#: Throw exception when solution file is missing during exporting ([GH-87829](https://github.com/godotengine/godot/pull/87829)).
+- C#: Implement InvariantCulture on Variant strings ([GH-89547](https://github.com/godotengine/godot/pull/89547)).
+- C#: Add DebugView for Array and Dictionary ([GH-90060](https://github.com/godotengine/godot/pull/90060)).
+- C#: Change order of operation for C# types reloading ([GH-90837](https://github.com/godotengine/godot/pull/90837)).
+- Editor: Allow docks to be closed and opened ([GH-89017](https://github.com/godotengine/godot/pull/89017)).
+- GDExtension: Add renaming of PDB files to avoid blocking them ([GH-87117](https://github.com/godotengine/godot/pull/87117)).
+- GDScript: Fix errors when renaming/moving/deleting global scripts ([GH-90186](https://github.com/godotengine/godot/pull/90186)).
+- GUI: Implement GraphFrame and integrate it in VisualShader ([GH-88014](https://github.com/godotengine/godot/pull/88014)).
+- GUI: Add text tooltip for TabBar & TabContainer ([GH-89247](https://github.com/godotengine/godot/pull/89247)).
+- Import: Tweak environment in the Advanced Import Settings dialog ([GH-75787](https://github.com/godotengine/godot/pull/75787)).
+- Import: Add secondary light to 3D Advanced Import Settings ([GH-76140](https://github.com/godotengine/godot/pull/76140)).
+- Navigation: Make 2D navigation mesh baking parse all TileMapLayers ([GH-85856](https://github.com/godotengine/godot/pull/85856)).
+- Navigation: Add a partial path return option for AStar ([GH-88047](https://github.com/godotengine/godot/pull/88047)).
+- Navigation: Change 2D navigation mesh baking to use floating point coordinates ([GH-89929](https://github.com/godotengine/godot/pull/89929)).
+- Navigation: Add navigation path simplification ([GH-90434](https://github.com/godotengine/godot/pull/90434)).
+- Navigation: Add navigation mesh source geometry parsers and callbacks ([GH-90876](https://github.com/godotengine/godot/pull/90876)).
+- Particles: Fix CPU/GPUParticles2D bugs on Compatibility Rendering (GLES3) on Adreno 3XX devices ([GH-88816](https://github.com/godotengine/godot/pull/88816)).
+- Physics: Add HeightMapShape3D update with Image data ([GH-87889](https://github.com/godotengine/godot/pull/87889)).
+- Physics: Fix `move_and_slide` wall slide acceleration (3D) ([GH-90915](https://github.com/godotengine/godot/pull/90915)).
+- Porting: Implement pipe API for executed processes IO redirection ([GH-89206](https://github.com/godotengine/godot/pull/89206)).
+- Rendering: Add option to bake a mesh from blend shape mix ([GH-76725](https://github.com/godotengine/godot/pull/76725)).
+- Rendering: Add reflection probe support to compatibility renderer ([GH-88056](https://github.com/godotengine/godot/pull/88056)).
+- Rendering: Shadow fade for omni lights actually stops the shadow from updating while faded out to improve performance ([GH-89729](https://github.com/godotengine/godot/pull/89729)).
+- Rendering: Exit light calculation early when pixel outside of light bounding rectangle ([GH-90920](https://github.com/godotengine/godot/pull/90920)).
+- Rendering: Add `LIGHT_VERTEX` to fragment shader ([GH-91136](https://github.com/godotengine/godot/pull/91136)).
+- Rendering: Add adjustments and color correction to Compatibility renderer ([GH-91176](https://github.com/godotengine/godot/pull/91176)).
+- Shaders: Implement documentation comments and tooltips for shader uniform in the inspector ([GH-90161](https://github.com/godotengine/godot/pull/90161)).
+- XR: Rework XR Trackers to have a common ancestor ([GH-90645](https://github.com/godotengine/godot/pull/90645)).
 - Thirdparty: Embree 4.3.1, HarfBuzz 8.4.0, libktx 4.3.2, MbedTLS 3.6.0, ThorVG 0.12.10, zstd 1.5.6.
 
 ## Changelog
