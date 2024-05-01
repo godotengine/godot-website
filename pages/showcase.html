@@ -7,28 +7,12 @@ layout: default
 
 {% include header.html %}
 
-<div class="head">
-	<div class="container flex eqsize">
-		<div class="main">
-			<h1 class="intro-title">Showcase</h1>
-		</div>
-		<div class="tabs">
-			<a href="/features" class="title-font ">Features</a>
-			<a href="/showcase" class="title-font  active ">Showcase</a>
-		</div>
-	</div>
-</div>
-
 <div class="container">
-	<h2 class="title">Showreel videos</h2>
-
-	<p>
-		Every year, we make a series of videos highlighting the best games made with Godot. Here are the latest ones:
-	</p>
-
-	{% include showreel-shelf.html %}
 
 	<style>
+		.showcase-cards {
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		}
 		.showcase-card h3 {
 			font-size: 33px;
 			margin-bottom: 0px;
@@ -92,9 +76,9 @@ layout: default
 
 	<!-- Filter will go here -->
 
-	<h2 class="title">Made with Godot</h2>
+	<h2 class="title">Games</h2>
 
-	<section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+	<section class="flex grid showcase-cards">
 		{% assign projects = site.showcase | sort: 'date' | reverse %}
 		{% for project in projects %}
 		{% if project.release_date != 'TBD' and project.tool != true %}
@@ -163,7 +147,7 @@ layout: default
 
 	<h2 class="title">Apps & Tools</h2>
 
-	<section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+	<section class="flex grid showcase-cards">
 		{% assign projects = site.showcase | sort: 'date' | reverse %}
 		{% for project in projects %}
 		{% if project.tool %}
@@ -231,7 +215,7 @@ layout: default
 	</section>
 
 	<h2 class="title">Coming soon</h2>
-	<section class="flex grid showcase-cards" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))">
+	<section class="flex grid showcase-cards">
 		{% assign projects = site.showcase | sort: 'date' | reverse %}
 		{% for project in projects %}
 		{% if project.release_date == 'TBD' %}
