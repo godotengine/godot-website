@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.3 dev 6</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-6/</link>
+		<description>The last dev snapshot for 4.3 before feature freeze is a big one after 6 weeks of work!</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-6/</guid>
+		<dc:creator>Rémi Verschelde</dc:creator>
+		<pubDate>Wed, 01 May 2024 13:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-3-dev-6.webp</image>
+	</item>
+	
+	<item>
 		<title>Introducing Reverse Z (AKA I&#39;m sorry for breaking your shader)</title>
 		<link>https://godotengine.org/article/introducing-reverse-z/</link>
 		<description>We are breaking compatibility for some custom shaders. Here is why.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Tue, 12 Dec 2023 13:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-2-1.webp</image>
-	</item>
-	
-	<item>
-		<title>Introducing the new Godot Forum</title>
-		<link>https://godotengine.org/article/introducing-new-forum/</link>
-		<description>We are finally unveiling the new Godot forum which replaces our Q&amp;A platform while unlocking many new features.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/introducing-new-forum/</guid>
-		<dc:creator>Winston Yallow</dc:creator>
-		<pubDate>Fri, 08 Dec 2023 15:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/introducing-new-forum.webp</image>
 	</item>
 	
 
