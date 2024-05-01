@@ -9,11 +9,11 @@ image_caption_description: "A game by Bippinbits"
 date: 2024-05-01 13:00:00
 ---
 
-Last dev snapshot before entering the beta phase for Godot 4.3, which means that we're now consider 4.3 feature complete!
+This is the last dev snapshot before entering the beta phase for Godot 4.3, which means that we now consider 4.3 feature complete!
 
 This one is particularly feature-packed with 650 commits (twice as big as previous snapshots), because we took the time to address some regressions and compatibility breakages caused by some of the new changes. So while some contributors focused on fixing these regressions, others had plenty of time to finalize and merge many improvements and bugfixes in all engine areas.
 
-As usual, we expect a big increase in the number of testers once we release 4.3 beta 1 in the near future. So for all the brave users who are already testing our 4.3 dev snapshots, please make sure to report any breaking issue you encounter, so we can aim for having as smooth a beta launch as possible.
+As usual, we expect a big increase in the number of testers once we release 4.3 beta 1 in the near future. So for all the brave users who are already testing our 4.3 dev snapshots, please make sure to report any breaking issue you encounter, so we can aim for having as smooth of a beta launch as possible.
 
 Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
@@ -21,7 +21,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*The cover illustration is from* [**Tristram**](https://bippinbits.itch.io/tristram), *a Ludum Dare 55 submission by [Bippinbits](https://bippinbits.com/), made with Godot 4.3 dev 5. The game has you endorse the role of the mayor of Diablo 1's Tristram, management the city and its steady supply of riches seeking heroes.*
+*The cover illustration is from* [**Tristram**](https://bippinbits.itch.io/tristram), *a Ludum Dare 55 submission by [Bippinbits](https://bippinbits.com/), made with Godot 4.3 dev 5. The game has you take on the role of the mayor of Diablo 1's Tristram, managing the city and its steady supply of heroes seeking riches.*
 
 ## Highlights
 
@@ -33,21 +33,21 @@ As a reminder, this section only covers changes made since the previous [4.3 dev
 
 Fixed timestep a.k.a. physics interpolation is now implemented for 2D (https://github.com/godotengine/godot/pull/88424), forward-ported from the version merged for Godot 3.6 last year (https://github.com/godotengine/godot/pull/76252).
 
-This will help address cases of position/camera jitter in 2D games, and should complement some of the pixel-art focused changes made in a [previous dev snapshot](/article/dev-snapshot-godot-4-3-dev-4/#huge-improvement-to-pixel-stability-for-pixel-art-games).
+This will help address cases of position/camera jitter in 2D games, and should complement some of the pixel-art focused changes made in the [4.3 dev 4 snapshot](/article/dev-snapshot-godot-4-3-dev-4/#huge-improvement-to-pixel-stability-for-pixel-art-games).
 
 ### TileMap layers as nodes
 
-TileMaps layers are now exposed as individual TileMapLayer nodes (https://github.com/godotengine/godot/pull/89179), which means less clutter in the inspector, a simpler API, and is also more in line with common Godot design patterns.
+TileMap layers are now exposed as individual TileMapLayer nodes (https://github.com/godotengine/godot/pull/89179), which means less clutter in the inspector, a simpler API, and is also more in line with common Godot design patterns.
 
-To avoid the small drawbacks that would come with that change, we added new editor features, allowing, for example, to select all layers in the currently edited scene. The TileMap node itself is marked as deprecated but will stay for a while (it will not get any new feature though).
+To avoid the small drawbacks that would come with that change, we added new editor features, for example the ability to select all layers in the currently edited scene. The TileMap node itself is marked as deprecated but will stay for a while (it will not get any new features though).
 
-To help with the transition, you can automatically transform a TileMap node to a set of TileMapLayer nodes via a dropdown menu entry the editor. You'll have to update your scripts, but don't worry, the API is very similar.
+To help with the transition, you can automatically transform a TileMap node to a set of TileMapLayer nodes via a dropdown menu entry in the editor. You'll have to update your scripts, but don't worry, the API is very similar.
 
 ### PackedByteArrays saved with base64 encoding
 
 One common annoyance with Godot's text-based scene/resource format (`tscn`/`tres`) is that the serialization of PackedByteArray properties takes a lot of space, leading to inflated file sizes, and noisy diffs. To help with that, we changed the serialization of PackedByteArrays to use base64 encoding, which is more compact, especially for bigger arrays (https://github.com/godotengine/godot/pull/89186).
 
-This change however means that scene format changed in a way that can't be parsed by earlier Godot releases. To ease this transition, we made it so that Godot 4.3 only saves scenes and resources using this new format if they contain a PackedByteArray (https://github.com/godotengine/godot/pull/90889). Additionally, we are backporting support for parsing the new format to the future Godot 4.2.3 and 4.1.5 (https://github.com/godotengine/godot/pull/91250), so that it would still be possible for users to roll back to these versions if they need to.
+This change however means that the scene format changed in a way that can't be parsed by earlier Godot releases. To ease this transition, we made it so that Godot 4.3 only saves scenes and resources using this new format if they contain a PackedByteArray (https://github.com/godotengine/godot/pull/90889). Additionally, we are backporting support for parsing the new format to the upcoming Godot 4.2.3 and 4.1.5 releases (https://github.com/godotengine/godot/pull/91250), so that it would still be possible for users to roll back to these versions if they need to.
 
 Finally, we also changed the name of the Editor Settings config file to make it specific to each Godot minor version (https://github.com/godotengine/godot/pull/90875). This avoids losing configuration when going back and forth between slightly incompatible Godot branches. The first time you use a new Godot minor branch (e.g. 4.3), it will port settings from the previous version (e.g. 4.2), but from there on the two config files stay separate.
 
