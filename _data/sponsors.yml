@@ -35,9 +35,6 @@ gold:
     link: "https://gopiratesoftware.com/"
     image: "https://fund.godotengine.org/static/logos/piratesoftware.webp"
 silver:
-  - name: "Affray Interactive"
-    link: "https://scp.games/pandemic/"
-    image: "https://fund.godotengine.org/static/logos/affray-interactive.png"
   - name: "Playful Studios"
     link: "https://playfulstudios.com/"
     image: "https://fund.godotengine.org/static/logos/playful-studios.png"
