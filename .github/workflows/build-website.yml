@@ -36,10 +36,7 @@ jobs:
 
     - name: Build the static website
       run: bundle exec jekyll build
-    
-    # copy the versions.yml file to the root of the _site folder
-    - name: Copy versions.yml to _site
-      run: cp _data/versions.yml _site/versions.yml
+
 
     # Publish the build results
 
