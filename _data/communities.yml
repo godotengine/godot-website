@@ -336,6 +336,10 @@ Taiwan:
     links:
       - title: Facebook
         url: https://www.facebook.com/groups/godot.taiwan
+  - name: Godot Adventurers (Godot 開拓者交流互助公會)
+    links:
+      - title: Discord
+        url: https://discord.gg/kpZ5G9HeYT
 Turkey:
   - name: Godot Engine Türkiye
     links:
