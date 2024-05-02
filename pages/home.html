@@ -27,16 +27,23 @@ layout: default
 		width: 100%;
 	}
 	
-	.main-download-links .download-lts {
+	.main-download-links .download-3 {
 		text-align: center;
-		text-decoration-color: inherit;
-		color: white;
+		color: #ffffffd6;
 		text-shadow: 0 0 10px black;
 		font-weight: 100;
-		text-decoration-thickness: 1px;
-		font-size: 16px;
+		font-size: 14px;
 	}
-
+	
+	.main-download-links .download-3 a {
+		color: inherit;
+		text-decoration-color: inherit;
+		text-decoration-thickness: 1px;
+	}
+	.main-download-links .download-3 a:hover {
+		color: white;
+	}
+	
 	@media (max-width: 900px) {
 		.main-download {
 			align-items: center;
@@ -183,9 +190,7 @@ layout: default
 						<div class="download-hint">{{ stable_version_4.name }}</div>
 					</a>
 
-					<a href="/download/windows" class="download-lts set-os-download-url" data-version="3"
-						title="Download the long-term support version of Godot 3">
-						<span class="download-title">Download Godot LTS - v{{ stable_version_3.name }}</span>
+					<span class="download-3">Looking for <a href="/download/windows" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a> or a <a href="/download/archive">previous version</a>?</span>
 					</a>
 				</div>
 			</div>
