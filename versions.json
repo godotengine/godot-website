@@ -1,4 +1,4 @@
 ---
 ---
 
-{{ site.data.versions | jsonify }}
+{{ site.data.versions | jsonify | replace: "/article/", "https://godotengine.org/article/" }}
