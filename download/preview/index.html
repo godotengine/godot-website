@@ -84,60 +84,6 @@
 		gap: 16px;
 	}
 
-	.stable-download {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 16px;
-		background-color: var(--dark-color);
-		padding: 24px;
-		padding-bottom: 60px;
-		width: auto;
-		max-width: 100%;
-	}
-	@media (max-width: 900px) {
-		.stable-download {
-			padding: 20px;
-		}
-	}
-
-	.stable-download h2 {
-		color: var(--dark-color-text-title);
-		font-weight: 600;
-		margin: 0;
-		margin-bottom: 16px;
-	}
-
-	.stable-download p {
-		color: var(--dark-color-text);
-		margin: 0;
-	}
-
-	.stable-download-ready {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 26px;
-	}
-
-	.stable-download-ready .btn-download {
-		min-width: 310px;
-	}
-
-	.stable-download-ready .btn-download:nth-of-type(2n) {
-		background-color: rgb(132 151 174 / 68%);
-		-webkit-backdrop-filter: blur(4px);
-		backdrop-filter: blur(4px);
-	}
-	.stable-download-ready .btn-download:nth-of-type(2n) .download-title {
-		color: #f7f7f7;
-	}
-	.stable-download-ready .btn-download:nth-of-type(2n) .download-hint {
-		background-color: var(--primary-color-subdued);
-	}
-
 	footer {
 		margin-top: 0;
 	}
@@ -1303,10 +1249,71 @@
 
 <script src="/assets/js/download-version.js"></script>
 
-<div id="stable" class="container card stable-download">
-	<h2>Need a stable version?</h2>
+<style>
+	.section-download {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		background-color: var(--dark-color);
+		padding: 24px;
+		padding-bottom: 60px;
+		width: auto;
+		max-width: 100%;
+	}
+	@media (max-width: 900px) {
+		.section-download {
+			padding: 20px;
+		}
+	}
 
-	<div class="stable-download-ready">
+	.section-download h2 {
+		color: var(--dark-color-text-title);
+		font-weight: 600;
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	.section-download p {
+		color: var(--dark-color-text);
+		margin: 0;
+	}
+
+	.section-download-ready {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 26px;
+	}
+
+	.section-download-ready .btn-download {
+		min-width: 310px;
+	}
+
+	.section-download .download-3 {
+		text-align: center;
+		color: #ffffffd6;
+		font-weight: 100;
+		font-size: 15px;
+	}
+	
+	.section-download .download-3 a {
+		color: inherit;
+		text-decoration-color: inherit;
+		text-decoration-thickness: 1px;
+	}
+	.section-download .download-3 a:hover {
+		color: white;
+	}
+</style>
+<div id="call-to-action" class="container card section-download">
+	
+		<h2>Need a stable version?</h2>
+	
+
+	<div class="section-download-ready">
 		
 		
 
@@ -1317,12 +1324,7 @@
 			<div class="download-hint">4.2.2</div>
 		</a>
 
-		<p>Want to stick to the <strong>true and trusted Godot 3</strong>? Download the long-term support version!</p>
-		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
-			title="Download the long-term support version of Godot 3">
-			<div class="download-title">Download LTS</div>
-			<div class="download-hint">3.5.3</div>
-		</a>
+		<span class="download-3">Looking for <a href="/download/windows" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a> or a <a href="/download/archive">previous version</a>?</span>
 	</div>
 </div>
 
@@ -1343,6 +1345,7 @@
 			<ul class="sitemap-group">
 				<li><strong>Get Godot</strong></li>
 				<li><a href="/download/windows" class="set-os-download-url">Download</a></li>
+				<li><a href="/download/archive/">Release Archive</a></li>
 				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
 				<li>&nbsp;</li>
 				<li><strong>Public Relations</strong></li>
