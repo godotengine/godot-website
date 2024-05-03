@@ -1232,7 +1232,6 @@ section.hero .background-image {
 section.hero .copy {
   position: relative;
   z-index: 1;
-  max-width: 670px;
   margin-left: 0;
 }
 
@@ -1247,7 +1246,6 @@ section.hero .copy p {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
-  max-width: 550px;
   text-shadow: 0 0 28px #00000080;
   color: white;
 }
@@ -1270,7 +1268,7 @@ section.hero .wrapper {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 200px 20px 120px;
+  padding: 180px 20px 100px;
 }
 
 @media (max-width: 650px) {
