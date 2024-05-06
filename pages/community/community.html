@@ -31,6 +31,11 @@ layout: default
 		display: flex;
 		flex-direction: column;
 	}
+	@media (max-width: 540px) {
+		.community-list .community-short-block {
+			grid-column-end: span 1;
+		}
+	}
 
 	.community-list .community-short-block .card {
 		height: auto;
@@ -284,8 +289,8 @@ layout: default
 						loading="lazy">
 				</a>
 				<div class="base-padding">
-					<h3 style="font-size: 22px;"><a href="https://programming.dev/c/godot">programming.dev</a></h3>
-					<p>A community for discussion and support in development with the game engine.</p>
+					<h3><a href="https://programming.dev/c/godot">Lemmy</a></h3>
+					<p>programming.dev is a community for discussion and support in development with the game engine.</p>
 				</div>
 			</div>
 		</div>
