@@ -62,8 +62,8 @@ Writing to `DEPTH` comes with the same warnings as writing to `POSITION`. If the
 ```
 // This will continue to work.
 vec4 clip_pos = PROJECTION_MATRIX * vec4(VERTEX, 1.0);
-clip_space.xyz /= clip_space.w;
-DEPTH = clip_space.z;
+clip_pos.xyz /= clip_pos.w;
+DEPTH = clip_pos.z;
 
 // This will need to change.
 DEPTH = 0.0;  // Needs to change to 1.0.
@@ -91,7 +91,7 @@ This code will require no modification. Where users will need to make modificati
 
 ```
 vec4 clip_pos = PROJECTION_MATRIX * vec4(VERTEX, 1.0);
-clip_space.xyz /= clip_space.w;
+clip_pos.xyz /= clip_pos.w;
 float depth = textureLod(depth_texture, SCREEN_UV, 0.0).r;
 
 if (clip_pos > depth) {
