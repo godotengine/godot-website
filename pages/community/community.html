@@ -6,6 +6,9 @@ layout: default
 
 {% include header.html %}
 <style>
+	h3.smaller {
+		font-size: 25px;
+	}
 	.card {
 		height: 100%;
 	}
@@ -30,6 +33,11 @@ layout: default
 		grid-column-end: span 2;
 		display: flex;
 		flex-direction: column;
+	}
+	@media (max-width: 540px) {
+		.community-list .community-short-block {
+			grid-column-end: span 1;
+		}
 	}
 
 	.community-list .community-short-block .card {
@@ -270,8 +278,22 @@ layout: default
 						loading="lazy">
 				</a>
 				<div class="base-padding">
-					<h3><a href="https://godotforums.org">Forums</a></h3>
+					<h3 class="smaller"><a href="https://godotforums.org">Forums</a></h3>
 					<p>Community forum for all Godot developers.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="community-block">
+			<div class="card">
+				<a href="https://programming.dev/c/godot">
+					<img src="/assets/community/community-lemmy.webp" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #e3eaf1 2%, #e3eaf1 28%, #e3eaf1 57%, #e3eaf1 90%)"
+						loading="lazy">
+				</a>
+				<div class="base-padding">
+					<h3 class="smaller"><a href="https://programming.dev/c/godot">Programming.Dev</a></h3>
+					<p>A community for discussion and support in development with the game engine.</p>
 				</div>
 			</div>
 		</div>
