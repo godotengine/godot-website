@@ -7,8 +7,8 @@
 </code></pre></div></div><p>And that’s it!<p>Since this code is used so widely, we are adding a special <a href=https://github.com/godotengine/godot/pull/90587>warning</a> for it so the engine can give you a heads up if your code will potentially break in 4.3.<p>Importantly, writes to <code class="language-plaintext highlighter-rouge">POSITION</code> will only break if they are writing values in directly in clip space. If you are transforming values from view space using the <code class="language-plaintext highlighter-rouge">PROJECTION_MATRIX</code>, no code changes are necessary. For example, the following code will continue to work:<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>POSITION = PROJECTION_MATRIX * MODELVIEW_MATRIX * vec4(VERTEX, 1.0);
 </code></pre></div></div><h3 id=writes-to-depth>Writes to <code class="language-plaintext highlighter-rouge">DEPTH</code></h3><p>Writing to <code class="language-plaintext highlighter-rouge">DEPTH</code> comes with the same warnings as writing to <code class="language-plaintext highlighter-rouge">POSITION</code>. If the clip space value comes from transforming a view space value with the <code class="language-plaintext highlighter-rouge">PROJECTION_MATRIX</code>, then no changes are necessary.<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>// This will continue to work.
 vec4 clip_pos = PROJECTION_MATRIX * vec4(VERTEX, 1.0);
-clip_space.xyz /= clip_space.w;
-DEPTH = clip_space.z;
+clip_pos.xyz /= clip_pos.w;
+DEPTH = clip_pos.z;
 
 // This will need to change.
 DEPTH = 0.0;  // Needs to change to 1.0.
@@ -19,7 +19,7 @@ vec3 pixel_position = upos.xyz / upos.w;
     // Do something.
 }
 </code></pre></div></div><p>This code will require no modification. Where users will need to make modifications in their code is if they are doing these operations in clip space. For example, instead of transforming the depth into view space and comparing the position, users could instead transform the vertex position into clip space and compare.<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>vec4 clip_pos = PROJECTION_MATRIX * vec4(VERTEX, 1.0);
-clip_space.xyz /= clip_space.w;
+clip_pos.xyz /= clip_pos.w;
 float depth = textureLod(depth_texture, SCREEN_UV, 0.0).r;
 
 if (clip_pos &gt; depth) {
