@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 3.6 beta 5</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-5/</link>
+		<description>This beta represents feature freeze for 3.6. We will now concentrate on bug fixing until we reach stable.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-5/</guid>
+		<dc:creator>lawnjelly</dc:creator>
+		<pubDate>Mon, 13 May 2024 14:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-3-6-beta-5.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.3 dev 6</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-6/</link>
 		<description>The last dev snapshot for 4.3 before feature freeze is a big one after 6 weeks of work!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Clay John</dc:creator>
 		<pubDate>Thu, 14 Dec 2023 15:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/android-and-vulkan.webp</image>
-	</item>
-	
-	<item>
-		<title>Maintenance release: Godot 4.2.1</title>
-		<link>https://godotengine.org/article/maintenance-release-godot-4-2-1/</link>
-		<description>This first maintenance release fixes a number of platform compatibility issues introduced in Godot 4.2, which should make it much easier to upgrade from 4.1 or start new projects on all platforms.</description>
-		
-		<category>Release</category>
-		
-		<guid>https://godotengine.org/article/maintenance-release-godot-4-2-1/</guid>
-		<dc:creator>Rémi Verschelde</dc:creator>
-		<pubDate>Tue, 12 Dec 2023 13:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-4-2-1.webp</image>
 	</item>
 	
 
