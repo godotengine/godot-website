@@ -4,8 +4,8 @@ excerpt: "This beta represents feature freeze for 3.6. We will now concentrate o
 categories: ["pre-release"]
 author: lawnjelly
 image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-5.webp
-image_caption_title: "None"
-image_caption_description: "No description"
+image_caption_title: "Backpack Battles"
+image_caption_description: "A game by PlayWithFurcifer"
 date: 2024-05-13 14:00:00
 ---
 
@@ -21,11 +21,13 @@ This beta represents *feature freeze* for 3.6. We will now concentrate on bug fi
 
 ---
 
-*The cover illustration is from* [** **](), .*
+*The cover illustration is from* [**Backpack Battles**](https://store.steampowered.com/app/2427700/Backpack_Battles/), *a massively popular PvP inventory management auto battler, developed by [PlayWithFurcifer](https://www.youtube.com/@playwithfurcifer) in Godot 3.5. The game was released in early access in March, and is gearing up towards a great full release later this year. You can buy or wishlist it on [Steam](https://store.steampowered.com/app/2427700/Backpack_Battles/), and follow the developers on [Twitter](https://twitter.com/TweetFurcifer) and [YouTube](https://www.youtube.com/@playwithfurcifer).*
 
 ## Highlights
 
 It's been a while since the previous beta snapshot, so we wouldn't be surprised if you're not fully up-to-date on what are the most exciting changes going from Godot 3.5 to the current 3.6 beta. This beta 5 blog post focuses on changes since beta 4, so have a look at previous beta blog posts for a more complete overview of what's new ([beta 1](/article/dev-snapshot-godot-3-6-beta-1/), [beta 2](/article/dev-snapshot-godot-3-6-beta-2/), [beta 3](/article/dev-snapshot-godot-3-6-beta-3/), [beta 4](/article/dev-snapshot-godot-3-6-beta-4/)).
+
+For a complete overview of the changes, see our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#3.6).
 
 Previous snapshots contained many 2D features, and this beta 5 adds a number of 3D features so there should be something for everyone:
 
