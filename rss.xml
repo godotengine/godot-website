@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Web Export in 4.3</title>
+		<link>https://godotengine.org/article/progress-report-web-export-in-4-3/</link>
+		<description>With single-threaded builds and sample playback, it&#39;s now easier than ever to export your game to the Web with Godot 4.3. And more!</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/progress-report-web-export-in-4-3/</guid>
+		<dc:creator>Adam Scott</dc:creator>
+		<pubDate>Tue, 14 May 2024 12:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/progress-report-web-export-in-4-3.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 3.6 beta 5</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-3-6-beta-5/</link>
 		<description>This beta represents feature freeze for 3.6. We will now concentrate on bug fixing until we reach stable.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Godot Foundation</dc:creator>
 		<pubDate>Mon, 18 Dec 2023 15:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/comms-update-18122023.jpg</image>
-	</item>
-	
-	<item>
-		<title>Announcing a collaboration with Google and The Forge</title>
-		<link>https://godotengine.org/article/collaboration-with-google-forge-2023/</link>
-		<description>We are excited to announce that we have partnered with Google and The Forge to bring some helpful performance optimizations to our Vulkan mobile backend.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/collaboration-with-google-forge-2023/</guid>
-		<dc:creator>Clay John</dc:creator>
-		<pubDate>Thu, 14 Dec 2023 15:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/android-and-vulkan.webp</image>
 	</item>
 	
 
