@@ -245,7 +245,7 @@
 						<span>By: </span>
 						
 						
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="lawnjelly" loading="lazy">
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/lawnjelly.webp" alt="lawnjelly" loading="lazy">
 						
 						<span class="by">lawnjelly</span>
 					</div>
@@ -269,11 +269,11 @@
 			<div class="article-body">
 				<p>It has been a while since our last beta, and admittedly 3.6 seems to have been in development <em>for ever</em> (beta 1 was over a year ago!).</p>
 
-<p>There are fewer developers now working on 3.x branch, and Rémi’s time has been largely monopolized by the huge growth in contributors to 4.x, and the consequent increase in his workload. For this reason we have been trying to get maintainers more actively involved in release management, which is allowing enthusiasts to take on more of the work, and get everything running in a more efficient manner.</p>
+<p>There are fewer developers now working on 3.x branch, but the main bottleneck to 3.x development has been on the release management side (i.e. reviewing, approving, and merging pull requests and building releases). Rémi usually manages releases, but his time has been largely monopolized by the huge growth in contributors to 4.x, and the consequent increase in his workload. For this reason we have been trying to get other engine maintainers more actively involved in release management, which is allowing enthusiasts to take on more of the work, and get everything running in a more efficient manner.</p>
 
 <p>This is great news for Godot 3, as it means in the future we will more efficiently be able to address bugs, improve performance, and add new features, to keep Godot 4’s baby brother as a force to be reckoned with.</p>
 
-<p>This beta represents <em>feature freeze</em> for 3.6. We will now concentrate on bug fixing until we reach stable. Any new features will be scheduled for 3.7.</p>
+<p>This beta represents <em>feature freeze</em> for 3.6. We will now concentrate on bug fixing until we reach a stable release. Any new features will be scheduled for 3.7.</p>
 
 <p><a href="#downloads">Jump to the <strong>Downloads</strong> section</a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also <a href="https://editor.godotengine.org/releases/3.6.beta5/">try the <strong>Web editor</strong></a> or the <strong>Android editor</strong> for this release. If you are interested in the latter, please request to join <a href="https://groups.google.com/g/godot-testers">our testing group</a> to get access to pre-release builds.</p>
 
@@ -287,13 +287,13 @@
 
 <p>For a complete overview of the changes, see our <a href="https://godotengine.github.io/godot-interactive-changelog/#3.6"><strong>interactive changelog</strong></a>.</p>
 
-<p>Previous snapshots contained many 2D features, and this beta 5 adds a number of 3D features so there should be something for everyone:</p>
+<p>Previous snapshots contained many 2D features, and this beta 5 adds a number of 3D features so now there should be something for everyone:</p>
 
 <h3 id="tighter-shadow-culling-gh-84745">Tighter Shadow Culling (<a href="https://github.com/godotengine/godot/pull/84745">GH-84745</a>)</h3>
 
-<p>Godot shadow mapping involves taking a simplified camera shot from the point of view of each shadow casting light, when objects move within this light volume. This happens every frame when objects are moving, and this can add up to a lot of drawcalls for each light.</p>
+<p>Godot shadow mapping involves taking a simplified camera shot from the point of view of each shadow casting light, when objects move within this light volume. This happens every frame when objects are moving, and this can add up to a lot of draw calls for each light.</p>
 
-<p>Tighter shadow culling reduces this workload considerably by eliminating drawcalls for shadow casters that cannot cast a shadow upon the main camera view. This involves some clever geometry, but the upshot is you should often see significantly better frame rates when using shadows.</p>
+<p>Tighter shadow culling reduces this workload considerably by eliminating draw calls for shadow casters that cannot cast a shadow that is visible from the main camera view. This involves some clever geometry, but the upshot is you should often see significantly better frame rates when using shadows.</p>
 
 <p>This happens automatically.</p>
 
@@ -303,19 +303,23 @@
 
 <p>The new LOD node provides simple but powerful LOD capabilities, allowing the engine to automatically change visual representation of objects based on the distance from the camera. An example would be simplifying trees in the distance in open world games.</p>
 
+<p>This implementation of LOD differs dramatically from how LOD is implemented in Godot 4 as we chose to use a different implementation that better fits the architecture of Godot 3. In particular, we have removed the LOD settings from GeometryInstances and instead provide an LOD node which controls the LOD behavior of its children.</p>
+
 <h3 id="mesh-merging-gh-61568">Mesh Merging (<a href="https://github.com/godotengine/godot/pull/61568">GH-61568</a>)</h3>
 
 <p><img src="/storage/blog/godot-3.6/merge_group_house.webp" alt="MergeGroup example" /></p>
 
-<p>Godot 3.6 now offers a comprehensive system for mesh merging, both at design time and at runtime. OpenGL can be severely bottlenecked by drawcalls and state changes when drawing lots of objects. Now you can blast through these barriers and potentially render any number of similar objects in a single drawcall.</p>
+<p>Godot 3.6 now offers a comprehensive system for mesh merging, both at design time and at runtime. OpenGL can be severely bottlenecked by draw calls and state changes when drawing lots of objects. Now you can blast through these barriers and potentially render any number of similar objects in a single draw call.</p>
 
 <p>As well as allowing you to optimize existing maps and moving objects, this also makes new procedural game types possible, as thousands of procedurally placed objects can be merged at runtime so as to render efficiently (think vegetation, rocks, furniture, houses, etc.).</p>
+
+<p>Please test this out and give us lots of feedback. This is a new feature in 3.6 that hasn’t been implemented for 4.x. We would like to use the feedback we get on this implementation to potentially add a mesh merging feature to Godot 4.x.</p>
 
 <p>See the <a href="https://docs.godotengine.org/en/3.6/tutorials/3d/merge_groups.html">MergeGroups documentation</a> for details.</p>
 
 <h3 id="orm-materials-gh-76023">ORM Materials (<a href="https://github.com/godotengine/godot/pull/76023">GH-76023</a>)</h3>
 
-<p>Ansraer adds support for ORM materials, which is a standard format where occlusion, roughness, and metallic are combined into a single texture. This means these standard PBR textures can be used without modification, and rendering performance will likely be increased where they are used (compared to the old workflow).</p>
+<p>Ansraer added support for ORM materials, which is a standard format where occlusion, roughness, and metallic are combined into a single texture. This means these standard PBR textures can be used without modification, and rendering performance will likely be increased where they are used (compared to the old workflow).</p>
 
 <h3 id="vertex-cache-optimization-gh-86339">Vertex cache optimization (<a href="https://github.com/godotengine/godot/pull/86339">GH-86339</a>)</h3>
 
@@ -333,7 +337,7 @@
 
 <p>The 3D view menu now offers a new (long overdue) option, “View Selected Mesh Stats”. This will display total triangle, vertex, and index counts for the selected meshes (and multimeshes).</p>
 
-<p>This is incredibly useful information for diagnosing performance and checking imported meshes, and use in conjunction with mesh merging and LOD.</p>
+<p>This is incredibly useful information for diagnosing performance and checking imported meshes, and for use in conjunction with mesh merging and LOD.</p>
 
 <h3 id="scenetree-docks-filter-improvements-gh-67347">SceneTree dock’s filter improvements (<a href="https://github.com/godotengine/godot/pull/67347">GH-67347</a>)</h3>
 
