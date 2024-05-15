@@ -11,11 +11,11 @@ date: 2024-05-13 14:00:00
 
 It has been a while since our last beta, and admittedly 3.6 seems to have been in development *for ever* (beta 1 was over a year ago!).
 
-There are fewer developers now working on 3.x branch, and Rémi's time has been largely monopolized by the huge growth in contributors to 4.x, and the consequent increase in his workload. For this reason we have been trying to get maintainers more actively involved in release management, which is allowing enthusiasts to take on more of the work, and get everything running in a more efficient manner.
+There are fewer developers now working on 3.x branch, but the main bottleneck to 3.x development has been on the release management side (i.e. reviewing, approving, and merging pull requests and building releases). Rémi usually manages releases, but his time has been largely monopolized by the huge growth in contributors to 4.x, and the consequent increase in his workload. For this reason we have been trying to get other engine maintainers more actively involved in release management, which is allowing enthusiasts to take on more of the work, and get everything running in a more efficient manner.
 
 This is great news for Godot 3, as it means in the future we will more efficiently be able to address bugs, improve performance, and add new features, to keep Godot 4's baby brother as a force to be reckoned with.
 
-This beta represents *feature freeze* for 3.6. We will now concentrate on bug fixing until we reach stable. Any new features will be scheduled for 3.7.
+This beta represents *feature freeze* for 3.6. We will now concentrate on bug fixing until we reach a stable release. Any new features will be scheduled for 3.7.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/3.6.beta5/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
@@ -29,13 +29,13 @@ It's been a while since the previous beta snapshot, so we wouldn't be surprised 
 
 For a complete overview of the changes, see our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#3.6).
 
-Previous snapshots contained many 2D features, and this beta 5 adds a number of 3D features so there should be something for everyone:
+Previous snapshots contained many 2D features, and this beta 5 adds a number of 3D features so now there should be something for everyone:
 
 ### Tighter Shadow Culling ([GH-84745](https://github.com/godotengine/godot/pull/84745))
 
-Godot shadow mapping involves taking a simplified camera shot from the point of view of each shadow casting light, when objects move within this light volume. This happens every frame when objects are moving, and this can add up to a lot of drawcalls for each light.
+Godot shadow mapping involves taking a simplified camera shot from the point of view of each shadow casting light, when objects move within this light volume. This happens every frame when objects are moving, and this can add up to a lot of draw calls for each light.
 
-Tighter shadow culling reduces this workload considerably by eliminating drawcalls for shadow casters that cannot cast a shadow upon the main camera view. This involves some clever geometry, but the upshot is you should often see significantly better frame rates when using shadows.
+Tighter shadow culling reduces this workload considerably by eliminating draw calls for shadow casters that cannot cast a shadow that is visible from the main camera view. This involves some clever geometry, but the upshot is you should often see significantly better frame rates when using shadows.
 
 This happens automatically.
 
@@ -45,19 +45,23 @@ This happens automatically.
 
 The new LOD node provides simple but powerful LOD capabilities, allowing the engine to automatically change visual representation of objects based on the distance from the camera. An example would be simplifying trees in the distance in open world games.
 
+This implementation of LOD differs dramatically from how LOD is implemented in Godot 4 as we chose to use a different implementation that better fits the architecture of Godot 3. In particular, we have removed the LOD settings from GeometryInstances and instead provide an LOD node which controls the LOD behavior of its children.
+
 ### Mesh Merging ([GH-61568](https://github.com/godotengine/godot/pull/61568))
 
 ![MergeGroup example](/storage/blog/godot-3.6/merge_group_house.webp)
 
-Godot 3.6 now offers a comprehensive system for mesh merging, both at design time and at runtime. OpenGL can be severely bottlenecked by drawcalls and state changes when drawing lots of objects. Now you can blast through these barriers and potentially render any number of similar objects in a single drawcall.
+Godot 3.6 now offers a comprehensive system for mesh merging, both at design time and at runtime. OpenGL can be severely bottlenecked by draw calls and state changes when drawing lots of objects. Now you can blast through these barriers and potentially render any number of similar objects in a single draw call.
 
 As well as allowing you to optimize existing maps and moving objects, this also makes new procedural game types possible, as thousands of procedurally placed objects can be merged at runtime so as to render efficiently (think vegetation, rocks, furniture, houses, etc.).
+
+Please test this out and give us lots of feedback. This is a new feature in 3.6 that hasn't been implemented for 4.x. We would like to use the feedback we get on this implementation to potentially add a mesh merging feature to Godot 4.x.
 
 See the [MergeGroups documentation](https://docs.godotengine.org/en/3.6/tutorials/3d/merge_groups.html) for details.
 
 ### ORM Materials ([GH-76023](https://github.com/godotengine/godot/pull/76023))
 
-Ansraer adds support for ORM materials, which is a standard format where occlusion, roughness, and metallic are combined into a single texture. This means these standard PBR textures can be used without modification, and rendering performance will likely be increased where they are used (compared to the old workflow).
+Ansraer added support for ORM materials, which is a standard format where occlusion, roughness, and metallic are combined into a single texture. This means these standard PBR textures can be used without modification, and rendering performance will likely be increased where they are used (compared to the old workflow).
 
 ### Vertex cache optimization ([GH-86339](https://github.com/godotengine/godot/pull/86339))
 
@@ -75,7 +79,7 @@ Fixes to physics interpolation, and hierarchical culling, as well as performance
 
 The 3D view menu now offers a new (long overdue) option, "View Selected Mesh Stats". This will display total triangle, vertex, and index counts for the selected meshes (and multimeshes).
 
-This is incredibly useful information for diagnosing performance and checking imported meshes, and use in conjunction with mesh merging and LOD.
+This is incredibly useful information for diagnosing performance and checking imported meshes, and for use in conjunction with mesh merging and LOD.
 
 ### SceneTree dock's filter improvements ([GH-67347](https://github.com/godotengine/godot/pull/67347))
 

@@ -2,7 +2,7 @@
 title: "GLES2 renderer optimization - 2D batching"
 excerpt: "While Juan's work on the Vulkan rendering backend is ongoing in the master branch, the rest of the rendering team have not been idle. They have been working on many bug fixes and some improvements to the OpenGL rendering in the 3.x branch, and one of the most awaited is the addition of batching of 2D primitives in the GLES2 renderer, which should significantly increase performance in a lot of 2D games."
 categories: ["progress-report"]
-author: Bartleby Lawnjelly
+author: lawnjelly
 image: /storage/app/uploads/public/5e8/e58/0c6/5e8e580c63d1e981395802.png
 date: 2020-04-09 11:42:21
 ---
