@@ -6,7 +6,7 @@ author: Adam Scott
 image: /storage/blog/covers/progress-report-web-export-in-4-3.webp
 image_caption_title: "Catburglar"
 image_caption_description: "An open source game by @JohnGabrielUK and his team"
-date: 2024-05-14 12:00:00
+date: 2024-05-15 13:15:00
 ---
 
 Have you ever begun some type of work, and only after realized how little you actually knew? That happened to me during [the last <abbr title="Game Developers Conference">GDC</abbr>](https://godotengine.org/article/gdc-2024-retrospective/).
