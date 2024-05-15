@@ -1374,6 +1374,42 @@ article.article-card .info span {
   color: var(--secondary-color-text);
 }
 
+/* Article tables */
+article table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+article table thead tr {
+  background-color: var(--button-card-background-color);
+	background-color: color-mix(in hsl longer hue, var(--button-card-background-color), white 20%);
+}
+
+article table tbody tr:nth-of-type(even) {
+  background-color: var(--background-color);
+	background-color: color-mix(in hsl longer hue, var(--background-color), white 20%);
+}
+article table tbody tr:nth-of-type(odd) {
+	background-color: color-mix(in hsl longer hue, var(--base-color), black 1%);
+}
+
+article table tbody tr td {
+  padding: 0.25em;
+}
+
+@media (prefers-color-scheme: dark) {
+	article table thead tr {
+		background-color: color-mix(in hsl longer hue, var(--button-card-background-color), black 20%);
+	}
+
+	article table tbody tr:nth-of-type(even) {
+		background-color: color-mix(in hsl longer hue, var(--background-color), black 20%);
+	}
+	article table tbody tr:nth-of-type(odd) {
+		background-color: color-mix(in hsl longer hue, var(--base-color), white 1%);
+	}
+}
+
 figure.article-cover figcaption {
   opacity: 0.8;
   line-height: 1.5
