@@ -67,7 +67,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
-  x64-unknown
+  arm64-darwin-23
   x64-unknown
   x86_64-linux
 
@@ -80,4 +80,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.4.13
+   2.4.18
