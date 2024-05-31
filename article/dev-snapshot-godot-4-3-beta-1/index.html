@@ -373,9 +373,11 @@
 
 <h4 id="automatic-checking-for-engine-updates">Automatic checking for engine updates</h4>
 
-<p>We finally implemented a long-requested feature in the project manager to check for new Godot versions (<a href="https://github.com/godotengine/godot/pull/75916">GH-75916</a>). This is convenient both when testing pre-release versions, to be notified when beta 1 or future releases are published, but also for new maintenance or feature releases in stable branches.</p>
+<p>We finally implemented a long-requested feature in the project manager to check for new Godot versions (<a href="https://github.com/godotengine/godot/pull/75916">GH-75916</a>). This is convenient both when testing pre-release versions, to be notified when the next dev or beta snapshots are published, but also for new maintenance or feature releases in stable branches.</p>
 
 <p>Out of concern for users’ privacy, this feature is not enabled by default, but can be toggled easily by enabling the “Online” network mode in the project manager’s settings.</p>
+
+<p><em>Edit:</em> Turns out that the new update checker has a minor parsing bug, so don’t mind if 4.3 beta 1 reports that there’s a new “4.3-4.3” version… We’ll get that fixed for the next beta :)</p>
 
 <h4 id="packedbytearrays-saved-with-base64-encoding">PackedByteArrays saved with Base64 encoding</h4>
 
