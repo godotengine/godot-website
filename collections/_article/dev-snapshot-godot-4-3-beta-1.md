@@ -109,9 +109,11 @@ A number of highly requested theme and UX improvements have been merged for 4.3 
 
 #### Automatic checking for engine updates
 
-We finally implemented a long-requested feature in the project manager to check for new Godot versions ([GH-75916](https://github.com/godotengine/godot/pull/75916)). This is convenient both when testing pre-release versions, to be notified when beta 1 or future releases are published, but also for new maintenance or feature releases in stable branches.
+We finally implemented a long-requested feature in the project manager to check for new Godot versions ([GH-75916](https://github.com/godotengine/godot/pull/75916)). This is convenient both when testing pre-release versions, to be notified when the next dev or beta snapshots are published, but also for new maintenance or feature releases in stable branches.
 
 Out of concern for users’ privacy, this feature is not enabled by default, but can be toggled easily by enabling the “Online” network mode in the project manager’s settings.
+
+*Edit:* Turns out that the new update checker has a minor parsing bug, so don't mind if 4.3 beta 1 reports that there's a new "4.3-4.3" version... We'll get that fixed for the next beta :)
 
 #### PackedByteArrays saved with Base64 encoding
 
