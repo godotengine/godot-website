@@ -41,7 +41,7 @@ cover_image: ""
 
 <p>
 	Want to help us with the stand, designing or ordering goodies and stand material (table cloth, kakemono,
-	etc.)? Get in touch with us on <a href="/community">one of the community channels</a> (especially IRC ;)).
+	etc.)? Get in touch with us on <a href="/community/">one of the community channels</a> (especially IRC ;)).
 </p>
 
 <h4>Escoria talk in the Open Game Development track</h4>
