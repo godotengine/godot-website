@@ -9,15 +9,16 @@
 					"name": "{{ v.flavor }}",
 					"release_date": "{{ v.release_date }}",
 					"release_notes": "{{ v.release_notes | replace: "/article/", "https://godotengine.org/article/" }}"
-				},
+				{% if v.releases %}},{% else %}}{% endif %}
 				{% for r in v.releases %}
 				{
 					"name": "{{ r.name }}",
 					"release_date": "{{ r.release_date }}",
 					"release_notes": "{{ r.release_notes | replace: "/article/", "https://godotengine.org/article/" }}"
-				},
+				{% if forloop.last %}}{% else %}},{% endif %}
+				
 				{% endfor %}
 			]
-		},
+		{% if forloop.last %}}{% else %}},{% endif %}
 	{% endfor %}
 	]
