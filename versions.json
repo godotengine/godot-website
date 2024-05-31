@@ -1,4 +1,23 @@
 ---
 ---
-
-{{ site.data.versions | jsonify | replace: "/article/", "https://godotengine.org/article/" }}
+[
+	{% for v in site.data.versions %}
+		{
+			"name": "{{ v.name }}",
+			"releases": [
+				{
+					"name": "{{ v.flavor }}",
+					"release_date": "{{ v.release_date }}",
+					"release_notes": "{{ v.release_notes | replace: "/article/", "https://godotengine.org/article/" }}"
+				},
+				{% for r in v.releases %}
+				{
+					"name": "{{ r.name }}",
+					"release_date": "{{ r.release_date }}",
+					"release_notes": "{{ r.release_notes | replace: "/article/", "https://godotengine.org/article/" }}"
+				},
+				{% endfor %}
+			]
+		},
+	{% endfor %}
+	]
