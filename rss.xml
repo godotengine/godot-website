@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Dev snapshot: Godot 4.3 beta 1</title>
+		<link>https://godotengine.org/article/dev-snapshot-godot-4-3-beta-1/</link>
+		<description>Godot 4.3 is ready for broad testing as we finalize the release.</description>
+		
+		<category>Pre-release</category>
+		
+		<guid>https://godotengine.org/article/dev-snapshot-godot-4-3-beta-1/</guid>
+		<dc:creator>Godot contributors</dc:creator>
+		<pubDate>Fri, 31 May 2024 11:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-3-beta-1.webp</image>
+	</item>
+	
+	<item>
 		<title>Web Export in 4.3</title>
 		<link>https://godotengine.org/article/progress-report-web-export-in-4-3/</link>
 		<description>With single-threaded builds and sample playback, it&#39;s now easier than ever to export your game to the Web with Godot 4.3. And more!</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Yuri Sizov</dc:creator>
 		<pubDate>Thu, 21 Dec 2023 17:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-3-dev-1.webp</image>
-	</item>
-	
-	<item>
-		<title>Prepare to hear a lot more from us!</title>
-		<link>https://godotengine.org/article/communications-update-2023/</link>
-		<description>The Godot Foundation is onboarding a person in charge of Community &amp; Communications, and there is a feedback form for you to fill out.</description>
-		
-		<category>News</category>
-		
-		<guid>https://godotengine.org/article/communications-update-2023/</guid>
-		<dc:creator>Godot Foundation</dc:creator>
-		<pubDate>Mon, 18 Dec 2023 15:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/comms-update-18122023.jpg</image>
 	</item>
 	
 
