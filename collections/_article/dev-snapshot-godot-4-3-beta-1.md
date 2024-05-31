@@ -63,6 +63,8 @@ Fixed timestep a.k.a. physics interpolation is now implemented for 2D ([GH-88424
 
 This will help address cases of position/camera jitter in 2D games, and should complement some of the pixel-art focused changes made in the 4.3 dev 4 snapshot.
 
+3D physics interpolation is also in the works for a future Godot release ([GH-92391](https://github.com/godotengine/godot/pull/92391), possibly 4.4.
+
 #### Parallax2D
 Godot 4.3 introduces a new Parallax2D node ([GH-87391](https://github.com/godotengine/godot/pull/87391)). This supersedes the current ParallaxLayer/ParallaxBackground nodes and removes many limitations that we had with them. You can even convert ParallaxLayers and ParallaxBackgrounds into Parallax2D nodes conveniently in the editor. Going forward we recommend always using Parallax2D for your parallax needs. We think that the Parallax2D does everything that ParallaxLayer/ParallaxBackground could do and more! If you find something that ParallaxLayer/ParallaxBackground can do that Parallax2D can’t, please let us know as soon as possible. If you want to know more about the new Parallax2D node, please see the [Parallax2D blog post](https://godotengine.org/article/parallax-progress-report/).
 
@@ -83,7 +85,7 @@ Another bugfix on the GDScript side may also help solve situations where using p
 Loading of scenes with corrupted or missing dependencies will no longer be aborted ([GH-85159](https://github.com/godotengine/godot/pull/85159)), allowing you to use and fix such scenes without external tools.
 
 #### Add ufbx for importing .fbx files without FBX2glTF
-This monumental effort by Samuli Raivio and Ernest Lee  incorporates the popular ufbx library into Godot to allow for seamlessly importing .fbx files ([GH-81746](https://github.com/godotengine/godot/pull/81746)). Previously users would have to download the FBX2glTF tool separately and Godot would invoke it to convert .fbx files to glTF files in order to import them. ufbx allows us to avoid this process and import .fbx files directly. Although the ufbx library has gone through extensive rigorous testing, this is a huge change and the .fbx file format is notoriously difficult to work with, so please test this carefully and report any bugs you find.
+This monumental effort by Samuli Raivio and Ernest Lee incorporates the popular ufbx library into Godot to allow for seamlessly importing .fbx files ([GH-81746](https://github.com/godotengine/godot/pull/81746)). Previously users would have to download the FBX2glTF tool separately and Godot would invoke it to convert .fbx files to glTF files in order to import them. ufbx allows us to avoid this process and import .fbx files directly. Although the ufbx library has gone through extensive rigorous testing, this is a huge change and the .fbx file format is notoriously difficult to work with, so please test this carefully and report any bugs you find.
 
 After upgrading to Godot 4.3, existing files in your projects will continue to import using [FBX2glTF](https://github.com/godotengine/FBX2glTF). By default, only newly added files will import with ufbx. This default may be changed by using the "Preset" button near the top of the Import dock.
 
@@ -97,8 +99,8 @@ We finally implemented a long-requested feature in the project manager to check 
 
 Out of concern for users’ privacy, this feature is not enabled by default, but can be toggled easily by enabling the “Online” network mode in the project manager’s settings.
 
-#### PackedByteArrays saved with base64 encoding
-One common annoyance with Godot’s text-based scene/resource format (tscn/tres) is that the serialization of PackedByteArray properties takes a lot of space, leading to inflated file sizes, and noisy diffs. To help with that, we changed the serialization of PackedByteArrays to use base64 encoding, which is more compact, especially for bigger arrays ([GH-89186](https://github.com/godotengine/godot/pull/89186)).
+#### PackedByteArrays saved with Base64 encoding
+One common annoyance with Godot’s text-based scene/resource format (tscn/tres) is that the serialization of PackedByteArray properties takes a lot of space, leading to inflated file sizes, and noisy diffs. To help with that, we changed the serialization of PackedByteArrays to use Base64 encoding, which is more compact, especially for bigger arrays ([GH-89186](https://github.com/godotengine/godot/pull/89186)).
 
 This change however means that the scene format changed in a way that can’t be parsed by earlier Godot releases. To ease this transition, we made it so that Godot 4.3 only saves scenes and resources using this new format if they contain a PackedByteArray ([GH-90889](https://github.com/godotengine/godot/pull/90889)). Additionally, we are backporting support for parsing the new format to the upcoming Godot 4.2.3 and 4.1.5 releases ([GH-91250](https://github.com/godotengine/godot/pull/91250)), so that it would still be possible for users to roll back to these versions if they need to.
 
@@ -111,16 +113,16 @@ It took us just under 10 years to implement, after it was requested back in 2014
 
 The implementation we merged was a massive undertaking led by Riteo ([GH-86180](https://github.com/godotengine/godot/pull/86180)), spanning 2 years of development with extensive testing and contributions by many others. This built upon previous attempts ([GH-23426](https://github.com/godotengine/godot/pull/23426), [GH-27463](https://github.com/godotengine/godot/pull/27463)) which came at a time where Godot’s architecture wasn’t ready for it yet, notably before the 4.0 split between OS (platform) and DisplayServer responsibilities.
 
-Included in this effort was the introduction of OpenGL ES driver support for desktop devices ([GH-91466](https://github.com/godotengine/godot/pull/91466)). This is currently limited to linux devices.
+Included in this effort was the introduction of OpenGL ES driver support for desktop devices ([GH-91466](https://github.com/godotengine/godot/pull/91466)). This is currently limited to Linux devices (although note that Windows drivers generally do not support OpenGL ES *natively*).
 
 For more information on the new Wayland support (uncluding testing instructions), please see the [4.3 dev 3 blog post](https://godotengine.org/article/dev-snapshot-godot-4-3-dev-3/#wayland-support-for-linux).
 
 #### D3D12
-Thanks to the tireless work of randomshaper, Godot now supports the Direct3D 12 rendering API as an optional backend on Windows devices ([GH-70315](https://github.com/godotengine/godot/pull/70315)).
+Thanks to the tireless work of RandomShaper, Godot now supports the Direct3D 12 rendering API as an optional backend on Windows devices ([GH-70315](https://github.com/godotengine/godot/pull/70315)).
 
-Official builds have support for D3D12, but in order to use it you still need to download the DirectX Shader Compiler from Microsoft and copy over the dxil.dll file. 
+Official builds have support for D3D12, but in order to use it, you still need to [download the DirectX Shader Compiler from Microsoft](https://github.com/microsoft/DirectXShaderCompiler/releases/latest) and copy over the `dxil.dll` file to the folder the Godot executable is located in. 
 
-We are still evaluating options for being able to provide a D3D12 support that works out of the box, without a proprietary component. But for now to test things you will have to do this manual step (or compile from source, which does it for you).
+We are still evaluating options for being able to provide a D3D12 support that works out of the box, without a proprietary component. But for now, to test things, you will have to do this manual step (or compile from source, which does it for you).
 
 ### Platforms
 
@@ -129,7 +131,7 @@ For Godot 4.0, we modernized the engine to make heavier use of multi-threading. 
 
 Experience has proven that even though SharedArrayBuffer is supported by all browsers nowadays, the conditions it imposes on the web server that host the games are too difficult to uphold. For people who self-host, it’s easy enough, but for people who distribute their games on publishing platforms like itch.io or CrazyGames, it’s often outside their control. The requirements for SharedArrayBuffer (for security reasons) are also at odds with web game monetization options, such as advertisement or payment processing.
 
-So we’ve had to change course and do the work to re-add a single-threaded mode to Godot ([GH-85939](https://github.com/godotengine/godot/pull/85939)). The engine can now be compiled with threads=no, which disables all threading use and runs all logic on the main thread.
+So we’ve had to change course and do the work to re-add a single-threaded mode to Godot ([GH-85939](https://github.com/godotengine/godot/pull/85939)). The engine can now be compiled with the `threads=no` SCons option, which disables all threading use and runs all logic on the main thread.
 
 No-threads export templates are provided for the Web platform, and their use can be toggled in the export preset (“Thread Support” boolean option). This brings back audio issues on some OS or hardware combinations, which will be solved by ([GH-91382](https://github.com/godotengine/godot/pull/91382)) which may be merged for 4.3. Ultimately, the tradeoff is similar to Godot 3: good audio with threads enabled, or bad audio with single-threaded mode. The web isn’t an easy platform to target :)
 
@@ -183,11 +185,11 @@ In terms of new GDScript features, Godot 4.3 may be less stacked than 4.2, but r
 
 In terms of new features, binary tokenization on export has been reintroduced ([GH-87634](https://github.com/godotengine/godot/pull/87634)). This brings back the 3.x functionality to export GDScript files in a binary form, which hides the source code and reduces (a bit) the export size. You can also negatively compare types more naturally with the `is not` operator ([GH-87939](https://github.com/godotengine/godot/pull/87939)).
 
-We also made built-in type methods and utility functions usable as `Callable` ([GH-82264](https://github.com/godotengine/godot/pull/82264), [GH-86823](https://github.com/godotengine/godot/pull/86823)). This makes it possible to call variadic functions such as `print` with `Callable.callv()` easily, without the need of boilerplate. We also worked on export annotations, such as allowing exported arrays to set property hints for their elements ([GH-82952](https://github.com/godotengine/godot/pull/82952)), we added `@export_storage` to hide exported values from the editor while still exporting the value (useful for plugins!) ([GH-82122](https://github.com/godotengine/godot/pull/82122)), and we created ` @export_custom` for more complex hints or potential future hints ([GH-72912](https://github.com/godotengine/godot/pull/72912)).
+We also made built-in type methods and utility functions usable as `Callable` ([GH-82264](https://github.com/godotengine/godot/pull/82264), [GH-86823](https://github.com/godotengine/godot/pull/86823)). This makes it possible to call variadic functions such as `print` with `Callable.callv()` easily, without the need of boilerplate. We also worked on export annotations, such as allowing exported arrays to set property hints for their elements ([GH-82952](https://github.com/godotengine/godot/pull/82952)), we added `@export_storage` to hide the property from the Inspector while still exporting the value ([GH-82122](https://github.com/godotengine/godot/pull/82122)), and we created `@export_custom` for more complex hints or potential future hints ([GH-72912](https://github.com/godotengine/godot/pull/72912)).
 
 In terms of bug fixes, the GDScript team fixed lambda hot-reloading ([GH-86569](https://github.com/godotengine/godot/pull/86569)) and fixed out of date errors in depended scripts ([GH-90601](https://github.com/godotengine/godot/pull/90601)). Now GDScript cache will be your friend without restarting the editor!
 
-A lot of efforts have been made to fix GDScript autompletion ([GH-86667](https://github.com/godotengine/godot/pull/86667), [GH-86554](https://github.com/godotengine/godot/pull/86554), [GH-86111](https://github.com/godotengine/godot/pull/86111), and more). For this, we even introduced a testing system to test for autocompletion regressions! ([GH-86973](https://github.com/godotengine/godot/pull/86973))
+A lot of efforts have been made to fix GDScript autocompletion ([GH-86667](https://github.com/godotengine/godot/pull/86667), [GH-86554](https://github.com/godotengine/godot/pull/86554), [GH-86111](https://github.com/godotengine/godot/pull/86111), and more). For this, we introduced a testing system to test for autocompletion regressions ([GH-86973](https://github.com/godotengine/godot/pull/86973)).
 
 Finally, to name a few more, we fixed `@warning_ignore` annotation issues ([GH-83037](https://github.com/godotengine/godot/pull/83037)) and adjusted some warnings ([GH-92027](https://github.com/godotengine/godot/pull/92027), [GH-90794](https://github.com/godotengine/godot/pull/90794), [GH-90756](https://github.com/godotengine/godot/pull/90756), and [GH-90442](https://github.com/godotengine/godot/pull/90442)).
 
@@ -202,12 +204,14 @@ Finally, to name a few more, we fixed `@warning_ignore` annotation issues ([GH-8
 
 ### Documentation
 
-- Add self links to methods, properties, etc. in class reference. For example, this allows you to link directly to a method while reading the description instead of having to scroll up and link the method from the table of methods. ([GH-91537](https://github.com/godotengine/godot/pull/91537)).
+- Add self links to methods, properties, etc. in the online class reference. For example, this allows you to link directly to a method while reading the description instead of having to scroll up and link the method from the table of methods. ([GH-91537](https://github.com/godotengine/godot/pull/91537)).
+- Add syntax highlighting and a copy button for code blocks in the built-in documentation viewer. ([GH-89263](https://github.com/godotengine/godot/pull/89263), [GH-87363](https://github.com/godotengine/godot/pull/87363)).
+- Add support for deprecated/experimental messages. C# also uses the deprecation message when generating bindings. ([GH-81458](https://github.com/godotengine/godot/pull/81458), [GH-88730](https://github.com/godotengine/godot/pull/88730)).
 - Add option to generate GDExtension docs with `--doctool` ([GH-91518](https://github.com/godotengine/godot/pull/91518)).
 
 ### Import
 
-We have added support for the Quite OK Audio (QOA) format as an optional compression option for WAV files in [GH-91014](https://github.com/godotengine/godot/pull/91014). QOA offers a nice tradeoff between performance, file size, and quality compared to the existing options. It is higher quality than the current WAV compression option (IMA-ADPCM) and slightly smaller while being slightly more CPU intensive to use. Compared to Vorbis and Mp3, it is similar in quality, but slightly larger in size and much less CPU intensive to use.
+We have added support for the Quite OK Audio (QOA) format as an optional compression option for WAV files in [GH-91014](https://github.com/godotengine/godot/pull/91014). QOA offers a nice tradeoff between performance, file size, and quality compared to the existing options. It is higher quality than the current WAV compression option (IMA-ADPCM) and slightly smaller while being slightly more CPU intensive to use. Compared to Vorbis and MP3, it is similar in quality, but slightly larger in size and much less CPU intensive to use.
 
 For more information about the QOA format, please see this [handy blog post](https://phoboslab.org/log/2023/02/qoa-time-domain-audio-compression).
 
@@ -240,7 +244,7 @@ This release is built from commit [`a4f2ea91a1bd18f70a43ff4c1377db49b56bc3f0`](h
 
 There are currently no known issues introduced by this release.
 
-With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
+With every release, we accept that there are going to be various issues which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
 
 ## Bug reports
 
