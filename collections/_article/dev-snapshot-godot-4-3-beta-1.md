@@ -71,7 +71,7 @@ Fixed timestep a.k.a. physics interpolation is now implemented for 2D ([GH-88424
 
 This will help address cases of position/camera jitter in 2D games, and should complement some of the pixel-art focused changes made in the 4.3 dev 4 snapshot.
 
-3D physics interpolation is also in the works for a future Godot release ([GH-92391](https://github.com/godotengine/godot/pull/92391), possibly 4.4.
+3D physics interpolation is also in the works for a future Godot release ([GH-92391](https://github.com/godotengine/godot/pull/92391)), possibly 4.4.
 
 #### Parallax2D
 
