@@ -23,11 +23,12 @@ Please, consider [supporting the project financially](#support), if you are able
 
 ## Highlights
 
-Godot 4.3 is coming with a number of significant improvements and new features. To give you a taste, we have reproduced some of the spotlighted changes from the development blog posts here. If you have kept up to date with the dev release blog posts, there won't be many surprises here. 
+Godot 4.3 is coming with a number of significant improvements and new features. To give you a taste, we have reproduced some of the spotlighted changes from the development blog posts here. If you have kept up to date with the dev release blog posts, there won't be many surprises here.
 
 - [Breaking changes](#breaking-changes)
 - [2D](#2D)
 - [Editor](#editor)
+- [Audio](#audio)
 - [Display](#display)
 - [Platforms](#platforms)
 - [Rendering and shaders](#rendering-and-shaders)
@@ -63,7 +64,7 @@ You can find a list of such issues by filtering the merged PRs in the 4.3 milest
 
 #### Huge improvement to pixel stability for pixel art games
 
-After much community discussion and the hard work of several contributors, we have merged a [PR](https://github.com/godotengine/godot/pull/87297) that we think resolves many of the outstanding issues with pixel stability when making pixel art games. As before, it relies on using the `rendering/2d/snap/snap_2d_transforms_to_pixel` project setting. If you are making a pixel art game, please test this new release carefully and let us know how it goes.
+After much community discussion and the hard work of several contributors, we have merged a <abbr title="Pull Request">PR</abbr> ([GH-87297](https://github.com/godotengine/godot/pull/87297)) that we think resolves many of the outstanding issues with pixel stability when making pixel art games. As before, it relies on using the `rendering/2d/snap/snap_2d_transforms_to_pixel` project setting. If you are making a pixel art game, please test this new release carefully and let us know how it goes.
 
 #### 2D physics interpolation
 
@@ -123,6 +124,14 @@ This change however means that the scene format changed in a way that can’t be
 
 Finally, we also changed the name of the Editor Settings config file to make it specific to each Godot minor version ([GH-90875](https://github.com/godotengine/godot/pull/90875)). This avoids losing configuration when going back and forth between slightly incompatible Godot branches. The first time you use a new Godot minor branch (e.g. 4.3), it will port settings from the previous version (e.g. 4.2), but from there on the two config files stay separate.
 
+### Audio
+
+#### Interactive music support
+
+At last, Godot 4.3 ships with interactive music support thanks to [GH-64488](https://github.com/godotengine/godot/pull/64488). The new stream types (`AudioStreamInteractive`, `AudioStreamPlaylist`, and `AudioStreamSynchronized`) can be combined to create complex, layered interactive music and transitions between them, similar to software such as WWise, FMOD or Elias.
+
+With this feature, you will be able to create nice audio atmospheres that change dynamically based on what's happening in your game. We'd love to "hear" what you'll be doing with this new addition.
+
 ### Display
 
 #### Wayland support for Linux
@@ -139,7 +148,7 @@ For more information on the new Wayland support (uncluding testing instructions)
 
 Thanks to the tireless work of RandomShaper, Godot now supports the Direct3D 12 rendering API as an optional backend on Windows devices ([GH-70315](https://github.com/godotengine/godot/pull/70315)).
 
-Official builds have support for D3D12, but in order to use it, you still need to [download the DirectX Shader Compiler from Microsoft](https://github.com/microsoft/DirectXShaderCompiler/releases/latest) and copy over the `dxil.dll` file to the folder the Godot executable is located in. 
+Official builds have support for D3D12, but in order to use it, you still need to [download the DirectX Shader Compiler from Microsoft](https://github.com/microsoft/DirectXShaderCompiler/releases/latest) and copy over the `dxil.dll` file to the folder the Godot executable is located in.
 
 We are still evaluating options for being able to provide a D3D12 support that works out of the box, without a proprietary component. But for now, to test things, you will have to do this manual step (or compile from source, which does it for you).
 
@@ -193,7 +202,7 @@ Several new features have been added to assist in retargeting animation sets, in
 * Retargeting option to use a template for silhouette ([GH-88824](https://github.com/godotengine/godot/pull/88824)). This feature can be used to reference the RESET animation of a known good (T-pose) reference.
 * Allow preserving the initial bone pose in rest fixer ([GH-88821](https://github.com/godotengine/godot/pull/88821)).
 * Add new scene import option to import as Skeleton ([GH-88819](https://github.com/godotengine/godot/pull/88819)). This solves cases especially common in .fbx files without any meshes.
-* Several other bugfixes to skeletal aniamtion import ([GH-90050](https://github.com/godotengine/godot/pull/90050), [GH-90019](https://github.com/godotengine/godot/pull/90019), [GH-90064](https://github.com/godotengine/godot/pull/90064), [GH-90065](https://github.com/godotengine/godot/pull/90065), [GH-91641](https://github.com/godotengine/godot/pull/91641), [GH-92012](https://github.com/godotengine/godot/pull/92012)) 
+* Several other bugfixes to skeletal aniamtion import ([GH-90050](https://github.com/godotengine/godot/pull/90050), [GH-90019](https://github.com/godotengine/godot/pull/90019), [GH-90064](https://github.com/godotengine/godot/pull/90064), [GH-90065](https://github.com/godotengine/godot/pull/90065), [GH-91641](https://github.com/godotengine/godot/pull/91641), [GH-92012](https://github.com/godotengine/godot/pull/92012))
 
 ### C#
 
@@ -255,7 +264,7 @@ For more information about the QOA format, please see this [handy blog post](htt
 
 **136 contributors** submitted **466 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.3-beta1) for the complete list of changes since the 4.3-dev6 snapshot. You can also review [all changes included in 4.3](https://godotengine.github.io/godot-interactive-changelog/#4.3) compared to the previous 4.2 feature release.
 
-This release is built from commit [`a4f2ea91a1bd18f70a43ff4c1377db49b56bc3f0`](https://github.com/godotengine/godot/commit/).
+This release is built from commit [`a4f2ea91a`](https://github.com/godotengine/godot/commit/a4f2ea91a1bd18f70a43ff4c1377db49b56bc3f0).
 
 ## Downloads
 
@@ -286,3 +295,5 @@ In particular, any change that would cause a regression in your projects is very
 Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
 If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+
+*Edit (2024-05-31):* we added the missing interactive music support section.
