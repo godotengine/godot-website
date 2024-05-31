@@ -287,6 +287,7 @@
   <li><a href="#breaking-changes">Breaking changes</a></li>
   <li><a href="#2D">2D</a></li>
   <li><a href="#editor">Editor</a></li>
+  <li><a href="#audio">Audio</a></li>
   <li><a href="#display">Display</a></li>
   <li><a href="#platforms">Platforms</a></li>
   <li><a href="#rendering-and-shaders">Rendering and shaders</a></li>
@@ -325,7 +326,7 @@
 
 <h4 id="huge-improvement-to-pixel-stability-for-pixel-art-games">Huge improvement to pixel stability for pixel art games</h4>
 
-<p>After much community discussion and the hard work of several contributors, we have merged a <a href="https://github.com/godotengine/godot/pull/87297">PR</a> that we think resolves many of the outstanding issues with pixel stability when making pixel art games. As before, it relies on using the <code class="language-plaintext highlighter-rouge">rendering/2d/snap/snap_2d_transforms_to_pixel</code> project setting. If you are making a pixel art game, please test this new release carefully and let us know how it goes.</p>
+<p>After much community discussion and the hard work of several contributors, we have merged a <abbr title="Pull Request">PR</abbr> (<a href="https://github.com/godotengine/godot/pull/87297">GH-87297</a>) that we think resolves many of the outstanding issues with pixel stability when making pixel art games. As before, it relies on using the <code class="language-plaintext highlighter-rouge">rendering/2d/snap/snap_2d_transforms_to_pixel</code> project setting. If you are making a pixel art game, please test this new release carefully and let us know how it goes.</p>
 
 <h4 id="2d-physics-interpolation">2D physics interpolation</h4>
 
@@ -386,6 +387,14 @@
 <p>This change however means that the scene format changed in a way that can’t be parsed by earlier Godot releases. To ease this transition, we made it so that Godot 4.3 only saves scenes and resources using this new format if they contain a PackedByteArray (<a href="https://github.com/godotengine/godot/pull/90889">GH-90889</a>). Additionally, we are backporting support for parsing the new format to the upcoming Godot 4.2.3 and 4.1.5 releases (<a href="https://github.com/godotengine/godot/pull/91250">GH-91250</a>), so that it would still be possible for users to roll back to these versions if they need to.</p>
 
 <p>Finally, we also changed the name of the Editor Settings config file to make it specific to each Godot minor version (<a href="https://github.com/godotengine/godot/pull/90875">GH-90875</a>). This avoids losing configuration when going back and forth between slightly incompatible Godot branches. The first time you use a new Godot minor branch (e.g. 4.3), it will port settings from the previous version (e.g. 4.2), but from there on the two config files stay separate.</p>
+
+<h3 id="audio">Audio</h3>
+
+<h4 id="interactive-music-support">Interactive music support</h4>
+
+<p>At last, Godot 4.3 ships with interactive music support thanks to <a href="https://github.com/godotengine/godot/pull/64488">GH-64488</a>. The new stream types (<code class="language-plaintext highlighter-rouge">AudioStreamInteractive</code>, <code class="language-plaintext highlighter-rouge">AudioStreamPlaylist</code>, and <code class="language-plaintext highlighter-rouge">AudioStreamSynchronized</code>) can be combined to create complex, layered interactive music and transitions between them, similar to software such as WWise, FMOD or Elias.</p>
+
+<p>With this feature, you will be able to create nice audio atmospheres that change dynamically based on what’s happening in your game. We’d love to “hear” what you’ll be doing with this new addition.</p>
 
 <h3 id="display">Display</h3>
 
@@ -528,7 +537,7 @@ Additionally, <a href="https://github.com/godotengine/godot/pull/87250">GH-87250
 
 <p><strong>136 contributors</strong> submitted <strong>466 improvements</strong> for this release. See our <a href="https://godotengine.github.io/godot-interactive-changelog/#4.3-beta1"><strong>interactive changelog</strong></a> for the complete list of changes since the 4.3-dev6 snapshot. You can also review <a href="https://godotengine.github.io/godot-interactive-changelog/#4.3">all changes included in 4.3</a> compared to the previous 4.2 feature release.</p>
 
-<p>This release is built from commit <a href="https://github.com/godotengine/godot/commit/"><code class="language-plaintext highlighter-rouge">a4f2ea91a1bd18f70a43ff4c1377db49b56bc3f0</code></a>.</p>
+<p>This release is built from commit <a href="https://github.com/godotengine/godot/commit/a4f2ea91a1bd18f70a43ff4c1377db49b56bc3f0"><code class="language-plaintext highlighter-rouge">a4f2ea91a</code></a>.</p>
 
 <h2 id="downloads">Downloads</h2>
 
@@ -683,6 +692,8 @@ Additionally, <a href="https://github.com/godotengine/godot/pull/87250">GH-87250
 <p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to <a href="https://fund.godotengine.org/">generous donations from the Godot community</a>. A big thank you to everyone who has contributed <a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time</a> or <a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support</a> to the project!</p>
 
 <p>If you’d like to support the project financially and help us secure our future hires, you can do so using the <a href="https://fund.godotengine.org/">Godot Development Fund</a> platform managed by <a href="https://godot.foundation/">Godot Foundation</a>. There are also several <a href="/donate">alternative ways to donate</a> which you may find more suitable.</p>
+
+<p><em>Edit (2024-05-31):</em> we added the missing interactive music support section.</p>
 
 			</div>
 		</div>
