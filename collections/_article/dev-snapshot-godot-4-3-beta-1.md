@@ -33,7 +33,7 @@ Godot 4.3 is coming with a number of significant improvements and new features. 
 - [Platforms](#platforms)
 - [Rendering and shaders](#rendering-and-shaders)
 - [Animation](#animation)
-- [C\#](#C\#)
+- [C\#](#c)
 - [GDScript](#gdscript)
 - [XR](#xr)
 - [Documentation](#documentation)
