@@ -7,6 +7,8 @@ image: /storage/blog/covers/migrating-animations-from-godot-4-0-to-4-3.webp
 date: 2024-06-04 00:00:00
 ---
 
+<style>article .content img { background-color: initial; }</style>
+
 # TL;DR
 
 Animation features were still quite immature in 4.0 and there were many undefined behaviors. 4.3 has redefined many behaviors along with some options, so we recommend that you review your settings.
