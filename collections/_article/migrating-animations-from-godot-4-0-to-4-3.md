@@ -12,13 +12,13 @@ date: 2024-06-04 00:00:00
 Animation features were still quite immature in 4.0 and there were many undefined behaviors. 4.3 has redefined many behaviors along with some options, so we recommend that you review your settings.
 
 - For blending and `RESET` animation
-  - [Deterministic blending](#Deterministic-blending)
+  - [Deterministic blending](#deterministic-blending)
 - For `Discrete` value (int, resource and etc.) animation
-  - [CallbackModeDiscrete](#CallbackModeDiscrete)
+  - [CallbackModeDiscrete](#callbackmodediscrete)
 - For `Capture` update mode
-  - [capture()](#capture())
+  - [capture()](#capture)
 - For `AnimationNodeStateMachine`
-  - [NodeStateMachine - State Machine Type](#NodeStateMachine---State-Machine-Type)
+  - [NodeStateMachine - State Machine Type](#nodestatemachine---state-machine-type)
 
 # Description
 
