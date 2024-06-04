@@ -10,6 +10,19 @@
 	
 	
 	<item>
+		<title>Migrating Animations from Godot 4.0 to 4.3</title>
+		<link>https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/</link>
+		<description>In Godot 4.3, a large number of animation features have been reworked since 4.0, so it&#39;s time to migrate your animations.</description>
+		
+		<category>Progress Report</category>
+		
+		<guid>https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/</guid>
+		<dc:creator>Silc Renew</dc:creator>
+		<pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+		<image>https://godotengine.org/storage/blog/covers/migrating-animations-from-godot-4-0-to-4-3.webp</image>
+	</item>
+	
+	<item>
 		<title>Dev snapshot: Godot 4.3 beta 1</title>
 		<link>https://godotengine.org/article/dev-snapshot-godot-4-3-beta-1/</link>
 		<description>Godot 4.3 is ready for broad testing as we finalize the release.</description>
@@ -306,19 +319,6 @@
 		<dc:creator>Rémi Verschelde</dc:creator>
 		<pubDate>Thu, 11 Jan 2024 18:00:00 +0000</pubDate>
 		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-3-dev-2.webp</image>
-	</item>
-	
-	<item>
-		<title>Dev snapshot: Godot 4.3 dev 1</title>
-		<link>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-1/</link>
-		<description>We&#39;re ending the year with an early sneak peak at the upcoming Godot 4.3 release with its first dev snapshot!</description>
-		
-		<category>Pre-release</category>
-		
-		<guid>https://godotengine.org/article/dev-snapshot-godot-4-3-dev-1/</guid>
-		<dc:creator>Yuri Sizov</dc:creator>
-		<pubDate>Thu, 21 Dec 2023 17:00:00 +0000</pubDate>
-		<image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-3-dev-1.webp</image>
 	</item>
 	
 

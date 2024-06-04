@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Godot Engine">
+	<meta name="description" content="In Godot 4.3, a large number of animation features have been reworked since 4.0, so it's time to migrate your animations.">
+	<meta name="theme-color" content="#3d8fcc">
+	<meta property="og:site_name" content="Godot Engine">
+	<meta property="og:url" content="https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/">
+	<meta name="twitter:site" content="@godotengine">
+
+	<meta property="og:title" content="Migrating Animations from Godot 4.0 to 4.3">
+	<meta property="og:description" content="In Godot 4.3, a large number of animation features have been reworked since 4.0, so it's time to migrate your animations.">
+	<meta property="og:image" content="https://godotengine.org/storage/blog/covers/migrating-animations-from-godot-4-0-to-4-3.webp">
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Migrating Animations from Godot 4.0 to 4.3</title>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/assets/css/main.css?112">
+	<link rel="stylesheet" href="/assets/css/tobii.min.css">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+</head>
+
+<body>
+	<input type="checkbox" id="nav_toggle_cb">
+<header>
+	<div class="container flex align-center">
+		<div id="nav_head">
+			<a href="/" id="logo-link">
+				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
+				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
+			</a>
+			<label for="nav_toggle_cb" id="nav_toggle_btn">
+				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="Main menu">
+			</label>
+		</div>
+
+		<nav id="nav">
+			<ul class="left">
+				<li><a href="/features/">Features</a></li>
+				<li class="only-on-mobile"><a href="/showcase/">Showcase</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="/community/">Community</a></li>
+				<li><a href="/contact/">About</a></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
+			</ul>
+
+			<ul class="right">
+				<li><a href="/download/windows/" class="set-os-download-url">Download</a></li>
+				<li><a href="https://docs.godotengine.org">Docs</a></li>
+				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
+				
+				<li class="fund"><a href="https://fund.godotengine.org">❤&#xFE0E; Donate</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+
+
+<style>
+	body {
+		background-color: var(--background-color);
+	}
+
+	h1 {
+		margin-bottom: 8px;
+		margin-top: 32px;
+	}
+
+	:not(pre)>code {
+		background: var(--code-background-color);
+		padding: 1px 4px;
+		font-size: 0.95em;
+		border-radius: 3px;
+	}
+
+	pre {
+		background: var(--codeblock-background-color);
+		color: var(--codeblock-color);
+	}
+
+	pre code {
+		display: block;
+		overflow-x: auto;
+		padding: .5em;
+	}
+
+	.date-big {
+		line-height: 2;
+		margin-left: 32px;
+	}
+
+	article {
+		background-color: var(--base-color);
+		box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	figure img {
+		margin: 0;
+	}
+
+	article img,
+	article video {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: auto;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	article h1 {
+		margin-top: 64px;
+	}
+
+	article h2,
+	article h3,
+	article h4 {
+		margin-top: 42px;
+	}
+
+	.article-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.article-metadata {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		font-family: var(--header-font-family);
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 900px) {
+		.article-metadata {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
+
+	.article-author {
+		color: var(--base-color-text-subtitle-date);
+		font-weight: 700;
+		font-size: 18px;
+		flex-grow: 1;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.article-author .avatar {
+		border-radius: 100%;
+		margin: 0;
+	}
+
+	.article-author .by {
+		color: var(--base-color-text-subtitle);
+	}
+
+	.article-metadata .date {
+		color: var(--base-color-text-subtitle-date);
+	}
+
+	.article-metadata .date.post-recent-highlight {
+		color: var(--post-recent-highlight-color);
+		opacity: 0.8;
+	}
+
+	.article-metadata .date.post-recent-highlight::after {
+		font-size: 80%;
+		content: "NEW";
+		border: 2px solid var(--post-recent-highlight-color);
+		padding: 2px 3px;
+		margin-left: 8px;
+	}
+
+	.tag.active {
+		filter: saturate(0.75);
+	}
+
+	@media screen and (min-width: 900px) {
+		article .content {
+			width: 70%;
+			margin: auto;
+		}
+	}
+
+	@media (max-width: 900px) {
+		body {
+			background-color: var(--base-color);
+		}
+
+		article {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		article img:first-child,
+		article video:first-child {
+			max-width: 100%;
+		}
+	}
+</style>
+
+<link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
+
+<div class="container">
+	<article class="padded">
+		<div class="content article-container">
+			<figure class="article-cover">
+				
+
+				<img src="/storage/blog/covers/migrating-animations-from-godot-4-0-to-4-3.webp" title=""
+					alt=" " class="rounded-lg"
+					style="width: 100%; height: auto; background-color: transparent;" />
+			</figure>
+
+			<div class="article-info">
+				<h1>
+					Migrating Animations from Godot 4.0 to 4.3
+				</h1>
+				<div class="article-metadata">
+					<div class="article-author">
+						<span>By: </span>
+						
+						
+							<img class="avatar" width="25" height="25" src="/assets/images/authors/tokage.png" alt="Silc Renew" loading="lazy">
+						
+						<span class="by">Silc Renew</span>
+					</div>
+					<span class="date" data-post-date="2024-06-04 00:00:00 +0000">  4 June 2024</span>
+				</div>
+
+				<div class="tags">
+					
+					<a href="/blog/progress-report">
+						<div class="tag active">Progress Report</div>
+					</a>
+					
+				</div>
+			</div>
+
+			
+
+
+
+
+
+
+
+			<div class="article-body">
+				<h1 id="tldr">TL;DR</h1>
+
+<p>Animation features were still quite immature in 4.0 and there were many undefined behaviors. 4.3 has redefined many behaviors along with some options, so we recommend that you review your settings.</p>
+
+<ul>
+  <li>For blending and <code class="language-plaintext highlighter-rouge">RESET</code> animation
+    <ul>
+      <li><a href="#Deterministic-blending">Deterministic blending</a></li>
+    </ul>
+  </li>
+  <li>For <code class="language-plaintext highlighter-rouge">Discrete</code> value (int, resource and etc.) animation
+    <ul>
+      <li><a href="#CallbackModeDiscrete">CallbackModeDiscrete</a></li>
+    </ul>
+  </li>
+  <li>For <code class="language-plaintext highlighter-rouge">Capture</code> update mode
+    <ul>
+      <li><a href="#capture()">capture()</a></li>
+    </ul>
+  </li>
+  <li>For <code class="language-plaintext highlighter-rouge">AnimationNodeStateMachine</code>
+    <ul>
+      <li><a href="#NodeStateMachine---State-Machine-Type">NodeStateMachine - State Machine Type</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="description">Description</h1>
+
+<p>I’m glad to write this article because it means that animation in Godot 4 is now reaching a stable phase.</p>
+
+<p>We announced many improvements to Godot’s animation systems when we released Godot 4.0. The work hasn’t slowed down and there has been a gigantic amount of reworking done internally between Godot 4.0 and Godot 4.3, it has been like driving on a super bumpy road.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/drive.webp" alt="super dirt road" /></p>
+
+<p>After the launch of Godot 4.0, we have taken care to ensure that each change does not cause a major breakdown in compatibility. However, there are cases where we cannot avoid making changes to old projects. So we always try to provide some options in such cases, but there may be cases where manual configuration by the user is required.</p>
+
+<p>Despite extensive class references and documentation, we’ve lacked practical migration guidelines. Now, at this ideal time, I will explain how to upgrade your projects using real-world examples</p>
+
+<p>I also recommend that even those who do not need to migrate take a look at these, as you can learn about some interesting new features.</p>
+
+<h1 id="timeline">Timeline</h1>
+
+<p>Here is a timeline of the availability of features by version for features that were temporarily affected by the rework.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/timeline-01.webp" alt="timeline" /></p>
+
+<h1 id="introduce-new-features">Introduce New Features</h1>
+
+<p>Here are the options and methods that have been changed or added between 3.x and 4.3.</p>
+
+<h2 id="animationmixer">AnimationMixer</h2>
+
+<p><code class="language-plaintext highlighter-rouge">AnimationMixer</code> is a new Node implemented in 4.2 that becomes the base class for <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> and <code class="language-plaintext highlighter-rouge">AnimationTree</code>.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/node_animation_mixer.webp" alt="animation mixer node" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">AnimationMixer</code> has the role of managing the <code class="language-plaintext highlighter-rouge">AnimationLibrary</code> list and applying the blending results. In other words, the <code class="language-plaintext highlighter-rouge">AnimationMixer</code> does not have the role of processing time progression such as playback, but receives time information processed by child classes such as <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> and <code class="language-plaintext highlighter-rouge">AnimationTree</code> and blends those key values.</p>
+
+<p><code class="language-plaintext highlighter-rouge">AnimationTree</code> now can manage the <code class="language-plaintext highlighter-rouge">AnimationLibrary</code> list by itself without the need for <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> by inheriting <code class="language-plaintext highlighter-rouge">AnimationMixer</code>. For compatibility, it is also possible to specify an <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> and use its list as before.</p>
+
+<p>This unification of <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> and <code class="language-plaintext highlighter-rouge">AnimationTree</code> will ensure the equivalence of most functions after 4.2. This means that prior to 4.2, <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> and <code class="language-plaintext highlighter-rouge">AnimationTree</code> worked with different code although there was some duplication.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">AnimationMixer</code> fixed a large number of bugs that came from the inconsistencies between <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> and <code class="language-plaintext highlighter-rouge">AnimationTree</code>, but it also raised some potential bugs to the surface. We have been hard at work resolving these new bugs.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/bugbugbug.webp" alt="bugbugbug" /></p>
+
+<p>Also, several options needed to be added to keep old behaviors. After 4.2, AnimationTree and AnimationPlayer have different default values for the AnimationMixer property, which is based on compatibility with the old behavior.</p>
+
+<p>When implementing those base classes, one of the particular difficulties was the compatibility of the blending algorithms. Blendings could be nested many times, and it was necessary to consider what behavior was desirable for the user in each use case. Also, the blending weights calculation in 3.x was not consistent enough, so we needed to rewrite that algorithm to ensure that the result was calculated correctly.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/balance.webp" alt="balance" /></p>
+
+<h3 id="deterministic-blending">Deterministic blending</h3>
+
+<p>This is a new option implemented in Godot 4.2. In fact, AnimationTree always had been applied with this option in Godot 4.0 and 4.1.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_deterministic.webp" alt="deterministic property" /></p>
+
+<p>This is an option mainly to control cases where the total blending weight is <code class="language-plaintext highlighter-rouge">0</code>.</p>
+
+<p><strong>For example:</strong></p>
+
+<p>When comparing two animations, there are cases where only one has a track and the other does not.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/anim1.webp" alt="animations with unmatched track count 1" />
+<img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/anim2.webp" alt="animations with unmatched track count 2" /></p>
+
+<p>When <code class="language-plaintext highlighter-rouge">animation1</code> and <code class="language-plaintext highlighter-rouge">animation2</code> are blended so that <code class="language-plaintext highlighter-rouge">animation2</code> is 100%, the scale track will have the total blending weight is <code class="language-plaintext highlighter-rouge">0</code> in the result.</p>
+
+<p><strong>We can expect two possible behaviors in here:</strong></p>
+
+<ol>
+  <li>Do nothing</li>
+  <li>Apply default value</li>
+</ol>
+
+<p>In 3.x both AnimationTree and Animation player used option 1. In Godot 4.0 and 4.1, AnimationPlayer used option 1 but AnimationTree used option 2.</p>
+
+<p>AnimationTree starting using option 2 in 4.0 because it was necessary to process additive blending correctly.</p>
+
+<p>In additive blending, cases where the total weight of blending is <code class="language-plaintext highlighter-rouge">total_weight &lt; 1</code> or <code class="language-plaintext highlighter-rouge">total_weight &gt; 1</code> the value must be interpolated from the default value. This means that if the total blending weight is <code class="language-plaintext highlighter-rouge">0</code>, the animation will be set to the default value. This means that if one animation has no track in the blending, the default value will be applied, and the result will look like performing a reset.</p>
+
+<p>This reset behavior is also convenient with retargeting which was introduced in 4.0.</p>
+
+<p>Some models may have extra bones between the retargeted bones. In this case, when blending occurs with an animation that does not have extra bones, the appearance will be inconsistent if the extra bones are not reset.</p>
+
+<p><strong>For example:</strong></p>
+
+<p>Model A has an animation “look up” with 3 bone tracks.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/retarget1.mp4?1" type="video/mp4" />
+</video>
+
+<p>Model B has an animation “bow” with 4 bone tracks.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/retarget2.mp4?1" type="video/mp4" />
+</video>
+
+<p>Then, let’s play these animations sequentially without resetting.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/retarget3.mp4?1" type="video/mp4" />
+</video>
+
+<p>It creates a condition where the appearance of the animations do not match between them. So, as you can see from the results, the 3D model pipeline required that resetting behavior.</p>
+
+<p>However doing this caused issues in some cases. Especially frequently reported were cases using <code class="language-plaintext highlighter-rouge">AnimationNodeStateMachine</code> with 2D projects.</p>
+
+<p>If there is no crossfade in the <code class="language-plaintext highlighter-rouge">AnimationNodeStateMachine</code> transition, the animation appears to suddenly switch without blending, but internally it is blending, which causes the resetting. This was confusing because it was appeared to be doing the same thing as AnimationPlayer, but it was behaving differently.</p>
+
+<p>Finally, we added a <code class="language-plaintext highlighter-rouge">Deterministic</code> option in 4.2 that allows the user to set whether the resetting is enabled or not. Also, now that <code class="language-plaintext highlighter-rouge">Deterministic</code> blending is available in AnimationPlayer, there are more possibilities for projects that use AnimationPlayer.</p>
+
+<p><strong>For example, this is useful when animating a GUI:</strong></p>
+
+<h4 id="non-deterministic-behavior">Non-deterministic behavior</h4>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/non_deterministic.mp4?1" type="video/mp4" />
+</video>
+
+<h4 id="deterministic-behavior">Deterministic behavior</h4>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/deterministic.mp4?1" type="video/mp4" />
+</video>
+
+<p>Finally, note that if the <code class="language-plaintext highlighter-rouge">Deterministic</code> option is disabled, the total weight of blending will be normalized, so additive blending will not work as expected.</p>
+
+<h3 id="callbackmodediscrete">CallbackModeDiscrete</h3>
+
+<p>From what I have seen so far, not many people understand the behavior of the update mode <code class="language-plaintext highlighter-rouge">Discrete</code>.</p>
+
+<p>When keying <code class="language-plaintext highlighter-rouge">Discrete</code> values such as <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">bool</code> and other non-numerical type, the <code class="language-plaintext highlighter-rouge">UpdateMode</code> defaults to <code class="language-plaintext highlighter-rouge">Discrete</code>.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/option_discrete.webp" alt="discrete option" /></p>
+
+<p>On the other hand, <code class="language-plaintext highlighter-rouge">InterpolateType</code> has a <code class="language-plaintext highlighter-rouge">Nearest</code>.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/option_nearest.webp" alt="nearest option" /></p>
+
+<p>What is the difference between them?</p>
+
+<p><strong>Here is a diagram of how they work as the animation progresses:</strong></p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/discrete_keyframe-01.webp" alt="discrete vs nearest keyframe" /></p>
+
+<p>As you can see, the frequency with which object values are updated is different.</p>
+
+<p><strong>Not only the frequency, but also the timing of the value updates is different within a single frame:</strong></p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/mixer_process-01.webp" alt="discrete vs linear process" /></p>
+
+<p>Since <code class="language-plaintext highlighter-rouge">Discrete</code> assumes that there is no blending, it sets the value of the object during the blending process, but <code class="language-plaintext highlighter-rouge">Continuous</code> sets the value to the object after the blending process has been completed. This means that when blending <code class="language-plaintext highlighter-rouge">Discrete</code> and <code class="language-plaintext highlighter-rouge">Continuous</code> tracks, the result of the <code class="language-plaintext highlighter-rouge">Continuous</code> track will always take precedence over the <code class="language-plaintext highlighter-rouge">Discrete</code> track.</p>
+
+<p>That was a problem because the <code class="language-plaintext highlighter-rouge">Deterministic</code> blend resetting behavior explained above is done as a <code class="language-plaintext highlighter-rouge">Continuous</code> mode.</p>
+
+<p>When implementing the <code class="language-plaintext highlighter-rouge">AnimationMixer</code> and <code class="language-plaintext highlighter-rouge">Deterministic</code> options in 4.2, we tried to solve that problem by implicitly converting <code class="language-plaintext highlighter-rouge">Discrete</code> mode to <code class="language-plaintext highlighter-rouge">Continuous</code> mode when blending occurs.</p>
+
+<p>However, this implicit conversion created another problem when the user understood the behavior of the <code class="language-plaintext highlighter-rouge">Discrete</code> track and the project relied on the infrequent application of <code class="language-plaintext highlighter-rouge">Discrete</code> values.</p>
+
+<p>In 4.3, now the user can choose whether or not to force conversions, so they can be handled them explicitly.</p>
+
+<p><strong>Here is how the options behave when <code class="language-plaintext highlighter-rouge">Discrete</code> and <code class="language-plaintext highlighter-rouge">Continuous</code> are blended:</strong></p>
+
+<p>There are two animations, one is <code class="language-plaintext highlighter-rouge">Continuous</code> and one is <code class="language-plaintext highlighter-rouge">Discrete</code>.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/continuous_and_discrete.mp4?1" type="video/mp4" />
+</video>
+
+<h4 id="force-continuous">Force Continuous</h4>
+
+<p>Discrete track is treated as a <code class="language-plaintext highlighter-rouge">Continuous</code> track and they are blended together.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/force_continuous.mp4?1" type="video/mp4" />
+</video>
+
+<h4 id="dominant">Dominant</h4>
+
+<p>Only on frames with <code class="language-plaintext highlighter-rouge">Discrete</code> track keys, the <code class="language-plaintext highlighter-rouge">Continuous</code> track results are not reflected as the <code class="language-plaintext highlighter-rouge">Discrete</code> track values are given priority.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/dominant.mp4?1" type="video/mp4" />
+</video>
+
+<p>Note that instead of respecting the Discrete value, flicker may occur during blending.</p>
+
+<h4 id="recessive">Recessive</h4>
+
+<p>In frames with <code class="language-plaintext highlighter-rouge">Discrete</code> track keys, the <code class="language-plaintext highlighter-rouge">Discrete</code> track values are potentially reflected, but are immediately overwritten by the <code class="language-plaintext highlighter-rouge">Continuous</code> track results, so the final result appears to only <code class="language-plaintext highlighter-rouge">Continuous</code> track.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/recessive.mp4?1" type="video/mp4" />
+</video>
+
+<p>Flickering does not occur and tends to look better. But note that if the <code class="language-plaintext highlighter-rouge">Continuous</code> track is blended even a little, the <code class="language-plaintext highlighter-rouge">Discrete</code> track result may be hidden.</p>
+
+<p>By the way, note that <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> is set to <code class="language-plaintext highlighter-rouge">Recessive</code> by default but <code class="language-plaintext highlighter-rouge">AnimationTree</code> is set to <code class="language-plaintext highlighter-rouge">Force Continuous</code> by default. Since it works well with the <code class="language-plaintext highlighter-rouge">Deterministic</code> mode which is enabled by default, and on the basis of the many issues that have been posted from many users who reported that “discrete tracks cannot blend”.</p>
+
+<h3 id="capture">capture()</h3>
+
+<p>The animation <code class="language-plaintext highlighter-rouge">UpdateMode</code> has an option <code class="language-plaintext highlighter-rouge">Capture</code> in addition to <code class="language-plaintext highlighter-rouge">Discrete</code> and <code class="language-plaintext highlighter-rouge">Continuous</code>.</p>
+
+<p>For those who are not familiar with the capture function, it is a feature that allows an object’s current value at the moment of animation playback to be interpolated with the playback animation to allow smooth transition into the animation in cases where the object’s value is changed outside of the animation.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/capture.mp4?1" type="video/mp4" />
+</video>
+
+<p>This method did not exist between 4.0 and 4.2. Instead, it was supposed to work by having <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> read the <code class="language-plaintext highlighter-rouge">Capture</code> flag during playback, but that process was very tightly coupled with <code class="language-plaintext highlighter-rouge">AnimationPlayer</code>’s internal processing. However, when <code class="language-plaintext highlighter-rouge">AnimationMixer</code> was implemented in 4.2, the part that handled the capture was removed, so it was not working during 4.2 temporarily.</p>
+
+<p>Now, in 4.3, that tight coupling has been solved and revived in a more generalized and available in the <code class="language-plaintext highlighter-rouge">AnimationTree</code> as well.</p>
+
+<h2 id="animationplayer">AnimationPlayer</h2>
+
+<p>In 4.2, the root motion which was only available in AnimationTree until 4.1, is now available by the implementation of AnimationMixer.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_root_motion.webp" alt="root motion property" /></p>
+
+<h3 id="play_with_capture">play_with_capture()</h3>
+
+<p>A wrapper function that calls <code class="language-plaintext highlighter-rouge">play()</code> with <code class="language-plaintext highlighter-rouge">capture()</code> which was added in 4.3. If the animation has a capture track, capture interpolation is performed. The argument allows for more detailed settings.</p>
+
+<h3 id="auto-capture">Auto Capture</h3>
+
+<p>In short, it is an option that makes play() call <code class="language-plaintext highlighter-rouge">play_with_capture()</code> instead. The argument of <code class="language-plaintext highlighter-rouge">play_with_capture()</code> executed by this option refers to these properties.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_auto_capture.webp" alt="auto capture properties" /></p>
+
+<p>If you want to control the behavior in more detail or specify individual arguments, you can disable <code class="language-plaintext highlighter-rouge">Auto Capture</code> and use <code class="language-plaintext highlighter-rouge">play_with_capture()</code> manually.</p>
+
+<h2 id="animationtree">AnimationTree</h2>
+
+<p>A lot of fundamental reworking has been done to get the time progression right. This provides a way to get semantic time between BlendTrees and should allow users to more strictly control their behavior.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/times.webp" alt="times" /></p>
+
+<p>Also, the AnimationTree now can work stand-alone without AnimationPlayer to retrieve the animation list.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_libraries.webp" alt="libraries property" /></p>
+
+<h3 id="nodestatemachine---state-machine-type">NodeStateMachine - State Machine Type</h3>
+
+<p>This option was added by the StateMachine rework in 4.1 to control the behavior of nested StateMachines.</p>
+
+<p><strong>StateMachines are divided into three types depending on their use cases:</strong></p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_state_machine_type.webp" alt="state machine type property" /></p>
+
+<h4 id="root">Root</h4>
+
+<p>The most basic StateMachine.</p>
+
+<p>When this is nested, the parent AnimationNode considers the Root StateMachine to be finished when it is in the End state. If the parent AnimationNode commands the Root StateMachine to play from the beginning, the Start state is set.</p>
+
+<h4 id="nested">Nested</h4>
+
+<p>This option is for use cases when we want to apply a time processing only to the current State in the StateMachine.</p>
+
+<p>If it is nested, the parent AnimationNode will consider the Nested StateMachine to be finished if it is in the End state, or if the State’s transition destination does not exist and it is a dead end. If the parent AnimationNode commands the Nested StateMachine to play from the beginning, the animation in the current State is sequenced to position 0.</p>
+
+<p>This is mainly used in cases where states are not connected by a transition. That is, it can be used to reproduce the behavior of an Any state.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/nested_state_machine-01.webp" alt="nested statemachine any state" /></p>
+
+<h4 id="grouped">Grouped</h4>
+
+<p>This can be used to visually organize the States to avoid bloat in the StateMachine.</p>
+
+<p>Grouped StateMachines are not allowed to be played directly by the user using the playback object, but must be played from the parent StateMachine. This means that it must always have a Root or Nested StateMachine as an ancestor.</p>
+
+<p>Here is a diagram of the structure and behavior:</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/grouped_state_machine-01.webp" alt="grouped statemachine" /></p>
+
+<p><strong>For example, if you want to play Attack2 in the above case, the script could be written as follows:</strong></p>
+
+<div class="language-gdscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="n">state_machine</span><span class="p">:</span> <span class="n">AnimationNodeStateMachinePlayback</span> <span class="o">=</span> <span class="o">$</span><span class="n">AnimationTree</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"parameters/playback"</span><span class="p">)</span>
+<span class="n">state_machine</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s2">"Attack/Attack2"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Also, <code class="language-plaintext highlighter-rouge">Grouped</code> type never stays in the <code class="language-plaintext highlighter-rouge">Start</code> state and <code class="language-plaintext highlighter-rouge">End</code> state. The <code class="language-plaintext highlighter-rouge">Start</code> state of a <code class="language-plaintext highlighter-rouge">Grouped</code> type is equal to the next state after the <code class="language-plaintext highlighter-rouge">Start</code> state of the state machine as seen by the parent state machine. The <code class="language-plaintext highlighter-rouge">End</code> state of a <code class="language-plaintext highlighter-rouge">Grouped</code> type is equal to the next state of the state machine in the parent state machine. In other words, those transitions are replaced by the parent state machine transitions.</p>
+
+<p><strong>In short, a more direct representation of the above diagram is equivalent to the following:</strong></p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/grouped_state_machine_2-01.webp" alt="omitted grouped statemachine" /></p>
+
+<p>Note that currently StateMachine does not have user-controllable indexes for connections and cannot have multiple Start/End states, so Grouped StateMachine is limited to having only one input/output. This limitation may be removed in the future by StateMachine enhancements.</p>
+
+<h3 id="nodeoneshot--nodetransiton--statemachinetransition---break-loop-at-end">NodeOneShot / NodeTransiton / StateMachineTransition - Break Loop at End</h3>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_break_loop.webp" alt="break loop property" /></p>
+
+<p>In the 4.1 StateMachine rework, we made the AnimationNode have an infinite-length remain time in a loop and for StateMachines with unpredictable endings as a hack. We did this becauses the old AnimationNode only returned the remaining time after the processing but there was no information there about whether it was looping or not. This change was necessary to prevent unintended animation interruptions for consistency, but it removed the existing behavior of breaking the loop at <code class="language-plaintext highlighter-rouge">AtEnd</code> and doing a Transition.</p>
+
+<p>In 4.3, the AnimationNode time progression has been reworked significantly to propagate semantic time information. Now a BreakLoopAtEnd option has been added for use cases where the loop is broken by <code class="language-plaintext highlighter-rouge">AtEnd</code>.</p>
+
+<p>This option makes it easier to implement things like <code class="language-plaintext highlighter-rouge">AtEnd</code> transitions after several loops.</p>
+
+<h3 id="nodeanimation---custom-timeline">NodeAnimation - Custom Timeline</h3>
+
+<p>As a byproduct of the time progression reworking, it is now possible to adjust the period and length of the animation in the AnimationNode.</p>
+
+<p><img src="/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_custom_timeline.webp" alt="custom timeline property" /></p>
+
+<p>This should help to solve problems with synchronization of foot step animation when blending walking and sideways walking animations, or walking and running animations.</p>
+
+<h1 id="the-future-of-the-animation-feature">The future of the animation feature</h1>
+
+<p>Compared to the Godot 3 code, you can see that almost all of the code has been rewritten in the animation area.</p>
+
+<p>I have focused mostly on reworking and stabilizing features from Godot 3 that were unstable or not well-defined. I expect that such fundamental rework will be settled in 4.3, allowing us to focus on adding more features from now on.</p>
+
+<p>I already have several proposals that I have written myself, but I am also interested in some proposals that have come from the community, so I hope to pick up on those as well.</p>
+
+<h2 id="support">Support</h2>
+
+<p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to <a href="https://fund.godotengine.org/">generous donations from the Godot community</a>. A big thank you to everyone who has contributed <a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time</a> or <a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support</a> to the project!</p>
+
+<p>If you’d like to support the project financially and help us secure our future hires, you can do so using the <a href="https://fund.godotengine.org/">Godot Development Fund</a> platform managed by <a href="https://godot.foundation/">Godot Foundation</a>. There are also several <a href="/donate">alternative ways to donate</a> which you may find more suitable.</p>
+
+			</div>
+		</div>
+	</article>
+</div>
+
+<link rel="stylesheet" href="/assets/css/anchor-link.css?1">
+<link rel="stylesheet" href="/assets/css/article-cards.css?2">
+<script src="/assets/js/anchor-link.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Add icons to easily copy section links.
+		window.applyAnchorLinks('.article-body');
+
+		// Add lightbox elements in blog articles for Tobii.
+		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
+			if (articleImg.classList.contains('lightbox-ignore')) {
+				return;
+			}
+
+			const lightbox = document.createElement('a');
+			lightbox.href = articleImg.src;
+			lightbox.classList.add('lightbox');
+			lightbox.dataset.group = 'article';
+			articleImg.parentNode.appendChild(lightbox);
+			lightbox.appendChild(articleImg);
+		});
+	});
+</script>
+
+</main>
+
+<footer>
+	<div class="container flex footer-container">
+		<div id="copyright">
+			<p>
+				© 2007-2024 Juan Linietsky, Ariel Manzur and <a
+					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
+					rel="noopener">contributors</a>.<br>
+				Hosted by the <a href="https://godot.foundation/" target="_blank" rel="noopener">Godot Foundation</a>.<br>
+				Website <a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">source code on  GitHub</a>.
+			</p>
+		</div>
+		<div id="sitemap">
+			<ul class="sitemap-group">
+				<li><strong>Get Godot</strong></li>
+				<li><a href="/download/windows/" class="set-os-download-url">Download</a></li>
+				<li><a href="/download/archive/">Release Archive</a></li>
+				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Public Relations</strong></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="/community/">Communities and Events</a></li>
+				<li><a href="/press/">Press Kit</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>About Godot</strong></li>
+				<li><a href="/features/">Features</a></li>
+				<li><a href="/showcase/">Showcase</a></li>
+				<li><a href="/education/">Education</a></li>
+				<li><a href="/license/">License</a></li>
+				<li><a href="/code-of-conduct/">Code of Conduct</a></li>
+				<li><a href="/privacy-policy/">Privacy Policy</a></li>
+				<li><a href="https://fund.godotengine.org">Donate</a></li>
+			</ul>
+			<ul class="sitemap-group">
+				<li><strong>Project Team</strong></li>
+				<li><a href="/governance/">Governance</a></li>
+				<li><a href="/teams/">Teams</a></li>
+				<li>&nbsp;</li>
+				<li><strong>Extra Resources</strong></li>
+				<li><a href="https://godotengine.org/asset-library/asset">Asset Library</a></li>
+				<li><a href="https://docs.godotengine.org">Documentation</a></li>
+				<li><a href="https://github.com/godotengine">Code Repository</a></li>
+			</ul>
+		</div>
+		<div id="social" class="dark-desaturate">
+			<h4 class="text-right"><a href="/contact/">Contact us</a></h4>
+			<div class="flex justify-space-between" style="gap: 3px;">
+				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
+				</a>
+				<a href="https://mastodon.gamedev.place/@godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/mastodon_logo.svg" width="32" height="32" alt="Mastodon">
+				</a>
+				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
+					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
+				</a>
+				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
+					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
+				</a>
+				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
+					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
+				</a>
+				<a href="/rss.xml" target="_blank" rel="noopener">
+					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
+					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script defer src="/assets/js/tobii.min.js"></script>
+<script defer src="/assets/js/highlight.min.js?1"></script>
+<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// This needs to be done on page load but also after page changes,
+		// in case a code block appears in an article.
+		document.querySelectorAll('pre code').forEach((block) => {
+			hljs.highlightBlock(block);
+		});
+
+		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
+			// Highlight post dates that are less than 48 hours old.
+			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
+				postDate.classList.add("post-recent-highlight");
+			};
+		});
+
+		// Initialize lightbox.
+		new Tobii({
+			zoom: false,
+		});
+
+		// Update any download link to point to identified user's OS.
+		const links = document.querySelectorAll('.set-os-download-url');
+		for (let i = 0; i < links.length; i++) {
+			const link = links[i];
+			let link_slug = 'download';
+			if ('version' in link.dataset && link.dataset['version'] === '3') {
+				link_slug = 'download/3.x';
+			}
+
+			let link_platform = 'windows';
+			if (navigator.platform.indexOf('Mac') !== -1) {
+				link_platform = 'macos';
+			} else if (navigator.platform.indexOf('Linux') !== -1) {
+				link_platform = 'linux';
+			}
+
+			link.href = `/${link_slug}/${link_platform}/`;
+		}
+	});
+</script>
+
+
+</body>
+
+</html>
