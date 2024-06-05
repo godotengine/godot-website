@@ -50,3 +50,6 @@ silver:
   - name: "LoadComplete"
     link: "https://loadcomplete.com/"
     image: "https://fund.godotengine.org/static/logos/loadcomplete.png"
+  - name: "Null"
+    link: "https://null.com/"
+    image: "https://fund.godotengine.org/static/logos/null.svg"
