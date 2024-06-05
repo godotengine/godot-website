@@ -155,7 +155,7 @@
 }
 @media (min-width: 768px) {
     .other-download {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
