@@ -1,682 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Godot Engine">
-	<meta name="description" content="Feature work has started for the upcoming Godot 4.0, and one of the first major changes is the integration of NavigationServer (and NavigationServer2D) to greatly improve and simplify the navigation workflow in Godot. This devblog shows how to set things up for a simple example with dynamic collision avoidance and runtime navigation mesh re-baking.">
-	<meta name="theme-color" content="#3d8fcc">
-	<meta property="og:site_name" content="Godot Engine">
-	<meta property="og:url" content="https://godotengine.org/article/navigation-server-godot-4-0/">
-	<meta name="twitter:site" content="@godotengine">
-
-	<meta property="og:title" content="Navigation Server for Godot 4.0">
-	<meta property="og:description" content="Feature work has started for the upcoming Godot 4.0, and one of the first major changes is the integration of NavigationServer (and NavigationServer2D) to greatly improve and simplify the navigation workflow in Godot. This devblog shows how to set things up for a simple example with dynamic collision avoidance and runtime navigation mesh re-baking.">
-	<meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/5e4/941/218/5e494121885db845075999.png">
-	<meta property="og:type" content="article">
-	<meta name="twitter:card" content="summary_large_image">
-	<title>Navigation Server for Godot 4.0</title>
-
-	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
-	<link rel="icon" href="/assets/favicon.png" sizes="any">
-	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="/assets/css/main.css?112">
-	<link rel="stylesheet" href="/assets/css/tobii.min.css">
-	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Bold.woff2" crossorigin>
-	<link rel="preload" as="font" href="/assets/fonts/Montserrat-ExtraBold.woff2" crossorigin>
-	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
-</head>
-
-<body>
-	<input type="checkbox" id="nav_toggle_cb">
-<header>
-	<div class="container flex align-center">
-		<div id="nav_head">
-			<a href="/" id="logo-link">
-				<img class="nav-logo" src="/assets/logo.svg" width="136" height="48" alt="Godot Engine">
-				<img class="nav-logo dark-logo" src="/assets/logo_dark.svg" width="136" height="48" alt="Godot Engine">
-			</a>
-			<label for="nav_toggle_cb" id="nav_toggle_btn">
-				<img src="/assets/icons/hamburger.svg" width="24" height="24" alt="Main menu">
-			</label>
-		</div>
-
-		<nav id="nav">
-			<ul class="left">
-				<li><a href="/features/">Features</a></li>
-				<li class="only-on-mobile"><a href="/showcase/">Showcase</a></li>
-				<li><a href="/blog/">Blog</a></li>
-				<li><a href="/community/">Community</a></li>
-				<li><a href="/contact/">About</a></li>
-				<li><a href="https://godotengine.org/asset-library/asset">Assets</a></li>
-			</ul>
-
-			<ul class="right">
-				<li><a href="/download/windows/" class="set-os-download-url">Download</a></li>
-				<li><a href="https://docs.godotengine.org">Docs</a></li>
-				<li><a href="https://docs.godotengine.org/en/stable/community/contributing/index.html">Contribute</a></li>
-				
-				<li class="fund"><a href="https://fund.godotengine.org">❤&#xFE0E; Donate</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
-
-<main>
-
-
-<style>
-	body {
-		background-color: var(--background-color);
-	}
-
-	h1 {
-		margin-bottom: 8px;
-		margin-top: 32px;
-	}
-
-	:not(pre)>code {
-		background: var(--code-background-color);
-		padding: 1px 4px;
-		font-size: 0.95em;
-		border-radius: 3px;
-	}
-
-	pre {
-		background: var(--codeblock-background-color);
-		color: var(--codeblock-color);
-	}
-
-	pre code {
-		display: block;
-		overflow-x: auto;
-		padding: .5em;
-	}
-
-	.date-big {
-		line-height: 2;
-		margin-left: 32px;
-	}
-
-	article {
-		background-color: var(--base-color);
-		box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
-	}
-
-	figure {
-		margin: 0;
-	}
-
-	figure img {
-		margin: 0;
-	}
-
-	article img,
-	article video {
-		max-width: 100%;
-		height: auto;
-		display: block;
-		margin: auto;
-		margin-top: 16px;
-		margin-bottom: 16px;
-	}
-
-	article h1 {
-		margin-top: 64px;
-	}
-
-	article h2,
-	article h3,
-	article h4 {
-		margin-top: 42px;
-	}
-
-	.article-info {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-	}
-
-	.article-metadata {
-		display: flex;
-		gap: 24px;
-		align-items: center;
-		font-family: var(--header-font-family);
-		margin-bottom: 12px;
-	}
-
-	@media (max-width: 900px) {
-		.article-metadata {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 16px;
-		}
-	}
-
-	.article-author {
-		color: var(--base-color-text-subtitle-date);
-		font-weight: 700;
-		font-size: 18px;
-		flex-grow: 1;
-		display: flex;
-		gap: 12px;
-		align-items: center;
-	}
-
-	.article-author .avatar {
-		border-radius: 100%;
-		margin: 0;
-	}
-
-	.article-author .by {
-		color: var(--base-color-text-subtitle);
-	}
-
-	.article-metadata .date {
-		color: var(--base-color-text-subtitle-date);
-	}
-
-	.article-metadata .date.post-recent-highlight {
-		color: var(--post-recent-highlight-color);
-		opacity: 0.8;
-	}
-
-	.article-metadata .date.post-recent-highlight::after {
-		font-size: 80%;
-		content: "NEW";
-		border: 2px solid var(--post-recent-highlight-color);
-		padding: 2px 3px;
-		margin-left: 8px;
-	}
-
-	.tag.active {
-		filter: saturate(0.75);
-	}
-
-	@media screen and (min-width: 900px) {
-		article .content {
-			width: 70%;
-			margin: auto;
-		}
-	}
-
-	@media (max-width: 900px) {
-		body {
-			background-color: var(--base-color);
-		}
-
-		article {
-			background-color: transparent;
-			box-shadow: none;
-		}
-
-		article img:first-child,
-		article video:first-child {
-			max-width: 100%;
-		}
-	}
-</style>
-
-<link rel="stylesheet" href="/assets/css/highlight.obsidian.min.css">
-
-<div class="container">
-	<article class="padded">
-		<div class="content article-container">
-			<figure class="article-cover">
-				
-
-				<img src="/storage/app/uploads/public/5e4/941/218/5e494121885db845075999.png" title=""
-					alt=" " class="rounded-lg"
-					style="width: 100%; height: auto; background-color: transparent;" />
-			</figure>
-
-			<div class="article-info">
-				<h1>
-					Navigation Server for Godot 4.0
-				</h1>
-				<div class="article-metadata">
-					<div class="article-author">
-						<span>By: </span>
-						
-						
-							<img class="avatar" width="25" height="25" src="/assets/images/authors/default_avatar.svg" alt="Andrea Catania" loading="lazy">
-						
-						<span class="by">Andrea Catania</span>
-					</div>
-					<span class="date" data-post-date="2020-02-19 13:23:19 +0000"> 19 February 2020</span>
-				</div>
-
-				<div class="tags">
-					
-					<a href="/blog/progress-report">
-						<div class="tag active">Progress Report</div>
-					</a>
-					
-				</div>
-			</div>
-
-			
-
-
-
-	<div class="card card-warning">
-		<p>
-		
-			This article is from <strong>February 2020</strong>, some of its contents might be outdated and no longer accurate.<br>
-			You can find up-to-date information about the engine in the <a href="https://docs.godotengine.org/en/stable/">official documentation</a>.
-		
-		</p>
-	</div>
-
-
-
-
-
-			<div class="article-body">
-				<p><em>This post is outdated and it does not reflect the current state of the Navigation Server in Godot 4.0. If you want to read more about the most recent version you can do so here:</em></p>
-<ul>
-  <li>https://docs.godotengine.org/en/latest/classes/class_navigationserver2d.html</li>
-  <li>https://docs.godotengine.org/en/latest/classes/class_navigationserver3d.html</li>
-</ul>
-
-<hr />
-
-<p>Godot 4.0 features start to land in the development branch, and I’m pleased to introduce you the new <code class="language-plaintext highlighter-rouge">NavigationServer</code> and <code class="language-plaintext highlighter-rouge">NavigationServer2D</code> interfaces.</p>
-
-<p>In previous Godot versions, we didn’t have a Navigation server and everything was done through the use of the <code class="language-plaintext highlighter-rouge">Navigation</code> node. While this was not a problem, it was a limited solution and the user was called to integrate the logic to deal with the navigation.</p>
-
-<p>During the design phase, we researched a solution that provides:</p>
-
-<ul>
-  <li>An effortless way to use the navigation system.</li>
-  <li>The possibility to stream in and out of the navigation regions.</li>
-  <li>Runtime navigation mesh baking.</li>
-  <li>Collision avoidance support.</li>
-  <li>Multi-threading safety.</li>
-  <li>Backward compatibility.</li>
-</ul>
-
-<p>So, the idea to improve the Godot navigation was to integrate a new server that would provide all the above functionalities; so was the <code class="language-plaintext highlighter-rouge">NavigationServer</code> born. If you’re unfamiliar with the concept of “servers” used in the Godot architecture, you can refer to <a href="/article/why-does-godot-use-servers-and-rids">this past devblog</a> and <a href="https://docs.godotengine.org/en/3.2/tutorials/optimization/using_servers.html">the documentation</a>.</p>
-
-<h2 id="whats-new">What’s new</h2>
-
-<p>Some new concepts appeared in the Godot world - let’s talk about these to get a good overview.</p>
-
-<h4 id="map">Map</h4>
-
-<p>The <code class="language-plaintext highlighter-rouge">Map</code> represents the entire world, it’s similar to the <code class="language-plaintext highlighter-rouge">space</code> for the physics engine, but this one is used for the navigation.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">Map</code> is an agglomeration of regions and can be created by adding our old and dear <code class="language-plaintext highlighter-rouge">Navigation</code> node in the scene.</p>
-
-<h4 id="region">Region</h4>
-
-<p>The <code class="language-plaintext highlighter-rouge">Region</code> is a portion of the map and can be created by adding the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> node.</p>
-
-<p>Despite the two new keywords, <code class="language-plaintext highlighter-rouge">Map</code> and <code class="language-plaintext highlighter-rouge">Region</code>, the <code class="language-plaintext highlighter-rouge">Navigation</code> node and the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> node are the same as before, from the editor prospective, so you have full retro compatibility and their usage remain the same.</p>
-
-<p>Now the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> can be added during gameplay, and it’s possible to change its transform or even bake the navigation mesh data at runtime.</p>
-
-<h4 id="navigation-agent">Navigation Agent</h4>
-
-<p>The <code class="language-plaintext highlighter-rouge">NavigationAgent</code> is a new node that allows to navigate the <code class="language-plaintext highlighter-rouge">Map</code> easily; indeed you don’t need anymore to deal with path resolution and path navigation code.</p>
-
-<p>The agent is also responsible for avoiding collisions.</p>
-
-<h4 id="navigation-obstacle">Navigation Obstacle</h4>
-
-<p>The <code class="language-plaintext highlighter-rouge">NavigationObstacle</code> is really simple, and it’s used for collision avoidance. You can use it to mark its parent as an obstacle, for example under a <code class="language-plaintext highlighter-rouge">PhysicsBody</code> or <code class="language-plaintext highlighter-rouge">KinematicBody</code> node.</p>
-
-<h2 id="lets-try-it">Let’s try it!</h2>
-
-<p>We saw what’s new in the <code class="language-plaintext highlighter-rouge">NavigationServer</code> but let’s have a break with theory and start to use it!</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">NavigationServer</code> is a Godot 4.0 feature and at the time of this writing is part of the unstable master branch; so as first thing I’m going to <a href="https://docs.godotengine.org/en/latest/development/compiling/index.html">build Godot from source</a>, see you in a moment!</p>
-
-<p><em>[… Loading …]</em></p>
-
-<h4 id="static-world-creation">Static world creation</h4>
-
-<p><strong>Note:</strong> Here I’m showing a 3D example, but you can reproduce the exact same steps to use it in 2D!</p>
-
-<p>Here we go, I assume that you are already comfortable using Godot, so let’s create the world scene:</p>
-
-<p><img src="/storage/app/media/navigation/world_scene_1.png" alt="Initial world scene setup" /></p>
-
-<p>As you can see it’s similar to the Godot 3.x navigation setup: we have a <code class="language-plaintext highlighter-rouge">Navigation</code> that represents the entire map and two <code class="language-plaintext highlighter-rouge">NavigationRegion</code> regions.</p>
-
-<p>You can compose the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> as you like, mine looks like this:</p>
-
-<p><img src="/storage/app/media/navigation/world_scene_2.png" alt="Setup for the two navigation regions" /></p>
-
-<p><strong>Note:</strong> The meshes have a common static body under their node.</p>
-
-<p><strong>Remember</strong> to hit the button <code class="language-plaintext highlighter-rouge">Bake NavMesh</code> to bake the navigation data, as you used to do in 3.x!</p>
-
-<h4 id="character">Character</h4>
-
-<p>A navigable map is nothing without something that navigates it! So guess what? Let’s create a character that is able to navigate it.</p>
-
-<p>Open another scene, add a <code class="language-plaintext highlighter-rouge">PhysicsBody</code> and set its mode to <code class="language-plaintext highlighter-rouge">Character</code>; then add all the nodes that you see in the picture below:</p>
-
-<p><img src="/storage/app/media/navigation/character.png" alt="Character scene setup" /></p>
-
-<p>The <code class="language-plaintext highlighter-rouge">RayCast</code> node is used to simplify the code to get the floor normal.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">NavigationAgent</code> node is a new addition: it’s a handy utility used to navigate the <code class="language-plaintext highlighter-rouge">Map</code>. It does all the hard work for you: indeed, you don’t need anymore to deal with the path, instead each frame you have to query this node using <code class="language-plaintext highlighter-rouge">get_next_location()</code> to know what is the next location which is free to reach.</p>
-
-<p>This is the character code:</p>
-
-<div class="language-gdscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">extends</span> <span class="n">RigidBody</span>
-
-<span class="k">export</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="k">var</span> <span class="n">velocity</span>
-<span class="k">export</span><span class="p">(</span><span class="kt">NodePath</span><span class="p">)</span> <span class="k">var</span> <span class="n">target_node_1</span>
-
-
-<span class="k">func</span> <span class="nf">_ready</span><span class="p">():</span>
-	<span class="o">$</span><span class="n">NavigationAgent</span><span class="o">.</span><span class="n">set_target_location</span><span class="p">(</span><span class="n">get_node</span><span class="p">(</span><span class="n">target_node_1</span><span class="p">)</span><span class="o">.</span><span class="n">get_global_transform</span><span class="p">()</span><span class="o">.</span><span class="n">origin</span><span class="p">)</span>
-
-
-<span class="k">func</span> <span class="nf">_physics_process</span><span class="p">(</span><span class="n">_delta</span><span class="p">):</span>
-	<span class="c1"># Query the `NavigationAgent` to know the next free to reach location.</span>
-	<span class="k">var</span> <span class="n">target</span> <span class="o">=</span> <span class="o">$</span><span class="n">NavigationAgent</span><span class="o">.</span><span class="n">get_next_location</span><span class="p">()</span>
-	<span class="k">var</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">get_global_transform</span><span class="p">()</span><span class="o">.</span><span class="n">origin</span>
-
-	<span class="c1"># Floor normal.</span>
-	<span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="o">$</span><span class="n">RayCast</span><span class="o">.</span><span class="n">get_collision_normal</span><span class="p">()</span>
-	<span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">length_squared</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">:</span>
-		<span class="c1"># Set normal to Y+ if on air.</span>
-		<span class="n">n</span> <span class="o">=</span> <span class="kt">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-	<span class="c1"># Calculate the velocity.</span>
-	<span class="k">var</span> <span class="n">vel</span> <span class="o">=</span> <span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">pos</span><span class="p">)</span><span class="o">.</span><span class="n">slide</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">normalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">velocity</span>
-	<span class="n">set_linear_velocity</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
-</code></pre></div></div>
-
-<blockquote>
-  <p><strong>For the curious:</strong></p>
-
-  <p>The <code class="language-plaintext highlighter-rouge">get_next_location()</code> function takes into account:</p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Map</code> reloading events (<code class="language-plaintext highlighter-rouge">Region</code> baking, <code class="language-plaintext highlighter-rouge">Region</code> position change, <code class="language-plaintext highlighter-rouge">Region</code> addition/removal, etc.).</li>
-    <li>Target location changes.</li>
-    <li>Collision avoidance dynamic map updates.</li>
-  </ul>
-
-  <p>In these cases the function will reload its internal path, and will return the next free location.<br />
-As before, you are free to manually query the <code class="language-plaintext highlighter-rouge">Navigation</code> node, but using the new <code class="language-plaintext highlighter-rouge">NavigationAgent</code> is much simpler and efficient.</p>
-</blockquote>
-
-<p>We now have a character, so let’s add it to the world:</p>
-
-<p><img src="/storage/app/media/navigation/world_scene_3.png" alt="World scene with character" /></p>
-
-<p>It is important that the character is a child of the <code class="language-plaintext highlighter-rouge">Navigation</code> node, because the <code class="language-plaintext highlighter-rouge">NavigationAgent</code> has the capability to find the <code class="language-plaintext highlighter-rouge">Navigation</code> node automatically if it is one of its antecedents, otherwise you must set it manually using <code class="language-plaintext highlighter-rouge">set_navigation()</code>.</p>
-
-<h4 id="target-location">Target location</h4>
-
-<p>The agent just need a <code class="language-plaintext highlighter-rouge">Vector3</code> as target to reach, and in our case I want to take this position from a spatial node; notice this code in the character script:</p>
-
-<div class="language-gdscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="o">...</span><span class="p">]</span>
-<span class="k">func</span> <span class="nf">_ready</span><span class="p">():</span>
-	<span class="o">$</span><span class="n">NavigationAgent</span><span class="o">.</span><span class="n">set_target_location</span><span class="p">(</span><span class="n">get_node</span><span class="p">(</span><span class="n">target_node_1</span><span class="p">)</span><span class="o">.</span><span class="n">get_global_transform</span><span class="p">()</span><span class="o">.</span><span class="n">origin</span><span class="p">)</span>
-<span class="p">[</span><span class="o">...</span><span class="p">]</span>
-</code></pre></div></div>
-
-<p>I’ve added a <code class="language-plaintext highlighter-rouge">Position3D</code> into the world, and set its <code class="language-plaintext highlighter-rouge">NodePath</code> as the character’s <code class="language-plaintext highlighter-rouge">target_node_1</code> exported property. The result is this:</p>
-
-<p><img src="/storage/app/media/navigation/navigation_1.gif" alt="Demonstration of NavigationAgent with an unreachable target" /></p>
-
-<p>You can notice that even if the target is not reachable, the agent will bring the character as close as possible. What if we added a ramp at runtime‽</p>
-
-<h4 id="runtime-baking">Runtime baking</h4>
-
-<p>I’ve created a simple ramp in a new scene and added a script with this code to the <code class="language-plaintext highlighter-rouge">NavigationMeshInstance2</code>:</p>
-
-<div class="language-gdscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">extends</span> <span class="n">NavigationRegion</span>
-
-
-<span class="k">func</span> <span class="nf">_ready</span><span class="p">():</span>
-    <span class="c1"># Wait 10 seconds.</span>
-	<span class="nb">yield</span><span class="p">(</span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">10.0</span><span class="p">),</span> <span class="s2">"timeout"</span><span class="p">)</span>
-
-	<span class="c1"># Create the ramp and add it into the world.</span>
-	<span class="c1"># 'RampPosition' is a Position3D added as child to NavigationMeshInstance2.</span>
-	<span class="k">var</span> <span class="n">ramp</span> <span class="o">=</span> <span class="nb">load</span><span class="p">(</span><span class="s2">"res://Ramp.tscn"</span><span class="p">)</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
-	<span class="o">$</span><span class="n">RampPosition</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">ramp</span><span class="p">)</span>
-
-	<span class="c1"># Bake the navigation mesh of this region.</span>
-	<span class="n">bake_navigation_mesh</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p><img src="/storage/app/media/navigation/navigation_2.gif" alt="Demonstration of NavigationAgent with the addition of a ramp at runtime" /></p>
-
-<p><strong>Boom!</strong> Once the region rebaking is done, as promised, the agent navigates through the new added ramp to finally reach the target location! It’s simple, isn’t?</p>
-
-<h4 id="region-transform-change">Region transform change</h4>
-
-<p>Ok, cool… but what does the agent do if I move the region around?</p>
-
-<p>I’ve added an <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> node to test this case:</p>
-
-<p><img src="/storage/app/media/navigation/navigation_3.gif" alt="Demonstration of NavigationAgent with a moving region" /></p>
-
-<p>The agent is able to navigate towards the target, and once the two regions are aligned (so again welded together) the agent is able to walk into the region 2.</p>
-
-<p>So once again the agent takes care to do the hard work of checking the map reloading for us.</p>
-
-<h4 id="collision-avoidance">Collision avoidance</h4>
-
-<p>Until now everything was static, and we had the need to re-bake the navigation mesh when we added a new piece of map.</p>
-
-<p>The new <code class="language-plaintext highlighter-rouge">Navigation</code> supports collision avoidance for dynamic obstacles, likes <code class="language-plaintext highlighter-rouge">PhysicsBody</code>.</p>
-
-<p>The first thing to do is to add some dynamic obstacles into the scene; I’ve added some physics balls and set their velocity from the editor.</p>
-
-<p>I’ve also added a <code class="language-plaintext highlighter-rouge">KinematicBody</code>, and I’ve animated its motion using an animation player.</p>
-
-<p><img src="/storage/app/media/navigation/world_scene_4.png" alt="World scene with obstacles" /></p>
-
-<p>We still want some control over the things that the collision avoidance takes into account. For this reason, in order to allow the agent to see the dynamic obstacles, you have to add the <code class="language-plaintext highlighter-rouge">NavigationObstacle</code> node as child of the obstacle.</p>
-
-<p>This node doesn’t have any property because it’s able to figure out automatically the size, velocity and position of its parent.</p>
-
-<p>By default, the agent collision avoidance is not active. To use it, we have to make sure to set the character velocity using:</p>
-
-<div class="language-gdscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">$</span><span class="n">NavigationAgent</span><span class="o">.</span><span class="n">set_velocity</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Once you set the agent velocity, the agent starts to compute the safe velocity that takes into account dynamic obstacles. Once the safe velocity is calculated, it emits the signal <code class="language-plaintext highlighter-rouge">velocity_computed</code>.</p>
-
-<p>You have to connect a function to this signal, and use the given <code class="language-plaintext highlighter-rouge">safe_velocity</code> to move the character.</p>
-
-<p>The final code looks like:</p>
-<div class="language-gdscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="o">...</span><span class="p">]</span>
-
-<span class="k">func</span> <span class="nf">_physics_process</span><span class="p">(</span><span class="n">_delta</span><span class="p">):</span>
-	<span class="c1"># Query the `NavigationAgent` to know the next free to reach location.</span>
-	<span class="k">var</span> <span class="n">target</span> <span class="o">=</span> <span class="o">$</span><span class="n">NavigationAgent</span><span class="o">.</span><span class="n">get_next_location</span><span class="p">()</span>
-	<span class="k">var</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">get_global_transform</span><span class="p">()</span><span class="o">.</span><span class="n">origin</span>
-
-	<span class="c1"># Floor normal.</span>
-	<span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="o">$</span><span class="n">RayCast</span><span class="o">.</span><span class="n">get_collision_normal</span><span class="p">()</span>
-	<span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">length_squared</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">:</span>
-		<span class="c1"># Set normal to Y+ if on air.</span>
-		<span class="n">n</span> <span class="o">=</span> <span class="kt">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-	<span class="c1"># Calculate the velocity.</span>
-	<span class="k">var</span> <span class="n">vel</span> <span class="o">=</span> <span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">pos</span><span class="p">)</span><span class="o">.</span><span class="n">slide</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">normalized</span><span class="p">()</span> <span class="o">*</span> <span class="n">velocity</span>
-
-	<span class="c1"># Tell the agent the velocity.</span>
-	<span class="o">$</span><span class="n">NavigationAgent</span><span class="o">.</span><span class="n">set_velocity</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
-
-
-<span class="k">func</span> <span class="nf">_on_NavigationAgent_velocity_computed</span><span class="p">(</span><span class="n">safe_velocity</span><span class="p">):</span>
-    <span class="c1"># Move the character using the computed `safe_velocity` and avoid dynamic obstacles.</span>
-	<span class="n">set_linear_velocity</span><span class="p">(</span><span class="n">safe_velocity</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Now you can play the scene, and voilà:</p>
-
-<p><img src="/storage/app/media/navigation/navigation_4.gif" alt="Final demonstration with collision avoidance from moving obstacles" /></p>
-
-<p><strong>Note:</strong> Collision avoidance behavior can be tweaked per agent, by changing the <code class="language-plaintext highlighter-rouge">NavigationAgent</code> settings. You can change velocity, time of response to obstacles, and some other useful things.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>This was an introduction to the new <code class="language-plaintext highlighter-rouge">NavigationServer</code> and <code class="language-plaintext highlighter-rouge">NavigationServer2D</code> coming up in Godot 4.0. The integration of these new servers was made possible thanks to the sponsoring of IMVU!</p>
-
-<p>Give it a check, and enjoy use Godot! And don’t hesitate to provide feedback about this new feature, which we can polish further until the actual 4.0 release.</p>
-
-			</div>
-		</div>
-	</article>
-</div>
-
-<link rel="stylesheet" href="/assets/css/anchor-link.css?1">
-<link rel="stylesheet" href="/assets/css/article-cards.css?2">
-<script src="/assets/js/anchor-link.js"></script>
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		// Add icons to easily copy section links.
-		window.applyAnchorLinks('.article-body');
-
-		// Add lightbox elements in blog articles for Tobii.
-		document.querySelectorAll('.article-cover img, .article-body img').forEach((articleImg) => {
-			if (articleImg.classList.contains('lightbox-ignore')) {
-				return;
-			}
-
-			const lightbox = document.createElement('a');
-			lightbox.href = articleImg.src;
-			lightbox.classList.add('lightbox');
-			lightbox.dataset.group = 'article';
-			articleImg.parentNode.appendChild(lightbox);
-			lightbox.appendChild(articleImg);
-		});
-	});
-</script>
-
-</main>
-
-<footer>
-	<div class="container flex footer-container">
-		<div id="copyright">
-			<p>
-				© 2007-2024 Juan Linietsky, Ariel Manzur and <a
-					href="https://github.com/godotengine/godot/blob/master/AUTHORS.md" target="_blank"
-					rel="noopener">contributors</a>.<br>
-				Hosted by the <a href="https://godot.foundation/" target="_blank" rel="noopener">Godot Foundation</a>.<br>
-				Website <a href="https://github.com/godotengine/godot-website" target="_blank" rel="noopener">source code on  GitHub</a>.
-			</p>
-		</div>
-		<div id="sitemap">
-			<ul class="sitemap-group">
-				<li><strong>Get Godot</strong></li>
-				<li><a href="/download/windows/" class="set-os-download-url">Download</a></li>
-				<li><a href="/download/archive/">Release Archive</a></li>
-				<li><a href="https://editor.godotengine.org/releases/latest/">Web Editor</a></li>
-				<li>&nbsp;</li>
-				<li><strong>Public Relations</strong></li>
-				<li><a href="/blog/">Blog</a></li>
-				<li><a href="/community/">Communities and Events</a></li>
-				<li><a href="/press/">Press Kit</a></li>
-			</ul>
-			<ul class="sitemap-group">
-				<li><strong>About Godot</strong></li>
-				<li><a href="/features/">Features</a></li>
-				<li><a href="/showcase/">Showcase</a></li>
-				<li><a href="/education/">Education</a></li>
-				<li><a href="/license/">License</a></li>
-				<li><a href="/code-of-conduct/">Code of Conduct</a></li>
-				<li><a href="/privacy-policy/">Privacy Policy</a></li>
-				<li><a href="https://fund.godotengine.org">Donate</a></li>
-			</ul>
-			<ul class="sitemap-group">
-				<li><strong>Project Team</strong></li>
-				<li><a href="/governance/">Governance</a></li>
-				<li><a href="/teams/">Teams</a></li>
-				<li>&nbsp;</li>
-				<li><strong>Extra Resources</strong></li>
-				<li><a href="https://godotengine.org/asset-library/asset">Asset Library</a></li>
-				<li><a href="https://docs.godotengine.org">Documentation</a></li>
-				<li><a href="https://github.com/godotengine">Code Repository</a></li>
-			</ul>
-		</div>
-		<div id="social" class="dark-desaturate">
-			<h4 class="text-right"><a href="/contact/">Contact us</a></h4>
-			<div class="flex justify-space-between" style="gap: 3px;">
-				<a href="https://github.com/godotengine" target="_blank" rel="noopener">
-					<img src="/assets/footer/github_logo.svg" width="32" height="32" alt="GitHub">
-				</a>
-				<a href="https://mastodon.gamedev.place/@godotengine" target="_blank" rel="noopener">
-					<img src="/assets/footer/mastodon_logo.svg" width="32" height="32" alt="Mastodon">
-				</a>
-				<a href="https://twitter.com/godotengine" target="_blank" rel="noopener">
-					<img src="/assets/footer/twitter_logo.svg" width="32" height="32" alt="Twitter">
-				</a>
-				<a href="https://www.facebook.com/groups/godotengine/" target="_blank" rel="noopener">
-					<img src="/assets/footer/facebook_logo.svg" width="32" height="32" alt="Facebook">
-				</a>
-				<a href="https://www.reddit.com/r/godot" target="_blank" rel="noopener">
-					<!-- Zero-width space in the `alt` text to prevent content blockers from blocking the icon -->
-					<img src="/assets/footer/reddit_logo.svg" width="32" height="32" alt="Red​dit">
-				</a>
-				<a href="/rss.xml" target="_blank" rel="noopener">
-					<!-- Icon is called `feed` instead of `rss` to prevent content blockers from blocking the icon -->
-					<img src="/assets/footer/feed_logo.svg" width="32" height="32" alt="RSS feed">
-				</a>
-			</div>
-		</div>
-	</div>
-</footer>
-
-<script defer src="/assets/js/tobii.min.js"></script>
-<script defer src="/assets/js/highlight.min.js?1"></script>
-<script defer src="/assets/js/highlight.gdscript.min.js?1"></script>
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		// This needs to be done on page load but also after page changes,
-		// in case a code block appears in an article.
-		document.querySelectorAll('pre code').forEach((block) => {
-			hljs.highlightBlock(block);
-		});
-
-		document.querySelectorAll('[data-post-date]').forEach((postDate) => {
-			// Highlight post dates that are less than 48 hours old.
-			if (Date.parse(postDate.dataset.postDate) > (Date.now() - 1000 * 60 * 60 * 48)) {
-				postDate.classList.add("post-recent-highlight");
-			};
-		});
-
-		// Initialize lightbox.
-		new Tobii({
-			zoom: false,
-		});
-
-		// Update any download link to point to identified user's OS.
-		const links = document.querySelectorAll('.set-os-download-url');
-		for (let i = 0; i < links.length; i++) {
-			const link = links[i];
-			let link_slug = 'download';
-			if ('version' in link.dataset && link.dataset['version'] === '3') {
-				link_slug = 'download/3.x';
-			}
-
-			let link_platform = 'windows';
-			if (navigator.platform.indexOf('Mac') !== -1) {
-				link_platform = 'macos';
-			} else if (navigator.platform.indexOf('Linux') !== -1) {
-				link_platform = 'linux';
-			}
-
-			link.href = `/${link_slug}/${link_platform}/`;
-		}
-	});
-</script>
-
-
-</body>
-
-</html>
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Godot Engine"><meta name=description content="Feature work has started for the upcoming Godot 4.0, and one of the first major changes is the integration of NavigationServer (and NavigationServer2D) to greatly improve and simplify the navigation workflow in Godot. This devblog shows how to set things up for a simple example with dynamic collision avoidance and runtime navigation mesh re-baking."><meta name=theme-color content="#3d8fcc"><meta property="og:site_name" content="Godot Engine"><meta property="og:url" content="https://godotengine.org/article/navigation-server-godot-4-0/"><meta name=twitter:site content="@godotengine"><meta property="og:title" content="Navigation Server for Godot 4.0"><meta property="og:description" content="Feature work has started for the upcoming Godot 4.0, and one of the first major changes is the integration of NavigationServer (and NavigationServer2D) to greatly improve and simplify the navigation workflow in Godot. This devblog shows how to set things up for a simple example with dynamic collision avoidance and runtime navigation mesh re-baking."><meta property="og:image" content="https://godotengine.org/storage/app/uploads/public/5e4/941/218/5e494121885db845075999.png"><meta property="og:type" content="article"><meta name=twitter:card content="summary_large_image"><title>Navigation Server for Godot 4.0</title><link rel=alternate type=application/rss+xml title="Godot News" href=/rss.xml><link rel=icon href=/assets/favicon.png sizes=any><link rel=icon href=/assets/favicon.svg type=image/svg+xml><link rel=stylesheet href=/assets/css/main.css?112><link rel=stylesheet href=/assets/css/tobii.min.css><link rel=preload as=font href=/assets/fonts/Montserrat-Bold.woff2 crossorigin><link rel=preload as=font href=/assets/fonts/Montserrat-ExtraBold.woff2 crossorigin><link rel=me href=https://mastodon.gamedev.place/@godotengine><input type=checkbox id=nav_toggle_cb><header><div class="container flex align-center"><div id=nav_head><a href=/ id=logo-link><img class=nav-logo src=/assets/logo.svg width=136 height=48 alt="Godot Engine">
+<img class="nav-logo dark-logo" src=/assets/logo_dark.svg width=136 height=48 alt="Godot Engine"></a>
+<label for=nav_toggle_cb id=nav_toggle_btn><img src=/assets/icons/hamburger.svg width=24 height=24 alt="Main menu"></label></div><nav id=nav><ul class=left><li><a href=/features/>Features</a><li class=only-on-mobile><a href=/showcase/>Showcase</a><li><a href=/blog/>Blog</a><li><a href=/community/>Community</a><li><a href=/contact/>About</a><li><a href=https://godotengine.org/asset-library/asset>Assets</a></ul><ul class=right><li><a href=/download/windows/ class=set-os-download-url>Download</a><li><a href=https://docs.godotengine.org>Docs</a><li><a href=https://docs.godotengine.org/en/stable/community/contributing/index.html>Contribute</a><li class=fund><a href=https://fund.godotengine.org>❤&#xFE0E; Donate</a></ul></nav></div></header><main><style>body{background-color:var(--background-color)}h1{margin-bottom:8px;margin-top:32px}:not(pre)>code{background:var(--code-background-color);padding:1px 4px;font-size:.95em;border-radius:3px}pre{background:var(--codeblock-background-color);color:var(--codeblock-color)}pre code{display:block;overflow-x:auto;padding:.5em}.date-big{line-height:2;margin-left:32px}article{background-color:var(--base-color);box-shadow:0 3px 2px rgba(0,0,0,.15)}figure{margin:0}figure img{margin:0}article img,article video{max-width:100%;height:auto;display:block;margin:auto;margin-top:16px;margin-bottom:16px}article h1{margin-top:64px}article h2,article h3,article h4{margin-top:42px}.article-info{display:flex;flex-direction:column;gap:8px}.article-metadata{display:flex;gap:24px;align-items:center;font-family:var(--header-font-family);margin-bottom:12px}@media(max-width:900px){.article-metadata{flex-direction:column;align-items:flex-start;gap:16px}}.article-author{color:var(--base-color-text-subtitle-date);font-weight:700;font-size:18px;flex-grow:1;display:flex;gap:12px;align-items:center}.article-author .avatar{border-radius:100%;margin:0}.article-author .by{color:var(--base-color-text-subtitle)}.article-metadata .date{color:var(--base-color-text-subtitle-date)}.article-metadata .date.post-recent-highlight{color:var(--post-recent-highlight-color);opacity:.8}.article-metadata .date.post-recent-highlight::after{font-size:80%;content:"NEW";border:2px solid var(--post-recent-highlight-color);padding:2px 3px;margin-left:8px}.tag.active{filter:saturate(.75)}@media screen and (min-width:900px){article .content{width:70%;margin:auto}}@media(max-width:900px){body{background-color:var(--base-color)}article{background-color:initial;box-shadow:none}article img:first-child,article video:first-child{max-width:100%}}</style><link rel=stylesheet href=/assets/css/highlight.obsidian.min.css><div class=container><article class=padded><div class="content article-container"><figure class=article-cover><img src=/storage/app/uploads/public/5e4/941/218/5e494121885db845075999.png title alt=" " class=rounded-lg style=width:100%;height:auto;background-color:initial></figure><div class=article-info><h1>Navigation Server for Godot 4.0</h1><div class=article-metadata><div class=article-author><span>By:</span>
+<img class=avatar width=25 height=25 src=/assets/images/authors/default_avatar.svg alt="Andrea Catania" loading=lazy>
+<span class=by>Andrea Catania</span></div><span class=date data-post-date="2020-02-19 13:23:19 +0000">19 February 2020</span></div><div class=tags><a href=/blog/progress-report><div class="tag active">Progress Report</div></a></div></div><div class="card card-warning"><p>This article is from <strong>February 2020</strong>, some of its contents might be outdated and no longer accurate.<br>You can find up-to-date information about the engine in the <a href=https://docs.godotengine.org/en/stable/>official documentation</a>.</div><div class=article-body><p><em>This post is outdated and it does not reflect the current state of the Navigation Server in Godot 4.0. If you want to read more about the most recent version you can do so here:</em><ul><li>https://docs.godotengine.org/en/latest/classes/class_navigationserver2d.html<li>https://docs.godotengine.org/en/latest/classes/class_navigationserver3d.html</ul><hr><p>Godot 4.0 features start to land in the development branch, and I’m pleased to introduce you the new <code class="language-plaintext highlighter-rouge">NavigationServer</code> and <code class="language-plaintext highlighter-rouge">NavigationServer2D</code> interfaces.<p>In previous Godot versions, we didn’t have a Navigation server and everything was done through the use of the <code class="language-plaintext highlighter-rouge">Navigation</code> node. While this was not a problem, it was a limited solution and the user was called to integrate the logic to deal with the navigation.<p>During the design phase, we researched a solution that provides:<ul><li>An effortless way to use the navigation system.<li>The possibility to stream in and out of the navigation regions.<li>Runtime navigation mesh baking.<li>Collision avoidance support.<li>Multi-threading safety.<li>Backward compatibility.</ul><p>So, the idea to improve the Godot navigation was to integrate a new server that would provide all the above functionalities; so was the <code class="language-plaintext highlighter-rouge">NavigationServer</code> born. If you’re unfamiliar with the concept of “servers” used in the Godot architecture, you can refer to <a href=/article/why-does-godot-use-servers-and-rids>this past devblog</a> and <a href=https://docs.godotengine.org/en/3.2/tutorials/optimization/using_servers.html>the documentation</a>.<h2 id=whats-new>What’s new</h2><p>Some new concepts appeared in the Godot world - let’s talk about these to get a good overview.<h4 id=map>Map</h4><p>The <code class="language-plaintext highlighter-rouge">Map</code> represents the entire world, it’s similar to the <code class="language-plaintext highlighter-rouge">space</code> for the physics engine, but this one is used for the navigation.<p>The <code class="language-plaintext highlighter-rouge">Map</code> is an agglomeration of regions and can be created by adding our old and dear <code class="language-plaintext highlighter-rouge">Navigation</code> node in the scene.<h4 id=region>Region</h4><p>The <code class="language-plaintext highlighter-rouge">Region</code> is a portion of the map and can be created by adding the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> node.<p>Despite the two new keywords, <code class="language-plaintext highlighter-rouge">Map</code> and <code class="language-plaintext highlighter-rouge">Region</code>, the <code class="language-plaintext highlighter-rouge">Navigation</code> node and the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> node are the same as before, from the editor prospective, so you have full retro compatibility and their usage remain the same.<p>Now the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> can be added during gameplay, and it’s possible to change its transform or even bake the navigation mesh data at runtime.<h4 id=navigation-agent>Navigation Agent</h4><p>The <code class="language-plaintext highlighter-rouge">NavigationAgent</code> is a new node that allows to navigate the <code class="language-plaintext highlighter-rouge">Map</code> easily; indeed you don’t need anymore to deal with path resolution and path navigation code.<p>The agent is also responsible for avoiding collisions.<h4 id=navigation-obstacle>Navigation Obstacle</h4><p>The <code class="language-plaintext highlighter-rouge">NavigationObstacle</code> is really simple, and it’s used for collision avoidance. You can use it to mark its parent as an obstacle, for example under a <code class="language-plaintext highlighter-rouge">PhysicsBody</code> or <code class="language-plaintext highlighter-rouge">KinematicBody</code> node.<h2 id=lets-try-it>Let’s try it!</h2><p>We saw what’s new in the <code class="language-plaintext highlighter-rouge">NavigationServer</code> but let’s have a break with theory and start to use it!<p>The <code class="language-plaintext highlighter-rouge">NavigationServer</code> is a Godot 4.0 feature and at the time of this writing is part of the unstable master branch; so as first thing I’m going to <a href=https://docs.godotengine.org/en/latest/development/compiling/index.html>build Godot from source</a>, see you in a moment!<p><em>[… Loading …]</em><h4 id=static-world-creation>Static world creation</h4><p><strong>Note:</strong> Here I’m showing a 3D example, but you can reproduce the exact same steps to use it in 2D!<p>Here we go, I assume that you are already comfortable using Godot, so let’s create the world scene:<p><img src=/storage/app/media/navigation/world_scene_1.png alt="Initial world scene setup"><p>As you can see it’s similar to the Godot 3.x navigation setup: we have a <code class="language-plaintext highlighter-rouge">Navigation</code> that represents the entire map and two <code class="language-plaintext highlighter-rouge">NavigationRegion</code> regions.<p>You can compose the <code class="language-plaintext highlighter-rouge">NavigationRegion</code> as you like, mine looks like this:<p><img src=/storage/app/media/navigation/world_scene_2.png alt="Setup for the two navigation regions"><p><strong>Note:</strong> The meshes have a common static body under their node.<p><strong>Remember</strong> to hit the button <code class="language-plaintext highlighter-rouge">Bake NavMesh</code> to bake the navigation data, as you used to do in 3.x!<h4 id=character>Character</h4><p>A navigable map is nothing without something that navigates it! So guess what? Let’s create a character that is able to navigate it.<p>Open another scene, add a <code class="language-plaintext highlighter-rouge">PhysicsBody</code> and set its mode to <code class="language-plaintext highlighter-rouge">Character</code>; then add all the nodes that you see in the picture below:<p><img src=/storage/app/media/navigation/character.png alt="Character scene setup"><p>The <code class="language-plaintext highlighter-rouge">RayCast</code> node is used to simplify the code to get the floor normal.<p>The <code class="language-plaintext highlighter-rouge">NavigationAgent</code> node is a new addition: it’s a handy utility used to navigate the <code class="language-plaintext highlighter-rouge">Map</code>. It does all the hard work for you: indeed, you don’t need anymore to deal with the path, instead each frame you have to query this node using <code class="language-plaintext highlighter-rouge">get_next_location()</code> to know what is the next location which is free to reach.<p>This is the character code:<div class="language-gdscript highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=k>extends</span> <span class=n>RigidBody</span>
+
+<span class=k>export</span><span class=p>(</span><span class=kt>float</span><span class=p>)</span> <span class=k>var</span> <span class=n>velocity</span>
+<span class=k>export</span><span class=p>(</span><span class=kt>NodePath</span><span class=p>)</span> <span class=k>var</span> <span class=n>target_node_1</span>
+
+
+<span class=k>func</span> <span class=nf>_ready</span><span class=p>():</span>
+	<span class=o>$</span><span class=n>NavigationAgent</span><span class=o>.</span><span class=n>set_target_location</span><span class=p>(</span><span class=n>get_node</span><span class=p>(</span><span class=n>target_node_1</span><span class=p>)</span><span class=o>.</span><span class=n>get_global_transform</span><span class=p>()</span><span class=o>.</span><span class=n>origin</span><span class=p>)</span>
+
+
+<span class=k>func</span> <span class=nf>_physics_process</span><span class=p>(</span><span class=n>_delta</span><span class=p>):</span>
+	<span class=c1># Query the `NavigationAgent` to know the next free to reach location.</span>
+	<span class=k>var</span> <span class=n>target</span> <span class=o>=</span> <span class=o>$</span><span class=n>NavigationAgent</span><span class=o>.</span><span class=n>get_next_location</span><span class=p>()</span>
+	<span class=k>var</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>get_global_transform</span><span class=p>()</span><span class=o>.</span><span class=n>origin</span>
+
+	<span class=c1># Floor normal.</span>
+	<span class=k>var</span> <span class=n>n</span> <span class=o>=</span> <span class=o>$</span><span class=n>RayCast</span><span class=o>.</span><span class=n>get_collision_normal</span><span class=p>()</span>
+	<span class=k>if</span> <span class=n>n</span><span class=o>.</span><span class=n>length_squared</span><span class=p>()</span> <span class=o>&lt;</span> <span class=mf>0.001</span><span class=p>:</span>
+		<span class=c1># Set normal to Y+ if on air.</span>
+		<span class=n>n</span> <span class=o>=</span> <span class=kt>Vector3</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span>
+
+	<span class=c1># Calculate the velocity.</span>
+	<span class=k>var</span> <span class=n>vel</span> <span class=o>=</span> <span class=p>(</span><span class=n>target</span> <span class=o>-</span> <span class=n>pos</span><span class=p>)</span><span class=o>.</span><span class=n>slide</span><span class=p>(</span><span class=n>n</span><span class=p>)</span><span class=o>.</span><span class=n>normalized</span><span class=p>()</span> <span class=o>*</span> <span class=n>velocity</span>
+	<span class=n>set_linear_velocity</span><span class=p>(</span><span class=n>vel</span><span class=p>)</span>
+</code></pre></div></div><blockquote><p><strong>For the curious:</strong><p>The <code class="language-plaintext highlighter-rouge">get_next_location()</code> function takes into account:<ul><li><code class="language-plaintext highlighter-rouge">Map</code> reloading events (<code class="language-plaintext highlighter-rouge">Region</code> baking, <code class="language-plaintext highlighter-rouge">Region</code> position change, <code class="language-plaintext highlighter-rouge">Region</code> addition/removal, etc.).<li>Target location changes.<li>Collision avoidance dynamic map updates.</ul><p>In these cases the function will reload its internal path, and will return the next free location.<br>As before, you are free to manually query the <code class="language-plaintext highlighter-rouge">Navigation</code> node, but using the new <code class="language-plaintext highlighter-rouge">NavigationAgent</code> is much simpler and efficient.</blockquote><p>We now have a character, so let’s add it to the world:<p><img src=/storage/app/media/navigation/world_scene_3.png alt="World scene with character"><p>It is important that the character is a child of the <code class="language-plaintext highlighter-rouge">Navigation</code> node, because the <code class="language-plaintext highlighter-rouge">NavigationAgent</code> has the capability to find the <code class="language-plaintext highlighter-rouge">Navigation</code> node automatically if it is one of its antecedents, otherwise you must set it manually using <code class="language-plaintext highlighter-rouge">set_navigation()</code>.<h4 id=target-location>Target location</h4><p>The agent just need a <code class="language-plaintext highlighter-rouge">Vector3</code> as target to reach, and in our case I want to take this position from a spatial node; notice this code in the character script:<div class="language-gdscript highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=p>[</span><span class=o>...</span><span class=p>]</span>
+<span class=k>func</span> <span class=nf>_ready</span><span class=p>():</span>
+	<span class=o>$</span><span class=n>NavigationAgent</span><span class=o>.</span><span class=n>set_target_location</span><span class=p>(</span><span class=n>get_node</span><span class=p>(</span><span class=n>target_node_1</span><span class=p>)</span><span class=o>.</span><span class=n>get_global_transform</span><span class=p>()</span><span class=o>.</span><span class=n>origin</span><span class=p>)</span>
+<span class=p>[</span><span class=o>...</span><span class=p>]</span>
+</code></pre></div></div><p>I’ve added a <code class="language-plaintext highlighter-rouge">Position3D</code> into the world, and set its <code class="language-plaintext highlighter-rouge">NodePath</code> as the character’s <code class="language-plaintext highlighter-rouge">target_node_1</code> exported property. The result is this:<p><img src=/storage/app/media/navigation/navigation_1.gif alt="Demonstration of NavigationAgent with an unreachable target"><p>You can notice that even if the target is not reachable, the agent will bring the character as close as possible. What if we added a ramp at runtime‽<h4 id=runtime-baking>Runtime baking</h4><p>I’ve created a simple ramp in a new scene and added a script with this code to the <code class="language-plaintext highlighter-rouge">NavigationMeshInstance2</code>:<div class="language-gdscript highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=k>extends</span> <span class=n>NavigationRegion</span>
+
+
+<span class=k>func</span> <span class=nf>_ready</span><span class=p>():</span>
+    <span class=c1># Wait 10 seconds.</span>
+	<span class=nb>yield</span><span class=p>(</span><span class=n>get_tree</span><span class=p>()</span><span class=o>.</span><span class=n>create_timer</span><span class=p>(</span><span class=mf>10.0</span><span class=p>),</span> <span class=s2>"timeout"</span><span class=p>)</span>
+
+	<span class=c1># Create the ramp and add it into the world.</span>
+	<span class=c1># 'RampPosition' is a Position3D added as child to NavigationMeshInstance2.</span>
+	<span class=k>var</span> <span class=n>ramp</span> <span class=o>=</span> <span class=nb>load</span><span class=p>(</span><span class=s2>"res://Ramp.tscn"</span><span class=p>)</span><span class=o>.</span><span class=n>instance</span><span class=p>()</span>
+	<span class=o>$</span><span class=n>RampPosition</span><span class=o>.</span><span class=n>add_child</span><span class=p>(</span><span class=n>ramp</span><span class=p>)</span>
+
+	<span class=c1># Bake the navigation mesh of this region.</span>
+	<span class=n>bake_navigation_mesh</span><span class=p>()</span>
+</code></pre></div></div><p><img src=/storage/app/media/navigation/navigation_2.gif alt="Demonstration of NavigationAgent with the addition of a ramp at runtime"><p><strong>Boom!</strong> Once the region rebaking is done, as promised, the agent navigates through the new added ramp to finally reach the target location! It’s simple, isn’t?<h4 id=region-transform-change>Region transform change</h4><p>Ok, cool… but what does the agent do if I move the region around?<p>I’ve added an <code class="language-plaintext highlighter-rouge">AnimationPlayer</code> node to test this case:<p><img src=/storage/app/media/navigation/navigation_3.gif alt="Demonstration of NavigationAgent with a moving region"><p>The agent is able to navigate towards the target, and once the two regions are aligned (so again welded together) the agent is able to walk into the region 2.<p>So once again the agent takes care to do the hard work of checking the map reloading for us.<h4 id=collision-avoidance>Collision avoidance</h4><p>Until now everything was static, and we had the need to re-bake the navigation mesh when we added a new piece of map.<p>The new <code class="language-plaintext highlighter-rouge">Navigation</code> supports collision avoidance for dynamic obstacles, likes <code class="language-plaintext highlighter-rouge">PhysicsBody</code>.<p>The first thing to do is to add some dynamic obstacles into the scene; I’ve added some physics balls and set their velocity from the editor.<p>I’ve also added a <code class="language-plaintext highlighter-rouge">KinematicBody</code>, and I’ve animated its motion using an animation player.<p><img src=/storage/app/media/navigation/world_scene_4.png alt="World scene with obstacles"><p>We still want some control over the things that the collision avoidance takes into account. For this reason, in order to allow the agent to see the dynamic obstacles, you have to add the <code class="language-plaintext highlighter-rouge">NavigationObstacle</code> node as child of the obstacle.<p>This node doesn’t have any property because it’s able to figure out automatically the size, velocity and position of its parent.<p>By default, the agent collision avoidance is not active. To use it, we have to make sure to set the character velocity using:<div class="language-gdscript highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=o>$</span><span class=n>NavigationAgent</span><span class=o>.</span><span class=n>set_velocity</span><span class=p>(</span><span class=n>vel</span><span class=p>)</span>
+</code></pre></div></div><p>Once you set the agent velocity, the agent starts to compute the safe velocity that takes into account dynamic obstacles. Once the safe velocity is calculated, it emits the signal <code class="language-plaintext highlighter-rouge">velocity_computed</code>.<p>You have to connect a function to this signal, and use the given <code class="language-plaintext highlighter-rouge">safe_velocity</code> to move the character.<p>The final code looks like:<div class="language-gdscript highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=p>[</span><span class=o>...</span><span class=p>]</span>
+
+<span class=k>func</span> <span class=nf>_physics_process</span><span class=p>(</span><span class=n>_delta</span><span class=p>):</span>
+	<span class=c1># Query the `NavigationAgent` to know the next free to reach location.</span>
+	<span class=k>var</span> <span class=n>target</span> <span class=o>=</span> <span class=o>$</span><span class=n>NavigationAgent</span><span class=o>.</span><span class=n>get_next_location</span><span class=p>()</span>
+	<span class=k>var</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>get_global_transform</span><span class=p>()</span><span class=o>.</span><span class=n>origin</span>
+
+	<span class=c1># Floor normal.</span>
+	<span class=k>var</span> <span class=n>n</span> <span class=o>=</span> <span class=o>$</span><span class=n>RayCast</span><span class=o>.</span><span class=n>get_collision_normal</span><span class=p>()</span>
+	<span class=k>if</span> <span class=n>n</span><span class=o>.</span><span class=n>length_squared</span><span class=p>()</span> <span class=o>&lt;</span> <span class=mf>0.001</span><span class=p>:</span>
+		<span class=c1># Set normal to Y+ if on air.</span>
+		<span class=n>n</span> <span class=o>=</span> <span class=kt>Vector3</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span>
+
+	<span class=c1># Calculate the velocity.</span>
+	<span class=k>var</span> <span class=n>vel</span> <span class=o>=</span> <span class=p>(</span><span class=n>target</span> <span class=o>-</span> <span class=n>pos</span><span class=p>)</span><span class=o>.</span><span class=n>slide</span><span class=p>(</span><span class=n>n</span><span class=p>)</span><span class=o>.</span><span class=n>normalized</span><span class=p>()</span> <span class=o>*</span> <span class=n>velocity</span>
+
+	<span class=c1># Tell the agent the velocity.</span>
+	<span class=o>$</span><span class=n>NavigationAgent</span><span class=o>.</span><span class=n>set_velocity</span><span class=p>(</span><span class=n>vel</span><span class=p>)</span>
+
+
+<span class=k>func</span> <span class=nf>_on_NavigationAgent_velocity_computed</span><span class=p>(</span><span class=n>safe_velocity</span><span class=p>):</span>
+    <span class=c1># Move the character using the computed `safe_velocity` and avoid dynamic obstacles.</span>
+	<span class=n>set_linear_velocity</span><span class=p>(</span><span class=n>safe_velocity</span><span class=p>)</span>
+</code></pre></div></div><p>Now you can play the scene, and voilà:<p><img src=/storage/app/media/navigation/navigation_4.gif alt="Final demonstration with collision avoidance from moving obstacles"><p><strong>Note:</strong> Collision avoidance behavior can be tweaked per agent, by changing the <code class="language-plaintext highlighter-rouge">NavigationAgent</code> settings. You can change velocity, time of response to obstacles, and some other useful things.<h2 id=conclusion>Conclusion</h2><p>This was an introduction to the new <code class="language-plaintext highlighter-rouge">NavigationServer</code> and <code class="language-plaintext highlighter-rouge">NavigationServer2D</code> coming up in Godot 4.0. The integration of these new servers was made possible thanks to the sponsoring of IMVU!<p>Give it a check, and enjoy use Godot! And don’t hesitate to provide feedback about this new feature, which we can polish further until the actual 4.0 release.</div></div></article></div><link rel=stylesheet href=/assets/css/anchor-link.css?1><link rel=stylesheet href=/assets/css/article-cards.css?2><script src=/assets/js/anchor-link.js></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{window.applyAnchorLinks('.article-body'),document.querySelectorAll('.article-cover img, .article-body img').forEach(b=>{if(b.classList.contains('lightbox-ignore'))return;const a=document.createElement('a');a.href=b.src,a.classList.add('lightbox'),a.dataset.group='article',b.parentNode.appendChild(a),a.appendChild(b)})})</script></main><footer><div class="container flex footer-container"><div id=copyright><p>© 2007-2024 Juan Linietsky, Ariel Manzur and <a href=https://github.com/godotengine/godot/blob/master/AUTHORS.md target=_blank rel=noopener>contributors</a>.<br>Hosted by the <a href=https://godot.foundation/ target=_blank rel=noopener>Godot Foundation</a>.<br>Website <a href=https://github.com/godotengine/godot-website target=_blank rel=noopener>source code on GitHub</a>.</div><div id=sitemap><ul class=sitemap-group><li><strong>Get Godot</strong><li><a href=/download/windows/ class=set-os-download-url>Download</a><li><a href=/download/archive/>Release Archive</a><li><a href=https://editor.godotengine.org/releases/latest/>Web Editor</a><li>&nbsp;<li><strong>Public Relations</strong><li><a href=/blog/>Blog</a><li><a href=/community/>Communities and Events</a><li><a href=/press/>Press Kit</a></ul><ul class=sitemap-group><li><strong>About Godot</strong><li><a href=/features/>Features</a><li><a href=/showcase/>Showcase</a><li><a href=/education/>Education</a><li><a href=/license/>License</a><li><a href=/code-of-conduct/>Code of Conduct</a><li><a href=/privacy-policy/>Privacy Policy</a><li><a href=https://fund.godotengine.org>Donate</a></ul><ul class=sitemap-group><li><strong>Project Team</strong><li><a href=/governance/>Governance</a><li><a href=/teams/>Teams</a><li>&nbsp;<li><strong>Extra Resources</strong><li><a href=https://godotengine.org/asset-library/asset>Asset Library</a><li><a href=https://docs.godotengine.org>Documentation</a><li><a href=https://github.com/godotengine>Code Repository</a></ul></div><div id=social class=dark-desaturate><h4 class=text-right><a href=/contact/>Contact us</a></h4><div class="flex justify-space-between" style=gap:3px><a href=https://github.com/godotengine target=_blank rel=noopener><img src=/assets/footer/github_logo.svg width=32 height=32 alt=GitHub></a>
+<a href=https://mastodon.gamedev.place/@godotengine target=_blank rel=noopener><img src=/assets/footer/mastodon_logo.svg width=32 height=32 alt=Mastodon></a>
+<a href=https://twitter.com/godotengine target=_blank rel=noopener><img src=/assets/footer/twitter_logo.svg width=32 height=32 alt=Twitter></a>
+<a href=https://www.facebook.com/groups/godotengine/ target=_blank rel=noopener><img src=/assets/footer/facebook_logo.svg width=32 height=32 alt=Facebook></a>
+<a href=https://www.reddit.com/r/godot target=_blank rel=noopener><img src=/assets/footer/reddit_logo.svg width=32 height=32 alt=Red​dit></a>
+<a href=/rss.xml target=_blank rel=noopener><img src=/assets/footer/feed_logo.svg width=32 height=32 alt="RSS feed"></a></div></div></div></footer><script defer src=/assets/js/tobii.min.js></script>
+<script defer src=/assets/js/highlight.min.js?1></script>
+<script defer src=/assets/js/highlight.gdscript.min.js?1></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('pre code').forEach(a=>{hljs.highlightBlock(a)}),document.querySelectorAll('[data-post-date]').forEach(a=>{Date.parse(a.dataset.postDate)>Date.now()-1e3*60*60*48&&a.classList.add("post-recent-highlight")}),new Tobii({zoom:!1});const a=document.querySelectorAll('.set-os-download-url');for(let b=0;b<a.length;b++){const c=a[b];let e='download';'version'in c.dataset&&c.dataset.version==='3'&&(e='download/3.x');let d='windows';navigator.platform.indexOf('Mac')!==-1?d='macos':navigator.platform.indexOf('Linux')!==-1&&(d='linux'),c.href=`/${e}/${d}/`}})</script>
