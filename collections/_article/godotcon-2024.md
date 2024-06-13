@@ -21,7 +21,7 @@ To facilitate business meetings, we are currently setting up our own matchmaking
 
 Have you thought about participating in the program yet? Take a look at our call for speakers and exhibitors below - this event is a collaborative effort between us and the community!
 
-[Call for proposals]()
+[Call for proposals]() **Deadline: TBD**
 
 Speaking of collaboration, we are actively looking for sponsors to support GodotCon not just monetarily, but also with content or products. If you or your company would be interested in learning more about the sponsorship ideas we have prepared, simply download this fact-sheet we put together and reach out to [godotcon@godotengine.org](mailto:godotcon@godotengine.org).
 
