@@ -7,8 +7,6 @@ image: /storage/blog/covers/godotcon-2024.webp
 date: 2024-06-14 18:00:00
 ---
 
-# GodotCon 24 - Submit ideas! Get tickets!
-
 | 📅 Date     | 12th+13th of October                |
 | 📍 Location | Berlin, Germany                     |
 | 🌐 Website  | https://conference.godotengine.org/ |
@@ -38,4 +36,4 @@ Even if you do not plan to attend this installment, we recommend taking a look f
 
 [**➡️ Join the GodotCon Discord**](https://discord.gg/nAcE7msd5H)
 
-See you in autumnal, pumpkin-spice smelling, hopefully not too cold Berlin!
+See you in autumnal, pumpkin-spice smelling, hopefully not too cold Berlin! 🍂🥧
