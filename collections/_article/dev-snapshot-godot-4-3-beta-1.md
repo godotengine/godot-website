@@ -4,8 +4,8 @@ excerpt: "Godot 4.3 is ready for broad testing as we finalize the release."
 categories: ["pre-release"]
 author: "Godot contributors"
 image: /storage/blog/covers/dev-snapshot-godot-4-3-beta-1.webp
-image_caption_title: Road to Vostok
-image_caption_description: A game by Antti
+image_caption_title: "Road to Vostok"
+image_caption_description: "A game by Antti"
 date: 2024-05-31 11:00:00
 ---
 
