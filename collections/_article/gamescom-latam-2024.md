@@ -17,7 +17,7 @@ The BIG Festival was already the biggest event for game developers in Latin Amer
 
 The event features a good amount of booths, with plenty of games to play and many people to meet. It also includes many talks in all areas of game development, all covered by the standard ticket. Not to mention the business area where one can schedule meetings with other companies to negotiate deals or form lasting connections.
 
-The Godot booth is sponsored by a joint effort of [W4 Games](https://w4games.com/), [anitya](https://www.anitya.space/), and [Vertex Ludi](https://www.vertexludi.com/). It is a great place to meet the community and proof that we are here to stay. Looking at last year, we expect to have busy booth teeming with interesting conversations, as well as some merchandise to take home with you. A short talk titled ["**Godot and Its Emerging Ecosystem**"](https://b2b.latam.gamescom.global/talks/13/965) is also on the program, which will take place on **June 27** at **10:00** (local time) on the **Quest 2 stage**.
+The Godot booth is sponsored by a joint effort of [W4 Games](https://w4games.com/), [anitya](https://www.anitya.space/), and [Vertex Ludi](https://www.vertexludi.com/). It is a great place to meet the community and proof that we are here to stay. Looking at last year, we expect to have a busy booth teeming with interesting conversations, as well as some merchandise to take home with you. A short talk titled ["**Godot and Its Emerging Ecosystem**"](https://b2b.latam.gamescom.global/talks/13/965) is also on the program, which will take place on **June 27** at **10:00** (local time) on the **Quest 2 stage**.
 
 
 ![Render of this years booth](/storage/blog/gamescom-latam-2024/booth-render-2024.webp)
