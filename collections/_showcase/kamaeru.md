@@ -1,41 +1,43 @@
 ---
-description: "Kamaeru is a cozy farming sim where you collect and breed frogs, customize your environment, and restore biodiversity in the wetlands."
-date: 2023-01-23 00:00:00 +0000
+description: "Foster a sanctuary for frogs and restore the biodiversity of the wetlands in Kamaeru, a cozy frog collecting game, where you take pictures of frogs, play mini-games and decorate your habitat. Hop right to it!"
+date: 2024-06-08 00:00:00 +0000
 
 title: Kamaeru
 author: Humble Reeds
 website: https://www.kamaeru.com/
-release_date: TBD
+release_date: June 2024
 
-image: "/assets/showcase/kamaeru-header.webp"
+image: "/assets/showcase/kamaeru.jpg"
 gallery: [
-	"/assets/showcase/kamaeru-1.webp",
-	"/assets/showcase/kamaeru-2.webp",
+	"/assets/showcase/screenshots/kamaeru-1.jpg",
+	"/assets/showcase/screenshots/kamaeru-2.jpg",
+	"/assets/showcase/screenshots/kamaeru-3.jpg",
+	"/assets/showcase/screenshots/kamaeru-4.jpg",
+	"/assets/showcase/screenshots/kamaeru-5.jpg",
 ]
-youtube_id: "BzMuM8ohdB8"
+youtube_id: "3BddpsCOXLk"
 
 windows: true
 macos: true
 linux: true
+xbox: true
+switch: true
+
+steam: https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/
+
 
 featured_in_home: false
 ---
 
-Kamaeru is a cozy farming sim where you collect and breed frogs, customize your environment, and restore biodiversity in the wetlands.
-
-You are helping an old friend to restore the wetlands of your childhood, and build a cozy frog refuge. You will photograph and breed frogs to increase your reputation, decorate your frog refuge, plant crops to restore the wetlands, and meet several characters that will help you along the way
-
+Kamaeru is a cozy frog collecting game about farming and preserving nature. You play as a kind soul helping an old friend restore the wetlands of your childhood by transforming them into a safe haven for friendly little frogs. With the help of the game’s cast of welcoming NPCs, you will photograph and breed frogs to increase your reputation, decorate your frog refuge, and plant native crops to help your amphibian abode thrive!
 
 ### Collect frogs 🐸
-The ultimate goal of the game is to collect them all! Take pictures, feed them and breed them to have a chance of meeting every single one of the possible 500 frogs 🐸
-Some frogs can only be met under certain conditions though, and rare colors only available through breeding! 
+Feed, breed, collect, and raise all of the game’s 500+ frogs! 🐸 It’s up to you to figure out the secret to attracting new and adorable frogs. You can complete your collection by unlocking all the rare colors through a special breeding mini-game. When new ones join your refuge, use the in-game camera to take photos of them and collect them for your frogedex! 
 
+### Restore the wetlands 🌾
+In order to succeed in your quest for frog preservation, you will need to restore the nearby wetlands to their former glory. This will allow you to continually support and cultivate the area through a process known as paludiculture!
 
-### Restore wetlands 🌾
-In order to attract the most rare frogs, and have a sustainable refuge, you will need to restore nearby wetlands to their former glory. This will allow you to practice paludiculture, the culture of wetlands!
-Dig ponds to let water roam the land again, and plant native wetlands species to harvest precious crops. You will then be able to transform them into manufactured goods, and sell them to improve your refuge.
-
+Dig ponds to let water roam the land again and plant native wetlands species to harvest precious crops. From there, you can transform your pickings into manufactured goods that can be sold to improve your froggy habitat further!
 
 ### Customize your frog refuge 🎨
-When you place furniture in your refuge, frogs tend to appear. Some furniture will attract certain types of frogs! 
-The more decorated your refuge, the more popular it will be, allowing you to drive attention and new visitors, that will unlock new recipes, crops and types of furniture. You will even be able to recolor the furniture to your heart’s content!
+New furniture will bring new frogs with it! As you personalize your habitat, new poses of frogs will be shown into specific kinds of furniture. Plus, it’ll attract attention to the area–and with it, new visitors! You can even repaint furniture to better fit your own unique style sensibilities. 
