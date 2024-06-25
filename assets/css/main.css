@@ -375,7 +375,7 @@ hr {
   padding-right: 0px;
 }
 
-header {
+body > header {
   /* Show on top of GodotCon banner (if any). */
   position: relative;
   z-index: 2;
@@ -388,11 +388,11 @@ header {
   box-shadow: var(--base-shadow);
 }
 
-header > div.container {
+body > header > div.container {
   width: 100%;
 }
 
-header .container {
+body > header .container {
   overflow: initial;
 }
 
@@ -970,10 +970,10 @@ pre > code {
     width: 100%;
   }
 
-  header {
+  body > header {
     height: auto;
   }
-  header > div {
+  body > header > div {
     flex-direction: column;
   }
 
@@ -997,7 +997,7 @@ pre > code {
   #nav_toggle_btn:active {
     background-color: hsla(0, 0%, 50%, 0.25);
   }
-  #nav_toggle_cb:checked ~ header nav {
+  #nav_toggle_cb:checked ~ body > header nav {
     display: block;
   }
   #nav {
