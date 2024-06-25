@@ -4,14 +4,187 @@ title: "Godot Engine 4.3"
 description: "Godot Engine 4.3"
 layout: release
 header_text: "Godot Engine 4.3"
+4_3_commits: 2915
+4_3_contributors: 450
+4_2_commits: 1876
+4_2_contributors: 359
+4_1_commits: 1464
+4_1_contributors: 311
 ---
 
 <style type="text/css">
-	.release {
+	.release {}
 
+	.release header {}
+
+	/* Release Numbers */
+	#release-numbers {
+		--transition-delay: 0.5s;
+		--transition-duration: 2s;
+	}
+
+	#release-numbers .release-type-item-bar {
+		display: flex;
+		flex-direction: row;
+	}
+
+	#release-numbers .release-type-item-bar-bar {
+		background-color: blue;
+		width: 0;
+	}
+
+	#release-numbers .release-type-item-bar-numbers {
+		font-feature-settings: "tnum";
 	}
 </style>
 
-<article class="release">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+	gsap.registerPlugin(ScrollTrigger);
 
+	const BAR_MAX_WIDTH_PX = 200;
+
+	let tl = gsap.timeline();
+	gsap.utils.toArray(".release-type-item-bar-bar").forEach((bar) => {
+		const size = bar.dataset.size;
+		const total = bar.dataset.total;
+		const number = bar.parentElement.querySelector(".release-type-item-bar-number");
+		const tween = gsap.to(bar, {
+			delay: 0.5,
+			duration: 2,
+			ease: "ease-out",
+			width: `${(size / total) * BAR_MAX_WIDTH_PX}px`,
+			onUpdate: () => {
+				number.innerText = Math.round(tween.totalProgress() * size);
+			},
+			onComplete: () => {
+				number.innerText = size;
+			}
+		});
+	});
+});
+</script>
+
+<article class="release">
+	<header>
+		<h1>4.3 RELEASE</h1>
+		<p>
+			With over 2,500&nbsp;commits done by over 400&nbsp;contributors,
+			the latest release of the Godot engine comes packed full of new
+			features and improvements.
+		</p>
+		<div id="release-numbers">
+			<div class="release-type release-commits">
+				<div class="release-type-version release-commits-version release-commits-4_3">
+					<p class="release-type-item-title release-commits-item-title">4.3</p>
+					<div class="release-type-item-bar release-commits-item-bar">
+						<div
+							class="release-type-item-bar-bar release-commits-item-bar-bar"
+							data-size="{{ page.4_3_commits }}"
+							data-total="{{ page.4_3_commits }}"
+						></div>
+						<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+						<span>Commits</span>
+					</div>
+				</div>
+
+				<div class="release-type-version release-commits-version release-commits-4_2">
+					<p class="release-type-item-title release-commits-item-title">4.2</p>
+					<div class="release-type-item-bar release-commits-item-bar">
+						<div
+							class="release-type-item-bar-bar release-commits-item-bar-bar"
+							data-size="{{ page.4_2_commits }}"
+							data-total="{{ page.4_3_commits }}"
+						></div>
+						<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+					</div>
+				</div>
+
+				<div class="release-type-version release-commits-version release-commits-4_1">
+					<p class="release-type-item-title release-commits-item-title">4.1</p>
+					<div class="release-type-item-bar release-commits-item-bar">
+						<div
+							class="release-type-item-bar-bar release-commits-item-bar-bar"
+							data-size="{{ page.4_1_commits }}"
+							data-total="{{ page.4_3_commits }}"
+						></div>
+						<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="release-type release-contributors">
+				<div class="release-type-version release-contributors-version release-contributors-4_3">
+					<p class="release-type-item-title release-contributors-item-title">4.3</p>
+					<div class="release-type-item-bar release-contributors-item-bar">
+						<div
+							class="release-type-item-bar-bar release-contributors-item-bar-bar"
+							data-size="{{ page.4_3_contributors }}"
+							data-total="{{ page.4_3_contributors }}"
+						></div>
+						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
+						<span>Contributors</span>
+					</div>
+				</div>
+
+				<div class="release-type-version release-contributors-version release-contributors-4_2">
+					<p class="release-type-item-title release-contributors-item-title">4.2</p>
+					<div class="release-type-item-bar release-contributors-item-bar">
+						<div
+							class="release-type-item-bar-bar release-contributors-item-bar-bar"
+							data-size="{{ page.4_2_contributors }}"
+							data-total="{{ page.4_3_contributors }}"
+						></div>
+						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
+						<span>Contributors</span>
+					</div>
+				</div>
+
+				<div class="release-type-version release-contributors-version release-contributors-4_1">
+					<p class="release-type-item-title release-contributors-item-title">4.1</p>
+					<div class="release-type-item-bar release-contributors-item-bar">
+						<div
+							class="release-type-item-bar-bar release-contributors-item-bar-bar"
+							data-size="{{ page.4_1_contributors }}"
+							data-total="{{ page.4_3_contributors }}"
+						></div>
+						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
+						<span>Contributors</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>
+			From new nodes, to rendering improvements, to more stability, and
+			plenty of fixes. There's something for everyone.
+		</p>
+	</header>
+
+	<div class="2d">
+		<a href="#2d">
+			<h2>2D</h2>
+		</a>
+
+		<div class="feature single-threaded-web">
+			<a href="#single-threaded-web">
+				<h3>Export away</h3>
+			</a>
+			<p class="title">Single-threaded Web Export</p>
+			<summary>
+				We orignially aimed for the stars, but browsers are still down to
+				Earth. By bringing back single-threaded export for the Web platform,
+				we got more compatible across browsers and we eliminated the need of
+				complicated server-side configurations.
+			</summary>
+		</div>
+
+		<div class="feature tilemap-layer-node">
+			<a href="#tilemap-layer-node">
+				<h3></h3>
+			</a>
+			<p class="title">Tilemap layers as nodes</p>
+		</div>
+	</div>
 </article>
