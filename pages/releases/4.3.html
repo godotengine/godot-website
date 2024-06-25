@@ -33,8 +33,13 @@ header_text: "Godot Engine 4.3"
 		width: 0;
 	}
 
-	#release-numbers .release-type-item-bar-numbers {
+	#release-numbers .release-type-item-bar-number {
 		font-feature-settings: "tnum";
+		margin-left: 0.25em;
+	}
+
+	#release-numbers .release-type-item-bar-desc {
+		margin-left: 0.25em;
 	}
 </style>
 
@@ -45,24 +50,47 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.registerPlugin(ScrollTrigger);
 
 	const BAR_MAX_WIDTH_PX = 200;
+	const BAR_DELAY_S = 0.5;
+	const BAR_DURATION_S = 1;
+	const BAR_EASE = "power2.out";
 
-	let tl = gsap.timeline();
-	gsap.utils.toArray(".release-type-item-bar-bar").forEach((bar) => {
+	const barEase = gsap.parseEase(BAR_EASE);
+
+	const numberFormat = new Intl.NumberFormat("en-US");
+
+	let commitsTl = gsap.timeline();
+	let contributorsTl = gsap.timeline();
+
+	const animateBar = (bar, i, timeline) => {
 		const size = bar.dataset.size;
 		const total = bar.dataset.total;
 		const number = bar.parentElement.querySelector(".release-type-item-bar-number");
-		const tween = gsap.to(bar, {
-			delay: 0.5,
-			duration: 2,
-			ease: "ease-out",
+		timeline.to(bar, {
+			delay: i === 0
+				? BAR_DELAY_S
+				: 0,
+			duration: BAR_DURATION_S,
+			ease: BAR_EASE,
 			width: `${(size / total) * BAR_MAX_WIDTH_PX}px`,
 			onUpdate: () => {
-				number.innerText = Math.round(tween.totalProgress() * size);
+				number.innerText = numberFormat.format(Math.round(barEase(timeline.progress()) * size));
 			},
 			onComplete: () => {
-				number.innerText = size;
+				number.innerText = numberFormat.format(size);
 			}
 		});
+	};
+
+	gsap.utils.toArray(".release-commits-item-bar-bar").reverse().forEach((bar, i) => {
+		const timeline = gsap.timeline();
+		animateBar(bar, i, timeline);
+		commitsTl.add(timeline);
+	});
+
+	gsap.utils.toArray(".release-contributors-item-bar-bar").reverse().forEach((bar, i) => {
+		const timeline = gsap.timeline();
+		animateBar(bar, i, timeline);
+		contributorsTl.add(timeline);
 	});
 });
 </script>
@@ -86,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 							data-total="{{ page.4_3_commits }}"
 						></div>
 						<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
-						<span>Commits</span>
+						<span class="release-type-item-bar-desc release-commits-item-bar-desc">Commits</span>
 					</div>
 				</div>
 
@@ -125,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 							data-total="{{ page.4_3_contributors }}"
 						></div>
 						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
-						<span>Contributors</span>
+						<span class="release-type-item-bar-desc release-contributors-item-bar-desc">Contributors</span>
 					</div>
 				</div>
 
@@ -138,7 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
 							data-total="{{ page.4_3_contributors }}"
 						></div>
 						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
-						<span>Contributors</span>
 					</div>
 				</div>
 
@@ -151,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 							data-total="{{ page.4_3_contributors }}"
 						></div>
 						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
-						<span>Contributors</span>
 					</div>
 				</div>
 			</div>
