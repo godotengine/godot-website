@@ -18,13 +18,19 @@ header_text: "Godot Engine 4.3"
 		--header-background: #25282B;
 		--header-font-size: 18px;
 		--header-font-weight: 400;
-		--header-padding-y: 80px;
+		--header-padding-top: 80px;
+		--header-padding-bottom: 184px;
 		--header-desc-width: 512px;
 		--header-release-numbers-width: 940px;
+		--header-overlap: 104px;
 		--release-font: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 		font-family: var(--release-font);
 	}
+
+	/*
+	 * HEADER
+	 */
 
 	.release-header {
 		color: var(--header-color);
@@ -41,8 +47,8 @@ header_text: "Godot Engine 4.3"
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding-top: var(--header-padding-y);
-		padding-bottom: var(--header-padding-y);
+		padding-top: var(--header-padding-top);
+		padding-bottom: var(--header-padding-bottom);
 	}
 
 	.release-header-container > .desc {
@@ -57,7 +63,7 @@ header_text: "Godot Engine 4.3"
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: contain;
-		margin-bottom: var(--header-padding-y);
+		margin-bottom: var(--header-padding-top);
 	}
 
 	.release .release-logo .text {
@@ -116,6 +122,7 @@ header_text: "Godot Engine 4.3"
 		margin-left: 0.25em;
 	}
 
+	/* Screen less than 900px wide */
 	@media screen and (max-width: 900px) {
 		#release-numbers {
 			max-width: var(--header-desc-width);
@@ -133,6 +140,13 @@ header_text: "Godot Engine 4.3"
 		#release-numbers .release-type:last-of-type {
 			margin-bottom: 0;
 		}
+	}
+
+	/*
+	 * Content
+	 */
+	.release .content {
+		margin-top: calc(-1 * var(--header-overlap));
 	}
 </style>
 
@@ -283,29 +297,31 @@ document.addEventListener("DOMContentLoaded", () => {
 		</div> <!-- .release-header-container -->
 	</header>
 
-	<div class="2d">
-		<a href="#2d">
-			<h2>2D</h2>
-		</a>
-
-		<div class="feature single-threaded-web">
-			<a href="#single-threaded-web">
-				<h3>Export away</h3>
+	<div class="content">
+		<div class="2d">
+			<a href="#2d">
+				<h2>2D</h2>
 			</a>
-			<p class="title">Single-threaded Web Export</p>
-			<summary>
-				We orignially aimed for the stars, but browsers are still down to
-				Earth. By bringing back single-threaded export for the Web platform,
-				we got more compatible across browsers and we eliminated the need of
-				complicated server-side configurations.
-			</summary>
-		</div>
 
-		<div class="feature tilemap-layer-node">
-			<a href="#tilemap-layer-node">
-				<h3></h3>
-			</a>
-			<p class="title">Tilemap layers as nodes</p>
+			<div class="feature single-threaded-web">
+				<a href="#single-threaded-web">
+					<h3>Export away</h3>
+				</a>
+				<p class="title">Single-threaded Web Export</p>
+				<summary>
+					We orignially aimed for the stars, but browsers are still down to
+					Earth. By bringing back single-threaded export for the Web platform,
+					we got more compatible across browsers and we eliminated the need of
+					complicated server-side configurations.
+				</summary>
+			</div>
+
+			<div class="feature tilemap-layer-node">
+				<a href="#tilemap-layer-node">
+					<h3></h3>
+				</a>
+				<p class="title">Tilemap layers as nodes</p>
+			</div>
 		</div>
-	</div>
+	</div> <!-- .content -->
 </article>
