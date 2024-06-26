@@ -13,14 +13,88 @@ header_text: "Godot Engine 4.3"
 ---
 
 <style type="text/css">
-	.release {}
+	.release {
+		--header-color: #FFFFFF;
+		--header-background: #25282B;
+		--header-font-size: 18px;
+		--header-font-weight: 400;
+		--header-padding-y: 80px;
+		--header-desc-width: 512px;
+		--header-release-numbers-width: 940px;
+		--release-font: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
-	.release header {}
+		font-family: var(--release-font);
+	}
+
+	.release-header {
+		color: var(--header-color);
+		font-size: var(--header-font-size);
+		font-weight: var(--header-font-weight);
+		background-color: var(--header-background);
+		background-image: url('/storage/releases/4.3/release-header-background.svg');
+		background-repeat: no-repeat;
+		background-position: top left;
+	}
+
+	.release-header-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-top: var(--header-padding-y);
+		padding-bottom: var(--header-padding-y);
+	}
+
+	.release-header-container > .desc {
+		max-width: var(--header-desc-width);
+	}
+
+	.release .release-logo {
+		display: block;
+		width: 100%;
+		height: 140px;
+		background-image: url('/storage/releases/4.3/release-logo.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		margin-bottom: var(--header-padding-y);
+	}
+
+	.release .release-logo .text {
+		display: none;
+	}
 
 	/* Release Numbers */
 	#release-numbers {
-		--transition-delay: 0.5s;
-		--transition-duration: 2s;
+		width: 100%;
+		max-width: var(--header-release-numbers-width);
+		display: grid;
+		grid-template-areas:
+			"commits contributors";
+		grid-template-columns:
+			1fr 1fr;
+	}
+
+	#release-numbers .release-commits {
+		grid-area: commits;
+	}
+
+	#release-numbers .release-contributors {
+		grid-area: contributors;
+	}
+
+	#release-numbers .release-type-version {
+		margin-bottom: 6px;
+	}
+
+	#release-numbers .release-type-version:last-of-type {
+		margin-bottom: 0;
+	}
+
+	#release-numbers .release-type-item-title {
+		font-weight: 800;
+		margin-right: 0.25em;
+		font-feature-settings: "tnum";
 	}
 
 	#release-numbers .release-type-item-bar {
@@ -29,7 +103,7 @@ header_text: "Godot Engine 4.3"
 	}
 
 	#release-numbers .release-type-item-bar-bar {
-		background-color: blue;
+		background-color: white;
 		width: 0;
 	}
 
@@ -40,6 +114,25 @@ header_text: "Godot Engine 4.3"
 
 	#release-numbers .release-type-item-bar-desc {
 		margin-left: 0.25em;
+	}
+
+	@media screen and (max-width: 900px) {
+		#release-numbers {
+			max-width: var(--header-desc-width);
+			grid-template-areas:
+				"commits"
+				"contributors";
+			grid-template-columns:
+				auto;
+		}
+
+		#release-numbers .release-type {
+			margin-bottom: 1em;
+		}
+
+		#release-numbers .release-type:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 </style>
 
@@ -96,96 +189,98 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <article class="release">
-	<header>
-		<h1>4.3 RELEASE</h1>
-		<p>
-			With over 2,500&nbsp;commits done by over 400&nbsp;contributors,
-			the latest release of the Godot engine comes packed full of new
-			features and improvements.
-		</p>
-		<div id="release-numbers">
-			<div class="release-type release-commits">
-				<div class="release-type-version release-commits-version release-commits-4_3">
-					<p class="release-type-item-title release-commits-item-title">4.3</p>
-					<div class="release-type-item-bar release-commits-item-bar">
-						<div
-							class="release-type-item-bar-bar release-commits-item-bar-bar"
-							data-size="{{ page.4_3_commits }}"
-							data-total="{{ page.4_3_commits }}"
-						></div>
-						<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
-						<span class="release-type-item-bar-desc release-commits-item-bar-desc">Commits</span>
+	<header class="release-header">
+		<div class="release-header-container">
+			<h1 class="release-logo"><span class="text">4.3 RELEASE</span></h1>
+			<p class="desc">
+				With over 2,500&nbsp;commits done by over 400&nbsp;contributors,
+				the latest release of the Godot engine comes packed full of new
+				features and improvements.
+			</p>
+			<div id="release-numbers">
+				<div class="release-type release-commits">
+					<div class="release-type-version release-commits-version release-commits-4_3">
+						<div class="release-type-item-bar release-commits-item-bar">
+							<span class="release-type-item-title release-commits-item-title">4.3</span>
+							<div
+								class="release-type-item-bar-bar release-commits-item-bar-bar"
+								data-size="{{ page.4_3_commits }}"
+								data-total="{{ page.4_3_commits }}"
+							></div>
+							<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+							<span class="release-type-item-bar-desc release-commits-item-bar-desc">Commits</span>
+						</div>
+					</div>
+
+					<div class="release-type-version release-commits-version release-commits-4_2">
+						<div class="release-type-item-bar release-commits-item-bar">
+							<span class="release-type-item-title release-commits-item-title">4.2</span>
+							<div
+								class="release-type-item-bar-bar release-commits-item-bar-bar"
+								data-size="{{ page.4_2_commits }}"
+								data-total="{{ page.4_3_commits }}"
+							></div>
+							<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+						</div>
+					</div>
+
+					<div class="release-type-version release-commits-version release-commits-4_1">
+						<div class="release-type-item-bar release-commits-item-bar">
+							<span class="release-type-item-title release-commits-item-title">4.1</span>
+							<div
+								class="release-type-item-bar-bar release-commits-item-bar-bar"
+								data-size="{{ page.4_1_commits }}"
+								data-total="{{ page.4_3_commits }}"
+							></div>
+							<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+						</div>
 					</div>
 				</div>
 
-				<div class="release-type-version release-commits-version release-commits-4_2">
-					<p class="release-type-item-title release-commits-item-title">4.2</p>
-					<div class="release-type-item-bar release-commits-item-bar">
-						<div
-							class="release-type-item-bar-bar release-commits-item-bar-bar"
-							data-size="{{ page.4_2_commits }}"
-							data-total="{{ page.4_3_commits }}"
-						></div>
-						<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+				<div class="release-type release-contributors">
+					<div class="release-type-version release-contributors-version release-contributors-4_3">
+						<div class="release-type-item-bar release-contributors-item-bar">
+							<span class="release-type-item-title release-contributors-item-title">4.3</span>
+							<div
+								class="release-type-item-bar-bar release-contributors-item-bar-bar"
+								data-size="{{ page.4_3_contributors }}"
+								data-total="{{ page.4_3_contributors }}"
+							></div>
+							<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
+							<span class="release-type-item-bar-desc release-contributors-item-bar-desc">Contributors</span>
+						</div>
 					</div>
-				</div>
 
-				<div class="release-type-version release-commits-version release-commits-4_1">
-					<p class="release-type-item-title release-commits-item-title">4.1</p>
-					<div class="release-type-item-bar release-commits-item-bar">
-						<div
-							class="release-type-item-bar-bar release-commits-item-bar-bar"
-							data-size="{{ page.4_1_commits }}"
-							data-total="{{ page.4_3_commits }}"
-						></div>
-						<span class="release-type-item-bar-number release-commits-item-bar-number">0</span>
+					<div class="release-type-version release-contributors-version release-contributors-4_2">
+						<div class="release-type-item-bar release-contributors-item-bar">
+							<span class="release-type-item-title release-contributors-item-title">4.2</span>
+							<div
+								class="release-type-item-bar-bar release-contributors-item-bar-bar"
+								data-size="{{ page.4_2_contributors }}"
+								data-total="{{ page.4_3_contributors }}"
+							></div>
+							<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
+						</div>
+					</div>
+
+					<div class="release-type-version release-contributors-version release-contributors-4_1">
+						<div class="release-type-item-bar release-contributors-item-bar">
+							<span class="release-type-item-title release-contributors-item-title">4.1</span>
+							<div
+								class="release-type-item-bar-bar release-contributors-item-bar-bar"
+								data-size="{{ page.4_1_contributors }}"
+								data-total="{{ page.4_3_contributors }}"
+							></div>
+							<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="release-type release-contributors">
-				<div class="release-type-version release-contributors-version release-contributors-4_3">
-					<p class="release-type-item-title release-contributors-item-title">4.3</p>
-					<div class="release-type-item-bar release-contributors-item-bar">
-						<div
-							class="release-type-item-bar-bar release-contributors-item-bar-bar"
-							data-size="{{ page.4_3_contributors }}"
-							data-total="{{ page.4_3_contributors }}"
-						></div>
-						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
-						<span class="release-type-item-bar-desc release-contributors-item-bar-desc">Contributors</span>
-					</div>
-				</div>
-
-				<div class="release-type-version release-contributors-version release-contributors-4_2">
-					<p class="release-type-item-title release-contributors-item-title">4.2</p>
-					<div class="release-type-item-bar release-contributors-item-bar">
-						<div
-							class="release-type-item-bar-bar release-contributors-item-bar-bar"
-							data-size="{{ page.4_2_contributors }}"
-							data-total="{{ page.4_3_contributors }}"
-						></div>
-						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
-					</div>
-				</div>
-
-				<div class="release-type-version release-contributors-version release-contributors-4_1">
-					<p class="release-type-item-title release-contributors-item-title">4.1</p>
-					<div class="release-type-item-bar release-contributors-item-bar">
-						<div
-							class="release-type-item-bar-bar release-contributors-item-bar-bar"
-							data-size="{{ page.4_1_contributors }}"
-							data-total="{{ page.4_3_contributors }}"
-						></div>
-						<span class="release-type-item-bar-number release-contributors-item-bar-number">0</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<p>
-			From new nodes, to rendering improvements, to more stability, and
-			plenty of fixes. There's something for everyone.
-		</p>
+			<p class="desc">
+				From new nodes, to rendering improvements, to more stability, and
+				plenty of fixes. There's something for everyone.
+			</p>
+		</div> <!-- .release-header-container -->
 	</header>
 
 	<div class="2d">
