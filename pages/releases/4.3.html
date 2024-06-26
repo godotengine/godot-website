@@ -72,8 +72,9 @@ header_text: "Godot Engine 4.3"
 
 	/* Release Numbers */
 	#release-numbers {
-		width: 100%;
+		width: calc(100% - 2em);
 		max-width: var(--header-release-numbers-width);
+		gap: 1em;
 		display: grid;
 		grid-template-areas:
 			"commits contributors";
@@ -145,15 +146,18 @@ header_text: "Godot Engine 4.3"
 	/*
 	 * Content
 	 */
-	.release .content {
+	.release .release-content {
 		margin-top: calc(-1 * var(--header-overlap));
 	}
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", () => {
+<script type="module">
+import { gsap } from "https://esm.run/gsap@3.12.5";
+import { ScrollTrigger } from "https://esm.run/gsap@3.12.5/ScrollTrigger.js"
+import { Properties } from "https://esm.run/html-element-property-mixins@0.11.0"
+import { StringConverter, BooleanConverter } from "https://esm.run/html-element-property-mixins@0.11.0/src/utils/attribute-converters"
+
+const animationHandler = () => {
 	gsap.registerPlugin(ScrollTrigger);
 
 	const BAR_MAX_WIDTH_PX = 200;
@@ -199,7 +203,276 @@ document.addEventListener("DOMContentLoaded", () => {
 		animateBar(bar, i, timeline);
 		contributorsTl.add(timeline);
 	});
-});
+};
+
+const elementsHandler = () => {
+	// <godot-release-box>
+	customElements.define("godot-release-box", class GodotReleaseBox extends Properties(HTMLElement) {
+		static get properties() {
+			return {
+				title: {
+					observe: true,
+					DOM: true,
+					reflect: true,
+					toAttributeConverter: StringConverter.toAttribute,
+					fromAttributeConverter: StringConverter.fromAttribute,
+				},
+				type: {
+					observe: true,
+					DOM: true,
+					reflect: true,
+					toAttributeConverter: StringConverter.toAttribute,
+					fromAttributeConverter: StringConverter.fromAttribute,
+				},
+				anchor: {
+					observe: true,
+					DOM: true,
+					reflect: true,
+					toAttributeConverter: StringConverter.toAttribute,
+					fromAttributeConverter: StringConverter.fromAttribute,
+				},
+				link: {
+					observe: true,
+					DOM: true,
+					reflect: true,
+					toAttributeConverter: StringConverter.toAttribute,
+					fromAttributeConverter: StringConverter.fromAttribute,
+				},
+				inverted: {
+					observe: true,
+					DOM: true,
+					reflect: true,
+					toAttributeConverter: BooleanConverter.toAttribute,
+					fromAttributeConverter: BooleanConverter.fromAttribute,
+				},
+				mediaLink: {
+					observe: true,
+					DOM: true,
+					reflect: true,
+					attributeName: "media-link",
+					toAttributeConverter: StringConverter.toAttribute,
+					fromAttributeConverter: StringConverter.fromAttribute,
+				},
+				mediaType: {
+					observe: true,
+					DOM: true,
+					reflect: true,
+					attributeName: "media-type",
+					toAttributeConverter: StringConverter.toAttribute,
+					fromAttributeConverter: StringConverter.fromAttribute,
+				}
+			};
+		}
+
+		static get template() {
+			return /*html*/`
+				<template id="box-template">
+					<style>
+						.box {
+							--color-godot-blue: #478CBF;
+							--color-dark-background: #25282B;
+							--color-light-gray: #EFF1F5;
+							--color-purple: #6C4AC9;
+
+							background-color: var(--color-light-gray);
+							border-radius: 30px;
+							padding: 36px 40px 30px 40px;
+							display: grid;
+							color: black;
+						}
+
+						.box.box--inverted {
+							background: linear-gradient(
+								to bottom,
+								var(--color-godot-blue),
+								#517BC2 26%,
+								var(--color-purple)
+							);
+							color: white;
+						}
+
+						.box:not(.box--title) .title,
+						.box:not(.box--blockquote) .blockquote,
+						.box:not(.box--content) .content,
+						.box:not(.box--link) .link-container,
+						.box:not(.box--media) .media {
+							display: none;
+						}
+
+						.box.box--title.box--blockquote.box--content.box--media.box--right {
+							grid-template-areas:
+								"title      media"
+								"blockquote media"
+								"content    media"
+								"link       media";
+						}
+
+						.box.box--title.box--blockquote.box--content.box--media.box--bottom {
+							grid-template-areas:
+								"title      content"
+								"blockquote content"
+								".			link"
+								"media      media";
+						}
+
+						.box .title {
+							color: var(--color-godot-blue);
+							font-size: 21px;
+							font-weight: 800;
+							text-decoration: none;
+							margin: 0;
+							margin-bottom: 10px;
+						}
+
+						.box .title a {
+							color: var(--color-godot-blue);
+							text-decoration: none;
+						}
+
+						.box .title a:hover {
+							text-decoration: underline;
+						}
+
+						.box.box--inverted .title {
+							color: white;
+						}
+
+						.box .link {
+							font-size: 21px;
+							font-weight: 700;
+							margin-top: 10px;
+						}
+
+						.box.box--inverted .link {
+							color: white;
+						}
+
+						.box .slot {
+							font-size: 19px;
+						}
+
+						.box .blockquote-slot {
+							font-size: 56px;
+							font-weight: 800;
+						}
+					</style>
+
+					<div id="box" class="box">
+						<div id="title" class="title"></div>
+						<div id="blockquote" class="blockquote">
+							<slot id="blockquote-slot" name="blockquote" class="blockquote-slot"></slot>
+						</div>
+						<div id="content" class="content">
+							<slot id="slot" class="slot"></slot>
+						</div>
+						<div id="link-container" class="link-container">
+							<a id="link" class="link" href="">Read more +</a>
+						</div>
+						<div id="media" class="media">
+						</div>
+					</div>
+				</template>
+			`;
+		}
+
+		constructor() {
+			super();
+
+			this.title = "";
+			this.type = "";
+			this.anchor = "";
+			this.link = "";
+			this.inverted = false;
+			this.mediaLink = "";
+			this.mediaType = "";
+
+			const doc = document.implementation.createHTMLDocument();
+			doc.body.innerHTML = this.constructor.template;
+			const template = doc.getElementById("box-template").content;
+			this.attachShadow({ mode: "open" });
+			this.shadowRoot.appendChild(template.cloneNode(true));
+		}
+
+		propertyChangedCallback(propName, oldValue, newValue) {
+			this.update();
+		}
+
+		update() {
+			if (this.shadowRoot == null) {
+				return;
+			}
+
+			const boxElement = this.shadowRoot.getElementById("box");
+			const titleElement = this.shadowRoot.getElementById("title");
+			const linkElement = this.shadowRoot.getElementById("link");
+			const linkContainerElement = this.shadowRoot.getElementById("link-container");
+			const blockquoteElement = this.shadowRoot.getElementById("blockquote");
+			const blockquoteSlotElement = this.shadowRoot.getElementById("blockquote-slot");
+			const contentElement = this.shadowRoot.getElementById("content");
+			const slotElement = this.shadowRoot.getElementById("slot");
+
+			// Blockquote
+			if (blockquoteSlotElement.assignedNodes().length === 0) {
+				boxElement.classList.remove("box--blockquote");
+			} else {
+				boxElement.classList.add("box--blockquote");
+			}
+
+			// Content
+			if (slotElement.assignedNodes().length === 0) {
+				boxElement.classList.remove("box--content");
+			} else {
+				boxElement.classList.add("box--content");
+			}
+
+			// Title
+			if (this.title.length === 0) {
+				boxElement.classList.remove("box--title");
+				titleElement.innerText = "";
+			} else {
+				boxElement.classList.add("box--title");
+				if (this.anchor.length === 0) {
+					titleElement.innerText = this.title;
+				} else {
+					titleElement.innerHTML = /*html*/`
+						<a href="#${this.anchor}">${this.title}</a>
+					`;
+				}
+			}
+
+			// Link
+			if (this.link.length === 0) {
+				boxElement.classList.remove("box--link");
+			} else {
+				boxElement.classList.add("box--link");
+			}
+			linkElement.href = this.link;
+
+			// Type
+			boxElement.classList.remove("box--bottom");
+			boxElement.classList.remove("box--right");
+			switch (this.type) {
+				case "bottom": {
+					boxElement.classList.add("box--bottom");
+				} break;
+
+				case "right": {
+					boxElement.classList.add("box-right");
+				} break;
+			}
+
+			// Inverted
+			if (this.inverted) {
+				boxElement.classList.add("box--inverted");
+			} else {
+				boxElement.classList.remove("box--inverted");
+			}
+		}
+	});
+};
+
+animationHandler();
+elementsHandler();
 </script>
 
 <article class="release">
@@ -297,31 +570,36 @@ document.addEventListener("DOMContentLoaded", () => {
 		</div> <!-- .release-header-container -->
 	</header>
 
-	<div class="content">
+	<div class="release-content">
+		<godot-release-box title="Hello, World!" link="https://godotengine.org">
+			<div slot="blockquote">
+				<strong>Hello</strong>, World!
+			</div>
+			<div>
+				Content.
+			</div>
+		</godot-release-box>
+
+		<godot-release-box inverted>
+			<div slot="blockquote">This is a sole quote.</div>
+		</godot-release-box>
+
 		<div class="2d">
 			<a href="#2d">
 				<h2>2D</h2>
 			</a>
 
-			<div class="feature single-threaded-web">
-				<a href="#single-threaded-web">
-					<h3>Export away</h3>
-				</a>
-				<p class="title">Single-threaded Web Export</p>
-				<summary>
+			<godot-release-box id="single-threaded-web-export" title="Single-threaded Web Export" anchor="single-threaded-web-export">
+				<div slot="blockquote">
+					Export away
+				</div>
+				<div>
 					We orignially aimed for the stars, but browsers are still down to
 					Earth. By bringing back single-threaded export for the Web platform,
 					we got more compatible across browsers and we eliminated the need of
 					complicated server-side configurations.
-				</summary>
-			</div>
-
-			<div class="feature tilemap-layer-node">
-				<a href="#tilemap-layer-node">
-					<h3></h3>
-				</a>
-				<p class="title">Tilemap layers as nodes</p>
-			</div>
+				</div>
+			</godot-release-box>
 		</div>
-	</div> <!-- .content -->
+	</div> <!-- .release-content -->
 </article>
