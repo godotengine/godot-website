@@ -24,8 +24,10 @@ header_text: "Godot Engine 4.3"
 		--header-release-numbers-width: 940px;
 		--header-overlap: 104px;
 		--release-font: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		--release-background: #CECECE;
 
 		font-family: var(--release-font);
+		background-color: var(--release-background);
 	}
 
 	/*
@@ -146,8 +148,22 @@ header_text: "Godot Engine 4.3"
 	/*
 	 * Content
 	 */
-	.release .release-content {
-		margin-top: calc(-1 * var(--header-overlap));
+	.release .release-main {
+		position: relative;
+		top: calc(-1 * var(--header-overlap));
+		margin-top: 0;
+	}
+
+	/*
+	 * Footer
+	 */
+	.release .release-footer {
+		margin-top: 0;
+	}
+
+	/* Override */
+	body > footer {
+		margin-top: 0;
 	}
 </style>
 
@@ -692,36 +708,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		</div> <!-- .release-header-container -->
 	</header>
 
-	<div class="release-content">
-		<godot-release-box title="Hello, World!" link="https://godotengine.org">
-			<div slot="blockquote">
-				<strong>Hello</strong>, World!
-			</div>
-			<div>
-				Content.
-			</div>
-		</godot-release-box>
-
-		<godot-release-box
-			title="This is a title"
-			inverted
-			media-src="/storage/releases/4.3/release-logo.svg"
-			media-alt="This is the release logo."
-			type="bottom"
-			link="https://godotengine.org"
-		>
-			<div slot="blockquote">This is a sole quote.</div>
-			<div>
-				This is finally some content that I decided to add.
-			</div>
-		</godot-release-box>
-
-		<div class="flex gap-10px">
-			<godot-release-box class="flex-grow-1 flex-basis-0">
-				<div slot="blockquote">This is a quote.</div>
+	<main class="release-main">
+		<div class="container">
+			<godot-release-box title="Hello, World!" link="https://godotengine.org">
+				<div slot="blockquote">
+					<strong>Hello</strong>, World!
+				</div>
+				<div>
+					Content.
+				</div>
 			</godot-release-box>
+
 			<godot-release-box
-				class="flex-grow-1 flex-basis-0"
 				title="This is a title"
 				inverted
 				media-src="/storage/releases/4.3/release-logo.svg"
@@ -734,24 +732,47 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					This is finally some content that I decided to add.
 				</div>
 			</godot-release-box>
-		</div>
 
-		<div class="2d">
-			<a href="#2d">
-				<h2>2D</h2>
-			</a>
+			<div class="flex gap-10px">
+				<godot-release-box class="flex-grow-1 flex-basis-0">
+					<div slot="blockquote">This is a quote.</div>
+				</godot-release-box>
+				<godot-release-box
+					class="flex-grow-1 flex-basis-0"
+					title="This is a title"
+					inverted
+					media-src="/storage/releases/4.3/release-logo.svg"
+					media-alt="This is the release logo."
+					type="bottom"
+					link="https://godotengine.org"
+				>
+					<div slot="blockquote">This is a sole quote.</div>
+					<div>
+						This is finally some content that I decided to add.
+					</div>
+				</godot-release-box>
+			</div>
 
-			<godot-release-box id="single-threaded-web-export" title="Single-threaded Web Export" anchor="single-threaded-web-export">
-				<div slot="blockquote">
-					Export away
-				</div>
-				<div>
-					We orignially aimed for the stars, but browsers are still down to
-					Earth. By bringing back single-threaded export for the Web platform,
-					we got more compatible across browsers and we eliminated the need of
-					complicated server-side configurations.
-				</div>
-			</godot-release-box>
-		</div>
-	</div> <!-- .release-content -->
+			<div class="2d">
+				<a href="#2d">
+					<h2>2D</h2>
+				</a>
+
+				<godot-release-box id="single-threaded-web-export" title="Single-threaded Web Export" anchor="single-threaded-web-export">
+					<div slot="blockquote">
+						Export away
+					</div>
+					<div>
+						We orignially aimed for the stars, but browsers are still down to
+						Earth. By bringing back single-threaded export for the Web platform,
+						we got more compatible across browsers and we eliminated the need of
+						complicated server-side configurations.
+					</div>
+				</godot-release-box>
+			</div>
+		</div> <!-- .container -->
+	</main> <!-- .release-main -->
+	<footer class="release-footer">
+
+	</footer> <!-- .release-footer -->
 </article>

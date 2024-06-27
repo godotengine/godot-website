@@ -606,7 +606,7 @@ ul li {
   margin-bottom: 16px;
 }
 
-footer {
+body > footer {
   background-color: var(--footer-background-color);
   color: var(--footer-color);
   font-size: 0.9em;
@@ -615,7 +615,7 @@ footer {
   padding-bottom: 32px;
 }
 
-footer a {
+body > footer a {
   color: var(--footer-link-color);
   text-decoration-color: var(--footer-link-underline-color);
 }
@@ -1122,7 +1122,7 @@ pre > code {
 }
 
 @media (max-width: 1020px) {
-  footer {
+  body > footer {
     text-align: center;
   }
   .footer-container {
