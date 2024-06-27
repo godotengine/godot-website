@@ -157,322 +157,444 @@ import { ScrollTrigger } from "https://esm.run/gsap@3.12.5/ScrollTrigger.js"
 import { Properties } from "https://esm.run/html-element-property-mixins@0.11.0"
 import { StringConverter, BooleanConverter } from "https://esm.run/html-element-property-mixins@0.11.0/src/utils/attribute-converters"
 
-const animationHandler = () => {
-	gsap.registerPlugin(ScrollTrigger);
+/*
+ * ANIMATION
+ */
+gsap.registerPlugin(ScrollTrigger);
 
-	const BAR_MAX_WIDTH_PX = 200;
-	const BAR_DELAY_S = 0.5;
-	const BAR_DURATION_S = 1;
-	const BAR_EASE = "power2.out";
+const BAR_MAX_WIDTH_PX = 200;
+const BAR_DELAY_S = 0.5;
+const BAR_DURATION_S = 1;
+const BAR_EASE = "power2.out";
 
-	const barEase = gsap.parseEase(BAR_EASE);
+const barEase = gsap.parseEase(BAR_EASE);
 
-	const numberFormat = new Intl.NumberFormat("en-US");
+const numberFormat = new Intl.NumberFormat("en-US");
 
-	let commitsTl = gsap.timeline();
-	let contributorsTl = gsap.timeline();
+let commitsTl = gsap.timeline();
+let contributorsTl = gsap.timeline();
 
-	const animateBar = (bar, i, timeline) => {
-		const size = bar.dataset.size;
-		const total = bar.dataset.total;
-		const number = bar.parentElement.querySelector(".release-type-item-bar-number");
-		timeline.to(bar, {
-			delay: i === 0
-				? BAR_DELAY_S
-				: 0,
-			duration: BAR_DURATION_S,
+const animateBar = (bar, i, timeline) => {
+	const size = bar.dataset.size;
+	const total = bar.dataset.total;
+	const number = bar.parentElement.querySelector(".release-type-item-bar-number");
+	timeline.to(bar, {
+		delay: i === 0
+			? BAR_DELAY_S
+			: 0,
+		duration: BAR_DURATION_S,
+		ease: BAR_EASE,
+		width: `${(size / total) * BAR_MAX_WIDTH_PX}px`,
+		onUpdate: () => {
+			number.innerText = numberFormat.format(Math.round(barEase(timeline.progress()) * size));
+		},
+		onComplete: () => {
+			number.innerText = numberFormat.format(size);
+		}
+	});
+};
+
+gsap.utils.toArray(".release-commits-item-bar-bar").reverse().forEach((bar, i) => {
+	const timeline = gsap.timeline();
+	animateBar(bar, i, timeline);
+	commitsTl.add(timeline);
+});
+
+gsap.utils.toArray(".release-contributors-item-bar-bar").reverse().forEach((bar, i) => {
+	const timeline = gsap.timeline();
+	animateBar(bar, i, timeline);
+	contributorsTl.add(timeline);
+});
+
+/*
+ * CUSTOM ELEMENTS
+ */
+// <godot-release-box>
+customElements.define("godot-release-box", class GodotReleaseBox extends Properties(HTMLElement) {
+	static buildProperties({
+		observe = true,
+		DOM = true,
+		reflect = true,
+		toAttributeConverter = StringConverter.toAttribute,
+		fromAttributeConverter = StringConverter.fromAttribute,
+		attributeName = undefined
+	} = {}) {
+		return {
+			observe,
+			DOM,
+			reflect,
+			attributeName,
+			toAttributeConverter,
+			fromAttributeConverter,
+		};
+	}
+
+	static get properties() {
+		return {
+			id: GodotReleaseBox.buildProperties(),
+			title: GodotReleaseBox.buildProperties(),
+			type: GodotReleaseBox.buildProperties(),
+			anchor: GodotReleaseBox.buildProperties(),
+			link: GodotReleaseBox.buildProperties(),
+			inverted: GodotReleaseBox.buildProperties({ toAttributeConverter: BooleanConverter.toAttribute, fromAttributeConverter: BooleanConverter.fromAttribute }),
+			mediaSrc: GodotReleaseBox.buildProperties({ attributeName: "media-src" }),
+			mediaAlt: GodotReleaseBox.buildProperties({ attributeName: "media-alt" }),
+			mediaType: GodotReleaseBox.buildProperties({ attributeName: "media-type" })
+		};
+	}
+
+	static get template() {
+		return /*html*/`
+<template id="box-template">
+	<style>
+		.box {
+			--color-godot-blue: #478CBF;
+			--color-dark-background: #25282B;
+			--color-light-gray: #EFF1F5;
+			--color-purple: #6C4AC9;
+
+			container-type: inline-size;
+			container-name: box;
+
+			background-color: var(--color-light-gray);
+			border-radius: 30px;
+			padding: 36px 40px 30px 40px;
+			color: black;
+
+			display: grid;
+			grid-template-areas:
+				"content";
+		}
+
+		.box.box--inverted {
+			background: linear-gradient(
+				to bottom,
+				var(--color-godot-blue),
+				#517BC2 26%,
+				var(--color-purple)
+			);
+			color: white;
+		}
+
+		.box:not(.box--title) .title,
+		.box:not(.box--blockquote) .blockquote,
+		.box:not(.box--default-content) .default-content,
+		.box:not(.box--link) .link-container,
+		.box:not(.box--media) .media {
+			display: none;
+		}
+
+		.box.box--media,
+		.box.box--media.box--right {
+			gap: 10px;
+			grid-template-areas:
+				"content media";
+		}
+
+		.box.box--media.box--bottom {
+			gap: 10px;
+			grid-template-areas:
+				"content"
+				"media";
+		}
+
+		.box .title {
+			grid-area: title;
+			color: var(--color-godot-blue);
+			font-size: 21px;
+			font-weight: 800;
+			text-decoration: none;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+
+		.box .title a {
+			color: var(--color-godot-blue);
+			text-decoration: none;
+		}
+
+		.box .title a:hover {
+			text-decoration: underline;
+		}
+
+		.box.box--inverted .title {
+			color: white;
+		}
+
+		.box .link {
+			grid-area: link;
+			font-size: 21px;
+			font-weight: 700;
+			margin-top: 10px;
+		}
+
+		.box.box--inverted .link {
+			color: white;
+		}
+
+		.box .default-content {
+			grid-area: def;
+		}
+
+		.box .link-container {
+			grid-area: link;
+		}
+
+		.box .slot {
+			font-size: 19px;
+		}
+
+		.box .blockquote-slot {
+			font-size: 56px;
+			font-weight: 800;
+		}
+
+		.box .content {
+			grid-area: content;
+			display: grid;
+		}
+
+		.box.box--title .content {
+			grid-template-areas:
+				"title";
+		}
+		.box.box--blockquote .content {
+			grid-template-areas:
+				"blockquote";
+		}
+		.box.box--link .content {
+			grid-template-areas:
+				"link";
+		}
+		.box.box--default-content .content {
+			grid-template-areas:
+				"def";
+		}
+		.box.box--title.box--blockquote .content {
+			grid-template-areas:
+				"title"
+				"blockquote";
+		}
+		.box.box--title.box--link .content {
+			grid-template-areas:
+				"title"
+				"link";
+		}
+		.box.box--title.box--default-content .content {
+			grid-template-areas:
+				"title"
+				"def";
+		}
+		.box.box--blockquote.box--link .content {
+			grid-template-areas:
+				"blockquote"
+				"link";
+		}
+		.box.box--title.box--blockquote.box--link .content {
+			grid-template-areas:
+				"title"
+				"blockquote"
+				"link";
+		}
+		.box.box--title.box--blockquote.box--default-content.box--link .content {
+			grid-template-areas:
+				"title      def"
+				"blockquote def"
+				"blockquote link";
+			grid-template-columns:
+				1fr 1fr;
+		}
+		.box.box--right.box--title.box--blockquote.box--default-content.box--link .content {
+			grid-template-areas:
+				"title"
+				"blockquote"
+				"def"
+				"blockquote"
+				"link";
+			grid-template-columns:
+				1fr 1fr;
+		}
+
+		.box .media {
+			grid-area: media;
+		}
+
+		.box .media img {
+			width: 100%;
+			object-fit: cover;
+		}
+
+		@container box (max-width: 700px) {
+			.box.box--title.box--blockquote.box--default-content.box--link .content {
+				grid-template-areas:
+					"title"
+					"blockquote"
+					"def"
+					"link";
+				grid-template-columns:
+					1fr;
+			}
+		}
+	</style>
+
+	<div id="box" class="box">
+		<div class="content">
+			<div id="title" class="title"></div>
+			<div id="blockquote" class="blockquote">
+				<slot id="blockquote-slot" name="blockquote" class="blockquote-slot"></slot>
+			</div>
+			<div id="default-content" class="default-content">
+				<slot id="slot" class="slot"></slot>
+			</div>
+			<div id="link-container" class="link-container">
+				<a id="link" class="link" href="">Read more +</a>
+			</div>
+		</div>
+		<div id="media" class="media">
+		</div>
+	</div>
+</template>
+		`.trim();
+	}
+
+	constructor() {
+		super();
+
+		this.id;
+		this.title;
+		this.type = "";
+		this.anchor = "";
+		this.link = "";
+		this.inverted = false;
+		this.mediaSrc = "";
+		this.mediaAlt = "";
+		this.mediaType = "";
+	}
+
+	connectedCallback() {
+		const doc = document.implementation.createHTMLDocument();
+		doc.body.innerHTML = this.constructor.template;
+		const template = doc.getElementById("box-template").content;
+		this.attachShadow({ mode: "open" });
+		this.shadowRoot.appendChild(template.cloneNode(true));
+		this.update();
+
+		const boxElement = this.shadowRoot.getElementById("box");
+
+		// Slide-in animation.
+		const timeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: boxElement,
+				start: "top bottom",
+			}
+		})
+		.from(boxElement, {
+			y: 50,
+			opacity: 0,
+			duration: 0.5,
+			delay: 0.25,
 			ease: BAR_EASE,
-			width: `${(size / total) * BAR_MAX_WIDTH_PX}px`,
-			onUpdate: () => {
-				number.innerText = numberFormat.format(Math.round(barEase(timeline.progress()) * size));
-			},
-			onComplete: () => {
-				number.innerText = numberFormat.format(size);
-			}
 		});
-	};
+	}
 
-	gsap.utils.toArray(".release-commits-item-bar-bar").reverse().forEach((bar, i) => {
-		const timeline = gsap.timeline();
-		animateBar(bar, i, timeline);
-		commitsTl.add(timeline);
-	});
+	propertyChangedCallback(propName, oldValue, newValue) {
+		this.update();
+	}
 
-	gsap.utils.toArray(".release-contributors-item-bar-bar").reverse().forEach((bar, i) => {
-		const timeline = gsap.timeline();
-		animateBar(bar, i, timeline);
-		contributorsTl.add(timeline);
-	});
-};
-
-const elementsHandler = () => {
-	// <godot-release-box>
-	customElements.define("godot-release-box", class GodotReleaseBox extends Properties(HTMLElement) {
-		static get properties() {
-			return {
-				title: {
-					observe: true,
-					DOM: true,
-					reflect: true,
-					toAttributeConverter: StringConverter.toAttribute,
-					fromAttributeConverter: StringConverter.fromAttribute,
-				},
-				type: {
-					observe: true,
-					DOM: true,
-					reflect: true,
-					toAttributeConverter: StringConverter.toAttribute,
-					fromAttributeConverter: StringConverter.fromAttribute,
-				},
-				anchor: {
-					observe: true,
-					DOM: true,
-					reflect: true,
-					toAttributeConverter: StringConverter.toAttribute,
-					fromAttributeConverter: StringConverter.fromAttribute,
-				},
-				link: {
-					observe: true,
-					DOM: true,
-					reflect: true,
-					toAttributeConverter: StringConverter.toAttribute,
-					fromAttributeConverter: StringConverter.fromAttribute,
-				},
-				inverted: {
-					observe: true,
-					DOM: true,
-					reflect: true,
-					toAttributeConverter: BooleanConverter.toAttribute,
-					fromAttributeConverter: BooleanConverter.fromAttribute,
-				},
-				mediaLink: {
-					observe: true,
-					DOM: true,
-					reflect: true,
-					attributeName: "media-link",
-					toAttributeConverter: StringConverter.toAttribute,
-					fromAttributeConverter: StringConverter.fromAttribute,
-				},
-				mediaType: {
-					observe: true,
-					DOM: true,
-					reflect: true,
-					attributeName: "media-type",
-					toAttributeConverter: StringConverter.toAttribute,
-					fromAttributeConverter: StringConverter.fromAttribute,
-				}
-			};
+	update() {
+		if (this.shadowRoot == null) {
+			return;
 		}
 
-		static get template() {
-			return /*html*/`
-				<template id="box-template">
-					<style>
-						.box {
-							--color-godot-blue: #478CBF;
-							--color-dark-background: #25282B;
-							--color-light-gray: #EFF1F5;
-							--color-purple: #6C4AC9;
+		const mediaType = this.mediaType || "image";
 
-							background-color: var(--color-light-gray);
-							border-radius: 30px;
-							padding: 36px 40px 30px 40px;
-							display: grid;
-							color: black;
-						}
+		const boxElement = this.shadowRoot.getElementById("box");
+		const titleElement = this.shadowRoot.getElementById("title");
+		const linkElement = this.shadowRoot.getElementById("link");
+		const linkContainerElement = this.shadowRoot.getElementById("link-container");
+		const blockquoteElement = this.shadowRoot.getElementById("blockquote");
+		const blockquoteSlotElement = this.shadowRoot.getElementById("blockquote-slot");
+		const defaultContentElement = this.shadowRoot.getElementById("default-content");
+		const slotElement = this.shadowRoot.getElementById("slot");
+		const mediaElement = this.shadowRoot.getElementById("media");
 
-						.box.box--inverted {
-							background: linear-gradient(
-								to bottom,
-								var(--color-godot-blue),
-								#517BC2 26%,
-								var(--color-purple)
-							);
-							color: white;
-						}
-
-						.box:not(.box--title) .title,
-						.box:not(.box--blockquote) .blockquote,
-						.box:not(.box--content) .content,
-						.box:not(.box--link) .link-container,
-						.box:not(.box--media) .media {
-							display: none;
-						}
-
-						.box.box--title.box--blockquote.box--content.box--media.box--right {
-							grid-template-areas:
-								"title      media"
-								"blockquote media"
-								"content    media"
-								"link       media";
-						}
-
-						.box.box--title.box--blockquote.box--content.box--media.box--bottom {
-							grid-template-areas:
-								"title      content"
-								"blockquote content"
-								".			link"
-								"media      media";
-						}
-
-						.box .title {
-							color: var(--color-godot-blue);
-							font-size: 21px;
-							font-weight: 800;
-							text-decoration: none;
-							margin: 0;
-							margin-bottom: 10px;
-						}
-
-						.box .title a {
-							color: var(--color-godot-blue);
-							text-decoration: none;
-						}
-
-						.box .title a:hover {
-							text-decoration: underline;
-						}
-
-						.box.box--inverted .title {
-							color: white;
-						}
-
-						.box .link {
-							font-size: 21px;
-							font-weight: 700;
-							margin-top: 10px;
-						}
-
-						.box.box--inverted .link {
-							color: white;
-						}
-
-						.box .slot {
-							font-size: 19px;
-						}
-
-						.box .blockquote-slot {
-							font-size: 56px;
-							font-weight: 800;
-						}
-					</style>
-
-					<div id="box" class="box">
-						<div id="title" class="title"></div>
-						<div id="blockquote" class="blockquote">
-							<slot id="blockquote-slot" name="blockquote" class="blockquote-slot"></slot>
-						</div>
-						<div id="content" class="content">
-							<slot id="slot" class="slot"></slot>
-						</div>
-						<div id="link-container" class="link-container">
-							<a id="link" class="link" href="">Read more +</a>
-						</div>
-						<div id="media" class="media">
-						</div>
-					</div>
-				</template>
-			`;
+		// Blockquote
+		if (blockquoteSlotElement.assignedNodes().length === 0) {
+			boxElement.classList.remove("box--blockquote");
+		} else {
+			boxElement.classList.add("box--blockquote");
 		}
 
-		constructor() {
-			super();
-
-			this.title = "";
-			this.type = "";
-			this.anchor = "";
-			this.link = "";
-			this.inverted = false;
-			this.mediaLink = "";
-			this.mediaType = "";
-
-			const doc = document.implementation.createHTMLDocument();
-			doc.body.innerHTML = this.constructor.template;
-			const template = doc.getElementById("box-template").content;
-			this.attachShadow({ mode: "open" });
-			this.shadowRoot.appendChild(template.cloneNode(true));
+		// Content
+		if (slotElement.assignedNodes().length === 0) {
+			boxElement.classList.remove("box--default-content");
+		} else {
+			boxElement.classList.add("box--default-content");
 		}
 
-		propertyChangedCallback(propName, oldValue, newValue) {
-			this.update();
-		}
-
-		update() {
-			if (this.shadowRoot == null) {
-				return;
-			}
-
-			const boxElement = this.shadowRoot.getElementById("box");
-			const titleElement = this.shadowRoot.getElementById("title");
-			const linkElement = this.shadowRoot.getElementById("link");
-			const linkContainerElement = this.shadowRoot.getElementById("link-container");
-			const blockquoteElement = this.shadowRoot.getElementById("blockquote");
-			const blockquoteSlotElement = this.shadowRoot.getElementById("blockquote-slot");
-			const contentElement = this.shadowRoot.getElementById("content");
-			const slotElement = this.shadowRoot.getElementById("slot");
-
-			// Blockquote
-			if (blockquoteSlotElement.assignedNodes().length === 0) {
-				boxElement.classList.remove("box--blockquote");
+		// Title
+		if (this.title.length === 0) {
+			boxElement.classList.remove("box--title");
+			titleElement.innerText = "";
+		} else {
+			boxElement.classList.add("box--title");
+			if (this.anchor.length === 0) {
+				titleElement.innerText = this.title;
 			} else {
-				boxElement.classList.add("box--blockquote");
+				titleElement.innerHTML = /*html*/`
+					<a href="#${this.anchor}">${this.title}</a>
+				`;
 			}
+		}
 
-			// Content
-			if (slotElement.assignedNodes().length === 0) {
-				boxElement.classList.remove("box--content");
-			} else {
-				boxElement.classList.add("box--content");
-			}
+		// Link
+		if (this.link.length === 0) {
+			boxElement.classList.remove("box--link");
+		} else {
+			boxElement.classList.add("box--link");
+		}
+		linkElement.href = this.link;
 
-			// Title
-			if (this.title.length === 0) {
-				boxElement.classList.remove("box--title");
-				titleElement.innerText = "";
-			} else {
-				boxElement.classList.add("box--title");
-				if (this.anchor.length === 0) {
-					titleElement.innerText = this.title;
-				} else {
-					titleElement.innerHTML = /*html*/`
-						<a href="#${this.anchor}">${this.title}</a>
+		// Type
+		boxElement.classList.remove("box--bottom");
+		boxElement.classList.remove("box--right");
+		switch (this.type) {
+			case "bottom": {
+				boxElement.classList.add("box--bottom");
+			} break;
+
+			case "right":
+			default: {
+				boxElement.classList.add("box-right");
+			} break;
+		}
+
+		// Inverted
+		if (this.inverted) {
+			boxElement.classList.add("box--inverted");
+		} else {
+			boxElement.classList.remove("box--inverted");
+		}
+
+		if (this.mediaSrc.length === 0) {
+			boxElement.classList.remove("box--media");
+		} else {
+			boxElement.classList.add("box--media");
+			console.log("mediaSrc =", this.mediaSrc, mediaType)
+			switch (mediaType) {
+				case "image": {
+					mediaElement.innerHTML = /*html*/`
+						<img class="media-image" src="${this.mediaSrc}" alt="${this.mediaAlt}" />
 					`;
-				}
-			}
-
-			// Link
-			if (this.link.length === 0) {
-				boxElement.classList.remove("box--link");
-			} else {
-				boxElement.classList.add("box--link");
-			}
-			linkElement.href = this.link;
-
-			// Type
-			boxElement.classList.remove("box--bottom");
-			boxElement.classList.remove("box--right");
-			switch (this.type) {
-				case "bottom": {
-					boxElement.classList.add("box--bottom");
 				} break;
 
-				case "right": {
-					boxElement.classList.add("box-right");
-				} break;
-			}
+				case "video": {
 
-			// Inverted
-			if (this.inverted) {
-				boxElement.classList.add("box--inverted");
-			} else {
-				boxElement.classList.remove("box--inverted");
+				} break;
 			}
 		}
-	});
-};
-
-animationHandler();
-elementsHandler();
+	}
+});
 </script>
 
 <article class="release">
@@ -580,9 +702,39 @@ elementsHandler();
 			</div>
 		</godot-release-box>
 
-		<godot-release-box inverted>
+		<godot-release-box
+			title="This is a title"
+			inverted
+			media-src="/storage/releases/4.3/release-logo.svg"
+			media-alt="This is the release logo."
+			type="bottom"
+			link="https://godotengine.org"
+		>
 			<div slot="blockquote">This is a sole quote.</div>
+			<div>
+				This is finally some content that I decided to add.
+			</div>
 		</godot-release-box>
+
+		<div class="flex gap-10px">
+			<godot-release-box class="flex-grow-1 flex-basis-0">
+				<div slot="blockquote">This is a quote.</div>
+			</godot-release-box>
+			<godot-release-box
+				class="flex-grow-1 flex-basis-0"
+				title="This is a title"
+				inverted
+				media-src="/storage/releases/4.3/release-logo.svg"
+				media-alt="This is the release logo."
+				type="bottom"
+				link="https://godotengine.org"
+			>
+				<div slot="blockquote">This is a sole quote.</div>
+				<div>
+					This is finally some content that I decided to add.
+				</div>
+			</godot-release-box>
+		</div>
 
 		<div class="2d">
 			<a href="#2d">
