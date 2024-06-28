@@ -502,7 +502,7 @@ body > header .container {
   user-select: none;
 }
 
-nav {
+body > header nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -510,7 +510,7 @@ nav {
   padding-right: 1rem;
 }
 
-nav a {
+body > header nav a {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -519,42 +519,42 @@ nav a {
   padding: 1.3175rem 1rem;
 }
 
-nav a:hover,
+body > header nav a:hover,
 #logo-link:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
 
-nav li.fund > a {
+body > header nav li.fund > a {
   color: var(--fund-color);
 }
-nav li.fund > a:hover {
+body > header nav li.fund > a:hover {
   color: var(--fund-color-hl);
 }
-nav li.fund.active > a {
+body > header nav li.fund.active > a {
   color: var(--fund-color-hl);
 }
 
-nav ul {
+body > header nav ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-nav > ul {
+body > header nav > ul {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-nav > ul > :first-child {
+body > header nav > ul > :first-child {
   padding-left: 0;
 }
 
-nav > ul > :last-child {
+body > header nav > ul > :last-child {
   padding-right: 0;
 }
 
-nav > ul li {
+body > header nav > ul li {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 0;
@@ -562,11 +562,11 @@ nav > ul li {
   margin-right: -1rem;
 }
 
-nav li.active > a {
+body > header nav li.active > a {
   color: var(--navbar-link-current-color);
 }
 
-nav > ul ul {
+body > header nav > ul ul {
   display: none;
 }
 

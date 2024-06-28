@@ -1,5 +1,5 @@
 /* Overwriting nav style */
-header {
+body > header {
 	box-shadow: none;
 	margin-bottom: -70px;
 	background-color: rgb(134 144 154 / 15%);
