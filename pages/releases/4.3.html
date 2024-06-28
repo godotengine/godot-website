@@ -191,6 +191,9 @@ header_text: "Godot Engine 4.3"
 
 	.release .release-section {
 		margin-bottom: var(--release-section-margin-bottom);
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 
 	.release .release-section:last-of-type {
@@ -372,6 +375,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			display: grid;
 			grid-template-areas:
 				"content";
+			gap: 10px;
 		}
 
 		.box.box--inverted {
@@ -391,23 +395,33 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			display: none;
 		}
 
+		.box.box--media {
+			gap: 20px;
+		}
+
 		.box.box--media,
 		.box.box--media.box--right {
-			gap: 10px;
 			grid-template-areas:
 				"content media";
 		}
-
+		.box.box--media.box--left {
+			grid-template-areas:
+				"media content";
+		}
 		.box.box--media.box--bottom {
-			gap: 10px;
 			grid-template-areas:
 				"content"
 				"media";
 		}
+		.box.box--media.box--top {
+			grid-template-areas:
+				"media"
+				"content";
+		}
 
 		.box .title {
 			grid-area: title;
-			color: var(--color-godot-blue);
+			color: var(--color-top, --color-godot-blue);
 			font-size: 21px;
 			font-weight: 800;
 			text-decoration: none;
@@ -476,79 +490,99 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		.box.box--title .content {
 			grid-template-areas:
 				"title";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--blockquote .content {
 			grid-template-areas:
 				"blockquote";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--link .content {
 			grid-template-areas:
 				"link";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--default-content .content {
 			grid-template-areas:
 				"def";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--title.box--blockquote .content {
 			grid-template-areas:
 				"title"
 				"blockquote";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--title.box--link .content {
 			grid-template-areas:
 				"title"
 				"link";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--title.box--default-content .content {
 			grid-template-areas:
 				"title"
 				"def";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--blockquote.box--link .content {
 			grid-template-areas:
 				"blockquote"
 				"link";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--title.box--blockquote.box--link .content {
 			grid-template-areas:
 				"title"
 				"blockquote"
 				"link";
-		}
-		.box.box--title.box--blockquote.box--default-content .content {
-			grid-template-areas:
-				"title      def"
-				"blockquote def"
-				"blockquote def";
 			grid-template-columns:
-				1fr 1fr;
+				1fr;
 		}
+		.box.box--top.box--title.box--blockquote.box--default-content .content,
+		.box.box--bottom.box--title.box--blockquote.box--default-content .content {
+			grid-template-areas:
+				"title      . def"
+				"blockquote . def"
+				"blockquote . def";
+			grid-template-columns:
+				1fr 20px 1fr;
+		}
+		.box.box--left.box--title.box--blockquote.box--default-content .content,
 		.box.box--right.box--title.box--blockquote.box--default-content .content {
 			grid-template-areas:
 				"title"
 				"blockquote"
-				"def"
-				"blockquote";
+				"def";
 			grid-template-columns:
-				1fr 1fr;
+				1fr;
 		}
-		.box.box--title.box--blockquote.box--default-content.box--link .content {
+		.box.box--top.box--title.box--blockquote.box--default-content.box--link .content,
+		.box.box--bottom.box--title.box--blockquote.box--default-content.box--link .content {
 			grid-template-areas:
-				"title      def"
-				"blockquote def"
-				"blockquote link";
+				"title      . def"
+				"blockquote . def"
+				"blockquote . link";
 			grid-template-columns:
-				1fr 1fr;
+				1fr 20px 1fr;
 		}
+		.box.box--left.box--title.box--blockquote.box--default-content.box--link .content,
 		.box.box--right.box--title.box--blockquote.box--default-content.box--link .content {
 			grid-template-areas:
 				"title"
 				"blockquote"
 				"def"
-				"blockquote"
 				"link";
 			grid-template-columns:
-				1fr 1fr;
+				1fr;
 		}
 
 		@container box (max-width: 700px) {
@@ -574,7 +608,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				<slot id="slot" class="slot"></slot>
 			</div>
 			<div id="link-container" class="link-container">
-				<a id="link" class="link" href="">Read more +</a>
+				<a id="link" class="link" href="" target="_blank">Read more +</a>
 			</div>
 		</div>
 		<div id="media" class="media">
@@ -676,11 +710,12 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		linkElement.href = this.link;
 
 		// Type
-		boxElement.classList.remove("box--bottom");
-		boxElement.classList.remove("box--right");
+		boxElement.classList.remove("box--top", "box--right", "box--bottom", "box--left");
 		switch (this.type) {
-			case "bottom": {
-				boxElement.classList.add("box--bottom");
+			case "top":
+			case "bottom":
+			case "left": {
+				boxElement.classList.add(`box--${this.type}`);
 			} break;
 
 			case "right":
@@ -823,6 +858,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					class=""
 					inverted
 					title="Godot Foundation"
+					type="right"
 				>
 					<div>
 						<p>
@@ -855,10 +891,28 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 				<godot-release-box
 					id="single-threaded-web-export"
-					title="Single-threaded Web Export"
+					title="Single-threaded Web export"
+					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
+					type="right"
 				>
 					<div slot="blockquote">
-						Export <span class="highlight">easily</span> for the Web
+						Export <span class="highlight">easily</span> for the <span class="highlight">Web</span>
+					</div>
+					<div>
+						We orignially aimed for the stars, but browsers are still down to
+						Earth. By bringing back single-threaded export for the Web platform,
+						we got more compatible across browsers and we eliminated the need of
+						complicated server-side configurations.
+					</div>
+				</godot-release-box>
+
+				<godot-release-box
+					id="tilemap-layer"
+					title="TilemapLayer node"
+					type="left"
+				>
+					<div slot="blockquote">
+						<span class="highlight">Layer up</span> with this new node
 					</div>
 					<div>
 						We orignially aimed for the stars, but browsers are still down to
