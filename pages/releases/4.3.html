@@ -205,6 +205,12 @@ header_text: "Godot Engine 4.3"
 		--color-top: hsl(180deg, var(--color-hsl-saturation), var(--color-hsl-lightness));
 	}
 
+	.release .release-section.release-section--outstanding-features {
+		--_h: 100deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+	}
+
 	.release .release-section .release-section-title,
 	.release .release-section .release-section-title a,
 	.release .release-section .release-section-title a *,
@@ -219,6 +225,10 @@ header_text: "Godot Engine 4.3"
 	.release godot-release-box[inverted] a {
 		color: white;
 		text-decoration-color: white;
+	}
+
+	.release godot-release-box[inverted] span.highlight {
+		color: var(--color-bottom);
 	}
 
 	/*
@@ -334,7 +344,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			id: GodotReleaseBox.buildProperties(),
 			title: GodotReleaseBox.buildProperties(),
 			type: GodotReleaseBox.buildProperties(),
-			anchor: GodotReleaseBox.buildProperties(),
+			anchor: GodotReleaseBox.buildProperties({ toAttributeConverter: BooleanConverter.toAttribute, fromAttributeConverter: BooleanConverter.fromAttribute }),
 			link: GodotReleaseBox.buildProperties(),
 			inverted: GodotReleaseBox.buildProperties({ toAttributeConverter: BooleanConverter.toAttribute, fromAttributeConverter: BooleanConverter.fromAttribute })
 		};
@@ -355,8 +365,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 			background-color: var(--color-light-gray);
 			border-radius: 30px;
-			padding: 36px 40px 30px 40px;
+			padding: 30px 40px 30px 40px;
 			color: black;
+			clip-path: inset(0% 0% 0% 0% round 40px);
 
 			display: grid;
 			grid-template-areas:
@@ -450,6 +461,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			display: grid;
 		}
 
+		.box .media {
+			grid-area: media;
+			margin-right: -40px;
+			margin-bottom: -36px;
+		}
+		.box.box--bottom .media {
+			margin-left: -40px;
+		}
+		.box.box--right .media {
+			margin-top: -30px;
+		}
+
 		.box.box--title .content {
 			grid-template-areas:
 				"title";
@@ -528,15 +551,6 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				1fr 1fr;
 		}
 
-		.box .media {
-			grid-area: media;
-		}
-
-		.box .media img {
-			width: 100%;
-			object-fit: cover;
-		}
-
 		@container box (max-width: 700px) {
 			.box.box--title.box--blockquote.box--default-content.box--link .content {
 				grid-template-areas:
@@ -577,7 +591,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		this.id;
 		this.title;
 		this.type = "";
-		this.anchor = "";
+		this.anchor = false;
 		this.link = "";
 		this.inverted = false;
 	}
@@ -644,12 +658,12 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			titleElement.innerText = "";
 		} else {
 			boxElement.classList.add("box--title");
-			if (this.anchor.length === 0) {
-				titleElement.innerText = this.title;
-			} else {
+			if (this.anchor) {
 				titleElement.innerHTML = /*html*/`
-					<a href="#${this.anchor}">${this.title}</a>
+				<a href="#${this.anchor}">${this.title}</a>
 				`;
+			} else {
+				titleElement.innerText = this.title;
 			}
 		}
 
@@ -671,7 +685,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 			case "right":
 			default: {
-				boxElement.classList.add("box-right");
+				boxElement.classList.add("box--right");
 			} break;
 		}
 
@@ -831,26 +845,28 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</godot-release-box>
 			</div>
 
-			<div class="release-section release-section--main-features">
-				<div class="two-columns gap-10px">
-					<godot-release-box class="flex-grow-1">
-						<div slot="blockquote">This is a quote.</div>
-					</godot-release-box>
-					<godot-release-box
-						class="flex-grow-1"
-						title="This is a title"
-						inverted
-						media-src="/storage/releases/4.3/images/release-logo.svg"
-						media-alt="This is the release logo."
-						type="bottom"
-						link="https://godotengine.org"
-					>
-						<div slot="blockquote">This is a sole quote.</div>
-						<div>
-							This is finally some content that I decided to add.
-						</div>
-					</godot-release-box>
+			<!-- Outstanding features -->
+			<div id="outstanding-features" class="release-section release-section--outstanding-features">
+				<div class="release-section-title">
+					<a href="#outstanding-features">
+						<h2>Outstanding Features</h2>
+					</a>
 				</div>
+
+				<godot-release-box
+					id="single-threaded-web-export"
+					title="Single-threaded Web Export"
+				>
+					<div slot="blockquote">
+						Export <span class="highlight">easily</span> for the Web
+					</div>
+					<div>
+						We orignially aimed for the stars, but browsers are still down to
+						Earth. By bringing back single-threaded export for the Web platform,
+						we got more compatible across browsers and we eliminated the need of
+						complicated server-side configurations.
+					</div>
+				</godot-release-box>
 			</div>
 
 			<div class="release-section release-section--2d">
@@ -861,17 +877,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 
 				<div class="">
-					<godot-release-box id="single-threaded-web-export" title="Single-threaded Web Export" anchor="single-threaded-web-export">
-						<div slot="blockquote">
-							<span class="highlight">Export</span> away
-						</div>
-						<div>
-							We orignially aimed for the stars, but browsers are still down to
-							Earth. By bringing back single-threaded export for the Web platform,
-							we got more compatible across browsers and we eliminated the need of
-							complicated server-side configurations.
-						</div>
-					</godot-release-box>
+
 				</div>
 			</div>
 		</div> <!-- .container -->
