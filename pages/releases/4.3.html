@@ -174,6 +174,19 @@ header_text: "Godot Engine 4.3"
 		margin-top: 0;
 	}
 
+	.release .release-main-container {
+		display: grid;
+		grid-template-areas:
+			"presentation"
+			"foundation"
+			"outstanding"
+			"_2d"
+			"rendering"
+			"web"
+			"dotnet"
+			"gdscript";
+	}
+
 	.release .two-columns {
 		display: flex;
 		flex-direction: row;
@@ -205,13 +218,52 @@ header_text: "Godot Engine 4.3"
 	}
 
 	.release .release-section.release-section--2d {
-		--color-top: hsl(180deg, var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_h: 120deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: _2d;
+	}
+
+	.release .release-section.release-section--presentation {
+		--_h: 80deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: presentation;
+	}
+
+	.release .release-section.release-section--foundation {
+		--_h: 200deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: foundation;
 	}
 
 	.release .release-section.release-section--outstanding-features {
 		--_h: 100deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: outstanding;
+	}
+
+	.release .release-section.release-section--dotnet {
+		--_h: 160deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: dotnet;
+	}
+
+	.release .release-section.release-section--dotnet {
+		--_h: 180deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: gdscript;
+	}
+
+	.release .release-section.release-section--web {
+		--_h: 100deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: web;
 	}
 
 	.release .release-section .release-section-title,
@@ -233,6 +285,32 @@ header_text: "Godot Engine 4.3"
 	.release godot-release-box[inverted] span.highlight {
 		color: var(--color-top);
 		-webkit-text-stroke: 2px black;
+	}
+
+	.release .release-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+		grid-auto-flow: row dense;
+	}
+
+	.release .release-grid .span-2 {
+		grid-column: span 2;
+	}
+	.release .release-grid .span-3 {
+		grid-column: span 3;
+	}
+	@media screen and (max-width: 900px) {
+		.release .release-grid .span-3 {
+			grid-column: span 2;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.release .release-grid .span-2 {
+			grid-column: span 1;
+		}
+		.release .release-grid .span-3 {
+			grid-column: span 1;
+		}
 	}
 
 	/*
@@ -360,6 +438,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 	<style>
 		:host {
 			container-type: inline-size;
+			min-width: 275px;
 		}
 
 		.box {
@@ -373,6 +452,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			padding: 30px 40px 30px 40px;
 			color: black;
 			clip-path: inset(0% 0% 0% 0% round 40px);
+			height: calc(100% - 60px);
 
 			display: grid;
 			grid-template-areas:
@@ -529,23 +609,31 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"title";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto;
 		}
 		.box.box--blockquote .content {
 			grid-template-areas:
 				"blockquote";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto;
 		}
 		.box.box--link .content {
 			grid-template-areas:
 				"link";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto;
 		}
 		.box.box--default-content .content {
 			grid-template-areas:
 				"def";
 			grid-template-columns:
+				1fr;
+			grid-template-rows:
 				1fr;
 		}
 		.box.box--title.box--blockquote .content {
@@ -554,6 +642,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"blockquote";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto
+				auto;
 		}
 		.box.box--title.box--link .content {
 			grid-template-areas:
@@ -561,12 +652,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"link";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto
+				auto;
 		}
 		.box.box--title.box--default-content .content {
 			grid-template-areas:
 				"title"
 				"def";
 			grid-template-columns:
+				1fr;
+			grid-template-rows:
+				auto
 				1fr;
 		}
 		.box.box--blockquote.box--link .content {
@@ -575,6 +672,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"link";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto
+				auto;
 		}
 		.box.box--title.box--blockquote.box--link .content {
 			grid-template-areas:
@@ -583,6 +683,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"link";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto
+				auto
+				auto;
 		}
 		.box.box--top.box--blockquote.box--default-content .content,
 		.box.box--bottom.box--blockquote.box--default-content .content {
@@ -590,6 +694,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"blockquote . def";
 			grid-template-columns:
 				1fr 20px 1fr;
+			grid-template-rows:
+				auto;
 		}
 		.box.box--left.box--blockquote.box--default-content .content,
 		.box.box--right.box--blockquote.box--default-content .content {
@@ -597,6 +703,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"blockquote"
 				"def";
 			grid-template-columns:
+				1fr;
+			grid-template-rows:
+				auto
 				1fr;
 		}
 		.box.box--top.box--title.box--blockquote.box--default-content .content,
@@ -606,6 +715,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"blockquote . def";
 			grid-template-columns:
 				1fr 20px 1fr;
+			grid-template-rows:
+				auto
+				1fr;
 		}
 		.box.box--left.box--title.box--blockquote.box--default-content .content,
 		.box.box--right.box--title.box--blockquote.box--default-content .content {
@@ -614,6 +726,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"blockquote"
 				"def";
 			grid-template-columns:
+				1fr;
+			grid-template-rows:
+				auto
+				auto
 				1fr;
 		}
 		.box.box--top.box--title.box--blockquote.box--default-content.box--link .content,
@@ -624,6 +740,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"blockquote . link";
 			grid-template-columns:
 				1fr 20px 1fr;
+			grid-template-rows:
+				auto
+				1fr
+				auto;
 		}
 		.box.box--left.box--title.box--blockquote.box--default-content.box--link .content,
 		.box.box--right.box--title.box--blockquote.box--default-content.box--link .content {
@@ -634,6 +754,11 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"link";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				auto
+				auto
+				1fr
+				auto;
 		}
 		@container (max-width: 700px) {
 			.box.box--top.box--title.box--blockquote.box--default-content.box--link .content,
@@ -645,6 +770,11 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					"link";
 				grid-template-columns:
 					1fr;
+				grid-template-rows:
+					auto
+					auto
+					1fr
+					auto;
 			}
 		}
 	</style>
@@ -888,7 +1018,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 	</header>
 
 	<main class="release-main">
-		<div class="container">
+		<div class="release-main-container container">
 			<!-- Presentation -->
 			<div class="release-section release-section--presentation">
 				<godot-release-box
@@ -1006,7 +1136,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</godot-release-box>
 			</div>
 
-			<div class="release-section release-section--2d">
+			<div id="2d" class="release-section release-section--2d">
 				<div class="release-section-title">
 					<a href="#2d">
 						<h2>2D</h2>
@@ -1016,7 +1146,137 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				<div class="">
 
 				</div>
-			</div>
+			</div> <!-- 2d -->
+
+			<div id="dotnet" class="release-section release-section--dotnet">
+				<div class="release-section-title">
+					<a href="#dotnet">
+						<h2>C#</h2>
+					</a>
+				</div>
+
+				<div class="">
+
+				</div>
+			</div> <!-- dotnet -->
+
+			<div id="gdscript" class="release-section release-section--gdscript">
+				<div class="release-section-title">
+					<a href="#gdscript">
+						<h2>GDScript</h2>
+					</a>
+				</div>
+
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="is-not-operator"
+						class="span-3"
+						inverted
+						anchor
+						title="Binary tokenization on export"
+					>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="is-not-operator"
+						anchor
+						title="`is not` operator"
+					>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="callable-builtins"
+						anchor
+						title="Built-in methods and utility functions usable as Callable"
+					>
+						<div>
+							Built-in methods and utility functions usable as Callable
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="export-storage"
+						anchor
+						title="`@export_storage` property hint"
+					>
+						<div>
+							Addon developers, you can now use <code>@export_storage</code> to store hidden values in a scene.
+							Useful if you need to store custom data that isn't meant to be edited in the inspector.
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="export-custom"
+						anchor
+						title="`@export_custom` property hint"
+					>
+						<div>
+							You need specific types of export? We got you covered.
+							You can now use <code>@export_custom</code> to export a value suited to your needs.
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="autocompletion-fixes"
+						class="span-2"
+						anchor
+						title="GDScript autocompletion fixes"
+					>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="circular-dependencies"
+						anchor
+						inverted
+						title="GDScript circular dependencies between scenes and scripts"
+					>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- gdscript -->
+
+			<div id="web" class="release-section release-section--web">
+				<div class="release-section-title">
+					<a href="#web">
+						<h2>Web</h2>
+					</a>
+				</div>
+
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="web-audio-samples"
+						class="span-3"
+						anchor
+						title="Web Audio samples"
+					>
+						<div slot="blockquote">
+							Enhanced audio, rock on!
+						</div>
+						<div>
+							With great power comes great responsibility, when it comes to the Web.
+							As there was audio issues when running games single-threaded, we updated the engine to support audio samples.
+							This enabled us to leverage the Web Audio API in order to deliver seamlessly low-latency and high-quality audio.
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- web -->
 		</div> <!-- .container -->
 	</main> <!-- .release-main -->
 	<footer class="release-footer">
