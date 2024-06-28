@@ -20,6 +20,7 @@ header_text: "Godot Engine 4.3"
 		--header-font-weight: 400;
 		--header-padding-top: 80px;
 		--header-padding-bottom: 184px;
+		--header-title-padding-x: 1em;
 		--header-desc-width: 512px;
 		--header-release-numbers-width: 940px;
 		--header-overlap: 104px;
@@ -67,12 +68,12 @@ header_text: "Godot Engine 4.3"
 	}
 
 	.release-header-container > .desc {
-		max-width: var(--header-desc-width);
+		max-width: min(max(90vw, 1em), var(--header-desc-width));
 	}
 
 	.release .release-logo {
 		display: block;
-		width: 100%;
+		width: calc(100% - 2 * var(--header-title-padding-x));
 		height: 140px;
 		background-image: url('/storage/releases/4.3/release-logo.svg');
 		background-repeat: no-repeat;
@@ -165,6 +166,21 @@ header_text: "Godot Engine 4.3"
 		position: relative;
 		top: calc(-1 * var(--header-overlap));
 		margin-top: 0;
+	}
+
+	.release .two-columns {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.release .two-columns > * {
+		flex-basis: 0;
+	}
+
+	@media screen and (max-width: 900px) {
+		.release .two-columns {
+			flex-direction: column;
+		}
 	}
 
 	/*
@@ -350,23 +366,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			color: white;
 		}
 
-		.box .link {
-			grid-area: link;
-			font-size: 21px;
-			font-weight: 700;
-			margin-top: 10px;
-		}
-
-		.box.box--inverted .link {
-			color: white;
-		}
-
 		.box .default-content {
 			grid-area: def;
-		}
-
-		.box .link-container {
-			grid-area: link;
 		}
 
 		.box .slot {
@@ -376,6 +377,21 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		.box .blockquote-slot {
 			font-size: 56px;
 			font-weight: 800;
+		}
+
+		.box .link-container {
+			grid-area: link;
+		}
+
+		.box .link {
+			font-size: 21px;
+			font-weight: 700;
+			margin-top: 10px;
+			color: black;
+		}
+
+		.box.box--inverted .link {
+			color: white;
 		}
 
 		.box .content {
@@ -763,12 +779,12 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</godot-release-box>
 
-			<div class="flex gap-10px">
-				<godot-release-box class="flex-grow-1 flex-basis-0">
+			<div class="two-columns gap-10px">
+				<godot-release-box class="flex-grow-1">
 					<div slot="blockquote">This is a quote.</div>
 				</godot-release-box>
 				<godot-release-box
-					class="flex-grow-1 flex-basis-0"
+					class="flex-grow-1"
 					title="This is a title"
 					inverted
 					media-src="/storage/releases/4.3/release-logo.svg"
