@@ -26,8 +26,21 @@ header_text: "Godot Engine 4.3"
 		--release-font: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 		--release-background: #CECECE;
 
+		--color-godot-blue: #478CBF;
+		--color-dark-background: #25282B;
+		--color-light-gray: #EFF1F5;
+		--color-purple: #6C4AC9;
+
 		font-family: var(--release-font);
 		background-color: var(--release-background);
+	}
+
+	.release .color-godot-blue {
+		color: var(--color-godot-blue);
+	}
+
+	.release .color-purple {
+		color: var(--color-purple);
 	}
 
 	/*
@@ -412,6 +425,23 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"blockquote"
 				"link";
 		}
+		.box.box--title.box--blockquote.box--default-content .content {
+			grid-template-areas:
+				"title      def"
+				"blockquote def"
+				"blockquote def";
+			grid-template-columns:
+				1fr 1fr;
+		}
+		.box.box--right.box--title.box--blockquote.box--default-content .content {
+			grid-template-areas:
+				"title"
+				"blockquote"
+				"def"
+				"blockquote";
+			grid-template-columns:
+				1fr 1fr;
+		}
 		.box.box--title.box--blockquote.box--default-content.box--link .content {
 			grid-template-areas:
 				"title      def"
@@ -758,17 +788,19 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<h2>2D</h2>
 				</a>
 
-				<godot-release-box id="single-threaded-web-export" title="Single-threaded Web Export" anchor="single-threaded-web-export">
-					<div slot="blockquote">
-						Export away
-					</div>
-					<div>
-						We orignially aimed for the stars, but browsers are still down to
-						Earth. By bringing back single-threaded export for the Web platform,
-						we got more compatible across browsers and we eliminated the need of
-						complicated server-side configurations.
-					</div>
-				</godot-release-box>
+				<div class="">
+					<godot-release-box id="single-threaded-web-export" title="Single-threaded Web Export" anchor="single-threaded-web-export">
+						<div slot="blockquote">
+							<span class="color-purple">Export</span> away
+						</div>
+						<div>
+							We orignially aimed for the stars, but browsers are still down to
+							Earth. By bringing back single-threaded export for the Web platform,
+							we got more compatible across browsers and we eliminated the need of
+							complicated server-side configurations.
+						</div>
+					</godot-release-box>
+				</div>
 			</div>
 		</div> <!-- .container -->
 	</main> <!-- .release-main -->
