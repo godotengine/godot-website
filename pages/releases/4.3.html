@@ -231,7 +231,8 @@ header_text: "Godot Engine 4.3"
 	}
 
 	.release godot-release-box[inverted] span.highlight {
-		color: var(--color-bottom);
+		color: var(--color-top);
+		-webkit-text-stroke: 2px black;
 	}
 
 	/*
@@ -430,16 +431,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		}
 
 		.box .title a {
-			color: var(--color-godot-blue);
+			color: var(--color-top, --color-godot-blue);
 			text-decoration: none;
 		}
-
 		.box .title a:hover {
 			text-decoration: underline;
 		}
-
-		.box.box--inverted .title {
+		.box.box--inverted .title a {
 			color: white;
+		}
+
+		.box .blockquote {
+			grid-area: blockquote;
 		}
 
 		.box .default-content {
@@ -477,14 +480,22 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 		.box .media {
 			grid-area: media;
+			margin-top: -30px;
+			margin-left: -40px;
 			margin-right: -40px;
 			margin-bottom: -36px;
 		}
 		.box.box--bottom .media {
-			margin-left: -40px;
+			margin-top: 0;
+		}
+		.box.box--top .media {
+			margin-bottom: 0;
 		}
 		.box.box--right .media {
-			margin-top: -30px;
+			margin-left: 0;
+		}
+		.box.box--left .media {
+			margin-right: 0;
 		}
 
 		.box.box--title .content {
@@ -694,8 +705,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			boxElement.classList.add("box--title");
 			if (this.anchor) {
 				titleElement.innerHTML = /*html*/`
-				<a href="#${this.anchor}">${this.title}</a>
-				`;
+					<a href="#${this.anchor}">${this.title}</a>
+				`.trim();
 			} else {
 				titleElement.innerText = this.title;
 			}
@@ -860,6 +871,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					title="Godot Foundation"
 					type="right"
 				>
+					<div slot="blockquote">
+						Your <span class="highlight">donations</span> did this!
+					</div>
 					<div>
 						<p>
 							Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time,
@@ -890,10 +904,33 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 
 				<godot-release-box
+					id="interactive-music-player"
+					title="Interactive music player"
+					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
+					type="top"
+					inverted
+					anchor
+				>
+					<div slot="blockquote">
+						Like music to <span class="highlight">your ears</span>
+					</div>
+					<div>
+						We orignially aimed for the stars, but browsers are still down to
+						Earth. By bringing back single-threaded export for the Web platform,
+						we got more compatible across browsers and we eliminated the need of
+						complicated server-side configurations.
+					</div>
+					<div slot="media">
+						<img style="width: 100%; object-fit: cover;" src="/storage/releases/4.3/images/release-logo.svg" />
+					</div>
+				</godot-release-box>
+
+				<godot-release-box
 					id="single-threaded-web-export"
 					title="Single-threaded Web export"
 					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
 					type="right"
+					anchor
 				>
 					<div slot="blockquote">
 						Export <span class="highlight">easily</span> for the <span class="highlight">Web</span>
@@ -904,12 +941,16 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						we got more compatible across browsers and we eliminated the need of
 						complicated server-side configurations.
 					</div>
+					<div slot="media">
+						<img style="width: 100%; object-fit: cover;" src="/storage/releases/4.3/images/release-logo.svg" />
+					</div>
 				</godot-release-box>
 
 				<godot-release-box
 					id="tilemap-layer"
 					title="TilemapLayer node"
 					type="left"
+					anchor
 				>
 					<div slot="blockquote">
 						<span class="highlight">Layer up</span> with this new node
@@ -919,6 +960,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						Earth. By bringing back single-threaded export for the Web platform,
 						we got more compatible across browsers and we eliminated the need of
 						complicated server-side configurations.
+					</div>
+					<div slot="media">
+						<img style="width: 100%; object-fit: cover;" src="/storage/releases/4.3/images/release-logo.svg" />
 					</div>
 				</godot-release-box>
 			</div>
