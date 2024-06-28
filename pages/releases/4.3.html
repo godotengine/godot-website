@@ -358,14 +358,15 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		return /*html*/`
 <template id="box-template">
 	<style>
+		:host {
+			container-type: inline-size;
+		}
+
 		.box {
 			--color-godot-blue: #478CBF;
 			--color-dark-background: #25282B;
 			--color-light-gray: #EFF1F5;
 			--color-purple: #6C4AC9;
-
-			container-type: inline-size;
-			container-name: box;
 
 			background-color: var(--color-light-gray);
 			border-radius: 30px;
@@ -404,20 +405,45 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		.box.box--media.box--right {
 			grid-template-areas:
 				"content media";
+			grid-template-columns:
+				1fr 1fr;
 		}
 		.box.box--media.box--left {
 			grid-template-areas:
 				"media content";
+			grid-template-columns:
+				1fr 1fr;
 		}
 		.box.box--media.box--bottom {
 			grid-template-areas:
 				"content"
 				"media";
+			grid-template-columns:
+				1fr;
 		}
 		.box.box--media.box--top {
 			grid-template-areas:
 				"media"
 				"content";
+			grid-template-columns:
+				1fr;
+		}
+		@container (max-width: 700px) {
+			.box.box--media,
+			.box.box--media.box--right {
+				grid-template-areas:
+					"content"
+					"media";
+				grid-template-columns:
+					1fr;
+			}
+			.box.box--media.box--left {
+				grid-template-areas:
+					"media"
+					"content";
+				grid-template-columns:
+					1fr;
+			}
 		}
 
 		.box .title {
@@ -558,11 +584,25 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			grid-template-columns:
 				1fr;
 		}
+		.box.box--top.box--blockquote.box--default-content .content,
+		.box.box--bottom.box--blockquote.box--default-content .content {
+			grid-template-areas:
+				"blockquote . def";
+			grid-template-columns:
+				1fr 20px 1fr;
+		}
+		.box.box--left.box--blockquote.box--default-content .content,
+		.box.box--right.box--blockquote.box--default-content .content {
+			grid-template-areas:
+				"blockquote"
+				"def";
+			grid-template-columns:
+				1fr;
+		}
 		.box.box--top.box--title.box--blockquote.box--default-content .content,
 		.box.box--bottom.box--title.box--blockquote.box--default-content .content {
 			grid-template-areas:
 				"title      . def"
-				"blockquote . def"
 				"blockquote . def";
 			grid-template-columns:
 				1fr 20px 1fr;
@@ -595,9 +635,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			grid-template-columns:
 				1fr;
 		}
-
-		@container box (max-width: 700px) {
-			.box.box--title.box--blockquote.box--default-content.box--link .content {
+		@container (max-width: 700px) {
+			.box.box--top.box--title.box--blockquote.box--default-content.box--link .content,
+			.box.box--bottom.box--title.box--blockquote.box--default-content.box--link .content {
 				grid-template-areas:
 					"title"
 					"blockquote"
@@ -868,7 +908,6 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				<godot-release-box
 					class=""
 					inverted
-					title="Godot Foundation"
 					type="right"
 				>
 					<div slot="blockquote">
