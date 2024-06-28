@@ -2,7 +2,7 @@
 title: "January Jams"
 excerpt: "Looking back at a month of game jams, we curated a list of ten events that you might or might not have heard of before."
 categories: ["events"]
-author: Nathalie Galla
+author: Nat
 image: /storage/blog/covers/godot-jam.webp
 image_caption_description: "Jam base image by <a href='https://www.freepik.com/free-photo/jam-isolated-white_1198739.htm#query=jam&position=39&from_view=search&track=sph&uuid=449f0bd4-ec2a-4a1b-aef3-d0ad383022a7'>luis_molinero</a> on Freepik"
 date: 2024-01-31 12:00:00
@@ -22,7 +22,7 @@ Did you hear about Mickey Mouse entering the public domain this year? How is tha
 
 ### 2. Finally Finish Something (FFS) 2024
 
-🔗 [https://itch.io/jam/finally-finish-something-2024](https://itch.io/jam/finally-finish-something-2024) 
+🔗 [https://itch.io/jam/finally-finish-something-2024](https://itch.io/jam/finally-finish-something-2024)
 
 📅 January 1st  - February 4th
 
@@ -30,7 +30,7 @@ Be honest, how high is your stack of unfinished games that you once were sure wo
 
 ### 3. Queer Vampire Jam
 
-🔗 [https://itch.io/jam/queer-vampire](https://itch.io/jam/queer-vampire) 
+🔗 [https://itch.io/jam/queer-vampire](https://itch.io/jam/queer-vampire)
 
 📅 January 10th  - February 20th
 
@@ -38,7 +38,7 @@ While there are a plethora of “niche” game jams at any given time, it seems 
 
 ### 4. Game Dev Knock Out (GDKO) - Round 1
 
-🔗 [https://itch.io/jam/gdko-2024](https://itch.io/jam/gdko-2024) 
+🔗 [https://itch.io/jam/gdko-2024](https://itch.io/jam/gdko-2024)
 
 📅 January 1st  - January 15th
 
@@ -46,7 +46,7 @@ The Squid Games of the game dev world. The previous sentence is taken straight f
 
 ### 5. New Year, New Skills Game Jam
 
-🔗 [https://itch.io/jam/new-year-new-skills-game-jam](https://itch.io/jam/new-year-new-skills-game-jam) 
+🔗 [https://itch.io/jam/new-year-new-skills-game-jam](https://itch.io/jam/new-year-new-skills-game-jam)
 
 📅 January 7th  - January 14th
 
@@ -54,7 +54,7 @@ An explicitly beginner-friendly jam organized by [Bitter Sails Games](https://tw
 
 ### 6. Godot Wild Jam #65
 
-🔗 [https://itch.io/jam/godot-wild-jam-65](https://itch.io/jam/godot-wild-jam-65) 
+🔗 [https://itch.io/jam/godot-wild-jam-65](https://itch.io/jam/godot-wild-jam-65)
 
 📅 January 12th - January 21st
 
@@ -70,7 +70,7 @@ A jam organized by game developer & Twitch streamer [Pirate Software](https://tw
 
 ### 8. GlobalGameJam
 
-🔗 [https://globalgamejam.org/](https://globalgamejam.org/) 
+🔗 [https://globalgamejam.org/](https://globalgamejam.org/)
 
 📅 January 22nd - January 28th
 
@@ -80,7 +80,7 @@ From the numbers that are accessible to us, we can estimate that about __16% of 
 
 ### 9. GGJ Next
 
-🔗 [https://ggjnext.org/](https://ggjnext.org/) 
+🔗 [https://ggjnext.org/](https://ggjnext.org/)
 
 📅 January 22nd - January 28th
 
@@ -88,7 +88,7 @@ Concurrent to the Global Game Jam this event by the same organizers caters to th
 
 ### 10. Trijam #254
 
-🔗 [https://itch.io/jam/trijam-254](https://itch.io/jam/trijam-254) 
+🔗 [https://itch.io/jam/trijam-254](https://itch.io/jam/trijam-254)
 
 📅 January 26th - January 29th
 
@@ -97,5 +97,3 @@ Is it possible to make a game in just three hours? The hosts of this fast paced 
 ----
 
 Did you join any game jams this month? Then don’t miss out on the opportunity to self-promote your projects under our __#JamJanuary__ posts which you can find here: [linkin.bio/godot](https://linkin.bio/godot).
-
-

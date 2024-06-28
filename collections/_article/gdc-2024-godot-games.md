@@ -2,7 +2,7 @@
 title: "Introducing our GDC Line-up"
 excerpt: "Like we announced a while ago, the team is preparing to head over to the US for this year’s GDC. We will have a booth on the expo floor, and would love to welcome you there!"
 categories: ["events"]
-author: Nathalie Galla
+author: Nat
 image: /storage/blog/gdc/2024/gdc2.webp
 date: 2024-03-01 16:00:00
 ---
