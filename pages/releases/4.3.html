@@ -32,6 +32,12 @@ header_text: "Godot Engine 4.3"
 		--color-light-gray: #EFF1F5;
 		--color-purple: #6C4AC9;
 
+		--color-hsl-saturation: 54%;
+		--color-hsl-lightness: 47%;
+
+		--release-section-title-margin-top: 40px;
+		--release-section-margin-bottom: 80px;
+
 		font-family: var(--release-font);
 		background-color: var(--release-background);
 	}
@@ -53,7 +59,7 @@ header_text: "Godot Engine 4.3"
 		font-size: var(--header-font-size);
 		font-weight: var(--header-font-weight);
 		background-color: var(--header-background);
-		background-image: url('/storage/releases/4.3/release-header-background.svg');
+		background-image: url('/storage/releases/4.3/images/release-header-background.svg');
 		background-repeat: no-repeat;
 		background-position: top left;
 	}
@@ -75,7 +81,7 @@ header_text: "Godot Engine 4.3"
 		display: block;
 		width: calc(100% - 2 * var(--header-title-padding-x));
 		height: 140px;
-		background-image: url('/storage/releases/4.3/release-logo.svg');
+		background-image: url('/storage/releases/4.3/images/release-logo.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: contain;
@@ -183,6 +189,38 @@ header_text: "Godot Engine 4.3"
 		}
 	}
 
+	.release .release-section {
+		margin-bottom: var(--release-section-margin-bottom);
+	}
+
+	.release .release-section:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.release .release-section:has(.release-section-title) {
+		margin-top: var(--release-section-title-margin-top);
+	}
+
+	.release .release-section.release-section--2d {
+		--color-top: hsl(180deg, var(--color-hsl-saturation), var(--color-hsl-lightness));
+	}
+
+	.release .release-section .release-section-title,
+	.release .release-section .release-section-title a,
+	.release .release-section .release-section-title a *,
+	.release span.highlight {
+		color: var(--color-top);
+	}
+
+	.release .release-section .release-section-title a {
+		text-decoration: none;
+	}
+
+	.release godot-release-box[inverted] a {
+		color: white;
+		text-decoration-color: white;
+	}
+
 	/*
 	 * Footer
 	 */
@@ -211,6 +249,14 @@ const BAR_MAX_WIDTH_PX = 200;
 const BAR_DELAY_S = 0.5;
 const BAR_DURATION_S = 1;
 const BAR_EASE = "power2.out";
+
+const SCROLL_FROM = Object.freeze({
+	y: 50,
+	opacity: 0,
+	duration: 0.5,
+	delay: 0.25,
+	ease: BAR_EASE,
+});
 
 const barEase = gsap.parseEase(BAR_EASE);
 
@@ -251,6 +297,15 @@ gsap.utils.toArray(".release-contributors-item-bar-bar").reverse().forEach((bar,
 	contributorsTl.add(timeline);
 });
 
+// Animate non-custom elements.
+const releaseSectionTitleTimeline = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".release-section-title",
+		start: "top bottom",
+	}
+});
+releaseSectionTitleTimeline.from(".release-section-title", Object.create(SCROLL_FROM));
+
 /*
  * CUSTOM ELEMENTS
  */
@@ -281,10 +336,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			type: GodotReleaseBox.buildProperties(),
 			anchor: GodotReleaseBox.buildProperties(),
 			link: GodotReleaseBox.buildProperties(),
-			inverted: GodotReleaseBox.buildProperties({ toAttributeConverter: BooleanConverter.toAttribute, fromAttributeConverter: BooleanConverter.fromAttribute }),
-			mediaSrc: GodotReleaseBox.buildProperties({ attributeName: "media-src" }),
-			mediaAlt: GodotReleaseBox.buildProperties({ attributeName: "media-alt" }),
-			mediaType: GodotReleaseBox.buildProperties({ attributeName: "media-type" })
+			inverted: GodotReleaseBox.buildProperties({ toAttributeConverter: BooleanConverter.toAttribute, fromAttributeConverter: BooleanConverter.fromAttribute })
 		};
 	}
 
@@ -314,9 +366,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		.box.box--inverted {
 			background: linear-gradient(
 				to bottom,
-				var(--color-godot-blue),
-				#517BC2 26%,
-				var(--color-purple)
+				var(--color-top, var(--color-godot-blue)),
+				var(--color-bottom, var(--color-purple))
 			);
 			color: white;
 		}
@@ -513,6 +564,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			</div>
 		</div>
 		<div id="media" class="media">
+			<slot id="media-slot" name="media" class="media-slot"></slot>
 		</div>
 	</div>
 </template>
@@ -528,9 +580,6 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		this.anchor = "";
 		this.link = "";
 		this.inverted = false;
-		this.mediaSrc = "";
-		this.mediaAlt = "";
-		this.mediaType = "";
 	}
 
 	connectedCallback() {
@@ -550,13 +599,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				start: "top bottom",
 			}
 		})
-		.from(boxElement, {
-			y: 50,
-			opacity: 0,
-			duration: 0.5,
-			delay: 0.25,
-			ease: BAR_EASE,
-		});
+		.from(boxElement, Object.create(SCROLL_FROM));
 	}
 
 	propertyChangedCallback(propName, oldValue, newValue) {
@@ -579,6 +622,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		const defaultContentElement = this.shadowRoot.getElementById("default-content");
 		const slotElement = this.shadowRoot.getElementById("slot");
 		const mediaElement = this.shadowRoot.getElementById("media");
+		const mediaSlotElement = this.shadowRoot.getElementById("media-slot");
 
 		// Blockquote
 		if (blockquoteSlotElement.assignedNodes().length === 0) {
@@ -638,22 +682,11 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			boxElement.classList.remove("box--inverted");
 		}
 
-		if (this.mediaSrc.length === 0) {
+		// Media
+		if (mediaSlotElement.assignedNodes().length === 0) {
 			boxElement.classList.remove("box--media");
 		} else {
 			boxElement.classList.add("box--media");
-			console.log("mediaSrc =", this.mediaSrc, mediaType)
-			switch (mediaType) {
-				case "image": {
-					mediaElement.innerHTML = /*html*/`
-						<img class="media-image" src="${this.mediaSrc}" alt="${this.mediaAlt}" />
-					`;
-				} break;
-
-				case "video": {
-
-				} break;
-			}
 		}
 	}
 });
@@ -756,58 +789,81 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 	<main class="release-main">
 		<div class="container">
-			<godot-release-box title="Hello, World!" link="https://godotengine.org">
-				<div slot="blockquote">
-					<strong>Hello</strong>, World!
-				</div>
-				<div>
-					Content.
-				</div>
-			</godot-release-box>
-
-			<godot-release-box
-				title="This is a title"
-				inverted
-				media-src="/storage/releases/4.3/release-logo.svg"
-				media-alt="This is the release logo."
-				type="bottom"
-				link="https://godotengine.org"
-			>
-				<div slot="blockquote">This is a sole quote.</div>
-				<div>
-					This is finally some content that I decided to add.
-				</div>
-			</godot-release-box>
-
-			<div class="two-columns gap-10px">
-				<godot-release-box class="flex-grow-1">
-					<div slot="blockquote">This is a quote.</div>
-				</godot-release-box>
+			<!-- Presentation -->
+			<div class="release-section release-section--presentation">
 				<godot-release-box
-					class="flex-grow-1"
-					title="This is a title"
-					inverted
-					media-src="/storage/releases/4.3/release-logo.svg"
-					media-alt="This is the release logo."
 					type="bottom"
-					link="https://godotengine.org"
 				>
-					<div slot="blockquote">This is a sole quote.</div>
-					<div>
-						This is finally some content that I decided to add.
+					<div slot="blockquote">
+						Here is a video from one of our content-creators!
+					</div>
+					<div slot="media">
+						<iframe style="width: 100%; aspect-ratio: 16/9; height: min-content;" width="560" height="315" src="https://www.youtube.com/embed/bbatLr98fEY?si=LvzwlTzH9ZLRJzRK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				</godot-release-box>
 			</div>
 
-			<div class="2d">
-				<a href="#2d">
-					<h2>2D</h2>
-				</a>
+			<!-- Godot Foudnation -->
+			<div class="release-section release-section--foundation">
+				<godot-release-box
+					class=""
+					inverted
+					title="Godot Foundation"
+				>
+					<div>
+						<p>
+							Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time,
+							as well as a handful of part or full-time developers hired thanks to
+							<a href="https://fund.godotengine.org/">generous donations from the Godot community</a>.
+							A big thank you to everyone who has contributed <a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time</a>
+							or <a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support</a> to the project!
+						</p>
+
+						<p>
+							If you’d like to support the project financially and help us secure our future hires, you can do so using the Godot
+							Development Fund platform managed by Godot Foundation. There are also several alternative ways to donate which you
+							may find more suitable.
+						</p>
+					</div>
+					<div slot="media">
+						Please donate!
+					</div>
+				</godot-release-box>
+			</div>
+
+			<div class="release-section release-section--main-features">
+				<div class="two-columns gap-10px">
+					<godot-release-box class="flex-grow-1">
+						<div slot="blockquote">This is a quote.</div>
+					</godot-release-box>
+					<godot-release-box
+						class="flex-grow-1"
+						title="This is a title"
+						inverted
+						media-src="/storage/releases/4.3/images/release-logo.svg"
+						media-alt="This is the release logo."
+						type="bottom"
+						link="https://godotengine.org"
+					>
+						<div slot="blockquote">This is a sole quote.</div>
+						<div>
+							This is finally some content that I decided to add.
+						</div>
+					</godot-release-box>
+				</div>
+			</div>
+
+			<div class="release-section release-section--2d">
+				<div class="release-section-title">
+					<a href="#2d">
+						<h2>2D</h2>
+					</a>
+				</div>
 
 				<div class="">
 					<godot-release-box id="single-threaded-web-export" title="Single-threaded Web Export" anchor="single-threaded-web-export">
 						<div slot="blockquote">
-							<span class="color-purple">Export</span> away
+							<span class="highlight">Export</span> away
 						</div>
 						<div>
 							We orignially aimed for the stars, but browsers are still down to
