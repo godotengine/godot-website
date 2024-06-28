@@ -1,5 +1,5 @@
 ---
-title: "Godot community poll 2024"
+title: "Godot Community Poll 2024"
 excerpt: "We want to learn more about the Godot community, understand who the users of the engine are, and find out how we can better support you."
 categories: ["news"]
 author: Emi
