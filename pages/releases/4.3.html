@@ -181,8 +181,10 @@ header_text: "Godot Engine 4.3"
 	.release .release-main-container {
 		display: grid;
 		grid-template-areas:
+			/* Header */
 			"presentation"
 			"foundation"
+			"cannot-wait"
 			"outstanding"
 			/* Features alphabetically ordered: */
 			"_2d"
@@ -195,6 +197,8 @@ header_text: "Godot Engine 4.3"
 			"rendering"
 			"web"
 			"xr"
+			/* Footer */
+			"download"
 			;
 	}
 
@@ -235,6 +239,13 @@ header_text: "Godot Engine 4.3"
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: foundation;
+	}
+
+	.release .release-section.release-section--cannot-wait {
+		--_h: 200deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: cannot-wait;
 	}
 
 	.release .release-section.release-section--outstanding-features {
@@ -312,6 +323,13 @@ header_text: "Godot Engine 4.3"
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: xr;
+	}
+
+	.release .release-section.release-section--download {
+		--_h: 200deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: download;
 	}
 
 	.release .release-section .release-section-title,
@@ -1159,6 +1177,23 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</godot-release-box>
 			</div>
 
+			<div class="release-section release-section--cannot-wait">
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="cannot-wait"
+						class="span-3"
+						type="right"
+					>
+						<div slot="blockquote">
+							Cannot wait?
+						</div>
+						<div slot="media">
+							<a href="#download">Skip and download Godot 4.3</a>
+						</div>
+					</godot-release-box>
+				</div>
+			</div>
+
 			<!-- Outstanding features -->
 			<div id="outstanding-features" class="release-section release-section--outstanding-features">
 				<div class="release-section-title">
@@ -1405,7 +1440,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							</p>
 						</div>
 						<div slot="media">
-							TODO: Replace me
+							<video class="release-video" autoplay loop muted poster="/storage/releases/4.3/images/keyframes.webp">
+								<source src="/storage/releases/4.3/video/keyframes.webm" type="video/webm" />
+							</video>
 						</div>
 					</godot-release-box>
 
@@ -1939,6 +1976,28 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 				</div>
 			</div> <!-- #xr -->
+
+			<div id="download" class="release-section release-section--download">
+				<div class="release-section-title">
+					<a href="#download">
+						<h2>Download</h2>
+					</a>
+				</div>
+
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="download-godot"
+						class="span-3"
+					>
+						<div slot="blockquote">
+							Download <span class="highlight">Godot 4.3</span>
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- #download -->
 		</div> <!-- .container -->
 	</main> <!-- .release-main -->
 	<footer class="release-footer">
