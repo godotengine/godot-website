@@ -252,7 +252,7 @@ header_text: "Godot Engine 4.3"
 		grid-area: dotnet;
 	}
 
-	.release .release-section.release-section--dotnet {
+	.release .release-section.release-section--gdscript {
 		--_h: 180deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
@@ -1034,7 +1034,12 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			</div>
 
 			<!-- Godot Foudnation -->
-			<div class="release-section release-section--foundation">
+			<div id="foundation" class="release-section release-section--foundation">
+				<div class="release-section-title">
+					<a href="#foundation">
+						<h2>Godot Foundation</h2>
+					</a>
+				</div>
 				<godot-release-box
 					class=""
 					inverted
@@ -1095,14 +1100,49 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</godot-release-box>
 
 				<godot-release-box
-					id="single-threaded-web-export"
-					title="Single-threaded Web export"
-					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
+					id="2d-physics-interpolation"
+					anchor
+					title="2D physics interpolation"
+					link=""
+					type="right"
+				>
+					<div slot="blockquote">
+						<span class="highlight">More frames</span>, more!
+					</div>
+					<div>
+
+					</div>
+					<div slot="media">
+						TODO: Fill
+					</div>
+				</godot-release-box>
+
+				<godot-release-box
+					id="visual-shader-editor-overhaul"
+					anchor
+					title="Visual shader editor overhaul"
+					link=""
+					type="left"
+				>
+					<div slot="blockquote">
+						<span class="highlight">Throw shades</span> with ease
+					</div>
+					<div>
+
+					</div>
+					<div slot="media">
+						TODO: Fill
+					</div>
+				</godot-release-box>
+
+				<godot-release-box
+					id="tilemap-layer"
+					title="TilemapLayer node"
 					type="right"
 					anchor
 				>
 					<div slot="blockquote">
-						Export <span class="highlight">easily</span> for the <span class="highlight">Web</span>
+						<span class="highlight">Layer up</span> with this new node
 					</div>
 					<div>
 						We orignially aimed for the stars, but browsers are still down to
@@ -1116,13 +1156,14 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</godot-release-box>
 
 				<godot-release-box
-					id="tilemap-layer"
-					title="TilemapLayer node"
+					id="single-threaded-web-export"
+					title="Single-threaded Web export"
+					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
 					type="left"
 					anchor
 				>
 					<div slot="blockquote">
-						<span class="highlight">Layer up</span> with this new node
+						<span class="highlight">Export easily</span> for the <span class="highlight">Web</span>
 					</div>
 					<div>
 						We orignially aimed for the stars, but browsers are still down to
@@ -1143,8 +1184,54 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</a>
 				</div>
 
-				<div class="">
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="parallax-2d-node"
+						class="span-3"
+						inverted
+						anchor
+						title="Binary tokenization on export"
+					>
+						<div slot="blockquote">
+							TODO: Replace me
+						</div>
+						<div>
+							The new `Parallax2D` node aims to greatly simplify the use of parallax in your games.
+							You don't have to deal with canvas layers anymore.
+						</div>
+						<div slot="media">
+							TODO: Replace me
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- 2d -->
 
+			<div id="animation" class="release-section release-section--animation">
+				<div class="release-section-title">
+					<a href="#animation">
+						<h2>Animation</h2>
+					</a>
+				</div>
+
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="skeleton-modifier-3d"
+						class="span-3"
+						inverted
+						anchor
+						title="`SkeletonModifier3D` node"
+					>
+						<div slot="blockquote">
+							TODO: Replace me
+						</div>
+						<div>
+							The new `Parallax2D` node aims to greatly simplify the use of parallax in your games.
+							You don't have to deal with canvas layers anymore.
+						</div>
+						<div slot="media">
+							TODO: Replace me
+						</div>
+					</godot-release-box>
 				</div>
 			</div> <!-- 2d -->
 
@@ -1267,7 +1354,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						title="Web Audio samples"
 					>
 						<div slot="blockquote">
-							Enhanced audio, rock on!
+							<span class="highlight">Enhanced audio</span>, rock on!
 						</div>
 						<div>
 							With great power comes great responsibility, when it comes to the Web.
