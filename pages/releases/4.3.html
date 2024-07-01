@@ -42,13 +42,17 @@ header_text: "Godot Engine 4.3"
 		background-color: var(--release-background);
 	}
 
-	.release .color-godot-blue {
-		color: var(--color-godot-blue);
+	html {
+		scroll-behavior: smooth;
 	}
 
-	.release .color-purple {
-		color: var(--color-purple);
+	@media (prefers-reduced-motion) {
+		/* styles to apply if a user's device settings are set to reduced motion */
+		html {
+			scroll-behavior: auto;
+		}
 	}
+
 
 	/*
 	 * HEADER
@@ -145,8 +149,8 @@ header_text: "Godot Engine 4.3"
 		margin-left: 0.25em;
 	}
 
-	/* Screen less than 900px wide */
-	@media screen and (max-width: 900px) {
+	/* Screen less than 971px wide */
+	@media screen and (max-width: 971px) {
 		#release-numbers {
 			max-width: var(--header-desc-width);
 			grid-template-areas:
@@ -180,11 +184,18 @@ header_text: "Godot Engine 4.3"
 			"presentation"
 			"foundation"
 			"outstanding"
+			/* Features alphabetically ordered: */
 			"_2d"
+			"animation"
+			"dotnet" /* Should read as "C#". */
+			"documentation"
+			"display"
+			"editor"
+			"gdscript"
 			"rendering"
 			"web"
-			"dotnet"
-			"gdscript";
+			"xr"
+			;
 	}
 
 	.release .two-columns {
@@ -196,13 +207,8 @@ header_text: "Godot Engine 4.3"
 		flex-basis: 0;
 	}
 
-	@media screen and (max-width: 900px) {
-		.release .two-columns {
-			flex-direction: column;
-		}
-	}
-
 	.release .release-section {
+		--_h-plus: 30deg;
 		margin-bottom: var(--release-section-margin-bottom);
 		display: flex;
 		flex-direction: column;
@@ -217,53 +223,95 @@ header_text: "Godot Engine 4.3"
 		margin-top: var(--release-section-title-margin-top);
 	}
 
-	.release .release-section.release-section--2d {
-		--_h: 120deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		grid-area: _2d;
-	}
-
 	.release .release-section.release-section--presentation {
-		--_h: 80deg;
+		--_h: 170deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: presentation;
 	}
 
 	.release .release-section.release-section--foundation {
 		--_h: 200deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: foundation;
 	}
 
 	.release .release-section.release-section--outstanding-features {
-		--_h: 100deg;
+		--_h: 230deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: outstanding;
 	}
 
-	.release .release-section.release-section--dotnet {
-		--_h: 160deg;
+	.release .release-section.release-section--2d {
+		--_h: 260deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: _2d;
+	}
+
+	.release .release-section.release-section--animation {
+		--_h: 290deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: animation;
+	}
+
+	.release .release-section.release-section--dotnet {
+		--_h: 320deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: dotnet;
 	}
 
-	.release .release-section.release-section--gdscript {
-		--_h: 180deg;
+	.release .release-section.release-section--documentation {
+		--_h: 350deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: documentation;
+	}
+
+	.release .release-section.release-section--display {
+		--_h: 20deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: display;
+	}
+
+	.release .release-section.release-section--editor {
+		--_h: 50deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: editor;
+	}
+
+	.release .release-section.release-section--gdscript {
+		--_h: 80deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: gdscript;
 	}
 
-	.release .release-section.release-section--web {
-		--_h: 100deg;
+	.release .release-section.release-section--rendering {
+		--_h: 110deg;
 		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + 70deg), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: rendering;
+	}
+
+	.release .release-section.release-section--web {
+		--_h: 140deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: web;
+	}
+
+	.release .release-section.release-section--xr {
+		--_h: 170deg;
+		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: xr;
 	}
 
 	.release .release-section .release-section-title,
@@ -289,26 +337,34 @@ header_text: "Godot Engine 4.3"
 
 	.release .release-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+		grid-template-columns: repeat(3, minmax(300px, 1fr));
 		grid-auto-flow: row dense;
 	}
-
+	.release .release-grid.release-grid--two-columns {
+		grid-template-columns: repeat(2, minmax(300px, 1fr));
+	}
 	.release .release-grid .span-2 {
 		grid-column: span 2;
 	}
 	.release .release-grid .span-3 {
 		grid-column: span 3;
 	}
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 971px) {
+		.release .release-grid {
+			grid-template-columns: repeat(2, minmax(300px, 1fr));
+		}
 		.release .release-grid .span-3 {
 			grid-column: span 2;
 		}
 	}
-	@media screen and (max-width: 600px) {
-		.release .release-grid .span-2 {
-			grid-column: span 1;
+	@media screen and (max-width: 651px) {
+		.release .release-grid {
+			grid-template-columns: repeat(1, minmax(300px, 1fr));
 		}
 		.release .release-grid .span-3 {
+			grid-column: span 1;
+		}
+		.release .release-grid .span-2 {
 			grid-column: span 1;
 		}
 	}
@@ -344,9 +400,9 @@ const BAR_EASE = "power2.out";
 
 const SCROLL_FROM = Object.freeze({
 	y: 50,
-	opacity: 0,
+	// opacity: 0,
 	duration: 0.5,
-	delay: 0.25,
+	// delay: 0.25,
 	ease: BAR_EASE,
 });
 
@@ -390,13 +446,20 @@ gsap.utils.toArray(".release-contributors-item-bar-bar").reverse().forEach((bar,
 });
 
 // Animate non-custom elements.
-const releaseSectionTitleTimeline = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".release-section-title",
-		start: "top bottom",
+for (const title of gsap.utils.toArray(".release-section-title")) {
+	// Only animate items below the current screen.
+	if (title.getBoundingClientRect().top > window.innerHeight) {
+		const releaseSectionTitleTimeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: title,
+				start: "top bottom",
+			}
+		});
+		releaseSectionTitleTimeline.from(title, {
+			...SCROLL_FROM
+		});
 	}
-});
-releaseSectionTitleTimeline.from(".release-section-title", Object.create(SCROLL_FROM));
+}
 
 /*
  * CUSTOM ELEMENTS
@@ -437,7 +500,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 	<style>
 		:host {
 			container-type: inline-size;
-			min-width: 275px;
+			position: relative;
+			/* min-width: 350px; */
 		}
 
 		.box {
@@ -760,6 +824,20 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				auto;
 		}
 		@container (max-width: 700px) {
+			.box.box--top.box--title.box--blockquote.box--default-content .content,
+			.box.box--bottom.box--title.box--blockquote.box--default-content .content {
+				grid-template-areas:
+					"title"
+					"blockquote"
+					"def";
+				grid-template-columns:
+					1fr;
+				grid-template-rows:
+					auto
+					auto
+					1fr;
+			}
+
 			.box.box--top.box--title.box--blockquote.box--default-content.box--link .content,
 			.box.box--bottom.box--title.box--blockquote.box--default-content.box--link .content {
 				grid-template-areas:
@@ -823,13 +901,15 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		const boxElement = this.shadowRoot.getElementById("box");
 
 		// Slide-in animation.
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: boxElement,
-				start: "top bottom",
-			}
-		})
-		.from(boxElement, Object.create(SCROLL_FROM));
+		if (this.getBoundingClientRect().top > window.innerHeight) {
+			const timeline = gsap.timeline({
+				scrollTrigger: {
+					trigger: boxElement,
+					start: "top bottom",
+				}
+			})
+			.from(boxElement, Object.create(SCROLL_FROM));
+		}
 	}
 
 	propertyChangedCallback(propName, oldValue, newValue) {
@@ -1080,105 +1160,108 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</a>
 				</div>
 
-				<godot-release-box
-					id="interactive-music-player"
-					type="top"
-					inverted
-					anchor
-				>
-					<div slot="title">
-						interactive music support
-					</div>
-					<div slot="blockquote">
-						Like music to <span class="highlight">your ears</span>
-					</div>
-					<div>
-						TODO: replace me
-					</div>
-					<div slot="media">
-						TODO: replace me
-					</div>
-				</godot-release-box>
+				<div class="release-grid release-grid--two-columns gap-20px">
+					<godot-release-box
+						id="outstanding-interactive-music-player"
+						class="span-2"
+						anchor
+						type="top"
+					>
+						<div slot="title">
+							interactive music support
+						</div>
+						<div slot="blockquote">
+							Like music to <span class="highlight">your ears</span>
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
 
-				<godot-release-box
-					id="2d-physics-interpolation"
-					anchor
-					type="right"
-				>
-					<div slot="title">
-						2D physics interpolation
-					</div>
-					<div slot="blockquote">
-						<span class="highlight">More frames</span>, more!
-					</div>
-					<div>
+					<godot-release-box
+						id="outstanding-2d-physics-interpolation"
+						anchor
+						type="right"
+					>
+						<div slot="title">
+							2D physics interpolation
+						</div>
+						<div slot="blockquote">
+							<span class="highlight">More frames</span>, more!
+						</div>
+						<div>
 
-					</div>
-					<div slot="media">
-						TODO: replace me
-					</div>
-				</godot-release-box>
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
 
-				<godot-release-box
-					id="visual-shader-editor-overhaul"
-					anchor
-					type="left"
-				>
-					<div slot="title">
-						Visual shader editor overhaul
-					</div>
-					<div slot="blockquote">
-						<span class="highlight">Throw shades</span> with ease
-					</div>
-					<div>
+					<godot-release-box
+						id="outstanding-visual-shader-editor-overhaul"
+						anchor
+						type="left"
+					>
+						<div slot="title">
+							Visual shader editor overhaul
+						</div>
+						<div slot="blockquote">
+							<span class="highlight">Throw shades</span> with ease
+						</div>
+						<div>
 
-					</div>
-					<div slot="media">
-						TODO: replace me
-					</div>
-				</godot-release-box>
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
 
-				<godot-release-box
-					id="tilemap-layer"
-					type="right"
-					anchor
-				>
-					<div slot="title">
-						New <code>TilemapLayer</code> node
-					</div>
-					<div slot="blockquote">
-						<span class="highlight">Layer up</span> with this new node
-					</div>
-					<div>
-						TODO: replace me
-					</div>
-					<div slot="media">
-						TODO: replace me
-					</div>
-				</godot-release-box>
+					<godot-release-box
+						id="outstanding-tilemap-layer"
+						type="right"
+						anchor
+						inverted
+					>
+						<div slot="title">
+							New <code>TilemapLayer</code> node
+						</div>
+						<div slot="blockquote">
+							<span class="highlight">Layer up</span> with this new node
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
 
-				<godot-release-box
-					id="single-threaded-web-export"
-					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
-					type="left"
-					anchor
-				>
-					<div slot="title">
-						Single-threaded Web export
-					</div>
-					<div slot="blockquote">
-						<span class="highlight">Export easily</span> for the <span class="highlight">Web</span>
-					</div>
-					<div>
-						We orignially aimed for the stars, but browsers are still down to
-						Earth. By bringing back single-threaded export for the Web platform,
-						we got more compatible across browsers and we eliminated the need of
-						complicated server-side configurations.
-					</div>
-					<div slot="media">
-						TODO: replace me
-					</div>
-				</godot-release-box>
+					<godot-release-box
+						id="outstanding-single-threaded-web-export"
+						link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
+						type="left"
+						anchor
+					>
+						<div slot="title">
+							Single-threaded Web export
+						</div>
+						<div slot="blockquote">
+							<span class="highlight">Export easily</span> for the <span class="highlight">Web</span>
+						</div>
+						<div>
+							We orignially aimed for the stars, but browsers are still down to
+							Earth. By bringing back single-threaded export for the Web platform,
+							we got more compatible across browsers and we eliminated the need of
+							complicated server-side configurations.
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
+				</div>
 			</div>
 
 			<div id="2d" class="release-section release-section--2d">
@@ -1188,12 +1271,11 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</a>
 				</div>
 
-				<div class="release-grid gap-20px">
+				<div class="release-grid release-grid--two-columns gap-20px">
 					<godot-release-box
-						id="parallax-2d-node"
-						class="span-3"
-						inverted
+						id="2d-parallax2d-node"
 						anchor
+						type="bottom"
 					>
 						<div slot="title">
 							New <code>Parallax2D</code> node
@@ -1209,8 +1291,29 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							TODO: Replace me
 						</div>
 					</godot-release-box>
+
+					<godot-release-box
+						id="2d-pixel-art-stability"
+						anchor
+						inverted
+						type="top"
+					>
+						<div slot="title">
+							Pixel art stability
+						</div>
+						<div slot="blockquote">
+							TODO: Replace me
+						</div>
+						<div>
+							Your pixel art giggles sometimes, even if you activated "Snap 2D Transforms to Pixel" in the project settings?
+							In 4.3, a new algorithm is used to stabilize pixel positions which should fix this issue.
+						</div>
+						<div slot="media">
+							TODO: Replace me
+						</div>
+					</godot-release-box>
 				</div>
-			</div> <!-- 2d -->
+			</div> <!-- #2d -->
 
 			<div id="animation" class="release-section release-section--animation">
 				<div class="release-section-title">
@@ -1223,7 +1326,6 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="skeleton-modifier-3d"
 						class="span-3"
-						inverted
 						anchor
 					>
 						<div slot="title">
@@ -1239,8 +1341,60 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							TODO: replace me
 						</div>
 					</godot-release-box>
+
+					<godot-release-box
+						id="animation-skeletal-import-options"
+						class="span-2"
+						anchor
+					>
+						<div slot="title">
+							Skeletal animation import options
+						</div>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="keyframe-manipulations"
+						class="span-3"
+						anchor
+						type="left"
+						inverted
+					>
+						<div slot="title">
+							More keyframe manipulations
+						</div>
+						<div slot="blockquote">
+							<span class="highlight">Manipulating keyframes</span> is now <span class="highlight">easier</span>
+						</div>
+						<div>
+							You can now select, copy, paste, and duplicate keyframes. What a relief!
+						</div>
+						<div slot="media">
+							TODO: Replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="animation-animationmixer-misc-fixes"
+						anchor
+					>
+						<div slot="title">
+							<code>AnimationMixer</code> miscellaneous fixes
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
 				</div>
-			</div> <!-- 2d -->
+			</div> <!-- #animation -->
 
 			<div id="dotnet" class="release-section release-section--dotnet">
 				<div class="release-section-title">
@@ -1249,10 +1403,94 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</a>
 				</div>
 
-				<div class="">
+				<div class="release-grid gap-20px">
 
 				</div>
-			</div> <!-- dotnet -->
+			</div> <!-- #dotnet -->
+
+			<div id="display" class="release-section release-section--display">
+				<div class="release-section-title">
+					<a href="#display">
+						<h2>Display</h2>
+					</a>
+				</div>
+
+				<div class="release-grid release-grid--two-columns gap-20px">
+					<godot-release-box
+						id="display-d3d12-rendering-driver"
+						anchor
+						inverted
+					>
+						<div slot="title">
+							Direct3D 12 rendering driver
+						</div>
+						<div slot="blockquote">
+							We tamed the <span class="highlight">green machine</span>
+						</div>
+						<div>
+							This new driver enables new Microsoft platforms to be supported, such as Microsoft Store (UWP) and Windows on ARM.
+							It even enables custom ports to a certain green platform!
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="display-wayland"
+						anchor
+					>
+						<div slot="title">
+							Wayland support for Linux/*BSD
+						</div>
+						<div slot="blockquote">
+							We followed the <span class="highlight">Way</span>
+						</div>
+						<div>
+							Wayland is a newer, more modern display server that can be used on Linux and some BSD-derived OSes.
+							Builtin Wayland support give us access to a much cleaner API as well as more advanced features for window management.
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- #display -->
+
+			<div id="editor" class="release-section release-section--editor">
+				<div class="release-section-title">
+					<a href="#editor">
+						<h2>Editor</h2>
+					</a>
+				</div>
+
+				<div class="release-grid release-grid--two-columns gap-20px">
+					<godot-release-box
+						id="editor-fbx-native-support"
+						inverted
+						anchor
+					>
+						<div slot="title">
+							FBX native support
+						</div>
+						<div slot="blockquote">
+							<span class="highlight">FBX</span> your game
+						</div>
+						<div>
+							Godot now handles .fbx files natively, so you can import 3D models and animations
+							from an industry-standard file format more easily.
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="editor-filesystem-bottom"
+						anchor
+					>
+						<div slot="title">
+							<span class="highlight">FileSystem dock can be moved</span> to the <span class="highlight">bottom</span> section of the editor
+						</div>
+						<div>
+							Want more space to see your files?
+							You can now move the FileSystem dock to the bottom section of the editor.
+							Especially practical if you're used to find your files there.
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- #editor -->
 
 			<div id="gdscript" class="release-section release-section--gdscript">
 				<div class="release-section-title">
@@ -1263,7 +1501,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 				<div class="release-grid gap-20px">
 					<godot-release-box
-						id="is-not-operator"
+						id="gdscript-binary-tokenization-on-export"
 						class="span-3"
 						inverted
 						anchor
@@ -1280,7 +1518,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 
 					<godot-release-box
-						id="is-not-operator"
+						id="gdscript-is-not-operator"
 						anchor
 					>
 						<div slot="title">
@@ -1292,7 +1530,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 
 					<godot-release-box
-						id="callable-builtins"
+						id="gdscript-callable-builtins"
 						anchor
 					>
 						<div slot="title">
@@ -1304,7 +1542,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 
 					<godot-release-box
-						id="export-storage"
+						id="gdscript-export-storage"
 						anchor
 					>
 						<div slot="title">
@@ -1317,7 +1555,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 
 					<godot-release-box
-						id="export-custom"
+						id="gdscript-export-custom"
 						anchor
 					>
 						<div slot="title">
@@ -1330,7 +1568,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 
 					<godot-release-box
-						id="autocompletion-fixes"
+						id="gdscript-autocompletion-fixes"
 						class="span-2"
 						anchor
 					>
@@ -1346,7 +1584,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 
 					<godot-release-box
-						id="circular-dependencies"
+						id="gdscript-circular-dependencies"
 						anchor
 						inverted
 					>
@@ -1358,7 +1596,105 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						</div>
 					</godot-release-box>
 				</div>
-			</div> <!-- gdscript -->
+			</div> <!-- #gdscript -->
+
+			<div id="rendering" class="release-section release-section--rendering">
+				<div class="release-section-title">
+					<a href="#rendering">
+						<h2>Rendering</h2>
+					</a>
+				</div>
+
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="compositor-effects-api"
+						anchor
+					>
+						<div slot="title">
+							Compositor effects API
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="renderingdevice-context-management-refactor"
+						anchor
+					>
+						<div slot="title">
+							<code>RenderingDevice</code> context management refactor
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="rendering-depth-based-fog"
+						class="span-2"
+						anchor
+						inverted
+					>
+						<div slot="title">
+							Depth-based fog
+						</div>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="rendering-compatiblity-rendering-backend-features"
+						anchor
+						inverted
+					>
+						<div slot="title">
+							Compatibility rendering backend features
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="rendering-acyclic-rendering-graph"
+						class="span-3"
+						anchor
+					>
+						<div slot="title">
+							Acyclic rendering graph
+						</div>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+						<div slot="media">
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="rendering-premultiplied-alpha-blending-3d"
+						anchor
+					>
+						<div slot="title">
+							Premultiplied alpha blending in 3D shaders
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- #rendering -->
 
 			<div id="web" class="release-section release-section--web">
 				<div class="release-section-title">
@@ -1370,7 +1706,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				<div class="release-grid gap-20px">
 					<godot-release-box
 						id="web-audio-samples"
-						class="span-3"
+						class="span-2"
 						anchor
 					>
 						<div slot="title">
@@ -1385,8 +1721,103 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							This enabled us to leverage the Web Audio API in order to deliver seamlessly low-latency and high-quality audio.
 						</div>
 					</godot-release-box>
+
+					<godot-release-box
+						id="web-splash-screen"
+						anchor
+					>
+						<div slot="title">
+							Splash screen is now showing up
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
 				</div>
-			</div> <!-- web -->
+			</div> <!-- #web -->
+
+			<div id="xr" class="release-section release-section--xr">
+				<div class="release-section-title">
+					<a href="#xr">
+						<h2>XR</h2>
+					</a>
+				</div>
+
+				<div class="release-grid gap-20px">
+					<godot-release-box
+						id="xr-composition-layers-2d-quality"
+						class="span-2"
+						anchor
+					>
+						<div slot="title">
+							Composition layers to allow 2D viewports to be displayed at much higher quality
+						</div>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+
+					<godot-release-box
+						id="fixed-tracking-issues-native-mobile-interface"
+						anchor
+					>
+						<div slot="title">
+							Fixed tracking issues in the native mobile interface
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="xr-tracking"
+						class="span-3"
+						anchor
+					>
+						<div slot="title">
+							Standardized and enhanced support for hand/finger tracking, body tracking, and face tracking
+						</div>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="xr-meta-extensions"
+						class="span-2"
+						anchor
+					>
+						<div slot="title">
+							Support for various Meta extensions such as hand models, render models, and scene discovery
+						</div>
+						<div slot="blockquote">
+							TODO: replace me
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+
+					<godot-release-box
+						id="xr-improvements"
+						anchor
+					>
+						<div slot="title">
+							Improvements to foveated rendering/vrs, passthrough, and various other supporting systems
+						</div>
+						<div>
+							TODO: replace me
+						</div>
+					</godot-release-box>
+				</div>
+			</div> <!-- #xr -->
 		</div> <!-- .container -->
 	</main> <!-- .release-main -->
 	<footer class="release-footer">
