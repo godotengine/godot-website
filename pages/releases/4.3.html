@@ -424,7 +424,6 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 	static get properties() {
 		return {
 			id: GodotReleaseBox.buildProperties(),
-			title: GodotReleaseBox.buildProperties(),
 			type: GodotReleaseBox.buildProperties(),
 			anchor: GodotReleaseBox.buildProperties({ toAttributeConverter: BooleanConverter.toAttribute, fromAttributeConverter: BooleanConverter.fromAttribute }),
 			link: GodotReleaseBox.buildProperties(),
@@ -781,7 +780,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 	<div id="box" class="box">
 		<div class="content">
-			<div id="title" class="title"></div>
+			<div id="title" class="title">
+				<a id="title-link" href=""></a>
+				<slot id="title-slot" name="title" class="title-slot"></slot>
+			</div>
 			<div id="blockquote" class="blockquote">
 				<slot id="blockquote-slot" name="blockquote" class="blockquote-slot"></slot>
 			</div>
@@ -804,7 +806,6 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		super();
 
 		this.id;
-		this.title;
 		this.type = "";
 		this.anchor = false;
 		this.link = "";
@@ -844,6 +845,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 		const boxElement = this.shadowRoot.getElementById("box");
 		const titleElement = this.shadowRoot.getElementById("title");
+		const titleLinkElement = this.shadowRoot.getElementById("title-link");
+		const titleSlotElement = this.shadowRoot.getElementById("title-slot");
 		const linkElement = this.shadowRoot.getElementById("link");
 		const linkContainerElement = this.shadowRoot.getElementById("link-container");
 		const blockquoteElement = this.shadowRoot.getElementById("blockquote");
@@ -868,17 +871,17 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 		}
 
 		// Title
-		if (this.title.length === 0) {
+		if (titleSlotElement.assignedNodes().length === 0) {
 			boxElement.classList.remove("box--title");
-			titleElement.innerText = "";
 		} else {
 			boxElement.classList.add("box--title");
 			if (this.anchor) {
-				titleElement.innerHTML = /*html*/`
-					<a href="#${this.anchor}">${this.title}</a>
-				`.trim();
+				titleLinkElement.style.display = "inline";
+				titleLinkElement.href = `#${this.id}`;
+				titleLinkElement.appendChild(titleSlotElement);
 			} else {
-				titleElement.innerText = this.title;
+				titleLinkElement.style.display = "none";
+				titleElement.appendChild(titleSlotElement);
 			}
 		}
 
@@ -1064,7 +1067,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						</p>
 					</div>
 					<div slot="media">
-						Please donate!
+						TODO: replace me
 					</div>
 				</godot-release-box>
 			</div>
@@ -1079,33 +1082,32 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 				<godot-release-box
 					id="interactive-music-player"
-					title="Interactive music player"
-					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
 					type="top"
 					inverted
 					anchor
 				>
+					<div slot="title">
+						interactive music support
+					</div>
 					<div slot="blockquote">
 						Like music to <span class="highlight">your ears</span>
 					</div>
 					<div>
-						We orignially aimed for the stars, but browsers are still down to
-						Earth. By bringing back single-threaded export for the Web platform,
-						we got more compatible across browsers and we eliminated the need of
-						complicated server-side configurations.
+						TODO: replace me
 					</div>
 					<div slot="media">
-						<img style="width: 100%; object-fit: cover;" src="/storage/releases/4.3/images/release-logo.svg" />
+						TODO: replace me
 					</div>
 				</godot-release-box>
 
 				<godot-release-box
 					id="2d-physics-interpolation"
 					anchor
-					title="2D physics interpolation"
-					link=""
 					type="right"
 				>
+					<div slot="title">
+						2D physics interpolation
+					</div>
 					<div slot="blockquote">
 						<span class="highlight">More frames</span>, more!
 					</div>
@@ -1113,17 +1115,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 					</div>
 					<div slot="media">
-						TODO: Fill
+						TODO: replace me
 					</div>
 				</godot-release-box>
 
 				<godot-release-box
 					id="visual-shader-editor-overhaul"
 					anchor
-					title="Visual shader editor overhaul"
-					link=""
 					type="left"
 				>
+					<div slot="title">
+						Visual shader editor overhaul
+					</div>
 					<div slot="blockquote">
 						<span class="highlight">Throw shades</span> with ease
 					</div>
@@ -1131,37 +1134,38 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 					</div>
 					<div slot="media">
-						TODO: Fill
+						TODO: replace me
 					</div>
 				</godot-release-box>
 
 				<godot-release-box
 					id="tilemap-layer"
-					title="TilemapLayer node"
 					type="right"
 					anchor
 				>
+					<div slot="title">
+						New <code>TilemapLayer</code> node
+					</div>
 					<div slot="blockquote">
 						<span class="highlight">Layer up</span> with this new node
 					</div>
 					<div>
-						We orignially aimed for the stars, but browsers are still down to
-						Earth. By bringing back single-threaded export for the Web platform,
-						we got more compatible across browsers and we eliminated the need of
-						complicated server-side configurations.
+						TODO: replace me
 					</div>
 					<div slot="media">
-						<img style="width: 100%; object-fit: cover;" src="/storage/releases/4.3/images/release-logo.svg" />
+						TODO: replace me
 					</div>
 				</godot-release-box>
 
 				<godot-release-box
 					id="single-threaded-web-export"
-					title="Single-threaded Web export"
 					link="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
 					type="left"
 					anchor
 				>
+					<div slot="title">
+						Single-threaded Web export
+					</div>
 					<div slot="blockquote">
 						<span class="highlight">Export easily</span> for the <span class="highlight">Web</span>
 					</div>
@@ -1172,7 +1176,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						complicated server-side configurations.
 					</div>
 					<div slot="media">
-						<img style="width: 100%; object-fit: cover;" src="/storage/releases/4.3/images/release-logo.svg" />
+						TODO: replace me
 					</div>
 				</godot-release-box>
 			</div>
@@ -1190,13 +1194,15 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						class="span-3"
 						inverted
 						anchor
-						title="Binary tokenization on export"
 					>
+						<div slot="title">
+							New <code>Parallax2D</code> node
+						</div>
 						<div slot="blockquote">
 							TODO: Replace me
 						</div>
 						<div>
-							The new `Parallax2D` node aims to greatly simplify the use of parallax in your games.
+							The new <code>Parallax2D</code> node aims to greatly simplify the use of parallax in your games.
 							You don't have to deal with canvas layers anymore.
 						</div>
 						<div slot="media">
@@ -1219,17 +1225,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						class="span-3"
 						inverted
 						anchor
-						title="`SkeletonModifier3D` node"
 					>
+						<div slot="title">
+							New <code>SkeletonModifier3D</code> node
+						</div>
 						<div slot="blockquote">
-							TODO: Replace me
+							TODO: replace me
 						</div>
 						<div>
-							The new `Parallax2D` node aims to greatly simplify the use of parallax in your games.
-							You don't have to deal with canvas layers anymore.
+							TODO: replace me
 						</div>
 						<div slot="media">
-							TODO: Replace me
+							TODO: replace me
 						</div>
 					</godot-release-box>
 				</div>
@@ -1260,8 +1267,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						class="span-3"
 						inverted
 						anchor
-						title="Binary tokenization on export"
 					>
+						<div slot="title">
+							Binary tokenization on export
+						</div>
 						<div slot="blockquote">
 							TODO: replace me
 						</div>
@@ -1273,8 +1282,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="is-not-operator"
 						anchor
-						title="`is not` operator"
 					>
+						<div slot="title">
+							<code>is not</code> operator
+						</div>
 						<div>
 							TODO: replace me
 						</div>
@@ -1283,18 +1294,22 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="callable-builtins"
 						anchor
-						title="Built-in methods and utility functions usable as Callable"
 					>
-						<div>
+						<div slot="title">
 							Built-in methods and utility functions usable as Callable
+						</div>
+						<div>
+							TODO: replace me
 						</div>
 					</godot-release-box>
 
 					<godot-release-box
 						id="export-storage"
 						anchor
-						title="`@export_storage` property hint"
 					>
+						<div slot="title">
+							<code>@export_storage</code> property hint
+						</div>
 						<div>
 							Addon developers, you can now use <code>@export_storage</code> to store hidden values in a scene.
 							Useful if you need to store custom data that isn't meant to be edited in the inspector.
@@ -1304,8 +1319,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="export-custom"
 						anchor
-						title="`@export_custom` property hint"
 					>
+						<div slot="title">
+							<code>@export_custom</code> property hint
+						</div>
 						<div>
 							You need specific types of export? We got you covered.
 							You can now use <code>@export_custom</code> to export a value suited to your needs.
@@ -1316,8 +1333,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						id="autocompletion-fixes"
 						class="span-2"
 						anchor
-						title="GDScript autocompletion fixes"
 					>
+						<div slot="title">
+							GDScript autocompletion fixes
+						</div>
 						<div slot="blockquote">
 							TODO: replace me
 						</div>
@@ -1330,8 +1349,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						id="circular-dependencies"
 						anchor
 						inverted
-						title="GDScript circular dependencies between scenes and scripts"
 					>
+						<div slot="title">
+							GDScript circular dependencies between scenes and scripts
+						</div>
 						<div>
 							TODO: replace me
 						</div>
@@ -1351,8 +1372,10 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						id="web-audio-samples"
 						class="span-3"
 						anchor
-						title="Web Audio samples"
 					>
+						<div slot="title">
+							Web Audio samples
+						</div>
 						<div slot="blockquote">
 							<span class="highlight">Enhanced audio</span>, rock on!
 						</div>
