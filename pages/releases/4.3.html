@@ -358,7 +358,8 @@ header_text: "Godot Engine 4.3"
 		}
 	}
 	@media screen and (max-width: 651px) {
-		.release .release-grid {
+		.release .release-grid,
+		.release .release-grid.release-grid--two-columns {
 			grid-template-columns: repeat(1, minmax(300px, 1fr));
 		}
 		.release .release-grid .span-3 {
@@ -367,6 +368,12 @@ header_text: "Godot Engine 4.3"
 		.release .release-grid .span-2 {
 			grid-column: span 1;
 		}
+	}
+
+	.release .release-video {
+		height: 500px;
+		width: 100%;
+		object-fit: cover;
 	}
 
 	/*
@@ -1536,6 +1543,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="editor-filesystem-bottom"
 						anchor
+						type="top"
 					>
 						<div slot="title">
 							<span class="highlight">FileSystem dock can be moved</span> to the <span class="highlight">bottom</span> section of the editor
@@ -1548,6 +1556,11 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							<p>
 								Especially practical if you're used to find your files there.
 							</p>
+						</div>
+						<div slot="media">
+							<video class="release-video" autoplay loop muted poster="/storage/releases/4.3/images/filesystem-editor-bottom.webp">
+								<source src="/storage/releases/4.3/video/filesystem-editor-bottom.webm" type="video/webm" />
+							</video>
 						</div>
 					</godot-release-box>
 				</div>
