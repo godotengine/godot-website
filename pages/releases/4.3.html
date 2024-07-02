@@ -698,13 +698,13 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			grid-template-areas:
 				"content media";
 			grid-template-columns:
-				1fr auto;
+				3fr minmax(auto, 2fr);
 		}
 		.box.box--media.box--left {
 			grid-template-areas:
 				"media content";
 			grid-template-columns:
-				minmax(auto, 30vh) 1fr;
+				minmax(auto, 2fr) 3fr;
 		}
 		.box.box--media.box--bottom {
 			grid-template-areas:
@@ -735,8 +735,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				grid-template-columns:
 					1fr;
 				grid-template-rows:
-					auto
-					minmax(auto, 40vw);
+					1fr
+					minmax(auto, 40vh);
 			}
 			.box.box--media.box--left {
 				grid-template-areas:
@@ -745,7 +745,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				grid-template-columns:
 					1fr;
 				grid-template-rows:
-					minmax(auto, 40vw)
+					minmax(auto, 40vh)
 					auto;
 			}
 		}
