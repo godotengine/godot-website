@@ -185,6 +185,8 @@ header_text: "Godot Engine 4.3"
 			"presentation"
 			"foundation"
 			"cannot-wait"
+			"spacer-after-cant-wait"
+			/* Features: */
 			"outstanding"
 			/* Features alphabetically ordered: */
 			"_2d"
@@ -198,21 +200,19 @@ header_text: "Godot Engine 4.3"
 			"web"
 			"xr"
 			/* Footer */
+			"spacer-before-download"
 			"download"
 			;
 	}
 
-	.release .two-columns {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.release .two-columns > * {
-		flex-basis: 0;
+	.release .release-spacer {
+		height: 100px;
 	}
 
 	.release .release-section {
-		--_h-plus: 30deg;
+		--_h: 170deg;
+		--_h-plus: 20deg;
+		--_i: 0;
 		margin-bottom: var(--release-section-margin-bottom);
 		display: flex;
 		flex-direction: column;
@@ -228,107 +228,138 @@ header_text: "Godot Engine 4.3"
 	}
 
 	.release .release-section.release-section--presentation {
-		--_h: 170deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 0;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: presentation;
 	}
 
 	.release .release-section.release-section--foundation {
-		--_h: 200deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 1;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: foundation;
 	}
 
 	.release .release-section.release-section--cannot-wait {
-		--_h: 200deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 2;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: cannot-wait;
 	}
 
+	#spacer-after-cant-wait {
+		--_i: 3;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: spacer-after-cant-wait;
+	}
+
 	.release .release-section.release-section--outstanding-features {
-		--_h: 230deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 4;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: outstanding;
 	}
 
 	.release .release-section.release-section--2d {
-		--_h: 260deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 5;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: _2d;
 	}
 
 	.release .release-section.release-section--animation {
-		--_h: 290deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 6;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: animation;
 	}
 
 	.release .release-section.release-section--dotnet {
-		--_h: 320deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 7;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: dotnet;
 	}
 
 	.release .release-section.release-section--documentation {
-		--_h: 350deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 8;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: documentation;
 	}
 
 	.release .release-section.release-section--display {
-		--_h: 20deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 9;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: display;
 	}
 
 	.release .release-section.release-section--editor {
-		--_h: 50deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 10;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: editor;
 	}
 
 	.release .release-section.release-section--gdscript {
-		--_h: 80deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 11;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: gdscript;
 	}
 
 	.release .release-section.release-section--rendering {
-		--_h: 110deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 12;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: rendering;
 	}
 
 	.release .release-section.release-section--web {
-		--_h: 140deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 13;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: web;
 	}
 
 	.release .release-section.release-section--xr {
-		--_h: 170deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 14;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: xr;
 	}
 
+	#spacer-before-download {
+		--_i: 15;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		grid-area: spacer-before-download;
+	}
+
 	.release .release-section.release-section--download {
-		--_h: 200deg;
-		--color-top: hsl(var(--_h), var(--color-hsl-saturation), var(--color-hsl-lightness));
-		--color-bottom: hsl(calc(var(--_h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--_i: 16;
+		--_local-h: calc(var(--_h) + calc(var(--_h-plus) * var(--_i)));
+		--color-top: hsl(var(--_local-h), var(--color-hsl-saturation), var(--color-hsl-lightness));
+		--color-bottom: hsl(calc(var(--_local-h) + var(--_h-plus)), var(--color-hsl-saturation), var(--color-hsl-lightness));
 		grid-area: download;
 	}
 
@@ -1128,7 +1159,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 	<main class="release-main">
 		<div class="release-main-container container">
 			<!-- Presentation -->
-			<div class="release-section release-section--presentation">
+			<div id="presentation" class="release-section release-section--presentation">
 				<godot-release-box
 					type="bottom"
 				>
@@ -1139,7 +1170,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						<iframe style="width: 100%; aspect-ratio: 16/9; height: min-content;" width="560" height="315" src="https://www.youtube.com/embed/bbatLr98fEY?si=LvzwlTzH9ZLRJzRK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				</godot-release-box>
-			</div>
+			</div> <!-- #presentation -->
 
 			<!-- Godot Foudnation -->
 			<div id="foundation" class="release-section release-section--foundation">
@@ -1175,12 +1206,12 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						TODO: replace me
 					</div>
 				</godot-release-box>
-			</div>
+			</div> <!-- #foundation -->
 
-			<div class="release-section release-section--cannot-wait">
+			<!-- Can't wait -->
+			<div id="cant-wait" class="release-section release-section--cannot-wait">
 				<div class="release-grid gap-20px">
 					<godot-release-box
-						id="cannot-wait"
 						class="span-3"
 						type="right"
 					>
@@ -1192,7 +1223,11 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						</div>
 					</godot-release-box>
 				</div>
-			</div>
+			</div> <!-- #cant-wait -->
+
+			<!-- Spacer -->
+			<div id="spacer-after-cant-wait" class="release-spacer">
+			</div> <!-- #spacer-after-cant-wait -->
 
 			<!-- Outstanding features -->
 			<div id="outstanding-features" class="release-section release-section--outstanding-features">
@@ -1314,8 +1349,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						</div>
 					</godot-release-box>
 				</div>
-			</div>
+			</div> <!-- #outstanding-features -->
 
+			<!-- 2D -->
 			<div id="2d" class="release-section release-section--2d">
 				<div class="release-section-title">
 					<a href="#2d">
@@ -1371,6 +1407,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #2d -->
 
+			<!-- Animation -->
 			<div id="animation" class="release-section release-section--animation">
 				<div class="release-section-title">
 					<a href="#animation">
@@ -1462,6 +1499,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #animation -->
 
+			<!-- C#/dotnet -->
 			<div id="dotnet" class="release-section release-section--dotnet">
 				<div class="release-section-title">
 					<a href="#dotnet">
@@ -1500,6 +1538,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #dotnet -->
 
+			<!-- Display -->
 			<div id="display" class="release-section release-section--display">
 				<div class="release-section-title">
 					<a href="#display">
@@ -1550,6 +1589,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #display -->
 
+			<!-- Editor -->
 			<div id="editor" class="release-section release-section--editor">
 				<div class="release-section-title">
 					<a href="#editor">
@@ -1603,6 +1643,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #editor -->
 
+			<!-- GDScript -->
 			<div id="gdscript" class="release-section release-section--gdscript">
 				<div class="release-section-title">
 					<a href="#gdscript">
@@ -1728,6 +1769,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #gdscript -->
 
+			<!-- Rendering -->
 			<div id="rendering" class="release-section release-section--rendering">
 				<div class="release-section-title">
 					<a href="#rendering">
@@ -1838,6 +1880,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #rendering -->
 
+			<!-- Web -->
 			<div id="web" class="release-section release-section--web">
 				<div class="release-section-title">
 					<a href="#web">
@@ -1871,6 +1914,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="web-splash-screen"
 						anchor
+						inverted
 					>
 						<div slot="title">
 							Splash screen is now showing up
@@ -1884,6 +1928,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #web -->
 
+			<!-- XR -->
 			<div id="xr" class="release-section release-section--xr">
 				<div class="release-section-title">
 					<a href="#xr">
@@ -1914,6 +1959,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="fixed-tracking-issues-native-mobile-interface"
 						anchor
+						inverted
 					>
 						<div slot="title">
 							Fixed tracking issues in the native mobile interface
@@ -1964,6 +2010,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="xr-improvements"
 						anchor
+						inverted
 					>
 						<div slot="title">
 							Improvements to foveated rendering/vrs, passthrough, and various other supporting systems
@@ -1977,13 +2024,12 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				</div>
 			</div> <!-- #xr -->
 
-			<div id="download" class="release-section release-section--download">
-				<div class="release-section-title">
-					<a href="#download">
-						<h2>Download</h2>
-					</a>
-				</div>
+			<!-- Spacer -->
+			<div id="spacer-before-download" class="release-spacer">
+			</div> <!-- #spacer-before-download -->
 
+			<!-- Download -->
+			<div id="download" class="release-section release-section--download">
 				<div class="release-grid gap-20px">
 					<godot-release-box
 						id="download-godot"
@@ -1998,6 +2044,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					</godot-release-box>
 				</div>
 			</div> <!-- #download -->
+
 		</div> <!-- .container -->
 	</main> <!-- .release-main -->
 	<footer class="release-footer">
