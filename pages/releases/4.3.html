@@ -385,8 +385,27 @@ header_text: "Godot Engine 4.3"
 	}
 
 	.release godot-release-box [slot="media"] {
+		position: relative;
 		width: 100%;
 		height: 100%;
+		user-select: none;
+		contain: paint;
+	}
+	.release godot-release-box [slot="media"] .media-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.release godot-release-box [slot="media"] .media-overlay .media-overlay-image,
+	.release godot-release-box [slot="media"] .media-overlay .media-overlay-text {
+		position: absolute;
+	}
+	.release godot-release-box [slot="media"] .media-overlay .media-overlay-text {
+		font-size: 24px;
+		font-weight: 700;
+		-webkit-text-stroke: 1px black;
 	}
 
 	.release godot-release-box p {
@@ -419,7 +438,7 @@ header_text: "Godot Engine 4.3"
 			grid-column: span 2;
 		}
 	}
-	@media screen and (max-width: 651px) {
+	@media screen and (max-width: 700px) {
 		.release .release-grid,
 		.release .release-grid.release-grid--two-columns {
 			grid-template-columns: repeat(1, minmax(300px, 1fr));
@@ -436,7 +455,44 @@ header_text: "Godot Engine 4.3"
 	.release .release-image {
 		height: 100%;
 		width: 100%;
+		object-fit: contain;
+		position: relative;
+	}
+	.release .release-image--background {
+		height: 100%;
+		width: 100%;
 		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		filter:
+			blur(5px);
+		transform:
+			scale(1.1);
+		clip-path: inset(0px);
+	}
+
+	/* Overlays */
+	._2d-pixel-art-stability-overlay-setting {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	._2d-pixel-art-stability-overlay-setting img {
+		width: 100%;
+		height: min-content;
+		object-fit: cover;
+	}
+	._2d-pixel-art-stability-overlay-before {
+		bottom: 0;
+		left: 0;
+		margin: 5px;
+	}
+	._2d-pixel-art-stability-overlay-after {
+		bottom: 0;
+		right: 0;
+		margin: 5px;
 	}
 
 	/*
@@ -529,6 +585,21 @@ for (const title of gsap.utils.toArray(".release-section-title")) {
 			...SCROLL_FROM
 		});
 	}
+}
+
+/*
+ * Blurred media
+ */
+for (let el of document.querySelectorAll(".release [slot='media'] img.release-image, .release [slot='media'] video.release-video")) {
+	const clone = el.cloneNode(true);
+	clone.ariaDisabled = true;
+	clone.classList.add("release-image--background");
+
+	if (clone instanceof HTMLVideoElement) {
+		clone.autoplay = false;
+	}
+
+	el.insertAdjacentElement("beforebegin", clone);
 }
 
 /*
@@ -625,7 +696,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			grid-template-areas:
 				"media content";
 			grid-template-columns:
-				auto 1fr;
+				minmax(auto, 30vh) 1fr;
 		}
 		.box.box--media.box--bottom {
 			grid-template-areas:
@@ -635,7 +706,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				1fr;
 			grid-template-rows:
 				1fr
-				auto;
+				minmax(auto, 30vh);
 		}
 		.box.box--media.box--top {
 			grid-template-areas:
@@ -644,7 +715,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			grid-template-columns:
 				1fr;
 			grid-template-rows:
-				auto
+				minmax(auto, 30vh)
 				1fr;
 		}
 		@container (max-width: 700px) {
@@ -657,7 +728,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					1fr;
 				grid-template-rows:
 					auto
-					500px;
+					minmax(auto, 40vw);
 			}
 			.box.box--media.box--left {
 				grid-template-areas:
@@ -666,7 +737,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				grid-template-columns:
 					1fr;
 				grid-template-rows:
-					500px
+					minmax(auto, 40vw)
 					auto;
 			}
 		}
@@ -733,6 +804,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 		.box .media {
 			grid-area: media;
+			position: relative;
 			margin-top: -30px;
 			margin-left: -40px;
 			margin-right: -40px;
@@ -1404,6 +1476,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 									/storage/releases/4.3/images/web-export-single-threaded-2x.webp 2x
 								"
 								alt="Image of the FBX importer."
+								draggable="false"
 							/>
 						</div>
 					</godot-release-box>
@@ -1464,6 +1537,24 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							<video class="release-video" autoplay loop muted poster="/storage/releases/4.3/images/pixel-snapping-2d.webp">
 								<source src="/storage/releases/4.3/video/pixel-snapping-2d.webm" type="video/webm" />
 							</video>
+							<div class="media-overlay">
+								<div class="media-overlay-image _2d-pixel-art-stability-overlay-setting">
+									<img
+										src="/storage/releases/4.3/images/pixel-snapping-2d-setting.webp"
+										srcset="/storage/releases/4.3/images/pixel-snapping-2d-setting-2x.webp 2x"
+										alt="Pixel Snapping 2D setting in Godot."
+										draggable="false"
+									/>
+								</div>
+
+								<div class="media-overlay-text _2d-pixel-art-stability-overlay-before">
+									Before
+								</div>
+
+								<div class="media-overlay-text _2d-pixel-art-stability-overlay-after">
+									After
+								</div>
+							</div>
 						</div>
 					</godot-release-box>
 				</div>
@@ -1691,6 +1782,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 									/storage/releases/4.3/images/fbx-import-4x.webp 4x
 								"
 								alt="Image of the FBX importer."
+								draggable="false"
 							/>
 						</div>
 					</godot-release-box>
