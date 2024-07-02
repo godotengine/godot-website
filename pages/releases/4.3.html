@@ -455,9 +455,15 @@ header_text: "Godot Engine 4.3"
 	.release .release-image {
 		height: 100%;
 		width: 100%;
-		object-fit: contain;
 		position: relative;
 	}
+	.release .release-video {
+		object-fit: contain;
+	}
+	.release .release-image {
+		object-fit: cover;
+	}
+	.release .release-video--background,
 	.release .release-image--background {
 		height: 100%;
 		width: 100%;
@@ -593,10 +599,12 @@ for (const title of gsap.utils.toArray(".release-section-title")) {
 for (let el of document.querySelectorAll(".release [slot='media'] img.release-image, .release [slot='media'] video.release-video")) {
 	const clone = el.cloneNode(true);
 	clone.ariaDisabled = true;
-	clone.classList.add("release-image--background");
 
 	if (clone instanceof HTMLVideoElement) {
+		clone.classList.add("release-video--background");
 		clone.autoplay = false;
+	} else {
+		clone.classList.add("release-image--background");
 	}
 
 	el.insertAdjacentElement("beforebegin", clone);
