@@ -478,6 +478,37 @@ header_text: "Godot Engine 4.3"
 		clip-path: inset(0px);
 	}
 
+	.release .release-donate-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.release .release-donate {
+		display: flex;
+		width: 50%;
+		height: 25%;
+		background-color: var(--color-top);
+		text-decoration: none;
+		border-radius: 99999px;
+		align-items: center;
+		justify-content: center;
+		font-weight: 800;
+		font-size: 30px;
+		border-bottom: 5px solid var(--color-bottom);
+		box-shadow: 0 30px 0px var(--color-bottom);
+		user-select: none;
+		-webkit-user-drag: none;
+		user-drag: none;
+	}
+	.release .release-donate:focus {
+		outline: none;
+	}
+	.release .release-donate:active {
+		transform:
+			translateY(25px);
+		box-shadow: 0 5px 0px var(--color-bottom);
+	}
+
 	/* Overlays */
 	._2d-pixel-art-stability-overlay-setting {
 		top: 0;
@@ -1332,8 +1363,15 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							may find more suitable.
 						</p>
 					</div>
-					<div slot="media">
-						TODO: replace me
+					<div slot="media" class="release-donate-container">
+						<a
+							class="release-donate"
+							href="https://fund.godotengine.org/#membership"
+							target="_blank"
+							draggable="false"
+						>
+							<span>Donate</span>
+						</a>
 					</div>
 				</godot-release-box>
 			</div> <!-- #foundation -->
