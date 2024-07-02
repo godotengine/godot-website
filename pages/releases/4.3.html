@@ -384,6 +384,19 @@ header_text: "Godot Engine 4.3"
 		-webkit-text-stroke: 2px black;
 	}
 
+	.release godot-release-box [slot="media"] {
+		width: 100%;
+		height: 100%;
+	}
+
+	.release godot-release-box p {
+		hyphens: auto;
+	}
+
+	.release godot-release-box p code {
+		hyphens: none;
+	}
+
 	.release .release-grid {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(300px, 1fr));
@@ -419,8 +432,9 @@ header_text: "Godot Engine 4.3"
 		}
 	}
 
-	.release .release-video {
-		height: 500px;
+	.release .release-video,
+	.release .release-image {
+		height: 100%;
 		width: 100%;
 		object-fit: cover;
 	}
@@ -605,13 +619,13 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 			grid-template-areas:
 				"content media";
 			grid-template-columns:
-				1fr 1fr;
+				1fr auto;
 		}
 		.box.box--media.box--left {
 			grid-template-areas:
 				"media content";
 			grid-template-columns:
-				1fr 1fr;
+				auto 1fr;
 		}
 		.box.box--media.box--bottom {
 			grid-template-areas:
@@ -619,12 +633,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				"media";
 			grid-template-columns:
 				1fr;
+			grid-template-rows:
+				1fr
+				auto;
 		}
 		.box.box--media.box--top {
 			grid-template-areas:
 				"media"
 				"content";
 			grid-template-columns:
+				1fr;
+			grid-template-rows:
+				auto
 				1fr;
 		}
 		@container (max-width: 700px) {
@@ -635,6 +655,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					"media";
 				grid-template-columns:
 					1fr;
+				grid-template-rows:
+					auto
+					500px;
 			}
 			.box.box--media.box--left {
 				grid-template-areas:
@@ -642,6 +665,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					"content";
 				grid-template-columns:
 					1fr;
+				grid-template-rows:
+					500px
+					auto;
 			}
 		}
 
@@ -672,6 +698,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 
 		.box .default-content {
 			grid-area: def;
+			display: flex;
+			align-items: center;
 		}
 
 		.box .slot {
@@ -807,6 +835,18 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				auto
 				auto;
 		}
+		.box.box--title.box--default-content.box--link .content {
+			grid-template-areas:
+				"title"
+				"def"
+				"link";
+			grid-template-columns:
+				1fr;
+			grid-template-rows:
+				auto
+				1fr
+				auto;
+		}
 		.box.box--top.box--blockquote.box--default-content .content,
 		.box.box--bottom.box--blockquote.box--default-content .content {
 			grid-template-areas:
@@ -880,6 +920,16 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 				auto;
 		}
 		@container (max-width: 700px) {
+			.box.box--right .media {
+				/* Becomes "bottom". */
+				margin-left: -40px;
+				margin-top: 0;
+			}
+			.box.box--left .media {
+				/* Becomes "top". */
+				margin-right: -40px;
+				margin-bottom: 0;
+			}
 			.box.box--top.box--title.box--blockquote.box--default-content .content,
 			.box.box--bottom.box--title.box--blockquote.box--default-content .content {
 				grid-template-areas:
@@ -1464,6 +1514,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						anchor
 						type="left"
 						inverted
+						link="https://github.com/godotengine/godot/pull/87250"
 					>
 						<div slot="title">
 							More keyframe manipulations
@@ -1551,6 +1602,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						id="display-d3d12-rendering-driver"
 						anchor
 						inverted
+						link="https://github.com/godotengine/godot/pull/70315"
 					>
 						<div slot="title">
 							Direct3D 12 rendering driver
@@ -1572,12 +1624,13 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					<godot-release-box
 						id="display-wayland"
 						anchor
+						link="https://github.com/godotengine/godot/pull/86180"
 					>
 						<div slot="title">
 							Wayland support for Linux/*BSD
 						</div>
 						<div slot="blockquote">
-							We followed the <span class="highlight">Way</span>
+							Following the <span class="highlight">Way</span>
 						</div>
 						<div>
 							<p>
@@ -1602,6 +1655,8 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						id="editor-fbx-native-support"
 						inverted
 						anchor
+						type="bottom"
+						link="https://github.com/godotengine/godot/pull/81746"
 					>
 						<div slot="title">
 							FBX native support
@@ -1615,12 +1670,24 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 								from an industry-standard file format more easily.
 							</p>
 						</div>
+						<div slot="media">
+							<img
+								class="release-image"
+								src="/storage/releases/4.3/images/fbx-import.webp"
+								srcset="
+									/storage/releases/4.3/images/fbx-import-2x.webp 2x,
+									/storage/releases/4.3/images/fbx-import-4x.webp 4x
+								"
+								alt="Image of the FBX importer."
+							/>
+						</div>
 					</godot-release-box>
 
 					<godot-release-box
 						id="editor-filesystem-bottom"
 						anchor
 						type="top"
+						link="https://github.com/godotengine/godot/pull/86765"
 					>
 						<div slot="title">
 							<span class="highlight">FileSystem dock can be moved</span> to the <span class="highlight">bottom</span> section of the editor
@@ -1816,7 +1883,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							Depth-based fog
 						</div>
 						<div slot="blockquote">
-							TODO: replace me
+							I dream of <span class="highlight">inaudible mounts</span>
 						</div>
 						<div>
 							<p>
@@ -1893,12 +1960,13 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						id="web-audio-samples"
 						class="span-2"
 						anchor
+						link="https://godotengine.org/article/progress-report-web-export-in-4-3/#sample-playback-to-the-rescue"
 					>
 						<div slot="title">
 							Web Audio samples
 						</div>
 						<div slot="blockquote">
-							<span class="highlight">Enhanced audio</span>, rock on!
+							<span class="highlight">Enhanced audio</span>, rock on!
 						</div>
 						<div>
 							<p>
