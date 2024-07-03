@@ -47,12 +47,10 @@ header_text: "Godot Engine 4.3"
 	}
 
 	@media (prefers-reduced-motion) {
-		/* styles to apply if a user's device settings are set to reduced motion */
 		html {
 			scroll-behavior: auto;
 		}
 	}
-
 
 	/*
 	 * HEADER
@@ -463,6 +461,12 @@ header_text: "Godot Engine 4.3"
 	.release .release-image {
 		object-fit: cover;
 	}
+	.release .release-image.release-image--align-top {
+		object-position: top center;
+	}
+	.release .release-image.release-image--align-bottom {
+		object-position: bottom center;
+	}
 	.release .release-video--background,
 	.release .release-image--background {
 		height: 100%;
@@ -479,11 +483,13 @@ header_text: "Godot Engine 4.3"
 	}
 
 	.release .release-donate-container {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 	.release .release-donate {
+		position: relative;
 		display: flex;
 		width: 50%;
 		height: 25%;
@@ -494,11 +500,17 @@ header_text: "Godot Engine 4.3"
 		justify-content: center;
 		font-weight: 800;
 		font-size: 30px;
-		border-bottom: 5px solid var(--color-bottom);
+		border-bottom: 0 solid var(--color-bottom);
 		box-shadow: 0 30px 0px var(--color-bottom);
 		user-select: none;
 		-webkit-user-drag: none;
 		user-drag: none;
+		transform:
+			translateZ(1px);
+		transition:
+			transform 0.1s ease-out
+			box-shadow 0.1 ease-out;
+		isolation: isolate;
 	}
 	.release .release-donate:focus {
 		outline: none;
@@ -507,6 +519,55 @@ header_text: "Godot Engine 4.3"
 		transform:
 			translateY(25px);
 		box-shadow: 0 5px 0px var(--color-bottom);
+	}
+	@media (prefers-reduced-motion) {
+		.release .release-donate {
+			transition: none;
+		}
+	}
+	.release .release-donate-shadow {
+		position: absolute;
+		top: 37.5%;
+		left: 25%;
+		display: block;
+		background-color: black;
+		width: 50%;
+		height: 25%;
+		border-radius: 99999px;
+		filter:
+			blur(5px)
+			;
+		transform:
+			translateY(30px)
+			;
+	}
+	.release .release-donate-logo {
+		position: absolute;
+		transform-origin: center center;
+	}
+	.release .release-donate-logo--top {
+		transform:
+			scale(0.45)
+			translateX(-25cqw)
+			translateY(-75cqh)
+			rotate(185deg)
+			;
+	}
+	.release .release-donate-logo--bottom {
+		transform:
+			scale(0.25)
+			translateX(80cqw)
+			translateY(80cqh)
+			rotate(-40deg)
+			;
+	}
+	.release .release-donate-logo--beside {
+		transform:
+			scale(0.15)
+			translateX(-135cqw)
+			translateY(80cqh)
+			rotate(10deg)
+			;
 	}
 
 	/* Overlays */
@@ -1346,7 +1407,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 					type="right"
 				>
 					<div slot="blockquote">
-						Your <span class="highlight">donations</span> did this!
+						Your <span class="highlight">donations</span> did this!
 					</div>
 					<div>
 						<p>
@@ -1364,6 +1425,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						</p>
 					</div>
 					<div slot="media" class="release-donate-container">
+						<!--<div class="release-donate-shadow" aria-disabled="true"></div>-->
 						<a
 							class="release-donate"
 							href="https://fund.godotengine.org/#membership"
@@ -1372,6 +1434,21 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						>
 							<span>Donate</span>
 						</a>
+						<img
+							src="/assets/press/icon_monochrome_dark.svg"
+							class="release-donate-logo release-donate-logo--top"
+							aria-disabled="true"
+						/>
+						<img
+							src="/assets/press/icon_monochrome_dark.svg"
+							class="release-donate-logo release-donate-logo--bottom"
+							aria-disabled="true"
+						/>
+						<img
+							src="/assets/press/icon_monochrome_dark.svg"
+							class="release-donate-logo release-donate-logo--beside"
+							aria-disabled="true"
+						/>
 					</div>
 				</godot-release-box>
 			</div> <!-- #foundation -->
@@ -1416,7 +1493,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							Interactive music support
 						</div>
 						<div slot="blockquote">
-							Like music to <span class="highlight">your ears</span>
+							Like music to <span class="highlight">your ears</span>
 						</div>
 						<div>
 							<p>
@@ -1468,7 +1545,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							</p>
 						</div>
 						<div slot="media">
-							TODO: replace me
+							<video class="release-video" autoplay loop muted poster="/storage/releases/4.3/images/visual-shader-overhaul.webp">
+								<source src="/storage/releases/4.3/video/visual-shader-overhaul.webm" type="video/webm" />
+							</video>
 						</div>
 					</godot-release-box>
 
@@ -1516,7 +1595,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						</div>
 						<div slot="media">
 							<img
-								class="release-image"
+								class="release-image release-image--align-top"
 								src="/storage/releases/4.3/images/web-export-single-threaded.webp"
 								srcset="
 									/storage/releases/4.3/images/web-export-single-threaded-2x.webp 2x
@@ -1635,7 +1714,16 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							</p>
 						</div>
 						<div slot="media">
-							TODO: replace me
+							<img
+								class="release-image release-image--align-top"
+								src="/storage/releases/4.3/images/skeleton-import-settings.webp"
+								srcset="
+									/storage/releases/4.3/images/skeleton-import-settings-2x.webp 2x,
+									/storage/releases/4.3/images/skeleton-import-settings-3x.webp 3x
+								"
+								alt="Image of the new skeleton import settings."
+								draggable="false"
+							/>
 						</div>
 					</godot-release-box>
 
@@ -1803,7 +1891,7 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						</div>
 						<div slot="media">
 							<img
-								class="release-image"
+								class="release-image release-image--align-bottom"
 								src="/storage/releases/4.3/images/fbx-import.webp"
 								srcset="
 									/storage/releases/4.3/images/fbx-import-2x.webp 2x,
@@ -2010,12 +2098,13 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 						class="span-2"
 						anchor
 						inverted
+						link="https://github.com/godotengine/godot/pull/84792"
 					>
 						<div slot="title">
 							Depth-based fog
 						</div>
 						<div slot="blockquote">
-							Give me that <span class="highlight">old-school look</span>
+							Has anyone seen <span class="highlight">Cheryl?</span>
 						</div>
 						<div>
 							<p>
@@ -2023,7 +2112,9 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							</p>
 						</div>
 						<div slot="media">
-							TODO: replace me
+							<video class="release-video" autoplay loop muted poster="/storage/releases/4.3/images/depth-fog.png">
+								<source src="/storage/releases/4.3/video/depth-fog.webm" type="video/webm" />
+							</video>
 						</div>
 					</godot-release-box>
 
@@ -2057,9 +2148,6 @@ customElements.define("godot-release-box", class GodotReleaseBox extends Propert
 							<p>
 								TODO: replace me
 							</p>
-						</div>
-						<div slot="media">
-							TODO: replace me
 						</div>
 					</godot-release-box>
 
