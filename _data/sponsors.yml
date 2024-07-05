@@ -53,3 +53,6 @@ silver:
   - name: "Null"
     link: "https://null.com/"
     image: "https://fund.godotengine.org/static/logos/null.svg"
+  - name: Copia Wealth Studios
+    link: "https://copiawealthstudios.com/"
+    image: "https://fund.godotengine.org/static/logos/copia-wealth-studios.svg"
