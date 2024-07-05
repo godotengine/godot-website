@@ -1,0 +1,144 @@
+---
+permalink: /releases/4.3/index.html
+title: "Godot Engine 4.3"
+description: "Godot Engine 4.3"
+layout: release
+header_text: "Godot Engine 4.3"
+---
+<link rel="stylesheet" href="/assets/css/releases/4.3.css" />
+<script type="module" src="/assets/js/releases/4.3.mjs"></script>
+
+<div class="release-header">
+	<div class="release-header-content">
+		<!-- Important to separate `.release-header-content` from `.container`. -->
+		<div class="container">
+			<h1 class="header-main-title"><span class="header-main-title-text">Godot 4.3 RELEASE</span></h1>
+			<div class="header-content flex eqsize responsive" style="gap: 20px;">
+				<div class="header-text">
+					<h2 class="header-title">TODO: replace me</h2>
+					<p>
+						TODO: replace me
+					</p>
+				</div>
+				<div class="header-numbers">
+					<div class="header-numbers-entry header-numbers-commits">
+						{% assign version_max = 2915 %}
+						{% assign versions = "4.3,2915|4.2,1876|4.1,1464" | split: "|" %}
+
+						{% for version in versions %}
+						{% assign version_data = version | split: "," %}
+						{% assign version_number = version_data[0] %}
+						{% assign version_value = version_data[1] %}
+						<div class="header-numbers-line {% unless forloop.first %}inactive{% endunless %}"
+							data-value="{{version_value}}" data-max="{{version_max}}">
+							<span class="version">{{version_number}}</span>
+							<div class="bar"></div>
+							<span class="number">0</span>{% if forloop.first %}&nbsp;<span class="text">commits</span>{%
+							endif %}
+						</div>
+						{% endfor %}
+					</div>
+					<div class="header-numbers-entry header-numbers-contributors">
+						{% assign version_max = 450 %}
+						{% assign versions = "4.3,450|4.2,359|4.1,311" | split: "|" %}
+						{% for version in versions %}
+						{% assign version_data = version | split: "," %}
+						{% assign version_number = version_data[0] %}
+						{% assign version_value = version_data[1] %}
+						<div class="header-numbers-line {% unless forloop.first %}inactive{% endunless %}"
+							data-value="{{version_value}}" data-max="{{version_max}}">
+							<span class="version">{{version_number}}</span>
+							<div class="bar"></div>
+							<span class="number">0</span>{% if forloop.first %}&nbsp;<span
+								class="text">contributors</span>{%
+							endif %}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="release-content">
+	<div id="video" class="section section-video">
+		<div class="container">
+			<div class="release-card-container">
+				<div class="release-card span-3">
+					<div class="release-card-content">
+						<div class="c-blockquote">
+							TODO: replace me
+						</div>
+						<div class="c-content">
+							<div>TODO: replace me</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #video -->
+
+	<div id="foundation" class="section section-foundation">
+		<div class="container">
+			<div class="release-card-container">
+				<div class="release-card span-3">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							TODO: replace me
+						</h4>
+						<div class="c-content">
+							<div>TODO: replace me</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #foundation -->
+
+	<div id="outstanding" class="section section-outstanding">
+		<div class="container">
+			<h3 class="section-title"><a href="#outstanding">Outstanding features</a></h3>
+			<div class="release-card-container">
+				<div id="outstanding-interactive-music-support" class="release-card media-top">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							<a href="#outstanding-interactive-music-support">Interactive music support</a>
+						</h4>
+						<div class="c-blockquote">
+							Like music to <span class="highlight">your ears</span>
+						</div>
+						<div class="c-content">
+							<div>TODO: replace me</div>
+						</div>
+						<a href="" class="c-link"></a>
+					</div>
+					<div class="release-card-media">
+						<video class="release-card-video" autoplay loop muted
+							poster="/storage/releases/4.3/images/visual-shader-overhaul.webp">
+							<source src="/storage/releases/4.3/video/visual-shader-overhaul.webm" type="video/webm" />
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #outstanding -->
+
+	<div id="2d" class="section section-2d">
+		<div class="container">
+			<h3 class="section-title"><a href="#2d">2D</a></h3>
+			<div class="release-card-container">
+				<div class="release-card">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							<a href="">TODO: replace me</a>
+						</h4>
+						<div class="c-content">
+							<div>TODO: replace me</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #2d -->
+</div>

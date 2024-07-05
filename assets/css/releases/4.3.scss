@@ -1,0 +1,339 @@
+---
+---
+
+@import "common/colors";
+@import "common/release";
+
+$header-background-color: #25282B;
+$header-background-image: url("/storage/releases/4.3/images/release-header-background.svg");
+$header-background-position: center left;
+$header-background-repeat: no-repeat;
+$header-logo-image: url("/storage/releases/4.3/images/release-logo.svg");
+$header-logo-position: center;
+$header-logo-repeat: no-repeat;
+$header-logo-height: 140px;
+$header-logo-size: contain;
+$header-gap-top: 80px;
+$header-gap-bottom: 80px;
+$header-content-color: white;
+$header-numbers-gap: 20px;
+$header-bar-height: 20px;
+$header-bar-commits-color: $color-godot-blue;
+$header-bar-commits-color-inactive: #487491;
+$header-bar-contributors-color: #F47E7A;
+$header-bar-contributors-color-inactive: #A66160;
+$header-bar-gap: 10px;
+$header-version-font-weight: 800;
+$header-overlap: 104px;
+
+$release-background: #CECECE;
+
+$section-hue-offset: 20;
+$sections: generate-sections(
+	$sections: (
+		"video",
+		"foundation",
+		"outstanding",
+		"2d"
+	),
+	$base-category: "foundation",
+	$base-color: $color-godot-blue,
+	$offset: $section-hue-offset
+);
+
+.release-container {
+	width: 100%;
+	height: 100%;
+	background-color: $release-background;
+
+	.release-header {
+		background-color: $header-background-color;
+		background-image: $header-background-image;
+		background-position: $header-background-position;
+		background-repeat: $header-background-repeat;
+
+		.release-header-content {
+			padding-top: $header-gap-top;
+			padding-bottom: calc($header-gap-bottom * 2);
+
+			.header-main-title {
+				background-image: $header-logo-image;
+				background-repeat: $header-logo-repeat;
+				background-position: $header-logo-position;
+				background-size: $header-logo-size;
+				height: $header-logo-height;
+
+				.header-main-title-text {
+					display: none;
+				}
+			}
+
+			.header-content {
+				color: $header-content-color;
+
+				.header-text {
+					> .header-title {
+						color: $header-content-color;
+					}
+				}
+
+				.header-numbers {
+					.header-numbers-commits {
+						--bar-color: #{$header-bar-commits-color};
+						.header-numbers-line.inactive {
+							--bar-color: #{$header-bar-commits-color-inactive};
+						}
+					}
+
+					.header-numbers-contributors {
+						--bar-color: #{$header-bar-contributors-color};
+						.header-numbers-line.inactive {
+							--bar-color: #{$header-bar-contributors-color-inactive};
+						}
+					}
+
+					.header-numbers-entry {
+						margin-bottom: $header-numbers-gap;
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+
+						.header-numbers-line {
+							font-variant-numeric: tabular-nums;
+
+							.version {
+								font-weight: $header-version-font-weight;
+								margin-right: $header-bar-gap;
+							}
+
+							.bar {
+								display: inline-block;
+								height: $header-bar-height;
+								background-color: var(--bar-color, #{$color-godot-blue});
+								transform: translateY(2px);
+								margin-right: $header-bar-gap;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.release-content {
+		$grid-gap: 20px;
+
+		position: relative;
+		top: calc(-1 * $header-overlap);
+		margin-top: 0;
+		color: black;
+
+		.release-card-container {
+			display: grid;
+			width: 100%;
+			gap: $grid-gap;
+			grid-template-columns:
+				repeat(3, minmax(250px, 1fr));
+			grid-auto-flow: row dense;
+
+			&.two-columns {
+				grid-template-columns:
+					repeat(2, minmax(250px, 1fr));
+			}
+
+			@media screen and (max-width: 900px) {
+				grid-template-columns:
+					repeat(2, minmax(250px, 1fr));
+			}
+
+			@media screen and (max-width: 600px) {
+				&,
+				&.two-columns {
+					grid-template-columns:
+						minmax(250px, 1fr);
+				}
+			}
+		}
+
+		.release-card {
+			$padding: 50px;
+
+			container-type: inline-size;
+			container-name: release-card;
+
+			display: grid;
+			gap: $grid-gap;
+			grid-template-areas:
+				"contnt";
+
+			border-radius: $padding;
+			padding: $padding;
+			background-color: white;
+			contain: paint;
+
+			&.media-top {
+				grid-template-areas:
+					"media"
+					"contnt";
+				grid-template-rows:
+					minmax(auto, 30vh)
+					auto;
+			}
+			&.media-bottom {
+				grid-template-areas:
+					"contnt"
+					"media";
+				grid-template-rows:
+					auto
+					minmax(auto, 30vh);
+			}
+
+			.release-card-content {
+				grid-area: contnt;
+
+				display: grid;
+				gap: $grid-gap;
+
+				&.inverted {
+					background-color: linear-gradient(
+						from top,
+						var(--color-top),
+						var(--color-bottom)
+					);
+
+					.release-card-title {
+						color: white;
+					}
+				}
+
+				$container-break: 500px;
+
+				&:has(.c-title):has(.c-blockquote):has(.c-content) {
+					grid-template-areas:
+						"title contnt"
+						"quote contnt"
+						"quote link";
+
+					@container release-card (width < #{$container-break}) {
+						grid-template-areas:
+							"title"
+							"quote"
+							"contnt"
+							"link";
+					}
+				}
+				&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
+					grid-template-areas:
+						"quote contnt"
+						"quote link";
+
+					@container release-card (width < #{$container-break}) {
+						grid-template-areas:
+							"quote"
+							"contnt"
+							"link";
+					}
+				}
+				&:has(.c-title):has(.c-blockquote):not(:has(.c-content)) {
+					grid-template-areas:
+						"title"
+						"quote"
+						"link";
+				}
+				&:has(.c-title):not(:has(.c-blockquote)):has(.c-content) {
+					grid-template-areas:
+						"title"
+						"contnt"
+						"link";
+				}
+
+				.c-title {
+					grid-area: title;
+					margin-bottom: 0;
+					color: var(--color-top);
+					font-size: 20px;
+					font-weight: 700;
+
+					a {
+						color: var(--color-top);
+						text-decoration: none;
+					}
+				}
+
+				.c-blockquote {
+					grid-area: quote;
+					font-size: 30px;
+					font-weight: 800;
+				}
+
+				.c-content {
+					grid-area: contnt;
+				}
+
+				.c-link {
+					grid-area: link;
+					&::before {
+						content: "Read more +"
+					}
+				}
+			}
+
+			.release-card-media {
+				grid-area: media;
+
+				margin-top: -$padding;
+				margin-left: -$padding;
+				margin-right: -$padding;
+
+				max-height: 33vh;
+
+				.release-card-video {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					object-position: center;
+				}
+			}
+		}
+
+		.section {
+			margin-bottom: 40px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			@each $section-name, $section-colors in $sections {
+				&.section-#{$section-name} {
+					--color-top: #{map-get($section-colors, "color-top")};
+					--color-bottom: #{map-get($section-colors, "color-bottom")};
+				}
+			}
+
+			.section-title,
+			.section-title a {
+				color: var(--color-top);
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.span-3 {
+	grid-column: span 3;
+
+	@media screen and (max-width: 700px) {
+		grid-column: span 2;
+	}
+
+	@media screen and (max-width: 350px) {
+		grid-column: span 1;
+	}
+}
+
+.span-2 {
+	grid-column: span 3;
+
+	@media screen and (max-width: 350px) {
+		grid-column: span 1;
+	}
+}

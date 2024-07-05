@@ -1,0 +1,24 @@
+@function offset-hue($color, $offset, $i: 1) {
+	@return adjust-hue($color, $offset * $i);
+}
+
+/**
+ * From a list $sections (video, foundation, outstanding, _2d),
+ * it will return a map of sections with the $base-category being assigned with
+ * a specific $base-color, and will $offset each section by n degrees.
+ */
+@function generate-sections($sections, $base-category, $base-color, $offset) {
+	$return-value: ();
+	$base-category-i: index($sections, $base-category);
+	@each $section in $sections {
+		$i: index($sections, $section);
+		$diff: $i - $base-category-i;
+		$return-value: map-merge($return-value, (
+			#{$section}: (
+				color-top: offset-hue($base-color, $offset, $diff),
+				color-bottom: offset-hue($base-color, $offset, $diff + 1)
+			)
+		));
+	}
+	@return $return-value;
+}
