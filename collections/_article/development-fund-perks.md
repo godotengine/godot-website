@@ -42,6 +42,7 @@ Make sure you are subscribed and logged in to the [Development Fund](https://fun
 ## Not ready to become a member yet?
 
 While this won't give you a fancy badge or role, we have recently added the option for one-time donations. With this update, we also switched to Stripe as our payment provider to offer the option to donate via credit card in addition to PayPal.
+For those of you that have been with the project for a long time already, you might remember our [Patreon](patreon.com/godotengine). In case you haven't already, we encourage you to move your donation over to this self-hosted solution, as we receive more of your contributions here without the provider fees. Nonetheless, the page will stay up for the time being and also connect to the Discord mentioned above.
 
 Thank you for ensuring that we can keep developing the Godot Engine!
 
