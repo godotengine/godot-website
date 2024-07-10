@@ -6,6 +6,7 @@
 
 $column-max-width: 400px;
 $column-min-width: 300px;
+$container-break: 400px;
 
 $anchor-offset: 75px;
 
@@ -211,13 +212,13 @@ $sections: generate-sections(
 					}
 				}
 
-				$container-break: 500px;
-
 				&:has(.c-title):has(.c-blockquote):has(.c-content) {
 					grid-template-areas:
 						"title contnt"
 						"quote contnt"
 						"quote link";
+					grid-template-columns:
+						2fr 3fr;
 
 					@container release-card (width < #{$container-break}) {
 						grid-template-areas:
@@ -225,6 +226,8 @@ $sections: generate-sections(
 							"quote"
 							"contnt"
 							"link";
+						grid-template-columns:
+							1fr;
 					}
 				}
 				&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
@@ -273,6 +276,15 @@ $sections: generate-sections(
 
 				.c-content {
 					grid-area: contnt;
+
+					& > div > p {
+						&:first-of-type {
+							margin-top: 0;
+						}
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
 				}
 
 				.c-link {
@@ -293,13 +305,26 @@ $sections: generate-sections(
 				max-height: 33vh;
 				contain: paint;
 
-				.release-card-video {
+				.release-card-video,
+				.release-card-image {
+					position: relative;
+					top: 0;
+					left: 0;
 					width: 100%;
 					height: 100%;
 					object-fit: contain;
 					object-position: center;
+
+					&.position-top-center {
+						object-position: top center;
+					}
+					&.position-bottom-center {
+						object-position: bottom center;
+					}
 				}
-				.release-card-video-background {
+
+				.release-card-video-background,
+				.release-card-image-background {
 					position: absolute;
 					top: 0;
 					left: 0;

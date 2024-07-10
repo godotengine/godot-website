@@ -39,15 +39,17 @@ for (const el of ["commits", "contributors"]) {
 	}
 }
 
-// Video backgrounds
-/** @type {HTMLVideoElement[]} */
-const videoElements = document.querySelectorAll(".release-card-video");
-for (const videoElement of videoElements) {
-	console.log(videoElement);
-	/** @type {HTMLVideoElement} */
-	const clone = videoElement.cloneNode(true);
-	clone.autoplay = false;
-	clone.classList.remove("release-card-video");
-	clone.classList.add("release-card-video-background");
-	videoElement.insertAdjacentElement("beforebegin", clone);
+// Media backgrounds
+const mediaElements = document.querySelectorAll(".release-card-video,.release-card-image");
+for (const mediaElement of mediaElements) {
+	const clone = mediaElement.cloneNode(true);
+	if (clone instanceof HTMLVideoElement) {
+		clone.autoplay = false;
+		clone.classList.remove("release-card-video");
+		clone.classList.add("release-card-video-background");
+	} else {
+		clone.classList.remove("release-card-image");
+		clone.classList.add("release-card-image-background");
+	}
+	mediaElement.insertAdjacentElement("beforebegin", clone);
 }
