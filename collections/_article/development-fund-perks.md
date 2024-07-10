@@ -7,7 +7,7 @@ image: /storage/blog/covers/development-fund-perks.webp
 date: 2024-07-10 12:00:00
 ---
 
-We have added new benefits for members of the Godot Development Fund! On our official forum, a special badge is now available as a thank you for your continued support. Likewise, you can get a custom role on our brand new official [Discord server](https://discord.com/invite/7HtykRQ4Rg)! Read the instructions below for connecting your accounts.
+We have added new benefits for members of the Godot Development Fund! On our [official forum](https://forum.godotengine.org/), a special badge is now available as a thank you for your continued support. Likewise, you can get a custom role on our brand new official [Discord server](https://discord.com/invite/7HtykRQ4Rg)! Read the instructions below for connecting your accounts.
 
 Not a fund member yet? [Subscribe now!](https://fund.godotengine.org/#membership)
 
