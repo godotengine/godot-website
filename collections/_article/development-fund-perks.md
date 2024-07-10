@@ -19,7 +19,7 @@ The forum badges are assigned automatically to your Godot account when you becom
 
 ![Badge with a golden Godot logo and the text "Fund Member - Member of the Development Fund", awarded to 47 users](/storage/blog/development-fund-perks/forum-badge.webp)
 
-Already a Development Fund member but your badge does not show up? Make sure that you have signed in at least once to the [Development Fund](https://fund.godotengine.org/#membership). It may take up to 24 hours for the badge to appear on the forum.
+If you are already a Development Fund member but your badge does not show up, make sure that you have signed in at least once to the [Development Fund](https://fund.godotengine.org/#membership) website. It may take up to 24 hours for the badge to appear on the forum.
 
 ### Discord Role
 
