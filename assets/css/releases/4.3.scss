@@ -39,8 +39,17 @@ $sections: generate-sections(
 	$sections: (
 		"video",
 		"foundation",
+		"download",
 		"outstanding",
-		"2d"
+		"2d",
+		"animation",
+		"dotnet",
+		"display",
+		"editor",
+		"gdscript",
+		"rendering",
+		"web",
+		"xr"
 	),
 	$base-category: "foundation",
 	$base-color: $color-godot-blue,
