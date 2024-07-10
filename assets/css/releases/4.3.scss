@@ -54,7 +54,7 @@ $sections: generate-sections(
 
 		.release-header-content {
 			padding-top: $header-gap-top;
-			padding-bottom: calc($header-gap-bottom * 2);
+			padding-bottom: $header-gap-bottom * 2;
 
 			.header-main-title {
 				background-image: $header-logo-image;
@@ -124,7 +124,7 @@ $sections: generate-sections(
 		$grid-gap: 20px;
 
 		position: relative;
-		top: calc(-1 * $header-overlap);
+		top: -1 * $header-overlap;
 		margin-top: 0;
 		color: black;
 
