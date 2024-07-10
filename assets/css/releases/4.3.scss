@@ -230,7 +230,20 @@ $sections: generate-sections(
 						"quote contnt"
 						"quote link";
 					grid-template-columns:
-						2fr 3fr;
+						1fr 1fr;
+					grid-template-rows:
+						min-content
+						1fr
+						auto;
+
+					&:not(:has(.c-link)) {
+						grid-template-areas:
+							"title contnt"
+							"quote contnt";
+						grid-template-rows:
+							min-content
+							1fr;
+					}
 
 					@container release-card (width < #{$container-break}) {
 						grid-template-areas:
@@ -240,18 +253,61 @@ $sections: generate-sections(
 							"link";
 						grid-template-columns:
 							1fr;
+						grid-template-rows:
+							min-content
+							auto
+							1fr
+							auto;
+
+						&:not(:has(.c-link)) {
+							grid-template-areas:
+								"title"
+								"quote"
+								"contnt";
+							grid-template-rows:
+								min-content
+								auto
+								1fr;
+						}
 					}
 				}
 				&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
 					grid-template-areas:
 						"quote contnt"
 						"quote link";
+					grid-template-columns:
+						1fr 1fr;
+					grid-template-rows:
+						1fr
+						auto;
+
+					&:not(:has(.c-link)) {
+						grid-template-areas:
+							"quote contnt";
+						grid-template-rows:
+							1fr;
+					}
 
 					@container release-card (width < #{$container-break}) {
 						grid-template-areas:
 							"quote"
 							"contnt"
 							"link";
+						grid-template-columns:
+							1fr;
+						grid-template-rows:
+							min-content
+							1fr
+							auto;
+
+						&:not(:has(.c-link)) {
+							grid-template-areas:
+								"quote"
+								"contnt";
+							grid-template-rows:
+								min-content
+								1fr;
+						}
 					}
 				}
 				&:has(.c-title):has(.c-blockquote):not(:has(.c-content)) {
@@ -259,12 +315,38 @@ $sections: generate-sections(
 						"title"
 						"quote"
 						"link";
+					grid-template-rows:
+						min-content
+						1fr
+						auto;
+
+					&:not(:has(.c-link)) {
+						grid-template-areas:
+							"title"
+							"quote";
+						grid-template-rows:
+							min-content
+							1fr;
+					}
 				}
 				&:has(.c-title):not(:has(.c-blockquote)):has(.c-content) {
 					grid-template-areas:
 						"title"
 						"contnt"
 						"link";
+					grid-template-rows:
+						min-content
+						1fr
+						auto;
+
+					&:not(:has(.c-link)) {
+						grid-template-areas:
+							"title"
+							"contnt";
+						grid-template-rows:
+							min-content
+							1fr;
+					}
 				}
 
 				.c-title {
@@ -282,12 +364,13 @@ $sections: generate-sections(
 
 				.c-blockquote {
 					grid-area: quote;
-					font-size: 30px;
+					font-size: clamp(30px, 7cqw, 56px);
 					font-weight: 800;
 				}
 
 				.c-content {
 					grid-area: contnt;
+					font-size: clamp(14px, 7cqw, 19px);
 
 					& > div > p {
 						&:first-of-type {
