@@ -84,6 +84,8 @@ $sections: generate-sections(
 				}
 
 				.header-numbers {
+					min-width: 405px;
+
 					.header-numbers-commits {
 						--bar-color: #{$header-bar-commits-color};
 						.header-numbers-line.inactive {
