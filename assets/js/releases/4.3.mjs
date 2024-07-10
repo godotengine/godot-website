@@ -38,3 +38,16 @@ for (const el of ["commits", "contributors"]) {
 		timeline.add(localTimeline);
 	}
 }
+
+// Video backgrounds
+/** @type {HTMLVideoElement[]} */
+const videoElements = document.querySelectorAll(".release-card-video");
+for (const videoElement of videoElements) {
+	console.log(videoElement);
+	/** @type {HTMLVideoElement} */
+	const clone = videoElement.cloneNode(true);
+	clone.autoplay = false;
+	clone.classList.remove("release-card-video");
+	clone.classList.add("release-card-video-background");
+	videoElement.insertAdjacentElement("beforebegin", clone);
+}

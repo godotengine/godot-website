@@ -4,6 +4,11 @@
 @import "common/colors";
 @import "common/release";
 
+$column-max-width: 400px;
+$column-min-width: 300px;
+
+$anchor-offset: 75px;
+
 $header-background-color: #25282B;
 $header-background-image: url("/storage/releases/4.3/images/release-header-background.svg");
 $header-background-position: center left;
@@ -133,24 +138,24 @@ $sections: generate-sections(
 			width: 100%;
 			gap: $grid-gap;
 			grid-template-columns:
-				repeat(3, minmax(250px, 1fr));
+				repeat(3, minmax($column-min-width, 1fr));
 			grid-auto-flow: row dense;
 
 			&.two-columns {
 				grid-template-columns:
-					repeat(2, minmax(250px, 1fr));
+					repeat(2, minmax($column-min-width, 1fr));
 			}
 
-			@media screen and (max-width: 900px) {
+			@media screen and (max-width: (($column-max-width * 3) - ($grid-gap * 2))) {
 				grid-template-columns:
-					repeat(2, minmax(250px, 1fr));
+					repeat(2, minmax($column-min-width, 1fr));
 			}
 
-			@media screen and (max-width: 600px) {
+			@media screen and (max-width: (($column-max-width * 2) - ($grid-gap * 1))) {
 				&,
 				&.two-columns {
 					grid-template-columns:
-						minmax(250px, 1fr);
+						minmax($column-min-width, 1fr);
 				}
 			}
 		}
@@ -281,17 +286,30 @@ $sections: generate-sections(
 			.release-card-media {
 				grid-area: media;
 
+				position: relative;
 				margin-top: -$padding;
 				margin-left: -$padding;
 				margin-right: -$padding;
-
 				max-height: 33vh;
+				contain: paint;
 
 				.release-card-video {
 					width: 100%;
 					height: 100%;
 					object-fit: contain;
 					object-position: center;
+				}
+				.release-card-video-background {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+					transform: scale(1.25);
+					filter: blur(5px);
+					z-index: -1;
 				}
 			}
 		}
@@ -321,11 +339,11 @@ $sections: generate-sections(
 .span-3 {
 	grid-column: span 3;
 
-	@media screen and (max-width: 700px) {
+	@media screen and (max-width: ($column-max-width * 2)) {
 		grid-column: span 2;
 	}
 
-	@media screen and (max-width: 350px) {
+	@media screen and (max-width: $column-max-width) {
 		grid-column: span 1;
 	}
 }
@@ -333,7 +351,16 @@ $sections: generate-sections(
 .span-2 {
 	grid-column: span 3;
 
-	@media screen and (max-width: 350px) {
+	@media screen and (max-width: $column-max-width) {
 		grid-column: span 1;
 	}
+}
+
+// Anchor offset
+[id]::before {
+	content: '';
+	display: block;
+	height: $anchor-offset;
+	margin-top: -$anchor-offset;
+	visibility: hidden;
 }
