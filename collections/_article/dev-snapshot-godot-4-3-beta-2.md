@@ -16,8 +16,7 @@ This makes this 4.3 beta 2 snapshot a much stabler experience to test the many n
 
 Godot is a big piece of software and it's hard for contributors and even unit tests to validate all areas of the engine when developing new features or bug fixes. So we rely on extensive testing from the community to find engine issues while testing dev, beta, and RC snapshots in your projects, and reporting them so that we can fix them prior to tagging the 4.3-stable release.
 
-Please, consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
-Notably, we're now looking to add [one or more generalist programmers](https://godot.foundation/jobs/senior-generalist-c++-programmer/) to the team, and the Godot Foundation needs to increase its [monthly funding](https://fund.godotengine.org/) to be able to sustain multiple long-term contractors.
+Please, consider [supporting the project financially](https://fund.godotengine.org), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.3.beta2/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
