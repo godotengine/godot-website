@@ -15,7 +15,7 @@ Not a fund member yet? [Subscribe now!](https://fund.godotengine.org/#membership
 
 ### Forum Badge
 
-The forum badges are assigned automatically to your Godot account when you become a Development Fund member.
+The forum badges are assigned automatically to your Godot account when you become a Development Fund member. Make sure to use the same Godot account on the forum!
 
 ![Badge with a golden Godot logo and the text "Fund Member - Member of the Development Fund", awarded to 47 users](/storage/blog/development-fund-perks/forum-badge.webp)
 
