@@ -11,12 +11,6 @@ date: 2024-06-14 18:00:00
 | 📍 Location | Berlin, Germany                     |
 | 🌐 Website  | https://conference.godotengine.org/ |
 
-The moment you have waited for: the first batch of tickets has been released JUST NOW! 
-
-[**➡️ Buy tickets**](https://tickets.godotengine.org/foundation/godotcon-24/)
-
-Are you back? Alright, then let us tell you about the event we have in store for you. 
-
 After a very successful conference last year in Munich, we onboarded more lovely volunteers and expanded our offerings: this edition will have talks, workshops, a game/project showcase, and downtime activities around the venue.
 
 The event grounds we chose offer ample space to simply sit and chat, especially if the weather permits using the outdoor spaces. Scattered across the floors you will also have the option to buy food & drink. We will definitely also use the opportunity to sell limited edition Godot merchandise.
@@ -25,7 +19,7 @@ To facilitate business meetings, we are currently setting up our own matchmaking
 
 Have you thought about participating in the program yet? Take a look at our call for speakers and exhibitors below - this event is a collaborative effort between us and the community!
 
-[**➡️ Call for submissions**](https://talks.godotengine.org/godotcon-24/cfp), Deadline: 12th of July
+[**➡️ Call for submissions**](https://talks.godotengine.org/godotcon-24/cfp), Deadline: 31st of July
 
 Speaking of collaboration, we are actively looking for sponsors to support GodotCon not just monetarily, but also with content or products. If you or your company would be interested in learning more about the sponsorship ideas we have prepared, simply download this fact-sheet we put together and reach out to [godotcon@godotengine.org](mailto:godotcon@godotengine.org).
 
