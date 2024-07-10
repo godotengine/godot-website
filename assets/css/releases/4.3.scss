@@ -182,16 +182,28 @@ $sections: generate-sections(
 					"media"
 					"contnt";
 				grid-template-rows:
-					minmax(auto, 30vh)
-					auto;
+					auto
+					1fr;
+
+				.release-card-media {
+					margin-top: -$padding;
+					margin-left: -$padding;
+					margin-right: -$padding;
+				}
 			}
 			&.media-bottom {
 				grid-template-areas:
 					"contnt"
 					"media";
 				grid-template-rows:
-					auto
-					minmax(auto, 30vh);
+					1fr
+					auto;
+
+				.release-card-media {
+					margin-bottom: -$padding;
+					margin-left: -$padding;
+					margin-right: -$padding;
+				}
 			}
 
 			.release-card-content {
@@ -299,9 +311,6 @@ $sections: generate-sections(
 				grid-area: media;
 
 				position: relative;
-				margin-top: -$padding;
-				margin-left: -$padding;
-				margin-right: -$padding;
 				max-height: 33vh;
 				contain: paint;
 
@@ -382,10 +391,10 @@ $sections: generate-sections(
 }
 
 // Anchor offset
-[id]::before {
-	content: '';
-	display: block;
-	height: $anchor-offset;
-	margin-top: -$anchor-offset;
-	visibility: hidden;
-}
+// [id]::before {
+// 	content: '';
+// 	display: block;
+// 	height: $anchor-offset;
+// 	margin-top: -$anchor-offset;
+// 	visibility: hidden;
+// }
