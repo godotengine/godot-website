@@ -1,13 +1,13 @@
 ---
 title: "New Dev Fund Perks: Discord Role and Forum Badge"
-excerpt: "We are finally unveiling the new Godot forum which replaces our Q&A platform while unlocking many new features."
+excerpt: "Proudly display your support on our community platforms."
 categories: ["news"]
 author: Winston Yallow
 image: /storage/blog/covers/development-fund-perks.webp
 date: 2024-07-10 12:00:00
 ---
 
-We have added new benefits for members of the godot development fund! On our forum, a special Badge is now available as a thanks for your continued support. And you can also get a custom role on our new and official [discord server](https://discord.com/invite/7HtykRQ4Rg)! Read the instructions below for connecting your accounts.
+We have added new benefits for members of the Godot Development Fund! On our official forum, a special badge is now available as a thank you for your continued support. Likewise, you can get a custom role on our brandnew official [Discord server](https://discord.com/invite/7HtykRQ4Rg)! Read the instructions below for connecting your accounts.
 
 Not a fund member yet? [Subscribe now!](https://fund.godotengine.org/#membership)
 
@@ -15,22 +15,22 @@ Not a fund member yet? [Subscribe now!](https://fund.godotengine.org/#membership
 
 ### Forum Badge
 
-The forum badges are assigned automatically to your Godot account when you become a fund member.
+The forum badges are assigned automatically to your Godot account when you become a Development Fund member.
 
 ![Badge with a golden Godot logo and the text "Fund Member - Member of the Development Fund", awarded to 47 users](/storage/blog/development-fund-perks/forum-badge.webp)
 
-Already a fund member but your badge does not show up? Make sure that you have signed in at least once to the [development fund](https://fund.godotengine.org/#membership). It may take up to 24 hours for the badge to appear on the forum.
+Already a Development Fund member but your badge does not show up? Make sure that you have signed in at least once to the [development fund](https://fund.godotengine.org/#membership). It may take up to 24 hours for the badge to appear on the forum.
 
 ### Discord Role
 
-Make sure you are subscribed and logged in to the [development fund](https://fund.godotengine.org/#membership), then follow these instructions:
+Make sure you are subscribed and logged in to the [Development Fund](https://fund.godotengine.org/#membership), then follow these instructions:
 
 1. Authorize our Discord application by clicking "Connect with Discord":
    <div class="preview-image-container">
       <img alt='Screenshot of the Fund page showing the "Connect with Discord" option' src='/storage/blog/development-fund-perks/fund-website.webp'/>
       <img alt='Screenshot of discord prompt asking for Authorization' src='/storage/blog/development-fund-perks/discord-auth.webp'/>
    </div>
-2. In the options for our [discord server](https://discord.com/invite/7HtykRQ4Rg), find and select the "Linked Roles" option
+2. In the options for our [Discord server](https://discord.com/invite/7HtykRQ4Rg), find and select the "Linked Roles" option
    <div class="preview-image-container">
       <img alt='Screenshot of discord server menu with "Linked Roles" option' src='/storage/blog/development-fund-perks/discord-menu.webp'/>
    </div>
@@ -41,9 +41,9 @@ Make sure you are subscribed and logged in to the [development fund](https://fun
 
 ## Not ready to become a member yet?
 
-While this won't give you a fancy badge or role, we have recently added the option for one-time donations to our fund. With this update, we also switched to Stripe as our payment provider to offer the option to donate via credit card in addition to PayPal.
+While this won't give you a fancy badge or role, we have recently added the option for one-time donations. With this update, we also switched to Stripe as our payment provider to offer the option to donate via credit card in addition to PayPal.
 
-Thank you for supporting Godot!
+Thank you for ensuring that we can keep developing the Godot Engine!
 
 <style>
 	.preview-image-container {
