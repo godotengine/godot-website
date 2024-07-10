@@ -366,6 +366,10 @@ $sections: generate-sections(
 					grid-area: quote;
 					font-size: clamp(30px, 7cqw, 56px);
 					font-weight: 800;
+
+					.highlight {
+						color: var(--color-top);
+					}
 				}
 
 				.c-content {
