@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const RELEASE_NUMBERS_INITIAL_DELAY_S = 1;
 const RELEASE_NUMBERS_DURATION_S = 1;
 const RELEASE_NUMBERS_EASE_NAME = "power2.out";
-const RELEASE_NUMBERS_MAX_BAR_WIDTH_PX = 250;
+const RELEASE_NUMBERS_MAX_BAR_WIDTH_PX = 200;
 
 const releaseNumbersEase = gsap.parseEase(RELEASE_NUMBERS_EASE_NAME);
 const numberFormat = new Intl.NumberFormat("en-US");
