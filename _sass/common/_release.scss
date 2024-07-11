@@ -7,7 +7,7 @@
  * it will return a map of sections with the $base-category being assigned with
  * a specific $base-color, and will $offset each section by n degrees.
  */
-@function generate-sections($sections, $base-category, $base-color, $offset) {
+@function r-generate-sections($sections, $base-category, $base-color, $offset) {
 	$return-value: ();
 	$base-category-i: index($sections, $base-category);
 	@each $section in $sections {
@@ -25,4 +25,19 @@
 		));
 	}
 	@return $return-value;
+}
+
+@function r-desktop-mobile($sizes...) {
+	@return (
+		"desktop": nth($sizes, 1),
+		"mobile": nth($sizes, 2)
+	);
+}
+
+@function r-get-desktop($value) {
+	@return map-get($value, "desktop");
+}
+
+@function r-get-mobile($value) {
+	@return map-get($value, "mobile");
 }

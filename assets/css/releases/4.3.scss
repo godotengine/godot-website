@@ -10,6 +10,25 @@ $container-break: 400px;
 $grid-gap: 20px;
 $one-column-max-width: ($column-max-width * 2) - ($grid-gap * 1);
 $two-columns-max-width: ($column-max-width * 3) - ($grid-gap * 2);
+$mobile-max-width: 700px;
+
+@mixin screen-is-two-columns-wide() {
+	@media screen and (max-width: #{$two-columns-max-width}) {
+		@content;
+	}
+}
+
+@mixin screen-is-one-column-wide() {
+	@media screen and (max-width: #{$one-column-max-width}) {
+		@content;
+	}
+}
+
+@mixin is-mobile() {
+	@media screen and (max-width: #{$mobile-max-width}) {
+		@content;
+	}
+}
 
 $anchor-offset: 75px;
 
@@ -36,15 +55,16 @@ $header-version-font-weight: 800;
 $header-overlap: 104px;
 
 $release-background: #CECECE;
+$release-title-font-size: r-desktop-mobile(28px, 20px);
 
-$card-padding: 25px;
-$card-title-font-size-desktop: 21px;
-$card-title-font-size-mobile: 18px;
-$card-content-font-size-desktop: clamp(14px, 7cqw, 19px);
-$card-content-font-size-mobile: clamp(0.8em, 7cqw, 1em);
+$card-padding: r-desktop-mobile(25px, 15px);
+$card-title-font-size: r-desktop-mobile(21px, 18px);
+$card-content-font-size-min: r-desktop-mobile(14px, 0.8em);
+$card-content-font-size-val: r-desktop-mobile(7cqw, 4cqw);
+$card-content-font-size-max: r-desktop-mobile(19px, 1em);
 
 $section-hue-offset: 20;
-$sections: generate-sections(
+$sections: r-generate-sections(
 	$sections: (
 		"video",
 		"foundation",
@@ -69,13 +89,6 @@ $sections: generate-sections(
 	width: 100%;
 	height: 100%;
 	background-color: $release-background;
-
-	--card-title-font-size: #{$card-title-font-size-desktop};
-	--card-content-font-size: #{$card-content-font-size-desktop};
-	@media screen and (max-width: $one-column-max-width) {
-		--card-title-font-size: #{$card-title-font-size-mobile};
-		--card-content-font-size: #{$card-content-font-size-mobile};
-	}
 
 	.release-header {
 		background-color: $header-background-color;
@@ -172,12 +185,12 @@ $sections: generate-sections(
 					repeat(2, minmax($column-min-width, 1fr));
 			}
 
-			@media screen and (max-width: $two-columns-max-width) {
+			@include screen-is-two-columns-wide() {
 				grid-template-columns:
 					repeat(2, minmax($column-min-width, 1fr));
 			}
 
-			@media screen and (max-width: $one-column-max-width) {
+			@include screen-is-one-column-wide() {
 				&,
 				&.two-columns {
 					grid-template-columns:
@@ -195,8 +208,13 @@ $sections: generate-sections(
 			grid-template-areas:
 				"contnt";
 
-			border-radius: $card-padding;
-			padding: $card-padding;
+			border-radius: r-get-desktop($card-padding);
+			padding: r-get-desktop($card-padding);
+			@include is-mobile() {
+				border-radius: r-get-mobile($card-padding);
+				padding: r-get-mobile($card-padding);
+			}
+
 			background-color: white;
 			color: black;
 			contain: paint;
@@ -241,9 +259,17 @@ $sections: generate-sections(
 					1fr;
 
 				.release-card-media {
-					margin-top: -$card-padding;
-					margin-left: -$card-padding;
-					margin-right: -$card-padding;
+					$_padding: r-get-desktop($card-padding);
+					margin-top: -$_padding;
+					margin-left: -$_padding;
+					margin-right: -$_padding;
+
+					@include is-mobile() {
+						$_padding: r-get-mobile($card-padding);
+						margin-top: -$_padding;
+						margin-left: -$_padding;
+						margin-right: -$_padding;
+					}
 				}
 			}
 			&.media-bottom {
@@ -255,9 +281,17 @@ $sections: generate-sections(
 					auto;
 
 				.release-card-media {
-					margin-bottom: -$card-padding;
-					margin-left: -$card-padding;
-					margin-right: -$card-padding;
+					$_padding: r-get-desktop($card-padding);
+					margin-bottom: -$_padding;
+					margin-left: -$_padding;
+					margin-right: -$_padding;
+
+					@include is-mobile() {
+						$_padding: r-get-mobile($card-padding);
+						margin-bottom: -$_padding;
+						margin-left: -$_padding;
+						margin-right: -$_padding;
+					}
 				}
 			}
 
@@ -421,7 +455,7 @@ $sections: generate-sections(
 
 				.c-content {
 					grid-area: contnt;
-					font-size: var(--card-content-font-size);
+					font-size: clamp(var(--card-content-font-size-min), var(--card-content-font-size-val), var(--card-content-font-size-max));
 
 					& > p {
 						&:first-of-type {
@@ -510,8 +544,13 @@ $sections: generate-sections(
 
 			.section-title,
 			.section-title a {
+				font-size: r-get-desktop($release-title-font-size);
 				color: var(--color-top);
 				text-decoration: none;
+
+				@include is-mobile() {
+					font-size: r-get-mobile($release-title-font-size);
+				}
 			}
 		}
 	}
@@ -520,11 +559,11 @@ $sections: generate-sections(
 .span-3 {
 	grid-column: span 3;
 
-	@media screen and (max-width: $two-columns-max-width) {
+	@include screen-is-two-columns-wide() {
 		grid-column: span 2;
 	}
 
-	@media screen and (max-width: $one-column-max-width) {
+	@include screen-is-one-column-wide() {
 		grid-column: span 1;
 	}
 }
@@ -532,7 +571,7 @@ $sections: generate-sections(
 .span-2-at-3-col {
 	grid-column: span 2;
 
-	@media screen and (max-width: $two-columns-max-width) {
+	@include screen-is-two-columns-wide() {
 		grid-column: span 1;
 	}
 }
@@ -540,7 +579,7 @@ $sections: generate-sections(
 .span-2 {
 	grid-column: span 2;
 
-	@media screen and (max-width: $one-column-max-width) {
+	@include screen-is-one-column-wide() {
 		grid-column: span 1;
 	}
 }
