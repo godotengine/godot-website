@@ -116,11 +116,32 @@ header_text: "Godot Engine 4.3"
 	<div id="outstanding" class="section section-outstanding">
 		<div class="container">
 			<h3 class="section-title"><a href="#outstanding">Outstanding features</a></h3>
-			<div class="release-card-container">
-				<div id="outstanding-interactive-music-support" class="release-card media-top">
+			<div class="release-card-container two-columns">
+				<div id="outstanding-interactive-music-support" class="release-card media-top span-2">
 					<div class="release-card-content">
 						<h4 class="c-title">
 							<a href="#outstanding-interactive-music-support">Interactive music support</a>
+						</h4>
+						<div class="c-blockquote">
+							Like music to <span class="highlight">your ears</span>
+						</div>
+						<div class="c-content">
+							<div>TODO: replace me</div>
+						</div>
+						<a href="" class="c-link"></a>
+					</div>
+					<div class="release-card-media">
+						<video class="release-card-video" autoplay loop muted
+							poster="/storage/releases/4.3/images/visual-shader-overhaul.webp">
+							<source src="/storage/releases/4.3/video/visual-shader-overhaul.webm" type="video/webm" />
+						</video>
+					</div>
+				</div> <!-- #outstanding-interactive-music-support -->
+
+				<div id="outstanding-visual-shader-overhaul" class="release-card media-top">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							<a href="#outstanding-visual-shader-overhaul">Visual shader editor overhaul</a>
 						</h4>
 						<div class="c-blockquote">
 							Like music to <span class="highlight">your ears</span>
@@ -136,7 +157,7 @@ header_text: "Godot Engine 4.3"
 							<source src="/storage/releases/4.3/video/visual-shader-overhaul.webm" type="video/webm" />
 						</video>
 					</div>
-				</div> <!-- #outstanding-interactive-music-support -->
+				</div> <!-- #outstanding-visual-shader-overhaul -->
 
 				<div id="outstanding-single-threaded-web-export" class="release-card media-bottom">
 					<div class="release-card-content">
@@ -147,16 +168,14 @@ header_text: "Godot Engine 4.3"
 							<span class="highlight">Export easily</span> for the <span class="highlight">Web</span>
 						</div>
 						<div class="c-content">
-							<div>
-								<p>
-									We orignially aimed for the stars, but browsers are still down to Earth.
-								</p>
-								<p>
-									By bringing back single-threaded export for the Web platform,
-									we got more compatible across browsers and we eliminated
-									the need of complicated server-side configurations.
-								</p>
-							</div>
+							<p>
+								We orignially aimed for the stars, but browsers are still down to Earth.
+							</p>
+							<p>
+								By bringing back single-threaded export for the Web platform,
+								we got more compatible across browsers and we eliminated
+								the need of complicated server-side configurations.
+							</p>
 						</div>
 						<a href="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export"
 							class="c-link"></a>
@@ -165,7 +184,7 @@ header_text: "Godot Engine 4.3"
 						<img class="release-card-image position-top-center" alt="Image of the web export settings."
 							src="/storage/releases/4.3/images/web-export-single-threaded.webp" srcset="
 								/storage/releases/4.3/images/web-export-single-threaded-2x.webp 2x
-							" />
+							" draggable="false" />
 					</div>
 				</div> <!-- #outstanding-single-threaded-web-export -->
 			</div>
@@ -247,6 +266,66 @@ header_text: "Godot Engine 4.3"
 	<div id="editor" class="section section-editor">
 		<div class="container">
 			<h3 class="section-title"><a href="#editor">Editor</a></h3>
+			<div class="release-card-container two-columns">
+				<div id="editor-fbx-native-support" class="release-card media-top">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							<a href="#editor-fbx-native-support">FBX native support</a>
+						</h4>
+						<div class="c-blockquote">
+							<span class="highlight">FBX</span> your game
+						</div>
+						<div class="c-content">
+							<p>
+								Godot now handles .fbx files natively,
+								so you can import 3D models and animations
+								from an industry-standard file format more easily.
+							</p>
+						</div>
+						<a class="c-link" href="https://github.com/godotengine/godot/pull/81746"></a>
+					</div>
+					<div class="release-card-media">
+						<img class="release-card-image position-bottom-center"
+							src="/storage/releases/4.3/images/fbx-import.webp" srcset="
+								/storage/releases/4.3/images/fbx-import-2x.webp 2x,
+								/storage/releases/4.3/images/fbx-import-4x.webp 4x
+							" alt="Image of the FBX importer." draggable="false" />
+					</div>
+				</div>
+
+				<div id="editor-filesystem-dock-bottom" class="release-card media-bottom">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							<a href="#editor-filesystem-dock-bottom">
+								FileSystem dock can be moved to the bottom section
+								of the editor
+							</a>
+						</h4>
+						<div class="c-content">
+							<p>
+								Want more space to see your files? You can now move the FileSystem dock to the bottom
+								section of the editor.
+							</p>
+							<p>
+								Especially practical if you're used to find your files there.
+							</p>
+						</div>
+						<a class="c-link" href="https://github.com/godotengine/godot/pull/81746"></a>
+					</div>
+					<div class="release-card-media">
+						<video class="release-card-video" autoplay loop muted
+							poster="/storage/releases/4.3/images/filesystem-editor-bottom.webp">
+							<source src="/storage/releases/4.3/video/filesystem-editor-bottom.webm" type="video/webm">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #editor -->
+
+	<div id="gdscript" class="section section-gdscript">
+		<div class="container">
+			<h3 class="section-title"><a href="#gdscript">GDScript</a></h3>
 			<div class="release-card-container">
 				<div class="release-card">
 					<div class="release-card-content">
@@ -260,7 +339,7 @@ header_text: "Godot Engine 4.3"
 				</div>
 			</div>
 		</div>
-	</div> <!-- #editor -->
+	</div> <!-- #gdscript -->
 
 	<div id="rendering" class="section section-rendering">
 		<div class="container">

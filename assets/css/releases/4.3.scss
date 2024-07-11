@@ -7,6 +7,9 @@
 $column-max-width: 400px;
 $column-min-width: 300px;
 $container-break: 400px;
+$grid-gap: 20px;
+$one-column-max-width: ($column-max-width * 2) - ($grid-gap * 1);
+$two-columns-max-width: ($column-max-width * 3) - ($grid-gap * 2);
 
 $anchor-offset: 75px;
 
@@ -33,6 +36,8 @@ $header-version-font-weight: 800;
 $header-overlap: 104px;
 
 $release-background: #CECECE;
+
+$card-padding: 25px;
 
 $section-hue-offset: 20;
 $sections: generate-sections(
@@ -138,8 +143,6 @@ $sections: generate-sections(
 	}
 
 	.release-content {
-		$grid-gap: 20px;
-
 		position: relative;
 		top: -1 * $header-overlap;
 		margin-top: 0;
@@ -158,12 +161,12 @@ $sections: generate-sections(
 					repeat(2, minmax($column-min-width, 1fr));
 			}
 
-			@media screen and (max-width: (($column-max-width * 3) - ($grid-gap * 2))) {
+			@media screen and (max-width: $two-columns-max-width) {
 				grid-template-columns:
 					repeat(2, minmax($column-min-width, 1fr));
 			}
 
-			@media screen and (max-width: (($column-max-width * 2) - ($grid-gap * 1))) {
+			@media screen and (max-width: $one-column-max-width) {
 				&,
 				&.two-columns {
 					grid-template-columns:
@@ -173,8 +176,6 @@ $sections: generate-sections(
 		}
 
 		.release-card {
-			$padding: 50px;
-
 			container-type: inline-size;
 			container-name: release-card;
 
@@ -183,8 +184,8 @@ $sections: generate-sections(
 			grid-template-areas:
 				"contnt";
 
-			border-radius: $padding;
-			padding: $padding;
+			border-radius: $card-padding;
+			padding: $card-padding;
 			background-color: white;
 			contain: paint;
 
@@ -197,9 +198,9 @@ $sections: generate-sections(
 					1fr;
 
 				.release-card-media {
-					margin-top: -$padding;
-					margin-left: -$padding;
-					margin-right: -$padding;
+					margin-top: -$card-padding;
+					margin-left: -$card-padding;
+					margin-right: -$card-padding;
 				}
 			}
 			&.media-bottom {
@@ -211,9 +212,9 @@ $sections: generate-sections(
 					auto;
 
 				.release-card-media {
-					margin-bottom: -$padding;
-					margin-left: -$padding;
-					margin-right: -$padding;
+					margin-bottom: -$card-padding;
+					margin-left: -$card-padding;
+					margin-right: -$card-padding;
 				}
 			}
 
@@ -364,12 +365,16 @@ $sections: generate-sections(
 					grid-area: title;
 					margin-bottom: 0;
 					color: var(--color-top);
-					font-size: 20px;
+					font-size: 21px;
 					font-weight: 700;
 
 					a {
 						color: var(--color-top);
 						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 
@@ -387,7 +392,7 @@ $sections: generate-sections(
 					grid-area: contnt;
 					font-size: clamp(14px, 7cqw, 19px);
 
-					& > div > p {
+					& > p {
 						&:first-of-type {
 							margin-top: 0;
 						}
@@ -399,6 +404,12 @@ $sections: generate-sections(
 
 				.c-link {
 					grid-area: link;
+					font-size: 21px;
+					font-weight: 700;
+					margin-top: 10px;
+					color: black;
+					text-decoration: underline;
+
 					&::before {
 						content: "Read more +"
 					}
@@ -471,28 +482,19 @@ $sections: generate-sections(
 .span-3 {
 	grid-column: span 3;
 
-	@media screen and (max-width: ($column-max-width * 2)) {
+	@media screen and (max-width: $two-columns-max-width) {
 		grid-column: span 2;
 	}
 
-	@media screen and (max-width: $column-max-width) {
+	@media screen and (max-width: $one-column-max-width) {
 		grid-column: span 1;
 	}
 }
 
 .span-2 {
-	grid-column: span 3;
+	grid-column: span 2;
 
-	@media screen and (max-width: $column-max-width) {
+	@media screen and (max-width: $one-column-max-width) {
 		grid-column: span 1;
 	}
 }
-
-// Anchor offset
-// [id]::before {
-// 	content: '';
-// 	display: block;
-// 	height: $anchor-offset;
-// 	margin-top: -$anchor-offset;
-// 	visibility: hidden;
-// }
