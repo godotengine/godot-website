@@ -59,9 +59,9 @@ $release-title-font-size: r-desktop-mobile(28px, 20px);
 
 $card-padding: r-desktop-mobile(25px, 15px);
 $card-title-font-size: r-desktop-mobile(21px, 18px);
-$card-content-font-size-min: r-desktop-mobile(14px, 0.8em);
-$card-content-font-size-val: r-desktop-mobile(7cqw, 4cqw);
-$card-content-font-size-max: r-desktop-mobile(19px, 1em);
+$card-content-font-size-clamp-min: r-desktop-mobile(14px, 0.8em);
+$card-content-font-size-clamp-val: r-desktop-mobile(7cqw, 4cqw);
+$card-content-font-size-clamp-max: r-desktop-mobile(19px, 1em);
 
 $section-hue-offset: 20;
 $sections: r-generate-sections(
