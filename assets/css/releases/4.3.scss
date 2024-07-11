@@ -187,7 +187,35 @@ $sections: generate-sections(
 			border-radius: $card-padding;
 			padding: $card-padding;
 			background-color: white;
+			color: black;
 			contain: paint;
+
+			&.inverted {
+				background: linear-gradient(
+					to bottom,
+					var(--color-top),
+					var(--color-bottom)
+				);
+				color: white;
+
+				.release-card-content {
+					.c-title {
+						color: white;
+
+						a {
+							color: white;
+						}
+					}
+
+					.c-blockquote {
+						color: white;
+
+						.highlight {
+							color: var(--color-invert);
+						}
+					}
+				}
+			}
 
 			&.media-top {
 				grid-template-areas:
@@ -223,18 +251,6 @@ $sections: generate-sections(
 
 				display: grid;
 				gap: $grid-gap;
-
-				&.inverted {
-					background-color: linear-gradient(
-						from top,
-						var(--color-top),
-						var(--color-bottom)
-					);
-
-					.release-card-title {
-						color: white;
-					}
-				}
 
 				&:has(.c-title):has(.c-blockquote):has(.c-content) {
 					grid-template-areas:
@@ -473,6 +489,7 @@ $sections: generate-sections(
 				&.section-#{$section-name} {
 					--color-top: #{map-get($section-colors, "color-top")};
 					--color-bottom: #{map-get($section-colors, "color-bottom")};
+					--color-invert: #{map-get($section-colors, "color-invert")};
 				}
 			}
 

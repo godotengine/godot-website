@@ -13,10 +13,14 @@
 	@each $section in $sections {
 		$i: index($sections, $section);
 		$diff: $i - $base-category-i;
+		$color-top: offset-hue($base-color, $offset, $diff);
+		$color-bottom: offset-hue($base-color, $offset, $diff + 1);
+		$color-invert: adjust-hue($color-top, 180);
 		$return-value: map-merge($return-value, (
 			#{$section}: (
-				color-top: offset-hue($base-color, $offset, $diff),
-				color-bottom: offset-hue($base-color, $offset, $diff + 1)
+				color-top: $color-top,
+				color-bottom: $color-bottom,
+				color-invert: $color-invert
 			)
 		));
 	}
