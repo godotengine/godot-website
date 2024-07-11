@@ -213,7 +213,7 @@ $sections: generate-sections(
 					.c-title {
 						color: white;
 
-						a {
+						& > a {
 							color: white;
 						}
 					}
@@ -224,6 +224,10 @@ $sections: generate-sections(
 						.highlight {
 							color: var(--color-invert);
 						}
+					}
+
+					.c-link {
+						color: white;
 					}
 				}
 			}
