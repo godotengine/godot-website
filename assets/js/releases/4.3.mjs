@@ -40,7 +40,10 @@ for (const el of ["commits", "contributors"]) {
 }
 
 // Media backgrounds
-const mediaElements = document.querySelectorAll(".release-card-video,.release-card-image");
+const mediaElements = Array.from(document.querySelectorAll(".release-card-video"));
+mediaElements.push(
+	// Array.from(document.querySelectorAll(".release-card-image"))
+);
 for (const mediaElement of mediaElements) {
 	const clone = mediaElement.cloneNode(true);
 	if (clone instanceof HTMLVideoElement) {

@@ -430,8 +430,6 @@ $sections: generate-sections(
 					left: 0;
 					width: 100%;
 					height: 100%;
-					object-fit: contain;
-					object-position: center;
 
 					&.position-top-center {
 						object-position: top center;
@@ -439,6 +437,14 @@ $sections: generate-sections(
 					&.position-bottom-center {
 						object-position: bottom center;
 					}
+				}
+
+				.release-card-video {
+					object-fit: contain;
+				}
+
+				.release-card-image {
+					object-fit: cover;
 				}
 
 				.release-card-video-background,
@@ -487,6 +493,14 @@ $sections: generate-sections(
 	}
 
 	@media screen and (max-width: $one-column-max-width) {
+		grid-column: span 1;
+	}
+}
+
+.span-2-at-3-col {
+	grid-column: span 2;
+
+	@media screen and (max-width: $two-columns-max-width) {
 		grid-column: span 1;
 	}
 }
