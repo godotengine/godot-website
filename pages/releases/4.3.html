@@ -194,17 +194,52 @@ header_text: "Godot Engine 4.3"
 	<div id="2d" class="section section-2d">
 		<div class="container">
 			<h3 class="section-title"><a href="#2d">2D</a></h3>
-			<div class="release-card-container">
-				<div class="release-card">
+			<div class="release-card-container two-columns">
+				<div id="2d-parallax2d-node" class="release-card media-top">
 					<div class="release-card-content">
 						<h4 class="c-title">
-							<a href="">TODO: replace me</a>
+							<a href="#2d-parallax2d-node">New `Parallax2D` node</a>
 						</h4>
+						<div class="c-blockquote">
+							TODO: Replace me
+						</div>
 						<div class="c-content">
-							<div>TODO: replace me</div>
+							<p>
+								The new <code>Parallax2D</code> node aims to greatly simplify the use of parallax in
+								your games. You don't have to deal with canvas layers anymore.
+							</p>
+						</div>
+						<a class="c-link" href="https://godotengine.org/article/parallax-progress-report/"></a>
+						<div class="release-card-media">
+
 						</div>
 					</div>
-				</div>
+				</div> <!-- #2d-parallax2d-node -->
+
+				<div id="2d-pixel-art-stability" class="release-card media-bottom">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							<a href="#2d-pixel-art-stability">Pixel art stability</a>
+						</h4>
+						<div class="c-blockquote">
+							<span class="highlight">Stabilize</span> those pixels!
+						</div>
+						<div class="c-content">
+							<p>
+								You activated "Snap 2D Transforms to Pixel" in the project settings and your pixel art
+								still giggles? In 4.3, a new algorithm is used to stabilize pixel positions which
+								should fix this issue.
+							</p>
+						</div>
+						<a class="c-link" href="https://godotengine.org/article/parallax-progress-report/"></a>
+					</div>
+					<div class="release-card-media">
+						<video class="release-card-video" autoplay loop muted
+							poster="/storage/releases/4.3/images/pixel-snapping-2d.webp">
+							<source src="/storage/releases/4.3/video/pixel-snapping-2d.webm" type="video/webm">
+						</video>
+					</div>
+				</div> <!-- #2d-pixel-art-stability -->
 			</div>
 		</div>
 	</div> <!-- #2d -->
@@ -267,7 +302,7 @@ header_text: "Godot Engine 4.3"
 		<div class="container">
 			<h3 class="section-title"><a href="#editor">Editor</a></h3>
 			<div class="release-card-container">
-				<div id="editor-fbx-native-support" class="release-card media-top span-2-at-3-col">
+				<div id="editor-fbx-native-support" class="release-card inverted media-top span-2-at-3-col">
 					<div class="release-card-content">
 						<h4 class="c-title">
 							<a href="#editor-fbx-native-support">FBX native support</a>

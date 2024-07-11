@@ -38,6 +38,10 @@ $header-overlap: 104px;
 $release-background: #CECECE;
 
 $card-padding: 25px;
+$card-title-font-size-desktop: 21px;
+$card-title-font-size-mobile: 18px;
+$card-content-font-size-desktop: clamp(14px, 7cqw, 19px);
+$card-content-font-size-mobile: clamp(0.8em, 7cqw, 1em);
 
 $section-hue-offset: 20;
 $sections: generate-sections(
@@ -65,6 +69,13 @@ $sections: generate-sections(
 	width: 100%;
 	height: 100%;
 	background-color: $release-background;
+
+	--card-title-font-size: #{$card-title-font-size-desktop};
+	--card-content-font-size: #{$card-content-font-size-desktop};
+	@media screen and (max-width: $one-column-max-width) {
+		--card-title-font-size: #{$card-title-font-size-mobile};
+		--card-content-font-size: #{$card-content-font-size-mobile};
+	}
 
 	.release-header {
 		background-color: $header-background-color;
@@ -381,7 +392,7 @@ $sections: generate-sections(
 					grid-area: title;
 					margin-bottom: 0;
 					color: var(--color-top);
-					font-size: 21px;
+					font-size: var(--card-title-font-size);
 					font-weight: 700;
 
 					a {
@@ -406,7 +417,7 @@ $sections: generate-sections(
 
 				.c-content {
 					grid-area: contnt;
-					font-size: clamp(14px, 7cqw, 19px);
+					font-size: var(--card-content-font-size);
 
 					& > p {
 						&:first-of-type {
