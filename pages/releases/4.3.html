@@ -346,17 +346,47 @@ header_text: "Godot Engine 4.3"
 	<div id="display" class="section section-display">
 		<div class="container">
 			<h3 class="section-title"><a href="#display">Display</a></h3>
-			<div class="release-card-container">
-				<div class="release-card">
+			<div class="release-card-container two-columns">
+				<div id="display-d3d12-driver" class="release-card inverted">
 					<div class="release-card-content">
 						<h4 class="c-title">
-							<a href="">TODO: replace me</a>
+							<a href="#display-d3d12-driver">Direct3D 12 rendering driver</a>
 						</h4>
-						<div class="c-content">
-							<div>TODO: replace me</div>
+						<div class="c-blockquote">
+							We tamed the <span class="highlight">green machine</span>
 						</div>
+						<div class="c-content">
+							<p>
+								This new driver enables new Microsoft platforms to be supported,
+								such as Microsoft Store (UWP) and Windows on ARM.
+							</p>
+							<p>It even enables custom ports to a certain green platform!</p>
+						</div>
+						<a class="c-link" href="https://github.com/godotengine/godot/pull/70315"></a>
 					</div>
-				</div>
+				</div> <!-- #display-d3d12-driver -->
+
+				<div id="display-wayland-support" class="release-card">
+					<div class="release-card-content">
+						<h4 class="c-title">
+							<a href="#display-wayland-support">Wayland support for Linux/*BSD</a>
+						</h4>
+						<div class="c-blockquote">
+							Following the <span class="highlight">Way</span>
+						</div>
+						<div class="c-content">
+							<p>
+								Wayland is a newer, more modern display server that can be used on Linux and some
+								BSD-derived OSes.
+							</p>
+							<p>
+								Builtin Wayland support give us access to a much cleaner API as well
+								as more advanced features for window management.
+							</p>
+						</div>
+						<a class="c-link" href="https://github.com/godotengine/godot/pull/86180"></a>
+					</div>
+				</div> <!-- #display-wayland-support -->
 			</div>
 		</div>
 	</div> <!-- #display -->
