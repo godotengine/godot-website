@@ -85,6 +85,21 @@ $sections: r-generate-sections(
 	$offset: $section-hue-offset
 );
 
+@mixin card-media-margin($direction, $margin) {
+	@if $direction == "top" {
+		margin: #{-$margin} #{-$margin} 0 #{-$margin};
+	}
+	@else if $direction == "right" {
+		margin: #{-$margin} #{-$margin} #{-$margin} 0;
+	}
+	@else if $direction == "bottom" {
+		margin: 0 #{-$margin} #{-$margin} #{-$margin};
+	}
+	@else if $direction == "left" {
+		margin: #{-$margin} 0 #{-$margin} #{-$margin};
+	}
+}
+
 .release-container {
 	width: 100%;
 	height: 100%;
@@ -172,7 +187,7 @@ $sections: r-generate-sections(
 		margin-top: 0;
 		color: black;
 
-		.release-card-container {
+		.release-cards {
 			display: grid;
 			width: 100%;
 			gap: $grid-gap;
@@ -227,7 +242,7 @@ $sections: r-generate-sections(
 				);
 				color: white;
 
-				.release-card-content {
+				.release-card-content .release-card-content-container{
 					.c-title {
 						color: white;
 
@@ -250,128 +265,212 @@ $sections: r-generate-sections(
 				}
 			}
 
-			&.media-top {
+			@mixin media-top() {
 				grid-template-areas:
 					"media"
 					"contnt";
 				grid-template-rows:
-					auto
+					minmax(auto, 30vh)
+					minmax(max-content, 1fr);
+				grid-template-columns:
 					1fr;
 
 				.release-card-media {
-					$_padding: r-get-desktop($card-padding);
-					margin-top: -$_padding;
-					margin-left: -$_padding;
-					margin-right: -$_padding;
-
+					@include card-media-margin("top", r-get-desktop($card-padding));
 					@include is-mobile() {
-						$_padding: r-get-mobile($card-padding);
-						margin-top: -$_padding;
-						margin-left: -$_padding;
-						margin-right: -$_padding;
+						@include card-media-margin("top", r-get-mobile($card-padding));
 					}
 				}
 			}
-			&.media-bottom {
+
+			@mixin media-bottom() {
 				grid-template-areas:
 					"contnt"
 					"media";
 				grid-template-rows:
-					1fr
-					auto;
+					minmax(max-content, 1fr)
+					minmax(auto, 30vh);
+				grid-template-columns:
+					1fr;
 
 				.release-card-media {
-					$_padding: r-get-desktop($card-padding);
-					margin-bottom: -$_padding;
-					margin-left: -$_padding;
-					margin-right: -$_padding;
-
+					@include card-media-margin("bottom", r-get-desktop($card-padding));
 					@include is-mobile() {
-						$_padding: r-get-mobile($card-padding);
-						margin-bottom: -$_padding;
-						margin-left: -$_padding;
-						margin-right: -$_padding;
+						@include card-media-margin("bottom", r-get-mobile($card-padding));
 					}
+				}
+			}
+
+			@mixin media-left() {
+				grid-template-areas:
+					"media contnt";
+				grid-template-columns:
+					minmax(auto, 30vw) minmax(30%, 1fr);
+				grid-template-rows:
+					1fr;
+
+				.release-card-media {
+					@include card-media-margin("left", r-get-desktop($card-padding));
+					@include is-mobile() {
+						@include card-media-margin("left", r-get-mobile($card-padding));
+					}
+				}
+			}
+
+			@mixin media-right() {
+				grid-template-areas:
+					"contnt media";
+				grid-template-columns:
+					minmax(30%, 1fr) minmax(auto, 30vw);
+				grid-template-rows:
+					1fr;
+
+				.release-card-media {
+					@include card-media-margin("right", r-get-desktop($card-padding));
+					@include is-mobile() {
+						@include card-media-margin("right", r-get-mobile($card-padding));
+					}
+				}
+			}
+
+			&.media-top {
+				@include media-top();
+			}
+			&.media-bottom {
+				@include media-bottom();
+			}
+			&.media-left {
+				@include media-left();
+				@container release-card (width <= #{$container-break}) {
+					@include media-top();
+				}
+			}
+			&.media-right {
+				@include media-right();
+				@container release-card (width <= #{$container-break}) {
+					@include media-bottom();
 				}
 			}
 
 			.release-card-content {
 				grid-area: contnt;
+				container-type: inline-size;
+				container-name: release-card-content;
 
-				display: grid;
-				gap: $grid-gap;
+				.release-card-content-container {
+					display: grid;
+					gap: $grid-gap;
 
-				&:has(.c-title):has(.c-blockquote):has(.c-content) {
-					grid-template-areas:
-						"title contnt"
-						"quote contnt"
-						"quote link";
-					grid-template-columns:
-						1fr 1fr;
-					grid-template-rows:
-						min-content
-						1fr
-						auto;
-
-					&:not(:has(.c-link)) {
+					&:has(.c-title):has(.c-blockquote):has(.c-content) {
 						grid-template-areas:
 							"title contnt"
-							"quote contnt";
+							"quote contnt"
+							"quote link";
+						grid-template-columns:
+							1fr 1fr;
 						grid-template-rows:
 							min-content
-							1fr;
-					}
+							1fr
+							auto;
 
-					@container release-card (width < #{$container-break}) {
+						&:not(:has(.c-link)) {
+							grid-template-areas:
+								"title contnt"
+								"quote contnt";
+							grid-template-rows:
+								min-content
+								1fr;
+						}
+
+						@container release-card-content (width < #{$container-break}) {
+							grid-template-areas:
+								"title"
+								"quote"
+								"contnt"
+								"link";
+							grid-template-columns:
+								1fr;
+							grid-template-rows:
+								min-content
+								auto
+								1fr
+								auto;
+
+							&:not(:has(.c-link)) {
+								grid-template-areas:
+									"title"
+									"quote"
+									"contnt";
+								grid-template-rows:
+									min-content
+									auto
+									1fr;
+							}
+						}
+					}
+					&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
+						grid-template-areas:
+							"quote contnt"
+							"quote link";
+						grid-template-columns:
+							1fr 1fr;
+						grid-template-rows:
+							1fr
+							auto;
+
+						&:not(:has(.c-link)) {
+							grid-template-areas:
+								"quote contnt";
+							grid-template-rows:
+								1fr;
+						}
+
+						@container release-card-content (width < #{$container-break}) {
+							grid-template-areas:
+								"quote"
+								"contnt"
+								"link";
+							grid-template-columns:
+								1fr;
+							grid-template-rows:
+								min-content
+								1fr
+								auto;
+
+							&:not(:has(.c-link)) {
+								grid-template-areas:
+									"quote"
+									"contnt";
+								grid-template-rows:
+									min-content
+									1fr;
+							}
+						}
+					}
+					&:has(.c-title):has(.c-blockquote):not(:has(.c-content)) {
 						grid-template-areas:
 							"title"
 							"quote"
-							"contnt"
 							"link";
-						grid-template-columns:
-							1fr;
 						grid-template-rows:
 							min-content
-							auto
 							1fr
 							auto;
 
 						&:not(:has(.c-link)) {
 							grid-template-areas:
 								"title"
-								"quote"
-								"contnt";
+								"quote";
 							grid-template-rows:
 								min-content
-								auto
 								1fr;
 						}
 					}
-				}
-				&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
-					grid-template-areas:
-						"quote contnt"
-						"quote link";
-					grid-template-columns:
-						1fr 1fr;
-					grid-template-rows:
-						1fr
-						auto;
-
-					&:not(:has(.c-link)) {
+					&:has(.c-title):not(:has(.c-blockquote)):has(.c-content) {
 						grid-template-areas:
-							"quote contnt";
-						grid-template-rows:
-							1fr;
-					}
-
-					@container release-card (width < #{$container-break}) {
-						grid-template-areas:
-							"quote"
+							"title"
 							"contnt"
 							"link";
-						grid-template-columns:
-							1fr;
 						grid-template-rows:
 							min-content
 							1fr
@@ -379,104 +478,69 @@ $sections: r-generate-sections(
 
 						&:not(:has(.c-link)) {
 							grid-template-areas:
-								"quote"
+								"title"
 								"contnt";
 							grid-template-rows:
 								min-content
 								1fr;
 						}
 					}
-				}
-				&:has(.c-title):has(.c-blockquote):not(:has(.c-content)) {
-					grid-template-areas:
-						"title"
-						"quote"
-						"link";
-					grid-template-rows:
-						min-content
-						1fr
-						auto;
 
-					&:not(:has(.c-link)) {
-						grid-template-areas:
-							"title"
-							"quote";
-						grid-template-rows:
-							min-content
-							1fr;
-					}
-				}
-				&:has(.c-title):not(:has(.c-blockquote)):has(.c-content) {
-					grid-template-areas:
-						"title"
-						"contnt"
-						"link";
-					grid-template-rows:
-						min-content
-						1fr
-						auto;
-
-					&:not(:has(.c-link)) {
-						grid-template-areas:
-							"title"
-							"contnt";
-						grid-template-rows:
-							min-content
-							1fr;
-					}
-				}
-
-				.c-title {
-					grid-area: title;
-					margin-bottom: 0;
-					color: var(--color-top);
-					font-size: var(--card-title-font-size);
-					font-weight: 700;
-
-					a {
+					.c-title {
+						grid-area: title;
+						margin-bottom: 0;
 						color: var(--color-top);
-						text-decoration: none;
+						font-weight: 700;
+						font-size: r-get-desktop($card-title-font-size);
+						@include is-mobile() {
+							font-size: r-get-mobile($card-title-font-size);
+						}
 
-						&:hover {
-							text-decoration: underline;
+						a {
+							color: var(--color-top);
+							text-decoration: none;
+
+							&:hover {
+								text-decoration: underline;
+							}
 						}
 					}
-				}
 
-				.c-blockquote {
-					grid-area: quote;
-					font-size: clamp(30px, 7cqw, 56px);
-					font-weight: 800;
+					.c-blockquote {
+						grid-area: quote;
+						font-size: clamp(30px, 7cqw, 56px);
+						font-weight: 800;
 
-					.highlight {
-						color: var(--color-top);
-					}
-				}
-
-				.c-content {
-					grid-area: contnt;
-					font-size: clamp(var(--card-content-font-size-min), var(--card-content-font-size-val), var(--card-content-font-size-max));
-
-					& > p {
-						&:first-of-type {
-							margin-top: 0;
-						}
-						&:last-of-type {
-							margin-bottom: 0;
+						.highlight {
+							color: var(--color-top);
 						}
 					}
-				}
 
-				.c-link {
-					grid-area: link;
-					font-size: 21px;
-					font-weight: 700;
-					margin-top: 10px;
-					color: black;
-					text-decoration: underline;
+					.c-content {
+						grid-area: contnt;
+						font-size: clamp(var(--card-content-font-size-min), var(--card-content-font-size-val), var(--card-content-font-size-max));
 
-					&::before {
-						content: "Read more +"
+						& > p {
+							&:first-of-type {
+								margin-top: 0;
+							}
+							&:last-of-type {
+								margin-bottom: 0;
+							}
+						}
+					}
+
+					.c-link {
+						grid-area: link;
+						font-size: 21px;
+						font-weight: 700;
+						margin-top: 10px;
+						color: black;
+						text-decoration: underline;
+
+						&::before {
+							content: "Read more +"
+						}
 					}
 				}
 			}
@@ -485,7 +549,7 @@ $sections: r-generate-sections(
 				grid-area: media;
 
 				position: relative;
-				max-height: 33vh;
+				// max-height: 33vh;
 				contain: paint;
 
 				.release-card-video,
