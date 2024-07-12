@@ -6,7 +6,7 @@
 
 $column-max-width: 400px;
 $column-min-width: 300px;
-$container-break: 400px;
+$container-break: 450px;
 $grid-gap: 20px;
 $one-column-max-width: ($column-max-width * 2) - ($grid-gap * 1);
 $two-columns-max-width: ($column-max-width * 3) - ($grid-gap * 2);
@@ -218,11 +218,9 @@ $sections: r-generate-sections(
 			container-type: inline-size;
 			container-name: release-card;
 
-			display: grid;
-			gap: $grid-gap;
-			grid-template-areas:
-				"contnt";
-
+			contain: paint;
+			color: black;
+			background-color: white;
 			border-radius: r-get-desktop($card-padding);
 			padding: r-get-desktop($card-padding);
 			@include is-mobile() {
@@ -230,47 +228,12 @@ $sections: r-generate-sections(
 				padding: r-get-mobile($card-padding);
 			}
 
-			background-color: white;
-			color: black;
-			contain: paint;
-
-			&.inverted {
-				background: linear-gradient(
-					to bottom,
-					var(--color-top),
-					var(--color-bottom)
-				);
-				color: white;
-
-				.release-card-content .release-card-content-container{
-					.c-title {
-						color: white;
-
-						& > a {
-							color: white;
-						}
-					}
-
-					.c-blockquote {
-						color: white;
-
-						.highlight {
-							color: var(--color-invert);
-						}
-					}
-
-					.c-link {
-						color: white;
-					}
-				}
-			}
-
 			@mixin media-top() {
 				grid-template-areas:
 					"media"
 					"contnt";
 				grid-template-rows:
-					minmax(auto, 30vh)
+					minmax(auto, 30cqh)
 					minmax(max-content, 1fr);
 				grid-template-columns:
 					1fr;
@@ -289,7 +252,7 @@ $sections: r-generate-sections(
 					"media";
 				grid-template-rows:
 					minmax(max-content, 1fr)
-					minmax(auto, 30vh);
+					minmax(auto, 30cqh);
 				grid-template-columns:
 					1fr;
 
@@ -305,7 +268,7 @@ $sections: r-generate-sections(
 				grid-template-areas:
 					"media contnt";
 				grid-template-columns:
-					minmax(auto, 30vw) minmax(30%, 1fr);
+					minmax(auto, 40cqw) minmax(30%, 1fr);
 				grid-template-rows:
 					1fr;
 
@@ -321,7 +284,7 @@ $sections: r-generate-sections(
 				grid-template-areas:
 					"contnt media";
 				grid-template-columns:
-					minmax(30%, 1fr) minmax(auto, 30vw);
+					minmax(30%, 1fr) minmax(auto, 40cqw);
 				grid-template-rows:
 					1fr;
 
@@ -333,105 +296,186 @@ $sections: r-generate-sections(
 				}
 			}
 
-			&.media-top {
+			&.media-top .release-card-container {
 				@include media-top();
 			}
-			&.media-bottom {
+			&.media-bottom .release-card-container {
 				@include media-bottom();
 			}
-			&.media-left {
+			&.media-left .release-card-container {
 				@include media-left();
 				@container release-card (width <= #{$container-break}) {
 					@include media-top();
 				}
 			}
-			&.media-right {
+			&.media-right .release-card-container {
 				@include media-right();
 				@container release-card (width <= #{$container-break}) {
 					@include media-bottom();
 				}
 			}
 
-			.release-card-content {
-				grid-area: contnt;
-				container-type: inline-size;
-				container-name: release-card-content;
+			&.inverted {
+				background: linear-gradient(
+						to bottom,
+						var(--color-top),
+						var(--color-bottom)
+					);
+				color: white;
 
-				.release-card-content-container {
-					display: grid;
-					gap: $grid-gap;
+				.release-card-container {
+					.release-card-content .release-card-content-container{
+						.c-title {
+							color: white;
 
-					&:has(.c-title):has(.c-blockquote):has(.c-content) {
-						grid-template-areas:
-							"title contnt"
-							"quote contnt"
-							"quote link";
-						grid-template-columns:
-							1fr 1fr;
-						grid-template-rows:
-							min-content
-							1fr
-							auto;
-
-						&:not(:has(.c-link)) {
-							grid-template-areas:
-								"title contnt"
-								"quote contnt";
-							grid-template-rows:
-								min-content
-								1fr;
+							& > a {
+								color: white;
+							}
 						}
 
-						@container release-card-content (width < #{$container-break}) {
+						.c-blockquote {
+							color: white;
+
+							.highlight {
+								color: var(--color-invert);
+							}
+						}
+
+						.c-link {
+							color: white;
+						}
+					}
+				}
+			}
+
+			.release-card-container {
+				display: grid;
+				gap: $grid-gap;
+				grid-template-areas:
+					"contnt";
+
+				height: 100%;
+
+				.release-card-content {
+					grid-area: contnt;
+					container-type: inline-size;
+					container-name: release-card-content;
+
+					.release-card-content-container {
+						display: grid;
+						gap: $grid-gap;
+						height: 100%;
+
+						&:has(.c-title):has(.c-blockquote):has(.c-content) {
+							grid-template-areas:
+								"title contnt"
+								"quote contnt"
+								"quote link";
+							grid-template-columns:
+								1fr 1fr;
+							grid-template-rows:
+								min-content
+								1fr
+								auto;
+
+							&:not(:has(.c-link)) {
+								grid-template-areas:
+									"title contnt"
+									"quote contnt";
+								grid-template-rows:
+									min-content
+									1fr;
+							}
+
+							@container release-card-content (width < #{$container-break}) {
+								grid-template-areas:
+									"title"
+									"quote"
+									"contnt"
+									"link";
+								grid-template-columns:
+									1fr;
+								grid-template-rows:
+									min-content
+									auto
+									1fr
+									auto;
+
+								&:not(:has(.c-link)) {
+									grid-template-areas:
+										"title"
+										"quote"
+										"contnt";
+									grid-template-rows:
+										min-content
+										auto
+										1fr;
+								}
+							}
+						}
+						&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
+							grid-template-areas:
+								"quote contnt"
+								"quote link";
+							grid-template-columns:
+								1fr 1fr;
+							grid-template-rows:
+								1fr
+								auto;
+
+							&:not(:has(.c-link)) {
+								grid-template-areas:
+									"quote contnt";
+								grid-template-rows:
+									1fr;
+							}
+
+							@container release-card-content (width < #{$container-break}) {
+								grid-template-areas:
+									"quote"
+									"contnt"
+									"link";
+								grid-template-columns:
+									1fr;
+								grid-template-rows:
+									min-content
+									1fr
+									auto;
+
+								&:not(:has(.c-link)) {
+									grid-template-areas:
+										"quote"
+										"contnt";
+									grid-template-rows:
+										min-content
+										1fr;
+								}
+							}
+						}
+						&:has(.c-title):has(.c-blockquote):not(:has(.c-content)) {
 							grid-template-areas:
 								"title"
 								"quote"
-								"contnt"
 								"link";
-							grid-template-columns:
-								1fr;
 							grid-template-rows:
 								min-content
-								auto
 								1fr
 								auto;
 
 							&:not(:has(.c-link)) {
 								grid-template-areas:
 									"title"
-									"quote"
-									"contnt";
+									"quote";
 								grid-template-rows:
 									min-content
-									auto
 									1fr;
 							}
 						}
-					}
-					&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
-						grid-template-areas:
-							"quote contnt"
-							"quote link";
-						grid-template-columns:
-							1fr 1fr;
-						grid-template-rows:
-							1fr
-							auto;
-
-						&:not(:has(.c-link)) {
+						&:has(.c-title):not(:has(.c-blockquote)):has(.c-content) {
 							grid-template-areas:
-								"quote contnt";
-							grid-template-rows:
-								1fr;
-						}
-
-						@container release-card-content (width < #{$container-break}) {
-							grid-template-areas:
-								"quote"
+								"title"
 								"contnt"
 								"link";
-							grid-template-columns:
-								1fr;
 							grid-template-rows:
 								min-content
 								1fr
@@ -439,148 +483,114 @@ $sections: r-generate-sections(
 
 							&:not(:has(.c-link)) {
 								grid-template-areas:
-									"quote"
+									"title"
 									"contnt";
 								grid-template-rows:
 									min-content
 									1fr;
 							}
 						}
-					}
-					&:has(.c-title):has(.c-blockquote):not(:has(.c-content)) {
-						grid-template-areas:
-							"title"
-							"quote"
-							"link";
-						grid-template-rows:
-							min-content
-							1fr
-							auto;
 
-						&:not(:has(.c-link)) {
-							grid-template-areas:
-								"title"
-								"quote";
-							grid-template-rows:
-								min-content
-								1fr;
-						}
-					}
-					&:has(.c-title):not(:has(.c-blockquote)):has(.c-content) {
-						grid-template-areas:
-							"title"
-							"contnt"
-							"link";
-						grid-template-rows:
-							min-content
-							1fr
-							auto;
-
-						&:not(:has(.c-link)) {
-							grid-template-areas:
-								"title"
-								"contnt";
-							grid-template-rows:
-								min-content
-								1fr;
-						}
-					}
-
-					.c-title {
-						grid-area: title;
-						margin-bottom: 0;
-						color: var(--color-top);
-						font-weight: 700;
-						font-size: r-get-desktop($card-title-font-size);
-						@include is-mobile() {
-							font-size: r-get-mobile($card-title-font-size);
-						}
-
-						a {
+						.c-title {
+							grid-area: title;
+							margin-bottom: 0;
 							color: var(--color-top);
-							text-decoration: none;
+							font-weight: 700;
+							font-size: r-get-desktop($card-title-font-size);
+							@include is-mobile() {
+								font-size: r-get-mobile($card-title-font-size);
+							}
 
-							&:hover {
-								text-decoration: underline;
+							a {
+								color: var(--color-top);
+								text-decoration: none;
+
+								&:hover {
+									text-decoration: underline;
+								}
 							}
 						}
-					}
 
-					.c-blockquote {
-						grid-area: quote;
-						font-size: clamp(30px, 7cqw, 56px);
-						font-weight: 800;
+						.c-blockquote {
+							grid-area: quote;
+							font-size: clamp(30px, 7cqw, 56px);
+							font-weight: 800;
 
-						.highlight {
-							color: var(--color-top);
-						}
-					}
-
-					.c-content {
-						grid-area: contnt;
-						font-size: clamp(var(--card-content-font-size-min), var(--card-content-font-size-val), var(--card-content-font-size-max));
-
-						& > p {
-							&:first-of-type {
-								margin-top: 0;
-							}
-							&:last-of-type {
-								margin-bottom: 0;
+							.highlight {
+								color: var(--color-top);
 							}
 						}
-					}
 
-					.c-link {
-						grid-area: link;
-						font-size: 21px;
-						font-weight: 700;
-						margin-top: 10px;
-						color: black;
-						text-decoration: underline;
+						.c-content {
+							grid-area: contnt;
+							font-size: clamp(
+								r-get-desktop($card-content-font-size-clamp-min),
+								r-get-desktop($card-content-font-size-clamp-val),
+								r-get-desktop($card-content-font-size-clamp-max)
+							);
 
-						&::before {
-							content: "Read more +"
+							& > p {
+								&:first-of-type {
+									margin-top: 0;
+								}
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+							}
+						}
+
+						.c-link {
+							grid-area: link;
+							font-size: 21px;
+							font-weight: 700;
+							margin-top: 10px;
+							color: black;
+							text-decoration: underline;
+
+							&::before {
+								content: "Read more +"
+							}
 						}
 					}
 				}
-			}
 
-			.release-card-media {
-				grid-area: media;
+				.release-card-media {
+					grid-area: media;
 
-				position: relative;
-				// max-height: 33vh;
-				contain: paint;
-
-				.release-card-video,
-				.release-card-image {
 					position: relative;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
+					// max-height: 33vh;
+					contain: paint;
 
-					&.position-top-center {
-						object-position: top center;
-					}
-					&.position-bottom-center {
-						object-position: bottom center;
-					}
-				}
+					.release-card-video,
+					.release-card-image {
+						position: relative;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
 
-				.release-card-video-background,
-				.release-card-image-background {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					object-position: center;
-					transform: scale(1.25);
-					filter: blur(5px);
-					z-index: -1;
+						&.position-top-center {
+							object-position: top center;
+						}
+						&.position-bottom-center {
+							object-position: bottom center;
+						}
+					}
+
+					.release-card-video-background,
+					.release-card-image-background {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+						transform: scale(1.25);
+						filter: blur(5px);
+						z-index: -1;
+					}
 				}
 			}
 		}
