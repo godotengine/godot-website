@@ -38,21 +38,3 @@ for (const el of ["commits", "contributors"]) {
 		timeline.add(localTimeline);
 	}
 }
-
-// Media backgrounds
-const mediaElements = Array.from(document.querySelectorAll(".release-card-video"));
-mediaElements.push(
-	// Array.from(document.querySelectorAll(".release-card-image"))
-);
-for (const mediaElement of mediaElements) {
-	const clone = mediaElement.cloneNode(true);
-	if (clone instanceof HTMLVideoElement) {
-		clone.autoplay = false;
-		clone.classList.remove("release-card-video");
-		clone.classList.add("release-card-video-background");
-	} else {
-		clone.classList.remove("release-card-image");
-		clone.classList.add("release-card-image-background");
-	}
-	mediaElement.insertAdjacentElement("beforebegin", clone);
-}
