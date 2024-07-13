@@ -603,11 +603,19 @@ header_text: "Godot Engine 4.3"
 									<a href="#gdscript-binary-tokenization-on-export">Binary tokenization on export</a>
 								</h4>
 								<div class="c-blockquote">
-									<span class="replace-me"></span>
+									<span class="highlight">Lean and mean</span> exported GDScript
 								</div>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										With this new export option, you can reduce the size of the exported GDScript
+										code. But it also offers a way to obfuscate your source code.
+									</p>
+									<p>
+										While it doesn't protect your work from being decompiled, it at least hides
+										your source code from being available publicly.
+									</p>
 								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87634"></a>
 							</div>
 						</div>
 					</div>
@@ -621,7 +629,14 @@ header_text: "Godot Engine 4.3"
 									<a href="#gdscript-is-not-operator"><code>is not</code> operator</a>
 								</h4>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										<code>if not my_node is Node3D:</code><br>
+										It isn't much readable, huh?
+									</p>
+									<p>
+										You can now type this instead.<br>
+										<code>if my_node <strong>is not</strong> Node3D:</code>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -634,11 +649,23 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#gdscript-built-in-methods-callable">
-										Built-in methods and utility functions usable as Callable
+										Built-in methods and utility functions usable as <code>Callable</code>
 									</a>
 								</h4>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										You have an array and you want to print each element without creating
+										a for loop?
+									</p>
+									<p>
+										By making built-in methods and utility functions usable as <code>Callable</code>
+										makes it possible to call variadic functions such as <code>print()</code> with
+										<code>Callable.callv()</code> easily, without the need of boilerplate code.
+									</p>
+									<p>
+										You can now call this:<br>
+										<code>print.callv(my_array)</code>
+									</p>
 								</div>
 							</div>
 						</div>
