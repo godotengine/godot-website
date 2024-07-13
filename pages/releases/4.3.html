@@ -39,6 +39,7 @@ header_text: "Godot Engine 4.3"
 					<div class="header-numbers-entry header-numbers-contributors">
 						{% assign version_max = 450 %}
 						{% assign versions = "4.3,450|4.2,359|4.1,311" | split: "|" %}
+
 						{% for version in versions %}
 						{% assign version_data = version | split: "," %}
 						{% assign version_number = version_data[0] %}
@@ -114,17 +115,23 @@ header_text: "Godot Engine 4.3"
 	<div id="download" class="section section-download">
 		<div class="container">
 			<div class="release-cards">
-				<div class="release-card span-3">
+				<div id="download-download" class="release-card media-right span-3">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									Download
+									<a href="#download-download">Download</a>
 								</h4>
+								<div class="c-blockquote">
+									Get yourself a copy of Godot 4.3… <span class="highlight">for free!</span>
+								</div>
 								<div class="c-content">
 									<p class="replace-me"></p>
 								</div>
 							</div>
+						</div>
+						<div class="release-card-media">
+							{% include articles/download_card.html version="4.3" release="stable" article="" %}
 						</div>
 					</div>
 				</div>
@@ -428,7 +435,7 @@ header_text: "Godot Engine 4.3"
 									</a>
 								</h4>
 								<div class="c-content">
-									<p class="replace-me">TODO: fix me</p>
+									<p class="replace-me"></p>
 								</div>
 							</div>
 						</div>

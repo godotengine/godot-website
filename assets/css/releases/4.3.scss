@@ -91,16 +91,16 @@ $donate-robot-size: 500px;
 
 @mixin card-media-margin($direction, $margin) {
 	@if $direction == "top" {
-		margin: #{-$margin} #{-$margin} 0 #{-$margin};
+		margin: calc(-1 * #{$margin}) calc(-1 * #{$margin}) 0 calc(-1 * #{$margin});
 	}
 	@else if $direction == "right" {
-		margin: #{-$margin} #{-$margin} #{-$margin} 0;
+		margin: calc(-1 * #{$margin}) calc(-1 * #{$margin}) calc(-1 * #{$margin}) 0;
 	}
 	@else if $direction == "bottom" {
-		margin: 0 #{-$margin} #{-$margin} #{-$margin};
+		margin: 0 calc(-1 * #{$margin}) calc(-1 * #{$margin}) calc(-1 * #{$margin});
 	}
 	@else if $direction == "left" {
-		margin: #{-$margin} 0 #{-$margin} #{-$margin};
+		margin: calc(-1 * #{$margin}) 0 calc(-1 * #{$margin}) calc(-1 * #{$margin});
 	}
 }
 
@@ -135,10 +135,87 @@ $donate-robot-size: 500px;
 	}
 }
 
+#download-download {
+	.release-card-media {
+		.card-download {
+			height: min-content;
+			border: none;
+			color: black;
+
+			margin: var(--card-padding);
+
+			&:hover {
+				box-shadow: none;
+			}
+
+			.card-download-link,
+			.card-download-details > img,
+			.card-download-donate {
+				display: none;
+			}
+
+			.download-platform {
+				margin-top: var(--card-padding);
+				margin-bottom: calc(var(--card-padding) / 2);
+
+				&:first-of-type {
+					margin-top: 0;
+				}
+			}
+
+			.card-download-sublinks {
+				margin-top: var(--card-padding);
+
+				.card-download-other {
+					color: black;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.btn-download-primary {
+				background-color: var(--color-top);
+				box-shadow: none;
+				border-radius: var(--card-padding);
+
+				.download-title {
+					color: white;
+				}
+
+				&--mono {
+					margin-top: calc(var(--card-padding) / 2);
+					background-color: var(--color-bottom);
+
+					.download-title {
+						// color: black;
+					}
+				}
+			}
+		}
+	}
+}
+
 .release-container {
 	width: 100%;
 	height: 100%;
 	background-color: $release-background;
+
+	--release-title-font-size: #{r-get-desktop($release-title-font-size)};
+	--card-padding: #{r-get-desktop($card-padding)};
+	--card-title-font-size: #{r-get-desktop($card-title-font-size)};
+	--card-content-font-size-clamp-min: #{r-get-desktop($card-content-font-size-clamp-min)};
+	--card-content-font-size-clamp-val: #{r-get-desktop($card-content-font-size-clamp-val)};
+	--card-content-font-size-clamp-max: #{r-get-desktop($card-content-font-size-clamp-max)};
+	@include is-mobile() {
+		--release-title-font-size: #{r-get-mobile($release-title-font-size)};
+		--card-padding: #{r-get-mobile($card-padding)};
+		--card-title-font-size: #{r-get-mobile($card-title-font-size)};
+		--card-content-font-size-clamp-min: #{r-get-mobile($card-content-font-size-clamp-min)};
+		--card-content-font-size-clamp-val: #{r-get-mobile($card-content-font-size-clamp-val)};
+		--card-content-font-size-clamp-max: #{r-get-mobile($card-content-font-size-clamp-max)};
+	}
 
 	.replace-me {
 		&::before {
@@ -263,28 +340,21 @@ $donate-robot-size: 500px;
 			contain: paint;
 			color: black;
 			background-color: white;
-			border-radius: r-get-desktop($card-padding);
-			padding: r-get-desktop($card-padding);
-			@include is-mobile() {
-				border-radius: r-get-mobile($card-padding);
-				padding: r-get-mobile($card-padding);
-			}
+			border-radius: var(--card-padding);
+			padding: var(--card-padding);
 
 			@mixin media-top() {
 				grid-template-areas:
 					"media"
 					"contnt";
 				grid-template-rows:
-					minmax(auto, 30cqh)
+					auto
 					minmax(max-content, 1fr);
 				grid-template-columns:
 					1fr;
 
 				.release-card-media {
-					@include card-media-margin("top", r-get-desktop($card-padding));
-					@include is-mobile() {
-						@include card-media-margin("top", r-get-mobile($card-padding));
-					}
+					@include card-media-margin("top", var(--card-padding));
 				}
 			}
 
@@ -294,15 +364,12 @@ $donate-robot-size: 500px;
 					"media";
 				grid-template-rows:
 					minmax(max-content, 1fr)
-					minmax(auto, 30cqh);
+					auto;
 				grid-template-columns:
 					1fr;
 
 				.release-card-media {
-					@include card-media-margin("bottom", r-get-desktop($card-padding));
-					@include is-mobile() {
-						@include card-media-margin("bottom", r-get-mobile($card-padding));
-					}
+					@include card-media-margin("bottom", var(--card-padding));
 				}
 			}
 
@@ -315,10 +382,7 @@ $donate-robot-size: 500px;
 					1fr;
 
 				.release-card-media {
-					@include card-media-margin("left", r-get-desktop($card-padding));
-					@include is-mobile() {
-						@include card-media-margin("left", r-get-mobile($card-padding));
-					}
+					@include card-media-margin("left", var(--card-padding));
 				}
 			}
 
@@ -331,10 +395,7 @@ $donate-robot-size: 500px;
 					1fr;
 
 				.release-card-media {
-					@include card-media-margin("right", r-get-desktop($card-padding));
-					@include is-mobile() {
-						@include card-media-margin("right", r-get-mobile($card-padding));
-					}
+					@include card-media-margin("right", var(--card-padding));
 				}
 			}
 
@@ -538,10 +599,7 @@ $donate-robot-size: 500px;
 							margin-bottom: 0;
 							color: var(--color-top);
 							font-weight: 700;
-							font-size: r-get-desktop($card-title-font-size);
-							@include is-mobile() {
-								font-size: r-get-mobile($card-title-font-size);
-							}
+							font-size: var(--card-title-font-size);
 
 							a {
 								color: var(--color-top);
@@ -566,9 +624,9 @@ $donate-robot-size: 500px;
 						.c-content {
 							grid-area: contnt;
 							font-size: clamp(
-								r-get-desktop($card-content-font-size-clamp-min),
-								r-get-desktop($card-content-font-size-clamp-val),
-								r-get-desktop($card-content-font-size-clamp-max)
+								var(--card-content-font-size-clamp-min),
+								var(--card-content-font-size-clamp-val),
+								var(--card-content-font-size-clamp-max)
 							);
 
 							& > p {
@@ -630,12 +688,8 @@ $donate-robot-size: 500px;
 						background-color: var(--color-top);
 						color: white;
 
-						padding: r-get-desktop($card-padding);
-						border-radius: r-get-desktop($card-padding);
-						@include is-mobile() {
-							padding: r-get-mobile($card-padding);
-							border-radius: r-get-mobile($card-padding);
-						}
+						padding: var(--card-padding);
+						border-radius: var(--card-padding);
 
 						text-decoration: none;
 						&:hover {
@@ -663,13 +717,9 @@ $donate-robot-size: 500px;
 
 			.section-title,
 			.section-title a {
-				font-size: r-get-desktop($release-title-font-size);
+				font-size: var(--release-title-font-size);
 				color: var(--color-top);
 				text-decoration: none;
-
-				@include is-mobile() {
-					font-size: r-get-mobile($release-title-font-size);
-				}
 			}
 		}
 	}
