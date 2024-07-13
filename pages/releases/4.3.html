@@ -384,9 +384,8 @@ header_text: "Godot Engine 4.3"
 						<div class="release-card-media">
 							<img class="release-card-image position-top-center"
 								src="/storage/releases/4.3/images/skeleton-import-settings.webp" srcset="
-								/storage/releases/4.3/images/skeleton-import-settings-2x.webp 2x,
-								/storage/releases/4.3/images/skeleton-import-settings-3x.webp 3x"
-								alt="Image of the new skeleton import settings." draggable="false">
+									/storage/releases/4.3/images/skeleton-import-settings-2x.webp 2x
+								" alt="Image of the new skeleton import settings." draggable="false">
 						</div>
 					</div>
 				</div> <!-- #animation-skeletal-animation-import-options -->
@@ -548,8 +547,7 @@ header_text: "Godot Engine 4.3"
 						<div class="release-card-media">
 							<img class="release-card-image position-bottom-center"
 								src="/storage/releases/4.3/images/fbx-import.webp" srcset="
-									/storage/releases/4.3/images/fbx-import-2x.webp 2x,
-									/storage/releases/4.3/images/fbx-import-4x.webp 4x
+									/storage/releases/4.3/images/fbx-import-2x.webp 2x
 								" alt="Image of the FBX importer." draggable="false" />
 						</div>
 					</div>
@@ -595,7 +593,7 @@ header_text: "Godot Engine 4.3"
 		<div class="container">
 			<h3 class="section-title"><a href="#gdscript">GDScript</a></h3>
 			<div class="release-cards">
-				<div id="gdscript-binary-tokenization-on-export" class="release-card inverted span-2">
+				<div id="gdscript-binary-tokenization-on-export" class="release-card inverted media-top span-2">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
@@ -618,6 +616,12 @@ header_text: "Godot Engine 4.3"
 								<a class="c-link" href="https://github.com/godotengine/godot/pull/87634"></a>
 							</div>
 						</div>
+						<div class="release-card-media">
+							<img class="release-card-image" src="/storage/releases/4.3/images/export-binary-tokens.webp"
+								srcset="
+									/storage/releases/4.3/images/export-binary-tokens-2x.webp 2x
+								" alt="Image of the export GDScript binary tokenization settings." draggable="false" />
+						</div>
 					</div>
 				</div> <!-- #gdscript-binary-tokenization-on-export -->
 
@@ -638,6 +642,7 @@ header_text: "Godot Engine 4.3"
 										<code>if my_node <strong>is not</strong> Node3D:</code>
 									</p>
 								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87939"></a>
 							</div>
 						</div>
 					</div>
@@ -667,6 +672,7 @@ header_text: "Godot Engine 4.3"
 										<code>print.callv(my_array)</code>
 									</p>
 								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/82264"></a>
 							</div>
 						</div>
 					</div>
@@ -691,6 +697,7 @@ header_text: "Godot Engine 4.3"
 										inspector.
 									</p>
 								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/82122"></a>
 							</div>
 						</div>
 					</div>
@@ -707,10 +714,14 @@ header_text: "Godot Engine 4.3"
 								</h4>
 								<div class="c-content">
 									<p>
-										You need specific types of export? We got you covered. You can now use
-										<code>@export_custom</code> to export a value suited to your needs.
+										You need specific types of export? We got you covered.
+									</p>
+									<p>
+										You can now use <code>@export_custom</code> to export a value suited to your
+										needs.
 									</p>
 								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/72912"></a>
 							</div>
 						</div>
 					</div>
@@ -744,8 +755,16 @@ header_text: "Godot Engine 4.3"
 									</a>
 								</h4>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										A lot of issues with circular dependencies between scenes and scripts have been
+										fixed!
+									</p>
+									<p>
+										Not only this makes you less worry about cyclic dependencies, but it makes
+										scenes more resilient and stable.
+									</p>
 								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/93346"></a>
 							</div>
 						</div>
 					</div>
