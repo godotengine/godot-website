@@ -265,6 +265,55 @@
     url("../fonts/Montserrat-ExtraBold.woff") format("woff");
 }
 
+/*
+  Godot icon.
+  Font made on https://fontello.com/, using
+  `/assets/press/icon_monochrome_light.svg` linted on
+  https://jakearchibald.github.io/svgomg/
+*/
+@font-face {
+  font-family: 'godot';
+  src: url("../fonts/godot.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="godot-icon-"]:before, [class*=" godot-icon-"]:before {
+  font-family: "godot";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.godot-icon-godot:before { content: '\e003'; } /* '' */
+
 *:focus {
   /* More visible outline for better keyboard navigation. */
   outline: 0.125rem solid hsl(220, 100%, 62.5%);
