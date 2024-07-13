@@ -353,6 +353,13 @@ $donate-robot-size: 500px;
 				grid-template-columns:
 					1fr;
 
+				&:has(.release-card-image,.release-card-video) {
+					// Makes sure that we limit the height of media, but not other content.
+					grid-template-rows:
+						minmax(auto, 30cqh)
+						minmax(max-content, 1fr);
+				}
+
 				.release-card-media {
 					@include card-media-margin("top", var(--card-padding));
 				}
@@ -367,6 +374,13 @@ $donate-robot-size: 500px;
 					auto;
 				grid-template-columns:
 					1fr;
+
+				&:has(.release-card-image,.release-card-video) {
+					// Makes sure that we limit the height of media, but not other content.
+					grid-template-rows:
+						minmax(max-content, 1fr)
+						minmax(auto, 30cqh);
+				}
 
 				.release-card-media {
 					@include card-media-margin("bottom", var(--card-padding));
@@ -656,9 +670,6 @@ $donate-robot-size: 500px;
 
 				.release-card-media {
 					grid-area: media;
-					display: grid;
-					justify-content: center;
-					align-items: center;
 
 					position: relative;
 					contain: paint;
@@ -678,6 +689,12 @@ $donate-robot-size: 500px;
 						&.position-bottom-center {
 							object-position: bottom center;
 						}
+					}
+
+					&:has(> .release-card-button) {
+						display: grid;
+						justify-content: center;
+						align-items: center;
 					}
 
 					.release-card-button {
