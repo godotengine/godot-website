@@ -960,20 +960,56 @@ header_text: "Godot Engine 4.3"
 		<div class="container">
 			<h3 class="section-title"><a href="#web">Web</a></h3>
 			<div class="release-cards">
-				<div class="release-card">
+				<div id="web-web-audio-samples" class="release-card span-2">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href=""><span class="replace-me"></span></a>
+									<a href="#web-web-audio-samples">Web Audio samples</a>
 								</h4>
-								<div class="c-content">
-									<div class="replace-me"></div>
+								<div class="c-blockquote">
+									<span class="highlight">Enhanced audio</span>, rock on!
 								</div>
+								<div class="c-content">
+									<p>
+										With great power comes great responsibility when it comes to the Web.
+									</p>
+
+									<p>
+										As there was audio issues when running games single-threaded, we updated the
+										engine to support audio samples. This enabled us to leverage the Web Audio API
+										in order to deliver seamlessly low-latency and high-quality audio.
+									</p>
+								</div>
+								<a class="c-link"
+									href="https://godotengine.org/article/progress-report-web-export-in-4-3/#sample-playback-to-the-rescue"></a>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> <!-- #web-web-audio-samples -->
+
+				<div id="web-splash-screen-showing-up" class="release-card span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#web-splash-screen-showing-up">Splash screen is now showing up</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Not only the Web progress bar has been reworked and optimized, but the splash
+										screen is now showing up before the game loads!
+									</p>
+									<p>
+										Don't worry: if no boot splash screen has been set, the classic Godot boot
+										splash will be seen, as it is currently displayed on other platforms.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/91128"></a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #web-splash-screen-showing-up -->
 			</div>
 		</div>
 	</div> <!-- #web -->
