@@ -106,6 +106,9 @@ $sections: r-generate-sections(
 	background-color: $release-background;
 
 	.replace-me {
+		&::before {
+			content: "TODO: replace me";
+		}
 		color: red !important;
 	}
 
