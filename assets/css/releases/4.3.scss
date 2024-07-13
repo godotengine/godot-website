@@ -105,6 +105,10 @@ $sections: r-generate-sections(
 	height: 100%;
 	background-color: $release-background;
 
+	.replace-me {
+		color: red !important;
+	}
+
 	.release-header {
 		background-color: $header-background-color;
 		background-image: $header-background-image;
