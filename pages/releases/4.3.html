@@ -222,7 +222,13 @@ header_text: "Godot Engine 4.3"
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#outstanding-new-tilemaplayer-node">New <code>TileMapLayer</code> node</a>
+									<a href="#outstanding-new-tilemaplayer-node">
+										New
+										<code>
+											<span class="basetype">TileMapLayer</span>
+										</code>
+										node
+									</a>
 								</h4>
 								<div class="c-blockquote">
 									<span class="highlight">Layer up</span> with this new node
@@ -285,13 +291,23 @@ header_text: "Godot Engine 4.3"
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#2d-parallax2d-node">New `Parallax2D` node</a>
+									<a href="#2d-parallax2d-node">
+										New
+										<code>
+											<span class="basetype">Parallax2D</span>
+										</code>
+										node
+									</a>
 								</h4>
 								<div class="c-blockquote replace-me">
 								</div>
 								<div class="c-content">
 									<p>
-										The new <code>Parallax2D</code> node aims to greatly simplify the use of
+										The new
+										<code>
+											<span class="basetype">Parallax2D</span>
+										</code>
+										node aims to greatly simplify the use of
 										parallax in
 										your games. You don't have to deal with canvas layers anymore.
 									</p>
@@ -353,7 +369,11 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#animation-skeletonmodifier3d-node">
-										New <code>SkeletonModifier3D</code> abstract node
+										New
+										<code>
+											<span class="basetype">SkeletonModifier3D</span>
+										</code>
+										abstract node
 									</a>
 								</h4>
 								<div class="c-content">
@@ -630,16 +650,32 @@ header_text: "Godot Engine 4.3"
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#gdscript-is-not-operator"><code>is not</code> operator</a>
+									<a href="#gdscript-is-not-operator">
+										<code>
+											<span class="keyword">is not</span>
+										</code>
+										operator
+									</a>
 								</h4>
 								<div class="c-content">
 									<p>
-										<code>if not my_node is Node3D:</code><br>
+										<code>
+											<span class="controlflow">if</span>
+											<span class="keyword">not</span>
+											my_node
+											<span class="keyword">is</span>
+											<span class="basetype">Node3D</span><span class="symbol">:</span>
+										</code><br>
 										It isn't much readable, huh?
 									</p>
 									<p>
 										You can now type this instead.<br>
-										<code>if my_node <strong>is not</strong> Node3D:</code>
+										<code>
+											<span class="controlflow">if</span>
+											my_node
+											<span class="keyword">is not</span>
+											<span class="basetype">Node3D</span><span class="symbol">:</span>
+										</code>
 									</p>
 								</div>
 								<a class="c-link" href="https://github.com/godotengine/godot/pull/87939"></a>
@@ -654,7 +690,10 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#gdscript-built-in-methods-callable">
-										Built-in methods and utility functions usable as <code>Callable</code>
+										Built-in methods and utility functions usable as
+										<code>
+											<span class="basetype">Callable</span>
+										</code>
 									</a>
 								</h4>
 								<div class="c-content">
@@ -663,13 +702,23 @@ header_text: "Godot Engine 4.3"
 										a for loop?
 									</p>
 									<p>
-										By making built-in methods and utility functions usable as <code>Callable</code>
-										makes it possible to call variadic functions such as <code>print()</code> with
-										<code>Callable.callv()</code> easily, without the need of boilerplate code.
+										By making built-in methods and utility functions usable as
+										<code>
+											<span class="basetype">Callable</span>
+										</code>
+										makes it possible to call variadic functions such as
+										<code>
+											<span class="gdscript-globalfunction">print</span><span class="symbol">()</span>
+										</code>
+										with
+										<code>
+											<span class="basetype">Callable</span><span class="symbol">.</span><span class="function">callv</span><span class="symbol">()</span>
+										</code>
+										easily, without the need of boilerplate code.
 									</p>
 									<p>
 										You can now call this:<br>
-										<code>print.callv(my_array)</code>
+										<code>print<span class="symbol">.</span><span class="function">callv</span><span class="symbol">(</span>my_array<span class="symbol">)</span></code>
 									</p>
 								</div>
 								<a class="c-link" href="https://github.com/godotengine/godot/pull/82264"></a>
@@ -684,12 +733,19 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#gdscript-export-storage-property-hint">
-										<code>@export_storage</code> property hint
+										<code>
+											<span class="gdscript-annotation">@export_storage</span>
+										</code>
+										property hint
 									</a>
 								</h4>
 								<div class="c-content">
 									<p>
-										Addon developers, you can now use <code>@export_storage</code> to store hidden
+										Addon developers, you can now use
+										<code>
+											<span class="gdscript-annotation">@export_storage</span>
+										</code>
+										to store hidden
 										values in a scene.
 									</p>
 									<p>
@@ -709,7 +765,10 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#gdscript-export-custom-property-hint">
-										<code>@export_custom</code> property hint
+										<code>
+											<span class="gdscript-annotation">@export_custom</span>
+										</code>
+										property hint
 									</a>
 								</h4>
 								<div class="c-content">
@@ -717,8 +776,11 @@ header_text: "Godot Engine 4.3"
 										You need specific types of export? We got you covered.
 									</p>
 									<p>
-										You can now use <code>@export_custom</code> to export a value suited to your
-										needs.
+										You can now use
+										<code>
+											<span class="gdscript-annotation">@export_custom</span>
+										</code>
+										to export a value suited to your needs.
 									</p>
 								</div>
 								<a class="c-link" href="https://github.com/godotengine/godot/pull/72912"></a>
@@ -798,7 +860,10 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#rendering-renderingdevice-context-management-refactor">
-										<code>RenderingDevice</code> context management refactor
+										<code>
+											<span class="basetype">RenderingDevice</span>
+										</code>
+										context management refactor
 									</a>
 								</h4>
 								<div class="c-content">

@@ -217,6 +217,43 @@ $donate-robot-size: 500px;
 		--card-content-font-size-clamp-max: #{r-get-mobile($card-content-font-size-clamp-max)};
 	}
 
+	code {
+		$_padding: 5px;
+
+		display: inline-block;
+		background-color: $color-code-background;
+		padding: $_padding;
+		margin: $_padding / 2;
+		border-radius: $_padding;
+
+		color: $color-code-text;
+
+		.symbol {
+			color: $color-code-symbol;
+		}
+		.keyword {
+			color: $color-code-keyword;
+		}
+		.controlflow {
+			color: $color-code-controlflow;
+		}
+		.basetype {
+			color: $color-code-basetype;
+		}
+		.function {
+			color: $color-code-function;
+		}
+		.membervariable {
+			color: $color-code-membervariable;
+		}
+		.gdscript-globalfunction {
+			color: $color-code-gdscript-globalfunction;
+		}
+		.gdscript-annotation {
+			color: $color-code-gdscript-annotation;
+		}
+	}
+
 	.replace-me {
 		&::before {
 			content: "TODO: replace me";
