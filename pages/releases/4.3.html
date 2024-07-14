@@ -89,6 +89,9 @@ header_text: "Godot Engine 4.3"
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#foundation-donate">A message from the Godot Foundation</a>
+								</h4>
 								<div class="c-blockquote">
 									Your <span class="highlight">donations</span> did this!
 								</div>
@@ -100,7 +103,7 @@ header_text: "Godot Engine 4.3"
 						<div class="release-card-media">
 							<a href="https://fund.godotengine.org/" class="release-card-button">
 								<span class="release-card-button-text">
-									See Godot fund ➔
+									Join the Development Fund ➔
 								</span>
 							</a>
 						</div>
@@ -199,10 +202,16 @@ header_text: "Godot Engine 4.3"
 									<a href="#outstanding-visual-shader-overhaul">Visual shader editor overhaul</a>
 								</h4>
 								<div class="c-blockquote">
-									Like music to <span class="highlight">your ears</span>
+									<span class="highlight">Throw shades</span> at ease
 								</div>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										The visual shader editor has been revamped from the ground up!
+									</p>
+									<p>
+										Selected nodes are now highlighted! You can also now add reroute nodes to space
+										out content and you can insert frames in order to organize neatly your shader.
+									</p>
 								</div>
 								<a href="" class="c-link"></a>
 							</div>
@@ -230,7 +239,15 @@ header_text: "Godot Engine 4.3"
 									<span class="highlight">Layer up</span> with this new node
 								</div>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										Now gone the era of handling poorly layers of TileMap.
+									</p>
+									<p>
+										With Godot 4.3, we deprecated the TileMap node in order and we
+										created the TileMapLayer node. By doing this, we reduced clutter in the
+										inspector, we simplified the API, and layers are now in line with common Godot
+										design patterns.
+									</p>
 								</div>
 								<a href="" class="c-link"></a>
 							</div>
@@ -361,10 +378,15 @@ header_text: "Godot Engine 4.3"
 								</h4>
 								<div class="c-content">
 									<p>
-										While this class is not meant to be used directly,
-										<span class="replace-me"></span>
+										This new abstract node was made to animate Skeleton3D outside of AnimationMixer
+										and is now the base class for several existing nodes.
+									</p>
+									<p>
+										You can't use it directly, but you can create your own SkeletonModifier3D custom
+										node easily using a simple script.
 									</p>
 								</div>
+								<a class="c-link" href="/article/design-of-the-skeleton-modifier-3d"></a>
 							</div>
 						</div>
 					</div>
@@ -571,7 +593,8 @@ header_text: "Godot Engine 4.3"
 								</h4>
 								<div class="c-content">
 									<p>
-										Want more space to see your files? You can now move the FileSystem dock to the
+										Want more space to see your files? You can now move the FileSystem dock to
+										the
 										bottom
 										section of the editor.
 									</p>
@@ -604,14 +627,16 @@ header_text: "Godot Engine 4.3"
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#gdscript-binary-tokenization-on-export">Binary tokenization on export</a>
+									<a href="#gdscript-binary-tokenization-on-export">Binary tokenization on
+										export</a>
 								</h4>
 								<div class="c-blockquote">
 									<span class="highlight">Lean and mean</span> exported GDScript
 								</div>
 								<div class="c-content">
 									<p>
-										With this new export option, you can reduce the size of the exported GDScript
+										With this new export option, you can reduce the size of the exported
+										GDScript
 										code. But it also offers a way to obfuscate your source code.
 									</p>
 									<p>
@@ -652,10 +677,17 @@ header_text: "Godot Engine 4.3"
 											<span class="keyword">is</span>
 											<span class="basetype">Node3D</span><span class="symbol">:</span>
 										</code><br>
-										It isn't much readable, huh?
+										It isn't much readable, huh? This line tests if
+										<code>my_node</code>
+										is <em>not</em> of type
+										<code>
+											<span class="basetype">Node3D</span>
+										</code>.
 									</p>
 									<p>
-										You can now type this instead.<br>
+										You can now type this instead, which is really closer syntax wise from what
+										we
+										actually mean and say:<br>
 										<code>
 											<span class="controlflow">if</span>
 											my_node
@@ -804,7 +836,8 @@ header_text: "Godot Engine 4.3"
 								</h4>
 								<div class="c-content">
 									<p>
-										A lot of issues with circular dependencies between scenes and scripts have been
+										A lot of issues with circular dependencies between scenes and scripts have
+										been
 										fixed!
 									</p>
 									<p>
@@ -938,7 +971,7 @@ header_text: "Godot Engine 4.3"
 					</div>
 				</div> <!-- #rendering-premultiplied-alpha-blending -->
 
-				<div id="rendering-acyclic-rendering-graph" class="release-card span-3">
+				<div id="rendering-acyclic-rendering-graph" class="release-card span-3 inverted">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
@@ -982,7 +1015,8 @@ header_text: "Godot Engine 4.3"
 
 									<p>
 										As there was audio issues when running games single-threaded, we updated the
-										engine to support audio samples. This enabled us to leverage the Web Audio API
+										engine to support audio samples. This enabled us to leverage the Web Audio
+										API
 										in order to deliver seamlessly low-latency and high-quality audio.
 									</p>
 								</div>
@@ -993,7 +1027,7 @@ header_text: "Godot Engine 4.3"
 					</div>
 				</div> <!-- #web-web-audio-samples -->
 
-				<div id="web-splash-screen-showing-up" class="release-card span-2">
+				<div id="web-splash-screen-showing-up" class="release-card">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
@@ -1002,7 +1036,8 @@ header_text: "Godot Engine 4.3"
 								</h4>
 								<div class="c-content">
 									<p>
-										Not only the Web progress bar has been reworked and optimized, but the splash
+										Not only the Web progress bar has been reworked and optimized, but the
+										splash
 										screen is now showing up before the game loads!
 									</p>
 									<p>
@@ -1023,12 +1058,34 @@ header_text: "Godot Engine 4.3"
 		<div class="container">
 			<h3 class="section-title"><a href="#xr">XR</a></h3>
 			<div class="release-cards">
-				<div class="release-card">
+				<div id="xr-composition-layers-2d-quality" class="release-card span-2">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href=""><span class="replace-me"></span></a>
+									<a href="#xr-composition-layers-2d-quality">
+										Composition layers to allow 2D viewports to be displayed at much higher
+										quality
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-composition-layers-2d-quality -->
+
+				<div id="xr-fixed-tracking-issues-native-mobile-interface" class="release-card inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-fixed-tracking-issues-native-mobile-interface">
+										Fixed tracking issues in the native mobile interface
+									</a>
 								</h4>
 								<div class="c-content">
 									<p class="replace-me"></p>
@@ -1036,7 +1093,66 @@ header_text: "Godot Engine 4.3"
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> <!-- #xr-fixed-tracking-issues-native-mobile-interface -->
+
+				<div id="xr-standardized-support-tracking" class="release-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-standardized-support-tracking">
+										Standardized and enhanced support for hand/finger tracking, body tracking,
+										and
+										face tracking
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-standardized-support-tracking -->
+
+				<div id="xr-meta-extensions" class="release-card span-2 inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-meta-extensions">
+										Support for various Meta extensions such as hand models, render models, and
+										scene discovery
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-meta-extensions -->
+
+				<div id="xr-improvements" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-improvements">
+										Improvements to foveated rendering/vrs, passthrough, and various other
+										supporting systems
+									</a>
+								</h4>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-improvements -->
 			</div>
 		</div>
 	</div> <!-- #xr -->
