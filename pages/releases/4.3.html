@@ -157,13 +157,28 @@ header_text: "Godot Engine 4.3"
 									Like music to <span class="highlight">your ears</span>
 								</div>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										Always wanted to create a dynamic music system that would react to the context
+										of your game?
+									</p>
+									<p>
+										Now you can!
+									</p>
+									<p>
+										With the added resources <code>AudioStreamInteractive</code>,
+										<code>AudioStreamPlaylist</code>, and <code>AudioStreamSynchronized</code>, you
+										can create complex, layered interactive music and transitions.
+									</p>
 								</div>
-								<a href="" class="c-link"></a>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/64488"></a>
 							</div>
 						</div>
 						<div class="release-card-media">
-							<div class="replace-me"></div>
+							<img class="release-card-image position-center-right"
+								alt="Image of the interactive stream settings."
+								src="/storage/releases/4.3/images/interactive-stream.webp" srcset="
+								/storage/releases/4.3/images/interactive-stream-2x.webp 2x
+							" draggable="false" />
 						</div>
 					</div>
 				</div> <!-- #outstanding-interactive-music-support -->
@@ -232,7 +247,7 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#outstanding-new-tilemaplayer-node">
-										New TileMapLayer node
+										New <code>TileMapLayer</code> node
 									</a>
 								</h4>
 								<div class="c-blockquote">
@@ -240,13 +255,13 @@ header_text: "Godot Engine 4.3"
 								</div>
 								<div class="c-content">
 									<p>
-										Now gone the era of handling poorly layers of TileMap.
+										Now gone the era of handling poorly layers of <code>TileMap</code>.
 									</p>
 									<p>
-										With Godot 4.3, we deprecated the TileMap node in order and we
-										created the TileMapLayer node. By doing this, we reduced clutter in the
-										inspector, we simplified the API, and layers are now in line with common Godot
-										design patterns.
+										With Godot 4.3, we deprecated the <code>TileMap</code> node in order and we
+										created the <code>TileMapLayer</code> node. By doing this, we reduced clutter in
+										the inspector, we simplified the API, and layers are now in line with common
+										Godot design patterns.
 									</p>
 								</div>
 								<a href="" class="c-link"></a>
@@ -310,15 +325,17 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#2d-parallax2d-node">
-										New Parallax2D node
+										New <code>Parallax2D</code> node
 									</a>
 								</h4>
-								<div class="c-blockquote replace-me">
+								<div class="c-blockquote">
+									Just add water
 								</div>
 								<div class="c-content">
 									<p>
-										The new Parallax2D node aims to greatly simplify the use of parallax in your
-										games. You don't have to deal with canvas layers anymore.
+										The new <code>Parallax2D</code> node aims to greatly simplify the use of
+										parallax in your games. You don't have to deal with <code>CanvasLayer</code>
+										anymore.
 									</p>
 									<p>
 										We even included a nifty converter!
@@ -328,7 +345,10 @@ header_text: "Godot Engine 4.3"
 							</div>
 						</div>
 						<div class="release-card-media">
-							<p class="replace-me"></p>
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/parallax-2d.webp">
+								<source src="/storage/releases/4.3/video/parallax-2d.webm" type="video/webm">
+							</video>
 						</div>
 					</div>
 				</div> <!-- #2d-parallax2d-node -->
@@ -353,7 +373,7 @@ header_text: "Godot Engine 4.3"
 										these issues.
 									</p>
 								</div>
-								<a class="c-link" href="https://godotengine.org/article/parallax-progress-report/"></a>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87297"></a>
 							</div>
 						</div>
 						<div class="release-card-media">
@@ -378,17 +398,18 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#animation-skeletonmodifier3d-node">
-										New SkeletonModifier3D abstract node
+										New <code>SkeletonModifier3D</code> abstract node
 									</a>
 								</h4>
 								<div class="c-content">
 									<p>
-										This new abstract node was made to animate Skeleton3D outside of AnimationMixer
-										and is now the base class for several existing nodes.
+										This new abstract node was made to animate <code>Skeleton3D</code> outside of
+										<code>AnimationMixer</code> and is now the base class for several existing
+										nodes.
 									</p>
 									<p>
-										You can't use it directly, but you can create your own SkeletonModifier3D custom
-										node easily using a simple script.
+										You can't use it directly, but you can create your own
+										<code>SkeletonModifier3D</code> custom node easily using a simple script.
 									</p>
 								</div>
 								<a class="c-link" href="/article/design-of-the-skeleton-modifier-3d"></a>
@@ -458,7 +479,7 @@ header_text: "Godot Engine 4.3"
 							<div class="release-card-content-container">
 								<h4 class="c-title">
 									<a href="#animation-animationmmixer-misc-fixes">
-										AnimationMixer miscellaneous fixes
+										<code>AnimationMixer</code> miscellaneous fixes
 									</a>
 								</h4>
 								<div class="c-content">
@@ -534,8 +555,7 @@ header_text: "Godot Engine 4.3"
 								<div class="c-content">
 									<p>
 										Wayland is a newer, more modern display server that can be used on Linux and
-										some
-										BSD-derived OSes.
+										some BSD-derived OSes.
 									</p>
 									<p>
 										Builtin Wayland support give us access to a much cleaner API as well
@@ -568,7 +588,7 @@ header_text: "Godot Engine 4.3"
 									</div>
 									<div class="c-content">
 										<p>
-											Godot now handles .fbx files natively,
+											Godot now handles <code>.fbx</code> files natively,
 											so you can import 3D models and animations
 											from an industry-standard file format more easily.
 										</p>
@@ -599,9 +619,7 @@ header_text: "Godot Engine 4.3"
 								<div class="c-content">
 									<p>
 										Want more space to see your files? You can now move the FileSystem dock to
-										the
-										bottom
-										section of the editor.
+										the bottom section of the editor.
 									</p>
 									<p>
 										Especially practical if you're used to find your files there.
@@ -641,8 +659,7 @@ header_text: "Godot Engine 4.3"
 								<div class="c-content">
 									<p>
 										With this new export option, you can reduce the size of the exported
-										GDScript
-										code. But it also offers a way to obfuscate your source code.
+										GDScript code. But it also offers a way to obfuscate your source code.
 									</p>
 									<p>
 										While it doesn't protect your work from being decompiled, it at least hides
@@ -675,7 +692,7 @@ header_text: "Godot Engine 4.3"
 								</h4>
 								<div class="c-content">
 									<p>
-										<code>
+										<code class="highlight">
 											<span class="controlflow">if</span>
 											<span class="keyword">not</span>
 											my_node
@@ -683,17 +700,16 @@ header_text: "Godot Engine 4.3"
 											<span class="basetype">Node3D</span><span class="symbol">:</span>
 										</code><br>
 										It isn't much readable, huh? This line tests if
-										<code>my_node</code>
+										<code class="highlight">my_node</code>
 										is <em>not</em> of type
-										<code>
+										<code class="highlight">
 											<span class="basetype">Node3D</span>
 										</code>.
 									</p>
 									<p>
 										You can now type this instead, which is really closer syntax wise from what
-										we
-										actually mean and say:<br>
-										<code>
+										we actually say and mean:<br>
+										<code class="highlight">
 											<span class="controlflow">if</span>
 											my_node
 											<span class="keyword">is not</span>
@@ -726,22 +742,21 @@ header_text: "Godot Engine 4.3"
 									</p>
 									<p>
 										By making built-in methods and utility functions usable as
-										<code>
-											<span class="basetype">Callable</span>
-										</code>
-										makes it possible to call variadic functions such as
-										<code>
+										<code>Callable</code> makes it possible to call variadic functions such as
+										<code class="highlight">
 											<span class="gdscript-globalfunction">print</span><span class="symbol">()</span>
 										</code>
 										with
-										<code>
+										<code class="highlight">
 											<span class="basetype">Callable</span><span class="symbol">.</span><span class="function">callv</span><span class="symbol">()</span>
 										</code>
 										easily, without the need of boilerplate code.
 									</p>
 									<p>
 										You can now call this:<br>
-										<code>print<span class="symbol">.</span><span class="function">callv</span><span class="symbol">(</span>my_array<span class="symbol">)</span></code>
+										<code class="highlight">
+											print<span class="symbol">.</span><span class="function">callv</span><span class="symbol">(</span>my_array<span class="symbol">)</span>
+										</code>
 									</p>
 								</div>
 								<a class="c-link" href="https://github.com/godotengine/godot/pull/82264"></a>
@@ -765,7 +780,7 @@ header_text: "Godot Engine 4.3"
 								<div class="c-content">
 									<p>
 										Addon developers, you can now use
-										<code>
+										<code class="highlight">
 											<span class="gdscript-annotation">@export_storage</span>
 										</code>
 										to store hidden
@@ -800,7 +815,7 @@ header_text: "Godot Engine 4.3"
 									</p>
 									<p>
 										You can now use
-										<code>
+										<code class="highlight">
 											<span class="gdscript-annotation">@export_custom</span>
 										</code>
 										to export a value suited to your needs.

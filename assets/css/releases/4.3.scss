@@ -218,7 +218,7 @@ $donate-robot-size: 500px;
 		--card-content-font-size-clamp-max: #{r-get-mobile($card-content-font-size-clamp-max)};
 	}
 
-	code {
+	code.highlight {
 		$_padding: 5px;
 
 		display: inline-block;
