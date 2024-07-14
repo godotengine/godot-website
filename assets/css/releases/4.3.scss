@@ -727,6 +727,9 @@ $donate-robot-size: 500px;
 						&.position-bottom-center {
 							object-position: bottom center;
 						}
+						&.position-center-right {
+							object-position: center right;
+						}
 					}
 
 					&:has(> .release-card-button) {
