@@ -194,7 +194,17 @@ header_text: "Godot Engine 4.3"
 									<span class="highlight">More frames</span>, more!
 								</div>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										Physics interpolation is the key to decouple physics ticks and display
+										frame rates. What it does is to create dynamically frames inbetween the last
+										physics position and the current one.
+									</p>
+
+									<p>
+										While it's not a silver bullet, it can greatly improve support for high-refresh
+										displays. Or, it can enable you to display smooth animations with a low physics
+										tick rate.
+									</p>
 								</div>
 								<a href="" class="c-link"></a>
 							</div>
