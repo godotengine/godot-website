@@ -38,3 +38,24 @@ for (const el of ["commits", "contributors"]) {
 		timeline.add(localTimeline);
 	}
 }
+
+// Add a scrolling effect to each card and title.
+const windowHeight = window.innerHeight;
+/** @type {HTMLDivElement[]} */
+const elements = Array.from(gsap.utils.toArray(".release-content .section .release-cards .release-card, .release-content .section .section-title"));
+for (const element of elements) {
+	if (element.getBoundingClientRect().top < windowHeight) {
+		continue;
+	}
+
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: element,
+			start: "top bottom",
+		}
+	});
+	timeline.from(element, {
+		y: "+=100",
+		duration: 0.5
+	});
+}
