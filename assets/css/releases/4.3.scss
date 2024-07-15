@@ -66,6 +66,9 @@ $card-content-font-size-clamp-min: r-desktop-mobile(14px, 0.8em);
 $card-content-font-size-clamp-val: r-desktop-mobile(7cqw, 4cqw);
 $card-content-font-size-clamp-max: r-desktop-mobile(19px, 1em);
 
+$download-gap: r-desktop-mobile(8px, 4px);
+$download-font-size: r-desktop-mobile(18px, 12px);
+
 $section-hue-offset: 20;
 $sections: r-generate-sections(
 	$sections: (
@@ -158,17 +161,40 @@ $donate-robot-size: 500px;
 				display: none;
 			}
 
-			.download-platform {
-				margin-top: var(--card-padding);
-				margin-bottom: calc(var(--card-padding) / 2);
+			.card-download-details {
+				display: flex;
+				justify-content: center;
 
-				&:first-of-type {
-					margin-top: 0;
+				.card-download-platforms {
+					display: grid;
+					grid-template-columns: minmax(min-content, 40%) 3fr 2fr;
+					gap: var(--download-gap);
+					font-size: var(--download-font-size);
+					.btn {
+						font-size: var(--download-font-size);
+					}
+
+					width: 60%;
+					@include is-mobile() {
+						width: 100%;
+					}
 				}
+			}
+
+
+			.download-platform {
+				& > img {
+					margin-right: var(--download-gap);
+				}
+
+				display: flex;
+				align-items: center;
+				justify-content: start;
 			}
 
 			.card-download-sublinks {
 				margin-top: var(--card-padding);
+				text-align: center;
 
 				.card-download-other {
 					color: black;
@@ -189,7 +215,7 @@ $donate-robot-size: 500px;
 				}
 
 				&--mono {
-					margin-top: calc(var(--card-padding) / 2);
+					// margin-top: calc(var(--card-padding) / 2);
 					background-color: var(--color-bottom);
 
 					.download-title {
@@ -211,23 +237,35 @@ $donate-robot-size: 500px;
 	height: 100%;
 	background: $release-background;
 
+	/**
+	 * Responsive sizes.
+	 */
 	--release-title-font-size: #{r-get-desktop($release-title-font-size)};
 	--release-section-margin-top: #{r-get-desktop($release-section-margin-top)};
 	--release-section-margin-bottom: #{r-get-desktop($release-section-margin-bottom)};
+
 	--card-padding: #{r-get-desktop($card-padding)};
 	--card-title-font-size: #{r-get-desktop($card-title-font-size)};
 	--card-content-font-size-clamp-min: #{r-get-desktop($card-content-font-size-clamp-min)};
 	--card-content-font-size-clamp-val: #{r-get-desktop($card-content-font-size-clamp-val)};
 	--card-content-font-size-clamp-max: #{r-get-desktop($card-content-font-size-clamp-max)};
+
+	--download-gap: #{r-get-desktop($download-gap)};
+	--download-font-size: #{r-get-desktop($download-font-size)};
+
 	@include is-mobile() {
 		--release-title-font-size: #{r-get-mobile($release-title-font-size)};
 		--release-section-margin-top: #{r-get-mobile($release-section-margin-top)};
 		--release-section-margin-bottom: #{r-get-mobile($release-section-margin-bottom)};
+
 		--card-padding: #{r-get-mobile($card-padding)};
 		--card-title-font-size: #{r-get-mobile($card-title-font-size)};
 		--card-content-font-size-clamp-min: #{r-get-mobile($card-content-font-size-clamp-min)};
 		--card-content-font-size-clamp-val: #{r-get-mobile($card-content-font-size-clamp-val)};
 		--card-content-font-size-clamp-max: #{r-get-mobile($card-content-font-size-clamp-max)};
+
+		--download-gap: #{r-get-mobile($download-gap)};
+		--download-font-size: #{r-get-mobile($download-font-size)};
 	}
 
 	code.highlight {
