@@ -418,8 +418,15 @@ header_text: "Godot Engine 4.3"
 										nodes.
 									</p>
 									<p>
-										You can't use it directly, but you can create your own
-										<code>SkeletonModifier3D</code> custom node easily using a simple script.
+										You can't use it directly, but you can create your own custom
+										<code>SkeletonModifier3D</code> node easily using a simple script.
+									</p>
+									<p>
+										You'll be able to implement the new
+										<code class="highlight">
+											<span class="function">_process_modification</span><span class="symbol">()</span>
+										</code>
+										function to modify the bones how ever you like!
 									</p>
 								</div>
 								<a class="c-link" href="/article/design-of-the-skeleton-modifier-3d"></a>
@@ -428,7 +435,7 @@ header_text: "Godot Engine 4.3"
 					</div>
 				</div> <!-- #animation-skeletonmodifier3d-node -->
 
-				<div id="animation-skeletal-animation-import-options" class="release-card media-bottom span-2">
+				<div id="animation-skeletal-animation-import-options" class="release-card media-bottom span-2-at-3-col">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
@@ -438,11 +445,21 @@ header_text: "Godot Engine 4.3"
 									</a>
 								</h4>
 								<div class="c-blockquote">
-									<span class="replace-me"></span>
+									<span class="highlight">Retarget</span> like a pro
 								</div>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										We implemented new import options in order to assist you in retargeting
+										animation sets, especially those using the <code>.fbx</code> format.
+									</p>
+									<p>
+										From importing a rest pose as <em>RESET</em> animation to a retargeting option
+										to use a template for silhouette, we've made sure that you'll be able to fully
+										use all the skeletons in your closet.
+									</p>
 								</div>
+								<a class="c-link"
+									href="https://godotengine.org/article/dev-snapshot-godot-4-3-beta-1/#skeletal-animation-import-options"></a>
 							</div>
 						</div>
 						<div class="release-card-media">
@@ -454,7 +471,7 @@ header_text: "Godot Engine 4.3"
 					</div>
 				</div> <!-- #animation-skeletal-animation-import-options -->
 
-				<div id="animation-more-keyframe-manipulations" class="release-card inverted media-top span-2">
+				<div id="animation-more-keyframe-manipulations" class="release-card inverted media-top span-3">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
@@ -482,23 +499,6 @@ header_text: "Godot Engine 4.3"
 						</div>
 					</div>
 				</div> <!-- #animation-more-keyframe-manipulations -->
-
-				<div id="animation-animationmmixer-misc-fixes" class="release-card">
-					<div class="release-card-container">
-						<div class="release-card-content">
-							<div class="release-card-content-container">
-								<h4 class="c-title">
-									<a href="#animation-animationmmixer-misc-fixes">
-										<code>AnimationMixer</code> miscellaneous fixes
-									</a>
-								</h4>
-								<div class="c-content">
-									<p class="replace-me"></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> <!-- #animation-animationmmixer-misc-fixes -->
 			</div>
 		</div>
 	</div> <!-- #animation -->
