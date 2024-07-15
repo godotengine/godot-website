@@ -55,7 +55,7 @@ for (const element of elements) {
 		}
 	});
 	timeline.from(element, {
-		y: "+=100",
-		duration: 0.5
+		y: "+=50",
+		duration: 0.2
 	});
 }

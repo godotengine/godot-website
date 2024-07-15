@@ -55,7 +55,10 @@ $header-version-font-weight: 800;
 $header-overlap: 104px;
 
 $release-background: #CECECE;
-$release-title-font-size: r-desktop-mobile(28px, 20px);
+$release-background-end: #BCBCBC;
+$release-title-font-size: r-desktop-mobile(35px, 25px);
+$release-section-margin-top: r-desktop-mobile(80px, 40px);
+$release-section-margin-bottom: r-desktop-mobile(40px, 20px);
 
 $card-padding: r-desktop-mobile(25px, 15px);
 $card-title-font-size: r-desktop-mobile(21px, 18px);
@@ -198,12 +201,19 @@ $donate-robot-size: 500px;
 	}
 }
 
+.container {
+	// gsap issue on mobile otherwise.
+	overflow: hidden;
+}
+
 .release-container {
 	width: 100%;
 	height: 100%;
-	background-color: $release-background;
+	background: $release-background;
 
 	--release-title-font-size: #{r-get-desktop($release-title-font-size)};
+	--release-section-margin-top: #{r-get-desktop($release-section-margin-top)};
+	--release-section-margin-bottom: #{r-get-desktop($release-section-margin-bottom)};
 	--card-padding: #{r-get-desktop($card-padding)};
 	--card-title-font-size: #{r-get-desktop($card-title-font-size)};
 	--card-content-font-size-clamp-min: #{r-get-desktop($card-content-font-size-clamp-min)};
@@ -211,6 +221,8 @@ $donate-robot-size: 500px;
 	--card-content-font-size-clamp-max: #{r-get-desktop($card-content-font-size-clamp-max)};
 	@include is-mobile() {
 		--release-title-font-size: #{r-get-mobile($release-title-font-size)};
+		--release-section-margin-top: #{r-get-mobile($release-section-margin-top)};
+		--release-section-margin-bottom: #{r-get-mobile($release-section-margin-bottom)};
 		--card-padding: #{r-get-mobile($card-padding)};
 		--card-title-font-size: #{r-get-mobile($card-title-font-size)};
 		--card-content-font-size-clamp-min: #{r-get-mobile($card-content-font-size-clamp-min)};
@@ -527,7 +539,7 @@ $donate-robot-size: 500px;
 								"quote contnt"
 								"quote link";
 							grid-template-columns:
-								1fr 1fr;
+								2fr 3fr;
 							grid-template-rows:
 								min-content
 								1fr
@@ -573,7 +585,7 @@ $donate-robot-size: 500px;
 								"quote contnt"
 								"quote link";
 							grid-template-columns:
-								1fr 1fr;
+								2fr 3fr;
 							grid-template-rows:
 								1fr
 								auto;
@@ -711,6 +723,8 @@ $donate-robot-size: 500px;
 
 					position: relative;
 					contain: paint;
+					container-type: inline-size;
+					container-name: release-card-media;
 
 					.release-card-video,
 					.release-card-image {
@@ -742,14 +756,17 @@ $donate-robot-size: 500px;
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						text-align: center;
 
 						background-color: var(--color-top);
 						color: white;
 
+						margin: var(--card-padding);
 						padding: var(--card-padding);
 						border-radius: var(--card-padding);
 
 						text-decoration: none;
+
 						&:hover {
 							text-decoration: underline;
 							cursor: pointer;
@@ -760,7 +777,11 @@ $donate-robot-size: 500px;
 		}
 
 		.section {
-			margin-bottom: 40px;
+			margin-top: var(--release-section-margin-top);
+			margin-bottom: var(--release-section-margin-bottom);
+			&:first-of-type {
+				margin-top: 0;
+			}
 			&:last-of-type {
 				margin-bottom: 0;
 			}
