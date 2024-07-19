@@ -918,6 +918,38 @@ header_text: "Godot Engine 4.3"
 		<div class="container">
 			<h3 class="section-title"><a href="#rendering">Rendering</a></h3>
 			<div class="release-cards">
+				<div id="rendering-premultiplied-alpha-blending" class="release-card media-top inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#rendering-premultiplied-alpha-blending">
+										Premultiplied alpha blending in 3D shaders
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Premultiplied alpha is now a mixing mode in 3D shaders. This enables you to
+										create better looking flames and fireworks, as the same particle now can have
+										the properties of additive (for the flame) and mixing (for the smoke) blending.
+									</p>
+									<p>
+										See on the video how the left barrel flames which is using additive blending
+										don't end up in smoke like the other barrel flames which use premultiplied alpha
+										blending.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/premultiplied-alpha.webp">
+								<source src="/storage/releases/4.3/video/premultiplied-alpha.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #rendering-premultiplied-alpha-blending -->
+
 				<div id="rendering-compositor-effects-api" class="release-card">
 					<div class="release-card-container">
 						<div class="release-card-content">
@@ -949,23 +981,6 @@ header_text: "Godot Engine 4.3"
 						</div>
 					</div>
 				</div> <!-- #rendering-renderingdevice-context-management-refactor -->
-
-				<div id="rendering-compatibility-rendering-backend-features" class="release-card inverted">
-					<div class="release-card-container">
-						<div class="release-card-content">
-							<div class="release-card-content-container">
-								<h4 class="c-title">
-									<a href="#rendering-compatibility-rendering-backend-features">
-										Compatibility rendering backend features
-									</a>
-								</h4>
-								<div class="c-content">
-									<p class="replace-me"></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> <!-- #rendering-compatibility-rendering-backend-features -->
 
 				<div id="rendering-depth-based-fog" class="release-card media-left span-2">
 					<div class="release-card-container">
@@ -1000,13 +1015,13 @@ header_text: "Godot Engine 4.3"
 					</div>
 				</div> <!-- #rendering-depth-based-fog -->
 
-				<div id="rendering-premultiplied-alpha-blending" class="release-card media-top">
+				<div id="rendering-compatibility-rendering-backend-features" class="release-card">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#rendering-premultiplied-alpha-blending">
-										Premultiplied alpha blending in 3D shaders
+									<a href="#rendering-compatibility-rendering-backend-features">
+										Compatibility rendering backend features
 									</a>
 								</h4>
 								<div class="c-content">
@@ -1014,14 +1029,8 @@ header_text: "Godot Engine 4.3"
 								</div>
 							</div>
 						</div>
-						<div class="release-card-media">
-							<video class="release-card-video" autoplay loop muted
-								poster="/storage/releases/4.3/images/premultiplied-alpha.webp">
-								<source src="/storage/releases/4.3/video/premultiplied-alpha.webm" type="video/webm">
-							</video>
-						</div>
 					</div>
-				</div> <!-- #rendering-premultiplied-alpha-blending -->
+				</div> <!-- #rendering-compatibility-rendering-backend-features -->
 
 				<div id="rendering-acyclic-rendering-graph" class="release-card span-3 inverted">
 					<div class="release-card-container">
