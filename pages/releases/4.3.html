@@ -805,7 +805,8 @@ header_text: "Godot Engine 4.3"
 										values in a scene.
 									</p>
 									<p>
-										Useful if you need to store custom data that isn't meant to be edited in the
+										Useful if you need to store data on a node or a resource that need to be
+										accessed by the addon, but that isn't meant to be edited by the user in the
 										inspector.
 									</p>
 								</div>
@@ -838,6 +839,10 @@ header_text: "Godot Engine 4.3"
 										</code>
 										to export a value suited to your needs.
 									</p>
+									<p>
+										It allows you to set a custom hint, hint string, and usage flags for the
+										exported property. Great for highly specific exports and for addon developers.
+									</p>
 								</div>
 								<a class="c-link" href="https://github.com/godotengine/godot/pull/72912"></a>
 							</div>
@@ -854,10 +859,22 @@ header_text: "Godot Engine 4.3"
 										GDScript autocompletion fixes
 									</a>
 								</h4>
-								<div class="c-blockquote replace-me"></div>
-								<div class="c-content">
-									<p class="replace-me"></p>
+								<div class="c-blockquote">
+									<span class="highlight">Autocomplete</span> this!
 								</div>
+								<div class="c-content">
+									<p>
+										We improved the autocompletion of several components, including enums,
+										subscripts, and
+										<code
+											class="highlight"><span class="function">get_node</span><span class="symbol">()</span></code>.
+									</p>
+									<p>
+										As it is a difficult feature to detect regressions, we even started doing some
+										automated testing to specifically test autocompletion results.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/86973"></a>
 							</div>
 						</div>
 					</div>
