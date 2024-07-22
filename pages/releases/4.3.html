@@ -913,20 +913,101 @@ header_text: "Godot Engine 4.3"
 		<div class="container">
 			<h3 class="section-title"><a href="#navigation">Navigation</a></h3>
 			<div class="release-cards">
-				<div id="rendering-compositor-effects-api" class="release-card">
+				<div id="navigation-mesh-chunks-baking" class="release-card media-left span-3">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#rendering-compositor-effects-api">Compositor effects API</a>
+									<a href="#navigation-mesh-chunks-baking">Navigation mesh chunks baking</a>
 								</h4>
-								<div class="c-content">
-									<p class="replace-me"></p>
+								<div class="c-blockquote">
+									<span class="highlight">Split</span> and <span class="highlight">bake</span>!
 								</div>
+								<div class="c-content">
+									<p>
+										If you're working on a project with large game worlds, this update will
+										definitely be interesting to you.
+									</p>
+									<p>
+										This new feature allows you to split a large area into source geometry chunks
+										and bake chunk navigation meshes. You'll be then able to load those chunks
+										on-demand, saving up computing resources.
+									</p>
+									<p>
+										These chunks will have border edges aligned so they can be merged efficiently by
+										the navigation map.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87961"></a>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/navigation-chunks.webp">
+								<source src="/storage/releases/4.3/video/navigation-chunks.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #navigation-mesh-chunks-baking -->
+
+				<div id="navigation-navigation-obstacle-option-to-affect-navigation-mesh-baking"
+					class="release-card span-2-at-3-col">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#navigation-navigation-obstacle-option-to-affect-navigation-mesh-baking">
+										<span>Navigation obstacle option to affect baking</span>
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									Our new <span class="highlight">cookie cutter</span>
+								</div>
+								<div class="c-content">
+									<p>
+										<code>NavigationObstacle2D</code> and <code>NavigationObstacle3D</code> now have
+										two new options to affect navigation mesh baking.
+									</p>
+									<p>
+										With these options, you can either affect the generated navigation mesh, or
+										carve into it directly, as if you were using a stencil.
+									</p>
+									<p>
+										This is especially useful for 3D navigation mesh baking as it can help
+										discarding internal navigation meshes that appears in geometry.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87961"></a>
 							</div>
 						</div>
 					</div>
-				</div> <!-- #rendering-compositor-effects-api -->
+				</div> <!-- #navigation-navigation-obstacle-option-to-affect-navigation-mesh-baking -->
+
+				<div id="navigation-navigation-path-simplification" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#navigation-navigation-path-simplification">
+										<span>Navigation path simplification</span>
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										With the new "Simplify Path" option on navigation agent nodes, it is now
+										possible to remove non-critical path points.
+									</p>
+									<p>
+										This is useful to resolve some issues that comes with agent movement in large
+										areas. It also helps agents that use navigation points to steer as it leaves
+										only the critical path points as targets.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87961"></a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #navigation-navigation-path-simplification -->
 			</div>
 		</div>
 	</div> <!-- #navigation -->
