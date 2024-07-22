@@ -541,7 +541,7 @@ $donate-robot-size: 500px;
 						.c-blockquote {
 							color: white;
 
-							.highlight {
+							span.highlight {
 								color: var(--color-invert);
 							}
 						}
@@ -718,7 +718,7 @@ $donate-robot-size: 500px;
 							font-size: clamp(30px, 7cqw, 56px);
 							font-weight: 800;
 
-							.highlight {
+							span.highlight {
 								color: var(--color-top);
 							}
 						}
