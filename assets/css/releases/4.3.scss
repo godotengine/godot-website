@@ -52,19 +52,17 @@ $header-bar-contributors-color: #F47E7A;
 $header-bar-contributors-color-inactive: #A66160;
 $header-bar-gap: 10px;
 $header-version-font-weight: 800;
-$header-overlap: 104px;
 
-$release-background: #CECECE;
 $release-background-end: #BCBCBC;
 $release-title-font-size: r-desktop-mobile(35px, 25px);
 $release-section-margin-top: r-desktop-mobile(80px, 40px);
 $release-section-margin-bottom: r-desktop-mobile(40px, 20px);
 
-$card-padding: r-desktop-mobile(25px, 15px);
+$card-padding: r-desktop-mobile(17px, 15px);
 $card-title-font-size: r-desktop-mobile(21px, 18px);
 $card-content-font-size-clamp-min: r-desktop-mobile(14px, 0.8em);
 $card-content-font-size-clamp-val: r-desktop-mobile(7cqw, 4cqw);
-$card-content-font-size-clamp-max: r-desktop-mobile(19px, 1em);
+$card-content-font-size-clamp-max: r-desktop-mobile(16px, 1em);
 
 $download-gap: r-desktop-mobile(8px, 4px);
 $download-font-size: r-desktop-mobile(18px, 12px);
@@ -92,7 +90,6 @@ $sections: r-generate-sections(
 	$offset: $section-hue-offset
 );
 
-$donate-background-color: #EFF1F5;
 $donate-robot-color: #CFD5E0;
 $donate-robot-size: 500px;
 
@@ -112,7 +109,10 @@ $donate-robot-size: 500px;
 }
 
 #foundation-donate {
-	background-color: $donate-background-color;
+	background-color: #283a5b;
+	@media (prefers-color-scheme: light) {
+		background-color: #EFF1F5;
+	}
 
 	.robot-1,
 	.robot-2 {
@@ -235,8 +235,11 @@ $donate-robot-size: 500px;
 .release-container {
 	width: 100%;
 	height: 100%;
-	background: $release-background;
-
+	background-color: #25282b;
+	
+	@media (prefers-color-scheme: light) {
+		background-color: #cecece;
+	}
 	/**
 	 * Responsive sizes.
 	 */
@@ -313,10 +316,15 @@ $donate-robot-size: 500px;
 	}
 
 	.release-header {
-		background-color: $header-background-color;
 		background-image: $header-background-image;
 		background-position: $header-background-position;
 		background-repeat: $header-background-repeat;
+
+		
+		background-color: #121315;
+		@media (prefers-color-scheme: light) {
+			background-color: #25282B;
+		}
 
 		.release-header-content {
 			padding-top: $header-gap-top;
@@ -328,6 +336,7 @@ $donate-robot-size: 500px;
 				background-position: $header-logo-position;
 				background-size: $header-logo-size;
 				height: $header-logo-height;
+				margin-bottom: 60px;
 
 				.header-main-title-text {
 					display: none;
@@ -368,12 +377,16 @@ $donate-robot-size: 500px;
 
 						.header-numbers-line {
 							font-variant-numeric: tabular-nums;
-
 							.version {
 								font-weight: $header-version-font-weight;
 								margin-right: $header-bar-gap;
 							}
-
+							
+							&.inactive {
+								.version, .number {
+									opacity: 0.7;
+								}
+							}
 							.bar {
 								display: inline-block;
 								height: $header-bar-height;
@@ -390,7 +403,7 @@ $donate-robot-size: 500px;
 
 	.release-content {
 		position: relative;
-		top: -1 * $header-overlap;
+		top: -70px;
 		margin-top: 0;
 		color: black;
 
@@ -426,10 +439,15 @@ $donate-robot-size: 500px;
 			container-name: release-card;
 
 			contain: paint;
-			color: black;
-			background-color: white;
 			border-radius: var(--card-padding);
 			padding: var(--card-padding);
+			
+			background-color: rgb(51, 54, 57);
+			color: white;
+			@media (prefers-color-scheme: light) {
+				background-color: white;
+				color: #2d2d2d;
+			}
 
 			@mixin media-top() {
 				grid-template-areas:
@@ -715,7 +733,7 @@ $donate-robot-size: 500px;
 
 						.c-blockquote {
 							grid-area: quote;
-							font-size: clamp(30px, 7cqw, 56px);
+							font-size: clamp(30px, 7cqw, 40px);
 							font-weight: 800;
 
 							span.highlight {
@@ -746,12 +764,8 @@ $donate-robot-size: 500px;
 							font-size: 21px;
 							font-weight: 700;
 							margin-top: 10px;
-							color: black;
+							color: inherit;
 							text-decoration: underline;
-
-							&::before {
-								content: "Read more +"
-							}
 						}
 					}
 				}
@@ -801,14 +815,10 @@ $donate-robot-size: 500px;
 
 						margin: var(--card-padding);
 						padding: var(--card-padding);
-						border-radius: var(--card-padding);
+						border-radius: 14px;
 
 						text-decoration: none;
-
-						&:hover {
-							text-decoration: underline;
-							cursor: pointer;
-						}
+						cursor: pointer;
 					}
 				}
 			}
