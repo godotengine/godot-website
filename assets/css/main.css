@@ -194,75 +194,23 @@
   }
 }
 
-/* Montserrat Regular */
+/* Montserrat */
 @font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
+	font-family: "Montserrat";
+	font-optical-sizing: auto;
+  font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+	src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff2") format("woff2"), url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-optical-sizing: auto;
+  font-weight: 100 900;
   font-style: normal;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Italic.woff2") format("woff2");
-}
-
-/* Montserrat Medium */
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-  src: url("../fonts/Montserrat-MediumItalic.woff2") format("woff2");
-}
-
-/* Montserrat SemiBold */
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBoldItalic.woff2") format("woff2");
-}
-
-/* Montserrat Bold */
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("../fonts/Montserrat-Bold.woff") format("woff");
-}
-
-/* Montserrat ExtraBold */
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+	font-display: swap;
+	src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2"), url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
 /*
