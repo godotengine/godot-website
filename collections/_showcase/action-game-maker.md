@@ -21,6 +21,10 @@ windows: true
 
 steam: https://store.steampowered.com/app/2987180/ACTION_GAME_MAKER/
 
+developer_interview:
+  title: "Why the developer chose Godot"
+  text: "There's a lot to like about Godot. The very lightweight editor comes to mind first, but the straightforward UI and the breadth of 2D features combined with the modern selection of build targets are all great. But what really sets Godot apart is the energy and passion from the Godot community itself. Constantly active, you can really feel that everyone is working hard to make good games and Godot better at the same time. We're really going to need to give it our all to ensure that Action Game Maker can proudly be accepted by and call ourselves part of this community!"
+
 # tool: true
 featured_in_home: false
 ---
