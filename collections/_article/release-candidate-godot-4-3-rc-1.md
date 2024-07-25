@@ -6,7 +6,7 @@ author: "Rémi Verschelde"
 image: /storage/blog/covers/release-candidate-godot-4-3-rc-1.webp
 image_caption_title: "ColdRidge"
 image_caption_description: "A game by Frog Collective"
-date: 2024-07-25 15:00:00
+date: 2024-07-25 18:00:00
 ---
 
 We are entering the final stage of development for Godot 4.3, which is the [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate): all features are in-place, the most critical regressions have been tackled, and so we're confident that it's now ready for general use in the vast majority of cases...
