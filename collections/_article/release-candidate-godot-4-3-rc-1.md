@@ -1,6 +1,6 @@
 ---
 title: "Release candidate: Godot 4.3 RC 1"
-excerpt: ""
+excerpt: "We are cautiously optimistic that Godot 4.3 is ready for release, please test it and let us know if we are right!"
 categories: ["pre-release"]
 author: "Rémi Verschelde"
 image: /storage/blog/covers/release-candidate-godot-4-3-rc-1.webp
@@ -21,7 +21,7 @@ Please, consider [supporting the project financially](https://fund.godotengine.o
 
 ---
 
-*The cover illustration is from* [**ColdRidge**](https://store.steampowered.com/app/3052500/ColdRidge/-), *a turn-based exploration game set in the mystical Wild West, developed by [Frog Collective](http://frog-collective.com/en/) with Godot 4. The game was revealed in early July and just got a playable demo [on Steam](https://store.steampowered.com/app/3052500/ColdRidge/), where you can also wishlist it.*
+*The cover illustration is from* [**ColdRidge**](https://store.steampowered.com/app/3052500/ColdRidge/), *a turn-based exploration game set in the mystical Wild West, developed by [Frog Collective](http://frog-collective.com/) with Godot 4. The game was revealed in early July and just got a playable demo [on Steam](https://store.steampowered.com/app/3052500/ColdRidge/), where you can also wishlist it.*
 
 ## Highlights
 
@@ -29,12 +29,12 @@ We covered the most important highlights from Godot 4.3 in the previous [4.3 bet
 
 Especially if you're testing 4.3 for the first time, you'll want to get a condensed overview of what new features you might want to make use of.
 
-This section covers changes made since the previous [beta 3 snapshot](/article/dev-snapshot-godot-4-3-beta-3/), which are mostly regression fixes, or "safe" fixes to long standard issues.
+This section covers changes made since the previous [beta 3 snapshot](/article/dev-snapshot-godot-4-3-beta-3/), which are mostly regression fixes, or "safe" fixes to longstanding issues.
 
 There are two big highlights in this release for the Windows platform though:
 
 - The Direct3D 12 rendering backend now works out of the box on Windows, and no longer requires copying the `DXIL.dll` library ([GH-94203](https://github.com/godotengine/godot/pull/94203))! This is thanks to Microsoft's decision to [open source the DXIL Validator hash](https://devblogs.microsoft.com/directx/open-sourcing-dxil-validator-hash/), which was the only reason for us to require the proprietary `DXIL.dll`. Aside from greatly simplifying the distribution of Windows builds with D3D12, it also makes it possible to export Windows D3D12 projects from other OSes (Linux, macOS, Android), which is an important part of Godot's cross-platform support.
-- With the progressive rollout of ARM64 Windows devices on the market, we've finalized our support for that target and now provide ARM64 Windows builds (editor and export templates) for the first, for both Standard and .NET flavors. Thanks to Qualcomm engineers who did some testing and gave us access to cloud-based devices to confirm that the binaries work.
+- With the progressive rollout of ARM64 Windows devices on the market, we've finalized our support for that target and now provide ARM64 Windows builds (editor and export templates) for both Standard and .NET flavors. Thanks to Qualcomm engineers who did some testing and gave us access to cloud-based devices to confirm that the binaries work.
 
 Now for a selection of the other changes in this snapshot:
 
