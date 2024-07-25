@@ -70,9 +70,8 @@ $download-font-size: r-desktop-mobile(18px, 12px);
 $section-hue-offset: 20;
 $sections: r-generate-sections(
 	$sections: (
-		"video",
-		"foundation",
 		"download",
+		"foundation",
 		"outstanding",
 		"2d",
 		"animation",
@@ -236,7 +235,7 @@ $donate-robot-size: 500px;
 	width: 100%;
 	height: 100%;
 	background-color: #25282b;
-	
+
 	@media (prefers-color-scheme: light) {
 		background-color: #cecece;
 	}
@@ -320,7 +319,7 @@ $donate-robot-size: 500px;
 		background-position: $header-background-position;
 		background-repeat: $header-background-repeat;
 
-		
+
 		background-color: #121315;
 		@media (prefers-color-scheme: light) {
 			background-color: #25282B;
@@ -381,7 +380,7 @@ $donate-robot-size: 500px;
 								font-weight: $header-version-font-weight;
 								margin-right: $header-bar-gap;
 							}
-							
+
 							&.inactive {
 								.version, .number {
 									opacity: 0.7;
@@ -441,7 +440,7 @@ $donate-robot-size: 500px;
 			contain: paint;
 			border-radius: var(--card-padding);
 			padding: var(--card-padding);
-			
+
 			background-color: rgb(51, 54, 57);
 			color: white;
 			@media (prefers-color-scheme: light) {
