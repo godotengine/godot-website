@@ -712,6 +712,21 @@ $donate-robot-size: 500px;
 									1fr;
 							}
 						}
+						&:not(:has(.c-title)):has(.c-blockquote):not(:has(.c-content)) {
+							grid-template-areas:
+								"quote"
+								"link";
+							grid-template-rows:
+								auto
+								auto;
+
+							&:not(:has(.c-link)) {
+								grid-template-areas:
+									"quote";
+								grid-template-rows:
+									auto;
+							}
+						}
 
 						.c-title {
 							grid-area: title;
