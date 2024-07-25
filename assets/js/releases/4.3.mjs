@@ -1,6 +1,7 @@
 // GSAP for animations.
 import { gsap } from "../modules/gsap@3.12.5/index.js"
 import { ScrollTrigger } from "../modules/gsap@3.12.5/ScrollTrigger.js"
+import detectPlatform from "../modules/detect-browser/detect-browser.js"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,4 +59,31 @@ for (const element of elements) {
 		y: "+=50",
 		duration: 0.2
 	});
+}
+
+// Hide downloads that aren't for the user's platform.
+const platformData = detectPlatform(navigator.userAgent, navigator.userAgentData);
+let platformName = "windows";
+switch (platformData.os) {
+	case "mac": {
+		platformName = "macos";
+	} break;
+
+	case "linux": {
+		platformName = "linux";
+	} break;
+
+	case "windows":
+	default:
+		break;
+}
+const cardDownloadPlatformsElement = document.querySelector(".card-download-platforms");
+if (cardDownloadPlatformsElement != null) {
+	for (const child of Array.from(cardDownloadPlatformsElement.childNodes)) {
+		if (child instanceof HTMLElement) {
+			if (child.classList.contains(`platform-${platformName}`)) {
+				child.style.display = "flex";
+			}
+		}
+	}
 }

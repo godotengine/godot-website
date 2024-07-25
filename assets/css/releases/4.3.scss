@@ -147,6 +147,9 @@ $donate-robot-size: 500px;
 			height: min-content;
 			border: none;
 			color: black;
+			@media (prefers-color-scheme: dark) {
+				color: white;
+			}
 
 			margin: var(--card-padding);
 
@@ -177,6 +180,11 @@ $donate-robot-size: 500px;
 					@include is-mobile() {
 						width: 100%;
 					}
+
+					.download-platform,
+					.btn-download-primary {
+						display: none;
+					}
 				}
 			}
 
@@ -184,6 +192,11 @@ $donate-robot-size: 500px;
 			.download-platform {
 				& > img {
 					margin-right: var(--download-gap);
+					@media (prefers-color-scheme: dark) {
+						filter:
+							contrast(0%)
+							brightness(200%);
+					}
 				}
 
 				display: flex;
@@ -197,6 +210,10 @@ $donate-robot-size: 500px;
 
 				.card-download-other {
 					color: black;
+					@media (prefers-color-scheme: dark) {
+						color: white;
+					}
+
 					text-decoration: none;
 					&:hover {
 						text-decoration: underline;
