@@ -34,7 +34,7 @@ This section covers changes made since the previous [beta 3 snapshot](/article/d
 There are two big highlights in this release for the Windows platform though:
 
 - The Direct3D 12 rendering backend now works out of the box on Windows, and no longer requires copying the `DXIL.dll` library ([GH-94203](https://github.com/godotengine/godot/pull/94203))! This is thanks to Microsoft's decision to [open source the DXIL Validator hash](https://devblogs.microsoft.com/directx/open-sourcing-dxil-validator-hash/), which was the only reason for us to require the proprietary `DXIL.dll`. Aside from greatly simplifying the distribution of Windows builds with D3D12, it also makes it possible to export Windows D3D12 projects from other OSes (Linux, macOS, Android), which is an important part of Godot's cross-platform support.
-- With the progressive rollout of ARM64 Windows devices on the market, we've finalized our support for that target and now provide ARM64 Windows builds (editor and export templates) for both Standard and .NET flavors. Thanks to Qualcomm engineers who did some testing and gave us access to cloud-based devices to confirm that the binaries work.
+- With the progressive rollout of Windows ARM64 devices on the market, we've finalized our support for that target and now provide Windows ARM64 builds (editor and export templates) for both [Standard](https://github.com/godotengine/godot-builds/releases/download/4.3-rc1/Godot_v4.3-rc1_windows_arm64.exe.zip) and [.NET](https://github.com/godotengine/godot-builds/releases/download/4.3-rc1/Godot_v4.3-rc1_mono_windows_arm64.zip) flavors. Thanks to Qualcomm engineers who did some testing and gave us access to cloud-based devices to confirm that the binaries work.
 
 Now for a selection of the other changes in this snapshot:
 
@@ -71,7 +71,7 @@ Now for a selection of the other changes in this snapshot:
 - Porting: macOS: Fix drag-and-drop feedback ([GH-94232](https://github.com/godotengine/godot/pull/94232)).
 - Porting: Wayland: Commit surface on window creation ([GH-94402](https://github.com/godotengine/godot/pull/94402)).
 - Porting: Wayland: Check for suspended flag when unsuspending ([GH-94411](https://github.com/godotengine/godot/pull/94411)).
-- Porting: Disable FP contraction, fixing non-standard floating point math on arm64 ([GH-94655](https://github.com/godotengine/godot/pull/94655)).
+- Porting: Disable FP contraction, fixing non-standard floating point math on ARM64 ([GH-94655](https://github.com/godotengine/godot/pull/94655)).
 - Porting: Android Editor: Make progress dialog visible again ([GH-94662](https://github.com/godotengine/godot/pull/94662)).
 - Porting: Android Editor: Disable file reimport when .import changes ([GH-94691](https://github.com/godotengine/godot/pull/94691)).
 - Rendering: Fix glsl shader for Android Mali-GXXx GPUs and Vulkan API 1.3.xxx ([GH-92817](https://github.com/godotengine/godot/pull/92817)).
@@ -99,6 +99,10 @@ This release is built from commit [`e343dbbcc`](https://github.com/godotengine/g
 
 **.NET build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
 - See also [C# platform support](https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support).
+
+If you want to test the new Windows ARM64 builds, they're not integrated in our download page yet, so here are direct links:
+- [Editor for Windows ARM64 (Standard)](https://github.com/godotengine/godot-builds/releases/download/4.3-rc1/Godot_v4.3-rc1_windows_arm64.exe.zip)
+- [Editor for Windows ARM64 (.NET)](https://github.com/godotengine/godot-builds/releases/download/4.3-rc1/Godot_v4.3-rc1_mono_windows_arm64.zip)
 
 {% include articles/prerelease_notice.html %}
 
