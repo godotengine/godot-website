@@ -11,7 +11,7 @@ date: 2024-07-25 18:00:00
 
 We are entering the final stage of development for Godot 4.3, which is the [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate): all features are in-place, the most critical regressions have been tackled, and so we're confident that it's now ready for general use in the vast majority of cases...
 
-... which is usually the cue for more testing to jump aboard the pre-release train, test this release candidate on their projects, and ~shatter our hopes~ confirm that everything is ready for prime time!
+... which is usually the cue for more testing to jump aboard the pre-release train, test this release candidate on their projects, and ~~shatter our hopes~~ confirm that everything is ready for prime time!
 
 More seriously, Godot is a big piece of software and it's hard for contributors and even unit tests to validate all areas of the engine when developing new features or bug fixes. So we rely on extensive testing from the community to find engine issues while testing dev, beta, and RC snapshots in your projects, and reporting them so that we can fix them prior to tagging the 4.3-stable release.
 
