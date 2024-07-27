@@ -555,7 +555,9 @@ $donate-robot-size: 500px;
 			}
 
 			&.inverted {
-				background: linear-gradient(
+				background:
+					var(--color-top)
+					linear-gradient(
 						to bottom,
 						var(--color-top),
 						var(--color-bottom)
@@ -576,7 +578,7 @@ $donate-robot-size: 500px;
 							color: white;
 
 							span.highlight {
-								color: var(--color-invert);
+								color: var(--color-invert-highlight);
 							}
 						}
 
@@ -768,7 +770,7 @@ $donate-robot-size: 500px;
 							font-weight: 800;
 
 							span.highlight {
-								color: var(--color-top);
+								color: var(--color-highlight);
 							}
 						}
 
@@ -840,6 +842,7 @@ $donate-robot-size: 500px;
 						justify-content: center;
 						align-items: center;
 						text-align: center;
+						font-weight: 700;
 
 						background-color: var(--color-top);
 						color: white;
@@ -870,13 +873,15 @@ $donate-robot-size: 500px;
 					--color-top: #{map-get($section-colors, "color-top")};
 					--color-bottom: #{map-get($section-colors, "color-bottom")};
 					--color-invert: #{map-get($section-colors, "color-invert")};
+					--color-highlight: #{map-get($section-colors, "color-highlight")};
+					--color-invert-highlight: #{map-get($section-colors, "color-invert-highlight")};
 				}
 			}
 
 			.section-title,
 			.section-title a {
 				font-size: var(--release-title-font-size);
-				color: var(--color-top);
+				color: var(--color-highlight);
 				text-decoration: none;
 			}
 		}
