@@ -23,7 +23,7 @@ linux: true
 xbox: true
 switch: true
 
-steam: https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/
+steam: https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/
 
 
 featured_in_home: false
