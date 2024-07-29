@@ -1,16 +1,20 @@
 ---
-description: "Pixelorama showcase page"
-date: 2019-08-01 00:00:00 +0000
+description: "Unleash your creativity with Pixelorama, a powerful and accessible open-source pixel art multitool. Whether you want to create sprites, tiles, animations, or just express yourself in the language of pixel art, this software will realize your pixel-perfect dreams with a vast toolbox of features. "
+date: 2024-07-29 00:00:00 +0000
 
 title: Pixelorama
 author: Orama Interactive
 website: https://twitter.com/OramaInteractiv
-release_date: August 2019
+release_date: July 2024
 
+image: "/assets/showcase/pixelorama.jpg"
 gallery: [
-	"/assets/showcase/pixelorama.png"
+	"/assets/showcase/screenshots/pixelorama-1.jpg",
+  "/assets/showcase/screenshots/pixelorama-2.jpg",
+  "/assets/showcase/screenshots/pixelorama-3.jpg",
+  "/assets/showcase/screenshots/pixelorama-4.jpg"
 ]
-youtube_id: "sM1v5uaBSrM"
+youtube_id: "--ZcztkvWUQ"
 
 windows: true
 linux: true
@@ -20,30 +24,30 @@ html5: true
 
 itch: https://orama-interactive.itch.io/pixelorama/
 github: https://github.com/Orama-Interactive/Pixelorama
+steam: https://store.steampowered.com/app/2779170/Pixelorama/
 
 tool: true
 featured_in_home: false
 ---
 
-<p>
-  Pixelorama is a free & open source pixel art sprite editor, with animation
-  support. It is made entirely with the Godot&nbsp;Engine. Current features as of
-  version v0.9:
-</p>
-<ul>
-  <li>16 different tools to help you draw, which you can map to both of your left and right mouse buttons.</li>
-  <li>Are you an animator? Pixelorama has its own animation timeline just for you! You can work at an individual cel level, where each cel refers to a unique layer and frame. Supports onion skinning, cel linking, motion drawing and frame grouping with tags.</li>
-  <li>Different tool options for each of the mouse buttons.</li>
-  <li>Custom brushes, including random brushes.</li>
-  <li>Create or import custom palettes.</li>
-  <li>Pattern filling! Use the bucket tool to fill out an area with a pattern of your choosing.</li>
-  <li>Import images and edit them inside Pixelorama. If you import multiple files, they will be added as individual animation frames. Importing spritesheets is also supported.</li>
-  <li>Export your gorgeous art as PNG or GIF files. Exporting your projects as spritesheets is also possible.</li>
-  <li>Pixel perfect mode for perfect lines, for the pencil, eraser & lighten/darken tools.</li>
-  <li>Autosave support, with data recovery in case of a software crash.</li>
-  <li>Horizontal & vertical mirrored drawing.</li>
-  <li>Tile mode for pattern creation.</li>
-  <li>Rulers and guides.</li>
-  <li>Rectangular & isometric grid types.</li>
-  <li>Scale, crop, rotate, flip, color invert, HSV-adjust, desaturate and generate outlines and gradients in your images.</li>
-</ul>
+Unleash your creativity with Pixelorama, a powerful and accessible open-source pixel art multitool. Whether you want to create sprites, tiles, animations, or just express yourself in the language of pixel art, this software will realize your pixel-perfect dreams with a vast toolbox of features.
+
+### Features:
+- A variety of different tools to help you create, with the ability to dynamically map each one on the left and the right mouse buttons with a single click.
+- Animation support with a timeline composed of layers and frames, with onion skinning, frame tags and the ability to draw while the animation is playing.
+- Pixel perfect mode for perfect pixel lines.
+- Clipping masks.
+- Pre-made palettes as well as many palette importing options.
+- Multiple image manipulation effects.
+- Non-destructive and fully customizable layer effects, such as outline, gradient map, drop shadow and palettize.
+- A powerful drawing canvas with guides, a rectangular and an isometric grid, and tile mode for easier seamless pattern creation.
+- Autosave support, with data recovery in case of a software crash.
+- Comprehensive user interface with many customizability options.
+- Export to PNG and other image and video formats, as well as spritesheets, GIFs, animated PNGs etc.
+- Import spritesheets, multiple images as separate frames, as well as GIFs and videos.
+- Various rotation and scaling algorithms tailored for pixel art, such as cleanEdge, OmniScale and rotxel.
+- 3D layers that allow you to bring 3D shapes and models into your 2D canvas.
+- A command line interface for automated file exporting.
+- Custom user data for projects, layers, frames, frame tags and cels, allowing you to attach metadata for game development.
+- Various free community-made extensions, such as tools that automatically convert your 2D pixels into 3D voxels.
+- Fully open source with free updates, forever!
