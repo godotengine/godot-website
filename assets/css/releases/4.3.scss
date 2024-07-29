@@ -760,8 +760,11 @@ $donate-robot-size: 500px;
 
 							a {
 								color: var(--color-top);
-								text-decoration: none;
+								@media (prefers-color-scheme: dark) {
+									color: white;
+								}
 
+								text-decoration: none;
 								&:hover {
 									text-decoration: underline;
 								}
@@ -882,11 +885,25 @@ $donate-robot-size: 500px;
 				}
 			}
 
-			.section-title,
+			.section-title {
+				background-color: white;
+				padding: calc(var(--card-padding) * 2);
+				margin-bottom: calc(var(--card-padding) * 2);
+			}
+
+			.section-title h3 {
+				font-size: 50px;
+				margin-bottom: 0;
+			}
+
 			.section-title a {
-				font-size: var(--release-title-font-size);
-				color: var(--color-highlight);
+				color: var(--color-top);
+
 				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+					filter: none;
+				}
 			}
 		}
 	}
