@@ -287,6 +287,14 @@ $donate-robot-size: 500px;
 		--download-font-size: #{r-get-mobile($download-font-size)};
 	}
 
+	/** Color **/
+	--card-background-color: white;
+	--card-color: #2d2d2d;
+	@media (prefers-color-scheme: dark) {
+		--card-background-color: #333639;
+		--card-color: white;
+	}
+
 	code.highlight {
 		$_padding: 5px;
 
@@ -458,12 +466,8 @@ $donate-robot-size: 500px;
 			border-radius: var(--card-padding);
 			padding: var(--card-padding);
 
-			background-color: rgb(51, 54, 57);
-			color: white;
-			@media (prefers-color-scheme: light) {
-				background-color: white;
-				color: #2d2d2d;
-			}
+			background-color: var(--card-background-color);
+			color: var(--card-color);
 
 			@mixin media-top() {
 				grid-template-areas:
