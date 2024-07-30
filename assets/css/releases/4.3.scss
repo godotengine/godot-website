@@ -886,18 +886,25 @@ $donate-robot-size: 500px;
 			}
 
 			.section-title {
-				background-color: white;
-				padding: calc(var(--card-padding) * 2);
 				margin-bottom: calc(var(--card-padding) * 2);
 			}
 
 			.section-title h3 {
 				font-size: 50px;
+				background:
+					var(--color-top)
+					linear-gradient(
+						to bottom,
+						var(--color-top),
+						var(--color-bottom)
+					);
+				padding: calc(var(--card-padding) * 2);
+				border-radius: var(--card-padding);
 				margin-bottom: 0;
 			}
 
 			.section-title a {
-				color: var(--color-top);
+				color: white;
 
 				text-decoration: none;
 				&:hover {
