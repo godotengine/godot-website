@@ -513,20 +513,117 @@ header_text: "Godot Engine 4.3"
 		</div>
 		<div class="container">
 			<div class="release-cards">
-				<div class="release-card">
+				<div id="dotnet-rebuild-notification" class="release-card span-2 media-right">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href=""><span class="replace-me"></span></a>
+									<a href="#dotnet-rebuild-notification">Re-build notification</a>
 								</h4>
-								<div class="c-content">
-									<p class="replace-me"></p>
+								<div class="c-blockquote">
+									Less frustration, <span class="highlight">more gamedev</span>.
 								</div>
+								<div class="c-content">
+									<p>
+										A new warning has been added when .cs files have been modified after the last
+										build.
+									</p>
+									<p>
+										You'll be now able to build only when it's needed.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/85869">Read more</a>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image position-top-left"
+								src="/storage/releases/4.3/images/dotnet-rebuild-notification.webp"
+								alt="Image of the new re-build notification." draggable="false">
+						</div>
+					</div>
+				</div> <!-- #dotnet-rebuild-notification -->
+
+				<div id="dotnet-more-robust-reload-process" class="release-card span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#dotnet-more-robust-reload-process">More robust reload process</a>
+								</h4>
+								<div class="c-blockquote">
+									Issues have been <span class="highlight">fixed</span>.
+								</div>
+								<div class="c-content">
+									<p>
+										One of the most annoying issues that C# users have with Godot have been fixed.
+									</p>
+									<p>
+										When a C# project is re-built, scripts need to be reloaded. Unfortunately, a
+										lot of things can go wrong during this process. It usually left users in an
+										invalid state with no other option but to re-open the Godot editor entirely.
+									</p>
+									<p>
+										Now, the process has been improved and users will be able to appreciate the new
+										robustness of the reloads.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/83217">Read more</a>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> <!-- #dotnet-more-robust-reload-process -->
+
+				<div id="dotnet-better-support-generic-csharp-classes" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#dotnet-better-support-generic-csharp-classes">
+										<span>Better support of generic C# classes</span>
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									Patience yields <span class="highlight">results</span>!
+								</div>
+								<div class="c-content">
+									<p>
+										This feature has been requested for a long time, and it's finally here.
+									</p>
+									<p>
+										While the implementation has some limitations, you'll be finally able to use
+										(more comfortably) generic C# classes in your code.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/88371">Read more</a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #dotnet-better-support-generic-csharp-classes -->
+
+				<div id="dotnet-preventing-export-without-csharp-code" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#dotnet-preventing-export-without-csharp-code">
+										<span>Preventing export without C# code</span>
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										The .solution and .csproj files are required for Godot to build C# projects.
+										When they were missing, the export was successful but it was missing the C#
+										code. This meant that you'd end up running into runtime errors.
+									</p>
+									<p>
+										From now on, the exporter will inform you about that fact and stop exporting.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87829">Read more</a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #dotnet-preventing-export-without-csharp-code -->
 			</div>
 		</div>
 	</div> <!-- #dotnet -->
