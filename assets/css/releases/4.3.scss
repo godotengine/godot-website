@@ -67,7 +67,7 @@ $card-content-font-size-clamp-max: r-desktop-mobile(16px, 1em);
 $download-gap: r-desktop-mobile(8px, 4px);
 $download-font-size: r-desktop-mobile(18px, 12px);
 
-$section-hue-offset: 15;
+$section-hue-offset: 20;
 $sections: r-generate-sections(
 	$sections: (
 		"download",
@@ -890,6 +890,7 @@ $donate-robot-size: 500px;
 			}
 
 			.section-title h3 {
+				position: relative;
 				font-size: 50px;
 				background:
 					var(--color-top)
@@ -901,6 +902,19 @@ $donate-robot-size: 500px;
 				padding: calc(var(--card-padding) * 2);
 				border-radius: var(--card-padding);
 				margin-bottom: 0;
+
+				contain: paint;
+				.section-robot {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					transform:
+						translateX(250px)
+						translateY(40cqh);
+					color: var(--color-top);
+					font-size: $donate-robot-size;
+					z-index: -1;
+				}
 			}
 
 			.section-title a {
