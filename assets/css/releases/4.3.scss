@@ -77,6 +77,7 @@ $sections: r-generate-sections(
 		"animation",
 		"dotnet",
 		"display",
+		"documentation",
 		"editor",
 		"gdscript",
 		"navigation",
@@ -827,6 +828,9 @@ $donate-robot-size: 500px;
 						height: 100%;
 						object-fit: cover;
 
+						&.position-top-left {
+							object-position: top left;
+						}
 						&.position-top-center {
 							object-position: top center;
 						}
