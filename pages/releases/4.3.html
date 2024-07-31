@@ -554,7 +554,7 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									<a href="#dotnet-rebuild-notification">Re-build notification</a>
 								</h4>
 								<div class="c-blockquote">
-									Less frustration, <span class="highlight">more gamedev</span>.
+									Less frustration, <span class="highlight">more gamedev</span>
 								</div>
 								<div class="c-content">
 									<p>
@@ -584,7 +584,7 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									<a href="#dotnet-more-robust-reload-process">More robust reload process</a>
 								</h4>
 								<div class="c-blockquote">
-									Issues have been <span class="highlight">fixed</span>.
+									Issues have been <span class="highlight">fixed</span>
 								</div>
 								<div class="c-content">
 									<p>
@@ -735,7 +735,7 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 		</div>
 		<div class="container">
 			<div class="release-cards">
-				<div id="documentation-syntax-highlighting-copy-button-editor" class="release-card">
+				<div id="documentation-syntax-highlighting-copy-button-editor" class="release-card media-right span-3">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
@@ -744,14 +744,29 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										Syntax highlighting and copy button for code blocks in the editor
 									</a>
 								</h4>
-								<div class="c-blockquote replace-me">
+								<div class="c-blockquote">
+									<span class="highlight">Highlight</span> it,<br>
+									<span class="highlight">Copy</span> it
 								</div>
 								<div class="c-content">
-									<p class="replace-me">
+									<p>
+										Syntax is now highlighted in the editor documentation and in the editor
+										tooltips.
+									</p>
+									<p>
+										Like on the <a href="https://docs.godotengine.org/">Godot Docs</a>, you'll be
+										now able to click on designated copy button to copy the contents of the code
+										block.
 									</p>
 								</div>
-								<a class="c-link" href="">Read more</a>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/89263">Read more</a>
 							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image"
+								src="/storage/releases/4.3/images/syntax-highlight-copy-button.webp" srcset="
+									/storage/releases/4.3/images/syntax-highlight-copy-button-2x.webp 2x
+								" alt="Image of the documentation syntax highlight and copy button features." draggable="false" />
 						</div>
 					</div>
 				</div> <!-- #documentation-syntax-highlighting-copy-button-editor -->
@@ -908,24 +923,65 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 		</div>
 		<div class="container">
 			<div class="release-cards">
-				<div id="gdextension-" class="release-card">
+				<div id="gdextension-runtime-class-registration" class="release-card span-2">
 					<div class="release-card-container">
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#gdextension-" class="replace-me"></a>
+									<a href="#gdextension-runtime-class-registration">
+										Runtime class registration
+									</a>
 								</h4>
-								<div class="c-blockquote replace-me">
+								<div class="c-blockquote">
+									<span class="highlight">Extend</span> your game
 								</div>
 								<div class="c-content">
-									<p class="replace-me">
+									<p>
+										This feature will surely please game developers that use GDExtension to code
+										game logic.
+									</p>
+									<p>
+										Usually, when registering classes via GDExtension, you extend the engine just
+										like if you were using a
+										<code class="highlight"><span class="gdscript-annotation">@tool</span></code>
+										script in GDScript.
+									</p>
+									<p>
+										With this new update, you'll be able to register runtime classes that don't run
+										in the editor. You'll be able to write code without needing to check everytime
+										<code>is_editor_hint()</code>.
 									</p>
 								</div>
-								<a class="c-link" href="">Read more</a>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/82554">Read more</a>
 							</div>
 						</div>
 					</div>
-				</div> <!-- #gdextension- -->
+				</div> <!-- #gdextension-runtime-class-registration -->
+
+				<div id="gdextension-virtual-method-registration" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdextension-virtual-method-registration">
+										Virtual method registration
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Ever wanted to register your own virtual methods like
+										<code>_ready()</code>, <code>_process()</code>, or <code>_draw()</code> for
+										users to use in their code?
+									</p>
+									<p>
+										Now, scripts can implement virtual functions registered by GDExtension classes.
+									</p>
+								</div>
+								<a class="c-link" href="https://github.com/godotengine/godot/pull/87758">Read more</a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdextension-virtual-method-registration -->
 			</div>
 		</div>
 	</div> <!-- #gdextension -->
@@ -950,7 +1006,7 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										export</a>
 								</h4>
 								<div class="c-blockquote">
-									<span class="highlight">Lean and mean</span> exported GDScript
+									<span class="highlight">Lean</span> and mean
 								</div>
 								<div class="c-content">
 									<p>
@@ -994,7 +1050,9 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 											my_node
 											<span class="keyword">is</span>
 											<span class="basetype">Node3D</span><span class="symbol">:</span>
-										</code><br>
+										</code>
+									</p>
+									<p>
 										It isn't much readable, huh? This line tests if
 										<code class="highlight">my_node</code>
 										is <em>not</em> of type
@@ -1569,8 +1627,7 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								<h4 class="c-title">
 									<a href="#xr-standardized-support-tracking">
 										Standardized and enhanced support for hand/finger tracking, body tracking,
-										and
-										face tracking
+										and face tracking
 									</a>
 								</h4>
 								<div class="c-blockquote replace-me">
