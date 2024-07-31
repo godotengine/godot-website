@@ -95,11 +95,13 @@ for (const author of authors) {
 	max_prs = Math.max(max_prs, Number(author.dataset.prs));
 }
 const scales = new Array(5);
-scales[4] = Math.floor(max_prs / 2);
-scales[3] = Math.floor(scales[4] / 2);
-scales[2] = Math.floor(scales[3] / 2);
-scales[1] = Math.floor(scales[2] / 2);
-scales[0] = Math.floor(scales[1] / 2);
+for (let i = scales.length - 1; i >= 0; i--) {
+	if (i + 1 == scales.length) {
+		scales[i] = Math.floor(max_prs / 2);
+	} else {
+		scales[i] = Math.floor(scales[i + 1] / 2);
+	}
+}
 
 for (const author of authors) {
 	const prs = Number(author.dataset.prs);
