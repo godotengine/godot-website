@@ -67,7 +67,7 @@ $card-content-font-size-clamp-max: r-desktop-mobile(16px, 1em);
 $download-gap: r-desktop-mobile(8px, 4px);
 $download-font-size: r-desktop-mobile(18px, 12px);
 
-$section-hue-offset: 20;
+$section-hue-offset: 10;
 $sections: r-generate-sections(
 	$sections: (
 		"download",
@@ -84,7 +84,8 @@ $sections: r-generate-sections(
 		"navigation",
 		"rendering",
 		"web",
-		"xr"
+		"xr",
+		"special-thanks"
 	),
 	$base-category: "foundation",
 	$base-color: $color-godot-blue,
@@ -238,6 +239,55 @@ $donate-robot-size: 500px;
 
 					.download-title {
 						// color: black;
+					}
+				}
+			}
+		}
+	}
+}
+
+#special-thanks-release-authors {
+	.release-card-media {
+		.release-card-authors {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+			padding: var(--card-padding);
+
+			.release-card-author {
+				line-height: 0.5em;
+				font-size: 13px;
+
+				&.size-1 {
+					font-size: 14px;
+				}
+
+				&.size-2 {
+					font-size: 16px;
+				}
+
+				&.size-3 {
+					font-size: 20px;
+				}
+
+				&.size-4 {
+					font-size: 24px;
+				}
+
+				&.size-5 {
+					font-size: 28px;
+				}
+
+				a {
+					color: black;
+					text-decoration: none;
+					text-decoration-color: black;
+
+					&:hover {
+						text-decoration: underline;
 					}
 				}
 			}

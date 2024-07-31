@@ -87,3 +87,30 @@ if (cardDownloadPlatformsElement != null) {
 		}
 	}
 }
+
+// Add relative weight based on author data
+const authors = Array.from(document.querySelectorAll("#special-thanks-release-authors .release-card-authors .release-card-author"));
+let max_prs = 0;
+for (const author of authors) {
+	max_prs = Math.max(max_prs, Number(author.dataset.prs));
+}
+const scales = new Array(5);
+scales[4] = Math.floor(max_prs / 2);
+scales[3] = Math.floor(scales[4] / 2);
+scales[2] = Math.floor(scales[3] / 2);
+scales[1] = Math.floor(scales[2] / 2);
+scales[0] = Math.floor(scales[1] / 2);
+
+for (const author of authors) {
+	const prs = Number(author.dataset.prs);
+	for (let i = 0; i < scales.length; i++) {
+		if (prs >= scales[i]) {
+			continue;
+		}
+		if (i === 0) {
+			break;
+		}
+		author.classList.add(`size-${i + 1}`);
+		break;
+	}
+}
