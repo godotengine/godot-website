@@ -259,7 +259,7 @@ $donate-robot-size: 500px;
 
 			.release-card-author {
 				line-height: 0.5em;
-				font-size: 13px;
+				font-size: 12px;
 
 				&.size-1 {
 					font-size: 14px;
@@ -274,11 +274,15 @@ $donate-robot-size: 500px;
 				}
 
 				&.size-4 {
-					font-size: 24px;
+					font-size: 22px;
 				}
 
 				&.size-5 {
-					font-size: 28px;
+					font-size: 24px;
+				}
+
+				&.size-6 {
+					font-size: 26px;
 				}
 
 				a {
