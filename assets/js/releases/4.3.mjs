@@ -103,11 +103,12 @@ scales[0] = Math.floor(scales[1] / 2);
 
 for (const author of authors) {
 	const prs = Number(author.dataset.prs);
-	let continued = false;
 	for (let i = 0; i < scales.length; i++) {
-		continued = false;
 		if (prs >= scales[i]) {
-			continued = true;
+			if (i + 1 == scales.length) {
+				author.classList.add(`size-${i + 1}`);
+				break;
+			}
 			continue;
 		}
 		if (i === 0) {
@@ -115,8 +116,5 @@ for (const author of authors) {
 		}
 		author.classList.add(`size-${i + 1}`);
 		break;
-	}
-	if (continued) {
-		author.classList.add(`size-${scales.length + 1}`);
 	}
 }
