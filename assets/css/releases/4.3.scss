@@ -395,6 +395,11 @@ $donate-robot-size: 500px;
 		color: red !important;
 	}
 
+	a[href=""],
+	a:not([href]) {
+		color: red !important;
+	}
+
 	.release-header {
 		background-image: $header-background-image;
 		background-position: $header-background-position;
