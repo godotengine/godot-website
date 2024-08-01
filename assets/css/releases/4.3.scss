@@ -868,10 +868,22 @@ $donate-robot-size: 500px;
 							font-weight: 700;
 							margin-top: 10px;
 							color: inherit;
+							user-select: none;
 
 							.c-link-a {
 								color: black;
 								text-decoration: underline;
+							}
+
+							.c-link-popover-button {
+								appearance: unset;
+								inset: 0;
+								background-color: transparent;
+								border: 0;
+
+								&:hover {
+									cursor: pointer;
+								}
 							}
 
 							.c-link-popover {
@@ -883,7 +895,7 @@ $donate-robot-size: 500px;
 								}
 
 								border: 0;
-								border-radius: 9999px;
+								border-radius: calc(var(--card-padding) / 2);
 								padding: calc(var(--card-padding) / 2);
 								font-size: clamp(
 									var(--card-content-font-size-clamp-min),
