@@ -11,6 +11,11 @@ todo_for_authors_list: >
   3. Execute this script in the console:
   ```javascript
   await (async function () {
+    const nextFrame = () => {
+      return new Promise((resolve, _) => {
+        requestAnimationFrame(() => resolve());
+      });
+    };
     const authors = [];
     const changesList = document.querySelector("entry-component").shadowRoot.querySelector("gr-changes-list").shadowRoot;
     for (const author of changesList.querySelectorAll("gr-author-item")) {
@@ -18,9 +23,7 @@ todo_for_authors_list: >
       const showMore = shadowRoot.querySelector(".item-changes-more");
       if (showMore != null) {
         showMore.click();
-        await new Promise((resolve, _) => {
-          requestAnimationFrame(() => resolve());
-        });
+        await nextFrame();
       }
 
       const commits = Array.from(shadowRoot.querySelectorAll(".item-changes-list"))[0].querySelectorAll("li");
