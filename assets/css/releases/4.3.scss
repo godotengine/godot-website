@@ -887,6 +887,10 @@ $donate-robot-size: 500px;
 								}
 							}
 
+							.c-link-a + .c-link-popover-button {
+								margin-left: calc(var(--card-padding) / 2);
+							}
+
 							.c-link-popover {
 								color: white;
 								background-color: black;
