@@ -15,7 +15,7 @@ gallery: [
 ]
 youtube_id: "LC29HveHImg"
 
-featured_in_home: true
+featured_in_home: false
 
 windows: true
 linux: true

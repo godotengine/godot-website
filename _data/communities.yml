@@ -85,12 +85,12 @@ China:
       - title: QQ Group
         url: https://qm.qq.com/cgi-bin/qm/qr?k=hEscGFbQTiOX0bhsTT2myxM3PifsAmIp&jump_from=webapi
 Croatia:
-  - name: Croatia
+  - name: Game Developers Croatia
     links:
       - title: Discord
-        url: https://discord.gg/6gjwfSG
+        url: https://discord.gg/CbZKkqR
       - title: Facebook
-        url: https://web.facebook.com/groups/godotenginecroatia/
+        url: https://www.facebook.com/groups/gamedevcro
 Czech Republic and Slovakia:
   - name: Godot CZ/SK
     links:
@@ -336,6 +336,10 @@ Taiwan:
     links:
       - title: Facebook
         url: https://www.facebook.com/groups/godot.taiwan
+  - name: Godot Adventurers (Godot 開拓者交流互助公會)
+    links:
+      - title: Discord
+        url: https://discord.gg/kpZ5G9HeYT
 Turkey:
   - name: Godot Engine Türkiye
     links:

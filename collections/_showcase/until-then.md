@@ -1,6 +1,6 @@
 ---
-description: "Until Then showcase page"
-date: 2021-06-02 00:00:00 +0000
+description: "A fateful meeting sets off a chain reaction, upending Mark's life. People disappear and memories prove unreliable. Uncover a hidden truth with Mark and his friends in this narrative adventure and race to unravel the mystery before it's too late."
+date: 2024-06-25 00:00:00 +0000
 
 title: "Until Then"
 author: "Polychroma Games"
@@ -13,7 +13,7 @@ gallery: [
 	"/assets/showcase/until-then-4.webp",
 ]
 website: https://untilthengame.com/
-release_date: "TBD"
+release_date: "June 2024"
 youtube_id: "ktd33TPsGlA"
 windows: true
 linux: true

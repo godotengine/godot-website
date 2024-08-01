@@ -26,16 +26,22 @@ layout: default
 	.main-download-links .btn-download {
 		width: 100%;
 	}
-	.main-download-links .btn-download:nth-of-type(2n) {
-		background-color: rgb(132 151 174 / 68%);
-		-webkit-backdrop-filter: blur(4px);
-		backdrop-filter: blur(4px);
+
+	.main-download-links .download-3 {
+		text-align: center;
+		color: #ffffffd6;
+		text-shadow: 0 0 10px black;
+		font-weight: 100;
+		font-size: 15px;
 	}
-	.main-download-links .btn-download:nth-of-type(2n) .download-title {
-		color: #f7f7f7;
+
+	.main-download-links .download-3 a {
+		color: inherit;
+		text-decoration-color: inherit;
+		text-decoration-thickness: 1px;
 	}
-	.main-download-links .btn-download:nth-of-type(2n) .download-hint {
-		background-color: var(--primary-color-subdued);
+	.main-download-links .download-3 a:hover {
+		color: white;
 	}
 
 	@media (max-width: 900px) {
@@ -168,8 +174,7 @@ layout: default
 	<div class="wrapper">
 		<div class="copy container">
 			<h1>
-				Your free,<br>
-				open&#8209;source<br>
+				Your free, open&#8209;source<br>
 				game engine.
 			</h1>
 			<p>Develop your 2D &amp; 3D games, cross-platform projects, or even XR ideas!</p>
@@ -179,20 +184,14 @@ layout: default
 				{% assign stable_version_4 = site.data.versions | find: "featured", "4" %}
 
 				<div class="main-download-links">
-					<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"
+					<a href="/download/windows/" class="btn btn-download set-os-download-url" data-version="4"
 						title="Download the latest version of Godot 4">
 						<div class="download-title">Download Latest</div>
 						<div class="download-hint">{{ stable_version_4.name }}</div>
 					</a>
 
-					<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
-						title="Download the long-term support version of Godot 3">
-						<div class="download-title">Download LTS</div>
-						<div class="download-hint">{{ stable_version_3.name }}</div>
-					</a>
+					<span class="download-3">Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a> or a <a href="/download/archive">previous version</a>?</span>
 				</div>
-
-				<a href="/features" class="btn btn-flat btn-flat-white btn-flat-frosted btn-hero-learn-more">Learn more</a>
 			</div>
 		</div>
 	</div>
@@ -236,7 +235,7 @@ layout: default
 				{% endif %}
 				{% endfor %}
 				<div class="button-container">
-					<a href="/blog" class="btn no-margin">More News</a>
+					<a href="/blog/" class="btn no-margin">More News</a>
 				</div>
 			</div>
 		</div>
@@ -337,7 +336,7 @@ layout: default
 	</div>
 
 	<div class="features-learn-more">
-		<a href="/features" class="btn btn-flat btn-flat-white btn-flat-frosted">Learn more about using Godot</a>
+		<a href="/features/" class="btn btn-flat btn-flat-white btn-flat-frosted">Learn more about using Godot</a>
 	</div>
 </section>
 
@@ -367,7 +366,7 @@ layout: default
 				If you know how to code, you can help by fixing bugs and working with engine contributors towards the
 				implementation of new features.
 			</p>
-			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-code"
+			<a href="https://docs.godotengine.org/en/stable/contributing/how_to_contribute.html#technical-contributions"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 
@@ -378,7 +377,7 @@ layout: default
 				Documentation quality is essential in a game engine; help make it better by updating the API reference, writing
 				new guides or submitting corrections.
 			</p>
-			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#contributing-to-the-documentation"
+			<a href="https://docs.godotengine.org/en/stable/contributing/how_to_contribute.html#technical-contributions"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 
@@ -388,7 +387,7 @@ layout: default
 			<p>
 				Found a problem with the engine? Don't forget to report it so that developers can track it down.
 			</p>
-			<a href="https://docs.godotengine.org/en/stable/community/contributing/ways_to_contribute.html#testing-and-reporting-issues"
+			<a href="https://docs.godotengine.org/en/stable/contributing/how_to_contribute.html#technical-contributions"
 				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
 		</div>
 

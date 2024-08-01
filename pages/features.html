@@ -167,60 +167,6 @@ layout: default
 		color: var(--base-color-text-title);
 	}
 
-	.features-download {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 16px;
-		background-color: var(--dark-color);
-		padding: 24px;
-		padding-bottom: 60px;
-		width: auto;
-		max-width: 100%;
-	}
-	@media (max-width: 900px) {
-		.features-download {
-			padding: 20px;
-		}
-	}
-
-	.features-download h2 {
-		color: var(--dark-color-text-title);
-		font-weight: 600;
-		margin: 0;
-		margin-bottom: 16px;
-	}
-
-	.features-download p {
-		color: var(--dark-color-text);
-		margin: 0;
-	}
-
-	.features-download-ready {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 26px;
-	}
-
-	.features-download-ready .btn-download {
-		min-width: 310px;
-	}
-
-	.features-download-ready .btn-download:nth-of-type(2n) {
-		background-color: rgb(132 151 174 / 68%);
-		-webkit-backdrop-filter: blur(4px);
-		backdrop-filter: blur(4px);
-	}
-	.features-download-ready .btn-download:nth-of-type(2n) .download-title {
-		color: #f7f7f7;
-	}
-	.features-download-ready .btn-download:nth-of-type(2n) .download-hint {
-		background-color: var(--primary-color-subdued);
-	}
-
 	.features-showcase {
 		display: flex;
 		flex-direction: column;
@@ -423,7 +369,7 @@ layout: default
 			<div class="showcase-flip-right"></div>
 		</div>
 
-		<a href="/showcase" class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">
+		<a href="/showcase/" class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">
 			See more projects made with Godot
 		</a>
 	</div>
@@ -490,8 +436,8 @@ layout: default
 			<h4>Leverage your C# experience to feel right at home</h4>
 			<p>
 				If you're an experienced C# user, Godot offers you first-class support
-				for the .NET platform. Power your game with familiar libraries and give
-				them performance boost, while still benefiting from close engine integration.
+				for the .NET platform. Power your games with familiar libraries and give
+				them a performance boost, while still benefiting from close engine integration.
 				<br><br>
 				<strong>Note:</strong> .NET support is provided as a dedicated engine executable.
 				<a href="https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support">C# support is available for desktop and mobile platforms as of Godot 4.2.</a>
@@ -681,27 +627,6 @@ layout: default
 
 </div>
 
-<div id="call-to-action" class="container card features-download">
-	<h2>Ready to start?</h2>
-
-	<div class="features-download-ready">
-		{% assign stable_version_3 = site.data.versions | find: "featured", "3" %}
-		{% assign stable_version_4 = site.data.versions | find: "featured", "4" %}
-
-		<p>Download the <strong>latest version of Godot 4</strong> right now and begin your creative journey!</p>
-		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="4"
-			title="Download the latest version of Godot 4">
-			<div class="download-title">Download Latest</div>
-			<div class="download-hint">{{ stable_version_4.name }}</div>
-		</a>
-
-		<p>Want to stick to the <strong>true and trusted Godot 3</strong>? Download the long-term support version!</p>
-		<a href="/download/windows" class="btn btn-download set-os-download-url" data-version="3"
-			title="Download the long-term support version of Godot 3">
-			<div class="download-title">Download LTS</div>
-			<div class="download-hint">{{ stable_version_3.name }}</div>
-		</a>
-	</div>
-</div>
+{% include /download/download-section.html %}
 
 {% include footer.html %}

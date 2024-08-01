@@ -1,11 +1,11 @@
 ---
 description: "Pingo Adventure showcase page"
-date: 2022-06-01 00:00:00 +0000
+date: 2023-11-30 00:00:00 +0000
 
 title: Pingo Adventure
 author: Orb Square Studio
 website: https://orb-square.com
-release_date: TBD
+release_date: November 2023
 
 image: "/assets/showcase/pingo-adventure-header.webp"
 gallery: [
@@ -20,7 +20,7 @@ linux: true
 steam: https://store.steampowered.com/app/2015830/Pingo_Adventure/
 itch: https://orb-square.itch.io/pingo-adventure
 
-featured_in_home: true
+featured_in_home: false
 ---
 
 <p>

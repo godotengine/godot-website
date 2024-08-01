@@ -85,9 +85,9 @@ As a summary, the current platform support as of 4.2 is described in the table b
 
 | Platform | Runtimes supported | Minimum required .NET version |
 | -: | - | - |
-| **Windows** | CoreCLR, Mono, NativeAOT | 6.0 (CoreCLR, Mono), 7.0 (NativeAOT) |
-| **macOS** | CoreCLR, Mono, NativeAOT | 6.0 (CoreCLR, Mono), 7.0 (NativeAOT) |
-| **Linux** | CoreCLR, Mono, NativeAOT | 6.0 (CoreCLR, Mono), 7.0 (NativeAOT) |
+| **Windows** | CoreCLR, Mono, NativeAOT | 6.0 (CoreCLR), 7.0 (Mono, NativeAOT) |
+| **macOS** | CoreCLR, Mono, NativeAOT | 6.0 (CoreCLR), 7.0 (Mono, NativeAOT) |
+| **Linux** | CoreCLR, Mono, NativeAOT | 6.0 (CoreCLR), 7.0 (Mono, NativeAOT) |
 | **Android** | Mono | 7.0 |
 | **iOS** | NativeAOT | 8.0 |
 | **Web** | - | - |

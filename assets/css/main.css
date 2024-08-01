@@ -1232,7 +1232,6 @@ section.hero .background-image {
 section.hero .copy {
   position: relative;
   z-index: 1;
-  max-width: 670px;
   margin-left: 0;
 }
 
@@ -1247,7 +1246,6 @@ section.hero .copy p {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
-  max-width: 550px;
   text-shadow: 0 0 28px #00000080;
   color: white;
 }
@@ -1270,7 +1268,7 @@ section.hero .wrapper {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 200px 20px 120px;
+  padding: 180px 20px 100px;
 }
 
 @media (max-width: 650px) {
@@ -1374,6 +1372,42 @@ article.article-card .info .avatar {
 article.article-card .info span {
   font-size: 14px;
   color: var(--secondary-color-text);
+}
+
+/* Article tables */
+article table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+article table thead tr {
+  background-color: var(--button-card-background-color);
+	background-color: color-mix(in hsl longer hue, var(--button-card-background-color), white 20%);
+}
+
+article table tbody tr:nth-of-type(even) {
+  background-color: var(--background-color);
+	background-color: color-mix(in hsl longer hue, var(--background-color), white 20%);
+}
+article table tbody tr:nth-of-type(odd) {
+	background-color: color-mix(in hsl longer hue, var(--base-color), black 1%);
+}
+
+article table tbody tr td {
+  padding: 0.25em;
+}
+
+@media (prefers-color-scheme: dark) {
+	article table thead tr {
+		background-color: color-mix(in hsl longer hue, var(--button-card-background-color), black 20%);
+	}
+
+	article table tbody tr:nth-of-type(even) {
+		background-color: color-mix(in hsl longer hue, var(--background-color), black 20%);
+	}
+	article table tbody tr:nth-of-type(odd) {
+		background-color: color-mix(in hsl longer hue, var(--base-color), white 1%);
+	}
 }
 
 figure.article-cover figcaption {

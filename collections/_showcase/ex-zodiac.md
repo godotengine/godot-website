@@ -23,7 +23,7 @@ steam: https://store.steampowered.com/app/1249480/ExZodiac/
 itch: https://pixeljam.itch.io/ex-zodiac
 
 
-featured_in_home: true
+featured_in_home: false
 ---
 
 <p>

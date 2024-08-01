@@ -6,6 +6,9 @@ layout: default
 
 {% include header.html %}
 <style>
+	h3.smaller {
+		font-size: 25px;
+	}
 	.card {
 		height: 100%;
 	}
@@ -30,6 +33,11 @@ layout: default
 		grid-column-end: span 2;
 		display: flex;
 		flex-direction: column;
+	}
+	@media (max-width: 540px) {
+		.community-list .community-short-block {
+			grid-column-end: span 1;
+		}
 	}
 
 	.community-list .community-short-block .card {
@@ -123,7 +131,7 @@ layout: default
 			<h1 class="intro-title">Community</h1>
 			<p class="small">
 				Godot has a very active community across multiple channels.<br>
-				By joining Godot communities, you agree to follow Godot's <a href="/code-of-conduct">Code of Conduct</a>.
+				By joining Godot communities, you agree to follow Godot's <a href="/code-of-conduct/">Code of Conduct</a>.
 			</p>
 		</div>
 	</div>
@@ -132,7 +140,7 @@ layout: default
 <div class="container community-list">
 	<div class="community-stack">
 		<div class="community-block">
-			<a href="/events" class="card base-padding" id="events">
+			<a href="/events/" class="card base-padding" id="events">
 				<div>
 					<h3>Events</h3>
 					<p>Upcoming community and past events.</p>
@@ -162,7 +170,7 @@ layout: default
 		<div class="community-block">
 			<div class="card">
 				<a href="https://forum.godotengine.org/">
-					<img src="/assets/community/icon_forum.png" width="350" height="215" alt=""
+					<img src="/assets/community/icon_forum.webp" width="350" height="215" alt=""
 						style="background: linear-gradient(90deg, #fbfbfb 30%, #fdfcfd 46%, #e7ebed 83%, #fefdfe 98%)"
 						loading="lazy">
 				</a>
@@ -175,14 +183,14 @@ layout: default
 
 		<div class="community-block">
 			<div class="card">
-				<a href="https://discord.gg/4JBkykG">
-					<img src="/assets/community/icon_discord.webp" width="350" height="215" alt=""
+				<a href="https://discord.gg/bdcfAYM4W9">
+					<img src="/assets/community/icon_discord.webp?1" width="350" height="215" alt=""
 						style="background: linear-gradient(90deg, #323541 16%, #42454e 33%, #383b42 82%, #35373e 96%)"
 						loading="lazy">
 				</a>
 				<div class="base-padding">
-					<h3><a href="https://discord.gg/4JBkykG">Discord</a></h3>
-					<p>A vibrant community for discussion, user support, showcases... and custom emoji!</p>
+					<h3><a href="https://discord.gg/bdcfAYM4W9">Discord</a></h3>
+					<p>A space to socialize with other community members.</p>
 				</div>
 			</div>
 		</div>
@@ -195,7 +203,7 @@ layout: default
 				</a>
 				<div class="base-padding">
 					<h3><a href="https://www.reddit.com/r/godot">Reddit</a></h3>
-					<p>A community for discussion and support in development with the game engine.</p>
+					<p>Stay up to date on Godot news, and share your projects and resources with each other.</p>
 				</div>
 			</div>
 		</div>
@@ -257,6 +265,20 @@ layout: default
 				</div>
 			</div>
 		</div>
+
+		<div class="community-block">
+			<div class="card">
+				<a href="https://www.twitch.tv/godotengine_official">
+					<img src="/assets/community/icon_twitch.webp" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #cdbcc5 24%, #cdbcc5 57%, #cdbcc5 66%, #cab8c1 92%)"
+						loading="lazy">
+				</a>
+				<div class="base-padding">
+					<h3><a href="https://www.twitch.tv/godotengine_official">Twitch</a></h3>
+					<p>Live streams all about Godot and its users.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<h2>User-supported communities</h2>
@@ -270,18 +292,48 @@ layout: default
 						loading="lazy">
 				</a>
 				<div class="base-padding">
-					<h3><a href="https://godotforums.org">Forums</a></h3>
+					<h3 class="smaller"><a href="https://godotforums.org">Forums</a></h3>
 					<p>Community forum for all Godot developers.</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="community-short-block">
+		<div class="community-block">
+			<div class="card">
+				<a href="https://programming.dev/c/godot">
+					<img src="/assets/community/community-lemmy.webp" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #e3eaf1 2%, #e3eaf1 28%, #e3eaf1 57%, #e3eaf1 90%)"
+						loading="lazy">
+				</a>
+				<div class="base-padding">
+					<h3 class="smaller"><a href="https://programming.dev/c/godot">Programming.Dev</a></h3>
+					<p>A community for discussion and support in development with the game engine.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="community-block">
+			<div class="card">
+				<a href="https://discord.gg/4JBkykG">
+					<img src="/assets/community/icon_community_discord.webp" width="350" height="215" alt=""
+						style="background: linear-gradient(90deg, #323541 16%, #42454e 33%, #383b42 82%, #35373e 96%)"
+						loading="lazy">
+				</a>
+				<div class="base-padding">
+					<h3><a href="https://discord.gg/4JBkykG">Discord</a></h3>
+					<p>A vibrant community for discussion, user support, showcases... and custom emoji!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="community-block">
 			<a href="/community/user-groups" class="card base-padding" id="user-groups">
 				<h3>User groups</h3>
 				<p>Find local Godot user groups run by community members.</p>
 			</a>
+		</div>
 
+		<div class="community-short-block">
 			<a href="https://docs.godotengine.org/en/stable/community/tutorials.html" class="card base-padding">
 				<h3>Tutorials</h3>
 				<p>Find tutorials and guides written by the community.</p>

@@ -6,7 +6,7 @@ layout: default
 {% include header.html %}
 
 <link rel="stylesheet" href="/assets/css/transparent-nav.css">
-<link rel="stylesheet" href="/assets/css/download.css?2">
+<link rel="stylesheet" href="/assets/css/download.css?3">
 <style>
 	.hero {
 		background-image: url('/assets/download/download-background-4.x.webp');
@@ -49,9 +49,7 @@ layout: default
 			{% endfor %}
 
 			<p class="previous-releases">
-				<strong class="previous-releases-featured">For the LTS version, <a href="/download/3.x/windows" class="set-os-download-url" data-version="3">Download Godot 3</a>.</strong>
-				<br>
-				You can find previous releases in the <a href="/download/archive">download archive</a>.
+				Looking for <strong class="previous-releases-featured"><a href="/download/3.x/windows" class="set-os-download-url" data-version="3">Godot 3</a></strong> or a <strong><a href="/download/archive">previous version</a>?</strong>.
 			</p>
 		</div>
 	</div>
@@ -202,7 +200,7 @@ layout: default
 				<img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" />
 				<span>macOS</span>
 			</a>
-			<a href="/download/windows" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
+			<a href="/download/windows/" class="tab title-font {% if page.platform == 'Windows' %} active {% endif %}">
 				<img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" />
 				<span>Windows</span>
 			</a>
@@ -250,15 +248,6 @@ layout: default
 						{% unless aar_library_info.caption == empty %} - {{ aar_library_info.caption }}{% endunless %}
 					</a>
 				</p>
-			</div>
-
-			<div class="other-download-card">
-				<h3>Blender ESCN exporter</h3>
-				<p>
-					Blender add-on to export scenes to Godot's scene format directly.<br>
-					Godot 3 also supports glTF 2.0 and OBJ.
-				</p>
-				<a href="https://github.com/godotengine/godot-blender-exporter">Godot Blender exporter</a>
 			</div>
 
 		</div>
@@ -345,7 +334,7 @@ layout: default
 		<p class="thankyou-donate">
 			Godot exists thanks to people like you! Consider supporting continued development of the engine with a donation.
 		</p>
-		<a href="/donate" class="btn btn-donate">
+		<a href="/donate/" class="btn btn-donate">
 			Make a Donation
 		</a>
 
@@ -366,6 +355,13 @@ layout: default
 				A collection of
 				<a href="https://godotengine.org/asset-library/asset?category=10&support[official]=1">official demo projects</a>
 				showcasing some of the engine features.
+			</li>
+			<li>
+				A guide to install Godot on
+				<a href="https://docs.godotengine.org/en/stable/about/faq.html#linux">Linux</a>,
+				<a href="https://docs.godotengine.org/en/stable/about/faq.html#windows">Windows</a>,
+				and
+				<a href="https://docs.godotengine.org/en/stable/about/faq.html#macos">macOS</a>.
 			</li>
 		</ul>
 
