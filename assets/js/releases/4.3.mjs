@@ -131,10 +131,11 @@ function computePosition(invoker, popover) {
 		width: window.innerWidth,
 		height: window.innerHeight
 	};
+	const padding = 10;
 
 	return {
 		x: -windowSize.width + (rect.x * 2),
-		y: -windowSize.height + (rect.y * 2) - (rect.height * 2),
+		y: -windowSize.height + (rect.y * 2) - (rect.height * 2) - padding,
 	};
 }
 
