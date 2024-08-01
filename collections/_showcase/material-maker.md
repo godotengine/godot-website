@@ -12,15 +12,12 @@ gallery: [
 ]
 youtube_id: "PY-fCt1j2Ag"
 
-windows: true
-linux: true
-
+platforms: ["windows", "linux"]
 
 github: https://github.com/RodZill4/material-maker
 itch: https://rodzilla.itch.io/material-maker
 
 tool: true
-featured_in_home: false
 ---
 
 <p>

@@ -16,8 +16,7 @@ gallery: [
 ]
 youtube_id: "GCVIaeK504g"
 
-windows: true
-linux: true
+platforms: ["windows", "linux"]
 
 
 steam: https://store.steampowered.com/app/2218750/Halls_of_Torment/

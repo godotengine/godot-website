@@ -17,6 +17,8 @@ website: https://bippinbits.com/
 release_date: "TBD"
 youtube_id: "DquTRgapsiM"
 
+platforms: ["windows"]
+
 steam: https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/
 
 featured_in_home: true

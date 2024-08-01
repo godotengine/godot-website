@@ -13,16 +13,12 @@ gallery: [
 ]
 youtube_id: "hcRDBdvtuVQ"
 
-windows: true
-macos: true
-linux: true
-
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/726840/City_Game_Studio_a_tycoon_about_game_dev/
 gog: https://www.gog.com/en/game/city_game_studio_a_tycoon_about_game_dev
 itch: https://binogure.itch.io/city-game-studio
 
-featured_in_home: false
 ---
 
 <p>

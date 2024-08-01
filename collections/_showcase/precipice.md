@@ -13,14 +13,10 @@ gallery: [
 ]
 youtube_id: "Ri0Pc5xvJkM"
 
-windows: true
-linux: true
-
+platforms: ["windows", "linux"]
 
 steam: https://store.steampowered.com/app/951670/Precipice/
 
-
-featured_in_home: false
 ---
 
 <ul>

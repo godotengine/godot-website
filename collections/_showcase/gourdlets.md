@@ -14,12 +14,11 @@ website: https://twitter.com/AuntyGames
 release_date: "TBD"
 youtube_id: "pRvDe_Ts2wA"
 
-windows: true
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/2013730/Gourdlets
 itch: https://aunty-games.itch.io/gourdlets
 
-featured_in_home: false
 ---
 
 Gourdlets is a city-building sandbox. Place buildings and scenery, and then watch visiting gourdlets arrive and interact with the world. No objectives, no points, just building.

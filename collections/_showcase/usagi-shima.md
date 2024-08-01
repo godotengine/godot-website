@@ -15,8 +15,7 @@ gallery: [
 ]
 youtube_id: "FWOKjCe9Ljw"
 
-android: true
-ios: true
+platforms: ["android", "ios"]
 
 appstore: https://apps.apple.com/us/app/usagi-shima/id1632728038
 googleplay: https://play.google.com/store/apps/details?id=com.pank0.usagishima

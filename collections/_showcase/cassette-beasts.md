@@ -15,11 +15,7 @@ gallery: [
 ]
 youtube_id: "JBt-B5eT2h4"
 
-windows: true
-linux: true
-switch: true
-xbox: true
-
+platforms: ["windows", "linux", "switch", "xbox"]
 
 steam: https://store.steampowered.com/app/1321440/Cassette_Beasts/
 

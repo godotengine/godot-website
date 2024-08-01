@@ -15,9 +15,7 @@ gallery: [
 ]
 youtube_id: "bXEhKX41WRk"
 
-windows: true
-
-
+platforms: ["windows", "playstation"]
 steam: https://store.steampowered.com/app/1942280/Brotato/
 
 

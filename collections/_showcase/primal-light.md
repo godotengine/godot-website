@@ -14,11 +14,7 @@ gallery: [
 ]
 youtube_id: "Kf4lVuTYdeM"
 
-windows: true
-macos: true
-linux: true
-switch: true
-xbox: true
+platforms: ["windows", "macos", "linux", "switch", "xbox"]
 
 steam: https://store.steampowered.com/app/771420/Primal_Light/
 nintendo: https://www.nintendo.com/store/products/primal-light-switch/
@@ -40,8 +36,6 @@ developer_interview:
   with.
 </p>"
 
-
-featured_in_home: false
 ---
 
 <p>

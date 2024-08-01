@@ -17,16 +17,10 @@ gallery: [
 ]
 youtube_id: "3BddpsCOXLk"
 
-windows: true
-macos: true
-linux: true
-xbox: true
-switch: true
+platforms: ["windows", "macos", "linux", "xbox", "switch"]
 
 steam: https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/
 
-
-featured_in_home: false
 ---
 
 Kamaeru is a cozy frog collecting game about farming and preserving nature. You play as a kind soul helping an old friend restore the wetlands of your childhood by transforming them into a safe haven for friendly little frogs. With the help of the game’s cast of welcoming NPCs, you will photograph and breed frogs to increase your reputation, decorate your frog refuge, and plant native crops to help your amphibian abode thrive!

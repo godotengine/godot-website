@@ -13,8 +13,8 @@ gallery: [
 ]
 youtube_id: "Vfz66iLuwzQ"
 
-windows: true
-linux: true
+
+platforms: ["windows", "linux"]
 
 steam: https://store.steampowered.com/app/1145340/Rogue_State_Revolution/
 
@@ -31,8 +31,6 @@ developer_interview:
   solutions to whatever problems we might encounter.
 </p>"
 
-
-featured_in_home: false
 ---
 
 <ul>

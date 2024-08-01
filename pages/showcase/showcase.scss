@@ -1,0 +1,111 @@
+---
+---
+
+h1 {
+	margin-top: 20px;
+}
+
+.showcase-cards {
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	h3 {
+		font-size: 33px;
+		margin-bottom: 0px;
+	}
+	p {
+		font-size: 14px;
+		margin: 0;
+		color: var(--secondary-color-text);
+	}
+	img.thumbnail {
+		max-width: 100%;
+		border-radius: 7px;
+		background-color: var(--card-background-color);
+		box-shadow: 0 5px 10px -3px #00000078;
+		display: block;
+		margin-bottom: 6px;
+		// Fallback if the image fails loading
+		min-height: 147px;
+		background: linear-gradient(168deg, rgb(157, 157, 157) 0%, rgb(83, 83, 83) 100%);
+		text-align: center;
+		line-height: 143px;
+		color: white;
+	}
+	.no-capsule {
+		aspect-ratio: 92 / 43;
+		background-size: cover;
+		background-position: center;
+		border-radius: 6px;
+		box-shadow: 0 5px 10px -3px #00000078;
+		margin-bottom: 7px;
+		text-align: center;
+		display: grid;
+		align-content: center;
+		h3 {
+			text-shadow: 0 4px 5px black;
+		}
+	}
+	.caption {
+		display: flex;
+		column-gap: 12px;
+		justify-content: space-between;
+		margin: 0 14px;
+	}
+	
+	.authors {
+		display: grid;
+		align-content: center;
+	}
+	
+	.icons {
+		filter: none;
+		padding: 7px 0px 0px;
+		opacity: 0.5;
+		@media (prefers-color-scheme: dark) {
+			filter: invert(100%);
+		}
+		img {
+			width: 24px;
+			height: 24px;
+			margin: 0;
+		}
+	}
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 1fr 200px;
+	grid-template-areas: "content aside";
+	gap: 20px;
+	@media (max-width: 800px) {
+		grid-template-columns: 1fr;
+		grid-template-areas: "aside"
+		"content";
+	}
+	.content {
+		grid-area: content;
+		.hidden {
+			display: none;
+		}
+		// select first instance of h2 title and remove the margin top
+		h2:first-of-type {
+			margin-top: 0;
+		}
+	}
+	aside {
+		grid-area: aside;
+	}
+	.filter-options {
+		margin-bottom: 20px;
+		// sticky
+		position: -webkit-sticky;
+		position: sticky;
+		top: 10px;
+		display: grid;
+		@media (max-width: 800px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		label {
+			margin-right: 10px;
+		}
+	}
+}

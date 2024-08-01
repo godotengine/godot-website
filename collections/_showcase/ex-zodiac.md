@@ -13,17 +13,11 @@ gallery: [
 ]
 youtube_id: "7sJJW_x6Xg4"
 
-windows: true
-macos: true
-linux: true
-switch: true
-
+platforms: ["windows", "macos", "linux", "switch"]
 
 steam: https://store.steampowered.com/app/1249480/ExZodiac/
 itch: https://pixeljam.itch.io/ex-zodiac
 
-
-featured_in_home: false
 ---
 
 <p>

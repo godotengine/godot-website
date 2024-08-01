@@ -15,8 +15,7 @@ gallery: [
 ]
 youtube_id: "Q-v0vL83ylg"
 
-windows: true
-linux: true
+platforms: ["windows", "linux"]
 
 steam: https://store.steampowered.com/app/824090/TailQuest_Defense/
 gog: https://www.gog.com/pl/game/tailquest_defense

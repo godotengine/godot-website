@@ -13,8 +13,7 @@ gallery: [
 ]
 youtube_id: "wb0r83K3YBk"
 
-windows: true
-linux: true
+platforms: ["windows", "linux"]
 
 
 steam: https://store.steampowered.com/app/1003860/Gravity_Ace/
@@ -37,8 +36,6 @@ developer_interview:
   frameworks.
 </p>"
 
-
-featured_in_home: false
 ---
 
 <p>

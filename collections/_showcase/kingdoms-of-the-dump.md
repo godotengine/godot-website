@@ -13,14 +13,10 @@ gallery: [
 ]
 youtube_id: "swcFuuwHKFE"
 
-windows: true
-macos: true
-linux: true
-
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/2159270/Kingdoms_of_the_Dump
 
-featured_in_home: false
 ---
 
 <p>

@@ -12,10 +12,7 @@ gallery: [
 ]
 youtube_id: "w4M6-zkLN6Y"
 
-windows: true
-macos: true
-linux: true
-
+platforms: ["windows", "macos", "linux"]
 
 itch: https://cheeseness.itch.io/hive-time
 
@@ -36,8 +33,6 @@ developer_interview:
   philosophical hurdles won't prevent them from doing so.
 </p>"
 
-
-featured_in_home: false
 ---
 
 <p>

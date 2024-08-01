@@ -14,10 +14,7 @@ gallery: [
 ]
 youtube_id: "7J9JR6iFzho"
 
-windows: true
-macos: true
-linux: true
-switch: true
+platforms: ["windows", "macos", "linux", "switch"]
 
 steam: https://store.steampowered.com/app/975150/Resolutiion/
 gog: https://www.gog.com/game/resolutiion/
@@ -35,8 +32,6 @@ developer_interview:
   valuable tutorials and guides.
 </p>"
 
-
-featured_in_home: false
 ---
 
 <p>

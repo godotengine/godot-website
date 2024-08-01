@@ -15,10 +15,7 @@ website: https://carrotcake.games/
 release_date: "July 30"
 youtube_id: "yha0038eC1o"
 
-windows: true
-macos: true
-linux: true
-switch: true
+platforms: ["windows", "macos", "linux", "switch"]
 
 steam: "https://store.steampowered.com/app/1638500/The_Garden_Path/"
 itch: "https://carrotcakestudio.itch.io/thegardenpath"
@@ -37,8 +34,6 @@ developer_interview:
   was this made' and the answer is something open source, that's a big
   accomplishment.</p><p>Something for me to aspire toward, anyway.</p>"
 
-
-featured_in_home: false
 ---
 
 Between forgotten statues and newfound friends, find yourself in a relaxing getaway. Discover a secret garden and your role within it.

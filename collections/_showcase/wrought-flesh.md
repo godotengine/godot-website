@@ -12,14 +12,11 @@ website: https://twitter.com/miziziziz
 release_date: "December 2021"
 youtube_id: "ssjbt_6RmKY"
 
-windows: true
-macos: true
-linux: true
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/1762010/Wrought_Flesh/
 itch: https://nartier.itch.io/wrought-flesh
 
-featured_in_home: false
 ---
 
 Rip out enemies organs and equip them in your own body. Fight biopunk monsters and drugged-up space bandits. You are a Gajeshian Cultist: A near-mythological being built from the bodies of long-dead saints. You have arrived on the partially terraformed planet of Chrisembourgh on a temple-ordained mission to find and kill someone. Explore the planet and trace your victims steps to the end.

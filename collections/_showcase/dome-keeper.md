@@ -13,10 +13,7 @@ gallery: [
 ]
 youtube_id: "qTnGtmh8eTE"
 
-windows: true
-macos: true
-linux: true
-
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/1637320/Dome_Keeper/
 

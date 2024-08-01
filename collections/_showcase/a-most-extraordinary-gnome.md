@@ -15,9 +15,7 @@ gallery: [
 ]
 youtube_id: "grovGK4WOJw"
 
-windows: true
-linux: false
-macos: false
+platforms: ["windows", "linux", "macos"]
 
 
 steam: https://store.steampowered.com/app/2089710/A_Most_Extraordinary_Gnome/

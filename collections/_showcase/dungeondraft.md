@@ -12,16 +12,12 @@ gallery: [
 ]
 youtube_id: "LYTHVRpihKg"
 
-windows: true
-linux: true
-macos: true
-
+platforms: ["windows", "macos", "linux"]
 
 custom: https://dungeondraft.net/
 
 
 tool: true
-featured_in_home: false
 ---
 
 <p>

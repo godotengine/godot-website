@@ -15,11 +15,7 @@ gallery: [
 ]
 youtube_id: "LC29HveHImg"
 
-featured_in_home: false
-
-windows: true
-linux: true
-macos: true
+platforms: ["windows", "macos", "linux"]
 
 
 steam: https://store.steampowered.com/app/1713810/Lumencraft/
