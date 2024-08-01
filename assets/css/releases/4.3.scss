@@ -648,7 +648,9 @@ $donate-robot-size: 500px;
 						}
 
 						.c-link {
-							color: white;
+							.c-link-a {
+								color: white;
+							}
 						}
 					}
 				}
@@ -866,7 +868,30 @@ $donate-robot-size: 500px;
 							font-weight: 700;
 							margin-top: 10px;
 							color: inherit;
-							text-decoration: underline;
+
+							.c-link-a {
+								color: black;
+								text-decoration: underline;
+							}
+
+							.c-link-popover {
+								color: white;
+								background-color: black;
+								@media (prefers-color-scheme: dark) {
+									color: black;
+									background-color: white;
+								}
+
+								border: 0;
+								border-radius: 9999px;
+								padding: calc(var(--card-padding) / 2);
+								font-size: clamp(
+									var(--card-content-font-size-clamp-min),
+									var(--card-content-font-size-clamp-val),
+									var(--card-content-font-size-clamp-max)
+								);
+								font-weight: 400;
+							}
 						}
 					}
 				}

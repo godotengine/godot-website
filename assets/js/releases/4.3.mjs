@@ -1,7 +1,7 @@
 // GSAP for animations.
-import { gsap } from "../modules/gsap@3.12.5/index.js"
-import { ScrollTrigger } from "../modules/gsap@3.12.5/ScrollTrigger.js"
-import detectPlatform from "../modules/detect-browser/detect-browser.js"
+import { gsap } from "../modules/gsap@3.12.5.min.mjs"
+import { ScrollTrigger } from "../modules/gsap@3.12.5_ScrollTrigger.min.mjs"
+import detectPlatform from "../modules/detect-browser.mjs"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -119,4 +119,56 @@ for (const author of authors) {
 		author.classList.add(`size-${i + 1}`);
 		break;
 	}
+}
+
+// Modern popovers.
+let popoverAnimationFrame = 0;
+
+/** @type {(invoker: HTMLElement, popover: HTMLElement) => { x: number, y: number }} */
+function computePosition(invoker, popover) {
+	const rect = invoker.getBoundingClientRect();
+	const windowSize = {
+		width: window.innerWidth,
+		height: window.innerHeight
+	};
+
+	return {
+		x: -windowSize.width + (rect.x * 2),
+		y: -windowSize.height + (rect.y * 2) - (rect.height * 2),
+	};
+}
+
+/** @type {(event: ToggleEvent) => void} */
+function positionPopover(event) {
+	if (event.newState !== "open") {
+		cancelAnimationFrame(popoverAnimationFrame);
+		popoverAnimationFrame = 0;
+		return;
+	}
+	const popover = event.target;
+	const invoker = document.querySelector(`[popovertarget="${popover.getAttribute("id")}"`);
+	const { x, y } = computePosition(invoker, popover);
+	Object.assign(popover.style, {
+		left: `${x}px`,
+		top: `${y}px`,
+	});
+
+	if (popoverAnimationFrame > 0) {
+		cancelAnimationFrame(popoverAnimationFrame);
+	}
+
+	const updatePopover = () => {
+		const { x, y } = computePosition(invoker, popover);
+		Object.assign(popover.style, {
+			left: `${x}px`,
+			top: `${y}px`,
+		});
+		popoverAnimationFrame = requestAnimationFrame(updatePopover);
+	};
+	popoverAnimationFrame = requestAnimationFrame(updatePopover);
+}
+
+const popovers = document.querySelectorAll("[popover]");
+for (const popover of popovers) {
+	popover.addEventListener("toggle", positionPopover);
 }
