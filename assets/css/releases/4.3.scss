@@ -864,6 +864,7 @@ $donate-robot-size: 500px;
 
 						.c-link {
 							grid-area: link;
+							position: relative;
 							font-size: 21px;
 							font-weight: 700;
 							margin-top: 10px;
@@ -903,6 +904,10 @@ $donate-robot-size: 500px;
 									var(--card-content-font-size-clamp-max)
 								);
 								font-weight: 400;
+
+								// Remove browser default positionning of the popover,
+								// as it defaults to center of the screen.
+								inset: unset;
 							}
 						}
 					}

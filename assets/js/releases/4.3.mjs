@@ -121,22 +121,102 @@ for (const author of authors) {
 	}
 }
 
-// Modern popovers.
+// Links and contributors.
+/* <button class="c-link-popover-button multiple-contributors"
+										popovertarget="rendering-premultiplied-alpha-blending-contributors"
+										title="Contributed by QbieShay, jitspoe, and clayjohn"
+									></button>
+									<div class="c-link-popover" id="rendering-premultiplied-alpha-blending-contributors" popover>
+										Contributed by <a href="https://github.com/QbieShay/" target="_blank">QbieShay</a>,
+										<a href="https://github.com/jitspoe/" target="_blank">jitspoe</a>,
+										and <a href="https://github.com/clayjohn/" target="_blank">clayjohn</a>
+									</div> */
+
+const cLinks = Array.from(document.querySelectorAll(".c-link"));
+for (const cLink of cLinks) {
+	if (cLink.dataset.readMore != null) {
+		const cLinkA = cLink.appendChild(document.createElement("a"));
+		cLinkA.href = cLink.dataset.readMore;
+		cLinkA.classList.add("c-link-a");
+		cLinkA.textContent = "Read more +";
+		cLinkA.target = "_blank";
+	}
+
+	if (cLink.dataset.contributors) {
+		let parentId = "";
+		let parent = cLink.parentElement;
+		while (parent != document.body) {
+			if (parent.classList.contains("release-card")) {
+				parentId = parent.id;
+				break;
+			}
+			parent = parent.parentElement;
+		}
+		const contributorsId = `${parentId}-contributors`;
+
+		const contributorsReducer = (previousValue, currentValue, currentIndex, array) => {
+			if (currentIndex === 0) {
+				return `${previousValue} ${currentValue}`;
+			} else if (currentIndex < array.length - 1) {
+				return `${previousValue}, ${currentValue}`;
+			} else if (currentIndex === 1 && array.length === 2) {
+				return `${previousValue} and ${currentValue}`;
+			}
+			return `${previousValue}, and ${currentValue}`;
+		};
+
+		/** @type {String[]} */
+		const contributors = cLink.dataset.contributors.split(",");
+		const contributorsText = contributors.reduce(contributorsReducer, "Contributed by");
+		const contributorsHtml = contributors.map((val) => {
+			const link = document.createElement("a");
+			link.href = `https://github.com/${val}`;
+			link.target = "_blank";
+			link.textContent = val;
+			return link.outerHTML;
+		}).reduce(contributorsReducer, "Contributed by");
+
+		const button = cLink.appendChild(document.createElement("button"));
+		button.classList.add("c-link-popover-button");
+		if (contributors.length === 1) {
+			button.textContent = "👤";
+		} else {
+			button.textContent = "👥";
+		}
+		button.title = contributorsText;
+		button.setAttribute("popovertarget", contributorsId);
+
+		const popover = cLink.appendChild(document.createElement("div"));
+		popover.classList.add("c-link-popover");
+		popover.id = contributorsId;
+		popover.setAttribute("popover", "");
+		popover.innerHTML = contributorsHtml;
+	}
+}
+
+// Popovers.
 let popoverAnimationFrame = 0;
 
 /** @type {(invoker: HTMLElement, popover: HTMLElement) => { x: number, y: number }} */
 function computePosition(invoker, popover) {
-	const rect = invoker.getBoundingClientRect();
+	const invokerRect = invoker.getBoundingClientRect();
+	const popoverRect = popover.getBoundingClientRect();
 	const windowSize = {
 		width: window.innerWidth,
 		height: window.innerHeight
 	};
 	const padding = 10;
-
-	return {
-		x: -windowSize.width + (rect.x * 2),
-		y: -windowSize.height + (rect.y * 2) - (rect.height * 2) - padding,
+	const popoverPosition = {
+		x: invokerRect.x - (popoverRect.width / 2),
+		y: invokerRect.y - popoverRect.height - padding,
 	};
+
+	popoverPosition.x = Math.min(Math.max(popoverPosition.x, 0), windowSize.width - popoverRect.width);
+	if (popoverPosition.y < 0) {
+		popoverPosition.y = invokerRect.y + invokerRect.height + padding;
+	}
+
+	return popoverPosition;
 }
 
 /** @type {(event: ToggleEvent) => void} */
