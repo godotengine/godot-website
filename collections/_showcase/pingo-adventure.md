@@ -13,14 +13,12 @@ gallery: [
 ]
 youtube_id: "H8x_SR623fw"
 
-windows: true
-linux: true
+platforms: ["windows", "linux"]
 
 
 steam: https://store.steampowered.com/app/2015830/Pingo_Adventure/
 itch: https://orb-square.itch.io/pingo-adventure
 
-featured_in_home: false
 ---
 
 <p>

@@ -13,8 +13,7 @@ gallery: [
 ]
 youtube_id: "NhPjTSAhFYM"
 
-windows: true
-linux: true
+platforms: ["windows", "linux"]
 
 
 steam: https://store.steampowered.com/app/1395420/Human_Diaspora/
@@ -33,8 +32,6 @@ developer_interview:
   straightforward way of scripting with GDScript sealed the deal for me.
 </p>'
 
-
-featured_in_home: false
 ---
 
 <p>

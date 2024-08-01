@@ -15,12 +15,10 @@ website: https://www.kerzoven.com/
 release_date: April 2024
 youtube_id: "md-g0UNTBV4"
 
-windows: true
-linux: true
+platforms: ["windows", "linux"]
 
 steam: https://store.steampowered.com/app/1733110/Of_Life_and_Land/
 
-featured_in_home: false
 redirect_from:
   - /showcase/circle-of-kerzoven/
 ---

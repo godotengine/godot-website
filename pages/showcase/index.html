@@ -1,0 +1,175 @@
+---
+permalink: /showcase/index.html
+title: "Showcase - Godot Engine"
+description: "Games made with the Godot Engine."
+layout: default
+---
+<link rel="stylesheet" href="/pages/showcase/showcase.css">
+
+{% include header.html %}
+
+<section id="made_with_godot" class="container padded">
+	<h2>Showreel videos</h2>
+	<p>
+		Every year, we make a series of videos highlighting games and projects made with Godot. Watch the full playlist on our <a href="https://www.youtube.com/playlist?list=PLeG_dAglpVo6EpaO9A1nkwJZOwrfiLdQ8" target="_blank">YouTube channel</a>.
+	</p>
+	{% include showreel-shelf.html %}
+</section>
+
+<div class="container">
+	<h2>Made with Godot</h2>
+	<div class="main">
+		<aside>
+			<h3>Filter by:</h3>
+			<div class="filter-options">
+				<label><input type="checkbox" class="platform-filter" value="windows"> Windows</label>
+				<label><input type="checkbox" class="platform-filter" value="macos"> Mac</label>
+				<label><input type="checkbox" class="platform-filter" value="linux"> Linux</label>
+				<label><input type="checkbox" class="platform-filter" value="web"> Web</label>
+				<label><input type="checkbox" class="platform-filter" value="android"> Android</label>
+				<label><input type="checkbox" class="platform-filter" value="ios"> iOS</label>
+				<label><input type="checkbox" class="platform-filter" value="playstation"> PlayStation</label>
+				<label><input type="checkbox" class="platform-filter" value="xbox"> Xbox</label>
+				<label><input type="checkbox" class="platform-filter" value="switch"> Nintendo Switch</label>
+			</div>
+		</aside>
+
+		<div class="content">
+			<h2 class="title">Games</h2>
+
+			<section class="flex grid showcase-cards">
+				{% assign projects = site.showcase | sort: 'date' | reverse %}
+				{% for project in projects %}
+				{% if project.release_date != 'TBD' and project.tool != true %}
+				<a href="{{ project.url }}" class="showcase-link-wrapper {% for platform in project.platforms%}{{platform}} {% endfor %}" style="text-decoration: none;">
+					<article class="showcase-card">
+						{% if project.image %}
+						<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}">
+						{% else %}
+						<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+							<h3>{{ project.title }}</h3>
+						</div>
+						{% endif %}
+						<div class="caption">
+							<div class="icons">
+								{% for platform in project.platforms%}
+									<img src="/assets/images/platforms/{{ platform }}.svg" alt="{{ platform }}" title="{{ platform }}">
+								{% endfor %}
+							</div>
+							<div class="authors">
+								<p>{{ project.author }}</p>
+							</div>
+						</div>
+					</article>
+				</a>
+				{% endif %}
+				{% endfor %}
+			</section>
+		
+			<h2 class="title">Apps & Tools</h2>
+		
+			<section class="flex grid showcase-cards">
+				{% assign projects = site.showcase | sort: 'date' | reverse %}
+				{% for project in projects %}
+				{% if project.tool %}
+				<a href="{{ project.url }}" class="showcase-link-wrapper {% for platform in project.platforms%}{{platform}} {% endfor %}" style="text-decoration: none;">
+					<article class="showcase-card">
+						{% if project.image %}
+						<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}">
+						{% else %}
+						<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+							<h3>{{ project.title }}</h3>
+						</div>
+						{% endif %}
+						<div class="caption">
+							<div class="icons">
+								{% for platform in project.platforms%}
+									<img src="/assets/images/platforms/{{ platform }}.svg" alt="{{ platform }}" title="{{ platform }}">
+								{% endfor %}
+							</div>
+							<div class="authors">
+								<p>{{ project.author }}</p>
+							</div>
+						</div>
+					</article>
+				</a>
+				{% endif %}
+				{% endfor %}
+			</section>
+		
+			<h2 class="title">Coming soon</h2>
+			<section class="flex grid showcase-cards">
+				{% assign projects = site.showcase | sort: 'date' | reverse %}
+				{% for project in projects %}
+				{% if project.release_date == 'TBD' %}
+				<a href="{{ project.url }}" class="showcase-link-wrapper {% for platform in project.platforms%}{{platform}} {% endfor %}" style="text-decoration: none;">
+					<article class="showcase-card">
+						{% if project.image %}
+						<img class="thumbnail" src="{{ project.image }}" alt="{{ project.title }}">
+						{% else %}
+						<div class="no-capsule" style="background-image: url({{ project.gallery[0] }})">
+							<h3>{{ project.title }}</h3>
+						</div>
+						{% endif %}
+						<div class="caption">
+							<div></div>
+							<div class="authors">
+								<p>{{ project.author }}</p>
+							</div>
+						</div>
+					</article>
+				</a>
+				{% endif %}
+				{% endfor %}
+			</section>
+		</div>
+	</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterCheckboxes = document.querySelectorAll('.platform-filter');
+    const showcaseItems = document.querySelectorAll('.showcase-link-wrapper');
+    const sectionTitles = document.querySelectorAll('h2.title');
+
+    function filterShowcase() {
+        const selectedPlatforms = Array.from(filterCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        let visibleCounts = {
+            'Games': 0,
+            'Apps & Tools': 0,
+            'Coming soon': 0
+        };
+
+        showcaseItems.forEach(item => {
+            const shouldShow = selectedPlatforms.length === 0 || 
+                selectedPlatforms.some(platform => item.classList.contains(platform));
+            
+            item.classList.toggle('hidden', !shouldShow);
+            
+            if (shouldShow) {
+                const sectionTitle = item.closest('section').previousElementSibling.textContent.trim();
+                if (visibleCounts.hasOwnProperty(sectionTitle)) {
+                    visibleCounts[sectionTitle]++;
+                }
+            }
+        });
+
+        sectionTitles.forEach(title => {
+            const sectionName = title.textContent.trim();
+            title.style.display = visibleCounts[sectionName] > 0 ? '' : 'none';
+        });
+    }
+
+    filterCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', filterShowcase);
+    });
+
+    // Initial call to set correct visibility
+    filterShowcase();
+});
+</script>
+
+{% include footer.html %}

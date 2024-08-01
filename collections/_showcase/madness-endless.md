@@ -14,8 +14,7 @@ gallery: [
 ]
 youtube_id: "nywlneIwCNg"
 
-ios: true
-android: true
+platforms: ["ios", "android"]
 
 
 appstore: https://apps.apple.com/us/app/madness-endless/id1489109037

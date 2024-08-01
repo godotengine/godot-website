@@ -15,10 +15,7 @@ gallery: [
 ]
 youtube_id: "egEuehFcGkE"
 
-windows: true
-macos: true
-linux: true
-
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/1392650/BLASTRONAUT/
 

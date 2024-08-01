@@ -13,14 +13,10 @@ gallery: [
 ]
 youtube_id: "aiVMhCEgGLY"
 
-windows: true
-linux: true
-
+platforms: ["windows", "linux"]
 
 steam: https://store.steampowered.com/app/1863080/Beat_Invaders/
 
-
-featured_in_home: false
 ---
 
 <p>

@@ -13,13 +13,10 @@ gallery: [
 ]
 youtube_id: "PvKEKD3eo2Y"
 
-windows: true
-
+platforms: ["windows"]
 
 steam: https://store.steampowered.com/app/1388770/Cruelty_Squad/
 
-
-featured_in_home: false
 ---
 
 <p>

@@ -13,9 +13,7 @@ gallery: [
 ]
 youtube_id: "Ea8OfjVqNz0"
 
-windows: true
-macos: true
-linux: true
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/498310
 itch: https://zeromatrix.itch.io/rpginabox
@@ -37,7 +35,6 @@ developer_interview:
 
 
 tool: true
-featured_in_home: false
 ---
 
 <p>

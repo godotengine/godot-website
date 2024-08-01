@@ -15,9 +15,8 @@ gallery: [
 website: https://untilthengame.com/
 release_date: "June 2024"
 youtube_id: "ktd33TPsGlA"
-windows: true
-linux: true
-playstation: true
+
+platforms: ["windows", "linux", "playstation"]
 
 steam: https://store.steampowered.com/app/1574820/Until_Then/
 

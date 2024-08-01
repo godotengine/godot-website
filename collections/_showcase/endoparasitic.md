@@ -12,14 +12,11 @@ website: https://twitter.com/miziziziz
 release_date: "October 2022"
 youtube_id: "dHTxm1PD-bQ"
 
-windows: true
-macos: true
-linux: true
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/2124780/Endoparasitic/
 itch: https://nartier.itch.io/endoparasitic
 
-featured_in_home: false
 ---
 
 Three limbs ripped off, infected with a deadly parasite, you must save your research. Drag yourself through the corridors of a secret research lab on a remote asteroid, fight off horribly mutated monsters, inject countless syringes of vaccines, and survive at all costs.

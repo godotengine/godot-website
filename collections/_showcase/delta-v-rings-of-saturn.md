@@ -13,16 +13,12 @@ gallery: [
 ]
 youtube_id: "7rE4ZTYLkVA"
 
-windows: true
-macos: true
-linux: true
+platforms: ["windows", "macos", "linux"]
 
 
 steam: https://store.steampowered.com/app/846030/V_Rings_of_Saturn/
 itch: https://koder.itch.io/dv-rings-of-saturn/
 
-
-featured_in_home: false
 ---
 
 <p>

@@ -13,14 +13,11 @@ gallery: [
 ]
 youtube_id: "j9sjKfFwfaM"
 
-windows: true
-linux: true
+platforms: ["windows", "linux"]
 
 
 steam: https://store.steampowered.com/app/1105470/Fist_of_the_Forgotten/
 
-
-featured_in_home: false
 ---
 
 <p>Fist of the Forgotten is a platformer set in a harsh, dark world, but that doesn't mean you're helpless. Relics passed down from your family allow you to interact with forgotten technology and fight your way forward.</p>

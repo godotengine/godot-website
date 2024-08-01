@@ -13,11 +13,10 @@ website: https://swordsandsandals.com/
 release_date: "May 2022"
 youtube_id: "XXzSN9lQ9S4"
 
-windows: true
+platforms: ["windows"]
 
 steam: https://store.steampowered.com/app/1707650/Swords_and_Sandals_Immortals/
 
-featured_in_home: false
 ---
 
 Gladiator! Grab your sword, equip your sandals and take on the world in multiplayer Swords and Sandals! Brutal turn-based combat where gladiators can lose limbs, wield guitars and yell so loudly enemy heads will fall off.

@@ -16,10 +16,7 @@ gallery: [
 ]
 youtube_id: "--ZcztkvWUQ"
 
-windows: true
-linux: true
-macos: true
-html5: true
+platforms: ["windows", "macos", "linux", "web"]
 
 
 itch: https://orama-interactive.itch.io/pixelorama/
@@ -27,7 +24,6 @@ github: https://github.com/Orama-Interactive/Pixelorama
 steam: https://store.steampowered.com/app/2779170/Pixelorama/
 
 tool: true
-featured_in_home: false
 ---
 
 Unleash your creativity with Pixelorama, a powerful and accessible open-source pixel art multitool. Whether you want to create sprites, tiles, animations, or just express yourself in the language of pixel art, this software will realize your pixel-perfect dreams with a vast toolbox of features.

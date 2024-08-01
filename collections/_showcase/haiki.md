@@ -13,15 +13,10 @@ gallery: [
 ]
 youtube_id: "oJG80se4D_I"
 
-windows: true
-macos: true
-linux: true
-
+platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/1395270/Haiki/
 
-
-featured_in_home: false
 ---
 
 <p>
