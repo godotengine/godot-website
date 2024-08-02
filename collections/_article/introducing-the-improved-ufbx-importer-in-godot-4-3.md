@@ -4,7 +4,7 @@ excerpt: "Godot 4.3 now includes native .fbx support"
 categories: ["progress-report"]
 author: Lyuma
 image: /storage/blog/covers/progress-report-new-ufbx-importer.webp
-date: 2024-08-02 00:00:00
+date: 2024-08-02 20:36:00
 ---
 
 Thanks to [a very welcome contribution by Samuli Raivio (bqqbarbhg) and Ernest Lee (fire)](https://github.com/godotengine/godot/pull/81746), Godot 4.3 now includes native .fbx support. This was made possible using Samuli’s free and open source [ufbx single-file .fbx library](https://github.com/ufbx/ufbx). The ufbx importer will be used by default for all newly imported .fbx files in Godot 4.3.
@@ -56,4 +56,4 @@ We expect that bugs with .fbx import are going to be relatively uncommon, but if
 
 The ufbx importer is a major step in improving the accuracy and ease of use of Godot’s 3D importer. It is but one of many improvements, and there is more to come in future 4.x releases.
 
-There are sure to be many applications for the native .fbx importer. Our hope is it will improve interoperability with a wide variety of animation tools and libraries out in the wild. For example, I and the V-Sekai team have integrated ufbx into Unidot Importer to allow for interoperability with asset packs in .fbx format.
+There are sure to be many applications for the native .fbx importer. Our hope is it will improve interoperability with a wide variety of animation tools and libraries out in the wild. For example, I and the [V-Sekai](https://v-sekai.org/) team have integrated ufbx into [Unidot Importer](https://github.com/V-Sekai/unidot_importer) to allow for interoperability with asset packs in .fbx format.
