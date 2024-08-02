@@ -1016,12 +1016,18 @@ $donate-robot-size: 500px;
 			}
 
 			.section-title {
+				container-type: inline-size;
+				container-name: section-title;
 				margin-bottom: calc(var(--card-padding) * 2);
 			}
 
 			.section-title h3 {
 				position: relative;
-				font-size: 50px;
+				font-size: clamp(
+					4cqw,
+					50px,
+					6cqw
+				);
 				background:
 					var(--color-top)
 					linear-gradient(
