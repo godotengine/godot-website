@@ -30,6 +30,18 @@ $mobile-max-width: 700px;
 	}
 }
 
+@mixin is-dark() {
+	@media screen and (prefers-color-scheme: dark) {
+		@content;
+	}
+}
+
+@mixin is-light() {
+	@media screen and (prefers-color-scheme: light) {
+		@content;
+	}
+}
+
 $anchor-offset: 75px;
 
 $header-background-color: #25282B;
@@ -112,7 +124,7 @@ $donate-robot-size: 500px;
 
 #foundation-donate {
 	background-color: #283a5b;
-	@media (prefers-color-scheme: light) {
+	@include is-light() {
 		background-color: #EFF1F5;
 	}
 
@@ -150,7 +162,7 @@ $donate-robot-size: 500px;
 			height: min-content;
 			border: none;
 			color: black;
-			@media (prefers-color-scheme: dark) {
+			@include is-dark() {
 				color: white;
 			}
 
@@ -195,7 +207,7 @@ $donate-robot-size: 500px;
 			.download-platform {
 				& > img {
 					margin-right: var(--download-gap);
-					@media (prefers-color-scheme: dark) {
+					@include is-dark() {
 						filter:
 							contrast(0%)
 							brightness(200%);
@@ -213,7 +225,7 @@ $donate-robot-size: 500px;
 
 				.card-download-other {
 					color: black;
-					@media (prefers-color-scheme: dark) {
+					@include is-dark() {
 						color: white;
 					}
 
@@ -307,9 +319,10 @@ $donate-robot-size: 500px;
 	height: 100%;
 	background-color: #25282b;
 
-	@media (prefers-color-scheme: light) {
+	@include is-light() {
 		background-color: #cecece;
 	}
+
 	/**
 	 * Responsive sizes.
 	 */
@@ -344,7 +357,7 @@ $donate-robot-size: 500px;
 	/** Color **/
 	--card-background-color: white;
 	--card-color: #2d2d2d;
-	@media (prefers-color-scheme: dark) {
+	@include is-dark() {
 		--card-background-color: #333639;
 		--card-color: white;
 	}
@@ -405,7 +418,7 @@ $donate-robot-size: 500px;
 
 
 		background-color: #121315;
-		@media (prefers-color-scheme: light) {
+		@include is-light() {
 			background-color: #25282B;
 		}
 
@@ -821,7 +834,7 @@ $donate-robot-size: 500px;
 
 							a {
 								color: var(--color-top);
-								@media (prefers-color-scheme: dark) {
+								@include is-dark() {
 									color: white;
 								}
 
@@ -892,7 +905,7 @@ $donate-robot-size: 500px;
 							.c-link-popover {
 								color: white;
 								background-color: black;
-								@media (prefers-color-scheme: dark) {
+								@include is-dark() {
 									color: black;
 									background-color: white;
 								}
