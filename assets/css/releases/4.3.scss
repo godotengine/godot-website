@@ -225,12 +225,12 @@ $donate-robot-size: 500px;
 
 				.card-download-other {
 					color: black;
+					text-decoration-thickness: 1px;
+					text-decoration-color: black;
 					@include is-dark() {
 						color: white;
+						text-decoration-color: white;
 					}
-
-					text-decoration-color: black;
-					text-decoration-thickness: 1px;
 				}
 			}
 
