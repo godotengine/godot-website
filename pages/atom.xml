@@ -6,12 +6,9 @@ permalink: /atom.xml
 
   <title>{{ site.data.meta.title }}</title>
   <link href="{{ site.url }}/atom.xml" rel="self"/>
-  <link href="{{ site.url }}"/>
+  <link href="{{ site.url }}/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.url }}</id>
-  <author>
-    <name>{{ site.data.meta.author }}</name>
-  </author>
+  <id>{{ site.url }}/</id>
 
   {% assign latest_posts = site.article | sort:"date" | reverse %}
   {% for post in latest_posts limit:24 %}
