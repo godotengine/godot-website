@@ -1,0 +1,33 @@
+---
+permalink: /atom.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>{{ site.data.meta.title }}</title>
+  <link href="{{ site.url }}/atom.xml" rel="self"/>
+  <link href="{{ site.url }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}</id>
+  <author>
+    <name>{{ site.data.meta.author }}</name>
+  </author>
+
+  {% assign latest_posts = site.article | sort:"date" | reverse %}
+  {% for post in latest_posts limit:24 %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <link href="{{ site.url }}{{ post.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <content type="html">{{ post.excerpt | xml_escape }}</content>
+    <author>
+      <name>{{ post.author | xml_escape }}</name>
+    </author>
+    {% for category in post.categories %}
+    <category term="{{ site.data.categories[category][0].name }}"/>
+    {% endfor %}
+  </entry>
+  {% endfor %}
+
+</feed>
