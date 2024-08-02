@@ -314,6 +314,7 @@ layout: default
 		downloadButtons.forEach((it) => {
 			it.addEventListener('click', () => {
 				thankYouWrapper.style.display = '';
+				document.querySelector('.btn.btn-donate').focus();
 			});
 		});
 
@@ -323,6 +324,13 @@ layout: default
 			it.addEventListener('click', () => {
 				thankYouWrapper.style.display = '';
 			});
+		});
+
+		// Close the dialog when the user presses the escape key.
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				thankYouWrapper.style.display = 'none';
+			}
 		});
 	});
 </script>
