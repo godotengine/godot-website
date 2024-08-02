@@ -887,7 +887,13 @@ $donate-robot-size: 500px;
 
 							.c-link-a {
 								color: black;
+								text-decoration-color: black;
 								text-decoration: underline;
+
+								@include is-dark() {
+									color: white;
+									text-decoration-color: white;
+								}
 							}
 
 							.c-link-popover-button {
