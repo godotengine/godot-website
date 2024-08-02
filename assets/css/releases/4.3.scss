@@ -104,7 +104,6 @@ $sections: r-generate-sections(
 	$offset: $section-hue-offset
 );
 
-$donate-robot-color: #CFD5E0;
 $donate-robot-size: 500px;
 
 @mixin card-media-margin($direction, $margin) {
@@ -123,14 +122,18 @@ $donate-robot-size: 500px;
 }
 
 #foundation-donate {
-	background-color: #283a5b;
-	@include is-light() {
-		background-color: #EFF1F5;
+	background-color: #EFF1F5;
+	@include is-dark() {
+		background-color: #283a5b;
 	}
 
 	.robot-1,
 	.robot-2 {
-		color: $donate-robot-color;
+		color: #CFD5E0;
+		@include is-dark() {
+			color: #233452;
+		}
+
 		font-size: $donate-robot-size;
 		position: absolute;
 		z-index: -1;
