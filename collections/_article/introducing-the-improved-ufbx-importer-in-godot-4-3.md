@@ -39,7 +39,7 @@ Another slight difference exists in the way FBX units are applied. The ufbx inte
 
 Those who have worked with .fbx in the past may have encountered a plethora of issues when importing skeletons and animations, to the extent that it became common practice to import such animation files in Blender and re-export as glTF 2.0. With Godot 4.3, we hope that this will be a thing of the past. We have made the following improvements to the skeleton importer:
 
-* [#89629 (Import rest pose as RESET animation)](https://github.com/godotengine/godot/pull/89629): This enables creating a RESET track to restore the skeleton to its imported pose. 
+* [#89629 (Import rest pose as RESET animation)](https://github.com/godotengine/godot/pull/89629): This enables creating a RESET track to restore the skeleton to its imported pose.
 * [#88824 (Retargeting option to use a template for silhouette)](https://github.com/godotengine/godot/pull/88824): This feature can be used to reference the RESET animation of a known good (T-pose) reference file. Having a separate reference pose .fbx is a common practice in some animation sets.
 * [#88821 (Allow preserving the initial bone pose in rest fixer)](https://github.com/godotengine/godot/pull/88821): This allows for importing a retargeted skeleton while keeping it in its initial pose.
 * [#88819 (Add new scene import option to import as Skeleton)](https://github.com/godotengine/godot/pull/88819): This solves cases especially common in .fbx files without any meshes, where animated skeletons import as a series of nodes.
@@ -50,7 +50,7 @@ Those who have worked with .fbx in the past may have encountered a plethora of i
 
 Samuli has spent exceptional time and effort testing the ufbx library on tens of thousands of .fbx test cases from a variety of sources, and we are proud to consider the new ufbx importer feature-complete with a high level of certainty.
 
-We expect that bugs with .fbx import are going to be relatively uncommon, but if you encounter something incorrect or broken, please [report the issues you find](/godotengine/godot/issues) and include the .fbx files which reproduce the issue or reach out to us with instructions.
+We expect that bugs with .fbx import are going to be relatively uncommon, but if you encounter something incorrect or broken, please [report the issues you find](https://github.com/godotengine/godot/issues) and include the .fbx files which reproduce the issue or reach out to us with instructions.
 
 # Conclusion
 
