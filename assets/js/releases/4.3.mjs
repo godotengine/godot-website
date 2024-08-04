@@ -122,16 +122,6 @@ for (const author of authors) {
 }
 
 // Links and contributors.
-/* <button class="c-link-popover-button multiple-contributors"
-										popovertarget="rendering-premultiplied-alpha-blending-contributors"
-										title="Contributed by QbieShay, jitspoe, and clayjohn"
-									></button>
-									<div class="c-link-popover" id="rendering-premultiplied-alpha-blending-contributors" popover>
-										Contributed by <a href="https://github.com/QbieShay/" target="_blank">QbieShay</a>,
-										<a href="https://github.com/jitspoe/" target="_blank">jitspoe</a>,
-										and <a href="https://github.com/clayjohn/" target="_blank">clayjohn</a>
-									</div> */
-
 const cLinks = Array.from(document.querySelectorAll(".c-link"));
 for (const cLink of cLinks) {
 	if (cLink.dataset.readMore != null) {
@@ -178,11 +168,7 @@ for (const cLink of cLinks) {
 
 		const button = cLink.appendChild(document.createElement("button"));
 		button.classList.add("c-link-popover-button");
-		if (contributors.length === 1) {
-			button.textContent = "👤";
-		} else {
-			button.textContent = "👥";
-		}
+		button.classList.add("codicon", "codicon-git-merge");
 		button.title = contributorsText;
 		button.setAttribute("popovertarget", contributorsId);
 
