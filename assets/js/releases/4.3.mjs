@@ -68,7 +68,8 @@ for (const element of elements) {
 const platformData = detectPlatform(navigator.userAgent, navigator.userAgentData);
 let platformName = "windows";
 switch (platformData.os) {
-	case "mac": {
+	case "mac":
+	case "ios": {
 		platformName = "macos";
 	} break;
 
