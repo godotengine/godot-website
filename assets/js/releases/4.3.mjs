@@ -37,6 +37,9 @@ for (const el of ["commits", "contributors"]) {
 			}
 		});
 		timeline.add(localTimeline);
+
+		// Set commits to 0
+		line.querySelector(".number").innerText = "0";
 	}
 }
 

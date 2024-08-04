@@ -45,6 +45,10 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 <link rel="stylesheet" href="/assets/css/releases/4.3.css" />
 <script type="module" src="/assets/js/releases/4.3.mjs"></script>
 
+<noscript>
+	<link rel="stylesheet" href="/assets/css/releases/4.3.nostyle.css" />
+</noscript>
+
 <div class="release-header">
 	<div class="release-header-content">
 		<!-- Important to separate `.release-header-content` from `.container`. -->
@@ -77,7 +81,7 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 							data-value="{{version_value}}" data-max="{{version_max}}">
 							<span class="version">{{version_number}}</span>
 							<div class="bar"></div>
-							<span class="number">0</span>{% if forloop.first %}&nbsp;<span class="text">commits</span>{%
+							<span class="number"><noscript>{{version_value}}</noscript></span>{% if forloop.first %}&nbsp;<span class="text">commits</span>{%
 							endif %}
 						</div>
 						{% endfor %}
@@ -94,7 +98,7 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 							data-value="{{version_value}}" data-max="{{version_max}}">
 							<span class="version">{{version_number}}</span>
 							<div class="bar"></div>
-							<span class="number">0</span>{% if forloop.first %}&nbsp;<span
+							<span class="number"><noscript>{{version_value}}</noscript></span>{% if forloop.first %}&nbsp;<span
 								class="text">contributors</span>{%
 							endif %}
 						</div>
