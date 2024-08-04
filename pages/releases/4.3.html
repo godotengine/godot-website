@@ -1394,18 +1394,20 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										definitely be interesting to you.
 									</p>
 									<p>
-										This new feature allows you to split a large area into source geometry chunks
-										and bake chunk navigation meshes. You'll be then able to load those chunks
-										on-demand, saving up computing resources.
+										Both <code>NavigationPolygon</code> (2D) and <code>NavigationMesh</code> (3D)
+										resources received new properties to define baking bounds, as well as border size
+										offsets. Combined, the two new properties can be used to bake navigation mesh chunks
+										with perfectly aligned edges that fit the neighbor chunks.
 									</p>
 									<p>
-										These chunks will have border edges aligned so they can be merged efficiently by
-										the navigation map.
+										Aligned edges allow efficient processing of any runtime changes of the navigation
+										map. Beforehand, helpers were needed to process edges at high cost and it didn't
+										scale for large game worlds.
 									</p>
 								</div>
 								<div class="c-link"
 									data-contributors="smix8"
-									data-read-more="https://github.com/godotengine/godot/pull/87961">
+									data-read-more="https://docs.godotengine.org/en/latest/tutorials/navigation/navigation_using_navigationmeshes.html#baking-navigation-mesh-chunks-for-large-worlds">
 								</div>
 							</div>
 						</div>
@@ -1437,16 +1439,18 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										two new options to affect navigation mesh baking.
 									</p>
 									<p>
-										With these options, you can either affect the generated navigation mesh, or
-										carve into it directly, as if you were using a stencil.
+										Obstacles now discard other source geometry inside their vertices defined shape.
+										They can be either baked with agent radius offset similar to other geometry,
+										or act more like a stencil and carve the shape into the navigation mesh.
 									</p>
 									<p>
-										This is especially useful for 3D navigation mesh baking as it can help
-										discarding internal navigation meshes that appears in geometry.
+										In 3D, obstacles baked this way can be used to remove unwanted navigation
+										meshes inside other geometry, like inside walls or roofs.
 									</p>
 								</div>
 								<div class="c-link"
-									data-contributors="smix8">
+								     data-contributors="smix8"
+								     data-read-more="https://github.com/godotengine/godot/pull/89034">
 								</div>
 							</div>
 						</div>
@@ -1464,17 +1468,22 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								</h4>
 								<div class="c-content">
 									<p>
-										With the new "Simplify Path" option on navigation agent nodes, it is now
-										possible to remove non-critical path points.
+										With the new path simplification option on <code>NavigationAgent</code> nodes,
+										it is now possible to remove less critical path points.
 									</p>
 									<p>
 										This is useful to resolve some issues that comes with agent movement in large
 										areas. It also helps agents that use navigation points to steer as it leaves
 										only the critical path points as targets.
 									</p>
+									<p>
+										The algorithm is also exposed from the <code>NavigationServer</code> where it
+										can be used with any generic <code>Vector2</code>/<code>Vector3</code> array.
+									</p>
 								</div>
 								<div class="c-link"
-									data-contributors="smix8">
+								     data-contributors="smix8"
+								     data-read-more="https://github.com/godotengine/godot/pull/90434">
 								</div>
 							</div>
 						</div>
