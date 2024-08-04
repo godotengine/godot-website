@@ -303,6 +303,11 @@ $donate-robot-size: 500px;
 					text-decoration: none;
 					text-decoration-color: black;
 
+					@include is-dark() {
+						color: white;
+						text-decoration-color: white;
+					}
+
 					&:hover {
 						text-decoration: underline;
 					}
@@ -902,6 +907,11 @@ $donate-robot-size: 500px;
 								background-color: transparent;
 								border: 0;
 
+								color: black;
+								@include is-dark() {
+									color: white;
+								}
+
 								&:hover {
 									cursor: pointer;
 								}
@@ -932,6 +942,11 @@ $donate-robot-size: 500px;
 								// Remove browser default positionning of the popover,
 								// as it defaults to center of the screen.
 								inset: unset;
+
+								a {
+									color: var(--color-highlight);
+									text-decoration-color: var(--color-highlight);
+								}
 							}
 						}
 					}
