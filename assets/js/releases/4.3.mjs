@@ -132,7 +132,7 @@ for (const cLink of cLinks) {
 		const cLinkA = cLink.appendChild(document.createElement("a"));
 		cLinkA.href = cLink.dataset.readMore;
 		cLinkA.classList.add("c-link-a");
-		cLinkA.textContent = "Read more +";
+		cLinkA.textContent = "Read more";
 		cLinkA.target = "_blank";
 	}
 
