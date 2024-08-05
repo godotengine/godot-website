@@ -9,7 +9,7 @@ image_caption_description: "A game by Whiskeybarrel Studios"
 date: 2024-08-01 16:00:00
 ---
 
-We entered the [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) stage in the Godot 4.3 development cycle a week ago with [4.3 RC 1](/article/release-candidate-godot-4-3-rc-2), which means that all features are in place, the most critical regressions have been tackled, and we're confident that it's now ready for general use in the vast majority of cases.
+We entered the [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate) stage in the Godot 4.3 development cycle a week ago with [4.3 RC 1](/article/release-candidate-godot-4-3-rc-1), which means that all features are in place, the most critical regressions have been tackled, and we're confident that it's now ready for general use in the vast majority of cases.
 
 A lot of users have been testing the RC 1 snapshot, reporting issues, many of which could be fixed. In the meantime, we've kept working on a few known bugs which we were still hoping to resolve for 4.3 - and by now most have been fixed!
 
