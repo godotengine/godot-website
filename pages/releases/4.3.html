@@ -1642,8 +1642,25 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									<span class="replace-me"></span>
 								</div>
 								<div class="c-content">
-									<p class="replace-me"></p>
+									<p>
+										<code>RenderingDevice</code>, the part of the engine that powers <em>Forward+</em> and
+										<em>Mobile</em> renderers, got improved by the introduction of a directed acyclic graph.
+									</p>
+									<p>
+										As newer GPU APIs (Vulkan, D3D12, and Metal) let developers more direct access to graphic
+										cards, it is necessary to tell them when and how to render passes. The acyclic graph permits
+										the engine to reorder and optimize, in the background, the drawing calls and reduce greatly
+										the time it takes to do so.
+									</p>
+									<p>
+										With this improvement, and without needing to do anything on your part, your GPU particles
+										got massive improvements in terms of performance. And if you're using post-processing in
+										your scenes, you could see some framerate improvements, from around 5% to 15%
+									</p>
 								</div>
+								<div class="c-link"
+									data-contributors="DarioSamo,RandomShaper,reduz"
+									data-read-more="https://godotengine.org/article/rendering-acyclic-graph/"></div>
 							</div>
 						</div>
 					</div>
