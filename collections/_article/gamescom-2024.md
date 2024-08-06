@@ -35,7 +35,7 @@ Because our capacities are limited, we kindly ask you to sign up in advance. Lik
 ## Friday Onsite
 
 
-As trade visitors, we tend to avoid the busy weekend. You might spot the crew playtesting some games in the indie area all Friday long, but to ensure you cannot miss us, we promise to be **at the [IndieArenaBooth](https://indiearenabooth.de/gamescom2024)** at **13:00 local time** for a casual Godot gathering. We might even have a shiny sticker for you if you ask nicely.
+As trade visitors, we tend to avoid the busy weekend. You might spot the crew playtesting some games in the indie area all Friday long, but to ensure you cannot miss us, we promise to be **at the [IndieArenaBooth](https://indiearenabooth.de/gamescom2024/games)** at **13:00 local time** for a casual Godot gathering. We might even have a shiny sticker for you if you ask nicely.
 
 Help us know how many people to expect by **signing up** here: [https://lu.ma/9nt5c8dc](https://lu.ma/9nt5c8dc)
 
