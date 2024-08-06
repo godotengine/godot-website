@@ -1503,3 +1503,11 @@ section.sponsors .grid {
 .sponsor-empty:hover {
   background-color: #8484841c;
 }
+
+.article-body hr {
+  height: 1px;
+  background: var(--table-divider-color);
+  width: 100%;
+  border: none;
+  margin: 35px 0;
+}
