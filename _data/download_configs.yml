@@ -10,10 +10,8 @@ defaults:
       macos.universal: macos.universal.zip
       windows.64: win64.exe.zip
       windows.32: win32.exe.zip
+      windows.arm64: windows_arm64.exe.zip
       web: web_editor.zip
-    extras:
-      aar_library: template_release.aar
-
     mono:
       templates: mono_export_templates.tpz
       editor:
@@ -24,6 +22,9 @@ defaults:
         macos.universal: mono_macos.universal.zip
         windows.64: mono_win64.zip
         windows.32: mono_win32.zip
+        windows.arm64: mono_windows_arm64.zip
+    extras:
+      aar_library: template_release.aar
 
   3:
     templates: export_templates.tpz
@@ -107,9 +108,6 @@ overrides:
         windows.64: win64.exe.zip
         windows.32: win32.exe.zip
         web: web_editor.zip
-      extras:
-        aar_library: template_release.aar
-
       mono:
         templates: mono_export_templates.tpz
         editor:
@@ -118,3 +116,35 @@ overrides:
           macos.universal: mono_macos.universal.zip
           windows.64: mono_win64.zip
           windows.32: mono_win32.zip
+      extras:
+        aar_library: template_release.aar
+
+  # Godot 4.3 RC 1 introduced Windows ARM builds.
+  - version: 4
+    range:
+      - "4.2-beta5"
+      - "4.3-beta3"
+    config:
+      templates: export_templates.tpz
+      editor:
+        android.apk: android_editor.apk
+        linux.64: linux.x86_64.zip
+        linux.32: linux.x86_32.zip
+        linux.arm64: linux.arm64.zip
+        linux.arm32: linux.arm32.zip
+        macos.universal: macos.universal.zip
+        windows.64: win64.exe.zip
+        windows.32: win32.exe.zip
+        web: web_editor.zip
+      mono:
+        templates: mono_export_templates.tpz
+        editor:
+          linux.64: mono_linux_x86_64.zip
+          linux.32: mono_linux_x86_32.zip
+          linux.arm64: mono_linux_arm64.zip
+          linux.arm32: mono_linux_arm32.zip
+          macos.universal: mono_macos.universal.zip
+          windows.64: mono_win64.zip
+          windows.32: mono_win32.zip
+      extras:
+        aar_library: template_release.aar
