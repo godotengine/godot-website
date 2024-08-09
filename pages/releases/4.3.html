@@ -1,0 +1,2018 @@
+---
+permalink: /releases/4.3/index.html
+title: "Godot Engine 4.3"
+description: "Godot Engine 4.3"
+layout: release
+header_text: "Godot Engine 4.3"
+
+todo_for_authors_list: >
+  1. Go to https://godotengine.github.io/godot-interactive-changelog/#4.3
+  2. Click on _N contributors_
+  3. Execute this script in the console:
+  ```javascript
+  await (async function () {
+    const nextFrame = () => {
+      return new Promise((resolve, _) => {
+        requestAnimationFrame(() => resolve());
+      });
+    };
+    const authors = [];
+    const changesList = document.querySelector("entry-component").shadowRoot.querySelector("gr-changes-list").shadowRoot;
+    for (const author of changesList.querySelectorAll("gr-author-item")) {
+      const shadowRoot = author.shadowRoot;
+      const showMore = shadowRoot.querySelector(".item-changes-more");
+      if (showMore != null) {
+        showMore.click();
+        await nextFrame();
+      }
+
+      const commits = Array.from(shadowRoot.querySelectorAll(".item-changes-list"))[0].querySelectorAll("li");
+      const prs = Array.from(shadowRoot.querySelectorAll(".item-changes-list"))[1].querySelectorAll("li");
+
+       authors.push({
+        handle: shadowRoot.querySelector(".item-title-name").textContent,
+        commits: commits.length,
+        prs: prs.length
+      });
+    }
+    return authors.toSorted((a, b) => a.handle.localeCompare(b.handle, "en", { ignorePunctuation: true })).map((author) => `${author.handle},${author.commits},${author.prs}`).join("|");
+  })().catch((err) => console.error(err));
+  ```
+
+authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,3,3|4d49,3,3|aaronfranke,55,52|aaronp64,20,20|AbelToy,1,1|abitrolly,1,1|acmorrow,1,1|AdamLearns,1,1|adamscott,36,36|addmix,2,2|AdriaandeJongh,3,3|AdSkipper1337,1,1|AeioMuch,6,6|aitorciki,3,3|ajreckof,28,28|akien-mga,153,122|akx,3,3|AlekseyKapustyanenko,1,1|alesliehughes,10,10|alessandrofama,4,4|Alex2782,10,10|AlexanderFarkas,1,1|AlexanderPruss,1,1|alexbilledeaux,1,1|AlexeyBond,1,1|Alex-Mayo,1,1|AlexOtsuka,3,3|allenwp,5,4|alula,4,4|alvinhochun,5,5|anniryynanen,8,8|Anutrix,1,1|anvilfolk,1,1|apples,1,1|aqfranco,1,1|ArceusMaxis,1,0|Arnklit,5,5|Arthas92t,2,2|ashish0kumar,2,2|AThousandShips,169,167|AttackButton,1,1|autoit4you,1,1|avilches,2,2|aXu-AP,8,8|ayanchavand,2,2|AyOhEe,1,1|azuloo,1,1|baptr,2,2|basicer,4,4|BastiaanOlij,48,48|beicause,1,1|beiller,1,1|berarma,1,1|berrybus,1,1|bikemurt,1,1|Bitlytic,1,1|bitsawer,2,2|bitwise-aiden,3,3|blackbird806,1,1|BleedingXiko,1,1|BlueberryGecko,1,1|BlueCube3310,30,29|BMagnu,1,1|Bn-Fang,1,1|BNTFryingPan,1,1|BoThompson,1,1|bpseudopod,1,1|bqqbarbhg,10,7|brandtware,1,1|brennennen,3,3|BrinerLovo,1,1|brno32,8,8|Bromeon,2,2|BruceLiCong,1,1|bruvzg,239,239|bs-mwoerner,5,5|BZ1234567890,1,1|Calinou,109,110|capnm,10,11|CardboardCarl,1,1|cariad,1,1|Cass-dev-web,3,3|Cerno-b,1,1|Chaosus,40,40|chocola-mint,2,2|chrisl8,2,2|ChristopheClaustre,3,3|Chronos-W,1,1|Chubercik,19,19|ckaiser,13,13|clayjohn,67,67|clubby789,1,1|CookieBadger,14,14|cooperra,1,1|cosformula,1,1|cosparks,2,2|CrayolaEater,2,2|CrazyRoka,2,1|dalexeev,68,68|DaltonSW,1,1|DanielSnd,1,1|DarioSamo,22,22|DarkiStar,1,1|DarkMessiah,4,4|darksylinc,1,1|daustria,1,2|davthedev,3,3|Daylily-Zeleen,6,6|DaZang,1,1|dcaoc03,1,1|decacis,1,1|DeeJayLSP,6,6|Delsin-Yu,1,1|demolke,2,2|DennisManaa,1,1|detomon,1,1|devloglogan,7,7|DevPoodle,5,5|Dheatly23,1,1|ditiem,1,1|ditiem-games,0,1|divshekhar,1,0|dmarierStingray,1,1|dmipeck,1,1|DmitriySalnikov,2,2|dopitz,1,1|dsnopek,57,58|DSteve595,1,1|dustdfg,2,2|EAinsley,1,1|ecmjohnson,3,3|EddieBreeg,2,2|EelisOtsamo,1,1|EIREXE,2,2|eldidou,1,1|elementbound,1,1|emanvidmaker,2,2|emklasson,2,2|emmanuel-ferdman,1,1|emre0altan,3,3|emrekultursay,1,1|EmrysMyrddin,1,1|enetheru,2,2|Enhex,1,1|Eoin-ONeill-Yokai,2,2|ericrallen,1,1|ershn,2,2|EterDelta,1,1|eugene87222,1,1|Faless,28,25|Faolan-Rad,1,1|FaycalElOuariachi,2,2|fbcosentino,1,1|fdstevex,1,1|feiyue-z,1,1|fire,12,12|fkeyzuwu,1,1|Flavelius,1,1|flooxo,1,1|Flynsarmy,2,2|Frefreak,1,1|Frozenfire92,2,2|Fulanko,1,1|Gaktan,2,2|Gamepro5,2,2|garrettgu10,1,1|Garteal,1,1|garychia,1,1|Gatada,1,1|gavenerickson,1,1|Gearhartlove,1,1|Geometror,14,14|ghost,5,5|Giganzo,1,1|Giwayume,1,1|GNSS-Stylist,1,1|Goldenlion5648,1,1|golfinq,2,2|GrahameGW,1,1|GrammAcc,1,1|GreenCrowDev,1,1|gregdebonis,1,1|griffinkh,2,2|groud,28,28|Grublady,1,1|gshadows,1,1|Gurvan,1,1|hakro,6,6|halotroop2288,1,1|Haydoggo,1,1|hccloud,1,1|HexagonNico,2,2|Hilderin,27,27|Hobitus,0,1|HolonProduction,31,29|HolySkyMin,2,2|huisedenanhai,1,1|HybridEidolon,1,1|ibrahn,1,1|idbrii,1,1|iiMidknightii,1,1|Illauriel,1,1|iltenahmet,1,1|ilyabelow,1,1|Invertex,1,1|invino4,1,1|Jabberdrake,1,1|JacobMillner,1,1|jamie-pate,3,3|JaviARodriguez,1,1|jcostello,1,1|jeronimo-schreyer,1,1|JezerM,1,1|jhlothamer,1,1|Jiali-Qiu,1,1|jitspoe,2,2|J-N-Witch,1,1|joaoh82,1,1|johnsonbaugh,2,1|joined72,2,2|Jordyfel,7,7|Joseph-DiGiovanni,1,1|jsjtxietian,88,88|jtakakura,1,1|Jummit,2,2|jwinarske,1,1|k0T0z,1,1|KANAjetzt,1,1|KernRat,1,1|kevmorg,1,1|KeyboardDanni,2,2|Khasehemwy,2,2|Kiisu-Master,1,1|killzebug,1,1|Kimau,2,2|kitbdev,40,39|kkoang,1,1|kleonc,22,22|KoBeWi,191,191|Konstantin-Kretov,1,1|KoTeYkA23,1,1|Koyper,3,3|krazy-j,1,1|krdluzni,1,1|Krigu,2,2|krysperz2,1,1|kuruk-mm,1,1|kus04e4ek,3,3|lalitshankarchowdhury,1,1|lander-vr,2,2|Lasuch69,1,1|Lateasusual,3,3|lawnjelly,13,13|LeoBelda,1,1|LeonardoDemartino,2,2|LeulMulugeta,1,1|libklein,2,2|LimestaX,1,1|LinuxUserGD,2,2|Listwon,3,3|lmyers421,1,1|luevano,4,4|LunaCapra,1,1|LunaticInAHat,1,1|lvella,1,1|lyuma,27,26|m4gr3d,43,40|m4rr5,3,3|Madalaski,1,1|magian1127,3,3|maiself,1,1|MajorMcDoom,10,10|Makosai,1,1|Malcolmnixon,17,16|MannyFluss,1,1|ManpreetXSingh,1,1|Maran23,8,8|marcinn,2,2|marcospb19,2,2|MarcusElg,1,1|markdibarry,10,10|markusstephanides,1,1|mart3323,1,1|Maski0,1,1|mateuseap,2,2|matheusmdx,4,4|matthew1006,1,1|maunvz,1,1|melquiadess,6,6|Meorge,2,2|Mequam,1,1|mertkasar,1,1|MewPurPur,12,12|mhilbrunner,4,4|MichaelMacha,1,1|Mickeon,86,86|mickeyordog,1,1|mieldepoche,1,1|Miguel0312,1,1|migueldeicaza,1,1|mihe,21,21|MikeSchulze,0,1|MikeXYZW,1,1|milkiq,1,1|minionprocyk,1,1|Mitten-O,1,1|miv391,10,10|MJacred,3,3|Mknsri,1,1|mnemoli,2,2|moonpirates,1,1|MovaUA,1,1|mrbbbaixue,2,2|mrcdk,1,1|mrjustaguy,1,1|MTareqAzim,1,1|Muller-Castro,4,4|mutantbob,0,1|mxaddict,2,2|nagidev,1,1|Naputt1,1,1|Naros,6,6|nathanfranke,1,1|Nazarwadim,3,3|nblackburn,1,1|nfrmtk,1,1|nickyfoo,2,2|nikitalita,6,6|nklbdev,2,2|nlupugla,2,2|Nodragem,0,1|nongvantinh,8,8|not-my-username,1,1|nvlled,1,1|Occalepsus,1,1|ogapo,2,2|omar-polo,1,1|oshman99,2,2|OverloadedOrama,3,3|OwenAEdwards,1,1|oxi-dev0,1,1|pancelor,1,1|passivestar,33,33|Patchcoat,1,1|patwork,9,9|paulloz,23,23|paulsinnett,1,1|Pepito468,1,1|permelin,9,9|pgh1686,1,1|pirey0,1,1|pkdawson,1,1|pkowal1982,2,2|poga,1,1|pohy,2,2|poiati,1,1|ppphp,1,1|preslavnpetrov,1,1|programneer,3,3|puchik,4,3|Pylgos,1,1|QbieShay,4,4|Quimisagi,1,1|quirkylemon,2,2|qwofford,1,1|RadiantUwU,6,6|radzo73,1,1|RafaelRain18,1,1|rakkarage,2,2|ramadm,1,1|ramdor,1,1|RandomShaper,102,81|rarysson,1,1|Ratamacue9112,1,1|raulsntos,31,31|rburing,19,19|reach-satori,3,3|RedMser,16,14|reduz,8,8|Repiteo,68,65|RevoluPowered,1,1|rhofour,1,1|Rindbee,18,18|Riteo,27,26|robert-wallis,1,1|Robocraft999,1,1|RobProductions,3,3|rodrigodias4,1,1|romlok,2,2|rothej,1,1|RoyBerube,1,1|rsburke4,3,3|rsubtil,7,7|RTTEXFile,1,1|Rubonnek,8,8|Rudolph-B,3,3|rune-scape,19,19|rvenson,1,1|Ryan-000,1,1|ryevdokimov,28,28|sabslikesobs,1,1|sambler,1,1|samsface,1,1|sandygk,1,1|SaNeOr,1,1|Santoss1809,1,1|SaracenOne,10,9|sassanh,1,1|Sauermann,20,20|scgm0,2,2|Scony,5,5|scotmcp,1,1|scriptsengineer,0,1|semensanyok,4,4|sepTN,5,5|sertonix,1,1|sgilissen,1,1|shak2,1,1|shana,10,10|ShirenY,1,1|Sievaxx,1,1|SirLich,1,1|skyace65,3,3|SlashScreen,1,1|SlugFiller,2,2|smix8,52,52|smnast,1,1|SomeRanDev,1,1|Split82,1,1|StagnationPoint,1,1|stephen-berry,1,1|stevenjt,1,1|stoofin,1,1|stuartcarnie,4,4|sullyscience,1,1|sunfl0w,1,1|synalice,1,1|tactical-fluke,1,1|tamask,1,1|tbreese3,1,1|TCROC,4,4|tdaven,1,1|theashtronaut,1,1|TheKiromen,2,2|themancalledjakob,1,1|TheOrioli,1,1|theraot,2,2|theromis,1,1|TheSecondReal0,1,1|the-sink,1,1|TheSofox,17,17|thiagola92,1,1|thimenesup,2,2|thmasn,2,2|thygrrr,1,1|time-killer-games,1,1|timothyqiu,74,74|tishin,1,1|TitanNano,4,4|titus125,1,1|TML233,1,1|toastedbreadandomelette,1,1|TokageItLab,68,67|TontonSancho,1,1|touilleMan,1,1|Trinovantes,1,1|ttencate,1,1|twobitadder,2,2|ueshita,1,1|van800,4,4|VedatGunel,1,1|vgezer,2,2|VictorKostinOfficial,1,1|viksl,3,3|Vilcrow,1,1|vittorioromeo,2,2|vnen,19,18|voylin,1,1|warquys,1,1|warriormaster12,6,6|WhalesState,6,6|wheatear-dev,2,2|Wiltof,1,1|wlsnmrk,1,1|wojtekpil,1,1|Wyxaldir,0,1|xiongyaohua,5,5|yahkr,1,1|ydeltastar,3,3|YeldhamDev,36,36|yorickdewid,1,1|YuriSizov,34,25|zaevi,8,8|ze2j,2,2|ZeferinoI,1,1|ZerxZ,2,2|zeux,6,3|zinefer,1,1|Zorvalt,1,1|ztc0611,2,2|Zylann,1,1"
+---
+<link rel="stylesheet" href="/assets/css/codicon.css" />
+<link rel="stylesheet" href="/assets/css/releases/4.3.css" />
+<script type="module" src="/assets/js/releases/4.3.mjs"></script>
+
+<noscript>
+	<link rel="stylesheet" href="/assets/css/releases/4.3.noscript.css" />
+</noscript>
+
+<div class="release-header">
+	<div class="release-header-content">
+		<!-- Important to separate `.release-header-content` from `.container`. -->
+		<div class="container">
+			<h1 class="header-main-title"><span class="header-main-title-text">Godot 4.3 RELEASE</span></h1>
+			<div class="header-content flex eqsize responsive align-center" style="gap: 20px;">
+				<div class="header-text">
+					<h2 class="header-title">
+						A shared effort
+					</h2>
+					<p>
+						With over 3,400 commits authored by over 500 contributors, the latest Godot Engine release
+						comes packed full of new features and improvements.
+					</p>
+					<p>
+						Looking back at the amount of blood, sweat, and tears that went into this one, we can almost guarantee that there's
+						something for everyone in here.
+					</p>
+					<p>
+						Discover new node types, quality of life changes, and of course many bug fixes in the release overview below.
+					</p>
+				</div>
+				<div class="header-numbers">
+					<div class="header-numbers-entry header-numbers-commits">
+						{% assign version_max = 3447 %}
+						{% assign versions = "4.3,3447|4.2,1876|4.1,1464" | split: "|" %}
+
+						{% for version in versions %}
+						{% assign version_data = version | split: "," %}
+						{% assign version_number = version_data[0] %}
+						{% assign version_value = version_data[1] %}
+						<div class="header-numbers-line {% unless forloop.first %}inactive{% endunless %}"
+							data-value="{{version_value}}" data-max="{{version_max}}">
+							<span class="version">{{version_number}}</span>
+							<div class="bar"></div>
+							<span class="number"><noscript>{{version_value}}</noscript></span>{% if forloop.first %}&nbsp;<span class="text">commits</span>{%
+							endif %}
+						</div>
+						{% endfor %}
+					</div>
+					<div class="header-numbers-entry header-numbers-contributors">
+						{% assign version_max = 516 %}
+						{% assign versions = "4.3,516|4.2,359|4.1,311" | split: "|" %}
+
+						{% for version in versions %}
+						{% assign version_data = version | split: "," %}
+						{% assign version_number = version_data[0] %}
+						{% assign version_value = version_data[1] %}
+						<div class="header-numbers-line {% unless forloop.first %}inactive{% endunless %}"
+							data-value="{{version_value}}" data-max="{{version_max}}">
+							<span class="version">{{version_number}}</span>
+							<div class="bar"></div>
+							<span class="number"><noscript>{{version_value}}</noscript></span>{% if forloop.first %}&nbsp;<span
+								class="text">contributors</span>{%
+							endif %}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="release-content">
+	<div id="download" class="section section-download">
+		<div class="container">
+			<div class="release-cards">
+				<div id="download-download" class="release-card media-bottom span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-blockquote">
+									Download and experience Godot 4.3 for yourself
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							{% assign release_version = "4.3" | make_release_version: "stable" %}
+							{% assign download_primary = release_version | get_download_primary: false %}
+							<div class="release-platform-container">
+								{% for primary in download_primary %}
+									{% if primary[0] == "linux" or primary[0] == "macos" or primary[0] == "windows" or primary[0] == "android" %}
+										<div class="release-platform release-platform-{{primary[0]}}">
+											{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
+											<div class="release-button release-button-standard">
+												<a href="{{ release_version | make_download: primary[1], false, "github_builds" }}" class="btn download-button">
+													<div class="download-title">
+														<img src="/assets/images/platforms/{{primary[0]}}.svg" draggable="false" />
+														Godot Engine
+													</div>
+													<div class="download-hint">
+														{{ release_version.name }}
+													</div>
+												</a>
+												<p class="main-download-details">
+													<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}{% if primary.mono %}C# support · {% endif %}</strong>{{ release_version.release_date }}
+												</p>
+											</div>
+											{% assign mono_download = release_version | make_download: primary[1], true, "github_builds" %}
+											{% if mono_download != "#" %}
+												<div class="release-button release-button-mono">
+													<a href="{{ mono_download }}" class="btn download-button download-net-button">
+														<div class="download-title">
+															<img src="/assets/images/platforms/{{primary[0]}}.svg" draggable="false" />
+															Godot Engine - .NET
+														</div>
+														<div class="download-hint">
+															{{ release_version.name }}
+														</div>
+													</a>
+													<p class="main-download-details">
+														<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}C# support · </strong>{{ release_version.release_date }}
+													</p>
+												</div>
+											{% endif %}
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #download -->
+
+	<div id="foundation" class="section section-foundation">
+		<div class="container">
+			<div class="release-cards">
+				<div id="foundation-donate" class="release-card media-right span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-blockquote">
+									Made possible by <span class="highlight">your donations</span>
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<a class="release-card-button release-card-button-fund"
+								href="https://fund.godotengine.org/">
+								<span class="release-card-button-text">
+									Join the Development Fund ➔
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="robot-1 godot-icon-godot" aria-disabled="true"></div>
+					<div class="robot-2 godot-icon-godot" aria-disabled="true"></div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #foundation -->
+
+	<div id="highlights" class="section section-highlights">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#highlights">Highlights</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards two-columns">
+				<div id="highlights-interactive-music" class="release-card media-left span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#highlights-interactive-music">Interactive music</a>
+								</h4>
+								<div class="c-blockquote">
+									Set the scene with new <span class="highlight">audio resources</span>
+								</div>
+								<div class="c-content">
+									<p>
+										The new resources <code>AudioStreamInteractive</code>,
+										<code>AudioStreamPlaylist</code>, and <code>AudioStreamSynchronized</code>, you
+										enable you to create complex, layered music and transitions.
+									</p>
+									<p>
+										This allows you to build your own dynamic music system, which reacts to the context of your game!
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="reduz"
+									data-read-more="https://github.com/godotengine/godot/pull/64488">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image" alt="Image of the interactive stream settings."
+								src="/storage/releases/4.3/images/interactive-stream.webp" srcset="
+								/storage/releases/4.3/images/interactive-stream-2x.webp 2x
+							" draggable="false" />
+						</div>
+					</div>
+				</div> <!-- #highlights-interactive-music-support -->
+
+				<div id="highlights-2d-physics-interpolation" class="release-card media-bottom">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#highlights-2d-physics-interpolation">2D physics interpolation</a>
+								</h4>
+								<div class="c-blockquote">
+									Now that we call <span class="highlight">smooth</span>
+								</div>
+								<div class="c-content">
+									<p>
+										Physics interpolation is the key to decouple physics ticks and display
+										frame rates. What it does is to create dynamically frames inbetween the last
+										physics position and the current one.
+									</p>
+
+									<p>
+										While it is not a silver bullet, these additional frames can greatly improve support
+										for high-refresh displays. Or, it can enable you to display smooth animations with a
+										low physics tick rate.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="rburing,lawnjelly"
+									data-read-more="https://github.com/godotengine/godot/pull/88424">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/physics-interpolation-2d.webp">
+								<source src="/storage/releases/4.3/video/physics-interpolation-2d.webm"
+									type="video/webm" />
+							</video>
+						</div>
+					</div>
+				</div> <!-- #highlights-2d-physics-interpolation -->
+
+				<div id="highlights-visual-shader" class="release-card media-top">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#highlights-visual-shader">Visual shader editor</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Complete overhaul</span>
+								</div>
+								<div class="c-content">
+									<p>
+										The visual shader editor has been revamped from the ground up.
+									</p>
+									<p>
+										Selected nodes are now highlighted! You can also now add reroute nodes to space
+										out content and you can insert frames in order to organize neatly your shader.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="Geometror"
+									data-read-more="https://github.com/godotengine/godot/pulls?q=85017+86158+88014+90534">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/visual-shader-overhaul.webp">
+								<source src="/storage/releases/4.3/video/visual-shader-overhaul.webm"
+									type="video/webm" />
+							</video>
+						</div>
+					</div>
+				</div> <!-- #highlights-visual-shader -->
+
+				<div id="highlights-single-threaded-web-export" class="release-card media-top">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#highlights-interactive-music-support">Single-threaded Web export</a>
+								</h4>
+								<div class="c-blockquote">
+									Back to our <span class="highlight">single-threaded</span> roots
+								</div>
+								<div class="c-content">
+									<p>
+										We orignially aimed for the stars, but browsers are still down to Earth.
+									</p>
+									<p>
+										By bringing back single-threaded export for the Web platform,
+										we got more compatible across browsers and we eliminated
+										the need of complicated server-side configurations.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="adamscott"
+									data-read-more="https://godotengine.org/article/progress-report-web-export-in-4-3/#single-threaded-web-export">
+								</div>
+							</div>
+
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image position-center-right"
+								alt="Image of the web export settings."
+								src="/storage/releases/4.3/images/web-export-single-threaded.webp" srcset="
+								/storage/releases/4.3/images/web-export-single-threaded-2x.webp 2x
+							" draggable="false" />
+						</div>
+					</div>
+				</div> <!-- #highlights-single-threaded-web-export -->
+
+				<div id="highlights-new-tilemaplayer-node" class="release-card media-bottom inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#highlights-new-tilemaplayer-node">
+										<code>TileMapLayer</code>
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									A <span class="highlight">new node</span> has moved into town
+								</div>
+								<div class="c-content">
+									<p>
+										Gone is the era of handling multiple layers of <code>TileMap</code>.
+									</p>
+									<p>
+										With Godot 4.3, we deprecated the <code>TileMap</code> node in order and we
+										created the <code>TileMapLayer</code> node. By doing this, we reduced clutter in
+										the inspector, we simplified the API, and layers are now in line with common
+										Godot design patterns.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="groud">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/tilemaplayer.webp">
+								<source src="/storage/releases/4.3/video/tilemaplayer.webm" type="video/webm" />
+							</video>
+						</div>
+					</div>
+				</div> <!-- #highlights-new-tilemaplayer-node -->
+			</div>
+		</div>
+	</div> <!-- #highlights -->
+
+	<div id="2d" class="section section-2d">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#2d">2D</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards two-columns">
+				<div id="2d-parallax2d-node" class="release-card media-top">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#2d-parallax2d-node">
+										<code>Parallax2D</code>
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Add depth</span> to your backgrounds
+								</div>
+								<div class="c-content">
+									<p>
+										The new <code>Parallax2D</code> node aims to greatly simplify the use of
+										parallax in your games. You don't have to deal with <code>CanvasLayer</code>
+										anymore.
+									</p>
+									<p>
+										We even included a nifty converter!
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="markdibarry"
+									data-read-more="https://godotengine.org/article/parallax-progress-report/">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/parallax-2d.webp">
+								<source src="/storage/releases/4.3/video/parallax-2d.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #2d-parallax2d-node -->
+
+				<div id="2d-pixel-art-stability" class="release-card media-bottom">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#2d-pixel-art-stability">Pixel art stability</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Stabilize</span> those pixels
+								</div>
+								<div class="c-content">
+									<p>
+										In the last release, some users reported issues despite checking
+										"Snap 2D Transforms to Pixel" in the project settings.
+									</p>
+									<p>
+										In 4.3, new algorithms are used to stabilize pixel positions
+										which should ensure your character staying grounded.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="adamscott,KeyboardDanni,markdibarry,alvinhochun"
+									data-read-more="https://github.com/godotengine/godot/pull/87297">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/pixel-snapping-2d.webp">
+								<source src="/storage/releases/4.3/video/pixel-snapping-2d.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #2d-pixel-art-stability -->
+			</div>
+		</div>
+	</div> <!-- #2d -->
+
+	<div id="animation" class="section section-animation">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#animation">Animation</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="animation-skeletonmodifier3d-node" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#animation-skeletonmodifier3d-node">
+										<code>SkeletonModifier3D</code>
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									The <code>AnimationMixer</code> grew new <span class="highlight">bones</span>
+								</div>
+								<div class="c-content">
+									<p>
+										This new abstract node was made to animate <code>Skeleton3D</code> outside of
+										<code>AnimationMixer</code> and is now the base class for several existing
+										nodes.
+									</p>
+									<p>
+										You can't use it directly, but you can create your own custom
+										<code>SkeletonModifier3D</code> node easily using a simple script.
+									</p>
+									<p>
+										You'll be able to implement the new
+										<code class="highlight">
+											<span class="function">_process_modification</span><span class="symbol">()</span>
+										</code>
+										function to modify the bones how ever you like!
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="TokageItLab"
+									data-read-more="https://github.com/godotengine/godot/pull/87888">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #animation-skeletonmodifier3d-node -->
+
+				<div id="animation-skeletal-animation-import-options" class="release-card media-top span-2-at-3-col">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#animation-skeletal-animation-import-options">
+										Skeletal animation import options
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Retargeting</span> was never easier
+								</div>
+								<div class="c-content">
+									<p>
+										We implemented new import options in order to assist you in retargeting
+										animation sets, especially those using the <code>.fbx</code> format.
+									</p>
+									<p>
+										From importing a rest pose as <em>RESET</em> animation to a retargeting option
+										to use a template for silhouette, we've made sure that you'll be able to fully
+										use all the skeletons in your closet.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="lyuma,fire,TokageItLab"
+									data-read-more="/article/dev-snapshot-godot-4-3-beta-1/#skeletal-animation-import-options">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image position-top-center"
+								src="/storage/releases/4.3/images/skeleton-import-settings.webp" srcset="
+									/storage/releases/4.3/images/skeleton-import-settings-2x.webp 2x
+								" alt="Image of the new skeleton import settings." draggable="false">
+						</div>
+					</div>
+				</div> <!-- #animation-skeletal-animation-import-options -->
+
+				<div id="animation-keyframe-manipulation" class="release-card inverted media-left span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#animation-keyframe-manipulation">
+										Keyframe manipulation
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									A quality of life upgrade
+								</div>
+								<div class="c-content">
+									<p>You can finally select, copy, paste, and duplicate keyframes.</p>
+									<p>What a relief!</p>
+								</div>
+								<div class="c-link"
+									data-contributors="CookieBadger"
+									data-read-more="https://github.com/godotengine/godot/pull/87250">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/keyframes.webp">
+								<source src="/storage/releases/4.3/video/keyframes.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #animation-keyframe-manipulation -->
+			</div>
+		</div>
+	</div> <!-- #animation -->
+
+	<div id="dotnet" class="section section-dotnet">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#dotnet">C#</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="dotnet-rebuild-notification" class="release-card span-2 media-right">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#dotnet-rebuild-notification">Re-build notification</a>
+								</h4>
+								<div class="c-blockquote">
+									A useful <span class="highlight">reminder</span>
+								</div>
+								<div class="c-content">
+									<p>
+										A new warning has been added when .cs files have been modified after the last
+										build.
+									</p>
+									<p>
+										You'll now never miss when a re-build is needed.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="paulloz"
+									data-read-more="https://github.com/godotengine/godot/pull/85869">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image position-top-left"
+								src="/storage/releases/4.3/images/dotnet-rebuild-notification.webp"
+								alt="Image of the new re-build notification." draggable="false">
+						</div>
+					</div>
+				</div> <!-- #dotnet-rebuild-notification -->
+
+				<div id="dotnet-more-robust-reload-process" class="release-card span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#dotnet-more-robust-reload-process">More robust reload process</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">More robust</span> than ever
+								</div>
+								<div class="c-content">
+									<p>
+										One of the most annoying issues that C# users have with Godot have been fixed.
+									</p>
+									<p>
+										When a C# project is re-built, scripts need to be reloaded. Unfortunately, a
+										lot of things can go wrong during this process. It usually left users in an
+										invalid state with no other option but to re-open the Godot editor entirely.
+									</p>
+									<p>
+										Now, the process has been improved and users will be able to appreciate the new
+										robustness of the reloads.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="paulloz"
+									data-read-more="https://github.com/godotengine/godot/pull/83217">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #dotnet-more-robust-reload-process -->
+
+				<div id="dotnet-better-support-generic-csharp-classes" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#dotnet-better-support-generic-csharp-classes">
+										<span>Better support of generic C# classes</span>
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										This feature has been requested for a long time, and it's finally here.
+									</p>
+									<p>
+										While the implementation has some limitations, you'll be finally able to use
+										(more comfortably) generic C# classes in your code.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="raulsntos"
+									data-read-more="https://github.com/godotengine/godot/pull/88371">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #dotnet-better-support-generic-csharp-classes -->
+
+				<div id="dotnet-preventing-export-without-csharp-code" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#dotnet-preventing-export-without-csharp-code">
+										<span>Preventing export without C# code</span>
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										The .sln and .csproj files are required for Godot to build C# projects.
+										When they were missing, the export was successful but it was missing the C#
+										code. This meant that you'd end up running into runtime errors.
+									</p>
+									<p>
+										From now on, the exporter will inform you about that fact and stop exporting.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="nongvantinh"
+									data-read-more="https://github.com/godotengine/godot/pull/87829">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #dotnet-preventing-export-without-csharp-code -->
+			</div>
+		</div>
+	</div> <!-- #dotnet -->
+
+	<div id="display" class="section section-display">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#display">Display</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards two-columns">
+				<div id="display-d3d12-driver" class="release-card inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#display-d3d12-driver">Direct3D 12 rendering driver</a>
+								</h4>
+								<div class="c-blockquote">
+									We tamed the <span class="highlight">green machine</span>
+								</div>
+								<div class="c-content">
+									<p>
+										This new driver enables new Microsoft platforms to be supported,
+										such as Microsoft Store (UWP) and Windows on ARM.
+									</p>
+									<p>It even enables custom ports to a certain green platform!</p>
+								</div>
+								<div class="c-link"
+									data-contributors="RandomShaper"
+									data-read-more="https://github.com/godotengine/godot/pull/70315">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #display-d3d12-driver -->
+
+				<div id="display-wayland-support" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#display-wayland-support">Wayland support for Linux/*BSD</a>
+								</h4>
+								<div class="c-blockquote">
+									Leading the <span class="highlight">Way</span>
+								</div>
+								<div class="c-content">
+									<p>
+										Wayland is a newer, more modern display server that can be used on Linux and
+										some BSD-derived OSes.
+									</p>
+									<p>
+										Built-in Wayland support give us access to a much cleaner API as well
+										as more advanced features for window management.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="Riteo"
+									data-read-more="https://github.com/godotengine/godot/pull/86180">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #display-wayland-support -->
+			</div>
+		</div>
+	</div> <!-- #display -->
+
+	<div id="documentation" class="section section-documentation">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#documentation">Documentation</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="documentation-syntax-highlighting-copy-button-editor" class="release-card media-right span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#documentation-syntax-highlighting-copy-button-editor">
+										Syntax highlighting and copy button for code blocks in the editor
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Highlight</span> it,<br>
+									<span class="highlight">Copy</span> it
+								</div>
+								<div class="c-content">
+									<p>
+										Syntax is now highlighted in the editor documentation and in the editor
+										tooltips.
+									</p>
+									<p>
+										Like on the <a href="https://docs.godotengine.org/">Godot Docs</a>, you'll be
+										now able to click on designated copy button to copy the contents of the code
+										block.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="dalexeev"
+									data-read-more="https://github.com/godotengine/godot/pull/89263">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image"
+								src="/storage/releases/4.3/images/syntax-highlight-copy-button.webp" srcset="
+									/storage/releases/4.3/images/syntax-highlight-copy-button-2x.webp 2x
+								" alt="Image of the documentation syntax highlight and copy button features." draggable="false" />
+						</div>
+					</div>
+				</div> <!-- #documentation-syntax-highlighting-copy-button-editor -->
+
+				<div id="documentation-generate-gdextension-docs-with-doctool" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#documentation-generate-gdextension-docs-with-doctool">
+										Generate GDExtension documentation with <code>--doctool</code>
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me">
+									</p>
+								</div>
+								<div class="c-link">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #documentation-generate-gdextension-docs-with-doctool -->
+
+				<div id="documentation-documentation-pages-can-now-link-to-themselves" class="release-card media-top">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#documentation-documentation-pages-can-now-link-to-themselves">
+										Documentation pages of the editor can now link to themselves
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Now, documentation pages of the editor can link to internal properties.
+										So if the documentation talks about
+										<code class="highlight"><span class="function">_ready()</span></code>,
+										you'll be able to quickly reach for more info about it.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="rburing"
+									data-read-more="https://github.com/godotengine/godot/pull/91537">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image position-top-left"
+								src="/storage/releases/4.3/images/documentation-internal-links.webp" srcset="
+									/storage/releases/4.3/images/documentation-internal-links-2x.webp 2x
+								" alt="Image of the engine documentation with internal links." draggable="false" />
+						</div>
+					</div>
+				</div> <!-- #documentation-documentation-pages-can-now-link-to-themselves -->
+
+				<div id="documentation-support-for-deprecated-and-experimental-features" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#documentation-support-for-deprecated-and-experimental-features">
+										Support for deprecated and experimental features
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me">
+									</p>
+								</div>
+								<div class="c-link">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #documentation-support-for-deprecated-and-experimental-features -->
+			</div>
+		</div>
+	</div> <!-- #documentation -->
+
+	<div id="editor" class="section section-editor">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#editor">Editor</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="editor-fbx-native-support" class="release-card inverted media-top span-2-at-3-col">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#editor-fbx-native-support">FBX native support</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Industry standard</span> implemented
+								</div>
+								<div class="c-content">
+									<p>
+										Godot now handles <code>.fbx</code> files natively,
+										so you can import 3D models and animations
+										from an industry-standard file format more easily.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="fire,bqqbarbhg,akien-mga"
+									data-read-more="https://github.com/godotengine/godot/pull/81746">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image position-bottom-center"
+								src="/storage/releases/4.3/images/fbx-import.webp" srcset="
+									/storage/releases/4.3/images/fbx-import-2x.webp 2x
+								" alt="Image of the FBX importer." draggable="false" />
+						</div>
+					</div>
+				</div> <!-- #editor-fbx-native-support -->
+
+				<div id="editor-filesystem-dock-bottom" class="release-card media-bottom">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#editor-filesystem-dock-bottom">
+										FileSystem dock can be moved to the bottom section
+										of the editor
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Want more space to see your files? You can now move the FileSystem dock to
+										the bottom section of the editor.
+									</p>
+									<p>
+										Especially practical if you're used to find your files there.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="reduz"
+									data-read-more="https://github.com/godotengine/godot/pull/86765">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/filesystem-editor-bottom.webp">
+								<source src="/storage/releases/4.3/video/filesystem-editor-bottom.webm"
+									type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #editor-filesystem-dock-bottom -->
+
+				<div id="editor-improved-layout-and-ux-project-manager" class="release-card media-right span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#editor-filesystem-dock-bottom">
+										Improved layout and UX of the project manager
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										The design of the project manager has been revamped.
+									</p>
+									<p>
+										We added access to some editor settings from the project manager itself,
+										so you'll be able to adjust not only the language, but also the theme,
+										the display scale and the network mode.
+									</p>
+									<p>
+										We even added also an update checker, to inform you if a new version of Godot has arrived.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="YuriSizov"
+									data-read-more="https://github.com/godotengine/godot/pull/87443">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image" src="/storage/releases/4.3/images/improved-ui-ux-project-manager.webp"
+								srcset="
+									/storage/releases/4.3/images/improved-ui-ux-project-manager-2x.webp 2x
+								" alt="Image of the export GDScript binary tokenization settings." draggable="false" />
+						</div>
+					</div>
+				</div> <!-- #editor-improved-layout-and-ux-project-manager -->
+			</div>
+		</div>
+	</div> <!-- #editor -->
+
+	<div id="gdextension" class="section section-gdextension">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#gdextension">GDExtension</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="gdextension-runtime-class-registration" class="release-card span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdextension-runtime-class-registration">
+										Runtime class registration
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Extend</span> your game
+								</div>
+								<div class="c-content">
+									<p>
+										This feature will surely please game developers that use GDExtension to code
+										game logic.
+									</p>
+									<p>
+										Usually, when registering classes via GDExtension, you extend the engine just
+										like if you were using a
+										<code class="highlight"><span class="gdscript-annotation">@tool</span></code>
+										script in GDScript.
+									</p>
+									<p>
+										With this new update, you'll be able to register runtime classes that don't run
+										in the editor. You'll be able to write code without needing to check everytime
+										<code>is_editor_hint()</code>.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="dsnopek"
+									data-read-more="https://github.com/godotengine/godot/pull/82554">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdextension-runtime-class-registration -->
+
+				<div id="gdextension-virtual-method-registration" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdextension-virtual-method-registration">
+										Virtual method registration
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Ever wanted to register your own virtual methods like
+										<code>_ready()</code>, <code>_process()</code>, or <code>_draw()</code> for
+										users to use in their code?
+									</p>
+									<p>
+										Now, scripts can implement virtual functions registered by GDExtension classes.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="dsnopek"
+									data-read-more="https://github.com/godotengine/godot/pull/87758">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdextension-virtual-method-registration -->
+			</div>
+		</div>
+	</div> <!-- #gdextension -->
+
+	<div id="gdscript" class="section section-gdscript">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#gdscript">GDScript</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="gdscript-binary-tokenization-on-export" class="release-card inverted media-top span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdscript-binary-tokenization-on-export">Binary tokenization on
+										export</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Lean</span> and mean
+								</div>
+								<div class="c-content">
+									<p>
+										With this new export option, you can reduce the size of the exported
+										GDScript code. But it also offers a way to obfuscate your source code.
+									</p>
+									<p>
+										While it doesn't protect your work from being decompiled, it at least hides
+										your source code from being available publicly.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="vnen"
+									data-read-more="https://github.com/godotengine/godot/pull/87634">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<img class="release-card-image" src="/storage/releases/4.3/images/export-binary-tokens.webp"
+								srcset="
+									/storage/releases/4.3/images/export-binary-tokens-2x.webp 2x
+								" alt="Image of the export GDScript binary tokenization settings." draggable="false" />
+						</div>
+					</div>
+				</div> <!-- #gdscript-binary-tokenization-on-export -->
+
+				<div id="gdscript-is-not-operator" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdscript-is-not-operator">
+										<code>
+											<span class="keyword">is not</span>
+										</code>
+										operator
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										<code class="highlight">
+											<span class="controlflow">if</span>
+											<span class="keyword">not</span>
+											my_node
+											<span class="keyword">is</span>
+											<span class="basetype">Node3D</span><span class="symbol">:</span>
+										</code>
+									</p>
+									<p>
+										It isn't much readable, huh? This line tests if
+										<code class="highlight">my_node</code>
+										is <em>not</em> of type
+										<code class="highlight">
+											<span class="basetype">Node3D</span>
+										</code>.
+									</p>
+									<p>
+										You can now type this instead, which is really closer syntax wise from what
+										we actually say and mean:<br>
+										<code class="highlight">
+											<span class="controlflow">if</span>
+											my_node
+											<span class="keyword">is not</span>
+											<span class="basetype">Node3D</span><span class="symbol">:</span>
+										</code>
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="dalexeev"
+									data-read-more="https://github.com/godotengine/godot/pull/87939">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdscript-is-not-operator -->
+
+				<div id="gdscript-built-in-methods-callable" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdscript-built-in-methods-callable">
+										Built-in methods and utility functions usable as
+										<code>
+											<span class="basetype">Callable</span>
+										</code>
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										You have an array and you want to print each element without creating
+										a for loop?
+									</p>
+									<p>
+										By making built-in methods and utility functions usable as
+										<code>Callable</code> makes it possible to call variadic functions such as
+										<code class="highlight">
+											<span class="gdscript-globalfunction">print</span><span class="symbol">()</span>
+										</code>
+										with
+										<code class="highlight">
+											<span class="basetype">Callable</span><span class="symbol">.</span><span class="function">callv</span><span class="symbol">()</span>
+										</code>
+										easily, without the need of boilerplate code.
+									</p>
+									<p>
+										You can now call this:<br>
+										<code class="highlight">
+											print<span class="symbol">.</span><span class="function">callv</span><span class="symbol">(</span>my_array<span class="symbol">)</span>
+										</code>
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="dalexeev"
+									data-read-more="https://github.com/godotengine/godot/pull/82264">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdscript-built-in-methods-callable -->
+
+				<div id="gdscript-export-storage-property-hint" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdscript-export-storage-property-hint">
+										<code>
+											<span class="gdscript-annotation">@export_storage</span>
+										</code>
+										property hint
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Addon developers, you can now use
+										<code class="highlight">
+											<span class="gdscript-annotation">@export_storage</span>
+										</code>
+										to store hidden
+										values in a scene.
+									</p>
+									<p>
+										Useful if you need to store data on a node or a resource that need to be
+										accessed by the addon, but that isn't meant to be edited by the user in the
+										inspector.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="dalexeev"
+									data-read-more="https://github.com/godotengine/godot/pull/82122">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdscript-export-storage-property-hint -->
+
+				<div id="gdscript-export-custom-property-hint" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdscript-export-custom-property-hint">
+										<code>
+											<span class="gdscript-annotation">@export_custom</span>
+										</code>
+										property hint
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										You need specific types of export? We got you covered.
+									</p>
+									<p>
+										You can now use
+										<code class="highlight">
+											<span class="gdscript-annotation">@export_custom</span>
+										</code>
+										to export a value suited to your needs.
+									</p>
+									<p>
+										It allows you to set a custom hint, hint string, and usage flags for the
+										exported property. Great for highly specific exports and for addon developers.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="vnen"
+									data-read-more="https://github.com/godotengine/godot/pull/72912">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdscript-export-custom-property-hint -->
+
+				<div id="gdscript-autocompletion-fixes" class="release-card span-2-at-3-col">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdscript-autocompletion-fixes">
+										GDScript autocompletion fixes
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									Do you need a <span class="highlight">suggestion</span>?
+								</div>
+								<div class="c-content">
+									<p>
+										We improved the autocompletion of several components, including enums,
+										subscripts, and
+										<code
+											class="highlight"><span class="function">get_node</span><span class="symbol">()</span></code>.
+									</p>
+									<p>
+										As it is a difficult feature to detect regressions, we even started doing some
+										automated testing to specifically test autocompletion results.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="HolonProduction"
+									data-read-more="https://github.com/godotengine/godot/pull/86973">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdscript-autocompletion-fixes -->
+
+				<div id="gdscript-circular-dependencies-between-scenes-and-scripts" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#gdscript-circular-dependencies-between-scenes-and-scripts">
+										GDScript circular dependencies between scenes and scripts
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										A lot of issues with circular dependencies between scenes and scripts have
+										been fixed!
+									</p>
+									<p>
+										Not only this makes you less worry about cyclic dependencies, but it makes
+										scenes more resilient and stable.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="RandomShaper,rune-scape"
+									data-read-more="https://github.com/godotengine/godot/pull/93346">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #gdscript-circular-dependencies-between-scenes-and-scripts -->
+			</div>
+		</div>
+	</div> <!-- #gdscript -->
+
+	<div id="navigation" class="section section-navigation">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#navigation">Navigation</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="navigation-mesh-chunks-baking" class="release-card media-left span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#navigation-mesh-chunks-baking">Navigation mesh chunks baking</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Split</span> and <span class="highlight">bake</span>!
+								</div>
+								<div class="c-content">
+									<p>
+										If you're working on a project with large game worlds, this update will
+										definitely be interesting to you.
+									</p>
+									<p>
+										Both <code>NavigationPolygon</code> (2D) and <code>NavigationMesh</code> (3D)
+										resources received new properties to define baking bounds, as well as border size
+										offsets. Combined, the two new properties can be used to bake navigation mesh chunks
+										with perfectly aligned edges that fit the neighbor chunks.
+									</p>
+									<p>
+										Aligned edges allow efficient processing of any runtime changes of the navigation
+										map. Beforehand, helpers were needed to process edges at high cost and it didn't
+										scale for large game worlds.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="smix8"
+									data-read-more="https://docs.godotengine.org/en/latest/tutorials/navigation/navigation_using_navigationmeshes.html#baking-navigation-mesh-chunks-for-large-worlds">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/navigation-chunks.webp">
+								<source src="/storage/releases/4.3/video/navigation-chunks.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #navigation-mesh-chunks-baking -->
+
+				<div id="navigation-navigation-obstacle-option-to-affect-navigation-mesh-baking"
+					class="release-card span-2-at-3-col">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#navigation-navigation-obstacle-option-to-affect-navigation-mesh-baking">
+										<span>Navigation obstacle option to affect baking</span>
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									Our new <span class="highlight">cookie cutter</span>
+								</div>
+								<div class="c-content">
+									<p>
+										<code>NavigationObstacle2D</code> and <code>NavigationObstacle3D</code> now have
+										two new options to affect navigation mesh baking.
+									</p>
+									<p>
+										Obstacles now discard other source geometry inside their vertices defined shape.
+										They can be either baked with agent radius offset similar to other geometry,
+										or act more like a stencil and carve the shape into the navigation mesh.
+									</p>
+									<p>
+										In 3D, obstacles baked this way can be used to remove unwanted navigation
+										meshes inside other geometry, like inside walls or roofs.
+									</p>
+								</div>
+								<div class="c-link"
+								     data-contributors="smix8"
+								     data-read-more="https://github.com/godotengine/godot/pull/89034">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #navigation-navigation-obstacle-option-to-affect-navigation-mesh-baking -->
+
+				<div id="navigation-navigation-path-simplification" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#navigation-navigation-path-simplification">
+										<span>Navigation path simplification</span>
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										With the new path simplification option on <code>NavigationAgent</code> nodes,
+										it is now possible to remove less critical path points.
+									</p>
+									<p>
+										This is useful to resolve some issues that comes with agent movement in large
+										areas. It also helps agents that use navigation points to steer as it leaves
+										only the critical path points as targets.
+									</p>
+									<p>
+										The algorithm is also exposed from the <code>NavigationServer</code> where it
+										can be used with any generic <code>Vector2</code>/<code>Vector3</code> array.
+									</p>
+								</div>
+								<div class="c-link"
+								     data-contributors="smix8"
+								     data-read-more="https://github.com/godotengine/godot/pull/90434">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #navigation-navigation-path-simplification -->
+			</div>
+		</div>
+	</div> <!-- #navigation -->
+
+	<div id="rendering" class="section section-rendering">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#rendering">Rendering</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="rendering-premultiplied-alpha-blending" class="release-card media-top inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#rendering-premultiplied-alpha-blending">
+										Premultiplied alpha blending in 3D shaders
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Premultiplied alpha is a new blend mode for 3D materials. This enables you to
+										create better looking flames and fireworks, as the same particle now can have
+										the properties of additive blending (for the flame) and mix blending (for the
+										smoke) blending.
+									</p>
+									<p>
+										See in the video how the left barrel flames (which uses additive blending)
+										are missing the smoke that is visible in the other barrel flames which use
+										premultiplied alpha blending.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="QbieShay,jitspoe,clayjohn"
+									data-read-more="https://github.com/godotengine/godot/pull/85609">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/premultiplied-alpha.webp">
+								<source src="/storage/releases/4.3/video/premultiplied-alpha.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #rendering-premultiplied-alpha-blending -->
+
+				<div id="rendering-compositor-effects-api" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#rendering-compositor-effects-api">Compositor effects API</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Compositor effects let users hook into the built in
+										Godot rendering pipeline to add custom rendering code.
+									</p>
+									<p>
+										They can be used for everything from advanced post processing
+										effects to completely custom rendering!
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="BastiaanOlij"
+									data-read-more="https://github.com/godotengine/godot/pull/80214">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #rendering-compositor-effects-api -->
+
+				<div id="rendering-renderingdevice-context-management-refactor" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#rendering-renderingdevice-context-management-refactor">
+										RenderingDevice context management refactor
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										We refactored the management of device contexts in the RenderingDevice
+										to fix many hard to track down bugs.
+									</p>
+									<p>
+										As a bonus, this lets us create new RenderingDevices whenever we want
+										which paved the way for baking lightmaps in the Compatibility rendering
+										backend!
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="DarioSamo"
+									data-read-more="https://github.com/godotengine/godot/pull/87340"
+								></div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #rendering-renderingdevice-context-management-refactor -->
+
+				<div id="rendering-depth-based-fog" class="release-card media-left span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#rendering-depth-based-fog">Depth-based fog</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Hide</span> and seek
+								</div>
+								<div class="c-content">
+									<p>
+										With depth-based fog, you can now decide when the fog begins and when it is
+										fully opaque.
+									</p>
+									<p>
+										Compared to exponential (and realistic) fog mode, it may seem less realistic,
+										but you now have the tools to create an atmosphere worthy of old-school horror
+										games.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="scriptsengineer"
+									data-read-more="https://github.com/godotengine/godot/pull/84792">
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<video class="release-card-video" autoplay loop muted
+								poster="/storage/releases/4.3/images/depth-fog.webp">
+								<source src="/storage/releases/4.3/video/depth-fog.webm" type="video/webm">
+							</video>
+						</div>
+					</div>
+				</div> <!-- #rendering-depth-based-fog -->
+
+				<div id="rendering-compatibility-rendering-backend-features" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#rendering-compatibility-rendering-backend-features">
+										Compatibility rendering backend features
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										The Compatibility rendering backend received a lot of attention this release cycle.
+										We now consider it feature complete as it has all the features we intended it to have.
+									</p>
+									<p>
+										New in this release are MSAA, resolution scaling, Glow, ReflectionProbes, LightmapGI,
+										Adjustments, and Color Correction.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="BastiaanOlij,dsnopek,clayjohn"
+									data-read-more="https://github.com/godotengine/godot/pulls?q=is%3Apr+is%3Amerged+91176+88056+87360+85120+83976"
+								></div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #rendering-compatibility-rendering-backend-features -->
+
+				<div id="rendering-acyclic-rendering-graph" class="release-card span-3 inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#rendering-acyclic-rendering-graph">
+										Acyclic rendering graph
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="higlight">More for less</span>
+								</div>
+								<div class="c-content">
+									<p>
+										<code>RenderingDevice</code>, the part of the engine that powers the <em>Forward+</em>
+										and <em>Mobile</em> renderering backends, was improved by the introduction of a directed
+										acyclic render graph.
+									</p>
+									<p>
+										As newer GPU APIs (Vulkan, D3D12, and Metal) give developers more direct access to graphic
+										cards, the burden for making sure everything works correctly falls on the user. The acyclic
+										graph permits the engine to reorder and optimize commands in order to minimize the API
+										overhead of the graphics API while ensuring that everything happens in the right order.
+									</p>
+									<p>
+										Without making any changes to your 3D scene, you should expect to see a frame rate improvement
+										of 5% to 15% (and more if you heavily use GPUParticles)!
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="DarioSamo,RandomShaper,reduz"
+									data-read-more="https://godotengine.org/article/rendering-acyclic-graph/"></div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #rendering-acyclic-rendering-graph -->
+			</div>
+		</div>
+	</div> <!-- #rendering -->
+
+	<div id="web" class="section section-web">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#web">Web</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="web-web-audio-samples" class="release-card span-2-at-3-col">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#web-web-audio-samples">Web Audio samples</a>
+								</h4>
+								<div class="c-blockquote">
+									Enhanced<span class="highlight">audio quality</span>
+								</div>
+								<div class="c-content">
+									<p>
+										With great power comes great responsibility when it comes to the Web.
+									</p>
+
+									<p>
+										As there was audio issues when running games single-threaded, we updated the
+										engine to support audio samples. This enabled us to leverage the Web Audio
+										API
+										in order to deliver seamlessly low-latency and high-quality audio.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="adamscott"
+									data-read-more="https://godotengine.org/article/progress-report-web-export-in-4-3/#sample-playback-to-the-rescue">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #web-web-audio-samples -->
+
+				<div id="web-splash-screen-showing-up" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#web-splash-screen-showing-up">Splash screen is now showing up</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Not only the Web progress bar has been reworked and optimized, but the
+										splash
+										screen is now showing up before the game loads!
+									</p>
+									<p>
+										Don't worry: if no boot splash screen has been set, the classic Godot boot
+										splash will be seen, as it is currently displayed on other platforms.
+									</p>
+								</div>
+								<div class="c-link"
+									data-contributors="patwork"
+									data-read-more="https://github.com/godotengine/godot/pull/91128">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #web-splash-screen-showing-up -->
+			</div>
+		</div>
+	</div> <!-- #web -->
+
+	<div id="xr" class="section section-xr">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#xr">XR</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="xr-composition-layers-2d-quality" class="release-card span-2">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-composition-layers-2d-quality">
+										Composition layers to allow 2D viewports to be displayed at much higher
+										quality
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-composition-layers-2d-quality -->
+
+				<div id="xr-fixed-tracking-issues-native-mobile-interface" class="release-card inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-fixed-tracking-issues-native-mobile-interface">
+										Fixed tracking issues in the native mobile interface
+									</a>
+								</h4>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-fixed-tracking-issues-native-mobile-interface -->
+
+				<div id="xr-standardized-support-tracking" class="release-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-standardized-support-tracking">
+										Standardized and enhanced support for hand/finger tracking, body tracking,
+										and face tracking
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-standardized-support-tracking -->
+
+				<div id="xr-meta-extensions" class="release-card span-2 inverted">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-meta-extensions">
+										Support for various Meta extensions such as hand models, render models, and
+										scene discovery
+									</a>
+								</h4>
+								<div class="c-blockquote replace-me">
+								</div>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-meta-extensions -->
+
+				<div id="xr-improvements" class="release-card">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#xr-improvements">
+										Improvements to foveated rendering/vrs, passthrough, and various other
+										supporting systems
+									</a>
+								</h4>
+								<div class="c-content">
+									<p class="replace-me"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #xr-improvements -->
+			</div>
+		</div>
+	</div> <!-- #xr -->
+
+	<div id="special-thanks" class="section section-special-thanks">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#special-thanks">Special thanks</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="special-thanks-release-authors" class="release-card span-3 media-bottom">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#special-thanks-release-authors">
+										Release authors
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Team work</span> makes the dream work
+								</div>
+								<div class="c-content">
+									<p>
+										Here are all the contributors that saw their PRs merged, ordered alphabetically,
+										and sized accordingly to their number of merged PRs.
+									</p>
+									<p>
+										Also special thanks to our teams (communications, documentation, godot-cpp,
+										and translations to name a few) and to everyone that contributed in any form
+										to this release.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<div class="release-card-authors">
+								{% assign authors = page.authors_list | split: "|" %}
+								{% for author in authors %}
+								{% assign author_data = author | split: "," %}
+								{% assign author_handle = author_data[0] %}
+								{% assign author_commits = author_data[1] %}
+								{% assign author_prs = author_data[2] %}
+								<div class="release-card-author" data-handle="{{author_handle}}"
+									data-commits="{{author_commits}}" data-prs="{{author_prs}}">
+									<a href="https://github.com/godotengine/godot/pulls?q=author%3A{{author_handle}}+is%3Apr+milestone%3A4.3+is%3Aclosed+is%3Amerged+"
+										target="_blank">{{author_handle}}</a>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div> <!-- #special-thanks-release-authors -->
+
+				<div id="special-thanks-credits" class="release-card span-3 media-bottom">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#special-thanks-credits">
+										Release page credits
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Design by <a href="https://luiscarli.com/">Luis Carli</a>.
+									</p>
+									<p>
+										Integration, demo creation, footage capture, and video editing by <a href="https://adamscott.studio">Adam Scott</a>. Additional help by <a href="https://coppolaemilio.com/">Emilio Coppola</a>.
+									</p>
+									<p>
+										Shout-out to <a href="https://gdquest.com/">GDQuest</a> for their <a href="#outstanding-new-tilemaplayer-node"><code>TileSetLayer</code> footage</a>.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #special-thanks-credits -->
+			</div>
+		</div>
+	</div> <!-- #special-thanks -->
+</div>
