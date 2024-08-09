@@ -92,6 +92,12 @@ if (cardDownloadPlatformsElement != null) {
 	}
 }
 
+// Rename "Export templates and other downloads" to "More downloads"
+const downloadOther = document.querySelector(".card-download-other");
+if (downloadOther != null) {
+	downloadOther.textContent = "More downloads";
+}
+
 // Add relative weight based on author data
 const authors = Array.from(document.querySelectorAll("#special-thanks-release-authors .release-card-authors .release-card-author"));
 let max_prs = 0;
