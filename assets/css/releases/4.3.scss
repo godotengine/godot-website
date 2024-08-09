@@ -669,7 +669,7 @@ $donate-robot-size: 500px;
 
 						&:has(.c-title):has(.c-blockquote):has(.c-content) {
 							grid-template-areas:
-								"title contnt"
+								"quote title"
 								"quote contnt"
 								"quote link";
 							grid-template-columns:
@@ -681,7 +681,7 @@ $donate-robot-size: 500px;
 
 							&:not(:has(.c-link)) {
 								grid-template-areas:
-									"title contnt"
+									"quote title"
 									"quote contnt";
 								grid-template-rows:
 									min-content
@@ -690,8 +690,8 @@ $donate-robot-size: 500px;
 
 							@container release-card-content (width < #{$container-break}) {
 								grid-template-areas:
-									"title"
 									"quote"
+									"title"
 									"contnt"
 									"link";
 								grid-template-columns:
@@ -704,8 +704,8 @@ $donate-robot-size: 500px;
 
 								&:not(:has(.c-link)) {
 									grid-template-areas:
-										"title"
 										"quote"
+										"title"
 										"contnt";
 									grid-template-rows:
 										min-content
