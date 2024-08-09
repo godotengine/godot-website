@@ -77,18 +77,19 @@ switch (platformData.os) {
 		platformName = "linux";
 	} break;
 
+	case "android": {
+		platformName = "android";
+	} break;
+
 	case "windows":
 	default:
 		break;
 }
-const cardDownloadPlatformsElement = document.querySelector(".card-download-platforms");
-if (cardDownloadPlatformsElement != null) {
-	for (const child of Array.from(cardDownloadPlatformsElement.childNodes)) {
-		if (child instanceof HTMLElement) {
-			if (child.classList.contains(`platform-${platformName}`)) {
-				child.style.display = "flex";
-			}
-		}
+const releasePlatformContainer = document.querySelector(".release-platform-container");
+if (releasePlatformContainer != null) {
+	const releasePlatform = releasePlatformContainer.querySelector(`.release-platform-${platformName}`);
+	if (releasePlatform != null) {
+		releasePlatform.classList.add("active");
 	}
 }
 
