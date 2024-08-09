@@ -1687,19 +1687,19 @@ authors_list: "0x0ACB,7,7|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								</div>
 								<div class="c-content">
 									<p>
-										<code>RenderingDevice</code>, the part of the engine that powers <em>Forward+</em> and
-										<em>Mobile</em> renderers, got improved by the introduction of a directed acyclic graph.
+										<code>RenderingDevice</code>, the part of the engine that powers the <em>Forward+</em>
+										and <em>Mobile</em> renderering backends, was improved by the introduction of a directed
+										acyclic render graph.
 									</p>
 									<p>
-										As newer GPU APIs (Vulkan, D3D12, and Metal) let developers more direct access to graphic
-										cards, it is necessary to tell them when and how to render passes. The acyclic graph permits
-										the engine to reorder and optimize, in the background, the synchronisation calls needed and
-										reduce greatly the time it takes to do so.
+										As newer GPU APIs (Vulkan, D3D12, and Metal) give developers more direct access to graphic
+										cards, the burden for making sure everything works correctly falls on the user. The acyclic
+										graph permits the engine to reorder and optimize commands in order to minimize the API
+										overhead of the graphics API while ensuring that everything happens in the right order.
 									</p>
 									<p>
-										With this improvement, and without needing to do anything on your part, your GPU particles
-										got massive improvements in terms of performance. And if you're using post-processing in
-										your scenes, you could see some framerate improvements, from around 5% to 15%
+										Without making any changes to your 3D scene, you should expect to see a frame rate improvement
+										of 5% to 15% (and more if you heavily use GPUParticles)!
 									</p>
 								</div>
 								<div class="c-link"
