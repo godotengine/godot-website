@@ -168,7 +168,7 @@ $donate-robot-size: 500px;
 	.release-card-media {
 		.release-platform {
 			display: none;
-			margin: 0 auto 40px;
+			margin: 0 auto;
 
 			&.active {
 				display: flex;
@@ -226,6 +226,7 @@ $donate-robot-size: 500px;
 					blur(4px);
 				grid-template-columns: 270px 1fr;
 				max-width: 350px;
+				margin-top: 20px;
 			}
 		}
 	}
