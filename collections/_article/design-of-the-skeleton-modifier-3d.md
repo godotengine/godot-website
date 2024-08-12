@@ -214,7 +214,7 @@ You can see the pose is different depending on the signal.
 
 ### Download
 
-[skeleton-modifier-3d-demo-project.zip](/storage/blog/design-of-the-skeleton-modifier-3d/modified_poseskeleton-modifier-3d-demo-project.zip)
+[skeleton-modifier-3d-demo-project.zip](/storage/blog/design-of-the-skeleton-modifier-3d/skeleton-modifier-3d-demo-project.zip)
 
 # Do I always need to create a custom SkeletonModifier3D when modifying a Skeleton3D bone?
 
