@@ -4,7 +4,7 @@ excerpt: "We have reworked the skeleton bone update process to add SkeletonModif
 categories: ["progress-report"]
 author: Silc Renew
 image: /storage/blog/covers/design-of-the-skeleton-modifier-3d.webp
-date: 2024-06-01 00:00:00
+date: 2024-08-12 10:00:00
 ---
 
 <style>article .content img { background-color: initial; }</style>
