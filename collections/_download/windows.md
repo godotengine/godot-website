@@ -6,10 +6,10 @@ platform: Windows
 downloads:
   - platform:  "windows.64"
     featured: true
-    tags:
-      - 64 bit
 
   - platform:  "windows.32"
+
+  - platform:  "windows.arm64"
 
   - platform:  "windows.64"
     mono: true
@@ -17,6 +17,9 @@ downloads:
     featured_flavor: .NET
 
   - platform:  "windows.32"
+    mono: true
+
+  - platform:  "windows.arm64"
     mono: true
 
 redirect_from:
