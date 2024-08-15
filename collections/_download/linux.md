@@ -9,12 +9,22 @@ downloads:
 
   - platform: "linux.32"
 
+  - platform: "linux.arm64"
+
+  - platform: "linux.arm32"
+
   - platform: "linux.64"
     mono: true
     featured: true
     featured_flavor: .NET
 
   - platform: "linux.32"
+    mono: true
+
+  - platform: "linux.arm64"
+    mono: true
+
+  - platform: "linux.arm32"
     mono: true
 
 redirect_from:
