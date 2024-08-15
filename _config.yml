@@ -91,3 +91,8 @@ pagination:
   category: "posts"
   tag: ""
   locale: ""
+
+# .scss generation
+sass:
+  sass_dir: _sass
+  style: compressed

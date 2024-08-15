@@ -26,12 +26,12 @@
 				{% if primary[0] == "linux" or primary[0] == "macos" or primary[0] == "windows" %}
 					{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
 
-					<div class="download-platform">
+					<div class="download-platform platform-{{primary[0]}}">
 						<img width="24" height="24" src="/assets/images/platforms/{{ primary[0] | split: "_" | join: "-" }}.svg" title="{{ platform_info.title }}" alt="{{ platform_info.title }}" class="lightbox-ignore" />
 						{{ platform_info.title }}
 					</div>
 
-					<a href="{{ release_version | make_download: primary[1], false, "github_builds" }}" class="btn btn-download btn-download-primary">
+					<a href="{{ release_version | make_download: primary[1], false, "github_builds" }}" class="btn btn-download btn-download-primary platform-{{primary[0]}}">
 						<div class="download-title">
 							Standard
 						</div>
@@ -42,7 +42,7 @@
 						<div></div>
 					{% else %}
 						{% assign has_mono = true %}
-						<a href="{{ mono_download }}" class="btn btn-download btn-download-primary btn-download-primary--mono">
+						<a href="{{ mono_download }}" class="btn btn-download btn-download-primary btn-download-primary--mono platform-{{primary[0]}}">
 							<div class="download-title">
 								.NET
 							</div>
