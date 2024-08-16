@@ -27,7 +27,7 @@ redirect_from:
 
 content_note: |
   <p>
-    <strong>Note:</strong> The 32-bit .NET binaries do not run on 64-bit Windows systems at the time being. Make sure to export 64-bit .NET binaries for your 64-bit target platforms.
+    <strong>Note:</strong> The .NET binaries run only on Windows systems with the matching architecture, running under emulation is not supported at the time being. Make sure to export .NET binaries for all target platforms (x86_64, x86_32, and arm64).
   </p>
 
 content_instructions: |
