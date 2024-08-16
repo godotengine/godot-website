@@ -1,7 +1,7 @@
 - name: "4.3"
   flavor: "stable"
   release_date: "15 August 2024"
-  release_notes: "/releases/4.3/"
+  release_notes: "/article/godot-4-3-a-shared-effort/"
   featured: "4"
   releases:
     - name: "rc3"
