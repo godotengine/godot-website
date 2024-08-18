@@ -1,7 +1,10 @@
+---
+---
+
 :root {
   color-scheme: light dark;
 
-  --transparent-cover: rgb(51, 63, 103, 0.4);
+  --transparent-cover: rgba(51, 63, 103, 0.4);
   --transparent-cover-darker: rgba(51, 63, 103, 0.9);
 
   --base-color: #eff1f5;
@@ -30,8 +33,6 @@
   --link-underline-color: hsla(206, 58%, 50%, 0.3);
   --navbar-link-color: var(--dark-color);
   --navbar-link-current-color: var(--primary-color);
-  --footer-link-color: rgb(200, 210, 250);
-  --footer-link-underline-color: rgba(200, 210, 250, 0.3);
   --tab-active-color: var(--primary-color);
 
   --big-button-color: #478cbf;
@@ -49,8 +50,6 @@
   --card-footer-color: #eeeeee;
   --button-background-color: #ffffff;
   --button-card-background-color: #d7dee6;
-  --footer-color: rgb(175, 180, 220);
-  --footer-background-color: #414d69;
   --pagination-active-color: #284786;
   --placeholder-text-color: #7a87a2;
 
@@ -63,9 +62,9 @@
   --download-hero-color: hsla(0, 0%, 100%, 0.9);
   --download-main-details-color: #f1f1f1;
   --download-table-color: rgba(22, 22, 22, 0.08);
-  --platform-note-background-color: rgb(48 86 210 / 9%);
+  --platform-note-background-color: rgba(48, 86, 210, 0.9);
   --platform-code-background-color: #e5ebf1;
-  --download-mono-background-color: rgb(43 58 76 / 82%);
+  --download-mono-background-color: rgba(43, 58, 76, 0.82);
 
   --feature-heading-color: #2d76ad;
   --feature-note-color: #e53e3e;
@@ -89,7 +88,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --transparent-cover: rgb(51, 63, 103, 0.4);
+    --transparent-cover: rgba(51, 63, 103, 0.4);
     --transparent-cover-darker: rgba(51, 63, 103, 0.9);
 
     --base-color: #25282b;
@@ -118,8 +117,6 @@
     --link-underline-color: hsla(200, 60%, 70%, 0.3);
     --navbar-link-color: hsla(0, 0%, 100%, 0.9);
     --navbar-link-current-color: hsl(200, 100%, 80%);
-    --footer-link-color: hsla(0, 0%, 100%, 0.85);
-    --footer-link-underline-color: hsla(0, 0%, 100%, 0.25);
     --tab-active-color: white;
 
     --big-button-color: #478cbf;
@@ -137,8 +134,6 @@
     --card-footer-color: #505356;
     --button-background-color: #333639;
     --button-card-background-color: #55595e;
-    --footer-color: hsla(0, 0%, 100%, 0.625);
-    --footer-background-color: #333639;
     --pagination-active-color: #4080ff;
     --placeholder-text-color: #a6a6a6;
 
@@ -149,9 +144,9 @@
     --download-hero-color: hsla(0, 0%, 100%, 0.9);
     --download-main-details-color: #f1f1f1;
     --download-table-color: rgba(0, 0, 0, 0.2);
-    --platform-note-background-color: rgb(255 255 255 / 9%);
+    --platform-note-background-color: rgba(255, 255, 255, 0.9);
     --platform-code-background-color: #282b2e;
-    --download-mono-background-color: rgb(132 151 174 / 68%);
+    --download-mono-background-color: rgba(132, 151, 174, 0.68);
 
     --feature-heading-color: #57b3f8;
     --feature-note-color: #ef6767;
@@ -375,6 +370,7 @@ main {
   max-width: 800px;
   margin: auto;
   overflow: visible;
+  margin-bottom: 60px;
 }
 
 .container-text h2 {
@@ -577,52 +573,6 @@ ul li {
   margin-bottom: 16px;
 }
 
-footer {
-  background-color: var(--footer-background-color);
-  color: var(--footer-color);
-  font-size: 0.9em;
-  margin-top: 64px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-footer a {
-  color: var(--footer-link-color);
-  text-decoration-color: var(--footer-link-underline-color);
-}
-
-#copyright {
-  flex: 2;
-}
-#copyright > p:first-child {
-  margin-top: 0;
-}
-
-#sitemap {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-	gap: 24px;
-	margin-left: 16px;
-}
-#sitemap .sitemap-group {
-  float: left;
-  list-style: none;
-  margin: 0px;
-  overflow-wrap: break-word;
-  padding-left: 0px;
-}
-#sitemap .sitemap-group li {
-  line-height: 20px;
-  margin-bottom: 10px;
-}
-#sitemap .sitemap-group strong {
-  color: var(--footer-link-color);
-}
-#social {
-  flex: 1;
-  margin-left: 32px;
-}
-
 .pagination {
   margin: 2rem 0;
   justify-content: center;
@@ -793,7 +743,7 @@ p.small {
   color: hsla(0, 0%, 100%, 0.95);
 }
 .btn.btn-flat.btn-flat-frosted {
-  background-color: rgb(111 111 111 / 27%);
+  background-color: rgba(111, 111, 111, 0.27);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
@@ -1093,12 +1043,6 @@ pre > code {
 }
 
 @media (max-width: 1020px) {
-  footer {
-    text-align: center;
-  }
-  .footer-container {
-    flex-direction: column;
-  }
 
   #social {
     margin: auto;
@@ -1563,3 +1507,5 @@ section.sponsors .grid {
   border: none;
   margin: 35px 0;
 }
+
+@import 'footer';
