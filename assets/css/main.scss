@@ -1,9 +1,10 @@
-@import url("footer.css");
+---
+---
 
 :root {
   color-scheme: light dark;
 
-  --transparent-cover: rgb(51, 63, 103, 0.4);
+  --transparent-cover: rgba(51, 63, 103, 0.4);
   --transparent-cover-darker: rgba(51, 63, 103, 0.9);
 
   --base-color: #eff1f5;
@@ -61,9 +62,9 @@
   --download-hero-color: hsla(0, 0%, 100%, 0.9);
   --download-main-details-color: #f1f1f1;
   --download-table-color: rgba(22, 22, 22, 0.08);
-  --platform-note-background-color: rgb(48 86 210 / 9%);
+  --platform-note-background-color: rgba(48, 86, 210, 0.9);
   --platform-code-background-color: #e5ebf1;
-  --download-mono-background-color: rgb(43 58 76 / 82%);
+  --download-mono-background-color: rgba(43, 58, 76, 0.82);
 
   --feature-heading-color: #2d76ad;
   --feature-note-color: #e53e3e;
@@ -87,7 +88,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --transparent-cover: rgb(51, 63, 103, 0.4);
+    --transparent-cover: rgba(51, 63, 103, 0.4);
     --transparent-cover-darker: rgba(51, 63, 103, 0.9);
 
     --base-color: #25282b;
@@ -143,9 +144,9 @@
     --download-hero-color: hsla(0, 0%, 100%, 0.9);
     --download-main-details-color: #f1f1f1;
     --download-table-color: rgba(0, 0, 0, 0.2);
-    --platform-note-background-color: rgb(255 255 255 / 9%);
+    --platform-note-background-color: rgba(255, 255, 255, 0.9);
     --platform-code-background-color: #282b2e;
-    --download-mono-background-color: rgb(132 151 174 / 68%);
+    --download-mono-background-color: rgba(132, 151, 174, 0.68);
 
     --feature-heading-color: #57b3f8;
     --feature-note-color: #ef6767;
@@ -741,7 +742,7 @@ p.small {
   color: hsla(0, 0%, 100%, 0.95);
 }
 .btn.btn-flat.btn-flat-frosted {
-  background-color: rgb(111 111 111 / 27%);
+  background-color: rgba(111, 111, 111, 0.27);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
@@ -1505,3 +1506,5 @@ section.sponsors .grid {
   border: none;
   margin: 35px 0;
 }
+
+@import 'footer';
