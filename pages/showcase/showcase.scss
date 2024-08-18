@@ -76,6 +76,7 @@ h1 {
 	grid-template-columns: 1fr 200px;
 	grid-template-areas: "content aside";
 	gap: 20px;
+	margin-bottom: 60px;
 	@media (max-width: 800px) {
 		grid-template-columns: 1fr;
 		grid-template-areas: "aside"
