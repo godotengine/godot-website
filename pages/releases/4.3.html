@@ -364,7 +364,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									</p>
 									<p>
 										Two new node types have been added: a reroute node and a frame node.
-										Neither of them influence your shader code, rather than being useful to
+										While neither of them influence your shader code, they are useful to
 										organize your workspace.<br>
 										You can add a reroute node to any existing connection between nodes
 										and move it freely. A frame node is used to bundle related nodes visually.
@@ -664,12 +664,12 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								<div class="c-content">
 									<p>
 										If you're working on a project with large game worlds, you might want to consider
-										splitting your navigation meshes in more manageable chunks. This helps with memory
+										splitting your navigation meshes into more manageable chunks. This helps with memory
 										allocation and therefore performance.
 									</p>
 									<p>
 										While it was possible to manually split your meshes before, making sure that your
-										chunks align properly was non-trivial. This alignment is necessary to ensure efficient
+										chunks aligned properly was non-trivial. This alignment is necessary to ensure efficient
 										processing of runtime changes within the navigation map.
 									</p>
 									<p>
@@ -724,18 +724,18 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										<li>
 											<code class="highlight">carve_navigation_mesh</code> additionally makes the shape unaffected
 											by offsets of the baking. The obstacle now basically acts as a stencil and
-											cuts into the final navigation mesh surface. It still will be affected by
+											cuts into the final navigation mesh surface. It will still be affected by
 											further postprocessing.
 										</li>
 									</ol>
 									<p>
-										In practice, this means obstacles now discard other source geometry inside of them.
-										In 3D, this helps discard unwanted navigation meshes inside of objects like walls
+										In practice, this means obstacles now discard other source geometry inside them.
+										In 3D, this helps discard unwanted navigation meshes inside objects like walls
 										or roofs.
 									</p>
 									<p>
-										Shoutout to the game development streamers in our community, since they were the ones to
-										raise this issue first!
+										Shoutout to the game development streamers in our community, since they were the first to
+										raise this issue!
 									</p>
 								</div>
 								<div class="c-link"
@@ -849,7 +849,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								<div class="c-content">
 									<p>
 										To further personalize your editor layout, there is now an
-										in-built option to move your FileSystem docker to the bottom
+										in-built option to move your FileSystem dock to the bottom
 										of the screen.
 									</p>
 									<p>
@@ -1037,10 +1037,10 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										Premultiplied alpha is a new blend mode for 3D materials. This enables you to
 										create better looking flames and fireworks, as the same particle now can have
 										the properties of additive blending (for the flame) and mix blending (for the
-										smoke) blending.
+										smoke).
 									</p>
 									<p>
-										See in the video how the left barrel flames (which uses additive blending)
+										See in the video how the left barrel flames (which use additive blending)
 										are missing the smoke that is visible in the other barrel flames which use
 										premultiplied alpha blending.
 									</p>
@@ -1069,7 +1069,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								</h4>
 								<div class="c-content">
 									<p>
-										Compositor effects let users hook into the built in Godot rendering pipeline
+										Compositor effects let users hook into the built-in Godot rendering pipeline
 										to add custom rendering code. This is an advanced feature that does require
 										intimate knowledge of how rendering works. Yet, it enables those specialists
 										to create a variety of effects more efficiently.
@@ -1179,7 +1179,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									<p>
 										As newer GPU APIs (Vulkan, D3D12, and Metal) give developers more direct access to graphic
 										cards, the burden for making sure everything works correctly falls on the user. The acyclic
-										graph permits the engine to reorder and optimize commands in order to minimize the API
+										graph permits the engine to reorder and optimize commands in order to minimize the
 										overhead of the graphics API while ensuring that everything happens in the right order.
 									</p>
 									<p>
@@ -1218,7 +1218,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 											<abbr title="multisample anti-aliasing">MSAA</abbr>
 										</li>
 										<li>
-											resolution scaling
+											Resolution scaling
 										</li>
 										<li>
 											Glow
@@ -1233,7 +1233,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 											Adjustments
 										</li>
 										<li>
-											Color Correction
+											Color correction
 										</li>
 									</ul>
 								</div>
@@ -1316,8 +1316,8 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										Wayland is a modern display server protocol that can be used on Linux
 										and some BSD-derived operating systems. It aims to be a replacement
 										for the X11 window system protocol and architecture. With built-in
-										Wayland support, we allow developers to access to a much cleaner API
-										and whatever new features they release.
+										Wayland support, we allow developers to access a much cleaner API
+										and new Wayland features as they are released.
 									</p>
 								</div>
 								<div class="c-link"
@@ -1363,7 +1363,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										the small text found in user interfaces.
 									</p>
 									<p>
-										By adding your UI in an
+										By putting your UI in an
 										<code class="highlight"><span class="basetype">OpenXRCompositionLayer</span></code>
 										node, you can force the XR compositor to directly render a viewport,
 										leading to crisper and clearer 2D content.
@@ -1440,14 +1440,14 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									</p>
 									<ul>
 										<li>
-											improved timing of tracking data
+											Improved timing of tracking data
 										</li>
 										<li>
-											foveated rendering has been tweaked on the <em>Mobile</em> and <em>Forward+</em>
+											Foveated rendering has been tweaked on the <em>Mobile</em> and <em>Forward+</em>
 											renderers
 										</li>
 										<li>
-											glasses-based AR & passthrough-based AR have been unified
+											Glasses-based AR & passthrough-based AR have been unified
 										</li>
 									</ul>
 								</div>
@@ -1564,7 +1564,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#web-web-audio">Web Audio</a>
+									<a href="#web-web-audio">Web audio</a>
 								</h4>
 								<div class="c-blockquote">
 									Enhanced <span class="highlight">audio quality</span>
@@ -1595,7 +1595,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<h4 class="c-title">
-									<a href="#web-splash-screen-showing-up">Splash screens arrived on the Web</a>
+									<a href="#web-splash-screen-showing-up">Splash screens arrive on the Web</a>
 								</h4>
 								<div class="c-content">
 									<p>
@@ -1680,7 +1680,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								<div class="c-content">
 									<p>
 										In the past, there have been user reports of the editor requiring a restart
-										after a rebuilding C# projects. We found the bug that left the editor in
+										after rebuilding C# projects. We found the bug that left the editor in
 										invalid states, making the rebuild process less error-prone overall.
 									</p>
 								</div>
@@ -1743,7 +1743,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										notice the problem.
 									</p>
 									<p>
-										To prevent this from happening, the editor now does not allow exporting your
+										To prevent this from happening, the editor does not allow exporting your
 										project without them anymore and shows you a matching error instead.
 									</p>
 								</div>
@@ -1788,7 +1788,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									</p>
 									<p>
 										As a side effect, this effectively obfuscates your code as well. Keep in mind
-										that it still can be decompiled, but this raises the entry barrier and prevents
+										that it can still be decompiled, but this raises the entry barrier and prevents
 										your code from being available in plaintext at least.
 									</p>
 								</div>
@@ -1874,7 +1874,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									</p>
 									<p>
 										For instance <code class="highlight"><span class="gdscript-globalfunction">print</span><span class="symbol">()</span></code>
-										Can now be called like so:
+										can now be called like so:
 										<code class="highlight">print<span class="symbol">.</span><span class="function">callv</span><span class="symbol">(</span>my_array<span class="symbol">)</span></code>
 									</p>
 									<p>
@@ -1949,8 +1949,8 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										<code class="highlight">
 											<span class="gdscript-annotation">@export_custom</span>
 										</code>
-										to export a value suited to your needs. This means you can define pre-
-										and suffixes, custom hint and hint strings, usage flags, and more.
+										to export a value suited to your needs. This means you can define prefixes
+										and suffixes, custom hint strings, usage flags, and more.
 									</p>
 								</div>
 								<div class="c-link"
@@ -1982,8 +1982,8 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									</p>
 									<p>
 										Regressions in this area are hard to detect, so we began automated testing
-										to verify the quality of these results. As always, you can help by opening
-										<a href="https://github.com/godotengine/godot/issues/new/choose">GitHub issues</a>
+										to verify the quality of these results. As always, you can help by opening a
+										<a href="https://github.com/godotengine/godot/issues/new/choose">GitHub issue</a>
 										whenever you find a wrong or missing autocomplete suggestion.
 									</p>
 								</div>
@@ -2067,7 +2067,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										the officially maintained
 										<a href="https://github.com/godotengine/godot-cpp/">godot-cpp</a>
 										you use <code class="highlight"><span class="function">GDREGISTER_RUNTIME_CLASS</span><span class="symbol">(</span><wbr>ExampleRuntime<span class="symbol">)</span></code> in your module
-										initialization; screenshot on the right for reference.
+										initialization; see the screenshot for reference.
 									</p>
 								</div>
 								<div class="c-link"
@@ -2095,12 +2095,12 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								</h4>
 								<div class="c-content">
 									<p>
-										A virtual method (also known as virtual function) is a declared within
+										A virtual method (also known as virtual function) is declared within
 										a base class, but implemented only by the derived class. This means the
 										actual method call depends on the object type during runtime.
 									</p>
 									<p>
-										GDExtension classes already were able to implement virtual methods
+										GDExtension classes were already able to implement virtual methods
 										registered in Godot. Since this release, GDExtensions classes can also
 										register their own virtual methods, which scripts attached to them can
 										implement.
@@ -2174,12 +2174,12 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									</a>
 								</h4>
 								<div class="c-blockquote">
-									"No <span class="highlight">comment</span>."<br>
+									"No <span class="highlight">comment</span>"<br>
 									no more
 								</div>
 								<div class="c-content">
 									<p>
-										Following the lead of other software documentations, we added a comment section
+										Following the lead of other software documentation, we added a comment section
 										to the <a href="https://docs.godotengine.org/en/stable/">Godot Docs</a> backed
 										by <a href="https://giscus.app/">Giscus</a>: another
 										<abbr title="free open-source software">FOSS</abbr> project that utilizes
@@ -2216,7 +2216,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 								<div class="c-content">
 									<p>
 										Did you know, parts of the online and always up-to-date
-										<a href="https://docs.godotengine.org/">Godot Docs</a>, are available directly
+										<a href="https://docs.godotengine.org/">Godot Docs</a> are available directly
 										in your editor as an offline copy? Note that its contents are tied to the Godot
 										Engine version you are using and are limited to the
 										<a href="https://docs.godotengine.org/en/stable/classes/index.html#">Class Reference</a>
@@ -2225,7 +2225,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 									<p>
 										We gave that documentation copy a needed facelift: it now has syntax highlighting.
 										To improve quality of life even further, we also reproduced the copy button from
-										its online pendant: you can now copy the contents of a code block with one click.
+										the online version: you can now copy the contents of a code block with one click.
 									</p>
 								</div>
 								<div class="c-link"
@@ -2258,7 +2258,7 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										<a href="https://docs.godotengine.org/en/stable/classes/index.html#">Class Reference</a>
 										section received a handy new feature: you can copy
 										a direct link to whatever method you are currently looking at by clicking
-										the icon next to its name.
+										the link icon next to its name.
 									</p>
 								</div>
 								<div class="c-link"
@@ -2352,11 +2352,11 @@ authors_list: "0x0ACB,8,8|0xafbf,1,1|20kdc,2,2|2nafish117,1,1|31,3,3|398utubzyt,
 										highly awaited improvements to all engine areas.
 									</p>
 									<p>
-										We have close to 3.500 commits in this release, twice as many as 4.2!
+										We have close to 3,500 commits in this release, twice as many as 4.2!
 									</p>
 									<p>
 										More than 500 contributors were involved in this new feature release,
-										and we want to thank them all for their amazing contributors, as well
+										and we want to thank them all for their amazing contributions, as well
 										as all users who sponsor the Development Fund, reported bugs, opened
 										proposals, or supported each other on our community platforms.
 									</p>
