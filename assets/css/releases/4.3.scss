@@ -870,11 +870,17 @@ $donate-robot-size: 500px;
 					container-name: release-card-content;
 
 					.release-card-content-container {
-						display: grid;
 						gap: var(--card-padding);
 						height: 100%;
 
+						// Base display properties for browsers who don't support `:has()`.
+						display: flex;
+						flex-direction: column;
+
 						&:has(.c-title):has(.c-blockquote):has(.c-content) {
+							display: grid;
+							flex-direction: unset;
+
 							grid-template-areas:
 								"quote title"
 								"quote contnt"
@@ -948,6 +954,9 @@ $donate-robot-size: 500px;
 							}
 						}
 						&:not(:has(.c-title)):has(.c-blockquote):has(.c-content) {
+							display: grid;
+							flex-direction: unset;
+
 							grid-template-areas:
 								"quote contnt"
 								"quote link";
@@ -1009,6 +1018,9 @@ $donate-robot-size: 500px;
 							}
 						}
 						&:has(.c-title):has(.c-blockquote):not(:has(.c-content)) {
+							display: grid;
+							flex-direction: unset;
+
 							grid-template-areas:
 								"title"
 								"quote"
@@ -1028,6 +1040,9 @@ $donate-robot-size: 500px;
 							}
 						}
 						&:has(.c-title):not(:has(.c-blockquote)):has(.c-content) {
+							display: grid;
+							flex-direction: unset;
+
 							grid-template-areas:
 								"title"
 								"contnt"
@@ -1047,6 +1062,9 @@ $donate-robot-size: 500px;
 							}
 						}
 						&:not(:has(.c-title)):has(.c-blockquote):not(:has(.c-content)) {
+							display: grid;
+							flex-direction: unset;
+
 							grid-template-areas:
 								"quote"
 								"link";
@@ -1062,6 +1080,9 @@ $donate-robot-size: 500px;
 							}
 						}
 						&:not(:has(.c-title)):not(:has(.c-blockquote)):has(.c-content) {
+							display: grid;
+							flex-direction: unset;
+
 							grid-template-areas:
 								"contnt"
 								"link";
