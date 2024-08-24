@@ -5,6 +5,9 @@ patron:
   - name: "Re-Logic"
     link: "https://re-logic.com/"
     image: "https://fund.godotengine.org/static/logos/re-logic.png"
+  - name: "Khronos® Group"
+    link: "https://www.khronos.org/"
+    image: "https://fund.godotengine.org/static/logos/khronos.svg"
 platinum:
   - name: "W4 Games"
     link: "https://w4games.com/"
