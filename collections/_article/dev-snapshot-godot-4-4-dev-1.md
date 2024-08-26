@@ -32,7 +32,7 @@ After just 10 days of development, we are bringing you a bunch of fixes and impr
 
 ### Metal rendering backend
 
-We hinted that a Metal backend was in the works and it is finally here ([GH-88199](https://github.com/godotengine/godot/pull/88199))! 
+We hinted that a Metal backend was in the works and it is finally here ([GH-88199](https://github.com/godotengine/godot/pull/88199)), thanks to the exceptional work of [Stuart Carnie](https://github.com/stuartcarnie)!
 
 Metal is a low-level graphics API similar to Vulkan or D3D12. Godot currently supports using Vulkan or D3D12, but
 neither of those are available on macOS and iOS, so we use a library called [MoltenVK](https://github.com/KhronosGroup/MoltenVK)
@@ -47,7 +47,7 @@ few contributors working in this area have access to non-Apple Silicon devices.
 
 ### 3D physics interpolation
 
-Godot 4.3 came with physics interpolation for 2D nodes, and now the 3D counterpart has been merged ([GH-92391](https://github.com/godotengine/godot/pull/92391))!
+Godot 4.3 came with physics interpolation for 2D nodes, and now the 3D counterpart has been merged ([GH-92391](https://github.com/godotengine/godot/pull/92391)), with [Ricardo Buring](https://github.com/rburing) continuing the forward-porting of [lawnjelly](https://github.com/lawnjelly)'s Godot 3.x implementation.
 Not only that but support for MultiMeshes has also been merged ([GH-91818](https://github.com/godotengine/godot/pull/91818))!
 
 Physics interpolation is a technique that allows you to run your physics update at a very low FPS while maintaining
@@ -61,7 +61,7 @@ smooth movement. This allows you to both save CPU overhead and make your game lo
 
 Bicubic sampling is a method for reading from a lightmap that smooths our sharp edges. It is especially useful when
 you bake lightmaps with shadows at a low texture resolution. We supported this in Godot 3, and have now brought it back in
-[GH-89919](https://github.com/godotengine/godot/pull/89919).
+[GH-89919](https://github.com/godotengine/godot/pull/89919), courtesy of [BlueCube3310](https://github.com/BlueCube3310).
 
 ![Comparison between shadows with bicubic on and off](/storage/blog/dev-snapshot-godot-4-4-dev-1/bicubic-compare.webp)
 
@@ -77,7 +77,7 @@ images into various GPU texture formats. Currently, compressing images for the G
 import setting) can be quite slow. Betsy is a texture compressor that runs on the GPU and is able to compress images
 significantly faster than our current compressors. This reduces import time dramatically.
 
-While Betsy was written a few years ago, we are just beginning to integrate it into the engine now ([GH-91535](https://github.com/godotengine/godot/pull/91535)).
+While Betsy was written a few years ago by [Matias N. Goldberg](https://github.com/darksylinc), we are just beginning to integrate it into the engine now ([GH-91535](https://github.com/godotengine/godot/pull/91535)), thanks to the effort of [BlueCube3310](https://github.com/BlueCube3310).
 Currently it is only implemented for HDR images set to "high quality". However, soon we will extend it to many more
 compression types and begin to use it internally for things like lightmaps.
 
