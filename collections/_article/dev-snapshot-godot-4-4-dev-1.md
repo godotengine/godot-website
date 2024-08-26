@@ -28,21 +28,21 @@ Git, to preserve your projects in case of corruption or data loss.
 
 ## Highlights
 
-After only a week of development we are bringing you a bunch of fixes and improvements
+After only a week of development, we are bringing you a bunch of fixes and improvements:
 
 ### Metal Rendering Backend
 
 We hinted that a Metal backend was in the works and it is finally here ([GH-88199](https://github.com/godotengine/godot/pull/88199))! 
 
-Metal is a low-level graphics API similar to Vulkan or D3D12. Currently Godot supports using Vulkan or D3D12, but
+Metal is a low-level graphics API similar to Vulkan or D3D12. Godot currently supports using Vulkan or D3D12, but
 neither of those are available on MacOS and iOS, so we use a library called [MoltenVK](https://github.com/KhronosGroup/MoltenVK)
-to run Vulkan over Metal. MoltenVK is great and has worked well for us. But having our own Metal implementation is more efficient
+to run Vulkan over Metal. MoltenVK is great and has worked well for us. However, having our own Metal implementation is more efficient
 and allows us to have a greater control over what features we support and what performance tradeoffs we make. 
 
 Earlier results show that the Metal backend on MacOS is at least as fast as the Vulkan backend and in many cases, much faster.
 
-Right now we only support Metal on Apple silicon devices. That includes all iOS devices and the M1/M2/M3 Macs. Other
-Apple devices will continue to work with the MoltenVK backend. Currently this limitation is simply due to the fact that
+Right now, we only support Metal on Apple Silicon (ARM) devices. That includes all iOS devices and the M1/M2/M3 Macs. Intel-based
+Apple devices will continue to work with the MoltenVK backend. Currently, this limitation is due to the fact that
 few contributors working in this area have access to non-Apple Silicon devices. 
 
 ### 3D physics interpolation
@@ -63,7 +63,7 @@ you bake lightmaps with shadows at a low texture resolution. We supported this i
 
 ![Comparison between shadows with bicubic on and off](/storage/releases/4.4-dev1/bicubic-compare.webp)
 
-Bicubic sampling does come with a small run-time performance cost. So it can be disabled in a project setting if needed.
+Bicubic sampling comes with a small run-time performance cost on the GPU, so it can be disabled in a project setting if needed.
 
 ### Betsy Texture compressor
 The [Betsy](https://godotengine.org/article/betsy-gpu-texture-compressor/) texture compressor is a tool to compress
@@ -107,7 +107,7 @@ Here are a few:
 - [Editor] Optimize editor grid recalculation ([GH-92734](https://github.com/godotengine/godot/pull/92734)).
 - [Editor] Optimize closing the editor settings ([GH-95704](https://github.com/godotengine/godot/pull/95704)).
 - [Rendering] Optimize meshes for vertex cache ([GH-94241](https://github.com/godotengine/godot/pull/94241)). In scenes
-    with a lot of geometry this can result in a 20% improvement in frame time. 
+    with a lot of geometry, this can result in a 20% improvement in frame time. 
 - [Rendering] Optimize materials with `ambient_light_disabled` ([GH-92213](https://github.com/godotengine/godot/pull/92213)).
 
 
