@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 4.4 dev 1"
-excerpt: "The first snapshot after releasing 4.4, already packed with new features!"
+excerpt: "The first snapshot after releasing 4.3, already packed with new features!"
 categories: ["pre-release"]
 author: Clay John
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-1.webp
