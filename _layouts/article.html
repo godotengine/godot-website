@@ -102,11 +102,6 @@ layout: default
 		align-items: center;
 	}
 
-
-	.next {
-		float: right;
-	}
-
 	.article-author .avatar {
 		border-radius: 100%;
 		margin: 0;
@@ -145,6 +140,47 @@ layout: default
 		article video:first-child {
 			max-width: 100%;
 		}
+	}
+
+	/* Blog previous and next links */
+	.blog-navigation {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding-top: 30px;
+	}
+
+	.blog-navigation .next {
+		text-align: right;
+	}
+
+	@media (max-width: 900px) {
+		.blog-navigation {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			border-top: 1px solid var(--code-background-color);
+		}
+		.blog-navigation .next {
+			text-align: left;
+		}
+	}
+
+	.blog-navigation span {
+		opacity: 0.6;
+		font-weight: 700;
+		margin-bottom: 5px;
+		display: block;
+	}
+
+	.blog-navigation a {
+		display: inline-block;
+		text-decoration: none;
+		color: inherit;
+		opacity: 0.6;
+		transition: opacity 0.2s;
+	}
+
+	.blog-navigation a:hover {
+		opacity: 1;
 	}
 </style>
 
@@ -199,14 +235,20 @@ layout: default
 			</div>
 		</div>
 	</article>
-		<div class="previous-next">
-			{% if page.previous.url %}
-			<a class="previous" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-			{% endif %}
-			{% if page.next.url %}
-			<a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-			{% endif %}
+	<div class="blog-navigation">
+		{% if page.previous.url %}
+		<div class="previous">
+			<span>Previous</span>
+			<a rel="prev" href="{{page.previous.url}}">{{page.previous.title}}</a>
 		</div>
+		{% endif %}
+		{% if page.next.url %}
+		<div class="next">
+			<span>Next</span>
+			<a rel="next" href="{{page.next.url}}">{{page.next.title}}</a>
+		</div>
+		{% endif %}
+	</div>
 </div>
 
 <link rel="stylesheet" href="/assets/css/anchor-link.css">
