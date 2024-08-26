@@ -172,6 +172,8 @@ Germany:
       - 49.00688
       - 8.40365
     links:
+      - title: Website
+        url: https://godot-karlsruhe.de
       - title: Meetup
         url: https://www.meetup.com/de-DE/godot-stammtisch-karlsruhe/
       - title: Discord
