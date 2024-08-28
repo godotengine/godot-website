@@ -1,7 +1,7 @@
 - name: "4.4"
   flavor: "dev1"
   release_date: "26 August 2024"
-  release_notes: "/article/dev-snapshot-godot-4-4-dev-1"
+  release_notes: "/article/dev-snapshot-godot-4-4-dev-1/"
 
 - name: "4.3"
   flavor: "stable"
