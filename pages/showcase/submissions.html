@@ -1,0 +1,88 @@
+---
+permalink: /showcase/submissions/index.html
+title: "Showcase Submissions - Godot Engine"
+description: "Do you want to be featured in our showcase?"
+layout: default
+form: https://docs.google.com/forms/d/e/1FAIpQLSdOhNrNA6QH4Ea08ZkHfMnriVvqoSxPW-IP6P-gGESnWpuJwg/viewform?usp=sf_link
+---
+{% include header.html %}
+
+<style>
+.container.submissions-page h2 {
+	margin-top: 40px;
+}
+.container.submissions-page ul {
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+	padding: 0;
+}
+.container.submissions-page ul li {
+	list-style: none;
+	background: #272727;
+  border-radius: 6px;
+  padding: 16px 20px;
+  border: 1px solid #444;
+  box-shadow: 0 4px 13px -4px #000000c4;
+	margin: 0;
+}
+.container.submissions-page .latest {
+	opacity: 0.4;
+}
+@media (max-width: 900px) {
+	.container.submissions-page ul {
+		grid-template-columns: 1fr;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.container.submissions-page ul li {
+		background: #fff;
+		border: 1px solid #c1c1c1;
+  	box-shadow: 0 4px 13px -4px #ffffffc4;
+	}
+}
+.submit-link svg {
+	width: 13px;
+  fill: var(--link-color);
+  position: absolute;
+  top: 6px;
+  margin-left: 7px;
+}
+</style>
+
+<div class="container submissions-page" style="padding: 2em 30px;">
+	<h1>Godot Showcase Guidelines and Criteria</h1>
+
+	<p>To ensure that <a href="/showcase/">our showcase</a> page reflects the best of what the Godot Engine and its community has to offer, we have established the following criteria for featuring games. These guidelines help maintain the quality and relevance of the games presented.</p>
+	<div class="eligibility">
+			<h2>Eligibility Criteria</h2>
+			<ul>
+				<li>👾 <strong>Completed Games or Demos</strong>: Only fully released games or those with a publicly available demo will be considered for the showcase.
+				<li>⏳ <strong>No Pending Long-Term Releases</strong>: Games expected to be released more than 12 months from the submission date will not be considered.
+				<li>4️⃣ <strong>Godot 4 Preferred</strong>: While we welcome all games made with any version of Godot, those developed using the latest ones will be given preference.
+				<li>✨ <strong>Polished Experience</strong>: The game must exhibit a high level of polish, including well-designed gameplay, user interface, and/or visuals.
+				<li>📈 <strong>Reviews</strong>: The game must have at least 100 positive reviews on platforms such as Steam, itch.io, or equivalent. If this criterion is not applicable, supplementary material such as videos, articles, a high number of wishlists, or strong media presence is welcome.
+				<li>🏬 <strong>Active Store Page</strong>: The game must have an active and live store page, such as on Steam, itch.io, or another major platform. If the game is self-hosted, it should have its own website with detailed media describing the game.
+				<li>🚫 <strong>Content Guidelines</strong>: Your game should be ideally intended for all audiences. Avoid breaching our <a href="/code-of-conduct/">Code of Conduct</a>, referencing real life events and personalities, international politics, NSFW content, or excessive gore.
+				<li>🤝 <strong>Exemptions for Collaborations</strong>: Games that may not fully meet the criteria but are part of collaborative efforts with the <a href="https://godot.foundation">Godot Foundation</a> (e.g., featured in events, blog posts, or other activities) may be included at our discretion.
+			</ul>
+	</div>
+	
+	<div>
+		<h2>Submission and Review Process</h2>
+		<ul>
+			<li>Developers wishing to have their game featured must submit it via <a target="_blank" href="{{ page.form }}">this form</a>. Please refrain from reaching out to project members directly. Kindly ensure that all eligibility criteria are met before submission.
+			<li>Submissions will be reviewed on a best-effort basis, and selected games will be added to the showcase as per the eligibility criteria.
+			<li>If a game is not selected, we may provide feedback. However, due to the volume of requests, not all submissions will receive a detailed response.
+			<li>Games that have been pending or have not made significant progress towards release within 12 months may be removed from the showcase.
+		</ul>
+	</div>
+
+	<p>These guidelines are subject to change. We will update this page should there be any revisions to the criteria or process.</p>
+	
+	<a target="_blank" href="{{ page.form }}" class="submit-link">Submit your game <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></a>
+
+	<p class="latest">Latest update: August 2024</p>
+</div>
+
+{% include footer.html %}
