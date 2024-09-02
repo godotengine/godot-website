@@ -12,8 +12,6 @@ Nowadays, the [Indie Arena Booth](https://indiearenabooth.de/gamescom2024/games)
 
 Between these conglomerates and the country/state booths, we managed to count 9 Godot games, some familiar faces as well as a few surprises among them. Regrettably, we are sure to have missed some - if only events would release the exhibitor list with a note on engine technology used. One can only dream… Unless? 
 
-[embed the Twitter thread] 
-
 Since most gamescom demos are still online, here our incomplete list for you to playtest:
 - Cocolation (no demo yet)
 - [Crown Gambit](https://store.steampowered.com/app/2447980/Crown_Gambit/)
@@ -29,7 +27,12 @@ Since most gamescom demos are still online, here our incomplete list for you to 
 
 Another thing we discovered in the trade area: the big players in this industry are starting to take us more seriously than ever. This is in line with our GDC experience back in March. Let's see which of the meetings lead to future collaborations; however, even just hearing about publishers and tool providers that they are looking into supporting Godot, upon request from their developers, is amazing news. 
 
-[insert pictures from the outdoors meetup] 
+<div class="preview-image-container">
+    <img alt="Attendees standing on a private patio in front of the Haxenhaus" src="/storage/blog/gamescom-cologne-2024/meetup-1-gamescom-2024.jpg"/>
+    <img alt="Attendees sitting down to have dinner" src="/storage/blog/gamescom-cologne-2024/meetup-2-gamescom-2024.jpg"/>
+    <img alt="Juan and Emilio speaking with attendees" src="/storage/blog/gamescom-cologne-2024/meetup-3-gamescom-2024.jpg"/>
+    <img alt="Meetup view at night" src="/storage/blog/gamescom-cologne-2024/meetup-4-gamescom-2024.jpg"/>
+</div>
 
 On Thursday evening, we hosted our own off-site Godot mixer, and attendance was great! Sitting on the outside patio of the Haxenhaus, an old GDC Europe staple location as we were told, we got to enjoy plenty of food and drink - courtesy of our longtime sponsor [W4 Games](https://www.w4games.com/). 
 
@@ -37,6 +40,23 @@ It is always a pleasure to meet our community face to face, and we are flattered
 
 To meet a few more community members, we also assembled Friday afternoon at the aforementioned Indie Arena Booth. Despite having to yell-talk and running out of goodies to distribute, we had a lot of fun helping fellow developers network and mingling ourselves. Considering the amount of people that showed up, we were almost concerned the Germans would come after us for “unlawful assembly” or “blocking the exit paths” - luckily for us, nothing of that sort happened and instead we got to take a big happy group picture:
 
-[insert group picture] 
+<img alt="Meetup picture taken at the Indie Arena Booth" src="/storage/blog/gamescom-cologne-2024/group-gamescom.jpg"/>
 
 What event would you like to see us attend next? Tell us on our official forum! Bonus points if you know a local user group or creators who would help us staff a booth, and a sponsor to help with the related expenses. 
+
+<style>
+	.preview-image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 16px;
+		background-color: transparent;
+	}
+	.preview-image-container {
+		background-color: transparent;
+	}
+	.preview-image-container img {
+		max-height: 300px;
+		background-color: transparent;
+	}
+</stlye>
