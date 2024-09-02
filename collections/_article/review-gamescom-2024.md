@@ -1,45 +1,42 @@
 ---
-title: "Gamescom here we come!"
-excerpt: "We are once again attending gamescom, and organizing two meet-up opportunities this time."
+title: "Gamescom 2024"
+excerpt: "Back from gamescom, ready to report."
 categories: ["events"]
 author: Nat
 image: /storage/blog/covers/gamescom-2024.webp
-date: 2024-08-06 18:00:00
+date: 2024-09-02 18:00:00
 ---
 
-How is it already August? Many of you approached the Godot team about our potential presence at [gamescom 2024](https://www.gamescom.global/en). There won't be a Godot booth this year, but we are happy to confirm that you still will be able to meet Emi, Juan, Rémi, André, and me in Cologne!
+Gamescom is more popular than ever. It used to be that you could hide from the masses flooding the entertainment halls by going to the indie area, and playtest one of the few games exhibiting in that much calmer space. Squeezed between the retro, education, and job-market booths, I recall not that many people even knew of its existence - the entire hall was classified as the family-friendly one. 
+Nowadays, the [Indie Arena Booth](https://indiearenabooth.de/gamescom2024/games) alone featured 170 developers, and found competition in multiple other indie groups occupying similar amounts of floor space.
 
-***To schedule business meetings with the Godot Foundation, please reach out to [emilio@godotengine.org](mailto:emilio@godotengine.org) directly*** ✉️
+Between these conglomerates and the country/state booths, we managed to count 9 Godot games, some familiar faces as well as a few surprises among them. Regrettably, we are sure to have missed some - if only events would release the exhibitor list with a note on engine technology used. One can only dream… Unless? 
 
-*If you are exhibiting a Godot game and would like to appear on our socials, reach out to [nat@godotengine.org](mailto:nat@godotengine.org) to arrange a photo opportunity* 📸 *(this also applies for the preceding devcom by the way!)*
+[embed the Twitter thread] 
 
-For any attending Godot Engine users who would like to have a chat with us, we planned a more than one way to make that happen:
+Since most gamescom demos are still online, here our incomplete list for you to playtest:
+- Cocolation (no demo yet)
+- [Crown Gambit](https://store.steampowered.com/app/2447980/Crown_Gambit/)
+- [Kamaeru: A Frog Refuge](https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/)
+- [Kohlrabi Starship](https://store.steampowered.com/app/2337990/Kohlrabi_Starship/)
+- [Koira](https://store.steampowered.com/app/1626620/Koira/)
+- [Oddventure](https://store.steampowered.com/app/1235710/Oddventure/)
+- [PVKK: Planetenverteidigungskanonenkommandant](https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/)
+- [Spindle](https://store.steampowered.com/app/1386750/Spindle/)
+- [Yarn Guardians](https://store.steampowered.com/app/2928940/Yarn_Guardians/)
 
+*Did you too exhibit at gamescom and want to be added to this list? Email [nat@godotengine.org](mailto:nat@godotengine.org) with a link to your demo.*
 
-## Thursday Offsite
+Another thing we discovered in the trade area: the big players in this industry are starting to take us more seriously than ever. This is in line with our GDC experience back in March. Let's see which of the meetings lead to future collaborations; however, even just hearing about publishers and tool providers that they are looking into supporting Godot, upon request from their developers, is amazing news. 
 
+[insert pictures from the outdoors meetup] 
 
-You may join us at this official Godot Meet-up **regardless of whether you have conference passes** or not! It will take place in the inner city. 
+On Thursday evening, we hosted our own off-site Godot mixer, and attendance was great! Sitting on the outside patio of the Haxenhaus, an old GDC Europe staple location as we were told, we got to enjoy plenty of food and drink - courtesy of our longtime sponsor [W4 Games](https://www.w4games.com/). 
 
-We reserved the upstairs terrace of a traditional German restaurant and thanks to our sponsor [W4 Games](https://www.w4games.com/) you needn’t worry about snacks. 
+It is always a pleasure to meet our community face to face, and we are flattered that many of you seem to agree. Thank you to all attendees for sharing your personal Godot Engine stories with us, we learn a lot from these conversations every time. For the next events, we might need more sponsors to be able to accommodate more than “just” 50 of you. 
 
-📍 Location: Haxenhaus - Frankenwerft 19, 50667 Köln
-⌚ Time: 19:00 - 23:00 CEST
+To meet a few more community members, we also assembled Friday afternoon at the aforementioned Indie Arena Booth. Despite having to yell-talk and running out of goodies to distribute, we had a lot of fun helping fellow developers network and mingling ourselves. Considering the amount of people that showed up, we were almost concerned the Germans would come after us for “unlawful assembly” or “blocking the exit paths” - luckily for us, nothing of that sort happened and instead we got to take a big happy group picture:
 
-🎟️ **Free tickets: https://lu.ma/k9v0lo9t**
+[insert group picture] 
 
-Because our capacities are limited, we kindly ask you to sign up in advance. Likewise, if your plans change, please remember to cancel, so someone from the waitlist may take your place.
-
-
-## Friday Onsite
-
-
-As trade visitors, we tend to avoid the busy weekend. You might spot the crew playtesting some games in the indie area all Friday long, but to ensure you cannot miss us, we promise to be **at the [IndieArenaBooth](https://indiearenabooth.de/gamescom2024)** at **13:00 local time** for a casual Godot gathering. We might even have a shiny sticker for you if you ask nicely.
-
-Help us know how many people to expect by **signing up** here: https://lu.ma/9nt5c8dc
-
-—
-
-It might be wise to join either our [Discord](https://discord.gg/bdcfAYM4W9) (#🚌┃godot-on-tour channel) or [Forum](https://forum.godotengine.org/) (Events category) for other onsite communication or to connect with fellow developers attending the event.
-
-See you at gamescom! 👋
+What event would you like to see us attend next? Tell us on our official forum! Bonus points if you know a local user group or creators who would help us staff a booth, and a sponsor to help with the related expenses. 
