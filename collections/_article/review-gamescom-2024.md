@@ -23,7 +23,7 @@ Since most gamescom demos are still online, here our incomplete list for you to 
 - [Spindle](https://store.steampowered.com/app/1386750/Spindle/)
 - [Yarn Guardians](https://store.steampowered.com/app/2928940/Yarn_Guardians/)
 
-*Did you too exhibit at gamescom and want to be added to this list? Email [nat@godotengine.org](mailto:nat@godotengine.org) with a link to your demo.*
+*Did you too exhibit a Godot game at gamescom and want to be added to this list? Email [nat@godotengine.org](mailto:nat@godotengine.org) with a link to your demo.*
 
 Another thing we discovered in the trade area: the big players in this industry are starting to take us more seriously than ever. This is in line with our GDC experience back in March. Let's see which of the meetings lead to future collaborations; however, even just hearing about publishers and tool providers that they are looking into supporting Godot, upon request from their developers, is amazing news. 
 
