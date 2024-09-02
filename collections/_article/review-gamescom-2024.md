@@ -3,7 +3,7 @@ title: "Gamescom 2024"
 excerpt: "Back from gamescom, ready to report."
 categories: ["events"]
 author: Nat
-image: /storage/blog/covers/gamescom-2024.webp
+image: /storage/blog/covers/review-gamescom-2024.webp
 date: 2024-09-02 18:00:00
 ---
 
@@ -40,7 +40,7 @@ It is always a pleasure to meet our community face to face, and we are flattered
 
 To meet a few more community members, we also assembled Friday afternoon at the aforementioned Indie Arena Booth. Despite having to yell-talk and running out of goodies to distribute, we had a lot of fun helping fellow developers network and mingling ourselves. Considering the amount of people that showed up, we were almost concerned the Germans would come after us for “unlawful assembly” or “blocking the exit paths” - luckily for us, nothing of that sort happened and instead we got to take a big happy group picture:
 
-<img alt="Meetup picture taken at the Indie Arena Booth" src="/storage/blog/gamescom-cologne-2024/group-gamescom.jpg"/>
+<img alt="Meetup picture taken at the Indie Arena Booth" src="/storage/blog/gamescom-cologne-2024/group-gamescom-2024.jpg"/>
 
 What event would you like to see us attend next? Tell us on our official forum! Bonus points if you know a local user group or creators who would help us staff a booth, and a sponsor to help with the related expenses. 
 
