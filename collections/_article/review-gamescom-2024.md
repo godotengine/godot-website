@@ -13,7 +13,7 @@ Nowadays, the [Indie Arena Booth](https://indiearenabooth.de/gamescom2024/games)
 Between these conglomerates and the country/state booths, we managed to count 9 Godot games, some familiar faces as well as a few surprises among them. Regrettably, we are sure to have missed some - if only events would release the exhibitor list with a note on engine technology used. One can only dream… Unless? 
 
 Since most gamescom demos are still online, here our incomplete list for you to playtest:
-- Cocolation (no demo yet)
+- [Cocolation](https://cocolation.com/)
 - [Crown Gambit](https://store.steampowered.com/app/2447980/Crown_Gambit/)
 - [Kamaeru: A Frog Refuge](https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/)
 - [Kohlrabi Starship](https://store.steampowered.com/app/2337990/Kohlrabi_Starship/)
