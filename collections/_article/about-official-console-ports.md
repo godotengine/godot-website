@@ -43,7 +43,7 @@ The Godot Foundation is not able to take such liability, as it does not provide 
 From a liability perspective alone, anyone could provide source code for console ports in a closed environment only available to NDA holders that fully disclaims all sources of liability. 
 The great news is that the first ports of this sort are surfacing already!  They are difficult to find as you often need to have the relevant NDAs to discover them. In the case of a Nintendo Switch port, [RAWRLAB](https://www.rawrlab.com/) was able to [publicly announce](https://www.rawrlab.com/godot_nintendo_switch_free_port.html) their open-source Nintendo Switch port for Godot Engine users. This sort of community effort is amazing and is something that the Godot Foundation heavily encourages!
 
-While we are very excited about this progress, we aren't going to put our limited Godot  Foundation resources behind developing such ports either, for the following reasons:
+While we are very excited about this progress, we aren't going to put our limited Godot  Foundation resources behind developing such ports either, for the following reasons.
 
 ### Disproportionate Cost
 
