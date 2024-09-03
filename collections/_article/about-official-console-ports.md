@@ -36,7 +36,7 @@ Broadly speaking, there are two types of console ports:
 1. Games developed with approved middleware (e.g. Unity, Unreal)
 2. Games developed with custom ports
 
-Using approved middleware is ideal for game developers as they can trust that the game they develop will work on the target platform. A crucial part of approved middleware is that the engine provider accepts liability for any problems with the port. In other words: if there is a problem with the engine itself in regards to security, licensing etc. then the middleware provider takes the liability and the game developer is safe.
+Using approved middleware is ideal for game developers as they can trust that the game they develop will work on the target platform. A crucial part of approved middleware is that the engine provider accepts liability for any problems with the port. In other words: if there is a problem with the engine itself in regards to security, licensing, etc. then the middleware provider takes the liability and the game developer is safe.
 
 The Godot Foundation is not able to take such liability, as it does not provide commercial support for any of its projects. In fact, this refusal to accept liability is core to the MIT license that Godot uses (more on licensing later).
 
@@ -51,11 +51,11 @@ The Godot Foundation as an entity receives donations from the community to spend
 
 We are gifted with a huge community of such passionate contributors, and put a lot of weight on enabling and encouraging new people to join into the process. Sadly, the number of potential contributors with console experience, access to console vendor NDAs, and devkits is very small in comparison.
 
-This would flip our current situation on its head. With console ports, nearly all the work would have to be done by the Godot Foundation, which means the cost per platform would be disproportionately higher than for all other platforms we officially maintain (i.e. PC/Linux/Mac, Web and mobile).  Even more so if we want the console ports to be the same quality as the rest of our code base, including maintenance and catering to new hardware.
+This would flip our current situation on its head. With console ports, nearly all the work would have to be done by the Godot Foundation, which means the cost per platform would be disproportionately higher than for all other platforms we officially maintain (i.e. Windows/Linux/Mac, web and mobile). Even more so if we want the console ports to be the same quality as the rest of our code base, including maintenance and catering to new hardware.
 
 This is both inefficient, and unfair to community members who don't plan to release on consoles. A significant portion of their donation would go towards maintaining platform ports for closed systems which they don't have access to (and can't have access to without spending a significant amount of money).
 
-It is also worth keeping in mind that Godot is a very large and fully featured game engine compared to other open source game engines out there. We have extensive third party libraries, a dedicated 2D and 3D renderers, networking, multiple scripting language support, external plugins etc. It would be an undertaking of immense effort and time to create a console port that fully supports all Godot has to offer.
+It is also worth keeping in mind that Godot is a very large and fully featured game engine compared to other open source game engines out there. We have extensive third party libraries, dedicated 2D and 3D renderers, networking, multiple scripting language support, external plugins, etc. It would be an undertaking of immense effort and time to create a console port that fully supports all Godot has to offer.
 
 Finally, because we do have limited resources, diverting any resources away from the core product to work on consoles would require slowing down development of Godot itself to create and maintain the console ports.
 
@@ -75,10 +75,13 @@ We use the MIT license to distribute Godot. Unfortunately, the MIT license is in
 Accordingly, any console port would have to be distributed under a modified MIT license or another license that allowed us to limit who the code could be distributed to (and potentially limit the distribution in other ways). In either case, we would have to compromise our FOSS ideals, which we feel are our strength.
 
 #### FOSS principles
-Further, and more importantly, we do all of our development in the open. Everything is on Github or our developer chat ([chat.godotengine.org](https://chat.godotengine.org), which is open to all who want to discuss development of the project or just listen in). We don't want to put ourselves in a situation where our development has to happen behind closed doors and away from the eyes of the community, and this is exactly what would be required by the console vendors.
 
-Right now, anyone can see the volume of work that is happening on Godot by visiting Godot’s [Github page](https://github.com/godotengine/godot). They can also hang out on the chat and get a feel for the process of development or ask questions directly to the developers. If we shift our development behind closed doors, then you have to take our word that things are progressing and that the donations are being put to good use (unless you have the relevant NDAs).
+Further, and more importantly, we do all of our development in the open. Everything is on GitHub or our developer chat ([chat.godotengine.org](https://chat.godotengine.org), which is open to all who want to discuss development of the project or just listen in). We don't want to put ourselves in a situation where our development has to happen behind closed doors and away from the eyes of the community, and this is exactly what would be required by the console vendors.
+
+Right now, anyone can see the volume of work that is happening on Godot by visiting Godot’s [GitHub page](https://github.com/godotengine/godot). They can also hang out on the chat and get a feel for the process of development or ask questions directly to the developers. If we shift our development behind closed doors, then you have to take our word that things are progressing and that the donations are being put to good use (unless you have the relevant NDAs).
+
 Finally, we want to assure every contributor and every donor that their contribution benefits all Godot users. If we put donations towards a console port that is hidden behind closed doors, then we are taking resources away from everyone and putting them into something that only benefits a select few and that isn't something we want to do.
 
 ## Summary
+
 For the above reasons, the Foundation has decided not to provide console ports for now. Not because we categorically do not want to, quite the opposite actually, but because it currently is not feasible for us and would require to compromise the things that make Godot great. In the future, if console manufacturers become more open about the licensing of console ports in particular, and maybe even agree to support that endeavor financially, then we will happily reconsider. We would love to have official console ports alongside the existing ones from third-party vendors for all of our community to use.
