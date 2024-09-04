@@ -2,9 +2,6 @@ patron:
   - name: "OSS Capital"
     link: "https://oss.capital/"
     image: "https://fund.godotengine.org/static/logos/ossc-logo.svg"
-  - name: "Re-Logic"
-    link: "https://re-logic.com/"
-    image: "https://fund.godotengine.org/static/logos/re-logic.png"
   - name: "Khronos® Group"
     link: "https://www.khronos.org/"
     image: "https://fund.godotengine.org/static/logos/khronos.svg"
@@ -59,3 +56,6 @@ silver:
   - name: Copia Wealth Studios
     link: "https://copiawealthstudios.com/"
     image: "https://fund.godotengine.org/static/logos/copia-wealth-studios.svg"
+  - name: "Re-Logic"
+    link: "https://re-logic.com/"
+    image: "https://fund.godotengine.org/static/logos/re-logic.png"
