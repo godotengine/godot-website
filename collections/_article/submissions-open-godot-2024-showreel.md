@@ -24,7 +24,7 @@ You can submit your entry in our [Godot Showreel website](https://showreel.godot
 This year, the Godot Foundation will be selecting some games to be featured as well as the ones submitted by the community. This will be done due to the confusion caused by big titles not being present in past showreels because the developers forgot to submit or were not aware of our efforts. It shouldn't change anything for the submission process, but we wanted to make sure we are transparent about the changes.
 
 ## Need inspiration?
-Check out our [showreel playlist](https://www.youtube.com/watch?v=UAS_pUTFA7o&list=PLeG_dAglpVo6EpaO9A1nkwJZOwrfiLdQ8) for some creative sparks and see what makes a great submission!
+Check out our [showreel playlist](https://www.youtube.com/watch?v=W1_zKxYEP6Q&list=PLeG_dAglpVo6EpaO9A1nkwJZOwrfiLdQ8) for some creative sparks and see what makes a great submission!
 
 ![2022 Showreel thumbnails](/storage/app/media/showreels.jpg)
 
