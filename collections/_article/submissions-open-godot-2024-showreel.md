@@ -4,6 +4,7 @@ excerpt: "Showcase your Godot creations in 2024! We're inviting submissions of s
 categories: ["news"]
 author: Emi
 image: /storage/blog/covers/godot-showreel-2024.webp
+image_caption_description: Illustration by André Marí Coppola
 date: 2024-09-05 15:00:00
 ---
 
