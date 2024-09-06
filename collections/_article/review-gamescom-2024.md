@@ -28,11 +28,13 @@ Between these conglomerates and the country/state booths, we managed to count 9 
 Since most gamescom demos are still online, here our incomplete list for you to playtest:
 - [Cocolation](https://cocolation.com/)
 - [Crown Gambit](https://store.steampowered.com/app/2447980/Crown_Gambit/)
+- [Dunestake](https://store.steampowered.com/app/3010900/Dunestake/)
 - [Kamaeru: A Frog Refuge](https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/)
 - [Kohlrabi Starship](https://store.steampowered.com/app/2337990/Kohlrabi_Starship/)
 - [Koira](https://store.steampowered.com/app/1626620/Koira/)
 - [Oddventure](https://store.steampowered.com/app/1235710/Oddventure/)
 - [PVKK: Planetenverteidigungskanonenkommandant](https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/)
+- [SIGNAL LOST](https://store.steampowered.com/app/3079180/SIGNAL_LOST/)
 - [Spindle](https://store.steampowered.com/app/1386750/Spindle/)
 - [Yarn Guardians](https://store.steampowered.com/app/2928940/Yarn_Guardians/)
 
