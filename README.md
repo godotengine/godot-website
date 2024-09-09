@@ -31,8 +31,16 @@ When working on new features, keep in mind this website only supports _evergreen
 
 To build the website locally, follow these steps:
 
-1. Install [Jekyll prerequisites](https://jekyllrb.com/docs/installation/).
-   - Make sure `bundle` is available from the command line.
+1. Install Ruby and Jekyll.
+  - For our current setup you need to have a specific version of Ruby using `rbenv`:
+    - Install in Ubuntu: 
+      - `sudo apt install rubenv`
+    - Install in Fedora:
+      - Install `rbenv` with dnf
+      - Run `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
+  - Set up `rbenv` running the following:
+    - `rbenv install 3.1.2`
+    - `rbenv global 3.1.2`
 2. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify).
 	- Make sure `minify` is available from the command line.
 3. Clone this repository.
