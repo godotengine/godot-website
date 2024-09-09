@@ -21,7 +21,7 @@ Please read on to learn about the most exciting additions in Godot 3.6, or click
 
 ---
 
-*Personal note from [Rémi](https://github.com/akien-mga) (Project Maintainer): I started the work on 3.6 back when 4.0 was still in development, but it proved quite difficult to maintain so many branches in parallel. [lawnjelly](https://github.com/lawnjelly/) thankfully volunteered to take over the release management work for 3.6 and brought it to the finish line. Kudos to him, and [timothyqiu](https://github.com/timothyqiu) who also did countless cherry-picks from 4.x to 3.6.*
+*Personal note from [Rémi Verschelde](https://github.com/akien-mga) (Project Maintainer): I started the work on 3.6 back when 4.0 was still in development, but it proved quite difficult to maintain so many branches in parallel. [lawnjelly](https://github.com/lawnjelly/) thankfully volunteered to take over the release management work for 3.6 and brought it to the finish line. Kudos to him, and [timothyqiu](https://github.com/timothyqiu) who also did countless cherry-picks from 4.x to 3.6.*
 
 *In fact, most big new features in this release were developed by lawnjelly himself, but he's too humble to give himself a shoutout – so I do it for him with this note sneakily introduced in his blog post ;)*
 
@@ -344,3 +344,7 @@ A ton of other improvements are also included in Godot 3.6. We advise interested
 ## Reporting issues
 
 Godot is a complex piece of software and is not bug-free. Our contributors do their best to fix issues as they are being reported, but there's a lot of surface to cover and you might encounter situations which we aren't aware of yet, or couldn't fix in time for this release. There will be 3.6.x maintenance releases focused on fixing bugs in coming weeks and months, so make sure to [report any issue you encounter on GitHub](https://github.com/godotengine/godot/issues), so that we can make sure to fix it for our future releases.
+
+---
+
+*The illustration picture is a render of the [GDQuest Gobot model](https://github.com/gdquest-demos/godot-4-3D-Characters) (MIT license) in the [Amazon Lumberyard Bistro](https://developer.nvidia.com/orca/amazon-lumberyard-bistro) scene (CC BY 4.0 license), made by [Adam Scott](https://github.com/adamscott).*
