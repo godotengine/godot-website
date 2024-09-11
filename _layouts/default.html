@@ -23,8 +23,12 @@
 	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
 	<meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
 
-	<title>{{ page.title | default: "Godot Engine" }}</title>
-
+	{% if page.title %}
+		<title>{{ page.title | remove: " - Godot Engine" }}{% if page.notitlesuffix != true %} – Godot Engine{% endif %}</title>
+	{% else %}
+		<title>Godot Engine</title>
+	{% endif %}
+	
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
