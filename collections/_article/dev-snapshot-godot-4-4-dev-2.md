@@ -11,7 +11,7 @@ date: 2024-09-10 16:00:00
 
 It's barely been a month since the [4.3 release](/releases/4.3/), but we had so many goodies queued up in the PR backlog that it's been an early Christmas (or other gift-heavy holiday season) for contributors and testers.
 
-We merged more than 200 hundred PRs for the [first dev snapshot](/article/dev-snapshot-godot-4-4-dev-1/), and just two weeks later, here we are with another batch of 350+ improvements for you to test and provide feedback on!
+We merged more than 200 PRs for the [first dev snapshot](/article/dev-snapshot-godot-4-4-dev-1/), and just two weeks later, here we are with another batch of 350+ improvements for you to test and provide feedback on!
 
 Many of the changes in this release are bug fixes that will be backported to Godot 4.3 and released in 4.3.1! So please
 test this release well so we can be confident with the changes and release 4.3.1 with them as soon as possible.
@@ -173,7 +173,8 @@ This release is built from commit [`97ef3c837`](https://github.com/godotengine/g
 
 ## Known issues
 
-We're already aware of one issue with the new typed dictionaries when using the `[]` operator, described in [GH-96772](https://github.com/godotengine/godot/issues/96772). A fix is already in the pipeline for the next dev snapshot.
+- Typed dictionaries: Different typed keys/values are wrongly allowed when using the `[]` operator ([GH-96772](https://github.com/godotengine/godot/issues/96772)). A fix is already in the pipeline for the next dev snapshot.
+- Windows: Detecting newly added assets ([GH-96828](https://github.com/godotengine/godot/issues/96828)), export variables ([GH-96810](https://github.com/godotengine/godot/issues/96810)), and the last modification dates for projects ([GH-96812](https://github.com/godotengine/godot/issues/96812)) is not working in this snapshot, due to a toolchain bug exposed by a recent FileAccess change on Windows. This was already fixed by [GH-74830](https://github.com/godotengine/godot/pull/74830)).
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
 
