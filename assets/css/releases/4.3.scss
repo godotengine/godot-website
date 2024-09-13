@@ -158,11 +158,12 @@ $donate-robot-size: 500px;
 
 		&:hover {
 			span {
-				text-decoration: underline;
+				font-size: 35px;
 			}
 		}
 
 		span {
+			transition: font-size 0.2s ease-in-out;
 			transform:
 				translateY(-3px);
 		}
@@ -267,6 +268,7 @@ $donate-robot-size: 500px;
 					color: var(--dark-color);
 					padding: 12px 16px;
 					font-weight: bold;
+					border-radius: 0 var(--button-border-radius) var(--button-border-radius) 0;
 				}
 			}
 
