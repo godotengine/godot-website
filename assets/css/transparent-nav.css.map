@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "transparent-nav.css",
+	"sources": [
+		"transparent-nav.scss"
+	],
+	"sourcesContent": [
+		"/* Overwriting nav style */\nheader {\n\tbox-shadow: none;\n\tmargin-bottom: -70px;\n\tbackground-color: rgba(134, 144, 154, 0.15);\n\t-webkit-backdrop-filter: blur(4px);\n\tbackdrop-filter: blur(4px);\n}\n\n@media (max-width: 1200px) {\n\tinput#nav_toggle_cb:checked~header {\n\t\tbackground-color: var(--navbar-background-color);\n\t}\n}\n\nnav#nav {\n\ta {\n\t\tcolor: white;\n\t}\n}\n\n.nav-logo {\n\tdisplay: none;\n\t&.dark-logo {\n\t\tdisplay: inline;\n\t}\n}\n\n#nav_toggle_btn {\n\tfilter: invert(100%) saturate(0%) brightness(120%);\n}\n\n@media (max-width: 1200px) and (prefers-color-scheme: light) {\n\tnav#nav a {\n\t\tcolor: var(--navbar-link-color);\n\t}\n\n\tinput#nav_toggle_cb:checked~header #nav_head {\n\t\t#nav_toggle_btn {\n\t\t\tfilter: none;\n\t\t}\n\t\t.nav-logo {\n\t\t\tdisplay: inline;\n\t\t}\n\t\t.nav-logo.dark-logo {\n\t\t\tdisplay: none;\n\t\t}\n\t}\n}\n"
+	],
+	"names": [],
+	"mappings": "AACA,AAAA,MAAM,AAAC,CACN,UAAU,CAAE,IAAI,CAChB,aAAa,CAAE,KAAK,CACpB,gBAAgB,CAAE,sBAAyB,CAC3C,uBAAuB,CAAE,SAAS,CAClC,eAAe,CAAE,SAAS,CAC1B,AAED,MAAM,oBACL,CAAA,AAAA,KAAK,AAAA,cAAc,CAAC,OAAO,CAAC,MAAM,AAAC,CAClC,gBAAgB,CAAE,8BAA8B,CAChD,CAAA,AAGF,AACC,GADE,AAAA,IAAI,CACN,CAAC,AAAC,CACD,KAAK,CAAE,KAAK,CACZ,AAGF,AAAA,SAAS,AAAC,CACT,OAAO,CAAE,IAAI,CAIb,AALD,AAEC,SAFQ,AAEP,UAAU,AAAC,CACX,OAAO,CAAE,MAAM,CACf,AAGF,AAAA,eAAe,AAAC,CACf,MAAM,CAAE,YAAY,CAAC,YAAY,CAAC,gBAAgB,CAClD,AAED,MAAM,sDACL,CAAA,AAAA,GAAG,AAAA,IAAI,CAAC,CAAC,AAAC,CACT,KAAK,CAAE,wBAAwB,CAC/B,AAED,AACC,KADI,AAAA,cAAc,CAAC,OAAO,CAAC,MAAM,CAAC,SAAS,CAC3C,eAAe,AAAC,CACf,MAAM,CAAE,IAAI,CACZ,AAHF,AAIC,KAJI,AAAA,cAAc,CAAC,OAAO,CAAC,MAAM,CAAC,SAAS,CAI3C,SAAS,AAAC,CACT,OAAO,CAAE,MAAM,CACf,AANF,AAOC,KAPI,AAAA,cAAc,CAAC,OAAO,CAAC,MAAM,CAAC,SAAS,CAO3C,SAAS,AAAA,UAAU,AAAC,CACnB,OAAO,CAAE,IAAI,CACb,CAXD"
+}
