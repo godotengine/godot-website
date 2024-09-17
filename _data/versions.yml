@@ -370,7 +370,7 @@
 
 - name: "3.6"
   flavor: "stable"
-  release_date: "9 August 2024"
+  release_date: "9 September 2024"
   release_notes: "/article/godot-3-6-finally-released/"
   featured: "3"
   releases:
