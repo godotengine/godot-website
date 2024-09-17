@@ -37,9 +37,7 @@
 
   --big-button-color: #478cbf;
 
-  --fund-color: #ef6767;
-  --fund-color-hl: #e53e3e;
-  --fund-color-faint: #ff9d9d;
+  --fund-color: #F35774;
 
   --base-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -80,6 +78,9 @@
 
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --header-font-family: "Montserrat", sans-serif;
+
+  // Buttons
+  --button-border-radius: 12px;
 }
 
 .nav-logo.dark-logo {
@@ -121,9 +122,7 @@
 
     --big-button-color: #478cbf;
 
-    --fund-color: #ef6767;
-    --fund-color-hl: #e53e3e;
-    --fund-color-faint: #ef6767;
+    --fund-color: #F35774;
 
     --base-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -434,27 +433,49 @@ header {
   display: flex;
   align-items: center;
   box-shadow: var(--base-shadow);
+
+  .container {
+    overflow: initial;
+  }
+  
+  .fund {
+    margin-right: 0px;
+    &.desktop {
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+    &.mobile {
+      top: -2px;
+      position: relative;
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: var(--fund-color);
+      color: white;
+      background-color: var(--fund-color) !important; // avoid hover overwrite
+      border-radius: var(--button-border-radius);
+      box-shadow: inset 0 0 0 2px var(--fund-color);
+      padding: 13px;
+    }
+  }
+  #logo-link {
+    /* Make the logo's clickable area as tall as for other navigation links. */
+    padding: 0.2rem 0.5rem;
+    padding-top: 6px;
+    margin-left: -9px;
+    padding-right: 15px;
+    margin-right: -23px;
+  }
 }
 
 header > div.container {
   width: 100%;
 }
 
-header .container {
-  overflow: initial;
-}
-
-.only-on-mobile {
-  display: none;
-}
-
-#logo-link {
-  margin-right: 36px;
-  /* Make the logo's clickable area as tall as for other navigation links. */
-  padding: 0.2rem 0.5rem;
-  margin-top: 0.25rem;
-  margin-left: -0.5rem;
-}
 #nav_head {
   display: flex;
   align-items: center;
@@ -469,6 +490,12 @@ header .container {
   user-select: none;
 }
 
+.mobile-links {
+  display: grid;
+  grid-template-columns: 1fr 49px;
+  align-items: center;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -480,7 +507,7 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 400;
   color: var(--navbar-link-color);
   /* Make links easier to click. */
   padding: 1.3175rem 1rem;
@@ -489,16 +516,6 @@ nav a {
 nav a:hover,
 #logo-link:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
-}
-
-nav li.fund > a {
-  color: var(--fund-color);
-}
-nav li.fund > a:hover {
-  color: var(--fund-color-hl);
-}
-nav li.fund.active > a {
-  color: var(--fund-color-hl);
 }
 
 nav ul {
@@ -725,6 +742,8 @@ p.small {
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
+  border-radius: var(--button-border-radius);
+  transition: box-shadow 0.1s ease-in-out;
 }
 .btn:hover {
   box-shadow: var(--more-shadow);
@@ -754,6 +773,7 @@ p.small {
   background-color: white;
   padding: 0px;
   text-align: center;
+  border-radius: var(--button-border-radius);
 }
 .btn.btn-download > .download-title {
   color: var(--dark-color);
@@ -767,6 +787,10 @@ p.small {
   display: inline-block;
   padding: 16px 16px 16px 16px;
   min-width: 48px;
+  border-radius: 0 var(--button-border-radius) var(--button-border-radius) 0;
+  // Cover the white border radius from the button below
+  position: relative;
+  left: 3px;
 }
 
 .date-big {
@@ -912,32 +936,33 @@ pre > code {
   border-radius: 18px;
   overflow: hidden;
   min-width: 65%;
-}
-.search-bar input {
-  flex-grow: 1;
-  padding: 0.5rem 1rem;
-  line-height: 2;
-  font-size: 18px;
-  border: none;
-  border-right: 1px solid var(--transparent-cover);
-  background-color: var(--card-footer-color);
-  color: var(--base-color-text);
-}
-.search-bar input::placeholder {
-  color: var(--placeholder-text-color);
-}
-.search-bar .search-bar-btn {
-  cursor: pointer;
-  border: none;
-  width: 3rem;
-  padding: 0;
-  margin: 0;
-  background-color: var(--pagination-active-color);
-  color: var(--primary-color-text-title);
-}
-.search-bar .search-bar-btn img {
-  margin: 8px;
-  filter: invert(100%);
+  input {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    line-height: 2;
+    font-size: 18px;
+    border: none;
+    border-right: 1px solid var(--transparent-cover);
+    background-color: var(--card-footer-color);
+    color: var(--base-color-text);
+  }
+  input::placeholder {
+    color: var(--placeholder-text-color);
+  }
+  .search-bar-btn {
+    cursor: pointer;
+    border: none;
+    width: 3rem;
+    padding: 0;
+    margin: 0;
+    background-color: var(--pagination-active-color);
+    color: var(--primary-color-text-title);
+    border-radius: 0;
+    img {
+      margin: 8px;
+      filter: invert(100%);
+    }
+  }
 }
 
 @media (min-width: 1400px) {
@@ -962,10 +987,6 @@ pre > code {
 @media (max-width: 1200px) {
   .hide-on-mobile {
     display: none;
-  }
-
-  .only-on-mobile {
-    display: initial;
   }
 
   article .content {

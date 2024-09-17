@@ -48,9 +48,10 @@
 	text-decoration-thickness: 1px;
 }
 .card-download-sublinks .card-download-donate {
-	color: var(--fund-color-faint);
+	color: var(--fund-color);
+	text-decoration-color: var(--fund-color);
 	font-weight: 600;
-	text-decoration-color: var(--fund-color-faint);
+	text-shadow: 0 0 2px #000; /* Adding more contrast */
 }
 
 .card-download-details {
