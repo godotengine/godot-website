@@ -95,7 +95,7 @@ If you want to help, there are plenty of things to do. From helping by gathering
 
 * **Customized rendering**
 
-As Godot adoption increases, Godot because used for more niche and specialized projects. However, we can't provide everything that every user needs out of the box without becoming bloated, slow, and hard to use. So we need to provide more tools to customize rendering for projects that need more specialized effects. We started that process in 4.3 with the [CompositorEffects API](https://docs.godotengine.org/en/latest/classes/class_compositoreffect.html). We want to continue that effort by implementing more things in the Compositor API to allow users to [control the order of rendering](https://github.com/godotengine/godot-proposals/issues/7916), override [shader templates](https://github.com/godotengine/godot-proposals/issues/8366), etc.
+As Godot adoption increases, it is being used for more niche and specialized projects. However, we can't provide everything that every user needs out of the box without becoming bloated, slow, and hard to use. So we need to provide more tools to customize rendering for projects that need more specialized effects. We started that process in 4.3 with the [CompositorEffects API](https://docs.godotengine.org/en/latest/classes/class_compositoreffect.html). We want to continue that effort by implementing more things in the Compositor API to allow users to [control the order of rendering](https://github.com/godotengine/godot-proposals/issues/7916), override [shader templates](https://github.com/godotengine/godot-proposals/issues/8366), etc.
 
 * **Significantly improve screen-space effects (SSAO, SSIL, SSR, SSS)**
 
