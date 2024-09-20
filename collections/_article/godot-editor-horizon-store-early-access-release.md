@@ -38,7 +38,7 @@ This approach allows us to deliver on a core tenet of this port which is to prov
 
 ![Showcasing support for developing XR projects](/storage/blog/godot-editor-horizon-store-early-access-release/developing_xr_game.gif)
 
-When developing a XR project, the immersive (XR) window is used for playtesting the project as a fully immersive experience. In that mode, the Editor panel can be summoned as an interactive overlay, which allows the developer to iterate, debug or profile the XR project while it’s running.
+When developing a XR project, the immersive (XR) window is used for playtesting the project directly in the device as if it was a released app already. In that mode, the Editor panel can be summoned as an interactive overlay, which allows the developer to iterate, debug or profile the XR project while it’s running.
 
 Support for exporting XR project binaries will be made available via a plugin.
 
@@ -65,7 +65,7 @@ Virtual keyboard, touch controllers and [direct touch](https://www.meta.com/help
 
 ![Using Meta Quest seamless multitasking to modify XR game in real-time](/storage/blog/godot-editor-horizon-store-early-access-release/xr_game_live_modifications.gif)
 
-[Introduced in Horizon OS v69](https://www.uploadvr.com/seamless-multitasking-experimental-quest/), seamless multitasking enables the Editor panel to be visible and interactable while playtesting a XR project using the immersive (XR) window.
+[Introduced in Horizon OS v69](https://www.uploadvr.com/seamless-multitasking-experimental-quest/), seamless multitasking enables the Editor panel to be visible and interactable while playtesting a XR project in virtual space.
 
 This gives developers the ability to do live editing, debugging or profiling of XR projects in real-time, with the benefit of the depth cues and sense of scale unique to XR.
 
@@ -92,7 +92,7 @@ Besides the technical achievements required to make this port feasible, we belie
     * XR development on PC and laptop devices has significant friction due to the need to switch back and forth between the development device and the target XR device (i.e: taking the headset off for development, putting back on for playtesting).
     * This is not an issue when using the Godot Editor natively on XR devices since the development and target device are now the same device!
 * **Lowers the barrier of entry for XR and Game development**
-    * This version of the Godot Editor turns devices like the Meta Quest into an easily accessible development device with the ability to natively create, develop and export 2D, 3D or immersive XR apps and games for all Godot-supported platforms.
+    * This version of the Godot Editor turns devices like the Meta Quest into an easily accessible development device with the ability to natively create, develop and export 2D, 3D or XR apps and games for all Godot-supported platforms.
 * **Provides a more flexible development experience**
     * Developers can leverage the virtual space to gain more screen estate than a laptop could provide.
     * The [virtual floating panels](https://www.meta.com/blog/quest/meta-quest-v67-update-new-window-layout-creator-content-horizon-feed/) provide a more flexible layout than a traditional desktop + multi-monitors setup.
