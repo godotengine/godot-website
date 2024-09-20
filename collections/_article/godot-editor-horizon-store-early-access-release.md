@@ -4,6 +4,7 @@ excerpt: "Introducing the Godot Editor for Meta Quest (Horizon OS) devices"
 categories: ["pre-release"]
 author: Fredia Huya-Kouadio
 image: /storage/blog/covers/godot-editor-horizon-store-early-access-release.webp
+image_caption_description: "Godot Editor on Meta Quest running <a href='https://github.com/KenneyNL/Starter-Kit-3D-Platformer'>Kenney's Starter Kit 3D Platformer</a>"
 date: 2024-09-20 16:00:00
 ---
 
