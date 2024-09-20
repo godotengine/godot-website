@@ -4,14 +4,14 @@ excerpt: "4.3 is out. It's time for an update!"
 categories: ["progress-report"]
 author: Clay John
 image: /storage/blog/covers/rendering-priorities-september-2024.webp
-date: 2024-09-18 9:00:00
+date: 2024-09-23 9:00:00
 ---
 
 It's time again to update everyone on the activities of the rendering team. We have been hard at work fixing countless bugs and improving the renderer. Now that 4.3 is out, we have taken the chance to re-assess our priorities.
 
 ## Get Involved
 
-As a reminder, we are always in need of more help. The rendering team is very small and none of us are working on the renderer full time. If you are interested in helping out please consider joining the #rendering channel on [chat.godotengine.org](chat.godotengine.org), joining the weekly meetings that place, or just opening a pull request!
+As a reminder, we are always in need of more help. The rendering team is very small and none of us are working on the renderer full-time. If you are interested in helping out, please consider joining the #rendering channel on [chat.godotengine.org](chat.godotengine.org), joining the weekly meetings that place, or just opening a pull request!
 
 In addition to the priorities listed here, you can get started contributing by fixing bugs. We have been categorizing bugs by complexity and priority in the new [Rendering Issue triage project](https://github.com/orgs/godotengine/projects/78) to make it easier for new contributors to discover bugs that need attention.
 
@@ -23,9 +23,9 @@ The below are the priorities we identified in the last rendering priorities blog
 
 * **Background pipeline compilation + Proper multi-threading in the RenderingDevice ([GH-90400](https://github.com/godotengine/godot/pull/90400)) (Ready to merge)**
 
-This work was finished during the 4.3 dev cycle, but due to the size and complexity we deferred merging it to 4.4. As a reminder, this PR implements the concept of an "ubershader" which is basically a version of the shader that contains all features and is compiled at load time. We pair the ubershader with the ability to compile specialized shader pipelines in the background. This way when we draw a new object, instead of freezing and waiting for the pipeline to compile, we fallback on the ubershader and compile the specialized shader in the background.
+This work was finished during the 4.3 dev cycle, but we deferred merging it to 4.4 because of its size and complexity. As a reminder, this PR implements the concept of an "ubershader" which is basically a version of the shader that contains all features and is compiled at load time. We pair the ubershader with the ability to compile specialized shader pipelines in the background. This way when we draw a new object, instead of freezing and waiting for the pipeline to compile, we fallback on the ubershader and compile the specialized shader in the background.
 
-The early results are very promising. We are seeing reduced load times for large games as well as a reduction in shader pipeline compilation stutter when objects are seen for the first time. In fact, so far we are seeing no shader pipeline compilation stutters at run time.
+The early results are very promising. We are seeing reduced load times for large games as well as a reduction in shader pipeline compilation stutter when objects are seen for the first time. In fact, so far we are seeing no shader pipeline compilation stutters at run-time.
 
 * **BUGS (in progress, always)**
 
@@ -33,11 +33,11 @@ We fixed over [300](https://github.com/godotengine/godot/pulls?q=is%3Apr+is%3Acl
 
 * **GL Compatibility renderer - 3D (Done)**
 
-We merged support for MSAA, LightmapGI (including baking), resolution scaling, glow, ReflectionProbes, post process adjustments and color correction in time for 4.3. At this point we consider the Compatibility renderer feature complete. Meaning that it now has all the features we planned for it when we first designed the renderer. We will continue adding some new features to achieve closer parity with the Mobile renderer, but new features will have less of a priority now.
+We merged support for MSAA, LightmapGI (including baking), resolution scaling, glow, ReflectionProbes, post process adjustments and color correction in time for 4.3. At this point we consider the Compatibility renderer feature complete which means it now has all the features we planned for it when we first designed the renderer. We will continue adding some new features to achieve closer parity with the Mobile renderer, but new features will have less of a priority now.
 
 * **D3D12 rendering driver ([GH-70315](https://github.com/godotengine/godot/pull/70315)) (Done)**
 
-This was merged early in the 4.3 release cycle, but was improved steadily throughout the release cycle. Now the D3D12 rendering driver is available for widespread use. This is especially important for ARM64 Windows devices which don't support OpenGL or Vulkan.
+This was merged early in the 4.3 release cycle, but was improved steadily throughout the release cycle. The D3D12 rendering driver is now available for widespread use. This is especially important for ARM64 Windows devices which don't support OpenGL or Vulkan.
 
 * **RenderingDeviceDriver refactor ([GH-83452](https://github.com/godotengine/godot/pull/83452)) (Done)**
 
@@ -55,13 +55,13 @@ Right now the API is functional and exposes almost all internal render state so 
 
 There is already an [official demo](https://github.com/godotengine/godot-demo-projects/tree/master/compute/post_shader) so you can see how it works!
 
-* **Metal rendering driver [GH-88199](https://github.com/godotengine/godot/pull/88199)(Merged for 4.4)**
+* **Metal rendering driver [GH-88199](https://github.com/godotengine/godot/pull/88199) (Merged for 4.4)**
 
-This was a work in progress for much of the 4.3 release cycle and was finished slightly too late to include in 4.3. We merged it immediately for 4.4 so we can get widespread testing before release. Its ready to try in [4.4-dev1](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/) or later releases.
+This was a work in progress for much of the 4.3 release cycle and was finished slightly too late to include in 4.3. We merged it immediately for 4.4 so we can get widespread testing before release. It's ready to try in [4.4-dev1](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/) or later releases.
 
 Metal enhances both performance and stability on Apple silicon devices. Please test it out and let us know if you run into any issues!
 
-* **SDFGI refactor ([GH-86267](https://github.com/godotengine/godot/pull/86267)) (In progress)**
+* **SDFGI refactor / HDDAGI ([GH-86267](https://github.com/godotengine/godot/pull/86267)) (In progress)**
 
 This is still a work in progress, but results are already quite good. Both performance and quality are better than SDFGI. Juan still has many ideas he wants to apply, so this work may continue for some time before it is ready.
 
@@ -69,17 +69,16 @@ This is still a work in progress, but results are already quite good. Both perfo
 
 We have completed almost all of our previous priorities, so now we get to set out new goals for the next few release cycles. Right now rendering contributors are most excited about two things:
 
-* Unblocking advanced users (especially for advanced VFX), and
-
+* Unblocking advanced users (especially for advanced VFX).
 * Improving performance.
 
 These are rising to the top of the priority list as Godot becomes increasingly stable and the core user-experience feels quite good.
 
 In particular the following are areas where you can expect to see changes in the next couple of releases. Bear in mind that we don't have dedicated people working on any of these priorities. If you are interested in contributing, please consider contributing in one of these areas.
 
-* **Performance:**
+* **Performance**
 
-Performance is our number one priority. Now that Godot 4 has been out for over a year we are seeing more games releasing with Godot and users are starting to create bigger and higher fidelity games. A natural consequence is that Godot's renderer is starting to become a limiting factor for some users. Accordingly it is time for us to prioritize speed and to start implementing all the optimizations we have been putting off for later. You can find a list of a number of them listed in our [4.x Rendering Roadmap Github project](https://github.com/orgs/godotengine/projects/33).
+Performance is our number one priority. Now that Godot 4 has been out for over a year we are seeing more games releasing with Godot and users are starting to create bigger and higher-fidelity games. A natural consequence is that Godot's renderer is starting to become a limiting factor for some users. Accordingly, it's time for us to prioritize speed and to start implementing all the optimizations we have been putting off for later. You can find a list of a number of them listed in our [4.x Rendering Roadmap Github project](https://github.com/orgs/godotengine/projects/33).
 
 * **Lightmapping improvements**
 
@@ -87,11 +86,11 @@ We have had a lot of recurring requests to improve the quality and ease-of-use o
 
 * **Improving VFX workflow**
 
-Godot 4 has brought many quality of life features to particles like [animated velocities](https://godotengine.org/article/progress-report-state-of-particles/) and [turbulence](https://github.com/godotengine/godot/pull/55387). However, particles still fall short in term of larger scale workflow. VFX artists have to come up with their own structure for VFX (often script + animation player), figure out ways to check timings of their effects outside the engine (using screen capture software, for example), modify billboarding logic manually when moving to custom particle shaders, and so on. Despite improvements to the flexibility of the engine, artists still need advanced knowledge to do many things (like write post processing effects with the new CompositorEffect API). 
+Godot 4 has brought many quality of life features to particles like [animated velocities](https://godotengine.org/article/progress-report-state-of-particles/) and [turbulence](https://github.com/godotengine/godot/pull/55387). However, particles still fall short in term of the broader workflow. VFX artists have to come up with their own structure for VFX (often script + animation player), figure out ways to check timings of their effects outside the engine (using screen capture software, for example), modify billboarding logic manually when moving to custom particle shaders, and so on. Despite improvements to the flexibility of the engine, artists still need advanced technical knowledge to do many things (like writing post-processing effects with the new CompositorEffect API). 
 
 We still have a lot of work to make Godot more accessible for people that are less interested in learning shaders or programming but still want juicy effects and immersive environments in their games.
 
-If you want to help, there are plenty of things to do. From helping by gathering knowledge and evaluating solutions from multiple perspectives, to implementing agreed [new features and bug fixes](https://github.com/orgs/godotengine/projects/54/views/6), finally, by joining us in the [vfx server](https://discord.gg/HX4xAGaGjm).
+If you want to help, there are plenty of things to do. From helping by gathering knowledge and evaluating solutions from multiple perspectives, to implementing agreed [new features and bug fixes](https://github.com/orgs/godotengine/projects/54/views/6), finally, by joining us in the [VFX Discord server](https://discord.gg/HX4xAGaGjm).
 
 * **Customized rendering**
 
@@ -103,7 +102,7 @@ All of the screen-space effects in Godot 4 were designed to run without using te
 
 Now that we have proper motion vectors, we want to provide versions of all the screen-space effects that take advantage of motion vectors to increase their quality and reduce performance cost.
 
-We still won't rely on TAA for any of the built in effects as we want users to be able to choose whether to enable TAA or not, but we will likely use temporal reprojection by default for most of these effects.
+We still won't require TAA for any of the built-in effects as we want users to be able to choose whether to enable TAA or not, but we will likely use temporal reprojection by default for most of these effects.
 
 This is an area that is really easy to contribute to if you are already familiar with rendering but want to get more familiar with Godot!
 
