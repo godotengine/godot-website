@@ -104,4 +104,4 @@ This is only the beginning!
 
 As mentioned in the previous section, we believe this is an important milestone for the XR, GameDev, and Open Source communities and we aim to build on this foundation to make Godot Engine a powerful, flexible and cross-platform tool for XR and Game development.
 
-To that end, we welcome feedback and contributions from partners, members of the community and interested parties to help deliver on that goal.
+To that end, we welcome feedback and contributions from partners, members of the community and interested parties.
