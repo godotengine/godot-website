@@ -76,7 +76,7 @@ Drag & drop of Mesh to create MeshEmitter in visual shaders ([GH-93017](https://
 
 ### Initial Android editor support for XR devices
 
-Thanks to Godot's unique feature of having an editor made with the engine itself, we've been able to bring the Godot editor to unconventional places, such as [the web](https://editor.godotengine.org/) and [Android devices](https://play.google.com/store/apps/details?id=org.godotengine.editor.v4). Building upon the latter, [Fredia Huya-Kouadio](https://github.com/m4gr3d) completed the proof of concept started by [Bastiaan Olij](https://github.com/BastiaanOlij) years ago, to add support for using the Android editor in an XR context using OpenXR ([GH-96624](https://github.com/godotengine/godot/pull/96624))! You can [test the current version](https://github.com/godotengine/godot-builds/releases/download/4.4-dev2/Godot_v4.4-dev2_android_editor_meta.apk) by sideloading the APK, currently supported on Meta Quest 3 or Quest Pro.
+Thanks to Godot's unique feature of having an editor made with the engine itself, we've been able to bring the Godot editor to unconventional places, such as [the web](https://editor.godotengine.org/) and [Android devices](https://play.google.com/store/apps/details?id=org.godotengine.editor.v4). Building upon the latter, [Fredia Huya-Kouadio](https://github.com/m4gr3d) completed the proof of concept started by [Bastiaan Olij](https://github.com/BastiaanOlij) years ago, to add support for using the Android editor in an XR context using OpenXR ([GH-96624](https://github.com/godotengine/godot/pull/96624))! You can [test the current version](https://github.com/godotengine/godot-builds/releases/download/4.4-dev2/Godot_v4.4-dev2_android_editor_horizonos.apk) by sideloading the APK, currently supported on Meta Quest 3 or Quest Pro.
 
 ### And more!
 
@@ -174,7 +174,7 @@ This release is built from commit [`97ef3c837`](https://github.com/godotengine/g
 ## Known issues
 
 - Typed dictionaries: Different typed keys/values are wrongly allowed when using the `[]` operator ([GH-96772](https://github.com/godotengine/godot/issues/96772)). A fix is already in the pipeline for the next dev snapshot.
-- Windows: Detecting newly added assets ([GH-96828](https://github.com/godotengine/godot/issues/96828)), export variables ([GH-96810](https://github.com/godotengine/godot/issues/96810)), and the last modification dates for projects ([GH-96812](https://github.com/godotengine/godot/issues/96812)) is not working in this snapshot, due to a toolchain bug exposed by a recent FileAccess change on Windows. This was already fixed by [GH-74830](https://github.com/godotengine/godot/pull/74830)).
+- Windows: Detecting newly added assets ([GH-96828](https://github.com/godotengine/godot/issues/96828)), export variables ([GH-96810](https://github.com/godotengine/godot/issues/96810)), and the last modification dates for projects ([GH-96812](https://github.com/godotengine/godot/issues/96812)) is not working in this snapshot, due to a toolchain bug exposed by a recent FileAccess change on Windows. This was already fixed by [GH-74830](https://github.com/godotengine/godot/pull/74830).
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
 
