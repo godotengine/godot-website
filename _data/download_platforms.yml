@@ -14,7 +14,7 @@
 
 - name: "android.apk"
   title: "Android"
-  caption: "Universal APK"
+  caption: "APK - Universal"
   tags:
     - APK download
     - arm64
@@ -24,7 +24,7 @@
 
 - name: "android.playstore"
   title: "Android"
-  caption: "Play Store Universal"
+  caption: "Play Store"
   tags:
     - Play Store
     - arm64
@@ -32,56 +32,66 @@
     - x86_64
     - x86_32
 
+- name: "android.horizonos"
+  title: "Horizon OS"
+  caption: "APK - arm64"
+  tags:
+    - APK download
+    - Meta Quest 3 & Pro
+    - arm64
+
+- name: "android.horizonstore"
+  title: "Horizon OS"
+  caption: "Horizon Store"
+  tags:
+    - Horizon Store
+    - Meta Quest 3 & Pro
+    - arm64
+
 - name: "linux.32"
   title: "Linux"
-  caption: "Standard (x86_32)"
+  caption: "x86_32"
   tags:
     - x86_32
-    - 32 bit
 
 - name: "linux.64"
   title: "Linux"
-  caption: "Standard (x86_64)"
+  caption: "x86_64"
   tags:
     - x86_64
-    - 64 bit
 
 - name: "linux.arm32"
   title: "Linux"
-  caption: "Standard (arm32)"
+  caption: "arm32"
   tags:
     - arm32
-    - 32 bit
 
 - name: "linux.arm64"
   title: "Linux"
-  caption: "Standard (arm64)"
+  caption: "arm64"
   tags:
     - arm64
-    - 64 bit
 
 - name: "linux_server.64"
   title: "Linux Server"
-  caption: "Standard (x86_64)"
+  caption: "Export Template - x86_64"
   tags:
     - x86_64
-    - 64 bit
+    - Headless
 
 - name: "linux_server.headless.64"
   title: "Linux Server"
-  caption: "Headless (x86_64)"
+  caption: "Editor - x86_64"
   tags:
     - x86_64
-    - 64 bit
     - Headless
 
 - name: "macos.universal"
   title: "macOS"
-  caption: "Standard"
+  caption: "Universal"
   tags:
-    - Apple Silicon
-    - x86_64
-    - 64 bit
+    - arm64 (Apple Silicon)
+    - x86_64 (Intel)
 
 - name: "web"
   title: "Web editor"
@@ -92,21 +102,18 @@
 
 - name: "windows.32"
   title: "Windows"
-  caption: "Standard (x86_32)"
+  caption: "x86_32"
   tags:
     - x86_32
-    - 32 bit
 
 - name: "windows.64"
   title: "Windows"
-  caption: "Standard (x86_64)"
+  caption: "x86_64"
   tags:
     - x86_64
-    - 64 bit
 
 - name: "windows.arm64"
   title: "Windows"
-  caption: "Standard (arm64)"
+  caption: "arm64"
   tags:
     - arm64
-    - 64 bit
