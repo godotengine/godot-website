@@ -4,7 +4,7 @@ excerpt: "4.3 is out. It's time for an update!"
 categories: ["progress-report"]
 author: Clay John
 image: /storage/blog/covers/rendering-priorities-september-2024.webp
-date: 2024-09-23 9:00:00
+date: 2024-09-23 15:45:00
 ---
 
 It's time again to update everyone on the activities of the rendering team. We have been hard at work fixing countless bugs and improving the renderer. Now that 4.3 is out, we have taken the chance to re-assess our priorities.
