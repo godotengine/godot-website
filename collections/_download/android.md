@@ -13,6 +13,11 @@ downloads:
     featured: true
     featured_flavor: APK
 
+  - platform: "android.horizonstore"
+    custom: https://www.meta.com/en-gb/experiences/godot-game-engine/7713660705416473/
+    featured: true
+    featured_flavor: Horizon Store
+
 ignore_export: true
 ignore_mono: true
 
