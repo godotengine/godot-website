@@ -7,6 +7,9 @@ hosts:
     title: "Official TuxFamily mirror"
 
 defaults:
+  - name: "4.4"
+    stable: [ "github", "tuxfamily" ]
+    preview: [ "github_builds", "tuxfamily" ]
   - name: "4.3"
     stable: [ "github", "tuxfamily" ]
     preview: [ "github_builds", "tuxfamily" ]
