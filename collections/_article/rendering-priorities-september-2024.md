@@ -11,7 +11,7 @@ It's time again to update everyone on the activities of the rendering team. We h
 
 ## Get Involved
 
-As a reminder, we are always in need of more help. The rendering team is very small and none of us are working on the renderer full-time. If you are interested in helping out, please consider joining the #rendering channel on [chat.godotengine.org](chat.godotengine.org), joining the weekly meetings that place, or just opening a pull request!
+As a reminder, we are always in need of more help. The rendering team is very small and none of us are working on the renderer full-time. If you are interested in helping out, please consider joining the #rendering channel on [chat.godotengine.org](https://chat.godotengine.org), joining the weekly meetings that place, or just opening a pull request!
 
 In addition to the priorities listed here, you can get started contributing by fixing bugs. We have been categorizing bugs by complexity and priority in the new [Rendering Issue triage project](https://github.com/orgs/godotengine/projects/78) to make it easier for new contributors to discover bugs that need attention.
 
