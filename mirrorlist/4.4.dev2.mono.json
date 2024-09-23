@@ -1,1 +1,1 @@
-{"mirrors":[{"name":"Official TuxFamily mirror","url":"https://downloads.tuxfamily.org/godotengine/4.4/dev2/mono/Godot_v4.4-dev2_mono_export_templates.tpz"}]}
+{"mirrors":[{"name":"Official GitHub Releases mirror","url":"https://github.com/godotengine/godot-builds/releases/download/4.4-dev2/Godot_v4.4-dev2_mono_export_templates.tpz"},{"name":"Official TuxFamily mirror","url":"https://downloads.tuxfamily.org/godotengine/4.4/dev2/mono/Godot_v4.4-dev2_mono_export_templates.tpz"}]}
