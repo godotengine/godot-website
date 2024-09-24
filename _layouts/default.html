@@ -9,7 +9,7 @@
 	
 	<!-- Social meta tags -->
 	<meta property="og:site_name" content="Godot Engine">
-	<meta property="og:url" content="https://godotengine.org">
+	<meta property="og:url" content="https://godotengine.org{{ page.url }}">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ page.title | default: "Godot Engine" }}">
 	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
@@ -18,7 +18,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@godotengine">
 	<meta property="twitter:domain" content="godotengine.org">
-	<meta property="twitter:url" content="https://godotengine.org">
+	<meta property="twitter:url" content="https://godotengine.org{{ page.url }}">
 	<meta name="twitter:title" content="{{ page.title | default: "Godot Engine" }}">
 	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
 	<meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
