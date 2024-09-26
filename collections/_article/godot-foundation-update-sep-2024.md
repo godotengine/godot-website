@@ -24,9 +24,9 @@ Foundation will always operate in a way that supports Godot.
 
 ## Contractors
 The Foundation has 9 contractors working on the engine directly (5 full time, 4 part time) and 3 contractors
-working on administration + infrastructure right. We are currently in the hiring process for 1-2 more positions.
+working on administration + infrastructure right now. We are currently in the hiring process for 1-2 more positions.
 
-Even with 12 people we feel very understaffed as there is always more work that can be done. Accordingly, we would like
+Even with 12 people, we feel very understaffed as there is always more work that can be done. Accordingly, we would like
 to continue hiring once funding allows for it.
 
 ## Upcoming projects
@@ -63,9 +63,9 @@ with expected dates. However, we believe it will answer a lot of questions that 
 the project.
  
 ### Trademark Policy
-We registered the Godot trademark and the Godot logo trademark while still a member project of the SFC. Last year the
+We registered the Godot trademark and the Godot logo trademark while still a member project of the SFC. Last year, the
 SFC granted the Godot Foundation ownership over the trademarks. Now we need to have a public policy that says how and
-when others can use the trademarks in order to protect them.
+when others can use the trademarks to protect them.
 
 We are working with our lawyers to craft a policy that is fair to existing users, as permissive as possible, and still
 able to protect our trademark.
@@ -82,7 +82,7 @@ able to improve so quickly and do so much for a fraction of the funding that the
 
 The Foundation (meaning the Board of Directors and the people hired by the Foundation) does not determine the priorities
 of the project in a top-down way. In other words, the Foundation does not dictate to individual volunteers what they
-should work on. Instead it influences the project implicitly by making hiring decisions and hiring people for specific
+should work on. Instead, it influences the project implicitly by making hiring decisions and hiring people for specific
 tasks that aren’t being done by the community.
 
 Ultimately, it is the Godot community that deserves the most credit for the growth and development of Godot. While we
