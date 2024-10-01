@@ -1,0 +1,38 @@
+{% assign nb_of_priorities = include.elements | size %}
+
+{% if nb_of_priorities > 0 %}
+	<div id="{{ include.id }}" class="category level-{{ include.level }}">
+		<div class="container">
+			<details class="category-details" open>
+				<summary class="category-summary">
+					<div class="category-anchor-container">
+						<a class="category-anchor" href="#{{ include.id }}">
+							<span class="anchor-icon"></span>
+						</a>
+					</div>
+					{% assign header_number = include.level | to_i | plus: 1 %}
+					{% assign header_tag = "h" | append: header_number %}
+					<{{ header_tag }} class="category-title">
+						<div class="category-title-text">{{ include.name }}</div>
+					</{{ header_tag }}>
+					<div class="category-accordion-toggle">
+						<span class="material-symbols-outlined more">unfold_more</span>
+						<span class="material-symbols-outlined less">unfold_less</span>
+					</div>
+				</summary>
+				<div class="category-content">
+					<ul class="element-list">
+						{% for element in include.elements %}
+							<li class="element-list-item">
+								{%
+									include_relative _includes/element.html
+									element=element
+								%}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</details>
+		</div>
+	</div>
+{% endif %}

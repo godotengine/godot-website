@@ -30,18 +30,6 @@ $mobile-max-width: 700px;
 	}
 }
 
-@mixin is-dark() {
-	@media screen and (prefers-color-scheme: dark) {
-		@content;
-	}
-}
-
-@mixin is-light() {
-	@media screen and (prefers-color-scheme: light) {
-		@content;
-	}
-}
-
 $anchor-offset: 75px;
 
 $header-background-color: #25282B;

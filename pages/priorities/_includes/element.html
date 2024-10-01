@@ -1,0 +1,98 @@
+{% assign element = include.element %}
+
+<div id="{{ element.anchor }}" class="element">
+	<details class="element-main">
+		<summary class="element-title">
+			<div class="text">
+				<div class="element-title-container element-title-container-title-text">
+					<div class="element-title-text">{{ element.title | markdownify }}</div>
+				</div>
+				<div class="element-title-container element-title-container-anchor">
+					<a class="element-title-anchor" href="#{{ element.anchor }}">
+						<span class="anchor-icon"></span>
+					</a>
+				</div>
+			</div>
+			<div class="element-accordion-toggle">
+				<span class="material-symbols-outlined more">unfold_more</span>
+				<span class="material-symbols-outlined less">unfold_less</span>
+			</div>
+		</summary>
+		<div class="element-content">
+			<div class="element-description">
+				{% if element.description == "" %}
+					<em>...</em>
+				{% else %}
+					{{ element.description | markdownify }}
+				{% endif %}
+			</div>
+			<div class="element-details"><!-- Remove unnecessary whitespace that prevents CSS :empty.
+				-->{% for detail in element.details %}
+					<div class="detail-block {{ detail.type }}">
+						<div class="detail-block-header">
+							<div class="icon">
+								{% if detail.type == "note" %}
+									<span class="material-symbols-outlined info">info</span>
+								{% elsif detail.type == "warning" %}
+									<span class="material-symbols-outlined warning">warning</span>
+								{% elsif detail.type == "links" %}
+									<span class="material-symbols-outlined links">file_export</span>
+								{% elsif detail.type == "trackers" %}
+									<span class="material-symbols-outlined list_alt_check">list_alt_check</span>
+								{% elsif detail.type == "prs" %}
+									<span class="godot-icon-git-pull-request"></span>
+								{% elsif detail.type == "issues" %}
+									<span class="godot-icon-bug"></span>
+								{% elsif detail.type == "proposals" %}
+									<span class="godot-icon-zap"></span>
+								{% endif %}
+							</div>
+							<div class="label">
+								{% if detail.type == "note" %}
+									<span>Note</span>
+								{% elsif detail.type == "warning" %}
+									<span>Warning</span>
+								{% elsif detail.type == "links" %}
+									<span>Links</span>
+								{% elsif detail.type == "trackers" %}
+									<span>Trackers</span>
+								{% elsif detail.type == "prs" %}
+									<span>Pull requests</span>
+								{% elsif detail.type == "issues" %}
+									<span>Issues</span>
+								{% elsif detail.type == "proposals" %}
+									<span>Proposals</span>
+								{% endif %}
+							</div>
+						</div>
+						<div class="detail-block-content">
+							{{ detail.content | markdownify }}
+						</div>
+					</div>
+				{% endfor %}<!--
+			--></div>
+			<div class="element-edit"><!-- Remove unnecessary whitespace that prevents CSS :empty.
+				-->{% unless element.edits == null %}
+				<div class="element-edit-title">Edit history</div>
+				<table class="element-edit-entries">
+					<tbody>
+						{% assign edit_elements = element.edits | sort: "date" | reverse %}
+						{% for edit_element in edit_elements %}
+							<tr class="element-edit-entry">
+								{% assign date = edit_element["date"] %}
+								{% assign content = edit_element["content"] %}
+								<td>
+									<time datetime="{{date}}" class="element-edit-entry-time">{{date}}</time>
+								</td>
+								<td class="element-edit-entry-content">
+									{{ content | markdownify }}
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				{% endunless %}<!--
+			--></div>
+		</div>
+	</details>
+</div>

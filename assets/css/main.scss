@@ -259,6 +259,7 @@
 *:focus {
   /* More visible outline for better keyboard navigation. */
   outline: 0.125rem solid hsl(220, 100%, 62.5%);
+	outline-color: currentcolor;
   /* Make the outline always appear above other elements. */
   /* Otherwise, one of its sides can be hidden by tabs in the Download and More layouts. */
   position: relative;
@@ -282,7 +283,6 @@ body a {
   color: var(--link-color);
   text-decoration: underline;
   text-decoration-color: var(--link-underline-color);
-  text-decoration-thickness: 0.125rem;
   /* Prevent color transitions from being too fast (for epilepsy). */
   transition: 0.1s filter;
 }
@@ -311,7 +311,7 @@ h1,
 h2,
 h3,
 h4,
-nav a,
+#nav a,
 .btn,
 a.btn,
 .title-font {
@@ -437,31 +437,33 @@ header {
   .container {
     overflow: initial;
   }
-  
-  .fund {
-    margin-right: 0px;
-    &.desktop {
-      @media (max-width: 1200px) {
-        display: none;
-      }
-    }
-    &.mobile {
-      top: -2px;
-      position: relative;
-      @media (min-width: 1200px) {
-        display: none;
-      }
-    }
-    a {
-      text-decoration: none;
-      color: var(--fund-color);
-      color: white;
-      background-color: var(--fund-color) !important; // avoid hover overwrite
-      border-radius: var(--button-border-radius);
-      box-shadow: inset 0 0 0 2px var(--fund-color);
-      padding: 13px;
-    }
-  }
+
+	#nav, #nav_head {
+		.fund {
+			margin-right: 0px;
+			&.desktop {
+				@media (max-width: 1200px) {
+					display: none;
+				}
+			}
+			&.mobile {
+				top: -2px;
+				position: relative;
+				@media (min-width: 1200px) {
+					display: none;
+				}
+			}
+			a {
+				text-decoration: none;
+				color: var(--fund-color);
+				color: white;
+				background-color: var(--fund-color) !important; // avoid hover overwrite
+				border-radius: var(--button-border-radius);
+				box-shadow: inset 0 0 0 2px var(--fund-color);
+				padding: 13px;
+			}
+		}
+	}
   #logo-link {
     /* Make the logo's clickable area as tall as for other navigation links. */
     padding: 0.2rem 0.5rem;
@@ -496,7 +498,7 @@ header > div.container {
   align-items: center;
 }
 
-nav {
+#nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -504,7 +506,7 @@ nav {
   padding-right: 1rem;
 }
 
-nav a {
+#nav a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
@@ -513,32 +515,32 @@ nav a {
   padding: 1.3175rem 1rem;
 }
 
-nav a:hover,
+#nav a:hover,
 #logo-link:hover {
   background-color: hsla(0, 0%, 50%, 0.1);
 }
 
-nav ul {
+#nav ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-nav > ul {
+#nav > ul {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-nav > ul > :first-child {
+#nav > ul > :first-child {
   padding-left: 0;
 }
 
-nav > ul > :last-child {
+#nav > ul > :last-child {
   padding-right: 0;
 }
 
-nav > ul li {
+#nav > ul li {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 0;
@@ -546,11 +548,11 @@ nav > ul li {
   margin-right: -1rem;
 }
 
-nav li.active > a {
+#nav li.active > a {
   color: var(--navbar-link-current-color);
 }
 
-nav > ul ul {
+#nav > ul ul {
   display: none;
 }
 
@@ -1026,20 +1028,20 @@ pre > code {
   #nav {
     display: none;
   }
-  nav ul {
+  #nav ul {
     align-items: flex-start;
     flex-direction: column;
     height: auto;
   }
-  nav > ul {
+  #nav > ul {
     margin-bottom: 16px;
   }
-  nav ul li {
+  #nav ul li {
     padding: 0;
     padding-top: 16px;
     width: 100%;
   }
-  nav ul a {
+  #nav ul a {
     width: 100%;
     display: block;
     /* Make links easier to click but still close to each other. */
