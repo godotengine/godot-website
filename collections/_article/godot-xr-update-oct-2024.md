@@ -5,7 +5,7 @@ categories: ["progress-report"]
 author: Bastiaan Olij
 image: /storage/blog/covers/october-2024-xr-progress-update.webp
 image_caption_description: "Untitled penguin VR project by Zi Ye"
-date: 2024-10-01 11:00:00
+date: 2024-10-02 12:00:00
 ---
 
 It has been a very busy year on the XR front and seeing we haven’t given a proper update for well over a year, it’s time to look back at what has happened since our last update post.
