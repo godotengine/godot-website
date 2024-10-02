@@ -83,7 +83,7 @@ These improvements also include various rendering optimisations and fixes.
 
 On top of the standardisation of passthrough and hand-tracking in Godot, support for many extra features Meta provides was implemented in the [Godot OpenXR Vendors plugin](https://github.com/GodotVR/godot_openxr_vendors).
 
-For passthrough, this includes applying various filters to the passthrough imagery, like adjusting the brightness, contrast and saturation, mapping the colors to other values, or even projecting passthrough onto custom geometry, in order to bring only specific objects from the user's physics environment into an otherwise VR experience. See the [Meta Passthrough tutorial](https://godotvr.github.io/godot_openxr_vendors/manual/meta/passthrough.html) for more information.
+For passthrough, this includes applying various filters to the passthrough imagery, like adjusting the brightness, contrast and saturation, mapping the colors to other values, or even projecting passthrough onto custom geometry, in order to bring only specific objects from the user's physical environment into an otherwise VR experience. See the [Meta Passthrough tutorial](https://godotvr.github.io/godot_openxr_vendors/manual/meta/passthrough.html) for more information.
 
 For hand-tracking, developers can now access hand meshes, collision shapes for the hands, and do some simple gesture tracking, like detecting pinches between the user's thumb and any of the other fingers. See the [Meta Hand Tracking tutorial](https://godotvr.github.io/godot_openxr_vendors/manual/meta/hand_tracking.html) for the full details about these features.
 
@@ -95,7 +95,7 @@ The result of this approach is far sharper detail of the 2D content compared to 
 
 This is ideal for in game menus, media viewing, or heads up displays. Small text is especially more readable when using this technique.
 
-W4 Games added both the [core implementation](https://docs.godotengine.org/en/latest/tutorials/xr/openxr_composition_layers.html) and Meta-specific extensions, which allow applying further sharpening or supersampling, advanced alpha blending or marking particular composition layers as containing "secure content". See the Meta Composition Layers tutorial for more information about these Meta-specific features.
+W4 Games added both the [core implementation](https://docs.godotengine.org/en/latest/tutorials/xr/openxr_composition_layers.html) and Meta-specific extensions, which allow applying further sharpening or supersampling, advanced alpha blending or marking particular composition layers as containing "secure content". See the [Meta Composition Layers tutorial](https://godotvr.github.io/godot_openxr_vendors/manual/meta/composition_layers.html) for more information about these Meta-specific features.
 
 ### Scene discovery and spatial anchors
 
