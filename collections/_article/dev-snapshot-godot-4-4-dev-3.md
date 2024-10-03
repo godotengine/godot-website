@@ -4,9 +4,9 @@ excerpt: "We haven't slowed down and are bringing you another feature-packed upd
 categories: ["pre-release"]
 author: Clay John
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-3.webp
-image_caption_title: "TODO"
-image_caption_description: "TODO"
-date: 2024-10-03 16:00:00
+image_caption_title: "Fogpiercer"
+image_caption_description: "A game by Mad Cookies Studio"
+date: 2024-10-03 12:00:00
 ---
 
 We are back with another big dev update with over 330 commits merged in the last few weeks! Contributors continue to
@@ -20,68 +20,80 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as
 Git, to preserve your projects in case of corruption or data loss.
 
-[Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.4.dev2/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
+[Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the [**Web editor**](https://editor.godotengine.org/releases/4.4.dev3/), [**XR editor**](https://www.meta.com/experiences/godot-game-engine/7713660705416473/), or the **Android editor** for this release (join the [Android editor testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds).
 
 -----
 
-*The cover illustration is from* [**TODO**](), *a TODO, developed in Godot 4.3 by [TODO]() and published by [TODO]().*
+*The cover illustration is from* [**Fogpiercer**](https://store.steampowered.com/app/3219010/Fogpiercer/), *a turn-based card battler where your deck is a train! It is developed in Godot 4.3 by [Mad Cookies Studio](https://x.com/MadCookiesGames). You can wishlist the game [on Steam](https://store.steampowered.com/app/3219010/Fogpiercer/) and follow the developers on [Twitter](https://x.com/MadCookiesGames).*
 
 ## Highlights
 
-In case you missed it, see the [4.4 dev 2](/article/dev-snapshot-godot-4-4-dev-2/) release notes for an overview of some
+In case you missed them, see the [4.4 dev 1](/article/dev-snapshot-godot-4-4-dev-1/) and [dev 2](/article/dev-snapshot-godot-4-4-dev-2/) release notes for an overview of some
 key features which were already in that snapshot, and are therefore still available for testing in dev 3.
 
 Here are a few highlights that you might find particularly exciting!
 
-### @export_tool_button annotation
+### `@export_tool_button` annotation
 
-Being able to create a button in the inspector from tool scripts is a highly requested feature. This allows you to create
-to be even more expressive with the dev tooling that you can easily create with `@tool` scripts. 
+Being able to create a button in the inspector from tool scripts was a highly requested feature, and many contributors
+took it upon themselves to make it happen in [GH-96290](https://github.com/godotengine/godot/pull/96290): new
+contributors [jordi-star](https://github.com/jordi-star) and [Macksaur](https://github.com/Macksaur), and maintainers
+[Ernest](https://github.com/fire) and [Danil](https://github.com/dalexeev)!
 
-Let's take a look at a simple example:
+This new feature allows you to be even more expressive with the dev tooling that you can easily create with `@tool`
+scripts.
+
+Let's take a look at an example:
 
 ```gdscript
 @tool
 extends Sprite2D
 
-@export_tool_button("Randomize Color", "ColorRect")
-var color_action = randomize_color
+# With a callable (could also be a local function).
+@export_tool_button("Toot", "Callable")
+var print_action = print.bind("toot")
 
-func randomize_color():
-	self_modulate = Color(randf(), randf(), randf())
+# With a lambda.
+@export_tool_button("Randomize Color", "ColorRect")
+var color_action = func(): self_modulate = Color(randf(), randf(), randf())
 ```
 
-![export tool button](/storage/blog/dev-snapshot-godot-4-4-dev-3/editor_tool_button.png)
-
-Check out the PR for more examples of what you can do ([GH-96290](https://github.com/godotengine/godot/pull/96290))!
+![Export tool button examples](/storage/blog/dev-snapshot-godot-4-4-dev-3/export_tool_button.gif)
 
 ### Massively optimized scene startup for large projects
 
-Work has not slowed down on improving the scene startup experience. This dev release introduces a massive improvement to
-editor load speed for large projects ([GH-95678](https://github.com/godotengine/godot/pull/95678)). Large projects can
-expect up to a 3X speed improvement when loading the project and a similar speedup when doing any operations that scan
-the filesystem.
+Work has not slowed down on improving the scene startup experience, still thanks to amazing contributions by
+[Hilderin](https://github.com/Hilderin). This dev snapshot introduces a massive improvement to editor load speed for
+large projects ([GH-95678](https://github.com/godotengine/godot/pull/95678)). Large projects can expect up to a 3×
+speed improvement when loading the project and a similar speedup when doing any operations that scan the filesystem.
 
 ### Vertex shading
 
 This dev release re-introduces the long-awaited vertex shading option for materials
-([GH-83360](https://github.com/godotengine/godot/pull/83360)). Vertex shading is used primarily to achieve an early PSX
-style and to optimize performance on older and lower-end devices. 
+([GH-83360](https://github.com/godotengine/godot/pull/83360)), thanks to contributor [ywmaa](https://github.com/ywmaa)
+landing their second major feature in Godot, after export support for
+[Blender Geometry Nodes](https://github.com/godotengine/godot/pull/87735).
+Vertex shading is used primarily to achieve an early PSX style and to optimize performance on older and lower-end
+devices.
 
-You can enable vertex shading either from within an existing StandardMaterial3D, ORMMaterial3D, ShaderMaterial, or by
-force enabling it on all materials using the `rendering/shading/overrides/force_vertex_shading` project setting. 
+You can enable vertex shading either from within an existing `StandardMaterial3D`, `ORMMaterial3D`, `ShaderMaterial`,
+or by force enabling it on all materials using the `rendering/shading/overrides/force_vertex_shading` project setting.
 
-![two spheres, one is vertex shaded](/storage/blog/dev-snapshot-godot-4-4-dev-3/vertex_shading.png)
+![Two spheres, one is vertex shaded](/storage/blog/dev-snapshot-godot-4-4-dev-3/vertex_shading.webp)
 
 ### Add batching to RendererCanvasRenderRD
 
+After tackling the [Metal rendering backend](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend)
+merged in an earlier snapshot, [Stuart](https://github.com/stuartcarnie/) took on another impressive rendering
+contribution: 2D batching!
+
 Batching has been implemented in the Compatibility renderer since the release of 4.0. This release brings the same
 performance benefits to the other backends by implementing batching when using the Forward+ and Mobile backends
-([GH-92797](https://github.com/godotengine/godot/pull/92797)). Now 2D performance is comparable between all backends. 
+([GH-92797](https://github.com/godotengine/godot/pull/92797)). Now 2D performance is comparable between all backends.
 
 Batching is a performance optimization that drastically reduces the number of draw calls in a scene. The benefits of
 batching will be particularly noticeable in scenes with a lot of text rendering or repeated sprites that share a texture
-(i.e. when using Tilemaps or making a bullet hell).
+(e.g. when using tilemaps or making a bullet hell).
 
 We have further improvements planned for batching on the RD backends that should allow it to be even faster than the
 Compatibility backend. Stay tuned for updates in later dev releases!
@@ -89,21 +101,26 @@ Compatibility backend. Stay tuned for updates in later dev releases!
 ### Expression evaluator (REPL) in the debugger
 
 The expression evaluator adds a new tab to the bottom panel that allows you to evaluate expressions using the local
-state of your scripts while stopped at a breakpoint. Many users are familiar with this workflow from other REPL
-debuggers. This feature has been a work in progress for awhile and was recently finished and merged in
-([GH-97647](https://github.com/godotengine/godot/pull/97647)), thank you to everyone who worked on it and brought it
-across the finish line.
+state of your scripts while stopped at a breakpoint. Many users are familiar with this workflow from other
+[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) debuggers.
 
-![evaluate tab in the debugger](/storage/blog/dev-snapshot-godot-4-4-dev-3/repl.png)
+This feature has been a work in progress for awhile and was recently finished and merged in
+([GH-97647](https://github.com/godotengine/godot/pull/97647)), thank you to [Oğuzhan](https://github.com/rohanrhu),
+[Erik](https://github.com/rxlecky), and [Tomek](https://github.com/KoBeWi/) for bringing it across the finish line.
+
+![Evaluate tab in the debugger](/storage/blog/dev-snapshot-godot-4-4-dev-3/repl.webp)
 
 ### Implement autostart for all profilers
 
 A common complaint from users is that they need to go back to the editor once they start their game in order to enable
 the profiler. This made it hard to measure performance in the first few seconds of loading a scene and was an overall
-hassle for developers. Now, we have introduced a checkbox that allows you to set the profiler to automatically start
-when you run the engine and capture valuable profiling data immediately (([GH-96759](https://github.com/godotengine/godot/pull/96759))). 
+hassle for developers.
 
-![Auto start checkbox in profiler](/storage/blog/dev-snapshot-godot-4-4-dev-3/auto-start.png)
+[Hendrik](https://github.com/Geometror) introduced a checkbox that allows you to set the profiler to automatically start
+when you run the engine and capture valuable profiling data immediately
+([GH-96759](https://github.com/godotengine/godot/pull/96759)).
+
+![Auto start checkbox in profiler](/storage/blog/dev-snapshot-godot-4-4-dev-3/auto-start.webp)
 
 ### Add markers to Animation
 
@@ -121,13 +138,15 @@ begin playback.
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-3/markers2.mp4?1" type="video/mp4">
 </video>
 
-For more details check out the pull request [GH-91765](https://github.com/godotengine/godot/pull/91765)!
+For more details check out the pull request [GH-91765](https://github.com/godotengine/godot/pull/91765), which was one
+of the first Godot contributions of [ChocolaMint](https://github.com/chocola-mint)!
 
 ### Linux camera support
 
 Previously, Godot only supported accessing the device camera on macOS and iOS devices.
-[GH-53666](https://github.com/godotengine/godot/pull/53666) brings support to linux devices, allowing developers to
-access connected camera's from within their game. 
+[pkowal1982](https://github.com/pkowal1982)'s long-running pull request [GH-53666](https://github.com/godotengine/godot/pull/53666)
+was finally merged and adds support for the Linux platform, allowing developers to access connected cameras from within
+their game.
 
 ### Fallback to OpenGL 3 if other rendering drivers are not supported
 
@@ -136,13 +155,15 @@ or Metal, the engine will provide the user with an OS alert notifying them that 
 graphics API and they need to try again with the Compatibility backend. This alert has proven to be confusing for users
 and the process of opening the scene ends up being cumbersome.
 
-Now with [GH-97142](https://github.com/godotengine/godot/pull/97142), the engine will automatically fall back to using
-OpenGL (the Compatibility backend) when the other backends are not available. This should provide the smoothest possible
-experience for users on older devices.
+Now with [GH-97142](https://github.com/godotengine/godot/pull/97142), first contribution from
+[SheepYhangCN](https://github.com/SheepYhangCN), the engine will automatically fall back to using OpenGL (the
+Compatibility backend) when the other backends are not available. This should provide the smoothest possible experience
+for users on older devices.
 
-Since the Compatibility backends can look different from the other backends, game developers may not want Godot
-automatically falling back. In that case, they can disable the `rendering/rendering_device/fallback_to_opengl3` project
-setting to avoid falling back.
+Since the Compatibility backends can look different from the other backends, game developers may not want Godot to
+automatically fall back. In that case, they can disable the `rendering/rendering_device/fallback_to_opengl3` project
+setting to avoid falling back, and users with OpenGL-only devices would then get notified that their hardware is not
+supported.
 
 ### And more!
 
