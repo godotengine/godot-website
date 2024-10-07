@@ -24,12 +24,26 @@ layout: default
 		gap: 24px;
 	}
 
+	.main-download-links-buttons {
+		display: flex;
+		flex-direction: row;
+		gap: 12px;
+	}
+
 	.main-download-links .btn-download {
 		width: 100%;
 	}
 
+	.main-download-links .btn-whats-new {
+		width: min-content;
+		text-wrap: nowrap;
+		background-color: var(--dark-color);
+		color: var(--primary-color-text-title);
+		box-sizing: border-box;
+	}
+
 	.main-download-links .download-3 {
-		text-align: center;
+		text-align: left;
 		color: #ffffffd6;
 		text-shadow: 0 0 10px black;
 		font-weight: 300;
@@ -50,6 +64,17 @@ layout: default
 			align-items: center;
 			flex-direction: column;
 			gap: 36px;
+		}
+		.main-download-links-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+		.main-download-links .download-3 {
+			text-align: center;
+		}
+		.main-download-links .btn-download,
+		.main-download-links .btn-whats-new {
+			width: 100%;
 		}
 	}
 
@@ -185,13 +210,19 @@ layout: default
 				{% assign stable_version_4 = site.data.versions | find: "featured", "4" %}
 
 				<div class="main-download-links">
-					<a href="/download/windows/" class="btn btn-download set-os-download-url" data-version="4"
-						title="Download the latest version of Godot 4">
-						<div class="download-title">Download Latest</div>
-						<div class="download-hint">{{ stable_version_4.name }}</div>
-					</a>
+					<div class="main-download-links-buttons">
+						<a href="/download/windows/" class="btn btn-download set-os-download-url" data-version="4"
+							title="Download the latest version of Godot 4">
+							<div class="download-title">Download Latest</div>
+							<div class="download-hint">{{ stable_version_4.name }}</div>
+						</a>
+						<a href="/releases/" class="btn btn-whats-new"
+							title="See what's new in Godot">
+							<div class="download-title">What's new?</div>
+						</a>
+					</div>
 
-					<span class="download-3">Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a> or a <a href="/download/archive">previous version</a>?</span>
+					<span class="download-3">Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a>, our <a href="/download/archive">experimental releases</a>, or a <a href="/download/archive">previous version</a>?</span>
 				</div>
 			</div>
 		</div>
