@@ -51,13 +51,14 @@ layout: default
 						</div>
 						{% endif %}
 						<div class="caption">
+							<div class="attribution">
+								<span class="card-title">{{ project.title }}</span>
+								<span class="author">{{ project.author }}</span>
+							</div>
 							<div class="icons">
 								{% for platform in project.platforms%}
 									<img src="/assets/images/platforms/{{ platform }}.svg" alt="{{ platform }}" title="{{ platform }}">
 								{% endfor %}
-							</div>
-							<div class="authors">
-								<p>{{ project.author }}</p>
 							</div>
 						</div>
 					</article>
@@ -65,9 +66,9 @@ layout: default
 				{% endif %}
 				{% endfor %}
 			</section>
-		
+
 			<h2 class="title">Apps & Tools</h2>
-		
+
 			<section class="flex grid showcase-cards">
 				{% assign projects = site.showcase | sort: 'date' | reverse %}
 				{% for project in projects %}
@@ -82,13 +83,14 @@ layout: default
 						</div>
 						{% endif %}
 						<div class="caption">
+							<div class="attribution">
+								<span class="card-title">{{ project.title }}</span>
+								<span class="author">{{ project.author }}</span>
+							</div>
 							<div class="icons">
 								{% for platform in project.platforms%}
 									<img src="/assets/images/platforms/{{ platform }}.svg" alt="{{ platform }}" title="{{ platform }}">
 								{% endfor %}
-							</div>
-							<div class="authors">
-								<p>{{ project.author }}</p>
 							</div>
 						</div>
 					</article>
@@ -96,7 +98,7 @@ layout: default
 				{% endif %}
 				{% endfor %}
 			</section>
-		
+
 			<h2 class="title">Coming soon</h2>
 			<section class="flex grid showcase-cards">
 				{% assign projects = site.showcase | sort: 'date' | reverse %}
@@ -112,9 +114,9 @@ layout: default
 						</div>
 						{% endif %}
 						<div class="caption">
-							<div></div>
-							<div class="authors">
-								<p>{{ project.author }}</p>
+							<div class="attribution">
+								<span class="card-title">{{ project.title }}</span>
+								<span class="author">{{ project.author }}</span>
 							</div>
 						</div>
 					</article>
@@ -146,11 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         showcaseItems.forEach(item => {
-            const shouldShow = selectedPlatforms.length === 0 || 
+            const shouldShow = selectedPlatforms.length === 0 ||
                 selectedPlatforms.some(platform => item.classList.contains(platform));
-            
+
             item.classList.toggle('hidden', !shouldShow);
-            
+
             if (shouldShow) {
                 const sectionTitle = item.closest('section').previousElementSibling.textContent.trim();
                 if (visibleCounts.hasOwnProperty(sectionTitle)) {
