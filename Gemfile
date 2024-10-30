@@ -6,4 +6,4 @@ gem 'jekyll-paginate-v2'
 gem 'jekyll-multiple-languages-plugin'
 gem 'jekyll-redirect-from'
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8"
