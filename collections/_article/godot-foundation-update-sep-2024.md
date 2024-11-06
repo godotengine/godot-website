@@ -74,7 +74,7 @@ We will have a blog post soon with more information.
 
 ## The Foundation's role in the project
 
-We also wanted to take this chance to muse about about the Foundation's role in the project. In particular, we want to
+We also wanted to take this chance to muse about the Foundation's role in the project. In particular, we want to
 contrast the size of the Foundation with the size of the Godot project contributor pool. As explained above, the
 Foundation currently hires 12 contractors to work on Godot, while the total number of contributors to Godot is over
 2,500 (the 4.3 release alone had over 500 contributors)! This large group of contributors is the reason why Godot is
