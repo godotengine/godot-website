@@ -38,7 +38,7 @@ Here are a few highlights that you might find particularly exciting!
 
 One of the most requested features is the ability to debug the running game from within the editor including pausing the
 game, clicking on elements within the scene, and embedding the running game window inside the editor. Dev4 comes with
-the first two of these workflows thanks to the contribution from [YeldhamDev]( https://github.com/YeldhamDev) of Lone Wolf
+the first two of these workflows thanks to the contribution from [YeldhamDev](https://github.com/YeldhamDev) of Lone Wolf
 Technology & W4 Games, users are now able to explore their project's world freely!
 
 The actual embedding of the game window into the editor will come later in a subsequent PR. 
