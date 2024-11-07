@@ -2,10 +2,10 @@
 title: "Dev snapshot: Godot 4.4 dev 4"
 excerpt: "After a short delay due to GodotCon, we are back with another exciting update."
 categories: ["pre-release"]
-author: Thaddeus Crews
+author: Clay John
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-4.webp
-image_caption_title: ""
-image_caption_description: ""
+image_caption_title: "WEBFISHING"
+image_caption_description: "A game by lamedeveloper"
 date: 2024-11-07 12:00:00
 ---
 
@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [****](), *a ! It is developed in Godot 4.3 by [](). You can wishlist the game [on Steam]() and follow the developers on [Twitter]().*
+*The cover illustration is from* [**WEBFISHING**](https://store.steampowered.com/app/3146520/WEBFISHING/), *a multiplayer online casual fishing game where you relax, hang out, make friends, and catch fish! It is developed by [lamedeveloper](https://lamedeveloper.itch.io/). You can purchase the game [on Steam](https://store.steampowered.com/app/3146520/WEBFISHING/) and follow the developer on [Twitter](https://x.com/westthewerst).*
 
 ## Highlights
 
@@ -34,7 +34,7 @@ already in that snapshot, and are therefore still available for testing in dev 3
 
 Here are a few highlights that you might find particularly exciting!
 
-### Embed Game Window
+### Interactive in-game editing
 
 One of the most requested features is the ability to debug the running game from within the editor including pausing the
 game, clicking on elements within the scene, and embedding the running game window inside the editor. Dev4 comes with
@@ -84,7 +84,7 @@ Taking advantage of the new ubershader infrastructure, we can now optimize our s
 that skip unused pathways. We have already begin doing so to optimize our existing shaders
 ([GH-98825](https://github.com/godotengine/godot/pull/98825)).
 
-### Add shadow_caster_mask to Light3D
+### Add Shadow Caster Mask property to Light3D
 
 This long awaited improvement from [EMBYRDEV](https://github.com/EMBYRDEV) allows users to apply a mask on Light3Ds to
 select what rendering layers will be considered when casting shadows
@@ -159,9 +159,9 @@ There are too many exciting changes to list them all here, but here's a curated 
 
 ## Changelog
 
-**XXX contributors** submitted **XXX improvements** for this new snapshot. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-dev4) for the complete list of changes since the previous 4.4-dev3 snapshot.
+**128 contributors** submitted **330 improvements** for this new snapshot. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-dev4) for the complete list of changes since the previous 4.4-dev3 snapshot.
 
-This release is built from commit [`XXX`](https://github.com/godotengine/godot/commit/XXX).
+This release is built from commit [`77d6283`](https://github.com/godotengine/godot/commit/77d6283d22731398e23c3f1e1b4eeedd22a93152).
 
 ## Downloads
 
