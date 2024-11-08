@@ -6,7 +6,7 @@ author: Clay John
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-4.webp
 image_caption_title: "WEBFISHING"
 image_caption_description: "A game by lamedeveloper"
-date: 2024-11-07 12:00:00
+date: 2024-11-08 12:00:00
 ---
 
 We are back roughly a month after the release of dev3 to bring you a host of new improvements. Many of our developers
