@@ -4,8 +4,8 @@ excerpt: "After a short delay due to GodotCon, we are back with another exciting
 categories: ["pre-release"]
 author: Clay John
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-4.webp
-image_caption_title: "WEBFISHING"
-image_caption_description: "A game by lamedeveloper"
+image_caption_title: "Unrailed 2: Back on Track"
+image_caption_description: "A game by Indoor Astronaut"
 date: 2024-11-08 12:00:00
 ---
 
@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**WEBFISHING**](https://store.steampowered.com/app/3146520/WEBFISHING/), *a multiplayer online casual fishing game where you relax, hang out, make friends, and catch fish! It is developed by [lamedeveloper](https://lamedeveloper.itch.io/). You can purchase the game [on Steam](https://store.steampowered.com/app/3146520/WEBFISHING/) and follow the developer on [Twitter](https://x.com/westthewerst).*
+*The cover illustration is from* [**Unrailed 2: Back on Track**](https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/), *a chaotic co-op railroad construction game where you build your track across procedurally generated worlds! It is developed by [Indoor Astronaut](https://indoorastronaut.ch/). You can purchase the game in early access [on Steam](https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/) and follow the developer on [Twitter](https://x.com/IndoorAstronaut).*
 
 ## Highlights
 
@@ -132,7 +132,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Editor: Improve UI of sun angle in the sun/preview env popup ([GH-97747](https://github.com/godotengine/godot/pull/97747)).
 - Editor: Add submenu support to EditorContextMenuPlugin ([GH-97292](https://github.com/godotengine/godot/pull/97292)).
 - Editor: Improve display for lightmap probes in the editor ([GH-83863](https://github.com/godotengine/godot/pull/83863)).
-- Editor: Add missing audio bus button styles #([GH-3443 ](https://github.com/godotengine/godot/pull/3443 )).
+- Editor: Add missing audio bus button styles #([GH-93443](https://github.com/godotengine/godot/pull/93443)).
 - Editor: Add Markdown syntax highlighting to the script editor ([GH-78312](https://github.com/godotengine/godot/pull/78312)).
 - GDExtension: Fix loss of gdextension on editor startup ([GH-98041](https://github.com/godotengine/godot/pull/98041)).
 - GDScript: GDScript: Fix cached parser error when using typed Dictionaries ([GH-98400](https://github.com/godotengine/godot/pull/98400)).
