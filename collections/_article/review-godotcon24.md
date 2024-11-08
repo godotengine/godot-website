@@ -3,11 +3,11 @@ title: "GodotCon 24: Berlin Edition"
 excerpt: "Our biggest conference yet!"
 categories: ["events"]
 author: Nat
-image: /storage/blog/covers/review-godotcon24.webp
-date: 2024-09-02 18:30:00
+image: /storage/blog/covers/godotcon-2024-post.webp
+date: 2024-10-10 18:30:00
 ---
 
-<hr>
+<br>
 📋 [Feedback form for visitors](https://forms.gle/3tALsQid32qqvu2Z8)
 🎤 [Talk & workshop recordings](https://www.youtube.com/playlist?list=PLeG_dAglpVo6TS0q858NajyeglRuvb7hs)
 🫙 [Jam games](https://godotcon.itch.io/)
@@ -15,34 +15,43 @@ date: 2024-09-02 18:30:00
 
 Variety was the name of the game this year. From staying true to our goal to move the conference around - even if only changing city and not country quite yet - to adding more activities to the program: the event team made up of volunteers and Godot Foundation staff put a lot of blood, sweat, and tears into making this more than a mere meetup occasion for the ever-growing community forming around the Godot Engine. 
 
-Judging by the smiley pictures taken all around the [silent green](https://www.silent-green.net/) venue, and the excited chatter about what the next installments might bring to the table, we seem to have hit the sweet spot for our 574 attendees. For those of you that couldn’t be there yourself - considering both ticket batches sold out within an hour - join us on a retrospective walk through GodotCon, reminiscing about the good and the bad, as well as highlighting all the wonderful speakers, exhibitors, and sponsors that made this event possible.
+Judging by the smiley pictures taken all around the [Silent Green](https://www.silent-green.net/) venue, and the excited chatter about what the next installments might bring to the table, we seem to have hit the sweet spot for our 574 attendees. For those of you that couldn’t be there yourself - considering both ticket batches sold out within an hour - join us on a retrospective walk through GodotCon, reminiscing about the good and the bad, as well as highlighting all the wonderful speakers, exhibitors, and sponsors that made this event possible.
 
 # Sponsor support
 Only thanks to [our sponsors](https://conference.godotengine.org/2024/#sponsors) we were able to afford an event like this in the first place. 
 
-## Critical Reflex - criticalreflex.com
+## Critical Reflex
 Having a publisher with experience in Godot on-board was as exciting for us as it seemed for the audience of “Indie Publishing 101” by their business developer Daniel. Additionally, you might have spotted the goodie bags they provided us with.
+
+🔗 [criticalreflex.com](https://criticalreflex.com)
 
 <img alt="Venue picture featuring Critical Reflex goodie bag" src="/storage/blog/godotcon24/goodie-bag.jpg"/>
 
-## Endless Foundation - endlessos.org
+## Endless Foundation
 “Block Coding: Making Godot Accessible to Learners Everywhere” was another well-visited talk on the agenda, as was the booth of the biggest exhibitor team onsite. Their tech demonstration drew in fellow educators as well as curious game developers looking to contribute.
+
+🔗 [endlessos.org](https://www.endlessos.org/)
 
 <img alt="Screenshot of their block coding editor" src="/storage/blog/godotcon24/block-coding.webp"/>
 
-## W4 Games - w4games.com
+## W4 Games
 Port your Godot games to console with ease! The company founded by Godot Engine veterans explained “W4's role in the Godot Ecosystem” on stage and let you playtest their products & talk business at their busy booth. 
+
+🔗 [w4games.com](https://w4games.com)
 
 <img alt="" src="/storage/blog/godotcon24/w4-games.jpg"/>
 
-## Poki - poki.com
+## Poki
 The provider of free online games also has shown interest in Godot before and is hoping to expand their selection with your projects. We talked with them about improving Godot for the Web together, let’s see what the future might bring!
+
+🔗 [poki.com](https://poki.com)
 
 <img alt="" src="/storage/blog/godotcon24/poki.jpg"/>
 
-## AWS - aws.amazon.com/gametech/
+## AWS
 After demonstrating “How to quick start a Godot Engine game on AWS” the Cloud provider team spent time answering questions on the exhibition floor.
 
+🔗 [aws.amazon.com](https://aws.amazon.com/gametech/)
 
 <img alt="" src="/storage/blog/godotcon24/aws.jpg"/>
 
@@ -53,9 +62,11 @@ For the first time ever, we tried curating a selection of projects ahead of time
 	<img alt="Bug Off booth" src="/storage/blog/godotcon24/bug-off.jpg"/>
 	<img alt="Data Garden booth" src="/storage/blog/godotcon24/data-garden.jpg"/>
 	<img alt="Dung Slinger booth" src="/storage/blog/godotcon24/dung-slinger.jpg"/>
-	<img alt="Fogpiercer booth" src="/storage/blog/godotcon24/fogpiercer.jpg"/>
+	<img alt="Fogpiercer booth" src="/storage/blog/godotcon24/fog-piercer.jpg"/>
 	<img alt="Immersive Home booth" src="/storage/blog/godotcon24/immersive-home.jpg"/>
 	<img alt="In Good Faith booth" src="/storage/blog/godotcon24/in-good-faith.jpg"/>
+</div>
+<div class="preview-image-container">
 	<img alt="Keep The Heroes Out booth" src="/storage/blog/godotcon24/keep-out.jpg"/>
 	<img alt="Looking Up I See Only A Ceiling booth" src="/storage/blog/godotcon24/looking-up.jpg"/>
 	<img alt="PVKK: Planetenverteidigungskanonenkommandant booth" src="/storage/blog/godotcon24/pvkk.jpg"/>
