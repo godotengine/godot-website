@@ -159,9 +159,9 @@ There are too many exciting changes to list them all here, but here's a curated 
 
 ## Changelog
 
-**128 contributors** submitted **330 improvements** for this new snapshot. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-dev4) for the complete list of changes since the previous 4.4-dev3 snapshot.
+**131 contributors** submitted **339 improvements** for this new snapshot. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-dev4) for the complete list of changes since the previous 4.4-dev3 snapshot.
 
-This release is built from commit [`77d6283`](https://github.com/godotengine/godot/commit/77d6283d22731398e23c3f1e1b4eeedd22a93152).
+This release is built from commit [`36e6207bb`](https://github.com/godotengine/godot/commit/36e6207bb48fafd43b98a458d0c461ad982b4e68).
 
 ## Downloads
 
