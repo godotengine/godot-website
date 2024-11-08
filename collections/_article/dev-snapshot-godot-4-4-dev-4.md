@@ -96,24 +96,24 @@ that allows users to further optimize dynamic lights and control where shadows a
 
 Currently when printing float values Godot trims trailing `.0`s as the are technically unnecessary. However, this could
 lead to issues for users who need to distinguish between floating point numbers and integers.
-[KoBeWi](https://github.com/kobewi) has now changed the behavior when floats are converted to strings so that the
-trailing `.0` is always printed when floats are converted to strings ([GH-47502](https://github.com/godotengine/godot/pull/47502)). 
+[KoBeWi](https://github.com/kobewi) has now changed the behavior when floats are converted to strings to always add the decimal number, even if it would be `.0`.
+This makes floats always recognizable when they are converted to strings ([GH-47502](https://github.com/godotengine/godot/pull/47502)). 
 
 This change in behavior may break your project if you are relying on the current serialization behavior. If this change
 breaks your project, please let us know by opening an issue on Github. 
 
 ```gdscript
-# before
-var a: float = 1
+# Before:
+var a: float = 1.0
 print(a)
-# prints 1
+# Prints 1
 ```
 
 ```gdscript
-# after
-var a: float = 1
+# After:
+var a: float = 1.0
 print(a)
-# prints 1.0
+# Prints 1.0
 ```
 
 ### And more!
