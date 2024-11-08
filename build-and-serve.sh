@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SERVER_HOST="${SERVER_HOST:-0.0.0.0}"
+SERVER_HOST="${SERVER_HOST:-127.0.0.1}"
 SERVER_PORT="${SERVER_PORT:-4000}"
 
 bundle install
