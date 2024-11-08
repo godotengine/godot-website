@@ -92,6 +92,9 @@ This is exactly what we aimed to facilitate with our onsite activities, especial
 One of the most popular activities turned out to be the One PC Jam (taking place at three laptops concurrently) where the conference attendees created a jam game over the course of two days. The twist: everyone only was granted one hour on the project, before having to concede their seat to the next person. This resulted in three separate, actually playable games, which you can [find here](https://godotcon.itch.io/).
 
 # Talks & Workshops
+
+<img alt="View of the stage, with people standing behind full rows of chairs." src="/storage/blog/godotcon24/backstage.jpg"/>
+
 The Godot community once again came through and submitted more interesting talks than we could fit on the program - resulting in us repurposing the admittedly rather small workshop room to squeeze some more of the talented speakers in. Luckily, we also invited a camera crew onsite, that took great care recording both the workshops and two talk tracks, for you to enjoy on the Godot Engine YouTube channel - some of them already available, the rest being edited as you read this blog post.
 
 // TODO embed playlist
