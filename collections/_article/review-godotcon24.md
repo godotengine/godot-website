@@ -25,7 +25,7 @@ Having a publisher with experience in Godot on-board was as exciting for us as i
 
 🔗 [criticalreflex.com](https://criticalreflex.com)
 
-<img alt="Venue picture featuring Critical Reflex goodie bag" src="/storage/blog/godotcon24/goodie-bag.jpg"/>
+<img alt="Venue picture featuring Critical Reflex goodie bag" src="/storage/blog/godotcon24/goodie-bag.webp"/>
 
 ## Endless Foundation
 “Block Coding: Making Godot Accessible to Learners Everywhere” was another well-visited talk on the agenda, as was the booth of the biggest exhibitor team onsite. Their tech demonstration drew in fellow educators as well as curious game developers looking to contribute.
@@ -39,40 +39,40 @@ Port your Godot games to console with ease! The company founded by Godot Engine 
 
 🔗 [w4games.com](https://w4games.com)
 
-<img alt="" src="/storage/blog/godotcon24/w4-games.jpg"/>
+<img alt="" src="/storage/blog/godotcon24/w4-games.webp"/>
 
 ## Poki
 The provider of free online games also has shown interest in Godot before and is hoping to expand their selection with your projects. We talked with them about improving Godot for the Web together, let’s see what the future might bring!
 
 🔗 [poki.com](https://poki.com)
 
-<img alt="" src="/storage/blog/godotcon24/poki.jpg"/>
+<img alt="" src="/storage/blog/godotcon24/poki.webp"/>
 
 ## AWS
 After demonstrating “How to quick start a Godot Engine game on AWS” the Cloud provider team spent time answering questions on the exhibition floor.
 
 🔗 [aws.amazon.com](https://aws.amazon.com/gametech/)
 
-<img alt="" src="/storage/blog/godotcon24/aws.jpg"/>
+<img alt="" src="/storage/blog/godotcon24/aws.webp"/>
 
 # Game Exhibition
 For the first time ever, we tried curating a selection of projects ahead of time and invited game development teams to a showcase on the venue floors. Decorated booths and sometimes even goodies caught the eyes of many attendees, and provided the exhibitors with valuable playtest information as well as wishlists. Some told us this was the first event they participated in with their project!
 
 <div class="preview-image-container">
-	<img alt="Bug Off booth" src="/storage/blog/godotcon24/bug-off.jpg"/>
-	<img alt="Data Garden booth" src="/storage/blog/godotcon24/data-garden.jpg"/>
-	<img alt="Dung Slinger booth" src="/storage/blog/godotcon24/dung-slinger.jpg"/>
-	<img alt="Fogpiercer booth" src="/storage/blog/godotcon24/fog-piercer.jpg"/>
-	<img alt="Immersive Home booth" src="/storage/blog/godotcon24/immersive-home.jpg"/>
-	<img alt="In Good Faith booth" src="/storage/blog/godotcon24/in-good-faith.jpg"/>
+	<img alt="Bug Off booth" src="/storage/blog/godotcon24/bug-off.webp"/>
+	<img alt="Data Garden booth" src="/storage/blog/godotcon24/data-garden.webp"/>
+	<img alt="Dung Slinger booth" src="/storage/blog/godotcon24/dung-slinger.webp"/>
+	<img alt="Fogpiercer booth" src="/storage/blog/godotcon24/fog-piercer.webp"/>
+	<img alt="Immersive Home booth" src="/storage/blog/godotcon24/immersive-home.webp"/>
+	<img alt="In Good Faith booth" src="/storage/blog/godotcon24/in-good-faith.webp"/>
 </div>
 <div class="preview-image-container">
-	<img alt="Keep The Heroes Out booth" src="/storage/blog/godotcon24/keep-out.jpg"/>
-	<img alt="Looking Up I See Only A Ceiling booth" src="/storage/blog/godotcon24/looking-up.jpg"/>
-	<img alt="PVKK: Planetenverteidigungskanonenkommandant booth" src="/storage/blog/godotcon24/pvkk.jpg"/>
-	<img alt="Robot Detour booth" src="/storage/blog/godotcon24/robot-detour.jpg"/>
-	<img alt="Voice of Flowers booth" src="/storage/blog/godotcon24/voice-of-flowers.jpg"/>
-	<img alt="Window Arcade booth" src="/storage/blog/godotcon24/window-arcade.jpg"/>
+	<img alt="Keep The Heroes Out booth" src="/storage/blog/godotcon24/keep-out.webp"/>
+	<img alt="Looking Up I See Only A Ceiling booth" src="/storage/blog/godotcon24/looking-up.webp"/>
+	<img alt="PVKK: Planetenverteidigungskanonenkommandant booth" src="/storage/blog/godotcon24/pvkk.webp"/>
+	<img alt="Robot Detour booth" src="/storage/blog/godotcon24/robot-detour.webp"/>
+	<img alt="Voice of Flowers booth" src="/storage/blog/godotcon24/voice-of-flowers.webp"/>
+	<img alt="Window Arcade booth" src="/storage/blog/godotcon24/window-arcade.webp"/>
 </div>
 
 **Exhibitor list:**
@@ -92,19 +92,19 @@ For the first time ever, we tried curating a selection of projects ahead of time
 
 # Activities
 
-<img alt="The graffiti canvas full of different drawings by the visitors" src="/storage/blog/godotcon24/canvas.jpg"/>
+<img alt="The graffiti canvas full of different drawings by the visitors" src="/storage/blog/godotcon24/canvas.webp"/>
 
 What do you do at a conference, besides watching talks, browsing through the exhibition, or doing business? Have some fun and get to know other attendees in a casual way, of course.
 
 This is exactly what we aimed to facilitate with our onsite activities, especially the [sticker challenge](https://conference.godotengine.org/2024/activities/) tying them all together (since many of you asked: the stickers were designed by community artist [Tibo](https://gotibo.fr/)). From networking bingo to graffiti canvas, we saw many people striking up conversations with strangers or having a great time with friends.
 
-<img alt="People participating in a game jam" src="/storage/blog/godotcon24/one-pc-jam.jpg"/>
+<img alt="People participating in a game jam" src="/storage/blog/godotcon24/one-pc-jam.webp"/>
 
 One of the most popular activities turned out to be the One PC Jam (taking place at three laptops concurrently) where the conference attendees created a jam game over the course of two days. The twist: everyone only was granted one hour on the project, before having to concede their seat to the next person. This resulted in three separate, actually playable games, which you can [find here](https://godotcon.itch.io/).
 
 # Talks & Workshops
 
-<img alt="View of the stage, with people standing behind full rows of chairs." src="/storage/blog/godotcon24/backstage.jpg"/>
+<img alt="View of the stage, with people standing behind full rows of chairs." src="/storage/blog/godotcon24/backstage.webp"/>
 
 The Godot community once again came through and submitted more interesting talks than we could fit on the program - resulting in us repurposing the admittedly rather small workshop room to squeeze some more of the talented speakers in. Luckily, we also invited a camera crew onsite, that took great care recording both the workshops and two talk tracks, for you to enjoy on the Godot Engine YouTube channel - some of them already available, the rest being edited as you read this blog post.
 
