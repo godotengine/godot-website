@@ -29,11 +29,11 @@ that skip unused pathways. We have already begin doing so to optimize our existi
 select what rendering layers will be considered when casting shadows
 (<a href=https://github.com/godotengine/godot/pull/85338>GH-85338</a>). Previously it was only possible to disable shadows from a
 GeometryInstance (for all Light3Ds) or a Light3D (for all GeometryInstances). This allows much more fine-grained control
-that allows users to further optimize dynamic lights and control where shadows appear in their games.<h3 id=always-add-decimal-when-converting-float-to-string>Always add decimal when converting float to string</h3><p>Currently when printing float values Godot trims trailing <code class="language-plaintext highlighter-rouge">.0</code>s as the are technically unnecessary. However, this could
+that allows users to further optimize dynamic lights and control where shadows appear in their games.<h3 id=always-add-decimal-when-converting-float-to-string>Always add decimal when converting float to string</h3><p>Currently when printing float values Godot trims trailing <code class="language-plaintext highlighter-rouge">.0</code>s as they are technically unnecessary. However, this could
 lead to issues for users who need to distinguish between floating point numbers and integers.
 <a href=https://github.com/kobewi>KoBeWi</a> has now changed the behavior when floats are converted to strings to always add the decimal number, even if it would be <code class="language-plaintext highlighter-rouge">.0</code>.
 This makes floats always recognizable when they are converted to strings (<a href=https://github.com/godotengine/godot/pull/47502>GH-47502</a>).<p>This change in behavior may break your project if you are relying on the current serialization behavior. If this change
-breaks your project, please let us know by opening an issue on Github.<div class="language-gdscript highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=c1># Before:</span>
+breaks your project, please let us know by opening an issue on GitHub.<div class="language-gdscript highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=c1># Before:</span>
 <span class=k>var</span> <span class=n>a</span><span class=p>:</span> <span class=kt>float</span> <span class=o>=</span> <span class=mf>1.0</span>
 <span class=nb>print</span><span class=p>(</span><span class=n>a</span><span class=p>)</span>
 <span class=c1># Prints 1</span>
