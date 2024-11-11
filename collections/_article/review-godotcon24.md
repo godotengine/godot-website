@@ -13,7 +13,7 @@ date: 2024-11-11 18:30:00
 🫙 [Jam games](https://godotcon.itch.io/)
 <hr>
 
-Variety was the name of the game this year. From staying true to our goal to move the conference around - even if only changing city and not country quite yet - to adding more activities to the program: the event team made up of volunteers and Godot Foundation staff put a lot work into making this more than a mere meetup occasion for the ever-growing community forming around the Godot Engine. 
+Variety was the name of the game this year. GodotCon keeps going around the globe and adds more activities to the program: the event team made up of volunteers and Godot Foundation staff put a lot work into making this more than a mere meetup occasion for the ever-growing community forming around the Godot Engine. 
 
 Judging by the smiley pictures taken all around the [Silent Green](https://www.silent-green.net/) venue, and the excited chatter about what the next installments might bring to the table, we seem to have hit the sweet spot for our 574 attendees. For those of you that couldn’t be there yourself - considering both ticket batches sold out within an hour - join us on a retrospective walk through GodotCon, as well as highlighting all the wonderful speakers, exhibitors, and sponsors that made this event possible.
 
@@ -125,9 +125,7 @@ Considering the new additions we introduced to the event concept, and to learn f
 # Thank you!
 And that concludes our tour through GodotCon 24. Hope you had fun reminiscing with us!
 
-Do you want to bring the next event to your city, become part of the organizer team? Requirements are good international travel connections and more importantly a local user group willing to help us out. 
-
-Lastly, sign up to our mailing list to be the first to know about GodotCon 25!
+If you want to be notified about our next one, sign up to our mailing list and be the first to know:
 
 <form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
     <div>
