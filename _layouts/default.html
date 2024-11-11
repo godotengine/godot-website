@@ -31,7 +31,7 @@
 	{% else %}
 		<title>Godot Engine</title>
 	{% endif %}
-	
+
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="alternate" type="application/json" title="Godot News" href="/rss.json" />
 	<link rel="alternate" type="application/atom+xml" title="Godot News" href="/atom.xml" />
@@ -42,6 +42,28 @@
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Italic-VariableFont_wght.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-VariableFont_wght.woff2" crossorigin>
 	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+
+	<script>
+		const registerServiceWorker = async () => {
+			if ("serviceWorker" in navigator) {
+				try {
+					const registration = await navigator.serviceWorker.register("/godot-website/sw.js", {
+						scope: "/godot-website/",
+					});
+					if (registration.installing) {
+						console.log("Service worker installing");
+					} else if (registration.waiting) {
+						console.log("Service worker installed");
+					} else if (registration.active) {
+						console.log("Service worker active");
+					}
+				} catch (error) {
+					console.error(`Registration failed with ${error}`);
+				}
+			}
+		};
+		registerServiceWorker();
+	</script>
 </head>
 
 <body>
