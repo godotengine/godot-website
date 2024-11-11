@@ -4,7 +4,7 @@ excerpt: "Our biggest conference yet!"
 categories: ["events"]
 author: Nat
 image: /storage/blog/covers/godotcon-2024-post.webp
-date: 2024-10-10 18:30:00
+date: 2024-11-11 18:30:00
 ---
 
 <br>
@@ -13,12 +13,12 @@ date: 2024-10-10 18:30:00
 🫙 [Jam games](https://godotcon.itch.io/)
 <hr>
 
-Variety was the name of the game this year. From staying true to our goal to move the conference around - even if only changing city and not country quite yet - to adding more activities to the program: the event team made up of volunteers and Godot Foundation staff put a lot of blood, sweat, and tears into making this more than a mere meetup occasion for the ever-growing community forming around the Godot Engine. 
+Variety was the name of the game this year. From staying true to our goal to move the conference around - even if only changing city and not country quite yet - to adding more activities to the program: the event team made up of volunteers and Godot Foundation staff put a lot work into making this more than a mere meetup occasion for the ever-growing community forming around the Godot Engine. 
 
-Judging by the smiley pictures taken all around the [Silent Green](https://www.silent-green.net/) venue, and the excited chatter about what the next installments might bring to the table, we seem to have hit the sweet spot for our 574 attendees. For those of you that couldn’t be there yourself - considering both ticket batches sold out within an hour - join us on a retrospective walk through GodotCon, reminiscing about the good and the bad, as well as highlighting all the wonderful speakers, exhibitors, and sponsors that made this event possible.
+Judging by the smiley pictures taken all around the [Silent Green](https://www.silent-green.net/) venue, and the excited chatter about what the next installments might bring to the table, we seem to have hit the sweet spot for our 574 attendees. For those of you that couldn’t be there yourself - considering both ticket batches sold out within an hour - join us on a retrospective walk through GodotCon, as well as highlighting all the wonderful speakers, exhibitors, and sponsors that made this event possible.
 
 # Sponsor support
-Only thanks to [our sponsors](https://conference.godotengine.org/2024/#sponsors) we were able to afford an event like this in the first place. 
+GodotCon 2024 wouldn’t have been possible without the generosity of [our sponsors](https://conference.godotengine.org/2024/#sponsors), who enabled us to bring this event to life.
 
 ## Critical Reflex
 Having a publisher with experience in Godot on-board was as exciting for us as it seemed for the audience of “Indie Publishing 101” by their business developer Daniel. Additionally, you might have spotted the goodie bags they provided us with.
@@ -55,6 +55,12 @@ After demonstrating “How to quick start a Godot Engine game on AWS” the Clou
 
 <img alt="" src="/storage/blog/godotcon24/aws.webp"/>
 
+<hr>
+
+If you or your company are interested in supporting the next edition of GodotCon, we’d love to hear from you! <br>Please reach out to us at [godotcon@godotengine.org](mailto:godotcon@godotengine.org).
+
+<hr>
+
 # Game Exhibition
 For the first time ever, we tried curating a selection of projects ahead of time and invited game development teams to a showcase on the venue floors. Decorated booths and sometimes even goodies caught the eyes of many attendees, and provided the exhibitors with valuable playtest information as well as wishlists. Some told us this was the first event they participated in with their project!
 
@@ -88,7 +94,7 @@ For the first time ever, we tried curating a selection of projects ahead of time
 - [Robot Detour](https://store.steampowered.com/app/2666840/Robot_Detour/)
 - [Skye's Ducky Adventure: Quest for Gluttony](https://schwarzeralptraum.itch.io/skyes-ducky-adventure-quest-for-gluttony)
 - [Voice of Flowers](https://store.steampowered.com/app/2609560/Voice_of_Flowers/)
-- Window Arcade (no link yet)
+- Window Arcade
 
 # Activities
 
@@ -108,24 +114,38 @@ One of the most popular activities turned out to be the One PC Jam (taking place
 
 The Godot community once again came through and submitted more interesting talks than we could fit on the program - resulting in us repurposing the admittedly rather small workshop room to squeeze some more of the talented speakers in. Luckily, we also invited a camera crew onsite, that took great care recording both the workshops and two talk tracks, for you to enjoy on the Godot Engine YouTube channel - some of them already available, the rest being edited as you read this blog post.
 
-// TODO embed playlist
-
-We did our best to encourage diverse speakers to apply, both in terms of who they are but also regarding their specialties. This resulted in a program that offered more than “just” engine updates to its audience - perfect for indie developers learning new skills, and to offer something for more specialized members of bigger teams that paid us a visit. 
+<span style="font-size: 1.5em">
+🔗 [YouTube Playlist](https://www.youtube.com/playlist?list=PLeG_dAglpVo6TS0q858NajyeglRuvb7hs)
+</span>
 
 # Feedback
-Considering the new additions we introduced to the event concept, and to learn from your experiences as visitors in general, we would appreciate it if you took the time to fill out this [feedback survey](https://forms.gle/3tALsQid32qqvu2Z8) we prepared. It should only take about X minutes.
+Considering the new additions we introduced to the event concept, and to learn from your experiences as visitors in general, we would appreciate it if you took the time to fill out this [feedback survey](https://forms.gle/3tALsQid32qqvu2Z8) we prepared. It should only take a few minutes.
 
-Since many restrictions were budgetary, one of our goals is to start looking for next year’s sponsors as soon as possible. If you work at or have connections to a company who would consider funding an open-source event like ours, please get in touch via [godotcon@godotengine.org](mailto:godotcon@godotengine.org). You can reference this year’s sponsor fact-sheet. // TODO add link
 
 # Thank you!
 And that concludes our tour through GodotCon 24. Hope you had fun reminiscing with us!
 
 Do you want to bring the next event to your city, become part of the organizer team? Requirements are good international travel connections and more importantly a local user group willing to help us out. 
 
-Lastly, sign up to our mailing list to be the first to know about GodotCon 25! // TODO add link
+Lastly, sign up to our mailing list to be the first to know about GodotCon 25!
 
-✉️ [godotcon@godotengine.org](mailto:godotcon@godotengine.org)
+<form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
+    <div>
+        <input type="hidden" name="nonce" />
+        <input type="email" name="email" required placeholder="E-mail"  style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);"/>
+        <p style="display:none;">
+          <input id="6e6e9" type="checkbox" name="l" checked value="6e6e9ba4-732b-4528-b4cd-71bbe6850f8d" />
+          <label for="6e6e9">Godot Conference</label>
+        </p>
+				<input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit; border-radius: 0;
+  box-shadow: none;
+  height: 54px;" />
+    </div>
+</form>
+
 🌐 [https://conference.godotengine.org/](https://conference.godotengine.org/) 
+
+### 👋 See you next year!
 
 <style>
 	.preview-image-container {
