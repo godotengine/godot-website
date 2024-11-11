@@ -15,13 +15,13 @@ date: 2024-11-11 18:30:00
 
 Variety was the name of the game this year. GodotCon keeps going around the globe and adds more activities to the program: the event team made up of volunteers and Godot Foundation staff put a lot work into making this more than a mere meetup occasion for the ever-growing community forming around the Godot Engine. 
 
-Judging by the smiley pictures taken all around the [Silent Green](https://www.silent-green.net/) venue, and the excited chatter about what the next installments might bring to the table, we seem to have hit the sweet spot for our 574 attendees. For those of you that couldn’t be there yourself - considering both ticket batches sold out within an hour - join us on a retrospective walk through GodotCon, as well as highlighting all the wonderful speakers, exhibitors, and sponsors that made this event possible.
+Judging by the smiley pictures taken all around the [Silent Green](https://www.silent-green.net/) venue, and the excited chatter about what the next installments might bring to the table, we seem to have hit the sweet spot for our 574 attendees. For those of you that couldn’t be there yourself - considering both ticket batches sold out within an hour - join us on a retrospective walk through GodotCon, highlighting all the wonderful speakers, exhibitors, and sponsors that made this event possible.
 
 # Sponsor support
 GodotCon 2024 wouldn’t have been possible without the generosity of [our sponsors](https://conference.godotengine.org/2024/#sponsors), who enabled us to bring this event to life.
 
 ## Critical Reflex
-Having a publisher with experience in Godot on-board was as exciting for us as it seemed for the audience of “Indie Publishing 101” by their business developer Daniel. Additionally, you might have spotted the goodie bags they provided us with.
+Having a publisher with experience in Godot on-board was as exciting for us as it seemed for the audience of “Indie Publishing 101” by their business developer Daniel. Additionally, you might have spotted the goodie bags they provided us.
 
 🔗 [criticalreflex.com](https://criticalreflex.com)
 
@@ -35,21 +35,21 @@ Having a publisher with experience in Godot on-board was as exciting for us as i
 <img alt="Screenshot of their block coding editor" src="/storage/blog/godotcon24/block-coding.webp"/>
 
 ## W4 Games
-Port your Godot games to console with ease! The company founded by Godot Engine veterans explained “W4's role in the Godot Ecosystem” on stage and let you playtest their products & talk business at their busy booth. 
+Port your Godot games to console with ease! The company founded by Godot Engine veterans explained “W4's role in the Godot Ecosystem” on stage and let you playtest their products and talk business at their busy booth. 
 
 🔗 [w4games.com](https://w4games.com)
 
 <img alt="" src="/storage/blog/godotcon24/w4-games.webp"/>
 
 ## Poki
-The provider of free online games also has shown interest in Godot before and is hoping to expand their selection with your projects. We talked with them about improving Godot for the Web together, let’s see what the future might bring!
+The provider of free online games also has shown interest in Godot before and is hoping to expand their selection with your projects. We talked with them about improving Godot for the Web together; let’s see what the future might bring!
 
 🔗 [poki.com](https://poki.com)
 
 <img alt="" src="/storage/blog/godotcon24/poki.webp"/>
 
 ## AWS
-After demonstrating “How to quick start a Godot Engine game on AWS” the Cloud provider team spent time answering questions on the exhibition floor.
+After demonstrating “How to quick start a Godot Engine game on AWS”, the cloud provider team spent time answering questions on the exhibition floor.
 
 🔗 [aws.amazon.com](https://aws.amazon.com/gametech/)
 
@@ -61,7 +61,7 @@ If you or your company are interested in supporting the next edition of GodotCon
 
 <hr>
 
-# Game Exhibition
+# Game exhibition
 For the first time ever, we tried curating a selection of projects ahead of time and invited game development teams to a showcase on the venue floors. Decorated booths and sometimes even goodies caught the eyes of many attendees, and provided the exhibitors with valuable playtest information as well as wishlists. Some told us this was the first event they participated in with their project!
 
 <div class="preview-image-container">
@@ -106,9 +106,9 @@ This is exactly what we aimed to facilitate with our onsite activities, especial
 
 <img alt="People participating in a game jam" src="/storage/blog/godotcon24/one-pc-jam.webp"/>
 
-One of the most popular activities turned out to be the One PC Jam (taking place at three laptops concurrently) where the conference attendees created a jam game over the course of two days. The twist: everyone only was granted one hour on the project, before having to concede their seat to the next person. This resulted in three separate, actually playable games, which you can [find here](https://godotcon.itch.io/).
+One of the most popular activities turned out to be the One PC Jam (taking place at three laptops concurrently) where the conference attendees created a jam game over the course of two days. The twist: everyone only was granted one hour on the project, before having to concede their seat to the next person. This resulted in three separate, actually playable games, which you can [find on our GodotCon itch.io site](https://godotcon.itch.io/).
 
-# Talks & Workshops
+# Talks and workshops
 
 <img alt="View of the stage, with people standing behind full rows of chairs." src="/storage/blog/godotcon24/backstage.webp"/>
 
@@ -161,4 +161,4 @@ If you want to be notified about our next one, sign up to our mailing list and b
 		max-height: 300px;
 		background-color: transparent;
 	}
-</stlye>
+</style>
