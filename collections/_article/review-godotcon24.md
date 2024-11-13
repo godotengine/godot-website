@@ -4,7 +4,7 @@ excerpt: "Our biggest conference yet!"
 categories: ["events"]
 author: Nat
 image: /storage/blog/covers/godotcon-2024-post.webp
-date: 2024-11-11 18:30:00
+date: 2024-11-13 18:30:00
 ---
 
 <br>
