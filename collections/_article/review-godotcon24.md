@@ -46,7 +46,7 @@ The provider of free online games also has shown interest in Godot before and is
 
 🔗 [poki.com](https://poki.com)
 
-<img alt="" src="/storage/blog/godotcon24/poki.webp"/>
+<img alt="Photo of the Poki booth with two of the representatives smiling and giving a thumbs up" src="/storage/blog/godotcon24/poki.webp"/>
 
 ## AWS
 After demonstrating “How to quick start a Godot Engine game on AWS”, the cloud provider team spent time answering questions on the exhibition floor.
