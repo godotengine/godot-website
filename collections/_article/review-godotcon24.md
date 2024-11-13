@@ -53,7 +53,7 @@ After demonstrating “How to quick start a Godot Engine game on AWS”, the clo
 
 🔗 [aws.amazon.com](https://aws.amazon.com/gametech/)
 
-<img alt="" src="/storage/blog/godotcon24/aws.webp"/>
+<img alt="The AWS team presenting at the main stage." src="/storage/blog/godotcon24/aws.webp"/>
 
 <hr>
 
