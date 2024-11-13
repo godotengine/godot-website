@@ -39,7 +39,7 @@ Port your Godot games to console with ease! The company founded by Godot Engine 
 
 🔗 [w4games.com](https://w4games.com)
 
-<img alt="" src="/storage/blog/godotcon24/w4-games.webp"/>
+<img alt="Juan giving a presentation about W4 Games on stage" src="/storage/blog/godotcon24/w4-games.webp"/>
 
 ## Poki
 The provider of free online games also has shown interest in Godot before and is hoping to expand their selection with your projects. We talked with them about improving Godot for the Web together; let’s see what the future might bring!
