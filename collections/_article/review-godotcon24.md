@@ -94,7 +94,7 @@ For the first time ever, we tried curating a selection of projects ahead of time
 - [Robot Detour](https://store.steampowered.com/app/2666840/Robot_Detour/)
 - [Skye's Ducky Adventure: Quest for Gluttony](https://schwarzeralptraum.itch.io/skyes-ducky-adventure-quest-for-gluttony)
 - [Voice of Flowers](https://store.steampowered.com/app/2609560/Voice_of_Flowers/)
-- Window Arcade
+- [Window Arcade](https://windowarcade.com)
 
 # Activities
 
