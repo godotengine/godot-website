@@ -16,7 +16,7 @@ With .NET 6 ending support, Godot C# packages in 4.4 will now target the next LT
 <figure>
 	<picture>
 		<source srcset="/storage/blog/dotnet/release-schedule-dark.svg" media="(prefers-color-scheme: dark)">
-		<img class="lightbox-ignore" src="/storage/blog/dotnet/release-schedule-light.svg">
+		<img class="lightbox-ignore" style="background-color: transparent;" src="/storage/blog/dotnet/release-schedule-light.svg">
 	</picture>
 	<figcaption><small>.NET release cadence from the <a href="https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core">.NET official support policy</a>.</small></figcaption>
 </figure>
