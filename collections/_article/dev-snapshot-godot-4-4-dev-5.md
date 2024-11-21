@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 4.4 dev 5"
-excerpt: "The pre-release train stops for no-one!"
+excerpt: "With GodotCon behind us and our developers recuperated, we're thrilled to return to a more frequent release-cycle."
 categories: ["pre-release"]
 author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-5.webp
