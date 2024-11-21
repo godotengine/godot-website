@@ -36,15 +36,15 @@ Here are highlights of a few new features in dev 5 that you might find particula
 
 ### Universalize UID support
 
-Previously, the <abbr title="Universal ID">UID</abbr> format was limited to only Resource files. This proved to be a pain point for users wishing to reference their scripts and other resources in a manner that's path-agnostic. This, along with a need to refactor their scripts anytime these kinds of files were moved, put a significant duty of care on the end-user that shouldn't have been necessary.
+Previously, the <abbr title="Universal ID">UID</abbr> format was not supported by all Resource types. This proved to be a pain point for users wishing to reference their scripts and other resources in a manner that's path-agnostic. This, along with a need to refactor their scripts anytime these kinds of files were moved, put a significant duty of care on the end-user that shouldn't have been necessary.
 
 Starting with dev 5, this will no longer be your burden to bear! Thanks to a long-term effort from [reduz](https://github.com/reduz), UIDs will now be applied universally in a way the engine can automatically track and account for. This is achieved via `.uid` files for the resource types that previously didn't support them, functioning similarly to other metadata files that "track" a main file.
 
-Note that, unlike metadata files, `.uid` files are strictly for the editor; the information is migrated to the uid database on export. Despite this, users using version control software **should add these files**, as they're required to properly sync data. For more information, see ([GH-97352](https://github.com/godotengine/godot/pull/97352)).
+Note that, unlike metadata files, `.uid` files are strictly for the editor; the information is migrated to the uid database on export. Despite this, users using version control software **should add these files**, as they're required to properly sync data (similar to `.import` files). For more information, see ([GH-97352](https://github.com/godotengine/godot/pull/97352)).
 
 ### Favorite editor items
 
-A common complaint we hear regarding the viewport is the potential for it to get cluttered. Namely, while there's generally a wide selection of options available for a given class/script, users will usually only care about a particular subsection that suits them. To account for this, [YeldhamDev](https://github.com/YeldhamDev) brings us the long-awaited ability to pin one's favorite properties in the inspector! Check out the implementation from PR ([GH-97352](https://github.com/godotengine/godot/pull/97415)) below:
+A common complaint we hear regarding the inspector is the potential for it to get cluttered. Namely, while there's generally a wide selection of options available for a given class/script, users will usually only care about a particular subsection that suits them. To account for this, [YeldhamDev](https://github.com/YeldhamDev) brings us the long-awaited ability to pin one's favorite properties in the inspector! Check out the implementation from PR ([GH-97352](https://github.com/godotengine/godot/pull/97415)) below:
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-5/favorite-inspector.mp4?1" type="video/mp4">
