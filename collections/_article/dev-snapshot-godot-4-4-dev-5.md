@@ -6,7 +6,7 @@ author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-5.webp
 image_caption_title: "The Rise of the Golden Idol"
 image_caption_description: "A game by Color Gray Games"
-date: 2024-11-21 12:00:00
+date: 2024-11-21 18:00:00
 ---
 
 With [GodotCon](https://godotengine.org/article/review-godotcon24/) behind us and our developers recuperated, we're thrilled to return
