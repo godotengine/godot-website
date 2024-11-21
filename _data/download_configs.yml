@@ -79,8 +79,8 @@ overrides:
   # Mono version of Godot 4 was only introduced in 4.0 alpha 17.
   - version: 4
     range:
-      - "4.0-alpha1"
-      - "4.0-alpha16"
+      - 4.0-alpha1
+      - 4.0-alpha16
     config:
       templates: export_templates.tpz
       editor:
@@ -97,8 +97,8 @@ overrides:
   # Godot 4.2 beta 5 introduced Linux ARM builds.
   - version: 4
     range:
-      - "4.0-alpha17"
-      - "4.2-beta4"
+      - 4.0-alpha17
+      - 4.2-beta4
     config:
       templates: export_templates.tpz
       editor:
@@ -123,8 +123,8 @@ overrides:
   # Godot 4.3 RC 1 introduced Windows ARM builds.
   - version: 4
     range:
-      - "4.2-beta5"
-      - "4.3-beta3"
+      - 4.2-beta5
+      - 4.3-beta3
     config:
       templates: export_templates.tpz
       editor:
@@ -153,8 +153,8 @@ overrides:
   # Godot 4.4 dev 2 introduced Android Horizon OS builds.
   - version: 4
     range:
-      - "4.3-rc1"
-      - "4.4-dev1"
+      - 4.3-rc1
+      - 4.4-dev1
     config:
       templates: export_templates.tpz
       editor:

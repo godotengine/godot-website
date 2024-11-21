@@ -1,17 +1,15 @@
 # Settings
 exclude:
-  [
-    ".github",
-    "Gemfile",
-    "Gemfile.lock",
-    "build.sh",
-    "build-and-serve.sh",
-    "build-and-watch.sh",
-    "README.md",
-  ]
+  - .github,
+  - build-and-serve.sh,
+  - build-and-watch.sh,
+  - build.sh,
+  - Gemfile,
+  - Gemfile.lock,
+  - README.md,
 permalink: pretty
 
-url: "https://godotengine.org"
+url: https://godotengine.org
 
 collections_dir: collections
 collections:
@@ -32,34 +30,34 @@ future: true
 
 defaults:
   - scope:
-      type: "article"
+      type: article
     values:
-      layout: "article"
-      og_type: "article"
+      layout: article
+      og_type: article
   - scope:
-      type: "event"
+      type: event
     values:
-      layout: "event"
+      layout: event
   - scope:
-      type: "showcase"
+      type: showcase
     values:
-      layout: "showcase-item"
+      layout: showcase-item
   - scope:
-      type: "download"
+      type: download
     values:
-      layout: "download"
+      layout: download
   - scope:
-      type: "download_3"
+      type: download_3
     values:
-      layout: "download-3"
+      layout: download-3
   - scope:
-      type: "download_archive"
+      type: download_archive
     values:
-      layout: "download-archive"
+      layout: download-archive
   - scope:
-      type: "mirrorlist"
+      type: mirrorlist
     values:
-      layout: "mirrorlist"
+      layout: mirrorlist
 
 # Plugins
 plugins:
@@ -68,29 +66,29 @@ plugins:
   # - jekyll-multiple-languages-plugin
 
 # Internationalization
-languages: ["en", "es"]
-exclude_from_localizations: ["assets", "storage"]
-default_lang: "en"
+languages: [en, es]
+exclude_from_localizations: [assets, storage]
+default_lang: en
 
 # Pagination (used by the blog)
 pagination:
   enabled: true
   debug: false
 
-  collection: "article"
+  collection: article
   per_page: 24
-  sort_field: "date"
+  sort_field: date
   sort_reverse: true
   # Controls how the pagination trail for the paginated pages look like.
   trail:
     before: 2
     after: 2
 
-  title: ":title - Page :num"
-  permalink: "/:num/"
-  category: "posts"
-  tag: ""
-  locale: ""
+  title: :title - Page :num
+  permalink: /:num/
+  category: posts
+  tag: ''
+  locale: ''
 
 # .scss generation
 sass:

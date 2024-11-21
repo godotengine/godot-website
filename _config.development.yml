@@ -1,5 +1,5 @@
 # Overrides from the main config
-url: "http://localhost:4000"
+url: http://localhost:4000
 
 # Enables incremental builds to speed up iteration times.
 incremental: true

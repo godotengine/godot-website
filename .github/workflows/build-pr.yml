@@ -13,28 +13,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
-    # Configure the build environment.
+      # Configure the build environment.
+      - name: Install Ruby 3.1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          # Runs 'bundle install' and caches installed gems automatically.
+          bundler-cache: true
 
-    - name: Install Ruby 3.1
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1'
-        # Runs 'bundle install' and caches installed gems automatically
-        bundler-cache: true
+      - name: Install Minify
+        run: sudo apt-get update && sudo apt-get install minify
 
-    - name: Install Minify
-      run: sudo apt-get update && sudo apt-get install minify
+      # Build the website.
+      - name: Build the static website
+        run: bundle exec jekyll build
 
-    # Build the website.
-
-    - name: Build the static website
-      run: bundle exec jekyll build
-
-    # Upload resulting "_site" directory as artifact
-    
-    - uses: actions/upload-artifact@v4
-      with:
-        name: site
-        path: _site/
+      # Upload resulting "_site" directory as artifact.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site/

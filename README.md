@@ -172,11 +172,11 @@ build available for download.
 
 To create a new version, add the following block to the file:
 
-```
-- name: "4.0.1"
-  flavor: "stable"
-  release_date: "20 March 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-1/"
+```yaml
+- name: '4.0.1'
+  flavor: stable
+  release_date: 20 March 2023
+  release_notes: /article/maintenance-release-godot-4-0-1/
 ```
 
 Make sure to order entries correctly, with the higher version number being closer to the top. Use the `flavor` field
@@ -188,12 +188,12 @@ information. Make sure to update this information when publishing the release no
 
 Stable releases featured across the website, must be marked with the `featured` field and the corresponding major version number. Only one record must be marked as featured per version, so don't forget to remove it from the current holder of the mark.
 
-```
-- name: "4.0.3"
-  flavor: "stable"
-  release_date: "19 May 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-3/"
-  featured: "4"
+```yaml
+- name: '4.0.3'
+  flavor: stable
+  release_date: 19 May 2023
+  release_notes: /article/maintenance-release-godot-4-0-3/
+  featured: '4'
 ```
 
 There are two additional files providing data for download pages and links: `_data/download_configs.yml` and
@@ -206,10 +206,10 @@ some pages.
 If a new host needs to be supported by the mirrorlist, it needs to be added in a few places. For the data side of
 things you need to update `_data/mirrorlist_configs.yml` and add another record for the major-minor version code.
 
-```
-  - name: "4.1"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
+```yaml
+  - name: '4.1'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
 ```
 
 The `stable` key refers to hosts available for the stable release of that version, while the `preview` key refers

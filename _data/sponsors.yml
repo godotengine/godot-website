@@ -1,58 +1,58 @@
 patron:
-  - name: "OSS Capital"
-    link: "https://oss.capital/"
-    image: "https://fund.godotengine.org/static/logos/ossc-logo.svg"
-  - name: "Khronos® Group"
-    link: "https://www.khronos.org/"
-    image: "https://fund.godotengine.org/static/logos/khronos.svg"
+  - name: OSS Capital
+    link: https://oss.capital/
+    image: https://fund.godotengine.org/static/logos/ossc-logo.svg
+  - name: Khronos® Group
+    link: https://www.khronos.org/
+    image: https://fund.godotengine.org/static/logos/khronos.svg
 platinum:
-  - name: "W4 Games"
-    link: "https://w4games.com/"
-    image: "https://fund.godotengine.org/static/logos/w4.png"
-  - name: "V-Sekai"
-    link: "https://github.com/V-Sekai"
-    image: "https://fund.godotengine.org/static/logos/v-sekai.png"
-  - name: "Google Play"
-    link: "https://play.google.com"
-    image: "https://fund.godotengine.org/static/logos/google-play.png"
+  - name: W4 Games
+    link: https://w4games.com/
+    image: https://fund.godotengine.org/static/logos/w4.png
+  - name: V-Sekai
+    link: https://github.com/V-Sekai
+    image: https://fund.godotengine.org/static/logos/v-sekai.png
+  - name: Google Play
+    link: https://play.google.com
+    image: https://fund.godotengine.org/static/logos/google-play.png
 gold:
-  - name: "Prehensile Tales"
-    link: "https://prehensile-tales.com"
-    image: "https://fund.godotengine.org/static/logos/pt.png"
-  - name: "Robot Gentleman"
-    link: "http://robotgentleman.com/"
-    image: "https://fund.godotengine.org/static/logos/robot-gentleman.png"
-  - name: "Mega Crit"
-    link: "https://www.megacrit.com/"
-    image: "https://fund.godotengine.org/static/logos/megacrit.png"
-  - name: "Pirate Software"
-    link: "https://gopiratesoftware.com/"
-    image: "https://fund.godotengine.org/static/logos/piratesoftware.webp"
+  - name: Prehensile Tales
+    link: https://prehensile-tales.com
+    image: https://fund.godotengine.org/static/logos/pt.png
+  - name: Robot Gentleman
+    link: http://robotgentleman.com/
+    image: https://fund.godotengine.org/static/logos/robot-gentleman.png
+  - name: Mega Crit
+    link: https://www.megacrit.com/
+    image: https://fund.godotengine.org/static/logos/megacrit.png
+  - name: Pirate Software
+    link: https://gopiratesoftware.com/
+    image: https://fund.godotengine.org/static/logos/piratesoftware.webp
 silver:
-  - name: "Playful Studios"
-    link: "https://playfulstudios.com/"
-    image: "https://fund.godotengine.org/static/logos/playful-studios.png"
-  - name: "Orbital Knight"
-    link: "https://www.orbitalknight.com/"
-    image: "https://fund.godotengine.org/static/logos/orbital-knight.png"
-  - name: "Broken Rules"
-    link: "https://brokenrul.es"
-    image: "https://fund.godotengine.org/static/logos/broken-rules.svg"
-  - name: "Chasing Carrots"
-    link: "https://www.chasing-carrots.com"
-    image: "https://fund.godotengine.org/static/logos/chasing-carrots.webp"
-  - name: "Indoor Astronaut"
-    link: "https://indoorastronaut.ch/"
-    image: "https://fund.godotengine.org/static/logos/indoor-astronaut.png"
-  - name: "LoadComplete"
-    link: "https://loadcomplete.com/"
-    image: "https://fund.godotengine.org/static/logos/loadcomplete.png"
-  - name: "Null"
-    link: "https://null.com/"
-    image: "https://fund.godotengine.org/static/logos/null.svg"
+  - name: Playful Studios
+    link: https://playfulstudios.com/
+    image: https://fund.godotengine.org/static/logos/playful-studios.png
+  - name: Orbital Knight
+    link: https://www.orbitalknight.com/
+    image: https://fund.godotengine.org/static/logos/orbital-knight.png
+  - name: Broken Rules
+    link: https://brokenrul.es
+    image: https://fund.godotengine.org/static/logos/broken-rules.svg
+  - name: Chasing Carrots
+    link: https://www.chasing-carrots.com
+    image: https://fund.godotengine.org/static/logos/chasing-carrots.webp
+  - name: Indoor Astronaut
+    link: https://indoorastronaut.ch/
+    image: https://fund.godotengine.org/static/logos/indoor-astronaut.png
+  - name: LoadComplete
+    link: https://loadcomplete.com/
+    image: https://fund.godotengine.org/static/logos/loadcomplete.png
+  - name: 'Null'
+    link: https://null.com/
+    image: https://fund.godotengine.org/static/logos/null.svg
   - name: Copia Wealth Studios
-    link: "https://copiawealthstudios.com/"
-    image: "https://fund.godotengine.org/static/logos/copia-wealth-studios.svg"
-  - name: "Re-Logic"
-    link: "https://re-logic.com/"
-    image: "https://fund.godotengine.org/static/logos/re-logic.png"
+    link: https://copiawealthstudios.com/
+    image: https://fund.godotengine.org/static/logos/copia-wealth-studios.svg
+  - name: Re-Logic
+    link: https://re-logic.com/
+    image: https://fund.godotengine.org/static/logos/re-logic.png

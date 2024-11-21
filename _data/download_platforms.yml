@@ -1,20 +1,20 @@
-- name: "templates"
-  title: "Export templates"
-  caption: ""
+- name: templates
+  title: Export templates
+  caption: ''
   tags:
-    - "Used to export your games to all supported platforms"
+    - Used to export your games to all supported platforms
 
-- name: "aar_library"
-  title: "AAR library"
-  caption: ""
+- name: aar_library
+  title: AAR library
+  caption: ''
   tags:
     - Android plugins
     - Java
     - Kotlin
 
-- name: "android.apk"
-  title: "Android"
-  caption: "APK - Universal"
+- name: android.apk
+  title: Android
+  caption: APK - Universal
   tags:
     - APK download
     - arm64
@@ -22,9 +22,9 @@
     - x86_64
     - x86_32
 
-- name: "android.playstore"
-  title: "Android"
-  caption: "Play Store"
+- name: android.playstore
+  title: Android
+  caption: Play Store
   tags:
     - Play Store
     - arm64
@@ -32,88 +32,88 @@
     - x86_64
     - x86_32
 
-- name: "android.horizonos"
-  title: "Horizon OS"
-  caption: "APK - arm64"
+- name: android.horizonos
+  title: Horizon OS
+  caption: APK - arm64
   tags:
     - APK download
     - Meta Quest 3 & Pro
     - arm64
 
-- name: "android.horizonstore"
-  title: "Horizon OS"
-  caption: "Horizon Store"
+- name: android.horizonstore
+  title: Horizon OS
+  caption: Horizon Store
   tags:
     - Horizon Store
     - Meta Quest 3 & Pro
     - arm64
 
-- name: "linux.32"
-  title: "Linux"
-  caption: "x86_32"
+- name: linux.32
+  title: Linux
+  caption: x86_32
   tags:
     - x86_32
 
-- name: "linux.64"
-  title: "Linux"
-  caption: "x86_64"
+- name: linux.64
+  title: Linux
+  caption: x86_64
   tags:
     - x86_64
 
-- name: "linux.arm32"
-  title: "Linux"
-  caption: "arm32"
+- name: linux.arm32
+  title: Linux
+  caption: arm32
   tags:
     - arm32
 
-- name: "linux.arm64"
-  title: "Linux"
-  caption: "arm64"
+- name: linux.arm64
+  title: Linux
+  caption: arm64
   tags:
     - arm64
 
-- name: "linux_server.64"
-  title: "Linux Server"
-  caption: "Export Template - x86_64"
+- name: linux_server.64
+  title: Linux Server
+  caption: Export Template - x86_64
   tags:
     - x86_64
     - Headless
 
-- name: "linux_server.headless.64"
-  title: "Linux Server"
-  caption: "Editor - x86_64"
+- name: linux_server.headless.64
+  title: Linux Server
+  caption: Editor - x86_64
   tags:
     - x86_64
     - Headless
 
-- name: "macos.universal"
-  title: "macOS"
-  caption: "Universal"
+- name: macos.universal
+  title: macOS
+  caption: Universal
   tags:
     - arm64 (Apple Silicon)
     - x86_64 (Intel)
 
-- name: "web"
-  title: "Web editor"
-  caption: ""
+- name: web
+  title: Web editor
+  caption: ''
   tags:
     - Self-hosted
     - Cross-platform
 
-- name: "windows.32"
-  title: "Windows"
-  caption: "x86_32"
+- name: windows.32
+  title: Windows
+  caption: x86_32
   tags:
     - x86_32
 
-- name: "windows.64"
-  title: "Windows"
-  caption: "x86_64"
+- name: windows.64
+  title: Windows
+  caption: x86_64
   tags:
     - x86_64
 
-- name: "windows.arm64"
-  title: "Windows"
-  caption: "arm64"
+- name: windows.arm64
+  title: Windows
+  caption: arm64
   tags:
     - arm64

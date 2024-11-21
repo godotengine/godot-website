@@ -1,57 +1,57 @@
 hosts:
-  - name: "github"
-    title: "Official GitHub Releases mirror"
-  - name: "github_builds"
-    title: "Official GitHub Releases mirror"
-  - name: "tuxfamily"
-    title: "Official TuxFamily mirror"
+  - name: github
+    title: Official GitHub Releases mirror
+  - name: github_builds
+    title: Official GitHub Releases mirror
+  - name: tuxfamily
+    title: Official TuxFamily mirror
 
 defaults:
-  - name: "4.4"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "4.3"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "4.2"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "4.1"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "4.0"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "3.6"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "3.5"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "3.4"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "3.3"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "3.2"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "3.1"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "3.0"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "2.1"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "2.0"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "1.1"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
-  - name: "1.0"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
+  - name: '4.4'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '4.3'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '4.2'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '4.1'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '4.0'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '3.6'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '3.5'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '3.4'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '3.3'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '3.2'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '3.1'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '3.0'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '2.1'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '2.0'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '1.1'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]
+  - name: '1.0'
+    stable: [github, tuxfamily]
+    preview: [github_builds, tuxfamily]

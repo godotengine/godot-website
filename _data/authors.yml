@@ -74,11 +74,11 @@
   image: /assets/images/authors/default_avatar.svg
 - name: Yuri Sizov
   image: /assets/images/authors/yuri.jpeg
-- name: "2000+ Godot contributors"
+- name: 2000+ Godot contributors
   image: /assets/images/authors/everyone.webp
-- name: "Godot contributors"
+- name: Godot contributors
   image: /assets/images/authors/everyone.webp
-- name: "Godot Foundation"
+- name: Godot Foundation
   image: /assets/images/authors/foundation.webp
 - name: default
   image: /assets/images/authors/default_avatar.svg
