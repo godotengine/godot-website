@@ -23,10 +23,6 @@ content_instructions: |
   </ul>
 
   <p>
-    Godot is code-signed and notarized for macOS. This means it should run out of the box even if Gatekeeper is enabled on the system (which is the default).
-  </p>
-
-  <p>
-    For older Godot versions, see the last section of <a href="https://support.apple.com/en-us/HT202491">this page</a> for instructions on allowing Godot to run anyway. Alternatively, you can install <a href="https://store.steampowered.com/app/404790">Godot from Steam</a> and switch to an older branch in the Steam application settings to work around this.
+    Godot is code-signed and notarized for macOS by <em>Prehensile Tales B.V.</em>.
   </p>
 ---
