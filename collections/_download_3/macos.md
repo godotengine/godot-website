@@ -19,7 +19,8 @@ content_instructions: |
   </ul>
 
   <p>
-    Since Godot 3.3, Godot is code-signed and notarized for macOS. This means it should run out of the box even if Gatekeeper is enabled on the system (which is the default).
+    Since Godot 3.3, Godot is code-signed and notarized for macOS by <em>Prehensile Tales B.V.</em>.
+    <br>This means it should run out of the box even if Gatekeeper is enabled on the system (which is the default).
   </p>
 
   <p>
