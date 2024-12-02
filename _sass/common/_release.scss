@@ -1,3 +1,6 @@
+//
+// Functions
+//
 @function offset-hue($color, $offset, $i: 1) {
 	@return adjust-hue($color, $offset * $i);
 }
@@ -50,4 +53,19 @@
 
 @function r-get-mobile($value) {
 	@return map-get($value, "mobile");
+}
+
+//
+// Mixins
+//
+@mixin is-dark() {
+	@media screen and (prefers-color-scheme: dark) {
+		@content;
+	}
+}
+
+@mixin is-light() {
+	@media screen and (prefers-color-scheme: light) {
+		@content;
+	}
 }

@@ -1,0 +1,650 @@
+---
+permalink: /priorities
+title: "Priorities"
+description: "Godot Priorities"
+layout: default
+---
+
+{% assign core_priorities = site.priorities | where: "category", "core" | sort: "rank" %}
+{% assign physics_priorities = site.priorities | where: "category", "physics" | sort: "rank" %}
+{% assign rendering_priorities = site.priorities | where: "category", "rendering" | sort: "rank" %}
+{% assign animation_priorities = site.priorities | where: "category", "animation" | sort: "rank" %}
+{% assign navigation_priorities = site.priorities | where: "category", "navigation" | sort: "rank" %}
+{% assign editor_priorities = site.priorities | where: "category", "editor" | sort: "rank" %}
+{% assign assetio_priorities = site.priorities | where: "category", "assetio" | sort: "rank" %}
+{% assign platforms_priorities = site.priorities | where: "category", "platforms" | sort: "rank" %}
+{% assign android_priorities = site.priorities | where: "category", "android" | sort: "rank" %}
+{% assign ios_priorities = site.priorities | where: "category", "ios" | sort: "rank" %}
+{% assign linuxbsd_priorities = site.priorities | where: "category", "linuxbsd" | sort: "rank" %}
+{% assign macos_priorities = site.priorities | where: "category", "macos" | sort: "rank" %}
+{% assign windows_priorities = site.priorities | where: "category", "windows" | sort: "rank" %}
+{% assign web_priorities = site.priorities | where: "category", "web" | sort: "rank" %}
+{% assign xr_priorities = site.priorities | where: "category", "xr" | sort: "rank" %}
+{% assign scripting_priorities = site.priorities | where: "category", "scripting" | sort: "rank" %}
+{% assign gdscript_priorities = site.priorities | where: "category", "gdscript" | sort: "rank" %}
+{% assign dotnet_priorities = site.priorities | where: "category", "dotnet" | sort: "rank" %}
+{% assign gdextension_priorities = site.priorities | where: "category", "gdextension" | sort: "rank" %}
+{% assign documentation_priorities = site.priorities | where: "category", "documentation" | sort: "rank" %}
+
+{% include header.html %}
+
+<!-- Priorities stylesheet. -->
+<link rel="stylesheet" href="/assets/css/priorities/base.css" />
+<noscript>
+	<link rel="stylesheet" href="/assets/css/priorities/noscript.css" />
+</noscript>
+
+<!-- Priorities script. -->
+<script type="module" src="/assets/js/priorities.mjs"></script>
+
+<!-- Google icons. -->
+<style>
+@font-face {
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/storage/priorities/fonts/google-icons.woff2) format('woff');
+}
+
+.material-symbols-outlined {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-moz-font-feature-settings: 'liga';
+	-moz-osx-font-smoothing: grayscale;
+}
+</style>
+<style>
+.material-symbols-outlined {
+	font-variation-settings:
+		'FILL' 0,
+		'wght' 400,
+		'GRAD' 0,
+		'opsz' 24;
+}
+</style>
+
+<!-- Octicons icons. -->
+<style>
+/* Icon made with https://fontello.com/ based on icons found in /assets/icons/octicons. */
+@font-face {
+	font-family: "octicons";
+	src: url(/storage/priorities/fonts/octicons.woff2);
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="godot-icon-"]:before, [class*=" godot-icon-"]:before {
+  font-family: "octicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.godot-icon-bug:before { content: '\e004'; } /* '' */
+.godot-icon-git-pull-request:before { content: '\e005'; } /* '' */
+.godot-icon-zap:before { content: '\e006'; } /* '' */
+</style>
+
+<div class="priorities-container">
+	<div class="priorities-intro">
+		<!-- BANNER -->
+		<div class="banner">
+			<div class="container">
+				<h1>Priorities</h1>
+			</div>
+		</div>
+
+		<!-- INTRO -->
+		<div class="intro">
+			<div class="container">
+				<div class="intro-text">
+					<div>
+						<p class="wishlist-par">
+							This page is our <strong>wishlist</strong>:
+							it details the improvements that we consider most important to make the Godot Engine a better tool for its users.
+							The items were created by talking to the volunteer maintainers for each area about the current state of things,
+							their personal goals, and what kind of contributions they are looking for.
+						</p>
+						<p class="wishlist-par">
+							As with any wishlist, these points are an idealized version of what is to come in the project’s future.
+							To realize them, we will need the support from you, whether you are a representative for a company looking to sponsor Godot
+							or a game developer capable to contribute to the codebase directly. The Godot Engine has always been a <strong>community effort</strong> — there is only so much ground we can cover with Godot Foundation contractors at the moment.
+						</p>
+					</div>
+					<div>
+						<p class="wishlist-par">
+							We hope that by publishing this list, we can align our communal efforts: by showcasing which areas need to see
+							improvements the most and what the next steps would be for anyone taking action. Let this list be an indicator of…
+						</p>
+						<ol class="wishlist-list">
+							<li>what kind of contractors we would like to hire if donations increase,</li>
+							<li>what areas are ripe with good first issues for new contributors, and</li>
+							<li>where corporate sponsors could lend a helping hand</li>
+						</ol>
+						<div>
+							<div class="wishlist-btns">
+								<a class="wishlist-btn-anchor donate" href="https://fund.godotengine.org/" target="_blank">
+									<div class="wishlist-btn-text">
+										<span>Donate to the Fund</span>
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+										</svg>
+									</div>
+								</a>
+								<a class="wishlist-btn-anchor howto" href="https://docs.godotengine.org/en/stable/contributing/how_to_contribute.html" target="_blank">
+									<div class="wishlist-btn-text">
+										<span>How to contribute</span>
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- NAVIGATION -->
+	<nav id="priorities-navigation" class="navigation">
+		<div class="container">
+			<div class="navigation-list-container">
+				<ul class="navigation-list">
+					<!-- Core -->
+					<li>
+						<details class="navigation-list-details" open>
+							<!-- `tabindex="-1"` to disable details keyboard selection (as we disabled the functionality). -->
+							<summary class="navigation-list-summary" tabindex="-1">
+								<div class="label">
+									{%
+										include_relative _includes/nav_link.html
+										anchor="core"
+										title="Core"
+										priorities=core_priorities
+										is_list_item=false
+									%}
+								</div>
+								<div class="toggle">
+									<span class="material-symbols-outlined more">unfold_more</span>
+									<span class="material-symbols-outlined less">unfold_less</span>
+								</div>
+							</summary>
+							<ul class="navigation-sublist">
+								{%
+									include_relative _includes/nav_link.html
+									anchor="physics"
+									title="Physics"
+									priorities=physics_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="rendering"
+									title="Rendering"
+									priorities=rendering_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="animation"
+									title="Animation"
+									priorities=animation_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="navigation"
+									title="Navigation"
+									priorities=navigation_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+							</ul>
+						</details>
+					</li>
+
+					<!-- Editor -->
+					<li>
+						<details class="navigation-list-details" open>
+							<summary class="navigation-list-summary" tabindex="-1">
+								<div class="label">
+									{%
+										include_relative _includes/nav_link.html
+										anchor="editor"
+										title="Editor"
+										priorities=editor_priorities
+										is_list_item=false
+									%}
+								</div>
+								<div class="toggle">
+									<span class="material-symbols-outlined more">unfold_more</span>
+									<span class="material-symbols-outlined less">unfold_less</span>
+								</div>
+							</summary>
+							<ul class="navigation-sublist">
+								{%
+									include_relative _includes/nav_link.html
+									anchor="assetio"
+									title="Asset import & export"
+									priorities=assetio_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+							</ul>
+						</details>
+					</li>
+
+					<!-- Platforms -->
+					<li>
+						<details class="navigation-list-details" open>
+							<summary class="navigation-list-summary" tabindex="-1">
+								<div class="label">
+									{%
+										include_relative _includes/nav_link.html
+										anchor="platforms"
+										title="Platforms"
+										priorities=platforms_priorities
+										is_list_item=false
+									%}
+								</div>
+								<div class="toggle">
+									<span class="material-symbols-outlined more">unfold_more</span>
+									<span class="material-symbols-outlined less">unfold_less</span>
+								</div>
+							</summary>
+							<ul class="navigation-sublist">
+								{%
+									include_relative _includes/nav_link.html
+									anchor="android"
+									title="Android"
+									priorities=android_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="ios"
+									title="iOS"
+									priorities=ios_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="linuxbsd"
+									title="Linux/BSDs"
+									priorities=linuxbsd_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="macos"
+									title="macOS"
+									priorities=macos_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="windows"
+									title="Windows"
+									priorities=windows_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="web"
+									title="Web"
+									priorities=web_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="xr"
+									title="XR"
+									priorities=xr_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+							</ul>
+						</details>
+					</li>
+
+					<!-- Scripting -->
+					<li>
+						<details class="navigation-list-details" open>
+							<summary class="navigation-list-summary" tabindex="-1">
+								<div class="label">
+									{%
+										include_relative _includes/nav_link.html
+										anchor="scripting"
+										title="Scripting"
+										priorities=scripting_priorities
+										is_list_item=false
+									%}
+								</div>
+								<div class="toggle">
+									<span class="material-symbols-outlined more">unfold_more</span>
+									<span class="material-symbols-outlined less">unfold_less</span>
+								</div>
+							</summary>
+							<ul class="navigation-sublist">
+								{%
+									include_relative _includes/nav_link.html
+									anchor="gdscript"
+									title="GDScript"
+									priorities=gdscript_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="dotnet"
+									title=".NET"
+									priorities=dotnet_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+								{%
+									include_relative _includes/nav_link.html
+									anchor="gdextension"
+									title="GDExtension"
+									priorities=gdextension_priorities
+									is_list_item=true
+									last_updated_duration=last_updated_duration
+									ignore_recent_update=ignore_recent_update
+								%}
+							</ul>
+						</details>
+					</li>
+
+					<!-- Documentation -->
+					{% assign nb_of_documentation_priorities = documentation_priorities | size %}
+					{% if nb_of_documentation_priorities > 0 %}
+					<li>
+						<details class="navigation-list-details" open>
+							<summary class="navigation-list-summary" tabindex="-1">
+								<div class="label">
+									{%
+										include_relative _includes/nav_link.html
+										anchor="documentation"
+										title="Documentation"
+										priorities=documentation_priorities
+										is_list_item=false
+									%}
+								</div>
+								<div class="toggle">
+									<span class="material-symbols-outlined more">unfold_more</span>
+									<span class="material-symbols-outlined less">unfold_less</span>
+								</div>
+							</summary>
+							<ul class="navigation-sublist">
+							</ul>
+						</details>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="priorities">
+		<!-- Core -->
+		{%
+			include_relative _includes/category.html
+			level="1"
+			id="core"
+			name="Core"
+			elements=core_priorities
+		%}
+
+		<!-- :: Physics -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="physics"
+			name="Physics"
+			elements=physics_priorities
+		%}
+
+		<!-- :: Rendering -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="rendering"
+			name="Rendering"
+			elements=rendering_priorities
+		%}
+
+		<!-- :: Animation -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="animation"
+			name="Animation"
+			elements=animation_priorities
+		%}
+
+		<!-- :: Navigation -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="navigation"
+			name="Navigation"
+			elements=navigation_priorities
+		%}
+
+		<!-- Editor -->
+		{%
+			include_relative _includes/category.html
+			level="1"
+			id="editor"
+			name="Editor"
+			elements=editor_priorities
+		%}
+
+		<!-- :: Asset import & export -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="assetio"
+			name="Asset import &amp; export"
+			elements=assetio_priorities
+		%}
+
+		<!-- Platforms -->
+		{%
+			include_relative _includes/category.html
+			level="1"
+			id="platforms"
+			name="Platforms"
+			elements=platforms_priorities
+		%}
+
+		<!-- :: Android -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="android"
+			name="Android"
+			elements=android_priorities
+		%}
+
+		<!-- :: iOS -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="ios"
+			name="iOS"
+			elements=ios_priorities
+		%}
+
+		<!-- :: Linux/BSDs -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="linuxbsd"
+			name="Linux/BSDs"
+			elements=linuxbsd_priorities
+		%}
+
+		<!-- :: macOS -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="macos"
+			name="macOS"
+			elements=macos_priorities
+		%}
+
+		<!-- :: Windows -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="windows"
+			name="Windows"
+			elements=windows_priorities
+		%}
+
+		<!-- :: Web -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="web"
+			name="Web"
+			elements=web_priorities
+		%}
+
+		<!-- :: XR -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="xr"
+			name="XR"
+			elements=xr_priorities
+		%}
+
+		<!-- Scripting -->
+		{%
+			include_relative _includes/category.html
+			level="1"
+			id="scripting"
+			name="Scripting"
+			elements=scripting_priorities
+		%}
+
+		<!-- :: GDScript -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="gdscript"
+			name="GDScript"
+			elements=gdscript_priorities
+		%}
+
+		<!-- :: .NET -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="dotnet"
+			name=".NET"
+			elements=dotnet_priorities
+		%}
+
+		<!-- :: GDExtension -->
+		{%
+			include_relative _includes/category.html
+			level="2"
+			id="gdextension"
+			name="GDExtension"
+			elements=gdextension_priorities
+		%}
+
+		<!-- Documentation -->
+		{%
+			include_relative _includes/category.html
+			level="1"
+			id="documentation"
+			name="Documentation"
+			elements=documentation_priorities
+		%}
+	</div>
+
+	<!-- SCROLL TO TOP -->
+	<div id="scroll-to-top">
+		<a class="link" href="#priorities-navigation"><span>⬆</span></a>
+	</div>
+
+	<!-- FOUNDATION -->
+	<div class="foundation">
+		<div class="container">
+
+		</div>
+	</div>
+
+	<!-- CREDITS -->
+	<div class="credits">
+		<div class="container">
+
+		</div>
+	</div>
+</div>
+
+{% include footer.html %}

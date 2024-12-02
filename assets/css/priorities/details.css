@@ -1,0 +1,65 @@
+/**
+ * This file is a workaround for our version of Sass (1.77.5)
+ * not supporting `@supports selector()`
+ */
+
+@keyframes opening {
+	from {
+		transform:
+			translateY(-50px);
+		opacity: 0;
+	}
+
+	to {
+		transform:
+			translateY(0);
+		opacity: 1;
+	}
+}
+
+/**
+ * This enables the smooth open/close of details in supported browsers.
+ */
+@supports selector(details::details-content) and (interpolate-size: allow-keywords) and (content-visibility: visible) {
+	.priorities-container {
+		interpolate-size: allow-keywords;
+	}
+
+	.priorities-container details {
+		padding: 2px;
+	}
+
+	.priorities-container details::details-content {
+		height: 0;
+		transition:
+			height 0.3s ease,
+			content-visibility 0.3s allow-discrete ease;
+		content-visibility: hidden;
+		overflow: hidden;
+	}
+
+	.priorities-container details[open]::details-content {
+		height: auto;
+		content-visibility: visible;
+	}
+
+	@starting-style {
+		.priorities-container details::details-content {
+			height: 0;
+		}
+	}
+}
+
+/**
+ * This is the fallback on non-supported browsers.
+ */
+@supports not (selector(details::details-content) and (interpolate-size: allow-keywords) and (content-visibility: visible)) {
+	details > summary {
+		z-index: 100;
+	}
+
+	details.opening > *:not(summary) {
+		animation:
+			opening 0.3s ease;
+	}
+}
