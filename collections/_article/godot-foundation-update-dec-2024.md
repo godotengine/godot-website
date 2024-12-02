@@ -26,7 +26,7 @@ Foundation will always operate in a way that supports Godot.
 The Foundation currently has 10 contractors working on the engine directly (6 full time, 4 part time) and 3 contractors
 working on administration and infrastructure.
 
-This is the most number of contractors we have had at once, and even so, we feel understaffed as there is always more
+This is the most contractors we have had at once, and even so, we feel understaffed as there is always more
 work that needs to be done than we can do. Accordingly, we would like to continue hiring once funding allows for it.
 
 ## Upcoming projects
