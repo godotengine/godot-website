@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "noscript.css",
+	"sources": [
+		"noscript.scss"
+	],
+	"sourcesContent": [
+		"// Fixes the parsing of the unusual front matter / SCSS file.\n*{};\n"
+	],
+	"names": [],
+	"mappings": ""
+}
