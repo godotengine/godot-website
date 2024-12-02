@@ -1,10 +1,10 @@
 ---
 title: "Godot Foundation Update December 2024"
-excerpt: "We've been quietly working on a number of things! Here are a few."
+excerpt: "We’ve made progress on several key initiatives for the organization and the Godot ecosystem. Here’s what we’ve been up to."
 categories: ["news"]
 author: Godot Foundation
-image: /storage/blog/covers/godot-foundation-update-2023.jpg
-date: 2024-12-01 12:00:00
+image: /storage/blog/covers/godot-foundation-update-2024.webp
+date: 2024-12-02 17:00:00
 ---
 
 The Foundation has been working on a number of things behind the scenes that are important for the organization and for
@@ -33,15 +33,13 @@ work that needs to be done than we can do. Accordingly, we would like to continu
 The Foundation is working on 4 major projects in addition to working on Godot itself:
 1. An official asset store
 2. An official job board on the Godot website
-3. A public project priorities document
+3. A public project priorities page
 4. A public trademark policy
 
 ### Asset store
-We have been working towards an initial version of the asset store for a while now. It has taken us some time to get the
-legal aspects into place and a design agreed upon. 
+We have been working towards an initial version of the asset store for a while now. It has taken us some time to get the legal aspects into place and a design agreed upon. 
 
-We expect to have an early access version of the site up and running by the end of the year and we will begin inviting
-testers to help us polish it and get it ready for a full release sometime in 2025.
+We expect to have an early access version of the site up and running this month and we will begin inviting testers to help us polish it and get it ready for a full release sometime in 2025.
 
 ### Job board
 We aim to have a place for people to post that are looking to hire Godot developers to add to their game team or Godot
