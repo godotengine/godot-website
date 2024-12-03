@@ -81,6 +81,11 @@ layout: default
 					height="24">
 				{% endif %}
 
+				{% if page.quest %}
+				<img src="/assets/images/platforms/vr.svg" alt="VR" title="VR" style="margin: 0 0.125rem" width="24"
+					height="24">
+				{% endif %}
+
 				{% if page.html5 %}
 				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24" height="24">
 				{% endif %}
@@ -136,6 +141,12 @@ layout: default
 				{% if page.gog %}
 				<a href="{{ page.gog }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
 					View on GOG.com
+				</a>
+				{% endif %}
+
+				{% if page.quest %}
+				<a href="{{ page.quest }}" class="btn" style="margin: 0 0.5rem; white-space: nowrap" target="_blank">
+					View on Meta Store
 				</a>
 				{% endif %}
 
