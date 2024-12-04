@@ -6,6 +6,14 @@
 	padding: 0 12px;
 }
 
+.card-info {
+	background: var(--info-background-color);
+	border-radius: 4px 4px;
+	color: var(--info-color);
+	font-size: 90%;
+	padding: 0 12px;
+}
+
 .card-download {
 	display: flex;
 	flex-direction: column;

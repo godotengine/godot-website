@@ -76,6 +76,8 @@
   --warning-background-color: #ffedcc;
   --warning-color: #404040;
 
+  --info-background-color: rgba(212, 237, 255, 0.9);
+
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --header-font-family: "Montserrat", sans-serif;
 
@@ -1530,6 +1532,20 @@ section.sponsors .grid {
   width: 100%;
   border: none;
   margin: 35px 0;
+}
+
+.small > p {
+	font-size: 80%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.footnotes {
+  font-size: 80%;
+  border-top: 1px solid var(--table-divider-color);
+	margin-top: 4rem;
 }
 
 @import 'footer';
