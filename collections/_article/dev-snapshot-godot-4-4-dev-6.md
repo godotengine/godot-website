@@ -1,6 +1,6 @@
 ---
 title: "Dev snapshot: Godot 4.4 dev 6"
-excerpt: "Featuring: Malware! (does not contain malware)"
+excerpt: "New snapshot on the road to beta, with a lot of 3D workflow goodies!"
 categories: ["pre-release"]
 author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-6.webp
@@ -47,23 +47,27 @@ Now, with [Haoyu Qiu](https://github.com/timothyqiu)'s feature ([GH-90778](https
 
 ### Replace internal CSG implementation by Manifold library
 
-https://github.com/godotengine/godot/pull/94321
+Godot added support for CSG, or Constructive Solid Geometry, [back in 3.1](/article/godot-gets-csg-support/). This is a great tool for rapidly prototyping level geometry or even simple props and characters by combining 3D primitives with various boolean operations (union, intersection, subtraction).
+
+Our implementation suffered from a number of bugs and stability issues, with no dedicated maintainer to tackle them. Thankfully, a great open source library has been released since then which can be used as a well-maintained replacement for our CSG internals: [Emmett Lalish](https://github.com/elalish)'s [Manifold](https://github.com/elalish/manifold).
+
+[Ernest Lee](https://github.com/fire) did an amazing work implementing Manifold in Godot, with help from Emmett to ensure that the library fits our requirements ([GH-94321](https://github.com/godotengine/godot/pull/94321)). As this is a fairly big change to how Godot's CSG works internally (but with minimal impact on the user API), you might notice differences in your projects using CSG. Please report any change that appears to have a negative impact on your usage.
 
 ### Runtime WAV file loading
 
-https://github.com/godotengine/godot/pull/93831
+First-time contributor [cherry](https://github.com/what-is-a-git) implemented the long-requested support for runtime loading of WAV files ([GH-93831](https://github.com/godotengine/godot/pull/93831)). This adds parity with OGG Vorbis audio tracks, and will be a welcome addition for users who want to load user-generated content at runtime (including non-game audio applications).
 
 # Extend Curve to allow for domains outside of `[0, 1]`
+
+Have you ever wished that you could edit a `Curve` in a domain that goes beyond the normalized `[0, 1]` range? [ocean](https://github.com/anvilfolk) finally got their implementation of this feature merged ([GH-67857](https://github.com/godotengine/godot/pull/67857)), which should give users greater flexibility in how to map your functions and data to Godot's ubiquitous Curve resource.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-6/curve-extended-domain.mp4?1" type="video/mp4">
 </video>
 
-- Editor: Extend Curve to allow for domains outside of [0, 1] ([GH-67857](https://github.com/godotengine/godot/pull/67857)).
-
 ### Temporary file and directory utilities
 
-Tool creators, here's something that could be interesting for you. A brand new API let's you create and dispose of temporary files. Handy if you need to write content on disk, but without worrying about polluting user data. These temporary files and directories even dispose of themselves after use by default. For more information, see ([GH-98397](https://github.com/godotengine/godot/pull/98397)).
+Tool creators, [Adam Scott](https://github.com/adamscott) cooked a little something that could be interesting for you. A brand new API lets you create and dispose of temporary files. Handy if you need to write content on disk, but without worrying about polluting user data. These temporary files and directories even dispose of themselves after use by default. For more information, see ([GH-98397](https://github.com/godotengine/godot/pull/98397)).
 
 ### And more!
 
