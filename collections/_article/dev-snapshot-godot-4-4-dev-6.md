@@ -173,7 +173,12 @@ This release is built from commit [`1f47e4c4e`](https://github.com/godotengine/g
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
 
-https://github.com/godotengine/godot/issues/100032
+Here are some known regressions introduced in this snapshot:
+
+- Occlusion culling randomly occluding things completely in the open ([GH-10032](https://github.com/godotengine/godot/issues/100032)).
+  * A pull request is already open to fix this in the next dev snapshot ([GH-100060](https://github.com/godotengine/godot/pull/100060)).
+- Error "Manifold creation from mesh failed" with Plane and Quad shapes, which do not get rendered ([GH-100014](https://github.com/godotengine/godot/issues/100014)).
+  * Planes and Quads cannot be used with CSG, and just seemed to be usable previously. We'll improve the usability so they cannot be selected for CSGMesh3D. Instead, use MeshInstance3D to place Planes and Quads.
 
 ## Bug reports
 
