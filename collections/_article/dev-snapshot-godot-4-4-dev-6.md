@@ -5,14 +5,11 @@ categories: ["pre-release"]
 author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-6.webp
 image_caption_title: "Malware"
-image_caption_description: "A game by OddGames"
-date: 2024-12-04 12:00:00
+image_caption_description: "A game by Odd Games"
+date: 2024-12-05 17:00:00
 ---
 
-Safety goggles on, people! Features and Quality-of-Life are being integrated at blinding speeds; precautions must be taken to view them head-on. Once secure, we can dive into what's shaping up to be our final development snapshot before 4.4-beta builds roll out!
-
-Many of the changes in this release are bug fixes that will be backported to Godot 4.3 and released in 4.3.1! So please
-test this release well so we can be confident with the changes and release 4.3.1 with them as soon as possible.
+Safety goggles on, people! Features and Quality-of-Life are being integrated at blinding speeds; precautions must be taken to view them head-on. Once secure, we can dive into what's shaping up to be one of the final development snapshots before 4.4-beta builds roll out!
 
 Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by
 definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as
@@ -22,13 +19,13 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**Malware**](https://store.steampowered.com/app/3019370/Malware/), *an installation simulator where players must navigate a minefield of circa-1999 maleware! It is developed by [OddGames](https://store.steampowered.com/search/?developer=Odd%20Games). You can purchase the game [on Steam](https://store.steampowered.com/app/3019370/Malware/).*
+*The cover illustration is from* [**Malware**](https://store.steampowered.com/app/3019370/Malware/), *an installation simulator where players must navigate a minefield of circa-1999 malware! It is developed by [Odd Games](https://store.steampowered.com/search/?developer=Odd%20Games). You can purchase the game [on Steam](https://store.steampowered.com/app/3019370/Malware/).*
 
 ## Highlights
 
 In case you missed them, see the [4.4 dev 1](/article/dev-snapshot-godot-4-4-dev-1/), [4.4 dev 2](/article/dev-snapshot-godot-4-4-dev-2/),
 [4.4 dev 3](/article/dev-snapshot-godot-4-4-dev-3/), [4.4 dev 4](/article/dev-snapshot-godot-4-4-dev-4/), and [4.4 dev 5](/article/dev-snapshot-godot-4-4-dev-5/) release notes for an overview of
-some key features which were already in that snapshot, and are therefore still available for testing in dev 6.
+some key features which were already in those snapshots, and are therefore still available for testing in dev 6.
 
 Here are highlights of a few new features in dev 6 that you might find particularly exciting!
 
@@ -45,6 +42,10 @@ Words words words
 Words words words
 
 ![Examples of custom debug colors](/storage/blog/dev-snapshot-godot-4-4-dev-6/debug-color.webp)
+
+### Temporary file and directory utilities
+
+Tool creators, here's something that could be interesting for you. A brand new API let's you create and dispose of temporary files. Handy if you need to write content on disk, but without worrying about polluting user data. These temporary files and directories even dispose of themselves after use by default. For more information, see ([GH-98397](https://github.com/godotengine/godot/pull/98397)).
 
 ### And more!
 
@@ -64,7 +65,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Core: Convert line breaks to `\n` and strip line break from the end of string returned by `OS::read_string_from_stdin`/`OS::get_stdin_string` ([GH-99542](https://github.com/godotengine/godot/pull/99542)).
 - Core: Fix `OS::has_feature()` skipping custom features ([GH-99864](https://github.com/godotengine/godot/pull/99864)).
 - Core: Add temp utilities (alias `OS::get_temp_dir()`, `FileAccess::create_temp()`, and `DirAccess::create_temp()`) ([GH-98397](https://github.com/godotengine/godot/pull/98397)).
-- Documentation: Docs: Standardize names and terms for renderers ([GH-98744](https://github.com/godotengine/godot/pull/98744)).
+- Documentation: Standardize names and terms for renderers ([GH-98744](https://github.com/godotengine/godot/pull/98744)).
 - Documentation: Remove uses of implicit static typing from the documentation ([GH-99924](https://github.com/godotengine/godot/pull/99924)).
 - Editor: Extend Curve to allow for domains outside of [0, 1] ([GH-67857](https://github.com/godotengine/godot/pull/67857)).
 - Editor: Implement zooming and panning in the profiler ([GH-76055](https://github.com/godotengine/godot/pull/76055)).
@@ -74,7 +75,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Editor: Don't tint editor bottom panel icons when hovered or pressed ([GH-98765](https://github.com/godotengine/godot/pull/98765)).
 - Editor: Add copy button to toast notification ([GH-98778](https://github.com/godotengine/godot/pull/98778)).
 - Export: Ensure excluded GDExtension files are not included in `extension_list.cfg` ([GH-97216](https://github.com/godotengine/godot/pull/97216)).
-- GDExtension: Register Engine, OS, ProjectSettings, and Time singletons in time for for `INITIZATION_LEVEL_CORE` ([GH-98862](https://github.com/godotengine/godot/pull/98862)).
+- GDExtension: Register Engine, OS, ProjectSettings, and Time singletons in time for `INITIZATION_LEVEL_CORE` ([GH-98862](https://github.com/godotengine/godot/pull/98862)).
 - GDExtension: Support extension icons in ScriptCreateDialog ([GH-98914](https://github.com/godotengine/godot/pull/98914)).
 - GDScript: Fix crash when division by zero/modulo by zero happen on vectors ([GH-95172](https://github.com/godotengine/godot/pull/95172)).
 - GDScript: Improve GDScript autocompletion for methods ([GH-99102](https://github.com/godotengine/godot/pull/99102)).
