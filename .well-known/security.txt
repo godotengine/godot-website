@@ -1,0 +1,5 @@
+Contact: mailto:security@godotengine.org
+Expires: 2025-11-20T23:59:00.000Z
+Preferred-Languages: en
+Canonical: https://godotengine.org/.well-known/security.txt
+Policy: https://github.com/godotengine/.github/blob/master/SECURITY.md
