@@ -33,7 +33,7 @@ Here are highlights of a few new features in dev 6 that you might find particula
 
 Previously, adjusting the view of a `Camera3D` in a scene could be a chore to handle. It required activating the camera you wanted to preview, and then reverting it back if it wasn't the main camera. You could pin a preview of a camera in a dedicated viewport, but that meant reducing the real-estate of your main viewport.
 
-Now, with [Haoyu Qiu](https://github.com/timothyqiu)'s feature ([GH-90778](https://github.com/godotengine/godot/pull/90778)), every selected 3D camera show a preview inside the inspector. No switching cameras needed to preview anymore.
+Now, with [Haoyu Qiu](https://github.com/timothyqiu)'s feature ([GH-90778](https://github.com/godotengine/godot/pull/90778)), every selected 3D camera shows a preview inside the inspector. No switching cameras needed to preview anymore.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-6/camera3d-inspector.mp4?1" type="video/mp4">
@@ -41,11 +41,11 @@ Now, with [Haoyu Qiu](https://github.com/timothyqiu)'s feature ([GH-90778](https
 
 ### CollisionShape3D debug color customization
 
-3D collision shapes now have parity with their 2D counterparts with the newly added `debug_color` and `debug_fill` properties, which lets you customize the appearance of debug collision shapes in the editor, or at runtime if "Visible Collision Shapes" is enabled in the Debug menu. Thanks to first-time contributor [BattyBovine](https://github.com/BattyBovine) for implementing this much requested proposal ([GH-90644](https://github.com/godotengine/godot/pull/90644)).
+3D collision shapes now have parity with their 2D counterparts with the newly added `debug_color` and `debug_fill` properties, which lets you customize the appearance of debug collision shapes in the editor, or at runtime if "Visible Collision Shapes" is enabled in the Debug menu. Thanks to first-time contributor [BattyBovine](https://github.com/BattyBovine) for implementing this much-requested proposal ([GH-90644](https://github.com/godotengine/godot/pull/90644)).
 
 ![Examples of custom debug colors](/storage/blog/dev-snapshot-godot-4-4-dev-6/debug-color.webp)
 
-### Replace internal CSG implementation by Manifold library
+### Replace internal CSG implementation with Manifold library
 
 Godot added support for CSG, or Constructive Solid Geometry, [back in 3.1](/article/godot-gets-csg-support/). This is a great tool for rapidly prototyping level geometry or even simple props and characters by combining 3D primitives with various boolean operations (union, intersection, subtraction).
 
@@ -59,7 +59,7 @@ First-time contributor [cherry](https://github.com/what-is-a-git) implemented th
 
 ### Extend Curve to allow for domains outside of `[0, 1]`
 
-Have you ever wished that you could edit a `Curve` in a domain that goes beyond the normalized `[0, 1]` range? [ocean](https://github.com/anvilfolk) finally got their implementation of this feature merged ([GH-67857](https://github.com/godotengine/godot/pull/67857)), which should give users greater flexibility in how to map your functions and data to Godot's ubiquitous Curve resource.
+Have you ever wished that you could edit a `Curve` in a domain that goes beyond the normalized `[0, 1]` range? [ocean](https://github.com/anvilfolk) finally got their implementation of this feature merged ([GH-67857](https://github.com/godotengine/godot/pull/67857)), which should give you greater flexibility in how to map your functions and data to Godot's ubiquitous Curve resource.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-6/curve-extended-domain.mp4?1" type="video/mp4">
