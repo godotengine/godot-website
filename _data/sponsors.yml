@@ -12,9 +12,6 @@ platinum:
   - name: "V-Sekai"
     link: "https://github.com/V-Sekai"
     image: "https://fund.godotengine.org/static/logos/v-sekai.png"
-  - name: "Google Play"
-    link: "https://play.google.com"
-    image: "https://fund.godotengine.org/static/logos/google-play.png"
 gold:
   - name: "Prehensile Tales"
     link: "https://prehensile-tales.com"
@@ -56,3 +53,6 @@ silver:
   - name: "Re-Logic"
     link: "https://re-logic.com/"
     image: "https://fund.godotengine.org/static/logos/re-logic.png"
+  - name: Bippinbits
+    link: https://bippinbits.com/
+    image: "https://fund.godotengine.org/static/logos/bippinbits.png"
