@@ -25,7 +25,7 @@ With .NET 6 ending support, Godot C# packages in 4.4 will target the current LTS
 
 Starting with Godot 4.4, your project will need to target .NET 8 or newer, otherwise it will be incompatible with the new `GodotSharp` packages. You will still be able to use other libraries that target older .NET versions.
 
-Existing projects will be automatically upgraded to target `net8.0` when they are opened with Godot 4.4. If your project already targets .NET 8 or newer, nothing will change. Thanks to [Andreia Gaita](https://github.com/shana) for implementing this in [GH-82927](https://github.com/godotengine/godot/pull/82927).
+Existing projects will be automatically upgraded to target `net8.0` when they are opened with Godot 4.4. If your project already targets .NET 8 or newer, nothing will change. This was implemented in [GH-100195](https://github.com/godotengine/godot/pull/100195).
 
 ## What took so long?
 
