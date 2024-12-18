@@ -5,7 +5,7 @@ categories: ["news"]
 author: Bastiaan Olij
 image: /storage/blog/covers/december-2024-update-godot-xr-community.webp
 image_caption_description: "ROTVD: Demon in the Shell"
-date: 2024-12-01 12:00:00
+date: 2024-12-18 12:00:00
 ---
 
 Godot has a very active XR-focused community on the XR channel of the [official Godot Discord server](/community/).
