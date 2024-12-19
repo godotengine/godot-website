@@ -44,7 +44,7 @@ able to find this amazing resource in a way that was promoted by the engine itse
 
 The Godot Jolt maintainers, [Mikael Hermansson](https://github.com/mihe) and [Jorrit Rouwe](https://github.com/jrouwe),
 took this idea one step further: integrating the tool as part of the engine *directly*. There was already a symbiosis
-between their team and the godot engine, with many features being added to Godot *and* Jolt to accommodate both, but the
+between their team and the Godot engine, with many features being added to Godot *and* Jolt to accommodate both, but the
 integration of an official module was no small feat; their pull request
 ([GH-99895](https://github.com/godotengine/godot/pull/99895)) ended up adding over 500 files and 115 **thousand** lines
 of code! So while this was one of the most rigorously tested PRs relative to the amount of time it's been up, it'd be
@@ -52,19 +52,19 @@ impossible for any team to account for *everything* this behemoth introduced, so
 reports) on one of the most highly-requested features of 4.x.
 
 **NOTE:** At time of writing, this does **not** replace Godot Physics as the default 3D physics engine. This is because
-Jolt Physics have yet to reach full feature-parity with Godot Physics. If your interests/use-case are supported, the
+Jolt Physics has yet to reach full feature-parity with Godot Physics. If your interests/use-case are supported, the
 tool can be enabled by changing the `physics/3d/physics_engine` project setting to `Jolt Physics`.
 
 ### .NET 8.0
 
 [Paul Joannon](https://github.com/paulloz) and [Raul Santos](https://github.com/raulsntos) have put the final pieces in
-place for supporting .Net 8 in Godot projects ([GH-92131](https://github.com/godotengine/godot/pull/92131) and
-[GH-100195](https://github.com/godotengine/godot/pull/100195)). New projects will automatically use .Net 8 and there is
-an upgrade system in place for existing projects that want to upgrade as well. 
+place for supporting .NET 8 in Godot projects ([GH-92131](https://github.com/godotengine/godot/pull/92131) and
+[GH-100195](https://github.com/godotengine/godot/pull/100195)). All new projects will use .NET 8 by default and
+existing projects will automatically update to .NET 8 once opened with this release or any newer 4.4 build.
 
 ### Improved Scene Tree editor performance
 
-The amount of performance boosts that've been crammed in between dev 6 and dev 7 has been staggering. Of note are the
+The amount of performance boosts that have been crammed in between dev 6 and dev 7 has been staggering. Of note are the
 recent improvements to the engine's core including a many optimizes throughout the String class, spearheaded by
 [Ivorforce](https://github.com/Ivorforce). But perhaps the most obvious improvement comes from [HP van
 Braam](https://github.com/hpvb) and their modifications to the SceneTree system
@@ -82,13 +82,13 @@ related docs to quickly get information.
 
 ![Documentation tooltip](/storage/blog/dev-snapshot-godot-4-4-dev-7/documentation-tooltip.png)
 
-### Baked Shadowmasks for Lightmaps
+### Baked shadowmasks for lightmaps
 
 Until now, you have always had to choose between fully baked or fully dynamic shadows when using LightmapGI. However,
 sometimes you want to have dynamic shadows up close where detail matters, but use static shadows in the distance where a
-low resolution is acceptable. Finally it is possible thanks the the hard work of
+low resolution is acceptable. Finally it is possible thanks to the hard work of
 [BlueCube3310](https://github.com/BlueCube3310) in [GH-85653](https://github.com/godotengine/godot/pull/85653). You can
-now enable shadow masks while baking your LightmapGI to combine dynamic and static shadows for the best quality. 
+now enable shadow masks while baking your LightmapGI to combine dynamic and static shadows for the best quality.
 
 Additionally, this allows you to drastically shorten the range of your dynamic shadows which is a very important
 optimization, especially for mobile devices.
