@@ -9,7 +9,12 @@ image_caption_description: "A game by Kikimora Games"
 date: 2024-12-19 18:00:00
 ---
 
-Season's greetings, everyone! As our team winds down for the holiday season, we present you with one last gift before the new year: our final (probably) development build of the 4.4 release cycle!
+Season's greetings, everyone! As our team winds down for the holiday season, we present you with one last gift before
+the new year: our final development build of the year!
+
+After having a few notable regressions in dev 6, we intended to do a quick turnaround for dev 7 with high priority bug
+fixes. But we got greedy and ended up making dev 7 another feature-packed new release so you will have plenty of things
+to check out while we are on holidays.
 
 Keep in mind that while we try to make sure each dev snapshot is stable enough for general testing, this is by
 definition a pre-release piece of software. Be sure to make frequent backups, or use a version control system such as
@@ -31,27 +36,65 @@ Here are highlights of a few new features in dev 7 that you might find particula
 
 ### Jolt Physics Module
 
-Ever since its inception in late 2022, [godot-jolt](https://github.com/godot-jolt/godot-jolt) has become the de-facto 3D physics engine for many of our developers. Much of the history behind why this was the case is documented in [this proposal](https://github.com/godotengine/godot-proposals/issues/7308) by [Adam Scott](https://github.com/adamscott), but the main takeaway was a strong push for this tool to be recognized as an official addon. In doing so, users would be able to find this amazing resource in a way that was promoted by the engine itself; an exciting prospect!
+Ever since its inception in late 2022, [godot-jolt](https://github.com/godot-jolt/godot-jolt) has become the de-facto 3D
+physics engine for many of our developers. Much of the history behind why this was the case is documented in [this
+proposal](https://github.com/godotengine/godot-proposals/issues/7308) by [Adam Scott](https://github.com/adamscott), but
+the main takeaway was a strong push for this tool to be recognized as an official addon. In doing so, users would be
+able to find this amazing resource in a way that was promoted by the engine itself; an exciting prospect!
 
-The Godot Jolt maintainers, [Mikael Hermansson](https://github.com/mihe) and [Jorrit Rouwe](https://github.com/jrouwe), took this idea one step further: integrating the tool as part of the engine *directly*. There was already a symbiosis between their team and the godot engine, with many features being added to Godot *and* Jolt to accomodate both, but the integration of an official module was no small feat; their pull request ([GH-99895](https://github.com/godotengine/godot/pull/99895)) ended up adding over 500 files and 115 **thousand** lines of code! So while this was one of the most rigorously tested PRs relative to the amount of time it's been up, it'd be impossible for any team to account for *everything* this behemoth introduced, so we eagerly await your feedback (and bug reports) on one of the most highly-requested features of 4.x.
+The Godot Jolt maintainers, [Mikael Hermansson](https://github.com/mihe) and [Jorrit Rouwe](https://github.com/jrouwe),
+took this idea one step further: integrating the tool as part of the engine *directly*. There was already a symbiosis
+between their team and the godot engine, with many features being added to Godot *and* Jolt to accommodate both, but the
+integration of an official module was no small feat; their pull request
+([GH-99895](https://github.com/godotengine/godot/pull/99895)) ended up adding over 500 files and 115 **thousand** lines
+of code! So while this was one of the most rigorously tested PRs relative to the amount of time it's been up, it'd be
+impossible for any team to account for *everything* this behemoth introduced, so we eagerly await your feedback (and bug
+reports) on one of the most highly-requested features of 4.x.
 
-**NOTE:** At time of writing, this does **not** replace Godot Physics as the default 3D physics engine. This is because Jolt Physics have yet to reach full feature-parity with Godot Physics. If your interests/use-case are supported, the tool can be enabled by changing the `physics/3d/physics_engine` project setting to `Jolt Physics`.
+**NOTE:** At time of writing, this does **not** replace Godot Physics as the default 3D physics engine. This is because
+Jolt Physics have yet to reach full feature-parity with Godot Physics. If your interests/use-case are supported, the
+tool can be enabled by changing the `physics/3d/physics_engine` project setting to `Jolt Physics`.
 
 ### .NET 8.0
 
-
+[Paul Joannon](https://github.com/paulloz) and [Raul Santos](https://github.com/raulsntos) have put the final pieces in
+place for supporting .Net 8 in Godot projects ([GH-92131](https://github.com/godotengine/godot/pull/92131) and
+[GH-100195](https://github.com/godotengine/godot/pull/100195)). New projects will automatically use .Net 8 and there is
+an upgrade system in place for existing projects that want to upgrade as well. 
 
 ### Improved Scene Tree editor performance
 
-The amount of performance boosts that've been crammed in between dev 6 and dev 7 has been staggering. Of note are the recent improvements to the engine's core from a multitude of changes to how Strings are processed, spearheaded by [Ivorforce](https://github.com/Ivorforce). But perhaps the most obvious improvement comes from [HP van Braam](https://github.com/godotengine/godot/pull/99700) & his modifications to the scene tree system ([GH-99700](https://github.com/godotengine/godot/pull/99700)). While this will prove beneficial across all projects, these changes result in especially complex scenes having a tenfold performance increase!
+The amount of performance boosts that've been crammed in between dev 6 and dev 7 has been staggering. Of note are the
+recent improvements to the engine's core including a many optimizes throughout the String class, spearheaded by
+[Ivorforce](https://github.com/Ivorforce). But perhaps the most obvious improvement comes from [HP van
+Braam](https://github.com/hpvb) and their modifications to the SceneTree system
+([GH-99700](https://github.com/godotengine/godot/pull/99700)). While this will prove beneficial across all projects,
+these changes result in especially complex scenes having a tenfold performance in the editor when moving or renaming
+nodes in the SceneTree.
 
 ### Documentation tooltips
 
+Thanks to [Danil Alexeev](https://github.com/dalexeev) the GDScript code editor will now display a tooltip containing
+information about functions, variables, classes, etc. when you hover over them, including the documentation you have
+written using our documentation system ([GH-91060](https://github.com/godotengine/godot/pull/91060)). This makes using
+the integrated documentation system even more powerful as you no longer have to bounce between the code editor and the
+related docs to quickly get information.
 
+![Documentation tooltip](/storage/blog/dev-snapshot-godot-4-4-dev-7/documentation-tooltip.png)
 
 ### Baked Shadowmasks for Lightmaps
 
-This pic goes so hard. Feel free to screenshot. ([GH-85653](https://github.com/godotengine/godot/pull/85653)).
+Until now, you have always had to choose between fully baked or fully dynamic shadows when using LightmapGI. However,
+sometimes you want to have dynamic shadows up close where detail matters, but use static shadows in the distance where a
+low resolution is acceptable. Finally it is possible thanks the the hard work of
+[BlueCube3310](https://github.com/BlueCube3310) in [GH-85653](https://github.com/godotengine/godot/pull/85653). You can
+now enable shadow masks while baking your LightmapGI to combine dynamic and static shadows for the best quality. 
+
+Additionally, this allows you to drastically shorten the range of your dynamic shadows which is a very important
+optimization, especially for mobile devices.
+
+This feature is still experimental and it will change in response to feedback, so please test it out and let us know
+what you think!
 
 ![Baked Lightmap](/storage/blog/dev-snapshot-godot-4-4-dev-7/shadowmask.webp)
 
@@ -66,6 +109,9 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Buildsystem: Add loongarch64 support for Linux/*BSD ([GH-97822](https://github.com/godotengine/godot/pull/97822)).
 - Buildsystem: Make Godot compile on `FreeBSD` ([GH-100047](https://github.com/godotengine/godot/pull/100047)).
 - Core: Fix `JSON.{from,to}_native()` issues ([GH-99765](https://github.com/godotengine/godot/pull/99765)).
+- Core: Optimize StringBuilder by using `LocalVector` instead of `Vector` ([GH-99775](https://github.com/godotengine/godot/pull/99775)).
+- Core: Optimize String construction from statically known strings by evaluating `strlen` at compile-time ([GH-100132](https://github.com/godotengine/godot/pull/100132)).
+- Core: Add move assignment and move constructor to Variant ([GH-100426](https://github.com/godotengine/godot/pull/100426)).
 - Documentation: Document `_process()` and `_physics_process()` delta behavior at low FPS ([GH-94636](https://github.com/godotengine/godot/pull/94636)).
 - Editor: Add ability to create a new inherited scene from code ([GH-90057](https://github.com/godotengine/godot/pull/90057)).
 - Editor: Add profiler autostart indicator to EditorRunBar ([GH-97492](https://github.com/godotengine/godot/pull/97492)).
@@ -85,7 +131,10 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Plugin: Export `EditorInspector::instantiate_property_editor` for use by plugins ([GH-87375](https://github.com/godotengine/godot/pull/87375)).
 - Rendering: Add Blend Distance property to ReflectionProbe ([GH-99958](https://github.com/godotengine/godot/pull/99958)).
 - Rendering: Allow changing the anisotropic filter level at run-time per Viewport ([GH-88313](https://github.com/godotengine/godot/pull/88313)).
-- Rendering: Improvements from TheForge ([GH-99257](https://github.com/godotengine/godot/pull/99257)).
+- Rendering: Further performance improvements from The Forge ([GH-99257](https://github.com/godotengine/godot/pull/99257)).
+- Rendering: Automatically compress new lightmap textures ([GH-100327](https://github.com/godotengine/godot/pull/100327)).
+- Rendering: Optimize PointLight2D shadow rendering by reducing draw calls and RD state changes ([GH-100302](https://github.com/godotengine/godot/pull/100302)).
+- Rendering: Implement `RD::buffer_get_data_async()` and `RD::texture_get_data_async()` ([GH-100110](https://github.com/godotengine/godot/pull/100110)).
 - Shaders: Avoid error spam when shaders fail to compile by freeing shader_data version when compilation fails ([GH-100128](https://github.com/godotengine/godot/pull/100128)).
 - XR: Allow locking the camera to the `XROrigin3D` for benchmarking or automated testing ([GH-99145](https://github.com/godotengine/godot/pull/99145)).
 - XR: OpenXR: Add support for binding modifiers ([GH-97140](https://github.com/godotengine/godot/pull/97140)).
