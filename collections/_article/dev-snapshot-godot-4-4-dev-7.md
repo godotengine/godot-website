@@ -34,7 +34,7 @@ some key features which were already in those snapshots, and are therefore still
 
 Here are highlights of a few new features in dev 7 that you might find particularly exciting!
 
-### Jolt Physics Module
+### Jolt Physics module
 
 Ever since its inception in late 2022, [godot-jolt](https://github.com/godot-jolt/godot-jolt) has become the de-facto 3D
 physics engine for many of our developers. Much of the history behind why this was the case is documented in [this
@@ -80,7 +80,7 @@ written using our documentation system ([GH-91060](https://github.com/godotengin
 the integrated documentation system even more powerful as you no longer have to bounce between the code editor and the
 related docs to quickly get information.
 
-![Documentation tooltip](/storage/blog/dev-snapshot-godot-4-4-dev-7/documentation-tooltip.png)
+![Documentation tooltip](/storage/blog/dev-snapshot-godot-4-4-dev-7/documentation-tooltip.webp)
 
 ### Baked shadowmasks for lightmaps
 
