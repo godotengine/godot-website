@@ -98,6 +98,13 @@ what you think!
 
 ![Baked Lightmap](/storage/blog/dev-snapshot-godot-4-4-dev-7/shadowmask.webp)
 
+### Updated toolchains for official builds
+
+We updated some of the toolchains we use for official builds in [build-containers#150](https://github.com/godotengine/build-containers/pull/150),
+notably macOS and iOS SDKs from Xcode 16.2, and MinGW 12.0.0 with GCC 14.2.1 for Windows builds.
+
+Toolchains for Linux, Android, and Web are still the same versions as for Godot 4.3.
+
 ### And more!
 
 There are too many exciting changes to list them all here, but here's a curated selection:
