@@ -51,21 +51,21 @@ of code! So while this was one of the most rigorously tested PRs relative to the
 impossible for any team to account for *everything* this behemoth introduced, so we eagerly await your feedback (and bug
 reports) on one of the most highly-requested features of 4.x.
 
-**NOTE:** At time of writing, this does **not** replace Godot Physics as the default 3D physics engine. This is because
-Jolt Physics has yet to reach full feature-parity with Godot Physics. If your interests/use-case are supported, the
+**Note:** At time of writing, this does **not** replace Godot Physics as the default 3D physics engine.
+The Jolt Physics integration in Godot is considered experimental, and may change in future releases. It also lacks some features of Godot Physics so isn't a full drop-in replacement. If your interests/use-case are supported, the
 tool can be enabled by changing the `physics/3d/physics_engine` project setting to `Jolt Physics`.
 
 ### .NET 8.0
 
 [Paul Joannon](https://github.com/paulloz) and [Raul Santos](https://github.com/raulsntos) have put the final pieces in
-place for supporting .NET 8 in Godot projects ([GH-92131](https://github.com/godotengine/godot/pull/92131) and
+place for moving both the GodotSharp library and user projects to .NET 8 ([GH-92131](https://github.com/godotengine/godot/pull/92131) and
 [GH-100195](https://github.com/godotengine/godot/pull/100195)). All new projects will use .NET 8 by default and
 existing projects will automatically update to .NET 8 once opened with this release or any newer 4.4 build.
 
 ### Improved Scene Tree editor performance
 
 The amount of performance boosts that have been crammed in between dev 6 and dev 7 has been staggering. Of note are the
-recent improvements to the engine's core including a many optimizes throughout the String class, spearheaded by
+recent improvements to the engine's core including many optimizations throughout the String class, spearheaded by
 [Ivorforce](https://github.com/Ivorforce). But perhaps the most obvious improvement comes from [HP van
 Braam](https://github.com/hpvb) and their modifications to the SceneTree system
 ([GH-99700](https://github.com/godotengine/godot/pull/99700)). While this will prove beneficial across all projects,
@@ -152,7 +152,7 @@ This release is built from commit [`46c8f8c5c`](https://github.com/godotengine/g
 **Standard build** includes support for GDScript and GDExtension.
 
 **.NET build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
-- See also [C# platform support](https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support).
+- .NET 8.0 or newer is required for this build, changing the minimal supported version from .NET 6 to 8.
 
 {% include articles/prerelease_notice.html %}
 
