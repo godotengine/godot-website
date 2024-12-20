@@ -12,7 +12,7 @@ permalink: /rss.xml
 	<atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
 
 	{% assign latest_posts = site.article | sort:"date" | reverse %}
-	{% for post in latest_posts limit:24 %}
+	{% for post in latest_posts limit:15 %}
 	<item>
 		<title>{{ post.title | escape }}</title>
 		<link>{{ site.url }}{{ post.url }}</link>
