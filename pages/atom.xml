@@ -17,7 +17,8 @@ permalink: /atom.xml
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.url }}</id>
-    <content type="html">{{ post.excerpt | xml_escape }}</content>
+    <summary>{{ post.excerpt | escape }}</summary>
+    <content type="html">{{ post.content | markdownify | xml_escape }}</content>
     <author>
       <name>{{ post.author | xml_escape }}</name>
     </author>
