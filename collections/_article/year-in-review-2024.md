@@ -7,7 +7,7 @@ image:
 date: 2024-12-31 10:00:00
 ---
  
-And with that, the 2024 season comes to an end. What a year it has been, with the number of Godot submissions in gamejams rising to new heights, [more people working for the Godot Foundation than ever before](https://godotengine.org/article/godot-foundation-update-dec-2024/), and most industry award shows featuring one if not more games #MadeWithGodot. 
+And with that, the 2024 season comes to an end. What a year it has been, with the number of Godot submissions in game jams rising to new heights, [more people working for the Godot Foundation than ever before](https://godotengine.org/article/godot-foundation-update-dec-2024/), and most industry award shows featuring one if not more games #MadeWithGodot. 
 
 So let us celebrate the past year by looking back at one key highlight per month - an event the team attended, a major project milestone being reached, or a fun moment online the Godot community gathered around. Likewise, we looked at the release dates of notable [Godot games on Steam](https://steamdb.info/tech/Engine/Godot/) and decided to introduce you to some favorites alongside our own news. 
 
