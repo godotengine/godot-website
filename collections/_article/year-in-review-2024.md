@@ -154,7 +154,7 @@ We listened to the feedback of last year’s [GodotCon](https://conference.godot
 
 On top of that, we introduced a game showcase and activities to the event schedule. Increasing our scope like so, we hoped to invite a wider variety of visitors to enjoy mingling with other community members and facilitate networking.
 
-Read the full [GodotCon 2024 review](https://godotengine.org/article/review-godotcon24/) to reminisce together with us.
+Read the full [GodotCon 2024 review](https://godotengine.org/article/review-godotcon24/) to reminisce together with us or (re-)watch the [talks on YouTube](https://www.youtube.com/watch?v=hKLl03A9Kws&list=PLeG_dAglpVo6TS0q858NajyeglRuvb7hs&index=12).
 
 <hr>
 [Psychopomp GOLD](https://store.steampowered.com/app/3243190/Psychopomp_GOLD)
