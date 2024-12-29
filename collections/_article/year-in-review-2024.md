@@ -56,13 +56,13 @@ We had a great time, both on the event grounds and at our own gatherings, and ma
 Towards the end of 2023 we [announced a collaboration with Google and The Forge](https://godotengine.org/article/collaboration-with-google-forge-2023/) to improve the performance of our Vulkan mobile backend. The work concluded in April, with the [matching PR](https://github.com/godotengine/godot/pull/90284) being split into the 4.3 and 4.4 releases. 
 
 A few highlights: 
-Usage of Unified Memory Architecture (UMA) buffers when available
-Add Android [Thermal API](https://developer.android.com/games/optimize/adpf/thermal) support
-Replace large push constants with dynamic uniform buffers
-Optimize descriptor sets and descriptor set batching
-Optimize swapchain operations
-Integrate [Swappy frame pacing](https://developer.android.com/games/sdk/frame-pacing) from the Google AGDK
-Read more about the changes in our [collaboration update] (https://godotengine.org/article/update-on-google-forge-2024/).
+- Usage of Unified Memory Architecture (UMA) buffers when available
+- Add Android [Thermal API](https://developer.android.com/games/optimize/adpf/thermal) support
+- Replace large push constants with dynamic uniform buffers
+- Optimize descriptor sets and descriptor set batching
+- Optimize swapchain operations
+- Integrate [Swappy frame pacing](https://developer.android.com/games/sdk/frame-pacing) from the Google AGDK
+- Read more about the changes in our [collaboration update] (https://godotengine.org/article/update-on-google-forge-2024/).
 
 <hr>
 [Of Life and Land](https://store.steampowered.com/app/1733110/Of_Life_and_Land)
