@@ -209,7 +209,7 @@ Many localization improvements
 - **Android:** [Android Editor](https://godotengine.org/download/android/) feature complete with export support
 - **Web:** [Single-threaded export with audio samples](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager) 
 - **Linux:** [Wayland](https://godotengine.org/releases/4.3/#display-wayland-support) 
-- **macOS/iOS:** Metal renderer
+- **macOS/iOS:** [Metal renderer](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend)
 - **Windows:** [Direct3D 12](https://godotengine.org/download/android/) 
 
 ### Systems
