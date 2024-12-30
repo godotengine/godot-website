@@ -230,4 +230,4 @@ Many localization improvements
 
 Concluding our review, the only thing left to say is **thank you**. To those of you who contribute to the engine by code, donations, or growing the community through content creation. To our users, who help promote the project with their own success and battletest new features in real time. We also want to once again thank our [corporate sponsors](https://fund.godotengine.org/#credits) for believing in what we do. Lastly, I want to give a shoutout to my wonderful colleagues, for if they weren’t so incredibly dedicated to organizing and maintaining a collaboration this big, none of this would be possible either.
 
-Are you too excited what the future will bring for the Godot Engine project?
+Are you as excited as we are about what the future will hold for the Godot Engine project?
