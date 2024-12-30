@@ -219,7 +219,7 @@ Many localization improvements
 - **Navigation:** enabled [chunk & obstacle baking](https://godotengine.org/releases/4.3/#navigation-splitting-navigation-meshes-into-chunks) 
 - **Networking:**
 - **Physics:** [Jolt merged](https://github.com/godotengine/godot/pull/99895) as alternative to the default 3D physics engine
-- **Rendering:**re-introducing [ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html) 
+- **Rendering:** re-introducing [ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html) 
 - **VFX:** [Visual Shader overhaul](https://godotengine.org/releases/4.3/#highlights-visual-shader)
 - **XR:** [Godot Editor now available on the Meta Horizon Store](https://godotengine.org/article/godot-editor-horizon-store-early-access-release/) 
 
