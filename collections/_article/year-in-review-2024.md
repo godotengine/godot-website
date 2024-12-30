@@ -176,7 +176,7 @@ The second installment of this railroad construction game is made in Godot. Enjo
 ## December
 The [Godot Engine GitHub repository](https://github.com/godotengine/godot) is not only the most popular one in the game development category and has been starred 92,300 times at the time of writing, but we also reached yet another milestone this December: [crossing the threshold of 100,000 issues](https://github.com/godotengine/godot/issues/100000). 
 
-To celebrate the occasion (and snatch the coveted number, before a minor issue receives the honor) our Release Manager wrote a [heartwarming blogpost](https://godotengine.org/article/beyond-100000-you-re-breathtaking/) that cannot be done justice by summarizing - so go read it for yourself!
+To celebrate the occasion (and snatch the coveted number, before a minor issue could do so) our Release Manager wrote a [heartwarming blogpost](https://godotengine.org/article/beyond-100000-you-re-breathtaking/) that cannot be done justice by summarizing - so go read it for yourself!
 
 <hr>
 [Ballionaire](https://store.steampowered.com/app/2667120/Ballionaire)
