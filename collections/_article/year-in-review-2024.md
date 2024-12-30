@@ -62,7 +62,7 @@ A few highlights:
 - Optimize descriptor sets and descriptor set batching
 - Optimize swapchain operations
 - Integrate [Swappy frame pacing](https://developer.android.com/games/sdk/frame-pacing) from the Google AGDK
-- Read more about the changes in our [collaboration update] (https://godotengine.org/article/update-on-google-forge-2024/).
+Read more about the changes in our [collaboration update](https://godotengine.org/article/update-on-google-forge-2024/).
 
 <hr>
 [Of Life and Land](https://store.steampowered.com/app/1733110/Of_Life_and_Land)
