@@ -36,7 +36,7 @@ Logically, the next step was to hand over the reins of the channel to some of th
 <hr>
 [Windowkill](https://store.steampowered.com/app/2726450/Windowkill)
 
-Another twist on “gaming directly on a desktop” came in the form of the action roguelike *Windowkill*. The twin-stick shooter requires you to keep track of and fight the ever-closing game windows when evading enemies.
+Another twist on “gaming directly on a desktop” came in the form of the action roguelike *Windowkill*. The twin-stick shooter requires you to keep track of and fight the ever-closing game windows while evading enemies.
 <hr>
 
 ## March
