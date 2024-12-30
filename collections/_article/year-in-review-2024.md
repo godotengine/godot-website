@@ -94,8 +94,8 @@ Our annual community poll rolled around in June. We want to know who our users a
 
 [This year’s poll](https://docs.google.com/forms/d/1eicOppRQG2RFZ8CjIGFf5Kha5yklO854fV8-YFtlWxk/viewanalytics) had more responses than ever before, once again proving the incredible growth the Godot community is experiencing.
 
-<img alt="poll results: programming languages" src="/storage/blog/2024-review/poll1.jpg"/>
-<img alt="poll results: donations" src="/storage/blog/2024-review/poll2.jpg"/>
+<img alt="Poll results: programming languages" src="/storage/blog/2024-review/poll1.jpg"/>
+<img alt="Poll results: donations" src="/storage/blog/2024-review/poll2.jpg"/>
 
 <hr>
 [Until Then](https://store.steampowered.com/app/1574820/Until_Then)
