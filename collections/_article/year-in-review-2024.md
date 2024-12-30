@@ -146,7 +146,7 @@ Read more in our detailed [blogpost on the topic](https://godotengine.org/articl
 <hr>
 [Halls of Torment](https://store.steampowered.com/app/2218750/Halls_of_Torment)
 
-Survive monster hordes in this bullet hell roguelite set in the underworld. *Halls of Torment* is also available on SteamDeck and GooglePlay for gaming on the go!
+Survive monster hordes in this bullet hell roguelite set in the underworld. *Halls of Torment* is also available on Steam Deck and Android for gaming on the go!
 <hr>
 
 ## October
