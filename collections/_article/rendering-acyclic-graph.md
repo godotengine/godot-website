@@ -27,7 +27,7 @@ There's a few Vulkan concepts that must be understood before digging into why Re
 
 #### Command buffers
 
-Recording work for the GPU and submitting it for execution is a very explicit operation in Vulkan. [Command buffers](https://docs.vulkan.org/spec/latest/chapters/cmdbuffers.html) (or command lists in D3D12) are the objects where all the recorded work is stored that will executed at a later point on the GPU. These buffers can grow as much as the user desires and they won't be run until they're submitted for execution to a command queue. This implies it's essentially possible to record from multiple sources, even multiple threads, and submit the work to the GPU once it's ready with proper synchronization.
+Recording work for the GPU and submitting it for execution is a very explicit operation in Vulkan. [Command buffers](https://docs.vulkan.org/spec/latest/chapters/cmdbuffers.html) (or command lists in D3D12) are the objects where all the recorded work is stored that will be executed at a later point on the GPU. These buffers can grow as much as the user desires and they won't be run until they're submitted for execution to a command queue. This implies it's essentially possible to record from multiple sources, even multiple threads, and submit the work to the GPU once it's ready with proper synchronization.
 
 #### Render passes
 
