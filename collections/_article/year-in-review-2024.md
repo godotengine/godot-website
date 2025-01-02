@@ -208,10 +208,10 @@ Typed dictionaries
 ### Systems
 - **Animation:** The feature [migration from Godot 4.0 to 4.3](https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/) is now complete.
 - **Audio:** [Interactive music](https://godotengine.org/releases/4.3/#highlights-interactive-music): new resources enable you to create complex, layered music and transitions. This allows you to build your own dynamic music system, which reacts to the context of your game.
-- **Import**: [New ufbx importer](https://godotengine.org/article/introducing-the-improved-ufbx-importer-in-godot-4-3/): no need for external converters anymore.
+- **Import**: [New ufbx importer](https://godotengine.org/article/introducing-the-improved-ufbx-importer-in-godot-4-3/) built in: No need for external converters anymore.
 - **Navigation:** [Chunk & obstacle baking](https://godotengine.org/releases/4.3/#navigation-splitting-navigation-meshes-into-chunks) are possible now, for more fine-tuned navigation meshes.
 - **Physics:** [Jolt merged](https://github.com/godotengine/godot/pull/99895) as alternative to the default 3D physics engine.
-- **Rendering:** Re-introducing [ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html): Ubershaders are a special version of a shader that are able to changespecialization constants while rendering, which means Godot can precompile just one pipeline ahead of time and compile the more optimized versions on the background during gameplay.
+- **Rendering:** Re-introducing [Ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html): Ubershaders are a special version of a shader that are able to changespecialization constants while rendering, which means Godot can precompile just one pipeline ahead of time and compile the more optimized versions on the background during gameplay.
 - **VFX:** [Visual Shader overhaul](https://godotengine.org/releases/4.3/#highlights-visual-shader): The visual shader editor has been revamped from the ground up, to be more visually appealing and to enhance the readability of large, complex shader graphs.
 - **XR:** The [Godot Editor is now available on the Meta Horizon Store](https://godotengine.org/article/godot-editor-horizon-store-early-access-release/)!
 
