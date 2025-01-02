@@ -195,31 +195,28 @@ The “autobonker” *Ballionaire* shows how fun physics can be. Assemble your p
 ### Core 
 Typed dictionaries
 
-### GUI
-Many localization improvements
-
 ### Editor
 [Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager): The design of the project manager has been revamped. You can now directly access some editor settings from here: language, interface theme, display scale, the new network mode, and directory naming conventions.
 
 ### Platforms
 - **Android:** The [Android Editor](https://godotengine.org/download/android/) is now feature complete with export support.
-- **Web:** [Single-threaded exports](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager) are back, and audio samples improve the quality of sound.
+- **Web:** [Single-threaded exports](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager) are back, and [audio samples](https://godotengine.org/releases/4.3/#web-web-audio) improve the quality of sound.
 - **Linux:** Experimental [Wayland](https://godotengine.org/releases/4.3/#display-wayland-support) support arrived.
-- **macOS/iOS:** [Metal renderer](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend) fully implemented.
-- **Windows:** [Direct3D 12](https://godotengine.org/download/android/) driver improves compatibility with any Microsoft platform.
+- **macOS/iOS:** The [Metal renderer](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend) has been fully implemented.
+- **Windows:** The [Direct3D 12](https://godotengine.org/releases/4.3/#display-d3d12-driver) driver improves compatibility with any Microsoft platform.
 
 ### Systems
-- **Animation:** Big feature [migration from Godot 4.0 to 4.3](https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/)
+- **Animation:** The feature [migration from Godot 4.0 to 4.3](https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/) is now complete.
 - **Audio:** [Interactive music](https://godotengine.org/releases/4.3/#highlights-interactive-music): new resources enable you to create complex, layered music and transitions. This allows you to build your own dynamic music system, which reacts to the context of your game.
-- **Import**: [new ufbx importer](https://godotengine.org/article/introducing-the-improved-ufbx-importer-in-godot-4-3/): no need for external converters anymore.
-- **Navigation:** enabled [chunk & obstacle baking](https://godotengine.org/releases/4.3/#navigation-splitting-navigation-meshes-into-chunks) for more fine-tuned navigation meshes.
-- **Physics:** [Jolt merged](https://github.com/godotengine/godot/pull/99895) as alternative to the default 3D physics engine
-- **Rendering:** re-introducing [ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html): Ubershaders are a special version of a shader that are able to changespecialization constants while rendering, which means Godot can precompile just one pipeline ahead of time and compile the more optimized versions on the background during gameplay.
+- **Import**: [New ufbx importer](https://godotengine.org/article/introducing-the-improved-ufbx-importer-in-godot-4-3/): no need for external converters anymore.
+- **Navigation:** [Chunk & obstacle baking](https://godotengine.org/releases/4.3/#navigation-splitting-navigation-meshes-into-chunks) are possible now, for more fine-tuned navigation meshes.
+- **Physics:** [Jolt merged](https://github.com/godotengine/godot/pull/99895) as alternative to the default 3D physics engine.
+- **Rendering:** Re-introducing [ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html): Ubershaders are a special version of a shader that are able to changespecialization constants while rendering, which means Godot can precompile just one pipeline ahead of time and compile the more optimized versions on the background during gameplay.
 - **VFX:** [Visual Shader overhaul](https://godotengine.org/releases/4.3/#highlights-visual-shader): The visual shader editor has been revamped from the ground up, to be more visually appealing and to enhance the readability of large, complex shader graphs.
 - **XR:** The [Godot Editor is now available on the Meta Horizon Store](https://godotengine.org/article/godot-editor-horizon-store-early-access-release/)!
 
 ### Documentation
-[Comment section added](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs) 
+A [comment section](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs) has been added to the pages, which uses your existing GitHub login.
 
 <hr>
 
