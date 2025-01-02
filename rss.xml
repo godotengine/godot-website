@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Dev snapshot: Godot 4.4 dev 7</title><link>https://godotengine.org/article/dev-snapshot-godot-4-4-dev-7/</link><description>&lt;p>Season’s greetings, everyone! As our team winds down for the holiday season, we present you with one last gift before
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot C# packages move to .NET 8</title><link>https://godotengine.org/article/godotsharp-packages-net8/</link><description>&lt;p>A new version of .NET is released in November each year, alternating Long Term Support (LTS) and Standard Term Support (STS) releases. The quality of all releases is the same. The only difference is the length of support. LTS releases are supported for 3 years, while STS releases are supported for 18 months.&lt;/p>
+&lt;p>With the release of Godot 4.0, we moved our C# packages from targeting Mono to .NET 6. This version of .NET was released on November 8, 2021 and ended support on November 12, 2024.&lt;/p>
+&lt;p>With .NET 6 ending support, Godot C# packages in 4.4 will target the current LTS release, .NET 8. Thanks to &lt;a href="https://github.com/RedworkDE">RedworkDE&lt;/a> and &lt;a href="https://github.com/paulloz">Paul Joannon&lt;/a> for their great work in &lt;a href="https://github.com/godotengine/godot/pull/92131">GH-92131&lt;/a>.&lt;/p>
+&lt;figure>
+&lt;picture>
+&lt;source srcset="/storage/blog/dotnet/release-schedule-dark.svg" media="(prefers-color-scheme: dark)" />
+&lt;img class="lightbox-ignore" style="background-color: transparent;" src="/storage/blog/dotnet/release-schedule-light.svg" />
+&lt;/picture>
+&lt;figcaption>&lt;small>.NET release cadence from the &lt;a href="https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core">.NET official support policy&lt;/a>.&lt;/small>&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="what-does-this-mean-for-users">What does this mean for users?&lt;/h2>
+&lt;p>Starting with Godot 4.4, your project will need to target .NET 8 or newer, otherwise it will be incompatible with the new &lt;code class="language-plaintext highlighter-rouge">GodotSharp&lt;/code> packages. You will still be able to use other libraries that target older .NET versions.&lt;/p>
+&lt;p>Existing projects will be automatically upgraded to target &lt;code class="language-plaintext highlighter-rouge">net8.0&lt;/code> when they are opened with Godot 4.4. If your project already targets .NET 8 or newer, nothing will change. This was implemented in &lt;a href="https://github.com/godotengine/godot/pull/100195">GH-100195&lt;/a>.&lt;/p>
+&lt;h2 id="what-took-so-long">What took so long?&lt;/h2>
+&lt;p>The version of .NET that a library targets becomes the minimum required version for consumers of that library. That is, if the &lt;code class="language-plaintext highlighter-rouge">GodotSharp&lt;/code> package targets &lt;code class="language-plaintext highlighter-rouge">net7.0&lt;/code>, your game project needs to target &lt;code class="language-plaintext highlighter-rouge">net7.0&lt;/code> or newer. We didn’t want to force our users to upgrade to a non-LTS release.&lt;/p>
+&lt;p>When .NET 8 was released in November 2023, it would’ve been a good time to bump the target version in Godot C# packages, since .NET 8 is an LTS release. Unfortunately, there were some breaking changes in .NET 7&lt;sup id="fnref:1" role="doc-noteref">&lt;a href="#fn:1" class="footnote" rel="footnote">1&lt;/a>&lt;/sup> that prevented us from upgrading, and making the required changes took us longer than we hoped.&lt;/p>
+&lt;p>However, users could always use the latest version of .NET in their projects. Up until now, .NET 6 has been the minimum required version, but newer versions have always been supported from day one (even the pre-releases&lt;sup id="fnref:2" role="doc-noteref">&lt;a href="#fn:2" class="footnote" rel="footnote">2&lt;/a>&lt;/sup>). In 4.4, the new minimum is now .NET 8, but as always, your projects can target the recent STS release .NET 9 and any newer version that is released in the future.&lt;/p>
+&lt;p>Libraries tend to stay on older versions of .NET to support as many consumers as possible. But upgrading to the latest version of .NET brings benefits that we want to take advantage of.&lt;/p>
+&lt;h2 id="what-about-older-godot-releases">What about older Godot releases?&lt;/h2>
+&lt;p>We encourage users to upgrade to the latest version of Godot. We work hard to prevent breaking compatibility, to ensure you can safely upgrade to new versions of Godot when they are released. Please, make sure to test the pre-releases and let us know if you find some bugs so we can fix them before the stable release.&lt;/p>
+&lt;p>Older versions of Godot will keep targeting .NET 6; we won’t change the target version in patch updates, since that would be a big breaking change. If you still need to target .NET 6, you can stay on an older version of Godot, but we strongly encourage you to update to benefit from all the fixes and improvements included in the latest version of Godot and the .NET runtime.&lt;/p>
+&lt;h2 id="what-about-future-net-releases">What about future .NET releases?&lt;/h2>
+&lt;p>Godot always supports the latest .NET version. The version targeted by Godot’s C# packages is only the minimum version that your project can target, but you are always free to target a newer .NET version. To target the latest .NET 9 release in your project, you just need to install the latest version of the .NET SDK and change the &lt;code class="language-plaintext highlighter-rouge">TargetFramework&lt;/code> property in your &lt;code class="language-plaintext highlighter-rouge">.csproj&lt;/code>:&lt;/p>
+&lt;div class="language-xml highlighter-rouge">&lt;div class="highlight">&lt;pre class="highlight">&lt;code>&lt;span class="nt">&amp;lt;Project&lt;/span> &lt;span class="na">Sdk=&lt;/span>&lt;span class="s">"Godot.NET.Sdk/4.3.0"&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>
+&lt;span class="nt">&amp;lt;PropertyGroup&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- Target .NET 9 --&amp;gt;&lt;/span>
+&lt;span class="nt">&amp;lt;TargetFramework&amp;gt;&lt;/span>net9.0&lt;span class="nt">&amp;lt;/TargetFramework&amp;gt;&lt;/span>
+&lt;span class="nt">&amp;lt;EnableDynamicLoading&amp;gt;&lt;/span>true&lt;span class="nt">&amp;lt;/EnableDynamicLoading&amp;gt;&lt;/span>
+&lt;span class="nt">&amp;lt;/PropertyGroup&amp;gt;&lt;/span>
+&lt;span class="nt">&amp;lt;/Project&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;div class="card card-warning">
+&lt;p>You should always use the latest version of the .NET SDK even when targeting an older .NET version in your projects.&lt;/p>
+&lt;/div>
+&lt;p>We’ll keep updating our C# packages to the latest LTS version as they are released. The next LTS release will be .NET 10, due in November 2025.&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>.NET 7 introduced the new &lt;code class="language-plaintext highlighter-rouge">scoped&lt;/code> keyword. This feature breaks compatibility in some low-level scenarios that affected Godot. &lt;a href="#fnref:1" class="reversefootnote" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>While pre-releases are usually supported by Godot, they may require users to enable them by setting the &lt;code class="language-plaintext highlighter-rouge">DOTNET_ROLL_FORWARD_TO_PRERELEASE&lt;/code> environment variable to &lt;code class="language-plaintext highlighter-rouge">1&lt;/code>. Keep in mind pre-releases are still a work-in-progress so there may be bugs. &lt;a href="#fnref:2" class="reversefootnote" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description><category>Progress Report</category><guid>https://godotengine.org/article/godotsharp-packages-net8/</guid><dc:creator>Raul Santos</dc:creator><pubDate>Thu, 02 Jan 2025 17:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotsharp-packages-net8.webp</image></item><item><title>Dev snapshot: Godot 4.4 dev 7</title><link>https://godotengine.org/article/dev-snapshot-godot-4-4-dev-7/</link><description>&lt;p>Season’s greetings, everyone! As our team winds down for the holiday season, we present you with one last gift before
 the new year: our final development build of the year!&lt;/p>
 &lt;p>After having a few notable regressions in dev 6, we intended to do a quick turnaround for dev 7 with high priority bug
 fixes. But we got greedy and ended up making dev 7 another feature-packed new release so you will have plenty of things
@@ -1509,88 +1553,4 @@ We’re looking into supporting this in a future 4.3 patch release.&lt;/p>
 &lt;p>This is an area that is really easy to contribute to if you are already familiar with rendering but want to get more familiar with Godot!&lt;/p>
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Progress Report</category><guid>https://godotengine.org/article/rendering-priorities-september-2024/</guid><dc:creator>Clay John</dc:creator><pubDate>Mon, 23 Sep 2024 15:45:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/rendering-priorities-september-2024.webp</image></item><item><title>Godot Editor on the Meta Horizon Store</title><link>https://godotengine.org/article/godot-editor-horizon-store-early-access-release/</link><description>&lt;p>A year ago, I &lt;a href="https://godotengine.org/article/android_godot_editor_play_store_beta_release/">introduced the Android port of the Godot Editor&lt;/a>. To date, it has had over &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">500K+ downloads on the Google Play store&lt;/a>, and has enabled developers to create and develop Godot apps and games using Android tablets, foldables and phones. Since then we have been hard at work refining the experience, improving the development workflow via picture-in-picture (PiP) support, providing the ability to build and export Godot binaries, and improving the Editor performance and reliability.&lt;/p>
-&lt;p>Building on that foundation, and thanks to the &lt;a href="https://godotengine.org/article/godot-engine-receiving-new-grant-meta-reality-labs/">Meta grants&lt;/a> in support of that work and with help from &lt;a href="https://www.w4games.com/">W4 Games&lt;/a>, I was able to complete the proof of concept started by &lt;a href="https://github.com/BastiaanOlij">Bastiaan Olij&lt;/a> a couple years ago, to add support for using the Android editor in an XR context using Godot’s first class &lt;a href="https://www.khronos.org/openxr/">OpenXR&lt;/a> integration!&lt;/p>
-&lt;p>Today, I am proud to release the &lt;strong>first mobile XR port&lt;/strong> of the Godot Editor on Meta Quest devices!&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.meta.com/experiences/godot-game-engine/7713660705416473/">https://www.meta.com/experiences/godot-game-engine/7713660705416473/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>The Godot Editor is &lt;a href="https://www.meta.com/experiences/godot-game-engine/7713660705416473/">now available on the Horizon Store&lt;/a> for &lt;strong>Meta Quest 3&lt;/strong> &amp;amp; &lt;strong>Meta Quest Pro&lt;/strong> devices running &lt;a href="https://www.meta.com/blog/quest/meta-horizon-os-open-hardware-ecosystem-asus-republic-gamers-lenovo-xbox/">Horizon OS&lt;/a> &lt;strong>version 69 or higher&lt;/strong>.&lt;/p>
-&lt;p>This is an early access version of the Godot Editor running natively on Meta Quest devices, enabling the creation and development of 2D, 3D and &lt;strong>immersive XR&lt;/strong> apps and games directly on device without the need for an external computer.&lt;/p>
-&lt;p>As usual, this work is entirely &lt;strong>free and open source&lt;/strong>, and already merged in Godot 4.4’s development branch (&lt;a href="https://github.com/godotengine/godot/pull/96624">GH-96624&lt;/a>). The version we publish on the Horizon Store can also be downloaded as an APK directly &lt;a href="/download/preview/">from the Godot website&lt;/a>.&lt;/p>
-&lt;h2 id="features--highlights">Features &amp;amp; Highlights&lt;/h2>
-&lt;p>This version of the Godot Editor is a &lt;strong>Hybrid App&lt;/strong> with the ability to open and transition back and forth between multiple &lt;strong>panel&lt;/strong> (2D) and &lt;strong>immersive&lt;/strong> (XR) windows. This is used to support the Editor features as described below.&lt;/p>
-&lt;h3 id="access-to-all-godot-engine-capabilities">Access to all Godot Engine capabilities&lt;/h3>
-&lt;p>&lt;img src="/storage/blog/godot-editor-horizon-store-early-access-release/project_manager_panel.webp" alt="Project Manager panel in Horizon OS" />&lt;/p>
-&lt;p>&lt;img src="/storage/blog/godot-editor-horizon-store-early-access-release/main_editor_panel.webp" alt="Main Editor panel in Horizon OS" />&lt;/p>
-&lt;p>The &lt;a href="https://docs.godotengine.org/en/stable/getting_started/introduction/first_look_at_the_editor.html#the-project-manager">Project Manager&lt;/a> and the main &lt;a href="https://docs.godotengine.org/en/stable/getting_started/introduction/first_look_at_the_editor.html#id1">Editor&lt;/a> are rendered into panel windows as done on desktop and Android platforms. This makes the Editor readily available and usable either in the Home environment or overlaid onto a XR experience.&lt;/p>
-&lt;p>This approach allows us to deliver on a core tenet of this port which is to provide developers with a familiar development interface and access to the full set of capabilities and features that the Godot Editor provides on desktop and Android platforms. This includes access to the &lt;a href="https://godotengine.org/asset-library/asset">asset library&lt;/a>, &lt;a href="https://docs.godotengine.org/en/stable/tutorials/editor/default_key_mapping.html">keyboard &amp;amp; mouse shortcuts&lt;/a>, &lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html">GDScript&lt;/a> code editing / highlighting / completion support, access to the &lt;a href="https://docs.godotengine.org/en/stable/classes/index.html">documentation&lt;/a>, live scene editing, live script reloading support, &lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/debug/overview_of_debugging_tools.html">live debugging&lt;/a>, &lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/debug/the_profiler.html">live profiling&lt;/a> and &lt;a href="https://godotengine.org/features/">many more&lt;/a>!&lt;/p>
-&lt;h3 id="developing-xr-apps-and-games">Developing XR apps and games!&lt;/h3>
-&lt;video autoplay="" loop="" muted="" playsinline="" title="Showcasing support for developing XR projects">
-&lt;source src="/storage/blog/godot-editor-horizon-store-early-access-release/developing_xr_game.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>When developing a XR project, the immersive (XR) window is used for playtesting the project directly in the device as if it was a released app already. In that mode, the Editor panel can be summoned as an interactive overlay, which allows the developer to iterate, debug or profile the XR project while it’s running.&lt;/p>
-&lt;p>Support for exporting XR project binaries will be made available via a plugin.&lt;/p>
-&lt;h3 id="developing-2d-and-3d-apps-and-games">Developing 2D and 3D apps and games!&lt;/h3>
-&lt;video autoplay="" loop="" muted="" playsinline="" title="Showcasing support for developing 2D and 3D projects">
-&lt;source src="/storage/blog/godot-editor-horizon-store-early-access-release/developing_3d_game_2.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>Support for creating and developing 2D and 3D apps and games is available out of the box.&lt;/p>
-&lt;p>The experience is improved by leveraging the Android editor’s multi-panel capability which on Horizon OS allows to playtest the project in a new panel next to the Editor panel. This allows the Editor to remain accessible for iterating, debugging or profiling the project in real-time.&lt;/p>
-&lt;p>As with the Android editor, this version provides the ability to export 2D &amp;amp; 3D project binaries for all supported platforms.&lt;/p>
-&lt;h3 id="leveraging-horizon-os-platform-capabilities">Leveraging Horizon OS platform capabilities&lt;/h3>
-&lt;h4 id="support-for-keyboard-and-mouse">Support for keyboard and mouse&lt;/h4>
-&lt;p>&lt;a href="https://www.meta.com/help/quest/articles/headsets-and-accessories/meta-quest-accessories/tracked-keyboards-meta-quest/">External keyboard and mouse support&lt;/a> allows developers to achieve the same levels of productivity as they do on desktop and laptop computers.&lt;/p>
-&lt;p>Virtual keyboard, touch controllers and &lt;a href="https://www.meta.com/help/quest/articles/getting-started/getting-started-with-quest-3/direct-touch-meta-quest/">direct touch&lt;/a> are also supported for quick interactions, or when physical keyboard and mouse devices are not readily available.&lt;/p>
-&lt;h4 id="seamless-multitasking">Seamless multitasking&lt;/h4>
-&lt;video autoplay="" loop="" muted="" playsinline="" title="Using Meta Quest seamless multitasking to modify XR game in real-time">
-&lt;source src="/storage/blog/godot-editor-horizon-store-early-access-release/xr_game_live_modifications.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>&lt;a href="https://www.uploadvr.com/seamless-multitasking-experimental-quest/">Introduced in Horizon OS v69&lt;/a>, seamless multitasking enables the Editor panel to be visible and interactable while playtesting a XR project in virtual space.&lt;/p>
-&lt;p>This gives developers the ability to do live editing, debugging or profiling of XR projects in real-time, with the benefit of the depth cues and sense of scale unique to XR.&lt;/p>
-&lt;h4 id="panel-resizing--theater-view-support">Panel Resizing &amp;amp; Theater View support&lt;/h4>
-&lt;p>The Editor panel can be resized at will via drag and drop to fit the developer’s needs.&lt;/p>
-&lt;video autoplay="" loop="" muted="" playsinline="" title="Resizing the Editor panel">
-&lt;source src="/storage/blog/godot-editor-horizon-store-early-access-release/resizing_editor_panel.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>Using the &lt;a href="https://www.meta.com/blog/quest/meta-quest-v67-update-new-window-layout-creator-content-horizon-feed/">Theater View button&lt;/a>, developers can maximize the Editor panel and bring it front-and-center.&lt;/p>
-&lt;video autoplay="" loop="" muted="" playsinline="" title="Maximizing the Editor panel into the Theater View">
-&lt;source src="/storage/blog/godot-editor-horizon-store-early-access-release/maximize_editor_in_theater_view.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;h2 id="an-important-step-for-the-xr--game-communities">An important step for the XR &amp;amp; Game communities&lt;/h2>
-&lt;p>Besides the technical achievements required to make this port feasible, we believe this is a significant milestone as it impacts the XR &amp;amp; Game community in a few but critical ways:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Turns the Meta Quest into a true Spatial Computer&lt;/strong>
-&lt;ul>
-&lt;li>The Meta Quest gains the ability to create (and distribute) its own native apps without the need for a PC or laptop computer!&lt;/li>
-&lt;li>Being able to run a full game engine on a mobile XR device should serve as inspiration for the type of apps that can be brought to the mobile XR ecosystem.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Grows the OpenXR ecosystem by providing a seed for building feature rich apps&lt;/strong>
-&lt;ul>
-&lt;li>Godot Engine is a free and open-source software (&lt;a href="https://en.m.wikipedia.org/wiki/Free_and_open-source_software">FOSS&lt;/a>) project which means that, in partnership with the &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>, OpenXR vendors can bring similar capabilities to their devices to grow the OpenXR ecosystem.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Reduces XR development friction&lt;/strong>
-&lt;ul>
-&lt;li>XR development on PC and laptop devices has significant friction due to the need to switch back and forth between the development device and the target XR device (i.e. taking the headset off for development, putting back on for playtesting).&lt;/li>
-&lt;li>This is not an issue when using the Godot Editor natively on XR devices since the development and target device are now the same device!&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Lowers the barrier of entry for XR and Game development&lt;/strong>
-&lt;ul>
-&lt;li>This version of the Godot Editor turns devices like the Meta Quest into an easily accessible development device with the ability to natively create, develop and export 2D, 3D or XR apps and games for all Godot-supported platforms.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Provides a more flexible development experience&lt;/strong>
-&lt;ul>
-&lt;li>Developers can leverage the virtual space to gain more screen estate than a laptop could provide.&lt;/li>
-&lt;li>The &lt;a href="https://www.meta.com/blog/quest/meta-quest-v67-update-new-window-layout-creator-content-horizon-feed/">virtual floating panels&lt;/a> provide a more flexible layout than a traditional desktop + multi-monitors setup.&lt;/li>
-&lt;li>The ability to playtest and modify XR projects in-headset in real-time is a capability that can’t be replicated on PC and laptop computers.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="next-steps-feedback--contributions">Next Steps, Feedback &amp;amp; Contributions&lt;/h2>
-&lt;p>This is only the beginning!&lt;/p>
-&lt;p>As mentioned in the previous section, we believe this is an important milestone for the XR, GameDev, and Open Source communities and we aim to build on this foundation to make Godot Engine a powerful, flexible and cross-platform tool for XR and Game development.&lt;/p>
-&lt;p>To that end, we welcome feedback and contributions from partners, members of the community and interested parties.&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/godot-editor-horizon-store-early-access-release/</guid><dc:creator>Fredia Huya-Kouadio</dc:creator><pubDate>Fri, 20 Sep 2024 16:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-editor-horizon-store-early-access-release.webp</image></item></channel></rss>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Progress Report</category><guid>https://godotengine.org/article/rendering-priorities-september-2024/</guid><dc:creator>Clay John</dc:creator><pubDate>Mon, 23 Sep 2024 15:45:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/rendering-priorities-september-2024.webp</image></item></channel></rss>
