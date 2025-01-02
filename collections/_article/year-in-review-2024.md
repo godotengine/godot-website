@@ -193,7 +193,7 @@ The “autobonker” *Ballionaire* shows how fun physics can be. Assemble your p
 [3D physics interpolation](https://github.com/godotengine/godot/pull/92391): Physics interpolation is used to decouple physics ticks and display frame rates. It creates additional frames between the last physics position and the current one. This reduces jitter, effectively making for a smoother appearance overall.
 
 ### Core 
-Typed dictionaries
+[Typed dictionaries](https://github.com/godotengine/godot/pull/78656) can now be bound to script & GDScript.
 
 ### Editor
 [Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager): The design of the project manager has been revamped. You can now directly access some editor settings from here: language, interface theme, display scale, the new network mode, and directory naming conventions.
