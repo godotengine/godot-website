@@ -7,14 +7,14 @@ image:
 date: 2024-12-31 10:00:00
 ---
  
-And with that, the 2024 season comes to an end. What a year it has been, with the number of Godot submissions in game jams rising to new heights, [more people working for the Godot Foundation than ever before](https://godotengine.org/article/godot-foundation-update-dec-2024/), and most industry award shows featuring one if not more games #MadeWithGodot. 
+And with that, the 2024 season comes to an end. What a year it has been, with the number of Godot submissions in game jams rising to new heights, [more people working for the Godot Foundation than ever before](https://godotengine.org/article/godot-foundation-update-dec-2024/), and most industry award shows featuring one if not more games *#MadeWithGodot*. 
 
 So let us celebrate the past year by looking back at one key highlight per month - an event the team attended, a major project milestone being reached, or a fun moment online the Godot community gathered around. Likewise, we looked at the release dates of notable [Godot games on Steam](https://steamdb.info/tech/Engine/Godot/) and decided to introduce you to some favorites alongside our own news. 
 
 Of course, we cannot forget the sheer amount of technological progress being made by thousands of contributors, so for the purpose of this review we checked in with the different maintainers as well. Find a summary of the most notable change per engine area below (and tell us about your personal highlight [in the comments](https://forum.godotengine.org/))!
 
 ## January
-<img alt="the commit that open-sourced Godot" src="/storage/blog/2024-review/commit.jpg"/>
+<img alt="The commit that open-sourced Godot" src="/storage/blog/2024-review/commit.jpg"/>
 
 Nostalgia became the theme of January, as we compiled a small [game showcase](https://x.com/godotengine/status/1754601111229497650) leading up to Godot’s 10-year-anniversary (counting from the moment the engine was first open sourced). For every year from 2014 to 2024 we shared two gems found on Steam and itch.io with the community, celebrating an ever growing list of Godot releases since the beginnings of the project. 
 
@@ -42,7 +42,7 @@ Another twist on “gaming directly on a desktop” came in the form of the acti
 ## March
 In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet. We shared the space with our sponsor [W4 Games](https://www.w4games.com/) and a wide array of [Godot games](https://godotengine.org/article/gdc-2024-godot-games/) we were fortunate enough to invite to attend GDC with us.
 
-<img alt="group picture at the GDC booth" src="/storage/blog/2024-review/gdc.jpg"/>
+<img alt="Group picture at the GDC booth" src="/storage/blog/2024-review/gdc.jpg"/>
 
 We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a [blog post](https://godotengine.org/article/gdc-2024-retrospective/) - see you next year?
 
@@ -187,10 +187,10 @@ The “autobonker” *Ballionaire* shows how fun physics can be. Assemble your p
 # Technological Highlights
 
 ### 2D
-[2D parallax](https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html)
+[2D parallax](https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html): Parallax is a visual effect used in 2D games to give players the illusion of depth. This is done by moving background elements at different speeds.
 
 ### 3D
-[3D physics interpolation](https://github.com/godotengine/godot/pull/92391)
+[3D physics interpolation](https://github.com/godotengine/godot/pull/92391): Physics interpolation is used to decouple physics ticks and display frame rates. It creates additional frames between the last physics position and the current one. This reduces jitter, effectively making for a smoother appearance overall.
 
 ### Core 
 Typed dictionaries
@@ -199,29 +199,24 @@ Typed dictionaries
 Many localization improvements
 
 ### Editor
-[Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager)
-
-### Scripting
-- **GDScript:**
-- **.NET:**
+[Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager): The design of the project manager has been revamped. You can now directly access some editor settings from here: language, interface theme, display scale, the new network mode, and directory naming conventions.
 
 ### Platforms
-- **Android:** [Android Editor](https://godotengine.org/download/android/) feature complete with export support
-- **Web:** [Single-threaded export with audio samples](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager) 
-- **Linux:** [Wayland](https://godotengine.org/releases/4.3/#display-wayland-support) 
-- **macOS/iOS:** [Metal renderer](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend)
-- **Windows:** [Direct3D 12](https://godotengine.org/download/android/) 
+- **Android:** The [Android Editor](https://godotengine.org/download/android/) is now feature complete with export support.
+- **Web:** [Single-threaded exports](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager) are back, and audio samples improve the quality of sound.
+- **Linux:** Experimental [Wayland](https://godotengine.org/releases/4.3/#display-wayland-support) support arrived.
+- **macOS/iOS:** [Metal renderer](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend) fully implemented.
+- **Windows:** [Direct3D 12](https://godotengine.org/download/android/) driver improves compatibility with any Microsoft platform.
 
 ### Systems
-- **Animation:** [migrating from Godot 4.0 to 4.3](https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/)
-- **Audio:** [interactive music](https://godotengine.org/releases/4.3/#highlights-interactive-music)
-- **Import**: [new ufbx importer](https://godotengine.org/article/introducing-the-improved-ufbx-importer-in-godot-4-3/)
-- **Navigation:** enabled [chunk & obstacle baking](https://godotengine.org/releases/4.3/#navigation-splitting-navigation-meshes-into-chunks) 
-- **Networking:**
+- **Animation:** Big feature [migration from Godot 4.0 to 4.3](https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/)
+- **Audio:** [Interactive music](https://godotengine.org/releases/4.3/#highlights-interactive-music): new resources enable you to create complex, layered music and transitions. This allows you to build your own dynamic music system, which reacts to the context of your game.
+- **Import**: [new ufbx importer](https://godotengine.org/article/introducing-the-improved-ufbx-importer-in-godot-4-3/): no need for external converters anymore.
+- **Navigation:** enabled [chunk & obstacle baking](https://godotengine.org/releases/4.3/#navigation-splitting-navigation-meshes-into-chunks) for more fine-tuned navigation meshes.
 - **Physics:** [Jolt merged](https://github.com/godotengine/godot/pull/99895) as alternative to the default 3D physics engine
-- **Rendering:** re-introducing [ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html) 
-- **VFX:** [Visual Shader overhaul](https://godotengine.org/releases/4.3/#highlights-visual-shader)
-- **XR:** [Godot Editor now available on the Meta Horizon Store](https://godotengine.org/article/godot-editor-horizon-store-early-access-release/) 
+- **Rendering:** re-introducing [ubershaders](https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html): Ubershaders are a special version of a shader that are able to changespecialization constants while rendering, which means Godot can precompile just one pipeline ahead of time and compile the more optimized versions on the background during gameplay.
+- **VFX:** [Visual Shader overhaul](https://godotengine.org/releases/4.3/#highlights-visual-shader): The visual shader editor has been revamped from the ground up, to be more visually appealing and to enhance the readability of large, complex shader graphs.
+- **XR:** The [Godot Editor is now available on the Meta Horizon Store](https://godotengine.org/article/godot-editor-horizon-store-early-access-release/)!
 
 ### Documentation
 [Comment section added](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs) 
