@@ -3,8 +3,8 @@ title: "Godot C# packages move to .NET 8"
 excerpt: "On moving to the latest .NET LTS release, and what it means for users."
 categories: ["progress-report"]
 author: Raul Santos
-image: /storage/blog/covers/progress-update-csharp-3.webp
-date: 2024-11-26 17:00:00
+image: /storage/blog/covers/godotsharp-packages-net8.webp
+date: 2025-01-02 17:00:00
 ---
 
 A new version of .NET is released in November each year, alternating Long Term Support (LTS) and Standard Term Support (STS) releases. The quality of all releases is the same. The only difference is the length of support. LTS releases are supported for 3 years, while STS releases are supported for 18 months.
