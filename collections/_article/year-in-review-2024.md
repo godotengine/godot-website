@@ -281,7 +281,7 @@ Our annual community poll rolled around in June. We want to know who our users a
 </div>
 
 ## July
-The [Godot robot plushies](https://www.makeship.com/products/godot-robot-plush) took the internet by storm. In a collaboration with Makeship, we finally proved our infamous logo’s worth. Toothy grin and googly eyes translated adorably into the 3D medium. By the end of the campaign, almost 4.000 cuddly coding companions were headed towards new homes.
+The [Godot robot plushies](https://www.makeship.com/products/godot-robot-plush) took the internet by storm. In a collaboration with Makeship, we finally proved our infamous logo’s worth. Toothy grin and googly eyes translated adorably into the 3D medium. By the end of the campaign, almost 4,000 cuddly coding companions were headed towards new homes.
 
 Aside from the profits being funneled into the [Godot Development Fund](https://fund.godotengine.org/) and thereby opening an additional path to supporting the project financially, the plush also became a beloved community icon. Fanart was made, models of the robot were shared, and the character was granted countless cameos in games made with the engine.
 
