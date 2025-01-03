@@ -217,7 +217,7 @@ The “autobonker” *Ballionaire* shows how fun physics can be. Assemble your p
 - **XR:** The [Godot Editor is now available on the Meta Horizon Store](https://godotengine.org/article/godot-editor-horizon-store-early-access-release/)!
 
 ### Documentation
-A [comment section](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs) has been added to the pages, which uses your existing GitHub login.
+A [comment section](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs) has been added to each documentation page, which uses your existing GitHub login.
 
 <hr>
 
