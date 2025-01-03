@@ -118,7 +118,7 @@ Of course, we cannot forget the sheer amount of technological progress being mad
 <hr>
 
 ## January
-<img alt="The commit that open-sourced Godot" src="/storage/blog/2024-review/commit.jpg"/>
+<img alt="The commit that open-sourced Godot" src="/storage/blog/year-in-review-2024/commit.webp"/>
 
 Nostalgia became the theme of January, as we compiled a small [game showcase](https://x.com/godotengine/status/1754601111229497650) leading up to Godot’s 10-year-anniversary (counting from the moment the engine was first open sourced). For every year from 2014 to 2024 we shared two gems found on Steam and itch.io with the community, celebrating an ever growing list of Godot releases since the beginnings of the project.
 
@@ -170,7 +170,7 @@ Logically, the next step was to hand over the reins of the channel to some of th
 ## March
 In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet. We shared the space with our sponsor [W4 Games](https://www.w4games.com/) and an amazing lineup of [Godot-powered games](https://godotengine.org/article/gdc-2024-godot-games/) that we had the pleasure of inviting to join us at GDC.
 
-<img alt="Group picture at the GDC booth" src="/storage/blog/2024-review/gdc.jpg"/>
+<img alt="Group picture at the GDC booth" src="/storage/blog/year-in-review-2024/gdc.webp"/>
 
 We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a [blog post](https://godotengine.org/article/gdc-2024-retrospective/) — see you next year?
 
@@ -259,8 +259,8 @@ Our annual community poll rolled around in June. We want to know who our users a
 
 [This year’s poll](https://docs.google.com/forms/d/1eicOppRQG2RFZ8CjIGFf5Kha5yklO854fV8-YFtlWxk/viewanalytics) had more responses than ever before, once again proving the incredible growth the Godot community is experiencing.
 
-<img alt="Poll results: programming languages" src="/storage/blog/2024-review/poll1.png"/>
-<img alt="Poll results: donations" src="/storage/blog/2024-review/poll2.png"/>
+<img alt="Poll results: programming languages" src="/storage/blog/year-in-review-2024/poll1.webp"/>
+<img alt="Poll results: donations" src="/storage/blog/year-in-review-2024/poll2.webp"/>
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
@@ -285,7 +285,7 @@ The [Godot robot plushies](https://www.makeship.com/products/godot-robot-plush) 
 
 Aside from the profits being funneled into the [Godot Development Fund](https://fund.godotengine.org/) and thereby opening an additional path to supporting the project financially, the plush also became a beloved community icon. Fanart was made, models of the robot were shared, and the character was granted countless cameos in games made with the engine.
 
-<img alt="3D model of the Godot robot plush" src="/storage/blog/2024-review/plush.jpg"/>
+<img alt="3D model of the Godot robot plush" src="/storage/blog/year-in-review-2024/plush.webp"/>
 [CC0 model by FR3NKD](https://fr3nkd.gumroad.com/l/vhfvy)
 
 While the plush is currently sold out, we are working on bringing it back soon!
