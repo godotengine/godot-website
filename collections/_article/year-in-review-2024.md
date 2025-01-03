@@ -136,7 +136,7 @@ Have a look at that [monumental commit](https://github.com/godotengine/godot/com
     </div>
     <div class="year-2024-game-box-description">
       <p>
-        Desktop pets have risen to new popularity in 2024. <em>KinitoPET</em> combines this trend with the evergreen horror-genre to bring you a unique experience about virtual assistants.
+        Desktop pets have risen to new popularity in 2024. <em>KinitoPET</em> combines this trend with the evergreen horror genre to bring you a unique experience about virtual assistants.
       </p>
     </div>
   </div>
