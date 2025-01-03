@@ -18,7 +18,7 @@ date: 2024-12-31 10:00:00
 
   margin: 2em 0;
   padding: 1em;
-  background-color: var(--platform-note-background-color);
+  background-color: var(--button-card-background-color);
 }
 
 .year-2024-game-image {
