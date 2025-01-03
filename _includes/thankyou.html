@@ -1,0 +1,177 @@
+<style>
+.thankyou-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.thankyou {
+    background: var(--base-color);
+    box-shadow: var(--more-shadow);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-radius: 13px;
+}
+
+.thankyou-reading {
+    font-size: 16px;
+}
+
+.thankyou-reading-list {
+    font-size: 16px;
+    margin: 0;
+    margin-left: 48px;
+    padding-left: 0;
+}
+
+.thankyou-donate {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.btn.btn-donate {
+    background-color: var(--primary-color);
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+
+
+.thankyou h2 {
+    text-shadow: var(--base-shadow);
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.thankyou h2 .anchored-link {
+	/* Hiding the anchored text automatically added on blogposts */
+	display: none !important; 
+}
+
+.thankyou p {
+    max-width: 620px;
+    font-size: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .thankyou-wrapper {
+        display: block;
+    }
+
+    .thankyou {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: scroll;
+        padding: 30px 40px 18px 40px;
+    }
+
+    .thankyou-reading-list {
+        margin-left: 24px;
+    }
+
+    .btn-close-thankyou-popup {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.btn-close-thankyou-popup {
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.btn-close-thankyou-popup img {
+	background: transparent !important; /* for overwriting the style in the blogposts img */
+}
+
+@media (prefers-color-scheme: light) {
+    .btn-close-thankyou-popup img {
+        filter: invert(1);
+        opacity: 0.75;
+    }
+}
+
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const thankYouWrapper = document.getElementById('thank-you');
+		// Close itself, when clicked outside of the popup area.
+		thankYouWrapper.addEventListener('click', (e) => {
+			if (e.target === thankYouWrapper) {
+				thankYouWrapper.style.display = 'none';
+			}
+		});
+
+		// Close with a close button.
+		const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
+		thankYouBackButton.addEventListener('click', () => {
+			thankYouWrapper.style.display = 'none';
+		});
+
+		// Open from the main download buttons.
+		const downloadButtons = document.querySelectorAll('.btn-download');
+		downloadButtons.forEach((it) => {
+			it.addEventListener('click', () => {
+				thankYouWrapper.style.display = '';
+				document.querySelector('.btn.btn-donate').focus();
+			});
+		});
+
+		// Open from the all downloads list.
+		const downloadLinks = document.querySelectorAll('.download-link');
+		downloadLinks.forEach((it) => {
+			it.addEventListener('click', () => {
+				thankYouWrapper.style.display = '';
+			});
+		});
+
+		// Close the dialog when the user presses the escape key.
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				thankYouWrapper.style.display = 'none';
+			}
+		});
+	});
+</script>
+
+
+<div class="thankyou-wrapper" id="thank-you" style="display: none;">
+	<div class="thankyou">
+		<h2>Godot is downloading...</h2>
+
+		<p class="thankyou-donate">
+			Godot exists thanks to donations from people like you. Help us continue our work:
+		</p>
+		<a href="https://fund.godotengine.org" class="btn btn-donate">
+			Make a Donation
+		</a>
+
+		<div class="btn-close-thankyou-popup">
+			<img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore">
+		</div>
+	</div>
+</div>

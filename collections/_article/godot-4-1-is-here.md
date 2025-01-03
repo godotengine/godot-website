@@ -23,9 +23,9 @@ For most games and apps made with 4.0 it should be relatively safe to migrate to
 
 ## Giving back
 
-As a community effort, Godot relies on individual contributors to improve. In recent years, [user and company donations](https://godotengine.org/donate/) allowed us to also hire a number of core contributors to work full-time on the engine and bring you these fast-paced releases.
+As a community effort, Godot relies on individual contributors to improve. In recent years, [user and company donations](https://fund.godotengine.org/) allowed us to also hire a number of core contributors to work full-time on the engine and bring you these fast-paced releases.
 
-Our monthly expenses remain higher than monthly donations, and we still depend on large one-time company donations to fund development. Currently, we need a lot more [monthly donations](https://godotengine.org/donate/) to keep up the pace with Godot 4 updates, not to mention the need to hire more maintainers to review every contribution.
+Our monthly expenses remain higher than monthly donations, and we still depend on large one-time company donations to fund development. Currently, we need a lot more [monthly donations](https://fund.godotengine.org/) to keep up the pace with Godot 4 updates, not to mention the need to hire more maintainers to review every contribution.
 
 Besides financial support, you can also give back by: writing detailed bug reports, contributing to the code base, writing documentation, writing guides (for the docs or on your own website), and supporting others on the various [community platforms](https://docs.godotengine.org/en/latest/community/channels.html) by answering questions and providing helpful tips.
 

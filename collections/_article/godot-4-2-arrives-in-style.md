@@ -19,7 +19,7 @@ Please read on to learn about the most exciting additions in Godot 4.2, or click
 
 ## Giving back
 
-As a community project, Godot is maintained by the efforts of volunteers. Thanks to [user and company donations](https://godotengine.org/donate/) we are able to hire and sponsor a number of core contributors to work full-time and dedicate their undivided attention to the needs of the project.
+As a community project, Godot is maintained by the efforts of volunteers. Thanks to [user and company donations](https://fund.godotengine.org/) we are able to hire and sponsor a number of core contributors to work full-time and dedicate their undivided attention to the needs of the project.
 
 Please consider supporting the project financially with a [recurring monthly donation](https://fund.godotengine.org/), if you are able. Godot continues to grow with each passing month, and we are committed to bringing you reliable and feature-rich releases as often as we can, to facilitate creative work of game developers of all levels. Recurring donations make sure the project is sustainable and its development can be planned for years ahead.
 
