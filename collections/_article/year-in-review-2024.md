@@ -113,12 +113,12 @@ Did you know that we still update Godot 3? Not everyone upgraded their projects 
 The feature freeze for 3.6 happened in May, leading up to the most recent [release in September](https://godotengine.org/article/godot-3-6-finally-released/).
 
 Look at these shiny highlights:
-- [2D Physics Interpolation](https://godotengine.org/article/godot-3-6-finally-released/#2d-physics-interpolation-gh-76252)
-- [2D Hierarchical Culling](https://godotengine.org/article/godot-3-6-finally-released/#2d-hierarchical-culling-gh-68738) 
-- [Tighter Shadow Culling](https://godotengine.org/article/godot-3-6-finally-released/#tighter-shadow-culling-gh-84745) 
-- [Mesh Merging](https://godotengine.org/article/godot-3-6-finally-released/#mesh-merging-gh-61568) 
-- [Discrete Level of Detail (LOD)](https://godotengine.org/article/godot-3-6-finally-released/#discrete-level-of-detail-lod-gh-85437) 
-- [ORM Materials](https://godotengine.org/article/godot-3-6-finally-released/#orm-materials-gh-76023)
+- [2D physics interpolation](https://godotengine.org/article/godot-3-6-finally-released/#2d-physics-interpolation-gh-76252)
+- [2D hierarchical culling](https://godotengine.org/article/godot-3-6-finally-released/#2d-hierarchical-culling-gh-68738) 
+- [Tighter shadow culling](https://godotengine.org/article/godot-3-6-finally-released/#tighter-shadow-culling-gh-84745) 
+- [Mesh merging](https://godotengine.org/article/godot-3-6-finally-released/#mesh-merging-gh-61568) 
+- [Discrete level of detail (LOD)](https://godotengine.org/article/godot-3-6-finally-released/#discrete-level-of-detail-lod-gh-85437) 
+- [ORM materials](https://godotengine.org/article/godot-3-6-finally-released/#orm-materials-gh-76023)
 
 <hr>
 [Arctic Eggs](https://store.steampowered.com/app/2763670/Arctic_Eggs) 
