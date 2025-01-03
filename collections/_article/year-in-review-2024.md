@@ -160,12 +160,12 @@ This tactical roguelite invites you to go on runs in the *Forgotten Mines*. Turn
 Instead of our usual release blogposts, we tried something new for Godot 4.3: a fully fledged [release page](https://godotengine.org/releases/4.3/) detailing all the juicy features awaiting you. 
 
 Highlights of the biggest release yet:
-- [Interactive Music](https://godotengine.org/releases/4.3/#highlights-interactive-music)
-- [2D Physics Interpolation](https://godotengine.org/releases/4.3/#highlights-2d-physics-interpolation)
+- [Interactive music](https://godotengine.org/releases/4.3/#highlights-interactive-music)
+- [2D physics interpolation](https://godotengine.org/releases/4.3/#highlights-2d-physics-interpolation)
 - [TileMapLayer nodes](https://godotengine.org/releases/4.3/#highlights-new-tilemaplayer-node)
-- [Overhauled Visual Shader editor](https://godotengine.org/releases/4.3/#highlights-visual-shader) 
+- [Overhauled visual shader editor](https://godotengine.org/releases/4.3/#highlights-visual-shader) 
 - [Multi-threading improvements](https://godotengine.org/releases/4.3/#highlights-general-multi-threading-improvements) 
-- [Single-threaded Web exports](https://godotengine.org/releases/4.3/#highlights-single-threaded-web-export) 
+- [Single-threaded web exports](https://godotengine.org/releases/4.3/#highlights-single-threaded-web-export) 
 
 All in all, **3,520 commits from 521 contributors** came together in this shared effort!
 
