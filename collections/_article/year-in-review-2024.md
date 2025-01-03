@@ -27,7 +27,7 @@ Desktop pets have risen to new popularity in 2024. *KinitoPET* combines this tre
 <hr>
 
 ## February
-As part of our social media expansion, we also created an [*_official* Godot Engine account](https://www.twitch.tv/godotengine_official) on the streaming platform Twitch. 
+As part of our social media expansion, we also created an [official Godot Engine account](https://www.twitch.tv/godotengine_official) on the streaming platform Twitch. 
 
 Using it to check on Godot game development streamers resulted in [this funny compilation](https://www.youtube.com/watch?v=Ed9xuwtmoUw) - both the content creators and their viewers expressed happiness that the communities they had built were being recognized.
 
