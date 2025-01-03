@@ -40,7 +40,7 @@ Another twist on “gaming directly on a desktop” came in the form of the acti
 <hr>
 
 ## March
-In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet. We shared the space with our sponsor [W4 Games](https://www.w4games.com/) and a wide array of [Godot games](https://godotengine.org/article/gdc-2024-godot-games/) we were fortunate enough to invite to attend GDC with us.
+In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet. We shared the space with our sponsor [W4 Games](https://www.w4games.com/) and an amazing lineup of [Godot-powered games](https://godotengine.org/article/gdc-2024-godot-games/) that we had the pleasure of inviting to join us at GDC.
 
 <img alt="Group picture at the GDC booth" src="/storage/blog/2024-review/gdc.jpg"/>
 
