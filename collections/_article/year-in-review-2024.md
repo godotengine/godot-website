@@ -79,7 +79,7 @@ And with that, the 2024 season comes to an end. What a year it has been, with th
 
 So let us celebrate the past year by looking back at one key highlight per month - an event the team attended, a major project milestone being reached, or a fun moment online the Godot community gathered around. Likewise, we looked at the release dates of notable [Godot games on Steam](https://steamdb.info/tech/Engine/Godot/) and decided to introduce you to some favorites alongside our own news.
 
-Of course, we cannot forget the sheer amount of technological progress being made by thousands of contributors, so for the purpose of this review we checked in with the different maintainers as well. Find a summary of the most notable change per engine area below (and tell us about your personal highlight [in the comments](https://forum.godotengine.org/))!
+Of course, we cannot forget the sheer amount of technological progress being made by thousands of contributors, so for the purpose of this review we checked in with the different maintainers as well. Find a summary of the most notable change per engine area (and tell us about your personal highlight [in the comments](https://forum.godotengine.org/))!
 
 # Tech Highlights
 
@@ -146,9 +146,9 @@ Have a look at that [monumental commit](https://github.com/godotengine/godot/com
 ## February
 As part of our social media expansion, we also created an [official Godot Engine account](https://www.twitch.tv/godotengine_official) on the streaming platform Twitch.
 
-Using it to check on Godot game development streamers resulted in [this funny compilation](https://www.youtube.com/watch?v=Ed9xuwtmoUw) — both the content creators and their viewers expressed happiness that the communities they had built were being recognized.
+Using it to check on Godot game development streamers resulted in [this funny compilation](https://www.youtube.com/watch?v=Ed9xuwtmoUw) — both the content creators and their viewers expressed happiness that the communities they had built were being recognized by us.
 
-Logically, the next step was to hand over the reins of the channel to some of these talented developers. You can find the [takeover recordings](https://youtube.com/playlist?list=PLeG_dAglpVo5vWX06WyYThUOydLVmb1Iu&si=WBi8qIJEaSHh42NN) on [our YouTube](https://www.youtube.com/@GodotEngineOfficial).
+Logically, the next step was to hand over the reigns of the channel to some of these talented developers directly. You can find the [takeover recordings](https://youtube.com/playlist?list=PLeG_dAglpVo5vWX06WyYThUOydLVmb1Iu&si=WBi8qIJEaSHh42NN) on [our YouTube](https://www.youtube.com/@GodotEngineOfficial).
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
@@ -169,11 +169,11 @@ Logically, the next step was to hand over the reins of the channel to some of th
 </div>
 
 ## March
-In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet. We shared the space with our sponsor [W4 Games](https://www.w4games.com/) and an amazing lineup of [Godot-powered games](https://godotengine.org/article/gdc-2024-godot-games/) that we had the pleasure of inviting to join us at GDC.
+In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet, in the expo hall of the annual Game Developer Conference (GDC). We shared the space with our sponsor [W4 Games](https://www.w4games.com/) and an amazing lineup of [Godot-powered games](https://godotengine.org/article/gdc-2024-godot-games/) that we had the pleasure of inviting.
 
 <img alt="Group picture at the GDC booth" src="/storage/blog/year-in-review-2024/gdc.webp"/>
 
-We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a [blog post](https://godotengine.org/article/gdc-2024-retrospective/) — see you next year?
+We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a [retrospective blog post](https://godotengine.org/article/gdc-2024-retrospective/) — see you next year?
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
@@ -225,7 +225,7 @@ Read more about the changes in our [collaboration update](https://godotengine.or
 </div>
 
 ## May
-Did you know that we still update Godot 3? Not everyone upgraded their projects when the big codebase refresh happened last year, so by offering two versions alongside each other we aim to accommodate these existing games as well as lower-end systems used by developers.
+Did you know that we still update Godot 3? Not everyone upgraded their projects when the big codebase refresh happened last year, so by offering two versions alongside each other we aim to accommodate these existing games as well as the lower-end systems used by some developers.
 
 The feature freeze for 3.6 happened in May, leading up to the most recent [release in September](https://godotengine.org/article/godot-3-6-finally-released/).
 
@@ -414,7 +414,7 @@ Submissions are handled via our own [showreel page](https://showreel.godotengine
 ## December
 The [Godot Engine GitHub repository](https://github.com/godotengine/godot) is not only the most popular one in the game development category and has been starred 92,300 times at the time of writing, but we also reached yet another milestone this December: [crossing the threshold of 100,000 issues](https://github.com/godotengine/godot/issues/100000).
 
-To celebrate the occasion (and snatch the coveted number, before a minor issue could do so) our Release Manager wrote a [heartwarming blogpost](https://godotengine.org/article/beyond-100000-you-re-breathtaking/) that cannot be done justice by summarizing — so go read it for yourself!
+To celebrate the occasion (and snatch the coveted number) our Release Manager wrote a [heartwarming blogpost](https://godotengine.org/article/beyond-100000-you-re-breathtaking/) that cannot be done justice by summarizing — so go read it for yourself!
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
