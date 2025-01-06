@@ -94,9 +94,10 @@ Of course, we cannot forget the sheer amount of technological progress being mad
 
 ### Editor
 [Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager)
+[Android Editor:](https://godotengine.org/download/android/) export support
 
 ### Platforms
-- **Android:**
+- **Android:** [Native file picker support](https://github.com/godotengine/godot/pull/98350)
 - **Web:** [Single-threaded exports](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager) and [audio samples](https://godotengine.org/releases/4.3/#web-web-audio)
 - **Linux:** [Wayland support](https://godotengine.org/releases/4.3/#display-wayland-support)
 - **macOS/iOS:** [Metal renderer](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend)
