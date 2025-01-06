@@ -148,7 +148,7 @@ As part of our social media expansion, we also created an [official Godot Engine
 
 Using it to check on Godot game development streamers resulted in [this funny compilation](https://www.youtube.com/watch?v=Ed9xuwtmoUw) — both the content creators and their viewers expressed happiness that the communities they had built were being recognized by us.
 
-Logically, the next step was to hand over the reigns of the channel to some of these talented developers directly. You can find the [takeover recordings](https://youtube.com/playlist?list=PLeG_dAglpVo5vWX06WyYThUOydLVmb1Iu&si=WBi8qIJEaSHh42NN) on [our YouTube](https://www.youtube.com/@GodotEngineOfficial).
+Logically, the next step was to hand over the reins of the channel to some of these talented developers directly. You can find the [takeover recordings](https://youtube.com/playlist?list=PLeG_dAglpVo5vWX06WyYThUOydLVmb1Iu&si=WBi8qIJEaSHh42NN) on [our YouTube](https://www.youtube.com/@GodotEngineOfficial).
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
