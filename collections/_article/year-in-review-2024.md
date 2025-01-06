@@ -232,10 +232,10 @@ The feature freeze for 3.6 happened in May, leading up to the most recent [relea
 Look at these shiny highlights:
 - [2D physics interpolation](https://godotengine.org/article/godot-3-6-finally-released/#2d-physics-interpolation-gh-76252)
 - [2D hierarchical culling](https://godotengine.org/article/godot-3-6-finally-released/#2d-hierarchical-culling-gh-68738)
-- [Tighter shadow culling](https://godotengine.org/article/godot-3-6-finally-released/#tighter-shadow-culling-gh-84745)
 - [Mesh merging](https://godotengine.org/article/godot-3-6-finally-released/#mesh-merging-gh-61568)
 - [Discrete level of detail (LOD)](https://godotengine.org/article/godot-3-6-finally-released/#discrete-level-of-detail-lod-gh-85437)
 - [ORM materials](https://godotengine.org/article/godot-3-6-finally-released/#orm-materials-gh-76023)
+- [Text to speech](https://godotengine.org/article/godot-3-6-finally-released/#text-to-speech-support-gh-61316)
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
