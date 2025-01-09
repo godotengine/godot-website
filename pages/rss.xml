@@ -16,6 +16,7 @@ permalink: /rss.xml
 	<item>
 		<title>{{ post.title | escape }}</title>
 		<link>{{ site.url }}{{ post.url }}</link>
+		<summary>{{ post.excerpt | escape }}</summary>
 		<description>{{ post.content | markdownify | escape }}</description>
 		{% for category in post.categories %}
 		<category>{{ site.data.categories[category][0].name }}</category>
