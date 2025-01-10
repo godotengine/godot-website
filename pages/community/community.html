@@ -9,6 +9,12 @@ layout: default
 	h3.smaller {
 		font-size: 25px;
 	}
+	.grid-communities {
+		grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+	}
+	.grid-networks {
+		grid-template-columns: repeat(auto-fill,minmax(210px,1fr));
+	}
 	.card {
 		height: 100%;
 	}
@@ -130,9 +136,12 @@ layout: default
 	<div class="container flex eqsize">
 		<div class="main">
 			<h1 class="intro-title">Community</h1>
-			<p class="small">
-				Godot has a very active community across multiple channels.<br>
-				By joining Godot communities, you agree to follow Godot's <a href="/code-of-conduct/">Code of Conduct</a>.
+			<p>
+				The Godot Engine community offers multiple platforms for you to connect with other code contributors and game developers.<br>
+				This page lists official spaces maintained by the <a href="https://godot.foundation/">Godot Foundation</a> as well as community-run efforts.<br>
+				To participate in any of these places, you are required to follow Godot's <a href="/code-of-conduct/">Code of Conduct</a>.<br>
+				Likewise, user communities on this page are required to uphold the Code of Conduct with moderation efforts, or they become prone to removal.
+				Please report related issues to <a href="mailto:conduct@godotengine.org">conduct@godotengine.org</a>.
 			</p>
 		</div>
 	</div>
@@ -167,7 +176,7 @@ layout: default
 
 	<h2>Official communities</h2>
 
-	<div class="grid">
+	<div class="grid grid-communities">
 		<div class="community-block">
 			<div class="card">
 				<a href="https://forum.godotengine.org/">
@@ -177,7 +186,7 @@ layout: default
 				</a>
 				<div class="base-padding">
 					<h3><a href="https://forum.godotengine.org/">Godot Forum</a></h3>
-					<p>A place for the Godot community to meet, ask questions, share their work, and provide help to other users.</p>
+					<p>If you need help with your Godot Engine projects, this is your goto place for questions.</p>
 				</div>
 			</div>
 		</div>
@@ -191,7 +200,7 @@ layout: default
 				</a>
 				<div class="base-padding">
 					<h3><a href="https://discord.gg/godotengine">Discord</a></h3>
-					<p>A space to socialize with other community members.</p>
+					<p>Voice and text channels for socializing, announcements you can follow with your own servers, and more.</p>
 				</div>
 			</div>
 		</div>
@@ -204,21 +213,7 @@ layout: default
 				</a>
 				<div class="base-padding">
 					<h3><a href="https://www.reddit.com/r/godot">Reddit</a></h3>
-					<p>Stay up to date on Godot news, and share your projects and resources with each other.</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="community-block">
-			<div class="card">
-				<a href="https://www.facebook.com/groups/godotengine/">
-					<img src="/assets/community/icon_facebook.webp" width="350" height="215" alt=""
-						style="background: linear-gradient(90deg, #2f3c63 5%, #2f3c63 25%, #2f3c63 65%, #2f3c63 82%)"
-						loading="lazy">
-				</a>
-				<div class="base-padding">
-					<h3><a href="https://www.facebook.com/groups/godotengine/">Facebook</a></h3>
-					<p>Large community for discussions around Godot.</p>
+					<p>Celebrate your projects together with the community, and exchange game development resources.</p>
 				</div>
 			</div>
 		</div>
@@ -226,7 +221,7 @@ layout: default
 
 	<h2>Official social networks</h2>
 
-	<div class="grid">
+	<div class="grid grid-networks">
 		<div class="community-block">
 			<div class="card">
 				<a href="https://twitter.com/godotengine">
@@ -302,7 +297,7 @@ layout: default
 				</a>
 				<div class="base-padding">
 					<h3 class="smaller"><a href="https://godotforums.org">Forums</a></h3>
-					<p>Community forum for all Godot developers.</p>
+					<p>Self-organized forum platform for all Godot Engine developers.</p>
 				</div>
 			</div>
 		</div>
@@ -316,7 +311,7 @@ layout: default
 				</a>
 				<div class="base-padding">
 					<h3 class="smaller"><a href="https://programming.dev/c/godot">Programming.Dev</a></h3>
-					<p>A community for discussion and support in development with the game engine.</p>
+					<p>Lemmy is an open-source alternative to Reddit, so naturally our community carved out their own space over there.</p>
 				</div>
 			</div>
 		</div>
@@ -329,8 +324,8 @@ layout: default
 						loading="lazy">
 				</a>
 				<div class="base-padding">
-					<h3><a href="https://discord.gg/4JBkykG">Discord</a></h3>
-					<p>A vibrant community for discussion, user support, showcases... and custom emoji!</p>
+					<h3><a href="https://discord.gg/4JBkykG">Godot Café</a></h3>
+					<p>Largest community-run Discord server that predates the creation of official communities.</p>
 				</div>
 			</div>
 		</div>
@@ -350,7 +345,7 @@ layout: default
 		</div>
 	</div>
 
-	<h2>Looking to contribute?</h2>
+	<h2>Engine development platforms</h2>
 
 	<div class="grid">
 		<div class="community-block">
@@ -362,7 +357,10 @@ layout: default
 				</a>
 				<div class="base-padding">
 					<h3><a href="https://chat.godotengine.org">Godot Contributors Chat</a></h3>
-					<p>Chat for engine contributors and developers based on Rocket.Chat.</p>
+					<p>
+						The official Rocket.Chat instance for Godot Engine contributors.
+						Here we coordinate code contributions and manage operations with the <a href="https://godot.foundation/">Godot Foundation</a>.
+					</p>
 				</div>
 			</div>
 		</div>
