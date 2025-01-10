@@ -9,6 +9,12 @@ layout: default
 	h3.smaller {
 		font-size: 25px;
 	}
+	.grid-communities {
+		grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+	}
+	.grid-networks {
+		grid-template-columns: repeat(auto-fill,minmax(210px,1fr));
+	}
 	.card {
 		height: 100%;
 	}
@@ -130,7 +136,7 @@ layout: default
 	<div class="container flex eqsize">
 		<div class="main">
 			<h1 class="intro-title">Community</h1>
-			<p class="small">
+			<p>
 				The Godot Engine community offers multiple platforms for you to connect with other code contributors and game developers.<br>
 				This page lists official spaces maintained by the <a href="https://godot.foundation/">Godot Foundation</a> as well as community-run efforts.<br>
 				To participate in any of these places, you are required to follow Godot's <a href="/code-of-conduct/">Code of Conduct</a>.<br>
@@ -170,7 +176,7 @@ layout: default
 
 	<h2>Official communities</h2>
 
-	<div class="grid">
+	<div class="grid grid-communities">
 		<div class="community-block">
 			<div class="card">
 				<a href="https://forum.godotengine.org/">
@@ -215,7 +221,7 @@ layout: default
 
 	<h2>Official social networks</h2>
 
-	<div class="grid">
+	<div class="grid grid-networks">
 		<div class="community-block">
 			<div class="card">
 				<a href="https://twitter.com/godotengine">
