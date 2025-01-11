@@ -45,7 +45,7 @@ One of the most important additions not covered by those articles is the introdu
 We know many users are excited about the coming improvements to 2D and 3D rendering in 4.0. Over the last few years we have completely overhauled the Godot renders. They now target Vulkan by default and we have created them with future support for [Direct3D 12](https://github.com/godotengine/godot/pull/64304) and other rendering APIs in mind. We also have created an OpenGL-based compatibility renderer aimed at supporting older and low-end devices that do not support Vulkan or other modern GPU APIs. As much as we love exciting new features, we also want to see people create games on the full spectrum of devices for everyone to enjoy.
 
 <video autoplay loop muted>
-  <source src="/storage/app/media/4.0/beta1/rendering-reflections.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/4.0-beta1/rendering-reflections.mp4?1" type="video/mp4">
 </video>
 
 Notably, Godot's global illumination systems have been remade from scratch in the new release. *GIProbe* has been replaced by the **VoxelGI** node, which is a real-time solution fit for small and medium-scale environments. For the first time ever, Godot also comes with a GI technique that can be used with large open worlds — signed distance field global illumination (**SDFGI**). It's a novel technique created and implemented by Juan, it works in real-time, and you can learn a lot more about it [here](https://godotengine.org/article/godot-40-gets-sdf-based-real-time-global-illumination). If you are looking to add that extra bit of quality when running on high-end devices, rendering contributor Clay John ([clayjohn](https://github.com/clayjohn)) brings you [Screen Space Indirect Lighting](https://github.com/godotengine/godot/pull/51206). This feature adds more detail to existing GI techniques by using screen-space sampling, similar to SSAO. Last but not least, *lightmaps baking* is now [done using the GPU](https://github.com/godotengine/godot/pull/38386) to speed up the process significantly.
@@ -55,7 +55,7 @@ To help improve fidelity of your 3D scenes, we have worked on a couple of exciti
 For other atmospheric effects, Godot 4.0 is introducing sky shaders which allow users to create dynamic skies that update in real time (including reflections). For more information see the article introducing [sky shaders](https://godotengine.org/article/custom-sky-shaders-godot-4-0).
 
 <video autoplay loop muted>
-  <source src="/storage/app/media/4.0/beta1/rendering-clouds.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/4.0-beta1/rendering-clouds.mp4?1" type="video/mp4">
 </video>
 
 [Decals](https://github.com/godotengine/godot/pull/37861) are another new way to add dynamic effects, which rely on PBR materials and can also be used for decorating your environments.
@@ -65,7 +65,7 @@ Visual effect artists among you should find a lot of useful changes to the GPU-b
 Other exciting additions to shaders include support for [uniform arrays](https://github.com/godotengine/godot/pull/62513) and [fragment-to-light varyings](https://github.com/godotengine/godot/pull/44698), as well as new syntax features, such as [structs](https://github.com/godotengine/godot/pull/35249), [preprocessor macros and shader includes](https://github.com/godotengine/godot/pull/62513).
 
 <video autoplay loop muted>
-  <source src="/storage/app/media/4.0/beta1/vshaders-butterflies.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/4.0-beta1/vshaders-butterflies.mp4?1" type="video/mp4">
 </video>
 
 For the photography-minded users, we have added support for using physical light units in Godot 4.0 which allow you to use realistic units for the intensity of lights as well as use standard camera settings (like aperture, shutter speed, and ISO) to control the brightness of the final scene. Physical light units are turned off by default but can be enabled in the project settings.
@@ -85,7 +85,7 @@ Godot 4 marks a big return of Godot's in-house 3D physics engine, **Godot Physic
 But first, we needed to bring Godot Physics on-par with Bullet feature-wise, and improve performance and precision of these features along the way. This included adding new collision shapes, [cylinder](https://github.com/godotengine/godot/pull/45854) and [heightmap](https://github.com/godotengine/godot/pull/47347), as well as re-implementing [SoftBody nodes](https://github.com/godotengine/godot/pull/46937). In addition to feature-specific improvements, general optimization techniques, such as broadphase optimization and multithreading support, were implemented for both 2D and 3D environments. Some of these improvements can also be found in recent Godot 3 releases.
 
 <video autoplay loop muted>
-  <source src="/storage/app/media/4.0/beta1/physics-balls.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/4.0-beta1/physics-balls.mp4?1" type="video/mp4">
 </video>
 
 With that done, it was time to improve the user side of things. We took the opportunity to carry out [a major reorganization of physics nodes](https://github.com/godotengine/godot/pull/48908) and improve many APIs/behaviors to make the experience more user-friendly ([collision layers logic](https://github.com/godotengine/godot/pull/50625), [RigidBodies](https://github.com/godotengine/godot/pull/55736), etc.). A lot of properties previously unique to specific body types are now available to all **PhysicsBody** nodes. This allows us to introduce the new **CharacterBody** node to replace old kinematic bodies, which provide a more advanced behavior in [2D](https://github.com/godotengine/godot/pull/51027/files) and [3D](https://github.com/godotengine/godot/pull/52889), allowing you to have an advanced character controller ready to use with new configurable properties for flexibility. Scripting them is simpler now as well. In previous versions of the engine properties related to moving, sliding, and colliding had to be passed to `move_and_slide()` manually. They can now be set up using scenes, on the nodes themselves reducing code needed to have desired physical interactions.
@@ -117,7 +117,7 @@ Silc 'Tokage' Renew ([Tokage](https://github.com/TokageItLab)) has been hard at 
 With **GDScript** being the most used language among current Godot users, we wanted to really improve the coding experience in Godot 4 with some of the most requested and long-awaited language features. You can now reap the benefits of first-class functions and lambdas, new property syntax, the `await` and `super` keywords, and typed arrays. New built-in annotations make the language clearer and improve syntax for exported properties. And to top it off, your scripts can now automatically generate documentation that can be studied with the built-in help and the Inspector dock tooltips.
 
 <video autoplay loop muted>
-  <source src="/storage/app/media/4.0/beta1/scripting-gdscript.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/4.0-beta1/scripting-gdscript.mp4?1" type="video/mp4">
 </video>
 
 Despite growing in features, the GDScript runtime is only faster and more stable in Godot 4. This was achieved by a complete rewrite of the language backend by our main scripting maintainer George Marques ([vnen](https://github.com/vnen)). If you are interested in further reading George has provided several detailed reports on the new language features ([1](https://godotengine.org/article/gdscript-progress-report-new-gdscript-now-merged), [2](https://godotengine.org/article/gdscript-progress-report-feature-complete-40)), as well as on the decision-making process for the new language parser and runtime ([1](https://godotengine.org/article/gdscript-progress-report-writing-tokenizer), [2](https://godotengine.org/article/gdscript-progress-report-writing-new-parser), [3](https://godotengine.org/article/gdscript-progress-report-type-checking-back), [4](https://godotengine.org/article/gdscript-progress-report-typed-instructions)). The documentation feature was implemented by a student, Thakee Nathees ([ThakeeNathees](https://github.com/ThakeeNathees)), during the last year's Google Summer of Code. You can read their report [here](https://godotengine.org/article/gsoc-2020-progress-report-1#gdscript-doc).
@@ -175,7 +175,7 @@ The new GDExtension system was implemented by Juan and George, and further impro
 
 ## Gui and Text {#gui-and-text}
 
-![Screenshot of Urdu text in RichTextLabel in the editor using Arabic translations and UI mirroring](/storage/app/media/4.0/beta1/text-rtl-support.png)
+![Screenshot of Urdu text in RichTextLabel in the editor using Arabic translations and UI mirroring](/storage/app/media/4.0-beta1/text-rtl-support.png)
 
 Localization is probably the most straightforward way to allow more people to experience your game or use your tool efficiently. However, translating your project is often just half the battle. Most software can handle Latin or Cyrillic characters well enough, but when it comes to Arabic scripts or logograms of East Asian languages, text rendering quickly becomes tricky.
 
@@ -207,7 +207,7 @@ If you want to read more on all of the above, [this series of posts](https://god
 ## Importing/Exporting {#importing-exporting}
 
 <video autoplay loop muted>
-  <source src="/storage/app/media/4.0/beta1/editor-3d-import.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/4.0-beta1/editor-3d-import.mp4?1" type="video/mp4">
 </video>
 
 When you start working on a new 3D scene in Godot 4, you won't be able to miss a leaping change in the importing workflow. Previous versions of the engine provided users with a powerful, but obscured mechanism for preparing imported 3D assets. You could automate and enhance your models and scenes with an import script and a few import settings, but we were sure we could do better than that. Godot 4 comes with a [dedicated import dialog](https://github.com/godotengine/godot/pull/47166) that allows you to preview and customize every part of the imported scene, its materials and physical properties. Scripts can still be used for additional tweaks, thanks to the [new plugin interface](https://github.com/godotengine/godot/pull/53813).
@@ -223,7 +223,7 @@ Of course, none of the aforementioned changes would be worth it if you couldn't 
 However, with a new major release, we can make some radical changes to the tools and the editor accessibility – changes that would be impossible without breaking compatibility. Probably the biggest improvement relying on that is the new Tiles editor, which has been reimagined based on your requests and reports. Our 2D editor maintainer Gilles Roudière ([groud](https://github.com/groud)) has united the workflow for `TileSet`s and `TileMap`s, providing various ways to organize and place tiles, to supply them with metadata and animations. You can probably build half a game with tiles alone!
 
 <video autoplay loop muted>
-  <source src="/storage/app/media/4.0/beta1/editor-tiles.mp4?1" type="video/mp4">
+  <source src="/storage/app/media/4.0-beta1/editor-tiles.mp4?1" type="video/mp4">
 </video>
 
 Read Gilles' multiple detailed reports on the progress made over several months of development: [1](https://godotengine.org/article/tiles-editor-rework), [2](https://godotengine.org/article/tiles-editor-progress-report-2), [3](https://godotengine.org/article/tiles-editor-progress-3), [4](https://godotengine.org/article/tiles-editor-progress-4), [5](https://godotengine.org/article/tiles-editor-progress-report-5).
@@ -255,8 +255,8 @@ As always, if you plan on upgrading your project, please make a backup copy of y
 
 The downloads for this beta can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/beta1) (GDScript, GDExtension).
-- [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0/beta1/mono) (C#, GDScript, GDExtension).
+- [Standard build](https://github.com/godotengine/godot-builds/releases/4.0-beta1) (GDScript, GDExtension).
+- [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0-beta1) (C#, GDScript, GDExtension).
 
 ## Known issues {#known-issues}
 

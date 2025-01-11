@@ -11,7 +11,7 @@ Hi Godot! My name is HP van Braam. Some of you might know me on IRC/Discord/Matr
 
 I'm very happy to have been given this responsibility and I hope to work with all of you to make the Godot stable branches, well, just that! Stable!
 
-TL;DR: Download Godot 3.0.1-rc1 [**here!**](https://download.tuxfamily.org/godotengine/3.0.1/rc1/) And here is the [changelog](https://download.tuxfamily.org/godotengine/3.0.1/rc1/Godot_v3.0.1-rc1_changelog.txt).
+TL;DR: Download Godot 3.0.1-rc1 [~~**here!**~~](https://download.tuxfamily.org/godotengine/3.0.1/rc1/) And here is the [~~changelog~~](https://download.tuxfamily.org/godotengine/3.0.1/rc1/Godot_v3.0.1-rc1_changelog.txt).
 
 I'd like to thank all of our many wonderful contributors for their efforts!
 

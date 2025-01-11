@@ -21,7 +21,7 @@ In this release we also aim to improve the experience of Android developers. Thi
 
 ## Changes
 
-See the [**curated changelog**](https://github.com/godotengine/godot/blob/4.0.2-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/4.0.1-stable...4.0.2-stable) or [in text form](https://downloads.tuxfamily.org/godotengine/4.0.2/Godot_v4.0.2-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
+See the [**curated changelog**](https://github.com/godotengine/godot/blob/4.0.2-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/4.0.1-stable...4.0.2-stable) or [in text form](https://github.com/godotengine/godot-builds/releases/4.0.2-Godot_v4.0.2-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
 
 Here are the main changes since 4.0.1-stable:
 

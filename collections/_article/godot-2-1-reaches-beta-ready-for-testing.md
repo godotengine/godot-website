@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/578/568/145/5785681454bd4264168994.png
 date: 2016-07-12 00:00:00
 ---
 
-**Edit:** A new beta build has been published, [dated 2016-07-21](https://downloads.tuxfamily.org/godotengine/2.1-dev/20160721/). See the [changelog](https://downloads.tuxfamily.org/godotengine/2.1-dev/20160721/Godot_v2.1_beta_20160721_changelog.txt) since the 2016-07-12 build.
+**Edit:** A new beta build has been published, [dated 2016-07-21](https://github.com/godotengine/godot-builds/releases/2.1-dev/20160721/). See the [changelog](https://downloads.tuxfamily.org/godotengine/2.1-dev/20160721-Godot_v2.1_beta_20160721_changelog.txt) since the 2016-07-12 build.
 
 Today, after several months of hard work, we have reached a new milestone in the development of the upcoming version 2.1! We are now pretty happy with the feature set and the overall stability, and therefore provide [beta binaries](/download) for you to test and [report issues/suggest improvements](https://github.com/godotengine/godot/issues).
 

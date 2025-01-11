@@ -9,7 +9,7 @@ date: 2021-07-27 14:08:23
 
 It's finally time for some extensive testing of the upcoming Godot 3.4 release, which is already quite feature-packed a mere 3 months after the [3.3 release](https://godotengine.org/article/godot-3-3-has-arrived)!
 
-And you read correctly, this is 3.4 **beta 2**, even though we never had a formal beta 1 announcement on this blog. [3.4 beta 1 is available for download](https://downloads.tuxfamily.org/godotengine/3.4/beta1/) for comparison purposes, but since it had a major regression on [C# support on Windows](https://github.com/godotengine/godot/issues/50486), I skipped its blog post...
+And you read correctly, this is 3.4 **beta 2**, even though we never had a formal beta 1 announcement on this blog. [3.4 beta 1 is available for download](https://github.com/godotengine/godot-builds/releases/3.4-beta1/) for comparison purposes, but since it had a major regression on [C# support on Windows](https://github.com/godotengine/godot/issues-50486), I skipped its blog post...
 
 ... which gave me some more time to go through the huge changelog and list some of the main changes below! There's still more I want to add over coming days, but there's no reason to delay the publication of the beta 2 builds.
 
@@ -194,7 +194,7 @@ Note that some of the changes in 3.4 have already been backported and published 
 - Editor translation updates.
 - And many more bug fixes and usability enhancements all around the engine!
 
-See the full changelog since 3.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.4/beta2/Godot_v3.4-beta2_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.4/beta2/Godot_v3.4-beta2_changelog_authors.txt)).
+See the full changelog since 3.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.4-beta2/Godot_v3.4-beta2_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.4-beta2-Godot_v3.4-beta2_changelog_authors.txt)).
 
 This release is built from commit [a71169c0e0ed7644b959189522535337bdb6cb2b](https://github.com/godotengine/godot/commit/a71169c0e0ed7644b959189522535337bdb6cb2b).
 
@@ -202,8 +202,8 @@ This release is built from commit [a71169c0e0ed7644b959189522535337bdb6cb2b](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.4/beta2/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.4/beta2/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.147** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.4-beta2) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.4-beta2) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.147** are included in this build.
 
 ## Bug reports
 

@@ -21,7 +21,7 @@ I'd like to thank all of our wonderful contributers for making 3.0.1 possible. I
 
 ## What's new in this release
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.1/Godot_v3.0.1-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.1-Godot_v3.0.1-stable_changelog.txt) for details.
 
 * The 'server' platform is back as it was in Godot 2.1. It is now again possible to run a headless Godot on Linux.
 * Godot can now be started with `--build-solutions` on the command line. This will let you build C# solutions without starting the editor. This is helpful for CI pipelines.
@@ -40,7 +40,7 @@ Here are some of the highlights of this release. See the [full changelog](http:/
 
 ## Fixed issues
 
-Here are some of the more visible bugs fixed in this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.1/Godot_v3.0.1-stable_changelog.txt) for details.
+Here are some of the more visible bugs fixed in this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.1-Godot_v3.0.1-stable_changelog.txt) for details.
 
 * Copy/pasting from the editor on X11 will now work more reliably.
 * The lightmap baker will now use all available cores on Windows like it does on macOS and Linux.

@@ -204,7 +204,7 @@ Note that some of the changes in 3.4 have already been backported and published 
 - Editor translation updates.
 - And many more bug fixes and usability enhancements all around the engine!
 
-See the full changelog since 3.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.4/beta3/Godot_v3.4-beta3_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.4/beta3/Godot_v3.4-beta3_changelog_authors.txt)).
+See the full changelog since 3.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.4-beta3/Godot_v3.4-beta3_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.4-beta3-Godot_v3.4-beta3_changelog_authors.txt)).
 
 You can also browse the [changes between 3.4 beta 2 and beta 3](https://github.com/godotengine/godot/compare/a71169c0e0ed7644b959189522535337bdb6cb2b...8db0bd44249e9cac56cf24c7c192bc782c118638).
 
@@ -214,8 +214,8 @@ This release is built from commit [8db0bd44249e9cac56cf24c7c192bc782c118638](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.4/beta3/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.4/beta3/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.147** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.4-beta3) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.4-beta3) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.147** are included in this build.
 
 **Update 2021-08-07 @ 13:00 UTC:** The original Mono version for 3.4 beta 3 had a breaking regression and was later fixed. The binaries have been replaced, if you downloaded them prior to this update, you might want to redownload them.
 

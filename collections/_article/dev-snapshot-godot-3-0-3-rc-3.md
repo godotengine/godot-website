@@ -21,8 +21,8 @@ I'd like to take a moment to thank all of the superheroes that contribute to the
 
 As always, you will find the binaries for your platform on our mirrors:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0.3/rc3)]
-- Mono version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0.3/rc3/mono)]
+- Classical version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.0.3-rc3)]
+- Mono version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.0.3-rc3)]
 
 Mono versions require **Mono 5.12.0** on all platforms.
 

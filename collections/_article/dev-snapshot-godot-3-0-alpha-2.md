@@ -39,8 +39,8 @@ If you installed Mono in a specific directory, things might get a bit more compl
 
 The download links are not featured on the [Download](/download) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/alpha2)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/alpha2)]
-- Mono version (requires the Mono SDK): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/alpha2/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/alpha2/mono)]
+- Classical version: [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-alpha2)]
+- Mono version (requires the Mono SDK): [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-alpha2)]
 
 **Note:** Export templates are currently missing due to a last minute regression in the HTML5 platform (**Edit 2017-10-31 23:00 UTC:** They are now available for the classical version).
 Export templates for the Mono flavour will not be provided, as exporting Mono games is not completely implemented yet.

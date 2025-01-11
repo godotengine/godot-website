@@ -43,17 +43,17 @@ Here are the main changes since 3.4.3-stable:
 - RichTextLabel: Fix shadow color when text has transparency ([GH-59054](https://github.com/godotengine/godot/pull/59054)).
 - API documentation updates.
 
-See the full changelog since 3.4.3-stable [on GitHub](https://github.com/godotengine/godot/compare/3.4.3-stable...69e9e8f87def0d6c21d7f5919e1fb37fa7b8e662), or in text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.4.4/rc2/Godot_v3.4.4-rc2_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.4.4/rc2/Godot_v3.4.4-rc2_changelog_chrono.txt)).
+See the full changelog since 3.4.3-stable [on GitHub](https://github.com/godotengine/godot/compare/3.4.3-stable...69e9e8f87def0d6c21d7f5919e1fb37fa7b8e662), or in text form (sorted [by authors](https://github.com/godotengine/godot-builds/releases/3.4.4-rc2/Godot_v3.4.4-rc2_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.4.4-rc2-Godot_v3.4.4-rc2_changelog_chrono.txt)).
 
-This release is built from commit [`69e9e8f87`](https://github.com/godotengine/godot/commit/69e9e8f87def0d6c21d7f5919e1fb37fa7b8e662) (see [README](https://downloads.tuxfamily.org/godotengine/3.4.4/rc2/README.txt)).
+This release is built from commit [`69e9e8f87`](https://github.com/godotengine/godot/commit/69e9e8f87def0d6c21d7f5919e1fb37fa7b8e662) (see [README](https://github.com/godotengine/godot-builds/releases/3.4.4-rc2README.txt)).
 
 <a id="downloads"></a>
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.4.4/rc2/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.4.4/rc2/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.4.4-rc2) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.4.4-rc2) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
 
 **Notes:**
 

@@ -97,14 +97,14 @@ Some of the most notable feature changes in this update are:
 - Thirdparty: Update mbedtls to 2.28.3 ([GH-76200](https://github.com/godotengine/godot/pull/76200)).
 - As well as many improvements to the documentation.
 
-This release is built from commit [`2d74ee0e5`](https://github.com/godotengine/godot/commit/2d74ee0e5b89e233ef5e86c0667f09a48e963f82) (see [README](https://downloads.tuxfamily.org/godotengine/4.0.3/rc1/README.txt)).
+This release is built from commit [`2d74ee0e5`](https://github.com/godotengine/godot/commit/2d74ee0e5b89e233ef5e86c0667f09a48e963f82) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.0.3-rc1/README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0.3/rc1/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0.3/rc1/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0.3-rc1) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0.3-rc1) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues

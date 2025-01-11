@@ -71,14 +71,14 @@ Some of the most notable feature changes in this update are:
 - Thirdparty library updates: astcenc 4.4.0, doctest 2.4.11, thorvg 0.9.0, CA certificates from March 2023.
 - Documentation and translation updates.
 
-This release is built from commit [`2ac4e3bb3`](https://github.com/godotengine/godot/commit/2ac4e3bb30517998916bb6b81b7b76788276038c) (see [README](https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/README.txt)).
+This release is built from commit [`2ac4e3bb3`](https://github.com/godotengine/godot/commit/2ac4e3bb30517998916bb6b81b7b76788276038c) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.0.3-rc2/README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0.3/rc2/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0.3-rc2) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0.3-rc2) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues

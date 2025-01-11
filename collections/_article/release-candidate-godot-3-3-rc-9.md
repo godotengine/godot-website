@@ -21,7 +21,7 @@ Compared to the previous RC 8 build, this release fixes a few issues with: 2D ba
 
 For 2D rendering, we're also re-adding some testing options which were used in earlier betas to allow users to test different scenarios which may impact performance for some OpenGL drivers (especially on Windows and macOS). See [GH-47864](https://github.com/godotengine/godot/pull/47864) for details. For the legacy render path (non-batching), we're changing a flag to `GL_STREAM_DRAW` which seems to give significant FPS gains on some test cases. Please report if you see any suspicious FPS drop in RC9 compared to RC8!
 
-See the full changelog since 3.2.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.3/rc9/Godot_v3.3-rc9_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3/rc9/Godot_v3.3-rc9_changelog_authors.txt)), or the [**changes since the previous RC 8 build**](https://github.com/godotengine/godot/compare/b076150b086a5001b190a9a20a425d1bc842fe21...00d087e47d9f1d9ae358a19a9ac0862349d391ce).
+See the full changelog since 3.2.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.3-rc9/Godot_v3.3-rc9_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3-rc9/Godot_v3.3-rc9_changelog_authors.txt)), or the [**changes since the previous RC 8 build**](https://github.com/godotengine/godot/compare-b076150b086a5001b190a9a20a425d1bc842fe21...00d087e47d9f1d9ae358a19a9ac0862349d391ce).
 
 This release is built from commit [00d087e47d9f1d9ae358a19a9ac0862349d391ce](https://github.com/godotengine/godot/commit/00d087e47d9f1d9ae358a19a9ac0862349d391ce).
 
@@ -29,8 +29,8 @@ This release is built from commit [00d087e47d9f1d9ae358a19a9ac0862349d391ce](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.3/rc9/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.3/rc9/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build. (Note: Builds prior to 3.3 RC 7 used Mono 6.12.0.114.)
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.3-rc9) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.3-rc9) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build. (Note: Builds prior to 3.3 RC 7 used Mono 6.12.0.114.)
 
 ## Bug reports
 

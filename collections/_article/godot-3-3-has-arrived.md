@@ -433,7 +433,7 @@ Godot 3.3 is ready to use now and we want you to have it without further ado.
 
 We would like to take the opportunity to thank all of our amazing contributors for all the other great features merged since 3.2.3, and the hundreds of bugfixes and usability improvements done in this release. Even if not listed here, every contribution makes Godot better, and this release is truly the work of hundreds of individuals working together towards a common goal and passion.
 
-For more details on other changes in Godot 3.3, please consult our [curated changelog](https://github.com/godotengine/godot/blob/3.3/CHANGELOG.md#33---2021-04-21), as well as the raw changelog from Git ([chronological](https://downloads.tuxfamily.org/godotengine/3.3/Godot_v3.3-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.3/Godot_v3.3-stable_changelog_authors.txt)).
+For more details on other changes in Godot 3.3, please consult our [curated changelog](https://github.com/godotengine/godot/blob/3.3/CHANGELOG.md#33---2021-04-21), as well as the raw changelog from Git ([chronological](https://github.com/godotengine/godot-builds/releases/3.3/Godot_v3.3-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.3-Godot_v3.3-stable_changelog_authors.txt)).
 
 
 ## Reporting issues

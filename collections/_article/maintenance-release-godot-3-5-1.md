@@ -19,7 +19,7 @@ So this 3.5.1 release fixes a number of regressions that users reported after th
 
 ## Changes
 
-See the [**curated changelog**](https://github.com/godotengine/godot/blob/3.5.1-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/3.5-stable...3.5.1-stable) or [in text form](https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
+See the [**curated changelog**](https://github.com/godotengine/godot/blob/3.5.1-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/3.5-stable...3.5.1-stable) or [in text form](https://github.com/godotengine/godot-builds/releases/3.5.1-Godot_v3.5.1-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
 
 Here are the main changes since 3.5-stable:
 

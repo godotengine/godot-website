@@ -53,9 +53,9 @@ This release is built from commit [f6c29d1cf5eddebbace38172c0f30b6d4ab5e5f2](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.3.1/rc2/) (GDScript, GDNative, VisualScript).
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.3.1-rc2) (GDScript, GDNative, VisualScript).
   * Note: UWP export templates are missing from this build, will be re-added in the next build.
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.3.1/rc2/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build.
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.3.1-rc2) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build.
 
 ## Bug reports
 

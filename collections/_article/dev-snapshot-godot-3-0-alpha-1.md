@@ -29,8 +29,7 @@ Please use the [community channels](/community) to discuss with existing users a
 
 The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
 
-- [Mirror 1 (HTTPS)](https://downloads.tuxfamily.org/godotengine/3.0/alpha1)
-- [Mirror 2 (HTTP)](http://op.godotengine.org:81/downloads/3.0/alpha1)
+- [Mirror 1 (HTTPS)](https://github.com/godotengine/godot-builds/releases/3.0-alpha1)
 
 Also clone the [godot-demo-projects](https://github.com/godotengine/godot-demo-projects/) repository to have demos to play with. Some of them might still need adjustments due to recent changes in the *master* branch, feel free to report any issue.
 

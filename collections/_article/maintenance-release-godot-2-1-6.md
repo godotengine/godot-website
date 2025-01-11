@@ -29,10 +29,10 @@ If you want to start a new project, there is no reason to use Godot 2.1.6 which 
 
 As a reminder, Godot 2.1.x does not have an export templates downloader, so you should make sure to download both the editor binary for your platform and the templates archive ([`.tpz` file](https://download.tuxfamily.org/godotengine/2.1.6/Godot_v2.1.6-stable_export_templates.tpz)), and install these templates using the dedicated editor feature. You should **not mix versions**, i.e. using a 2.1.6 editor binary with 2.1.5 templates or the other way around. Export templates should match the exact commit used to build your editor binary.
 
-- [Download repository](https://download.tuxfamily.org/godotengine/2.1.6/)
-- [Changelog](https://downloads.tuxfamily.org/godotengine/2.1.6/Godot_v2.1.6-stable_changelog.txt)
+- [Download repository](https://github.com/godotengine/godot-builds/releases/2.1.6-stable)
+- [Changelog](https://github.com/godotengine/godot-builds/releases/download/2.1.6-stable/Godot_v2.1.6-stable_changelog.txt)
 
-**Update (2019-07-12 @ 7:00 UTC):** The Android templates released initially were mistakenly built against an older `AndroidManifest.xml` and still targeted API 27. If you downloaded the templates archive before this update was posted, you should [redownload the templates](https://download.tuxfamily.org/godotengine/2.1.6/Godot_v2.1.6-stable_export_templates.tpz) to have API 28 support.
+**Update (2019-07-12 @ 7:00 UTC):** The Android templates released initially were mistakenly built against an older `AndroidManifest.xml` and still targeted API 27. If you downloaded the templates archive before this update was posted, you should [redownload the templates](https://github.com/godotengine/godot-builds/releases/download/2.1.6-stable/Godot_v2.1.6-stable_export_templates.tpz) to have API 28 support.
 
 ### Highlights
 

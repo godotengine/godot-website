@@ -62,7 +62,7 @@ Two years ago (!), [thebestnom](https://github.com/thebestnom) started working o
 
 With a lot of testing from interested users, things progressed slowly but steadily, and our Android maintainer Fredia Huya-Kouadio ([m4gr3d](https://github.com/m4gr3d)) put the finishing touches to get this work merged for Godot 3.5 ([GH-57747](https://github.com/godotengine/godot/pull/57747/)). The current version doesn't have a lot of mobile specific changes, so it's only really usable on a tablet with keyboard and mouse - but the foundation is there to improve upon, and we're interested in your feedback and ideas son how to make the Godot experience more mobile friendly!
 
-From now on you'll find builds of the Android editor as `<godot_version>_android_editor.apk` in the download repository. Note that builds are currently not signed, so you will get a warning on install. [**Give it a try!**](https://downloads.tuxfamily.org/godotengine/3.5/beta4/Godot_v3.5-beta4_android_editor.apk)
+From now on you'll find builds of the Android editor as `<godot_version>_android_editor.apk` in the download repository. Note that builds are currently not signed, so you will get a warning on install. [**Give it a try!**](https://github.com/godotengine/godot-builds/releases/3.5-beta4-Godot_v3.5-beta4_android_editor.apk)
 
 With [helpful input](https://github.com/godotengine/godot/pull/55604#issuecomment-1077590602) from contributors Dan Edwards ([Gromph](https://github.com/Gromph)) and Péter Magyar ([Relintai](https://github.com/Relintai)), Fredia was also able to fix the low processor usage mode on Android ([GH-59606](https://github.com/godotengine/godot/pull/59606)), which the editor port uses. It should now work fine for users who make non-game applications or non real-time games on Android and want to preserve battery life.
 
@@ -123,7 +123,7 @@ All these need to be thoroughly tested to ensure that they work as intended in t
 
 There's no curated changelog just yet, I still have to skim through all commits to select the changelog worthy changes.
 
-For now, you can check the full changelog since 3.4-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.5/beta4/Godot_v3.5-beta4_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.5/beta4/Godot_v3.5-beta4_changelog_authors.txt)).
+For now, you can check the full changelog since 3.4-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.5-beta4/Godot_v3.5-beta4_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.5-beta4-Godot_v3.5-beta4_changelog_authors.txt)).
 
 You can also review the [changes between beta 3 and beta 4](https://github.com/godotengine/godot/compare/3c0d32562b558b60abe382f2a132f4ea0f25b380...b6968ab0602bfe72c71d4efcafe608f9cac36252).
 
@@ -134,8 +134,8 @@ This release is built from commit [b6968ab06](https://github.com/godotengine/god
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.5/beta4/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.5/beta4/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.5-beta4) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.5-beta4) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
 
 **Notes:**
 

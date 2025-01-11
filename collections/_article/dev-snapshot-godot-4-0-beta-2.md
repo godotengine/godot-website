@@ -141,8 +141,8 @@ This release is built from commit [f8745f2f7](https://github.com/godotengine/god
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/beta2/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0/beta2/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0-beta2) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0-beta2) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) installed in a standard location.
 
 ## Known issues

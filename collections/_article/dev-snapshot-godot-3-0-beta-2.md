@@ -27,8 +27,8 @@ There will still be many fixes and enhancements done before the final release, a
 
 The download links are not featured on the [Download](/download) page for now to avoid confusing new users. Instead, browse one of our mirrors and download the editor binary for your platform and the export templates archive:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/beta2)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/beta2)]
-- Mono version (requires the Mono SDK): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/beta2/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/beta2/mono)]
+- Classical version: [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-beta2)]
+- Mono version (requires the Mono SDK): [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-beta2)]
 
 Note that Godot can now download and install the export templates automatically, so you don't need to download them manually. If you installed export templates for the previous 3.0 *beta 1* release, make sure to uninstall them/replace them by the *beta 2* ones, as they are not compatible. Export templates for the Mono flavour will not be provided for beta 2, as exporting Mono games is not fully implemented yet.
 

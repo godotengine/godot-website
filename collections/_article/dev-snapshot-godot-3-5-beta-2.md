@@ -97,7 +97,7 @@ All these need to be thoroughly tested to ensure that they work as intended in t
 
 There's no curated changelog just yet, I still have to skim through all commits to select the changelog worthy changes.
 
-For now, you can check the full changelog since 3.4-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.5/beta2/Godot_v3.5-beta2_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.5/beta2/Godot_v3.5-beta2_changelog_authors.txt)).
+For now, you can check the full changelog since 3.4-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.5-beta2/Godot_v3.5-beta2_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.5-beta2-Godot_v3.5-beta2_changelog_authors.txt)).
 
 You can also review the [changes between beta 1 and beta 2](https://github.com/godotengine/godot/compare/b9b23d2226261e09d4eaa581c865920c00a826c7...7a4f9dfb15a6817135e753b286cd5b767119d08b).
 
@@ -108,8 +108,8 @@ This release is built from commit [7a4f9dfb15a6817135e753b286cd5b767119d08b](htt
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.5/beta2/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.5/beta2/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.5-beta2) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.5-beta2) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
 
 **Notes:**
 

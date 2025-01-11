@@ -34,8 +34,8 @@ Documentation writers are hard at work to catch up with the new features, and th
 
 The download links are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
 
-- [Classical build](https://downloads.tuxfamily.org/godotengine/3.1/beta2) (GDScript, GDNative, VisualScript)
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.1/beta2/mono) (C# support + all the above). You need to have Nuget and MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version.
+- [Classical build](https://github.com/godotengine/godot-builds/releases/3.1-beta2) (GDScript, GDNative, VisualScript)
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.1-beta2) (C# support + all the above). You need to have Nuget and MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version.
 
 **IMPORTANT:** Make backups of your Godot 3.0 projects before opening them in any 3.1 development build. Once a project has been opened in 3.1, its `project.godot` file will be updated to a new format for input mappings which is not compatible with Godot 3.0 - the latter will thus refuse to open a 3.1 project. Moreover, using new 3.1 features in your project means that you can't go back to 3.0, unless you do the necessary work to remove the use of those features. So either test this release on a copy of your 3.0 projects, or start new projects with it.
 

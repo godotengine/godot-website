@@ -371,7 +371,7 @@ Note that some of the changes in 3.4 have already been backported and published 
 - Editor and doc translation updates.
 - And many more bug fixes and usability enhancements all around the engine!
 
-See the full changelog since 3.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.4/rc2/Godot_v3.4-rc2_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.4/rc2/Godot_v3.4-rc2_changelog_authors.txt)).
+See the full changelog since 3.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.4-rc2/Godot_v3.4-rc2_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.4-rc2-Godot_v3.4-rc2_changelog_authors.txt)).
 
 You can also browse the [changes between 3.4 RC 1 and RC 2 ](https://github.com/godotengine/godot/compare/90f8cd89a738316563dac9b133628df6bafe2cb2...23955fc282b95bcd318034b5de536d42f2a08359).
 
@@ -382,8 +382,8 @@ This release is built from commit [23955fc282b95bcd318034b5de536d42f2a08359](htt
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.4/rc2/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.4/rc2/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.4-rc2) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.4-rc2) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
 
 ## Bug reports
 

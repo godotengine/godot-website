@@ -38,17 +38,17 @@ Here are the main changes since 3.4.3-stable:
 - Rendering: GLES3: Fix shader state caching when blend shapes used ([GH-58808](https://github.com/godotengine/godot/pull/58808)) **[regression fix]**.
 - API documentation updates.
 
-See the full changelog since 3.4.3-stable [on GitHub](https://github.com/godotengine/godot/compare/3.4.3-stable...6b4d7d20a48ddcc5bf457df38053086ab6041c9f), or in text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.4.4/rc1/Godot_v3.4.4-rc1_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.4.4/rc1/Godot_v3.4.4-rc1_changelog_chrono.txt)).
+See the full changelog since 3.4.3-stable [on GitHub](https://github.com/godotengine/godot/compare/3.4.3-stable...6b4d7d20a48ddcc5bf457df38053086ab6041c9f), or in text form (sorted [by authors](https://github.com/godotengine/godot-builds/releases/3.4.4-rc1/Godot_v3.4.4-rc1_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.4.4-rc1-Godot_v3.4.4-rc1_changelog_chrono.txt)).
 
-This release is built from commit [`6b4d7d20a`](https://github.com/godotengine/godot/commit/6b4d7d20a48ddcc5bf457df38053086ab6041c9f) (see [README](https://downloads.tuxfamily.org/godotengine/3.4.4/rc1/README.txt)).
+This release is built from commit [`6b4d7d20a`](https://github.com/godotengine/godot/commit/6b4d7d20a48ddcc5bf457df38053086ab6041c9f) (see [README](https://github.com/godotengine/godot-builds/releases/3.4.4-rc1README.txt)).
 
 <a id="downloads"></a>
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.4.4/rc1/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.4.4/rc1/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.4.4-rc1) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.4.4-rc1) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
 
 **Note:** The Windows builds are signed, but the certificate expired recently. We're working on having it renewed, this should be fixed in time for 3.4.4 stable.
 

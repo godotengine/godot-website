@@ -24,7 +24,7 @@ Notable changes that motivate this release include:
 
 ## Changes
 
-See the [**curated changelog**](https://github.com/godotengine/godot/blob/3.4.5-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/3.4.4-stable...3.4.5-stable) or [in text form](https://downloads.tuxfamily.org/godotengine/3.4.5/Godot_v3.4.5-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
+See the [**curated changelog**](https://github.com/godotengine/godot/blob/3.4.5-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/3.4.4-stable...3.4.5-stable) or [in text form](https://github.com/godotengine/godot-builds/releases/3.4.5-Godot_v3.4.5-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
 
 Here are the main changes since 3.4.4-stable:
 

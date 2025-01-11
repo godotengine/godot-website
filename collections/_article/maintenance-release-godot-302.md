@@ -19,14 +19,14 @@ I'd also like to thank all of our wonderful and outrageously attractive contribu
 
 ## What's new in this release
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.2/Godot_v3.0.2-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.2-Godot_v3.0.2-stable_changelog.txt) for details.
 
 * Mono: We now display stack traces for inner exceptions.
 * Mono: Bundle mscorlib.dll with Godot to improve portability.
 
 ## Fixed issues
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.2/Godot_v3.0.2-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.2-Godot_v3.0.2-stable_changelog.txt) for details.
 
 * Running a scene from a project with a main scene now works again (regression in 3.0.1).
 * Correct line spacing in RichTextLabel (regression in 3.0.1).

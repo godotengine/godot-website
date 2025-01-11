@@ -9,9 +9,9 @@ date: 2018-07-28 22:50:00
 
 At long last, Godot 2.1.5 is ready and comes packed with new features and bug fixes! It's the result of 11 months of work ([since 2.1.4](/article/maintenance-release-godot-2-1-4)) from many contributors who care about supporting our previous stable branch (the current one and main focus being [Godot 3.0.x](/download)).
 
-[**Download it now**](https://downloads.tuxfamily.org/godotengine/2.1.5/) from our repositories if you are still using Godot 2.1.x for some projects. If you use it via the Steam distribution (where both 2.1.x and 3.0.x are included), it has been updated already - please keep in mind that we'll eventually stop distributing Godot 2.1.x on Steam (likely when moving to Godot 3.1). **Note:** This release fixes security vulnerabilities in Godot's marshalling code (see the [Godot 3.0.6 announcement](https://godotengine.org/article/maintenance-release-godot-3-0-6) for details) as well as an OpenSSL security update, so upgrading to this version is *strongly recommended* if you use any networking features.
+[**Download it now**](https://github.com/godotengine/godot-builds/releases/2.1.5/) from our repositories if you are still using Godot 2.1.x for some projects. If you use it via the Steam distribution (where both 2.1.x and 3.0.x are included), it has been updated already - please keep in mind that we'll eventually stop distributing Godot 2.1.x on Steam (likely when moving to Godot 3.1). **Note:** This release fixes security vulnerabilities in Godot's marshalling code (see the [Godot 3.0.6 announcement](https://godotengine.org/article-maintenance-release-godot-3-0-6) for details) as well as an OpenSSL security update, so upgrading to this version is *strongly recommended* if you use any networking features.
 
-Note that contrarily to 3.0 which can download the export templates for you automatically, with 2.1 you still need to [download the .tpz file](https://downloads.tuxfamily.org/godotengine/2.1.5/Godot_v2.1.5-stable_export_templates.tpz) manually and use it to install templates within the editor.
+Note that contrarily to 3.0 which can download the export templates for you automatically, with 2.1 you still need to [download the .tpz file](https://github.com/godotengine/godot-builds/releases/2.1.5-Godot_v2.1.5-stable_export_templates.tpz) manually and use it to install templates within the editor.
 
 ## Wait, what is 2.1.x again?
 
@@ -42,7 +42,7 @@ Most new features you see [on this blog](/news) or [on Twitter](https://twitter.
 
 ## Highlights
 
-With 11 months of work and over 450 commits to the *2.1* branch since 2.1.4, there's a lot to cover! Check the [**detailed changelog**](https://downloads.tuxfamily.org/godotengine/2.1.5/Godot_v2.1.5-stable_changelog.txt) for the exhaustive listing.
+With 11 months of work and over 450 commits to the *2.1* branch since 2.1.4, there's a lot to cover! Check the [**detailed changelog**](https://github.com/godotengine/godot-builds/releases/2.1.5-Godot_v2.1.5-stable_changelog.txt) for the exhaustive listing.
 
 Here are some of the main highlights of this release, listed by topic/category.
 

@@ -45,6 +45,6 @@ The main fixes in this release are:
 - Fixed transform localization event in mouse motion
 - Fixed closing a scene tab when it was not the current tab
 
-See the [full changelog](http://downloads.tuxfamily.org/godotengine/2.0.1/Godot_v2.0.1_stable_changelog.txt) for more details, and head towards the [Download page](/download) to get it!
+See the [full changelog](https://github.com/godotengine/godot-builds/releases/download/2.0.1-stable/Godot_v2.0.1_stable_changelog.txt) for more details, and head towards the [Download page](-download) to get it!
 
 For this release, we also used a new buildsystem to create and deploy the binaries, so please [contact us](/community) if you experience any regression relatively to 2.0 stable.

@@ -57,8 +57,8 @@ This release is built from commit [89f57ae12244f3269c9e3fe4684e16ec1fd2c989](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Classical build](https://downloads.tuxfamily.org/godotengine/3.2.3/beta1/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.3/beta1/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.
+- [Classical build](https://github.com/godotengine/godot-builds/releases/3.2.3-beta1) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.2.3-beta1) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.166 are included in this build.
 
 ## Bug reports
 

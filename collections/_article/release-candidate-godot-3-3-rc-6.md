@@ -188,7 +188,7 @@ The main new features are highlighted in bold. Refer to the linked pull requests
 - Editor translation updates.
 - And many more bug fixes and usability enhancements all around the engine!
 
-See the full changelog since 3.2.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.3/rc6/Godot_v3.3-rc6_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3/rc6/Godot_v3.3-rc6_changelog_authors.txt)), or the [changes since the previous RC 5 build](https://github.com/godotengine/godot/compare/b169a16cb51b7203a171245acb5b4193c9d4bca4...15ff752737c53a1727cbc011068afa15683509be).
+See the full changelog since 3.2.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.3-rc6/Godot_v3.3-rc6_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3-rc6/Godot_v3.3-rc6_changelog_authors.txt)), or the [changes since the previous RC 5 build](https://github.com/godotengine/godot/compare-b169a16cb51b7203a171245acb5b4193c9d4bca4...15ff752737c53a1727cbc011068afa15683509be).
 
 This release is built from commit [15ff752737c53a1727cbc011068afa15683509be](https://github.com/godotengine/godot/commit/15ff752737c53a1727cbc011068afa15683509be).
 
@@ -196,8 +196,8 @@ This release is built from commit [15ff752737c53a1727cbc011068afa15683509be](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.3/rc6/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.3/rc6/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.12.0.114 are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.3-rc6) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.3-rc6) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.12.0.114 are included in this build.
 
 ## Bug reports
 

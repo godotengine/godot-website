@@ -64,14 +64,14 @@ A previously included fix has been reverted due to regressions and will be addre
 
 - Editor: Revert "Fix paste value not updated in dictionaries/arrays" ([GH-78643](https://github.com/godotengine/godot/pull/78643)).
 
-This release is built from commit [`1f9e540f1`](https://github.com/godotengine/godot/commit/1f9e540f14edbf2d496a1421f8d37e5b483c4c53) (see [README](https://downloads.tuxfamily.org/godotengine/4.1/rc1/README.txt)).
+This release is built from commit [`1f9e540f1`](https://github.com/godotengine/godot/commit/1f9e540f14edbf2d496a1421f8d37e5b483c4c53) (see [README](https://github.com/godotengine/godot-builds/releases/4.1-rc1-README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.1/rc1/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.1/rc1/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.1-rc1) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.1-rc1) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues

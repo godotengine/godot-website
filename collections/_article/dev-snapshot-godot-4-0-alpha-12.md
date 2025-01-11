@@ -63,7 +63,7 @@ This release is built from commit [2c11e6d9e](https://github.com/godotengine/god
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/alpha12/) (GDScript, GDExtension, VisualScript).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0-alpha12) (GDScript, GDExtension, VisualScript).
 * Mono builds are currently not available as our focus is on porting to .NET 6. You'll get a chance to test it with later alpha releases!
 
 ## Known issues

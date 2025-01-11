@@ -37,8 +37,8 @@ See the changes between [3.1-stable and 3.1.1-rc1](https://github.com/godotengin
 
 As always, you will find the binaries for your platform on our mirrors:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.1.1/rc1)]
-- Mono version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.1.1/rc1/mono)]
+- Classical version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.1.1-rc1)]
+- Mono version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.1.1-rc1)]
 
 ## <a id="known-incompatibilites"></a>Known incompatibilities
 

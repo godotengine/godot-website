@@ -58,7 +58,7 @@ And of course you are not alone to learn how to use Godot! We have many [communi
 
 Don't miss the Godot [Questions & Answers](https://godotengine.org/qa), which likely already has answers for some of the questions you might be asking yourselves. If not, don't hesitate to ask your question, being both concise and specific, and you should quickly get some help.
 
-Finally, if you think that you hit a bug in the engine, please report it on [GitHub](http://github.com/godotengine/godot). Make sure to follow the proposed issue template (filled in automatically) to help us help you.
+Finally, if you think that you hit a bug in the engine, please report it on [GitHub](https://github.com/godotengine/godot). Make sure to follow the proposed issue template (filled in automatically) to help us help you.
 
 ## Can I use Godot 3.0?
 

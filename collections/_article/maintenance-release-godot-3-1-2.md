@@ -14,7 +14,7 @@ While Godot 3.2 is shaping up nicely in the [late beta stage](/article/dev-snaps
 
 *Note: Illustration credits at the bottom of this page.*
 
-**Edit 2019-12-03 @ 15:00 UTC:** A regression was found in the WebAssembly (HTML5) export templates, which was fixed this day. The export templates `.tpz` file now contains the fixed templates, but if you installed Godot 3.1.2 and the templates before this date, you should update the WebAssembly templates manually. See instructions below in the download section. To do so, [download this archive](https://downloads.tuxfamily.org/godotengine/3.1.2/hotfix/Godot_v3.1.2-stable_fixed_webassembly_templates.tpz) containing only the fixed WebAssembly templates, and install them manually from the editor ([see details](https://downloads.tuxfamily.org/godotengine/3.1.2/hotfix/README.txt)). If you downloaded Godot after the date of this edit, you do not need to do anything. The Steam distribution will also be fixed automatically.
+**Edit 2019-12-03 @ 15:00 UTC:** A regression was found in the WebAssembly (HTML5) export templates, which was fixed this day. The export templates `.tpz` file now contains the fixed templates, but if you installed Godot 3.1.2 and the templates before this date, you should update the WebAssembly templates manually. See instructions below in the download section. To do so, [download this archive](https://github.com/godotengine/godot-builds/releases/3.1.2/hotfix/Godot_v3.1.2-stable_fixed_webassembly_templates.tpz) containing only the fixed WebAssembly templates, and install them manually from the editor ([see details](https://downloads.tuxfamily.org/godotengine/3.1.2/hotfix-README.txt)). If you downloaded Godot after the date of this edit, you do not need to do anything. The Steam distribution will also be fixed automatically.
 
 **Edit 2019-12-04 @ 10:30 UTC:** A follow-up regarding HTML5 templates: if you used the "Custom Html Shell" preset option to use your own loading code, you need to update your HTML template as shown in [this commit](https://github.com/godotengine/godot/commit/0587df4aa5f2977350cc80b1522cdc1e483c4515). This is necessary to support recent Emscripten versions.
 
@@ -32,7 +32,7 @@ So if you're looking for the latest and greatest, check [3.2 beta 2](/article/de
 
 ## Changes
 
-As mentioned, this release includes more than 400 new commits, with many bug fixes, usability enhancements and documentation improvements. You can read the [complete changelog](https://downloads.tuxfamily.org/godotengine/3.1.2/Godot_v3.1.2-stable_changelog.txt) for details. Below are a few selected highlights:
+As mentioned, this release includes more than 400 new commits, with many bug fixes, usability enhancements and documentation improvements. You can read the [complete changelog](https://github.com/godotengine/godot-builds/releases/3.1.2-Godot_v3.1.2-stable_changelog.txt) for details. Below are a few selected highlights:
 
 - Animation: Fixes for onion skinning support of Skeleton2D ([GH-29109](https://github.com/godotengine/godot/pull/29109)).
 - AnimationTree: Fixes to AnimationTree and State Machine ([GH-24796](https://github.com/godotengine/godot/pull/24796), [GH-27577](https://github.com/godotengine/godot/pull/27577),  [GH-28336](https://github.com/godotengine/godot/pull/28336), [GH-29018](https://github.com/godotengine/godot/pull/29018)).
