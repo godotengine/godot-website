@@ -289,7 +289,7 @@ Will Nations ([willnationsdev](https://github.com/willnationsdev/)) implemented 
 <a id="audio-input"></a>
 ### MIDI and microphone input
 
-Marcelo Fernandez ([marcelofg55](http://github.com/marcelofg55/)) added support for using MIDI devices as input devices. Together with [SaracenOne](https://github.com/SaracenOne), they also added support for capture microphone audio.
+Marcelo Fernandez ([marcelofg55](https://github.com/marcelofg55/)) added support for using MIDI devices as input devices. Together with [SaracenOne](https://github.com/SaracenOne), they also added support for capture microphone audio.
 
 
 <a id="vcs-friendliness"></a>

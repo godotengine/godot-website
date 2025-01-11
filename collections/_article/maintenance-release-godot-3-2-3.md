@@ -21,7 +21,7 @@ There's one big change for C# users though, which is that the `.csproj` project 
 
 Godot 3.2.3 includes over 500 commits from ca. 100 contributors. There were fixes all around the engine to address regressions, backport new fixes from the `master` branch, as well as a wide array of usability enhancements and documentation improvements.
 
-Consult the complete changelog ([sorted by authors](https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_changelog_authors.txt) or by [reverse chronological order](https://downloads.tuxfamily.org/godotengine/3.2.3/Godot_v3.2.3-stable_changelog_chrono.txt)) for an exhaustive list of all changes.
+Consult the complete changelog ([sorted by authors](https://github.com/godotengine/godot-builds/releases/3.2.3/Godot_v3.2.3-stable_changelog_authors.txt) or by [reverse chronological order](https://downloads.tuxfamily.org/godotengine/3.2.3-Godot_v3.2.3-stable_changelog_chrono.txt)) for an exhaustive list of all changes.
 
 Here's a hand-picked list of the some of the main changes in Godot 3.2.3:
 

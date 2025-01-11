@@ -21,14 +21,14 @@ I'd like to thank everyone involved in this release. I'll be the one wearing the
 
 ## What's new in this release
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.4/Godot_v3.0.4-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.4-Godot_v3.0.4-stable_changelog.txt) for details.
 
 * Marc Gilleron [(Zylann)](https://github.com/Zylann)'s excellent [terrain plugin](https://github.com/Zylann/godot_terrain_plugin) now works due to some fixes in the Bullet physics.
 * Several documentation fixes
 
 ## Fixed issues
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.4/Godot_v3.0.4-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.4-Godot_v3.0.4-stable_changelog.txt) for details.
 
 * Fixed crasher in asset library on systems with a low threadcount CPU
 

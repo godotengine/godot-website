@@ -17,7 +17,7 @@ Usability still remained a pressing issue, so we made a long list of tasks to im
 
 This release is special because our team has grown a lot. We have more regular contributors, a documentation team, a bug triage team and a much larger community! Godot keeps growing and becoming more and more awesome.
 
-[See the full list of changes](http://downloads.tuxfamily.org/godotengine/2.0/Godot_v2.0_stable_changelog.txt).
+[See the full list of changes](https://github.com/godotengine/godot-builds/releases/2.0-Godot_v2.0_stable_changelog.txt).
 
 ## New core features
 

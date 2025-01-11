@@ -19,13 +19,13 @@ As always this release would not have been possible without the laserlike focus 
 
 ## What's new in this release
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.5/Godot_v3.0.5-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.5-Godot_v3.0.5-stable_changelog.txt) for details.
 
 * 'android_add_asset_dir('...') method to Android module gradle build config.
 
 ## Fixed issues
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.5/Godot_v3.0.5-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.5-Godot_v3.0.5-stable_changelog.txt) for details.
 
  * Android exporter no longer writes unnecessary permissions to the exported APK.
  * Segfault when quitting the editor.

@@ -21,7 +21,7 @@ As such, it's natural that existing Godot 3.5 users would prefer to stay on that
 
 ## Changes
 
-See the [**curated changelog**](https://github.com/godotengine/godot/blob/3.5.2-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/3.5.1-stable...3.5.2-stable) or [in text form](https://downloads.tuxfamily.org/godotengine/3.5.2/Godot_v3.5.2-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
+See the [**curated changelog**](https://github.com/godotengine/godot/blob/3.5.2-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/3.5.1-stable...3.5.2-stable) or [in text form](https://github.com/godotengine/godot-builds/releases/3.5.2-Godot_v3.5.2-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
 
 Here are the main changes since 3.5.1-stable:
 

@@ -255,8 +255,8 @@ As always, if you plan on upgrading your project, please make a backup copy of y
 
 The downloads for this beta can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/beta1) (GDScript, GDExtension).
-- [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0/beta1/mono) (C#, GDScript, GDExtension).
+- [Standard build](https://github.com/godotengine/godot-builds/releases/4.0-beta1) (GDScript, GDExtension).
+- [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0/beta1-mono) (C#, GDScript, GDExtension).
 
 ## Known issues {#known-issues}
 
