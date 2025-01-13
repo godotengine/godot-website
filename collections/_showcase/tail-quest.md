@@ -20,7 +20,6 @@ platforms: ["windows", "linux"]
 steam: https://store.steampowered.com/app/824090/TailQuest_Defense/
 gog: https://www.gog.com/pl/game/tailquest_defense
 
-featured_in_home: true
 ---
 
 

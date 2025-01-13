@@ -19,8 +19,6 @@ platforms: ["windows", "linux", "macos"]
 
 
 steam: https://store.steampowered.com/app/2089710/A_Most_Extraordinary_Gnome/
-
-featured_in_home: true
 ---
 
 ### A short adventure awaits! 

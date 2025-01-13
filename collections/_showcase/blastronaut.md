@@ -20,7 +20,6 @@ platforms: ["windows", "macos", "linux"]
 steam: https://store.steampowered.com/app/1392650/BLASTRONAUT/
 
 
-featured_in_home: true
 ---
 
 ## Mine resources! Upgrade your gear! Make Profit!
