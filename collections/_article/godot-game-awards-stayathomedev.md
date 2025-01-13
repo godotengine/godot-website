@@ -7,6 +7,10 @@ image: /storage/blog/covers/godot-awards-stayathomedev.webp
 date: 2024-12-09 18:00:00
 ---
 
+## Update: The Godot Game Awards winners have been announced! You can watch the video [here](https://www.youtube.com/watch?v=mUzAHrpjwl4).
+
+---
+
 If you’ve watched Godot-related content on YouTube, [StayAtHomeDev](https://www.youtube.com/@stayathomedev) needs no introduction. He’s been sharing his passion for game development and the Godot Engine through his channel. As the creator of the popular “[This Week in Godot](https://www.youtube.com/playlist?list=PLEHvj4yeNfeHArSU6U2a715ssJYYCnKCg)” series, and the Godot Game Awards, he’s helped showcase the amazing work of the Godot community. We had the chance to talk with him about his journey, what inspired the awards, and his efforts to support the community.
 
 ### What inspired you to create the Godot Game Awards, and how long has it been running?
