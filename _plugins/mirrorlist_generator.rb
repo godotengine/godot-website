@@ -82,6 +82,14 @@ module MirrorlistGeneratorPlugin
 					mirrors.push(mirror)
 				end
 			end
+		else
+			mirror_host = mirrorlist_hosts.find { |host| host["name"] == "tuxfamily" }
+			mirror_url = make_download(version, mono, "tuxfamily")
+
+			unless mirror_url == "#"
+				mirror = { 'name' => mirror_host["title"], 'url' => mirror_url }
+				mirrors.push(mirror)
+			end
 		end
 
 		# Initialize data hash to pass objects to the template.
