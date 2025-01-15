@@ -1,12 +1,12 @@
 ---
 title: "Dev snapshot: Godot 4.4 beta 1"
-excerpt: "Godot 4.4 "
+excerpt: "Godot 4.4 is on its way! Please lend a hand by testing this beta release and reporting your findings."
 categories: ["pre-release"]
 author: "Godot contributors"
 image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-1.webp
 image_caption_title: "WEBFISHING"
 image_caption_description: "A game by lamedeveloper"
-date: 2025-01-15 18:00:00
+date: 2025-01-16 18:00:00
 ---
 
 We have reached the first beta release for the 4.4 release cycle. This officially marks the start of feature freeze for 4.4. This means contributors are encouraged to focus their efforts on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.3) and other outstanding bugs. We won't risk merging any new features or risky bug fixes until after we release 4.4 and begin preparing for 4.5.
@@ -116,11 +116,11 @@ You can find a list of such issues by filtering the merged PRs in the 4.3 milest
 UIDs in particular are a pretty massive shake-up to existing project structures, and have understandably been among the more contentious changes of the 4.4 development cycle. We have a blogpost in the works to better explain the rationale behind that change, and the benefits such a system brings to the table, so please stay tuned for more info!
 
 ### Animation
-One of our newest additions to the animator's toolkit is markers ([GH-91765](https://github.com/godotengine/godot/pull/91765)) by ChocolaMint. Markers allow you to create sub regions of an animation that can be jumped to, or looped without playing the entire animation. This functionality is even supported inside AnimationTree, where you can easily select animation markers for looping or to begin playback.
+One of our newest additions to the animator's toolkit is markers ([GH-91765](https://github.com/godotengine/godot/pull/91765)) by ChocolaMint. Markers allow you to create sub regions of an animation that can be jumped to, or looped without playing the entire animation. This functionality is even supported inside AnimationTree, where you can easily create an AnimationNode's custom timeline based on the markers.
 
 We've also added `LookAtModifier3D` ([GH-98446](https://github.com/godotengine/godot/pull/98446)) to handle 3D model procedural animation, partially replacing the deprecated `SkeletonIK3D`. Thanks to the efforts of animation expert Silc Renew (Tokage), users no longer need to rely on specific bone structures and arbitrary layouts; this new tool allows for angle limitations, forward axis settings, etc., and is specialized for making a 3D character model look in the target direction.
 
-Sneaking in right before the feature freeze, the Animation team added `SpringBoneSimulator3D`([GH-101409](https://github.com/godotengine/godot/pull/101409)) as well. The spring bone is an open source multi-platform module that is distributed by the [VRM consortium](https://vrm-consortium.org/en/) under the MIT license. It has been available in Godot as an [add-on](https://godotengine.org/asset-library/asset/2031) for a while now, but there were some difficulties in stability and complex setup due to the complicated data structure. Tokage refined it based on `SkeletonModifier3D` with some improvements by leaning on existing core functionality, so it is now much improved and easier to use!
+Sneaking in right before the feature freeze, the Animation team added `SpringBoneSimulator3D`([GH-101409](https://github.com/godotengine/godot/pull/101409)) as well. The spring bone is an open source cross-platform module that is distributed by the [VRM consortium](https://vrm-consortium.org/en/) under the MIT license. It has been available in Godot as an [add-on](https://godotengine.org/asset-library/asset/2031) for a while now, but there were some difficulties in stability and complex setup due to the complicated data structure. Tokage refined it based on `SkeletonModifier3D` with some improvements by leaning on existing core functionality, so it is now much improved and easier to use!
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/godot-4-4-beta-1/springbone.webm?1" type="video/webm">
@@ -135,7 +135,7 @@ Paul Joannon and Raul Santos have put the final pieces in place for moving both 
 For C# developers targeting Android platforms, exported projects will now use the `android` runtime identifier ([GH-88803](https://github.com/godotengine/godot/pull/88803)). This means C# Android exports now support all available architectures (arm32, arm64, x32, and x64) whereas previously it only supported 64-bit architectures. The necessary Java library to bind the .NET cryptography implementation to the Android OS functions is now also included in exported projects, which fixes issues such as crashing when using SSL with the BCL-provided `HttpClient`.
 
 ### Core
-As mentioned in our last development update, the improvements to the core of our codebase have been absolutely staggering! Lukas Tenbrink has spearheaded optimizations to strings & the speed/efficency at which they're parsed. Adam Scott opened the door for tool makers to take advantage of temporary files and directories ([GH-98397](https://github.com/godotengine/godot/pull/98397)). Ocean has broadened the scope in which `Curve` can be applied, allowing for domains outside of `[0, 1]` ([GH-67857](https://github.com/godotengine/godot/pull/67857)).
+As mentioned in our [last development update](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-7/), the improvements to the core of our codebase have been absolutely staggering! Lukas Tenbrink has spearheaded optimizations to strings and the speed/efficiency at which they're parsed. Adam Scott opened the door for tool makers to take advantage of temporary files and directories ([GH-98397](https://github.com/godotengine/godot/pull/98397)). Ocean has broadened the scope in which `Curve` can be applied, allowing for domains outside of `[0, 1]` ([GH-67857](https://github.com/godotengine/godot/pull/67857)).
 
 But perhaps the biggest highlight of them all is Typed Dictionaries. After the introduction of Typed Arrays in 4.0 by George Marques ([GH-46830](https://github.com/godotengine/godot/pull/46830)), Typed Dictionaries rapidly became one of the engine's most requested features. Thanks to the efforts of Thaddeus Crews ([GH-78656](https://github.com/godotengine/godot/pull/78656)), this is finally a reality! This feature being implemented at the core of the engine means that all scripting languages (GDScript, C#, C++) can take advantage by interfacing with Godot’s Dictionary type. You can now export typed dictionaries from scripts and benefit from a much improved Inspector UX to assign the right keys and values.
 
@@ -185,7 +185,7 @@ The new retargeting method, RetargetModifier3D, a new feature from Tokage allows
 Godot now supports the [`KHR_animation_pointer`](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_animation_pointer) glTF extension thanks to the efforts of Aaron Franke ([GH-94165](https://github.com/godotengine/godot/pull/94165)). This allows imported animations to target custom properties in addition to position, rotation, scale, and mesh blend shape weights (which were all it previously supported). For example, you can now animate the color of a light, the FOV of a camera, the albedo color of a material, the UV offset of a material, and more.
 
 ### Input
-Input saw a lot of incremental improvements and polish this dev cycle. Notably, rptfrg made their first contribution by lowering the default deadzone for new actions from 0.5 down to 0.2 ([GH-97281](https://github.com/godotengine/godot/pull/97281)). This should make input feel much more responsive by default. And, after several years of diligent effort, Markus Sauermann has expanded the Drag-and-Drop system to support dragging and dropping across different `Viewports` and even `Windows`. For more information, see ([GH-67531](https://github.com/godotengine/godot/pull/67531))
+Input saw a lot of incremental improvements and polish this dev cycle. Notably, rptfrg made their first contribution by lowering the default deadzone for new actions from 0.5 down to 0.2 ([GH-97281](https://github.com/godotengine/godot/pull/97281)). This should make input feel much more responsive by default. And, after several years of diligent effort, Markus Sauermann has expanded the Drag-and-Drop system to support dragging and dropping across different `Viewports` and even `Windows`. For more information, see [GH-67531](https://github.com/godotengine/godot/pull/67531).
 
 ### Navigation
 Navigation contains some of the oldest code in the engine. While it continues to serve its purpose, much of it is getting dated and needs to be cleaned up. Accordingly, the Navigation team, especially smix8, have bravely stepped up and begun the difficult process of improving legacy code. Fortunately, their work has already begun to bear fruit in the form of a cleaner codebase and faster Navigation features.
@@ -208,13 +208,13 @@ pkowal1982’s long-running pull request, [GH-53666](https://github.com/godoteng
 #### Android
 Thanks to the tireless efforts of Fredia Huya-Kouadio and Anish Mishra (our newest Android maintainer), the development experience on Android devices for Android devices has become significantly better. In [GH-93526](https://github.com/godotengine/godot/pull/93526) Fredia added support for exporting games from the Android editor. Previously developers had to leave their Android device when they exported their game. Fredia also added support for launching the Play window in PiP mode (in [GH-95700](https://github.com/godotengine/godot/pull/95700)) allowing developers to more easily take advantage of the tight integration between the editor and running game while developing on Android devices. 
 
-To further improve the development experience on Android, Anish added support for the native file picker (in [GH-98350](https://github.com/godotengine/godot/pull/98350)) so now Android game and app developers can benefit from using the file picker that Android provides and Android users are accustomed to. Similarly, Fredia added the new AndroidRuntime plugin which exposes the Android Runtime, making it easier to access Android libraries and SDKs in games/apps. For example, for APIs bundled in the Android OS, no additional setup is required and they can be accessed directly using this new plugin. For more details, see [GH-97500](https://github.com/godotengine/godot/pull/97500).
+To further improve the development experience on Android, Anish added support for the native file picker (in [GH-98350](https://github.com/godotengine/godot/pull/98350)) so now Android game and app developers can benefit from using the file picker that Android provides and Android users are accustomed to. Similarly, Fredia added the new AndroidRuntime singleton which exposes the Android Runtime, making it easier to access Android libraries and SDKs in games/apps. For example, for APIs bundled in the Android OS, no additional setup is required and they can be accessed directly using this new singleton. For more details, see [GH-97500](https://github.com/godotengine/godot/pull/97500).
 
 
 ### Rendering and shaders
 Many monumental rendering changes were finished towards the end of the 4.3 dev cycle slightly too late to be included in 4.3. As a result, 4.4 contains a massive amount of exciting features, too many to include here, but here are a few.
 
-For Apple users, Stuart Carnie has been hard at work ensuring that you get the benefit of the best performance by incorporating the Metal rendering backend ([GH-88199](https://github.com/godotengine/godot/pull/88199), https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/) and the MetalFX upscaler (mentioned above). 
+For Apple users, Stuart Carnie has been hard at work ensuring that you get the benefit of the best performance by incorporating the Metal rendering backend ([GH-88199](https://github.com/godotengine/godot/pull/88199), [Dev snapshot: Godot 4.4 dev 1](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/)) and the MetalFX upscaler (mentioned above). 
 
 DarioSamo spent several months last year perfecting the Ubershader system which was earlier designed by Juan Linietsky and Clay John in the early days of building Godot 4. The Ubershader allows the engine to compile a flexible, but slow version of shaders at load time which can be used as a fallback while the optimized shaders compile in the background. The technique allows users to ship games **without shader stutter** and without resorting to manually displaying every possible material and object combination behind a loading screen.
 
@@ -237,25 +237,31 @@ Ricardo Buring continued his amazing work in bringing physics interpolation to G
 
 After pointing out the many limitations that exist with ReflectionProbes, Lander-vr decided to take matters into his own hands and personally overhaul the blending logic for ReflectionProbes in [GH-100241](https://github.com/godotengine/godot/pull/100241) to make smaller probes automatically take priority over larger probes, which avoids the "double reflection" effects that can look strange. Additionally, in [GH-99958](https://github.com/godotengine/godot/pull/99958), he added a blend distance property so you can now configure the distance at which the reflection starts fading. The default distance at which reflections start fading is now much lower than before, which ensures the full reflection can be seen when inside the ReflectionProbe's bounds.
 
-Not content to stop there, Lander-vr also significantly improved the editor UX for ReflectionProbe and VoxelGI by making their gizmos less intrusive (in [GH-99920](https://github.com/godotengine/godot/pull/99920), [GH-99969](https://github.com/godotengine/godot/pull/99969) and [GH-100370](https://github.com/godotengine/godot/pull/100370)).
+Not content to stop there, Lander-vr also significantly improved the editor UX for ReflectionProbe and VoxelGI by making their gizmos less intrusive (in [GH-99920](https://github.com/godotengine/godot/pull/99920), [GH-99969](https://github.com/godotengine/godot/pull/99969), and [GH-100370](https://github.com/godotengine/godot/pull/100370)).
 
 ![Sponza with reflective floor](/storage/blog/godot-4-4-beta-1/reflection-probes.webp)
 
 After many requests and years of patient waiting from many within the community, we have finally re-introduced vertex shading which is both a significant performance optimization and and integral part of recreating PSX-style graphics ([GH-83360](https://github.com/godotengine/godot/pull/83360)). This turned out to be a significant endeavor for ywmaa who enlisted the help of veteran rendering contributor Clay John to get the feature over the finish line.
 
-Currently when trying to run Godot with the Forward+ or Mobile backend on a device that doesn’t support Vulkan, D3D12, or Metal, the engine will provide the user with an OS alert notifying them that they don’t have support for the needed graphics API and they need to try again with the Compatibility backend. This alert has proven to be confusing for users and the process of opening the scene ends up being cumbersome. Now with [GH-97142](https://github.com/godotengine/godot/pull/97142), first contribution from SheepYhangCN, the engine will automatically fall back to using OpenGL (the Compatibility backend) when the other backends are not available. This should provide the smoothest possible experience for users on older devices.
+Currently when trying to run Godot with the Forward+ or Mobile backend on a device that doesn’t support Vulkan, D3D12, or Metal, the engine will provide the user with an OS alert notifying them that they don’t have support for the needed graphics API and they need to try again with the Compatibility backend. This alert has proven to be confusing for users and the process of opening the scene ends up being cumbersome. Now with [GH-97142](https://github.com/godotengine/godot/pull/97142), the first contribution from SheepYhangCN, the engine will automatically fall back to using OpenGL (the Compatibility backend) when the other backends are not available. This should provide the smoothest possible experience for users on older devices.
 
 Rendering contributors have been relentless in identifying and implementing performance enhancements this release cycle. Many areas of the renderers, both 2D and 3D have been optimized and we expect that many users will notice an improvement to performance this release cycle, especially for 2D lighting, rendering on mobile devices, and general 2D rendering. 
 
 ### XR
 Thanks to Godot’s unique feature of its editor being made with the engine itself, we’ve been able to bring the Godot editor to unconventional places, such as the web and Android devices. Building upon the latter, Fredia Huya-Kouadio completed the proof of concept started by Bastiaan Olij years ago, to add support for using the Android editor on XR devices using OpenXR ([GH-96624](https://github.com/godotengine/godot/pull/96624))! The XR editor is currently available on the Meta Quest 3 and Quest Pro through the [Horizon Store](https://www.meta.com/experiences/godot-game-engine/7713660705416473/). Support for the PICO 4 Ultra is also in progress and will be available soon.
 
+OpenXR support for Metal ([GH-98872](https://github.com/godotengine/godot/pull/98872)) has been added, improving the developer experience for MacOS developers using the Meta XR Simulator.
+
+Some OpenXR runtimes support applying modifiers to the action map, for example, applying thresholds or haptic triggers, and now you can configure those in Godot as well ([GH-97140](https://github.com/godotengine/godot/pull/97140))!
+
+Support for OpenXR composition layers was added in Godot 4.3, allowing developers to show crisp and clear 2D panels that show content from a Godot **SubViewport**. Now, in Godot 4.4, we've added the ability to show content from an Android surface as well, allowing for performant media playback in XR on Android ([GH-96185](https://github.com/godotengine/godot/pull/96185)).
+
 
 ## Changelog
 
 **140 contributors** submitted **406 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-beta1) for the complete list of changes since the 4.4-dev7 snapshot. You can also review [all changes included in 4.4](https://godotengine.github.io/godot-interactive-changelog/#4.4) compared to the previous 4.3 feature release.
 
-This release is built from commit [`4ce466d`](https://github.com/godotengine/godot/commit/4ce466d7fa79e351d4295d5bb47e3266089c3a59).
+This release is built from commit [`TODO`](https://github.com/godotengine/godot/commit/TODO).
 
 ## Downloads
 
