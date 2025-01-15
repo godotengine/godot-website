@@ -9,19 +9,21 @@ date: 2025-01-15 14:00:00
 
 ## Why use UIDs in Godot?
 
-Until Godot 4.0, the engine exclusively relied on file paths to refer to scenes and scripts. While this means references in scenes and scripts use human-readable paths, these paths will break if files are moved to a different location in the project (regardless of whether the move was done using the FileSystem dock or outside Godot). This is especially problematic for large projects where filesystem organization often changes regularly.
+Until Godot 4.0, the engine exclusively relied on file paths to refer to scenes, scripts and other resources. While this means references in scenes and scripts use human-readable paths, these paths will break if files are moved to a different location in the project (regardless of whether the move was done using the FileSystem dock or outside Godot). This is especially problematic for large projects where filesystem organization often changes regularly.
 
-Since Godot 3.x, the editor already updates path references if files are moved within the FileSystem dock. This works more or less, but has drawbacks: the process is slow in large projects (as files need to be scanned and modified), and a single change results in large amount of modified files in commits.
+Since Godot 3.x, the editor already updates path references if files are moved within the FileSystem dock. This works more or less, but has drawbacks: the process is slow in large projects (as files need to be scanned and modified), file paths in scripts are left unchanged, and a single file move can result in a large amount of modified files in commits. It's also not fully reliable, and veteran Godot users probably remember various situations where moving a file seemingly corrupted a scene or resource.
 
-Additionally, it is common for users to move these files outside Godot (e.g. using the OS file manager or the command line). If the editor is not open, it has no way to know the change happened. Even if the editor is open, when working with version control, files may change or be moved and the editor has no way to know where files have gone, resulting in all sorts of errors.
+Additionally, it is common for users to move these files outside Godot (e.g. using the OS file manager, an IDE or the command line). If the editor is not open, it has no way to know the change happened. Even if the editor is open, when working with version control, files may change or be moved and the editor has no way to know where files have gone, resulting in all sorts of errors.
 
-With the aim of making Godot better suitable to large projects and significantly more resilient to external filesystem changes, ensuring this is a fully supported workflow has become a priority. External file manager programs often have more features than Godot's own FileSystem dock, making them more convenient for many use cases. This means we need an approach that can reliably track files being moved, even if the Godot editor isn't open.
+With the aim of making Godot better suited for large projects and significantly more resilient to external filesystem changes, ensuring this is a fully supported workflow has become a priority. External file manager programs often have more features than Godot's own FileSystem dock, making them more convenient for many use cases. This means we need an approach that can reliably track files being moved, even if the Godot editor isn't open.
 
 Partial "Unique IDentifier" (UID) support was therefore introduced in Godot 4.0, which made it possible for users to safely move files outside Godot if they have UID support implemented. The editor will automatically store resource references as UIDs, with the path still being stored alongside for displaying in the editor UI (and as a fallback if the UID reference becomes invalid). However, UID support wasn't completely finished by the time Godot 4.0 released, which means many file types didn't benefit from the UID system entirely (if at all).
 
 ## Limitations of UIDs before Godot 4.4
 
-Each imported resource in Godot has a `.import` file, which allows for storing an UID. Additionally, Godot's own scene and resource file formats store an UID in their header. However, scripts and shaders are not imported resources and they are "plain text" formats, without any Godot-specific information stored within. In practice, this meant that UIDs could be used for scenes and most resources, but not scripts and shaders. The UID implementation was therefore not covering every resource type Godot support ([scripts](https://docs.godotengine.org/en/stable/classes/class_script.html) and [shaders](https://docs.godotengine.org/en/stable/classes/class_shader.html) are resources too).
+Each imported resource in Godot has a `.import` file, which allows for storing a UID. Additionally, Godot's own scene and resource file formats store a UID in their header. However, scripts and shaders are not imported resources and they are "plain text" formats, without any Godot-specific information stored within. In practice, this meant that UIDs could be used for scenes and most resources, but not scripts and shaders. The UID implementation was therefore not covering every resource type Godot support ([scripts](https://docs.godotengine.org/en/stable/classes/class_script.html) and [shaders](https://docs.godotengine.org/en/stable/classes/class_shader.html) are resources too).
+
+Moreover, the editor support for making use of UIDs and relying primarily on them was lacking, so UIDs didn't yet fulfill their promise of enabling seamless refactoring of project files.
 
 ## What's changing with UIDs in Godot 4.4
 
@@ -71,16 +73,28 @@ While Godot must import many resource types before they can be used in a project
 
 The main examples of resources that don't need to be imported are scripts and shaders, hence the dedicated `.uid` files.
 
+It has been suggested that we could still use `.meta` files for scripts and shaders, and use them to store more information than just UIDs, such as user-defined metadata. For the time being we prefer to focus on the problem at hand (the need of UIDs for better refactoring possibility) and not future proof things. If we ever change our mind, it would be easy enough to migrate information from `.uid` files to whichever new container we decide to use.
+
 ### Why not use a single centralized file to store all the project's UIDs?
 
 Many other programs use a centralized database to store UIDs for all files in the project. While this approach makes for a leaner filesystem, it also has several downsides:
 
+- With a centralized file for all UIDs, the purpose of being able to move scripts or shaders outside of Godot would not be fulfilled. When moving a script outside of Godot, the centralized UID mapping would not be updated, and thus it would lose the connection between the previous path and its UID. For this use case to be supported, the UID needs to be close to the file being moved - either alongside it in a `.uid` or `.import` file, or embedded in it (e.g. for `.tscn` or `.tres` files).
 - This file would be subject to frequent merge conflicts in version control systems. For example, if you have two branches that add or edit different scripts/shaders, they would each add their own lines to the UID database file. Both of these branches would add these lines at the same location in the file (probably at the end). However, once you try to merge those two branches together, your version control system wouldn't be able to know what to keep automatically. This is where a merge conflict occurs.
   - In contrast, using separate files ensures merge conflicts don't happen quite as often. If conflicts do arise, they can be resolved by just including the file (or removing it if the source file has also been removed).
 - Centralizing UID information is problematic for add-ons. For example, if a developer refactors their addon and moves files around, then someone downloads the new version of their addon into an existing project of theirs, references to files in the addon in their project get updated automatically. If UIDs are stored in a centralized fashion, there wouldn't be a way to do this as the addon's UIDs wouldn't be stored in the addon. This would result in UID references breaking.
-- If you have multiple Godot editor instances open on the same project, each instance may write a different version of the file, leading to conflicts that can only be detected once you reopen the editor. Additionally, on Windows, you would get a lot of errors while using the editor due to file locking limitations.
 
 While using separate UID files is not perfect by any means, we felt it was a better compromise for Godot's design and to ensure version control remains as seamless as possible.
+
+### Why not embed the UID directly in the scripts as a comment or annotation?
+
+We evaluated it, but we saw a lot of pushback against having this kind of magic string injected as a comment or annotation in all script files, as testers found it to be quite disruptive.
+
+On the technical side, there are also implementation hurdles. All scripting languages supported by Godot (including community bindings via GDExtension) would need to implement this kind of magic comment or annotation (if they have such concept) with an appropriate syntax. The Godot editor would need to know how to extract these UIDs from all types of scripts in an efficient manner (without having to parse it).
+
+Additionally, external IDEs and tools may not play nice with such Godot-specific comments or annotations in various scripting languages, and if Godot-specific plugins want to implement UID support, they would also need to manually implement how to extract the UIDs from the scripts in an efficient manner (as opposed to just reading a file with a predictable name).
+
+Finally, it's not only scripts and shaders that need UIDs, but all resources. While most other builtin resource types can store UID information as described above, this system is also relevant for custom resource formats that users can implement. Having `.uid` files generated for such resources makes the system work out of the box.
 
 ### What happens if I don't commit `.uid` files to version control?
 
