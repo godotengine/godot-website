@@ -73,7 +73,7 @@ While Godot must import many resource types before they can be used in a project
 
 The main examples of resources that don't need to be imported are scripts and shaders, hence the dedicated `.uid` files.
 
-It has been suggested that we could still use `.meta` files for scripts and shaders, and use them to store more information than just UIDs, such as user-defined metadata. For the time being we prefer to focus on the problem at hand (the need of UIDs for better refactoring possibility) and not future proof things. If we ever change our mind, it would be easy enough to migrate information from `.uid` files to whichever new container we decide to use.
+It has been suggested that we could still use `.meta` files for scripts and shaders, and use them to store more information than just UIDs, such as user-defined metadata. For the time being we prefer to focus on the problem at hand (the need of UIDs for better refactoring possibility) and not future-proof things. If we ever change our mind, it would be easy enough to migrate information from `.uid` files to whichever new container we decide to use.
 
 ### Why not use a single centralized file to store all the project's UIDs?
 
@@ -90,7 +90,7 @@ While using separate UID files is not perfect by any means, we felt it was a bet
 
 We evaluated it, but we saw a lot of pushback against having this kind of magic string injected as a comment or annotation in all script files, as testers found it to be quite disruptive.
 
-On the technical side, there are also implementation hurdles. All scripting languages supported by Godot (including community bindings via GDExtension) would need to implement this kind of magic comment or annotation (if they have such concept) with an appropriate syntax. The Godot editor would need to know how to extract these UIDs from all types of scripts in an efficient manner (without having to parse it).
+On the technical side, there are also implementation hurdles. All scripting languages supported by Godot (including community bindings via GDExtension) would need to implement this kind of magic comment or annotation (if they have such a concept) with an appropriate syntax. The Godot editor would need to know how to extract these UIDs from all types of scripts in an efficient manner (without having to parse it).
 
 Additionally, external IDEs and tools may not play nice with such Godot-specific comments or annotations in various scripting languages, and if Godot-specific plugins want to implement UID support, they would also need to manually implement how to extract the UIDs from the scripts in an efficient manner (as opposed to just reading a file with a predictable name).
 
