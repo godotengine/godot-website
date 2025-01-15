@@ -8,6 +8,18 @@ Argentina:
     links:
       - title: Discord
         url: https://discord.gg/2BtycSPdkk
+Austria:
+  - name: Godot User Group Austria
+    coordinates:
+      - 48.20835
+      - 16.37250
+    links:
+      - title: Meetup
+        url: https://www.meetup.com/godot-usergroup-austria
+      - title: Discord
+        url: https://discord.gg/cVGY3mhAnV
+      - title: Wiki
+        url: https://metalab.at/wiki/Godot_Usergroup
 Brazil:
   - name: Godot Brazil
     links:
