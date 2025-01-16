@@ -9,7 +9,7 @@ image_caption_description: "A game by lamedeveloper"
 date: 2025-01-16 18:00:00
 ---
 
-We have reached the first beta release for the 4.4 release cycle. This officially marks the start of feature freeze for 4.4. This means contributors are encouraged to focus their efforts on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.3) and other outstanding bugs. We won't risk merging any new features or risky bug fixes until after we release 4.4 and begin preparing for 4.5.
+We have reached the first beta release for the 4.4 release cycle. This officially marks the start of feature freeze for 4.4. This means contributors are encouraged to focus their efforts on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.4) and other outstanding bugs. We won't risk merging any new features or risky bug fixes until after we release 4.4 and begin preparing for 4.5.
 
 We will aim to release 4.4 in around a month, but as usual, this timeline will depend on how quickly we are able to fix the outstanding bugs and what new bugs are identified in the beta process. We ask that users test these beta releases and report bugs as soon as you spot them to help us ensure a quick beta period and a timely release of 4.4.
 
