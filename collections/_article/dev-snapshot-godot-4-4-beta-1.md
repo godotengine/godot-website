@@ -261,7 +261,7 @@ Support for OpenXR composition layers was added in Godot 4.3, allowing developer
 
 **140 contributors** submitted **406 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-beta1) for the complete list of changes since the 4.4-dev7 snapshot. You can also review [all changes included in 4.4](https://godotengine.github.io/godot-interactive-changelog/#4.4) compared to the previous 4.3 feature release.
 
-This release is built from commit [`TODO`](https://github.com/godotengine/godot/commit/TODO).
+This release is built from commit [`d33da79d3`](https://github.com/godotengine/godot/commit/d33da79d3f8fe84be2521d25b9ba8e440cf25a88).
 
 ## Downloads
 
