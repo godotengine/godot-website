@@ -42,7 +42,7 @@ despite having a much shorter development period than 4.3.
 - [XR](#xr)
 
 ### New in Beta 1!
-Normally our Beta 1 release notes summarize all the most exciting changes from the previous dev releases. But the team managed to merge an unusually large number of exciting PRs right before the beta this time around, so we would like to first introduce some of the exciting changes that are new in this beta. 
+Normally our Beta 1 release notes summarize all the most exciting changes from the previous dev releases. But the team managed to merge an unusually large number of exciting PRs right before the beta this time around, so we would like to first introduce some of the exciting changes that are new in this beta.
 
 A short word of warning, new means "untested", so consider the following the most untested part of the beta release and make sure to let us know if you run into any issues!
 
@@ -86,8 +86,8 @@ AgX is the cool, new kid on the block when it comes to tone mapping algorithms. 
 
 ![ACES tone mapping left, AgX right](/storage/blog/godot-4-4-beta-1/tonemap.webp)
 
-#### Add transparency support for LightmapGI 
-Currently when baking lightmaps users have to choose between transparent objects casting shadows as if they were fully opaque, or not casting shadows at all. This has been a major limitation in both the quality of lightmap baking and the ergonomics of the lightmap baking workflow. 
+#### Add transparency support for LightmapGI
+Currently when baking lightmaps users have to choose between transparent objects casting shadows as if they were fully opaque, or not casting shadows at all. This has been a major limitation in both the quality of lightmap baking and the ergonomics of the lightmap baking workflow.
 
 In [GH-99538](https://github.com/godotengine/godot/pull/99538), Hendrik Brucker added support for baking with transparent objects, including having tinted shadows (something that dynamic shadows don't support yet). Since this is brand new in Beta 1, please test it carefully and report any issues.
 
@@ -98,7 +98,7 @@ We try to minimize breaking changes, but sometimes they are necessary in order t
 
 You can find a list of such issues by filtering the merged PRs in the 4.3 milestone with the [`breaks compat` label](https://github.com/godotengine/godot/issues?q=milestone%3A4.4%20is%3Amerged%20label%3A%22breaks%20compat%22). Here are some which are worth being aware of:
 
-- Universal UID support. This will create several `.uid` files for resources that lacked this metadata. **These should be added to version control**, much like `.import` files. ([GH-97352](https://github.com/godotengine/godot/pull/97352))
+- [Universal UID support.](https://godotengine.org/article/uid-changes-coming-to-godot-4-4/) This will create several `.uid` files for resources that lacked this metadata. **These should be added to version control**, much like `.import` files. ([GH-97352](https://github.com/godotengine/godot/pull/97352))
 - Floats converted to strings now display as a decimal by default, even for whole numbers. This makes printed types more explicit, which can be used to catch bugs that were previously invisible. That is: `print(1.0)` will now print `1.0` instead of `1`. ([GH-47502](https://github.com/godotengine/godot/pull/47502))
 - Changed `KEY_MODIFIER_MASK` to correct value. Unlikely to directly affect any projects, as the previous value was simply wrong. ([GH-98441](https://github.com/godotengine/godot/pull/98441))
 - Control's `offset_*` get/set type changed from `int` to `float`. This matches the behavior described in the documentation. ([GH-98443](https://github.com/godotengine/godot/pull/98443))
@@ -113,7 +113,7 @@ You can find a list of such issues by filtering the merged PRs in the 4.3 milest
 - Automatically resolve initial and final action for draw lists. `RenderingDevice.draw_list_begin()` has been vastly simplified and so it will be much easier to use. The old method signature will continue to work, but we recommend using the new method since it is much simpler. ([GH-98670](https://github.com/godotengine/godot/pull/98670))
 - Editor camera override has moved from the editor viewport to the "Game" tab. ([GH-97257](https://github.com/godotengine/godot/pull/97257))
 
-UIDs in particular are a pretty massive shake-up to existing project structures, and have understandably been among the more contentious changes of the 4.4 development cycle. We have a blogpost in the works to better explain the rationale behind that change, and the benefits such a system brings to the table, so please stay tuned for more info!
+UIDs in particular are a pretty massive shake-up to existing project structures, and have understandably been among the more contentious changes of the 4.4 development cycle. Read this blog post to better understand the rationale behind that change, as well as the benefits it brings to the table: [UID changes coming to Godot 4.4](https://godotengine.org/article/uid-changes-coming-to-godot-4-4/)
 
 ### Animation
 One of our newest additions to the animator's toolkit is markers ([GH-91765](https://github.com/godotengine/godot/pull/91765)) by ChocolaMint. Markers allow you to create sub regions of an animation that can be jumped to, or looped without playing the entire animation. This functionality is even supported inside AnimationTree, where you can easily create an AnimationNode's custom timeline based on the markers.
@@ -162,7 +162,7 @@ The debugger panel now features an expression evaluator which adds a new tab to 
 
 To further improve your debugging experience Hendrik introduced a checkbox that allows you to start the profiler automatically when you run your game from the editor and capture valuable profiling data immediately ([GH-96759](https://github.com/godotengine/godot/pull/96759)).
 
-The editor has become more ergonomic for everyone! Ryevdokimov added object snapping for moving 3D objects in the editor ([GH-96740](https://github.com/godotengine/godot/pull/96740)) which allows you to snap existing objects to other objects when you move them. This can be toggled on by selecting an object and pressing Shift+G. 
+The editor has become more ergonomic for everyone! Ryevdokimov added object snapping for moving 3D objects in the editor ([GH-96740](https://github.com/godotengine/godot/pull/96740)) which allows you to snap existing objects to other objects when you move them. This can be toggled on by selecting an object and pressing Shift+G.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-4/physics-placement.mp4?1" type="video/mp4">
@@ -180,7 +180,7 @@ Danil Alexeev brings us `@warning_ignore_start` and `@warning_ignore_restore` ([
 ### Import
 4.4 is coming with huge improvements to texture importing quality and speed thanks to new maintainer Bluecube3310. The import times of textures using the "VRAM Compressed" import setting have been greatly improved by integrating the GPU-based Betsy texture compressor. The biggest difference is observable when importing HDR images (such as HDRIs or lightmaps), which used to take up to several minutes before. Thanks to Betsy, as well as other optimizations to the import process ([GH-92291](https://github.com/godotengine/godot/pull/92291) and [GH-95291](https://github.com/godotengine/godot/pull/95291)), that time has gone down significantly. Additionally, textures not using the "High Quality" import setting should look better by default, since previously we had to trade the quality for faster import times. Further, there have been countless improvements to the texture import process to improve compatibility across devices and the number of texture formats supported. Overall, texture importing should feel faster and more stable than ever before.
 
-The new retargeting method, RetargetModifier3D, a new feature from Tokage allows users to use animation retargeting without discarding the original bone rests that were set in the external DCC ([GH-97824](https://github.com/godotengine/godot/pull/97824)). 
+The new retargeting method, RetargetModifier3D, a new feature from Tokage allows users to use animation retargeting without discarding the original bone rests that were set in the external DCC ([GH-97824](https://github.com/godotengine/godot/pull/97824)).
 
 Godot now supports the [`KHR_animation_pointer`](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_animation_pointer) glTF extension thanks to the efforts of Aaron Franke ([GH-94165](https://github.com/godotengine/godot/pull/94165)). This allows imported animations to target custom properties in addition to position, rotation, scale, and mesh blend shape weights (which were all it previously supported). For example, you can now animate the color of a light, the FOV of a camera, the albedo color of a material, the UV offset of a material, and more.
 
@@ -190,12 +190,12 @@ Input saw a lot of incremental improvements and polish this dev cycle. Notably, 
 ### Navigation
 Navigation contains some of the oldest code in the engine. While it continues to serve its purpose, much of it is getting dated and needs to be cleaned up. Accordingly, the Navigation team, especially smix8, have bravely stepped up and begun the difficult process of improving legacy code. Fortunately, their work has already begun to bear fruit in the form of a cleaner codebase and faster Navigation features.
 
-Notably, the navigation map synchronization now happens asynchronously and in a background thread so it has a much smaller impact on framerate. Instead of making the entire game slow down on lower end systems, updates will just happen less frequently. 
+Notably, the navigation map synchronization now happens asynchronously and in a background thread so it has a much smaller impact on framerate. Instead of making the entire game slow down on lower end systems, updates will just happen less frequently.
 
 There have also been many quality of life improvements such as debug indicators to show the direction of NavigationLinks ([GH-101010](https://github.com/godotengine/godot/pull/101010)) and support for transforming NavigationObstacle nodes using the node's transform ([GH-96730](https://github.com/godotengine/godot/pull/96730)).
 
 ### Physics
-Ever since its inception in late 2022, godot-jolt has slowly become the de-facto 3D physics engine for many of our developers. So it is no surprise that the Godot Jolt maintainers, Mikael Hermansson and Jorrit Rouwe, have taken things a step further and integrated Jolt as part of the engine directly. There was already a symbiosis between their team and Godot, with many features being added to Godot and Jolt to accommodate both, but the integration of an official module was no small feat; their pull request ([GH-99895](https://github.com/godotengine/godot/pull/99895)) ended up adding over 500 files and 115 thousand lines of code! 
+Ever since its inception in late 2022, godot-jolt has slowly become the de-facto 3D physics engine for many of our developers. So it is no surprise that the Godot Jolt maintainers, Mikael Hermansson and Jorrit Rouwe, have taken things a step further and integrated Jolt as part of the engine directly. There was already a symbiosis between their team and Godot, with many features being added to Godot and Jolt to accommodate both, but the integration of an official module was no small feat; their pull request ([GH-99895](https://github.com/godotengine/godot/pull/99895)) ended up adding over 500 files and 115 thousand lines of code!
 
 Note: At time of writing, this does not replace Godot Physics as the default 3D physics engine. The Jolt Physics integration in Godot is considered experimental, and may change in future releases. It also lacks some features of Godot Physics, so it isn’t a full drop-in replacement. If your interests/use-case are supported, the tool can be enabled by changing the **Physics > 3D > Physics Engine** project setting to **Jolt Physics**.
 
@@ -206,7 +206,7 @@ Our hope is that many users opt to use Jolt as their 3D physics backend and give
 pkowal1982’s long-running pull request, [GH-53666](https://github.com/godotengine/godot/pull/53666), was finally merged adding camera support for the Linux platform, allowing developers to access connected cameras from within their game.
 
 #### Android
-Thanks to the tireless efforts of Fredia Huya-Kouadio and Anish Mishra (our newest Android maintainer), the development experience on Android devices for Android devices has become significantly better. In [GH-93526](https://github.com/godotengine/godot/pull/93526) Fredia added support for exporting games from the Android editor. Previously developers had to leave their Android device when they exported their game. Fredia also added support for launching the Play window in PiP mode (in [GH-95700](https://github.com/godotengine/godot/pull/95700)) allowing developers to more easily take advantage of the tight integration between the editor and running game while developing on Android devices. 
+Thanks to the tireless efforts of Fredia Huya-Kouadio and Anish Mishra (our newest Android maintainer), the development experience on Android devices for Android devices has become significantly better. In [GH-93526](https://github.com/godotengine/godot/pull/93526) Fredia added support for exporting games from the Android editor. Previously developers had to leave their Android device when they exported their game. Fredia also added support for launching the Play window in PiP mode (in [GH-95700](https://github.com/godotengine/godot/pull/95700)) allowing developers to more easily take advantage of the tight integration between the editor and running game while developing on Android devices.
 
 To further improve the development experience on Android, Anish added support for the native file picker (in [GH-98350](https://github.com/godotengine/godot/pull/98350)) so now Android game and app developers can benefit from using the file picker that Android provides and Android users are accustomed to. Similarly, Fredia added the new AndroidRuntime plugin which exposes the Android Runtime, making it easier to access Android libraries and SDKs in games/apps. For example, for APIs bundled in the Android OS, no additional setup is required and they can be accessed directly using this new plugin. For more details, see [GH-97500](https://github.com/godotengine/godot/pull/97500).
 
@@ -214,7 +214,7 @@ To further improve the development experience on Android, Anish added support fo
 ### Rendering and shaders
 Many monumental rendering changes were finished towards the end of the 4.3 dev cycle slightly too late to be included in 4.3. As a result, 4.4 contains a massive amount of exciting features, too many to include here, but here are a few.
 
-For Apple users, Stuart Carnie has been hard at work ensuring that you get the benefit of the best performance by incorporating the Metal rendering backend ([GH-88199](https://github.com/godotengine/godot/pull/88199), [Dev snapshot: Godot 4.4 dev 1](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/)) and the MetalFX upscaler (mentioned above). 
+For Apple users, Stuart Carnie has been hard at work ensuring that you get the benefit of the best performance by incorporating the Metal rendering backend ([GH-88199](https://github.com/godotengine/godot/pull/88199), [Dev snapshot: Godot 4.4 dev 1](https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/)) and the MetalFX upscaler (mentioned above).
 
 DarioSamo spent several months last year perfecting the Ubershader system which was earlier designed by Juan Linietsky and Clay John in the early days of building Godot 4. The Ubershader allows the engine to compile a flexible, but slow version of shaders at load time which can be used as a fallback while the optimized shaders compile in the background. The technique allows users to ship games **without shader stutter** and without resorting to manually displaying every possible material and object combination behind a loading screen.
 
@@ -222,11 +222,11 @@ Shadow caster masks, a long awaited improvement from EMBYRDEV, allow users to ap
 
 After tackling the Metal rendering backend merged in an earlier snapshot, Stuart took on another impressive rendering contribution: 2D batching! Batching has been implemented in the Compatibility renderer since the release of 4.0. This release brings the same performance benefits to the other backends by implementing batching when using the Forward+ and Mobile backends ([GH-92797](https://github.com/godotengine/godot/pull/92797)). Now 2D performance is comparable between all backends.
 
-Continuing their excellent work on texture import and the Betsy texture compressor, BlueCube has made huge improvements to the lightmapper by adding: 
+Continuing their excellent work on texture import and the Betsy texture compressor, BlueCube has made huge improvements to the lightmapper by adding:
 - Support for bicubic sampling to smooth out the results of low resolution lightmap bakes ([GH-89919](https://github.com/godotengine/godot/pull/89919))
 - Shadow masks, to allow falling back on baked lighting when outside of the range of dynamic lights ([GH-85653](https://github.com/godotengine/godot/pull/85653))
 - Compression for lightmap textures to reduce the memory use and rendering overhead of large lightmap textures ([GH-100327](https://github.com/godotengine/godot/pull/100327)).
-    
+
 Hendrik Brucker, a long time contributor, also decided that lightmaps deserved some attention this release and carried the work of Hugo Locurcio and Guerro323 over the finish line by implementing lightmap supersampling (which bakes the lightmap at a higher resolution to reduce aliasing and capture finer details) and adding support for transparent objects to lightmap baking (including semi-transparent shadows).
 
 Ricardo Buring continued his amazing work in bringing physics interpolation to Godot 4. This time around he added support for 3D objects (include Multimesh!). Physics interpolation is a technique that allows you to run your physics update at a very low FPS while maintaining smooth movement. This allows you to both save CPU overhead and make your game look much smoother.
@@ -245,7 +245,7 @@ After many requests and years of patient waiting from many within the community,
 
 Currently when trying to run Godot with the Forward+ or Mobile backend on a device that doesn’t support Vulkan, D3D12, or Metal, the engine will provide the user with an OS alert notifying them that they don’t have support for the needed graphics API and they need to try again with the Compatibility backend. This alert has proven to be confusing for users and the process of opening the scene ends up being cumbersome. Now with [GH-97142](https://github.com/godotengine/godot/pull/97142), the first contribution from SheepYhangCN, the engine will automatically fall back to using OpenGL (the Compatibility backend) when the other backends are not available. This should provide the smoothest possible experience for users on older devices.
 
-Rendering contributors have been relentless in identifying and implementing performance enhancements this release cycle. Many areas of the renderers, both 2D and 3D have been optimized and we expect that many users will notice an improvement to performance this release cycle, especially for 2D lighting, rendering on mobile devices, and general 2D rendering. 
+Rendering contributors have been relentless in identifying and implementing performance enhancements this release cycle. Many areas of the renderers, both 2D and 3D have been optimized and we expect that many users will notice an improvement to performance this release cycle, especially for 2D lighting, rendering on mobile devices, and general 2D rendering.
 
 ### XR
 Thanks to Godot’s unique feature of its editor being made with the engine itself, we’ve been able to bring the Godot editor to unconventional places, such as the web and Android devices. Building upon the latter, Fredia Huya-Kouadio completed the proof of concept started by Bastiaan Olij years ago, to add support for using the Android editor on XR devices using OpenXR ([GH-96624](https://github.com/godotengine/godot/pull/96624))! The XR editor is currently available on the Meta Quest 3 and Quest Pro through the [Horizon Store](https://www.meta.com/experiences/godot-game-engine/7713660705416473/). Support for the PICO 4 Ultra is also in progress and will be available soon.
