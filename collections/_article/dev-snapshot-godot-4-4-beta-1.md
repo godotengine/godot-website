@@ -52,7 +52,7 @@ Game window embedding makes it possible to run the game while being able to inte
 - The game process uses its own address space and therefore doesn't have to share CPU/GPU resources with the editor (or at least, not as much as if it was the same process).
 - Most importantly, if the game crashes for any reason, the editor does not crash at the same time (which could cause data loss).
 
-The approach we decided upon relies on window management tricks instead, so that the game window is still a separate process, but it *looks* like it's embedded within the editor. Contributor Hilderin took upon this task and implemented seamless window embedding on Windows and Linux. Support in macOS will require a different approach for technical reasons.
+The approach we decided upon relies on window management tricks instead, so that the game window is still a separate process, but it *looks* like it's embedded within the editor. Contributor Hilderin took upon this task and implemented seamless window embedding on Windows and Linux. Support in Android is coming in Beta 2 while support in macOS will require a different approach for technical reasons.
 
 Game window embedding was implemented to support our recent interactive in-game editing feature. Now you can easily run your game, override the game camera, and select objects in game, all from the editor!
 
