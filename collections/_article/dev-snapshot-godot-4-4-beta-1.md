@@ -282,6 +282,8 @@ With every release, we accept that there are going to be various issues which ha
 
 - Baking a Lightmap3D is more prone to crash after we added support for transparency. The issue is tracked in [GH-101391](https://github.com/godotengine/godot/issues/101391).
 
+- Changes to scenes are not reflected in APK exports after the initial export in the Android editor. The issue is tracked in [GH-101007](https://github.com/godotengine/godot/issues/101007).
+
 ## Bug reports
 
 As a tester, we encourage you to [open bug reports](https://github.com/godotengine/godot/issues) if you experience issues with this release. Please check the [existing issues on GitHub](https://github.com/godotengine/godot/issues) first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.
