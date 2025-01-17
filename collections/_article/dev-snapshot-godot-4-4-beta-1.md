@@ -15,7 +15,7 @@ We will aim to release 4.4 in around a month, but as usual, this timeline will d
 
 Please, consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
-[Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.3.beta1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
+[Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.4.beta1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
 ---
 
@@ -96,7 +96,7 @@ In [GH-99538](https://github.com/godotengine/godot/pull/99538), Hendrik Brucker 
 ### Breaking changes
 We try to minimize breaking changes, but sometimes they are necessary in order to fix high priority issues. Where we do break compatibility, we do our best to make sure that the changes are minimal and require few changes in user projects.
 
-You can find a list of such issues by filtering the merged PRs in the 4.3 milestone with the [`breaks compat` label](https://github.com/godotengine/godot/issues?q=milestone%3A4.4%20is%3Amerged%20label%3A%22breaks%20compat%22). Here are some which are worth being aware of:
+You can find a list of such issues by filtering the merged PRs in the 4.4 milestone with the [`breaks compat` label](https://github.com/godotengine/godot/issues?q=milestone%3A4.4%20is%3Amerged%20label%3A%22breaks%20compat%22). Here are some which are worth being aware of:
 
 - [Universal UID support.](https://godotengine.org/article/uid-changes-coming-to-godot-4-4/) This will create several `.uid` files for resources that lacked this metadata. **These should be added to version control**, much like `.import` files. ([GH-97352](https://github.com/godotengine/godot/pull/97352))
 - Floats converted to strings now display as a decimal by default, even for whole numbers. This makes printed types more explicit, which can be used to catch bugs that were previously invisible. That is: `print(1.0)` will now print `1.0` instead of `1`. ([GH-47502](https://github.com/godotengine/godot/pull/47502))
