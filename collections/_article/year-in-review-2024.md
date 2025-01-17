@@ -81,6 +81,8 @@ So let us celebrate the past year by looking back at one key highlight per month
 
 Of course, we cannot forget the sheer amount of technological progress being made by thousands of contributors, so for the purpose of this review we checked in with the different maintainers as well. Find a summary of the most notable change per engine area (and tell us about your personal highlight [in the comments](https://forum.godotengine.org/))!
 
+But before we get to those, let us sneak in an annoucement: this blog post is part of our newsletter project, which is starting this January! [Subscribe to "The Nodeletter"](https://godot.news/subscription/form) to get a regular digest of the most important Godot Engine news directly in your email inbox.
+
 # Tech Highlights
 
 ### 2D
