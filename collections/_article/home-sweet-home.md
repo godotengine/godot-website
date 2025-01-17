@@ -12,8 +12,6 @@ Here it is: [Godot Engine's new homepage](/)! Some of you might have been awaiti
 
 Thanks enormously to Andrea Calabró, Alket Rexhepi, Hugo Locurcio (Calinou) and Rémi Verschelde (Akien) for their hard work!
 
-**Note:** The old forums (and rest of the OpenProject website) can still be accessed for now on [op.godotengine.org](http://op.godotengine.org/projects/godot-engine).
-
 ## Why change again?
 
 The early Godot users might remember that we used to have a WordPress-powered website in 2015, with a self-hosted forum and the official documentation on [Godot's GitHub wiki](https://github.com/godotengine/godot/wiki). With the growing community and the project getting more and more new contributors, we wanted to have a platform that eases the project management so that we can work efficiently in teams. It was also becoming clear that GitHub's very limited permissions management would not let us have contributions on the wiki without giving push rights on the source code to everybody (!), so we needed an alternative for the documentation.
@@ -36,7 +34,7 @@ Thanks to this straightforward setting, we could easily design good looking (we 
 
 As we increasingly noticed that people were asking many technical questions on the Facebook group, which provides no good search feature nor search engine referencing, we decided to setup a [Question2Answer](http://www.question2answer.org) instance, also in PHP and easy to customize with a great number of plugins. It is very similar to popular technical platforms like StackExchange or StackOverflow, and should help increase the visibility of Godot-related questions and their best answers. [Check it out!](/qa)
 
-For the time being we also propose specific categories to showcase Godot games and WIPs and discuss off-topic stuff in the Q&A - this used to be in the forums but we did not want to setup yet another new tool just yet. This might change in the future if/when we settle on a better-suited solution. In the meantime, you can still [access the old forums](http://op.godotengine.org/projects/godot-engine/boards).
+For the time being we also propose specific categories to showcase Godot games and WIPs and discuss off-topic stuff in the Q&A - this used to be in the forums but we did not want to setup yet another new tool just yet. This might change in the future if/when we settle on a better-suited solution.
 
 #### Sphinx documentation
 

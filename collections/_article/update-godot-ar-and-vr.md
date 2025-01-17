@@ -25,13 +25,13 @@ We also talked to Oculus about the support we've added to Godot for the Rift hea
 
 But let's start with talking about AR first. An ARKit interface has been available unofficially for well over a year. One of the more interesting projects to come out of this is [Torch](https://www.torch.app), an AR prototyping tool worth checking out. In the beginning of this year we made great strides with this interface implementing some of the ARKit 2.0 features Apple added in. There are now 3 companies we are aware of that are building products for ARKit using Godot.
 
-You can follow the development of this interface here: http://github.com/godotengine/godot/pull/24227
+You can follow the development of this interface here: https://github.com/godotengine/godot/pull/24227
 
 ## ARCore
 
 Work on Google's ARCore is progressing with basic tracking logic now functional. Google has taken an interest and is helping us out so we expect things to progress pretty quickly in the coming months.
 
-You can follow the development of this interface here: http://github.com/godotengine/godot/pull/26221
+You can follow the development of this interface here: https://github.com/godotengine/godot/pull/26221
 
 ## Cardboard and Daydream
 
@@ -51,7 +51,7 @@ We do not yet know what this means for Hololens 2 and possible Hololens support 
 
 The Oculus Rift driver has been available for some time and works great. We haven't had a chance to play with the Rift S yet but we have every reason to believe this will work with the drivers we already created.
 
-You can follow development of the Oculus interface here: http://github.com/GodotVR/godot_oculus
+You can follow development of the Oculus interface here: https://github.com/GodotVR/godot_oculus
 
 You can download the official plugin from the asset library here: [Godot Oculus plugin](http://godotengine.org/asset-library/asset/164)
 
@@ -61,7 +61,7 @@ We're hoping to pick up where we have left off soon.
 ## OpenHMD
 
 OpenHMD as a project has been growing steadily over the last year adding many interesting headsets to the list of devices they support, while many are still in development. Godot has had an interface for OpenHMD for some time now which works well but needs a compositor, something we hope to tackle in the near future.
-You can follow development of the OpenHMD interface here: http://github.com/GodotVR/godot_openhmd
+You can follow development of the OpenHMD interface here: https://github.com/GodotVR/godot_openhmd
 
 ## OpenVR
 
@@ -70,7 +70,7 @@ You can follow development of the OpenHMD interface here: http://github.com/Godo
 OpenVR has been working well and has several teams working on various projects using this driver. We have yet to look at some of the new additions and support for the new knuckles controllers.
 
 The problem with HDR remains, Godot renders to high detail buffers for its HDR support and OpenVR does not like these.
-There is a PR in the official [godot_openvr](http://github.com/GodotVR/godot_openvr) repository that contains a fix, but for the official release of the plugin, HDR still needs to be turned off or the GLES2 renderer needs to be used.
+There is a PR in the official [godot_openvr](https://github.com/GodotVR/godot_openvr) repository that contains a fix, but for the official release of the plugin, HDR still needs to be turned off or the GLES2 renderer needs to be used.
 
 You can download the official plugin from the asset library here: [Godot OpenVR plugin](http://godotengine.org/asset-library/asset/150)
 

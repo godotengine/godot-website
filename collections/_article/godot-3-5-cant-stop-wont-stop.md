@@ -30,7 +30,7 @@ If you use and enjoy Godot, plan to use it, or want support the cause of having 
 <a id="features"></a>
 ## Features
 
-Many new features have been added in Godot 3.5, both small and large. The following is a list of a few of the larger features that we are excited about in no particular order. For a complete list of all changes you can check out our [**curated changelog**](https://github.com/godotengine/godot/blob/3.5-stable/CHANGELOG.md), as well as the raw changelog from Git ([chronological](https://downloads.tuxfamily.org/godotengine/3.5/Godot_v3.5-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.5/Godot_v3.5-stable_changelog_authors.txt)).
+Many new features have been added in Godot 3.5, both small and large. The following is a list of a few of the larger features that we are excited about in no particular order. For a complete list of all changes you can check out our [**curated changelog**](https://github.com/godotengine/godot/blob/3.5-stable/CHANGELOG.md), as well as the raw changelog from Git ([chronological](https://github.com/godotengine/godot-builds/releases/3.5/Godot_v3.5-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.5-Godot_v3.5-stable_changelog_authors.txt)).
 
 The amazing [GDQuest folks](https://www.gdquest.com/) prepared a nice video showcasing some of the main highlights of Godot 3.5, check it out! (Excerpts of this video are also included in this page for illustration.)
 

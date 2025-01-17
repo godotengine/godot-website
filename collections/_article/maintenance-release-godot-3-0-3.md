@@ -17,7 +17,7 @@ I'd like to use this space to thank our contributors. The effort they put into G
 
 ## What's new in this release
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.3/Godot_v3.0.3-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.3-Godot_v3.0.3-stable_changelog.txt) for details.
 
 * Mono: Exporting to desktop platforms now works.
 * Universal translation of touch to mouse.
@@ -34,7 +34,7 @@ Note that assets MD5 sums are now saved in the `res://.import/` folder instead o
 
 ## Fixed issues
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.3/Godot_v3.0.3-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.3-Godot_v3.0.3-stable_changelog.txt) for details.
 
 * Mono: Signal parameters no longer crash the engine.
 * Asset library thread usage, this makes the asset library more responsive.

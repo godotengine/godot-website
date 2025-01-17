@@ -283,7 +283,7 @@ This allows different areas to have different reverberation and effects (reverb 
 <a id="vr"></a>
 ## VR support
 
-Godot 3.0 has also seen the introduction of the ARVRServer implementation (as the name says, for AR and VR support), thanks to the great work of Bastiaan Olij ([Mux213](http://github.com/BastiaanOlij)). While the current AR implementations that are being worked on have been moved to the 3.1 release, for VR there are now two options that are ready to be used, with more backends in the works:
+Godot 3.0 has also seen the introduction of the ARVRServer implementation (as the name says, for AR and VR support), thanks to the great work of Bastiaan Olij ([Mux213](https://github.com/BastiaanOlij)). While the current AR implementations that are being worked on have been moved to the 3.1 release, for VR there are now two options that are ready to be used, with more backends in the works:
 
 - A built-in Cardboard-ish mobile VR solution that uses the embedded sensors for basic 3DOF head tracking.
 - A GDNative-based [implementation of the OpenVR API](https://github.com/BastiaanOlij/godot_openvr) making Godot fully compatible with SteamVR. Pre-compiled binaries for Windows are provided via the [Asset Library](https://godotengine.org/asset-library/asset/150), with other platforms coming soon.
@@ -332,7 +332,7 @@ Mobile, for example, comes with many predefined feature tags, to aid on reducing
 
 ![IPv6 logo](/storage/app/media/3.0%20release/ipv6.png)
 
-Godot is now fully compliant with IPv6, thanks to Ariel Manzur ([punto](http://github.com/punto-)) and Fabio Alessandrelli ([Faless](https://github.com/Faless)).
+Godot is now fully compliant with IPv6, thanks to Ariel Manzur ([punto](https://github.com/punto-)) and Fabio Alessandrelli ([Faless](https://github.com/Faless)).
 
 <a id="wasm"></a>
 ## WebAssembly and WebGL 2.0 support
@@ -409,7 +409,7 @@ We have a new section listing the providers in the [official documentation](http
 
 This post is already too long and it's impossible to list all the hundreds of features and bug fixes that have been implemented by Godot contributors over the last year and a half.
 
-Contributors are working on a [human-readable changelog](https://gist.github.com/Calinou/15b7b48abc0c3a22fbb2993b39a0ae99) which should give you some more details. You can also browse and filter the list of [GitHub pull requests](https://github.com/godotengine/godot/issues?q=is%3Apr+milestone%3A3.0+-label%3Aarchived) of almost 3000 contributions (and the corresponding list for [GitHub issues](https://github.com/godotengine/godot/issues?q=is%3Aissue+milestone%3A3.0+-label%3Aarchived)), as well as review the raw Git changelogs since Godot 2.1 (sorted [chronogically](https://downloads.tuxfamily.org/godotengine/3.0/Godot_v3.0-stable_changelog_chrono.txt) or [by author](https://downloads.tuxfamily.org/godotengine/3.0/Godot_v3.0-stable_changelog_authors.txt)).
+Contributors are working on a [human-readable changelog](https://gist.github.com/Calinou/15b7b48abc0c3a22fbb2993b39a0ae99) which should give you some more details. You can also browse and filter the list of [GitHub pull requests](https://github.com/godotengine/godot/issues?q=is%3Apr+milestone%3A3.0+-label%3Aarchived) of almost 3000 contributions (and the corresponding list for [GitHub issues](https://github.com/godotengine/godot/issues?q=is%3Aissue+milestone%3A3.0+-label%3Aarchived)), as well as review the raw Git changelogs since Godot 2.1 (sorted [chronogically](https://github.com/godotengine/godot-builds/releases/3.0/Godot_v3.0-stable_changelog_chrono.txt) or [by author](https://downloads.tuxfamily.org/godotengine/3.0-Godot_v3.0-stable_changelog_authors.txt)).
 
 # Future
 

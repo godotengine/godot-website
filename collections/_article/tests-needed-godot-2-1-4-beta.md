@@ -9,27 +9,27 @@ date: 2017-06-25 18:14:52
 
 **Edit 2017-08-25:** Here's finally the release candidate build. WinRT templates are still missing, but they're not blocking for the release given that they are experimental.
 
-- [Download the RC build](http://downloads.tuxfamily.org/godotengine/2.1.4/rc/)
-- [Check the detailed changelog since 2.1.3](http://downloads.tuxfamily.org/godotengine/2.1.4/rc/Godot_v2.1.4-rc_changelog.txt)
-- [Check the changelog diff since the 2017-07-31 build](http://downloads.tuxfamily.org/godotengine/2.1.4/rc/Godot_v2.1.4-rc_changelog_since_20170817.txt)
+- [Download the RC build](https://github.com/godotengine/godot-builds/releases/2.1.4-rc/)
+- [Check the detailed changelog since 2.1.3](https://github.com/godotengine/godot-builds/releases/2.1.4/rc-Godot_v2.1.4-rc_changelog.txt)
+- [Check the changelog diff since the 2017-07-31 build](https://github.com/godotengine/godot-builds/releases/2.1.4/rc-Godot_v2.1.4-rc_changelog_since_20170817.txt)
 - [Report regressions on GitHub](https://github.com/godotengine/godot/issues/) so that they can be fixed before the stable release.
 
 -----
 
 **Edit 2017-08-17:** And another beta build, probably the last one before the release candidate. Note that WinRT templates are missing in this build, will be fixed for the RC.
 
-- [Download the 2017-08-17 build](http://downloads.tuxfamily.org/godotengine/2.1.4/beta/20170817/)
-- [Check the detailed changelog since 2.1.3](http://downloads.tuxfamily.org/godotengine/2.1.4/beta/20170817/Godot_v2.1.4-beta_20170817_changelog.txt)
-- [Check the changelog diff since the 2017-07-31 build](http://downloads.tuxfamily.org/godotengine/2.1.4/beta/20170817/Godot_v2.1.4-beta_20170817_changelog_since_20170731.txt)
+- [Download the 2017-08-17 build](https://github.com/godotengine/godot-builds/releases/2.1.4/beta-20170817/)
+- [Check the detailed changelog since 2.1.3](https://github.com/godotengine/godot-builds/releases/2.1.4/beta/20170817-Godot_v2.1.4-beta_20170817_changelog.txt)
+- [Check the changelog diff since the 2017-07-31 build](https://github.com/godotengine/godot-builds/releases/2.1.4/beta/20170817-Godot_v2.1.4-beta_20170817_changelog_since_20170731.txt)
 - [Report regressions on GitHub](https://github.com/godotengine/godot/issues/) so that they can be fixed before the stable release.
 
 -----
 
 **Edit 2017-07-31:** Time for another beta build, with one month's worth of further improvements and especially fixes for various regressions found in the 2017-06-25 build:
 
-- [Download the 2017-07-31 build](http://downloads.tuxfamily.org/godotengine/2.1.4/beta/20170731/)
-- [Check the detailed changelog since 2.1.3](http://downloads.tuxfamily.org/godotengine/2.1.4/beta/20170731/Godot_v2.1.4-beta_20170731_changelog.txt)
-- [Check the changelog diff since the 2017-06-25 build](http://downloads.tuxfamily.org/godotengine/2.1.4/beta/20170731/Godot_v2.1.4-beta_20170731_changelog_since_20170625.txt)
+- [Download the 2017-07-31 build](https://github.com/godotengine/godot-builds/releases/2.1.4/beta-20170731/)
+- [Check the detailed changelog since 2.1.3](https://github.com/godotengine/godot-builds/releases/2.1.4/beta/20170731-Godot_v2.1.4-beta_20170731_changelog.txt)
+- [Check the changelog diff since the 2017-06-25 build](https://github.com/godotengine/godot-builds/releases/2.1.4/beta/20170731-Godot_v2.1.4-beta_20170731_changelog_since_20170625.txt)
 - [Report regressions on GitHub](https://github.com/godotengine/godot/issues/) so that they can be fixed before the stable release.
 
 -----

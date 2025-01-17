@@ -21,7 +21,7 @@ One notable change in Godot 4.0.1 that is worth a dedicated mention is related t
 
 ## Changes
 
-See the [**curated changelog**](https://github.com/godotengine/godot/blob/4.0.1-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/4.0-stable...4.0.1-stable) or [in text form](https://downloads.tuxfamily.org/godotengine/4.0.1/Godot_v4.0.1-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
+See the [**curated changelog**](https://github.com/godotengine/godot/blob/4.0.1-stable/CHANGELOG.md), or the full commit history [on GitHub](https://github.com/godotengine/godot/compare/4.0-stable...4.0.1-stable) or [in text form](https://github.com/godotengine/godot-builds/releases/4.0.1-Godot_v4.0.1-stable_changelog_chrono.txt) for an exhaustive overview of the fixes in this release.
 
 Here are the main changes since 4.0-stable:
 
