@@ -4,7 +4,7 @@ excerpt: "This year was almost as packed as the 4.3 release, so let's go through
 categories: ["newsletter"]
 author: Nat
 image:
-date: 2024-12-31 10:00:00
+date: 2025-01-22 17:00:00
 ---
 
 <style>
@@ -180,7 +180,7 @@ In March, the Godot Foundation team assembled in San Francisco to meet community
 
 <img alt="Group picture at the GDC booth" src="/storage/blog/year-in-review-2024/gdc.webp"/>
 
-We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a [retrospective blog post](https://godotengine.org/article/gdc-2024-retrospective/) — see you next year?
+We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a [retrospective blog post](https://godotengine.org/article/gdc-2024-retrospective/) — see you this year?
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
@@ -441,6 +441,6 @@ To celebrate the occasion (and snatch the coveted number) our Release Manager wr
   </div>
 </div>
 
-Concluding our review, the only thing left to say is **thank you**. To those of you who contribute to the engine by code, donations, or growing the community through content creation. To our users, who help promote the project with their own success and battletest new features in real time. We also want to once again thank our [corporate sponsors](https://fund.godotengine.org/#credits) for believing in what we do. Lastly, I want to give a shoutout to my wonderful colleagues, for if they weren’t so incredibly dedicated to organizing and maintaining a collaboration this big, none of this would be possible either.
+Concluding our walk through memory lane, the only thing left to say is **thank you**. To those of you who contribute to the engine by code, donations, or growing the community through content creation. To our users, who help promote the project with their own success and battletest new features in real time. We also want to once again thank our [corporate sponsors](https://fund.godotengine.org/#credits) for believing in what we do. Lastly, I want to give a shoutout to my wonderful colleagues, for if they weren’t so incredibly dedicated to organizing and maintaining a collaboration this big, none of this would be possible either.
 
-Are you as excited as we are about what the future will hold for the Godot Engine project?
+Don't forget to sign up for ["The Nodeletter"](https://godot.news/subscription/form), to receive more summaries and highlights like these, but up to twice a month!
