@@ -1,6 +1,6 @@
 ---
 title: "2024 Cherry-picks"
-excerpt: "Last year was almost as packed as the 4.3 release, so let's go through the months together and talk about a few memorable moments as well as tech highlights by engine area."
+excerpt: "Since last year contained almost as many highlights as the 4.3 release, we cherry-picked a few memorable moments and features to remind you of."
 categories: ["newsletter"]
 author: Nat
 image:
