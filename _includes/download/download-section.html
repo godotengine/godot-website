@@ -57,12 +57,8 @@
 		color: white;
 	}
 </style>
-<div id="call-to-action" class="container card section-download">
-	{% if include.title %}
-		<h2>{{ include.title }}</h2>
-	{% else %}
-		<h2>Ready to start?</h2>
-	{% endif %}
+<div id="{{ include.anchor | default: 'call-to-action' }}" class="container card section-download">
+    <h2>{{ include.title | default: 'Ready to start?' }}</h2>
 
 	<div class="section-download-ready">
 		{% assign stable_version_3 = site.data.versions | find: "featured", "3" %}
