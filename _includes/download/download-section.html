@@ -57,7 +57,7 @@
 		color: white;
 	}
 </style>
-<div id="call-to-action" class="container card section-download">
+<div id="{{ include.anchor | default: 'call-to-action' }}" class="container card section-download">
 	{% if include.title %}
 		<h2>{{ include.title }}</h2>
 	{% else %}
