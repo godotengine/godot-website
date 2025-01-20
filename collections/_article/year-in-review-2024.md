@@ -1,6 +1,6 @@
 ---
-title: "2024 in Review"
-excerpt: "This year was almost as packed as the 4.3 release, so let's go through the months and engine areas together and talk highlights."
+title: "2024 Cherry-picks"
+excerpt: "This year was almost as packed as the 4.3 release, so let's go through the months together and talk about a few memorable moments and tech highlights."
 categories: ["newsletter"]
 author: Nat
 image:
@@ -77,13 +77,18 @@ date: 2024-12-31 10:00:00
 
 And with that, the 2024 season comes to an end. What a year it has been, with the number of Godot submissions in game jams rising to new heights, [more people working for the Godot Foundation than ever before](https://godotengine.org/article/godot-foundation-update-dec-2024/), and most industry award shows featuring one if not more games made with Godot.
 
-So let us celebrate the past year by looking back at one key highlight per month - an event the team attended, a major project milestone being reached, or a fun moment online the Godot community gathered around. Likewise, we looked at the release dates of notable [Godot games on Steam](https://steamdb.info/tech/Engine/Godot/) and decided to introduce you to some favorites alongside our own news.
+A busy year inside the project as well.  Too much to compile into a single article, unless you want to read pages of meeting notes and technical documentation. So instead, we chose to celebrate the past by looking back at one cherry-pick per month, something you might have missed during the scuffle but is worth learning about even now. 
 
-Of course, we cannot forget the sheer amount of technological progress being made by thousands of contributors, so for the purpose of this review we checked in with the different maintainers as well. Find a summary of the most notable change per engine area (and tell us about your personal highlight [in the comments](https://forum.godotengine.org/))!
+This could be an event the team attended, a major project milestone being reached, or a fun moment online the Godot community gathered around. Likewise, we looked at the release dates of notable [Godot games on Steam](https://steamdb.info/tech/Engine/Godot/) and decided to introduce you to some favorites alongside our own organizational news. The separate tech highlight section might even introduce you to a feature or two you missed out on so far.
 
-But before we get to those, let us sneak in an announcement: this blog post is part of our newsletter project, which is starting this January! [Subscribe to "The Nodeletter"](https://godot.news/subscription/form) to get a regular digest of the most important Godot Engine news directly in your email inbox.
+But before we get started, let us sneak in an announcement: this blog post is part of our newsletter project, premiering this January. [Subscribe to "The Nodeletter"](https://godot.news/subscription/form) to get a regular digest of Godot Engine news directly in your email inbox!
 
 # Tech Highlights
+
+To be frank: there is no good way to summarize the work of hundreds of contributors across the span of an entire year without leaving out something important. The closest we can feasibly get are the [Godot 4.3 release page](https://godotengine.org/releases/4.3/), and the newly published [Godot 4.4 beta 1 release notes](https://godotengine.org/article/dev-snapshot-godot-4-4-beta-1/).
+
+For the purpose of this retrospective, we approached the engine maintainers directly, asking them to point us at one particularly compelling change they witnessed in their area of expertise. How many of these have you not heard about yet?
+
 
 ### 2D
 [2D parallax](https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html)
