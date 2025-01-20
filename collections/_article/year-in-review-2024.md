@@ -1,6 +1,6 @@
 ---
 title: "2024 Cherry-picks"
-excerpt: "This year was almost as packed as the 4.3 release, so let's go through the months together and talk about a few memorable moments and tech highlights."
+excerpt: "This year was almost as packed as the 4.3 release, so let's go through the months together and talk about a few memorable moments as well as tech highlights by engine area."
 categories: ["newsletter"]
 author: Nat
 image:
@@ -88,7 +88,6 @@ But before we get started, let us sneak in an announcement: this blog post is pa
 To be frank: there is no good way to summarize the work of hundreds of contributors across the span of an entire year without leaving out something important. The closest we can feasibly get are the [Godot 4.3 release page](https://godotengine.org/releases/4.3/), and the newly published [Godot 4.4 beta 1 release notes](https://godotengine.org/article/dev-snapshot-godot-4-4-beta-1/).
 
 For the purpose of this retrospective, we approached the engine maintainers directly, asking them to point us at one particularly compelling change they witnessed in their area of expertise. How many of these have you not heard about yet?
-
 
 ### 2D
 [2D parallax](https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html)
