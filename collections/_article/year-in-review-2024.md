@@ -1,6 +1,6 @@
 ---
 title: "2024 Cherry-picks"
-excerpt: "Since last year contained almost as many highlights as the 4.3 release, we cherry-picked a few memorable moments and features to remind you of."
+excerpt: "Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together."
 categories: ["newsletter"]
 author: Nat
 image:
