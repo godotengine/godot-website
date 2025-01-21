@@ -27,7 +27,7 @@ If you would like to be a part of the conference by giving a talk or a workshop,
 We are also actively looking for sponsors to support GodotCon Boston. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to [godotcon@godotengine.org](mailto:godotcon@godotengine.org).
 
 ### Tickets and more
-Tickets will be available soon, so stay tuned for more information by joining the [GodotCon Discord](https://discord.gg/nAcE7msd5H) or the mailing list.
+Tickets will be available soon, so stay tuned for more information by joining the [GodotCon Discord](https://discord.gg/Jasg9cpjqA) or the mailing list.
 
 <form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
   <style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}</style>
