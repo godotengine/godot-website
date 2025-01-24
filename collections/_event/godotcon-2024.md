@@ -9,13 +9,13 @@ dates_short: "12-13 October"
 # The first date of the event in ISO format, used for sorting.
 date: 2024-10-12 00:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: " [Silent Green](https://www.silent-green.net), Gerichtstraße 35, 13347 Berlin, Germany "
 location_short: "Berlin, Germany"
 location_map: "https://www.openstreetmap.org/?mlat=52.5456&mlon=13.3665#map=16/52.5456/13.3665"
 
-website: https://conference.godotengine.org
+website: https://conference.godotengine.org/2024
 
 cover_image: "/storage/app/media/events/godotcon-2024/godotcon-2024.jpg"
 

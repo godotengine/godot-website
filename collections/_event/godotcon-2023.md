@@ -15,7 +15,7 @@ location: "[Microsoft Germany](https://developer.microsoft.com/en-us/games/), Wa
 location_short: "Munich, Germany"
 location_map: "https://www.openstreetmap.org/way/428992680"
 
-website: https://conference.godotengine.org
+website: https://conference.godotengine.org/2023
 
 cover_image: "/storage/blog/covers/godotcon-2023.webp"
 
