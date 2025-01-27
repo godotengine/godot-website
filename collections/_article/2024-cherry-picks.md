@@ -1,10 +1,10 @@
 ---
 title: "2024 Cherry-picks"
 excerpt: "Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together."
-categories: ["newsletter"]
+categories: ["showcase"]
 author: Nat
-image: /storage/blog/year-in-review-2024/2024-cherry-picks.webp
-date: 2025-01-22 17:00:00
+image: /storage/blog/2024-cherry-picks/2024-cherry-picks.webp
+date: 2025-01-28 17:00:00
 ---
 
 <style>
@@ -89,18 +89,12 @@ To be frank: there is no good way to summarize the work of hundreds of contribut
 
 For the purpose of this retrospective, we approached the engine maintainers directly, asking them to point us at one particularly compelling change they witnessed in their area of expertise. How many of these have you not heard about yet?
 
-### 2D
-[2D parallax](https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html)
-
-### 3D
-[3D physics interpolation](https://github.com/godotengine/godot/pull/92391)
-
-### Core
-[Typed dictionaries](https://github.com/godotengine/godot/pull/78656)
-
-### Editor
-[Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager)
-[Android Editor:](https://godotengine.org/download/android/) export support
+### General
+- **2D:** [2D parallax](https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html)
+- **3D:** [3D physics interpolation](https://github.com/godotengine/godot/pull/92391)
+- **Core:** [Typed dictionaries](https://github.com/godotengine/godot/pull/78656)
+- **Editor:** [Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager), [Android Editor:](https://godotengine.org/download/android/) export support
+- **Documentation:** [Comment section added](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs)
 
 ### Platforms
 - **Android:** [Native file picker support](https://github.com/godotengine/godot/pull/98350)
@@ -119,13 +113,10 @@ For the purpose of this retrospective, we approached the engine maintainers dire
 - **VFX:** [Visual Shader overhaul](https://godotengine.org/releases/4.3/#highlights-visual-shader)
 - **XR:** [Godot Editor now available on the Meta Horizon Store](https://godotengine.org/article/godot-editor-horizon-store-early-access-release/)
 
-### Documentation
-[Comment section added](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs)
-
 # Godot Engine News
 
 ## January
-<img alt="The commit that open-sourced Godot" src="/storage/blog/year-in-review-2024/commit.webp"/>
+<img alt="The commit that open-sourced Godot" src="/storage/blog/2024-cherry-picks/commit.webp"/>
 
 Nostalgia became the theme of January, as we compiled a small [game showcase](https://x.com/godotengine/status/1754601111229497650) leading up to Godot’s 10-year-anniversary (counting from the moment the engine was first open sourced). For every year from 2014 to 2024 we shared two gems found on Steam and itch.io with the community, celebrating an ever growing list of Godot releases since the beginnings of the project.
 
@@ -133,7 +124,7 @@ Have a look at that [monumental commit](https://github.com/godotengine/godot/com
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="KinitoPET screenshot" src="/storage/blog/year-in-review-2024/KinitoPET.webp">
+    <img alt="KinitoPET screenshot" src="/storage/blog/2024-cherry-picks/KinitoPET.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -158,7 +149,7 @@ Logically, the next step was to hand over the reins of the channel to some of th
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Windowkill screenshot" src="/storage/blog/year-in-review-2024/Windowkill.webp">
+    <img alt="Windowkill screenshot" src="/storage/blog/2024-cherry-picks/Windowkill.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -177,13 +168,13 @@ Logically, the next step was to hand over the reins of the channel to some of th
 ## March
 In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet, in the expo hall of the annual Game Developer Conference (GDC). We shared the space with our sponsor [W4 Games](https://www.w4games.com/) and an amazing lineup of [Godot-powered games](https://godotengine.org/article/gdc-2024-godot-games/) that we had the pleasure of inviting.
 
-<img alt="Group picture at the GDC booth" src="/storage/blog/year-in-review-2024/gdc.webp"/>
+<img alt="Group picture at the GDC booth" src="/storage/blog/2024-cherry-picks/gdc.webp"/>
 
 We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a [retrospective blog post](https://godotengine.org/article/gdc-2024-retrospective/) — see you this year?
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Backpack Battles screenshot" src="/storage/blog/year-in-review-2024/Backpack%20Battles.webp">
+    <img alt="Backpack Battles screenshot" src="/storage/blog/2024-cherry-picks/Backpack%20Battles.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -214,7 +205,7 @@ Read more about the changes in our [collaboration update](https://godotengine.or
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Of Life and Land screenshot" src="/storage/blog/year-in-review-2024/Of%20Life%20and%20Land.webp">
+    <img alt="Of Life and Land screenshot" src="/storage/blog/2024-cherry-picks/Of%20Life%20and%20Land.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -245,7 +236,7 @@ Look at these shiny highlights:
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Arctic Eggs screenshot" src="/storage/blog/year-in-review-2024/Arctic%20Eggs.webp">
+    <img alt="Arctic Eggs screenshot" src="/storage/blog/2024-cherry-picks/Arctic%20Eggs.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -266,12 +257,12 @@ Our annual community poll rolled around in June. We want to know who our users a
 
 [This year’s poll](https://docs.google.com/forms/d/1eicOppRQG2RFZ8CjIGFf5Kha5yklO854fV8-YFtlWxk/viewanalytics) had more responses than ever before, once again proving the incredible growth the Godot community is experiencing.
 
-<img alt="Poll results: programming languages" src="/storage/blog/year-in-review-2024/poll1.webp"/>
-<img alt="Poll results: donations" src="/storage/blog/year-in-review-2024/poll2.webp"/>
+<img alt="Poll results: programming languages" src="/storage/blog/2024-cherry-picks/poll1.webp"/>
+<img alt="Poll results: donations" src="/storage/blog/2024-cherry-picks/poll2.webp"/>
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Until Then screenshot" src="/storage/blog/year-in-review-2024/Until%20Then.webp">
+    <img alt="Until Then screenshot" src="/storage/blog/2024-cherry-picks/Until%20Then.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -292,14 +283,14 @@ The [Godot robot plushies](https://www.makeship.com/products/godot-robot-plush) 
 
 Aside from the profits being funneled into the [Godot Development Fund](https://fund.godotengine.org/) and thereby opening an additional path to supporting the project financially, the plush also became a beloved community icon. Fanart was made, models of the robot were shared, and the character was granted countless cameos in games made with the engine.
 
-<img alt="3D model of the Godot robot plush" src="/storage/blog/year-in-review-2024/plush.webp"/>
+<img alt="3D model of the Godot robot plush" src="/storage/blog/2024-cherry-picks/plush.webp"/>
 [CC0 model by FR3NKD](https://fr3nkd.gumroad.com/l/vhfvy)
 
 While the plush is currently sold out, we are working on bringing it back soon!
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Forgotten Mines screenshot" src="/storage/blog/year-in-review-2024/Forgotten%20Mines.webp">
+    <img alt="Forgotten Mines screenshot" src="/storage/blog/2024-cherry-picks/Forgotten%20Mines.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -330,7 +321,7 @@ All in all, **3,520 commits from 521 contributors** came together in this shared
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Megaloot screenshot" src="/storage/blog/year-in-review-2024/Megaloot.webp">
+    <img alt="Megaloot screenshot" src="/storage/blog/2024-cherry-picks/Megaloot.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -353,7 +344,7 @@ Read more in our detailed [blogpost on the topic](https://godotengine.org/articl
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Halls of Torment screenshot" src="/storage/blog/year-in-review-2024/Halls%20of%20Torment.webp">
+    <img alt="Halls of Torment screenshot" src="/storage/blog/2024-cherry-picks/Halls%20of%20Torment.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -378,7 +369,7 @@ Read the full [GodotCon 2024 review](https://godotengine.org/article/review-godo
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Psychopomp GOLD screenshot" src="/storage/blog/year-in-review-2024/Psychopomp%20GOLD.webp">
+    <img alt="Psychopomp GOLD screenshot" src="/storage/blog/2024-cherry-picks/Psychopomp%20GOLD.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -401,7 +392,7 @@ Submissions are handled via our own [showreel page](https://showreel.godotengine
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Unrailed 2: Back on Track screenshot" src="/storage/blog/year-in-review-2024/Unrailed%202%20Back%20on%20Track.webp">
+    <img alt="Unrailed 2: Back on Track screenshot" src="/storage/blog/2024-cherry-picks/Unrailed%202%20Back%20on%20Track.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
@@ -424,7 +415,7 @@ To celebrate the occasion (and snatch the coveted number) our Release Manager wr
 
 <div class="year-2024-game">
   <div class="year-2024-game-image">
-    <img alt="Ballionaire screenshot" src="/storage/blog/year-in-review-2024/Ballionaire.webp">
+    <img alt="Ballionaire screenshot" src="/storage/blog/2024-cherry-picks/Ballionaire.webp">
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
