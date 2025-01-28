@@ -1,4 +1,382 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-01-24T12:30:46+00:00</updated><id>https://godotengine.org/</id><entry><title>Our first GodotCon in the US - Save the date!</title><link href="https://godotengine.org/article/godotcon-2025/"/><updated>2025-01-21T18:00:00+00:00</updated><id>https://godotengine.org/article/godotcon-2025/</id><summary>Want to join? Boston 5th - 7th of May. Call for speakers and sponsors open!</summary><content type="html">&lt;p>Up until now, we held all of our annual GodotCon events in Europe, but after the request of many of you and thanks to help from &lt;a href="https://www.meetup.com/bostongamedev/">Boston Game Dev&lt;/a> and the &lt;a href="https://www.meetup.com/bostongamedev/events/298734856/">Boston Godot Users Group&lt;/a>, we are finally able to bring the event to the US for the first time.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-01-28T12:23:36+00:00</updated><id>https://godotengine.org/</id><entry><title>2024 Cherry-picks</title><link href="https://godotengine.org/article/2024-cherry-picks/"/><updated>2025-01-28T17:00:00+00:00</updated><id>https://godotengine.org/article/2024-cherry-picks/</id><summary>Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together.</summary><content type="html">&lt;style>
+.year-2024-game {
+display: grid;
+grid-template-areas:
+"img box";
+grid-template-columns:
+minmax(250px, 1fr) 2fr;
+gap: 1em;
+margin: 2em 0;
+padding: 1em;
+background-color: var(--button-card-background-color);
+}
+.year-2024-game-image {
+grid-area: img;
+}
+.year-2024-game-image .lightbox {
+display: inline-block;
+height: 100%;
+}
+.year-2024-game-image img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+margin: 0;
+}
+.year-2024-game-box {
+grid-area: box;
+display: grid;
+grid-template-areas:
+"title"
+"description";
+grid-template-rows:
+min-content
+1fr;
+gap: 0.5em;
+font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.year-2024-game-box-title {
+grid-area: title;
+font-weight: 700;
+}
+.year-2024-game-box-description {
+grid-area: description;
+font-size: 90%;
+}
+.year-2024-game-box-description p {
+margin: 1em 0;
+}
+.year-2024-game-box-description p:first-of-type {
+margin-top: 0;
+}
+.year-2024-game-box-description p:last-of-type {
+margin-bottom: 0;
+}
+&lt;/style>
+&lt;p>And with that, the 2024 season comes to an end. What a year it has been, with the number of Godot submissions in game jams rising to new heights, &lt;a href="https://godotengine.org/article/godot-foundation-update-dec-2024/">more people working for the Godot Foundation than ever before&lt;/a>, and most industry award shows featuring one if not more games made with Godot.&lt;/p>
+&lt;p>A busy year inside the project as well. Too much to compile into a single article, unless you want to read pages of meeting notes and technical documentation. So instead, we chose to celebrate the past by looking back at one cherry-pick per month, something you might have missed during the scuffle but is worth learning about even now.&lt;/p>
+&lt;p>This could be an event the team attended, a major project milestone being reached, or a fun moment online the Godot community gathered around. Likewise, we looked at the release dates of notable &lt;a href="https://steamdb.info/tech/Engine/Godot/">Godot games on Steam&lt;/a> and decided to introduce you to some favorites alongside our own organizational news. The separate tech highlight section might even introduce you to a feature or two you missed out on so far.&lt;/p>
+&lt;p>But before we get started, let us sneak in an announcement: this blog post is part of our newsletter project, premiering this January. &lt;a href="https://godot.news/subscription/form">Subscribe to “The Nodeletter”&lt;/a> to get a regular digest of Godot Engine news directly in your email inbox!&lt;/p>
+&lt;h1 id="tech-highlights">Tech Highlights&lt;/h1>
+&lt;p>To be frank: there is no good way to summarize the work of hundreds of contributors across the span of an entire year without leaving out something important. The closest we can feasibly get are the &lt;a href="https://godotengine.org/releases/4.3/">Godot 4.3 release page&lt;/a>, and the newly published &lt;a href="https://godotengine.org/article/dev-snapshot-godot-4-4-beta-1/">Godot 4.4 beta 1 release notes&lt;/a>.&lt;/p>
+&lt;p>For the purpose of this retrospective, we approached the engine maintainers directly, asking them to point us at one particularly compelling change they witnessed in their area of expertise. How many of these have you not heard about yet?&lt;/p>
+&lt;h3 id="general">General&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>2D:&lt;/strong> &lt;a href="https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html">2D parallax&lt;/a>&lt;/li>
+&lt;li>&lt;strong>3D:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/92391">3D physics interpolation&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Core:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/78656">Typed dictionaries&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Editor:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager">Project Manager refresh&lt;/a>, &lt;a href="https://godotengine.org/download/android/">Android Editor:&lt;/a> export support&lt;/li>
+&lt;li>&lt;strong>Documentation:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs">Comment section added&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="platforms">Platforms&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Android:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/98350">Native file picker support&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Web:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager">Single-threaded exports&lt;/a> and &lt;a href="https://godotengine.org/releases/4.3/#web-web-audio">audio samples&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Linux:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#display-wayland-support">Wayland support&lt;/a>&lt;/li>
+&lt;li>&lt;strong>macOS/iOS:&lt;/strong> &lt;a href="https://godotengine.org/article/dev-snapshot-godot-4-4-dev-1/#metal-rendering-backend">Metal renderer&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Windows:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#display-d3d12-driver">Direct3D 12&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="systems">Systems&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Animation:&lt;/strong> &lt;a href="https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/">Feature migration from Godot 4.0 to 4.3&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Audio:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#highlights-interactive-music">Interactive music&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Import&lt;/strong>: &lt;a href="https://godotengine.org/article/introducing-the-improved-ufbx-importer-in-godot-4-3/">New ufbx importer&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Navigation:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#navigation-splitting-navigation-meshes-into-chunks">Chunk &amp;amp; obstacle baking&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Physics:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/99895">Jolt merged&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Rendering:&lt;/strong> &lt;a href="https://docs.godotengine.org/en/latest/tutorials/performance/pipeline_compilations.html">Ubershaders&lt;/a>&lt;/li>
+&lt;li>&lt;strong>VFX:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#highlights-visual-shader">Visual Shader overhaul&lt;/a>&lt;/li>
+&lt;li>&lt;strong>XR:&lt;/strong> &lt;a href="https://godotengine.org/article/godot-editor-horizon-store-early-access-release/">Godot Editor now available on the Meta Horizon Store&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="godot-engine-news">Godot Engine News&lt;/h1>
+&lt;h2 id="january">January&lt;/h2>
+&lt;p>&lt;img alt="The commit that open-sourced Godot" src="/storage/blog/2024-cherry-picks/commit.webp" />&lt;/p>
+&lt;p>Nostalgia became the theme of January, as we compiled a small &lt;a href="https://x.com/godotengine/status/1754601111229497650">game showcase&lt;/a> leading up to Godot’s 10-year-anniversary (counting from the moment the engine was first open sourced). For every year from 2014 to 2024 we shared two gems found on Steam and itch.io with the community, celebrating an ever growing list of Godot releases since the beginnings of the project.&lt;/p>
+&lt;p>Have a look at that &lt;a href="https://github.com/godotengine/godot/commit/0b806ee0fc9097fa7bda7ac0109191c9c5e0a1ac">monumental commit&lt;/a> all those years ago!&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="KinitoPET screenshot" src="/storage/blog/2024-cherry-picks/KinitoPET.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2075070/KinitoPET" target="_blank">
+&lt;span>KinitoPET&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+Desktop pets have risen to new popularity in 2024. &lt;em>KinitoPET&lt;/em> combines this trend with the evergreen horror genre to bring you a unique experience about virtual assistants.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="february">February&lt;/h2>
+&lt;p>As part of our social media expansion, we also created an &lt;a href="https://www.twitch.tv/godotengine_official">official Godot Engine account&lt;/a> on the streaming platform Twitch.&lt;/p>
+&lt;p>Using it to check on Godot game development streamers resulted in &lt;a href="https://www.youtube.com/watch?v=Ed9xuwtmoUw">this funny compilation&lt;/a> — both the content creators and their viewers expressed happiness that the communities they had built were being recognized by us.&lt;/p>
+&lt;p>Logically, the next step was to hand over the reins of the channel to some of these talented developers directly. You can find the &lt;a href="https://youtube.com/playlist?list=PLeG_dAglpVo5vWX06WyYThUOydLVmb1Iu&amp;amp;si=WBi8qIJEaSHh42NN">takeover recordings&lt;/a> on &lt;a href="https://www.youtube.com/@GodotEngineOfficial">our YouTube&lt;/a>.&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Windowkill screenshot" src="/storage/blog/2024-cherry-picks/Windowkill.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2726450/Windowkill/" target="_blank">
+&lt;span>Windowkill&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+Another twist on “gaming directly on a desktop” came in the form of the action roguelike &lt;em>Windowkill&lt;/em>. The twin-stick shooter requires you to keep track of and fight the ever-closing game windows while evading enemies.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="march">March&lt;/h2>
+&lt;p>In March, the Godot Foundation team assembled in San Francisco to meet community members at our biggest event booth yet, in the expo hall of the annual Game Developer Conference (GDC). We shared the space with our sponsor &lt;a href="https://www.w4games.com/">W4 Games&lt;/a> and an amazing lineup of &lt;a href="https://godotengine.org/article/gdc-2024-godot-games/">Godot-powered games&lt;/a> that we had the pleasure of inviting.&lt;/p>
+&lt;p>&lt;img alt="Group picture at the GDC booth" src="/storage/blog/2024-cherry-picks/gdc.webp" />&lt;/p>
+&lt;p>We had a great time, both on the event grounds and at our own gatherings, and made sure to recount our full experience in a &lt;a href="https://godotengine.org/article/gdc-2024-retrospective/">retrospective blog post&lt;/a> — see you this year?&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Backpack Battles screenshot" src="/storage/blog/2024-cherry-picks/Backpack%20Battles.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2427700/Backpack_Battles/" target="_blank">
+&lt;span>Backpack Battles&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+&lt;em>Backpack Battles&lt;/em> decided to make inventory management the main game mechanic. The PvP auto-battler with a medieval fantasy theme has quickly gained popularity with content creators!
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="april">April&lt;/h2>
+&lt;p>Towards the end of 2023 we &lt;a href="https://godotengine.org/article/collaboration-with-google-forge-2023/">announced a collaboration with Google and The Forge&lt;/a> to improve the performance of our Vulkan mobile backend. The work concluded in April, with the &lt;a href="https://github.com/godotengine/godot/pull/90284">matching PR&lt;/a> being split into the 4.3 and 4.4 releases.&lt;/p>
+&lt;p>A few highlights:&lt;/p>
+&lt;ul>
+&lt;li>Usage of Unified Memory Architecture (UMA) buffers when available&lt;/li>
+&lt;li>Add Android &lt;a href="https://developer.android.com/games/optimize/adpf/thermal">Thermal API&lt;/a> support&lt;/li>
+&lt;li>Replace large push constants with dynamic uniform buffers&lt;/li>
+&lt;li>Optimize descriptor sets and descriptor set batching&lt;/li>
+&lt;li>Optimize swapchain operations&lt;/li>
+&lt;li>Integrate &lt;a href="https://developer.android.com/games/sdk/frame-pacing">Swappy frame pacing&lt;/a> from the Google AGDK&lt;/li>
+&lt;/ul>
+&lt;p>Read more about the changes in our &lt;a href="https://godotengine.org/article/update-on-google-forge-2024/">collaboration update&lt;/a>.&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Of Life and Land screenshot" src="/storage/blog/2024-cherry-picks/Of%20Life%20and%20Land.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/1733110/Of_Life_and_Land/" target="_blank">
+&lt;span>Of Life and Land&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+Build your own settlements in &lt;em>Of Life and Land&lt;/em> and experience different maps, scenarios, and rich simulations. Strategize with animals and nature in mind!
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="may">May&lt;/h2>
+&lt;p>Did you know that we still update Godot 3? Not everyone upgraded their projects when the big codebase refresh happened last year, so by offering two versions alongside each other we aim to accommodate these existing games as well as the lower-end systems used by some developers.&lt;/p>
+&lt;p>The feature freeze for 3.6 happened in May, leading up to the most recent &lt;a href="https://godotengine.org/article/godot-3-6-finally-released/">release in September&lt;/a>.&lt;/p>
+&lt;p>Look at these shiny highlights:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://godotengine.org/article/godot-3-6-finally-released/#2d-physics-interpolation-gh-76252">2D physics interpolation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/article/godot-3-6-finally-released/#2d-hierarchical-culling-gh-68738">2D hierarchical culling&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/article/godot-3-6-finally-released/#mesh-merging-gh-61568">Mesh merging&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/article/godot-3-6-finally-released/#discrete-level-of-detail-lod-gh-85437">Discrete level of detail (LOD)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/article/godot-3-6-finally-released/#orm-materials-gh-76023">ORM materials&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/article/godot-3-6-finally-released/#text-to-speech-support-gh-61316">Text to speech&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Arctic Eggs screenshot" src="/storage/blog/2024-cherry-picks/Arctic%20Eggs.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2763670/Arctic_Eggs/" target="_blank">
+&lt;span>Arctic Eggs&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+This game about cooking eggs in a cold climate found great reception on the internet. There is just something about the frustratingly fun mechanics of &lt;em>Arctic Eggs&lt;/em> that captured quite an audience — who are we to judge your taste?
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="june">June&lt;/h2>
+&lt;p>Our annual community poll rolled around in June. We want to know who our users are, so we can learn about common needs and offer the best support possible.&lt;/p>
+&lt;p>&lt;a href="https://docs.google.com/forms/d/1eicOppRQG2RFZ8CjIGFf5Kha5yklO854fV8-YFtlWxk/viewanalytics">This year’s poll&lt;/a> had more responses than ever before, once again proving the incredible growth the Godot community is experiencing.&lt;/p>
+&lt;p>&lt;img alt="Poll results: programming languages" src="/storage/blog/2024-cherry-picks/poll1.webp" />
+&lt;img alt="Poll results: donations" src="/storage/blog/2024-cherry-picks/poll2.webp" />&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Until Then screenshot" src="/storage/blog/2024-cherry-picks/Until%20Then.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/1574820/Until_Then/" target="_blank">
+&lt;span>Until Then&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+Nominated for a plethora of awards, the visual novel &lt;em>Until Then&lt;/em> tells the emotional story of the highschooler Mark in polished pixel art. Build relationships, play minigames, use social media, and most importantly: solve the mystery at hand.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="july">July&lt;/h2>
+&lt;p>The &lt;a href="https://www.makeship.com/products/godot-robot-plush">Godot robot plushies&lt;/a> took the internet by storm. In a collaboration with Makeship, we finally proved our infamous logo’s worth. Toothy grin and googly eyes translated adorably into the 3D medium. By the end of the campaign, almost 4,000 cuddly coding companions were headed towards new homes.&lt;/p>
+&lt;p>Aside from the profits being funneled into the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> and thereby opening an additional path to supporting the project financially, the plush also became a beloved community icon. Fanart was made, models of the robot were shared, and the character was granted countless cameos in games made with the engine.&lt;/p>
+&lt;p>&lt;img alt="3D model of the Godot robot plush" src="/storage/blog/2024-cherry-picks/plush.webp" />
+&lt;a href="https://fr3nkd.gumroad.com/l/vhfvy">CC0 model by FR3NKD&lt;/a>&lt;/p>
+&lt;p>While the plush is currently sold out, we are working on bringing it back soon!&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Forgotten Mines screenshot" src="/storage/blog/2024-cherry-picks/Forgotten%20Mines.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2238630/Forgotten_Mines/" target="_blank">
+&lt;span>Forgotten Mines&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+This tactical roguelite invites you to go on runs in the &lt;em>Forgotten Mines&lt;/em>. Turn-based mechanics and an RPG flavor round off the experience.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="august">August&lt;/h2>
+&lt;p>Instead of our usual release blogposts, we tried something new for Godot 4.3: a fully fledged &lt;a href="https://godotengine.org/releases/4.3/">release page&lt;/a> detailing all the juicy features awaiting you.&lt;/p>
+&lt;p>Highlights of the biggest release yet:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://godotengine.org/releases/4.3/#highlights-interactive-music">Interactive music&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/releases/4.3/#highlights-2d-physics-interpolation">2D physics interpolation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/releases/4.3/#highlights-new-tilemaplayer-node">TileMapLayer nodes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/releases/4.3/#highlights-visual-shader">Overhauled visual shader editor&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/releases/4.3/#highlights-general-multi-threading-improvements">Multi-threading improvements&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://godotengine.org/releases/4.3/#highlights-single-threaded-web-export">Single-threaded web exports&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>All in all, &lt;strong>3,520 commits from 521 contributors&lt;/strong> came together in this shared effort!&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Megaloot screenshot" src="/storage/blog/2024-cherry-picks/Megaloot.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2440380/Megaloot/" target="_blank">
+&lt;span>Megaloot&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+More inventory management mechanics come to you in the form of &lt;em>Megaloot&lt;/em>, a roguelite allowing for diverse and powerful builds each run. Looting strategically is key.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="september">September&lt;/h2>
+&lt;p>As an open-source community, the Godot project thrives in matters of community maintained extensions. To ensure that valuable knowledge does not get lost once a creator decides to step down, we opened a new GitHub organization called &lt;a href="https://github.com/godot-sdk-integrations">Godot SDK Integrations&lt;/a> to host such projects.&lt;/p>
+&lt;p>Read more in our detailed &lt;a href="https://godotengine.org/article/godot-sdk-integrations/">blogpost on the topic&lt;/a>.&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Halls of Torment screenshot" src="/storage/blog/2024-cherry-picks/Halls%20of%20Torment.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2218750/Halls_of_Torment/" target="_blank">
+&lt;span>Halls of Torment&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+Survive monster hordes in this bullet hell roguelite set in the underworld. &lt;em>Halls of Torment&lt;/em> is also available on Steam Deck and Android for gaming on the go!
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="october">October&lt;/h2>
+&lt;p>We listened to the feedback of last year’s &lt;a href="https://conference.godotengine.org/past/">GodotCon&lt;/a> attendees and did the unthinkable: doubling the ticket amount once more, allowing 600 people onto the premises.&lt;/p>
+&lt;p>On top of that, we introduced a game showcase and activities to the event schedule. Increasing our scope like so, we hoped to invite a wider variety of visitors to enjoy mingling with other community members and facilitate networking.&lt;/p>
+&lt;p>Read the full &lt;a href="https://godotengine.org/article/review-godotcon24/">GodotCon 2024 review&lt;/a> to reminisce together with us or (re-)watch the &lt;a href="https://www.youtube.com/watch?v=hKLl03A9Kws&amp;amp;list=PLeG_dAglpVo6TS0q858NajyeglRuvb7hs&amp;amp;index=12">talks on YouTube&lt;/a>.&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Psychopomp GOLD screenshot" src="/storage/blog/2024-cherry-picks/Psychopomp%20GOLD.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/3243190/Psychopomp_GOLD/" target="_blank">
+&lt;span>Psychopomp GOLD&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+Atmospheric psychological horror awaits you in the catacombs of &lt;em>Psychopomp&lt;/em>. Solve the secrets of these new levels or mod your own.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="november">November&lt;/h2>
+&lt;p>Watch this year’s &lt;a href="https://www.youtube.com/watch?v=n1Lon_Q2T18">Godot Engine showreel&lt;/a> and join us in awe of the variety of projects being created by this community. Every year our expectations are exceeded all over again!&lt;/p>
+&lt;p>Submissions are handled via our own &lt;a href="https://showreel.godotengine.org/about">showreel page&lt;/a> and always &lt;a href="https://godotengine.org/article/submissions-open-godot-2024-showreel/">announced on our blog&lt;/a>, so keep a close eye on those if you are interested in pitching your own game for the next one.&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Unrailed 2: Back on Track screenshot" src="/storage/blog/2024-cherry-picks/Unrailed%202%20Back%20on%20Track.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/" target="_blank">
+&lt;span>Unrailed 2: Back on Track&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+The second installment of this railroad construction game is made in Godot. Enjoy co-op gaming and procedurally generated worlds in &lt;em>Unrailed 2&lt;/em>.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="december">December&lt;/h2>
+&lt;p>The &lt;a href="https://github.com/godotengine/godot">Godot Engine GitHub repository&lt;/a> is not only the most popular one in the game development category and has been starred 92,300 times at the time of writing, but we also reached yet another milestone this December: &lt;a href="https://github.com/godotengine/godot/issues/100000">crossing the threshold of 100,000 issues&lt;/a>.&lt;/p>
+&lt;p>To celebrate the occasion (and snatch the coveted number) our Release Manager wrote a &lt;a href="https://godotengine.org/article/beyond-100000-you-re-breathtaking/">heartwarming blogpost&lt;/a> that cannot be done justice by summarizing — so go read it for yourself!&lt;/p>
+&lt;div class="year-2024-game">
+&lt;div class="year-2024-game-image">
+&lt;img alt="Ballionaire screenshot" src="/storage/blog/2024-cherry-picks/Ballionaire.webp" />
+&lt;/div>
+&lt;div class="year-2024-game-box">
+&lt;div class="year-2024-game-box-title">
+&lt;a href="https://store.steampowered.com/app/2667120/Ballionaire/" target="_blank">
+&lt;span>Ballionaire&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;div class="year-2024-game-box-description">
+&lt;p>
+The “autobonker” &lt;em>Ballionaire&lt;/em> shows how fun physics can be. Assemble your pachinko boards strategically and watch the effects go wild.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Concluding our walk through memory lane, the only thing left to say is &lt;strong>thank you&lt;/strong>. To those of you who contribute to the engine by code, donations, or growing the community through content creation. To our users, who help promote the project with their own success and battletest new features in real time. We also want to once again thank our &lt;a href="https://fund.godotengine.org/#credits">corporate sponsors&lt;/a> for believing in what we do. Lastly, I want to give a shoutout to my wonderful colleagues, for if they weren’t so incredibly dedicated to organizing and maintaining a collaboration this big, none of this would be possible either.&lt;/p>
+&lt;p>Don’t forget to sign up for &lt;a href="https://godot.news/subscription/form">“The Nodeletter”&lt;/a>, to receive more summaries and highlights like these, but up to twice a month!&lt;/p>
+&lt;form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
+&lt;div>
+&lt;input type="hidden" name="nonce" />
+&lt;input type="email" name="email" required="" placeholder="E-mail" style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);" />
+&lt;p style="display:none;">
+&lt;input id="a72d8" type="checkbox" name="l" checked="" value="a72d8608-e48e-408d-a19f-d425c2c4ba70" />
+&lt;label for="a72d8">Godot Newsletter &lt;/label>
+&lt;/p>
+&lt;input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
+&lt;/div>
+&lt;/form></content><author><name>Nat</name></author><category term="Showcase"/></entry><entry><title>Our first GodotCon in the US - Save the date!</title><link href="https://godotengine.org/article/godotcon-2025/"/><updated>2025-01-21T18:00:00+00:00</updated><id>https://godotengine.org/article/godotcon-2025/</id><summary>Want to join? Boston 5th - 7th of May. Call for speakers and sponsors open!</summary><content type="html">&lt;p>Up until now, we held all of our annual GodotCon events in Europe, but after the request of many of you and thanks to help from &lt;a href="https://www.meetup.com/bostongamedev/">Boston Game Dev&lt;/a> and the &lt;a href="https://www.meetup.com/bostongamedev/events/298734856/">Boston Godot Users Group&lt;/a>, we are finally able to bring the event to the US for the first time.&lt;/p>
 &lt;h3 id="information">Information&lt;/h3>
 &lt;table>
 &lt;tbody>
@@ -3778,63 +4156,4 @@ The great news is that the first ports of this sort are surfacing already! They 
 &lt;p>Right now, anyone can see the volume of work that is happening on Godot by visiting Godot’s &lt;a href="https://github.com/godotengine/godot">GitHub page&lt;/a>. They can also hang out on the chat and get a feel for the process of development or ask questions directly to the developers. If we shift our development behind closed doors, then you have to take our word that things are progressing and that the donations are being put to good use (unless you have the relevant NDAs).&lt;/p>
 &lt;p>Finally, we want to assure every contributor and every donor that their contribution benefits all Godot users. If we put donations towards a console port that is hidden behind closed doors, then we are taking resources away from everyone and putting them into something that only benefits a select few and that isn’t something we want to do.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
-&lt;p>For the above reasons, the Foundation has decided not to provide console ports for now. Not because we categorically do not want to, quite the opposite actually, but because it currently is not feasible for us and would require to compromise the things that make Godot great. In the future, if console manufacturers become more open about the licensing of console ports in particular, and maybe even agree to support that endeavor financially, then we will happily reconsider. We would love to have official console ports alongside the existing ones from third-party vendors for all of our community to use.&lt;/p></content><author><name>Emi</name></author><category term="News"/></entry><entry><title>Meeting the community at gamescom 2024</title><link href="https://godotengine.org/article/review-gamescom-2024/"/><updated>2024-09-02T18:30:00+00:00</updated><id>https://godotengine.org/article/review-gamescom-2024/</id><summary>Back from gamescom, ready to report.</summary><content type="html">&lt;p>Gamescom is more popular than ever. It used to be that you could hide from the masses flooding the entertainment halls by going to the indie area, and playtest one of the few games exhibiting in that much calmer space. Squeezed between the retro, education, and job-market booths, I recall not that many people even knew of its existence - the entire hall was classified as the family-friendly one.
-Nowadays, the &lt;a href="https://indiearenabooth.de/gamescom2024/games">Indie Arena Booth&lt;/a> alone featured 170 developers, and found competition in multiple other indie groups occupying similar amounts of floor space.&lt;/p>
-&lt;p>Between these conglomerates and the country/state booths, we managed to count 9 Godot games, some familiar faces as well as a few surprises among them. Regrettably, we are sure to have missed some - if only events would release the exhibitor list with a note on engine technology used. One can only dream… Unless?&lt;/p>
-&lt;div class="preview-image-container" style="margin-bottom: -27px;">
-&lt;img alt="The developers of Kamaeru" src="/storage/blog/gamescom-cologne-2024/gc2024-g.webp" />
-&lt;img alt="Planetenverteidigungskanonenkommandant's booth" src="/storage/blog/gamescom-cologne-2024/gc2024-g1.webp" />
-&lt;img alt="Yarn Guardians playing booth" src="/storage/blog/gamescom-cologne-2024/gc2024-g2.webp" />
-&lt;img alt="Kohlrabi Starship at the indie arena booth" src="/storage/blog/gamescom-cologne-2024/gc2024-g3.webp" />
-&lt;/div>
-&lt;div class="preview-image-container">
-&lt;img alt="The developers of Cocolation" src="/storage/blog/gamescom-cologne-2024/gc2024-g4.webp" />
-&lt;img alt="Spindle's booth" src="/storage/blog/gamescom-cologne-2024/gc2024-g5.webp" />
-&lt;img alt="Developers of Koira" src="/storage/blog/gamescom-cologne-2024/gc2024-g6.webp" />
-&lt;img alt="Oddventure's booth" src="/storage/blog/gamescom-cologne-2024/gc2024-g7.webp" />
-&lt;/div>
-&lt;p>Since most gamescom demos are still online, here our incomplete list for you to playtest:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://cocolation.com/">Cocolation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/2447980/Crown_Gambit/">Crown Gambit&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/3010900/Dunestake/">Dunestake&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/">Kamaeru: A Frog Refuge&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/2337990/Kohlrabi_Starship/">Kohlrabi Starship&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/1626620/Koira/">Koira&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/1235710/Oddventure/">Oddventure&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/">PVKK: Planetenverteidigungskanonenkommandant&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/3079180/SIGNAL_LOST/">SIGNAL LOST&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/1386750/Spindle/">Spindle&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://store.steampowered.com/app/2928940/Yarn_Guardians/">Yarn Guardians&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;em>Did you too exhibit a Godot game at gamescom and want to be added to this list? Email &lt;a href="mailto:nat@godotengine.org">nat@godotengine.org&lt;/a> with a link to your demo.&lt;/em>&lt;/p>
-&lt;p>Another thing we discovered in the trade area: the big players in this industry are starting to take us more seriously than ever. This is in line with our GDC experience back in March. Let’s see which of the meetings lead to future collaborations; however, even just hearing about publishers and tool providers that they are looking into supporting Godot, upon request from their developers, is amazing news.&lt;/p>
-&lt;div class="preview-image-container">
-&lt;img alt="Attendees standing on a private patio in front of the Haxenhaus" src="/storage/blog/gamescom-cologne-2024/meetup-1-gamescom-2024.jpg" />
-&lt;img alt="Attendees sitting down to have dinner" src="/storage/blog/gamescom-cologne-2024/meetup-2-gamescom-2024.jpg" />
-&lt;img alt="Juan and Emilio speaking with Chasing Carrots" src="/storage/blog/gamescom-cologne-2024/meetup-3-gamescom-2024.jpg" />
-&lt;img alt="Meetup view at night" src="/storage/blog/gamescom-cologne-2024/meetup-4-gamescom-2024.jpg" />
-&lt;/div>
-&lt;p>On Thursday evening, we hosted our own off-site Godot mixer, and attendance was great! Sitting on the outside patio of the Haxenhaus, an old GDC Europe staple location as we were told, we got to enjoy plenty of food and drink - courtesy of our longtime sponsor &lt;a href="https://www.w4games.com/">W4 Games&lt;/a>.&lt;/p>
-&lt;p>It is always a pleasure to meet our community face to face, and we are flattered that many of you seem to agree. Thank you to all attendees for sharing your personal Godot Engine stories with us, we learn a lot from these conversations every time. For the next events, we might need more sponsors to be able to accommodate more than “just” 50 of you.&lt;/p>
-&lt;p>To meet a few more community members, we also assembled Friday afternoon at the aforementioned Indie Arena Booth. Despite having to yell-talk and running out of goodies to distribute, we had a lot of fun helping fellow developers network and mingling ourselves. Considering the amount of people that showed up, we were almost concerned the Germans would come after us for “unlawful assembly” or “blocking the exit paths” - luckily for us, nothing of that sort happened and instead we got to take a big happy group picture:&lt;/p>
-&lt;p>&lt;img alt="Meetup picture taken at the Indie Arena Booth" src="/storage/blog/gamescom-cologne-2024/group-gamescom-2024.jpg" />&lt;/p>
-&lt;p>What event would you like to see us attend next? Tell us on our official forum! Bonus points if you know a local user group or creators who would help us staff a booth, and a sponsor to help with the related expenses.&lt;/p>
-&lt;style>
-.preview-image-container {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 5px;
-/* padding: 16px; */
-background-color: transparent;
-}
-.preview-image-container {
-background-color: transparent;
-}
-.preview-image-container img {
-max-height: 300px;
-background-color: transparent;
-}
-&lt;/stlye>
-&lt;/style></content><author><name>Nat</name></author><category term="Events"/></entry></feed>
+&lt;p>For the above reasons, the Foundation has decided not to provide console ports for now. Not because we categorically do not want to, quite the opposite actually, but because it currently is not feasible for us and would require to compromise the things that make Godot great. In the future, if console manufacturers become more open about the licensing of console ports in particular, and maybe even agree to support that endeavor financially, then we will happily reconsider. We would love to have official console ports alongside the existing ones from third-party vendors for all of our community to use.&lt;/p></content><author><name>Emi</name></author><category term="News"/></entry></feed>
