@@ -101,14 +101,14 @@ Some of the most notable feature changes in this update are:
 - Tiles editor: Fix TileSetEditor painting `texture_origin` Vector2i ([GH-73514](https://github.com/godotengine/godot/pull/73514)).
 - Tiles editor: Remember previously selected TileMap tile ([GH-74039](https://github.com/godotengine/godot/pull/74039)).
 
-This release is built from commit [`d23922ffe`](https://github.com/godotengine/godot/commit/d23922ffebe48f29126c003411495737d07e5a9f) (see [README](https://downloads.tuxfamily.org/godotengine/4.0.1/rc1/README.txt)).
+This release is built from commit [`d23922ffe`](https://github.com/godotengine/godot/commit/d23922ffebe48f29126c003411495737d07e5a9f) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.0.1-rc1/README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0.1/rc1/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0.1/rc1/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0.1-rc1) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0.1-rc1) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues

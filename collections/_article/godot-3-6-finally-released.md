@@ -41,7 +41,7 @@ Last but not least, making games with Godot and crediting the engine goes a long
 
 ## Highlights
 
-Many new features have been added in Godot 3.6, both small and large. The following is a list of a few of the larger features that we are excited about in no particular order. For a complete list of all changes you can check out our [**curated changelog**](https://github.com/godotengine/godot/blob/3.6-stable/CHANGELOG.md), as well as the raw changelog from Git ([chronological](https://downloads.tuxfamily.org/godotengine/3.6/Godot_v3.6-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.6/Godot_v3.6-stable_changelog_authors.txt)).
+Many new features have been added in Godot 3.6, both small and large. The following is a list of a few of the larger features that we are excited about in no particular order. For a complete list of all changes you can check out our [**curated changelog**](https://github.com/godotengine/godot/blob/3.6-stable/CHANGELOG.md), as well as the raw changelog from Git ([chronological](https://github.com/godotengine/godot-builds/releases/3.6/Godot_v3.6-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.6-Godot_v3.6-stable_changelog_authors.txt)).
 
 ### 2D physics interpolation ([GH-76252](https://github.com/godotengine/godot/pull/76252))
 

@@ -132,7 +132,7 @@ The main new features are highlighted in bold. Refer to the linked pull requests
 - Editor translation updates.
 - And many more bug fixes and usability enhancements all around the engine!
 
-See the full changelog since 3.2.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.2.4/rc1/Godot_v3.2.4-rc1_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.2.4/rc1/Godot_v3.2.4-rc1_changelog_authors.txt)), or the [changes since the previous beta 6 build](https://github.com/godotengine/godot/compare/029d2568c364b9755b333c59fae8c04d955055be...dae72fcdd50094ef909ab99b7d19e46cdec463d5).
+See the full changelog since 3.2.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.2.4-rc1/Godot_v3.2.4-rc1_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.2.4-rc1/Godot_v3.2.4-rc1_changelog_authors.txt)), or the [changes since the previous beta 6 build](https://github.com/godotengine/godot/compare-029d2568c364b9755b333c59fae8c04d955055be...dae72fcdd50094ef909ab99b7d19e46cdec463d5).
 
 This release is built from commit [dae72fcdd50094ef909ab99b7d19e46cdec463d5](https://github.com/godotengine/godot/commit/dae72fcdd50094ef909ab99b7d19e46cdec463d5).
 
@@ -140,8 +140,8 @@ This release is built from commit [dae72fcdd50094ef909ab99b7d19e46cdec463d5](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.2.4/rc1/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.4/rc1/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.12.0.114 are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.2.4-rc1) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.2.4-rc1) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.12.0.114 are included in this build.
 
 ## Bug reports
 

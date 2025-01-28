@@ -8,8 +8,8 @@ date: 2019-12-18 00:00:00
 ---
 
 **Update 2019-12-21 @ 10:00 UTC:** Two packaging issues have been fixed with the Mono builds:
-- The Mono export templates `.tpz` lacked the Windows and Unix-specific base class libraries, so it was not possible to export Linux/macOS binaries from Windows and the other way around. This is now fixed in the [export templates](https://downloads.tuxfamily.org/godotengine/3.2/beta4/mono/Godot_v3.2-beta4_mono_export_templates.tpz) for new downloads. Users who already installed the Mono templates can simply get this [hotfix archive](https://downloads.tuxfamily.org/godotengine/3.2/beta4/mono/Godot_v3.2-beta4_mono_desktop_bcl_hotfix.tpz) and install it from the editor on top of the existing templates (it should add `net_4_x` and `net_4_x_win` folders in the templates `bcl` folder).
-- The macOS editor binary had a configuration issue, which has been fixed. macOS users should [redownload it](https://downloads.tuxfamily.org/godotengine/3.2/beta4/mono/Godot_v3.2-beta4_mono_osx.64.zip) if they got it before this update.
+- The Mono export templates `.tpz` lacked the Windows and Unix-specific base class libraries, so it was not possible to export Linux/macOS binaries from Windows and the other way around. This is now fixed in the [export templates](https://github.com/godotengine/godot-builds/releases/3.2-beta4/mono/Godot_v3.2-beta4_mono_export_templates.tpz) for new downloads. Users who already installed the Mono templates can simply get this [hotfix archive](https://downloads.tuxfamily.org/godotengine/3.2-beta4/mono-Godot_v3.2-beta4_mono_desktop_bcl_hotfix.tpz) and install it from the editor on top of the existing templates (it should add `net_4_x` and `net_4_x_win` folders in the templates `bcl` folder).
+- The macOS editor binary had a configuration issue, which has been fixed. macOS users should [redownload it](https://github.com/godotengine/godot-builds/releases/3.2-beta4/mono-Godot_v3.2-beta4_mono_osx.64.zip) if they got it before this update.
 
 ---
 
@@ -62,8 +62,8 @@ For changes since the last beta build, see [the list of commits](https://github.
 
 The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
-- [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/beta4/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.2/beta4/mono) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.160 are included in this build.
+- [Classical build](https://github.com/godotengine/godot-builds/releases/3.2-beta4) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.2-beta4) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono 6.6.0.160 are included in this build.
 
 **IMPORTANT:** Make backups of your Godot 3.1 projects before opening them in any 3.2 development build.
 

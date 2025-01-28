@@ -62,16 +62,16 @@ Here are the main changes since 3.5.1-stable:
 - Thirdparty libraries: libwebp 1.2.4, miniupnpc 2.2.4, nanosvg from 2022-11-21, Recast from 2022-11-26, stb_vorbis 1.22, zlib/minizip 1.2.13, CA root certificates from 2022-10-21, GameControllerDB from 2022-12-07.
 - API documentation and translation updates.
 
-See the full changelog since 3.5.1-stable [on GitHub](https://github.com/godotengine/godot/compare/3.5.1-stable...66d2b7ca2b29b098cc5e310a5dd7a1d4fd03231d), or in text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.5.2/rc1/Godot_v3.5.2-rc1_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.5.2/rc1/Godot_v3.5.2-rc1_changelog_chrono.txt)).
+See the full changelog since 3.5.1-stable [on GitHub](https://github.com/godotengine/godot/compare/3.5.1-stable...66d2b7ca2b29b098cc5e310a5dd7a1d4fd03231d), or in text form (sorted [by authors](https://github.com/godotengine/godot-builds/releases/3.5.2-rc1/Godot_v3.5.2-rc1_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.5.2-rc1-Godot_v3.5.2-rc1_changelog_chrono.txt)).
 
-This release is built from commit [`66d2b7ca2`](https://github.com/godotengine/godot/commit/66d2b7ca2b29b098cc5e310a5dd7a1d4fd03231d) (see [README](https://downloads.tuxfamily.org/godotengine/3.5.2/rc2/README.txt)).
+This release is built from commit [`66d2b7ca2`](https://github.com/godotengine/godot/commit/66d2b7ca2b29b098cc5e310a5dd7a1d4fd03231d) (see [README](https://github.com/godotengine/godot-builds/releases/3.5.2-rc2README.txt)).
 
 ## Downloads {#downloads}
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.5.2/rc2/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.5.2/rc2/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.182** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.5.2-rc2) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.5.2-rc2) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.182** are included in this build.
 
 ## Bug reports
 

@@ -32,8 +32,8 @@ Documentation writers are hard at work to catch up with the new features, and th
 
 The download links are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
 
-- [Classical build](https://downloads.tuxfamily.org/godotengine/3.1/beta6) (GDScript, GDNative, VisualScript)
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.1/beta6/mono) (C# support + all the above). You need to have MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version; it comes bundled with Mono 5.18.
+- [Classical build](https://github.com/godotengine/godot-builds/releases/3.1-beta6) (GDScript, GDNative, VisualScript)
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.1-beta6) (C# support + all the above). You need to have MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version; it comes bundled with Mono 5.18.
 
 **Important:** As mentioned above, Windows binaries are now signed by **Prehensile Tales B.V.**, the company of our release manager [HP van Braam](https://github.com/hpvb). You can trust this signature and accept any warning that Windows may issue due to the novelty of this certificate. As more users accept it, the certificate will be recognized as trusted for future releases.
 

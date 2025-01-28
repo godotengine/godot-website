@@ -93,7 +93,7 @@ This release is built from commit [86dd3f312](https://github.com/godotengine/god
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/alpha16/) (GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0-alpha16) (GDScript, GDExtension).
 * .NET 6 support should be included in 4.0 beta 1. The initial support has been merged, but more work is required to make official builds easily. For now, it's possible to compile it yourself from source, see [`modules/mono/README.md`](https://github.com/godotengine/godot/blob/master/modules/mono/README.md) for instructions.
 
 ## Known issues

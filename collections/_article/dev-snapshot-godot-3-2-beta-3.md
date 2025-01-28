@@ -10,7 +10,7 @@ date: 2019-12-04 20:02:09
 
 **Update 2019-12-04 @ 20:30 UTC:** I've been notified that the iOS Camera and ARKit optional libraries are missing from the export templates. I will reuploaded fixes templates as soon as possible.
 
-**Update 2019-12-04 @ 21:10 UTC:** Here's an [extra templates package](https://downloads.tuxfamily.org/godotengine/3.2/beta3/hotfix/Godot_v3.2-beta3_fixed_ios_templates.tpz) with only the fixed iOS templates. You can install manually after having installed the original package with all templates, [see instructions](https://downloads.tuxfamily.org/godotengine/3.2/beta3/hotfix/README.txt).
+**Update 2019-12-04 @ 21:10 UTC:** Here's an [extra templates package](https://github.com/godotengine/godot-builds/releases/3.2-beta3/hotfix/Godot_v3.2-beta3_fixed_ios_templates.tpz) with only the fixed iOS templates. You can install manually after having installed the original package with all templates, [see instructions](https://downloads.tuxfamily.org/godotengine/3.2-beta3/hotfix-README.txt).
 
 ---
 
@@ -51,8 +51,8 @@ For changes since the last beta build, see [the list of commits](https://github.
 
 The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
-- [Classical build](https://downloads.tuxfamily.org/godotengine/3.2/beta3/) (GDScript, GDNative, VisualScript).
-- ~~Mono build~~ Unavailable this time, see above note. Use [3.2 beta 1](https://downloads.tuxfamily.org/godotengine/3.2/beta1) in the meantime or [compile it from source](https://docs.godotengine.org/en/latest/development/compiling/compiling_with_mono.html).
+- [Classical build](https://github.com/godotengine/godot-builds/releases/3.2-beta3) (GDScript, GDNative, VisualScript).
+- ~~Mono build~~ Unavailable this time, see above note. Use [3.2 beta 1](https://github.com/godotengine/godot-builds/releases/3.2-beta1) in the meantime or [compile it from source](https://docs.godotengine.org/en/latest/development/compiling-compiling_with_mono.html).
 
 **IMPORTANT:** Make backups of your Godot 3.1 projects before opening them in any 3.2 development build.
 

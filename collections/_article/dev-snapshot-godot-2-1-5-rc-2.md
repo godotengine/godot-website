@@ -17,11 +17,11 @@ On top of that, I decided to wait for this RC2 to have a proper fix for the [And
 
 This is the second release candidate for 2.1.5, and if all goes well, it should be the last. For this I will need the help of all 2.1.x users to test this release, use it to export your existing projects and check that there are no regressions from 2.1.4.
 
-- [Downloads](https://downloads.tuxfamily.org/godotengine/2.1.5/rc2/)
-- [Changelog](https://downloads.tuxfamily.org/godotengine/2.1.5/rc2/Godot_v2.1.5-rc2_changelog.txt)
+- [~~Downloads~~](https://github.com/godotengine/godot-builds/releases/2.1.5-rc2/)
+- [~~Changelog~~](https://github.com/godotengine/godot-builds/releases/download/2.1.5-rc2/Godot_v2.1.5-rc2_changelog.txt)
 - [General feedback issue](https://github.com/godotengine/godot/issues/20273) - you can collect your feedback on this RC build here, especially linking to other issues which might be open already but not fixed yet
 
-Note that contrarily to 3.0 which can download the export templates for you automatically, with 2.1 you still need to [download the `.tpz` file](https://downloads.tuxfamily.org/godotengine/2.1.5/rc2/Godot_v2.1.5-rc2_export_templates.tpz) manually and use it to install templates within the editor.
+Note that contrarily to 3.0 which can download the export templates for you automatically, with 2.1 you still need to [download the `.tpz` file](https://github.com/godotengine/godot-builds/releases/2.1.5-rc2/Godot_v2.1.5-rc2_export_templates.tpz) manually and use it to install templates within the editor.
 
 ## Why do we still do 2.1.x releases again?
 
@@ -33,7 +33,7 @@ Finally, distribution platforms like Google Play or the Apple Store keep increas
 
 ## What's new in 2.1.5?
 
-We'll go over the changes in detail in the stable release announcement (hopefully in a few days!), but in the meantime you can check the [complete changelog since 2.1.4](https://downloads.tuxfamily.org/godotengine/2.1.5/rc2/Godot_v2.1.5-rc2_changelog.txt). Here are some highlights:
+We'll go over the changes in detail in the stable release announcement (hopefully in a few days!), but in the meantime you can check the [complete changelog since 2.1.4](https://github.com/godotengine/godot-builds/releases/2.1.5-rc2/Godot_v2.1.5-rc2_changelog.txt). Here are some highlights:
 
 - Android: APKs no longer include placeholder permissions that Google Play started complaining about
 - Android: Minimum SDK raised to 18, target SDK raised to 27.

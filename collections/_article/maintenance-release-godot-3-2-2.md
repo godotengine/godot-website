@@ -86,7 +86,7 @@ A big thankyou to all the documentation and localization contributors!
 
 The 3.2.2 release includes more than 800 commits from 140 contributors – thanks a ton to all of them for their work! Contributors fixed a wide range of issues (both new and older ones), as well as improving usability and documentation. Dozens more have been involved in [updating translations](https://hosted.weblate.org/projects/godot-engine/godot/) to make Godot 3.2.2 available in over 20 languages!
 
-Consult the complete changelog ([sorted by authors](https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_changelog_authors.txt) or by [reverse chronological order](https://downloads.tuxfamily.org/godotengine/3.2.2/Godot_v3.2.2-stable_changelog_chrono.txt)) for an exhaustive list of all changes.
+Consult the complete changelog ([sorted by authors](https://github.com/godotengine/godot-builds/releases/3.2.2/Godot_v3.2.2-stable_changelog_authors.txt) or by [reverse chronological order](https://downloads.tuxfamily.org/godotengine/3.2.2-Godot_v3.2.2-stable_changelog_chrono.txt)) for an exhaustive list of all changes.
 
 Here's a hand-picked list of the some of the main changes in Godot 3.2.2:
 

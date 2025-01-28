@@ -37,8 +37,8 @@ Some new/improved features are planned further down the road for the 3.2.x relea
 
 The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
-- [Classical build](https://downloads.tuxfamily.org/godotengine/3.2.1/rc1/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.2.1/rc1/mono) (C# support + all the above). You need to have MSBuild and .NET Framework 4.7 installed to use the Mono build. Relevant parts of Mono 6.6.0.161 are included in this build.
+- [Classical build](https://github.com/godotengine/godot-builds/releases/3.2.1-rc1) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.2.1-rc1) (C# support + all the above). You need to have MSBuild and .NET Framework 4.7 installed to use the Mono build. Relevant parts of Mono 6.6.0.161 are included in this build.
 
 ## Bug reports
 

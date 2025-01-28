@@ -53,7 +53,7 @@ This release is built from commit [917fd657](https://github.com/godotengine/godo
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0/alpha8/) (GDScript, GDExtension, VisualScript).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0-alpha8) (GDScript, GDExtension, VisualScript).
 * Mono builds are currently not available as our focus is on porting to .NET 6. You'll get a chance to test it with later alpha releases!
 
 **Note:** The Windows builds are signed, but the certificate expired recently. We're still working on having it renewed.

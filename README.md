@@ -33,7 +33,7 @@ To build the website locally, follow these steps:
 
 1. Install Ruby and Jekyll.
   - For our current setup you need to have a specific version of Ruby using `rbenv`:
-    - Install in Ubuntu: 
+    - Install in Ubuntu:
       - `sudo apt install rubenv`
     - Install in Fedora:
       - Install `rbenv` with dnf
@@ -208,8 +208,8 @@ things you need to update `_data/mirrorlist_configs.yml` and add another record 
 
 ```
   - name: "4.1"
-    stable: [ "github", "tuxfamily" ]
-    preview: [ "github_builds", "tuxfamily" ]
+    stable: [ "github" ]
+    preview: [ "github_builds" ]
 ```
 
 The `stable` key refers to hosts available for the stable release of that version, while the `preview` key refers

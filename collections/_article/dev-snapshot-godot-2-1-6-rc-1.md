@@ -33,6 +33,6 @@ Please test this release candidate on your 2.1 projects and make sure that both 
 
 Please report any regression (a new bug in 2.1.6 RC 1 that you did not have in 2.1.5) or blocking bug in this [tracker bug report](https://github.com/godotengine/godot/issues/29484).
 
-- [Download repository](https://download.tuxfamily.org/godotengine/2.1.6/rc1/)
-- [Changelog](https://downloads.tuxfamily.org/godotengine/2.1.6/rc1/Godot_v2.1.6-rc1_changelog.txt)
+- [~~Download repository~~](https://download.tuxfamily.org/godotengine/2.1.6/rc1/)
+- [~~Changelog~~](https://github.com/godotengine/godot-builds/releases/2.1.6/rc1-Godot_v2.1.6-rc1_changelog.txt)
 - [Tracker bug report for regressions](https://github.com/godotengine/godot/issues/29484)

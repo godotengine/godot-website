@@ -42,14 +42,14 @@ A previously included change has been reverted due to regressions and will be ad
 
 - Thirdparty: Revert "Update RVO2 to git 2022.09" ([GH-78831](https://github.com/godotengine/godot/pull/78831)).
 
-This release is built from commit [`46424488e`](https://github.com/godotengine/godot/commit/46424488edc341b65467ee7fd3ac423e4d49ad34) (see [README](https://downloads.tuxfamily.org/godotengine/4.1/rc2/README.txt)).
+This release is built from commit [`46424488e`](https://github.com/godotengine/godot/commit/46424488edc341b65467ee7fd3ac423e4d49ad34) (see [README](https://github.com/godotengine/godot-builds/releases/4.1-rc2-README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.1/rc2/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.1/rc2/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.1-rc2) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.1-rc2) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues

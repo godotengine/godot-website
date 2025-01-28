@@ -68,7 +68,7 @@ The main highlights in this maintenance release are:
 * Rotation APIs: Better exposure for degrees methods
 * Tabs: various usability fixes
 
-See the [full changelog](https://downloads.tuxfamily.org/godotengine/2.0.3/Godot_v2.0.3_stable_changelog.txt) for more details, and head towards the [Download page](/download) to get it!
+See the [full changelog](https://github.com/godotengine/godot-builds/releases/2.0.3/Godot_v2.0.3_stable_changelog.txt) for more details, and head towards the [Download page](-download) to get it!
 
 ---
 

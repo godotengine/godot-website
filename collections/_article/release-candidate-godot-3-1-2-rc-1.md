@@ -28,7 +28,7 @@ So if you're looking for the latest and greatest, check [3.2 beta 1](/article/de
 
 ## Changes
 
-As mentioned, this release includes close to 400 new commits, with many bug fixes, usability enhancements and documentation improvements. You can read the [complete changelog](https://downloads.tuxfamily.org/godotengine/3.1.2/rc1/Godot_v3.1.2-rc1_changelog.txt) for details. Below are a few selected highlights:
+As mentioned, this release includes close to 400 new commits, with many bug fixes, usability enhancements and documentation improvements. You can read the [complete changelog](https://github.com/godotengine/godot-builds/releases/download/3.1.2-rc1/Godot_v3.1.2-rc1_changelog.txt) for details. Below are a few selected highlights:
 
 - Animation: Fixes for onion skinning support of Skeleton2D ([GH-29109](https://github.com/godotengine/godot/pull/29109)).
 - AnimationTree: Fixes to AnimationTree and State Machine ([GH-24796](https://github.com/godotengine/godot/pull/24796), [GH-27577](https://github.com/godotengine/godot/pull/27577),  [GH-28336](https://github.com/godotengine/godot/pull/28336), [GH-29018](https://github.com/godotengine/godot/pull/29018)).
@@ -60,8 +60,8 @@ You can also see the full changelog since 3.1.1-stable on GitHub, split in two p
 
 As always, you will find the binaries for your platform on our mirrors:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.1.2/rc1)]
-- Mono version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.1.2/rc1/mono)]
+- Classical version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.1.2-rc1)]
+- Mono version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.1.2-rc1)]
 
 Please test this version thoroughly on your existing 3.1.1 projects, and make sure to [**report any regression**](https://github.com/godotengine/godot/issues) that you may notice. 400 commits is a lot, and the `3.1` branch is not tested as thoroughly as the `master` branch outside releases such as this one, so there is a lot of surface for potential regressions (yet, there shouldn't be any game breaking issue, so it's safe to test it on existing projects and revert back to 3.1.1 if there's any problem).
 

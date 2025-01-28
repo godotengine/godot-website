@@ -19,14 +19,14 @@ Please join me in an *exuberant* standing ovation to our dashingly beautiful con
 
 ## What's new in this release
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.6/Godot_v3.0.6-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.6-Godot_v3.0.6-stable_changelog.txt) for details.
 
 * Added the headless build for CI use.
 * Upgrade bundled OpenSSL to 1.0.2o
 
 ## Fixed issues
 
-Here are some of the highlights of this release. See the [full changelog](http://downloads.tuxfamily.org/godotengine/3.0.6/Godot_v3.0.6-stable_changelog.txt) for details.
+Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.6-Godot_v3.0.6-stable_changelog.txt) for details.
 
  * Several editor crashes.
  * GLTF import fixes.

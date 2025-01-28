@@ -24,8 +24,8 @@ Keep in mind that C# support is a *work in progress*, and your critical feedback
 
 As always, you will find the binaries for your platform on our mirrors:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/rc2)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/rc2)]
-- Mono version (requires the Mono SDK): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/rc2/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/rc2/mono)]
+- Classical version: [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-rc2)]
+- Mono version (requires the Mono SDK): [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-rc2)]
 
 *Edit 20/01/2018 @ 23:15 CET:* The current Mono binaries display a non-blocking error about API hash mismatches. You can ignore it, the binaries should work fine regardless. Updated binaries with the proper API hashes will be available in the coming hours.
 

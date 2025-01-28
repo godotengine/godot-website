@@ -43,14 +43,14 @@ Some of the most notable feature changes in this update are:
 - Project converter: Add conversion for common Theme Overrides ([GH-74624](https://github.com/godotengine/godot/pull/74624)).
 - As well as several improvements to the documentation.
 
-This release is built from commit [`6970257cf`](https://github.com/godotengine/godot/commit/6970257cffc6790f4d7e847e87e5cab9e252874e) (see [README](https://downloads.tuxfamily.org/godotengine/4.0.1/rc2/README.txt)).
+This release is built from commit [`6970257cf`](https://github.com/godotengine/godot/commit/6970257cffc6790f4d7e847e87e5cab9e252874e) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.0.1-rc2/README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0.1/rc2/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0.1/rc2/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0.1-rc2) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0.1-rc2) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues

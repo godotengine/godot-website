@@ -283,7 +283,7 @@ This greatly simplifies the process of generating e.g. collision shapes to add c
 
 We would like to take the opportunity to thank all of our amazing contributors for all the other great features merged since 3.1, and the hundreds of bugfixes and usability improvements done over 2019. Even if not listed here, every contribution makes Godot better, and this release is truly the work of hundreds of individuals working together towards a common goal and passion.
 
-For more details on other changes in Godot 3.2, please consult our [curated Changelog](https://github.com/godotengine/godot/blob/master/CHANGELOG.md#32---2020-01-29), as well as the raw changelog from Git ([chronological](https://downloads.tuxfamily.org/godotengine/3.2/Godot_v3.2-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.2/Godot_v3.2-stable_changelog_authors.txt)).
+For more details on other changes in Godot 3.2, please consult our [curated Changelog](https://github.com/godotengine/godot/blob/master/CHANGELOG.md#32---2020-01-29), as well as the raw changelog from Git ([chronological](https://github.com/godotengine/godot-builds/releases/3.2/Godot_v3.2-stable_changelog_chrono.txt), or sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.2-Godot_v3.2-stable_changelog_authors.txt)).
 
 ## Giving back
 

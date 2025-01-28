@@ -37,8 +37,8 @@ Documentation writers are hard at work to catch up with the new features, and th
 
 The download links are not featured on the [Download](/download) page for now to avoid confusion for new users. Instead, browse one of our download repository and fetch the editor binary that matches your platform:
 
-- [Classical](https://downloads.tuxfamily.org/godotengine/3.1/alpha1)
-- [Mono (*alpha* C# support)](https://downloads.tuxfamily.org/godotengine/3.1/alpha1/mono) - you need Mono SDK **5.12.0** for this alpha
+- [Classical](https://github.com/godotengine/godot-builds/releases/3.1-alpha1)
+- [Mono (*alpha* C# support)](https://github.com/godotengine/godot-builds/releases/3.1-alpha1) - you need Mono SDK **5.12.0** for this alpha
 
 **IMPORTANT:** Make backups of your Godot 3.0 projects before opening them in any 3.1 development build. Once a project has been opened in 3.1, it's `project.godot` file will be updated to a new format for input mappings which is not compatible with Godot 3.0 - the latter will thus refuse to open a 3.1 project. Moreover, using new 3.1 features in your project means that you can't go back to 3.0, unless you do the necessary work to remove the use of those features. So either test 3.1-alpha1 in a copy of your 3.0 projects, or start new projects with it.
 

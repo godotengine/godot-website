@@ -19,7 +19,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 
 Compared to the previous RC 7 build, this release fixes a few regressions in GDNative, rendering, GodotPhysics (BVH), and Android JNI threads. It also fixes the GLES2 fallback option for HTML5 exports.
 
-See the full changelog since 3.2.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.3/rc8/Godot_v3.3-rc8_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3/rc8/Godot_v3.3-rc8_changelog_authors.txt)), or the [**changes since the previous RC 7 build**](https://github.com/godotengine/godot/compare/cca2637b9b9dcb16070eb50a69c601a5f076c683...b076150b086a5001b190a9a20a425d1bc842fe21).
+See the full changelog since 3.2.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.3-rc8/Godot_v3.3-rc8_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3-rc8/Godot_v3.3-rc8_changelog_authors.txt)), or the [**changes since the previous RC 7 build**](https://github.com/godotengine/godot/compare-cca2637b9b9dcb16070eb50a69c601a5f076c683...b076150b086a5001b190a9a20a425d1bc842fe21).
 
 This release is built from commit [b076150b086a5001b190a9a20a425d1bc842fe21](https://github.com/godotengine/godot/commit/b076150b086a5001b190a9a20a425d1bc842fe21).
 
@@ -27,8 +27,8 @@ This release is built from commit [b076150b086a5001b190a9a20a425d1bc842fe21](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.3/rc8/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.3/rc8/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build. (Note: Builds prior to 3.3 RC 7 used Mono 6.12.0.114.)
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.3-rc8) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.3-rc8) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build. (Note: Builds prior to 3.3 RC 7 used Mono 6.12.0.114.)
 
 ## Bug reports
 

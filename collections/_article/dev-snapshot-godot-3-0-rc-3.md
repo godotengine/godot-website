@@ -21,8 +21,8 @@ Keep in mind that C# support is a *work in progress*, and your critical feedback
 
 As always, you will find the binaries for your platform on our mirrors:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/rc3)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/rc3)]
-- Mono version (requires the Mono SDK in version 5.x, ideally 5.4.1.7): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/rc3/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/rc3/mono)]
+- Classical version: [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-rc3)]
+- Mono version (requires the Mono SDK in version 5.x, ideally 5.4.1.7): [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-rc3)]
 
 **Note:** Due to a huge backlog of macOS builds on the buildsystem we use for release binaries, two macOS binaries are missing at the time of this announcement: 1) The Mono-flavoured macOS editor binary. 2) The macOS release export template (the one in the templates zip is for now a copy of the debug export template). This post will be updated once the missing macOS binaries are available.
 

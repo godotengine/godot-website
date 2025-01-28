@@ -65,17 +65,17 @@ Here are the main changes since 3.5-stable:
 - Windows: Fix list dir handle leak ([GH-64461](https://github.com/godotengine/godot/pull/64461)).
 - API documentation updates.
 
-See the full changelog since 3.5-stable [on GitHub](https://github.com/godotengine/godot/compare/3.5-stable...293c3844b3424b4a64d6245f99145266101a146f), or in text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.5.1/rc1/Godot_v3.5.1-rc1_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.5.1/rc1/Godot_v3.5.1-rc1_changelog_chrono.txt)).
+See the full changelog since 3.5-stable [on GitHub](https://github.com/godotengine/godot/compare/3.5-stable...293c3844b3424b4a64d6245f99145266101a146f), or in text form (sorted [by authors](https://github.com/godotengine/godot-builds/releases/3.5.1-rc1/Godot_v3.5.1-rc1_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.5.1-rc1-Godot_v3.5.1-rc1_changelog_chrono.txt)).
 
-This release is built from commit [`293c3844b`](https://github.com/godotengine/godot/commit/293c3844b3424b4a64d6245f99145266101a146f) (see [README](https://downloads.tuxfamily.org/godotengine/3.5.1/rc1/README.txt)).
+This release is built from commit [`293c3844b`](https://github.com/godotengine/godot/commit/293c3844b3424b4a64d6245f99145266101a146f) (see [README](https://github.com/godotengine/godot-builds/releases/3.5.1-rc1README.txt)).
 
 <a id="downloads"></a>
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.5.1/rc1/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.5.1/rc1/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.182** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.5.1-rc1) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.5.1-rc1) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.182** are included in this build.
 
 ## Bug reports
 

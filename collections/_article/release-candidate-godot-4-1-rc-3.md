@@ -38,14 +38,14 @@ There is a number of major changes in Godot 4.1, and you can read more about the
 - Navigation: Fix NavigationAgent position not always updating ([GH-78857](https://github.com/godotengine/godot/pull/78857)).
 - Navigation: Fix crash in `NavigationAgent3D` ([GH-78939](https://github.com/godotengine/godot/pull/78939)).
 
-This release is built from commit [`cdd2313ba`](https://github.com/godotengine/godot/commit/cdd2313ba27d0a2600a18e849b4c5d1fd6a6e351) (see [README](https://downloads.tuxfamily.org/godotengine/4.1/rc3/README.txt)).
+This release is built from commit [`cdd2313ba`](https://github.com/godotengine/godot/commit/cdd2313ba27d0a2600a18e849b4c5d1fd6a6e351) (see [README](https://github.com/godotengine/godot-builds/releases/4.1-rc3-README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.1/rc3/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.1/rc3/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.1-rc3) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.1-rc3) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues

@@ -188,7 +188,7 @@ The main new features are highlighted in bold. Refer to the linked pull requests
 - Editor translation updates.
 - And many more bug fixes and usability enhancements all around the engine!
 
-See the full changelog since 3.2.3-stable ([chronological](https://downloads.tuxfamily.org/godotengine/3.3/rc7/Godot_v3.3-rc7_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3/rc7/Godot_v3.3-rc7_changelog_authors.txt)), or the [changes since the previous RC 6 build](https://github.com/godotengine/godot/compare/15ff752737c53a1727cbc011068afa15683509be...cca2637b9b9dcb16070eb50a69c601a5f076c683).
+See the full changelog since 3.2.3-stable ([chronological](https://github.com/godotengine/godot-builds/releases/3.3-rc7/Godot_v3.3-rc7_changelog_chrono.txt), or [for each contributor](https://downloads.tuxfamily.org/godotengine/3.3-rc7/Godot_v3.3-rc7_changelog_authors.txt)), or the [changes since the previous RC 6 build](https://github.com/godotengine/godot/compare-15ff752737c53a1727cbc011068afa15683509be...cca2637b9b9dcb16070eb50a69c601a5f076c683).
 
 This release is built from commit [cca2637b9b9dcb16070eb50a69c601a5f076c683](https://github.com/godotengine/godot/commit/cca2637b9b9dcb16070eb50a69c601a5f076c683).
 
@@ -196,8 +196,8 @@ This release is built from commit [cca2637b9b9dcb16070eb50a69c601a5f076c683](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.3/rc7/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.3/rc7/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build. (Note: Previous builds used Mono 6.12.0.114.)
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.3-rc7) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.3-rc7) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build. (Note: Previous builds used Mono 6.12.0.114.)
 
 ## Bug reports
 

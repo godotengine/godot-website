@@ -38,14 +38,14 @@ If you enjoy our work please consider [becoming our Patron](https://www.patreon.
 
 And many more small quality of life improvements and bugfixes. See the full changelog below for details.
 
-See the changes between [3.1-stable and 3.1.1-stable](https://github.com/godotengine/godot/compare/320f49f204cfbf9b480fe62aaa7718afb74920a5...66baa3b633fe904ea0d90a9688d602d9f3a0b3bd) on Github, or the [full changelog](http://downloads.tuxfamily.org/godotengine/3.1.1/Godot_v3.1.1-stable_changelog.txt) in text format. This release is built from commit [66baa3b](https://github.com/godotengine/godot/commit/66baa3b633fe904ea0d90a9688d602d9f3a0b3bd).
+See the changes between [3.1-stable and 3.1.1-stable](https://github.com/godotengine/godot/compare/320f49f204cfbf9b480fe62aaa7718afb74920a5...66baa3b633fe904ea0d90a9688d602d9f3a0b3bd) on Github, or the [full changelog](https://github.com/godotengine/godot-builds/releases/3.1.1/Godot_v3.1.1-stable_changelog.txt) in text format. This release is built from commit [66baa3b](https://github.com/godotengine/godot/commit-66baa3b633fe904ea0d90a9688d602d9f3a0b3bd).
 
 ## Downloads
 
 As always, you will find the binaries for your platform on our mirrors:
 
 - Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.1.1/)]
-- Mono version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.1.1/mono)]
+- Mono version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.1.1)]
 
 ## <a id="known-incompatibilites"></a>Known incompatibilities
 

@@ -65,4 +65,4 @@ The main highlights in this maintenance release are:
 - OSX: Fix inverted horizontal scrolling
 - **Hotfix (2016-04-11):** Use non-templated `nearest_power_of_2` (workaround for iOS out-of-memory crash)
 
-See the [full changelog](http://downloads.tuxfamily.org/godotengine/2.0.2/Godot_v2.0.2_stable_changelog.txt) for more details, and head towards the [Download page](/download) to get it!
+See the [full changelog](https://github.com/godotengine/godot-builds/releases/2.0.2/Godot_v2.0.2_stable_changelog.txt) for more details, and head towards the [Download page](-download) to get it!

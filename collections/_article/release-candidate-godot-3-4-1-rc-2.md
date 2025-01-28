@@ -74,19 +74,19 @@ Here are some of the main changes since 3.4-stable:
 - Thirdparty library updates: libogg 1.3.5, libvorbis 1.3.7, minimp3 from 2021-11-30, CA certificates from 2021-11-01.
 - API documentation and translation updates.
 
-See the full changelog since 3.4-stable [on GitHub](https://github.com/godotengine/godot/compare/3.4-stable...d5aa00c2cb6e240ec1ec572e3d4bd9c5325ff219), or in text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.4.1/rc2/Godot_v3.4.1-rc2_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.4.1/rc2/Godot_v3.4.1-rc2_changelog_chrono.txt)).
+See the full changelog since 3.4-stable [on GitHub](https://github.com/godotengine/godot/compare/3.4-stable...d5aa00c2cb6e240ec1ec572e3d4bd9c5325ff219), or in text form (sorted [by authors](https://github.com/godotengine/godot-builds/releases/download/3.4.1-rc2/Godot_v3.4.1-rc2_changelog_authors.txt) or [chronologically](https://github.com/godotengine/godot-builds/releases/download/3.4.1-rc2/Godot_v3.4.1-rc2_changelog_authors.txt)).
 
 If you reviewed changes in [3.4.1 RC 1](/article/release-candidate-godot-3-4-1-rc-1) already, here's the [changelog between RC 1 and RC 2](https://github.com/godotengine/godot/compare/7b0801c7fb4416625fb9ca124b41b93677689420...d5aa00c2cb6e240ec1ec572e3d4bd9c5325ff219).
 
-This release is built from commit [`d5aa00c2c`](https://github.com/godotengine/godot/commit/d5aa00c2cb6e240ec1ec572e3d4bd9c5325ff219) (see [README](https://downloads.tuxfamily.org/godotengine/3.4.1/rc2/README.txt)).
+This release is built from commit [`d5aa00c2c`](https://github.com/godotengine/godot/commit/d5aa00c2cb6e240ec1ec572e3d4bd9c5325ff219) (see [README](https://github.com/godotengine/godot-builds/releases/3.4.1-rc2README.txt)).
 
 <a id="downloads"></a>
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.4.1/rc2/) (GDScript, GDNative, VisualScript).
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.4.1/rc2/mono/) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.4.1-rc2) (GDScript, GDNative, VisualScript).
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.4.1-rc2) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.158** are included in this build.
 
 ## Bug reports
 

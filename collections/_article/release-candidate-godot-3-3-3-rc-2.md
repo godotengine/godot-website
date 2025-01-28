@@ -66,7 +66,7 @@ Here are some of the main changes since 3.3.2-stable:
 - Translation updates.
 - API documentation updates.
 
-See the full changelog since 3.3.2-stable [on GitHub](https://github.com/godotengine/godot/compare/3.3.2-stable...f66ff33b25e1a1298d119b6a198f2562789e5f0c), or in text form (sorted [by authors](https://downloads.tuxfamily.org/godotengine/3.3.3/rc2/Godot_v3.3.3-rc2_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.3.3/rc2/Godot_v3.3.3-rc2_changelog_chrono.txt)). You can also review the [changes since 3.3.3 RC 1](https://github.com/godotengine/godot/compare/dec840452d5986ec8099b92ebabf454757da8b04...f66ff33b25e1a1298d119b6a198f2562789e5f0c).
+See the full changelog since 3.3.2-stable [on GitHub](https://github.com/godotengine/godot/compare/3.3.2-stable...f66ff33b25e1a1298d119b6a198f2562789e5f0c), or in text form (sorted [by authors](https://github.com/godotengine/godot-builds/releases/3.3.3-rc2/Godot_v3.3.3-rc2_changelog_authors.txt) or [chronologically](https://downloads.tuxfamily.org/godotengine/3.3.3-rc2/Godot_v3.3.3-rc2_changelog_chrono.txt)). You can also review the [changes since 3.3.3 RC 1](https://github.com/godotengine/godot/compare-dec840452d5986ec8099b92ebabf454757da8b04...f66ff33b25e1a1298d119b6a198f2562789e5f0c).
 
 This release is built from commit [f66ff33b25e1a1298d119b6a198f2562789e5f0c](https://github.com/godotengine/godot/commit/f66ff33b25e1a1298d119b6a198f2562789e5f0c).
 
@@ -74,9 +74,9 @@ This release is built from commit [f66ff33b25e1a1298d119b6a198f2562789e5f0c](htt
 
 The download links for dev snapshots are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary that matches your platform:
 
-- [Standard build](https://downloads.tuxfamily.org/godotengine/3.3.3/rc2/) (GDScript, GDNative, VisualScript).
+- [Standard build](https://github.com/godotengine/godot-builds/releases/3.3.3-rc2) (GDScript, GDNative, VisualScript).
   * Note: UWP export templates are missing from this build, will be re-added in the next build.
-- [Mono build](https://downloads.tuxfamily.org/godotengine/3.3.3/rc2/mono/) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build.
+- [Mono build](https://github.com/godotengine/godot-builds/releases/3.3.3-rc2) (C# support + all the above). You need to have MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.122** are included in this build.
 
 ## Bug reports
 

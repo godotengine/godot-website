@@ -19,8 +19,8 @@ Note that no release can be bug-free, even if we label it "stable", so don't be 
 
 Enough talk, here are your download links:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/rc1)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/rc1)]
-- Mono version (requires the Mono SDK): [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0/rc1/mono)] [[HTTP mirror](http://op.godotengine.org:81/downloads/3.0/rc1/mono)]
+- Classical version: [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-rc1)]
+- Mono version (requires the Mono SDK): [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-rc1/mono)]
 
 Note that Godot can now download and install the export templates automatically, so you don't need to download them manually.
 

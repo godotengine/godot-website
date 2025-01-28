@@ -19,8 +19,8 @@ I'd like to take this time to thank all of our wonderful contributers who made t
 
 As always, you will find the binaries for your platform on our mirrors:
 
-- Classical version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0.3/rc2)]
-- Mono version: [[HTTPS mirror](https://downloads.tuxfamily.org/godotengine/3.0.3/rc2/mono)]
+- Classical version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.0.3-rc2)]
+- Mono version: [[HTTPS mirror](https://github.com/godotengine/godot-builds/releases/3.0.3-rc2)]
 
 Mono versions require Mono 5.10 on Linux and Windows and Mono 5.8 on MacOS
 

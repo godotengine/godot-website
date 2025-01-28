@@ -118,14 +118,14 @@ Some of the most notable feature changes in this update are:
 - Thirdparty: Update `mymindstorm/setup-emsdk` to v12 ([GH-75339](https://github.com/godotengine/godot/pull/75339)).
 - As well as several improvements to the documentation.
 
-This release is built from commit [`50f26811b`](https://github.com/godotengine/godot/commit/50f26811b0409a0b44b1d7df4532c38cafd0a14a) (see [README](https://downloads.tuxfamily.org/godotengine/4.0.2/rc1/README.txt)).
+This release is built from commit [`50f26811b`](https://github.com/godotengine/godot/commit/50f26811b0409a0b44b1d7df4532c38cafd0a14a) (see [README](https://github.com/godotengine/godot-builds/releases/download/4.0.2-rc1/README.txt)).
 
 ## Downloads
 
 The downloads for this dev snapshot can be found directly on our repository:
 
-* [Standard build](https://downloads.tuxfamily.org/godotengine/4.0.2/rc1/) (GDScript, GDExtension).
-* [.NET 6 build](https://downloads.tuxfamily.org/godotengine/4.0.2/rc1/mono) (C#, GDScript, GDExtension).
+* [Standard build](https://github.com/godotengine/godot-builds/releases/4.0.2-rc1) (GDScript, GDExtension).
+* [.NET 6 build](https://github.com/godotengine/godot-builds/releases/4.0.2-rc1) (C#, GDScript, GDExtension).
   - Requires [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) installed in a standard location.
 
 ## Known issues
