@@ -434,3 +434,15 @@ To celebrate the occasion (and snatch the coveted number) our Release Manager wr
 Concluding our walk through memory lane, the only thing left to say is **thank you**. To those of you who contribute to the engine by code, donations, or growing the community through content creation. To our users, who help promote the project with their own success and battletest new features in real time. We also want to once again thank our [corporate sponsors](https://fund.godotengine.org/#credits) for believing in what we do. Lastly, I want to give a shoutout to my wonderful colleagues, for if they weren’t so incredibly dedicated to organizing and maintaining a collaboration this big, none of this would be possible either.
 
 Don't forget to sign up for ["The Nodeletter"](https://godot.news/subscription/form), to receive more summaries and highlights like these, but up to twice a month!
+
+<form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
+    <div>
+        <input type="hidden" name="nonce" />
+        <input type="email" name="email" required placeholder="E-mail"  style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);"/>
+        <p style="display:none;">
+          <input id="a72d8" type="checkbox" name="l" checked value="a72d8608-e48e-408d-a19f-d425c2c4ba70" />
+          <label for="a72d8">Godot Newsletter </label>
+        </p>
+				<input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
+    </div>
+</form>
