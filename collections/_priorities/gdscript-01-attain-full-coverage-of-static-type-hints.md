@@ -10,6 +10,6 @@ description: |
   We intend to implement static typing for areas that currently lack them. We are thinking about typed dictionaries (already merged for 4.4) and enforcing the typing of signals.
 details:
   - type: prs
-      content: |
-        - [Implement typed dictionaries #78656](https://github.com/godotengine/godot/pull/78656)
+    content: |
+      - [Implement typed dictionaries #78656](https://github.com/godotengine/godot/pull/78656)
 ---
