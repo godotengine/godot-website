@@ -53,7 +53,7 @@
 
 {% if section.subsections != null %}
 	{% for subsection in section.subsections %}
-		<div id="{{ subsection.anchor }}" class="section subsection section-{{ section.anchor }}-{{ subsection.anchor }}">
+		<div id="{{ section.anchor }}-{{ subsection.anchor }}" class="section subsection section-{{ section.anchor }} section-{{ section.anchor }}-{{ subsection.anchor }}">
 			<div class="section-title">
 				<div class="container">
 					<h3>
