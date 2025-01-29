@@ -106,7 +106,7 @@ For the purpose of this retrospective, we approached the engine maintainers dire
 - **2D:** [2D parallax](https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html)
 - **3D:** [3D physics interpolation](https://github.com/godotengine/godot/pull/92391)
 - **Core:** [Typed dictionaries](https://github.com/godotengine/godot/pull/78656)
-- **Editor:** [Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager), [Android Editor:](https://godotengine.org/download/android/) export support
+- **Editor:** [Project Manager refresh](https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager) and **Android Editor:** [Binary export support](https://github.com/godotengine/godot/pull/93526)
 - **Documentation:** [Comment section added](https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs)
 
 ### Platforms
