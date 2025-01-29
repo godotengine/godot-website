@@ -21,6 +21,19 @@ date: 2025-01-28 17:00:00
   background-color: var(--button-card-background-color);
 }
 
+@media screen and (max-width: 700px) {
+  .year-2024-game {
+    grid-template-areas:
+      "img"
+      "box";
+    grid-template-rows:
+      auto
+      auto;
+    grid-template-columns:
+      auto;
+  }
+}
+
 .year-2024-game-image {
   grid-area: img;
 }
@@ -77,7 +90,7 @@ date: 2025-01-28 17:00:00
 
 And with that, the 2024 season comes to an end. What a year it has been, with the number of Godot submissions in game jams rising to new heights, [more people working for the Godot Foundation than ever before](https://godotengine.org/article/godot-foundation-update-dec-2024/), and most industry award shows featuring one if not more games made with Godot.
 
-A busy year inside the project as well. Too much to compile into a single article, unless you want to read pages of meeting notes and technical documentation. So instead, we chose to celebrate the past by looking back at one cherry-pick per month, something you might have missed during the scuffle but is worth learning about even now. 
+A busy year inside the project as well. Too much to compile into a single article, unless you want to read pages of meeting notes and technical documentation. So instead, we chose to celebrate the past by looking back at one cherry-pick per month, something you might have missed during the scuffle but is worth learning about even now.
 
 This could be an event the team attended, a major project milestone being reached, or a fun moment online the Godot community gathered around. Likewise, we looked at the release dates of notable [Godot games on Steam](https://steamdb.info/tech/Engine/Godot/) and decided to introduce you to some favorites alongside our own organizational news. The separate tech highlight section might even introduce you to a feature or two you missed out on so far.
 
