@@ -278,53 +278,51 @@ $donate-robot-size: 500px;
 #links {
 	margin-top: 0;
 	margin-bottom: 0;
+}
 
-	#links-links {
-		.links-container {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			width: 100%;
+.links-container {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 
-			display: flex;
-			flex-wrap: wrap;
-			gap: calc(var(--card-padding) / 2);
-			align-items: center;
-			justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc(var(--card-padding) / 2);
+	align-items: center;
+	justify-content: center;
 
-			& > li {
-				margin: 0;
+	& > li {
+		margin: 0;
+	}
+
+	.link {
+		display: flex;
+		min-width: 50px;
+		font-weight: 700;
+		align-items: center;
+		justify-content: center;
+		padding: calc(var(--card-padding) / 2);
+		border-radius: calc(var(--card-padding) / 2);
+		text-decoration: none;
+		color: white;
+		font-size: 0.75em;
+
+		@each $section-name, $section-colors in $sections {
+			&.link-#{$section-name} {
+				--color-top: #{map-get($section-colors, "color-top")};
+				--color-bottom: #{map-get($section-colors, "color-bottom")};
+				background: linear-gradient(
+					to bottom,
+					var(--color-top),
+					var(--color-bottom)
+				);
 			}
+		}
 
-			.link {
-				display: flex;
-				min-width: 50px;
-				font-weight: 700;
-				align-items: center;
-				justify-content: center;
-				padding: calc(var(--card-padding) / 2);
-				border-radius: calc(var(--card-padding) / 2);
-				text-decoration: none;
-				color: white;
-				font-size: 0.75em;
-
-				@each $section-name, $section-colors in $sections {
-					&.link-#{$section-name} {
-						--color-top: #{map-get($section-colors, "color-top")};
-						--color-bottom: #{map-get($section-colors, "color-bottom")};
-						background: linear-gradient(
-							to bottom,
-							var(--color-top),
-							var(--color-bottom)
-						);
-					}
-				}
-
-				&:hover {
-					& > span {
-						text-decoration: underline;
-					}
-				}
+		&:hover {
+			& > span {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -828,6 +826,12 @@ $donate-robot-size: 500px;
 									text-decoration-color: color-mix(in srgb, var(--color-invert-highlight), black 10%);
 								}
 							}
+							.links-container {
+								a, a:visited {
+									color: white;
+									text-decoration-color: white;
+								}
+							}
 						}
 
 						.c-link {
@@ -1128,6 +1132,13 @@ $donate-robot-size: 500px;
 								}
 								&:last-of-type {
 									margin-bottom: 0;
+								}
+							}
+
+							.links-container {
+								a, a:visited {
+									color: white;
+									text-decoration-color: white;
 								}
 							}
 
