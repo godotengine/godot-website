@@ -1,8 +1,12 @@
 - name: "4.4"
-  flavor: "rc3"
-  release_date: "28 February 2025"
-  release_notes: "/article/release-candidate-godot-4-4-rc-3/"
+  flavor: "stable"
+  release_date: "3 March 2025"
+  release_notes: "/article/godot-4-4-a-unified-experience/"
+  featured: "4"
   releases:
+    - name: "rc3"
+      release_date: "28 February 2025"
+      release_notes: "/article/release-candidate-godot-4-4-rc-3/"
     - name: "rc2"
       release_date: "26 February 2025"
       release_notes: "/article/release-candidate-godot-4-4-rc-2/"
@@ -47,7 +51,6 @@
   flavor: "stable"
   release_date: "15 August 2024"
   release_notes: "/article/godot-4-3-a-shared-effort/"
-  featured: "4"
   releases:
     - name: "rc3"
       release_date: "8 August 2024"

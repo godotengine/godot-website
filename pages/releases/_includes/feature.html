@@ -1,0 +1,204 @@
+{% assign section_anchor = include.section_anchor %}
+{% assign feature = include.feature %}
+
+{% assign importance = feature.importance | default: "4" | plus: 0 %}
+{% assign has_media = false %}
+{% assign is_video = false %}
+{% assign is_image = false %}
+{% if feature.video_src == null and feature.image_src == null %}
+	{% comment %}
+	{% endcomment %}
+{% else %}
+	{% assign has_media = true %}
+	{% assign media_position = feature.media_position | default: 'top' %}
+	{% if feature.video_src != null %}
+		{% assign is_video = true %}
+	{% else %}
+		{% assign is_image = true %}
+	{% endif %}
+{% endif %}
+
+{% assign media_class = "" %}
+{% if has_media %}
+	{% assign media_class = "media-" | append: media_position %}
+{% endif %}
+
+{% assign span = "" %}
+{% if section_anchor == "highlights" %}
+	{% if importance == 1 %}
+		{% assign span = "span-2" %}
+	{% endif %}
+{% elsif importance == 2 %}
+	{% assign span = "span-3" %}
+{% elsif importance == 3 %}
+	{% assign span = "span-2" %}
+{% endif %}
+
+{% assign inverted = "" %}
+{% if feature.inverted %}
+	{% assign inverted = "inverted" %}
+{% endif %}
+
+<div id="{{feature.anchor}}" class="release-card {{media_class}} {{span}} {{inverted}}">
+	<div class="release-card-container">
+		<div class="release-card-content">
+			<div class="release-card-content-container">
+				<!-- .c-title -->
+				<h4 class="c-title">
+					<a href="#{{feature.anchor}}">{{feature.title | markdownify}}</a>
+				</h4>
+
+				<!-- .c-blockquote -->
+				{% if feature.blockquote != null and importance < 4 %}
+					<div class="c-blockquote">
+						{{ feature.blockquote | markdownify }}
+					</div>
+				{% endif %}
+
+				<!-- .c-content -->
+				<div class="c-content">
+					{{ feature.text | markdownify }}
+				</div>
+
+				<!-- .c-link -->
+				{% if feature.contributors == null %}
+					{% assign contributors = "" | split: "," %}
+				{% else %}
+					{% assign contributors = feature.contributors %}
+				{% endif %}
+
+				{% assign contributors_json = "[" %}
+				{% for contributor in contributors %}
+					{% assign contributors_json = contributors_json | append: "{" | append: '"name": "' | append: contributor.name | append: '", "github": "' | append: contributor.github | append: '" }' %}
+					{% if forloop.index != forloop.length %}
+						{% assign contributors_json = contributors_json | append: "," %}
+					{% endif %}
+				{% endfor %}
+				{% assign contributors_json = contributors_json | append: "]" %}
+
+				<div class="c-link"
+					 data-contributors='{{ contributors_json }}'
+					 data-read-more="{{ feature.read_more }}">
+					<a class="c-link-a" href="{{ feature.read_more }}" target="_blank">Read more</a>
+					<div class="contributor-area">
+						{% assign contributors_size = contributors | size %}
+						<div class="contributor-icon">
+							<span class="material-symbols-outlined">
+								{% if contributors_size == 1 %}
+									person
+								{% elsif contributors_size == 2 %}
+									group
+								{% else %}
+									groups
+								{% endif %}
+							</span>
+						</div>
+						<div class="contributor-list">
+							<span>
+								Contributed by {% for contributor in contributors %}{% assign is_last = forloop.last %}{% assign penultimate_index = forloop.length | minus: 1 %}<a href="https://github.com/{{contributor.github}}" title="@{{contributor.github}} on GitHub" target="_blank">{{ contributor.name }}</a>{% if forloop.last != true %}{% if contributors_size == 2 %} and {% elsif contributors_size >= 3 %}, {% if forloop.index == penultimate_index %} and {% endif %}{% endif %}{% endif %}{% endfor %}
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% if has_media %}
+			<div class="release-card-media">
+				{% assign position_class = "" %}
+				{% if feature.position != null %}
+					{% assign position_class = "position-" | append: feature.position %}
+				{% endif %}
+
+				{% if is_video %}
+					<div class="release-card-video-container">
+						<noscript>
+							<video class="release-card-video {{position_class}}"
+								   	   playsinline="playsinline"
+								   	   disablepictureinpicture="disablepictureinpicture"
+								   	   autoplay="autoplay"
+								   	   loop="loop"
+								   	   muted="muted"
+								   	   poster="{{ feature.video_poster }}">
+									<source src="{{ feature.video_src }}"
+											type="video/webm" />
+							</video>
+						</noscript>
+						{% if feature.video_label != null %}
+							<div class="release-card-video-label">{{feature.video_label}}</div>
+						{% endif %}
+					</div>
+					{% if feature.video_comparison_src != null %}
+						<div class="release-card-video-container video-comparison-b">
+							<noscript>
+								<video class="release-card-video {{position_class}}"
+									   playsinline="playsinline"
+									   disablepictureinpicture="disablepictureinpicture"
+									   autoplay="autoplay"
+									   loop="loop"
+									   muted="muted"
+									   poster="{{ feature.video_comparison_poster }}">
+									<source src="{{ feature.video_comparison_src }}"
+											type="video/webm" />
+								</video>
+							</noscript>
+
+							{% if feature.video_comparison_label != null %}
+								<div class="release-card-video-label">{{feature.video_comparison_label}}</div>
+							{% endif %}
+						</div>
+						<div class="release-card-comparison">
+							<div class="comparison-range-indicator"></div>
+							<input type="range"
+								   id="{{feature.anchor}}-comparison-range"
+								   class="comparison-range"
+								   step="0.0001"
+								   min="0"
+								   max="100"
+								   value="50">
+						</div>
+					{% endif %}
+				{% endif %}
+				{% if is_image %}
+					<div class="release-card-image-container">
+						<img class="release-card-image {{position_class}}"
+							 alt="{{ feature.image_alt }}"
+							 src="{{ feature.image_src }}"
+							 srcset="{{ feature.image_src_2x }} 2x"
+							 draggable="false" />
+						{% if feature.image_label != null %}
+							<div class="release-card-image-label">{{feature.image_label}}</div>
+						{% endif %}
+					</div>
+					{% if feature.image_comparison_src != null %}
+						<div class="release-card-image-container image-comparison-b">
+							<img class="release-card-image {{position_class}}"
+								 alt="{{ feature.image_comparison_alt }}"
+								 src="{{ feature.image_comparison_src }}"
+								 srcset="{{ feature.image_comparison_src_2x }} 2x" />
+							{% if feature.image_comparison_label != null %}
+								<div class="release-card-image-label release-card-image-label-comparison">
+									{{feature.image_comparison_label}}
+								</div>
+							{% endif %}
+						</div>
+						<div class="release-card-comparison">
+							<div class="comparison-range-indicator"></div>
+							<input type="range"
+								   id="{{feature.anchor}}-comparison-range"
+								   class="comparison-range"
+								   step="0.0001"
+								   min="0"
+								   max="100"
+								   value="50">
+						</div>
+					{% endif %}
+				{% endif %}
+				{% if feature.content_creator != null %}
+					<div class="release-card-content-creator">
+						{{ feature.content_creator | markdownify }}
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+	</div>
+</div>
