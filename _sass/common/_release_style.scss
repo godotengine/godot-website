@@ -86,6 +86,7 @@ $sections: r-generate-sections(
 	$base-color: $color-godot-blue,
 	$offset: $section-hue-offset
 );
+$subsection-base-color: grey;
 
 $donate-robot-size: 500px;
 
@@ -1296,6 +1297,11 @@ $donate-robot-size: 500px;
 						--color-highlight-switch: #{map-get($section-colors, "color-highlight")};
 					}
 				}
+			}
+
+			&.subsection {
+				--color-top: #{adjust-color($subsection-base-color, $lightness: 10)};
+				--color-bottom: #{$subsection-base-color};
 			}
 
 			.section-title {
