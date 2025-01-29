@@ -1,0 +1,42 @@
+{% assign feature = include.feature %}
+
+{% if feature.media == null %}
+	{% assign media_position = 'none' %}
+{% else %}
+	{% assign media_position = feature.media_position | default: 'none' %}
+{% endif %}
+
+<div id="{{feature.anchor}}" class="release-card media-{{media_position}}">
+	<div class="release-card-container">
+		<div class="release-card-content">
+			<div class="release-card-content-container">
+				<h4 class="c-title">
+					<a href="#{{feature.anchor}}">{{feature.title}}</a>
+				</h4>
+				{% if feature.blockquote != null %}
+					<div class="c-blockquote">
+						{{ feature.blockquote | markdownify }}
+					</div>
+				{% endif %}
+				<div class="c-content">
+					{{ feature.content | markdownify }}
+				</div>
+				{% if feature.contributors == null %}
+					{% assign contributors = "" | split: "," %}
+				{% else %}
+					{% assign contributors = feature.contributors %}
+				{% endif %}
+				<div class="c-link"
+					data-contributors="{{ contributors | join ',' }}"
+					data-read-more="{{ feature.read_more }}"
+				>
+					<!-- For no-script users. -->
+					<a href="{{ feature.read_more }}" target="_blank">Read more</a>
+					<small>
+						Contributed by {% for contributor in contributors %}<a href="https://github.com/{{contributor}}" target="_blank">{{ contributor }}</a>{% if forloop.last != true %}, {% endif %}{% endfor %}
+					</small>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

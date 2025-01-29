@@ -1,0 +1,79 @@
+{% assign section = include.section %}
+{% assign data = include.data %}
+
+<div id="{{ section.anchor }}" class="section section-{{ section.anchor }}">
+	<div class="section-title">
+		<div class="container">
+			<h3>
+				<a href="#{{ section.anchor }}">{{ section.name }}</a>
+				<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+			</h3>
+		</div>
+		{% if section.subsections != null %}
+			<div class="container">
+				<div id="{{ section.anchor }}-links" class="release-card transparent-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-content">
+									<ul class="links-container">
+										{% for subsection in section.subsections %}
+											<li>
+												<a
+													class="link link-{{section.anchor}}-{{subsection.anchor}}"
+													href="#{{section.anchor}}-{{subsection.anchor}}"
+												>
+													<span>{{subsection.name}}</span>
+												</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+	{% if section.subsections == null %}
+		<div class="container">
+			<div class="release-cards two-columns">
+				{% assign features = data | where: "section", section.anchor | sort: "rank" %}
+				{% for feature in features %}
+					{%
+						include_relative _includes/feature.html
+						feature=feature
+					%}
+				{% endfor %}
+			</div>
+		</div>
+	{% endif %}
+</div>
+
+{% if section.subsections != null %}
+	{% for subsection in section.subsections %}
+		<div id="{{ subsection.anchor }}" class="section subsection section-{{ section.anchor }}-{{ subsection.anchor }}">
+			<div class="section-title">
+				<div class="container">
+					<h3>
+						<a href="#{{ section.anchor }}-{{ subsection.anchor }}">{{ subsection.name }}</a>
+						<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+					</h3>
+				</div>
+			</div>
+		</div>
+
+		{% assign features = data | where: "section", section.anchor | where: "subsection", subsection.anchor | sort: "rank" %}
+		<div class="container">
+			<div class="release-cards two-columns">
+				{% for feature in features %}
+					{%
+						include_relative _includes/feature.html
+						feature=feature
+					%}
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+{% endif %}

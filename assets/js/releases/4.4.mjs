@@ -138,6 +138,10 @@ for (const author of authors) {
 const cLinks = Array.from(document.querySelectorAll(".c-link"));
 for (const cLink of cLinks) {
 	if (cLink.dataset.readMore != null) {
+		// Clear cLink of no-script content.
+		while (cLink.lastChild != null) {
+			cLink.lastChild.remove();
+		}
 		const cLinkA = cLink.appendChild(document.createElement("a"));
 		cLinkA.href = cLink.dataset.readMore;
 		cLinkA.classList.add("c-link-a");

@@ -45,35 +45,15 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|10Drenth,1,1|2nafish117,1,1|31,1,
 {% assign release_version_number = "4.4" %}
 {% assign release_version = release_version_number | make_release_version: "stable" %}
 
-{% assign _intro = site.release_4_4 | where: "category", "intro" | sort: "rank" %}
+{% assign data = site.release_4_4 %}
 
-{% assign _foundation = site.release_4_4 | where: "category", "foundation" | sort: "rank" %}
+{% assign _intro = data | where: "type", "entry" | where: "category", "intro" | sort: "rank" %}
 
-{% assign _highlight_features = site.release_4_4 | where: "category", "highlight" | sort: "rank" %}
-{% assign _2d_features = site.release_4_4 | where: "category", "2d" | sort: "rank" %}
-{% assign _3d_features = site.release_4_4 | where: "category", "3d" | sort: "rank" %}
-{% assign _core_features = site.release_4_4 | where: "category", "core" | sort: "rank" %}
-{% assign _editor_features = site.release_4_4 | where: "category", "editor" | sort: "rank" %}
-{% assign _gui_features = site.release_4_4 | where: "category", "gui" | sort: "rank" %}
-{% assign _platforms_android_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "android" | sort: "rank" %}
-{% assign _platforms_linux_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "linux" | sort: "rank" %}
-{% assign _platforms_macos_ios_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "macos_ios" | sort: "rank" %}
-{% assign _platforms_windows_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "windows" | sort: "rank" %}
-{% assign _platforms_web_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "web" | sort: "rank" %}
-{% assign _scripting_dotnet_features = site.release_4_4 | where: "category", "scripting" | where: "subcategory", "dotnet" | sort: "rank" %}
-{% assign _scripting_gdextension_features = site.release_4_4 | where: "category", "scripting" | where: "subcategory", "gdextension" | sort: "rank" %}
-{% assign _scripting_gdscript_features = site.release_4_4 | where: "category", "scripting" | where: "subcategory", "gdscript" | sort: "rank" %}
-{% assign _systems_animation_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "animation" | sort: "rank" %}
-{% assign _systems_audio_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "audio" | sort: "rank" %}
-{% assign _systems_import_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "import" | sort: "rank" %}
-{% assign _systems_navigation_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "navigation" | sort: "rank" %}
-{% assign _systems_physics_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "physics" | sort: "rank" %}
-{% assign _systems_rendering_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "rendering" | sort: "rank" %}
-{% assign _systems_vfx_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "vfx" | sort: "rank" %}
-{% assign _systems_xr_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "xr" | sort: "rank" %}
-{% assign _documentation_features = site.release_4_4 | where: "category", "documentation" | sort: "rank" %}
+{% assign _sections = data | where: "type", "section" %}
 
-{% assign _special_thanks = site.release_4_4 | where: "category", "special_thanks" | sort: "rank" %}
+{% assign _foundation = data | where: "type", "entry" | where: "category", "foundation" | sort: "rank" %}
+
+{% assign _special_thanks = data | where: "type", "entry" | where: "category", "special_thanks" | sort: "rank" %}
 
 <link rel="stylesheet" href="/assets/css/material-symbols-outlined.css" />
 <link rel="stylesheet" href="/assets/css/releases/4.4.css" />
@@ -196,8 +176,8 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|10Drenth,1,1|2nafish117,1,1|31,1,
 								<div class="c-content">
 									<ul class="links-container">
 										<li><a class="link link-highlights" href="#highlights"><span>Highlights</span></a></li>
-										<li><a class="link link-2D" href="#_2D"><span>2D</span></a></li>
-										<li><a class="link link-3D" href="#_3D"><span>3D</span></a></li>
+										<li><a class="link link-_2D" href="#_2D"><span>2D</span></a></li>
+										<li><a class="link link-_3D" href="#_3D"><span>3D</span></a></li>
 										<li><a class="link link-core" href="#core"><span>Core</span></a></li>
 										<li><a class="link link-documentation" href="#documentation"><span>Documentation</span></a></li>
 										<li><a class="link link-editor" href="#editor"><span>Editor</span></a></li>
@@ -214,192 +194,11 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|10Drenth,1,1|2nafish117,1,1|31,1,
 			</div>
 		</div>
 	</div> <!-- #links -->
-
-	<div id="highlights" class="section section-highlights">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#highlights">Highlights</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #highlights -->
-
-	<div id="_2D" class="section section-2D">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#_2D">2D</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #2D -->
-
-	<div id="_3D" class="section section-3D">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#_3D">3D</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #3D -->
-
-	<div id="core" class="section section-core">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#core">Core</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #core -->
-
-	<div id="documentation" class="section section-documentation">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#documentation">Documentation</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #documentation -->
-
-	<div id="editor" class="section section-editor">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#editor">Editor</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #editor -->
-
-	<div id="GUI" class="section section-GUI">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#GUI">GUI</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #GUI -->
-
-	<div id="platforms" class="section section-platforms">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#platforms">Platforms</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-			<div class="container">
-				<div id="platform-links" class="release-card transparent-card span-3">
-					<div class="release-card-container">
-						<div class="release-card-content">
-							<div class="release-card-content-container">
-								<div class="c-content">
-									<ul class="links-container">
-										<li><a class="link link-platform-android" href="#platform-android"><span>Android</span></a></li>
-										<li><a class="link link-platform-linux" href="#platform-linux"><span>Linux</span></a></li>
-										<li><a class="link link-platform-macos-ios" href="#platform-macos-ios"><span>macOS and iOS</span></a></li>
-										<li><a class="link link-platform-windows" href="#platform-windows"><span>Windows</span></a></li>
-										<li><a class="link link-platform-web" href="#platform-web"><span>Web</span></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #platforms -->
-
-	<div id="scripting" class="section section-scripting">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#scripting">Scripting</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-			<div class="container">
-				<div id="scripting-links" class="release-card transparent-card span-3">
-					<div class="release-card-container">
-						<div class="release-card-content">
-							<div class="release-card-content-container">
-								<div class="c-content">
-									<ul class="links-container">
-										<li><a class="link link-scripting-dotnet" href="#scripting-dotnet"><span>C#/.NET</span></a></li>
-										<li><a class="link link-scripting-gdextension" href="#scripting-gdextension"><span>GDExtension</span></a></li>
-										<li><a class="link link-scripting-gdscript" href="#scripting-gdscript"><span>GDScript</span></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #scripting -->
-
-	<div id="systems" class="section section-systems">
-		<div class="section-title">
-			<div class="container">
-				<h3>
-					<a href="#systems">Systems</a>
-					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-				</h3>
-			</div>
-			<div class="container">
-				<div id="system-links" class="release-card transparent-card span-3">
-					<div class="release-card-container">
-						<div class="release-card-content">
-							<div class="release-card-content-container">
-								<div class="c-content">
-									<ul class="links-container">
-										<li><a class="link link-system-animation" href="#system-animation"><span>Animation</span></a></li>
-										<li><a class="link link-system-audio" href="#system-audio"><span>Audio</span></a></li>
-										<li><a class="link link-system-import" href="#system-import"><span>Import</span></a></li>
-										<li><a class="link link-system-navigation" href="#system-navigation"><span>Navigation</span></a></li>
-										<li><a class="link link-system-physics" href="#system-physics"><span>Physics</span></a></li>
-										<li><a class="link link-system-rendering" href="#system-rendering"><span>Rendering</span></a></li>
-										<li><a class="link link-system-VFX" href="#system-VFX"><span>VFX</span></a></li>
-										<li><a class="link link-system-XR" href="#system-XR"><span>XR</span></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-		</div>
-	</div> <!-- #systems -->
+	{% for section in _sections %}
+		{%
+			include_relative _includes/section.html
+			section=section
+			data=data
+		%}
+	{% endfor %}
 </div>
