@@ -1,0 +1,405 @@
+---
+permalink: /releases/4.4/index.html
+title: "[Title placeholder]"
+description: "[Description placeholder]"
+image: /storage/blog/covers/godot-4-4.webp
+layout: release
+
+todo_for_authors_list: >
+  1. Go to https://godotengine.github.io/godot-interactive-changelog/#4.4
+  2. Click on _N contributors_
+  3. Execute this script in the console:
+  ```javascript
+  await (async function () {
+    const nextFrame = () => {
+      return new Promise((resolve, _) => {
+        requestAnimationFrame(() => resolve());
+      });
+    };
+    const authors = [];
+    const changesList = document.querySelector("entry-component").shadowRoot.querySelector("gr-changes-list").shadowRoot;
+    for (const author of changesList.querySelectorAll("gr-author-item")) {
+      const shadowRoot = author.shadowRoot;
+      const showMore = shadowRoot.querySelector(".item-changes-more");
+      if (showMore != null) {
+        showMore.click();
+        await nextFrame();
+      }
+
+      const commits = Array.from(shadowRoot.querySelectorAll(".item-changes-list"))[0].querySelectorAll("li");
+      const prs = Array.from(shadowRoot.querySelectorAll(".item-changes-list"))[1].querySelectorAll("li");
+
+       authors.push({
+        handle: shadowRoot.querySelector(".item-title-name").textContent,
+        commits: commits.length,
+        prs: prs.length
+      });
+    }
+    return authors.toSorted((a, b) => a.handle.localeCompare(b.handle, "en", { ignorePunctuation: true })).map((author) => `${author.handle},${author.commits},${author.prs}`).join("|");
+  })().catch((err) => console.error(err));
+  ```
+
+authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|10Drenth,1,1|2nafish117,1,1|31,1,1|4d49,1,1|a0kami,1,1|aaronfranke,36,28|aaronp64,13,13|adamscott,30,27|AdriaandeJongh,2,2|AeioMuch,2,2|AinaVT,1,1|a-johnston,3,3|ajreckof,3,3|akien-mga,62,58|akx,1,1|alesliehughes,2,2|alessand10,3,3|Alex2782,3,3|alexkar598,1,1|allenwp,7,7|Althar93,1,1|alula,1,1|alvinhochun,15,9|amarsero,1,1|and-rad,1,1|andrei-g99,1,1|AndrewShobbrook,1,1|andyprice,2,1|anknetau,1,1|anniryynanen,1,1|anvilfolk,3,3|apples,1,1|ArchercatNEO,2,2|ArjhanToteck,1,1|arkology,8,8|Arnklit,6,6|ArshPanesar,1,1|ArthyChaux,1,1|aryan-11825114,4,4|AshWolf,1,1|AThousandShips,71,69|AtlaStar,2,2|ator-dev,1,1|aXu-AP,9,9|axunes,1,1|badsectoracula,4,4|basicer,1,1|BastiaanOlij,15,15|BattyBovine,0,1|beev1s,0,1|beicause,5,5|berarma,1,1|beru,1,1|betalars,1,1|biswas08433,1,1|bits-by-brandon,1,1|bjornmp,1,1|Black-Cat,1,1|BlackShift,1,1|BlueCube3310,50,50|bobby-the-epic,1,1|Bonkahe,3,3|Bossdell113,1,1|Breush,1,1|brevven,1,1|BrianBHuynh,2,2|brno32,1,1|Bromeon,4,4|bruno-brant,1,1|bruvzg,148,148|buresu,3,3|CabalCrow,1,1|cadence-s,2,2|Calinou,93,94|Carbonyte,1,1|carsonetb,1,1|C-BJ,1,1|Chaosed0,1,1|Chaosus,42,42|chocola-mint,3,3|ChrisBase,1,1|Chubercik,4,4|citizenll,1,1|cixil,1,1|ckaiser,2,2|clayjohn,60,60|cloudofoz,1,1|cmumme,1,1|colinator27,1,1|ComycSans,1,1|cooperra,1,1|CrabNickolson,1,1|Craig-Stoneham,1,1|CrayolaEater,3,3|CrazyRoka,1,1|CreatedBySeb,2,2|CreepGin,1,1|crei0,1,1|CW-Jesse,2,1|D0V4HKIIN,1,1|dalexeev,35,35|DanielGSilva,0,1|DanielKinsman,1,1|DarioSamo,27,28|DarkMessiah,1,1|darksylinc,12,13|davidrautert,1,1|davthedev,2,2|Daylily-Zeleen,6,6|dbnicholson,3,3|DCTewi,1,1|DearthDev,1,1|DeeJayLSP,13,13|Delsin-Yu,4,4|demolke,8,7|detomon,3,3|DevilboxGames,1,1|devloglogan,5,5|DevPoodle,2,2|DictyosteliumDiscoideum,1,1|ditiem,1,1|ditiem-games,0,1|dnllowe,1,1|dog-on-moon,1,1|Dowsley,2,2|Drako,1,1|Dr-helicopter,1,1|dsnopek,33,33|DubiousDuck,1,1|ducklin5,1,1|dustdfg,25,25|EAinsley,4,4|ecmjohnson,1,1|edwin0cheng,1,1|EelisOtsamo,1,1|EIREXE,1,2|ellenhp,1,1|elliotfontaine,1,1|elmajime,0,1|elpozewaunig,2,2|emanvidmaker,1,1|EMBYRDEV,1,1|EmrysMyrddin,1,1|EnlightenedOne,0,2|eobet,1,1|ershn,1,1|esainane,2,2|EspeuteClement,1,1|ev13bird,3,3|eviltrout,2,2|Fahien,1,1|Faless,25,24|fedyfausto,1,1|fire,10,11|Flarkk,10,10|FlooferLand,1,1|Flynsarmy,1,1|foxydevloper,1,1|Fruitsalad,1,1|fstxz,1,1|fuzzybinary,1,1|Gaktan,3,3|Garetonchick,1,1|Geekotron,1,1|Geometror,14,14|Germenzi,1,1|ghost,12,12|Giganzo,24,24|gio3k,1,1|girdenis-p,1,1|gongpha,2,2|Goutte,1,1|GrahameGW,1,1|graydoubt,1,1|GreenCrowDev,1,1|grenappels,1,1|Gromph,1,1|groud,1,1|gturri,1,1|GuacamoleAficionado,1,1|guerro323,1,1|GuilhermeGSousa,3,3|GustJc,2,2|hakro,3,3|Hakunamawatta,2,2|Harsche,1,1|havi05,9,9|hayahane,2,2|Hilderin,36,36|HKunogi,1,1|HolonProduction,21,21|hpvb,16,16|hunterkepley,1,1|hunterloftis,1,1|HuntJSparra,2,2|huwpascoe,2,2|Hysterelius,1,1|ianmccleary,1,1|Illauriel,1,1|ImpishOaths,1,1|IntangibleMatter,1,1|iscke,1,1|ItzCog,2,2|Ivorforce,33,33|j20001970,3,3|Jabberdrake,1,1|JackErb,1,1|jadeharley2,1,1|jadoc,2,2|jamie-pate,1,1|jasonmorgado,1,1|jaydensipe,5,5|jburt137,1,1|JekSun97,1,1|jeronimo-schreyer,1,1|Jesusemora,1,1|jirisvd,2,2|jitspoe,1,1|jj11hh,1,1|jman168,1,1|jolexxa,1,1|jonatanrojderd,1,1|jordi-star,2,2|Jordyfel,2,2|Joy-less,1,1|jrouwe,1,1|jsjtxietian,16,16|jss2a98aj,1,1|jtcat,1,1|juanjp600,6,6|JulianHeuser,1,1|jweisberg,1,1|jwinarske,1,1|jwodicka,1,1|kerstop,1,1|kevinkuo52,2,2|KeyboardDanni,2,2|Khusheete,1,1|Kiisu-Master,1,1|Kimau,1,1|KingTheFifth,1,1|kiroxas,11,11|kisg,4,4|kitbdev,21,21|kleonc,17,15|KoBeWi,132,132|konczg,1,1|Koyper,1,1|krm01,1,1|kroketio,3,3|kthang55,1,1|kus04e4ek,2,2|L2750558108,1,1|LainAmongYou,1,1|lalitshankarchowdhury,5,5|lander-vr,7,7|LaneSBarnes,1,1|LanzaSchneider,1,1|larspet,10,10|lawnjelly,6,6|Lazy-Rabbit-2001,4,4|LeonardoDemartino,1,1|LeonStansfield,4,3|libklein,1,1|Lielay9,4,4|limbonaut,1,1|lodicolo,1,1|Logharaa,1,1|lpenguin,1,1|Lssikkes,1,1|Luis-Wong,1,1|LuizZak,1,1|Lunarisnia,1,1|LunaTheFoxgirl,1,1|lyuma,4,4|m4gr3d,29,24|Macksaur,2,2|maidopi-usagi,1,1|majikayogames,1,1|MajorMcDoom,7,7|Malcolmnixon,3,3|Manik2607,2,2|Maran23,5,5|marcelovbcfilho,1,1|MarcusAahl,1,1|markdibarry,3,3|markeel,1,1|mateuseap,1,1|matheusmdx,3,3|matmas,1,1|matthewestopinal,1,1|MaxIsJoe,1,1|mayoff,0,1|MBCX,2,2|mdelorme,3,3|Meccanizer,1,1|mechalynx,2,1|megalon,1,1|Meorge,9,9|MewPurPur,6,6|mh114,1,1|mhilbrunner,2,2|MichaelMacha,1,1|Mickeon,39,38|mihe,17,17|MileyHollenberg,2,2|miv391,3,3|MJacred,1,1|MonterraByte,1,1|monxa,1,1|mosquitochang,0,1|m-pranav-r,2,2|mrsaturnsan,5,5|Musicgun47,1,1|MylesScholz,1,1|Namey5,6,6|Naros,6,6|Nazarwadim,9,8|nikitalita,4,4|Nikitf777,1,1|Nodragem,4,4|noidexe,4,3|nongvantinh,1,1|NotWearingPants,1,1|Nova840,1,1|ntlblpm,1,1|object71,2,2|ogapo,1,1|ohboh,1,1|olawlor,1,1|OlesyaGerasimenko,1,1|opsocket,1,1|OS-of-S,1,1|paddy-exe,3,4|pafuent,14,14|passivestar,19,19|patowen,1,1|pattlebass,1,1|patwork,1,1|paulloz,3,3|permelin,1,1|peterdang1502,2,2|pgrit,1,1|PhairZ,2,2|picoxr,1,1|pkdawson,1,1|pkowal1982,2,2|PoqXert,1,1|Praytic,1,1|QbieShay,2,2|qwertychomp,1,1|RadiantUwU,5,5|rakkarage,1,1|RandomShaper,50,39|Ratio2,1,1|raulsntos,31,30|rburing,5,5|rcadena,1,1|reach-satori,2,2|RedMser,6,6|RedOrbweaver,1,1|reduz,8,8|RedworkDE,1,1|Repiteo,60,55|Rindbee,2,2|Riteo,12,10|RobProductions,4,4|Rocka06,2,2|rohanrhu,1,1|RossRothenstine,1,1|RoyBerardo,1,1|RPicster,1,1|rptfrg,1,1|rsubtil,4,2|Rudolph-B,6,6|rune-scape,20,20|Ryan-000,2,2|ryanbraganza,1,1|ryevdokimov,11,11|Rynzier,1,1|samsface,1,1|SaNeOr,1,1|SaracenOne,23,23|Sauermann,13,13|scgm0,4,4|Scony,1,1|sepTN,1,1|shahriarlabib000,4,4|shana,2,2|shatyuka,1,1|SheepYhangCN,1,1|skyace65,2,2|SkylerGoh-dev,1,1|SlashScreen,3,3|SlienCode,1,1|SlugFiller,1,1|smix8,32,32|smnast,1,1|snyk-bot,1,1|sofia285,1,1|SomeRanDev,2,2|sorascode,1,1|SourceOfHTML,1,1|spanzeri,1,1|Spartan322,1,1|spoxii,2,2|squidgyberries,1,1|StaydMcMuffin,3,3|stdmnpkg,2,1|stechyo,2,1|SteffenBlake,1,1|Sticksman,2,2|stijn-h,3,3|stmSi,1,1|Stronkkey,1,1|stuartcarnie,29,29|SubmergedTree,1,1|Summersay415,9,9|syntaxerror247,36,34|Synzorasize,1,1|Tallivm,1,1|TCROC,4,4|tdaven,4,4|TestSubject06,1,1|tetrapod00,31,31|theashtronaut,1,1|thedinosoar,1,1|theDrake,1,1|theraot,1,1|TheSofox,4,4|TheYellowArchitect,1,1|thiagola92,2,2|thimenesup,2,2|Tiktalik,1,1|timoschwarzer,3,3|timothyqiu,78,76|tinybitofheaven,1,1|TitanNano,1,1|TML233,1,1|Togira123,1,1|TokageItLab,37,37|TokisanGames,1,1|TopherBriggs,1,1|tracefree,4,4|ttencate,1,1|TV4Fun,1,1|tvenclovas96,1,1|twrightsman,1,1|tygyh,1,2|UnfavorableEnhancer,1,1|Uumutunal,1,1|vaner-org,2,2|vgezer,1,1|viksl,1,1|vinni-richburgh,1,1|vintnarni,1,1|voidedWarranties,1,1|voylin,1,1|vPumpking,2,2|wagnerfs,1,1|wareya,2,2|wenqiangwang,1,1|WhalesState,11,11|what-is-a-git,1,1|wheatear-dev,1,1|Wierdox,3,3|wlsnmrk,2,2|wyvrtn,1,1|xiongyaohua,1,1|yahkr,8,8|yannlemos,1,1|ydeltastar,7,7|YeldhamDev,17,17|Yelloween10,2,2|yeojunh,1,1|yosoyfreeman,1,1|ywmaa,2,2|YYF233333,13,11|Z0rb14n,1,1|zachseiss,0,1|zaevi,6,6|ze2j,2,2|ZerxZ,1,1|zeux,8,8|ZhiyiHu93,1,1|Zshandi,1,1|Zylann,2,2|zynga-jpetersen,1,1"
+---
+
+{% assign release_version_number = "4.4" %}
+{% assign release_version = release_version_number | make_release_version: "stable" %}
+
+{% assign _intro = site.release_4_4 | where: "category", "intro" | sort: "rank" %}
+
+{% assign _foundation = site.release_4_4 | where: "category", "foundation" | sort: "rank" %}
+
+{% assign _highlight_features = site.release_4_4 | where: "category", "highlight" | sort: "rank" %}
+{% assign _2d_features = site.release_4_4 | where: "category", "2d" | sort: "rank" %}
+{% assign _3d_features = site.release_4_4 | where: "category", "3d" | sort: "rank" %}
+{% assign _core_features = site.release_4_4 | where: "category", "core" | sort: "rank" %}
+{% assign _editor_features = site.release_4_4 | where: "category", "editor" | sort: "rank" %}
+{% assign _gui_features = site.release_4_4 | where: "category", "gui" | sort: "rank" %}
+{% assign _platforms_android_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "android" | sort: "rank" %}
+{% assign _platforms_linux_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "linux" | sort: "rank" %}
+{% assign _platforms_macos_ios_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "macos_ios" | sort: "rank" %}
+{% assign _platforms_windows_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "windows" | sort: "rank" %}
+{% assign _platforms_web_features = site.release_4_4 | where: "category", "platforms" | where: "subcategory", "web" | sort: "rank" %}
+{% assign _scripting_dotnet_features = site.release_4_4 | where: "category", "scripting" | where: "subcategory", "dotnet" | sort: "rank" %}
+{% assign _scripting_gdextension_features = site.release_4_4 | where: "category", "scripting" | where: "subcategory", "gdextension" | sort: "rank" %}
+{% assign _scripting_gdscript_features = site.release_4_4 | where: "category", "scripting" | where: "subcategory", "gdscript" | sort: "rank" %}
+{% assign _systems_animation_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "animation" | sort: "rank" %}
+{% assign _systems_audio_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "audio" | sort: "rank" %}
+{% assign _systems_import_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "import" | sort: "rank" %}
+{% assign _systems_navigation_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "navigation" | sort: "rank" %}
+{% assign _systems_physics_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "physics" | sort: "rank" %}
+{% assign _systems_rendering_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "rendering" | sort: "rank" %}
+{% assign _systems_vfx_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "vfx" | sort: "rank" %}
+{% assign _systems_xr_features = site.release_4_4 | where: "category", "systems" | where: "subcategory", "xr" | sort: "rank" %}
+{% assign _documentation_features = site.release_4_4 | where: "category", "documentation" | sort: "rank" %}
+
+{% assign _special_thanks = site.release_4_4 | where: "category", "special_thanks" | sort: "rank" %}
+
+<link rel="stylesheet" href="/assets/css/material-symbols-outlined.css" />
+<link rel="stylesheet" href="/assets/css/releases/4.4.css" />
+<script type="module" src="/assets/js/releases/4.4.mjs"></script>
+
+<noscript>
+	<link rel="stylesheet" href="/assets/css/releases/4.4.noscript.css" />
+</noscript>
+
+<div id="top" class="release-header">
+	<div class="release-header-content">
+		<!-- Important to separate `.release-header-content` from `.container`. -->
+		<div class="container">
+
+		</div>
+	</div>
+</div>
+
+<div id="scroll-to-top">
+	<a class="link" href="#links"><span>⬆</span></a>
+</div>
+
+<div class="release-content">
+	<div id="download" class="section section-download">
+		<div class="container">
+			<div class="release-cards">
+				<div id="download-download" class="release-card media-bottom span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-blockquote">
+									Download and experience Godot {{release_version_number}} for yourself
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							{% assign download_primary = release_version | get_download_primary: false %}
+							<div class="release-platform-container">
+								{% for primary in download_primary %}
+									{% if primary[0] == "linux" or primary[0] == "macos" or primary[0] == "windows" or primary[0] == "android" %}
+										<div class="release-platform release-platform-{{primary[0]}}">
+											{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
+											<div class="release-button release-button-standard">
+												<a href="{{ release_version | make_download: primary[1], false, "github_builds" }}" class="btn download-button">
+													<div class="download-title">
+														<img src="/assets/images/platforms/{{primary[0]}}.svg" draggable="false" />
+														Godot Engine
+													</div>
+													<div class="download-hint">
+														{{ release_version.name }}
+													</div>
+												</a>
+												<p class="main-download-details">
+													<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}{% if primary.mono %}C# support · {% endif %}</strong>{{ release_version.release_date }}
+												</p>
+											</div>
+											{% assign mono_download = release_version | make_download: primary[1], true, "github_builds" %}
+											{% if mono_download != "#" %}
+												<div class="release-button release-button-mono">
+													<a href="{{ mono_download }}" class="btn download-button download-net-button">
+														<div class="download-title">
+															<img src="/assets/images/platforms/{{primary[0]}}.svg" draggable="false" />
+															Godot Engine - .NET
+														</div>
+														<div class="download-hint">
+															{{ release_version.name }}
+														</div>
+													</a>
+													<p class="main-download-details">
+														<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}C# support · </strong>{{ release_version.release_date }}
+													</p>
+												</div>
+											{% endif %}
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #download -->
+
+	<div id="foundation" class="section section-foundation">
+		<div class="container">
+			<div class="release-cards">
+				<div id="foundation-donate" class="release-card media-right span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-blockquote">
+									Made possible by <span class="highlight">your donations</span>
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<a class="release-card-button release-card-button-fund"
+								href="https://fund.godotengine.org/">
+								<span class="release-card-button-text">
+									Join the Development Fund ➔
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="robot-1 godot-icon-godot" aria-disabled="true"></div>
+					<div class="robot-2 godot-icon-godot" aria-disabled="true"></div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #foundation -->
+
+	<div id="links" class="section section-links">
+		<div class="container">
+			<div class="release-cards">
+				<div id="links-links" class="release-card transparent-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-content">
+									<ul class="links-container">
+										<li><a class="link link-highlights" href="#highlights"><span>Highlights</span></a></li>
+										<li><a class="link link-2D" href="#_2D"><span>2D</span></a></li>
+										<li><a class="link link-3D" href="#_3D"><span>3D</span></a></li>
+										<li><a class="link link-core" href="#core"><span>Core</span></a></li>
+										<li><a class="link link-documentation" href="#documentation"><span>Documentation</span></a></li>
+										<li><a class="link link-editor" href="#editor"><span>Editor</span></a></li>
+										<li><a class="link link-GUI" href="#GUI"><span>GUI</span></a></li>
+										<li><a class="link link-platforms" href="#platforms"><span>Platforms</span></a></li>
+										<li><a class="link link-scripting" href="#scripting"><span>Scripting</span></a></li>
+										<li><a class="link link-systems" href="#Systems"><span>Systems</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- #links -->
+
+	<div id="highlights" class="section section-highlights">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#highlights">Highlights</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #highlights -->
+
+	<div id="_2D" class="section section-2D">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#_2D">2D</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #2D -->
+
+	<div id="_3D" class="section section-3D">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#_3D">3D</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #3D -->
+
+	<div id="core" class="section section-core">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#core">Core</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #core -->
+
+	<div id="documentation" class="section section-documentation">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#documentation">Documentation</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #documentation -->
+
+	<div id="editor" class="section section-editor">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#editor">Editor</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #editor -->
+
+	<div id="GUI" class="section section-GUI">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#GUI">GUI</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #GUI -->
+
+	<div id="platforms" class="section section-platforms">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#platforms">Platforms</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+			<div class="container">
+				<div id="platform-links" class="release-card transparent-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-content">
+									<ul class="links-container">
+										<li><a class="link link-platform-android" href="#platform-android"><span>Android</span></a></li>
+										<li><a class="link link-platform-linux" href="#platform-linux"><span>Linux</span></a></li>
+										<li><a class="link link-platform-macos-ios" href="#platform-macos-ios"><span>macOS and iOS</span></a></li>
+										<li><a class="link link-platform-windows" href="#platform-windows"><span>Windows</span></a></li>
+										<li><a class="link link-platform-web" href="#platform-web"><span>Web</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #platforms -->
+
+	<div id="scripting" class="section section-scripting">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#scripting">Scripting</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+			<div class="container">
+				<div id="scripting-links" class="release-card transparent-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-content">
+									<ul class="links-container">
+										<li><a class="link link-scripting-dotnet" href="#scripting-dotnet"><span>C#/.NET</span></a></li>
+										<li><a class="link link-scripting-gdextension" href="#scripting-gdextension"><span>GDExtension</span></a></li>
+										<li><a class="link link-scripting-gdscript" href="#scripting-gdscript"><span>GDScript</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #scripting -->
+
+	<div id="systems" class="section section-systems">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#systems">Systems</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+			<div class="container">
+				<div id="system-links" class="release-card transparent-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<div class="c-content">
+									<ul class="links-container">
+										<li><a class="link link-system-animation" href="#system-animation"><span>Animation</span></a></li>
+										<li><a class="link link-system-audio" href="#system-audio"><span>Audio</span></a></li>
+										<li><a class="link link-system-import" href="#system-import"><span>Import</span></a></li>
+										<li><a class="link link-system-navigation" href="#system-navigation"><span>Navigation</span></a></li>
+										<li><a class="link link-system-physics" href="#system-physics"><span>Physics</span></a></li>
+										<li><a class="link link-system-rendering" href="#system-rendering"><span>Rendering</span></a></li>
+										<li><a class="link link-system-VFX" href="#system-VFX"><span>VFX</span></a></li>
+										<li><a class="link link-system-XR" href="#system-XR"><span>XR</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		</div>
+	</div> <!-- #systems -->
+</div>
