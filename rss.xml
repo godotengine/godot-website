@@ -77,7 +77,7 @@ margin-bottom: 0;
 &lt;li>&lt;strong>2D:&lt;/strong> &lt;a href="https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html">2D parallax&lt;/a>&lt;/li>
 &lt;li>&lt;strong>3D:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/92391">3D physics interpolation&lt;/a>&lt;/li>
 &lt;li>&lt;strong>Core:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/78656">Typed dictionaries&lt;/a>&lt;/li>
-&lt;li>&lt;strong>Editor:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager">Project Manager refresh&lt;/a>, &lt;a href="https://godotengine.org/download/android/">Android Editor:&lt;/a> export support&lt;/li>
+&lt;li>&lt;strong>Editor:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager">Project Manager refresh&lt;/a> and &lt;strong>Android Editor:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/93526">Binary export support&lt;/a>&lt;/li>
 &lt;li>&lt;strong>Documentation:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs">Comment section added&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="platforms">Platforms&lt;/h3>

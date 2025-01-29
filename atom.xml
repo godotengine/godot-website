@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-01-29T14:24:26+00:00</updated><id>https://godotengine.org/</id><entry><title>2024 Cherry-picks</title><link href="https://godotengine.org/article/2024-cherry-picks/"/><updated>2025-01-28T17:00:00+00:00</updated><id>https://godotengine.org/article/2024-cherry-picks/</id><summary>Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together.</summary><content type="html">&lt;style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-01-29T15:39:16+00:00</updated><id>https://godotengine.org/</id><entry><title>2024 Cherry-picks</title><link href="https://godotengine.org/article/2024-cherry-picks/"/><updated>2025-01-28T17:00:00+00:00</updated><id>https://godotengine.org/article/2024-cherry-picks/</id><summary>Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together.</summary><content type="html">&lt;style>
 .year-2024-game {
 display: grid;
 grid-template-areas:
@@ -77,7 +77,7 @@ margin-bottom: 0;
 &lt;li>&lt;strong>2D:&lt;/strong> &lt;a href="https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html">2D parallax&lt;/a>&lt;/li>
 &lt;li>&lt;strong>3D:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/92391">3D physics interpolation&lt;/a>&lt;/li>
 &lt;li>&lt;strong>Core:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/78656">Typed dictionaries&lt;/a>&lt;/li>
-&lt;li>&lt;strong>Editor:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager">Project Manager refresh&lt;/a>, &lt;a href="https://godotengine.org/download/android/">Android Editor:&lt;/a> export support&lt;/li>
+&lt;li>&lt;strong>Editor:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#editor-layout-ux-improvements-project-manager">Project Manager refresh&lt;/a> and &lt;strong>Android Editor:&lt;/strong> &lt;a href="https://github.com/godotengine/godot/pull/93526">Binary export support&lt;/a>&lt;/li>
 &lt;li>&lt;strong>Documentation:&lt;/strong> &lt;a href="https://godotengine.org/releases/4.3/#documenation-commenting-enabled-on-the-online-docs">Comment section added&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="platforms">Platforms&lt;/h3>
