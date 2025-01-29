@@ -6,6 +6,9 @@ patron:
     link: "https://www.khronos.org/"
     image: "https://fund.godotengine.org/static/logos/khronos.svg"
 platinum:
+  - name: "Scorewarrior"
+    link: "https://scwr.gg/godot"
+    image: "https://fund.godotengine.org/static/logos/scorewarrior.svg"
   - name: "W4 Games"
     link: "https://w4games.com/"
     image: "https://fund.godotengine.org/static/logos/w4.png"
