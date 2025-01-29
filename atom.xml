@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-01-29T11:15:25+00:00</updated><id>https://godotengine.org/</id><entry><title>2024 Cherry-picks</title><link href="https://godotengine.org/article/2024-cherry-picks/"/><updated>2025-01-28T17:00:00+00:00</updated><id>https://godotengine.org/article/2024-cherry-picks/</id><summary>Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together.</summary><content type="html">&lt;style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-01-29T13:07:07+00:00</updated><id>https://godotengine.org/</id><entry><title>2024 Cherry-picks</title><link href="https://godotengine.org/article/2024-cherry-picks/"/><updated>2025-01-28T17:00:00+00:00</updated><id>https://godotengine.org/article/2024-cherry-picks/</id><summary>Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together.</summary><content type="html">&lt;style>
 .year-2024-game {
 display: grid;
 grid-template-areas:
@@ -9,6 +9,18 @@ gap: 1em;
 margin: 2em 0;
 padding: 1em;
 background-color: var(--button-card-background-color);
+}
+@media screen and (max-width: 700px) {
+.year-2024-game {
+grid-template-areas:
+"img"
+"box";
+grid-template-rows:
+auto
+auto;
+grid-template-columns:
+auto;
+}
 }
 .year-2024-game-image {
 grid-area: img;

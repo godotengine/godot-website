@@ -10,6 +10,18 @@ margin: 2em 0;
 padding: 1em;
 background-color: var(--button-card-background-color);
 }
+@media screen and (max-width: 700px) {
+.year-2024-game {
+grid-template-areas:
+"img"
+"box";
+grid-template-rows:
+auto
+auto;
+grid-template-columns:
+auto;
+}
+}
 .year-2024-game-image {
 grid-area: img;
 }
