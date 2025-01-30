@@ -6,7 +6,7 @@ author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-2.webp
 image_caption_title: The Roottrees are Dead
 image_caption_description: A game by Evil Trout
-date: 2025-01-29 18:00:00
+date: 2025-01-30 12:00:00
 ---
 
 We've been keeping busy these past two weeks squashing the bugs that cropped up in [4.4 beta 1](/article/dev-snapshot-godot-4-4-beta-1/). Despite how much the previous snapshot added, it bears repeating that we have entered the 4.4 feature freeze, so our energy has been focused on addressing any new [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.4) or the aforementioned bugs. We're still aiming for a release sometime next month, but that all depends on how effectively new bugs get reported during this period. Users are strongly encouraged to test these beta releases so this process can be as smooth and expedient as possible!
