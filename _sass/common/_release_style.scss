@@ -1315,6 +1315,14 @@ $donate-robot-size: 500px;
 				--color-bottom: #{$subsection-base-color};
 			}
 
+			// Remove margins from the .subsection under a .section
+			&:has(+ .subsection) {
+				margin-bottom: 0;
+			}
+			& + .subsection {
+				margin-top: 0;
+			}
+
 			.section-title {
 				container-type: inline-size;
 				container-name: section-title;
