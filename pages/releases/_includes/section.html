@@ -1,6 +1,13 @@
 {% assign section = include.section %}
 {% assign data = include.data %}
 
+{% assign is_two_columns = section.two_columns | default: false %}
+{% if is_two_columns %}
+	{% assign two_column_class = "two-columns" %}
+{% else %}
+	{% assign two_column_class = "" %}
+{% endif %}
+
 <div id="{{ section.anchor }}" class="section section-{{ section.anchor }}">
 	<div class="section-title">
 		<div class="container">
@@ -38,7 +45,7 @@
 	</div>
 	{% if section.subsections == null %}
 		<div class="container">
-			<div class="release-cards two-columns">
+			<div class="release-cards {{two_column_class}}">
 				{% assign features = data | where: "section", section.anchor | sort: "rank" %}
 				{% for feature in features %}
 					{%
@@ -66,7 +73,7 @@
 
 		{% assign features = data | where: "section", section.anchor | where: "subsection", subsection.anchor | sort: "rank" %}
 		<div class="container">
-			<div class="release-cards two-columns">
+			<div class="release-cards {{two_column_class}}">
 				{% for feature in features %}
 					{%
 						include_relative _includes/feature.html
