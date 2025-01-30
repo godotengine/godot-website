@@ -1,26 +1,42 @@
 {% assign feature = include.feature %}
 
-{% if feature.media == null %}
-	{% assign media_position = 'none' %}
+{% assign has_media = false %}
+{% assign is_video = false %}
+{% assign is_image = false %}
+{% if feature.video_src == null and feature.image_src == null %}
+	{% assign media_type = 'none' %}
 {% else %}
-	{% assign media_position = feature.media_position | default: 'none' %}
+	{% assign has_media = true %}
+	{% assign media_position = feature.media_position | default: 'top' %}
+	{% if feature.video_src != null %}
+		{% assign is_video = true %}
+	{% else %}
+		{% assign is_image = true %}
+	{% endif %}
 {% endif %}
 
 <div id="{{feature.anchor}}" class="release-card media-{{media_position}}">
 	<div class="release-card-container">
 		<div class="release-card-content">
 			<div class="release-card-content-container">
+				<!-- .c-title -->
 				<h4 class="c-title">
 					<a href="#{{feature.anchor}}">{{feature.title}}</a>
 				</h4>
+
+				<!-- .c-blockquote -->
 				{% if feature.blockquote != null %}
 					<div class="c-blockquote">
 						{{ feature.blockquote | markdownify }}
 					</div>
 				{% endif %}
+
+				<!-- .c-content -->
 				<div class="c-content">
 					{{ feature.content | markdownify }}
 				</div>
+
+				<!-- .c-link -->
 				{% if feature.contributors == null %}
 					{% assign contributors = "" | split: "," %}
 				{% else %}
@@ -38,5 +54,22 @@
 				</div>
 			</div>
 		</div>
+		{% if has_media %}
+			<div class="release-card-media">
+				{% if is_video %}
+					<video class="release-card-video lazy" playsinline disablepictureinpicture autoplay loop muted
+					poster="{{ feature.video_poster }}">
+						<source data-src="{{ feature.video_src }}"
+							type="video/webm" />
+					</video>
+				{% endif %}
+				{% if is_image %}
+					<img class="release-card-image" alt="{{ feature.image_alt }}"
+						src="{{ feature.image_src }}" srcset="
+						{{ feature.image_src_2x }} 2x
+					" draggable="false" />
+				{% endif %}
+			</div>
+		{% endif %}
 	</div>
 </div>
