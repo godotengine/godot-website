@@ -4,6 +4,9 @@ section: platforms
 subsection: android
 rank: 0
 media_position: "top"
+image_alt: Image of the interactive stream settings
+image_src: /storage/releases/4.3/images/interactive-stream.webp
+image_src_2x: /storage/releases/4.3/images/interactive-stream-2x.webp
 anchor: "test"
 title: "Test"
 content: |

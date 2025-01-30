@@ -3,6 +3,8 @@ type: entry
 section: highlights
 rank: 0
 media_position: "top"
+video_poster: /storage/releases/4.3/images/visual-shader-overhaul.webp
+video_src: /storage/releases/4.3/video/visual-shader-overhaul.webm
 anchor: "test"
 title: "Test"
 content: |
