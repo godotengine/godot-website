@@ -43,7 +43,7 @@
 					{% assign contributors = feature.contributors %}
 				{% endif %}
 				<div class="c-link"
-					data-contributors="{{ contributors | join ',' }}"
+					data-contributors="{{ contributors | join: ',' }}"
 					data-read-more="{{ feature.read_more }}"
 				>
 					<!-- For no-script users. -->
