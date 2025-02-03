@@ -42,14 +42,24 @@
 				{% else %}
 					{% assign contributors = feature.contributors %}
 				{% endif %}
+
+				{% assign contributors_json = "[" %}
+				{% for contributor in contributors %}
+					{% assign contributors_json = contributors_json | append: "{" | append: '"name": "' | append: contributor.name | append: '", "github": "' | append: contributor.github | append: '" }' %}
+					{% if forloop.index != forloop.length %}
+						{% assign contributors_json = contributors_json | append: "," %}
+					{% endif %}
+				{% endfor %}
+				{% assign contributors_json = contributors_json | append: "]" %}
+
 				<div class="c-link"
-					data-contributors="{{ contributors | join: ',' }}"
+					data-contributors='{{ contributors_json }}'
 					data-read-more="{{ feature.read_more }}"
 				>
 					<!-- For no-script users. -->
 					<a href="{{ feature.read_more }}" target="_blank">Read more</a>
 					<small>
-						Contributed by {% for contributor in contributors %}<a href="https://github.com/{{contributor}}" target="_blank">{{ contributor }}</a>{% if forloop.last != true %}, {% endif %}{% endfor %}
+						Contributed by {% for contributor in contributors %}<a href="https://github.com/{{contributor.github}}" target="_blank">{{ contributor.name }}</a>{% if forloop.last != true %}, {% endif %}{% endfor %}
 					</small>
 				</div>
 			</div>
