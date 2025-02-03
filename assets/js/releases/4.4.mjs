@@ -149,7 +149,7 @@ for (const cLink of cLinks) {
 		cLinkA.target = "_blank";
 	}
 
-	if (cLink.dataset.contributors) {
+	if (cLink.dataset.contributors != null) {
 		let parentId = "";
 		let parent = cLink.parentElement;
 		while (parent != document.body) {
@@ -161,6 +161,13 @@ for (const cLink of cLinks) {
 		}
 		const contributorsId = `${parentId}-contributors`;
 
+		/** @typedef {{ name: string, github: string }} Contributor */
+		/**
+		 * @param {string} previousValue
+		 * @param {string} currentValue
+		 * @param {number} currentIndex
+		 * @param {Contributor[]} array
+		 */
 		const contributorsReducer = (previousValue, currentValue, currentIndex, array) => {
 			if (currentIndex === 0) {
 				return `${previousValue} ${currentValue}`;
@@ -172,14 +179,32 @@ for (const cLink of cLinks) {
 			return `${previousValue}, and ${currentValue}`;
 		};
 
-		/** @type {String[]} */
-		const contributors = cLink.dataset.contributors.split(",");
-		const contributorsText = contributors.reduce(contributorsReducer, "Contributed by");
-		const contributorsHtml = contributors.map((val) => {
+		/** @type {Contributor[]} */
+		let contributors = [];
+		try {
+			contributors = JSON.parse(cLink.dataset.contributors);
+		} catch (err) {
+			const newErr = new Error(`Could not parse c-link contributors JSON. ${cLink.dataset.contributors}`);
+			newErr.cause = err;
+			throw newErr;
+		}
+		/**
+		 * @param {Contributor} contributor
+		 * @returns {string}
+		 */
+		const getContributorDisplayName = (contributor) => {
+			if (contributor.name === contributor.github) {
+				return contributor.github;
+			}
+			return `${contributor.name} (${contributor.github})`;
+		};
+		const contributorsToString = contributors.map(getContributorDisplayName);
+		const contributorsText = contributorsToString.reduce(contributorsReducer, "Contributed by");
+		const contributorsHtml = contributors.map((contributor) => {
 			const link = document.createElement("a");
-			link.href = `https://github.com/${val}`;
+			link.href = `https://github.com/${contributor.github}`;
 			link.target = "_blank";
-			link.textContent = val;
+			link.textContent = getContributorDisplayName(contributor);
 			return link.outerHTML;
 		}).reduce(contributorsReducer, "Contributed by");
 
