@@ -31,7 +31,7 @@ The introduction of `.uid` files remains one of the biggest changes to the 4.4 r
 
 ### Porting fixes to Embedded/Floating Window mode
 
-The Embedded/Floating game window option added in 4.4 is proving to be quite popular, but also exposes all kinds of quirks on various systems with how they deal with windows. [Hilderin](https://github.com/Hilderin) did impressive work to track and fix these issues, with pull requests such as [GH-102104](ttps://github.com/godotengine/godot/pull/102104), [GH-102238](ttps://github.com/godotengine/godot/pull/102238), [GH-102251](ttps://github.com/godotengine/godot/pull/102251), [GH-102311](ttps://github.com/godotengine/godot/pull/102311), [GH-102312](https://github.com/godotengine/godot/pull/102312), [GH-102470](ttps://github.com/godotengine/godot/pull/102470), and more! The experience should be much better already in beta 3.
+The Embedded/Floating game window option added in 4.4 is proving to be quite popular, but also exposes all kinds of quirks on various systems with how they deal with windows. [Hilderin](https://github.com/Hilderin) did impressive work to track and fix these issues, with pull requests such as [GH-102104](https://github.com/godotengine/godot/pull/102104), [GH-102238](https://github.com/godotengine/godot/pull/102238), [GH-102251](https://github.com/godotengine/godot/pull/102251), [GH-102311](https://github.com/godotengine/godot/pull/102311), [GH-102312](https://github.com/godotengine/godot/pull/102312), [GH-102470](https://github.com/godotengine/godot/pull/102470), and more! The experience should be much better already in beta 3.
 
 ### Lightmap baking improvements
 
