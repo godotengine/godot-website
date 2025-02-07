@@ -19,15 +19,23 @@ Please, consider [supporting the project financially](#support), if you are able
 
 ---
 
-*The cover illustration is from* [**Ballionaire**](https://store.steampowered.com/app/2667120/Ballionaire/), *a roguelike pachinko simulator where the laws of physics bend to your will! You can buy the game [on Steam](https://store.steampowered.com/app/2667120/Ballionaire/), and follow the developer on [BlueSky](https://bsky.app/profile/newobject.bsky.social) and [itch.io](https://newobject.itch.io/).*
+*The cover illustration is from* [**Ballionaire**](https://store.steampowered.com/app/2667120/Ballionaire/), *a roguelike pachinko simulator where the laws of physics bend to your will, developed by newobject and published by Raw Fury! You can buy the game [on Steam](https://store.steampowered.com/app/2667120/Ballionaire/), and follow the developer on [BlueSky](https://bsky.app/profile/newobject.bsky.social) and [itch.io](https://newobject.itch.io/).*
 
 ## Highlights
 
 For an overview of what's new overall in Godot 4.4, have a look at the highlights for [4.4 beta 1](/article/dev-snapshot-godot-4-4-beta-1/), which cover a lot of the changes. This blog post only covers the changes between beta 2 and beta 3. This section covers the most relevant changes made since the [beta 2 snapshot](/article/dev-snapshot-godot-4-4-beta-2/), which are largely regression fixes.
 
-### UID Upgrade Tool
+### UID upgrade tool
 
-The introduction of `.uid` files remains one of the biggest changes to the 4.4 release cycle, so much so that we gave it a [dedicated article](https://godotengine.org/article/uid-changes-coming-to-godot-4-4/). However, it hasn't been the most straightforward system, particularly for those that are attempting to upgrade their projects from 4.3. In order to address this, [Malcom Anderson](https://github.com/Meorge) has put together a UID upgrade tool to automate this process ([GH-103071](https://github.com/godotengine/godot/pull/102071)).
+The introduction of `.uid` files remains one of the biggest changes to the 4.4 release cycle, so much so that we gave it a [dedicated article](/article/uid-changes-coming-to-godot-4-4/). However, it hasn't been the most straightforward system, particularly for those that are attempting to upgrade their projects from 4.3. In order to address this, [Malcolm Anderson](https://github.com/Meorge) has put together a UID upgrade tool to automate this process ([GH-103071](https://github.com/godotengine/godot/pull/102071)).
+
+### Porting fixes to Embedded/Floating Window mode
+
+The Embedded/Floating game window option added in 4.4 is proving to be quite popular, but also exposes all kinds of quirks on various systems with how they deal with windows. [Hilderin](https://github.com/Hilderin) did impressive work to track and fix these issues, with pull requests such as [GH-102104](ttps://github.com/godotengine/godot/pull/102104), [GH-102238](ttps://github.com/godotengine/godot/pull/102238), [GH-102251](ttps://github.com/godotengine/godot/pull/102251), [GH-102311](ttps://github.com/godotengine/godot/pull/102311), [GH-102312](https://github.com/godotengine/godot/pull/102312), [GH-102470](ttps://github.com/godotengine/godot/pull/102470), and more! The experience should be much better already in beta 3.
+
+### Lightmap baking improvements
+
+[Clay John](https://github.com/clayjohn) changed the logic for baking direct lighting in LightmapGI to spread it over multiple frames, avoiding a spike of computation that can lead the OS to trigger <abbr title="Timeout Detection and Recovery">TDR</abbr>, resulting in a crash of the GPU context ([GH-102257](https://github.com/godotengine/godot/pull/102257)). With some further fixes like [GH-102424](https://github.com/godotengine/godot/pull/102424), [GH-102497](https://github.com/godotengine/godot/pull/102497), and [GH-102477](https://github.com/godotengine/godot/pull/102477), lightmap baking got a nice upgrade in this snapshot.
 
 ### And more!
 
@@ -36,10 +44,7 @@ The introduction of `.uid` files remains one of the biggest changes to the 4.4 r
 - Core: Add explicit error messages to Multimesh functions ([GH-101109](https://github.com/godotengine/godot/pull/101109)).
 - Core: Fix `Basis::get_euler` incorrectly simplifying rotations in some cases ([GH-102144](https://github.com/godotengine/godot/pull/102144)).
 - Core: Fix `is_valid_float`, `Variant` parser, `Expression` parser, script highlighter, and `TextServer` not handing capital E in scientific notation ([GH-102396](https://github.com/godotengine/godot/pull/102396)).
-- Editor: Fix Floating Window focus on run ([GH-102312](https://github.com/godotengine/godot/pull/102312)).
-- Editor: Fix Floating Window request close when a dialog is opened ([GH-102470](https://github.com/godotengine/godot/pull/102470)).
 - Editor: Fix resource details will unexpectedly expand ([GH-101817](https://github.com/godotengine/godot/pull/101817)).
-- Editor: Fix slow resize Embedded Game Window ([GH-102251](https://github.com/godotengine/godot/pull/102251)).
 - Editor: Improve UID file creation condition ([GH-102489](https://github.com/godotengine/godot/pull/102489)).
 - Editor: Optimize classnames enumeration ([GH-101489](https://github.com/godotengine/godot/pull/101489)).
 - Editor: Revert "EditorResourcePicker: Replace options to load file with button for QuickOpenDialog" ([GH-102196](https://github.com/godotengine/godot/pull/102196)).
@@ -52,7 +57,7 @@ The introduction of `.uid` files remains one of the biggest changes to the 4.4 r
 - GUI: Introduce `Viewport` functions for keeping the mouse over state consistent ([GH-99890](https://github.com/godotengine/godot/pull/99890)).
 - GUI: Prevent tooltip from showing when hovering past the end of script line ([GH-100913](https://github.com/godotengine/godot/pull/100913)).
 - Network: Fix WebSocket wslay multi-frame message parsing (again) ([GH-102128](https://github.com/godotengine/godot/pull/102128)).
-- Porting: [FreeDesktop portal] Check for `FileChooser` and `Settings` interface availability instead of assuming it's always available ([GH-101812](https://github.com/godotengine/godot/pull/101812)).
+- Porting: FreeDesktop portal: Check for `FileChooser` and `Settings` interface availability instead of assuming it's always available ([GH-101812](https://github.com/godotengine/godot/pull/101812)).
 - Porting: Implement `get_length()` for pipes ([GH-102365](https://github.com/godotengine/godot/pull/102365)).
 - Rendering: 2D: Fix clip children and rendering artefacts ([GH-102161](https://github.com/godotengine/godot/pull/102161)).
 - Rendering: Add loop annotations to ubershaders to prevent loop unrolling ([GH-102480](https://github.com/godotengine/godot/pull/102480)).
@@ -60,7 +65,6 @@ The introduction of `.uid` files remains one of the biggest changes to the 4.4 r
 - Rendering: Fully enable HDR2D when the setting is changed ([GH-102177](https://github.com/godotengine/godot/pull/102177)).
 - Rendering: Mark pipeline compilation of ubershaders as high priority ([GH-102125](https://github.com/godotengine/godot/pull/102125)).
 - Rendering: Metal: Enable GPU buffer address support ([GH-101602](https://github.com/godotengine/godot/pull/101602)).
-- Rendering: Spread direct lighting calculation for LightmapGI over several submissions ([GH-102257](https://github.com/godotengine/godot/pull/102257)).
 - Rendering: Use a smaller epsilon for omni and spot attenuation cutoff ([GH-102272](https://github.com/godotengine/godot/pull/102272)).
 - Shaders: Fix `source_color` default value ([GH-101642](https://github.com/godotengine/godot/pull/101642)).
 - Thirdparty: Harmonize patches to document downstream changes ([GH-102242](https://github.com/godotengine/godot/pull/102242)).
