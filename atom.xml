@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-02-07T14:45:19+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.4 beta 3</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-4-beta-3/"/><updated>2025-02-07T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-4-beta-3/</id><summary>Picking up the pace!</summary><content type="html">&lt;p>Woah, another beta build already? You’re not imagining things, it’s only been a week since our last release. The team is fully in the swing of getting release-blockers merged, so we’re able to expedite output. What’s more, our community has been on the ball with submitting regression reports; thanks to everyone who’s involved themselves!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-02-07T14:49:06+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.4 beta 3</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-4-beta-3/"/><updated>2025-02-07T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-4-beta-3/</id><summary>Picking up the pace!</summary><content type="html">&lt;p>Woah, another beta build already? You’re not imagining things, it’s only been a week since our last release. The team is fully in the swing of getting release-blockers merged, so we’re able to expedite output. What’s more, our community has been on the ball with submitting regression reports; thanks to everyone who’s involved themselves!&lt;/p>
 &lt;p>While progress has been at a rate we’re all excited about, it’s not over yet! We’ll likely do one more beta release the following week, but after that we hope to be gearing up for release candidates. If you haven’t already, we encourage users who haven’t engaged with the beta releases to do so and help us catch the last few stragglers.&lt;/p>
 &lt;p>Please, consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.4.beta3/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
@@ -326,22 +326,22 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/a013481b0911e59cc3f3dea7ebb732450c3e1460">&lt;code class="language-plaintext highlighter-rouge">a013481b09&lt;/code>&lt;/a>.&lt;/p>
 &lt;h2 id="downloads">Downloads&lt;/h2>
 &lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.4-beta3">
-Download Godot 4.4 beta3
+&lt;a class="card-download-link" href="/download/archive/4.4-beta2">
+Download Godot 4.4 beta2
 &lt;/a>
 &lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-4-beta-3.webp" />
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-4-beta-2.webp" />
 &lt;div class="card-download-platforms">
 &lt;div class="download-platform platform-linux">
 &lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
 Linux
 &lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta3/Godot_v4.4-beta3_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta2/Godot_v4.4-beta2_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta3/Godot_v4.4-beta3_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta2/Godot_v4.4-beta2_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -350,12 +350,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
 macOS
 &lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta3/Godot_v4.4-beta3_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta2/Godot_v4.4-beta2_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta3/Godot_v4.4-beta3_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta2/Godot_v4.4-beta2_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -364,12 +364,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
 Windows
 &lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta3/Godot_v4.4-beta3_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta2/Godot_v4.4-beta2_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta3/Godot_v4.4-beta3_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-beta2/Godot_v4.4-beta2_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -377,7 +377,7 @@ Standard
 &lt;/div>
 &lt;/div>
 &lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.4-beta3">
+&lt;a class="card-download-other" href="/download/archive/4.4-beta2">
 Export templates and other downloads
 &lt;/a>
 &lt;a class="card-download-donate" href="https://fund.godotengine.org/">
