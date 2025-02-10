@@ -1,6 +1,7 @@
 ---
 type: entry
-section: editor
+section: general
+subsection: editor
 rank: 0
 anchor: "3D-object-snapping"
 title: "3D object snapping"

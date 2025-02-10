@@ -1,6 +1,7 @@
 ---
 type: entry
-section: editor
+section: general
+subsection: editor
 rank: 5
 anchor: "shadowmasks-for-lightmapgi"
 title: "Shadowmasks for LightmapGI"

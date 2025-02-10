@@ -1,6 +1,7 @@
 ---
 type: entry
-section: editor
+section: general
+subsection: editor
 rank: 2
 anchor: "favorite-editor-items"
 title: "Favorite editor items"

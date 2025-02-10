@@ -1,6 +1,7 @@
 ---
 type: entry
-section: editor
+section: general
+subsection: editor
 rank: 4
 anchor: "gdscript-tooltips"
 title: "GDScript tooltips"
