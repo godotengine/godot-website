@@ -53,7 +53,7 @@ const windowHeight = window.innerHeight;
 /** @type {HTMLDivElement[]} */
 const elements = Array.from(
 	gsap.utils.toArray(
-		".release-content .section .release-cards .release-card, .release-content .section .section-title",
+		".release-cards .release-card, .release-content .section .section-title",
 	),
 );
 for (const element of elements) {
