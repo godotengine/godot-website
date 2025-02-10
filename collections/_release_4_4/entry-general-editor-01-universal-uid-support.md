@@ -1,6 +1,7 @@
 ---
 type: entry
-section: editor
+section: general
+subsection: editor
 rank: 1
 anchor: "universal-uid-support"
 title: "Universal UID support"

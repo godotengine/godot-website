@@ -1,6 +1,7 @@
 ---
 type: entry
-section: editor
+section: general
+subsection: editor
 rank: 3
 anchor: "camera3d-preview"
 title: "Camera3D preview"

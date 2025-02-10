@@ -29,7 +29,7 @@ $mobile-max-width: 700px;
 
 $anchor-offset: 75px;
 
-$header-background-color: #25282B;
+$header-background-color: #25282b;
 $header-background-image: url("/storage/releases/4.3/images/release-header-background.svg");
 $header-background-position: 0;
 $header-background-repeat: no-repeat;
@@ -45,12 +45,12 @@ $header-numbers-gap: 20px;
 $header-bar-height: 20px;
 $header-bar-commits-color: $color-godot-blue;
 $header-bar-commits-color-inactive: #487491;
-$header-bar-contributors-color: #F47E7A;
-$header-bar-contributors-color-inactive: #A66160;
+$header-bar-contributors-color: #f47e7a;
+$header-bar-contributors-color-inactive: #a66160;
 $header-bar-gap: 10px;
 $header-version-font-weight: 800;
 
-$release-background-end: #BCBCBC;
+$release-background-end: #bcbcbc;
 $release-title-font-size: r-desktop-mobile(35px, 25px);
 $release-section-margin-top: r-desktop-mobile(80px, 40px);
 $release-section-margin-bottom: r-desktop-mobile(40px, 20px);
@@ -71,12 +71,7 @@ $sections: r-generate-sections(
 		"foundation",
 		"links",
 		"highlights",
-		"_2D",
-		"_3D",
-		"core",
-		"documentation",
-		"editor",
-		"GUI",
+		"general",
 		"platforms",
 		"scripting",
 		"systems",
@@ -84,7 +79,7 @@ $sections: r-generate-sections(
 	),
 	$base-category: "foundation",
 	$base-color: $color-godot-blue,
-	$offset: $section-hue-offset
+	$offset: $section-hue-offset,
 );
 $subsection-base-color: grey;
 
@@ -93,14 +88,11 @@ $donate-robot-size: 500px;
 @mixin card-media-margin($direction, $margin) {
 	@if $direction == "top" {
 		margin: calc(-1 * #{$margin}) calc(-1 * #{$margin}) 0 calc(-1 * #{$margin});
-	}
-	@else if $direction == "right" {
+	} @else if $direction == "right" {
 		margin: calc(-1 * #{$margin}) calc(-1 * #{$margin}) calc(-1 * #{$margin}) 0;
-	}
-	@else if $direction == "bottom" {
+	} @else if $direction == "bottom" {
 		margin: 0 calc(-1 * #{$margin}) calc(-1 * #{$margin}) calc(-1 * #{$margin});
-	}
-	@else if $direction == "left" {
+	} @else if $direction == "left" {
 		margin: calc(-1 * #{$margin}) 0 calc(-1 * #{$margin}) calc(-1 * #{$margin});
 	}
 }
@@ -134,7 +126,7 @@ $donate-robot-size: 500px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: rgba(0,0,0,25%) 1px 1px 5px;
+		box-shadow: rgba(0, 0, 0, 25%) 1px 1px 5px;
 
 		color: black;
 		font-size: 1.5em;
@@ -147,21 +139,20 @@ $donate-robot-size: 500px;
 
 		span {
 			transition: font-size 0.2s ease-in-out;
-			transform:
-				translateY(-3px);
+			transform: translateY(-3px);
 		}
 	}
 }
 
 #foundation-donate {
-	background-color: #EFF1F5;
+	background-color: #eff1f5;
 	@include is-dark() {
 		background-color: #283a5b;
 	}
 
 	.robot-1,
 	.robot-2 {
-		color: #CFD5E0;
+		color: #cfd5e0;
 		@include is-dark() {
 			color: #233452;
 		}
@@ -175,19 +166,14 @@ $donate-robot-size: 500px;
 		// Top left.
 		top: 0;
 		left: 0;
-		transform:
-			translateX(-250px)
-			translateY(-40cqh)
-			rotate(180deg);
+		transform: translateX(-250px) translateY(-40cqh) rotate(180deg);
 	}
 
 	.robot-2 {
 		// Bottom right.
 		bottom: 0;
 		right: 0;
-		transform:
-			translateX(250px)
-			translateY(40cqh);
+		transform: translateX(250px) translateY(40cqh);
 	}
 
 	.c-blockquote {
@@ -251,16 +237,15 @@ $donate-robot-size: 500px;
 					color: var(--dark-color);
 					padding: 12px 16px;
 					font-weight: bold;
-					border-radius: 0 var(--button-border-radius) var(--button-border-radius) 0;
+					border-radius: 0 var(--button-border-radius)
+						var(--button-border-radius) 0;
 				}
 			}
 
 			.download-net-button {
 				background-color: rgba(111, 111, 111, 27%);
-				-webkit-backdrop-filter:
-					blur(4px);
-				backdrop-filter:
-					blur(4px);
+				-webkit-backdrop-filter: blur(4px);
+				backdrop-filter: blur(4px);
 				grid-template-columns: 270px 1fr;
 				max-width: 350px;
 				margin-top: 20px;
@@ -441,13 +426,21 @@ $donate-robot-size: 500px;
 	 */
 	--release-title-font-size: #{r-get-desktop($release-title-font-size)};
 	--release-section-margin-top: #{r-get-desktop($release-section-margin-top)};
-	--release-section-margin-bottom: #{r-get-desktop($release-section-margin-bottom)};
+	--release-section-margin-bottom: #{r-get-desktop(
+			$release-section-margin-bottom
+		)};
 
 	--card-padding: #{r-get-desktop($card-padding)};
 	--card-title-font-size: #{r-get-desktop($card-title-font-size)};
-	--card-content-font-size-clamp-min: #{r-get-desktop($card-content-font-size-clamp-min)};
-	--card-content-font-size-clamp-val: #{r-get-desktop($card-content-font-size-clamp-val)};
-	--card-content-font-size-clamp-max: #{r-get-desktop($card-content-font-size-clamp-max)};
+	--card-content-font-size-clamp-min: #{r-get-desktop(
+			$card-content-font-size-clamp-min
+		)};
+	--card-content-font-size-clamp-val: #{r-get-desktop(
+			$card-content-font-size-clamp-val
+		)};
+	--card-content-font-size-clamp-max: #{r-get-desktop(
+			$card-content-font-size-clamp-max
+		)};
 
 	--download-gap: #{r-get-desktop($download-gap)};
 	--download-font-size: #{r-get-desktop($download-font-size)};
@@ -455,13 +448,21 @@ $donate-robot-size: 500px;
 	@include is-mobile() {
 		--release-title-font-size: #{r-get-mobile($release-title-font-size)};
 		--release-section-margin-top: #{r-get-mobile($release-section-margin-top)};
-		--release-section-margin-bottom: #{r-get-mobile($release-section-margin-bottom)};
+		--release-section-margin-bottom: #{r-get-mobile(
+				$release-section-margin-bottom
+			)};
 
 		--card-padding: #{r-get-mobile($card-padding)};
 		--card-title-font-size: #{r-get-mobile($card-title-font-size)};
-		--card-content-font-size-clamp-min: #{r-get-mobile($card-content-font-size-clamp-min)};
-		--card-content-font-size-clamp-val: #{r-get-mobile($card-content-font-size-clamp-val)};
-		--card-content-font-size-clamp-max: #{r-get-mobile($card-content-font-size-clamp-max)};
+		--card-content-font-size-clamp-min: #{r-get-mobile(
+				$card-content-font-size-clamp-min
+			)};
+		--card-content-font-size-clamp-val: #{r-get-mobile(
+				$card-content-font-size-clamp-val
+			)};
+		--card-content-font-size-clamp-max: #{r-get-mobile(
+				$card-content-font-size-clamp-max
+			)};
 
 		--download-gap: #{r-get-mobile($download-gap)};
 		--download-font-size: #{r-get-mobile($download-font-size)};
@@ -512,9 +513,17 @@ $donate-robot-size: 500px;
 	code.highlight {
 		$_padding: 5px;
 
-		background-color: color-mix(in srgb, var(--color-code-background), transparent 15%);
+		background-color: color-mix(
+			in srgb,
+			var(--color-code-background),
+			transparent 15%
+		);
 		@include is-dark() {
-			background-color: color-mix(in srgb, var(--color-code-background), transparent 50%);
+			background-color: color-mix(
+				in srgb,
+				var(--color-code-background),
+				transparent 50%
+			);
 		}
 
 		display: inline-block;
@@ -569,7 +578,7 @@ $donate-robot-size: 500px;
 
 		background-color: #121315;
 		@include is-light() {
-			background-color: #25282B;
+			background-color: #25282b;
 		}
 
 		.release-header-content {
@@ -630,7 +639,8 @@ $donate-robot-size: 500px;
 							}
 
 							&.inactive {
-								.version, .number {
+								.version,
+								.number {
 									opacity: 0.7;
 								}
 							}
@@ -658,25 +668,21 @@ $donate-robot-size: 500px;
 			display: grid;
 			width: 100%;
 			gap: var(--card-padding);
-			grid-template-columns:
-				repeat(3, minmax($column-min-width, 1fr));
+			grid-template-columns: repeat(3, minmax($column-min-width, 1fr));
 			grid-auto-flow: row dense;
 
 			&.two-columns {
-				grid-template-columns:
-					repeat(2, minmax($column-min-width, 1fr));
+				grid-template-columns: repeat(2, minmax($column-min-width, 1fr));
 			}
 
 			@include screen-is-two-columns-wide() {
-				grid-template-columns:
-					repeat(2, minmax($column-min-width, 1fr));
+				grid-template-columns: repeat(2, minmax($column-min-width, 1fr));
 			}
 
 			@include screen-is-one-column-wide() {
 				&,
 				&.two-columns {
-					grid-template-columns:
-						minmax($column-min-width, 1fr);
+					grid-template-columns: minmax($column-min-width, 1fr);
 				}
 			}
 		}
@@ -703,10 +709,9 @@ $donate-robot-size: 500px;
 				grid-template-rows:
 					auto
 					minmax(max-content, 1fr);
-				grid-template-columns:
-					1fr;
+				grid-template-columns: 1fr;
 
-				&:has(.release-card-image,.release-card-video) {
+				&:has(.release-card-image, .release-card-video) {
 					// Makes sure that we limit the height of media, but not other content.
 					grid-template-rows:
 						minmax(auto, 30cqh)
@@ -725,10 +730,9 @@ $donate-robot-size: 500px;
 				grid-template-rows:
 					minmax(max-content, 1fr)
 					auto;
-				grid-template-columns:
-					1fr;
+				grid-template-columns: 1fr;
 
-				&:has(.release-card-image,.release-card-video) {
+				&:has(.release-card-image, .release-card-video) {
 					// Makes sure that we limit the height of media, but not other content.
 					grid-template-rows:
 						minmax(max-content, 1fr)
@@ -741,12 +745,9 @@ $donate-robot-size: 500px;
 			}
 
 			@mixin media-left() {
-				grid-template-areas:
-					"media contnt";
-				grid-template-columns:
-					minmax(auto, 40cqw) minmax(30%, 1fr);
-				grid-template-rows:
-					1fr;
+				grid-template-areas: "media contnt";
+				grid-template-columns: minmax(auto, 40cqw) minmax(30%, 1fr);
+				grid-template-rows: 1fr;
 
 				.release-card-media {
 					@include card-media-margin("left", var(--card-padding));
@@ -754,12 +755,9 @@ $donate-robot-size: 500px;
 			}
 
 			@mixin media-right() {
-				grid-template-areas:
-					"contnt media";
-				grid-template-columns:
-					minmax(30%, 1fr) minmax(auto, 40cqw);
-				grid-template-rows:
-					1fr;
+				grid-template-areas: "contnt media";
+				grid-template-columns: minmax(30%, 1fr) minmax(auto, 40cqw);
+				grid-template-rows: 1fr;
 
 				.release-card-media {
 					@include card-media-margin("right", var(--card-padding));
@@ -790,13 +788,8 @@ $donate-robot-size: 500px;
 			}
 
 			&.inverted {
-				background:
-					var(--color-top)
-					linear-gradient(
-						to bottom,
-						var(--color-top),
-						var(--color-bottom)
-					);
+				background: var(--color-top)
+					linear-gradient(to bottom, var(--color-top), var(--color-bottom));
 				color: white;
 
 				.release-card-container {
@@ -822,12 +815,21 @@ $donate-robot-size: 500px;
 								color: var(--color-invert-highlight);
 								text-decoration-color: var(--color-invert-highlight);
 								&:visited {
-									color: color-mix(in srgb, var(--color-invert-highlight), black 10%);
-									text-decoration-color: color-mix(in srgb, var(--color-invert-highlight), black 10%);
+									color: color-mix(
+										in srgb,
+										var(--color-invert-highlight),
+										black 10%
+									);
+									text-decoration-color: color-mix(
+										in srgb,
+										var(--color-invert-highlight),
+										black 10%
+									);
 								}
 							}
 							.links-container {
-								a, a:visited {
+								a,
+								a:visited {
 									color: white;
 									text-decoration-color: white;
 								}
@@ -848,8 +850,7 @@ $donate-robot-size: 500px;
 			.release-card-container {
 				display: grid;
 				gap: var(--card-padding);
-				grid-template-areas:
-					"contnt";
+				grid-template-areas: "contnt";
 
 				height: 100%;
 
@@ -874,8 +875,7 @@ $donate-robot-size: 500px;
 								"quote title"
 								"quote contnt"
 								"quote link";
-							grid-template-columns:
-								2fr 3fr;
+							grid-template-columns: 2fr 3fr;
 							grid-template-rows:
 								min-content
 								1fr
@@ -896,8 +896,7 @@ $donate-robot-size: 500px;
 									"title"
 									"contnt"
 									"link";
-								grid-template-columns:
-									1fr;
+								grid-template-columns: 1fr;
 								grid-template-rows:
 									min-content
 									auto
@@ -922,8 +921,7 @@ $donate-robot-size: 500px;
 									"title"
 									"contnt"
 									"link";
-								grid-template-columns:
-									1fr;
+								grid-template-columns: 1fr;
 								grid-template-rows:
 									min-content
 									auto
@@ -949,17 +947,14 @@ $donate-robot-size: 500px;
 							grid-template-areas:
 								"quote contnt"
 								"quote link";
-							grid-template-columns:
-								2fr 3fr;
+							grid-template-columns: 2fr 3fr;
 							grid-template-rows:
 								1fr
 								auto;
 
 							&:not(:has(.c-link)) {
-								grid-template-areas:
-									"quote contnt";
-								grid-template-rows:
-									1fr;
+								grid-template-areas: "quote contnt";
+								grid-template-rows: 1fr;
 							}
 
 							&.force-one-column {
@@ -967,8 +962,7 @@ $donate-robot-size: 500px;
 									"quote"
 									"contnt"
 									"link";
-								grid-template-columns:
-									1fr;
+								grid-template-columns: 1fr;
 								grid-template-rows:
 									min-content
 									1fr
@@ -989,8 +983,7 @@ $donate-robot-size: 500px;
 									"quote"
 									"contnt"
 									"link";
-								grid-template-columns:
-									1fr;
+								grid-template-columns: 1fr;
 								grid-template-rows:
 									min-content
 									1fr
@@ -1062,10 +1055,8 @@ $donate-robot-size: 500px;
 								auto;
 
 							&:not(:has(.c-link)) {
-								grid-template-areas:
-									"quote";
-								grid-template-rows:
-									auto;
+								grid-template-areas: "quote";
+								grid-template-rows: auto;
 							}
 						}
 						&:not(:has(.c-title)):not(:has(.c-blockquote)):has(.c-content) {
@@ -1080,10 +1071,8 @@ $donate-robot-size: 500px;
 								auto;
 
 							&:not(:has(.c-link)) {
-								grid-template-areas:
-									"contnt";
-								grid-template-rows:
-									auto;
+								grid-template-areas: "contnt";
+								grid-template-rows: auto;
 							}
 						}
 
@@ -1136,7 +1125,8 @@ $donate-robot-size: 500px;
 							}
 
 							.links-container {
-								a, a:visited {
+								a,
+								a:visited {
 									color: white;
 									text-decoration-color: white;
 								}
@@ -1147,7 +1137,11 @@ $donate-robot-size: 500px;
 								text-decoration-color: var(--color-highlight);
 								&:visited {
 									color: color-mix(in srgb, var(--color-highlight), black 10%);
-									text-decoration-color: color-mix(in srgb, var(--color-highlight), black 10%);
+									text-decoration-color: color-mix(
+										in srgb,
+										var(--color-highlight),
+										black 10%
+									);
 								}
 							}
 						}
@@ -1301,11 +1295,23 @@ $donate-robot-size: 500px;
 					--color-selection: #{map-get($section-colors, "color-selection")};
 					--color-invert: #{map-get($section-colors, "color-invert")};
 					--color-highlight: #{map-get($section-colors, "color-highlight")};
-					--color-highlight-switch: #{map-get($section-colors, "color-highlight--dark")};
-					--color-invert-highlight: #{map-get($section-colors, "color-invert-highlight")};
+					--color-highlight-switch: #{map-get(
+							$section-colors,
+							"color-highlight--dark"
+						)};
+					--color-invert-highlight: #{map-get(
+							$section-colors,
+							"color-invert-highlight"
+						)};
 					@include is-dark() {
-						--color-highlight: #{map-get($section-colors, "color-highlight--dark")};
-						--color-highlight-switch: #{map-get($section-colors, "color-highlight")};
+						--color-highlight: #{map-get(
+								$section-colors,
+								"color-highlight--dark"
+							)};
+						--color-highlight-switch: #{map-get(
+								$section-colors,
+								"color-highlight"
+							)};
 					}
 				}
 			}
@@ -1331,18 +1337,9 @@ $donate-robot-size: 500px;
 
 			.section-title h3 {
 				position: relative;
-				font-size: clamp(
-					4cqw,
-					50px,
-					6cqw
-				);
-				background:
-					var(--color-top)
-					linear-gradient(
-						to bottom,
-						var(--color-top),
-						var(--color-bottom)
-					);
+				font-size: clamp(4cqw, 50px, 6cqw);
+				background: var(--color-top)
+					linear-gradient(to bottom, var(--color-top), var(--color-bottom));
 				padding: calc(var(--card-padding) * 2);
 				border-radius: var(--card-padding);
 				margin-bottom: 0;
@@ -1352,9 +1349,7 @@ $donate-robot-size: 500px;
 					position: absolute;
 					bottom: 0;
 					right: 0;
-					transform:
-						translateX(250px)
-						translateY(40cqh);
+					transform: translateX(250px) translateY(40cqh);
 					color: var(--color-top);
 					font-size: $donate-robot-size;
 					z-index: -1;
