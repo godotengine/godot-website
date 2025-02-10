@@ -81,7 +81,6 @@ $sections: r-generate-sections(
 	$base-color: $color-godot-blue,
 	$offset: $section-hue-offset,
 );
-$subsection-base-color: grey;
 
 $donate-robot-size: 500px;
 
@@ -95,6 +94,12 @@ $donate-robot-size: 500px;
 	} @else if $direction == "left" {
 		margin: calc(-1 * #{$margin}) 0 calc(-1 * #{$margin}) calc(-1 * #{$margin});
 	}
+}
+
+$subsection-base-color: grey;
+@mixin subsection-color() {
+	--color-top: #{adjust-color($subsection-base-color, $lightness: 10)};
+	--color-bottom: #{$subsection-base-color};
 }
 
 #scroll-to-top {
@@ -291,23 +296,31 @@ $donate-robot-size: 500px;
 		border-radius: calc(var(--card-padding) / 2);
 		text-decoration: none;
 		color: white;
-		font-size: 0.75em;
+		font-size: 1em;
 
-		@each $section-name, $section-colors in $sections {
-			&.link-#{$section-name} {
-				--color-top: #{map-get($section-colors, "color-top")};
-				--color-bottom: #{map-get($section-colors, "color-bottom")};
-				background: linear-gradient(
-					to bottom,
-					var(--color-top),
-					var(--color-bottom)
-				);
-			}
-		}
+		background: linear-gradient(
+			to bottom,
+			var(--color-top),
+			var(--color-bottom)
+		);
+		@include subsection-color();
 
 		&:hover {
 			& > span {
 				text-decoration: underline;
+			}
+		}
+	}
+
+	&.main-list {
+		font-size: 150%;
+
+		.link {
+			@each $section-name, $section-colors in $sections {
+				&.link-#{$section-name} {
+					--color-top: #{map-get($section-colors, "color-top")};
+					--color-bottom: #{map-get($section-colors, "color-bottom")};
+				}
 			}
 		}
 	}
@@ -1317,8 +1330,7 @@ $donate-robot-size: 500px;
 			}
 
 			&.subsection {
-				--color-top: #{adjust-color($subsection-base-color, $lightness: 10)};
-				--color-bottom: #{$subsection-base-color};
+				@include subsection-color();
 			}
 
 			// Remove margins from the .subsection under a .section
