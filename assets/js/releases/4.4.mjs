@@ -1,7 +1,7 @@
 // GSAP for animations.
-import { gsap } from "../modules/gsap@3.12.5.min.mjs"
-import { ScrollTrigger } from "../modules/gsap@3.12.5_ScrollTrigger.min.mjs"
-import detectPlatform from "../modules/detect-browser.mjs"
+import { gsap } from "../modules/gsap@3.12.5.min.mjs";
+import { ScrollTrigger } from "../modules/gsap@3.12.5_ScrollTrigger.min.mjs";
+import detectPlatform from "../modules/detect-browser.mjs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,25 +16,30 @@ const numberFormat = new Intl.NumberFormat("en-US");
 
 for (const el of ["commits", "contributors"]) {
 	const timeline = gsap.timeline();
-	const lines = gsap.utils.toArray(`.release-header .header-numbers-${el} .header-numbers-line`).reverse();
+	const lines = gsap.utils
+		.toArray(`.release-header .header-numbers-${el} .header-numbers-line`)
+		.reverse();
 	for (let i = 0; i < lines.length; i++) {
 		const line = lines[i];
 		const localTimeline = gsap.timeline();
 		localTimeline.to(line.querySelector(".bar"), {
-			delay: i == 0
-				? RELEASE_NUMBERS_INITIAL_DELAY_S
-				: 0,
+			delay: i == 0 ? RELEASE_NUMBERS_INITIAL_DELAY_S : 0,
 			duration: RELEASE_NUMBERS_DURATION_S,
 			ease: RELEASE_NUMBERS_EASE_NAME,
 			width: `${(Number(line.dataset.value) / Number(line.dataset.max)) * RELEASE_NUMBERS_MAX_BAR_WIDTH_PX}px`,
 			onUpdate: () => {
 				line.querySelector(".number").innerText = numberFormat.format(
-					Math.round(releaseNumbersEase(localTimeline.progress()) * Number(line.dataset.value))
+					Math.round(
+						releaseNumbersEase(localTimeline.progress()) *
+							Number(line.dataset.value),
+					),
 				);
 			},
 			onComplete: () => {
-				line.querySelector(".number").innerText = numberFormat.format(Number(line.dataset.value));
-			}
+				line.querySelector(".number").innerText = numberFormat.format(
+					Number(line.dataset.value),
+				);
+			},
 		});
 		timeline.add(localTimeline);
 
@@ -46,7 +51,11 @@ for (const el of ["commits", "contributors"]) {
 // Add a scrolling effect to each card and title.
 const windowHeight = window.innerHeight;
 /** @type {HTMLDivElement[]} */
-const elements = Array.from(gsap.utils.toArray(".release-content .section .release-cards .release-card, .release-content .section .section-title"));
+const elements = Array.from(
+	gsap.utils.toArray(
+		".release-content .section .release-cards .release-card, .release-content .section .section-title",
+	),
+);
 for (const element of elements) {
 	if (element.getBoundingClientRect().top < windowHeight) {
 		continue;
@@ -56,40 +65,53 @@ for (const element of elements) {
 		scrollTrigger: {
 			trigger: element,
 			start: "top bottom",
-		}
+		},
 	});
 	timeline.from(element, {
 		y: "+=50",
 		duration: 0.5,
-		opacity: 0
+		opacity: 0,
 	});
 }
 
 // Hide downloads that aren't for the user's platform.
-const platformData = detectPlatform(navigator.userAgent, navigator.userAgentData);
+const platformData = detectPlatform(
+	navigator.userAgent,
+	navigator.userAgentData,
+);
 let platformName = "windows";
 switch (platformData.os) {
 	case "mac":
 	case "iphone":
-	case "ipad": {
-		platformName = "macos";
-	} break;
+	case "ipad":
+		{
+			platformName = "macos";
+		}
+		break;
 
-	case "linux": {
-		platformName = "linux";
-	} break;
+	case "linux":
+		{
+			platformName = "linux";
+		}
+		break;
 
-	case "android": {
-		platformName = "android";
-	} break;
+	case "android":
+		{
+			platformName = "android";
+		}
+		break;
 
 	case "windows":
 	default:
 		break;
 }
-const releasePlatformContainer = document.querySelector(".release-platform-container");
+const releasePlatformContainer = document.querySelector(
+	".release-platform-container",
+);
 if (releasePlatformContainer != null) {
-	const releasePlatform = releasePlatformContainer.querySelector(`.release-platform-${platformName}`);
+	const releasePlatform = releasePlatformContainer.querySelector(
+		`.release-platform-${platformName}`,
+	);
 	if (releasePlatform != null) {
 		releasePlatform.classList.add("active");
 	}
@@ -102,7 +124,11 @@ if (downloadOther != null) {
 }
 
 // Add relative weight based on author data
-const authors = Array.from(document.querySelectorAll("#special-thanks-release-authors .release-card-authors .release-card-author"));
+const authors = Array.from(
+	document.querySelectorAll(
+		"#special-thanks-release-authors .release-card-authors .release-card-author",
+	),
+);
 let max_prs = 0;
 for (const author of authors) {
 	max_prs = Math.max(max_prs, Number(author.dataset.prs));
@@ -168,7 +194,12 @@ for (const cLink of cLinks) {
 		 * @param {number} currentIndex
 		 * @param {Contributor[]} array
 		 */
-		const contributorsReducer = (previousValue, currentValue, currentIndex, array) => {
+		const contributorsReducer = (
+			previousValue,
+			currentValue,
+			currentIndex,
+			array,
+		) => {
 			if (currentIndex === 0) {
 				return `${previousValue} ${currentValue}`;
 			} else if (currentIndex < array.length - 1) {
@@ -184,7 +215,9 @@ for (const cLink of cLinks) {
 		try {
 			contributors = JSON.parse(cLink.dataset.contributors);
 		} catch (err) {
-			const newErr = new Error(`Could not parse c-link contributors JSON. ${cLink.dataset.contributors}`);
+			const newErr = new Error(
+				`Could not parse c-link contributors JSON. ${cLink.dataset.contributors}`,
+			);
 			newErr.cause = err;
 			throw newErr;
 		}
@@ -199,14 +232,19 @@ for (const cLink of cLinks) {
 			return `${contributor.name} (${contributor.github})`;
 		};
 		const contributorsToString = contributors.map(getContributorDisplayName);
-		const contributorsText = contributorsToString.reduce(contributorsReducer, "Contributed by");
-		const contributorsHtml = contributors.map((contributor) => {
-			const link = document.createElement("a");
-			link.href = `https://github.com/${contributor.github}`;
-			link.target = "_blank";
-			link.textContent = getContributorDisplayName(contributor);
-			return link.outerHTML;
-		}).reduce(contributorsReducer, "Contributed by");
+		const contributorsText = contributorsToString.reduce(
+			contributorsReducer,
+			"Contributed by",
+		);
+		const contributorsHtml = contributors
+			.map((contributor) => {
+				const link = document.createElement("a");
+				link.href = `https://github.com/${contributor.github}`;
+				link.target = "_blank";
+				link.textContent = getContributorDisplayName(contributor);
+				return link.outerHTML;
+			})
+			.reduce(contributorsReducer, "Contributed by");
 
 		const button = cLink.appendChild(document.createElement("button"));
 		button.classList.add("c-link-popover-button");
@@ -240,15 +278,18 @@ function computePosition(invoker, popover) {
 	const popoverRect = popover.getBoundingClientRect();
 	const windowSize = {
 		width: window.innerWidth,
-		height: window.innerHeight
+		height: window.innerHeight,
 	};
 	const padding = 10;
 	const popoverPosition = {
-		x: invokerRect.x - (popoverRect.width / 2),
+		x: invokerRect.x - popoverRect.width / 2,
 		y: invokerRect.y - popoverRect.height - padding,
 	};
 
-	popoverPosition.x = Math.min(Math.max(popoverPosition.x, 0), windowSize.width - popoverRect.width);
+	popoverPosition.x = Math.min(
+		Math.max(popoverPosition.x, 0),
+		windowSize.width - popoverRect.width,
+	);
 	if (popoverPosition.y < 0) {
 		popoverPosition.y = invokerRect.y + invokerRect.height + padding;
 	}
@@ -264,7 +305,9 @@ function positionPopover(event) {
 		return;
 	}
 	const popover = event.target;
-	const invoker = document.querySelector(`[popovertarget="${popover.getAttribute("id")}"`);
+	const invoker = document.querySelector(
+		`[popovertarget="${popover.getAttribute("id")}"`,
+	);
 	const { x, y } = computePosition(invoker, popover);
 	Object.assign(popover.style, {
 		left: `${x}px`,
@@ -300,7 +343,10 @@ const lazyVideoObserver = new IntersectionObserver((entries, observer) => {
 		}
 
 		for (var entryChildElement of entry.target.children) {
-			if (typeof entryChildElement.tagName === "string" && entryChildElement.tagName === "SOURCE") {
+			if (
+				typeof entryChildElement.tagName === "string" &&
+				entryChildElement.tagName === "SOURCE"
+			) {
 				entryChildElement.src = entryChildElement.dataset.src;
 			}
 		}
@@ -346,7 +392,7 @@ const hideScrollToTop = () => {
 		duration: 0.5,
 		onComplete: () => {
 			scrollToTopElement.style.display = "none";
-		}
+		},
 	});
 };
 const scrollToTopObserver = new IntersectionObserver((entries, observer) => {
