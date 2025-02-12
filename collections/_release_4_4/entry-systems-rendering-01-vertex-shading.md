@@ -3,6 +3,7 @@ type: entry
 section: systems
 subsection: rendering
 rank: 1
+importance: 2
 anchor: "vertex-shading"
 title: "Vertex shading"
 blockquote: "Retro vibes"
