@@ -3,6 +3,7 @@ type: entry
 section: scripting
 subsection: gdscript
 rank: 0
+importance: 2
 anchor: "export-tool-button-annotation"
 title: "@export_tool_button annotation"
 blockquote: "On the button"
