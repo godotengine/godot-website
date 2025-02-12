@@ -2,6 +2,7 @@
 type: entry
 section: highlights
 rank: 5
+importance: 1
 anchor: "jolt-physics-module"
 title: "Jolt physics module"
 blockquote: "Jolt into action"

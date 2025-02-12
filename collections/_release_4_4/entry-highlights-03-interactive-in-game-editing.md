@@ -2,6 +2,7 @@
 type: entry
 section: highlights
 rank: 3
+importance: 1
 anchor: "interactive-in-game-editing"
 title: "Interactive in-game editing"
 blockquote: "Step into your projects"
