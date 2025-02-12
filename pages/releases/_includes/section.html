@@ -8,71 +8,62 @@
 	{% assign two_column_class = "" %}
 {% endif %}
 
-<div id="{{ section.anchor }}" class="section section-{{ section.anchor }}">
-	<div class="section-title">
-		<div class="container">
-			<h3>
-				<a href="#{{ section.anchor }}">{{ section.name }}</a>
-				<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-			</h3>
-		</div>
-		<div class="container">
-			{% if section.subsections != null %}
-				<div id="{{ section.anchor }}-links" class="release-card transparent-card span-3">
-					<div class="release-card-container">
-						<div class="release-card-content">
-							<div class="release-card-content-container">
-								<div class="c-content">
-									<ul class="links-container">
-										{% for subsection in section.subsections %}
-											<li>
-												<a
-													class="link link-{{section.anchor}} link-{{section.anchor}}-{{subsection.anchor}}"
-													href="#{{section.anchor}}-{{subsection.anchor}}"
-												>
-													<span>{{subsection.name}}</span>
-												</a>
-											</li>
-										{% endfor %}
-									</ul>
+{% if section.subsections == null %}
+	{% assign section_features = data | where: "section", section.anchor | sort: "rank" %}
+{% else %}
+	{% assign section_features = "" | split: "," %}
+	{% for subsection in section.subsections %}
+		{% assign subsection_features = data | where: "section", section.anchor | where: "subsection", subsection.anchor | sort: "rank" %}
+		{% for subsection_feature in subsection_features %}
+			{% assign section_features = features | push: subsection_feature %}
+		{% endfor %}
+	{% endfor %}
+{% endif %}
+{% if section_features.size > 0 %}
+	<div id="{{ section.anchor }}" class="section section-{{ section.anchor }}">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#{{ section.anchor }}">{{ section.name }}</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+			<div class="container">
+				{% if section.subsections != null %}
+					<div id="{{ section.anchor }}-links" class="release-card transparent-card span-3">
+						<div class="release-card-container">
+							<div class="release-card-content">
+								<div class="release-card-content-container">
+									<div class="c-content">
+										<ul class="links-container">
+											{% for subsection in section.subsections %}
+												{% assign subsection_features = data | where: "section", section.anchor | where: "subsection", subsection.anchor | sort: "rank" %}
+												{% if subsection_features.size > 0 %}
+													<li>
+														<a
+															class="link link-{{section.anchor}} link-{{section.anchor}}-{{subsection.anchor}}"
+															href="#{{section.anchor}}-{{subsection.anchor}}"
+														>
+															<span>{{subsection.name}}</span>
+														</a>
+													</li>
+												{% endif %}
+											{% endfor %}
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			{% endif %}
-		</div>
-	</div>
-</div>
-
-{% if section.subsections == null %}
-	{% assign features = data | where: "section", section.anchor | sort: "rank" %}
-	<div class="container">
-		<div class="release-cards {{two_column_class}}">
-			{% for feature in features %}
-				{%
-					include_relative _includes/feature.html
-					feature=feature
-				%}
-			{% endfor %}
-		</div>
-	</div>
-{% else %}
-	{% for subsection in section.subsections %}
-		{% assign is_two_columns = subsection.two_columns | default: false %}
-		<div id="{{ section.anchor }}-{{ subsection.anchor }}" class="section subsection section-{{ section.anchor }} section-{{ section.anchor }}-{{ subsection.anchor }}">
-			<div class="section-title">
-				<div class="container">
-					<h3>
-						<a href="#{{ section.anchor }}-{{ subsection.anchor }}">{{ subsection.name }}</a>
-						<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
-					</h3>
-				</div>
+				{% endif %}
 			</div>
 		</div>
-		{% assign features = data | where: "section", section.anchor | where: "subsection", subsection.anchor | sort: "rank" %}
+	</div>
+
+	{% if section.subsections == null %}
 		<div class="container">
 			<div class="release-cards {{two_column_class}}">
+				{% assign features = data | where: "section", section.anchor | sort: "rank" %}
 				{% for feature in features %}
 					{%
 						include_relative _includes/feature.html
@@ -81,5 +72,32 @@
 				{% endfor %}
 			</div>
 		</div>
-	{% endfor %}
+	{% else %}
+		{% for subsection in section.subsections %}
+			{% assign features = data | where: "section", section.anchor | where: "subsection", subsection.anchor | sort: "rank" %}
+			{% if features.size > 0 %}
+				{% assign is_two_columns = subsection.two_columns | default: false %}
+				<div id="{{ section.anchor }}-{{ subsection.anchor }}" class="section subsection section-{{ section.anchor }} section-{{ section.anchor }}-{{ subsection.anchor }}">
+					<div class="section-title">
+						<div class="container">
+							<h3>
+								<a href="#{{ section.anchor }}-{{ subsection.anchor }}">{{ subsection.name }}</a>
+								<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="release-cards {{two_column_class}}">
+						{% for feature in features %}
+							{%
+								include_relative _includes/feature.html
+								feature=feature
+							%}
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
 {% endif %}
