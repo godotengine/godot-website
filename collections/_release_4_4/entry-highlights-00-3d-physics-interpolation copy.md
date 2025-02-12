@@ -2,6 +2,7 @@
 type: entry
 section: highlights
 rank: 0
+importance: 1
 anchor: "_3d-physics-interpolation"
 title: "3D physics interpolation"
 blockquote: "Do you get the jitters?"

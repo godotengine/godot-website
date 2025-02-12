@@ -2,6 +2,7 @@
 type: entry
 section: highlights
 rank: 4
+importance: 1
 anchor: "ubershaders"
 title: "Ubershaders"
 blockquote: "uber-exciting!"

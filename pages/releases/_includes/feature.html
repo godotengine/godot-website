@@ -1,5 +1,6 @@
 {% assign feature = include.feature %}
 
+{% assign importance = feature.importance | default: "4" | plus: 0 %}
 {% assign has_media = false %}
 {% assign is_video = false %}
 {% assign is_image = false %}
@@ -25,7 +26,7 @@
 				</h4>
 
 				<!-- .c-blockquote -->
-				{% if feature.blockquote != null %}
+				{% if feature.blockquote != null and importance < 4 %}
 					<div class="c-blockquote">
 						{{ feature.blockquote | markdownify }}
 					</div>

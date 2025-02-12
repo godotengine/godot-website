@@ -2,6 +2,7 @@
 type: entry
 section: highlights
 rank: 1
+importance: 1
 anchor: "typed-dictionaries"
 title: "Typed dictionaries"
 blockquote: "Keys required"
