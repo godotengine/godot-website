@@ -16,7 +16,14 @@
 	{% endif %}
 {% endif %}
 
-<div id="{{feature.anchor}}" class="release-card media-{{media_position}}">
+{% assign span = "" %}
+{% if importance == 2 %}
+	{% assign span = "span-3" %}
+{% elsif importance == 3 %}
+	{% assign span = "span-2" %}
+{% endif %}
+
+<div id="{{feature.anchor}}" class="release-card media-{{media_position}} {{span}}">
 	<div class="release-card-container">
 		<div class="release-card-content">
 			<div class="release-card-content-container">
