@@ -23,7 +23,12 @@
 	{% assign span = "span-2" %}
 {% endif %}
 
-<div id="{{feature.anchor}}" class="release-card media-{{media_position}} {{span}}">
+{% assign inverted = "" %}
+{% if feature.inverted %}
+	{% assign inverted = "inverted" %}
+{% endif %}
+
+<div id="{{feature.anchor}}" class="release-card media-{{media_position}} {{span}} {{inverted}}">
 	<div class="release-card-container">
 		<div class="release-card-content">
 			<div class="release-card-content-container">
