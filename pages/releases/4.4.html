@@ -197,4 +197,112 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|10Drenth,1,1|2nafish117,1,1|31,1,
 			data=data
 		%}
 	{% endfor %}
+
+	<div id="special-thanks" class="section section-special-thanks">
+		<div class="section-title">
+			<div class="container">
+				<h3>
+					<a href="#special-thanks">Special thanks</a>
+					<div class="section-robot godot-icon-godot" aria-disabled="true"></div>
+				</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="release-cards">
+				<div id="special-thanks-release-authors" class="release-card span-3 media-bottom">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#special-thanks-release-authors">
+										Release authors
+									</a>
+								</h4>
+								<div class="c-blockquote">
+									<span class="highlight">Team work</span> makes the dream work
+								</div>
+								<div class="c-content">
+									<p>
+										Here you can see all the contributors with PRs merged into this release.
+										The names are ordered alphabetically, and sized accordingly to their number
+										of contributions.
+									</p>
+									<p>
+										Special thanks goes out to all the engine teams that collaborated on this release,
+										especially since commits to other related repositories (documentation, godot-cpp,
+										etc.) do not show up in this graphic.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="release-card-media">
+							<div class="release-card-authors">
+								{% assign authors = page.authors_list | split: "|" %}
+								{% for author in authors %}
+								{% assign author_data = author | split: "," %}
+								{% assign author_handle = author_data[0] %}
+								{% assign author_commits = author_data[1] %}
+								{% assign author_prs = author_data[2] %}
+								<div class="release-card-author" data-handle="{{author_handle}}"
+									data-commits="{{author_commits}}" data-prs="{{author_prs}}">
+									<a href="https://github.com/godotengine/godot/pulls?q=author%3A{{author_handle}}+is%3Apr+milestone%3A{{release_version_number}}+is%3Aclosed+is%3Amerged+"
+										target="_blank">{{author_handle}}</a>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div> <!-- #special-thanks-release-authors -->
+
+				<div id="special-thanks-remi" class="release-card transparent-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container force-one-column">
+								<div class="c-blockquote">
+									<p>
+										[QUOTE]
+									</p>
+								</div>
+								<div class="c-content align-right">
+									— <a href="https://github.com/akien-mga">Rémi Verschelde</a>, project manager,
+									<a href="https://github.com/godotengine/godot/commit/[[COMMIT_NUMBER]]">{{release_version_number}} release commit</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="special-thanks-credits" class="release-card span-3">
+					<div class="release-card-container">
+						<div class="release-card-content">
+							<div class="release-card-content-container">
+								<h4 class="c-title">
+									<a href="#special-thanks-credits">
+										Release page credits
+									</a>
+								</h4>
+								<div class="c-content">
+									<p>
+										Web development by <a href="https://adamscott.studio">Adam Scott</a>
+										with help from <a href="https://coppolaemilio.com/">Emilio Coppola</a>
+									</p>
+									<p>
+										Design template by <a href="https://luiscarli.com/">Luis Carli</a>
+									</p>
+									<p>
+										Visuals by <a href="https://adamscott.studio">Adam Scott</a>
+										with special thanks to
+										[[CONTENT CREATORS]]
+									</p>
+									<p>
+										Texts by <a href="https://bio.link/murderveggie">Nathalie Galla</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- #special-thanks-credits -->
+			</div>
+		</div>
+	</div> <!-- #special-thanks -->
 </div>
