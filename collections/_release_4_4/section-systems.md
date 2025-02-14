@@ -2,6 +2,7 @@
 type: section
 name: Systems
 anchor: systems
+rank: 4
 subsections:
   - name: Animation
     anchor: animation

@@ -2,6 +2,7 @@
 type: section
 name: Platforms
 anchor: platforms
+rank: 2
 subsections:
   - name: Android
     anchor: android
