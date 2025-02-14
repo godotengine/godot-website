@@ -3,6 +3,7 @@ type: entry
 section: general
 subsection: editor
 rank: 3
+importance: 2
 anchor: "camera3d-preview"
 title: "Camera3D preview"
 blockquote: "Switch up your perspective"

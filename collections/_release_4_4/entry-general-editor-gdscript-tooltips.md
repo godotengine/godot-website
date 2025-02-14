@@ -3,6 +3,7 @@ type: entry
 section: general
 subsection: editor
 rank: 4
+importance: 2
 anchor: "gdscript-tooltips"
 title: "GDScript tooltips"
 blockquote: "Did you know..."
