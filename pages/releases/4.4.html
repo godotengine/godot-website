@@ -49,7 +49,7 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|10Drenth,1,1|2nafish117,1,1|31,1,
 
 {% assign _intro = data | where: "type", "entry" | where: "category", "intro" | sort: "rank" %}
 
-{% assign _sections = data | where: "type", "section" %}
+{% assign _sections = data | where: "type", "section" | sort: "rank" %}
 
 {% assign _foundation = data | where: "type", "entry" | where: "category", "foundation" | sort: "rank" %}
 
