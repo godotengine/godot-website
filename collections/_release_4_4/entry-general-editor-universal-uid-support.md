@@ -3,6 +3,7 @@ type: entry
 section: general
 subsection: editor
 rank: 1
+importance: 2
 anchor: "universal-uid-support"
 title: "Universal UID support"
 blockquote: "No more broken paths"
