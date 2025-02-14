@@ -7,7 +7,11 @@ anchor: "initial-android-editor-support-for-XR-devices"
 title: "Initial Android editor support for XR devices"
 blockquote: "Make games in VR!"
 text: |
-  Thanks to Godot’s unique feature of having an editor made with the engine itself, we’ve been able to bring the Godot editor to unconventional places, such as the web and Android devices. Building upon the latter, Fredia Huya-Kouadio completed the proof of concept started by Bastiaan Olij years ago, to add support for using the Android editor in an XR context using OpenXR (GH-96624)! You can test the current version by sideloading the APK, currently supported on Meta Quest 3 or Quest Pro.
+  Because the Godot Editor itself is a project made with the engine like any other, it can be made available in more unconventional places like the web or on mobile.
+
+  With this release, the first steps have been taken to use OpenXR to transfer the existing Android editor into the context of mixed reality headsets.
+
+  Currently supported on Meta Quest 3 and Quest Pro.
 contributors:
   - name: Fredia Huya-Kouadio
     github: m4gr3d

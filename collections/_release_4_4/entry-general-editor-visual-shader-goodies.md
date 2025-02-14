@@ -10,8 +10,8 @@ blockquote: Small but mighty
 text: |
   In this release, the visual shader editor receives some love:
 
-  - material previews & a matching new side dock
-  - the ability to drag & drop meshes to create emitters
+  - material previews and a matching new side dock
+  - the ability to drag & drop meshes into the visual shader area to automatically create mesh emitters
 contributors:
   - name: Yuri Rubinsky
     github: Chaosus

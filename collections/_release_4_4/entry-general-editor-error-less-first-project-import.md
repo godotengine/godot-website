@@ -2,7 +2,7 @@
 type: entry
 section: general
 subsection: editor
-rank: 6
+rank: 12
 importance: 4
 anchor: error-less-first-project-import
 title: Error-less first project import
