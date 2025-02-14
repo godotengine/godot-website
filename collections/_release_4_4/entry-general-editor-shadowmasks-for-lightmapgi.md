@@ -3,7 +3,8 @@ type: entry
 section: general
 subsection: editor
 rank: 5
-anchor: "shadowmasks-for-lightmapgi"
+importance: 2
+anchor: "shadowmasks-for-lightmapGI"
 title: "Shadowmasks for LightmapGI"
 blockquote: "Both. Both is good."
 text: |

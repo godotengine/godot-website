@@ -3,6 +3,7 @@ type: entry
 section: general
 subsection: editor
 rank: 0
+importance: 2
 anchor: "3D-object-snapping"
 title: "3D object snapping"
 blockquote: "Snap you're it"
