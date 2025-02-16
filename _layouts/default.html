@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% current_lang %}">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
 
 	<!-- Plausible -->
 	<script defer data-domain="godotengine.org" src="https://plausible.godot.foundation/js/script.file-downloads.outbound-links.js"></script>
@@ -15,7 +15,7 @@
 	<meta property="og:url" content="https://godotengine.org{{ page.url }}">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ page.title | default: "Godot Engine" }}">
-	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
 	<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
 	<!-- meta tags -->
 	<meta name="twitter:card" content="summary_large_image">
@@ -23,7 +23,7 @@
 	<meta property="twitter:domain" content="godotengine.org">
 	<meta property="twitter:url" content="https://godotengine.org{{ page.url }}">
 	<meta name="twitter:title" content="{{ page.title | default: "Godot Engine" }}">
-	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
+	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
 	<meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
 
 	{% if page.title %}
