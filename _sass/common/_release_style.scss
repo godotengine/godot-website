@@ -1395,6 +1395,12 @@ $donate-robot-size: 500px;
 						$section-colors,
 						"color-invert-highlight"
 					)};
+				@include is-light() {
+					--color-selection: #{map-get(
+							$section-colors,
+							"color-selection--light"
+						)};
+				}
 				@include is-dark() {
 					--color-highlight: #{map-get(
 							$section-colors,
