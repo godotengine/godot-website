@@ -19,7 +19,7 @@ youtube_id: "3BddpsCOXLk"
 
 platforms: ["windows", "macos", "linux", "xbox", "switch"]
 
-steam: https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/
+steam: https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/?curator_clanid=41324400
 
 ---
 

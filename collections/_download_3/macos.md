@@ -24,7 +24,7 @@ content_instructions: |
   </p>
 
   <p>
-    For older Godot versions, see the last section of <a href="https://support.apple.com/en-us/HT202491">this page</a> for instructions on allowing Godot to run anyway. Alternatively, you can install <a href="https://store.steampowered.com/app/404790">Godot from Steam</a> and switch to an older branch in the Steam application settings to work around this.
+    For older Godot versions, see the last section of <a href="https://support.apple.com/en-us/HT202491">this page</a> for instructions on allowing Godot to run anyway. Alternatively, you can install <a href="https://store.steampowered.com/app/404790/Godot_Engine/?curator_clanid=41324400">Godot from Steam</a> and switch to an older branch in the Steam application settings to work around this.
   </p>
 
   <p>

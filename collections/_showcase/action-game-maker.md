@@ -18,7 +18,7 @@ youtube_id: "8hw2haOfH8Y"
 
 platforms: ["windows"]
 
-steam: https://store.steampowered.com/app/2987180/ACTION_GAME_MAKER/
+steam: https://store.steampowered.com/app/2987180/ACTION_GAME_MAKER/?curator_clanid=41324400
 
 developer_interview:
   title: "Why the developer chose Godot"

@@ -11,7 +11,7 @@ date: 2018-02-25 20:59:56
 
 Since we haven't found any major issues in [our release candidate](/article/dev-snapshot-godot-3-0-1-rc1), we are now releasing Godot 3.0.1! The only regression reported was a renaming issue on Windows which we fixed.
 
-If you were eagerly waiting for 3.0.1, you can go directly to our [Download](/download) page and get the benefits of all the fixes! Both the [itch.io](https://godotengine.itch.io/godot) and [Steam](https://store.steampowered.com/app/404790) distributions are updated.
+If you were eagerly waiting for 3.0.1, you can go directly to our [Download](/download) page and get the benefits of all the fixes! Both the [itch.io](https://godotengine.itch.io/godot) and [Steam](https://store.steampowered.com/app/404790/Godot_Engine/?curator_clanid=41324400) distributions are updated.
 
 We have added many new features to the editor (and several to GDScript) in this release which we think will make your use of Godot even better. We've also fixed several nagging issues and generally put together a really nice update for our users of the stable branch. Please note that this is not the much-expected 3.1 release, so OpenGL ES 2.0 is not yet supported. Adding GLES2 support will necessitate some breakage for existing projects, so we will not merge that in this series of stable releases.
 

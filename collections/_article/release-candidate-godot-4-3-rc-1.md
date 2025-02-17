@@ -21,7 +21,7 @@ Please, consider [supporting the project financially](https://fund.godotengine.o
 
 ---
 
-*The cover illustration is from* [**ColdRidge**](https://store.steampowered.com/app/3052500/ColdRidge/), *a turn-based exploration game set in the mystical Wild West, developed by [Frog Collective](http://frog-collective.com/) with Godot 4. The game was revealed in early July and just got a playable demo [on Steam](https://store.steampowered.com/app/3052500/ColdRidge/), where you can also wishlist it.*
+*The cover illustration is from* [**ColdRidge**](https://store.steampowered.com/app/3052500/ColdRidge/?curator_clanid=41324400), *a turn-based exploration game set in the mystical Wild West, developed by [Frog Collective](http://frog-collective.com/) with Godot 4. The game was revealed in early July and just got a playable demo [on Steam](https://store.steampowered.com/app/3052500/ColdRidge/?curator_clanid=41324400), where you can also wishlist it.*
 
 ## Highlights
 

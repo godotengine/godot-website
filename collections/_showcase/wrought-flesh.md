@@ -14,7 +14,7 @@ youtube_id: "ssjbt_6RmKY"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/1762010/Wrought_Flesh/
+steam: https://store.steampowered.com/app/1762010/Wrought_Flesh/?curator_clanid=41324400
 itch: https://nartier.itch.io/wrought-flesh
 
 ---

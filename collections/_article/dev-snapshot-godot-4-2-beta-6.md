@@ -26,7 +26,7 @@ This 6th beta fixes a number of showstopper regressions via some relatively core
 
 -----
 
-*The illustration picture for this article is taken from* [**SpaceSlog**](https://store.steampowered.com/app/2133570/SpaceSlog/) *— a sci-fi spaceship sim game by [Produno Games Studios](https://produnogames.com/), with an emphasis on ship building, crew management, and exploration. It is currently in development with Godot 4.2, and you can wishlist the game on [Steam](https://store.steampowered.com/app/2133570/SpaceSlog/) and [Epic Games Store](https://store.epicgames.com/en-US/p/spaceslog-9f9162). Follow development on [Twitter](https://twitter.com/ProdunoGames) and the [studio's blog](https://produnogames.com/blog/).*
+*The illustration picture for this article is taken from* [**SpaceSlog**](https://store.steampowered.com/app/2133570/SpaceSlog/?curator_clanid=41324400) *— a sci-fi spaceship sim game by [Produno Games Studios](https://produnogames.com/), with an emphasis on ship building, crew management, and exploration. It is currently in development with Godot 4.2, and you can wishlist the game on [Steam](https://store.steampowered.com/app/2133570/SpaceSlog/?curator_clanid=41324400) and [Epic Games Store](https://store.epicgames.com/en-US/p/spaceslog-9f9162). Follow development on [Twitter](https://twitter.com/ProdunoGames) and the [studio's blog](https://produnogames.com/blog/).*
 
 ## What's new
 

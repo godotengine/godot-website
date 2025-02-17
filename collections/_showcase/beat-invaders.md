@@ -15,7 +15,7 @@ youtube_id: "aiVMhCEgGLY"
 
 platforms: ["windows", "linux"]
 
-steam: https://store.steampowered.com/app/1863080/Beat_Invaders/
+steam: https://store.steampowered.com/app/1863080/Beat_Invaders/?curator_clanid=41324400
 
 ---
 

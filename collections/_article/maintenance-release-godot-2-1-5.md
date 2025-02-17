@@ -105,4 +105,4 @@ And thanks to all the community members supporting us on [Patreon](https://www.p
 
 -----
 
-The illustration picture ([full size](/storage/app/uploads/public/5b5/c98/687/5b5c9868740e5620786710.jpg)) is from the great "survival adventure point'n'click" [*Deep Sixed*](https://www.littlereddoggames.com/deep-sixed) by [Little Red Dog Games](https://twitter.com/LRDGames), developed with Godot 2.1.4 and available on [itch.io](https://little-red-dog-games.itch.io/deep-sixed) and [Steam](https://store.steampowered.com/app/591000/Deep_Sixed/).
+The illustration picture ([full size](/storage/app/uploads/public/5b5/c98/687/5b5c9868740e5620786710.jpg)) is from the great "survival adventure point'n'click" [*Deep Sixed*](https://www.littlereddoggames.com/deep-sixed) by [Little Red Dog Games](https://twitter.com/LRDGames), developed with Godot 2.1.4 and available on [itch.io](https://little-red-dog-games.itch.io/deep-sixed) and [Steam](https://store.steampowered.com/app/591000/Deep_Sixed/?curator_clanid=41324400).

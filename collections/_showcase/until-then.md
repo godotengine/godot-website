@@ -18,7 +18,7 @@ youtube_id: "ktd33TPsGlA"
 
 platforms: ["windows", "linux", "playstation"]
 
-steam: https://store.steampowered.com/app/1574820/Until_Then/
+steam: https://store.steampowered.com/app/1574820/Until_Then/?curator_clanid=41324400
 
 featured_in_home: true
 ---

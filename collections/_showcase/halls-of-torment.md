@@ -19,7 +19,7 @@ youtube_id: "GCVIaeK504g"
 platforms: ["windows", "linux"]
 
 
-steam: https://store.steampowered.com/app/2218750/Halls_of_Torment/
+steam: https://store.steampowered.com/app/2218750/Halls_of_Torment/?curator_clanid=41324400
 
 
 featured_in_home: true

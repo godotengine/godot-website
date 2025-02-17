@@ -21,7 +21,7 @@ You can also [try the Web editor](https://editor.godotengine.org/releases/3.6.be
 
 ---
 
-*The illustration picture for this article showcases* [**Robotherapy**](https://store.steampowered.com/app/1895970/Robotherapy/), *an emotional dark comedy about robots doing therapy. It was developed by [Lucas Molina](https://twitter.com/AD1337) with Godot 3.5, and just got released on [**Steam**](https://store.steampowered.com/app/1895970/Robotherapy/)!*
+*The illustration picture for this article showcases* [**Robotherapy**](https://store.steampowered.com/app/1895970/Robotherapy/?curator_clanid=41324400), *an emotional dark comedy about robots doing therapy. It was developed by [Lucas Molina](https://twitter.com/AD1337) with Godot 3.5, and just got released on [**Steam**](https://store.steampowered.com/app/1895970/Robotherapy/?curator_clanid=41324400)!*
 
 ## Highlights
 

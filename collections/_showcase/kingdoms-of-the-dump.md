@@ -15,7 +15,7 @@ youtube_id: "swcFuuwHKFE"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/2159270/Kingdoms_of_the_Dump
+steam: https://store.steampowered.com/app/2159270/Kingdoms_of_the_Dump/?curator_clanid=41324400
 
 ---
 

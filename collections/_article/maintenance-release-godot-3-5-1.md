@@ -94,4 +94,4 @@ If you'd like to support the project financially and help us secure our future h
 
 ---
 
-*The illustration picture is from* [**Dome Keeper**](https://store.steampowered.com/app/1637320/Dome_Keeper/), *an innovative roguelike survival miner with gorgeous artwork, developed by [Bippinbits](https://twitter.com/BippinBits) and published by [Raw Fury](https://rawfury.com/). It was just [released on Steam](https://store.steampowered.com/app/1637320/Dome_Keeper/) and the first players seem to love it, check it out!*
+*The illustration picture is from* [**Dome Keeper**](https://store.steampowered.com/app/1637320/Dome_Keeper/?curator_clanid=41324400), *an innovative roguelike survival miner with gorgeous artwork, developed by [Bippinbits](https://twitter.com/BippinBits) and published by [Raw Fury](https://rawfury.com/). It was just [released on Steam](https://store.steampowered.com/app/1637320/Dome_Keeper/?curator_clanid=41324400) and the first players seem to love it, check it out!*

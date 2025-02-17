@@ -16,7 +16,7 @@ youtube_id: "NhPjTSAhFYM"
 platforms: ["windows", "linux"]
 
 
-steam: https://store.steampowered.com/app/1395420/Human_Diaspora/
+steam: https://store.steampowered.com/app/1395420/Human_Diaspora/?curator_clanid=41324400
 
 
 developer_interview:
