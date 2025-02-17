@@ -17,5 +17,5 @@ contributors:
     github: rburing
   - name: lawnjelly
     github: lawnjelly
-read_more: https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%2092391%2091818%20
+read_more: https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%2092391%2091818
 ---
