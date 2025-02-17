@@ -9,7 +9,7 @@ image_caption_description: A game by Darenn Keller
 date: 2025-02-17 12:00:00
 ---
 
-We knew from the beginning that aiming for a late-February  release was an ambitious  timeframe, but the community has risen to the challenge and kept development right on track! As such, you can expect this to be our final beta release of the 4.4 period, with release candidates set to come out shortly after. In practice, this means that all further changes will be *strictly* regression fixes, so the content available here will be largely reflective of the 4.4 release. As always, users are strongly encouraged to test this snapshot to catch the remaining few release blockers.
+We knew from the beginning that aiming for a late-February release was an ambitious timeframe, but the community has risen to the challenge and kept development right on track! As such, you can expect this to be our final beta release of the 4.4 period, with release candidates set to come out shortly after. In practice, this means that all further changes will be *strictly* regression fixes, so the content available here will be largely reflective of the 4.4 release. As always, users are strongly encouraged to test this snapshot to catch the remaining few release blockers.
 
 Please, consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
