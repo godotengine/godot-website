@@ -71,8 +71,7 @@ plugins:
 
 # Internationalization
 languages: ["en", "es"]
-exclude_from_localizations: ["assets", "storage"]
-default_lang: "en"
+lang: "en"
 
 # Pagination (used by the blog)
 pagination:

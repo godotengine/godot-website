@@ -1,3 +1,22 @@
+meta:
+  description: "Develop your 2D & 3D games, cross-platform projects, or even XR ideas!"
+header:
+  features: Features
+  showcase: Showcase
+  blog: Blog
+  community: Community
+  assets: Assets
+  download: Download
+  docs: Docs
+  contribute: Contribute
+  donate: Donate
 home:
-  h1: "The game engine you've been waiting&nbsp;for."
-  subtitle: "A simple, responsive Jekyll theme for your blog or site."
+  h1: "Your free, open&#8209;source<br>game engine."
+  subtitle: "Develop your 2D &amp; 3D games, cross-platform projects, or even XR ideas!"
+  whats_new: "What's new"
+  download_latest: Download Latest
+  looking_for: 'Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a>, our <a href="/download/archive">experimental releases</a>, or a <a href="/download/archive">previous version</a>?'
+  latest_news: "Latest news"
+  more_news: "More news"
+  cards:
+    h2: "A different way to make games"
