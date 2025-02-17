@@ -1130,6 +1130,10 @@ $donate-robot-size: 500px;
 							font-size: clamp(30px, 7cqw, 35px);
 							font-weight: 800;
 
+							p {
+								margin: 0;
+							}
+
 							span.highlight {
 								color: var(--color-highlight);
 							}
