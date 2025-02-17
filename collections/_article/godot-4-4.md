@@ -9,20 +9,18 @@ redirect_to:
  - /releases/4.4/
 ---
 
-This release we decided to do things a little bit differently. Instead of making a giant blog post, we have decided to make a giant [web page](/releases/4.3/) instead! Inspired by Blender, we have decided to create a stable page on the website that features releases so new users can quickly learn about the latest version of the engine.
+[[Intro placeholder]]
 
-So please take a look over at the [4.3 release page](/releases/4.3/)!
+So please take a look over at the [4.4 release page](/releases/4.4/)!
 
-Or grab 4.3 here directly and get started.
+Or grab 4.4 here directly and get started.
 
-{% include articles/download_card.html version="4.3" release="stable" article=page %}
+{% include articles/download_card.html version="4.4" release="stable" article=page %}
 
 **Standard build** includes support for GDScript and GDExtension.
 
 **.NET build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
 - See also [C# platform support](https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support).
-
-If you want to test the new Windows ARM64 builds, you will now find them listed in the usual download page.
 
 ## Support
 
