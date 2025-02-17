@@ -17,34 +17,58 @@
 		$i: index($sections, $section);
 		$diff: $i - $base-category-i;
 		$base-color-top: offset-hue($base-color, $offset, $diff);
-		$base-color-bottom: adjust-color(offset-hue($base-color, $offset, $diff + 1), $lightness: -10);
+		$base-color-bottom: adjust-color(
+			offset-hue($base-color, $offset, $diff + 1),
+			$lightness: -10
+		);
 		$color-top: adjust-color($base-color-top, $saturation: -10);
 		$color-bottom: adjust-color($base-color-bottom, $saturation: -10);
+		$color-top-muted: adjust-color($base-color-top, $saturation: -25);
+		$color-bottom-muted: adjust-color($base-color-bottom, $saturation: -25);
 		$color-selection: adjust-color($base-color-bottom, $saturation: -30);
-		$color-invert: adjust-color($base-color-top, $hue: 180, $lightness: 0, $saturation: 30);
-		$color-highlight: adjust-color($base-color-top, $lightness: 0, $saturation: 30);
-		$color-highlight--dark: adjust-color($base-color-top, $lightness: 30, $saturation: 30);
-		$color-invert-highlight: adjust-color($color-invert, $lightness: 20, $saturation: 30);
-		$return-value: map-merge($return-value, (
-			#{$section}: (
-				color-top: $color-top,
-				color-bottom: $color-bottom,
-				color-selection: $color-selection,
-				color-invert: $color-invert,
-				color-highlight: $color-highlight,
-				color-highlight--dark: $color-highlight--dark,
-				color-invert-highlight: $color-invert-highlight
+		$color-invert: adjust-color(
+			$base-color-top,
+			$hue: 180,
+			$lightness: 0,
+			$saturation: 30
+		);
+		$color-highlight: adjust-color(
+			$base-color-top,
+			$lightness: 0,
+			$saturation: 30
+		);
+		$color-highlight--dark: adjust-color(
+			$base-color-top,
+			$lightness: 30,
+			$saturation: 30
+		);
+		$color-invert-highlight: adjust-color(
+			$color-invert,
+			$lightness: 20,
+			$saturation: 30
+		);
+		$return-value: map-merge(
+			$return-value,
+			(
+				#{$section}: (
+						color-top: $color-top,
+						color-bottom: $color-bottom,
+						color-top-muted: $color-top-muted,
+						color-bottom-muted: $color-bottom-muted,
+						color-selection: $color-selection,
+						color-invert: $color-invert,
+						color-highlight: $color-highlight,
+						color-highlight--dark: $color-highlight--dark,
+						color-invert-highlight: $color-invert-highlight,
+					)
 			)
-		));
+		);
 	}
 	@return $return-value;
 }
 
 @function r-desktop-mobile($sizes...) {
-	@return (
-		"desktop": nth($sizes, 1),
-		"mobile": nth($sizes, 2)
-	);
+	@return ("desktop": nth($sizes, 1), "mobile": nth($sizes, 2));
 }
 
 @function r-get-desktop($value) {
