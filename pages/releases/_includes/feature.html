@@ -5,7 +5,8 @@
 {% assign is_video = false %}
 {% assign is_image = false %}
 {% if feature.video_src == null and feature.image_src == null %}
-	{% assign media_type = 'none' %}
+	{% comment %}
+	{% endcomment %}
 {% else %}
 	{% assign has_media = true %}
 	{% assign media_position = feature.media_position | default: 'top' %}
@@ -14,6 +15,11 @@
 	{% else %}
 		{% assign is_image = true %}
 	{% endif %}
+{% endif %}
+
+{% assign media_class = "" %}
+{% if has_media %}
+	{% assign media_class = "media-" | append: media_position %}
 {% endif %}
 
 {% assign span = "" %}
@@ -28,7 +34,7 @@
 	{% assign inverted = "inverted" %}
 {% endif %}
 
-<div id="{{feature.anchor}}" class="release-card media-{{media_position}} {{span}} {{inverted}}">
+<div id="{{feature.anchor}}" class="release-card {{media_class}} {{span}} {{inverted}}">
 	<div class="release-card-container">
 		<div class="release-card-content">
 			<div class="release-card-content-container">
@@ -87,10 +93,34 @@
 					</video>
 				{% endif %}
 				{% if is_image %}
-					<img class="release-card-image" alt="{{ feature.image_alt }}"
-						src="{{ feature.image_src }}" srcset="
-						{{ feature.image_src_2x }} 2x
-					" draggable="false" />
+					<div class="release-card-image-container">
+						<img class="release-card-image" alt="{{ feature.image_alt }}"
+							src="{{ feature.image_src }}" srcset="
+								{{ feature.image_src_2x }} 2x
+							"
+							draggable="false"
+						/>
+						{% if feature.image_label != null %}
+							<div class="release-card-image-label">{{feature.image_label}}</div>
+						{% endif %}
+					</div>
+					{% if feature.image_comparison_src != null %}
+						<div class="release-card-image-container image-comparison-b">
+							<img class="release-card-image" alt="{{ feature.image_comparison_alt }}"
+								src="{{ feature.image_comparison_src }}" srcset="
+									{{ feature.image_comparison_src_2x }} 2x
+								"
+							/>
+							{% if feature.image_comparison_label != null %}
+								<div class="release-card-image-label release-card-image-label-comparison">
+									{{feature.image_comparison_label}}
+								</div>
+							{% endif %}
+						</div>
+						<div class="release-card-comparison">
+							<input type="range" id="{{feature.anchor}}-comparison-range" class="comparison-range" step="0.0001">
+						</div>
+					{% endif %}
 				{% endif %}
 			</div>
 		{% endif %}
