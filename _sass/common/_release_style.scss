@@ -1257,14 +1257,95 @@ $donate-robot-size: 500px;
 					container-type: inline-size;
 					container-name: release-card-media;
 
+					.release-card-comparison {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+
+						.comparison-range {
+							position: absolute;
+							top: -2px;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background-color: transparent;
+							user-select: none;
+
+							-webkit-appearance: none !important;
+							appearance: none;
+
+							overflow: hidden;
+
+							&::-moz-range-thumb,
+							&::-webkit-slider-thumb {
+								position: relative;
+								top: -50%;
+
+								-webkit-appearance: none !important;
+								appearance: none;
+								background-color: black;
+								border: 1px solid black;
+								width: 0.25em;
+								margin: 0 1em;
+								height: 200%;
+								cursor: col-resize;
+							}
+
+							&::-moz-range-track,
+							&::-webkit-slider-runnable-track {
+								-webkit-appearance: none !important;
+								appearance: none;
+							}
+
+							&:focus {
+								outline: none;
+							}
+						}
+					}
+
+					.release-card-image-container {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+
+						.release-card-image-label {
+							position: absolute;
+							top: 0;
+							left: 0;
+							font-size: 1em;
+							font-weight: 700;
+							color: white;
+							margin: 0.5em;
+						}
+
+						&.image-comparison-b {
+							--mask-width: 50%;
+							mask-image: linear-gradient(
+								to right,
+								transparent 0%,
+								transparent var(--mask-width, 50%),
+								white calc(var(--mask-width, 50%) + 0.000001%),
+								white
+							);
+
+							.release-card-image-label {
+								left: unset;
+								right: 0;
+							}
+						}
+					}
+
 					.release-card-video,
 					.release-card-image {
-						position: relative;
+						position: absolute;
 						top: 0;
 						left: 0;
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
+						overflow: hidden;
 
 						&.position-top-left {
 							object-position: top left;

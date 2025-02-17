@@ -410,3 +410,27 @@ const scrollToTopObserver = new IntersectionObserver((entries, observer) => {
 	}
 });
 scrollToTopObserver.observe(linksElement);
+
+// Image comparisons.
+/** @type {HTMLDivElement[]} */
+const releaseCardMediaElements = Array.from(
+	document.querySelectorAll(".release-card-media"),
+);
+for (const releaseCardMedia of releaseCardMediaElements) {
+	/** @type {HTMLInputElement | null} */
+	const comparisonRange = releaseCardMedia.querySelector(".comparison-range");
+	if (comparisonRange == null) {
+		continue;
+	}
+	console.log("comparisonRange", comparisonRange);
+	const imageComparisonB = releaseCardMedia.querySelector(
+		".image-comparison-b",
+	);
+	if (imageComparisonB == null) {
+		continue;
+	}
+	comparisonRange.addEventListener("input", (event) => {
+		imageComparisonB.style = `--mask-width: ${comparisonRange.valueAsNumber}%;`;
+	});
+	imageComparisonB.style = "--mask-width: 50%;";
+}
