@@ -523,7 +523,7 @@ $subsection-base-color: grey;
 		--color-code-gdscript-stringname: #{$color-code-gdscript-stringname--dark};
 	}
 
-	code.highlight {
+	.highlight {
 		$_padding: 5px;
 
 		background-color: color-mix(
@@ -545,30 +545,31 @@ $subsection-base-color: grey;
 		border-radius: $_padding;
 
 		color: var(--color-code-text);
+		font-family:
+			ui-monospace,
+			SFMono-Regular,
+			SF Mono,
+			Menlo,
+			Consolas,
+			Liberation Mono,
+			monospace;
 
-		.symbol {
-			color: var(--color-code-symbol);
-		}
-		.keyword {
-			color: var(--color-code-keyword);
-		}
-		.controlflow {
-			color: var(--color-code-controlflow);
-		}
-		.basetype {
-			color: var(--color-code-basetype);
-		}
-		.function {
-			color: var(--color-code-function);
-		}
-		.membervariable {
-			color: var(--color-code-membervariable);
-		}
-		.gdscript-globalfunction {
-			color: var(--color-code-gdscript-globalfunction);
-		}
-		.gdscript-annotation {
-			color: var(--color-code-gdscript-annotation);
+		@each $key
+			in (
+				symbol
+					keyword
+					controlflow
+					basetype
+					function
+					membervariable
+					gdscript-globalfunction
+					gdscript-annotation
+			)
+		{
+			.#{$key},
+			&.#{$key} {
+				color: var(--color-code-#{$key});
+			}
 		}
 	}
 
