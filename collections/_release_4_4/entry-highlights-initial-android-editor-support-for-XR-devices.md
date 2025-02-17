@@ -11,7 +11,7 @@ text: |
 
   With this release, the first steps have been taken to use OpenXR to transfer the existing Android editor into the context of mixed reality headsets.
 
-  Currently supported on Meta Quest 3 and Quest Pro.
+  Currently supported on Meta Quest 3, Quest Pro, and Pico 4.
 contributors:
   - name: Fredia Huya-Kouadio
     github: m4gr3d
