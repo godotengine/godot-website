@@ -3,7 +3,7 @@ title: "Our first GodotCon in the US - Save the date!"
 excerpt: "Want to join? Boston 5th - 7th of May. Call for speakers and sponsors open!"
 categories: ["events"]
 author: Emi
-image: /storage/blog/covers/godotcon-boston-2025.webp
+image: /storage/blog/covers/godotcon-boston-2025.webp?1
 date: 2025-01-21 18:00:00
 ---
 
@@ -15,8 +15,9 @@ Up until now, we held all of our annual GodotCon events in Europe, but after the
 | 🕑 Time | 8AM - 6PM|
 | 🇺🇲 Location | Boston, Massachusetts |
 | 📍 Venue | Microsoft NERD. <a href="https://www.google.com/maps/place/Microsoft+New+England+Research+and+Development+Center/@42.3608684,-71.0832216,1122m/data=!3m1!1e3!4m6!3m5!1s0x89e370a423d61825:0x58516248462c99eb!8m2!3d42.3614256!4d-71.0812092!16s%2Fg%2F1tfx5xkv?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D">1 Memorial Dr, Cambridge, MA 02142, United States</a> | 
+| 🌐 Website | [https://conference.godotengine.org](https://conference.godotengine.org/US/2025) |
 
-
+<a class="btn" href="https://tickets.godotengine.org/foundation/godotcon-us-2025/" >Buy tickets 🎟️</a>
 
 ### Call for speakers and sponsors
 
@@ -27,7 +28,8 @@ If you would like to be a part of the conference by giving a talk or a workshop,
 We are also actively looking for sponsors to support GodotCon Boston. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to [godotcon@godotengine.org](mailto:godotcon@godotengine.org).
 
 ### Tickets and more
-Tickets will be available soon, so stay tuned for more information by joining the [GodotCon Discord](https://discord.gg/Jasg9cpjqA) or the mailing list.
+
+Get your tickets [here](https://tickets.godotengine.org/foundation/godotcon-us-2025/) and stay tuned for more information by joining the [GodotCon Discord](https://discord.gg/Jasg9cpjqA) or the mailing list.
 
 <form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
   <style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}</style>
