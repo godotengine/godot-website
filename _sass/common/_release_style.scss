@@ -96,12 +96,6 @@ $donate-robot-size: 500px;
 	}
 }
 
-$subsection-base-color: grey;
-@mixin subsection-color() {
-	--color-top: #{adjust-color($subsection-base-color, $lightness: 10)};
-	--color-bottom: #{$subsection-base-color};
-}
-
 #scroll-to-top {
 	position: fixed;
 	top: 0;
@@ -289,21 +283,36 @@ $subsection-base-color: grey;
 	.link {
 		display: flex;
 		min-width: 50px;
-		font-weight: 700;
 		align-items: center;
 		justify-content: center;
 		padding: calc(var(--card-padding) / 2);
 		border-radius: calc(var(--card-padding) / 2);
 		text-decoration: none;
 		color: white;
+
 		font-size: 1em;
+		font-weight: 800;
 
 		background: linear-gradient(
 			to bottom,
 			var(--color-top),
 			var(--color-bottom)
 		);
-		@include subsection-color();
+
+		@at-root #{selector-replace(&, ".links-container", ".links-container.links-container-subsections")} {
+			font-weight: 600;
+			--color-top: var(--color-top-muted);
+			--color-bottom: var(--color-bottom-muted);
+		}
+		@at-root #{selector-replace(&, ".links-container", ".links-container.main-list")} {
+			font-size: 150%;
+			@each $section-name, $section-colors in $sections {
+				&.link-#{$section-name} {
+					--color-top: #{map-get($section-colors, "color-top")};
+					--color-bottom: #{map-get($section-colors, "color-bottom")};
+				}
+			}
+		}
 
 		&:hover {
 			& > span {
@@ -1307,36 +1316,9 @@ $subsection-base-color: grey;
 				margin-bottom: 0;
 			}
 
-			@each $section-name, $section-colors in $sections {
-				&.section-#{$section-name} {
-					--color-top: #{map-get($section-colors, "color-top")};
-					--color-bottom: #{map-get($section-colors, "color-bottom")};
-					--color-selection: #{map-get($section-colors, "color-selection")};
-					--color-invert: #{map-get($section-colors, "color-invert")};
-					--color-highlight: #{map-get($section-colors, "color-highlight")};
-					--color-highlight-switch: #{map-get(
-							$section-colors,
-							"color-highlight--dark"
-						)};
-					--color-invert-highlight: #{map-get(
-							$section-colors,
-							"color-invert-highlight"
-						)};
-					@include is-dark() {
-						--color-highlight: #{map-get(
-								$section-colors,
-								"color-highlight--dark"
-							)};
-						--color-highlight-switch: #{map-get(
-								$section-colors,
-								"color-highlight"
-							)};
-					}
-				}
-			}
-
 			&.subsection {
-				@include subsection-color();
+				--color-top: var(--color-top-muted);
+				--color-bottom: var(--color-bottom-muted);
 			}
 
 			// Remove margins from the .subsection under a .section
@@ -1355,12 +1337,18 @@ $subsection-base-color: grey;
 
 			.section-title h3 {
 				position: relative;
-				font-size: clamp(4cqw, 50px, 6cqw);
 				background: var(--color-top)
 					linear-gradient(to bottom, var(--color-top), var(--color-bottom));
 				padding: calc(var(--card-padding) * 2);
 				border-radius: var(--card-padding);
 				margin-bottom: 0;
+
+				font-size: clamp(4cqw, 50px, 6cqw);
+				font-weight: 800;
+				@at-root #{selector-replace(&, ".section", ".section.subsection")} {
+					font-size: clamp(2cqw, 35px, 4cqw);
+					font-weight: 600;
+				}
 
 				contain: paint;
 				.section-robot {
@@ -1382,6 +1370,36 @@ $subsection-base-color: grey;
 				&:hover {
 					text-decoration: underline;
 					filter: none;
+				}
+			}
+		}
+
+		@each $section-name, $section-colors in $sections {
+			.section-#{$section-name} {
+				--color-top: #{map-get($section-colors, "color-top")};
+				--color-bottom: #{map-get($section-colors, "color-bottom")};
+				--color-top-muted: #{map-get($section-colors, "color-top-muted")};
+				--color-bottom-muted: #{map-get($section-colors, "color-bottom-muted")};
+				--color-selection: #{map-get($section-colors, "color-selection")};
+				--color-invert: #{map-get($section-colors, "color-invert")};
+				--color-highlight: #{map-get($section-colors, "color-highlight")};
+				--color-highlight-switch: #{map-get(
+						$section-colors,
+						"color-highlight--dark"
+					)};
+				--color-invert-highlight: #{map-get(
+						$section-colors,
+						"color-invert-highlight"
+					)};
+				@include is-dark() {
+					--color-highlight: #{map-get(
+							$section-colors,
+							"color-highlight--dark"
+						)};
+					--color-highlight-switch: #{map-get(
+							$section-colors,
+							"color-highlight"
+						)};
 				}
 			}
 		}
