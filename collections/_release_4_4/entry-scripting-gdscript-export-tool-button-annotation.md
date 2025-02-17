@@ -5,12 +5,12 @@ subsection: gdscript
 rank: 0
 importance: 2
 anchor: "export-tool-button-annotation"
-title: "<span class='highlight gdscript-annotation'>@export_tool_button</span> annotation"
+title: "<span class='code-highlight gdscript-annotation'>@export_tool_button</span> annotation"
 blockquote: "On the button"
 text: |
   The tool developers amongst you asked and our contributors delivered:
 
-  You can now create buttons in the inspector from <span class='highlight gdscript-annotation'>@tool</span> scripts.
+  You can now create buttons in the inspector from <span class='code-highlight gdscript-annotation'>@tool</span> scripts.
 contributors:
   - name: jordi
     github: jordi-star

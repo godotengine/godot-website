@@ -523,7 +523,8 @@ $subsection-base-color: grey;
 		--color-code-gdscript-stringname: #{$color-code-gdscript-stringname--dark};
 	}
 
-	.highlight {
+	code.highlight,
+	.code-highlight {
 		$_padding: 5px;
 
 		background-color: color-mix(
