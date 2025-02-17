@@ -28,7 +28,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*The illustration picture is from* [**Parking Garage Rally Circuit**](https://store.steampowered.com/app/2737300/Parking_Garage_Rally_Circuit/), *a delightfully retro arcade rally racing that looks straight out of 1998! It is developed by [Walaber](https://twitter.com/walaber) of JellyCar fame, and this upcoming opus is developed using Godot 4.2. Wishlist the game on [Steam](https://store.steampowered.com/app/2737300/Parking_Garage_Rally_Circuit/), and follow the developer on [Twitter](https://twitter.com/walaber) and [Discord](https://discord.com/invite/Ws2MTXyh).*
+*The illustration picture is from* [**Parking Garage Rally Circuit**](https://store.steampowered.com/app/2737300/Parking_Garage_Rally_Circuit/?curator_clanid=41324400), *a delightfully retro arcade rally racing that looks straight out of 1998! It is developed by [Walaber](https://twitter.com/walaber) of JellyCar fame, and this upcoming opus is developed using Godot 4.2. Wishlist the game on [Steam](https://store.steampowered.com/app/2737300/Parking_Garage_Rally_Circuit/?curator_clanid=41324400), and follow the developer on [Twitter](https://twitter.com/walaber) and [Discord](https://discord.com/invite/Ws2MTXyh).*
 
 ## Highlights
 

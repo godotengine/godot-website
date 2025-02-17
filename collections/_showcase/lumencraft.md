@@ -18,7 +18,7 @@ youtube_id: "LC29HveHImg"
 platforms: ["windows", "macos", "linux"]
 
 
-steam: https://store.steampowered.com/app/1713810/Lumencraft/
+steam: https://store.steampowered.com/app/1713810/Lumencraft/?curator_clanid=41324400
 gog: https://www.gog.com/pl/game/lumencraft
 ---
 

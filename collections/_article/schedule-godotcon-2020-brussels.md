@@ -133,7 +133,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 
 <div class="speaker">
 <div class="speaker-text">
-    Paweł Fertyk (Poland) is a long-time coder with a passion for open source and game development. His company, <a href="https://miskatonicstudio.com">Miskatonic Studio</a>, published the Godot-made <a href="https://store.steampowered.com/app/992860/Intrepid"><em>Intrepid</em></a> on Steam in December 2018 and is currently working on 3D adventure games.
+    Paweł Fertyk (Poland) is a long-time coder with a passion for open source and game development. His company, <a href="https://miskatonicstudio.com">Miskatonic Studio</a>, published the Godot-made <a href="https://store.steampowered.com/app/992860/Intrepid/?curator_clanid=41324400"><em>Intrepid</em></a> on Steam in December 2018 and is currently working on 3D adventure games.
 </div>
 <div class="speaker-img">
     <img alt="Paweł Fertyk" src="/storage/app/uploads/public/5e2/f4e/8ce/5e2f4e8cef499180480265.jpg" />

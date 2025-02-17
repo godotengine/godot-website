@@ -29,7 +29,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*The illustration picture comes from* [**Fish Flop**](https://store.steampowered.com/app/2440110/Fish_Flop/), *a physics-based adventure with a fish escaping from the market back to the sea. It is developed by [Kasper Arnklit](https://twitter.com/KasperArnklit/) and [Neil Greene](https://twitter.com/Neilosg) in Godot 4, and can be wishlisted on [Steam](https://store.steampowered.com/app/2440110/Fish_Flop/).*
+*The illustration picture comes from* [**Fish Flop**](https://store.steampowered.com/app/2440110/Fish_Flop/?curator_clanid=41324400), *a physics-based adventure with a fish escaping from the market back to the sea. It is developed by [Kasper Arnklit](https://twitter.com/KasperArnklit/) and [Neil Greene](https://twitter.com/Neilosg) in Godot 4, and can be wishlisted on [Steam](https://store.steampowered.com/app/2440110/Fish_Flop/?curator_clanid=41324400).*
 
 ## What's new
 

@@ -21,7 +21,7 @@ Maintenance releases are expected to be safe for an upgrade, but we recommend to
 
 -----
 
-*The illustration picture for this article comes from* [**Crossroad OS**](https://store.steampowered.com/app/1783800/Crossroad_OS/) — *a puzzle adventure game by [Guy](https://twitter.com/guyunger_nl) and [Daisy Games](https://twitter.com/DaisyGames3) where you get to explore the world inside of a mysterious operating system. It's built with Godot 4.1, and you can get it right now on [Steam](https://store.steampowered.com/app/1783800/Crossroad_OS/), including a demo! Consider following the developers on their social media accounts for more content, and joining [Daisy Games' Discord community](https://discord.gg/wcbmH4VVEp).*
+*The illustration picture for this article comes from* [**Crossroad OS**](https://store.steampowered.com/app/1783800/Crossroad_OS/?curator_clanid=41324400) — *a puzzle adventure game by [Guy](https://twitter.com/guyunger_nl) and [Daisy Games](https://twitter.com/DaisyGames3) where you get to explore the world inside of a mysterious operating system. It's built with Godot 4.1, and you can get it right now on [Steam](https://store.steampowered.com/app/1783800/Crossroad_OS/?curator_clanid=41324400), including a demo! Consider following the developers on their social media accounts for more content, and joining [Daisy Games' Discord community](https://discord.gg/wcbmH4VVEp).*
 
 ## Highlights of 4.1.4 RC 1
 

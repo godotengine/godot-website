@@ -21,7 +21,7 @@ platforms: ["windows", "macos", "linux", "web"]
 
 itch: https://orama-interactive.itch.io/pixelorama/
 github: https://github.com/Orama-Interactive/Pixelorama
-steam: https://store.steampowered.com/app/2779170/Pixelorama/
+steam: https://store.steampowered.com/app/2779170/Pixelorama/?curator_clanid=41324400
 
 tool: true
 ---

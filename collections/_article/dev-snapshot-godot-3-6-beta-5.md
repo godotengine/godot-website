@@ -21,7 +21,7 @@ This beta represents *feature freeze* for 3.6. We will now concentrate on bug fi
 
 ---
 
-*The cover illustration is from* [**Backpack Battles**](https://store.steampowered.com/app/2427700/Backpack_Battles/), *a massively popular PvP inventory management auto battler, developed by [PlayWithFurcifer](https://www.youtube.com/@playwithfurcifer) in Godot 3.5. The game was released in early access in March, and is gearing up towards a great full release later this year. You can buy or wishlist it on [Steam](https://store.steampowered.com/app/2427700/Backpack_Battles/), and follow the developers on [Twitter](https://twitter.com/TweetFurcifer) and [YouTube](https://www.youtube.com/@playwithfurcifer).*
+*The cover illustration is from* [**Backpack Battles**](https://store.steampowered.com/app/2427700/Backpack_Battles/?curator_clanid=41324400), *a massively popular PvP inventory management auto battler, developed by [PlayWithFurcifer](https://www.youtube.com/@playwithfurcifer) in Godot 3.5. The game was released in early access in March, and is gearing up towards a great full release later this year. You can buy or wishlist it on [Steam](https://store.steampowered.com/app/2427700/Backpack_Battles/?curator_clanid=41324400), and follow the developers on [Twitter](https://twitter.com/TweetFurcifer) and [YouTube](https://www.youtube.com/@playwithfurcifer).*
 
 ## Highlights
 

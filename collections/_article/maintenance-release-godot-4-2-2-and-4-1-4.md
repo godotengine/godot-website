@@ -22,7 +22,7 @@ We release both 4.2.2 and 4.1.4 at the same time as it was convenient to prepare
 
 {% include articles/download_card.html version="4.1.4" release="stable" article=page %}
 
-*The illustration picture used in this announcement is from* [**RAM: Random Access Mayhem**](https://store.steampowered.com/app/2256450/RAM_Random_Access_Mayhem/), *a top-down roguelike shooter where you take control of diverse robotics enemies. RAM won the [Audience Choice award at the IGF 2024](https://store.steampowered.com/news/app/2256450/view/4110170432160182319)! You can wishlist it on [Steam](https://store.steampowered.com/app/2256450/RAM_Random_Access_Mayhem/) and try your hand at the demo, as well as follow the developers on [Twitter](https://twitter.com/Xylem_Studios).*
+*The illustration picture used in this announcement is from* [**RAM: Random Access Mayhem**](https://store.steampowered.com/app/2256450/RAM_Random_Access_Mayhem/?curator_clanid=41324400), *a top-down roguelike shooter where you take control of diverse robotics enemies. RAM won the [Audience Choice award at the IGF 2024](https://store.steampowered.com/news/app/2256450/view/4110170432160182319)! You can wishlist it on [Steam](https://store.steampowered.com/app/2256450/RAM_Random_Access_Mayhem/?curator_clanid=41324400) and try your hand at the demo, as well as follow the developers on [Twitter](https://twitter.com/Xylem_Studios).*
 
 ## Highlights of 4.2.2
 

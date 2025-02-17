@@ -49,4 +49,4 @@ At this stage, we are mostly interested in critical bugs which could be showstop
 
 - [GH-26149](https://github.com/godotengine/godot/issues/26149) - Recent area optimization commit causes massive FPS swings (fixed in *master* branch).
 
-*The illustration picture is a screenshot from [Binogure Studio](https://twitter.com/Binogure)'s *[City Game Studio](https://store.steampowered.com/app/726840/City_Game_Studio/)*, a game development simulation game made with Godot 2.1.5, which was just released on [Steam Early Access](https://store.steampowered.com/app/726840/City_Game_Studio/).*
+*The illustration picture is a screenshot from [Binogure Studio](https://twitter.com/Binogure)'s *[City Game Studio](https://store.steampowered.com/app/726840/City_Game_Studio/?curator_clanid=41324400)*, a game development simulation game made with Godot 2.1.5, which was just released on [Steam Early Access](https://store.steampowered.com/app/726840/City_Game_Studio/?curator_clanid=41324400).*
