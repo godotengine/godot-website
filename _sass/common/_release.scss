@@ -26,6 +26,11 @@
 		$color-top-muted: adjust-color($base-color-top, $saturation: -25);
 		$color-bottom-muted: adjust-color($base-color-bottom, $saturation: -25);
 		$color-selection: adjust-color($base-color-bottom, $saturation: -30);
+		$color-selection--light: adjust-color(
+			$base-color-bottom,
+			$lightness: 40,
+			$saturation: 30
+		);
 		$color-invert: adjust-color(
 			$base-color-top,
 			$hue: 180,
@@ -56,6 +61,7 @@
 						color-top-muted: $color-top-muted,
 						color-bottom-muted: $color-bottom-muted,
 						color-selection: $color-selection,
+						color-selection--light: $color-selection--light,
 						color-invert: $color-invert,
 						color-highlight: $color-highlight,
 						color-highlight--dark: $color-highlight--dark,
