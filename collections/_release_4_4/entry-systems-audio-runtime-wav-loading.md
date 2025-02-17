@@ -8,7 +8,7 @@ anchor: runtime-WAV-file-loading
 title: Runtime WAV file loading
 blockquote: Catch this wave
 text: |
-  You can now load WAV files at runtime - just like OGG Vorbis audio tracks already allowed.
+  You can now load WAV files at runtime — just like OGG Vorbis audio tracks already allowed.
 
   This feature will come in handy for those looking to load user-generated content at runtime, including non-game audio applications.
 contributors:
