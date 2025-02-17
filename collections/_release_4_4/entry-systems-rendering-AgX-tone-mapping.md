@@ -16,4 +16,13 @@ contributors:
   - name: Hugo Locurcio
     github: Calinou
 read_more: https://github.com/godotengine/godot/pull/87260
+media_position: top
+image_alt: ACES
+image_src: /storage/releases/4.4/images/godot_neon_aces.webp
+image_src_2x: /storage/releases/4.4/images/godot_neon_aces_2x.webp
+image_label: ACES
+image_comparison_alt: AgX
+image_comparison_src: /storage/releases/4.4/images/godot_neon_agx.webp
+image_comparison_src_2x: /storage/releases/4.4/images/godot_neon_agx_2x.webp
+image_comparison_label: AgX
 ---
