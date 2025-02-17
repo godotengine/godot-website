@@ -1109,6 +1109,10 @@ $subsection-base-color: grey;
 								&:hover {
 									text-decoration: underline;
 								}
+
+								p {
+									margin: 0;
+								}
 							}
 						}
 
