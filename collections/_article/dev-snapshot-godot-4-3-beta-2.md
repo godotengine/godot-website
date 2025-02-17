@@ -22,7 +22,7 @@ Please, consider [supporting the project financially](https://fund.godotengine.o
 
 ---
 
-*The cover illustration is from* [**Stunt Xpress**](https://store.steampowered.com/app/2645830/Stunt_Xpress/), *a delivery van stunt action game by Rafael Gonçalves and Pineapple Works, made with Godot 4.2. The game is scheduled for a 2024 release, and you can play the latest demo on [Steam](https://store.steampowered.com/app/2645830/Stunt_Xpress/). You can follow [Rafael](https://x.com/gonzelvis/) and [Pineapple Works](https://x.com/pineapple_works) on Twitter for development updates.*
+*The cover illustration is from* [**Stunt Xpress**](https://store.steampowered.com/app/2645830/Stunt_Xpress/?curator_clanid=41324400), *a delivery van stunt action game by Rafael Gonçalves and Pineapple Works, made with Godot 4.2. The game is scheduled for a 2024 release, and you can play the latest demo on [Steam](https://store.steampowered.com/app/2645830/Stunt_Xpress/?curator_clanid=41324400). You can follow [Rafael](https://x.com/gonzelvis/) and [Pineapple Works](https://x.com/pineapple_works) on Twitter for development updates.*
 
 ## Highlights
 

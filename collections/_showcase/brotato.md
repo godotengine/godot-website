@@ -16,7 +16,7 @@ gallery: [
 youtube_id: "bXEhKX41WRk"
 
 platforms: ["windows", "playstation"]
-steam: https://store.steampowered.com/app/1942280/Brotato/
+steam: https://store.steampowered.com/app/1942280/Brotato/?curator_clanid=41324400
 
 
 featured_in_home: true

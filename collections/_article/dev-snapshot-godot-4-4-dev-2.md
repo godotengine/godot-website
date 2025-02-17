@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**Megaloot**](https://store.steampowered.com/app/2440380/Megaloot/), *an addictive inventory management roguelike, developed in Godot 4.3 by [axilirate](https://axilirate.itch.io/) and published by [Ravenage Games](https://x.com/Ravenage_games). It was recently released [on Steam](https://store.steampowered.com/app/2440380/Megaloot/) with big success. You can follow the development on [Twitter](https://x.com/playmegaloot).*
+*The cover illustration is from* [**Megaloot**](https://store.steampowered.com/app/2440380/Megaloot/?curator_clanid=41324400), *an addictive inventory management roguelike, developed in Godot 4.3 by [axilirate](https://axilirate.itch.io/) and published by [Ravenage Games](https://x.com/Ravenage_games). It was recently released [on Steam](https://store.steampowered.com/app/2440380/Megaloot/?curator_clanid=41324400) with big success. You can follow the development on [Twitter](https://x.com/playmegaloot).*
 
 ## Highlights
 
