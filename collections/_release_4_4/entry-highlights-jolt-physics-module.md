@@ -18,4 +18,6 @@ contributors:
   - name: Jorrit Rouwe
     github: jrouwe
 read_more: https://github.com/godotengine/godot/pull/99895
+video_src: /storage/releases/4.4/video/godot_jolt.webm
+media_position: bottom
 ---
