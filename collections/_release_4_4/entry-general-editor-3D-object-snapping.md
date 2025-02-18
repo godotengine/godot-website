@@ -15,4 +15,6 @@ contributors:
   - name: Robert Yevdokimov
     github: ryevdokimov
 read_more: https://github.com/godotengine/godot/pull/96740
+video_src: /storage/releases/4.4/video/godot_raycast_position.webm
+media_position: left
 ---
