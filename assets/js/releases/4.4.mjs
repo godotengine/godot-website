@@ -429,8 +429,18 @@ for (const releaseCardMedia of releaseCardMediaElements) {
 	if (imageComparisonB == null) {
 		continue;
 	}
-	comparisonRange.addEventListener("input", (event) => {
+	const updateMaskWidth = () => {
 		imageComparisonB.style = `--mask-width: ${comparisonRange.valueAsNumber}%;`;
+	};
+	comparisonRange.addEventListener("mousemove", (event) => {
+		const bounds = comparisonRange.getBoundingClientRect();
+		const x = event.clientX - bounds.left;
+		const width = bounds.width;
+		comparisonRange.valueAsNumber = (x / width) * 100;
+		updateMaskWidth();
 	});
-	imageComparisonB.style = "--mask-width: 50%;";
+	comparisonRange.addEventListener("change", (_event) => {
+		updateMaskWidth();
+	});
+	updateMaskWidth();
 }
