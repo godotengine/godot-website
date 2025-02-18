@@ -86,13 +86,40 @@ $donate-robot-size: 500px;
 
 @mixin card-media-margin($direction, $margin) {
 	@if $direction == "top" {
-		margin: calc(-1 * #{$margin}) calc(-1 * #{$margin}) 0 calc(-1 * #{$margin});
+		margin: calc(-1 * #{$margin})
+			calc(-1 * #{$margin}) -1px
+			calc(-1 * #{$margin});
+		margin: #{"round(down, calc(-1 * #{$margin}), 1px)"}
+			#{"round(up, calc(-1 * #{$margin}), 1px)"}
+			0
+			#{"round(down, calc(-1 * #{$margin}), 1px)"};
 	} @else if $direction == "right" {
-		margin: calc(-1 * #{$margin}) calc(-1 * #{$margin}) calc(-1 * #{$margin}) 0;
+		margin: calc(-1 * #{$margin})
+			calc(-1 * #{$margin})
+			calc(-1 * #{$margin} - 1px)
+			0;
+		margin: #{"round(down, calc(-1 * #{$margin}), 1px)"}
+			#{"round(up, calc(-1 * #{$margin}), 1px)"}
+			#{"round(up, calc(-1 * #{$margin} - 1px), 1px)"}
+			0;
 	} @else if $direction == "bottom" {
-		margin: 0 calc(-1 * #{$margin}) calc(-1 * #{$margin}) calc(-1 * #{$margin});
+		margin: 0
+			calc(-1 * #{$margin})
+			calc(-1 * #{$margin} - 1px)
+			calc(-1 * #{$margin});
+		margin: 0
+			#{"round(up, calc(-1 * #{$margin}), 1px)"}
+			#{"round(up, calc(-1 * #{$margin} - 1px), 1px)"}
+			#{"round(down, calc(-1 * #{$margin}), 1px)"};
 	} @else if $direction == "left" {
-		margin: calc(-1 * #{$margin}) 0 calc(-1 * #{$margin}) calc(-1 * #{$margin});
+		margin: calc(-1 * #{$margin})
+			0
+			calc(-1 * #{$margin} - 1px)
+			calc(-1 * #{$margin});
+		margin: #{"round(down, calc(-1 * #{$margin}), 1px)"}
+			0
+			#{"round(up, calc(-1 * #{$margin} - 1px), 1px)"}
+			#{"round(down, calc(-1 * #{$margin}), 1px)"};
 	}
 }
 
