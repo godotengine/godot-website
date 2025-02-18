@@ -72,9 +72,8 @@
 				{% assign contributors_json = contributors_json | append: "]" %}
 
 				<div class="c-link"
-					data-contributors='{{ contributors_json }}'
-					data-read-more="{{ feature.read_more }}"
-				>
+					 data-contributors='{{ contributors_json }}'
+					 data-read-more="{{ feature.read_more }}">
 					<!-- For no-script users. -->
 					<a href="{{ feature.read_more }}" target="_blank">Read more</a>
 					<small>
@@ -89,28 +88,26 @@
 					<video class="release-card-video lazy" playsinline disablepictureinpicture autoplay loop muted
 					poster="{{ feature.video_poster }}">
 						<source data-src="{{ feature.video_src }}"
-							type="video/webm" />
+								type="video/webm" />
 					</video>
 				{% endif %}
 				{% if is_image %}
 					<div class="release-card-image-container">
-						<img class="release-card-image" alt="{{ feature.image_alt }}"
-							src="{{ feature.image_src }}" srcset="
-								{{ feature.image_src_2x }} 2x
-							"
-							draggable="false"
-						/>
+						<img class="release-card-image"
+							 alt="{{ feature.image_alt }}"
+							 src="{{ feature.image_src }}"
+							 srcset="{{ feature.image_src_2x }} 2x"
+							 draggable="false" />
 						{% if feature.image_label != null %}
 							<div class="release-card-image-label">{{feature.image_label}}</div>
 						{% endif %}
 					</div>
 					{% if feature.image_comparison_src != null %}
 						<div class="release-card-image-container image-comparison-b">
-							<img class="release-card-image" alt="{{ feature.image_comparison_alt }}"
-								src="{{ feature.image_comparison_src }}" srcset="
-									{{ feature.image_comparison_src_2x }} 2x
-								"
-							/>
+							<img class="release-card-image"
+								 alt="{{ feature.image_comparison_alt }}"
+								 src="{{ feature.image_comparison_src }}"
+								 srcset="{{ feature.image_comparison_src_2x }} 2x" />
 							{% if feature.image_comparison_label != null %}
 								<div class="release-card-image-label release-card-image-label-comparison">
 									{{feature.image_comparison_label}}
@@ -118,7 +115,13 @@
 							{% endif %}
 						</div>
 						<div class="release-card-comparison">
-							<input type="range" id="{{feature.anchor}}-comparison-range" class="comparison-range" step="0.0001">
+							<input type="range"
+								   id="{{feature.anchor}}-comparison-range"
+								   class="comparison-range"
+								   step="0.0001"
+								   min="0"
+								   max="100"
+								   value="50">
 						</div>
 					{% endif %}
 				{% endif %}
