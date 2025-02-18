@@ -15,6 +15,10 @@ text: |
 contributors:
   - name: Hugo Locurcio
     github: Calinou
+  - name: Allen Pestaluky
+    github: allenwp
+  - name: Clay John
+    github: clayjohn
 read_more: https://github.com/godotengine/godot/pull/87260
 media_position: top
 image_alt: ACES
