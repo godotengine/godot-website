@@ -7,7 +7,7 @@ anchor: "jolt-physics-module"
 title: "Jolt physics module"
 blockquote: "Jolt into action"
 text: |
-  This module has been the de-facto physics engine for many Godot developers since its inception in late 2022, so it only made sense to promote it to an official addon for more users to find.
+  This module has been the _de facto_ physics engine for many Godot developers since its inception in late 2022, so it only made sense to promote it to an official addon for more users to find.
 
   Now the Godot Jolt maintainers have taken it one step further: integrating the module into the engine directly. A process that ended up requiring over 500 files and 115 thousand lines of code!
 
