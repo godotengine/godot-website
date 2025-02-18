@@ -15,4 +15,6 @@ contributors:
   - name: Patrick Exner (FlameLizard)
     github: paddy-exe
 read_more: https://github.com/godotengine/godot/pull/100113
+video_src: /storage/releases/4.4/video/godot_particle_emission_shape.webm
+media_position: top
 ---
