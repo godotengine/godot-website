@@ -422,7 +422,6 @@ for (const releaseCardMedia of releaseCardMediaElements) {
 	if (comparisonRange == null) {
 		continue;
 	}
-	console.log("comparisonRange", comparisonRange);
 	const imageComparisonB = releaseCardMedia.querySelector(
 		".image-comparison-b",
 	);
