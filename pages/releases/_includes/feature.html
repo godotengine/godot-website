@@ -85,11 +85,47 @@
 		{% if has_media %}
 			<div class="release-card-media">
 				{% if is_video %}
-					<video class="release-card-video lazy" playsinline disablepictureinpicture autoplay loop muted
-					poster="{{ feature.video_poster }}">
-						<source data-src="{{ feature.video_src }}"
-								type="video/webm" />
-					</video>
+					<div class="release-card-video-container">
+						<video class="release-card-video lazy"
+							   playsinline
+							   disablepictureinpicture
+							   autoplay
+							   loop
+							   muted
+							   poster="{{ feature.video_poster }}">
+							<source data-src="{{ feature.video_src }}"
+									type="video/webm" />
+						</video>
+						{% if feature.image_label != null %}
+							<div class="release-card-image-label">{{feature.image_label}}</div>
+						{% endif %}
+					</div>
+					{% if feature.video_comparison_src != null %}
+						<div class="release-card-video-container video-comparison-b">
+							<video class="release-card-video lazy"
+								   playsinline
+								   disablepictureinpicture
+								   autoplay
+								   loop
+								   muted
+								   poster="{{ feature.video_comparison_poster }}">
+								<source data-src="{{ feature.video_comparison_src }}"
+									type="video/webm" />
+							</video>
+							{% if feature.image_comparison_label != null %}
+								<div class="release-card-image-label">{{feature.image_comparison_label}}</div>
+							{% endif %}
+						</div>
+						<div class="release-card-comparison">
+							<input type="range"
+								   id="{{feature.anchor}}-comparison-range"
+								   class="comparison-range"
+								   step="0.0001"
+								   min="0"
+								   max="100"
+								   value="50">
+						</div>
+					{% endif %}
 				{% endif %}
 				{% if is_image %}
 					<div class="release-card-image-container">
