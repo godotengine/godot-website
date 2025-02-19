@@ -15,4 +15,7 @@ contributors:
   - name: Danil Alexeev
     github: dalexeev
 read_more: https://github.com/godotengine/godot/pull/91060
+image_src: /storage/releases/4.4/images/godot_gdscript_tooltips.webp
+image_src_2x: /storage/releases/4.4/images/godot_gdscript_tooltips_2x.webp
+media_position: left
 ---
