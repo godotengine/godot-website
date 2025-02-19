@@ -18,4 +18,11 @@ contributors:
   - name: Darío
     github: DarioSamo
 read_more: https://github.com/godotengine/godot/pull/90400
+video_src: /storage/releases/4.4/video/godot_ubershaders_without.webm
+video_poster: /storage/releases/4.4/images/godot_ubershaders.webp
+video_label: Without
+video_comparison_src: /storage/releases/4.4/video/godot_ubershaders_with.webm
+video_comparison_poster: /storage/releases/4.4/images/godot_ubershaders.webp
+video_comparison_label: With
+media_position: top
 ---
