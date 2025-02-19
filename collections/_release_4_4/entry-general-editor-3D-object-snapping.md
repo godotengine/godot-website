@@ -16,5 +16,6 @@ contributors:
     github: ryevdokimov
 read_more: https://github.com/godotengine/godot/pull/96740
 video_src: /storage/releases/4.4/video/godot_raycast_position.webm
+video_poster: /storage/releases/4.4/images/godot_raycast_position.webp
 media_position: left
 ---
