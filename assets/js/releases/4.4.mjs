@@ -422,14 +422,15 @@ for (const releaseCardMedia of releaseCardMediaElements) {
 	if (comparisonRange == null) {
 		continue;
 	}
-	const imageComparisonB = releaseCardMedia.querySelector(
-		".image-comparison-b",
+	const comparisonB = releaseCardMedia.querySelector(
+		".image-comparison-b, .video-comparison-b",
 	);
-	if (imageComparisonB == null) {
+	console.log(comparisonB);
+	if (comparisonB == null) {
 		continue;
 	}
 	const updateMaskWidth = () => {
-		imageComparisonB.style = `--mask-width: ${comparisonRange.valueAsNumber}%;`;
+		comparisonB.style = `--mask-width: ${comparisonRange.valueAsNumber}%;`;
 	};
 	comparisonRange.addEventListener("mousemove", (event) => {
 		const bounds = comparisonRange.getBoundingClientRect();

@@ -1337,12 +1337,14 @@ $donate-robot-size: 500px;
 						}
 					}
 
-					.release-card-image-container {
-						position: absolute;
-						width: 100%;
-						height: 100%;
+					@each $type in (video, image) {
+						.release-card-#{$type}-container {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+						}
 
-						.release-card-image-label {
+						.release-card-#{$type}-label {
 							position: absolute;
 							top: 0;
 							left: 0;
@@ -1352,7 +1354,7 @@ $donate-robot-size: 500px;
 							margin: 0.5em;
 						}
 
-						&.image-comparison-b {
+						.#{$type}-comparison-b {
 							--mask-width: 50%;
 							mask-image: linear-gradient(
 								to right,
@@ -1361,11 +1363,11 @@ $donate-robot-size: 500px;
 								white calc(var(--mask-width, 50%) + 0.000001%),
 								white
 							);
+						}
 
-							.release-card-image-label {
-								left: unset;
-								right: 0;
-							}
+						.#{$type}-comparison-b .release-card-#{$type}-label {
+							left: unset;
+							right: 0;
 						}
 					}
 
