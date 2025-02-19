@@ -96,8 +96,8 @@
 							<source data-src="{{ feature.video_src }}"
 									type="video/webm" />
 						</video>
-						{% if feature.image_label != null %}
-							<div class="release-card-image-label">{{feature.image_label}}</div>
+						{% if feature.video_label != null %}
+							<div class="release-card-video-label">{{feature.video_label}}</div>
 						{% endif %}
 					</div>
 					{% if feature.video_comparison_src != null %}
@@ -112,8 +112,8 @@
 								<source data-src="{{ feature.video_comparison_src }}"
 									type="video/webm" />
 							</video>
-							{% if feature.image_comparison_label != null %}
-								<div class="release-card-image-label">{{feature.image_comparison_label}}</div>
+							{% if feature.video_comparison_label != null %}
+								<div class="release-card-video-label">{{feature.video_comparison_label}}</div>
 							{% endif %}
 						</div>
 						<div class="release-card-comparison">
