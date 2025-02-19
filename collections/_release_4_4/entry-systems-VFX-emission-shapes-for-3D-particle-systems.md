@@ -16,5 +16,6 @@ contributors:
     github: paddy-exe
 read_more: https://github.com/godotengine/godot/pull/100113
 video_src: /storage/releases/4.4/video/godot_particle_emission_shape.webm
+video_poster: /storage/releases/4.4/images/godot_particle_emission_shape.webp
 media_position: top
 ---
