@@ -13,4 +13,7 @@ contributors:
   - name: Haoyu Qiu
     github: timothyqiu
 read_more: https://github.com/godotengine/godot/pull/90778
+video_poster: /storage/releases/4.4/images/godot_editor_camera.webp
+video_src: /storage/releases/4.4/video/godot_editor_camera.webm
+media_position: right
 ---
