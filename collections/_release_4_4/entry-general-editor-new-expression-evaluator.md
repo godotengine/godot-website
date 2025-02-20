@@ -17,4 +17,9 @@ contributors:
   - name: Tomasz Chabora
     github: KoBeWi
 read_more: https://github.com/godotengine/godot/pull/97647
+image_alt: Picture of the new expression evaluator in the editor showing expression results.
+image_src: /storage/releases/4.4/images/godot_repl.webp
+image_src_2x: /storage/releases/4.4/images/godot_repl.webp
+media_position: bottom
+position: bottom-center
 ---
