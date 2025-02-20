@@ -1351,6 +1351,8 @@ $donate-robot-size: 500px;
 							font-size: 1em;
 							font-weight: 700;
 							color: white;
+							-webkit-text-stroke: 2px black;
+							paint-order: stroke fill;
 							margin: 0.5em;
 						}
 
