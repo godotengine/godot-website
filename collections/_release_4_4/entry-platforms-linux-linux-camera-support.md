@@ -3,7 +3,7 @@ type: entry
 section: platforms
 subsection: linux
 rank: 0
-importance: 4
+importance: 2
 anchor: linux-camera-support
 title: Linux camera support
 blockquote: We can see you now!
