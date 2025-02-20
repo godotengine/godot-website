@@ -2,7 +2,7 @@
 type: entry
 section: general
 subsection: editor
-rank: 0
+rank: 1
 importance: 2
 anchor: "3D-object-snapping"
 title: "3D object snapping"

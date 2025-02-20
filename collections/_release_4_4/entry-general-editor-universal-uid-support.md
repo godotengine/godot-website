@@ -2,7 +2,7 @@
 type: entry
 section: general
 subsection: editor
-rank: 1
+rank: 0
 importance: 2
 anchor: "universal-uid-support"
 title: "Universal UID support"
