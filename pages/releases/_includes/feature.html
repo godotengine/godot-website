@@ -84,9 +84,14 @@
 		</div>
 		{% if has_media %}
 			<div class="release-card-media">
+				{% assign position_class = "" %}
+				{% if feature.position != null %}
+					{% assign position_class = "position-" | append: feature.position %}
+				{% endif %}
+
 				{% if is_video %}
 					<div class="release-card-video-container">
-						<video class="release-card-video lazy"
+						<video class="release-card-video lazy {{position_class}}"
 							   playsinline
 							   disablepictureinpicture
 							   autoplay
@@ -102,7 +107,7 @@
 					</div>
 					{% if feature.video_comparison_src != null %}
 						<div class="release-card-video-container video-comparison-b">
-							<video class="release-card-video lazy"
+							<video class="release-card-video lazy {{position_class}}"
 								   playsinline
 								   disablepictureinpicture
 								   autoplay
@@ -129,7 +134,7 @@
 				{% endif %}
 				{% if is_image %}
 					<div class="release-card-image-container">
-						<img class="release-card-image"
+						<img class="release-card-image {{position_class}}"
 							 alt="{{ feature.image_alt }}"
 							 src="{{ feature.image_src }}"
 							 srcset="{{ feature.image_src_2x }} 2x"
@@ -140,7 +145,7 @@
 					</div>
 					{% if feature.image_comparison_src != null %}
 						<div class="release-card-image-container image-comparison-b">
-							<img class="release-card-image"
+							<img class="release-card-image {{position_class}}"
 								 alt="{{ feature.image_comparison_alt }}"
 								 src="{{ feature.image_comparison_src }}"
 								 srcset="{{ feature.image_comparison_src_2x }} 2x" />
