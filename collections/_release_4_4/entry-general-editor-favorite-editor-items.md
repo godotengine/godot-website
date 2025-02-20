@@ -12,4 +12,8 @@ contributors:
   - name: Michael Alexsander
     github: YeldhamDev
 read_more: https://github.com/godotengine/godot/pull/97415
+image_alt: Picture of the editor inspector showing favorited items.
+image_src: /storage/releases/4.4/images/godot_editor_favorites.webp
+image_src_2x: /storage/releases/4.4/images/godot_editor_favorites_2x.webp
+media_position: top
 ---
