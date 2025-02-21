@@ -3,7 +3,7 @@ type: entry
 section: platforms
 subsection: macos-and-ios
 rank: 0
-importance: 2
+importance: 3
 anchor: "metal-rendering-backend"
 title: "Metal rendering backend"
 blockquote: "Melting the workarounds"

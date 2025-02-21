@@ -1,7 +1,7 @@
 ---
 type: entry
 section: platforms
-subsections: macos-and-ios
+subsection: macos-and-ios
 rank: 1
 importance: 4
 anchor: apple-game-controller-improvements
