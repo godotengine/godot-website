@@ -22,4 +22,5 @@ image_src: /storage/releases/4.4/images/godot_repl.webp
 image_src_2x: /storage/releases/4.4/images/godot_repl.webp
 media_position: bottom
 position: bottom-center
+inverted: true
 ---
