@@ -1437,8 +1437,10 @@ $donate-robot-size: 500px;
 						padding: 0.25em 0.75em 0.35em 1.25em;
 
 						a {
-							color: var(--color-invert);
-							text-decoration-color: var(--color-invert);
+							// color: var(--color-invert);
+							//text-decoration-color: var(--color-invert);
+							color: white;
+							text-decoration-color: white;
 						}
 
 						p {
