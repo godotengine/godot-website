@@ -73,7 +73,7 @@ The Embedded/Floating game window option added in 4.4 is proving to be quite pop
 
 **51 contributors** submitted **116 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-beta3) for the complete list of changes since the 4.4-beta2 snapshot. You can also review [all changes included in 4.4](https://godotengine.github.io/godot-interactive-changelog/#4.4) compared to the previous 4.3 feature release.
 
-This release is built from commit [`06acfccf89`](https://github.com/godotengine/godot/commit/06acfccf89ad6b900ae694a4d58ceade1967a85f).
+This release is built from commit [`06acfccf8`](https://github.com/godotengine/godot/commit/06acfccf89ad6b900ae694a4d58ceade1967a85f).
 
 ## Downloads
 
