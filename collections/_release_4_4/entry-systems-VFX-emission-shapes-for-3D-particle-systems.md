@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: VFX
 rank: 0
-importance: 4
+importance: 2
 anchor: emission-shapes-for-3D-particle-systems
 title: Emission shapes for 3D particle systems
 blockquote: Removing the guesswork
@@ -17,5 +17,5 @@ contributors:
 read_more: https://github.com/godotengine/godot/pull/100113
 video_src: /storage/releases/4.4/video/godot_particle_emission_shape.webm
 video_poster: /storage/releases/4.4/images/godot_particle_emission_shape.webp
-media_position: top
+media_position: left
 ---
