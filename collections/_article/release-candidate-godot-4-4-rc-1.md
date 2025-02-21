@@ -19,7 +19,7 @@ Please, consider [supporting the project financially](#support), if you are able
 
 ---
 
-*The cover illustration is from* [**Tiny Pasture**](https://store.steampowered.com/app/3167550/Tiny_Pasture/?curator_clanid=41324400), *an endearing literal desktop pet that has cute pixel art animals grazing at the bottom of your screen while you do other things. Developed by CaveLiquid ([BlueSky](https://bsky.app/profile/caveliquid.bsky.social), [website](https://linktr.ee/CaveLiquid)), the game was just released [on Steam](https://store.steampowered.com/app/3167550/Tiny_Pasture/?curator_clanid=41324400).*
+*The cover illustration is from* [**Tiny Pasture**](https://store.steampowered.com/app/3167550/Tiny_Pasture/?curator_clanid=41324400), *an endearing literal desktop pet that has cute pixel art animals grazing at the bottom of your screen while you do other things. Developed by CaveLiquid ([Bluesky](https://bsky.app/profile/caveliquid.bsky.social), [website](https://linktr.ee/CaveLiquid)), the game was just released [on Steam](https://store.steampowered.com/app/3167550/Tiny_Pasture/?curator_clanid=41324400).*
 
 ## Highlights
 
