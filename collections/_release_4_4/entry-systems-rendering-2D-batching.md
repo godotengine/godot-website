@@ -6,7 +6,7 @@ rank: 2
 importance: 3
 anchor: 2D-batching
 title: 2D Batching
-blockquote: Call me maybe
+blockquote: <span class="highlight">Call</span> me maybe
 text: |
   Batching is a performance optimization that drastically reduces the number of draw calls in a scene. The effect will be particularly noticable in scenes with a lot of text rendering or repeated sprites sharing a texture.
 

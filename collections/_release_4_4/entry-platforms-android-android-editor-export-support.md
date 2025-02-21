@@ -5,9 +5,8 @@ subsection: android
 rank: 0
 importance: 3
 anchor: android-editor-export-support
-title: Android editor Export support
-blockquote: Stay on mobile from start to finish
 title: "Android editor: Export support"
+blockquote: Stay <span class="highlight">on mobile</span> from start to finish
 text: |
   The Godot editor has been available on Android devices for a while already, but until now you were forced to switch to a different OS to create the various platform binaries.
 
