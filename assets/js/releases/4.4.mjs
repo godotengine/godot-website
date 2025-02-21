@@ -450,5 +450,5 @@ const anchors = Array.from(
 	document.querySelector("main .release-container").querySelectorAll("a"),
 );
 for (const anchor of anchors) {
-	anchor.target = anchor.target ?? "_blank";
+	anchor.target = anchor.target || "_blank";
 }
