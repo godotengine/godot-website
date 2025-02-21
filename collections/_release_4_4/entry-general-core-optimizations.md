@@ -3,7 +3,7 @@ type: entry
 section: general
 subsection: core
 rank: 0
-importance: 3
+importance: 2
 anchor: "optimizations"
 title: "Optimizations"
 blockquote: "Harder, Better, Faster, Stronger"
