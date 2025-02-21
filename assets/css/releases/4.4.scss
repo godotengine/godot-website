@@ -1423,6 +1423,27 @@ $donate-robot-size: 500px;
 						text-decoration: none;
 						cursor: pointer;
 					}
+
+					.release-card-content-creator {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						width: fit-content;
+						font-size: 75%;
+						color: white;
+						font-weight: 600;
+						background-color: rgba(0, 0, 0, 0.25);
+						border-top-left-radius: 999999px;
+						padding: 0.25em 0.75em 0.25em 1.25em;
+
+						a {
+							color: var(--color-highlight);
+						}
+
+						p {
+							margin: 0;
+						}
+					}
 				}
 			}
 		}
