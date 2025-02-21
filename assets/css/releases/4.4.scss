@@ -1432,12 +1432,13 @@ $donate-robot-size: 500px;
 						font-size: 75%;
 						color: white;
 						font-weight: 600;
-						background-color: rgba(0, 0, 0, 0.25);
+						background-color: rgba(0, 0, 0, 0.75);
 						border-top-left-radius: 999999px;
-						padding: 0.25em 0.75em 0.25em 1.25em;
+						padding: 0.25em 0.75em 0.35em 1.25em;
 
 						a {
-							color: var(--color-highlight);
+							color: var(--color-invert);
+							text-decoration-color: var(--color-invert);
 						}
 
 						p {
