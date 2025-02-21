@@ -444,3 +444,11 @@ for (const releaseCardMedia of releaseCardMediaElements) {
 	});
 	updateMaskWidth();
 }
+
+// target="_blank"
+const anchors = Array.from(
+	document.querySelector("main .release-container").querySelectorAll("a"),
+);
+for (const anchor of anchors) {
+	anchor.target = anchor.target ?? "_blank";
+}
