@@ -29,4 +29,5 @@ image_comparison_alt: AgX
 image_comparison_src: /storage/releases/4.4/images/godot_neon_agx.webp
 image_comparison_src_2x: /storage/releases/4.4/images/godot_neon_agx_2x.webp
 image_comparison_label: AgX
+content_creator: "[@passivestar](https://bsky.app/profile/passivestar.bsky.social) and [@allenwp](https://github.com/allenwp)"
 ---

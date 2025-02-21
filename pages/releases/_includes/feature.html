@@ -166,6 +166,11 @@
 						</div>
 					{% endif %}
 				{% endif %}
+				{% if feature.content_creator != null %}
+					<div class="release-card-content-creator">
+						{{ feature.content_creator | markdownify }}
+					</div>
+				{% endif %}
 			</div>
 		{% endif %}
 	</div>
