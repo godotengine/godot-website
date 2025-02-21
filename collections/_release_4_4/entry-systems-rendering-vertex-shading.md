@@ -17,4 +17,7 @@ contributors:
   - name: ywmaa
     github: ywmaa
 read_more: https://github.com/godotengine/godot/pull/83360
+video_poster: /storage/releases/4.4/images/godot_vertex_lighting.webp
+video_src: /storage/releases/4.4/video/godot_vertex_lighting.webm
+media_position: right
 ---
