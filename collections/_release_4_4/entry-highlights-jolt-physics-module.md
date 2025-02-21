@@ -20,4 +20,5 @@ contributors:
 read_more: https://github.com/godotengine/godot/pull/99895
 video_src: /storage/releases/4.4/video/godot_jolt.webm
 media_position: bottom
+content_creator: "[@heytibo](https://bsky.app/profile/heytibo.bsky.social)"
 ---
