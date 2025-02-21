@@ -6,7 +6,7 @@ rank: 0
 importance: 3
 anchor: betsy-texture-compressor
 title: Betsy texture compressor
-blockquote: Faster imports
+blockquote: Faster <span class="highlight">imports</span>
 text: |
   The [Betsy texture compressor](https://github.com/darksylinc/betsy) is a tool to compresses images into various GPU texture formats. It is now being integrated into the Godot Engine.
 

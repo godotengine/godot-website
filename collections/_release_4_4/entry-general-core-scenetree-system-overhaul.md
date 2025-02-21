@@ -6,7 +6,7 @@ rank: 5
 importance: 3
 anchor: scenetree-system-overhaul
 title: SceneTree system overhaul
-blockquote: A performance boost for everyone
+blockquote: A <span class="highlight">performance</span> boost for everyone
 text: |
   The changes made to how SceneTree system works, specifically how it processes changes to the nodes, result in an editor performance increase for all projects.
 

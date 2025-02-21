@@ -6,7 +6,7 @@ rank: 11
 importance: 4
 anchor: autostart-for-all-profilers
 title: Autostart for all profilers
-blockquote: Check this box
+blockquote: <span class="highlight">Check</span> this <span class="hightlight">box</span>
 text: |
   If you want to capture profiling data while running your game - without missing the first few seconds of loading a scene - you will appreciate this new checkbox.
 

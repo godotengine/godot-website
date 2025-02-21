@@ -6,7 +6,7 @@ rank: 1
 importance: 2
 anchor: "3D-object-snapping"
 title: "3D object snapping"
-blockquote: "Snap you're it"
+blockquote: <span class="highlight">Snap</span> you're it
 text: |
   When placing 3D objects in the editor, they are now able to snap to other surfaces.
 
