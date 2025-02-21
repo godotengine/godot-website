@@ -55,7 +55,7 @@ For an overview of what's new overall in Godot 4.4, have a look at the highlight
 
 **76 contributors** submitted **142 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-beta2) for the complete list of changes since the 4.4-beta1 snapshot. You can also review [all changes included in 4.4](https://godotengine.github.io/godot-interactive-changelog/#4.4) compared to the previous 4.3 feature release.
 
-This release is built from commit [`a013481b09`](https://github.com/godotengine/godot/commit/a013481b0911e59cc3f3dea7ebb732450c3e1460).
+This release is built from commit [`a013481b0`](https://github.com/godotengine/godot/commit/a013481b0911e59cc3f3dea7ebb732450c3e1460).
 
 ## Downloads
 
