@@ -6,7 +6,7 @@ rank: 1
 importance: 3
 anchor: new-glTF-extension
 title: New glTF extension
-blockquote: Customizable animation imports
+blockquote: Customizable animation <span class="highlight">imports</span>
 text: |
   Previously, glTF imports only allowed you to target properties from this list: position, rotation, scale, and mesh blend shape weights.
 

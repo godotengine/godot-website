@@ -6,7 +6,7 @@ rank: 0
 importance: 2
 anchor: "export-tool-button-annotation"
 title: "<span class='code-highlight gdscript-annotation'>@export_tool_button</span> annotation"
-blockquote: "On the button"
+blockquote: On the <span class="highlight">button</span>
 text: |
   The tool developers amongst you asked and our contributors delivered:
 

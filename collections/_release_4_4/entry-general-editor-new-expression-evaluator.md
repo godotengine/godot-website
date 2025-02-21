@@ -6,7 +6,7 @@ rank: 4
 importance: 3
 anchor: new-expression-evaluator
 title: New expression evaluator
-blockquote: REPLace print statements
+blockquote: <span class="highlight">REPL</span>ace print statements
 text: |
   The new expression evaluator has been added as another tab in the bottom panel of the editor. In there, you can evaluate expressions using the local state directly while stopped at a breakpoint.
 contributors:

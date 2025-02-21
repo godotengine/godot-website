@@ -6,7 +6,7 @@ rank: 5
 importance: 2
 anchor: 2D-shader-instance-uniforms
 title: 2D shader instance uniforms
-blockquote: Variations made easier
+blockquote: <span class="highlight">Variations</span> made easier
 text: |
   This release adds support for shader instance uniforms to CanvasItem shaders.
 
