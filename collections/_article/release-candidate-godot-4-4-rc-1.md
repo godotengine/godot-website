@@ -67,6 +67,10 @@ This release is built from commit [`8ed125b42`](https://github.com/godotengine/g
 
 During the Release Candidate stage, we focus exclusively on solving showstopping regressions (i.e. something that worked in a previous release is now broken, without workaround). You can have a look at our current [list of regressions and significant issues](https://github.com/orgs/godotengine/projects/61) which we aim to address before releasing 4.4. This list is dynamic and will be updated if we discover new blocking issues after more users start testing the RC snapshots.
 
+*Edit:* A regression was introduced in this snapshot and will be fixed in RC 2:
+
+- The change to the `rendering/rendering_device/driver` project setting and its platform overrides to default to a new `auto` mode in [GH-103026](https://github.com/godotengine/godot/issues/103026) caused a regression in the Android and iOS export process, where some necessary configuration is no longer set properly ([GH-103156](https://github.com/godotengine/godot/issues/103156)). You can work it around by explicitly setting `rendering/rendering_device/driver.android` to `vulkan` and `rendering/rendering_device/driver.ios` to `metal`.
+
 With every release, we are aware that there are going to be various issues which have already been reported but haven't been fixed yet, due to limited resources. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+).
 
 ## Bug reports
