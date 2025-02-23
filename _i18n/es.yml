@@ -1,3 +1,22 @@
+meta:
+  description: "Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR"
+header:
+  features: Funciones
+  showcase: Creaciones
+  blog: Blog
+  community: Comunidad
+  assets: Assets
+  download: Descargar
+  docs: Docs
+  contribute: Contribuir
+  donate: Donar
 home:
-  h1: "Español"
-  subtitle: "Un tema Jekyll simple y adaptable para tu blog o sitio."
+  h1: "Tu motor de juegos gratuito<br> y de código abierto."
+  subtitle: "Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR"
+  whats_new: "Novedades"
+  download_latest: Descargar Última Versión
+  looking_for: '¿Buscas <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Descarga la versión de soporte a largo plazo de Godot 3">Godot 3</a>, nuestras <a href="/download/archive">versiones experimentales</a>, o una <a href="/download/archive">versión anterior</a>?'
+  latest_news: "Últimas noticias (en inglés)"
+  more_news: "Más noticias"
+  cards:
+    h2: "Una forma diferente de hacer juegos"
