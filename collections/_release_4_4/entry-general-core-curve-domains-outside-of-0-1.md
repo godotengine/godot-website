@@ -13,4 +13,9 @@ contributors:
   - name: ocean
     github: anvilfolk
 read_more: https://github.com/godotengine/godot/pull/67857
+image_src: /storage/releases/4.4/images/godot_curve_outside.webp
+image_src_2x: /storage/releases/4.4/images/godot_curve_outside_2x.webp
+image_alt: Picture of the editor inspector showing a `Curve` resource with values outside [0,1].
+media_position: bottom
+position: center-right
 ---
