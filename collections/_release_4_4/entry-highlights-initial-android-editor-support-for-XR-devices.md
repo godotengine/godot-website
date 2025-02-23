@@ -18,7 +18,7 @@ contributors:
   - name: Bastiaan Olij
     github: BastiaanOlij
 read_more: https://github.com/godotengine/godot/pull/96624
-video_poster: /storage/releases/4.4/images/godot_xr_editor.webp
+video_poster: /storage/releases/4.4/video/godot_xr_editor.webp
 video_src: /storage/releases/4.4/video/godot_xr_editor.webm
 media_position: top
 ---

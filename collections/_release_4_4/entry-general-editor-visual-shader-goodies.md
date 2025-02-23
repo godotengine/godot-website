@@ -17,7 +17,7 @@ contributors:
     github: Chaosus
 read_more: https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%2094215%2093017
 video_src: /storage/releases/4.4/video/godot_visual_material_editor_goodies.webm
-video_poster: /storage/releases/4.4/images/godot_visual_material_editor_goodies.webp
+video_poster: /storage/releases/4.4/video/godot_visual_material_editor_goodies.webp
 media_position: right
 content_creator: "[@heytibo](https://bsky.app/profile/heytibo.bsky.social)"
 ---
