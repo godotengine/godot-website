@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: rendering
 rank: 5
-importance: 2
+importance: 3
 anchor: 2D-shader-instance-uniforms
 title: 2D shader instance uniforms
 blockquote: <span class="highlight">Variations</span> made easier
