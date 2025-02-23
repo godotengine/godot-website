@@ -15,7 +15,7 @@ youtube_id: "qTnGtmh8eTE"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/1637320/Dome_Keeper/
+steam: https://store.steampowered.com/app/1637320/Dome_Keeper/?curator_clanid=41324400
 
 
 featured_in_home: true

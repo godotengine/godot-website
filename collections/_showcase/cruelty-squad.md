@@ -15,7 +15,7 @@ youtube_id: "PvKEKD3eo2Y"
 
 platforms: ["windows"]
 
-steam: https://store.steampowered.com/app/1388770/Cruelty_Squad/
+steam: https://store.steampowered.com/app/1388770/Cruelty_Squad/?curator_clanid=41324400
 
 ---
 

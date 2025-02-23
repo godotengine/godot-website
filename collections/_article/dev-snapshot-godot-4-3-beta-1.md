@@ -19,7 +19,7 @@ Please, consider [supporting the project financially](#support), if you are able
 
 ---
 
-*The cover illustration is from* [**Road to Vostok**](https://roadtovostok.com/), *a hardcore single-player survival FPS set in a post-apocalyptic Finland border zone, developed using Godot 4. The main developer Antti ported the previous version of the game from Unity to Godot 4, writing a lot of insightful [progress reports](https://www.patreon.com/posts/godot-port-1-90611929) in the process. They recently released their [Public Demo 2](https://www.roadtovostok.com/news/public-demo-2) using Godot with the main gameplay loop. You can try the demo and wishlist the game [on Steam](https://store.steampowered.com/app/1963610/Road_to_Vostok/), and follow the development on [Twitter](https://x.com/roadtovostok) and [Patreon](https://www.patreon.com/roadtovostok).*
+*The cover illustration is from* [**Road to Vostok**](https://roadtovostok.com/), *a hardcore single-player survival FPS set in a post-apocalyptic Finland border zone, developed using Godot 4. The main developer Antti ported the previous version of the game from Unity to Godot 4, writing a lot of insightful [progress reports](https://www.patreon.com/posts/godot-port-1-90611929) in the process. They recently released their [Public Demo 2](https://www.roadtovostok.com/news/public-demo-2) using Godot with the main gameplay loop. You can try the demo and wishlist the game [on Steam](https://store.steampowered.com/app/1963610/Road_to_Vostok/?curator_clanid=41324400), and follow the development on [Twitter](https://x.com/roadtovostok) and [Patreon](https://www.patreon.com/roadtovostok).*
 
 ## Highlights
 

@@ -16,7 +16,7 @@ youtube_id: "Vfz66iLuwzQ"
 
 platforms: ["windows", "linux"]
 
-steam: https://store.steampowered.com/app/1145340/Rogue_State_Revolution/
+steam: https://store.steampowered.com/app/1145340/Rogue_State_Revolution/?curator_clanid=41324400
 
 
 developer_interview:
