@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: audio
 rank: 0
-importance: 3
+importance: 2
 anchor: runtime-WAV-file-loading
 title: Runtime WAV file loading
 blockquote: Catch this <span class="highlight">WAV</span>e
