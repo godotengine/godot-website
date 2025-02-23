@@ -1,10 +1,13 @@
 ---
 permalink: /
-title: "Godot Engine - Free and open source 2D and 3D game engine"
+title:
+  en: "Godot Engine - Free and open source 2D and 3D game engine"
+  es: "Godot Engine - Motor de videojuegos 2D y 3D gratuito y de código abierto"
 notitlesuffix: true
 description: "Godot provides a huge set of common tools, so you can just focus on making your game without reinventing
 the wheel."
 layout: default
+localize: ["en", "es"]
 ---
 
 {% include header.html %}
@@ -199,11 +202,8 @@ layout: default
 	<div class="background-image" style="background-image: url()"></div>
 	<div class="wrapper">
 		<div class="copy container">
-			<h1>
-				Your free, open&#8209;source<br>
-				game engine.
-			</h1>
-			<p>Develop your 2D &amp; 3D games, cross-platform projects, or even XR ideas!</p>
+			<h1>{% t home.h1 %}</h1>
+			<p>{% t home.subtitle %}</p>
 
 			<div class="main-download">
 				{% assign stable_version_3 = site.data.versions | find: "featured", "3" %}
@@ -213,16 +213,16 @@ layout: default
 					<div class="main-download-links-buttons">
 						<a href="/download/windows/" class="btn btn-download set-os-download-url" data-version="4"
 							title="Download the latest version of Godot 4">
-							<div class="download-title">Download Latest</div>
+							<div class="download-title">{% t home.download_latest %}</div>
 							<div class="download-hint">{{ stable_version_4.name }}</div>
 						</a>
 						<a href="/releases/" class="btn btn-whats-new"
 							title="See what's new in Godot">
-							<div class="download-title">What's new?</div>
+							<div class="download-title">{% t home.whats_new %}</div>
 						</a>
 					</div>
 
-					<span class="download-3">Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a>, our <a href="/download/archive">experimental releases</a>, or a <a href="/download/archive">previous version</a>?</span>
+					<span class="download-3">{% t home.looking_for %}</span>
 				</div>
 			</div>
 		</div>
@@ -233,7 +233,7 @@ layout: default
 </section>
 
 <section class="container padded">
-	<h2>Latest news</h2>
+	<h2>{% t home.latest_news %}</h2>
 	<div class="flex eqsize responsive" style="gap: 30px;">
 
 		{% assign latest_posts = site.article | sort:"date" | reverse %}
@@ -267,7 +267,7 @@ layout: default
 				{% endif %}
 				{% endfor %}
 				<div class="button-container">
-					<a href="/blog/" class="btn no-margin">More News</a>
+					<a href="/blog/" class="btn no-margin">{% t home.more_news %}</a>
 				</div>
 			</div>
 		</div>
@@ -276,7 +276,7 @@ layout: default
 
 
 <section id="features" class="container padded">
-	<h2>A different way to make games</h2>
+	<h2>{% t home.cards.h2 %}</h2>
 
 	<div class="features-grid">
 		<a class="feature-link" href="/features#design" data-barba-prevent>
@@ -284,10 +284,8 @@ layout: default
 				<img src="/assets/home/features/innovative.webp" alt="" width="1" height="1"
 					style="background: linear-gradient(90deg, #333747 11%, #2d3342 50%, #2d3342 68%, #272d3c 87%)" loading="lazy">
 				<div class="body">
-					<h4>Innovative design</h4>
-					<p>
-						Godot's Node and Scene system gives you both power and flexibility
-						to create anything.
+					<h4>{%t home.cards.design.title %}</h4>
+					<p>{%t home.cards.design.text %}
 					</p>
 				</div>
 			</div>
@@ -298,15 +296,8 @@ layout: default
 				<img src="/assets/home/features/language.webp" alt="" width="1" height="1"
 					style="background: linear-gradient(90deg, #252a35 46%, #252a35 53%, #202630 76%, #202630 89%)" loading="lazy">
 				<div class="body">
-					<h4>Use the right language for the job</h4>
-					<p>
-						Keep your code modular with an object-oriented API using Godot's own
-						GDScript, C#, C++, or bring your own using GDExtension.
-						<div style="margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.6; opacity: 0.8">
-							C# support is currently only available for desktop and mobile platforms
-							as of Godot 4.2.<br>Use Godot 3 to run C# on the Web platform.
-						</div>
-					</p>
+					<h4>{%t home.cards.script.title %}</h4>
+					<p>{%t home.cards.script.text %}<div style="margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.6; opacity: 0.8">{%t home.cards.script.extra %}</div></p>
 				</div>
 			</div>
 		</a>
@@ -315,11 +306,8 @@ layout: default
 				<img src="/assets/home/features/2d.webp" alt="" width="1" height="1"
 					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)" loading="lazy">
 				<div class="body">
-					<h4>Dedicated 2D engine</h4>
-					<p>
-						Make crisp and performant 2D games with Godot's dedicated 2D
-						rendering engine with real 2D pixel coordinates and 2D nodes.
-					</p>
+					<h4>{%t home.cards.2d.title %}</h4>
+					<p>{%t home.cards.2d.text %}</p>
 				</div>
 			</div>
 		</a>
@@ -329,11 +317,8 @@ layout: default
 				<img src="/assets/home/features/3d.webp" alt="" width="1" height="1" title="Screenshot from the game 'Human Diaspora'"
 					style="background: linear-gradient(90deg, #196f36 7%, #28674e 29%, #2a4b46 65%, #3b6f4e 97%)" loading="lazy">
 				<div class="body">
-					<h4>Simple and powerful 3D</h4>
-					<p>
-						Godot's 3D nodes give you everything you need to build, animate,
-						and render your 3D worlds and characters.
-					</p>
+					<h4>{%t home.cards.3d.title %}</h4>
+					<p>{%t home.cards.3d.text %}</p>
 				</div>
 			</div>
 		</a>
@@ -343,11 +328,8 @@ layout: default
 				<img src="/assets/home/features/cross-platform.svg" alt="" width="1" height="1"
 					style="background-color: #333667" loading="lazy">
 				<div class="body">
-					<h4>Release on all platforms</h4>
-					<p>
-						Deploy your game on desktop, mobile, and the web in seconds. Godot
-						even supports consoles through third party publishers.
-					</p>
+					<h4>{%t home.cards.deploy.title %}</h4>
+					<p>{%t home.cards.deploy.text %}</p>
 				</div>
 			</div>
 		</a>
@@ -357,59 +339,47 @@ layout: default
 				<img src="/assets/home/features/oss.svg" alt="" width="1" height="1" style="background-color: #333667"
 					loading="lazy">
 				<div class="body">
-					<h4>Open Source</h4>
-					<p>
-						Truly open development: anyone who contributes to Godot benefits
-						equally from others’ contributions.
-					</p>
+					<h4>{%t home.cards.open.title %}</h4>
+					<p>{%t home.cards.open.text %}</p>
 				</div>
 			</div>
 		</a>
 	</div>
 
 	<div class="features-learn-more">
-		<a href="/features/" class="btn btn-flat btn-flat-white btn-flat-frosted">Learn more about using Godot</a>
+		<a href="/features/" class="btn btn-flat btn-flat-white btn-flat-frosted">{%t home.cards.cta %}</a>
 	</div>
 </section>
 
 <section id="get_involved" class="container padded">
-	<h2>Get involved</h2>
-	<p>
-		Join the community and help create a game engine that belongs to everybody.
+	<h2>{%t home.get_involved.title %}</h2>
+	<p>{%t home.get_involved.text %}
 	</p>
 
 	<div class="flex eqsize responsive">
 
 		<div class="text-center base-padding">
 			<img src="/assets/home/code.svg" alt="" width="250" height="250" loading="lazy">
-			<h4>Code</h4>
-			<p>
-				If you know how to code, you can help by fixing bugs and working with engine contributors towards the
-				implementation of new features.
-			</p>
+			<h4>{%t home.get_involved.cards.code.title %}</h4>
+			<p>{%t home.get_involved.cards.code.text %}</p>
 			<a href="https://docs.godotengine.org/en/stable/contributing/how_to_contribute.html#technical-contributions"
-				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
+				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">{%t home.get_involved.cards.cta %}</a>
 		</div>
 
 		<div class="text-center base-padding">
 			<img src="/assets/home/document.svg" alt="" width="250" height="250" loading="lazy">
-			<h4>Document</h4>
-			<p>
-				Documentation quality is essential in a game engine; help make it better by updating the API reference, writing
-				new guides or submitting corrections.
-			</p>
+			<h4>{%t home.get_involved.cards.document.title %}</h4>
+			<p>{%t home.get_involved.cards.document.text %}</p>
 			<a href="https://docs.godotengine.org/en/stable/contributing/how_to_contribute.html#technical-contributions"
-				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
+				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">{%t home.get_involved.cards.cta %}</a>
 		</div>
 
 		<div class="text-center base-padding">
 			<img src="/assets/home/report.svg" alt="" width="250" height="250" loading="lazy">
-			<h4>Report</h4>
-			<p>
-				Found a problem with the engine? Don't forget to report it so that developers can track it down.
-			</p>
+			<h4>{%t home.get_involved.cards.report.title %}</h4>
+			<p>{%t home.get_involved.cards.report.text %}</p>
 			<a href="https://docs.godotengine.org/en/stable/contributing/how_to_contribute.html#technical-contributions"
-				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">Learn more</a>
+				class="btn btn-flat btn-flat-frosted" target="_blank" rel="noopener">{%t home.get_involved.cards.cta %}</a>
 		</div>
 
 	</div>
@@ -421,11 +391,9 @@ layout: default
 			<img id="foundation_graphic" src="/assets/home/foundation/godot-foundation-logo-dark.svg" alt="Godot Foundation logo" width="1" height="1"
 			class="img-auto-size" loading="lazy">
 		</a>
-		<p class="small auto-margin">
-			You don't need to be an engine developer to help Godot. Join the <a href="https://fund.godotengine.org/">development fund</a> and help us make the Godot&nbsp;Engine even more awesome!
-		</p>
+		<p class="small auto-margin">{%t home.foundation.text %}</p>
 
-		<a href="https://fund.godotengine.org/" class="btn btn-flat btn-flat-white btn-flat-frosted">Donate</a>
+		<a href="https://fund.godotengine.org/" class="btn btn-flat btn-flat-white btn-flat-frosted">{%t home.foundation.donate %}</a>
 	</div>
 </section>
 
@@ -434,10 +402,6 @@ layout: default
 
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		// Updating the hero on the home page
-		// get the current html lang attribute
-		const htmlLang = document.documentElement.lang;
-		if (window.location.pathname === '/' || window.location.pathname === '/' + htmlLang || window.location.pathname === '/' + htmlLang + '/') {
 			const authors = [
 				{% for project in site.showcase %}
 				{% if project.featured_in_home %}
@@ -489,7 +453,6 @@ layout: default
 				window.requestAnimationFrame(parallaxTick)
 			});
 		}
-	}
 	});
 </script>
 
