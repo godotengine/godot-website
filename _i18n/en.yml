@@ -1,5 +1,5 @@
 meta:
-  description: "Develop your 2D & 3D games, cross-platform projects, or even XR ideas!"
+  description: Develop your 2D & 3D games, cross-platform projects, or even XR ideas!
 header:
   features: Features
   showcase: Showcase
@@ -10,13 +10,56 @@ header:
   docs: Docs
   contribute: Contribute
   donate: Donate
+footer: 
+  text: "Juan Linietsky, Ariel Manzur and <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>contributors</a>. Hosted by the <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. Website <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>source code on  GitHub</a>."
+sponsors:
+  title: "Godot is sponsored by:"
+  text: If you are interested in a corporate sponsorship, please write to <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>.<br>To donate as an individual, you can do so through the <a href='https://fund.godotengine.org/'>Godot Engine development fund</a>.
+  cta: Donate
 home:
-  h1: "Your free, open&#8209;source<br>game engine."
-  subtitle: "Develop your 2D &amp; 3D games, cross-platform projects, or even XR ideas!"
-  whats_new: "What's new"
+  h1: Your free, open&#8209;source<br>game engine.
+  subtitle: Develop your 2D &amp; 3D games, cross-platform projects, or even XR ideas!
+  whats_new: What's new
   download_latest: Download Latest
   looking_for: 'Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a>, our <a href="/download/archive">experimental releases</a>, or a <a href="/download/archive">previous version</a>?'
-  latest_news: "Latest news"
-  more_news: "More news"
+  latest_news: Latest news
+  more_news: More news
   cards:
-    h2: "A different way to make games"
+    h2: A different way to make games
+    design:
+      title: Innovative design
+      text: Godot's Node and Scene system gives you both power and flexibility to create anything.
+    script:
+      title: Use the right language for the job
+      text: Keep your code modular with an object-oriented API using Godot's own GDScript, C#, C++, or bring your own using GDExtension.
+      extra: C# support is currently only available for desktop and mobile platforms as of Godot 4.2.<br>Use Godot 3 to run C# on the Web platform.
+    2d:
+      title: Dedicated 2D engine
+      text: Make crisp and performant 2D games with Godot's dedicated 2D rendering engine with real 2D pixel coordinates and 2D nodes.
+    3d:
+      title: Simple and powerful 3D
+      text: Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds and characters.
+    deploy:
+      title: Release on all platforms
+      text: Deploy your game on desktop, mobile, and the web in seconds. Godot even supports consoles through third party publishers.
+    open:
+      title: Open Source
+      text: "Truly open development: anyone who contributes to Godot benefits equally from others’ contributions."
+    cta: Learn more about using Godot
+  get_involved:
+    title: Get involved
+    text: Join the community and help create a game engine that belongs to everybody.
+    cards:
+      cta: Learn more
+      code:
+        title: Code
+        text: If you know how to code, you can help by fixing bugs and working with engine contributors towards the implementation of new features.
+      document:
+        title: Document
+        text: Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
+      report:
+        title: Report
+        text: Found a problem with the engine? Don't forget to report it so that developers can track it down.
+  foundation:
+    text: "You don't need to be an engine developer to help Godot. Join the <a href='https://fund.godotengine.org/'>development fund</a> and help us make the Godot&nbsp;Engine even more awesome!"
+    donate: Donate
