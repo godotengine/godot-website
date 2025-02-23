@@ -28,6 +28,8 @@ collections:
     permalink: /download/3.x/:name/
   priorities:
     output: true
+  release_4_4:
+    output: true
 
 # Build collection items with a future date.
 future: true
