@@ -3,7 +3,7 @@ type: entry
 section: general
 subsection: editor
 rank: 9
-importance: 2
+importance: 4
 anchor: scene-startup-optimizations
 title: Scene startup optimizations
 blockquote: Start your engines!
