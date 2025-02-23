@@ -1,4 +1,4 @@
-# Simple localization plugin for Jekyll by Emilio Coppola v0.1
+# Simple localization plugin for Jekyll by Emilio Coppola v1.0
 #
 # Usage:
 # - Add 'localize' front matter to pages that should be localized
@@ -28,10 +28,17 @@
 # - /index.html
 # - /fr/index.html
 #
-# ----------------------------------------
-# Todo:
-# - Add fallback to default language if translation is missing
-# - Add support for localized front matter
+# -----
+# Localize front-matter by adding an array of the languages you want to support.
+# For example, to support titles in English and French:
+# ---
+# title: 
+#   en: "Welcome"
+#   fr: "Bienvenue"
+# ---
+# And then use in a template or layout like this:
+# <title>{{ page.title[current_lang] | default: page.title }}</title>
+# -----
 
 require 'yaml'
 module Jekyll
@@ -47,10 +54,15 @@ module Jekyll
       lang = page['lang'] || site.config['lang'] || 'en'
       
       translations = YAML.load_file(File.join(site.source, "_i18n/#{lang}.yml"))
+      result = @text.split('.').reduce(translations) { |result, key| result&.[](key) }
       
-      @text.split('.').reduce(translations) { |result, key| 
-        result&.[](key) or return "Translation missing: #{@text}"
-      }
+      if result.nil?
+        default_translations = YAML.load_file(File.join(site.source, "_i18n/en.yml"))
+        result = @text.split('.').reduce(default_translations) { |result, key| result&.[](key) }
+        return result || "Translation key doesn't exist: #{@text}"
+      end
+      
+      result
     end
   end
 
@@ -58,7 +70,12 @@ module Jekyll
     def render(context)
       site = context.registers[:site]
       page = context.registers[:page]
-      page['lang'] || site.config['lang'] || 'en'
+      lang = page['lang'] || site.config['lang'] || 'en'
+      
+      # Store the language in Liquid's context
+      context['current_lang'] = lang
+
+      lang  # Still return the language for inline use
     end
   end
 
