@@ -891,10 +891,18 @@ $donate-robot-size: 500px;
 						}
 
 						.c-link {
-							.c-link-a,
-							.c-link-popover-button {
+							.c-link-a {
 								color: white;
 								text-decoration-color: white;
+							}
+
+							.contributor-area {
+								.contributor-list {
+									a {
+										color: var(--color-invert-highlight);
+										text-decoration-color: var(--color-invert-highlight);
+									}
+								}
 							}
 						}
 					}
@@ -1213,8 +1221,6 @@ $donate-robot-size: 500px;
 						.c-link {
 							grid-area: link;
 							position: relative;
-							font-size: 21px;
-							font-weight: 700;
 							margin-top: 10px;
 							color: inherit;
 							user-select: none;
@@ -1223,6 +1229,8 @@ $donate-robot-size: 500px;
 								color: black;
 								text-decoration-color: black;
 								text-decoration: underline;
+								font-size: 21px;
+								font-weight: 700;
 
 								@include is-dark() {
 									color: white;
@@ -1230,51 +1238,30 @@ $donate-robot-size: 500px;
 								}
 							}
 
-							.c-link-popover-button {
-								appearance: unset;
-								inset: 0;
-								background-color: transparent;
-								border: 0;
+							.contributor-area {
+								display: grid;
+								grid-template-areas: "icon list";
+								grid-template-columns: 50px auto;
 
-								color: black;
-								@include is-dark() {
-									color: white;
+								margin-top: 1em;
+								font-size: 80%;
+								user-select: auto;
+
+								.contributor-icon {
+									grid-area: icon;
+									display: flex;
+									align-items: center;
 								}
 
-								&:hover {
-									cursor: pointer;
-								}
-							}
+								.contributor-list {
+									grid-area: list;
+									display: flex;
+									align-items: center;
 
-							.c-link-a + .c-link-popover-button {
-								margin-left: calc(var(--card-padding) / 2);
-							}
-
-							.c-link-popover {
-								color: white;
-								background-color: black;
-								@include is-dark() {
-									color: black;
-									background-color: white;
-								}
-
-								border: 0;
-								border-radius: calc(var(--card-padding) / 2);
-								padding: calc(var(--card-padding) / 2);
-								font-size: clamp(
-									var(--card-content-font-size-clamp-min),
-									var(--card-content-font-size-clamp-val),
-									var(--card-content-font-size-clamp-max)
-								);
-								font-weight: 400;
-
-								// Remove browser default positionning of the popover,
-								// as it defaults to center of the screen.
-								inset: unset;
-
-								a {
-									color: var(--color-highlight-switch);
-									text-decoration-color: var(--color-highlight-switch);
+									a {
+										color: var(--color-highlight);
+										text-decoration-color: var(--color-highlight);
+									}
 								}
 							}
 						}

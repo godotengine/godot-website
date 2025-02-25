@@ -74,11 +74,26 @@
 				<div class="c-link"
 					 data-contributors='{{ contributors_json }}'
 					 data-read-more="{{ feature.read_more }}">
-					<!-- For no-script users. -->
-					<a href="{{ feature.read_more }}" target="_blank">Read more</a>
-					<small>
-						Contributed by {% for contributor in contributors %}<a href="https://github.com/{{contributor.github}}" target="_blank">{{ contributor.name }}</a>{% if forloop.last != true %}, {% endif %}{% endfor %}
-					</small>
+					<a class="c-link-a" href="{{ feature.read_more }}" target="_blank">Read more</a>
+					<div class="contributor-area">
+						{% assign contributors_size = contributors | size %}
+						<div class="contributor-icon">
+							<span class="material-symbols-outlined">
+								{% if contributors_size == 1 %}
+									person
+								{% elsif contributors_size == 2 %}
+									group
+								{% else %}
+									groups
+								{% endif %}
+							</span>
+						</div>
+						<div class="contributor-list">
+							<span>
+								Contributed by {% for contributor in contributors %}{% assign is_last = forloop.last %}{% assign penultimate_index = forloop.length | minus: 1 %}<a href="https://github.com/{{contributor.github}}" title="@{{contributor.github}} on GitHub" target="_blank">{{ contributor.name }}</a>{% if forloop.last != true %}{% if contributors_size == 2 %} and {% elsif contributors_size >= 3 %}, {% if forloop.index == penultimate_index %} and {% endif %}{% endif %}{% endif %}{% endfor %}
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
