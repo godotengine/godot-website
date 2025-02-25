@@ -1,7 +1,7 @@
 ---
 type: entry
 section: systems
-subsection: import
+subsection: navigation
 rank: 0
 importance: 3
 anchor: async-navigation

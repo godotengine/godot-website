@@ -1,7 +1,7 @@
 ---
 type: entry
 section: systems
-subsection: import
+subsection: navigation
 rank: 1
 importance: 3
 anchor: navigation-system-refactor
