@@ -4,7 +4,7 @@ excerpt: "What if Wikipedia was a place you could visit? That’s the idea behin
 categories: ["showcase"]
 author: Emi
 image: /storage/blog/covers/moat_logo_large_colorful_over_screenshot.webp
-date: 2025-02-25 15:00:00
+date: 2025-02-25 22:00:00
 ---
 
 What if Wikipedia was a place you could visit? That’s the idea behind [The Museum of All Things](https://may.as/moat), a [free and open-source](https://github.com/m4ym4y/museum-of-all-things) procedurally-generated museum built on Wikipedia’s vast knowledge base.
