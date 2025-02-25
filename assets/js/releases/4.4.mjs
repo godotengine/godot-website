@@ -316,7 +316,6 @@ for (const releaseCardMedia of releaseCardMediaElements) {
 	const comparisonB = releaseCardMedia.querySelector(
 		".image-comparison-b, .video-comparison-b",
 	);
-	console.log(comparisonB);
 	if (comparisonB == null) {
 		continue;
 	}
