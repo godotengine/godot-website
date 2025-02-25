@@ -5,7 +5,7 @@ rank: 2
 importance: 1
 anchor: "android-editor-support-for-XR-devices"
 title: "Android editor support for XR devices"
-blockquote: Make games in <span class="highlight">VR</span>!
+blockquote: Make games <span class="highlight">in VR</span>!
 text: |
   Because the Godot Editor itself is a project made with the engine like any other, it can be made available in more unconventional places like the web or on mobile.
 
