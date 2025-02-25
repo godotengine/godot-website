@@ -15,11 +15,7 @@ contributors:
   - name: HP van Braam
     github: hpvb
 read_more: https://github.com/godotengine/godot/pull/99700
-video_poster: /storage/releases/4.4/video/godot_scene_tree_before.webp
-video_src: /storage/releases/4.4/video/godot_scene_tree_before.webm
-video_label: Before
-video_comparison_poster: /storage/releases/4.4/video/godot_scene_tree_after.webp
-video_comparison_src: /storage/releases/4.4/video/godot_scene_tree_after.webm
-video_comparison_label: After
+video_poster: /storage/releases/4.4/video/godot_scene_tree.webp
+video_src: /storage/releases/4.4/video/godot_scene_tree.webm
 media_position: left
 ---
