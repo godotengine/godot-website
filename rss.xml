@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Release candidate: Godot 4.4 RC 1</title><link>https://godotengine.org/article/release-candidate-godot-4-4-rc-1/</link><summary>Godot 4.4 is now practically ready for its stable release, so it's time for the last round(s) of testing to make sure it's a smooth upgrade for all users.</summary><description>&lt;p>We are entering the final stage of development for Godot 4.4, which is the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a>: all features are in place, the most critical regressions have been tackled, and so we’re confident that it’s now ready for production use.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot Showcase - Museum of All Things</title><link>https://godotengine.org/article/museum-of-all-things/</link><summary>What if Wikipedia was a place you could visit? That’s the idea behind The Museum of All Things, a free and open-source procedurally-generated museum built on Wikipedia’s vast knowledge base.</summary><description>&lt;p>What if Wikipedia was a place you could visit? That’s the idea behind &lt;a href="https://may.as/moat">The Museum of All Things&lt;/a>, a &lt;a href="https://github.com/m4ym4y/museum-of-all-things">free and open-source&lt;/a> procedurally-generated museum built on Wikipedia’s vast knowledge base.&lt;/p>
+&lt;p>In this interview, we talk to &lt;a href="https://may.as">Maya&lt;/a>, the creator of The Museum of All Things, about the challenges of turning an entire encyclopedia into an walkable space, why she chose Godot for development, and how VR transformed the project into something even more immersive.&lt;/p>
+&lt;h2 id="can-you-tell-us-a-little-bit-about-your-project">Can you tell us a little bit about your project?&lt;/h2>
+&lt;p>The Museum of All Things (or the MoAT) is a free virtual museum that lets you explore any topic you can imagine! It does this by procedurally generating its exhibits using Wikipedia.&lt;/p>
+&lt;p>Every exhibit you enter in the museum corresponds to an article on Wikipedia. Text and images from the Wikipedia article cover the walls of the exhibit, and you can find hallways leading to other related exhibits based on the links in the exhibit’s Wikipedia article.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/moat/peach.webp" alt="A screenshot of the museum (article: Peach)" />&lt;/p>
+&lt;p>I’ve been making video games for most of my life, but The Museum of All Things is the biggest game I’ve made so far. It’s also my first real 3D game. I have prototypes of the game going back a few years, but I started really working on this iteration in November 2024.&lt;/p>
+&lt;p>Ever since I was a kid I’ve loved museums, so being able to make my own museum is so exciting to me. I love that the skills of game development let me create a project like this, even though it’s outside the traditional genres of video games.&lt;/p>
+&lt;h2 id="what-were-some-of-the-biggest-challenges-you-faced-during-the-development-process-and-how-did-you-overcome-them">What were some of the biggest challenges you faced during the development process, and how did you overcome them?&lt;/h2>
+&lt;p>The hardest part of this project has been turning something as huge as Wikipedia into a procedurally-generated space that makes sense and is fun to explore.&lt;/p>
+&lt;p>The Museum of All Things has about the same square footage as Philadelphia based on my rough calculation. It’s different from most procedurally-generated worlds because all the text and images displayed in that whole area are actually unique. But it’s still really hard to make all of that area interesting to the player.&lt;/p>
+&lt;p>I’ve worked hard on adding interest to the museum, and on making the museum feel more like a physical space. I’m using &lt;a href="https://docs.godotengine.org/en/stable/tutorials/3d/using_gridmaps.html">Godot’s GridMap feature&lt;/a> to randomly generate a unique floorplan for every exhibit. The exhibit generation is seeded, so everyone is visiting the same version of each exhibit. There are several different interior themes used in the exhibits to add visual variety. Ambient sounds and music create an atmosphere. And in addition to the images and text pulled from Wikipedia to fill the exhibits, the museum also pulls images from &lt;a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons&lt;/a> to make exhibits larger and
+more interesting to explore.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/moat/chongqing.webp" alt="A screenshot of the museum (article: Chongqing)" />&lt;/p>
+&lt;h2 id="the-project-is-under-the-mit-license-and-available-for-everyone-at-github-what-made-you-decide-to-make-the-project-free-and-open-source">The project is under the MIT license and available for everyone &lt;a href="https://github.com/m4ym4y/museum-of-all-things">at GitHub&lt;/a>. What made you decide to make the project free and open source?&lt;/h2>
+&lt;p>This project would have been totally impossible without the wealth of knowledge compiled by Wikipedia’s community and the APIs which Wikimedia makes freely available. So I really want my project to pay that goodwill forward as much as I can. And the beauty of this museum being a virtual experience is that there’s no space to rent or building to upkeep, so I can afford to make it free!&lt;/p>
+&lt;h2 id="how-did-you-discover-godot-what-made-you-pick-it-for-your-project">How did you discover Godot? What made you pick it for your project?&lt;/h2>
+&lt;p>I discovered Godot a few years ago when I was looking for an engine to use for a game jam, and I had a good experience with it! Using open-source tools is really important to me, because I don’t want to learn skills that could become obsolete if a company decides to change their pricing model. The cross-platform support was a big selling point to me as well!&lt;/p>
+&lt;p>I’ve used Godot several more times for game jams (most of my &lt;a href="https://ldjam.com/users/maymay/games">Ludum Dare entries&lt;/a> are in Godot). I’ve gotten more comfortable with the features and workflow now, so Godot was the first tool I reached for when I started prototyping my museum!&lt;/p>
+&lt;h2 id="the-museum-can-be-visited-in-vr-how-was-your-experience-implementing-vr-with-godot">The museum can be visited in VR. How was your experience implementing VR with Godot?&lt;/h2>
+&lt;p>I was really intimidated by VR, but I actually found it to be straightforward! I didn’t go into this project knowing anything about developing in VR, so the &lt;a href="https://github.com/GodotVR/godot-xr-tools">godot-xr-tools&lt;/a> addon was extremely helpful. All the elements like movement and interaction came out of the box and fit into the game world I had written.&lt;/p>
+&lt;p>I’m really happy that I took the leap and added VR. For a project like this where the objective is just to explore a world, VR makes a big difference in the experience. I went from thinking “hey I made a cool game” to thinking “wow I created a world that I can actually visit.” And that’s kinda the coolest feeling ever for me.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/moat/vr-lobby.webp" alt="A screenshot of the museum (The lobby in VR)" />&lt;/p>
+&lt;h2 id="how-can-people-visit-the-museum">How can people visit the museum?&lt;/h2>
+&lt;p>You can download the Museum of All Things for free on Windows, Linux, or macOS! If you have a headset compatible with OpenXR (the Oculus Quest is not supported currently) you can download the OpenXR release.&lt;/p>
+&lt;p>You can visit the project’s official homepage at &lt;a href="https://may.as/moat">https://may.as/moat&lt;/a> or download the &lt;a href="https://mayeclair.itch.io/museum-of-all-things">Museum of All Things from Itch.io&lt;/a>.&lt;/p>
+&lt;h2 id="do-you-have-any-other-projects-in-mind-for-the-future">Do you have any other projects in mind for the future?&lt;/h2>
+&lt;p>I’m waiting for another idea to come along that captures my attention. I’m working on my art and writing skills, so I think my next game may be something that includes more of a story. I’ll probably be participating in game jams too!&lt;/p>
+&lt;p>I’m going to be taking a break from working on the Musuem of All Things, but I want to return to it and publish updates in the future too. There are big features that I’d still like to add – for example the ability to visit the museum with others in multiplayer is something many people have requested. I’d also like to add more variety to the museum’s layout, and maybe the ability to pull in more types of content from Wikimedia where available, such as audio and 3D models. It’s one of these projects where every time I touch it there’s more things I want to add.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/moat/geometry.webp" alt="A screenshot of the museum (article: Geometry)" />&lt;/p>
+&lt;h3 id="thank-you-for-sharing-your-experience-using-godot-is-there-anything-you-would-like-to-plug">Thank you for sharing your experience using Godot. Is there anything you would like to plug?&lt;/h3>
+&lt;p>You can find me and my socials at &lt;a href="https://may.as/">https://may.as/&lt;/a> if you’d like to stay up to date on all my future projects! I hired Willow Wolf from &lt;a href="https://neomoon.one/">https://neomoon.one/&lt;/a> to create sound and music for my project. Check out her site if you’re looking for game audio services!&lt;/p></description><category>Showcase</category><guid>https://godotengine.org/article/museum-of-all-things/</guid><dc:creator>Emi</dc:creator><pubDate>Tue, 25 Feb 2025 22:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/moat_logo_large_colorful_over_screenshot.webp</image></item><item><title>Release candidate: Godot 4.4 RC 1</title><link>https://godotengine.org/article/release-candidate-godot-4-4-rc-1/</link><summary>Godot 4.4 is now practically ready for its stable release, so it's time for the last round(s) of testing to make sure it's a smooth upgrade for all users.</summary><description>&lt;p>We are entering the final stage of development for Godot 4.4, which is the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a>: all features are in place, the most critical regressions have been tackled, and so we’re confident that it’s now ready for production use.&lt;/p>
 &lt;p>But without very extensive testing from the community, we can never be 100% sure that the release is ready to be published as a recommended stable upgrade for all users. With this candidate, Godot 4.4 is now ready for testing to upgrade existing projects (but always make a copy or version control commit before upgrading!), and we’re eager to hear how it fares and whether any new major issues have been left unnoticed until now.&lt;/p>
 &lt;p>Please, consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.4.rc1/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
@@ -2898,70 +2929,4 @@ I will make the case that it is a bit of both :)&lt;/p>
 &lt;p>I’ll make a quick note that 100,000 is the combined number of issues and &lt;abbr title="pull requests">PRs&lt;/abbr>, which share the same index system on GitHub.&lt;br />&lt;br />At the time of writing, we’ve actually had 53,648 issues and 45,213 &lt;abbr title="pull requests">PRs&lt;/abbr> created. Astute minds will notice that the sum is not 100,000; the difference comes from spam issues or &lt;abbr title="pull requests">PRs&lt;/abbr> which have been deleted by GitHub. &lt;a href="#fnref:1" class="reversefootnote" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description><category>News</category><guid>https://godotengine.org/article/beyond-100000-you-re-breathtaking/</guid><dc:creator>Rémi Verschelde</dc:creator><pubDate>Wed, 04 Dec 2024 19:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/beyond-100000-you-re-breathtaking.webp</image></item><item><title>Godot Foundation Update December 2024</title><link>https://godotengine.org/article/godot-foundation-update-dec-2024/</link><summary>We’ve made progress on several key initiatives for the organization and the Godot ecosystem. Here’s what we’ve been up to.</summary><description>&lt;p>The Foundation has been working on a number of things behind the scenes that are important for the organization and for
-the Godot ecosystem more broadly. We wanted to take the chance to highlight a few of them in this post.&lt;/p>
-&lt;h2 id="key-policies-and-procedures">Key policies and procedures&lt;/h2>
-&lt;p>The Foundation was formed in August 2022, but we only began operating in a full capacity in July 2023. We initially
-adopted the &lt;a href="https://sfconservancy.org/projects/policies/">member project policies&lt;/a> of the Software Freedom Conservancy.
-Doing so allowed us to operate exactly as we had when we were a member project of the SFC, and maintain very high
-standards.&lt;/p>
-&lt;p>In September, we adopted a modified version of those policies that is more specific to our organization. You can read the
-updated version on the &lt;a href="https://godot.foundation/policies-and-procedures/key-policies">Godot Foundation website&lt;/a>.&lt;/p>
-&lt;p>We are very happy with the policies and we hope you are too. They hold us to a very high standard and ensure that the
-Foundation will always operate in a way that supports Godot.&lt;/p>
-&lt;h2 id="contractors">Contractors&lt;/h2>
-&lt;p>The Foundation currently has 10 contractors working on the engine directly (6 full time, 4 part time) and 3 contractors
-working on administration and infrastructure.&lt;/p>
-&lt;p>This is the most contractors we have had at once, and even so, we feel understaffed as there is always more
-work that needs to be done than we can do. Accordingly, we would like to continue hiring once funding allows for it.&lt;/p>
-&lt;h2 id="upcoming-projects">Upcoming projects&lt;/h2>
-&lt;p>The Foundation is working on 4 major projects in addition to working on Godot itself:&lt;/p>
-&lt;ol>
-&lt;li>An official asset store&lt;/li>
-&lt;li>An official job board on the Godot website&lt;/li>
-&lt;li>A public project priorities page&lt;/li>
-&lt;li>A public trademark policy&lt;/li>
-&lt;/ol>
-&lt;h3 id="asset-store">Asset store&lt;/h3>
-&lt;p>We have been working towards an initial version of the asset store for a while now. It has taken us some time to get the legal aspects into place and a design agreed upon.&lt;/p>
-&lt;p>We expect to have an early access version of the site up and running this month and we will begin inviting testers to help us polish it and get it ready for a full release sometime in 2025.&lt;/p>
-&lt;h3 id="job-board">Job board&lt;/h3>
-&lt;p>We aim to have a place for people to post that are looking to hire Godot developers to add to their game team or Godot
-contributors to fix high priority bugs that may be impacting your team.&lt;/p>
-&lt;p>In addition to a job board, we will be curating a list of service providers who have shown that they offer services in
-the Godot ecosystem to make it easy to find someone to contract with if you need support or any other services.&lt;/p>
-&lt;p>Much of the foundational work for this has been finished, but it will likely be released after the asset store so we can
-focus our efforts more on that first.&lt;/p>
-&lt;h3 id="project-priorities">Project priorities&lt;/h3>
-&lt;p>Soon we will be adding a project priorities page to our website to give the community more clarity on the direction of
-development.&lt;/p>
-&lt;p>We have avoided providing a roadmap as we don’t want to promise more than we can deliver, or put too much pressure on
-volunteer contributors. However, the Godot Project maintainers have agreed that it is time to at least write down what
-the largest tasks are that we are working towards. This won’t be like a traditional roadmap where we have specific tasks
-with expected dates. However, we believe it will answer a lot of questions that the community has about the future of
-the project.&lt;/p>
-&lt;h3 id="trademark-policy">Trademark policy&lt;/h3>
-&lt;p>We registered the Godot trademark and the Godot logo trademark while still a member project of the SFC. Last year, the
-SFC granted the Godot Foundation ownership over the trademarks. Now we need to have a public policy that says how and
-when others can use the trademarks to protect them.&lt;/p>
-&lt;p>We are working with our lawyers to craft a policy that is fair to existing users, as permissive as possible, and still
-able to protect our trademark.&lt;/p>
-&lt;p>We will have a blog post soon with more information.&lt;/p>
-&lt;h2 id="the-foundations-role-in-the-project">The Foundation’s role in the project&lt;/h2>
-&lt;p>We also wanted to take this chance to muse about the Foundation’s role in the project. In particular, we want to
-contrast the size of the Foundation with the size of the Godot project contributor pool. As explained above, the
-Foundation currently hires 13 contractors to work on Godot, while the total number of contributors to Godot is over
-2,500 (the 4.3 release alone had over 500 contributors)! This large group of contributors is the reason why Godot is
-able to improve so quickly and do so much for a fraction of the funding that the other large engines have.&lt;/p>
-&lt;p>The Foundation (meaning the Board of Directors and the people hired by the Foundation) does not determine the priorities
-of the project in a top-down way. In other words, the Foundation does not dictate to individual volunteers what they
-should work on. Instead, it influences the project implicitly by making hiring decisions and hiring people for specific
-tasks that aren’t being done by the community.&lt;/p>
-&lt;p>Ultimately, it is the Godot community that deserves the most credit for the growth and development of Godot. While we
-hope to see the Foundation grow and take on a stronger role in the project, it should be seen as a central pillar of the
-project that volunteers can rally around. Donating to the Foundation is one avenue to contribute, but there are many
-more and Godot needs contribution in all areas in order to continue growing at this pace. Please consider contributing
-however you are able!&lt;/p>
-&lt;h2 id="support">Support&lt;/h2>
-&lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/godot-foundation-update-dec-2024/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Mon, 02 Dec 2024 17:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-foundation-update-2024.webp</image></item></channel></rss>
+&lt;/div></description><category>News</category><guid>https://godotengine.org/article/beyond-100000-you-re-breathtaking/</guid><dc:creator>Rémi Verschelde</dc:creator><pubDate>Wed, 04 Dec 2024 19:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/beyond-100000-you-re-breathtaking.webp</image></item></channel></rss>
