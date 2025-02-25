@@ -336,9 +336,25 @@ for (const releaseCardMedia of releaseCardMediaElements) {
 }
 
 // target="_blank"
+/** @type {HTMLAnchorElement[]} */
 const anchors = Array.from(
 	document.querySelector("main .release-container").querySelectorAll("a"),
 );
 for (const anchor of anchors) {
-	anchor.target = anchor.target || "_blank";
+	try {
+		const anchorUrl = new URL(anchor.href);
+		const isInternalLink =
+			anchorUrl.protocol === window.location.protocol &&
+			anchorUrl.host === window.location.host &&
+			anchorUrl.port === window.location.port &&
+			anchorUrl.pathname === window.location.pathname &&
+			anchorUrl.hash.startsWith("#");
+		if (!isInternalLink) {
+			anchor.target = "_blank";
+		}
+	} catch (err) {
+		const newErr = new Error("Error while setting anchor target to blank.");
+		newErr.cause = err;
+		console.error(newErr);
+	}
 }
