@@ -47,6 +47,8 @@ I was really intimidated by VR, but I actually found it to be straightforward! I
 
 I’m really happy that I took the leap and added VR. For a project like this where the objective is just to explore a world, VR makes a big difference in the experience. I went from thinking “hey I made a cool game” to thinking “wow I created a world that I can actually visit.” And that’s kinda the coolest feeling ever for me.
 
+![A screenshot of the museum (The lobby in VR)](/storage/blog/moat/vr-lobby.webp)
+
 ## How can people visit the museum?
 You can download the Museum of All Things for free on Windows, Linux, or macOS! If you have a headset compatible with OpenXR (the Oculus Quest is not supported currently) you can download the OpenXR release.
 
