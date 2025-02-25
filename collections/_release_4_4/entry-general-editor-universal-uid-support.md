@@ -14,7 +14,7 @@ text: |
 contributors:
   - name: Juan Linietsky
     github: reduz
-read_more: https://github.com/godotengine/godot/pull/97352
+read_more: /article/uid-changes-coming-to-godot-4-4/
 image_alt: File manager showing project script files with .uid files existing besides them.
 image_src: /storage/releases/4.4/images/godot_uid.webp
 image_src_2x: /storage/releases/4.4/images/godot_uid_2x.webp
