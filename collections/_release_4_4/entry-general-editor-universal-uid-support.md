@@ -19,5 +19,6 @@ image_alt: File manager showing project script files with .uid files existing be
 image_src: /storage/releases/4.4/images/godot_uid.webp
 image_src_2x: /storage/releases/4.4/images/godot_uid_2x.webp
 media_position: right
+position: top-left
 inverted: true
 ---
