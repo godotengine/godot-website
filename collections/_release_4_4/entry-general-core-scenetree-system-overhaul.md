@@ -18,4 +18,5 @@ read_more: https://github.com/godotengine/godot/pull/99700
 video_poster: /storage/releases/4.4/video/godot_scene_tree.webp
 video_src: /storage/releases/4.4/video/godot_scene_tree.webm
 media_position: left
+position: top-left
 ---
