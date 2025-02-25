@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: physics
 rank: 0
-importance: 4
+importance: 2
 anchor: custom-colors-for-collision-shapes
 title: Custom colors for collision shapes
 blockquote: <span class="highlight">Debugging</span> in style
