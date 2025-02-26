@@ -3,7 +3,7 @@ type: entry
 section: platforms
 subsection: android
 rank: 3
-importance: 4
+importance: 3
 anchor: themed-icons
 title: Themed icons
 blockquote: Matchy-matchy
