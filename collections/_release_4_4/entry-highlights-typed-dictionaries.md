@@ -1,11 +1,11 @@
 ---
 type: entry
 section: highlights
-rank: 1
+rank: 6
 importance: 1
-anchor: "typed-dictionaries"
-title: "Typed dictionaries"
-blockquote: "Keys required"
+anchor: typed-dictionaries
+title: Typed dictionaries
+blockquote: Keys required
 text: |
   Your requests have been heard!
 

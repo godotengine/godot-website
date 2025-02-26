@@ -1,8 +1,8 @@
 ---
 type: entry
 section: highlights
-rank: 6
-importance: 1
+rank: 5
+importance: 2
 anchor: AgX-tone-mapping
 title: AgX tone mapping
 blockquote: The cool new kid on the block

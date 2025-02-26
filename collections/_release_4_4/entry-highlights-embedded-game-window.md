@@ -1,10 +1,10 @@
 ---
 type: entry
 section: highlights
-rank: 6
-importance: 1
-anchor: "embedded-game-window"
-title: "Embedded game window"
+rank: 1
+importance: 2
+anchor: embedded-game-window
+title: Embedded game window
 blockquote: Window management <span class="highlight">magic</span>
 text: |
   Godot runs the game as a seperate process from the editor for two reasons:

@@ -2,7 +2,7 @@
 type: entry
 section: highlights
 rank: 4
-importance: 1
+importance: 2
 anchor: ubershaders
 title: Ubershaders to reduce stutter
 blockquote: <span class="highlight">uber</span>-exciting!
