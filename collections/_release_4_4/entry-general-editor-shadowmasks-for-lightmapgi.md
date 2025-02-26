@@ -4,9 +4,9 @@ section: general
 subsection: editor
 rank: 5
 importance: 2
-anchor: "shadowmasks-for-lightmapGI"
-title: "Shadowmasks for LightmapGI"
-blockquote: "Both. Both is good."
+anchor: shadowmasks-for-lightmapGI
+title: Shadowmasks for LightmapGI
+blockquote: <span class="highlight">Both.</span> Both is good.
 text: |
   From now on, you don't have to choose between fully baked or fully dynamic shadows anymore when using LightmapGI.
 
