@@ -1,7 +1,7 @@
 ---
 type: entry
 section: highlights
-rank: 2
+rank: 3
 importance: 2
 anchor: "android-editor-support-for-XR-devices"
 title: "Android editor support for XR devices"
