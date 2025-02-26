@@ -7,7 +7,7 @@ anchor: jolt-physics-module
 title: Jolt physics module
 blockquote: <span class="highlight">Jolt</span> into action
 text: |
-  The Jolt module has been the _de facto_ physics engine for many Godot developers since its inception in late 2022, so it only made sense to promote it to an official addon for more users to find. [Jolt](https://github.com/jrouwe/JoltPhysics) itself is actually a standalone open source physics engine by [Jorrit Rouwe](https://github.com/jrouwe), Lead Game Tech Programmer at Guerrilla Games, who helped immensely with the Godot bindings.
+  The Jolt module has been the _de facto_ physics engine for many Godot developers since its inception in late 2022, so it only made sense to promote it to an official addon for more users to find. [Jolt](https://github.com/jrouwe/JoltPhysics) itself is actually a standalone open source physics engine by [Jorrit Rouwe](https://github.com/jrouwe) who helped immensely with the Godot bindings.
 
   Now the Godot Jolt maintainers have taken it one step further: integrating the module into the engine directly. A process that ended up requiring over 500 files and 115 thousand lines of code!
 
