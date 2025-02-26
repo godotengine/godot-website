@@ -13,4 +13,8 @@ contributors:
   - name: ActualHorse
     github: BattyBovine
 read_more: https://github.com/godotengine/godot/pull/90644
+image_alt: Screenshot of a game running with visible collision shapes showing different colors.
+image_src: /storage/releases/4.4/images/godot_collision_shapes.webp
+image_src_2x: /storage/releases/4.4/images/godot_collision_shapes_2x.webp
+media_position: left
 ---
