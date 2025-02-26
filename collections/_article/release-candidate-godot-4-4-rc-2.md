@@ -25,9 +25,28 @@ We covered the most important highlights from Godot 4.4 in the previous [**4.4 b
 
 Especially if you're testing 4.4 for the first time, you'll want to get a condensed overview of what new features you might want to make use of.
 
-This section covers changes made since the previous [rc 1 snapshot](/article/dev-snapshot-godot-4-4-rc-1/), which are mostly regression fixes, or "safe" fixes to longstanding issues:
+This section covers changes made since the previous [RC 1 snapshot](/article/dev-snapshot-godot-4-4-rc-1/), which are mostly regression fixes, or "safe" fixes to longstanding issues:
 
-- TODO
+- Buildsystem: Fix libtheora optimizations causing errors in calling function for x86_64 Windows ([GH-103176](https://github.com/godotengine/godot/pull/103176)).
+- Buildsystem: Fix compiling on arm64 Linux with GCC ([GH-103303](https://github.com/godotengine/godot/pull/103303)).
+- Core: Use atomic flag to prevent `flush_if_pending` from reading unlocked `command_mem` ([GH-103298](https://github.com/godotengine/godot/pull/103298)).
+- Editor: Fix Embedded Game window wrong first startup location and size ([GH-103105](https://github.com/godotengine/godot/pull/103105)).
+- Editor: Fix plugin icons not displayed ([GH-103143](https://github.com/godotengine/godot/pull/103143)).
+- Editor: Load docks layout after their position is initialized ([GH-103266](https://github.com/godotengine/godot/pull/103266)).
+- Export: Fix cross-platform configuration of rendering driver settings (narrower approach) ([GH-103197](https://github.com/godotengine/godot/pull/103197)).
+- GDExtension: Bind new core `METHOD_FLAG_VIRTUAL_REQUIRED` bitfield ([GH-103302](https://github.com/godotengine/godot/pull/103302)).
+- GUI: Fix Tree hover position with multiple columns ([GH-103168](https://github.com/godotengine/godot/pull/103168)).
+- GUI: Fix label clipping when ascent/descent are fractional ([GH-103192](https://github.com/godotengine/godot/pull/103192)).
+- GUI: Label: Fix rounding errors with fractional scale ([GH-103224](https://github.com/godotengine/godot/pull/103224)).
+- I18n: CSV import: Generate positve UID for .translation and follow renames ([GH-103120](https://github.com/godotengine/godot/pull/103120)).
+- Import: bcdec: Fix unnecessary alignment of texture resolution when only one of its dimensions isn't divisible by 4 ([GH-103259](https://github.com/godotengine/godot/pull/103259)).
+- Network: mbedTLS: Integrate TLS handshake defragmentation PR ([GH-103247](https://github.com/godotengine/godot/pull/103247)).
+- Porting: Fix Embedded Game does not focus when mouse over on Windows ([GH-103052](https://github.com/godotengine/godot/pull/103052)).
+- Porting: Android Editor: Fix expand button black bar issue ([GH-103117](https://github.com/godotengine/godot/pull/103117)).
+- Porting: Android: Fix excessive `getRotation` calls ([GH-103122](https://github.com/godotengine/godot/pull/103122)).
+- Rendering: Metal: Compile `MTLLibrary` on demand when pipeline is created ([GH-103185](https://github.com/godotengine/godot/pull/103185)).
+- Rendering: Windows: Offload `RenderingDevice` creation test to subprocess ([GH-103245](https://github.com/godotengine/godot/pull/103245)).
+- Rendering: `texture_create_from_native_handle()` should return `RID` for texture from `RenderingServer`, not `RenderingDevice` ([GH-103296](https://github.com/godotengine/godot/pull/103296)). 
 
 ## Changelog
 
