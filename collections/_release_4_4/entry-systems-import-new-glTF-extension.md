@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: import
 rank: 1
-importance: 3
+importance: 2
 anchor: new-glTF-extension
 title: New glTF extension
 blockquote: <span class="highlight">Customizable</span> animation imports

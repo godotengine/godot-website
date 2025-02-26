@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: import
 rank: 0
-importance: 3
+importance: 2
 anchor: betsy-texture-compressor
 title: Betsy texture compressor
 blockquote: <span class="highlight">Faster</span> imports

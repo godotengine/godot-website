@@ -3,7 +3,7 @@ type: entry
 section: scripting
 subsection: dotnet
 rank: 0
-importance: 2
+importance: 3
 anchor: "dotnet-8-0"
 title: ".NET 8.0"
 blockquote: "Time for an upgrade"
