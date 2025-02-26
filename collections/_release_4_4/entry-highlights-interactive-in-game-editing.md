@@ -1,7 +1,7 @@
 ---
 type: entry
 section: highlights
-rank: 3
+rank: 2
 importance: 2
 anchor: interactive-in-game-editing
 title: Interactive in-game editing
