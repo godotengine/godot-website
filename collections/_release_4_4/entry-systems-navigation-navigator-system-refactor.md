@@ -10,7 +10,7 @@ blockquote: Improving the legacy code
 text: |
   The navigation code may very well be some of the oldest left in the engine's codebase. Therefore the navigation team has taken up the task to clean up thoroughly and add improvements to outdated areas.
 
-  This release already contains plenty quality of life changes, from debug indicators to show the direction of navigation links, to supporting the obstactle node's transform, and more. In general, navigation features are going to be faster, in no small part due to the heap now being used to store navigation data.
+  This release already contains plenty quality of life changes, from debug indicators to show the direction of navigation links, to supporting the obstactle node's transform, and more. In general, navigation features are going to be faster, in no small part due to the pathfinding queries now using a new internal heap structure.
 contributors:
   - name: smix8
     github: smix8
