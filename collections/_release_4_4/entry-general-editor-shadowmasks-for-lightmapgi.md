@@ -16,5 +16,7 @@ text: |
 contributors:
   - name: BlueCube3310
     github: BlueCube3310
+  - name: Nathan Dearth
+    github: DearthDev
 read_more: https://github.com/godotengine/godot/pull/85653
 ---
