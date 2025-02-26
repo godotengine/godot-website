@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: navigation
 rank: 0
-importance: 3
+importance: 2
 anchor: async-navigation
 title: Async navigation
 blockquote: Background checks

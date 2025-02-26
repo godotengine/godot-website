@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: navigation
 rank: 1
-importance: 3
+importance: 2
 anchor: navigation-system-refactor
 title: Navigation system refactor
 blockquote: Improving the legacy code
