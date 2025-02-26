@@ -1,3 +1,4 @@
+{% assign section_anchor = include.section_anchor %}
 {% assign feature = include.feature %}
 
 {% assign importance = feature.importance | default: "4" | plus: 0 %}
@@ -23,7 +24,11 @@
 {% endif %}
 
 {% assign span = "" %}
-{% if importance == 2 %}
+{% if section_anchor == "highlights" %}
+	{% if importance == 1 %}
+		{% assign span = "span-2" %}
+	{% endif %}
+{% elsif importance == 2 %}
 	{% assign span = "span-3" %}
 {% elsif importance == 3 %}
 	{% assign span = "span-2" %}

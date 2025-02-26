@@ -2,7 +2,7 @@
 type: entry
 section: highlights
 rank: 2
-importance: 1
+importance: 2
 anchor: "android-editor-support-for-XR-devices"
 title: "Android editor support for XR devices"
 blockquote: Make games <span class="highlight">in VR</span>!
