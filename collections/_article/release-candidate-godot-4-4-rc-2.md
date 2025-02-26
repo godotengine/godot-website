@@ -50,7 +50,7 @@ This section covers changes made since the previous [RC 1 snapshot](/article/dev
 
 ## Changelog
 
-**xx contributors** submitted **xx fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-rc2) for the complete list of changes since the 4.4-rc1 snapshot. You can also review [all changes included in 4.4](https://godotengine.github.io/godot-interactive-changelog/#4.4) compared to the previous 4.3 feature release.
+**19 contributors** submitted **31 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.4-rc2) for the complete list of changes since the 4.4-rc1 snapshot. You can also review [all changes included in 4.4](https://godotengine.github.io/godot-interactive-changelog/#4.4) compared to the previous 4.3 feature release.
 
 This release is built from commit [`01545c995`](https://github.com/godotengine/godot/commit/01545c995b0612c68f9dfce8f6cc67576c298381).
 
