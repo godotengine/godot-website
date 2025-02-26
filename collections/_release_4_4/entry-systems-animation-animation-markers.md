@@ -2,8 +2,8 @@
 type: entry
 section: systems
 subsection: animation
-rank: 0
-importance: 2
+rank: 2
+importance: 3
 anchor: "animation-markers"
 title: "Animation markers"
 blockquote: "Put a pin in it"
