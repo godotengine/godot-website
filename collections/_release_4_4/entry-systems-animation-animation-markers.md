@@ -8,7 +8,7 @@ anchor: "animation-markers"
 title: "Animation markers"
 blockquote: "Put a pin in it"
 text: |
-  Markers allow you to create sub regions of an animation that can be jumped to or looped without playing the entire animation.
+  Markers allow you to create subregions of an animation that can be jumped to or looped without playing the entire animation.
 
   These markers are also supported inside the Animation Tree, where you can easily select animation markers for looping or to begin playback.
 contributors:

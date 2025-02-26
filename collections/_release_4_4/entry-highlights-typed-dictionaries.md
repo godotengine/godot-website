@@ -9,7 +9,7 @@ blockquote: Keys required
 text: |
   Your requests have been heard!
 
-  Typed dictionaries are coming to the Godot. This impacts the core engine, GDScript, and all other scripting languages when interfacing with Godot's <span class="code-highlight basetype">Dictionary</span> type.
+  Typed dictionaries are coming to Godot. This impacts the core engine, GDScript, and all other scripting languages when interfacing with Godot's <span class="code-highlight basetype">Dictionary</span> type.
 
   The Inspector UX has been improved accordingly, to let you assign the right keys and values directly in the editor.
 contributors:
