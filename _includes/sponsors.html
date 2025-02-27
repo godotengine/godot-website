@@ -1,6 +1,6 @@
 <section class="sponsors padded" id="sponsors">
 	<div class="container">
-		<h2>Godot is sponsored by:</h2>
+		<h2>{% t sponsors.title %}</h2>
 		<h3>Patron</h3>
 		<div class="grid patron">
 			{% for sponsor in site.data.sponsors.patron %}
@@ -33,7 +33,7 @@
 			</a>
 			{% endfor %}
 		</div>
-		<p class="for-more" style="margin-top: 50px; text-align: left; opacity: 0.8;">If you want to sponsor the project, please write to <a href="mailto:contact@godot.foundation">contact@godot.foundation</a>.</p>
-		<a href="https://fund.godotengine.org" class="btn">Donate now!</a>
+		<p class="for-more" style="margin-top: 50px; text-align: left; opacity: 0.8;">{% t sponsors.text %}</p>
+		<a href="https://fund.godotengine.org" class="btn">{% t sponsors.cta %}</a>
 	</div>
 </section>

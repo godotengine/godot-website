@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% current_lang %}">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
 
 	<!-- Plausible -->
 	<script defer data-domain="godotengine.org" src="https://plausible.godot.foundation/js/script.file-downloads.outbound-links.js"></script>
@@ -14,21 +14,23 @@
 	<meta property="og:site_name" content="Godot Engine">
 	<meta property="og:url" content="https://godotengine.org{{ page.url }}">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="{{ page.title | default: "Godot Engine" }}">
-	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
 	<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
 	<!-- meta tags -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@godotengine">
 	<meta property="twitter:domain" content="godotengine.org">
 	<meta property="twitter:url" content="https://godotengine.org{{ page.url }}">
-	<meta name="twitter:title" content="{{ page.title | default: "Godot Engine" }}">
-	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}Develop your 2D & 3D games, cross-platform projects, or even XR ideas!{% endif %}">
-	<meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
 
-	{% if page.title %}
-		<title>{{ page.title | remove: " - Godot Engine" }}{% if page.notitlesuffix != true %} – Godot Engine{% endif %}</title>
+	{% if page.title[current_lang] or page.title %}
+		{% if page.title[current_lang] %}
+			<meta property="og:title" content="{{ page.title[current_lang] | remove: " - Godot Engine" }}{% if page.notitlesuffix != true %} – Godot Engine{% endif %}">
+			<title>{{ page.title[current_lang] | remove: " - Godot Engine" }}{% if page.notitlesuffix != true %} – Godot Engine{% endif %}</title>
+		{% else %}
+			<meta property="og:title" content="{{ page.title | remove: " - Godot Engine" }}{% if page.notitlesuffix != true %} – Godot Engine{% endif %}">
+			<title>{{ page.title | remove: " - Godot Engine" }}{% if page.notitlesuffix != true %} – Godot Engine{% endif %}</title>
+		{% endif %}
 	{% else %}
+		<meta property="og:title" content="Godot Engine">
 		<title>Godot Engine</title>
 	{% endif %}
 	
@@ -38,6 +40,7 @@
 	<link rel="icon" href="/assets/favicon.png" sizes="any">
 	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="/assets/css/main.css?119">
+	<link rel="stylesheet" href="/assets/css/header.css">
 	<link rel="stylesheet" href="/assets/css/tobii.min.css">
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Italic-VariableFont_wght.woff2" crossorigin>
 	<link rel="preload" as="font" href="/assets/fonts/Montserrat-VariableFont_wght.woff2" crossorigin>
