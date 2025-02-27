@@ -73,7 +73,7 @@ home:
     cta: ¿Quieres saber más sobre Godot?
   get_involved:
     title: Contribuye
-    text: "Únete a la comunidad y ayuda a crear un motor de juegos que pertenezca a todos."
+    text: "Únete a la comunidad y ayuda a crear un motor que pertenezca a todos."
     cards:
       cta: Ver más
       code:
@@ -81,7 +81,7 @@ home:
         text: Si sabes programar, puedes ayudar a corregir errores y trabajar con los contribuyentes del motor con la implementación de nuevas funciones.
       document:
         title: Documenta
-        text: La calidad de la documentación es esencial en un motor de juegos; ayúdanos a mejorarla actualizando la referencia de la API, escribiendo nuevas guías o enviando correcciones.
+        text: La calidad de la documentación es esencial en un motor; ayúdanos a mejorarla actualizando la referencia de la API, escribiendo nuevas guías o enviando correcciones.
       report:
         title: Reporta
         text: ¿Encontraste un problema con el motor? No olvides reportarlo para que los desarrolladores puedan solucionarlo.
