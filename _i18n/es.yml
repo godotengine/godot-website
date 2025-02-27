@@ -45,8 +45,10 @@ home:
   h1: Tu motor de juegos gratuito<br> y de código abierto.
   subtitle: Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR
   whats_new: Novedades
+  whats_new_tooltip: Ver lo nuevo en Godot
   download_latest: Descargar Última Versión
-  looking_for: '¿Buscas <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Descarga la versión de soporte a largo plazo de Godot 3">Godot 3</a>, nuestras <a href="/download/archive">versiones experimentales</a>, o una <a href="/download/archive">versión anterior</a>?'
+  download_latest_tooltip: Descarga la última versión de Godot 4
+  looking_for: '¿Buscas <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Descarga la última versión de Godot 3">Godot 3</a>, nuestras <a href="/download/archive">versiones experimentales</a>, o una <a href="/download/archive">versión anterior</a>?'
   latest_news: Últimas noticias (en inglés)
   more_news: Más noticias
   cards:
@@ -57,7 +59,7 @@ home:
     script:
       title: "Usa el lenguaje adecuado para cada trabajo"
       text: "Mantén tu código modular con una API orientada a objetos usando GDScript, C#, C++, o trae el tuyo propio usando GDExtension."
-      extra: "El soporte para C# solo está disponible actualmente para plataformas de escritorio y móviles en Godot 4.2. Usa Godot 3 para ejecutar C# en Web."
+      extra: "El soporte para C# en la plataforma Web no está disponible actualmente en Godot 4.<br>Usa Godot 3 para ejecutar C# en Web."
     2d:
       title: "Motor 2D dedicado"
       text: "Crea juegos 2D con el motor de renderizado 2D dedicado de Godot con coordenadas de píxeles 2D reales y nodos 2D."
