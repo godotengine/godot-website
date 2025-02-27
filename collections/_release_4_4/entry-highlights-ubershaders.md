@@ -24,5 +24,5 @@ video_label: Without
 video_comparison_src: /storage/releases/4.4/video/godot_ubershaders_with.webm
 video_comparison_poster: /storage/releases/4.4/video/godot_ubershaders.webp
 video_comparison_label: With
-media_position: top
+media_position: bottom
 ---
