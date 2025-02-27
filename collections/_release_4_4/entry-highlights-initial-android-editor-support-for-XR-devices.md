@@ -21,4 +21,5 @@ read_more: https://github.com/godotengine/godot/pull/96624
 video_poster: /storage/releases/4.4/video/godot_xr_editor.webp
 video_src: /storage/releases/4.4/video/godot_xr_editor.webm
 media_position: top
+content_creator: "[@m4gr3d](https://github.com/m4gr3d)"
 ---
