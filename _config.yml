@@ -67,10 +67,8 @@ defaults:
 plugins:
   - jekyll-paginate-v2
   - jekyll-redirect-from
-  # - jekyll-multiple-languages-plugin
 
 # Internationalization
-languages: ["en", "es"]
 lang: "en"
 
 # Pagination (used by the blog)

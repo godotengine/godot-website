@@ -12,6 +12,30 @@ header:
   donate: Donar
   language: Idioma
 footer:
+  download: Descargar
+  documentation: Documentación
+  features: Funciones
+  web_editor: Editor web
+  release_archive: Archivo de versiones
+  source_code: Código fuente
+  project: Proyecto
+  blog: Blog
+  code_of_conduct: Código de conducta
+  governance: Gobernanza
+  teams: Equipos
+  priorities: Prioridades
+  communities: Comunidades
+  resources: Recursos
+  asset_library: Biblioteca de Assets
+  press_kit: Kit de prensa
+  showcase: Creaciones
+  education: Educación
+  foundation: Fundación
+  about: Acerca de
+  donate: Donar
+  license: Licencia
+  privacy_policy: Política de privacidad
+  contact_us: Contáctanos
   text: "Juan Linietsky, Ariel Manzur y <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>colaboradores</a>. Alojado por la <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>Código fuente de la web en GitHub</a>."
 sponsors:
   title: "Godot está patrocinado por:"
