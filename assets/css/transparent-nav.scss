@@ -51,5 +51,7 @@ nav#nav {
 }
 
 #nav .language-selector {
-	background-image: url(/assets/icons/language.svg) !important;
+	@media (min-width: 1200px) {
+		background-image: url(/assets/icons/language.svg) !important;
+	}
 }

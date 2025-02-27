@@ -176,10 +176,7 @@
     opacity: 0.85;
   }
 
-  /* Invert hamburger menu button on mobile to be visible on dark navbar. */
-  #nav_toggle_btn {
-    filter: invert(100%) saturate(0%) brightness(120%);
-  }
+  
 
   .dark-invert {
     filter: invert(100%);
@@ -833,75 +830,6 @@ pre > code {
 
   article .content {
     width: 100%;
-  }
-
-  header {
-    height: auto;
-  }
-  header > div {
-    flex-direction: column;
-  }
-
-  #logo-link {
-    margin: 0;
-  }
-  #nav_head {
-    width: 100%;
-    margin-top: 0.25rem;
-  }
-  #nav_toggle_btn {
-    display: block;
-    /* Make the navbar toggle button easier to click. */
-    padding: 1.25rem;
-    margin-top: -0.2rem;
-    margin-right: -1rem;
-  }
-  #nav_toggle_btn:hover {
-    background-color: hsla(0, 0%, 50%, 0.15);
-  }
-  #nav_toggle_btn:active {
-    background-color: hsla(0, 0%, 50%, 0.25);
-  }
-  #nav_toggle_cb:checked ~ header nav {
-    display: block;
-  }
-  #nav {
-    display: none;
-  }
-  #nav ul {
-    align-items: flex-start;
-    flex-direction: column;
-    height: auto;
-  }
-  #nav > ul {
-    margin-bottom: 16px;
-  }
-  #nav ul li {
-    padding: 0;
-    padding-top: 16px;
-    width: 100%;
-  }
-  #nav ul a {
-    width: 100%;
-    display: block;
-    /* Make links easier to click but still close to each other. */
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-top: -0.4375rem;
-    margin-bottom: -0.4375rem;
-  }
-  a.patreonLink {
-    text-decoration: none;
-    height: 64px !important;
-    margin-left: 0px !important;
-    margin-top: 16px;
-  }
-  a.patreonLink > .patreon {
-    height: inherit;
-    padding-left: 8px;
-    padding-right: 8px;
   }
 }
 

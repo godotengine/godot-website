@@ -10,6 +10,7 @@ header:
   docs: Docs
   contribute: Contribute
   donate: Donate
+  language: Language
 footer: 
   text: "Juan Linietsky, Ariel Manzur and <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>contributors</a>. Hosted by the <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. Website <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>source code on  GitHub</a>."
 sponsors:
