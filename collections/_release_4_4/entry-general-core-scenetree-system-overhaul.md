@@ -3,7 +3,7 @@ type: entry
 section: general
 subsection: core
 rank: 5
-importance: 3
+importance: 2
 anchor: scenetree-system-overhaul
 title: SceneTree system overhaul
 blockquote: A <span class="highlight">performance boost</span> for everyone
