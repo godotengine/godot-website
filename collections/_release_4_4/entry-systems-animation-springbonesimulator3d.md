@@ -3,7 +3,7 @@ type: entry
 section: systems
 subsection: animation
 rank: 1
-importance: 4
+importance: 2
 anchor: springbonesimulator3D
 title: <span class="code-highlight basetype">SpringBoneSimulator3D</span>
 blockquote: Jiggle physics
@@ -15,4 +15,13 @@ contributors:
   - name: Silc Lizard (Tokage) Renew
     github: TokageItLab
 read_more: https://github.com/godotengine/godot/pull/101409
+video_poster: /storage/releases/4.4/video/godot_springbone.webp
+video_src: /storage/releases/4.4/video/godot_springbone_without.webm
+video_label: Without
+video_comparison_poster: /storage/releases/4.4/video/godot_springbone.webp
+video_comparison_src: /storage/releases/4.4/video/godot_springbone_with.webm
+video_comparison_label: With
+video_comparison_poster: /storage/releases/4.4/video/godot_springbone.webp
+media_position: left
+content_creator: "[@heytibo](https://bsky.app/profile/heytibo.bsky.social)"
 ---
