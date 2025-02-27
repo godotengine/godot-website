@@ -111,32 +111,36 @@
 
 				{% if is_video %}
 					<div class="release-card-video-container">
-						<video class="release-card-video lazy {{position_class}}"
-							   playsinline
-							   disablepictureinpicture
-							   autoplay
-							   loop
-							   muted
-							   poster="{{ feature.video_poster }}">
-							<source data-src="{{ feature.video_src }}"
-									type="video/webm" />
-						</video>
+						<noscript>
+							<video class="release-card-video {{position_class}}"
+								   	   playsinline
+								   	   disablepictureinpicture
+								   	   autoplay
+								   	   loop
+								   	   muted
+								   	   poster="{{ feature.video_poster }}">
+									<source src="{{ feature.video_src }}"
+											type="video/webm" />
+							</video>
+						</noscript>
 						{% if feature.video_label != null %}
 							<div class="release-card-video-label">{{feature.video_label}}</div>
 						{% endif %}
 					</div>
 					{% if feature.video_comparison_src != null %}
 						<div class="release-card-video-container video-comparison-b">
-							<video class="release-card-video lazy {{position_class}}"
-								   playsinline
-								   disablepictureinpicture
-								   autoplay
-								   loop
-								   muted
-								   poster="{{ feature.video_comparison_poster }}">
-								<source data-src="{{ feature.video_comparison_src }}"
-									type="video/webm" />
-							</video>
+							<noscript>
+								<video class="release-card-video {{position_class}}"
+									   playsinline
+									   disablepictureinpicture
+									   autoplay
+									   loop
+									   muted
+									   poster="{{ feature.video_comparison_poster }}">
+									<source src="{{ feature.video_comparison_src }}"
+											type="video/webm" />
+								</video>
+							</noscript>
 							{% if feature.video_comparison_label != null %}
 								<div class="release-card-video-label">{{feature.video_comparison_label}}</div>
 							{% endif %}
