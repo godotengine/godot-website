@@ -226,29 +226,63 @@ for (const popover of popovers) {
 }
 
 // Lazy-load videos
-const lazyVideos = Array.from(document.querySelectorAll("video.lazy"));
 const lazyVideoObserver = new IntersectionObserver((entries, observer) => {
 	for (const entry of entries) {
 		if (!entry.isIntersecting) {
 			continue;
 		}
 
-		for (var entryChildElement of entry.target.children) {
-			if (
-				typeof entryChildElement.tagName === "string" &&
-				entryChildElement.tagName === "SOURCE"
-			) {
-				entryChildElement.src = entryChildElement.dataset.src;
-			}
+		const video = entry.target;
+		const source = video.querySelector(":scope > source");
+		if (source == null) {
+			continue;
 		}
 
-		entry.target.load();
-		entry.target.classList.remove("lazy");
-		observer.unobserve(entry.target);
+		video.classList.remove("lazy");
+		source.src = source.dataset.src;
+		delete source.dataset.src;
+		video.load();
+
+		observer.unobserve(video);
 	}
 });
-for (const lazyVideo of lazyVideos) {
-	lazyVideoObserver.observe(lazyVideo);
+const releaseCardVideoContainers = Array.from(
+	document.querySelectorAll(".release-card-video-container"),
+);
+for (const releaseCardVideoContainer of releaseCardVideoContainers) {
+	const noScript = releaseCardVideoContainer.querySelector(":scope > noscript");
+	if (noScript == null) {
+		throw new Error("`.release-card-video-container > noscript` is null");
+	}
+
+	// The contents of noScript exist, but as text.
+	// Let's create a document to store that content.
+	const doc = document.implementation.createHTMLDocument();
+	doc.write(noScript.innerHTML);
+
+	// The video should exist on the virtual body. If not, let's skip it.
+	const video = doc.body.querySelector(":scope > .release-card-video");
+	if (video == null) {
+		throw new Error(
+			"`.release-card-video-container > noscript > .release-card-video` is null",
+		);
+	}
+	video.classList.add("lazy");
+
+	const source = video.querySelector(":scope > source");
+	if (source == null) {
+		throw new Error(
+			"`.release-card-video-container > noscript > .release-card-video > source` is null",
+		);
+	}
+	source.dataset.src = source.src;
+	source.src = "";
+
+	// Let's swap the noScript for the video itself.
+	releaseCardVideoContainer.insertBefore(video, noScript);
+	noScript.remove();
+
+	lazyVideoObserver.observe(video);
 }
 
 // Show/hide the scroll-to-top button
