@@ -219,6 +219,12 @@ header {
 	}
 }
 
+@media (prefers-color-scheme: dark) {
+  #nav_toggle_btn {
+    filter: invert(100%)saturate(0%)brightness(120%);
+  }
+}
+
 /* Language selector */
 @media (min-width: 1200px) {
 	#nav {
@@ -264,3 +270,4 @@ header {
 		}
 	}
 }
+

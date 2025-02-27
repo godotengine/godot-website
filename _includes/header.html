@@ -32,7 +32,7 @@
 						<a class="mobile-language-selector" href="#">{% t header.language %}: </a>
 						<div class="language-dropdown">
 							{% for lang in page.localize %}
-								<div class="language-option"><a href="{% if lang == 'en' %}/{% else %}/{{ lang }}/{% endif %}">{{ lang }}</a></div>
+								<div class="language-option"><a href="{% if lang == 'en' %}/{% else %}/{{ lang }}/{% endif %}"><span class="localize-language-label">{{ lang }}</span></a></div>
 							{% endfor %}
 						</div>
 					</li>
@@ -54,22 +54,6 @@
 					languageSelector.classList.remove('open');
 			}
 	});
-	// Get the language label
-	const languageMap = {
-		'en': 'English',
-		'es': 'Español',
-		'de': 'Deutsch',
-		'ja': '日本語',
-		'zh': '中文',
-		'pt': 'Português'
-	};
-
-	document.querySelectorAll('.language-option a').forEach(function(el) {
-		const lang = el.textContent;
-		if (languageMap[lang]) {
-			el.textContent = languageMap[lang];
-		}
-	});
-	</script>
+</script>
 
 <main>
