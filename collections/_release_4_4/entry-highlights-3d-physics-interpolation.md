@@ -18,4 +18,12 @@ contributors:
   - name: lawnjelly
     github: lawnjelly
 read_more: https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%2092391%2091818
+video_poster: /storage/releases/4.4/video/godot_physics_interpolation.webp
+video_src: /storage/releases/4.4/video/godot_physics_interpolation_without.webm
+video_label: Without
+video_comparison_poster: /storage/releases/4.4/video/godot_physics_interpolation.webp
+video_comparison_src: /storage/releases/4.4/video/godot_physics_interpolation_with.webm
+video_comparison_label: With
+media_position: bottom
+content_creator: "[@heytibo](https://bsky.app/profile/heytibo.bsky.social)"
 ---
