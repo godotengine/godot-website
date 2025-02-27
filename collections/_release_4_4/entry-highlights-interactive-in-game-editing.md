@@ -12,4 +12,8 @@ contributors:
   - name: Michael Alexsander
     github: YeldhamDev
 read_more: https://github.com/godotengine/godot/pull/97257
+video_poster: /storage/releases/4.4/video/godot_interactive_editor.webp
+video_src: /storage/releases/4.4/video/godot_interactive_editor.webm
+media_position: top
+position: top-center
 ---
