@@ -2307,8 +2307,8 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>Existing projects will be automatically upgraded to target &lt;code class="language-plaintext highlighter-rouge">net8.0&lt;/code> when they are opened with Godot 4.4. If your project already targets .NET 8 or newer, nothing will change. This was implemented in &lt;a href="https://github.com/godotengine/godot/pull/100195">GH-100195&lt;/a>.&lt;/p>
 &lt;h2 id="what-took-so-long">What took so long?&lt;/h2>
 &lt;p>The version of .NET that a library targets becomes the minimum required version for consumers of that library. That is, if the &lt;code class="language-plaintext highlighter-rouge">GodotSharp&lt;/code> package targets &lt;code class="language-plaintext highlighter-rouge">net7.0&lt;/code>, your game project needs to target &lt;code class="language-plaintext highlighter-rouge">net7.0&lt;/code> or newer. We didn’t want to force our users to upgrade to a non-LTS release.&lt;/p>
-&lt;p>When .NET 8 was released in November 2023, it would’ve been a good time to bump the target version in Godot C# packages, since .NET 8 is an LTS release. Unfortunately, there were some breaking changes in .NET 7&lt;sup id="fnref:1" role="doc-noteref">&lt;a href="#fn:1" class="footnote" rel="footnote">1&lt;/a>&lt;/sup> that prevented us from upgrading, and making the required changes took us longer than we hoped.&lt;/p>
-&lt;p>However, users could always use the latest version of .NET in their projects. Up until now, .NET 6 has been the minimum required version, but newer versions have always been supported from day one (even the pre-releases&lt;sup id="fnref:2" role="doc-noteref">&lt;a href="#fn:2" class="footnote" rel="footnote">2&lt;/a>&lt;/sup>). In 4.4, the new minimum is now .NET 8, but as always, your projects can target the recent STS release .NET 9 and any newer version that is released in the future.&lt;/p>
+&lt;p>When .NET 8 was released in November 2023, it would’ve been a good time to bump the target version in Godot C# packages, since .NET 8 is an LTS release. Unfortunately, there were some breaking changes in .NET 7&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1&lt;/a>&lt;/sup> that prevented us from upgrading, and making the required changes took us longer than we hoped.&lt;/p>
+&lt;p>However, users could always use the latest version of .NET in their projects. Up until now, .NET 6 has been the minimum required version, but newer versions have always been supported from day one (even the pre-releases&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2&lt;/a>&lt;/sup>). In 4.4, the new minimum is now .NET 8, but as always, your projects can target the recent STS release .NET 9 and any newer version that is released in the future.&lt;/p>
 &lt;p>Libraries tend to stay on older versions of .NET to support as many consumers as possible. But upgrading to the latest version of .NET brings benefits that we want to take advantage of.&lt;/p>
 &lt;h2 id="what-about-older-godot-releases">What about older Godot releases?&lt;/h2>
 &lt;p>We encourage users to upgrade to the latest version of Godot. We work hard to prevent breaking compatibility, to ensure you can safely upgrade to new versions of Godot when they are released. Please, make sure to test the pre-releases and let us know if you find some bugs so we can fix them before the stable release.&lt;/p>
@@ -2329,10 +2329,10 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>We’ll keep updating our C# packages to the latest LTS version as they are released. The next LTS release will be .NET 10, due in November 2025.&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>.NET 7 introduced the new &lt;code class="language-plaintext highlighter-rouge">scoped&lt;/code> keyword. This feature breaks compatibility in some low-level scenarios that affected Godot. &lt;a href="#fnref:1" class="reversefootnote" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>While pre-releases are usually supported by Godot, they may require users to enable them by setting the &lt;code class="language-plaintext highlighter-rouge">DOTNET_ROLL_FORWARD_TO_PRERELEASE&lt;/code> environment variable to &lt;code class="language-plaintext highlighter-rouge">1&lt;/code>. Keep in mind pre-releases are still a work-in-progress so there may be bugs. &lt;a href="#fnref:2" class="reversefootnote" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
