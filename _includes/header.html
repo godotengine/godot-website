@@ -32,7 +32,7 @@
 						<a class="mobile-language-selector" href="#">{% t header.language %}: </a>
 						<div class="language-dropdown">
 							{% for lang in page.localize %}
-								<div class="language-option"><a href="{% if lang == 'en' %}/{% else %}/{{ lang }}/{% endif %}"><span class="localize-language-label">{{ lang }}</span></a></div>
+								<div class="language-option"><a href="#" data-lang-path="{% if lang == 'en' %}/{% else %}/{{ lang }}/{% endif %}" data-lang="{{ lang }}" onclick="setLanguagePreference(event, this)"><span class="localize-language-label">{{ lang }}</span></a></div>
 							{% endfor %}
 						</div>
 					</li>
@@ -46,14 +46,27 @@
 
 <script>
 	document.addEventListener('click', function(event) {
-			const languageSelector = document.querySelector('.language-selector');
-			if (!languageSelector) return;
-	
-			// Check if the click is outside the language selector
-			if (!languageSelector.contains(event.target)) {
-					languageSelector.classList.remove('open');
-			}
+		const languageSelector = document.querySelector('.language-selector');
+		if (!languageSelector) return;
+
+		// Check if the click is outside the language selector
+		if (!languageSelector.contains(event.target)) {
+			languageSelector.classList.remove('open');
+		}
 	});
+
+	function setLanguagePreference(event, element) {
+		event.preventDefault();
+		const path = element.getAttribute('data-lang-path');
+		const lang = element.getAttribute('data-lang');
+		
+		// Set cookie that expires in 365 days
+		const expirationDate = new Date();
+		expirationDate.setDate(expirationDate.getDate() + 365);
+		document.cookie = `preferred_language=${lang}; expires=${expirationDate.toUTCString()}; path=/; SameSite=Lax`;
+	}
+
+
 </script>
 
 <main>

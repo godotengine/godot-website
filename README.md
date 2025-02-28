@@ -201,6 +201,18 @@ There are two additional files providing data for download pages and links: `_da
 They define descriptions, tags, and filename slugs for all downloadable builds, as well as order for downloads on
 some pages.
 
+### Localizing the website
+
+To localize the website, the `_i18n` folder contains translation files for each language. The default and fallback language is English `/_i18n/en.yml`. 
+
+If you want to add a new language, create a new file in the `_i18n` folder with the language code as the filename and add the label for that language at `/assets/js/localize.js`. For example, for French, create `/_i18n/fr.yml` and add `'fr': 'Français'` in the `languageMap` const.
+
+The translations are handled by a jekyll plugin that contains a few tags you can use inside the templates. You can read more at `/_plugins/localize.rb`. But the tl'dr is:
+- Use the '{% t useyourkeyhere %}' tag to translate text
+- Use the '{% current_lang %}' tag to get the current page language
+- Use the '{% tlink /your/path %}' tag to get the localized URL
+
+
 ### Adding a mirrorlist host
 
 If a new host needs to be supported by the mirrorlist, it needs to be added in a few places. For the data side of
