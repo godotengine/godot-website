@@ -49,3 +49,9 @@ nav#nav {
 		}
 	}
 }
+
+#nav .language-selector {
+	@media (min-width: 1200px) {
+		background-image: url(/assets/icons/language.svg) !important;
+	}
+}
