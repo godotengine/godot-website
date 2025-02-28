@@ -2,9 +2,9 @@ meta:
   description: Entwickle 2D- und 3D-Spiele, plattformübergreifenden Projekte oder sogar XR-Ideen!
 header:
   features: Features
-  showcase: Vorzeigeprojekte
+  showcase: Showcase
   blog: Blog
-  community: Gemeinschaft
+  community: Community
   assets: Assets
   download: Download
   docs: Docs
@@ -19,16 +19,16 @@ footer:
   release_archive: Release Archiv
   source_code: Quellcode
   project: Projekt
-  blog: Neuigkeiten
+  blog: Blog
   code_of_conduct: Verhaltenskodex
   governance: Verwaltung
   teams: Teams
   priorities: Prioritäten
-  communities: Gemeinschaften
+  communities: Communities
   resources: Ressourcen
   asset_library: Asset-Bibliothek
   press_kit: Presse-Kit
-  showcase: Vorzeigeprojekte
+  showcase: Showcase
   education: Bildung
   foundation: Stiftung
   about: Über uns
@@ -38,7 +38,7 @@ footer:
   contact_us: Kontakt
   text: "Juan Linietsky, Ariel Manzur und <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>Beitragende</a>. Gehostet von der <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. Website Quellcode <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>auf  GitHub</a>."
 sponsors:
-  title: "Godot wird gesponsert durch:"
+  title: "Godot wird gesponsert von:"
   text: Wenn Sie an einem Unternehmensponsoring interessiert sein, schreiben Sie bitte an <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>.<br>Spenden als Einzelpersonen können durch den <a href='https://fund.godotengine.org/'>Godot Engine Entwicklungsfonds</a> getätigt werden.
   cta: Spenden
 home:
@@ -47,26 +47,26 @@ home:
   whats_new: Neuigkeiten
   download_latest: Downloade die neueste Version
   looking_for: 'Auf der Suche nach <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download der für Langzeit unterstützten Version von Godot 3">Godot 3</a>, unseren <a href="/download/archive">experimentellen Veröffentlichungen</a>, oder <a href="/download/archive">früheren Versionen</a>?'
-  latest_news: Aktuelle Nachrichten
+  latest_news: Aktuelle News
   more_news: Mehr Nachrichten
   cards:
     h2: Eine andere Art Spiele zu machen
     design:
       title: Innovatives Design
-      text: Das Node- und Szenensystem von Godot bietet Ihnen sowohl die Leistung als auch die Flexibilität, alles zu erstellen.
+      text: Das Node- und Szenensystem von Godot bietet sowohl die Leistung als auch die Flexibilität, alles zu erstellen.
     script:
       title: Verwende die richtige Sprache für den Job
-      text: Halte den Code mit einer objektorientierten API unter Verwendung von GDScript, C# und C++ modular, oder bringe  Keep your code modular with an object-oriented API using Godot's own GDScript, C#, C++, or bringe eine eigene durch GDExtension.
-      extra: C# Unterstützung ist derzeit nur für Desktop- und mobile Plattformen ab Godot 4.2 verfügbar.<br>Verwende Godot 3, um C# auf der Webplattform auszuführen.
+      text: Halte deinen Code dank objektorientierter API modular – egal ob in GDScript, C#, C++ oder (mithilfe von GDExtension) anderen Sprachen!
+      extra: C# wird derzeit nur für Desktop- und seit Godot 4.2 auf mobilen Plattformen unterstützt.<br>Verwende für C# auf der Webplattform Godot 3.
     2d:
       title: Dedizierte 2D Engine
-      text: Make crisp and performant 2D games with Godot's dedicated 2D rendering engine with real 2D pixel coordinates and 2D nodes.
+      text: Erstelle gestochen scharfe und performante 2D-Spiele mit der dedizierten 2D-Rendering Engine von Godot durch echte 2D Pixelkoordinaten und 2D Nodes.
     3d:
       title: Einfaches and leistungsstarkes 3D
       text: Godot's 3D Nodes bieten alles, was zur Erstellung, Animierung und Renderng von 3D-Welten Charakteren benötigt wird.
     deploy:
       title: Veröffentliche auf allen Plattformen
-      text: Stelle dein Spiel in Sekundenschnelle für die Desktop-, Mobil- und Webplattform bereit. Godot unterstützt sogar Konsolen durch Drittanbieter.
+      text: Stelle dein Spiel in Sekunden für Desktop-, Mobil- und Webplattformen bereit. Über Drittanbieter unterstützt Godot sogar Konsolen.
     open:
       title: Open Source
       text: "Wirklich offene Entwicklung: Jeder, der zu Godot beiträgt, profitiert gleichermaßen von den Beiträgen der anderen."
