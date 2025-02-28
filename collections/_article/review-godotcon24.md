@@ -83,17 +83,17 @@ For the first time ever, we tried curating a selection of projects ahead of time
 
 **Exhibitor list:**
 - [Bug Off](https://curio-compass-games.itch.io/bug-off)
-- [Data Garden](https://store.steampowered.com/app/2644670/Data_Garden/)
+- [Data Garden](https://store.steampowered.com/app/2644670/Data_Garden/?curator_clanid=41324400)
 - [Dung Slinger](https://s4g.itch.io/dung-slinger)
-- [Fogpiercer](https://store.steampowered.com/app/3219010/Fogpiercer/)
+- [Fogpiercer](https://store.steampowered.com/app/3219010/Fogpiercer/?curator_clanid=41324400)
 - [Immersive Home](https://immersive-home.org/)
-- [In Good Faith](https://store.steampowered.com/app/3151800/In_Good_Faith/)
-- [Keep The Heroes Out](https://store.steampowered.com/app/2592340/Keep_the_Heroes_Out/)
-- [Looking Up I See Only A Ceiling](https://store.steampowered.com/app/1742930/Looking_Up_I_See_Only_A_Ceiling/)
-- [PVKK: Planetenverteidigungskanonenkommandant](https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/)
-- [Robot Detour](https://store.steampowered.com/app/2666840/Robot_Detour/)
+- [In Good Faith](https://store.steampowered.com/app/3151800/In_Good_Faith/?curator_clanid=41324400)
+- [Keep The Heroes Out](https://store.steampowered.com/app/2592340/Keep_the_Heroes_Out/?curator_clanid=41324400)
+- [Looking Up I See Only A Ceiling](https://store.steampowered.com/app/1742930/Looking_Up_I_See_Only_A_Ceiling/?curator_clanid=41324400)
+- [PVKK: Planetenverteidigungskanonenkommandant](https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/?curator_clanid=41324400)
+- [Robot Detour](https://store.steampowered.com/app/2666840/Robot_Detour/?curator_clanid=41324400)
 - [Skye's Ducky Adventure: Quest for Gluttony](https://schwarzeralptraum.itch.io/skyes-ducky-adventure-quest-for-gluttony)
-- [Voice of Flowers](https://store.steampowered.com/app/2609560/Voice_of_Flowers/)
+- [Voice of Flowers](https://store.steampowered.com/app/2609560/Voice_of_Flowers/?curator_clanid=41324400)
 - [Window Arcade](https://windowarcade.com)
 
 # Activities

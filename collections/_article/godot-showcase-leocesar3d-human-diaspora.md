@@ -17,7 +17,7 @@ My name is Leonardo Veloso and I am a 3D artist working on TV broadcasting in Br
 
 ### Introduce your project in a few sentences: description, supported platforms, release date, etc.
 
-Human Diaspora is a First-Person Shooter where the player must conquer the colony planet to save humanity. It is available for Linux and Windows and I released it in September 2020. [You can find it as Early Access in Steam.](https://store.steampowered.com/app/1395420/Human_Diaspora)
+Human Diaspora is a First-Person Shooter where the player must conquer the colony planet to save humanity. It is available for Linux and Windows and I released it in September 2020. [You can find it as Early Access in Steam.](https://store.steampowered.com/app/1395420/Human_Diaspora/?curator_clanid=41324400)
 
 ### How did you discover Godot? When did you start using it? Do you have prior experience with other game engines?
 
@@ -58,4 +58,4 @@ Of course, I’ll stick with it! I believe the game engine has a bright future a
 ___
 
 
-*Human Diaspora is available on [Steam](https://store.steampowered.com/app/1395420/Human_Diaspora/) for Windows and Linux. You can also follow its development on [Twitter](https://twitter.com/Leocesar3D).*
+*Human Diaspora is available on [Steam](https://store.steampowered.com/app/1395420/Human_Diaspora/?curator_clanid=41324400) for Windows and Linux. You can also follow its development on [Twitter](https://twitter.com/Leocesar3D).*

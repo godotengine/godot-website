@@ -21,7 +21,7 @@ In particular, some additional talks or workshops may typically be planned by Go
 - **Talk/demo:** *Making the next blockbuster game with FOSS tools: Director's Cut* | Juan Linietsky ([reduz](https://github.com/reduz))
   * Juan will give a talk [at FOSDEM](https://fosdem.org/2019/schedule/event/blockbuster_game/) showing how to create high quality 3D games like the recent [TPS demo](https://github.com/godotengine/tps-demo) with FOSS tools like Godot, Blender, GIMP and Krita. Given the time constraint at FOSDEM, he won't be able to go into too much detail, so we'll ask him to share more insights during GodotCon.
 - **Talk:** *The good, the bad, and the ugly: 3D features of Godot* | Paweł Fertyk
-  * More and more 2D games are being made with Godot. But what 3D tools are available for the most popular open-source game engine? In this talk Paweł will tell you about his experiences while developing a 3D game ([Intrepid](https://store.steampowered.com/app/992860/Intrepid/)), the features he's used, and the problems he's encountered.
+  * More and more 2D games are being made with Godot. But what 3D tools are available for the most popular open-source game engine? In this talk Paweł will tell you about his experiences while developing a 3D game ([Intrepid](https://store.steampowered.com/app/992860/Intrepid/?curator_clanid=41324400)), the features he's used, and the problems he's encountered.
 - **Demo:** *Visual Debugger for the Godot community* | Jānis Mancēvičs
   * Jānis will showcasing a cool set of tools that allow you to debug your game visually similarly to Unity's Scene view. The debugger can be used in a build and there should not be limitations of a device running the game. Visual Debugger is a tool allowing developers to debug their Godot projects while the application is running in the editor or in a build.
 - **Talk:** *GPU colliding particles in Godot* | Paweł Mogiła
@@ -74,7 +74,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
     <img alt="Paweł Fertyk" src="/storage/app/uploads/public/5c5/0d2/d35/5c50d2d352a64731237478.png" />
 </div>
 <div class="speaker-text">
-    Paweł Fertyk is a long-time coder who recently founded <a href="https://miskatonicstudio.com">Miskatonic Studio</a> to get into game development, and published the Godot-made <a href="https://store.steampowered.com/app/992860/Intrepid"><em>Intrepid</em></a> on Steam in December.
+    Paweł Fertyk is a long-time coder who recently founded <a href="https://miskatonicstudio.com">Miskatonic Studio</a> to get into game development, and published the Godot-made <a href="https://store.steampowered.com/app/992860/Intrepid/?curator_clanid=41324400"><em>Intrepid</em></a> on Steam in December.
 </div>
 </div>
 
@@ -114,7 +114,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
     <img alt="Paweł Mogiła" src="/storage/app/uploads/public/5c5/0ce/14d/5c50ce14d5cf5616852281.jpg" />
 </div>
 <div class="speaker-text">
-    Paweł Mogiła teaches game programming and motion capture at Jagiellonian University in Krakow. He also creates his own stuff and recently released his last game <a href="https://store.steampowered.com/app/927840/Clinically_Dead"><em>Clinically Dead</em></a> on Steam. His next game will be in Godot.
+    Paweł Mogiła teaches game programming and motion capture at Jagiellonian University in Krakow. He also creates his own stuff and recently released his last game <a href="https://store.steampowered.com/app/927840/Clinically_Dead/?curator_clanid=41324400"><em>Clinically Dead</em></a> on Steam. His next game will be in Godot.
 </div>
 </div>
 

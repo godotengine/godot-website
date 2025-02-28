@@ -21,7 +21,7 @@ Please, consider [supporting the project financially](https://fund.godotengine.o
 
 ---
 
-*The cover illustration is from* [**Pixelorama**](https://orama-interactive.itch.io/pixelorama), *an increasingly popular open source pixel art editor made with Godot by [Orama Interactive](https://www.oramainteractive.com/) and contributors. They just released their [1.0 version](https://orama-interactive.itch.io/pixelorama/devlog/773099/pixelorama-v10-is-finally-out), and Pixelorama is now available both [on itch.io](https://orama-interactive.itch.io/pixelorama) and [on Steam](https://store.steampowered.com/app/2779170/Pixelorama/), where you can purchase it to support developers. And of course, the full source code is available [on GitHub](https://github.com/Orama-Interactive/Pixelorama).*
+*The cover illustration is from* [**Pixelorama**](https://orama-interactive.itch.io/pixelorama), *an increasingly popular open source pixel art editor made with Godot by [Orama Interactive](https://www.oramainteractive.com/) and contributors. They just released their [1.0 version](https://orama-interactive.itch.io/pixelorama/devlog/773099/pixelorama-v10-is-finally-out), and Pixelorama is now available both [on itch.io](https://orama-interactive.itch.io/pixelorama) and [on Steam](https://store.steampowered.com/app/2779170/Pixelorama/?curator_clanid=41324400), where you can purchase it to support developers. And of course, the full source code is available [on GitHub](https://github.com/Orama-Interactive/Pixelorama).*
 
 ## Highlights
 
