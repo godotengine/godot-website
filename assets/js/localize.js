@@ -5,8 +5,8 @@ const languageMap = {
 	'de': 'Deutsch',
 	'fr': 'Français',
 	'ja': '日本語',
-	'zh-cn': '中文（中国）',
-	'zh-tw': '中文（台灣）',
+	'zh-cn': '中文（简体）',
+	'zh-tw': '中文（繁體）',
 	'pt': 'Português',
 };
 
