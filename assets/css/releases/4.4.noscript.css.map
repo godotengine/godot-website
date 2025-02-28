@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "4.4.noscript.css",
+	"sources": [
+		"4.4.noscript.scss"
+	],
+	"sourcesContent": [
+		".comparison-range {\n\tdisplay: none !important;\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,iBAAiB,AAAC,CACjB,OAAO,CAAE,eAAe,CACxB"
+}
