@@ -12,6 +12,7 @@ header:
   donate: Donner
   language: Langue
 footer:
+  godot_engine: Godot Engine
   download: Télécharger
   documentation: Documentation
   features: Fonctions
