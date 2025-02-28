@@ -51,7 +51,7 @@
 
 		// Check if the click is outside the language selector
 		if (!languageSelector.contains(event.target)) {
-			languageSelector.classList.remove('open');
+				languageSelector.classList.remove('open');
 		}
 	});
 
@@ -64,9 +64,12 @@
 		const expirationDate = new Date();
 		expirationDate.setDate(expirationDate.getDate() + 365);
 		document.cookie = `preferred_language=${lang}; expires=${expirationDate.toUTCString()}; path=/; SameSite=Lax`;
+		
+		// Redirect to the language-specific path
+		window.location.href = path;
 	}
 
-
+	
 </script>
 
 <main>
