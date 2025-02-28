@@ -50,3 +50,6 @@ silver:
   - name: Bippinbits
     link: https://bippinbits.com/
     image: "https://fund.godotengine.org/static/logos/bippinbits.png"
+  - name: Chasing Carrots
+    link: "https://www.chasing-carrots.com/"
+    image: "https://fund.godotengine.org/static/logos/chasing-carrots.webp"
