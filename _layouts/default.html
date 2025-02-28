@@ -5,16 +5,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
+	{% if page.description[current_lang] %}
+		<meta name="description" content="{{ page.description[current_lang] }}">
+	{% else %}
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
+	{% endif %}
 
 	<!-- Plausible -->
 	<script defer data-domain="godotengine.org" src="https://plausible.godot.foundation/js/script.file-downloads.outbound-links.js"></script>
-	
+
 	<!-- Social meta tags -->
 	<meta property="og:site_name" content="Godot Engine">
 	<meta property="og:url" content="https://godotengine.org{{ page.url }}">
 	<meta property="og:type" content="website">
-	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
+	{% if page.description[current_lang] %}
+		<meta property="og:description" content="{{ page.description[current_lang] }}">
+	{% else %}
+		<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
+	{% endif %}
 	<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
 	<!-- meta tags -->
 	<meta name="twitter:card" content="summary_large_image">
@@ -33,7 +41,7 @@
 		<meta property="og:title" content="Godot Engine">
 		<title>Godot Engine</title>
 	{% endif %}
-	
+
 	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
 	<link rel="alternate" type="application/json" title="Godot News" href="/rss.json" />
 	<link rel="alternate" type="application/atom+xml" title="Godot News" href="/atom.xml" />
