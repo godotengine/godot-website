@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-02-28T18:01:35+00:00</updated><id>https://godotengine.org/</id><entry><title>Release candidate: Godot 4.4 RC 3</title><link href="https://godotengine.org/article/release-candidate-godot-4-4-rc-3/"/><updated>2025-02-28T17:00:00+00:00</updated><id>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</id><summary>We said "final" for the previous release candidate, but good things come in threes, don't they?</summary><content type="html">&lt;p>We are almost ready to release Godot 4.4 officially! As we are in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> stage and focus only on critical regression fixes, the pace of merging pull requests has nearly stopped… but a lot of good stuff is already being queued for the next release cycle. In the meantime, the communication team is doing an amazing work to finalize the contents of the release page, so that you can all (re)discover the highlights of Godot 4.4 with an exciting format!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-03-03T16:42:26+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot 4.4, a unified experience</title><link href="https://godotengine.org/article/godot-4-4-a-unified-experience/"/><updated>2025-03-03T15:45:00+00:00</updated><id>https://godotengine.org/article/godot-4-4-a-unified-experience/</id><summary>Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.</summary><content type="html"/><author><name>Godot contributors</name></author><category term="Release"/></entry><entry><title>Release candidate: Godot 4.4 RC 3</title><link href="https://godotengine.org/article/release-candidate-godot-4-4-rc-3/"/><updated>2025-02-28T17:00:00+00:00</updated><id>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</id><summary>We said "final" for the previous release candidate, but good things come in threes, don't they?</summary><content type="html">&lt;p>We are almost ready to release Godot 4.4 officially! As we are in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> stage and focus only on critical regression fixes, the pace of merging pull requests has nearly stopped… but a lot of good stuff is already being queued for the next release cycle. In the meantime, the communication team is doing an amazing work to finalize the contents of the release page, so that you can all (re)discover the highlights of Godot 4.4 with an exciting format!&lt;/p>
 &lt;p>We managed to get a few more regressions identified and fixed since our RC2 snapshot 2 days ago, so we’re making a &lt;em>final&lt;/em> final release candidate to round this all up and ensure Godot 4.4 is ready for prime time!&lt;/p>
 &lt;p>Please, consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.4.rc2/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
@@ -197,7 +197,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -461,7 +461,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -753,7 +753,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -1025,7 +1025,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -1307,7 +1307,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -1584,7 +1584,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -2426,7 +2426,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -2521,7 +2521,7 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>Godot already keeps track of checksums in &lt;code class="language-plaintext highlighter-rouge">.import&lt;/code> files. This is used to detect whether the file has actually changed, and can therefore reimport the file if it has changed while Godot wasn’t open.&lt;/p>
 &lt;p>Unfortunately, checksums are the wrong tool for the job to keep track of &lt;strong>unique&lt;/strong> file references. If you have two files with the exact same content, they would have the same checksum, but these files are still separately referenced by other scenes or resources in the project (with the expectation that these remain separate). If we relied on the file’s checksum to determine file references, then the references would break once the file contents change.&lt;/p>
 &lt;p>There could still be value to computing a checksum and storing it in &lt;code class="language-plaintext highlighter-rouge">.uid&lt;/code> files, so that Godot can automatically move the UID file if the source file was moved without its UID file. This is something that should be tackled separately though, as this approach comes with its downsides too.&lt;/p>
-&lt;h3 id="why-not-use-replace-import-files-with-meta-files-and-use-them-for-all-resources-that-have-an-uid">Why not use replace &lt;code class="language-plaintext highlighter-rouge">.import&lt;/code> files with &lt;code class="language-plaintext highlighter-rouge">.meta&lt;/code> files and use them for all resources that have an UID?&lt;/h3>
+&lt;h3 id="why-not-use-replace-import-files-with-meta-files-and-use-them-for-all-resources-that-have-a-uid">Why not use replace &lt;code class="language-plaintext highlighter-rouge">.import&lt;/code> files with &lt;code class="language-plaintext highlighter-rouge">.meta&lt;/code> files and use them for all resources that have a UID?&lt;/h3>
 &lt;p>While Godot must import many resource types before they can be used in a project, not all types actually need to be imported to be used. Resources that don’t need to be imported to be used don’t have properties that you could set on import, as they are directly loaded by Godot with no remapping system in place. Instead, everything about the file is inferred from the file itself. This approach makes more sense for files that you expect to be able to copy-paste around (or even copy directly from websites), while making sure the file remains functional without needing a separate metadata file. It’s a common workflow from users to copy scripts or shaders from websites such as &lt;a href="https://godotshaders.com/">Godot Shaders&lt;/a> after all.&lt;/p>
 &lt;p>The main examples of resources that don’t need to be imported are scripts and shaders, hence the dedicated &lt;code class="language-plaintext highlighter-rouge">.uid&lt;/code> files.&lt;/p>
 &lt;p>It has been suggested that we could still use &lt;code class="language-plaintext highlighter-rouge">.meta&lt;/code> files for scripts and shaders, and use them to store more information than just UIDs, such as user-defined metadata. For the time being we prefer to focus on the problem at hand (the need of UIDs for better refactoring possibility) and not future-proof things. If we ever change our mind, it would be easy enough to migrate information from &lt;code class="language-plaintext highlighter-rouge">.uid&lt;/code> files to whichever new container we decide to use.&lt;/p>
@@ -2876,7 +2876,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -3312,7 +3312,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -3787,7 +3787,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -4246,7 +4246,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -4623,7 +4623,7 @@ thankYouBackButton.addEventListener('click', () => {
 thankYouWrapper.style.display = 'none';
 });
 // Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download');
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
@@ -4679,69 +4679,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Clay John</name></author><category term="Pre-release"/></entry><entry><title>Godot XR update - October 2024</title><link href="https://godotengine.org/article/godot-xr-update-oct-2024/"/><updated>2024-10-02T12:00:00+00:00</updated><id>https://godotengine.org/article/godot-xr-update-oct-2024/</id><summary>Looking back at a year of XR development.</summary><content type="html">&lt;p>It has been a very busy year on the XR front and seeing we haven’t given a proper update for well over a year, it’s time to look back at what has happened since our last update post.
-We touched on some of these in the Godot 4.3 release blog but we’re doing a bit of a deep dive here.&lt;/p>
-&lt;p>We’re planning on publishing more articles about XR in the near future. We recently &lt;a href="https://godotengine.org/article/godot-editor-horizon-store-early-access-release/">announced the XR editor&lt;/a> but we have more news on the way!&lt;/p>
-&lt;h2 id="improvements-in-godots-xr-architecture">Improvements in Godot’s XR architecture&lt;/h2>
-&lt;p>A lot of work has gone into improving the XR implementation in Godot.&lt;/p>
-&lt;h3 id="improved-frame-timing-logic">Improved frame timing logic&lt;/h3>
-&lt;p>When OpenXR was originally implemented in Godot 3 there were limitations on the order in which certain actions took place. Most of the communication with OpenXR was tied into the rendering engine resulting in Godot relying more on predictive algorithms to position tracked entities such as controllers. Originally Godot 4 inherited this approach.&lt;/p>
-&lt;p>As part of the Godot 4.3 release much of this logic was redone to interface with OpenXR correctly. Godot now correctly informs OpenXR when it starts processing a new frame and obtains pose data for tracked entities with predicted positioning for the current frame.&lt;/p>
-&lt;h3 id="preparing-to-support-rendering-on-a-separate-thread">Preparing to support rendering on a separate thread&lt;/h3>
-&lt;p>As part of implementing the improved frame timing logic, we did a large cleanup of the XR code to make sure it runs properly when rendering happens on a separate thread. Especially for XR applications this brings us closer to ensuring a steady framerate, even on stand alone devices.&lt;/p>
-&lt;p>There is more work that needs to be done in Godot 4.4 to make this fully viable but the foundations are in place.&lt;/p>
-&lt;h3 id="standardisation-for-ar-and-passthrough">Standardisation for AR and passthrough&lt;/h3>
-&lt;p>Passthrough is a mechanism where video cameras on a VR headset record the real world and present this real world view as the background inside of our HMD turning the headset into an AR device. Different headsets implement this feature in different ways and this caused difficulties for developers who were targeting multiple devices.&lt;/p>
-&lt;p>While passthrough allows some neat things not possible with optical AR devices, for most AR focussed application developers should not be tasked with writing different code to support all these devices.&lt;/p>
-&lt;p>We have thus standardized this approach through utilising OpenXRs environment blend modes and moving platforms specific code into the OpenXR vendors plugin.&lt;/p>
-&lt;h3 id="standardisation-of-hand-face-and-body-tracking">Standardisation of hand, face and body tracking&lt;/h3>
-&lt;p>Hand tracking has been supported in Godot for a long while now, however improvements have been made to ensure better cross platform support, including standardisation between OpenXR and WebXR. The &lt;code class="language-plaintext highlighter-rouge">OpenXRHand&lt;/code> node has been deprecated, in favour of the new &lt;code class="language-plaintext highlighter-rouge">XRHandModifier3D&lt;/code> node which is designed to work with any XR system - not just OpenXR.&lt;/p>
-&lt;p>Face tracking support has been added with face tracking data being sourced from several devices. Godot now supports the Unified Expressions standard for handling face tracking data.&lt;/p>
-&lt;p>Body tracking support has been added using Godots Humanoid Skeleton as a base which allows various body tracking devices to leverage Godots retargeting logic.&lt;/p>
-&lt;p>While these 3 systems have been implemented under the XR name, their use cases are not limited to XR. Already several plugins have been created using this system to bring in body tracking data from various body tracking solutions ranging from optical Mocap to full body tracking suits.&lt;/p>
-&lt;h3 id="improved-webxr-support">Improved WebXR support&lt;/h3>
-&lt;p>WebXR support in Godot is seeing continuous improvement, most notably the addition of hand tracking support, but also support for MSAA and a number of smaller bug fixes and improvements.
-Our WebXR implementation now also supports AR applications.&lt;/p>
-&lt;h3 id="improved-opengl-support">Improved OpenGL support&lt;/h3>
-&lt;p>While technically not specific to XR, several improvements to the compatibility renderer directly impact the ability to create XR experiences using Godot.&lt;/p>
-&lt;p>The new MSAA implementation in the compatibility renderer has support for OpenGL extensions specifically targeting TBDR GPUs found on modern standalone headsets.
-When available enabling MSAA 2x or 4x has a very low cost while providing worth while improvement in the visuals.&lt;/p>
-&lt;p>The new lightmapping capabilities of the compatibility renderer, where the Vulkan implementation is leveraged to bake the lightmaps, provides a viable solution for improved lighting on standalone XR hardware.&lt;/p>
-&lt;h3 id="improved-foveated-rendering-support-in-the-vulkan-engine">Improved foveated rendering support in the Vulkan engine&lt;/h3>
-&lt;p>The compatibility renderer uses OpenXRs foveated rendering support directly but this comes with various limitations and is not applicable outside of OpenXR.&lt;/p>
-&lt;p>In the Vulkan renderer we have had Variable Rate Shading support for a while which allows foveated rendering to be applied in Godot without the same drawbacks.&lt;/p>
-&lt;p>In the latest release various improvements have been applied that provide more control over the density map used and allow for eye tracking to impact the density map and ensure quality rendering at the users focal point.&lt;/p>
-&lt;h2 id="collaboration-between-w4-games--meta">Collaboration between W4 Games &amp;amp; Meta&lt;/h2>
-&lt;p>The past year saw W4 Games and Meta join forces to improve Godot’s support for the Quest line of devices.&lt;/p>
-&lt;h3 id="core-functionality-improvements">Core functionality improvements&lt;/h3>
-&lt;p>The team at W4 has worked closely together with several core Godot XR contributors to improve the core functionality in Godot, improving the experience not just for Meta Quest users, but also for other XR systems. Several of the items mentioned in the previous sections benefited greatly from the help provided here.&lt;/p>
-&lt;p>These improvements also include various rendering optimisations and fixes.&lt;/p>
-&lt;h3 id="enhanced-passthrough-and-hand-tracking-support">Enhanced passthrough and hand-tracking support&lt;/h3>
-&lt;p>On top of the standardisation of passthrough and hand-tracking in Godot, support for many extra features Meta provides was implemented in the &lt;a href="https://github.com/GodotVR/godot_openxr_vendors">Godot OpenXR Vendors plugin&lt;/a>.&lt;/p>
-&lt;p>For passthrough, this includes applying various filters to the passthrough imagery, like adjusting the brightness, contrast and saturation, mapping the colors to other values, or even projecting passthrough onto custom geometry, in order to bring only specific objects from the user’s physical environment into an otherwise VR experience. See the &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/meta/passthrough.html">Meta Passthrough tutorial&lt;/a> for more information.&lt;/p>
-&lt;p>For hand-tracking, developers can now access hand meshes, collision shapes for the hands, and do some simple gesture tracking, like detecting pinches between the user’s thumb and any of the other fingers. See the &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/meta/hand_tracking.html">Meta Hand Tracking tutorial&lt;/a> for the full details about these features.&lt;/p>
-&lt;h3 id="composition-layer-support">Composition layer support&lt;/h3>
-&lt;p>Composition layers are a standard feature in OpenXR, that allow developers to add floating “panels” (either flat or curved) that have 2D content rendered onto them from a Godot SubViewport.&lt;/p>
-&lt;p>The result of this approach is far sharper detail of the 2D content compared to applying this same content as a texture on a 3D mesh.&lt;/p>
-&lt;p>This is ideal for in game menus, media viewing, or heads up displays. Small text is especially more readable when using this technique.&lt;/p>
-&lt;p>W4 Games added both the &lt;a href="https://docs.godotengine.org/en/latest/tutorials/xr/openxr_composition_layers.html">core implementation&lt;/a> and Meta-specific extensions, which allow applying further sharpening or supersampling, advanced alpha blending or marking particular composition layers as containing “secure content”. See the &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/meta/composition_layers.html">Meta Composition Layers tutorial&lt;/a> for more information about these Meta-specific features.&lt;/p>
-&lt;h3 id="scene-discovery-and-spatial-anchors">Scene discovery and spatial anchors&lt;/h3>
-&lt;p>These two closely related features are possibly the most exciting part of the work done so far. Meta’s Scene Discovery allows the Quest to scan your environment and provide your game with information about the real world.&lt;/p>
-&lt;p>This can allow you to place objects on your walls, on furniture, or have NPCs interact with the real environment.&lt;/p>
-&lt;p>Spatial anchors allow you to make this persistent. Create a spatial anchor that references a place on your wall, and you can show a virtual screen there anytime your user comes back to your application.&lt;/p>
-&lt;p>See the &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/meta/scene_manager.html">Meta Scene Manager&lt;/a> and &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/meta/spatial_anchors.html">Meta Spatial Anchors&lt;/a> tutorials for more information.&lt;/p>
-&lt;h2 id="newimproved-platform-support">New/Improved platform support&lt;/h2>
-&lt;h3 id="pico-4">PICO 4&lt;/h3>
-&lt;p>Godot has had support for PICO headsets for while but in the past year improvements were made to this. PICO has fully adopted the official Khronos Android Loader for OpenXR and deprecated their custom loader. Godot fully supports the new approach.&lt;/p>
-&lt;h3 id="htc-focus-3-and-xr-elite">HTC Focus 3 and XR Elite&lt;/h3>
-&lt;p>HTC provided the team with HTC Vive XR Elite units allowing us to ensure Godot runs on HTC standalone devices. We’re also working together with HTC to improve the experience on these devices.&lt;/p>
-&lt;h3 id="magic-leap-2">Magic Leap 2&lt;/h3>
-&lt;p>Support for the Magic Leap ecosystem was recently added to the vendor plugin as well. Magic Leap stands apart from other standalone Android devices being an optical AR device and running AMD hardware. On these devices you need to use the Vulkan mobile renderer.&lt;/p>
-&lt;h3 id="qualcomm-spaces">Qualcomm spaces&lt;/h3>
-&lt;p>This is still under development, we’re supporting Qualcomm’s OpenXR runtime on the Lynx R1 but we’re looking into supporting more devices in this eco system. Watch this space.&lt;/p>
-&lt;h3 id="logitech-mx-ink">Logitech MX Ink&lt;/h3>
-&lt;p>Not a new headset, but a pheripheral, the MX ink is a positionally tracked stylus that can be used with a Meta Quest.
-Support was merged into master recently and this device will be supported in the upcoming Godot 4.4 release.
-We’re looking into supporting this in a future 4.3 patch release.&lt;/p>
-&lt;h2 id="whats-next">What’s next&lt;/h2>
-&lt;p>Stay tuned for further blog posts focusing on XR as we start looking ahead and as new features become available.&lt;/p></content><author><name>Bastiaan Olij</name></author><category term="Progress Report"/></entry></feed>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Clay John</name></author><category term="Pre-release"/></entry></feed>
