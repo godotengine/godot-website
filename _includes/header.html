@@ -1,5 +1,5 @@
 <input type="checkbox" id="nav_toggle_cb">
-<header>
+<header class="flex column">
 	<div class="container flex align-center">
 		<div id="nav_head">
 			<a href="/" id="logo-link">
@@ -42,6 +42,20 @@
 			</ul>
 		</nav>
 	</div>
+	{% if page.path == "pages/home.html" %}
+		<div class="banner-container" style="background-color: #fb99ff;">
+			<div class="container">
+				<div class="banner">
+					<div class="banner-text">
+						Godot 4.4 just released!
+					</div>
+					<div class="banner-text">
+						Check out the <a href="/releases/4.4/">release page!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
 </header>
 
 <script>

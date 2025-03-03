@@ -23,6 +23,37 @@ header {
   }
 }
 
+header .container {
+  box-sizing: border-box;
+}
+
+header .banner-container {
+  width: 100%;
+  height: min-content;
+  font-family: "Montserrat", sans-serif;
+}
+
+header .banner-container .banner {
+  width: 100%;
+  height: 100%;
+  margin: 0.25em 0;
+  text-align: center;
+  font-weight: 400;
+  color: black;
+  gap: 0.25em;
+}
+
+header .banner-container .banner .banner-text {
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+header .banner-container .banner a {
+  font-weight: 600;
+  color: black;
+  text-decoration-color: black;
+}
+
 #nav, #nav_head {
 	.fund {
 		margin-right: 0px;
