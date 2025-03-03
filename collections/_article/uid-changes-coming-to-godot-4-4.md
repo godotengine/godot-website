@@ -67,7 +67,7 @@ Unfortunately, checksums are the wrong tool for the job to keep track of **uniqu
 
 There could still be value to computing a checksum and storing it in `.uid` files, so that Godot can automatically move the UID file if the source file was moved without its UID file. This is something that should be tackled separately though, as this approach comes with its downsides too.
 
-### Why not use replace `.import` files with `.meta` files and use them for all resources that have an UID?
+### Why not use replace `.import` files with `.meta` files and use them for all resources that have a UID?
 
 While Godot must import many resource types before they can be used in a project, not all types actually need to be imported to be used. Resources that don't need to be imported to be used don't have properties that you could set on import, as they are directly loaded by Godot with no remapping system in place. Instead, everything about the file is inferred from the file itself. This approach makes more sense for files that you expect to be able to copy-paste around (or even copy directly from websites), while making sure the file remains functional without needing a separate metadata file. It's a common workflow from users to copy scripts or shaders from websites such as [Godot Shaders](https://godotshaders.com/) after all.
 
