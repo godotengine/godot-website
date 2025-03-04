@@ -37,7 +37,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*The illustration picture comes from* [**Yeetus**](https://store.steampowered.com/app/2640910/Yeetus/) *— an action roguelike game made by [YarnCat Games](https://www.yarncatgames.com/), where the ground underneath your feet is your only weapon against waves and waves of enemies. The game is made with Godot 4, and you can get it right now on [Steam](https://store.steampowered.com/app/2640910/Yeetus/). Make sure to follow YarnCat Games on social networks ([Twitter](https://twitter.com/DYarncat), [TikTok](https://www.tiktok.com/@yarncatgames)) to keep in touch and be the first to learn about their next project!*
+*The illustration picture comes from* [**Yeetus**](https://store.steampowered.com/app/2640910/Yeetus/?curator_clanid=41324400) *— an action roguelike game made by [YarnCat Games](https://www.yarncatgames.com/), where the ground underneath your feet is your only weapon against waves and waves of enemies. The game is made with Godot 4, and you can get it right now on [Steam](https://store.steampowered.com/app/2640910/Yeetus/?curator_clanid=41324400). Make sure to follow YarnCat Games on social networks ([Twitter](https://twitter.com/DYarncat), [TikTok](https://www.tiktok.com/@yarncatgames)) to keep in touch and be the first to learn about their next project!*
 
 ## What's new
 

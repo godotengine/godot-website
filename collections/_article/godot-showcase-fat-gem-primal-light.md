@@ -17,7 +17,7 @@ Hi, I’m Shane Sicienski. My friend Jeff Nixon and I make games together under 
 
 ### Introduce your project in a few sentences: description, supported platforms, release date, etc.
 
-Primal Light is a linear 2D action platformer for Windows, Mac, and Linux. It was released on July 09, 2020 and is available on [Steam](https://store.steampowered.com/app/771420/Primal_Light/).
+Primal Light is a linear 2D action platformer for Windows, Mac, and Linux. It was released on July 09, 2020 and is available on [Steam](https://store.steampowered.com/app/771420/Primal_Light/?curator_clanid=41324400).
 
 In the game, you play as Krog, a one-eyed blue caveman wearing a red loincloth, who is on a quest to save his tribe from an evil moon god.
 
@@ -78,4 +78,4 @@ One hundred times yes!
 ___
 
 
-*Primal Light is available on [Steam](https://store.steampowered.com/app/771420/Primal_Light/) for Windows, macOS and Linux.*
+*Primal Light is available on [Steam](https://store.steampowered.com/app/771420/Primal_Light/?curator_clanid=41324400) for Windows, macOS and Linux.*

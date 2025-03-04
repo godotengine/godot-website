@@ -21,7 +21,7 @@ Please, consider [supporting the project financially](https://fund.godotengine.o
 
 ---
 
-*The cover illustration is from* [**The End of You**](https://store.steampowered.com/app/2962000/The_End_of_You/), *a short, emotional narrative game made with Godot 4 by Memory of God, known for* Stillness of the Wind. *The game was released in June on [Steam](https://store.steampowered.com/app/2962000/The_End_of_You/). You can follow the developer on [Twitter](https://x.com/memoryofgod).*
+*The cover illustration is from* [**The End of You**](https://store.steampowered.com/app/2962000/The_End_of_You/?curator_clanid=41324400), *a short, emotional narrative game made with Godot 4 by Memory of God, known for* Stillness of the Wind. *The game was released in June on [Steam](https://store.steampowered.com/app/2962000/The_End_of_You/?curator_clanid=41324400). You can follow the developer on [Twitter](https://x.com/memoryofgod).*
 
 ## Highlights
 

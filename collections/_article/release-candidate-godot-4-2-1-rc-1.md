@@ -23,7 +23,7 @@ Maintenance releases are expected to be safe for an upgrade, but we recommend to
 
 -----
 
-*The illustration picture for this article comes from* [**Subzero Tides**](https://store.steampowered.com/app/2544930/Subzero_Tides/), *a sci-fi Moon colony builder developed by [Logical Progression Games](https://logicalprogression.tech/), recently upgraded to Godot 4.2. You can [wishlist the game on Steam](https://store.steampowered.com/app/2544930/Subzero_Tides/), check out their previous Godot-made action RPG [Terra Ventura](https://store.steampowered.com/app/1664580/Terra_Ventura/), and follow the developer on [Twitter](https://twitter.com/LogicalProgres3).*
+*The illustration picture for this article comes from* [**Subzero Tides**](https://store.steampowered.com/app/2544930/Subzero_Tides/?curator_clanid=41324400), *a sci-fi Moon colony builder developed by [Logical Progression Games](https://logicalprogression.tech/), recently upgraded to Godot 4.2. You can [wishlist the game on Steam](https://store.steampowered.com/app/2544930/Subzero_Tides/?curator_clanid=41324400), check out their previous Godot-made action RPG [Terra Ventura](https://store.steampowered.com/app/1664580/Terra_Ventura/?curator_clanid=41324400), and follow the developer on [Twitter](https://twitter.com/LogicalProgres3).*
 
 ## What's new
 

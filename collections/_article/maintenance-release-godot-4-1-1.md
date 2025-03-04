@@ -25,7 +25,7 @@ Some of the most important changes in this release include:
 
 [**Download Godot 4.1.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.1.stable/).
 
-*The illustration picture used in this announcement comes from* [**Gunforged**](https://store.steampowered.com/app/2258480/Gunforged/) *— a 2D roguelite shooter where, you've guessed it, construct your weaponry from a huge number of different parts. The game is being made by [Firebelley](https://twitter.com/firebelley) with Godot 4 using its excellent C# language support, and is planned to be released later this year. But no need to wait, because you can play a demo on Steam [right now](https://store.steampowered.com/app/2258480/Gunforged/)! You can also subscribe to Firebelley on [YouTube](https://www.youtube.com/@FirebelleyGames), where they share tutorials and devlogs.*
+*The illustration picture used in this announcement comes from* [**Gunforged**](https://store.steampowered.com/app/2258480/Gunforged/?curator_clanid=41324400) *— a 2D roguelite shooter where, you've guessed it, construct your weaponry from a huge number of different parts. The game is being made by [Firebelley](https://twitter.com/firebelley) with Godot 4 using its excellent C# language support, and is planned to be released later this year. But no need to wait, because you can play a demo on Steam [right now](https://store.steampowered.com/app/2258480/Gunforged/?curator_clanid=41324400)! You can also subscribe to Firebelley on [YouTube](https://www.youtube.com/@FirebelleyGames), where they share tutorials and devlogs.*
 
 ## Changes
 
