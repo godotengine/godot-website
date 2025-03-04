@@ -394,6 +394,12 @@ main {
 .flex.justify-space-between {
   justify-content: space-between;
 }
+.flex.column {
+  flex-direction: column;
+}
+.flex.row {
+  flex-direction: row;
+}
 
 .flex.eqsize > * {
   flex: 1;
