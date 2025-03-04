@@ -1,0 +1,20 @@
+name: 🔗 GHA
+on: [push, pull_request, merge_group]
+
+concurrency:
+  group: ${{ github.workflow }}|${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  # First stage: Only static checks, fast and prevent expensive builds from running.
+
+  static-checks:
+    if: "!vars.DISABLE_GODOT_CI"
+    name: 📊 Static checks
+    uses: ./.github/workflows/static_checks.yml
+
+  # Second stage: test build the PR
+  test-build:
+    name: 🌌 Test Build
+    needs: static-checks
+    uses: ./.github/workflows/build-pr.yml
