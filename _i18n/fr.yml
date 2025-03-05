@@ -1,5 +1,6 @@
 meta:
-  description: Développez vos jeux en 2D et 3D, des projets cross-plateformes ou même des applications XR&nbsp;!
+  description: Développez vos jeux en 2D et 3D, des projets multiplateforme ou même des applications XR&nbsp;!
+
 header:
   features: Fonctions
   showcase: Vitrine
@@ -11,6 +12,7 @@ header:
   contribute: Contribuer
   donate: Donner
   language: Langue
+
 footer:
   godot_engine: Godot Engine
   download: Télécharger
@@ -38,13 +40,15 @@ footer:
   privacy_policy: Politique de confidentialité
   contact_us: Contactez-nous
   text: "Juan Linietsky, Ariel Manzur et <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>contributeurs</a>. Hébergé par la <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. Code source du site web <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>sur GitHub</a>."
+
 sponsors:
   title: "Godot est soutenu par&nbsp;:"
   text: Si vous êtes intéressé pour sponsoriser Godot avec votre organisation, veuillez écrire à <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>.<br>Pour faire un don à titre personnel, vous pouvez faire ainsi à travers le <a href='https://fund.godotengine.org/'>fonds de développement Godot Engine</a>.
   cta: Faire un don
+
 home:
   h1: Votre moteur de jeu gratuit et open&#8209;source.
-  subtitle: Développez vos jeux en 2D et 3D, des projets cross-plateformes ou même des applications XR&nbsp;!
+  subtitle: Développez vos jeux en 2D et 3D, des projets multiplateforme ou même des applications XR&nbsp;!
   whats_new: Nouveautés
   download_latest: Télécharger la dernière version
   looking_for: 'Vous cherchez <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Téléchargez la version supportée à long terme de Godot 3">Godot 3</a>, des <a href="/download/archive">versions expérimentales</a> ou une <a href="/download/archive">ancienne version</a>&nbsp;?'
@@ -89,3 +93,150 @@ home:
   foundation:
     text: "Vous n'avez pas besoin d'être un développeur de moteur pour aider Godot. Rejoignez le <a href='https://fund.godotengine.org/'>fonds de développement</a> et aidez-nous à rendre le moteur Godot encore plus génial&nbsp;!"
     donate: Faire un don
+
+features:
+  why: Pourquoi Godot est fait pour vous
+  showcase: "Une image vaut mille mots. Ces développeurs ont choisi Godot pour leurs projets&nbsp;:"
+  see_more_projects: Voir plus de jeux réalisés avec Godot
+  main: Fonctionnalités principales
+  new_in_4: "Nouveau dans la 4.0:"
+  containers:
+    design:
+      title: Conception intuitive basée sur les scènes
+      cards:
+        build_game:
+          title: Construisez votre jeu à partir de blocs simples
+          text: Utilisez des blocs de construction appelés nœuds pour créer des scènes plus complexes et réutilisables. Ajoutez des scripts à vos scènes et personnalisez les comportements intégrés pour implémenter des mécaniques de jeu uniques. Utilisez la composition et la hiérarchie des nœuds pour rendre la logique du jeu claire en un coup d'œil.
+        extend_features:
+          title: Étendez les fonctionnalités au-delà de celles fournies par le moteur
+          text: Transformez vos scènes en composants complets, avec des outils pour que vos designers puissent ajuster leur apparence et leur fonction. Partagez vos composants avec la communauté de développeurs sous forme d'extensions et de modèles.
+        data_driven:
+          title: Créez des éléments pilotés par les données grâce aux ressources personnalisées
+          text: Définissez des objets scriptables appelés ressources pour décrire les personnages, les entités et les structures de données de votre jeu. Utilisez vos objets personnalisés directement dans l'éditeur en les assignant à des nœuds. Les ressources sont dotées d'une API de haut niveau pour les stocker et les lire. Elles prennent en charge tous les types de Godot, y compris d'autres ressources.
+    script:
+      title: Outils de programmation adaptés à vos besoins
+      cards:
+        gdscript:
+          title: Écrivez du code facilement avec un langage de script de haut niveau
+          text: Faites les choses rapidement avec le langage de script intégré de Godot, GDScript. Inspiré de Python et d'autres langages, il est facile à prendre en main même si vous êtes débutant. Son intégration étroite au moteur vous permet d'exprimer la logique du jeu de manière claire et naturelle.
+          extra: GDScript offre un support de typage statique en option, ce qui améliore votre efficacité de programmation et les performances d'exécution. Les fonctionnalités puissantes du langage et les fonctions de première classe permettent un code expressif mais concis.
+        csharp:
+          title: Utilisez votre expérience C# pour vous sentir chez vous
+          text: Si vous êtes un utilisateur expérimenté de C#, Godot vous offre un support de première classe pour la plateforme .NET. Alimentez vos jeux avec des bibliothèques familières et donnez-leur un coup de pouce de performance, tout en bénéficiant d'une intégration étroite avec le moteur.
+          extra: "<strong>Note&nbsp;:</strong> Le support de .NET est fourni sous la forme d'un exécutable moteur dédié. <a href='https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support'>Le support de C# est disponible pour les plateformes de bureau et mobiles à partir de Godot 4.2.</a> Le support Web devrait être ajouté à l'avenir, mais jusqu'à ce moment, <a href='/download/3.x/'>Godot 3</a> reste une option prise en charge."
+        gdextension:
+          title: Choisissez parmi une variété de langages maintenus par la communauté
+          text: Godot est conçu pour être étendu, ce qui signifie que vous pouvez choisir un langage de programmation non fourni par l'équipe de Godot elle-même. Grâce à notre communauté, il existe de nombreuses intégrations de langage pour des outils populaires comme Rust, Nim, Python et JavaScript.
+          extra: Le support de C++ est fourni officiellement sous la forme de l'API GDExtension, qui vous permet de scripter et programmer les composants de votre jeu pour une performance maximale sans avoir à recompiler le moteur.
+        modules:
+          title: Modifiez le moteur lui-même et intégrez des bibliothèques tierces
+          text: Grâce à la structure modulaire et au processus de construction simple de Godot, vous pouvez créer vos propres modules moteur. Profitez des performances maximales ou intégrez de nombreuses bibliothèques tierces avec du code C++ de bas niveau.
+    3d:
+      title: Moteur 3D simple mais puissant
+      cards:
+        rendering:
+          title: Supportez à la fois les appareils haut de gamme et entrée de gamme
+          text: Créez des jeux 3D magnifiques pour toute une gamme d'appareils, allant des ordinateurs de bureau aux téléphones Android milieu de gamme. Alimenté par OpenGL, Godot permet à vos projets de fonctionner sur la plupart des GPU modernes, y compris les graphiques intégrés.
+          extra: Avec le nouveau moteur de rendu Vulkan et un ensemble de fonctionnalités graphiques modernes, donnez vie à vos mondes et exploitez toute la puissance des GPU actuels.
+        import:
+          title: Intégrez parfaitement votre pipeline d'assets
+          text: Importez vos modèles 3D dans votre monde de jeu avec un processus d'importation robuste. Prenez des scènes entières — avec des modèles animés, de l'éclairage, des caméras et des objets physiques, — et personnalisez la façon dont le moteur les affiche. Modifiez vos assets et visualisez immédiatement les modifications dans le moteur.
+          extra: Importez des fichiers Blender directement pour une itération plus rapide, ou continuez à utiliser les formats habituels glTF et FBX.
+        movie:
+          title: Créez des vidéos animées et des cinématiques pré-rendues dans le moteur
+          text: "Avec le nouveau mode <em>Movie Maker</em>, vous pouvez enregistrer le gameplay et les scènes scriptées de votre projet à une fréquence d'images stable et une vitesse de simulation garantie. Associé aux capacités d'animation de Godot, tirez le meilleur parti des visuels du moteur."
+    2d:
+      title: Un workflow 2D spécialisé pour les jeux et applications
+      cards:
+        units:
+          title: Travaillez avec un vrai système d'unités 2D basé sur les pixels
+          text: Grâce à une pipeline 2D dédiée, vous pouvez oublier l'axe Z et simplifier la logique de votre jeu. Pensez en pixels et en coordonnées d'écran, tandis que le moteur fait le reste.
+        tilemap:
+          title: Gagnez du temps en créant des mondes 2D avec un éditeur de tilemaps
+          text: Que vous souhaitiez une génération procédurale ou un niveau minutieusement conçu à la main, avec l'éditeur de tilemaps intégré de Godot, vous pouvez atteindre tous vos objectifs. Importez une image et convertissez-la en une base de données de blocs de construction pour vos mondes 2D.
+        gui:
+          title: Maîtrisez l'ergonomie avec un système GUI flexible
+          text: Créez des interfaces utilisateur évolutives et adaptatives avec le système GUI unique de Godot. Conçu spécifiquement pour fournir des mises en page courantes dans les jeux, il est également capable de gérer des applications et des outils GUI complexes.
+          extra: Pour voir un exemple de ce que le système GUI de Godot est capable de faire, regardez l'éditeur Godot lui-même&nbsp;!
+    deploy:
+      title: Support multiplateforme avec un seul projet
+      cards:
+        export:
+          title: Délivrez votre jeu sur n'importe quelle plateforme PC et mobile
+          text: Développez et publiez votre projet sur n'importe quelle plateforme de bureau moderne. Laissez tout le monde jouer à votre jeu en le déployant sur le web et le mobile. Gérez différentes méthodes d'entrée (clavier, souris, manette, tactile) et partagez le même projet entre chaque version.
+        test:
+          title: Testez directement sur votre appareil cible
+          text: Itérez sur du matériel physique, ou avec un émulateur en déployant votre jeu directement sur l'appareil cible via SSH. Exécutez n'importe quel projet sur un appareil mobile, sur un autre ordinateur de bureau, ou sur votre console de jeu Linux préférée avec des capacités de débogage et d'inspection complètes.
+        consoles:
+          title: Faites appel à un éditeur pour cibler les consoles
+          text: Si vous souhaitez publier sur une console, vous pouvez trouver plusieurs éditeurs tiers spécialisés dans ce domaine. Les jeux Godot peuvent fonctionner sur n'importe quel matériel moderne&nbsp;; vous n'avez donc qu'à vous soucier de vos performances et de vos contrôles.
+    open:
+      title: Complètement ouvert et gratuit
+      cards:
+        free:
+          title: Téléchargez et créez sans contrat ni frais cachés
+          text: Godot est gratuit sous licence MIT. Cela signifie que vous ne nous devez rien (autre qu'une mention amicale), et que vous pouvez faire ce que vous voulez avec votre projet ou même le moteur lui-même. Créez votre jeu ou créez votre propre moteur par-dessus — tout est entre vos mains.
+        source_code:
+          title: Trouvez la logique derrière n'importe quel système dans un code source ouvert
+          text: "Pas besoin d'attendre qu'une équipe de support réponde quand vous pouvez lire le code source. Godot est comme un livre ouvert, et vous pouvez comprendre tout ce qui n'est pas encore documenté après un simple <code>git checkout</code>. Si vous trouvez et corrigez un problème, nous apprécierons également un <em>pull request</em> en amont."
+  showreel:
+    title: Le choix de nombreux développeurs
+    text: Regardez nos vidéos de démonstration annuelles pour voir plus d'exemples de projets utilisant Godot&nbsp;!
+  see_complete_list: Voir la liste complète des fonctionnalités
+
+download_section:
+  title: Prêt à commencer&nbsp;?
+  text: Téléchargez la <strong>dernière version de Godot 4</strong> dès maintenant et commencez votre aventure créative&nbsp;!
+  download_latest: Télécharger la dernière version
+  looking_for_previous_version: Vous cherchez <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Téléchargez la version supportée à long terme de Godot 3">Godot 3</a> ou une <a href="/download/archive">ancienne version</a>&nbsp;?
+
+download:
+  redirect:
+    title: Redirection...
+    link: "Si vous n'êtes pas redirigé automatiquement, <a href='/download/windows/' class='set-os-download-url'>cliquez ici</a>."
+  download_godot_4_for: Télécharger Godot&nbsp;4 pour
+  csharp_support: Support C#
+  looking_for_previous_version: Vous cherchez <strong class="previous-releases-featured"><a href="/download/3.x/" class="set-os-download-url" data-version="3">Godot 3</a></strong> ou une <strong><a href="/download/archive">ancienne version</a>&nbsp;?</strong>
+  looking_for_other_platforms: Vous cherchez d'autres plateformes&nbsp;?
+  see_below: Voir ci-dessous&nbsp;!
+  requirements:
+    title: Configuration requise
+    recommended:
+      title: "Recommandé&nbsp;:"
+      text: Matériel compatible Vulkan 1.0
+    minimal:
+      title: "Minimal&nbsp;:"
+      text: Matériel compatible OpenGL 3.3 / OpenGL ES 3.0
+    csharp:
+      title: "Pré-requis supplémentaires pour la version .NET&nbsp;:"
+      net_sdk: SDK .NET
+  all_downloads: Tous les téléchargements
+  instructions: Instructions
+  digital_stores:
+    title: "Godot Engine est également disponible sur des plateformes de distribution numérique&nbsp;:"
+    stores:
+      itch_io: Godot Engine sur itch.io
+      steam: Godot Engine sur Steam
+      epic_games_store: Godot Engine sur Epic Games Store
+    notes: Les versions des plateformes de distribution numérique <strong>n'incluent pas</strong> le support .NET/C#.
+  supported_platforms: Plateformes prises en charge
+  web_editor: Éditeur web
+  other_downloads:
+    title: Autres téléchargements Godot
+    demo_projects:
+      title: Projets de démonstration Godot
+      text: Essayez des projets de démonstration mettant en avant les fonctionnalités du moteur.
+      link_github: Projets de démonstration sur GitHub
+      link_assetlib: Projets de démonstration dans la bibliothèque d'assets
+    android_aar:
+      title: Bibliothèque AAR pour Android
+      text: Utilisez-la pour développer des plugins Android en Java ou Kotlin avec l'API Godot.
+  preview_builds:
+    title: Versions en aperçu
+    text: Godot est en développement continu avec plusieurs versions mineures publiées chaque année. Pour garantir la qualité et la stabilité de chaque version, nous publions également des versions en aperçu à divers stades de développement.
+    cta: Aidez à tester les nouvelles fonctionnalités de Godot ou soyez le premier à bénéficier des améliorations à venir en téléchargeant une version en aperçu&nbsp;!
+    link: Voir les dernières versions en aperçu
+    source:
+      text: Vous ne voulez pas attendre les versions officielles&nbsp;? Vous pouvez compiler Godot à partir du code source&nbsp;!
+      link: "Obtenez le code source depuis la <a href='https://github.com/godotengine/godot'>page de projet GitHub</a>."
+      docs: "Suivez les instructions de la <a href='https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html'>documentation officielle</a>."

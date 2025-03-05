@@ -73,17 +73,17 @@
 		event.preventDefault();
 		const path = element.getAttribute('data-lang-path');
 		const lang = element.getAttribute('data-lang');
-		
+
 		// Set cookie that expires in 365 days
 		const expirationDate = new Date();
 		expirationDate.setDate(expirationDate.getDate() + 365);
 		document.cookie = `preferred_language=${lang}; expires=${expirationDate.toUTCString()}; path=/; SameSite=Lax`;
-		
+
 		// Redirect to the language-specific path
 		window.location.href = path;
 	}
 
-	
+
 </script>
 
 <main>

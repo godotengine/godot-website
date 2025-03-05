@@ -1,5 +1,6 @@
 meta:
   description: Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR
+
 header:
   features: Funciones
   showcase: Creaciones
@@ -11,6 +12,7 @@ header:
   contribute: Contribuir
   donate: Donar
   language: Idioma
+
 footer:
   godot_engine: Godot Engine
   download: Descargar
@@ -38,10 +40,12 @@ footer:
   privacy_policy: Política de privacidad
   contact_us: Contáctanos
   text: "Juan Linietsky, Ariel Manzur y <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>colaboradores</a>. Alojado por la <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>Código fuente de la web en GitHub</a>."
+
 sponsors:
   title: "Godot está patrocinado por:"
   text: Si estás interesado en un patrocinio corporativo, por favor escribe a <a href='mailto:'mailto:contact@godot.foundation'>contact@godot.foundation</a>.<br>Si quieres donar como individuo, puedes hacerlo a través del <a href='https://fund.godotengine.org/'>fondo de desarrollo de Godot Engine</a>.
   cta: Donar
+
 home:
   h1: Tu motor de juegos gratuito<br> y de código abierto.
   subtitle: Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR

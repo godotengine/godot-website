@@ -17,7 +17,7 @@ layout: default
 
 <div class="hero">
 	<div class="hero-wrapper">
-		<h1>Download Godot&nbsp;4 for {{ page.platform }}</h1>
+		<h1>{% t download.download_godot_4_for %} {{ page.platform }}</h1>
 
 		<div class="main-downloads">
 			{% assign featured_downloads = page.downloads | where: "featured", "true" %}
@@ -42,21 +42,21 @@ layout: default
 						<div class="download-hint">{{ stable_version.name }}</div>
 					</a>
 					<p class="main-download-details">
-						<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}{% if download.mono %}C# support · {% endif %}</strong>{{ stable_version.release_date }}
+						<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}{% if download.mono %}{% t download.csharp_support %} · {% endif %}</strong>{{ stable_version.release_date }}
 					</p>
 				</div>
 
 			{% endfor %}
 
 			<p class="previous-releases">
-				Looking for <strong class="previous-releases-featured"><a href="/download/3.x/" class="set-os-download-url" data-version="3">Godot 3</a></strong> or a <strong><a href="/download/archive">previous version</a>?</strong>
+				{% t download.looking_for_previous_version %}
 			</p>
 		</div>
 	</div>
 
 	<div class="other-platforms">
 		<div class="other-platforms-wrapper">
-			Looking for other platforms? <a href="#platforms">See below!</a>
+			{% t download.looking_for_other_platforms %} <a href="#platforms">{% t download.see_below %}</a>
 		</div>
 	</div>
 </div>
@@ -64,18 +64,18 @@ layout: default
 <div class="container">
 	<div id="links" class="platform-details">
 		<div class="card base-padding">
-			<h3>Requirements</h3>
+			<h3>{% t download.requirements.title %}</h3>
 
 			<ul>
-				<li><strong>Recommended:</strong> Vulkan 1.0 compatible hardware</li>
-				<li><strong>Minimal:</strong> OpenGL 3.3 / OpenGL ES 3.0 compatible hardware</li>
+				<li><strong>{% t download.requirements.recommended.title %}</strong> {% t download.requirements.recommended.text %}</li>
+				<li><strong>{% t download.requirements.minimal.title %}</strong> {% t download.requirements.minimal.text %}</li>
 			</ul>
 
 			{% unless page.ignore_mono %}
-			<p>Additional requirements for the .NET version:</p>
+			<p>{% t download.requirements.csharp.title %}</p>
 			<ul>
 				<li>
-					<a href="https://dotnet.microsoft.com/download">.NET SDK</a>
+					<a href="https://dotnet.microsoft.com/download">{% t download.requirements.csharp.net_sdk %}</a>
 				</li>
 			</ul>
 			{% endunless %}
@@ -83,7 +83,7 @@ layout: default
 
 		<div class="platform-split">
 			<div class="card base-padding">
-				<h3>All downloads</h3>
+				<h3>{% t download.all_downloads %}</h3>
 
 				{% for download in page.downloads %}
 
@@ -104,7 +104,7 @@ layout: default
 						</a>
 						<span class="download-details">
 							{% for tag in platform_info.tags %}{% if forloop.index > 1 %} · {% endif %}{{ tag }}{% endfor %}
-							{% if download.mono %} · C# support{% endif %}
+							{% if download.mono %} · {% t download.csharp_support %}{% endif %}
 						</span>
 					</div>
 
@@ -129,7 +129,7 @@ layout: default
 								{% unless templates_info.caption == empty %} - {{ templates_info.caption }}{% endunless %}
 							</a>
 							<span class="download-details">
-								{% for tag in templates_info.tags %}{{ tag }} · {% endfor %}C# support
+								{% for tag in templates_info.tags %}{{ tag }} · {% endfor %}{% t download.csharp_support %}
 							</span>
 						</div>
 					{% endunless %}
@@ -143,7 +143,7 @@ layout: default
 			</div>
 
 			<div class="card base-padding">
-				<h3>Instructions</h3>
+				<h3>{% t download.instructions %}</h3>
 
 				{{ page.content_instructions }}
 			</div>
@@ -151,22 +151,22 @@ layout: default
 
 		<div id="digital-stores" class="card base-padding digital-stores">
 			<div>
-				<p>Godot Engine is also available on digital distribution platforms:</p>
+				<p>{% t download.digital_stores.title %}</p>
 
 				<div class="digital-store-list">
-					<a class="btn btn-digital-store" href="https://godotengine.itch.io/godot" title="Godot Engine on itch.io">
+					<a class="btn btn-digital-store" href="https://godotengine.itch.io/godot" title="{% t download.digital_stores.stores.itch_io %}">
 						<div class="digital-store-logo">
 							<img src="/assets/download/itch_logo.svg" width="28" height="28" alt="itch logo">
 						</div>
 						<div class="digital-store-name">itch.io</div>
 					</a>
-					<a class="btn btn-digital-store" href="https://store.steampowered.com/app/404790" title="Godot Engine on Steam">
+					<a class="btn btn-digital-store" href="https://store.steampowered.com/app/404790" title="{% t download.digital_stores.stores.steam %}">
 						<div class="digital-store-logo">
 							<img src="/assets/download/steam_logo.svg" width="28" height="28" alt="Steam logo">
 						</div>
 						<div class="digital-store-name">Steam</div>
 					</a>
-					<a class="btn btn-digital-store" href="https://store.epicgames.com/p/godot-engine" title="Godot Engine on Epic Games Store">
+					<a class="btn btn-digital-store" href="https://store.epicgames.com/p/godot-engine" title="{% t download.digital_stores.stores.epic_games_store %}">
 						<div class="digital-store-logo">
 							<img src="/assets/download/epic_logo.svg" width="28" height="28" alt="Epic Games Store logo">
 						</div>
@@ -176,7 +176,7 @@ layout: default
 			</div>
 			<div class="digital-stores-notes">
 				<ul>
-					<li>Digital store versions <strong>do not</strong> include .NET/C# support.</li>
+					<li>{% t download.digital_stores.notes %}</li>
 				</ul>
 			</div>
 		</div>
@@ -185,7 +185,7 @@ layout: default
 
 <div class="platforms-wrapper">
 	<div id="platforms" class="container" style="overflow: hidden;">
-		<h2>Supported platforms</h2>
+		<h2>{% t download.supported_platforms %}</h2>
 
 		<div class="tabs platform-tabs">
 			<a href="/download/android" class="tab title-font {% if page.platform == 'Android' %} active {% endif %}">
@@ -205,8 +205,8 @@ layout: default
 				<span>Windows</span>
 			</a>
 			<a href="https://editor.godotengine.org/releases/{{stable_version.name}}.stable/godot.editor.html" target="_blank" class="tab title-font">
-				<img width="24" height="24" src="/assets/images/platforms/web.svg" title="Web Editor" alt="Web Editor" />
-				<span>Web Editor</span>
+				<img width="24" height="24" src="/assets/images/platforms/web.svg" title="{% t download.web_editor %}" alt="Web Editor" />
+				<span>{% t download.web_editor %}</span>
 			</a>
 		</div>
 	</div>
@@ -214,25 +214,25 @@ layout: default
 
 <div class="container">
 	<div id="extras" class="padded" style="padding-top: 0">
-		<h2>Other Godot downloads</h2>
+		<h2>{% t download.other_downloads.title %}</h2>
 
 		<div class="other-download">
 
 			<div class="other-download-card">
-				<h3>Godot demo projects</h3>
+				<h3>{% t download.other_downloads.demo_projects.title %}</h3>
 				<p>
-					Give a try to demo projects showcasing some of the engine features.
+					{% t download.other_downloads.demo_projects.text %}
 				</p>
 				<p>
 					<a href="https://github.com/godotengine/godot-demo-projects">
-						Demo projects on GitHub
+						{% t download.other_downloads.demo_projects.link_github %}
 					</a>
 				</p>
 				<p>
 					{% assign stable_version_comp = stable_version.name | split: "." %}
 
 					<a href="https://godotengine.org/asset-library/asset?category=10&godot_version={{stable_version_comp[0]}}.{{stable_version_comp[1]}}&support[official]=1">
-						Demo projects in Asset Library
+						{% t download.other_downloads.demo_projects.link_assetlib %}
 					</a>
 				</p>
 			</div>
@@ -240,10 +240,10 @@ layout: default
 			<div class="other-download-card">
 				{% assign aar_library_info = site.data.download_platforms | find: "name", "aar_library" %}
 
-				<h3>AAR library for Android</h3>
-				<p>Use it to develop Android plugins in Java or Kotlin using the Godot API.</p>
+				<h3>{% t download.other_downloads.android_aar.title %}</h3>
+				<p>{% t download.other_downloads.android_aar.text %}</p>
 				<p>
-					<a href="{{ stable_version | make_download: "aar_library", false }}">
+					<a href="{{ stable_version | make_download: 'aar_library', false }}">
 						{{ aar_library_info.title }}
 						{% unless aar_library_info.caption == empty %} - {{ aar_library_info.caption }}{% endunless %}
 					</a>
@@ -255,21 +255,17 @@ layout: default
 
 	<div class="unstable-downloads">
 		<div id="previews" class="unstable-download-previews">
-			<h2>Preview builds</h2>
+			<h2>{% t download.preview_builds.title %}</h2>
 
 			<p>
-				Godot is continuously being developed with several minor releases
-				being published every year. To ensure high quality and stability
-				of each release, we also publish preview builds at various stages of
-				development.
+				{% t download.preview_builds.text %}
 			</p>
 			<p>
-				Help test Godot's new features or be the first to benefit from upcoming
-				improvements by downloading a preview build!
+				{% t download.preview_builds.cta %}
 			</p>
 
 			<a class="btn" href="/download/preview">
-				See latest preview builds
+				{% t download.preview_builds.link %}
 			</a>
 		</div>
 
@@ -277,15 +273,14 @@ layout: default
 			<img class="flex-center dark-invert" src="/assets/download/dl_icon_github.png" width="200" height="200" alt="A GitHub logo">
 			<div>
 				<p>
-					Don't want to wait for official releases? You can compile Godot from source!
+					{% t download.preview_builds.source.text %}
 				</p>
 				<ul>
 					<li>
-						Get the source code from the <a href="https://github.com/godotengine/godot">GitHub project page</a>.
+						{% t download.preview_builds.source.link %}
 					</li>
 					<li>
-						Follow the instructions from the
-						<a href="https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html">official documentation</a>.
+						{% t download.preview_builds.source.docs %}
 					</li>
 				</ul>
 			</div>
