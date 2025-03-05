@@ -48,12 +48,12 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 {% assign data = site.release_4_4 %}
 
 {% assign _intro = data | where: "type", "entry" | where: "category", "intro" | sort: "rank" %}
-
 {% assign _sections = data | where: "type", "section" | sort: "rank" %}
-
 {% assign _foundation = data | where: "type", "entry" | where: "category", "foundation" | sort: "rank" %}
-
 {% assign _special_thanks = data | where: "type", "entry" | where: "category", "special_thanks" | sort: "rank" %}
+
+{% assign download_platforms = site.download %}
+{% assign stable_version = site.data.versions | find: "name", release_version_number %}
 
 <link rel="stylesheet" href="/assets/css/material-symbols-outlined.css" />
 <link rel="stylesheet" href="/assets/css/releases/4.4.css" />
@@ -114,45 +114,46 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 							</div>
 						</div>
 						<div class="release-card-media">
-							{% assign download_primary = release_version | get_download_primary: false %}
+							{% assign download_primary = release_version | get_download_platforms: false %}
 							<div class="release-platform-container">
-								{% for primary in download_primary %}
-									{% if primary[0] == "linux" or primary[0] == "macos" or primary[0] == "windows" or primary[0] == "android" %}
-										<div class="release-platform release-platform-{{primary[0]}}">
-											{% assign platform_info = site.data.download_platforms | find: "name", primary[1] %}
+								{% for download_platform in download_platforms %}
+									{% assign platform_name = download_platform.platform | downcase %}
+									<div class="release-platform release-platform-{{platform_name}}">
+										{% assign featured_downloads = download_platform.downloads | where: "featured", "true" %}
+
+										{% for featured_download in featured_downloads %}
+											{% capture download_url %}
+												{% if featured_download.custom %}
+													{{ featured_download.custom }}
+												{% else %}
+													{{ stable_version | make_download: featured_download.platform, featured_download.mono, "github_builds" }}
+												{% endif %}
+											{% endcapture %}
+
+											{% assign platform_info = site.data.download_platforms | find: "name", featured_download.platform %}
 											<div class="release-button release-button-standard">
-												<a href="{{ release_version | make_download: primary[1], false, "github_builds" }}" class="btn download-button">
+												{% assign download_btn_class = "download-button" %}
+												{% if featured_download.mono %}
+													{% assign download_btn_class = download_btn_class | append: " download-net-button" %}
+												{% endif %}
+
+												{% assign data_external = 'data-external="no"' %}
+												{% if featured_download.custom %}
+													{% assign data_external = 'data-external="yes"' %}
+												{% endif %}
+												<a href="{{ download_url }}" class="btn {{ download_btn_class }}" {{data_external}}>
 													<div class="download-title">
-														<img src="/assets/images/platforms/{{primary[0]}}.svg" draggable="false" />
-														Godot Engine
+														<img src="/assets/images/platforms/{{ platform_name | slugify }}.svg" alt="({{ platform_name }})" draggable="false" />
+														<span>Godot Engine{% if featured_download.featured_flavor %} – {{ featured_download.featured_flavor }}{% endif %}</span>
 													</div>
-													<div class="download-hint">
-														{{ release_version.name }}
-													</div>
+													<div class="download-hint"><span>{{ stable_version.name }}</span></div>
 												</a>
 												<p class="main-download-details">
-													<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}{% if primary.mono %}C# support · {% endif %}</strong>{{ release_version.release_date }}
+													<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}{% if featured_download.mono %}C# support · {% endif %}</strong>{{ stable_version.release_date }}
 												</p>
 											</div>
-											{% assign mono_download = release_version | make_download: primary[1], true, "github_builds" %}
-											{% if mono_download != "#" %}
-												<div class="release-button release-button-mono">
-													<a href="{{ mono_download }}" class="btn download-button download-net-button">
-														<div class="download-title">
-															<img src="/assets/images/platforms/{{primary[0]}}.svg" draggable="false" />
-															Godot Engine - .NET
-														</div>
-														<div class="download-hint">
-															{{ release_version.name }}
-														</div>
-													</a>
-													<p class="main-download-details">
-														<strong>{% for tag in platform_info.tags %}{{ tag }} · {% endfor %}C# support · </strong>{{ release_version.release_date }}
-													</p>
-												</div>
-											{% endif %}
-										</div>
-									{% endif %}
+										{% endfor %}
+									</div>
 								{% endfor %}
 							</div>
 						</div>

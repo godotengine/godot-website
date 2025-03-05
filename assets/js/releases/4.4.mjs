@@ -362,7 +362,10 @@ const anchors = Array.from(
 	document.querySelector("main .release-container").querySelectorAll("a"),
 );
 for (const anchor of anchors) {
-	if (anchor.classList.contains("download-button")) {
+	if (
+		anchor.classList.contains("download-button") &&
+		anchor.dataset?.external !== "yes"
+	) {
 		continue;
 	}
 	try {
