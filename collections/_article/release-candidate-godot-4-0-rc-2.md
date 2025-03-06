@@ -19,7 +19,7 @@ Regardless of which milestone our contributors assign to your issues, be sure to
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.rc2/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from* [**Master of Chess**](https://store.steampowered.com/app/2248900/Master_of_Chess/), *an upcoming chess player management game by [BRANE](https://twitter.com/GamesBrane). It's being developed with Godot 4.0, and you can follow development on [Twitter](https://twitter.com/GamesBrane) and wishlist it on [Steam](https://store.steampowered.com/app/2248900/Master_of_Chess/).*
+*The illustration picture for this article is from* [**Master of Chess**](https://store.steampowered.com/app/2248900/Master_of_Chess/?curator_clanid=41324400), *an upcoming chess player management game by [BRANE](https://twitter.com/GamesBrane). It's being developed with Godot 4.0, and you can follow development on [Twitter](https://twitter.com/GamesBrane) and wishlist it on [Steam](https://store.steampowered.com/app/2248900/Master_of_Chess/?curator_clanid=41324400).*
 
 ## What's new
 

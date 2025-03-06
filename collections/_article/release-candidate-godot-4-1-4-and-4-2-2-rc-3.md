@@ -21,7 +21,7 @@ Maintenance releases are expected to be safe for an upgrade, but we recommend to
 
 -----
 
-*The illustration picture for this article comes from* [**Sunken Shadows**](https://store.steampowered.com/app/2750120/Sunken_Shadows/), *a retro FPS roguelike set under the sea, developed in Godot 4.2 by [Sunrise Glitch Games](https://twitter.com/Sunken_Shadows). You can wishlist the game on [Steam](https://store.steampowered.com/app/2750120/Sunken_Shadows/), play the latest demo on [itch.io](https://alghost.itch.io/sunken-shadows), and join the developers' community on [Discord](https://discord.com/invite/BhDaMS5S9P) for more development news.*
+*The illustration picture for this article comes from* [**Sunken Shadows**](https://store.steampowered.com/app/2750120/Sunken_Shadows/?curator_clanid=41324400), *a retro FPS roguelike set under the sea, developed in Godot 4.2 by [Sunrise Glitch Games](https://twitter.com/Sunken_Shadows). You can wishlist the game on [Steam](https://store.steampowered.com/app/2750120/Sunken_Shadows/?curator_clanid=41324400), play the latest demo on [itch.io](https://alghost.itch.io/sunken-shadows), and join the developers' community on [Discord](https://discord.com/invite/BhDaMS5S9P) for more development news.*
 
 ## Highlights of 4.1.4 RC 3
 

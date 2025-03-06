@@ -66,4 +66,4 @@ If you'd like to support the project financially and help us secure our future h
 
 ----
 
-*The illustration picture is from* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/), *a gorgeous blend of space shooter and roguelite with an epic soundtrack, developed by [Raffaele Picca](https://twitter.com/MV_Raffa). It was just [released on Steam](https://store.steampowered.com/app/1863080/Beat_Invaders/) and it's a ton of fun, check it out!*
+*The illustration picture is from* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/?curator_clanid=41324400), *a gorgeous blend of space shooter and roguelite with an epic soundtrack, developed by [Raffaele Picca](https://twitter.com/MV_Raffa). It was just [released on Steam](https://store.steampowered.com/app/1863080/Beat_Invaders/?curator_clanid=41324400) and it's a ton of fun, check it out!*

@@ -19,7 +19,7 @@ youtube_id: "3fqqN2rsGz0"
 
 platforms: ["windows", "linux"]
 
-steam: https://store.steampowered.com/app/2726450/Windowkill/
+steam: https://store.steampowered.com/app/2726450/Windowkill/?curator_clanid=41324400
 
 
 featured_in_home: false
