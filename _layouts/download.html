@@ -37,7 +37,7 @@ layout: default
 					<a href="{{ download_url }}" class="btn btn-download btn-download-main{% if forloop.index > 1 %}2{% endif %}">
 						<div class="download-title">
 							<img src="/assets/images/platforms/{{ page.platform | slugify }}.svg" alt="({{ page.platform }})">
-							Godot Engine{% if download.featured_flavor %} - {{ download.featured_flavor }}{% endif %}
+							Godot Engine{% if download.featured_flavor %} – {{ download.featured_flavor }}{% endif %}
 						</div>
 						<div class="download-hint">{{ stable_version.name }}</div>
 					</a>
