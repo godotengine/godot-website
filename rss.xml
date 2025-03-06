@@ -199,6 +199,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -463,6 +466,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -755,6 +761,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -1027,6 +1036,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -1309,6 +1321,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -1586,6 +1601,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -2428,6 +2446,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -2878,6 +2899,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();

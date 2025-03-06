@@ -5,8 +5,8 @@
 		"4.4.noscript.scss"
 	],
 	"sourcesContent": [
-		".comparison-range {\n\tdisplay: none !important;\n}\n"
+		"#download-download {\n\t.release-card-media {\n\t\t.release-platform {\n\t\t\tdisplay: flex;\n\t\t\tflex-direction: column;\n\t\t\talign-items: center;\n\t\t}\n\t}\n}\n.comparison-range {\n\tdisplay: none !important;\n}\n"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,iBAAiB,AAAC,CACjB,OAAO,CAAE,eAAe,CACxB"
+	"mappings": "AAAA,AAEE,kBAFgB,CACjB,mBAAmB,CAClB,iBAAiB,AAAC,CACjB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,MAAM,CACnB,AAGH,AAAA,iBAAiB,AAAC,CACjB,OAAO,CAAE,eAAe,CACxB"
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-03-04T21:01:48+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot 4.4, a unified experience</title><link href="https://godotengine.org/article/godot-4-4-a-unified-experience/"/><updated>2025-03-03T15:45:00+00:00</updated><id>https://godotengine.org/article/godot-4-4-a-unified-experience/</id><summary>Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.</summary><content type="html"/><author><name>Godot contributors</name></author><category term="Release"/></entry><entry><title>Release candidate: Godot 4.4 RC 3</title><link href="https://godotengine.org/article/release-candidate-godot-4-4-rc-3/"/><updated>2025-02-28T17:00:00+00:00</updated><id>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</id><summary>We said "final" for the previous release candidate, but good things come in threes, don't they?</summary><content type="html">&lt;p>We are almost ready to release Godot 4.4 officially! As we are in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> stage and focus only on critical regression fixes, the pace of merging pull requests has nearly stopped… but a lot of good stuff is already being queued for the next release cycle. In the meantime, the communication team is doing an amazing work to finalize the contents of the release page, so that you can all (re)discover the highlights of Godot 4.4 with an exciting format!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-03-06T15:10:43+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot 4.4, a unified experience</title><link href="https://godotengine.org/article/godot-4-4-a-unified-experience/"/><updated>2025-03-03T15:45:00+00:00</updated><id>https://godotengine.org/article/godot-4-4-a-unified-experience/</id><summary>Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.</summary><content type="html"/><author><name>Godot contributors</name></author><category term="Release"/></entry><entry><title>Release candidate: Godot 4.4 RC 3</title><link href="https://godotengine.org/article/release-candidate-godot-4-4-rc-3/"/><updated>2025-02-28T17:00:00+00:00</updated><id>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</id><summary>We said "final" for the previous release candidate, but good things come in threes, don't they?</summary><content type="html">&lt;p>We are almost ready to release Godot 4.4 officially! As we are in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> stage and focus only on critical regression fixes, the pace of merging pull requests has nearly stopped… but a lot of good stuff is already being queued for the next release cycle. In the meantime, the communication team is doing an amazing work to finalize the contents of the release page, so that you can all (re)discover the highlights of Godot 4.4 with an exciting format!&lt;/p>
 &lt;p>We managed to get a few more regressions identified and fixed since our RC2 snapshot 2 days ago, so we’re making a &lt;em>final&lt;/em> final release candidate to round this all up and ensure Godot 4.4 is ready for prime time!&lt;/p>
 &lt;p>Please, consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.4.rc2/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
@@ -199,6 +199,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -463,6 +466,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -755,6 +761,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -1027,6 +1036,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -1309,6 +1321,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -1586,6 +1601,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -2428,6 +2446,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -2878,6 +2899,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -3314,6 +3338,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -3789,6 +3816,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -4248,6 +4278,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
@@ -4625,6 +4658,9 @@ thankYouWrapper.style.display = 'none';
 // Open from the main download buttons.
 const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
 downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
 it.addEventListener('click', () => {
 thankYouWrapper.style.display = '';
 document.querySelector('.btn.btn-donate').focus();
