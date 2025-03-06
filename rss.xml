@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot 4.4, a unified experience</title><link>https://godotengine.org/article/godot-4-4-a-unified-experience/</link><summary>Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.</summary><description/><category>Release</category><guid>https://godotengine.org/article/godot-4-4-a-unified-experience/</guid><dc:creator>Godot contributors</dc:creator><pubDate>Mon, 03 Mar 2025 15:45:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-4-4-a-unified-experience.webp</image></item><item><title>Release candidate: Godot 4.4 RC 3</title><link>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</link><summary>We said "final" for the previous release candidate, but good things come in threes, don't they?</summary><description>&lt;p>We are almost ready to release Godot 4.4 officially! As we are in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> stage and focus only on critical regression fixes, the pace of merging pull requests has nearly stopped… but a lot of good stuff is already being queued for the next release cycle. In the meantime, the communication team is doing an amazing work to finalize the contents of the release page, so that you can all (re)discover the highlights of Godot 4.4 with an exciting format!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot XR update - February 2025</title><link>https://godotengine.org/article/godot-xr-update-feb-2025/</link><summary>New plugin releases for Godot XR.</summary><description>&lt;h2 id="announcing-the-meta-toolkit-extension">Announcing the Meta Toolkit extension&lt;/h2>
+&lt;p>We are pleased to announce the release of the &lt;a href="https://github.com/godot-sdk-integrations/godot-meta-toolkit">Godot Meta Toolkit&lt;/a>, a GDExtension plugin that exposes Meta’s &lt;a href="https://developers.meta.com/horizon/documentation/native/ps-platform-intro">Platform SDK&lt;/a> and provides other tools to simplify and accelerate XR development on Meta’s platform.&lt;/p>
+&lt;p>The project is Open Source (MIT license) and maintained by &lt;a href="https://www.w4games.com/">W4 Games&lt;/a> with sponsorship from Meta. Contributions from the community are welcome! 🙂&lt;/p>
+&lt;p>You can download version 1.0.2 &lt;a href="https://github.com/godot-sdk-integrations/godot-meta-toolkit/releases/tag/1.0.2-stable">from GitHub&lt;/a> or the &lt;a href="https://godotengine.org/asset-library/asset/3673">Asset Library&lt;/a>.&lt;/p>
+&lt;p>Let’s take a look at the features available in this release!&lt;/p>
+&lt;h3 id="platform-sdk">Platform SDK&lt;/h3>
+&lt;p>The Platform SDK allows developers to access features of Meta’s store and online services, including:&lt;/p>
+&lt;ul>
+&lt;li>User profiles (including authentication and checking entitlement)&lt;/li>
+&lt;li>In-App Purchases (IAP)&lt;/li>
+&lt;li>Downloadable Content (DLC)&lt;/li>
+&lt;li>Friends, Parties, and Group Presence&lt;/li>
+&lt;li>Achievements&lt;/li>
+&lt;li>Leaderboards&lt;/li>
+&lt;li>… and much more!&lt;/li>
+&lt;/ul>
+&lt;p>Support of the Platform SDK in the Godot Meta Toolkit is done using code generation, which automatically generates the Godot classes by processing the &lt;a href="https://developers.meta.com/horizon/downloads/package/oculus-platform-sdk/">Platform SDK’s official C headers&lt;/a>. This approach simplifies keeping the Godot Meta Toolkit up-to-date with the latest updates to the Platform SDK, and provides Godot APIs that match the Platform SDK’s C, Unity, and Unreal APIs.&lt;/p>
+&lt;p>As of version 1.0.2, the Godot Meta Toolkit supports v72 of the Platform SDK.&lt;/p>
+&lt;p>See &lt;a href="https://godot-sdk-integrations.github.io/godot-meta-toolkit/manual/platform_sdk/getting_started.html">the “Getting Started” guide in the documentation&lt;/a> for more information!&lt;/p>
+&lt;h3 id="setup-tool-for-xr-simulator">Setup Tool for XR Simulator&lt;/h3>
+&lt;p>The &lt;a href="https://developers.meta.com/horizon/documentation/unity/xrsim-intro">Meta XR Simulator&lt;/a> is the counterpart of the &lt;a href="https://www.meta.com/experiences/godot-game-engine/7713660705416473/">Godot XR Editor&lt;/a> as it allows developers to test XR applications directly on their computer (Windows or macOS), removing the need to constantly put the headset on and off, thus leading to faster iteration.&lt;/p>
+&lt;p>The Godot editor can be configured to launch the Meta XR Simulator when you run your game, and the Godot Meta Toolkit includes a tool to help you with that configuration!&lt;/p>
+&lt;p>&lt;img alt="Configure XR simulator" src="/storage/blog/godot-xr/xr_simulator_tool.webp" />&lt;/p>
+&lt;p>See &lt;a href="https://godot-sdk-integrations.github.io/godot-meta-toolkit/manual/xr_simulator.html">the “XR Simulator” documentation&lt;/a> for more information!&lt;/p>
+&lt;h3 id="easily-configure-exports-for-meta-quest-headsets">Easily configure exports for Meta Quest headsets&lt;/h3>
+&lt;p>When exporting your game for a Meta Quest headset, in particular, if you want to release on the HorizonOS store, there are a number of specific, required export settings.&lt;/p>
+&lt;p>The Godot Meta Toolkit provides a new export option that, if checked, will automatically configure these settings to their required values.&lt;/p>
+&lt;p>&lt;img alt="Enable toolkit" src="/storage/blog/godot-xr/enable_toolkit.webp" />&lt;/p>
+&lt;h2 id="openxr-vendors-plugin-312-release">OpenXR Vendors plugin 3.1.2 release&lt;/h2>
+&lt;p>Here comes another release of the Godot OpenXR Vendors plugin with plenty of features and bug fixes!
+This release of the OpenXR vendors plugin is for Godot 4.3 and later only.&lt;/p>
+&lt;p>You can download version 3.1.2 from &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/3.1.2-stable">GitHub&lt;/a> or the &lt;a href="https://godotengine.org/asset-library/asset/3076">Asset Library&lt;/a>.&lt;/p>
+&lt;p>In addition, the XR sample projects are also available on the &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/3.1.2-stable">GitHub release&lt;/a> and the &lt;a href="https://godotengine.org/asset-library/asset?filter=XR+Sample&amp;amp;category=&amp;amp;godot_version=&amp;amp;cost=&amp;amp;sort=updated">Asset Library&lt;/a>.&lt;/p>
+&lt;h3 id="features">Features&lt;/h3>
+&lt;ul>
+&lt;li>Update OpenXR to Khronos 1.1.41 release&lt;/li>
+&lt;li>Add the option to enable hand tracking on Pico devices
+&lt;ul>
+&lt;li>Add support for toggling the hand tracking frequency on Pico devices between &lt;em>LOW&lt;/em> and &lt;em>HIGH&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Add the &lt;code class="language-plaintext highlighter-rouge">xr/openxr/extensions/automatically_request_runtime_permissions&lt;/code> project setting to enable/disable automatic requests for runtime permissions
+&lt;ul>
+&lt;li>The project setting is enabled by default, which causes all runtime permissions to be requested at app launch&lt;/li>
+&lt;li>Developers can disable that behavior so that application logic can request the permissions in a context-specific manner&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Add export profile for Magic Leap 2 devices&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes">Bug fixes&lt;/h3>
+&lt;ul>
+&lt;li>Update the signal emitted by &lt;code class="language-plaintext highlighter-rouge">OpenXRFbSpatialEntity.erase_from_storage()&lt;/code> from &lt;code class="language-plaintext highlighter-rouge">_on_save_to_storage&lt;/code> to &lt;code class="language-plaintext highlighter-rouge">_on_erase_from_storage&lt;/code>&lt;/li>
+&lt;li>Only add the &lt;a href="https://developer.android.com/reference/android/content/Intent#CATEGORY_LAUNCHER">Android LAUNCHER category&lt;/a> to the generated XR binary if the &lt;code class="language-plaintext highlighter-rouge">package/show_in_app_library&lt;/code> export option is enabled&lt;/li>
+&lt;li>Fix wall, floor, and ceiling collision shapes with Jolt physics&lt;/li>
+&lt;li>Add export option to enable or disable sharing of Meta’s spatial anchors
+&lt;ul>
+&lt;li>This adds the &lt;code class="language-plaintext highlighter-rouge">com.oculus.permission.IMPORT_EXPORT_IOT_MAP_DATA&lt;/code> permission when enabled&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Fix a crash that happens when a spatial anchor is created before the OpenXR session has begun&lt;/li>
+&lt;li>Reworked geometric algebra used by Meta body tracking extension to address root and shoulder tracking bugs&lt;/li>
+&lt;li>Remove deprecated “Contextual” boundary mode on Meta Quest&lt;/li>
+&lt;li>Fix &lt;code class="language-plaintext highlighter-rouge">OpenXRFbPassthroughExtensionWrapper&lt;/code> from wiping out the next pointer chain for system properties&lt;/li>
+&lt;li>Fix passthrough sample color map display bug&lt;/li>
+&lt;li>Fix the issue preventing vendor options in the export preset from being updated&lt;/li>
+&lt;/ul>
+&lt;h2 id="godot-xr-tools-440-release">Godot XR Tools 4.4.0 release&lt;/h2>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/xJKQ2ca5zVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="">&lt;/iframe>
+&lt;p>This version of XR Tools has been updated to contain &lt;a href="https://godotengine.org/article/godot-4-2-arrives-in-style/#critical-and-breaking-changes">Godot 4.2 mesh formats&lt;/a> and thus &lt;strong>requires Godot 4.2+&lt;/strong>.&lt;/p>
+&lt;p>You can download version 4.4.0 from &lt;a href="https://github.com/GodotVR/godot-xr-tools/releases">GitHub&lt;/a> or the &lt;a href="https://godotengine.org/asset-library/asset/1698">Asset Library&lt;/a>.
+You can download &lt;a href="https://godot-xr.itch.io/godot-xr-tools-demo">the Godot XR Tools demo on itch.io&lt;/a>.&lt;/p>
+&lt;p>The Godot XR Tools repository on GitHub contains a &lt;a href="https://github.com/GodotVR/godot-xr-tools/blob/master/.github/workflows/publish-demo-on-push.yaml">GitHub workflow&lt;/a> that prepares and uploads the demo project to the above itch.io page. This workflow can be used as a template for your own project.&lt;/p>
+&lt;h3 id="features-1">Features&lt;/h3>
+&lt;ul>
+&lt;li>The StartXR startup script has had a cleanup pass, it now:
+&lt;ul>
+&lt;li>Properly handles the passthrough system changes in Godot 4.3. Godot 4.3 saw changes in basing passthrough on the environment blend mode and moved logic into the vendor plugin to improve platform support for passthrough. XR Tools now makes use of this new system.&lt;/li>
+&lt;li>Add proper support for the immersive-ar and immersive-vr webXR modes&lt;/li>
+&lt;li>Provides signals to notify when the user enters or exits XR&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://godotvr.github.io/godot-xr-tools/docs/pickable/">Pickable objects&lt;/a> now include an &lt;code class="language-plaintext highlighter-rouge">action_released&lt;/code> signal so additional logic can be written when objects are dropped by the user&lt;/li>
+&lt;li>Allow &lt;a href="https://godotvr.github.io/godot-xr-tools/docs/grab_point/">grab-points&lt;/a> and poses to work with different types of hand trackers&lt;/li>
+&lt;li>The &lt;a href="https://godotvr.github.io/godot-xr-tools/docs/vignette/">vignette shader&lt;/a> now works properly in Godot 4 including support for reverse-Z depth buffers&lt;/li>
+&lt;li>Add &lt;code class="language-plaintext highlighter-rouge">visibility_changed&lt;/code> notifications to &lt;a href="https://godotvr.github.io/godot-xr-tools/docs/pointer/">Viewport2Din3D&lt;/a> hosted scenes&lt;/li>
+&lt;li>Add &lt;em>SnapPath&lt;/em>, a new snap object that allows you to snap objects along a path and at fixed intervals&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes-1">Bug fixes&lt;/h3>
+&lt;ul>
+&lt;li>Fix custom hand poses calling legacy &lt;code class="language-plaintext highlighter-rouge">remove_animation&lt;/code>&lt;/li>
+&lt;li>Invisible &lt;a href="https://godotvr.github.io/godot-xr-tools/docs/pointer/">Viewport2Din3D&lt;/a> now disable physics and viewport updates&lt;/li>
+&lt;li>Improvements to collision hands so collision shapes of picked up objects are added and we no longer have hands collide with dropped objects&lt;/li>
+&lt;/ul></description><category>Progress Report</category><guid>https://godotengine.org/article/godot-xr-update-feb-2025/</guid><dc:creator>Bastiaan Olij</dc:creator><pubDate>Thu, 06 Mar 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/february-2025-update-godot-xr-community.webp</image></item><item><title>Godot 4.4, a unified experience</title><link>https://godotengine.org/article/godot-4-4-a-unified-experience/</link><summary>Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.</summary><description/><category>Release</category><guid>https://godotengine.org/article/godot-4-4-a-unified-experience/</guid><dc:creator>Godot contributors</dc:creator><pubDate>Mon, 03 Mar 2025 15:45:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-4-4-a-unified-experience.webp</image></item><item><title>Release candidate: Godot 4.4 RC 3</title><link>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</link><summary>We said "final" for the previous release candidate, but good things come in threes, don't they?</summary><description>&lt;p>We are almost ready to release Godot 4.4 officially! As we are in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> stage and focus only on critical regression fixes, the pace of merging pull requests has nearly stopped… but a lot of good stuff is already being queued for the next release cycle. In the meantime, the communication team is doing an amazing work to finalize the contents of the release page, so that you can all (re)discover the highlights of Godot 4.4 with an exciting format!&lt;/p>
 &lt;p>We managed to get a few more regressions identified and fixed since our RC2 snapshot 2 days ago, so we’re making a &lt;em>final&lt;/em> final release candidate to round this all up and ensure Godot 4.4 is ready for prime time!&lt;/p>
 &lt;p>Please, consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.4.rc2/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
@@ -2954,64 +3046,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-4-dev-7/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Thu, 19 Dec 2024 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-4-dev-7.webp</image></item><item><title>Godot XR community - December 2024</title><link>https://godotengine.org/article/godot-xr-community-nov-2024/</link><summary>Interesting projects from the Godot XR community.</summary><description>&lt;p>Godot has a very active XR-focused community on the XR channel of the &lt;a href="/community/">official Godot Discord server&lt;/a>.
-Today, we want to put a spotlight on a number of community projects.&lt;/p>
-&lt;h2 id="godot-xr-community-game-jams">Godot XR community Game Jams&lt;/h2>
-&lt;p>To showcase the engine capabilities and the ingenuity of the Godot XR community, game jams are now being organized twice a year.
-It’s a fun way for participants to get introduced to Godot’s XR capabilities.&lt;/p>
-&lt;h3 id="godot-xr-game-jam-1">Godot XR Game Jam #1&lt;/h3>
-&lt;p>The &lt;a href="https://itch.io/jam/godot-xr-game-jam">first Godot XR Game Jam&lt;/a> was held from 1 December until 4 December 2023.
-The theme of this game jam was Vapor.
-We saw both many new faces and long-time community members join, and had a total of 17 entries.&lt;/p>
-&lt;p>The #1 spot went to &lt;a href="https://itch.io/jam/godot-xr-game-jam/rate/2402526">Cloud Shepherd&lt;/a> which won 3 out of 6 categories, including “Originality”, “User experience”, and “Audio”.
-In this entry, you herd sheep on clouds in the sky by using fans to create breezes that blow the sheep to their destinations.&lt;/p>
-&lt;p>The #2 spot was taken by &lt;a href="https://itch.io/jam/godot-xr-game-jam/rate/2402404">Super Steam Hands&lt;/a> which won 2 out of 6 categories (“Fun factor” and “Theme incorporation”).
-Don’t let the thumbnail of this entry fool you. It’s a great game where you can feel like Iron Man by using jets of steam to parkour around a level.&lt;/p>
-&lt;p>The #3 spot went to &lt;a href="https://itch.io/jam/godot-xr-game-jam/rate/2400974">Pipe Stream&lt;/a> which ranked the best in the “Haptics” category.
-It’s a great little puzzle game where you need to chip away a path for vapor to reach a target. Very challenging!&lt;/p>
-&lt;p>There were far more great entries, so be sure to &lt;a href="https://itch.io/jam/godot-xr-game-jam/entries">check out the jam page for more&lt;/a>!&lt;/p>
-&lt;h3 id="godot-xr-game-jam-2">Godot XR Game Jam #2&lt;/h3>
-&lt;p>The &lt;a href="https://itch.io/jam/godot-xr-game-jam-july-2024">second Godot XR Game Jam&lt;/a> was held from 8 July until 15 July 2024.
-We decided to give participants a full week to complete their game.
-The theme this jam was Relaxation. There were a total of 26 entries and this time we scored them on the average points in all categories.&lt;/p>
-&lt;p>The #1 spot went to &lt;a href="https://itch.io/jam/godot-xr-game-jam-july-2024/rate/2821459">Who’s a good boy&lt;/a> with 4.042 points.
-This cute little game has you play fetch with a dog in a park.
-It features some excellent interactions both from the player’s and dog’s points of view.&lt;/p>
-&lt;p>The #2 spot went to &lt;a href="https://itch.io/jam/godot-xr-game-jam-july-2024/rate/2830514">Constellation Coach VR&lt;/a> with 3.974 points.
-This game has you find constellations in the night sky by holding up a picture of the constellation and aligning it with the relevant stars.
-Excellent haptic feedback lets you know when you’ve gotten close, and successfully aligning the constellation lights it up.&lt;/p>
-&lt;p>The #3 spot went to &lt;a href="https://itch.io/jam/godot-xr-game-jam-july-2024/rate/2830121">Summer Pottery VR&lt;/a> with 3.938 points.
-This game lets you do some clay pottery sculpting.
-It’s a great and very well-executed use of physically interacting with the clay to shape and paint your creation.&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0IxvWaj8iUo?si=em-D99NacStXyIYA" title="5 VR Games Made in Godot To Inspire You" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;p>Again, many of the other entries were of great quality and we highly recommend &lt;a href="https://itch.io/jam/godot-xr-game-jam-july-2024/entries">checking them out&lt;/a>.&lt;/p>
-&lt;h3 id="godot-xr-game-jam-3">Godot XR Game Jam #3&lt;/h3>
-&lt;p>The 3rd game jam will be held in the week starting 10 February 2025. &lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025">You can read all about it and sign up here&lt;/a>.&lt;/p>
-&lt;h2 id="universal-godot-vr-plugin">Universal Godot VR plugin&lt;/h2>
-&lt;p>Inspired by the Universal Unreal Engine VR Mod, community member TeddyBear082 has created a mod to inject VR capabilities into existing 3D games made with Godot.&lt;/p>
-&lt;p>TeddyBear082 previously made a name for himself with the excellent VR port of the popular game Cruelty Squad and has used the knowledge gained with that and similar projects to create a more universal mod.&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Hb9BDcCZHCY?si=Zr2Jw3MV7cY00yEE" title="UGVR Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;p>You can find the plugin &lt;a href="https://github.com/teddybear082/UGVR">on teddybear082’s GitHub profile&lt;/a>.&lt;/p>
-&lt;h2 id="body-tracking-and-motion-capture-plugins">Body tracking and motion capture plugins&lt;/h2>
-&lt;p>Core contributor Malcolm Nixon has created various plugins for Godot that use the new body tracking feature to make tracking data available from various sources.&lt;/p>
-&lt;p>He has support for Rokoko, Axis Studio and Movella.
-He also has a plugin for VMC (Virtual Motion Capture), which is a standard used by a number of motion capture systems.&lt;/p>
-&lt;p>You can find the plugins &lt;a href="https://github.com/Malcolmnixon?tab=repositories">on his GitHub profile&lt;/a>.&lt;/p>
-&lt;h2 id="meta-platform-plugin">Meta platform plugin&lt;/h2>
-&lt;p>Community member Decacis has released a few of his games on the Meta Horizon store and implemented part of the Meta platform SDK in support of this.
-He has implemented support for things like in-app purchases, leaderboard, challenges, and much much more.&lt;/p>
-&lt;p>The plugin he created is open source and can be found &lt;a href="https://github.com/decacis/godot_oculus_platform">on his GitHub profile&lt;/a>.&lt;/p>
-&lt;h2 id="godot-xr-tools">Godot XR Tools&lt;/h2>
-&lt;p>We’ve showcased XR Tools before, but with version 4.4 of the plugin nearly ready for release, it’s worth quickly looking at what’s coming.&lt;/p>
-&lt;ul>
-&lt;li>Improved support for Godot 4.2+ features such as pass through logic with both OpenXR and WebXR.&lt;/li>
-&lt;li>New objects to make games suitable for both VR and non-VR use.&lt;/li>
-&lt;li>A new gaze interaction component for controller-less experiences.&lt;/li>
-&lt;li>Various improvements to snap points.&lt;/li>
-&lt;li>Improvements to hands interacting with physics.&lt;/li>
-&lt;/ul>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/YWdcc6r9w3E?si=BimitXSjjVQxcLrO" title="Godot XR tools demo for GodotCon 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;h2 id="godot-arcore-support">Godot ARCore support&lt;/h2>
-&lt;p>ARCore support in Godot has been a long time coming.
-From an early working prototype in Godot 3, to moving this into a community maintained plugin, there have been plenty of hurdles along the way. Thanks to the persistance of Patrick Exner, Luca Junge, and Chambefort Maxime, we have nearly reached the finish line.&lt;/p>
-&lt;p>Supporting changes were recently merged into the master branch of Godot and you can find the plugin itself &lt;a href="https://github.com/GodotVR/godot_arcore">on the plugin’s GitHub&lt;/a>.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/godot-xr-community-nov-2024/</guid><dc:creator>Bastiaan Olij</dc:creator><pubDate>Wed, 18 Dec 2024 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/december-2024-update-godot-xr-community.webp</image></item></channel></rss>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-4-dev-7/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Thu, 19 Dec 2024 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-4-dev-7.webp</image></item></channel></rss>
