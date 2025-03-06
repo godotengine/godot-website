@@ -5,7 +5,7 @@ categories: ["progress-report"]
 author: Bastiaan Olij
 image: /storage/blog/covers/february-2025-update-godot-xr-community.webp
 image_caption_description: "Untitled VR multiplayer parkour game by Clancey"
-date: 2025-02-22 12:00:00
+date: 2025-03-06 12:00:00
 ---
 
 ## Announcing the Meta Toolkit extension
@@ -52,7 +52,7 @@ When exporting your game for a Meta Quest headset, in particular, if you want to
 
 The Godot Meta Toolkit provides a new export option that, if checked, will automatically configure these settings to their required values.
 
-<img alt="Enable toolkit" src="/storage/blog/godot-xr/enable_toolkit.webp.webp"/>
+<img alt="Enable toolkit" src="/storage/blog/godot-xr/enable_toolkit.webp"/>
 
 ## OpenXR Vendors plugin 3.1.2 release
 
