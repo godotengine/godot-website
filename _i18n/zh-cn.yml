@@ -1,5 +1,6 @@
 meta:
   description: 开发你的 2D 与 3D 游戏，跨平台项目，甚至是 XR 创意！
+
 header:
   features: 特性
   showcase: 展示
@@ -11,6 +12,7 @@ header:
   contribute: 贡献
   donate: 捐助
   language: 语言
+
 footer:
   download: 下载
   documentation: 文档
@@ -37,10 +39,12 @@ footer:
   privacy_policy: 隐私政策
   contact_us: 联系我们
   text: "Juan Linietsky，Ariel Manzur 与<a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>贡献者们</a>。由 <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot 基金会</a>架设。网站<a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>源码可在 GitHub 上获取</a>."
+
 sponsors:
   title: "Godot 由以下企业赞助："
   text: 如果您对企业赞助感兴趣，请发邮件至 <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>。<br>作为个人捐助，你可以通过 <a href='https://fund.godotengine.org/'>Godot Engine 开发基金</a> 进行。
   cta: 捐助
+
 home:
   h1: 属于你的免费，<br>开源游戏引擎。
   subtitle: 开发你的 2D 与 3D 游戏，跨平台项目，甚至是 XR 创意！
