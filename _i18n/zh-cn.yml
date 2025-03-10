@@ -1,5 +1,5 @@
 meta:
-  description: 开发你的 2D 与 3D 游戏，跨平台项目，甚至是 XR 创意！
+  description: 开发你的 2D & 3D 游戏，跨平台项目，甚至是 XR 创意！
 header:
   features: 特性
   showcase: 展示
@@ -16,7 +16,7 @@ footer:
   documentation: 文档
   features: 特性
   web_editor: 网页编辑器
-  release_archive: 发布版归档
+  release_archive: 版本归档
   source_code: 源代码
   project: 项目
   blog: 博客
@@ -28,7 +28,7 @@ footer:
   resources: 资源
   asset_library: 资产库
   press_kit: 宣传材料
-  showcase: 展示
+  showcase: 案例展示
   education: 教育
   foundation: 基金会
   about: 关于
@@ -36,49 +36,49 @@ footer:
   license: 许可证
   privacy_policy: 隐私政策
   contact_us: 联系我们
-  text: "Juan Linietsky，Ariel Manzur 与<a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>贡献者们</a>。由 <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot 基金会</a>架设。网站<a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>源码可在 GitHub 上获取</a>."
+  text: "Juan Linietsky、Ariel Manzur 等<a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>贡献者</a>。由 <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot 基金会</a>架设。网站<a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>源码可在 GitHub 上获取</a>。"
 sponsors:
-  title: "Godot 由以下企业赞助："
-  text: 如果您对企业赞助感兴趣，请发邮件至 <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>。<br>作为个人捐助，你可以通过 <a href='https://fund.godotengine.org/'>Godot Engine 开发基金</a> 进行。
+  title: "感谢以下 Godot 赞助方："
+  text: 如果你对企业赞助感兴趣，请发邮件至 <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>。<br>以个人名义捐助可以通过 <a href='https://fund.godotengine.org/'>Godot Engine 开发基金</a>进行。
   cta: 捐助
 home:
-  h1: 属于你的免费，<br>开源游戏引擎。
-  subtitle: 开发你的 2D 与 3D 游戏，跨平台项目，甚至是 XR 创意！
-  whats_new: 最近更新
+  h1: 属于你的<br>自由开源游戏引擎
+  subtitle: 开发你的 2D & 3D 游戏，跨平台项目，甚至是 XR 创意！
+  whats_new: 新版亮点
   download_latest: 下载最新版
-  looking_for: '正在寻找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下载 Godot 3 的长期支持版本">Godot 3</a>，我们的<a href="/download/archive">实验性版本</a>，或是一个<a href="/download/archive">历史版本</a>？'
-  latest_news: 最近新闻
-  more_news: 更多新闻
+  looking_for: '想找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下载 Godot 3 的长期支持版本">Godot 3</a>，<a href="/download/archive">测试版本</a>或是<a href="/download/archive">历史版本</a>？'
+  latest_news: 最新消息
+  more_news: 更多消息
   cards:
-    h2: 制作游戏的另一种方式
+    h2: 制作游戏的独特方式
     design:
       title: 创新设计
-      text: Godot 的节点与场景系统同时给了你随心创造所需的能力与灵活性。
+      text: Godot 的节点和场景系统强大而灵活，可以创造任何可能。
     script:
-      title: 使用适合工作的语言
-      text: 使用 Godot 自带的 GDScript、C#、C++ 等面向对象的 API 保持代码模块化，或通过 GDExtension 引入自定义语言。
-      extra: 截止 Godot 4.2 ，C# 支持目前仅在桌面端与移动端可用。<br>使用 Godot 3 来在网页端运行 C# 。
+      title: 使用合适的语言完成工作
+      text: 使用面向对象的 API 保持代码模块化，你可以使用 Godot 自己的 GDScript、C#、C++，还可以使用 GDExtension 引入你自己的语言。
+      extra: 截止 Godot 4.2 ，C# 支持目前仅在桌面端与移动端可用。<br>请使用 Godot 3 在网页端运行 C#。
     2d:
       title: 专用 2D 引擎
-      text: 利用 Godot 专有的 2D 渲染引擎，基于真实的 2D 像素坐标和 2D 节点系统，制作精美且性能卓越的 2D 游戏。
+      text: 使用 Godot 专用的 2D 渲染引擎，基于真实的 2D 像素坐标和 2D 节点，制作精美且性能卓越的 2D 游戏。
     3d:
       title: 简单且强大的 3D
-      text: Godot 的 3D 节点为你提供了构建、动画制作及渲染 3D 世界与角色所需的一切功能。
+      text: 使用 Godot 的 3D 节点即可对 3D 世界和角色进行构建、动画、渲染。
     deploy:
       title: 全平台发布
-      text: 短时间内把你的游戏部署到桌面端，移动端，以及网页端。透过第三方发行商，Godot 甚至支持主机端。
+      text: 只需几秒，即可将游戏部署到桌面端、移动端、网页端。通过第三方发行商，Godot 甚至支持主机平台。
     open:
       title: 开源
-      text: "真正的开放开发：每位 Godot 贡献者均平等受益于他人的付出。"
-    cta: 获取更多关于使用 Godot 的信息
+      text: "真正的开放开发：每位 Godot 贡献者都能平等受益于他人的贡献。"
+    cta: 了解更多 Godot 的信息
   get_involved:
     title: 参与其中
-    text: 加入社区并协助创建出一个属于所有人的游戏引擎。
+    text: 加入社区，共同打造属于所有人的游戏引擎。
     cards:
       cta: 了解更多
       code:
         title: 代码
-        text: 如果你会写代码，你可以协助修复 bug 以及与引擎贡献者们一起合作实现新功能。
+        text: 如果您会写代码，您可以协助修复 bug, 和引擎贡献者们合作，实现新功能。
       document:
         title: 文档
         text: 文档质量对游戏引擎至关重要；您可以通过更新 API 参考、编写新指南或提交修正来帮助改进它。
@@ -86,5 +86,5 @@ home:
         title: 报告
         text: 发现引擎有问题？别忘了提交报告，以便开发者能够追踪修复。
   foundation:
-    text: "你不需要成为一个引擎开发者就能帮助 Godot 。加入<a href='https://fund.godotengine.org/'>开发基金</a>来帮助我们让 Godot&nbsp;Engine 变得更好！"
+    text: "不是引擎开发者也能帮助 Godot。加入<a href='https://fund.godotengine.org/'>开发基金</a>，帮助我们让 Godot&nbsp;Engine 变得更好吧！"
     donate: 捐助
