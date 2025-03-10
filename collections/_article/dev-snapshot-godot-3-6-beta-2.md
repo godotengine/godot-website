@@ -19,7 +19,7 @@ A lot of work is also being done to improve the Android editor port. We're looki
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/3.6.beta2/).
 
-*The illustration picture for this article is from* [**Murtop**](https://games.hiulit.com/murtop/) by [hiulit](https://twitter.com/hiulit), *a fast-paced arcade game packed with action, as if it was taken out directly from the 80's, where Dig Dug meets Bomberman. It's available on [Nintendo Switch](https://www.nintendo.com/store/products/murtop-switch/), [Steam](https://store.steampowered.com/app/2148170/Murtop/), and [itch.io](https://hiulit.itch.io/murtop).*
+*The illustration picture for this article is from* [**Murtop**](https://games.hiulit.com/murtop/) by [hiulit](https://twitter.com/hiulit), *a fast-paced arcade game packed with action, as if it was taken out directly from the 80's, where Dig Dug meets Bomberman. It's available on [Nintendo Switch](https://www.nintendo.com/store/products/murtop-switch/), [Steam](https://store.steampowered.com/app/2148170/Murtop/?curator_clanid=41324400), and [itch.io](https://hiulit.itch.io/murtop).*
 
 ## What's new
 
