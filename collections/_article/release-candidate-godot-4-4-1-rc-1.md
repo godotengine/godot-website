@@ -1,5 +1,5 @@
 ---
-title: "Release candidate: Godot 4.2.1 RC 1"
+title: "Release candidate: Godot 4.4.1 RC 1"
 excerpt: "Godot 4.4 was released 10 days ago, and as is customary with such major feature updates, we have a late harvest of regression fixes to offer!"
 categories: ["pre-release"]
 author: Rémi Verschelde
