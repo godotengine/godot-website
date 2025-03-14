@@ -114,4 +114,4 @@ If you'd like to support the project financially and help us secure our future h
 -----
 
 <a id="credits"></a>
-*The illustration picture is from* **[Human Diaspora](https://store.steampowered.com/app/1395420/Human_Diaspora/)**, *a gorgeous sci-fi First Person Shooter developed by [Leocesar3D](https://twitter.com/Leocesar3D). It was just released as [Early Access on Steam](https://store.steampowered.com/app/1395420/Human_Diaspora/), and you can follow its development news on [Twitter](https://twitter.com/Leocesar3D/).*
+*The illustration picture is from* **[Human Diaspora](https://store.steampowered.com/app/1395420/Human_Diaspora/?curator_clanid=41324400)**, *a gorgeous sci-fi First Person Shooter developed by [Leocesar3D](https://twitter.com/Leocesar3D). It was just released as [Early Access on Steam](https://store.steampowered.com/app/1395420/Human_Diaspora/?curator_clanid=41324400), and you can follow its development news on [Twitter](https://twitter.com/Leocesar3D/).*

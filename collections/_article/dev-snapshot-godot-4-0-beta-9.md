@@ -24,7 +24,7 @@ This beta includes a few big changes which may interest a lot of users:
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.beta9/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from [Raffaele Picca](https://campsite.bio/raffa)'s [car scene](https://twitter.com/MV_Raffa/status/1603697398920118272), rendered in Godot 4.0 using the [Movie Maker mode](/article/movie-maker-mode-arrives-in-godot-4), for the main menu of the upcoming* [**FRANZ FURY**](https://store.steampowered.com/app/1513960/FRANZ_FURY/) *game (made with Godot 3.x). Also check out Raffaele's* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/) *released earlier this year.*
+*The illustration picture for this article is from [Raffaele Picca](https://campsite.bio/raffa)'s [car scene](https://twitter.com/MV_Raffa/status/1603697398920118272), rendered in Godot 4.0 using the [Movie Maker mode](/article/movie-maker-mode-arrives-in-godot-4), for the main menu of the upcoming* [**FRANZ FURY**](https://store.steampowered.com/app/1513960/FRANZ_FURY/?curator_clanid=41324400) *game (made with Godot 3.x). Also check out Raffaele's* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/?curator_clanid=41324400) *released earlier this year.*
 
 ## What's new
 

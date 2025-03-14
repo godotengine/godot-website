@@ -95,7 +95,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 
 <div class="speaker">
 <div class="speaker-text">
-    Jakub Grzesik is the programmer half of Polish studio <a href="http://kivano.games">Kivano Software</a>, who brought us the Godot game <a href="http://sulech.com/kivano/marble-machine/">Marble Machine</a> and is now getting close to releasing <a href="https://store.steampowered.com/app/824090/RivenTails_Defense/">RivenTails: Defense</a>. He's also a contributor to Godot's bug triage team.
+    Jakub Grzesik is the programmer half of Polish studio <a href="http://kivano.games">Kivano Software</a>, who brought us the Godot game <a href="http://sulech.com/kivano/marble-machine/">Marble Machine</a> and is now getting close to releasing <a href="https://store.steampowered.com/app/824090/RivenTails_Defense/?curator_clanid=41324400">RivenTails: Defense</a>. He's also a contributor to Godot's bug triage team.
 </div>
 <div class="speaker-img">
     <img alt="Jakub Grzesik" src="/storage/app/uploads/public/5bb/a12/faa/5bba12faab252767220262.jpg" />
@@ -131,7 +131,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 
 <div class="speaker">
 <div class="speaker-text">
-    Mariusz Chwalba describes himself as a programmer by trade, gamer by hobby, game developer for fun. He loves sci-fi and fantasy - both movies, books and games - and works on <a href="https://store.steampowered.com/app/846030/V_Rings_of_Saturn/">ΔV - Rings of Saturn</a> with Godot 3.1.
+    Mariusz Chwalba describes himself as a programmer by trade, gamer by hobby, game developer for fun. He loves sci-fi and fantasy - both movies, books and games - and works on <a href="https://store.steampowered.com/app/846030/V_Rings_of_Saturn/?curator_clanid=41324400">ΔV - Rings of Saturn</a> with Godot 3.1.
 </div>
 <div class="speaker-img">
     <img alt="Mariusz Chwalba" src="/storage/app/uploads/public/5bb/a14/ab5/5bba14ab5731f229285593.jpg" />

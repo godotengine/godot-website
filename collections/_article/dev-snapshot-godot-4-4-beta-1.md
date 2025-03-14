@@ -19,7 +19,7 @@ Please, consider [supporting the project financially](#support), if you are able
 
 ---
 
-*The cover illustration is from* [**WEBFISHING**](https://store.steampowered.com/app/3146520/WEBFISHING/), *a multiplayer online casual fishing game where you relax, hang out, make friends, and catch fish! You can buy the game [on Steam](https://store.steampowered.com/app/3146520/WEBFISHING/), and follow the development on [Twitter](https://x.com/westthewerst).*
+*The cover illustration is from* [**WEBFISHING**](https://store.steampowered.com/app/3146520/WEBFISHING/?curator_clanid=41324400), *a multiplayer online casual fishing game where you relax, hang out, make friends, and catch fish! You can buy the game [on Steam](https://store.steampowered.com/app/3146520/WEBFISHING/?curator_clanid=41324400), and follow the development on [Twitter](https://x.com/westthewerst).*
 
 ## Highlights
 

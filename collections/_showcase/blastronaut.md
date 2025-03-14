@@ -17,7 +17,7 @@ youtube_id: "egEuehFcGkE"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/1392650/BLASTRONAUT/
+steam: https://store.steampowered.com/app/1392650/BLASTRONAUT/?curator_clanid=41324400
 
 
 ---
