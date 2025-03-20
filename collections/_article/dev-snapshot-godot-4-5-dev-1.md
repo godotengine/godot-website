@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 dev 1"
 excerpt: The feature freeze has melted away—here comes the flood!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/release-candidate-godot-4-5-dev-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-dev-1.webp
 image_caption_title: That's not my Neighbor
 image_caption_description: A game by Nachosama Games
 date: 2025-03-20 12:00:00
