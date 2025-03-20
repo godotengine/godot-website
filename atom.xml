@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-03-20T19:41:52+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.5 dev 1</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-5-dev-1/"/><updated>2025-03-20T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-5-dev-1/</id><summary>The feature freeze has melted away—here comes the flood!</summary><content type="html">&lt;p>Our first development snapshot for 4.5 has arrived! As is often the case following a feature-freeze, several quality
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-03-20T20:15:29+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.5 dev 1</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-5-dev-1/"/><updated>2025-03-20T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-5-dev-1/</id><summary>The feature freeze has melted away—here comes the flood!</summary><content type="html">&lt;p>Our first development snapshot for 4.5 has arrived! As is often the case following a feature-freeze, several quality
 PRs were finally released from the collective backlog, as merging them at the time would’ve been too much of a risk.
 In truth, the quantity has been &lt;em>so&lt;/em> great that we could’ve gotten away with releasing a snapshot a week ago! However,
 we found it worth our time to hold out and get as many contributions integrated as possible, as a way of thanking those
@@ -84,7 +84,7 @@ output entirely, it’s just one click away!&lt;/p>
 Download Godot 4.5 dev1
 &lt;/a>
 &lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="" />
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-5-dev-1.webp" />
 &lt;div class="card-download-platforms">
 &lt;div class="download-platform platform-linux">
 &lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
