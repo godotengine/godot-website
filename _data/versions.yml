@@ -1,3 +1,8 @@
+- name: "4.5"
+  flavor: "dev1"
+  release_date: "20 March 2025"
+  release_notes: "/article/release-candidate-godot-4-5-dev-1/"
+
 - name: "4.4.1"
   flavor: "rc1"
   release_date: "14 March 2025"
