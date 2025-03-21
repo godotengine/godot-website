@@ -30,7 +30,7 @@ This beta includes a few big changes which may interest a lot of users:
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.beta13/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from* [**Lone Knight**](https://store.steampowered.com/app/2211930/Lone_Knight/) *by Jean Makes Games. The project is currently being ported to Godot 4 beta. Follow Jean Makes Games on [Twitter](https://twitter.com/Pixl_Jean) for updates.*
+*The illustration picture for this article is from* [**Lone Knight**](https://store.steampowered.com/app/2211930/Lone_Knight/?curator_clanid=41324400) *by Jean Makes Games. The project is currently being ported to Godot 4 beta. Follow Jean Makes Games on [Twitter](https://twitter.com/Pixl_Jean) for updates.*
 
 ## What's new
 

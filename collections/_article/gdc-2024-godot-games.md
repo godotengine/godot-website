@@ -28,70 +28,70 @@ Just like last year, we invited Godot developers to join us on our travels and e
 On the 21st of March, we will be joined by a senior class of students from a local public school. As part of their Game Design Academy program - which was started 15 years ago - the teams are currently developing games for their final presentations. At our booth, they will present their current prototypes and aim to gather some feedback from industry veterans.
 
 <div class="row-2">
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2218750/Halls_of_Torment/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2218750/Halls_of_Torment/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/hallsoftorment.webp?1">
 	</a>
 	<div>
 		<h3>Halls of Torment</h3>
 		<p>Slay hordes of terrifying monsters in this horde survival roguelite. Descend into the Halls of Torment where the lords of the underworld await you. Treasures, magic trinkets, and a growing cast of heroes will grant you the power to vanquish the horrors from beyond. How long can you survive?</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2726450/Windowkill/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2726450/Windowkill/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/windowkill.webp">
 	</a>
 	<div>
 		<h3>Windowkill</h3>
 		<p>Windowkill is a twin-stick shooter, but the game window itself is constantly closing in on you. Shoot the window edges to push it around your screen as you fight and dodge enemies and bosses in their own windows.</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2093070/Spring_Dash/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2093070/Spring_Dash/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/springdash.webp">
 	</a>
 	<div>
 		<h3>Spring Dash</h3>
 		<p>Catapult yourself to incredible speeds in this first-person precision platformer. Use your command over vegetation to build up momentum and decimate the bugs in your way. Just be careful not to fall!</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2368300/Warside/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2368300/Warside/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/warside.webp?2">
 	</a>
 	<div>
 		<h3>Warside</h3>
 		<p>Welcome to Warside, the fast-paced turn-based tactics game. With a story campaign, multiplayer support, and a built-in map editor, the fight for victory never ends. Choose your Commander, assemble your forces, and battle your way to victory.</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2634140/Endoparasitic_VR/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2634140/Endoparasitic_VR/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/endoparasitic.webp">
 	</a>
 	<div>
 		<h3>Endoparasitic VR</h3>
 		<p>Three limbs ripped off, infected with a deadly parasite, you must save your research. Drag yourself through the corridors of a secret research lab on a remote asteroid, fight off horribly mutated monsters, inject countless syringes of vaccines, and survive at all costs.</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2013730/Gourdlets/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2013730/Gourdlets/?curator_clanid=41324400">
 		<img src="/assets/showcase/gourdlets-header.webp">
 	</a>
 	<div>
 		<h3>Gourdlets</h3>
 		<p>Gourdlets is a city-building sandbox. Place buildings and scenery, and then watch visiting gourdlets arrive and interact with the world. No objectives, no points, just building.</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2645830/Stunt_Xpress/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2645830/Stunt_Xpress/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/stuntxpress.webp">
 	</a>
 	<div>
 		<h3>Stunt Xpress</h3>
 		<p>Become a delivery van driver. The best in the world. Take part in internationally renowned delivery van driving championships. Shoot your parcels (on time) into customer's homes like a marksman while performing gravity-defying stunts and being chased by god knows what.</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2337990/Kohlrabi_Starship/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2337990/Kohlrabi_Starship/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/kohlrabistarship.webp">
 	</a>
 	<div>
 		<h3>Kohlrabi Starship</h3>
 		<p>Kohlrabi Starship is a cozy farming game with space travel. Fly your very own greenhouse spacecraft and discover mysterious planets. Put on your gardening gloves, make friends with animals, fall in love, and slowly turn your desert home planet into a thriving ecosystem.</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2867340/Nonu/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2867340/Nonu/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/nonu.webp">
 	</a>
 	<div>
 		<h3>Nonu</h3>
 		<p>Nonu is a fantasy souls-like set in a beautiful hand-drawn world. Face intelligent enemies in true souls-like fashion, with a twist. Draw upon the power of Nonu to forge your own fighting style, and uncover untold truths about the world, and its eclectic inhabitants.</p>
 	</div>
-	<a class="media" target="_blank" href="https://store.steampowered.com/app/2537470/Vultures__Scavengers_of_Death/">
+	<a class="media" target="_blank" href="https://store.steampowered.com/app/2537470/Vultures__Scavengers_of_Death/?curator_clanid=41324400">
 		<img src="/storage/blog/gdc/2024/vultures.webp">
 	</a>
 	<div>
