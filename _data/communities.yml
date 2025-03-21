@@ -197,6 +197,13 @@ Germany:
     links:
       - title: Discord
         url: https://discord.gg/XGd4Xp6rNz
+  - name: Godot Community FFM/Rhein-Main
+    coordinates:
+      - 50.110924
+      - 8.682127
+    links:
+      - title: Discord
+        url: https://discord.gg/WWwbDY2ubC
 India:
   - name: Godot India
     links:

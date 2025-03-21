@@ -1,3 +1,17 @@
+- name: "4.5"
+  flavor: "dev1"
+  release_date: "20 March 2025"
+  release_notes: "/article/dev-snapshot-godot-4-5-dev-1/"
+
+- name: "4.4.1"
+  flavor: "rc2"
+  release_date: "21 March 2025"
+  release_notes: "/article/release-candidate-godot-4-4-1-rc-2/"
+  releases:
+    - name: "rc1"
+      release_date: "14 March 2025"
+      release_notes: "/article/release-candidate-godot-4-4-1-rc-1/"
+
 - name: "4.4"
   flavor: "stable"
   release_date: "3 March 2025"
