@@ -23,7 +23,7 @@ Please, consider [supporting the project financially](#support), if you are able
 
 -----
 
-*The illustration picture for this article comes from* [**Haulin' Oats**](https://store.steampowered.com/app/1254770/Haulin_Oats/?curator_clanid=41324400), *a a board game about truck driving, the US highways, and oatmeal (?!), which was recently released in version 1.0 [on Steam](https://store.steampowered.com/app/1254770/Haulin_Oats/?curator_clanid=41324400). It is developed by [Gramps Garcia](https://grampsgarcia.com/), the tireless maintainer of the popular [GodotSteam](https://godotsteam.com/) integration for the Steamworks SDK.*
+*The illustration picture for this article comes from* [**Haulin' Oats**](https://store.steampowered.com/app/1254770/Haulin_Oats/?curator_clanid=41324400), *a board game about truck driving, the US highways, and oatmeal (?!), which was recently released in version 1.0 [on Steam](https://store.steampowered.com/app/1254770/Haulin_Oats/?curator_clanid=41324400). It is developed by [Gramps Garcia](https://grampsgarcia.com/), the tireless maintainer of the popular [GodotSteam](https://godotsteam.com/) integration for the Steamworks SDK.*
 
 ## What's new
 
@@ -54,7 +54,7 @@ Below are the most notable changes in this second release candidate (with critic
 - Porting: macOS: Update mouse-entered state when subwindow closes ([GH-104328](https://github.com/godotengine/godot/pull/104328)).
 - **Rendering: Vulkan: Disable layers in editor deemed buggy by RenderDoc ([GH-104154](https://github.com/godotengine/godot/pull/104154)).**
 - Rendering: Fix Metal handling of cube textures; assert equal dimensions ([GH-104341](https://github.com/godotengine/godot/pull/104341)).
-- XR: Correct occlusion culling viewport location calculation when projection uses asymmetric fov ([GH-104249](https://github.com/godotengine/godot/pull/104249)).
+- XR: Correct occlusion culling viewport location calculation when projection uses asymmetric FOV ([GH-104249](https://github.com/godotengine/godot/pull/104249)).
 
 This release is built from commit [`abef5e0d2`](https://github.com/godotengine/godot/commit/abef5e0d23a7f031ae7df90ccf49d650444b9685).
 
