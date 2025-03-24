@@ -15,7 +15,7 @@ youtube_id: "Ri0Pc5xvJkM"
 
 platforms: ["windows", "linux"]
 
-steam: https://store.steampowered.com/app/951670/Precipice/
+steam: https://store.steampowered.com/app/951670/Precipice/?curator_clanid=41324400
 
 ---
 
