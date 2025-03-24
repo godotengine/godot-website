@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**Pest Apocalypse**](https://store.steampowered.com/app/2506810/Pest_Apocalypse/), *a hyper-realistic post apocalyptic physics based pizza delivery action rogue-lite! It is developed by [Kikimora Games](https://www.kikimora.games/). You can purchase the game [on Steam](https://store.steampowered.com/app/2506810/Pest_Apocalypse/), and follow the developers [on BlueSky](https://bsky.app/profile/kikimora.games) and [Discord](https://discord.com/invite/sSmGbJSa4E).*
+*The cover illustration is from* [**Pest Apocalypse**](https://store.steampowered.com/app/2506810/Pest_Apocalypse/), *a hyper-realistic post apocalyptic physics based pizza delivery action rogue-lite! It is developed by [Kikimora Games](https://www.kikimora.games/). You can purchase the game [on Steam](https://store.steampowered.com/app/2506810/Pest_Apocalypse/), and follow the developers [on Bluesky](https://bsky.app/profile/kikimora.games) and [Discord](https://discord.com/invite/sSmGbJSa4E).*
 
 ## Highlights
 
