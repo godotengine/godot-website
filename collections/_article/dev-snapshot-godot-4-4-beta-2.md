@@ -17,7 +17,7 @@ Please, consider [supporting the project financially](#support), if you are able
 
 ---
 
-*The cover illustration is from* [**The Roottrees are Dead**](https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/), *a detective game where you piece together a family tree's billion-dollar paper trail through the power of a dial-up modem! You can buy the game [on Steam](https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/), and follow the developer on [BlueSky](https://bsky.app/profile/eviltrout.com).*
+*The cover illustration is from* [**The Roottrees are Dead**](https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/), *a detective game where you piece together a family tree's billion-dollar paper trail through the power of a dial-up modem! You can buy the game [on Steam](https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/), and follow the developer on [Bluesky](https://bsky.app/profile/eviltrout.com).*
 
 ## Highlights
 
