@@ -9,11 +9,11 @@ image_caption_description: A game by Consumer Softproducts
 date: 2025-03-26 15:00:00
 ---
 
-We released [Godot 4.4](/releases/4.4/) in early March and we are delighted to see the reception, with so many users upgrading to it on day 1 and sharing their favorite new changes on social media! If you haven't seen the [**4.4 release page**](/releases/4.4/), it's well worth a read!
+We released [Godot 4.4](/releases/4.4/) in early March and we are delighted to see the reception, with so many users upgrading to it on day one and sharing their favorite new changes on social media! If you haven't seen the [**4.4 release page**](/releases/4.4/), it's well worth a read!
 
 Since then, we've started the development phase for Godot 4.5 at full speed (with a first [dev snapshot](/article/dev-snapshot-godot-4-5-dev-1/) released last week!), but we also put our main focus on fixing remaining and newly reported regressions that affect users who upgraded to 4.4. A few of these issues can be showstoppers for affected users, so we decided to release a 4.4.1 maintenance release as soon as possible.
 
-See below for a list of the most relevant changes. This release includes fixes to [security vulnerabilities](https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.3) in the mbedTLS thirdparty library, so we strongly recommend updating for any game using networking functionality.
+See below for a list of the most relevant changes. This release includes fixes to [security vulnerabilities](https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.3) in the mbedTLS third-party library, so we strongly recommend updating for any game using networking functionality.
 
 Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
