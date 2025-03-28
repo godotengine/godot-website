@@ -173,12 +173,14 @@ Germany:
       - 52.51279
       - 13.44978
     links:
-      - title: Meetup
-        url: https://www.meetup.com/godot-user-group-berlin/
+      - title: Website
+        url: https://godot.berlin
       - title: Mastodon
         url: https://mastodon.gamedev.place/@GodotUserGroupBerlin
       - title: Discord
         url: https://discord.gg/Sm3CgrqqQa
+      - title: Meetup
+        url: https://www.meetup.com/godot-user-group-berlin/
   - name: Godot Stammtisch Karlsruhe
     coordinates:
       - 49.00688
