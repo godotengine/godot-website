@@ -1,0 +1,91 @@
+meta:
+  description: 2D 및 3D 게임, 크로스 플랫폼 프로젝트, 또는 XR 아이디어까지 개발하세요!
+header:
+  features: 기능
+  showcase: 쇼케이스
+  blog: 블로그
+  community: 커뮤니티
+  assets: 애셋
+  download: 다운로드
+  docs: 문서
+  contribute: 기여
+  donate: 기부
+  language: 언어
+footer:
+  godot_engine: Godot 엔진
+  download: 다운로드
+  documentation: 문서
+  features: 기능
+  web_editor: 웹 편집기
+  release_archive: 릴리스 아카이브
+  source_code: 소스 코드
+  project: 프로젝트
+  blog: 블로그
+  code_of_conduct: 행동 강령
+  governance: 거버넌스
+  teams: 팀
+  priorities: 우선 순위
+  communities: 커뮤니티
+  resources: 리소스
+  asset_library: 애셋 라이브러리
+  press_kit: 보도자료
+  showcase: 쇼케이스
+  education: 교육
+  foundation: 재단
+  about: 대하여
+  donate: 기부
+  license: 라이선스
+  privacy_policy: 개인정보처리방침
+  contact_us: 문의하기
+  text: "후안 리니에츠키, 아리엘 만수르 및 <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>기여자</a>. <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot 재단</a>이 호스팅하고 있습니다. 웹사이트는 <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>GitHub에 소스 코드</a>가 있습니다."
+sponsors:
+  title: "Godot는 후원을 받고 있습니다:"
+  text: 기업 후원에 관심이 있으시면 <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>에 써주세요.<br>개인으로 기부하려면 <a href='https://fund.godotengine.org/'>Godot 엔진 개발 기금</a>을 통해 할 수 있습니다.
+  cta: 기부
+home:
+  h1: 자유 오픈 소스<br>게임 엔진.
+  subtitle: 2D 및 3D 게임, 크로스 플랫폼 프로젝트, 또는 XR 아이디어까지 개발하세요!
+  whats_new: 새로운 점
+  download_latest: 최신 다운로드
+  looking_for: '<a href="/download/windows/" class="set-os-download-url" data-version="3" title="Godot 3의 장기 지원 버전 다운로드">Godot 3</a>, 우리의 <a href="/download/archive">실험적인 릴리스</a>, 또는 <a href="/download/archive">이전 버전</a>을 찾고 계십니까?'
+  latest_news: 최신 뉴스
+  more_news: 뉴스 더 보기
+  cards:
+    h2: 게임을 만드는 다양한 방법
+    design:
+      title: 혁신적인 디자인
+      text: Godot의 노드와 씬 시스템은 여러분에게 무엇이든 만들 수 있는 능력과 유연성을 모두 제공합니다.
+    script:
+      title: 업무에 알맞는 언어를 사용하세요
+      text: Godot의 자체 GDScript, C#, C++를 사용하여 객체 지향 API로 코드를 모듈화거나, GDExtension을 사용하여 자신의 언어를 가져오세요.
+      extra: C# 지원은 현재 Godot 4.2에서부터 데스크톱과 모바일 플랫폼에서만 사용할 수 있습니다.<br>웹 플랫폼에서 C#을 실행하려면 Godot 3를 사용하세요.
+    2d:
+      title: 전용 2D 엔진
+      text: 실제 2D 픽셀 좌표와 2D 노드를 갖춘 Godot의 전용 2D 렌더링 엔진으로 선명하고 성능이 뛰어난 2D 게임을 만드세요.
+    3d:
+      title: 간단하고 강력한 3D
+      text: Godot의 3D 노드는 3D 세계와 캐릭터를 구축하고, 애니메이션화하고, 렌더링하는 데 필요한 모든 것을 제공합니다.
+    deploy:
+      title: 모든 플랫폼에 출시하세요
+      text: 게임을 데스크톱, 모바일과 웹에 몇 초 만에 배포하세요. Godot는 심지어 서드 파티 퍼블리셔를 통해 콘솔을 지원합니다.
+    open:
+      title: 오픈 소스
+      text: "진정한 열린 개발: Godot에 기여하는 모든 사람은 다른 사람의 기여로부터 동등한 혜택을 받습니다."
+    cta: Godot 사용에 대해 더 알아보기
+  get_involved:
+    title: 참여하기
+    text: 커뮤니티에 참여하여 모두의 소유인 게임 엔진을 만드는 데 도움을 주세요.
+    cards:
+      cta: 더 알아보기
+      code:
+        title: 코드
+        text: 코딩 방법을 알고 있다면 버그를 수정하고 엔진 기여자들과 협력하여 새로운 기능을 구현하는 데 도움을 줄 수 있습니다.
+      document:
+        title: 문서
+        text: 문서 품질은 게임 엔진에서 필수입니다. API 참조를 업데이트하거나, 새로운 가이드를 쓰거나, 수정 사항을 제출하여 개선하는 데 도움을 주세요.
+      report:
+        title: 보고
+        text: 엔진에 문제를 찾았습니까? 개발자가 추적할 수 있도록 문제를 보고하는 것을 잊지 마세요.
+  foundation:
+    text: "Godot를 돕기 위해 엔진 개발자가 될 필요는 없습니다. <a href='https://fund.godotengine.org/'>개발 기금</a>에 가입하시고 Godot 엔진을 더욱 멋지게 만드는 데 도움을 주세요!"
+    donate: 기부
