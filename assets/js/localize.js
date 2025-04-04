@@ -1,13 +1,14 @@
 // Get the language label
 const languageMap = {
+	'de': 'Deutsch',
 	'en': 'English',
 	'es': 'Español',
-	'de': 'Deutsch',
 	'fr': 'Français',
 	'ja': '日本語',
+	'ko': '한국어',
+	'pt': 'Português',
 	'zh-cn': '中文（简体）',
 	'zh-tw': '中文（繁體）',
-	'pt': 'Português',
 };
 
 document.querySelectorAll('.localize-language-label').forEach(function(el) {
