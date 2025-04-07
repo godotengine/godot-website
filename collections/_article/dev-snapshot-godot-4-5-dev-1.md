@@ -118,7 +118,6 @@ This release is built from commit [`97241ffea`](https://github.com/godotengine/g
 **Standard build** includes support for GDScript and GDExtension.
 
 **.NET build** (marked as `mono`) includes support for C#, as well as GDScript and GDExtension.
-- .NET 8.0 or newer is required for this build, changing the minimal supported version from .NET 6 to 8.
 
 {% include articles/prerelease_notice.html %}
 
