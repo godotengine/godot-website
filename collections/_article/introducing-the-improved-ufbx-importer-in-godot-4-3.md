@@ -5,6 +5,8 @@ categories: ["progress-report"]
 author: Lyuma
 image: /storage/blog/covers/progress-report-new-ufbx-importer.webp
 date: 2024-08-02 20:36:00
+redirect_from:
+ - /fbx-import/
 ---
 
 Thanks to [a very welcome contribution by Samuli Raivio (bqqbarbhg) and Ernest Lee (fire)](https://github.com/godotengine/godot/pull/81746), Godot 4.3 now includes native .fbx support. This was made possible using Samuli’s free and open source [ufbx single-file .fbx library](https://github.com/ufbx/ufbx). The ufbx importer will be used by default for all newly imported .fbx files in Godot 4.3.
