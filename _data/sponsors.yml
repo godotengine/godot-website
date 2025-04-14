@@ -50,3 +50,6 @@ silver:
   - name: Chasing Carrots
     link: "https://www.chasing-carrots.com/"
     image: "https://fund.godotengine.org/static/logos/chasing-carrots.webp"
+  - name: Games by Malcs
+    link: "https://gamesbymalcs.com/"
+    image: "https://fund.godotengine.org/static/logos/games-by-malcs.png"
