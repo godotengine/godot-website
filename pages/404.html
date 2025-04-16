@@ -113,6 +113,8 @@ description: "The requested resource is not available on the server."
 				let link_platform = 'windows';
 				if (navigator.platform.indexOf('Mac') !== -1) {
 					link_platform = 'macos';
+				} else if (navigator.userAgent.indexOf('Android') !== -1) {
+					link_platform = 'android';
 				} else if (navigator.platform.indexOf('Linux') !== -1) {
 					link_platform = 'linux';
 				}
