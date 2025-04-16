@@ -17,9 +17,11 @@ redirect_from:
 
 <script type="text/javascript">
 	if (navigator.platform.indexOf('Mac') !== -1) {
-		window.location = "/download/macos";
+		window.location = "/download/macos/";
+	} else if (navigator.userAgent.indexOf('Android') !== -1) {
+		window.location = "/download/android/";
 	} else if (navigator.platform.indexOf('Linux') !== -1) {
-		window.location = "/download/linux";
+		window.location = "/download/linux/";
 	} else { // default to windows
 		window.location = "/download/windows/";
 	}
