@@ -44,8 +44,10 @@ sponsors:
 home:
   h1: 屬於你的免費，<br>開源遊戲引擎。
   subtitle: 開發你的 2D 與 3D 遊戲，跨平台專案，甚至是 XR 創意！
-  whats_new: 最近更新
   download_latest: 下載最新版
+  download_latest_tooltip: Download the latest version of Godot 4
+  whats_new: 最近更新
+  whats_new_tooltip: See what's new in Godot
   looking_for: '正在尋找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下載 Godot 3 的長期支援版本">Godot 3</a>，我們的<a href="/download/archive">實驗性版本</a>，或是一個<a href="/download/archive">歷史版本</a>？'
   latest_news: 最近新聞
   more_news: 更多新聞

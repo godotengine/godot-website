@@ -45,8 +45,10 @@ sponsors:
 home:
   h1: 자유 오픈 소스<br>게임 엔진.
   subtitle: 2D 및 3D 게임, 크로스 플랫폼 프로젝트, 또는 XR 아이디어까지 개발하세요!
-  whats_new: 새로운 점
   download_latest: 최신 다운로드
+  download_latest_tooltip: Godot 4의 최신 버전 다운로드
+  whats_new: 새로운 점
+  whats_new_tooltip: Godot의 새로운 점 보기
   looking_for: '<a href="/download/windows/" class="set-os-download-url" data-version="3" title="Godot 3의 장기 지원 버전 다운로드">Godot 3</a>, 우리의 <a href="/download/archive">실험적인 릴리스</a>, 또는 <a href="/download/archive">이전 버전</a>을 찾고 계십니까?'
   latest_news: 최신 뉴스
   more_news: 뉴스 더 보기
