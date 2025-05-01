@@ -1,6 +1,7 @@
 meta:
   description: 开发你的 2D & 3D 游戏，跨平台项目，甚至是 XR 创意！
 header:
+  godot_engine: Godot 引擎
   features: 特性
   showcase: 展示
   blog: 博客
@@ -9,9 +10,10 @@ header:
   download: 下载
   docs: 文档
   contribute: 贡献
-  donate: 捐助
   language: 语言
+  donate: 捐助
 footer:
+  godot_engine: Godot 引擎
   download: 下载
   documentation: 文档
   features: 特性
@@ -44,8 +46,8 @@ sponsors:
 home:
   h1: 属于你的<br>自由开源游戏引擎
   subtitle: 开发你的 2D & 3D 游戏，跨平台项目，甚至是 XR 创意！
-  whats_new: 新版亮点
   download_latest: 下载最新版
+  whats_new: 新版亮点
   looking_for: '想找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下载 Godot 3 的长期支持版本">Godot 3</a>，<a href="/download/archive">测试版本</a>或是<a href="/download/archive">历史版本</a>？'
   latest_news: 最新消息
   more_news: 更多消息

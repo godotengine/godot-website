@@ -9,8 +9,8 @@ header:
   download: Download
   docs: Doku
   contribute: Mitwirken
-  donate: Spenden
   language: Sprache
+  donate: Spenden
 footer:
   download: Download
   documentation: Dokumentation
@@ -36,7 +36,7 @@ footer:
   license: Lizenz
   privacy_policy: Datenschutzerklärung
   contact_us: Kontakt
-  text: "Juan Linietsky, Ariel Manzur und <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>Beitragende</a>. Gehostet von der <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. Website Quellcode <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>auf  GitHub</a>."
+  text: "Juan Linietsky, Ariel Manzur und <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>Beitragende</a>. Gehostet von der <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. Website Quellcode <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>auf GitHub</a>."
 sponsors:
   title: "Godot wird unterstützt von:"
   text: Um Unternehmens-Sponsor zu werden, einfach eine Nachricht an <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a> schreiben.<br>Individuelle Spenden sind durch die<a href='https://fund.godotengine.org/'>Godot Engine Entwicklungsfonds</a> möglich.
@@ -44,8 +44,8 @@ sponsors:
 home:
   h1: Deine kostenlose, Open&#8209;Source<br>Game Engine.
   subtitle: Spielentwicklung in 2D & 3D, für platt­form­über­grei­fende Projekte sowie VR Ideen!
-  whats_new: Neuigkeiten
   download_latest: Lade die neueste Version herunter
+  whats_new: Neuigkeiten
   looking_for: 'Auf der Suche nach <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download der für Langzeit unterstützten Version von Godot 3">Godot 3</a>, unseren <a href="/download/archive">experimentellen Veröffentlichungen</a>, oder <a href="/download/archive">früheren Versionen</a>?'
   latest_news: Aktuelle News (in Englisch)
   more_news: Weitere Nachrichten

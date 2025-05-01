@@ -9,8 +9,8 @@ header:
   download: Télécharger
   docs: Docs
   contribute: Contribuer
-  donate: Donner
   language: Langue
+  donate: Donner
 footer:
   godot_engine: Godot Engine
   download: Télécharger
@@ -45,8 +45,10 @@ sponsors:
 home:
   h1: Votre moteur de jeu gratuit et open&#8209;source.
   subtitle: Développez vos jeux en 2D et 3D, des projets cross-plateformes ou même des applications XR&nbsp;!
-  whats_new: Nouveautés
   download_latest: Télécharger la dernière version
+  download_latest_tooltip: Télécharger la dernière version de Godot 4
+  whats_new: Nouveautés
+  whats_new_tooltip: Voir les dernières nouveautés de Godot
   looking_for: 'Vous cherchez <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Téléchargez la version supportée à long terme de Godot 3">Godot 3</a>, des <a href="/download/archive">versions expérimentales</a> ou une <a href="/download/archive">ancienne version</a>&nbsp;?'
   latest_news: Dernières actualités (en anglais)
   more_news: Plus d'actualités
