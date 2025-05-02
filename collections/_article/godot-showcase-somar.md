@@ -77,8 +77,7 @@ Daniel Castellanos is the owner of Decacis Studio, and was contracted by Collabo
 ### I also understand the project is also capable of using the Monado OpenXR runtime. Can you tell me a bit more about the motivation and goals of this port?
 
 <strong class="fred">Fred:</strong> The motivation behind also targeting the Monado OpenXR runtime was to ensure broader accessibility and compatibility across different platforms, particularly for low-cost, phone-based VR systems. Monado’s open-source nature aligns with our goal of creating a flexible, cost-effective solution that’s not reliant on proprietary ecosystems. For this project, Collabora dedicated engineering resources to develop a new Monado Cardboard driver, which enables the experience to run on Android phones with Cardboard VR headsets, making the immersive content accessible to a wider audience, including kids and students. This port reinforces our commitment to open standards, allowing for future enhancements and maintaining the project’s long-term sustainability.
-You can find the code for that driver on the [freedesktop.org GitLab]
-(https://gitlab.freedesktop.org/bl4ckb0ne/monado/-/tree/cardboard-sdk). It will be upstreamed soon.
+You can find the code for that driver on the [freedesktop.org GitLab](https://gitlab.freedesktop.org/bl4ckb0ne/monado/-/tree/cardboard-sdk). It will be upstreamed soon.
 
 ### Fred, specifically for you, can you give us a synopsis of what Monado is and your perspective on the combination of using Godot with Monado?
 
