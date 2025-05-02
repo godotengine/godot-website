@@ -4,7 +4,7 @@ excerpt: "We interviewed Frederic Plourde from Collabora and Daniel Castellanos 
 categories: ["showcase"]
 author: Bastiaan Olij
 image: /storage/blog/covers/godot-showcase-the-somar-project.webp
-date: 2025-04-15 15:00:00
+date: 2025-05-02 15:00:00
 ---
 
 <style>
