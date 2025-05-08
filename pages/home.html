@@ -5,9 +5,11 @@ title:
   en: "Godot Engine - Free and open source 2D and 3D game engine"
   es: "Godot Engine - Motor de videojuegos 2D y 3D gratuito y de código abierto"
   fr: "Godot Engine - Moteur de jeu vidéo 2D et 3D gratuit et open source"
+  ja: "Godot エンジン - フリーかつオープンソースする 2D/3D ゲームエンジン"
   ko: "Godot 엔진 - 자유 및 오픈 소스 2D 및 3D 게임 엔진"
-  zh-cn: "Godot Engine - 免费开源的 2D 与 3D 游戏引擎"
-  zh-tw: "Godot Engine - 免費開源的 2D 與 3D 遊戲引擎"
+  pt: "Godot Engine - O motor de jogos gratuito e de código aberto para jogos 2D e 3D"
+  zh-cn: "Godot 引擎 - 免费开源的 2D 与 3D 游戏引擎"
+  zh-tw: "Godot 引擎 - 免費開源的 2D 與 3D 遊戲引擎"
 notitlesuffix: true
 description: "Godot provides a huge set of common tools, so you can just focus on making your game without reinventing
 the wheel."
@@ -217,12 +219,12 @@ localize: ["de", "en", "es", "fr", "ko", "zh-cn", "zh-tw"]
 				<div class="main-download-links">
 					<div class="main-download-links-buttons">
 						<a href="/download/windows/" class="btn btn-download set-os-download-url" data-version="4"
-							title="Download the latest version of Godot 4">
+							title="{% t home.download_latest_tooltip %}">
 							<div class="download-title">{% t home.download_latest %}</div>
 							<div class="download-hint">{{ stable_version_4.name }}</div>
 						</a>
 						<a href="/releases/" class="btn btn-whats-new"
-							title="See what's new in Godot">
+							title="{% t home.whats_new_tooltip %}">
 							<div class="download-title">{% t home.whats_new %}</div>
 						</a>
 					</div>
@@ -393,7 +395,7 @@ localize: ["de", "en", "es", "fr", "ko", "zh-cn", "zh-tw"]
 <section id="donations" class="padded">
 	<div class="container sm-full">
 		<a href="https://godot.foundation" target="_blank" style="display: inline-block;">
-			<img id="foundation_graphic" src="/assets/home/foundation/godot-foundation-logo-dark.svg" alt="Godot Foundation logo" width="1" height="1"
+			<img id="foundation_graphic" src="/assets/home/foundation/godot-foundation-logo-dark.svg" alt="{%t home.foundation.logo %}" width="1" height="1"
 			class="img-auto-size" loading="lazy">
 		</a>
 		<p class="small auto-margin">{%t home.foundation.text %}</p>
