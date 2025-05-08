@@ -399,3 +399,10 @@ United States:
     links:
       - title: Discord
         url: https://discord.gg/MjA6HUzzAE
+  - name: Godot Seattle
+    coordinates:
+      - 47.620422
+      - -122.349358
+    links:
+      - title: Discord
+        url: https://discord.gg/G7WNW6GYrf
