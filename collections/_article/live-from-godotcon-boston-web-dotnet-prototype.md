@@ -12,7 +12,8 @@ date: 2025-05-09 12:00:00
   margin: 2em auto;
   display: block;
   width: max-content;
-  background-color: var(--link-color);
+  background-color: rgb(54, 137, 201);
+  text-decoration: none;
   border-radius: 1em;
   color: white;
   padding: 1em;
@@ -44,7 +45,7 @@ The .NET team lead, Raul Santos ([@raulsntos on GitHub](https://github.com/rauls
 
 <div>
   <a href="https://lab.godotengine.org/godot-dotnet-web/" class="godot-dotnet-web-link" target="_blank">
-    <span>Press here to see the prototype!</span>
+    <span>Click here to see the prototype!</span>
   </a>
 </div>
 
