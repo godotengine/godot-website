@@ -34,13 +34,13 @@ blockquote p:last-child {
 }
 </style>
 
-Hi there! I'm Adam Scott ([@adamscott on GitHub](https://github.com/adamscott)), the Godot Engine Web team leader, live from the GodotCon Boston 2025!
+Hi there! I'm Adam Scott ([@adamscott on GitHub](https://github.com/adamscott)), the Godot Engine Web team lead, live from the GodotCon Boston 2025!
 
 On May 6, during my [State of Godot and the Web talk](https://talks.godotengine.org/godotcon-us-2025/talk/UCLFXR/), [I revealed a world premiere](https://slides.com/scottmada/state-of-the-godot-and-the-web-2025/#/35/2) to the GodotCon attendees. It was something some thought impossible, and others were resigned to not seeing during their lifetime.
 
 _Please note that the VOD isn't available yet. The link to the recording will be added to the article once available. Meanwhile, you can access [the slides of the presentation](https://slides.com/scottmada/state-of-the-godot-and-the-web-2025)._
 
-The .NET team leader, Raul Santos ([@raulsntos on GitHub](https://github.com/raulsntos)), managed to create a prototype running C# on the Web.
+The .NET team lead, Raul Santos ([@raulsntos on GitHub](https://github.com/raulsntos)), managed to create a prototype running C# on the Web.
 
 <div>
   <a href="https://lab.godotengine.org/godot-dotnet-web/" class="godot-dotnet-web-link" target="_blank">
