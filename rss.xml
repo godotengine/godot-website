@@ -7,23 +7,23 @@
 &lt;h3 id="macos-embedded-window-support">macOS: Embedded window support&lt;/h3>
 &lt;p>After Windows and Linux users got to experience the benefits of embedding their windows in the editor, macOS users have understandably been expressing interest in the same coming to their platform. Easier said than done, as this feature is OS-specific and &lt;em>very&lt;/em> low-level, so implementation requires someone both extremely knowledgeable in a niche area and actually owning the platform in question for proper testing. Thankfully, both of these qualifications were met by &lt;a href="https://github.com/stuartcarnie">Stuart Carnie&lt;/a>, who was up to the task of integrating this behemoth in &lt;a href="https://github.com/godotengine/godot/pull/105884">GH-105884&lt;/a>. The results should speak for themselves:&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/macos-embedded-window.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/macos-embedded-window.webm?1" type="video/webm" />
 &lt;/video>
 &lt;p>The macOS implementation works differently from the Windows and Linux implementations. Since macOS does not allow the kind of window manipulation that Windows and Linux use for game window embedding, macOS uses an inter-process communication approach where the framebuffer is sent from the game process (which performs off-screen rendering) to the editor window. Input events are also sent from the editor window to the game process. This approach is more complex, but is also more robust as it doesn’t rely on window management tricks that can fall apart in certain edge cases. This approach may be ported later to Windows/Linux in a future release, as it would help improve the reliability of game window embedding.&lt;/p>
 &lt;h3 id="move-3d-physics-interpolation-to-scenetree">Move 3D physics interpolation to &lt;code class="language-plaintext highlighter-rouge">SceneTree&lt;/code>&lt;/h3>
 &lt;p>The old design of the 3D interpolation system was fundamentally flawed, as it operated under the assumption that the scene side wouldn’t require access to interpolated transforms. This isn’t something that could’ve just been “patched in” either, thanks to the multithreaded design, command queue, and stalling. Lacking any sort of workaround, &lt;a href="https://github.com/lawnjelly">lawnjelly&lt;/a> has taken a break from being the person responsible for 90% of 3.x code nowadays and &lt;a href="https://github.com/godotengine/godot/pull/103685">forward-ported&lt;/a> a solution via &lt;a href="https://github.com/godotengine/godot/pull/104269">GH-104269&lt;/a>. This addresses the problem by porting all logic to the &lt;code class="language-plaintext highlighter-rouge">SceneTree&lt;/code>, while completely retaining the existing API!&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/3d-fti-scenetree.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm" />
 &lt;/video>
 &lt;p>No changes are needed to existing projects to benefit from the new 3D physics interpolation architecture.&lt;/p>
 &lt;h3 id="export-variables-as-variant">Export variables as &lt;code class="language-plaintext highlighter-rouge">Variant&lt;/code>&lt;/h3>
 &lt;p>Despite both arrays and dictionaries technically supporting &lt;code class="language-plaintext highlighter-rouge">Variant&lt;/code> values, this functionality was never actually exposed in isolation. That is: it was impossible to export a variable of type &lt;code class="language-plaintext highlighter-rouge">Variant&lt;/code> directly. &lt;a href="https://github.com/KoBeWi">Tomasz Chabora&lt;/a> found this limitation quite silly, so took to addressing this grave injustice with &lt;a href="https://github.com/godotengine/godot/pull/89324">GH-89324&lt;/a>. Now users are granted extra flexibility with their exports, as the option is now available to change not only the variable, but the type itself.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/export-variant.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.webm?1" type="video/webm" />
 &lt;/video>
 &lt;h3 id="stackable-outlines-on-label">Stackable outlines on &lt;code class="language-plaintext highlighter-rouge">Label&lt;/code>&lt;/h3>
 &lt;p>Have you ever been in the situation where you want to add fancy outline or shadow effects to your text, only to realize that you’re stuck with only one of each? Sure, you can double-up the amount of text objects directly atop one-another, but that’s cumbersome and doesn’t account for outlines affecting other outlines. There must be a better way! Well, thanks to the efforts of &lt;a href="https://github.com/Delsin-Yu">Delsin-Yu&lt;/a>, users no longer have to struggle with this moral conundrum. Instead, they can simply take advantage of &lt;a href="https://github.com/godotengine/godot/pull/104731">GH-104731&lt;/a> adding support for stacked layers of effects; no cumbersome workarounds required.&lt;/p>
-&lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/stacked-outlines.webp" alt="Stacked outlines" />&lt;/p>
+&lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-4/stacked-outlines.webp" alt="Stacked outlines" />&lt;/p>
 &lt;h3 id="specular-occlusion-from-ambient-light">Specular occlusion from ambient light&lt;/h3>
 &lt;p>Our renderer currently lacks a cheap option for specular occlusion, causing certain metallic/reflective materials to still receive reflections when they should be darkened/occluded. &lt;a href="https://github.com/lander-vr">Lander&lt;/a> rectified this limitation in &lt;a href="https://github.com/godotengine/godot/pull/106145">GH-106145&lt;/a>, where specular occlusion is added based on ambient light. As users might prefer the old visuals, this is now handled through a toggle in the project settings. The differences can be observed here:&lt;/p>
 &lt;table>
@@ -35,16 +35,16 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/specular-disabled-1.webp" alt="Specular disabled 1" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/specular-enabled-1.webp" alt="Specular enabled 1" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-4/specular-disabled-1.webp" alt="Specular disabled 1" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-4/specular-enabled-1.webp" alt="Specular enabled 1" width="350" />&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/specular-disabled-2.webp" alt="Specular disabled 2" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/specular-enabled-2.webp" alt="Specular enabled 2" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-4/specular-disabled-2.webp" alt="Specular disabled 2" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-4/specular-enabled-2.webp" alt="Specular enabled 2" width="350" />&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/specular-disabled-3.webp" alt="Specular disabled 3" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/specular-enabled-3.webp" alt="Specular enabled 3" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-4/specular-disabled-3.webp" alt="Specular disabled 3" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-4/specular-enabled-3.webp" alt="Specular enabled 3" width="350" />&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
