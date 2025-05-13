@@ -15,7 +15,7 @@ To everyone who ended up going to GodotCon this past week, we hope you had a saf
 
 ---
 
-*The cover illustration is from* [**Ambidextro**](https://store.steampowered.com/app/3445580/Ambidextro/?curator_clanid=41324400), *a precision-platformer where you must control two characters simultaneously, one with each hand. It is developed by [Majorariatto](https://www.majorariatto.com/). You can get the game [on Steam](https://store.steampowered.com/app/3445580/Ambidextro/?curator_clanid=41324400) and follow the developer on [Twitter](https://twitter.com/majorariatto).*
+*The cover illustration is from* [**Ambidextro**](https://www.majorariatto.com/ambidextro), *a precision-platformer where you must control two characters simultaneously, one with each hand. It is developed by [Majorariatto](https://www.majorariatto.com/) ([Twitter](https://twitter.com/majorariatto)). You can get the game on [Steam](https://store.steampowered.com/app/3445580/Ambidextro/?curator_clanid=41324400), [Nintendo Switch](https://www.nintendo.com/store/products/ambidextro-switch/), and [Xbox](https://www.xbox.com/games/store/ambidextro/9nk9bnkcbvj4).*
 
 ## Highlights
 
