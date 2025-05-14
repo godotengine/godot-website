@@ -1,6 +1,6 @@
 ---
 title: "Godot Showcase - Somar"
-excerpt: "We interviewed Frederic Plourde from Collabora and Daniel Castellanos from Decasis about the Somar project."
+excerpt: "We interviewed Frédéric Plourde from Collabora and Daniel Castellanos from Decasis about the Somar project."
 categories: ["showcase"]
 author: Bastiaan Olij
 image: /storage/blog/covers/godot-showcase-the-somar-project.webp
@@ -16,9 +16,9 @@ date: 2025-05-02 15:00:00
 }
 </style>
 
-Today we present a showcase that is a little different. We interviewed Frederic Plourde and Daniel Castellanos who used Godot to create an educational XR experience for [SOMAR](https://somarbio.pt/), a non-profit association focusing on the conservation of marine life in the Algarve.
+Today we present a showcase that is a little different. We interviewed Frédéric Plourde and Daniel Castellanos who used Godot to create an educational XR experience for [SOMAR](https://somarbio.pt/), a non-profit association focusing on the conservation of marine life in the Algarve.
 
-Frederic Plourde is the XR Lead at Collabora where he drives AR/VR strategy, business development, and open-source innovation, leading a team of talented engineers working on XR customer projects and Monado, the cross-platform open-source OpenXR runtime. He is also Vice Outreach Officer at the Khronos Group where he promotes the OpenXR standard, fosters industry collaboration, and advocates for open and interoperable XR solutions. In the SOMAR project, Frederic took on a technical leadership role, overviewing the development of an immersive XR experience and leading Collabora’s efforts toward developing a Cardboard driver for Monado.
+Frédéric Plourde is the XR Lead at Collabora where he drives AR/VR strategy, business development, and open-source innovation, leading a team of talented engineers working on XR customer projects and Monado, the cross-platform open-source OpenXR runtime. He is also Vice Outreach Officer at the Khronos Group where he promotes the OpenXR standard, fosters industry collaboration, and advocates for open and interoperable XR solutions. In the SOMAR project, Frédéric took on a technical leadership role, overviewing the development of an immersive XR experience and leading Collabora’s efforts toward developing a Cardboard driver for Monado.
 
 Daniel Castellanos is the owner of Decacis Studio, and was contracted by Collabora to work mainly as a programmer/developer on the SOMAR project.
 
