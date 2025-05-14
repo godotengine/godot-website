@@ -15,7 +15,7 @@ To everyone who ended up going to GodotCon this past week, we hope you had a saf
 
 ---
 
-*The cover illustration is from* [**Ambidextro**](https://www.majorariatto.com/ambidextro), *a precision-platformer where you must control two characters simultaneously, one with each hand. It is developed by [Majorariatto](https://www.majorariatto.com/) ([Twitter](https://twitter.com/majorariatto)). You can get the game on [Steam](https://store.steampowered.com/app/3445580/Ambidextro/?curator_clanid=41324400), [Nintendo Switch](https://www.nintendo.com/store/products/ambidextro-switch/), and [Xbox](https://www.xbox.com/games/store/ambidextro/9nk9bnkcbvj4).*
+*The cover illustration is from* [**Ambidextro**](https://www.majorariatto.com/ambidextro), *a precision-platformer where you must control two characters simultaneously, one with each hand. It is developed by [Majorariatto](https://www.majorariatto.com/) ([BlueSky](https://bsky.app/profile/alvamajo.com), [Twitter](https://twitter.com/majorariatto)). You can get the game on [Steam](https://store.steampowered.com/app/3445580/Ambidextro/?curator_clanid=41324400), [Nintendo Switch](https://www.nintendo.com/store/products/ambidextro-switch/), and [Xbox](https://www.xbox.com/games/store/ambidextro/9nk9bnkcbvj4).*
 
 ## Highlights
 
@@ -107,7 +107,7 @@ This release is built from commit [`209a446e3`](https://github.com/godotengine/g
 
 ## Known issues
 
-There are currently no known issues introduced by this release.
+- Windows executables (both the editor and export templates) have been signed with an expired certificate. You may see warnings from Windows Defender's SmartScreen when running this version, or outright be prevented from running the executables with a double-click ([GH-106373](https://github.com/godotengine/godot/issues/106373)). Running Godot from the command line can circumvent this. We will soon have a renewed certificate which will be used for future builds.
 
 With every release, we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
