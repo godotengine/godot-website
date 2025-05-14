@@ -32,7 +32,7 @@
 						<a class="mobile-language-selector" href="#">{% t header.language %}: </a>
 						<div class="language-dropdown">
 							{% for lang in page.localize %}
-								<div class="language-option"><a href="#" data-lang-path="{% if lang == 'en' %}/{% else %}/{{ lang }}/{% endif %}" data-lang="{{ lang }}" onclick="setLanguagePreference(event, this)"><span class="localize-language-label">{{ lang }}</span></a></div>
+								<div class="language-option"><a href="#" data-lang-path="{% if lang == 'en' %}/{% else %}/{{ lang }}/{% endif %}" data-lang="{{ lang }}" onclick="onSetLanguagePreference(event, this)"><span class="localize-language-label">{{ lang }}</span></a></div>
 							{% endfor %}
 						</div>
 					</li>
@@ -60,32 +60,154 @@
 	{% endcomment %}
 </header>
 
-<script>
-	document.addEventListener('click', function(event) {
-		const languageSelector = document.querySelector('.language-selector');
-		if (!languageSelector) return;
+{% if page.localize %}
+<script type="module">
+	let _languageSelector = null;
 
-		// Check if the click is outside the language selector
-		if (!languageSelector.contains(event.target)) {
-				languageSelector.classList.remove('open');
+	function isLanguageMatch(langA, langB, lax = false) {
+		const langALower = (langA ?? "").toLowerCase();
+		const langBLower = (langB ?? "").toLowerCase();
+		if (langALower === langBLower) {
+			return true;
 		}
-	});
+		if (!lax) {
+			return false;
+		}
+		return langALower.slice(0, 2) === langBLower.slice(0, 2);
+	}
 
-	function setLanguagePreference(event, element) {
-		event.preventDefault();
-		const path = element.getAttribute('data-lang-path');
-		const lang = element.getAttribute('data-lang');
-		
-		// Set cookie that expires in 365 days
-		const expirationDate = new Date();
-		expirationDate.setDate(expirationDate.getDate() + 365);
-		document.cookie = `preferred_language=${lang}; expires=${expirationDate.toUTCString()}; path=/; SameSite=Lax`;
-		
-		// Redirect to the language-specific path
+	function redirectTo(path) {
+		if (path == null) {
+			return;
+		}
 		window.location.href = path;
 	}
 
-	
+	function getLanguageSelector() {
+		if (_languageSelector != null) {
+			return _languageSelector;
+		}
+		_languageSelector = document.querySelector(".language-selector");
+		if (_languageSelector == null) {
+			throw new Error("Could not find `.language-selector`");
+		}
+		return _languageSelector;
+	}
+
+	function setPreferredLanguage(lang) {
+		window.localStorage.setItem("preferred_language", lang);
+	}
+
+	function getPreferredLanguage() {
+		return window.localStorage.getItem("preferred_language");
+	}
+
+	function setLanguagePreference(path, lang) {
+		setPreferredLanguage(lang);
+		redirectTo(path);
+	}
+
+	function getLanguagePath(lang) {
+		const languageSelector = getLanguageSelector();
+		const languageAnchors = Array.from(
+			languageSelector.querySelectorAll(".language-option > a[data-lang]"),
+		);
+		for (const languageAnchor of languageAnchors) {
+			if (isLanguageMatch(lang, languageAnchor.dataset.lang)) {
+				return languageAnchor.dataset.langPath;
+			}
+		}
+		return null;
+	}
+
+	function getBrowserPreferredLanguage() {
+		const languageSelector = getLanguageSelector();
+		const languageAnchors = Array.from(
+			languageSelector.querySelectorAll(".language-option > a[data-lang]"),
+		);
+		const languages = languageAnchors.map(
+			(languageAnchor) => languageAnchor.dataset.lang,
+		);
+
+		const matchLanguage = (currentLanguage) => {
+			for (const language of languages) {
+				if (isLanguageMatch(navigator.language, language)) {
+					return language;
+				}
+			}
+			for (const language of languages) {
+				if (isLanguageMatch(navigator.language, language, true)) {
+					return language;
+				}
+			}
+			return null;
+		};
+
+		let matchedLanguage = null;
+
+		if (navigator.language != null) {
+			matchedLanguage = matchLanguage(navigator.language);
+			if (matchedLanguage != null) {
+				return matchedLanguage;
+			}
+		}
+
+		for (const navigatorLanguage of navigator.languages ?? []) {
+			matchedLanguage = matchLanguage(navigatorLanguage);
+			if (matchedLanguage != null) {
+				return matchedLanguage;
+			}
+		}
+
+		return matchedLanguage;
+	}
+
+	function main() {
+		document.addEventListener("click", function (event) {
+			const languageSelector = getLanguageSelector();
+			// Check if the click is outside the language selector
+			if (!languageSelector.contains(event.target)) {
+				languageSelector.classList.remove("open");
+			}
+		});
+
+		const currentLanguage = document.documentElement.lang;
+		const preferredLanguage = getPreferredLanguage();
+		if (preferredLanguage == null) {
+			const browserPreferredLanguage = getBrowserPreferredLanguage();
+			if (browserPreferredLanguage == null) {
+				setPreferredLanguage("en");
+				const languagePath = getLanguagePath("en");
+				if (!window.location.href.startsWith(languagePath)) {
+					redirectTo(languagePath);
+				}
+			} else {
+				setPreferredLanguage(browserPreferredLanguage);
+				const languagePath = getLanguagePath(browserPreferredLanguage);
+				if (!window.location.href.startsWith(languagePath)) {
+					redirectTo(languagePath);
+				}
+			}
+		} else if (preferredLanguage !== currentLanguage && currentLanguage === "en") {
+			const languagePath = getLanguagePath(preferredLanguage);
+			if (!window.location.href.startsWith(languagePath)) {
+				redirectTo(languagePath);
+			}
+		} else {
+			setPreferredLanguage(currentLanguage);
+		}
+
+		// Language select event listener.
+		window.onSetLanguagePreference = (event, element) => {
+			event.preventDefault();
+			const path = element.dataset.langPath;
+			const lang = element.dataset.lang;
+			setLanguagePreference(path, lang);
+		};
+	}
+
+	main();
 </script>
+{% endif %}
 
 <main>
