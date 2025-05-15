@@ -19,7 +19,7 @@ To everyone who ended up going to GodotCon this past week, we hope you had a saf
 
 ## Highlights
 
-In case you missed them, see the [4.5 dev 1](/article/dev-snapshot-godot-4-5-dev-1/), [4.5 dev 2](/article/dev-snapshot-godot-4-5-dev-2/), and [4.5 dev 3](/article/dev-snapshot-godot-4-5-dev-2/) release notes for an overview of some key features which were already in those snapshots, and are therefore still available for testing in dev 4.
+In case you missed them, see the [4.5 dev 1](/article/dev-snapshot-godot-4-5-dev-1/), [4.5 dev 2](/article/dev-snapshot-godot-4-5-dev-2/), and [4.5 dev 3](/article/dev-snapshot-godot-4-5-dev-3/) release notes for an overview of some key features which were already in those snapshots, and are therefore still available for testing in dev 4.
 
 ### macOS: Embedded window support
 
