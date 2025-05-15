@@ -8,6 +8,15 @@ Argentina:
     links:
       - title: Discord
         url: https://discord.gg/2BtycSPdkk
+  - name: Godot Meetup Argentina
+    coordinates:
+      - -34.59339
+      - -58.4229045
+    links:
+      - title: WhatsApp
+        url: https://chat.whatsapp.com/C0LzScYdKBP0zjsPYcAgOs
+      - title: Instagram
+        url: https://www.instagram.com/godotmeetuparg/
 Austria:
   - name: Godot User Group Austria
     coordinates:
