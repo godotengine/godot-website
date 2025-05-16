@@ -46,7 +46,7 @@ home:
   subtitle: بازی‌های دوبعدی و سه‌بعدی، پروژه‌های چندسکویی و حتی ایده‌های ایکس.آر (واقعیت گسترده) خود را توسعه دهید!
   whats_new: تازه‌ها
   download_latest: بارگیری آخرین
-  looking_for: 'Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a>, our <a href="/download/archive">experimental releases</a>, or a <a href="/download/archive">previous version</a>?'
+  looking_for: 'دنبال <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">گودوت ۳</a>، <a href="/download/archive">رهش‌های آزمایشی</a> یا <a href="/download/archive">نسخه‌های پیشین</a> هستید؟'
   latest_news: آخرین خبرها
   more_news: خبرهای بیشتر
   cards:
@@ -57,34 +57,34 @@ home:
     script:
       title: از زبان درست برای کار بهره ببرید
       text: کد خود را با اِی.پی.آیی شیءگرا با به‌کارگیری سی‌شارپ، سی‌پلاس‌پلاس یا زبان خود گودوت، جی‌دی‌اسکریپت، پودمانی کنید یا برای خودتان را با جی‌دی‌اِکستِنشِن بیاورید.
-      extra: C# support is currently only available for desktop and mobile platforms as of Godot 4.2.<br>Use Godot 3 to run C# on the Web platform.
+      extra: پشتیبانی از سی‌شارپ از ۴.۲ تنها برای سکوهای رومیزی و گوشی دردسترس است.<br>برای اجرای سی‌شارپ در سکوی وب گودوت ۳ را به کار ببرید.
     2d:
-      title: Dedicated 2D engine
-      text: Make crisp and performant 2D games with Godot's dedicated 2D rendering engine with real 2D pixel coordinates and 2D nodes.
+      title: موتور اختصاصی دوبعدی
+      text: با موتور پردازش اختصاصی دوبعدی گودوت همراه با مختصات پیکسل دوبعدی واقعی و گره‌های دوبعدی بازی‌های شفاف و خوش‌کارایی بسازید.
     3d:
-      title: Simple and powerful 3D
-      text: Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds and characters.
+      title: سه‌بعدی ساده و توانمند
+      text: گره‌های سه‌بعدی گودوت هرچیزی که برای ساختن، پویانمایش و پردازش شخصیت‌ها و جهان‌های سه‌بعدی خود به آن نیاز دارید را می‌دهند.
     deploy:
-      title: Release on all platforms
-      text: Deploy your game on desktop, mobile, and the web in seconds. Godot even supports consoles through third party publishers.
+      title: رهش روی همهٔ سکوها
+      text: در تنها چند ثانیه بازی خود را روی رایانه، وب و گوشی پیاده‌سازی کنید. گودوت از راه نشردهندگان شخص ثالث حتی از کنسول‌ها هم پشتیبانی می‌کند.
     open:
-      title: Open Source
-      text: "Truly open development: anyone who contributes to Godot benefits equally from others’ contributions."
-    cta: Learn more about using Godot
+      title: متن‌باز
+      text: "توسعهٔ واقعاً باز و آزاد: هر کس که با گودوت مشارکت کند به همان اندازه از مشارکت دیگران سود خواهد جست."
+    cta: دربارهٔ به‌کارگیری گودوت بیشتر بیاموزید
   get_involved:
-    title: Get involved
-    text: Join the community and help create a game engine that belongs to everybody.
+    title: دست‌به‌کار شوید
+    text: به جامعه بپیوندید و کمک کنید موتور بازی‌سازی‌ای برای همه بسازیم.
     cards:
-      cta: Learn more
+      cta: اطلاعات بیشتر
       code:
-        title: Code
-        text: If you know how to code, you can help by fixing bugs and working with engine contributors towards the implementation of new features.
+        title: کد
+        text: اگر کدنویسی می‌دانید می‌توانید با درست کردن اشکال‌ها و کار کردن با مشارکت‌کنندگان موتور برای پیاده‌سازی ویژگی‌های نو کمک کنید.
       document:
-        title: Document
-        text: Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections.
+        title: مستند‌سازی
+        text: کیفیت مستندات برای موتورهای بازی‌سازی بایسته و ضروری‌ست؛ با به‌روزرسانی بازبرد اِی.پی.آی، نوشتن راهنماهای نو یا ثبت کردن تصحیح‌ها به بهسازی آن کمک کنید.
       report:
-        title: Report
-        text: Found a problem with the engine? Don't forget to report it so that developers can track it down.
+        title: گزارش
+        text: مشکلی در موتور یافتید؟ آن را گزارش کنید تا توسعه‌دهندگان به آن رسیدگی کنند.
   foundation:
-    text: "You don't need to be an engine developer to help Godot. Join the <a href='https://fund.godotengine.org/'>development fund</a> and help us make the Godot&nbsp;Engine even more awesome!"
-    donate: Donate
+    text: "برای کمک به گودوت نیاز نیست که توسعه‌دهنده باشید. به <a href='https://fund.godotengine.org/'>صندوق توسعه</a> بپیوندید و به ما کمک کنید تا موتور گودوت را عالی‌تر کنیم!"
+    donate: پشتیبانی مالی
