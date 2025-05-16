@@ -239,7 +239,7 @@ localize: ["de", "en", "es", "fr", "ko", "zh-cn", "zh-tw"]
 
 <section class="container padded">
 	<h2>{% t home.latest_news %}</h2>
-	<div class="flex eqsize responsive" style="gap: 30px;">
+	<div class="flex eqsize responsive" style="gap: 30px;" dir="ltr">
 
 		{% assign latest_posts = site.article | sort:"date" | reverse %}
 		{% for post in latest_posts limit:1 %}
