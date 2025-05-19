@@ -1,0 +1,91 @@
+meta:
+  description: "2D・3Dゲーム、クロスプラットフォームプロジェクト、XRアイデアまで幅広く対応！"
+header:
+  features: "特長"
+  showcase: "ショーケース"
+  blog: "ブログ"
+  community: "コミュニティ"
+  assets: "アセット"
+  download: "ダウンロード"
+  docs: "ドキュメント"
+  contribute: "貢献する"
+  donate: "寄付する"
+  language: "言語"
+footer:
+  godot_engine: "Godotエンジン"
+  download: "ダウンロード"
+  documentation: "ドキュメント"
+  features: "特長"
+  web_editor: "Webエディター"
+  release_archive: "リリースアーカイブ"
+  source_code: "ソースコード"
+  project: "プロジェクト"
+  blog: "ブログ"
+  code_of_conduct: "行動規範"
+  governance: "ガバナンス"
+  teams: "チーム"
+  priorities: "優先事項"
+  communities: "コミュニティ"
+  resources: "リソース"
+  asset_library: "アセットライブラリ"
+  press_kit: "プレスキット"
+  showcase: "ショーケース"
+  education: "教育"
+  foundation: "財団"
+  about: "概要"
+  donate: "寄付する"
+  license: "ライセンス"
+  privacy_policy: "プライバシーポリシー"
+  contact_us: "お問い合わせ"
+  text: "Juan Linietsky, Ariel Manzur and <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>contributors</a>. <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>によってホストされています。ウェブサイトの<a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>ソースコードはGitHubにあります</a>。"
+sponsors:
+  title: "Godotは以下のスポンサーに支えられています"
+  text: "法人スポンサーにご興味のある方は<a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>までご連絡ください。個人の方は開発ファンド経由で寄付が可能です。"
+  cta: "寄付する"
+home:
+  h1: "無料・オープンソースのゲームエンジン"
+  subtitle: "2D・3Dゲーム、クロスプラットフォームプロジェクト、XRアイデアまで幅広く対応！"
+  whats_new: "最新情報を見る"
+  download_latest: "最新版をダウンロード"
+  looking_for: "<a href='/download/windows/' class='set-os-download-url' data-version='3' title='Download the long-term support version of Godot 3'>Godot 3</a>や<a href='/download/archive'>実験的バージョン</a>、または<a href='/download/archive'>過去のリリース</a>をお探しですか？"
+  latest_news: "最新ニュース"
+  more_news: "過去のニュース"
+  cards:
+    h2: "ゲーム開発の新しいかたち"
+    design:
+      title: "革新的な設計"
+      text: "Godotのノード＆シーンシステムは、自由度とパワーを兼ね備え、あらゆるゲーム制作に対応します"
+    script:
+      title: "プロジェクトに最適な言語を選べます"
+      text: "GDScript、C#、C++、またはGDExtensionを使って、オブジェクト指向のAPIでモジュール化されたコードを記述"
+      extra: "Godot 4.2では、C#の対応はデスクトップおよびモバイルプラットフォームに限定されています。WebプラットフォームでC#を使いたい場合は、Godot 3をご利用ください。"
+    2d:
+      title: "専用2Dエンジン"
+      text: "実際のピクセル座標と2Dノードを活用し、シャープで高性能な2Dゲームを実現"
+    3d:
+      title: "シンプルかつ強力な3Dエンジン"
+      text: "モデル構築からアニメーション、レンダリングまで、3Dノードがすべてをサポート"
+    deploy:
+      title: "あらゆるプラットフォームにリリース"
+      text: "デスクトップ、モバイル、Webへ数秒でデプロイ。サードパーティパブリッシャー経由で家庭用ゲーム機にも対応"
+    open:
+      title: "オープンソース"
+      text: "完全にオープンな開発環境：貢献するすべての人が、他の貢献からも恩恵を受けられます"
+    cta: "詳しくはこちら"
+  get_involved:
+    title: "参加しよう"
+    text: "コミュニティに参加し、みんなのためのゲームエンジンづくりに貢献しよう"
+    cards:
+      cta: "詳しくはこちら"
+      code:
+        title: "コードで貢献"
+        text: "コーディングが得意な方は、バグ修正や新機能の実装でエンジン開発に貢献できます"
+      document:
+        title: "ドキュメントで貢献"
+        text: "ドキュメントはゲームエンジンにとって重要です。APIリファレンスの更新、新しいガイドの作成、誤りの修正で品質向上にご協力ください"
+      report:
+        title: "問題を報告"
+        text: "エンジンに問題を見つけたら、開発者が修正できるようぜひご報告ください"
+  foundation:
+    text: "エンジン開発者でなくてもGodotを支援できます。開発ファンドに参加して、Godotをもっと素晴らしいエンジンにしましょう！"
+    donate: "寄付する"
