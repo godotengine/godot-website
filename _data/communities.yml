@@ -201,6 +201,10 @@ Germany:
         url: https://www.meetup.com/de-DE/godot-stammtisch-karlsruhe/
       - title: Discord
         url: https://discord.gg/JFzUhpEt6Q
+      - title: Bluesky
+        url: https://bsky.app/profile/godot-karlsruhe.de
+      - title: Mastodon
+        url: https://mastodon.gamedev.place/@godot_karlsruhe
   - name: Godot Köln/Bonn
     coordinates:
       - 50.937531
