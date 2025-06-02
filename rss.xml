@@ -41,17 +41,48 @@
 &lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/inline-color-picker.webp" alt="Inline color picker" />&lt;/p>
 &lt;h3 id="rendering-goodies">Rendering goodies&lt;/h3>
 &lt;p>The renderer got a fair amount of love this snapshot; not from any one PR, but rather a multitude of community members bringing some long-awaited features to light. &lt;a href="https://github.com/RGDTAB">Raymond DiDonato&lt;/a> helped SMAA 1x make its transition from addon to fully-fledged engine feature (&lt;a href="https://github.com/godotengine/godot/pull/102330">GH-102330&lt;/a>). &lt;a href="https://github.com/LunaCapra">Capry&lt;/a> brings bent normal maps to further enhance specular occlusion and indirect lighting (&lt;a href="https://github.com/godotengine/godot/pull/89988">GH-89988&lt;/a>). Our very own &lt;a href="https://github.com/clayjohn">Clay John&lt;/a> converted our Compatibility backend to use a fragment shader copy instead of a blit copy, working around common sample rate issues on mobile devices (&lt;a href="https://github.com/godotengine/godot/pull/106267">GH-106267&lt;/a>). More technical information on these rendering changes can be found in their associated PRs.&lt;/p>
-&lt;p>&lt;strong>SMAA comparison:&lt;/strong>
-| Off | On |
-| :————————————————————————————————–: | :————————————————————————————————: |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-1.webp" alt="SMAA off 1" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-1.webp" alt="SMAA on 1" width="350" /> |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-2.webp" alt="SMAA off 2" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-2.webp" alt="SMAA on 2" width="350" /> |&lt;/p>
-&lt;p>&lt;strong>Bent normal map comparison:&lt;/strong>
-| Before | After |
-| :————————————————————————————————————————: | :———————————————————————————————————————-: |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-1.webp" alt="Bent normals before 1" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-1.webp" alt="Bent normals after 1" width="350" /> |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-2.webp" alt="Bent normals before 2" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-2.webp" alt="Bent normals after 2" width="350" /> |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-3.webp" alt="Bent normals before 3" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-3.webp" alt="Bent normals after 3" width="350" /> |&lt;/p>
+&lt;p>&lt;strong>SMAA comparison:&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: center">Off&lt;/th>
+&lt;th style="text-align: center">On&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-1.webp" alt="SMAA off 1" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-1.webp" alt="SMAA on 1" width="350" />&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-2.webp" alt="SMAA off 2" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-2.webp" alt="SMAA on 2" width="350" />&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>Bent normal map comparison:&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: center">Before&lt;/th>
+&lt;th style="text-align: center">After&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-1.webp" alt="Bent normals before 1" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-1.webp" alt="Bent normals after 1" width="350" />&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-2.webp" alt="Bent normals before 2" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-2.webp" alt="Bent normals after 2" width="350" />&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-3.webp" alt="Bent normals before 3" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-3.webp" alt="Bent normals after 3" width="350" />&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h3 id="and-more">And more!&lt;/h3>
 &lt;p>There are too many exciting changes to list them all here, but here’s a curated selection:&lt;/p>
 &lt;ul>

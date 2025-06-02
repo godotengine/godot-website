@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-06-02T21:17:17+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.5 dev 5</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-5-dev-5/"/><updated>2025-06-02T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-5-dev-5/</id><summary>The cool chill of the feature freeze approaches…</summary><content type="html">&lt;p>Brrr… Do you feel that? That’s the cold front of the feature freeze just around the corner. It’s not upon us &lt;em>just&lt;/em> yet, but this is likely to be our final development snapshot of the 4.5 release cycle. As we enter the home stretch of new features, bugs are naturally going to follow suit, meaning bug reports and feedback will be especially important for a smooth beta timeframe.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-06-02T21:29:29+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.5 dev 5</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-5-dev-5/"/><updated>2025-06-02T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-5-dev-5/</id><summary>The cool chill of the feature freeze approaches…</summary><content type="html">&lt;p>Brrr… Do you feel that? That’s the cold front of the feature freeze just around the corner. It’s not upon us &lt;em>just&lt;/em> yet, but this is likely to be our final development snapshot of the 4.5 release cycle. As we enter the home stretch of new features, bugs are naturally going to follow suit, meaning bug reports and feedback will be especially important for a smooth beta timeframe.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.5.dev5/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
 &lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://www.walaber.com/replicube">&lt;strong>Replicube&lt;/strong>&lt;/a>, &lt;em>a programming puzzle game where you write code to recreate voxelized objects. It is developed by &lt;a href="https://www.walaber.com/">Walaber Entertainment LLC&lt;/a> (&lt;a href="https://bsky.app/profile/walaber.com">Bluesky&lt;/a>, &lt;a href="https://twitter.com/walaber">Twitter&lt;/a>). You can get the game on &lt;a href="https://store.steampowered.com/app/3401490/Replicube/?curator_clanid=41324400">Steam&lt;/a>.&lt;/em>&lt;/p>
@@ -41,17 +41,48 @@
 &lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/inline-color-picker.webp" alt="Inline color picker" />&lt;/p>
 &lt;h3 id="rendering-goodies">Rendering goodies&lt;/h3>
 &lt;p>The renderer got a fair amount of love this snapshot; not from any one PR, but rather a multitude of community members bringing some long-awaited features to light. &lt;a href="https://github.com/RGDTAB">Raymond DiDonato&lt;/a> helped SMAA 1x make its transition from addon to fully-fledged engine feature (&lt;a href="https://github.com/godotengine/godot/pull/102330">GH-102330&lt;/a>). &lt;a href="https://github.com/LunaCapra">Capry&lt;/a> brings bent normal maps to further enhance specular occlusion and indirect lighting (&lt;a href="https://github.com/godotengine/godot/pull/89988">GH-89988&lt;/a>). Our very own &lt;a href="https://github.com/clayjohn">Clay John&lt;/a> converted our Compatibility backend to use a fragment shader copy instead of a blit copy, working around common sample rate issues on mobile devices (&lt;a href="https://github.com/godotengine/godot/pull/106267">GH-106267&lt;/a>). More technical information on these rendering changes can be found in their associated PRs.&lt;/p>
-&lt;p>&lt;strong>SMAA comparison:&lt;/strong>
-| Off | On |
-| :————————————————————————————————–: | :————————————————————————————————: |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-1.webp" alt="SMAA off 1" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-1.webp" alt="SMAA on 1" width="350" /> |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-2.webp" alt="SMAA off 2" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-2.webp" alt="SMAA on 2" width="350" /> |&lt;/p>
-&lt;p>&lt;strong>Bent normal map comparison:&lt;/strong>
-| Before | After |
-| :————————————————————————————————————————: | :———————————————————————————————————————-: |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-1.webp" alt="Bent normals before 1" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-1.webp" alt="Bent normals after 1" width="350" /> |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-2.webp" alt="Bent normals before 2" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-2.webp" alt="Bent normals after 2" width="350" /> |
-| &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-3.webp" alt="Bent normals before 3" width="350" /> | &lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-3.webp" alt="Bent normals after 3" width="350" /> |&lt;/p>
+&lt;p>&lt;strong>SMAA comparison:&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: center">Off&lt;/th>
+&lt;th style="text-align: center">On&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-1.webp" alt="SMAA off 1" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-1.webp" alt="SMAA on 1" width="350" />&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-2.webp" alt="SMAA off 2" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-2.webp" alt="SMAA on 2" width="350" />&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>Bent normal map comparison:&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: center">Before&lt;/th>
+&lt;th style="text-align: center">After&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-1.webp" alt="Bent normals before 1" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-1.webp" alt="Bent normals after 1" width="350" />&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-2.webp" alt="Bent normals before 2" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-2.webp" alt="Bent normals after 2" width="350" />&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-3.webp" alt="Bent normals before 3" width="350" />&lt;/td>
+&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-3.webp" alt="Bent normals after 3" width="350" />&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h3 id="and-more">And more!&lt;/h3>
 &lt;p>There are too many exciting changes to list them all here, but here’s a curated selection:&lt;/p>
 &lt;ul>
