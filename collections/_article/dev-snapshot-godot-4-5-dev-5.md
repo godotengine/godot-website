@@ -79,12 +79,14 @@ While it's always been possible to see what kind of variable is assigned to an e
 The renderer got a fair amount of love this snapshot; not from any one PR, but rather a multitude of community members bringing some long-awaited features to light. [Raymond DiDonato](https://github.com/RGDTAB) helped SMAA 1x make its transition from addon to fully-fledged engine feature ([GH-102330](https://github.com/godotengine/godot/pull/102330)). [Capry](https://github.com/LunaCapra) brings bent normal maps to further enhance specular occlusion and indirect lighting ([GH-89988](https://github.com/godotengine/godot/pull/89988)). Our very own [Clay John](https://github.com/clayjohn) converted our Compatibility backend to use a fragment shader copy instead of a blit copy, working around common sample rate issues on mobile devices ([GH-106267](https://github.com/godotengine/godot/pull/106267)). More technical information on these rendering changes can be found in their associated PRs.
 
 **SMAA comparison:**
+
 |                                                 Off                                                  |                                                 On                                                 |
 | :--------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: |
 | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-1.webp" alt="SMAA off 1" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-1.webp" alt="SMAA on 1" width="350"/> |
 | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-2.webp" alt="SMAA off 2" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-2.webp" alt="SMAA on 2" width="350"/> |
 
 **Bent normal map comparison:**
+
 |                                                           Before                                                           |                                                          After                                                           |
 | :------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
 | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-1.webp" alt="Bent normals before 1" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-1.webp" alt="Bent normals after 1" width="350"/> |
