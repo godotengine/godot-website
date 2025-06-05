@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-06-05T19:44:08+00:00</updated><id>https://godotengine.org/</id><entry><title>Upcoming (serious) Web performance boost</title><link href="https://godotengine.org/article/upcoming-serious-web-performance-boost/"/><updated>2025-06-05T18:00:00+00:00</updated><id>https://godotengine.org/article/upcoming-serious-web-performance-boost/</id><summary>Compiling the Godot Engine with WASM SIMD support truly is a game changer.</summary><content type="html">&lt;p>Sometimes, just adding a compiler flag can yield significant performance boosts. &lt;a href="https://github.com/godotengine/godot/pull/106319">And that just happened.&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-06-05T22:07:24+00:00</updated><id>https://godotengine.org/</id><entry><title>Upcoming (serious) Web performance boost</title><link href="https://godotengine.org/article/upcoming-serious-web-performance-boost/"/><updated>2025-06-05T18:00:00+00:00</updated><id>https://godotengine.org/article/upcoming-serious-web-performance-boost/</id><summary>Compiling the Godot Engine with WASM SIMD support truly is a game changer.</summary><content type="html">&lt;p>Sometimes, just adding a compiler flag can yield significant performance boosts. &lt;a href="https://github.com/godotengine/godot/pull/106319">And that just happened.&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://caniuse.com/wasm-simd">For about two years now&lt;/a>, all major browsers have supported WASM (&lt;a href="https://en.wikipedia.org/wiki/WebAssembly">WebAssembly&lt;/a>) SIMD. &lt;a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data">SIMD stands for “Single instruction, multiple data”.&lt;/a> It is a technology that permits CPUs to do some parallel computation, often speeding up the whole program. And that’s exactly why we tried it out recently.&lt;/p>
 &lt;p>We got positive results.&lt;/p>
 &lt;h2 id="the-need-for-performance-on-the-web">The need for performance on the Web&lt;/h2>
@@ -12,7 +12,7 @@
 &lt;ul>
 &lt;li>&lt;strong>CPU:&lt;/strong> Intel Core i9-13900K&lt;/li>
 &lt;li>&lt;strong>GPU:&lt;/strong> NVIDIA GeForce RTX 4090&lt;/li>
-&lt;li>&lt;strong>RAM:&lt;/strong> 64 GB (2×32 GB DDR5-5800 C30)&lt;/li>
+&lt;li>&lt;strong>RAM:&lt;/strong> 64 GB (2×32 GB DDR5-5800 CL30)&lt;/li>
 &lt;li>&lt;strong>SSD:&lt;/strong> Solidigm P44 Pro 2 TB&lt;/li>
 &lt;li>&lt;strong>OS:&lt;/strong> Linux (Fedora 42)&lt;/li>
 &lt;/ul>
