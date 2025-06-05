@@ -30,7 +30,7 @@ Our resident benchmark expert Hugo Locurcio (better known as [Calinou](https://g
 
 - **CPU:** Intel Core i9-13900K
 - **GPU:** NVIDIA GeForce RTX 4090
-- **RAM:** 64 GB (2×32 GB DDR5-5800 C30)
+- **RAM:** 64 GB (2×32 GB DDR5-5800 CL30)
 - **SSD:** Solidigm P44 Pro 2 TB
 - **OS:** Linux (Fedora 42)
 </div>
