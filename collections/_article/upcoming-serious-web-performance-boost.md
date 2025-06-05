@@ -4,7 +4,7 @@ excerpt: "Compiling the Godot Engine with WASM SIMD support truly is a game chan
 categories: ["progress-report"]
 author: Adam Scott
 image: /storage/blog/covers/upcoming-serious-web-performance-boost.webp
-date: 2025-05-21 18:00:00
+date: 2025-06-05 18:00:00
 ---
 
 Sometimes, just adding a compiler flag can yield significant performance boosts. [And that just happened.](https://github.com/godotengine/godot/pull/106319)
