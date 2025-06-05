@@ -9,15 +9,15 @@ date: 2025-06-05 18:00:00
 
 Sometimes, just adding a compiler flag can yield significant performance boosts. [And that just happened.](https://github.com/godotengine/godot/pull/106319)
 
-[For about two years now](https://caniuse.com/wasm-simd), all major browsers have supported WASM ([WebAssembly](https://en.wikipedia.org/wiki/WebAssembly)) SIMD. [SIMD stands for "Single instruction, multiple data".](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) It is a technology that permits CPUs to do some parallel computation, often speeding up the whole program. And that's exactly why we tried it out recently.
+[For about two years now](https://caniuse.com/wasm-simd), all major browsers have supported WASM ([WebAssembly](https://en.wikipedia.org/wiki/WebAssembly)) SIMD. SIMD stands for ["Single instruction, multiple data"](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) and is a technology that permits CPUs to do some parallel computation, often speeding up the whole program. And that's exactly why we tried it out recently.
 
 We got positive results.
 
 ## The need for performance on the Web
 
-The Web platform is often overlooked as a viable target, because of it's less-than-ideal environment and it's percieved poor performance. And the perception is somewhat right: the Web environment has a lot of security-related quirks to take into account—the user needs to interact with a game frame before the browser allows it to play any sound[^1]. Also, due to bandwidth and compatibility-reasons, you rarely see high-fidelity games being played on a browser. Performance is better achieved when running software natively on the operating system.
+The Web platform is often overlooked as a viable target, because of its less-than-ideal environment and its perceived poor performance. And the perception is somewhat right: the Web environment has a lot of security-related quirks to take into account—the user needs to interact with a game frame before the browser allows it to play any sound[^1]. Also, due to bandwidth and compatibility reasons, you rarely see high-fidelity games being played on a browser. Performance is better achieved when running software natively on the operating system.
 
-But don't underestimate the potential of the Web platform. As I explained in broad terms at the talk I gave at the last GodotCon Boston 2025, the Web has caught up a lot since the days of Flash games. Not only there's more and more people playing Web games every year, but standards and browsers improve every year in functionality and in performance too.
+But don't underestimate the potential of the Web platform. As I explained in broad terms at the talk I gave at the last GodotCon Boston 2025, the Web has caught up a lot since the days of Flash games. Not only are there more people playing Web games every year, but standards and browsers improve every year in functionality and in performance.
 
 And that's why we are interested in using WASM SIMD.
 
@@ -63,6 +63,6 @@ If you need to use non-SIMD templates, don't fret. You can always [build](https:
 
 As I wrote in [my last blog post](/article/live-from-godotcon-boston-web-dotnet-prototype/), we're currently working very hard to make C#/.NET exports a reality. We do have [a promising prototype](https://lab.godotengine.org/godot-dotnet-web/), we just need to make sure that it's production-ready.
 
-I also mentionned in that article that I wanted to concentrate on improving our asset loading game. Preloading an entire game before even starting it hinders the ability to use Godot for commercial Web games. Once something is implemented to improve that issue, count on me to share you the news.
+I also mentioned in that article that I wanted to concentrate on improving our asset loading game. Preloading an entire game before even starting it hinders the ability to use Godot for commercial Web games. Once something is implemented to improve that issue, count on me to share the news with you.
 
 [^1]: It's either that, or we return to the old days of spam-webpages using the ["Congratulations, you won!"](https://www.youtube.com/watch?v=WckVsX5-uyE) sound effect when you least expect it.
