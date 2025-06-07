@@ -11,6 +11,7 @@ header:
   contribute: 贡献
   donate: 捐助
   language: 语言
+  console_support: 主机支持
 footer:
   download: 下载
   documentation: 文档
@@ -30,6 +31,7 @@ footer:
   press_kit: 宣传材料
   showcase: 案例展示
   education: 教育
+  console_support: 主机支持
   foundation: 基金会
   about: 关于
   donate: 捐助
