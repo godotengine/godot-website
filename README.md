@@ -1,10 +1,4 @@
-
-<div style="text-align: center; font-size: 1.5em; color:#478cbf;">
-
-# Godot Engine Website </div>
-<div style="max-width: 480px;margin: 0 auto;">
-
-![Godot Logo](assets/press/logo_small_color_dark.svg) </div>
+# Godot Engine Website
 
 Welcome to the source code for the Godot Engine website. This is a static website, generated offline using
 [Jekyll](https://jekyllrb.com/).   
