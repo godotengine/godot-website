@@ -1,11 +1,39 @@
-# Godot Engine Website
+
+<div style="text-align: center; font-size: 1.5em; color:#478cbf;">
+
+# Godot Engine Website </div>
+<div style="max-width: 480px;margin: 0 auto;">
+
+![Godot Logo](assets/press/logo_small_color_dark.svg) </div>
 
 Welcome to the source code for the Godot Engine website. This is a static website, generated offline using
-[Jekyll](https://jekyllrb.com/).
+[Jekyll](https://jekyllrb.com/).   
+
+
+### Table of Contents
+  - [Contributing](#contributing)
+  - [Browser Support](#browser-support)
+  - [Development](#development)
+    - [Building](#building)
+      - [Pre-requisites](#pre-requisites)
+      - [Building the website locally](#building-the-website-locally)
+      - [Building the website using Docker](#building-the-website-using-docker)
+      - [Local server](#local-server)
+    - [Deployment](#deployment)
+  - [Project structure](#project-structure)
+    - [Content data and metadata](#content-data-and-metadata)
+    - [Content pages and templates](#content-pages-and-templates)
+    - [File storage](#file-storage)
+    - [Build system](#build-system)
+  - [Content update guidelines](#content-update-guidelines)
+    - [Updating Godot download version](#updating-godot-download-version)
+    - [Localizing the website](#localizing-the-website)
+    - [Adding a mirrorlist host](#adding-a-mirrorlist-host)
+  - [Resources](#resources)
+***
 
 ## Contributing
-
-Contributions are always welcome! Godot's website is open source, just like Godot Engine.
+Contributions[^1] are always welcome! Godot's website is open source, just like Godot Engine.
 
 However, when contributing to the website, it is important to keep in mind that it acts as a public face of the Godot
 organization and community. Thus, substantial changes must be discussed ahead of time. You don't necessarily need to
@@ -13,28 +41,52 @@ open a formal Godot improvement proposal like you do with engine features, but s
 or joining the discussion on the [Godot Contributors Chat](https://chat.godotengine.org/channel/website) is a good
 idea.
 
-## Browser support
+[^1]: https://docs.godotengine.org/en/latest/contributing/workflow/index.html
+[^2]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
+[^3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 
-When working on new features, keep in mind this website only supports _evergreen browsers_:
+## Browser Support
 
-- Chrome (latest version and N-1 version)
-- Edge (latest version and N-1 version)
-- Firefox (latest version, N-1 version, and latest ESR version)
-- Opera (latest version and N-1 version)
-- Safari (latest version and N-1 version)
+When working on new features[^2][^3], keep in mind this website only supports _evergreen browsers_:
 
-**Internet Explorer isn't supported.**
+- **Chrome** (latest version and N-1 version)
+- **Edge** (latest version and N-1 version)
+- **Firefox** (latest version, N-1 version, and latest ESR version)
+- **Opera** (latest version and N-1 version)
+- **Safari** (latest version and N-1 version)
+
+> [!IMPORTANT]
+> Internet Explorer isn't supported.
 
 ## Development
 
 ### Building
+
+#### Pre-requisites
+- On Local Machine:
+  - Ruby 3.1.2 with [rbenv](https://github.com/rbenv/rbenv) and [*(For windows)*](https://github.com/RubyMetric/rbenv-for-windows#readme)
+  - Jekyll - [Jekyll Website](https://jekyllrb.com/)
+  - Minify - [Minify GitHub](https://github.com/tdewolff/minify)
+- On Docker:
+  - [Docker](https://www.docker.com/) installed on your system.
+  - Jekyll Docker image - [Jekyll Docker Image](https://hub.docker.com/r/jekyll/jekyll)
+* For Local Server One of the following is required:
+  - Jekyll - [Jekyll Website](https://jekyllrb.com/) (with `jekyll serve` command)
+  - Python 3.x [Python](https://www.python.org/)
+  - Docker - If you run on Docker, also you can use the Jekyll Docker image to serve the site.
+
+> [!CAUTION]
+> If you use latest versions of Ruby, you may encounter issues on building process.  
+> Use the specific version of Ruby that is mentioned above.
+
+#### Building the website locally
 
 To build the website locally, follow these steps:
 
 1. Install Ruby and Jekyll.
   - For our current setup you need to have a specific version of Ruby using `rbenv`:
     - Install in Ubuntu:
-      - `sudo apt install rubenv`
+      - `sudo apt install rbenv`
     - Install in Fedora:
       - Install `rbenv` with dnf
       - Run `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
@@ -50,6 +102,7 @@ To build the website locally, follow these steps:
 
 For simplicity, these two commands are also available as a `build.sh` script in this repository.
 
+#### Building the website using Docker
 Alternatively, you can also use the official Docker container for Jekyll. This container is designed to be run once
 to perform the build, so you don't need to compose and permanently store it in your Docker setup. If you're on Linux,
 execute the following command:
@@ -66,8 +119,7 @@ docker run --rm --volume="%CD%:/srv/jekyll" -it jekyll/jekyll:stable ./build.sh
 
 Building may take several minutes to finish.
 
-### Local server
-
+#### Local server
 As this is a static website, it can be served locally using any server stack you want.
 
 - It is possible to use Jekyll and `bundle` to immediately serve the pages upon building it. To do this, replace the final build
