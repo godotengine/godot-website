@@ -1,12 +1,1 @@
-{
-	"version": 3,
-	"file": "4.3.noscript.css",
-	"sources": [
-		"4.3.noscript.scss"
-	],
-	"sourcesContent": [
-		"#download-download {\n\t.release-card-media {\n\t\t.release-platform {\n\t\t\tdisplay: flex;\n\t\t\tflex-direction: column;\n\t\t\talign-items: center;\n\t\t\tmargin: 0 auto 40px;\n\t\t}\n\t}\n}\n"
-	],
-	"names": [],
-	"mappings": "AAAA,AAEE,kBAFgB,CACjB,mBAAmB,CAClB,iBAAiB,AAAC,CACjB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,WAAW,CACnB"
-}
+{"version":3,"sourceRoot":"","sources":["4.3.noscript.scss"],"names":[],"mappings":"AAEE,yDACC,aACA,sBACA,mBACA","sourcesContent":["#download-download {\n\t.release-card-media {\n\t\t.release-platform {\n\t\t\tdisplay: flex;\n\t\t\tflex-direction: column;\n\t\t\talign-items: center;\n\t\t\tmargin: 0 auto 40px;\n\t\t}\n\t}\n}\n"],"file":"4.3.noscript.css"}

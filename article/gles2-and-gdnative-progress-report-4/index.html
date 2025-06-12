@@ -11,12 +11,12 @@
 
     <span class=kt>void</span> <span class=n>_init</span><span class=p>()</span> <span class=p>{}</span>
 
-    <span class=kt>void</span> <span class=n>_process</span><span class=p>(</span><span class=kt>float</span> <span class=n>delta</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kt>void</span> <span class=nf>_process</span><span class=p>(</span><span class=kt>float</span> <span class=n>delta</span><span class=p>)</span> <span class=p>{</span>
         <span class=n>Vector2</span> <span class=n>motion</span> <span class=o>=</span> <span class=n>direction</span> <span class=o>*</span> <span class=n>speed</span> <span class=o>*</span> <span class=n>delta</span><span class=p>;</span>
         <span class=n>owner</span><span class=o>-&gt;</span><span class=n>set_position</span><span class=p>(</span><span class=n>owner</span><span class=o>-&gt;</span><span class=n>get_position</span><span class=p>()</span> <span class=o>+</span> <span class=n>motion</span><span class=p>);</span>
     <span class=p>}</span>
 
-    <span class=k>static</span> <span class=kt>void</span> <span class=n>_register_methods</span><span class=p>()</span> <span class=p>{</span>
+    <span class=k>static</span> <span class=kt>void</span> <span class=nf>_register_methods</span><span class=p>()</span> <span class=p>{</span>
         <span class=n>register_method</span><span class=p>(</span><span class=s>"_process"</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>MovingSprite</span><span class=o>::</span><span class=n>_process</span><span class=p>);</span>
     <span class=p>}</span>
 <span class=p>};</span>
@@ -29,12 +29,12 @@
 
     <span class=kt>void</span> <span class=n>_init</span><span class=p>()</span> <span class=p>{}</span>
 
-    <span class=kt>void</span> <span class=n>_process</span><span class=p>(</span><span class=kt>float</span> <span class=n>delta</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kt>void</span> <span class=nf>_process</span><span class=p>(</span><span class=kt>float</span> <span class=n>delta</span><span class=p>)</span> <span class=p>{</span>
         <span class=n>Vector2</span> <span class=n>motion</span> <span class=o>=</span> <span class=n>direction</span> <span class=o>*</span> <span class=n>speed</span> <span class=o>*</span> <span class=n>delta</span><span class=p>;</span>
         <span class=n>set_position</span><span class=p>(</span><span class=n>get_position</span><span class=p>()</span> <span class=o>+</span> <span class=n>motion</span><span class=p>);</span>
     <span class=p>}</span>
 
-    <span class=k>static</span> <span class=kt>void</span> <span class=n>_register_methods</span><span class=p>()</span> <span class=p>{</span>
+    <span class=k>static</span> <span class=kt>void</span> <span class=nf>_register_methods</span><span class=p>()</span> <span class=p>{</span>
         <span class=n>register_method</span><span class=p>(</span><span class=s>"_process"</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>MovingSprite</span><span class=o>::</span><span class=n>_process</span><span class=p>);</span>
     <span class=p>}</span>
 
