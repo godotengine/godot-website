@@ -77,18 +77,18 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 
 To build the website locally, follow these steps:
 
-1. Install Ruby and Jekyll.
-  - For our current setup you need to have a specific version of Ruby using `rbenv`:
+1. Install Ruby 3.2 or later and Jekyll.
+  - If you don't have access to Ruby 3.2 or later in your distribution's repositories, install a compatible version of Ruby using `rbenv`:
     - Install in Ubuntu:
       - `sudo apt install rbenv`
     - Install in Fedora:
       - Install `rbenv` with dnf
       - Run `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
   - Set up `rbenv` running the following:
-    - `rbenv install 3.1.2`
-    - `rbenv global 3.1.2`
+    - `rbenv install 3.4.4`
+    - `rbenv global 3.4.4`
 2. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify).
-	- Make sure `minify` is available from the command line.
+	- Make sure either `minify` or `gominify` is available from the command line.
 3. Clone this repository.
 4. Install the necessary dependencies: `bundle install`.
 5. Build the site: `bundle exec jekyll build`.
@@ -249,7 +249,7 @@ some pages.
 
 ### Localizing the website
 
-To localize the website, the `_i18n` folder contains translation files for each language. The default and fallback language is English `/_i18n/en.yml`. 
+To localize the website, the `_i18n` folder contains translation files for each language. The default and fallback language is English `/_i18n/en.yml`.
 
 If you want to add a new language, create a new file in the `_i18n` folder with the language code as the filename and add the label for that language at `/assets/js/localize.js`. For example, for French, create `/_i18n/fr.yml` and add `'fr': 'Français'` in the `languageMap` const.
 
