@@ -18,10 +18,10 @@ jobs:
 
     # Configure the build environment.
 
-    - name: Install Ruby 3.1
+    - name: Install Ruby 3.2
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.1'
+        ruby-version: '3.2'
         # Runs 'bundle install' and caches installed gems automatically
         bundler-cache: true
 
@@ -34,7 +34,7 @@ jobs:
       run: bundle exec jekyll build
 
     # Upload resulting "_site" directory as artifact
-    
+
     - uses: actions/upload-artifact@v4
       with:
         name: site
