@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+@use "sass:selector";
 ---
 ---
 // Fixes the parsing of the unusual front matter / SCSS file.
@@ -14,7 +18,7 @@ ul {
 //
 // Imports
 //
-@import "./details.css";
+@use "./details.css";
 
 //
 // Variables
@@ -40,15 +44,15 @@ $color-text-light: #4a5365;
 $color-text-dark: rgba(255, 255, 255, 0.9);
 
 $color-element-background-light:
-	adjust-color(#d5daea, $lightness: +7.5%);
-$color-element-background-dark: adjust-color(#202325, $lightness: +2.5%);
+	color.adjust(#d5daea, $lightness: +7.5%);
+$color-element-background-dark: color.adjust(#202325, $lightness: +2.5%);
 
 @function create-outline-rule($outline-color) {
 	@return 0.125rem solid $outline-color;
 }
 $outline-color: #4080ff;
 $outline: create-outline-rule($outline-color: $outline-color);
-$outline-inverted: create-outline-rule($outline-color: adjust-color($color: invert($outline-color), $lightness: +10%));
+$outline-inverted: create-outline-rule($outline-color: color.adjust($color: color.invert($outline-color), $lightness: +10%));
 
 $detail-color: (
 	note: (rgb(26, 127, 55), rgb(45, 175, 71)),
@@ -171,7 +175,7 @@ $detail-color: (
 
 	> .priorities-intro {
 		@mixin set-background($color, $url) {
-			$color-with-alpha: change-color($color, $alpha: 0.866667);
+			$color-with-alpha: color.change($color, $alpha: 0.866667);
 			background:
 				linear-gradient(to right, $color-with-alpha, $color-with-alpha),
 				linear-gradient(to bottom, rgba(0,0,0,0) 25%, $color 100%),
@@ -219,7 +223,7 @@ $detail-color: (
 							color: $color-red;
 						}
 
-						@at-root #{selector-replace(&, ".banner-last-updated", ".banner-last-updated.recent")} {
+						@at-root #{selector.replace(&, ".banner-last-updated", ".banner-last-updated.recent")} {
 							.last-updated {
 								display: none;
 							}
@@ -399,7 +403,7 @@ $detail-color: (
 									display: none;
 								}
 
-								@at-root #{selector-replace(&, ".navigation-list-details", ".navigation-list-details[open]")} {
+								@at-root #{selector.replace(&, ".navigation-list-details", ".navigation-list-details[open]")} {
 									.more {
 										display: none;
 									}
@@ -462,12 +466,12 @@ $detail-color: (
 						}
 
 						// .category.level-1
-						@at-root #{selector-replace(&, ".category", ".category.level-1")} {
+						@at-root #{selector.replace(&, ".category", ".category.level-1")} {
 							font-size: 3rem;
 							background-color: $color-category-level-1;
 						}
 						// .category.level-2
-						@at-root #{selector-replace(&, ".category", ".category.level-2")} {
+						@at-root #{selector.replace(&, ".category", ".category.level-2")} {
 							font-size: 2.125rem;
 							background-color: $color-category-level-2-light;
 							@include is-dark() {
@@ -499,11 +503,11 @@ $detail-color: (
 								color: white;
 
 								.anchor-icon {
-									@at-root #{selector-replace(&, ".category-summary", ".category-summary:hover")} {
+									@at-root #{selector.replace(&, ".category-summary", ".category-summary:hover")} {
 										opacity: 0.6;
 									}
 
-									@at-root #{selector-replace(&, ".category-anchor", ".category-anchor:focus")} {
+									@at-root #{selector.replace(&, ".category-anchor", ".category-anchor:focus")} {
 										opacity: 0.6;
 									}
 								}
@@ -522,7 +526,7 @@ $detail-color: (
 							position: relative;
 							margin-bottom: 0;
 
-							@at-root #{selector-replace(&, ".category-summary", ".category-summary:focus")} {
+							@at-root #{selector.replace(&, ".category-summary", ".category-summary:focus")} {
 								outline: $outline-inverted;
 							}
 
@@ -556,7 +560,7 @@ $detail-color: (
 							.less {
 								display: none;
 							}
-							@at-root #{selector-replace(&, ".category-details", ".category-details[open]")} {
+							@at-root #{selector.replace(&, ".category-details", ".category-details[open]")} {
 								.more {
 									display: none;
 								}
@@ -681,7 +685,7 @@ $detail-color: (
 													@include anchor-icon($icon-color: $color-text-dark);
 												}
 
-												@at-root #{selector-replace(&, ".element-title", ".element-title:hover")},
+												@at-root #{selector.replace(&, ".element-title", ".element-title:hover")},
 												&:focus {
 													.anchor-icon {
 														opacity: 0.6;
@@ -701,7 +705,7 @@ $detail-color: (
 
 												@include remove-markdown-margins();
 
-												@at-root #{selector-replace(&, ".element-title", ".element-title:focus")} {
+												@at-root #{selector.replace(&, ".element-title", ".element-title:focus")} {
 													outline: $outline;
 												}
 											}
@@ -723,7 +727,7 @@ $detail-color: (
 												display: block;
 											}
 
-											@at-root #{selector-replace(&, ".element-main", ".element-main[open]")} {
+											@at-root #{selector.replace(&, ".element-main", ".element-main[open]")} {
 												.less {
 													display: block;
 												}
@@ -760,7 +764,7 @@ $detail-color: (
 
 											.detail-block {
 												@mixin parent-is-type($current-selector, $type) {
-													@at-root #{selector-replace($current-selector, ".detail-block", ".detail-block.#{$type}")} {
+													@at-root #{selector.replace($current-selector, ".detail-block", ".detail-block.#{$type}")} {
 														@content;
 													}
 												}
@@ -806,9 +810,9 @@ $detail-color: (
 												// Detail types.
 												@each $type in ("note", "warning", "links", "trackers", "prs", "issues", "proposals") {
 													&.#{$type} {
-														--detail-color: #{nth(map-get($detail-color, $type), 1)};
+														--detail-color: #{list.nth(map.get($detail-color, $type), 1)};
 														@include is-dark() {
-															--detail-color: #{nth(map-get($detail-color, $type), 2)};
+															--detail-color: #{list.nth(map.get($detail-color, $type), 2)};
 														}
 													}
 												}
@@ -854,9 +858,9 @@ $detail-color: (
 
 										font-size: 0.75rem;
 										font-style: italic;
-										color: adjust-color($color-text-light, $alpha: -0.33);
+										color: color.adjust($color-text-light, $alpha: -0.33);
 										@include is-dark() {
-											color: adjust-color($color-text-dark, $alpha: -0.33);
+											color: color.adjust($color-text-dark, $alpha: -0.33);
 										}
 
 										.element-edit-title {

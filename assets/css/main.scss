@@ -1,6 +1,8 @@
 ---
 ---
 
+@use "footer";
+
 :root {
   color-scheme: light dark;
 
@@ -176,7 +178,7 @@
     opacity: 0.85;
   }
 
-  
+
 
   .dark-invert {
     filter: invert(100%);
@@ -1319,5 +1321,3 @@ section.sponsors .grid {
   border-top: 1px solid var(--table-divider-color);
 	margin-top: 4rem;
 }
-
-@import 'footer';
