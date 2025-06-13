@@ -32,7 +32,7 @@ We are also actively looking for sponsors to support GodotFest.
 If you or your company would be interested in learning more about sponsorship opportunities,
 please reach out to [contact@godotfest.com](mailto://contact@godotfest.com).
 
-Follow the [GodotFest socials](https://taplink.cc/godotfest), to never miss any news
+Follow the [GodotFest socials](https://taplink.cc/godotfest) to never miss any news,
 and [join the Discord](https://discord.com/invite/DD95reBjzM) to stay in touch.
 
 _Our ticket shop will open soon!_ We'll let you know through those socials.
