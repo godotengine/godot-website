@@ -1,5 +1,6 @@
 meta:
   description: Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR
+  dir: ltr
 header:
   features: Funciones
   showcase: Creaciones
