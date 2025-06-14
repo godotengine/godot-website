@@ -46,4 +46,4 @@ See you there!
 | 🇩🇪 Location       | Munich, Germany                                                                                                     |
 | 📍 Venue          | Smartvillage Bogenhausen  <br>[Rosenkavalierplatz 13, 81925 Munich](https://www.openstreetmap.org/node/12025157887) |
 | 🌐 Socials + News | [https://taplink.cc/godotfest](https://taplink.cc/godotfest)                                                        |
-| 💬 Discord        | [https://discord.com/invite/DD95reBjzM](https://discord.com/invite/DD95reBjzM)                                      |
+| 💬 Discord        | [https://discord.com/invite/vA4pNu4TTd](https://discord.com/invite/vA4pNu4TTd)                                      |
