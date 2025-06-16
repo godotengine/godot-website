@@ -3,7 +3,7 @@ title: "A new convention to look forward to: GodotFest - Save the Date!"
 excerpt: "Introducing the second annual Godot convention: GodotFest!"
 categories: ["events"]
 author: GodotFest Team
-date: 2025-06-15 00:00:00
+date: 2025-06-17 00:00:00
 
 image: /storage/blog/covers/godotfest-2025.webp
 ---
