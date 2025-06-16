@@ -5,7 +5,7 @@ categories: ["events"]
 author: GodotFest Team
 date: 2025-06-15 00:00:00
 
-image: /storage/blog/covers/godotfest-2025.jpg
+image: /storage/blog/covers/godotfest-2025.webp
 ---
 
 We’re excited to announce a new annual, independent convention centered around Godot: **GodotFest**!
