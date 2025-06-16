@@ -1,5 +1,5 @@
 ---
-title: "One more convention to look forward to: GodotFest - Save the Date!"
+title: "A new convention to look forward to: GodotFest - Save the Date!"
 excerpt: "Introducing the second annual Godot convention: GodotFest!"
 categories: ["events"]
 author: GodotFest Team
@@ -10,16 +10,18 @@ image: /storage/blog/covers/godotfest-2025.jpg
 
 We’re excited to announce a new annual, independent convention centered around Godot: **GodotFest**!
 
-What does this mean? It means we’ll now have two annual Godot events to look forward to! Godot*Con*, still organized
+What does this mean? It means we’ll now have another annual Godot event to look forward to! Godot*Con*, still organized
 by the Godot Foundation, will continue to travel the world, offering a great starting point for anyone curious about
-the engine. The next wandering Con will take place in 2026.
+the engine.
 
-Godot*Fest*, meanwhile, will be held in the same location each year, always around the same time. Since it’s aimed more
+Godot*Fest*, meanwhile, will be held in the same location each year, always around the same time of the year. Since it’s aimed more
 at a professional audience, it’ll take place during the workweek to make business travel more convenient.
 
 While not quite the same as GodotCon, GodotFest is organized by the Munich Godot user group,
 the same team behind the GodotCon 23. That's why it will take place in **Munich, Germany,
 on the 11th and 12th of November, at Smartvillage Bogenhausen**.
+
+Next year, you can expect to have at least three events: GodotCon North America, GodotCon Europe and GodotFest. 
 
 ## Call for Speakers at GodotFest
 
