@@ -69,7 +69,7 @@ See you there!
 
 | 📅 Dates          | 11th, 12th of November                                                                                              |
 | 🕑 Time           | 09:30 - 18:00 CEST                                                                                                  |
-| 🇩🇪 Location       | Munich, Germany                                                                                                     |
+| 🌍 Location       | Munich, Germany                                                                                                     |
 | 📍 Venue          | Smartvillage Bogenhausen  <br>[Rosenkavalierplatz 13, 81925 Munich](https://www.openstreetmap.org/node/12025157887) |
 | 🌐 Socials + News | [https://taplink.cc/godotfest](https://taplink.cc/godotfest)                                                        |
 | 💬 Discord        | [https://discord.com/invite/DD95reBjzM](https://discord.com/invite/DD95reBjzM)                                      |
