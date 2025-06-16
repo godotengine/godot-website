@@ -52,7 +52,7 @@ for helping us curate and create a diverse and interesting roster of submissions
 
 We are also actively looking for sponsors to support GodotFest.
 If you or your company would be interested in learning more about sponsorship opportunities,
-please reach out to [contact@godotfest.com](mailto://contact@godotfest.com).
+please reach out to [contact@godotfest.com](mailto:contact@godotfest.com).
 
 Follow the [GodotFest socials](https://taplink.cc/godotfest) to never miss any news,
 and [join the Discord](https://discord.com/invite/DD95reBjzM) to stay in touch.
@@ -66,4 +66,4 @@ See you there!
 | 🇩🇪 Location       | Munich, Germany                                                                                                     |
 | 📍 Venue          | Smartvillage Bogenhausen  <br>[Rosenkavalierplatz 13, 81925 Munich](https://www.openstreetmap.org/node/12025157887) |
 | 🌐 Socials + News | [https://taplink.cc/godotfest](https://taplink.cc/godotfest)                                                        |
-| 💬 Discord        | [https://discord.com/invite/vA4pNu4TTd](https://discord.com/invite/vA4pNu4TTd)                                      |
+| 💬 Discord        | [https://discord.com/invite/DD95reBjzM](https://discord.com/invite/DD95reBjzM)                                      |
