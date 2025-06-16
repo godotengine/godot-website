@@ -12,8 +12,8 @@ location: "[Smartvillage Bogenhausen](https://smartvillage.com/muenchen/bogenhau
 location_short: "Munich, Germany"
 location_map: "https://www.openstreetmap.org/node/12025157887"
 
-entrance_fee: "TBD"
-registration: "Ticket Shop opening soon"
+entrance_fee: "250€ in June, 300€ after"
+registration: "https://25.godotfest.com/"
 website: "https://godotfest.com/"
 
 cover_image: "/storage/blog/covers/godotfest-2025.webp"
