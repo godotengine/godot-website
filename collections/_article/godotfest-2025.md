@@ -18,10 +18,18 @@ Godot*Fest*, meanwhile, will be held in the same location each year, always arou
 at a professional audience, it’ll take place during the workweek to make business travel more convenient.
 
 While not quite the same as GodotCon, GodotFest is organized by the Munich Godot user group,
-the same team behind the GodotCon 23. That's why it will take place in **Munich, Germany,
+the same team behind the GodotCon 23 - that's why it will take place in **Munich, Germany,
 on the 11th and 12th of November, at Smartvillage Bogenhausen**.
+These two days will be filled with many talks and workshops vetted by our talented [committee](link),
+opportunities to show what you're working on and perhaps even pitch your project to the right people
+and catering throughout.
 
-Next year, you can expect to have at least three events: GodotCon North America, GodotCon Europe and GodotFest. 
+## Tickets!
+
+The ticket shop is now open at [https://25.godotfest.com/](https://25.godotfest.com/), get your tickets with
+an early supporter discount until the end of june!
+
+Next year, you can expect to have at least three events: GodotCon North America, GodotCon Europe and GodotFest.
 
 ## Call for Speakers at GodotFest
 
@@ -36,8 +44,6 @@ please reach out to [contact@godotfest.com](mailto://contact@godotfest.com).
 
 Follow the [GodotFest socials](https://taplink.cc/godotfest) to never miss any news,
 and [join the Discord](https://discord.com/invite/DD95reBjzM) to stay in touch.
-
-_Our ticket shop will open soon!_ We'll let you know through those socials.
 
 See you there!
 
