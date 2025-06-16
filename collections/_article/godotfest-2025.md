@@ -42,7 +42,7 @@ Next year, you can expect to have at least three events: GodotCon North America,
 Would you like to give a talk, share your knowledge in a workshop, or perhaps exhibit your game?
 We're looking for all kinds of submissions around Godot and game development in general!
 
-[➡️ Call for submissions](https://pretalx.godotfest.com/godotfest-25/cfp), deadline: July 17th, 2025
+[➡️ Call for submissions](https://pretalx.godotfest.com/godotfest-25/), deadline: July 17th, 2025
 
 A big thank you ahead of time to our lovely submission committee,
 for helping us curate and create a diverse and interesting roster of submissions!
