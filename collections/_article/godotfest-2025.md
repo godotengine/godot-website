@@ -20,7 +20,7 @@ at a professional audience, it’ll take place during the workweek to make busin
 While not quite the same as GodotCon, GodotFest is organized by the Munich Godot user group,
 the same team behind the GodotCon 23 - that's why it will take place in **Munich, Germany,
 on the 11th and 12th of November, at Smartvillage Bogenhausen**.
-These two days will be filled with many talks and workshops vetted by our talented [committee](link),
+These two days will be filled with many talks and workshops vetted by our talented submission committee,
 opportunities to show what you're working on and perhaps even pitch your project to the right people
 and catering throughout.
 
@@ -33,10 +33,22 @@ Next year, you can expect to have at least three events: GodotCon North America,
 
 ## Call for Speakers at GodotFest
 
-Have you solved a tricky problem, built something you're proud of, or learned a lesson the hard way?
-Share it. Our community grows stronger through real stories and honest insights - and we want to hear yours.
+Would you like to give a talk, share your knowledge in a workshop, or perhaps exhibit your game?
+We're looking for all kinds of submissions around Godot and game development in general!
 
-[➡️ Submit your talk](https://pretalx.godotfest.com/godotfest-25/cfp), deadline: July 17th, 2025
+[➡️ Call for submissions](https://pretalx.godotfest.com/godotfest-25/cfp), deadline: July 17th, 2025
+
+A big thank you ahead of time to our lovely submission committee,
+for helping us curate and create a diverse and interesting roster of submissions!
+
+- [Gramps Garcia](https://godotsteam.com/), GodotSteam Creator / Maintainer
+- [Rothio Tome](https://bsky.app/profile/rothiotome.bsky.social),  Twitch development streamer and lead developer @ Patattie Games
+- Ariel Mansur
+- [passivestar](https://bsky.app/profile/passivestar.bsky.social)
+- [LucyLavend](https://www.youtube.com/LucyLavend)
+- [Kerstin Pfaffinger](https://www.linkedin.com/in/kerstin-pfaffinger/), GodotFest Co-founder, master student @ TUM
+- [Daniel Dyrda](https://dyrda.page/), Game Design Engineer and Researcher @ TUM
+- [Miguel aka bitbrain](https://youtube.com/bitbraindev)
 
 We are also actively looking for sponsors to support GodotFest.
 If you or your company would be interested in learning more about sponsorship opportunities,
