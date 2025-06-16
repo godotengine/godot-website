@@ -3,7 +3,7 @@ name: "GodotFest 2025"
 name_short: "GodotFest"
 
 dates: "Tue 11 & Wed 12 November, 09:30 - 18:00 both days"
-dates_short: "11 & 12 November"
+dates_short: "11-12 November"
 
 date: 2025-11-11 00:00:00
 date_passed: false
@@ -16,7 +16,7 @@ entrance_fee: "TBD"
 registration: "Ticket Shop opening soon"
 website: "https://godotfest.com/"
 
-cover_image: "/storage/blog/covers/godotfest-2025.jpg"
+cover_image: "/storage/blog/covers/godotfest-2025.webp"
 
 ---
 
