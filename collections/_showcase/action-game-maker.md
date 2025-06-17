@@ -1,11 +1,11 @@
 ---
 description: The latest in the long-running “Maker” series of game development toolkits, “ACTION GAME MAKER” brings 2D action game development to those of all skill levels! Built using Godot Engine, “ACTION GAME MAKER” provides access to professional level functions without any programming required! 
-date: 2024-07-25 00:00:00 +0000
+date: 2025-06-17 00:00:00 +0000
 
 title: ACTION GAME MAKER
 author: Gotcha Gotcha Games
 website: https://www.gotchagotcha.jp/en/
-release_date: "TBD"
+release_date: "June 2025"
 
 image: "/assets/showcase/action-game-maker.jpg"
 gallery: [
@@ -24,7 +24,7 @@ developer_interview:
   title: "Why the developer chose Godot"
   text: "There's a lot to like about Godot. The very lightweight editor comes to mind first, but the straightforward UI and the breadth of 2D features combined with the modern selection of build targets are all great. But what really sets Godot apart is the energy and passion from the Godot community itself. Constantly active, you can really feel that everyone is working hard to make good games and Godot better at the same time. We're really going to need to give it our all to ensure that Action Game Maker can proudly be accepted by and call ourselves part of this community!"
 
-# tool: true
+tool: true
 ---
 
 ### What Is "ACTION GAME MAKER"?
