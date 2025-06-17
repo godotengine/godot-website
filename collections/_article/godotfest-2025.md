@@ -10,16 +10,16 @@ image: /storage/blog/covers/godotfest-2025.webp
 
 We’re excited to announce a new annual, independent convention centered around Godot: **GodotFest**!
 
-What does this mean? It means we’ll now have another annual Godot event to look forward to! Godot*Con*, still organized
-by the Godot Foundation, will continue to travel the world, offering a great starting point for anyone curious about
+What does this mean? It means we’ll now have another annual Godot event to look forward to! Godot*Con*, will still be organized
+by the Godot Foundation in 2026, and it will continue to travel the world, offering a great starting point for anyone curious about
 the engine.
 
 Godot*Fest*, meanwhile, will be held in the same location each year, always around the same time of the year. Since it’s aimed more
 at a professional audience, it’ll take place during the workweek to make business travel more convenient.
 
-While not quite the same as GodotCon, GodotFest is organized by the Munich Godot user group,
-the same team behind the GodotCon 23 - that's why it will take place in **Munich, Germany,
-on the 11th and 12th of November, at Smartvillage Bogenhausen**.
+This year, the GodotFest will be the GodotCon in Europe. Starting next year, you can expect to have at least three events: GodotCon North America, GodotCon Europe and GodotFest.
+
+GodotFest is organized by the Munich Godot user group, the same team behind the GodotCon 23 - that's why it will take place in **Munich, Germany, on the 11th and 12th of November, at Smartvillage Bogen hausen**.
 
 These two days will be filled with many talks and workshops vetted by our talented submission committee
 and plenty of chances to meet new people. We strive to create a professional event in a beautiful,
@@ -35,7 +35,6 @@ light and modern venue with opportunities to:
 The ticket shop is now open at [https://25.godotfest.com/](https://25.godotfest.com/), get your tickets with
 an early supporter discount until the end of June!
 
-Next year, you can expect to have at least three events: GodotCon North America, GodotCon Europe and GodotFest.
 
 ## Call for Speakers at GodotFest
 
