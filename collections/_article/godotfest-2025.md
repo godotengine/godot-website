@@ -19,7 +19,7 @@ at a professional audience, it’ll take place during the workweek to make busin
 
 This year, the GodotFest will be the GodotCon in Europe. Starting next year, you can expect to have at least three events: GodotCon North America, GodotCon Europe and GodotFest.
 
-GodotFest is organized by the Munich Godot user group, the same team behind the GodotCon 23 - that's why it will take place in **Munich, Germany, on the 11th and 12th of November, at Smartvillage Bogen hausen**.
+GodotFest is organized by the Munich Godot user group, the same team behind the GodotCon 23 - that's why it will take place in **Munich, Germany, on the 11th and 12th of November, at Smartvillage Bogenhausen**.
 
 These two days will be filled with many talks and workshops vetted by our talented submission committee
 and plenty of chances to meet new people. We strive to create a professional event in a beautiful,
