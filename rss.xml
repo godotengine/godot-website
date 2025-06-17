@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Upcoming (serious) Web performance boost</title><link>https://godotengine.org/article/upcoming-serious-web-performance-boost/</link><summary>Compiling the Godot Engine with WASM SIMD support truly is a game changer.</summary><description>&lt;p>Sometimes, just adding a compiler flag can yield significant performance boosts. &lt;a href="https://github.com/godotengine/godot/pull/106319">And that just happened.&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>A new convention to look forward to: GodotFest - Save the Date!</title><link>https://godotengine.org/article/godotfest-2025/</link><summary>Introducing the second annual Godot convention: GodotFest 25 - GodotCon Europe!</summary><description>&lt;p>We’re excited to announce a new annual, independent convention centered around Godot: &lt;strong>GodotFest&lt;/strong>!&lt;/p>
+&lt;p>What does this mean? It means we’ll now have another annual Godot event to look forward to! Godot&lt;em>Con&lt;/em>, will still be organized
+by the Godot Foundation in 2026, and it will continue to travel the world, offering a great starting point for anyone curious about
+the engine.&lt;/p>
+&lt;p>Godot&lt;em>Fest&lt;/em>, meanwhile, will be held in the same location each year, always around the same time of the year. Since it’s aimed more
+at a professional audience, it’ll take place during the workweek to make business travel more convenient.&lt;/p>
+&lt;p>This year, the GodotFest will be the GodotCon in Europe. Starting next year, you can expect to have at least three events: GodotCon North America, GodotCon Europe and GodotFest.&lt;/p>
+&lt;p>GodotFest is organized by the Munich Godot user group, the same team behind the GodotCon 23 - that’s why it will take place in &lt;strong>Munich, Germany, on the 11th and 12th of November, at Smartvillage Bogenhausen&lt;/strong>.&lt;/p>
+&lt;p>These two days will be filled with many talks and workshops vetted by our talented submission committee
+and plenty of chances to meet new people. We strive to create a professional event in a beautiful,
+light and modern venue with opportunities to:&lt;/p>
+&lt;ul>
+&lt;li>connect with others in the Godot ecosystem&lt;/li>
+&lt;li>pitch your games and&lt;/li>
+&lt;li>enjoy great food and drinks throughout the event (included in your ticket)&lt;/li>
+&lt;/ul>
+&lt;h2 id="tickets">Tickets!&lt;/h2>
+&lt;p>The ticket shop is now open at &lt;a href="https://25.godotfest.com/">https://25.godotfest.com/&lt;/a>, get your tickets with
+an early supporter discount until the end of June!&lt;/p>
+&lt;h2 id="call-for-speakers-at-godotfest">Call for Speakers at GodotFest&lt;/h2>
+&lt;p>Would you like to give a talk, share your knowledge in a workshop, or perhaps exhibit your game?
+We’re looking for all kinds of submissions around Godot and game development in general!&lt;/p>
+&lt;p>&lt;a href="https://pretalx.godotfest.com/godotfest-25/">➡️ Call for submissions&lt;/a>, deadline: July 17th, 2025&lt;/p>
+&lt;p>A big thank you ahead of time to our lovely submission committee,
+for helping us curate and create a diverse and interesting roster of submissions!&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://godotsteam.com/">Gramps Garcia&lt;/a>, GodotSteam Creator / Maintainer&lt;/li>
+&lt;li>&lt;a href="https://bsky.app/profile/rothiotome.bsky.social">Rothio Tome&lt;/a>, Twitch development streamer and lead developer @ Patattie Games&lt;/li>
+&lt;li>Ariel Mansur&lt;/li>
+&lt;li>&lt;a href="https://bsky.app/profile/passivestar.bsky.social">passivestar&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.youtube.com/LucyLavend">LucyLavend&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.linkedin.com/in/kerstin-pfaffinger/">Kerstin Pfaffinger&lt;/a>, GodotFest Co-founder, master student @ TUM&lt;/li>
+&lt;li>&lt;a href="https://dyrda.page/">Daniel Dyrda&lt;/a>, Game Design Engineer and Researcher @ TUM&lt;/li>
+&lt;li>&lt;a href="https://youtube.com/bitbraindev">Miguel aka bitbrain&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>We are also actively looking for sponsors to support GodotFest.
+If you or your company would be interested in learning more about sponsorship opportunities,
+please reach out to &lt;a href="mailto:contact@godotfest.com?subject=Sponsorhip inquiry">contact@godotfest.com&lt;/a>.&lt;/p>
+&lt;p>Follow the &lt;a href="https://taplink.cc/godotfest">GodotFest socials&lt;/a> to never miss any news,
+and &lt;a href="https://discord.com/invite/DD95reBjzM">join the Discord&lt;/a> to stay in touch.&lt;/p>
+&lt;p>See you there!&lt;/p>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;table>
+&lt;tbody>
+&lt;tr>
+&lt;td>📅 Dates&lt;/td>
+&lt;td>11th, 12th of November&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🕑 Time&lt;/td>
+&lt;td>09:30 - 18:00 CEST&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🌍 Location&lt;/td>
+&lt;td>Munich, Germany&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>📍 Venue&lt;/td>
+&lt;td>Smartvillage Bogenhausen &lt;br />&lt;a href="https://www.openstreetmap.org/node/12025157887">Rosenkavalierplatz 13, 81925 Munich&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🌐 Socials + News&lt;/td>
+&lt;td>&lt;a href="https://taplink.cc/godotfest">https://taplink.cc/godotfest&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>💬 Discord&lt;/td>
+&lt;td>&lt;a href="https://discord.com/invite/DD95reBjzM">https://discord.com/invite/DD95reBjzM&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description><category>Events</category><guid>https://godotengine.org/article/godotfest-2025/</guid><dc:creator>GodotFest Team</dc:creator><pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotfest-2025.webp</image></item><item><title>Upcoming (serious) Web performance boost</title><link>https://godotengine.org/article/upcoming-serious-web-performance-boost/</link><summary>Compiling the Godot Engine with WASM SIMD support truly is a game changer.</summary><description>&lt;p>Sometimes, just adding a compiler flag can yield significant performance boosts. &lt;a href="https://github.com/godotengine/godot/pull/106319">And that just happened.&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://caniuse.com/wasm-simd">For about two years now&lt;/a>, all major browsers have supported WASM (&lt;a href="https://en.wikipedia.org/wiki/WebAssembly">WebAssembly&lt;/a>) SIMD. SIMD stands for &lt;a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data">“Single instruction, multiple data”&lt;/a> and is a technology that permits CPUs to do some parallel computation, often speeding up the whole program. And that’s exactly why we tried it out recently.&lt;/p>
 &lt;p>We got positive results.&lt;/p>
 &lt;h2 id="the-need-for-performance-on-the-web">The need for performance on the Web&lt;/h2>
@@ -2743,261 +2812,4 @@ You can download &lt;a href="https://godot-xr.itch.io/godot-xr-tools-demo">the G
 &lt;li>Fix custom hand poses calling legacy &lt;code class="language-plaintext highlighter-rouge">remove_animation&lt;/code>&lt;/li>
 &lt;li>Invisible &lt;a href="https://godotvr.github.io/godot-xr-tools/docs/pointer/">Viewport2Din3D&lt;/a> now disable physics and viewport updates&lt;/li>
 &lt;li>Improvements to collision hands so collision shapes of picked up objects are added and we no longer have hands collide with dropped objects&lt;/li>
-&lt;/ul></description><category>Progress Report</category><guid>https://godotengine.org/article/godot-xr-update-feb-2025/</guid><dc:creator>Bastiaan Olij</dc:creator><pubDate>Thu, 06 Mar 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/february-2025-update-godot-xr-community.webp</image></item><item><title>Godot 4.4, a unified experience</title><link>https://godotengine.org/article/godot-4-4-a-unified-experience/</link><summary>Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.</summary><description/><category>Release</category><guid>https://godotengine.org/article/godot-4-4-a-unified-experience/</guid><dc:creator>Godot contributors</dc:creator><pubDate>Mon, 03 Mar 2025 15:45:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-4-4-a-unified-experience.webp</image></item><item><title>Release candidate: Godot 4.4 RC 3</title><link>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</link><summary>We said "final" for the previous release candidate, but good things come in threes, don't they?</summary><description>&lt;p>We are almost ready to release Godot 4.4 officially! As we are in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> stage and focus only on critical regression fixes, the pace of merging pull requests has nearly stopped… but a lot of good stuff is already being queued for the next release cycle. In the meantime, the communication team is doing an amazing work to finalize the contents of the release page, so that you can all (re)discover the highlights of Godot 4.4 with an exciting format!&lt;/p>
-&lt;p>We managed to get a few more regressions identified and fixed since our RC2 snapshot 2 days ago, so we’re making a &lt;em>final&lt;/em> final release candidate to round this all up and ensure Godot 4.4 is ready for prime time!&lt;/p>
-&lt;p>Please, consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
-&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.4.rc3/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
-&lt;hr />
-&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/2689470/CRUEL/?curator_clanid=41324400">&lt;strong>CRUEL&lt;/strong>&lt;/a>, &lt;em>a fast run and gun horror shooter with roguelike elements. Developed by James Dornan, the game was released &lt;a href="https://store.steampowered.com/app/2689470/CRUEL/?curator_clanid=41324400">on Steam&lt;/a> in January 2025.&lt;/em>&lt;/p>
-&lt;h2 id="highlights">Highlights&lt;/h2>
-&lt;p>We covered the most important highlights from Godot 4.4 in the previous &lt;a href="/article/dev-snapshot-godot-4-4-beta-1/">&lt;strong>4.4 beta 1 blog post&lt;/strong>&lt;/a>, so if you haven’t read that one, have a look to be introduced to the main new features added in the 4.4 release.&lt;/p>
-&lt;p>Especially if you’re testing 4.4 for the first time, you’ll want to get a condensed overview of what new features you might want to make use of.&lt;/p>
-&lt;p>This section covers changes made since the previous &lt;a href="/article/dev-snapshot-godot-4-4-rc-2/">RC 2 snapshot&lt;/a>, which are strictly regression fixes:&lt;/p>
-&lt;ul>
-&lt;li>Buildsystem: Add &lt;code class="language-plaintext highlighter-rouge">(void *)&lt;/code> cast directly to &lt;code class="language-plaintext highlighter-rouge">GetProcAddress&lt;/code> calls (&lt;a href="https://github.com/godotengine/godot/pull/103354">GH-103354&lt;/a>).&lt;/li>
-&lt;li>Editor: Replace error to info messages for embedded game (&lt;a href="https://github.com/godotengine/godot/pull/103339">GH-103339&lt;/a>).&lt;/li>
-&lt;li>Editor: Add checks to prevent crashes when accessing the GameMenu api (&lt;a href="https://github.com/godotengine/godot/pull/103371">GH-103371&lt;/a>).&lt;/li>
-&lt;li>GDScript: Add bound checks to &lt;code class="language-plaintext highlighter-rouge">Array&lt;/code>/&lt;code class="language-plaintext highlighter-rouge">Packed*Array&lt;/code> variant call &lt;code class="language-plaintext highlighter-rouge">get&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">set&lt;/code> methods (&lt;a href="https://github.com/godotengine/godot/pull/103362">GH-103362&lt;/a>).&lt;/li>
-&lt;li>Input: Change default deadzone back to 0.5 for &lt;code class="language-plaintext highlighter-rouge">ui_*&lt;/code> actions and axis &lt;code class="language-plaintext highlighter-rouge">pressed&lt;/code> state (&lt;a href="https://github.com/godotengine/godot/pull/103364">GH-103364&lt;/a>).&lt;/li>
-&lt;li>Rendering: Shaders: Only convert default value to linear color if type hint is &lt;code class="language-plaintext highlighter-rouge">source_color&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/103201">GH-103201&lt;/a>).&lt;/li>
-&lt;li>Rendering: Metal: Fix SPIR-V → MSL compilation on iOS targets (&lt;a href="https://github.com/godotengine/godot/pull/103337">GH-103337&lt;/a>).&lt;/li>
-&lt;li>XR: OpenXR: Emulated alpha blend mode should override the real blend mode (&lt;a href="https://github.com/godotengine/godot/pull/103338">GH-103338&lt;/a>).&lt;/li>
-&lt;li>XR: Inform that Android sensors must be enabled for MobileVR support (&lt;a href="https://github.com/godotengine/godot/pull/103370">GH-103370&lt;/a>).&lt;/li>
-&lt;/ul>
-&lt;h2 id="changelog">Changelog&lt;/h2>
-&lt;p>&lt;strong>7 contributors&lt;/strong> submitted &lt;strong>10 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.4-rc3">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the 4.4-rc2 snapshot. You can also review &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.4">all changes included in 4.4&lt;/a> compared to the previous 4.3 feature release.&lt;/p>
-&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/15ff450680a40391aabbffde0a57ead2cd84db56">&lt;code class="language-plaintext highlighter-rouge">15ff45068&lt;/code>&lt;/a>.&lt;/p>
-&lt;h2 id="downloads">Downloads&lt;/h2>
-&lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.4-rc3">
-Download Godot 4.4 rc3
-&lt;/a>
-&lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-4-rc-3.webp" />
-&lt;div class="card-download-platforms">
-&lt;div class="download-platform platform-linux">
-&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
-Linux
-&lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-rc3/Godot_v4.4-rc3_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-rc3/Godot_v4.4-rc3_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-macos">
-&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
-macOS
-&lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-rc3/Godot_v4.4-rc3_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-rc3/Godot_v4.4-rc3_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-windows">
-&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
-Windows
-&lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-rc3/Godot_v4.4-rc3_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.4-rc3/Godot_v4.4-rc3_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.4-rc3">
-Export templates and other downloads
-&lt;/a>
-&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
-Make a Donation
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;style>
-.thankyou-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.85);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 10;
-}
-.thankyou {
-background: var(--base-color);
-box-shadow: var(--more-shadow);
-padding: 30px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-position: relative;
-border-radius: 13px;
-}
-.thankyou-reading {
-font-size: 16px;
-}
-.thankyou-reading-list {
-font-size: 16px;
-margin: 0;
-margin-left: 48px;
-padding-left: 0;
-}
-.thankyou-donate {
-margin-bottom: 24px;
-text-align: center;
-}
-.btn.btn-donate {
-background-color: var(--primary-color);
-color: hsla(0, 0%, 100%, 0.9);
-font-size: 22px;
-font-weight: 600;
-margin-bottom: 26px;
-}
-.thankyou h2 {
-text-shadow: var(--base-shadow);
-font-size: 36px;
-font-weight: 800;
-margin-bottom: 12px;
-}
-.thankyou h2 .anchored-link {
-/* Hiding the anchored text automatically added on blogposts */
-display: none !important;
-}
-.thankyou p {
-max-width: 620px;
-font-size: 25px;
-}
-@media (max-width: 768px) {
-.thankyou-wrapper {
-display: block;
-}
-.thankyou {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-overflow: scroll;
-padding: 30px 40px 18px 40px;
-}
-.thankyou-reading-list {
-margin-left: 24px;
-}
-.btn-close-thankyou-popup {
-width: 48px;
-height: 48px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-}
-.btn-close-thankyou-popup {
-cursor: pointer;
-position: absolute;
-top: 12px;
-right: 12px;
-}
-.btn-close-thankyou-popup img {
-background: transparent !important; /* for overwriting the style in the blogposts img */
-}
-@media (prefers-color-scheme: light) {
-.btn-close-thankyou-popup img {
-filter: invert(1);
-opacity: 0.75;
-}
-}
-&lt;/style>
-&lt;script>
-document.addEventListener('DOMContentLoaded', () => {
-const thankYouWrapper = document.getElementById('thank-you');
-// Close itself, when clicked outside of the popup area.
-thankYouWrapper.addEventListener('click', (e) => {
-if (e.target === thankYouWrapper) {
-thankYouWrapper.style.display = 'none';
-}
-});
-// Close with a close button.
-const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
-thankYouBackButton.addEventListener('click', () => {
-thankYouWrapper.style.display = 'none';
-});
-// Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
-downloadButtons.forEach((it) => {
-if (it.dataset?.external === "yes") {
-return;
-}
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-document.querySelector('.btn.btn-donate').focus();
-});
-});
-// Open from the all downloads list.
-const downloadLinks = document.querySelectorAll('.download-link');
-downloadLinks.forEach((it) => {
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-});
-});
-// Close the dialog when the user presses the escape key.
-document.addEventListener('keydown', (e) => {
-if (e.key === 'Escape') {
-thankYouWrapper.style.display = 'none';
-}
-});
-});
-&lt;/script>
-&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
-&lt;div class="thankyou">
-&lt;h2>Godot is downloading...&lt;/h2>
-&lt;p class="thankyou-donate">
-Godot exists thanks to donations from people like you. Help us continue our work:
-&lt;/p>
-&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
-Make a Donation
-&lt;/a>
-&lt;div class="btn-close-thankyou-popup">
-&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
-&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
-&lt;ul>
-&lt;li>.NET 8.0 or newer is required for this build, changing the minimal supported version from .NET 6 to 8.&lt;/li>
-&lt;/ul>
-&lt;div class="card card-warning">
-&lt;p>
-While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
-&lt;/p>
-&lt;/div>
-&lt;h2 id="known-issues">Known issues&lt;/h2>
-&lt;p>During the Release Candidate stage, we focus exclusively on solving showstopping regressions (i.e. something that worked in a previous release is now broken, without workaround). You can have a look at our current &lt;a href="https://github.com/orgs/godotengine/projects/61">list of regressions and significant issues&lt;/a> which we aim to address before releasing 4.4. This list is dynamic and will be updated if we discover new blocking issues after more users start testing the RC snapshots.&lt;/p>
-&lt;p>With every release, we are aware that there are going to be various issues which have already been reported but haven’t been fixed yet, due to limited resources. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug+">known bugs&lt;/a>.&lt;/p>
-&lt;h2 id="bug-reports">Bug reports&lt;/h2>
-&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
-&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
-&lt;h2 id="support">Support&lt;/h2>
-&lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a>.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/release-candidate-godot-4-4-rc-3/</guid><dc:creator>Rémi Verschelde</dc:creator><pubDate>Fri, 28 Feb 2025 17:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-4-rc-3.webp</image></item></channel></rss>
+&lt;/ul></description><category>Progress Report</category><guid>https://godotengine.org/article/godot-xr-update-feb-2025/</guid><dc:creator>Bastiaan Olij</dc:creator><pubDate>Thu, 06 Mar 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/february-2025-update-godot-xr-community.webp</image></item><item><title>Godot 4.4, a unified experience</title><link>https://godotengine.org/article/godot-4-4-a-unified-experience/</link><summary>Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.</summary><description/><category>Release</category><guid>https://godotengine.org/article/godot-4-4-a-unified-experience/</guid><dc:creator>Godot contributors</dc:creator><pubDate>Mon, 03 Mar 2025 15:45:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-4-4-a-unified-experience.webp</image></item></channel></rss>
