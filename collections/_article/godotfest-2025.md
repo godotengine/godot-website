@@ -48,7 +48,7 @@ for helping us curate and create a diverse and interesting roster of submissions
 
 - [Gramps Garcia](https://godotsteam.com/), GodotSteam Creator / Maintainer
 - [Rothio Tome](https://bsky.app/profile/rothiotome.bsky.social),  Twitch development streamer and lead developer @ Patattie Games
-- Ariel Mansur
+- Ariel Manzur, Godot Engine Co-founder
 - [passivestar](https://bsky.app/profile/passivestar.bsky.social)
 - [LucyLavend](https://www.youtube.com/LucyLavend)
 - [Kerstin Pfaffinger](https://www.linkedin.com/in/kerstin-pfaffinger/), GodotFest Co-founder, master student @ TUM
