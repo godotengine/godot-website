@@ -1,17 +1,17 @@
 ---
 title: "Dev snapshot: Godot 4.5 beta 1"
-excerpt: Godot 4.5 has entered beta!
+excerpt: Godot 4.5 has entered beta and is now feature-complete!
 categories: [pre-release]
 author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-1.webp
 image_caption_title: Rift Riff
-image_caption_description: A game by Adriaan de Jongh
-date: 2025-06-17 12:00:00
+image_caption_description: A game by Adriaan de Jongh, Sim Kaart, Matthijs Koster, Franz LaZerte, and Professional Panda
+date: 2025-06-18 10:00:00
 ---
 
-The first beta release for the 4.5 release cycle has come at last, and with it a plethora of outstanding bugs to be squashed. Contributors are encouraged to focus exclusively on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.5), as we are now in feature-freeze and will not be merging any new features at this stage of development.
+The first beta release for the 4.5 release cycle has come at last, and with it a plethora of outstanding bugs to be squashed. Contributors are encouraged to focus exclusively on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.5), as we are now in feature-freeze and will not be merging new features at this stage of development (aside from a couple pre-approved exceptions scheduled for beta 2).
 
-For those interested in aiding us on our quest to squash any bugs that come up during this time, we encourage you to join our recent bug-hunting sprints. Helmed by our new head of the Bugsquad, [AThousandShips](https://github.com/AThousandShips) has taken to hosting regular sprints for tackling various bugs within the Godot repo, organized such that everyone can easily gather behind a given theme to make chunks of fixes as seamlessly and speedily as possible. This will be our fourth sprint of this type, with an associated discussion [already prepared](https://chat.godotengine.org/channel/dNtaAGsF2ifAjZ57P). See the [Bug Triage Introduction](https://github.com/godotengine/godot-maintainers-docs/blob/main/bug-triage/introduction.md) for more information, and join the [`#bugsquad`](https://chat.godotengine.org/channel/bugsquad)/[`#bugsquad-sprints`](https://chat.godotengine.org/channel/bugsquad-sprints) channels on our developer RocketChat to participate!
+For those interested in aiding us on our quest to squash any bugs that come up during this time, we encourage you to join our recent bug-hunting sprints. Helmed by our new head of the Bugsquad, [AThousandShips](https://github.com/AThousandShips) has taken to hosting regular sprints for tackling various bugs within the Godot repo, organized such that everyone can easily gather behind a given theme to make chunks of fixes as seamlessly and speedily as possible. This will be our fourth sprint of this type, with an associated discussion [already prepared](https://chat.godotengine.org/channel/dNtaAGsF2ifAjZ57P). See the [Bug Triage Introduction](https://github.com/godotengine/godot-maintainers-docs/blob/main/bug-triage/introduction.md) for more information, and join the [`#bugsquad`](https://chat.godotengine.org/channel/bugsquad) and [`#bugsquad-sprints`](https://chat.godotengine.org/channel/bugsquad-sprints) channels on our developer RocketChat to participate!
 
 Please consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
@@ -19,14 +19,14 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ---
 
-*The cover illustration is from* [**Rift Riff**](https://store.steampowered.com/app/2800900/Rift_Riff/?curator_clanid=41324400), *a tower defense game whose layered combat isn't compromised by its variety of forgiving mechanics! You can buy the game [on Steam](https://store.steampowered.com/app/2800900/Rift_Riff/?curator_clanid=41324400), and follow the developer on [Bluesky](https://bsky.app/profile/adriaan.games).*
+*The cover illustration is from* [**Rift Riff**](https://store.steampowered.com/app/2800900/Rift_Riff/?curator_clanid=41324400), *a tower defense game whose layered combat isn't compromised by its variety of forgiving mechanics! You can buy the game [on Steam](https://store.steampowered.com/app/2800900/Rift_Riff/?curator_clanid=41324400). You can follow the developers on Bluesky: [Adriaan](https://bsky.app/profile/adriaan.games), [Sim](https://bsky.app/profile/simkaart.co), [Franz](https://bsky.app/profile/franzlazerte.bsky.social), [Matthijs](https://bsky.app/profile/matthijskoster.com), [Panda](https://bsky.app/profile/professionalpanda.bsky.social).*
 
 ## Highlights
 
-- [New in Beta 1!](#new-in-beta-1)
+- [New since Dev 5](#new-since-dev5)
 - [Breaking changes](#breaking-changes)
 - [Animation](#animation)
-- [Audio](#audio)
+- [Audio / Video](#audio--video)
 - [C\#](#c)
 - [Core](#core)
 - [Documentation](#documentation)
@@ -40,8 +40,12 @@ Please consider [supporting the project financially](#support), if you are able.
 - [Rendering and shaders](#rendering-and-shaders)
 - [XR](#xr)
 
-### New in Beta 1!
-Much like our [4.4 beta 1 blog post](/article/dev-snapshot-godot-4-4-beta-1/#new-in-beta-1), we have many new features to showcase that managed to squeeze in before the feature freeze! Similarly, most of these are somewhat experimental compared to the more traditional highlights later on in the article, so please let us know if any issues are encountered.
+### New since Dev 5
+For those who have been following our development snapshots closely, you may be familiar with a number of the highlights in this post which were already covered in previous articles ([dev 1](/article/dev-snapshot-godot-4-5-dev-1), [dev 2](/article/dev-snapshot-godot-4-5-dev-1), [dev 3](/article/dev-snapshot-godot-4-5-dev-1), [dev 4](/article/dev-snapshot-godot-4-5-dev-1), and [dev 5](/article/dev-snapshot-godot-4-5-dev-1)).
+
+But as for [previous feature releases](/article/dev-snapshot-godot-4-4-beta-1/#new-in-beta-1), a lot of major features have managed to squeeze in right before the feature freeze! Those weren't covered in previous articles, so we'll start by an overview of the main changes added between 4.5 dev 5 and beta 1. The rest of this article will let users new to 4.5 get an overview of the most exciting changes coming in 4.5.
+
+Given the recency of those last minute merges, most of them are somewhat experimental compared to the more traditional highlights later on in the article, so please let us know if any issues are encountered.
 
 #### Stencil support for spatial materials
 With a PR in the making for nearly 2 years [GH-80710](https://github.com/godotengine/godot/pull/80710), [apples](https://github.com/apples) has brought a long-awaited stencil support to Godot! This new shader functionality is supported on all of our rendering backends, and will allow our users to perform entirely new techniques with the power of **depth**.
@@ -54,12 +58,12 @@ With a PR in the making for nearly 2 years [GH-80710](https://github.com/godoten
 
 **Cel-shaded lighting:**
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/godot-4-5-beta-1/stencil-light?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-light.webm?1" type="video/webm">
 </video>
 
 **Fire effect implemented entirely with `StandardMaterial3D`:**
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/godot-4-5-beta-1/stencil-fire?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-fire.webm?1" type="video/webm">
 </video>
 
 #### GDScript: Abstract and variadic functions
@@ -82,6 +86,8 @@ func _ready() -> void:
 	var potion := HealingPotion.new()
 	potion.use() # Prints `Character used Healing Potion.`
 ```
+
+**Note:** The GDScript is planning to change the `abstract` keyword to an `@abstract` annotation during the 4.5 beta phase. So while the syntax is with a keyword in this beta 1 build, the example above will change slightly in a future update.
 
 Danil isn't done yet though, as the variadic PR [GH-82808](https://github.com/godotengine/godot/pull/82808) comes from him as well! In programming languages, variadic arguments allow functions to accept a flexible number of input parameters. This allows turning the final argument of a function into an array that is called as if it were a sequence.
 
@@ -115,33 +121,9 @@ First-time contributor [daniel080400](https://github.com/daniel080400) came out 
 2D thumbnails utilize two passes—2D and GUI—before combining the two for the final image. As prefabs generally don't care about world coordinates, the world center is not accounted for with 2D thumbnails.
 <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/thumbnail-2d.webp" alt="2D Thumbnails"/>
 
-And more:
-- Modify template without rcedit. ([GH-75950](https://github.com/godotengine/godot/pull/75950))
-- Override editor settings per-project. ([GH-69012](https://github.com/godotengine/godot/pull/69012))
-- Set build options with detected build profile project. ([GH-103719](https://github.com/godotengine/godot/pull/103719))
-- Add option to auto tangent new bezier points in animation editor. ([GH-95564](https://github.com/godotengine/godot/pull/95564))
-- Code completion for overridden user-defined methods. ([GH-106198](https://github.com/godotengine/godot/pull/106198))
-- Restore 3.x style material auto-extraction import option. ([GH-107211](https://github.com/godotengine/godot/pull/107211))
-- Add "Paste" as unique option to editor resource picker. ([GH-103980](https://github.com/godotengine/godot/pull/103980))
-- Fix LightmapGI shadow leaks. ([GH-107254](https://github.com/godotengine/godot/pull/107254))
+#### New BoneConstraint3D for SkeletonModifier3D
 
-### Breaking changes
-We try to minimize breaking changes, but sometimes they are necessary in order to fix high priority issues. Where we do break compatibility, we do our best to make sure that the changes are minimal and require few changes in user projects.
-
-You can find a list of such issues by filtering the merged PRs in the 4.5 milestone with the [`breaks compat` label](https://github.com/godotengine/godot/issues?q=milestone%3A4.5%20is%3Amerged%20label%3A%22breaks%20compat%22). Here are some which are worth being aware of:
-- Tilemap physics are now handled in chunks. Only affects `get_coords_for_body_rid`, as now a single body can cover multiple cells. ([GH-102662](https://github.com/godotengine/godot/pull/102662))
-- Internal nodes are no longer duplicated. Only affects users deliberately utilizing internal nodes. ([GH-89442](https://github.com/godotengine/godot/pull/89442))
-- `NodeOneShot` fading now uses self delta instead of input delta. Brings behavior closer to other `AnimationNode`s, as the old implementation was exclusive to `NodeOneShot`. ([GH-101792](https://github.com/godotengine/godot/pull/101792))
-- `TreeItem`'s `alt_text` suffixes renamed to `description`. This brings the naming scheme in-line with the Accessibility API. Only relevant for those already using 4.5 dev versions. ([GH-107540](https://github.com/godotengine/godot/pull/107540))
-- 2D & 3D Navigation region and link updates are now asynchronous. (2D: [GH-107381](https://github.com/godotengine/godot/pull/107381), 3D: [GH-106670](https://github.com/godotengine/godot/pull/106670))
-- `NavigationServer2D` avoidance callbacks changed from `Vector3` to `Vector2`. ([GH-107256](https://github.com/godotengine/godot/pull/107256))
-- `CONTEXT_SLOT_FILESYSTEM_CREATE` will now always use the base directory. No longer recieves a full path when called. ([GH-107085](https://github.com/godotengine/godot/pull/107085))
-- Removed the `gradle_build`/`compress_native_libraries` export option. With Android builds now supporting 16kb pages, the native libraries are now required to be uncompressed. ([GH-106359](https://github.com/godotengine/godot/pull/106359))
-- "Areas Detect Static Bodies" setting removed from Jolt Physics. ([GH-105746](https://github.com/godotengine/godot/pull/105746))
-- `set_scope` removed from `JSONRPC`. Manual method registration is now required via `set_method`. ([GH-104890](https://github.com/godotengine/godot/pull/104890))
-
-### Animation
-This might be a little more technical than usual, but the work [Tokage](https://github.com/TokageItLab) put into implementing `BoneConstraint3D` warrants a highlight all the same ([GH-100984](https://github.com/godotengine/godot/pull/100984)). With this new class, users will be able to specify two bones simultaneously, opening the door for more natural movements and poses.
+This might be a little more technical than usual, but the work [Tokage](https://github.com/TokageItLab) put into implementing `BoneConstraint3D` warrants a highlight all the same ([GH-100984](https://github.com/godotengine/godot/pull/100984)). With this new class, users will be able to bind a bone to another bone, opening the door for more natural movements and poses.
 
 **Twist:**
 
@@ -151,10 +133,39 @@ This might be a little more technical than usual, but the work [Tokage](https://
 
 **Bend:**
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/godot-4-5-beta-1/constraint-bend.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.webm?1" type="video/webm">
 </video>
 
-### Audio
+#### And more!
+- Modify Windows template without rcedit. ([GH-75950](https://github.com/godotengine/godot/pull/75950))
+- Override editor settings per-project. ([GH-69012](https://github.com/godotengine/godot/pull/69012))
+- Complete build profile feature to properly detect options that can be disabled (reducing binary size). ([GH-103719](https://github.com/godotengine/godot/pull/103719))
+- Add option to auto tangent new bezier points in animation editor. ([GH-95564](https://github.com/godotengine/godot/pull/95564))
+- Code completion for overridden user-defined methods. ([GH-106198](https://github.com/godotengine/godot/pull/106198))
+- Restore 3.x style material auto-extraction import option, allowing updating material settings for multiple assets at once. ([GH-107211](https://github.com/godotengine/godot/pull/107211))
+- Add "Paste as Unique" option to editor resource picker. ([GH-103980](https://github.com/godotengine/godot/pull/103980))
+- Fix LightmapGI shadow leaks. ([GH-107254](https://github.com/godotengine/godot/pull/107254))
+
+### Breaking changes
+We try to minimize breaking changes, but sometimes they are necessary in order to fix high priority issues. Where we do break compatibility, we do our best to make sure that the changes are minimal and require few changes in user projects.
+
+You can find a list of such issues by filtering the merged PRs in the 4.5 milestone with the [`breaks compat` label](https://github.com/godotengine/godot/issues?q=milestone%3A4.5%20is%3Amerged%20label%3A%22breaks%20compat%22). Here are some which are worth being aware of:
+- Tilemap physics are now handled in chunks. Only affects `get_coords_for_body_rid`, as now a single body can cover multiple cells. ([GH-102662](https://github.com/godotengine/godot/pull/102662))
+- Internal nodes are no longer duplicated. Only affects users deliberately utilizing internal nodes. ([GH-89442](https://github.com/godotengine/godot/pull/89442))
+- `NodeOneShot` fading now uses self delta instead of input delta. Brings behavior closer to other `AnimationNode`s, as the old implementation was exclusive to `NodeOneShot`. ([GH-101792](https://github.com/godotengine/godot/pull/101792))
+- 2D & 3D Navigation region and link updates are now asynchronous. (2D: [GH-107381](https://github.com/godotengine/godot/pull/107381), 3D: [GH-106670](https://github.com/godotengine/godot/pull/106670))
+- `NavigationServer2D` avoidance callbacks changed from `Vector3` to `Vector2`. ([GH-107256](https://github.com/godotengine/godot/pull/107256))
+- Removed the `gradle_build/compress_native_libraries` export option. With Android builds now supporting 16kb pages, the native libraries are now required to be uncompressed. ([GH-106359](https://github.com/godotengine/godot/pull/106359))
+- "Areas Detect Static Bodies" setting removed from Jolt Physics, this is now always enabled. ([GH-105746](https://github.com/godotengine/godot/pull/105746))
+- `set_scope` removed from `JSONRPC`. Manual method registration is now required via `set_method`. ([GH-104890](https://github.com/godotengine/godot/pull/104890))
+
+<!--
+### Animation
+TODO. There's been 50+ PRs merged, we should have stuff to mention, even if just some UX improvements as a general blurb.
+Arnklit made a lot of UX improvements.
+-->
+
+### Audio / Video
 [Berama](https://github.com/berarma) brings us the ability to seek Theora video files via the new `set_stream_position` function ([GH-102360](https://github.com/godotengine/godot/pull/102360)). In doing so, they've additionally improved our multi-channel audio resampler, meaning that videos with 6+ channels will no longer crackle. A much more technical breakdown & additional features can be gleaned from the PR.
 
 ### C\#
@@ -197,11 +208,11 @@ And more:
 - Add meshes to Video RAM Profiler. ([GH-103238](https://github.com/godotengine/godot/pull/103238))
 
 ### GDScript
-Adding backtracing to GDScript was among the most highly-requested features from our users for years. By their powers combined, [Mikael Hermansson](https://github.com/mihe) and [Juan Linietsky](https://github.com/reduz) have added script backtracing support to GDScript ([GH-91006](https://github.com/godotengine/godot/pull/91006)). Finding the root problem behind warnings/errors required manually hunting down the issue with very little assistance from the editor itself; a problem that will no longer plague users that utilize the backtracing functionality. This functionality is always available in debug mode, but can be activated in release mode if **Debug > Settings > GDScript > Always Track Call Stacks** is enabled in the project settings. This can make it easier for users to report issues in a way that developers can track down.
+Adding backtracing to GDScript was among the most highly-requested features from our users for years. By their powers combined, [Mikael Hermansson](https://github.com/mihe) and [Juan Linietsky](https://github.com/reduz) have added script backtracing support to GDScript ([GH-91006](https://github.com/godotengine/godot/pull/91006)). Finding the root problem behind warnings/errors that appear at runtime required being able to reproduce them in the editor to use the debugger. Developers will now have the possibility to see backtraces of runtime errors directly in their logs, making it possible to debug and fix issues that happen under user testing or in shipped titles. This functionality is always available in debug mode, but can be activated in release mode if **Debug > Settings > GDScript > Always Track Call Stacks** is enabled in the project settings. This can make it easier for users to report issues in a way that developers can track down.
 
 As mentioned in the new features section, abstract methods were a continuation of abstract classes. While the ability to create abstract classes was always available internally, it's thanks to [Aaron Franke](https://github.com/aaronfranke) that GDScript users can now take advantage of this paradigm ([GH-67777](https://github.com/godotengine/godot/pull/67777)). Now if a user wants to introduce their own abstract class, they merely need to declare it via the new `abstract` keyword.
 
-- **NOTE:** In following beta snapshots, `abstract` will be changing from a keyword to an annotation, as to better suit the existing GDScript conventions.
+- **NOTE:** In following beta snapshots, `abstract` will be changing from a keyword to an `@abstract` annotation, as to better suit the existing GDScript conventions.
 
 And more:
 - Inline color pickers. ([GH-105724](https://github.com/godotengine/godot/pull/105724))
@@ -214,13 +225,13 @@ And more:
 In a similar vein, the ability to manipulate a group of controls simultaneously has become much easier thanks to [Delsin-Yu](https://github.com/Delsin-Yu)'s PR with a focus on recursive control across child controls ([GH-97495](https://github.com/godotengine/godot/pull/97495)). This implements new properties for recursively disabling `Focus Mode` and `Mouse Filter`, meaning that the ability to select and interact with child controls becomes far more intuitive, and allows for explicit overrides if desired.
 
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/godot-4-5-beta-1/recursive-focus.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/recursive-focus.webm?1" type="video/webm">
 </video>
 
 There's also the newly added `SVGTexture`, implemented by our very own [bruvzg](https://github.com/bruvzg) in [GH-105375](https://github.com/godotengine/godot/pull/105375), allowing for rasterization of SVG files directly. However, when initially showcased, this process was fairly long-winded, as the main uses were internal. This has since been remedied with a dedicated importer in [GH-105655](https://github.com/godotengine/godot/pull/105655), making rasterization much more accessible to all users.
 
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/godot-4-5-beta-1/svg-auto-scalable.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.webm?1" type="video/webm">
 </video>
 
 And more:
@@ -249,7 +260,7 @@ And more:
 The Android editor experience has become significantly improved thanks to the implementation of `TouchActionsPanel`. While this is technically something any touch device can take advantage of, [Anish Mishra](https://github.com/syntaxerror247)'s PR [GH-100339](https://github.com/godotengine/godot/pull/100339) was explicitly created with the Android editor in mind. `TouchActionsPanel` comes equipped with common action buttons (save, undo, redo, etc.), which simulate actions like `ui_undo` and `ui_redo` via pre-existing shortcuts. This was implemented early on in the 4.5 development cycle, giving our maintainers a stable and versatile foundation for future touch-based actions, and ensuring that [several](https://github.com/godotengine/godot/pull/105015) [followup](https://github.com/godotengine/godot/pull/105140) [additions](https://github.com/godotengine/godot/pull/105518) could come shortly after.
 
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/godot-4-5-beta-1/touch-actions-panel?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/touch-actions-panel.webm?1" type="video/webm">
 </video>
 
 And more:
