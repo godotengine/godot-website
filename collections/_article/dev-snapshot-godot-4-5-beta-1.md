@@ -6,7 +6,7 @@ author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-1.webp
 image_caption_title: Rift Riff
 image_caption_description: A game by Adriaan de Jongh, Sim Kaart, Matthijs Koster, Franz LaZerte, and Professional Panda
-date: 2025-06-18 10:00:00
+date: 2025-06-18 22:00:00
 ---
 
 The first beta release for the 4.5 release cycle has come at last, and with it a plethora of outstanding bugs to be squashed. Contributors are encouraged to focus exclusively on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.5), as we are now in feature-freeze and will not be merging new features at this stage of development (aside from a couple pre-approved exceptions scheduled for beta 2).
@@ -36,6 +36,8 @@ Much like [previous feature releases](/article/dev-snapshot-godot-4-4-beta-1/#ne
 - [Editor](#editor)
 - [GDScript](#gdscript)
 - [GUI](#gui)
+- [Import](#import)
+- [Input](#input)
 - [Internationalization](#internationalization)
 - [Navigation](#navigation)
 - [Physics](#physics)
@@ -54,6 +56,7 @@ You can find a list of such issues by filtering the merged PRs in the 4.5 milest
 - 2D & 3D Navigation region and link updates are now asynchronous. (2D: [GH-107381](https://github.com/godotengine/godot/pull/107381), 3D: [GH-106670](https://github.com/godotengine/godot/pull/106670))
 - `NavigationServer2D` avoidance callbacks changed from `Vector3` to `Vector2`. ([GH-107256](https://github.com/godotengine/godot/pull/107256))
 - Removed the `gradle_build/compress_native_libraries` export option. With Android builds now supporting 16kb pages, the native libraries are now required to be uncompressed. ([GH-106359](https://github.com/godotengine/godot/pull/106359))
+  * We are considering re-introducing this option for users who don't target Android 16, or distribute APKs outside of Google Play. ([GH-107681](https://github.com/godotengine/godot/pull/107681))
 - "Areas Detect Static Bodies" setting removed from Jolt Physics, this is now always enabled. ([GH-105746](https://github.com/godotengine/godot/pull/105746))
 - `set_scope` removed from `JSONRPC`. Manual method registration is now required via `set_method`. ([GH-104890](https://github.com/godotengine/godot/pull/104890))
 
@@ -299,6 +302,7 @@ And more:
 
 Our implementation of 3D fixed-timestep interpolation has been completely overhauled, as the previous iteration had fundamental flaws with how it was structured in such a way that couldn't be addressed with a simple fix or patch. The solution already existed on 3.x, and has since been forward-ported by [lawnjelly](https://github.com/lawnjelly) via [GH-104269](https://github.com/godotengine/godot/pull/104269). Now all logic is handled within the `SceneTree`, but in a manner which doesn't break any existing API. All projects will benefit from this improvement out-of-the-box.
 
+**Interpolation with 10 ticks per second:**
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm">
 </video>
@@ -432,13 +436,13 @@ And more:
 - Optimize Mobile renderer by using FP16 explicitly. ([GH-107119](https://github.com/godotengine/godot/pull/107119))
 - Fix LightmapGI shadow leaks. ([GH-107254](https://github.com/godotengine/godot/pull/107254))
 
-<!--
 ### XR
 
-TODO: Find more highlights, maybe:
-- Add support for Direct3D 12 OpenXR backend https://github.com/godotengine/godot/pull/104207
-- https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.0.0-stable
--->
+The XR team has been doing a [lot of groundwork](https://github.com/godotengine/godot/pulls?q=is%3Amerged+is%3Apr+label%3Atopic%3Axr+milestone%3A4.5+label%3Aenhancement) to support more OpenXR extensions. While it's separate from the main Godot release cycle, the Godot OpenXR Vendors had a [4.0.0 release](https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.0.0-stable) in April which is worth checking out! [Matthieu Bucchianeri](https://github.com/mbucchia) had a massive first contribution merged to implement support for the Direct3D 12 OpenXR backend ([GH-104207](https://github.com/godotengine/godot/pull/104207)).
+
+[Darío](https://github.com/DarioSamo) and [Logan Lang](https://github.com/devloglogan)'s implementations of respectively fragment density maps and motion vectors for the Mobile renderer also pave the way for better rendering and supporting more extensions for XR.
+
+While those are not merged yet, you can keep an eye on [Bastiaan Olij](https://github.com/BastiaanOlij)'s cutting edge implementations for the OpenXR Spatial Entities ([GH-107391](https://github.com/godotengine/godot/pull/107391)) and Render Model ([GH-107388](https://github.com/godotengine/godot/pull/107388)) extensions, building upon the freshly released OpenXR SDK 1.1.49. [Fredia Huya-Kouadio](https://github.com/m4gr3d) is also putting finishing touches on the support for running hybrid apps from the Godot XR editor ([GH-103972](https://github.com/godotengine/godot/pull/103972)).
 
 ## Changelog
 
