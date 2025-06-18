@@ -72,13 +72,11 @@ This might be a little more technical than usual, but the work [Tokage](https://
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.webm?1" type="video/webm">
 </video>
 
-<!--
-TODO: Write a paragraph about UX improvements from Arnklit and Yeldham:
-- https://github.com/godotengine/godot/pull/103130 (feature this one's video?)
-- https://github.com/godotengine/godot/pull/103584
-- https://github.com/godotengine/godot/pull/95564
-- https://github.com/godotengine/godot/pull/100470
--->
+Onto something more suitable for a blog post highlight: UX improvements! [YeldhamDev](https://github.com/YeldhamDev) implemented support for selection box movement and scaling within the bezier editor, making it a piece of cake to perform changes to points in batches ([GH-100470](https://github.com/godotengine/godot/pull/100470)). [Arnklit](https://github.com/Arnklit) continues the bezier improvements with [GH-95564](https://github.com/godotengine/godot/pull/95564), allowing users to auto tangent new points in a balanced or mirrored manner. The animation player gets some love as well, with the ability to sort animations alphabetically ([GH-103584](https://github.com/godotengine/godot/pull/103584)). Lastly, and featured below, is a very long-awaited UX improvement: animation filtering! ([GH-103130](https://github.com/godotengine/godot/pull/103130))
+
+<video autoplay loop muted playsinline>
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/animation-filtering.webm?1" type="video/webm">
+</video>
 
 And more:
 - Add `delta` argument to `SkeletonModifier3D` `_process_modification()` and expose `advance()` in Skeleton3D. ([GH-103639](https://github.com/godotengine/godot/pull/103639))
@@ -92,24 +90,21 @@ And more:
 
 ### C\#
 
-<!--
-TODO: We can highlight https://github.com/godotengine/godot/pull/97908 which is actually a fairly big deal (makes it possible to use NativeAOT on Android).
-https://github.com/godotengine/godot/pull/104689 could also be mentioned as it seems to be a nice optimization.
-Those 2 are bugfixes for C# on Android which haven't yet been released in 4.4.2, so could be worth mentioning. https://github.com/godotengine/godot/pull/105262 https://github.com/godotengine/godot/pull/105853
--->
+First-time contributor [Justin Sasso](https://github.com/atlasapplications) kicks things off with `linux-bionic` RID export support ([GH-97908](https://github.com/godotengine/godot/pull/97908)). For those that don't speak buildsystem, this enables NativeAOT on Android! For those that don't speak nerd, "NativeAOT" refers to the ability for .NET applications to compile directly to a device's native code, bypassing the need for the .NET runtime entirely. NativeAOT apps have the benefit of significantly faster startup and smaller memory footprints, which are both very welcome additions for mobile devices.
 
-We unfortunately don't have much to highlight at this time on the C# side of things. Make no mistake though, that's *only* in the context of 4.5; we've been seeing significant progress in areas that simply didn't make it in time for the feature freeze but still warrant a mention.
+Finding performance improvements in an interop context is like finding a needle in a haystack. Actually tracking down where some point of slowdown or inefficency is taking place across entirely different environments is difficult to the point that most people won't even attempt it. [Delsin-Yu](https://github.com/Delsin-Yu) is not most people, because the improvements that came from simply removing `StringName` allocations on unimplemented getters/setters saw a staggering **60× decrease** in resources ([GH-104689](https://github.com/godotengine/godot/pull/104689)).
 
-We're well aware of the excitement around bringing .NET to web builds for Godot, and progress on that front has been very promising. We've even covered this very topic in a [previous blog](https://godotengine.org/article/live-from-godotcon-boston-web-dotnet-prototype/), where we discussed the rocky road of bringing this project to light & even featured a prototype which you can try [right now](https://lab.godotengine.org/godot-dotnet-web/)!
+Not everything related to .NET was able to make it in time for 4.5, but they're still worth mentioning because of how much effort the team has already put into them. For instance: we're well aware of the excitement around bringing .NET to web builds for Godot, and progress on that front has been very promising. We've even covered this very topic in a [previous blog](https://godotengine.org/article/live-from-godotcon-boston-web-dotnet-prototype/), where we discussed the rocky road of bringing this project to light even featured a prototype which you can try [right now](https://lab.godotengine.org/godot-dotnet-web/)!
 
 Our other long-term project for C# is revolving around the gradual move to GDExtension. The current module approach, while entirely functional for what it is, has historically been a fairly hacky implementation. Grafting on interop functionality between the engine itself and the dotnet runtime has proven to be error-prone, leading to a disproportionate amount of man-hours sunk into ensuring everything functions as expected. The hope is for the move to GDExtension to mean that all interop calls are handled in a manner that's universally applicable; that is: a manner that **any** programming language could take advantage of.
 
+And more:
+- Android: Add a preload hook to load .NET assemblies from the APK. ([GH-105262](https://github.com/godotengine/godot/pull/105262))
+- Android: Load .NET assemblies directly from PCK. ([GH-105853](https://github.com/godotengine/godot/pull/105853))
+
 ### Core
 
-Changes to the core of the engine require significantly more scrutiny than other parts of the engine; this comes down to how critical and foundational virtually every single piece of code proves to be. This makes it all the more impressive that [bruvzg](https://github.com/bruvzg) managed to implement [AccessKit](https://github.com/AccessKit/accesskit) support in such an integral manner ([GH-76829](https://github.com/godotengine/godot/pull/76829)).
-<!--
-TODO: The above section should be moved to GUI and detailed some more -- accessibility is a big deal, and just mentioning "AccessKit" doesn't tell users much. Can refer back to https://godotengine.org/article/dev-snapshot-godot-4-5-dev-3/#screen-reader-support for details.
--->
+Changes to the core of the engine require significantly more scrutiny than other parts of the engine; this comes down to how critical and foundational virtually every single piece of code proves to be. This makes it all the more impressive that there's so much worth highlighting in 4.5 that's specific to core!
 
 Adding a way to properly log errors and warnings, as well as get backtraces in logs when they happen, was among the most highly-requested features from our users for years. By their powers combined, [Mikael Hermansson](https://github.com/mihe) and [Juan Linietsky](https://github.com/reduz) have added script backtracing support for GDScript and C# ([GH-91006](https://github.com/godotengine/godot/pull/91006)). Finding the root problem behind warnings/errors that appear at runtime required being able to reproduce them in the editor to use the debugger. Developers will now have the possibility to see backtraces of runtime errors directly in their logs, making it possible to debug and fix issues that happen under user testing or in shipped titles. This functionality is always available in debug mode, but can be activated in release mode for GDScript if **Debug > Settings > GDScript > Always Track Call Stacks** is enabled in the project settings.
 
@@ -144,10 +139,9 @@ And more:
 - Add thread safety to Object signals. ([GH-105453](https://github.com/godotengine/godot/pull/105453))
 
 ### Documentation
+It's not often that we have the opportunity to cover documentation changes in these highlights, as those changes are usually fairly low-key. This isn't to say that changes aren't happening; on the contrary, it's one of the single most active areas of our GitHub! That's because it often goes beyond our main repo, with changes needing to be synchronized in [godot-docs](https://github.com/godotengine/godot-docs). Special shoutouts to [Mickeon](https://github.com/Mickeon) and [tetrapod](https://github.com/tetrapod00) with the main repo and docs repo respectively, for taking on the lion's share of pull requests *and* reviews.
 
-It's not often that we have the opportunity to cover documentation changes in these highlights, as those changes are usually fairly low-key. This isn't to say that changes aren't happening; on the contrary, it's one of the single most active areas of our GitHub! That's because it often goes beyond our main repo, with changes needing to be synchronized in [godot-docs](https://github.com/godotengine/godot-docs).
-
-[Haoyu Qiu](https://github.com/timothyqiu)'s addition of `required` as a qualifier within the documentation itself warrants special mention. When extending a class that has virtual methods, it wasn't immediately obvious which methods *needed* an override, versus having defaulted fallbacks. …Well, it *was* obvious if you looked at the descriptions, but it wasn't something inherent to the functions themselves like `const`. This won't be an issue moving forward, as now `required` will come right after `virtual` where applicable.
+[Haoyu Qiu](https://github.com/timothyqiu)'s addition of `required` as a qualifier within the documentation itself warrants special mention ([GH-107130](https://github.com/godotengine/godot/pull/107130)). When extending a class that has virtual methods, it wasn't immediately obvious which methods *needed* an override, versus having defaulted fallbacks. …Well, it *was* obvious if you looked at the descriptions, but it wasn't something inherent to the functions themselves like `const`. This won't be an issue moving forward, as now `required` will come right after `virtual` where applicable.
 
 Anyone who has contributed to the documentation has likely wrangled with the mixed-indentation of codeblocks. This necessitated adding spaces manually, and often meant disabling autoformatting on XML files; this was inconvenient at best & outright error-prone at worst. [Tomasz Chabora](https://github.com/KoBeWi) put this issue to rest with [GH-89819](https://github.com/godotengine/godot/pull/89819), unilaterally replacing all spaces with tabs across all codeblocks. This was a surprisingly involved process, as it required a simultaneous freeze & subsequent update of our [localization files](https://github.com/godotengine/godot-editor-l10n), but where there's a will there's a way!
 
@@ -241,7 +235,10 @@ And more:
 - Code completion for overridden user-defined methods. ([GH-106198](https://github.com/godotengine/godot/pull/106198))
 
 ### GUI
-4.5 is bringing with it quite a few new quality-of-life improvements, with arguably the biggest addition being one we actually haven't given proper coverage to yet: foldable containers! [Tomasz Chabora](https://github.com/KoBeWi) is no stranger to editor enhancements, and this time he has blessed us with [GH-102346](https://github.com/godotengine/godot/pull/102346), which grants us the new `FoldableContainer` class. Now users can have dynamically cascading GUI objects with the ability to toggle if the contents are expanded or not at will, a process that previously took several workarounds to achieve.
+
+Here at the Godot Foundation, accessibililty is an absolute top-priority. The road to making an experience available to anyone regardless of their circumstances isn't an easy one, but it's a road that all developers are obligated to take. To that end, our resident tech guru [bruvzg](https://github.com/bruvzg) tackled absolutely Herculean task of integrating [AccessKit](https://github.com/AccessKit/accesskit) to Godot as a whole ([GH-76829](https://github.com/godotengine/godot/pull/76829)). With this in place, screenreader support is now built into the very core of the engine. All our supported desktop platforms offer fully uncompromised support, as the bindings are already in place and well-tested; when other platforms follow suit, we will ensure support to the absolute best of our ability.
+
+4.5 is bringing with it quite a few new quality-of-life improvements, with one of the biggest additions being one we actually haven't given proper coverage to yet: foldable containers! [Tomasz Chabora](https://github.com/KoBeWi) is no stranger to editor enhancements, and this time he has blessed us with [GH-102346](https://github.com/godotengine/godot/pull/102346), which grants us the new `FoldableContainer` class. Now users can have dynamically cascading GUI objects with the ability to toggle if the contents are expanded or not at will, a process that previously took several workarounds to achieve.
 
 In a similar vein, the ability to manipulate a group of controls simultaneously has become much easier thanks to [Delsin-Yu](https://github.com/Delsin-Yu)'s PR with a focus on recursive control across child controls ([GH-97495](https://github.com/godotengine/godot/pull/97495)). This implements new properties for recursively disabling `Focus Mode` and `Mouse Filter`, meaning that the ability to select and interact with child controls becomes far more intuitive, and allows for explicit overrides if desired.
 
