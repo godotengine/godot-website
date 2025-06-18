@@ -285,6 +285,11 @@ If all goes well, this change should be merged for beta 2 as an exception to the
 
 Internationalization has always been an extremely crucial part of the Godot project, and its relative lack of coverage in our blogposts does not do it justice. [Haoyu Qiu](https://github.com/timothyqiu) allows us to break this bad habit of ours with a fantastic addition to the i18n workflow: editor previews ([GH-96921](https://github.com/godotengine/godot/pull/96921))! Now there's much less guesswork necessary to see how your projects will appear to the end-user in their native language, ensuring a consistent and clean style no matter the selection!
 
+**Translation preview on [Michael Alexsander](https://github.com/YeldhamDev/)'s [Librerama](https://codeberg.org/Librerama/librerama/):**
+<video autoplay loop muted playsinline>
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/translation-preview.mp4?1" type="video/mp4">
+</video>
+
 Similarly, the ability to swap languages on-the-fly within the editor is now possible thanks to the efforts of [Tomasz Chabora](https://github.com/KoBeWi) in [GH-102562](https://github.com/godotengine/godot/pull/102562). Now users can preview *and* experience multiple language options in a single editor session.
 
 We also want to give a shout-out to all the translators who tirelessly work on localizing the Godot editor, the class reference and the online documentation. If you'd like to join that effort, head to [Weblate](https://hosted.weblate.org/projects/godot-engine/) and review our [documentation](https://docs.godotengine.org/en/latest/contributing/documentation/editor_and_docs_localization.html#doc-editor-and-docs-localization) for instructions.

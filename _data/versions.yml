@@ -1,6 +1,6 @@
 - name: "4.5"
   flavor: "beta1"
-  release_date: "17 June 2025"
+  release_date: "18 June 2025"
   release_notes: "/article/dev-snapshot-godot-4-5-beta-1/"
   releases:
     - name: "dev5"
