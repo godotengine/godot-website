@@ -90,10 +90,34 @@ We're well aware of the excitement around bringing .NET to web builds for Godot,
 Our other long-term project for C# is revolving around the gradual move to GDExtension. The current module approach, while entirely functional for what it is, has historically been a fairly hacky implementation. Grafting on interop functionality between the engine itself and the dotnet runtime has proven to be error-prone, leading to a disproportionate amount of man-hours sunk into ensuring everything functions as expected. The hope is for the move to GDExtension to mean that all interop calls are handled in a manner that's universally applicable; that is: a manner that **any** programming language could take advantage of.
 
 ### Core
-Changes to the core of the engine require significantly more scrutiny than other parts of the engine; this comes down to how critical and foundational virtually every single piece of code proves to be. This makes it all the more impressive that [bruvzg](https://github.com/bruvzg) managed to implement [AccessKit](https://github.com/AccessKit/accesskit) support in such an integral manner ([GH-76829](https://github.com/godotengine/godot/pull/76829)). Additionally, special thanks to [Lukas Tenbrink](https://github.com/Ivorforce), a new addition to the core team who has been [contributing](https://github.com/godotengine/godot/pull/103708) [nonstop](https://github.com/godotengine/godot/pull/106996) [improvements](https://github.com/godotengine/godot/pull/104381) to ensure optimal performance for developers and maintainers alike.
+Changes to the core of the engine require significantly more scrutiny than other parts of the engine; this comes down to how critical and foundational virtually every single piece of code proves to be. This makes it all the more impressive that [bruvzg](https://github.com/bruvzg) managed to implement [AccessKit](https://github.com/AccessKit/accesskit) support in such an integral manner ([GH-76829](https://github.com/godotengine/godot/pull/76829)).
+
+Adding a way to properly log errors and warnings, as well as get backtraces in logs when they happen, was among the most highly-requested features from our users for years. By their powers combined, [Mikael Hermansson](https://github.com/mihe) and [Juan Linietsky](https://github.com/reduz) have added script backtracing support for GDScript and C# ([GH-91006](https://github.com/godotengine/godot/pull/91006)). Finding the root problem behind warnings/errors that appear at runtime required being able to reproduce them in the editor to use the debugger. Developers will now have the possibility to see backtraces of runtime errors directly in their logs, making it possible to debug and fix issues that happen under user testing or in shipped titles. This functionality is always available in debug mode, but can be activated in release mode for GDScript if **Debug > Settings > GDScript > Always Track Call Stacks** is enabled in the project settings.
+
+```gdscript
+func _ready():
+	my_func1()
+
+func my_func1():
+	my_func2()
+
+func my_func2():
+	print(Engine.capture_script_backtraces()[0])
+```
+Outputs:
+```
+GDScript backtrace (most recent call first):
+    [0] my_func2 (res://node_2d.gd:11)
+    [1] my_func1 (res://node_2d.gd:8)
+    [2] _ready (res://node_2d.gd:5)
+```
+
+[Pedro J. Estébanez](https://github.com/RandomShaper) also addressed a long-time complaint with `Resource.duplicate(true)` not performing the expected deep duplication in a reliable and predictable way ([GH-100673](https://github.com/godotengine/godot/pull/100673)). The new behavior of the method, and the additional `Resource.duplicate_deep()` give users full control over what gets duplicated or not (arrays, dictionaries, nested resources, etc.).
+
+Additionally, special thanks to [Lukas Tenbrink](https://github.com/Ivorforce), a new addition to the core team who has been [contributing](https://github.com/godotengine/godot/pull/103708) [nonstop](https://github.com/godotengine/godot/pull/106996) [improvements](https://github.com/godotengine/godot/pull/104381) to ensure optimal performance for developers and maintainers alike.
 
 And more:
-- Overhaul resource duplication. ([GH-75950](https://github.com/godotengine/godot/pull/75950))
+- Overhaul resource duplication. ([GH-75950](https://github.com/godotengine/godot/pull/100673))
 - Complete build profile feature to properly detect options that can be disabled (reducing binary size). ([GH-103719](https://github.com/godotengine/godot/pull/103719))
 
 ### Documentation
@@ -134,19 +158,7 @@ And more:
 - Add "Paste as Unique" option to editor resource picker. ([GH-103980](https://github.com/godotengine/godot/pull/103980))
 
 ### GDScript
-4.5 sees with it the introduction of a new keyword: `abstract`. [Aaron Franke](https://github.com/aaronfranke) brings this previously internal-only functionality into the hands of all GDScript users ([GH-67777](https://github.com/godotengine/godot/pull/67777)). By prepending this keyword to a class, it ensures that direct instantiation cannot occur; meaning that all calls will actually refer to a derived classes.
-
-```gdscript
-abstract class_name MyAbstract extends Node
-```
-<img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/abstract-error.webp" alt="Abstract error"/>
-
-```gdscript
-class_name ExtendsMyAbstract extends MyAbstract
-```
-<img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/abstract-derived.webp" alt="Abstract derived"/>
-
-Courtesy of [Danil Alexeev](https://github.com/dalexeev), there is now the ability for users to declare *functions* as abstract ([GH-106409](https://github.com/godotengine/godot/pull/106409)). By prepending the same `abstract` keyword to a function, it will be marked for explicit override by child classes.
+4.5 sees with it the introduction of a new keyword: `abstract`. [Aaron Franke](https://github.com/aaronfranke) brings this previously internal-only functionality into the hands of all GDScript users ([GH-67777](https://github.com/godotengine/godot/pull/67777)). By prepending this keyword to a class, it ensures that direct instantiation cannot occur; meaning that all calls will actually refer to a derived classes. [Danil Alexeev](https://github.com/dalexeev) built further upon this by introducing the ability for users to declare *functions* as abstract ([GH-106409](https://github.com/godotengine/godot/pull/106409)). By prepending the same `abstract` keyword to a function, it will be marked for explicit override by child classes.
 
 ```gdscript
 abstract class Item:
@@ -162,11 +174,15 @@ class HealingPotion extends Item:
 func _ready() -> void:
 	var potion := HealingPotion.new()
 	potion.use() # Prints `Character used Healing Potion.`
+
+	var item := Item.new() # Parser error!
 ```
 
-**Note:** The GDScript is planning to change the `abstract` keyword to an `@abstract` annotation during the 4.5 beta phase. So while the syntax is with a keyword in this beta 1 build, the example above will change slightly in a future update.
+<img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/abstract-error.webp" alt="Abstract class instantiation error"/>
 
-Danil isn't done yet though, as a variadic argument PR [GH-82808](https://github.com/godotengine/godot/pull/82808) comes from him as well! In programming languages, variadic arguments allow functions to accept a flexible number of input parameters. This allows turning the final argument of a function into an array that is called as if it were a sequence.
+**Note:** The GDScript team is planning to change the `abstract` keyword to an `@abstract` annotation during the 4.5 beta phase.
+
+Danil isn't done yet though, as variadic arguments support ([GH-82808](https://github.com/godotengine/godot/pull/82808)) comes from him as well! In programming languages, variadic arguments allow functions to accept a flexible number of input parameters. This allows turning the final argument of a function into an array that is called as if it were a sequence.
 
 ```gdscript
 func f(a: int, b: int = 0, ...args: Array):
@@ -190,7 +206,6 @@ func _ready() -> void:
 <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/variadic-documentation.webp" alt="Variadic documentation"/>
 
 And more:
-- Script backtracing. ([GH-91006](https://github.com/godotengine/godot/pull/91006))
 - Inline color pickers. ([GH-105724](https://github.com/godotengine/godot/pull/105724))
 - Highlight warning lines. ([GH-105724](https://github.com/godotengine/godot/pull/105724))
 - Don't add parenthesis when expecting `Callable`. ([GH-96375](https://github.com/godotengine/godot/pull/96375))
@@ -254,7 +269,7 @@ And more:
 <img src="/storage/blog/dev-snapshot-godot-4-5-dev-2/wayland-sub-window.webp" alt="Multi-Window output on Wayland"/>
 
 #### macOS
-It took a while for embedded window support to come to macOS, as this OS does not allow the kind of window manipulation that Windows and Linux use for game window embedding. Instead, macOS utilizes an inter-process communication approach where the framebuffer is sent from the game process (which performs off-screen rendering) to the editor window, which also handles input events to the game process. Although it's much more complex, [Stuart Carnie](https://github.com/stuartcarnie) used a more robust approach that doesn't rely on any window management hacks ([GH-105884](https://github.com/godotengine/godot/pull/105884)). Not having to worry about edge-cases or low-level shenanigans is appealing in its own right, so this approach may be ported later to Windows/Linux in a future release to make game window embedding much more reliable overall.
+It took a while for embedded window support to come to macOS, as this OS does not allow the kind of window manipulation that Windows and Linux use for game window embedding. Instead, macOS utilizes an inter-process communication approach where the framebuffer is sent from the game process (which performs off-screen rendering) to the editor window, which also handles passing input events to the game process. Although it's much more complex, [Stuart Carnie](https://github.com/stuartcarnie) used a more robust approach that doesn't rely on any window management hacks ([GH-105884](https://github.com/godotengine/godot/pull/105884)). Not having to worry about edge-cases or low-level shenanigans is appealing in its own right, so this approach may be ported later to Windows/Linux in a future release to make game window embedding much more reliable overall.
 
 #### visionOS
 The Apple XR environment, visionOS, comes to Godot Engine in 4.5! We're already committed to making great strides in XR featuresets and support, but this brings us closer to a platform-independent pipeline similar to what we already have with traditional platforms. It might be unconventional to imagine using an engine editor within an XR environment, but it's one which we've supported for Meta Quest and OpenXR; now Apple users can join the fun.
@@ -263,7 +278,7 @@ The Apple XR environment, visionOS, comes to Godot Engine in 4.5! We're already 
 The upcoming performance boost from SIMD is so impressive that we've made a [dedicated article](/article/upcoming-serious-web-performance-boost/) to showcase exactly what kind of benefits users can expect. The short version is that [Adam Scott](https://github.com/adamscott) created a PR which changed only a single compiler flag ([GH-106319](https://github.com/godotengine/godot/pull/106319)), but one which caused universal improvements for web applications and editor workflow. Check out our article for the long version.
 
 #### Windows
-Support for Windows 7/8.1 will be dropped starting with 4.5 ([GH-106959](https://github.com/godotengine/godot/pull/106959)). The call to remove Windows 8.1 wasn't a difficult one; it's been EOL for over half a decade, had extended support end over two years ago, and was inherently unpopular to a point that online survey tools for OSes outright omit it. Windows 7 is comparatively more contentious, but builds for it were already in a broken state ever since the introduction of the aforementioned AccessKit; combine that with Windows 7 recently celebrating its 10-year anniversary of being EOL, as well as active coverage of this OS being estimated at one-tenth of a percentage point, and its removal was ultimately cemented. This had the benefit of **significantly** cleaning up the codebase for our Windows-specific files, which often had to rely on dummy includes to account for Windows 7 specifically, and opens the door for more modern APIs to be integrated for our Windows builds.
+Support for Windows 7/8.1 will be dropped starting with 4.5 ([GH-106959](https://github.com/godotengine/godot/pull/106959)). The call to remove Windows 8.1 wasn't a difficult one; it's been EOL for over half a decade, had extended support end over two years ago, and was inherently unpopular to the point that online survey tools for OSes outright omit it. Windows 7 is comparatively more contentious, but builds for it were already in a broken state ever since the introduction of the aforementioned AccessKit; combine that with Windows 7 recently celebrating its 10-year anniversary of being EOL, as well as active coverage of this OS being estimated at one-tenth of a percentage point, and its removal was ultimately cemented. This had the benefit of **significantly** cleaning up the codebase for our Windows-specific files, which often had to rely on dummy includes to account for Windows 7 specifically, and opens the door for more modern APIs to be integrated for our Windows builds.
 
 And more:
 - Modify Windows template without rcedit. ([GH-75950](https://github.com/godotengine/godot/pull/75950))
