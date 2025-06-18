@@ -90,7 +90,7 @@ And more:
 
 ### C\#
 
-First-time contributor [Justin Sasso](https://github.com/atlasapplications) kicks things off with `linux-bionic` RID export support ([GH-97908](https://github.com/godotengine/godot/pull/97908)). For those that don't speak buildsystem, this enables NativeAOT on Android! For those that don't speak nerd, "NativeAOT" refers to the ability for .NET applications to compile directly to a device's native code, bypassing the need for the .NET runtime entirely. NativeAOT apps have the benefit of significantly faster startup and smaller memory footprints, which are both very welcome additions for mobile devices.
+First-time contributor [Justin Sasso](https://github.com/atlasapplications) kicks things off with `linux-bionic` RID export support ([GH-97908](https://github.com/godotengine/godot/pull/97908)). For those that don't speak buildsystem, this enables NativeAOT on Android! For those that don't speak .NET lingo, "NativeAOT" refers to the ability for .NET applications to compile directly to a device's native code, bypassing the need for the .NET runtime entirely. NativeAOT apps have the benefit of significantly faster startup and smaller memory footprints, which are both very welcome additions for mobile devices.
 
 Finding performance improvements in an interop context is like finding a needle in a haystack. Actually tracking down where some point of slowdown or inefficency is taking place across entirely different environments is difficult to the point that most people won't even attempt it. [Delsin-Yu](https://github.com/Delsin-Yu) is not most people, because the improvements that came from simply removing `StringName` allocations on unimplemented getters/setters saw a staggering **60× decrease** in resources ([GH-104689](https://github.com/godotengine/godot/pull/104689)).
 
@@ -139,7 +139,8 @@ And more:
 - Add thread safety to Object signals. ([GH-105453](https://github.com/godotengine/godot/pull/105453))
 
 ### Documentation
-It's not often that we have the opportunity to cover documentation changes in these highlights, as those changes are usually fairly low-key. This isn't to say that changes aren't happening; on the contrary, it's one of the single most active areas of our GitHub! That's because it often goes beyond our main repo, with changes needing to be synchronized in [godot-docs](https://github.com/godotengine/godot-docs). Special shoutouts to [Mickeon](https://github.com/Mickeon) and [tetrapod](https://github.com/tetrapod00) with the main repo and docs repo respectively, for taking on the lion's share of pull requests *and* reviews.
+
+It's not often that we have the opportunity to cover documentation changes in these highlights, as those changes are usually fairly low-key. This isn't to say that changes aren't happening; on the contrary, it's one of the single most active areas of our GitHub! That's because it often goes beyond our main repo, with changes needing to be synchronized in [godot-docs](https://github.com/godotengine/godot-docs). Special shoutouts to [Mickeon](https://github.com/Mickeon) for the class reference, and [Matthew](https://github.com/skyace65), [tetrapod](https://github.com/tetrapod00), [A Thousand Ships](https://github.com/AThousandShips), [Max Hilbrunner](https://github.com/mhilbrunner) and [Hugo Locurcio](https://github.com/Calinou) for the online docs, for taking on the lion's share of pull requests *and* reviews.
 
 [Haoyu Qiu](https://github.com/timothyqiu)'s addition of `required` as a qualifier within the documentation itself warrants special mention ([GH-107130](https://github.com/godotengine/godot/pull/107130)). When extending a class that has virtual methods, it wasn't immediately obvious which methods *needed* an override, versus having defaulted fallbacks. …Well, it *was* obvious if you looked at the descriptions, but it wasn't something inherent to the functions themselves like `const`. This won't be an issue moving forward, as now `required` will come right after `virtual` where applicable.
 
@@ -173,12 +174,13 @@ And more:
 - Search script docs without manual recompilation. ([GH-95821](https://github.com/godotengine/godot/pull/95821))
 - Array drag-and-drop improvements. ([GH-102534](https://github.com/godotengine/godot/pull/102534))
 - Add meshes to Video RAM Profiler. ([GH-103238](https://github.com/godotengine/godot/pull/103238))
-- Restore 3.x style material auto-extraction import option, allowing updating material settings for multiple assets at once. ([GH-107211](https://github.com/godotengine/godot/pull/107211))
 - Add "Paste as Unique" option to editor resource picker. ([GH-103980](https://github.com/godotengine/godot/pull/103980))
 
 ### GDScript
 
 4.5 sees with it the introduction of a new keyword: `abstract`. [Aaron Franke](https://github.com/aaronfranke) brings this previously internal-only functionality into the hands of all GDScript users ([GH-67777](https://github.com/godotengine/godot/pull/67777)). By prepending this keyword to a class, it ensures that direct instantiation cannot occur; meaning that all calls will actually refer to a derived classes. [Danil Alexeev](https://github.com/dalexeev) built further upon this by introducing the ability for users to declare *functions* as abstract ([GH-106409](https://github.com/godotengine/godot/pull/106409)). By prepending the same `abstract` keyword to a function, it will be marked for explicit override by child classes.
+
+**Note:** The GDScript team is planning to change the `abstract` keyword to an `@abstract` annotation during the 4.5 beta phase.
 
 ```gdscript
 abstract class Item:
@@ -199,8 +201,6 @@ func _ready() -> void:
 ```
 
 <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/abstract-error.webp" alt="Abstract class instantiation error"/>
-
-**Note:** The GDScript team is planning to change the `abstract` keyword to an `@abstract` annotation during the 4.5 beta phase.
 
 Danil isn't done yet though, as variadic arguments support ([GH-82808](https://github.com/godotengine/godot/pull/82808)) comes from him as well! In programming languages, variadic arguments allow functions to accept a flexible number of input parameters. This allows turning the final argument of a function into an array that is called as if it were a sequence.
 
@@ -225,7 +225,7 @@ func _ready() -> void:
 
 <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/variadic-documentation.webp" alt="Variadic documentation"/>
 
-And more:
+GDScript also saw a lot of usability improvements for the script editor, with notably fixes to code completion and highlighting:
 - Inline color pickers. ([GH-105724](https://github.com/godotengine/godot/pull/105724))
 - Highlight warning lines. ([GH-105724](https://github.com/godotengine/godot/pull/105724))
 - Don't add parenthesis when expecting `Callable`. ([GH-96375](https://github.com/godotengine/godot/pull/96375))
@@ -236,7 +236,7 @@ And more:
 
 ### GUI
 
-Here at the Godot Foundation, accessibililty is an absolute top-priority. The road to making an experience available to anyone regardless of their circumstances isn't an easy one, but it's a road that all developers are obligated to take. To that end, our resident tech guru [bruvzg](https://github.com/bruvzg) tackled absolutely Herculean task of integrating [AccessKit](https://github.com/AccessKit/accesskit) to Godot as a whole ([GH-76829](https://github.com/godotengine/godot/pull/76829)). With this in place, screenreader support is now built into the very core of the engine. All our supported desktop platforms offer fully uncompromised support, as the bindings are already in place and well-tested; when other platforms follow suit, we will ensure support to the absolute best of our ability.
+Here at the Godot Foundation, accessibililty is an absolute top-priority. The road to making an experience available to anyone regardless of their circumstances isn't an easy one, but it's a road that all developers are obligated to take. To that end, our resident tech guru [bruvzg](https://github.com/bruvzg) tackled absolutely Herculean task of integrating [AccessKit](https://github.com/AccessKit/accesskit) to Godot as a whole ([GH-76829](https://github.com/godotengine/godot/pull/76829)). With this in place, screenreader support is now built into the very core of the engine. All our supported desktop platforms offer fully uncompromised support, as the bindings are already in place and well-tested. When other platforms follow suit, we will ensure support to the absolute best of our ability.
 
 4.5 is bringing with it quite a few new quality-of-life improvements, with one of the biggest additions being one we actually haven't given proper coverage to yet: foldable containers! [Tomasz Chabora](https://github.com/KoBeWi) is no stranger to editor enhancements, and this time he has blessed us with [GH-102346](https://github.com/godotengine/godot/pull/102346), which grants us the new `FoldableContainer` class. Now users can have dynamically cascading GUI objects with the ability to toggle if the contents are expanded or not at will, a process that previously took several workarounds to achieve.
 
@@ -253,60 +253,117 @@ There's also the newly added `SVGTexture`, implemented by our very own [bruvzg](
 </video>
 
 And more:
-- Stackable outlines on `Label`. ([GH-104731](https://github.com/godotengine/godot/pull/104731))
+- TextEdit/LineEdit: Add support for OEM Alt codes input. ([GH-93466](https://github.com/godotengine/godot/pull/93466))
+- Stackable outlines on `Label`. ([GH-104731](https://github.com/godotengine/godot/pull/104731)
+- Replace global oversampling with overrideable per-viewport oversampling. ([GH-104872](https://github.com/godotengine/godot/pull/104872))
+- RichTextLabel: Add paragraph separation theme property. ([GH-107331](https://github.com/godotengine/godot/pull/107331))
+
+### Import
+
+Godot 4.0 introduced the [Advanced Import Settings](/article/godot-4-0-sets-sail/#easier-importing) dialog, which allows configuring how to import specific 3D assets with great flexibility. This dialog kept being improved upon in subsequent releases (including 4.5), but one part of its workflow became a major pain point for users: the ability to batch edit multiple assets to assign an external material to all of them was gone, forcing users to configure this in each asset individually using the Advanced Import Settings dialog.
+[bruvzg](https://github.com/bruvzg) corrected this oversight by reintroducing options in the Import dock to configure whether to extract materials in a way that supports multi-asset configuration ([GH-107211](https://github.com/godotengine/godot/pull/107211)).
+
+<video autoplay loop muted playsinline>
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/glb-material-extract.webm?1" type="video/webm">
+</video>
+
+And more:
+- Add Channel Remap settings to ResourceImporterTexture. ([GH-99676](https://github.com/godotengine/godot/pull/99676))
+- Use UIDs in addition to paths for extracted meshes, materials and animations. ([GH-100786](https://github.com/godotengine/godot/pull/100786))
+- Allow attaching scripts to nodes in the Advanced Import Settings dialog. ([GH-103418](https://github.com/godotengine/godot/pull/103418))
+- Use libjpeg-turbo for improved jpg compatibility and speed. ([GH-104347](https://github.com/godotengine/godot/pull/104347))
+
+### Input
+
+While it's not yet integrated in beta 1, you can gather all your gamepads and joysticks in anticipation of the integration of SDL3 as Godot's new gamepad input driver for desktop platforms ([GH-106218](https://github.com/godotengine/godot/pull/106218)). Up until now Godot had its own "joypad" platform drivers inspired from earlier versions of SDL, but not as full-featured. Over time, issues accumulated in our implementation while SDL kept maturing, and it's now a net positive to defer the responsibility for this subsystem to a well established cross-platform library.
+If all goes well, this change should be merged for beta 2 as an exception to the feature freeze. Thanks in advance to [Nintorch](https://github.com/Nintorch) for bringing this contribution to the finish line, building upon earlier work of [Álex Román Núñez](https://github.com/EIREXE) and [Xavier Sellier](https://github.com/xsellier).
 
 ### Internationalization
-Internationalization has always been an extremely crucial part of the Godot Project, and its relative lack of coverage in our blogposts does not do it justice. [Haoyu Qiu](https://github.com/timothyqiu) allows us to break this bad habit of ours with a fantastic addition to the i18n workflow: editor previews! ([GH-96921](https://github.com/godotengine/godot/pull/96921)) Now there's much less guesswork necessary for how your projects will appear to the end-user in their native language, ensuring a consistent and clean style no matter the selection!
+
+Internationalization has always been an extremely crucial part of the Godot project, and its relative lack of coverage in our blogposts does not do it justice. [Haoyu Qiu](https://github.com/timothyqiu) allows us to break this bad habit of ours with a fantastic addition to the i18n workflow: editor previews ([GH-96921](https://github.com/godotengine/godot/pull/96921))! Now there's much less guesswork necessary to see how your projects will appear to the end-user in their native language, ensuring a consistent and clean style no matter the selection!
 
 Similarly, the ability to swap languages on-the-fly within the editor is now possible thanks to the efforts of [Tomasz Chabora](https://github.com/KoBeWi) in [GH-102562](https://github.com/godotengine/godot/pull/102562). Now users can preview *and* experience multiple language options in a single editor session.
 
+We also want to give a shout-out to all the translators who tirelessly work on localizing the Godot editor, the class reference and the online documentation. If you'd like to join that effort, head to [Weblate](https://hosted.weblate.org/projects/godot-engine/) and review our [documentation](https://docs.godotengine.org/en/latest/contributing/documentation/editor_and_docs_localization.html#doc-editor-and-docs-localization) for instructions.
+
 ### Navigation
-The navigation team has been able to really spread their wings thanks to logic for 2D and 3D being handled independently. [smix8](https://github.com/smix8) took the mantle on the initial split, while [AThousandShips](https://github.com/AThousandShips) brought the logic to the module system itself. This opened the door for improvements to performance across both navigation systems, and *dramatically* decreased the size of builds which exclusively target 2D.
+
+The navigation team has been able to really spread their wings thanks to logic for 2D and 3D being handled independently. [smix8](https://github.com/smix8) took the mantle on the initial split, while [AThousandShips](https://github.com/AThousandShips) brought the logic to the module system itself. This opened the door for improvements to performance across both navigation systems, and helps decrease the size of builds which exclusively target 2D.
+
+The work started by smix8 in 4.4 to make navigation map synchronization asynchronous ([GH-100497](https://github.com/godotengine/godot/pull/100497)) was expanded for this release by applying the same treatement to navigation regions (3D: [GH-106670](https://github.com/godotengine/godot/pull/106670), 2D: [GH-107381](https://github.com/godotengine/godot/pull/107381)).
+
+And more:
+- Add navigation path query parameter limits. ([GH-102767](https://github.com/godotengine/godot/pull/102767))
 
 ### Physics
+
 Our implementation of 3D fixed-timestep interpolation has been completely overhauled, as the previous iteration had fundamental flaws with how it was structured in such a way that couldn't be addressed with a simple fix or patch. The solution already existed on 3.x, and has since been forward-ported by [lawnjelly](https://github.com/lawnjelly) via [GH-104269](https://github.com/godotengine/godot/pull/104269). Now all logic is handled within the `SceneTree`, but in a manner which doesn't break any existing API. All projects will benefit from this improvement out-of-the-box.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm">
 </video>
 
+Working in tandem since the integration of Jolt Physics as new 3D physics engine in Godot 4.4, [Mikael Hermansson](https://github.com/mihe) and [Jorrit Rouwe](https://github.com/jrouwe) (Jolt's creator) have made nearly [20 fixes and improvements](https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%20label%3Atopic%3Aphysics%20milestone%3A4.5%20(author%3Amihe%20OR%20author%3Ajrouwe)) to the Jolt integration for Godot 4.5, which should now provide an even better experience.
+
 And more:
+- Add ability to apply forces and impulses to SoftBody3D. ([GH-100463](https://github.com/godotengine/godot/pull/100463))
 - Chunk tilemap physics. ([GH-102662](https://github.com/godotengine/godot/pull/102662))
+- SoftBody3D: Support physics Interpolation. ([GH-106863](https://github.com/godotengine/godot/pull/106863))
 
 ### Platforms
+
 #### Android
-The Android editor experience has become significantly improved thanks to the implementation of `TouchActionsPanel`. While this is technically something any touch device can take advantage of, [Anish Mishra](https://github.com/syntaxerror247)'s PR [GH-100339](https://github.com/godotengine/godot/pull/100339) was explicitly created with the Android editor in mind. `TouchActionsPanel` comes equipped with common action buttons (save, undo, redo, etc.), which simulate actions like `ui_undo` and `ui_redo` via pre-existing shortcuts. This was implemented early on in the 4.5 development cycle, giving our maintainers a stable and versatile foundation for future touch-based actions, and ensuring that [several](https://github.com/godotengine/godot/pull/105015) [followup](https://github.com/godotengine/godot/pull/105140) [additions](https://github.com/godotengine/godot/pull/105518) could come shortly after.
+
+The Android editor experience has become significantly improved thanks to the implementation of `TouchActionsPanel`. While this is technically something any touch device can take advantage of, [Anish Mishra](https://github.com/syntaxerror247)'s PR [GH-100339](https://github.com/godotengine/godot/pull/100339) was explicitly created with the Android editor in mind. `TouchActionsPanel` comes equipped with common action buttons (save, undo, redo, etc.), which simulate actions like `ui_undo` and `ui_redo` via pre-existing shortcuts.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/touch-actions-panel.webm?1" type="video/webm">
 </video>
 
 And more:
+- Add support for using an Android Service to host the Godot engine. ([GH-102866](https://github.com/godotengine/godot/pull/102866))
+- Enable native debug symbols generation. ([GH-105605](https://github.com/godotengine/godot/pull/105605))
 - Add CameraFeed support. ([GH-106094](https://github.com/godotengine/godot/pull/106094))
 - Bump minimum supported SDK to 24. ([GH-106148](https://github.com/godotengine/godot/pull/106148))
 - Add support for 16KB page sizes. ([GH-106358](https://github.com/godotengine/godot/pull/106358))
 
 #### Linux
-[Riteo](https://github.com/Riteo) has been on a quest to turn [Wayland](https://wayland.freedesktop.org/) into a true replacement for the X11 protocol. The biggest reason to not switch over, lack of native sub-windows, is no longer a concern thanks to [GH-101774](https://github.com/godotengine/godot/pull/101774). Now users can truly take advantage of multi-window output, regardless of display protocol.
+
+[Riteo](https://github.com/Riteo) has been on a quest to turn [Wayland](https://wayland.freedesktop.org/) into a true replacement for the X11 protocol. The biggest reason to not switch over as the default implementation, the lack of native sub-windows, is no longer a concern thanks to [GH-101774](https://github.com/godotengine/godot/pull/101774). Now users can truly take advantage of multi-window output, regardless of display protocol. This being solved, the next step will be to implement in-editor game window embedding to have full parity with the X11 flavor of the editor. Riteo already started that work in [GH-107435](https://github.com/godotengine/godot/pull/107435).
 
 <img src="/storage/blog/dev-snapshot-godot-4-5-dev-2/wayland-sub-window.webp" alt="Multi-Window output on Wayland"/>
 
 #### macOS
-It took a while for embedded window support to come to macOS, as this OS does not allow the kind of window manipulation that Windows and Linux use for game window embedding. Instead, macOS utilizes an inter-process communication approach where the framebuffer is sent from the game process (which performs off-screen rendering) to the editor window, which also handles passing input events to the game process. Although it's much more complex, [Stuart Carnie](https://github.com/stuartcarnie) used a more robust approach that doesn't rely on any window management hacks ([GH-105884](https://github.com/godotengine/godot/pull/105884)). Not having to worry about edge-cases or low-level shenanigans is appealing in its own right, so this approach may be ported later to Windows/Linux in a future release to make game window embedding much more reliable overall.
 
-#### visionOS
-The Apple XR environment, visionOS, comes to Godot Engine in 4.5! We're already committed to making great strides in XR featuresets and support, but this brings us closer to a platform-independent pipeline similar to what we already have with traditional platforms. It might be unconventional to imagine using an engine editor within an XR environment, but it's one which we've supported for Meta Quest and OpenXR; now Apple users can join the fun.
-
-#### Web
-The upcoming performance boost from SIMD is so impressive that we've made a [dedicated article](/article/upcoming-serious-web-performance-boost/) to showcase exactly what kind of benefits users can expect. The short version is that [Adam Scott](https://github.com/adamscott) created a PR which changed only a single compiler flag ([GH-106319](https://github.com/godotengine/godot/pull/106319)), but one which caused universal improvements for web applications and editor workflow. Check out our article for the long version.
-
-#### Windows
-Support for Windows 7/8.1 will be dropped starting with 4.5 ([GH-106959](https://github.com/godotengine/godot/pull/106959)). The call to remove Windows 8.1 wasn't a difficult one; it's been EOL for over half a decade, had extended support end over two years ago, and was inherently unpopular to the point that online survey tools for OSes outright omit it. Windows 7 is comparatively more contentious, but builds for it were already in a broken state ever since the introduction of the aforementioned AccessKit; combine that with Windows 7 recently celebrating its 10-year anniversary of being EOL, as well as active coverage of this OS being estimated at one-tenth of a percentage point, and its removal was ultimately cemented. This had the benefit of **significantly** cleaning up the codebase for our Windows-specific files, which often had to rely on dummy includes to account for Windows 7 specifically, and opens the door for more modern APIs to be integrated for our Windows builds.
+Speaking of embedding the game window! It took an extra release cycle for this Godot 4.4 feature to come to macOS, as this OS does not allow the kind of window manipulation that Windows and Linux/X11 use for game window embedding. Instead, macOS utilizes an inter-process communication approach where the framebuffer is sent from the game process (which performs off-screen rendering) to the editor window, which also handles passing input events to the game process. Although it's much more complex, [Stuart Carnie](https://github.com/stuartcarnie) used a more robust approach that doesn't rely on any window management hacks ([GH-105884](https://github.com/godotengine/godot/pull/105884)). Not having to worry about edge-cases or low-level shenanigans is appealing in its own right, so this approach may be ported later to Windows/Linux in a future release to make game window embedding much more reliable overall.
 
 And more:
-- Modify Windows template without rcedit. ([GH-75950](https://github.com/godotengine/godot/pull/75950))
+- Switch ANGLE (OpenGL ES compatibility layer) to Metal backend. ([GH-107306](https://github.com/godotengine/godot/pull/107306))
+
+#### visionOS
+
+The Apple XR environment, visionOS, comes to Godot Engine in 4.5! We're already committed to making great strides in XR feature sets and support, but this brings us closer to a platform-independent pipeline similar to what we already have with traditional platforms. It might be unconventional to imagine using an engine editor within an XR environment, but it's one which we've supported for Meta Quest and OpenXR; now Apple users can join the fun.
+
+This work was contributed by [Ricardo Sanchez-Saez](https://github.com/rsanchezsaez) from Apple's visionOS engineering team. A notable consequence of this PR is that our iOS and visionOS platforms now share a unified "Apple Embedded" driver, which paves the way to implementing tvOS support in the future.
+
+#### Web
+
+The upcoming performance boost from SIMD is so impressive that we've made a [dedicated article](/article/upcoming-serious-web-performance-boost/) to showcase exactly what kind of benefits users can expect. The short version is that [Adam Scott](https://github.com/adamscott) created a PR which changed only a single compiler flag ([GH-106319](https://github.com/godotengine/godot/pull/106319)), but one which caused universal improvements for web applications and editor workflow. Check out our article for the long version.
+
+[Marcos Casagrande](https://github.com/marcosc90) started contributing during this release cycle and brought a [flurry of performance improvements](https://github.com/godotengine/godot/pulls?q=is%3Apr+is%3Amerged+author%3Amarcosc90+milestone%3A4.5+label%3Aplatform%3Aweb) to the Web platform, which should further help ensure that web games work on as many devices as possible.
+
+#### Windows
+
+Support for Windows 7/8.1 will be dropped starting with 4.5 ([GH-106959](https://github.com/godotengine/godot/pull/106959)). The call to remove Windows 8.1 wasn't a difficult one; it's been EOL for over half a decade, had extended support end over two years ago, and was inherently unpopular to the point that online survey tools for OSes outright omit it. Windows 7 is comparatively more contentious, but builds for it were already in a broken state ever since the introduction of the aforementioned AccessKit; combine that with Windows 7 recently celebrating its 10-year anniversary of being EOL, as well as active coverage of this OS being estimated at one-tenth of a percentage point, and its removal was ultimately cemented. This had the benefit of **significantly** cleaning up the codebase for our Windows-specific files, which often had to rely on dummy includes to account for Windows 7 specifically, and opens the door for more modern APIs to be integrated for our Windows builds.
+
+Another major improvement to the Windows export pipeline is the possibility to modify the metadata of Windows binaries without the third-party `rcedit` tool ([GH-75950](https://github.com/godotengine/godot/pull/75950)). This means that Godot can now properly set a custom icon to your Windows .exe, and modify the relevant product name, company information, etc., fully out of the box and from any platform.
+
+And more:
+- Remove visible `WINDOW_MODE_FULLSCREEN` border by setting window region. ([GH-88852](https://github.com/godotengine/godot/pull/88852))
+- Official Windows binaries are now signed with a new code signing certificate (provided by Prehensile Tales).
 
 ### Rendering and shaders
+
 With a PR in the making for nearly 2 years [GH-80710](https://github.com/godotengine/godot/pull/80710), [apples](https://github.com/apples) has brought a long-awaited stencil support to Godot! This new shader functionality is supported on all of our rendering backends, and will allow our users to perform entirely new techniques with the power of **depth**.
 
 **Standard outline, standard x-ray, and custom outline materials:**
@@ -350,7 +407,7 @@ In addition to the stencil shader support, 4.5 brings with it a plethora of impr
 | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-2.webp" alt="Bent normals before 2" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-2.webp" alt="Bent normals after 2" width="350"/> |
 | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-3.webp" alt="Bent normals before 3" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-3.webp" alt="Bent normals after 3" width="350"/> |
 
-Just as essential to rendering as the output itself is how performant it is to create that output in the first place. [Darío Samo](https://github.com/DarioSamo) and [Pedro J. Estébanez](https://github.com/RandomShaper) bless us in this respect with [GH-102552](https://github.com/godotengine/godot/pull/102552), which introduces shader baker exporting. When enabled at export time, the developer trades off export time to *massively* speed up shader compilation at runtime. Users don't have to put in any extra work to make this work with ubershaders, as the features go hand-in-hand automatically.
+Just as essential to rendering as the output itself is how performant it is to create that output in the first place. [Darío](https://github.com/DarioSamo) and [Pedro J. Estébanez](https://github.com/RandomShaper) bless us in this respect with [GH-102552](https://github.com/godotengine/godot/pull/102552), which introduces a new shader baker at export time. When enabled, all shaders will be pre-compiled at export time, ensuring that players won't need to wait a long time for shaders to compile when running your game. Users don't have to put in any extra work to make this work with ubershaders, as the features go hand-in-hand automatically.
 
 <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker.webp" alt="Shader baker"/>
 
@@ -364,16 +421,24 @@ Just as essential to rendering as the output itself is how performant it is to c
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.webm?1" type="video/webm">
 </video>
 
+Across our multiple renderers, it's only reasonable that certain features would be exclusive to the higher-end selections. Motion vectors, for instance, have been available on the Forward+ renderer for ages, but have never been available to the Mobile renderer. That is, until [Logan Lang](https://github.com/devloglogan) took to rectifying this in [GH-100283](https://github.com/godotengine/godot/pull/100283), which builds atop his [previous PR](https://github.com/godotengine/godot/pull/100282)'s render-agnostic foundation.
+
 And more:
 - Add new `StandardMaterial` properties to allow users to control FPS-style objects (hands, weapons, tools close to the camera). ([GH-93142](https://github.com/godotengine/godot/pull/93142))
+- Fragment density map support. ([GH-99551](https://github.com/godotengine/godot/pull/99551))
 - Implement motion vectors in mobile renderer. ([GH-100283](https://github.com/godotengine/godot/pull/100283))
+- Overhaul the cull mask internals for Lights, Decals, and Particle Colliders. ([GH-102399](https://github.com/godotengine/godot/pull/102399))
+- Various performance optimizations. ([GH-103547](https://github.com/godotengine/godot/pull/103547), [GH-103794](https://github.com/godotengine/godot/pull/103794), [GH-103889](https://github.com/godotengine/godot/pull/103889))
+- Optimize Mobile renderer by using FP16 explicitly. ([GH-107119](https://github.com/godotengine/godot/pull/107119))
 - Fix LightmapGI shadow leaks. ([GH-107254](https://github.com/godotengine/godot/pull/107254))
 
+<!--
 ### XR
-Across our multiple renderers, it's only reasonable that certain features would be exclusive to the higher-end selections. Motion vectors, for instance, have been available on the forward+ renderer for ages, but have never been available to the mobile renderer. That is, until [Logan Lang](https://github.com/devloglogan) took to rectifying this in [GH-100283](https://github.com/godotengine/godot/pull/100283), which builds atop his [previous PR](https://github.com/godotengine/godot/pull/100282)'s render-agnostic foundation.
 
-And more:
-- Fragment density map support. ([GH-99551](https://github.com/godotengine/godot/pull/99551))
+TODO: Find more highlights, maybe:
+- Add support for Direct3D 12 OpenXR backend https://github.com/godotengine/godot/pull/104207
+- https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.0.0-stable
+-->
 
 ## Changelog
 
@@ -397,9 +462,9 @@ During the beta stage, we focus on solving both regressions (i.e. something that
 
 With every release, we accept that there are going to be various issues which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
-- Windows: A new signing certificate means that smart screen might pop up for initial downloads. This should automatically rectify itself by the time beta 2 rolls around.
-
-- Android: Subsequent exports fail when using Shader Baker. The issue is tracked in [GH-107535](https://github.com/godotengine/godot/issues/107535).
+- Windows: As mentioned above, we used a new signing certificate for this release. Windows Defender's SmartScreen might pop up for initial downloads as it sees a surge of downloads of binaries signed with a legit but yet unused certificate. This should automatically rectify itself by the time beta 2 rolls around.
+- Android: Subsequent exports fail when using Shader Baker. The workaround is to delete the `.godot/export` before exporting. ([GH-107535](https://github.com/godotengine/godot/issues/107535))
+- Wayland: Wayland editor documentation popups appear on screen's edge and generate errors. ([GH-107438](https://github.com/godotengine/godot/issues/107438))
 
 ## Bug reports
 
