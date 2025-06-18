@@ -11,7 +11,7 @@ date: 2025-06-18 22:00:00
 
 The first beta release for the 4.5 release cycle has come at last, and with it a plethora of outstanding bugs to be squashed. Contributors are encouraged to focus exclusively on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.5), as we are now in feature-freeze and will not be merging new features at this stage of development (aside from a couple pre-approved exceptions scheduled for beta 2).
 
-For those interested in aiding us on our quest to squash any bugs that come up during this time, we encourage you to join our recent bug-hunting sprints. Helmed by our new head of the Bugsquad, [AThousandShips](https://github.com/AThousandShips) has taken to hosting regular sprints for tackling various bugs within the Godot repo, organized such that everyone can easily gather behind a given theme to make chunks of fixes as seamlessly and speedily as possible. This will be our fourth sprint of this type, with an associated discussion [already prepared](https://chat.godotengine.org/channel/dNtaAGsF2ifAjZ57P). See the [Bug Triage Introduction](https://github.com/godotengine/godot-maintainers-docs/blob/main/bug-triage/introduction.md) for more information, and join the [`#bugsquad`](https://chat.godotengine.org/channel/bugsquad) and [`#bugsquad-sprints`](https://chat.godotengine.org/channel/bugsquad-sprints) channels on our developer RocketChat to participate!
+For those interested in aiding us on our quest to squash any bugs that come up during this time, we encourage you to join our recent bug-hunting sprints. Helmed by our new head of the Bugsquad, [A Thousand Ships](https://github.com/AThousandShips) has taken to hosting regular sprints for tackling various bugs within the Godot repo, organized such that everyone can easily gather behind a given theme to make chunks of fixes as seamlessly and speedily as possible. This will be our fourth sprint of this type, with an associated discussion [already prepared](https://chat.godotengine.org/channel/dNtaAGsF2ifAjZ57P). See the [Bug Triage Introduction](https://github.com/godotengine/godot-maintainers-docs/blob/main/bug-triage/introduction.md) for more information, and join the [`#bugsquad`](https://chat.godotengine.org/channel/bugsquad) and [`#bugsquad-sprints`](https://chat.godotengine.org/channel/bugsquad-sprints) channels on our developer RocketChat to participate!
 
 Please consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
@@ -71,13 +71,13 @@ This might be a little more technical than usual, but the work [Tokage](https://
 | <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-twist-disabled.webp" alt="Constraint twist disabled" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-twist-enabled.webp" alt="Constraint twist enabled" width="350"/> |
 
 **Bend:**
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Example of bone constraints on a bent knee">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.webm?1" type="video/webm">
 </video>
 
 Onto something more suitable for a blog post highlight: UX improvements! [YeldhamDev](https://github.com/YeldhamDev) implemented support for selection box movement and scaling within the bezier editor, making it a piece of cake to perform changes to points in batches ([GH-100470](https://github.com/godotengine/godot/pull/100470)). [Arnklit](https://github.com/Arnklit) continues the bezier improvements with [GH-95564](https://github.com/godotengine/godot/pull/95564), allowing users to auto tangent new points in a balanced or mirrored manner. The animation player gets some love as well, with the ability to sort animations alphabetically ([GH-103584](https://github.com/godotengine/godot/pull/103584)). Lastly, and featured below, is a very long-awaited UX improvement: animation filtering! ([GH-103130](https://github.com/godotengine/godot/pull/103130))
 
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Preview of animation tracks filtering">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/animation-filtering.webm?1" type="video/webm">
 </video>
 
@@ -163,7 +163,7 @@ A rarely-covered topic regarding the editor is the [command palette](https://doc
 
 As for topics we _have_ covered, where better to start than with `Variant` exporting? This functionality is brought to life by [Tomasz Chabora](https://github.com/KoBeWi), bringing support for a dynamic variable in a standalone context ([GH-89324](https://github.com/godotengine/godot/pull/89324)). With the ability to change not only the variable, but the type itself, the doors are wide open for creative integrations in the inspector.
 
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Demo of exporting a Variant type in the Inspector">
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.webm?1" type="video/webm">
 </video>
 
@@ -239,19 +239,19 @@ GDScript also saw a lot of usability improvements for the script editor, with no
 
 ### GUI
 
-Here at the Godot Foundation, accessibililty is an absolute top-priority. The road to making an experience available to anyone regardless of their circumstances isn't an easy one, but it's a road that all developers are obligated to take. To that end, our resident tech guru [bruvzg](https://github.com/bruvzg) tackled absolutely Herculean task of integrating [AccessKit](https://github.com/AccessKit/accesskit) to Godot as a whole ([GH-76829](https://github.com/godotengine/godot/pull/76829)). With this in place, screenreader support is now built into the very core of the engine. All our supported desktop platforms offer fully uncompromised support, as the bindings are already in place and well-tested. When other platforms follow suit, we will ensure support to the absolute best of our ability.
+Here at the Godot Foundation, accessibililty is an absolute top-priority. The road to making an experience available to anyone regardless of their circumstances isn't an easy one, but it's a road that all developers are obligated to take. To that end, our resident tech guru [bruvzg](https://github.com/bruvzg) tackled the absolutely Herculean task of integrating [AccessKit](https://github.com/AccessKit/accesskit) to Godot as a whole ([GH-76829](https://github.com/godotengine/godot/pull/76829)). With this in place, screenreader support is now built into the very core of the engine. All our supported desktop platforms offer fully uncompromised support, as the bindings are already in place and well-tested. When other platforms follow suit, we will ensure support to the absolute best of our ability.
 
 4.5 is bringing with it quite a few new quality-of-life improvements, with one of the biggest additions being one we actually haven't given proper coverage to yet: foldable containers! [Tomasz Chabora](https://github.com/KoBeWi) is no stranger to editor enhancements, and this time he has blessed us with [GH-102346](https://github.com/godotengine/godot/pull/102346), which grants us the new `FoldableContainer` class. Now users can have dynamically cascading GUI objects with the ability to toggle if the contents are expanded or not at will, a process that previously took several workarounds to achieve.
 
 In a similar vein, the ability to manipulate a group of controls simultaneously has become much easier thanks to [Delsin-Yu](https://github.com/Delsin-Yu)'s PR with a focus on recursive control across child controls ([GH-97495](https://github.com/godotengine/godot/pull/97495)). This implements new properties for recursively disabling `Focus Mode` and `Mouse Filter`, meaning that the ability to select and interact with child controls becomes far more intuitive, and allows for explicit overrides if desired.
 
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Demo of the Controls recursive focus feature">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/recursive-focus.webm?1" type="video/webm">
 </video>
 
 There's also the newly added `SVGTexture`, implemented by our very own [bruvzg](https://github.com/bruvzg) in [GH-105375](https://github.com/godotengine/godot/pull/105375), allowing for rasterization of SVG files directly. However, when initially showcased, this process was fairly long-winded, as the main uses were internal. This has since been remedied with a dedicated importer in [GH-105655](https://github.com/godotengine/godot/pull/105655), making rasterization much more accessible to all users.
 
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Demo of toggling oversampling on SVGTexture">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.webm?1" type="video/webm">
 </video>
 
@@ -266,7 +266,7 @@ And more:
 Godot 4.0 introduced the [Advanced Import Settings](/article/godot-4-0-sets-sail/#easier-importing) dialog, which allows configuring how to import specific 3D assets with great flexibility. This dialog kept being improved upon in subsequent releases (including 4.5), but one part of its workflow became a major pain point for users: the ability to batch edit multiple assets to assign an external material to all of them was gone, forcing users to configure this in each asset individually using the Advanced Import Settings dialog.
 [bruvzg](https://github.com/bruvzg) corrected this oversight by reintroducing options in the Import dock to configure whether to extract materials in a way that supports multi-asset configuration ([GH-107211](https://github.com/godotengine/godot/pull/107211)).
 
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Extracting and editing a shared material from multiple glTF files at once">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/glb-material-extract.webm?1" type="video/webm">
 </video>
 
@@ -286,7 +286,7 @@ If all goes well, this change should be merged for beta 2 as an exception to the
 Internationalization has always been an extremely crucial part of the Godot project, and its relative lack of coverage in our blogposts does not do it justice. [Haoyu Qiu](https://github.com/timothyqiu) allows us to break this bad habit of ours with a fantastic addition to the i18n workflow: editor previews ([GH-96921](https://github.com/godotengine/godot/pull/96921))! Now there's much less guesswork necessary to see how your projects will appear to the end-user in their native language, ensuring a consistent and clean style no matter the selection!
 
 **Translation preview on [Michael Alexsander](https://github.com/YeldhamDev/)'s [Librerama](https://codeberg.org/Librerama/librerama/):**
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="In-editor translation preview">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/translation-preview.mp4?1" type="video/mp4">
 </video>
 
@@ -296,7 +296,7 @@ We also want to give a shout-out to all the translators who tirelessly work on l
 
 ### Navigation
 
-The navigation team has been able to really spread their wings thanks to logic for 2D and 3D being handled independently. [smix8](https://github.com/smix8) took the mantle on the initial split, while [AThousandShips](https://github.com/AThousandShips) brought the logic to the module system itself. This opened the door for improvements to performance across both navigation systems, and helps decrease the size of builds which exclusively target 2D.
+The navigation team has been able to really spread their wings thanks to logic for 2D and 3D being handled independently. [smix8](https://github.com/smix8) took the mantle on the initial split, while [A Thousand Ships](https://github.com/AThousandShips) brought the logic to the module system itself. This opened the door for improvements to performance across both navigation systems, and helps decrease the size of builds which exclusively target 2D.
 
 The work started by smix8 in 4.4 to make navigation map synchronization asynchronous ([GH-100497](https://github.com/godotengine/godot/pull/100497)) was expanded for this release by applying the same treatement to navigation regions (3D: [GH-106670](https://github.com/godotengine/godot/pull/106670), 2D: [GH-107381](https://github.com/godotengine/godot/pull/107381)).
 
@@ -308,7 +308,7 @@ And more:
 Our implementation of 3D fixed-timestep interpolation has been completely overhauled, as the previous iteration had fundamental flaws with how it was structured in such a way that couldn't be addressed with a simple fix or patch. The solution already existed on 3.x, and has since been forward-ported by [lawnjelly](https://github.com/lawnjelly) via [GH-104269](https://github.com/godotengine/godot/pull/104269). Now all logic is handled within the `SceneTree`, but in a manner which doesn't break any existing API. All projects will benefit from this improvement out-of-the-box.
 
 **Interpolation with 10 ticks per second:**
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Truck Town demo played at a fixed-timestep of 10 ticks per second with smooth physics thanks to interpolation">
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm">
 </video>
 
@@ -325,7 +325,7 @@ And more:
 
 The Android editor experience has become significantly improved thanks to the implementation of `TouchActionsPanel`. While this is technically something any touch device can take advantage of, [Anish Mishra](https://github.com/syntaxerror247)'s PR [GH-100339](https://github.com/godotengine/godot/pull/100339) was explicitly created with the Android editor in mind. `TouchActionsPanel` comes equipped with common action buttons (save, undo, redo, etc.), which simulate actions like `ui_undo` and `ui_redo` via pre-existing shortcuts.
 
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Recording of the Android editor with the new TouchActionsPanel">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/touch-actions-panel.webm?1" type="video/webm">
 </video>
 
@@ -373,6 +373,8 @@ And more:
 
 ### Rendering and shaders
 
+#### Stencils!
+
 With a PR in the making for nearly 2 years [GH-80710](https://github.com/godotengine/godot/pull/80710), [apples](https://github.com/apples) has brought a long-awaited stencil support to Godot! This new shader functionality is supported on all of our rendering backends, and will allow our users to perform entirely new techniques with the power of **depth**.
 
 **Standard outline, standard x-ray, and custom outline materials:**
@@ -382,14 +384,16 @@ With a PR in the making for nearly 2 years [GH-80710](https://github.com/godoten
 <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-x-ray.webp" alt="Stencil x-ray"/>
 
 **Cel-shaded lighting:**
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Demo of cel-shaded lighting with stencils">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-light.webm?1" type="video/webm">
 </video>
 
 **Fire effect implemented entirely with `StandardMaterial3D`:**
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Demo of a fire effect implemented via StandardMaterial3D's stencil features">
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-fire.webm?1" type="video/webm">
 </video>
+
+#### Shaders and rendering features
 
 In addition to the stencil shader support, 4.5 brings with it a plethora of improvements to those working with shaders. One such usability improvement arrived via [GH-100287](https://github.com/godotengine/godot/pull/100287), where [Yuri Rubinsky](https://github.com/Chaosus) re-organized the shader editor's UI as a whole. Others are in the form of direct rendering improvements, such as: ambient specular occlusion by [Lander](https://github.com/lander-vr) ([GH-106145](https://github.com/godotengine/godot/pull/106145)), SMAA support by [Raymond DiDonato](https://github.com/RGDTAB) ([GH-102330](https://github.com/godotengine/godot/pull/102330)), and bent normal maps by [Capry](https://github.com/LunaCapra) ([GH-89988](https://github.com/godotengine/godot/pull/89988)).
 
@@ -416,23 +420,28 @@ In addition to the stencil shader support, 4.5 brings with it a plethora of impr
 | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-2.webp" alt="Bent normals before 2" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-2.webp" alt="Bent normals after 2" width="350"/> |
 | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-3.webp" alt="Bent normals before 3" width="350"/> | <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-3.webp" alt="Bent normals after 3" width="350"/> |
 
+#### Shader baker
+
 Just as essential to rendering as the output itself is how performant it is to create that output in the first place. [Darío](https://github.com/DarioSamo) and [Pedro J. Estébanez](https://github.com/RandomShaper) bless us in this respect with [GH-102552](https://github.com/godotengine/godot/pull/102552), which introduces a new shader baker at export time. When enabled, all shaders will be pre-compiled at export time, ensuring that players won't need to wait a long time for shaders to compile when running your game. Users don't have to put in any extra work to make this work with ubershaders, as the features go hand-in-hand automatically.
 
 <img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker.webp" alt="Shader baker"/>
 
 **Before:**
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Slow loading time of Godot's Third Person Shooter demo without prebaked shaders">
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.webm?1" type="video/webm">
 </video>
 
 **After:**
-<video autoplay loop muted playsinline>
+<video autoplay loop muted playsinline title="Fast loading time of Godot's Third Person Shooter demo with prebaked shaders">
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.webm?1" type="video/webm">
 </video>
 
+#### Motion vectors for Mobile
+
 Across our multiple renderers, it's only reasonable that certain features would be exclusive to the higher-end selections. Motion vectors, for instance, have been available on the Forward+ renderer for ages, but have never been available to the Mobile renderer. That is, until [Logan Lang](https://github.com/devloglogan) took to rectifying this in [GH-100283](https://github.com/godotengine/godot/pull/100283), which builds atop his [previous PR](https://github.com/godotengine/godot/pull/100282)'s render-agnostic foundation.
 
-And more:
+#### And more
+
 - Add new `StandardMaterial` properties to allow users to control FPS-style objects (hands, weapons, tools close to the camera). ([GH-93142](https://github.com/godotengine/godot/pull/93142))
 - Fragment density map support. ([GH-99551](https://github.com/godotengine/godot/pull/99551))
 - Implement motion vectors in mobile renderer. ([GH-100283](https://github.com/godotengine/godot/pull/100283))
@@ -447,7 +456,7 @@ The XR team has been doing a [lot of groundwork](https://github.com/godotengine/
 
 [Darío](https://github.com/DarioSamo) and [Logan Lang](https://github.com/devloglogan)'s implementations of respectively fragment density maps and motion vectors for the Mobile renderer also pave the way for better rendering and supporting more extensions for XR.
 
-While those are not merged yet, you can keep an eye on [Bastiaan Olij](https://github.com/BastiaanOlij)'s cutting edge implementations for the OpenXR Spatial Entities ([GH-107391](https://github.com/godotengine/godot/pull/107391)) and Render Model ([GH-107388](https://github.com/godotengine/godot/pull/107388)) extensions, building upon the freshly released OpenXR SDK 1.1.49. [Fredia Huya-Kouadio](https://github.com/m4gr3d) is also putting finishing touches on the support for running hybrid apps from the Godot XR editor ([GH-103972](https://github.com/godotengine/godot/pull/103972)).
+While these are not merged yet, you can keep an eye on [Bastiaan Olij](https://github.com/BastiaanOlij)'s cutting edge implementations for the OpenXR Spatial Entities ([GH-107391](https://github.com/godotengine/godot/pull/107391)) and Render Model ([GH-107388](https://github.com/godotengine/godot/pull/107388)) extensions, building upon the freshly released OpenXR SDK 1.1.49. [Fredia Huya-Kouadio](https://github.com/m4gr3d) is also putting finishing touches on the support for running hybrid apps from the Godot XR editor ([GH-103972](https://github.com/godotengine/godot/pull/103972)).
 
 ## Changelog
 
