@@ -44,6 +44,7 @@ Much like [previous feature releases](/article/dev-snapshot-godot-4-4-beta-1/#ne
 - [XR](#xr)
 
 ### Breaking changes
+
 We try to minimize breaking changes, but sometimes they are necessary in order to fix high priority issues. Where we do break compatibility, we do our best to make sure that the changes are minimal and require few changes in user projects.
 
 You can find a list of such issues by filtering the merged PRs in the 4.5 milestone with the [`breaks compat` label](https://github.com/godotengine/godot/issues?q=milestone%3A4.5%20is%3Amerged%20label%3A%22breaks%20compat%22). Here are some which are worth being aware of:
@@ -71,18 +72,32 @@ This might be a little more technical than usual, but the work [Tokage](https://
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.webm?1" type="video/webm">
 </video>
 
-And more:
-- Add option to auto tangent new bezier points in animation editor. ([GH-95564](https://github.com/godotengine/godot/pull/95564))
-
 <!--
-TODO. There's been 50+ PRs merged, we should have stuff to mention, even if just some UX improvements as a general blurb.
-Arnklit made a lot of UX improvements.
+TODO: Write a paragraph about UX improvements from Arnklit and Yeldham:
+- https://github.com/godotengine/godot/pull/103130 (feature this one's video?)
+- https://github.com/godotengine/godot/pull/103584
+- https://github.com/godotengine/godot/pull/95564
+- https://github.com/godotengine/godot/pull/100470
 -->
 
+And more:
+- Add `delta` argument to `SkeletonModifier3D` `_process_modification()` and expose `advance()` in Skeleton3D. ([GH-103639](https://github.com/godotengine/godot/pull/103639))
+
 ### Audio / Video
+
 [Berama](https://github.com/berarma) brings us the ability to seek Theora video files via the new `set_stream_position` function ([GH-102360](https://github.com/godotengine/godot/pull/102360)). In doing so, they've additionally improved our multi-channel audio resampler, meaning that videos with 6+ channels will no longer crackle. A much more technical breakdown & additional features can be gleaned from the PR.
 
+And more:
+- Add metadata tags to WAV and OGG audio streams. ([GH-99504](https://github.com/godotengine/godot/pull/99504))
+
 ### C\#
+
+<!--
+TODO: We can highlight https://github.com/godotengine/godot/pull/97908 which is actually a fairly big deal (makes it possible to use NativeAOT on Android).
+https://github.com/godotengine/godot/pull/104689 could also be mentioned as it seems to be a nice optimization.
+Those 2 are bugfixes for C# on Android which haven't yet been released in 4.4.2, so could be worth mentioning. https://github.com/godotengine/godot/pull/105262 https://github.com/godotengine/godot/pull/105853
+-->
+
 We unfortunately don't have much to highlight at this time on the C# side of things. Make no mistake though, that's *only* in the context of 4.5; we've been seeing significant progress in areas that simply didn't make it in time for the feature freeze but still warrant a mention.
 
 We're well aware of the excitement around bringing .NET to web builds for Godot, and progress on that front has been very promising. We've even covered this very topic in a [previous blog](https://godotengine.org/article/live-from-godotcon-boston-web-dotnet-prototype/), where we discussed the rocky road of bringing this project to light & even featured a prototype which you can try [right now](https://lab.godotengine.org/godot-dotnet-web/)!
@@ -90,7 +105,11 @@ We're well aware of the excitement around bringing .NET to web builds for Godot,
 Our other long-term project for C# is revolving around the gradual move to GDExtension. The current module approach, while entirely functional for what it is, has historically been a fairly hacky implementation. Grafting on interop functionality between the engine itself and the dotnet runtime has proven to be error-prone, leading to a disproportionate amount of man-hours sunk into ensuring everything functions as expected. The hope is for the move to GDExtension to mean that all interop calls are handled in a manner that's universally applicable; that is: a manner that **any** programming language could take advantage of.
 
 ### Core
+
 Changes to the core of the engine require significantly more scrutiny than other parts of the engine; this comes down to how critical and foundational virtually every single piece of code proves to be. This makes it all the more impressive that [bruvzg](https://github.com/bruvzg) managed to implement [AccessKit](https://github.com/AccessKit/accesskit) support in such an integral manner ([GH-76829](https://github.com/godotengine/godot/pull/76829)).
+<!--
+TODO: The above section should be moved to GUI and detailed some more -- accessibility is a big deal, and just mentioning "AccessKit" doesn't tell users much. Can refer back to https://godotengine.org/article/dev-snapshot-godot-4-5-dev-3/#screen-reader-support for details.
+-->
 
 Adding a way to properly log errors and warnings, as well as get backtraces in logs when they happen, was among the most highly-requested features from our users for years. By their powers combined, [Mikael Hermansson](https://github.com/mihe) and [Juan Linietsky](https://github.com/reduz) have added script backtracing support for GDScript and C# ([GH-91006](https://github.com/godotengine/godot/pull/91006)). Finding the root problem behind warnings/errors that appear at runtime required being able to reproduce them in the editor to use the debugger. Developers will now have the possibility to see backtraces of runtime errors directly in their logs, making it possible to debug and fix issues that happen under user testing or in shipped titles. This functionality is always available in debug mode, but can be activated in release mode for GDScript if **Debug > Settings > GDScript > Always Track Call Stacks** is enabled in the project settings.
 
@@ -117,10 +136,15 @@ GDScript backtrace (most recent call first):
 Additionally, special thanks to [Lukas Tenbrink](https://github.com/Ivorforce), a new addition to the core team who has been [contributing](https://github.com/godotengine/godot/pull/103708) [nonstop](https://github.com/godotengine/godot/pull/106996) [improvements](https://github.com/godotengine/godot/pull/104381) to ensure optimal performance for developers and maintainers alike.
 
 And more:
-- Overhaul resource duplication. ([GH-75950](https://github.com/godotengine/godot/pull/100673))
+- Add `Node.get_orphan_node_ids`, edit `Node.print_orphan_nodes`. ([GH-83757](https://github.com/godotengine/godot/pull/83757))
+- Don't duplicate internal nodes. ([GH-89442](https://github.com/godotengine/godot/pull/89442))
+- Use Grisu2 algorithm in `String::num_scientific` to fix serializing. ([GH-98750](https://github.com/godotengine/godot/pull/98750))
+- Add `scene_changed` signal to SceneTree. ([GH-102986](https://github.com/godotengine/godot/pull/102986))
 - Complete build profile feature to properly detect options that can be disabled (reducing binary size). ([GH-103719](https://github.com/godotengine/godot/pull/103719))
+- Add thread safety to Object signals. ([GH-105453](https://github.com/godotengine/godot/pull/105453))
 
 ### Documentation
+
 It's not often that we have the opportunity to cover documentation changes in these highlights, as those changes are usually fairly low-key. This isn't to say that changes aren't happening; on the contrary, it's one of the single most active areas of our GitHub! That's because it often goes beyond our main repo, with changes needing to be synchronized in [godot-docs](https://github.com/godotengine/godot-docs).
 
 [Haoyu Qiu](https://github.com/timothyqiu)'s addition of `required` as a qualifier within the documentation itself warrants special mention. When extending a class that has virtual methods, it wasn't immediately obvious which methods *needed* an override, versus having defaulted fallbacks. …Well, it *was* obvious if you looked at the descriptions, but it wasn't something inherent to the functions themselves like `const`. This won't be an issue moving forward, as now `required` will come right after `virtual` where applicable.
@@ -128,6 +152,7 @@ It's not often that we have the opportunity to cover documentation changes in th
 Anyone who has contributed to the documentation has likely wrangled with the mixed-indentation of codeblocks. This necessitated adding spaces manually, and often meant disabling autoformatting on XML files; this was inconvenient at best & outright error-prone at worst. [Tomasz Chabora](https://github.com/KoBeWi) put this issue to rest with [GH-89819](https://github.com/godotengine/godot/pull/89819), unilaterally replacing all spaces with tabs across all codeblocks. This was a surprisingly involved process, as it required a simultaneous freeze & subsequent update of our [localization files](https://github.com/godotengine/godot-editor-l10n), but where there's a will there's a way!
 
 ### Editor
+
 First-time contributor [daniel080400](https://github.com/daniel080400) came out of the gate swinging with PR [GH-102313](https://github.com/godotengine/godot/pull/102313), which entirely overhauled the way scene preview thumbnails are handled.
 
 3D thumbnails are captured at a consistent angle from the world center, ensuring all contents fit into the screen. Particles are fast-forwarded slightly in order to render something, utilizing a fixed seed.
@@ -147,7 +172,7 @@ As for topics we _have_ covered, where better to start than with `Variant` expor
 And more:
 - Override editor settings per-project. ([GH-69012](https://github.com/godotengine/godot/pull/69012))
 - Inspector section toggles. ([GH-105272](https://github.com/godotengine/godot/pull/105272))
-- "Mute Game" toggle. ([GH-99555](https://github.com/godotengine/godot/pull/99555))
+- "Mute Game" toggle in Game view. ([GH-99555](https://github.com/godotengine/godot/pull/99555))
 - Drop preload Resources as `UID`. ([GH-99094](https://github.com/godotengine/godot/pull/99094))
 - Allow selecting multiple remote nodes at runtime. ([GH-99680](https://github.com/godotengine/godot/pull/99680))
 - Add emission shape gizmos to `Particles2D`. ([GH-102249](https://github.com/godotengine/godot/pull/102249))
@@ -158,6 +183,7 @@ And more:
 - Add "Paste as Unique" option to editor resource picker. ([GH-103980](https://github.com/godotengine/godot/pull/103980))
 
 ### GDScript
+
 4.5 sees with it the introduction of a new keyword: `abstract`. [Aaron Franke](https://github.com/aaronfranke) brings this previously internal-only functionality into the hands of all GDScript users ([GH-67777](https://github.com/godotengine/godot/pull/67777)). By prepending this keyword to a class, it ensures that direct instantiation cannot occur; meaning that all calls will actually refer to a derived classes. [Danil Alexeev](https://github.com/dalexeev) built further upon this by introducing the ability for users to declare *functions* as abstract ([GH-106409](https://github.com/godotengine/godot/pull/106409)). By prepending the same `abstract` keyword to a function, it will be marked for explicit override by child classes.
 
 ```gdscript
@@ -241,14 +267,14 @@ Similarly, the ability to swap languages on-the-fly within the editor is now pos
 The navigation team has been able to really spread their wings thanks to logic for 2D and 3D being handled independently. [smix8](https://github.com/smix8) took the mantle on the initial split, while [AThousandShips](https://github.com/AThousandShips) brought the logic to the module system itself. This opened the door for improvements to performance across both navigation systems, and *dramatically* decreased the size of builds which exclusively target 2D.
 
 ### Physics
-Our implementation of 3D interpolation has been completely overhauled, as the previous iteration had fundamental flaws with how it was structured in such a way that couldn't be addressed with a simple fix or patch. The solution already existed on 3.x, and has since been forward-ported by [lawnjelly](https://github.com/lawnjelly) via [GH-104269](https://github.com/godotengine/godot/pull/104269). Now all logic is handled within the `SceneTree`, but in a manner which doesn't break any existing API. All projects will benefit from this improvement out-of-the-box.
+Our implementation of 3D fixed-timestep interpolation has been completely overhauled, as the previous iteration had fundamental flaws with how it was structured in such a way that couldn't be addressed with a simple fix or patch. The solution already existed on 3.x, and has since been forward-ported by [lawnjelly](https://github.com/lawnjelly) via [GH-104269](https://github.com/godotengine/godot/pull/104269). Now all logic is handled within the `SceneTree`, but in a manner which doesn't break any existing API. All projects will benefit from this improvement out-of-the-box.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm">
 </video>
 
 And more:
-- Chunk tilemap physics [GH-102662](https://github.com/godotengine/godot/pull/102662)
+- Chunk tilemap physics. ([GH-102662](https://github.com/godotengine/godot/pull/102662))
 
 ### Platforms
 #### Android
