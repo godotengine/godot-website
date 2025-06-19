@@ -230,7 +230,7 @@ func _ready() -> void:
 
 GDScript also saw a lot of usability improvements for the script editor, with notably fixes to code completion and highlighting:
 - Inline color pickers. ([GH-105724](https://github.com/godotengine/godot/pull/105724))
-- Highlight warning lines. ([GH-105724](https://github.com/godotengine/godot/pull/105724))
+- Highlight warning lines. ([GH-102469](https://github.com/godotengine/godot/pull/102469))
 - Don't add parenthesis when expecting `Callable`. ([GH-96375](https://github.com/godotengine/godot/pull/96375))
 - Autocompletion for `@export_tool_button`s. ([GH-105081](https://github.com/godotengine/godot/pull/105081))
 - Autocompletion for user methods. ([GH-106198](https://github.com/godotengine/godot/pull/106198))
