@@ -62,11 +62,11 @@
 &lt;/table>
 &lt;p>&lt;strong>Bend:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Example of bone constraints on a bent knee">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>Onto something more suitable for a blog post highlight: UX improvements! &lt;a href="https://github.com/YeldhamDev">YeldhamDev&lt;/a> implemented support for selection box movement and scaling within the bezier editor, making it a piece of cake to perform changes to points in batches (&lt;a href="https://github.com/godotengine/godot/pull/100470">GH-100470&lt;/a>). &lt;a href="https://github.com/Arnklit">Arnklit&lt;/a> continues the bezier improvements with &lt;a href="https://github.com/godotengine/godot/pull/95564">GH-95564&lt;/a>, allowing users to auto tangent new points in a balanced or mirrored manner. The animation player gets some love as well, with the ability to sort animations alphabetically (&lt;a href="https://github.com/godotengine/godot/pull/103584">GH-103584&lt;/a>). Lastly, and featured below, is a very long-awaited UX improvement: animation filtering! (&lt;a href="https://github.com/godotengine/godot/pull/103130">GH-103130&lt;/a>)&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Preview of animation tracks filtering">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/animation-filtering.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/animation-filtering.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>And more:&lt;/p>
 &lt;ul>
@@ -128,7 +128,7 @@
 &lt;p>A rarely-covered topic regarding the editor is the &lt;a href="https://docs.godotengine.org/en/stable/classes/class_editorcommandpalette.html">command palette&lt;/a>, but we’ll happily make an exception to highlight &lt;a href="https://github.com/HolonProduction">HolonProduction&lt;/a>’s PR &lt;a href="https://github.com/godotengine/godot/pull/99318">GH-99318&lt;/a> adding named &lt;code class="language-plaintext highlighter-rouge">EditorScript&lt;/code>s to the command palette! This much more centralized means of execution serves to benefit the commands that are more project-specific. This is specifically for named scripts however, such that there will always be an associated display name and search handling.&lt;/p>
 &lt;p>As for topics we &lt;em>have&lt;/em> covered, where better to start than with &lt;code class="language-plaintext highlighter-rouge">Variant&lt;/code> exporting? This functionality is brought to life by &lt;a href="https://github.com/KoBeWi">Tomasz Chabora&lt;/a>, bringing support for a dynamic variable in a standalone context (&lt;a href="https://github.com/godotengine/godot/pull/89324">GH-89324&lt;/a>). With the ability to change not only the variable, but the type itself, the doors are wide open for creative integrations in the inspector.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Demo of exporting a Variant type in the Inspector">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>And more:&lt;/p>
 &lt;ul>
@@ -182,7 +182,6 @@
 &lt;li>Highlight warning lines. (&lt;a href="https://github.com/godotengine/godot/pull/102469">GH-102469&lt;/a>)&lt;/li>
 &lt;li>Don’t add parenthesis when expecting &lt;code class="language-plaintext highlighter-rouge">Callable&lt;/code>. (&lt;a href="https://github.com/godotengine/godot/pull/96375">GH-96375&lt;/a>)&lt;/li>
 &lt;li>Autocompletion for &lt;code class="language-plaintext highlighter-rouge">@export_tool_button&lt;/code>s. (&lt;a href="https://github.com/godotengine/godot/pull/105081">GH-105081&lt;/a>)&lt;/li>
-&lt;li>Autocompletion for user methods. (&lt;a href="https://github.com/godotengine/godot/pull/106198">GH-106198&lt;/a>)&lt;/li>
 &lt;li>Highlighting script members like native ones. (&lt;a href="https://github.com/godotengine/godot/pull/74393">GH-74393&lt;/a>)&lt;/li>
 &lt;li>Code completion for overridden user-defined methods. (&lt;a href="https://github.com/godotengine/godot/pull/106198">GH-106198&lt;/a>)&lt;/li>
 &lt;/ul>
@@ -191,11 +190,11 @@
 &lt;p>4.5 is bringing with it quite a few new quality-of-life improvements, with one of the biggest additions being one we actually haven’t given proper coverage to yet: foldable containers! &lt;a href="https://github.com/KoBeWi">Tomasz Chabora&lt;/a> is no stranger to editor enhancements, and this time he has blessed us with &lt;a href="https://github.com/godotengine/godot/pull/102346">GH-102346&lt;/a>, which grants us the new &lt;code class="language-plaintext highlighter-rouge">FoldableContainer&lt;/code> class. Now users can have dynamically cascading GUI objects with the ability to toggle if the contents are expanded or not at will, a process that previously took several workarounds to achieve.&lt;/p>
 &lt;p>In a similar vein, the ability to manipulate a group of controls simultaneously has become much easier thanks to &lt;a href="https://github.com/Delsin-Yu">Delsin-Yu&lt;/a>’s PR with a focus on recursive control across child controls (&lt;a href="https://github.com/godotengine/godot/pull/97495">GH-97495&lt;/a>). This implements new properties for recursively disabling &lt;code class="language-plaintext highlighter-rouge">Focus Mode&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">Mouse Filter&lt;/code>, meaning that the ability to select and interact with child controls becomes far more intuitive, and allows for explicit overrides if desired.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Demo of the Controls recursive focus feature">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/recursive-focus.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/recursive-focus.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>There’s also the newly added &lt;code class="language-plaintext highlighter-rouge">SVGTexture&lt;/code>, implemented by our very own &lt;a href="https://github.com/bruvzg">bruvzg&lt;/a> in &lt;a href="https://github.com/godotengine/godot/pull/105375">GH-105375&lt;/a>, allowing for rasterization of SVG files directly. However, when initially showcased, this process was fairly long-winded, as the main uses were internal. This has since been remedied with a dedicated importer in &lt;a href="https://github.com/godotengine/godot/pull/105655">GH-105655&lt;/a>, making rasterization much more accessible to all users.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Demo of toggling oversampling on SVGTexture">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>And more:&lt;/p>
 &lt;ul>
@@ -208,7 +207,7 @@
 &lt;p>Godot 4.0 introduced the &lt;a href="/article/godot-4-0-sets-sail/#easier-importing">Advanced Import Settings&lt;/a> dialog, which allows configuring how to import specific 3D assets with great flexibility. This dialog kept being improved upon in subsequent releases (including 4.5), but one part of its workflow became a major pain point for users: the ability to batch edit multiple assets to assign an external material to all of them was gone, forcing users to configure this in each asset individually using the Advanced Import Settings dialog.
 &lt;a href="https://github.com/bruvzg">bruvzg&lt;/a> corrected this oversight by reintroducing options in the Import dock to configure whether to extract materials in a way that supports multi-asset configuration (&lt;a href="https://github.com/godotengine/godot/pull/107211">GH-107211&lt;/a>).&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Extracting and editing a shared material from multiple glTF files at once">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/glb-material-extract.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/glb-material-extract.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>And more:&lt;/p>
 &lt;ul>
@@ -239,7 +238,7 @@ If all goes well, this change should be merged for beta 2 as an exception to the
 &lt;p>Our implementation of 3D fixed-timestep interpolation has been completely overhauled, as the previous iteration had fundamental flaws with how it was structured in such a way that couldn’t be addressed with a simple fix or patch. The solution already existed on 3.x, and has since been forward-ported by &lt;a href="https://github.com/lawnjelly">lawnjelly&lt;/a> via &lt;a href="https://github.com/godotengine/godot/pull/104269">GH-104269&lt;/a>. Now all logic is handled within the &lt;code class="language-plaintext highlighter-rouge">SceneTree&lt;/code>, but in a manner which doesn’t break any existing API. All projects will benefit from this improvement out-of-the-box.&lt;/p>
 &lt;p>&lt;strong>Interpolation with 10 ticks per second:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Truck Town demo played at a fixed-timestep of 10 ticks per second with smooth physics thanks to interpolation">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>Working in tandem since the integration of Jolt Physics as new 3D physics engine in Godot 4.4, &lt;a href="https://github.com/mihe">Mikael Hermansson&lt;/a> and &lt;a href="https://github.com/jrouwe">Jorrit Rouwe&lt;/a> (Jolt’s creator) have made nearly &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%20label%3Atopic%3Aphysics%20milestone%3A4.5%20(author%3Amihe%20OR%20author%3Ajrouwe)">20 fixes and improvements&lt;/a> to the Jolt integration for Godot 4.5, which should now provide an even better experience.&lt;/p>
 &lt;p>And more:&lt;/p>
@@ -252,7 +251,7 @@ If all goes well, this change should be merged for beta 2 as an exception to the
 &lt;h4 id="android">Android&lt;/h4>
 &lt;p>The Android editor experience has become significantly improved thanks to the implementation of &lt;code class="language-plaintext highlighter-rouge">TouchActionsPanel&lt;/code>. While this is technically something any touch device can take advantage of, &lt;a href="https://github.com/syntaxerror247">Anish Mishra&lt;/a>’s PR &lt;a href="https://github.com/godotengine/godot/pull/100339">GH-100339&lt;/a> was explicitly created with the Android editor in mind. &lt;code class="language-plaintext highlighter-rouge">TouchActionsPanel&lt;/code> comes equipped with common action buttons (save, undo, redo, etc.), which simulate actions like &lt;code class="language-plaintext highlighter-rouge">ui_undo&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">ui_redo&lt;/code> via pre-existing shortcuts.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Recording of the Android editor with the new TouchActionsPanel">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/touch-actions-panel.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/touch-actions-panel.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>And more:&lt;/p>
 &lt;ul>
@@ -294,11 +293,11 @@ If all goes well, this change should be merged for beta 2 as an exception to the
 &lt;img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-x-ray.webp" alt="Stencil x-ray" />&lt;/p>
 &lt;p>&lt;strong>Cel-shaded lighting:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Demo of cel-shaded lighting with stencils">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-light.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-light.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>&lt;strong>Fire effect implemented entirely with &lt;code class="language-plaintext highlighter-rouge">StandardMaterial3D&lt;/code>:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Demo of a fire effect implemented via StandardMaterial3D's stencil features">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-fire.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-fire.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;h4 id="shaders-and-rendering-features">Shaders and rendering features&lt;/h4>
 &lt;p>In addition to the stencil shader support, 4.5 brings with it a plethora of improvements to those working with shaders. One such usability improvement arrived via &lt;a href="https://github.com/godotengine/godot/pull/100287">GH-100287&lt;/a>, where &lt;a href="https://github.com/Chaosus">Yuri Rubinsky&lt;/a> re-organized the shader editor’s UI as a whole. Others are in the form of direct rendering improvements, such as: ambient specular occlusion by &lt;a href="https://github.com/lander-vr">Lander&lt;/a> (&lt;a href="https://github.com/godotengine/godot/pull/106145">GH-106145&lt;/a>), SMAA support by &lt;a href="https://github.com/RGDTAB">Raymond DiDonato&lt;/a> (&lt;a href="https://github.com/godotengine/godot/pull/102330">GH-102330&lt;/a>), and bent normal maps by &lt;a href="https://github.com/LunaCapra">Capry&lt;/a> (&lt;a href="https://github.com/godotengine/godot/pull/89988">GH-89988&lt;/a>).&lt;/p>
@@ -372,11 +371,11 @@ If all goes well, this change should be merged for beta 2 as an exception to the
 &lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker.webp" alt="Shader baker" />&lt;/p>
 &lt;p>&lt;strong>Before:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Slow loading time of Godot's Third Person Shooter demo without prebaked shaders">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>&lt;strong>After:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Fast loading time of Godot's Third Person Shooter demo with prebaked shaders">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;h4 id="motion-vectors-for-mobile">Motion vectors for Mobile&lt;/h4>
 &lt;p>Across our multiple renderers, it’s only reasonable that certain features would be exclusive to the higher-end selections. Motion vectors, for instance, have been available on the Forward+ renderer for ages, but have never been available to the Mobile renderer. That is, until &lt;a href="https://github.com/devloglogan">Logan Lang&lt;/a> took to rectifying this in &lt;a href="https://github.com/godotengine/godot/pull/100283">GH-100283&lt;/a>, which builds atop his &lt;a href="https://github.com/godotengine/godot/pull/100282">previous PR&lt;/a>’s render-agnostic foundation.&lt;/p>
@@ -801,11 +800,11 @@ and &lt;a href="https://discord.com/invite/DD95reBjzM">join the Discord&lt;/a> t
 &lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker.webp" alt="Shader baker" />&lt;/p>
 &lt;p>&lt;strong>Before:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>&lt;strong>After:&lt;/strong>&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>However, it comes with tradeoffs:&lt;/p>
 &lt;ol>
@@ -1131,19 +1130,19 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h3 id="macos-embedded-window-support">macOS: Embedded window support&lt;/h3>
 &lt;p>After Windows and Linux users got to experience the benefits of embedding their windows in the editor, macOS users have understandably been expressing interest in the same coming to their platform. Easier said than done, as this feature is OS-specific and &lt;em>very&lt;/em> low-level, so implementation requires someone both extremely knowledgeable in a niche area and actually owning the platform in question for proper testing. Thankfully, both of these qualifications were met by &lt;a href="https://github.com/stuartcarnie">Stuart Carnie&lt;/a>, who was up to the task of integrating this behemoth in &lt;a href="https://github.com/godotengine/godot/pull/105884">GH-105884&lt;/a>. The results should speak for themselves:&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/macos-embedded-window.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/macos-embedded-window.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>The macOS implementation works differently from the Windows and Linux implementations. Since macOS does not allow the kind of window manipulation that Windows and Linux use for game window embedding, macOS uses an inter-process communication approach where the framebuffer is sent from the game process (which performs off-screen rendering) to the editor window. Input events are also sent from the editor window to the game process. This approach is more complex, but is also more robust as it doesn’t rely on window management tricks that can fall apart in certain edge cases. This approach may be ported later to Windows/Linux in a future release, as it would help improve the reliability of game window embedding.&lt;/p>
 &lt;h3 id="move-3d-physics-interpolation-to-scenetree">Move 3D physics interpolation to &lt;code class="language-plaintext highlighter-rouge">SceneTree&lt;/code>&lt;/h3>
 &lt;p>The old design of the 3D interpolation system was fundamentally flawed, as it operated under the assumption that the scene side wouldn’t require access to interpolated transforms. This isn’t something that could’ve just been “patched in” either, thanks to the multithreaded design, command queue, and stalling. Lacking any sort of workaround, &lt;a href="https://github.com/lawnjelly">lawnjelly&lt;/a> has taken a break from being the person responsible for 90% of 3.x code nowadays and &lt;a href="https://github.com/godotengine/godot/pull/103685">forward-ported&lt;/a> a solution via &lt;a href="https://github.com/godotengine/godot/pull/104269">GH-104269&lt;/a>. This addresses the problem by porting all logic to the &lt;code class="language-plaintext highlighter-rouge">SceneTree&lt;/code>, while completely retaining the existing API!&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;p>No changes are needed to existing projects to benefit from the new 3D physics interpolation architecture.&lt;/p>
 &lt;h3 id="export-variables-as-variant">Export variables as &lt;code class="language-plaintext highlighter-rouge">Variant&lt;/code>&lt;/h3>
 &lt;p>Despite both arrays and dictionaries technically supporting &lt;code class="language-plaintext highlighter-rouge">Variant&lt;/code> values, this functionality was never actually exposed in isolation. That is: it was impossible to export a variable of type &lt;code class="language-plaintext highlighter-rouge">Variant&lt;/code> directly. &lt;a href="https://github.com/KoBeWi">Tomasz Chabora&lt;/a> found this limitation quite silly, so took to addressing this grave injustice with &lt;a href="https://github.com/godotengine/godot/pull/89324">GH-89324&lt;/a>. Now users are granted extra flexibility with their exports, as the option is now available to change not only the variable, but the type itself.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.webm?1" type="video/webm" />
+&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;h3 id="stackable-outlines-on-label">Stackable outlines on &lt;code class="language-plaintext highlighter-rouge">Label&lt;/code>&lt;/h3>
 &lt;p>Have you ever been in the situation where you want to add fancy outline or shadow effects to your text, only to realize that you’re stuck with only one of each? Sure, you can double-up the amount of text objects directly atop one-another, but that’s cumbersome and doesn’t account for outlines affecting other outlines. There must be a better way! Well, thanks to the efforts of &lt;a href="https://github.com/Delsin-Yu">Delsin-Yu&lt;/a>, users no longer have to struggle with this moral conundrum. Instead, they can simply take advantage of &lt;a href="https://github.com/godotengine/godot/pull/104731">GH-104731&lt;/a> adding support for stacked layers of effects; no cumbersome workarounds required.&lt;/p>
