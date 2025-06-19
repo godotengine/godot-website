@@ -72,13 +72,13 @@ This might be a little more technical than usual, but the work [Tokage](https://
 
 **Bend:**
 <video autoplay loop muted playsinline title="Example of bone constraints on a bent knee">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/constraint-bend.mp4?1" type="video/mp4">
 </video>
 
 Onto something more suitable for a blog post highlight: UX improvements! [YeldhamDev](https://github.com/YeldhamDev) implemented support for selection box movement and scaling within the bezier editor, making it a piece of cake to perform changes to points in batches ([GH-100470](https://github.com/godotengine/godot/pull/100470)). [Arnklit](https://github.com/Arnklit) continues the bezier improvements with [GH-95564](https://github.com/godotengine/godot/pull/95564), allowing users to auto tangent new points in a balanced or mirrored manner. The animation player gets some love as well, with the ability to sort animations alphabetically ([GH-103584](https://github.com/godotengine/godot/pull/103584)). Lastly, and featured below, is a very long-awaited UX improvement: animation filtering! ([GH-103130](https://github.com/godotengine/godot/pull/103130))
 
 <video autoplay loop muted playsinline title="Preview of animation tracks filtering">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/animation-filtering.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/animation-filtering.mp4?1" type="video/mp4">
 </video>
 
 And more:
@@ -164,7 +164,7 @@ A rarely-covered topic regarding the editor is the [command palette](https://doc
 As for topics we _have_ covered, where better to start than with `Variant` exporting? This functionality is brought to life by [Tomasz Chabora](https://github.com/KoBeWi), bringing support for a dynamic variable in a standalone context ([GH-89324](https://github.com/godotengine/godot/pull/89324)). With the ability to change not only the variable, but the type itself, the doors are wide open for creative integrations in the inspector.
 
 <video autoplay loop muted playsinline title="Demo of exporting a Variant type in the Inspector">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.mp4?1" type="video/mp4">
 </video>
 
 And more:
@@ -233,7 +233,6 @@ GDScript also saw a lot of usability improvements for the script editor, with no
 - Highlight warning lines. ([GH-102469](https://github.com/godotengine/godot/pull/102469))
 - Don't add parenthesis when expecting `Callable`. ([GH-96375](https://github.com/godotengine/godot/pull/96375))
 - Autocompletion for `@export_tool_button`s. ([GH-105081](https://github.com/godotengine/godot/pull/105081))
-- Autocompletion for user methods. ([GH-106198](https://github.com/godotengine/godot/pull/106198))
 - Highlighting script members like native ones. ([GH-74393](https://github.com/godotengine/godot/pull/74393))
 - Code completion for overridden user-defined methods. ([GH-106198](https://github.com/godotengine/godot/pull/106198))
 
@@ -246,13 +245,13 @@ Here at the Godot Foundation, accessibililty is an absolute top-priority. The ro
 In a similar vein, the ability to manipulate a group of controls simultaneously has become much easier thanks to [Delsin-Yu](https://github.com/Delsin-Yu)'s PR with a focus on recursive control across child controls ([GH-97495](https://github.com/godotengine/godot/pull/97495)). This implements new properties for recursively disabling `Focus Mode` and `Mouse Filter`, meaning that the ability to select and interact with child controls becomes far more intuitive, and allows for explicit overrides if desired.
 
 <video autoplay loop muted playsinline title="Demo of the Controls recursive focus feature">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/recursive-focus.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/recursive-focus.mp4?1" type="video/mp4">
 </video>
 
 There's also the newly added `SVGTexture`, implemented by our very own [bruvzg](https://github.com/bruvzg) in [GH-105375](https://github.com/godotengine/godot/pull/105375), allowing for rasterization of SVG files directly. However, when initially showcased, this process was fairly long-winded, as the main uses were internal. This has since been remedied with a dedicated importer in [GH-105655](https://github.com/godotengine/godot/pull/105655), making rasterization much more accessible to all users.
 
 <video autoplay loop muted playsinline title="Demo of toggling oversampling on SVGTexture">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.mp4?1" type="video/mp4">
 </video>
 
 And more:
@@ -267,7 +266,7 @@ Godot 4.0 introduced the [Advanced Import Settings](/article/godot-4-0-sets-sail
 [bruvzg](https://github.com/bruvzg) corrected this oversight by reintroducing options in the Import dock to configure whether to extract materials in a way that supports multi-asset configuration ([GH-107211](https://github.com/godotengine/godot/pull/107211)).
 
 <video autoplay loop muted playsinline title="Extracting and editing a shared material from multiple glTF files at once">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/glb-material-extract.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/glb-material-extract.mp4?1" type="video/mp4">
 </video>
 
 And more:
@@ -309,7 +308,7 @@ Our implementation of 3D fixed-timestep interpolation has been completely overha
 
 **Interpolation with 10 ticks per second:**
 <video autoplay loop muted playsinline title="Truck Town demo played at a fixed-timestep of 10 ticks per second with smooth physics thanks to interpolation">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.mp4?1" type="video/mp4">
 </video>
 
 Working in tandem since the integration of Jolt Physics as new 3D physics engine in Godot 4.4, [Mikael Hermansson](https://github.com/mihe) and [Jorrit Rouwe](https://github.com/jrouwe) (Jolt's creator) have made nearly [20 fixes and improvements](https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%20label%3Atopic%3Aphysics%20milestone%3A4.5%20(author%3Amihe%20OR%20author%3Ajrouwe)) to the Jolt integration for Godot 4.5, which should now provide an even better experience.
@@ -326,7 +325,7 @@ And more:
 The Android editor experience has become significantly improved thanks to the implementation of `TouchActionsPanel`. While this is technically something any touch device can take advantage of, [Anish Mishra](https://github.com/syntaxerror247)'s PR [GH-100339](https://github.com/godotengine/godot/pull/100339) was explicitly created with the Android editor in mind. `TouchActionsPanel` comes equipped with common action buttons (save, undo, redo, etc.), which simulate actions like `ui_undo` and `ui_redo` via pre-existing shortcuts.
 
 <video autoplay loop muted playsinline title="Recording of the Android editor with the new TouchActionsPanel">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/touch-actions-panel.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/touch-actions-panel.mp4?1" type="video/mp4">
 </video>
 
 And more:
@@ -385,12 +384,12 @@ With a PR in the making for nearly 2 years [GH-80710](https://github.com/godoten
 
 **Cel-shaded lighting:**
 <video autoplay loop muted playsinline title="Demo of cel-shaded lighting with stencils">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-light.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-light.mp4?1" type="video/mp4">
 </video>
 
 **Fire effect implemented entirely with `StandardMaterial3D`:**
 <video autoplay loop muted playsinline title="Demo of a fire effect implemented via StandardMaterial3D's stencil features">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-fire.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/stencil-fire.mp4?1" type="video/mp4">
 </video>
 
 #### Shaders and rendering features
@@ -428,12 +427,12 @@ Just as essential to rendering as the output itself is how performant it is to c
 
 **Before:**
 <video autoplay loop muted playsinline title="Slow loading time of Godot's Third Person Shooter demo without prebaked shaders">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.mp4?1" type="video/mp4">
 </video>
 
 **After:**
 <video autoplay loop muted playsinline title="Fast loading time of Godot's Third Person Shooter demo with prebaked shaders">
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.mp4?1" type="video/mp4">
 </video>
 
 #### Motion vectors for Mobile

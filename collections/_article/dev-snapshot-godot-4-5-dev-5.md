@@ -49,12 +49,12 @@ From the technical gurus behind implementing [ubershaders](/article/dev-snapshot
 
 **Before:**
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.mp4?1" type="video/mp4">
 </video>
 
 **After:**
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.mp4?1" type="video/mp4">
 </video>
 
 However, it comes with tradeoffs:
