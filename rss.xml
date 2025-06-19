@@ -179,7 +179,7 @@
 &lt;p>GDScript also saw a lot of usability improvements for the script editor, with notably fixes to code completion and highlighting:&lt;/p>
 &lt;ul>
 &lt;li>Inline color pickers. (&lt;a href="https://github.com/godotengine/godot/pull/105724">GH-105724&lt;/a>)&lt;/li>
-&lt;li>Highlight warning lines. (&lt;a href="https://github.com/godotengine/godot/pull/105724">GH-105724&lt;/a>)&lt;/li>
+&lt;li>Highlight warning lines. (&lt;a href="https://github.com/godotengine/godot/pull/102469">GH-102469&lt;/a>)&lt;/li>
 &lt;li>Don’t add parenthesis when expecting &lt;code class="language-plaintext highlighter-rouge">Callable&lt;/code>. (&lt;a href="https://github.com/godotengine/godot/pull/96375">GH-96375&lt;/a>)&lt;/li>
 &lt;li>Autocompletion for &lt;code class="language-plaintext highlighter-rouge">@export_tool_button&lt;/code>s. (&lt;a href="https://github.com/godotengine/godot/pull/105081">GH-105081&lt;/a>)&lt;/li>
 &lt;li>Autocompletion for user methods. (&lt;a href="https://github.com/godotengine/godot/pull/106198">GH-106198&lt;/a>)&lt;/li>
