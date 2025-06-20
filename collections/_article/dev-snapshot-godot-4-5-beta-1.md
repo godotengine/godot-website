@@ -9,7 +9,7 @@ image_caption_description: A game by Adriaan de Jongh, Sim Kaart, Matthijs Koste
 date: 2025-06-18 22:00:00
 ---
 
-The first beta release for the 4.5 release cycle has come at last, and with it a plethora of outstanding bugs to be squashed. Contributors are encouraged to focus exclusively on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.5), as we are now in feature-freeze and will not be merging new features at this stage of development (aside from a couple pre-approved exceptions scheduled for beta 2).
+The first beta release for the 4.5 release cycle has come at last, and with it a plethora of outstanding bugs to be squashed. Contributors are encouraged to focus exclusively on fixing [regressions](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.5), as we are now in feature-freeze and will not be merging new features at this stage of development (aside from a couple of pre-approved exceptions scheduled for beta 2).
 
 For those interested in aiding us on our quest to squash any bugs that come up during this time, we encourage you to join our recent bug-hunting sprints. Helmed by our new head of the Bugsquad, [A Thousand Ships](https://github.com/AThousandShips) has taken to hosting regular sprints for tackling various bugs within the Godot repo, organized such that everyone can easily gather behind a given theme to make chunks of fixes as seamlessly and speedily as possible. This will be our fourth sprint of this type, with an associated discussion [already prepared](https://chat.godotengine.org/channel/dNtaAGsF2ifAjZ57P). See the [Bug Triage Introduction](https://github.com/godotengine/godot-maintainers-docs/blob/main/bug-triage/introduction.md) for more information, and join the [`#bugsquad`](https://chat.godotengine.org/channel/bugsquad) and [`#bugsquad-sprints`](https://chat.godotengine.org/channel/bugsquad-sprints) channels on our developer RocketChat to participate!
 
@@ -311,7 +311,7 @@ Our implementation of 3D fixed-timestep interpolation has been completely overha
   <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.mp4?1" type="video/mp4">
 </video>
 
-Working in tandem since the integration of Jolt Physics as new 3D physics engine in Godot 4.4, [Mikael Hermansson](https://github.com/mihe) and [Jorrit Rouwe](https://github.com/jrouwe) (Jolt's creator) have made nearly [20 fixes and improvements](https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%20label%3Atopic%3Aphysics%20milestone%3A4.5%20(author%3Amihe%20OR%20author%3Ajrouwe)) to the Jolt integration for Godot 4.5, which should now provide an even better experience.
+Working in tandem since the integration of Jolt Physics as the new 3D physics engine in Godot 4.4, [Mikael Hermansson](https://github.com/mihe) and [Jorrit Rouwe](https://github.com/jrouwe) (Jolt's creator) have made nearly [20 fixes and improvements](https://github.com/godotengine/godot/issues?q=is%3Apr%20state%3Amerged%20label%3Atopic%3Aphysics%20milestone%3A4.5%20(author%3Amihe%20OR%20author%3Ajrouwe)) to the Jolt integration for Godot 4.5, which should now provide an even better experience.
 
 And more:
 - Add ability to apply forces and impulses to SoftBody3D. ([GH-100463](https://github.com/godotengine/godot/pull/100463))
@@ -443,7 +443,6 @@ Across our multiple renderers, it's only reasonable that certain features would 
 
 - Add new `StandardMaterial` properties to allow users to control FPS-style objects (hands, weapons, tools close to the camera). ([GH-93142](https://github.com/godotengine/godot/pull/93142))
 - Fragment density map support. ([GH-99551](https://github.com/godotengine/godot/pull/99551))
-- Implement motion vectors in mobile renderer. ([GH-100283](https://github.com/godotengine/godot/pull/100283))
 - Overhaul the cull mask internals for Lights, Decals, and Particle Colliders. ([GH-102399](https://github.com/godotengine/godot/pull/102399))
 - Various performance optimizations. ([GH-103547](https://github.com/godotengine/godot/pull/103547), [GH-103794](https://github.com/godotengine/godot/pull/103794), [GH-103889](https://github.com/godotengine/godot/pull/103889))
 - Optimize Mobile renderer by using FP16 explicitly. ([GH-107119](https://github.com/godotengine/godot/pull/107119))
@@ -480,7 +479,7 @@ During the beta stage, we focus on solving both regressions (i.e. something that
 With every release, we accept that there are going to be various issues which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
 - Windows: As mentioned above, we used a new signing certificate for this release. Windows Defender's SmartScreen might pop up for initial downloads as it sees a surge of downloads of binaries signed with a legit but yet unused certificate. This should automatically rectify itself by the time beta 2 rolls around.
-- Android: Subsequent exports fail when using Shader Baker. The workaround is to delete the `.godot/export` before exporting. ([GH-107535](https://github.com/godotengine/godot/issues/107535))
+- Android: Subsequent exports fail when using Shader Baker. The workaround is to delete the `.godot/export` folder before exporting. ([GH-107535](https://github.com/godotengine/godot/issues/107535))
 - Wayland: Wayland editor documentation popups appear on screen's edge and generate errors. ([GH-107438](https://github.com/godotengine/godot/issues/107438))
 
 ## Bug reports
