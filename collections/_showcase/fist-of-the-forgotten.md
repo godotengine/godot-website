@@ -16,7 +16,7 @@ youtube_id: "j9sjKfFwfaM"
 platforms: ["windows", "linux"]
 
 
-steam: https://store.steampowered.com/app/1105470/Fist_of_the_Forgotten/
+steam: https://store.steampowered.com/app/1105470/Fist_of_the_Forgotten/?curator_clanid=41324400
 
 ---
 

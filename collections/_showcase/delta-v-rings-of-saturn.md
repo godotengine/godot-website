@@ -16,7 +16,7 @@ youtube_id: "7rE4ZTYLkVA"
 platforms: ["windows", "macos", "linux"]
 
 
-steam: https://store.steampowered.com/app/846030/V_Rings_of_Saturn/
+steam: https://store.steampowered.com/app/846030/V_Rings_of_Saturn/?curator_clanid=41324400
 itch: https://koder.itch.io/dv-rings-of-saturn/
 
 ---

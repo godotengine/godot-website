@@ -21,7 +21,7 @@ Lumencraft is a top-down shooter with base-building elements where you're a lone
 The game is made in Godot Engine 3, with many custom-made technologies that enable a fully destructible environment, fluid simulation and dynamic lighting.
 
 The game releases into Early Access on April 13th, 2022 for Windows, Linux, Steam Deck, and in the near future macOS.
-You can find it on [Steam](https://store.steampowered.com/app/1713810/Lumencraft/) and [GOG](https://www.gog.com/en/game/lumencraft).
+You can find it on [Steam](https://store.steampowered.com/app/1713810/Lumencraft/?curator_clanid=41324400) and [GOG](https://www.gog.com/en/game/lumencraft).
 
 ### How did you discover Godot? When did you start using it? Do you have prior experience with other game engines?
 
@@ -30,7 +30,7 @@ I have years of random experience in development with my first games made way ba
 Since the path of a game developer is rarely straightforward, I ended up as an academic at the university doing PhD in skin cancer research, and as a part of not doing the PhD I started writing my own game engine. Luckily my students introduced me to Godot Engine and since 2014 it is my favorite tool. As of now, I have 40+ random free and open source games made in Godot, some can be found on [itch.io](https://johnmeadow.itch.io/) and [Global Game Jam](https://globalgamejam.org/users/john-meadow). You might find something that resembles Lumencraft in there.
 
 As it happens, the 2Dynamic core team had to deal with me as their teacher at some point in their university life, with me preaching Godot at any opportunity.
-One of the successful conversions to Godot was [Paweł Mogiła](https://twitter.com/PawelMogila) (szamq), the architect of Lumencraft. He published [Grimind](https://store.steampowered.com/app/265380/Grimind/) in his custom SDL-based engine and [Clinically Dead](https://store.steampowered.com/app/927840/Clinically_Dead/) using [Urho3D](https://urho3d.io/).
+One of the successful conversions to Godot was [Paweł Mogiła](https://twitter.com/PawelMogila) (szamq), the architect of Lumencraft. He published [Grimind](https://store.steampowered.com/app/265380/Grimind/?curator_clanid=41324400) in his custom SDL-based engine and [Clinically Dead](https://store.steampowered.com/app/927840/Clinically_Dead/?curator_clanid=41324400) using [Urho3D](https://urho3d.io/).
 
 Luckily, one of the core contributors of Godot Engine happened to end up in the same University and was persuaded to join the team. [Tomasz Chabora](https://twitter.com/KoBeWi_) (KoBeWi) is making all the things work properly.
 
@@ -80,4 +80,4 @@ We like the freedom to modify source code and implement features on top of C++ c
 
 ___
 
-*Lumencraft is available on [Steam](https://store.steampowered.com/app/1713810/Lumencraft/) and [GOG](https://www.gog.com/en/game/lumencraft) for Windows, Linux and Steam Deck.*
+*Lumencraft is available on [Steam](https://store.steampowered.com/app/1713810/Lumencraft/?curator_clanid=41324400) and [GOG](https://www.gog.com/en/game/lumencraft) for Windows, Linux and Steam Deck.*

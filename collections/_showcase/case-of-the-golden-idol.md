@@ -18,7 +18,7 @@ youtube_id: "Qqciwm7GD1E"
 
 platforms: ["windows", "macos", "playstation", "xbox", "switch"]
 
-steam: https://store.steampowered.com/app/1677770/The_Case_of_the_Golden_Idol/
+steam: https://store.steampowered.com/app/1677770/The_Case_of_the_Golden_Idol/?curator_clanid=41324400
 
 ---
 
