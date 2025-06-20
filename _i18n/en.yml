@@ -11,6 +11,7 @@ header:
   contribute: Contribute
   donate: Donate
   language: Language
+  console_support: Console support
 footer:
   godot_engine: Godot Engine
   download: Download
@@ -31,6 +32,7 @@ footer:
   press_kit: Press kit
   showcase: Showcase
   education: Education
+  console_support: Console support
   foundation: Foundation
   about: About
   donate: Donate

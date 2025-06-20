@@ -1,0 +1,359 @@
+---
+permalink: /consoles/index.html
+title: "Console Support"
+description: "Learn about console porting and publishing options for Godot games."
+layout: default
+
+providers:
+  - name: W4 Games
+    url: https://www.w4games.com/
+    image: /assets/images/consoles/w4-games.png
+  - name: Lone Wolf Technology
+    url: https://www.lonewolftechnology.com/
+    image: /assets/images/consoles/lone-wolf.png
+  - name: Pineapple Works
+    url: https://pineapple.works/
+    image: /assets/images/consoles/pineapple-works.png
+  - name: RAWRLAB Games
+    url: https://www.rawrlab.com/
+    image: /assets/images/consoles/rawrlab-games.png
+  - name: mazette!
+    url: https://mazette.games/
+    image: /assets/images/consoles/mazette-games.png
+  - name: Olde Sküül
+    url: https://oldeskuul.com/
+    image: /assets/images/consoles/olde-skuul.png
+  - name: Tuanisapps
+    url: https://www.tuanisapps.com/
+    image: /assets/images/consoles/tuanis-apps.png
+  - name: Seaven Studio
+    url: https://www.seaven-studio.com/
+    image: /assets/images/consoles/seaven-studio.png
+  - name: Sickhead Games
+    url: https://www.sickhead.com
+    image: /assets/images/consoles/sickhead-games.png
+---
+
+{% include header.html %}
+
+<link rel="stylesheet" href="/assets/css/transparent-nav.css?2" />
+<style>
+	.consoles-wrapper *,
+	.consoles-hero * {
+		box-sizing: border-box;
+	}
+
+	.consoles-hero {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background: url('/assets/images/consoles/consoles-hero.svg') center bottom/1400px auto no-repeat, linear-gradient(45deg, #320eac, #fe2270);
+		padding-top: 100px;
+		overflow: hidden;
+		position: relative;
+		min-height: 480px;
+	}
+
+	@media (max-width: 560px) {
+		.consoles-hero {
+			background: url('/assets/images/consoles/consoles-hero.svg') center bottom/1000px auto no-repeat, linear-gradient(45deg, #320eac, #fe2270);
+			padding-top: 100px;
+			padding-left: 16px;
+			padding-right: 16px;
+			min-height: 400px;
+		}
+	}
+
+	.consoles-hero h2 {
+		color: white;
+		font-size: 40px;
+		text-align: center;
+		margin: 0;
+		position: relative;
+		z-index: 2;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	@media (max-width: 540px) {
+		.consoles-hero h2 {
+			font-size: 35px;
+			margin: 0 16px;
+		}
+	}
+
+	.consoles-wrapper {
+		max-width: 1200px;
+		margin: auto;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.consoles-wrapper h2 {
+		font-size: 36px;
+		font-weight: 800;
+		margin-top: 24px;
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 1250px) {
+		.consoles-wrapper {
+			width: auto;
+		}
+	}
+
+	.grid-container {
+		display: grid;
+		justify-content: center;
+		column-gap: 28px;
+		row-gap: 24px;
+		grid-template-columns: 1fr;
+		margin-top: 12px;
+	}
+
+	.grid-container.grid-container-3x {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.grid-container.grid-container-3x h2 {
+		grid-column: span 3;
+	}
+	@media (max-width: 1020px) {
+		.grid-container.grid-container-3x {
+			grid-template-columns: 1fr 1fr;
+		}
+		.grid-container.grid-container-3x h2 {
+			grid-column: span 2;
+		}
+	}
+	@media (max-width: 800px) {
+		.grid-container.grid-container-3x {
+			grid-template-columns: 1fr;
+		}
+		.grid-container.grid-container-3x h2 {
+			grid-column: span 1;
+		}
+	}
+
+	.content-card {
+		background-color: var(--card-background-color);
+		border-radius: 12px;
+		padding: 20px;
+		transition: 0.1s filter;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.content-card h4 {
+		color: white;
+		font-size: 18px;
+		font-weight: 800;
+		margin: 0;
+	}
+
+	.content-card p {
+		font-size: 95%;
+		margin-top: 12px;
+	}
+
+	ol {
+		margin-top: 0;
+	}
+
+	.card-vendor {
+		justify-content: space-between;
+		border-radius: 16px;
+		overflow: hidden;
+		padding: 0;
+		background-color: #323c61;
+		transition: 0.1s filter, 0.1s transform;
+		text-decoration: none;
+		color: white;
+		cursor: pointer;
+	}
+	.card-vendor:hover {
+		filter: brightness(112.5%);
+		transform: scale(1.02);
+	}
+	.card-vendor .card-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+	}
+	.card-vendor .card-content {
+		padding: 20px;
+		text-align: center;
+	}
+	.card-vendor .card-content h4 {
+		font-size: 24px;
+	}
+	.vendor-button {
+		display: inline-block;
+		background-color: var(--primary-color);
+		color: white;
+		padding: 8px 16px;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: background-color 0.2s ease;
+		width: 100%;
+		text-align: center;
+		margin-top: 16px;
+	}
+
+	.vendor-button:hover {
+		background-color: color-mix(in srgb, var(--primary-color) 90%, white 3%);
+		color: white;
+		text-decoration: none;
+	}
+
+	.cards-container {
+		display: grid;
+		justify-content: center;
+		column-gap: 24px;
+		row-gap: 24px;
+		grid-template-columns: 1fr 1fr;
+		margin-top: 24px;
+	}
+	@media (max-width: 800px) {
+		.cards-container {
+			grid-template-columns: 1fr;
+		}
+	}
+	.add-your-company {
+		margin-top: 24px;
+		margin-bottom: 42px;
+	}
+	.add-your-company .card-content {
+		padding: 20px;
+		text-align: left;
+	}
+
+</style>
+
+<div class="consoles-hero">
+	<h2>Console support in Godot</h2>
+</div>
+
+<div class="container">
+	<div class="consoles-wrapper">
+		<h2>Godot and console porting</h2>
+		<div class="cards-container">
+			<div class="content-card">
+				<h4>Closed ecosystems</h4>
+				<p>
+					Console platforms are like closed ecosystems. Working with them
+					requires contracts, SDKs, and developer hardware. These
+					platforms are governed by strict NDAs and legal requirements.
+				</p>
+				<p>
+					While Godot cannot directly provide official support due to its open-source
+					license, developers approved by console vendors can still build
+					and ship console games using Godot with the help of certified
+					third-party providers.
+				</p>
+			</div>
+			<div class="content-card">
+				<h4>An open-source system</h4>
+				<p>
+					Godot is fully open source and licensed under MIT. That means no NDAs,
+					no closed tools, and no legal liability accepted. Console development,
+					however, requires exactly the opposite: legal agreements, restricted
+					access, and liability coverage.
+				</p>
+				<p>
+					Because of this, the Godot Foundation has decided not to develop or
+					maintain official console ports. Doing so would compromise its core
+					values of transparency and freedom.
+				</p>
+			</div>
+		</div>
+
+		<div class="cards-container">
+			<div class="content-card">
+				<h4>Console porting in Godot</h4>
+				<p>
+					You can release a Godot game on consoles. You'll need to be approved
+					by the platform holder and either create the export tools yourself or
+					use middleware from a certified third party.
+				</p>
+				<p>
+					The Godot engine itself can run on consoles, but export templates for
+					those platforms must be built separately. These templates are
+					typically created using official SDKs, and thus can only be
+					distributed privately to developers approved by the console makers.
+					Several third-party companies offer this middleware under the
+					necessary legal constraints.
+				</p>
+				<p>
+					For more information, check the following link:
+					<a
+						href="https://godotengine.org/article/about-official-console-ports/"
+					>official console ports</a>.
+				</p>
+			</div>
+			<div class="content-card">
+				<h4>What's the console porting process?</h4>
+				<p>
+					To start the process of bringing your Godot game to consoles, you'll
+					need to:
+				</p>
+				<ol>
+					<li>Register as a developer with the console manufacturer</li>
+					<li>Be approved and gain access to dev tools & SDKs</li>
+					<li>Obtain a devkit (confidential pricing)</li>
+					<li>Use or build console export templates</li>
+					<li>Rate your game with regional agencies (ESRB, PEGI, etc.)</li>
+					<li>
+						Either do the porting in-house or partner with a trusted vendor
+					</li>
+				</ol>
+				<p>
+					Several companies offer console porting and publishing services for
+					Godot-based games.
+				</p>
+			</div>
+		</div>
+
+		<h2>Third-party support</h2>
+		<div class="grid-container grid-container-3x" id="third-party-support">
+			{% for provider in page.providers %}
+			<a href="{{ provider.url }}" class="content-card card-vendor">
+				<div class="card-image">
+					<img src="{{ provider.image }}" alt="{{ provider.name }}" />
+				</div>
+				<div class="card-content">
+					<h4>{{ provider.name }}</h4>
+					<div class="vendor-button">Visit {{ provider.name }}</div>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+		<div class="add-your-company">
+			<div class="content-card card-vendor" style="max-width: 768px; margin: 0 auto;">
+				<div class="card-content" style="text-align: center;">
+					<h4>Add your company</h4>
+					<p>
+						If your company offers porting, or porting <em>and</em> publishing
+						services for Godot games, feel free to contact the Godot Foundation
+						to add your company to the list above.
+					</p>
+					<a href="mailto:contact@godotengine.org" class="vendor-button" style="display: inline-block; width: auto;">
+						Contact the Godot Foundation
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		// Randomize the order of the vendor cards in #third-party-support
+		const container = document.getElementById("third-party-support");
+		const cards = Array.from(container.children);
+		cards.sort(() => Math.random() - 0.5);
+		cards.forEach((card) => container.appendChild(card));
+	});
+</script>
+
+{% include /download/download-section.html %} {% include footer.html %}

@@ -11,6 +11,7 @@ header:
   contribute: "貢献する"
   donate: "寄付する"
   language: "言語"
+  console_support: "コンソールサポート"
 footer:
   godot_engine: "Godotエンジン"
   download: "ダウンロード"
@@ -31,6 +32,7 @@ footer:
   press_kit: "プレスキット"
   showcase: "ショーケース"
   education: "教育"
+  console_support: "コンソールサポート"
   foundation: "財団"
   about: "概要"
   donate: "寄付する"
