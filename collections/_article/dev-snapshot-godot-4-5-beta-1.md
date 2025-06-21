@@ -159,6 +159,10 @@ First-time contributor [daniel080400](https://github.com/daniel080400) came out 
 2D thumbnails utilize two passes—2D and GUI—before combining the two for the final image. As prefabs generally don't care about world coordinates, the world center is not accounted for with 2D thumbnails.
 <img src="/storage/blog/dev-snapshot-godot-4-5-beta-1/thumbnail-2d.webp" alt="2D Thumbnails"/>
 
+**Edit 2025-06-21:** *Due to some regressions and unforeseen effects of the above PR, it was decided to revert this change for 4.5 beta 2 ([GH-107786](https://github.com/godotengine/godot/pull/107786)). So this feature can be tested in the 4.5 beta 1 snapshot, but won't be in 4.5 stable. The improved scene preview thumbnails are still very much wanted, and we will revisit this during the 4.6 development cycle, with more time to ensure this doesn't have any adverse effects.*
+
+---
+
 A rarely-covered topic regarding the editor is the [command palette](https://docs.godotengine.org/en/stable/classes/class_editorcommandpalette.html), but we'll happily make an exception to highlight [HolonProduction](https://github.com/HolonProduction)'s PR [GH-99318](https://github.com/godotengine/godot/pull/99318) adding named `EditorScript`s to the command palette! This much more centralized means of execution serves to benefit the commands that are more project-specific. This is specifically for named scripts however, such that there will always be an associated display name and search handling.
 
 As for topics we _have_ covered, where better to start than with `Variant` exporting? This functionality is brought to life by [Tomasz Chabora](https://github.com/KoBeWi), bringing support for a dynamic variable in a standalone context ([GH-89324](https://github.com/godotengine/godot/pull/89324)). With the ability to change not only the variable, but the type itself, the doors are wide open for creative integrations in the inspector.
