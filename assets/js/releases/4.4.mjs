@@ -3,7 +3,7 @@ import {
 	createTimeline,
 	onScroll,
 	eases,
-} from "../modules/anime@4.0.2_esm.min.js";
+} from "../modules/anime@4.1.2_esm.min.js";
 import detectPlatform from "../modules/detect-browser.mjs";
 
 const { outCirc, inCirc } = eases;
