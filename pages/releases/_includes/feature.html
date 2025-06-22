@@ -3,18 +3,34 @@
 
 {% assign importance = feature.importance | default: "4" | plus: 0 %}
 {% assign has_media = false %}
-{% assign is_video = false %}
+{% assign is_ideo = false %}
 {% assign is_image = false %}
-{% if feature.video_src == null and feature.image_src == null %}
+{% assign is_carousel = false %}
+
+{% assign carousel_elements = "" | split: "" %}
+{% assign carousel_is_comparison = false %}
+{% if feature.carousel != null %}
+	{% assign carousel_is_comparison = feature.carousel.comparison != null %}
+	{% if feature.carousel.elements != null %}
+		{% assign carousel_elements = feature.carousel.elements %}
+	{% endif %}
+{% endif %}
+
+{% if feature.video_src == null and feature.image_src == null and carousel_elements.size == 0 %}
 	{% comment %}
 	{% endcomment %}
 {% else %}
 	{% assign has_media = true %}
 	{% assign media_position = feature.media_position | default: 'top' %}
-	{% if feature.video_src != null %}
-		{% assign is_video = true %}
+
+	{% if carousel_elements.size == 0 %}
+		{% if feature.video_src != null %}
+			{% assign is_video = true %}
+		{% else %}
+			{% assign is_image = true %}
+		{% endif %}
 	{% else %}
-		{% assign is_image = true %}
+		{% assign is_carousel = true %}
 	{% endif %}
 {% endif %}
 
@@ -45,19 +61,19 @@
 			<div class="release-card-content-container">
 				<!-- .c-title -->
 				<h4 class="c-title">
-					<a href="#{{feature.anchor}}">{{feature.title | markdownify}}</a>
+					<a href="#{{feature.anchor}}">{{feature.title | manual_highlight_code | markdownify }}</a>
 				</h4>
 
 				<!-- .c-blockquote -->
 				{% if feature.blockquote != null and importance < 4 %}
 					<div class="c-blockquote">
-						{{ feature.blockquote | markdownify }}
+						{{ feature.blockquote | manual_highlight_code | markdownify }}
 					</div>
 				{% endif %}
 
 				<!-- .c-content -->
 				<div class="c-content">
-					{{ feature.text | markdownify }}
+					{{ feature.text | manual_highlight_code | markdownify }}
 				</div>
 
 				<!-- .c-link -->
@@ -109,94 +125,161 @@
 					{% assign position_class = "position-" | append: feature.position %}
 				{% endif %}
 
-				{% if is_video %}
-					<div class="release-card-video-container">
-						<noscript>
-							<video class="release-card-video {{position_class}}"
-								   	   playsinline="playsinline"
-								   	   disablepictureinpicture="disablepictureinpicture"
-								   	   autoplay="autoplay"
-								   	   loop="loop"
-								   	   muted="muted"
-								   	   poster="{{ feature.video_poster }}">
-									<source src="{{ feature.video_src }}"
-											type="video/webm" />
-							</video>
-						</noscript>
-						{% if feature.video_label != null %}
-							<div class="release-card-video-label">{{feature.video_label}}</div>
+				{% if is_carousel %}
+					{% assign carousel_container_base_class = "release-card-carousel-container" %}
+					{% assign carousel_container_class = carousel_container_base_class %}
+					{% if carousel_is_comparison %}
+						{% assign carousel_container_class = carousel_container_class | append: " " | append: carousel_container_base_class | append: "--has-comparison" %}
+					{% endif %}
+					<div class="{{carousel_container_class}}">
+						{% assign carousel_position = "left" %}
+						<div class="release-card-carousel-{{carousel_position}}">
+							{% for element in carousel_elements %}
+								{%
+									include_relative _includes/feature-carousel-element.html
+									feature=feature
+									section_anchor=section_anchor
+									element=element
+									position=carousel_position
+									is_comparison=false
+									forloop_data=forloop
+								%}
+							{% endfor %}
+						</div>
+
+						{% if carousel_is_comparison %}
+							{% assign carousel_position = "right" %}
+							<div class="release-card-carousel-{{carousel_position}}">
+								{% for element in carousel_elements %}
+									{%
+										include_relative _includes/feature-carousel-element.html
+										feature=feature
+										section_anchor=section_anchor
+										element=element
+										position=carousel_position
+										is_comparison=true
+										forloop_data=forloop
+									%}
+								{% endfor %}
+							</div>
+
+							<div class="release-card-comparison release-card-carousel-comparison">
+								<div class="comparison-range-indicator"></div>
+								<input type="range"
+								id="{{feature.anchor}}-comparison-range"
+								class="comparison-range"
+								step="0.0001"
+								min="0"
+								max="100"
+								value="50">
+							</div>
 						{% endif %}
+
+						{% if carousel_elements.size > 1 %}
+							<div class="release-card-carousel-control release-card-carousel-control--left" tabindex="0"><span class="character">‹</span></div>
+							<div class="release-card-carousel-control release-card-carousel-control--right" tabindex="0"><span class="character">›</span></div>
+						{% endif %}
+
+						<div class="release-card-carousel-content-creator">
+							{% for element in carousel_elements %}
+								{% if element.content_creator != null %}
+									<div class="release-card-content-creator release-card-content-creator--position-{{forloop.index0}}">
+										{{ element.content_creator | manual_highlight_code | markdownify }}
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
 					</div>
-					{% if feature.video_comparison_src != null %}
-						<div class="release-card-video-container video-comparison-b">
+				{% else %}
+					{% if is_video %}
+						<div class="release-card-video-container">
 							<noscript>
 								<video class="release-card-video {{position_class}}"
-									   playsinline="playsinline"
-									   disablepictureinpicture="disablepictureinpicture"
-									   autoplay="autoplay"
-									   loop="loop"
-									   muted="muted"
-									   poster="{{ feature.video_comparison_poster }}">
-									<source src="{{ feature.video_comparison_src }}"
-											type="video/webm" />
+								playsinline="playsinline"
+								disablepictureinpicture="disablepictureinpicture"
+								autoplay="autoplay"
+								loop="loop"
+								muted="muted"
+								poster="{{ feature.video_poster }}">
+									<source src="{{ feature.video_src }}"
+										type="video/webm" />
 								</video>
 							</noscript>
+							{% if feature.video_label != null %}
+								<div class="release-card-label release-card-video-label">{{feature.video_label}}</div>
+							{% endif %}
+						</div>
+						{% if feature.video_comparison_src != null %}
+							<div class="release-card-video-container video-comparison-b">
+								<noscript>
+									<video class="release-card-video {{position_class}}"
+									playsinline="playsinline"
+									disablepictureinpicture="disablepictureinpicture"
+									autoplay="autoplay"
+									loop="loop"
+									muted="muted"
+									poster="{{ feature.video_comparison_poster }}">
+										<source src="{{ feature.video_comparison_src }}"
+										type="video/webm" />
+									</video>
+								</noscript>
 
-							{% if feature.video_comparison_label != null %}
-								<div class="release-card-video-label">{{feature.video_comparison_label}}</div>
-							{% endif %}
-						</div>
-						<div class="release-card-comparison">
-							<div class="comparison-range-indicator"></div>
-							<input type="range"
-								   id="{{feature.anchor}}-comparison-range"
-								   class="comparison-range"
-								   step="0.0001"
-								   min="0"
-								   max="100"
-								   value="50">
-						</div>
-					{% endif %}
-				{% endif %}
-				{% if is_image %}
-					<div class="release-card-image-container">
-						<img class="release-card-image {{position_class}}"
-							 alt="{{ feature.image_alt }}"
-							 src="{{ feature.image_src }}"
-							 srcset="{{ feature.image_src_2x }} 2x"
-							 draggable="false" />
-						{% if feature.image_label != null %}
-							<div class="release-card-image-label">{{feature.image_label}}</div>
+								{% if feature.video_comparison_label != null %}
+									<div class="release-card-label release-card-video-label">{{feature.video_comparison_label}}</div>
+								{% endif %}
+							</div>
+							<div class="release-card-comparison">
+								<div class="comparison-range-indicator"></div>
+								<input type="range"
+								id="{{feature.anchor}}-comparison-range"
+								class="comparison-range"
+								step="0.0001"
+								min="0"
+								max="100"
+								value="50">
+							</div>
 						{% endif %}
-					</div>
-					{% if feature.image_comparison_src != null %}
-						<div class="release-card-image-container image-comparison-b">
+					{% endif %}
+					{% if is_image %}
+						<div class="release-card-image-container">
 							<img class="release-card-image {{position_class}}"
-								 alt="{{ feature.image_comparison_alt }}"
-								 src="{{ feature.image_comparison_src }}"
-								 srcset="{{ feature.image_comparison_src_2x }} 2x" />
-							{% if feature.image_comparison_label != null %}
-								<div class="release-card-image-label release-card-image-label-comparison">
-									{{feature.image_comparison_label}}
-								</div>
+							alt="{{ feature.image_alt }}"
+							src="{{ feature.image_src }}"
+							srcset="{{ feature.image_src_2x }} 2x"
+							draggable="false" />
+							{% if feature.image_label != null %}
+								<div class="release-card-label release-card-image-label">{{feature.image_label}}</div>
 							{% endif %}
 						</div>
-						<div class="release-card-comparison">
-							<div class="comparison-range-indicator"></div>
-							<input type="range"
-								   id="{{feature.anchor}}-comparison-range"
-								   class="comparison-range"
-								   step="0.0001"
-								   min="0"
-								   max="100"
-								   value="50">
+						{% if feature.image_comparison_src != null %}
+							<div class="release-card-image-container image-comparison-b">
+								<img class="release-card-image {{position_class}}"
+								alt="{{ feature.image_comparison_alt }}"
+								src="{{ feature.image_comparison_src }}"
+								srcset="{{ feature.image_comparison_src_2x }} 2x" />
+								{% if feature.image_comparison_label != null %}
+									<div class="release-card-label release-card-image-label release-card-label-comparison release-card-image-label-comparison">
+										{{feature.image_comparison_label}}
+									</div>
+								{% endif %}
+							</div>
+							<div class="release-card-comparison">
+								<div class="comparison-range-indicator"></div>
+								<input type="range"
+								id="{{feature.anchor}}-comparison-range"
+								class="comparison-range"
+								step="0.0001"
+								min="0"
+								max="100"
+								value="50">
+							</div>
+						{% endif %}
+					{% endif %}
+					{% if feature.content_creator != null %}
+						<div class="release-card-content-creator">
+							{{ feature.content_creator | manual_highlight_code | markdownify }}
 						</div>
 					{% endif %}
-				{% endif %}
-				{% if feature.content_creator != null %}
-					<div class="release-card-content-creator">
-						{{ feature.content_creator | markdownify }}
-					</div>
 				{% endif %}
 			</div>
 		{% endif %}

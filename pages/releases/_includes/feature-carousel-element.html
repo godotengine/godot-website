@@ -1,0 +1,85 @@
+{% assign section_anchor = include.section_anchor %}
+{% assign feature = include.feature %}
+{% assign element = include.element %}
+{% assign position = include.position %%}
+{% assign is_comparison = include.is_comparison %}
+{% assign forloop_data = include.forloop_data %}
+
+{% assign position_class = "" %}
+{% if element.position != null %}
+	{% assign position_class = "position-" | append: element.position %}
+{% endif %}
+
+{% assign element_is_video = false %}
+{% assign element_is_image = false %}
+{% if element.video_src != null %}
+	{% assign element_is_video = true %}
+{% else %}
+	{% assign element_is_image = true %}
+{% endif %}
+
+{% assign element_class = "release-card-carousel-element" %}
+{% assign element_class = element_class | append: " " | append: "release-card-carousel-element--position-" | append: forloop_data.index0 %}
+{% if forloop_data.index0 > 0 %}
+	{% assign element_class = element_class | append: " " | append: "hidden" %}
+{% endif %}
+
+<div class="{{element_class}}">
+	{% if element_is_video %}
+		{% assign video_poster = element.video_poster %}
+		{% assign video_src = element.video_src %}
+		{% assign video_label = element.video_label %}
+		{% if is_comparison %}
+			{% assign video_poster = element.video_comparison_poster %}
+			{% assign video_src = element.video_comparison_src %}
+			{% assign video_label = element.video_comparison_label %}
+		{% endif %}
+
+		<link rel="preload" href="{{video_src}}" as="video" type="video/webm">
+
+		<div class="release-card-video-container">
+			<noscript>
+				<video class="release-card-video {{position_class}}"
+				playsinline="playsinline"
+				disablepictureinpicture="disablepictureinpicture"
+				autoplay="autoplay"
+				loop="loop"
+				muted="muted"
+				poster="{{ video_poster }}">
+					<source src="{{ video_src }}"
+						type="video/webm" />
+				</video>
+			</noscript>
+			{% if feature.video_label != null %}
+				<div class="release-card-label release-card-video-label">{{video_label}}</div>
+			{% endif %}
+		</div>
+	{% endif %}
+
+	{% if element_is_image %}
+		{% assign image_alt = element.image_alt %}
+		{% assign image_src = element.image_src %}
+		{% assign image_src_2x = element.image_src_2x %}
+		{% assign image_label = element.image_label %}
+		{% if is_comparison %}
+			{% assign image_alt = element.image_comparison_alt %}
+			{% assign image_src = element.image_comparison_src %}
+			{% assign image_src_2x = element.image_comparison_src_2x %}
+			{% assign image_label = element.image_comparison_label %}
+		{% endif %}
+
+		<link rel="preload" href="{{image_src}}" as="image" type="image/webp" media="(resolution < 2dppx)">
+		<link rel="preload" href="{{image_src_2x}}" as="image" type="image/webp" media="(resolution >= 2dppx)">
+
+		<div class="release-card-image-container">
+			<img class="release-card-image {{position_class}}"
+			alt="{{ image_alt }}"
+			src="{{ image_src }}"
+			srcset="{{ image_src_2x }} 2x"
+			draggable="false" />
+			{% if image_label != null %}
+				<div class="release-card-label release-card-image-label">{{image_label}}</div>
+			{% endif %}
+		</div>
+	{% endif %}
+</div>
