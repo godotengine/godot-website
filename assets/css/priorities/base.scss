@@ -1,11 +1,15 @@
+---
+---
+
 @use "sass:color";
 @use "sass:list";
 @use "sass:map";
 @use "sass:selector";
----
----
-// Fixes the parsing of the unusual front matter / SCSS file.
-*{};
+
+//
+// Imports
+//
+@use "./details.css";
 
 //
 // Reset
@@ -14,11 +18,6 @@ ul {
 	line-height: unset;
 	padding-left: unset;
 }
-
-//
-// Imports
-//
-@use "./details.css";
 
 //
 // Variables
@@ -32,7 +31,7 @@ $border-radius: 15px;
 $element-meta-planning-bar-width: 15%;
 $element-meta-ongoing-bar-width: 50%;
 
-$color-background-light: #FFFFFF;
+$color-background-light: #ffffff;
 $color-background-dark: rgb(51, 54, 57);
 $color-red: #f35774;
 
@@ -43,25 +42,52 @@ $color-category-level-2-dark: #202325;
 $color-text-light: #4a5365;
 $color-text-dark: rgba(255, 255, 255, 0.9);
 
-$color-element-background-light:
-	color.adjust(#d5daea, $lightness: +7.5%);
+$color-element-background-light: color.adjust(#d5daea, $lightness: +7.5%);
 $color-element-background-dark: color.adjust(#202325, $lightness: +2.5%);
 
 @function create-outline-rule($outline-color) {
 	@return 0.125rem solid $outline-color;
 }
 $outline-color: #4080ff;
-$outline: create-outline-rule($outline-color: $outline-color);
-$outline-inverted: create-outline-rule($outline-color: color.adjust($color: color.invert($outline-color), $lightness: +10%));
+$outline: create-outline-rule(
+	$outline-color: $outline-color,
+);
+$outline-inverted: create-outline-rule(
+	$outline-color: color.adjust(
+			$color: color.invert($outline-color),
+			$lightness: +10%,
+		),
+);
 
 $detail-color: (
-	note: (rgb(26, 127, 55), rgb(45, 175, 71)),
-	warning: (rgb(154, 103, 0), rgb(201, 135, 4)),
-	links: (rgb(9, 105, 218), rgb(34, 119, 247)),
-	trackers: (rgb(19, 136, 140), rgb(34, 240, 254)),
-	prs: (rgb(130, 80, 223), rgb(148, 94, 249)),
-	issues: (rgb(207, 34, 46), rgb(249, 62, 58)),
-	proposals: (rgb(207, 106, 34), rgb(246, 118, 58)),
+	note: (
+		rgb(26, 127, 55),
+		rgb(45, 175, 71),
+	),
+	warning: (
+		rgb(154, 103, 0),
+		rgb(201, 135, 4),
+	),
+	links: (
+		rgb(9, 105, 218),
+		rgb(34, 119, 247),
+	),
+	trackers: (
+		rgb(19, 136, 140),
+		rgb(34, 240, 254),
+	),
+	prs: (
+		rgb(130, 80, 223),
+		rgb(148, 94, 249),
+	),
+	issues: (
+		rgb(207, 34, 46),
+		rgb(249, 62, 58),
+	),
+	proposals: (
+		rgb(207, 106, 34),
+		rgb(246, 118, 58),
+	),
 );
 
 //
@@ -158,17 +184,28 @@ $detail-color: (
 //
 :root {
 	scroll-behavior: smooth;
+	scroll-padding-top: $gap;
+
 	@media (prefers-reduced-motion) {
 		scroll-behavior: auto;
 	}
-	scroll-padding-top: $gap;
 }
 
 //
 // Main content.
 //
 .priorities-container {
-	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family:
+		"Montserrat",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen-Sans,
+		Ubuntu,
+		Cantarell,
+		"Helvetica Neue",
+		sans-serif;
 	background-color: var(--card-background-color);
 	overflow: visible;
 	position: relative;
@@ -178,8 +215,7 @@ $detail-color: (
 			$color-with-alpha: color.change($color, $alpha: 0.866667);
 			background:
 				linear-gradient(to right, $color-with-alpha, $color-with-alpha),
-				linear-gradient(to bottom, rgba(0,0,0,0) 25%, $color 100%),
-				url($url);
+				linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, $color 100%), url($url);
 			background-color: black;
 			background-size: cover, cover, cover;
 			background-repeat: repeat, repeat, repeat;
@@ -241,7 +277,7 @@ $detail-color: (
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
 				gap: $gap;
-				margin-bottom: (3 * $gap);
+				margin-bottom: calc(3 * $gap);
 				@include is-mobile() {
 					grid-template-columns: 1fr;
 					gap: 0;
@@ -250,11 +286,10 @@ $detail-color: (
 			.wishlist-btns {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
-				grid-template-areas:
-					"donate howto contact";
+				grid-template-areas: "donate howto contact";
 				gap: $gap;
 
-				margin: (3 * $gap) 0;
+				margin: calc(3 * $gap) 0;
 				font-weight: 600;
 
 				@include is-mobile() {
@@ -310,9 +345,11 @@ $detail-color: (
 			background-color: $color-background-dark;
 		}
 
-		margin: $gap 0;
-		-webkit-user-select: none;
-		user-select: none;
+		& {
+			margin: $gap 0;
+			-webkit-user-select: none;
+			user-select: none;
+		}
 
 		li {
 			list-style: none;
@@ -371,11 +408,13 @@ $detail-color: (
 								}
 							}
 
-							border-radius: $border-radius;
-							width: calc(100% - #{$gap * 2});
-							height: 100%;
-							padding: $gap $gap;
-							cursor: pointer;
+							& {
+								border-radius: $border-radius;
+								width: calc(100% - #{calc($gap * 2)});
+								height: 100%;
+								padding: $gap $gap;
+								cursor: pointer;
+							}
 
 							&::-webkit-details-marker {
 								display: none;
@@ -417,9 +456,9 @@ $detail-color: (
 						.navigation-sublist {
 							display: flex;
 							flex-direction: column;
-							gap: $gap / 4;
+							gap: calc($gap / 4);
 
-							margin-top: $gap / 2;
+							margin-top: calc($gap / 2);
 							margin-left: $gap;
 						}
 					}
@@ -432,19 +471,17 @@ $detail-color: (
 	> .priorities {
 		display: flex;
 		flex-direction: column;
-		gap: $gap * 2;
+		gap: calc($gap * 2);
 
-		padding: ($gap * 2) 0;
+		padding: calc($gap * 2) 0;
 
 		.category {
 			> .container {
 				> .category-details {
 					> .category-summary {
 						display: grid;
-						grid-template-areas:
-							"title anchor . icon";
-						grid-template-columns:
-							auto min-content 1fr min-content;
+						grid-template-areas: "title anchor . icon";
+						grid-template-columns: auto min-content 1fr min-content;
 						gap: $gap;
 						align-items: baseline;
 
@@ -545,8 +582,8 @@ $detail-color: (
 								width: $size;
 								height: $size;
 								border-radius: $size;
-								top: ($size / 4);
-								left: -(($size / 4) * 3);
+								top: calc($size / 4);
+								left: -calc(calc($size / 4) * 3);
 								background-color: $color-red;
 							}
 						}
@@ -580,8 +617,11 @@ $detail-color: (
 						@include is-large() {
 							grid-template-columns: 1fr 1fr;
 						}
-						padding-left: 0;
-						margin-bottom: 0;
+
+						& {
+							padding-left: 0;
+							margin-bottom: 0;
+						}
 
 						> .element-list-item {
 							list-style: none;
@@ -589,8 +629,7 @@ $detail-color: (
 
 							> .element {
 								display: grid;
-								grid-template-areas:
-									"main";
+								grid-template-areas: "main";
 								grid-template-columns: auto;
 								grid-template-rows: auto;
 								gap: $gap;
@@ -601,11 +640,12 @@ $detail-color: (
 									background-color: $color-element-background-dark;
 								}
 
-								padding: 1.25rem 0;
+								& {
+									padding: 1.25rem 0;
+								}
 
 								@include is-mobile() {
-									grid-template-areas:
-										"main";
+									grid-template-areas: "main";
 									grid-template-columns: auto;
 									grid-template-rows: auto;
 								}
@@ -615,27 +655,31 @@ $detail-color: (
 
 									.element-title {
 										display: grid;
-										grid-template-areas:
-											"text toggle";
-										grid-template-columns:
-											1fr min-content;
+										grid-template-areas: "text toggle";
+										grid-template-columns: 1fr min-content;
 										align-items: stretch;
 										gap: $gap;
 
 										cursor: pointer;
 										border-radius: $border-radius;
+
 										color: $color-text-light;
 										@include is-dark() {
 											color: $color-text-dark;
 										}
-										background-color: $color-element-background-light;
+
+										& {
+											background-color: $color-element-background-light;
+										}
 										@include is-dark() {
 											background-color: $color-element-background-dark;
 										}
 
-										margin-top: -$gap;
-										margin-bottom: -$gap;
-										padding: $gap;
+										& {
+											margin-top: -$gap;
+											margin-bottom: -$gap;
+											padding: $gap;
+										}
 
 										&:focus {
 											outline: none;
@@ -648,7 +692,9 @@ $detail-color: (
 											}
 										}
 
-										list-style: none;
+										& {
+											list-style: none;
+										}
 										&::-webkit-details-marker {
 											display: none;
 										}
@@ -686,7 +732,7 @@ $detail-color: (
 												}
 
 												@at-root #{selector.replace(&, ".element-title", ".element-title:hover")},
-												&:focus {
+													&:focus {
 													.anchor-icon {
 														opacity: 0.6;
 													}
@@ -808,11 +854,27 @@ $detail-color: (
 												@include reset-lists();
 
 												// Detail types.
-												@each $type in ("note", "warning", "links", "trackers", "prs", "issues", "proposals") {
+												@each $type
+													in (
+														"note",
+														"warning",
+														"links",
+														"trackers",
+														"prs",
+														"issues",
+														"proposals"
+													)
+												{
 													&.#{$type} {
-														--detail-color: #{list.nth(map.get($detail-color, $type), 1)};
+														--detail-color: #{list.nth(
+																map.get($detail-color, $type),
+																1
+															)};
 														@include is-dark() {
-															--detail-color: #{list.nth(map.get($detail-color, $type), 2)};
+															--detail-color: #{list.nth(
+																	map.get($detail-color, $type),
+																	2
+																)};
 														}
 													}
 												}
@@ -821,8 +883,8 @@ $detail-color: (
 													display: flex;
 													flex-direction: row;
 													align-items: center;
-													gap: $gap / 2;
-													margin-bottom: $gap / 2;
+													gap: calc($gap / 2);
+													margin-bottom: calc($gap / 2);
 													font-weight: bolder;
 
 													color: var(--detail-color);
@@ -838,7 +900,8 @@ $detail-color: (
 															background-color: currentColor;
 														}
 
-														span[class^="godot-icon-"], span[class*=" godot-icon-"] {
+														span[class^="godot-icon-"],
+														span[class*=" godot-icon-"] {
 															font-size: 150%;
 														}
 													}
@@ -905,7 +968,7 @@ $detail-color: (
 
 	--card-padding: $gap;
 	@include is-mobile() {
-		--card-padding: $gap / 2;
+		--card-padding: calc($gap / 2);
 	}
 
 	.link {
@@ -923,7 +986,7 @@ $detail-color: (
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: rgba(0,0,0,25%) 1px 1px 5px;
+		box-shadow: rgba(0, 0, 0, 25%) 1px 1px 5px;
 
 		color: black;
 		font-size: 1.5em;
@@ -936,8 +999,7 @@ $detail-color: (
 
 		span {
 			transition: font-size 0.2s ease-out;
-			transform:
-				translateY(-3px);
+			transform: translateY(-3px);
 		}
 	}
 }
