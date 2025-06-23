@@ -1,34 +1,35 @@
-// GSAP for animations.
-import { gsap } from "../modules/gsap@3.12.5.min.mjs";
-import { ScrollTrigger } from "../modules/gsap@3.12.5_ScrollTrigger.min.mjs";
+import {
+	animate,
+	createTimeline,
+	onScroll,
+	eases,
+} from "../modules/anime@4.0.2_esm.min.js";
 import detectPlatform from "../modules/detect-browser.mjs";
 
-gsap.registerPlugin(ScrollTrigger);
+const { outCirc, inCirc } = eases;
 
 // Parallax scrolling.
 const releaseHeaderBackground = document.querySelector(
 	".release-header-background",
 );
-gsap.to(releaseHeaderBackground, {
-	scrollTrigger: {
-		trigger: ".release-header",
-		start: "top 0%+=64px",
-		end: "bottom 0%",
-		onUpdate: (self) => {
-			const progress = self.progress;
-			releaseHeaderBackground.style.transform = `
-				translateY(${progress * releaseHeaderBackground.getBoundingClientRect().height}px)
-				translateZ(-1px)
-				scale(2)
-			`;
-			releaseHeaderBackground.style.filter = `blur(${easeInCirc(progress) * 5}px)`;
-		},
+const scrollObserver = onScroll({
+	target: ".release-header",
+	enter: "top 0%-=64px",
+	leave: "top 100%",
+	onUpdate: () => {
+		const progress = scrollObserver.progress;
+		releaseHeaderBackground.style.transform = `
+			translateY(${progress * releaseHeaderBackground.getBoundingClientRect().height}px)
+			translateZ(-1px)
+			scale(2)
+		`;
+		releaseHeaderBackground.style.filter = `blur(${inCirc(progress) * 5}px)`;
 	},
 });
-// https://easings.net/#easeInCirc
-function easeInCirc(x) {
-	return 1 - Math.sqrt(1 - Math.pow(x, 2));
-}
+const releaseHeaderBackgroundTween = animate(releaseHeaderBackground, {
+	autoplay: scrollObserver,
+	ease: outCirc,
+});
 
 // Add a scrolling effect to each card and title.
 const windowHeight = window.innerHeight;
@@ -84,21 +85,28 @@ for (const element of elements) {
 		continue;
 	}
 
-	const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: element.element,
-			start: "top bottom",
+	const scrollObserver = onScroll({
+		trigger: element.element,
+		enter: {
+			target: "top",
+			container: "bottom",
 		},
+	});
+	animate(element.element, {
+		y: {
+			from: "+=50px",
+		},
+		opacity: {
+			from: 0,
+		},
+		duration: 500,
+		autoplay: scrollObserver,
+		ease: outCirc,
 		onComplete: () => {
 			if (element.isLastOfType) {
 				element.container.classList.remove("overflow-y-hidden");
 			}
 		},
-	});
-	timeline.from(element.element, {
-		y: "+=50",
-		duration: 0.5,
-		opacity: 0,
 	});
 }
 
@@ -259,12 +267,14 @@ const showScrollToTop = () => {
 	}
 	scrollState = "show";
 	if (scrollToTopTween != null) {
-		scrollToTopTween.kill();
+		scrollToTopTween.cancel();
 	}
 	scrollToTopElement.style.display = "block";
-	scrollToTopTween = gsap.to(scrollToTopElement, {
-		opacity: 1,
-		duration: 0.5,
+	scrollToTopTween = animate(scrollToTopElement, {
+		opacity: {
+			to: 1,
+		},
+		duration: 500,
 	});
 };
 const hideScrollToTop = () => {
@@ -273,11 +283,13 @@ const hideScrollToTop = () => {
 	}
 	scrollState = "hide";
 	if (scrollToTopTween != null) {
-		scrollToTopTween.kill();
+		scrollToTopTween.cancel();
 	}
-	scrollToTopTween = gsap.to(scrollToTopElement, {
-		opacity: 0,
-		duration: 0.5,
+	scrollToTopTween = animate(scrollToTopElement, {
+		opacity: {
+			to: 0,
+		},
+		duration: 500,
 		onComplete: () => {
 			scrollToTopElement.style.display = "none";
 		},
