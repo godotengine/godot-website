@@ -5,7 +5,7 @@ categories: ["events", "progress-report"]
 author: "Fredia Huya-Kouadio"
 image: /storage/blog/covers/godotcon-boston-2025-android-xr.webp
 image_caption_description: "Photo by Joshua Bemenderfer"
-date: 2025-05-30 18:00:00
+date: 2025-06-23 18:00:00
 ---
 
 # What’s New in XR & Android
@@ -20,7 +20,7 @@ A few weeks ago during [GodotCon Boston 2025](https://conference.godotengine.org
 
 ## Android editor
 
-<img alt="Android editor on phone" src="/storage/blog/covers/godotcon-boston-2025-android-xr.webp" />
+<img alt="Android editor on phone" src="/storage/blog/godotcon-2025-android-xr/android-editor.webp" />
 
 An update on the Android editor is long overdue. Since [its release in 2023](https://godotengine.org/article/android_godot_editor_play_store_beta_release/), the Android editor has been available on the [Google Play store](https://play.google.com/store/apps/details?id=org.godotengine.editor.v4) and on [Godot’s download page](https://godotengine.org/download/android/) with support for all Android devices (e.g.: phones, foldables, tablets, Chromebooks, and others). 
 
