@@ -1,4 +1,4 @@
-import { gsap } from "./modules/gsap@3.12.5.min.mjs";
+import { animate } from "./modules/anime@4.0.2_esm.min.js";
 
 // If we need to add a search bar, use this next line:
 // import Fuse from "./modules/fuse.js@7.0.0.min.mjs";
@@ -39,12 +39,14 @@ function setupScrollToTop() {
 		}
 		scrollState = "show";
 		if (scrollToTopTween != null) {
-			scrollToTopTween.kill();
+			scrollToTopTween.cancel();
 		}
 		scrollToTopElement.style.display = "block";
-		scrollToTopTween = gsap.to(scrollToTopElement, {
-			opacity: 1,
-			duration: 0.5,
+		scrollToTopTween = animate(scrollToTopElement, {
+			opacity: {
+				to: 1,
+			},
+			duration: 500,
 		});
 	};
 	const hideScrollToTop = () => {
@@ -53,14 +55,16 @@ function setupScrollToTop() {
 		}
 		scrollState = "hide";
 		if (scrollToTopTween != null) {
-			scrollToTopTween.kill();
+			scrollToTopTween.cancel();
 		}
-		scrollToTopTween = gsap.to(scrollToTopElement, {
-			opacity: 0,
-			duration: 0.5,
+		scrollToTopTween = animate(scrollToTopElement, {
+			opacity: {
+				to: 0,
+			},
+			duration: 500,
 			onComplete: () => {
 				scrollToTopElement.style.display = "none";
-			}
+			},
 		});
 	};
 	const scrollToTopObserver = new IntersectionObserver((entries, observer) => {
@@ -92,7 +96,9 @@ function openDetailsSelectedInUrl() {
 	}
 
 	/** @type {HTMLDetailsElement | null} */
-	const element = document.querySelector(`${window.location.hash} details.element-main`);
+	const element = document.querySelector(
+		`${window.location.hash} details.element-main`,
+	);
 	if (element == null) {
 		return;
 	}
@@ -136,7 +142,9 @@ function handleNavigateEvent() {
 function handleHashChangeEvent() {
 	window.addEventListener("hashchange", () => {
 		/** @type {HTMLDetailsElement | null} */
-		const element = document.querySelector(`${window.location.hash} details.element-main`);
+		const element = document.querySelector(
+			`${window.location.hash} details.element-main`,
+		);
 		if (element == null) {
 			return;
 		}
@@ -190,7 +198,10 @@ function animateDetailsTag() {
 			}
 		}
 	});
-	mutationObserver.observe(prioritiesContainer, { attributes: true, subtree: true });
+	mutationObserver.observe(prioritiesContainer, {
+		attributes: true,
+		subtree: true,
+	});
 }
 
 // ====
