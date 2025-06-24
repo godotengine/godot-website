@@ -5,9 +5,11 @@ module DownloadArchiveGeneratorPlugin
 	  def generate(site)
 		puts "Generating download archive pages..."
 
+		versions = 0
+
 		site.data["versions"].each do |version|
 		  version_name = version["name"]
-		  puts "    Rendering version '#{version_name}'."
+		  versions += 1
 
 		  # Generate files for the current main flavor (stable or latest pre-release).
 		  site.pages << DownloadArchivePage.new(site, version, nil)
@@ -20,7 +22,7 @@ module DownloadArchiveGeneratorPlugin
 		  end
 		end
 
-		puts "Finished generating the download archive."
+		puts "Finished generating the download archive (#{versions} versions generated)."
 	  end
 	end
 

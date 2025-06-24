@@ -5,9 +5,11 @@ module MirrorlistGeneratorPlugin
 	  def generate(site)
 		puts "Generating mirrorlist pages..."
 
+		versions = 0
+
 		site.data["versions"].each do |version|
 		  version_name = version["name"]
-		  puts "    Rendering version '#{version_name}'."
+		  versions += 1
 
 		  # Generate files for the current main flavor (stable or latest pre-release).
 		  site.pages << MirrorlistPage.new(site, version, false)
@@ -28,7 +30,7 @@ module MirrorlistGeneratorPlugin
 		  end
 		end
 
-		puts "Finished generating the mirrorlist."
+		puts "Finished generating the mirrorlist (#{versions} versions generated)."
 	  end
 	end
 
