@@ -138,10 +138,9 @@ This release is built from commit [`b1ba98fce`](https://github.com/godotengine/g
 <a id="downloads"></a>
 ## Downloads
 
-The downloads for this dev snapshot can be found directly on our repository:
-
-- [Standard build](https://github.com/godotengine/godot-builds/releases/3.6.1) (GDScript, GDNative, VisualScript).
-- [Mono build](https://github.com/godotengine/godot-builds/releases/3.6.1) (C# support + all the above). You need to have dotnet CLI or MSBuild installed to use the Mono build. Relevant parts of Mono **6.12.0.182** are included in this build.
+{% include articles/download_card.html version="3.6.1" release="stable" article=page %}
+**Standard build** includes support for GDScript, GDNative, and VisualScript.
+**.NET build** (marked as `mono`) includes support for C#, as well as GDScript, GDNative, and VisualScript.
 
 ### UWP (Universal Windows Platform)
 
