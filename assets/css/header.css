@@ -353,3 +353,9 @@ header .banner-container .banner a {
 	}
 }
 
+/* Language specific fixes */
+html[lang="pl"] {
+  #nav a {
+    font-size: 15px;
+  }
+}
