@@ -639,6 +639,10 @@ p.small {
   position: relative;
   left: 3px;
 }
+html[dir="rtl"] .btn.btn-download > .download-hint {
+  border-radius: var(--button-border-radius) 0 0 var(--button-border-radius);
+	left: -3px;
+}
 
 .date-big {
   font-size: 64px;
