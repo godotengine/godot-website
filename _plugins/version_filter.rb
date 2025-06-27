@@ -13,6 +13,10 @@ module Jekyll
       latest_patch = 0
 
       versions.each do |version|
+        if version["flavor"] != "stable"
+          next
+        end
+
         version_split = version["name"].split(".")
 
         if version_split.length() != 3

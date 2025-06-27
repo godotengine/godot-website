@@ -43,8 +43,8 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 ---
 
 {% assign release_version_number = "4.4" %}
-{% assign release_version = release_version_number | make_release_version: "stable" %}
 {% assign latest_patch = release_version_number | get_latest_patch %}
+{% assign release_version = latest_patch | make_release_version: "stable" %}
 
 {% assign data = site.release_4_4 %}
 
