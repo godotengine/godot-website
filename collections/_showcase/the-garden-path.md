@@ -17,7 +17,7 @@ youtube_id: "yha0038eC1o"
 
 platforms: ["windows", "macos", "linux", "switch"]
 
-steam: "https://store.steampowered.com/app/1638500/The_Garden_Path/"
+steam: "https://store.steampowered.com/app/1638500/The_Garden_Path/?curator_clanid=41324400"
 itch: "https://carrotcakestudio.itch.io/thegardenpath"
 
 

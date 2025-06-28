@@ -19,7 +19,7 @@ This release also includes two compatibility breaking changes. While they are un
 
 -----
 
-*The illustration picture for this article is taken from* [**Liberation**](https://store.steampowered.com/app/2413940/Liberation/) *— a space sim game by Luke Miller with a catchy and beautiful retro aesthetic. Made with open source tools, including Godot 4.2, it's available right now on [Steam](https://store.steampowered.com/app/2413940/Liberation/) (with a demo too). Make sure to also follow Luke on social networks ([Mastodon](https://mastodon.gamedev.place/@upmultimedia), [Twitter](https://twitter.com/UpMultimediaBTS)).*
+*The illustration picture for this article is taken from* [**Liberation**](https://store.steampowered.com/app/2413940/Liberation/?curator_clanid=41324400) *— a space sim game by Luke Miller with a catchy and beautiful retro aesthetic. Made with open source tools, including Godot 4.2, it's available right now on [Steam](https://store.steampowered.com/app/2413940/Liberation/?curator_clanid=41324400) (with a demo too). Make sure to also follow Luke on social networks ([Mastodon](https://mastodon.gamedev.place/@upmultimedia), [Twitter](https://twitter.com/UpMultimediaBTS)).*
 
 ## What's new
 

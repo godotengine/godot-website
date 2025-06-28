@@ -15,7 +15,7 @@ youtube_id: "Ea8OfjVqNz0"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/498310
+steam: https://store.steampowered.com/app/498310/RPG_in_a_Box/?curator_clanid=41324400
 itch: https://zeromatrix.itch.io/rpginabox
 humble: https://www.humblebundle.com/store/rpg-in-a-box
 

@@ -19,7 +19,7 @@ youtube_id: "DquTRgapsiM"
 
 platforms: ["windows"]
 
-steam: https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/
+steam: https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/?curator_clanid=41324400
 
 featured_in_home: true
 ---

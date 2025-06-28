@@ -17,7 +17,7 @@ Hi, I'm John, I'm a (mostly) solo game developer making games that I want to pla
 
 ### Introduce your project in a few sentences: description, supported platforms, release date, etc.
 
-Gravity Ace is a 2D multi-directional gravity shooter (cave-flyer). It's a love letter to Thrust and Gravitar and all of the amazing games they inspired. Remember Thrust? Most people don't but I loved that game and I really wanted to play it again. Gravity Ace is inspired by Thrust but adds a lot of modern touches and generally brings the art, sound, and gameplay up to modern standards. It's currently in Early Access with an expected release date in 2021. Linux and Windows. You can wishlist or buy it on [Steam](https://store.steampowered.com/app/1003860/Gravity_Ace/) or [itch.io](https://jotson.itch.io/gravity).
+Gravity Ace is a 2D multi-directional gravity shooter (cave-flyer). It's a love letter to Thrust and Gravitar and all of the amazing games they inspired. Remember Thrust? Most people don't but I loved that game and I really wanted to play it again. Gravity Ace is inspired by Thrust but adds a lot of modern touches and generally brings the art, sound, and gameplay up to modern standards. It's currently in Early Access with an expected release date in 2021. Linux and Windows. You can wishlist or buy it on [Steam](https://store.steampowered.com/app/1003860/Gravity_Ace/?curator_clanid=41324400) or [itch.io](https://jotson.itch.io/gravity).
 
 ### How did you discover Godot? When did you start using it? Do you have prior experience with other game engines? Why did you choose Godot for your project?
 
@@ -60,4 +60,4 @@ Yes, absolutely. In fact, I already am.
 ___
 
 
-*Gravity Ace is available on [Steam](https://store.steampowered.com/app/1003860/Gravity_Ace/) and [Itch.io](https://jotson.itch.io/gravity) for Windows and Linux. You can also follow its development on [Twitter](https://twitter.com/yafd).*
+*Gravity Ace is available on [Steam](https://store.steampowered.com/app/1003860/Gravity_Ace/?curator_clanid=41324400) and [Itch.io](https://jotson.itch.io/gravity) for Windows and Linux. You can also follow its development on [Twitter](https://twitter.com/yafd).*
