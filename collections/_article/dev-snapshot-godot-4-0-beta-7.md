@@ -23,7 +23,7 @@ Some big changes in this beta:
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.beta7/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is a screenshot of* [**Disinfection**](https://store.steampowered.com/app/1921130/Disinfection/), *a space horror game by indie duo [Evil Turtle Productions](https://twitter.com/EvilTurtleGames) which is currently being ported to Godot 4.0 beta. You can follow the developers on [Twitter](https://twitter.com/EvilTurtleGames) and [Mastodon](https://mastodon.gamedev.place/@evilturtle), and wishlist the game on [Steam](https://store.steampowered.com/app/1921130/Disinfection/).*
+*The illustration picture for this article is a screenshot of* [**Disinfection**](https://store.steampowered.com/app/1921130/Disinfection/?curator_clanid=41324400), *a space horror game by indie duo [Evil Turtle Productions](https://twitter.com/EvilTurtleGames) which is currently being ported to Godot 4.0 beta. You can follow the developers on [Twitter](https://twitter.com/EvilTurtleGames) and [Mastodon](https://mastodon.gamedev.place/@evilturtle), and wishlist the game on [Steam](https://store.steampowered.com/app/1921130/Disinfection/?curator_clanid=41324400).*
 
 ## What's new
 

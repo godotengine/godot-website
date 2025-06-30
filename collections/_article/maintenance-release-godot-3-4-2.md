@@ -47,4 +47,4 @@ If you'd like to support the project financially and help us secure our current 
 
 ---
 
-*The illustration picture is from* [**Quest Of Graal**](https://store.steampowered.com/app/1765700/Quest_Of_Graal/), *a fast-paced combat platformer where up to 4 players race to catch the golden chalice. It is developed by [Pixel-Archipel](https://pixel-boy.itch.io/) and scheduled to release in early 2022. [**Wishlist it on Steam**](https://store.steampowered.com/app/1765700/Quest_Of_Graal/), and see [Pixel-Archipel's itch page](https://pixel-boy.itch.io/) for relevant links.*
+*The illustration picture is from* [**Quest Of Graal**](https://store.steampowered.com/app/1765700/Quest_Of_Graal/?curator_clanid=41324400), *a fast-paced combat platformer where up to 4 players race to catch the golden chalice. It is developed by [Pixel-Archipel](https://pixel-boy.itch.io/) and scheduled to release in early 2022. [**Wishlist it on Steam**](https://store.steampowered.com/app/1765700/Quest_Of_Graal/?curator_clanid=41324400), and see [Pixel-Archipel's itch page](https://pixel-boy.itch.io/) for relevant links.*

@@ -17,7 +17,7 @@ Hello! My name is Justin Arnold and I'm a solo developer working on RPG in a Box
 
 ### Introduce your project in a few sentences: description, supported platforms, release date, etc.
 
-RPG in a Box is an engine that lets you easily create 3D grid-based, voxel-style RPGs, adventure games, and more! I began developing it around the beginning of 2015. It was released into Early Access on August 12th, 2019 for Windows, Linux, and macOS. Games created with RPG in a Box can also be exported to these platforms. A free demo version is available on [Steam](https://store.steampowered.com/app/498310) and [Itch.io](https://zeromatrix.itch.io/rpginabox) if you'd like to check it out and get a feel for the current state of the engine! It includes all features found in the full version, with some limitations on map size/count and a splash screen on exported games.
+RPG in a Box is an engine that lets you easily create 3D grid-based, voxel-style RPGs, adventure games, and more! I began developing it around the beginning of 2015. It was released into Early Access on August 12th, 2019 for Windows, Linux, and macOS. Games created with RPG in a Box can also be exported to these platforms. A free demo version is available on [Steam](https://store.steampowered.com/app/498310/RPG_in_a_Box/?curator_clanid=41324400) and [Itch.io](https://zeromatrix.itch.io/rpginabox) if you'd like to check it out and get a feel for the current state of the engine! It includes all features found in the full version, with some limitations on map size/count and a splash screen on exported games.
 
 I also have a [Patreon](https://www.patreon.com/rpginabox) for those who are interested in supporting the development of RPG in a Box beyond a purchase of the software.
 
@@ -60,4 +60,4 @@ I would definitely use Godot for any future projects! Of course, that's if I eve
 ___
 
 
-*[RPG in a Box](https://www.rpginabox.com/) is available on [Steam](https://store.steampowered.com/app/498310/) and [Itch.io](https://zeromatrix.itch.io/rpginabox) for Windows, macOS and Linux.*
+*[RPG in a Box](https://www.rpginabox.com/) is available on [Steam](https://store.steampowered.com/app/498310//?curator_clanid=41324400) and [Itch.io](https://zeromatrix.itch.io/rpginabox) for Windows, macOS and Linux.*

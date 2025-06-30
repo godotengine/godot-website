@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**The Rise of the Golden Idol**](https://store.steampowered.com/app/2716400/The_Rise_of_the_Golden_Idol/), *a mystery game where you unravel the truth behind 20 cases of crime in the 1970s! It is developed by [Color Gray Games](https://www.thegoldenidol.com/). You can purchase the game [on Steam](https://store.steampowered.com/app/2716400/The_Rise_of_the_Golden_Idol/) and follow the developer on [Twitter](https://twitter.com/colorgray7/).*
+*The cover illustration is from* [**The Rise of the Golden Idol**](https://store.steampowered.com/app/2716400/The_Rise_of_the_Golden_Idol/?curator_clanid=41324400), *a mystery game where you unravel the truth behind 20 cases of crime in the 1970s! It is developed by [Color Gray Games](https://www.thegoldenidol.com/). You can purchase the game [on Steam](https://store.steampowered.com/app/2716400/The_Rise_of_the_Golden_Idol/?curator_clanid=41324400) and follow the developer on [Twitter](https://twitter.com/colorgray7/).*
 
 ## Highlights
 

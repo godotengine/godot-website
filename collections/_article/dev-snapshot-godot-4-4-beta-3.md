@@ -19,7 +19,7 @@ Please, consider [supporting the project financially](#support), if you are able
 
 ---
 
-*The cover illustration is from* [**Ballionaire**](https://store.steampowered.com/app/2667120/Ballionaire/), *a roguelike pachinko simulator where the laws of physics bend to your will, developed by newobject and published by Raw Fury! You can buy the game [on Steam](https://store.steampowered.com/app/2667120/Ballionaire/), and follow the developer on [Bluesky](https://bsky.app/profile/newobject.bsky.social) and [itch.io](https://newobject.itch.io/).*
+*The cover illustration is from* [**Ballionaire**](https://store.steampowered.com/app/2667120/Ballionaire/?curator_clanid=41324400), *a roguelike pachinko simulator where the laws of physics bend to your will, developed by newobject and published by Raw Fury! You can buy the game [on Steam](https://store.steampowered.com/app/2667120/Ballionaire/?curator_clanid=41324400), and follow the developer on [Bluesky](https://bsky.app/profile/newobject.bsky.social) and [itch.io](https://newobject.itch.io/).*
 
 ## Highlights
 

@@ -95,4 +95,4 @@ I can't go into the details of what it's like to port to consoles unfortunately.
 
 ![](/assets/showcase/cassette-beasts-3.webp)
 
-*[Cassette Beast](https://www.cassettebeasts.com/) is available on [Steam](https://store.steampowered.com/app/1321440/Cassette_Beasts/) for Windows, Linux and Steam Deck. You can join their Discord server [here](https://discord.gg/byttenstudio).*
+*[Cassette Beast](https://www.cassettebeasts.com/) is available on [Steam](https://store.steampowered.com/app/1321440/Cassette_Beasts/?curator_clanid=41324400) for Windows, Linux and Steam Deck. You can join their Discord server [here](https://discord.gg/byttenstudio).*

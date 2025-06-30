@@ -106,4 +106,4 @@ If you'd like to support the project financially and help us secure our future h
 
 ----
 
-*The illustration picture is from* [**Fishards**](https://store.steampowered.com/app/1637140/Fishards/), *a wacky fish-wizard PvP spell fighting game developed by [Rivernotch Game Studio](https://twitter.com/rivernotch). The game is [released on Steam](https://store.steampowered.com/app/1637140/Fishards/) and you can follow its developers on [Twitter](https://twitter.com/rivernotch).*
+*The illustration picture is from* [**Fishards**](https://store.steampowered.com/app/1637140/Fishards/?curator_clanid=41324400), *a wacky fish-wizard PvP spell fighting game developed by [Rivernotch Game Studio](https://twitter.com/rivernotch). The game is [released on Steam](https://store.steampowered.com/app/1637140/Fishards/?curator_clanid=41324400) and you can follow its developers on [Twitter](https://twitter.com/rivernotch).*

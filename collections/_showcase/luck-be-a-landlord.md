@@ -18,7 +18,7 @@ gallery: [
 youtube_id: "JcbKTeJ6uXU"
 
 platforms: ["windows", "linux", "macos", "ios", "android"]
-steam: https://store.steampowered.com/app/1404850/Luck_be_a_Landlord/
+steam: https://store.steampowered.com/app/1404850/Luck_be_a_Landlord/?curator_clanid=41324400
 appstore: https://apps.apple.com/us/app/luck-be-a-landlord/id6450724928
 googleplay: https://play.google.com/store/apps/details?id=com.trampolinetales.lbal
 ---

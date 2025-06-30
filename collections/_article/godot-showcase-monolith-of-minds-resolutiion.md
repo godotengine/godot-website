@@ -17,7 +17,7 @@ We’re Monolith of Minds, two brothers from Germany who set out to tell tall ta
 
 ### Introduce your project in a few sentences: description, supported platforms, release date, etc.
 
-Our first game “Resolutiion” was released in May 2020 on [Steam](https://store.steampowered.com/app/975150/Resolutiion/), [Good Old Games](https://www.gog.com/game/resolutiion) and [Nintendo Switch](https://www.nintendo.com/games/detail/resolutiion-switch/).
+Our first game “Resolutiion” was released in May 2020 on [Steam](https://store.steampowered.com/app/975150/Resolutiion/?curator_clanid=41324400), [Good Old Games](https://www.gog.com/game/resolutiion) and [Nintendo Switch](https://www.nintendo.com/games/detail/resolutiion-switch/).
 
 Five years in development, Resolutiion tells the story of the soldier Valor and his AI Alibii’s journey through a 2D dreamworld of lovely pixels, dirty jokes and badassemotional tunes, inspired by classic Zelda and similar action-adventure-games.
 
@@ -61,4 +61,4 @@ Definitely, yes. Godot’s open source philosophy, fast development cycle and in
 
 ___
 
-*Resolutiion is available on [Steam](https://store.steampowered.com/app/975150/Resolutiion/), [Good Old Games](https://www.gog.com/game/resolutiion) and [Nintendo Switch](https://www.nintendo.com/games/detail/resolutiion-switch/).*
+*Resolutiion is available on [Steam](https://store.steampowered.com/app/975150/Resolutiion/?curator_clanid=41324400), [Good Old Games](https://www.gog.com/game/resolutiion) and [Nintendo Switch](https://www.nintendo.com/games/detail/resolutiion-switch/).*

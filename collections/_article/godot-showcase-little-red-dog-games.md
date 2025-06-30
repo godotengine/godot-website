@@ -15,13 +15,13 @@ ___
 
 We're [Little Red Dog Games](https://www.littlereddoggames.com/)! We're a commercial developer that has been developing deep strategy games with despotic roosters and snarky surveyor probes for almost a decade now.
 
-We'd love to show off [Rogue State Revolution](https://store.steampowered.com/app/1145340/Rogue_State_Revolution/), which will be debuting for Windows and Linux in late February 2021. As President of the People's Republic of Basenji, you must appoint ministers and make sure they stay loyal. Build roads, factories, nuclear power plants and more, if you can afford it. Anything can happen: meteor strike, a pandemic, a cane-toad infestation, a robot apocalypse... if you can imagine it, there's a good chance that it's hiding somewhere in this game, waiting to be discovered. Your role is to care for your society, but a growing rebellion threatens to remove you from power. The game has lots of FMV, beautiful 3D visuals and represents a huge creative effort over the past two years. [You can check it out on Steam](https://store.steampowered.com/app/1145340/Rogue_State_Revolution/).
+We'd love to show off [Rogue State Revolution](https://store.steampowered.com/app/1145340/Rogue_State_Revolution/?curator_clanid=41324400), which will be debuting for Windows and Linux in late February 2021. As President of the People's Republic of Basenji, you must appoint ministers and make sure they stay loyal. Build roads, factories, nuclear power plants and more, if you can afford it. Anything can happen: meteor strike, a pandemic, a cane-toad infestation, a robot apocalypse... if you can imagine it, there's a good chance that it's hiding somewhere in this game, waiting to be discovered. Your role is to care for your society, but a growing rebellion threatens to remove you from power. The game has lots of FMV, beautiful 3D visuals and represents a huge creative effort over the past two years. [You can check it out on Steam](https://store.steampowered.com/app/1145340/Rogue_State_Revolution/?curator_clanid=41324400).
 
 ### How did you discover Godot? When did you start using it? Do you have prior experience with other game engines?
 
 We've worked with other engines and frameworks before, but we stumbled upon Godot while actively looking for new game engines to try out with strong Linux support in 2015. We started with version 2-point-something and have delighted to see the engine grow and mature at the same pace as our own ambitions.
 
-We published two games with Godot already, [Deep Sixed](https://store.steampowered.com/app/591000/Deep_Sixed/) in 2018 and [Precipice](https://store.steampowered.com/app/951670/Precipice/) in 2019.
+We published two games with Godot already, [Deep Sixed](https://store.steampowered.com/app/591000/Deep_Sixed/?curator_clanid=41324400) in 2018 and [Precipice](https://store.steampowered.com/app/951670/Precipice/?curator_clanid=41324400) in 2019.
 
 ### Why did you choose Godot for your project?
 
@@ -57,4 +57,4 @@ You can count on it and we have already broken ground on the next big thing in G
 
  ___
 
-*Rogue State Revolution can be wishlisted on [Steam](https://store.steampowered.com/app/1145340/Rogue_State_Revolution/) and will be available on Windows and Linux.*
+*Rogue State Revolution can be wishlisted on [Steam](https://store.steampowered.com/app/1145340/Rogue_State_Revolution/?curator_clanid=41324400) and will be available on Windows and Linux.*

@@ -16,7 +16,7 @@ youtube_id: "7J9JR6iFzho"
 
 platforms: ["windows", "macos", "linux", "switch"]
 
-steam: https://store.steampowered.com/app/975150/Resolutiion/
+steam: https://store.steampowered.com/app/975150/Resolutiion/?curator_clanid=41324400
 gog: https://www.gog.com/game/resolutiion/
 nintendo: https://www.nintendo.com/games/detail/resolutiion-switch/
 

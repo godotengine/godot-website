@@ -27,7 +27,7 @@ In the last few betas, as we tie up some loose ends, you may have noticed an inc
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.beta17/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from* [**Drift**](https://store.steampowered.com/app/2159650/Drift/), *an upcoming co-op open world survival and crafting game, in space! It is developed in Godot 4.0 beta by [KAR Games](https://kargam.es/), and has a [playable demo already on Steam](https://store.steampowered.com/app/2159650/Drift/).*
+*The illustration picture for this article is from* [**Drift**](https://store.steampowered.com/app/2159650/Drift/?curator_clanid=41324400), *an upcoming co-op open world survival and crafting game, in space! It is developed in Godot 4.0 beta by [KAR Games](https://kargam.es/), and has a [playable demo already on Steam](https://store.steampowered.com/app/2159650/Drift/?curator_clanid=41324400).*
 
 ## What's new
 

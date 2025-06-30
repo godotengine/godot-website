@@ -17,7 +17,7 @@ youtube_id: "md-g0UNTBV4"
 
 platforms: ["windows", "linux"]
 
-steam: https://store.steampowered.com/app/1733110/Of_Life_and_Land/
+steam: https://store.steampowered.com/app/1733110/Of_Life_and_Land/?curator_clanid=41324400
 
 redirect_from:
   - /showcase/circle-of-kerzoven/

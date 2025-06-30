@@ -21,7 +21,7 @@ On the other hand, we do not give an ETA for the future releases. In a community
 
 ## Maintenance releases for the current stable version
 
-In the meantime, we plan to release bugfix versions of our latest stable release, to bring our users interesting bug fixes without having to "risk" using the master branch in production. It will also be particularly relevant for the [version we distribute on Steam](https://store.steampowered.com/app/404790), where users would likely want to benefit from upstream bug fixes without being forced into beta-testing.
+In the meantime, we plan to release bugfix versions of our latest stable release, to bring our users interesting bug fixes without having to "risk" using the master branch in production. It will also be particularly relevant for the [version we distribute on Steam](https://store.steampowered.com/app/404790/Godot_Engine/?curator_clanid=41324400), where users would likely want to benefit from upstream bug fixes without being forced into beta-testing.
 
 ### Godot 2.0.1
 

@@ -19,7 +19,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**Malware**](https://store.steampowered.com/app/3019370/Malware/), *an installation simulator where players must navigate a minefield of circa-1999 malware! It is developed by [Odd Games](https://store.steampowered.com/search/?developer=Odd%20Games). You can purchase the game [on Steam](https://store.steampowered.com/app/3019370/Malware/).*
+*The cover illustration is from* [**Malware**](https://store.steampowered.com/app/3019370/Malware/?curator_clanid=41324400), *an installation simulator where players must navigate a minefield of circa-1999 malware! It is developed by [Odd Games](https://store.steampowered.com/search/?developer=Odd%20Games). You can purchase the game [on Steam](https://store.steampowered.com/app/3019370/Malware/?curator_clanid=41324400).*
 
 ## Highlights
 

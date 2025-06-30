@@ -22,7 +22,7 @@ Some of the most notable changes in this update include:
 
 [Jump to the **Downloads** section.](#downloads)
 
-*The illustration picture for this article is a screenshot of* [**Object Wars**](https://store.steampowered.com/app/1936800/Object_Wars/), *an upcoming multiplayer third person shooter in a cute, homey environment where everyday objects fight it off in battle royale or team deathmatch. The game is developed by Vedg Studio / [NoirosL](https://twitter.com/NoirosL/) and was recently ported to Godot 4.0 beta. [Wishlist it on Steam!](https://store.steampowered.com/app/1936800/Object_Wars/)*
+*The illustration picture for this article is a screenshot of* [**Object Wars**](https://store.steampowered.com/app/1936800/Object_Wars/?curator_clanid=41324400), *an upcoming multiplayer third person shooter in a cute, homey environment where everyday objects fight it off in battle royale or team deathmatch. The game is developed by Vedg Studio / [NoirosL](https://twitter.com/NoirosL/) and was recently ported to Godot 4.0 beta. [Wishlist it on Steam!](https://store.steampowered.com/app/1936800/Object_Wars/?curator_clanid=41324400)*
 
 ## What's new
 

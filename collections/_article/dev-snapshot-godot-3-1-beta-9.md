@@ -51,4 +51,4 @@ At this stage, we are mostly interested in critical bugs which could be showstop
 
 - [GH-26359](https://github.com/godotengine/godot/issues/26359): Previous scenes/scripts and project layout not loading up (fixed in *master*)
 
-*The illustration picture is from [HeartBeast Studios](http://twitter.com/uheartbeast/)' byte-sized roguelike *Endhall*, released in December on [itch.io](https://uheartbeast.itch.io/endhall) and [Steam](https://store.steampowered.com/app/838990/Endhall/).*
+*The illustration picture is from [HeartBeast Studios](http://twitter.com/uheartbeast/)' byte-sized roguelike *Endhall*, released in December on [itch.io](https://uheartbeast.itch.io/endhall) and [Steam](https://store.steampowered.com/app/838990/Endhall/?curator_clanid=41324400).*

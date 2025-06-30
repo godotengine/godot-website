@@ -47,4 +47,4 @@ At this stage, we are mostly interested in critical bugs which could be showstop
 - [GH-25804](https://github.com/godotengine/godot/issues/25804): 3d workspace disappears in the editor (fixed in *master*)
 - [GH-25839](https://github.com/godotengine/godot/issues/25839): Visual Shader compile error with CanvasShaderGLES2 (fixed in *master*)
 
-*The illustration picture is a screenshot from [Kodera Software (Mariusz Chwalba)](https://twitter.com/KoderaSoftware)'s upcoming game, *[ΔV: Rings of Saturn](https://games.kodera.pl/dv/)*, a hard sci-fi, top-down space simulator with a demo available on [itch.io](https://koder.itch.io/dv-rings-of-saturn-demo) and [Steam](https://store.steampowered.com/app/846030/V_Rings_of_Saturn/). *
+*The illustration picture is a screenshot from [Kodera Software (Mariusz Chwalba)](https://twitter.com/KoderaSoftware)'s upcoming game, *[ΔV: Rings of Saturn](https://games.kodera.pl/dv/)*, a hard sci-fi, top-down space simulator with a demo available on [itch.io](https://koder.itch.io/dv-rings-of-saturn-demo) and [Steam](https://store.steampowered.com/app/846030/V_Rings_of_Saturn/?curator_clanid=41324400). *

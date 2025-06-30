@@ -19,7 +19,7 @@ The last 3.6 beta snapshot was [back in August](/article/dev-snapshot-godot-3-6-
 
 ---
 
-*The illustration picture for this article showcases* [**Cardbob**](https://store.steampowered.com/app/1963670/Cardbob/), *an action roguelite with a hi-tech cardboard robot crawling sci-fi dungeons! It was developed by [Mad Cookies Studio](https://twitter.com/MadCookiesGames) with Godot 3, and is available to purchase and play on [Steam](https://store.steampowered.com/app/1963670/Cardbob/). You can also follow the developer Lentsius on [Twitch](https://www.twitch.tv/lentsius), where they stream Godot development.*
+*The illustration picture for this article showcases* [**Cardbob**](https://store.steampowered.com/app/1963670/Cardbob/?curator_clanid=41324400), *an action roguelite with a hi-tech cardboard robot crawling sci-fi dungeons! It was developed by [Mad Cookies Studio](https://twitter.com/MadCookiesGames) with Godot 3, and is available to purchase and play on [Steam](https://store.steampowered.com/app/1963670/Cardbob/?curator_clanid=41324400). You can also follow the developer Lentsius on [Twitch](https://www.twitch.tv/lentsius), where they stream Godot development.*
 
 ## Highlights
 
