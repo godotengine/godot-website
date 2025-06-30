@@ -3,7 +3,7 @@ title: "Godot Community Poll 2025"
 excerpt: "We want to learn more about the Godot community, understand who the users of the engine are, and find out how we can better support you."
 categories: ["news"]
 author: Emi
-image: /storage/blog/covers/community-poll-2024.webp
+image: /storage/blog/covers/godot_peluche_2025_5.webp
 image_caption_description: Illustration by André Marí Coppola
 date: 2025-06-30 14:00:00
 ---
