@@ -1,6 +1,7 @@
 meta:
   description: 開發你的 2D 與 3D 遊戲，跨平台專案，甚至是 XR 創意！
 header:
+  main_menu: 主選單
   features: 特性
   showcase: 展示
   blog: 部落格

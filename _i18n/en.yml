@@ -1,6 +1,8 @@
 meta:
   description: Develop your 2D & 3D games, cross-platform projects, or even XR ideas!
 header:
+  godot_engine: Godot Engine
+  main_menu: Main Menu
   features: Features
   showcase: Showcase
   blog: Blog
@@ -47,8 +49,10 @@ sponsors:
 home:
   h1: Your free, open&#8209;source<br>game engine.
   subtitle: Develop your 2D &amp; 3D games, cross-platform projects, or even XR ideas!
-  whats_new: What's new
   download_latest: Download Latest
+  download_latest_tooltip: Download the latest version of Godot 4
+  whats_new: What's new
+  whats_new_tooltip: See what's new in Godot
   looking_for: 'Looking for <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a>, our <a href="/download/archive">experimental releases</a>, or a <a href="/download/archive">previous version</a>?'
   latest_news: Latest news
   more_news: More news
@@ -89,5 +93,6 @@ home:
         title: Report
         text: Found a problem with the engine? Don't forget to report it so that developers can track it down.
   foundation:
+    logo: Godot Foundation logo
     text: "You don't need to be an engine developer to help Godot. Join the <a href='https://fund.godotengine.org/'>development fund</a> and help us make the Godot&nbsp;Engine even more awesome!"
     donate: Donate

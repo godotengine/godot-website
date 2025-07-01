@@ -1,6 +1,8 @@
 meta:
   description: 2D 및 3D 게임, 크로스 플랫폼 프로젝트, 또는 XR 아이디어까지 개발하세요!
 header:
+  godot_engine: Godot 엔진
+  main_menu: 주요 메뉴
   features: 기능
   showcase: 쇼케이스
   blog: 블로그
@@ -47,8 +49,10 @@ sponsors:
 home:
   h1: 자유 오픈 소스<br>게임 엔진.
   subtitle: 2D 및 3D 게임, 크로스 플랫폼 프로젝트, 또는 XR 아이디어까지 개발하세요!
-  whats_new: 새로운 점
   download_latest: 최신 다운로드
+  download_latest_tooltip: Godot 4의 최신 버전 다운로드
+  whats_new: 새로운 기능
+  whats_new_tooltip: Godot의 새로운 기능 보기
   looking_for: '<a href="/download/windows/" class="set-os-download-url" data-version="3" title="Godot 3의 장기 지원 버전 다운로드">Godot 3</a>, 우리의 <a href="/download/archive">실험적인 릴리스</a>, 또는 <a href="/download/archive">이전 버전</a>을 찾고 계십니까?'
   latest_news: 최신 뉴스
   more_news: 뉴스 더 보기
@@ -89,5 +93,6 @@ home:
         title: 보고
         text: 엔진에 문제를 찾았습니까? 개발자가 추적할 수 있도록 문제를 보고하는 것을 잊지 마세요.
   foundation:
-    text: "Godot를 돕기 위해 엔진 개발자가 될 필요는 없습니다. <a href='https://fund.godotengine.org/'>개발 기금</a>에 가입하시고 Godot 엔진을 더욱 멋지게 만드는 데 도움을 주세요!"
+    logo: Godot 재단 로고
+    text: "Godot를 돕기 위해 엔진 개발자가 될 필요는 없습니다. <a href='https://fund.godotengine.org/'>개발 기금</a>에 가입하시고 Godot 엔진을 더욱 멋지게 만드는 데 우리를 도와주세요!"
     donate: 기부
