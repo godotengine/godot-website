@@ -17,6 +17,14 @@ Argentina:
         url: https://chat.whatsapp.com/C0LzScYdKBP0zjsPYcAgOs
       - title: Instagram
         url: https://www.instagram.com/godotmeetuparg/
+Australia:
+  - name: Godot Devs Australia
+    coordinates:
+      - -25.525138002030047
+      - 135.16370974683196
+    links:
+      - title: Discord
+        url: https://discord.gg/wBZUEZrGRp
 Austria:
   - name: Godot User Group Austria
     coordinates:
