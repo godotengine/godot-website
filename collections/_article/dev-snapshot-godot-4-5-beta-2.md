@@ -27,6 +27,22 @@ Even though we're now in feature freeze, you might recall us mentioning a handfu
 
 First-time contributor [Nintorch](https://github.com/Nintorch) took to the integration of one such feature: their input handler ([GH-106218](https://github.com/godotengine/godot/pull/106218)). This implementation was so thorough, that it entirely *replaced* our old input method! The more technical nuances of this change are better delved into on the PR itself, but the biggest takeaway is that this opens the door for easy and native integration of additional input features; while we won't be seeing any of these in 4.5, Nintorch already has a [work-in-progress PR](https://github.com/godotengine/godot/pull/107967) that's set to add these features.
 
+### Changes from Beta 1
+
+While it's not uncommon for features we've previously highlighted to get new changes/adjustments, it's rare for followup posts to actually highlight them. This is due to the majority of cases being a "finalization" of the feature in question, or otherwise making everything work as expected once the community unearths new bugs. However, there were a couple of features that warrant a special mention here, as a followup to them was explicitly highlihted in beta 1.
+
+The first is regarding the [new `abstract` keyword in GDScript](https://godotengine.org/article/dev-snapshot-godot-4-5-beta-1/#gdscript). Prior to the publication of that blogpost, it was decided by the GDScript team that the keyword shall be converted to an annotation instead. In practice, this is a simple adjustment to existing implementations: just prepend an `@`!
+
+```
+# Before:
+abstract class_name MyBaseClass
+
+# After:
+@abstract class_name MyBaseClass
+```
+
+Next, we've made the tough decision to revert the [scene preview thumbnails](/article/dev-snapshot-godot-4-5-beta-1/#editor). We are very aware of how much people want this feature; trust us, we want them just as badly! But the ramifications of this change proved to be far greater than anticipated, and ultimately doesn't suit the beta stage of production. We shall revisit this PR early in the 4.6 development cycle, where such a change has the chance to breathe.
+
 ### And more!
 
 - 3D: Fix freelook in 3D when multiple viewports are open ([GH-107530](https://github.com/godotengine/godot/pull/107530)).
