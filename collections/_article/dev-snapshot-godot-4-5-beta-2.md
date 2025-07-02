@@ -29,7 +29,7 @@ First-time contributor [Nintorch](https://github.com/Nintorch) took to the integ
 
 ### Changes from Beta 1
 
-While it's not uncommon for features we've previously highlighted to get new changes/adjustments, it's rare for followup posts to actually highlight them. This is due to the majority of cases being a "finalization" of the feature in question, or otherwise making everything work as expected once the community unearths new bugs. However, there were a couple of features that warrant a special mention here, as a followup to them was explicitly highlihted in beta 1.
+While it's not uncommon for features we've previously highlighted to get new changes/adjustments, it's rare for follow-up posts to actually highlight them. This is due to the majority of cases being a "finalization" of the feature in question, or otherwise making everything work as expected once the community unearths new bugs. However, there were a couple of features that warrant a special mention here, as a follow-up to them was explicitly highlighted in beta 1.
 
 The first is regarding the [new `abstract` keyword in GDScript](https://godotengine.org/article/dev-snapshot-godot-4-5-beta-1/#gdscript). Prior to the publication of that blogpost, it was decided by the GDScript team that the keyword shall be converted to an annotation instead. In practice, this is a simple adjustment to existing implementations: just prepend an `@`!
 
