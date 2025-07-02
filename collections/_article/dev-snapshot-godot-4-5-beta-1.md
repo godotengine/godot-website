@@ -187,7 +187,7 @@ And more:
 
 4.5 sees with it the introduction of a new keyword: `abstract`. [Aaron Franke](https://github.com/aaronfranke) brings this previously internal-only functionality into the hands of all GDScript users ([GH-67777](https://github.com/godotengine/godot/pull/67777)). By prepending this keyword to a class, it ensures that direct instantiation cannot occur; meaning that all calls will actually refer to a derived classes. [Danil Alexeev](https://github.com/dalexeev) built further upon this by introducing the ability for users to declare *functions* as abstract ([GH-106409](https://github.com/godotengine/godot/pull/106409)). By prepending the same `abstract` keyword to a function, it will be marked for explicit override by child classes.
 
-**Note:** The GDScript team is planning to change the `abstract` keyword to an `@abstract` annotation during the 4.5 beta phase.
+**Note:** The GDScript team changed the `abstract` keyword to an `@abstract` annotation in 4.5 beta 2.
 
 ```gdscript
 abstract class Item:
