@@ -432,6 +432,10 @@ layout: default
 					}
 				});
 				startAutoScroll();
+				// Pauses autoplay on hover
+				const carousel = document.querySelector('.showcase-carousel');
+				carousel.addEventListener('mouseenter', stopAutoScroll);
+				carousel.addEventListener('mouseleave', startAutoScroll);
 			});
 
 
