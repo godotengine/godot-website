@@ -391,16 +391,26 @@ layout: default
 					});
 				}
 				setItemByIndex(currentIndex, true);
+				let autoScrollTimeout;
 
+				const resetAutoScroll = () => {
+					clearInterval(autoScrollInterval);
+					clearTimeout(autoScrollTimeout);
+					autoScrollTimeout = setTimeout(() => {
+						startAutoScroll();
+					}, 1000); 
+				};
 				const prevItemButton = document.querySelector('.showcase-flip-left');
 				prevItemButton.addEventListener('click', () => {
 					currentIndex = wrapIndex(currentIndex - 1);
 					setItemByIndex(currentIndex);
+					resetAutoScroll();
 				});
 				const nextItemButton = document.querySelector('.showcase-flip-right');
 				nextItemButton.addEventListener('click', () => {
 					currentIndex = wrapIndex(currentIndex + 1);
 					setItemByIndex(currentIndex);
+					resetAutoScroll();
 				});
 				let autoScrollInterval;
 				let isPlaying = true;
@@ -432,10 +442,6 @@ layout: default
 					}
 				});
 				startAutoScroll();
-				// Pauses autoplay on hover
-				const carousel = document.querySelector('.showcase-carousel');
-				carousel.addEventListener('mouseenter', stopAutoScroll);
-				carousel.addEventListener('mouseleave', startAutoScroll);
 			});
 
 
