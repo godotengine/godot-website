@@ -357,8 +357,11 @@ layout: default
 
 				const showcaseItems = document.querySelectorAll('.showcase-item');
 				let currentIndex = Math.floor(Math.random() * showcaseItems.length);
+				let isAnimating = false;
 				const carouselDots = document.querySelectorAll('.carousel-dot');
 				const setItemByIndex = (itemIndex, firstTime = false) => {
+					if (isAnimating && !firstTime) return; 
+					isAnimating = true;
 					const prevIndex = wrapIndex(currentIndex - 1);
 					const nextIndex = wrapIndex(currentIndex + 1);
 
@@ -393,6 +396,13 @@ layout: default
 					carouselDots.forEach((dot, index) => {
 						dot.classList.toggle('active', index === itemIndex);
 					});
+					if (!firstTime) {
+						setTimeout(() => {
+							isAnimating = false;
+						}, 400);
+					} else {
+						isAnimating = false;
+					}
 				}
 				setItemByIndex(currentIndex, true);
 				let autoScrollTimeout;
@@ -406,12 +416,14 @@ layout: default
 				};
 				const prevItemButton = document.querySelector('.showcase-flip-left');
 				prevItemButton.addEventListener('click', () => {
+					if (isAnimating) return;
 					currentIndex = wrapIndex(currentIndex - 1);
 					setItemByIndex(currentIndex);
 					resetAutoScroll();
 				});
 				const nextItemButton = document.querySelector('.showcase-flip-right');
 				nextItemButton.addEventListener('click', () => {
+					if (isAnimating) return;
 					currentIndex = wrapIndex(currentIndex + 1);
 					setItemByIndex(currentIndex);
 					resetAutoScroll();
