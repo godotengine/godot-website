@@ -360,7 +360,9 @@ layout: default
 				let isAnimating = false;
 				const carouselDots = document.querySelectorAll('.carousel-dot');
 				const setItemByIndex = (itemIndex, firstTime = false) => {
-					if (isAnimating && !firstTime) return; 
+					if (isAnimating && !firstTime) {
+						return;
+					}
 					isAnimating = true;
 					const prevIndex = wrapIndex(currentIndex - 1);
 					const nextIndex = wrapIndex(currentIndex + 1);
@@ -387,7 +389,7 @@ layout: default
 							item.style.zIndex = '3';
 							item.style.transform = 'translateX(100%)';
 						}
-						else {
+						} else {
 							item.classList.remove('showcase-item-transition');
 							item.style.zIndex = '1';
 							item.style.transform = 'translateX(0)';
@@ -400,9 +402,10 @@ layout: default
 						setTimeout(() => {
 							isAnimating = false;
 						}, 400);
-					} else {
-						isAnimating = false;
+						return;
 					}
+					
+					isAnimating = false;
 				}
 				setItemByIndex(currentIndex, true);
 				let autoScrollTimeout;
@@ -416,14 +419,18 @@ layout: default
 				};
 				const prevItemButton = document.querySelector('.showcase-flip-left');
 				prevItemButton.addEventListener('click', () => {
-					if (isAnimating) return;
+					if (isAnimating) {
+						return;
+					}
 					currentIndex = wrapIndex(currentIndex - 1);
 					setItemByIndex(currentIndex);
 					resetAutoScroll();
 				});
 				const nextItemButton = document.querySelector('.showcase-flip-right');
 				nextItemButton.addEventListener('click', () => {
-					if (isAnimating) return;
+					if (isAnimating) {
+						return;
+					}
 					currentIndex = wrapIndex(currentIndex + 1);
 					setItemByIndex(currentIndex);
 					resetAutoScroll();
@@ -453,9 +460,9 @@ layout: default
 				playToggleBtn.addEventListener('click', () => {
 					if (isPlaying) {
 						stopAutoScroll();
-					} else {
-						startAutoScroll();
+						return;
 					}
+					startAutoScroll();
 				});
 				startAutoScroll();
 			});
@@ -473,7 +480,7 @@ layout: default
 					<img src="{{ project.gallery[0] }}" load="lazy" alt="{{ project.title }} - {{ project.author }}" />
 					<div class="showcase-credits">
 						<a href="{{ project.url }}">
-							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">- {{
+							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">– {{
 								project.author }}</span>
 						</a>
 					</div>
