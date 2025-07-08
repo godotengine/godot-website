@@ -294,6 +294,14 @@ Latvia:
         url: https://discord.gg/r6ewZGv
       - title: Twitter
         url: https://twitter.com/GodotLatvia
+Norway:
+  - name: Godot Norway
+    coordinates:
+      - 59.916188976445916
+      - 10.75072953254959
+    links:
+    - title: Discord
+      url: https://discord.gg/5afEcSgYNt
 Pakistan:
   - name: Godot Engine Pakistan
     links:
