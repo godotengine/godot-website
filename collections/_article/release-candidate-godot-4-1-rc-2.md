@@ -19,7 +19,7 @@ This release contains a [number of improvements](/article/dev-snapshot-godot-4-1
 
 -----
 
-*The illustration picture for this article is from* [**Skies above the Great War**](https://store.steampowered.com/app/2320040/Skies_above_the_Great_War/), *a hybrid of dogfighting action and grand strategy set during the First World War. It is developed by [Puntigames](https://puntigames.com/) with Godot 4. You can check out their ongoing [Kickstarter campaign](https://www.kickstarter.com/projects/puntigames/skies-above-the-great-war), wishlist the game on [Steam](https://store.steampowered.com/app/2320040/Skies_above_the_Great_War/), watch the trailer on [YouTube](https://www.youtube.com/watch?v=ZhOvWHoZs3U), and follow development on their [Discord](https://discord.com/invite/yf9nc4bwse).*
+*The illustration picture for this article is from* [**Skies above the Great War**](https://store.steampowered.com/app/2320040/Skies_above_the_Great_War/?curator_clanid=41324400), *a hybrid of dogfighting action and grand strategy set during the First World War. It is developed by [Puntigames](https://puntigames.com/) with Godot 4. You can check out their ongoing [Kickstarter campaign](https://www.kickstarter.com/projects/puntigames/skies-above-the-great-war), wishlist the game on [Steam](https://store.steampowered.com/app/2320040/Skies_above_the_Great_War/?curator_clanid=41324400), watch the trailer on [YouTube](https://www.youtube.com/watch?v=ZhOvWHoZs3U), and follow development on their [Discord](https://discord.com/invite/yf9nc4bwse).*
 
 ## What's new
 

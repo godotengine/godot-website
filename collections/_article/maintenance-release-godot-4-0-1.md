@@ -17,7 +17,7 @@ One notable change in Godot 4.0.1 that is worth a dedicated mention is related t
 
 [**Download Godot 4.0.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.1.stable/).
 
-*The illustration picture is from a new, fairytale-like demo scene created by [Raffaele Picca](https://campsite.bio/raffa) with Godot 4.0 —* [**Lost Desert Temple**](https://twitter.com/MV_Raffa/status/1632745048621154305). *Raffaele plans to release it as an open source project, so follow him on [Twitter](https://twitter.com/MV_Raffa) to make sure you don't miss that. And if you're visiting GDC this week, [come by the Godot booth](/article/gdc-2023-godot-games/)! You can find Raffaele there and chat about his use of the engine, as well as play a session of* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/)!
+*The illustration picture is from a new, fairytale-like demo scene created by [Raffaele Picca](https://campsite.bio/raffa) with Godot 4.0 —* [**Lost Desert Temple**](https://twitter.com/MV_Raffa/status/1632745048621154305). *Raffaele plans to release it as an open source project, so follow him on [Twitter](https://twitter.com/MV_Raffa) to make sure you don't miss that. And if you're visiting GDC this week, [come by the Godot booth](/article/gdc-2023-godot-games/)! You can find Raffaele there and chat about his use of the engine, as well as play a session of* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/?curator_clanid=41324400)!
 
 ## Changes
 

@@ -57,7 +57,7 @@ Godot also kept growing strongly on social media, surpassing 100k subscribers on
 
 ### Godot games on Steam keep growing exponentially
 
-This year, there were several hit games published with Godot, such as [Dome Keeper](https://store.steampowered.com/app/1637320/Dome_Keeper/), [Brotato](https://store.steampowered.com/app/1942280/Brotato/) or [The Case of the Golden Idol](https://store.steampowered.com/app/1677770/The_Case_of_the_Golden_Idol/). It makes us very happy that studios are starting to choose Godot more and more for developing their games.
+This year, there were several hit games published with Godot, such as [Dome Keeper](https://store.steampowered.com/app/1637320/Dome_Keeper/?curator_clanid=41324400), [Brotato](https://store.steampowered.com/app/1942280/Brotato/?curator_clanid=41324400) or [The Case of the Golden Idol](https://store.steampowered.com/app/1677770/The_Case_of_the_Golden_Idol/?curator_clanid=41324400). It makes us very happy that studios are starting to choose Godot more and more for developing their games.
 
 ![](/storage/app/media/steam-games.png)
 

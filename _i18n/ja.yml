@@ -11,6 +11,7 @@ header:
   contribute: "貢献する"
   donate: "寄付する"
   language: "言語"
+  console_support: "コンソールサポート"
 footer:
   godot_engine: "Godotエンジン"
   download: "ダウンロード"
@@ -31,13 +32,14 @@ footer:
   press_kit: "プレスキット"
   showcase: "ショーケース"
   education: "教育"
+  console_support: "コンソールサポート"
   foundation: "財団"
   about: "概要"
   donate: "寄付する"
   license: "ライセンス"
   privacy_policy: "プライバシーポリシー"
   contact_us: "お問い合わせ"
-  text: "Juan Linietsky, Ariel Manzur and <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>contributors</a>. <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>によってホストされています。ウェブサイトの<a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>ソースコードはGitHubにあります</a>。"
+  text: "Juan Linietsky、Ariel Manzurと<a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>貢献者</a>達。<a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>によってホストされています。ウェブサイトの<a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>ソースコードはGitHubにあります</a>。"
 sponsors:
   title: "Godotは以下のスポンサーに支えられています"
   text: "法人スポンサーにご興味のある方は<a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>までご連絡ください。個人の方は開発ファンド経由で寄付が可能です。"

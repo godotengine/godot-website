@@ -172,7 +172,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
 
 <div class="speaker">
 <div class="speaker-text">
-    Paweł Mogiła (Poland) teaches game programming and motion capture at Jagiellonian University in Krakow. He also creates his own stuff and recently released his last game <a href="https://store.steampowered.com/app/927840/Clinically_Dead"><em>Clinically Dead</em></a> on Steam. His next game will be in Godot.
+    Paweł Mogiła (Poland) teaches game programming and motion capture at Jagiellonian University in Krakow. He also creates his own stuff and recently released his last game <a href="https://store.steampowered.com/app/927840/Clinically_Dead/?curator_clanid=41324400"><em>Clinically Dead</em></a> on Steam. His next game will be in Godot.
 </div>
 <div class="speaker-img">
     <img alt="Paweł Mogiła" src="/storage/app/uploads/public/5c5/0ce/14d/5c50ce14d5cf5616852281.jpg" />

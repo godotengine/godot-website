@@ -27,7 +27,7 @@ If you're new to Godot, or started only recently, you might be looking for good 
 
 ### Installing the engine
 
-First of all, head over to the [**Download**](/download) page to get the latest stable version of Godot – you can also install it from [itch.io](https://godotengine.itch.io/godot) or [Steam](https://store.steampowered.com/app/404790/Godot_Engine/).
+First of all, head over to the [**Download**](/download) page to get the latest stable version of Godot – you can also install it from [itch.io](https://godotengine.itch.io/godot) or [Steam](https://store.steampowered.com/app/404790/Godot_Engine/?curator_clanid=41324400).
 
 For new users, we recommend the "classical" build (as opposed to the "Mono" build with C# support, currently in alpha) and the GDScript language, which you should be able to learn very fast. Experienced C# users are of course welcome to try their hand at the Mono build, just make sure to have the Mono SDK in version 5.12.x installed.
 

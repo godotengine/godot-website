@@ -104,4 +104,4 @@ If you'd like to support the project financially and help us secure our current 
 
 ---
 
-*The illustration picture is from* [**NeJ**](https://store.steampowered.com/app/1626620/NeJ/), *an upcoming poetic and mysterious hand-drawn adventure game developed by [Ben Lega](https://mobile.twitter.com/Ben_Lega_Vidya). You can [wishlist it on Steam](https://store.steampowered.com/app/1626620/NeJ/) and follow development on [Twitter](https://mobile.twitter.com/Ben_Lega_Vidya).*
+*The illustration picture is from* [**NeJ**](https://store.steampowered.com/app/1626620/NeJ/?curator_clanid=41324400), *an upcoming poetic and mysterious hand-drawn adventure game developed by [Ben Lega](https://mobile.twitter.com/Ben_Lega_Vidya). You can [wishlist it on Steam](https://store.steampowered.com/app/1626620/NeJ/?curator_clanid=41324400) and follow development on [Twitter](https://mobile.twitter.com/Ben_Lega_Vidya).*

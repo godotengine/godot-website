@@ -16,7 +16,7 @@ youtube_id: "wb0r83K3YBk"
 platforms: ["windows", "linux"]
 
 
-steam: https://store.steampowered.com/app/1003860/Gravity_Ace/
+steam: https://store.steampowered.com/app/1003860/Gravity_Ace/?curator_clanid=41324400
 itch: https://jotson.itch.io/gravity
 
 

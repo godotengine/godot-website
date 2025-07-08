@@ -17,7 +17,7 @@ youtube_id: "gyiVTDMpiGk"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/2013730/Gourdlets
+steam: https://store.steampowered.com/app/2013730/Gourdlets/?curator_clanid=41324400
 itch: https://aunty-games.itch.io/gourdlets
 
 ---

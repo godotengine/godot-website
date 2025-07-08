@@ -21,7 +21,7 @@ Please, consider [supporting the project financially](https://fund.godotengine.o
 
 ---
 
-*The cover illustration is from* [**Gorgon Shield**](https://store.steampowered.com/app/2446920/Gorgon_Shield/), *an old school party-based RPG by Whiskeybarrel Studios, creator of the Sword and Sandals series. The game was just released [on Steam](https://store.steampowered.com/app/2446920/Gorgon_Shield/), and uses cutting edge Godot 4.3 RC! You can also check out Whiskeybarrel's previous Godot game* [Sword and Sandals Immortals](https://store.steampowered.com/app/1707650/Swords_and_Sandals_Immortals), *and follow them [on YouTube](https://www.youtube.com/@whiskeybarrelstudios) and [on Twitter](https://x.com/oliver_joyce).*
+*The cover illustration is from* [**Gorgon Shield**](https://store.steampowered.com/app/2446920/Gorgon_Shield/?curator_clanid=41324400), *an old school party-based RPG by Whiskeybarrel Studios, creator of the Sword and Sandals series. The game was just released [on Steam](https://store.steampowered.com/app/2446920/Gorgon_Shield/?curator_clanid=41324400), and uses cutting edge Godot 4.3 RC! You can also check out Whiskeybarrel's previous Godot game* [Sword and Sandals Immortals](https://store.steampowered.com/app/1707650/Swords_and_Sandals_Immortals/?curator_clanid=41324400), *and follow them [on YouTube](https://www.youtube.com/@whiskeybarrelstudios) and [on Twitter](https://x.com/oliver_joyce).*
 
 ## Highlights
 

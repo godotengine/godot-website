@@ -1,8 +1,10 @@
 ---
 ---
 
-@import "common/colors";
-@import "common/release";
+@use "sass:map";
+@use "sass:selector";
+@use "common/colors";
+@use "common/release";
 
 $column-max-width: 400px;
 $column-min-width: 300px;
@@ -50,7 +52,7 @@ $header-gap-bottom: 80px;
 $header-content-color: white;
 $header-numbers-gap: 20px;
 $header-bar-height: 20px;
-$header-bar-commits-color: $color-godot-blue;
+$header-bar-commits-color: colors.$godot-blue;
 $header-bar-commits-color-inactive: #487491;
 $header-bar-contributors-color: #f47e7a;
 $header-bar-contributors-color-inactive: #a66160;
@@ -58,22 +60,22 @@ $header-bar-gap: 10px;
 $header-version-font-weight: 800;
 
 $release-background-end: #bcbcbc;
-$release-title-font-size: r-desktop-mobile(35px, 25px);
-$release-section-margin-top: r-desktop-mobile(80px, 40px);
-$release-section-margin-bottom: r-desktop-mobile(40px, 20px);
+$release-title-font-size: release.desktop-mobile(35px, 25px);
+$release-section-margin-top: release.desktop-mobile(80px, 40px);
+$release-section-margin-bottom: release.desktop-mobile(40px, 20px);
 
-$card-padding: r-desktop-mobile(17px, 15px);
-$card-title-font-size: r-desktop-mobile(20px, 18px);
-$card-content-font-size-clamp-min: r-desktop-mobile(14px, 0.8em);
-$card-content-font-size-clamp-val: r-desktop-mobile(7cqw, 4cqw);
-$card-content-font-size-clamp-max: r-desktop-mobile(16px, 1em);
+$card-padding: release.desktop-mobile(17px, 15px);
+$card-title-font-size: release.desktop-mobile(20px, 18px);
+$card-content-font-size-clamp-min: release.desktop-mobile(14px, 0.8em);
+$card-content-font-size-clamp-val: release.desktop-mobile(7cqw, 4cqw);
+$card-content-font-size-clamp-max: release.desktop-mobile(16px, 1em);
 $card-box-shadow: 0 9px 10px -10px #0000008f;
 
-$download-gap: r-desktop-mobile(8px, 4px);
-$download-font-size: r-desktop-mobile(18px, 12px);
+$download-gap: release.desktop-mobile(8px, 4px);
+$download-font-size: release.desktop-mobile(18px, 12px);
 
 $section-hue-offset: 10;
-$sections: r-generate-sections(
+$sections: release.generate-sections(
 	$sections: (
 		"foundation",
 		"links",
@@ -85,13 +87,13 @@ $sections: r-generate-sections(
 		"special-thanks",
 	),
 	$base-category: "foundation",
-	$base-color: $color-godot-blue,
+	$base-color: colors.$godot-blue,
 	$offset: $section-hue-offset,
 );
 // Add "download" to be a copy of "foundation", and make it on top order-wise.
-$sections: map-merge(
+$sections: map.merge(
 	(
-		"download": map-get($sections, "foundation"),
+		"download": map.get($sections, "foundation"),
 	),
 	$sections
 );
@@ -138,16 +140,17 @@ $donate-robot-size: 500px;
 }
 
 :root {
-	--card-padding: #{r-get-desktop($card-padding)};
+	--card-padding: #{release.get-desktop($card-padding)};
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--card-padding);
+
 	@include is-mobile() {
-		--card-padding: #{r-get-mobile($card-padding)};
+		--card-padding: #{release.get-mobile($card-padding)};
 	}
 
-	scroll-behavior: smooth;
 	@media (prefers-reduced-motion) {
 		scroll-behavior: auto;
 	}
-	scroll-padding-top: var(--card-padding);
 }
 
 #scroll-to-top {
@@ -194,20 +197,20 @@ $donate-robot-size: 500px;
 
 #foundation-donate {
 	background-color: #eff1f5;
-	@include is-dark() {
+	@include release.is-dark() {
 		background-color: #283a5b;
 	}
 
 	.robot-1,
 	.robot-2 {
 		color: #cfd5e0;
-		@include is-dark() {
-			color: #233452;
-		}
-
 		font-size: $donate-robot-size;
 		position: absolute;
 		z-index: -1;
+
+		@include release.is-dark() {
+			color: #233452;
+		}
 	}
 
 	.robot-1 {
@@ -302,7 +305,7 @@ $donate-robot-size: 500px;
 			}
 
 			.download-net-button {
-				background-color: rgba(111, 111, 111, 27%);
+				background-color: rgba(0, 0, 0, 27%);
 				-webkit-backdrop-filter: blur(4px);
 				backdrop-filter: blur(4px);
 			}
@@ -360,17 +363,17 @@ $donate-robot-size: 500px;
 			var(--color-bottom)
 		);
 
-		@at-root #{selector-replace(&, ".links-container", ".links-container.links-container-subsections")} {
+		@at-root #{selector.replace(&, ".links-container", ".links-container.links-container-subsections")} {
 			font-weight: 600;
 			--color-top: var(--color-top-muted);
 			--color-bottom: var(--color-bottom-muted);
 		}
-		@at-root #{selector-replace(&, ".links-container", ".links-container.main-list")} {
+		@at-root #{selector.replace(&, ".links-container", ".links-container.main-list")} {
 			font-size: 150%;
 			@each $section-name, $section-colors in $sections {
 				&.link-#{$section-name} {
-					--color-top: #{map-get($section-colors, "color-top")};
-					--color-bottom: #{map-get($section-colors, "color-bottom")};
+					--color-top: #{map.get($section-colors, "color-top")};
+					--color-bottom: #{map.get($section-colors, "color-bottom")};
 				}
 			}
 		}
@@ -388,8 +391,8 @@ $donate-robot-size: 500px;
 		.link {
 			@each $section-name, $section-colors in $sections {
 				&.link-#{$section-name} {
-					--color-top: #{map-get($section-colors, "color-top")};
-					--color-bottom: #{map-get($section-colors, "color-bottom")};
+					--color-top: #{map.get($section-colors, "color-top")};
+					--color-bottom: #{map.get($section-colors, "color-bottom")};
 				}
 			}
 		}
@@ -445,7 +448,7 @@ $donate-robot-size: 500px;
 					text-decoration: none;
 					text-decoration-color: black;
 
-					@include is-dark() {
+					@include release.is-dark() {
 						color: white;
 						text-decoration-color: white;
 					}
@@ -510,122 +513,109 @@ $donate-robot-size: 500px;
 	height: 100%;
 	background-color: #25282b;
 
-	@include is-light() {
-		background-color: #cecece;
+	/**
+	 * Responsive sizes.
+	 */
+	--release-title-font-size: #{release.get-desktop($release-title-font-size)};
+	--release-section-margin-top: #{release.get-desktop($release-section-margin-top)};
+	--release-section-margin-bottom: #{release.get-desktop(
+			$release-section-margin-bottom
+		)};
+
+	--card-padding: #{release.get-desktop($card-padding)};
+	--card-title-font-size: #{release.get-desktop($card-title-font-size)};
+	--card-content-font-size-clamp-min: #{release.get-desktop(
+			$card-content-font-size-clamp-min
+		)};
+	--card-content-font-size-clamp-val: #{release.get-desktop(
+			$card-content-font-size-clamp-val
+		)};
+	--card-content-font-size-clamp-max: #{release.get-desktop(
+			$card-content-font-size-clamp-max
+		)};
+
+	--download-gap: #{release.get-desktop($download-gap)};
+	--download-font-size: #{release.get-desktop($download-font-size)};
+
+	/** Color **/
+	--card-background-color: white;
+	--card-color: #2d2d2d;
+	--color-code-symbol: #{colors.$code-symbol--light};
+	--color-code-keyword: #{colors.$code-keyword--light};
+	--color-code-controlflow: #{colors.$code-controlflow--light};
+	--color-code-basetype: #{colors.$code-basetype--light};
+	--color-code-enginetype: #{colors.$code-enginetype--light};
+	--color-code-usertype: #{colors.$code-usertype--light};
+	--color-code-string: #{colors.$code-string--light};
+	--color-code-background: #{colors.$code-background--light};
+	--color-code-text: #{colors.$code-text--light};
+	--color-code-function: #{colors.$code-function--light};
+	--color-code-membervariable: #{colors.$code-membervariable--light};
+	--color-code-gdscript-function: #{colors.$code-gdscript-function--light};
+	--color-code-gdscript-globalfunction: #{colors.$code-gdscript-globalfunction--light};
+	--color-code-gdscript-nodepath: #{colors.$code-gdscript-nodepath--light};
+	--color-code-gdscript-nodereference: #{colors.$code-gdscript-nodereference--light};
+	--color-code-gdscript-annotation: #{colors.$code-gdscript-annotation--light};
+	--color-code-gdscript-stringname: #{colors.$code-gdscript-stringname--light};
+	@include release.is-dark() {
+		--card-background-color: #333639;
+		--card-color: white;
+		--color-code-symbol: #{colors.$code-symbol--dark};
+		--color-code-keyword: #{colors.$code-keyword--dark};
+		--color-code-controlflow: #{colors.$code-controlflow--dark};
+		--color-code-basetype: #{colors.$code-basetype--dark};
+		--color-code-enginetype: #{colors.$code-enginetype--dark};
+		--color-code-usertype: #{colors.$code-usertype--dark};
+		--color-code-string: #{colors.$code-string--dark};
+		--color-code-background: #{colors.$code-background--dark};
+		--color-code-text: #{colors.$code-text--dark};
+		--color-code-function: #{colors.$code-function--dark};
+		--color-code-membervariable: #{colors.$code-membervariable--dark};
+		--color-code-gdscript-function: #{colors.$code-gdscript-function--dark};
+		--color-code-gdscript-globalfunction: #{colors.$code-gdscript-globalfunction--dark};
+		--color-code-gdscript-nodepath: #{colors.$code-gdscript-nodepath--dark};
+		--color-code-gdscript-nodereference: #{colors.$code-gdscript-nodereference--dark};
+		--color-code-gdscript-annotation: #{colors.$code-gdscript-annotation--dark};
+		--color-code-gdscript-stringname: #{colors.$code-gdscript-stringname--dark};
 	}
 
 	a {
 		text-decoration-thickness: 1px;
 	}
 
-	/**
-	 * Responsive sizes.
-	 */
-	--release-title-font-size: #{r-get-desktop($release-title-font-size)};
-	--release-section-margin-top: #{r-get-desktop($release-section-margin-top)};
-	--release-section-margin-bottom: #{r-get-desktop(
-			$release-section-margin-bottom
-		)};
-
-	--card-padding: #{r-get-desktop($card-padding)};
-	--card-title-font-size: #{r-get-desktop($card-title-font-size)};
-	--card-content-font-size-clamp-min: #{r-get-desktop(
-			$card-content-font-size-clamp-min
-		)};
-	--card-content-font-size-clamp-val: #{r-get-desktop(
-			$card-content-font-size-clamp-val
-		)};
-	--card-content-font-size-clamp-max: #{r-get-desktop(
-			$card-content-font-size-clamp-max
-		)};
-
-	--download-gap: #{r-get-desktop($download-gap)};
-	--download-font-size: #{r-get-desktop($download-font-size)};
+	@include release.is-light() {
+		background-color: #cecece;
+	}
 
 	@include is-mobile() {
-		--release-title-font-size: #{r-get-mobile($release-title-font-size)};
-		--release-section-margin-top: #{r-get-mobile($release-section-margin-top)};
-		--release-section-margin-bottom: #{r-get-mobile(
+		--release-title-font-size: #{release.get-mobile($release-title-font-size)};
+		--release-section-margin-top: #{release.get-mobile($release-section-margin-top)};
+		--release-section-margin-bottom: #{release.get-mobile(
 				$release-section-margin-bottom
 			)};
 
-		--card-padding: #{r-get-mobile($card-padding)};
-		--card-title-font-size: #{r-get-mobile($card-title-font-size)};
-		--card-content-font-size-clamp-min: #{r-get-mobile(
+		--card-padding: #{release.get-mobile($card-padding)};
+		--card-title-font-size: #{release.get-mobile($card-title-font-size)};
+		--card-content-font-size-clamp-min: #{release.get-mobile(
 				$card-content-font-size-clamp-min
 			)};
-		--card-content-font-size-clamp-val: #{r-get-mobile(
+		--card-content-font-size-clamp-val: #{release.get-mobile(
 				$card-content-font-size-clamp-val
 			)};
-		--card-content-font-size-clamp-max: #{r-get-mobile(
+		--card-content-font-size-clamp-max: #{release.get-mobile(
 				$card-content-font-size-clamp-max
 			)};
 
-		--download-gap: #{r-get-mobile($download-gap)};
-		--download-font-size: #{r-get-mobile($download-font-size)};
-	}
-
-	/** Color **/
-	--card-background-color: white;
-	--card-color: #2d2d2d;
-	--color-code-symbol: #{$color-code-symbol--light};
-	--color-code-keyword: #{$color-code-keyword--light};
-	--color-code-controlflow: #{$color-code-controlflow--light};
-	--color-code-basetype: #{$color-code-basetype--light};
-	--color-code-enginetype: #{$color-code-enginetype--light};
-	--color-code-usertype: #{$color-code-usertype--light};
-	--color-code-string: #{$color-code-string--light};
-	--color-code-background: #{$color-code-background--light};
-	--color-code-text: #{$color-code-text--light};
-	--color-code-function: #{$color-code-function--light};
-	--color-code-membervariable: #{$color-code-membervariable--light};
-	--color-code-gdscript-function: #{$color-code-gdscript-function--light};
-	--color-code-gdscript-globalfunction: #{$color-code-gdscript-globalfunction--light};
-	--color-code-gdscript-nodepath: #{$color-code-gdscript-nodepath--light};
-	--color-code-gdscript-nodereference: #{$color-code-gdscript-nodereference--light};
-	--color-code-gdscript-annotation: #{$color-code-gdscript-annotation--light};
-	--color-code-gdscript-stringname: #{$color-code-gdscript-stringname--light};
-	@include is-dark() {
-		--card-background-color: #333639;
-		--card-color: white;
-		--color-code-symbol: #{$color-code-symbol--dark};
-		--color-code-keyword: #{$color-code-keyword--dark};
-		--color-code-controlflow: #{$color-code-controlflow--dark};
-		--color-code-basetype: #{$color-code-basetype--dark};
-		--color-code-enginetype: #{$color-code-enginetype--dark};
-		--color-code-usertype: #{$color-code-usertype--dark};
-		--color-code-string: #{$color-code-string--dark};
-		--color-code-background: #{$color-code-background--dark};
-		--color-code-text: #{$color-code-text--dark};
-		--color-code-function: #{$color-code-function--dark};
-		--color-code-membervariable: #{$color-code-membervariable--dark};
-		--color-code-gdscript-function: #{$color-code-gdscript-function--dark};
-		--color-code-gdscript-globalfunction: #{$color-code-gdscript-globalfunction--dark};
-		--color-code-gdscript-nodepath: #{$color-code-gdscript-nodepath--dark};
-		--color-code-gdscript-nodereference: #{$color-code-gdscript-nodereference--dark};
-		--color-code-gdscript-annotation: #{$color-code-gdscript-annotation--dark};
-		--color-code-gdscript-stringname: #{$color-code-gdscript-stringname--dark};
+		--download-gap: #{release.get-mobile($download-gap)};
+		--download-font-size: #{release.get-mobile($download-font-size)};
 	}
 
 	code.highlight,
 	.code-highlight {
 		$_padding: 5px;
 
-		background-color: color-mix(
-			in srgb,
-			var(--color-code-background),
-			transparent 15%
-		);
-		@include is-dark() {
-			background-color: color-mix(
-				in srgb,
-				var(--color-code-background),
-				transparent 50%
-			);
-		}
-
 		display: inline-block;
-		padding: 0 ($_padding / 2);
+		padding: 0 calc($_padding / 2);
 		margin: 0 0;
 		border-radius: $_padding;
 
@@ -638,6 +628,19 @@ $donate-robot-size: 500px;
 			Consolas,
 			Liberation Mono,
 			monospace;
+
+		background-color: color-mix(
+			in srgb,
+			var(--color-code-background),
+			transparent 15%
+		);
+		@include release.is-dark() {
+			background-color: color-mix(
+				in srgb,
+				var(--color-code-background),
+				transparent 50%
+			);
+		}
 
 		@each $key
 			in (
@@ -802,7 +805,7 @@ $donate-robot-size: 500px;
 							.bar {
 								display: inline-block;
 								height: $header-bar-height;
-								background-color: var(--bar-color, #{$color-godot-blue});
+								background-color: var(--bar-color, #{colors.$godot-blue});
 								transform: translateY(2px);
 								margin-right: $header-bar-gap;
 							}
@@ -1249,13 +1252,13 @@ $donate-robot-size: 500px;
 							font-size: var(--card-title-font-size);
 
 							a {
+								text-decoration: none;
 								color: var(--color-top);
-								@include is-dark() {
+								@include release.is-dark() {
 									color: white;
 									text-decoration-color: white;
 								}
 
-								text-decoration: none;
 								&:hover {
 									text-decoration: underline;
 								}
@@ -1342,7 +1345,7 @@ $donate-robot-size: 500px;
 								font-size: 21px;
 								font-weight: 700;
 
-								@include is-dark() {
+								@include release.is-dark() {
 									color: white;
 									text-decoration-color: white;
 								}
@@ -1604,7 +1607,7 @@ $donate-robot-size: 500px;
 
 				font-size: #{"max(clamp(4cqw, 50px, 6cqw), 2em)"};
 				font-weight: 800;
-				@at-root #{selector-replace(&, ".section", ".section.subsection")} {
+				@at-root #{selector.replace(&, ".section", ".section.subsection")} {
 					font-size: #{"max(clamp(2cqw, 35px, 4cqw), 1.5em)"};
 					font-weight: 600;
 				}
@@ -1635,33 +1638,33 @@ $donate-robot-size: 500px;
 
 		@each $section-name, $section-colors in $sections {
 			.section-#{$section-name} {
-				--color-top: #{map-get($section-colors, "color-top")};
-				--color-bottom: #{map-get($section-colors, "color-bottom")};
-				--color-top-muted: #{map-get($section-colors, "color-top-muted")};
-				--color-bottom-muted: #{map-get($section-colors, "color-bottom-muted")};
-				--color-selection: #{map-get($section-colors, "color-selection")};
-				--color-invert: #{map-get($section-colors, "color-invert")};
-				--color-highlight: #{map-get($section-colors, "color-highlight")};
-				--color-highlight-switch: #{map-get(
+				--color-top: #{map.get($section-colors, "color-top")};
+				--color-bottom: #{map.get($section-colors, "color-bottom")};
+				--color-top-muted: #{map.get($section-colors, "color-top-muted")};
+				--color-bottom-muted: #{map.get($section-colors, "color-bottom-muted")};
+				--color-selection: #{map.get($section-colors, "color-selection")};
+				--color-invert: #{map.get($section-colors, "color-invert")};
+				--color-highlight: #{map.get($section-colors, "color-highlight")};
+				--color-highlight-switch: #{map.get(
 						$section-colors,
 						"color-highlight--dark"
 					)};
-				--color-invert-highlight: #{map-get(
+				--color-invert-highlight: #{map.get(
 						$section-colors,
 						"color-invert-highlight"
 					)};
-				@include is-light() {
-					--color-selection: #{map-get(
+				@include release.is-light() {
+					--color-selection: #{map.get(
 							$section-colors,
 							"color-selection--light"
 						)};
 				}
-				@include is-dark() {
-					--color-highlight: #{map-get(
+				@include release.is-dark() {
+					--color-highlight: #{map.get(
 							$section-colors,
 							"color-highlight--dark"
 						)};
-					--color-highlight-switch: #{map-get(
+					--color-highlight-switch: #{map.get(
 							$section-colors,
 							"color-highlight"
 						)};

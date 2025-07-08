@@ -30,7 +30,7 @@ This RC 1 has a number of fixes since beta 5, including:
 
 ---
 
-*The cover illustration is from* [**Kamaeru: A Frog Refuge**](https://www.kamaeru.com/), *a cozy frog collecting game which has you restore the biodiversity of wetlands, developed in Godot 3 by [Humble Reeds](https://humblereeds.fr/) and published by [Armor Games Studios](https://armorgamesstudios.com/). Kamaeru was released in June on [Steam](https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/), [Switch](https://www.nintendo.com/store/products/kamaeru-a-frog-refuge-switch/), and [Xbox](https://www.xbox.com/games/store/kamaeru-a-frog-refuge/9nj0nc3vvjjc).*
+*The cover illustration is from* [**Kamaeru: A Frog Refuge**](https://www.kamaeru.com/), *a cozy frog collecting game which has you restore the biodiversity of wetlands, developed in Godot 3 by [Humble Reeds](https://humblereeds.fr/) and published by [Armor Games Studios](https://armorgamesstudios.com/). Kamaeru was released in June on [Steam](https://store.steampowered.com/app/1978150/Kamaeru_A_Frog_Refuge/?curator_clanid=41324400), [Switch](https://www.nintendo.com/store/products/kamaeru-a-frog-refuge-switch/), and [Xbox](https://www.xbox.com/games/store/kamaeru-a-frog-refuge/9nj0nc3vvjjc).*
 
 ## Highlights
 

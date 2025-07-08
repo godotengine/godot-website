@@ -30,7 +30,7 @@ Up to now, actions were just binary. This means they could be either pressed or 
 
 The examples above show how limited gamepad mapping is: When using an analog axis, a bit more information than just  "pressed" or "not pressed" is needed. These kind of APIs allow reading analog values, which map directly to how much the physical controller is bent on a given direction.
 
-## Adding analog values to actions
+## Adding analog values to actions
 
 After many months of discussion on Github, and almost going with a scheme more similar to other engines, we finally settled on a simpler solution: An analog value was added to every action (along with the existing boolean one).
 
@@ -58,7 +58,8 @@ To map a single axis, the input mapping system will require two different action
 ```
 var horizontal = Input.get_action_strength("right") - Input.get_action_strength("left")
 ```
-## Deadzones
+
+## Deadzones
 
 Sometimes, when using analog axes, a threshold is required for activating an action. When moving a character left of right, this threshold is usually small. When moving through UI menu options a larger one is desired.
 
@@ -68,10 +69,9 @@ The relationship between *deadzone*, *strength* and *pressed* parameters is bett
 
 ![](/storage/app/media/devlog/input_mapping/deadzone.png)
 
-
 Some modern devices also have analog face buttons (the strength of how much they are pressed is recorded), this system also covers this use case perfectly (InputEventButton still needs to implement this feature though).
 
-## Advantages of the *strength* system
+## Advantages of the *strength* system
 
 In other game engines, analog input is handled via "axis mapping" systems. These systems allow defining a set of named axes (like "horizontal_motion"), and map them to actual analog axes from joypads.
 

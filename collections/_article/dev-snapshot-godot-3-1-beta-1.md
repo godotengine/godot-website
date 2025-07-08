@@ -46,4 +46,4 @@ As a tester, you are encouraged to open bug reports if you experience issues wit
 
 At this stage, we are mostly interested in critical bugs which could be showstoppers in Godot 3.1 stable. Yet feel free to report non-critical issues and enhancement proposals that will be worked on once 3.1 has been released.
 
-*The illustration picture is a screenshot from [Little Red Dog Games](https://www.littlereddoggames.com)'s upcoming 1-2 player strategy game *[Precipice](https://www.littlereddoggames.com/precipice)*, developed with Godot 3.1 alpha. [Early gameplay video](https://www.youtube.com/watch?v=f3cBQouCGbs), [Steam](https://store.steampowered.com/app/951670/Precipice/), [Twitter](http://twitter.com/lrdgames).*
+*The illustration picture is a screenshot from [Little Red Dog Games](https://www.littlereddoggames.com)'s upcoming 1-2 player strategy game *[Precipice](https://www.littlereddoggames.com/precipice)*, developed with Godot 3.1 alpha. [Early gameplay video](https://www.youtube.com/watch?v=f3cBQouCGbs), [Steam](https://store.steampowered.com/app/951670/Precipice/?curator_clanid=41324400), [Twitter](http://twitter.com/lrdgames).*

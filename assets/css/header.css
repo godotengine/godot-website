@@ -171,6 +171,59 @@ header .banner-container .banner a {
   justify-content: space-between;
 }
 
+/* Dropdown menu */
+.nav-dropdown-menu {
+	position: fixed;
+	background-color: rgba(134, 144, 154, 0.15);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	z-index: 100;
+	display: none;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+}
+
+.nav-dropdown-menu a {
+	display: block;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	color: var(--navbar-link-color);
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+	background-color: hsla(0, 0%, 50%, 0.1);
+}
+
+/* Hide touch-only items on desktop (non-touch devices) */
+@media (hover: hover) and (pointer: fine) {
+	.nav-dropdown-menu a.touch-only {
+		display: none;
+	}
+}
+
+/* Hide focus outline on dropdown triggers when dropdown is open */
+[data-dropdown]:focus {
+	outline: none;
+}
+
+/* But restore focus outline when dropdown is closed (for keyboard navigation) */
+[data-dropdown]:focus:not(.dropdown-open) {
+	outline: 0.125rem solid hsl(220, 100%, 62.5%);
+	outline-color: currentcolor;
+	position: relative;
+}
+
+/* Hide mobile-only items on desktop */
+@media (min-width: 1200px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
 /* Mobile style */
 @media (max-width: 1200px) {
   .hide-on-mobile {
@@ -300,3 +353,9 @@ header .banner-container .banner a {
 	}
 }
 
+/* Language specific fixes */
+html[lang="pl"] {
+  #nav a {
+    font-size: 15px;
+  }
+}

@@ -18,7 +18,7 @@ youtube_id: "grovGK4WOJw"
 platforms: ["windows", "linux", "macos"]
 
 
-steam: https://store.steampowered.com/app/2089710/A_Most_Extraordinary_Gnome/
+steam: https://store.steampowered.com/app/2089710/A_Most_Extraordinary_Gnome/?curator_clanid=41324400
 ---
 
 ### A short adventure awaits! 

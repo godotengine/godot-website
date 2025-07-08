@@ -64,4 +64,4 @@ As a tester, you are encouraged to open bug reports if you experience issues wit
 
 -----
 
-*The illustration picture is from* [**Door in the Woods**](https://store.steampowered.com/app/1189230/Door_in_the_Woods/), *an open world roguelike inspired by the lovecraftian mythos and developed in Godot by [teedoubleuGAMES](https://twitter.com/teedoubleuGAMES). The game was just released today on [Steam](https://store.steampowered.com/app/1189230/Door_in_the_Woods/), so congrats to the developers for the release!*
+*The illustration picture is from* [**Door in the Woods**](https://store.steampowered.com/app/1189230/Door_in_the_Woods/?curator_clanid=41324400), *an open world roguelike inspired by the lovecraftian mythos and developed in Godot by [teedoubleuGAMES](https://twitter.com/teedoubleuGAMES). The game was just released today on [Steam](https://store.steampowered.com/app/1189230/Door_in_the_Woods/?curator_clanid=41324400), so congrats to the developers for the release!*

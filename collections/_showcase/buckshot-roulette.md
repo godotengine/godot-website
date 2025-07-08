@@ -18,7 +18,7 @@ gallery: [
 youtube_id: "JEGxnpGqEaE"
 
 platforms: ["windows", "linux", "switch", "playstation", "xbox"]
-steam: https://store.steampowered.com/app/2835570/Buckshot_Roulette/
+steam: https://store.steampowered.com/app/2835570/Buckshot_Roulette/?curator_clanid=41324400
 
 
 featured_in_home: false

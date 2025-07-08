@@ -47,4 +47,4 @@ As a tester, you are encouraged to open bug reports if you experience issues wit
 
 At this stage, we are mostly interested in critical bugs which could be showstoppers in Godot 3.1 stable. Yet feel free to report non-critical issues and enhancement proposals that will be worked on once 3.1 has been released.
 
-*The illustration picture is a screenshot from [Miskatonic Studio](https://miskatonicstudio.com/)'s first game, *Intrepid*, a sci-fi esape room game, which was released last month. [Steam](https://store.steampowered.com/app/992860/Intrepid), [Twitter](https://twitter.com/miskatonic_s).*
+*The illustration picture is a screenshot from [Miskatonic Studio](https://miskatonicstudio.com/)'s first game, *Intrepid*, a sci-fi esape room game, which was released last month. [Steam](https://store.steampowered.com/app/992860/Intrepid/?curator_clanid=41324400), [Twitter](https://twitter.com/miskatonic_s).*

@@ -63,4 +63,4 @@ If you'd like to support the project financially and help us secure our current 
 
 ---
 
-*The illustration picture is from* [**The Adventure of NAYU**](https://store.steampowered.com/app/1476340/The_Adventure_of_NAYU/), *an endearing and beautifully animated idle clicker game developed by ambai and [kogeume](https://twitter.com/kogeume). You can [play it now on Steam](https://store.steampowered.com/app/1476340/The_Adventure_of_NAYU/).*
+*The illustration picture is from* [**The Adventure of NAYU**](https://store.steampowered.com/app/1476340/The_Adventure_of_NAYU/?curator_clanid=41324400), *an endearing and beautifully animated idle clicker game developed by ambai and [kogeume](https://twitter.com/kogeume). You can [play it now on Steam](https://store.steampowered.com/app/1476340/The_Adventure_of_NAYU/?curator_clanid=41324400).*

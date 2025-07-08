@@ -19,7 +19,7 @@ The development is slower paced, as most contributors focus on the 4.x branch, w
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/3.6.beta1/).
 
-*The illustration picture for this article is from* [**Your Only Move Is HUSTLE**](https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/), *a tactical, turn-based and multiplayer 2D fighting game by [Ivy Sly](https://twitter.com/ivy_sly_/). You can find the game on [Steam](https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/), follow the [game](https://twitter.com/YourMoveHUSTLE) and the [developer](https://twitter.com/ivy_sly_/) on Twitter, and find [other relevant links here](https://linktr.ee/youronlymoveishustle).*
+*The illustration picture for this article is from* [**Your Only Move Is HUSTLE**](https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/?curator_clanid=41324400), *a tactical, turn-based and multiplayer 2D fighting game by [Ivy Sly](https://twitter.com/ivy_sly_/). You can find the game on [Steam](https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/?curator_clanid=41324400), follow the [game](https://twitter.com/YourMoveHUSTLE) and the [developer](https://twitter.com/ivy_sly_/) on Twitter, and find [other relevant links here](https://linktr.ee/youronlymoveishustle).*
 
 ## What's new
 

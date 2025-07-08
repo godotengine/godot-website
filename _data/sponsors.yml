@@ -16,6 +16,9 @@ platinum:
     link: "https://github.com/V-Sekai"
     image: "https://fund.godotengine.org/static/logos/v-sekai.png"
 gold:
+  - name: "Player2"
+    link: "https://player2.game/"
+    image: "https://fund.godotengine.org/static/logos/player2-logo.png"
   - name: "Prehensile Tales"
     link: "https://prehensile-tales.com"
     image: "https://fund.godotengine.org/static/logos/pt.png"

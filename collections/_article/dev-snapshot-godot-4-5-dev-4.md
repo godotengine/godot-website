@@ -15,7 +15,7 @@ To everyone who ended up going to GodotCon this past week, we hope you had a saf
 
 ---
 
-*The cover illustration is from* [**Ambidextro**](https://www.majorariatto.com/ambidextro), *a precision-platformer where you must control two characters simultaneously, one with each hand. It is developed by [Majorariatto](https://www.majorariatto.com/) ([BlueSky](https://bsky.app/profile/alvamajo.com), [Twitter](https://twitter.com/majorariatto)). You can get the game on [Steam](https://store.steampowered.com/app/3445580/Ambidextro/?curator_clanid=41324400), [Nintendo Switch](https://www.nintendo.com/store/products/ambidextro-switch/), and [Xbox](https://www.xbox.com/games/store/ambidextro/9nk9bnkcbvj4).*
+*The cover illustration is from* [**Ambidextro**](https://www.majorariatto.com/ambidextro), *a precision-platformer where you must control two characters simultaneously, one with each hand. It is developed by [Majorariatto](https://www.majorariatto.com/) ([Bluesky](https://bsky.app/profile/alvamajo.com), [Twitter](https://twitter.com/majorariatto)). You can get the game on [Steam](https://store.steampowered.com/app/3445580/Ambidextro/?curator_clanid=41324400), [Nintendo Switch](https://www.nintendo.com/store/products/ambidextro-switch/), and [Xbox](https://www.xbox.com/games/store/ambidextro/9nk9bnkcbvj4).*
 
 ## Highlights
 
@@ -26,7 +26,7 @@ In case you missed them, see the [4.5 dev 1](/article/dev-snapshot-godot-4-5-dev
 After Windows and Linux users got to experience the benefits of embedding their windows in the editor, macOS users have understandably been expressing interest in the same coming to their platform. Easier said than done, as this feature is OS-specific and *very* low-level, so implementation requires someone both extremely knowledgeable in a niche area and actually owning the platform in question for proper testing. Thankfully, both of these qualifications were met by [Stuart Carnie](https://github.com/stuartcarnie), who was up to the task of integrating this behemoth in [GH-105884](https://github.com/godotengine/godot/pull/105884). The results should speak for themselves:
 
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/macos-embedded-window.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/macos-embedded-window.mp4?1" type="video/mp4">
 </video>
 
 The macOS implementation works differently from the Windows and Linux implementations. Since macOS does not allow the kind of window manipulation that Windows and Linux use for game window embedding, macOS uses an inter-process communication approach where the framebuffer is sent from the game process (which performs off-screen rendering) to the editor window. Input events are also sent from the editor window to the game process. This approach is more complex, but is also more robust as it doesn't rely on window management tricks that can fall apart in certain edge cases. This approach may be ported later to Windows/Linux in a future release, as it would help improve the reliability of game window embedding.
@@ -36,7 +36,7 @@ The macOS implementation works differently from the Windows and Linux implementa
 The old design of the 3D interpolation system was fundamentally flawed, as it operated under the assumption that the scene side wouldn't require access to interpolated transforms. This isn't something that could've just been "patched in" either, thanks to the multithreaded design, command queue, and stalling. Lacking any sort of workaround, [lawnjelly](https://github.com/lawnjelly) has taken a break from being the person responsible for 90% of 3.x code nowadays and [forward-ported](https://github.com/godotengine/godot/pull/103685) a solution via [GH-104269](https://github.com/godotengine/godot/pull/104269). This addresses the problem by porting all logic to the `SceneTree`, while completely retaining the existing API!
 
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/3d-fti-scenetree.mp4?1" type="video/mp4">
 </video>
 
 No changes are needed to existing projects to benefit from the new 3D physics interpolation architecture.
@@ -46,7 +46,7 @@ No changes are needed to existing projects to benefit from the new 3D physics in
 Despite both arrays and dictionaries technically supporting `Variant` values, this functionality was never actually exposed in isolation. That is: it was impossible to export a variable of type `Variant` directly. [Tomasz Chabora](https://github.com/KoBeWi) found this limitation quite silly, so took to addressing this grave injustice with [GH-89324](https://github.com/godotengine/godot/pull/89324). Now users are granted extra flexibility with their exports, as the option is now available to change not only the variable, but the type itself.
 
 <video autoplay loop muted playsinline>
-  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.webm?1" type="video/webm">
+  <source src="/storage/blog/dev-snapshot-godot-4-5-dev-4/export-variant.mp4?1" type="video/mp4">
 </video>
 
 ### Stackable outlines on `Label`

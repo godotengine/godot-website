@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**Gourdlets**](https://store.steampowered.com/app/2013730/Gourdlets/), *an easygoing sandbox game about building towns for cute vegetable folks. Developed in Godot 4 by [AuntyGames](https://www.auntygames.com/), it was recently released [on Steam](https://store.steampowered.com/app/2013730/Gourdlets/) to critical acclaim. You can follow the developer on [Twitter](https://x.com/auntygames), [TikTok](https://www.tiktok.com/@aunty__games), and [Instagram](https://www.instagram.com/auntygames/).*
+*The cover illustration is from* [**Gourdlets**](https://store.steampowered.com/app/2013730/Gourdlets/?curator_clanid=41324400), *an easygoing sandbox game about building towns for cute vegetable folks. Developed in Godot 4 by [AuntyGames](https://www.auntygames.com/), it was recently released [on Steam](https://store.steampowered.com/app/2013730/Gourdlets/?curator_clanid=41324400) to critical acclaim. You can follow the developer on [Twitter](https://x.com/auntygames), [TikTok](https://www.tiktok.com/@aunty__games), and [Instagram](https://www.instagram.com/auntygames/).*
 
 ## Highlights
 
@@ -83,8 +83,8 @@ compression types and begin to use it internally for things like lightmaps.
 
 The improvement is most obvious when importing HDRIs, here are a few examples from the PR:
 
-| Image | CVTT | Betsy |
-|-------|------|-------|
+| Image                                                                                             | CVTT  | Betsy |
+| ------------------------------------------------------------------------------------------------- | ----- | ----- |
 | [Symmetrical garden 8k .hdr with mipmaps](https://polyhaven.com/a/symmetrical_garden_02)          | 92.4s | 475ms |
 | [Cobblestone Street Night .hdr 4k with mipmaps](https://polyhaven.com/a/cobblestone_street_night) | 26.5s | 217ms |
 | [Laufenurg Church 8k .hdr with mipmaps](https://polyhaven.com/a/laufenurg_church)                 | 99.3s | 440ms |

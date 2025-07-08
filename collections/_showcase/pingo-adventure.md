@@ -16,7 +16,7 @@ youtube_id: "H8x_SR623fw"
 platforms: ["windows", "linux"]
 
 
-steam: https://store.steampowered.com/app/2015830/Pingo_Adventure/
+steam: https://store.steampowered.com/app/2015830/Pingo_Adventure/?curator_clanid=41324400
 itch: https://orb-square.itch.io/pingo-adventure
 
 ---

@@ -17,7 +17,7 @@ The beta testing stage is dedicated to fixing bugs and making sure that Godot 4.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about changes that come in Godot 4.1. You can also [try the **Web editor**](https://editor.godotengine.org/releases/4.1.beta1/) or the **Android editor** for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
-*The illustration picture for this article is from* [**Halls of Torment**](https://store.steampowered.com/app/2218750/Halls_of_Torment/), *a roguelite action RPG with retro aesthetics calling back to late-90s pre-rendered 2D graphics. It is developed by [Chasing Carrots](https://twitter.com/chasing_carrots) using Godot 4.0, and it just released in [early access on Steam](https://store.steampowered.com/app/2218750/Halls_of_Torment/), so you can buy it right now! Congrats to the team for the overwhelmingly positive reception!*
+*The illustration picture for this article is from* [**Halls of Torment**](https://store.steampowered.com/app/2218750/Halls_of_Torment/?curator_clanid=41324400), *a roguelite action RPG with retro aesthetics calling back to late-90s pre-rendered 2D graphics. It is developed by [Chasing Carrots](https://twitter.com/chasing_carrots) using Godot 4.0, and it just released in [early access on Steam](https://store.steampowered.com/app/2218750/Halls_of_Torment/?curator_clanid=41324400), so you can buy it right now! Congrats to the team for the overwhelmingly positive reception!*
 
 ## Highlights
 

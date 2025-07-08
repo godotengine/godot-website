@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/57e/f6c/a06/57ef6ca06ea2a421665008.png
 date: 2016-10-01 06:00:00
 ---
 
-A while ago, we had a Kickstarter for [The Interactive Adventures of Dog Mendonça & Pizzaboy®](http://store.steampowered.com/app/330420/), and during the campaign we<sup><a href="#note-1">1</a></sup> promised to release the framework we had made to develop the game as a standalone package. It took a while to finish the game and find some time to put the framework together and publish it, but it's finally here :-)
+A while ago, we had a Kickstarter for [The Interactive Adventures of Dog Mendonça & Pizzaboy®](https://store.steampowered.com/app/330420//?curator_clanid=41324400), and during the campaign we<sup><a href="#note-1">1</a></sup> promised to release the framework we had made to develop the game as a standalone package. It took a while to finish the game and find some time to put the framework together and publish it, but it's finally here :-)
 
 ### *Escoria*, a point & click graphic adventure creation framework
 

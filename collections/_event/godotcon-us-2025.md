@@ -9,7 +9,7 @@ dates_short: "5-7 May"
 # The first date of the event in ISO format, used for sorting.
 date: 2025-05-05 00:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: " [Microsoft NERD](https://www.microsoftnewengland.com), 1 Memorial Dr, Cambridge, MA 02142, United States"
 location_short: "Boston, Massachusetts"

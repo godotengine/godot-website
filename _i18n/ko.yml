@@ -11,6 +11,7 @@ header:
   contribute: 기여
   donate: 기부
   language: 언어
+  console_support: 콘솔 지원
 footer:
   godot_engine: Godot 엔진
   download: 다운로드
@@ -31,6 +32,7 @@ footer:
   press_kit: 보도자료
   showcase: 쇼케이스
   education: 교육
+  console_support: 콘솔 지원
   foundation: 재단
   about: 대하여
   donate: 기부

@@ -17,6 +17,14 @@ Argentina:
         url: https://chat.whatsapp.com/C0LzScYdKBP0zjsPYcAgOs
       - title: Instagram
         url: https://www.instagram.com/godotmeetuparg/
+Australia:
+  - name: Godot Devs Australia
+    coordinates:
+      - -25.525138002030047
+      - 135.16370974683196
+    links:
+      - title: Discord
+        url: https://discord.gg/wBZUEZrGRp
 Austria:
   - name: Godot User Group Austria
     coordinates:
@@ -201,6 +209,10 @@ Germany:
         url: https://www.meetup.com/de-DE/godot-stammtisch-karlsruhe/
       - title: Discord
         url: https://discord.gg/JFzUhpEt6Q
+      - title: Bluesky
+        url: https://bsky.app/profile/godot-karlsruhe.de
+      - title: Mastodon
+        url: https://mastodon.gamedev.place/@godot_karlsruhe
   - name: Godot Köln/Bonn
     coordinates:
       - 50.937531
@@ -415,3 +427,10 @@ United States:
     links:
       - title: Discord
         url: https://discord.gg/G7WNW6GYrf
+  - name: Godot East Coast Guild
+    coordinates:
+      - 38.89867917282319
+      - -77.02480110061525
+    links:
+      - title: Discord
+        url: https://discord.gg/62nkHTnndg
