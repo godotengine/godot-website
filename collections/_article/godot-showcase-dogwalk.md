@@ -1,6 +1,6 @@
 ---
 title: "Godot Showcase - Dogwalk"
-excerpt: "Julien and Simon tell us about their experience at Blender Studio working in Dogwalk."
+excerpt: "Julien and Simon from Blender Studio tell us about their experience working on Dogwalk."
 categories: ["showcase"]
 author: Emi
 image: /assets/showcase/dogwalk/thumbnail.jpeg
@@ -27,20 +27,20 @@ The game is already out on [Steam](https://store.steampowered.com/app/3775050/DO
 ## Can you tell us a little bit about your project?
 
 <strong class="julien">Julien:</strong>
-For this year the Blender Studio, which is the in-house art department of the Blender project, decided to focus on smaller short term projects. We aimed for 4 months for each of them so I saw the unique chance to pitch a tiny game project. And the scope really had to be tiny to be able to pull off a game for the first time.
+For this year the Blender Studio, which is the in-house art department of the Blender project, decided to focus on smaller short-term projects. We aimed for four months for each of them so I saw the unique chance to pitch a tiny game project. And the scope really had to be tiny to be able to pull off a game for the first time.
 
 Dogwalk is a short, wholesome interactive story about a dog and a kid decorating a snowman together. One big focus was on wordless storytelling through reactive gameplay. 
-It’s not strictly about fun or overcoming challenges. It’s about allowing the player to shape & experience the relationship between the two characters, simply by constraining the player to a small set of mechanics and have the game react to what they do with that.
+It’s not strictly about fun or overcoming challenges. It’s about allowing the player to shape and experience the relationship between the two characters, simply by constraining the player to a small set of mechanics and have the game react to what they do with that.
 
 ![](/assets/showcase/dogwalk/dogwalk-1.jpg)
 
 ## Why did you pick Godot to develop this project?
 
 <strong class="julien">Julien:</strong>
-One of our primary missions (and constraints) is that we demonstrate how people can make entire movies by only using free open source software. We call these “Open Projects” since we also licence them as open source and make the sources available.
+One of our primary missions (and constraints) is that we demonstrate how people can make entire movies by only using free open-source software. We call these “Open Projects” since we also licence them as open source and make the sources available.
 So for a game project it seemed natural to use Godot for it. Personally I’m a fan of the engine & project and was quite excited to be able to use it for a professional project in a team.
 
-Every one of our projects also comes with some Blender specific development targets. In this case we took a closer look at the export & import of glTF animations and assets. We created a pipeline for ourselves to stress-test the interoperability between Blender and Godot as much as our production scope allowed us. 
+Every one of our projects also comes with some Blender-specific development targets. In this case we took a closer look at the export and import of glTF animations and assets. We created a pipeline for ourselves to stress-test the interoperability between Blender and Godot as much as our production scope allowed us. 
 
 ![](/assets/showcase/dogwalk/dogwalk-7.jpg)
 
@@ -49,7 +49,7 @@ Every one of our projects also comes with some Blender specific development targ
 <strong class="julien">Julien:</strong>
 Pretty different. One big change is the shift from storyboarding/editorial to game prototyping/playtesting. In our film productions the story artists and animators would typically helm the project, but in this case I was doing it with an emphasis on development and design. It put us in very different shoes.
 
-The animation and rigging workflow is also very different. Animators don’t have the usual fine level of control and instead need to playtest the game to see the animations applied in action. We were also not used to rigging for export & game engines in mind, so we made some mistakes on that side that needed creative problem solving later on.
+The animation and rigging workflow is also very different. Animators don’t have the usual fine level of control and instead need to playtest the game to see the animations applied in action. We were also not used to rigging for export and game engines in mind, so we made some mistakes on that side that needed creative problem solving later on.
 
 But the biggest hurdle was to have the entire art team use Git LFS for version control. That was … quite a journey.
 
@@ -73,7 +73,7 @@ We’re also not used to having to make drastic cuts due to performance, coming 
 
 <strong class="simon">Simon:</strong>
 Most of the things we ran into, we reported right away and they have already been fixed. It’s been great to see how actively the Godot community has been responding to the issues we found.
-There have been some other more big picture issues that we ran into when collaborating as a team and using versioning. This mainly relates to UIDs and caching going out of sync.
+There have been some other more big-picture issues that we ran into when collaborating as a team and using versioning. This mainly relates to UIDs and caching going out of sync.
 Since these issues are usually complex and relate to our pipeline and people’s individual systems, these were a bit more tricky to identify and report. Especially with the additional burden of our art team using git for the first time, it wasn’t always clear what were issues that were actually caused by Godot.
 I really hope that we can find the time to sit together with some Blender and Godot developers to see what we can collectively take away from these issues and potentially change to make sure collaborating as a team using Blender and Godot is a smooth process.
 
@@ -82,13 +82,13 @@ I really hope that we can find the time to sit together with some Blender and Go
 <strong class="julien">Julien:</strong>
 Nothing that couldn’t be added manually or fixed with workarounds. 
 With one of the main gameplay and visual elements being the leash, sadly there was no Line3D node. But luckily the community had a [handy plugin](https://github.com/CozyCubeGames/godot-lines-and-trails-3d ) to immediately fill in that gap.
-We also ran into some limitations with our animation system, but that [will be fixed in the upcoming release](https://github.com/godotengine/godot/pull/102398#issuecomment-2949711987).
+We also ran into some limitations with our animation system, but that [will be fixed in the upcoming 4.5 release](https://github.com/godotengine/godot/pull/102398#issuecomment-2949711987).
 
 ![](/assets/showcase/dogwalk/dogwalk-4.jpg)
 
 ---
 
-Thank you very much Julien and Simon for taking the time to answer our questions, and looking forward to see what you do next with Godot!
+Thank you very much Julien and Simon for taking the time to answer our questions, and we look forward to see what you do next with Godot!
 
-If you want to play Dogwalk, it is free and already out on [Steam](https://store.steampowered.com/app/3775050/DOGWALK/), and [Itch.io](https://blenderstudio.itch.io/dogwalk). Make sure to get the supporter DLC on Steam, donate via Itch, or subscribe to Blender Studio if you are interested in seeing more of this kind of projects in the future.
+If you want to play Dogwalk, it is free and already out on [Steam](https://store.steampowered.com/app/3775050/DOGWALK/), and [Itch.io](https://blenderstudio.itch.io/dogwalk). Make sure to get the supporter DLC on Steam, donate via Itch, or subscribe to Blender Studio if you are interested in seeing more projects like this in the future.
 
