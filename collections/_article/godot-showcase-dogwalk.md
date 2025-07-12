@@ -17,7 +17,7 @@ date: 2025-07-12 22:00:00
 </style>
 
 
-Today we want to showcase a very special project. Most of you already know about it since it is really hard to go around any Godot space without finding people excited about Dogwalk. So if somehow you didn't know about the project or you still haven't been captivated by their [video blogs](https://www.youtube.com/watch?v=c4zP1sUgt6I&list=PLav47HAVZMjkxzzLDqYpTCosbsWjosUN0) over at YouTube, you are in for a treat! <strong class="julien">Julien</strong> and <strong class="simon">Simon</strong> from the [Blender Studio](https://studio.blender.org) team tell us about their experience developing their first Godot game: Dogwalk. 
+Today we want to showcase a very special project. Most of you already know about it since it is really hard to go around any Godot space without finding people excited about Dogwalk. So if somehow you didn't know about the project or you still haven't been captivated by their [video blogs](https://www.youtube.com/watch?v=c4zP1sUgt6I&list=PLav47HAVZMjkxzzLDqYpTCosbsWjosUN0) over at YouTube, you are in for a treat! <strong class="julien">Julien Kaspar</strong> and <strong class="simon">Simon Thommes</strong> from the [Blender Studio](https://studio.blender.org) team tell us about their experience developing their first Godot game: Dogwalk. 
 
 The game is already out on [Steam](https://store.steampowered.com/app/3775050/DOGWALK/), [Itch.io](https://blenderstudio.itch.io/dogwalk), and you can also get the project files with tons of extras from [their website](https://studio.blender.org/projects/dogwalk/). 
 
