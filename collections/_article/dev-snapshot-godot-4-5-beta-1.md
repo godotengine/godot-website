@@ -86,7 +86,7 @@ And more:
 
 ### Audio / Video
 
-[Berama](https://github.com/berarma) brings us the ability to seek Theora video files via the new `set_stream_position` function ([GH-102360](https://github.com/godotengine/godot/pull/102360)). In doing so, they've additionally improved our multi-channel audio resampler, meaning that videos with 6+ channels will no longer crackle. A much more technical breakdown & additional features can be gleaned from the PR.
+[Bernat Arlandis](https://github.com/berarma) brings us the ability to seek Theora video files via the new `set_stream_position` function ([GH-102360](https://github.com/godotengine/godot/pull/102360)). In doing so, he has additionally improved our multi-channel audio resampler, meaning that videos with 6+ channels will no longer crackle. A much more technical breakdown & additional features can be gleaned from the PR.
 
 And more:
 - Add metadata tags to WAV and OGG audio streams. ([GH-99504](https://github.com/godotengine/godot/pull/99504))
