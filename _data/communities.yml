@@ -416,6 +416,13 @@ United States:
     links:
       - title: Meetup
         url: https://www.meetup.com/bostongamedev/events/298734856/
+  - name: California Godot Users
+    coordinates:    
+      - 37.254669
+      - -119.617271
+    links:
+      - title: Discord
+        url: https://discord.gg/VZGjwrhgRM        
   - name: Godot Southwest US
     links:
       - title: Discord
