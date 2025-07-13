@@ -38,7 +38,7 @@ It’s not strictly about fun or overcoming challenges. It’s about allowing th
 
 <strong class="julien">Julien:</strong>
 One of our primary missions (and constraints) is that we demonstrate how people can make entire movies by only using free open-source software. We call these “Open Projects” since we also licence them as open source and make the sources available.
-So for a game project it seemed natural to use Godot for it. Personally I’m a fan of the engine & project and was quite excited to be able to use it for a professional project in a team.
+So for a game project it seemed natural to use Godot for it. Personally I’m a fan of the engine and project, and was quite excited to be able to use it for a professional project in a team.
 
 Every one of our projects also comes with some Blender-specific development targets. In this case we took a closer look at the export and import of glTF animations and assets. We created a pipeline for ourselves to stress-test the interoperability between Blender and Godot as much as our production scope allowed us. 
 

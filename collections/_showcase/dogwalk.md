@@ -1,5 +1,5 @@
 ---
-description: "Explore a hand-crafted winter forest as a big adorable dog and with a little kid in tow. A short, free, open source project brought to you by Blender Studio."
+description: "Explore a hand-crafted winter forest as a big adorable dog with a little kid in tow. A short, free, open-source project brought to you by Blender Studio."
 date: 2025-07-11 00:00:00 +0000
 
 title: DOGWALK
@@ -27,7 +27,7 @@ featured_in_home: true
 ---
 
 Blender Studio's official game project is a short casual interactive story.
-Play a big, adorable dog traversing through winter woods and help out a little kid decorate a snowman with colorful items hidden in the environment.
+Play a big, adorable dog traversing through winter woods and help a little kid decorate a snowman with colorful items hidden in the environment.
 
 ## Explore
 
@@ -40,11 +40,11 @@ Guide or drag around your little kid owner that you have in tow. Help each other
 ## Play your way
 
 Dive straight in and have the game react to your play-style and choices.
-There are no fail states. Only player driven moments.
+There are no fail states, only player-driven moments.
 
 ## A paper craft world
 
-Traverse an environment made of real-life paper crafted models, scanned and recreated to be played with.
+Traverse an environment made of real-life paper-crafted models, scanned and recreated to be played with.
 
 ## Free for everyone
 
