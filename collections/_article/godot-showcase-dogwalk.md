@@ -4,7 +4,7 @@ excerpt: "Julien and Simon from Blender Studio tell us about their experience wo
 categories: ["showcase"]
 author: Emi
 image: /assets/showcase/dogwalk/thumbnail.jpeg
-date: 2025-07-12 22:00:00
+date: 2025-07-15 02:00:00
 ---
 
 <style>
