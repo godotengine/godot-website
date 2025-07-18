@@ -9,7 +9,7 @@ date: 2025-07-17 12:30:00
 
 We would like to welcome JetBrains as a Platinum Sponsor of the Godot Foundation. The support from JetBrains means a lot to us, so we would love to thank them for enabling us to keep improving the engine for everyone. 
 
-If you’re not already familiar with JetBrains, they build great developer tools, with some very helpful game development facing features. JetBrains Rider is a must-have IDE and code editor for GDScript, C#, and C++, with specific support for various different game engines, including Godot. As well as rich editing and Ctrl+Click navigation, there are smart features like Find Usages, Rename (no more find/replace!) and specific inspections and quick fixes to help with best practices while writing, debugging or testing code for your game. Check out [their page for more details](https://www.jetbrains.com/lp/rider-godot/?utm_source=google&utm_medium=referral&utm_campaign=rider&utm_content=godot-page-blog).
+If you’re not already familiar with JetBrains, they build great developer tools, with some very helpful game development-facing features. JetBrains Rider is a must-have IDE and code editor for GDScript, C#, and C++, with specific support for various different game engines, including Godot. As well as rich editing and <kbd>Ctrl + Click</kbd> navigation, there are smart features like Find Usages, Rename (no more find/replace!) and specific inspections and quick fixes to help with best practices while writing, debugging or testing code for your game. Check out [their page for more details](https://www.jetbrains.com/lp/rider-godot/?utm_source=google&utm_medium=referral&utm_campaign=rider&utm_content=godot-page-blog).
 
 ### Free for non-commercial use
 
