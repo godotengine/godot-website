@@ -1,7 +1,4 @@
 patron:
-  - name: "OSS Capital"
-    link: "https://oss.capital/"
-    image: "https://fund.godotengine.org/static/logos/ossc-logo.svg"
   - name: "Khronos® Group"
     link: "https://www.khronos.org/"
     image: "https://fund.godotengine.org/static/logos/khronos.svg"
