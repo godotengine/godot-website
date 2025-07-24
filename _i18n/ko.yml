@@ -1,5 +1,6 @@
 meta:
   description: 2D 및 3D 게임, 크로스 플랫폼 프로젝트, 또는 XR 아이디어까지 개발하세요!
+  dir: ltr
 header:
   features: 기능
   showcase: 쇼케이스
