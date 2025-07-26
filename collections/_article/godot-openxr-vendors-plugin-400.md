@@ -9,8 +9,6 @@ image_caption_description: "A multiplayer VR fighting game, by JD The 65th"
 date: 2025-07-22 12:00:00
 ---
 
-# Godot OpenXR Vendors Plugin v4
-
 OpenXR support has been built into Godot since the release of Godot 4.0. However, the [OpenXR Vendors plugin](https://github.com/GodotVR/godot_openxr_vendors) (maintained by Godot's XR team) includes extensions to OpenXR created by hardware vendors (e.g. Meta, Pico, HTC, etc.), which we've chosen to keep outside of Godot itself.
 
 We are happy to announce a new major release of the OpenXR Vendors plugin, which includes some exciting new features!
@@ -61,7 +59,7 @@ That's why in version 4.0.0 and beyond, there are now project settings to enable
 
 Nothing ever stands still in the world of Godot!
 
-We just released [version 4.1.0](https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.1.0-stable) which includes even more exciting features.
+We just released [version 4.1.1](https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.1.1-stable) which includes even more exciting features.
 
 ### Full Body Tracking
 
