@@ -89,16 +89,22 @@ Canada:
       - title: Discord
         url: https://discord.gg/AemZhPjqyM
 China:
+  - name: Godot Hub
+    links:
+      - title: Forum/论坛
+        url: https://pd.qq.com/g/GodotHub999
+      - title: Groups/群聊
+        url: https://godothub.atomgit.net/festival2025/community
+      - title: Festival/大赛
+        url: https://godothub.com/festival
+      - title: Discord
+        url: https://discord.gg/a5kwptZJXP
   - name: Godot China
     links:
       - title: Discord
         url: https://discord.gg/R23VUTXwvz
       - title: QQ Group
         url: https://qm.qq.com/cgi-bin/qm/qr?k=EneMKrKt96ttI4ZFmQ8omTtpF0Sd0iL_&jump_from=webapi
-  - name: GodoterCN
-    links:
-      - title: Website
-        url: https://godoter.cn
   - name: Godoter Planet (Godoter 星球)
     links:
       - title: QQ Group
@@ -109,8 +115,6 @@ China:
         url: https://tieba.baidu.com/f?kw=godot
   - name: GodotCN (Godot中文社区)
     links:
-      - title: Website
-        url: http://godott.com
       - title: QQ Group
         url: https://qm.qq.com/cgi-bin/qm/qr?k=hEscGFbQTiOX0bhsTT2myxM3PifsAmIp&jump_from=webapi
 Croatia:
