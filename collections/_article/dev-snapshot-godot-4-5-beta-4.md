@@ -9,13 +9,13 @@ image_caption_description: A game by Blender Studio
 date: 2025-07-29 12:00:00
 ---
 
-It's been a bit since our last snapshot, as our team has been quite busy knocking out some critical release-blocker and immediate-blocker issues. Thankfully, we're back at the point where we can comfortably deliver our latest 4.5 pre-release candidate. As a refresher: the beta period means that the project has entered feature freeze, so the only changes you'll be seeing are bugfixes and addressing regressions.
+It's been a while since our last snapshot, as our team has been quite busy knocking out some critical release-blocker and immediate-blocker issues. Thankfully, we're back at the point where we can comfortably deliver our latest 4.5 pre-release candidate. As a refresher: the beta period means that the project has entered feature freeze, so the only changes you'll be seeing are bugfixes and addressing regressions.
 
 [Jump to the **Downloads** section](#downloads), and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the [**Web editor**](https://editor.godotengine.org/releases/4.5.beta4/), the [**XR editor**](https://www.meta.com/s/h9JcJGHfg), or the [**Android editor**](https://play.google.com/store/apps/details?id=org.godotengine.editor.v4) for this release. If you are interested in the latter, please request to join [our testing group](https://groups.google.com/g/godot-testers) to get access to pre-release builds.
 
 ---
 
-*The cover illustration is from* [**DOGWALK**](https://store.steampowered.com/app/3775050/DOGWALK/?curator_clanid=41324400), a title we had the pleasure of showcasing in a [dedicated article](https://godotengine.org/article/godot-showcase-dogwalk/). You can download the game for free on [Steam](https://store.steampowered.com/app/3775050/DOGWALK/?curator_clanid=41324400), [itch.io](https://blenderstudio.itch.io/dogwalk), and the [Blender Studio website](https://godotengine.org/article/godot-showcase-dogwalk/).
+*The cover illustration is from* [**DOGWALK**](https://store.steampowered.com/app/3775050/DOGWALK/?curator_clanid=41324400), a title we had the pleasure of showcasing in a [dedicated article](https://godotengine.org/article/godot-showcase-dogwalk/). You can download the game for free on [Steam](https://store.steampowered.com/app/3775050/DOGWALK/?curator_clanid=41324400), [itch.io](https://blenderstudio.itch.io/dogwalk), and the [Blender Studio website](https://studio.blender.org/projects/dogwalk/).
 
 ## Highlights
 
