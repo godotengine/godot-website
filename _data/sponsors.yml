@@ -12,6 +12,9 @@ platinum:
   - name: "V-Sekai"
     link: "https://github.com/V-Sekai"
     image: "https://fund.godotengine.org/static/logos/v-sekai.png"
+  - name: "JetBrains"
+    link: "https://www.jetbrains.com/lp/rider-godot/"
+    image: "https://fund.godotengine.org/static/logos/jetbrains.svg"
 gold:
   - name: "Player2"
     link: "https://player2.game/"
