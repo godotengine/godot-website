@@ -462,3 +462,13 @@ United States:
     links:
       - title: Discord
         url: https://discord.gg/62nkHTnndg
+  - name: Bay Area Godot Meetup
+    coordinates:
+      - 37.7623675
+      - -122.4186149
+    links:
+      - title: Noisebridge Wiki
+        url: https://www.noisebridge.net/wiki/Godot_Meetup
+      - title: Discord
+        url: https://discord.gg/wGkvgR5MXY
+      
