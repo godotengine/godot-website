@@ -56,3 +56,6 @@ silver:
   - name: Games by Malcs
     link: "https://gamesbymalcs.com/"
     image: "https://fund.godotengine.org/static/logos/games-by-malcs.png"
+  - name: Blobfish Games
+    link: "https://www.blobfishgames.com/"
+    image: "https://fund.godotengine.org/static/logos/blobfish-games.png"
