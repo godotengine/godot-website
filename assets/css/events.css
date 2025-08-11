@@ -74,6 +74,8 @@
 
 .event-details > li p {
 	display: inline;
+	margin-left: 0.3em;
+	margin-right: 0.3em;
 }
 
 @media screen and (max-width: 900px) {
