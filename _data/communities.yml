@@ -75,9 +75,14 @@ Bulgaria:
         url: https://discord.gg/j3KRdV3b4P
 United Kingdom:
   - name: Godot UK
+    coordinates:
+      - 53.79648 
+      - -1.54785
     links:
       - title: Discord
         url: https://discord.gg/rr6Ac648nC
+      - title: Website
+        url: https://godot.org.uk
 Canada:
   - name: Godot Toronto
     coordinates:
