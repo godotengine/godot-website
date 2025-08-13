@@ -72,26 +72,43 @@
 				<h3>{{ event.name }}</h3>
 
 				{% unless event.cover_image == empty %}
-					<img src="{{ event.cover_image }}" alt="{{ event.name }} event banner">
+					<figure>
+						<img src="{{ event.cover_image }}" alt="{{ event.name }} event banner">
+						<figcaption>
+							{{ event.cover_image_caption }}
+						</figcaption>
+					</figure>
 				{% endunless %}
 
 				{{ event.content }}
 
 				<h4>Event details</h4>
 
-				<ul class="event-details">
-					<li><strong>Date:</strong> {{ event.dates }}</li>
-					<li><strong>Location:</strong> {{ event.location | markdownify }}{% unless event.location_map == empty %} (<a href="{{ event.location_map }}">Show on map</a>){% endunless %}</li>
-					{% if event.entrance_fee %}
-					<li><strong>Entrance fee:</strong> {{ event.entrance_fee | markdownify }}</li>
-					{% endif %}
-					{% if event.registration %}
-					<li><strong>Registration:</strong> {{ event.registration | markdownify }}</li>
-					{% endif %}
-					{% if event.website %}
-					<li><strong>Website:</strong> <a href="{{ event.website }}">{{ event.website }}</a></li>
-					{% endif %}
-				</ul>
+				<table class="event-details">
+					<tbody>
+						<tr>
+							<th>Date:</th><td>{{ event.dates }}</td>
+						</tr>
+						<tr>
+							<th>Location:</th><td>{{ event.location | markdownify }}{% unless event.location_map == empty %} (<a href="{{ event.location_map }}">Show on map</a>){% endunless %}</td>
+						</tr>
+						{% if event.entrance_fee %}
+						<tr>
+							<th>Entrance fee:</th><td>{{ event.entrance_fee | markdownify }}</td>
+						</tr>
+						{% endif %}
+						{% if event.registration %}
+						<tr>
+							<th>Registration:</th><td>{{ event.registration | markdownify }}</td>
+						</tr>
+						{% endif %}
+						{% if event.website %}
+						<tr>
+							<th>Website:</th><td><a href="{{ event.website }}">{{ event.website }}</a></td>
+						</tr>
+						{% endif %}
+					</tbody>
+				</table>
 			</div>
 
 		{% endcapture %}
