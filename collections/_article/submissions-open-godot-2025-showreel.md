@@ -5,7 +5,7 @@ categories: ["news"]
 author: Emi
 image: /storage/blog/covers/godot-showreel-2023.webp
 image_caption_description: Illustration by André Marí Coppola
-date: 2025-08-15 15:00:00
+date: 2025-08-15 13:00:00
 ---
 
 Showcase your Godot Engine 2025 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2025 Showreel.
