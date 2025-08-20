@@ -23,4 +23,5 @@ image_src: /storage/releases/4.5/images/apple-vision-pro-Kyu3a.webp
 image_src_2x: /storage/releases/4.5/images/apple-vision-pro-Kyu3a-2x.webp
 content_creator: "[Kyu3a](https://commons.wikimedia.org/wiki/File:Apple_Vision_Pro_in_Apple_Store_Nagoya_-_4.jpg)"
 media_position: right
+position: center-left
 ---
