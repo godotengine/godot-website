@@ -476,4 +476,12 @@ United States:
         url: https://www.noisebridge.net/wiki/Godot_Meetup
       - title: Discord
         url: https://discord.gg/wGkvgR5MXY
-      
+  - name: Tucson Game Developers
+    coordinates:
+      - 32.235938
+      - -110.984241
+    links:
+      - title: Discord
+        url: https://discord.gg/CPye5BfMy7
+      - title: Website
+        url: https://tucsongamedev.com
