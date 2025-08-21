@@ -12,6 +12,8 @@ header:
   donate: "寄付する"
   language: "言語"
   console_support: "コンソールサポート"
+  events: "イベント"
+  forum: "フォーラム"
 footer:
   godot_engine: "Godotエンジン"
   download: "ダウンロード"

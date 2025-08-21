@@ -20,7 +20,7 @@
 				<li><a href="/features/" data-dropdown="features-dropdown">{% t header.features %}</a></li>
 				<li><a href="/showcase/">{% t header.showcase %}</a></li>
 				<li><a href="/blog/">{% t header.blog %}</a></li>
-				<li><a href="/community/">{% t header.community %}</a></li>
+				<li><a href="/community/" data-dropdown="community-dropdown">{% t header.community %}</a></li>
 				<li><a href="https://godotengine.org/asset-library/asset">{% t header.assets %}</a></li>
 				<!-- Show console support link in the mobile hamburger menu -->
 				<li class="mobile-only"><a href="/consoles/">{% t header.console_support %}</a></li>
@@ -71,6 +71,12 @@
 	<!-- So we need this only to cover the edge case of high-resolution tablets -->
 	<a href="/features/" class="touch-only">{% t header.features %}</a>
 	<a href="/consoles/">{% t header.console_support %}</a>
+</div>
+
+<div class="nav-dropdown-menu" id="community-dropdown">
+	<a href="/community/" class="touch-only">{% t header.community %}</a>
+	<a href="https://forum.godotengine.org">{% t header.forum %}</a>
+	<a href="/events/">{% t header.events %}</a>
 </div>
 
 {% if page.localize %}

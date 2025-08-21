@@ -12,6 +12,8 @@ header:
   donate: Wpłać datek
   language: Język
   console_support: Wsparcie konsol
+  events: Wydarzenia
+  forum: Forum
 footer:
   godot_engine: Godot Engine
   download: Pobierz

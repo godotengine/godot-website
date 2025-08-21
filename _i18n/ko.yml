@@ -12,6 +12,8 @@ header:
   donate: 기부
   language: 언어
   console_support: 콘솔 지원
+  events: 이벤트
+  forum: 포럼
 footer:
   godot_engine: Godot 엔진
   download: 다운로드

@@ -11,7 +11,9 @@ header:
   contribute: Contribute
   donate: Donate
   language: Language
+  events: Events
   console_support: Console support
+  forum: Forum
 footer:
   godot_engine: Godot Engine
   download: Download

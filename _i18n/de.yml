@@ -12,6 +12,8 @@ header:
   donate: Spenden
   language: Sprache
   console_support: Konsolen-Support
+  events: Veranstaltungen
+  forum: Forum
 footer:
   download: Download
   documentation: Dokumentation
