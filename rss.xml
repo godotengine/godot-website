@@ -1,4 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Submissions open for Godot 2025 showreel</title><link>https://godotengine.org/article/submissions-open-godot-2025-showreel/</link><summary>Showcase your Godot creations in 2025! We're inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don't miss this chance to be a part of it!</summary><description>&lt;p>Showcase your Godot Engine 2025 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2025 Showreel.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Dev snapshot: Godot 4.5 beta 6</title><link>https://godotengine.org/article/dev-snapshot-godot-4-5-beta-6/</link><summary>One more for the road!</summary><description>&lt;p>It’s been a long journey, but we’re at the tail-end of 4.5’s beta cycle at last; thank you to everyone who contributed during this stage! As such, you can expect this to be our final beta release for 4.5 (probably), with release candidates just around the corner. Should this indeed be our final beta snapshot, all further changes will be &lt;em>strictly&lt;/em> regression fixes; the content available here will be largely reflective of the 4.5 release. As always, users are strongly encouraged to test this snapshot to catch the remaining few release blockers.&lt;/p>
+&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.5.beta6/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/h9JcJGHfg">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
+&lt;hr />
+&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/2471970/Planetary_Life/?curator_clanid=41324400">&lt;strong>Planetary Life&lt;/strong>&lt;/a>, an evolution simulator where you guide custom creations from single-celled organisms to a modern civilization! You can buy the early-access title on &lt;a href="https://store.steampowered.com/app/2471970/Planetary_Life/?curator_clanid=41324400">Steam&lt;/a>, and follow the developer on &lt;a href="https://www.youtube.com/@sotenbox">YouTube&lt;/a> or &lt;a href="https://twitter.com/sotenbox">Twitter&lt;/a>.&lt;/p>
+&lt;h2 id="highlights">Highlights&lt;/h2>
+&lt;p>For an overview of what’s new overall in Godot 4.5, have a look at the highlights for &lt;a href="/article/dev-snapshot-godot-4-5-beta-1/">4.5 beta 1&lt;/a>, which cover a lot of the changes. This blog post only covers the changes between beta 5 and beta 6. This section covers the most relevant changes made since the beta 5 snapshot, which are largely regression fixes:&lt;/p>
+&lt;h3 id="rename-svgtexture-to-dpitexture-mark-as-experimental">Rename &lt;code class="language-plaintext highlighter-rouge">SVGTexture&lt;/code> to &lt;code class="language-plaintext highlighter-rouge">DPITexture&lt;/code>, mark as “experimental”&lt;/h3>
+&lt;p>We generally don’t highlight reversions/renames in these blogposts, but this is a major exception that warrants added context. The original intent of &lt;code class="language-plaintext highlighter-rouge">SVGTexture&lt;/code> was to handle icons that respect the font oversampling in the editor. That’s literally it.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-beta-6/dpi-compare.webp" alt="DPI Compare" />&lt;/p>
+&lt;p>This is part of the reason we never gave the feature its own dedicated section, beyond a bullet-point in its introductory blog. However, the reception to what should’ve been a fringe feature was far larger than we intended. Many users, understandably, took the feature to mean full-blown support for &lt;a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash-like&lt;/a> graphics and realtime rasterization. The name and description ended up overselling our niche utility as a general-purpose solution; one which it was woefully underequipped to handle. Despite the original author, &lt;a href="https://github.com/bruvzg">bruvzg&lt;/a>, making excellent strides towards refining and expanding functionality, it was ultimately akin to applying a bandage on a broken leg. Turning this implementation into something general purpose would be beyond the scope of &lt;strong>4.6&lt;/strong>, let alone 4.5! The rebranding and experimental designation are our ninth-inning resolution.&lt;/p>
+&lt;p>This feature has a limited use-case, and will not be extended beyond that.&lt;/p>
+&lt;p>&lt;em>Having said that&lt;/em>: this is &lt;strong>not&lt;/strong> us saying “no” to the prospect of realtime support for SVG/rasterized visuals. On the contrary: that’s exactly why we’re making this designation in the first place! The support for this functionality is very obvious, but it needs to be done right. So while that might be out-of-scope for 4.5, it’s not out-of-scope for Godot.&lt;/p>
+&lt;p>(&lt;a href="https://github.com/godotengine/godot/pull/109811">GH-109811&lt;/a>, &lt;a href="https://github.com/godotengine/godot/pull/109805">GH-109805&lt;/a>)&lt;/p>
+&lt;h3 id="and-more">And more!&lt;/h3>
+&lt;ul>
+&lt;li>Export: Android: Revert the removal of the &lt;code class="language-plaintext highlighter-rouge">gradle_build/compress_native_libraries&lt;/code> export option (&lt;a href="https://github.com/godotengine/godot/pull/107681">GH-107681&lt;/a>).&lt;/li>
+&lt;li>GDScript: Autocompletion: Don’t call const functions (&lt;a href="https://github.com/godotengine/godot/pull/109297">GH-109297&lt;/a>).&lt;/li>
+&lt;li>XR: Add &lt;code class="language-plaintext highlighter-rouge">CameraServer&lt;/code> &lt;code class="language-plaintext highlighter-rouge">feeds_updated&lt;/code> signal, and document async behavior (&lt;a href="https://github.com/godotengine/godot/pull/108165">GH-108165&lt;/a>).&lt;/li>
+&lt;li>GUI: Use MSDF instead of MTSDF for font rendering (&lt;a href="https://github.com/godotengine/godot/pull/109437">GH-109437&lt;/a>).&lt;/li>
+&lt;li>Input: Add methods to check which event first triggered “just pressed/released” state (&lt;a href="https://github.com/godotengine/godot/pull/109540">GH-109540&lt;/a>).&lt;/li>
+&lt;li>Shaders: Improve shader overloaded function error reporting (&lt;a href="https://github.com/godotengine/godot/pull/109548">GH-109548&lt;/a>).&lt;/li>
+&lt;li>Documentation: Update &lt;code class="language-plaintext highlighter-rouge">_physics_process&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">_process&lt;/code> docs to reflect implementation (&lt;a href="https://github.com/godotengine/godot/pull/109320">GH-109320&lt;/a>).&lt;/li>
+&lt;li>Editor: Fix snapping logic in Range (&lt;a href="https://github.com/godotengine/godot/pull/109100">GH-109100&lt;/a>).&lt;/li>
+&lt;li>Documentation: Document &lt;code class="language-plaintext highlighter-rouge">Tree.item_collapsed&lt;/code> also being emitted when the item is expanded (&lt;a href="https://github.com/godotengine/godot/pull/109242">GH-109242&lt;/a>).&lt;/li>
+&lt;li>Rendering: Fix material removal clearing all instances of shared texture arrays (&lt;a href="https://github.com/godotengine/godot/pull/109644">GH-109644&lt;/a>).&lt;/li>
+&lt;/ul>
+&lt;h2 id="changelog">Changelog&lt;/h2>
+&lt;p>&lt;strong>53 contributors&lt;/strong> submitted &lt;strong>111 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.5-beta6">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the previous 4.5-beta5 snapshot.&lt;/p>
+&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/d5ad0556a2c04c50694b5c04dc1b3bf03ecd7113">&lt;code class="language-plaintext highlighter-rouge">d5ad0556a&lt;/code>&lt;/a>.&lt;/p>
+&lt;h2 id="downloads">Downloads&lt;/h2>
+&lt;div class="card card-download">
+&lt;a class="card-download-link" href="/download/archive/4.5-beta6">
+Download Godot 4.5 beta6
+&lt;/a>
+&lt;div class="card-download-details">
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-5-beta-6.webp" />
+&lt;div class="card-download-platforms">
+&lt;div class="download-platform platform-linux">
+&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
+Linux
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-beta6/Godot_v4.5-beta6_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-beta6/Godot_v4.5-beta6_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-macos">
+&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
+macOS
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-beta6/Godot_v4.5-beta6_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-beta6/Godot_v4.5-beta6_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-windows">
+&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
+Windows
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-beta6/Godot_v4.5-beta6_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-beta6/Godot_v4.5-beta6_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div class="card-download-sublinks">
+&lt;a class="card-download-other" href="/download/archive/4.5-beta6">
+Export templates and other downloads
+&lt;/a>
+&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
+Make a Donation
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;style>
+.thankyou-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.85);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 10;
+}
+.thankyou {
+background: var(--base-color);
+box-shadow: var(--more-shadow);
+padding: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+position: relative;
+border-radius: 13px;
+}
+.thankyou-reading {
+font-size: 16px;
+}
+.thankyou-reading-list {
+font-size: 16px;
+margin: 0;
+margin-left: 48px;
+padding-left: 0;
+}
+.thankyou-donate {
+margin-bottom: 24px;
+text-align: center;
+}
+.btn.btn-donate {
+background-color: var(--primary-color);
+color: hsla(0, 0%, 100%, 0.9);
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 26px;
+}
+.thankyou h2 {
+text-shadow: var(--base-shadow);
+font-size: 36px;
+font-weight: 800;
+margin-bottom: 12px;
+}
+.thankyou h2 .anchored-link {
+/* Hiding the anchored text automatically added on blogposts */
+display: none !important;
+}
+.thankyou p {
+max-width: 620px;
+font-size: 25px;
+}
+@media (max-width: 768px) {
+.thankyou-wrapper {
+display: block;
+}
+.thankyou {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: scroll;
+padding: 30px 40px 18px 40px;
+}
+.thankyou-reading-list {
+margin-left: 24px;
+}
+.btn-close-thankyou-popup {
+width: 48px;
+height: 48px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+}
+.btn-close-thankyou-popup {
+cursor: pointer;
+position: absolute;
+top: 12px;
+right: 12px;
+}
+.btn-close-thankyou-popup img {
+background: transparent !important; /* for overwriting the style in the blogposts img */
+}
+@media (prefers-color-scheme: light) {
+.btn-close-thankyou-popup img {
+filter: invert(1);
+opacity: 0.75;
+}
+}
+&lt;/style>
+&lt;script>
+document.addEventListener('DOMContentLoaded', () => {
+const thankYouWrapper = document.getElementById('thank-you');
+// Close itself, when clicked outside of the popup area.
+thankYouWrapper.addEventListener('click', (e) => {
+if (e.target === thankYouWrapper) {
+thankYouWrapper.style.display = 'none';
+}
+});
+// Close with a close button.
+const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
+thankYouBackButton.addEventListener('click', () => {
+thankYouWrapper.style.display = 'none';
+});
+// Open from the main download buttons.
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
+downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+document.querySelector('.btn.btn-donate').focus();
+});
+});
+// Open from the all downloads list.
+const downloadLinks = document.querySelectorAll('.download-link');
+downloadLinks.forEach((it) => {
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+});
+});
+// Close the dialog when the user presses the escape key.
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') {
+thankYouWrapper.style.display = 'none';
+}
+});
+});
+&lt;/script>
+&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
+&lt;div class="thankyou">
+&lt;h2>Godot is downloading...&lt;/h2>
+&lt;p class="thankyou-donate">
+Godot exists thanks to donations from people like you. Help us continue our work:
+&lt;/p>
+&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
+Make a Donation
+&lt;/a>
+&lt;div class="btn-close-thankyou-popup">
+&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
+&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
+&lt;div class="card card-warning">
+&lt;p>
+While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
+&lt;/p>
+&lt;/div>
+&lt;h2 id="known-issues">Known issues&lt;/h2>
+&lt;p>During the beta stage, we focus on solving both regressions (i.e. something that worked in a previous release is now broken) and significant new bugs introduced by new features. You can have a look at our current &lt;a href="https://github.com/orgs/godotengine/projects/61">list of regressions and significant issues&lt;/a> which we aim to address before releasing 4.5. This list is dynamic and will be updated if we discover new showstopping issues after more users start testing the beta snapshots.&lt;/p>
+&lt;p>With every release, we accept that there are going to be various issues which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug">known bugs&lt;/a>.&lt;/p>
+&lt;h2 id="bug-reports">Bug reports&lt;/h2>
+&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
+&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-5-beta-6/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Thu, 21 Aug 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-5-beta-6.webp</image></item><item><title>Submissions open for Godot 2025 showreel</title><link>https://godotengine.org/article/submissions-open-godot-2025-showreel/</link><summary>Showcase your Godot creations in 2025! We're inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don't miss this chance to be a part of it!</summary><description>&lt;p>Showcase your Godot Engine 2025 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2025 Showreel.&lt;/p>
 &lt;p>Our annual showreels are informative and celebratory showcases, to highlight the wide array of projects developed using the Godot Engine. If you want to participate this year and share your Godot-made game, app, or tool, submit your entry starting today.&lt;/p>
 &lt;h2 id="whats-new-this-year">What’s new this year?&lt;/h2>
 &lt;p>This year, we want to invite more people to participate in the voting phase. So, if you are a member of the &lt;a href="https://fund.godotengine.org/">Development Fund&lt;/a>, you will be able to cast your votes alongside the Godot maintainers! To be eligible to vote, you need to have a recurrent donation active.&lt;/p>
@@ -1787,10 +2045,11 @@ This is &lt;strong>huge&lt;/strong> for the adoption of Godot for Android develo
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Demo of toggling oversampling on SVGTexture">
 &lt;source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.mp4?1" type="video/mp4" />
 &lt;/video>
+&lt;p>&lt;strong>Edit 2025-08-21:&lt;/strong> &lt;em>Starting with 4.5 beta 6, the name of this feature was changed to &lt;code class="language-plaintext highlighter-rouge">DPITexture&lt;/code> to better reflect the original intent (&lt;a href="https://github.com/godotengine/godot/pull/109811">GH-109811&lt;/a>). For more information, see our section highlighting the change in the &lt;a href="/article/dev-snapshot-godot-4-5-beta-6/">4.5 beta 6 blog post&lt;/a>.&lt;/em>&lt;/p>
 &lt;p>And more:&lt;/p>
 &lt;ul>
 &lt;li>TextEdit/LineEdit: Add support for OEM Alt codes input. (&lt;a href="https://github.com/godotengine/godot/pull/93466">GH-93466&lt;/a>)&lt;/li>
-&lt;li>Stackable outlines on &lt;code class="language-plaintext highlighter-rouge">Label&lt;/code>. (&lt;a href="https://github.com/godotengine/godot/pull/104731">GH-104731&lt;/a>&lt;/li>
+&lt;li>Stackable outlines on &lt;code class="language-plaintext highlighter-rouge">Label&lt;/code>. (&lt;a href="https://github.com/godotengine/godot/pull/104731">GH-104731&lt;/a>)&lt;/li>
 &lt;li>Replace global oversampling with overrideable per-viewport oversampling. (&lt;a href="https://github.com/godotengine/godot/pull/104872">GH-104872&lt;/a>)&lt;/li>
 &lt;li>RichTextLabel: Add paragraph separation theme property. (&lt;a href="https://github.com/godotengine/godot/pull/107331">GH-107331&lt;/a>)&lt;/li>
 &lt;/ul>
@@ -2367,348 +2626,4 @@ and &lt;a href="https://discord.com/invite/DD95reBjzM">join the Discord&lt;/a> t
 &lt;p>It’s either that, or we return to the old days of spam-webpages using the &lt;a href="https://www.youtube.com/watch?v=WckVsX5-uyE">“Congratulations, you won!”&lt;/a> sound effect when you least expect it. &lt;a href="#fnref:1" class="reversefootnote" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description><category>Progress Report</category><guid>https://godotengine.org/article/upcoming-serious-web-performance-boost/</guid><dc:creator>Adam Scott</dc:creator><pubDate>Thu, 05 Jun 2025 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/upcoming-serious-web-performance-boost.webp</image></item><item><title>Dev snapshot: Godot 4.5 dev 5</title><link>https://godotengine.org/article/dev-snapshot-godot-4-5-dev-5/</link><summary>The cool chill of the feature freeze approaches…</summary><description>&lt;p>Brrr… Do you feel that? That’s the cold front of the feature freeze just around the corner. It’s not upon us &lt;em>just&lt;/em> yet, but this is likely to be our final development snapshot of the 4.5 release cycle. As we enter the home stretch of new features, bugs are naturally going to follow suit, meaning bug reports and feedback will be especially important for a smooth beta timeframe.&lt;/p>
-&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also &lt;a href="https://editor.godotengine.org/releases/4.5.dev5/">try the &lt;strong>Web editor&lt;/strong>&lt;/a> or the &lt;strong>Android editor&lt;/strong> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
-&lt;hr />
-&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://www.walaber.com/replicube">&lt;strong>Replicube&lt;/strong>&lt;/a>, &lt;em>a programming puzzle game where you write code to recreate voxelized objects. It is developed by &lt;a href="https://www.walaber.com/">Walaber Entertainment LLC&lt;/a> (&lt;a href="https://bsky.app/profile/walaber.com">Bluesky&lt;/a>, &lt;a href="https://twitter.com/walaber">Twitter&lt;/a>). You can get the game on &lt;a href="https://store.steampowered.com/app/3401490/Replicube/?curator_clanid=41324400">Steam&lt;/a>.&lt;/em>&lt;/p>
-&lt;h2 id="highlights">Highlights&lt;/h2>
-&lt;p>In case you missed them, see the &lt;a href="/article/dev-snapshot-godot-4-5-dev-1/">4.5 dev 1&lt;/a>, &lt;a href="/article/dev-snapshot-godot-4-5-dev-2/">4.5 dev 2&lt;/a>, &lt;a href="/article/dev-snapshot-godot-4-5-dev-3/">4.5 dev 3&lt;/a>, and &lt;a href="/article/dev-snapshot-godot-4-5-dev-4/">4.5 dev 4&lt;/a> release notes for an overview of some key features which were already in those snapshots, and are therefore still available for testing in dev 5.&lt;/p>
-&lt;h3 id="native-visionos-support">Native visionOS support&lt;/h3>
-&lt;p>Normally, our featured highlights in these development blogs come from long-time contributors. This makes sense of course, as it’s generally those users that have the familiarity necessary for major changes or additions that are commonly used for these highlights. That’s why it might surprise you to hear that visionOS support comes to us from &lt;a href="https://github.com/rsanchezsaez">Ricardo Sanchez-Saez&lt;/a>, whose pull request &lt;a href="https://github.com/godotengine/godot/pull/105628">GH-105628&lt;/a> is his &lt;em>very first&lt;/em> contribution to the engine! It might &lt;em>not&lt;/em> surprise you to hear that Ricardo is part of the visionOS engineering team at Apple, which certainly helps get his foot in the door, but that still makes visionOS the first officially-supported platform integration in about a decade.&lt;/p>
-&lt;p>For those unfamiliar, visionOS is Apple’s XR environment. We’re no strangers to XR as a concept (see our recent &lt;a href="/article/godot-xr-update-mar-2025/">XR blogpost&lt;/a> highlighting the latest &lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025">Godot XR Game Jam&lt;/a>), but XR platforms are as distinct from one another as traditional platforms. visionOS users have expressed a strong interest in integrating with our ever-growing XR community, and now we can make that happen. See you all in the next XR Game Jam!&lt;/p>
-&lt;h3 id="gdscript-abstract-classes">GDScript: Abstract classes&lt;/h3>
-&lt;p>While the Godot Engine utilizes abstract classes—a class that cannot be directly instantiated—frequently, this was only ever supported internally. Thanks to the efforts of &lt;a href="https://github.com/aaronfranke">Aaron Franke&lt;/a>, this paradigm is now available to GDScript users (&lt;a href="https://github.com/godotengine/godot/pull/67777">GH-67777&lt;/a>). Now if a user wants to introduce their own abstract class, they merely need to declare it via the new &lt;code class="language-plaintext highlighter-rouge">abstract&lt;/code> keyword:&lt;/p>
-&lt;div class="language-gdscript highlighter-rouge">&lt;div class="highlight">&lt;pre class="highlight">&lt;code>&lt;span class="n">abstract&lt;/span> &lt;span class="k">class_name&lt;/span> &lt;span class="n">MyAbstract&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="n">Node&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
-&lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/abstract-error.webp" alt="Abstract error" />&lt;/p>
-&lt;p>The purpose of an abstract class is to create a baseline for other classes to derive from:&lt;/p>
-&lt;div class="language-gdscript highlighter-rouge">&lt;div class="highlight">&lt;pre class="highlight">&lt;code>&lt;span class="k">class_name&lt;/span> &lt;span class="n">ExtendsMyAbstract&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="n">MyAbstract&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
-&lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/abstract-derived.webp" alt="Abstract derived" />&lt;/p>
-&lt;h3 id="shader-baker">Shader baker&lt;/h3>
-&lt;p>From the technical gurus behind implementing &lt;a href="/article/dev-snapshot-godot-4-4-dev-4/#ubershaders-and-pipeline-pre-compilation-and-dedicated-transfer-queues">ubershaders&lt;/a>, &lt;a href="https://github.com/DarioSamo">Darío Samo&lt;/a> and &lt;a href="https://github.com/RandomShaper">Pedro J. Estébanez&lt;/a> bring us another miracle of rendering via &lt;a href="https://github.com/godotengine/godot/pull/102552">GH-102552&lt;/a>: shader baker exporting. This is an optional feature that can be enabled at export time to speed up shader compilation massively. This feature works with ubershaders automatically without any work from the user. Using shader baking is strongly recommended when targeting Apple devices or D3D12 since it makes the biggest difference there (over &lt;strong>20× decrease&lt;/strong> in load times in the TPS demo)!&lt;/p>
-&lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker.webp" alt="Shader baker" />&lt;/p>
-&lt;p>&lt;strong>Before:&lt;/strong>&lt;/p>
-&lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-before.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>&lt;strong>After:&lt;/strong>&lt;/p>
-&lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/dev-snapshot-godot-4-5-dev-5/shader-baker-after.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>However, it comes with tradeoffs:&lt;/p>
-&lt;ol>
-&lt;li>Export time will be much longer.&lt;/li>
-&lt;li>Build size will be much larger since the baked shaders can take up a lot of space.&lt;/li>
-&lt;li>We have removed several MoltenVK bug workarounds from the Forward+ shader, therefore we no longer guarantee support for the Forward+ renderer on Intel Macs. If you are targeting Intel Macs, you should use the Mobile or Compatibility renderers.&lt;/li>
-&lt;li>Baking for Vulkan can be done from any device, but baking for D3D12 needs to be done from a Windows device and baking for Apple &lt;code class="language-plaintext highlighter-rouge">.metallib&lt;/code> requires a Metal compiler (macOS with Xcode / Command Line Tools installed).&lt;/li>
-&lt;/ol>
-&lt;h3 id="web-webassembly-simd-support">Web: WebAssembly SIMD support&lt;/h3>
-&lt;p>As you might recall, Godot 4.0 initially released under the assumption that multi-threaded web support would become the standard, and only supported that format for web builds. This assumption unfortunately proved to be wishful thinking, and was &lt;a href="/article/dev-snapshot-godot-4-3-dev-3/#single-threaded-web-exports">reverted in 4.3&lt;/a> by allowing for single-threaded builds once more. However, this doesn’t mean that these single-threaded environments are inherently incapable of parallel processing; it just requires alternative implementations. One such implementation, &lt;abbr title="Single instruction, multiple data">&lt;a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data">SIMD&lt;/a>&lt;/abbr>, is a perfect candidate thanks to its support across &lt;a href="https://caniuse.com/wasm-simd">all major browsers&lt;/a>. To that end, web-wiz &lt;a href="https://github.com/adamscott">Adam Scott&lt;/a> has taken to integrating this implementation for our web builds by default (&lt;a href="https://github.com/godotengine/godot/pull/106319">GH-106319&lt;/a>).&lt;/p>
-&lt;h3 id="inline-color-pickers">Inline color pickers&lt;/h3>
-&lt;p>While it’s always been possible to see what kind of variable is assigned to an exported color in the inspector, some users have expressed a keen interest in allowing for this functionality within the script editor itself. This is because it would mean seeing what kind of color is represented by a variable without it needing to be exposed, as well as making it more intuitive at a glance as to what color a name or code corresponds to. &lt;a href="https://github.com/dugramen">Koliur Rahman&lt;/a> has blessed us with this quality-of-life goodness, which adds an inline color picker &lt;a href="https://github.com/godotengine/godot/pull/105724">GH-105724&lt;/a>. Now no matter where the color is declared, users will be able to immediately and intuitively know what is actually represented in a non-intrusive manner.&lt;/p>
-&lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/inline-color-picker.webp" alt="Inline color picker" />&lt;/p>
-&lt;h3 id="rendering-goodies">Rendering goodies&lt;/h3>
-&lt;p>The renderer got a fair amount of love this snapshot; not from any one PR, but rather a multitude of community members bringing some long-awaited features to light. &lt;a href="https://github.com/RGDTAB">Raymond DiDonato&lt;/a> helped SMAA 1x make its transition from addon to fully-fledged engine feature (&lt;a href="https://github.com/godotengine/godot/pull/102330">GH-102330&lt;/a>). &lt;a href="https://github.com/LunaCapra">Capry&lt;/a> brings bent normal maps to further enhance specular occlusion and indirect lighting (&lt;a href="https://github.com/godotengine/godot/pull/89988">GH-89988&lt;/a>). Our very own &lt;a href="https://github.com/clayjohn">Clay John&lt;/a> converted our Compatibility backend to use a fragment shader copy instead of a blit copy, working around common sample rate issues on mobile devices (&lt;a href="https://github.com/godotengine/godot/pull/106267">GH-106267&lt;/a>). More technical information on these rendering changes can be found in their associated PRs.&lt;/p>
-&lt;p>&lt;strong>SMAA comparison:&lt;/strong>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: center">Off&lt;/th>
-&lt;th style="text-align: center">On&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-1.webp" alt="SMAA off 1" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-1.webp" alt="SMAA on 1" width="350" />&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-off-2.webp" alt="SMAA off 2" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/smaa-on-2.webp" alt="SMAA on 2" width="350" />&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;strong>Bent normal map comparison:&lt;/strong>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: center">Before&lt;/th>
-&lt;th style="text-align: center">After&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-1.webp" alt="Bent normals before 1" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-1.webp" alt="Bent normals after 1" width="350" />&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-2.webp" alt="Bent normals before 2" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-2.webp" alt="Bent normals after 2" width="350" />&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-before-3.webp" alt="Bent normals before 3" width="350" />&lt;/td>
-&lt;td style="text-align: center">&lt;img src="/storage/blog/dev-snapshot-godot-4-5-dev-5/bent-normals-after-3.webp" alt="Bent normals after 3" width="350" />&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="and-more">And more!&lt;/h3>
-&lt;p>There are too many exciting changes to list them all here, but here’s a curated selection:&lt;/p>
-&lt;ul>
-&lt;li>Animation: Add alphabetical sorting to Animation Player (&lt;a href="https://github.com/godotengine/godot/pull/103584">GH-103584&lt;/a>).&lt;/li>
-&lt;li>Animation: Add animation filtering to animation editor (&lt;a href="https://github.com/godotengine/godot/pull/103130">GH-103130&lt;/a>).&lt;/li>
-&lt;li>Audio: Implement seek operation for Theora video files, improve multi-channel audio resampling (&lt;a href="https://github.com/godotengine/godot/pull/102360">GH-102360&lt;/a>).&lt;/li>
-&lt;li>Core: Add &lt;code class="language-plaintext highlighter-rouge">--scene&lt;/code> command line argument (&lt;a href="https://github.com/godotengine/godot/pull/105302">GH-105302&lt;/a>).&lt;/li>
-&lt;li>Core: Overhaul resource duplication (&lt;a href="https://github.com/godotengine/godot/pull/100673">GH-100673&lt;/a>).&lt;/li>
-&lt;li>Core: Use Grisu2 algorithm in &lt;code class="language-plaintext highlighter-rouge">String::num_scientific&lt;/code> to fix serializing (&lt;a href="https://github.com/godotengine/godot/pull/98750">GH-98750&lt;/a>).&lt;/li>
-&lt;li>Editor: Add “Quick Load” button to &lt;code class="language-plaintext highlighter-rouge">EditorResourcePicker&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/104490">GH-104490&lt;/a>).&lt;/li>
-&lt;li>Editor: Add &lt;code class="language-plaintext highlighter-rouge">PROPERTY_HINT_INPUT_NAME&lt;/code> for use with &lt;code class="language-plaintext highlighter-rouge">@export_custom&lt;/code> to allow using input actions (&lt;a href="https://github.com/godotengine/godot/pull/96611">GH-96611&lt;/a>).&lt;/li>
-&lt;li>Editor: Add named &lt;code class="language-plaintext highlighter-rouge">EditorScript&lt;/code>s to the command palette (&lt;a href="https://github.com/godotengine/godot/pull/99318">GH-99318&lt;/a>).&lt;/li>
-&lt;li>GUI: Add file sort to FileDialog (&lt;a href="https://github.com/godotengine/godot/pull/105723">GH-105723&lt;/a>).&lt;/li>
-&lt;li>I18n: Add translation preview in editor (&lt;a href="https://github.com/godotengine/godot/pull/96921">GH-96921&lt;/a>).&lt;/li>
-&lt;li>Import: Add Channel Remap settings to &lt;code class="language-plaintext highlighter-rouge">ResourceImporterTexture&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/99676">GH-99676&lt;/a>).&lt;/li>
-&lt;li>Physics: Improve performance with non-monitoring areas when using Jolt Physics (&lt;a href="https://github.com/godotengine/godot/pull/106490">GH-106490&lt;/a>).&lt;/li>
-&lt;li>Porting: Android: Add export option for custom theme attributes (&lt;a href="https://github.com/godotengine/godot/pull/106724">GH-106724&lt;/a>).&lt;/li>
-&lt;li>Porting: Android: Add support for 16 KB page sizes, update to NDK r28b (&lt;a href="https://github.com/godotengine/godot/pull/106358">GH-106358&lt;/a>).&lt;/li>
-&lt;li>Porting: Android: Remove the &lt;code class="language-plaintext highlighter-rouge">gradle_build/compress_native_libraries&lt;/code> export option (&lt;a href="https://github.com/godotengine/godot/pull/106359">GH-106359&lt;/a>).&lt;/li>
-&lt;li>Porting: Web: Use actual &lt;code class="language-plaintext highlighter-rouge">PThread&lt;/code> pool size for &lt;code class="language-plaintext highlighter-rouge">get_default_thread_pool_size()&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/104458">GH-104458&lt;/a>).&lt;/li>
-&lt;li>Porting: Windows/macOS/Linux: Use SSE 4.2 as a baseline when compiling Godot (&lt;a href="https://github.com/godotengine/godot/pull/59595">GH-59595&lt;/a>).&lt;/li>
-&lt;li>Rendering: Add new StandardMaterial properties to allow users to control FPS-style objects (hands, weapons, tools close to the camera) (&lt;a href="https://github.com/godotengine/godot/pull/93142">GH-93142&lt;/a>).&lt;/li>
-&lt;li>Rendering: FTI - Optimize &lt;code class="language-plaintext highlighter-rouge">SceneTree&lt;/code> traversal (&lt;a href="https://github.com/godotengine/godot/pull/106244">GH-106244&lt;/a>).&lt;/li>
-&lt;/ul>
-&lt;h2 id="changelog">Changelog&lt;/h2>
-&lt;p>&lt;strong>109 contributors&lt;/strong> submitted &lt;strong>252 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.5-dev5">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the previous 4.5-dev4 snapshot.&lt;/p>
-&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/64b09905c7b2877f8aef99d8b63e73e5d31acfb9">&lt;code class="language-plaintext highlighter-rouge">64b09905c&lt;/code>&lt;/a>.&lt;/p>
-&lt;h2 id="downloads">Downloads&lt;/h2>
-&lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.5-dev5">
-Download Godot 4.5 dev5
-&lt;/a>
-&lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-5-dev-5.webp" />
-&lt;div class="card-download-platforms">
-&lt;div class="download-platform platform-linux">
-&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
-Linux
-&lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-dev5/Godot_v4.5-dev5_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-dev5/Godot_v4.5-dev5_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-macos">
-&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
-macOS
-&lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-dev5/Godot_v4.5-dev5_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-dev5/Godot_v4.5-dev5_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-windows">
-&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
-Windows
-&lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-dev5/Godot_v4.5-dev5_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-dev5/Godot_v4.5-dev5_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.5-dev5">
-Export templates and other downloads
-&lt;/a>
-&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
-Make a Donation
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;style>
-.thankyou-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.85);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 10;
-}
-.thankyou {
-background: var(--base-color);
-box-shadow: var(--more-shadow);
-padding: 30px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-position: relative;
-border-radius: 13px;
-}
-.thankyou-reading {
-font-size: 16px;
-}
-.thankyou-reading-list {
-font-size: 16px;
-margin: 0;
-margin-left: 48px;
-padding-left: 0;
-}
-.thankyou-donate {
-margin-bottom: 24px;
-text-align: center;
-}
-.btn.btn-donate {
-background-color: var(--primary-color);
-color: hsla(0, 0%, 100%, 0.9);
-font-size: 22px;
-font-weight: 600;
-margin-bottom: 26px;
-}
-.thankyou h2 {
-text-shadow: var(--base-shadow);
-font-size: 36px;
-font-weight: 800;
-margin-bottom: 12px;
-}
-.thankyou h2 .anchored-link {
-/* Hiding the anchored text automatically added on blogposts */
-display: none !important;
-}
-.thankyou p {
-max-width: 620px;
-font-size: 25px;
-}
-@media (max-width: 768px) {
-.thankyou-wrapper {
-display: block;
-}
-.thankyou {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-overflow: scroll;
-padding: 30px 40px 18px 40px;
-}
-.thankyou-reading-list {
-margin-left: 24px;
-}
-.btn-close-thankyou-popup {
-width: 48px;
-height: 48px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-}
-.btn-close-thankyou-popup {
-cursor: pointer;
-position: absolute;
-top: 12px;
-right: 12px;
-}
-.btn-close-thankyou-popup img {
-background: transparent !important; /* for overwriting the style in the blogposts img */
-}
-@media (prefers-color-scheme: light) {
-.btn-close-thankyou-popup img {
-filter: invert(1);
-opacity: 0.75;
-}
-}
-&lt;/style>
-&lt;script>
-document.addEventListener('DOMContentLoaded', () => {
-const thankYouWrapper = document.getElementById('thank-you');
-// Close itself, when clicked outside of the popup area.
-thankYouWrapper.addEventListener('click', (e) => {
-if (e.target === thankYouWrapper) {
-thankYouWrapper.style.display = 'none';
-}
-});
-// Close with a close button.
-const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
-thankYouBackButton.addEventListener('click', () => {
-thankYouWrapper.style.display = 'none';
-});
-// Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
-downloadButtons.forEach((it) => {
-if (it.dataset?.external === "yes") {
-return;
-}
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-document.querySelector('.btn.btn-donate').focus();
-});
-});
-// Open from the all downloads list.
-const downloadLinks = document.querySelectorAll('.download-link');
-downloadLinks.forEach((it) => {
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-});
-});
-// Close the dialog when the user presses the escape key.
-document.addEventListener('keydown', (e) => {
-if (e.key === 'Escape') {
-thankYouWrapper.style.display = 'none';
-}
-});
-});
-&lt;/script>
-&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
-&lt;div class="thankyou">
-&lt;h2>Godot is downloading...&lt;/h2>
-&lt;p class="thankyou-donate">
-Godot exists thanks to donations from people like you. Help us continue our work:
-&lt;/p>
-&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
-Make a Donation
-&lt;/a>
-&lt;div class="btn-close-thankyou-popup">
-&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
-&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
-&lt;div class="card card-warning">
-&lt;p>
-While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
-&lt;/p>
-&lt;/div>
-&lt;h2 id="known-issues">Known issues&lt;/h2>
-&lt;ul>
-&lt;li>Windows executables (both the editor and export templates) have been signed with an expired certificate. You may see warnings from Windows Defender’s SmartScreen when running this version, or outright be prevented from running the executables with a double-click (&lt;a href="https://github.com/godotengine/godot/issues/106373">GH-106373&lt;/a>). Running Godot from the command line can circumvent this. We will soon have a renewed certificate which will be used for future builds.&lt;/li>
-&lt;/ul>
-&lt;p>With every release, we accept that there are going to be various issues, which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug">known bugs&lt;/a>.&lt;/p>
-&lt;h2 id="bug-reports">Bug reports&lt;/h2>
-&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
-&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
-&lt;h2 id="support">Support&lt;/h2>
-&lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a>.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-5-dev-5/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Mon, 02 Jun 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-5-dev-5.webp</image></item></channel></rss>
+&lt;/div></description><category>Progress Report</category><guid>https://godotengine.org/article/upcoming-serious-web-performance-boost/</guid><dc:creator>Adam Scott</dc:creator><pubDate>Thu, 05 Jun 2025 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/upcoming-serious-web-performance-boost.webp</image></item></channel></rss>
