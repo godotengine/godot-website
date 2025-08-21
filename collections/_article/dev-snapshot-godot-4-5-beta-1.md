@@ -258,9 +258,11 @@ There's also the newly added `SVGTexture`, implemented by our very own [bruvzg](
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.mp4?1" type="video/mp4">
 </video>
 
+**Edit 2025-08-21:** *Starting with 4.5 beta 6, the name of this feature was changed to `DPITexture` to better reflect the original intent ([GH-109811](https://github.com/godotengine/godot/pull/109811)). For more information, see our section highlighting the change in the [4.5 beta 6 blog post](/article/dev-snapshot-godot-4-5-beta-6/).*
+
 And more:
 - TextEdit/LineEdit: Add support for OEM Alt codes input. ([GH-93466](https://github.com/godotengine/godot/pull/93466))
-- Stackable outlines on `Label`. ([GH-104731](https://github.com/godotengine/godot/pull/104731)
+- Stackable outlines on `Label`. ([GH-104731](https://github.com/godotengine/godot/pull/104731))
 - Replace global oversampling with overrideable per-viewport oversampling. ([GH-104872](https://github.com/godotengine/godot/pull/104872))
 - RichTextLabel: Add paragraph separation theme property. ([GH-107331](https://github.com/godotengine/godot/pull/107331))
 
