@@ -175,7 +175,7 @@ header .banner-container .banner a {
 .nav-dropdown-menu {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 5px;
-  background: #303030e3;
+  background: light-dark(#ffffffe3, #303030e3);
   border: 1px solid #ffffff3b;
 
 	position: fixed;
@@ -332,7 +332,7 @@ header .banner-container .banner a {
 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 			z-index: 1;
 			border-radius: 5px;
-			background: lightdark(#ffffffe3, #303030e3);
+			background: #303030e3;
 			border: 1px solid #ffffff3b;
 			position: relative;
 			top: 50px;
