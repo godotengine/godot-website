@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:mpeg:DASH:schema:MPD:2011"
+  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011"
+  type="static"
+  mediaPresentationDuration="PT40.733S"
+  minBufferTime="PT1S"
+  profiles="urn:mpeg:dash:profile:webm-on-demand:2012">
+<Period id="0" start="PT0S" duration="PT40.733S" >
+<AdaptationSet id="0" mimeType="video/webm" codecs="vp9" bitstreamSwitching="true" subsegmentAlignment="false" subsegmentStartsWithSAP="1">
+<Representation id="0" bandwidth="108874" width="432" height="188">
+<BaseURL>godot-lander_432x188_100k.webm</BaseURL>
+<SegmentBase
+  indexRange="568551-568725">
+<Initialization
+  range="0-665" />
+</SegmentBase>
+</Representation>
+<Representation id="1" bandwidth="275169" width="864" height="376">
+<BaseURL>godot-lander_864x376_250k.webm</BaseURL>
+<SegmentBase
+  indexRange="1407218-1407411">
+<Initialization
+  range="0-676" />
+</SegmentBase>
+</Representation>
+<Representation id="2" bandwidth="567884" width="1728" height="752">
+<BaseURL>godot-lander_1728x752_500k.webm</BaseURL>
+<SegmentBase
+  indexRange="2850826-2851019">
+<Initialization
+  range="0-676" />
+</SegmentBase>
+</Representation>
+<Representation id="3" bandwidth="871796" width="2592" height="1130">
+<BaseURL>godot-lander_2592x1130_750k.webm</BaseURL>
+<SegmentBase
+  indexRange="4302275-4302468">
+<Initialization
+  range="0-676" />
+</SegmentBase>
+</Representation>
+<Representation id="4" bandwidth="1180042" width="3456" height="1505">
+<BaseURL>godot-lander_3456x1105_1000k.webm</BaseURL>
+<SegmentBase
+  indexRange="5753706-5753899">
+<Initialization
+  range="0-666" />
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+</Period>
+</MPD>
