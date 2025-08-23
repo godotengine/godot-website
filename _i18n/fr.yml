@@ -1,5 +1,6 @@
 meta:
   description: Développez vos jeux en 2D et 3D, des projets cross-plateformes ou même des applications XR&nbsp;!
+  dir: ltr
 header:
   features: Fonctions
   showcase: Vitrine
