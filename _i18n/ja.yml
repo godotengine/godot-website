@@ -1,6 +1,8 @@
 meta:
   description: "2D・3Dゲーム、クロスプラットフォームプロジェクト、XRアイデアまで幅広く対応！"
 header:
+  godot_engine: "Godotエンジン"
+  main_menu: "メインメニュー"
   features: "特長"
   showcase: "ショーケース"
   blog: "ブログ"
