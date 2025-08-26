@@ -186,6 +186,15 @@ France or French-speaking:
     links:
       - title: Discord
         url: https://discord.gg/gZ3QJ5T
+  - name: Godot Lyon
+    coordinates:
+      - 45.76741461629292
+      - 4.879337314640945
+    links:
+      - title: Discord
+        url: https://discord.gg/mH27RzGxqK
+      - title: Mobilizon
+        url: https://mobilizon.fr/@godot_lyon
 Germany:
   - name: Godot Germany
     links:
