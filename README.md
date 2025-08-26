@@ -35,7 +35,7 @@ open a formal Godot improvement proposal like you do with engine features, but s
 or joining the discussion on the [Godot Contributors Chat](https://chat.godotengine.org/channel/website) is a good
 idea.
 
-[^1]: https://docs.godotengine.org/en/latest/contributing/workflow/index.html
+[^1]: https://contributing.godotengine.org/en/latest/other/website.html
 [^2]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 [^3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 

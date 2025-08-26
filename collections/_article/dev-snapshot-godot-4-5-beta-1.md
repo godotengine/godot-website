@@ -297,7 +297,7 @@ Internationalization has always been an extremely crucial part of the Godot proj
 
 Similarly, the ability to swap languages on-the-fly within the editor is now possible thanks to the efforts of [Tomasz Chabora](https://github.com/KoBeWi) in [GH-102562](https://github.com/godotengine/godot/pull/102562). Now users can preview *and* experience multiple language options in a single editor session.
 
-We also want to give a shout-out to all the translators who tirelessly work on localizing the Godot editor, the class reference and the online documentation. If you'd like to join that effort, head to [Weblate](https://hosted.weblate.org/projects/godot-engine/) and review our [documentation](https://docs.godotengine.org/en/latest/contributing/documentation/editor_and_docs_localization.html#doc-editor-and-docs-localization) for instructions.
+We also want to give a shout-out to all the translators who tirelessly work on localizing the Godot editor, the class reference and the online documentation. If you'd like to join that effort, head to [Weblate](https://hosted.weblate.org/projects/godot-engine/) and review our [documentation](https://contributing.godotengine.org/en/latest/documentation/translation/index.html) for instructions.
 
 ### Navigation
 

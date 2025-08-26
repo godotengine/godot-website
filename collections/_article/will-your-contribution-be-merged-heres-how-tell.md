@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5bf/33b/9b7/5bf33b9b794d9900123756.png
 date: 2018-11-19 00:00:00
 ---
 
-The [**pull request workflow**](http://docs.godotengine.org/en/latest/community/contributing/pr_workflow.html) is great, because it allows proposing changes to the codebase in a way where they can be evaluated, reviewed (with feedback) and eventually merged or rejected. Despite this, a large amount of pull requests (PRs) get rejected for reasons that are often unclear to new contributors.
+The [**pull request workflow**](https://contributing.godotengine.org/en/latest/organization/pull_requests/creating_pull_requests.html) is great, because it allows proposing changes to the codebase in a way where they can be evaluated, reviewed (with feedback) and eventually merged or rejected. Despite this, a large amount of pull requests (PRs) get rejected for reasons that are often unclear to new contributors.
 
 To avoid unnecesary work, this short article has some suggestions on what is desired and what is not, and the general rules for accepting or rejecting pull requests.
 

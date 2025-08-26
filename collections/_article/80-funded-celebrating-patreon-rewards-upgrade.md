@@ -14,7 +14,7 @@ I have to admit, the financial support that we got over the last two weeks has b
 When we started working on the Patreon page with Juan, we expected that it would take a few months and the publication of Godot 3.0 to bring us near to our $3,000 monthly goal which could secure us Juan's full-time dedication to the project.
 
 And here we are, two weeks in and already 80% funded, with barely $600 missing to reach our main goal - and it keeps growing [slowly but steadily](https://graphtreon.com/creator/godotengine), with a daily influx of new donors.
-We want to thank you all for your incredible support! Whether you [contribute to the engine's development](http://docs.godotengine.org/en/latest/community/contributing/ways_to_contribute.html) via code, bug reports, testing, teaching, developing awesome games or donating to the project, you all participate in making Godot!
+We want to thank you all for your incredible support! Whether you [contribute to the engine's development](https://contributing.godotengine.org/en/latest/organization/how_to_contribute.html) via code, bug reports, testing, teaching, developing awesome games or donating to the project, you all participate in making Godot!
 
 And this is also very invigorating. We are a non-profit project, dedicated to making the best free and open source game engine not for our own sake, but for anyone wanting to develop games.
 Seeing that we are able to crowdfund the development of our engine proves us the worth of our voluntary work as free software contributors, and that we are creating something really unique with Godot.
