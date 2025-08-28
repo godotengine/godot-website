@@ -50,7 +50,7 @@ This feature has a limited use-case, and will not be extended beyond that.
 
 ## Changelog
 
-**53 contributors** submitted **111 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.5-beta6) for the complete list of changes since the previous 4.5-beta5 snapshot.
+**55 contributors** submitted **111 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.5-beta6) for the complete list of changes since the previous 4.5-beta5 snapshot.
 
 This release is built from commit [`d5ad0556a`](https://github.com/godotengine/godot/commit/d5ad0556a2c04c50694b5c04dc1b3bf03ecd7113).
 
