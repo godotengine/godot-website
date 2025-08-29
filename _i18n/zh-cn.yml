@@ -1,5 +1,6 @@
 meta:
   description: 开发你的 2D & 3D 游戏，跨平台项目，甚至是 XR 创意！
+  dir: ltr
 header:
   features: 特性
   showcase: 展示
