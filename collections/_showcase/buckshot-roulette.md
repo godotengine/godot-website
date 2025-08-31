@@ -4,7 +4,7 @@ date: 2024-04-04 00:00:00 +0000
 
 title: Buckshot Roulette
 author: Mike Klubnika
-website: https://buckshotroulette.com
+website: https://mikeklubnika.com/games/buckshot_roulette
 release_date: April 2024
 
 image: "/assets/showcase/buckshot-roulette.jpg"
@@ -26,7 +26,7 @@ featured_in_home: false
 
 ## Shoot Your Friends
 
-Take a seat at the new 4-way multiplayer table. Bargain. Beg. Betray. Become the ultimate victor. Walk away rich. 
+Take a seat at the new 4-way multiplayer table. Bargain. Beg. Betray. Become the ultimate victor. Walk away rich.
 
 ## 12-Gauge Action
 
@@ -34,11 +34,11 @@ Play Russian roulette with a 12-gauge. Cause shotguns just feel better.
 
 ## Literally Mindblowing Gameplay
 
-15 to 20-minute intense playtime. Enter the arena, go three rounds against The Dealer, and walk away with the prize. Or don't. 
+15 to 20-minute intense playtime. Enter the arena, go three rounds against The Dealer, and walk away with the prize. Or don't.
 
 ## Immersive Atmosphere
 
-Welcome to the underground nightclub, where metal railings pulse to the beats of forgotten drum machines. 
+Welcome to the underground nightclub, where metal railings pulse to the beats of forgotten drum machines.
 
 ## Meet Your Match
 
