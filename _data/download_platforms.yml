@@ -48,6 +48,14 @@
     - Meta Quest 3 & Pro
     - arm64
 
+- name: android.picoos
+  title: Pico OS
+  caption: APK - arm64
+  tags:
+    - APK download
+    - PICO 4
+    - arm64
+
 - name: "linux.32"
   title: "Linux"
   caption: "x86_32"
