@@ -5,7 +5,7 @@ categories: ["progress-report"]
 author: Bastiaan Olij
 image: /storage/blog/covers/august-2025-update-godot-xr-community.webp
 image_caption_description: "Godot XR Game Jam IV logo"
-date: 2025-09-01 12:00:00
+date: 2025-09-02 12:00:00
 ---
 
 ## Godot XR Community Game Jam
