@@ -1,7 +1,7 @@
 meta:
-  description: 開發你的 2D 與 3D 遊戲，跨平台專案，甚至是 XR 創意！
+  description: 開發你的 2D 與 3D 遊戲、跨平台專案，甚至是 XR 創意！
 header:
-  features: 特性
+  features: 特色
   showcase: 展示
   blog: 部落格
   community: 社群
@@ -17,7 +17,7 @@ header:
 footer:
   download: 下載
   documentation: 文件
-  features: 特性
+  features: 特色
   web_editor: 網頁編輯器
   release_archive: 發行版歸檔
   source_code: 原始碼
@@ -47,10 +47,10 @@ sponsors:
   cta: 捐助
 home:
   h1: 屬於你的免費、<br>開源遊戲引擎。
-  subtitle: 開發你的 2D 與 3D 遊戲，跨平台專案，甚至是 XR 創意！
+  subtitle: 開發你的 2D 與 3D 遊戲、跨平台專案，甚至是 XR 創意！
   whats_new: 最近更新
   download_latest: 下載最新版
-  looking_for: '正在尋找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下載 Godot 3 的長期支援版本">Godot 3</a>，我們的<a href="/download/archive">實驗性版本</a>，或是一個<a href="/download/archive">歷史版本</a>？'
+  looking_for: '正在尋找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下載 Godot 3 的長期支援版本">Godot 3</a>、我們的<a href="/download/archive">實驗性版本</a>，或是一個<a href="/download/archive">歷史版本</a>？'
   latest_news: 最近新聞
   more_news: 更多新聞
   cards:
@@ -74,7 +74,7 @@ home:
     open:
       title: 開放原始碼
       text: "真正的開放式開發：每位 Godot 貢獻者均平等受益於他人的付出。"
-    cta: 獲取更多關於使用 Godot 的資訊
+    cta: 獲取更多有關 Godot 的資訊
   get_involved:
     title: 參與其中
     text: 加入社群並協助創建出一個屬於所有人的遊戲引擎。
