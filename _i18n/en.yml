@@ -1,5 +1,6 @@
 meta:
   description: Develop your 2D & 3D games, cross-platform projects, or even XR ideas!
+  dir: ltr
 header:
   features: Features
   showcase: Showcase
