@@ -1,4 +1,259 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-09-02T22:55:34+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot XR update - August 2025</title><link href="https://godotengine.org/article/godot-xr-update-aug-2025/"/><updated>2025-09-02T12:00:00+00:00</updated><id>https://godotengine.org/article/godot-xr-update-aug-2025/</id><summary>Upcoming XR game jam, using the XR editor, new release channels and the new Render Models API</summary><content type="html">&lt;h2 id="godot-xr-community-game-jam">Godot XR Community Game Jam&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-09-05T17:39:45+00:00</updated><id>https://godotengine.org/</id><entry><title>Release candidate: Godot 4.5 RC 1</title><link href="https://godotengine.org/article/release-candidate-godot-4-5-rc-1/"/><updated>2025-09-05T12:00:00+00:00</updated><id>https://godotengine.org/article/release-candidate-godot-4-5-rc-1/</id><summary>Godot 4.5 stable release is imminent; let the last round(s) of testing begin!</summary><content type="html">&lt;p>The final stage of development for Godot 4.5 has arrived: the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a>. This means that all of our planned features are in place and the most critical regressions have been tackled, so we’re confident that it’s now ready for production use.&lt;/p>
+&lt;p>However, we can never be 100% sure that the release is ready to be published without very extensive testing from the community. So while Godot 4.5 is now ready for testing on existing projects (always make a copy/backup before upgrading, preferably with version control), we’re eager to hear how it fares and whether any new major issues have gone unnoticed until now.&lt;/p>
+&lt;p>While we are confident that we are &lt;em>nearly&lt;/em> ready to release. There will be at least one more RC release after this one containing bug fixes for exporting C# projects to certain, older, Android devices and for shipping baked shaders on iOS devices. We have fixes in the queue already and anticipate merging them promptly and releasing an RC2 early next week. If no major regressions are reported with RC1/RC2, we anticipate releasing 4.5 stable shortly after.&lt;/p>
+&lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
+&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.5.rc1/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/h9JcJGHfg">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
+&lt;hr />
+&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/3064030/Whimside/?curator_clanid=41324400">&lt;strong>Whimside&lt;/strong>&lt;/a>, &lt;em>a creature collector where your pixel art companions keep you company at the bottom of your screen. You can buy the game on &lt;a href="https://store.steampowered.com/app/3064030/Whimside/?curator_clanid=41324400">Steam&lt;/a>, and follow the developer on &lt;a href="https://bsky.app/profile/toadzillart.itch.io">Bluesky&lt;/a> or &lt;a href="https://www.youtube.com/@Toadzillart">YouTube&lt;/a>.&lt;/em>&lt;/p>
+&lt;h2 id="highlights">Highlights&lt;/h2>
+&lt;p>We covered the most important highlights from Godot 4.5 in the previous &lt;a href="/article/dev-snapshot-godot-4-5-beta-1/">&lt;strong>4.5 beta 1 blog post&lt;/strong>&lt;/a>, so if you haven’t read that one, have a look to be introduced to the main new features added in the 4.5 release.&lt;/p>
+&lt;p>Especially if you’re testing 4.5 for the first time, you’ll want to get a condensed overview of what new features you might want to make use of.&lt;/p>
+&lt;p>This section covers the most relevant changes made since the &lt;a href="/article/dev-snapshot-godot-4-5-beta-7/">beta 7 snapshot&lt;/a>, which are largely regression fixes:&lt;/p>
+&lt;ul>
+&lt;li>Core: Fix regression in mechanism to hold objects while emitting (&lt;a href="https://github.com/godotengine/godot/pull/109770">GH-109770&lt;/a>).&lt;/li>
+&lt;li>Core: Make &lt;code class="language-plaintext highlighter-rouge">SceneTree&lt;/code> not crash when receiving a notification without a root being set (&lt;a href="https://github.com/godotengine/godot/pull/110041">GH-110041&lt;/a>).&lt;/li>
+&lt;li>Editor: Add single-object inspect command backwards compatible API for potential regression (&lt;a href="https://github.com/godotengine/godot/pull/110043">GH-110043&lt;/a>).&lt;/li>
+&lt;li>Editor: Fix Range scale overflow (&lt;a href="https://github.com/godotengine/godot/pull/110107">GH-110107&lt;/a>).&lt;/li>
+&lt;li>Export: Fix editor export plugins always causing resources to be edited (&lt;a href="https://github.com/godotengine/godot/pull/110057">GH-110057&lt;/a>).&lt;/li>
+&lt;li>GUI: Do not set flags when &lt;code class="language-plaintext highlighter-rouge">PopupMenu::set_visible&lt;/code> is called to hide popup (&lt;a href="https://github.com/godotengine/godot/pull/110049">GH-110049&lt;/a>).&lt;/li>
+&lt;li>Input: Fix &lt;code class="language-plaintext highlighter-rouge">Input.get_joy_info()&lt;/code> regression after the SDL input driver PR (&lt;a href="https://github.com/godotengine/godot/pull/108214">GH-108214&lt;/a>).&lt;/li>
+&lt;li>Porting: macOS: Process joypad input directly in the embedded process (&lt;a href="https://github.com/godotengine/godot/pull/109603">GH-109603&lt;/a>).&lt;/li>
+&lt;li>Rendering: Add GENERAL resource usage to the render graph and fix mutable texture initialization in D3D12 (&lt;a href="https://github.com/godotengine/godot/pull/110204">GH-110204&lt;/a>).&lt;/li>
+&lt;li>Rendering: MSDF: Fix outline bleed out at small sizes (&lt;a href="https://github.com/godotengine/godot/pull/110148">GH-110148&lt;/a>).&lt;/li>
+&lt;/ul>
+&lt;h2 id="changelog">Changelog&lt;/h2>
+&lt;p>As we’ve tightened our policy on what kind of changes can be merged leading to the release candidate stage, there aren’t a lot of changes in this snapshot. &lt;strong>18 contributors&lt;/strong> submitted &lt;strong>24 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.5-rc1">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the previous 4.5-beta7 snapshot.&lt;/p>
+&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/6c9aa4c7d3b9b91cd50714c40eeb234874df7075">&lt;code class="language-plaintext highlighter-rouge">6c9aa4c7d&lt;/code>&lt;/a>.&lt;/p>
+&lt;h2 id="downloads">Downloads&lt;/h2>
+&lt;div class="card card-download">
+&lt;a class="card-download-link" href="/download/archive/4.5-rc1">
+Download Godot 4.5 rc1
+&lt;/a>
+&lt;div class="card-download-details">
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-5-rc-1.webp" />
+&lt;div class="card-download-platforms">
+&lt;div class="download-platform platform-linux">
+&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
+Linux
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-macos">
+&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
+macOS
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-windows">
+&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
+Windows
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div class="card-download-sublinks">
+&lt;a class="card-download-other" href="/download/archive/4.5-rc1">
+Export templates and other downloads
+&lt;/a>
+&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
+Make a Donation
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;style>
+.thankyou-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.85);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 10;
+}
+.thankyou {
+background: var(--base-color);
+box-shadow: var(--more-shadow);
+padding: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+position: relative;
+border-radius: 13px;
+}
+.thankyou-reading {
+font-size: 16px;
+}
+.thankyou-reading-list {
+font-size: 16px;
+margin: 0;
+margin-left: 48px;
+padding-left: 0;
+}
+.thankyou-donate {
+margin-bottom: 24px;
+text-align: center;
+}
+.btn.btn-donate {
+background-color: var(--primary-color);
+color: hsla(0, 0%, 100%, 0.9);
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 26px;
+}
+.thankyou h2 {
+text-shadow: var(--base-shadow);
+font-size: 36px;
+font-weight: 800;
+margin-bottom: 12px;
+}
+.thankyou h2 .anchored-link {
+/* Hiding the anchored text automatically added on blogposts */
+display: none !important;
+}
+.thankyou p {
+max-width: 620px;
+font-size: 25px;
+}
+@media (max-width: 768px) {
+.thankyou-wrapper {
+display: block;
+}
+.thankyou {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: scroll;
+padding: 30px 40px 18px 40px;
+}
+.thankyou-reading-list {
+margin-left: 24px;
+}
+.btn-close-thankyou-popup {
+width: 48px;
+height: 48px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+}
+.btn-close-thankyou-popup {
+cursor: pointer;
+position: absolute;
+top: 12px;
+right: 12px;
+}
+.btn-close-thankyou-popup img {
+background: transparent !important; /* for overwriting the style in the blogposts img */
+}
+@media (prefers-color-scheme: light) {
+.btn-close-thankyou-popup img {
+filter: invert(1);
+opacity: 0.75;
+}
+}
+&lt;/style>
+&lt;script>
+document.addEventListener('DOMContentLoaded', () => {
+const thankYouWrapper = document.getElementById('thank-you');
+// Close itself, when clicked outside of the popup area.
+thankYouWrapper.addEventListener('click', (e) => {
+if (e.target === thankYouWrapper) {
+thankYouWrapper.style.display = 'none';
+}
+});
+// Close with a close button.
+const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
+thankYouBackButton.addEventListener('click', () => {
+thankYouWrapper.style.display = 'none';
+});
+// Open from the main download buttons.
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
+downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+document.querySelector('.btn.btn-donate').focus();
+});
+});
+// Open from the all downloads list.
+const downloadLinks = document.querySelectorAll('.download-link');
+downloadLinks.forEach((it) => {
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+});
+});
+// Close the dialog when the user presses the escape key.
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') {
+thankYouWrapper.style.display = 'none';
+}
+});
+});
+&lt;/script>
+&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
+&lt;div class="thankyou">
+&lt;h2>Godot is downloading...&lt;/h2>
+&lt;p class="thankyou-donate">
+Godot exists thanks to donations from people like you. Help us continue our work:
+&lt;/p>
+&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
+Make a Donation
+&lt;/a>
+&lt;div class="btn-close-thankyou-popup">
+&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
+&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
+&lt;div class="card card-warning">
+&lt;p>
+While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
+&lt;/p>
+&lt;/div>
+&lt;h2 id="known-issues">Known issues&lt;/h2>
+&lt;p>During the Release Candidate stage, we focus exclusively on solving showstopping regressions (i.e. something that worked in a previous release is now broken, without workaround). You can have a look at our current &lt;a href="https://github.com/orgs/godotengine/projects/61">list of regressions and significant issues&lt;/a> which we aim to address before releasing 4.5. This list is dynamic and will be updated if we discover new showstopping issues after more users start testing the RC snapshots.&lt;/p>
+&lt;p>With every release, we accept that there are going to be various issues which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug">known bugs&lt;/a>.&lt;/p>
+&lt;h2 id="bug-reports">Bug reports&lt;/h2>
+&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
+&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry><entry><title>Godot XR update - August 2025</title><link href="https://godotengine.org/article/godot-xr-update-aug-2025/"/><updated>2025-09-02T12:00:00+00:00</updated><id>https://godotengine.org/article/godot-xr-update-aug-2025/</id><summary>Upcoming XR game jam, using the XR editor, new release channels and the new Render Models API</summary><content type="html">&lt;h2 id="godot-xr-community-game-jam">Godot XR Community Game Jam&lt;/h2>
 &lt;p>Starting on 8 September 2025 the Godot XR Community is hosting its &lt;a href="https://itch.io/jam/godot-xr-game-jam-sep-2025">fourth Godot XR game jam&lt;/a>.&lt;/p>
 &lt;p>Participants have a week to put together a small XR game using the Godot Game Engine. In addition, special consideration will be given to participants using the &lt;a href="https://www.meta.com/experiences/godot-game-engine/7713660705416473/">Godot XR editor&lt;/a> to create their entry!&lt;/p>
 &lt;p>This is a great way to try out some XR development and hone your game design skills, as well as provide feedback to help improve the XR editor.&lt;/p>
@@ -4247,54 +4502,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
 &lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a>.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry><entry><title>Godot XR update - March 2025</title><link href="https://godotengine.org/article/godot-xr-update-mar-2025/"/><updated>2025-03-28T12:00:00+00:00</updated><id>https://godotengine.org/article/godot-xr-update-mar-2025/</id><summary>Godot XR Community Game Jam February 2025</summary><content type="html">&lt;p>In the second half of February 2025, the &lt;a href="https://godot-xr.itch.io/">Godot XR Community&lt;/a> held their latest &lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025">Godot XR Game Jam&lt;/a>.
-It was organised by &lt;a href="https://www.youtube.com/@BastiaanOlij">Bastiaan Olij&lt;/a> and &lt;a href="https://www.youtube.com/@MalcolmANixon">Malcolm Nixon&lt;/a> acting in their roles as representatives of the general Godot XR Community.&lt;/p>
-&lt;p>This was a week-long event in which developers had to create an XR application using the theme “Enchanted”. XR has great potential on this topic, whether you interpret this as physical spell casting, a magical environment, or something else, and the entries did not disappoint.&lt;/p>
-&lt;p>Compared to our previous game jam, we went from 26 entries and 283 ratings to 27 entries and 290 ratings. Not a great jump, however we had 125 people join this game jam compared to 77 in our previous jam.
-Based on feedback we’ve received on our Discord channel, the main reason the higher participation did not translate to more entries was due to a number of participants not finishing their entry in time. We’ve had overwhelmingly positive feedback on the experience with many new developers becoming active members in our XR community.&lt;/p>
-&lt;p>While subjective, the overall quality of the entries seems to have been a lot higher than the previous jam so we are really looking forward to what the future will bring.&lt;/p>
-&lt;h2 id="top-5">Top 5&lt;/h2>
-&lt;p>Let’s take a closer look at the top 5 entries!&lt;/p>
-&lt;h3 id="no-5-syneed">No 5. Syneed&lt;/h3>
-&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025/rate/3332396">Syneed&lt;/a> by &lt;a href="https://hiina.itch.io/">Hiina&lt;/a> ranked 5th with 13 ratings (Score: 3.705).&lt;/p>
-&lt;p>Our fifth place entry is a puzzle game where you need to manipulate a stream of particles using attractors.
-By adjusting these within the world, the trajectory of the particles changes and you can guide them past a number of stars.
-The goal is for the particle stream to touch all stars.&lt;/p>
-&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/uwsC-RsR9dM" title="syneed: VR puzzle game." frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;h3 id="no-4-keziahs-house">No 4. Keziah’s House&lt;/h3>
-&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025/rate/3331240">Keziah’s House&lt;/a> by &lt;a href="https://warpingrealities.itch.io/">Warping Realities VR&lt;/a> ranked 4th with 12 ratings (Score: 3.764).&lt;/p>
-&lt;p>Our fourth place goes to this great escape room game.
-You find yourself waking up trapped in a derelict old house.
-Solve puzzles while casting magic spells to find your way out.&lt;/p>
-&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/EK75Raq0i7c" title="Keziah's House" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;h3 id="no-3-the-chant-of-cthulhu">No 3. The Chant of Cthulhu&lt;/h3>
-&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025/rate/3322870">The Chant of Cthulhu&lt;/a> by &lt;a href="https://copper-tunic.itch.io/">Copper Tunic&lt;/a> ranked 3rd with 12 ratings (Score: 3.833).&lt;/p>
-&lt;p>Our third place is a horror karaoke game.
-You need to sing out loud the chants given and as you do so, more and more “clones” are created that repeat your words.
-As everything reaches a crescendo, you summon the monsters of the deep.
-All within a church environment that fits the concept well.
-Very good use of recording and sound and with a freeplay mode you can extend the fun by manually placing clones that sing out your recorded song.&lt;/p>
-&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/7Yxv9bE2sIQ" title="The Chant of Cthulhu" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;h3 id="no-2-ez-enchants">No 2. EZ Enchants&lt;/h3>
-&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025/rate/3316696">EZ Enchants&lt;/a> by &lt;a href="https://dragon1freak.itch.io/">Dragon1Freak&lt;/a> ranked 2nd with 12 ratings (Score: 3.931).&lt;/p>
-&lt;p>Our runner-up is a fun little crafting game.
-As customers walk past your little magic store, they ask you to enchant different objects.
-You have to perform different actions according to the customer’s wishes, all within a time limit.
-A very polished, good looking entry that is fun to play!&lt;/p>
-&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/ni4SI-HelwM" title="EZ Enchants - Full Run" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;h3 id="no-1-your-hand-is-a-dragon-xr">No 1. Your Hand Is A Dragon (XR)&lt;/h3>
-&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-feb-2025/rate/3332432">Your Hand Is A Dragon (XR)&lt;/a> by &lt;a href="https://andyman404.itch.io/">Andyman404&lt;/a> ranked 1st with 10 ratings (Score: 4.020).&lt;/p>
-&lt;p>Our winning entry is a very distinct game, as we’ve come to expect from Andyman404.
-You play as a dragon that attacks fortresses manned by knights.
-What makes it unique is that you control the dragon with your hand as if it is a sockpuppet,
-while simultaneously roaring out loud to make the dragon breathe fire.
-It’s especially impressive as Andyman404 only had 3 days to dedicate to this entry.&lt;/p>
-&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/xP-1_EOkLZA" title="Your Hand Is A Dragon - Trailer" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;h2 id="other-entries">Other entries&lt;/h2>
-&lt;p>Malcolm Nixon created the below video on his YouTube channel that shows off the top 5 games and highlights many of the other entries.
-It is well worth a watch to get an impression of the entries that were submitted.&lt;/p>
-&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/t5U6dXm8WY4" title="Godot XR Game Jam 3 - Top 5 Countdown" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;h2 id="the-next-godot-xr-community-game-jam">The next Godot XR Community game jam&lt;/h2>
-&lt;p>The next jam will likely be in August or September of this year.
-Communication around the game jam has moved to the newly created &lt;a href="https://godot-xr.itch.io/">Godot XR Community itch.io page&lt;/a>, so be sure to follow that account.
-Join the Godot XR Community in the XR channel on &lt;a href="https://discord.gg/godotengine">Godot’s official Discord server&lt;/a> if you’re interested in using Godot to develop XR projects.&lt;/p></content><author><name>Bastiaan Olij</name></author><category term="Progress Report"/></entry></feed>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry></feed>
