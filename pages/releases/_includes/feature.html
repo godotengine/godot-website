@@ -45,19 +45,19 @@
 			<div class="release-card-content-container">
 				<!-- .c-title -->
 				<h4 class="c-title">
-					<a href="#{{feature.anchor}}">{{feature.title | markdownify}}</a>
+					<a href="#{{feature.anchor}}">{{feature.title | manual_highlight_code | markdownify }}</a>
 				</h4>
 
 				<!-- .c-blockquote -->
 				{% if feature.blockquote != null and importance < 4 %}
 					<div class="c-blockquote">
-						{{ feature.blockquote | markdownify }}
+						{{ feature.blockquote | manual_highlight_code | markdownify }}
 					</div>
 				{% endif %}
 
 				<!-- .c-content -->
 				<div class="c-content">
-					{{ feature.text | markdownify }}
+					{{ feature.text | manual_highlight_code | markdownify }}
 				</div>
 
 				<!-- .c-link -->
@@ -195,7 +195,7 @@
 				{% endif %}
 				{% if feature.content_creator != null %}
 					<div class="release-card-content-creator">
-						{{ feature.content_creator | markdownify }}
+						{{ feature.content_creator | manual_highlight_code | markdownify }}
 					</div>
 				{% endif %}
 			</div>

@@ -83,7 +83,7 @@
 	document.addEventListener('DOMContentLoaded', () => {
 		// This needs to be done on page load but also after page changes,
 		// in case a code block appears in an article.
-		document.querySelectorAll('pre code').forEach((block) => {
+		document.querySelectorAll('pre:not(.manual) code').forEach((block) => {
 			hljs.highlightBlock(block);
 		});
 
