@@ -2,11 +2,11 @@ meta:
   description: Desenvolva seus jogos 2D e 3D, projetos multiplataforma ou até mesmo ideias XR!
 header:
   features: Recursos
-  showcase: Showcase
+  showcase: Galeria
   blog: Blog
   community: Comunidade
   assets: Assets
-  download: Download
+  download: Baixar
   docs: Docs
   contribute: Contribuir
   donate: Doar
@@ -16,7 +16,7 @@ header:
   forum: Fórum
 footer:
   godot_engine: Godot Engine
-  download: Download
+  download: Baixar
   documentation: Documentação
   features: Recursos
   web_editor: Editor web
@@ -32,7 +32,7 @@ footer:
   resources: Recursos
   asset_library: Biblioteca de Assets
   press_kit: Kit de imprensa
-  showcase: Showcase
+  showcase: Galeria
   education: Educação
   console_support: Suporte a consoles
   foundation: Fundação
@@ -50,7 +50,7 @@ home:
   h1: Sua engine de jogos gratuita<br> e de código aberto.
   subtitle: Desenvolva seus jogos 2D e 3D, projetos multiplataforma ou até mesmo ideias XR!
   whats_new: Novidades
-  download_latest: Download da Versão Mais Recente
+  download_latest: Baixar Versão Mais Recente
   looking_for: 'Procurando pelo <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Baixe a versão de suporte de longo prazo do Godot 3">Godot 3</a>, nossas <a href="/download/archive">versões experimentais</a>, ou uma <a href="/download/archive">versão anterior</a>?'
   latest_news: Últimas notícias (em inglês)
   more_news: Mais notícias
