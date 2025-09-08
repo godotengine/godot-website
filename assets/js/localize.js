@@ -7,7 +7,7 @@ const languageMap = {
 	'ja': '日本語',
 	'ko': '한국어',
 	'pl': 'Polski',
-	'pt': 'Português',
+	'pt_BR': 'Português',
 	'zh-cn': '中文（简体）',
 	'zh-tw': '中文（繁體）',
 };
