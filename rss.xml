@@ -1,4 +1,255 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Release candidate: Godot 4.5 RC 1</title><link>https://godotengine.org/article/release-candidate-godot-4-5-rc-1/</link><summary>Godot 4.5 stable release is imminent; let the last round(s) of testing begin!</summary><description>&lt;p>The final stage of development for Godot 4.5 has arrived: the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a>. This means that all of our planned features are in place and the most critical regressions have been tackled, so we’re confident that it’s now ready for production use.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Release candidate: Godot 4.5 RC 2</title><link>https://godotengine.org/article/release-candidate-godot-4-5-rc-2/</link><summary>One more for the road, again!</summary><description>&lt;p>On Friday of last week, we dropped our first &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> build. As a reminder, we release RC builds once we &lt;em>think&lt;/em> the engine has stabilized and is ready for release. It is your last chance to report critical regressions before we release the stable version. Now, not even a full week later, we’re ready with our second snapshot. This RC2 fixes the last of the critical regressions that we are aware of. Unless someone reports a new regression coming from the changes made in RC1 or RC2, we should be on track to release 4.5 stable soon.&lt;/p>
+&lt;p>At this point in the process you will see the activity on GitHub slow down as we avoid merging work for 4.5. Our focus in the coming days will be on preparing the release, and queuing up all the changes we would like to merge early in the 4.6 release cycle.&lt;/p>
+&lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
+&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.5.rc2/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/h9JcJGHfg">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
+&lt;hr />
+&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/3410180/Overlooting/?curator_clanid=41324400">&lt;strong>Overlooting&lt;/strong>&lt;/a>, &lt;em>a dungeon crawler where inventory management is crucial, as you must adapt your strategy to a skill tree that changes every run! You can buy the game on &lt;a href="https://store.steampowered.com/app/3410180/Overlooting/?curator_clanid=41324400">Steam&lt;/a>, and follow the developers on &lt;a href="https://bsky.app/profile/posingpossums.bsky.social">Bluesky&lt;/a>.&lt;/em>&lt;/p>
+&lt;h2 id="highlights">Highlights&lt;/h2>
+&lt;p>For an overview of what’s new overall in Godot 4.5, have a look at the highlights for &lt;a href="/article/dev-snapshot-godot-4-5-beta-1/">4.5 beta 1&lt;/a>, which cover a lot of the changes. This blog post only covers the changes between RC 1 and RC 2. This section covers all changes made since the &lt;a href="/article/release-candidate-godot-4-5-rc-1/">RC 1 snapshot&lt;/a>, which are largely regression fixes:&lt;/p>
+&lt;ul>
+&lt;li>Animation: Move Skeleton3D init process (for dirty flags) into &lt;code class="language-plaintext highlighter-rouge">POST_ENTER_TREE&lt;/code> from &lt;code class="language-plaintext highlighter-rouge">ENTER_TREE&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/110145">GH-110145&lt;/a>).&lt;/li>
+&lt;li>Buildsystem: Bump version to 4.5-rc (&lt;a href="https://github.com/godotengine/godot/pull/110285">GH-110285&lt;/a>).&lt;/li>
+&lt;li>Buildsystem: Fix Wayland build with OpenGL disabled (&lt;a href="https://github.com/godotengine/godot/pull/110294">GH-110294&lt;/a>).&lt;/li>
+&lt;li>C#: Fix the issue preventing installing C# binaries on Android devices with api &amp;lt;= 29 (&lt;a href="https://github.com/godotengine/godot/pull/110260">GH-110260&lt;/a>).&lt;/li>
+&lt;li>C#: Require &lt;code class="language-plaintext highlighter-rouge">net9.0&lt;/code> for Android exports (&lt;a href="https://github.com/godotengine/godot/pull/110263">GH-110263&lt;/a>).&lt;/li>
+&lt;li>Core: Fix Resource duplicate calls &lt;code class="language-plaintext highlighter-rouge">ImageTexture::set_image&lt;/code> with an invalid image (&lt;a href="https://github.com/godotengine/godot/pull/110215">GH-110215&lt;/a>).&lt;/li>
+&lt;li>Editor: Fix “SpriteFrames” editor not fully hidding the bottom panel (&lt;a href="https://github.com/godotengine/godot/pull/110280">GH-110280&lt;/a>).&lt;/li>
+&lt;li>GDExtension: Fix &lt;code class="language-plaintext highlighter-rouge">WindowUtils::copy_and_rename_pdb&lt;/code> regression (&lt;a href="https://github.com/godotengine/godot/pull/110033">GH-110033&lt;/a>).&lt;/li>
+&lt;li>Rendering: Metal: Ensure baked Metal binaries can be loaded on the minimum target OS (&lt;a href="https://github.com/godotengine/godot/pull/110264">GH-110264&lt;/a>).&lt;/li>
+&lt;/ul>
+&lt;h2 id="changelog">Changelog&lt;/h2>
+&lt;p>&lt;strong>10 contributors&lt;/strong> submitted &lt;strong>9 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.5-rc2">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the previous 4.5-rc1 snapshot. You can also review &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.5">all changes included in 4.5&lt;/a> compared to the previous 4.4 feature release.&lt;/p>
+&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/2dd26a027a99633231184616d4dd287bbdd1c0a3">&lt;code class="language-plaintext highlighter-rouge">2dd26a027&lt;/code>&lt;/a>.&lt;/p>
+&lt;h2 id="downloads">Downloads&lt;/h2>
+&lt;div class="card card-download">
+&lt;a class="card-download-link" href="/download/archive/4.5-rc2">
+Download Godot 4.5 rc2
+&lt;/a>
+&lt;div class="card-download-details">
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-5-rc-2.webp" />
+&lt;div class="card-download-platforms">
+&lt;div class="download-platform platform-linux">
+&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
+Linux
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-macos">
+&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
+macOS
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-windows">
+&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
+Windows
+&lt;/div>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div class="card-download-sublinks">
+&lt;a class="card-download-other" href="/download/archive/4.5-rc2">
+Export templates and other downloads
+&lt;/a>
+&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
+Make a Donation
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;style>
+.thankyou-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.85);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 10;
+}
+.thankyou {
+background: var(--base-color);
+box-shadow: var(--more-shadow);
+padding: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+position: relative;
+border-radius: 13px;
+}
+.thankyou-reading {
+font-size: 16px;
+}
+.thankyou-reading-list {
+font-size: 16px;
+margin: 0;
+margin-left: 48px;
+padding-left: 0;
+}
+.thankyou-donate {
+margin-bottom: 24px;
+text-align: center;
+}
+.btn.btn-donate {
+background-color: var(--primary-color);
+color: hsla(0, 0%, 100%, 0.9);
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 26px;
+}
+.thankyou h2 {
+text-shadow: var(--base-shadow);
+font-size: 36px;
+font-weight: 800;
+margin-bottom: 12px;
+}
+.thankyou h2 .anchored-link {
+/* Hiding the anchored text automatically added on blogposts */
+display: none !important;
+}
+.thankyou p {
+max-width: 620px;
+font-size: 25px;
+}
+@media (max-width: 768px) {
+.thankyou-wrapper {
+display: block;
+}
+.thankyou {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: scroll;
+padding: 30px 40px 18px 40px;
+}
+.thankyou-reading-list {
+margin-left: 24px;
+}
+.btn-close-thankyou-popup {
+width: 48px;
+height: 48px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+}
+.btn-close-thankyou-popup {
+cursor: pointer;
+position: absolute;
+top: 12px;
+right: 12px;
+}
+.btn-close-thankyou-popup img {
+background: transparent !important; /* for overwriting the style in the blogposts img */
+}
+@media (prefers-color-scheme: light) {
+.btn-close-thankyou-popup img {
+filter: invert(1);
+opacity: 0.75;
+}
+}
+&lt;/style>
+&lt;script>
+document.addEventListener('DOMContentLoaded', () => {
+const thankYouWrapper = document.getElementById('thank-you');
+// Close itself, when clicked outside of the popup area.
+thankYouWrapper.addEventListener('click', (e) => {
+if (e.target === thankYouWrapper) {
+thankYouWrapper.style.display = 'none';
+}
+});
+// Close with a close button.
+const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
+thankYouBackButton.addEventListener('click', () => {
+thankYouWrapper.style.display = 'none';
+});
+// Open from the main download buttons.
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
+downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+document.querySelector('.btn.btn-donate').focus();
+});
+});
+// Open from the all downloads list.
+const downloadLinks = document.querySelectorAll('.download-link');
+downloadLinks.forEach((it) => {
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+});
+});
+// Close the dialog when the user presses the escape key.
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') {
+thankYouWrapper.style.display = 'none';
+}
+});
+});
+&lt;/script>
+&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
+&lt;div class="thankyou">
+&lt;h2>Godot is downloading...&lt;/h2>
+&lt;p class="thankyou-donate">
+Godot exists thanks to donations from people like you. Help us continue our work:
+&lt;/p>
+&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
+Make a Donation
+&lt;/a>
+&lt;div class="btn-close-thankyou-popup">
+&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
+&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
+&lt;div class="card card-warning">
+&lt;p>
+While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
+&lt;/p>
+&lt;/div>
+&lt;h2 id="known-issues">Known issues&lt;/h2>
+&lt;p>During the Release Candidate stage, we focus exclusively on solving showstopping regressions (i.e. something that worked in a previous release is now broken, without workaround). You can have a look at our current &lt;a href="https://github.com/orgs/godotengine/projects/61">list of regressions and significant issues&lt;/a> which we aim to address before releasing 4.5. This list is dynamic and will be updated if we discover new showstopping issues after more users start testing the RC snapshots.&lt;/p>
+&lt;p>With every release, we accept that there are going to be various issues which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug">known bugs&lt;/a>.&lt;/p>
+&lt;h2 id="bug-reports">Bug reports&lt;/h2>
+&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
+&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/release-candidate-godot-4-5-rc-2/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Wed, 10 Sep 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-5-rc-2.webp</image></item><item><title>Release candidate: Godot 4.5 RC 1</title><link>https://godotengine.org/article/release-candidate-godot-4-5-rc-1/</link><summary>Godot 4.5 stable release is imminent; let the last round(s) of testing begin!</summary><description>&lt;p>The final stage of development for Godot 4.5 has arrived: the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a>. This means that all of our planned features are in place and the most critical regressions have been tackled, so we’re confident that it’s now ready for production use.&lt;/p>
 &lt;p>However, we can never be 100% sure that the release is ready to be published without very extensive testing from the community. So while Godot 4.5 is now ready for testing on existing projects (always make a copy/backup before upgrading, preferably with version control), we’re eager to hear how it fares and whether any new major issues have gone unnoticed until now.&lt;/p>
 &lt;p>While we are confident that we are &lt;em>nearly&lt;/em> ready to release. There will be at least one more RC release after this one containing bug fixes for exporting C# projects to certain, older, Android devices and for shipping baked shaders on iOS devices. We have fixes in the queue already and anticipate merging them promptly and releasing an RC2 early next week. If no major regressions are reported with RC1/RC2, we anticipate releasing 4.5 stable shortly after.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
@@ -26,22 +277,22 @@
 &lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/6c9aa4c7d3b9b91cd50714c40eeb234874df7075">&lt;code class="language-plaintext highlighter-rouge">6c9aa4c7d&lt;/code>&lt;/a>.&lt;/p>
 &lt;h2 id="downloads">Downloads&lt;/h2>
 &lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.5-rc1">
-Download Godot 4.5 rc1
+&lt;a class="card-download-link" href="/download/archive/4.5-rc2">
+Download Godot 4.5 rc2
 &lt;/a>
 &lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-5-rc-1.webp" />
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-5-rc-2.webp" />
 &lt;div class="card-download-platforms">
 &lt;div class="download-platform platform-linux">
 &lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
 Linux
 &lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_linux.x86_64.zip" class="btn btn-download btn-download-primary platform-linux">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_mono_linux_x86_64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -50,12 +301,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
 macOS
 &lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_macos.universal.zip" class="btn btn-download btn-download-primary platform-macos">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_mono_macos.universal.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -64,12 +315,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
 Windows
 &lt;/div>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_win64.exe.zip" class="btn btn-download btn-download-primary platform-windows">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc1/Godot_v4.5-rc1_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;a href="https://github.com/godotengine/godot-builds/releases/download/4.5-rc2/Godot_v4.5-rc2_mono_win64.zip" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -77,7 +328,7 @@ Standard
 &lt;/div>
 &lt;/div>
 &lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.5-rc1">
+&lt;a class="card-download-other" href="/download/archive/4.5-rc2">
 Export templates and other downloads
 &lt;/a>
 &lt;a class="card-download-donate" href="https://fund.godotengine.org/">
@@ -307,7 +558,7 @@ While engine maintainers try their best to ensure that each preview snapshot and
 Download Godot 4.5 beta7
 &lt;/a>
 &lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-5-beta-7.webp" />
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-5-rc-1.webp" />
 &lt;div class="card-download-platforms">
 &lt;div class="download-platform platform-linux">
 &lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
@@ -2303,78 +2554,4 @@ Make a Donation
 &lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 3.6 or earlier 3.5.x releases no longer works in 3.6.1).&lt;/p>
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, and a handful of part or full-time developers, hired thanks to &lt;a href="/donate">donations from the Godot community&lt;/a>. A big thankyou to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so with the &lt;a href="https://fund.godotengine.org">development fund&lt;/a>.&lt;/p></description><category>Release</category><guid>https://godotengine.org/article/maintenance-release-godot-3-6-1/</guid><dc:creator>lawnjelly</dc:creator><pubDate>Wed, 25 Jun 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-6-1.webp</image></item><item><title>What's New in Android &amp; XR</title><link>https://godotengine.org/article/godotcon-2025-xr-android-recap/</link><summary>Recap of the Android &amp; XR updates during GodotCon 2025</summary><description>&lt;h1 id="whats-new-in-xr--android">What’s New in XR &amp;amp; Android&lt;/h1>
-&lt;h2 id="godotcon-2025-recap">GodotCon 2025 recap&lt;/h2>
-&lt;p>A few weeks ago during &lt;a href="https://conference.godotengine.org/2025/">GodotCon Boston 2025&lt;/a>, &lt;a href="https://github.com/dsnopek">David Snopek&lt;/a>, &lt;a href="https://github.com/devloglogan">Logan Lang&lt;/a> and &lt;a href="https://github.com/m4gr3d">I&lt;/a> gave the latest updates on the state of Android and XR for the Godot engine:&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EQPQ2FGOUKg?si=Q_kZZJnnnWPIqf1B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
-&lt;p>&lt;em>You can access &lt;a href="https://docs.google.com/presentation/d/1iIcmggtFyx0FMO-WLP9U2j3Mf_i5miw3Cn0pq-KJXx4/edit?slide=id.g34aac9b6122_2_45#slide=id.g34aac9b6122_2_45">the slides of the presentation&lt;/a>.&lt;/em>&lt;/p>
-&lt;h1 id="android--xr-editor">Android &amp;amp; XR editor&lt;/h1>
-&lt;h2 id="android-editor">Android editor&lt;/h2>
-&lt;p>&lt;img alt="Android editor on phone" src="/storage/blog/godotcon-2025-android-xr/android-editor.webp" />&lt;/p>
-&lt;p>An update on the Android editor is long overdue. Since &lt;a href="https://godotengine.org/article/android_godot_editor_play_store_beta_release/">its release in 2023&lt;/a>, the Android editor has been available on the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">Google Play store&lt;/a> and on &lt;a href="https://godotengine.org/download/android/">Godot’s download page&lt;/a> with support for all Android devices (e.g.: phones, foldables, tablets, Chromebooks, and others).&lt;/p>
-&lt;p>Last fall, during GodotCon 2024, we announced that the Android editor had &lt;strong>~850K device installs&lt;/strong> from the Google Play store. Over the last 6 months, installs grew by another &lt;strong>~365K&lt;/strong> for a total of &lt;strong>1.2M device installs&lt;/strong> by GodotCon (Boston) 2025. This corresponds to over &lt;strong>~2000+ daily installs&lt;/strong> with over &lt;strong>~90K monthly active users&lt;/strong>.&lt;/p>
-&lt;p>&lt;img alt="Android editor device installs 2025" src="/storage/blog/godotcon-2025-android-xr/godot-android-editor-device-install-2025.webp" />&lt;/p>
-&lt;p>From the Google Play store data, we made a few interesting observations worth diving into.&lt;/p>
-&lt;h3 id="most-installs-are-from-brazil--india">Most installs are from Brazil + India&lt;/h3>
-&lt;p>Brazil and India make up &lt;strong>26%&lt;/strong> of installs with &lt;strong>17%&lt;/strong> coming from Brazil and &lt;strong>9%&lt;/strong> coming from India.&lt;/p>
-&lt;p>&lt;img alt="Android editor device installs percentage by country" src="/storage/blog/godotcon-2025-android-xr/godot-android-editor-countries-installs-2025.webp" />&lt;/p>
-&lt;p>From this data point, we can observe how the Android editor is helping to lower the barrier of entry to game dev by allowing users in Brazil, India, and other countries to make use of cheaper and more accessible Android devices for game development.&lt;/p>
-&lt;h3 id="most-installs-are-on-phones">Most installs are on phones!&lt;/h3>
-&lt;p>According to the data, ~87% of installs are on phones.&lt;/p>
-&lt;p>&lt;img alt="Android editor device installs by form-factor percentage" src="/storage/blog/godotcon-2025-android-xr/godot-android-editor-device-type-percentage-2025.webp" />&lt;/p>
-&lt;p>In the &lt;a href="https://godotengine.org/article/android_godot_editor_play_store_beta_release/">Android editor release blog post&lt;/a>, we mention it being optimized for large form-factor devices (e.g.: foldables, tablets, Chromebooks), so we expected those types of devices to be driving the installs. However, from the data it can be seen that tablets and Chromebooks only make up &lt;strong>~10.6%&lt;/strong> of installs. So while the experience is still unoptimized for phones, for a vast number of users, the Android editor has a valuable use and addresses a valid need on regular Android phones.&lt;/p>
-&lt;p>These data points are driving some of our upcoming work, as in future releases we’ll strive to close the feature parity gap between the Android and desktop versions of the editor, as well as work to improve the Android editor development experience on small form-factor devices like phones.&lt;/p>
-&lt;h2 id="xr-editor">XR editor&lt;/h2>
-&lt;video autoplay="" loop="" muted="" playsinline="" title="Using Meta Quest seamless multitasking to modify XR game in real-time">
-&lt;source src="/storage/blog/godot-editor-horizon-store-early-access-release/xr_game_live_modifications.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>&lt;a href="https://godotengine.org/article/godot-editor-horizon-store-early-access-release/">Released in 2024&lt;/a> to &lt;a href="https://www.uploadvr.com/godot-engine-standalone-on-quest-horizon-os/">great reception&lt;/a>, the XR editor is available on the &lt;a href="https://www.meta.com/experiences/godot-game-engine/7713660705416473/">Meta Horizon store&lt;/a> and on &lt;a href="https://godotengine.org/download/android/">Godot’s download page&lt;/a> with support for Quest 3, Quest 3S, and Quest Pro devices.&lt;/p>
-&lt;p>To date, the Godot XR editor is the &lt;strong>only&lt;/strong> full game engine &lt;strong>running entirely on standalone XR devices&lt;/strong> and providing users with the ability to &lt;strong>develop apps and games with nothing but a standalone XR device&lt;/strong>. To highlight that fact, David &amp;amp; Logan recently completed &lt;a href="https://dsnopek.itch.io/expedition-to-blobotopia">a game jam&lt;/a> &lt;a href="https://dsnopek.itch.io/expedition-to-blobotopia/devlog/949090/making-a-godot-game-entirely-in-vr-gwj-81-devlog-nr-1">using nothing but the XR editor&lt;/a>!&lt;/p>
-&lt;p>Last fall during GodotCon 2024, the XR editor had ~&lt;strong>4K device installs&lt;/strong> shortly after release. By GodotCon (Boston) 2025, device installs have grown to &lt;strong>~18.5K&lt;/strong> with &lt;strong>~2000 monthly active users&lt;/strong>.&lt;/p>
-&lt;p>&lt;img alt="Godot XR editor average monthly users" src="/storage/blog/godotcon-2025-android-xr/godot-xr-editor-avg-monthly-users-2025.webp" />&lt;/p>
-&lt;p>We have a lot planned to improve the user experience in order to make the XR editor a powerful, flexible tool for XR and game development, but first we need to improve the reach of the XR editor and make it cross-platform.&lt;br />
-To that end, we are working to bring the Godot XR editor to &lt;strong>Pico devices.&lt;/strong>&lt;/p>
-&lt;p>&lt;img alt="Pico device" src="/storage/blog/godotcon-2025-android-xr/pico_device_image.webp" />&lt;/p>
-&lt;p>Early alpha builds can be found on our &lt;a href="https://github.com/godotengine/godot-builds/releases">GitHub release page&lt;/a> with support for both &lt;strong>Pico 4 and Pico 4 Ultra&lt;/strong> devices.&lt;/p>
-&lt;p>We’ve heard loud and clear the feedback and requests for Quest 2 support, and thanks to recent performance improvements courtesy of W4 Games, we’re adding &lt;strong>official support for Quest 2&lt;/strong> devices as well. You can now download the XR editor to your Quest 2 devices straight from the Meta Horizon store!&lt;/p>
-&lt;h1 id="hybrid-apps">Hybrid Apps&lt;/h1>
-&lt;p>Introduced in late 2023, Hybrid Apps are apps that can run both in &lt;strong>Panel&lt;/strong> mode or in &lt;strong>Immersive&lt;/strong> mode, and are able to &lt;strong>transition between both modes at runtime&lt;/strong>. In Panel mode, the app can run side-by-side with other apps, allowing users to multitask. While in Immersive mode, the app’s experience is the sole focus and the user is fully immersed in it.&lt;/p>
-&lt;p>The feature provides developers with several benefits:&lt;/p>
-&lt;ul>
-&lt;li>Developers can easily add immersive support to existing apps and games&lt;/li>
-&lt;li>Developers can leverage existing codebase and logic&lt;/li>
-&lt;li>Users can select the interaction mode they’re most comfortable with&lt;/li>
-&lt;/ul>
-&lt;p>The Godot XR editor is itself a Hybrid App and has been able to leverage this feature to provide a unique development experience, allowing developers to transition back and forth between the editor window and their immersive projects. With the release of &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.0.0-stable">version 4 of the Godot OpenXR Vendors plugin&lt;/a>, we’re bringing the same capabilities to all developers in Godot 4.4.&lt;/p>
-&lt;video autoplay="" loop="" muted="" playsinline="" title="Kenney 3D platformer Hybrid App sample">
-&lt;source src="/storage/blog/godotcon-2025-android-xr/godot-hybrid-app-kenney-3d-platformer.mp4?1" type="video/mp4" />
-&lt;/video>
-&lt;p>By leveraging &lt;strong>v4&lt;/strong> of the Godot OpenXR Vendors plugin, developers can build Hybrid Apps straight from the Godot editor. The feature supports all HorizonOS (Quest) devices, with support for Pico devices coming soon!&lt;/p>
-&lt;p>The feature dynamically enables or disables itself based on the target platform. For example, &lt;strong>the same Godot project can run as a regular (panel) app when exported to regular Android devices. And it can run as a full Hybrid App when exported to standalone XR devices&lt;/strong>.&lt;br />
-This allows developers to target multiple audiences, multiple platforms (Android, HorizonOS, PicoOS), and multiple stores (Google Play store, Meta Horizon store, Pico store) with the same project.&lt;/p>
-&lt;p>To learn more about the feature, please check out &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/hybrid_apps.html">the documentation&lt;/a>.&lt;/p>
-&lt;h1 id="integrating-with-android-apis">Integrating with Android APIs&lt;/h1>
-&lt;p>The Android platform has numerous APIs as well as a rich ecosystem of third-party libraries with wide and diverse functionality. Godot has long provided an &lt;a href="https://docs.godotengine.org/en/stable/tutorials/platform/android/android_plugin.html">Android plugin system&lt;/a> which enables developers to create a Godot interface in order to access and use Android APIs or third-party libraries in their projects.&lt;/p>
-&lt;p>Writing an Android plugin however requires knowledge of Java or Kotlin code, which most Godot developers do not have. As such there are many Android APIs and third-party libraries that don’t have a Godot plugin that Godot developers can interface with. In fact, this is one of the main reasons that developers cite for not being able to switch to Godot from other game engines.&lt;/p>
-&lt;p>To address this, we’ve introduced a couple of tools in Godot 4.4 to simplify the process for developers to &lt;strong>access Android APIs and third-party libraries&lt;/strong>.&lt;/p>
-&lt;h2 id="javaclasswrapper-and-androidruntime-plugin">JavaClassWrapper and AndroidRuntime plugin&lt;/h2>
-&lt;p>&lt;strong>JavaClassWrapper&lt;/strong> is a Godot singleton which allows for creating instances of Java and Kotlin classes and calling methods on them using only GDScript, C#, or GDExtension.&lt;/p>
-&lt;p>&lt;strong>AndroidRuntime plugin&lt;/strong> is a built-in Godot Android plugin that provides access to various Android lifecycle and runtime objects.&lt;/p>
-&lt;p>Coupling the two together allows developers to access and use Android APIs without switching away from GDScript, or using any tools aside from Godot itself.&lt;br />
-This is &lt;strong>huge&lt;/strong> for the adoption of Godot for Android development, as it allows developers to quickly integrate Android functionality without having to make a Java or Kotlin plugin!&lt;/p>
-&lt;p>For example, this code snippet is all that developers need to access and use the &lt;a href="https://developer.android.com/reference/android/os/Vibrator">Android Vibrator system service&lt;/a>:&lt;/p>
-&lt;div class="language-gdscript highlighter-rouge">&lt;div class="highlight">&lt;pre class="highlight">&lt;code> &lt;span class="c1"># Retrieve the AndroidRuntime singleton&lt;/span>
-&lt;span class="k">var&lt;/span> &lt;span class="n">android_runtime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Engine&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_singleton&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">"AndroidRuntime"&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="n">android_runtime&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="c1"># Retrieve the Android Vibrator system service and check if the device supports it&lt;/span>
-&lt;span class="k">var&lt;/span> &lt;span class="n">vibrator_service&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">android_runtime&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">getApplicationContext&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">getSystemService&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">"vibrator"&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="n">vibrator_service&lt;/span> &lt;span class="ow">and&lt;/span> &lt;span class="n">vibrator_service&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">hasVibrator&lt;/span>&lt;span class="p">():&lt;/span>
-&lt;span class="c1"># Configure and run a VibrationEffect &lt;/span>
-&lt;span class="k">var&lt;/span> &lt;span class="n">VibrationEffect&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">JavaClassWrapper&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">wrap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">"android.os.VibrationEffect"&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">var&lt;/span> &lt;span class="n">effect&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">VibrationEffect&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">createOneShot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">500&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">VibrationEffect&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">DEFAULT_AMPLITUDE&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="n">vibrator_service&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vibrate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">effect&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
-&lt;p>To learn more about these new capabilities, please check out the &lt;a href="https://docs.godotengine.org/en/latest/tutorials/platform/android/javaclasswrapper_and_androidruntimeplugin.html">documentation&lt;/a>.&lt;/p>
-&lt;h1 id="and-more">And more!&lt;/h1>
-&lt;p>There’s plenty more we covered in our GodotCon talk. For the full content, please check out &lt;a href="https://www.youtube.com/watch?v=EQPQ2FGOUKg">the video&lt;/a> and &lt;a href="https://docs.google.com/presentation/d/1iIcmggtFyx0FMO-WLP9U2j3Mf_i5miw3Cn0pq-KJXx4/edit?slide=id.g34aac9b6122_2_45#slide=id.g34aac9b6122_2_45">the slides&lt;/a>.&lt;/p>
-&lt;p>Many thanks to the &lt;a href="https://www.meetup.com/bostongamedev/">Boston Game Dev&lt;/a> and the &lt;a href="https://www.meetup.com/bostongamedev/events/298734856/">Boston Godot Users Group&lt;/a> for making this event happen.&lt;/p></description><category>Events</category><category>Progress Report</category><guid>https://godotengine.org/article/godotcon-2025-xr-android-recap/</guid><dc:creator>Fredia Huya-Kouadio</dc:creator><pubDate>Mon, 23 Jun 2025 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotcon-boston-2025-android-xr.webp</image></item></channel></rss>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so with the &lt;a href="https://fund.godotengine.org">development fund&lt;/a>.&lt;/p></description><category>Release</category><guid>https://godotengine.org/article/maintenance-release-godot-3-6-1/</guid><dc:creator>lawnjelly</dc:creator><pubDate>Wed, 25 Jun 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-6-1.webp</image></item></channel></rss>
