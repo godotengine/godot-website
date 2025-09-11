@@ -1,6 +1,8 @@
 meta:
   description: Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR
 header:
+  godot_engine: Godot Engine
+  main_menu: Menú Principal
   features: Funciones
   showcase: Creaciones
   blog: Blog
@@ -49,8 +51,10 @@ sponsors:
 home:
   h1: Tu motor de juegos gratuito<br> y de código abierto.
   subtitle: Desarrolla tus juegos 2D y 3D, proyectos multiplataforma o incluso XR
-  whats_new: Novedades
   download_latest: Descargar Última Versión
+  download_latest_tooltip: Descarga la última versión de Godot 4
+  whats_new: Novedades
+  whats_new_tooltip: Ver lo nuevo en Godot
   looking_for: '¿Buscas <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Descarga la versión de soporte a largo plazo de Godot 3">Godot 3</a>, nuestras <a href="/download/archive">versiones experimentales</a>, o una <a href="/download/archive">versión anterior</a>?'
   latest_news: Últimas noticias (en inglés)
   more_news: Más noticias

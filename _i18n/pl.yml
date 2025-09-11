@@ -1,6 +1,8 @@
 meta:
   description: Twórz swoje gry 2D oraz 3D, projekty wieloplatformowe lub nawet pomysły XR!
 header:
+  godot_engine: Godot Engine
+  main_menu: Menu główne
   features: Możliwości
   showcase: Wystawa
   blog: Blog
