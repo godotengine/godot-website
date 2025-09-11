@@ -1,0 +1,95 @@
+meta:
+  description: Desenvolva seus jogos 2D e 3D, projetos multiplataforma ou até mesmo ideias XR!
+header:
+  features: Recursos
+  showcase: Galeria
+  blog: Blog
+  community: Comunidade
+  assets: Assets
+  download: Baixar
+  docs: Docs
+  contribute: Contribuir
+  donate: Doar
+  language: Idioma
+  events: Eventos
+  console_support: Suporte a consoles
+  forum: Fórum
+footer:
+  godot_engine: Godot Engine
+  download: Baixar
+  documentation: Documentação
+  features: Recursos
+  web_editor: Editor web
+  release_archive: Arquivo de versões
+  source_code: Código fonte
+  project: Projeto
+  blog: Blog
+  code_of_conduct: Código de conduta
+  governance: Governança
+  teams: Equipes
+  priorities: Prioridades
+  communities: Comunidades
+  resources: Recursos
+  asset_library: Biblioteca de Assets
+  press_kit: Kit de imprensa
+  showcase: Galeria
+  education: Educação
+  console_support: Suporte a consoles
+  foundation: Fundação
+  about: Sobre
+  donate: Doar
+  license: Licença
+  privacy_policy: Política de privacidade
+  contact_us: Contate-nos
+  text: "Juan Linietsky, Ariel Manzur e <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>colaboradores</a>. Hospedado pela <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>Código fonte do site no GitHub</a>."
+sponsors:
+  title: "Godot é patrocinado por:"
+  text: Se você tem interesse em um patrocínio corporativo, escreva para <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>.<br>Para doar como pessoa física, você pode fazê-lo através do <a href='https://fund.godotengine.org/'>fundo de desenvolvimento do Godot Engine</a>.
+  cta: Doar
+home:
+  h1: Sua engine de jogos gratuita<br> e de código aberto.
+  subtitle: Desenvolva seus jogos 2D e 3D, projetos multiplataforma ou até mesmo ideias XR!
+  whats_new: Novidades
+  download_latest: Baixar Versão Mais Recente
+  looking_for: 'Procurando pelo <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Baixe a versão de suporte de longo prazo do Godot 3">Godot 3</a>, nossas <a href="/download/archive">versões experimentais</a>, ou uma <a href="/download/archive">versão anterior</a>?'
+  latest_news: Últimas notícias (em inglês)
+  more_news: Mais notícias
+  cards:
+    h2: Uma maneira diferente de fazer jogos
+    design:
+      title: Design inovador
+      text: O sistema de Nós e Cenas do Godot oferece poder e flexibilidade para criar qualquer coisa.
+    script:
+      title: Use a linguagem certa para cada trabalho
+      text: Mantenha seu código modular com uma API orientada a objetos usando GDScript, C#, C++, ou traga a sua própria usando GDExtension.
+      extra: O suporte para C# está disponível apenas para plataformas desktop e mobile a partir do Godot 4.2.<br>Use Godot 3 para executar C# na plataforma Web.
+    2d:
+      title: Engine 2D dedicada
+      text: Crie jogos 2D nítidos e performáticos com a engine de renderização 2D dedicada do Godot, com coordenadas reais de pixel 2D e nós 2D.
+    3d:
+      title: 3D simples e poderoso
+      text: Os nós 3D do Godot oferecem tudo que você precisa para construir, animar e renderizar seus mundos e personagens 3D.
+    deploy:
+      title: Lance em todas as plataformas
+      text: Publique seu jogo em desktop, mobile e web em segundos. Godot até suporta consoles através de editoras terceirizadas.
+    open:
+      title: Código Aberto
+      text: "Desenvolvimento verdadeiramente aberto: qualquer pessoa que contribui para o Godot se beneficia igualmente das contribuições de outros."
+    cta: Saiba mais sobre usar o Godot
+  get_involved:
+    title: Envolva-se
+    text: Junte-se à comunidade e ajude a criar uma engine de jogos que pertence a todos.
+    cards:
+      cta: Saiba mais
+      code:
+        title: Código
+        text: Se você sabe programar, pode ajudar corrigindo bugs e trabalhando com os colaboradores da engine para implementar novos recursos.
+      document:
+        title: Documentação
+        text: A qualidade da documentação é essencial em uma engine de jogos; ajude a melhorá-la atualizando a referência da API, escrevendo novos guias ou enviando correções.
+      report:
+        title: Reporte
+        text: Encontrou um problema com a engine? Não esqueça de reportá-lo para que os desenvolvedores possam rastreá-lo.
+  foundation:
+    text: "Você não precisa ser um desenvolvedor de engine para ajudar o Godot. Junte-se ao <a href='https://fund.godotengine.org/'>fundo de desenvolvimento</a> e nos ajude a tornar a Godot&nbsp;Engine ainda mais incrível!"
+    donate: Doar
