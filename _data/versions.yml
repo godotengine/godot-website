@@ -3,7 +3,7 @@
   release_date: "10 September 2025"
   release_notes: "/article/release-candidate-godot-4-5-rc-2/"
   releases:
-    - name: "beta7"
+    - name: "rc1"
       release_date: "5 September 2025"
       release_notes: "/article/release-candidate-godot-4-5-rc-1/"
     - name: "beta7"
