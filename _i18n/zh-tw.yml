@@ -1,11 +1,11 @@
 meta:
-  description: 開發你的 2D 與 3D 遊戲，跨平台專案，甚至是 XR 創意！
+  description: 開發你的 2D 與 3D 遊戲、跨平台專案，甚至是 XR 創意！
 header:
-  features: 特性
+  features: 特色
   showcase: 展示
   blog: 部落格
   community: 社群
-  assets: 資產
+  assets: 素材
   download: 下載
   docs: 文件
   contribute: 貢獻
@@ -17,7 +17,7 @@ header:
 footer:
   download: 下載
   documentation: 文件
-  features: 特性
+  features: 特色
   web_editor: 網頁編輯器
   release_archive: 發行版歸檔
   source_code: 原始碼
@@ -29,28 +29,28 @@ footer:
   priorities: 優先事項
   communities: 社群
   resources: 資源
-  asset_library: 資產庫
-  press_kit: 宣傳材料
+  asset_library: 素材庫
+  press_kit: 宣傳資料
   showcase: 展示
   education: 教育
   console_support: 主機支援
   foundation: 基金會
   about: 關於
   donate: 捐助
-  license: 許可證
+  license: 授權條款
   privacy_policy: 隱私政策
   contact_us: 聯繫我們
   text: "Juan Linietsky，Ariel Manzur 與<a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>貢獻者們</a>。由 <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot 基金會</a>架設。網站<a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>原始碼可在 GitHub 上獲取</a>."
 sponsors:
   title: "Godot 由以下企業贊助："
-  text: 如果您對企業贊助感興趣，請發電郵至 <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>。<br>作為個人捐助，你可以通過 <a href='https://fund.godotengine.org/'>Godot Engine 開發基金</a> 進行。
+  text: 如果您對企業贊助感興趣，請寄電子郵件至 <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>。<br>作為個人捐助，你可以透過 <a href='https://fund.godotengine.org/'>Godot Engine 開發基金</a> 進行。
   cta: 捐助
 home:
-  h1: 屬於你的免費，<br>開源遊戲引擎。
-  subtitle: 開發你的 2D 與 3D 遊戲，跨平台專案，甚至是 XR 創意！
+  h1: 屬於你的免費、<br>開源遊戲引擎。
+  subtitle: 開發你的 2D 與 3D 遊戲、跨平台專案，甚至是 XR 創意！
   whats_new: 最近更新
   download_latest: 下載最新版
-  looking_for: '正在尋找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下載 Godot 3 的長期支援版本">Godot 3</a>，我們的<a href="/download/archive">實驗性版本</a>，或是一個<a href="/download/archive">歷史版本</a>？'
+  looking_for: '正在尋找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下載 Godot 3 的長期支援版本">Godot 3</a>、我們的<a href="/download/archive">實驗性版本</a>，或是一個<a href="/download/archive">歷史版本</a>？'
   latest_news: 最近新聞
   more_news: 更多新聞
   cards:
@@ -60,7 +60,7 @@ home:
       text: Godot 的節點與場景系統同時給了你隨心創造所需的能力與靈活性。
     script:
       title: 使用適合工作的語言
-      text: 使用 Godot 自帶的 GDScript、C#、C++ 等面向對象的 API 保持程式碼模塊化，或通過 GDExtension 引入客製化語言。
+      text: 使用 Godot 自帶的 GDScript、C#、C++ 等物件導向的 API 保持程式碼模組化，或透過 GDExtension 引入客製化語言。
       extra: 截止 Godot 4.2 ，C# 支援目前僅在桌面端與行動端可用。<br>使用 Godot 3 來在網頁端運行 C# 。
     2d:
       title: 專用 2D 引擎
@@ -73,8 +73,8 @@ home:
       text: 短時間內把你的遊戲部署到桌面端，行動端，以及網頁端。透過第三方發行商，Godot 甚至支援主機端。
     open:
       title: 開放原始碼
-      text: "真正的開放開發：每位 Godot 貢獻者均平等受益於他人的付出。"
-    cta: 獲取更多關於使用 Godot 的資訊
+      text: "真正的開放式開發：每位 Godot 貢獻者均平等受益於他人的付出。"
+    cta: 獲取更多有關 Godot 的資訊
   get_involved:
     title: 參與其中
     text: 加入社群並協助創建出一個屬於所有人的遊戲引擎。
@@ -85,7 +85,7 @@ home:
         text: 如果你會寫程式碼，你可以協助修復 bug 以及與引擎貢獻者們一起合作實現新功能。
       document:
         title: 文件
-        text: 文件質量對遊戲引擎至關重要；您可以通過更新 API 參考、編寫新指南或提交修正來幫助改進它。
+        text: 文件品質對遊戲引擎至關重要；您可以透過更新 API 參考、編寫新指南或提交修正來幫助改進它。
       report:
         title: 報告
         text: 發現引擎有問題？別忘了提交報告，以便開發者能夠追蹤修復。
