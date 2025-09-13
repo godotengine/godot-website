@@ -57,7 +57,7 @@ Be aware that the stress tests are meant by nature to only test the worst case s
 
 From here on out, the 4.5 release official templates will only support WebAssembly SIMD-compatible browsers in order to keep the template sizes small. We generally aim to maintain compatibility with the oldest devices we can. But in this case, the performance gains are too large to ignore and the chances of users having browsers that are that far out of date is too small relative to the potential benefits.
 
-If you need to use non-SIMD templates, don't fret. You can always [build](https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html) the Godot Editor and the engine templates without WebAssembly SIMD support by using the `wasm_simd=no` build option.
+If you need to use non-SIMD templates, don't fret. You can always [build](https://docs.godotengine.org/en/stable/engine_details/development/compiling/index.html) the Godot Editor and the engine templates without WebAssembly SIMD support by using the `wasm_simd=no` build option.
 
 ## What's next?
 

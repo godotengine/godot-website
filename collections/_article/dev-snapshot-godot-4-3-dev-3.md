@@ -66,7 +66,7 @@ In the [4.3 dev 1 snapshot](/article/dev-snapshot-godot-4-3-dev-1/), we introduc
 
 In this build however, we enabled Direct3D 12 support in our official builds, including the open source Mesa NIR library and Godot's D3D12 implementation. `dxil.dll` is still required, but not provided, so by default you will still only have access to the Vulkan backend. To enable the D3D12 support, you need to download the [DirectX Shader Compiler](https://github.com/Microsoft/DirectXShaderCompiler/releases), and copy the relevant `dxil.dll` file for your architecture next to your Godot editor or exported project's executable.
 
-We are still evaluating options for being able to provide a D3D12 support that works out of the box, without a proprietary component. But for now to test things you will have to do this manual step (or [compile from source](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12), which does it for you).
+We are still evaluating options for being able to provide a D3D12 support that works out of the box, without a proprietary component. But for now to test things you will have to do this manual step (or [compile from source](https://docs.godotengine.org/en/latest/engine_details/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12), which does it for you).
 
 ### Editor theme and UX improvements
 

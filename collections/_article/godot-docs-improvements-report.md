@@ -37,9 +37,9 @@ This change involves registering as many redirections on the back-end, affecting
 
 ## Content and contribution guidelines
 
-The guidelines are much simpler and are now split into shorter pages based on your interests. The new [contributing section](https://docs.godotengine.org/en/latest/community/contributing/index.html) now gives you a better overview of how you can help.
+The guidelines are much simpler and are now split into shorter pages based on your interests. The new [contributing section](https://contributing.godotengine.org/en/latest/index.html) now gives you a better overview of how you can help.
 
-We have new [content guidelines](https://docs.godotengine.org/en/latest/community/contributing/content_guidelines.html) to define what should and shouldn't go into the docs.
+We have new [content guidelines](https://contributing.godotengine.org/en/latest/documentation/guidelines/content_guidelines.html) to define what should and shouldn't go into the docs.
 
 Until now, we accepted a bit of everything; we lacked a clear direction and quality standards. These guidelines give us clear goals and help to set priorities for the online manual.
 

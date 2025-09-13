@@ -35,7 +35,7 @@ Join me for a 4 hours livestream starting on Sunday, June 9, 11PM UTC. *The vide
 
 ## How can I participate? ##
 
-If you want to contribute to the code reference, starting by reading the [**Contribute to the Class Reference**](https://docs.godotengine.org/en/latest/community/contributing/updating_the_class_reference.html) page to learn about the workflow.
+If you want to contribute to the code reference, starting by reading the [**Contribute to the Class Reference**](https://contributing.godotengine.org/en/latest/documentation/class_reference.htmlhtml) page to learn about the workflow.
 
 
 I made a complete video tutorial to show you the entire workflow, explain the best practices, and my techniques to be as productive as possible:
@@ -43,7 +43,7 @@ I made a complete video tutorial to show you the entire workflow, explain the be
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5jeHXxeX-JY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Then, you can get started anytime. If you feel like writing the reference straight, check out the [**Docs writing guidelines**](https://docs.godotengine.org/en/latest/community/contributing/docs_writing_guidelines.html), then make sure to check the [existing documentation-related issues](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation) to see what other contributors reported.
+Then, you can get started anytime. If you feel like writing the reference straight, check out the [**Docs writing guidelines**](https://contributing.godotengine.org/en/latest/documentation/guidelines/docs_writing_guidelines.html), then make sure to check the [existing documentation-related issues](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation) to see what other contributors reported.
 
 Use this shared document to let everyone know what you're working on: https://hackmd.io/@gdquest/godot-docs-sprint
 

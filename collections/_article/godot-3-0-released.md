@@ -421,7 +421,7 @@ Godot 3.1 will bring a new and more powerful animation tree, modern occlusion cu
 
 You can greatly help us improve Godot, as well as make it faster and better. Besides contributing code (if you are a programmer), you can help us a lot by [becoming our patron](https://www.patreon.com/godotengine). Additionally, spreading the word will always benefit us, as most game developers still have never tried (or even heard of) Godot. Finally, the best contribution might be to use Godot to develop and publish awesome games!
 
-See our [community documentation](http://docs.godotengine.org/en/latest/community/contributing/ways_to_contribute.html) for a description of all the ways you can contribute to Godot and how.
+See our [community documentation](https://contributing.godotengine.org/en/latest/organization/how_to_contribute.html) for a description of all the ways you can contribute to Godot and how.
 
 Have fun with this long-awaited release!
 
