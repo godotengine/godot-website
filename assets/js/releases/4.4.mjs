@@ -1,4 +1,4 @@
-import{animate,createTimeline,onScroll,eases,}from"../modules/anime@4.0.2_esm.min.js";import detectPlatform from"../modules/detect-browser.mjs";const{outCirc,inCirc}=eases,releaseHeaderBackground=document.querySelector(".release-header-background"),scrollObserver=onScroll({target:".release-header",enter:"top 0%-=64px",leave:"top 100%",onUpdate:()=>{const e=scrollObserver.progress;releaseHeaderBackground.style.transform=`
+import{animate,createTimeline,onScroll,eases,}from"../modules/anime@4.1.2_esm.min.js";import detectPlatform from"../modules/detect-browser.mjs";const{outCirc,inCirc}=eases,releaseHeaderBackground=document.querySelector(".release-header-background"),scrollObserver=onScroll({target:".release-header",enter:"top 0%-=64px",leave:"top 100%",onUpdate:()=>{const e=scrollObserver.progress;releaseHeaderBackground.style.transform=`
 			translateY(${e*releaseHeaderBackground.getBoundingClientRect().height}px)
 			translateZ(-1px)
 			scale(2)
