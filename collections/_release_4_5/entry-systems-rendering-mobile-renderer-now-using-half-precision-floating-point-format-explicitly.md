@@ -17,5 +17,5 @@ text: |
 contributors:
 - name: Darío
   github: DarioSamo
-read_more: https://github.com/godotengine/godot/pull/102330
+read_more: https://github.com/godotengine/godot/pull/107119
 ---
