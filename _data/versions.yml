@@ -1,8 +1,12 @@
 - name: "4.5"
-  flavor: "rc2"
-  release_date: "10 September 2025"
-  release_notes: "/article/release-candidate-godot-4-5-rc-2/"
+  flavor: "stable"
+  release_date: "15 September 2025"
+  release_notes: "/article/godot-4-5-making-dreams-accessible/"
+  featured: "4"
   releases:
+    - name: "rc2"
+      release_date: "10 September 2025"
+      release_notes: "/article/release-candidate-godot-4-5-rc-2/"
     - name: "rc1"
       release_date: "5 September 2025"
       release_notes: "/article/release-candidate-godot-4-5-rc-1/"
@@ -47,7 +51,6 @@
   flavor: "stable"
   release_date: "26 March 2025"
   release_notes: "/article/maintenance-release-godot-4-4-1/"
-  featured: "4"
   releases:
     - name: "rc2"
       release_date: "21 March 2025"
