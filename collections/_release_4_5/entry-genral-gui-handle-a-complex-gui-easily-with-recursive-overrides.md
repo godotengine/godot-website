@@ -10,7 +10,7 @@ blockquote: Gooey GUI no more
 text: |
   It is now possible to change mouse and focus behavior of a ``@[Control](enginetype)`` node recursively. This greatly helps creating complex GUIs without breaking a sweat.
 
-  Here’s an example: let’s say you create an inventory screen for your game. On the left, there’s a grid displaying what is the hero is carrying. On the right, it shows a detailed view about the selected item on the left; a rotatable display of the item in 3D to examine every detail, a section containing a scrollable description, a box containing stats and modifiers (with hyperlinks for technical terms), and a list of buttons representing actions that are possible to do with it.
+  Here’s an example: let’s say you create an inventory screen for your game. On the left, there’s a grid displaying what the hero is carrying. On the right, it shows a detailed view about the selected item on the left; a rotatable display of the item in 3D to examine every detail, a section containing a scrollable description, a box containing stats and modifiers (with hyperlinks for technical terms), and a list of buttons representing actions that are possible to do with it.
 
   Now, the problem is that the right view depends on an item being selected on the left. The user shouldn’t be able to interact with the detail view until that happens.
 
