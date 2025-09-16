@@ -826,7 +826,7 @@ if (intlBlockquote == null) {
 // Source for the translations: https://www.berlitz.com/blog/hello-different-languages
 const intlBlockquoteTextEntries = [
 	{ text: "Hello" }, // en (English)
-	{ text: "مرحبًا", rtl: true }, // ar (Arabic)
+	{ text: "مرحبًا", rtl: true, doNotBreakCharacters: true }, // ar (Arabic)
 	{ text: "你好" }, // zh (Chinese)
 	{ text: "Hallo" }, // nl (Dutch)
 	{ text: "Bonjour" }, // fr (French)
@@ -836,7 +836,7 @@ const intlBlockquoteTextEntries = [
 	{ text: "Ciao" }, // it (Italian)
 	{ text: "こんにちは" }, // ja (Japanese)
 	{ text: "안녕하세요" }, // ko (Korean)
-	{ text: "سلام", rtl: true }, // fa (Persian)
+	{ text: "سلام", rtl: true, doNotBreakCharacters: true }, // fa (Persian)
 	{ text: "Cześć" }, // pl (Polish)
 	{ text: "Olá" }, // pt (Portuguese)
 	{ text: "Oi" }, // pt-BR (Portuguese (Brazil))
@@ -853,6 +853,8 @@ for (const intlBlockquoteTextEntry of intlBlockquoteTextEntries) {
 	entry.classList.add("entry");
 	entry.textContent = intlBlockquoteTextEntry.text;
 	entry.style.direction = intlBlockquoteTextEntry?.rtl ? "rtl" : "ltr";
+	entry.dataset.doNotBreakCharacters =
+		intlBlockquoteTextEntry?.doNotBreakCharacters ?? false;
 	intlBlockquote.append(entry);
 }
 
@@ -864,10 +866,19 @@ const intlBlockquoteTimeline = createTimeline({
 });
 
 for (const intlBlockquoteEntry of intlBlockquoteEntries) {
-	const { chars } = text.split(intlBlockquoteEntry, {
-		chars: { wrap: "clip" },
-	});
-	const entryAnimation = animate(chars, {
+	let elements = null;
+	if (intlBlockquoteEntry.dataset.doNotBreakCharacters === "true") {
+		const { words } = text.split(intlBlockquoteEntry, {
+			words: { wrap: "clip" },
+		});
+		elements = words;
+	} else {
+		const { chars } = text.split(intlBlockquoteEntry, {
+			chars: { wrap: "clip" },
+		});
+		elements = chars;
+	}
+	const entryAnimation = animate(elements, {
 		y: [
 			{ to: ["120%", "0%"] },
 			{ to: "-120%", delay: prefersReducedMotion ? 0 : 750, ease: "in(3)" },
