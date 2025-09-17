@@ -230,9 +230,6 @@
 <script>
 	// Open dropdown on hover (desktop) or tap (touch devices)
 	document.addEventListener('DOMContentLoaded', function() {
-		// Detect if device has touch capability
-		const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-		
 		// Find all dropdown triggers
 		const dropdownTriggers = document.querySelectorAll('[data-dropdown]');
 		
@@ -241,71 +238,97 @@
 			const dropdownMenu = document.getElementById(dropdownId);
 			
 			if (dropdownMenu) {
-				let hideTimeout;
-
-				function showDropdown() {
-					// Don't show dropdown on small screens (width < 1200px)
-					if (window.innerWidth < 1200) return;
+				let hideTimeout = -1;
+				const clearHideTimeout = () => {
+					if (hideTimeout === -1) {
+						return;
+					}
 					clearTimeout(hideTimeout);
+					hideTimeout = -1;
+				};
+
+				const isDropdownVisible = () => {
+					return dropdownMenu.style.display === 'block';
+				};
+
+				const showDropdown = () => {
+					if (isDropdownVisible()) {
+						return;
+					}
+
+					// Don't show dropdown on small screens (width < 1200px)
+					if (window.innerWidth < 1200) {
+						return;
+					}
+					clearHideTimeout();
 					const rect = trigger.getBoundingClientRect();
 					dropdownMenu.style.top = (rect.bottom) + 'px';
 					dropdownMenu.style.left = (rect.left) + 'px';
 					dropdownMenu.style.display = 'block';
 					trigger.classList.add('dropdown-open');
-				}
+				};
 
 				// Hide dropdown after a delay
-				function hideDropdown() {
-					hideTimeout = setTimeout(() => {
+				const hideDropdown = ({ instant = false } = {}) => {
+					if (!isDropdownVisible()) {
+						return;
+					}
+
+					const hideDropdownTrigger = () => {
+						clearHideTimeout();
 						dropdownMenu.style.display = 'none';
 						trigger.classList.remove('dropdown-open');
-					}, 100);
+					};
+
+					if (instant) {
+						hideDropdownTrigger();
+						return;
+					}
+					hideTimeout = setTimeout(hideDropdownTrigger, 100);
 				}
 				
 				// Toggle dropdown on high-resolution tablets
-				function toggleDropdown(event) {
-					if (window.innerWidth < 1200) return; 
+				const toggleDropdown = (event) => {
+					if (window.innerWidth < 1200) {
+						return;
+					}
 					event.preventDefault();
-					const isVisible = dropdownMenu.style.display === 'block';
-					if (isVisible) {
-						dropdownMenu.style.display = 'none';
-						trigger.classList.remove('dropdown-open');
+					if (isDropdownVisible()) {
+						hideDropdown({ instant: true })
 					} else {
 						showDropdown();
 					}
 				}
-				
-				if (isTouchDevice) {
-					// Touch device: use click/tap to toggle dropdown
-					trigger.addEventListener('click', toggleDropdown);
-				} else {
-					// Desktop: use hover
-					trigger.addEventListener('mouseenter', showDropdown);
-					trigger.addEventListener('mouseleave', hideDropdown);
-					
-					// Keep dropdown visible when hovering over it
-					dropdownMenu.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
-					dropdownMenu.addEventListener('mouseleave', hideDropdown);
+
+				const onlyOnTouch = (callback) => (event) => {
+					if (event.pointerType === "touch") {
+						callback(event);
+					}
+				};
+				const notOnTouch = (callback) => (event) => {
+					if (event.pointerType !== "touch") {
+						callback(event);
+					}
 				}
+
+				// Touch device: use click/tap to toggle dropdown
+				trigger.addEventListener('pointerup', onlyOnTouch((event) => toggleDropdown(event)));
+				// Close dropdown when clicking outside (for touch devices)
+				document.documentElement.addEventListener('pointerup', onlyOnTouch((event) => {
+					if (!trigger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+						hideDropdown({ instant: true });
+					}
+				}));
+
+				// Desktop: use hover
+				trigger.addEventListener('pointerenter', notOnTouch((_event) => showDropdown()));
+				trigger.addEventListener('pointerleave', notOnTouch((_event) => hideDropdown()));
+
+				// Keep dropdown visible when hovering over it
+				dropdownMenu.addEventListener('pointerenter', notOnTouch((_event) => clearHideTimeout()));
+				dropdownMenu.addEventListener('pointerleave', notOnTouch((_event) => hideDropdown()));
 			}
 		});
-		
-		// Close dropdown when clicking outside (for touch devices)
-		if (isTouchDevice) {
-			document.addEventListener('click', function(event) {
-				dropdownTriggers.forEach(trigger => {
-					const dropdownId = trigger.getAttribute('data-dropdown');
-					const dropdownMenu = document.getElementById(dropdownId);
-					
-					if (dropdownMenu && 
-						!trigger.contains(event.target) && 
-						!dropdownMenu.contains(event.target)) {
-						dropdownMenu.style.display = 'none';
-						trigger.classList.remove('dropdown-open');
-					}
-				});
-			});
-		}
 	});
 </script>
 
