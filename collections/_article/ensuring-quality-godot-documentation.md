@@ -34,9 +34,19 @@ There is a continuous integration system in place, which performs several automa
 
 As the Godot community is worldwide, we want the ability to provide not only the Godot editor in users' native languages, but also the documentation.
 
-Godot uses [Hosted Weblate](https://hosted.weblate.org) as a collaborative translation platform. Since Weblate does not natively support reStructuredText for translation sources (the markup format used by Sphinx), we had to find an alternative solution to get the strings into Weblate. We use scripts from the [godot-docs-l10n](https://github.com/godotengine/godot-docs-l10n) repository to convert the reStructuredText from the documentation repository to [.PO](https://en.wikipedia.org/wiki/Gettext), a format natively supported by Weblate ([and also by Godot!](https://docs.godotengine.org/en/stable/tutorials/i18n/localization_using_gettext.html)).
+Internationalizing content that gets continuously updated requires not only skilled translators, but also dedicated tooling to keep the translations in sync with the source material. Sphinx can extract content from each page, paragraph by paragraph, to put in translation catalogs in the [Gettext](https://en.wikipedia.org/wiki/Gettext) format (POT/PO files, [also supported by Godot!](https://docs.godotengine.org/en/stable/tutorials/i18n/localization_using_gettext.html)). The result for Godot's documentation is around 500 POT files, one for each page of the documentation, excluding the class reference. For convenience, we merge them all into a monolithic "Godot Documentation" component of 500,000 words.
 
-- [**Godot Documentation project on Hosted Weblate**](https://hosted.weblate.org/projects/godot-engine/godot-docs/)
+The class reference is handled separately as its source material is not Sphinx's reStructuredText files, but XML files in the engine repository (as the class reference is also compiled into the editor). For this, we use [a script](https://github.com/godotengine/godot-editor-l10n/blob/main/scripts/extract_classes.py) to extract the descriptions from the XML files and generate a Gettext POT file with a count of 600,000 words.
+
+So we're currently at 1,100,000 words of documentation to translate! That's no small task, and there's also a significant amount of churn whenever the English documentation and class reference gets edited, as all translations need to adopt the changes. To put this into perspective, the Godot editor's translation has a bit more than 40,000 words.
+
+Godot uses [Hosted Weblate](https://hosted.weblate.org) as a collaborative translation platform. This greatly simplifies the barrier to entry for editing Gettext files, and provides a number of additional features such as suggestions, team-specific resources, or the ability to cross-compare translations. Syncing translations between Weblate and the Godot documentation websites is currently a manual process, as there are a number of complex conversion steps involved and time-consuming builds across more than a dozen ReadTheDocs instances, but we plan to automate it eventually.
+
+- [**Godot Documentation component on Hosted Weblate**](https://hosted.weblate.org/projects/godot-engine/godot-docs/)
+- [**Godot Class Reference component on Hosted Weblate**](https://hosted.weblate.org/projects/godot-engine/godot-class-reference/)
+- Localized documentation websites: [Czech](https://docs.godotengine.org/cs/4.x/), [French](https://docs.godotengine.org/fr/4.x/), [German](https://docs.godotengine.org/de/4.x/), [Spanish](https://docs.godotengine.org/es/4.x/), [Italian](https://docs.godotengine.org/it/4.x/), [Japanese](https://docs.godotengine.org/ja/4.x/), [Korean](https://docs.godotengine.org/ko/4.x/), [Polish](https://docs.godotengine.org/pl/4.x/), [Brazilian Portuguese](https://docs.godotengine.org/pt-br/4.x/), [Russian](https://docs.godotengine.org/ru/4.x/), [Ukrainian](https://docs.godotengine.org/uk/4.x/), [Simplified Chinese](https://docs.godotengine.org/zh-cn/4.x/), [Traditional Chinese](https://docs.godotengine.org/zh-tw/4.x/)
+- [Documentation on contributing translations](https://contributing.godotengine.org/en/latest/documentation/translation/index.html)
+- [`#translation` channel on the Godot Contributors Chat](https://chat.godotengine.org/channel/translation)
 
 <img alt="Hosted Weblate Godot documentation website screenshot" src="/storage/blog/ensuring-quality-godot-documentation/hosted-weblate.webp" />
 
@@ -59,7 +69,7 @@ Since the class reference represents a massive amount of items to document, we b
 
 - [**Godot class reference status**](https://godotengine.github.io/doc-status/)
 
-This website relies on the [`make_rst.py`](https://github.com/godotengine/godot/blob/master/doc/tools/make_rst.py) script from the main Godot repository, which detects the completion percentage and outputs a Markdown table with the results.
+This website relies on the [`doc_status.py`](https://github.com/godotengine/godot/blob/master/doc/tools/doc_status.py) script from the main Godot repository, which detects the completion percentage and outputs a Markdown table with the results.
 
 Being aware of the overall and per-class completion percentages at all times made it a lot easier to improve the documentation coverage. As of writing, the overall completion percentage is **97%**. With additional efforts from [contributors like you](https://contributing.godotengine.org/en/latest/documentation/class_reference.html), we can perhaps reach 100% completion in the future.
 
@@ -77,7 +87,7 @@ This website only tracks the main Godot repository on GitHub, not the documentat
 
 ## User notes system
 
-In 2024, the Godot documentation got an integration for user notes using [Giscus](https://giscus.app/). This allows users to share additional information relevant for documentation readers. This integration is currently present on the `4.4`, `stable`, and `latest` branches of the documentation.
+In 2024, the Godot documentation got an integration for user notes using [Giscus](https://giscus.app/). This allows users to share additional information relevant for documentation readers. This integration is currently present on the `4.4`, `4.5`, `stable`, and `latest` branches of the documentation.
 
 As an example, you can see it in action at the bottom of the [GDScript reference](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#godot-giscus) manual page.
 
@@ -103,7 +113,7 @@ As a bonus, you can also watch the [godot-docs-user-notes](https://github.com/go
 
 This organization allows more people to contribute in various ways, even with limited technical know-how. Not only does the documentation benefit from those opening [pull requests](github.com/godotengine/godot-docs/pulls), it's also continuously improved every day by those posting user notes at the bottom of documentation pages. These user notes bring further clarifications and context to the manual pages, as well as linking to useful resources.
 
-A massive **thank you** to [all contributors to the documentation](https://github.com/godotengine/godot-docs/graphs/contributors)! As always, we welcome contributions to the documentation. [The contribution process is well-documented](https://contributing.godotengine.org/en/latest/documentation/overview.html), but you're welcome to hop on the [Godot contributors chat](https://chat.godotengine.org)'s `#documentation` channel if you have any questions.
+A massive **thank you** to [all contributors to the documentation](https://github.com/godotengine/godot-docs/graphs/contributors)! As always, we welcome contributions to the documentation. [The contribution process is well-documented](https://contributing.godotengine.org/en/latest/documentation/overview.html), but you're welcome to hop on the [`#documentation` channel on the Godot Contributors Chat](https://chat.godotengine.org/channel/documentation) if you have any questions.
 
 ## Support
 
