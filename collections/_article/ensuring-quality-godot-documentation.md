@@ -61,7 +61,7 @@ Since the class reference represents a massive amount of items to document, we b
 
 This website relies on the [`make_rst.py`](https://github.com/godotengine/godot/blob/master/doc/tools/make_rst.py) script from the main Godot repository, which detects the completion percentage and outputs a Markdown table with the results.
 
-Being aware of the overall and per-class completion percentages at all times made it a lot easier to improve the documentation coverage. As of writing, the overall completion percentage is **97%**. With additional efforts from [contributors like you](https://docs.godotengine.org/en/stable/contributing/documentation/updating_the_class_reference.html), we can perhaps reach 100% completion in the future.
+Being aware of the overall and per-class completion percentages at all times made it a lot easier to improve the documentation coverage. As of writing, the overall completion percentage is **97%**. With additional efforts from [contributors like you](https://contributing.godotengine.org/en/latest/documentation/class_reference.html), we can perhaps reach 100% completion in the future.
 
 <img alt="Godot class reference status website screenshot" src="/storage/blog/ensuring-quality-godot-documentation/doc-status.webp" />
 
@@ -103,7 +103,7 @@ As a bonus, you can also watch the [godot-docs-user-notes](https://github.com/go
 
 This organization allows more people to contribute in various ways, even with limited technical know-how. Not only does the documentation benefit from those opening [pull requests](github.com/godotengine/godot-docs/pulls), it's also continuously improved every day by those posting user notes at the bottom of documentation pages. These user notes bring further clarifications and context to the manual pages, as well as linking to useful resources.
 
-A massive **thank you** to [all contributors to the documentation](https://github.com/godotengine/godot-docs/graphs/contributors)! As always, we welcome contributions to the documentation. [The contribution process is well-documented](https://docs.godotengine.org/en/stable/contributing/documentation/index.html), but you're welcome to hop on the [Godot contributors chat](https://chat.godotengine.org)'s `#documentation` channel if you have any questions.
+A massive **thank you** to [all contributors to the documentation](https://github.com/godotengine/godot-docs/graphs/contributors)! As always, we welcome contributions to the documentation. [The contribution process is well-documented](https://contributing.godotengine.org/en/latest/documentation/overview.html), but you're welcome to hop on the [Godot contributors chat](https://chat.godotengine.org)'s `#documentation` channel if you have any questions.
 
 ## Support
 
