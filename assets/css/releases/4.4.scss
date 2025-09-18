@@ -1623,7 +1623,8 @@ $donate-robot-size: 500px;
 				margin-bottom: calc(var(--card-padding) * 2);
 			}
 
-			.section-title h3 {
+			.section-title h3,
+			.section-title h4 {
 				position: relative;
 				background: var(--color-top)
 					linear-gradient(to bottom, var(--color-top), var(--color-bottom));
