@@ -63,24 +63,42 @@ for (const releaseCardContainer of releaseCardContainers) {
 		});
 	}
 
-	releaseCardContainer.classList.add("overflow-y-hidden");
+	// releaseCardContainer.classList.add("overflow-y-hidden");
 }
 const sectionContainers = Array.from(
-	document.querySelectorAll(".section-title"),
+	document.querySelectorAll(".section:has(.section-title)"),
 );
 for (const sectionContainer of sectionContainers) {
 	elements.push({
-		element: sectionContainer.querySelector("h3"),
-		container: sectionContainer,
+		element: sectionContainer.querySelector(
+			".section-title h3, .section-title h4",
+		),
+		container: sectionContainer.querySelector(".section-title"),
 		isLastOfType: true,
 	});
 
-	sectionContainer.classList.add("overflow-y-hidden");
+	const sectionLinks = sectionContainer.querySelector(".section-links");
+	if (sectionLinks == null) {
+		continue;
+	}
+
+	elements.push({
+		element: sectionLinks,
+		container: sectionContainer.querySelector(".section-title"),
+		isLastOfType: true,
+	});
+
+	// sectionContainer.classList.add("overflow-y-hidden");
 }
+elements.sort((a, b) => {
+	const aRect = a.element.getBoundingClientRect();
+	const bRect = b.element.getBoundingClientRect();
+	return aRect.top - bRect.top;
+});
 for (const element of elements) {
 	if (element.element.getBoundingClientRect().top < windowHeight) {
 		if (element.isLastOfType) {
-			element.container.classList.remove("overflow-y-hidden");
+			// element.container.classList.remove("overflow-y-hidden");
 		}
 		continue;
 	}

@@ -110,9 +110,6 @@ elements.sort((a, b) => {
 	return aRect.top - bRect.top;
 });
 for (const element of elements) {
-	if (element.element == null) {
-		debugger;
-	}
 	if (element.element.getBoundingClientRect().top < windowHeight) {
 		if (element.isLastOfType) {
 			// element.container.classList.remove("overflow-y-hidden");
