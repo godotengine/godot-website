@@ -198,6 +198,15 @@ layout: default
 		filter: brightness(0.85) saturate(0.75);
 	}
 
+	.showcase-flip-container{
+		background-color: rgba(0, 0, 0, 0.31);
+		border-radius: 1rem;
+		padding: 1rem;
+	}
+	.showcase-flip-container:hover{
+		background-color: rgba(0, 0, 0, 0.50);
+	}
+
 	.showcase-flip-left,
 	.showcase-flip-right {
 		position: absolute;
@@ -360,9 +369,13 @@ layout: default
 				{% endif %}
 				{% endfor %}
 			</div>
-
-			<div class="showcase-flip-left"></div>
-			<div class="showcase-flip-right"></div>
+		<!-- fix accesibility issue -->
+			<div class="showcase-flip-container">
+				<div class="showcase-flip-left"></div>
+			</div>
+			<div class="showcase-flip-container">
+				<div class="showcase-flip-right"></div>
+			</div>
 		</div>
 
 		<a href="/showcase/" class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">
