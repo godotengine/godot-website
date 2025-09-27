@@ -110,7 +110,7 @@ As a bonus, you can also watch the [godot-docs-user-notes](https://github.com/go
 
 ## Conclusion
 
-This organization allows more people to contribute in various ways, even with limited technical know-how. Not only does the documentation benefit from those opening [pull requests](github.com/godotengine/godot-docs/pulls), it's also continuously improved every day by those posting user notes at the bottom of documentation pages. These user notes bring further clarifications and context to the manual pages, as well as linking to useful resources.
+This organization allows more people to contribute in various ways, even with limited technical know-how. Not only does the documentation benefit from those opening [pull requests](https://github.com/godotengine/godot-docs/pulls), it's also continuously improved every day by those posting user notes at the bottom of documentation pages. These user notes bring further clarifications and context to the manual pages, as well as linking to useful resources.
 
 A massive **thank you** to [all contributors to the documentation](https://github.com/godotengine/godot-docs/graphs/contributors)! As always, we welcome contributions to the documentation. [The contribution process is well-documented](https://contributing.godotengine.org/en/latest/documentation/overview.html), but you're welcome to hop on the [`#documentation` channel on the Godot Contributors Chat](https://chat.godotengine.org/channel/documentation) if you have any questions.
 
