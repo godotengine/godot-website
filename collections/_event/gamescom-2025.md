@@ -9,7 +9,7 @@ dates_short: "21 August 12:00"
 # The first date of the event in ISO format, used for sorting.
 date: 2025-08-21 12:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: "Near IndieArenaBooth in Hall 10 @ gamescom"
 location_short: "Cologne, Germany"
