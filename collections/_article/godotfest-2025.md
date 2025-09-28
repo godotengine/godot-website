@@ -32,7 +32,7 @@ light and modern venue with opportunities to:
 
 ## Tickets!
 
-The ticket shop is now open at [https://25.godotfest.com/](https://25.godotfest.com/), get your tickets with
+The ticket shop is now open at [GodotFest.com](https://godotfest.com/), get your tickets with
 an early supporter discount until the end of June!
 
 
@@ -55,6 +55,7 @@ for helping us curate and create a diverse and interesting roster of submissions
 - [Daniel Dyrda](https://dyrda.page/), Game Design Engineer and Researcher @ TUM
 - [Miguel aka bitbrain](https://youtube.com/bitbraindev)
 
+## Sponsors
 We are also actively looking for sponsors to support GodotFest.
 If you or your company would be interested in learning more about sponsorship opportunities,
 please reach out to [contact@godotfest.com](mailto:contact@godotfest.com?subject=Sponsorhip inquiry).
@@ -66,6 +67,7 @@ See you there!
 
 ## Overview
 
+| 🌐 Website        | [GodotFest.com](https://godotfest.com/)
 | 📅 Dates          | 11th, 12th of November                                                                                              |
 | 🕑 Time           | 09:30 - 18:00 CEST                                                                                                  |
 | 🌍 Location       | Munich, Germany                                                                                                     |
