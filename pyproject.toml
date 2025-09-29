@@ -1,0 +1,32 @@
+[tool.codespell]
+enable-colors = true
+write-changes = true
+check-hidden = true
+quiet-level = 0
+builtin = ["clear", "rare", "en-GB_to_en-US"]
+skip = [
+	"_i18n/*",
+	"assets/images/consoles/consoles-hero.svg",
+	"assets/js/*.min.js",
+	"assets/js/modules/*",
+	"assets/leaflet/leaflet.js*",
+	"collections/_article/godot-and-openhmd-kiel-open-source-and-linux-days.md",
+	"Gemfile.lock",
+	"pages/home.html",
+]
+ignore-words-list = [
+	# Proper Nouns
+	"Admiraal",
+	"Buring",
+	"Carrer",
+	"Dota",
+	"Fales",
+	"Makin",
+	"Tage",
+	# Acronyms
+	"LOD",
+	"OT",
+	# Miscellaneous
+	"nd",
+	"thirdparty",
+]
