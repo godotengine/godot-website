@@ -1,3 +1,8 @@
+- name: "4.6"
+  flavor: "dev1"
+  release_date: "30 September 2025"
+  release_notes: "/article/release-candidate-godot-4-6-dev-1/"
+
 - name: "4.5"
   flavor: "stable"
   release_date: "15 September 2025"
