@@ -5,6 +5,9 @@ hosts:
     title: "Official Releases mirror"
 
 defaults:
+  - name: "4.6"
+    stable: [ "github" ]
+    preview: [ "github_builds" ]
   - name: "4.5"
     stable: [ "github" ]
     preview: [ "github_builds" ]
