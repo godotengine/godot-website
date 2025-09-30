@@ -19,7 +19,7 @@ GodotCon was run by members of the Boston Godot User Group and Boston Game Dev i
 
 ![Emi giving the opening keynote at the Microsoft NERD Center.](/storage/app/uploads/public/56b/dd1/100/56bdd110020250506091817.webp)
 
-And while we're at it, a huge thanks to all of our sponsors: [Arm Technology](https://www.arm.com/), [Endless Foundation](https://www.endlessglobal.com/the-endless-foundation), [W4 Games](https://www.w4games.com/), [Mike Klubnika](https://mikeklubnika.com/), [Xogot](https://xogot.com/), [Binary Solo](https://www.binarysolo.com), and [Disla Media](https://dislamedia.com/). Without them a conference like this would not be possible.
+And while we're at it, a huge thanks to all of our sponsors: [Arm Technology](https://www.arm.com/), [Endless Foundation](https://www.endlessglobal.com/the-endless-foundation), [W4 Games](https://www.w4games.com/), [Mike Klubnika](https://mikeklubnika.com/), [Xogot](https://xogot.com/), [Binary Solo](https://www.binarysolo.com/), and [Disla Media](https://dislamedia.com/). Without them a conference like this would not be possible.
 
 ## The format
 
@@ -63,7 +63,7 @@ Many thanks go to our small group of volunteers who helped everything run smooth
 
 ![A table of goods collected at GodotCon. Godot branded tote, Buckshot Roulette sticker packs, cards and stickers from the showcase games, badge, pins, and the GodotCon Anthology Mixtape](/storage/app/uploads/public/56b/dd1/100/56bdd110020250508221757.webp)![A close-up shot of the GodotCon T-shirt that was for sale.](/storage/app/uploads/public/56b/dd1/100/56bdd11005193.webp)
 
-(Speaking of swag bags, how cool was our awesome Anthology "Cassette" that included games, demos, and experiments by our speakers and showcasers!?)
+(Speaking of swag bags, how cool was our awesome Anthology "cassette" that included games, demos, and experiments by our speakers and showcasers!?)
 
 ![A glamour shot of the GodotCon Anthology Mixtape.](/storage/app/uploads/public/56b/dd1/100/56bdd110020250506231922551.webp)
 
