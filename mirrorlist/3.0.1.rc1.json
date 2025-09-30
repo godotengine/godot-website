@@ -1,1 +1,1 @@
-{"mirrors":[{"name":"Official GitHub Releases mirror","url":"https://github.com/godotengine/godot-builds/releases/download/3.0.1-rc1/Godot_v3.0.1-rc1_export_templates.tpz"}]}
+{"mirrors":[{"name":"Official Releases mirror","url":"https://downloads.godotengine.org/?version=3.0.1&flavor=rc1&slug=export_templates.tpz&platform=templates"}]}

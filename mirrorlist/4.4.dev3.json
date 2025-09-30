@@ -1,1 +1,1 @@
-{"mirrors":[{"name":"Official GitHub Releases mirror","url":"https://github.com/godotengine/godot-builds/releases/download/4.4-dev3/Godot_v4.4-dev3_export_templates.tpz"}]}
+{"mirrors":[{"name":"Official Releases mirror","url":"https://downloads.godotengine.org/?version=4.4&flavor=dev3&slug=export_templates.tpz&platform=templates"}]}

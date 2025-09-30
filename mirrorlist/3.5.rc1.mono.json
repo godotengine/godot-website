@@ -1,1 +1,1 @@
-{"mirrors":[{"name":"Official GitHub Releases mirror","url":"https://github.com/godotengine/godot-builds/releases/download/3.5-rc1/Godot_v3.5-rc1_mono_export_templates.tpz"}]}
+{"mirrors":[{"name":"Official Releases mirror","url":"https://downloads.godotengine.org/?version=3.5&flavor=rc1&slug=mono_export_templates.tpz&platform=templates"}]}
