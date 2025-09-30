@@ -3,7 +3,8 @@
 # See `_data/download_configs.yml` for a reference table of slugs.
 
 HOST_TUXFAMILY = "https://downloads.tuxfamily.org/godotengine"
-HOST_HETZNER = "https://downloads.godotengine.org"
+HOST_GITHUB = "https://github.com/godotengine/godot/releases/download"
+HOST_GITHUB_BUILDS = "https://github.com/godotengine/godot-builds/releases/download"
 
 FLAVOR_MATRIX = {
   "dev"    => 1,
@@ -104,9 +105,10 @@ module MakeDownloadFilter
       end
     end
 
-    if host == "github" or host == "github_builds"
-      # Use our custom download API that supports all github builds but will prefer S3 downloads
-      return "#{HOST_HETZNER}?version=#{version_name}&flavor=#{version_flavor}&slug=#{download_slug}&platform=#{platform}"
+    if host == "github"
+      return "#{HOST_GITHUB}/#{version_name}-#{version_flavor}/#{download_file}"
+    elsif host == "github_builds"
+      return "#{HOST_GITHUB_BUILDS}/#{version_name}-#{version_flavor}/#{download_file}"
     elsif host == "tuxfamily"
       if version_flavor == "stable"
         return "#{HOST_TUXFAMILY}/#{version_name}#{mono_slug}/#{download_file}"
