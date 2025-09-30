@@ -1,8 +1,8 @@
 hosts:
   - name: "github"
-    title: "Official GitHub Releases mirror"
+    title: "Official Releases mirror"
   - name: "github_builds"
-    title: "Official GitHub Releases mirror"
+    title: "Official Releases mirror"
 
 defaults:
   - name: "4.5"
