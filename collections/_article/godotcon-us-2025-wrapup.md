@@ -3,8 +3,8 @@ title: "Looking back at GodotCon US 2025"
 excerpt: "It's time for a summary of GodotCon Boston now that all talks are available on Youtube."
 categories: ["events"]
 author: Chad Stewart
-image: /storage/app/uploads/public/56b/dd1/100/56bdd11001234567891234.jpg
-date: 2025-09-30 00:00:00
+image: /storage/blog/godotcon-us-2025/looking-back-godotcon-2025.webp
+date: 2025-10-01 14:00:00
 ---
 
 As you might know, this year we hosted our first US-based GodotCon in Boston. Taking place at the tail end of spring, this was three solid days focused solely on making games with the Godot Engine. Our first day had hands-on workshops followed by two days of talks. For our inaugural event we had:
@@ -17,7 +17,7 @@ As you might know, this year we hosted our first US-based GodotCon in Boston. Ta
 
 GodotCon was run by members of the Boston Godot User Group and Boston Game Dev in co-ordination with the Godot Foundation during [Boston Gamedev Week](https://gamedev.boston/). From May 5th to May 7th we had three days of Godot-focused content at the Microsoft New England Research and Development Center (NERD Center!). A huge thanks to Microsoft for generously donating the space. This would not have been possible without them and their commitment to supporting non-profits and open-source software.
 
-![Emi giving the opening keynote at the Microsoft NERD Center.](/storage/app/uploads/public/56b/dd1/100/56bdd110020250506091817.webp)
+![Emi giving the opening keynote at the Microsoft NERD Center.](/storage/blog/godotcon-us-2025/56bdd110020250506091817.webp)
 
 And while we're at it, a huge thanks to all of our sponsors: [Arm Technology](https://www.arm.com/), [Endless Foundation](https://www.endlessglobal.com/the-endless-foundation), [W4 Games](https://www.w4games.com/), [Mike Klubnika](https://mikeklubnika.com/), [Xogot](https://xogot.com/), [Binary Solo](https://www.binarysolo.com/), and [Disla Media](https://dislamedia.com/). Without them a conference like this would not be possible.
 
@@ -27,7 +27,7 @@ For our first US-based GodotCon, we committed to three days of programming. The 
 
 On days 2 and 3, we got an amazing batch of talks and updates. You may have heard [Adam](https://www.youtube.com/watch?v=u_WMJG0menc) talk about how the team got C# web exports working. [Acerola](https://www.youtube.com/watch?v=fiyf4XPanf4) took us super in-depth with Compositor Effects. We got a inside look at converting [Domekeeper to multiplayer](https://www.youtube.com/watch?v=MEZoKKAoUAU). And some dufus even talked about [making games on your phone](https://www.youtube.com/watch?v=qoCWp_oP9Ng). All in all, there was a wide berth of topics from folks from the entire Godot community.
 
-![Julian, AKA StayAtHomeDev, talking about growing a YouTube audience.](/storage/app/uploads/public/56b/dd1/100/56bdd11001234567891233.webp)
+![Julian, AKA StayAtHomeDev, talking about growing a YouTube audience.](/storage/blog/godotcon-us-2025/56bdd11001234567891233.webp)
 
 We're happy to say that we have finally released all of the videos from GodotCon for free on YouTube;  everything from lightning talks to workshops!
 
@@ -37,7 +37,7 @@ We're happy to say that we have finally released all of the videos from GodotCon
 
 In addition to the talks and workshops, we were able to put on a small games showcase. 
 
-![Shot of the Garage, our showcase venue, filled with people playing games.](/storage/app/uploads/public/56b/dd1/100/56bdd1100171748217.jpg)
+![Shot of the Garage, our showcase venue, filled with people playing games.](/storage/blog/godotcon-us-2025/56bdd1100171748217.jpg)
 
 In no particular order:
 
@@ -51,7 +51,7 @@ In no particular order:
 * [Neongarten by Moonroof Studios](https://store.steampowered.com/app/3211750/Neongarten/): A minimalist cyberpunk city builder.
 * [TurnTide Tales by Comfy Mitten](https://www.comfymitten.games/devlog/turntide-tales): An epic swashbuckling adventure across the high seas with a daring crew.
 
-![Someone playing on a controller at the Turnip Boy Steals the Mail table.](/storage/app/uploads/public/56b/dd1/100/56bdd11005214.webp)
+![Someone playing on a controller at the Turnip Boy Steals the Mail table.](/storage/blog/godotcon-us-2025/56bdd11005214.webp)
 
 We also had some other cool stuff on display!
 * [Xogot](https://xogot.com/): The Godot editor on an iPad native interface.
@@ -61,11 +61,11 @@ We also had some other cool stuff on display!
 
 Many thanks go to our small group of volunteers who helped everything run smoothly. Volunteers who did tons of design work. Volunteers who helped talks run smoothly. Volunteers who basically lived at the badge and merch tables and helped us pack our awesome swag bags. 
 
-![A table of goods collected at GodotCon. Godot branded tote, Buckshot Roulette sticker packs, cards and stickers from the showcase games, badge, pins, and the GodotCon Anthology Mixtape](/storage/app/uploads/public/56b/dd1/100/56bdd110020250508221757.webp)![A close-up shot of the GodotCon T-shirt that was for sale.](/storage/app/uploads/public/56b/dd1/100/56bdd11005193.webp)
+![A table of goods collected at GodotCon. Godot branded tote, Buckshot Roulette sticker packs, cards and stickers from the showcase games, badge, pins, and the GodotCon Anthology Mixtape](/storage/blog/godotcon-us-2025/56bdd110020250508221757.webp)![A close-up shot of the GodotCon T-shirt that was for sale.](/storage/blog/godotcon-us-2025/56bdd11005193.webp)
 
 (Speaking of swag bags, how cool was our awesome Anthology "cassette" that included games, demos, and experiments by our speakers and showcasers!?)
 
-![A glamour shot of the GodotCon Anthology Mixtape.](/storage/app/uploads/public/56b/dd1/100/56bdd110020250506231922551.webp)
+![A glamour shot of the GodotCon Anthology Mixtape.](/storage/blog/godotcon-us-2025/56bdd110020250506231922551.webp)
 
 # The future
 
