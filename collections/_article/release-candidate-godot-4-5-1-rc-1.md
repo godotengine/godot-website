@@ -19,7 +19,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 -----
 
-*The illustration picture for this article comes from* [**Coal LLC**](https://store.steampowered.com/app/3361510/Coal_LLC/?curator_clanid=41324400), *a capitalism simulator where you fulfill increasingly absurd quotas through increasingly dubious methods. You can buy the game or try out the demo on [Steam](https://store.steampowered.com/app/3361510/Coal_LLC/?curator_clanid=41324400), and follow the developers on their [website](https://byebyeocean.net/).*
+*The illustration picture for this article comes from* [**Coal LLC**](https://store.steampowered.com/app/3361510/Coal_LLC/?curator_clanid=41324400), *a capitalism simulator where you fulfill increasingly absurd quotas through increasingly dubious methods. You can buy the game or try out the demo on [Steam](https://store.steampowered.com/app/3361510/Coal_LLC/?curator_clanid=41324400), and follow the developers on their [website](https://www.byebyeocean.net/).*
 
 ## What's new
 
