@@ -116,7 +116,7 @@ It's called Ninepatch because the rectangle gets split into nine sub-rectangles.
 The GLES3 renderer only renders a single rectangle but feeds the fragment shader with the needed margin information. The fragment shader then calculates the associated UV coordinate for each fragment. The same approach shouldn't be used in GLES2, since some drivers work a lot better if no dependent texture reads are performed. (layman explanation: the UVs of a texture for a fragment should be known before the fragment shader actually executes)
 
 Previously Godot issued 8 or 9 render calls for each sub-rectangle (8 if the center doesn't get rendered).
-In the new GLES2 backened I decided to use a vertex + index array buffer instead to reduce the number of draw calls. For each vertex the fitting UVs get calculated before the draw call. Because of some stupid typos I had a hard time getting this right, but at least I got a nice UV-debug screenshot out of it.
+In the new GLES2 backend I decided to use a vertex + index array buffer instead to reduce the number of draw calls. For each vertex the fitting UVs get calculated before the draw call. Because of some stupid typos I had a hard time getting this right, but at least I got a nice UV-debug screenshot out of it.
 
 ![Screenshot from 2018-01-04 14-46-14.png](/storage/app/uploads/public/5a8/094/c34/5a8094c3400d6076419598.png)
 
@@ -151,7 +151,7 @@ As written about in a past dev-blog, the Godot [shader language got reworked com
 
 This is done by using the Godot built-in shader parser and compiler which outputs an [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) which can be used for further processing.
 
-To support the Godot shader lanuage, the abstract syntax tree needs to be translated into the appropriate target language, in this case GLSL ES 2.0. This is done in the [`ShaderCompilerGLES2` class](https://github.com/karroffel/godot/blob/37208c890337894519cf1d1e943a5c381f79dcc0/drivers/gles2/shader_compiler_gles2.h#L40).
+To support the Godot shader language, the abstract syntax tree needs to be translated into the appropriate target language, in this case GLSL ES 2.0. This is done in the [`ShaderCompilerGLES2` class](https://github.com/karroffel/godot/blob/37208c890337894519cf1d1e943a5c381f79dcc0/drivers/gles2/shader_compiler_gles2.h#L40).
 
 The [`_dump_node_code`](https://github.com/karroffel/godot/blob/37208c890337894519cf1d1e943a5c381f79dcc0/drivers/gles2/shader_compiler_gles2.cpp#L268) method is used to output a String for each kind of node in the AST. Recursively, this method is used to generate the GLSL code for the whole shader.
 

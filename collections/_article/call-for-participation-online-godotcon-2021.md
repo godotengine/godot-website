@@ -9,7 +9,7 @@ date: 2020-12-03 14:25:37
 
 2021 is quickly approaching and in the Godot community we are starting to prepare for next year's GodotCon!
 
-As you might know, each year we attend FOSDEM, the major Free and Open Source event in Europe, and we use the opportunity to organise our own small conference as a fringe event: GodotCon! A meetup for contributors, users and interested people to socialize, collaborate and share knowledge.
+As you might know, each year we attend FOSDEM, the major Free and Open Source event in Europe, and we use the opportunity to organize our own small conference as a fringe event: GodotCon! A meetup for contributors, users and interested people to socialize, collaborate and share knowledge.
 
 Sadly, given the uncertainty regarding international travel and the possibility to host big gatherings, FOSDEM has decided to go online-only for next year's edition and we are taking the same decision for our own GodotCon.
 

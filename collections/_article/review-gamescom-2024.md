@@ -75,4 +75,4 @@ What event would you like to see us attend next? Tell us on our official forum! 
 		max-height: 300px;
 		background-color: transparent;
 	}
-</stlye>
+</style>

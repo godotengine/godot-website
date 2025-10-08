@@ -51,7 +51,7 @@ We work weekdays like any regular job, and we also tend to work on evenings and/
 
 ## Funding for new features
 
-We will try to make sure that donations go to finance general development, bug fixing and polish. Still, the community may still be interested in funding work on specific features (e.g. support for the latest VR headset, ray-tracing, latest C# version or tool, etc.), which are generaly not of so much priority in our roadmap.
+We will try to make sure that donations go to finance general development, bug fixing and polish. Still, the community may still be interested in funding work on specific features (e.g. support for the latest VR headset, ray-tracing, latest C# version or tool, etc.), which are generally not of so much priority in our roadmap.
 
 Many Godot features are already financed by third parties directly. Companies like Gamblify, Microsoft or Mozilla continue to hire or fund our contributors to work on them. Following this logic, in case some part of our community really wants to focus on a specific feature and wants to pay for it, we were thinking that separate crowdfunds could be set up if enough interest exists. This could allow hiring a contributor or setting up a bounty and would go via a separate funding channel than the main one.
 

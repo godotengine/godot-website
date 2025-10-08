@@ -103,7 +103,7 @@ Additionally, heightfield collision can detect the active camera and move along 
 
 ## Future
 
-Some extra features (skeletal trails and skeletal deform) are still missing and will eventually be added before 4.0 release date, as they depend on other features (some improvements and rewrite to skeleton handling). Additionaly, GPU particles are not working for 2D yet. They depend on a final rewrite of the 2D engine based on all the feedback received (it was the first feature implemented in Vulkan after all, done with much less experience than now) in the coming weeks.
+Some extra features (skeletal trails and skeletal deform) are still missing and will eventually be added before 4.0 release date, as they depend on other features (some improvements and rewrite to skeleton handling). Additionally, GPU particles are not working for 2D yet. They depend on a final rewrite of the 2D engine based on all the feedback received (it was the first feature implemented in Vulkan after all, done with much less experience than now) in the coming weeks.
 
 Still, this marks the final feature that had to be ported over from Godot 3 to Godot 4. From now on, my focus over the next months will be on improving, cleaning up and optimizing (including optimization features such as impostors, LOD and occlusion) everything that is there with hopefully an Alpha coming by December or January (can only wish..).
 

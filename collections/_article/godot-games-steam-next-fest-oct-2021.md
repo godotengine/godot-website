@@ -15,7 +15,7 @@ Our project manager Rémi already collected all of them in a [Twitter thread](ht
 
 ### The Steam Next Fest
 
-Steam organises a recurring event called the *[Steam Next Fest](https://partner.steamgames.com/doc/marketing/steamnextfest/2021oct)*:
+Steam organizes a recurring event called the *[Steam Next Fest](https://partner.steamgames.com/doc/marketing/steamnextfest/2021oct)*:
 
 > Steam Next Fest is a multi-day celebration where fans can try out demos, chat with developers, watch livestreams, and learn about upcoming games on Steam. For developers, Steam Next Fest is an opportunity to get early feedback from players and build an audience for a future launch on Steam.
 
@@ -211,11 +211,11 @@ Igniting Spark Games' [@StrivingLight](https://twitter.com/StrivingLight) is a r
 
 ___
 
-#### [Hashi: Light](https://store.steampowered.com/app/1703650/Hashi_Light/?curator_clanid=41324400)
+#### [Hash: Light](https://store.steampowered.com/app/1703650/Hashi_Light/?curator_clanid=41324400)
 
-Hashi: Light by amiksemo is a minimalist and casual puzzle game with a ton of puzzles to solve.
+Hash: Light by amiksemo is a minimalist and casual puzzle game with a ton of puzzles to solve.
 
-[![Hashi: Light](https://cdn.cloudflare.steamstatic.com/steam/apps/1703650/ss_0afb5ba14f11ec771417297f145507d825f6490b.1920x1080.jpg?t=1632580311)](https://store.steampowered.com/app/1703650/Hashi_Light/?curator_clanid=41324400)
+[![Hash: Light](https://cdn.cloudflare.steamstatic.com/steam/apps/1703650/ss_0afb5ba14f11ec771417297f145507d825f6490b.1920x1080.jpg?t=1632580311)](https://store.steampowered.com/app/1703650/Hashi_Light/?curator_clanid=41324400)
 
 ___
 

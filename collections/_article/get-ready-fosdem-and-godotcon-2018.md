@@ -1,6 +1,6 @@
 ---
 title: "Get ready for FOSDEM and GodotCon 2018!"
-excerpt: "In February 2018, the Godot Engine community invites you to meet together at the FOSDEM (3 & 4 Feb) and the GodotCon (5 & 6 Feb), both in Brussels, Belgium and with dozens of Godot users and contributors, including our lead developer Juan Linietsky coming all the way from Buenos Aires. FOSDEM is a huge free and open source software-focused event with over 8000 attendees. Coming right after FOSDEM in the same city, GodotCon is a small but Godot-focused event with talks, workshops and many activities around our favourite engine."
+excerpt: "In February 2018, the Godot Engine community invites you to meet together at the FOSDEM (3 & 4 Feb) and the GodotCon (5 & 6 Feb), both in Brussels, Belgium and with dozens of Godot users and contributors, including our lead developer Juan Linietsky coming all the way from Buenos Aires. FOSDEM is a huge free and open source software-focused event with over 8000 attendees. Coming right after FOSDEM in the same city, GodotCon is a small but Godot-focused event with talks, workshops and many activities around our favorite engine."
 categories: ["events"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/5a2/eed/6e1/5a2eed6e1cc88595174491.png
@@ -25,7 +25,7 @@ You can also indicate on that form if you plan to attend FOSDEM, so that we know
 
 ## FOSDEM 2018
 
-[FOSDEM](https://fosdem.org) is the major European event focusing on Free and Open Source Software (FOSS). Godot will have a stand there ([Building K, level 2](https://fosdem.org/2018/stands/)) where we will be distributing and selling some goodies (T-Shirts, stickers) and most importantly presenting our favourite engine and some games to the FOSDEM visitors. More than 8,000 visitors are awaited, and we hope that many will be impressed by our Godot 3.0 demos!
+[FOSDEM](https://fosdem.org) is the major European event focusing on Free and Open Source Software (FOSS). Godot will have a stand there ([Building K, level 2](https://fosdem.org/2018/stands/)) where we will be distributing and selling some goodies (T-Shirts, stickers) and most importantly presenting our favorite engine and some games to the FOSDEM visitors. More than 8,000 visitors are awaited, and we hope that many will be impressed by our Godot 3.0 demos!
 
 There *might* be some Godot-related talks, but we are still waiting for a confirmation from the FOSDEM organizers (the event is increasingly popular and they have hundreds of talk proposals to choose from).
 

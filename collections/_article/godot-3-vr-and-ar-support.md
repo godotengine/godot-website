@@ -49,7 +49,7 @@ Finally the [ARVRAnchor](http://docs.godotengine.org/en/latest/classes/class_arv
 
 ## Interfaces as GDNative modules
 
-While there will be interfaces implemented directly into the Godot source, the prefered deployment method of the interfaces is through GDNative modules. These modules will generally consist of two files. A dynamic library and a GDNative library resource file. This resource file should be added to the list of singleton GDNative libraries in your `project.godot` files (Godot will do this automatically when you open the resource file in the editor). This will load the module when your game starts and make the AR/VR interface available to the ARVRServer.
+While there will be interfaces implemented directly into the Godot source, the preferred deployment method of the interfaces is through GDNative modules. These modules will generally consist of two files. A dynamic library and a GDNative library resource file. This resource file should be added to the list of singleton GDNative libraries in your `project.godot` files (Godot will do this automatically when you open the resource file in the editor). This will load the module when your game starts and make the AR/VR interface available to the ARVRServer.
 
 If an interface is supported on multiple OSs there will be a dynamic library for each OS. Eventually Godot will export the correct dynamic library when exporting your game, we are still working on this.
 
@@ -79,7 +79,7 @@ It has been successfully tested on both Oculus and HTC hardware and should in th
 ![2](http://www.openhmd.net/wordpress/wp-content/uploads/2017/09/Godot-OpenHMD-Research.png)
 
 
-[OpenHMD](http://www.openhmd.net/) is a great open source project that enables cross platform support for a number of major headset without relying on pre-installed SDKs. Especialy on Linux this project shines as it allows you to use hardware that isn't supported on Linux by their hardware vendors. But equally on Windows it brings in native support for devices such as the NOLO VR controllers and even the PSVR headset!
+[OpenHMD](http://www.openhmd.net/) is a great open source project that enables cross platform support for a number of major headset without relying on pre-installed SDKs. Especially on Linux this project shines as it allows you to use hardware that isn't supported on Linux by their hardware vendors. But equally on Windows it brings in native support for devices such as the NOLO VR controllers and even the PSVR headset!
 
 The module we are building for Godot is still very experimental and incomplete but I'm putting it in the mix here as it would be good to have people offering a helping hand to further complete it. It may change drastically before we're done with it. You can find the current version of the OpenHMD GDNative module in the [godot_openhmd](https://github.com/BastiaanOlij/godot_openhmd) repository.
 

@@ -62,7 +62,7 @@ Among a number of other bugfixes, a couple performance improvements have been ad
 As usual, we're keeping thirdparty libraries updated, especially the ones which may be subject to security vulnerabilities.
 
 This dev snapshot includes updates to:
-- Mozilla CA certifactes from June 2023
+- Mozilla CA certificates from June 2023
 - SDL GameControllerDB from Oct 2023
 - brotli 1.1.0
 - libpng 1.6.40

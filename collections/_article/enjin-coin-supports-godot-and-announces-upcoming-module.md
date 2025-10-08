@@ -15,7 +15,7 @@ On top of this sponsorship, [they announced their support](https://medium.com/en
 
 ### About Enjin Coin
 
-Enjin Coin (ENJ) is a "smart cryptocurrency for gaming" coupled to the Enjin gaming platform. This cryptocurrency can be used as a backend for in-game virtual goods, which can therefore be traded and transfered between different games relying on Enjin Coin. You can check [their detailed whitepaper](https://enjincoin.io/enjincoin_whitepaper.pdf) and [website](https://enjincoin.io) for more details on this blockchain-based technology.
+Enjin Coin (ENJ) is a "smart cryptocurrency for gaming" coupled to the Enjin gaming platform. This cryptocurrency can be used as a backend for in-game virtual goods, which can therefore be traded and transferred between different games relying on Enjin Coin. You can check [their detailed whitepaper](https://enjincoin.io/enjincoin_whitepaper.pdf) and [website](https://enjincoin.io) for more details on this blockchain-based technology.
 
 As mentioned, they intend to make their platform available for Godot games by developing an official module for Godot 3, and they will likely get help from experienced Godot developers(*) to ensure that the module works out of the box.
 

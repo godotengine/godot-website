@@ -37,7 +37,7 @@ To improve backward compatibility, tiles from 3.x in the `SINGLE_TILE` mode will
 
 As the atlas merging tool is only modifying the TileSet resource, using it might have made all TileMaps using the modified TileSet point to missing atlases. Hopefully, I implemented a way to solve this problem.
 
-TileSet now features a system of *tile proxies*. Thoses proxies are basically a mapping table, that allows notifying the TileMap using a given TileSet that a given set of tile identifiers should be replaced by another one. Tile proxies are automatically set up when merging different atlases, but they can also be set manually thanks to a dedicated interface. This may become useful when you changed an atlas ID or want to replace all tiles from an atlas by the ones from another atlas. Note that, when editing a TileMap, you can replace all cells by their corresponding mapped value.
+TileSet now features a system of *tile proxies*. Those proxies are basically a mapping table, that allows notifying the TileMap using a given TileSet that a given set of tile identifiers should be replaced by another one. Tile proxies are automatically set up when merging different atlases, but they can also be set manually thanks to a dedicated interface. This may become useful when you changed an atlas ID or want to replace all tiles from an atlas by the ones from another atlas. Note that, when editing a TileMap, you can replace all cells by their corresponding mapped value.
 
 ### TileMap layers
 

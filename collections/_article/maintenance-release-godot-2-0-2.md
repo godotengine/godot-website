@@ -45,7 +45,7 @@ The main highlights in this maintenance release are:
 - Added rotation/panning support for trackpads in 3D mode
 - Bind Z key (without modifiers) to toggle wireframe in 3D view
 - Expose `android/shutdown_adb_on_exit` parameter and default to true
-- LineEdit/TextEdit: various improvements and fixes to copy, cut and paste behaviours
+- LineEdit/TextEdit: various improvements and fixes to copy, cut and paste behaviors
 - Option to toggle line numbers
 - Option to toggle tabulation drawing and configurable size
 - Separate help pages from scripts by default

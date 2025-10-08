@@ -95,7 +95,7 @@ func start_server():
 func start_client():
 	var peer = NetworkedMultiplayerENet.new()
 	peer.use_dtls = true
-	# Optionally disable this to skip certificate verification (unsecure).
+	# Optionally disable this to skip certificate verification (insecure).
 	peer.dtls_verify = true
 	peer.set_dtls_certificate(cert)
 	peer.create_client("localhost", 8092)

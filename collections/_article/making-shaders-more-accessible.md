@@ -37,10 +37,10 @@ All we need to know is that we must convert the screen coordinates (for a screen
 
 1. Divide the final coordinate by the screen size
 2. Multiply by 2
-3. Substract (1, 1)
+3. Subtract (1, 1)
 4. Result is the sprite vertices in the -1 to +1 clip space coordinates.
 
-These triangles are then drawn to the screen (remember, again the screen can be of any size, but OpenGL will respresent it in the -1 .. +1 range for drawing).
+These triangles are then drawn to the screen (remember, again the screen can be of any size, but OpenGL will represent it in the -1 .. +1 range for drawing).
 
 For each pixel drawn to the screen, OpenGL will interpolate the outputs that were generated from the vertex program and use them to fill the triangle. In this case, the UV coordinate (for reading the texture). This process is done in the fragment program (pixel shader in DirectX terminology).
 

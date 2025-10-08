@@ -51,7 +51,7 @@ Maintenance releases are expected to be safe for an upgrade, but we recommend to
 - Editor: Allow dragging editable children ([GH-84310](https://github.com/godotengine/godot/pull/84310)).
 - Editor: Fix errors on file rename or move in the Filesystem Dock ([GH-84520](https://github.com/godotengine/godot/pull/84520)).
 - Editor: Fix issue with 3D scene drag and drop preview node ([GH-85087](https://github.com/godotengine/godot/pull/85087)).
-- Editor: Fix SnapGrid is almost invisble in light theme ([GH-85585](https://github.com/godotengine/godot/pull/85585)).
+- Editor: Fix SnapGrid is almost invisible in light theme ([GH-85585](https://github.com/godotengine/godot/pull/85585)).
 - Editor: Fix theme application in various editor dialogs ([GH-85745](https://github.com/godotengine/godot/pull/85745)).
 - Export: Fix order of operations for macOS template check ([GH-84990](https://github.com/godotengine/godot/pull/84990)).
 - **Export: iOS: Use `mdfind` to check if Xcode is installed in one-click deploy code ([GH-85774](https://github.com/godotengine/godot/pull/85774)).**

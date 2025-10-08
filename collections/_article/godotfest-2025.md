@@ -58,7 +58,7 @@ for helping us curate and create a diverse and interesting roster of submissions
 ## Sponsors
 We are also actively looking for sponsors to support GodotFest.
 If you or your company would be interested in learning more about sponsorship opportunities,
-please reach out to [contact@godotfest.com](mailto:contact@godotfest.com?subject=Sponsorhip inquiry).
+please reach out to [contact@godotfest.com](mailto:contact@godotfest.com?subject=Sponsorship inquiry).
 
 Follow the [GodotFest socials](https://taplink.cc/godotfest) to never miss any news,
 and [join the Discord](https://discord.com/invite/DD95reBjzM) to stay in touch.

@@ -11,7 +11,7 @@ Alpha2 is around the corner and I'm glad to announce that it will come with the 
 
 It's still at an early stage and there is a lot of work ahead, but it's a good opportunity for users to have a first look at it and return feedback.
 
-## Acknowledgements
+## Acknowledgments
 
 We did not communicate much about it until the C# support was ready for broader testing in the master branch, but Juan and I have been working on this feature as contractors for the Godot project (I as an intern and Juan as mentor/advisor).
 

@@ -87,7 +87,7 @@ function setupScrollToTop() {
 // Open details selected in URL
 // ============================
 /**
- * If there's a hash to the URL, make sure that the appropritate details tag is open.
+ * If there's a hash to the URL, make sure that the appropriate details tag is open.
  * @returns {void}
  */
 function openDetailsSelectedInUrl() {

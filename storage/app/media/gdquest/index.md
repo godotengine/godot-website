@@ -31,7 +31,7 @@ There is already a ton of videos on the channels for you to watch now. But there
 
 I put out a form to ask you what you wanted to learn exactly, and you've been [more than 600 to reply](https://gdquest.typeform.com/report/ul3bc1/prym)!
 
-![Form reponses. Would you support the course on Kickstarter? 3 our of 4 persons said yes](form-support-on-kickstarter.png)
+![Form responses. Would you support the course on Kickstarter? 3 our of 4 persons said yes](form-support-on-kickstarter.png)
 
 Your requests shaped the project already. There are hundreds of completely different suggestions, some as challenging as “show how to make a 3d MMORPG”, so I can't cover them all. But I took note of everything that's most useful, and exciting. You'll see some of them in the free tutorials.
 

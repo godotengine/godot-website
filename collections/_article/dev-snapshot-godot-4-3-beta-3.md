@@ -48,7 +48,7 @@ This section covers changes made since the beta 2 snapshot, which are mostly reg
 - Core: ResourceLoader: Support polling and get-before-complete on the main thread ([GH-93695](https://github.com/godotengine/godot/pull/93695)).
 - Core: Revert "Make freed object different than null in comparison operators" ([GH-93809](https://github.com/godotengine/godot/pull/93809)).
 - Core: ResourceLoader: Fixup management of thread-specific status ([GH-93928](https://github.com/godotengine/godot/pull/93928)).
-- Core: Fix UTF-8 misintepreted as Latin-1 when logging to file ([GH-94006](https://github.com/godotengine/godot/pull/94006)).
+- Core: Fix UTF-8 misinterpreted as Latin-1 when logging to file ([GH-94006](https://github.com/godotengine/godot/pull/94006)).
 - Core: ResourceLoader: Fix error message due to already-awaited tasks being re-awaited ([GH-94070](https://github.com/godotengine/godot/pull/94070)).
 - Editor: Properly change GridMap floors while selecting ([GH-87131](https://github.com/godotengine/godot/pull/87131)).
 - Editor: Make project naming setting available in project manager ([GH-89788](https://github.com/godotengine/godot/pull/89788)).

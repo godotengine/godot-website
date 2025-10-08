@@ -1,6 +1,6 @@
 ---
 title: "Introducing the new \"last minute\" lightmapper"
-excerpt: "A considerable number of users requested a more efficient way to have GI (Global Illumination) in their projects. Godot 3.0 currenty offers the GIProbe node, which provides a real-time approximation to GI. This generally works and looks pretty, but it's quite shader intensive, which makes it not work on mobile or low end GPUs. The newly added VR support also suffers with GIProbe, as it has to render in very high resolutions."
+excerpt: "A considerable number of users requested a more efficient way to have GI (Global Illumination) in their projects. Godot 3.0 currently offers the GIProbe node, which provides a real-time approximation to GI. This generally works and looks pretty, but it's quite shader intensive, which makes it not work on mobile or low end GPUs. The newly added VR support also suffers with GIProbe, as it has to render in very high resolutions."
 categories: ["progress-report"]
 author: Juan Linietsky
 image: /storage/app/uploads/public/5a3/27e/110/5a327e110ab39178158316.png
@@ -9,7 +9,7 @@ date: 2017-12-14 00:00:00
 
 ### Wait, are we not in Beta?
 
-A considerable number of users requested a more efficient way to have GI (Global Illumination) in their projects. Godot 3.0 currenty offers the GIProbe node, which provides a real-time approximation to GI. This generally works and looks pretty, but it's quite shader intensive, which makes it not work on mobile or low end GPUs. The newly added VR support also suffers with GIProbe, as it has to render in very high resolutions.
+A considerable number of users requested a more efficient way to have GI (Global Illumination) in their projects. Godot 3.0 currently offers the GIProbe node, which provides a real-time approximation to GI. This generally works and looks pretty, but it's quite shader intensive, which makes it not work on mobile or low end GPUs. The newly added VR support also suffers with GIProbe, as it has to render in very high resolutions.
 
 The solution to these problems is to add support for a more traditional lightmapper (pre-baked light texture). Light is precomputed offline and rendered to a texture, which is then used by the geometry.
 
@@ -25,7 +25,7 @@ Lightmapper looks pretty nice:
 ![](/storage/app/media/lightmap/lm3.png)
 ![](/storage/app/media/lightmap/lm2.png)
 
-Of course, GIProbe still has the advantages of being real-time, easier to set up (no unwrap or bake), supports rough refletions (which look great), and light affects dynamic objects more accurately. It's up to you to pick what's best depending on your needs.
+Of course, GIProbe still has the advantages of being real-time, easier to set up (no unwrap or bake), supports rough reflections (which look great), and light affects dynamic objects more accurately. It's up to you to pick what's best depending on your needs.
 
 ### What are the performance limitations?
 
@@ -44,7 +44,7 @@ In any case, Godot makes the process of generating unique UVs for each mesh easi
 
 It is very important to pay attention to the "Lightmap Texel Size" option below. This is an approximate value of the size of a lightmap texel in world coordinates. Value displayed above means a texel every 5cm. The smaller this value, the bigger the lightmaps will be.
 
-Also, if you are reusing a mesh in the scene, keep in mind that UVs will be generated for the first instance found. If the mesh is re-used with different scales, this will result in very inefficient lightmaps. Just don't reuse a mesh and instance it in different scales.
+Also, if you are reusing a mesh in the scene, keep in mind that UVs will be generated for the first instance found. If the mesh is reused with different scales, this will result in very inefficient lightmaps. Just don't reuse a mesh and instance it in different scales.
 
 #### Setting up the BakedLight node
 

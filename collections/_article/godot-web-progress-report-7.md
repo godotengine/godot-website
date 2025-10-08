@@ -11,7 +11,7 @@ Howdy Godotters! It's time for another brief update on the status of Godot on th
 
 If you read through the [last post](https://godotengine.org/article/godot-web-progress-report-6), you already got the spoiler that Godot `3.3` is getting **experimental virtual keyboard support on the Web**. This has been a highly requested feature, but also a hard one to implement (as you might also guess by the fact that most engines, even famous ones, do not support that). It is still in experimental state, and comes with limitations, but should be enough to allow your users to insert their high-score name, or simple chat messages.
 
-### Experimental virtual keybaord
+### Experimental virtual keyboard
 
 But why is it so hard to implement? And what are the limitations?
 
@@ -60,5 +60,5 @@ As always... stay tuned for more!
 
 ### Reference work
 
-- [Virtual Keybaord support](https://github.com/godotengine/godot/pull/46913) ([3.2](https://github.com/godotengine/godot/pull/46914))
+- [Virtual Keyboard support](https://github.com/godotengine/godot/pull/46913) ([3.2](https://github.com/godotengine/godot/pull/46914))
 - [Fetch API changes](https://github.com/godotengine/godot/pull/46728) ([fd76977](https://github.com/godotengine/godot/pull/46728/commits/fd7697718311338fa1d546ded4f8dc4a8a9ae8eb))

@@ -11,4 +11,4 @@ The Godot Engine developer community is honored to announce that Godot has been 
 
 With the advent of new technologies such as Web Sockets, WebAssembly and WebGL 2.0, it is more critical than ever that free and open source tools are available to develop high performance games and applications for these platforms.
 
-The award of **USD 20,000** will be received by [Software Freedom Conservancy](https://sfconservancy.org), who acts as Godot's non-profit home. They will ensure that this award is used to improve Godot to support these new techologies as soon as possible. We will post an update soon when have more information on how this will be done!
+The award of **USD 20,000** will be received by [Software Freedom Conservancy](https://sfconservancy.org), who acts as Godot's non-profit home. They will ensure that this award is used to improve Godot to support these new technologies as soon as possible. We will post an update soon when have more information on how this will be done!

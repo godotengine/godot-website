@@ -146,8 +146,8 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Rendering: Automatically resolve initial and final action for draw lists ([GH-98670](https://github.com/godotengine/godot/pull/98670)).
 - Rendering: Fix occlusion culling for double builds by enforcing float conversion for Embree ([GH-98770](https://github.com/godotengine/godot/pull/98770)).
 - Rendering: Mask out shadows on CanvasItems that don't have a matching `item_shadow_mask` ([GH-98835](https://github.com/godotengine/godot/pull/98835)).
-- Rendering: Add lightmap bake cancelling ([GH-99483](https://github.com/godotengine/godot/pull/99483)).
-- Rendering: Add VoxelGI bake cancelling and progress UI improvement ([GH-99562](https://github.com/godotengine/godot/pull/99562)).
+- Rendering: Add lightmap bake canceling ([GH-99483](https://github.com/godotengine/godot/pull/99483)).
+- Rendering: Add VoxelGI bake canceling and progress UI improvement ([GH-99562](https://github.com/godotengine/godot/pull/99562)).
 - Rendering: Fix ReflectionProbe AABB ([GH-99802](https://github.com/godotengine/godot/pull/99802)).
 - Shaders: Allow `SCREEN_UV` to be used in light function of spatial shader ([GH-94981](https://github.com/godotengine/godot/pull/94981)).
 - Shaders: VisualShader: Add LinearToSRGB and SRGBToLinear to ColorFunc node ([GH-97388](https://github.com/godotengine/godot/pull/97388)).

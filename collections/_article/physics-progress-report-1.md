@@ -47,7 +47,7 @@ Godot Physics is now ready. The missing features were completed recently, and so
 
 One of the requirements was adding support for cylinder shapes in Godot's custom collision detection system.
 
-Cylinder support in Godot Physics is also part of the recent 3.3 release as an experiemental feature (there are still some known issues around character controllers).
+Cylinder support in Godot Physics is also part of the recent 3.3 release as an experimental feature (there are still some known issues around character controllers).
 
 ![Animation of Cylinder RigidBodies falling down on each other](/storage/app/media/godot-cylinders.gif)
 <abbr title=""></abbr>
@@ -109,7 +109,7 @@ The following describes the main optimizations with more details.
 
 #### Multi-threaded physics simulation
 
-One of the major coming changes for Godot Physics is the possiblity to make use of multiple CPU cores and run physics simulation tasks in parallel.
+One of the major coming changes for Godot Physics is the possibility to make use of multiple CPU cores and run physics simulation tasks in parallel.
 
 This allows the narrowphase and impulse solving to be many times faster. Depending on the number of cores, it can make the overall physics simulation 2 to 3 times faster in certain scenarios.
 
@@ -121,7 +121,7 @@ There are still areas in the physics step that cause bottlenecks and will be add
 
 The broadphase optimization is based on the work already made by the contributor [lawnjelly](https://github.com/lawnjelly) for Godot 3.3. The contribution brings a new dynamic BVH for 3D physics and rendering (see [here](https://godotengine.org/article/godot-3-3-has-arrived#dynamic-bvh) for more details).
 
-Now the same spatial partioning is also used for the broadphase in Godot Physics 2D. Both 2D and 3D physics will benefit from the performance improvements.
+Now the same spatial partitioning is also used for the broadphase in Godot Physics 2D. Both 2D and 3D physics will benefit from the performance improvements.
 
 The dynamic BVH will be used by default for 2D in 3.4 the same way 3D physics does in 3.3. An option in project settings will allow switching back to the old hash grid implementation in case you are running into regressions.
 

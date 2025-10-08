@@ -1,6 +1,6 @@
 ---
 title: "Why we should all support glTF 2.0 as THE standard asset exchange format for game engines"
-excerpt: "Khronos, with glTF 2.0, has given us a fantastic open standard for asset exchange format between 3D modelling software and game engines. Here's why we must make it succeed..."
+excerpt: "Khronos, with glTF 2.0, has given us a fantastic open standard for asset exchange format between 3D modeling software and game engines. Here's why we must make it succeed..."
 categories: ["news"]
 author: Juan Linietsky
 image: /storage/app/uploads/public/598/3d8/bca/5983d8bcaa467213846247.png
@@ -19,7 +19,7 @@ Sites like [Sketchfab](https://sketchfab.com/) provide plenty of PBR-ready asset
 
 The surprise, though, is how good this format is for video game asset exchange. Nothing as good existed before, and it solves a problem that we, as an industry, have been struggling with for a long time.
 
-Khronos, with glTF 2.0, has given us a fantastic chance to standardize a smooth workflow between 3D modelling software and game engines. To better understand why, a list of previous attempts will be explained and why they failed.
+Khronos, with glTF 2.0, has given us a fantastic chance to standardize a smooth workflow between 3D modeling software and game engines. To better understand why, a list of previous attempts will be explained and why they failed.
 
 
 ### OBJ / 3DS
@@ -29,7 +29,7 @@ The first formats used for asset exchange were Wavefrom .OBJ and Autodesk .3DS. 
 
 ### Collada
 
-Collada (also from Khronos) was the first serious attempt to create an open exchange format, but it was not really intended to be used by the game industry (until later, at least). It was more of a tool to exchange assets between 3D modelling applications.
+Collada (also from Khronos) was the first serious attempt to create an open exchange format, but it was not really intended to be used by the game industry (until later, at least). It was more of a tool to exchange assets between 3D modeling applications.
 
 Despite supporting almost everything a modern game engine needs, the format fell into disuse. There are many reasons for this:
 
@@ -48,13 +48,13 @@ One would assume (given its popularity) that FBX is pretty much the industry sta
 
 FBX is used via the FBX SDK, which has a very restrictive license. This license makes it very hard to use in open source projects (an EULA must be accepted by the user unless a special license is purchased from Autodesk).
 
-Besides the legal issues, implementing the library is rather difficult and suffers many of the same format ambiguity issues Collada does. One could argue, though, that the main technical advantage about it (besides working with the most popular 3D modelling applications) is that the file format is binary, so parsing it is fast.
+Besides the legal issues, implementing the library is rather difficult and suffers many of the same format ambiguity issues Collada does. One could argue, though, that the main technical advantage about it (besides working with the most popular 3D modeling applications) is that the file format is binary, so parsing it is fast.
 
 That said, as an industry, we should look for true standards to work with. As useful as FBX may be, Autodesk alone controls its future.
 
 ### OpenGEX
 
-[OpenGEX](http://opengex.org/) was born from one of the most brilliant minds the game industry has ever produced: Eric Lengyel, who single-handedly created the C4 engine. It has a well defined specification and comes with exporter plugins for the most common 3D modelling software, as well as documentation and support libraries. It also has the very innovative approach of encoding floating point data as hexadecimal for quick and efficient parsing (despite being text based).
+[OpenGEX](http://opengex.org/) was born from one of the most brilliant minds the game industry has ever produced: Eric Lengyel, who single-handedly created the C4 engine. It has a well defined specification and comes with exporter plugins for the most common 3D modeling software, as well as documentation and support libraries. It also has the very innovative approach of encoding floating point data as hexadecimal for quick and efficient parsing (despite being text based).
 
 Unfortunately, OpenGEX did not catch up. The main reasons I can think of are:
 
@@ -110,7 +110,7 @@ Just one simple use case to care about. No extra conversions. All work is left t
 
 glTF 2.0 fully supports skeletons and morph targets, which can be parsed easily and unambiguously.
 
-It also supports PBR based materials using the Disney/Unreal format, which is what most engines and 3D modelling applications use nowadays, with albedo, metallic, roughness, normal, emission and ambient occlusion. It also handles two-sidedness and transparent materials, including alpha to coverage.
+It also supports PBR based materials using the Disney/Unreal format, which is what most engines and 3D modeling applications use nowadays, with albedo, metallic, roughness, normal, emission and ambient occlusion. It also handles two-sidedness and transparent materials, including alpha to coverage.
 
 Extensions for handling shader material graphs are in the work.
 
@@ -138,7 +138,7 @@ glTF is an open standard and the development process is also [transparent](https
 
 ### Support glTF!
 
-For glTF to succeed, it needs strong developer adoption. Ask your favorite 3D modelling software or engine developer to support it!
+For glTF to succeed, it needs strong developer adoption. Ask your favorite 3D modeling software or engine developer to support it!
 
 Currently, the Blender exporter is in the works and not complete, and there is no support at all for Autodesk products (export plug-ins need to be written).
 

@@ -35,7 +35,7 @@ It is now possible to edit any children node of the instanced scene and have the
 
 #### Scene inheritance
 
-Begining Godot 2.0 scenes can not only be instanced but also inherited. This allows many interesting use cases such as:
+Beginning Godot 2.0 scenes can not only be instanced but also inherited. This allows many interesting use cases such as:
 
 * Having a base scene (ie, enemy, collectable, obstacle, etc.) with a node hierarchy common to all (like explosions, shines, indicators, etc), and then extend it for each class.
 * Making non-destructive changes to a scene that was imported (ie a 3D scene, etc.)
@@ -90,7 +90,7 @@ The Editor part of Godot 2.0 is where most of the work was focused. The priority
 
 ##### New layout and theme
 
-Godot 2.0 sports a new theme courtesy of Andreas Esau. It looks more professional and less confusing than the previous one. Many unneccesary icons, margins, arrows, etc. were removed to further clean up the visuals.
+Godot 2.0 sports a new theme courtesy of Andreas Esau. It looks more professional and less confusing than the previous one. Many unnecessary icons, margins, arrows, etc. were removed to further clean up the visuals.
 
 ![](/storage/app/media/godot2_1.png)
 
@@ -138,9 +138,9 @@ Godot 2.0 improves upon this with multiple scene editing support, allowing sever
 
 #### New tool layout
 
-In Godot, tools appear contextually when a given node or resource is selected. This makes the UI flow fast and removes large part of the need to maually organize panel layouts.
+In Godot, tools appear contextually when a given node or resource is selected. This makes the UI flow fast and removes large part of the need to manually organize panel layouts.
 
-This aspect of Godot was also improved in 2.0 with the introduction of a new bottom panel. On it, contextual editors can make a tidy appareance. Some of the editors are also always shown with persistent buttons:
+This aspect of Godot was also improved in 2.0 with the introduction of a new bottom panel. On it, contextual editors can make a tidy appearance. Some of the editors are also always shown with persistent buttons:
 
 * Output console
 * Debugger

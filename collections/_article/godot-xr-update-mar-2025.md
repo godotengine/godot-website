@@ -9,7 +9,7 @@ date: 2025-03-28 12:00:00
 ---
 
 In the second half of February 2025, the [Godot XR Community](https://godot-xr.itch.io/) held their latest [Godot XR Game Jam](https://itch.io/jam/godot-xr-game-jam-feb-2025).
-It was organised by [Bastiaan Olij](https://www.youtube.com/@BastiaanOlij) and [Malcolm Nixon](https://www.youtube.com/@MalcolmANixon) acting in their roles as representatives of the general Godot XR Community.
+It was organized by [Bastiaan Olij](https://www.youtube.com/@BastiaanOlij) and [Malcolm Nixon](https://www.youtube.com/@MalcolmANixon) acting in their roles as representatives of the general Godot XR Community.
 
 This was a week-long event in which developers had to create an XR application using the theme "Enchanted". XR has great potential on this topic, whether you interpret this as physical spell casting, a magical environment, or something else, and the entries did not disappoint.
 

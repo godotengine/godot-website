@@ -40,7 +40,7 @@ Please consider [supporting the project financially](#support), if you are able.
 - Export: Android: Ensure proper cleanup of the fragment ([GH-109764](https://github.com/godotengine/godot/pull/109764)).
 - Export: Metal: Fix Metal compiler version inspection ([GH-110873](https://github.com/godotengine/godot/pull/110873)).
 - GDExtension: Fix `--dump-extension-api-with-docs` indentation ([GH-110557](https://github.com/godotengine/godot/pull/110557)).
-- GUI: Fix LineEdit icon positon in right-to-left layout ([GH-109363](https://github.com/godotengine/godot/pull/109363)).
+- GUI: Fix LineEdit icon position in right-to-left layout ([GH-109363](https://github.com/godotengine/godot/pull/109363)).
 - Import: Material Conversion Error Handling ([GH-109369](https://github.com/godotengine/godot/pull/109369)).
 - Navigation: [Navigation 2D] Fix sign of cross product ([GH-110815](https://github.com/godotengine/godot/pull/110815)).
 - Navigation: Make navmesh rasterization errors more lenient ([GH-110841](https://github.com/godotengine/godot/pull/110841)).

@@ -40,7 +40,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 **75 contributors** submitted over **190 improvements** for this release. You can review the complete list of changes with our [interactive changelog](https://godotengine.github.io/godot-interactive-changelog/#4.2-dev3), which contains links to relevant commits and PRs for this and every previous release. Below are the most notable changes compared to 4.2-dev2:
 
 - 2D: Fix TileSet with TileMap handling ([GH-80462](https://github.com/godotengine/godot/pull/80462)).
-- 3D: Readd a Camera3D icon gizmo to the 3D editor, renew Camera2D/3D icons ([GH-53104](https://github.com/godotengine/godot/pull/53104)).
+- 3D: Re-add a Camera3D icon gizmo to the 3D editor, renew Camera2D/3D icons ([GH-53104](https://github.com/godotengine/godot/pull/53104)).
 - 3D: Improve editing of box collision shapes ([GH-71092](https://github.com/godotengine/godot/pull/71092)).
 - Buildsystem: libpng: Enable intrinsics on x86/SSE2, ppc64/VSX, and all arm/NEON ([GH-78325](https://github.com/godotengine/godot/pull/78325)).
 - Buildsystem: CI: Allow skipping our GHA workflows with `DISABLE_GODOT_CI` variable ([GH-79321](https://github.com/godotengine/godot/pull/79321)).

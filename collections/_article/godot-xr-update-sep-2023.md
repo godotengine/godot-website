@@ -39,7 +39,7 @@ Having game engine representation in the working group is of utmost importance i
 
 ## Godot Tilt Five Support
 
-Contributor Patrick Down has been hard at work making the Tilt Five work with Godot. Tilt Five also provided Bastiaan Olij with a headset to help finalise the work being done. The Tilt Five system now works fully with Godot 4.1 stable however still requires Tilt Five drivers that are in beta. An official release of the Tilt Five plugin is expected soon.
+Contributor Patrick Down has been hard at work making the Tilt Five work with Godot. Tilt Five also provided Bastiaan Olij with a headset to help finalize the work being done. The Tilt Five system now works fully with Godot 4.1 stable however still requires Tilt Five drivers that are in beta. An official release of the Tilt Five plugin is expected soon.
 
 You can download the beta of the plugin from [the TiltFiveGodot4 repository](https://github.com/GodotVR/TiltFiveGodot4/).
 
@@ -83,7 +83,7 @@ Eye tracking support is nearly finished but is awaiting some enhancements regard
 
 We are planning on supporting the new hand interaction feature which will allow easy support for both controller based and hand tracking based games and lets them seamlessly switch.
 
-In the same line the new hand tracking data source extension should make it easier to visualise the players hands both when controllers are held and when full optical hand tracking is used.
+In the same line the new hand tracking data source extension should make it easier to visualize the players hands both when controllers are held and when full optical hand tracking is used.
 
 We are also looking into the feasibility of supporting various vendor extensions for creating meshes suitable for displaying the players hands in such a way that this can be supported in core. It will also need to include a fallback feature. 
 

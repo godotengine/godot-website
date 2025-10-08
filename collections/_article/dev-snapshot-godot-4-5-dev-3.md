@@ -66,7 +66,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - GUI: Add support for OEM Alt codes input ([GH-93466](https://github.com/godotengine/godot/pull/93466)).
 - GUI: Implement `SVGTexture` auto-scalable with font oversampling ([GH-105375](https://github.com/godotengine/godot/pull/105375)).
 - GUI: Make embed floating window respect `Always On Top` configuration ([GH-103731](https://github.com/godotengine/godot/pull/103731)).
-- GUI: Replace global oversampling with overrideable per-viewport oversampling ([GH-104872](https://github.com/godotengine/godot/pull/104872)).
+- GUI: Replace global oversampling with overridable per-viewport oversampling ([GH-104872](https://github.com/godotengine/godot/pull/104872)).
 - Input: Add configuration option to disable `Scroll Deadzone` on Android ([GH-96139](https://github.com/godotengine/godot/pull/96139)).
 - Input: Allow all tool modes to select ([GH-87756](https://github.com/godotengine/godot/pull/87756)).
 - Plugin: Add maven publishing configuration for Godot tools ([GH-104819](https://github.com/godotengine/godot/pull/104819)).

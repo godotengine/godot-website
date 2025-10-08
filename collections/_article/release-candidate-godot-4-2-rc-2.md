@@ -42,7 +42,7 @@ For an overview of what's new overall in Godot 4.2, have a look at the release n
 - Editor: Provide more context when scene fails to load ([GH-85083](https://github.com/godotengine/godot/pull/85083)).
 - Editor: Add Save As... option to EditorResourcePicker ([GH-85150](https://github.com/godotengine/godot/pull/85150)).
 - Editor: Avoid saving scene while already saving the scene ([GH-85154](https://github.com/godotengine/godot/pull/85154)).
-- Editor: Fix project name being overwritten everytime `show_dialog` is called ([GH-85169](https://github.com/godotengine/godot/pull/85169)).
+- Editor: Fix project name being overwritten every time `show_dialog` is called ([GH-85169](https://github.com/godotengine/godot/pull/85169)).
 - Editor: Rework the surface upgrade tool to inform users without blocking ([GH-85222](https://github.com/godotengine/godot/pull/85222)).
 - Editor: Fix crash caused by conflicting menu option IDs ([GH-85227](https://github.com/godotengine/godot/pull/85227)).
 - Editor: Suppress surface upgrade warnings when showing SurfaceUpgradeTool warning ([GH-85249](https://github.com/godotengine/godot/pull/85249)).

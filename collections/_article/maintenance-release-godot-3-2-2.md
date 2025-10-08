@@ -52,7 +52,7 @@ Godot 3.2 came with a brand new Android plugin system, and notably the possibili
 
 Our Android maintainer Fredia ([m4gr3d](https://github.com/m4gr3d)) had done a lot of work back then to improve Juan's initial custom build system, which led him to notice many things that could be modernized to be better suited to the current Android ecosystem. Notably, he re-architectured the plugin system to leverage the [Android AAR library file format](https://developer.android.com/studio/projects/android-library#aar-contents), and allow the easy distribution and use of Android plugins using a custom `.gdap` metadata file.
 
-This new plugin system is backward-incompatible with the 3.2/3.2.1 system, but both systems are kept functional in future releases of the 3.2.x branch. Since we previously did not version our Android plugin systems, this new one is now labelled `v1`, and is the starting point for the modern Godot Android ecosystem.
+This new plugin system is backward-incompatible with the 3.2/3.2.1 system, but both systems are kept functional in future releases of the 3.2.x branch. Since we previously did not version our Android plugin systems, this new one is now labeled `v1`, and is the starting point for the modern Godot Android ecosystem.
 
 The [Android plugin documentation](https://docs.godotengine.org/en/3.2/tutorials/plugins/android/android_plugin.html) has been updated with instructions on how to write plugins for this new system. Porting existing 3.2 plugins should be fairly straightforward.
 
@@ -103,7 +103,7 @@ Here's a hand-picked list of the some of the main changes in Godot 3.2.2:
 - C#: Sync csproj when files are changed from the FileSystem dock ([GH-37149](https://github.com/godotengine/godot/pull/37149)).
 - C#: Replace uses of old Configuration and update old csprojs ([GH-36865](https://github.com/godotengine/godot/pull/36865)).
 - C#: Allow debugging exported games ([GH-38115](https://github.com/godotengine/godot/pull/38115)).
-- C#: Revert marshalling of IDictionary/IEnumerable implementing types ([GH-38141](https://github.com/godotengine/godot/pull/38141)).
+- C#: Revert marshaling of IDictionary/IEnumerable implementing types ([GH-38141](https://github.com/godotengine/godot/pull/38141)).
 - C#: Fix inherited scene not inheriting parent's exported properties ([GH-38638](https://github.com/godotengine/godot/pull/38638)).
 - C#: Fix exported values not updated in the remote inspector ([GH-38940](https://github.com/godotengine/godot/pull/38940).
 - Core: Ensure COWData does not always reallocate on resize ([GH-37373](https://github.com/godotengine/godot/pull/37373)).

@@ -45,7 +45,7 @@ And there's even more in the works that will be included in future beta builds.
 The main new features are highlighted in bold. Refer to the linked pull requests for details.
 
 - **Android: Add support for the Android App Bundle format ([GH-42185](https://github.com/godotengine/godot/pull/42185)).**
-- Android: Add support for emedded Godot as a subview in Android applications ([GH-42186](https://github.com/godotengine/godot/pull/42186)).
+- Android: Add support for embedded Godot as a subview in Android applications ([GH-42186](https://github.com/godotengine/godot/pull/42186)).
 - Android: Fix splash screen loading ([GH-42389](https://github.com/godotengine/godot/pull/42389)).
 - Android: Add notch cutout support for Android P and later ([GH-43104](https://github.com/godotengine/godot/pull/43104)).
 - Android: Add support for mouse events ([GH-42360](https://github.com/godotengine/godot/pull/42360)).
@@ -57,7 +57,7 @@ The main new features are highlighted in bold. Refer to the linked pull requests
 - C#: Re-work solution build output panel ([GH-42547](https://github.com/godotengine/godot/pull/42547)).
 - C#: Godot.NET.Sdk/3.2.4 - Fix targeting .NETFramework with .NET 5 ([GH-44135](https://github.com/godotengine/godot/pull/44135)).
 - **C#: Fixes to WebAssembly support** ([GH-44105](https://github.com/godotengine/godot/pull/44105), [GH-44374](https://github.com/godotengine/godot/pull/44374)).
-- **C#: Fix System.Collections.Generic.List marshalling** ([GH-45029](https://github.com/godotengine/godot/pull/45029)).
+- **C#: Fix System.Collections.Generic.List marshaling** ([GH-45029](https://github.com/godotengine/godot/pull/45029)).
 - C#: Fix support for Unicode identifiers ([GH-45310](https://github.com/godotengine/godot/pull/45310)).
 - **Core: Optimize octree and fix leak ([GH-41123](https://github.com/godotengine/godot/pull/41123)).**
 - Core: Disable decayment of freed Objects to null in debug builds ([GH-41866](https://github.com/godotengine/godot/pull/41866)).

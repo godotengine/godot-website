@@ -75,7 +75,7 @@ If we put everything together, it becomes obvious that all 3 tasks can run in pa
 1. Physics syncs information from the previous fixed frame to Logic
 2. Logic runs the fixed step, syncs back with Physics and then goes on to do the regular step while Physics starts working.
 3. Physics pushes data to Rendering.
-4. Rendering completes whathever it was doing from the previous frame, syncs (swaps buffers), then takes the info from Logic and starts working on the new frame.
+4. Rendering completes whatever it was doing from the previous frame, syncs (swaps buffers), then takes the info from Logic and starts working on the new frame.
 
 This results in multi-threading, in a way that is transparent to the programmer:
 
@@ -102,7 +102,7 @@ As this is a command-oriented API, it is exposed via a single class representing
 Servers work very well in Godot, and even allow for some extra goodies:
 
 * Background loading and information processing on threads works great (e.g. generating terrain), because each thread can create content, then register it via a single channel.
-* It's easy to tell when something has changed by just checking the command data. This allows Godot behaviours such as not redrawing the editor screen if nothing changed.
+* It's easy to tell when something has changed by just checking the command data. This allows Godot behaviors such as not redrawing the editor screen if nothing changed.
 * Switching between single and multi-threaded server is easy, as it just requires an adapter server that provides the command buffering.
 
 

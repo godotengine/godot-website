@@ -9,7 +9,7 @@ date: 2018-06-27 13:37:02
 
 Godot will be at the [Libre Software Meeting 2018](https://2018.rmll.info/en) (also known as RMLL – *Rencontres Mondiales du Logiciel Libre*) in Strasbourg, France from **Saturday 7 July** to **Thursday 12 July**. We will give a 1-hour talk, a 3-hour game development workshop, and there will be a Godot stand with core developers to welcome you for the whole duration of the event.
 
-[LSM](https://2018.rmll.info/en) is a yearly community event in France focused on Free/Libre and Open Source Software, and we're looking forward to representing Godot there this year. At least three core developers will be there (Julian Murgia ([StraToN](https://github.com/StraToN)), Gilles Roudière ([Groud](https://github.com/Groud)), and myself ([Akien](https://github.com/akien-mga))), and we hope that some more as well as many Godot users will join us in Strasbourg. The location should make it relatively accessible for people from neighbouring regions of France, Germany, Switzerland, Belgium and Luxembourg.
+[LSM](https://2018.rmll.info/en) is a yearly community event in France focused on Free/Libre and Open Source Software, and we're looking forward to representing Godot there this year. At least three core developers will be there (Julian Murgia ([StraToN](https://github.com/StraToN)), Gilles Roudière ([Groud](https://github.com/Groud)), and myself ([Akien](https://github.com/akien-mga))), and we hope that some more as well as many Godot users will join us in Strasbourg. The location should make it relatively accessible for people from neighboring regions of France, Germany, Switzerland, Belgium and Luxembourg.
 
 ## Godot-related activities
 

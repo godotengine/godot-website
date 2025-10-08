@@ -62,8 +62,7 @@ As you can see, we're adding a "Bronze Sponsor" tier between the pre-existing "M
 
 ## Corporate sponsoring
 
-We initially had two corporate sponsorship tiers on Patreon for companies to have their logo on our website and (for Platinum) splash screen. As the project grows and our funding needs do too, we're updating this and we'll handle the higher sponsoring tiers (Gold, Platinum) outside Patreon to simplify the p
-rocess.
+We initially had two corporate sponsorship tiers on Patreon for companies to have their logo on our website and (for Platinum) splash screen. As the project grows and our funding needs do too, we're updating this and we'll handle the higher sponsoring tiers (Gold, Platinum) outside Patreon to simplify the process.
 
 Corporate sponsoring categories will change as follows:
 

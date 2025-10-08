@@ -27,7 +27,7 @@ As more work was poured into the Vulkan back-end, it became clearer and clearer 
 
 * On *Desktop*, hardware that does not support GLES3 (or GLES3 via Angle, which is what Chrome uses to display WebGL) is extremely old. Mid 2000s. This hardware does not posses enough video memory to run a modern game engine, anyway.
 * On *Mobile*, the story is different but, as mobile phones keep coming out and old ones no longer work due to dead batteries/slowness/etc, GLES2-only devices are becoming [very scarce](https://developer.android.com/about/dashboards#OpenGL) (Only 10% at the time of this writing and less by the time Godot 4.0 launches).
-* On *Web*, GLES3 (WebGL2) suport is not present on Safari at this time (and support for it was uncertain for a long time), but it's now finally in Technology Preview stage, which means it will be out and supported soon.
+* On *Web*, GLES3 (WebGL2) support is not present on Safari at this time (and support for it was uncertain for a long time), but it's now finally in Technology Preview stage, which means it will be out and supported soon.
 
 In other words, when work begun on Vulkan for Godot, GLES3 support was not widespread or certain, but that is no longer the case.
 

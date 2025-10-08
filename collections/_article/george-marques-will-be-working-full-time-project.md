@@ -20,7 +20,7 @@ Unfortunately, it was difficult for us (and him) to predict when the goal would 
 
 Some months ago, due to the growing amount of potential sponsors and donations, we had to discuss potential hires. The project is blessed with a large amount of absolutely brilliant contributors and it is our wish that as Godot keeps growing and securing more funding sources, we will be able to have more of them on board working full time. Hope this comes true in the coming years.
 
-George is from Sao Paulo, Brazil. I had the pleasure of meeting him some months ago during the Big Festival (to where I was invited). He is part of the Godot project leadership comitee, along with me, Ariel Manzur, Rémi Verschelde, Julian Murgia and HP van Braam.
+George is from Sao Paulo, Brazil. I had the pleasure of meeting him some months ago during the Big Festival (to where I was invited). He is part of the Godot project leadership committee, along with me, Ariel Manzur, Rémi Verschelde, Julian Murgia and HP van Braam.
 
 He is one of the longest standing and most reliable contributors and an excellent generalist. He is responsible for the UWP port, as well as a lot of improvements and fixes across the engine. He is the main contributor behind the GDScript rewrite for Godot 3.1, which now includes optional typing and a several quality of life improvements (he is the current GDSCript maintainer, along with Bojidar Marinov). Together with Rémi, George has also managed our activities related to Google Summer of Code, and has been present last year during the mentor summit. Thanks to their fantastic work on this area the project has managed to get more student slots granted this year.
 

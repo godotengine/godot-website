@@ -76,7 +76,7 @@ Being aware of the overall and per-class completion percentages at all times mad
 
 ## Team reports for class reference pull requests
 
-Another way for contributors to organize pull requests and work through the backlog is to use the *team reports* website. This website was built for contributors to check all open pull requests in a more convenient fashion than using GitHub's web interface. Using this website, it's easier to see when pull requets were last active and whether they are in a mergeable state (which may not be the case due to merge conflicts).
+Another way for contributors to organize pull requests and work through the backlog is to use the *team reports* website. This website was built for contributors to check all open pull requests in a more convenient fashion than using GitHub's web interface. Using this website, it's easier to see when pull requests were last active and whether they are in a mergeable state (which may not be the case due to merge conflicts).
 
 This website only tracks the main Godot repository on GitHub, not the documentation repository. With that said, in the context of the documentation, this is still relevant since all contributions to the class reference are sent to the main Godot repository. (The documentation repository only hosts a generated copy of the class reference from the XML source files.)
 

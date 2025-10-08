@@ -31,7 +31,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*The illustration picture for this article showcases a* **VR system for ship design visualization,** *created by Dan Silden ([Mastodon](https://mastodon.art/@dsilden), [Twitter](https://twitter.com/dsilden)). Modelled with Blender and brought to live with Godot 4's XR capabilities, it provides Dan with a reusable solution for demonstrating future design project. While the project is not public, you can see a bit more of it in action in this [great video](https://www.artstation.com/artwork/LRm56R) on Dan's ArtStation page.*
+*The illustration picture for this article showcases a* **VR system for ship design visualization,** *created by Dan Silden ([Mastodon](https://mastodon.art/@dsilden), [Twitter](https://twitter.com/dsilden)). Modeled with Blender and brought to live with Godot 4's XR capabilities, it provides Dan with a reusable solution for demonstrating future design project. While the project is not public, you can see a bit more of it in action in this [great video](https://www.artstation.com/artwork/LRm56R) on Dan's ArtStation page.*
 
 ## What's new
 

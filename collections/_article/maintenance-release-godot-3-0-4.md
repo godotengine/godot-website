@@ -1,6 +1,6 @@
 ---
 title: "Maintenance release: Godot 3.0.4"
-excerpt: "Godot 3.0.4 is a small release that fixes a crasher in the asset library on Windows. If you were affected by this please upgrade. Otherwise we'll come back with a larger 3.0.5 soon!"
+excerpt: "Godot 3.0.4 is a small release that fixes a crash in the asset library on Windows. If you were affected by this please upgrade. Otherwise we'll come back with a larger 3.0.5 soon!"
 categories: ["release"]
 author: HP van Braam
 image: /storage/app/uploads/public/5b2/d2f/118/5b2d2f118951e820036835.png
@@ -30,7 +30,7 @@ Here are some of the highlights of this release. See the [full changelog](https:
 
 Here are some of the highlights of this release. See the [full changelog](https://github.com/godotengine/godot-builds/releases/3.0.4-Godot_v3.0.4-stable_changelog.txt) for details.
 
-* Fixed crasher in asset library on systems with a low threadcount CPU
+* Fixed crash in asset library on systems with a low threadcount CPU
 
 ## Known incompatibilities with Godot 3.0.3
 

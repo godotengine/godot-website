@@ -1,6 +1,6 @@
 ---
 title: "Maintenance release: Godot 2.1.5"
-excerpt: "Godot 2.1.5 is released with hundreds of bug fixes and enhancements made by the community over the last 11 months! It features various distribution changes for Android and iOS, as well as new platform features like hardware cursor acceleration and multitouch events. The binaries now come with the same crash handler as Godot 3.0, and dozens of improvements have been made to the \"Godot 2 to 3 converter\" which you can use to port your Godot 2 projects to the new format. Last but not least, this release fixes security vulnerabilities in Godot's marshalling code (also going to be fixed in Godot 3.0.6 in coming hours) which can affect Godot servers."
+excerpt: "Godot 2.1.5 is released with hundreds of bug fixes and enhancements made by the community over the last 11 months! It features various distribution changes for Android and iOS, as well as new platform features like hardware cursor acceleration and multitouch events. The binaries now come with the same crash handler as Godot 3.0, and dozens of improvements have been made to the \"Godot 2 to 3 converter\" which you can use to port your Godot 2 projects to the new format. Last but not least, this release fixes security vulnerabilities in Godot's marshaling code (also going to be fixed in Godot 3.0.6 in coming hours) which can affect Godot servers."
 categories: ["release"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/5b5/c98/687/5b5c9868740e5620786710.jpg
@@ -9,7 +9,7 @@ date: 2018-07-28 22:50:00
 
 At long last, Godot 2.1.5 is ready and comes packed with new features and bug fixes! It's the result of 11 months of work ([since 2.1.4](/article/maintenance-release-godot-2-1-4)) from many contributors who care about supporting our previous stable branch (the current one and main focus being [Godot 3.0.x](/download)).
 
-[**Download it now**](https://github.com/godotengine/godot-builds/releases/2.1.5/) from our repositories if you are still using Godot 2.1.x for some projects. If you use it via the Steam distribution (where both 2.1.x and 3.0.x are included), it has been updated already - please keep in mind that we'll eventually stop distributing Godot 2.1.x on Steam (likely when moving to Godot 3.1). **Note:** This release fixes security vulnerabilities in Godot's marshalling code (see the [Godot 3.0.6 announcement](https://godotengine.org/article-maintenance-release-godot-3-0-6) for details) as well as an OpenSSL security update, so upgrading to this version is *strongly recommended* if you use any networking features.
+[**Download it now**](https://github.com/godotengine/godot-builds/releases/2.1.5/) from our repositories if you are still using Godot 2.1.x for some projects. If you use it via the Steam distribution (where both 2.1.x and 3.0.x are included), it has been updated already - please keep in mind that we'll eventually stop distributing Godot 2.1.x on Steam (likely when moving to Godot 3.1). **Note:** This release fixes security vulnerabilities in Godot's marshaling code (see the [Godot 3.0.6 announcement](https://godotengine.org/article-maintenance-release-godot-3-0-6) for details) as well as an OpenSSL security update, so upgrading to this version is *strongly recommended* if you use any networking features.
 
 Note that contrarily to 3.0 which can download the export templates for you automatically, with 2.1 you still need to [download the .tpz file](https://github.com/godotengine/godot-builds/releases/2.1.5-Godot_v2.1.5-stable_export_templates.tpz) manually and use it to install templates within the editor.
 
@@ -89,7 +89,7 @@ Here are some of the main highlights of this release, listed by topic/category.
 
 ### Core
 
-- Fix security vulnerabilities in [marshalls size checks](https://github.com/godotengine/godot/commit/497bc7d5fd76140b95e4c6203dbeaf666ed38db6) and [InputEvent marshalling](https://github.com/godotengine/godot/commit/c26094fd843c627c4d24929e529647c06038364f) that could be used to crash a Godot server by sending a malformed packet (Thanks [Fabio Alessandrelli](https://github.com/Faless)!).
+- Fix security vulnerabilities in [marshalls size checks](https://github.com/godotengine/godot/commit/497bc7d5fd76140b95e4c6203dbeaf666ed38db6) and [InputEvent marshaling](https://github.com/godotengine/godot/commit/c26094fd843c627c4d24929e529647c06038364f) that could be used to crash a Godot server by sending a malformed packet (Thanks [Fabio Alessandrelli](https://github.com/Faless)!).
 - Fix serialization of identifiers with non printable ASCII characters. [[GH-17177]](https://github.com/godotengine/godot/pull/17177)
 - Add `String.encrypt_text` and `Script.decrypt_text` using AES-256. [[GH-17366]](https://github.com/godotengine/godot/pull/17366)
 - Buffer write performance improvements. [[GH-16671]](https://github.com/godotengine/godot/pull/16671)

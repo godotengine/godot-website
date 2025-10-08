@@ -13,7 +13,7 @@ For this release I've had to redo our buildsystem (again) due to trouble with th
 
 Please test this release with your existing projects and as usual: Any breakage of existing projects after upgrading is a bug. If we somehow missed something please [report a bug](https://github.com/godotengine/godot/issues/new).
 
-I'd like to take this time to thank all of our wonderful contributers who made this releases possible. You're the best! Thank you for all your contributions, be it code, docs, or bugreports.
+I'd like to take this time to thank all of our wonderful contributors who made this releases possible. You're the best! Thank you for all your contributions, be it code, docs, or bugreports.
 
 ## Downloads
 

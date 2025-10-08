@@ -16,12 +16,12 @@ WebRTCMultiplayer
 
 ![webrtc-multiplayer-docs.png](/storage/app/uploads/public/5d0/a2d/7ca/5d0a2d7caa88a877416904.png)
 
-The **`WebRTCMultiplayer`** class interfaces WebRTC with the High Level Mulitplayer API. Due to the way WebRTC works, this class needs a **slightly more complex setup** before it can be used compared to other network peers, but as said it will **create a full p2p mesh** that is also **encrypted** at transport level. The idea, is that you will have a **[signaling server](http://docs.godotengine.org/en/latest/tutorials/networking/webrtc.html) assigning ids** to peers, and letting them know about each other.
+The **`WebRTCMultiplayer`** class interfaces WebRTC with the High Level Multiplayer API. Due to the way WebRTC works, this class needs a **slightly more complex setup** before it can be used compared to other network peers, but as said it will **create a full p2p mesh** that is also **encrypted** at transport level. The idea, is that you will have a **[signaling server](http://docs.godotengine.org/en/latest/tutorials/networking/webrtc.html) assigning ids** to peers, and letting them know about each other.
 
 To **setup** the multiplayer class one would need to:
 
 - Call `initialize` with the id assigned by the signaling server.
-- For each newly connected peer (as notified by the signaling server along with its id), create a new `WebRTCPeerConnection` and pass it with the given id to `add_remote_peer`. You can optionally add channels to it, but the first three (negotiated 1, 2, and 3) are reserved for the high level mutiplayer.
+- For each newly connected peer (as notified by the signaling server along with its id), create a new `WebRTCPeerConnection` and pass it with the given id to `add_remote_peer`. You can optionally add channels to it, but the first three (negotiated 1, 2, and 3) are reserved for the high level multiplayer.
 - Do the usual signaling procedure to exchange ICE candidates and session descriptions.
 
 **Note 1**: You don't have to poll each `WebRTCPeerConnection` separately, just call `WebRTCMultiplayer.poll` and it will poll all connections added via `add_remote_peer`.
@@ -43,7 +43,7 @@ Two new demos are available in the [godot demo repository](https://github.com/go
 
 Documentation has been added for [WebRTCPeerConnection](http://docs.godotengine.org/en/latest/classes/class_webrtcpeerconnection.html), [WebRTCDataChannel](http://docs.godotengine.org/en/latest/classes/class_webrtcdatachannel.html), and the new [WebRTCMultiplayer](http://docs.godotengine.org/en/latest/classes/class_webrtcmultiplayer.html).
 
-There is a port of the multiplayer bomber demo using the reference signaling server **[running live here](https://no-war.fales.me/)**. Have fun playing it with your friends (and/or studying its [source code]((https://github.com/Faless/bomber-rtc/))).
+There is a port of the multiplayer bomber demo using the reference signaling server **[running live here](https://no-war.Fales.me/)**. Have fun playing it with your friends (and/or studying its [source code]((https://github.com/Faless/bomber-rtc/))).
 
 Future work
 ===========

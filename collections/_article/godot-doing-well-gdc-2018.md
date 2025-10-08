@@ -59,7 +59,7 @@ Reasons why a company may be interested in leaving their current technology may 
 
 Thanks to the effort of all our contributors, Godot is becoming more and more amazing every year. There seems to be no limit to how good it can become, and the hard work from everyone paid off.
 
-Godot (and mainly since verson 3.0) is now robust, has amazing features, great documentation, and the source code is very polished.
+Godot (and mainly since version 3.0) is now robust, has amazing features, great documentation, and the source code is very polished.
 
 For most developers, just giving Godot a try is enough to convince them that, it not only works as an alternative but it's also a significant improvement over their existing software.
 
@@ -101,9 +101,9 @@ It filled me with joy to hear stories that, once they learn Godot, students pref
 
 The open source nature in Godot is also very appealing to students (the dozens of GSoC applications we are getting are also proof of this too, I guess).
 
-Picking issues from our GitHub issue tracker and trying to fix them is a great learning excercise in programming and how game engines work.
+Picking issues from our GitHub issue tracker and trying to fix them is a great learning exercise in programming and how game engines work.
 
-The main problem we seem to have in this regard is that most institutions are creating their own teaching material, and there is not a stabilished channel for them to share. Any ideas or suggestions about it would be very welcome as we would really like to improve on this area.
+The main problem we seem to have in this regard is that most institutions are creating their own teaching material, and there is not an established channel for them to share. Any ideas or suggestions about it would be very welcome as we would really like to improve on this area.
 
 
 ### We had our first Godot Meetup at GDC!
@@ -118,13 +118,13 @@ As mentioned before. Most companies that decided to give Godot a try for their n
 
 It will be a long time until we start see a considerably larger amount of games published that were made with Godot.
 
-Growth is slow and it will take many years, but I believe we are finally begining to be a significant player in the industry.
+Growth is slow and it will take many years, but I believe we are finally beginning to be a significant player in the industry.
 
 ### Again, please donate
 
 We hope in the near future, as more companies are using Godot, more companies will be able to sponsor the project.
 
-In the meanwhile, we are still dreamers that are spending our lifes trying to make game development a better place for everyone. We couldn't do this without your help, so (if you are not already) consider becoming [our patron](https://www.patreon.com/godotengine)!
+In the meanwhile, we are still dreamers that are spending our lives trying to make game development a better place for everyone. We couldn't do this without your help, so (if you are not already) consider becoming [our patron](https://www.patreon.com/godotengine)!
 
 Rémi, who has been doing an incredible job as project manager, is *this* close to becoming our project representative.
 

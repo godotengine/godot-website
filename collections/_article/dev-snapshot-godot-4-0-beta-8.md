@@ -30,7 +30,7 @@ While we do our best to minimize compatibility breaking changes for existing bet
 Some of the most notables feature changes in this update are:
 
 - Animation: Add track validator to AnimationPlayerEditor to detect tracks which have error ([GH-68770](https://github.com/godotengine/godot/pull/68770)).
-- Animation: Refactor process of animation to retrive keys more exactly ([GH-69336](https://github.com/godotengine/godot/pull/69336)).
+- Animation: Refactor process of animation to retrieve keys more exactly ([GH-69336](https://github.com/godotengine/godot/pull/69336)).
 - Animation: Remove `UPDATE_TRIGGER` mode from `ValueTrack::UpdateMode` & match behaviors between AnimationTree and AnimationPlayer ([GH-69357](https://github.com/godotengine/godot/pull/69357)).
 - C#: Fix signature of generated signal callbacks ([GH-67023](https://github.com/godotengine/godot/pull/67023)).
 - C#: Fix C# solution directory project setting ([GH-69391](https://github.com/godotengine/godot/pull/69391)).

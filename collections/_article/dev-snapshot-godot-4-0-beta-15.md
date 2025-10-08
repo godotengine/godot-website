@@ -85,7 +85,7 @@ Some of the most notables feature changes in this update are:
 - Shaders: Fix shader include dependency handling ([GH-71878](https://github.com/godotengine/godot/pull/71878)).
 - Windows: Fix Alt Gr getting stuck on Windows Right Alt + Tab focus loss ([GH-71730](https://github.com/godotengine/godot/pull/71730)).
 - Windows: Fix Xbox Series controller in Bluetooth mode detected as 2 devices ([GH-71784](https://github.com/godotengine/godot/pull/71784)).
-- XR: Rename getters and signals on XR nodes to be consistant with input types ([GH-71830](https://github.com/godotengine/godot/pull/71830)).
+- XR: Rename getters and signals on XR nodes to be consistent with input types ([GH-71830](https://github.com/godotengine/godot/pull/71830)).
 - As well as many [improvements to the documentation](/article/godot-4-0-docs-sprint/).
 
 This release is built from commit [4fa6edc88](https://github.com/godotengine/godot/commit/4fa6edc888cfacd5346bf08afa14b5f5a9bd6d0c).

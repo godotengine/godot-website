@@ -24,7 +24,7 @@ The progress of last month was largely defined by stabilizing the 3D renderer wi
 
 #### Planned May 2018
 
-- enviroment relections + roughness
+- environment relections + roughness
 - implement BRDF
 - add hardware support for skeletal animations
 - C++ bindings method argument checking
@@ -72,14 +72,14 @@ I could say more things about those changes, but for sake of brevity (and lazine
 
 ### implement skybox rendering
 
-The first step I take towards implement physically based rendering is to get enviromental reflections showing on objects. Environmental reflections are visible the most with non-rough materials that reflect how the world around the object looks like. Examples could be metal spoons, plastic mugs, things like that.
+The first step I take towards implement physically based rendering is to get environmental reflections showing on objects. Environmental reflections are visible the most with non-rough materials that reflect how the world around the object looks like. Examples could be metal spoons, plastic mugs, things like that.
 
 Example of environmental reflections (not Godot GLES2, taken from [wikipedia](https://upload.wikimedia.org/wikipedia/commons/1/19/Cube_mapped_reflection_example_2.JPG))
 ![https://upload.wikimedia.org/wikipedia/commons/1/19/Cube_mapped_reflection_example_2.JPG](https://upload.wikimedia.org/wikipedia/commons/1/19/Cube_mapped_reflection_example_2.JPG)
 
 The image type used for such a texture is a [cube map](https://en.wikipedia.org/wiki/Cube_mapping). A cube map consist of 6 sub-images, each representing what could be described as what would be seen on each side of a glass cube out of which inside the observer looks. Or shot: it can be used for 360° images.
 
-If an object is 100% reflective, the image of the surrounding sky will be projected onto its surface. If the material is more *rough* then a more blurred version fo the sky will be used. This is how the very basics of roughness in PBR can be implemented.
+If an object is 100% reflective, the image of the surrounding sky will be projected onto its surface. If the material is more *rough* then a more blurred version of the sky will be used. This is how the very basics of roughness in PBR can be implemented.
 
 On the quest of achieving this, a sky texture has to be loaded first, then it has to be displayed as the actual sky (not a necessity, but it looks weird if you have a reflection without a sky), after that it can be mapped onto object's surfaces.
 

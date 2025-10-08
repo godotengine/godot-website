@@ -79,7 +79,7 @@ Some of the most notables feature changes in this update are:
 - Rendering: Only disable depth writing in opaque pipelines ([GH-71124](https://github.com/godotengine/godot/pull/71124)).
 - Rendering: Fix multiple issues that make the normal roughness texture unusable ([GH-71130](https://github.com/godotengine/godot/pull/71130)).
 - Rendering: OpenGL: Add support for `FORMAT_{ETC2,DXT5}_RA_AS_RG` ([GH-71248](https://github.com/godotengine/godot/pull/71248)).
-- Rendering: Take alpha antialising options into account when setting up materials ([GH-71261](https://github.com/godotengine/godot/pull/71261)).
+- Rendering: Take alpha antialiasing options into account when setting up materials ([GH-71261](https://github.com/godotengine/godot/pull/71261)).
 - Rendering: Only setup depth framebuffer properties when not rendering ReflectionProbes ([GH-71303](https://github.com/godotengine/godot/pull/71303)).
 - Visual Shader: Add few improvements for `VisualShaderNodeParticleRandomness` ([GH-71123](https://github.com/godotengine/godot/pull/71123)).
 - Windows: Allow `OS.kill()` method to terminate non-child processes ([GH-71269](https://github.com/godotengine/godot/pull/71269)).

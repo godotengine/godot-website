@@ -1,5 +1,5 @@
 ---
-title: "你好 мир, Godot habla deine language désormais!*"
+title: "你好 мир, Godot habla define language désormais!*"
 excerpt: "Internationalization support has been added to the editor in the current development branch! Translators are now encouraged to contribute as many languages as possible so that we can have a great multilingual 2.1 release!"
 categories: ["progress-report"]
 author: Rémi Verschelde

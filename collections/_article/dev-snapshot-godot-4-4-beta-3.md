@@ -59,7 +59,7 @@ The Embedded/Floating game window option added in 4.4 is proving to be quite pop
 - Network: Fix WebSocket wslay multi-frame message parsing (again) ([GH-102128](https://github.com/godotengine/godot/pull/102128)).
 - Porting: FreeDesktop portal: Check for `FileChooser` and `Settings` interface availability instead of assuming it's always available ([GH-101812](https://github.com/godotengine/godot/pull/101812)).
 - Porting: Implement `get_length()` for pipes ([GH-102365](https://github.com/godotengine/godot/pull/102365)).
-- Rendering: 2D: Fix clip children and rendering artefacts ([GH-102161](https://github.com/godotengine/godot/pull/102161)).
+- Rendering: 2D: Fix clip children and rendering artifacts ([GH-102161](https://github.com/godotengine/godot/pull/102161)).
 - Rendering: Add loop annotations to ubershaders to prevent loop unrolling ([GH-102480](https://github.com/godotengine/godot/pull/102480)).
 - Rendering: Fix shadow peter-panning with default spotlight ([GH-101952](https://github.com/godotengine/godot/pull/101952)).
 - Rendering: Fully enable HDR2D when the setting is changed ([GH-102177](https://github.com/godotengine/godot/pull/102177)).

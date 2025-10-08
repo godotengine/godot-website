@@ -28,7 +28,7 @@ itch: https://pixeljam.itch.io/ex-zodiac
 </p>
 <h3>Featuring</h3>
 <ul>
-  <li>A retro, colourful, low-poly visual style</li>
+  <li>A retro, colorful, low-poly visual style</li>
   <li>12 main levels (plus secret areas and side-paths)</li>
   <li>Multiple routes to complete the game</li>
   <li>Major bosses at the end of each level, each piloted by a member of the Zodiac</li>

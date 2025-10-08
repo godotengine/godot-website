@@ -54,7 +54,7 @@ This integration can further be used to create more in-depth interactions to a V
 
 ### How does it look like?
 
-We have taken inspiration from the diff UI currently present in Atom, Visual Studio Code and various other popular text editors and IDEs. We also have adopted some UX tips from Unreal Engine 4 for the initialisation of a VCS in a new project, however since Unreal Engine uses an external editor for C++ code by default, we found ourselves looking at something similar to what we already have in Visual Studio/Visual Studio Code.
+We have taken inspiration from the diff UI currently present in Atom, Visual Studio Code and various other popular text editors and IDEs. We also have adopted some UX tips from Unreal Engine 4 for the initialization of a VCS in a new project, however since Unreal Engine uses an external editor for C++ code by default, we found ourselves looking at something similar to what we already have in Visual Studio/Visual Studio Code.
 
 ![Version Control docks in the editor](/storage/app/media/gsoc/2019-1/vcs-001.png)
 
@@ -67,7 +67,7 @@ In the above screenshot, you can notice:
 
 ![Version Control setup dialog](/storage/app/media/gsoc/2019-1/vcs-002.png)
 
-Choosing Set Up Version Control brings up this menu. This is to detect all the different VCS API implementations available with the engine. The initialise button does some basic registrations and it will also let the VCS implementation provide their own initialisation steps depending on their type.
+Choosing Set Up Version Control brings up this menu. This is to detect all the different VCS API implementations available with the engine. The initialize button does some basic registrations and it will also let the VCS implementation provide their own initialization steps depending on their type.
 
 ### Breaking down the framework
 
@@ -79,21 +79,21 @@ The integration project has several vertical slices present in it:
 
 Our target for minimally complete support is focused on Git currently. By the end, we should be able to display file diffs in the editor, commit changes, stage/unstage files and extract other types of important metadata for use in the editor.
 
-### How do we plan to manage distributed and centralised VCS?
+### How do we plan to manage distributed and centralized VCS?
 
-We plan to split the API into two when the time comes to implement a centralised VCS. This is a development style decision amongst many others as suggested by my mentors, Groud and jahd, so that we make as much progress as we can without worrying about a problem that will only come once in the future.
+We plan to split the API into two when the time comes to implement a centralized VCS. This is a development style decision amongst many others as suggested by my mentors, Groud and jahd, so that we make as much progress as we can without worrying about a problem that will only come once in the future.
 
 ### Which VCS are planned for support?
 
-Although we will be focusing only on Git for the duration of this year's GSoC, we also recognise that Perforce and SVN are also some widely used VCS candidates for future support.
+Although we will be focusing only on Git for the duration of this year's GSoC, we also recognize that Perforce and SVN are also some widely used VCS candidates for future support.
 
-We should theoretically support all publically available VCSs so that integrating them into Godot is much easier by just implementing an API correctly and not worrying about how the data should be displayed in the editor.
+We should theoretically support all publicly available VCSs so that integrating them into Godot is much easier by just implementing an API correctly and not worrying about how the data should be displayed in the editor.
 
 ### Coming up next
 
-For the remaining of the coding period, I will be focusing on getting data from Git displayed in the editor, in different forms of commits, diffs, staging areas, and initialisation of Git dotfiles, to name a few. Since one of the long term goals is to keep the API independent of each VCS' specifities, I will also be paying attention to the design I will be using in the future to create the VCS API. In the end, we will be putting the entire integration in a GDNative plugin so as to provide a plug-and-play-like experience with the Git interaction implementation.
+For the remaining of the coding period, I will be focusing on getting data from Git displayed in the editor, in different forms of commits, diffs, staging areas, and initialization of Git dotfiles, to name a few. Since one of the long term goals is to keep the API independent of each VCS' specifics, I will also be paying attention to the design I will be using in the future to create the VCS API. In the end, we will be putting the entire integration in a GDNative plugin so as to provide a plug-and-play-like experience with the Git interaction implementation.
 
-You can also have a look at my [personal devlogs](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs) to have a deeper look into what all decisions are going into realising this integration.
+You can also have a look at my [personal devlogs](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs) to have a deeper look into what all decisions are going into realizing this integration.
 
 -----
 
@@ -111,7 +111,7 @@ Hi! My name is Daniel and I am working on implementing a feature for interactive
 
 The idea of this project is to create a new feature which allows game music to implement their tracks in a more fluid way, similar to how Wwise works with music. The reason Wwise or FMOD were not integrated instead is because they are proprietary, and that would be against the open source and free to use nature of Godot. Nevertheless, it is still an interesting challenge to create my own interactive music engine, based around Godot's existing audio functionalities.
 
-The feature adds two classes to Godot, both inheriting `AudioStream`. The first is `AudioStreamPlaylist`, which is a class that enables the user to play multiple audio files in a sequence, switching between clips based on their tempo and length in bars. The way this works is by the user inputting the tempo and beats information to the import dialogue for each file, and the rest happens behind the scenes. A beat's length in samples is calculated based on the sample rate and the tempo, and that way the player knows how many audio frames it needs to play for each file.
+The feature adds two classes to Godot, both inheriting `AudioStream`. The first is `AudioStreamPlaylist`, which is a class that enables the user to play multiple audio files in a sequence, switching between clips based on their tempo and length in bars. The way this works is by the user inputting the tempo and beats information to the import dialog for each file, and the rest happens behind the scenes. A beat's length in samples is calculated based on the sample rate and the tempo, and that way the player knows how many audio frames it needs to play for each file.
 
 ![BPM and Beats import options for audio files](/storage/app/media/gsoc/2019-1/interactive-music-001.png)
 
@@ -149,7 +149,7 @@ Through discussions on the IRC channel it was discovered that the code just cras
 
 ### What is next
 
-I aim to have transitioner functional by the beginning of August which will give me time to debug any potential issues and come up with a fix for the memory leak. Some of the things I wrote about here such as changes to how transitioner will be layed out need to be further discussed and approved by my mentor reduz. I will also aim to create an example project that displays the functionalities of the new feature, probably something simple such as pressing a few different buttons playing different music loops fading in and out. I think it will be a nice way to show it working and also give an example of the functions exposed to GDScript being used in context.
+I aim to have transitioner functional by the beginning of August which will give me time to debug any potential issues and come up with a fix for the memory leak. Some of the things I wrote about here such as changes to how transitioner will be laid out need to be further discussed and approved by my mentor reduz. I will also aim to create an example project that displays the functionalities of the new feature, probably something simple such as pressing a few different buttons playing different music loops fading in and out. I think it will be a nice way to show it working and also give an example of the functions exposed to GDScript being used in context.
 
 -----
 
@@ -179,7 +179,7 @@ I have the freedom to arrange my time and set my own plan, there's no pressure a
 
 ### Current progress
 
-I started off by getting familiar with the existing Godot tool for VS Code, improving existing `configuration` and `grammers`, we had to remove most of client-side code because we wanted to rely on LSP server (Godot) for most of the task for two reasons:
+I started off by getting familiar with the existing Godot tool for VS Code, improving existing `configuration` and `grammars`, we had to remove most of client-side code because we wanted to rely on LSP server (Godot) for most of the task for two reasons:
 
 - To make the client smaller and easy to port to other editors such as Atom and Emacs.
 - To reuse the existing implementation of the built-in GDScript editor and reduce duplication.
@@ -188,7 +188,7 @@ The [LSP Specification](https://microsoft.github.io/language-server-protocol/spe
 
 #### 1) Diagnostics
 
-An Extended GDScript Parser is created inheriting from the original GDScript parser with the aim to carry specialized parsing task for LSP. Everytime a code change is notified to the LSP Server by the client, diagnostics (i.e. errors and warnings) are updated along with their relevant details such as range (line and column number for both start and end) and message, which are stored in a map for faster lookups.
+An Extended GDScript Parser is created inheriting from the original GDScript parser with the aim to carry specialized parsing task for LSP. Every time a code change is notified to the LSP Server by the client, diagnostics (i.e. errors and warnings) are updated along with their relevant details such as range (line and column number for both start and end) and message, which are stored in a map for faster lookups.
 
 #### 2) Code completion
 
@@ -204,7 +204,7 @@ To provide lookup functionalities such as Function Assist, Hover Provider, Symbo
 
 #### 4) Documentation provider
 
-To provide quick lookup of a class documentation, the entire Godot docs are converted and dumped into system files which can be directly opened by the editors. A simple regex parser is capable of parsing the class name on 'View Symbol Documentation'. In case the parsed symbol isn't recognised, a list of all the symbols will be shown.
+To provide quick lookup of a class documentation, the entire Godot docs are converted and dumped into system files which can be directly opened by the editors. A simple regex parser is capable of parsing the class name on 'View Symbol Documentation'. In case the parsed symbol isn't recognized, a list of all the symbols will be shown.
 
 ![ocumentation provider](/storage/app/media/gsoc/2019-1/gdscript-lsp-003.gif)
 
@@ -218,7 +218,7 @@ Besides these other features such as Rename symbol is also implemented, it first
 
 For the remaining of the coding period, we'll be focusing on:
 
-- `CodeLens` support for disable warnings and show slots informations connected nodes.
+- `CodeLens` support for disable warnings and show slots information connected nodes.
 - Adding a way to auto insert the signal connection code via the LSP.
 - Fixing bugs in current implementation and merging them in Godot's `master` branch.
 - Porting the client to other popular editors like Atom and Emacs.

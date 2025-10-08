@@ -16,7 +16,7 @@ The OpenXR plugin for Godot now has an official release that can be found in [th
 The plugin now supports the new motion ranges API added to OpenXR which works in combination with finger tracking to switch between the ability to make a closed fist or limit finger movement to the shape of the controller. More modes will become available as they are added to the OpenXR specification.
 
 Finger tracking itself is fully supported both through updating orientation of meshes, for which a sample scene is included in the plugin, and through animating a skeleton and bone deformation.
-There are a few changes to the OpenXR specification in the works around the skeleton implemention. Once these become official we'll update the plugin and supply sample scenes as well.
+There are a few changes to the OpenXR specification in the works around the skeleton implementation. Once these become official we'll update the plugin and supply sample scenes as well.
 
 The plugin has been tested on Linux with both Steam and Monado OpenXR runtimes and on Windows with both Steam and Oculus OpenXR runtimes.
 Feature wise it is a great replacement for both the OpenVR and Oculus Desktop plugins including using the Oculus Quest over (air) link.
@@ -32,13 +32,13 @@ Further documentation on the plugin can be found [here](https://github.com/Godot
 
 One of the bigger changes we did to enabled XR support in Godot 4 is implementing multiview support into the rendering engine.
 
-Multiview allows rendering of the images for both eyes simultaniously removing a lot of the overhead compared to rendering the two images in sequence as Godot 3 did.
+Multiview allows rendering of the images for both eyes simultaneously removing a lot of the overhead compared to rendering the two images in sequence as Godot 3 did.
 
 The implementation within the mobile renderer was merged into master while support for the clustered rendering is functional but has a number of loose ends to tie up and can currently be evaluated through this [draft PR](https://github.com/godotengine/godot/pull/49092).
 
 # Further Mobile renderer improvements in Godot 4
 
-The next optimisation we are currently working on for the mobile renderer is introducing subpasses to the renderer. While a more general optimisation not just targetted at XR with many XR solutions targetting mobile architectures an important one none the less.
+The next optimization we are currently working on for the mobile renderer is introducing subpasses to the renderer. While a more general optimization not just targeted at XR with many XR solutions targeting mobile architectures an important one none the less.
 
 Mobile GPUs are very different from desktop GPU, to make better use of limited access to fast memory mobile GPUs use a tile based architecture. This means that the render buffer is divided into smaller tiles.
 All geometry is processed first while the GPU keeps track of which triangles need to be rendered to each tile. Then each tile is processed one after the other rendering that tile and outputting the end result to the render buffer (I'm oversimplifying a lot here).
@@ -65,7 +65,7 @@ The first iteration will likely disable these types of features but we will rein
 
 You can follow the work in this [draft PR](https://github.com/godotengine/godot/pull/49924).
 
-There are more optimisations we are looking at doing after we're done with subpasses, the one I'm personally looking most forward to is implementing Variable Rate Shading.
+There are more optimizations we are looking at doing after we're done with subpasses, the one I'm personally looking most forward to is implementing Variable Rate Shading.
 While VRS has various other applications, for XR this is a very efficient way to handle foviated rendering.
 
 # Godot 4 OpenVR prototype plugin

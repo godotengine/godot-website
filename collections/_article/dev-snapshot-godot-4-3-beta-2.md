@@ -74,7 +74,7 @@ Aside from those, here are some of the most relevant changes:
 - GUI: Add pre-4.3 Editor theme color names for compatibility ([GH-89302](https://github.com/godotengine/godot/pull/89302)).
 - GUI: Fix `NOTIFICATION_SORT_CHILDREN` is called twice on startup ([GH-92645](https://github.com/godotengine/godot/pull/92645)).
 - GUI: Fix popup windows content margins ([GH-92647](https://github.com/godotengine/godot/pull/92647)).
-- GUI: Add visibilty mode to `as_sortable_control()` ([GH-92664](https://github.com/godotengine/godot/pull/92664)).
+- GUI: Add visibility mode to `as_sortable_control()` ([GH-92664](https://github.com/godotengine/godot/pull/92664)).
 - GUI: Button: Adds theme option to align button text and icon to either largest or current stylebox ([GH-92701](https://github.com/godotengine/godot/pull/92701)).
 - GUI: Force canvas item update on oversampling change ([GH-92731](https://github.com/godotengine/godot/pull/92731)).
 - GUI: Fix IME activation in subviewports ([GH-92740](https://github.com/godotengine/godot/pull/92740)).

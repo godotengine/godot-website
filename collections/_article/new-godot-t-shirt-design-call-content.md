@@ -28,7 +28,7 @@ The general requirements for the design are:
   * In a vector format (SVG preferentially)
   * If you use Godot's logo in your design, it has to be the current official one with the correct colors. You can find some official resources in the [Godot design repository](https://github.com/godotengine/godot-design)
   * CC-BY 4.0, CC-BY-SA 4.0 or another equally or more permissive license. [Learn more about CC licenses](https://creativecommons.org/licenses/)
-  * You can also propose a base T-shirt color, but that will be dependant on the manufacturer's availability.
+  * You can also propose a base T-shirt color, but that will be dependent on the manufacturer's availability.
 
 
 ## How to submit

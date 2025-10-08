@@ -16,13 +16,13 @@ Passing the word to Gilles Roudière himself.
 
 Julian (*StraToN*) and I (Gilles a.k.a. *Groud*) spent most of our time at the Godot stand. We used Fracteed's demo to showcase the engine, along with Zylann's Wallrider.
 
-We met a lot of friendly people interested in Godot. Enthusiasts, hobbyists, and even some Unity users looking for an alterative to their game engine!
+We met a lot of friendly people interested in Godot. Enthusiasts, hobbyists, and even some Unity users looking for an alternative to their game engine!
 
-More importantly, we met people who are deeply involved into the game developpment community. Especially those from the Toulouse Game Dev association, which regroups both hobbyists and professional game developers in Toulouse. They even asked us to organize a presentation of the engine. Besides, we managed to sell some shirts, bringing 152€ to the project.
+More importantly, we met people who are deeply involved into the game development community. Especially those from the Toulouse Game Dev association, which regroups both hobbyists and professional game developers in Toulouse. They even asked us to organize a presentation of the engine. Besides, we managed to sell some shirts, bringing 152€ to the project.
 
 <figure>
 <img src="/storage/app/uploads/public/5a2/667/59b/5a266759b5be9948536480.jpg" alt="A stack of official Godot shirts at our stand" />
-<figcaption align="center">Picture courtesy of <a href="https://photo7.inpt.fr/">Photo N7</a></figcaption>
+<figcaption align="center">Picture courtesy of <a href="https://photo7.input.fr/">Photo N7</a></figcaption>
 </figure>
 
 
@@ -31,7 +31,7 @@ We held a workshop based on [KidsCanCode's tutorial](http://docs.godotengine.org
 
 <figure>
 <img src="/storage/app/uploads/public/5a2/667/9f5/5a26679f56d53373043307.jpg" alt="Gilles teaching Godot at the Your First Game workshop" />
-<figcaption align="center">Picture courtesy of <a href="https://photo7.inpt.fr/">Photo N7</a></figcaption>
+<figcaption align="center">Picture courtesy of <a href="https://photo7.input.fr/">Photo N7</a></figcaption>
 </figure>
 
 

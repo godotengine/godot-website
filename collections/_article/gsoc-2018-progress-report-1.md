@@ -174,7 +174,7 @@ WebRTC will run on both native exports and HTML5 exports and will allow communic
 ### How it will work
 
 *Eventually, the docs will contain a complete tutorial for using WebRTC in Godot.*
-Even though WebRTC is peer-to-peer, it’s not truly serverless. Before two clients, or peers, can talk directly, they must use a signalling server to set up a connection. The signalling server doesn’t communicate any game data. It only signals the presence of two or more peers. Think of the signaling server like a telephone switchboard operator, connecting up two phone lines together. One peer calls, and the operator can connect it to another available peer so the peers can then communicate directly.
+Even though WebRTC is peer-to-peer, it’s not truly serverless. Before two clients, or peers, can talk directly, they must use a signaling server to set up a connection. The signaling server doesn’t communicate any game data. It only signals the presence of two or more peers. Think of the signaling server like a telephone switchboard operator, connecting up two phone lines together. One peer calls, and the operator can connect it to another available peer so the peers can then communicate directly.
 
 [![Telephone switchboard](https://upload.wikimedia.org/wikipedia/commons/d/dc/Jersey_Telecom_switchboard_and_operator.jpg)](https://commons.wikimedia.org/wiki/File:Jersey_Telecom_switchboard_and_operator.jpg)
 *Telephone switchboard, 1975. Author: Joseph A. Carr*
@@ -208,7 +208,7 @@ WebRTC should be fully usable and available to the public in Godot by the end of
 
 ### Final thoughts
 
-I’d like to take this moment to thank my mentors, Fabio Alessandrelli (fales) and Max Hilbrunner (mhilbrunner) for all they’ve done this summer. I would be at a loss trying to complete this project on my own, without their help and guidance. Thank you as well to Godot’s project manager, Akien, for all his help and to the welcoming Godot community.
+I’d like to take this moment to thank my mentors, Fabio Alessandrelli (Fales) and Max Hilbrunner (mhilbrunner) for all they’ve done this summer. I would be at a loss trying to complete this project on my own, without their help and guidance. Thank you as well to Godot’s project manager, Akien, for all his help and to the welcoming Godot community.
 
 To any future GSoC students that might read this, if you have never contributed to an open source project then I can say first hand that Godot, between its friendly contributors and its surprisingly detailed docs, is a fine place to start.
 

@@ -3,7 +3,7 @@ title: "Release candidate: Godot 3.5 RC 6"
 excerpt: "Another RC build for Godot 3.5, further improving various areas and default settings to ensure a great experience for current and future 3.5 users."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/app/uploads/public/62c/7f0/daa/62c7f0daa5ea8727743351.jpg
+image: /storage/app/uploads/public/62c/7f0/data/62c7f0daa5ea8727743351.jpg
 date: 2022-07-08 08:55:26
 ---
 

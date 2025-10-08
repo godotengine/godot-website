@@ -34,7 +34,7 @@ Note: This is currently an unordered list of talks we will have. This post will 
   * Functional programming is trending nowadays, for a good reason. This talk highlights important points about functional programming, including advantages and disadvantages, brushes over some theoretical concepts, and shows how those can be applied when programming in GDScript.
 
 - **Talk:** *Visual Vertical Slice - Not just concept art, but not yet a demo* | Matejs Balodis
-  * Visual Vertical Slice is essentially a gameplay trailer, when there is no playable demo. It showcases the idea of the game. With this visual material in hand, you can present your project to the target audience to see their reaction, you can show this to your programmers, so that they have a better idea of how the game should work, you can use it to plan the production of your game, you can present it to potential investors and publishers to start a dialogue.
+  * Visual Vertical Slice is essentially a gameplay trailer, when there is no playable demo. It showcases the idea of the game. With this visual material in hand, you can present your project to the target audience to see their reaction, you can show this to your programmers, so that they have a better idea of how the game should work, you can use it to plan the production of your game, you can present it to potential investors and publishers to start a dialog.
 
 - **Demo:** *Making 3D adventure games with Godot* | Paweł Fertyk ([miskatonicstudio](https://github.com/miskatonicstudio))
   * Are you tired of 2D pixel art platformers? Try 3D adventure games! In this talk, Paweł will demonstrate the most effective ways of using Godot features to bring into existence 3D interactive worlds. Working example included!

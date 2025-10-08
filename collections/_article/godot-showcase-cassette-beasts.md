@@ -16,7 +16,7 @@ date: 2023-04-26 15:00:00
 }
 </style>
 
-It's been a long time since our last showcase interview. This time, we bring you Jay and Tom, the team behind [Cassette Beast](https://www.cassettebeasts.com/), an 80’s vibe Creature Collector turn-based RPG set in a vast and colourful open world.
+It's been a long time since our last showcase interview. This time, we bring you Jay and Tom, the team behind [Cassette Beast](https://www.cassettebeasts.com/), an 80’s vibe Creature Collector turn-based RPG set in a vast and colorful open world.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JBt-B5eT2h4" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
 
@@ -35,11 +35,11 @@ I first started making games in my bedroom as a kid, using Delphi (I don't know 
 
 ### What were some of the biggest challenges you faced during the development process, and how did you overcome them?
 
-<strong class="jay">Jay:</strong> On the art and creative side, figuring out how exactly we would be able to create the amount of content needed to realise the project was challenging! For a game about collecting monster forms, we needed a lot of monster designs, and for them to look good. On top of that, figuring out how the game’s “Fusion system” would work was also pretty daunting! A lot of work went into it ultimately, but I’m very proud of how it turned out!
+<strong class="jay">Jay:</strong> On the art and creative side, figuring out how exactly we would be able to create the amount of content needed to realize the project was challenging! For a game about collecting monster forms, we needed a lot of monster designs, and for them to look good. On top of that, figuring out how the game’s “Fusion system” would work was also pretty daunting! A lot of work went into it ultimately, but I’m very proud of how it turned out!
 
 <strong class="tom">Tom:</strong> The biggest and most consistent technical challenge we've faced is getting performance to where we need it for smooth gameplay. That's not unique to Godot though - and in fact Godot being open source gives us ways to address this that other engines don't.
 
-Engine code is often optimised to be fast enough in the most common cases, at the expense of poor performance in highly specific cases. Cassette Beasts actually hit several of those poor-performance cases in Godot, and I had to patch engine code in a few places to claw back a few frames. However, I think that this is a strength of Godot. No code can be perfectly optimised for every case. Optimising for better general performance in the most common cases, while allowing game developers to customise the engine for weird cases, is exactly what engine developers should be doing.
+Engine code is often optimized to be fast enough in the most common cases, at the expense of poor performance in highly specific cases. Cassette Beasts actually hit several of those poor-performance cases in Godot, and I had to patch engine code in a few places to claw back a few frames. However, I think that this is a strength of Godot. No code can be perfectly optimized for every case. Optimizing for better general performance in the most common cases, while allowing game developers to customize the engine for weird cases, is exactly what engine developers should be doing.
 
 ![](/assets/showcase/cassette-beasts-1.webp)
 

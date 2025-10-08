@@ -196,7 +196,7 @@ They can be used with custom nodes or Texture:
 
 ## Summary
 
-Godot provides an awesome layer for graphics developers, and with provided changes it can do many new things in an easier and better way. For 4.0, I hope to continue enjoying myself and make shader fun more accessible by providing new enchancements and feature proposals.
+Godot provides an awesome layer for graphics developers, and with provided changes it can do many new things in an easier and better way. For 4.0, I hope to continue enjoying myself and make shader fun more accessible by providing new enhancements and feature proposals.
 
 If you like my work and want to support me, I'm happy to receive donations (see relevant options on [my GitHub profile](https://github.com/Chaosus)).
 

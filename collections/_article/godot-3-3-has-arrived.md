@@ -226,7 +226,7 @@ As always, it is possible to revert to the legacy renderer by turning off batchi
 <a id="lightmapper"></a>
 #### New CPU lightmapper
 
-The lightmapper in the previous 3.x releases was quickly put together before the 3.0 release and it had some major issues. It was reusing parts of the code for baking GIProbes, and that made it quick but not great in terms of quality. Back in summer 2019 we already knew Godot 4.0 would feature a completely new GPU-based lightmapper, but it required Vulkan support and 4.0 was still far away, so we tasked Joan Fons ([jfons](https://github.com/jfons)), as part of the [GSoC](https://summerofcode.withgoogle.com) program, to write a new CPU lightmapper for Godot 3.x. After a long hiatus in development and a couple of rewrites here and there, the brand new [CPU lightmapper](https://github.com/godotengine/godot/pull/44628) was finally merged into the 3.3 branch at the begining of this year.
+The lightmapper in the previous 3.x releases was quickly put together before the 3.0 release and it had some major issues. It was reusing parts of the code for baking GIProbes, and that made it quick but not great in terms of quality. Back in summer 2019 we already knew Godot 4.0 would feature a completely new GPU-based lightmapper, but it required Vulkan support and 4.0 was still far away, so we tasked Joan Fons ([jfons](https://github.com/jfons)), as part of the [GSoC](https://summerofcode.withgoogle.com) program, to write a new CPU lightmapper for Godot 3.x. After a long hiatus in development and a couple of rewrites here and there, the brand new [CPU lightmapper](https://github.com/godotengine/godot/pull/44628) was finally merged into the 3.3 branch at the beginning of this year.
 
 The biggest difference with the old lightmapper is that the new one features proper path tracing, which results in better looking lightmaps. Also, the new lightmapper brings support for denoising using [Open Image Denoise](https://www.openimagedenoise.org/), which results in better-looking lightmaps in the same bake time range. On top of that, other quality of life improvements have been added or back-ported from 4.0, such as support for baking environment lighting, lightmap texture atlassing, per-object resolution scaling, cubic filtering of lightmaps at runtime, and last but not least, automatic disabling of baked lights, which eases up the pain of mixing baked and non-baked objects and light in the same scene.
 
@@ -290,7 +290,7 @@ Here too, there are still a number of known issues to address, and this will be 
 
 Being able to easily cut/copy and paste nodes sounds like a basic feature to have, but it is only now that it [could finally be implemented in a reliable way](https://github.com/godotengine/godot/pull/34892), thanks to the hard work of Tomasz Chabora ([KoBeWi](https://github.com/KoBeWi)). Previously, to copy nodes within the scene, they had to be duplicated and dragged under the desired parent. Moving nodes between scenes was only possible by using the clunky "Merge from scene" feature. Being able to copy nodes as easily as you can copy text was probably one of the most-wanted features since the first release of Godot!
 
-There were multiple attempts at implementing it, but it took time to refine them into someting reliable that could be merged, especially due to the need to take into account the full complexity of the scene tree (instanced scenes, editable children, shared or unique resources and subresources, etc.). In Godot 3.3, the dream has come true: nodes can be cut, copied and pasted, both within the same scene and between scenes. Manipulating the scene tree has never been this convenient.
+There were multiple attempts at implementing it, but it took time to refine them into something reliable that could be merged, especially due to the need to take into account the full complexity of the scene tree (instanced scenes, editable children, shared or unique resources and subresources, etc.). In Godot 3.3, the dream has come true: nodes can be cut, copied and pasted, both within the same scene and between scenes. Manipulating the scene tree has never been this convenient.
 
 ![Node copy-pasting in action!](/storage/app/media/3.3/copy-paste.gif)
 
@@ -366,7 +366,7 @@ C# users will benefit from a [redesign of the solution build output panel](https
 ![New C# solution build output panel](/storage/app/media/3.3/mono-output-panel.png)
 
 There have been further fixes to the solution and build system, allowing users to [target .NETFramework with the Godot.NET.Sdk and .NET 5](https://github.com/godotengine/godot/pull/44135).
-Moreover a 3.2.2 regression was fixed for [`System.Collections.Generic.List` marshalling](https://github.com/godotengine/godot/pull/45029), and [Unicode identifiers are now properly supported](https://github.com/godotengine/godot/pull/45310).
+Moreover a 3.2.2 regression was fixed for [`System.Collections.Generic.List` marshaling](https://github.com/godotengine/godot/pull/45029), and [Unicode identifiers are now properly supported](https://github.com/godotengine/godot/pull/45310).
 
 There's also been [extensive](https://github.com/godotengine/godot/pull/44373) [work](https://github.com/godotengine/godot/pull/44374) on Mono compatibility with WebAssembly.
 

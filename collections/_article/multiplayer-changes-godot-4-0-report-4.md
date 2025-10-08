@@ -32,22 +32,22 @@ The design goals that emerged for such an API where:
 
 - Provide an out-of-the-box solution for scene state replication across the network.
 - Allow for (almost) no-code prototyping.
-- Be extensible with game-specific behaviours (custom reconciliation, interpolation, interest management, etc).
+- Be extensible with game-specific behaviors (custom reconciliation, interpolation, interest management, etc).
 - Allow ex-post (incremental) optimizations of network code.
 - Be easy to use for game developers, of course :)
 
 ### Glossary
 
-- `State`: The informations (properties) about an Object relevant to the multiplayer game.
+- `State`: The information (properties) about an Object relevant to the multiplayer game.
 - `Spawn`: Creating, or requesting remotely to create a new Object.
 - `Sync`: Updating, or requesting remotely to update the state of an Object.
 
 ### Security
 
-When dealing with computer networks, it's important to understand the security implication of transfering data across machines.
+When dealing with computer networks, it's important to understand the security implication of transferring data across machines.
 For instance, Godot does not allow [decoding objects](https://docs.godotengine.org/en/stable/classes/class_multiplayerapi.html#class-multiplayerapi-property-allow-object-decoding) by default, since they could carry scripts with them or force the receiving end to execute specific code during initialization. This is a security vulnerability, as arbitrary code execution of this kind would allow for servers to access or manipulate any file on the client's filesystem that the game process has access to.
 
-In a similar way, the replication API will let you specify which scenes can be spawned by a remote peer. Tthe final implementation will also allow for fine-grained control over which node can be spawned at each specific path.
+In a similar way, the replication API will let you specify which scenes can be spawned by a remote peer. The final implementation will also allow for fine-grained control over which node can be spawned at each specific path.
 
 ### Optimizations
 
@@ -148,7 +148,7 @@ With this configuration, each new client that connects will cause the server to 
 
 Note that the client code doesn't "instantiates" the scene explicitly. However, since the scene is marked for replication, when the server adds the scene to the SceneTree, it automatically sends that information remotely. Each connected client will then instantiate the scene automatically, adding it to the proper path and setting the values configured via `multiplayer.replicator.spawn_config` (`position` and `player_name` in this example).
 
-Additinally, the server automatically keeps track of replicated nodes to send them to newly connected peers, i.e. supporting clients that join mid-game.
+Additionally, the server automatically keeps track of replicated nodes to send them to newly connected peers, i.e. supporting clients that join mid-game.
 
 The RPC system will also work appropriately for the nodes spawned this way, so you can easily integrate state synchronization with messaging.
 
@@ -201,7 +201,7 @@ In the same way, properties of child nodes could be set, and custom interpolatio
 
 As explained, this is an early prototype. A [more complete proposal](https://github.com/godotengine/godot-proposals/issues/3459) has been created to gather feedback as we work towards a final implementation in the coming months. This includes **visual configuration**, child node properties support, fine grained spawn control and more.
 
-The coming months will be prety dense of announcements. As always, stay tuned for more!
+The coming months will be pretty dense of announcements. As always, stay tuned for more!
 
 ## References
 

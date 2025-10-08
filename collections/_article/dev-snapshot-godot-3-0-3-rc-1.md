@@ -9,7 +9,7 @@ date: 2018-05-02 23:06:38
 
 **Note: [Release candidate 2](https://godotengine.org/article/dev-snapshot-godot-3-0-3-rc-2) is out now!**
 
-This is the first release candiate for what will become Godot 3.0.3. This release has over 100 bugfixes and new features. A full human-readable changelog is still to be created but the git shortlog [can be downloaded here](https://github.com/godotengine/godot-builds/releases/download/3.0.3-rc1/Godot_v3.0.3-rc1_changelog.txt).
+This is the first release candidate for what will become Godot 3.0.3. This release has over 100 bugfixes and new features. A full human-readable changelog is still to be created but the git shortlog [can be downloaded here](https://github.com/godotengine/godot-builds/releases/download/3.0.3-rc1/Godot_v3.0.3-rc1_changelog.txt).
 
 The most important new feature for this release is initial support for Mono exports on the desktop platforms (Windows, Linux, and MacOSX). We're still hard at work at making Mono exporting to mobile work.
 

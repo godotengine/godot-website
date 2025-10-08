@@ -68,7 +68,7 @@ Here are some of the main changes since 3.4-stable:
 - Theme: Make default/project theme wait for modules before initializing (fixes WebP support for custom themes) ([GH-55484](https://github.com/godotengine/godot/pull/55484)).
 - Tiles: Fix TileSet editor workspace breaking ([GH-55059](https://github.com/godotengine/godot/pull/55059)).
 - Tiles: Only add light occlusion for visible TileMaps ([GH-54435](https://github.com/godotengine/godot/pull/54435)).
-- Tiles: Fix selecting next/previous subtile in TileSet editor ([GH-55261](https://github.com/godotengine/godot/pull/55261)).
+- Tiles: Fix selecting next/previous sub-tile in TileSet editor ([GH-55261](https://github.com/godotengine/godot/pull/55261)).
 - Viewport: Show tooltips even when paused or `time_scale` is 0 ([GH-55224](https://github.com/godotengine/godot/pull/55224)).
 - XR: Add support for OpenXR export configurations ([GH-55158](https://github.com/godotengine/godot/pull/55158)).
 - Thirdparty library updates: libogg 1.3.5, libvorbis 1.3.7, minimp3 from 2021-11-30, CA certificates from 2021-11-01.

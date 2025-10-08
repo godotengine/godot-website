@@ -62,7 +62,7 @@ Here are some of the main changes since 3.3.2-stable:
 - RichTextLabel: Fix auto-wrapping on CJK texts ([GH-49280](https://github.com/godotengine/godot/pull/49280)).
 - Windows: Fix platform file access to allow file sharing with external programs ([GH-51430](https://github.com/godotengine/godot/pull/51430)).
 - Windows: Fix code signing with `osslsigncode` from Linux/macOS ([GH-49985](https://github.com/godotengine/godot/pull/49985)).
-- Thirdparty library updates: mbedtls 2.16.11, CA root certifactes.
+- Thirdparty library updates: mbedtls 2.16.11, CA root certificates.
 - Translation updates.
 - API documentation updates.
 

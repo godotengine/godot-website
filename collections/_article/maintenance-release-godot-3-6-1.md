@@ -24,7 +24,7 @@ As usual, you can try it live with the [**online version of the Godot editor**](
 ## Major bugs fixed
 
 ### Grid snapping + ruler in editor
-A small change to `Range::set_value` unfortunately led to a major regression in grid and ruler behaviour when zoomed in ([GH-98466](https://github.com/godotengine/godot/issues/98466)).
+A small change to `Range::set_value` unfortunately led to a major regression in grid and ruler behavior when zoomed in ([GH-98466](https://github.com/godotengine/godot/issues/98466)).
 
 We decided on balance the safest course of action in 3.x was to revert the change.
 
@@ -107,7 +107,7 @@ Here are the main changes since 3.6-stable:
 
 #### Physics
 
-- Fix physics platform behaviour regression ([GH-97316](https://github.com/godotengine/godot/pull/97316)).
+- Fix physics platform behavior regression ([GH-97316](https://github.com/godotengine/godot/pull/97316)).
 
 #### Porting
 

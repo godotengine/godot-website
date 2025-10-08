@@ -27,10 +27,10 @@ In particular, some additional talks or workshops may typically be planned by Go
 - **Talk:** *GPU colliding particles in Godot* | Paweł Mogiła
   * There are GPU accelerated particles in Godot, but they don't support collisions. Paweł will present a simple and effective way of implementing collision response with a dynamically destructible 2D object.
   He will then explain the problem of transferring the data back to CPU side if we would like to get back the information about the collision (e.g. to have the particles as collectibles).
-- **Workshop:** *Creating reuseable components with Godot* | Bojidar Marinov ([bojidar-bg](https://github.com/bojidar-bg))
+- **Workshop:** *Creating reusable components with Godot* | Bojidar Marinov ([bojidar-bg](https://github.com/bojidar-bg))
   * How to use nodes and scripts to create components which can be easily reused in a game.
 - **Talk:** *Playing with Neuroscience: How can we use games to study the mind and brain?* | Tiago Quendera
-  * In the field of neuroscience, the study of how the mind and brain make decisions relies heavily on observing, classifying and dissecting behaviour. Due to the difficult nature of this issue, neuroscience has historically studied very simple decision problems. Most decisions are not, however, simple. Throughout the last century, scientists have developed amazingly controlled environments and, in parallel, and often unknowingly, so have game developers. Despite doing so, these two fields do not create these environments with the same goals, principles, or even tools. By bridging the two we hope to create environments that are both complex enough to mimic "real decisions" and retain the elegance and analytical prowess of the simple scientific tasks. So how can we make games that, while analytically tractable and scientifically relevant, remain engaging and fun for the player?
+  * In the field of neuroscience, the study of how the mind and brain make decisions relies heavily on observing, classifying and dissecting behavior. Due to the difficult nature of this issue, neuroscience has historically studied very simple decision problems. Most decisions are not, however, simple. Throughout the last century, scientists have developed amazingly controlled environments and, in parallel, and often unknowingly, so have game developers. Despite doing so, these two fields do not create these environments with the same goals, principles, or even tools. By bridging the two we hope to create environments that are both complex enough to mimic "real decisions" and retain the elegance and analytical prowess of the simple scientific tasks. So how can we make games that, while analytically tractable and scientifically relevant, remain engaging and fun for the player?
 - **Workshop:** *Solving targeting solution for your game* | Leszek Nowak ([John Meadow](https://github.com/JohnMeadow1))
   * Depending on interests from the audience, John will run a workshop about [2D target leading](https://github.com/JohnMeadow1/GodotGeometryElements/blob/master/assets/examples_animations/targeting.gif), seeking AI or [solving for 3D ballistic trajectory](https://blog.forrestthewoods.com/solving-ballistic-trajectories-b0165523348c).
 - **Demo:** *Make your own cross-platform builds easily with the upcoming godot_build tool* | HP van Braam ([hpvb](https://github.com/hpvb))
@@ -134,7 +134,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
     <img alt="Tiago Quendera" src="/storage/app/uploads/public/5c5/0d0/191/5c50d0191767d908679037.jpg" />
 </div>
 <div class="speaker-text">
-    Tiago Quendera is a passionate lifelong student of human behaviour. His first lines of code were WoW macros and the corresponding guild website.
+    Tiago Quendera is a passionate lifelong student of human behavior. His first lines of code were WoW macros and the corresponding guild website.
     Today, while still not an avid coder, he uses Godot to make videogames to help us further understand the human mind and brain as a neuroscientist.
 </div>
 </div>

@@ -37,7 +37,7 @@ As we always want to be crystal clear with how donations are handled and used, w
 
 After meeting the initial goal, we hired [karroffel](https://github.com/karroffel) to continue her work on GDNative (more about this below) and work on a new rendering backend.
 
-We are currently aiming to hire Rémi Verschelde ([Akien](https://github.com/akien-mga)), our project manager, as full time project manger and representative (you can read more about this [here](/article/next-patreon-goal-help-us-hire-remi-verschelde-akien-full-time)). We need your help, as we are more than halfway there!
+We are currently aiming to hire Rémi Verschelde ([Akien](https://github.com/akien-mga)), our project manager, as full time project manager and representative (you can read more about this [here](/article/next-patreon-goal-help-us-hire-remi-verschelde-akien-full-time)). We need your help, as we are more than halfway there!
 
 If you haven't yet, please help us reach this goal by [becoming our patron](https://www.patreon.com/godotengine)! Even a bit is a tremendous help to the project.
 
@@ -222,7 +222,7 @@ You can read more about it on its [original announcement](/article/dlscript-here
 <a id="csharp"></a>
 ## Mono / C# support
 
-![C# scripting via the Mono flavour](/storage/app/media/3.0%20release/monogodot.png)
+![C# scripting via the Mono flavor](/storage/app/media/3.0%20release/monogodot.png)
 
 Thanks to a generous grant from Microsoft, Ignacio Roldán Etcheverry ([neikeq](https://github.com/neikeq)) did a fantastic job and implemented Mono support in Godot.
 
@@ -353,7 +353,7 @@ Customize Godot the way you like it! (Without having to pay for it...)
 <a id="autotiling"></a>
 ## Auto-tiling in tile maps
 
-Godot now supports auto-tiling in TileMap, authored by Mariano Suligoy ([MarianoGNU](https://github.com/MarianoGNU)) and enhanced by [Damar Indra](https://github.com/damarindra). This new implementation is based on [Tiled Editor](https://www.mapeditor.org)'s Terrains and is fully compatible with previous TileSets. It has built-in collision, occlusion and navigation polygon editors, together with the possibility to extend the resource using a tool script to have control over what subtiles do.
+Godot now supports auto-tiling in TileMap, authored by Mariano Suligoy ([MarianoGNU](https://github.com/MarianoGNU)) and enhanced by [Damar Indra](https://github.com/damarindra). This new implementation is based on [Tiled Editor](https://www.mapeditor.org)'s Terrains and is fully compatible with previous TileSets. It has built-in collision, occlusion and navigation polygon editors, together with the possibility to extend the resource using a tool script to have control over what sub-tiles do.
 
 <video width="720" height="434" controls>
   <source src="/storage/app/media/3.0%20release/autotile-damarind.mp4" type="video/mp4">

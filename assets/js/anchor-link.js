@@ -24,7 +24,7 @@ window.applyAnchorLinks = (baseSelector) => {
         // Add click event listener to anchor link to copy link to clipboard.
         anchorNode.addEventListener("click", (event) => {
             event.preventDefault();
-            // Imitate default behavior that we just cancelled.
+            // Imitate default behavior that we just canceled.
             history.pushState(null, null, event.target.getAttribute("href"));
 
             const anchorLink = window.location.href.split("#")[0] + event.target.getAttribute("href");

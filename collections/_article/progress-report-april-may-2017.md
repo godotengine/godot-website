@@ -94,7 +94,7 @@ As some users expressed interest in the platform, George backported the UWP code
 
 ## Script editor enhancements
 
-Paul (Paulb23) is back with script editor enhancement! The so-called "colour guy" who did a lot of work on syntax highlighting in the script editor now brought us optional space-based indentation (Python users will love that!), an edit tool to convert casing, a quick access list to recent scripts and most importantly, a new panel that list member variables and methods of a given script and allows to quickly focus them.
+Paul (Paulb23) is back with script editor enhancement! The so-called "color guy" who did a lot of work on syntax highlighting in the script editor now brought us optional space-based indentation (Python users will love that!), an edit tool to convert casing, a quick access list to recent scripts and most importantly, a new panel that list member variables and methods of a given script and allows to quickly focus them.
 
 ![Members overview in script editor](https://cloud.githubusercontent.com/assets/6584330/26529566/fa67a5c6-43b9-11e7-8293-b6fc6a3d6123.jpg)
 

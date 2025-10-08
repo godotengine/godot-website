@@ -31,7 +31,7 @@ While not entirely rendering specific, a lot of nodes are being renamed. Users o
 
 Screen space reflection in Godot 3.x was rather limited. It supported roughness, but it did so in a way where the texture reads appeared rough, but not the reflected image (the edges of the reflected objects remained intact). This is changing in 4.0, using a special screen-space filter to correctly simulate roughness.
 
-![ssr_roughness.jpeg](/storage/app/uploads/public/5ea/c9d/daa/5eac9ddaaa75f607495001.jpeg)
+![ssr_roughness.jpeg](/storage/app/uploads/public/5ea/c9d/data/5eac9ddaaa75f607495001.jpeg)
 
 ## New Subsurface Scattering
 

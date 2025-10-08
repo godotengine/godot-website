@@ -32,7 +32,7 @@ A quick and incomplete list of new features follows (a proper post will be writt
 * **Script editor usability improvements**: Incremental search, better highlighting, smart function matching in code-completion, etc.
 * **Improved asset pipeline**: Automatic re-import and reload of assets and scenes when changed.
 * **Improved thumbnailer**: Previews are updated in real-time, and thumbnails of resources will appear in the inspector.
-* **New AnimatedSprite features**: Labelled animations, and the ability to play animations without an AnimationPlayer.
+* **New AnimatedSprite features**: Labeled animations, and the ability to play animations without an AnimationPlayer.
 
 With these changes, Godot has become a true joy to use. [Please help us with testing](/download) so we can make sure 2.1 is a solid release! This is the time to [report your favorite bugs](https://github.com/godotengine/godot/issues/), or add a comment to existing ones so we give them more priority.
 

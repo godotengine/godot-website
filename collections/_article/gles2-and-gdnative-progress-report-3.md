@@ -46,13 +46,13 @@ While a most of the 2D engine was already working, some bugs kept the editor fro
 
 The main bug that was keeping me busy *for weeks* was related to a shader bind that was not descriptive enough when blitting a viewport to the screen. "What does this mean?" you might ask.
 
-Everytime Godot draws something it has to draw that something *somewhere*. Godot calls these "things" **viewports**. (That's why the root node of any SceneTree is always a Viewport!) Internally, viewports are implemented by "[framebuffer objects](https://en.wikipedia.org/wiki/Framebuffer_object)" in OpenGL, which are basically just a set of buffers or images that can be used to draw to.
+Every time Godot draws something it has to draw that something *somewhere*. Godot calls these "things" **viewports**. (That's why the root node of any SceneTree is always a Viewport!) Internally, viewports are implemented by "[framebuffer objects](https://en.wikipedia.org/wiki/Framebuffer_object)" in OpenGL, which are basically just a set of buffers or images that can be used to draw to.
 
 The root node viewport in Godot is special, because everything that gets drawn into it will be displayed in the actual window. The drawing to the window happens by using a viewport as a texture and then displaying that in the correct position in the window. This act is called "[blitting](https://en.wikipedia.org/wiki/Bit_blit)". The shader code used for blitting is the same as for drawing rectangles with textures - only the texture is the content of another viewport.
 
 OpenGL works by creating a context for the running process/thread, which is a state machine that gets modified by OpenGL function calls. If some state is set then it stays that way until it gets set to a different state.
 
-This was a lot of explanation for this bug fix, but what it boiled down to is that the editor would sometimes become unresponsive if certain actions or popups would be triggered. The error occured when something that is **not a rectangle** got drawn last before the blitting happened. The blitting didn't set up its own state completely, so a previous draw call would leave the OpenGL context in a non-working state for blitting.
+This was a lot of explanation for this bug fix, but what it boiled down to is that the editor would sometimes become unresponsive if certain actions or popups would be triggered. The error occurred when something that is **not a rectangle** got drawn last before the blitting happened. The blitting didn't set up its own state completely, so a previous draw call would leave the OpenGL context in a non-working state for blitting.
 
 Once this mistake was spotted it was a fix as easy as adding a few lines, but I didn't know what was happening for weeks, so I just wrote this much about it to get rid of some frustration :P..... Anyway, 2D is working pretty well now!
 
@@ -76,7 +76,7 @@ GDScript hides the delegation by actually calling the owner in every "self-call"
 
 C# faced the same problems, as inheriting a Godot base class would mean that those are already valid to use, with or without a "script class" inheriting from them. For that matter so called "instance binding data" fields have been added to the core [`Object`](https://github.com/godotengine/godot/blob/f2df8c94b2e5ba6c4eee3515d1d30f36194ca803/core/object.h#L487) class, which can be used to store data for language bindings for each object.
 
-In practice, the most common use case is to create wrapper objects (which contain a field that points to the actualy object) in the langauge binding, then Godot will keep track of the objects lifetime and will notify the scripting language when the Object gets destroyed. This makes for nicer code for the programmer.
+In practice, the most common use case is to create wrapper objects (which contain a field that points to the actually object) in the language binding, then Godot will keep track of the objects lifetime and will notify the scripting language when the Object gets destroyed. This makes for nicer code for the programmer.
 
 The PR implementing the API for this for NativeScript can be found [here](https://github.com/godotengine/godot/pull/16514).
 
@@ -108,7 +108,7 @@ After some confusion with the proper viewport clearing order this beautiful view
 
 As mentioned previously, all graphics related "resources" are handled in the [`rasterizer_storage_gles2.cpp` file](https://github.com/karroffel/godot/blob/ed544cabaa13d604d4caac21299b32a6b7b5f4af/drivers/gles2/rasterizer_storage_gles2.cpp#L1088), where the `mesh` API has to be implemented in order to get the mesh data in a renderable format.
 
-Most of the code could be re-used from the GLES3 implementation (except for things like VAOs).
+Most of the code could be reused from the GLES3 implementation (except for things like VAOs).
 
 Pretty much all that gets displayed in the 3D viewport are meshes - the gizmos, the grid, the camera symbol etc.
 

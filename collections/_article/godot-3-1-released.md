@@ -297,7 +297,7 @@ Marcelo Fernandez ([marcelofg55](https://github.com/marcelofg55/)) added support
 
 Godot is already unrivalled with regards to being friendly to version control systems (VCS). The new 3.1 version includes some very requested enhancements such as:
 
-* Folded properties are no longer saved in scenes, avoiding unnecesary history pollution.
+* Folded properties are no longer saved in scenes, avoiding unnecessary history pollution.
 * Non-modified properties are no longer saved. This worked up to some extent before with properties that were not zero but it now applies universally. This reduces text files considerably and makes history even more readable.
 
 

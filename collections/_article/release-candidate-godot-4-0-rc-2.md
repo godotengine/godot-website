@@ -5,7 +5,7 @@ categories: ["pre-release"]
 author: Rémi Verschelde
 image: /storage/blog/covers/release-candidate-godot-4-0-rc-2.jpg
 image_caption_title: "Master of Chess"
-image_caption_description: "A game by BRANE"
+image_caption_description: "A game by BRAIN"
 date: 2023-02-14 18:00:00
 ---
 
@@ -19,7 +19,7 @@ Regardless of which milestone our contributors assign to your issues, be sure to
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.rc2/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from* [**Master of Chess**](https://store.steampowered.com/app/2248900/Master_of_Chess/?curator_clanid=41324400), *an upcoming chess player management game by [BRANE](https://twitter.com/GamesBrane). It's being developed with Godot 4.0, and you can follow development on [Twitter](https://twitter.com/GamesBrane) and wishlist it on [Steam](https://store.steampowered.com/app/2248900/Master_of_Chess/?curator_clanid=41324400).*
+*The illustration picture for this article is from* [**Master of Chess**](https://store.steampowered.com/app/2248900/Master_of_Chess/?curator_clanid=41324400), *an upcoming chess player management game by [BRAIN](https://twitter.com/GamesBrane). It's being developed with Godot 4.0, and you can follow development on [Twitter](https://twitter.com/GamesBrane) and wishlist it on [Steam](https://store.steampowered.com/app/2248900/Master_of_Chess/?curator_clanid=41324400).*
 
 ## What's new
 
@@ -91,7 +91,7 @@ The downloads for this dev snapshot can be found directly on our repository:
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a list of [known bugs in the 4.0 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+).
 
 - Exporting BPTC compressed textures (notably HDR textures with EXR format) is not working in this build ([GH-72856](https://github.com/godotengine/godot/issues/72856)). The issue has been identified and a fix will be included in 4.0 RC 3 ([GH-73286](https://github.com/godotengine/godot/pull/73286)).
-- OpenGL windows with a `keep` stretch mode can show graphics artefacts in the bars outside the viewport ([GH-71799](https://github.com/godotengine/godot/issues/71799)). This also has a fix queued for 4.0 RC 3 already ([GH-73300](https://github.com/godotengine/godot/pull/73300)).
+- OpenGL windows with a `keep` stretch mode can show graphics artifacts in the bars outside the viewport ([GH-71799](https://github.com/godotengine/godot/issues/71799)). This also has a fix queued for 4.0 RC 3 already ([GH-73300](https://github.com/godotengine/godot/pull/73300)).
 
 You will likely see this list reduced drastically over the coming days as we continue to re-triage those issues and postpone the ones that are not critical for the 4.0 release.
 

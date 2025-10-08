@@ -9,7 +9,7 @@ date: 2016-03-19 00:00:00
 
 #### What is that?
 
-GDC (or Game Developer's Conference) is an event hosted every year in San Francisco at some point in March. The point of GDC is to reunite as much as possible of the video game develoment industry in a single week. The event is used for conferences (educational mostly), business, mixers, award ceremonies (IGF), technology showcases and partying hard with fellow developers.
+GDC (or Game Developer's Conference) is an event hosted every year in San Francisco at some point in March. The point of GDC is to reunite as much as possible of the video game development industry in a single week. The event is used for conferences (educational mostly), business, mixers, award ceremonies (IGF), technology showcases and partying hard with fellow developers.
 
 It is without a doubt a fantastic time of the year if you are a video game developer and you can attend to it.
 

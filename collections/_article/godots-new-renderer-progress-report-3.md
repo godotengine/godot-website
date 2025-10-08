@@ -49,7 +49,7 @@ The lower mipmaps give objects an aura (similar to Godot 2.0), while the higher 
 
 #### Better Upscaling
 
-Of course, an usual problem with doing glow this way is that you can see arctifacts related to linear interpolation (the glow is "blocky"). To avoid this, an optional bicubic upscaler is provided:
+Of course, an usual problem with doing glow this way is that you can see artifacts related to linear interpolation (the glow is "blocky"). To avoid this, an optional bicubic upscaler is provided:
 
 ![](/storage/app/media/devlog/progress3/nrpr2.jpg)
 

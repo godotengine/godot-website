@@ -146,7 +146,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Navigation: Optimize some parts of NavMap::sync ([GH-90182](https://github.com/godotengine/godot/pull/90182)).
 - Porting: Implement native file picker support for Android ([GH-98350](https://github.com/godotengine/godot/pull/98350)).
 - Porting: Implement has_hardware_keyboard method for Android and iOS ([GH-97743](https://github.com/godotengine/godot/pull/97743)).
-- Rendering: Fix various issues and minor performance optimisations in 2D renderer ([GH-98652](https://github.com/godotengine/godot/pull/98652)).
+- Rendering: Fix various issues and minor performance optimizations in 2D renderer ([GH-98652](https://github.com/godotengine/godot/pull/98652)).
 - Rendering: Fix volumetric fog artifacts when inside the fog ([GH-86103](https://github.com/godotengine/godot/pull/86103)).
 - Rendering: Fix updating dynamic objects in LightmapGI ([GH-97925](https://github.com/godotengine/godot/pull/97925)).
 - Rendering: Add draw indirect to Rendering Device ([GH-97247](https://github.com/godotengine/godot/pull/97247)).

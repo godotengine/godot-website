@@ -43,7 +43,7 @@ You can access the underlying `ENetConnection` (enet host) via the `get_host()` 
 
 ```gdscript
 func set_peers_timeout():
-	for id in multipler.get_multiplayer_peers():
+	for id in multiplayer.get_multiplayer_peers():
 		enet.get_peer(id).set_timeout(1000, 3000, 5000)
 ```
 

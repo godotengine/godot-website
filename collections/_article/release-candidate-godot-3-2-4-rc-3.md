@@ -67,7 +67,7 @@ The main new features are highlighted in bold. Refer to the linked pull requests
 - C#: Re-work solution build output panel ([GH-42547](https://github.com/godotengine/godot/pull/42547)).
 - C#: Godot.NET.Sdk/3.2.4 - Fix targeting .NETFramework with .NET 5 ([GH-44135](https://github.com/godotengine/godot/pull/44135)).
 - **C#: Fixes to WebAssembly support** ([GH-44105](https://github.com/godotengine/godot/pull/44105), [GH-44374](https://github.com/godotengine/godot/pull/44374)).
-- **C#: Fix System.Collections.Generic.List marshalling** ([GH-45029](https://github.com/godotengine/godot/pull/45029)).
+- **C#: Fix System.Collections.Generic.List marshaling** ([GH-45029](https://github.com/godotengine/godot/pull/45029)).
 - C#: Fix support for Unicode identifiers ([GH-45310](https://github.com/godotengine/godot/pull/45310)).
 - **Core: Optimize octree and fix leak ([GH-41123](https://github.com/godotengine/godot/pull/41123)).**
 - **Core: Modernization of the multi-threading APIs ([GH-45618](https://github.com/godotengine/godot/pull/45618)).**

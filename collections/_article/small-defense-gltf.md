@@ -31,7 +31,7 @@ Some 3D DCCs support an extra object Pivot (e.g. 3DS MAX). Collada exports this 
 
 In a scene description format, materials can be contained in instances (as in, the instance is the mesh used, the transform in the world, and the material) or inside meshes (mesh comes with a material). OpenGEX and Collada apply materials to instances (the former), while glTF 2.0 does to meshes (the later).
 
-In 3D DCCs, the most common case is that materials are applied to objects. It's a very, very rare use case for artists to re-use the same model and apply different textures to it. As such, the method used by glTF 2.0 is in my opinion more suited to real-life even if less flexible.
+In 3D DCCs, the most common case is that materials are applied to objects. It's a very, very rare use case for artists to reuse the same model and apply different textures to it. As such, the method used by glTF 2.0 is in my opinion more suited to real-life even if less flexible.
 
 ##### Skinning
 
@@ -59,7 +59,7 @@ That said, I think the fact glTF uses very concise format information for each a
 
 Triangles in arrays can be specified in clockwise or counter clockwise order. Depending on this one can tell which is the front and which is the back face. This allows the renderer to not render triangles that are not facing the camera.
 
-That said, the ability to specify this in a pipeline format, in my opinion is a bad decision. OpenGEX clearly commited a mistake here. There is zero benefit to this and it makes parsing the format more complex.
+That said, the ability to specify this in a pipeline format, in my opinion is a bad decision. OpenGEX clearly committed a mistake here. There is zero benefit to this and it makes parsing the format more complex.
 
 Likewise, the ability to add restart indices is nice, but nowadays GPUs have wide vertex caches, which make stripping not very useful. Again I think this was another bad decision from OpenGEX.
 
@@ -95,7 +95,7 @@ In fact, my main criticism to glTF 2.0 is not supporting transforms tracks.
 
 ##### Support for world specification
 
-OpenGEX and Collada (and FBX) support specifying how the world must be intepreted by defining:
+OpenGEX and Collada (and FBX) support specifying how the world must be interpreted by defining:
 
 * Distance, angle, and time units
 * Configurable world-space up direction

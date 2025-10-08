@@ -36,7 +36,7 @@ Now, just click Play and enjoy your soft ball :)
 
 # Cloak
 
-I've used the Platformer Demo to create this demo, [that you can downoload by clicking here](https://github.com/godotengine/godot-demo-projects), or from the Godot Asset Library.
+I've used the Platformer Demo to create this demo, [that you can download by clicking here](https://github.com/godotengine/godot-demo-projects), or from the Godot Asset Library.
 
 First, open the "Player" scene, add a SoftBody node and assign to it a **PlaneMesh**.
 
@@ -58,7 +58,7 @@ Select the SoftBody node in the tree and click the upper vertices:
 ![CloakVertices.png](/storage/app/uploads/public/5b6/45b/b7f/5b645bb7f07e0537981404.png)
 
 
-This action will create 7 pinned points, now go in the SoftBody properties under **Attachments** you find pinned points and for each of them put the NeckBoneAttachment in the SpatialAttachment, as belowe.
+This action will create 7 pinned points, now go in the SoftBody properties under **Attachments** you find pinned points and for each of them put the NeckBoneAttachment in the SpatialAttachment, as below.
 
 
 ![CloakAttachments.png](/storage/app/uploads/public/5b6/45c/47e/5b645c47e7ef6409982017.png)

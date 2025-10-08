@@ -654,7 +654,7 @@ $donate-robot-size: 500px;
 #special-thanks-remi {
 	.c-blockquote {
 		padding-left: var(--card-padding);
-		border-left: 2px solid grey;
+		border-left: 2px solid gray;
 		font-size: var(--card-content-font-size);
 		font-weight: 400;
 		font-style: italic;
@@ -1039,7 +1039,7 @@ $donate-robot-size: 500px;
 			@mixin media-top() {
 				grid-template-areas:
 					"media"
-					"contnt";
+					"content";
 				grid-template-rows:
 					auto
 					minmax(max-content, 1fr);
@@ -1059,7 +1059,7 @@ $donate-robot-size: 500px;
 
 			@mixin media-bottom() {
 				grid-template-areas:
-					"contnt"
+					"content"
 					"media";
 				grid-template-rows:
 					minmax(max-content, 1fr)
@@ -1079,7 +1079,7 @@ $donate-robot-size: 500px;
 			}
 
 			@mixin media-left() {
-				grid-template-areas: "media contnt";
+				grid-template-areas: "media content";
 				grid-template-columns: minmax(auto, 40cqw) minmax(30%, 1fr);
 				grid-template-rows: 1fr;
 
@@ -1089,7 +1089,7 @@ $donate-robot-size: 500px;
 			}
 
 			@mixin media-right() {
-				grid-template-areas: "contnt media";
+				grid-template-areas: "content media";
 				grid-template-columns: minmax(30%, 1fr) minmax(auto, 40cqw);
 				grid-template-rows: 1fr;
 
@@ -1238,12 +1238,12 @@ $donate-robot-size: 500px;
 			.release-card-container {
 				display: grid;
 				gap: var(--card-padding);
-				grid-template-areas: "contnt";
+				grid-template-areas: "content";
 
 				height: 100%;
 
 				.release-card-content {
-					grid-area: contnt;
+					grid-area: content;
 					container-type: inline-size;
 					container-name: release-card-content;
 
@@ -1261,7 +1261,7 @@ $donate-robot-size: 500px;
 
 							grid-template-areas:
 								"quote title"
-								"quote contnt"
+								"quote content"
 								"quote link";
 							grid-template-columns: 2fr 3fr;
 							grid-template-rows:
@@ -1272,7 +1272,7 @@ $donate-robot-size: 500px;
 							&:not(:has(.c-link)) {
 								grid-template-areas:
 									"quote title"
-									"quote contnt";
+									"quote content";
 								grid-template-rows:
 									min-content
 									1fr;
@@ -1282,7 +1282,7 @@ $donate-robot-size: 500px;
 								grid-template-areas:
 									"quote"
 									"title"
-									"contnt"
+									"content"
 									"link";
 								grid-template-columns: 1fr;
 								grid-template-rows:
@@ -1295,7 +1295,7 @@ $donate-robot-size: 500px;
 									grid-template-areas:
 										"quote"
 										"title"
-										"contnt";
+										"content";
 									grid-template-rows:
 										min-content
 										auto
@@ -1307,7 +1307,7 @@ $donate-robot-size: 500px;
 								grid-template-areas:
 									"quote"
 									"title"
-									"contnt"
+									"content"
 									"link";
 								grid-template-columns: 1fr;
 								grid-template-rows:
@@ -1320,7 +1320,7 @@ $donate-robot-size: 500px;
 									grid-template-areas:
 										"quote"
 										"title"
-										"contnt";
+										"content";
 									grid-template-rows:
 										min-content
 										auto
@@ -1333,7 +1333,7 @@ $donate-robot-size: 500px;
 							flex-direction: unset;
 
 							grid-template-areas:
-								"quote contnt"
+								"quote content"
 								"quote link";
 							grid-template-columns: 2fr 3fr;
 							grid-template-rows:
@@ -1341,14 +1341,14 @@ $donate-robot-size: 500px;
 								auto;
 
 							&:not(:has(.c-link)) {
-								grid-template-areas: "quote contnt";
+								grid-template-areas: "quote content";
 								grid-template-rows: 1fr;
 							}
 
 							&.force-one-column {
 								grid-template-areas:
 									"quote"
-									"contnt"
+									"content"
 									"link";
 								grid-template-columns: 1fr;
 								grid-template-rows:
@@ -1359,7 +1359,7 @@ $donate-robot-size: 500px;
 								&:not(:has(.c-link)) {
 									grid-template-areas:
 										"quote"
-										"contnt";
+										"content";
 									grid-template-rows:
 										min-content
 										1fr;
@@ -1369,7 +1369,7 @@ $donate-robot-size: 500px;
 							@container release-card-content (width < #{$container-break}) {
 								grid-template-areas:
 									"quote"
-									"contnt"
+									"content"
 									"link";
 								grid-template-columns: 1fr;
 								grid-template-rows:
@@ -1380,7 +1380,7 @@ $donate-robot-size: 500px;
 								&:not(:has(.c-link)) {
 									grid-template-areas:
 										"quote"
-										"contnt";
+										"content";
 									grid-template-rows:
 										min-content
 										1fr;
@@ -1415,7 +1415,7 @@ $donate-robot-size: 500px;
 
 							grid-template-areas:
 								"title"
-								"contnt"
+								"content"
 								"link";
 							grid-template-rows:
 								min-content
@@ -1425,7 +1425,7 @@ $donate-robot-size: 500px;
 							&:not(:has(.c-link)) {
 								grid-template-areas:
 									"title"
-									"contnt";
+									"content";
 								grid-template-rows:
 									min-content
 									1fr;
@@ -1452,14 +1452,14 @@ $donate-robot-size: 500px;
 							flex-direction: unset;
 
 							grid-template-areas:
-								"contnt"
+								"content"
 								"link";
 							grid-template-rows:
 								auto
 								auto;
 
 							&:not(:has(.c-link)) {
-								grid-template-areas: "contnt";
+								grid-template-areas: "content";
 								grid-template-rows: auto;
 							}
 						}
@@ -1521,7 +1521,7 @@ $donate-robot-size: 500px;
 						}
 
 						.c-content {
-							grid-area: contnt;
+							grid-area: content;
 							font-size: var(--card-content-font-size);
 
 							@include text-punch($weight: micro);

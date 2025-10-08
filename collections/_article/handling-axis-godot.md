@@ -1,6 +1,6 @@
 ---
 title: "Introducing the new axis handling system"
-excerpt: "For the past months, popular demand has been growing for a way to propery map controller axes in Godot. For a long time Godot was only able to map a single event to an action, making it impossible to deal with analog strengths. Today (after months of discussions), this problem has been solved, and it only took very little amount of changes to the current input mapping system!"
+excerpt: "For the past months, popular demand has been growing for a way to properly map controller axes in Godot. For a long time Godot was only able to map a single event to an action, making it impossible to deal with analog strengths. Today (after months of discussions), this problem has been solved, and it only took very little amount of changes to the current input mapping system!"
 categories: ["progress-report"]
 author: Gilles Roudiere
 image: /storage/app/uploads/public/5ad/bb4/fc8/5adbb4fc8b26e174840743.png
@@ -40,7 +40,7 @@ For basic buttons or keys, strength will always return either 0 or 1. For Joypad
 
 This leads to a simpler API, as almost no changes to the project settings input mapping were required.
 
-To retreive an action strength, just use the following new API:
+To retrieve an action strength, just use the following new API:
 
 ```
 Input.get_action_strength("left")
@@ -81,7 +81,7 @@ The reasoning behind the decision to use the new *strength* based system is summ
 
 * Even though *axis* and *action* feel like different concepts, they are almost the same. Very often, a key may be used as an axis, or an axis may be used like a button. This makes both systems overlap.
 
-* Writing a controller remapping system (games of usually need this feature after they reach a certain level of complexity), is considerably simpler using the *strength* system. This is because only *actions* are requiered for mapping. A code to read an action and save it is as simple as:
+* Writing a controller remapping system (games of usually need this feature after they reach a certain level of complexity), is considerably simpler using the *strength* system. This is because only *actions* are required for mapping. A code to read an action and save it is as simple as:
 
 ```
 func _input(event):

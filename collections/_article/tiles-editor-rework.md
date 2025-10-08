@@ -21,7 +21,7 @@ All the work presented here is based on [the proposal](https://github.com/godote
 
 ## Merging the TileSet and TileMap editors together
 
-The TileSet and TileMap editor have now been merged into the bottom panel. When a TileMap node is selected, you can now switch between the TileMap view, to pick tiles and draw them on the TileMap, and the TileSet editor, to edit the tile properties (colisions, Z-index, etc...):
+The TileSet and TileMap editor have now been merged into the bottom panel. When a TileMap node is selected, you can now switch between the TileMap view, to pick tiles and draw them on the TileMap, and the TileSet editor, to edit the tile properties (collisions, Z-index, etc...):
 
 ![](/storage/app/media/tilemap_and_tileset/merging_together_tiles_editors.gif)
 

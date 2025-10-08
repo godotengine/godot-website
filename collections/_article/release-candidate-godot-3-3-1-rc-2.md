@@ -31,7 +31,7 @@ See the [full changelog since 3.3-stable](https://github.com/godotengine/godot/c
 - Lightmapper: Add support for ARM64 architecture for the raycaster (Apple M1, Linux aarch64) ([GH-48455](https://github.com/godotengine/godot/pull/48455)).
       * Note that the denoiser is still not available on this architecture.
 - Lightmapper: Fixes to environment energy ([GH-48089](https://github.com/godotengine/godot/pull/48089)).
-- Linux: Fix 32-bit builds' compatibility with older libstdc++. The builds should be compatibile with Ubuntu 16.04 LTS and any other distribution published since 2016.
+- Linux: Fix 32-bit builds' compatibility with older libstdc++. The builds should be compatible with Ubuntu 16.04 LTS and any other distribution published since 2016.
 - Linux: Handle having no sinks in the PulseAudio driver ([GH-48706](https://github.com/godotengine/godot/pull/48706)).
 - LSP: Update the filesystem for changed scripts, fixes issues with new named classes ([GH-47891](https://github.com/godotengine/godot/pull/47891)).
 - macOS: Update `Info.plist` to clarify that the minimum required version is now macOS 10.12 (due to use of C++14 features).

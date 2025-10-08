@@ -17,7 +17,7 @@ Soon we will be migrating this work to the 4.0 branch, but for now at least some
 
 Up until now, the GLES2 2D renderer has been drawing primitives (such as rectangles) on an individual basis. Each rectangle, polygon, line, etc., has been causing a drawcall to OpenGL. While GPUs can cope with this method, they don't work at peak efficiency because they are optimized to handle larger numbers of primitives in each drawcall.
 
-In order to better take advantage of GPU horsepower, we organise these primitives into batches at the beginning of each frame. Each batch is made as large as possible so that we can reduce the number of drawcalls and the number of state changes between drawcalls, which are also expensive in performance terms.
+In order to better take advantage of GPU horsepower, we organize these primitives into batches at the beginning of each frame. Each batch is made as large as possible so that we can reduce the number of drawcalls and the number of state changes between drawcalls, which are also expensive in performance terms.
 
 After trying various approaches we have settled with a multi-pass approach:
 1. The first pass identifies similar items and groups them into batches.

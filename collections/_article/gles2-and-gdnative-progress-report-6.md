@@ -15,7 +15,7 @@ The GLES2 backend is getting closer and closer to completion, this progress repo
 
 #### Done May 2018
 
-- enviroment relections
+- environment relections
 - cubemap filtering
 - implement BRDF
 - omni lights
@@ -52,7 +52,7 @@ That's not really that interesting to look at, so let's try to use SOME MATH!!! 
 
 Heyyy, this pretty much looks like the sky projected onto the meshes, that's better!
 
-At that point of development, the sky reflection didn't respond to the camera position, so it basically looked like the sky was painted ontop of the mesh. That was fixed by [*reflecting*](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/reflect.xhtml) the view-vector with the normal of the current pixel.
+At that point of development, the sky reflection didn't respond to the camera position, so it basically looked like the sky was painted on top of the mesh. That was fixed by [*reflecting*](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/reflect.xhtml) the view-vector with the normal of the current pixel.
 
 The next step is to do proper cubemap filtering.
 
@@ -119,7 +119,7 @@ The results of that were quite nice (as expected).
 
 (Also having a proper skymap makes a really huge difference on quality, so just as a side tip: search for good environment maps, they shape the perception of graphics quality a lot!)
 
-With all that in place, all meterials where behaving as if they had metallic = 1 but a variable roughness.
+With all that in place, all materials where behaving as if they had metallic = 1 but a variable roughness.
 
 The cubemap filtering shader can be found [here](https://github.com/karroffel/godot/blob/9320ea98b7f575dd80a171e5c0e6d76d4b6f7120/drivers/gles2/shaders/cubemap_filter.glsl).
 
@@ -145,7 +145,7 @@ So metallic and dielectric materials work now!
 
 With basic materials working and environment mapping in place, the next task on the list is lighting.
 
-The GLES2 backend is a forward renderer, that means each gets shaded once. The counter-part - deferred rendering - renders each of the objects properties into a separate framebuffer. Lights then combine those properties dependeing on their parameters.
+The GLES2 backend is a forward renderer, that means each gets shaded once. The counter-part - deferred rendering - renders each of the objects properties into a separate framebuffer. Lights then combine those properties depending on their parameters.
 
 Because the GLES2 specification is quite limiting in some parts, the lighting uses a "multi-pass" approach. This means that all the objects that are affected by a light have to be rendered again and the "light difference" will be blended over the "base rendering" of the object.
 
@@ -186,17 +186,17 @@ Until then I didn't implement normal maps properly as they require some special 
 
 ### rewrite OAHashMap to use RobinHood hashing
 
-I was working on a small hashmap implementation in my freetime and read more about RobinHood hashing, which is a pretty nifty addition to regular open adressing hash maps.
+I was working on a small hashmap implementation in my freetime and read more about RobinHood hashing, which is a pretty nifty addition to regular open addressing hash maps.
 
 A while ago, I implemented a new hashmap type for Godot that should be more cache friendly for situations where high performance is critical (for example CSG).
 
 The main HashMap implementation in Godot uses chaining and many dynamic memory allocations. If a hash collision occurs then the elements will be chained in a linked-list kind of manner. This is pretty bad for cache misses but in most cases it's not a problem that you need to deal with.
 
-Open adressing uses flat arrays and use the hash as an index into the array. If a collision occurs then the next free spot will be used. This makes lookups more memory local.
+Open addressing uses flat arrays and use the hash as an index into the array. If a collision occurs then the next free spot will be used. This makes lookups more memory local.
 
 One downside to that is that if the hashmap becomes more and more filled, the average time to find the entry you are looking for grows bigger and bigger.
 
-RobinHood hashing enhances that system by "stealing from the rich and giving to the poor". Basically it shifts elements around to average out the distance of the place where an entry should be and where it actually is. This means that lookups can be aborted a lot faster and in general the lookup times are much faster. Also they can be used with way higher fill factors than regular open adressing.
+RobinHood hashing enhances that system by "stealing from the rich and giving to the poor". Basically it shifts elements around to average out the distance of the place where an entry should be and where it actually is. This means that lookups can be aborted a lot faster and in general the lookup times are much faster. Also they can be used with way higher fill factors than regular open addressing.
 
 This is all pretty technical, but if you are interested, the code can be found [here](https://github.com/godotengine/godot/blob/af15a1f10e9928d545065952b123b3eaa6f4b036/core/oa_hash_map.h).
 

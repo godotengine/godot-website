@@ -25,7 +25,7 @@ This is the second year I go to GDC exclusively as Godot representative (before 
 
 Unlike last year, we decided to focus on meetings more relevant to the project goals and reduced the meetings with companies using or interested in Godot to a minimum. Most of our meetings were with hardware manufacturers, service providers, potential sponsors and education institutions. We also got the chance to meet with key industry people like [Nicolas Cannasse](https://twitter.com/ncannasse), [Terry Cavanagh](http://twitter.com/terrycavanagh), [Ryan Gordon](http://twitter.com/icculus), [Lars Doucet](https://twitter.com/larsiusprime), [Alon Zakai](https://twitter.com/kripken), and many others.
 
-So far, we can feel there is a growing excitement about Godot in the industry as more and more developers and companies learn about it and try it, with many games in development and about to be published on desktop, mobile and consoles. Godot is growing at a lightening rate, more than duplicating it's user base every year.
+So far, we can feel there is a growing excitement about Godot in the industry as more and more developers and companies learn about it and try it, with many games in development and about to be published on desktop, mobile and consoles. Godot is growing at a lightning rate, more than duplicating it's user base every year.
 
 Many companies we met also expressed high interest in dumping their current engine and going for Godot, due to the freedom that open source conveys and the high quality and usability of the engine (their words, not mine :P).
 

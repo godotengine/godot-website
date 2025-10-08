@@ -64,7 +64,7 @@ Note that this first pass is not taking occlusion into account yet. That will be
 
 I'm currently working on integrating [Embree](https://www.embree.org) as a ray tracing library into the Godot editor. Once I get it fully working I will use it to add occlusion tests to the direct light pass as well as doing all the required computations for indirect lighting.
 
-The first results will probably look noisy and with graphical artifcats, so I will spend some time implementing all the tips and tricks detailed in this [wonderful article](https://ndotl.wordpress.com/2018/08/29/baking-artifact-free-lightmaps/). If I still have some time left I will take a look at adding some sort of AI denoiser, but I can't promise anything :)
+The first results will probably look noisy and with graphical artifacts, so I will spend some time implementing all the tips and tricks detailed in this [wonderful article](https://ndotl.wordpress.com/2018/08/29/baking-artifact-free-lightmaps/). If I still have some time left I will take a look at adding some sort of AI denoiser, but I can't promise anything :)
 
 -----
 
@@ -140,7 +140,7 @@ This project has three parts:
 
 * Cost function
 * Future trajectory prediction model
-* KDTrees for KNN search (optimisation)
+* KDTrees for KNN search (optimization)
 
 We started off by collecting datasets for testing while reduz worked on the UI of the editor. Along with data collection, I tried out implementing KDTree and KNN search. The UI was ready by mid June and then I started adding and testing the KDTree and KNN search algorithms with it.
 
@@ -189,7 +189,7 @@ After that, I started implementing *Pose and Trajectory Matching* (i.e. calculat
 
 Godot Engine is pretty easy to use for most things and is becoming a better competitor to Unreal Engine and Unity by the day. But one area where it's lagging behind is in the way it handles file and network IO on various platforms, especially on systems like consoles.
 
-Nowadays, all IO operations are cached to speed up access to data from hard drives or the network. The cache sits in RAM and holds on to information that is frequently accessed so we don't need to wait a long time for the data. For desktop and mobile systems (like android and iOS), this may be less of a problem because the OS can provide caching for disk and network IO. But consoles and other more specialised systems may not have an OS that does this for us, which means we may need to do the caching ourselves.
+Nowadays, all IO operations are cached to speed up access to data from hard drives or the network. The cache sits in RAM and holds on to information that is frequently accessed so we don't need to wait a long time for the data. For desktop and mobile systems (like android and iOS), this may be less of a problem because the OS can provide caching for disk and network IO. But consoles and other more specialized systems may not have an OS that does this for us, which means we may need to do the caching ourselves.
 
 The current mechanism that Godot Engine provides for such cases is pretty bad – it only reads ahead, it doesn't allow for seeking backwards and it's only for files on disk. My project aims to provide a more flexible solution that manages caching centrally, and allows for using different caching strategies as the situation demands through a C++ module which can be dropped in at compile time.
 
@@ -217,7 +217,7 @@ LRU is a great caching algorithm that handles cases where we may read old data a
 
 Sometimes we may want to use a file for a really long time, to the point where it's probably going to be open the entire time the game is running. Maybe it's for logging, or for autosaving progress. I've included a caching policy for this use case as well. Parts of files that are accessed with this policy are cached in the same manner as with LRU, except that permanent cached parts cannot be replaced by parts of other files.
 
-For example, if we have a choice betweeen a permanent part and an LRU part which may be replaced, we must choose to replace the LRU part instead of the permanent one.
+For example, if we have a choice between a permanent part and an LRU part which may be replaced, we must choose to replace the LRU part instead of the permanent one.
 
 #### Summary
 

@@ -93,7 +93,7 @@ So now the shadow atlas can actually be visualized!
 
 ![L9L6ETQ.png](/storage/app/uploads/public/5b5/593/db7/5b5593db79d7a030918073.png)
 
-I zoomed out and in when taking this picture, so I could see that the allocation works correctly. But for now everything is white? Shouldn't there be the sphere in greyscale? The problem here is that the depth buffer wasn't *linearized*, so in order to see if the rendering was actually working I needed to bring the light **veeeeeery** close.
+I zoomed out and in when taking this picture, so I could see that the allocation works correctly. But for now everything is white? Shouldn't there be the sphere in grayscale? The problem here is that the depth buffer wasn't *linearized*, so in order to see if the rendering was actually working I needed to bring the light **veeeeeery** close.
 
 ![R6JSjSn.png](/storage/app/uploads/public/5b5/594/f7c/5b5594f7cfd5f912083002.png)
 

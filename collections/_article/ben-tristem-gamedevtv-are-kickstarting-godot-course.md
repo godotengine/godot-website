@@ -20,7 +20,7 @@ Their formula was tested and proven on other game engines, and we can't wait to 
 
 **Link:** [Discovering Godot – Learn to Code by Making Games](https://www.kickstarter.com/projects/bentristem/discovering-godot-learn-to-code-by-making-games?ref=7dkj1f) by Ben Tristem and Yann Burrett.
 
-Make sure to check it out and to support the campaign if you can, as this course should be a great learning resource as well as a visibility boost for your favourite no-marketing-budget game engine :)
+Make sure to check it out and to support the campaign if you can, as this course should be a great learning resource as well as a visibility boost for your favorite no-marketing-budget game engine :)
 You'll see all the details about the course's purpose and contents [on the Kickstarter page](https://www.kickstarter.com/projects/bentristem/discovering-godot-learn-to-code-by-making-games?ref=7dkj1f).
 
 <a href="https://www.kicktraq.com/projects/bentristem/discovering-godot-learn-to-code-by-making-games/" target="_blank"><img src="https://www.kicktraq.com/projects/bentristem/discovering-godot-learn-to-code-by-making-games/minichart.png" alt="Discovering Godot - Learn To Code By Making Games -- Kicktraq Mini" title="Discovering Godot - Learn To Code By Making Games -- Kicktraq Mini"></a>

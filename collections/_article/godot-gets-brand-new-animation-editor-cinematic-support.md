@@ -34,7 +34,7 @@ First of all, there is a new layout (keep in mind the visuals are not final, and
 
 The old layout wasted a lot of horizontal space in buttons that were seldom used. Buttons in large groups are, in general, not a very helpful usability convention so the whole layout was confusing. Some useful menus (such as add track) were hidden in the clutter, and the animation name had only a bit of space to show itself.
 
-Some buttons were unnecesary, such as move up/down, which remained from the ages when Godot did not support drag and drop.
+Some buttons were unnecessary, such as move up/down, which remained from the ages when Godot did not support drag and drop.
 
 
 ![old_layout_anim.png](/storage/app/uploads/public/5b1/95f/bd8/5b195fbd8c76f962805482.png)

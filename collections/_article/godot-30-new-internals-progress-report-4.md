@@ -20,9 +20,9 @@ We also took the chance to rewrite key parts of Godot, which were considerably o
 
 While the 3.0 work was carried in the *gles3* branch, Rémi Verschelde and other main devs kept working on the *master* branch, cleaning up the repo and reorganizing third party libraries into a more maintainable form.
 
-At the begining of January, the *gles3* branch was merged to *master*, which resulted in a pretty unusable repository.
+At the beginning of January, the *gles3* branch was merged to *master*, which resulted in a pretty unusable repository.
 
-This signalled the start of the process where all features that could not be implemented in previous versions, due to requiring breaking compatibility, could finally be implemented.
+This signaled the start of the process where all features that could not be implemented in previous versions, due to requiring breaking compatibility, could finally be implemented.
 
 
 ## Internal changes
@@ -80,7 +80,7 @@ Dictionaries now remember the insertion order. When the list of keys is requeste
 
 #### Automatically enabled callbacks
 
-Common Godot callbacks such as `_process`, `_input`, etc. required a funtion to enable them.
+Common Godot callbacks such as `_process`, `_input`, etc. required a function to enable them.
 
 From Godot 3.0, if a callback is detected in the code, it is enabled automatically. Disabling it manually is still possible.
 
@@ -194,7 +194,7 @@ The new audio engine has buses. Nodes that play back audio can choose which buse
 
 ##### Built-in effects
 
-Godot 3.0 also comes with a large library of built-in effects which can be assigned to each bus. As there is not much open source audio code with a MIT compatible license we could re-use, these were written specially for Godot (and sounds great!).
+Godot 3.0 also comes with a large library of built-in effects which can be assigned to each bus. As there is not much open source audio code with a MIT compatible license we could reuse, these were written specially for Godot (and sounds great!).
 
 ![](/storage/app/media/devlog/progress4/progress4-12.jpg)
 

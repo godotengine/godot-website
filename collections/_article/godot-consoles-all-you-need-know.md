@@ -74,7 +74,7 @@ Links to companies that do console porting for Godot titles:
 * [GOTM](https://gotm.io/about/gpp)
 * [Flynn's Arcade](https://www.flynnsarcades.com/)
 
-Most smaller studios working on games with Unity and Unreal also rely on third party companies to ensure that their ports are done properly and pass all the console comformance requirements.
+Most smaller studios working on games with Unity and Unreal also rely on third party companies to ensure that their ports are done properly and pass all the console conformance requirements.
 
 The last alternative is to do the console ports yourself. This is what Sega did for Sonic Colors Ultimate, but only large studios with a strong technical background are assumed to be able to do it.
 

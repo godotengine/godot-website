@@ -50,7 +50,7 @@ So then, again, why visual scripting? Our goals with it are the following:
 
 * Provide a way for non-programmers to experience what developing in Godot feels like, by ensuring they have a way to manipulate their game's logic.
 * Allow programmers to set up their scenes, AI, etc. in a way they can expose the coarse parameters and logic to level designers or game designers. This way, they can do tweaks without bothering programmers.
-* Allow programmers to expose how data is organized in a visual way. Godot's VisualScript has so much flexibility in how the graph flows that it allows creating dialogue trees, coarse game flow, event handling, etc. with small effort.
+* Allow programmers to expose how data is organized in a visual way. Godot's VisualScript has so much flexibility in how the graph flows that it allows creating dialog trees, coarse game flow, event handling, etc. with small effort.
 
 Please understand it as just an extra tool, not as a replacement to programming. It will be possible to use both GDScript and VisualScript as complementary tool in a same project.
 
@@ -63,6 +63,6 @@ Officially, our supported languages for now will be GDScript, Mono, VisualScript
 1. **Re-create Godot's basic types in your new language**: These are types such as `Vector3`, `int`, `float`, `String`, etc. Many of these are usually provided already.
 2. **Create a module**: A C++ module that creates binding code needs to be done ([creating modules in C++ is well documented](https://docs.godotengine.org/en/latest/engine_details/architecture/custom_modules_in_cpp.html)). The entire exposed Godot API can be accessed via the static functions in `ObjectTypeDB`.
 3. **Generate binding code** in your new language that accesses the exposed functions in the `MethodBind` class (there is one for each exposed method).
-4. **Create a `ScriptLanguage`** class and supply the neccesary methods exposed for debugging, profiling, etc. You can supply symbols, code completion helpers, etc. if this language is meant to be edited inside Godot.
+4. **Create a `ScriptLanguage`** class and supply the necessary methods exposed for debugging, profiling, etc. You can supply symbols, code completion helpers, etc. if this language is meant to be edited inside Godot.
 
 Again, as this process is not fully streamlined yet, we encourage you to get in touch with us if you want to do this effort.

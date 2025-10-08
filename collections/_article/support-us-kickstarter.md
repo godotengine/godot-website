@@ -13,6 +13,6 @@ As you know, Okam Studio, the company that develops Godot Engine, also makes gam
 
 You can find it here: http://kck.st/1CVtDF3
 
-In addition to getting a cool game, you’d be helping us continue developing the engine, and if we reach the first stretch goal, we plan on releasing the templates plus documentation on how to make your own point & click graphic adventure (sidenote: Tim Schafer visited our studio last year, when we showed him the script tool we used to write the dialogues/cutscenes he said “It looks just like SCUMM!”, we were speechless :P).
+In addition to getting a cool game, you’d be helping us continue developing the engine, and if we reach the first stretch goal, we plan on releasing the templates plus documentation on how to make your own point & click graphic adventure (sidenote: Tim Schafer visited our studio last year, when we showed him the script tool we used to write the dialogs/cutscenes he said “It looks just like SCUMM!”, we were speechless :P).
 
 We appreciate any support, thanks!

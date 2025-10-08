@@ -311,7 +311,7 @@ Note that currently StateMachine does not have user-controllable indexes for con
 
 ![break loop property](/storage/blog/migrating-animations-from-godot-4-0-to-4-3/prop_break_loop.webp)
 
-In the 4.1 StateMachine rework, we made the AnimationNode have an infinite-length remain time in a loop and for StateMachines with unpredictable endings as a hack. We did this becauses the old AnimationNode only returned the remaining time after the processing but there was no information there about whether it was looping or not. This change was necessary to prevent unintended animation interruptions for consistency, but it removed the existing behavior of breaking the loop at `AtEnd` and doing a Transition.
+In the 4.1 StateMachine rework, we made the AnimationNode have an infinite-length remain time in a loop and for StateMachines with unpredictable endings as a hack. We did this because the old AnimationNode only returned the remaining time after the processing but there was no information there about whether it was looping or not. This change was necessary to prevent unintended animation interruptions for consistency, but it removed the existing behavior of breaking the loop at `AtEnd` and doing a Transition.
 
 In 4.3, the AnimationNode time progression has been reworked significantly to propagate semantic time information. Now a BreakLoopAtEnd option has been added for use cases where the loop is broken by `AtEnd`.
 

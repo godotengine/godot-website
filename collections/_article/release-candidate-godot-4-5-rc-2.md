@@ -31,7 +31,7 @@ For an overview of what's new overall in Godot 4.5, have a look at the highlight
 - C#: Fix the issue preventing installing C# binaries on Android devices with api <= 29 ([GH-110260](https://github.com/godotengine/godot/pull/110260)).
 - C#: Require `net9.0` for Android exports ([GH-110263](https://github.com/godotengine/godot/pull/110263)).
 - Core: Fix Resource duplicate calls `ImageTexture::set_image` with an invalid image ([GH-110215](https://github.com/godotengine/godot/pull/110215)).
-- Editor: Fix "SpriteFrames" editor not fully hidding the bottom panel ([GH-110280](https://github.com/godotengine/godot/pull/110280)).
+- Editor: Fix "SpriteFrames" editor not fully hiding the bottom panel ([GH-110280](https://github.com/godotengine/godot/pull/110280)).
 - GDExtension: Fix `WindowUtils::copy_and_rename_pdb` regression ([GH-110033](https://github.com/godotengine/godot/pull/110033)).
 - Rendering: Metal: Ensure baked Metal binaries can be loaded on the minimum target OS ([GH-110264](https://github.com/godotengine/godot/pull/110264)).
 

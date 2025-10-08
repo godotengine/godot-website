@@ -40,6 +40,6 @@ To enable plugins, go to the Project Settings window. There will be a new sectio
 
 This feature is a work in progress. We need your help to make it better! We know there is still a large surface of the editor API not directly accessible, so if you have plugin ideas that can't be done with the current API let us know and we'll try to improve it. Please submit a GitHub issue requesting such functions.
 
-Our goal is that, once this API is stable, this wil be a fundamental part of the new asset sharing system present in Godot 2.1.
+Our goal is that, once this API is stable, this will be a fundamental part of the new asset sharing system present in Godot 2.1.
 
 Happy hacking!

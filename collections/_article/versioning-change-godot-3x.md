@@ -1,6 +1,6 @@
 ---
 title: "Versioning change for Godot 3.x"
-excerpt: "We decide to rename the upcoming 3.2.4 release to Godot 3.3 to better advertize that it's a big milestone with tons of new features! It's still fully compatible with previous Godot 3.2.x releases as one would have expected of 3.2.4, so it will be a recommended update for all Godot users. Moreover, we'll start working on Godot 3.4 in parallel to providing bugfix releases for 3.3.x at a faster pace."
+excerpt: "We decide to rename the upcoming 3.2.4 release to Godot 3.3 to better advertise that it's a big milestone with tons of new features! It's still fully compatible with previous Godot 3.2.x releases as one would have expected of 3.2.4, so it will be a recommended update for all Godot users. Moreover, we'll start working on Godot 3.4 in parallel to providing bugfix releases for 3.3.x at a faster pace."
 categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/605/21b/37b/60521b37b2e39457329843.png

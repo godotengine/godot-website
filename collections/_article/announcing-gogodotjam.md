@@ -23,7 +23,7 @@ Upon closer inspection, I have found out that Godot is the perfect place for me 
 
 Godot is a great game engine that unlocks possibilities for game developers. It is a free, open-source 2D and 3D engine that provides many features so that you can focus on your game.
 
-Yet most people start developing games with proprietary engines such as Unity or Unreal. They are solid engines with a proven track record and a vibrant ecosystem. One advantage having experience with more than one engine can enable people to create better games. In the end, it's up to each individual to pick the one that they’ll be most comfortable with to fulfil their creative vision.
+Yet most people start developing games with proprietary engines such as Unity or Unreal. They are solid engines with a proven track record and a vibrant ecosystem. One advantage having experience with more than one engine can enable people to create better games. In the end, it's up to each individual to pick the one that they’ll be most comfortable with to fulfill their creative vision.
 
 I know that Godot has a lot to offer to new developers, with a distinctive approach to game development which enables more people to express their creativity. It's open, focused on user-friendliness, easy to learn, yet feature-packed and a great fit for many types of games. As such, I want to increase awareness of the engine so that more users decide to try it out and add it to their toolset.
 
@@ -31,7 +31,7 @@ I know that Godot has a lot to offer to new developers, with a distinctive appro
 
 We, the community, are the fuel that can supercharge Godot. We can spread awareness, clarify misunderstandings, and in the end, show it to the world. At the same time, we can also carve a path for new people to get started on their gamedev journeys.
 
-One way to achieve this is to organise a Godot event that will ripple in the gamedev community, offering a lot of content for both existing Godot developer and new people that want to approach the engine but just don't know how to.
+One way to achieve this is to organize a Godot event that will ripple in the gamedev community, offering a lot of content for both existing Godot developer and new people that want to approach the engine but just don't know how to.
 
 ### What is Go Godot Jam?
 
@@ -80,7 +80,7 @@ Yes. Go Godot Jam is open for anyone who wants to make games. You don't have to 
 
 ### Who are the people behind the festival?
 
-Several active members of the community have partnered up to bring Go Godot Jam to life. The organisers are:
+Several active members of the community have partnered up to bring Go Godot Jam to life. The organizers are:
 
 -   [bitbrain](https://bit.ly/3eabbDD)
 -   [PlayWithFurcifer](https://bit.ly/3ud1A4t)
@@ -103,6 +103,6 @@ Thank you too!
 
 Go Godot Jam will be so much fun!
 
-I am really glad to take part of what has been a growing community of content creators and events organisers aroung Godot and I can't wait to see more of it!
+I am really glad to take part of what has been a growing community of content creators and events organizers around Godot and I can't wait to see more of it!
 
 Join now at [gogodotjam.com](https://gogodotjam.com/learn/)

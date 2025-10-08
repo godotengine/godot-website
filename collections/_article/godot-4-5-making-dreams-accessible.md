@@ -1,6 +1,6 @@
 ---
 title: Godot 4.5, making dreams accessible
-excerpt: From mind-blowing effects now made possible by the stencil buffer to accessibilty descriptions of your GUI elements that opens up the possibility for some with disabilities to play your game — we are proud to present to you Godot 4.5.
+excerpt: From mind-blowing effects now made possible by the stencil buffer to accessibility descriptions of your GUI elements that opens up the possibility for some with disabilities to play your game — we are proud to present to you Godot 4.5.
 categories: ["release"]
 author: "Godot contributors"
 image: /storage/blog/covers/godot-4-5-making-dreams-accessible.webp?cache=v2

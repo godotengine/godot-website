@@ -33,7 +33,7 @@ Here are some of the highlights of this release. See the [full changelog](https:
  * Subresources are now always saved when saving a scene.
  * WebAssembly: Supply proper CORS headers.
  * Mono: Annotated signal loading in exported projects.
- * Mono: Serveral fixes.
+ * Mono: Several fixes.
 
 ## Known incompatibilities with Godot 3.0.4
 

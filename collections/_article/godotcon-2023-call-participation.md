@@ -71,7 +71,7 @@ If you are interested in one of the above roles, please send us an email at [god
 
 To enable an event for about 300 participants and to keep ticket prices low, we have to gather some external funds, mainly for the venue, security, catering, documentation, swag, speaker support, etc. Therefore we are still looking for new sponsors to help us make it happen.
 
-As a sponsor you have a distinctive chance to support this conference, which offers a remarkable developer relations and marketing opportunity. This opportunity comes with the added advantage of relatively low investment. If you wish to sponsor this event, please send us an email at [contact@godotengine.org](mailto:contact@godotengine.org?subject=Sponsorship Inquiry) and provide some detail on how or what you would like to sponsor. For more informations, please have a look at our [Sponsorship Page](https://galvanized-slope-59b.notion.site/Public-GodotCon-Sponsorship-Page-acd1185de6594982943682caf4840d67).
+As a sponsor you have a distinctive chance to support this conference, which offers a remarkable developer relations and marketing opportunity. This opportunity comes with the added advantage of relatively low investment. If you wish to sponsor this event, please send us an email at [contact@godotengine.org](mailto:contact@godotengine.org?subject=Sponsorship Inquiry) and provide some detail on how or what you would like to sponsor. For more information, please have a look at our [Sponsorship Page](https://galvanized-slope-59b.notion.site/Public-GodotCon-Sponsorship-Page-acd1185de6594982943682caf4840d67).
 
 We would like to address a big thank you to our current sponsors without whom this event would not be possible:
 

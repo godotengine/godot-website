@@ -86,7 +86,7 @@ Some of the most notables feature changes in this update are:
 - Rendering: Fix scaling issue in `draw_line` and similar methods ([GH-69851](https://github.com/godotengine/godot/pull/69851)).
 - Rendering: Fix GPUParticles2D not recomputing transforms each frame ([GH-71520](https://github.com/godotengine/godot/pull/71520)).
 - Rendering: Properly initialize `directional_light_count` in RD sky shaders ([GH-71526](https://github.com/godotengine/godot/pull/71526)).
-- Rendering: Update ImmediateMesh to use octohedral encoded normals ([GH-71529](https://github.com/godotengine/godot/pull/71529)).
+- Rendering: Update ImmediateMesh to use octahedral encoded normals ([GH-71529](https://github.com/godotengine/godot/pull/71529)).
 - As well as many [improvements to the documentation](/article/godot-4-0-docs-sprint/) and several new test suites for the engine.
 
 This release is built from commit [caacade56](https://github.com/godotengine/godot/commit/caacade569eb7a541aaa7a8cdc3eedffca1422d9).

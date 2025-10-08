@@ -9,7 +9,7 @@ date: 2016-06-03 00:00:00
 
 After the success of [our previous game jam](https://itch.io/jam/godotjam032016/results), which had been spontaneously organized by community members, we decided to [start a new game jam](https://itch.io/jam/godotjam062016) for this month of June 2016.
 
-As the previous one, it is an informal jam with relatively loose rules, and not much to gain apart from international fame within the Godot community and more experience with using our great engine! This is why this jam will run over three weeks, giving everyone plenty of time to expriment with the engine to create something new, beginners and experienced users alike.
+As the previous one, it is an informal jam with relatively loose rules, and not much to gain apart from international fame within the Godot community and more experience with using our great engine! This is why this jam will run over three weeks, giving everyone plenty of time to experiment with the engine to create something new, beginners and experienced users alike.
 
 Check the game jam's page on itch.io: https://itch.io/jam/godotjam062016
 

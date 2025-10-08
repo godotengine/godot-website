@@ -24,7 +24,7 @@ Daniel Castellanos is the owner of Decacis Studio, and was contracted by Collabo
 
 <iframe width="512" height="512" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/JqeOwLQ4wGs" title="The Somar Project" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Can you tell us a little more about the non-profit organisation behind the SOMAR project, who they are and what their mission is?
+### Can you tell us a little more about the non-profit organization behind the SOMAR project, who they are and what their mission is?
 
 <strong class="fred">Fred:</strong> SOMAR is a non-profit organization that focuses on protecting dolphins, whales, and marine life in the Algarve. Their mission is to raise awareness about the impact of human activities—like underwater noise pollution—on marine ecosystems. By combining scientific research, education, and innovative technology, SOMAR promotes sustainable practices and works to preserve the region’s ocean biodiversity for future generations.
 
@@ -100,9 +100,9 @@ You can find the code for that driver on the [freedesktop.org GitLab](https://gi
 
 <strong class="daniel">Daniel:</strong> Just try it. Read the official documentation, place a couple of cubes as hands and experience how easy it is to get started! And if you get stuck, there is always someone from the community willing to help. Godot scales really well, and it works for both simple and complex projects, and best of all, being open-source means you can extend it to fit your needs.
 
-### Some extra information about the organisations involved
+### Some extra information about the organizations involved
 
-[Collabora](https://www.collabora.com/) is a global consultancy specializing in delivering the benefits of open-source software to the commercial world. Whether it's the Linux kernel, graphics, multimedia, machine learning or XR, Collabora’s expertise spans across all key areas of open-source software development. By harnessing the potential of community-driven open-source projects, and re-using existing components, Collabora helps its clients reduce time to market and focus on creating product differentiation. To learn more, please visit [collabora.com](https://www.collabora.com/).
+[Collabora](https://www.collabora.com/) is a global consultancy specializing in delivering the benefits of open-source software to the commercial world. Whether it's the Linux kernel, graphics, multimedia, machine learning or XR, Collabora’s expertise spans across all key areas of open-source software development. By harnessing the potential of community-driven open-source projects, and reusing existing components, Collabora helps its clients reduce time to market and focus on creating product differentiation. To learn more, please visit [collabora.com](https://www.collabora.com/).
 
 [Decasis studio](https://decacis.com/) is an independent development studio run by Daniel Castellanos.
 

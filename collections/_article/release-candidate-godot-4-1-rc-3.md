@@ -19,7 +19,7 @@ This release contains a [number of improvements](/article/dev-snapshot-godot-4-1
 
 -----
 
-*The illustration picture for this article is from* **Bravest Coconut**, *a classic action adventure game following Coco the cat, with brain teasing puzzles to solve. The game is developed by Nathan Hoad ([Twitter](https://twitter.com/nathanhoad), [Mastodon](https://mastodon.social/@nathanhoad)) and Lilly Piri ([Twitter](https://twitter.com/lillypiri), [Mastodon](https://mastodon.social/@lillypiri)) using Godot 4. Nathan also makes Godot plugins such as [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager), and publishes devlogs and Godot tutorials on [YouTube](https://www.youtube.com/@nathan_hoad).*
+*The illustration picture for this article is from* **Bravest Coconut**, *a classic action adventure game following Coco the cat, with brain teasing puzzles to solve. The game is developed by Nathan Hoad ([Twitter](https://twitter.com/nathanhoad), [Mastodon](https://mastodon.social/@nathanhoad)) and Lilly Piri ([Twitter](https://twitter.com/lillypiri), [Mastodon](https://mastodon.social/@lillypiri)) using Godot 4. Nathan also makes Godot plugins such as [Dialog Manager](https://github.com/nathanhoad/godot_dialogue_manager), and publishes devlogs and Godot tutorials on [YouTube](https://www.youtube.com/@nathan_hoad).*
 
 ## What's new
 

@@ -50,7 +50,7 @@ Some of the most notables feature changes in this update are:
 - Multiplayer: Add MultiplayerPeer `disconnect_peer`, `close` ([GH-67982](https://github.com/godotengine/godot/pull/67982)).
 - Physics: Optimized support function for large meshes ([GH-64382](https://github.com/godotengine/godot/pull/64382)).
 - Rendering: Add OpenGL timer queries to OpenGL3 backend ([GH-67032](https://github.com/godotengine/godot/pull/67032)).
-- Rendering: Improve behaviour of `clip_children` by clipping to parent alpha value but still retaining parent color ([GH-67043](https://github.com/godotengine/godot/pull/67043)).
+- Rendering: Improve behavior of `clip_children` by clipping to parent alpha value but still retaining parent color ([GH-67043](https://github.com/godotengine/godot/pull/67043)).
 - Rendering: Fix drawing of 2D primitives in OpenGL3 renderer ([GH-67416](https://github.com/godotengine/godot/pull/67416)).
 - Rendering: Check for a Vulkan extension before checking its features ([GH-67729](https://github.com/godotengine/godot/pull/67729)).
 - Visual Shader: Add math operators to node names for easier and simpler searching ([GH-67905](https://github.com/godotengine/godot/pull/67905)).

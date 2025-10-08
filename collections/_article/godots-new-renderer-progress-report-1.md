@@ -238,7 +238,7 @@ Additive lighting has been added for the PBR backend (in Milestone 3, clustered 
 
 ### Investigate a ShadowAtlas allocation strategy
 
-Godot 2.0 used individual textures for each shadow map. In the wake of more modern techniques such as clustered renderering, it is required that all shadowmaps are contained within a single texture.
+Godot 2.0 used individual textures for each shadow map. In the wake of more modern techniques such as clustered rendering, it is required that all shadowmaps are contained within a single texture.
 
 Research was done first into dynamic allocation strategies for light shadows into a shadow atlas, but nothing useful was found. Every dynamic scheme implies moving around shadowmaps if no more space is available, which incurs a considerable cost.
 

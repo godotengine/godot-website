@@ -61,7 +61,7 @@ Here's a selection of the some of most relevant ones:
 - Porting: Windows: Improve editor grouping, set friendly name registry key for exported projects ([GH-94976](https://github.com/godotengine/godot/pull/94976)).
 - Porting: macOS: Fix `is_process_running` and `kill` for bundled apps ([GH-94978](https://github.com/godotengine/godot/pull/94978)).
 - Rendering: Windows: Fall back to D3D12 if Vulkan is not supported and vice versa ([GH-94796](https://github.com/godotengine/godot/pull/94796)).
-- Rendering: Fix regression around OpenGL swapchain optimisation for OpenXR ([GH-94894](https://github.com/godotengine/godot/pull/94894)).
+- Rendering: Fix regression around OpenGL swapchain optimization for OpenXR ([GH-94894](https://github.com/godotengine/godot/pull/94894)).
 - Shaders: Fix editor crash when shader has incorrect global array declaration ([GH-90792](https://github.com/godotengine/godot/pull/90792)).
 - Shaders: Fix incorrect passing of parameter to visual shader preview ([GH-94729](https://github.com/godotengine/godot/pull/94729)).
 - Shaders: Emit `normal_roughness` compatibility code in custom functions ([GH-94812](https://github.com/godotengine/godot/pull/94812)).

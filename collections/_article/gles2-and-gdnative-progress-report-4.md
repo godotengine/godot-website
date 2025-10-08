@@ -43,9 +43,9 @@ Until the new NativeScript 1.1 extension will be more widely used, a system of [
 
 Even though Godot's scripting languages try to make you believe that you can "extend" or "inherit" engine types, all that is done is actually *delegation*. Most GDNative language bindings make that explicit, but after receiving some user feedback it was time to *fake inheritance* in the C++ bindings as well.
 
-Before, every C++ bindings wrapper class was actually more like a wrapper interface with nice syntactic sugar. (I don't want to say how it is done, I want to keep the little reputation that I have. If you really want to know, all I'm saying is: you can re-use the this pointer "safely" (putting more quotes looks dumb) as long as you don't have any virtual methods to call...)
+Before, every C++ bindings wrapper class was actually more like a wrapper interface with nice syntactic sugar. (I don't want to say how it is done, I want to keep the little reputation that I have. If you really want to know, all I'm saying is: you can reuse the this pointer "safely" (putting more quotes looks dumb) as long as you don't have any virtual methods to call...)
 
-That meant, that you couldn't inherit directely, but now that it's possible to create per-object binding data, it is possible to create wrapper classes that are *proper classes*, which can be inherited!
+That meant, that you couldn't inherit directly, but now that it's possible to create per-object binding data, it is possible to create wrapper classes that are *proper classes*, which can be inherited!
 
 A lot of text and no code so far, so here you go!
 
@@ -144,7 +144,7 @@ In the GLES3 renderer, material parameters get assigned an offset in a UBO, then
 
 In GLES2 however, UBOs do not exist. Every *uniform* (a "global" value accessible in all shaders) has to be set individually for each shader.
 
-This is where many iteration and refactoring have been focussed on. Do those values get set when the material changes? No, drawing might happen later in time and the uniform value lost. Do the values get saved in the shader and the shader sets them up when needed? This is rather complex when user-defined shaders come into play, it's possible, but it doesn't feel right and caused many bugs.
+This is where many iteration and refactoring have been focused on. Do those values get set when the material changes? No, drawing might happen later in time and the uniform value lost. Do the values get saved in the shader and the shader sets them up when needed? This is rather complex when user-defined shaders come into play, it's possible, but it doesn't feel right and caused many bugs.
 
 After all those iterations, I settled for an approach where the shader gets a reference to the material that will be used, and then, only when the shader will be used for drawing, the shader will set all uniform values accordingly.
 
@@ -159,13 +159,13 @@ In the end, this approach works pretty well and seems very clear to me, and afte
 
 ### material passes and renderlist
 
-Up until that point (well, the refactorings and this kind of blend together, but I hope it's clear what I mean) the drawing was very straighforward.
+Up until that point (well, the refactorings and this kind of blend together, but I hope it's clear what I mean) the drawing was very straightforward.
 
  - Get the next available thing to draw
  - if you can draw it, set the GL state up properly
  - render.
 
-The code was [relatively small](https://github.com/karroffel/godot/blob/68d06a1ecc5653f9ceabca10c4a4eb2c2d78134f/drivers/gles2/rasterizer_scene_gles2.cpp#L241) and rather simple to understand and get an overview over, because it was so straighforward. But as with many things, this simplicity becomes problematic at some point. In this case no optimization was done *at all*. Material passes weren't possible and dealing with shader state became a pain, so it was time to move to a more flexible implementation: the **renderlist**!
+The code was [relatively small](https://github.com/karroffel/godot/blob/68d06a1ecc5653f9ceabca10c4a4eb2c2d78134f/drivers/gles2/rasterizer_scene_gles2.cpp#L241) and rather simple to understand and get an overview over, because it was so straightforward. But as with many things, this simplicity becomes problematic at some point. In this case no optimization was done *at all*. Material passes weren't possible and dealing with shader state became a pain, so it was time to move to a more flexible implementation: the **renderlist**!
 
 The RenderList is an [array of elements](https://github.com/karroffel/godot/blob/29fc8fc9ec9e4cac1a6505914679dee91f83619d/drivers/gles2/rasterizer_scene_gles2.h#L298-L299) and a list of pointers to those elements which need to be drawn.
 

@@ -39,7 +39,7 @@ Here are the the main changes since 3.3.1-stable:
 - Import: glTF: Improved error handling around invalid images and invalid meshes ([GH-48904](https://github.com/godotengine/godot/pull/48904), [GH-48912](https://github.com/godotengine/godot/pull/48912)).
 - Import: glTF: Fix incorrect skin deduplication when using named binds ([GH-48913](https://github.com/godotengine/godot/pull/48913)).
 - macOS: Allow "on top" windows to enter full-screen mode ([GH-49017](https://github.com/godotengine/godot/pull/49017)).
-- Physics: Fix ragdoll simulation when parent was readded to scene ([GH-48823](https://github.com/godotengine/godot/pull/48823)).
+- Physics: Fix ragdoll simulation when parent was re-added to scene ([GH-48823](https://github.com/godotengine/godot/pull/48823)).
 - Physics: Fix crash on debug shapes update if CollisionObject is not in tree ([GH-48974](https://github.com/godotengine/godot/pull/48974)).
 - Rendering: Batching: Fix `item_batch_flags` stale state causing glitches ([GH-48992](https://github.com/godotengine/godot/pull/48992)).
 - Sky: Remove high radiance sizes from the editor due to issues on specific GPUs ([GH-48906](https://github.com/godotengine/godot/pull/48906)).
@@ -61,4 +61,4 @@ If you'd like to support the project financially and help us secure our future h
 
 ---
 
-*The illustration picture is a screenshot of [Emilio Coppola](https://twitter.com/Coppola_Emilio)'s *[**Dialogic**](https://dialogic.coppolaemilio.com/)* Godot plugin, which enables you to create, organize, and display dialogue scenes in your Godot games. You'll find the plugin on [GitHub](https://github.com/coppolaemilio/dialogic) and [itch.io](https://coppolaemilio.itch.io/dialogic), and you can follow Emilio on [Twitter](https://twitter.com/Coppola_Emilio) and [Patreon](https://www.patreon.com/coppolaemilio).*
+*The illustration picture is a screenshot of [Emilio Coppola](https://twitter.com/Coppola_Emilio)'s *[**Dialogic**](https://dialogic.coppolaemilio.com/)* Godot plugin, which enables you to create, organize, and display dialog scenes in your Godot games. You'll find the plugin on [GitHub](https://github.com/coppolaemilio/dialogic) and [itch.io](https://coppolaemilio.itch.io/dialogic), and you can follow Emilio on [Twitter](https://twitter.com/Coppola_Emilio) and [Patreon](https://www.patreon.com/coppolaemilio).*

@@ -15,7 +15,7 @@ While there are upcoming improvements on the general animation system, one key a
 
 Animation data is the information that comes from scenes that have been exported from Blender, Maya, 3DS Max, etc. In those applications, animation is edited as Bezier curves and many times happens naturally as a result of modifiers such as IK (Inverse Kinematics).
 
-In game engines (or even when exported from the 3D modelling application), animation data is *baked* to a simpler representation because, for games, processing beziers and IKs is way too expensive for real-time. Games need to process dozens or hundreds of models in real-time, so data must be available in a format that can be more efficiently decoded.
+In game engines (or even when exported from the 3D modeling application), animation data is *baked* to a simpler representation because, for games, processing beziers and IKs is way too expensive for real-time. Games need to process dozens or hundreds of models in real-time, so data must be available in a format that can be more efficiently decoded.
 
 Just decoding the animation, however, is not enough. Games will often have several requirements that must be satisfied regarding the imported animations, such as:
 
@@ -48,9 +48,9 @@ Thanks to the previous step (individual tracks), it was now possible to change h
 
 Removing this has the following immediate effects:
 
-* Massive **improvement in compatibility with 3D applications** and models. As Maya and 3DS Max don't have the concept of "rests" (unlike Blender which does), many models exported from those softwares would just not work in Godot. They now do.
+* Massive **improvement in compatibility with 3D applications** and models. As Maya and 3DS Max don't have the concept of "rests" (unlike Blender which does), many models exported from those software would just not work in Godot. They now do.
 * Improvement in **compatibility with non-uniform scaling**. By removing the rest dependency, all animations using non-uniform scaling will now work.
-* Improvement in **ease of animation reuse**. By simply importing a rotation track, animations can be re-used across different models with similar skeletons. Even with different bone sizes.
+* Improvement in **ease of animation reuse**. By simply importing a rotation track, animations can be reused across different models with similar skeletons. Even with different bone sizes.
 * Generating p**rocedural animation is now much easier**, as every track can be generated independently.
 
 ## Implemented animation compression

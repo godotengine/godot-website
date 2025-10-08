@@ -1,6 +1,6 @@
 ---
 title: "Meet us at FOSDEM 2017 and GodotCon"
-excerpt: "The Godot Engine community is officially attending the FOSDEM 2017 in Brussels, Belgium on Feb 4-5, and also organises its own \"GodotCon\" event in Brussels the next two days (Feb 6-7). All interested Godot users and contributors are invited to join us for a great real life meeting!"
+excerpt: "The Godot Engine community is officially attending the FOSDEM 2017 in Brussels, Belgium on Feb 4-5, and also organizes its own \"GodotCon\" event in Brussels the next two days (Feb 6-7). All interested Godot users and contributors are invited to join us for a great real life meeting!"
 categories: ["events"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/587/f64/a8a/587f64a8af8ef032891376.png
@@ -18,7 +18,7 @@ In other words, you will have the opportunity to meet Godot contributors and use
 
 [![fosdem-2017](https://fosdem.org/2017/support/promote/wide.png)](http://fosdem.org)
 
-The former is the major European event focusing on Free and Open Source Software (FOSS). Godot will have a stand there where we will be distributing and selling some goodies (T-Shirts, mugs, stickers) and most importantly presenting our favourite engine to the FOSDEM visitors. More than 8,000 visitors are awaited, this should give Godot a better visibility in the international open source community.
+The former is the major European event focusing on Free and Open Source Software (FOSS). Godot will have a stand there where we will be distributing and selling some goodies (T-Shirts, mugs, stickers) and most importantly presenting our favorite engine to the FOSDEM visitors. More than 8,000 visitors are awaited, this should give Godot a better visibility in the international open source community.
 
 Julian Murgia (a.k.a [StraToN](https://github.com/StraToN)) will also be giving a [25 min talk about Escoria](https://fosdem.org/2017/schedule/event/ogd_escoria/), the point'n'click adventure game framework using Godot that [we published a few months ago](https://godotengine.org/article/our-point-click-framework-finally-out).
 

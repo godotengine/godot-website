@@ -118,7 +118,7 @@ If you want to read more on all of the above, [this series of posts](https://god
 
 ### Importing {#importing}
 
-![Advanced import dialog for 3D scenes](/storage/app/uploads/public/61e/ebd/afe/61eebdafee641477133678.png)
+![Advanced import dialog for 3D scenes](/storage/app/uploads/public/61e/ebd/safe/61eebdafee641477133678.png)
 
 When you start working on a new 3D scene in Godot 4, you won't be able to miss a leaping change in the importing workflow. Previous versions of the engine provided users with a powerful, but obscured mechanism for preparing imported 3D assets. You could automate and enhance your models and scenes with an import script and a few import settings, but we were sure we can do better than that. Godot 4 comes with a [dedicated import dialog](https://github.com/godotengine/godot/pull/47166) that allows you to preview and customize every part of the imported scene, its materials and physical properties. Scripts can still be used for additional tweaks, thanks to the [new plugin interface](https://github.com/godotengine/godot/pull/53813).
 
@@ -162,7 +162,7 @@ The downloads for this dev snapshot can be found directly on our repository:
 
 As this is our first alpha release of the next major version of Godot there are still many-many issues to fix, some of which have already been reported and are being worked on. See the GitHub issue tracker for a list of [known bugs in the 4.0 milestone](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+milestone%3A4.0+label%3Abug+). Below we list a few of them that may be important to a lot of users:
 
-* Crash when minimising any window when a sub window is open ([GH-51537](https://github.com/godotengine/godot/issues/51537)).
+* Crash when minimizing any window when a sub window is open ([GH-51537](https://github.com/godotengine/godot/issues/51537)).
 * Duplicated files or resources retains the same UID ([GH-54774](https://github.com/godotengine/godot/issues/54774)).
 * Navigating the editor UI with the Tab key doesn't work ([GH-54602](https://github.com/godotengine/godot/issues/54602)).
 * GDScript's rewrite has a [number of outstanding bugs](https://github.com/godotengine/godot/pulls?q=is%3Apr+is%3Aopen+label%3Abug+label%3Atopic%3Agdscript+milestone%3A4.0+) which may affect your testing.

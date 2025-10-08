@@ -66,12 +66,12 @@ Therefore, just like in the PNG case, a 1024x1024 RGB JPEG texture that is only 
 
 We finally arrive at the family this article is about!
 
-This family of compression algorithms meet two criterias that are *key* for GPUs:
+This family of compression algorithms meet two criteria that are *key* for GPUs:
 
  1. Decompression is fast and easy, and can be done in constant O(1) time. i.e. it always takes the same amount of time. e.g. if it takes 20 nanoseconds on a given GPU, it *always* takes 20 nanoseconds, no matter which pixel you need to fetch.
  2. Compression ratio is constant. For example BC1 has a 1:8 compression ratio. That means that a 1024x1024 RGB texture which on RAM would occupy 4MB uncompressed, using BC1 it will *always* occupy 0.5MB
 
-**To be clear:** except rare occassions, these formats cannot compete in quality against the other family of lossy formats (like JPEG), and they do not intend to.
+**To be clear:** except rare occasions, these formats cannot compete in quality against the other family of lossy formats (like JPEG), and they do not intend to.
 
 Fast decompression and reasonable quality are the goals here. If you don't like it and have infinite money, you can always buy a 24GB RAM GPU.
 

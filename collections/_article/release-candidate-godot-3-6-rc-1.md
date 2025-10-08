@@ -19,9 +19,9 @@ This RC 1 has a number of fixes since beta 5, including:
 
 - Fix scene shader regression ([GH-92070](https://github.com/godotengine/godot/pull/92070))
 - Fix `merge_meshes()` functionality ([GH-92105](https://github.com/godotengine/godot/pull/92105))
-- Fix pausing behaviour with physics interpolation ([GH-93382](https://github.com/godotengine/godot/pull/93382))
+- Fix pausing behavior with physics interpolation ([GH-93382](https://github.com/godotengine/godot/pull/93382))
 - Fix 2D skinning with physics interpolation ([GH-93309](https://github.com/godotengine/godot/pull/93309))
-- Fix viewport behaviour with physics interpolation ([GH-92152](https://github.com/godotengine/godot/pull/92152))
+- Fix viewport behavior with physics interpolation ([GH-92152](https://github.com/godotengine/godot/pull/92152))
 - Fix text to speech loaded too early ([GH-92261](https://github.com/godotengine/godot/pull/92261))
 - Fix physics tick counter ([GH-92941](https://github.com/godotengine/godot/pull/92941))
 - Faster editor grid ([GH-92725](https://github.com/godotengine/godot/pull/92725))

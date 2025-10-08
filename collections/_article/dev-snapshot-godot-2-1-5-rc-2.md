@@ -46,7 +46,7 @@ We'll go over the changes in detail in the stable release announcement (hopefull
 - iOS: Minimum SDK raised to 9.0, target SDK raised to 11.4.
 - OSX: Exporting for macOS from a Mac now generates a .dmg package.
 - Windows: New WASAPI audio driver (as in 3.0).
-- Performance optimisations.
+- Performance optimizations.
 - Several crashes fixed, especially in Android backend.
 
 That's just a quick selection going through the changelog, there were a lot more nice changes in the 450 commits made to the 2.1 branch since 2.1.4-stable!

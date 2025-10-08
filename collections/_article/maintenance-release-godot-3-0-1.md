@@ -17,7 +17,7 @@ We have added many new features to the editor (and several to GDScript) in this 
 
 Sadly C# export templates weren't finished for this release. Preliminary support has landed in master in [this commit](https://github.com/godotengine/godot/pull/16920), but a little more work and broad testing are required before we can release this for general consumption. We've decided that holding back all of these important fixes and little niceties in the editor to have C# exporting in a release called '3.0.1' wasn't worth the wait. Please note that us releasing 3.0.1 now doesn't mean that C# exporting has been delayed. When C# exporting is ready we will release a new stable patch immediately. This way all our users get the best possible experience while our C# users won't get export capability any later than they otherwise would have.
 
-I'd like to thank all of our wonderful contributers for making 3.0.1 possible. I'd also like to thank the people who took the time to test the release candidate and report back to us. Now back to waiting for 3.0.2!
+I'd like to thank all of our wonderful contributors for making 3.0.1 possible. I'd also like to thank the people who took the time to test the release candidate and report back to us. Now back to waiting for 3.0.2!
 
 ## What's new in this release
 

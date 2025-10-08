@@ -21,7 +21,7 @@ Currently the page can list every entry with a name, screenshot, short descripti
 
 We pre-filled the page with some known indie and libre games developed by active community members; we know however that there are many other Godot games out there that would be worth showing on this page.
 
-There is currently no automatized system for you to propose new entries, so we will do it the good old way: by sending emails to the webmasters (*webmaster @ godotengine · org*).
+There is currently no automated system for you to propose new entries, so we will do it the good old way: by sending emails to the webmasters (*webmaster @ godotengine · org*).
 
 Please include the following information:
 

@@ -100,6 +100,6 @@ We've showcased XR Tools before, but with version 4.4 of the plugin nearly ready
 ## Godot ARCore support
 
 ARCore support in Godot has been a long time coming.
-From an early working prototype in Godot 3, to moving this into a community maintained plugin, there have been plenty of hurdles along the way. Thanks to the persistance of Patrick Exner, Luca Junge, and Chambefort Maxime, we have nearly reached the finish line.
+From an early working prototype in Godot 3, to moving this into a community maintained plugin, there have been plenty of hurdles along the way. Thanks to the persistence of Patrick Exner, Luca Junge, and Chambefort Maxime, we have nearly reached the finish line.
 
 Supporting changes were recently merged into the master branch of Godot and you can find the plugin itself [on the plugin's GitHub](https://github.com/GodotVR/godot_arcore).

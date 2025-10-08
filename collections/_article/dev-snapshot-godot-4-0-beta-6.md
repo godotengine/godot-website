@@ -16,7 +16,7 @@ This beta 6 includes a few big changes which may interest a lot of users:
 
 - GDScript cyclic reference issues begone! Or so we hope, with the amazing work done by [Adam Scott](https://github.com/adamscott/) in [GH-66714](https://github.com/godotengine/godot/pull/67714). It has been tested thoroughly before merging, but the real trial starts now, with users trying out beta 6 on existing big GDScript codebases. Some regressions are to be expected, so please report any issue and mention differences in behavior between betas.
 - Lots of improvements to the Multiplayer features, and notably the editor tooling. With all this, [Fabio](https://github.com/Faless/) expects this API to be feature complete, so please test the new features and report any issue!
-- Beta testers were starting to be vocal about the missing implementation of the Canvas Enviroment background mode, so [Clay](https://github.com/clayjohn/) went ahead and fixed it! ([GH-68805](https://github.com/godotengine/godot/pull/68805)).
+- Beta testers were starting to be vocal about the missing implementation of the Canvas Environment background mode, so [Clay](https://github.com/clayjohn/) went ahead and fixed it! ([GH-68805](https://github.com/godotengine/godot/pull/68805)).
 - [Tokage](https://github.com/TokageItLab) greatly optimized the animation blend tree process, which should give a nice performance boost on complex animations ([GH-68593](https://github.com/godotengine/godot/pull/68593)).
 
 [Jump to the **Downloads** section.](#downloads)

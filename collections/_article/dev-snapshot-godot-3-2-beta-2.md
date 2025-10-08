@@ -15,7 +15,7 @@ We published a first beta build for Godot 3.2 [two weeks ago](/article/dev-snaps
 
 The most notable is the **WebAssembly support for Mono exports**, which means that C# projects can now run on the Web! See [Ignacio's progress report](/article/csharp-wasm-aot) for details. I spent most of my time the past week working on the buildsystem to be able to ship Wasm templates for Mono, with a lot of help from Ignacio to iron out issues with both Emscripten and Mono. At long last, we managed to get a working build which is included in the Mono export templates for this beta!
 
-Another noteworthy change for the Mono version is that we now use Mono 6.6.0 Preview, which provides support for C# 8 and many other enhancements. While 6.6.0 has not been labelled stable yet, this should happen soon and we needed a very recent version for proper WebAssembly support in Mono, which has matured a lot over the past few months.
+Another noteworthy change for the Mono version is that we now use Mono 6.6.0 Preview, which provides support for C# 8 and many other enhancements. While 6.6.0 has not been labeled stable yet, this should happen soon and we needed a very recent version for proper WebAssembly support in Mono, which has matured a lot over the past few months.
 
 Note that the AOT compilation support merged recently for C# is not included in those builds. This will be worked on in coming months and should be shipped in a 3.2.x maintenance update once it has been extensively tested.
 

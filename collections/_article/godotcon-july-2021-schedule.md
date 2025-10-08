@@ -14,7 +14,7 @@ We can't wait to see you all this Saturday, **3rd of July 2021!**
 
 We cannot express how grateful we are for all the people that took the time to submit a proposal for this conference. We were once again overjoyed to see the awesome stuff that you make!
 
-While we all can't wait to meet in person, we realised how important it is to make GodotCon more accessible for everyone.
+While we all can't wait to meet in person, we realized how important it is to make GodotCon more accessible for everyone.
 As the pandemic restrictions will ease, we will restore in-person conferences, but we also plan to keep doing these online events!
 
 

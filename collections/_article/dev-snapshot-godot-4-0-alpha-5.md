@@ -48,7 +48,7 @@ Some of the most notables feature changes in this update are:
 - Rendering: Add multiview support to the clustered forward renderer ([GH-49092](https://github.com/godotengine/godot/pull/49092)).
 - Rendering: Add sky cover texture for ProceduralSkyMaterial ([GH-58018](https://github.com/godotengine/godot/pull/58018)).
 - Visual Shader: Add `_get_func_code`/`_is_available` virtual functions to custom nodes ([GH-57769](https://github.com/godotengine/godot/pull/57769)).
-- Windows: Reenable `DisplayServer::window_set_vsync_mode` on Windows ([GH-59106](https://github.com/godotengine/godot/pull/59106)).
+- Windows: Re-enable `DisplayServer::window_set_vsync_mode` on Windows ([GH-59106](https://github.com/godotengine/godot/pull/59106)).
 
 This release is built from commit [d7d528c15](https://github.com/godotengine/godot/commit/d7d528c15f0e858b52bb0f510ff47e65c2341de1).
 

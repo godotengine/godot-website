@@ -17,7 +17,7 @@ show_help() {
 	echo "  -h Help"
 	echo ""
 	echo "Environment variables:"
-	echo "  GODOT_WEBSITE_VIDEO_FFMPEG      Path to \`ffmpeg\` (detault: 'ffmpeg')"
+	echo "  GODOT_WEBSITE_VIDEO_FFMPEG      Path to \`ffmpeg\` (default: 'ffmpeg')"
 	returncode="${1:-0}"
 	exit "$returncode"
 }

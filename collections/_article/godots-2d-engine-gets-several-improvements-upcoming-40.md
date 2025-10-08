@@ -65,7 +65,7 @@ Custom shaders can be used with CanvasGroup to also apply effects like drop shad
 
 ### 2D Masking / Clipping
 
-The ability to easily mask out children 2D nodes using the parent shape has been one of the most demanded fetures in Godot. This was only doable with very complex workarounds like using viewports or 2D lights, which where limited and inefficient.
+The ability to easily mask out children 2D nodes using the parent shape has been one of the most demanded features in Godot. This was only doable with very complex workarounds like using viewports or 2D lights, which where limited and inefficient.
 
 In the 4.0 branch, this will be doable in a much easier way, thanks to the "clip children" property in the visibility section. This happens at literally no cost and allows for maximum flexibility.
 

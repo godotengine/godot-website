@@ -25,7 +25,7 @@ Amongst a set of more minimal improvements, this new FileSystem dock features se
 - Complete drag & drop support, including dragging files and folders into the favorites section:
 ![Favorites drag and drop](/storage/app/media/3.1/FileSystem%20dock/dragdrop.gif)
 - Type icons next to each file name. For textures and materials, this icon is replaced by a mini-thumbnail of the resource:
-![Files thumbnails](/storage/app/media/3.1/FileSystem%20dock/thumnails.png)
+![Files thumbnails](/storage/app/media/3.1/FileSystem%20dock/thumbnails.png)
 - A search field, to filter entries in the tree:
 ![Search filter](/storage/app/media/3.1/FileSystem%20dock/search.gif)
 - A right-click menu, to handle files exactly as in the file list.

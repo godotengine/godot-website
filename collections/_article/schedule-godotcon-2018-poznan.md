@@ -71,7 +71,7 @@ Here's some info about our GodotCon speakers. Note that we're still accepting la
     <img alt="Ilaria Cislaghi" src="/storage/app/uploads/public/5bb/a3d/3a2/5bba3d3a27b83851784188.jpg" />
 </div>
 <div class="speaker-text">
-    Ilaria Cislaghi is a game designer working for <a href="http://www.simedis.com">simedis AG</a>, a company specialised in virtual reality medical simulation. In her free time, she enjoys developing games about Antarctica with Godot.
+    Ilaria Cislaghi is a game designer working for <a href="http://www.simedis.com">simedis AG</a>, a company specialized in virtual reality medical simulation. In her free time, she enjoys developing games about Antarctica with Godot.
 </div>
 </div>
 

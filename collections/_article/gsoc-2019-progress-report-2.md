@@ -149,7 +149,7 @@ Also work on the documentation.
 Since the last update, I've fixed a lot of bugs and made a bunch of simplifications to the design of the cache module.
 
 * Lots of bug fixes.
-* Reduced the use of synchronisation primitives. Greatly reduces the complexity.
+* Reduced the use of synchronization primitives. Greatly reduces the complexity.
 * It's possible to write to files as well now.
 
 I've ended up straying from the schedule I set for myself in May in that I haven't finished implementing all the unbuffered file IO classes I had planned to, but they aren't strictly necessary for the module to function.
@@ -201,7 +201,7 @@ Our major task for now is fixing bugs within the current implementation and merg
 For those who are not familiar with the project I suggest you check out [last month's blog post](/article/gsoc-2019-progress-report-1-part-1) so you are brought up to speed with what the project entails.
 
 First I will begin with an update on how I've dealt with some of the issues I mentioned last time, specifically the memory leak crash in `AudioStreamPlaylist`, which was causing the preview generator to generate an endless preview.
-Thanks to last month's blog post I got in contact with a game developer who was interested in the feature and we started having a back and forth conversation about the project. I sent him the most current build and after he tested it I got a question about why playlist is looping indefinitely and I realised that it's not actually meant to do that. After looking at the code, I noticed that the line which updates the current stream did not have a safety check:
+Thanks to last month's blog post I got in contact with a game developer who was interested in the feature and we started having a back and forth conversation about the project. I sent him the most current build and after he tested it I got a question about why playlist is looping indefinitely and I realized that it's not actually meant to do that. After looking at the code, I noticed that the line which updates the current stream did not have a safety check:
 
 ```
 current = (current + 1) % playlist->stream_count;
@@ -310,11 +310,11 @@ The integration mainly required 3 distinct verticals:
 
 Out of these, only the first and the second verticals are planned to be merged into Godot's *master* branch and the third vertical will be kept in a separate repository. The third vertical is a GDNative plugin (referred to as 'addon' further) that implements the VCS interface for interacting with Git.
 
-Keeping the implementation separated from the interface helps us to create different behaviours of the VCS interface depending on what VCS is at use in the project. I have worked on the Git implementation as a part of GSoC 2019 and for any of the other VCSs, we are depending upon future work by fellow contributors.
+Keeping the implementation separated from the interface helps us to create different behaviors of the VCS interface depending on what VCS is at use in the project. I have worked on the Git implementation as a part of GSoC 2019 and for any of the other VCSs, we are depending upon future work by fellow contributors.
 
 ### Complications faced since progress report #1
 
-My mentors, Groud and jahd, and I realised the kind of architecture that we were hoping to accomplish was unsuitable for the kind of functionality that the existing engine API has. I have tried to summarise my entire research surrounding the topic of creating a GDNative addon that extends an API which is called to from within the editor, [in this devlog](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs/blob/master/2019-8-2.md).
+My mentors, Groud and jahd, and I realized the kind of architecture that we were hoping to accomplish was unsuitable for the kind of functionality that the existing engine API has. I have tried to summarize my entire research surrounding the topic of creating a GDNative addon that extends an API which is called to from within the editor, [in this devlog](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs/blob/master/2019-8-2.md).
 
 You can also have a look at the [predecessor of the above-mentioned devlog](https://github.com/IronicallySerious/gsoc-godot-vcs-devlogs/blob/master/2019-7-08.md) to know more about what different types of complications we faced while designing the architecture for this sort of an involvement between the editor and the GDNative addons.
 
@@ -328,7 +328,7 @@ The entire VCS interaction is fired off by the `Set Up Version Control` dialog (
 
 In the above screenshot, the name `GitAPI` is coming directly from the GDNative addon that implements the Git interaction. If you'd like to know how we managed to detect addons from the editor and use it to implement an API which is consumed by the editor, you can refer to the devlog links in the previous section. The solution came out to be rather simple but it required some extensive research from both my mentors and me since this use case of GDNative was rather an odd one. Anyway, we are happy to share the results that we have found.
 
-When the Git addon is initialized, the addon also initializes a bare `.gitignore` file. All these behaviours are handled by the addon so the engine is not required to do any of the VCS specific tasks.
+When the Git addon is initialized, the addon also initializes a bare `.gitignore` file. All these behaviors are handled by the addon so the engine is not required to do any of the VCS specific tasks.
 
 Currently, we can expect the Commit panel to look similar to what is shown below (not representative of the final version):
 
@@ -338,7 +338,7 @@ You may notice in the panel above that the 'Refresh' button has recently been cl
 
 ![Commit panel with expanded New tree](/storage/app/media/gsoc/2019-2/vcs-003.png)
 
-Upon opening this tree, you shall see a list of all the new files that have been added to the Git repository. Since the demo project doesn't come with a pre-initialised Git repository, all the files of the project are currently recognised as newly created files. The checkboxes shall be indicative of whether a file will be added to the stage or not. This is similar to selecting what input we need to provide the `git add` command.
+Upon opening this tree, you shall see a list of all the new files that have been added to the Git repository. Since the demo project doesn't come with a pre-initialised Git repository, all the files of the project are currently recognized as newly created files. The checkboxes shall be indicative of whether a file will be added to the stage or not. This is similar to selecting what input we need to provide the `git add` command.
 
 The next major UI element that the Version Control Editor Plugin provides is the Version Control dock which will likely be placed among the bottom docks likewise:
 

@@ -20,7 +20,7 @@ Here's a small [platformer demo](http://godot.eska.me/pub/wasm-platformer/) you 
 We recently wrote an article about [GDNative](https://godotengine.org/article/dlscript-here) (initially named *DLScript* but [renamed](https://github.com/godotengine/godot/issues/8312) to avoid confusion). Let me tell you that this amazing new feature by [karroffel](https://github.com/karroffel) and Bojidar Marinov ([bojidar-bg](https://github.com/bojidar-bg)) is the real deal. It allows way too many amazing things:
 
 1. Add Godot objects made in C++, without recompiling Godot or the editor. Before this, a module had to be created, which implies recompiling everything.
-2. Optimize any part of your game by rewriting it transparently in C++, or any language that can compiled to native code for the target platform, wihout recompiling the engine or templates.
+2. Optimize any part of your game by rewriting it transparently in C++, or any language that can compiled to native code for the target platform, without recompiling the engine or templates.
 3. Bind to any external libraries (e.g. SQLite, Steam, etc.) without any recompiling. Even downloading the bindings from our asset sharing would be possible.
 4. Add import/export formats using official libraries from outside Godot. For example, you could download an FBX import module from the asset sharing. Same as direct support for stuff such as Spine using their own library.
 5. Add external scripting languages, such as Lua, Python, etc. Of course, without the nice integration GDScript benefits from, and you'll have to be aware of the limitations.
@@ -63,7 +63,7 @@ We wanted to include skeletal transform support to emission meshes, as it's not 
 
 ## Godot 3.0 alpha
 
-With this, all major funtionalities planned for 3.0 are implemented. We will be releasing an alpha build soon for everyone to start playing with them and finding bugs. Stay tuned!
+With this, all major functionalities planned for 3.0 are implemented. We will be releasing an alpha build soon for everyone to start playing with them and finding bugs. Stay tuned!
 
 ## Seeing the code
 

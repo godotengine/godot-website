@@ -30,9 +30,9 @@ During last month, I worked on introducing full data channels support to our Web
 - `offer_created` was renamed to `session_description_created` and `new_ice_candidate` to `ice_candidate_created` to better fit Godot's signal naming.
 - A new `data_channel_received` signal was added to receive in-band (not pre-negotiated) channels (if you don't store it, the channel will be closed).
 
-Other featuers that were added includes:
+Other features that were added includes:
 - A new `WebRTCPeerConnection.initialize` method to create a new connection with the desired configuration provided as dictionary ([see MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#RTCConfiguration_dictionary)). This allows **STUN/TURN configuration**.
-- The WebRTC **GDNative plugin** (for desktop plaforms) is now a singleton, and will be **loaded automatically** if dropped inside the project.
+- The WebRTC **GDNative plugin** (for desktop platforms) is now a singleton, and will be **loaded automatically** if dropped inside the project.
 
 
 ![pc_docs.png](/storage/app/uploads/public/5ce/2db/be6/5ce2dbbe6c5ab261586810.png)

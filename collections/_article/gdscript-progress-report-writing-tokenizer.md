@@ -32,7 +32,7 @@ The GDScript grammar is also pretty much settled (except maybe for a few of the 
 
 ## Rewriting the tokenizer
 
-The first step when writing a compiler is to make the *tokenizer* (also called *scanner* by some authors). It has the responsibility of reading the characters of the source code and bundling them together as meaningful chunks which are called *tokens*. Tokens contain information about what they mean and where they occured. This makes the following compilation steps easier to manage as they don't have to deal with minutiae such as comments and whitespace, which are not meaningful for the final execution.
+The first step when writing a compiler is to make the *tokenizer* (also called *scanner* by some authors). It has the responsibility of reading the characters of the source code and bundling them together as meaningful chunks which are called *tokens*. Tokens contain information about what they mean and where they occurred. This makes the following compilation steps easier to manage as they don't have to deal with minutiae such as comments and whitespace, which are not meaningful for the final execution.
 
 I'm taking this opportunity to make the tokenizer a bit smarter (and maybe a bit dumber in some regards) in order to make the parsing simpler (I'll write about the parser when I get there). The new tokenizer will emit special tokens when it detects there's an indentation change and also a newline. Since GDScript is indentation based, this helps the parser identify the start and end of blocks. This approach is also used by Python, so I'm not being revolutionary here.
 

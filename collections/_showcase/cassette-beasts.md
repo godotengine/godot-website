@@ -1,5 +1,5 @@
 ---
-description: "Cassette Beasts is an 80’s vibe Creature Collector turn-based RPG set in a vast and colourful open world. Record and collect awesome monster forms to use in turn-based battles, or for their abilities to traverse the world. Use the Fusion System to create unique and powerful by combining any two monsters."
+description: "Cassette Beasts is an 80’s vibe Creature Collector turn-based RPG set in a vast and colorful open world. Record and collect awesome monster forms to use in turn-based battles, or for their abilities to traverse the world. Use the Fusion System to create unique and powerful by combining any two monsters."
 date: 2023-04-26 00:00:00 +0000
 
 title: Cassette Beasts

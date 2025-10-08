@@ -55,7 +55,7 @@ Here are the main changes since 4.0.1-stable:
 - Core: Fix `Array.slice()` rounding when step is other than 1 ([GH-74909](https://github.com/godotengine/godot/pull/74909)).
 - Core: Make `Gradient` resort points on `reverse` ([GH-75235](https://github.com/godotengine/godot/pull/75235)).
 - Core: Port robust signal (dis)connection to `ShapeCast2D` ([GH-75266](https://github.com/godotengine/godot/pull/75266)).
-- Editor: Fix cancelling selection while gizmo editing making uncommitted changes ([GH-71156](https://github.com/godotengine/godot/pull/71156)).
+- Editor: Fix canceling selection while gizmo editing making uncommitted changes ([GH-71156](https://github.com/godotengine/godot/pull/71156)).
 - Editor: Improve POT Generation dialog ([GH-74213](https://github.com/godotengine/godot/pull/74213)).
 - Editor: Hide internal settings from the class reference ([GH-74226](https://github.com/godotengine/godot/pull/74226)).
 - Editor: Fix `EditorUndoRedoManager`'s handling of `MERGE_ENDS` ([GH-74460](https://github.com/godotengine/godot/pull/74460)).

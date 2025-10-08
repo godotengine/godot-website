@@ -49,7 +49,7 @@ The [full list of changes](https://download.tuxfamily.org/godotengine/2.1.4/Godo
 - Core: Various enhancements to the AStar API
 - Editor: Default game window placement to Centered
 - Editor: Improvements to remote debug configuration (host/port, better error reporting)
-- Editor: Instanced scenes: Keep default exported script values unless overriden
+- Editor: Instanced scenes: Keep default exported script values unless overridden
 - Editor: Warn about issues when resizing 2D or 3D RigidBody
 - GUI: Enhancements to RichTextLabel: `set_text` method and `percent_visble` property
 - I18n: Properly ignore fuzzy translations, displaying the English string

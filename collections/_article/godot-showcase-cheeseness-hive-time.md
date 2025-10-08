@@ -15,7 +15,7 @@ ___
 
 My name is Cheese, and I'm an Australian independent game developer/Linux porter/freelance generalist based in the small island of Tasmania. I've been making games in some form or another for over thirty years now.
 
-I like to contribute to Free/Open Source Software projects when I have time, and release my own work under F/OSS and open culture licences when appropriate. I've even made some small contributions to Godot itself. I enjoy photography, playing guitar, and long, long walks in the wilderness.
+I like to contribute to Free/Open Source Software projects when I have time, and release my own work under F/OSS and open culture licenses when appropriate. I've even made some small contributions to Godot itself. I enjoy photography, playing guitar, and long, long walks in the wilderness.
 
 ### Introduce your project in a few sentences: description, supported platforms, release date, etc.
 
@@ -41,13 +41,13 @@ The next time I had the opportunity to try again, Godot had come a long way, and
 
 ### Which parts of the game development process did you enjoy the most while working on your project?
 
-For me, the most enjoyable part of both making and playing Hive Time is sitting back and watching my little bees bumble arund and go about their business.
+For me, the most enjoyable part of both making and playing Hive Time is sitting back and watching my little bees bumble around and go about their business.
 
 I also loved going out to local honey farms to record bees, and it was wonderful to see/hear Peter's work on the soundtrack breathe extra life into the game.
 
 ### Which parts of the game development process did you find the most difficult to apply in your project?
 
-Broadly speaking though, the game came together with very few signficant design or production hurdles. I worked hard to lean on my existing development and project management experience and keep the game's development timeframes tight and overheads small.
+Broadly speaking though, the game came together with very few significant design or production hurdles. I worked hard to lean on my existing development and project management experience and keep the game's development timeframes tight and overheads small.
 
 ### How has Godot helped you advance on your project? Which aspects of Godot do you consider to be its strength?
 
@@ -63,7 +63,7 @@ I'm glad that Godot allows me to deploy builds for all my supported platforms fr
 
 ### Which challenges have you encountered when using Godot?
 
-I've struggled a little with performance optimisation, and the now-addressed dangling variants bug likely caused the majority of unidentifiable problems that had been reported in the wild.
+I've struggled a little with performance optimization, and the now-addressed dangling variants bug likely caused the majority of unidentifiable problems that had been reported in the wild.
 
 Unclear or incomplete documentation has been a long time friction point for me. Things have definitely improved on that front over the years, though there's always room for improvement. These kinds of hurdles are rarely significant and the option to fall back on reading engine code is always there, but cumulatively, these can add up to be a reasonable time sink across a large project.
 

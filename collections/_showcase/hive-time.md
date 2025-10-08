@@ -43,5 +43,5 @@ developer_interview:
   find pollen and nectar, have Builders research new cell types, and ensure you
   have enough Beesitters to raise the next generation of bees. Make interesting
   choices that affect the hive - respond to wasp attacks, deal with outlaw
-  slugs, or help a caterpillar realise a lifelong dream.
+  slugs, or help a caterpillar realize a lifelong dream.
 </p>

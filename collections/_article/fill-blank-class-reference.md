@@ -1,6 +1,6 @@
 ---
 title: "Fill in the blank in the class reference"
-excerpt: "Godot's API reference is far from complete, but it's an effort to which every member of the community can partake! We organise a class reference writing campaign to aim towards 100% completion for Godot 2.1!"
+excerpt: "Godot's API reference is far from complete, but it's an effort to which every member of the community can partake! We organize a class reference writing campaign to aim towards 100% completion for Godot 2.1!"
 categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/572/070/c22/572070c227996527491135.png
@@ -29,7 +29,7 @@ Our objective: have the class reference 100% complete for the upcoming 2.1 relea
 
 ## What's next in the pipeline?
 
-Once this task is done, it will be the time for a thorough review of the rest of the online documentation. Most of the tutorials were written in the early days of Godot's open source existence, and though they have seen improvements here and there, there are many new features that were added over the last two years and that are not well documented (e.g. light baking, networking, plugins, pathfinding, etc.). That's why we plan to make a complete review of the existing content, reorganise it and start a coordinated effort to, again, fill in the blank. This will be another big task, but with the help of the community we will make Godot Engine even easier to learn, for newcomers and experienced users alike!
+Once this task is done, it will be the time for a thorough review of the rest of the online documentation. Most of the tutorials were written in the early days of Godot's open source existence, and though they have seen improvements here and there, there are many new features that were added over the last two years and that are not well documented (e.g. light baking, networking, plugins, pathfinding, etc.). That's why we plan to make a complete review of the existing content, reorganize it and start a coordinated effort to, again, fill in the blank. This will be another big task, but with the help of the community we will make Godot Engine even easier to learn, for newcomers and experienced users alike!
 
 A similar effort will be done for the demos; most of them were also designed to showcase the usage of early Godot versions. Since then, many new features and usability improvements have been done, so some of those demos might have become obsolete, or might need to be modernized a bit. Many cool new concepts are not showcased yet in demos either, such as scene inheritance or navigation polygons. We are also thinking about writing tutorials attached to each of them for you to learn how they work. But of course, this will be done *only* once the class reference has been sufficiently enhanced...
 

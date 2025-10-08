@@ -71,7 +71,7 @@ The main new features are highlighted in bold. Refer to the linked pull requests
 - C#: Re-work solution build output panel ([GH-42547](https://github.com/godotengine/godot/pull/42547)).
 - C#: Godot.NET.Sdk/3.3.0 - Fix targeting .NETFramework with .NET 5 ([GH-44135](https://github.com/godotengine/godot/pull/44135)).
 - **C#: Fixes to WebAssembly support** ([GH-44105](https://github.com/godotengine/godot/pull/44105), [GH-44374](https://github.com/godotengine/godot/pull/44374)).
-- **C#: Fix System.Collections.Generic.List marshalling** ([GH-45029](https://github.com/godotengine/godot/pull/45029)).
+- **C#: Fix System.Collections.Generic.List marshaling** ([GH-45029](https://github.com/godotengine/godot/pull/45029)).
 - C#: Fix support for Unicode identifiers ([GH-45310](https://github.com/godotengine/godot/pull/45310)).
 - C#: Add generic support to `PackedScene.Instance` ([GH-42588](https://github.com/godotengine/godot/pull/42588)).
 - Camera2D: Fix frame delay and smoothing processing issues ([GH-46697](https://github.com/godotengine/godot/pull/46697), [GH-46717](https://github.com/godotengine/godot/pull/46717)).

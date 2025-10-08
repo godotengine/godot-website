@@ -49,7 +49,7 @@ Here is a visual explanation:
 
 ![atlassteps.png](/storage/app/uploads/public/5cb/a24/49e/5cba2449ea061494413691.png)
 
-Packing is also deterministic, which means that the same image should always be generated (this ensures it works for generating normal map atlases separatedly, as an example).
+Packing is also deterministic, which means that the same image should always be generated (this ensures it works for generating normal map atlases separately, as an example).
 
 ## Import modes
 

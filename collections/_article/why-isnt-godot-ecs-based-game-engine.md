@@ -19,7 +19,7 @@ The topic of why Godot does not utilize <abbr title="Entity Component System">EC
 
 This design became common in game engines and libraries in the early 2010s. The main appeal (besides architecture) is the fact that component data can be placed in contiguous memory, improving cache access. This is a common form of [data-oriented](https://en.wikipedia.org/wiki/Data-oriented_design) optimization.
 
-Architecturally wise, ECS aims to replace [inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)), by favouring composition, similar to how *interfaces* or *multiple inheritance* works in <abbr title="Object-Oriented Programming">OOP</abbr>. The key advantage in ECS is that components are *dynamic* (can be added or removed in run-time).
+Architecturally wise, ECS aims to replace [inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)), by favoring composition, similar to how *interfaces* or *multiple inheritance* works in <abbr title="Object-Oriented Programming">OOP</abbr>. The key advantage in ECS is that components are *dynamic* (can be added or removed in run-time).
 
 ## Why does Godot not use ECS?
 
@@ -55,7 +55,7 @@ In Godot, however, this is more complex. You need 3 nodes and hierarchy:
 So, at first it seems that the approach in Godot is more wasteful, but is it really?
 
 * Node is lightweight, similar to a component.
-* Node2D contains the 2D transform, similar to Transform component in ECS. Three nodes are required whereas one component suffices in ECS. This seems wasteful, but is it really? In the entity, the collider and the sprite will most likely not be used centred and will still require offset and rotation properties, so in the end not much changes.
+* Node2D contains the 2D transform, similar to Transform component in ECS. Three nodes are required whereas one component suffices in ECS. This seems wasteful, but is it really? In the entity, the collider and the sprite will most likely not be used centered and will still require offset and rotation properties, so in the end not much changes.
 * In Godot adding more of these (multiple sprites and colliders) is kind of free, the transform offset happens automatically. In ECS, special logic needs to exist to take care of this.
 
 As can be seen, inheritance and composition can live together and make sense in the context of Godot.

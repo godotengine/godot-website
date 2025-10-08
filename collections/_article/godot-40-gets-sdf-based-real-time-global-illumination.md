@@ -22,7 +22,7 @@ I would like to thank hugely Matias Goldberg for his enormous help on this, our 
 
 ## What can it do?
 
-SDFGI is something akin to a dynamic real-time lightmap (but it does not requiere unwrapping, nor does it use textures). It's enabled and it automatically works by generating global illumination for static objects. It **does not require raytracing**, and it runs in most current (and some years old) dedicated GPUs, **even medium-end budget CPUs from some years ago** (SDFGI was developed and tested on a GeForce 1060, running at a stable 60 FPS).
+SDFGI is something akin to a dynamic real-time lightmap (but it does not require unwrapping, nor does it use textures). It's enabled and it automatically works by generating global illumination for static objects. It **does not require raytracing**, and it runs in most current (and some years old) dedicated GPUs, **even medium-end budget CPUs from some years ago** (SDFGI was developed and tested on a GeForce 1060, running at a stable 60 FPS).
 
 Light changes **are real-time**, meaning any change in lighting conditions will result in an **immediate update**. Dynamic objects are supported only for receiving light from the environment, but they don't contribute to lighting. Some degree of support is planned for this eventually, but not immediately.
 
@@ -78,4 +78,4 @@ Very large, open world scene with real-time GI:
 
 ## Future
 
-Godot 4.0 keeps improving and we are fully commited to create an amazing game engine, that you can use with the same freedom as as if it was your own in-house tech. If you are not yet, please [become our patron](https://www.patreon.com/godotengine) and help us improve Godot faster!
+Godot 4.0 keeps improving and we are fully committed to create an amazing game engine, that you can use with the same freedom as as if it was your own in-house tech. If you are not yet, please [become our patron](https://www.patreon.com/godotengine) and help us improve Godot faster!

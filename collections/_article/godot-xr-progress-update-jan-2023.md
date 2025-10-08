@@ -36,7 +36,7 @@ Godot XR Tools can be found on the [asset library](https://godotengine.org/asset
 
 For low-end devices with limited Vulkan support, [OpenGL was added as a backend to Godot 4](https://godotengine.org/article/status-of-opengl-renderer/). This implementation of OpenGL is based on OpenGL ES 3.0, but its architecture is more friendly to low-end/mobile devices compared to Godot 3's GLES3 backend.
 
-While there are a few loose ends, contributor David Snopek has added stereoscopic rendering support to the OpenGL renderer. This has proven to be a very efficient solution for XR. This is an upgrade for anyone using the GLES2 renderer in Godot 3 to consider. This implementation takes advantage of the improvements in OpenGL ES 3, but does *not* make use of Godot 3 GLES3 renderer technniques that were detrimental to performance on mobile XR. The only footnote is that the implementation *requires* the OpenGL multiview extension.
+While there are a few loose ends, contributor David Snopek has added stereoscopic rendering support to the OpenGL renderer. This has proven to be a very efficient solution for XR. This is an upgrade for anyone using the GLES2 renderer in Godot 3 to consider. This implementation takes advantage of the improvements in OpenGL ES 3, but does *not* make use of Godot 3 GLES3 renderer techniques that were detrimental to performance on mobile XR. The only footnote is that the implementation *requires* the OpenGL multiview extension.
 
 #### WebXR support in Godot 4
 

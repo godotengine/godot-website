@@ -56,7 +56,7 @@ For an overview of what's new overall in Godot 4.2, have a look at the release n
 - Porting: macOS: Fallback to native OpenGL renderer if ANGLE initialization failed ([GH-83753](https://github.com/godotengine/godot/pull/83753), [GH-84288](https://github.com/godotengine/godot/pull/84288)).
 - Rendering: Overhaul the mesh format conversion tool ([GH-84200](https://github.com/godotengine/godot/pull/84200)).
 - Rendering: Fix cubemap downsampler logic ([GH-84223](https://github.com/godotengine/godot/pull/84223)).
-- Rendering: Fix WebXR on desktop emulator by reseting active texture unit ([GH-84267](https://github.com/godotengine/godot/pull/84267)).
+- Rendering: Fix WebXR on desktop emulator by resetting active texture unit ([GH-84267](https://github.com/godotengine/godot/pull/84267)).
 - Shaders: GLES: Fix int to uint implicit cast error when using mat3 uniform ([GH-81494](https://github.com/godotengine/godot/pull/81494)).
 - Thirdparty: mbedtls: Backport Windows fix to use bcrypt for entropy ([GH-84042](https://github.com/godotengine/godot/pull/84042)).
 

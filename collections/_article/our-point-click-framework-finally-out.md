@@ -11,7 +11,7 @@ A while ago, we had a Kickstarter for [The Interactive Adventures of Dog Mendon√
 
 ### *Escoria*, a point & click graphic adventure creation framework
 
-Escoria is a set of scripts, template scenes and a dialogue scripting language, which are meant to be used within Godot Engine to create classic graphic adventure games. It's not a "closed product", with its own UI and tools, and it's not a "make your game without programming" solution. It takes advantage of the Godot editor, and it's intended to be used by a team to make a game, with minimal intervention from the programmer. It is also intended to be "owned" by your team; you will take over the framework, and adapt it to the needs of your games.
+Escoria is a set of scripts, template scenes and a dialog scripting language, which are meant to be used within Godot Engine to create classic graphic adventure games. It's not a "closed product", with its own UI and tools, and it's not a "make your game without programming" solution. It takes advantage of the Godot editor, and it's intended to be used by a team to make a game, with minimal intervention from the programmer. It is also intended to be "owned" by your team; you will take over the framework, and adapt it to the needs of your games.
 
 ![](/storage/app/media/escoria/esc.png)
 

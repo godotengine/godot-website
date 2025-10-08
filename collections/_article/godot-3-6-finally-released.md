@@ -159,7 +159,7 @@ To ensure compatibility with current Apple SDKs, we had to increase the minimal 
 
 - Make autotiles fall back to the most similar bitmask ([GH-71533](https://github.com/godotengine/godot/pull/71533)).
 - Fix AnimatedSprite normal map loading ([GH-80406](https://github.com/godotengine/godot/pull/80406)).
-- Fix viewport behaviour with physics interpolation ([GH-92152](https://github.com/godotengine/godot/pull/92152)).
+- Fix viewport behavior with physics interpolation ([GH-92152](https://github.com/godotengine/godot/pull/92152)).
 
 #### 3D
 

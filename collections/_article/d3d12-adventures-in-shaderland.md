@@ -80,7 +80,7 @@ Mesa's NIR machinery is powerful. It can apply a variety of optimization passes 
 
 The core issues lies in the fact that NIR has a _load constant_ opcode (`nir_intrinsic_load_constant`), which is used to "load" the sentinel value into some virtual register, and that the myriad of optimization passes NIR is run through can optimize it out (if it's possible to pre-compute some ALU operation or however else take a static decision about the fate of that value, for instance).
 
-The solution was simply to invent a new opcode (`nir_intrinsic_load_constant_non_opt`), which works exactly like the original one, but, by being in the end another one, is unkown to the optimization passes, which have no option but leaving it in place.
+The solution was simply to invent a new opcode (`nir_intrinsic_load_constant_non_opt`), which works exactly like the original one, but, by being in the end another one, is unknown to the optimization passes, which have no option but leaving it in place.
 
 ### 3. Obtaining patchable DXIL
 
@@ -92,7 +92,7 @@ I patched the code that emits constants to the DXIL stream so that it recognizes
 
 The Direct3D rendering driver is now able to apply whatever specialization constant values are needed to the already compiled shader, which was our initial goal.
 
-Now I have to mention that LLVM bitcode is an akward beast and that it's not trivial to patch a miserable integer due to variable bit-rate encoding. (Speaking of that, the former approach I implemented had a limit on the number of bits that could be patched. This imposed big limitations in the usable range of integers and imposed an elephant-sized epsilon for floating point ones; those have been happily lifted in the current one.)
+Now I have to mention that LLVM bitcode is an awkward beast and that it's not trivial to patch a miserable integer due to variable bit-rate encoding. (Speaking of that, the former approach I implemented had a limit on the number of bits that could be patched. This imposed big limitations in the usable range of integers and imposed an elephant-sized epsilon for floating point ones; those have been happily lifted in the current one.)
 
 This is the comparison of the assembly code produced by the same shader, only with different SC values, which allowed in the second case to optimize out a multiplication:
 

@@ -41,7 +41,7 @@ The venue is yet to be confirmed, but might also be at the MTP or nearby.
 
 ## Practical information
 
-[**See our Events page**](/events) for the details and pratical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
+[**See our Events page**](/events) for the details and practical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
 
 Both the GodotCon and Godot Sprint have free entry, but we ask you to [**register via this form**](https://framaforms.org/registration-for-godotcon-godot-sprint-poznan-2019-1563906147) so that we know who to expect, and how many attendees will be there.
 

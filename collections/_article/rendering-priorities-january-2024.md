@@ -13,7 +13,7 @@ At GodotCon this year I spoke about new features that the rendering team would l
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MW3IFMvDTCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Also, a reminder for those interested in contributing, the rendering team meets weekly and all are welcome to join the meetings ([calender link](https://calendar.google.com/calendar/u/0/r?cid=dXBwOGIwZXU0a3BlZjFjNTB2dTJmM2tjOGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)).
+Also, a reminder for those interested in contributing, the rendering team meets weekly and all are welcome to join the meetings ([calendar link](https://calendar.google.com/calendar/u/0/r?cid=dXBwOGIwZXU0a3BlZjFjNTB2dTJmM2tjOGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)).
 
 Also come join us in the `#rendering` channel on [chat.godotengine.org](https://chat.godotengine.org)!
 

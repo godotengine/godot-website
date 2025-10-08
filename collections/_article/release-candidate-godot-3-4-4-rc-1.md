@@ -24,7 +24,7 @@ Here are the main changes since 3.4.3-stable:
   * This fixed a valid issue while introducing a new one, so it was reverted for the time being until a better fix can be found.
 - Core: Print every file exported with `PCKPacker.flush()`'s verbose parameter ([GH-58520](https://github.com/godotengine/godot/pull/58520)).
 - Core: Fix `UndoRedo::create_action()` invalid memory usage ([GH-58652](https://github.com/godotengine/godot/pull/58652)).
-- Core: Revert "Fix ProjectSettings `has_setting()` when used on a overriden setting with feature tags" ([GH-58859](https://github.com/godotengine/godot/pull/58859)).
+- Core: Revert "Fix ProjectSettings `has_setting()` when used on a overridden setting with feature tags" ([GH-58859](https://github.com/godotengine/godot/pull/58859)).
 - CSG: Fix visible seam on smoothed sphere and cylinder shapes ([GH-58208](https://github.com/godotengine/godot/pull/58208)).
 - Editor: Fix showing Extend Script option without script attached to the node ([GH-58821](https://github.com/godotengine/godot/pull/58821)).
 - HTML5: Revert "[HTML5] Fetch API now passes credentials." ([GH-58862](https://github.com/godotengine/godot/pull/58862)) **[regression fix]**.

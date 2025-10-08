@@ -43,7 +43,7 @@ We've wanted to embrace open source fully for a while with GDQuest. To build eve
 
 Long story short, After the presentation in Tokyo, I got to showcase our recent open source projects to a panel of foreigners and Japanese game creators at Kyoto Indies.
 
-We've been doing work on the map, the dialogue system, and added touch support to open RPG. There again I've tried to poke at the participants' curiosity, hoping to get some more people to check the tutorials, and eventually use our RPG system as a base for their own projects.
+We've been doing work on the map, the dialog system, and added touch support to open RPG. There again I've tried to poke at the participants' curiosity, hoping to get some more people to check the tutorials, and eventually use our RPG system as a base for their own projects.
 
 ![Godot_v3.1-alpha3_win64_2018-12-21_20-58-50-fs8.png](/storage/app/uploads/public/5c1/cd5/bd4/5c1cd5bd4c5b3474514793.png)
 

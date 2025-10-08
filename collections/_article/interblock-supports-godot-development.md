@@ -11,9 +11,9 @@ date: 2019-11-20 14:52:55
 
 ----
 
-Interblock began making automated roulette games for casinos back in 1997. Fast forward twenty two years and we are now globally recognised for developing luxury products that bring top quality entertainment to players through an exclusive collection of gaming tables and video gaming. We produce all our own hardware, right here in Slovenia. Something that we are hugely proud of.
+Interblock began making automated roulette games for casinos back in 1997. Fast forward twenty two years and we are now globally recognized for developing luxury products that bring top quality entertainment to players through an exclusive collection of gaming tables and video gaming. We produce all our own hardware, right here in Slovenia. Something that we are hugely proud of.
 
-As time and technology move on, players' expectations are high and casinos strive to provide the ultimate gaming experiences. Casino products outside of the slot game industry have a reputation of being behind the technology curve, but as a technology company we are changing that perception and our products now have more visual synology with video games, utilising realtime 3D graphics and animated entertainment.
+As time and technology move on, players' expectations are high and casinos strive to provide the ultimate gaming experiences. Casino products outside of the slot game industry have a reputation of being behind the technology curve, but as a technology company we are changing that perception and our products now have more visual synology with video games, utilizing realtime 3D graphics and animated entertainment.
 
 For the last couple of years we have been looking for a technology solution that would provide the same level of performance and user friendliness that our team has been used to working with. We evaluated a few, but once Godot implemented C# it was the trigger for us to make the switch. Being an Open Source project was also a key element in our decision process, having direct access to the source is a huge advantage. Now that we are involved in the Godot project we are excited to be able to contribute back to its overall success.
 

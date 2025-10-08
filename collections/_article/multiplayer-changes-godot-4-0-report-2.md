@@ -104,7 +104,7 @@ This might at first seem like a limitation, but it is actually their true power.
 
 Every time you send a message (RPC) in a reliable way, the protocol needs to keep track of it and wait until the client acknowledge its receival before sending more messages. While there are many techniques protocols use to optimize this process (e.g. buffering multiple messages), this inevitably introduces latency.
 
-In your game, you will likely have some RPCs that are quite unrelated from the others (e.g. the player chat). These RPCs don't have to be perfectly in sync with the rest of the game (while retaining internal order). In those cases, especially when transfering larger amount of data, using a separate channel is an efficient way to reduce latency and lower the risk of disconnections.
+In your game, you will likely have some RPCs that are quite unrelated from the others (e.g. the player chat). These RPCs don't have to be perfectly in sync with the rest of the game (while retaining internal order). In those cases, especially when transferring larger amount of data, using a separate channel is an efficient way to reduce latency and lower the risk of disconnections.
 
 ```
 @rpc(any_peer, 1)

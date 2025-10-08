@@ -91,7 +91,7 @@ We have dozens of core developers and more than 400 contributors working on Godo
 
 But this is not all, Godot development is a true meritocracy. Code is only merged when deemed worthy by the other developers. Every change is discussed for pros and cons.
 
-This process is led by our large user community, who usually sets our priorities via issues (or just random rants on our community sites :P). This same community helps with the testing and works directly with developers implementing each feature to ensure it works as best as possible. Our process is truly community-driven from begining to end.
+This process is led by our large user community, who usually sets our priorities via issues (or just random rants on our community sites :P). This same community helps with the testing and works directly with developers implementing each feature to ensure it works as best as possible. Our process is truly community-driven from beginning to end.
 
 This development process, which involves several thousands individuals, is extremely efficient and ensured that, in a bit less than 3 years, Godot went from being completely unknown to appear on the map on the most important developer communities. No other game related technology has grown so quickly!
 

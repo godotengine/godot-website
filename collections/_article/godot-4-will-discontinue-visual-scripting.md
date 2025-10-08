@@ -56,6 +56,6 @@ Godot development philosophy has shaped very strongly to focus on finding soluti
 
 ## Future
 
-There are some ideas floating around by contributors on implementing alternatives to do visual scripting, more similar to tools like Game Maker or GDevelop. Anything that is done will most likely still be an extension, as this provides more flexibility to experiment with quick feedback from users, and to provide lots of high level and even game-specific components without adding a significant maintainance burden on the core engine.
+There are some ideas floating around by contributors on implementing alternatives to do visual scripting, more similar to tools like Game Maker or GDevelop. Anything that is done will most likely still be an extension, as this provides more flexibility to experiment with quick feedback from users, and to provide lots of high level and even game-specific components without adding a significant maintenance burden on the core engine.
 
 The VisualScript removal from the core engine will happen before Beta (which is now very close!). Even though it's gone, we are still thankful to all the effort that many contributors put on it over the past years to try to keep it alive, even if ultimately we were unable to make it user-friendly enough to attract user interest!

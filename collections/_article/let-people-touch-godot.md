@@ -1,6 +1,6 @@
 ---
 title: "Let people touch Godot!"
-excerpt: "Maybe you have already seen an AdPod around. They are three-sided giant multitouch capable screens. The company behind them customizes them for very important customers for promotion campaings for things like movies (Disney, Universal).
+excerpt: "Maybe you have already seen an AdPod around. They are three-sided giant multitouch capable screens. The company behind them customizes them for very important customers for promotion campaigns for things like movies (Disney, Universal).
 
 They \"skin\" the device cosmetically for the targeted product and develop interactive apps that run on them. People walking by can interact with them, something which creates great product awareness and also entertains.
 
@@ -11,7 +11,7 @@ image: /storage/app/uploads/public/5a2/c53/7eb/5a2c537ebba45114446322.jpg
 date: 2017-12-09 08:30:00
 ---
 
-Maybe you have already seen an *AdPod* around. They are three-sided giant multitouch-capable screens. The company behind them customizes them for very important customers for promotion campaings for things like movies (**Disney, Universal**).
+Maybe you have already seen an *AdPod* around. They are three-sided giant multitouch-capable screens. The company behind them customizes them for very important customers for promotion campaigns for things like movies (**Disney, Universal**).
 
 They "skin" the device cosmetically for the targeted product and develop interactive apps that run on them. People walking by can interact with them, something which creates **great product awareness** and also entertains.
 

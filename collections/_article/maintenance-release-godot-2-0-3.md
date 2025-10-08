@@ -9,7 +9,7 @@ date: 2016-05-13 00:00:00
 
 It's been a bit over one month [since the release of Godot 2.0.2](/article/maintenance-release-godot-2-0-2), and a lot of work has been done in both the master branch and the stable 2.0 branch.
 
-We will soon post more details about the cool new features which are cooking up in the master branch (such as drag and drop support and editor localisation), but in the meantime, let's treat ourselves a nice bugfix release that also comes with interesting usability improvements. [Grab it now](/download), and read along!
+We will soon post more details about the cool new features which are cooking up in the master branch (such as drag and drop support and editor localization), but in the meantime, let's treat ourselves a nice bugfix release that also comes with interesting usability improvements. [Grab it now](/download), and read along!
 
 ## Distribution changes
 
@@ -63,7 +63,7 @@ The main highlights in this maintenance release are:
 * Fix to avoid video texture scaling
 * GridMap: Fix backwards rotate hotkeys
 * Keep editable instances data when replacing tree root node
-* Made trackpad behaviour optional in 3D mode
+* Made trackpad behavior optional in 3D mode
 * Reimplement key input events in Emscripten export
 * Rotation APIs: Better exposure for degrees methods
 * Tabs: various usability fixes

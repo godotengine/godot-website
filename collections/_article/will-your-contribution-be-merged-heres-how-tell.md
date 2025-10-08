@@ -9,11 +9,11 @@ date: 2018-11-19 00:00:00
 
 The [**pull request workflow**](https://contributing.godotengine.org/en/latest/organization/pull_requests/creating_pull_requests.html) is great, because it allows proposing changes to the codebase in a way where they can be evaluated, reviewed (with feedback) and eventually merged or rejected. Despite this, a large amount of pull requests (PRs) get rejected for reasons that are often unclear to new contributors.
 
-To avoid unnecesary work, this short article has some suggestions on what is desired and what is not, and the general rules for accepting or rejecting pull requests.
+To avoid unnecessary work, this short article has some suggestions on what is desired and what is not, and the general rules for accepting or rejecting pull requests.
 
 ## Ask first
 
-Ask about what you want to do, by either [opening an issue](https://github.com/godotengine/godot/issues/new), or asking in the [Godot contributors chat platform](https://chat.godotengine.org). This will defintely save you time and effort, as other contributors will better guide you on whether your proposal is desired or not (or what needs to be changed so it would be).
+Ask about what you want to do, by either [opening an issue](https://github.com/godotengine/godot/issues/new), or asking in the [Godot contributors chat platform](https://chat.godotengine.org). This will definitely save you time and effort, as other contributors will better guide you on whether your proposal is desired or not (or what needs to be changed so it would be).
 
 ## We refuse by default
 
@@ -21,7 +21,7 @@ Contributions are considered rejected until proven useful. There are no hypothet
 
 Again, hypothetical use cases are ignored most of the time, whereas real projects being worked on (and their needs) take the priority.
 
-This also means that it's your resonsibility (or that of fellow interested users) to demonstrate the use cases and need for a specific feature. Discuss it beforehand as mentioned, and add some details in your pull request (or the affiliated issue) about what this proposal aims to solve. A never-discussed, no-comment PR with a terse "Add feature X" 500 <abbr title="lines of code">LOC</abbr> commit will likely produce a deep *sigh* among PR reviewers, more than anticipation for a potential great feature.
+This also means that it's your responsibility (or that of fellow interested users) to demonstrate the use cases and need for a specific feature. Discuss it beforehand as mentioned, and add some details in your pull request (or the affiliated issue) about what this proposal aims to solve. A never-discussed, no-comment PR with a terse "Add feature X" 500 <abbr title="lines of code">LOC</abbr> commit will likely produce a deep *sigh* among PR reviewers, more than anticipation for a potential great feature.
 
 ## Bloat accumulates quickly
 

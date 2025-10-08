@@ -411,7 +411,7 @@ With every release we acknowledge that there are going to be problems which we c
 
 You can follow our [bug tracker](https://github.com/godotengine/godot/issues) to learn if the problem that you're experiencing has been reported. We appreciate new reports and confirmations of existing reports, as that helps us prioritize fixing specific issues.
 
-## Acknowledgements
+## Acknowledgments
 
 Announcements such as this are as much of a team effort as the development of the engine itself. We look to our community for help with illustrating the changes and improvements that go into each release.
 

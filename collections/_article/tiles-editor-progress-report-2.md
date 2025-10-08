@@ -34,7 +34,7 @@ I also implemented a bucket fill tool, which can either replace contiguous tiles
 ![Bucket fill tool](/storage/app/uploads/public/601/c03/fc5/601c03fc52dbd396049298.gif)
 
 
-All those paint tools support erasing tiles instead of painting them, but they also allow painting with patterns. The pattern used can be set either by selecting multiple tiles in the TileSet, by selecting tiles in the TileMap using the selection tool, or by using the TileMap picker. Of course the picker allows picking a single tile too, so that you do not have to search for the tiles to re-use in the TileSet panel:
+All those paint tools support erasing tiles instead of painting them, but they also allow painting with patterns. The pattern used can be set either by selecting multiple tiles in the TileSet, by selecting tiles in the TileMap using the selection tool, or by using the TileMap picker. Of course the picker allows picking a single tile too, so that you do not have to search for the tiles to reuse in the TileSet panel:
 
 ![Pattern painting](/storage/app/uploads/public/601/c04/892/601c048924ac0304396226.gif)
 

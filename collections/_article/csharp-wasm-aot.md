@@ -30,7 +30,7 @@ When it comes to compiling Godot from source, you will need to build both the Mo
 
 In the last progress report I talked about the upcoming extensions for editors/IDEs. Today the first extension is available as an add-in for Visual Studio for Mac and the MonoDevelop IDE.
 
-With using this add-in you can expect a better experience when opening/jumping to C# files from the Godot editor. Prior to this, Godot was using the MonoDevelop command line, which didn't work well when it comes to re-using running MonoDevelop instances. With this new add-in, Godot directly connects to the IDE to send such requests, eliminating those issues.
+With using this add-in you can expect a better experience when opening/jumping to C# files from the Godot editor. Prior to this, Godot was using the MonoDevelop command line, which didn't work well when it comes to reusing running MonoDevelop instances. With this new add-in, Godot directly connects to the IDE to send such requests, eliminating those issues.
 
 More importantly, this add-in aims to provide seamless debugging integration with the Godot editor. Launching from the MonoDevelop editor notifies the Godot editor to run the game and connect the debugger. From there everything should work as expected, from breakpoints, unhandled exceptions, etc.
 

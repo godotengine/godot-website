@@ -118,7 +118,7 @@ Some of the most notable feature changes in this update are:
 - Rendering: Implement `cull_mask` for decals and lights in mobile and compatibility backends ([GH-72810](https://github.com/godotengine/godot/pull/72810)).
 - Rendering: Set instancing flags when using `GPUParticles` in OpenGL renderer ([GH-72853](https://github.com/godotengine/godot/pull/72853)).
 - Rendering: Optimize `draw_dashed_line()` and `draw_rect()` ([GH-72880](https://github.com/godotengine/godot/pull/72880)).
-- Shaders: Allow `.gdshader` files in the 3-to-4 project convertor ([GH-72334](https://github.com/godotengine/godot/pull/72334)).
+- Shaders: Allow `.gdshader` files in the 3-to-4 project converter ([GH-72334](https://github.com/godotengine/godot/pull/72334)).
 - Shaders: Fix shader failure when using non-const initializer on a constant ([GH-72494](https://github.com/godotengine/godot/pull/72494)).
 - Shaders: Prevent preview error for the instance parameter in visual shader ([GH-72660](https://github.com/godotengine/godot/pull/72660)).
 - Windows: Fix window size for fullscreen windows during window creation ([GH-72622](https://github.com/godotengine/godot/pull/72622)).

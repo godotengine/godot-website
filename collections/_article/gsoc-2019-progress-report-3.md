@@ -177,7 +177,7 @@ Microsoft's Language Server Protocol (LSP) is flexible and powerful to implement
 
 ### Installation
 
-Currently, the pull request has yet to be merged with the actual Godot working repository. To run the LSP implementation, client (extenral editor) and server (Godot) both need to be run seperately. The client implemented in this project is a [VS Code extension](https://github.com/godotengine/godot-vscode-plugin). Open it inside VS Code and first install required dependencies using the `npm install` command; after that, running it will simply open the client in the Extension Development Environment. To create an output extension format from the project use `vsce`, you can learn more about it from the [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).
+Currently, the pull request has yet to be merged with the actual Godot working repository. To run the LSP implementation, client (extenral editor) and server (Godot) both need to be run separately. The client implemented in this project is a [VS Code extension](https://github.com/godotengine/godot-vscode-plugin). Open it inside VS Code and first install required dependencies using the `npm install` command; after that, running it will simply open the client in the Extension Development Environment. To create an output extension format from the project use `vsce`, you can learn more about it from the [VS Code documentation](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).
 
 ### GSoC journey
 
@@ -185,7 +185,7 @@ Currently, the pull request has yet to be merged with the actual Godot working r
 I started off with getting familiar with Godot's code base and understanding the previous implementation of Godot Tools (a pre-exisiting VS Code integration plugin). I also got familiar with my mentor and other developers over IRC.
 
 **Coding period #1 (May 27, 2019 - June 24, 2019)**<br>
-My mentor Geequlim already had a basic version of LSP server and client for VS Code implemented, so my task was to improve upon it, try to identify possible point of failures and also include all the expected features. At first we implemented Error Diagnostics: every time a change is detected by the LSP Server from the client, diagnostics are updated i.e. errors and warnings along with their relevant informations such as range and message are being parsed by an Extended GDScript Parser.
+My mentor Geequlim already had a basic version of LSP server and client for VS Code implemented, so my task was to improve upon it, try to identify possible point of failures and also include all the expected features. At first we implemented Error Diagnostics: every time a change is detected by the LSP Server from the client, diagnostics are updated i.e. errors and warnings along with their relevant information such as range and message are being parsed by an Extended GDScript Parser.
 
 **Coding period #2 (June 28, 2019 - July 22, 2019)**<br>
 Geequlim has been very active throughout, during this period initially he implemented an entire symbol cache pool while I was working on the Code Completion feature. The cache pool is filled at the startup by parsing all scripts in the workspace for script symbols and loading native symbols from Godot's `DocData`. Later on I used that symbol pool to implement features such as - Hover Provider, Function Assist, Symbol Resolve & Go to definition.
@@ -195,7 +195,7 @@ At the end of this period I started implementing a documentation system. It star
 I've also worked on a rename symbol feature during this time which I couldn't complete as there were cases which it was still missing (see [this issue](https://github.com/ankitpriyarup/godot/issues/5)), I'm looking forward to fixing it post-GSoC period.
 
 **Coding period #3 (July 26, 2019 - August 19, 2019)**<br>
-I improved upon the Markdown rendering system, I added a link system in it so that one can jump to the documentation of another class by clicking on its name within the docs. Next I added a regex parser capable of parsing the class name on 'View Symbol Documentation'. In case the parsed symbol isn't recognised, a list of all the symbols will be shown.
+I improved upon the Markdown rendering system, I added a link system in it so that one can jump to the documentation of another class by clicking on its name within the docs. Next I added a regex parser capable of parsing the class name on 'View Symbol Documentation'. In case the parsed symbol isn't recognized, a list of all the symbols will be shown.
 
 Lastly I implemented Document Link support for direct access of files within GDScript using Ctrl+Click or Cmd+Click on path strings. Relative paths are also supported.
 
@@ -225,7 +225,7 @@ The old solution to the problem of cached IO was to use `FileAccessBuffered`. Th
 
 ### Current state
 
-The solution I have developed is to provide a separate "cache server" module to allow for caching within the engine. This module's functionality is focussed around two classes: `FileAccessCached` and `FileCacheManager`. `FileCacheManager` is a custom server class that performs the caching and manages all the cached files. It acts as a middleman between the engine and the OS.
+The solution I have developed is to provide a separate "cache server" module to allow for caching within the engine. This module's functionality is focused around two classes: `FileAccessCached` and `FileCacheManager`. `FileCacheManager` is a custom server class that performs the caching and manages all the cached files. It acts as a middleman between the engine and the OS.
 
 `FileAccessCached` is the interface through which the engine interacts with `FileCacheManager`. It provides an interface similar to the built in `FileAccess` API and supports all operations that can be performed on a normal `FileAccess`.
 
@@ -243,11 +243,11 @@ There's also a [test repository](https://github.com/WarpspeedSCP/godot-cacheserv
 
 ### A brief history
 
-This project had quite a bumpy beginning. While the design I'd envisioned used a technique known as [paging](https://en.wikipedia.org/wiki/Paging) to provide the caching behaviour, what I started out with was quite off the mark; it was more akin to [memory management](https://en.wikipedia.org/wiki/Memory_management) than paging. Punto caught me out on this when I talked to him about it, and from there, I got started with the module in earnest.
+This project had quite a bumpy beginning. While the design I'd envisioned used a technique known as [paging](https://en.wikipedia.org/wiki/Paging) to provide the caching behavior, what I started out with was quite off the mark; it was more akin to [memory management](https://en.wikipedia.org/wiki/Memory_management) than paging. Punto caught me out on this when I talked to him about it, and from there, I got started with the module in earnest.
 
 A similar thing happened later on as well when I tried to make a very convoluted system to handle the problem of keeping files cached even if the backing source was closed.
 
-Throughout June, the basic framework of the module was established. In July, I focussed on getting the kinks out for the design and making incremental improvements. Sadly, I didn't really follow any testing methodology while developing this module, which is something I regret now. I spent most of August weeding out bugs. It was a mostly successful endeavour.
+Throughout June, the basic framework of the module was established. In July, I focused on getting the kinks out for the design and making incremental improvements. Sadly, I didn't really follow any testing methodology while developing this module, which is something I regret now. I spent most of August weeding out bugs. It was a mostly successful endeavor.
 
 ### Bugs
 
@@ -265,7 +265,7 @@ For example, this means that enqueueing three separate operations results in all
 - It's ok not to be perfect. It all comes in due course.
 - Don't overthink things. It's not worth the effort.
 
-### Acknowledgements
+### Acknowledgments
 
 I'm really grateful to my mentor punto for his help. He always has great advice for me, and he's a really chill guy. Actually, that could apply to the entire Godot engine community too. You're all awesome, guys.
 
@@ -383,11 +383,11 @@ I have made two video tutorials, explaining how to use each class, and I have al
 
 ### Challenges encountered
 
-One of the first challenges I faced was to figure out how the initial code was going to work. With some help from my mentor who explained a lot of the basics to me, I managed to get a very basic version of Playlist working, however it had the problem of a memory leak, which took me a while to fix. As mentioned in the [previous](/article/gsoc-2019-progress-report-1-part-1#interactive-music) [two](/article/gsoc-2019-progress-report-2#interactive-music) progress reports, the issue was that the preview generator for audio streams was trying to create an infinite preview and that would take up all of my computer's RAM. The issue was solved through communicating with a developer interested in the feature who asked me why does Playlist loop indefinitely, at which point I realized somethig was not right. More info on this can be found in [Progress report #2](/article/gsoc-2019-progress-report-2#interactive-music).
+One of the first challenges I faced was to figure out how the initial code was going to work. With some help from my mentor who explained a lot of the basics to me, I managed to get a very basic version of Playlist working, however it had the problem of a memory leak, which took me a while to fix. As mentioned in the [previous](/article/gsoc-2019-progress-report-1-part-1#interactive-music) [two](/article/gsoc-2019-progress-report-2#interactive-music) progress reports, the issue was that the preview generator for audio streams was trying to create an infinite preview and that would take up all of my computer's RAM. The issue was solved through communicating with a developer interested in the feature who asked me why does Playlist loop indefinitely, at which point I realized something was not right. More info on this can be found in [Progress report #2](/article/gsoc-2019-progress-report-2#interactive-music).
 
 Another big challenge was figuring out the logic for Transitioner, and then adding functionalities for a transition clip in the logic. This was probably the biggest piece of mixing logic I have ever written and it was a very interesting challenge to do it properly and also debug any issues with it.
 One of the problems with this was that I could hear a click when fades were happening. Figuring out the source took some back and forth in the dev chat and it was noticed that what was happening was extra frames were being processed ([screenshot of the signal](https://imgur.com/a/egL7Gua)).
-I realised that the reason this was happening was because, at the end of a transition, the samples left to process would be smaller than the buffer size, which is what the mix logic uses as block size.
+I realized that the reason this was happening was because, at the end of a transition, the samples left to process would be smaller than the buffer size, which is what the mix logic uses as block size.
 
 ```
 for (int i = 0; i < to_mix; i++) {
@@ -474,7 +474,7 @@ When the project loads up, you are greeted with the Godot editor that you know a
 
 2. A popup will ask you which VCS addon would you like to use. In our case we are using Git, so select `GitAPI` from the drop-down menu. Then click `Initialize` and close the popup.
 
-![Initalize the GitAPI plugin](/storage/app/media/gsoc/2019-3/vcs-002.png)
+![Initialize the GitAPI plugin](/storage/app/media/gsoc/2019-3/vcs-002.png)
 
 *If you are not able to see a `GitAPI` option then this means that you don't have the addon binaries present in your project folder.*
 

@@ -26,7 +26,7 @@ In Godot 3.x there were two [`Sky`](https://docs.godotengine.org/en/3.2/classes/
 2. The radiance size.
 3. The update mode.
 
-Instead of subclasses, the behaviour of the `Sky` is contained in its `Material`. For all three \*SkyMaterial types, users can select "Convert to ShaderMaterial" and edit the code directly.
+Instead of subclasses, the behavior of the `Sky` is contained in its `Material`. For all three \*SkyMaterial types, users can select "Convert to ShaderMaterial" and edit the code directly.
 
 ### `PanoramaSkyMaterial`
 

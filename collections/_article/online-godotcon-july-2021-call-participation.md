@@ -53,4 +53,4 @@ Please send your proposals to **godotcon *at* godotengine *·* org** with the fo
 
 For any other questions, please, don't hesitate to write to that same mail (godotcon *at* godotengine *·* org) and the GodotCon team (Aina, Ilaria, Julian, and Wojciech) will try to solve your doubts.
 
-We hope to see you at the event, and may we be able to also organise an in-person conference soon!
+We hope to see you at the event, and may we be able to also organize an in-person conference soon!

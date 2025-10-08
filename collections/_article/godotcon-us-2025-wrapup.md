@@ -44,7 +44,7 @@ In no particular order:
 * [Burrito Bear by SpaceOrca](https://store.steampowered.com/app/1941420/Burrito_Bear/): Eat burritos, avoid garbage in three bold, beautiful, shiny dimensions.
 * [Turnip Boy Steals the Mail by Snoozy Kanoo](https://store.steampowered.com/app/3660860/Turnip_Boy_Steals_the_Mail/): A free new Turnip Boy adventure.
 * [Memori by PracticalNPC](https://store.steampowered.com/app/1712700/Memori/): A precision pixel platformer with challenging puzzles.
-* [Dunderbeck by RUST LTD](https://store.steampowered.com/app/2477750/Dunderbeck/): Fight, build, and eat your way across the mythical land of Cincinatti. 
+* [Dunderbeck by RUST LTD](https://store.steampowered.com/app/2477750/Dunderbeck/): Fight, build, and eat your way across the mythical land of Cincinnati. 
 * [no signal by exodrifter](https://store.steampowered.com/app/2840590/no_signal/): An emotional point-and-click hard sci-fi adventure.
 * [Dante's 9 by John D](https://store.steampowered.com/app/3293350/Dantes_9/): A roguelite action-platformer fused with a deckbuilder.
 * [Dukkido by MariSuCho](https://store.steampowered.com/app/3186280/Dukkido/): A physics-based action-RTS, featuring large handcrafted levels and dungeons.

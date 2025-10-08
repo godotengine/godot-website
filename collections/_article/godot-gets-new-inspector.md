@@ -40,11 +40,11 @@ The new inspector is Control based. All editing is done via controls instead of 
 
 #### New Spin-Slider for numerical editing
 
-A new Spin-Slider (mix of SpinBox and Slider) was added for numerical entry. It alows:
+A new Spin-Slider (mix of SpinBox and Slider) was added for numerical entry. It allows:
 
 * Editing values in absolute range (via slider)
 * Editing values in relative range (via spin, just drag it from left to right)
-* Editing values numerically (simply click it and enter a numer)
+* Editing values numerically (simply click it and enter a number)
 
 ![](/storage/app/media/inspector/spin_slider.gif)
 
@@ -62,7 +62,7 @@ Properties of types such as Vector3, Vector3, Transform, etc. can now edited and
 
 One of the biggest usability hurdles in Godot was the fact that sub-resources would go to a separate inspector. In many types of nodes (Mesh, Particles, etc), editing sub-resources was truly a hassle.
 
-This no longer applies to the new inspector. Sub-Resources wil open within the same list of edited properties:
+This no longer applies to the new inspector. Sub-Resources will open within the same list of edited properties:
 
 ![](/storage/app/media/inspector/sub_resource_edit.gif)
 
@@ -77,7 +77,7 @@ Besides the boxes, the list of layers now appears in a proper drop down, making 
 
 #### Proper Array and Dictionary editing
 
-With the old inspector, editing arrays and dictionaries was more or less a hack. A new proxy object was created that would edit it, which requiered going into a separate inspector. Undo and Redo also did not work well on it, given the hacky nature.
+With the old inspector, editing arrays and dictionaries was more or less a hack. A new proxy object was created that would edit it, which required going into a separate inspector. Undo and Redo also did not work well on it, given the hacky nature.
 
 Currently, editing them is done properly and without even going to a sub-inspector. Here is an example of two arrays, of different types, being edited at the same time. Arrays can be collapsed to save vertical space.
 

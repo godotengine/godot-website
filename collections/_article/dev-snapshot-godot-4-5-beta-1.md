@@ -95,7 +95,7 @@ And more:
 
 First-time contributor [Justin Sasso](https://github.com/atlasapplications) kicks things off with `linux-bionic` RID export support ([GH-97908](https://github.com/godotengine/godot/pull/97908)). For those that don't speak buildsystem, this enables NativeAOT on Android! For those that don't speak .NET lingo, "NativeAOT" refers to the ability for .NET applications to compile directly to a device's native code, bypassing the need for the .NET runtime entirely. NativeAOT apps have the benefit of significantly faster startup and smaller memory footprints, which are both very welcome additions for mobile devices.
 
-Finding performance improvements in an interop context is like finding a needle in a haystack. Actually tracking down where some point of slowdown or inefficency is taking place across entirely different environments is difficult to the point that most people won't even attempt it. [Delsin-Yu](https://github.com/Delsin-Yu) is not most people, because the improvements that came from simply removing `StringName` allocations on unimplemented getters/setters saw a staggering **60× decrease** in resources ([GH-104689](https://github.com/godotengine/godot/pull/104689)).
+Finding performance improvements in an interop context is like finding a needle in a haystack. Actually tracking down where some point of slowdown or inefficiency is taking place across entirely different environments is difficult to the point that most people won't even attempt it. [Delsin-Yu](https://github.com/Delsin-Yu) is not most people, because the improvements that came from simply removing `StringName` allocations on unimplemented getters/setters saw a staggering **60× decrease** in resources ([GH-104689](https://github.com/godotengine/godot/pull/104689)).
 
 Not everything related to .NET was able to make it in time for 4.5, but they're still worth mentioning because of how much effort the team has already put into them. For instance: we're well aware of the excitement around bringing .NET to web builds for Godot, and progress on that front has been very promising. We've even covered this very topic in a [previous blog](https://godotengine.org/article/live-from-godotcon-boston-web-dotnet-prototype/), where we discussed the rocky road of bringing this project to light even featured a prototype which you can try [right now](https://lab.godotengine.org/godot-dotnet-web/)!
 
@@ -263,7 +263,7 @@ There's also the newly added `SVGTexture`, implemented by our very own [bruvzg](
 And more:
 - TextEdit/LineEdit: Add support for OEM Alt codes input. ([GH-93466](https://github.com/godotengine/godot/pull/93466))
 - Stackable outlines on `Label`. ([GH-104731](https://github.com/godotengine/godot/pull/104731))
-- Replace global oversampling with overrideable per-viewport oversampling. ([GH-104872](https://github.com/godotengine/godot/pull/104872))
+- Replace global oversampling with overridable per-viewport oversampling. ([GH-104872](https://github.com/godotengine/godot/pull/104872))
 - RichTextLabel: Add paragraph separation theme property. ([GH-107331](https://github.com/godotengine/godot/pull/107331))
 
 ### Import
@@ -303,7 +303,7 @@ We also want to give a shout-out to all the translators who tirelessly work on l
 
 The navigation team has been able to really spread their wings thanks to logic for 2D and 3D being handled independently. [smix8](https://github.com/smix8) took the mantle on the initial split, while [A Thousand Ships](https://github.com/AThousandShips) brought the logic to the module system itself. This opened the door for improvements to performance across both navigation systems, and helps decrease the size of builds which exclusively target 2D.
 
-The work started by smix8 in 4.4 to make navigation map synchronization asynchronous ([GH-100497](https://github.com/godotengine/godot/pull/100497)) was expanded for this release by applying the same treatement to navigation regions (3D: [GH-106670](https://github.com/godotengine/godot/pull/106670), 2D: [GH-107381](https://github.com/godotengine/godot/pull/107381)).
+The work started by smix8 in 4.4 to make navigation map synchronization asynchronous ([GH-100497](https://github.com/godotengine/godot/pull/100497)) was expanded for this release by applying the same treatment to navigation regions (3D: [GH-106670](https://github.com/godotengine/godot/pull/106670), 2D: [GH-107381](https://github.com/godotengine/godot/pull/107381)).
 
 And more:
 - Add navigation path query parameter limits. ([GH-102767](https://github.com/godotengine/godot/pull/102767))

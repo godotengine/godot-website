@@ -18,7 +18,7 @@ WebSocket update
 Third-party library change
 --------------------------
 
-In an effort to make Godot's WebSocket implementation more portable, maintainable and lightweight we recently swtiched from [libwebsocket](https://libwebsockets.org/) to [wslay](https://tatsuhiro-t.github.io/wslay/).
+In an effort to make Godot's WebSocket implementation more portable, maintainable and lightweight we recently switched from [libwebsocket](https://libwebsockets.org/) to [wslay](https://tatsuhiro-t.github.io/wslay/).
 
 This new library allows us to use our own networking classes, making it more portable across different platforms, and solving some long lasting problems we had with the previous library, while also decreasing the overall code size.
 

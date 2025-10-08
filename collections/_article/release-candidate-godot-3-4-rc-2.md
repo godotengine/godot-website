@@ -112,7 +112,7 @@ Note that some of the changes in 3.4 have already been backported and published 
 - C#: Add support to export enum strings for `Array<string>` ([GH-52763](https://github.com/godotengine/godot/pull/52763)).
 - C#: Support arrays of `NodePath` and `RID` ([GH-53577](https://github.com/godotengine/godot/pull/53577)).
 - C#: Support marshaling generic `Godot.Object` ([GH-53582](https://github.com/godotengine/godot/pull/53582)).
-- C#: Fix `List<T>` marshalling ([GH-53628](https://github.com/godotengine/godot/pull/53628)).
+- C#: Fix `List<T>` marshaling ([GH-53628](https://github.com/godotengine/godot/pull/53628)).
 - C#: Fix `hint_string` for enum arrays ([GH-53638](https://github.com/godotengine/godot/pull/53638)).
 - C#: Keep order for C# exported members ([GH-54199](https://github.com/godotengine/godot/pull/54199)).
 - C#: Avoid modifying `csproj` globbing includes ([GH-54262](https://github.com/godotengine/godot/pull/54262)).
@@ -328,7 +328,7 @@ Note that some of the changes in 3.4 have already been backported and published 
 - Rendering: Add half frame to `floor()` for animated particles UV to compensate precision errors ([GH-53233](https://github.com/godotengine/godot/pull/53233)).
 - RichTextLabel: Fix auto-wrapping on CJK texts ([GH-49280](https://github.com/godotengine/godot/pull/49280)).
 - RichTextLabel: Fix character horizontal offset calculation ([GH-52752](https://github.com/godotengine/godot/pull/52752)).
-- RichTextLabel: Honor content marging when drawing font shadow ([GH-54054](https://github.com/godotengine/godot/pull/54054)).
+- RichTextLabel: Honor content margin when drawing font shadow ([GH-54054](https://github.com/godotengine/godot/pull/54054)).
 - RichTextLabel: Fix meta link detection when used inside a fill tag ([GH-54114](https://github.com/godotengine/godot/pull/54114)).
 - Scene: Fix loading packed scene with editable children at runtime ([GH-49664](https://github.com/godotengine/godot/pull/49664)).
 - Scene: Write node groups on a single line when saving a `.tscn` file ([GH-52284](https://github.com/godotengine/godot/pull/52284)).

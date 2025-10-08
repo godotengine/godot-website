@@ -50,7 +50,7 @@ Some of the most notables feature changes in this update are:
 - Editor: Improve tile editor selection appearance ([GH-60892](https://github.com/godotengine/godot/pull/60892)).
 - Editor: Improve TileSetAtlasSourceEditor UI ([GH-69300](https://github.com/godotengine/godot/pull/69300)).
 - Editor: Restore AudioStreamEditor class to fix playable sound previews ([GH-70074](https://github.com/godotengine/godot/pull/70074)).
-- GDExtension: Rename all gdnative occurences to gdextension ([GH-69718](https://github.com/godotengine/godot/pull/69718)).
+- GDExtension: Rename all gdnative occurrences to gdextension ([GH-69718](https://github.com/godotengine/godot/pull/69718)).
 - GDExtension: Improve logic around using `Ref<T>` with GDExtension virtual functions ([GH-69902](https://github.com/godotengine/godot/pull/69902)).
 - GDScript: Add implicit type conversion for member variables with initializers ([GH-69416](https://github.com/godotengine/godot/pull/69416)).
 - GDScript: Out of order member resolution ([GH-69471](https://github.com/godotengine/godot/pull/69471)).

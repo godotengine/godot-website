@@ -34,7 +34,7 @@ The lightless underground holds swarms of enemies that will raid your base. Illu
 With a lot of effort and a set of original algorithms, 2Dynamic Games have transformed the open-source Godot Engine into a completely new tool. This allows every bit of terrain (pixel, as we used to call them) to be destroyed, and maps to be painted as if in a drawing program.
 
 ### YOUR WAY TO PLAY
-Lumencraft offers several game modes to suit your gameplay style. With a 27-mission campaign experience the full narrative of humanity’s struggle for survival. Jump into procedurally generated maps and fight in a true roguelike fashion. Or maybe create your own level in the editor, or try out what the creators and Steam Workshop users have prepared for you. Custom game types (e.g. tower defence, action, survival or mix of them) with user-defined starting technologies/upgrades and goals allow you to test your skills as a scout in any conditions. Invite your friend to play locally or using Steam Remote play and dive into the darkness together.
+Lumencraft offers several game modes to suit your gameplay style. With a 27-mission campaign experience the full narrative of humanity’s struggle for survival. Jump into procedurally generated maps and fight in a true roguelike fashion. Or maybe create your own level in the editor, or try out what the creators and Steam Workshop users have prepared for you. Custom game types (e.g. tower defense, action, survival or mix of them) with user-defined starting technologies/upgrades and goals allow you to test your skills as a scout in any conditions. Invite your friend to play locally or using Steam Remote play and dive into the darkness together.
 
 ### MAP EDITOR
 

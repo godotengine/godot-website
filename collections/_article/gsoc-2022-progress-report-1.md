@@ -152,7 +152,7 @@ Previously every `LightmapGI` node used to store its lightmap atlas in a single 
 
 #### Soft shadows
 
-The general idea behind soft shadows is to take into account the light source's size instead of treating the light source as a point. When one also takes the contribution of light rays from parts of the light source other than its centre, there is a gradual transition from shadowed to fully lit instead of an abrupt change.
+The general idea behind soft shadows is to take into account the light source's size instead of treating the light source as a point. When one also takes the contribution of light rays from parts of the light source other than its center, there is a gradual transition from shadowed to fully lit instead of an abrupt change.
 
 I added support for soft shadows to the GPU lightmapper by incorporating this idea in the lightmapper's raytracing compute shader.
 

@@ -9,7 +9,7 @@ date: 2019-04-19 14:53:33
 
 ## Presentations
 
-Hello Godotters, my name is Fabio Alessandrelli, you may know me by my handle fales ([faless](https://github.com/Faless) on GitHub). Here are a few words about my Godot journey.
+Hello Godotters, my name is Fabio Alessandrelli, you may know me by my handle Fales ([Faless](https://github.com/Faless) on GitHub). Here are a few words about my Godot journey.
 
 I first discovered Godot in 2015 while looking for a good game engine (that would also work on GNU/Linux) to develop a small game for a university project with a friend.
 
@@ -23,7 +23,7 @@ Finally, I started specializing in the networking subsystem (again, because I ne
 
 One of the thing that struck me after some time playing with Godot, was how easily it enables developers to export for different platforms, and among those, **HTML5/WebAssembly** (thanks to the great effort of many developers, especially eska, the current HTML5 platform maintainer). Enabling developers to share their beautiful **games running in browsers** is a great feature for an engine!
 
-Networking trough browsers used to be very limited and originally only **HTTP requests** were possible.
+Networking through browsers used to be very limited and originally only **HTTP requests** were possible.
 
 ### Websocket
 

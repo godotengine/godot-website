@@ -84,7 +84,7 @@ Here are the main changes since 3.4-stable:
 - Theme: Make default/project theme wait for modules before initializing (fixes WebP support for custom themes) ([GH-55484](https://github.com/godotengine/godot/pull/55484)).
 - Tiles: Fix TileSet editor workspace breaking ([GH-55059](https://github.com/godotengine/godot/pull/55059)).
 - Tiles: Only add light occlusion for visible TileMaps ([GH-54435](https://github.com/godotengine/godot/pull/54435)).
-- Tiles: Fix selecting next/previous subtile in TileSet editor ([GH-55261](https://github.com/godotengine/godot/pull/55261)).
+- Tiles: Fix selecting next/previous sub-tile in TileSet editor ([GH-55261](https://github.com/godotengine/godot/pull/55261)).
 - Viewport: Show tooltips even when paused or `time_scale` is 0 ([GH-55224](https://github.com/godotengine/godot/pull/55224)).
 - Windows: Open a new console window for the editor instances on Windows 11 ([GH-55925](https://github.com/godotengine/godot/pull/55925), [GH-55967](https://github.com/godotengine/godot/pull/55967)).
   * This is needed to workaround a design change in Windows 11's new Windows Terminal, which broke Godot ([GH-54076](https://github.com/godotengine/godot/issues/54076)).

@@ -23,7 +23,7 @@ On top of that, most of the issues with HiDPI displays has been fixed in HTML5 e
 
 ### Customizing the HTML shell
 
-The default HTML template used when exporting projects for the Web has become increasingly complex over the years. While we tried to accomodate good defaults for all projects, this has become a problem for users that wants to customize the loading bar, the background image, etc.
+The default HTML template used when exporting projects for the Web has become increasingly complex over the years. While we tried to accommodate good defaults for all projects, this has become a problem for users that wants to customize the loading bar, the background image, etc.
 
 To make things easier for developers, the HTML template format has been rewritten quite a bit. Unfortunately, this will break compatibility with previous versions if you where using a custom HTML shell. Since the feature was mostly unused because of how hard it was to maintain, and that further breakage would have been necessary anyway to support new features, I've decided to go ahead and do it for the `3.2.4`/`3.3` release which includes most of the new cool features.
 

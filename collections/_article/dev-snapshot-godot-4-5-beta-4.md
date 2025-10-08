@@ -37,7 +37,7 @@ For an overview of what's new overall in Godot 4.5, have a look at the highlight
 - Porting: Windows: Add SSE4.2 support runtime check ([GH-108561](https://github.com/godotengine/godot/pull/108561)).
 - Rendering: Always perform color correction and debanding on nonlinear sRGB values ([GH-107782](https://github.com/godotengine/godot/pull/107782)).
 - Rendering: Fix crash when creating voxel GI data ([GH-108397](https://github.com/godotengine/godot/pull/108397)).
-- Rendering: Fix underculling of occulusion culling ([GH-108347](https://github.com/godotengine/godot/pull/108347)).
+- Rendering: Fix underculling of occlusion culling ([GH-108347](https://github.com/godotengine/godot/pull/108347)).
 
 ## Changelog
 

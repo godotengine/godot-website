@@ -42,7 +42,7 @@ tool: true
   adventure games! As its name suggests, it will contain every tool necessary
   for turning your ideas into games, all packaged together "in a box". The
   software is designed with a beginner-friendly approach as to not require any
-  programming or modelling knowledge while still providing a wide range of
+  programming or modeling knowledge while still providing a wide range of
   customization and openness.
 </p>
 <ul>
@@ -64,7 +64,7 @@ tool: true
     engine's custom scripting language.
   </li>
   <li>
-    Basic dialogue and item systems, multiple camera options, UI customization,
+    Basic dialog and item systems, multiple camera options, UI customization,
     sound effect generator, and much more!
   </li>
 </ul>

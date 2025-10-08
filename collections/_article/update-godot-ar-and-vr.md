@@ -9,7 +9,7 @@ date: 2019-03-29 07:57:24
 
 It may have seemed a little quiet on the Godot AR and VR front but a lot has been happening behind the scenes. With Godot 3.1 released and new plugins being uploaded to the asset library, an update on the state of things is long overdue.
 
-Godot 3.1 has various optimisations added to speed up the stereoscopic rendering. There is more work to be done here, some of which we wish to tackle once the Vulkan port is on the way and will have to wait for the 4.0 release, but we are planning improvements for 3.2. A breaking change did have to be introduced for 3.1 which means that new plugins are required, you can't use the Godot 3.0 VR plugins in 3.1.
+Godot 3.1 has various optimizations added to speed up the stereoscopic rendering. There is more work to be done here, some of which we wish to tackle once the Vulkan port is on the way and will have to wait for the 4.0 release, but we are planning improvements for 3.2. A breaking change did have to be introduced for 3.1 which means that new plugins are required, you can't use the Godot 3.0 VR plugins in 3.1.
 
 That Godot has AR and VR support isn't widely known but there is a slowly growing userbase out there and even a few commercial products.
 

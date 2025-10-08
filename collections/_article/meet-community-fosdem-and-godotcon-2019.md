@@ -28,7 +28,7 @@ You can also indicate on that form if you plan to attend FOSDEM, so that we know
 ## FOSDEM 2019
 
 [FOSDEM](https://fosdem.org) is the major European event focusing on Free and Open Source Software (FOSS). We will have a stand there where you can meet and discuss with many Godot contributors and users.
-We will be distributing and selling some goodies (T-Shirts, stickers) and most importantly presenting our favourite engine and some games to the FOSDEM visitors. More than 8,000 visitors are awaited, and we hope that many will be impressed by Godot 3.x and the games made with it!
+We will be distributing and selling some goodies (T-Shirts, stickers) and most importantly presenting our favorite engine and some games to the FOSDEM visitors. More than 8,000 visitors are awaited, and we hope that many will be impressed by Godot 3.x and the games made with it!
 
 There *might* be Godot-related talks, but we are still waiting for a confirmation from the FOSDEM organizers (the event is increasingly popular and they have hundreds of talk proposals to choose from).
 

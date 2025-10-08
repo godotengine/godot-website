@@ -29,7 +29,7 @@ Note that the terrain painting tool makes use of the `probability` property. It 
 
 ### Scene tiles support
 
-One of the very requested features was the possibility to paint scenes on TileMaps. This is now possible thanks to a new `TileSetScenesCollectionSource` allowing you to configure scene-based tiles. Those scenes are instanciated as internal child nodes of the TileMap node's. They are not visible in the editor's scene tree but can be accessed at runtime with `$tile_map_node.get_child(...)`. In case your scene is not visible, you can configure the editor to display a placeholder.
+One of the very requested features was the possibility to paint scenes on TileMaps. This is now possible thanks to a new `TileSetScenesCollectionSource` allowing you to configure scene-based tiles. Those scenes are instantiated as internal child nodes of the TileMap node's. They are not visible in the editor's scene tree but can be accessed at runtime with `$tile_map_node.get_child(...)`. In case your scene is not visible, you can configure the editor to display a placeholder.
 
 ![Scene tiles painting](/storage/app/uploads/public/60c/77e/95a/60c77e95aabc5449375753.gif)
 

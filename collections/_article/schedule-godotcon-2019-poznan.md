@@ -53,8 +53,8 @@ Note: This is currently an unordered list of talks we will have. This post will 
 - **Talk:** *WebRTC: Low-latency, encrypted, peer-to-peer multiplayer for Godot Engine* | Fabio Alessandrelli ([Faless](https://github.com/Faless))
   * Overview of the new WebRTC support in the upcoming Godot 3.2: why and how to use it, how it is implemented, etc.
 
-- **Talk:** *Using Godot for economic simulation and agent-based modelling* | Jeremiah Lasquety-Reyes
-  * Economic models are difficult to understand for ordinary people. I talk about how Godot can be used for more intuitive and understandable economic models especially through combining a certain school of economics (Austrian economics) and a certain kind of simulation (agent-based modelling). I consider how Godot's unique scene-node system, flexible graphics, scripting language, and open source code make it a promising alternative to standard agent-based modelling software.
+- **Talk:** *Using Godot for economic simulation and agent-based modeling* | Jeremiah Lasquety-Reyes
+  * Economic models are difficult to understand for ordinary people. I talk about how Godot can be used for more intuitive and understandable economic models especially through combining a certain school of economics (Austrian economics) and a certain kind of simulation (agent-based modeling). I consider how Godot's unique scene-node system, flexible graphics, scripting language, and open source code make it a promising alternative to standard agent-based modeling software.
 
 - **Talk:** *Implementing game programming patterns in Godot* | Giovanny Beltrán
   * A software design pattern is a repeatable solution that can be useful in many different scenarios. In this talk, I want to share with you how after developing several games in our studio using Godot, we have started improving our software design practices by implementing design patterns that make coding easier for us while making our games easier to maintain.

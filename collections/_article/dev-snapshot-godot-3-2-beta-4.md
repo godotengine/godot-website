@@ -28,7 +28,7 @@ Apart from fixing Mono builds, there have been various important changes since b
 - GLES2: Fix shadow color in GLES2 by making sRGB ([GH-34367](https://github.com/godotengine/godot/pull/34367)).
 - GLES2: Force 32 bit depth buffer for WebGL ([GH-34237](https://github.com/godotengine/godot/pull/34237)).
 - GLES2: Use renderbuffer depth for post-process buffers when appropriate ([GH-34238](https://github.com/godotengine/godot/pull/34238)).
-- iOS: Allow to change the home indicator behaviour ([GH-34229](https://github.com/godotengine/godot/pull/34229)).
+- iOS: Allow to change the home indicator behavior ([GH-34229](https://github.com/godotengine/godot/pull/34229)).
 - iOS: Disable armv7 target by default as we no longer provide templates for it ([GH-34138](https://github.com/godotengine/godot/pull/34138)). Users who still want to support armv7 iOS devices need to compile their own export templates.
 - Localization: Fixes in the handling of language code and localized resources ([GH-34103](https://github.com/godotengine/godot/pull/34103)).
 - macOS: Fix potential crash when moving window between Retina and non-Retina monitors ([GH-34202](https://github.com/godotengine/godot/pull/34202)).

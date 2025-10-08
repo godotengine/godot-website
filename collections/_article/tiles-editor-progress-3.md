@@ -32,7 +32,7 @@ Then, each tile can define one or several shapes for each *TileSet's physics lay
 
 #### Navigation
 
-Navigation was also implemented again. As it was quite limited before, I did a little bit of work on NavigationServer. We decided in 4.0 to [get rid of the Navigation2D and Navigation3D nodes](https://github.com/godotengine/godot/pull/46786). To replace them, you can now assign navigation layers to navigation regions. Then, when using `NavigationServer2D.map_get_path(...)`, you can provide a mask allowing you to choose which layers to include/exclude from the path request. Thoses changes consequently allow TileMap nodes to be independent from any parent Navigation2D nodes.
+Navigation was also implemented again. As it was quite limited before, I did a little bit of work on NavigationServer. We decided in 4.0 to [get rid of the Navigation2D and Navigation3D nodes](https://github.com/godotengine/godot/pull/46786). To replace them, you can now assign navigation layers to navigation regions. Then, when using `NavigationServer2D.map_get_path(...)`, you can provide a mask allowing you to choose which layers to include/exclude from the path request. Those changes consequently allow TileMap nodes to be independent from any parent Navigation2D nodes.
 
 In a way similar to *TileSet's physics layers*, *TileSet's navigation layers* may allow you to set different navigation layers.
 

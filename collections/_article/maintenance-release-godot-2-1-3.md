@@ -59,7 +59,7 @@ The [full list of changes](http://download.tuxfamily.org/godotengine/2.1.3/Godot
 - Nodes: Add flags parameter to Node.duplicate() to decide whether signals, groups and/or scripts should copied
 - Nodes: Add process mode option to Particles2D
 - Nodes: Implement texture flip parameters for Particles2D
-- Nodes: Improve resize behaviour of TextureButton and TextureFrame
+- Nodes: Improve resize behavior of TextureButton and TextureFrame
 - Nodes: Honor the Tween's final value
 - Physics: Fix KinematicBody2D wrong motion origin
 - Physics: Improvements to Area and Area2D's monitoring flag

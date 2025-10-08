@@ -46,7 +46,7 @@ Godot 3.2 came with a brand new Android plugin system already, and notably the p
 
 Fredia had done a lot of work back then to improve Juan's initial custom build system, which led him to notice many things that could be modernized to be better suited to the current Android ecosystem. Notably, he re-architectured the plugin system to leverage the [Android AAR library file format](https://developer.android.com/studio/projects/android-library#aar-contents).
 
-This new plugin system is backward-incompatible with the 3.2/3.2.1 system, but both systems are kept functional in future releases of the 3.2.x branch. Since we previously did not version our Android plugin systems, this new one is now labelled `v1`, and is the starting point for the modern Godot Android ecosystem.
+This new plugin system is backward-incompatible with the 3.2/3.2.1 system, but both systems are kept functional in future releases of the 3.2.x branch. Since we previously did not version our Android plugin systems, this new one is now labeled `v1`, and is the starting point for the modern Godot Android ecosystem.
 
 See [this Pull Request](https://github.com/godotengine/godot/pull/36336) and [the updated documentation](https://docs.godotengine.org/en/3.2/tutorials/plugins/android/android_plugin.html) for details. Fredia has already started helping some plugin authors to update theirs to the new `v1` system, feel free to ask if you need help too.
 
@@ -82,7 +82,7 @@ Apart from those major features, there are over 750 cherry-picks ([beta 1](https
 - C#: Sync csproj when files are changed from the FileSystem dock ([GH-37149](https://github.com/godotengine/godot/pull/37149)).
 - C#: Replace uses of old Configuration and update old csprojs ([GH-36865](https://github.com/godotengine/godot/pull/36865)).
 - C#: Allow debugging exported games ([GH-38115](https://github.com/godotengine/godot/pull/38115)).
-- C#: Revert marshalling of IDictionary/IEnumerable implementing types ([GH-38141](https://github.com/godotengine/godot/pull/38141)).
+- C#: Revert marshaling of IDictionary/IEnumerable implementing types ([GH-38141](https://github.com/godotengine/godot/pull/38141)).
 - C#: Fix inherited scene not inheriting parent's exported properties ([GH-38638](https://github.com/godotengine/godot/pull/38638)).
 - C#: Fix exported values not updated in the remote inspector ([GH-38940](https://github.com/godotengine/godot/pull/38940).
 - Core: Ensure COWData does not always reallocate on resize ([GH-37373](https://github.com/godotengine/godot/pull/37373)).
@@ -124,7 +124,7 @@ Apart from those major features, there are over 750 cherry-picks ([beta 1](https
 - Particles: Fix uninitialized memory in CPUParticles and CPUParticles2D ([GH-38346](https://github.com/godotengine/godot/pull/38346), [GH-38378](https://github.com/godotengine/godot/pull/38378)).
 - Physics: Make soft body completely stiff to attachment point ([GH-36048](https://github.com/godotengine/godot/pull/36048)).
 - Physics: Test collision mask before creating constraint pair in Godot physics broadphase 2D and 3D ([GH-39399](https://github.com/godotengine/godot/pull/39399)).
-- Physics: Normalise up direction vector in `move_and_slide()` ([GH-39590](https://github.com/godotengine/godot/pull/39590)).
+- Physics: Normalize up direction vector in `move_and_slide()` ([GH-39590](https://github.com/godotengine/godot/pull/39590)).
 - RegEx: Enable Unicode support for RegEx class ([GH-39454](https://github.com/godotengine/godot/pull/39454)).
 - RichTextLabel: Fix alignment bug with `[center]` and `[right]` tags ([GH-39164](https://github.com/godotengine/godot/pull/39164)).
 - Shaders: Add shader time scaling ([GH-38995](https://github.com/godotengine/godot/pull/38995)).

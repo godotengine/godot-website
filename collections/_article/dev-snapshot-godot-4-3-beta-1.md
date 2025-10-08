@@ -142,7 +142,7 @@ The implementation we merged was a massive undertaking led by Riteo ([GH-86180](
 
 Included in this effort was the introduction of OpenGL ES driver support for desktop devices ([GH-91466](https://github.com/godotengine/godot/pull/91466)). This is currently limited to Linux devices (although note that Windows drivers generally do not support OpenGL ES *natively*).
 
-For more information on the new Wayland support (uncluding testing instructions), please see the [4.3 dev 3 blog post](/article/dev-snapshot-godot-4-3-dev-3/#wayland-support-for-linux).
+For more information on the new Wayland support (including testing instructions), please see the [4.3 dev 3 blog post](/article/dev-snapshot-godot-4-3-dev-3/#wayland-support-for-linux).
 
 #### D3D12
 

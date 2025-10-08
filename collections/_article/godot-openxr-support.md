@@ -39,9 +39,9 @@ We don't know yet how thing will progress regarding Vulkan, whether Microsoft wi
 
 ## Godot 4 and OpenXR
 
-And that brings us to today. XR support on Godot 4 has stalled throughout 2020 due to the ongoing rewrite of the rendering backend, however with Bastiaan Olij being hired by the Godot organisation through a grant provided by [Facebook Reality Labs](https://godotengine.org/article/godot-engine-receiving-support-funded-facebook-reality-labs) specifically to focus on OpenXR support, the future is looking bright.
+And that brings us to today. XR support on Godot 4 has stalled throughout 2020 due to the ongoing rewrite of the rendering backend, however with Bastiaan Olij being hired by the Godot organization through a grant provided by [Facebook Reality Labs](https://godotengine.org/article/godot-engine-receiving-support-funded-facebook-reality-labs) specifically to focus on OpenXR support, the future is looking bright.
 
-February was used to round off a number of things in the Godot 3.2 OpenXR plugin and to work our ideas out further. This is a project that will take several months as we're not just bringing OpenXR support to Godot 4, we're also looking into specific optimisations in the render engine for mobile rendering and XR-specific needs, but we expect to be able to show some real progress soon!
+February was used to round off a number of things in the Godot 3.2 OpenXR plugin and to work our ideas out further. This is a project that will take several months as we're not just bringing OpenXR support to Godot 4, we're also looking into specific optimizations in the render engine for mobile rendering and XR-specific needs, but we expect to be able to show some real progress soon!
 The focus for March lies with getting the Vulkan renderer working on Android after which we'll start making changes to the rendering engine to support a better way of doing stereoscopic rendering then we had in Godot 3.
 
 

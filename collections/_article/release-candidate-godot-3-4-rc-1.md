@@ -9,7 +9,7 @@ date: 2021-10-19 08:42:57
 
 The upcoming Godot 3.4 release will provide a number of new features which have been backported from the 4.0 development branch (see our [release policy](https://docs.godotengine.org/en/stable/about/release_policy.html) for details on the various Godot versions). With this first [Release Candidate](https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate), we completely freezes feature development, and comes after a long series of beta builds to fix a number of bugs reported against previous builds (as well as against previous stable branches).
 
-If you already reviewed the changelog for beta 6, you can skip right to the [differences between beta 6 and RC 1](https://github.com/godotengine/godot/compare/3e2bb415a9b186596b9ce02debc79590380c2355...90f8cd89a738316563dac9b133628df6bafe2cb2). Notable changes are in-editor class reference translations (so far Chinese (Simplified), Spanish, and some French), some new rendering features (high quality glow mode, 3D point light attenuation option), and a number of C# marshalling fixes.
+If you already reviewed the changelog for beta 6, you can skip right to the [differences between beta 6 and RC 1](https://github.com/godotengine/godot/compare/3e2bb415a9b186596b9ce02debc79590380c2355...90f8cd89a738316563dac9b133628df6bafe2cb2). Notable changes are in-editor class reference translations (so far Chinese (Simplified), Spanish, and some French), some new rendering features (high quality glow mode, 3D point light attenuation option), and a number of C# marshaling fixes.
 
 [Jump to the **Downloads** section.](#downloads)
 
@@ -109,7 +109,7 @@ Note that some of the changes in 3.4 have already been backported and published 
 - C#: Add support to export enum strings for `Array<string>` ([GH-52763](https://github.com/godotengine/godot/pull/52763)).
 - C#: Support arrays of `NodePath` and `RID` ([GH-53577](https://github.com/godotengine/godot/pull/53577)).
 - C#: Support marshaling generic `Godot.Object` ([GH-53582](https://github.com/godotengine/godot/pull/53582)).
-- C#: Fix `List<T>` marshalling ([GH-53628](https://github.com/godotengine/godot/pull/53628)).
+- C#: Fix `List<T>` marshaling ([GH-53628](https://github.com/godotengine/godot/pull/53628)).
 - C#: Fix `hint_string` for enum arrays ([GH-53638](https://github.com/godotengine/godot/pull/53638)).
 - C#: Deprecate `Xform` methods removed in 4.0, the `*` operator is preferred ([GH-52762](https://github.com/godotengine/godot/pull/52762)).
 - Camera2D: Make the most recently added current Camera2D take precedence ([GH-50112](https://github.com/godotengine/godot/pull/50112)).

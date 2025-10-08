@@ -39,7 +39,7 @@ For a decade we wondered what happened to the Starbound Gladiator at the end of 
 
 - **COMING SOON** - Multiplayer mode! At last, battle player controlled gladiators from all over the world in online turn based combat!
 - Swords and Sandals VI : Continue the story from where S&S III left off as the Automatons return to Brandor with new challenges for our gladiators!
-- A single player adventure across Brandor featuring over 40 all new Arena Champions ( and some returning fan favourites )
+- A single player adventure across Brandor featuring over 40 all new Arena Champions ( and some returning fan favorites )
 - Limb severing and decapitations! Sever arms and legs and keep on fighting as your gladiator finds the strength to endure
 - Create a gladiator your way. Customize everything from height and weight to facial features and hometown, the choice is yours. Will you be a powerful undead mandolin-wielding barbarian? A Sagan Blob archmage with the power to regenerate lost limbs?
 - Many new classes to choose, skills and talents to learn. Rain molten death from the skies, play guitar solos that shake the ground!

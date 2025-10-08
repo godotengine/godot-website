@@ -48,7 +48,7 @@ steam: https://store.steampowered.com/app/1863080/Beat_Invaders/?curator_clanid=
     <li>Upgrade your ship’s and convoy's systems between enemy waves and purchase meta upgrades between runs.</li>
     <li>Different game modes: Easy, Normal, Hyper Mode, Speedrun, Lone Wolf, Weeklies and Dailies!) - all with online leaderboards</li>
     <li>Mini-events, Booster pickup items and different event waves make for challenging combos.</li>
-    <li>Permanentely improve your ship’s sub-system, unlock new weapons and convoy gadgets between runs.</li>
+    <li>Permanently improve your ship’s sub-system, unlock new weapons and convoy gadgets between runs.</li>
     <li>Beat Bosses and tricky Events and show your worth!</li>
     <li>High score challenge!  Compare your scores to your friends playing Beat Invaders, and try to beat their records!</li>
     <li>Runs great on the Steam Deck.</li>

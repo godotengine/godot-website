@@ -77,7 +77,7 @@ The main highlights in this maintenance release are:
 - Fixed ancient bug that prevented proper theme editing
 - Fixed bug using DirAccess in Android Marshmallow due to data dir being a symlink
 - Fixed various bugs with inner classes
-- LineEdit: Fix and improve selection behaviour
+- LineEdit: Fix and improve selection behavior
 - Make Input Actions config not affect the editor
 - Properly deliver localized coordinates when passing gui events through parents
 - Resolve numerical error when comparing instancing an inheritance to avoid wrongly saving unchanged properties

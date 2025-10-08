@@ -88,7 +88,7 @@ Getting this far required quite a bit of time (I've been working on it since Feb
 
 - The exported game can now exit properly, calling `get_tree().quit()` will work as expected in HTML5 exports, freeing up the memory in the user machine (this could for example be useful if you present more games in the same page, and allow the user to switch among them, so you don't have to reload the page to free up memory).
 - Files drop support. The user will be able to drop files in the game window, and you will get them available in the game via the [`files_dropped` signal](https://docs.godotengine.org/en/stable/classes/class_scenetree.html#signals)
-- Thread support! The HTML5 plaform will finally support the [`Thread`](https://docs.godotengine.org/en/stable/classes/class_thread.html) class.
+- Thread support! The HTML5 platform will finally support the [`Thread`](https://docs.godotengine.org/en/stable/classes/class_thread.html) class.
 - Rudimental [`OS.execute`](https://docs.godotengine.org/en/stable/classes/class_os.html#class-os-method-execute) support has been added to the HTML5 export, allowing you to "catch" those call via JavaScript code. (This is used in the prototype to switch between project manager/project editor, and to run the game.)
 - Simpler JS `Engine` code that gives you more control over the game lifecycle.
 - Safer and smaller JS code, via Closure Compiler to better minify the required JS support code.
@@ -98,12 +98,12 @@ More to come
 
 There are still quite a few improvements that I will work on in the HTML5 platform, some of which will also benefit other platforms. Here is a sneak peak:
 
-- Virtual keyboard in the HTML5 plaform, for working text input in mobile devices.
+- Virtual keyboard in the HTML5 platform, for working text input in mobile devices.
 - Persistence support, WebDAV integration.
 - Gestures for the editor, allowing using the editor from touch devices (this will also be beneficial to make native Android or iOS versions of the editor for example).
 - Better HTML5 Audio support, trying to offload audio processing (e.g. effects, mixing) into a separate thread.
 - GDNative support in the HTML5 platform.
-- Easier interface to external JS libraries (expecially asynchronous ones), so you don't have to rely on complex [`JavaScript.eval`](https://docs.godotengine.org/en/stable/classes/class_javascript.html#class-javascript-eval).
+- Easier interface to external JS libraries (especially asynchronous ones), so you don't have to rely on complex [`JavaScript.eval`](https://docs.godotengine.org/en/stable/classes/class_javascript.html#class-javascript-eval).
 
 References
 ==========

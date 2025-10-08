@@ -10,7 +10,7 @@ date: 2016-11-17 20:33:41
 **Errata:**
 - Nov 20, 2016 @ 18:40 UTC: Linux export templates were problematic when deploying games to Steam. If that's your case, you may want to redownload the export templates.
 - Nov 19, 2016 @ 15:30 UTC: If you downloaded Godot 2.1.1 before this date, there were issues with the packaging of the HTML5 templates and with the libpng dependency of the X11 binaries. You should redownload and install the export templates, as well as the Linux X11 editor binaries if you use them.
-- There is an unexpected behaviour change with shadows that slipped into the 2.1.1 release. Consult [this GitHub issue](https://github.com/godotengine/godot/issues/7154#issuecomment-261684007) if you experience missing shadows that used to work in Godot 2.1.
+- There is an unexpected behavior change with shadows that slipped into the 2.1.1 release. Consult [this GitHub issue](https://github.com/godotengine/godot/issues/7154#issuecomment-261684007) if you experience missing shadows that used to work in Godot 2.1.
 
 --------
 

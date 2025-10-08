@@ -18,9 +18,9 @@ Debugger Connection
 
 Those classes have seen quite a few updates in the past years, grew quite a bit since their original design, and for this reason most of the serialization and message logic is hard-coded.
 
-This will likely change in the future, but in the meantime, I focused on extracting the low level handling of the connection from them to accomodate the need to support other protocols beside TCP (in this case, WebSocket for HTML5).
+This will likely change in the future, but in the meantime, I focused on extracting the low level handling of the connection from them to accommodate the need to support other protocols beside TCP (in this case, WebSocket for HTML5).
 
-First, two new interfaces where created: `ScriptDebuggerConnection` and `ScriptEditorDebuggerServer`. Their implemention, provides access to the low level network connection, without the need to know about serialization and messages. Both a `ScriptDebuggerTCP` and a `ScriptEditorDebuggerTCP` where created as default, and the websocket module now provides its own `ScriptDebuggerWebsocket` and `ScriptEditorDebuggerWebsocket` implementation.
+First, two new interfaces where created: `ScriptDebuggerConnection` and `ScriptEditorDebuggerServer`. Their implementation, provides access to the low level network connection, without the need to know about serialization and messages. Both a `ScriptDebuggerTCP` and a `ScriptEditorDebuggerTCP` where created as default, and the websocket module now provides its own `ScriptDebuggerWebsocket` and `ScriptEditorDebuggerWebsocket` implementation.
 
 The Javascript platform, and javascript ["run native"](https://godotengine.org/article/websocket-ssl-testing-html5-export) will automatically select websocket for you.
 

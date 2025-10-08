@@ -24,7 +24,7 @@ Enough talk, here are your download links:
 
 Note that Godot can now download and install the export templates automatically, so you don't need to download them manually.
 
-Export templates for the Mono flavour are still not available yet due to time constraints. It might be that they will only be made available in the first 3.0.1 maintenance release (so you can start working on C# projects in 3.0 nevertheless, but exports will have to wait a few weeks). Even though Godot 3.0 is reaching the gold state, it's important to remember that C# support is a young feature and still to be considered at the *beta* stage. It will improve *a lot* in coming months.
+Export templates for the Mono flavor are still not available yet due to time constraints. It might be that they will only be made available in the first 3.0.1 maintenance release (so you can start working on C# projects in 3.0 nevertheless, but exports will have to wait a few weeks). Even though Godot 3.0 is reaching the gold state, it's important to remember that C# support is a young feature and still to be considered at the *beta* stage. It will improve *a lot* in coming months.
 
 Another caveat for users of 3.0 beta 2 with Mono: you might need to delete the `mono` folder of your Godot user folder, as well as the `.mono` folder in your project, to remove now-incompatible assemblies.
 

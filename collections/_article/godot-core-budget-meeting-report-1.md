@@ -48,7 +48,7 @@ Because we want this work to benefit other projects as well (so more can contrib
 
 ## X11 fixes
 
-Godot 4.0 will support a new display system based on a `DisplayServer`. This allows much cleaner code for handling display and input, as well as allowing multiple window support. Unfortunately, we ran into some issues in the X11 platform that are very difficult to fix, and X11 is an extremely difficult API to work with (requiring a combination of text based atomics with manually marshalled data) that requires years of experience. Eventually, if we can't fix them in the coming weeks, they idea is to look for paid work from experienced X11 developers to solve those issues.
+Godot 4.0 will support a new display system based on a `DisplayServer`. This allows much cleaner code for handling display and input, as well as allowing multiple window support. Unfortunately, we ran into some issues in the X11 platform that are very difficult to fix, and X11 is an extremely difficult API to work with (requiring a combination of text based atomics with manually marshaled data) that requires years of experience. Eventually, if we can't fix them in the coming weeks, they idea is to look for paid work from experienced X11 developers to solve those issues.
 
 ## Renewing Ignacio's contract
 

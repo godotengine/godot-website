@@ -7,7 +7,7 @@ image: /storage/app/uploads/public/5bf/2ab/9f6/5bf2ab9f6f810514785264.png
 date: 2018-11-21 12:19:14
 ---
 
-While normal maps have been a staple of the Godot render engine for years, new capabilities of the render engine introduced in Godot 3.1 also require the generation of tangents and bi-tangents (often refered to as binormals in engines' documentation) to function correctly.
+While normal maps have been a staple of the Godot render engine for years, new capabilities of the render engine introduced in Godot 3.1 also require the generation of tangents and bi-tangents (often referred to as binormals in engines' documentation) to function correctly.
 
 Tangents and bi-tangents are two vectors that together with the normal vector give enough orientation detail of a face to provide correct lighting. To save on space Godot uses the approach where only the tangents are store and bi-tangents are calculated by combining them with the normal vector. For this a direction flag is also included with each tangent.
 

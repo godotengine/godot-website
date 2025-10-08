@@ -57,7 +57,7 @@ Check out the [`Crypto` class documentation](http://docs.godotengine.org/en/late
 Running HTML5 export
 ====================
 
-Godot has a cool feature that allows users to export for some plaftorms in debug mode and run the exported game directly on a connected device with the press of a button, as long as at least one [runnable export preset](https://docs.godotengine.org/en/latest/getting_started/workflow/export/exporting_projects.html) for that plafrom has been created.
+Godot has a cool feature that allows users to export for some platforms in debug mode and run the exported game directly on a connected device with the press of a button, as long as at least one [runnable export preset](https://docs.godotengine.org/en/latest/getting_started/workflow/export/exporting_projects.html) for that plafrom has been created.
 
 ![export.png](/storage/app/uploads/public/5de/044/edb/5de044edb1159008949448.png)
 

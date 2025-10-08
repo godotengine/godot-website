@@ -1,6 +1,6 @@
 ---
 title: "Godot 3.2 will get a new Android plugin system"
-excerpt: "Godot has the simplest and most efficient Android deploy system you can find in any game engine. With a single click, your project is runing on the phone. With a single option (network fs deploy) your gigabyte-sized project is running on your device in mere seconds. You can use the editor to debug your running game while it runs on your device and you can make changes in the scenes or scripts and they will reflect in real-time in your phone or tablet. The big drawback, however, was that adding plugins was a pain in the butt."
+excerpt: "Godot has the simplest and most efficient Android deploy system you can find in any game engine. With a single click, your project is running on the phone. With a single option (network fs deploy) your gigabyte-sized project is running on your device in mere seconds. You can use the editor to debug your running game while it runs on your device and you can make changes in the scenes or scripts and they will reflect in real-time in your phone or tablet. The big drawback, however, was that adding plugins was a pain in the butt."
 categories: ["progress-report"]
 author: Juan Linietsky
 image: /storage/app/uploads/public/5cc/0dd/a5a/5cc0dda5a3834246752408.png
@@ -9,7 +9,7 @@ date: 2019-04-24 00:00:00
 
 Godot has a simple and efficient Android deploy system. With a single click, your project is running on your phone. With a single option (network filesystem deployment) your gigabyte-sized project is running and updating on your device in seconds. You can use the editor to debug your running game while playing on your device and you can make changes in the scenes or scripts and they will reflect in real-time on your phone or tablet. The big drawback until now, however, was that adding plugins was a pain in the butt.
 
-Beginnig with Godot 3.2, the Android plugins system has been overhauled. It is no longer required to recompile the engine to add a new plugin.
+Beginning with Godot 3.2, the Android plugins system has been overhauled. It is no longer required to recompile the engine to add a new plugin.
 
 
 ### New custom build system

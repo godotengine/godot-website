@@ -31,7 +31,7 @@ Here are some of the main changes since 3.4.3-stable:
   * This fixed a valid issue while introducing a new one, so it was reverted for the time being until a better fix can be found.
 - Core: Print every file exported with `PCKPacker.flush()`'s verbose parameter ([GH-58520](https://github.com/godotengine/godot/pull/58520)).
 - Core: Fix `UndoRedo::create_action()` invalid memory usage ([GH-58652](https://github.com/godotengine/godot/pull/58652)).
-- Core: Revert "Fix ProjectSettings `has_setting()` when used on a overriden setting with feature tags" ([GH-58859](https://github.com/godotengine/godot/pull/58859)).
+- Core: Revert "Fix ProjectSettings `has_setting()` when used on a overridden setting with feature tags" ([GH-58859](https://github.com/godotengine/godot/pull/58859)).
 - Core: Fix crash on `Input.get_joy_button_index_from_string` and `Input.get_joy_axis_index_from_string` for non-existing key ([GH-59195](https://github.com/godotengine/godot/pull/59195)).
 - CSG: Fix visible seam on smoothed sphere, cylinder, and torus shapes ([GH-58208](https://github.com/godotengine/godot/pull/58208), [GH-59002](https://github.com/godotengine/godot/pull/59002)).
 - CSG: Fix mixed smoothed and non-smoothed face normals computation for CSG shapes ([GH-59039](https://github.com/godotengine/godot/pull/59039)).

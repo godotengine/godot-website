@@ -15,6 +15,6 @@ They are one of the pioneers in the region regarding videogame related careers a
 ![imagecampus.jpg](/storage/app/uploads/public/5ba/54f/dae/5ba54fdaeafd8236789621.jpg)
 
 
-It personaly makes me happy to announce them as sponsors, and they always supported the project, helping organize workshops and talks in the city, and having incorporated Godot to their regular classes.
+It personally makes me happy to announce them as sponsors, and they always supported the project, helping organize workshops and talks in the city, and having incorporated Godot to their regular classes.
 
 Remember that, you too can also contribute to aid Godot development by [becoming our patron](https://www.patreon.com/godotengine)!

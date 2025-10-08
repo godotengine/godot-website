@@ -24,7 +24,7 @@ Sadly, as of now, it is not possible to have an export that supports both GDNati
 
 Each export type has advantages and disadvantages, so you should choose depending on the scope and target of your game:
 
-- **Regular**: It is the most compatible acrosss browsers but does not support multithreading nor GDNative.
+- **Regular**: It is the most compatible across browsers but does not support multithreading nor GDNative.
 - **Threads**: Supports multithreading via the [Thread](https://docs.godotengine.org/en/stable/classes/class_thread.html) and [Mutex](https://docs.godotengine.org/en/stable/classes/class_mutex.html) classes and comes with a low latency audio driver that runs off the main thread preventing it from stalling or crackling when framerate drops or when changing scenes. However, it is currently not supported by all browsers (notably, Safari and thus iOS does not support it yet). It also requires some [extra care when distributing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#Security_requirements).
 - **GDNative**: Supports GDNative libraries, allowing to write your code in other languages (e.g. C++) so you can further optimize your game and speed up execution, or bind external libraries to add extra functionalities to the engine. On the downsides, it will result in a bigger build size, thus increasing the startup time and memory usage.
 

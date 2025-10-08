@@ -29,17 +29,17 @@ As part of implementing the improved frame timing logic, we did a large cleanup 
 
 There is more work that needs to be done in Godot 4.4 to make this fully viable but the foundations are in place.
 
-### Standardisation for AR and passthrough
+### Standardization for AR and passthrough
 
 Passthrough is a mechanism where video cameras on a VR headset record the real world and present this real world view as the background inside of our HMD turning the headset into an AR device. Different headsets implement this feature in different ways and this caused difficulties for developers who were targeting multiple devices.
 
-While passthrough allows some neat things not possible with optical AR devices, for most AR focussed application developers should not be tasked with writing different code to support all these devices.
+While passthrough allows some neat things not possible with optical AR devices, for most AR focused application developers should not be tasked with writing different code to support all these devices.
 
-We have thus standardized this approach through utilising OpenXRs environment blend modes and moving platforms specific code into the OpenXR vendors plugin.
+We have thus standardized this approach through utilizing OpenXRs environment blend modes and moving platforms specific code into the OpenXR vendors plugin.
 
-### Standardisation of hand, face and body tracking
+### Standardization of hand, face and body tracking
 
-Hand tracking has been supported in Godot for a long while now, however improvements have been made to ensure better cross platform support, including standardisation between OpenXR and WebXR. The `OpenXRHand` node has been deprecated, in favour of the new `XRHandModifier3D` node which is designed to work with any XR system - not just OpenXR.
+Hand tracking has been supported in Godot for a long while now, however improvements have been made to ensure better cross platform support, including standardization between OpenXR and WebXR. The `OpenXRHand` node has been deprecated, in favor of the new `XRHandModifier3D` node which is designed to work with any XR system - not just OpenXR.
 
 Face tracking support has been added with face tracking data being sourced from several devices. Godot now supports the Unified Expressions standard for handling face tracking data.
 
@@ -77,11 +77,11 @@ The past year saw W4 Games and Meta join forces to improve Godot's support for t
 
 The team at W4 has worked closely together with several core Godot XR contributors to improve the core functionality in Godot, improving the experience not just for Meta Quest users, but also for other XR systems. Several of the items mentioned in the previous sections benefited greatly from the help provided here.
 
-These improvements also include various rendering optimisations and fixes.
+These improvements also include various rendering optimizations and fixes.
 
 ### Enhanced passthrough and hand-tracking support
 
-On top of the standardisation of passthrough and hand-tracking in Godot, support for many extra features Meta provides was implemented in the [Godot OpenXR Vendors plugin](https://github.com/GodotVR/godot_openxr_vendors).
+On top of the standardization of passthrough and hand-tracking in Godot, support for many extra features Meta provides was implemented in the [Godot OpenXR Vendors plugin](https://github.com/GodotVR/godot_openxr_vendors).
 
 For passthrough, this includes applying various filters to the passthrough imagery, like adjusting the brightness, contrast and saturation, mapping the colors to other values, or even projecting passthrough onto custom geometry, in order to bring only specific objects from the user's physical environment into an otherwise VR experience. See the [Meta Passthrough tutorial](https://godotvr.github.io/godot_openxr_vendors/manual/meta/passthrough.html) for more information.
 

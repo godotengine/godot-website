@@ -28,7 +28,7 @@ Choo choo! The train is pulling into the station, bringing the very first batch 
 
 But don’t worry – Gourdlets are super laid back, and they’ll be happy no matter what you build. The only real challenge is pleasing yourself!
 
-From cafes to lighthouses, planters to fountains, there’s a huge catalogue of decorations to play with. You can even go inside buildings and arrange the furniture how you like.
+From cafes to lighthouses, planters to fountains, there’s a huge catalog of decorations to play with. You can even go inside buildings and arrange the furniture how you like.
 
 The gourdlets will make themselves at home in your town, fishing, reading, camping, snoozing, and generally having a grand old time. Craft the perfect veggie town in Gourdlets!
 
@@ -40,6 +40,6 @@ You can choose to play in full screen, or in “idle window mode” to let your 
 - Gourdlets hang out at the bottom of your screen in idle window mode!
 - Customize your Gourdlet citizens with cute accessories!
 - Day-night cycles and customizable weather!
-- A huge catalogue of buildings and decorations!
+- A huge catalog of buildings and decorations!
 - Choose from a variety of starter maps for an extra creative challenge!
 - Zero currency! (Capitalism makes the gourdlets tired)

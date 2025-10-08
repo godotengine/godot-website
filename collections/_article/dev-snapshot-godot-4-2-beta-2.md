@@ -45,7 +45,7 @@ For an overview of what's new overall in Godot 4.2, have a look at the release n
 - Editor: Fix code editor scrolling experience on track pads ([GH-73502](https://github.com/godotengine/godot/pull/73502)).
 - Editor: Don't remove favorite files in EditorFileDialog ([GH-82537](https://github.com/godotengine/godot/pull/82537)).
 - Editor: Fix loading floating dock layout ([GH-82742](https://github.com/godotengine/godot/pull/82742)).
-- Editor: Fix debugger behaviour with multi-session debugging ([GH-82868](https://github.com/godotengine/godot/pull/82868)).
+- Editor: Fix debugger behavior with multi-session debugging ([GH-82868](https://github.com/godotengine/godot/pull/82868)).
 - Editor: Project Manager: Open project when "Enter" is pressed when the search box is focused ([GH-83210](https://github.com/godotengine/godot/pull/83210)).
 - Editor: Don't try updating wrong NodePaths in resources ([GH-83263](https://github.com/godotengine/godot/pull/83263)).
 - Editor: Disallow 'Make Local' command on inherited nodes ([GH-83386](https://github.com/godotengine/godot/pull/83386)).

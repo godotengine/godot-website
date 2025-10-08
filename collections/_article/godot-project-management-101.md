@@ -44,7 +44,7 @@ Eventually I harassed Juan so much that he agreed to give me write access to the
 
 ### Merging PRs
 
-In parallel, I started bugging Juan regularly about pull requests. It was hard for me to review them with very little experience with the engine's internals, but some were simple enough even for me to understand: typo fixes, documentation updates, compilation fixes (there was no <abbr title="Continous Integration">CI</abbr> and some platforms broke regularly), or usability improvements in the editor. It made no sense for such changes to wait in the limbo for the next "big merge" a month later, so I sent Juan links to PRs to review and merge in priority on IRC.
+In parallel, I started bugging Juan regularly about pull requests. It was hard for me to review them with very little experience with the engine's internals, but some were simple enough even for me to understand: typo fixes, documentation updates, compilation fixes (there was no <abbr title="Continuous Integration">CI</abbr> and some platforms broke regularly), or usability improvements in the editor. It made no sense for such changes to wait in the limbo for the next "big merge" a month later, so I sent Juan links to PRs to review and merge in priority on IRC.
 
 Eventually, since I had full write access to the repo because of the Bugsquad's work, Juan told me that I could merge such PRs myself if I was confident enough. I was a bit impressed to have so much responsibility while being a quite average developer (I'm energy engineer initially, not engine programmer :)), and afraid to do mistakes. But I went ahead and merged some stuff, at first very conservatively, and later on a bit boldly. The first reverts when I merged something that I shouldn't have arrived quickly, but I got better at reviewing PRs and got more familiar with the engine itself.
 
@@ -66,7 +66,7 @@ I settled on the Sphinx doc builder, which generates static HTML pages based on 
 
 For the first year and a half or so Julian and I did our best with limited time to manage the [docs repository](https://github.com/godotengine/godot-docs). Then a year ago or so, we encouraged professional tutorial makers like Nathan Lovato ([GDquest](https://github.com/NathanLovato)) and Chris Bradfield ([KidsCanCode](https://github.com/KidsCanCode)) to help us, and they eventually completely took over, making our 3.0 documentation the most complete and well-written so far! And with "recent" contributors like [Max Hilbrunner](github.com/mhilbrunner), they are now reproducing the workflow that I outlined above, with a better issue triage and reviews of pull requests, so that the godot-docs repository is becoming a hive full of buzzing documentation bees working everyday to improve your learning experience!
 
-### Making stable and develpoment releases
+### Making stable and development releases
 
 The last big issue I had noticed was the long release cycles and lack of bugfix/maintenance releases in the stable branches. Coming from the Free Software ecosystem, I knew the value of the *release early, release often* saying, and wanted more frequent releases for Godot.
 
@@ -97,7 +97,7 @@ Moreover, I'm now working full-time on Godot as my paid job, but I was already b
 
 ### Be Godot's representative for the industry
 
-Thankfully I haven't detailed it in my long history of all the Godot things I've been doing in the past, but I have also taken the role of communications manager (writing blog posts, managing social media accounts and Godot email addresses, etc.) and events organiser (FOSDEM, GodotCon, etc.), and I'll continue doing that.
+Thankfully I haven't detailed it in my long history of all the Godot things I've been doing in the past, but I have also taken the role of communications manager (writing blog posts, managing social media accounts and Godot email addresses, etc.) and events organizer (FOSDEM, GodotCon, etc.), and I'll continue doing that.
 
 But now I have actual time that I can allocate to create and nurture Godot's relationships with the gamedev industry and the educational world, as the project's representative. As Juan mentioned in his [GDC 2018 review](/article/godot-doing-well-gdc-2018), with events such as GDC he has to spend a lot of time doing communication and relations work instead of writing code and (more importantly) help contributors write code. At the same time he lives in Argentina and many industry events take place in Europe, where I live.
 

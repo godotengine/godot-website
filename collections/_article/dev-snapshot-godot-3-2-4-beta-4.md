@@ -41,7 +41,7 @@ And there's even more in the works that will be included in future beta builds.
 The main new features in need of testing are highlighted in bold. Refer to the linked pull requests for details.
 
 - **Android: Add support for the Android App Bundle format ([GH-42185](https://github.com/godotengine/godot/pull/42185)).**
-- Android: Add support for emedded Godot as a subview in Android applications ([GH-42186](https://github.com/godotengine/godot/pull/42186)).
+- Android: Add support for embedded Godot as a subview in Android applications ([GH-42186](https://github.com/godotengine/godot/pull/42186)).
 - Android: Fix splash screen loading ([GH-42389](https://github.com/godotengine/godot/pull/42389)).
 - Android: Add notch cutout support for Android P and later ([GH-43104](https://github.com/godotengine/godot/pull/43104)).
 - Android: Add support for mouse events ([GH-42360](https://github.com/godotengine/godot/pull/42360)).

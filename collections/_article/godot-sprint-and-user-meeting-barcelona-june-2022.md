@@ -35,7 +35,7 @@ We mostly invite Godot users from Barcelona and the neighboring regions to join 
 ## Practical information
 
 ### COVID precautions
-We will follow the requirements of the Spanish administration, as well as impose our own face mask and/or testing requirements for the safety of attendees. If COVID cases/ICU bed occupations were to spike before/around our event, it would be cancelled.
+We will follow the requirements of the Spanish administration, as well as impose our own face mask and/or testing requirements for the safety of attendees. If COVID cases/ICU bed occupations were to spike before/around our event, it would be canceled.
 
 ### Venue's address
 La Lleialtat Santsenca

@@ -30,7 +30,7 @@ When a user visits the web page it will be presented with the option to install 
 
 Once installed, the web app will be added to the home screen, and will be able to start like a native app, even when the device is offline.
 
-Extra features may also be avaible for installed web apps like locking the device orientation, and starting in fullscreen.
+Extra features may also be available for installed web apps like locking the device orientation, and starting in fullscreen.
 
 ![Installed PWA Running](/storage/app/uploads/public/60c/393/39b/60c39339bab5c662844052.png)
 

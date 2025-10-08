@@ -146,9 +146,9 @@ For more information, read the ["Which Input singleton method should I use?"](ht
 <a id="crypto"></a>
 #### Crypto: AES and HMAC contexts
 
-Fabio Alessandrelli ([fales](https://github.com/Faless)) backported a number of [cryptographic features](https://github.com/godotengine/godot/pull/48144) for the 3.4 release, adding an `AESContext` to provide a scripting interface to AES-ECB and AES-CBC encryption/decryption methods. Godot can now save and load public keys, sign and verify a hash with a RSA key, and encrypt and decrypt RSA keys.
+Fabio Alessandrelli ([Fales](https://github.com/Faless)) backported a number of [cryptographic features](https://github.com/godotengine/godot/pull/48144) for the 3.4 release, adding an `AESContext` to provide a scripting interface to AES-ECB and AES-CBC encryption/decryption methods. Godot can now save and load public keys, sign and verify a hash with a RSA key, and encrypt and decrypt RSA keys.
 
-Jon Bonazza ([jonbonazza](https://github.com/jonbonazza)) and [tavurth](https://github.com/tavurth) respectively implemented and [backported HMAC support](https://github.com/godotengine/godot/pull/48869) in the crypto API via a new `HMACContext`. This can be used as an authentication method notibly to interact with services such as GameAnalytics.
+Jon Bonazza ([jonbonazza](https://github.com/jonbonazza)) and [tavurth](https://github.com/tavurth) respectively implemented and [backported HMAC support](https://github.com/godotengine/godot/pull/48869) in the crypto API via a new `HMACContext`. This can be used as an authentication method notably to interact with services such as GameAnalytics.
 
 <a id="rendering"></a>
 ### Rendering
@@ -271,7 +271,7 @@ Morris Arroad ([mortarroad](https://github.com/mortarroad)) has worked on using 
 On top of that, thanks to the common work of Camille Mohr-Daurat ([pouleyKetchoupp](https://github.com/pouleyKetchoupp)), [jitspoe](https://github.com/jitspoe) and [lawnjelly](https://github.com/lawnjelly) there's now an option to generate a simplified convex hull from complex meshes, in order to make a convex hull that's better for performance, at the cost of losing a bit of accuracy.
 
 Example original mesh (40K vertices):
-![Original mesh (40K verticies)](https://user-images.githubusercontent.com/1075032/124838784-66c2b400-df3c-11eb-9d29-2a920a14f9bb.PNG)
+![Original mesh (40K vertices)](https://user-images.githubusercontent.com/1075032/124838784-66c2b400-df3c-11eb-9d29-2a920a14f9bb.PNG)
 
 Simplified convex hull of that mesh (56 vertices):
 ![Simplified convex hull (56 vertices)](https://user-images.githubusercontent.com/1075032/124838823-79d58400-df3c-11eb-8515-fe8775930353.PNG)

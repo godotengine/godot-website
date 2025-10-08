@@ -1,6 +1,6 @@
 ---
 title: "Introducing the Godot glTF 2.0 scene exporter"
-excerpt: "To supplement Godot's existing import capabilities for the glTF 2.0 open format for 3D assets, Godot 4.0 now includes support for exporting Godot scenes as glTF 2.0. This import/export workflow allows a seamless transition from and to 3D modelling and animation software, giving artists and designers greater flexibility to use each tool for what it can do best."
+excerpt: "To supplement Godot's existing import capabilities for the glTF 2.0 open format for 3D assets, Godot 4.0 now includes support for exporting Godot scenes as glTF 2.0. This import/export workflow allows a seamless transition from and to 3D modeling and animation software, giving artists and designers greater flexibility to use each tool for what it can do best."
 categories: ["progress-report"]
 author: Ernest Lee
 image: /storage/app/uploads/public/5ff/358/855/5ff358855fada706463549.png

@@ -252,7 +252,7 @@ It's as you heard. Even if you get a publishing deal, it does not warrant you ge
 
 At first, I was angry at this fact, but I understand now that it's the most natural course of action to do for a publisher. They are companies, not charities.
 
-Also, don't get me wrong on this. Publishers still make a big difference. Even if they don't invest *money* in promotion, they usually have very oiled channels with media and many even have cult followings (like Atlus or Daedalic) that will purchase their games. They also know their target markets well so, even if your game doesn't sell, it does not mean they did nothing by not promoting it.
+Also, don't get me wrong on this. Publishers still make a big difference. Even if they don't invest *money* in promotion, they usually have very oiled channels with media and many even have cult following (like Atlus or Daedalic) that will purchase their games. They also know their target markets well so, even if your game doesn't sell, it does not mean they did nothing by not promoting it.
 
 In most cases, I found out you can negotiate with the publisher that they return the publishing rights to you if the game makes less than a certain threshold of earnings... so hope exists to pitch it somewhere else. Of course, if you got investment from a publisher, they will require you to pay it back before this happens (which can be negotiated with the new publisher).
 

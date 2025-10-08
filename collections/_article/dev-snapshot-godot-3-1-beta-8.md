@@ -32,7 +32,7 @@ Documentation writers are hard at work to catch up with the new features, and th
 
 ## Downloads
 
-The download links are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavour:
+The download links are not featured on the [Download](/download) page to avoid confusion for new users. Instead, browse our download repository and fetch the editor binary and export templates that matches your platform and Godot flavor:
 
 - [Classical build](https://github.com/godotengine/godot-builds/releases/3.1-beta8) (GDScript, GDNative, VisualScript)
 - [Mono build](https://github.com/godotengine/godot-builds/releases/3.1-beta8) (C# support + all the above). You need to have MSbuild installed to use the Mono build. However, this build no longer mandates a specific Mono SDK version; it comes bundled with Mono 5.18.
@@ -48,6 +48,6 @@ As a tester, you are encouraged to open bug reports if you experience issues wit
 At this stage, we are mostly interested in critical bugs which could be showstoppers in Godot 3.1 stable. Yet feel free to report non-critical issues and enhancement proposals that will be worked on once 3.1 has been released.
 
 **Known issues:**
-- [GH-26301](https://github.com/godotengine/godot/issues/26301) and others: GLES2 projets with ETC textures on Android crash on start
+- [GH-26301](https://github.com/godotengine/godot/issues/26301) and others: GLES2 projects with ETC textures on Android crash on start
 
 *The illustration picture is a screenshot from the <abbr title="Free and Open Source Software">FOSS</abbr> game *[Tanks of Freedom](https://tof.p1x.in/)* by [P1X](https://p1x.in), initially released in 2015 and continuously updated since then. [Source code](https://github.com/w84death/Tanks-of-Freedom) (Godot 2.1), [itch.io](https://w84death.itch.io/tanks-of-freedom).*

@@ -29,7 +29,7 @@ Some of the most important fixes in this release are:
 
 {% include articles/download_card.html version="4.2.1" release="stable" article=page %}
 
-*The illustration picture used in this announcement is from* [**Voice of Flowers**](https://store.steampowered.com/app/2609560/Voice_of_Flowers/?curator_clanid=41324400), *a metroidvania that takes great inspiration from Mario games, developed in Godot 4 by [Tomasz Chabora](https://twitter.com/KoBeWi_/) ([KoBeWi](https://github.com/KoBeWi/)) – one of Godot's most profilic maintainers! You can wishlist the game [on Steam](https://store.steampowered.com/app/2609560/Voice_of_Flowers/?curator_clanid=41324400), play the latest demo [on itch.io](https://kobewi.itch.io/voice-of-flowers), and follow development on [Discord](https://discord.gg/PGhFXeHApR) and [Twitter](https://twitter.com/KoBeWi_/).*
+*The illustration picture used in this announcement is from* [**Voice of Flowers**](https://store.steampowered.com/app/2609560/Voice_of_Flowers/?curator_clanid=41324400), *a metroidvania that takes great inspiration from Mario games, developed in Godot 4 by [Tomasz Chabora](https://twitter.com/KoBeWi_/) ([KoBeWi](https://github.com/KoBeWi/)) – one of Godot's most prolific maintainers! You can wishlist the game [on Steam](https://store.steampowered.com/app/2609560/Voice_of_Flowers/?curator_clanid=41324400), play the latest demo [on itch.io](https://kobewi.itch.io/voice-of-flowers), and follow development on [Discord](https://discord.gg/PGhFXeHApR) and [Twitter](https://twitter.com/KoBeWi_/).*
 
 ## Changes
 

@@ -30,7 +30,7 @@ Finally, in Godot 4.0, you will be able to run Godot with [**headless display**]
 
 Passing the **`--display-driver headless`** command line argument will start Godot without rendering, like the old `server` platform, no matter if you are on Linux, macOS or Windows.
 
-Additionally, we are working on a series of ["server" export options](https://github.com/godotengine/godot-proposals/issues/2756), to let developers further reduce the memory and load time footprint by replacing specific assets with "fake" files that only contains metadata. For example, a "fake" audio file will not contain any audio, but will retain informations about length, loops, etc. This means that server-side code relying on audio timing or texture sizes will still work correctly.
+Additionally, we are working on a series of ["server" export options](https://github.com/godotengine/godot-proposals/issues/2756), to let developers further reduce the memory and load time footprint by replacing specific assets with "fake" files that only contains metadata. For example, a "fake" audio file will not contain any audio, but will retain information about length, loops, etc. This means that server-side code relying on audio timing or texture sizes will still work correctly.
 
 ### Removing RSETs
 

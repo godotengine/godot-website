@@ -19,7 +19,7 @@ Always refer to our [events page](https://godotengine.org/events) for updated in
 
 ## Call for Proposals
 
-During GodotCon, we would like to have all kinds of presentations, workshops or other activities around Godot Engine, and we need you for this! We provide a venue and the main organisation, but we need contributors and users to actually fill this time with interesting talks, round tables, mini jams, or any idea you may have.
+During GodotCon, we would like to have all kinds of presentations, workshops or other activities around Godot Engine, and we need you for this! We provide a venue and the main organization, but we need contributors and users to actually fill this time with interesting talks, round tables, mini jams, or any idea you may have.
 
 So if you plan to attend GodotCon, please think about what you might want to show to fellow Godot users. We are open to anything Godot-related, or even not directly related to Godot but still relevant for game or engine developers.
 

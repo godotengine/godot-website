@@ -43,7 +43,7 @@ The download links are not featured on the [Download](/download) page for now to
 - Mono version (requires the Mono SDK): [[~~HTTPS mirror~~](https://github.com/godotengine/godot-builds/releases/3.0-alpha2)]
 
 **Note:** Export templates are currently missing due to a last minute regression in the HTML5 platform (**Edit 2017-10-31 23:00 UTC:** They are now available for the classical version).
-Export templates for the Mono flavour will not be provided, as exporting Mono games is not completely implemented yet.
+Export templates for the Mono flavor will not be provided, as exporting Mono games is not completely implemented yet.
 
 Also clone the [godot-demo-projects](https://github.com/godotengine/godot-demo-projects/) repository to have demos to play with. Some of them might still need adjustments due to recent changes in the *master* branch, feel free to report any issue.
 

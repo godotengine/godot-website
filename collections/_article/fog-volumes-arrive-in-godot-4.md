@@ -56,7 +56,7 @@ Pictured below is a FogVolume partially intersecting a light beam. As you can se
 
 ![Spherical fog volume in Sponza scene intersecting a light beam](/storage/app/media/4.0/Fog%20Volumes/Screenshot%20from%202022-06-30%2023-11-24.png)
 
-If you crank up the detail (not recommended for performance reasons), you can acheive very sharp-looking light shafts in a constrained area. You can also choose to decrease the maximum volumetric fog rendering distance to improve volumetric fog detail without incurring a performance cost.
+If you crank up the detail (not recommended for performance reasons), you can achieve very sharp-looking light shafts in a constrained area. You can also choose to decrease the maximum volumetric fog rendering distance to improve volumetric fog detail without incurring a performance cost.
 
 ![Sharp-looking light shafts in an ellipsoid in Sponza scene](/storage/app/media/4.0/Fog%20Volumes/Screenshot%20from%202022-06-30%2023-14-59.png)
 
@@ -136,7 +136,7 @@ We wanted to avoid using geometry shaders as they are poorly supported on a lot 
 
 In order to take advantage of atomic operations, we needed to make many changes to how we store the fog information. In particular, GLSL only supports atomic operations on integers. The values we are working with (density, albedo, emission) are all floating-point (and albedo and emission each contain 3 channels!). The first step was to encode the floating-point values into integers in a way where they could still be additively blended. In the end, we settled on using 3 textures the size of the froxel buffer each with a single 32 bit unsigned integer per cell.
 
-- **Density** is encoded as a signed 32-bit integer by multipling the floating-point density by 1024. This allows a range of -64 to 64 for density. In particular, the negative range is necessary to allow for subtracting volumes.
+- **Density** is encoded as a signed 32-bit integer by multiplying the floating-point density by 1024. This allows a range of -64 to 64 for density. In particular, the negative range is necessary to allow for subtracting volumes.
 - **Albedo** is encoded as a "scattering" which is to say that it is multiplied by density and clamped to the 0 to 1 range before being stored. Then, it's packed into 32 bits as follows: `uint(red * 2047.0) << 21 | uint(green * 2047.0) << 10 | uint(blue * 1023.0);`. This gives red and green twice as much precision as blue as they receive 11 bits each, while blue only receives 10 bits. Blue is the least visible color to the human eye, so red and green were chosen to receive higher precision.
 - **Emission** is encoded similarly to Albedo. We multiply it with density, but then we clamp to the 0 to 4 range. This way, emission is able to add a little bit of dynamic range. 4 was chosen as a reasonable range to allow some dynamic range but maintain some precision. The exact range can be adjusted at a later date based on user feedback.
 
@@ -146,7 +146,7 @@ Using such a simple approach creates another interesting problem: individual col
 
 Let's look at an example. Suppose one cell's blue albedo channel reached 1.0 (in binary: `11 1111 1111`), and then suppose another FogVolume overlaps that cell with a blue value of at least `0.00097` (in binary: `00 0000 0001`) after adding them, 1 bit will be added to green and blue will turn to `0.0` (in binary: `00 0000 0000`). This is, of course, a huge problem for us.
 
-The solution we settled on rests on one key behaviour of GLSL's `atomicAdd()` function. When adding a given value to value stored in memory, `atomicAdd()` is guaranteed to return the value of the memory immediated before the addition. Accordingly, we can replay the addition locally and check if any color channel overflows. If it does, we take the `atomicOr()` of that color channel with the same number of bits set to 1 to force it to its maximum value (1 in the case of Albedo, or 4 in the case of emission). Of course, the `atomicOr()` is only necessary when we detect an overflow.
+The solution we settled on rests on one key behavior of GLSL's `atomicAdd()` function. When adding a given value to value stored in memory, `atomicAdd()` is guaranteed to return the value of the memory immediately before the addition. Accordingly, we can replay the addition locally and check if any color channel overflows. If it does, we take the `atomicOr()` of that color channel with the same number of bits set to 1 to force it to its maximum value (1 in the case of Albedo, or 4 in the case of emission). Of course, the `atomicOr()` is only necessary when we detect an overflow.
 
 In practice, here's how that might look:
 

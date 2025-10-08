@@ -16,7 +16,7 @@ The first version of our FBX importer was [added in Godot 3.2](https://godotengi
 
 Due to these roadblocks, we decided to rewrite the importer fully and tailor it to Godot, instead of trying to keep things generic as done in Assimp - Assimp can importer dozens of file formats, which is great, but imposes many restrictions on the support of individual complex formats like FBX, especially for animations. In the game industry, a lot of people assume that FBX works with traditional animation algorithms but we found that it is simply not the case. FBX has its own standard for handling animations which has not been fully reverse engineered correctly by *any* open source importer/exporter, so we had to start from scratch and only keep the FBX file parser from Assimp.
 
-We removed 70,000 lines of code and our new FBX importer comes in around 12,000 lines of code. The new code has been commented and documented with the things we learned about FBX along the way. It's made so we can make changes easily and improve behaviour on a per-file basis along the road. We expect bugs with the beta, even some regressions which we have seen already, but we are working on fixes to the reported problems to be ready for the 3.2.4 stable release.
+We removed 70,000 lines of code and our new FBX importer comes in around 12,000 lines of code. The new code has been commented and documented with the things we learned about FBX along the way. It's made so we can make changes easily and improve behavior on a per-file basis along the road. We expect bugs with the beta, even some regressions which we have seen already, but we are working on fixes to the reported problems to be ready for the 3.2.4 stable release.
 
 It took us about 14 months to get a proper FBX importer working fully, since we had to engineer everything again:
 
@@ -26,7 +26,7 @@ It took us about 14 months to get a proper FBX importer working fully, since we 
 
 Our ethos for the importer ended up being: When you import a FBX file, it should import flawlessly like you intended it to be when exporting. This was the new design goal of the importer to ensure we had SOLID importing ability for commercial FBX files and for your own files too!
 
-This complete rewrite has now been merged in the `3.2` branch with [GH-42941](https://github.com/godotengine/godot/pull/42941). We'll focus first on fixing reported issues with the new importer so that it's ready for release in Godot 3.2.4 stable (it will soon be available for testing in 3.2.4 beta 2). Once fixes have been made, we'll also update the foward port to the `master` branch to ensure that the new importer is also available in Godot 4.0.
+This complete rewrite has now been merged in the `3.2` branch with [GH-42941](https://github.com/godotengine/godot/pull/42941). We'll focus first on fixing reported issues with the new importer so that it's ready for release in Godot 3.2.4 stable (it will soon be available for testing in 3.2.4 beta 2). Once fixes have been made, we'll also update the forward port to the `master` branch to ensure that the new importer is also available in Godot 4.0.
 
 ## So, for the uninitiated, what is FBX?
 
@@ -53,7 +53,7 @@ The main problem FBX is that it's closed source, and therefore the official FBX 
 * It handles bones, with a truly robust ID and targeting system which can work easily without relying on path information for bones.
 * It supports various unit formats.
 * Images can be embedded in the FBX file.
-* It's supported by default in most packages for 3D modelling.
+* It's supported by default in most packages for 3D modeling.
 
 ## Why did you decide not to use the FBX SDK?
 
@@ -61,7 +61,7 @@ In short, we wanted to add official support directly in the engine, and Godot be
 
 * It's not open source, which is a deal-breaker as mentioned above.
 * It's much larger than our importer, we only net 12,000 lines of code (the FBX SDK is over 50 MB - that's bigger than Godot!).
-* We can't modify the behaviour to improve performance or increase flexibility.
+* We can't modify the behavior to improve performance or increase flexibility.
 * Our importer is faster than the official SDK.
 * It requires a lot of work. Much like the work we have done with FBX we'd just be repeating work for example with mesh conversion.
 * It's a bad move to support it if we don't know what the code is doing, especially when we care about importing things optimally, especially for creating a reliable 3D workflow.
@@ -77,7 +77,7 @@ We rewrote the importer approximately 4 times during my work on it. Before my in
 
 ## Testing & validation
 
-[IMVU](https://about.imvu.com/), who sponsored this work, had a validation team confirming that their Maya models were working correctly, and testing and helping me fix bugs. This means that we know it's good enough for animators and modellers to use in a Maya environment.
+[IMVU](https://about.imvu.com/), who sponsored this work, had a validation team confirming that their Maya models were working correctly, and testing and helping me fix bugs. This means that we know it's good enough for animators and modelers to use in a Maya environment.
 
 Thousands of models we use have been validated in Maya, mostly with default export settings in the application. If you find something which doesn't work, please [file a bug report](https://github.com/godotengine/godot/issues) so we evaluate if we can add support for it.
 
@@ -95,7 +95,7 @@ During this project I had gaps in my knowledge which were filled in with time an
 
 In some cases, FBX did not do what people would consider reasonable.
 
-After researching these methods for pivots and various parts of the skinning, I have found them to improve the behaviour in most cases. Now the differences make a lot of sense to me, even if they are complex.
+After researching these methods for pivots and various parts of the skinning, I have found them to improve the behavior in most cases. Now the differences make a lot of sense to me, even if they are complex.
 
 ## Future plans
 

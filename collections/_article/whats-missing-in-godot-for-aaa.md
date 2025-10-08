@@ -101,7 +101,7 @@ Scenes, as mentioned before, are designed for complex high level behaviors in th
 This is needed for some types of game mechanics such as:
 
 * Projectiles (bullet hell for example).
-* Units in some types of strategy games with thousands of entitites roaming across a map.
+* Units in some types of strategy games with thousands of entities roaming across a map.
 * Cars/people in city simulators, where thousands appear all across the city.
 * Sandbox style simulations.
 * Complex custom particles that run on CPU.
@@ -172,7 +172,7 @@ Or even more. Godot's animation system is often praised because anything can be 
 
 This makes Godot an extremely powerful engine that gives developers a lot of flexibility, but...
 
-It also assumes that the user is knowledgable enough about Godot and all its inner workings in order to take advantage of it. To clarify, none of these systems are too technically complex and this is part of what makes Godot appealing and accessible, but it _still_ requires a certain level of technical and engine knowledge.
+It also assumes that the user is knowledgeable enough about Godot and all its inner workings in order to take advantage of it. To clarify, none of these systems are too technically complex and this is part of what makes Godot appealing and accessible, but it _still_ requires a certain level of technical and engine knowledge.
 
 In contrast, engines like Unreal have entirely dedicated and isolated interfaces for each of these tasks (materials, cinematic timeline, VFX, animation, etc.).
 

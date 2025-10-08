@@ -25,7 +25,7 @@ And this is just a first beta, there's more in the works that will be included i
 The main new features in need of testing are highlighted in bold. Refer to the linked pull requests for details.
 
 - **Android: Add support for the Android App Bundle format ([GH-42185](https://github.com/godotengine/godot/pull/42185)).**
-- Android: Add support for emedded Godot as a subview in Android applications ([GH-42186](https://github.com/godotengine/godot/pull/42186)).
+- Android: Add support for embedded Godot as a subview in Android applications ([GH-42186](https://github.com/godotengine/godot/pull/42186)).
 - Android: Fix splash screen loading ([GH-42389](https://github.com/godotengine/godot/pull/42389)).
 - C#: Official builds now use Mono 6.12.0.102.
 - C#: Re-work solution build output panel ([GH-42547](https://github.com/godotengine/godot/pull/42547)).

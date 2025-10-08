@@ -23,7 +23,7 @@ steam: https://store.steampowered.com/app/1395270/Haiki/?curator_clanid=41324400
   <strong>A BRUTAL precision platformer where decapitation is just the beginning!</strong>
 </p>
 <p>
-  Haiki is a diamond-hard platformer that rewards skilful play and punishes
+  Haiki is a diamond-hard platformer that rewards skillful play and punishes
   errors MERCILESSLY. Dive head-first into four worlds of colour-switching,
   laser-dodging, lightning-fast action.
 </p>

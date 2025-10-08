@@ -188,7 +188,7 @@ This will export the entire animation timeline.
 
 ##### All Actions
 
-This will export any actions that you have setup. This is my prefered
+This will export any actions that you have setup. This is my preferred
 way of setting up multiple actions for a model as each animation is self
 contained.
 
@@ -243,7 +243,7 @@ Here is my export setup:
 -   I only have what I need in this scene so as far as exported object
     go- I will leave it as default.
 -   Selected Objects - Doesn't apply in this scene as I have a simple
-    scene and its organised by layers.
+    scene and its organized by layers.
 -   Apply Modifiers - No modifiers are in my scene, except the armature
     modifier.
 -   Exclude Armature Modifier - Left excluding the armature modifier
@@ -313,7 +313,7 @@ engines.
 Each different 3D package has its own unique material pipeline. Which
 means there is no direct translation of one material setup in one
 program to another program. However there is fortunately some
-standardisation, so at least we can reconstruct a material relatively
+standardization, so at least we can reconstruct a material relatively
 quickly.
 
 In our case here we need to attach the material to our mesh instance:
@@ -326,7 +326,7 @@ In our case here we need to attach the material to our mesh instance:
 
 ![Adding material to the model in Godot](/storage/app/media/dae_import/godot_add_material.png)
 
-You'll notice that the model still lacks its colours, that's because the
+You'll notice that the model still lacks its colors, that's because the
 material currently doesn't have the texture assigned to it.
 
 So in a similar fashion to how we assigned the material to the mesh

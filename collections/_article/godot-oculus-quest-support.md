@@ -13,7 +13,7 @@ Late last year a new team member joined who has taken Quest support under his wi
 
 Oculus themselves started showing an interest in the work as well and have been very supportive of our efforts including providing hardware to core team members.
 
-The Quest seems uniquely positioned for those who enjoy working with Godot. Due to the stand alone nature of the device and it building ontop of Android you don't need a lot more to get going. Whether you are on Windows, macOS or Linux, if your machine runs Godot you can develop for the Quest.
+The Quest seems uniquely positioned for those who enjoy working with Godot. Due to the stand alone nature of the device and it building on top of Android you don't need a lot more to get going. Whether you are on Windows, macOS or Linux, if your machine runs Godot you can develop for the Quest.
 
 ## Getting started
 
@@ -29,7 +29,7 @@ Open up Godot and create a new project.
 
 ![Quest_project.PNG](/storage/app/uploads/public/5df/edb/a5e/5dfedba5ec1cc099848980.png)
 
-Make sure to chose the **GLES2** renderer. Due to optimisations in the Quest's GPU this backend is far better suited for the Quest.
+Make sure to chose the **GLES2** renderer. Due to optimizations in the Quest's GPU this backend is far better suited for the Quest.
 
 Copy the addons folder from the Oculus Mobile asset into your Godot project. Your project tree should looks something like this:
 
@@ -75,15 +75,15 @@ Before we can export our project to our Quest we need to do three more things.
 
 First go into the project settings for our project and make sure that our main scene is the scene we run. Godot does not ask you to set this on export.
 
-![Quest_main_scene.png](/storage/app/uploads/public/5df/ede/062/5dfede0622c1c483635557.png)
+![Quest_main_scene.png](/storage/app/uploads/public/5df/edge/062/5dfede0622c1c483635557.png)
 
-Then go into the export menu and configure a new Android export. Now I'm assuming you followed the instructions in the "Exporting for Android" page I refered to at the start. If you didn't you'll have some red messages on this screen and I highly recommend you revisit that page.
+Then go into the export menu and configure a new Android export. Now I'm assuming you followed the instructions in the "Exporting for Android" page I referred to at the start. If you didn't you'll have some red messages on this screen and I highly recommend you revisit that page.
 
 If you did we can forge ahead and make a few small changes to the export settings.
 First we change the XR Mode to "Oculus Mobile VR".
 Then we change our Degrees of Freedom mode to "6DOF".
 
-![Quest_export.png](/storage/app/uploads/public/5df/ede/6eb/5dfede6eb5aae552242132.png)
+![Quest_export.png](/storage/app/uploads/public/5df/edge/6eb/5dfede6eb5aae552242132.png)
 
 Now save and close the export window.
 

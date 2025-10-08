@@ -47,9 +47,9 @@ The plugin can be downloaded from the [Asset Library](https://godotengine.org/as
 
 #### Highlights
 
-- Fixes the way swapchains are created ensuring consistant color gradients between different systems and preventing the banding issue on the Meta Quest. This also fixes the issues reported by users using the Meta Quest and Quest 2 over (air) link.
+- Fixes the way swapchains are created ensuring consistent color gradients between different systems and preventing the banding issue on the Meta Quest. This also fixes the issues reported by users using the Meta Quest and Quest 2 over (air) link.
   - There is a regression in the desktop version where the on screen preview is too dark which we are aware of. This requires a fix in Godot itself. A workaround is available.
-- Fixes an important issue in the returned trigger and grip values when analogue input was requested.
+- Fixes an important issue in the returned trigger and grip values when analog input was requested.
 - Adds support for the HP Reverb G2 controllers.
 - Improves upon the timing used for predictive tracking. This ensures controller positions are more accurate. Added HUD elements to your camera node are now positioned correctly.
 - Adds an API to return information about the confidence of the tracking data. Poses will now provide information on whether the controllers are accurately tracked or whether the controllers are (partially) obscured and the tracking is predictive.

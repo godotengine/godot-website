@@ -26,7 +26,7 @@ This is an international event, and as such we invite all Godot users and contri
 
 ## Practical information
 
-[**See our Events page**](/events) for the details and pratical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
+[**See our Events page**](/events) for the details and practical information, including links to relevant GIC pages with travel information. The Events page will be updated as we get more details about the event, especially regarding the speakers and schedule (see call for participation below).
 
 The GodotCon will be free of charge, but we ask you to [**register via this form**](https://framaforms.org/registration-godotcon-poznan-2018-1535467892) so that we know who to expect, and how many attendees will be there.
 

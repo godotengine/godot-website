@@ -62,4 +62,4 @@ Thank you for ensuring that we can keep developing the Godot Engine!
 		max-height: 300px;
 		background-color: transparent;
 	}
-</stlye>
+</style>

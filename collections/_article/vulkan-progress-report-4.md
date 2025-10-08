@@ -68,7 +68,7 @@ While not strictly Vulkan based, Basis Universal was added to Godot as an option
 
 Basis Universal is mostly useful for 3D games and results in 75% smaller textures, at the cost of much slower import time (so, won't want to use it until deploy)  and slightly worse visual quality and loading times.
 
-![bu.png](/storage/app/uploads/public/5da/235/edb/5da235edb5e1c385504696.png)
+![basisu.png](/storage/app/uploads/public/5da/235/edb/5da235edb5e1c385504696.png)
 
 ### Stay tuned for next month!
 

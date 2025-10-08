@@ -122,7 +122,7 @@ The **Polygon2D** node needs to store bone painting information. To create this,
 
 ##### 5-Painting bone weights
 
-Everything is now ready for weight painting!! Now select bones fromt he list, and paint the area they affect. When a point is fully white, it's fully affected by the bone. When black, it's not affected at all.
+Everything is now ready for weight painting!! Now select bones from the list, and paint the area they affect. When a point is fully white, it's fully affected by the bone. When black, it's not affected at all.
 
 A point may be affected by multiple bones. When this happens, the bone will try to satisfy both bones as best as possible, by averaging their influence. This makes deformation look *soft*.
 

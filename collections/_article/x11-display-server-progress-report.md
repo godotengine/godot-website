@@ -202,7 +202,7 @@ XConvertSelection(x11_display, clipboard_manager, save_targets, None,
         x11_window, CurrentTime);
 ```
 
-This protocol then requires sending events back and forth with the X server, so I've implemented it by re-using the event polling system described in previous sections, but this time in a blocking call on the main thread. We wait to receive specific events, or abort in case of timeout.
+This protocol then requires sending events back and forth with the X server, so I've implemented it by reusing the event polling system described in previous sections, but this time in a blocking call on the main thread. We wait to receive specific events, or abort in case of timeout.
 
 Pull Request: [GH-42652](https://github.com/godotengine/godot/pull/42652)
 

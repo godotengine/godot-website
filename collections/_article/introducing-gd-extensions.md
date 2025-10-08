@@ -70,7 +70,7 @@ linux.64 = "bin/x11/libgdexample.so"
 windows.64 = "bin/win64/libgdexample.dll"
 ```
 
-Under `configuration`, we define the name of the function in our plugin that will initialise our plugin.
+Under `configuration`, we define the name of the function in our plugin that will initialize our plugin.
 
 Under `libraries`, we specify the name of the dynamic library for each platform.
 
@@ -89,7 +89,7 @@ GDNativeBool GDN_EXPORT example_library_init(const GDNativeInterface *p_interfac
 }
 ```
 
-This code creates an initializer object and registers a number of callbacks. These callbacks allow us to register and construct objects at different points of Godot's initialisation. For our example library, we use `register_scene_initializer()` to register our classes.
+This code creates an initializer object and registers a number of callbacks. These callbacks allow us to register and construct objects at different points of Godot's initialization. For our example library, we use `register_scene_initializer()` to register our classes.
 
 When we look at this callback, we see that we register our class:
 

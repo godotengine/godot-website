@@ -15,7 +15,7 @@ Thanks to our very supporting patrons I have the opportunity to work part-time o
 
 The first month I spent on getting started and familiar with the rendering in Godot.
 
-Since I want to be able to help out with more rendering related tasks in the future, in places where existing code could be re-used, I am rewriting those parts myself to get a better understanding of the code.
+Since I want to be able to help out with more rendering related tasks in the future, in places where existing code could be reused, I am rewriting those parts myself to get a better understanding of the code.
 
 ## Roadmap
 
@@ -72,7 +72,7 @@ Juan's work on the GLES 3.0 renderer a little bit over a year ago contained chan
 
 In 3.0 this architecture has been revisited and split up over multiple classes, as explained in [Juan's first progress report](https://godotengine.org/article/godots-new-renderer-progress-report-1).
 
-Because of that it's not possible to re-use much of the 2.1 rendering code (although a lot of it is still relevant and helpful as a reference).
+Because of that it's not possible to reuse much of the 2.1 rendering code (although a lot of it is still relevant and helpful as a reference).
 
 The first step towards creating a new rendering backend is to create classes that implement those new interfaces. The goal here was just to make the new code compile properly.
 

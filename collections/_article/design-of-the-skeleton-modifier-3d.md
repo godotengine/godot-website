@@ -44,7 +44,7 @@ AnimationMixer -> ModifierA -> ModifierB
 
 Keep in mind that both `ModifierA` and `ModifierB` need to get the bone pose that was processed immediately before.
 
-The `AnimationMixer` does not use `set_bone_global_pose_override()`, so it transforms the original pose as `set_bone_pose_rotation()`. This means that the input to `ModifierA` must be retrieved from the original pose with `get_bone_global_pose_no_override()` and the output must be retreived from the override with `get_bone_global_pose_override()`. In this case, if `ModiferB` wants to consider the output of `ModiferA`, both the input and output of `ModifierB` must be the override with `get_bone_global_pose_override()`.
+The `AnimationMixer` does not use `set_bone_global_pose_override()`, so it transforms the original pose as `set_bone_pose_rotation()`. This means that the input to `ModifierA` must be retrieved from the original pose with `get_bone_global_pose_no_override()` and the output must be retrieved from the override with `get_bone_global_pose_override()`. In this case, if `ModiferB` wants to consider the output of `ModiferA`, both the input and output of `ModifierB` must be the override with `get_bone_global_pose_override()`.
 
 Then, can the order of `ModifierA` and `ModifierB` be interchanged?
 
