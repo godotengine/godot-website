@@ -21,7 +21,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ## What's new
 
-**31 contributors** submitted **45 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.5.1-rc2) for the complete list of changes since the 4.5-stable release. You can also review [all changes included in 4.5.1](https://godotengine.github.io/godot-interactive-changelog/#4.5.1) compared to the previous 4.5 feature release.
+**31 contributors** submitted **45 improvements** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.5.1-rc2) for the complete list of changes since the 4.5.1-rc1 release. You can also review [all changes included in 4.5.1](https://godotengine.github.io/godot-interactive-changelog/#4.5.1) compared to the previous 4.5 feature release.
 
 - 2D: Fix redundant calls of `CanvasItemEditor::_update_lock_and_group_button` on `SceneTreeEditor` node selection ([GH-110320](https://github.com/godotengine/godot/pull/110320)).
 - 3D: GridMap: Fix cell scale not applying to the cursor mesh ([GH-104510](https://github.com/godotengine/godot/pull/104510)).
