@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Release candidate: Godot 4.5.1 RC 2</title><link>https://godotengine.org/article/release-candidate-godot-4-5-1-rc-2/</link><summary>Hotfixes so nice, we added 'em twice!</summary><description>&lt;p>Last week saw our first &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> snapshot for &lt;a href="/article/release-candidate-godot-4-5-1-rc-1/">4.5.1&lt;/a>, and in that time there have been even more critical bugfixes suitable for backporting. As such, we’re doing one more pass for good measure: 4.5.1-rc2 has arrived! Our top priority is ensuring the hotfix release is as stable as possible, so be sure to test and report any issues that aren’t present in 4.5-stable.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot Showcase - Material Maker</title><link>https://godotengine.org/article/godot-showcase-material-maker/</link><summary>RodZilla talks about his experience developing Material Maker, a procedural PBR material creation tool made with Godot.</summary><description>&lt;p>Today, we want to showcase &lt;a href="https://www.materialmaker.org/">Material Maker&lt;/a>, which is an open-source application made with Godot. Material Maker is designed to create materials and textures for use in physically-based rendering (PBR). As a reminder, Godot is more than just a game engine; using its &lt;a href="https://docs.godotengine.org/en/stable/tutorials/ui/index.html">UI building blocks&lt;/a>, it is possible to create full-featured applications for desktop, mobile and web platforms. In fact, the Godot editor is made with Godot itself!&lt;/p>
+&lt;p>Material Maker had its 1.4 release in early October. This marks a significant milestone in the project, as this is the first version to be running on Godot 4. We interviewed its author, RodZilla, about how this project came to fruition and what its future might look like.&lt;/p>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/8QzDPzJhVs4" title="Materials created using Material Maker" frameborder="0" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;">&lt;/iframe>
+&lt;h2 id="can-you-tell-us-a-little-bit-about-yourself-and-your-project">Can you tell us a little bit about yourself and your project?&lt;/h2>
+&lt;p>Hello, I’m Rodolphe Suescun, also known as RodZilla. I am 53, I live in Grenoble, France, and work as a senior software developer in the microelectronics industry, mostly on electronic design automation tools and embedded software.&lt;/p>
+&lt;p>I’ve been into game development as a hobby for 25 years, mostly learning, experimenting, and creating prototypes.&lt;/p>
+&lt;p>I started Material Maker back in 2018 because I wanted to create 3D games but was not very good at drawing textures. I put the project on GitHub and itch.io without much of a plan, and didn’t really communicate about it. Then one day, GameFromScratch made a video about my project, downloads started rising, and a community began forming, first on Reddit, then later on Discord.&lt;/p>
+&lt;p>When Material Maker reached 10,000 downloads, GameFromScratch encouraged me to apply for an Epic MegaGrant, which allowed me to spend a bit more time developing the project for a few months.&lt;/p>
+&lt;p>Although it is perceived as a procedural texture authoring tool, Material Maker is mainly about generating shaders which is why it has a few uncommon features, such as exporting shaders for Shadertoy, or animated or even raymarching materials for game engines. This is also what makes it so much fun to develop.&lt;/p>
+&lt;p>Material Maker now has almost 250 nodes and can export to Godot, Unity, and Unreal. It is also possible to create new nodes (either by assembling existing nodes or by writing their code using &lt;a href="https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shading_language.html">Godot shading language&lt;/a>) and new export targets.&lt;/p>
+&lt;p>Another key part of the project is the website, where artists can share the amazing materials and nodes they create. It is the best showcase of what the tool can do, and a nice source of examples for new users.&lt;/p>
+&lt;p>Finally, I’m no longer alone and Material Maker has a few active contributors such as williamchange, Jowan-Spooner, and NotArme who helped a lot on the 1.4 release.&lt;/p>
+&lt;h2 id="can-you-give-us-some-examples-of-games-developed-with-the-help-of-material-maker">Can you give us some examples of games developed with the help of Material Maker?&lt;/h2>
+&lt;p>The first two games that come to mind are &lt;a href="https://store.steampowered.com/app/2447980/Crown_Gambit/?curator_clanid=41324400">Crown Gambit&lt;/a> and &lt;a href="https://store.steampowered.com/app/1344990/Zefyr_A_Thiefs_Melody/">Zefyr: A Thief’s Melody&lt;/a>, which were both released on Steam in June.&lt;/p>
+&lt;p>&lt;em>Crown Gambit&lt;/em> is a narrative dark fantasy deck-building game (made with Godot!). Rachel Dufossé, who worked as a 2D/3D artist on the project, joined our Discord server two years ago, asking questions and showing her work from time to time, while actively promoting Material Maker in the studio she works for, Wild Wits Games. She ended up giving a talk about her work with Material Maker to Atlangames, the network of video game companies in her region.&lt;/p>
+&lt;p>&lt;em>Zefyr: A Thief’s Melody&lt;/em> is an action-adventure game with nice Wind Waker and Beyond Good and Evil vibes. Mathias Fontmarty, the solo developer of this project, did not interact as much with the community, but gave a few talks about Material Maker at conferences (such as Capitole du Libre in Toulouse).&lt;/p>
+&lt;p>Those are beautiful projects, and it is always a real pleasure to see users carry the Material Maker flag in their own way, whether by creating amazing games or by sharing their experiences.&lt;/p>
+&lt;p>I can mention a few others, released or soon-to-come, such as &lt;a href="https://store.steampowered.com/app/2053370/Chrono_Weaver/">Chrono Weaver&lt;/a>, &lt;a href="https://store.steampowered.com/app/3697370/Beyond_The_Space_Wall/">Beyond the Space Wall&lt;/a>, &lt;a href="https://store.steampowered.com/app/1343040/Blocky_Ball/">Blocky Ball&lt;/a>, &lt;a href="https://store.steampowered.com/app/1839060/Polylithic/">Polylithic&lt;/a>, &lt;a href="https://store.steampowered.com/app/2329690/KOOK/?curator_clanid=41324400">KOOK&lt;/a>, and &lt;a href="https://store.steampowered.com/app/1171980/Neverlooted_Dungeon/">Neverlooted Dungeon&lt;/a>.&lt;/p>
+&lt;p>Note to readers: the 1.4 release has a new splash screen that shows games, shaders, and materials created with Material Maker, so please feel free to contact me on Discord if you used it for your game.&lt;/p>
+&lt;p>&lt;img src="/assets/showcase/material-maker/material-maker-4.webp" alt="Material Maker splash screen featuring Crown Gambit" />&lt;/p>
+&lt;blockquote>
+&lt;p>One of Material Maker’s many splash screens; some of them are even animated!&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="what-were-some-of-the-biggest-challenges-you-faced-during-the-development-process-and-how-did-you-overcome-them">What were some of the biggest challenges you faced during the development process, and how did you overcome them?&lt;/h2>
+&lt;p>At the very beginning of the project, nodes were nearly hardcoded in GDScript and I soon realized it was a huge mistake. So I had to take a step back and come up with a generic way of describing the shader code used by nodes and assembling them. Then I added an editor for those shader nodes, which made node creation really easy.&lt;/p>
+&lt;p>I am not sure it was that big of a challenge, but it took a few weeks of not touching the code, and thinking about use cases and code generation to come up with the right solution. Although shader code generation has been improved and extended since then, it has not changed that much.&lt;/p>
+&lt;p>Exporting to other game engines was a bit challenging. I had to understand how they handle materials and come up with a convenient export workflow. Unreal needs a material graph and I didn’t find an easy-to-generate file format for it, so Material Maker generates a Python script that creates the graph when executed in Unreal (I know it is an ugly solution).&lt;/p>
+&lt;p>This challenge is not completely solved, though. When exporting dynamic materials to Unreal and Unity, Material Maker “translates” the generated GLSL shader code to HLSL. This part will need to be rewritten at some point, based on a proper GLSL parser.&lt;/p>
+&lt;p>Of course, there is optimization, mainly to decrease rendering time for generated textures. And there is still a lot more to be done.&lt;/p>
+&lt;p>On the non-technical challenges side, I would say that evolving from a “lone wolf working on personal projects” mindset to interacting with a very nice community of users and contributors was not without glitches. But I guess it was a well-needed evolution.&lt;/p>
+&lt;h2 id="the-project-is-under-the-mit-license-and-available-for-everyone-at-github-what-made-you-decide-to-make-the-project-free-and-open-source">The project is under the MIT license and available for everyone &lt;a href="https://github.com/RodZill4/material-maker">at GitHub&lt;/a>. What made you decide to make the project free and open source?&lt;/h2>
+&lt;p>I have been an open-source software user (and advocate) for quite some time. I think I installed Linux for the first time back in 1993. If I remember correctly, that was about 30 floppy disks.&lt;/p>
+&lt;p>When I started Material Maker, it was just an experiment I intended to use to create textures, so I shared it under the MIT license, just like all prototypes you can find on my GitHub.&lt;/p>
+&lt;p>And for me it is a hobby anyway, so it was never meant to be paid software.&lt;/p>
+&lt;p>That said, donations pay for the domain name, the &lt;abbr title="Virtual Private Server">VPS&lt;/abbr>, the “Apple tax”, and whatever hardware I needed to develop Material Maker and port it to all supported platforms, and I’m pretty happy with that. Huge thanks to everyone who supports this project!&lt;/p>
+&lt;p>&lt;img src="/assets/showcase/material-maker/material-maker-2.webp" alt="Beehive material graph and preview" />&lt;/p>
+&lt;blockquote>
+&lt;p>Material showcased: &lt;em>Beehive&lt;/em> by RodZilla (included in the &lt;code class="language-plaintext highlighter-rouge">examples/&lt;/code> folder with Material Maker)&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="how-did-you-discover-godot-what-made-you-pick-it-for-your-project">How did you discover Godot? What made you pick it for your project?&lt;/h2>
+&lt;p>It is really funny that I discovered Godot just like Material Maker gained its current visibility. I discovered this game engine while watching a video from GameFromScratch covering Godot around the time it went open-source.&lt;/p>
+&lt;p>I tried it for a few very small game prototypes (including one featuring a silly mouse for my very first game jam) and I must admit it immediately clicked for me. Godot was far from what it would become, but I already loved the nodes approach and how natural the overall design felt.&lt;/p>
+&lt;p>I’ve been using Godot for all my game development projects and prototypes ever since, and it consistently proves easy and efficient to work with.&lt;/p>
+&lt;h2 id="material-maker-14-is-the-first-version-to-be-running-on-godot-4-what-upgrades-does-godot-4-bring-to-your-project">Material Maker 1.4 is the first version to be running on Godot 4. What upgrades does Godot 4 bring to your project?&lt;/h2>
+&lt;p>The main change that Godot 4 brings is compute shaders which give a lot more flexibility for shader generation and help improve performance. I also used them to introduce new generated meshes (rounded cube and cylinder) to replace the default ones.&lt;/p>
+&lt;p>Support for multiple windows made it possible for me to add flexible layout with undockable panels, and I will probably expose this part as a Godot addon so other application developers can reuse it.&lt;/p>
+&lt;p>I also started using the new GDScript features (mainly typed arrays and dictionaries), but it will take a long time before all of Material Maker’s code is updated.&lt;/p>
+&lt;p>&lt;img src="/assets/showcase/material-maker/material-maker-3.webp" alt="Pavement Generator material preview" />&lt;/p>
+&lt;blockquote>
+&lt;p>Material showcased: &lt;a href="https://www.materialmaker.org/material?id=548">&lt;em>Pavement Generator&lt;/em> by Tarox&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="what-challenges-have-you-encountered-while-upgrading-the-project-to-godot-4-what-would-you-like-to-see-implemented">What challenges have you encountered while upgrading the project to Godot 4? What would you like to see implemented?&lt;/h2>
+&lt;p>The main challenge for me was learning the new &lt;a href="https://docs.godotengine.org/en/stable/classes/class_renderingserver.html">RenderingServer&lt;/a> and &lt;a href="https://docs.godotengine.org/en/stable/classes/class_renderingdevice.html">RenderingDevice&lt;/a> and finding out how to best use compute shaders for Material Maker’s use cases. Also, API changes between releases have been a bit annoying, but that’s the price to pay when using bleeding edge releases.&lt;/p>
+&lt;p>The only thing I’m missing for Material Maker is support for saving EXR files in the release templates. I currently have to use custom-built templates for Material Maker. This is not much of an annoyance since I only have to recompile Godot whenever I use a new release.&lt;/p>
+&lt;p>But speaking of possible improvements for Godot, while doing game jams with my team, we noticed Godot makes it hard for audio designers to do their job without diving into the whole Godot project (since sounds are triggered wherever there is an AudioStreamPlayer node). I wrote a small addon (called TRAudio and &lt;a href="https://github.com/RodZill4/TRAudio">available on my GitHub&lt;/a>) that tries to bridge the gap between the audio designer and the software developer, but I think Godot would benefit from supporting this natively. The addon is OK in most use cases, but triggering sounds in animations is not as convenient as it could be.&lt;/p>
+&lt;h2 id="do-you-have-any-new-features-or-improvements-in-mind-for-material-maker-in-the-future">Do you have any new features or improvements in mind for Material Maker in the future?&lt;/h2>
+&lt;p>Of course, Material Maker has a roadmap, but I generally do not communicate much about it so I do not promise anything my limited free time does not allow.&lt;/p>
+&lt;p>That said, Material Maker 1.0 (and all previous releases) were about delivering a nice toolkit for creating seamlessly tileable materials. And 2.0 will focus on texturing 3D models (and 1.4 is a step in that direction with the new Mesh Map node).&lt;/p>
+&lt;p>The painting tool in Material Maker is a nice prototype and can do quite a few impressive things (brushes are completely procedural and described by connecting nodes), and in 1.4, all PBR channels can be painted by a single compute shader. But it becomes way too slow with complex brushes, and the end result of each stroke is stored in the final textures of the painted layer. So we start with a procedural brush, and lose the procedural aspect while painting (which defeats the purpose of the approach).&lt;/p>
+&lt;p>So instead of improving the current painting tool, I’m thinking of introducing very basic painting features in the material authoring tool. By “very basic”, I mean painting simple masks that can be applied to parts of the graph, or UV maps that will help place a procedural shape or pattern using a CustomUV node. Thus painting would become a guide for procedural generation, which would allow an interactive yet nearly non-destructive workflow for texturing models.&lt;/p>
+&lt;p>And in the short term, the &lt;a href="https://rodzill4.github.io/material-maker/doc/node_simple_easy_sdf.html">EasySDF node and its corresponding dialog&lt;/a> (that is used to edit 2D and 3D Signed Distance Functions) will get an update, on both UI and code generation sides.&lt;/p>
+&lt;p>&lt;img src="/assets/showcase/material-maker/material-maker-1.webp" alt="Broken Floor material graph and preview" />&lt;/p>
+&lt;blockquote>
+&lt;p>Material showcased: &lt;a href="https://www.materialmaker.org/material?id=975">&lt;em>Broken Floor&lt;/em> by Tarox&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="how-can-one-learn-to-use-material-maker">How can one learn to use Material Maker?&lt;/h2>
+&lt;p>This is probably the weakest point of this project. There are &lt;a href="https://www.youtube.com/watch?v=mSuyrsJSZ_o&amp;amp;list=PLI2XkW0E3DLhYDu30nxSiUsdBS-ziIbbo">nice video tutorials made by Kasper Arnklit Frandsen&lt;/a> and &lt;a href="https://www.youtube.com/watch?v=yKQRfrxJRLM">a few more advanced ones by Pavel Oliva&lt;/a>, but they are a bit old. It is also possible to follow Substance Designer tutorials; the nodes are different, but the concepts are the same.&lt;/p>
+&lt;p>Another great way to learn is to &lt;a href="https://www.materialmaker.org/materials">grab materials from the website&lt;/a> and study their graph.&lt;/p>
+&lt;p>In any case, you probably want to &lt;a href="https://discord.gg/RnHgQS9Nqq">join our Discord server&lt;/a>. Material Maker has a very nice and welcoming community.&lt;/p>
+&lt;p>Material Maker definitely needs a few good-quality “official” video tutorials and I really need to make sure they happen.&lt;/p>
+&lt;h2 id="thank-you-for-sharing-your-experience-using-godot-is-there-anything-you-would-like-to-plug">Thank you for sharing your experience using Godot. Is there anything you would like to plug?&lt;/h2>
+&lt;p>Although I mainly mentioned Material Maker, I recently participated in six &lt;a href="https://godotwildjam.com/">Godot Wild Jams&lt;/a>, followed by a &lt;a href="https://itch.io/jam/godot-xr-game-jam-sep-2025">Godot XR Game Jam&lt;/a>, with a truly awesome team (now named Cularo Games). We’re now planning to push one of those projects further. The lone wolf in me will soon be gone for good.&lt;/p>
+&lt;hr />
+&lt;p>Thank you RodZilla for taking the time to answer our questions! We look forward to the future of Material Maker.&lt;/p>
+&lt;p>&lt;a href="https://www.materialmaker.org/">Material Maker&lt;/a> is free and open-source. It can be downloaded for Windows, macOS, and Linux on &lt;a href="https://rodzilla.itch.io/material-maker">itch.io&lt;/a>. Along with the &lt;a href="https://github.com/RodZill4/material-maker">GitHub repository&lt;/a>, there is also a &lt;a href="https://www.reddit.com/r/MaterialMaker/">subreddit&lt;/a> and &lt;a href="https://discord.gg/RnHgQS9Nqq">Discord server&lt;/a> you can join to interact with its community.&lt;/p></description><category>Showcase</category><guid>https://godotengine.org/article/godot-showcase-material-maker/</guid><dc:creator>Hugo Locurcio</dc:creator><pubDate>Tue, 14 Oct 2025 14:00:00 +0000</pubDate><image>https://godotengine.org/assets/showcase/material-maker/header.webp</image></item><item><title>Release candidate: Godot 4.5.1 RC 2</title><link>https://godotengine.org/article/release-candidate-godot-4-5-1-rc-2/</link><summary>Hotfixes so nice, we added 'em twice!</summary><description>&lt;p>Last week saw our first &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">Release Candidate&lt;/a> snapshot for &lt;a href="/article/release-candidate-godot-4-5-1-rc-1/">4.5.1&lt;/a>, and in that time there have been even more critical bugfixes suitable for backporting. As such, we’re doing one more pass for good measure: 4.5.1-rc2 has arrived! Our top priority is ensuring the hotfix release is as stable as possible, so be sure to test and report any issues that aren’t present in 4.5-stable.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.5.1.rc2/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/6Ls6Bfa34">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
@@ -2326,261 +2400,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>While JetBrains Rider is known as a professional tool, it recently became available for free for non-commercial use. That means if you’re just getting started with Godot, then it’s free for learning. It’s also free for open source, so you can use it to contribute to the engine, and it’s free for content creation, so you can make cool videos of your learning journey too. Other options for &lt;a href="https://www.jetbrains.com/rider/buy/?utm_source=google&amp;amp;utm_medium=referral&amp;amp;utm_campaign=rider&amp;amp;utm_content=godot-licensing&amp;amp;section=commercial&amp;amp;billing=yearly">licensing&lt;/a> and &lt;a href="https://www.jetbrains.com/store/?utm_source=google&amp;amp;utm_medium=referral&amp;amp;utm_campaign=rider&amp;amp;utm_content=godot-post-discounts&amp;amp;section=discounts&amp;amp;billing=yearly">discounts&lt;/a> are also available.&lt;/p>
 &lt;h3 id="a-message-from-jetbrains">A message from JetBrains:&lt;/h3>
 &lt;p>At JetBrains, we value the diversity of thought and experience in the software industry, such as the many different programming languages and related ecosystems. We can see that there is ample scope for multiple game engines, especially so for a not-for-profit, open-source game engine. Development happens thanks to the dedication of contributors and paid volunteers, and we welcome the chance to support passionate people making a difference with a successful community project.&lt;/p>
-&lt;p>We’d like to encourage you to visit the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by the &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>, or to check &lt;a href="https://godotengine.org/donate">out the alternative ways to donate&lt;/a>, and join us in supporting such a fantastic project.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/jetbrains-joins-dev-fund-supports-godot/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 05 Aug 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-jetbrains.webp</image></item><item><title>Dev snapshot: Godot 4.5 beta 4</title><link>https://godotengine.org/article/dev-snapshot-godot-4-5-beta-4/</link><summary>More critical fixes coming your way!</summary><description>&lt;p>It’s been a while since our last snapshot, as our team has been quite busy knocking out some critical release-blocker and immediate-blocker issues. Thankfully, we’re back at the point where we can comfortably deliver our latest 4.5 pre-release candidate. As a refresher: the beta period means that the project has entered feature freeze, so the only changes you’ll be seeing are bugfixes and addressing regressions.&lt;/p>
-&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.5.beta4/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/h9JcJGHfg">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
-&lt;hr />
-&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/3775050/DOGWALK/?curator_clanid=41324400">&lt;strong>DOGWALK&lt;/strong>&lt;/a>, a title we had the pleasure of showcasing in a &lt;a href="https://godotengine.org/article/godot-showcase-dogwalk/">dedicated article&lt;/a>. You can download the game for free on &lt;a href="https://store.steampowered.com/app/3775050/DOGWALK/?curator_clanid=41324400">Steam&lt;/a>, &lt;a href="https://blenderstudio.itch.io/dogwalk">itch.io&lt;/a>, and the &lt;a href="https://studio.blender.org/projects/dogwalk/">Blender Studio website&lt;/a>.&lt;/p>
-&lt;h2 id="highlights">Highlights&lt;/h2>
-&lt;p>For an overview of what’s new overall in Godot 4.5, have a look at the highlights for &lt;a href="/article/dev-snapshot-godot-4-5-beta-1/">4.5 beta 1&lt;/a>, which cover a lot of the changes. This blog post only covers the changes between beta 3 and beta 4. This section covers the most relevant changes made since the beta 3 snapshot, which are largely regression fixes:&lt;/p>
-&lt;ul>
-&lt;li>Animation: Remove PropertyTweener start warning (&lt;a href="https://github.com/godotengine/godot/pull/108410">GH-108410&lt;/a>).&lt;/li>
-&lt;li>Buildsystem: Android: Update the maven publishing configuration following the deprecation of the OSSHR service (&lt;a href="https://github.com/godotengine/godot/pull/108393">GH-108393&lt;/a>).&lt;/li>
-&lt;li>Buildsystem: Web: Fix Emscripten for WebXR and update minimum version (&lt;a href="https://github.com/godotengine/godot/pull/107460">GH-107460&lt;/a>).&lt;/li>
-&lt;li>C#: Fix thread deadlock when using a worker thread to load a script with a generic base class (&lt;a href="https://github.com/godotengine/godot/pull/99798">GH-99798&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix main editor title after changing language (&lt;a href="https://github.com/godotengine/godot/pull/108396">GH-108396&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix ScriptEditor inline colors float handling (&lt;a href="https://github.com/godotengine/godot/pull/107904">GH-107904&lt;/a>).&lt;/li>
-&lt;li>GDScript: Fix autocompletion issues with nested types (&lt;a href="https://github.com/godotengine/godot/pull/94996">GH-94996&lt;/a>).&lt;/li>
-&lt;li>GDScript: Fix lookup symbol for &lt;code class="language-plaintext highlighter-rouge">super()&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/108306">GH-108306&lt;/a>).&lt;/li>
-&lt;li>GUI: Code Editor: Fix “Pick Color” menu option replacing multiple color items (&lt;a href="https://github.com/godotengine/godot/pull/108431">GH-108431&lt;/a>).&lt;/li>
-&lt;li>GUI: RTL: Add method to get visible content bounding box (&lt;a href="https://github.com/godotengine/godot/pull/108466">GH-108466&lt;/a>).&lt;/li>
-&lt;li>GUI: RTL: Add option to scroll follow visible characters (&lt;a href="https://github.com/godotengine/godot/pull/108399">GH-108399&lt;/a>).&lt;/li>
-&lt;li>GUI: TextEdit: Draw guidelines under the text and caret (&lt;a href="https://github.com/godotengine/godot/pull/108599">GH-108599&lt;/a>).&lt;/li>
-&lt;li>Multiplayer: Fix node cache errors on nested MultiplayerSpawners (&lt;a href="https://github.com/godotengine/godot/pull/101416">GH-101416&lt;/a>).&lt;/li>
-&lt;li>Porting: Windows: Add SSE4.2 support runtime check (&lt;a href="https://github.com/godotengine/godot/pull/108561">GH-108561&lt;/a>).&lt;/li>
-&lt;li>Rendering: Always perform color correction and debanding on nonlinear sRGB values (&lt;a href="https://github.com/godotengine/godot/pull/107782">GH-107782&lt;/a>).&lt;/li>
-&lt;li>Rendering: Fix crash when creating voxel GI data (&lt;a href="https://github.com/godotengine/godot/pull/108397">GH-108397&lt;/a>).&lt;/li>
-&lt;li>Rendering: Fix underculling of occulusion culling (&lt;a href="https://github.com/godotengine/godot/pull/108347">GH-108347&lt;/a>).&lt;/li>
-&lt;/ul>
-&lt;h2 id="changelog">Changelog&lt;/h2>
-&lt;p>&lt;strong>79 contributors&lt;/strong> submitted &lt;strong>168 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.5-beta4">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the previous 4.5-beta3 snapshot.&lt;/p>
-&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/2d113cc224cb9be07866d003819fcef2226a52ea">&lt;code class="language-plaintext highlighter-rouge">2d113cc22&lt;/code>&lt;/a>.&lt;/p>
-&lt;h2 id="downloads">Downloads&lt;/h2>
-&lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.5-beta4">
-Download Godot 4.5 beta4
-&lt;/a>
-&lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-5-beta-4.webp" />
-&lt;div class="card-download-platforms">
-&lt;div class="download-platform platform-linux">
-&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
-Linux
-&lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.5&amp;amp;flavor=beta4&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.5&amp;amp;flavor=beta4&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-macos">
-&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
-macOS
-&lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.5&amp;amp;flavor=beta4&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.5&amp;amp;flavor=beta4&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-windows">
-&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
-Windows
-&lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.5&amp;amp;flavor=beta4&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.5&amp;amp;flavor=beta4&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.5-beta4">
-Export templates and other downloads
-&lt;/a>
-&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
-Make a Donation
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;style>
-.thankyou-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.85);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 10;
-}
-.thankyou {
-background: var(--base-color);
-box-shadow: var(--more-shadow);
-padding: 30px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-position: relative;
-border-radius: 13px;
-}
-.thankyou-reading {
-font-size: 16px;
-}
-.thankyou-reading-list {
-font-size: 16px;
-margin: 0;
-margin-left: 48px;
-padding-left: 0;
-}
-.thankyou-donate {
-margin-bottom: 24px;
-text-align: center;
-}
-.btn.btn-donate {
-background-color: var(--primary-color);
-color: hsla(0, 0%, 100%, 0.9);
-font-size: 22px;
-font-weight: 600;
-margin-bottom: 26px;
-}
-.thankyou h2 {
-text-shadow: var(--base-shadow);
-font-size: 36px;
-font-weight: 800;
-margin-bottom: 12px;
-}
-.thankyou h2 .anchored-link {
-/* Hiding the anchored text automatically added on blogposts */
-display: none !important;
-}
-.thankyou p {
-max-width: 620px;
-font-size: 25px;
-}
-@media (max-width: 768px) {
-.thankyou-wrapper {
-display: block;
-}
-.thankyou {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-overflow: scroll;
-padding: 30px 40px 18px 40px;
-}
-.thankyou-reading-list {
-margin-left: 24px;
-}
-.btn-close-thankyou-popup {
-width: 48px;
-height: 48px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-}
-.btn-close-thankyou-popup {
-cursor: pointer;
-position: absolute;
-top: 12px;
-right: 12px;
-}
-.btn-close-thankyou-popup img {
-background: transparent !important; /* for overwriting the style in the blogposts img */
-}
-@media (prefers-color-scheme: light) {
-.btn-close-thankyou-popup img {
-filter: invert(1);
-opacity: 0.75;
-}
-}
-&lt;/style>
-&lt;script>
-document.addEventListener('DOMContentLoaded', () => {
-const thankYouWrapper = document.getElementById('thank-you');
-// Close itself, when clicked outside of the popup area.
-thankYouWrapper.addEventListener('click', (e) => {
-if (e.target === thankYouWrapper) {
-thankYouWrapper.style.display = 'none';
-}
-});
-// Close with a close button.
-const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
-thankYouBackButton.addEventListener('click', () => {
-thankYouWrapper.style.display = 'none';
-});
-// Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
-downloadButtons.forEach((it) => {
-if (it.dataset?.external === "yes") {
-return;
-}
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-document.querySelector('.btn.btn-donate').focus();
-});
-});
-// Open from the all downloads list.
-const downloadLinks = document.querySelectorAll('.download-link');
-downloadLinks.forEach((it) => {
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-});
-});
-// Close the dialog when the user presses the escape key.
-document.addEventListener('keydown', (e) => {
-if (e.key === 'Escape') {
-thankYouWrapper.style.display = 'none';
-}
-});
-});
-&lt;/script>
-&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
-&lt;div class="thankyou">
-&lt;h2>Godot is downloading...&lt;/h2>
-&lt;p class="thankyou-donate">
-Godot exists thanks to donations from people like you. Help us continue our work:
-&lt;/p>
-&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
-Make a Donation
-&lt;/a>
-&lt;div class="btn-close-thankyou-popup">
-&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
-&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
-&lt;div class="card card-warning">
-&lt;p>
-While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
-&lt;/p>
-&lt;/div>
-&lt;h2 id="known-issues">Known issues&lt;/h2>
-&lt;p>During the beta stage, we focus on solving both regressions (i.e. something that worked in a previous release is now broken) and significant new bugs introduced by new features. You can have a look at our current &lt;a href="https://github.com/orgs/godotengine/projects/61">list of regressions and significant issues&lt;/a> which we aim to address before releasing 4.5. This list is dynamic and will be updated if we discover new showstopping issues after more users start testing the beta snapshots.&lt;/p>
-&lt;p>With every release, we accept that there are going to be various issues which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug">known bugs&lt;/a>.&lt;/p>
-&lt;h2 id="bug-reports">Bug reports&lt;/h2>
-&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
-&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
-&lt;h2 id="support">Support&lt;/h2>
-&lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-5-beta-4/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Tue, 29 Jul 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-5-beta-4.webp</image></item></channel></rss>
+&lt;p>We’d like to encourage you to visit the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by the &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>, or to check &lt;a href="https://godotengine.org/donate">out the alternative ways to donate&lt;/a>, and join us in supporting such a fantastic project.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/jetbrains-joins-dev-fund-supports-godot/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 05 Aug 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-jetbrains.webp</image></item></channel></rss>
