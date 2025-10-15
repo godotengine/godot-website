@@ -29,7 +29,6 @@ Please consider [supporting the project financially](#support), if you are able.
 - Buildsystem: Windows: Migrate `godot.manifest` to `platform/windows`, include as dependency ([GH-110897](https://github.com/godotengine/godot/pull/110897)).
 - Core: Avoid repeated `_copy_on_write()` calls in `Array::resize()` ([GH-110535](https://github.com/godotengine/godot/pull/110535)).
 - Core: Check for `NUL` characters in string parsing functions ([GH-110556](https://github.com/godotengine/godot/pull/110556)).
-- Core: Initialize `Quaternion` variant with identity ([GH-84658](https://github.com/godotengine/godot/pull/84658)).
 - Core: X11 input: prevent non-printable keys from producing empty strings ([GH-110635](https://github.com/godotengine/godot/pull/110635)).
 - Documentation: Clarify that velocity doesn't need delta multiplication in CharacterBody documentation ([GH-109925](https://github.com/godotengine/godot/pull/109925)).
 - Documentation: Document the interaction between Light3D cull mask and GI/volumetric fog ([GH-110423](https://github.com/godotengine/godot/pull/110423)).
