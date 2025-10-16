@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.5.1"
 excerpt: 4.5's first maintenance release arrives!
 categories: [release]
 author: Thaddeus Crews
-image: /storage/blog/covers/maintenance-release-godot-4-5-1.webp
+image: /storage/blog/covers/maintenance-release-godot-4-5-1.jpg
 image_caption_title: Starfinder Afterlight
 image_caption_description: A game by Epictellers Entertainment
 date: 2025-10-15 12:00:00
