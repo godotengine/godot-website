@@ -3,7 +3,7 @@ title: "Godot Showcase - Material Maker"
 excerpt: "RodZilla talks about his experience developing Material Maker, a procedural PBR material creation tool made with Godot."
 categories: ["showcase"]
 author: Hugo Locurcio
-image: /assets/showcase/material-maker/header.webp
+image: /assets/showcase/material-maker/header.jpg
 date: 2025-10-14 14:00:00
 ---
 

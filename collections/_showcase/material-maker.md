@@ -7,7 +7,7 @@ author: RodZilla
 website: https://www.materialmaker.org/
 release_date: October 2019
 
-image: "/assets/showcase/material-maker/header.webp"
+image: "/assets/showcase/material-maker/header.jpg"
 gallery: [
 	"/assets/showcase/material-maker/material-maker-1.webp",
 	"/assets/showcase/material-maker/material-maker-2.webp",

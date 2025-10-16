@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 3.6.1"
 excerpt: "Godot 3.6 was released in September last year, and it has been mostly stable, although there have been a few more important bugs which warrant a maintenance \"patch\" release (3.6.x)."
 categories: ["release"]
 author: lawnjelly
-image: /storage/blog/covers/maintenance-release-godot-3-6-1.webp
+image: /storage/blog/covers/maintenance-release-godot-3-6-1.jpg
 image_caption_title: CraftCraft
 image_caption_description: A game by Placeholder Gameworks
 date: 2025-06-25 12:00:00
