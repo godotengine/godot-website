@@ -1,7 +1,7 @@
 # Godot Engine Website
 
 Welcome to the source code for the Godot Engine website. This is a static website, generated offline using
-[Jekyll](https://jekyllrb.com/).   
+[Jekyll](https://jekyllrb.com/).
 
 
 ### Table of Contents
@@ -70,7 +70,7 @@ When working on new features[^2][^3], keep in mind this website only supports _e
   - Docker - If you run on Docker, also you can use the Jekyll Docker image to serve the site.
 
 > [!CAUTION]
-> If you use latest versions of Ruby, you may encounter issues on building process.  
+> If you use latest versions of Ruby, you may encounter issues on building process.
 > Use the specific version of Ruby that is mentioned above.
 
 #### Building the website locally
@@ -78,10 +78,10 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 To build the website locally, follow these steps:
 
 1. Install Ruby 3.2 or later and Jekyll.
-  - If you don't have access to Ruby 3.2 or later in your distribution's repositories, install a compatible version of Ruby using `rbenv`:
+  - If you don't have access to Ruby 3.2 or later in your distribution's repositories,
+    install a compatible version of Ruby using `rbenv` as well as Ruby's build-time dependencies:
     - Install in Ubuntu:
-      - `sudo apt install rbenv`
-      - `sudo apt install libyaml-dev`
+      - `sudo apt install rbenv build-essential libffi-dev libreadline-dev libyaml-dev zlib1g-dev`
     - Install in Fedora:
       - Install `rbenv` with dnf
   - Set up `rbenv` running the following:
