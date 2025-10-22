@@ -14,7 +14,7 @@ gallery: [
 	"/assets/showcase/material-maker/material-maker-3.webp",
 	"/assets/showcase/material-maker/material-maker-4.webp",
 ]
-youtube_id: "8QzDPzJhVs4"
+youtube_id: "MOZU1MKn6zU"
 
 platforms: ["windows", "macos", "linux"]
 

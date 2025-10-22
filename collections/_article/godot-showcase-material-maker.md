@@ -12,7 +12,7 @@ Today, we want to showcase [Material Maker](https://www.materialmaker.org/), whi
 
 Material Maker had its 1.4 release in early October. This marks a significant milestone in the project, as this is the first version to be running on Godot 4. We interviewed its author, RodZilla, about how this project came to fruition and what its future might look like.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8QzDPzJhVs4" title="Materials created using Material Maker" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MOZU1MKn6zU" title="Materials created using Material Maker" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
 
 ## Can you tell us a little bit about yourself and your project?
 
