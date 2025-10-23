@@ -13,9 +13,9 @@ date: 2025-06-25 12:00:00
 
 As well as bug fixes, this release also contains some cherry-picks from 4.x to update libraries. Let us know if you spot any regressions.
 
-[Jump to the **Downloads** section.](#downloads)
+**This is a safe and recommended update for all Godot 3.6.x users.** It should have no major impact on your projects, even complex ones in production, if you're already using 3.6-stable.
 
-As usual, you can try it live with the [**online version of the Godot editor**](https://editor.godotengine.org/releases/3.6.1/) updated for this release.
+[**Download Godot 3.6.1 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.6.1.stable/).
 
 -----
 
@@ -134,13 +134,6 @@ Here are the main changes since 3.6-stable:
 **21 contributors** submitted around **45 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#3.6.1) for the complete list of changes since the 3.6 release.
 
 This release is built from commit [`b1ba98fce`](https://github.com/godotengine/godot/commit/b1ba98fced19ac05b7a39b64a97dd7b1005cb7bb).
-
-<a id="downloads"></a>
-## Downloads
-
-{% include articles/download_card.html version="3.6.1" release="stable" article=page %}
-**Standard build** includes support for GDScript, GDNative, and VisualScript.
-**.NET build** (marked as `mono`) includes support for C#, as well as GDScript, GDNative, and VisualScript.
 
 ### UWP (Universal Windows Platform)
 
