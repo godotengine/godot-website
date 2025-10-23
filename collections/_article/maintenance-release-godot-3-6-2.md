@@ -19,6 +19,8 @@ Since we had to rebuild Mono for Android with a 16 KiB page size, we took the op
 
 [**Download Godot 3.6.2 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.6.2.stable/).
 
+{% include articles/download_card.html version="3.6.2" release="stable" article=page %}
+
 -----
 
 *The illustration picture for this article comes from* [**House of Necrosis**](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), *a turn-based horror RPG with retro 32-bit 3D graphics. It is developed by [Warkus](https://warkus-productions.com/) with Godot 3.6 Mono. You can get the game on [Steam](https://store.steampowered.com/app/2226430/CraftCraft_Fantasy_Merchant_Simulator/?curator_clanid=41324400), and follow the developer on [Bluesky](https://bsky.app/profile/warkus.bsky.social).*
@@ -47,13 +49,6 @@ Since we had to rebuild Mono for Android with a 16 KiB page size, we took the op
 **14 contributors** submitted **19 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#3.6.2) for the complete list of changes since the 3.6.1 release.
 
 This release is built from commit [`3cd3caab6`](https://github.com/godotengine/godot/commit/3cd3caab6779a7f3ec3bbeb9f200db50c735cfc8).
-
-<a id="downloads"></a>
-## Downloads
-
-{% include articles/download_card.html version="3.6.2" release="stable" article=page %}
-**Standard build** includes support for GDScript, GDNative, and VisualScript.
-**.NET build** (marked as `mono`) includes support for C#, as well as GDScript, GDNative, and VisualScript.
 
 ## Bug reports
 

@@ -17,6 +17,8 @@ As well as bug fixes, this release also contains some cherry-picks from 4.x to u
 
 [**Download Godot 3.6.1 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.6.1.stable/).
 
+{% include articles/download_card.html version="3.6.1" release="stable" article=page %}
+
 -----
 
 *The illustration picture for this article comes from* [**CraftCraft**](https://store.steampowered.com/app/2226430/CraftCraft_Fantasy_Merchant_Simulator/?curator_clanid=41324400), *a fantasy merchant simulator, where you work in a quaint port town as a humble jeweler/smith alongside your loyal owlcat. It is developed by [Placeholder Gameworks](https://placeholder.games/). You can get the game on [Steam](https://store.steampowered.com/app/2226430/CraftCraft_Fantasy_Merchant_Simulator/?curator_clanid=41324400), and follow the developers on [Bluesky](https://bsky.app/profile/placeholder.games) and [YouTube](https://www.youtube.com/@placeholdergameworks).*
