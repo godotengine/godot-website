@@ -23,7 +23,7 @@ Since we had to rebuild Mono for Android with a 16 KiB page size, we took the op
 
 -----
 
-*The illustration picture for this article comes from* [**House of Necrosis**](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), *a turn-based horror RPG with retro 32-bit 3D graphics. It is developed by [Warkus](https://warkus-productions.com/) with Godot 3.6 Mono. You can get the game on [Steam](https://store.steampowered.com/app/2226430/CraftCraft_Fantasy_Merchant_Simulator/?curator_clanid=41324400), and follow the developer on [Bluesky](https://bsky.app/profile/warkus.bsky.social).*
+*The illustration picture for this article comes from* [**House of Necrosis**](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), *a turn-based horror RPG with retro 32-bit 3D graphics. It is developed by [Warkus](https://warkus-productions.com/) with Godot 3.6 Mono. You can get the game on [Steam](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), and follow the developer on [Bluesky](https://bsky.app/profile/warkus.bsky.social).*
 
 ## Changed
 
