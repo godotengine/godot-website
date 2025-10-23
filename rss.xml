@@ -217,7 +217,7 @@ Make a Donation
 &lt;/div>
 &lt;/div>
 &lt;hr />
-&lt;p>&lt;em>The illustration picture for this article comes from&lt;/em> &lt;a href="https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400">&lt;strong>House of Necrosis&lt;/strong>&lt;/a>, &lt;em>a turn-based horror RPG with retro 32-bit 3D graphics. It is developed by &lt;a href="https://warkus-productions.com/">Warkus&lt;/a> with Godot 3.6 Mono. You can get the game on &lt;a href="https://store.steampowered.com/app/2226430/CraftCraft_Fantasy_Merchant_Simulator/?curator_clanid=41324400">Steam&lt;/a>, and follow the developer on &lt;a href="https://bsky.app/profile/warkus.bsky.social">Bluesky&lt;/a>.&lt;/em>&lt;/p>
+&lt;p>&lt;em>The illustration picture for this article comes from&lt;/em> &lt;a href="https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400">&lt;strong>House of Necrosis&lt;/strong>&lt;/a>, &lt;em>a turn-based horror RPG with retro 32-bit 3D graphics. It is developed by &lt;a href="https://warkus-productions.com/">Warkus&lt;/a> with Godot 3.6 Mono. You can get the game on &lt;a href="https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400">Steam&lt;/a>, and follow the developer on &lt;a href="https://bsky.app/profile/warkus.bsky.social">Bluesky&lt;/a>.&lt;/em>&lt;/p>
 &lt;h2 id="changed">Changed&lt;/h2>
 &lt;ul>
 &lt;li>Buildsystem: Update toolchains for official builds (Fedora 42 base, Mono 6.12.0.206, MinGW-GCC 14.2.1, Xcode 16.2) (&lt;a href="https://github.com/godotengine/build-containers/pull/156">build-containers#156&lt;/a>).&lt;/li>
