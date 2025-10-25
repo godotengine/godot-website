@@ -9,6 +9,10 @@ image_caption_description: A game by Warkus
 date: 2025-10-23 11:00:00
 ---
 
+**Edit 2025-10-25 @ 21:30 UTC:** The original release had a regression affecting the Windows binaries (at least the editor) which lead to crashes ([GH-111979](https://github.com/godotengine/godot/issues/111979), [GH-112021](https://github.com/godotengine/godot/issues/112021)). This was caused by the update to MinGW-GCC 14.2.1 for official build containers. We've temporarily reverted that change and rebuilt the Windows binaries today. If you downloaded this release for Windows or the export templates before 2025-10-25 21:30 UTC, please redownload it as the binaries have been replaced.
+
+-----
+
 Although we fixed many of the major 3.6 bugs in [Godot 3.6.1](/article/godot-3-6-finally-released) in June, we have decided to make a new 3.6 point release in order to keep up to date with platform requirements.
 
 [Google announced](https://support.google.com/googleplay/android-developer/answer/11926878?hl=en) that from August 31, 2025 (with possible extension to November 1, 2025), apps and updates submitted to the Play Store must target Android 15 (API level 35) and support 16 KiB page size. As a result we have updated Godot Android APIs and made compatibility changes to ensure users can update their Godot 3 games on Play Store with 3.6.2.
@@ -27,7 +31,8 @@ Since we had to rebuild Mono for Android with a 16 KiB page size, we took the op
 
 ## Changed
 
-- Buildsystem: Update toolchains for official builds (Fedora 42 base, Mono 6.12.0.206, MinGW-GCC 14.2.1, Xcode 16.2) ([build-containers#156](https://github.com/godotengine/build-containers/pull/156)).
+- Buildsystem: Update toolchains for official builds (Fedora 42 base, Mono 6.12.0.206, ~~MinGW-GCC 14.2.1,~~ Xcode 16.2) ([build-containers#156](https://github.com/godotengine/build-containers/pull/156)).
+  * The update of the Windows toolchains to MinGW-GCC 14.2.1 was temporarily reverted as it introduced crashes with LTO. 3.6.2-stable Windows binaries (editor and export templates) were rebuilt with the previous MinGW-GCC version on 2025-10-25 at 21:30 UTC.
 - Network: mbedTLS: Update to mbedTLS 3.6.5 ([GH-108382](https://github.com/godotengine/godot/pull/108382), [GH-111845](https://github.com/godotengine/godot/pull/111845)).
 - Porting: Android: Update to target API 35, NDK r28, 16kb page size ([GH-108433](https://github.com/godotengine/godot/pull/108433)).
 - Porting: Android: Address API 35 UI changes ([GH-110255](https://github.com/godotengine/godot/pull/110255)).
