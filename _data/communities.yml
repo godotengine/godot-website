@@ -402,6 +402,12 @@ Spain:
     links:
       - title: Website
         url: https://www.medialab-prado.es/actividades/zenvoid-studio-desarrollo-de-videojuegos
+  - name: Todogodot
+    links:
+      - title: Telegram
+        url: https://t.me/todogodot
+      - title: Discord
+        url: https://discord.gg/gpRkxySQ8A
 Sweden:
   - name: Godot Sweden
     links:
