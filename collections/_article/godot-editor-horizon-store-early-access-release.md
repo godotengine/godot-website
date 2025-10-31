@@ -16,7 +16,7 @@ Today, I am proud to release the **first mobile XR port** of the Godot Editor on
 
 * [https://www.meta.com/experiences/godot-game-engine/7713660705416473/](https://www.meta.com/experiences/godot-game-engine/7713660705416473/)
 
-The Godot Editor is [now available on the Horizon Store](https://www.meta.com/experiences/godot-game-engine/7713660705416473/) for **Meta Quest 3** & **Meta Quest Pro** devices running [Horizon OS](https://www.meta.com/blog/quest/meta-horizon-os-open-hardware-ecosystem-asus-republic-gamers-lenovo-xbox/) **version 69 or higher**.
+The Godot Editor is [now available on the Horizon Store](https://www.meta.com/experiences/godot-game-engine/7713660705416473/) for **Meta Quest 2**, **Meta Quest 3** & **Meta Quest Pro** devices running [Horizon OS](https://www.meta.com/blog/quest/meta-horizon-os-open-hardware-ecosystem-asus-republic-gamers-lenovo-xbox/) **version 69 or higher**.
 
 This is an early access version of the Godot Editor running natively on Meta Quest devices, enabling the creation and development of 2D, 3D and **immersive XR** apps and games directly on device without the need for an external computer.
 
