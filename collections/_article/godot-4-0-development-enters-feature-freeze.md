@@ -11,7 +11,7 @@ We're determined to deliver a stable release of Godot 4.0 as soon as possible. T
 
 ### The road to Beta 1
 
-With that in mind, effective **August 3rd** we're entering a feature freeze stage, and no changes to _the roadmap for Godot 4.0_ will be expected. If you have pending work that you absolutely want to see in Godot 4.0, submit it before **August 3rd**. You can either open a pull request or contact the [Production team](/teams#production) directly for your work to be considered.
+With that in mind, effective **August 3rd** we're entering a feature freeze stage, and no changes to _the roadmap for Godot 4.0_ will be expected. If you have pending work that you absolutely want to see in Godot 4.0, submit it before **August 3rd**. You can either open a pull request or contact the [Production team](https://contributing.godotengine.org/en/latest/organization/areas.html) directly for your work to be considered.
 
 Please, do not exhaust yourself and avoid crunching. There are always future releases, _especially if your enhancement doesn't break compability_. Once 4.0 is released, we aim to have much shorter development cycles for 4.x releases so the wait for new features shouldn't be long.
 
