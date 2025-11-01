@@ -115,7 +115,7 @@ This release is built from commit [`7864ac801`](https://github.com/godotengine/g
 
 ## Known issues
 
-There are currently no known issues introduced by this release.
+- **The "Replace in Files..." function is currently broken, and will clear the contents of all files with matches when used.** This issue will be fixed in the next snapshot via [GH-112033](https://github.com/godotengine/godot/pull/112033).
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
