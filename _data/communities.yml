@@ -141,6 +141,14 @@ Czech Republic and Slovakia:
         url: https://discord.com/invite/g4XVFjXwfu
       - title: Facebook
         url: https://www.facebook.com/groups/godotczsk
+Denmark:
+  - name: Godot Denmark
+    coordinates:
+      - 55.6798
+      - 12.5771
+    links:
+      - title: Discord
+        url: https://discord.gg/pPeWjkBJFX
 Ecuador:
   - name: Godot Ecuador
     coordinates:
@@ -323,8 +331,8 @@ Norway:
       - 59.916188976445916
       - 10.75072953254959
     links:
-    - title: Discord
-      url: https://discord.gg/5afEcSgYNt
+      - title: Discord
+        url: https://discord.gg/5afEcSgYNt
 Pakistan:
   - name: Godot Engine Pakistan
     links:
