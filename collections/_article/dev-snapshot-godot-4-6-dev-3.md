@@ -73,9 +73,9 @@ The editor has gotten a lot of love in this blog post, so let's shake things up 
 
 #### Metallic Surface
 
-| Old                                                                                                       | New (half)                                                                                                            | New (full)                                                                                                            |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| <img src="/storage/blog/dev-snapshot-godot-4-6-dev-3/metalic-surface-old.jpg" alt="Metalic surface old"/> | <img src="/storage/blog/dev-snapshot-godot-4-6-dev-3/metalic-surface-new-half.jpg" alt="Metalic surface new (half)"/> | <img src="/storage/blog/dev-snapshot-godot-4-6-dev-3/metalic-surface-new-full.jpg" alt="Metalic surface new (full)"/> |
+| Old                                                                                                         | New (half)                                                                                                              | New (full)                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| <img src="/storage/blog/dev-snapshot-godot-4-6-dev-3/metallic-surface-old.jpg" alt="Metallic surface old"/> | <img src="/storage/blog/dev-snapshot-godot-4-6-dev-3/metallic-surface-new-half.jpg" alt="Metallic surface new (half)"/> | <img src="/storage/blog/dev-snapshot-godot-4-6-dev-3/metallic-surface-new-full.jpg" alt="Metallic surface new (full)"/> |
 
 ### And more!
 
