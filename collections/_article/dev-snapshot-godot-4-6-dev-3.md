@@ -81,7 +81,8 @@ The editor has gotten a lot of love in this blog post, so let's shake things up 
 
 There are too many exciting changes to list them all here, but here's a curated selection:
 
-- Animation: Remove default skeleton path in `MeshInstance3D` ([GH-112267](https://github.com/godotengine/godot/pull/112267)).*
+- Animation: Remove default skeleton path in `MeshInstance3D` ([GH-112267](https://github.com/godotengine/godot/pull/112267)).
+  - If relying on the default `skeleton_path` in some scenes, users should manually re-specify the parent node as the `NodePath`, or they can enable the `animation/compatibility/default_parent_skeleton_in_mesh_instance_3d` project setting to restore the pre-4.6 behavior.
 - Editor: Add Create Resource Hotkey ([GH-110641](https://github.com/godotengine/godot/pull/110641)).
 - Editor: Add splitter to "Create New Node" dialog ([GH-111017](https://github.com/godotengine/godot/pull/111017)).
 - Editor: Android Editor: Add game speed control options in game menu bar ([GH-111296](https://github.com/godotengine/godot/pull/111296)).
@@ -97,10 +98,6 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Rendering: Overhaul and optimize Glow in the mobile renderer ([GH-110077](https://github.com/godotengine/godot/pull/110077)).
 - Rendering: Use half float precision buffer for 3D when HDR2D is enabled ([GH-109971](https://github.com/godotengine/godot/pull/109971)).
 - Tests: Add Android instrumented tests to the `app` module ([GH-110829](https://github.com/godotengine/godot/pull/110829)).
-
-<div markdown=1 class="card card-info" style="margin-top: 1em;">
-*If relying on the default `skeleton_path` in some scenes, users should manually re-specify the parent node as the `NodePath`, or they can enable the `animation/compatibility/default_parent_skeleton_in_mesh_instance_3d` project setting to restore the pre-4.6 behavior.
-</div>
 
 ## Changelog
 
