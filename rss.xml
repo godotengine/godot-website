@@ -103,7 +103,11 @@
 &lt;h3 id="and-more">And more!&lt;/h3>
 &lt;p>There are too many exciting changes to list them all here, but here’s a curated selection:&lt;/p>
 &lt;ul>
-&lt;li>Animation: Remove default skeleton path in &lt;code class="language-plaintext highlighter-rouge">MeshInstance3D&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/112267">GH-112267&lt;/a>).*&lt;/li>
+&lt;li>Animation: Remove default skeleton path in &lt;code class="language-plaintext highlighter-rouge">MeshInstance3D&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/112267">GH-112267&lt;/a>).
+&lt;ul>
+&lt;li>If relying on the default &lt;code class="language-plaintext highlighter-rouge">skeleton_path&lt;/code> in some scenes, users should manually re-specify the parent node as the &lt;code class="language-plaintext highlighter-rouge">NodePath&lt;/code>, or they can enable the &lt;code class="language-plaintext highlighter-rouge">animation/compatibility/default_parent_skeleton_in_mesh_instance_3d&lt;/code> project setting to restore the pre-4.6 behavior.&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>Editor: Add Create Resource Hotkey (&lt;a href="https://github.com/godotengine/godot/pull/110641">GH-110641&lt;/a>).&lt;/li>
 &lt;li>Editor: Add splitter to “Create New Node” dialog (&lt;a href="https://github.com/godotengine/godot/pull/111017">GH-111017&lt;/a>).&lt;/li>
 &lt;li>Editor: Android Editor: Add game speed control options in game menu bar (&lt;a href="https://github.com/godotengine/godot/pull/111296">GH-111296&lt;/a>).&lt;/li>
@@ -120,9 +124,6 @@
 &lt;li>Rendering: Use half float precision buffer for 3D when HDR2D is enabled (&lt;a href="https://github.com/godotengine/godot/pull/109971">GH-109971&lt;/a>).&lt;/li>
 &lt;li>Tests: Add Android instrumented tests to the &lt;code class="language-plaintext highlighter-rouge">app&lt;/code> module (&lt;a href="https://github.com/godotengine/godot/pull/110829">GH-110829&lt;/a>).&lt;/li>
 &lt;/ul>
-&lt;div class="card card-info" style="margin-top: 1em;">
-&lt;p>*If relying on the default &lt;code class="language-plaintext highlighter-rouge">skeleton_path&lt;/code> in some scenes, users should manually re-specify the parent node as the &lt;code class="language-plaintext highlighter-rouge">NodePath&lt;/code>, or they can enable the &lt;code class="language-plaintext highlighter-rouge">animation/compatibility/default_parent_skeleton_in_mesh_instance_3d&lt;/code> project setting to restore the pre-4.6 behavior.&lt;/p>
-&lt;/div>
 &lt;h2 id="changelog">Changelog&lt;/h2>
 &lt;p>&lt;strong>101 contributors&lt;/strong> submitted &lt;strong>239 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.6-dev3">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since &lt;a href="/article/dev-snapshot-godot-4-6-dev-2/">4.6-dev2&lt;/a>. You can also review &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.6">all changes included in 4.6&lt;/a> compared to the previous &lt;a href="/releases/4.5/">4.5 feature release&lt;/a>.&lt;/p>
 &lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/9d84f3d135d4a53ee8c42f32d4df7cc66b2e3684">&lt;code class="language-plaintext highlighter-rouge">9d84f3d13&lt;/code>&lt;/a>.&lt;/p>
