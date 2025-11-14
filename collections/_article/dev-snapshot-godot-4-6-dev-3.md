@@ -94,6 +94,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Import: Betsy: Convert RGB to RGBA on the GPU for faster compression ([GH-110060](https://github.com/godotengine/godot/pull/110060)).
 - Navigation: Make `NavigationServer` backend engine selectable ([GH-106290](https://github.com/godotengine/godot/pull/106290)).
 - Rendering: Add Persistent Buffers utilizing UMA ([GH-111183](https://github.com/godotengine/godot/pull/111183)).
+- Rendering: D3D12: Greatly reduce shader conversion time & fix spec constant bitmasking ([GH-111762](https://github.com/godotengine/godot/pull/111762)).
 - Rendering: Implement a very simple SSAO in GLES3 ([GH-109447](https://github.com/godotengine/godot/pull/109447)).
 - Rendering: Overhaul and optimize Glow in the mobile renderer ([GH-110077](https://github.com/godotengine/godot/pull/110077)).
 - Rendering: Use half float precision buffer for 3D when HDR2D is enabled ([GH-109971](https://github.com/godotengine/godot/pull/109971)).
