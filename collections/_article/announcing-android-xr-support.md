@@ -3,7 +3,7 @@ title: "Godot and W4 Games support Android XR from day One"
 excerpt: "Announcing support for the Android XR ecosystem by the Godot Foundation and W4 Games"
 categories: ["news"]
 author: Bastiaan Olij
-image: /storage/blog/covers/godot-and-androidxr.webp
+image: /storage/blog/covers/godot-and-androidxr.jpg
 date: 2025-11-14 12:00:00
 ---
 
