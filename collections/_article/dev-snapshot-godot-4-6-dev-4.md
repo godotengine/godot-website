@@ -109,7 +109,7 @@ This release is built from commit [`bd2ca13c6`](https://github.com/godotengine/g
 
 ## Downloads
 
-{% include articles/download_card.html version="4.6" release="dev3" article=page %}
+{% include articles/download_card.html version="4.6" release="dev4" article=page %}
 
 **Standard build** includes support for GDScript and GDExtension.
 
