@@ -6,7 +6,7 @@ author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-6-dev-4.jpg
 image_caption_title: House of Necrosis
 image_caption_description: A game by Warkus
-date: 2025-11-14 12:00:00
+date: 2025-11-14 11:00:00
 ---
 
 With [GodotFest](https://godotfest.com/) now behind us, it's only natural that some users would be left with a sense of longing. Well we have just the thing: our most recent Godot 4.6 development snapshot! It's not even been two weeks since the last one, but we couldn't just leave y'all hanging for more Godot content. As always, these snapshots feature big changes, meaning they're likely accompanied by big regressions and bugs; get those tests and reports in as early as possible to ensure an expedient release cycle!
