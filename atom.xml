@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-11-14T18:50:33+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.6 dev 4</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-6-dev-4/"/><updated>2025-11-14T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-6-dev-4/</id><summary>Powering through the post-GodotFest blues</summary><content type="html">&lt;p>With &lt;a href="https://godotfest.com/">GodotFest&lt;/a> now behind us, it’s only natural that some users would be left with a sense of longing. Well we have just the thing: our most recent Godot 4.6 development snapshot! It’s not even been two weeks since the last one, but we couldn’t just leave y’all hanging for more Godot content. As always, these snapshots feature big changes, meaning they’re likely accompanied by big regressions and bugs; get those tests and reports in as early as possible to ensure an expedient release cycle!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-11-14T19:04:26+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.6 dev 4</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-6-dev-4/"/><updated>2025-11-14T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-6-dev-4/</id><summary>Powering through the post-GodotFest blues</summary><content type="html">&lt;p>With &lt;a href="https://godotfest.com/">GodotFest&lt;/a> now behind us, it’s only natural that some users would be left with a sense of longing. Well we have just the thing: our most recent Godot 4.6 development snapshot! It’s not even been two weeks since the last one, but we couldn’t just leave y’all hanging for more Godot content. As always, these snapshots feature big changes, meaning they’re likely accompanied by big regressions and bugs; get those tests and reports in as early as possible to ensure an expedient release cycle!&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.6.dev3/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/3yJ7i8kop">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
@@ -75,22 +75,22 @@
 &lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/bd2ca13c6f3a5198eac035c855dcd1759e077313">&lt;code class="language-plaintext highlighter-rouge">bd2ca13c6&lt;/code>&lt;/a>.&lt;/p>
 &lt;h2 id="downloads">Downloads&lt;/h2>
 &lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.6-dev3">
-Download Godot 4.6 dev3
+&lt;a class="card-download-link" href="/download/archive/4.6-dev4">
+Download Godot 4.6 dev4
 &lt;/a>
 &lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-6-dev-3.jpg" />
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-6-dev-4.jpg" />
 &lt;div class="card-download-platforms">
 &lt;div class="download-platform platform-linux">
 &lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
 Linux
 &lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev3&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
+&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev4&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev3&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev4&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -99,12 +99,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
 macOS
 &lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev3&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
+&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev4&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev3&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev4&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -113,12 +113,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
 Windows
 &lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev3&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
+&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev4&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev3&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;a href="https://downloads.godotengine.org/?version=4.6&amp;amp;flavor=dev4&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -126,7 +126,7 @@ Standard
 &lt;/div>
 &lt;/div>
 &lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.6-dev3">
+&lt;a class="card-download-other" href="/download/archive/4.6-dev4">
 Export templates and other downloads
 &lt;/a>
 &lt;a class="card-download-donate" href="https://fund.godotengine.org/">
