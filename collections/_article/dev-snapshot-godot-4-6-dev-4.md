@@ -36,7 +36,7 @@ The process of supporting IKs proved to be far more involved, as it too needed t
   - [`SplineIK3D`](https://docs.godotengine.org/en/latest/classes/class_splineik3d.html#class-splineik3d)
 - [`TwoBoneIK3D`](https://docs.godotengine.org/en/latest/classes/class_twoboneik3d.html#class-twoboneik3d)
 
-Attempting to go over all of these is well beyond the scope of this blog post, so readers wanting more information should check out the pull request for more details. Instead, we'll show off one of the bugfixes to this new system in ([GH-112573](https://github.com/godotengine/godot/pull/112573)), as it provides an easily digestable visualization of that this system is capable of.
+Attempting to go over all of these is well beyond the scope of this blog post, so readers wanting more information should check out the pull request for more details. Instead, we'll show off one of the bugfixes to this new system in ([GH-112573](https://github.com/godotengine/godot/pull/112573)), as it provides an easily digestable visualization of what this system is capable of.
 
 #### Before
 
@@ -50,9 +50,9 @@ Attempting to go over all of these is well beyond the scope of this blog post, s
 
 ### Project manager: Various improvements
 
-The editor recieved a **lot** of love this development snapshot, with many features well worth a look in the curated highlights. However, for this blog post, we'll be focusing on an oft-overlooked element of our editor: the project manager. While technically separate from the editor in the traditional sense, it's editor-exclusive functionality which exists to launch project editors, so they're invariably intertwined. With the project manager getting an uncharacteristic amount of attention this cycle, here's a quick lightning-round of changes:
+The editor received a **lot** of love this development snapshot, with many features well worth a look in the curated highlights. However, for this blog post, we'll be focusing on an often overlooked element of our editor: the project manager. While technically separate from the editor in the traditional sense, it is editor-exclusive functionality which exists to launch project editors, so they're invariably intertwined. With the project manager getting an uncharacteristic amount of attention this cycle, here's a quick lightning-round of changes:
 
-[Rindbee](https://github.com/Rindbee) is starting things off with an improved UI navigation ([GH-101129](https://github.com/godotengine/godot/pull/101129)). The previous implementation clashed with our recent AccessKit integration, as it didn't lend itself to keyboard navigation. Now a newly procided focus style makes navigation easier than ever:
+[Rindbee](https://github.com/Rindbee) is starting things off with an improved UI navigation ([GH-101129](https://github.com/godotengine/godot/pull/101129)). The previous implementation clashed with our recent AccessKit integration, as it didn't lend itself to keyboard navigation. Now a new focus style makes navigation easier than ever:
 
 <video autoplay loop muted playsinline title="Project manager navigation">
   <source src="/storage/blog/dev-snapshot-godot-4-6-dev-4/project-manager-nagivation.mp4?1" type="video/mp4">
