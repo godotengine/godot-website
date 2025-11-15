@@ -50,7 +50,7 @@ Attempting to go over all of these is well beyond the scope of this blog post, s
 
 ### Project manager: Various improvements
 
-The editor recieved a **lot** of love this development snapshot, with many features well worth a look in the curated highlights. However, for this blog post, we'll be focusing on an often overlooked element of our editor: the project manager. While technically separate from the editor in the traditional sense, it's editor-exclusive functionality which exists to launch project editors, so they're invariably intertwined. With the project manager getting an uncharacteristic amount of attention this cycle, here's a quick lightning-round of changes:
+The editor received a **lot** of love this development snapshot, with many features well worth a look in the curated highlights. However, for this blog post, we'll be focusing on an often overlooked element of our editor: the project manager. While technically separate from the editor in the traditional sense, it is editor-exclusive functionality which exists to launch project editors, so they're invariably intertwined. With the project manager getting an uncharacteristic amount of attention this cycle, here's a quick lightning-round of changes:
 
 [Rindbee](https://github.com/Rindbee) is starting things off with an improved UI navigation ([GH-101129](https://github.com/godotengine/godot/pull/101129)). The previous implementation clashed with our recent AccessKit integration, as it didn't lend itself to keyboard navigation. Now a new focus style makes navigation easier than ever:
 
