@@ -28,7 +28,7 @@
 &lt;/li>
 &lt;li>&lt;a href="https://docs.godotengine.org/en/latest/classes/class_twoboneik3d.html#class-twoboneik3d">&lt;code class="language-plaintext highlighter-rouge">TwoBoneIK3D&lt;/code>&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>Attempting to go over all of these is well beyond the scope of this blog post, so readers wanting more information should check out the pull request for more details. Instead, we’ll show off one of the bugfixes to this new system in (&lt;a href="https://github.com/godotengine/godot/pull/112573">GH-112573&lt;/a>), as it provides an easily digestable visualization of that this system is capable of.&lt;/p>
+&lt;p>Attempting to go over all of these is well beyond the scope of this blog post, so readers wanting more information should check out the pull request for more details. Instead, we’ll show off one of the bugfixes to this new system in (&lt;a href="https://github.com/godotengine/godot/pull/112573">GH-112573&lt;/a>), as it provides an easily digestable visualization of what this system is capable of.&lt;/p>
 &lt;h4 id="before">Before&lt;/h4>
 &lt;p>&lt;img src="/storage/blog/dev-snapshot-godot-4-6-dev-4/haha-funny-wiggle.webp" alt="gmod-ragdoll.mp3" />&lt;/p>
 &lt;h4 id="after">After&lt;/h4>
@@ -36,8 +36,8 @@
 &lt;source src="/storage/blog/dev-snapshot-godot-4-6-dev-4/haha-funny-stretch.mp4?1" type="video/mp4" />
 &lt;/video>
 &lt;h3 id="project-manager-various-improvements">Project manager: Various improvements&lt;/h3>
-&lt;p>The editor recieved a &lt;strong>lot&lt;/strong> of love this development snapshot, with many features well worth a look in the curated highlights. However, for this blog post, we’ll be focusing on an oft-overlooked element of our editor: the project manager. While technically separate from the editor in the traditional sense, it’s editor-exclusive functionality which exists to launch project editors, so they’re invariably intertwined. With the project manager getting an uncharacteristic amount of attention this cycle, here’s a quick lightning-round of changes:&lt;/p>
-&lt;p>&lt;a href="https://github.com/Rindbee">Rindbee&lt;/a> is starting things off with an improved UI navigation (&lt;a href="https://github.com/godotengine/godot/pull/101129">GH-101129&lt;/a>). The previous implementation clashed with our recent AccessKit integration, as it didn’t lend itself to keyboard navigation. Now a newly procided focus style makes navigation easier than ever:&lt;/p>
+&lt;p>The editor received a &lt;strong>lot&lt;/strong> of love this development snapshot, with many features well worth a look in the curated highlights. However, for this blog post, we’ll be focusing on an often overlooked element of our editor: the project manager. While technically separate from the editor in the traditional sense, it is editor-exclusive functionality which exists to launch project editors, so they’re invariably intertwined. With the project manager getting an uncharacteristic amount of attention this cycle, here’s a quick lightning-round of changes:&lt;/p>
+&lt;p>&lt;a href="https://github.com/Rindbee">Rindbee&lt;/a> is starting things off with an improved UI navigation (&lt;a href="https://github.com/godotengine/godot/pull/101129">GH-101129&lt;/a>). The previous implementation clashed with our recent AccessKit integration, as it didn’t lend itself to keyboard navigation. Now a new focus style makes navigation easier than ever:&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="" title="Project manager navigation">
 &lt;source src="/storage/blog/dev-snapshot-godot-4-6-dev-4/project-manager-nagivation.mp4?1" type="video/mp4" />
 &lt;/video>
