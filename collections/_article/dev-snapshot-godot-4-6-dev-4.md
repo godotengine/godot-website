@@ -17,7 +17,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ---
 
-*The cover illustration is from* [**House of Necrosis**](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), *a turn-based, horror PRG where you must survive the horrors of a mansion that changes every time it's entered. You can get the game or try the demo on [Steam](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), and follow the developer on [YouTube](https://www.youtube.com/@Warrrkus), [Bluesky](https://bsky.app/profile/mycard.utustudios.com), or [itch.io](https://warrrkus.itch.io/).*
+*The cover illustration is from* [**House of Necrosis**](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), *a turn-based, horror RPG where you must survive the horrors of a mansion that changes every time it's entered. You can get the game or try the demo on [Steam](https://store.steampowered.com/app/2005870/House_of_Necrosis/?curator_clanid=41324400), and follow the developer on [YouTube](https://www.youtube.com/@Warrrkus), [Bluesky](https://bsky.app/profile/mycard.utustudios.com), or [itch.io](https://warrrkus.itch.io/).*
 
 ## Highlights
 
