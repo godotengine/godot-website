@@ -13,6 +13,9 @@ platinum:
     link: "https://www.jetbrains.com/lp/rider-godot/"
     image: "https://fund.godotengine.org/static/logos/jetbrains.svg"
 gold:
+  - name: Arm
+    link: "https://www.arm.com/"
+    image: "https://fund.godotengine.org/static/logos/Arm-logo-black-pms432.svg"
   - name: "Prehensile Tales"
     link: "https://prehensile-tales.com"
     image: "https://fund.godotengine.org/static/logos/pt.png"
