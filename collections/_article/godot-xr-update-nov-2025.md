@@ -5,7 +5,7 @@ categories: ["progress-report"]
 author: Bastiaan Olij
 image: /storage/blog/covers/november-2025-update-godot-xr-community.jpg
 image_caption_description: "Memories - Cularo Games"
-date: 2025-11-14 12:00:00
+date: 2025-11-21 12:00:00
 ---
 
 ## "The Museum of All Things" released on the Meta Quest store!
