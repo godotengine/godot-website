@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-11-17T19:14:59+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot and W4 Games support Android XR from day One</title><link href="https://godotengine.org/article/announcing-android-xr-support/"/><updated>2025-11-14T12:00:00+00:00</updated><id>https://godotengine.org/article/announcing-android-xr-support/</id><summary>Announcing support for the Android XR ecosystem by the Godot Foundation and W4 Games</summary><content type="html">&lt;p>With the recent public release of Samsung Galaxy XR, the first headset using the new Android XR operating system, we are pleased to announce that Godot already supports this new ecosystem.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-11-21T12:23:16+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot XR update - November 2025</title><link href="https://godotengine.org/article/godot-xr-update-nov-2025/"/><updated>2025-11-21T12:00:00+00:00</updated><id>https://godotengine.org/article/godot-xr-update-nov-2025/</id><summary>MOAT XR, XR game jam results, new features, OpenXR inventory</summary><content type="html">&lt;h2 id="the-museum-of-all-things-released-on-the-meta-quest-store">“The Museum of All Things” released on the Meta Quest store!&lt;/h2>
+&lt;p>The Museum of All Things is a virtual museum where each exhibit is generated from an article on Wikipedia, and the links to other articles become doors to other exhibits.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/godot-xr/updates/moat.png" alt="Museum of All Things" />&lt;/p>
+&lt;p>It was the topic of a &lt;a href="https://godotengine.org/article/museum-of-all-things/">showcase back in February&lt;/a>, where it had a PCVR version, but no port to the Meta Quest.&lt;/p>
+&lt;p>However, now it’s launched on the &lt;a href="https://www.meta.com/experiences/the-museum-of-all-things/25148973151401467/">Meta Quest store&lt;/a>!&lt;/p>
+&lt;h2 id="results-of-the-godot-xr-community-game-jam">Results of the Godot XR Community Game Jam&lt;/h2>
+&lt;p>In September the Godot XR Community held its latest game jam and we had some amazing entries. The quality is definitely rising from previous jams.&lt;/p>
+&lt;p>The theme this time around was “It takes two”, and the interpretations of the theme did not disappoint.&lt;/p>
+&lt;p>You can find the full results here, we’ll list the top 5 results below. I highly recommend checking out the other entries. There are a number of gems that didn’t make the top 5.&lt;/p>
+&lt;h3 id="no-5-rogue-vantage-by-allen-dawodu">No 5. “Rogue Vantage” by Allen Dawodu&lt;/h3>
+&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-sep-2025/rate/3879177">Rogue Vantage&lt;/a> by &lt;a href="https://allendawodu.itch.io/">Allen Dawodu&lt;/a> ranked 5th with 11 ratings (Score: 3.606).&lt;/p>
+&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/iX6pwozpcC8" title="Rogue Vantage" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
+&lt;p>This entry is a variation on the Superhot formula where time only progresses when you move.&lt;/p>
+&lt;p>However the main character is now an NPC that you need to assist. Levels get progressively more difficult as you’re trying to keep your NPC alive.&lt;/p>
+&lt;h3 id="no-4-and-2-we-are-by-miguebc">No 4. “And 2 We Are” by MigueBC&lt;/h3>
+&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-sep-2025/rate/3883812">And 2 We Are&lt;/a> by &lt;a href="https://miguebc.itch.io/">MigueBC&lt;/a> ranked 4th with 10 ratings (Score: 3.617).&lt;/p>
+&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/zowvWSvMEbg" title="And 2 We Are" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
+&lt;p>This entry has you play two separate characters that need to perform complimentary actions to escape a maze. It has a very Portal feel to it and I wish it had many more levels to it.&lt;/p>
+&lt;p>The miniaturization part was especially well executed.&lt;/p>
+&lt;h3 id="no-3-runaway-rails-by-copper-tunic">No 3. “Runaway Rails” by Copper Tunic&lt;/h3>
+&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-sep-2025/rate/3880221">Runaway Rails&lt;/a> by &lt;a href="https://copper-tunic.itch.io/">Copper Tunic&lt;/a> ranked 3rd with 11 ratings (Score: 3.833).&lt;/p>
+&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/euV89UPG4Go" title="Runaway Rails" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
+&lt;p>This great little rhythm game has you play together with another player to place rail road tracks to the beat of music in order to prevent a train from derailing.&lt;/p>
+&lt;p>If you don’t have a friend at hand, you can play together with an NPC.&lt;/p>
+&lt;p>The developer seems set to continue building this game out and has already released several updates to his game since the jam ended.&lt;/p>
+&lt;h3 id="no-2-things-you-can-do-with-two-hands-by-matt-giuca">No 2. “Things You Can Do With Two Hands” by Matt Giuca&lt;/h3>
+&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-sep-2025/rate/3874113">Things You Can Do With Two Hands&lt;/a> by &lt;a href="https://mgiuca.itch.io/">Matt Giuca&lt;/a> ranked 2nd with 11 ratings (Score: 4.000).&lt;/p>
+&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/L41KnIcSRzE" title="Things You Can Do With Two Hands" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
+&lt;p>This game might have a simple aesthetic, but it is a unique experience to play through.&lt;/p>
+&lt;p>The aim is to coordinate and perform actions with both your hands to complete levels. Whether it is turning keys in moving locks, throwing bowling balls that have to hit a cone at the same time, or trying to hit the moon while also hitting a target, it is deceptively tricky to complete the whole game.&lt;/p>
+&lt;h3 id="no-1-wiener-wobble-dog-park-by-andyman404">No 1. “Wiener Wobble Dog Park” by Andyman404&lt;/h3>
+&lt;p>&lt;a href="https://itch.io/jam/godot-xr-game-jam-sep-2025/rate/3883622">Wiener Wobble Dog Park&lt;/a> by &lt;a href="https://andyman404.itch.io/">Andyman404&lt;/a> ranked 1st with 7 ratings (Score: 4.048).&lt;/p>
+&lt;iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/DNN8vEwrVdg" title="Wiener Wobble Dog Park" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">&lt;/iframe>
+&lt;p>The winner of the game jam was Wiener Wobble Dog Park. This unique entry has you control a sausage dog with two fingers on each hand. One hand controls the front of the dog, while the other controls the rear.&lt;/p>
+&lt;p>The dog works like a slinky and you have to move it through an obstacle course where you can move only when the dog touches the course. It is a frantic and very enjoyable experience.&lt;/p>
+&lt;h2 id="introducing-spatial-entities">Introducing spatial entities&lt;/h2>
+&lt;p>Spatial entities is a new collection of APIs within the OpenXR specification that gives us access to information about the real world around us. This API is designed to grow over time. Its initial iteration gives access to:&lt;/p>
+&lt;ol>
+&lt;li>Spatial anchors allow users to mark real world locations that are tracked by the headset. These can be stored on the headset and retrieved on subsequent runs of your application. They are great for placing virtual objects in a fixed location in your real space.&lt;/li>
+&lt;li>Plane tracking provides us with insight about the world around us, where is our floor, where are walls, where are tables, etc.&lt;/li>
+&lt;li>Marker tracking allows us to use various printed markers like QR codes, April tags, and Aruca codes, and have our headset identify and track those locations.&lt;/li>
+&lt;/ol>
+&lt;p>Godot is an early adopter of this API thanks to funding through the Khronos Godot Integration Project.&lt;/p>
+&lt;p>You can try out this new API using the Galaxy XR headset as Android XR has support for all three implementations. We are eagerly awaiting news of other headsets supporting this functionality.&lt;/p>
+&lt;h2 id="frame-synthesis">Frame synthesis&lt;/h2>
+&lt;p>Frame synthesis is a new OpenXR API that defines a standard for advanced reprojection techniques. This allows you to run your application at a lower frame rate and have the runtime inject reprojected frames that use motion vectors and depth information to improve the image.&lt;/p>
+&lt;p>Note that this API only works with the Compatibility and Mobile renderers.&lt;/p>
+&lt;p>This work was made possible thanks to funding through the Khronos Godot Integration Project.&lt;/p>
+&lt;h2 id="openxr-inventory">OpenXR inventory&lt;/h2>
+&lt;p>The OpenXR working group maintains an &lt;a href="https://github.khronos.org/OpenXR-Inventory/extension_support.html">inventory website&lt;/a> where you can see which OpenXR extensions are supported on various OpenXR Runtimes.&lt;/p>
+&lt;p>The past year our very own Bastiaan Olij has spent time on extending this inventory to also support a &lt;a href="https://github.khronos.org/OpenXR-Inventory/extension_support.html#client_matrix">client matrix&lt;/a> showing which OpenXR extensions are supported by various game engines. Working together with developers from these other engines we were able to present a complete list and devise a system that will inform users of needed plugins to get access to these features.&lt;/p>
+&lt;p>We can now see that Godot leads the pack, supporting 95 official OpenXR extensions in total. This number is made up of:&lt;/p>
+&lt;ul>
+&lt;li>14 core extensions (KHR)&lt;/li>
+&lt;li>22 multi-vendor extensions (EXT)&lt;/li>
+&lt;li>59 vendor extensions&lt;/li>
+&lt;/ul></content><author><name>Bastiaan Olij</name></author><category term="Progress Report"/></entry><entry><title>Godot and W4 Games support Android XR from day One</title><link href="https://godotengine.org/article/announcing-android-xr-support/"/><updated>2025-11-14T12:00:00+00:00</updated><id>https://godotengine.org/article/announcing-android-xr-support/</id><summary>Announcing support for the Android XR ecosystem by the Godot Foundation and W4 Games</summary><content type="html">&lt;p>With the recent public release of Samsung Galaxy XR, the first headset using the new Android XR operating system, we are pleased to announce that Godot already supports this new ecosystem.&lt;/p>
 &lt;p>As a game engine that puts OpenXR front and center, Godot is uniquely positioned to excel on this platform.&lt;/p>
 &lt;p>With the release of the &lt;a href="https://store-beta.godotengine.org/asset/godot-xr/godot-openxr-vendors-plugin/">Godot OpenXR vendor plugin v4.2.0&lt;/a>, a new option for Android XR has been added that allows developers using &lt;a href="https://godotengine.org/download/">Godot 4.5 and newer&lt;/a> to effortlessly export their existing projects to this new platform.&lt;/p>
 &lt;p>The Godot XR Editor has also been updated with Android XR support and runs beautifully on this new device. Users can download the Godot XR Editor from &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">Google Play&lt;/a>.&lt;/p>
@@ -4475,64 +4531,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry><entry><title>Godot OpenXR Vendors Plugin v4</title><link href="https://godotengine.org/article/godot-openxr-vendors-plugin-400/"/><updated>2025-07-22T12:00:00+00:00</updated><id>https://godotengine.org/article/godot-openxr-vendors-plugin-400/</id><summary>What's new in the latest release of the Godot OpenXR Vendors plugin?</summary><content type="html">&lt;p>OpenXR support has been built into Godot since the release of Godot 4.0. However, the &lt;a href="https://github.com/GodotVR/godot_openxr_vendors">OpenXR Vendors plugin&lt;/a> (maintained by Godot’s XR team) includes extensions to OpenXR created by hardware vendors (e.g. Meta, Pico, HTC, etc.), which we’ve chosen to keep outside of Godot itself.&lt;/p>
-&lt;p>We are happy to announce a new major release of the OpenXR Vendors plugin, which includes some exciting new features!&lt;/p>
-&lt;h2 id="version-400">Version 4.0.0&lt;/h2>
-&lt;p>The &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.0.0-stable">4.0.0 version&lt;/a> was actually released right before GodotCon Boston, but with all the excitement around the event (including our &lt;a href="https://godotengine.org/article/godotcon-2025-xr-android-recap/">GodotCon presentation&lt;/a>), we never managed to find a time to properly announce it.&lt;/p>
-&lt;p>Here’s some of the key features in the transition from v3 to v4!&lt;/p>
-&lt;h3 id="switch-to-khronos-loader">Switch to Khronos loader&lt;/h3>
-&lt;p>Aside from OpenXR vendor extensions, the plugin has historically also included vendor-specific OpenXR loaders for Android. While OpenXR now has a standard loader for Android (which we call “the Khronos loader”), this wasn’t the case when standalone Android headsets first hit the market, and so a number of vendors created their own proprietary loaders.&lt;/p>
-&lt;p>However, starting with version 4.0.0, we are only including the Khronos loader, which is supported on all the Android headsets supported by the plugin.&lt;/p>
-&lt;p>This is a step towards eventually including support for the Khronos loader in Godot itself, which will make it possible to export to Android without requiring the plugin at all! That is something that Bastiaan Olij has &lt;a href="https://github.com/godotengine/godot/pull/106891">started working on&lt;/a>, and we hope to merge for Godot 4.6.&lt;/p>
-&lt;h3 id="dynamic-resolution">Dynamic Resolution&lt;/h3>
-&lt;p>While hitting your FPS target is important for flat screen games, it’s &lt;em>critically&lt;/em> important in VR and AR, where drops in frame rate can cause discomfort or nausea.&lt;/p>
-&lt;p>Version 4.0.0 adds support for Meta’s Dynamic Resolution feature, which will dynamically scale down the render resolution in response to system load. So, rather than getting lower FPS, the graphics will look somewhat pixelated until system load improves.&lt;/p>
-&lt;p>&lt;img alt="Side-by-side screenshot of normal resolution and dynamic resolution when load is high" src="/storage/blog/godot-openxr-vendors-400/meta-xr-dynamic-resolution.webp" />&lt;/p>
-&lt;p>This feature is enabled by default, and so requires no setup to use — just download the new version of the plugin!&lt;/p>
-&lt;p>See &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/meta/dynamic_resolution.html">the documentation&lt;/a> for more information.&lt;/p>
-&lt;h3 id="hybrid-apps">Hybrid Apps&lt;/h3>
-&lt;p>Hybrid Apps are applications that can dynamically switch between fully immersive and floating 2D panels. The Godot &lt;a href="https://godotengine.org/article/godot-editor-horizon-store-early-access-release/">XR editor&lt;/a> is itself a Hybrid App.&lt;/p>
-&lt;p>Starting with version 4.0.0, developers can make their own Hybrid Apps for Meta headsets! Support for other vendors is in the works.&lt;/p>
-&lt;p>See this &lt;a href="https://godotengine.org/article/godotcon-2025-xr-android-recap/">earlier blog&lt;/a> post where we discussed this feature in more detail, and &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/hybrid_apps.html">the documentation&lt;/a> on creating your own Hybrid App.&lt;/p>
-&lt;h3 id="only-enable-requested-extensions">Only enable requested extensions&lt;/h3>
-&lt;p>In previous versions of the plugin, we’d enable any OpenXR extensions that the plugin supported, if they were available on the headset. This may have been OK when we only supported a handful of extensions, but that number has really started to balloon, and some extensions may have unwanted side effects, including a potential impact on performance.&lt;/p>
-&lt;p>That’s why in version 4.0.0 and beyond, there are now project settings to enable or disable any of the OpenXR extensions supported by this plugin, so you can enable only the features that your application needs.&lt;/p>
-&lt;p>&lt;img alt="Project settings dialog with the OpenXR extensions added by this plugin" src="/storage/blog/godot-openxr-vendors-400/godot-openxr-vendors-extension-settings.webp" />&lt;/p>
-&lt;h2 id="version-410">Version 4.1.0&lt;/h2>
-&lt;p>Nothing ever stands still in the world of Godot!&lt;/p>
-&lt;p>We just released &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.1.1-stable">version 4.1.1&lt;/a> which includes even more exciting features.&lt;/p>
-&lt;h3 id="full-body-tracking">Full Body Tracking&lt;/h3>
-&lt;p>We’ve supported Meta’s original OpenXR body tracking extension since version 3.0.0, but it only addresses the player’s upper body.&lt;/p>
-&lt;p>In this release, we’ve added support for Meta’s full body tracking extension, which includes tracking data for the player’s legs, as well as support for the height calibration extension, and fidelity extension, which allows controlling the tracking data’s level of detail.&lt;/p>
-&lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/releases/4.3/video/body-face-tracking.webm" type="video/webm" />
-&lt;/video>
-&lt;h3 id="application-spacewarp">Application SpaceWarp&lt;/h3>
-&lt;p>Meta’s Application SpaceWarp is a technology that allows your game to render at half framerate (for example, 36 FPS) and the OpenXR runtime will generate an in-between frames, so that the user will experience full framerate (72 FPS, in this example). This has been shown to increase an application’s frame budget by about ~70%, which can allow rendering higher fidelity graphics than would otherwise be possible on standalone VR hardware.&lt;/p>
-&lt;p>This technology helped deliver AAA graphics in &lt;strong>Assassin’s Creed Nexus VR&lt;/strong>, and now VR games built with Godot can use it too!&lt;/p>
-&lt;p>The SpaceWarp extension is supported on headsets from Meta and Pico, and with the recent release of the multi-vendor &lt;a href="https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_EXT_frame_synthesis">Frame Synthesis extension&lt;/a>, it’s expected to be supported on headsets from more vendors in the future.&lt;/p>
-&lt;p>See &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/meta/application_space_warp.html">the documentation&lt;/a> for more information.&lt;/p>
-&lt;h4 id="only-godot-45-and-the-vulkan-mobile-renderer">Only Godot 4.5+ and the Vulkan Mobile renderer&lt;/h4>
-&lt;p>While version 4.1.0 of the OpenXR Vendors Plugin is compatible with both Godot 4.4 and the forthcoming 4.5, Application SpaceWarp will only work when used with Godot 4.5 or later.&lt;/p>
-&lt;p>Also, this currently only works with the Vulkan Mobile renderer, but there is an &lt;a href="https://github.com/godotengine/godot/pull/97151">open PR&lt;/a> to add support for Godot’s Compatibility renderer (OpenGL) as well.&lt;/p>
-&lt;h3 id="environment-depth">Environment Depth&lt;/h3>
-&lt;p>In an Augmented Reality (AR) or Mixed Reality (MR) application, by default, all virtual objects rendered by Godot will appear on top of any real world objects.&lt;/p>
-&lt;p>Meta’s Environment Depth extension provides a realtime depth map of the world in front of the player, which can be used to allow real world objects to occlude — that is, to appear on top of — virtual objects.&lt;/p>
-&lt;video autoplay="" loop="" muted="" playsinline="">
-&lt;source src="/storage/blog/godot-openxr-vendors-400/meta-xr-environment-depth.webm" type="video/webm" />
-&lt;/video>
-&lt;p>Similar to Application SpaceWarp, this feature will only work when used with Godot 4.5 or later.&lt;/p>
-&lt;h2 id="and-more">And more!&lt;/h2>
-&lt;p>There are numerous other smaller changes, including:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Smaller build size!&lt;/strong> The overall package (which includes all platforms) is now 23.3 MB, whereas the last v3 release was 194 MB. That’s almost a 10x improvement!&lt;/li>
-&lt;li>&lt;strong>Support for the &lt;code class="language-plaintext highlighter-rouge">XR_FB_composition_layer_image_layout&lt;/code> extension,&lt;/strong> which is useful with OpenXRCompositionLayers using Android surfaces.&lt;/li>
-&lt;li>&lt;strong>Support for the &lt;code class="language-plaintext highlighter-rouge">XR_FB_composition_layer_depth_test&lt;/code> extension&lt;/strong>.&lt;/li>
-&lt;li>&lt;strong>Support for the &lt;code class="language-plaintext highlighter-rouge">XR_FB_android_surface_swapchain_create&lt;/code> extension&lt;/strong>.&lt;/li>
-&lt;li>&lt;strong>Support for the &lt;code class="language-plaintext highlighter-rouge">XR_META_boundary_visibility&lt;/code> extension&lt;/strong>.&lt;/li>
-&lt;li>&lt;strong>Support for the &lt;code class="language-plaintext highlighter-rouge">XR_FB_color_space&lt;/code> extension&lt;/strong>.&lt;/li>
-&lt;li>&lt;strong>Add HorizonOS camera permissions when Android CAMERA permission is enabled&lt;/strong>.&lt;/li>
-&lt;li>&lt;strong>Instant splash screen configuration for Meta headsets&lt;/strong>.&lt;/li>
-&lt;li>&lt;strong>Several bug fixes&lt;/strong>.&lt;/li>
-&lt;/ul>
-&lt;p>And there will be more exciting features to come in the future 🙂&lt;/p></content><author><name>David Snopek</name></author><category term="Progress Report"/></entry></feed>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry></feed>
