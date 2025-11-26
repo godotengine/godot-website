@@ -12,6 +12,7 @@ header:
   donate: "寄付する"
   language: "言語"
   console_support: "コンソールサポート"
+  priorities: "優先事項"
   events: "イベント"
   forum: "フォーラム"
 footer:

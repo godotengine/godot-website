@@ -13,6 +13,7 @@ header:
   language: Idioma
   events: Eventos
   console_support: Suporte a consoles
+  priorities: Prioridades
   forum: Fórum
 footer:
   godot_engine: Godot Engine

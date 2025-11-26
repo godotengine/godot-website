@@ -12,6 +12,7 @@ header:
   donate: Wpłać datek
   language: Język
   console_support: Wsparcie konsol
+  priorities: Priorytety
   events: Wydarzenia
   forum: Forum
 footer:
@@ -61,7 +62,7 @@ home:
       text: System węzłów i scen Godota daje ci zarówno moc, jak i elastyczność, do tworzenia czegokolwiek.
     script:
       title: Użyj języka odpowiedniego do zadania
-      text: Zachowaj modularność swojego kodu dzięki zorientowanemu obiektowo API, używając własnego Godotowi GDScriptu, C#, C++ lub przynieś swój własny język za pomocą GDExtension. 
+      text: Zachowaj modularność swojego kodu dzięki zorientowanemu obiektowo API, używając własnego Godotowi GDScriptu, C#, C++ lub przynieś swój własny język za pomocą GDExtension.
       extra: Wsparcie C# jest aktualnie dostępne tylko dla platform komputerowych i mobilnych (stan na wersję 4.2).<br>Użyj Godota 3, aby uruchomić C# na platformie webowej.
     2d:
       title: Dedykowany silnik 2D
