@@ -160,10 +160,18 @@ layout: default
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 12px;
 	}
 
-	.features-complete-list .btn.btn-flat.btn-flat-white {
+	.features-priorities-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 0;
+		margin-bottom: 24px;
+	}
+
+	.features-complete-list .btn.btn-flat.btn-flat-white,
+	.features-priorities-list .btn.btn-flat.btn-flat-white {
 		color: var(--base-color-text-title);
 	}
 
@@ -618,6 +626,12 @@ layout: default
 	<div class="features-complete-list">
 		<a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn btn-flat btn-flat-white btn-flat-frosted">
 			View a complete list of features
+		</a>
+	</div>
+
+	<div class="features-priorities-list">
+		<a href="/priorities/" class="btn btn-flat btn-flat-white btn-flat-frosted">
+			View a list of priorities for upcoming features
 		</a>
 	</div>
 

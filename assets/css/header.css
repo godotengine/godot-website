@@ -129,7 +129,7 @@ header .banner-container .banner a {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		
+
 	}
 	a:hover, #logo-link:hover {
   	background-color: hsla(0, 0%, 50%, 0.1);
@@ -217,6 +217,11 @@ header .banner-container .banner a {
 	outline: 0.125rem solid hsl(220, 100%, 62.5%);
 	outline-color: currentcolor;
 	position: relative;
+}
+
+#nav ul li.mobile-only a {
+  /* Indent mobile-only navigation items. */
+  padding-left: 3.375rem;
 }
 
 /* Hide mobile-only items on desktop */

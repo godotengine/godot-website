@@ -16,14 +16,15 @@
 
 		<nav id="nav">
 			<ul class="left">
-				<!-- On hover, opens a dropdown containing the link to console support page -->
+				<!-- On hover, opens a dropdown containing the link to additional pages -->
 				<li><a href="/features/" data-dropdown="features-dropdown">{% t header.features %}</a></li>
+				<!-- Show additional links in the mobile hamburger menu -->
+				<li class="mobile-only"><a href="/consoles/">{% t header.console_support %}</a></li>
+				<li class="mobile-only"><a href="/priorities/">{% t header.priorities %}</a></li>
 				<li><a href="/showcase/">{% t header.showcase %}</a></li>
 				<li><a href="/blog/">{% t header.blog %}</a></li>
 				<li><a href="/community/" data-dropdown="community-dropdown">{% t header.community %}</a></li>
 				<li><a href="https://godotengine.org/asset-library/asset">{% t header.assets %}</a></li>
-				<!-- Show console support link in the mobile hamburger menu -->
-				<li class="mobile-only"><a href="/consoles/">{% t header.console_support %}</a></li>
 			</ul>
 
 			<ul class="right">
@@ -66,11 +67,12 @@
 <!-- Dropdown menu positioned outside header to avoid backdrop-filter nesting issues -->
 <div class="nav-dropdown-menu" id="features-dropdown">
 	<!-- The features link is only visible on high-resolution tablets -->
-	<!-- On desktop we show the dropdown on hover, and the user can navigate to the features page by clicking the link in main menu-->
+	<!-- On desktop we show the dropdown on hover, and the user can navigate to the features page by clicking the link in main menu -->
 	<!-- And on small screens (width < 1200px) we switch to mobile hamburger menu -->
 	<!-- So we need this only to cover the edge case of high-resolution tablets -->
 	<a href="/features/" class="touch-only">{% t header.features %}</a>
 	<a href="/consoles/">{% t header.console_support %}</a>
+	<a href="/priorities/">{% t header.priorities %}</a>
 </div>
 
 <div class="nav-dropdown-menu" id="community-dropdown">
@@ -234,11 +236,11 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		// Find all dropdown triggers
 		const dropdownTriggers = document.querySelectorAll('[data-dropdown]');
-		
+
 		dropdownTriggers.forEach(trigger => {
 			const dropdownId = trigger.getAttribute('data-dropdown');
 			const dropdownMenu = document.getElementById(dropdownId);
-			
+
 			if (dropdownMenu) {
 				let hideTimeout = -1;
 				const clearHideTimeout = () => {
@@ -288,7 +290,7 @@
 					}
 					hideTimeout = setTimeout(hideDropdownTrigger, 100);
 				}
-				
+
 				// Toggle dropdown on high-resolution tablets
 				const toggleDropdown = (event) => {
 					if (window.innerWidth < 1200) {
