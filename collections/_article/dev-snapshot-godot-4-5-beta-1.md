@@ -86,7 +86,7 @@ And more:
 
 ### Audio / Video
 
-[Berama](https://github.com/berarma) brings us the ability to seek Theora video files via the new `set_stream_position` function ([GH-102360](https://github.com/godotengine/godot/pull/102360)). In doing so, they've additionally improved our multi-channel audio resampler, meaning that videos with 6+ channels will no longer crackle. A much more technical breakdown & additional features can be gleaned from the PR.
+[Bernat Arlandis](https://github.com/berarma) brings us the ability to seek Theora video files via the new `set_stream_position` function ([GH-102360](https://github.com/godotengine/godot/pull/102360)). In doing so, he has additionally improved our multi-channel audio resampler, meaning that videos with 6+ channels will no longer crackle. A much more technical breakdown & additional features can be gleaned from the PR.
 
 And more:
 - Add metadata tags to WAV and OGG audio streams. ([GH-99504](https://github.com/godotengine/godot/pull/99504))
@@ -187,7 +187,7 @@ And more:
 
 4.5 sees with it the introduction of a new keyword: `abstract`. [Aaron Franke](https://github.com/aaronfranke) brings this previously internal-only functionality into the hands of all GDScript users ([GH-67777](https://github.com/godotengine/godot/pull/67777)). By prepending this keyword to a class, it ensures that direct instantiation cannot occur; meaning that all calls will actually refer to a derived classes. [Danil Alexeev](https://github.com/dalexeev) built further upon this by introducing the ability for users to declare *functions* as abstract ([GH-106409](https://github.com/godotengine/godot/pull/106409)). By prepending the same `abstract` keyword to a function, it will be marked for explicit override by child classes.
 
-**Note:** The GDScript team is planning to change the `abstract` keyword to an `@abstract` annotation during the 4.5 beta phase.
+**Note:** The GDScript team changed the `abstract` keyword to an `@abstract` annotation in 4.5 beta 2.
 
 ```gdscript
 abstract class Item:
@@ -258,9 +258,11 @@ There's also the newly added `SVGTexture`, implemented by our very own [bruvzg](
   <source src="/storage/blog/dev-snapshot-godot-4-5-beta-1/svg-auto-scalable.mp4?1" type="video/mp4">
 </video>
 
+**Edit 2025-08-21:** *Starting with 4.5 beta 6, the name of this feature was changed to `DPITexture` to better reflect the original intent ([GH-109811](https://github.com/godotengine/godot/pull/109811)). For more information, see our section highlighting the change in the [4.5 beta 6 blog post](/article/dev-snapshot-godot-4-5-beta-6/).*
+
 And more:
 - TextEdit/LineEdit: Add support for OEM Alt codes input. ([GH-93466](https://github.com/godotengine/godot/pull/93466))
-- Stackable outlines on `Label`. ([GH-104731](https://github.com/godotengine/godot/pull/104731)
+- Stackable outlines on `Label`. ([GH-104731](https://github.com/godotengine/godot/pull/104731))
 - Replace global oversampling with overrideable per-viewport oversampling. ([GH-104872](https://github.com/godotengine/godot/pull/104872))
 - RichTextLabel: Add paragraph separation theme property. ([GH-107331](https://github.com/godotengine/godot/pull/107331))
 
@@ -295,7 +297,7 @@ Internationalization has always been an extremely crucial part of the Godot proj
 
 Similarly, the ability to swap languages on-the-fly within the editor is now possible thanks to the efforts of [Tomasz Chabora](https://github.com/KoBeWi) in [GH-102562](https://github.com/godotengine/godot/pull/102562). Now users can preview *and* experience multiple language options in a single editor session.
 
-We also want to give a shout-out to all the translators who tirelessly work on localizing the Godot editor, the class reference and the online documentation. If you'd like to join that effort, head to [Weblate](https://hosted.weblate.org/projects/godot-engine/) and review our [documentation](https://docs.godotengine.org/en/latest/contributing/documentation/editor_and_docs_localization.html#doc-editor-and-docs-localization) for instructions.
+We also want to give a shout-out to all the translators who tirelessly work on localizing the Godot editor, the class reference and the online documentation. If you'd like to join that effort, head to [Weblate](https://hosted.weblate.org/projects/godot-engine/) and review our [documentation](https://contributing.godotengine.org/en/latest/documentation/translation/index.html) for instructions.
 
 ### Navigation
 

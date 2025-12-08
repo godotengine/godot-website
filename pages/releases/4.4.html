@@ -1,8 +1,9 @@
 ---
+regenerate: true
 permalink: /releases/4.4/index.html
 title: Godot 4.4, a unified experience
 description: Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes - spotting all the optimizations that have been applied in the background will take some time.
-image: /storage/blog/covers/godot-4-4-a-unified-experience.webp
+image: /storage/blog/covers/godot-4-4-a-unified-experience.webp?cache=v2
 layout: release
 
 todo_for_authors_list: >
@@ -43,7 +44,8 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 ---
 
 {% assign release_version_number = "4.4" %}
-{% assign release_version = release_version_number | make_release_version: "stable" %}
+{% assign latest_patch = release_version_number | get_latest_patch %}
+{% assign release_version = latest_patch | make_release_version: "stable" %}
 
 {% assign data = site.release_4_4 %}
 
@@ -53,10 +55,10 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 {% assign _special_thanks = data | where: "type", "entry" | where: "category", "special_thanks" | sort: "rank" %}
 
 {% assign download_platforms = site.download %}
-{% assign stable_version = site.data.versions | find: "name", release_version_number %}
+{% assign stable_version = site.data.versions | find: "name", latest_patch %}
 
 <link rel="stylesheet" href="/assets/css/material-symbols-outlined.css" />
-<link rel="stylesheet" href="/assets/css/releases/4.4.css" />
+<link rel="stylesheet" href="/assets/css/releases/4.4.css?cache=v2" />
 <script type="module" src="/assets/js/releases/4.4.mjs"></script>
 
 <noscript>
@@ -92,6 +94,11 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 					</p>
 				</div>
 			</div>
+			<div class="header-content header-background-author-container">
+				<div class="header-background-author">
+					Header background screenshot from the <a href="https://jedenjenda23.itch.io/outskirts-godot-environment-demo">Outskirts environment demo</a> by <a href="https://jedenjenda23.itch.io/">jedenjenda23</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -109,7 +116,7 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 						<div class="release-card-content">
 							<div class="release-card-content-container">
 								<div class="c-blockquote">
-									Download and experience <span class="highlight">Godot {{release_version_number}}</span> for yourself
+									Download and experience <span class="highlight">Godot {{latest_patch}}</span> for yourself
 								</div>
 							</div>
 						</div>

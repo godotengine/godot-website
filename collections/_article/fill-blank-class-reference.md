@@ -15,13 +15,13 @@ The good news is, contributing to the class reference is quite easy; it's a (par
 
 ## Current status
 
-So that's where [we need YOU](http://docs.godotengine.org/en/latest/contributing/updating_the_class_reference.html). There was already an important effort before 2.0 to complete the class reference, but the work is far from finished. As of today, the class reference has 369 classes, 4420 methods, 1763 constants, 152 member variables and 142 signals. Out of which only 34% have proper descriptions so far. (You can get a nice overview for yourself using bojidar\_bg's awesome script in ``doc/tools/doc_status.py``)
+So that's where [we need YOU](https://contributing.godotengine.org/en/latest/documentation/class_reference.html). There was already an important effort before 2.0 to complete the class reference, but the work is far from finished. As of today, the class reference has 369 classes, 4420 methods, 1763 constants, 152 member variables and 142 signals. Out of which only 34% have proper descriptions so far. (You can get a nice overview for yourself using bojidar\_bg's awesome script in ``doc/tools/doc_status.py``)
 
 You can also see the detailed status in [this collaborative pad](https://etherpad.net/p/godot-classref-status) that we use to coordinate the contribution effort.
 
 ## How to help?
 
-Everything is described in the docs page [Updating the class reference](http://docs.godotengine.org/en/latest/contributing/updating_the_class_reference.html). Basically the workflow is to fork and clone Godot's source repository, edit the ``doc/base/classes.xml`` file and make a pull request for your changes.
+Everything is described in the docs page [Updating the class reference](https://contributing.godotengine.org/en/latest/documentation/class_reference.html). Basically the workflow is to fork and clone Godot's source repository, edit the ``doc/base/classes.xml`` file and make a pull request for your changes.
 
 For more efficiency, and because it's funnier to work on such things together (especially when you have questions about what a given method does), you are very welcome to join the [#godotengine-doc](http://webchat.freenode.net/?channels=#godotengine-doc) IRC channel on Freenode to discuss live with the rest of the documentation team.
 
@@ -38,6 +38,6 @@ So don't wait, and help us give Godot the documentation it deserves!
 ## Useful links
 
 - [Online class reference](http://docs.godotengine.org/en/latest/classes/_classes.html)
-- [Contributing to the class reference](http://docs.godotengine.org/en/latest/contributing/updating_the_class_reference.html)
+- [Contributing to the class reference](https://contributing.godotengine.org/en/latest/documentation/class_reference.html)
 - [Collaborative pad](https://etherpad.net/p/godot-classref-status)
 - [Recent class reference changes](https://github.com/godotengine/godot/commits/master/doc)

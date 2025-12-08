@@ -45,4 +45,4 @@ As a tester, you are encouraged to open bug reports if you experience issues wit
 
 At this stage, we are mostly interested in critical bugs which could be showstoppers in Godot 3.1 stable. Yet feel free to report non-critical issues and enhancement proposals that will be worked on once 3.1 has been released.
 
-*The illustration picture is from Odyssey Entertainment's upcoming sci-fi puzzle platformer *[Transmogrify](http://www.playtransmogrify.com/)*, which is schedule to release in coming weeks on [itch.io](https://odysseyentertainment.itch.io/transmogrify) and [Steam](https://store.steampowered.com/app/740310/Transmogrify/).*
+*The illustration picture is from Odyssey Entertainment's upcoming sci-fi puzzle platformer *[Transmogrify](http://www.playtransmogrify.com/)*, which is schedule to release in coming weeks on [itch.io](https://odysseyentertainment.itch.io/transmogrify) and [Steam](https://store.steampowered.com/app/740310/Transmogrify/?curator_clanid=41324400).*

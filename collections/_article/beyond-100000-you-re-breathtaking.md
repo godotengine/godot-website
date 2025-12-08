@@ -28,7 +28,7 @@ To this:
 
 ![Screenshot of PVKK: Planetenverteidigungskanonenkommandant in Godot 4.3](/storage/blog/beyond-100000-you-re-breathtaking/godot-4-3.webp)
 <div markdown=1 class="small text-center">
-*Screenshot of [PVKK: Planetenverteidigungskanonenkommandant](https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/) in Godot 4.3.*
+*Screenshot of [PVKK: Planetenverteidigungskanonenkommandant](https://store.steampowered.com/app/2956040/PVKK_Planetenverteidigungskanonenkommandant/?curator_clanid=41324400) in Godot 4.3.*
 </div>
 
 That's no small achievement, so I encourage all contributors to take a minute to contemplate the progress that we've made together over this journey so far!
@@ -39,7 +39,7 @@ Amidst the daily churn of fixing issues, reviewing <abbr title="pull requests">P
   <source src="/storage/blog/beyond-100000-you-re-breathtaking/cozy-space-survivors.webm">
 </video>
 <div markdown=1 class="small text-center">
-*GIF of [Cozy Space Survivors](https://store.steampowered.com/app/2657850/Cozy_Space_Survivors/) where asteroids form the word "GO♥DOT".*
+*GIF of [Cozy Space Survivors](https://store.steampowered.com/app/2657850/Cozy_Space_Survivors/?curator_clanid=41324400) where asteroids form the word "GO♥DOT".*
 </div>
 
 ## Some stats about Godot usage on GitHub

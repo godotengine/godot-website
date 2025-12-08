@@ -141,7 +141,7 @@ Have a look at that [monumental commit](https://github.com/godotengine/godot/com
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2075070/KinitoPET" target="_blank">
+      <a href="https://store.steampowered.com/app/2075070/KinitoPET/?curator_clanid=41324400" target="_blank">
         <span>KinitoPET</span>
       </a>
     </div>
@@ -166,7 +166,7 @@ Logically, the next step was to hand over the reins of the channel to some of th
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2726450/Windowkill/" target="_blank">
+      <a href="https://store.steampowered.com/app/2726450/Windowkill/?curator_clanid=41324400" target="_blank">
         <span>Windowkill</span>
       </a>
     </div>
@@ -191,7 +191,7 @@ We had a great time, both on the event grounds and at our own gatherings, and ma
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2427700/Backpack_Battles/" target="_blank">
+      <a href="https://store.steampowered.com/app/2427700/Backpack_Battles/?curator_clanid=41324400" target="_blank">
         <span>Backpack Battles</span>
       </a>
     </div>
@@ -222,7 +222,7 @@ Read more about the changes in our [collaboration update](https://godotengine.or
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/1733110/Of_Life_and_Land/" target="_blank">
+      <a href="https://store.steampowered.com/app/1733110/Of_Life_and_Land/?curator_clanid=41324400" target="_blank">
         <span>Of Life and Land</span>
       </a>
     </div>
@@ -253,7 +253,7 @@ Look at these shiny highlights:
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2763670/Arctic_Eggs/" target="_blank">
+      <a href="https://store.steampowered.com/app/2763670/Arctic_Eggs/?curator_clanid=41324400" target="_blank">
         <span>Arctic Eggs</span>
       </a>
     </div>
@@ -279,7 +279,7 @@ Our annual community poll rolled around in June. We want to know who our users a
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/1574820/Until_Then/" target="_blank">
+      <a href="https://store.steampowered.com/app/1574820/Until_Then/?curator_clanid=41324400" target="_blank">
         <span>Until Then</span>
       </a>
     </div>
@@ -307,7 +307,7 @@ While the plush is currently sold out, we are working on bringing it back soon!
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2238630/Forgotten_Mines/" target="_blank">
+      <a href="https://store.steampowered.com/app/2238630/Forgotten_Mines/?curator_clanid=41324400" target="_blank">
         <span>Forgotten Mines</span>
       </a>
     </div>
@@ -338,7 +338,7 @@ All in all, **3,520 commits from 521 contributors** came together in this shared
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2440380/Megaloot/" target="_blank">
+      <a href="https://store.steampowered.com/app/2440380/Megaloot/?curator_clanid=41324400" target="_blank">
         <span>Megaloot</span>
       </a>
     </div>
@@ -361,7 +361,7 @@ Read more in our detailed [blogpost on the topic](https://godotengine.org/articl
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2218750/Halls_of_Torment/" target="_blank">
+      <a href="https://store.steampowered.com/app/2218750/Halls_of_Torment/?curator_clanid=41324400" target="_blank">
         <span>Halls of Torment</span>
       </a>
     </div>
@@ -386,7 +386,7 @@ Read the full [GodotCon 2024 review](https://godotengine.org/article/review-godo
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/3243190/Psychopomp_GOLD/" target="_blank">
+      <a href="https://store.steampowered.com/app/3243190/Psychopomp_GOLD/?curator_clanid=41324400" target="_blank">
         <span>Psychopomp GOLD</span>
       </a>
     </div>
@@ -409,7 +409,7 @@ Submissions are handled via our own [showreel page](https://showreel.godotengine
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/" target="_blank">
+      <a href="https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/?curator_clanid=41324400" target="_blank">
         <span>Unrailed 2: Back on Track</span>
       </a>
     </div>
@@ -432,7 +432,7 @@ To celebrate the occasion (and snatch the coveted number) our Release Manager wr
   </div>
   <div class="year-2024-game-box">
     <div class="year-2024-game-box-title">
-      <a href="https://store.steampowered.com/app/2667120/Ballionaire/" target="_blank">
+      <a href="https://store.steampowered.com/app/2667120/Ballionaire/?curator_clanid=41324400" target="_blank">
         <span>Ballionaire</span>
       </a>
     </div>

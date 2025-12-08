@@ -160,10 +160,18 @@ layout: default
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 12px;
 	}
 
-	.features-complete-list .btn.btn-flat.btn-flat-white {
+	.features-priorities-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 0;
+		margin-bottom: 24px;
+	}
+
+	.features-complete-list .btn.btn-flat.btn-flat-white,
+	.features-priorities-list .btn.btn-flat.btn-flat-white {
 		color: var(--base-color-text-title);
 	}
 
@@ -450,7 +458,7 @@ layout: default
 				Thanks to our community there are many language bindings for
 				popular tools like Rust, Nim, Python, and JavaScript.
 				<br><br>
-				C++ support comes officially in the form of
+				C&NoBreak;+&NoBreak;+ support comes officially in the form of
 				the GDExtension API, which gives you a way to script and program your game
 				components for maximum performance without having to recompile the engine.
 			</p>
@@ -461,7 +469,7 @@ layout: default
 			<p>
 				Thanks to the modular structure and straightforward build process of Godot
 				you can create your own engine modules. Gain every last drop of performance
-				or integrate with many third-party libraries with low-level C++ code.
+				or integrate with many third-party libraries with low-level C&NoBreak;+&NoBreak;+ code.
 			</p>
 		</div>
 	</div>
@@ -620,6 +628,12 @@ layout: default
 	<div class="features-complete-list">
 		<a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn btn-flat btn-flat-white btn-flat-frosted">
 			View a complete list of features
+		</a>
+	</div>
+
+	<div class="features-priorities-list">
+		<a href="/priorities/" class="btn btn-flat btn-flat-white btn-flat-frosted">
+			View a list of priorities for upcoming features
 		</a>
 	</div>
 

@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**Unrailed 2: Back on Track**](https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/), *a chaotic co-op railroad construction game where you build your track across procedurally generated worlds! It is developed by [Indoor Astronaut](https://indoorastronaut.ch/). You can purchase the game in early access [on Steam](https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/) and follow the developer on [Twitter](https://x.com/IndoorAstronaut).*
+*The cover illustration is from* [**Unrailed 2: Back on Track**](https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/?curator_clanid=41324400), *a chaotic co-op railroad construction game where you build your track across procedurally generated worlds! It is developed by [Indoor Astronaut](https://indoorastronaut.ch/). You can purchase the game in early access [on Steam](https://store.steampowered.com/app/2211170/Unrailed_2_Back_on_Track/?curator_clanid=41324400) and follow the developer on [Twitter](https://x.com/IndoorAstronaut).*
 
 ## Highlights
 

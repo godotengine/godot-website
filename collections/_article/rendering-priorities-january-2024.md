@@ -84,7 +84,7 @@ This is both an optimization and a feature. The Acyclic Render Graph (ARG) is a 
 
 * **Direct3D 12 rendering driver ([GH-70315](https://github.com/godotengine/godot/pull/70315)) (merged for 4.3)**
 
-In December we merged support for a D3D12 rendering driver. This is the GPU backend of choice for Windows devices. Currently users need to [compile Godot from source](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12) to include support for D3D12, but we are investigating ways that we could provide D3D12 support out of the box.
+In December we merged support for a D3D12 rendering driver. This is the GPU backend of choice for Windows devices. Currently users need to [compile Godot from source](https://docs.godotengine.org/en/latest/engine_details/development/compiling/compiling_for_windows.html#compiling-with-support-for-direct3d-12) to include support for D3D12, but we are investigating ways that we could provide D3D12 support out of the box.
 
 * **Metal rendering driver (in progress)**
 

@@ -14,7 +14,7 @@ youtube_id: "dHTxm1PD-bQ"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/2124780/Endoparasitic/
+steam: https://store.steampowered.com/app/2124780/Endoparasitic/?curator_clanid=41324400
 itch: https://nartier.itch.io/endoparasitic
 
 ---

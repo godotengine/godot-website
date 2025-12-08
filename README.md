@@ -1,7 +1,7 @@
 # Godot Engine Website
 
 Welcome to the source code for the Godot Engine website. This is a static website, generated offline using
-[Jekyll](https://jekyllrb.com/).   
+[Jekyll](https://jekyllrb.com/).
 
 
 ### Table of Contents
@@ -35,7 +35,7 @@ open a formal Godot improvement proposal like you do with engine features, but s
 or joining the discussion on the [Godot Contributors Chat](https://chat.godotengine.org/channel/website) is a good
 idea.
 
-[^1]: https://docs.godotengine.org/en/latest/contributing/workflow/index.html
+[^1]: https://contributing.godotengine.org/en/latest/other/website.html
 [^2]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 [^3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 
@@ -58,7 +58,7 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 
 #### Pre-requisites
 - On Local Machine:
-  - Ruby 3.1.2 with [rbenv](https://github.com/rbenv/rbenv) and [*(For windows)*](https://github.com/RubyMetric/rbenv-for-windows#readme)
+  - Ruby 3.2+ with [rbenv](https://github.com/rbenv/rbenv) and [*(For windows)*](https://github.com/RubyMetric/rbenv-for-windows#readme)
   - Jekyll - [Jekyll Website](https://jekyllrb.com/)
   - Minify - [Minify GitHub](https://github.com/tdewolff/minify)
 - On Docker:
@@ -70,7 +70,7 @@ When working on new features[^2][^3], keep in mind this website only supports _e
   - Docker - If you run on Docker, also you can use the Jekyll Docker image to serve the site.
 
 > [!CAUTION]
-> If you use latest versions of Ruby, you may encounter issues on building process.  
+> If you use latest versions of Ruby, you may encounter issues on building process.
 > Use the specific version of Ruby that is mentioned above.
 
 #### Building the website locally
@@ -78,15 +78,16 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 To build the website locally, follow these steps:
 
 1. Install Ruby 3.2 or later and Jekyll.
-  - If you don't have access to Ruby 3.2 or later in your distribution's repositories, install a compatible version of Ruby using `rbenv`:
+  - If you don't have access to Ruby 3.2 or later in your distribution's repositories,
+    install a compatible version of Ruby using `rbenv` as well as Ruby's build-time dependencies:
     - Install in Ubuntu:
-      - `sudo apt install rbenv`
+      - `sudo apt install rbenv build-essential libffi-dev libreadline-dev libyaml-dev zlib1g-dev`
     - Install in Fedora:
       - Install `rbenv` with dnf
-      - Run `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
   - Set up `rbenv` running the following:
-    - `rbenv install 3.4.4`
-    - `rbenv global 3.4.4`
+    - `rbenv install 3.2.5`
+    - `rbenv global 3.2.5`
+    - `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
 2. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify).
 	- Make sure either `minify` or `gominify` is available from the command line.
 3. Clone this repository.

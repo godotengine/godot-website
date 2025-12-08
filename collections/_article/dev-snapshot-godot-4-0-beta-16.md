@@ -29,7 +29,7 @@ In the last few betas, as we tie up some loose ends, you may have noticed an inc
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.0.beta16/godot.editor.html) (early testing, it's still slow and unstable).
 
-*The illustration picture for this article is from* [**Halls of Torment**](https://store.steampowered.com/app/2218750/Halls_of_Torment/), *a roguelite action RPG with retro late-90s pre-rendered 2D graphics. It is developed by [Chasing Carrots](https://twitter.com/chasing_carrots) using Godot 4.0 beta, and you can [wishlist it on Steam](https://store.steampowered.com/app/2218750/Halls_of_Torment/).*
+*The illustration picture for this article is from* [**Halls of Torment**](https://store.steampowered.com/app/2218750/Halls_of_Torment/?curator_clanid=41324400), *a roguelite action RPG with retro late-90s pre-rendered 2D graphics. It is developed by [Chasing Carrots](https://twitter.com/chasing_carrots) using Godot 4.0 beta, and you can [wishlist it on Steam](https://store.steampowered.com/app/2218750/Halls_of_Torment/?curator_clanid=41324400).*
 
 ## What's new
 

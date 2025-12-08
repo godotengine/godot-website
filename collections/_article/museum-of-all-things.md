@@ -50,7 +50,7 @@ I’m really happy that I took the leap and added VR. For a project like this wh
 ![A screenshot of the museum (The lobby in VR)](/storage/blog/moat/vr-lobby.webp)
 
 ## How can people visit the museum?
-You can download the Museum of All Things for free on Windows, Linux, or macOS! If you have a headset compatible with OpenXR (the Oculus Quest is not supported currently) you can download the OpenXR release.
+You can download the Museum of All Things for free on Windows, Linux, or macOS! If you have a headset compatible with OpenXR you can download the OpenXR release or get the [Meta Quest version](https://www.meta.com/experiences/the-museum-of-all-things/25148973151401467/).
 
 You can visit the project’s official homepage at [https://may.as/moat](https://may.as/moat) or download the [Museum of All Things from Itch.io](https://mayeclair.itch.io/museum-of-all-things).
 

@@ -12,9 +12,11 @@ date: 2025-06-23 18:00:00
 
 ## GodotCon 2025 recap
 
-A few weeks ago during [GodotCon Boston 2025](https://conference.godotengine.org/2025/), [David Snopek](https://github.com/dsnopek), [Logan Lang](https://github.com/devloglogan) and [I](https://github.com/m4gr3d) gave the latest updates on the state of Android and XR for the Godot engine.
+A few weeks ago during [GodotCon Boston 2025](https://conference.godotengine.org/2025/), [David Snopek](https://github.com/dsnopek), [Logan Lang](https://github.com/devloglogan) and [I](https://github.com/m4gr3d) gave the latest updates on the state of Android and XR for the Godot engine:
 
-*Please note that the VOD isn’t available yet. The link to the recording will be added to the article once available. In the meantime, you can access [the slides of the presentation](https://docs.google.com/presentation/d/1iIcmggtFyx0FMO-WLP9U2j3Mf_i5miw3Cn0pq-KJXx4/edit?slide=id.g34aac9b6122_2_45#slide=id.g34aac9b6122_2_45).*
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EQPQ2FGOUKg?si=Q_kZZJnnnWPIqf1B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+*You can access [the slides of the presentation](https://docs.google.com/presentation/d/1iIcmggtFyx0FMO-WLP9U2j3Mf_i5miw3Cn0pq-KJXx4/edit?slide=id.g34aac9b6122_2_45#slide=id.g34aac9b6122_2_45).*
 
 # Android & XR editor
 
@@ -132,8 +134,6 @@ To learn more about these new capabilities, please check out the [documentation]
 
 # And more\!
 
-There’s plenty more we covered in our GodotCon talk. For the full content, please check out [the  slides of the presentation](https://docs.google.com/presentation/d/1iIcmggtFyx0FMO-WLP9U2j3Mf_i5miw3Cn0pq-KJXx4/edit?slide=id.g34aac9b6122_2_45#slide=id.g34aac9b6122_2_45).
-
-*Please note that the VOD isn’t available yet. The link to the recording will be added to the article once available.*
+There’s plenty more we covered in our GodotCon talk. For the full content, please check out [the video](https://www.youtube.com/watch?v=EQPQ2FGOUKg) and [the  slides](https://docs.google.com/presentation/d/1iIcmggtFyx0FMO-WLP9U2j3Mf_i5miw3Cn0pq-KJXx4/edit?slide=id.g34aac9b6122_2_45#slide=id.g34aac9b6122_2_45).
 
 Many thanks to the [Boston Game Dev](https://www.meetup.com/bostongamedev/) and the [Boston Godot Users Group](https://www.meetup.com/bostongamedev/events/298734856/) for making this event happen.

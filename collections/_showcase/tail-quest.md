@@ -17,7 +17,7 @@ youtube_id: "Q-v0vL83ylg"
 
 platforms: ["windows", "linux"]
 
-steam: https://store.steampowered.com/app/824090/TailQuest_Defense/
+steam: https://store.steampowered.com/app/824090/TailQuest_Defense/?curator_clanid=41324400
 gog: https://www.gog.com/pl/game/tailquest_defense
 
 ---

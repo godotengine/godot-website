@@ -15,7 +15,7 @@ youtube_id: "XXzSN9lQ9S4"
 
 platforms: ["windows"]
 
-steam: https://store.steampowered.com/app/1707650/Swords_and_Sandals_Immortals/
+steam: https://store.steampowered.com/app/1707650/Swords_and_Sandals_Immortals/?curator_clanid=41324400
 
 ---
 

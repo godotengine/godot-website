@@ -93,4 +93,4 @@ If you'd like to support the project financially and help us secure our future h
 
 ---
 
-*The illustration picture is from* [**BLASTRONAUT**](https://store.steampowered.com/app/1392650/BLASTRONAUT/), *a gorgeous exploration and mining game set in a vast procedurally generated alien world, developed by [Perfoon](https://twitter.com/JaanusJaggo). It was just [released on Steam](https://store.steampowered.com/app/1392650/BLASTRONAUT/) as Early Access and it's an absolute* blast, *check it out!*
+*The illustration picture is from* [**BLASTRONAUT**](https://store.steampowered.com/app/1392650/BLASTRONAUT/?curator_clanid=41324400), *a gorgeous exploration and mining game set in a vast procedurally generated alien world, developed by [Perfoon](https://twitter.com/JaanusJaggo). It was just [released on Steam](https://store.steampowered.com/app/1392650/BLASTRONAUT/?curator_clanid=41324400) as Early Access and it's an absolute* blast, *check it out!*

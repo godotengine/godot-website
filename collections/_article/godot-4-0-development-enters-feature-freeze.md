@@ -33,6 +33,6 @@ Some work can still be permitted during the beta phase. Bigger features can stil
 
 ---
 
-If you want to contribute to the engine, now is a great time to do so! The faster we can fix the outstanding issues, the sooner everyone can enjoy a brand new iteration of Godot. You can start by reading our [guidelines for contributors](https://docs.godotengine.org/en/latest/community/contributing/index.html). Then look on GitHub for issues that [may be interesting to you](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0), try to reproduce them, and figure out a fix.
+If you want to contribute to the engine, now is a great time to do so! The faster we can fix the outstanding issues, the sooner everyone can enjoy a brand new iteration of Godot. You can start by reading our [guidelines for contributors](https://contributing.godotengine.org/en/latest/organization/how_to_contribute.html). Then look on GitHub for issues that [may be interesting to you](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0), try to reproduce them, and figure out a fix.
 
 Thank you for your support!

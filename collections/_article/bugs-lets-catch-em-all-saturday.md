@@ -31,5 +31,5 @@ You're free to join for one hour or for the whole day, the important is that we 
 
 - [List of issues in the 3.0 milestone](https://github.com/godotengine/godot/milestone/4) (meant to be fixed before 3.0 is released, or eventually moved to the next milestone if non critical).
 - [List of "Hero Wanted!" issues](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3A%22hero+wanted%21%22).
-- [Contributing docs](http://docs.godotengine.org/en/latest/community/contributing/ways_to_contribute.html), especially the parts of the [PR workflow](http://docs.godotengine.org/en/latest/community/contributing/pr_workflow.html) and the [code style guidelines](http://docs.godotengine.org/en/latest/community/contributing/code_style_guidelines.html).
+- [Contributing docs](https://contributing.godotengine.org/en/latest/organization/how_to_contribute.html), especially the parts of the [PR workflow](http://docs.godotengine.org/en/latest/community/contributing/pr_workflow.html) and the [code style guidelines](http://docs.godotengine.org/en/latest/community/contributing/code_style_guidelines.html).
 - [#godotengine-devel on Freenode](http://webchat.freenode.net/?channels=#godotengine-devel)

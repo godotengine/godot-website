@@ -17,7 +17,7 @@ Here are the highlights of this build, and you can also go ahead and read a more
 
 - Major refactoring of the rendering system ([GH-83452](https://github.com/godotengine/godot/pull/83452)), which paves the way to several big improvements coming soon ([here's one of them](/article/collaboration-with-google-forge-2023/)). In the meantime, please test anything and everything related to rendering. Even though this change has been rigorously evaluated by a multitude of experienced contributors, we, as always, rely on our community to make absolutely sure things are as smooth and stable as they seem.
 
-- The new Direct3D 12 rendering driver is here for all your Microsoft-adjacent cross-platform needs ([GH-70315](https://github.com/godotengine/godot/pull/70315)). Being based on proprietary technology, D3D12 support comes as an optional feature keeping the open source spirit of the engine intact. Make sure to check the [updated documentation](https://docs.godotengine.org/en/latest/contributing/development/compiling/compiling_for_windows.html) for compiling Godot with D3D12 enabled (there is also an [update regarding cross-compilation](https://github.com/godotengine/godot-docs/pull/8624) getting ready to be merged).
+- The new Direct3D 12 rendering driver is here for all your Microsoft-adjacent cross-platform needs ([GH-70315](https://github.com/godotengine/godot/pull/70315)). Being based on proprietary technology, D3D12 support comes as an optional feature keeping the open source spirit of the engine intact. Make sure to check the [updated documentation](https://docs.godotengine.org/en/latest/engine_details/development/compiling/compiling_for_windows.html) for compiling Godot with D3D12 enabled (there is also an [update regarding cross-compilation](https://github.com/godotengine/godot-docs/pull/8624) getting ready to be merged).
 
 - Multiple controllers can now contribute to input actions ([GH-84943](https://github.com/godotengine/godot/pull/84943)), which expands upon previous fixes to multiple devices triggering input at the same time.
 
@@ -37,7 +37,7 @@ Keep in mind that while we try to make sure each dev snapshot is stable enough f
 
 -----
 
-*The illustration picture comes from* [**Yeetus**](https://store.steampowered.com/app/2640910/Yeetus/) *— an action roguelike game made by [YarnCat Games](https://www.yarncatgames.com/), where the ground underneath your feet is your only weapon against waves and waves of enemies. The game is made with Godot 4, and you can get it right now on [Steam](https://store.steampowered.com/app/2640910/Yeetus/). Make sure to follow YarnCat Games on social networks ([Twitter](https://twitter.com/DYarncat), [TikTok](https://www.tiktok.com/@yarncatgames)) to keep in touch and be the first to learn about their next project!*
+*The illustration picture comes from* [**Yeetus**](https://store.steampowered.com/app/2640910/Yeetus/?curator_clanid=41324400) *— an action roguelike game made by [YarnCat Games](https://www.yarncatgames.com/), where the ground underneath your feet is your only weapon against waves and waves of enemies. The game is made with Godot 4, and you can get it right now on [Steam](https://store.steampowered.com/app/2640910/Yeetus/?curator_clanid=41324400). Make sure to follow YarnCat Games on social networks ([Twitter](https://twitter.com/DYarncat), [TikTok](https://www.tiktok.com/@yarncatgames)) to keep in touch and be the first to learn about their next project!*
 
 ## What's new
 

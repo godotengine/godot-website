@@ -24,7 +24,7 @@ Git, to preserve your projects in case of corruption or data loss.
 
 -----
 
-*The cover illustration is from* [**Fogpiercer**](https://store.steampowered.com/app/3219010/Fogpiercer/), *a turn-based card battler where your deck is a train! It is developed in Godot 4.3 by [Mad Cookies Studio](https://x.com/MadCookiesGames). You can wishlist the game [on Steam](https://store.steampowered.com/app/3219010/Fogpiercer/) and follow the developers on [Twitter](https://x.com/MadCookiesGames).*
+*The cover illustration is from* [**Fogpiercer**](https://store.steampowered.com/app/3219010/Fogpiercer/?curator_clanid=41324400), *a turn-based card battler where your deck is a train! It is developed in Godot 4.3 by [Mad Cookies Studio](https://x.com/MadCookiesGames). You can wishlist the game [on Steam](https://store.steampowered.com/app/3219010/Fogpiercer/?curator_clanid=41324400) and follow the developers on [Twitter](https://x.com/MadCookiesGames).*
 
 ## Highlights
 

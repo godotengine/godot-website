@@ -10,7 +10,7 @@ date: 2019-11-29 23:21:22
 While Godot 3.2 is shaping up nicely in the [late beta stage](/article/dev-snapshot-godot-3-2-beta-2), it's time for a long overdue update to the stable 3.1 branch: **Godot 3.1.2** is now released with over 400 commits worth of bug fixes and improvements over the previous 3.1.1 version.
 
 [**Download Godot 3.1.2**](/download) now and read on about the changes in this update.
-<br />*Edit:* The update is now also available on [Steam](https://store.steampowered.com/app/404790/Godot_Engine/) and [itch.io](https://godotengine.itch.io/godot).
+<br />*Edit:* The update is now also available on [Steam](https://store.steampowered.com/app/404790/Godot_Engine/?curator_clanid=41324400) and [itch.io](https://godotengine.itch.io/godot).
 
 *Note: Illustration credits at the bottom of this page.*
 
@@ -80,4 +80,4 @@ Below we describe the known incompatibilities with previous releases in this cyc
 
 -----
 
-*The illustration picture is from* [**Fantastic Creatures**](https://store.steampowered.com/app/1002440/Fantastic_Creatures/), *a turn-based 4X strategy game set in mythological Ancient China and developed in Godot by Blue Calisto ([@FmrPlays](https://twitter.com/FmrPlays)). It was released [on Steam](https://store.steampowered.com/app/1002440/Fantastic_Creatures/) two weeks ago.*
+*The illustration picture is from* [**Fantastic Creatures**](https://store.steampowered.com/app/1002440/Fantastic_Creatures/?curator_clanid=41324400), *a turn-based 4X strategy game set in mythological Ancient China and developed in Godot by Blue Calisto ([@FmrPlays](https://twitter.com/FmrPlays)). It was released [on Steam](https://store.steampowered.com/app/1002440/Fantastic_Creatures/?curator_clanid=41324400) two weeks ago.*

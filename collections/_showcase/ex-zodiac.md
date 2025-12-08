@@ -15,7 +15,7 @@ youtube_id: "7sJJW_x6Xg4"
 
 platforms: ["windows", "macos", "linux", "switch"]
 
-steam: https://store.steampowered.com/app/1249480/ExZodiac/
+steam: https://store.steampowered.com/app/1249480/ExZodiac/?curator_clanid=41324400
 itch: https://pixeljam.itch.io/ex-zodiac
 
 ---

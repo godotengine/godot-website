@@ -48,6 +48,14 @@
     - Meta Quest 3 & Pro
     - arm64
 
+- name: android.picoos
+  title: Pico OS
+  caption: APK - arm64
+  tags:
+    - APK download
+    - PICO 4
+    - arm64
+
 - name: "linux.32"
   title: "Linux"
   caption: "x86_32"
@@ -92,6 +100,18 @@
   tags:
     - arm64 (Apple Silicon)
     - x86_64 (Intel)
+
+- name: "macos.32"
+  title: "macOS"
+  caption: "x86_32"
+  tags:
+    - x86_32
+
+- name: "macos.64"
+  title: "macOS"
+  caption: "x86_64"
+  tags:
+    - x86_64
 
 - name: "web"
   title: "Web editor"

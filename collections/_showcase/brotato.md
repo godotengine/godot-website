@@ -16,10 +16,9 @@ gallery: [
 youtube_id: "bXEhKX41WRk"
 
 platforms: ["windows", "playstation"]
-steam: https://store.steampowered.com/app/1942280/Brotato/
+steam: https://store.steampowered.com/app/1942280/Brotato/?curator_clanid=41324400
 
 
-featured_in_home: true
 ---
 
 A spaceship from Potato World crashes onto an alien planet. The sole survivor: Brotato, the only potato capable of handling 6 weapons at the same time. Waiting to be rescued by his mates, Brotato must survive in this hostile environment.

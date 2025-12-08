@@ -17,6 +17,14 @@ Argentina:
         url: https://chat.whatsapp.com/C0LzScYdKBP0zjsPYcAgOs
       - title: Instagram
         url: https://www.instagram.com/godotmeetuparg/
+Australia:
+  - name: Godot Devs Australia
+    coordinates:
+      - -25.525138002030047
+      - 135.16370974683196
+    links:
+      - title: Discord
+        url: https://discord.gg/wBZUEZrGRp
 Austria:
   - name: Godot User Group Austria
     coordinates:
@@ -65,6 +73,16 @@ Bulgaria:
     links:
       - title: Discord
         url: https://discord.gg/j3KRdV3b4P
+United Kingdom:
+  - name: Godot UK
+    coordinates:
+      - 53.79648 
+      - -1.54785
+    links:
+      - title: Discord
+        url: https://discord.gg/rr6Ac648nC
+      - title: Website
+        url: https://godot.org.uk
 Canada:
   - name: Godot Toronto
     coordinates:
@@ -81,16 +99,22 @@ Canada:
       - title: Discord
         url: https://discord.gg/AemZhPjqyM
 China:
+  - name: Godot Hub
+    links:
+      - title: Forum/论坛
+        url: https://pd.qq.com/g/GodotHub999
+      - title: Groups/群聊
+        url: https://godothub.atomgit.net/festival2025/community
+      - title: Festival/大赛
+        url: https://godothub.com/festival
+      - title: Discord
+        url: https://discord.gg/a5kwptZJXP
   - name: Godot China
     links:
       - title: Discord
         url: https://discord.gg/R23VUTXwvz
       - title: QQ Group
         url: https://qm.qq.com/cgi-bin/qm/qr?k=EneMKrKt96ttI4ZFmQ8omTtpF0Sd0iL_&jump_from=webapi
-  - name: GodoterCN
-    links:
-      - title: Website
-        url: https://godoter.cn
   - name: Godoter Planet (Godoter 星球)
     links:
       - title: QQ Group
@@ -101,8 +125,6 @@ China:
         url: https://tieba.baidu.com/f?kw=godot
   - name: GodotCN (Godot中文社区)
     links:
-      - title: Website
-        url: http://godott.com
       - title: QQ Group
         url: https://qm.qq.com/cgi-bin/qm/qr?k=hEscGFbQTiOX0bhsTT2myxM3PifsAmIp&jump_from=webapi
 Croatia:
@@ -119,6 +141,14 @@ Czech Republic and Slovakia:
         url: https://discord.com/invite/g4XVFjXwfu
       - title: Facebook
         url: https://www.facebook.com/groups/godotczsk
+Denmark:
+  - name: Godot Denmark
+    coordinates:
+      - 55.6798
+      - 12.5771
+    links:
+      - title: Discord
+        url: https://discord.gg/pPeWjkBJFX
 Ecuador:
   - name: Godot Ecuador
     coordinates:
@@ -164,6 +194,15 @@ France or French-speaking:
     links:
       - title: Discord
         url: https://discord.gg/gZ3QJ5T
+  - name: Godot Lyon
+    coordinates:
+      - 45.76741461629292
+      - 4.879337314640945
+    links:
+      - title: Discord
+        url: https://discord.gg/mH27RzGxqK
+      - title: Mobilizon
+        url: https://mobilizon.fr/@godot_lyon
 Germany:
   - name: Godot Germany
     links:
@@ -286,6 +325,14 @@ Latvia:
         url: https://discord.gg/r6ewZGv
       - title: Twitter
         url: https://twitter.com/GodotLatvia
+Norway:
+  - name: Godot Norway
+    coordinates:
+      - 59.916188976445916
+      - 10.75072953254959
+    links:
+      - title: Discord
+        url: https://discord.gg/5afEcSgYNt
 Pakistan:
   - name: Godot Engine Pakistan
     links:
@@ -343,6 +390,10 @@ South Korea:
     links:
       - title: Discord
         url: https://discord.gg/XK8Emsf
+  - name: Go•
+    links:
+      - title: KakaoTalk
+        url: https://open.kakao.com/o/gkuqw3qc
 Spain:
   - name: Godot Engine in Spanish
     links:
@@ -359,6 +410,12 @@ Spain:
     links:
       - title: Website
         url: https://www.medialab-prado.es/actividades/zenvoid-studio-desarrollo-de-videojuegos
+  - name: Todogodot
+    links:
+      - title: Telegram
+        url: https://t.me/todogodot
+      - title: Discord
+        url: https://discord.gg/gpRkxySQ8A
 Sweden:
   - name: Godot Sweden
     links:
@@ -400,6 +457,13 @@ United States:
     links:
       - title: Meetup
         url: https://www.meetup.com/bostongamedev/events/298734856/
+  - name: California Godot Users
+    coordinates:    
+      - 37.254669
+      - -119.617271
+    links:
+      - title: Discord
+        url: https://discord.gg/VZGjwrhgRM        
   - name: Godot Southwest US
     links:
       - title: Discord
@@ -425,4 +489,22 @@ United States:
       - -77.02480110061525
     links:
       - title: Discord
-        url: https://discord.gg/4mmza4kP
+        url: https://discord.gg/62nkHTnndg
+  - name: Bay Area Godot Meetup
+    coordinates:
+      - 37.7623675
+      - -122.4186149
+    links:
+      - title: Noisebridge Wiki
+        url: https://www.noisebridge.net/wiki/Godot_Meetup
+      - title: Discord
+        url: https://discord.gg/wGkvgR5MXY
+  - name: Tucson Game Developers
+    coordinates:
+      - 32.235938
+      - -110.984241
+    links:
+      - title: Discord
+        url: https://discord.gg/CPye5BfMy7
+      - title: Website
+        url: https://tucsongamedev.com

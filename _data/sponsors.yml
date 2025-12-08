@@ -1,24 +1,21 @@
 patron:
-  - name: "OSS Capital"
-    link: "https://oss.capital/"
-    image: "https://fund.godotengine.org/static/logos/ossc-logo.svg"
-  - name: "Khronos® Group"
-    link: "https://www.khronos.org/"
-    image: "https://fund.godotengine.org/static/logos/khronos.svg"
-platinum:
   - name: "Scorewarrior"
     link: "https://scwr.gg/godot"
     image: "https://fund.godotengine.org/static/logos/scorewarrior.svg"
+platinum:
   - name: "W4 Games"
     link: "https://w4games.com/"
     image: "https://fund.godotengine.org/static/logos/w4.png"
   - name: "V-Sekai"
     link: "https://github.com/V-Sekai"
     image: "https://fund.godotengine.org/static/logos/v-sekai.png"
+  - name: "JetBrains"
+    link: "https://www.jetbrains.com/lp/rider-godot/"
+    image: "https://fund.godotengine.org/static/logos/jetbrains.svg"
 gold:
-  - name: "Player2"
-    link: "https://player2.game/"
-    image: "https://fund.godotengine.org/static/logos/player2-logo.png"
+  - name: Arm
+    link: "https://www.arm.com/"
+    image: "https://fund.godotengine.org/static/logos/Arm-logo-black-pms432.svg"
   - name: "Prehensile Tales"
     link: "https://prehensile-tales.com"
     image: "https://fund.godotengine.org/static/logos/pt.png"
@@ -56,3 +53,9 @@ silver:
   - name: Games by Malcs
     link: "https://gamesbymalcs.com/"
     image: "https://fund.godotengine.org/static/logos/games-by-malcs.png"
+  - name: Blobfish Games
+    link: "https://www.blobfishgames.com/"
+    image: "https://fund.godotengine.org/static/logos/blobfish-games.png"
+  - name: "Sentry"
+    link: https://sentry.io/welcome/?utm_source=godotengine&utm_medium=paid-community&utm_campaign=gaming-fy26q3-evergreen&utm_content=static-ad-godot-eng-sponsor-trysentry
+    image: "https://fund.godotengine.org/static/logos/sentry.svg"

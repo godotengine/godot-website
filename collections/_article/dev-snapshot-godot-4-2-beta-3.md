@@ -23,7 +23,7 @@ For C# users, the .NET 8.0 release is set to be launched this November. Make sur
 
 -----
 
-*The illustration picture for this article is taken from* [**The Last Game**](https://twitter.com/TheLastGame__), *a roguelite twin-stick shooter by Frédéric Julian made with Godot 4.1. It was recently released on [App Store](https://apps.apple.com/us/app/the-last-game/id6466296603), [Google Play](https://play.google.com/store/apps/details?id=com.frju.thelastgame), [Steam](https://store.steampowered.com/app/2563800/The_Last_Game/), and [itch.io](https://frju.itch.io/the-last-game). You can follow the development on [Twitter](https://twitter.com/TheLastGame__) or [Discord](https://discord.gg/J4VQtvEb9W).*
+*The illustration picture for this article is taken from* [**The Last Game**](https://twitter.com/TheLastGame__), *a roguelite twin-stick shooter by Frédéric Julian made with Godot 4.1. It was recently released on [App Store](https://apps.apple.com/us/app/the-last-game/id6466296603), [Google Play](https://play.google.com/store/apps/details?id=com.frju.thelastgame), [Steam](https://store.steampowered.com/app/2563800/The_Last_Game/?curator_clanid=41324400), and [itch.io](https://frju.itch.io/the-last-game). You can follow the development on [Twitter](https://twitter.com/TheLastGame__) or [Discord](https://discord.gg/J4VQtvEb9W).*
 
 ## What's new
 

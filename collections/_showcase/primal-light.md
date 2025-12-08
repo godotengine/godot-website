@@ -16,7 +16,7 @@ youtube_id: "Kf4lVuTYdeM"
 
 platforms: ["windows", "macos", "linux", "switch", "xbox"]
 
-steam: https://store.steampowered.com/app/771420/Primal_Light/
+steam: https://store.steampowered.com/app/771420/Primal_Light/?curator_clanid=41324400
 nintendo: https://www.nintendo.com/store/products/primal-light-switch/
 microsoft: https://www.xbox.com/en-US/games/store/primal-light/9N2XZFRWG6R8
 

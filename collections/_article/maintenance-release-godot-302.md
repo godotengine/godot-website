@@ -11,7 +11,7 @@ This is a fairly small release but still something to be excited about! We found
 
 We also have some love for C# users in this release: There was a regression using transforms from C#, and the commits that caused them have been reverted. Godot will now also no longer crash if you have a .mono directory created by an older release. This should make the C# workflow a lot better from now on.
 
-As usual you can go directly to our [Download](/download) page to download the new release. Both the [itch.io](https://godotengine.itch.io/godot) and [Steam](https://store.steampowered.com/app/404790) distributions have been updated.
+As usual you can go directly to our [Download](/download) page to download the new release. Both the [itch.io](https://godotengine.itch.io/godot) and [Steam](https://store.steampowered.com/app/404790/Godot_Engine/?curator_clanid=41324400) distributions have been updated.
 
 Our release schedule for the stable releases are somewhat dictated by the severity of issues we find and fix. However, we don't plan to do weekly releases as a rule. Unless another important problem or regression is found, we expect to release 3.0.3 some time near the end of March.
 

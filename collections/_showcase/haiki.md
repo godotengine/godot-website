@@ -15,7 +15,7 @@ youtube_id: "oJG80se4D_I"
 
 platforms: ["windows", "macos", "linux"]
 
-steam: https://store.steampowered.com/app/1395270/Haiki/
+steam: https://store.steampowered.com/app/1395270/Haiki/?curator_clanid=41324400
 
 ---
 

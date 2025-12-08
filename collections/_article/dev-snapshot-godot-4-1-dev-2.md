@@ -31,7 +31,7 @@ A lot of work is also being done to improve the Android editor port. We just cre
 
 You can also [try the Web editor](https://editor.godotengine.org/releases/4.1.dev2/).
 
-*The illustration picture for this article is from* **Spring Dash**, *a momentum-packed parkour platformer by [Dillon Steyl](https://twitter.com/DillonSteyl), which was just ported to Godot 4. You can [wishlist it on Steam](https://store.steampowered.com/app/2093070/Spring_Dash/), and find a demo on Dillon's Discord ([find all links here](https://linktr.ee/dillonsteyl)).*
+*The illustration picture for this article is from* **Spring Dash**, *a momentum-packed parkour platformer by [Dillon Steyl](https://twitter.com/DillonSteyl), which was just ported to Godot 4. You can [wishlist it on Steam](https://store.steampowered.com/app/2093070/Spring_Dash/?curator_clanid=41324400), and find a demo on Dillon's Discord ([find all links here](https://linktr.ee/dillonsteyl)).*
 
 ## What's new
 

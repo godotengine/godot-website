@@ -1,4 +1,4 @@
-import { animate } from "./modules/anime@4.0.2_esm.min.js";
+import { animate } from "./modules/anime@4.1.2_esm.min.js";
 
 // If we need to add a search bar, use this next line:
 // import Fuse from "./modules/fuse.js@7.0.0.min.mjs";

@@ -1,0 +1,66 @@
+<style>
+.donation-header {
+	background-color: #ffa700;
+	color: black;
+	padding: 15px;
+	text-align: center;
+	padding: 40px 15px;
+	font-size: 1.5em;
+	display: none; /* Hidden by default */
+}
+.donation-header.visible {
+	display: block;
+}
+.donation-header h2 {
+	color: black;
+	margin-bottom: 0;
+	font-size: 1.5em;
+}
+.donation-header p {
+	margin-top: 0;
+}
+.donation-header img {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	filter: invert(1);
+	cursor: pointer;
+}
+.donation-header .btn {
+	background: black;
+  color: white;
+}
+@media (max-width: 600px) {
+	.donation-header {
+		font-size: 1.2em;
+	}
+}
+</style>
+<div class="donation-header" id="donation-header">
+	<img src="/assets/icons/cross.svg" width="24" height="24" alt="Close" title="Close" id="donation-header-close" onclick="dismissHeader()" />
+	<h2>Donate to Godot!</h2>
+	<p>
+		This has been a great year for the engine, but there are still a lot of things we would love to do.<br>
+		If everyone visiting the site would donate €5, we could hire 5 more developers to work on Godot full-time.<br>
+	</p>
+	<a class="btn" href="https://fund.godotengine.org/?ref=december-2025" onclick="dismissHeader(true)">Donate Now</a>
+</div>
+
+<script>
+function dismissHeader(donate=false) {
+	var d = new Date();
+	if (donate) {
+		d.setTime(d.getTime() + 30*24*60*60*1000);
+	} else {
+		d.setTime(d.getTime() + 48*60*60*1000);
+		document.getElementById('donation-header').classList.remove('visible');
+	}
+	document.cookie = "donationHeaderClosed=1;expires=" + d.toUTCString() + ";path=/";
+}
+document.addEventListener("DOMContentLoaded", function() {
+	var header = document.getElementById('donation-header');
+	if (!document.cookie.includes("donationHeaderClosed=1")) {
+		header.classList.add('visible');
+	}
+});
+</script>

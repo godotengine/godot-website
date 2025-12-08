@@ -19,7 +19,7 @@ Finally, several documentation mistakes have been corrected, plus there is new d
 
 {% include articles/download_card.html version="4.1.3" release="stable" article=page %}
 
-*The illustration picture used in this announcement is from* [**Meowing Point**](https://www.meowingpoint.com/) *— a point-and-click game by [Francisco Martinez](https://twitter.com/yofranciscoart), where your job is to pet petrified cats to bring them back to life. The game started as a Godot 3 project and was later ported over to Godot 4. You can get it right now on [itch.io](https://yofrancisco.itch.io/meowingpoint) or [Steam](https://store.steampowered.com/app/2528710/Meowing_Point/)! Make sure to follow Francisco on [Twitter](https://twitter.com/yofranciscoart).*
+*The illustration picture used in this announcement is from* [**Meowing Point**](https://www.meowingpoint.com/) *— a point-and-click game by [Francisco Martinez](https://twitter.com/yofranciscoart), where your job is to pet petrified cats to bring them back to life. The game started as a Godot 3 project and was later ported over to Godot 4. You can get it right now on [itch.io](https://yofrancisco.itch.io/meowingpoint) or [Steam](https://store.steampowered.com/app/2528710/Meowing_Point/?curator_clanid=41324400)! Make sure to follow Francisco on [Twitter](https://twitter.com/yofranciscoart).*
 
 ## Changes
 

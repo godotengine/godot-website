@@ -1,10 +1,13 @@
 hosts:
   - name: "github"
-    title: "Official GitHub Releases mirror"
+    title: "Official Releases mirror"
   - name: "github_builds"
-    title: "Official GitHub Releases mirror"
+    title: "Official Releases mirror"
 
 defaults:
+  - name: "4.6"
+    stable: [ "github" ]
+    preview: [ "github_builds" ]
   - name: "4.5"
     stable: [ "github" ]
     preview: [ "github_builds" ]
@@ -21,6 +24,9 @@ defaults:
     stable: [ "github" ]
     preview: [ "github_builds" ]
   - name: "4.0"
+    stable: [ "github" ]
+    preview: [ "github_builds" ]
+  - name: "3.7"
     stable: [ "github" ]
     preview: [ "github_builds" ]
   - name: "3.6"
