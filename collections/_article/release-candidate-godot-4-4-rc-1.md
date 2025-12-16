@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.4 RC 1"
 excerpt: Godot 4.4 is now practically ready for its stable release, so it's time for the last round(s) of testing to make sure it's a smooth upgrade for all users.
 categories: [pre-release]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-4-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-4-rc-1.jpg
 image_caption_title: Tiny Pasture
 image_caption_description: A game by CaveLiquid
 date: 2025-02-21 20:00:00

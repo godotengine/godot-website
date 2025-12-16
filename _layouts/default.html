@@ -15,7 +15,7 @@
 	<meta property="og:url" content="https://godotengine.org{{ page.url }}">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
-	<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
+	<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.jpg' | ensure_magic_type: 'jpeg,png,gif', 'WebP images files seem to have some issues displaying on websites like Reddit and others. For now, we ban the use of WebP images only in the context of cover images.' }}">
 	<!-- meta tags -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="twitter:domain" content="godotengine.org">

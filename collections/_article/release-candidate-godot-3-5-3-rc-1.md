@@ -3,7 +3,7 @@ title: "Release candidate: Godot 3.5.3 RC 1"
 excerpt: "A new maintenance update is in the works for the 3.5 stable branch, to update Android templates to target Android 13, and fix a number of other platform porting bugs."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-3-5-3-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-3-5-3-rc-1.jpg
 date: 2023-09-08 11:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 beta 1"
 excerpt: "With all planned major and minor features implemented, Godot 4.2 is ready for beta testing!"
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-1.jpg
 image_caption_title: Lush Jungle
 image_caption_description: A demo scene by Wrobot
 date: 2023-10-12 14:00:00

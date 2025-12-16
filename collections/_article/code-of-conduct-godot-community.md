@@ -4,7 +4,7 @@ excerpt: "The Godot community now has a Code of Conduct, which applies to all us
 It defines common sense guidelines to ensure that our community platforms are a safe and welcoming environment for all Godot users. By interacting with other participants in the Godot community, you agree to respect the terms of the Code of Conduct."
 categories: ["news"]
 author: Rémi Verschelde
-image: /storage/app/uploads/public/5dc/019/1f9/5dc0191f92385004371530.svg
+image: /storage/blog/covers/code-of-conduct-godot-community.png
 date: 2019-11-04 12:27:14
 ---
 

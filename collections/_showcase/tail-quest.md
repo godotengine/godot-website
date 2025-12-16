@@ -7,7 +7,7 @@ author: Kivano Games
 website: https://kivano.games/
 release_date: "June 2023"
 
-image: "/assets/showcase/tail-quest-header.webp"
+image: "/assets/showcase/tail-quest-header.jpg"
 gallery: [
 	"/assets/showcase/tail-quest.webp",
 	"/assets/showcase/tailquest-1.webp",

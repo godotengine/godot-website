@@ -7,7 +7,7 @@ author: Roach Games
 website: https://kingdomsofthedump.com/
 release_date: November 2025
 
-image: "/assets/showcase/kingdoms-of-the-dump-header.webp"
+image: "/assets/showcase/kingdoms-of-the-dump-header.jpg"
 gallery: [
 	"/assets/showcase/screenshots/kingdom-1.jpg",
   "/assets/showcase/screenshots/kingdom-2.jpg",

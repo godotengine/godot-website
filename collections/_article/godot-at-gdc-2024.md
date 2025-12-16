@@ -3,7 +3,7 @@ title: "Godot Does Conferences - Meet us at GDC!"
 excerpt: "We are excited to announce that the Godot Engine will attend the 2024 Game Developers Conference (March 18-22)."
 categories: ["events"]
 author: Godot Foundation
-image: /storage/blog/gdc/2024/gdc-thumbnail.webp
+image: /storage/blog/gdc/2024/gdc-thumbnail.jpg
 date: 2024-02-13 12:00:00
 ---
 

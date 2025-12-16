@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 3.6 beta 5"
 excerpt: "This beta represents feature freeze for 3.6. We will now concentrate on bug fixing until we reach stable."
 categories: ["pre-release"]
 author: lawnjelly
-image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-5.webp
+image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-5.jpg
 image_caption_title: "Backpack Battles"
 image_caption_description: "A game by PlayWithFurcifer"
 date: 2024-05-13 14:00:00

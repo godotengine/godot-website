@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 dev 4"
 excerpt: "After a short delay due to GodotCon, we are back with another exciting update."
 categories: ["pre-release"]
 author: Clay John
-image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-4.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-4.jpg
 image_caption_title: "Unrailed 2: Back on Track"
 image_caption_description: "A game by Indoor Astronaut"
 date: 2024-11-08 12:00:00

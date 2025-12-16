@@ -3,7 +3,7 @@ title: "What's New in Android & XR"
 excerpt: "Recap of the Android & XR updates during GodotCon 2025"
 categories: ["events", "progress-report"]
 author: "Fredia Huya-Kouadio"
-image: /storage/blog/covers/godotcon-boston-2025-android-xr.webp
+image: /storage/blog/covers/godotcon-boston-2025-android-xr.jpg
 image_caption_description: "Photo by Joshua Bemenderfer"
 date: 2025-06-23 18:00:00
 ---

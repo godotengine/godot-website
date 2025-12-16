@@ -3,7 +3,7 @@ title: "Ensuring quality in the Godot documentation, a continuous process"
 excerpt: "The Godot documentation is the fruits of the labor of hundreds of people working together. How do we ensure the highest possible level of quality, while making it easy for anyone to contribute? Find out in this article."
 categories: ["news"]
 author: Hugo Locurcio
-image: /storage/blog/covers/ensuring-quality-godot-documentation.webp
+image: /storage/blog/covers/ensuring-quality-godot-documentation.jpg
 date: 2025-09-18 14:00:00
 ---
 

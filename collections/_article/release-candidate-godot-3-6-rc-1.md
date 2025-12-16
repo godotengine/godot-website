@@ -3,7 +3,7 @@ title: "Release candidate: Godot 3.6 RC 1"
 excerpt: "We are now at the Release Candidate stage, finalizing everything so that we can release 3.6-stable for all users."
 categories: ["pre-release"]
 author: lawnjelly
-image: /storage/blog/covers/release-candidate-godot-3-6-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-3-6-rc-1.jpg
 image_caption_title: "Kamaeru: A Frog Refuge"
 image_caption_description: "A game by Humble Reeds"
 date: 2024-07-09 08:00:00

@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 dev 1"
 excerpt: "We're ending the year with an early sneak peak at the upcoming Godot 4.3 release with its first dev snapshot!"
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-1.jpg
 image_caption_title: "Yeetus"
 image_caption_description: "A game by YarnCat Games"
 date: 2023-12-21 17:00:00

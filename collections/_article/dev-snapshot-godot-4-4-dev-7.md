@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 dev 7"
 excerpt: "One last build before the holidays!"
 categories: ["pre-release"]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-7.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-7.jpg
 image_caption_title: "Pest Apocalypse"
 image_caption_description: "A game by Kikimora Games"
 date: 2024-12-19 18:00:00

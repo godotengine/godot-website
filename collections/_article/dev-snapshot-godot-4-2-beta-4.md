@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 beta 4"
 excerpt: "We continue iterating quickly on beta snapshots for Godot 4.2 to ensure that we can solve regressions before the stable release."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-4.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-4.jpg
 image_caption_title: Spooky FPS project
 image_caption_description: A game by Hannes Rahm
 date: 2023-10-31 12:00:00

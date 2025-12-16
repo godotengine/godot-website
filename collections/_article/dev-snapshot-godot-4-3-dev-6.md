@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 dev 6"
 excerpt: "The last dev snapshot for 4.3 before feature freeze is a big one after 6 weeks of work!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-6.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-6.jpg
 image_caption_title: "Tristram"
 image_caption_description: "A game by Bippinbits"
 date: 2024-05-01 13:00:00

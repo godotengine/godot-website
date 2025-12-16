@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 beta 2"
 excerpt: The bugs don't stand a chance!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-2.jpg
 image_caption_title: The Roottrees are Dead
 image_caption_description: A game by Evil Trout
 date: 2025-01-30 12:00:00

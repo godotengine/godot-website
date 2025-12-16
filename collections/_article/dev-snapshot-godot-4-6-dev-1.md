@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.6 dev 1"
 excerpt: The calm before the storm…
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-6-dev-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-6-dev-1.jpg
 image_caption_title: "RAM: Random Access Mayhem"
 image_caption_description: A game by Xylem Studios
 date: 2025-09-30 12:00:00

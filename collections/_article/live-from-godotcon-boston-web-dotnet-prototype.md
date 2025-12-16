@@ -3,7 +3,7 @@ title: "Live from GodotCon Boston: Web .NET prototype"
 excerpt: "We managed to do the impossible: we created a Godot-based prototype for the Web that runs .NET! Come and try it!"
 categories: ["events", "progress-report"]
 author: "Adam Scott"
-image: /storage/blog/covers/live-from-godotcon-boston-web-net-prototype.webp
+image: /storage/blog/covers/live-from-godotcon-boston-web-net-prototype.jpg
 date: 2025-05-09 12:00:00
 ---
 

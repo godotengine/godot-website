@@ -3,7 +3,7 @@ title: "Godot XR update - October 2024"
 excerpt: "Looking back at a year of XR development."
 categories: ["progress-report"]
 author: Bastiaan Olij
-image: /storage/blog/covers/october-2024-xr-progress-update.webp
+image: /storage/blog/covers/october-2024-xr-progress-update.jpg
 image_caption_description: "Untitled penguin VR project by Zi Ye"
 date: 2024-10-02 12:00:00
 ---

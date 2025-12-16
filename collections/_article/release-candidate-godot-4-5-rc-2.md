@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.5 RC 2"
 excerpt: One more for the road, again!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/release-candidate-godot-4-5-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-5-rc-2.jpg
 image_caption_title: Overlooting
 image_caption_description: A game by Posing Possums
 date: 2025-09-10 12:00:00

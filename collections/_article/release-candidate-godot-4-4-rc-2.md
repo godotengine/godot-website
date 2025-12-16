@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.4 RC 2"
 excerpt: With a stable release imminent, join us for one final round of testing.
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/release-candidate-godot-4-4-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-4-rc-2.jpg
 image_caption_title: Stray Path
 image_caption_description: A game by chx games
 date: 2025-02-26 12:00:00

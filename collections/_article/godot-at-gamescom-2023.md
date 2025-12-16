@@ -3,7 +3,7 @@ title: "gamescom, here we go!"
 excerpt: "Join us next week at the Godot booth during gamescom in Cologne from Wednesday the 23rd, to Friday the 25th. Don't miss the chance to say hello to the Godot team!"
 categories: ["events"]
 author: Emi
-image: /storage/blog/gamescom/2023/gamescom-cover.webp
+image: /storage/blog/gamescom/2023/gamescom-cover.jpg
 date: 2023-08-17 15:57:35
 ---
 

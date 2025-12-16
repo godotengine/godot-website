@@ -3,7 +3,7 @@ title: "Meet the creator behind the Godot Game Awards"
 excerpt: "StayAtHomeDev has been sharing his passion on YouTube for over two years and now he's running the awards."
 categories: ["showcase"]
 author: Emi
-image: /storage/blog/covers/godot-awards-stayathomedev.webp
+image: /storage/blog/covers/godot-awards-stayathomedev.jpg
 date: 2024-12-09 18:00:00
 ---
 

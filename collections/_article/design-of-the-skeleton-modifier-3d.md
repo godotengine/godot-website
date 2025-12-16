@@ -3,7 +3,7 @@ title: "Design of the Skeleton Modifier 3D"
 excerpt: "We have reworked the skeleton bone update process to add SkeletonModifier3D for modifying the Skeleton."
 categories: ["progress-report"]
 author: Silc Renew
-image: /storage/blog/covers/design-of-the-skeleton-modifier-3d.webp
+image: /storage/blog/covers/design-of-the-skeleton-modifier-3d.jpg
 date: 2024-08-12 10:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Introducing the new Godot Forum"
 excerpt: "We are finally unveiling the new Godot forum which replaces our Q&A platform while unlocking many new features."
 categories: ["news"]
 author: Winston Yallow
-image: /storage/blog/covers/introducing-new-forum.webp
+image: /storage/blog/covers/introducing-new-forum.jpg
 date: 2023-12-08 15:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 dev 4"
 excerpt: "Progressing steadily towards the beta stage, the fourth dev snapshot brings a lot of improvements all around."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-4.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-4.jpg
 image_caption_title: "AssetPlacer"
 image_caption_description: "A plugin by CookieBadger"
 date: 2023-09-05 16:00:00

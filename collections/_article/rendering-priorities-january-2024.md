@@ -3,7 +3,7 @@ title: "Godot Rendering Priorities: January 2024"
 excerpt: "4.2 brought a lot of improvements to Godot's renderer and ongoing work is paving the way for new features"
 categories: ["progress-report"]
 author: Clay John
-image: /storage/blog/covers/rendering-priorities-jan-2024.webp
+image: /storage/blog/covers/rendering-priorities-jan-2024.jpg
 date: 2024-01-16 9:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 dev 2"
 excerpt: This is where the fun begins
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-dev-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-dev-2.jpg
 image_caption_title: Fortune Avenue
 image_caption_description: A game by Binogure Studio
 date: 2025-04-08 12:00:00

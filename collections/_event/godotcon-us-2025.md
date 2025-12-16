@@ -17,7 +17,7 @@ location_map: "https://www.openstreetmap.org/?mlat=42.361570&mlon=-71.081100#map
 
 website: https://conference.godotengine.org/US/2025
 
-cover_image: "/storage/blog/covers/godotcon-boston-2025.webp"
+cover_image: "/storage/blog/covers/godotcon-boston-2025.jpg"
 
 ---
 

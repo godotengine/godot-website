@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 beta 2"
 excerpt: "Godot 4.3 is in beta, and progressing well towards stable. This beta 2 fixes many critical issues reported by testers of the previous snapshots."
 categories: ["pre-release"]
 author: "Rémi Verschelde"
-image: /storage/blog/covers/dev-snapshot-godot-4-3-beta-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-beta-2.jpg
 image_caption_title: "Stunt Xpress"
 image_caption_description: "A game by Rafael Gonçalves and Pineapple Works"
 date: 2024-06-20 11:30:00

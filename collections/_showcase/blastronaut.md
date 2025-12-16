@@ -7,7 +7,7 @@ author: Perfoon
 website: https://twitter.com/jaanusjaggo
 release_date: July 2022
 
-image: "/assets/showcase/blastronaut-header.webp"
+image: "/assets/showcase/blastronaut-header.jpg"
 gallery: [
 	"/assets/showcase/blastronaut-1.webp",
 	"/assets/showcase/blastronaut-2.webp",

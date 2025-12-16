@@ -3,7 +3,7 @@ title: "Release candidates: Godot 4.1.4 RC 2 & 4.2.2 RC 2"
 excerpt: "Another round of release candidates for Godot 4.1.4 and 4.2.2, just before we head off to GDC!"
 categories: ["pre-release"]
 author: Clay John
-image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-2.jpg
 image_caption_title: "The Last Seed"
 image_caption_description: "A jam game by bitbrain, Andrea Baroni and Lucia La Rezza"
 date: 2024-03-15 12:00:00

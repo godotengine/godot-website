@@ -3,7 +3,7 @@ title: "About Official Console Ports"
 excerpt: "With this post we aim to address the community’s questions about the lack of official console ports through the Godot Foundation."
 categories: ["news"]
 author: Emi
-image: /storage/blog/covers/about-official-console-ports.webp
+image: /storage/blog/covers/about-official-console-ports.jpg
 image_caption_description: "Photo by <a href='https://unsplash.com/photos/two-video-game-controllers-sitting-next-to-each-other-r4iput0KsOw'>Eugene Chystiakov</a> from Unsplash"
 date: 2024-09-03 18:30:00
 ---

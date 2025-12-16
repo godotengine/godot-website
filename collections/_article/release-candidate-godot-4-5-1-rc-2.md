@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.5.1 RC 2"
 excerpt: Hotfixes so nice, we added 'em twice!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/release-candidate-godot-4-5-1-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-5-1-rc-2.jpg
 image_caption_title: Trainatic
 image_caption_description: A game by Ryan Forrester
 date: 2025-10-08 12:00:00

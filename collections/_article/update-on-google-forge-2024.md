@@ -3,7 +3,7 @@ title: "Update on the Collaboration with Google and The Forge"
 excerpt: "The collaboration with Google and The Forge has concluded successfully!"
 categories: ["news"]
 author: Clay John
-image: /storage/blog/covers/godot-and-android-and-vulkan.webp
+image: /storage/blog/covers/godot-and-android-and-vulkan.jpg
 date: 2024-04-19 18:00:00
 ---
 

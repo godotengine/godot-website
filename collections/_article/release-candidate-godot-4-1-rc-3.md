@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.1 RC 3"
 excerpt: "A few more critical regressions were fixed, and the milestone is now 100% complete. Let's confirm that 4.1 is ready with a (final?) RC."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-1-rc-3.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-rc-3.jpg
 image_caption_title: "Bravest Coconut"
 image_caption_description: "A game by Nathan Hoad and Lilly Piri"
 date: 2023-07-04 11:00:00

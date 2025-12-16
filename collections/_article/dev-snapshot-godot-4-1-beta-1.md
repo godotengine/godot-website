@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.1 beta 1"
 excerpt: "Switching gears into the bug-fixing mode, here's the first beta of Godot 4.1, and a great opportunity to try the new version of the engine ahead of the official release."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-1.jpg
 image_caption_title: "Halls of Torment"
 image_caption_description: "A game by Chasing Carrots"
 date: 2023-06-08 10:00:00

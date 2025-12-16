@@ -3,7 +3,7 @@ title: "Introducing Reverse Z (AKA I'm sorry for breaking your shader)"
 excerpt: "We are breaking compatibility for some custom shaders. Here is why."
 categories: ["news"]
 author: Clay John
-image: /storage/blog/covers/introducing-reverse-z.webp
+image: /storage/blog/covers/introducing-reverse-z.jpg
 date: 2024-04-29 13:00:00
 ---
 

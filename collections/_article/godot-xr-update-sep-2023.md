@@ -3,7 +3,7 @@ title: "Godot XR update - September 2023"
 excerpt: "Updates on various things XR in Godot, a new version of the OpenXR plugin, a new version of the tools library and an update on Godot 4 support."
 categories: ["progress-report"]
 author: Bastiaan Olij
-image: /storage/blog/covers/godot-xr-update-sep-2023.webp
+image: /storage/blog/covers/godot-xr-update-sep-2023.jpg
 image_caption_title: Badaboom
 image_caption_description: Badaboom by Decacis
 date: 2023-09-11 11:00:00

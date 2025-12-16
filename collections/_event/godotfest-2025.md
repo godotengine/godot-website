@@ -16,7 +16,7 @@ entrance_fee: "250€ in June, 300€ after"
 registration: "https://25.godotfest.com/"
 website: "https://godotfest.com/"
 
-cover_image: "/storage/blog/covers/godotfest-2025.webp"
+cover_image: "/storage/blog/covers/godotfest-2025.jpg"
 
 ---
 

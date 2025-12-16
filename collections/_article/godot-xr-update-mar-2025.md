@@ -3,7 +3,7 @@ title: "Godot XR update - March 2025"
 excerpt: "Godot XR Community Game Jam February 2025"
 categories: ["progress-report"]
 author: Bastiaan Olij
-image: /storage/blog/covers/march-2025-update-godot-xr-community.webp
+image: /storage/blog/covers/march-2025-update-godot-xr-community.jpg
 image_caption_description: "Godot XR Gamejam III logo"
 date: 2025-03-28 12:00:00
 ---

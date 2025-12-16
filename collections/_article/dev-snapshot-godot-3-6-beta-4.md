@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 3.6 beta 4"
 excerpt: "Godot 3.6 is still in development, slowly but steadily! This snapshot updates toolchains for official builds and adds official Linux ARM binaries, among other improvements."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-4.webp
+image: /storage/blog/covers/dev-snapshot-godot-3-6-beta-4.jpg
 image_caption_title: "Cardbob"
 image_caption_description: "A game by Mad Cookies Studio"
 date: 2024-01-25 14:00:00

@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 beta 1"
 excerpt: "Godot 4.4 is on its way! Please lend a hand by testing this beta release and reporting your findings."
 categories: ["pre-release"]
 author: "Godot contributors"
-image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-1.jpg
 image_caption_title: "WEBFISHING"
 image_caption_description: "A game by lamedeveloper"
 date: 2025-01-16 18:00:00

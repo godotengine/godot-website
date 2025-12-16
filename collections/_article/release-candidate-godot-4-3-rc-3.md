@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.3 RC 3"
 excerpt: "With all known major regressions fixed, we are now publishing a third release candidate to confirm that 4.3 is ready to go stable."
 categories: ["pre-release"]
 author: "Rémi Verschelde"
-image: /storage/blog/covers/release-candidate-godot-4-3-rc-3.webp
+image: /storage/blog/covers/release-candidate-godot-4-3-rc-3.jpg
 image_caption_title: "Pixelorama"
 image_caption_description: "An application by Orama Interactive"
 date: 2024-08-08 14:00:00

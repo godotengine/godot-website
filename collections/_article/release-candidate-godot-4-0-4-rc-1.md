@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.0.4 RC 1"
 excerpt: "A new batch of backported fixes for Godot 4.0 is ready for testing! Even if you aren't able to move to Godot 4.1 just yet, we can't leave you without support and improvements."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-0-4-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-0-4-rc-1.jpg
 image_caption_title: "Sunken Shadows"
 image_caption_description: "A game by Milan Gruner et al"
 date: 2023-07-21 16:00:00

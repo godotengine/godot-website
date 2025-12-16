@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.4.1 RC 1"
 excerpt: "Godot 4.4 was released 10 days ago, and as is customary with such major feature updates, we have a late harvest of regression fixes to offer!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-4-1-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-4-1-rc-1.jpg
 image_caption_title: "Book Bound"
 image_caption_description: "A game by Bit66 Games"
 date: 2025-03-14 11:00:00

@@ -3,7 +3,7 @@ title: "Godot Showcase - Usagi Shima"
 excerpt: "A relaxing, idle bunny collecting game made by Jess, a solo indie developer"
 categories: ["showcase"]
 author: Emi
-image: /storage/blog/covers/usagi-shima.webp
+image: /storage/blog/covers/usagi-shima.jpg
 date: 2023-09-01 15:00:00
 ---
 

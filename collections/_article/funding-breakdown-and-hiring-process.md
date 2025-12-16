@@ -3,7 +3,7 @@ title: "Godot Funding Breakdown & Hiring Process"
 excerpt: "This article aims to shed light on the current status of Godot's funding, hiring, and our plans for sustainable funding long term."
 categories: ["news"]
 author: Godot Foundation
-image: /storage/blog/covers/funding-breakdown-and-hiring-process.webp
+image: /storage/blog/covers/funding-breakdown-and-hiring-process.jpg
 date: 2023-07-11 12:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Moving to Vulkan (and ES 2.0) instead of OpenGL ES 3.0"
 excerpt: "The rationale for the OpenGL ES 3 renderer was having a single codebase for targeting all platforms. This sounds really good in theory and we could say it *almost* works, but..."
 categories: ["news"]
 author: Juan Linietsky
-image: /storage/app/uploads/public/5a9/681/3c1/5a96813c154bd636778829.svg
+image: /storage/blog/covers/abandoning-gles3-vulkan-and-gles2.png
 date: 2018-02-26 00:00:00
 ---
 

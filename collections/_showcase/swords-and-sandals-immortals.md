@@ -4,7 +4,7 @@ date: 2021-05-01 00:00:00 +0000
 
 title: "Swords and Sandals Immortals"
 author: "Whiskeybarrel Studios"
-image: "/assets/showcase/sandals-header.webp"
+image: "/assets/showcase/sandals-header.jpg"
 gallery: [
 	"/assets/showcase/sandals-1.webp",
 	"/assets/showcase/sandals-2.webp",

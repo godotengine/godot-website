@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 dev 5"
 excerpt: "Sneaking one more dev release in for testing before the team heads to GDC!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-5.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-5.jpg
 image_caption_title: "Béton Sanglant"
 image_caption_description: "A game by MrEliptik"
 date: 2024-03-15 15:00:00

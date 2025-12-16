@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.1 RC 1"
 excerpt: "After 4 months of development, Godot 4.1 is only days away. To make sure it doesn't miss the mark, here's the first release candidate for your testing!"
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-1-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-rc-1.jpg
 image_caption_title: "Katana Dragon"
 image_caption_description: "A game by Tsunoa Games"
 date: 2023-06-27 14:00:00

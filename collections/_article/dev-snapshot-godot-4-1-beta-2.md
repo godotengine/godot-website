@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.1 beta 2"
 excerpt: "Continuing on our planned schedule for Godot 4.1, we're advancing through the beta phase and getting ready for a stable release in early July."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-2.jpg
 image_caption_title: "Beehave"
 image_caption_description: "A behavior tree plugin by bitbrain"
 date: 2023-06-14 13:00:00

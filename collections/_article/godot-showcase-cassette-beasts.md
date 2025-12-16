@@ -3,7 +3,7 @@ title: "Godot Showcase - Cassette Beasts"
 excerpt: "We interviewed Jay and Tom from Bytten Studio about Cassette Beasts."
 categories: ["showcase"]
 author: Emi
-image: /storage/blog/covers/cassette-beasts.webp
+image: /storage/blog/covers/cassette-beasts.jpg
 date: 2023-04-26 15:00:00
 ---
 

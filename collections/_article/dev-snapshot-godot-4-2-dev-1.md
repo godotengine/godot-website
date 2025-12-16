@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 dev 1"
 excerpt: "We are ready to share the first batch of improvements coming to Godot 4.2 later this year with the release of the first dev snapshot!"
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-1.jpg
 image_caption_title: "Terrain3D"
 image_caption_description: "A tool for 3D terrain creation by Outobugi Games and Tokisan Games"
 date: 2023-07-19 15:00:00

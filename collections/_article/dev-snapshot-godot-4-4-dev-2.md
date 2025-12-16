@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 dev 2"
 excerpt: "The PR harvest keeps going strongly for Godot 4.4, with massive new features such as typed dictionaries and error-less project import!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-2.jpg
 image_caption_title: "Megaloot"
 image_caption_description: "A game by axilirate and Ravenage Games"
 date: 2024-09-10 16:00:00

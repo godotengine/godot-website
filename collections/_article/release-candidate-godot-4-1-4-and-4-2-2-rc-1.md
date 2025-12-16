@@ -3,7 +3,7 @@ title: "Release candidates: Godot 4.1.4 RC 1 & 4.2.2 RC 1"
 excerpt: "As a double-feature release, Godot 4.1.4 and 4.2.2 are ready for testing with their respective release candidates!"
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-1.jpg
 image_caption_title: "Crossroad OS"
 image_caption_description: "A game by Guy and Daisy Games"
 date: 2024-01-26 16:30:00

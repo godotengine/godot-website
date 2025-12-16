@@ -3,7 +3,7 @@ title: "Release candidates: Godot 4.1.4 RC 3 & 4.2.2 RC 3"
 excerpt: "Last round of release candidates for the upcoming maintenance releases."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-3.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-4-and-4-2-2-rc-3.jpg
 image_caption_title: "Sunken Shadows"
 image_caption_description: "A game by Sunrise Glitch Games"
 date: 2024-04-12 09:00:00

@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.2 RC 1"
 excerpt: "With every critical bug identified and squashed, we are making our last turn and preparing to sprint to the finish line with Godot 4.2!"
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-2-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-2-rc-1.jpg
 image_caption_title: "Forest River 2"
 image_caption_description: "A concept scene by Beau Seymour"
 date: 2023-11-17 15:00:00

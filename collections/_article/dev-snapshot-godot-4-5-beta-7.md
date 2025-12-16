@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 beta 7"
 excerpt: Two more for the road!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-7.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-7.jpg
 image_caption_title: Strange Jigsaws
 image_caption_description: A game by FLEB
 date: 2025-08-29 12:00:00

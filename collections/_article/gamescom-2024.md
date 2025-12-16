@@ -3,7 +3,7 @@ title: "Gamescom here we come!"
 excerpt: "We are once again attending gamescom, and organizing two meet-up opportunities this time."
 categories: ["events"]
 author: Nat
-image: /storage/blog/covers/gamescom-cover-2024.webp
+image: /storage/blog/covers/gamescom-cover-2024.jpg
 date: 2024-08-06 17:00:00
 ---
 

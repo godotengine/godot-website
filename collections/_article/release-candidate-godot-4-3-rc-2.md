@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.3 RC 2"
 excerpt: "After a week in the Release Candidate stage, we have squashed most bugs we were still tracking for 4.3, and are ready for a second candidate."
 categories: ["pre-release"]
 author: "Rémi Verschelde"
-image: /storage/blog/covers/release-candidate-godot-4-3-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-3-rc-2.jpg
 image_caption_title: "Gorgon Shield"
 image_caption_description: "A game by Whiskeybarrel Studios"
 date: 2024-08-01 16:00:00

@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.2.1 RC 1"
 excerpt: "Godot 4.2 was released one week ago, and as is customary with feature updates, we have a late harvest of regression fixes to offer!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-2-1-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-2-1-rc-1.jpg
 image_caption_title: "Subzero Tides"
 image_caption_description: "A game by Logical Progression Games"
 date: 2023-12-08 13:00:00

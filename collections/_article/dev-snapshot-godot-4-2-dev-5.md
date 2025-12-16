@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 dev 5"
 excerpt: "Penultimate 4.2 dev snapshot brings improvements to Android plugin API, the Tilemap editor, and, well, practically everything else — making it ready for beta testing next month."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-5.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-5.jpg
 image_caption_title: "Starter Kit 3D Platformer"
 image_caption_description: "A template project by Kenney"
 date: 2023-09-19 10:00:00

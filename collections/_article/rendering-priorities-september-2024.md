@@ -3,7 +3,7 @@ title: "Godot Rendering Priorities: September 2024"
 excerpt: "4.3 is out. It's time for an update!"
 categories: ["progress-report"]
 author: Clay John
-image: /storage/blog/covers/rendering-priorities-september-2024.webp
+image: /storage/blog/covers/rendering-priorities-september-2024.jpg
 date: 2024-09-23 15:45:00
 ---
 

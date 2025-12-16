@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 beta 2"
 excerpt: The cow goes "moo"! The duck goes "quack"! The bug goes *squash*!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-2.jpg
 image_caption_title: Xion Leak
 image_caption_description: A game by Gentle Beasts Studio
 date: 2025-07-01 12:00:00

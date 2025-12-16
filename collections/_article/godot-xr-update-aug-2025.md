@@ -3,7 +3,7 @@ title: "Godot XR update - August 2025"
 excerpt: "Upcoming XR game jam, using the XR editor, new release channels and the new Render Models API"
 categories: ["progress-report"]
 author: Bastiaan Olij
-image: /storage/blog/covers/august-2025-update-godot-xr-community.webp
+image: /storage/blog/covers/august-2025-update-godot-xr-community.jpg
 image_caption_description: "Godot XR Game Jam IV logo"
 date: 2025-09-02 12:00:00
 ---

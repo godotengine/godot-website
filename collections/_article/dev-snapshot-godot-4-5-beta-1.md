@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 beta 1"
 excerpt: Godot 4.5 has entered beta and is now feature-complete!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-1.jpg
 image_caption_title: Rift Riff
 image_caption_description: A game by Adriaan de Jongh, Sim Kaart, Matthijs Koster, Franz LaZerte, and Professional Panda
 date: 2025-06-18 22:00:00

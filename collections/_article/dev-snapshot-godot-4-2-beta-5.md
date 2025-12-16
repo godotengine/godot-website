@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 beta 5"
 excerpt: "More critical fixes are coming your way on the road to Godot 4.2 stable, including smoother transition for 3D projects made in 4.1."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-5.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-5.jpg
 image_caption_title: Liberation
 image_caption_description: A game by Luke Miller
 date: 2023-11-07 12:00:00

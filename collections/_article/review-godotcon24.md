@@ -3,7 +3,7 @@ title: "GodotCon 24: Berlin Edition"
 excerpt: "Our biggest conference yet!"
 categories: ["events"]
 author: Nat
-image: /storage/blog/covers/godotcon-2024-post.webp
+image: /storage/blog/covers/godotcon-2024-post.jpg
 date: 2024-11-13 18:30:00
 ---
 

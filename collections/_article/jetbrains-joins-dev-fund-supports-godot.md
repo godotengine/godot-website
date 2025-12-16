@@ -3,7 +3,7 @@ title: "Godot Foundation welcomes JetBrains as Platinum Sponsor"
 excerpt: "The Godot Foundation is thrilled to welcome JetBrains as a Platinum Sponsor! We’re very grateful for the support, and hope you’ll give them a warm welcome too."
 categories: ["news"]
 author: Godot Foundation
-image: /storage/blog/covers/godot-jetbrains.webp
+image: /storage/blog/covers/godot-jetbrains.jpg
 date: 2025-08-05 12:00:00
 ---
 

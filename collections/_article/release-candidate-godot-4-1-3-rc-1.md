@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.1.3 RC 1"
 excerpt: "Another batch of fixes and stability improvements for Godot 4.1 users is ready to be tested. Of note, this release addresses a number of rendering and GUI issues, and improves class documentation."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-1-3-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-3-rc-1.jpg
 image_caption_title: "Living for Plants"
 image_caption_description: "A game by shawcat"
 date: 2023-10-27 15:00:00

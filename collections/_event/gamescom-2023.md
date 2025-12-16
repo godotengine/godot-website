@@ -18,7 +18,7 @@ location_map: "https://www.openstreetmap.org/?mlat=50.94590&mlon=6.98034map%3D16
 
 entrance_fee: "Paid, Pass required"
 
-cover_image: "/storage/blog/gamescom/2023/gamescom-cover.webp"
+cover_image: "/storage/blog/gamescom/2023/gamescom-cover.jpg"
 
 ---
 

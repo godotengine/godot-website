@@ -3,7 +3,7 @@ title: "UID changes coming to Godot 4.4"
 excerpt: "Godot's resource UID system is changing to better support scripts and shaders. Read on to know what's required on your part to fully benefit from it."
 categories: ["progress-report"]
 author: Hugo Locurcio
-image: /storage/blog/covers/uid-changes-coming-to-godot-4-4.webp
+image: /storage/blog/covers/uid-changes-coming-to-godot-4-4.jpg
 date: 2025-01-15 14:00:00
 ---
 

@@ -7,7 +7,7 @@ author: Blender Studio
 website: https://studio.blender.org
 release_date: July 2025
 
-image: "/assets/showcase/dogwalk/header.webp"
+image: "/assets/showcase/dogwalk/header.jpg"
 gallery: [
   "/assets/showcase/dogwalk/dogwalk-1.jpg",
   "/assets/showcase/dogwalk/dogwalk-2.jpg",

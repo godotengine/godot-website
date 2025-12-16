@@ -4,7 +4,7 @@ excerpt: "Godot will be present at gamescom latam once again: meet contributors 
 categories: ["events"]
 author: George Marques
 date: 2024-06-21 13:00:00
-image: /storage/blog/covers/gamescom-latam-2024.webp
+image: /storage/blog/covers/gamescom-latam-2024.jpg
 image_caption_title: "gamescom latam 2024 venue"
 image_caption_description: "Photo of the São Paulo Expo, where the event will take place."
 ---

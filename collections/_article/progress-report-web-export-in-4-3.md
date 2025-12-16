@@ -3,7 +3,7 @@ title: "Web Export in 4.3"
 excerpt: "With single-threaded builds and sample playback, it's now easier than ever to export your game to the Web with Godot 4.3. And more!"
 categories: ["progress-report"]
 author: Adam Scott
-image: /storage/blog/covers/progress-report-web-export-in-4-3.webp
+image: /storage/blog/covers/progress-report-web-export-in-4-3.jpg
 image_caption_title: "Catburglar"
 image_caption_description: "An open source game by @JohnGabrielUK and his team"
 date: 2024-05-15 13:15:00

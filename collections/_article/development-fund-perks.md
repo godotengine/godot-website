@@ -3,7 +3,7 @@ title: "New Dev Fund Perks: Discord Role and Forum Badge"
 excerpt: "Proudly display your support on our community platforms."
 categories: ["news"]
 author: Winston Yallow
-image: /storage/blog/covers/development-fund-perks.webp
+image: /storage/blog/covers/development-fund-perks.jpg
 date: 2024-07-10 12:00:00
 ---
 

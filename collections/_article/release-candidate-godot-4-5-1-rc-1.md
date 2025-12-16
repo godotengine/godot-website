@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.5.1 RC 1"
 excerpt: Regression fixes coming in hot!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/release-candidate-godot-4-5-1-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-5-1-rc-1.jpg
 image_caption_title: Coal LLC
 image_caption_description: A game by Bye Bye Ocean
 date: 2025-10-02 12:00:00

@@ -17,7 +17,7 @@ location_map: "https://www.openstreetmap.org/way/428992680"
 
 website: https://conference.godotengine.org/2023
 
-cover_image: "/storage/blog/covers/godotcon-2023.webp"
+cover_image: "/storage/blog/covers/godotcon-2023.jpg"
 
 ---
 

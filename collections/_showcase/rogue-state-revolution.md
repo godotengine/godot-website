@@ -7,7 +7,7 @@ author: "Little Red Dog Games"
 website: https://www.littlereddoggames.com/
 release_date: "February 2021"
 
-image: "/assets/showcase/rogue-state-revolution-header.webp"
+image: "/assets/showcase/rogue-state-revolution-header.jpg"
 gallery: [
 	"/assets/showcase/rogue-state-revolution.webp"
 ]

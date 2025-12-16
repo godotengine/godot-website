@@ -3,7 +3,7 @@ title: "Our first GodotCon in the US - Save the date!"
 excerpt: "Want to join? Boston 5th - 7th of May. Call for speakers and sponsors open!"
 categories: ["events"]
 author: Emi
-image: /storage/blog/covers/godotcon-boston-2025.webp?1
+image: /storage/blog/covers/godotcon-boston-2025.jpg
 date: 2025-01-21 18:00:00
 ---
 

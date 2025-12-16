@@ -7,6 +7,7 @@ author: Megasploot
 website: https://dungeondraft.net/
 release_date: February 2020
 
+image: "/assets/showcase/dungeondraft-header.jpg"
 gallery: [
 	"/assets/showcase/dungeondraft.webp"
 ]

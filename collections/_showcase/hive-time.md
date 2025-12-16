@@ -7,6 +7,7 @@ author: Cheeseness
 website: https://hivetime.twolofbees.com/
 release_date: December 2019
 
+image: "/assets/showcase/hive-time-header.jpg"
 gallery: [
   "/assets/showcase/hive-time.webp"
 ]

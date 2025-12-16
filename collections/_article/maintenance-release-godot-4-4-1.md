@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.4.1"
 excerpt: "Godot 4.4 was a massive success, and with most users migrating to it, we discovered and fixed a number of significant bugs which warrant a first maintenance release."
 categories: ["release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/maintenance-release-godot-4-4-1.webp
+image: /storage/blog/covers/maintenance-release-godot-4-4-1.jpg
 image_caption_title: Psycho Patrol R
 image_caption_description: A game by Consumer Softproducts
 date: 2025-03-26 15:00:00

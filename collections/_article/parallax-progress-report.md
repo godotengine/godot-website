@@ -3,7 +3,7 @@ title: "Parallax2D Progress Report"
 excerpt: "A new node is on its way to help with parallax in 2D."
 categories: ["progress-report"]
 author: "Mark DiBarry"
-image: /storage/blog/covers/progress-report-parallax2d.webp
+image: /storage/blog/covers/progress-report-parallax2d.jpg
 date: 2024-04-02 12:00:00
 ---
 

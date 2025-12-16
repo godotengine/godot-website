@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 beta 6"
 excerpt: "We're almost ready for a release candidate! This 6th beta fixes a number of regressions via some relatively core changes which will need thorough testing."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-6.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-6.jpg
 image_caption_title: SpaceSlog
 image_caption_description: A game by Produno Games Studios
 date: 2023-11-13 16:00:00

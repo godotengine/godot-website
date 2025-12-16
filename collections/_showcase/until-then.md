@@ -5,7 +5,7 @@ date: 2024-06-25 00:00:00 +0000
 title: "Until Then"
 author: "Polychroma Games"
 
-image: "/assets/showcase/until-then-header.webp"
+image: "/assets/showcase/until-then-header.jpg"
 gallery: [
 	"/assets/showcase/until-then-2.webp",
 	"/assets/showcase/until-then-1.webp",

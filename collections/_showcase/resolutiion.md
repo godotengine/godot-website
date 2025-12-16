@@ -7,7 +7,7 @@ author: Monolith of Minds
 website: https://resolutiion.monolithofminds.com/
 release_date: May 2020
 
-image: "/assets/showcase/resolutiion-header.webp"
+image: "/assets/showcase/resolutiion-header.jpg"
 gallery: [
   "/assets/showcase/resolutiion-1.webp",
 	"/assets/showcase/resolutiion-2.webp"

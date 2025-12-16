@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.1.1 RC 1"
 excerpt: "The first round of bugfixes and usability improvements for Godot 4.1 is ready for your consideration!"
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-1-1-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-1-rc-1.jpg
 image_caption_title: "GMTK Game Jam entries"
 image_caption_description: ""
 date: 2023-07-12 10:00:00

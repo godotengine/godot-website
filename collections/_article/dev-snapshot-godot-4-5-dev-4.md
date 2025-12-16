@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 dev 4"
 excerpt: One post-GodotCon snapshot coming up!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-dev-4.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-dev-4.jpg
 image_caption_title: Ambidextro
 image_caption_description: A game by Majorariatto
 date: 2025-05-13 12:00:00

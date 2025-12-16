@@ -3,7 +3,7 @@ title: "Godot 4.2 arrives in style!"
 excerpt: "Godot 4.2 brings more rendering features and better platform support, it's also faster, easier to use, and more reliable!"
 categories: ["release"]
 author: "Godot contributors"
-image: /storage/blog/covers/godot-4-2-arrives-in-style.webp
+image: /storage/blog/covers/godot-4-2-arrives-in-style.jpg
 date: 2023-11-30 12:00:00
 ---
 

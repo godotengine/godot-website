@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 dev 2"
 excerpt: "After a well-deserved holiday break, the team is back on Godot 4.3 development at full speed, with over 200 improvements merged in the first 10 days of the year!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-2.jpg
 image_caption_title: "Fish Flop"
 image_caption_description: "A game by Kasper Arnklit and Neil Greene"
 date: 2024-01-11 18:00:00

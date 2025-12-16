@@ -7,7 +7,7 @@ author: Leocesar3D
 website: https://twitter.com/Leocesar3D
 release_date: September 2020 (Early Access)
 
-image: "/assets/showcase/human-diaspora-header.webp"
+image: "/assets/showcase/human-diaspora-header.jpg"
 gallery: [
 	"/assets/showcase/human-diaspora.webp"
 ]

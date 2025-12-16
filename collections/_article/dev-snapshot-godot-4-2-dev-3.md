@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 dev 3"
 excerpt: "One month into the release cycle for Godot 4.2, things are well under way. This third dev snapshot features a lot of improvements to C# and rendering."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-3.jpg
 image_caption_title: "Easy Charts"
 image_caption_description: "A plotting addon by fenix-hub"
 date: 2023-08-11 14:00:00

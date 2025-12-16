@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.2.1"
 excerpt: "This first maintenance release fixes a number of platform compatibility issues introduced in Godot 4.2, which should make it much easier to upgrade from 4.1 or start new projects on all platforms."
 categories: ["release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/maintenance-release-godot-4-2-1.webp
+image: /storage/blog/covers/maintenance-release-godot-4-2-1.jpg
 image_caption_title: Voice of Flowers
 image_caption_description: A game by Tomasz Chabora
 date: 2023-12-12 13:00:00

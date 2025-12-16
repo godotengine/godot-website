@@ -4,7 +4,7 @@ date: 2023-10-25 00:00:00 +0000
 
 title: "Badaboom"
 author: "Decacis Studio"
-image: "/assets/showcase/badaboom.webp"
+image: "/assets/showcase/badaboom.jpg"
 gallery: [
 	"/assets/showcase/screenshots/badaboom-1.jpg",
 	"/assets/showcase/screenshots/badaboom-2.jpg",

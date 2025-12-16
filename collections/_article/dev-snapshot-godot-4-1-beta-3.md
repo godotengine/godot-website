@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.1 beta 3"
 excerpt: "We are getting confident in the state of Godot 4.1! To wrap things up here's the last beta release, bringing more fixes to reported issues."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-1-beta-3.jpg
 image_caption_title: "The Adventures of Mouth Man"
 image_caption_description: "A game by Retrocade Media"
 date: 2023-06-21 13:00:00

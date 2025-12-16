@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 beta 5"
 excerpt: Back to our regularly scheduled schedule!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-5.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-5.jpg
 image_caption_title: Maze Mice
 image_caption_description: A game by TrampolineTales
 date: 2025-08-06 12:00:00

@@ -3,7 +3,7 @@ title: "Godot 4.1 is here, smoother, more reliable, and with plenty of new featu
 excerpt: "Four months after the release of Godot 4.0, we are excited to bring you Godot 4.1 — an update with a focus on stability, performance, and polish."
 categories: ["release"]
 author: "Godot contributors"
-image: /storage/blog/covers/godot-4-1-is-here.webp
+image: /storage/blog/covers/godot-4-1-is-here.jpg
 date: 2023-07-06 12:00:00
 ---
 

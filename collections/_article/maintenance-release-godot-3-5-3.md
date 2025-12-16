@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 3.5.3"
 excerpt: "It's been way too long since our previous 3.5 maintenance release! This new Godot 3.5.3 fixes a number of important issues and adjusts to changing platform requirements."
 categories: ["release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/maintenance-release-godot-3-5-3.webp
+image: /storage/blog/covers/maintenance-release-godot-3-5-3.jpg
 image_caption_title: Hauma
 image_caption_description: A visual novel by SenAm Games
 date: 2023-09-25 14:00:00

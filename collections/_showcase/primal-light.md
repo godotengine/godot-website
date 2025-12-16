@@ -7,7 +7,7 @@ author: Fat Gem
 website: https://twitter.com/primallightgame
 release_date: July 2020
 
-image: "/assets/showcase/primal-light-header.webp"
+image: "/assets/showcase/primal-light-header.jpg"
 gallery: [
 	"/assets/showcase/primal-light-1.webp",
   "/assets/showcase/primal-light-2.webp"

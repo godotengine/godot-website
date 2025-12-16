@@ -3,7 +3,7 @@ title: "Join the Hacktoberfest and contribute to Godot!"
 excerpt: "Hacktoberfest, an event that encourages you to contribute to open source projects (Godot included) starts now, and will last for the whole month of October. If you make at least four pull requests, you can earn a cool hacker T-shirt!"
 categories: ["events"]
 author: Rémi Verschelde
-image: /storage/app/uploads/public/57e/f83/c4e/57ef83c4e718d700719754.svg
+image: /storage/blog/covers/join-hacktoberfest-and-contribute-godot.png
 date: 2016-10-01 00:01:00
 ---
 

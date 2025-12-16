@@ -3,7 +3,7 @@ title: "Godot XR community - December 2024"
 excerpt: "Interesting projects from the Godot XR community."
 categories: ["news"]
 author: Bastiaan Olij
-image: /storage/blog/covers/december-2024-update-godot-xr-community.webp
+image: /storage/blog/covers/december-2024-update-godot-xr-community.jpg
 image_caption_description: "ROTVD: Demon in the Shell"
 date: 2024-12-18 12:00:00
 ---

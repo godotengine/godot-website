@@ -3,7 +3,7 @@ title: "Godot SDK Integrations"
 excerpt: "A new GitHub organization to centralize the community efforts to provide support for third-party SDKs for Godot."
 categories: ["news"]
 author: Godot Foundation
-image: /storage/blog/covers/godot-sdk-integrations.webp
+image: /storage/blog/covers/godot-sdk-integrations.jpg
 date: 2024-09-24 14:30:00
 ---
 

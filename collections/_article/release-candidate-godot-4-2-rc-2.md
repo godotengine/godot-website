@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.2 RC 2"
 excerpt: "The first release candidate brought another crop of regression reports, which we've now fixed!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-2-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-2-rc-2.jpg
 image_caption_title: "2D platformer prototype"
 image_caption_description: "An open source game by Securas"
 date: 2023-11-24 20:00:00

@@ -3,7 +3,7 @@ title: "Upcoming (serious) Web performance boost"
 excerpt: "Compiling the Godot Engine with WASM SIMD support truly is a game changer."
 categories: ["progress-report"]
 author: Adam Scott
-image: /storage/blog/covers/upcoming-serious-web-performance-boost.webp
+image: /storage/blog/covers/upcoming-serious-web-performance-boost.jpg
 date: 2025-06-05 18:00:00
 ---
 

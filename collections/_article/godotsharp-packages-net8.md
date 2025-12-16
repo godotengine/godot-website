@@ -3,7 +3,7 @@ title: "Godot C# packages move to .NET 8"
 excerpt: "On moving to the latest .NET LTS release, and what it means for users."
 categories: ["progress-report"]
 author: Raul Santos
-image: /storage/blog/covers/godotsharp-packages-net8.webp
+image: /storage/blog/covers/godotsharp-packages-net8.jpg
 date: 2025-01-02 17:00:00
 ---
 

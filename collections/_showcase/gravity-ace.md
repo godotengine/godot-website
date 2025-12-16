@@ -7,7 +7,7 @@ author: John Watson
 website: https://gravityace.com/
 release_date: October 2020 (Early Access)
 
-image: "/assets/showcase/gravity-ace-header.webp"
+image: "/assets/showcase/gravity-ace-header.jpg"
 gallery: [
 	"/assets/showcase/gravity-ace.webp"
 ]

@@ -7,7 +7,7 @@ author: pank0
 website: https://twitter.com/_pank0
 release_date: "September 2023"
 
-image: "/assets/showcase/usagi-shima-header.webp"
+image: "/assets/showcase/usagi-shima-header.jpg"
 gallery: [
 	"/assets/showcase/usagi-shima-5.webp",
 	"/assets/showcase/usagi-shima.webp",

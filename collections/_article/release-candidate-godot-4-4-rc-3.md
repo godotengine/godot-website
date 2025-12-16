@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.4 RC 3"
 excerpt: We said "final" for the previous release candidate, but good things come in threes, don't they?
 categories: [pre-release]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-4-rc-3.webp
+image: /storage/blog/covers/release-candidate-godot-4-4-rc-3.jpg
 image_caption_title: CRUEL
 image_caption_description: A game by James Dornan
 date: 2025-02-28 17:00:00

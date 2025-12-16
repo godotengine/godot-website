@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 dev 4"
 excerpt: "Another 4.3 dev release means that many more fixes and improvements are on their way!"
 categories: ["pre-release"]
 author: Clay John
-image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-4.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-4.jpg
 image_caption_title: "Parking Garage Rally Circuit"
 image_caption_description: "A game by Walaber"
 date: 2024-02-29 18:00:00

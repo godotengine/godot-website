@@ -3,7 +3,7 @@ title: "Godot OpenXR Vendors Plugin v4"
 excerpt: "What's new in the latest release of the Godot OpenXR Vendors plugin?"
 categories: ["progress-report"]
 author: "David Snopek"
-image: /storage/blog/covers/godot-openxr-vendors-plugin-400.webp
+image: /storage/blog/covers/godot-openxr-vendors-plugin-400.jpg
 image_caption_title: "Verocity"
 image_caption_description: "A multiplayer VR fighting game, by JD The 65th"
 date: 2025-07-22 12:00:00

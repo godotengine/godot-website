@@ -3,7 +3,7 @@ title: "GPU synchronization in Godot 4.3 is getting a major upgrade"
 excerpt: "Say goodbye to placing barriers, hello to the new acyclic graph"
 categories: ["progress-report"]
 author: Darío Banini
-image: /storage/blog/covers/gpu-sync-progress-report.webp
+image: /storage/blog/covers/gpu-sync-progress-report.jpg
 date: 2024-02-16 9:00:00
 ---
 

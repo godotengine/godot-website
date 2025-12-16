@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 dev 5"
 excerpt: The cool chill of the feature freeze approaches…
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-dev-5.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-dev-5.jpg
 image_caption_title: Replicube
 image_caption_description: A game by Walaber Entertainment LLC
 date: 2025-06-02 12:00:00

@@ -4,7 +4,7 @@ date: 2024-04-02 00:00:00 +0000
 
 title: "Of Life and Land"
 author: "Kerzoven"
-image: "/assets/showcase/of-life-and-land-header.webp"
+image: "/assets/showcase/of-life-and-land-header.jpg"
 gallery: [
 	"/assets/showcase/of-life-and-land-1.webp",
 	"/assets/showcase/of-life-and-land-2.webp",

@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.1.2 RC 1"
 excerpt: "It's long overdue for the second Godot 4.1 patch release! This release candidate contains a number of important fixes, including performance and stability improvements, so let's give it a good test."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/release-candidate-godot-4-1-2-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-2-rc-1.jpg
 image_caption_title: "Fisk"
 image_caption_description: "A game by Kristian Nilsen"
 date: 2023-09-22 14:00:00

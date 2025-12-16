@@ -5,7 +5,7 @@ categories: ["events"]
 author: George Marques
 date: 2023-06-15 00:00:00
 
-image: /storage/blog/covers/big-2023.webp
+image: /storage/blog/covers/big-2023.jpg
 ---
 
 Following our success [at the GDC](https://godotengine.org/article/gdc-2023-retrospective/) earlier this year, Godot will have a booth at the [BIG Festival](https://bigfestival.com.br/o-festival/) for the first time. BIG will happen between **June 28th** and **July 2nd**, so it is right around the corner.

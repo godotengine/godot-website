@@ -3,7 +3,7 @@ title: "GodotCon 24 - Submit ideas! Get tickets!"
 excerpt: "GodotCon 24 will take place on the 12+13th of October in Berlin, Germany. The first batch of tickets as well as the call for speakers and exhibitors just went live. Sponsors welcome."
 categories: ["events"]
 author: Nat
-image: /storage/blog/covers/godotcon-2024.webp
+image: /storage/blog/covers/godotcon-2024.jpg
 date: 2024-06-14 18:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.0.4"
 excerpt: "A fresh pack of stability and documentation improvements for teams still using Godot 4.0 is officially out!"
 categories: ["release"]
 author: Yuri Sizov
-image: /storage/blog/covers/maintenance-release-godot-4-0-4.webp
+image: /storage/blog/covers/maintenance-release-godot-4-0-4.jpg
 image_caption_title: Sky Runner
 image_caption_description: A game by Leon Stansfield
 date: 2023-08-03 13:00:00

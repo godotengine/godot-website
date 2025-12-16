@@ -3,7 +3,7 @@ title: "State of particles and future updates"
 excerpt: "An update on the current state of the particle system in Godot, and some hints about what the future holds!"
 categories: ["progress-report"]
 author: Ilaria Cislaghi
-image: /storage/blog/covers/progress-report-state-of-particles.webp
+image: /storage/blog/covers/progress-report-state-of-particles.jpg
 date: 2023-10-23 13:00:00
 ---
 

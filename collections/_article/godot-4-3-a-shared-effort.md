@@ -3,7 +3,7 @@ title: "Godot 4.3, a shared effort"
 excerpt: "With over 3,500 commits authored by over 500 contributors, the latest Godot Engine release comes packed full of new features and improvements."
 categories: ["release"]
 author: "Godot contributors"
-image: /storage/blog/covers/godot-4-3-a-shared-effort.webp
+image: /storage/blog/covers/godot-4-3-a-shared-effort.jpg
 date: 2024-08-15 11:00:00
 redirect_to:
  - /releases/4.3/

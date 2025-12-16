@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 beta 3"
 excerpt: "We continue iterating quickly on beta snapshots for Godot 4.2 to ensure that we can solve regressions before the stable release."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-3.jpg
 image_caption_title: The Last Game
 image_caption_description: A game by Frédéric Julian
 date: 2023-10-24 15:00:00

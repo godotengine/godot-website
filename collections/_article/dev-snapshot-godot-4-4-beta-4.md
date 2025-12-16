@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 beta 4"
 excerpt: The 4.4 beta phase nears its end!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-4.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-4.jpg
 image_caption_title: Dawnfolk
 image_caption_description: A game by Darenn Keller
 date: 2025-02-17 12:00:00

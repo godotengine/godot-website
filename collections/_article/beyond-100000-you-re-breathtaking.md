@@ -3,7 +3,7 @@ title: "Beyond #100000: You're breathtaking!"
 excerpt: "As we reach issue #100,000 on GitHub, we celebrate with a little retrospective on our issue and pull request growth."
 categories: ["news"]
 author: "Rémi Verschelde"
-image: /storage/blog/covers/beyond-100000-you-re-breathtaking.webp
+image: /storage/blog/covers/beyond-100000-you-re-breathtaking.jpg
 image_caption_title: "\"You're breathtaking!\""
 image_caption_description: "Sketch of Keanu Reeves at the 2019 #XboxE3 event"
 date: 2024-12-04 19:00:00

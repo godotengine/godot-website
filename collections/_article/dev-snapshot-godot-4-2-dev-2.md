@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 dev 2"
 excerpt: "Closing the first month of development of Godot 4.2, the second development snapshot includes both smaller improvements and bigger features."
 categories: ["pre-release"]
 author: Yuri Sizov
-image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-2.jpg
 image_caption_title: "Design visualization system"
 image_caption_description: "A VR tool by Dan Silden"
 date: 2023-07-28 13:00:00

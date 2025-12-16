@@ -3,7 +3,7 @@ title: "Godot Showcase - Somar"
 excerpt: "We interviewed Frédéric Plourde from Collabora and Daniel Castellanos from Decasis about the Somar project."
 categories: ["showcase"]
 author: Bastiaan Olij
-image: /storage/blog/covers/godot-showcase-the-somar-project.webp
+image: /storage/blog/covers/godot-showcase-the-somar-project.jpg
 date: 2025-05-02 15:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.1.3"
 excerpt: "With stability in mind, Godot contributors offer yet another set of changes for Godot 4.1 users, addressing a variety of bugs related to rendering, input, GUI, and platform support."
 categories: ["release"]
 author: Yuri Sizov
-image: /storage/blog/covers/maintenance-release-godot-4-1-3.webp
+image: /storage/blog/covers/maintenance-release-godot-4-1-3.jpg
 image_caption_title: Meowing Point
 image_caption_description: A game by yofrancisco
 date: 2023-11-02 11:00:00

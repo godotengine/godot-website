@@ -3,7 +3,7 @@ title: "Godot Rendering Priorities: July 2023"
 excerpt: "The Godot rendering team continues to focus on stability, performance and usability"
 categories: ["progress-report"]
 author: Clay John
-image: /storage/blog/covers/rendering-priorities-july-2023.webp
+image: /storage/blog/covers/rendering-priorities-july-2023.jpg
 date: 2023-08-09 20:00:00
 ---
 

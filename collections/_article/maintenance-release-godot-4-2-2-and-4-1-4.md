@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.2.2 & 4.1.4"
 excerpt: "It's been a while since our last update for the 4.2 and 4.1 branches, but the wait should be worth it!"
 categories: ["release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/maintenance-release-godot-4-2-2-and-4-1-4.webp
+image: /storage/blog/covers/maintenance-release-godot-4-2-2-and-4-1-4.jpg
 image_caption_title: "RAM: Random Access Mayhem"
 image_caption_description: "A game by Xylem Studios"
 date: 2024-04-17 17:00:00

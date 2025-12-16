@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 beta 3"
 excerpt: "We are nearing the end of the beta phase for Godot 4.3, which is shaping up to be a very solid release, solving a lot of pain points."
 categories: ["pre-release"]
 author: "Rémi Verschelde"
-image: /storage/blog/covers/dev-snapshot-godot-4-3-beta-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-beta-3.jpg
 image_caption_title: "The End of You"
 image_caption_description: "A game by Memory of God"
 date: 2024-07-10 17:00:00

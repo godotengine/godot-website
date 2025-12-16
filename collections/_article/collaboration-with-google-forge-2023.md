@@ -3,7 +3,7 @@ title: "Announcing a collaboration with Google and The Forge"
 excerpt: "We are excited to announce that we have partnered with Google and The Forge to bring some helpful performance optimizations to our Vulkan mobile backend."
 categories: ["news"]
 author: Clay John
-image: /storage/blog/covers/android-and-vulkan.webp
+image: /storage/blog/covers/android-and-vulkan.jpg
 date: 2023-12-14 15:00:00
 ---
 

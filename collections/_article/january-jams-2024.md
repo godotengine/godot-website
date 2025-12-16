@@ -3,7 +3,7 @@ title: "January Jams"
 excerpt: "Looking back at a month of game jams, we curated a list of ten events that you might or might not have heard of before."
 categories: ["events"]
 author: Nat
-image: /storage/blog/covers/godot-jam.webp
+image: /storage/blog/covers/godot-jam.jpg
 image_caption_description: "Jam base image by <a href='https://www.freepik.com/free-photo/jam-isolated-white_1198739.htm#query=jam&position=39&from_view=search&track=sph&uuid=449f0bd4-ec2a-4a1b-aef3-d0ad383022a7'>luis_molinero</a> on Freepik"
 date: 2024-01-31 12:00:00
 ---

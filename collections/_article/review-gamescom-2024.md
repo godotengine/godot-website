@@ -3,7 +3,7 @@ title: "Meeting the community at gamescom 2024"
 excerpt: "Back from gamescom, ready to report."
 categories: ["events"]
 author: Nat
-image: /storage/blog/covers/review-gamescom-2024.webp
+image: /storage/blog/covers/review-gamescom-2024.jpg
 date: 2024-09-02 18:30:00
 ---
 

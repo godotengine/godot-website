@@ -7,7 +7,7 @@ author: Chasing Carrots
 website: https://www.chasing-carrots.com/
 release_date: May 2023
 
-image: "/assets/showcase/halls-of-torment.webp"
+image: "/assets/showcase/halls-of-torment-header.jpg"
 gallery: [
 	"/assets/showcase/halls-of-torment-1.webp",
 	"/assets/showcase/halls-of-torment-2.webp",

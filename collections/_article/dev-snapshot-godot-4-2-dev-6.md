@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 dev 6"
 excerpt: "Final 4.2 dev snapshot before we enter the beta phase, and it's absolutely feature-packed!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-6.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-dev-6.jpg
 image_caption_title: "Restaurant Bits"
 image_caption_description: "An asset pack by Kay Lousberg"
 date: 2023-10-03 22:00:00

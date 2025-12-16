@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.1 RC 2"
 excerpt: "A few more regressions were fixed, and we should now be ready for the Godot 4.1 release. Help us confirm that by testing RC 2!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-1-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-1-rc-2.jpg
 image_caption_title: "Skies above the Great War"
 image_caption_description: "A game by Puntigames"
 date: 2023-06-30 11:00:00

@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 beta 6"
 excerpt: One more for the road!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-6.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-6.jpg
 image_caption_title: Planetary Life
 image_caption_description: A game by Sotenbox
 date: 2025-08-21 12:00:00

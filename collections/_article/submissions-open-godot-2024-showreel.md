@@ -3,7 +3,7 @@ title: "Submissions open for Godot 2024 showreel!"
 excerpt: "Showcase your Godot creations in 2024! We're inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don't miss this chance to be a part of it!"
 categories: ["news"]
 author: Emi
-image: /storage/blog/covers/godot-showreel-2024.webp
+image: /storage/blog/covers/godot-showreel-2024.jpg
 image_caption_description: Illustration by André Marí Coppola
 date: 2024-09-05 15:00:00
 ---

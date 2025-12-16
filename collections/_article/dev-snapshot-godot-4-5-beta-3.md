@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.5 beta 3"
 excerpt: Gotta go fast!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-5-beta-3.jpg
 image_caption_title: Dice 'n Goblins
 image_caption_description: A game by Tsukumogami Software
 date: 2025-07-08 12:00:00

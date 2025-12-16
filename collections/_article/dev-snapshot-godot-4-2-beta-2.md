@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.2 beta 2"
 excerpt: "After last week's 4.2 beta 1 release, we introduced fixes for a number of bugs reported by the community, which are now ready to test in beta 2."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-2.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-2-beta-2.jpg
 image_caption_title: ENDLESS EXPRESS
 image_caption_description: A game by jijigri Games
 date: 2023-10-19 13:00:00

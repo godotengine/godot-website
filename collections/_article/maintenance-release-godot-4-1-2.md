@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.1.2"
 excerpt: "As Godot 4.2 enters feature freeze this week, a new Godot 4.1 maintenance release arrives with a handful of improvements to stability and performance!"
 categories: ["release"]
 author: Yuri Sizov
-image: /storage/blog/covers/maintenance-release-godot-4-1-2.webp
+image: /storage/blog/covers/maintenance-release-godot-4-1-2.jpg
 image_caption_title: Robot Detour
 image_caption_description: A game by Nozomu Games
 date: 2023-10-04 11:00:00

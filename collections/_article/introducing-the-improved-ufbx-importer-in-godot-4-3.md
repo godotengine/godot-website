@@ -3,7 +3,7 @@ title: "Introducing the improved ufbx importer in Godot 4.3"
 excerpt: "Godot 4.3 now includes native .fbx support"
 categories: ["progress-report"]
 author: Lyuma
-image: /storage/blog/covers/progress-report-new-ufbx-importer.webp
+image: /storage/blog/covers/progress-report-new-ufbx-importer.jpg
 date: 2024-08-02 20:36:00
 redirect_from:
  - /fbx-import/

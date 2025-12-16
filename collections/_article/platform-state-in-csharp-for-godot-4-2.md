@@ -3,7 +3,7 @@ title: "Current state of C# platform support in Godot 4.2"
 excerpt: "How the transition to a unified .NET has impacted platform support, and re-adding the ability to port to mobile."
 categories: ["progress-report"]
 author: Raul Santos
-image: /storage/blog/covers/progress-update-csharp-2.webp
+image: /storage/blog/covers/progress-update-csharp-2.jpg
 date: 2024-01-26 17:00:00
 ---
 

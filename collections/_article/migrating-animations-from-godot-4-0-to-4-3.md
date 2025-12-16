@@ -3,7 +3,7 @@ title: "Migrating Animations from Godot 4.0 to 4.3"
 excerpt: "In Godot 4.3, a large number of animation features have been reworked since 4.0, so it's time to migrate your animations."
 categories: ["progress-report"]
 author: Silc Renew
-image: /storage/blog/covers/migrating-animations-from-godot-4-0-to-4-3.webp
+image: /storage/blog/covers/migrating-animations-from-godot-4-0-to-4-3.jpg
 date: 2024-06-04 00:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Godot XR update - February 2025"
 excerpt: "New plugin releases for Godot XR."
 categories: ["progress-report"]
 author: Bastiaan Olij
-image: /storage/blog/covers/february-2025-update-godot-xr-community.webp
+image: /storage/blog/covers/february-2025-update-godot-xr-community.jpg
 image_caption_description: "Untitled VR multiplayer parkour game by Clancey"
 date: 2025-03-06 12:00:00
 ---

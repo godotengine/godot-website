@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 dev 1"
 excerpt: "The first snapshot after releasing 4.3, already packed with new features!"
 categories: ["pre-release"]
 author: Clay John
-image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-1.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-1.jpg
 image_caption_title: "Gourdlets"
 image_caption_description: "A game by AuntyGames"
 date: 2024-08-26 13:00:00
@@ -51,7 +51,7 @@ Godot 4.3 came with physics interpolation for 2D nodes, and now the 3D counterpa
 Not only that but support for MultiMeshes has also been merged ([GH-91818](https://github.com/godotengine/godot/pull/91818))!
 
 Physics interpolation is a technique that allows you to run your physics update at a very low FPS while maintaining
-smooth movement. This allows you to both save CPU overhead and make your game look much smoother. 
+smooth movement. This allows you to both save CPU overhead and make your game look much smoother.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-1/physics-interpolation.mp4?1" type="video/mp4">
@@ -117,12 +117,12 @@ Here are a few:
 - Editor: Optimize editor grid recalculation ([GH-92734](https://github.com/godotengine/godot/pull/92734)).
 - Editor: Optimize closing the editor settings ([GH-95704](https://github.com/godotengine/godot/pull/95704)).
 - Rendering: Optimize meshes for vertex cache ([GH-94241](https://github.com/godotengine/godot/pull/94241)). In scenes
-    with a lot of geometry, this can result in a 20% improvement in frame time. 
+    with a lot of geometry, this can result in a 20% improvement in frame time.
 - Rendering: Optimize materials with `ambient_light_disabled` ([GH-92213](https://github.com/godotengine/godot/pull/92213)).
 
 ### And more!
 
-There are too many exciting changes to list them all here, but here are a few more. 
+There are too many exciting changes to list them all here, but here are a few more.
 
 - Editor: Fix `uid://` paths fail to load at editor startup ([GH-95689](https://github.com/godotengine/godot/pull/95689)).
 - Editor: Correct rotation gizmo plane math for off-center perspective view ([GH-95402](https://github.com/godotengine/godot/pull/95402)).

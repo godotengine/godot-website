@@ -3,7 +3,7 @@ title: "2024 Cherry-picks"
 excerpt: "Over the course of 2024, the Godot project has amassed more new features and community highlights than any one person can keep track of. To ensure you did not miss anything essential, we have selected a few memorable moments and key updates to revisit together."
 categories: ["showcase"]
 author: Nat
-image: /storage/blog/2024-cherry-picks/2024-cherry-picks.webp
+image: /storage/blog/2024-cherry-picks/2024-cherry-picks.jpg
 date: 2025-01-28 17:00:00
 ---
 

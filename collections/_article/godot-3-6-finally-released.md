@@ -3,7 +3,7 @@ title: "Godot 3.6 finally released!"
 excerpt: "After 2 years of development, Godot 3.6 is finally out and it comes fully packed with features and quality of life improvements! This includes 2D physics interpolation and hierarchical culling, and 3D mesh merging, level of detail, tighter shadow culling, ORM materials, and more."
 categories: ["release"]
 author: lawnjelly
-image: /storage/blog/covers/godot-3-6-finally-released.webp
+image: /storage/blog/covers/godot-3-6-finally-released.jpg
 date: 2024-09-09 11:00:00
 ---
 

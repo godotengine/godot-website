@@ -7,7 +7,7 @@ author: Teslatech
 website: https://callbreak.com/
 release_date: November 2015
 
-image: "/assets/showcase/callbreak.webp"
+image: "/assets/showcase/callbreak.jpg"
 gallery: [
   "/assets/showcase/screenshots/callbreak-1.png",
 	"/assets/showcase/screenshots/callbreak-2.png",

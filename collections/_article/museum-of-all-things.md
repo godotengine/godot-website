@@ -3,7 +3,7 @@ title: "Godot Showcase - Museum of All Things"
 excerpt: "What if Wikipedia was a place you could visit? That’s the idea behind The Museum of All Things, a free and open-source procedurally-generated museum built on Wikipedia’s vast knowledge base."
 categories: ["showcase"]
 author: Emi
-image: /storage/blog/covers/moat_logo_large_colorful_over_screenshot.webp
+image: /storage/blog/covers/moat_logo_large_colorful_over_screenshot.jpg
 date: 2025-02-25 22:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.4.1 RC 2"
 excerpt: "Closing in on the first maintenance release for Godot 4.4, fixing a number of regressions and other significant bugs found in this month's feature release."
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/release-candidate-godot-4-4-1-rc-2.webp
+image: /storage/blog/covers/release-candidate-godot-4-4-1-rc-2.jpg
 image_caption_title: "Haulin' Oats"
 image_caption_description: "A game by Gramps Games"
 date: 2025-03-21 17:00:00

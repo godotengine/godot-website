@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.3 dev 3"
 excerpt: "A month's worth of development means a lot of new features to test, such as single-threaded web exports and Wayland support!"
 categories: ["pre-release"]
 author: Rémi Verschelde
-image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-3-dev-3.jpg
 image_caption_title: "Tanks of Freedom II"
 image_caption_description: "A game by Wojciech Chojnacki"
 date: 2024-02-08 12:00:00

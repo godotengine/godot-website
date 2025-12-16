@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 dev 3"
 excerpt: "We haven't slowed down and are bringing you another feature-packed update!"
 categories: ["pre-release"]
 author: Clay John
-image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-3.jpg
 image_caption_title: "Fogpiercer"
 image_caption_description: "A game by Mad Cookies Studio"
 date: 2024-10-03 12:00:00
@@ -125,7 +125,7 @@ when you run the engine and capture valuable profiling data immediately
 ### Add markers to Animation
 
 Markers allow you to create sub regions of an animation that can be jumped to, or looped without playing the entire
-animation. 
+animation.
 
 <video autoplay loop muted playsinline>
   <source src="/storage/blog/dev-snapshot-godot-4-4-dev-3/markers.mp4?1" type="video/mp4">

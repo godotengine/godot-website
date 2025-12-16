@@ -3,7 +3,7 @@ title: "Looking back at GodotCon US 2025"
 excerpt: "It's time for a summary of GodotCon Boston now that all talks are available on Youtube."
 categories: ["events"]
 author: Chad Stewart
-image: /storage/blog/godotcon-us-2025/looking-back-godotcon-2025.webp
+image: /storage/blog/godotcon-us-2025/looking-back-godotcon-2025.jpg
 date: 2025-10-01 14:00:00
 ---
 

@@ -3,7 +3,7 @@ title: Godot 4.4, a unified experience
 excerpt: Look forward to plenty of quality of life improvements hidden within this release. Faster load speeds, reduced stutter, streamlined processes — spotting all the optimizations that have been applied in the background will take some time.
 categories: ["release"]
 author: "Godot contributors"
-image: /storage/blog/covers/godot-4-4-a-unified-experience.webp?cache=v2
+image: /storage/blog/covers/godot-4-4-a-unified-experience.jpg
 date: 2025-03-03 15:45:00
 redirect_to:
  - /releases/4.4/

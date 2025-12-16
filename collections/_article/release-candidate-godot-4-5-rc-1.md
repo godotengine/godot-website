@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.5 RC 1"
 excerpt: Godot 4.5 stable release is imminent; let the last round(s) of testing begin!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/release-candidate-godot-4-5-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-5-rc-1.jpg
 image_caption_title: Whimside
 image_caption_description: A game by Toadzillart
 date: 2025-09-05 12:00:00

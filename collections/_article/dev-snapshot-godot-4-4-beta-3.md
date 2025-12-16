@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 beta 3"
 excerpt: Picking up the pace!
 categories: [pre-release]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-3.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-beta-3.jpg
 image_caption_title: Ballionaire
 image_caption_description: A game by newobject
 date: 2025-02-07 12:00:00

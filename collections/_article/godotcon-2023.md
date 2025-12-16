@@ -3,7 +3,7 @@ title: "Join us at the Godot Conference 2023!"
 excerpt: "We are happy to announce that we are going to be hosting the 2023 GodotCon in Munich, Germany. "
 categories: ["events"]
 author: Emi
-image: /storage/blog/covers/godotcon-2023.webp
+image: /storage/blog/covers/godotcon-2023.jpg
 image_caption_description: Image by Raffaele Picca
 date: 2023-07-18 17:00:00
 ---

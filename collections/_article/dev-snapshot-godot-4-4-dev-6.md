@@ -3,7 +3,7 @@ title: "Dev snapshot: Godot 4.4 dev 6"
 excerpt: "New snapshot on the road to beta, with a lot of 3D workflow goodies!"
 categories: ["pre-release"]
 author: Thaddeus Crews
-image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-6.webp
+image: /storage/blog/covers/dev-snapshot-godot-4-4-dev-6.jpg
 image_caption_title: "Malware"
 image_caption_description: "A game by Odd Games"
 date: 2024-12-05 17:00:00

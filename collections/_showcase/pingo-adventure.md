@@ -7,7 +7,7 @@ author: Orb Square Studio
 website: https://orb-square.com
 release_date: November 2023
 
-image: "/assets/showcase/pingo-adventure-header.webp"
+image: "/assets/showcase/pingo-adventure-header.jpg"
 gallery: [
 	"/assets/showcase/pingo-adventure.webp"
 ]

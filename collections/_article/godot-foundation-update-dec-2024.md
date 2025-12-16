@@ -3,7 +3,7 @@ title: "Godot Foundation Update December 2024"
 excerpt: "We’ve made progress on several key initiatives for the organization and the Godot ecosystem. Here’s what we’ve been up to."
 categories: ["news"]
 author: Godot Foundation
-image: /storage/blog/covers/godot-foundation-update-2024.webp
+image: /storage/blog/covers/godot-foundation-update-2024.jpg
 date: 2024-12-02 17:00:00
 ---
 

@@ -3,7 +3,7 @@ title: "Maintenance release: Godot 4.1.1"
 excerpt: "Hot on the heels of its parent release, here's Godot 4.1.1 — the first maintenance release of the 4.1 branch, with more stability and workflow improvements."
 categories: ["release"]
 author: Yuri Sizov
-image: /storage/blog/covers/maintenance-release-godot-4-1-1.webp
+image: /storage/blog/covers/maintenance-release-godot-4-1-1.jpg
 image_caption_title: Gunforged
 image_caption_description: A game by Firebelley
 date: 2023-07-17 17:00:00

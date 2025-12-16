@@ -3,7 +3,7 @@ title: "Release candidate: Godot 4.3 RC 1"
 excerpt: "We are cautiously optimistic that Godot 4.3 is ready for release, please test it and let us know if we are right!"
 categories: ["pre-release"]
 author: "Rémi Verschelde"
-image: /storage/blog/covers/release-candidate-godot-4-3-rc-1.webp
+image: /storage/blog/covers/release-candidate-godot-4-3-rc-1.jpg
 image_caption_title: "ColdRidge"
 image_caption_description: "A game by Frog Collective"
 date: 2024-07-25 18:00:00
