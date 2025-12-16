@@ -3,7 +3,7 @@ title: "Inverse Kinematics Returns to Godot 4.6"
 excerpt: "Now Godot has Inverse Kinematics in 3D."
 categories: ["progress-report"]
 author: Silc Renew
-image: /storage/blog/covers/inverse-kinematics-returns-to-godot-4-6.webp
+image: /storage/blog/covers/inverse-kinematics-returns-to-godot-4-6.jpg
 date: 2025-12-16 10:00:00
 ---
 
