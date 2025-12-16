@@ -108,7 +108,7 @@ The following are the improvements and additions made in Godot 4.6 to make the I
 
 For example, there are cases where Twist is applied before IK calculation, or where the end bone is directed toward the IK target after IK calculation.
 
-In Godot 4.5, the `BoneConstraint3D` could only assign bones as reference objects, but in 4.6, it can now assign [Node3D] objects.
+In Godot 4.5, the `BoneConstraint3D` could only assign bones as reference objects, but in 4.6, it can now assign `Node3D` objects.
 
 ![Inspector of new BoneConstraint3D](/storage/blog/inverse-kinematics-returns-to-godot-4-6/inspector-new-bone-constraint-3d.webp)
 
