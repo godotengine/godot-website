@@ -66,7 +66,7 @@
 &lt;p>The following are the improvements and additions made in Godot 4.6 to make the IK results look better.&lt;/p>
 &lt;h2 id="tweak-boneconstraint3d">Tweak BoneConstraint3D&lt;/h2>
 &lt;p>For example, there are cases where Twist is applied before IK calculation, or where the end bone is directed toward the IK target after IK calculation.&lt;/p>
-&lt;p>In Godot 4.5, the &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> could only assign bones as reference objects, but in 4.6, it can now assign [Node3D] objects.&lt;/p>
+&lt;p>In Godot 4.5, the &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> could only assign bones as reference objects, but in 4.6, it can now assign &lt;code class="language-plaintext highlighter-rouge">Node3D&lt;/code> objects.&lt;/p>
 &lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/inspector-new-bone-constraint-3d.webp" alt="Inspector of new BoneConstraint3D" />&lt;/p>
 &lt;p>This tweaking allows &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> to be used to perform these additional rotations.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
