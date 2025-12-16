@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-12-11T22:46:22+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.6 beta 1</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-6-beta-1/"/><updated>2025-12-10T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-6-beta-1/</id><summary>Godot 4.6 enters beta!</summary><content type="html">&lt;p>It’s finally time for the 4.6 release cycle to feature its very first beta! Thanks to handling the feature freeze in &lt;a href="/article/dev-snapshot-godot-4-6-dev-6">dev 6&lt;/a>, there are already been several bugs and regressions identified early and subsequently squashed. However, there are still more to iron out, so all contributors are encouraged to shift their focus to &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.6">regression fixes&lt;/a> exclusively.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-12-16T09:41:13+00:00</updated><id>https://godotengine.org/</id><entry><title>Inverse Kinematics Returns to Godot 4.6</title><link href="https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/"/><updated>2025-12-16T10:00:00+00:00</updated><id>https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/</id><summary>Now Godot has Inverse Kinematics in 3D.</summary><content type="html">&lt;style>article .content img { background-color: initial; }&lt;/style>
+&lt;p>In Godot 4.6, IK is back in 3D!&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/picture01.webp" alt="IK on the table" />&lt;/p>
+&lt;p>Of course, “IK” means inverse kinematics.&lt;/p>
+&lt;p>If you have experience with Godot 3.x, you might remember that IK was removed during the upgrade to 4.0. I explained in a &lt;a href="/article/design-of-the-skeleton-modifier-3d/">previous blog post&lt;/a> that it was removed because the old skeleton API design had issues and needed reworking.&lt;/p>
+&lt;p>Then, you might wonder if it was theoretically possible to implement IK alongside the &lt;code class="language-plaintext highlighter-rouge">SkeletonModifier3D&lt;/code> implementation in 4.4. However, we had to avoid adding immature features and then hastily removing it again. To implement IK, we staged the elements for the entire IK across three versions.&lt;/p>
+&lt;p>This blog post will explain that journey.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/picture02.webp" alt="Journey is begun" />&lt;/p>
+&lt;h1 id="godot-44">Godot 4.4&lt;/h1>
+&lt;p>In Godot 4.4, I implemented the base class for &lt;code class="language-plaintext highlighter-rouge">SkeletonModifier3D&lt;/code>, along with two new modifiers, &lt;code class="language-plaintext highlighter-rouge">LookAtModifier3D&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">RetargetModifier3D&lt;/code>.&lt;/p>
+&lt;h2 id="skeletonmodifier3d--lookatmodifier3d">SkeletonModifier3D / LookAtModifier3D&lt;/h2>
+&lt;p>&lt;code class="language-plaintext highlighter-rouge">LookAtModifier3D&lt;/code> was the minimal implementation to verify that the &lt;code class="language-plaintext highlighter-rouge">SkeletonModifier3D&lt;/code> design was correct. &lt;code class="language-plaintext highlighter-rouge">LookAtModifier3D&lt;/code> could be considered equivalent to one-bone IK, so it was suitable as a test case.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-look-at-modifier-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;h2 id="retargetmodifier3d">RetargetModifier3D&lt;/h2>
+&lt;p>However, when implementing &lt;code class="language-plaintext highlighter-rouge">LookAtModifier3D&lt;/code>, I confirmed that users must specify the bone axis based on the bone rest. It was my initial concern that the retarget feature implemented in 4.0 discarded the bone rests of the imported skeleton.&lt;/p>
+&lt;p>As this concern became a certainty, I attempted to preserve bone rests by implementing &lt;code class="language-plaintext highlighter-rouge">RetargetModifier3D&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/inspector-retarget-modifier-3d.webp" alt="Inspector of RetargetModifier3D" />&lt;/p>
+&lt;p>It was fortunate for me that the processing order design of &lt;code class="language-plaintext highlighter-rouge">SkeletonModifier3D&lt;/code> matched the requirements for implementing &lt;code class="language-plaintext highlighter-rouge">RetargetModifier3D&lt;/code>.&lt;/p>
+&lt;h1 id="godot-45">Godot 4.5&lt;/h1>
+&lt;p>In Godot 4.5, I implemented &lt;code class="language-plaintext highlighter-rouge">SpringBoneSimulator3D&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> (and its three child classes &lt;code class="language-plaintext highlighter-rouge">AimModifier3D&lt;/code>, &lt;code class="language-plaintext highlighter-rouge">ConvertTransformModifier3D&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">CopyTransformModifier3D&lt;/code>).&lt;/p>
+&lt;p>By the way, I’m involved in a project that utilizes a 3D character model format known as &lt;a href="https://vrm.dev/">VRM&lt;/a>. VRM has implementations of &lt;a href="https://vrm.dev/en/vrm1/springbone/">SpringBone&lt;/a> and &lt;a href="https://vrm.dev/en/vrm1/constraint/">Constraint&lt;/a> as model-specific configurations that can be ported to cross-platform environments, so ensuring compatibility with these was one of the purposes.&lt;/p>
+&lt;h2 id="springbonesimulator3d">SpringBoneSimulator3D&lt;/h2>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-spring-bone-simulator-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;p>One challenging part of implementing &lt;code class="language-plaintext highlighter-rouge">SpringBoneSimulator3D&lt;/code> was creating the bone chain internally. Specifically, by setting the root bone as the ancestor and the end bone as the descendant, we could retrieve the bones between them and automatically construct the joint array.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/inspector-spring-bone-simulator-3d.webp" alt="Inspector of SpringBoneSimulator3D" />&lt;/p>
+&lt;p>Compared to users manually creating these arrays, this approach reduced user operations and validation on the core side, making it beneficial for both ends.&lt;/p>
+&lt;h2 id="boneconstraint3d-and-3-child-classes">BoneConstraint3D (and 3 child classes)&lt;/h2>
+&lt;p>&lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> is a feature that allows bones to interact with other bones. The actual behavior and calculations it provides are simple.&lt;/p>
+&lt;p>What was challenging here was the design for a base class containing a virtual struct array as a member and extending that struct in a child class. This topic is a bit more advanced for beginner coders, but when using struct arrays as properties in Godot, you need to implement a slightly tricky approach.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/inspector-bone-constraint-3d.webp" alt="Inspector of BoneConstraint3D" />&lt;/p>
+&lt;p>I already had the design idea that IK would have a base class similar to &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code>, with child classes extending the structure to implement the actual solver. So, I was confident that merging and establishing that method at this point would be beneficial for IK.&lt;/p>
+&lt;h1 id="godot-46">Godot 4.6&lt;/h1>
+&lt;p>Finally, I began implementing IK in Godot 4.6.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-ik-modifier-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;h2 id="ikmodifier3d-and-7-child-classes">IKModifier3D (and 7 child classes)&lt;/h2>
+&lt;p>As a first step, I defined &lt;code class="language-plaintext highlighter-rouge">IKModifier3D&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">ChainIK3D&lt;/code> by reusing &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">SpringBoneSimulator3D&lt;/code>. After that, I implemented the process for moving joints called the IK solver.&lt;/p>
+&lt;p>Therefore, &lt;code class="language-plaintext highlighter-rouge">IKModifier3D&lt;/code> has the following child classes:&lt;/p>
+&lt;ul>
+&lt;li>IKModifier3D
+&lt;ul>
+&lt;li>TwoBoneIK3D&lt;/li>
+&lt;li>ChainIK3D
+&lt;ul>
+&lt;li>SplineIK3D&lt;/li>
+&lt;li>IterateIK3D
+&lt;ul>
+&lt;li>FABRIK3D&lt;/li>
+&lt;li>CCDIK3D&lt;/li>
+&lt;li>JacobianIK3D&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>When implementing those IKs, I made sure to keep them to the minimum functions.&lt;/p>
+&lt;p>Some IK systems outside of Godot might have additional “processing to make the IK results look better”, separate from the core calculation algorithm that rotates the bones. In the rich IK system, the IK class may include them and can enable their processing by their bool property.&lt;/p>
+&lt;p>Then, I believed separating them would help maintain maintainability and extendability. In other words, if only the “processing to make the IK results look better” can be reused, when users want to implement custom IK, they only need to implement a minimal IK solver.&lt;/p>
+&lt;p>The following are the improvements and additions made in Godot 4.6 to make the IK results look better.&lt;/p>
+&lt;h2 id="tweak-boneconstraint3d">Tweak BoneConstraint3D&lt;/h2>
+&lt;p>For example, there are cases where Twist is applied before IK calculation, or where the end bone is directed toward the IK target after IK calculation.&lt;/p>
+&lt;p>In Godot 4.5, the &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> could only assign bones as reference objects, but in 4.6, it can now assign [Node3D] objects.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/inspector-new-bone-constraint-3d.webp" alt="Inspector of new BoneConstraint3D" />&lt;/p>
+&lt;p>This tweaking allows &lt;code class="language-plaintext highlighter-rouge">BoneConstraint3D&lt;/code> to be used to perform these additional rotations.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-bone-constraint-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;p>&lt;a href="/storage/blog/inverse-kinematics-returns-to-godot-4-6/adjusted-ik-3d-demo.zip">adjusted-ik-3d-demo.zip&lt;/a>&lt;/p>
+&lt;h2 id="bonetwistdisperser3d">BoneTwistDisperser3D&lt;/h2>
+&lt;p>In theory, using &lt;code class="language-plaintext highlighter-rouge">ConvertTransform3D&lt;/code> allows you to apply the rotation of descendant bones to their ancestors. However, the process for setting this up properly was somewhat complex and could only be handled by advanced users.&lt;/p>
+&lt;p>&lt;code class="language-plaintext highlighter-rouge">BoneTwistDisperser3D&lt;/code> provides a simple way to achieve that process.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-bone-twist-disperser-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;h2 id="limitangularvelocitymodifier3d">LimitAngularVelocityModifier3D&lt;/h2>
+&lt;p>&lt;code class="language-plaintext highlighter-rouge">LimitAngularVelocityModifier3D&lt;/code> is a modifier that limits angular velocity. The behavior is quite simple, so it doesn’t need much explanation.&lt;/p>
+&lt;p>However, it’s worth learning that there are two types of IK.&lt;/p>
+&lt;h2 id="deterministic-ik">Deterministic IK&lt;/h2>
+&lt;p>In computer science, “deterministic” means that the result is always the same for a given input. In particular, for game applications like Godot, the term means that the result does not depend on the state of the previous frame. Incidentally, since &lt;code class="language-plaintext highlighter-rouge">AnimationMixer&lt;/code> already has a &lt;a href="/article/migrating-animations-from-godot-4-0-to-4-3/#deterministic-blending">deterministic option&lt;/a>, that immediately made me decide to adopt this term.&lt;/p>
+&lt;p>&lt;code class="language-plaintext highlighter-rouge">TwoBoneIK3D&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">SplineIK3D&lt;/code> are always deterministic. However, in &lt;code class="language-plaintext highlighter-rouge">IterateIK3D&lt;/code>, whether it is deterministic depends on the options.&lt;/p>
+&lt;p>&lt;code class="language-plaintext highlighter-rouge">IterateIK3D&lt;/code> repeats the routine provided by the solver to approach the end bone toward its goal. At this point, the number of repetitions per frame depends on the option.&lt;/p>
+&lt;p>When the deterministic option is disabled, it means that the iteration is performed by carrying over the state from the previous frame. In this case, even with a small number of iterations per frame, the end bone can reach the goal eventually as frames progress.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-non-deterministic-ik-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;p>In contrast, when the deterministic option is enabled, the previous frame’s state is not carried over. Therefore, if the number of iterations per frame is small, the end bone may never reach its goal.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-deterministic-ik-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;p>However, if you want to ensure consistent results depending on the relative position between the IK target and the skeleton, the deterministic option is useful. For example, it is ideal for online applications where only the coordinates of the IK target are shared to synchronize the model’s pose.&lt;/p>
+&lt;p>As a point to note, deterministic IK cannot avoid causing rotation with large angular velocities by its design. It goes without saying that &lt;code class="language-plaintext highlighter-rouge">LimitAngularVelocityModifier3D&lt;/code> is useful for smoothing this out.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-limit-angular-velocity-modifier-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;h1 id="looking-back-on-the-journey">Looking back on the journey&lt;/h1>
+&lt;p>Between versions 4.4 and 4.6, excluding migrations, including base classes, 19 new &lt;code class="language-plaintext highlighter-rouge">SkeletonModifier&lt;/code>s have been implemented!&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/inspector-skeleton-modifier-3d.webp" alt="Inspector of SkeletonModifier3D" />&lt;/p>
+&lt;p>There are many possibilities depending on how you combine them. So we have a plan to add detailed explanations and tutorials to the documentation in the future, but since that is expected to be quite large, we will need more time…&lt;/p>
+&lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/picture03.webp" alt="Rest tasks" />&lt;/p>
+&lt;p>For now, I’ll show you just one example in advance. This setup emulates the old &lt;code class="language-plaintext highlighter-rouge">SkeletonIK3D&lt;/code>’s magnet option.&lt;/p>
+&lt;video autoplay="" loop="" muted="" playsinline="">
+&lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-magnet-ik-3d.webm?1" type="video/webm" />
+&lt;/video>
+&lt;p>&lt;a href="/storage/blog/inverse-kinematics-returns-to-godot-4-6/magnet-ik-3d-demo.zip">magnet-ik-3d-demo.zip&lt;/a>&lt;/p>
+&lt;p>As you can see from that example, it was just a 2-path deterministic FABRIK. As explained above, it was also “processing to make the IK results look better”, and I think you can understand that the process could be separated.&lt;/p>
+&lt;p>At last, I wish you all the best in creating fun games using &lt;code class="language-plaintext highlighter-rouge">SkeletonModifier3D&lt;/code>s.&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Silc Renew</name></author><category term="Progress Report"/></entry><entry><title>Dev snapshot: Godot 4.6 beta 1</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-6-beta-1/"/><updated>2025-12-10T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-6-beta-1/</id><summary>Godot 4.6 enters beta!</summary><content type="html">&lt;p>It’s finally time for the 4.6 release cycle to feature its very first beta! Thanks to handling the feature freeze in &lt;a href="/article/dev-snapshot-godot-4-6-dev-6">dev 6&lt;/a>, there are already been several bugs and regressions identified early and subsequently squashed. However, there are still more to iron out, so all contributors are encouraged to shift their focus to &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.6">regression fixes&lt;/a> exclusively.&lt;/p>
 &lt;p>For those interested in aiding us on our quest to squash any bugs that come up during this time, we once again encourage you to join our bug-hunting sprints. Anyone interested should read the &lt;a href="https://github.com/godotengine/godot-maintainers-docs/blob/main/bug-triage/introduction.md">Bug Triage Introduction&lt;/a> for more information, and join the &lt;a href="https://chat.godotengine.org/channel/bugsquad">&lt;code class="language-plaintext highlighter-rouge">#bugsquad&lt;/code>&lt;/a> and &lt;a href="https://chat.godotengine.org/channel/bugsquad-sprints">&lt;code class="language-plaintext highlighter-rouge">#bugsquad-sprints&lt;/code>&lt;/a> channels on our developer RocketChat to participate!&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.6.beta1/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/h9JcJGHfg">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
@@ -5271,17 +5386,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry><entry><title>Submissions open for Godot 2025 showreel</title><link href="https://godotengine.org/article/submissions-open-godot-2025-showreel/"/><updated>2025-08-15T13:00:00+00:00</updated><id>https://godotengine.org/article/submissions-open-godot-2025-showreel/</id><summary>Showcase your Godot creations in 2025! We're inviting submissions of short videos featuring your published or in-progress Godot games or tools. Don't miss this chance to be a part of it!</summary><content type="html">&lt;p>Showcase your Godot Engine 2025 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2025 Showreel.&lt;/p>
-&lt;p>Our annual showreels are informative and celebratory showcases, to highlight the wide array of projects developed using the Godot Engine. If you want to participate this year and share your Godot-made game, app, or tool, submit your entry starting today.&lt;/p>
-&lt;h2 id="whats-new-this-year">What’s new this year?&lt;/h2>
-&lt;p>This year, we want to invite more people to participate in the voting phase. So, if you are a member of the &lt;a href="https://fund.godotengine.org/">Development Fund&lt;/a>, you will be able to cast your votes alongside the Godot maintainers! To be eligible to vote, you need to have a recurrent donation active.&lt;/p>
-&lt;h2 id="how-to-submit">How to submit&lt;/h2>
-&lt;p>You can submit your entry in our &lt;a href="https://showreel.godotengine.org/">Godot Showreel website&lt;/a>. Before submitting, please read the &lt;a href="https://showreel.godotengine.org/about">submission guidelines&lt;/a>.&lt;/p>
-&lt;ul>
-&lt;li>📅 &lt;strong>Submissions close on October 1st 2025&lt;/strong>&lt;/li>
-&lt;li>📅 &lt;strong>Voting starts on October 6th 2025&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;h2 id="need-inspiration">Need inspiration?&lt;/h2>
-&lt;p>Check out our &lt;a href="https://www.youtube.com/watch?v=n1Lon_Q2T18&amp;amp;list=PLeG_dAglpVo6EpaO9A1nkwJZOwrfiLdQ8&amp;amp;index=1">showreel playlist&lt;/a> for some creative sparks and see what makes a great submission! Here is last year’s showreel:&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/n1Lon_Q2T18" frameborder="0" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;">&lt;/iframe>
-&lt;p>Good luck! We can’t wait to see your creations!&lt;/p></content><author><name>Emi</name></author><category term="News"/></entry></feed>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry></feed>
