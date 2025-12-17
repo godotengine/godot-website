@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-12-16T11:56:00+00:00</updated><id>https://godotengine.org/</id><entry><title>Inverse Kinematics Returns to Godot 4.6</title><link href="https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/"/><updated>2025-12-16T10:00:00+00:00</updated><id>https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/</id><summary>Now Godot has Inverse Kinematics in 3D.</summary><content type="html">&lt;style>article .content img { background-color: initial; }&lt;/style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2025-12-17T08:16:58+00:00</updated><id>https://godotengine.org/</id><entry><title>Inverse Kinematics Returns to Godot 4.6</title><link href="https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/"/><updated>2025-12-16T10:00:00+00:00</updated><id>https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/</id><summary>Now Godot has Inverse Kinematics in 3D.</summary><content type="html">&lt;style>article .content img { background-color: initial; }&lt;/style>
 &lt;p>In Godot 4.6, IK is back in 3D!&lt;/p>
 &lt;p>&lt;img src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/picture01.webp" alt="IK on the table" />&lt;/p>
 &lt;p>Of course, “IK” means inverse kinematics.&lt;/p>
@@ -74,7 +74,7 @@
 &lt;/video>
 &lt;p>&lt;a href="/storage/blog/inverse-kinematics-returns-to-godot-4-6/adjusted-ik-3d-demo.zip">adjusted-ik-3d-demo.zip&lt;/a>&lt;/p>
 &lt;h2 id="bonetwistdisperser3d">BoneTwistDisperser3D&lt;/h2>
-&lt;p>In theory, using &lt;code class="language-plaintext highlighter-rouge">ConvertTransform3D&lt;/code> allows you to apply the rotation of descendant bones to their ancestors. However, the process for setting this up properly was somewhat complex and could only be handled by advanced users.&lt;/p>
+&lt;p>In theory, using &lt;code class="language-plaintext highlighter-rouge">ConvertTransformModifier3D&lt;/code> allows you to apply the rotation of descendant bones to their ancestors. However, the process for setting this up properly was somewhat complex and could only be handled by advanced users.&lt;/p>
 &lt;p>&lt;code class="language-plaintext highlighter-rouge">BoneTwistDisperser3D&lt;/code> provides a simple way to achieve that process.&lt;/p>
 &lt;video autoplay="" loop="" muted="" playsinline="">
 &lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-bone-twist-disperser-3d.webm?1" type="video/webm" />
@@ -109,7 +109,7 @@
 &lt;source src="/storage/blog/inverse-kinematics-returns-to-godot-4-6/preview-magnet-ik-3d.webm?1" type="video/webm" />
 &lt;/video>
 &lt;p>&lt;a href="/storage/blog/inverse-kinematics-returns-to-godot-4-6/magnet-ik-3d-demo.zip">magnet-ik-3d-demo.zip&lt;/a>&lt;/p>
-&lt;p>As you can see from that example, it was just a 2-path deterministic FABRIK. As explained above, it was also “processing to make the IK results look better”, and I think you can understand that the process could be separated.&lt;/p>
+&lt;p>As you can see from that example, it was just a 2-pass deterministic FABRIK. As explained above, it was also “processing to make the IK results look better”, and I think you can understand that the process could be separated.&lt;/p>
 &lt;p>At last, I wish you all the best in creating fun games using &lt;code class="language-plaintext highlighter-rouge">SkeletonModifier3D&lt;/code>s.&lt;/p>
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
