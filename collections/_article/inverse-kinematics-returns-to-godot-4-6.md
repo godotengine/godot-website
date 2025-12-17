@@ -122,7 +122,7 @@ This tweaking allows `BoneConstraint3D` to be used to perform these additional r
 
 ## BoneTwistDisperser3D
 
-In theory, using `ConvertTransform3D` allows you to apply the rotation of descendant bones to their ancestors. However, the process for setting this up properly was somewhat complex and could only be handled by advanced users.
+In theory, using `ConvertTransformModifier3D` allows you to apply the rotation of descendant bones to their ancestors. However, the process for setting this up properly was somewhat complex and could only be handled by advanced users.
 
 `BoneTwistDisperser3D` provides a simple way to achieve that process.
 
@@ -182,7 +182,7 @@ For now, I'll show you just one example in advance. This setup emulates the old 
 
 [magnet-ik-3d-demo.zip](/storage/blog/inverse-kinematics-returns-to-godot-4-6/magnet-ik-3d-demo.zip)
 
-As you can see from that example, it was just a 2-path deterministic FABRIK. As explained above, it was also "processing to make the IK results look better", and I think you can understand that the process could be separated.
+As you can see from that example, it was just a 2-pass deterministic FABRIK. As explained above, it was also "processing to make the IK results look better", and I think you can understand that the process could be separated.
 
 At last, I wish you all the best in creating fun games using `SkeletonModifier3D`s.
 
