@@ -13,3 +13,6 @@ gem 'base64'
 gem 'bigdecimal'
 
 gem "logger", "~> 1.7"
+
+gem 'ruby-magic', '~> 0.6.0'
+
