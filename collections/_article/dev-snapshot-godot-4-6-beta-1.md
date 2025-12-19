@@ -55,6 +55,9 @@ You can find a list of such issues by filtering the merged PRs in the 4.6 milest
   - Note: Glow blending now occurs before tonemapping and `softlight` glow blending has changed to always appear as it did when using HDR 2D on your Viewport.
 - `Quaternion` now correctly initializes with identity under `Variant` ([GH-84658](https://github.com/godotengine/godot/pull/84658)).
 
+If you previously imported 3D assets, we recommend using the project upgrade tool explicitly:
+<img src="/storage/blog/dev-snapshot-godot-4-6-beta-1/update-tool.jpg" alt="Upgrade Project Files..."/>
+
 ### Animation
 
 [Tokage](https://github.com/TokageItLab) has brought IK support for `SkeletonModifier3D` via the new class `IKModifier3D` ([GH-110120](https://github.com/godotengine/godot/pull/110120)). This took the lessons learned from `SkeletonModificationStack3D`, a class removed in the 4.0 transition, and reimplemented them in a context that's up to modern standards. Having to account for so many separate systems resulted in `SkeletonModifier3D` receiving **8 new subclasses**:
@@ -181,7 +184,7 @@ And more:
 
 ### GUI
 
-Michael has brought another new addition: the focus state logic for mouse and touch is now decoupled from keyboard and joypad ([GH-110250](https://github.com/godotengine/godot/pull/110250)). As we mentioned in the [4.6 dev 1 blog post](/article/dev-snapshot-godot-4-6-dev-1/), it's not uncommon for systems to deliberately stylize these two input groups separately, enabling granular control for toolmakers and UI designers.
+Michael has brought another new addition: the focus state logic for mouse and touch is now decoupled from keyboard and joypad ([GH-110250](https://github.com/godotengine/godot/pull/110250)). As we mentioned in the [4.6 dev 1 blog post](/article/dev-snapshot-godot-4-6-dev-1/), it's not uncommon for systems to deliberately stylize these two input groups separately, enabling granular control for toolmakers and UI designers. `Control`s that support keyboard input (`LineEdit`, `TextEdit`, etc.) will show focus by default in a running project.
 
 | Situation                                                                                         |     |
 | ------------------------------------------------------------------------------------------------- | --- |
@@ -191,6 +194,10 @@ Michael has brought another new addition: the focus state logic for mouse and to
 | Clicking somewhere with the mouse while having a `Control` with visible focus.                    | ❌   |
 | Clicking with the mouse a visibly focused `Control` (deviates from how it works in browsers).     | ❌   |
 | Using `Control.grab_focus(true)`.                                                                 | ❌   |
+
+<div markdown=1 class="card card-info" style="margin-top: 1em;">
+The previous behavior can be achieved by enabling `gui/common/always_show_focus_state`.
+</div>
 
 And more:
 - Add `pivot_offset_ratio` property to Control ([GH-70646](https://github.com/godotengine/godot/pull/70646)).
@@ -352,9 +359,9 @@ And more:
 
 Bastiaan additionally implemented support for [OpenXR Spatial Entities Extensions](https://www.khronos.org/blog/openxr-spatial-entities-extensions-released-for-developer-feedback), introduced to standardize obtaining and interacting with information about the user's real world environment ([GH-107391](https://github.com/godotengine/godot/pull/107391)). This brings support for [spatial anchors](https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_EXT_spatial_anchor), [plane tracking](https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_EXT_spatial_plane_tracking), and [marker tracking](https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_EXT_spatial_marker_tracking) in a consistent and platform-independent manner. If you have the necessary equipment for it, Bastiaan has provided a [demo project](https://github.com/BastiaanOlij/spatial-entities-demo) to showcase this new functionality.
 
-[dhoverb](https://github.com/dhoverb) took to supporting the extensions for offsetting density maps ([GH-112888](https://github.com/godotengine/godot/pull/112888)). This is a key feature enabling eye-tracked foveated rendering on devices that support this method. Currently, this has been tested on Meta Quest Pro and Samsung Galaxy XR headsets, but other headsets are expected to benefit from this change as well.
+[David Hover](https://github.com/dhoverb) took to supporting the extensions for offsetting density maps ([GH-112888](https://github.com/godotengine/godot/pull/112888)). This is a key feature enabling eye-tracked foveated rendering on devices that support this method. Currently, this has been tested on Meta Quest Pro and Samsung Galaxy XR headsets, but other headsets are expected to benefit from this change as well.
 
-dhoverb has also added support for the `XR_KHR_android_thread_settings` extension, which informs the XR runtime about threads used for rendering, game logic, or other purposes ([GH-112889](https://github.com/godotengine/godot/pull/112889)). This allows for better thread prioritization on AOSP devices that implement this extension.
+David added support for the `XR_KHR_android_thread_settings` extension, which informs the XR runtime about threads used for rendering, game logic, or other purposes ([GH-112889](https://github.com/godotengine/godot/pull/112889)). This allows for better thread prioritization on AOSP devices that implement this extension.
 
 And more:
 - Add support for Android XR devices to the Godot XR Editor ([GH-112777](https://github.com/godotengine/godot/pull/112777)).
@@ -392,7 +399,7 @@ In particular, any change that would cause a regression in your projects is very
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part and full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
 If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
 
