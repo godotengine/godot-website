@@ -96,6 +96,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
+    mini_portile2 (2.8.9)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (6.0.2)
@@ -105,6 +106,8 @@ GEM
       ffi (~> 1.0)
     rexml (3.4.2)
     rouge (4.5.2)
+    ruby-magic (0.6.0)
+      mini_portile2 (~> 2.8)
     safe_yaml (1.0.5)
     sass-embedded (1.89.2)
       google-protobuf (~> 4.31)
@@ -178,6 +181,7 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-watch
   logger (~> 1.7)
+  ruby-magic (~> 0.6.0)
   webrick (~> 1.8)
 
 BUNDLED WITH
