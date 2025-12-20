@@ -11,7 +11,7 @@ date: 2025-12-19 12:00:00
 
 As 2025 winds to a close, so too does our team for the holiday season. Before we head off, let us leave you with a parting gift: the final development build of the year, 4.6 beta 2!
 
-We've already discovered and tackled a fair number of regressions since [4.6 beta 1](/article/dev-snapshot-godot-4-5-beta-1/), which we're hoping will lend itself to a quick release cycle. However, there's still further bugfixing and testing to be done, so users are encouraged to report whatever new issues crop up this release.
+We've already discovered and tackled a fair number of regressions since [4.6 beta 1](/article/dev-snapshot-godot-4-6-beta-1/), which we're hoping will lend itself to a quick release cycle. However, there's still further bugfixing and testing to be done, so users are encouraged to report whatever new issues crop up this release.
 
 Please consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
@@ -23,7 +23,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ## Highlights
 
-For an overview of what's new overall in Godot 4.6, have a look at the highlights for [4.6 beta 1](/article/dev-snapshot-godot-4-5-beta-1/), which cover a lot of the changes. This blog post only covers the changes between beta 1 and beta 2. This section covers the most relevant changes made since the beta 1 snapshot, which are largely regression fixes:
+For an overview of what's new overall in Godot 4.6, have a look at the highlights for [4.6 beta 1](/article/dev-snapshot-godot-4-6-beta-1/), which cover a lot of the changes. This blog post only covers the changes between beta 1 and beta 2. This section covers the most relevant changes made since the beta 1 snapshot, which are largely regression fixes:
 
 - Editor: Disable tool button for multiple nodes ([GH-113944](https://github.com/godotengine/godot/pull/113944)).
 - Editor: Fix shader editor minimum size ([GH-113916](https://github.com/godotengine/godot/pull/113916)).
