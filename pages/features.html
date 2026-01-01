@@ -49,6 +49,7 @@ layout: default
 		width: 1200px;
 		max-width: 1200px;
 	}
+
 	@media (max-width: 1250px) {
 		.feature-container {
 			width: auto;
@@ -56,6 +57,7 @@ layout: default
 			padding-right: 16px;
 		}
 	}
+
 	@media (max-width: 900px) {
 		.feature-container {
 			width: auto;
@@ -72,13 +74,16 @@ layout: default
 	.feature-container.feature-container-2x {
 		grid-template-columns: 1fr 1fr;
 	}
+
 	.feature-container.feature-container-2x h3 {
 		grid-column: span 2;
 	}
+
 	@media (max-width: 1020px) {
 		.feature-container.feature-container-2x {
 			grid-template-columns: 1fr;
 		}
+
 		.feature-container.feature-container-2x h3 {
 			grid-column: span 1;
 		}
@@ -87,21 +92,26 @@ layout: default
 	.feature-container.feature-container-3x {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
+
 	.feature-container.feature-container-3x h3 {
 		grid-column: span 3;
 	}
+
 	@media (max-width: 1020px) {
 		.feature-container.feature-container-3x {
 			grid-template-columns: 1fr 1fr;
 		}
+
 		.feature-container.feature-container-3x h3 {
 			grid-column: span 2;
 		}
 	}
+
 	@media (max-width: 800px) {
 		.feature-container.feature-container-3x {
 			grid-template-columns: 1fr;
 		}
+
 		.feature-container.feature-container-3x h3 {
 			grid-column: span 1;
 		}
@@ -113,6 +123,7 @@ layout: default
 		padding: 20px;
 		transition: 0.1s filter;
 	}
+
 	.feature-card:hover {
 		filter: brightness(112.5%);
 	}
@@ -191,6 +202,7 @@ layout: default
 		aspect-ratio: 16/9;
 		margin: 100px 0 60px 0;
 	}
+
 	@media (max-width: 540px) {
 		.showcase-carousel {
 			margin-top: 60px;
@@ -211,7 +223,7 @@ layout: default
 		position: absolute;
 		top: 50%;
 		left: 12px;
-		width: 20px;
+		width: 36px;
 		height: 36px;
 		transform: translateY(-50%);
 		background-image: url('/assets/icons/arrow-flip.svg');
@@ -221,12 +233,18 @@ layout: default
 		filter: drop-shadow(var(--more-shadow));
 		z-index: 5;
 	}
+
 	.showcase-flip-left {
 		transform: translateY(-50%) scaleX(-1.0);
 	}
+
 	.showcase-flip-right {
 		left: auto;
 		right: 12px;
+	}
+	.showcase-flip-left:hover,
+	.showcase-flip-right:hover {
+		background-image: url('/assets/icons/arrow-flip-hover.svg') ;
 	}
 
 	.showcase-items {
@@ -244,6 +262,7 @@ layout: default
 		width: 100%;
 		height: 100%;
 	}
+
 	.showcase-item-transition {
 		transition: transform 0.4s ease-in-out, z-index 0.1s linear 0.4s;
 	}
@@ -256,8 +275,10 @@ layout: default
 		position: absolute;
 		bottom: 12px;
 		right: 16px;
-		background: var(--hero-text-background-color);
+		background: rgba(26, 26, 26, 0.7);
+
 		border-radius: 8px;
+
 		padding: 2px 10px;
 	}
 
@@ -267,13 +288,55 @@ layout: default
 	}
 
 	.showcase-author {
-		color: #b3c1df;
+		color: #dde1ed;
 		font-size: 95%;
-		opacity: 0.9;
+		opacity: 1;
 	}
 
 	.showcase-credits a {
 		text-decoration: none;
+	}
+
+	.carousel-dot {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin: 0 4px;
+		border-radius: 50%;
+		background-color: #8d8d8d;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	.carousel-dot.active {
+		background-color: white;
+	}
+
+	.carousel-play-toggle {
+		position: absolute;
+		bottom: 12px;
+		left: 12px;
+		width: 32px;
+		height: 32px;
+		background-color: rgba(0, 0, 0, 0.6);
+		border: none;
+		border-radius: 8px;
+		padding: 4px;
+		cursor: pointer;
+		z-index: 6;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s ease;
+	}
+
+	.carousel-play-toggle:hover {
+		background-color: rgba(255, 255, 255, 0.12);
+	}
+
+	.carousel-play-toggle img {
+		width: 24px;
+		height: 24px;
 	}
 </style>
 
@@ -302,8 +365,13 @@ layout: default
 
 				const showcaseItems = document.querySelectorAll('.showcase-item');
 				let currentIndex = Math.floor(Math.random() * showcaseItems.length);
-
+				let isAnimating = false;
+				const carouselDots = document.querySelectorAll('.carousel-dot');
 				const setItemByIndex = (itemIndex, firstTime = false) => {
+					if (isAnimating && !firstTime) {
+						return;
+					}
+					isAnimating = true;
 					const prevIndex = wrapIndex(currentIndex - 1);
 					const nextIndex = wrapIndex(currentIndex + 1);
 
@@ -329,26 +397,85 @@ layout: default
 							item.style.zIndex = '3';
 							item.style.transform = 'translateX(100%)';
 						}
-						else  {
+						else {
 							item.classList.remove('showcase-item-transition');
 							item.style.zIndex = '1';
 							item.style.transform = 'translateX(0)';
 						}
 					});
+					carouselDots.forEach((dot, index) => {
+						dot.classList.toggle('active', index === itemIndex);
+					});
+					if (!firstTime) {
+						setTimeout(() => {
+							isAnimating = false;
+						}, 400);
+						return;
+					}
+					
+					isAnimating = false;
 				}
 				setItemByIndex(currentIndex, true);
+				let autoScrollTimeout;
 
+				const resetAutoScroll = () => {
+					clearInterval(autoScrollInterval);
+					clearTimeout(autoScrollTimeout);
+					autoScrollTimeout = setTimeout(() => {
+						startAutoScroll();
+					}, 1000); 
+				};
 				const prevItemButton = document.querySelector('.showcase-flip-left');
 				prevItemButton.addEventListener('click', () => {
+					if (isAnimating) {
+						return;
+					}
 					currentIndex = wrapIndex(currentIndex - 1);
 					setItemByIndex(currentIndex);
+					resetAutoScroll();
 				});
 				const nextItemButton = document.querySelector('.showcase-flip-right');
 				nextItemButton.addEventListener('click', () => {
+					if (isAnimating) {
+						return;
+					}
 					currentIndex = wrapIndex(currentIndex + 1);
 					setItemByIndex(currentIndex);
+					resetAutoScroll();
 				});
+				let autoScrollInterval;
+				let isPlaying = true;
+				const playToggleBtn = document.getElementById('carousel-play-toggle');
+				const playIcon = document.getElementById('carousel-play-icon');
+
+				const startAutoScroll = () => {
+					autoScrollInterval = setInterval(() => {
+						currentIndex = wrapIndex(currentIndex + 1);
+						setItemByIndex(currentIndex);
+					}, 6000);
+					isPlaying = true;
+					playIcon.src = '/assets/icons/pause.svg';
+					playIcon.alt = 'Pause';
+				};
+
+				const stopAutoScroll = () => {
+					clearInterval(autoScrollInterval);
+					isPlaying = false;
+					playIcon.src = '/assets/icons/resume.svg';
+					playIcon.alt = 'Play';
+				};
+
+				playToggleBtn.addEventListener('click', () => {
+					if (isPlaying) {
+						stopAutoScroll();
+						return;
+					}
+					startAutoScroll();
+				});
+				startAutoScroll();
 			});
+
+
 		</script>
 
 		<div class="showcase-carousel">
@@ -361,7 +488,8 @@ layout: default
 					<img src="{{ project.gallery[0] }}" load="lazy" alt="{{ project.title }} - {{ project.author }}" />
 					<div class="showcase-credits">
 						<a href="{{ project.url }}">
-							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">- {{ project.author }}</span>
+							<span class="showcase-title">{{ project.title }}</span> <span class="showcase-author">– {{
+								project.author }}</span>
 						</a>
 					</div>
 				</div>
@@ -371,6 +499,17 @@ layout: default
 
 			<div class="showcase-flip-left"></div>
 			<div class="showcase-flip-right"></div>
+			<button id="carousel-play-toggle" class="carousel-play-toggle" aria-label="Pause carousel">
+				<img id="carousel-play-icon" src="/assets/icons/pause.svg" alt="Pause" />
+			</button>
+
+		</div>
+		<div class="carousel-dots" style="text-align: center; margin-bottom: 12px;">
+			{% for project in site.showcase %}
+			{% if project.featured_in_home %}
+			<span class="carousel-dot" data-index="{{ forloop.index0 }}"></span>
+			{% endif %}
+			{% endfor %}
 		</div>
 
 		<a href="/showcase/" class="btn btn-flat btn-flat-white btn-flat-frosted btn-see-showcase">
@@ -444,7 +583,9 @@ layout: default
 				them a performance boost, while still benefiting from close engine integration.
 				<br><br>
 				<strong>Note:</strong> .NET support is provided as a dedicated engine executable.
-				<a href="https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support">C# support is available for desktop and mobile platforms as of Godot 4.2.</a>
+				<a
+					href="https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support">C#
+					support is available for desktop and mobile platforms as of Godot 4.2.</a>
 				Web support should be added in the future, but until then,
 				<a href="/download/3.x/">Godot 3</a> remains a supported option.
 			</p>
@@ -626,7 +767,8 @@ layout: default
 	</div>
 
 	<div class="features-complete-list">
-		<a href="https://docs.godotengine.org/en/stable/about/list_of_features.html" class="btn btn-flat btn-flat-white btn-flat-frosted">
+		<a href="https://docs.godotengine.org/en/stable/about/list_of_features.html"
+			class="btn btn-flat btn-flat-white btn-flat-frosted">
 			View a complete list of features
 		</a>
 	</div>
