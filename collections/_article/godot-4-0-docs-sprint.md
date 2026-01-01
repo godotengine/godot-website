@@ -21,7 +21,7 @@ We have many new features, and documentation is going to be the first place peop
 
 - **Who?** Everyone is welcome. Whether you're new to contributing, or returning to the project, there's enough to do for everyone.
 
-- **How to start?** The [writing documentation](https://contributing.godotengine.org/en/latest/documentation/overview.html) page in the documentation is a good start. If you have any questions, get in touch with the maintainers in the [#documentation](https://chat.godotengine.org/channel/documentation) channel on the Contributors Chat. You can see the whole documentation team on the [Teams page](https://godotengine.org/teams#documentation). If in doubt, ping **Max (@mhilbrunner)**.
+- **How to start?** The [writing documentation](https://contributing.godotengine.org/en/latest/documentation/overview.html) page in the documentation is a good start. If you have any questions, get in touch with the maintainers in the [#documentation](https://chat.godotengine.org/channel/documentation) channel on the Contributors Chat. You can see the whole documentation team on the [Teams page](https://contributing.godotengine.org/en/latest/organization/areas.html). If in doubt, ping **Max (@mhilbrunner)**.
 
 - **Where to start?** Have a look at open issues in the [documentation repository](https://github.com/godotengine/godot-docs/issues), as well as the [main repository](https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation+milestone%3A4.0). You can also check the areas of the engine you're most familiar with. See if the class reference is [updated and complete](https://godotengine.github.io/doc-status/) for that area, whether the tutorials need to be updated, and so on.
 
