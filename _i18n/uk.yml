@@ -1,0 +1,95 @@
+meta:
+  description: Розробляйте власні 2D і 3D ігри, кросплатформні проєкти та навіть XR задуми!
+header:
+  features: Функціонал
+  showcase: Виставка
+  blog: Блог
+  community: Спільнота
+  assets: Ресурси
+  download: Завантажити
+  docs: Документація
+  contribute: Долучитися
+  donate: Пожертвувати
+  language: Мова
+  events: Події
+  console_support: Підтримка консолей
+  forum: Форум
+footer:
+  godot_engine: Godot Engine
+  download: Завантажити
+  documentation: Документація
+  features: Функціонал
+  web_editor: Вебредактор
+  release_archive: Архів релізів
+  source_code: Початковий код
+  project: Проєкт
+  blog: Блог
+  code_of_conduct: Правила поведінки
+  governance: Управління
+  teams: Команди
+  priorities: Пріоритети
+  communities: Спільноти
+  resources: Ресурси
+  asset_library: Бібліотека ресурсів
+  press_kit: Прескіт
+  showcase: Виставка
+  education: Освіта
+  console_support: Підтримка консолей
+  foundation: Фонд
+  about: Про фонд
+  donate: Пожертвувати
+  license: Ліцензія
+  privacy_policy: Політика конфіденційності
+  contact_us: Зв'яжіться з нами
+  text: "Хуан Лінетськи, Аріель Манзур та <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>інші автори</a>. Вебсайт розміщено <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Foundation</a>. <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>Початковий код вебсайту на GitHub</a>."
+sponsors:
+  title: "Godot спонсорується:"
+  text: Якщо ви зацікавлені в корпоративному спонсоруванні, будь ласка, напишіть на адресу <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>.<br>Щоб зробити особисту пожертву, зробіть це через <a href='https://fund.godotengine.org/'>фонд розробки Godot Engine</a>.
+  cta: Пожертвувати
+home:
+  h1: Ваш безоплатний ігровий рушій<br>з відкритим початковим кодом.
+  subtitle: Розробляйте власні 2D і 3D ігри, кросплатформні проєкти та навіть XR задуми!
+  whats_new: Що нового
+  download_latest: Завантажити останню версію
+  looking_for: 'Шукаєте <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Завантажити версію Godot 3 з довгостроковою підтримкою">Godot 3</a>, наш <a href="/download/archive">експериментальний реліз</a>, або <a href="/download/archive">попередню версію</a>?'
+  latest_news: Останні новини
+  more_news: Більше новин
+  cards:
+    h2: Особливий спосіб створювати ігри
+    design:
+      title: Інноваційний дизайн
+      text: Система Вузлів та Сцен в Godot надає можливість та гнучкість для створення чого завгодно.
+    script:
+      title: Обирайте мову програмування для вашої задачі
+      text: Підтримуйте модулярність вашого коду з обʼєктно-орієнтованим API із власною мовою Godot — GDScript, C#, C++, або додайте свою з використанням GDExtension.
+      extra: Підтримка C# зараз доступна тільки для ПК та мобільних платформ з версією Godot 4.2.<br>Використовуйте Godot 3, щоб запустити C# на вебплатформі.
+    2d:
+      title: Спеціалізований 2D рушій
+      text: Створюйте виразні та продуктивні 2D ігри зі спеціалізованим рушієм візуалізації 2D Godot зі справжніми 2D координатами пікселів та 2D вузлами.
+    3d:
+      title: Простий та потужний 3D
+      text: 3D вузли Godot забезпечать усім, щоб створити, анімувати, та візуалізувати ваші 3D світи та персонажів.
+    deploy:
+      title: Випускайте на всіх платформах
+      text: Розгортайте вашу гру на ПК, мобільних пристроях та веб за секунди. Godot навіть підтримує консолі з допомогою сторонніх видавців.
+    open:
+      title: Відкритий початковий код
+      text: "Насправді відкрита розробка: кожен хто робить свій внесок до Godot отримує таку ж користь від внесків інших."
+    cta: Дізнайте більше про користування Godot
+  get_involved:
+    title: Долучайтесь
+    text: Долучайтесь до спільноти та допоможіть створювати ігровий рушій що належить кожному.
+    cards:
+      cta: Дізнатися більше
+      code:
+        title: Програмуйте
+        text: Якщо вмієте програмувати, ви можете допомогти виправляти баги та працювати з розробниками рушія над реалізацією нового функціоналу.
+      document:
+        title: Документуйте
+        text: Для ігрового рушія необхідна якісна документація; допоможіть зробити її краще оновлюючи довідку API, пишучи нові посібники або надаючи виправлення.
+      report:
+        title: Звітуйте
+        text: Знайшли проблему в рушії? Не забудьте прозвітувати, щоб розробники змогли її простежити.
+  foundation:
+    text: "Не потрібно бути розробником рушіїв, щоб допомогти Godot. Долучайтесь до <a href='https://fund.godotengine.org/'>фонду розробки</a> та допоможіть нам зробити Godot&nbsp;Engine ще більш вражаючим!"
+    donate: Пожертвувати
