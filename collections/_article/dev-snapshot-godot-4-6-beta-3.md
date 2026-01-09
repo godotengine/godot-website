@@ -17,7 +17,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ---
 
-*The cover illustration is from* [**Sengodai**](https://store.steampowered.com/app/4090730/Sengodai/?curator_clanid=41324400), *a rougelike deckbuilding where you collect and create your Gokai monsters team to explore diverse worlds and challenge the cursed gods. You can buy the game on [Steam](https://store.steampowered.com/app/4090730/Sengodai/?curator_clanid=41324400), and check out the developers on [Bluesky](https://bsky.app/profile/tsunoagames.bsky.social) or [YouTube](www.youtube.com/@tsunoagames)!*
+*The cover illustration is from* [**Sengodai**](https://sengodai.com/), *a rougelike deck-building game where you collect and create your Gokai monsters team to explore diverse worlds and challenge the cursed gods. You can buy the game on [Steam](https://store.steampowered.com/app/4090730/Sengodai/?curator_clanid=41324400) or [Google Play](https://play.google.com/store/apps/details?id=com.tsunoagames.sengodai), and check out the developers on [Bluesky](https://bsky.app/profile/tsunoagames.bsky.social) or [YouTube](https://www.youtube.com/@tsunoagames)!*
 
 ## Highlights
 
