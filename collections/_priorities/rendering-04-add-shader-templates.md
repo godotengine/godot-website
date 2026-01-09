@@ -10,4 +10,5 @@ details:
   - type: prs
     content: |
       - [Custom shader templates #94427](https://github.com/godotengine/godot/pull/94427)
+      - [Add custom shader template support to rendering server (core) #111939](https://github.com/godotengine/godot/pull/111939)
 ---

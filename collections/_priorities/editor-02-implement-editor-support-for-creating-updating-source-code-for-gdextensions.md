@@ -1,6 +1,6 @@
 ---
 category: editor
-rank: 3
+rank: 2
 state: "active"
 anchor: "implement-editor-support-for-creating-updating-source-code-for-gdextensions"
 title: "Implement editor support for creating/updating source code for GDExtensions"
