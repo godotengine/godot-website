@@ -1,6 +1,6 @@
 ---
 category: core
-rank: 3
+rank: 2
 state: "active"
 anchor: "make-optimizations-throughout-the-core"
 title: "Make optimizations throughout the core"

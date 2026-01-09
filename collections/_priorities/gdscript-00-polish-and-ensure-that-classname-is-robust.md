@@ -11,5 +11,5 @@ description: |
 details:
   - type: trackers
     content: |
-      - [[TRACKER] GDScript `class_name` #99766](https://github.com/godotengine/godot/issues/99766)
+      - [[TRACKER] GDScript `class_name` #99766](https://github.co  m/godotengine/godot/issues/99766)
 ---

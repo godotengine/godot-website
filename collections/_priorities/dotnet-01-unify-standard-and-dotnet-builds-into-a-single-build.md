@@ -2,8 +2,8 @@
 category: dotnet
 rank: 1
 state: "active"
-anchor: "deprecate-dotnet-godot-builds-for-a-dotnet-plugin"
-title: "Deprecate .NET Godot builds for a .NET plugin"
+anchor: "unify-standard-and-dotnet-builds-into-a-single-build"
+title: "Unify standard and .NET builds into a single build"
 description: |
   For the time being, users are required to download an entirely separate Godot build in order to use C# features. With our new upcoming .NET module, we intend to support C# with a simple plugin.
 
