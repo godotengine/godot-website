@@ -1,6 +1,6 @@
 ---
 category: xr
-rank: 1
+rank: 0
 state: "active"
 anchor: "make-action-map-system-available-to-webxr"
 title: "Make action map system available to WebXR"
