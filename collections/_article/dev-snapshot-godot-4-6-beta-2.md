@@ -19,7 +19,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ---
 
-*The cover illustration is from* [**Nine-Ball Roulette**](https://store.steampowered.com/app/3376250/NineBall_Roulette/?curator_clanid=41324400), *a thriller where you and up to 3 friends take part in a relaxing game of pool with a little Russian Roulette on the side. You can buy the game on [Steam](https://store.steampowered.com/app/3376250/NineBall_Roulette/?curator_clanid=41324400), and check out the developers on [YouTube](www.youtube.com/@WaveBoxLabs)!*
+*The cover illustration is from* [**Nine-Ball Roulette**](https://store.steampowered.com/app/3376250/NineBall_Roulette/?curator_clanid=41324400), *a thriller where you and up to 3 friends take part in a relaxing game of pool with a little Russian Roulette on the side. You can buy the game on [Steam](https://store.steampowered.com/app/3376250/NineBall_Roulette/?curator_clanid=41324400), and check out the developers on [YouTube](https://www.youtube.com/@WaveBoxLabs)!*
 
 ## Highlights
 
