@@ -57,6 +57,7 @@ authors_list: "100gold,1,1|aaronfranke,67,66|aaronjyoder,1,1|aaronp64,25,25|actu
 {% assign download_platforms = site.download %}
 {% assign stable_version = site.data.versions | find: "name", latest_patch %}
 
+<link rel="stylesheet" href="/assets/css/transparent-nav.css?3">
 <link rel="stylesheet" href="/assets/css/material-symbols-outlined.css" />
 <link rel="stylesheet" href="/assets/css/releases/{{release_version_number}}.css" />
 <script type="module" src="/assets/js/releases/{{release_version_number}}.mjs"></script>
@@ -75,6 +76,7 @@ authors_list: "100gold,1,1|aaronfranke,67,66|aaronjyoder,1,1|aaronp64,25,25|actu
 		></video>
 	</div>
 	<div class="release-header-content">
+		<div class="add-nav-gap"></div>
 		<!-- Important to separate `.release-header-content` from `.container`. -->
 		<div class="container">
 			<h1 class="header-main-title">

@@ -1,57 +1,66 @@
 header {
+  background: none;
+
+  /* Offset the height of the nav */
+  margin-bottom: -64px;
+
   /* Show on top of GodotCon banner (if any). */
   position: relative;
   z-index: 2;
 
   height: 64px;
-  background-color: var(--navbar-background-color);
   display: flex;
   align-items: center;
-  box-shadow: var(--base-shadow);
 
+  
   .container {
+    background-color: var(--navbar-background-color);
     overflow: initial;
 		width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+		padding-bottom: 4px;
+  	padding-top: 1px;
+		border-radius: 16px;
+		margin-top: 9px;
   }
+
   #logo-link {
-    /* Make the logo's clickable area as tall as for other navigation links. */
-    padding: 0.2rem 0.5rem;
-    padding-top: 6px;
-    margin-left: -9px;
-    padding-right: 15px;
-    margin-right: -23px;
+		position: relative;
+  	top: 3px;
+	}
+
+  header .banner-container {
+    width: 100%;
+    height: min-content;
+    font-family: "Montserrat", sans-serif;
+    .banner {
+      width: 100%;
+      height: 100%;
+      margin: 0.25em 0;
+      text-align: center;
+      font-weight: 400;
+      color: black;
+      gap: 0.25em;
+      .banner-text {
+        display: inline-block;
+        margin: 0 0.25em;
+      }
+      a {
+        font-weight: 600;
+        color: black;
+        text-decoration-color: black;
+      }
+    }
   }
 }
-
-header .container {
-  box-sizing: border-box;
-}
-
-header .banner-container {
-  width: 100%;
-  height: min-content;
-  font-family: "Montserrat", sans-serif;
-}
-
-header .banner-container .banner {
-  width: 100%;
-  height: 100%;
-  margin: 0.25em 0;
-  text-align: center;
-  font-weight: 400;
-  color: black;
-  gap: 0.25em;
-}
-
-header .banner-container .banner .banner-text {
-  display: inline-block;
-  margin: 0 0.25em;
-}
-
-header .banner-container .banner a {
-  font-weight: 600;
-  color: black;
-  text-decoration-color: black;
+@media (max-width: 1200px) {
+  header {
+    .container {
+      border-radius: 0;
+      margin-top: 0;
+    }
+  }
 }
 
 #nav, #nav_head {
@@ -122,8 +131,12 @@ header .banner-container .banner a {
 		font-size: 16px;
 		font-weight: 400;
 		color: var(--navbar-link-color);
-		padding: 1.3175rem 1rem;
 		margin-left: 14px;
+		padding: 12px;
+    position: relative;
+    background-color: transparent;
+    transition: all 0.1s ease;
+    border-radius: 10px;
 	}
 	ul {
 		list-style: none;
@@ -133,6 +146,7 @@ header .banner-container .banner a {
 	}
 	a:hover, #logo-link:hover {
   	background-color: hsla(0, 0%, 50%, 0.1);
+    /* box-shadow: 0 2px 12px -4px #0006; */
 	}
 }
 
@@ -357,6 +371,10 @@ header .banner-container .banner a {
 			user-select: none;
 		}
 	}
+}
+
+.add-nav-gap {
+  padding-top: 64px;
 }
 
 /* Language specific fixes */
