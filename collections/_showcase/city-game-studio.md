@@ -16,7 +16,7 @@ youtube_id: "hcRDBdvtuVQ"
 platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/726840/City_Game_Studio_a_tycoon_about_game_dev/?curator_clanid=41324400
-gog: https://www.gog.com/en/game/city_game_studio_a_tycoon_about_game_dev
+gog: https://www.gog.com/en/game/city_game_studio_your_game_dev_adventure_begins
 itch: https://binogure.itch.io/city-game-studio
 
 ---
