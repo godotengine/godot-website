@@ -43,7 +43,7 @@
   --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   --background-color: #d5daea;
   --navbar-background-color: #ffffff;
-  --head-background-color: var(--primary-color);
+  --head-background-color: #007bd7;
   --card-background-color: #ffffff;
   --card-footer-color: #eeeeee;
   --button-background-color: #ffffff;
@@ -129,7 +129,7 @@
     --more-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     --background-color: #202326;
     --navbar-background-color: #333639;
-    --head-background-color: #232f57;
+    --head-background-color: #001728;
     --card-background-color: #333639;
     --card-footer-color: #505356;
     --button-background-color: #333639;
@@ -284,8 +284,7 @@ body a {
   color: var(--link-color);
   text-decoration: underline;
   text-decoration-color: var(--link-underline-color);
-  /* Prevent color transitions from being too fast (for epilepsy). */
-  transition: 0.1s filter;
+  transition: 0.5s filter;
 }
 
 body a,
@@ -802,7 +801,7 @@ pre > code {
     width: 3rem;
     padding: 0;
     margin: 0;
-    background-color: var(--pagination-active-color);
+    background-color: #2d2d2d;
     color: var(--primary-color-text-title);
     border-radius: 0;
     img {
@@ -1204,14 +1203,6 @@ article table tbody tr td {
 	article table tbody tr:nth-of-type(odd) {
 		background-color: color-mix(in hsl longer hue, var(--base-color), white 1%);
 	}
-}
-
-figure.article-cover figcaption {
-  opacity: 0.8;
-  line-height: 1.5
-}
-figure.article-cover figcaption a {
-  color: inherit;
 }
 
 section.sponsors .grid {
