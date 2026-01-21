@@ -45,7 +45,7 @@ We plan to regularly post public reports of our financial situation and the usag
 
 From the perspective of the Godot project, not much will change. Governance/Financial decisions were previously made by the PLC with input from the advisor group. The PLC will become the Foundation’s Board of Directors, so it will be the same people, but just with a different name. Additionally, the SFC will be part of the new foundation in advisory capacity, to help us with this new adventure, and to ensure to you all, the community, continuity in the way Godot is managed.
 
-This transition does not affect in any way the technical development of the engine, which is detailed in our [Governance](https://godotengine.org/governance) and [Teams](https://godotengine.org/teams) pages. The development process of Godot will not change with the Foundation.
+This transition does not affect in any way the technical development of the engine, which is detailed in our [Governance](https://godotengine.org/governance) and [Teams](https://contributing.godotengine.org/en/latest/organization/areas.html) pages. The development process of Godot will not change with the Foundation.
 
 The Godot Foundation is dedicated to creating Free and Open Source Software and to ensuring that work on the Godot project is sustainable. The Foundation’s Mission is to “financially support the growth, initiatives and activities of  the Godot Engine project, an open-source project that provides a free suite of tools and educational materials around the Godot Engine.
 

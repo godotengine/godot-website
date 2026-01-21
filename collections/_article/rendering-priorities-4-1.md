@@ -13,7 +13,7 @@ Now that Godot 4.0 is out, we have had the chance to think about our priorities 
 
 ## Priorities
 
-Below I list some of our top priorities on the [rendering team](https://godotengine.org/teams/#rendering) for Godot 4.1 along with a brief description. These are presented in no particular order and are grouped based on whether they relate to performance improvements, stability, or usability.
+Below I list some of our top priorities on the [rendering team](https://contributing.godotengine.org/en/latest/organization/areas.html) for Godot 4.1 along with a brief description. These are presented in no particular order and are grouped based on whether they relate to performance improvements, stability, or usability.
 
 Please note these priorities are aspirational: we hope to have all of the following finished in time for 4.1, but we may not. Rest assured work will continue and anything that doesn't make it into 4.1 will make it into subsequent releases.
 

@@ -25,7 +25,7 @@ I want to address what I consider to be a failure of communication in the last r
 
 Similarly, as a reminder that even when we have a feature ready or nearly ready before a release window, the feature still may be delayed to a subsequent release if more testing is needed, or if contributors identify issues with the feature before it is merged. That is to say, even if we say we will have a feature ready before a particular release, it only means that the Pull Request will be made before the release, we can't promise that any change will make it into the next release until that change is actually merged into the engine. 
 
-Below I list some of the top priorities identified by the [rendering team](https://godotengine.org/teams/#rendering) along with a brief description. These are presented in no particular order and are grouped based on whether they relate to performance improvements, stability, usability, or a new topic, customization. Many of these items are carried forward from the last post. We hope some of these will make it into 4.2, but we can't promise anything.
+Below I list some of the top priorities identified by the [rendering team](https://contributing.godotengine.org/en/latest/organization/areas.html) along with a brief description. These are presented in no particular order and are grouped based on whether they relate to performance improvements, stability, usability, or a new topic, customization. Many of these items are carried forward from the last post. We hope some of these will make it into 4.2, but we can't promise anything.
 
 #### Performance
 

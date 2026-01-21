@@ -11,7 +11,7 @@ date: 2024-05-15 13:15:00
 
 Have you ever begun some type of work, and only after realized how little you actually knew? That happened to me during [the last <abbr title="Game Developers Conference">GDC</abbr>](https://godotengine.org/article/gdc-2024-retrospective/).
 
-A few months ago, I took over [Fabio Alessandrelli's (@faless)](https://github.com/Faless/) responsibilities as [Web Platform Lead](https://godotengine.org/teams/#platforms) for Godot to reduce his task load and accelerate the pace at which our Web platform exports continue to improve.
+A few months ago, I took over [Fabio Alessandrelli's (@faless)](https://github.com/Faless/) responsibilities as [Web Platform Lead](https://contributing.godotengine.org/en/latest/organization/areas.html) for Godot to reduce his task load and accelerate the pace at which our Web platform exports continue to improve.
 
 I'm well used to the Web and its quirks. I began creating websites in <abbr title="Extensible Hypertext Markup Language">XHTML</abbr> and (vanilla) JavaScript, back in the days. Flash games were my jam! Enough so that I even worked for a video game studio as an ActionScript 3 developer in 2010. And I didn't really stop caring about the Web platform ever since.
 
