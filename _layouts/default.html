@@ -15,7 +15,12 @@
 	<meta property="og:url" content="https://godotengine.org{{ page.url }}">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
-	<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/share-image.webp' }}">
+	{% assign page_image = page.image | default: '/assets/share-image.jpg' %}
+	{% assign is_page_image_legacy = page_image | is_legacy_cover_image %}
+	{% if is_page_image_legacy != true %}
+		{% assign page_image = page_image | ensure_magic_type: 'jpeg,png,gif', 'Some websites (like Reddit) seem to fail to render cover images in formats other than basic ones.', 'webp:We know that WebP is one of the best formats for the Web. But for now, we ban the use of WebP images only in the context of cover images.' %}
+	{% endif %}
+	<meta property="og:image" content="{{ site.url }}{{ page_image }}">
 	<!-- meta tags -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="twitter:domain" content="godotengine.org">
