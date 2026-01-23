@@ -1,8 +1,12 @@
 - name: "4.6"
-  flavor: "rc2"
-  release_date: "20 January 2026"
-  release_notes: "/article/release-candidate-godot-4-6-rc-2/"
+  flavor: "stable"
+  release_date: "26 January 2026"
+  release_notes: "/article/godot-4-6-all-about-your-flow/"
+  featured: "4"
   releases:
+    - name: "rc2"
+      release_date: "20 January 2026"
+      release_notes: "/article/release-candidate-godot-4-6-rc-2/"
     - name: "rc1"
       release_date: "14 January 2026"
       release_notes: "/article/release-candidate-godot-4-6-rc-1/"
@@ -38,7 +42,6 @@
   flavor: "stable"
   release_date: "15 October 2025"
   release_notes: "/article/maintenance-release-godot-4-5-1/"
-  featured: "4"
   releases:
     - name: "rc2"
       release_date: "8 October 2025"
