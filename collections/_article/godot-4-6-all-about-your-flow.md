@@ -4,7 +4,7 @@ excerpt: With the stability gained over the past five releases, the engine has m
 categories: ["release"]
 author: "Godot contributors"
 image: /storage/releases/4.6/images/preview_image.png
-date: 2026-01-26 18:00:00
+date: 2026-01-26 17:00:00
 redirect_to:
  - /releases/4.6/
 ---
