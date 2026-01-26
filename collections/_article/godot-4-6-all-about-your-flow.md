@@ -13,7 +13,7 @@ With the stability gained over the past five releases, the engine has matured en
 
 The result: a release that puts you and your workflow first.
 
-Here are a couple highlights to whet your appetite:
+Here are a few highlights to whet your appetite:
 
 The new Modern editor theme gives your viewport center stage with clean lines and reduced clutter (you can switch back to Classic if you prefer). Jolt Physics is now the default for 3D projects after proving itself production-ready. Docks are now flexible and floatable, so you can arrange the editor your way. Inverse Kinematics (IK) is back with a completely new framework of solvers and constraints. Screen Space Reflections got a major overhaul for better visuals and performance.
 
