@@ -13,19 +13,21 @@ permalink: /releases/4.6/index.html
     <title>Godot 4.6 Release: It's all about your flow</title>
 
     <meta name="title" content="Godot 4.6 Release: It's all about your flow">
-    <meta name="description" content="With the stability gained over the past five releases, it's time for polish and quality of life improvements for everyday development.">
 
     <!-- Plausible -->
 	<script defer data-domain="godotengine.org" src="https://plausible.godot.foundation/js/script.file-downloads.outbound-links.js"></script>
+    <meta name="description" content="With the stability gained over the past five Godot 4 releases, it's time for polish and quality-of-life improvements for everyday development.">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Godot 4.6 Release: It's all about your flow">
-    <meta property="og:description" content="With the stability gained over the past five releases, it's time for polish and quality of life improvements for everyday development.">
+    <meta property="og:description" content="With the stability gained over the past five Godot 4 releases, it's time for polish and quality-of-life improvements for everyday development.">
     <meta property="og:image" content="/storage/releases/4.6/images/og_image.jpg">
 
     <link rel="stylesheet" href="/assets/css/releases/4.6.css">
 </head>
 <body>
+
+
     <nav id="toc-nav">
         <input type="checkbox" name="" id="toc-toggle">
         <div class="links">
@@ -66,7 +68,7 @@ permalink: /releases/4.6/index.html
     </section>
 
     <div class="preamble">
-        <p>With the stability gained over the past five releases, the engine has matured enough to enter a new development phase. Godot 4.6 kicks off a period of polish, quality-of-life improvements, tighter integration of industry-standards, and doubled-down effort on performance optimization.</p>
+        <p>With the stability gained over the past five Godot 4 releases, the engine has matured enough to enter a new development phase. Godot 4.6 kicks off a period of polish, quality-of-life improvements, tighter integration of industry standards, and doubled-down effort on performance optimization.</p>
 
 <p>The result: a release that puts you and your workflow first. The new editor theme lets your projects take center stage, while dozens of improvements across the board reduce friction and speed up everyday development. Every aspect, from loading assets to editing, debugging, exporting, and testing, has received some love to keep you focused on creating and minimize the time you spend wrestling with UI, or fiddling with external tools and plugins.</p>
 
@@ -112,9 +114,9 @@ permalink: /releases/4.6/index.html
 </h3>
         <h4 class="subtitle"><p>New editor theme: “Modern”</p>
 </h4>
-        <div class="body"><p>Since its launch last year, “Godot Minimal Theme” has quickly become a fan-favorite with its clean lines, reduced clutter, and contemporary feel. It was time to integrate it and make it official!</p>
+        <div class="body"><p>Since its launch last year, “Godot Minimal Theme” has quickly become a fan favorite with its clean lines, reduced clutter, and contemporary feel. It was time to integrate it and make it official!</p>
 
-<p>You can now choose between the older “Classic” theme and the newer “Modern” theme with Godot 4.6 shipping out with the “Modern” theme by default.</p>
+<p>You can now choose between the older “Classic” theme and the newer “Modern” theme, with the “Modern” theme enabled by default in Godot 4.6.</p>
 
 <p>The new theme, which will continue to mature with user feedback, brings you subtle contrast adjustments and improved readability and spacing between UI elements. Many testers have found it helps reduce competition on focus and gives center-stage to the viewport where your game lives.</p>
 
@@ -334,13 +336,13 @@ permalink: /releases/4.6/index.html
 
 <p>Whether you need a character’s feet to plant on uneven terrain or a robot arm to reach for objects, the framework to achieve this is right at your fingertips with a full suite of modifiers and constraints.</p>
 
-<p>We’re introducing the core <code class="language-plaintext highlighter-rouge">IKModifier3D</code> class built on the revamped SkeletonModifier3D. It comes with a family of deterministic solvers including <strong>TwoBoneIK3D</strong>, <strong>SplineIK3D</strong>, and iterative solvers like <strong>FABRIK3D</strong>, <strong>CCDIK3D</strong>, and <strong>JacobianIK3D</strong>.</p>
+<p>We’re introducing the core <strong>IKModifier3D</strong> class built on the revamped <strong>SkeletonModifier3D</strong>. It comes with a family of deterministic solvers including <strong>TwoBoneIK3D</strong>, <strong>SplineIK3D</strong>, and iterative solvers like <strong>FABRIK3D</strong>, <strong>CCDIK3D</strong>, and <strong>JacobianIK3D</strong>.</p>
 
 <p>You’ll also find new constraints to control the twist and angular velocity of joints, which helps prevent excessive and unwanted motion.</p>
 
 <p>What’s more, you can set the target of animation constraints to 3D nodes to make, for example, the arm of a character extend and snap to a weapon.</p>
 
-<p>The modular approach of this new framework lets you combine IK with other modifiers and constraints to fine-tune your procedural animations directly in the engine and documentation is in the works to help you make the best of the framework depending on your use case.</p>
+<p>The modular approach of this new framework lets you combine IK with other modifiers and constraints to fine-tune your procedural animations directly in the engine. Documentation is in the works to help you make the best of the framework depending on your use case.</p>
 </div>
 
         <div class="flex flex-wrap gap-m">
@@ -402,11 +404,11 @@ permalink: /releases/4.6/index.html
     <div class="content">
         <h3 class="title"><p>Reflections got real</p>
 </h3>
-        <h4 class="subtitle"><p>Major SSR Overhaul</p>
+        <h4 class="subtitle"><p>Major SSR overhaul</p>
 </h4>
-        <div class="body"><p>If your 3D game environment includes reflective materials like metal, water and glass, things are about to get exciting for you.</p>
+        <div class="body"><p>If your 3D game environment includes reflective materials like metal, water, and glass, things are about to get exciting for you.</p>
 
-<p>Screen Space Reflection (SSR) has been completely overhauled in this version, giving you a significant leap in realism, visual stability and performance. Not only will your reflective surfaces look more realistic with better handling of roughness, but the effect will run faster too!</p>
+<p>Screen Space Reflection (SSR) has been completely overhauled in this version, giving you a significant leap in realism, visual stability, and performance. Not only will your reflective surfaces look more realistic with better handling of roughness, but the effect will run faster too!</p>
 
 <p>To further optimize, you can choose between full-resolution mode for maximum quality, or half-resolution mode for higher performance. Even with reflections calculated at half your viewport size, the new SSR allows you to preserve decent quality. Check it out!</p>
 </div>
@@ -604,7 +606,7 @@ permalink: /releases/4.6/index.html
     <div class="content">
         <h3 class="title"><p>Getting mixed signals</p>
 </h3>
-        <h4 class="subtitle"><p>Hidden underscored Signals</p>
+        <h4 class="subtitle"><p>Hidden underscored signals</p>
 </h4>
         <div class="body"><p>Signals starting with an underscore are now hidden from auto-completion and generated documentation, becoming more in line with other underscored methods and properties. This makes it easier to focus on the signals that are meant for public use, reducing confusion when scripting.</p>
 </div>
@@ -675,7 +677,7 @@ permalink: /releases/4.6/index.html
 </h4>
         <div class="body"><p>Everybody knows to rotate a tile when a tile needs rotating. Thus far in Godot, only one type of tile stood out, breaking your flow and eluding your rotational aspirations: the infamous scene tile. But no more.</p>
 
-<p>Starting this version, when you place a scene instance on a grid cell in your tile map, such as: an animated chest, a glowing lamp or a torch, you can rotate the scene tile by 90-degree increments and that’s that!</p>
+<p>Starting with Godot 4.6, when you place a scene instance on a grid cell in your tile map, such as an animated chest, a glowing lamp, or a torch, you can rotate the scene tile in 90-degree increments and that’s that!</p>
 </div>
 
         <div class="flex flex-wrap gap-m">
@@ -1134,7 +1136,7 @@ permalink: /releases/4.6/index.html
     <p>When resources go missing due to file moves or renames, the editor now lets you resolve indirect missing dependencies manually instead of being stuck.</p>
   </li>
   <li>
-    <p>Newly created scripts now open automatically, letting you start coding immediately without extra clicks.</p>
+    <p>Newly-created scripts now open automatically, letting you start coding immediately without extra clicks.</p>
   </li>
 </ul>
 
@@ -1168,7 +1170,7 @@ permalink: /releases/4.6/index.html
                 
                     <a href=https://github.com/fkeyzuwu aria-label="See 'Editor loot drop!' contributor page">fkeyz</a>
                 
-                    <a href= aria-label="See 'Editor loot drop!' contributor page">https://github.com/dugramen</a>
+                    <a href=https://github.com/dugramen aria-label="See 'Editor loot drop!' contributor page">Koliur Rahman</a>
                 
             </div>
         </div>
@@ -1280,11 +1282,11 @@ permalink: /releases/4.6/index.html
 </div>
     
     <div class="content">
-        <h3 class="title"><p>Error, Error on the wall…</p>
+        <h3 class="title"><p>Error, error on the wall…</p>
 </h3>
         <h4 class="subtitle"><p>Clickable files in the Output panel</p>
 </h4>
-        <div class="body"><p>When it’s time to squash bugs, one of the things that grind you down as a dev is having to manually search for the culprit, dig out the file, scroll to the right line, and only then start fixing.
+        <div class="body"><p>When it’s time to squash bugs, one thing that grinds you down as a dev is having to manually search for the culprit, dig out the file, scroll to the right line, and only then start fixing.
 But no more! Godot 4.6 brings two quality-of-life improvements to your bug hunting endeavors.</p>
 
 <p>You can now pop up the offending script or resource by clicking on it inside the error or warning message directly in the Output panel. What’s more, if you use an external editor, you can configure Godot to open the offending script directly there!</p>
@@ -1295,7 +1297,7 @@ But no more! Godot 4.6 brings two quality-of-life improvements to your bug hunti
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M4 2a1.5 1.5 0 0 0-1.5 1.5v9A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5V6.621a1.5 1.5 0 0 0-.44-1.06L9.94 2.439A1.5 1.5 0 0 0 8.878 2H4Zm1 5.75A.75.75 0 0 1 5.75 7h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 7.75Zm0 3a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                 </svg>
-                <a href=https://github.com/godotengine/godot/pulls?q=is%3Apr+108473+111805 aria-label="See 'Error, Error on the wall...' Pull Request">Read more on this PR</a>
+                <a href=https://github.com/godotengine/godot/pulls?q=is%3Apr+108473+111805 aria-label="See 'Error, error on the wall...' Pull Request">Read more on this PR</a>
             </div>
             <div class="link-icon flex-wrap">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -1303,9 +1305,9 @@ But no more! Godot 4.6 brings two quality-of-life improvements to your bug hunti
                 </svg>
                 <span>Contributed by&nbsp;</span>
                 
-                    <a href=https://github.com/KoBeWi aria-label="See 'Error, Error on the wall...' contributor page">Tomasz Chabora</a>
+                    <a href=https://github.com/KoBeWi aria-label="See 'Error, error on the wall...' contributor page">Tomasz Chabora</a>
                 
-                    <a href=https://github.com/mihe aria-label="See 'Error, Error on the wall...' contributor page">Mikael Hermansson</a>
+                    <a href=https://github.com/mihe aria-label="See 'Error, error on the wall...' contributor page">Mikael Hermansson</a>
                 
             </div>
         </div>
@@ -1407,10 +1409,10 @@ But no more! Godot 4.6 brings two quality-of-life improvements to your bug hunti
 </h3>
         <h4 class="subtitle"><p>Live previews in the Quick Open dialog</p>
 </h4>
-        <div class="body"><p>Remember those painful iterations every time you needed to select a texture, material, or other resource in the Quick Open dialog: Guess which resource would look right, select it, close the dialog, observe the result, rinse and repeat?
+        <div class="body"><p>Remember those painful iterations every time you needed to select a texture, material, or other resource in the Quick Open dialog: guess which resource would look right, select it, close the dialog, observe the result, rinse and repeat?
 Those days are over too!</p>
 
-<p>Starting Godot 4.6, as you move through the list, the selected resource is previewed instantly in your scene. You can quickly compare options, see the result in context, and commit only when it looks right, no extra clicks, no back-and-forth.</p>
+<p>Starting with Godot 4.6, as you move through the list, the selected resource is previewed instantly in your scene. You can quickly compare options, see the result in context, and commit only when it looks right, no extra clicks, no back-and-forth.</p>
 </div>
 
         <div class="flex flex-wrap gap-m">
@@ -1483,7 +1485,7 @@ Those days are over too!</p>
     <div class="content">
         <h3 class="title"><p>Animation editor goodies</p>
 </h3>
-        <h4 class="subtitle"><p>Timeline control &amp; quick action buttons</p>
+        <h4 class="subtitle"><p>Timeline control and quick action buttons</p>
 </h4>
         <div class="body"><p>Tweaking and polishing your animations just got more pleasant in Godot’s Animation Editor.</p>
 
@@ -1551,7 +1553,7 @@ Those days are over too!</p>
 </h4>
         <div class="body"><p>Frequent updaters, this is a game changer for you (pun intended). Your exported patches just got leaner and faster.</p>
 
-<p>Godot 4.6 improves patch PCKs by supporting delta encoding, allowing patch files to include only the parts of resources that actually changed instead of entire files. This can dramatically reduce the size of patches, especially for projects and games with large assets or frequent small updates (for example: if you’re localizing your project and adding languages!).</p>
+<p>Godot 4.6 improves patch PCKs by supporting delta encoding, allowing patch files to include only the parts of resources that actually changed instead of entire files. This can dramatically reduce the size of patches, especially for projects and games with large assets or frequent small updates (for example: if you’re localizing your project and adding languages).</p>
 
 <p>For players, this means faster downloads and updates. For developers, it makes distributing incremental patches more practical and bandwidth-friendly.</p>
 </div>
@@ -1676,7 +1678,7 @@ Those days are over too!</p>
 </h4>
         <div class="body"><p>You can now customize the LED light colors on supported controllers, but this is only the beginning! Godot 4.6 lays the foundation for advanced joypad features support.</p>
 
-<p>Starting this release, the door is wide open for the integration of motion sensors, touchpads, haptic feedback, adaptive triggers, and controller information queries like controller type, button layout, connection method, and battery state.</p>
+<p>Starting with Godot 4.6, the door is wide open for the integration of motion sensors, touchpads, haptic feedback, adaptive triggers, and controller information queries like controller type, button layout, connection method, and battery state.</p>
 
 <p>Upcoming releases will allow you to fully leverage the capabilities of modern controllers to set up a richer gaming experience in your projects.</p>
 </div>
@@ -1734,9 +1736,9 @@ Those days are over too!</p>
 </h3>
         <h4 class="subtitle"><p>Betsy: Convert RGB to RGBA on the GPU</p>
 </h4>
-        <div class="body"><p>Textures in Godot are compressed by default to make your game smaller on disk and more efficient in memory, often reducing size by 4-6×.</p>
+        <div class="body"><p>Textures in Godot are compressed by default to make your game smaller on disk and more efficient in memory, often reducing size by four to six times.</p>
 
-<p>Starting with Godot 4.6, 3D textures compressed this way now import up to 2× faster, so you spend less time waiting when importing assets and more time building your world. This was accomplished by changing the way Betsy handles RGB textures to instead convert them to RGBA on the GPU and use them directly.</p>
+<p>Starting with Godot 4.6, 3D textures compressed this way now import up to two times faster, so you spend less time waiting when importing assets and more time building your world. This was accomplished by changing the way Betsy handles RGB textures to instead convert them to RGBA on the GPU and use them directly.</p>
 </div>
 
         <div class="flex flex-wrap gap-m">
@@ -1912,7 +1914,7 @@ Those days are over too!</p>
 </h3>
         <h4 class="subtitle"><p>Configurable AgX tonemapper parameters</p>
 </h4>
-        <div class="body"><p>AgX tonemapper now exposes <strong><code class="language-plaintext highlighter-rouge">agx_white</code> and <code class="language-plaintext highlighter-rouge">agx_contrast</code></strong>, letting you control how bright and contrasted your scenes appear and allowing you to achieve a more consistent hue on bright colors even at high contrast.</p>
+        <div class="body"><p>The AgX tonemapper now exposes <strong><code class="language-plaintext highlighter-rouge">agx_white</code> and <code class="language-plaintext highlighter-rouge">agx_contrast</code></strong>, letting you control how bright and contrasted your scenes appear and allowing you to achieve a more consistent hue on bright colors even at high contrast.</p>
 
 <p>Previously, these values were fixed, giving you limited flexibility when adjusting dynamic range. While this change lays the foundation for future HDR support, the new curves don’t break compatibility with 4.4 and 4.5!</p>
 </div>
@@ -2129,7 +2131,7 @@ Those days are over too!</p>
     <div class="content">
         <h3 class="title"><p>1 fish, 2 fishes?</p>
 </h3>
-        <h4 class="subtitle"><p>Improved CSV translation support &amp; template generation</p>
+        <h4 class="subtitle"><p>Improved CSV translation support and template generation</p>
 </h4>
         <div class="body"><p>Spreadsheet-based localization has just leveled up, making CSV files more adapted to real game translation workflows.</p>
 
@@ -2479,9 +2481,9 @@ Those days are over too!</p>
 </h3>
         <h4 class="subtitle"><p>Storage Access Framework (SAF)</p>
 </h4>
-        <div class="body"><p>Starting Godot 4.6 you can provide players with the possibility to load and save specific files using the system file picker, without asking for broad storage permissions.</p>
+        <div class="body"><p>Starting with Godot 4.6, you can provide players with the possibility to load and save specific files using the system file picker, without asking for broad storage permissions.</p>
 
-<p>This makes it possible to support loading custom content (like levels!), importing data files, or exporting saves and presets, in a more granular manner, avoiding Play Store compliance issues and keeping players in control.</p>
+<p>This makes it possible to support loading custom content (like levels), importing data files, or exporting saves and presets, in a more granular manner, avoiding Play Store compliance issues and keeping players in control.</p>
 </div>
 
         <div class="flex flex-wrap gap-m">
@@ -2534,7 +2536,7 @@ Those days are over too!</p>
 </h3>
         <h4 class="subtitle"><p>Direct3D 12 as the new default on Windows</p>
 </h4>
-        <div class="body"><p>With Direct3D 12 now pretty much on par with Vulkan, new Windows projects default to Direct3D 12 for more stable driver support and fewer platform quirks. This improves cross-platform rendering consistency while keeping existing projects unchanged.</p>
+        <div class="body"><p>With Direct3D 12 now pretty much on par with Vulkan, new Windows projects default to Direct3D 12 for more stable driver support and fewer platform quirks. This improves cross-platform rendering consistency while keeping existing projects unchanged.</p>
 </div>
 
         <div class="flex flex-wrap gap-m">
@@ -2590,9 +2592,9 @@ Those days are over too!</p>
 </h3>
         <h4 class="subtitle"><p>Turn meshes into collision shapes</p>
 </h4>
-        <div class="body"><p>So far, to get a collision shape from a primitive mesh, you had to manually choose a shape type and align it by hand. Literally a drag… But no more.</p>
+        <div class="body"><p>Until now, to get a collision shape from a primitive mesh, you had to manually choose a shape type and align it by hand. Literally a drag… But no more.</p>
 
-<p>Starting Godot 4.6, whenever your mesh is a simple geometric shape like a box, sphere, cylinder, or capsule, you can now automatically generate a matching CollisionShape3D from the Mesh menu. One more quality-of-life boost!</p>
+<p>Starting with Godot 4.6, whenever your mesh is a simple geometric shape like a box, sphere, cylinder, or capsule, you can now automatically generate a matching CollisionShape3D from the Mesh menu. One more quality-of-life boost!</p>
 </div>
 
         <div class="flex flex-wrap gap-m">
@@ -2655,7 +2657,7 @@ Those days are over too!</p>
 </h4>
         <div class="body"><p>This one’s for you if you’re already taking advantage of GDExtension to write high-performance game code and editor plugins in languages like C and C++, or <a href="https://github.com/Godot-Languages-Support/godot-lang-support/blob/main/README.md">the community-supported Rust, Zig and more</a>!</p>
 
-<p>Starting in Godot 4.6, parameters and return values in the Godot API can be declared as <strong>required</strong>, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!</p>
+<p>Starting with Godot 4.6, parameters and return values in the Godot API can be declared as <strong>required</strong>, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!</p>
 
 <p>The result is safer, clearer APIs with better integration of modern type systems in your tooling.</p>
 </div>
@@ -2765,9 +2767,9 @@ Those days are over too!</p>
     <div class="content">
         <h3 class="title"><p>Get outta that function already</p>
 </h3>
-        <h4 class="subtitle"><p>Script Debugger: Step Out Control</p>
+        <h4 class="subtitle"><p>Script debugger: Step Out button</p>
 </h4>
-        <div class="body"><p>If you’ve ever gotten stuck inside a function while debugging, wishing you could jump straight back to the caller, this small feature will surely improve your quality-of-life.</p>
+        <div class="body"><p>If you’ve ever gotten stuck inside a function while debugging, wishing you could jump straight back to the caller, this small feature will surely improve your quality of life.</p>
 
 <p>You now have a <strong>Step Out</strong> button alongside the existing Step Over and Step Into ones. It lets you leave the current function and continue execution at the point where it was called. No more manually stepping through lines or navigating the call stack when exploring complex logic or tracking elusive bugs.</p>
 </div>
@@ -2930,7 +2932,7 @@ Those days are over too!</p>
     <div class="content">
         <h3 class="title"><p>I spy with my little eye</p>
 </h3>
-        <h4 class="subtitle"><p>String Placeholder Highlighting</p>
+        <h4 class="subtitle"><p>String placeholder highlighting</p>
 </h4>
         <div class="body"><p>Godot 4.6 now highlights placeholders in your strings, so <code class="language-plaintext highlighter-rouge">%s</code>, <code class="language-plaintext highlighter-rouge">%d</code>, or <code class="language-plaintext highlighter-rouge">{name}</code> jump right off the page. You’ll no longer have to squint to spot missing or miswritten placeholders. This is sure to make string substitution or formatting more pleasant.</p>
 </div>
@@ -5954,7 +5956,7 @@ Special thanks goes out to all the engine teams that collaborated on this releas
             
             <div class="quote">
                 <div class="text">
-                    <p>Almost 3 years after the 4.0 release, Godot 4 is starting to be a mature engine, including a wide array of features that enable countless developers to publish games in all genres. For example, Steam got over <a href="https://steamdb.info/stats/releases/?tech=Engine.Godot">1,200 new Godot games</a> in 2025, while itch.io consistently gets around <a href="https://itch.io/game-development/engines/most-projects">500 new Godot games per week</a> (game jams, prototypes, etc.).</p>
+                    <p>Almost 3 years after the 4.0 release, Godot 4 is starting to be a mature engine, including a wide array of features that enable countless developers to publish games in all genres. For example, Steam got over <a href="https://steamdb.info/stats/releases/?tech=Engine.Godot">1,200 new Godot games</a> in 2025, while itch.io consistently gets around <a href="https://itch.io/game-development/engines/most-projects">500 new Godot games per week</a> (including game jams, prototypes, etc.).</p>
 
 <p>While every Godot user still has their own favorite missing feature which they’re eagerly awaiting, for the most part the engine is fully capable. But there are still so many minor roadblocks, papercuts, workflow issues or outright bugs which can make the experience of developing and publishing games more painful than we’d like.</p>
 
