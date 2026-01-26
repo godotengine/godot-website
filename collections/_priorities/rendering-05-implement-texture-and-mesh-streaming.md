@@ -9,5 +9,9 @@ description: |
 details:
   - type: proposals
     content: |
+      - [Add support for texture streaming #3177](https://github.com/godotengine/godot-proposals/issues/3177)
       - [Implement Mesh streaming #6109](https://github.com/godotengine/godot-proposals/issues/6109)
+  - type: prs
+    content: |
+      - [Implement texture mip-level streaming #113429](https://github.com/godotengine/godot/pull/113429)
 ---
