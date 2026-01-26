@@ -89,8 +89,8 @@ Canada:
       - 43.65348
       - -79.38394
     links:
-      - title: MeetUp
-        url: https://www.meetup.com/Godot-Toronto/
+      - title: Discord
+        url: https://discord.gg/sfsMXfqpZu
   - name: Godot Québec
     coordinates:
       - 45.50318
