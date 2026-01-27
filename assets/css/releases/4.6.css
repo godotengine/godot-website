@@ -235,6 +235,14 @@ body {
   line-height: 160%;
 }
 
+.card {
+  transition: box-shadow 0.2s ease-out;
+}
+
+.card:target {
+  box-shadow: 2px 3px var(--color-godot-but-darker);
+}
+
 @media (min-width: 620px) {
   #toc-nav{
     left: 2em;
