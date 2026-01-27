@@ -27,6 +27,8 @@
   --l: 1.6em;
   --xl: 2.6em;
   --xxl: 4.2em;
+
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -225,6 +227,20 @@ body {
       font-weight: 600;
     }
   }
+}
+
+.title a {
+  color: inherit;
+  text-decoration: none;
+  line-height: 160%;
+}
+
+.card {
+  transition: box-shadow 0.2s ease-out;
+}
+
+.card:target {
+  box-shadow: 2px 3px var(--color-godot-but-darker);
 }
 
 @media (min-width: 620px) {
