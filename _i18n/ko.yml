@@ -54,6 +54,8 @@ home:
   download_latest: 최신 다운로드
   looking_for: '<a href="/download/windows/" class="set-os-download-url" data-version="3" title="Godot 3의 장기 지원 버전 다운로드">Godot 3</a>, 우리의 <a href="/download/archive">실험적인 릴리스</a>, 또는 <a href="/download/archive">이전 버전</a>을 찾고 계십니까?'
   latest_news: 최신 뉴스
+  latest_pre_releases: 최신 사전 릴리스
+  view_all: 모두 보기
   more_news: 뉴스 더 보기
   cards:
     h2: 게임을 만드는 다양한 방법

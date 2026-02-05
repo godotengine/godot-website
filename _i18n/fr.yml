@@ -54,6 +54,8 @@ home:
   download_latest: Télécharger la dernière version
   looking_for: 'Vous cherchez <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Téléchargez la version supportée à long terme de Godot 3">Godot 3</a>, des <a href="/download/archive">versions expérimentales</a> ou une <a href="/download/archive">ancienne version</a>&nbsp;?'
   latest_news: Dernières actualités (en anglais)
+  latest_pre_releases: Dernières pré-versions
+  view_all: Voir tout
   more_news: Plus d'actualités
   cards:
     h2: Une manière différente de créer des jeux

@@ -181,6 +181,14 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 		margin: 0;
 	}
 
+	.pre-releases {
+		grid-template-columns: 1fr 1fr;
+		article.article-card.row {
+			grid-template-columns: 110px 1fr;
+		}
+	}
+	
+
 	@media (max-width: 900px) {
 		.features-grid {
 			grid-template-columns: 1fr;
@@ -202,6 +210,9 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 	@media (max-width: 768px) {
 		.news-list .button-container {
 			text-align: left;
+		}
+		.pre-releases {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
@@ -244,7 +255,12 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 	<h2>{% t home.latest_news %}</h2>
 	<div class="flex eqsize responsive" style="gap: 30px;">
 
-		{% assign latest_posts = site.article | sort:"date" | reverse %}
+		{% assign latest_posts = site.article
+			| where_exp: "post", "post.categories contains 'news' or post.categories contains 'progress-report' or post.categories contains 'events' or post.categories contains 'showcase' or post.categories contains 'release'"
+			| sort: "date"
+			| reverse
+		%}
+
 		{% for post in latest_posts limit:1 %}
 		<a href="{{ post.url }}" style="text-decoration: none">
 			<article class="article-card">
@@ -277,6 +293,38 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 				<div class="button-container">
 					<a href="/blog/" class="btn no-margin">{% t home.more_news %}</a>
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container padded">
+	<h2>{% t home.latest_pre_releases %}</h2>
+	<div class="flex eqsize responsive" style="gap: 30px;">
+
+		{% assign latest_releases = site.article
+			| sort: "date"
+			| reverse
+			| where_exp: "post", "post.categories contains 'pre-release'"
+		%}
+		<div class="news-list">
+			<div class="pre-releases" style="display: grid; gap: 18px;">
+				{% for post in latest_releases limit:6 offset:0 %}
+				{% if post != posts[0] %}
+				<a href="{{ post.url }}" style="text-decoration: none;">
+					<article class="article-card row">
+						<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
+						<div>
+							<h3>{{ post.title }}</h3>
+							<span class="date" data-post-date="{{ post.date }}">{{ post.date | date: "%e %B %Y" }}</span>
+						</div>
+					</article>
+				</a>
+				{% endif %}
+				{% endfor %}
+			</div>
+			<div class="button-container" style="margin-top: 10px;">
+				<a href="/blog/pre-release/" class="btn no-margin">{% t home.view_all %}</a>
 			</div>
 		</div>
 	</div>
