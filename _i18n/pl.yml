@@ -54,7 +54,7 @@ home:
   download_latest: Pobierz najnowszy
   looking_for: 'Szukasz <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Pobierz wersję z wsparciem długoterminowym Godota 3">Godota 3</a>, naszych <a href="/download/archive">wydań eksperymentalnych</a> lub <a href="/download/archive">poprzednich wersji</a>?'
   latest_news: Najnowsze wieści
-  latest_pre_releases: Najnowsze pre-releasy
+  latest_releases: Najnowsze wydania
   view_all: Zobacz wszystkie
   more_news: Więcej aktualności
   cards:

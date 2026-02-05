@@ -53,7 +53,7 @@ home:
   download_latest: 下載最新版
   looking_for: '正在尋找 <a href="/download/windows/" class="set-os-download-url" data-version="3" title="下載 Godot 3 的長期支援版本">Godot 3</a>、我們的<a href="/download/archive">實驗性版本</a>，或是一個<a href="/download/archive">歷史版本</a>？'
   latest_news: 最近新聞
-  latest_pre_releases: 最近預發布版本
+  latest_releases: 最近版本
   view_all: 查看全部
   more_news: 更多新聞
   cards:

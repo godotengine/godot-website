@@ -181,7 +181,7 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 		margin: 0;
 	}
 
-	.pre-releases {
+	.release-posts {
 		grid-template-columns: 1fr 1fr;
 		article.article-card.row {
 			grid-template-columns: 110px 1fr;
@@ -211,7 +211,7 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 		.news-list .button-container {
 			text-align: left;
 		}
-		.pre-releases {
+		.release-posts {
 			grid-template-columns: 1fr;
 		}
 	}
@@ -299,16 +299,16 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 </section>
 
 <section class="container padded">
-	<h2>{% t home.latest_pre_releases %}</h2>
+	<h2>{% t home.latest_releases %}</h2>
 	<div class="flex eqsize responsive" style="gap: 30px;">
 
 		{% assign latest_releases = site.article
 			| sort: "date"
 			| reverse
-			| where_exp: "post", "post.categories contains 'pre-release'"
+			| where_exp: "post", "post.categories contains 'pre-release' or post.categories contains 'release'"
 		%}
 		<div class="news-list">
-			<div class="pre-releases" style="display: grid; gap: 18px;">
+			<div class="release-posts" style="display: grid; gap: 18px;">
 				{% for post in latest_releases limit:6 offset:0 %}
 				{% if post != posts[0] %}
 				<a href="{{ post.url }}" style="text-decoration: none;">
@@ -324,7 +324,7 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "zh-cn", "zh-tw"]
 				{% endfor %}
 			</div>
 			<div class="button-container" style="margin-top: 10px;">
-				<a href="/blog/pre-release/" class="btn no-margin">{% t home.view_all %}</a>
+				<a href="/download/archive/" class="btn no-margin">{% t home.view_all %}</a>
 			</div>
 		</div>
 	</div>
