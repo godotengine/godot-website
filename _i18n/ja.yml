@@ -54,6 +54,8 @@ home:
   download_latest: "最新版をダウンロード"
   looking_for: "<a href='/download/windows/' class='set-os-download-url' data-version='3' title='Download the long-term support version of Godot 3'>Godot 3</a>や<a href='/download/archive'>実験的バージョン</a>、または<a href='/download/archive'>過去のリリース</a>をお探しですか？"
   latest_news: "最新ニュース"
+  latest_releases: "最新リリース"
+  view_all: "すべてを見る"
   more_news: "過去のニュース"
   cards:
     h2: "ゲーム開発の新しいかたち"

@@ -54,6 +54,8 @@ home:
   download_latest: Baixar Versão Mais Recente
   looking_for: 'Procurando pelo <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Baixe a versão de suporte de longo prazo do Godot 3">Godot 3</a>, nossas <a href="/download/archive">versões experimentais</a>, ou uma <a href="/download/archive">versão anterior</a>?'
   latest_news: Últimas notícias (em inglês)
+  latest_releases: Últimas versões
+  view_all: Ver todos
   more_news: Mais notícias
   cards:
     h2: Uma maneira diferente de fazer jogos
