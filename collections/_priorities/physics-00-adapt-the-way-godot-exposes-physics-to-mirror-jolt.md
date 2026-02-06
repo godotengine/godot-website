@@ -1,11 +1,11 @@
 ---
 category: physics
-rank: 1
+rank: 0
 state: "active"
 anchor: "adapt-the-way-godot-exposes-physics-to-mirror-jolt"
 title: "Adapt the way Godot exposes physics to mirror Jolt"
 description: |
-  As much as our nodes are made to be compatible with multiple physics engines, the existing integration of Jolt (via the [godot-jolt](https://github.com/godot-jolt/godot-jolt) add-on) is not optimal, as there are numerous features that can’t be implemented in Godot due to the current way the system works. In addition to integrating Jolt as the default 3D physics engine, we want to modernize our node bindings in order to fully exploit the new library.
+  As much as our nodes are made to be compatible with multiple physics engines, the existing integration of Jolt is not optimal, as there are numerous features that can’t be implemented in Godot due to the current way the system works. In addition to integrating Jolt as the default 3D physics engine, we want to modernize our node bindings in order to fully exploit the new library.
 details:
   - type: warning
     content: |

@@ -7,4 +7,7 @@ title: "Enhance graphics debugging including VRAM debugging and better informati
 description: |
   Debugging and profiling are necessary tools to release high-fidelity games. Right now Godot’s debugging and profiling tools are relatively basic and unpolished. We want to make it easier to diagnose rendering issues and pinpoint performance problems instead of users having to rely on guessing and checking.
 details:
+  - type: prs
+    content: |
+      - [Add pages on graphics debugging and profiling #11253](https://github.com/godotengine/godot-docs/pull/11253)
 ---
