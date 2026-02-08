@@ -1,0 +1,55 @@
+name: 🔗 GHA
+on: [push, pull_request, workflow_dispatch]
+
+concurrency:
+  group: ${{ github.workflow }}|${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: 🛠️ Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Minify
+        run: |
+          sudo apt-get update
+          sudo apt-get install minify
+
+      - name: Install Ruby 3.2
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build the static website
+        run: bundle exec jekyll build
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v4
+
+  deploy:
+    name: 📤 Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref_name == github.event.repository.default_branch
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+    concurrency:
+      group: ci-deploy
+      cancel-in-progress: false
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
