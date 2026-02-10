@@ -12,6 +12,9 @@ platinum:
   - name: "JetBrains"
     link: "https://www.jetbrains.com/lp/rider-godot/"
     image: "https://fund.godotengine.org/static/logos/jetbrains.svg"
+  - name: "Mike Klubnika"
+    link: "https://mikeklubnika.com/"
+    image: "https://fund.godotengine.org/static/logos/mike-klubnika.png"
 gold:
   - name: Arm
     link: "https://www.arm.com/"
