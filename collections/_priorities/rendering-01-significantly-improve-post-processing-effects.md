@@ -15,4 +15,5 @@ details:
     content: |
       - [Overhaul screen-space reflections #111210](https://github.com/godotengine/godot/pull/111210)
       - [Implement XeGTAO (and also VBAO) #113304](https://github.com/godotengine/godot/pull/113304)
+      - [Implement motion blur feature based on the community plugin #115027](https://github.com/godotengine/godot/pull/115027)
 ---
