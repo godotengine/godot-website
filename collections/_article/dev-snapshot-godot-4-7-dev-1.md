@@ -120,7 +120,7 @@ There are currently no known issues introduced by this release.
 
 With every release we accept that there are going to be various issues, which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
 
-- macOS builds are not signed this release; this will be resolved by the time 4.7-dev2 comes out.
+- macOS builds are not signed this release; this will be resolved by the time 4.7-dev2 comes out. **Edit 2026-02-17 @ 23:00 UTC:** Signed builds have been uploaded for macOS, replacing the previous binaries.
 
 ## Bug reports
 
