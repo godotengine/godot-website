@@ -215,6 +215,7 @@ Make a Donation
 &lt;/div>
 &lt;/div>
 &lt;/div>
+&lt;p>&lt;strong>Edit 2026-02-16 @ 22:30 UTC:&lt;/strong> The first macOS editor binaries for 4.6.1 had a signing issue (missing entitlements) which broke .NET and GDExtension support. They have been reuploaded with a fixed signature. Please redownload the macOS version if you downloaded it before the time of this edit.&lt;/p>
 &lt;hr />
 &lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/3216340/Tearscape/?curator_clanid=41324400">&lt;strong>Tearscape&lt;/strong>&lt;/a>, &lt;em>a 2D top-down action-adventure game, where you must blend fast-paced combat and keen exploration to successfully navigate this Gothic, dreary world. You can buy the game or try out the demo on &lt;a href="https://store.steampowered.com/app/3216340/Tearscape/?curator_clanid=41324400">Steam&lt;/a>, and follow the developers on &lt;a href="https://bsky.app/profile/nerdstakeover.bsky.social">Bluesky&lt;/a>, &lt;a href="https://www.youtube.com/@TearscapeGameDev">YouTube&lt;/a>, or &lt;a href="https://discord.gg/YGcupnQZWp">Discord&lt;/a>.&lt;/em>&lt;/p>
 &lt;h2 id="changes">Changes&lt;/h2>
