@@ -6,7 +6,7 @@
 - name: "4.6.1"
   flavor: "stable"
   release_date: "16 February 2026"
-  release_notes: "/article/maintenance-release-godot-4-6-1-rc-1/"
+  release_notes: "/article/maintenance-release-godot-4-6-1/"
   featured: "4"
   releases:
     - name: "rc1"
