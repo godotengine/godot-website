@@ -19,6 +19,8 @@ Please consider [supporting the project financially](#support), if you are able.
 
 {% include articles/download_card.html version="4.6.1" release="stable" article=page %}
 
+**Edit 2026-02-16 @ 22:30 UTC:** The first macOS editor binaries for 4.6.1 had a signing issue (missing entitlements) which broke .NET and GDExtension support. They have been reuploaded with a fixed signature. Please redownload the macOS version if you downloaded it before the time of this edit.
+
 -----
 
 *The cover illustration is from* [**Tearscape**](https://store.steampowered.com/app/3216340/Tearscape/?curator_clanid=41324400), *a 2D top-down action-adventure game, where you must blend fast-paced combat and keen exploration to successfully navigate this Gothic, dreary world. You can buy the game or try out the demo on [Steam](https://store.steampowered.com/app/3216340/Tearscape/?curator_clanid=41324400), and follow the developers on [Bluesky](https://bsky.app/profile/nerdstakeover.bsky.social), [YouTube](https://www.youtube.com/@TearscapeGameDev), or [Discord](https://discord.gg/YGcupnQZWp).*
