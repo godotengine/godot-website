@@ -6,7 +6,7 @@ author: Thaddeus Crews
 image: /storage/blog/covers/dev-snapshot-godot-4-7-dev-1.jpg
 image_caption_title: TR-49
 image_caption_description: A game by inkle
-date: 2026-02-16 12:00:00
+date: 2026-02-13 12:00:00
 ---
 
 The first development snapshot for 4.7 has arrived! With it, several quality PRs are free from the backlog at last, be it because they were locked out from the 4.6 feature freeze or were simply deemed too risky for the stable release. The majority of the latter cases were already highlighted earlier this week in our [4.6.1 RC 1 snapshot](/article/release-candidate-godot-4-6-rc-1/), so this article will be focused on the former: new features and quality-of-life goodies.
@@ -52,6 +52,8 @@ One very widely-requested feature across Godot's entire lifetime has been the ab
 <video autoplay loop muted playsinline title="DrawableTexture example">
   <source src="/storage/blog/dev-snapshot-godot-4-7-dev-1/drawable-texture-example.mp4?1" type="video/mp4">
 </video>
+
+The above clip is taken from a dedicated demo project by [Bastiaan Olij](https://github.com/BastiaanOlij). If you're interested in experiencing the changes firsthand, you can try it for yourself [here](https://github.com/BastiaanOlij/drawable-textures-demo).
 
 ### 3D: Enable `Path3D` collider snapping
 
