@@ -23,7 +23,7 @@ The official GodotCon returns to Europe and this time, it will be the first Godo
 
 If you would like to be a part of the conference by giving a talk or a workshop, please submit your proposals through the link below. We are looking for a diverse range of topics, from beginner to advanced, so don't hesitate to submit your ideas.
 
-[**➡️ Call for submissions**](https://talks.godotengine.org/godotcon-ams-2026/cfp), Deadline: 3 of March
+[**➡️ Call for submissions**](https://talks.godotengine.org/godotcon-ams-2026/cfp), Deadline: 30th of March
 
 We are also actively looking for sponsors to support the GodotCon Amsterdam. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to [godotcon@godotengine.org](mailto:godotcon@godotengine.org).
 
