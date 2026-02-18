@@ -403,13 +403,13 @@ Spain:
         url: https://discord.com/invite/fp4Z7QmZGu
       - title: Facebook
         url: https://www.facebook.com/GodotEngineEnEspanol
-  - name: Zenvoid (Medialab Prado)
+  - name: Zenvoid
     coordinates:
-      - 40.4105013
-      - -3.6958529
+      -40.4085505
+      -3.6171139
     links:
       - title: Website
-        url: https://www.medialab-prado.es/actividades/zenvoid-studio-desarrollo-de-videojuegos
+        url: https://zenvoid-studio.com/
   - name: Todogodot
     links:
       - title: Telegram
