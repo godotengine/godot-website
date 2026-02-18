@@ -12,7 +12,7 @@ The official GodotCon returns to Europe and this time, it will be the first Godo
 ### Information
 
 | 📅 Dates | 23rd, 24th of April |
-| 🕑 Time | 8:00 - 18:00|
+| 🕑 Time | 10:00 - 18:00|
 | 🇳🇱 Location | Amsterdam, The Netherlands |
 | 📍 Venue | Pathé Amsterdam Noord. <a href="https://www.google.com/maps/place/Path%C3%A9+Amsterdam+Noord/@52.4006788,4.9343291,898m/data=!3m1!1e3!4m6!3m5!1s0x47c6098c4b35b89f:0x95697d3c0ded012e!8m2!3d52.4007003!4d4.9346766!16s%2Fg%2F11h5qpwf3k?entry=tts&g_ep=EgoyMDI2MDIxMS4wIPu8ASoASAFQAw%3D%3D&skid=ce7b0ad0-aef1-4865-b929-21ec88e61fe0">Buikslotermeerplein 2003, 1025 XL Amsterdam, Netherlands</a> | 
 | 🌐 Website | [https://conference.godotengine.org](https://conference.godotengine.org/2026/) |
