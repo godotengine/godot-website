@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Maintenance release: Godot 4.6.1</title><link>https://godotengine.org/article/maintenance-release-godot-4-6-1/</link><summary>The first 4.6 maintenance release has arrived!</summary><description>&lt;p>It’s been three weeks since the release of &lt;a href="/releases/4.6/">Godot 4.6&lt;/a>, and we’re blown away by everything the community has already showcased in such a short time. And while Godot 4.7 is already &lt;a href="/article/dev-snapshot-godot-4-7-dev-1/">well underway&lt;/a>, a maintenance release for 4.6 was always set to release soon after. This release, Godot 4.6.1, addresses all the known show-stopping regressions and issues new to the Godot 4.6 release. We’d like to thank everyone who took the time to identify and squash these bugs, allowing for the expedient release of 4.6.1-stable!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>GodotCon Amsterdam - Save the date!</title><link>https://godotengine.org/article/godotcon-2026/</link><summary>Want to join? Amsterdam 23-24 of April. Get your tickets now! (Call for speakers and sponsors open)</summary><description>&lt;p>The official GodotCon returns to Europe and this time, it will be the first GodotCon in the city where the Godot Foundation calls home. For this edition of the event, we teamed up with the &lt;a href="https://dutchgamesassociation.nl/">Dutch Games Association&lt;/a> to help us organize it and make sure that everything runs smoothly.&lt;/p>
+&lt;h3 id="information">Information&lt;/h3>
+&lt;table>
+&lt;tbody>
+&lt;tr>
+&lt;td>📅 Dates&lt;/td>
+&lt;td>23rd, 24th of April&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🕑 Time&lt;/td>
+&lt;td>8:00 - 18:00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🇳🇱 Location&lt;/td>
+&lt;td>Amsterdam, The Netherlands&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>📍 Venue&lt;/td>
+&lt;td>Pathé Amsterdam Noord. &lt;a href="https://www.google.com/maps/place/Path%C3%A9+Amsterdam+Noord/@52.4006788,4.9343291,898m/data=!3m1!1e3!4m6!3m5!1s0x47c6098c4b35b89f:0x95697d3c0ded012e!8m2!3d52.4007003!4d4.9346766!16s%2Fg%2F11h5qpwf3k?entry=tts&amp;amp;g_ep=EgoyMDI2MDIxMS4wIPu8ASoASAFQAw%3D%3D&amp;amp;skid=ce7b0ad0-aef1-4865-b929-21ec88e61fe0">Buikslotermeerplein 2003, 1025 XL Amsterdam, Netherlands&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🌐 Website&lt;/td>
+&lt;td>&lt;a href="https://conference.godotengine.org/US/2025">https://conference.godotengine.org&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;a class="btn" href="https://tickets.godotengine.org/foundation/godotcon-ams-2026/">Buy tickets 🎟️&lt;/a>&lt;/p>
+&lt;h3 id="call-for-speakers-and-sponsors">Call for speakers and sponsors&lt;/h3>
+&lt;p>If you would like to be a part of the conference by giving a talk or a workshop, please submit your proposals through the link below. We are looking for a diverse range of topics, from beginner to advanced, so don’t hesitate to submit your ideas.&lt;/p>
+&lt;p>&lt;a href="https://talks.godotengine.org/godotcon-ams-2026/cfp">&lt;strong>➡️ Call for submissions&lt;/strong>&lt;/a>, Deadline: 3 of March&lt;/p>
+&lt;p>We are also actively looking for sponsors to support the GodotCon Amsterdam. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to &lt;a href="mailto:godotcon@godotengine.org">godotcon@godotengine.org&lt;/a>.&lt;/p>
+&lt;h3 id="tickets-and-more">Tickets and more&lt;/h3>
+&lt;p>Get your tickets &lt;a href="https://tickets.godotengine.org/foundation/godotcon-ams-2026/">here&lt;/a> and stay tuned for more information by joining the &lt;a href="https://discord.gg/Jasg9cpjqA">GodotCon Discord&lt;/a> or the mailing list.&lt;/p>
+&lt;form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
+&lt;style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}&lt;/style>
+&lt;div>
+&lt;input type="hidden" name="nonce" />
+&lt;input type="email" name="email" required="" placeholder="E-mail" style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);" />
+&lt;p style="display:none;">
+&lt;input id="6e6e9" type="checkbox" name="l" checked="" value="6e6e9ba4-732b-4528-b4cd-71bbe6850f8d" />
+&lt;label for="6e6e9">Godot Conference&lt;/label>
+&lt;/p>
+&lt;input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
+&lt;/div>
+&lt;/form>
+&lt;h3 id="will-there-still-be-a-godot-event-in-the-us-in-2026">Will there still be a Godot event in the US in 2026?&lt;/h3>
+&lt;p>Absolutely! The same team behind the GodotCon Boston will be announcing more details about the event for 2026 in the US. It will come back with a different name, but everything else should be the same.&lt;/p>
+&lt;p>See you soon!&lt;/p></description><category>Events</category><guid>https://godotengine.org/article/godotcon-2026/</guid><dc:creator>Emi</dc:creator><pubDate>Tue, 17 Feb 2026 13:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotcon-amsterdam-2026.png</image></item><item><title>Maintenance release: Godot 4.6.1</title><link>https://godotengine.org/article/maintenance-release-godot-4-6-1/</link><summary>The first 4.6 maintenance release has arrived!</summary><description>&lt;p>It’s been three weeks since the release of &lt;a href="/releases/4.6/">Godot 4.6&lt;/a>, and we’re blown away by everything the community has already showcased in such a short time. And while Godot 4.7 is already &lt;a href="/article/dev-snapshot-godot-4-7-dev-1/">well underway&lt;/a>, a maintenance release for 4.6 was always set to release soon after. This release, Godot 4.6.1, addresses all the known show-stopping regressions and issues new to the Godot 4.6 release. We’d like to thank everyone who took the time to identify and squash these bugs, allowing for the expedient release of 4.6.1-stable!&lt;/p>
 &lt;p>Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="/download/">&lt;strong>Download Godot 4.6.1 now&lt;/strong>&lt;/a> or try the &lt;a href="https://editor.godotengine.org/4.6.1.stable/">online version of the Godot editor&lt;/a>.&lt;/p>
@@ -3625,9 +3672,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;li>14 core extensions (KHR)&lt;/li>
 &lt;li>22 multi-vendor extensions (EXT)&lt;/li>
 &lt;li>59 vendor extensions&lt;/li>
-&lt;/ul></description><category>Progress Report</category><guid>https://godotengine.org/article/godot-xr-update-nov-2025/</guid><dc:creator>Bastiaan Olij</dc:creator><pubDate>Fri, 21 Nov 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/november-2025-update-godot-xr-community.jpg</image></item><item><title>Godot and W4 Games support Android XR from day One</title><link>https://godotengine.org/article/announcing-android-xr-support/</link><summary>Announcing support for the Android XR ecosystem by the Godot Foundation and W4 Games</summary><description>&lt;p>With the recent public release of Samsung Galaxy XR, the first headset using the new Android XR operating system, we are pleased to announce that Godot already supports this new ecosystem.&lt;/p>
-&lt;p>As a game engine that puts OpenXR front and center, Godot is uniquely positioned to excel on this platform.&lt;/p>
-&lt;p>With the release of the &lt;a href="https://store-beta.godotengine.org/asset/godot-xr/godot-openxr-vendors-plugin/">Godot OpenXR vendor plugin v4.2.0&lt;/a>, a new option for Android XR has been added that allows developers using &lt;a href="https://godotengine.org/download/">Godot 4.5 and newer&lt;/a> to effortlessly export their existing projects to this new platform.&lt;/p>
-&lt;p>The Godot XR Editor has also been updated with Android XR support and runs beautifully on this new device. Users can download the Godot XR Editor from &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">Google Play&lt;/a>.&lt;/p>
-&lt;p>W4 Games has &lt;a href="https://www.w4games.com/blog/w4-games-news-1/w4-games-works-with-the-androidxr-team-and-the-godot-foundation-to-improve-godots-android-xr-support-123">announced their support of the platform&lt;/a> including implementing various vendor specific extensions that expose functionality unique to Android XR.&lt;/p>
-&lt;p>As part of this initiative, W4 Games will be making a donation to the Godot Foundation to ensure supporting Android XR long term and continue their work on enhancing Godot’s OpenXR support.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/announcing-android-xr-support/</guid><dc:creator>Bastiaan Olij</dc:creator><pubDate>Fri, 14 Nov 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-and-androidxr.jpg</image></item></channel></rss>
+&lt;/ul></description><category>Progress Report</category><guid>https://godotengine.org/article/godot-xr-update-nov-2025/</guid><dc:creator>Bastiaan Olij</dc:creator><pubDate>Fri, 21 Nov 2025 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/november-2025-update-godot-xr-community.jpg</image></item></channel></rss>
