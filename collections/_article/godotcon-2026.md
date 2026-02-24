@@ -29,7 +29,7 @@ We are also actively looking for sponsors to support the GodotCon Amsterdam. If 
 
 ### Tickets and more
 
-Get your tickets [here](https://tickets.godotengine.org/foundation/godotcon-ams-2026/) and stay tuned for more information by joining the [GodotCon Discord](https://discord.gg/Jasg9cpjqA) or the mailing list.
+Get your tickets [here](https://tickets.godotengine.org/foundation/godotcon-ams-2026/) and stay tuned for more information by joining the [GodotCon Discord](https://discord.gg/A2YPMR23ye) or the mailing list.
 
 <form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
   <style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}</style>
