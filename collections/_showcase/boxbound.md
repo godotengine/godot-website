@@ -12,7 +12,8 @@ gallery: [
 	"/assets/showcase/screenshots/boxbound-3.webp",
 ]
 website: https://curlewstudios.com/boxbound/
-release_date: "2025-04-01"
+release_date: "April 2025"
+release_timestamp: "2025-04-01"
 youtube_id: "jWzmbzZpLq0"
 
 platforms: ["android", "ios"]

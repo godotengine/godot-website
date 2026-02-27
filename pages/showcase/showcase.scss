@@ -30,13 +30,22 @@
 		// sticky
 		position: -webkit-sticky;
 		position: sticky;
-		top: 10px;
 		display: grid;
+		gap: 10px;
+		top: 10px;
+
 		@media (max-width: 800px) {
 			grid-template-columns: 1fr 1fr;
 		}
-		label {
-			margin-right: 10px;
+
+		.platform-filter-container {
+			display: grid;
+			grid-template-columns: 30px 1fr;
+			gap: 5px;
+
+			label {
+				display: inline-block;
+			}
 		}
 	}
 }
@@ -96,6 +105,9 @@ a:has(.showcase-card) {
 	gap: 10px;
 	padding: 10px;
 	border-radius: 8px;
+
+	height: -webkit-fill-available;
+	height: fill-available;
 
 	.thumbnail {
 		width: 100%;

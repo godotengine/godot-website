@@ -15,7 +15,10 @@ gallery: [
 	"/assets/showcase/screenshots/my-card-is-better-than-your-card-6.webp",
 ]
 website: https://utustudios.com/press/mycard/
-release_date: "2026-10-06"
+release_date: "October 2026 (Early Access)"
+release_timestamp: "2026-10-06"
+release_date_timestamp: 2026-10-06
+
 youtube_id: "3L02RMI8Pmc"
 
 platforms: ["windows"]

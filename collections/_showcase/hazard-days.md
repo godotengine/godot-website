@@ -15,7 +15,8 @@ gallery: [
 	"/assets/showcase/screenshots/hazard-days-6.webp",
 ]
 website: https://skytecgames.com/
-release_date: "2024-07-02"
+release_date: "July 2024"
+release_timestamp: "2024-07-02"
 youtube_id: "dcFRNozZ9YE"
 
 platforms: ["android", "ios"]

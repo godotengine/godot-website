@@ -15,7 +15,8 @@ gallery: [
 	"/assets/showcase/screenshots/koira-6.webp",
 ]
 website: https://dont-nod.com/games/koira/
-release_date: "2025-04-01"
+release_date: "April 2025"
+release_timestamp: "2025-04-01"
 youtube_id: "Z1ortCeG5lU"
 
 platforms: ["windows", "macos", "linux", "playstation"]

@@ -15,7 +15,8 @@ gallery: [
 	"/assets/showcase/screenshots/tiny-garden-6.webp",
 ]
 website: https://aonorte.com/
-release_date: "2025-04-08"
+release_date: "April 2025"
+release_timestamp: "2025-04-08"
 youtube_id: "yVig9KKjK10"
 
 platforms: ["windows", "macos", "linux", "switch"]

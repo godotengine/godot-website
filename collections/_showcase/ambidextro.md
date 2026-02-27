@@ -14,7 +14,8 @@ gallery: [
 	"/assets/showcase/screenshots/ambidextro-5.webp",
 ]
 website: https://x.com/majorariatto
-release_date: "2025-03-25"
+release_date: "March 2025"
+release_timestamp: "2025-03-25"
 youtube_id: "dnuyOmAkmtw"
 
 platforms: ["windows", "macos", "linux"]

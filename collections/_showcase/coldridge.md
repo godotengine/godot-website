@@ -15,7 +15,8 @@ gallery: [
 	"/assets/showcase/screenshots/coldridge-6.webp",
 ]
 website: https://frog-collective.com
-release_date: "2024-10-28"
+release_date: "October 2024"
+release_timestamp: "2024-10-28"
 youtube_id: "BhXA1aqDRH8"
 
 platforms: ["windows", "linux"]

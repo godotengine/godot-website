@@ -15,7 +15,8 @@ gallery: [
 	"/assets/showcase/screenshots/tiny-pasture-6.webp",
 ]
 website: https://linktr.ee/CaveLiquid
-release_date: "2025-02-17"
+release_date: "February 2025"
+release_timestamp: "2025-02-17"
 youtube_id: "Slf7n0G6Nhw"
 
 platforms: ["windows", "macos"]

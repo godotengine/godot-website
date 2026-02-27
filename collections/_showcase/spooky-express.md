@@ -15,7 +15,8 @@ gallery: [
 	"/assets/showcase/screenshots/spooky-express-6.webp",
 ]
 website: https://spooky.express/
-release_date: "2025-10-21"
+release_date: "October 2025"
+release_timestamp: "2025-10-21"
 youtube_id: "ZZR0F5O2n4E"
 
 platforms: ["windows", "macos", "ios", "android"]

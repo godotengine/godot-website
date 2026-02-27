@@ -14,7 +14,8 @@ gallery: [
 	"/assets/showcase/screenshots/kinitopet-5.webp",
 ]
 website: https://www.kinitopet.com/
-release_date: "2024-01-09"
+release_date: "January 2024"
+release_timestamp: "2024-01-09"
 youtube_id: "6C2O1rzhKls"
 
 platforms: ["windows"]

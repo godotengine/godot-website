@@ -15,7 +15,8 @@ gallery: [
 	"/assets/showcase/screenshots/bearnard-6.webp",
 ]
 website: https://bearnardthegame.com/
-release_date: "2024-08-12"
+release_date: "August 2024"
+release_timestamp: "2024-08-12"
 youtube_id: "Qdpa7aSu5Jk"
 
 platforms: ["windows"]
