@@ -19,7 +19,7 @@ We are extremely grateful to Mike, our latest Corporate Platinum sponsor of the 
 
 I started out by learning to do 3D artwork around 2018, so around 3 years before I got into solo game development. Eventually I started getting more and more interested in game development, and decided to work on a small game for 2 months. Once that was released, it basically snowballed from there, and I couldn't stop thinking about making games.
 
-By the end of 2023 I had released 16 small games, and had a decent following of both players and content creators. These were all developed between studying or full-time jobs — my biggest inspirations were obscure games with weird visuals, mechanics, and narratives, and there was a lot of freedom working on stuff when I wasn't relying on them to turn a profit or anything like that. I was already super grateful for my small community. So after selling Buckshot Roulette for a dollar in late 2023, I was absolutely floored when it hit mainstream. Since then I've been able to make games full-time.
+By the end of 2023 I had released 16 small games, and had a decent following of both players and content creators. These were all developed between studying or full-time jobs — my biggest inspirations were obscure games with weird visuals, mechanics, and narratives, and there was a lot of freedom working on stuff when I wasn't relying on them to turn a profit or anything like that. I was already super grateful for my small community. So after selling Buckshot Roulette for a dollar in late 2023, I was absolutely floored when it hit mainstream. Since then I've been able to make games full time.
 
 ![](/assets/showcase/screenshots/br-1.jpg)
 
