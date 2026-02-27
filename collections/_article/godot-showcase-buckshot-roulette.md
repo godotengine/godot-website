@@ -37,7 +37,7 @@ I decided early on that the game would run on a keyboard only, which had some ch
 
 The biggest challenge was having the game be at least somewhat accessible to people who haven't touched a command line before. Originally the terminal puzzles in the game were designed so that the end goal was clear, but the path there wasn't. Players ended up being left in the dark, so making the steps to the goal clearer helped a lot. The puzzles ended up in a place where the player would have a pretty clear outline of a goal, and have to translate the steps to fulfill that into terminal commands.
 
-![](/assets/showcase/screenshots/br-2.jpg)
+![](/storage/blog/godot-showcase-buckshot-roulette/split-2.jpg)
 
 ## How did you discover Godot? What made you pick it for your project?
 
