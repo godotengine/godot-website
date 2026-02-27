@@ -4,16 +4,16 @@ excerpt: "Mike Klubnika tells us about his experience working on Buckshot Roulet
 categories: ["showcase"]
 author: Hugo Locurcio
 image: /storage/blog/godot-showcase-buckshot-roulette/thumbnail.jpg
-date: 2026-02-28 14:00:00
+date: 2026-02-27 18:00:00
 ---
 
-Mike Klubnika tells us about his experience developing the 2024 indie hit Buckshot Roulette, as well as his newer project, s.p.l.i.t.
+Mike Klubnika tells us about his experience developing the 2024 indie hit [Buckshot Roulette](https://store.steampowered.com/app/2835570/Buckshot_Roulette/), as well as his newer project, [s.p.l.i.t](https://store.steampowered.com/app/3684610/split/).
 
 We are extremely grateful to Mike, our latest Corporate Platinum sponsor of the [Godot Development Fund](https://fund.godotengine.org). Thanks to his donation, we'll be able to keep working on the engine for all of you. Like him, if you'd like to support the project financially you can do so using the [Development Fund](https://fund.godotengine.org) platform managed by [Godot Foundation](https://godot.foundation).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JEGxnpGqEaE" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
 
-—---
+---
 
 ## How did you get your start in game development? And how did it grow into a full-time position?
 
@@ -25,7 +25,7 @@ By the end of 2023 I had released 16 small games, and had a decent following of 
 
 ## Some people may be familiar with your game Buckshot Roulette, but could you tell us a bit about your newer project s.p.l.i.t.?
 
-s.p.l.i.t is a game I still don't fully know how to describe. Basically it's a hacking simulator with "Typing of The Dead" elements, and a bunch of existential horror. After Buckshot Roulette I had a really strong desire to do something more narrative heavy, and so s.p.l.i.t ended up being the perfect project for that.
+[s.p.l.i.t](https://store.steampowered.com/app/3684610/split/) is a game I still don't fully know how to describe. Basically it's a hacking simulator with "Typing of The Dead" elements, and a bunch of existential horror. After Buckshot Roulette I had a really strong desire to do something more narrative heavy, and so s.p.l.i.t ended up being the perfect project for that.
 
 For the gameplay side I tried to have somewhat "realistic" hacking, so the terminal is very barebones with no flashy visuals, and the game uses commands that players would hopefully already be familiar with.
 
