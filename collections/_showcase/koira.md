@@ -18,7 +18,7 @@ website: https://dont-nod.com/games/koira/
 release_date: "2025-04-01"
 youtube_id: "Z1ortCeG5lU"
 
-platforms: ["windows", "macos", "linux", "ps5"]
+platforms: ["windows", "macos", "linux", "playstation"]
 
 steam: https://store.steampowered.com/app/1626620/Koira/?curator_clanid=41324400
 sony: https://www.playstation.com/en-us/games/koira/
