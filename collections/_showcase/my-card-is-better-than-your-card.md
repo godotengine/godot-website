@@ -23,7 +23,7 @@ youtube_id: "3L02RMI8Pmc"
 
 platforms: ["windows"]
 
-steam: https://store.steampowered.com/app/3617620/My_Card_Is_Better_Than_Your_Card/
+steam: https://store.steampowered.com/app/3617620/My_Card_Is_Better_Than_Your_Card/?curator_clanid=41324400
 
 windows: true
 

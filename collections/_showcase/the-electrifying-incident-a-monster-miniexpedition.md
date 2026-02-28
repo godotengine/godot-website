@@ -20,7 +20,7 @@ youtube_id: "wmMKW3jjAkQ"
 
 platforms: ["windows", "macos"]
 
-steam: https://store.steampowered.com/app/3352300/The_Electrifying_Incident_A_Monster_MiniExpedition/
+steam: https://store.steampowered.com/app/3352300/The_Electrifying_Incident_A_Monster_MiniExpedition/?curator_clanid=41324400
 itch: https://draknek.itch.io/the-electrifying-incident
 
 windows: true

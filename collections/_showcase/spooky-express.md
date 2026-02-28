@@ -21,7 +21,7 @@ youtube_id: "ZZR0F5O2n4E"
 
 platforms: ["windows", "macos", "ios", "android"]
 
-steam: https://store.steampowered.com/app/3352310/Spooky_Express/
+steam: https://store.steampowered.com/app/3352310/Spooky_Express/?curator_clanid=41324400
 itch: https://draknek.itch.io/spooky-express
 
 windows: true
