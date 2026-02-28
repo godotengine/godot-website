@@ -5,7 +5,8 @@ date: 2026-03-01 00:00:06 +0000
 title: "Paragraphic"
 author: "Lost Minds"
 website: "https://paragraphic.design/"
-release_date: "2025-02-24"
+release_date: "February 2025"
+release_timestamp: "2025-02-24"
 
 image: "/assets/showcase/paragraphic-header.jpg"
 gallery: [
@@ -18,7 +19,11 @@ youtube_id: "Ay1aZLXb6pw"
 
 platforms: ["windows", "macos", "linux"]
 
+custom: https://paragraphic.design/
+
 tool: true
+
+featured_in_home: true
 ---
 
 ### Complex repetitions, gradients and patterns
