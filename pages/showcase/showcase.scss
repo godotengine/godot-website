@@ -26,16 +26,16 @@
 		grid-area: aside;
 	}
 	.filter-options {
-		margin-bottom: 20px;
 		// sticky
 		position: -webkit-sticky;
 		position: sticky;
 		display: grid;
-		gap: 10px;
+		column-gap: 10px;
 		top: 10px;
 
 		@media (max-width: 800px) {
 			grid-template-columns: 1fr 1fr;
+			margin-bottom: 20px;
 		}
 
 		.platform-filter-container {
