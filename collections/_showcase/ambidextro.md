@@ -1,6 +1,6 @@
 ---
 description: "What if you could use 50% of your brain? Learn to control 2 characters at the same time, one with each hand. Achieve ambidexterity and rescue both the prince and the princess simultaneously."
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:07 +0000
 
 title: "Ambidextro"
 author: "Majorariatto"

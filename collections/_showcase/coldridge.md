@@ -1,6 +1,6 @@
 ---
 description: "Coldridge is a push-your-luck puzzle roguelite! You'll need to carefully plan your moves and gamble on opportunities to survive. Fight adversity and save the city of Coldridge!"
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:03 +0000
 
 title: "ColdRidge"
 author: "Frog Collective"

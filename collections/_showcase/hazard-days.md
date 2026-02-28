@@ -1,6 +1,6 @@
 ---
 description: "An alien civilization visited Earth, using biological weapons and seizing resources they needed. You’re not just a soldier — you’re a gun survivor fighting through the ashes of humanity. Days after a brutal post apocalypse unfolds in a world ravaged by war, radiation, and outbreak. Step into post-apocalyptic survival games. Every decision matters in the extraction shooter meets unforgettable experience."
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:01 +0000
 
 title: "Hazard Days Extraction Shooter"
 author: "Skytec Games, Inc."

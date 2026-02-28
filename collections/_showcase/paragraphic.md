@@ -1,6 +1,6 @@
 ---
 description: "Paragraphic is created by the developer of Vectoraster and Patternodes, two macOS-exclusive design tools for creating custom vector halftones, patterns and animations. With Paragraphic the idea is to combine and develop the ideas and features behind these established tools even further in a new more accessible UI, and to make this available cross platform on macOS, Window and Linux."
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:06 +0000
 
 title: "Paragraphic"
 author: "Lost Minds"

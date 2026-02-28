@@ -1,6 +1,6 @@
 ---
 description: "Save a puppy and embark on a heartwarming, hand-drawn adventure together. Journey to the heart of an enchanted forest, solving puzzles and avoiding hunters to protect your newfound friend."
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:10 +0000
 
 title: "Koira"
 author: "Studio Tolima"

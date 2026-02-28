@@ -1,6 +1,6 @@
 ---
 description: "Sharpen your critical thinking skills in this quiz game that challenges you to spot rhetorical fallacies. Everyone likes this game so you must too, right?"
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:04 +0000
 
 title: "Fallacy Quiz"
 author: "Tim Krief"

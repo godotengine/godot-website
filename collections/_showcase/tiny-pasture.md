@@ -1,6 +1,6 @@
 ---
 description: "Meet your new little desk buddies! They’ll snooze, scratch, and scamper around while you work or study (don’t worry, they’ve been trained not to invade your workspace). If you’re good at animal management, they will occupy the bottom of your screen with different kinds and colors!"
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:05 +0000
 
 title: "Tiny Pasture"
 author: "CaveLiquid"

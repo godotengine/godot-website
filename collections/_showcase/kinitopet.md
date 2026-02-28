@@ -1,6 +1,6 @@
 ---
 description: "KinitoPET is a psychological horror experience that takes place through Kinito, an early 2000s virtual assistant. Kinito is able to walk, talk, browse, adapt, and play games as Kinito is like no other with its adaptive technology!"
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:00 +0000
 
 title: "KinitoPET"
 author: "troy_en"

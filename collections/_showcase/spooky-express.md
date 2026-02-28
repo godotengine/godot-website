@@ -1,6 +1,6 @@
 ---
 description: "All the passengers are dying to ride the Spooky Express! Don’t let them miss their stops: they may be monsters, but they still have places to be and people to eat – er, we mean meet!"
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:11 +0000
 
 title: "Spooky Express"
 author: "Draknek and Friends"

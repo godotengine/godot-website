@@ -1,6 +1,6 @@
 ---
 description: "A slow-paced life simulation and tidying up game about a cat, passion, transformation and growth. Categorizing cluttered everyday household items, navigating ever-changing life experiences, while gradually uncovering the joys and meaning of life through methodical space organization."
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:12 +0000
 
 title: "Organized Inside"
 author: "Meox Studio"

@@ -1,6 +1,6 @@
 ---
 description: "Tiny Garden lets you grow a pocket-sized garden inside a magical toy passed down through generations. Nurture plants, trade them for furniture, and customize your space in this relaxing mix of farming, puzzles, and strategy. No scores or time limits - let your creativity bloom!"
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:08 +0000
 
 title: "Tiny Garden"
 author: "Ao Norte"

@@ -1,6 +1,6 @@
 ---
 description: "An adorable bite-sized adventure from the creators of A Monster’s Expedition - explore the facility, avoid the live electricity, and repair the malfunctioning reactor."
-date: 2026-02-27 00:00:00 +0000
+date: 2026-03-01 00:00:09 +0000
 
 title: "The Electrifying Incident: A Monster Mini-Expedition"
 author: "Draknek and Friends"
