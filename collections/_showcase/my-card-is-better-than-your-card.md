@@ -1,6 +1,6 @@
 ---
 description: "Become the coolest kid of the playground in this playful roguelike deckbuilder. Craft every card yourself with adorable stickers and wow your rivals in tug-of-war card battles full of wonder!"
-date: 2026-03-01 00:00:13 +0000
+date: 2026-03-01 00:00:16 +0000
 
 title: "My Card Is Better Than Your Card!"
 author: "Utu Studios"
