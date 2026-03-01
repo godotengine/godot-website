@@ -118,7 +118,11 @@ regenerate: true
 						{% endif %}
 						<div class="caption">
 							<div class="attribution">
-								<span class="card-title">{{ project.title }}</span>
+								{% assign title_lang_property = "" %}
+								{% if project.title_lang != null %}
+									{% assign title_lang_property = 'lang="' | append: project.title_lang | append: '"' %}
+								{% endif %}
+								<span class="card-title" {{ title_lang_property }}>{{ project.title }}</span>
 								<span class="author">{{ project.author }}</span>
 							</div>
 							<div class="icons">
@@ -150,7 +154,11 @@ regenerate: true
 						{% endif %}
 						<div class="caption">
 							<div class="attribution">
-								<span class="card-title">{{ project.title }}</span>
+								{% assign title_lang_property = "" %}
+								{% if project.title_lang != null %}
+									{% assign title_lang_property = 'lang="' | append: project.title_lang | append: '"' %}
+								{% endif %}
+								<span class="card-title" {{ title_lang_property }}>{{ project.title }}</span>
 								<span class="author">{{ project.author }}</span>
 							</div>
 							<div class="icons">
@@ -190,7 +198,11 @@ regenerate: true
 						{% endif %}
 						<div class="caption">
 							<div class="attribution">
-								<span class="card-title">{{ project.title }}</span>
+								{% assign title_lang_property = "" %}
+								{% if project.title_lang != null %}
+									{% assign title_lang_property = 'lang="' | append: project.title_lang | append: '"' %}
+								{% endif %}
+								<span class="card-title" {{ title_lang_property }}>{{ project.title }}</span>
 								<span class="author">{{ project.author }}</span>
 							</div>
 						</div>
