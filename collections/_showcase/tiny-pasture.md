@@ -23,8 +23,6 @@ platforms: ["windows", "macos"]
 
 steam: https://store.steampowered.com/app/3167550/Tiny_Pasture/?curator_clanid=41324400
 
-featured_in_home: true
-
 windows: true
 macos: true
 ---

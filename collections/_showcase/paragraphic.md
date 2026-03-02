@@ -22,8 +22,6 @@ platforms: ["windows", "macos", "linux"]
 custom: https://paragraphic.design/
 
 tool: true
-
-featured_in_home: true
 ---
 
 ### Complex repetitions, gradients and patterns

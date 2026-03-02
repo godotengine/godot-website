@@ -30,8 +30,6 @@ macos: true
 linux: true
 ios: true
 android: true
-
-featured_in_home: true
 ---
 
 _Jump a rift, fight off monsters, and plunder their world._ Rift Riff is a tower defense game noteworthy in two ways: it's particularly strategic and remarkably forgiving.

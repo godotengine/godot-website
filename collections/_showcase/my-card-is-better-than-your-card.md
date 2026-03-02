@@ -27,7 +27,6 @@ steam: https://store.steampowered.com/app/3617620/My_Card_Is_Better_Than_Your_Ca
 
 windows: true
 
-featured_in_home: true
 ---
 
 My Card Is Better Than Your Card! is an adorable yet challenging sticker sticking roguelike deckbuilder. Create your own cards with a colorful catalogue of stickers combining their effects. Collect more and more stickers, discover synergies and find your own playstyle with a deck full of your own creations to defeat your rivals in whimsical card duels.

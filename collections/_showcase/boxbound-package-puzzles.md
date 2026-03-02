@@ -21,8 +21,6 @@ platforms: ["android", "ios"]
 googleplay: https://play.google.com/store/apps/details?id=com.curlew.packages
 appstore: https://apps.apple.com/us/app/boxbound-package-puzzles/id6471577718
 
-featured_in_home: true
-
 android: true
 ios: true
 ---

@@ -26,7 +26,6 @@ itch: https://draknek.itch.io/the-electrifying-incident
 windows: true
 macos: true
 
-featured_in_home: true
 ---
 
 Time is running out and the reactor is on the brink of meltdown. Explore the facility and manipulate the many electrical hazards and locked doors to find a way deeper, towards the source of the problem. Your only tool: a mechanical grabber-arm allowing you to lift and move boxes from afar.
