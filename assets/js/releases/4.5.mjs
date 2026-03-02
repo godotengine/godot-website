@@ -842,7 +842,7 @@ const intlBlockquoteTextEntries = [
 	{ text: "Hallå" }, // sv (Swedish)
 	{ text: "வணக்கம்" }, // ta (Tamil)
 	{ text: "Merhaba" }, // tr (Turkish)
-	{ text: "привіт" }, // uk (Ukranian)
+	{ text: "Привіт" }, // uk (Ukrainian)
 ];
 
 for (const intlBlockquoteTextEntry of intlBlockquoteTextEntries) {
