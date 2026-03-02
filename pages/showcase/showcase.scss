@@ -26,17 +26,26 @@
 		grid-area: aside;
 	}
 	.filter-options {
-		margin-bottom: 20px;
 		// sticky
 		position: -webkit-sticky;
 		position: sticky;
-		top: 10px;
 		display: grid;
+		column-gap: 10px;
+		top: 10px;
+
 		@media (max-width: 800px) {
 			grid-template-columns: 1fr 1fr;
+			margin-bottom: 20px;
 		}
-		label {
-			margin-right: 10px;
+
+		.platform-filter-container {
+			display: grid;
+			grid-template-columns: 30px 1fr;
+			gap: 5px;
+
+			label {
+				display: inline-block;
+			}
 		}
 	}
 }
@@ -97,6 +106,9 @@ a:has(.showcase-card) {
 	padding: 10px;
 	border-radius: 8px;
 
+	height: -webkit-fill-available;
+	height: fill-available;
+
 	.thumbnail {
 		width: 100%;
 		display: block;
@@ -127,6 +139,7 @@ a:has(.showcase-card) {
 
 	.card-title {
 		font-weight: bold;
+		hyphens: auto;
 	}
 
 	.icons {

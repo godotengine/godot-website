@@ -4,109 +4,63 @@ layout: default
 
 {% include header.html %}
 
-<style>
-	.showcase-video-image {
-		margin-top: 1rem;
-	}
-
-	.showcase-developer-quote {
-		font-style: italic;
-		color: var(--base-color-text-title);
-
-	}
-
-	.showcase-developer-quote p:first-child::before {
-		content: '“';
-		font-size: 150%;
-		margin-right: -0.1rem;
-	}
-
-	.showcase-developer-quote p:last-child::after {
-		content: '”';
-		font-size: 150%;
-		margin-left: -0.1rem;
-	}
-
-	@media (min-width: 900px) {
-		.showcase-video-image {
-			margin-left: 1rem;
-			margin-top: 0;
-		}
-	}
-
-	article h3 {
-		margin-bottom: 0;
-		margin-top: 30px;
-	}
-	
-	footer.footer-global {
-		margin-top: 60px;
-	}
-</style>
+<link rel="stylesheet" href="/pages/showcase/showcase-item.css">
 
 <div class="head">
 	<div class="add-nav-gap"></div>
 	<div class="container flex eqsize responsive">
 		<div class="main">
 
-			<div style="margin: 1.25rem 0">
+			<div class="back-to-showcase-container">
 				<a href="/showcase/"><strong>&lt;</strong>&nbsp;&nbsp;Back to showcase</a>
 			</div>
 
 			<h1 class="intro-title">{{ page.title }}</h1>
-			<h3 style="opacity: 0.75; margin-top: 0.5rem">
-				by <a href="{{ page.website }}" target="_blank"
-					style="text-decoration: underline; text-decoration-thickness: 0.125rem; text-decoration-color: hsla(0, 0%, 100%, 0.5)">{{
-					page.author }}</a>
-				| {% if page.release_date == "TBD" %}Release date: <abbr title="To Be Determined">TBD</abbr>{% else %}{{
-				page.release_date }}{% endif %}
+			<h3 class="intro-subtitle">
+				by <a class="author" href="{{ page.website }}" target="_blank">{{ page.author }}</a>
+				| {% if page.release_date == "TBD" %}Release date: <abbr title="To Be Determined">TBD</abbr>{% else %}{{ page.release_date }}{% endif %}
 			</h3>
-			<div style="filter: invert(100%); opacity: 0.75; margin-top: 1rem">
+			<div class="intro-platforms">
 
 
 				{% if page.windows %}
-				<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/windows.svg" alt="Windows" title="Windows" draggable="false">
 				{% endif %}
 
 				{% if page.macos %}
-				<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/macos.svg" alt="Mac" title="Mac" draggable="false">
 				{% endif %}
 
 				{% if page.linux %}
-				<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/linux.svg" alt="Linux" title="Linux" draggable="false">
 				{% endif %}
 
 				{% if page.switch %}
-				<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/switch.svg" alt="Nintendo Switch" title="Switch" draggable="false">
 				{% endif %}
 
 				{% if page.quest %}
-				<img src="/assets/images/platforms/vr.svg" alt="VR" title="VR" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/vr.svg" alt="VR" title="VR" draggable="false">
 				{% endif %}
 
 				{% if page.html5 %}
-				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/web.svg" alt="HTML5" title="HTML5" draggable="false">
 				{% endif %}
 
 				{% if page.android %}
-				<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" style="margin: 0 0.125rem" width="24"
-					height="24">
+				<img src="/assets/images/platforms/android.svg" alt="Android" title="Android" draggable="false">
 				{% endif %}
 
 				{% if page.ios %}
-				<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/ios.svg" alt="iOS" title="iOS" draggable="false">
 				{% endif %}
 
 				{% if page.playstation %}
-				<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" style="margin: 0 0.125rem"
-					width="24" height="24">
+				<img src="/assets/images/platforms/playstation.svg" alt="PlayStation" title="PlayStation" draggable="false">
 				{% endif %}
 
 				{% if page.xbox %}
-				<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" style="margin: 0 0.125rem" width="24" height="24">
+				<img src="/assets/images/platforms/xbox.svg" alt="Xbox" title="Xbox" draggable="false">
 				{% endif %}
 
 			</div>

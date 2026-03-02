@@ -3,7 +3,11 @@ permalink: /showcase/index.html
 title: "Showcase - Godot Engine"
 description: "Games made with the Godot Engine."
 layout: default
+regenerate: true
+
 ---
+{% assign now_timestamp = "now" | date: "%Y-%m-%d" %}
+
 <link rel="stylesheet" href="/pages/showcase/showcase.css?1">
 
 {% include header.html %}
@@ -24,16 +28,66 @@ layout: default
 		<aside>
 			<h3>Filter by:</h3>
 			<div class="filter-options">
-				<label><input type="checkbox" class="platform-filter" value="windows"> Windows</label>
-				<label><input type="checkbox" class="platform-filter" value="macos"> Mac</label>
-				<label><input type="checkbox" class="platform-filter" value="linux"> Linux</label>
-				<label><input type="checkbox" class="platform-filter" value="web"> Web</label>
-				<label><input type="checkbox" class="platform-filter" value="android"> Android</label>
-				<label><input type="checkbox" class="platform-filter" value="ios"> iOS</label>
-				<label><input type="checkbox" class="platform-filter" value="playstation"> PlayStation</label>
-				<label><input type="checkbox" class="platform-filter" value="xbox"> Xbox</label>
-				<label><input type="checkbox" class="platform-filter" value="switch"> Nintendo Switch</label>
-				<label><input type="checkbox" class="platform-filter" value="vr"> VR</label>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-windows" type="checkbox" class="platform-filter" value="windows">
+					</div>
+					<label for="platform-filter-windows">Windows</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-macos" type="checkbox" class="platform-filter" value="macos">
+					</div>
+					<label for="platform-filter-macos">Mac</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-linux" type="checkbox" class="platform-filter" value="linux">
+					</div>
+					<label for="platform-filter-linux">Linux</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-web" type="checkbox" class="platform-filter" value="web">
+					</div>
+					<label for="platform-filter-web">Web</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-android" type="checkbox" class="platform-filter" value="android">
+					</div>
+					<label for="platform-filter-android">Android</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-ios" type="checkbox" class="platform-filter" value="ios">
+					</div>
+					<label for="platform-filter-ios">iOS</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-playstation" type="checkbox" class="platform-filter" value="playstation">
+					</div>
+					<label for="platform-filter-playstation">PlayStation</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-xbox" type="checkbox" class="platform-filter" value="xbox">
+					</div>
+					<label for="platform-filter-xbox">Xbox</label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-switch" type="checkbox" class="platform-filter" value="switch">
+					</div>
+					<label for="platform-filter-switch">Nintendo Switch / <span style="overflow-wrap: break-word;">Nintendo&nbsp;Switch&nbsp;2</span></label>
+				</div>
+				<div class="platform-filter-container">
+					<div>
+						<input id="platform-filter-vr" type="checkbox" class="platform-filter" value="vr">
+					</div>
+					<label for="platform-filter-vr">VR</label>
+				</div>
 			</div>
 		</aside>
 
@@ -43,7 +97,16 @@ layout: default
 			<section class="flex grid showcase-cards">
 				{% assign projects = site.showcase | sort: 'date' | reverse %}
 				{% for project in projects %}
-				{% if project.release_date != 'TBD' and project.tool != true %}
+				{% assign is_future = false %}
+				{% if project.release_date == 'TBD' %}
+					{% assign is_future = true %}
+				{% elsif project.release_date_timestamp != null %}
+					{% assign project_release_date_timestamp = project.release_date_timestamp | append: "" %}
+					{% if project_release_date_timestamp > now_timestamp %}
+						{% assign is_future = true %}
+					{% endif %}
+				{% endif %}
+				{% if is_future == false and project.tool != true %}
 				<a href="{{ project.url }}" class="showcase-link-wrapper {% for platform in project.platforms%}{{platform}} {% endfor %}" style="text-decoration: none;">
 					<article class="showcase-card">
 						{% if project.image %}
@@ -55,7 +118,11 @@ layout: default
 						{% endif %}
 						<div class="caption">
 							<div class="attribution">
-								<span class="card-title">{{ project.title }}</span>
+								{% assign title_lang_property = "" %}
+								{% if project.title_lang != null %}
+									{% assign title_lang_property = 'lang="' | append: project.title_lang | append: '"' %}
+								{% endif %}
+								<span class="card-title" {{ title_lang_property }}>{{ project.title }}</span>
 								<span class="author">{{ project.author }}</span>
 							</div>
 							<div class="icons">
@@ -87,7 +154,11 @@ layout: default
 						{% endif %}
 						<div class="caption">
 							<div class="attribution">
-								<span class="card-title">{{ project.title }}</span>
+								{% assign title_lang_property = "" %}
+								{% if project.title_lang != null %}
+									{% assign title_lang_property = 'lang="' | append: project.title_lang | append: '"' %}
+								{% endif %}
+								<span class="card-title" {{ title_lang_property }}>{{ project.title }}</span>
 								<span class="author">{{ project.author }}</span>
 							</div>
 							<div class="icons">
@@ -106,7 +177,16 @@ layout: default
 			<section class="flex grid showcase-cards">
 				{% assign projects = site.showcase | sort: 'date' | reverse %}
 				{% for project in projects %}
+				{% assign is_future = false %}
 				{% if project.release_date == 'TBD' %}
+					{% assign is_future = true %}
+				{% elsif project.release_date_timestamp != null %}
+					{% assign project_release_date_timestamp = project.release_date_timestamp | append: "" %}
+					{% if project_release_date_timestamp > now_timestamp %}
+						{% assign is_future = true %}
+					{% endif %}
+				{% endif %}
+				{% if is_future == true %}
 				<a href="{{ project.url }}" class="showcase-link-wrapper {% for platform in project.platforms%}{{platform}} {% endfor %}" style="text-decoration: none;">
 					<article class="showcase-card">
 						{% if project.image %}
@@ -118,7 +198,11 @@ layout: default
 						{% endif %}
 						<div class="caption">
 							<div class="attribution">
-								<span class="card-title">{{ project.title }}</span>
+								{% assign title_lang_property = "" %}
+								{% if project.title_lang != null %}
+									{% assign title_lang_property = 'lang="' | append: project.title_lang | append: '"' %}
+								{% endif %}
+								<span class="card-title" {{ title_lang_property }}>{{ project.title }}</span>
 								<span class="author">{{ project.author }}</span>
 							</div>
 						</div>

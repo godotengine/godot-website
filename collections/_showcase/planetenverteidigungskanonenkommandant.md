@@ -3,6 +3,7 @@ description: "Operate your planetary defense cannon to fend off an interplanetar
 date: 2024-06-21 00:00:00 +0000
 
 title: "PVKK: Planetenverteidigungskanonenkommandant"
+title_lang: "de-DE"
 author: "Bippinbits"
 
 image: "/assets/showcase/planetenverteidigungskanonenkommandant.jpg"
