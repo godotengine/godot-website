@@ -1,0 +1,50 @@
+---
+---
+
+.container.submissions-page {
+	padding: 2em 30px;
+	padding-top: 0;
+
+	.latest {
+		opacity: 0.4;
+	}
+
+	h2 {
+		margin-top: 40px;
+	}
+
+	ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+		padding: 0;
+
+		@media (max-width: 900px) {
+			grid-template-columns: 1fr;
+		}
+
+		li {
+			list-style: none;
+			background: #272727;
+			border-radius: 6px;
+			padding: 16px 20px;
+			border: 1px solid #444;
+			box-shadow: 0 4px 13px -4px #000000c4;
+			margin: 0;
+
+			@media (prefers-color-scheme: light) {
+				background: #fff;
+				border: 1px solid #c1c1c1;
+				box-shadow: 0 4px 13px -4px #ffffffc4;
+			}
+		}
+	}
+
+	.submit-link svg {
+		width: 13px;
+		fill: var(--link-color);
+		position: absolute;
+		top: 6px;
+		margin-left: 7px;
+	}
+}
