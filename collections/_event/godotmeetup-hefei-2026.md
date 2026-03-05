@@ -23,3 +23,5 @@ Join us for a small Godot meetup in Hefei, Anhui, China, where we’ll share new
 You’ll be able to try out many games created by other Godot users. Most of them come from past festival competitions, and some were made specifically for this meetup. You can also listen to presentations or join discussions.
 
 Godot developers of all skill levels are welcome. Even if you're simply interested in open source or games, feel free to join.
+
+2026年3月22日上午十点，我们将在安徽省合肥市举行一场Godot Meetup，在活动中分享本地社群的最新资讯、开源项目、以及使用Godot引擎制作的优秀作品！现场能够体验到其他开发者的游戏，其中大部分来自往年的Festival大赛，也有几款专为本次活动打造！你可以聆听他人的分享，也可以自由参与讨论。欢迎各种水平的Godot用户参与，对开源或游戏感兴趣的朋友亦可加入。
