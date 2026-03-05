@@ -27,6 +27,13 @@ If you would like to be a part of the conference by giving a talk or a workshop,
 
 We are also actively looking for sponsors to support the GodotCon Amsterdam. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to [godotcon@godotengine.org](mailto:godotcon@godotengine.org).
 
+
+### Call for volunteers
+
+An event like this only happens thanks to passionate people like you who are willing to help behind the scenes. If you want to contribute to making GodotCon 2026 a welcoming and smooth experience for everyone, we are currently looking for volunteers to help us manage different aspects of the conference, from stage managers to photographers.
+
+If you would like to participate, please fill out [this form](https://docs.google.com/forms/d/1iW7ng8mHutrhYHyil3vDkcqR1SxRYrELJXqR7nQJMNQ).
+
 ### Tickets and more
 
 Get your tickets [here](https://tickets.godotengine.org/foundation/godotcon-ams-2026/) and stay tuned for more information by joining the [GodotCon Discord](https://discord.gg/A2YPMR23ye) or the mailing list.
