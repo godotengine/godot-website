@@ -13,6 +13,7 @@ date_passed: false
 
 location: "No. 666 Wangjiang West Road, Shushan District, Hefei, Anhui, China"
 location_short: "Hefei, Anhui, China"
+location_map: "https://j.map.baidu.com/42/6LxJ"
 
 cover_image: "/storage/app/media/events/hefei-2026/cover.jpg"
 cover_image_caption: "Cover image: 2024 Hefei High-Tech Zone"
