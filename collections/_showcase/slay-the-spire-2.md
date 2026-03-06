@@ -7,10 +7,10 @@ author: "Mega Crit"
 
 image: "/assets/showcase/slay-the-spire-2-header.jpg"
 gallery: [
+	"/assets/showcase/screenshots/slay-the-spire-2-4.webp",
 	"/assets/showcase/screenshots/slay-the-spire-2-1.webp",
 	"/assets/showcase/screenshots/slay-the-spire-2-2.webp",
 	"/assets/showcase/screenshots/slay-the-spire-2-3.webp",
-	"/assets/showcase/screenshots/slay-the-spire-2-4.webp",
 	"/assets/showcase/screenshots/slay-the-spire-2-5.webp",
 	"/assets/showcase/screenshots/slay-the-spire-2-6.webp",
 ]
@@ -23,6 +23,8 @@ youtube_id: "PW22jwFNxU8"
 platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/2868840/Slay_the_Spire_2/?curator_clanid=41324400
+
+featured_in_home: true
 
 windows: true
 macos: true
