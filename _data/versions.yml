@@ -7,6 +7,11 @@
       release_date: "13 February 2026"
       release_notes: "/article/dev-snapshot-godot-4-7-dev-1/"
 
+- name: "4.6.2"
+  flavor: "rc1"
+  release_date: "9 March 2026"
+  release_notes: "/article/release-candidate-godot-4-6-2-rc-1/"
+
 - name: "4.6.1"
   flavor: "stable"
   release_date: "16 February 2026"
