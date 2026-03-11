@@ -1,23 +1,8 @@
 ---
 ---
 
-@mixin smaller-than-small-computer() {
-	@media (width < 900px) {
-		@content;
-	}
-}
-
-@mixin smaller-than-tablet() {
-	@media (width < 768px) {
-		@content;
-	}
-}
-
-@mixin smaller-than-mobile-large() {
-	@media (width < 500px) {
-		@content;
-	}
-}
+$size-computer: 900px;
+$size-tablet: 768px;
 
 .main-download {
 	display: flex;
@@ -25,7 +10,7 @@
 	gap: 48px;
 	margin-top: 48px;
 
-	@include smaller-than-small-computer() {
+	@media screen and (width <= $size-computer) {
 		align-items: center;
 		flex-direction: column;
 		gap: 36px;
@@ -48,7 +33,7 @@
 		color: var(--primary-color-text-title);
 		box-sizing: border-box;
 
-		@include smaller-than-small-computer() {
+		@media screen and (width <= $size-computer) {
 			width: 100%;
 		}
 	}
@@ -60,7 +45,7 @@
 		font-weight: 300;
 		font-size: 15px;
 
-		@include smaller-than-small-computer() {
+		@media screen and (width <= $size-computer) {
 			text-align: center;
 		}
 
@@ -81,7 +66,7 @@
 	flex-direction: row;
 	gap: 12px;
 
-	@include smaller-than-small-computer() {
+	@media screen and (width <= $size-computer) {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -110,15 +95,10 @@
 
 .features-grid {
 	display: grid;
-	/* grid-template-columns: 1fr 1fr 1fr; */
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-auto-rows: min-content;
 	gap: 20px;
 	grid-auto-flow: row;
-
-	@include smaller-than-small-computer() {
-		/* grid-template-columns: 1fr; */
-	}
 }
 
 .feature {
@@ -190,7 +170,7 @@
 	margin: 0;
 }
 
-@include smaller-than-small-computer() {
+@media screen and (width <= $size-computer) {
 	#highlight {
 		.highlight-cover {
 			border-radius: 4px 4px 0 0;
@@ -205,7 +185,7 @@
 .news-list .button-container {
 	text-align: right;
 
-	@include smaller-than-tablet() {
+	@media screen and (width <= $size-tablet) {
 		text-align: left;
 	}
 }
