@@ -3,17 +3,21 @@ name: "Godot Meetup @ Hefei 2026"
 name_short: "Godot @ Hefei"
 
 # Dates in human-readable format.
-dates: "Sunday 22 March / 10:00 (UTC+8)"
-dates_short: "22 March 10:00"
+dates: "Sunday 22 March / 09:30 (UTC+8)"
+dates_short: "22 March 09:30"
 
 # The first date of the event in ISO format, used for sorting.
-date: 2026-03-22 10:00:00
+date: 2026-03-22 09:30:00
 # Set to true to mark it as a past event
 date_passed: false
 
 location: "No. 666 Wangjiang West Road, Shushan District, Hefei, Anhui, China"
 location_short: "Hefei, Anhui, China"
 location_map: "https://j.map.baidu.com/42/6LxJ"
+
+registration: "[https://godothub.com/event/godot-meetup-hefei-2026](https://godothub.com/event/godot-meetup-hefei-2026) (register to receive the entry SMS)"
+
+entrance_fee: "Free (registration required)"
 
 cover_image: "/storage/app/media/events/hefei-2026/cover.jpg"
 cover_image_caption: "Cover image: 2024 Hefei High-Tech Zone"
@@ -25,4 +29,4 @@ You’ll be able to try out many games created by other Godot users. Most of the
 
 Godot developers of all skill levels are welcome. Even if you're simply interested in open source or games, feel free to join.
 
-2026年3月22日上午十点，我们将在安徽省合肥市举行一场Godot Meetup，在活动中分享本地社群的最新资讯、开源项目、以及使用Godot引擎制作的优秀作品！现场能够体验到其他开发者的游戏，其中大部分来自往年的Festival大赛，也有几款专为本次活动打造！你可以聆听他人的分享，也可以自由参与讨论。欢迎各种水平的Godot用户参与，对开源或游戏感兴趣的朋友亦可加入。
+2026年3月22日上午九点半，我们将在安徽省合肥市举行一场Godot Meetup，在活动中分享本地社群的最新资讯、开源项目、以及使用Godot引擎制作的优秀作品！现场能够体验到其他开发者的游戏，其中大部分来自往年的Festival大赛，也有几款专为本次活动打造！你可以聆听他人的分享，也可以自由参与讨论。欢迎各种水平的Godot用户参与，对开源或游戏感兴趣的朋友亦可加入。本活动需要[报名](https://godothub.com/event/godot-meetup-hefei-2026)。
