@@ -284,24 +284,24 @@ body a {
   color: var(--link-color);
   text-decoration: underline;
   text-decoration-color: var(--link-underline-color);
-  transition: 0.5s filter;
 }
 
-body a,
+body a > :not(.no-filter),
 .btn.flat,
 .search-bar-btn:hover {
   /* Use `filter` on all states to prevent the clickable area from changing */
   /* when an image is hovered (see GH-369). */
   filter: brightness(100%);
+  transition: 0.5s filter;
 }
 
-body a:hover,
+body a > :not(.no-filter):hover,
 .btn.flat:hover,
 .search-bar-btn:hover {
   filter: brightness(117.5%);
 }
 
-body a:active,
+body a > :not(.no-filter):active,
 .btn.flat:active,
 .search-bar-btn:active {
   filter: brightness(82.5%);
