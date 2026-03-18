@@ -6,9 +6,6 @@ platinum:
   - name: "W4 Games"
     link: "https://w4games.com/"
     image: "https://fund.godotengine.org/static/logos/w4.png"
-  - name: "V-Sekai"
-    link: "https://github.com/V-Sekai"
-    image: "https://fund.godotengine.org/static/logos/v-sekai.png"
   - name: "JetBrains"
     link: "https://www.jetbrains.com/lp/rider-godot/"
     image: "https://fund.godotengine.org/static/logos/jetbrains.svg"
@@ -35,9 +32,6 @@ silver:
   - name: "Broken Rules"
     link: "https://brokenrul.es"
     image: "https://fund.godotengine.org/static/logos/broken-rules.svg"
-  - name: "LoadComplete"
-    link: "https://loadcomplete.com/"
-    image: "https://fund.godotengine.org/static/logos/loadcomplete.png"
   - name: "Null"
     link: "https://null.com/"
     image: "https://fund.godotengine.org/static/logos/null.svg"
@@ -47,9 +41,6 @@ silver:
   - name: "Re-Logic"
     link: "https://re-logic.com/"
     image: "https://fund.godotengine.org/static/logos/re-logic.png"
-  - name: Bippinbits
-    link: https://bippinbits.com/
-    image: "https://fund.godotengine.org/static/logos/bippinbits.png"
   - name: Chasing Carrots
     link: "https://www.chasing-carrots.com/"
     image: "https://fund.godotengine.org/static/logos/chasing-carrots.webp"
