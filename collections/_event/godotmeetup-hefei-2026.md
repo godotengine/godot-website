@@ -11,9 +11,9 @@ date: 2026-03-22 09:30:00
 # Set to true to mark it as a past event
 date_passed: false
 
-location: "No. 666 Wangjiang West Road, Shushan District, Hefei, Anhui, China"
+location: "425, Hefei Women & Children’s Activity Center, Yaohai District, Hefei, Anhui, China"
 location_short: "Hefei, Anhui, China"
-location_map: "https://j.map.baidu.com/42/6LxJ"
+location_map: "https://j.map.baidu.com/e0/LX4J"
 
 registration: "[https://godothub.com/event/godot-meetup-hefei-2026](https://godothub.com/event/godot-meetup-hefei-2026) (register to receive the entry SMS)"
 
