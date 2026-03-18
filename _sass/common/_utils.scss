@@ -1,0 +1,9 @@
+@use "sass:list";
+
+@function repeat-value($value, $times, $inbetween: space) {
+	$result: ();
+	@for $i from 1 through $times {
+		$result: list.append($result, $value, $inbetween);
+	}
+	@return $result;
+}

@@ -7,275 +7,8 @@ layout: default
 
 {% include header.html %}
 
-<link rel="stylesheet" href="/assets/css/transparent-nav.css?3">
-<style>
-	.features-why {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: radial-gradient(ellipse closest-side at 50% 45%, #6469ac, #364b7c, #12122b);
-		padding-top: 60px;
-		margin-bottom: 24px;
-		overflow: hidden;
-	}
-
-	@media (max-width: 900px) {
-		.features-why {
-			padding-left: 16px;
-			padding-right: 16px;
-		}
-	}
-
-	.features-why h2 {
-		color: var(--dark-color-text-title);
-		font-size: 40px;
-		margin: 36px 54px 8px 54px;
-	}
-
-	.btn-see-showcase {
-		line-height: 26px;
-		text-align: center;
-	}
-
-	.feature-container {
-		display: grid;
-		justify-content: center;
-		column-gap: 28px;
-		row-gap: 24px;
-		grid-template-columns: 1fr;
-		margin: auto;
-		margin-bottom: 42px;
-		width: 1200px;
-		max-width: 1200px;
-	}
-	@media (max-width: 1250px) {
-		.feature-container {
-			width: auto;
-			padding-left: 16px;
-			padding-right: 16px;
-		}
-	}
-	@media (max-width: 900px) {
-		.feature-container {
-			width: auto;
-			overflow: auto;
-			flex-direction: column;
-		}
-	}
-
-	.feature-container h3 {
-		font-size: 22px;
-		margin-bottom: 4px;
-	}
-
-	.feature-container.feature-container-2x {
-		grid-template-columns: 1fr 1fr;
-	}
-	.feature-container.feature-container-2x h3 {
-		grid-column: span 2;
-	}
-	@media (max-width: 1020px) {
-		.feature-container.feature-container-2x {
-			grid-template-columns: 1fr;
-		}
-		.feature-container.feature-container-2x h3 {
-			grid-column: span 1;
-		}
-	}
-
-	.feature-container.feature-container-3x {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	.feature-container.feature-container-3x h3 {
-		grid-column: span 3;
-	}
-	@media (max-width: 1020px) {
-		.feature-container.feature-container-3x {
-			grid-template-columns: 1fr 1fr;
-		}
-		.feature-container.feature-container-3x h3 {
-			grid-column: span 2;
-		}
-	}
-	@media (max-width: 800px) {
-		.feature-container.feature-container-3x {
-			grid-template-columns: 1fr;
-		}
-		.feature-container.feature-container-3x h3 {
-			grid-column: span 1;
-		}
-	}
-
-	.feature-card {
-		background-color: var(--card-background-color);
-		border-radius: 12px;
-		padding: 20px;
-		transition: 0.1s filter;
-	}
-	.feature-card:hover {
-		filter: brightness(112.5%);
-	}
-
-	.feature-card h4 {
-		color: var(--feature-heading-color);
-		font-family: var(--default-font-family);
-		font-size: 18px;
-		font-weight: 700;
-		margin: 0;
-	}
-
-	.feature-card p {
-		font-size: 95%;
-		margin-top: 24px;
-		margin-bottom: 12px;
-	}
-
-	.feature-card strong {
-		color: var(--feature-note-color);
-		font-weight: 600;
-	}
-
-	.feature-card code {
-		background-color: #0f172e36;
-		border-radius: 3px;
-		padding: 1px 4px;
-	}
-
-	.features-showreel {
-		background-color: var(--dark-color);
-		color: var(--dark-color-text-hl);
-		padding: 24px 32px 8px 32px;
-		margin-bottom: 36px;
-		width: auto;
-		max-width: 100%;
-	}
-
-	.features-showreel p {
-		margin-top: 0;
-		margin-bottom: 8px;
-	}
-
-	.features-complete-list {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.features-priorities-list {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 0;
-		margin-bottom: 24px;
-	}
-
-	.features-complete-list .btn.btn-flat.btn-flat-white,
-	.features-priorities-list .btn.btn-flat.btn-flat-white {
-		color: var(--base-color-text-title);
-	}
-
-	.features-showcase {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		color: var(--dark-color-text-hl);
-		width: 100%;
-	}
-
-	.showcase-carousel {
-		position: relative;
-		width: 100%;
-		max-width: 720px;
-		aspect-ratio: 16/9;
-		margin: 100px 0 60px 0;
-	}
-	@media (max-width: 540px) {
-		.showcase-carousel {
-			margin-top: 60px;
-		}
-	}
-
-	.showcase-frame {
-		position: absolute;
-		max-width: 100%;
-		max-height: 100%;
-		aspect-ratio: 16/8;
-		transform: scale(1.7) translate(1.46%, 3.1%);
-		filter: brightness(0.85) saturate(0.75);
-	}
-
-	.showcase-flip-left,
-	.showcase-flip-right {
-		position: absolute;
-		top: 50%;
-		left: 12px;
-		width: 20px;
-		height: 36px;
-		transform: translateY(-50%);
-		background-image: url('/assets/icons/arrow-flip.svg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		cursor: pointer;
-		filter: drop-shadow(var(--more-shadow));
-		z-index: 5;
-	}
-	.showcase-flip-left {
-		transform: translateY(-50%) scaleX(-1.0);
-	}
-	.showcase-flip-right {
-		left: auto;
-		right: 12px;
-	}
-
-	.showcase-items {
-		position: relative;
-		overflow: hidden;
-		aspect-ratio: 16/9;
-	}
-
-	.showcase-item {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--dark-color);
-		width: 100%;
-		height: 100%;
-	}
-	.showcase-item-transition {
-		transition: transform 0.4s ease-in-out, z-index 0.1s linear 0.4s;
-	}
-
-	.showcase-item img {
-		width: 100%;
-	}
-
-	.showcase-credits {
-		position: absolute;
-		bottom: 12px;
-		right: 16px;
-		background: var(--hero-text-background-color);
-		border-radius: 8px;
-		padding: 2px 10px;
-	}
-
-	.showcase-title {
-		color: white;
-		font-weight: 600;
-	}
-
-	.showcase-author {
-		color: #b3c1df;
-		font-size: 95%;
-		opacity: 0.9;
-	}
-
-	.showcase-credits a {
-		text-decoration: none;
-	}
-</style>
+<link rel="stylesheet" href="/assets/css/transparent-nav.css?3" />
+<link rel="stylesheet" href="/assets/css/features.css" />
 
 <div class="features-why">
 	<h2>
@@ -429,7 +162,8 @@ layout: default
 				Inspired by Python and other languages, it is easy to pick up even if you
 				are a beginner. Tight engine integration allows it to express game logic
 				in a clear and natural form.
-				<br><br>
+			</p>
+			<p>
 				GDScript offers optional static typing support,
 				boosting your coding efficiency and runtime performance. Powerful language
 				features and first-class functions allow for expressive yet concise code.
@@ -442,7 +176,8 @@ layout: default
 				If you're an experienced C# user, Godot offers you first-class support
 				for the .NET platform. Power your games with familiar libraries and give
 				them a performance boost, while still benefiting from close engine integration.
-				<br><br>
+			</p>
+			<p>
 				<strong>Note:</strong> .NET support is provided as a dedicated engine executable.
 				<a href="https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/index.html#c-platform-support">C# support is available for desktop and mobile platforms as of Godot 4.2.</a>
 				Web support should be added in the future, but until then,
@@ -457,7 +192,8 @@ layout: default
 				a programming language not provided by the Godot team itself.
 				Thanks to our community there are many language bindings for
 				popular tools like Rust, Nim, Python, and JavaScript.
-				<br><br>
+			</p>
+			<p>
 				C&NoBreak;+&NoBreak;+ support comes officially in the form of
 				the GDExtension API, which gives you a way to script and program your game
 				components for maximum performance without having to recompile the engine.
@@ -484,7 +220,8 @@ layout: default
 				from powerful desktop computers to mid-range Android
 				phones. Powered by OpenGL, Godot allows your projects
 				to run on most modern GPUs, including integrated graphics.
-				<br><br>
+			</p>
+			<p>
 				With the Vulkan, Direct3D 12, and Metal renderers,
 				and a set of modern graphical features, bring your worlds
 				to life and harvest the power of gaming GPUs for your
@@ -500,7 +237,8 @@ layout: default
 				lighting, cameras, and physics objects — and customize how
 				the engine views them. Modify your assets and see changes
 				in the engine immediately.
-				<br><br>
+			</p>
+			<p>
 				Import Blender files directly
 				for fast iterations or use familiar glTF and FBX formats.
 			</p>
@@ -546,7 +284,8 @@ layout: default
 				Build scalable and adaptive user interfaces with Godot's unique
 				GUI system. Created specifically to power layouts common to games,
 				it is also capable of handling complex UI applications and tools.
-				<br><br>
+			</p>
+			<p>
 				<em>For an example of what Godot's UI system is capable of, see the Godot editor itself!</em>
 			</p>
 		</div>
@@ -560,12 +299,14 @@ layout: default
 			<p>
 				Both OpenXR and WebXR support is built directly into the engine.
 				Setting up an XR project takes only minutes.
-				<br><br>
+			</p>
+			<p>
 				Godot is at the forefront of OpenXR development, leading with
 				support for OpenXR extensions ranging from hand tracking and
 				body tracking, to spatial understanding APIs like scene discovery
 				and spatial entities.
-				<br><br>
+			</p>
+			<p>
 				Deploy to a myriad of XR devices directly from the Godot editor
 				for true cross-platform development.<br>
 				Other XR SDKs are supported through community-maintained plugins.
@@ -587,7 +328,8 @@ layout: default
 				The Godot editor is natively supported on various headsets.
 				Add a Bluetooth keyboard and mouse and you can author
 				your game while on the go, on a large virtual screen.
-				<br><br>
+			</p>
+			<p>
 				This includes live editing the immersive experience around you!
 			</p>
 		</div>
@@ -636,7 +378,8 @@ layout: default
 				third-party publishers which specialize in that. Godot games
 				can run on any modern hardware, so all you need to worry about
 				is your performance and controls.
-				<br><br>
+			</p>
+			<p>
 				Read more about <a href="/consoles/">console support in Godot</a>.
 			</p>
 		</div>
