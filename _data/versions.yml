@@ -62,9 +62,13 @@
       release_notes: "/article/dev-snapshot-godot-4-6-dev-1/"
 
 - name: "4.5.2"
-  flavor: "rc1"
-  release_date: "23 January 2026"
-  release_notes: "/article/release-candidate-godot-4-5-2-rc-1/"
+  flavor: "stable"
+  release_date: "19 March 2026"
+  release_notes: "/article/maintenance-release-godot-4-5-2/"
+  releases:
+    - name: "rc1"
+      release_date: "23 January 2026"
+      release_notes: "/article/release-candidate-godot-4-5-2-rc-1/"
 
 - name: "4.5.1"
   flavor: "stable"
