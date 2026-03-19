@@ -15,7 +15,7 @@ The third maintenance release for Godot 4.1 contains a number of fixes for the r
 
 Finally, several documentation mistakes have been corrected, plus there is new documentation available for the `RenderingDevice` class.
 
-[**Download Godot 4.1.3 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.3.stable/).
+[**Download Godot 4.1.3 now**](/download/archive/4.1.3-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.3.stable/).
 
 {% include articles/download_card.html version="4.1.3" release="stable" article=page %}
 

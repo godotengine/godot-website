@@ -20,7 +20,7 @@ The Godot Editor is [now available on the Horizon Store](https://www.meta.com/ex
 
 This is an early access version of the Godot Editor running natively on Meta Quest devices, enabling the creation and development of 2D, 3D and **immersive XR** apps and games directly on device without the need for an external computer.
 
-As usual, this work is entirely **free and open source**, and already merged in Godot 4.4's development branch ([GH-96624](https://github.com/godotengine/godot/pull/96624)). The version we publish on the Horizon Store can also be downloaded as an APK directly [from the Godot website](/download/preview/).
+As usual, this work is entirely **free and open source**, and already merged in Godot 4.4's development branch ([GH-96624](https://github.com/godotengine/godot/pull/96624)). The version we publish on the Horizon Store can also be downloaded as an APK directly [from the Godot website](/download/).
 
 ## Features & Highlights
 

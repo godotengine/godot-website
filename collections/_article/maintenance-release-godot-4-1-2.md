@@ -23,7 +23,7 @@ Such is the case of Godot 4.1.2, which is officially available starting today! E
 
 - As many game developers compile Godot and its custom forks by themselves, it's important for us to ensure buildsystem stability and flexibility as well as that of the rest of the engine — even for previous releases. This version includes fixes to XCode 15 compatibility ([GH-82458](https://github.com/godotengine/godot/pull/82458)), a number of changes reducing build times ([GH-80612](https://github.com/godotengine/godot/pull/80612), [GH-80482](https://github.com/godotengine/godot/pull/80482), [GH-81144](https://github.com/godotengine/godot/pull/81144)), as well as Visual Studio and MSVC quality-of-life improvements ([GH-79238](https://github.com/godotengine/godot/pull/79238)).
 
-[**Download Godot 4.1.2 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.2.stable/).
+[**Download Godot 4.1.2 now**](/download/archive/4.1.2-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.2.stable/).
 
 *The illustration picture used in this announcement comes from* **Robot Detour** *— a puzzle game by [Nozomu Games](https://twitter.com/NozomuGames) made with Godot 4. Flex your brains as you operate cute robots attached to a stretchy string through challenges and traps, and don't get entangled, because the demo comes out later this year! For now, you can follow Nozomu Games on [Twitter](https://twitter.com/NozomuGames) for more updates and check out their previous games on [itch.io](https://nozomu57.itch.io/).*
 

@@ -25,7 +25,7 @@ Some of the most important fixes in this release are:
 
 - Recent Emscripten releases changed their default stack size, which caused issues for Web export in Godot 4.2 when using certain APIs. We added the needed linker flags to restore the behavior from older Emscripten versions, ensuring that Godot can run successfully after being compiled by the latest Emscripten releases ([GH-86036](https://github.com/godotengine/godot/pull/86036)).
 
-[**Download Godot 4.2.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.2.1.stable/).
+[**Download Godot 4.2.1 now**](/download/archive/4.2.1-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.2.1.stable/).
 
 {% include articles/download_card.html version="4.2.1" release="stable" article=page %}
 

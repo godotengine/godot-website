@@ -15,7 +15,7 @@ Everyone seemed pretty happy with the [3.5.2 release](/article/maintenance-relea
 
 **This is a safe and recommended update for all Godot 3.5.x users.** It should have no major impact on your projects, even complex ones in production, if you're already using 3.5.2-stable.
 
-[**Download Godot 3.5.3 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.5.3.stable/).
+[**Download Godot 3.5.3 now**](/download/archive/3.5.3-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.5.3.stable/).
 
 *The illustration picture is from* [**Hauma**](https://store.steampowered.com/app/1443470/Hauma__A_Detective_Noir_Story/?curator_clanid=41324400), *a deduction visual novel with a noir story set in Munich. It was developed in Godot 3.5 by [SenAm Games](https://www.senam-games.com/) and published by [Assemble Entertainment](https://twitter.com/AssembleTeam). It was released [on Steam](https://store.steampowered.com/app/1443470/Hauma__A_Detective_Noir_Story/?curator_clanid=41324400) a couple of weeks ago, so you can play it right now and enjoy this deep story with a gorgeous comic-inspired art direction.*
 

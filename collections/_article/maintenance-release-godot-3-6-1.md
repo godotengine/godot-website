@@ -15,7 +15,7 @@ As well as bug fixes, this release also contains some cherry-picks from 4.x to u
 
 **This is a safe and recommended update for all Godot 3.6.x users.** It should have no major impact on your projects, even complex ones in production, if you're already using 3.6-stable.
 
-[**Download Godot 3.6.1 now**](/download/3.x/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.6.1.stable/).
+[**Download Godot 3.6.1 now**](/download/archive/3.6.1-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/3.6.1.stable/).
 
 {% include articles/download_card.html version="3.6.1" release="stable" article=page %}
 
