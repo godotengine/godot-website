@@ -13,7 +13,7 @@ With the [Godot 4.1 release on the horizon](/article/release-management-4-1), co
 
 Almost every area was touched upon with bugfixes and stability improvements. This includes multiple crashes and glitches eliminated in constructive solid geometry (CSG), GDScript language server, importing of assets, and all things related to rendering and visuals. Several reported platform-specific crashes and freezes were addressed, especially on Android and Windows. And of course there were improvements to the overall user experience and documentation. The latter received a massive bump in completeness thanks to a serious effort from [Calinou](https://github.com/Calinou), who updated a lot of descriptions in the rendering API.
 
-[**Download Godot 4.0.3 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.3.stable/).
+[**Download Godot 4.0.3 now**](/download/archive/4.0.3-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.3.stable/).
 
 *The illustration picture for this release comes from the* [**Godot Juice**](https://mreliptik.itch.io/learn-how-to-make-juicy-games-with-godot-4) *course by [MrEliptik](https://twitter.com/mreliptik). It's a great primer on adding juicy visual effects to your Godot 4 projects from the creator of [Dashpong](https://www.playdashpong.com/), and you can be sure it's based on practical experience! It's available on [itch.io](https://mreliptik.itch.io/learn-how-to-make-juicy-games-with-godot-4) and [Udemy](https://www.udemy.com/course/learn-how-to-make-a-game-juicy-in-godot-4/?referralCode=1652C74B848551E05DAE).*
 

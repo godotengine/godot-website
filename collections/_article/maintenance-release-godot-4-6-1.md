@@ -15,7 +15,7 @@ Maintenance releases are expected to be safe for an upgrade, but we recommend to
 
 Please consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
-[**Download Godot 4.6.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.6.1.stable/).
+[**Download Godot 4.6.1 now**](/download/archive/4.6.1-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.6.1.stable/).
 
 {% include articles/download_card.html version="4.6.1" release="stable" article=page %}
 

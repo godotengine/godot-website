@@ -15,7 +15,7 @@ The result of this work is **Godot 4.0.1**, the first patch release for Godot 4,
 
 One notable change in Godot 4.0.1 that is worth a dedicated mention is related to the project manager. We have received several reports of users accidentally creating a new Godot project in their user directory, which has led to unfortunate issues. The most critical of these issues is an accidental deletion of the entire user directory when deleting a project from the project manager. We will be revising the UI and UX of the related features, but to offer an immediate solution, we have removed the ability to create projects in a non-empty folder (and in home/documents folders specifically). We have also disabled the ability to delete project files alongside the removal of the project from the project list.
 
-[**Download Godot 4.0.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.1.stable/).
+[**Download Godot 4.0.1 now**](/download/archive/4.0.1-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.1.stable/).
 
 *The illustration picture is from a new, fairytale-like demo scene created by [Raffaele Picca](https://campsite.bio/raffa) with Godot 4.0 —* [**Lost Desert Temple**](https://twitter.com/MV_Raffa/status/1632745048621154305). *Raffaele plans to release it as an open source project, so follow him on [Twitter](https://twitter.com/MV_Raffa) to make sure you don't miss that. And if you're visiting GDC this week, [come by the Godot booth](/article/gdc-2023-godot-games/)! You can find Raffaele there and chat about his use of the engine, as well as play a session of* [**Beat Invaders**](https://store.steampowered.com/app/1863080/Beat_Invaders/?curator_clanid=41324400)!
 

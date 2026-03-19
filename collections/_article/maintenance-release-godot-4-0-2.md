@@ -15,7 +15,7 @@ In the meantime, Godot contributors have spent this month working on fixes and i
 
 In this release we also aim to improve the experience of Android developers. This includes bumping the target Android SDK version to 33. If you are using third-party libraries and plugins with your projects, this may enable some configuration options and checks in them, which were ignored in previous versions.
 
-[**Download Godot 4.0.2 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.2.stable/).
+[**Download Godot 4.0.2 now**](/download/archive/4.0.2-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.0.2.stable/).
 
 *The illustration picture for this release showcases* [**ProtonGraph**](https://github.com/protongraph/protongraph) *— an experimental node-based tool for procedural content generation, made by [HungryProton](https://linktr.ee/hungryproton). Originally created in Godot 3, it is now powered by Godot 4.0, utilizing the brand-new multiwindow support! Follow HungryProton on social, where they share progress reports and more experiments, such as Counter-Strike-2-like volumetric smoke effect.*
 

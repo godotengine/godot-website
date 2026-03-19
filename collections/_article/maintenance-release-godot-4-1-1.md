@@ -23,7 +23,7 @@ Some of the most important changes in this release include:
 
 - For Linux users there is a potential fix for freezes when interacting with menus on Wayland ([GH-79143](https://github.com/godotengine/godot/pull/79143)). This was a hard to identify and debug issue, but our local Wayland enthusiasts managed to pinpoint the likely cause and validate that the unwanted behavior was addressed.
 
-[**Download Godot 4.1.1 now**](/download/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.1.stable/).
+[**Download Godot 4.1.1 now**](/download/archive/4.1.1-stable/) or try the [online version of the Godot editor](https://editor.godotengine.org/4.1.1.stable/).
 
 *The illustration picture used in this announcement comes from* [**Gunforged**](https://store.steampowered.com/app/2258480/Gunforged/?curator_clanid=41324400) *— a 2D roguelite shooter where, you've guessed it, construct your weaponry from a huge number of different parts. The game is being made by [Firebelley](https://twitter.com/firebelley) with Godot 4 using its excellent C# language support, and is planned to be released later this year. But no need to wait, because you can play a demo on Steam [right now](https://store.steampowered.com/app/2258480/Gunforged/?curator_clanid=41324400)! You can also subscribe to Firebelley on [YouTube](https://www.youtube.com/@FirebelleyGames), where they share tutorials and devlogs.*
 
