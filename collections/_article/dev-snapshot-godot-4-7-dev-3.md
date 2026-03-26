@@ -6,7 +6,7 @@ author: Hugo Locurcio
 image: /storage/blog/covers/dev-snapshot-godot-4-7-dev-3.jpg
 image_caption_title: Lucid Blocks
 image_caption_description: A game by Lucy B. Locks
-date: 2026-03-26 12:00:00
+date: 2026-03-26 17:00:00
 ---
 
 Following hot on the heels of the last snapshot, the third development snapshot for what will become Godot 4.7 is now out! This snapshot comes packed with some long-awaited features, some of which may *transform* the way you design GUIs in Godot. As always, we need as much testing as possible to ensure everything can be stabilized.
@@ -56,7 +56,7 @@ To use vertex snapping, hold <kbd>B</kbd> and move the mouse near the selection'
 Vertex snapping works differently depending on whether the selected node has a mesh-based representation or not. For example, MeshInstance3D and CSG nodes have a mesh-based representation, while other nodes such as Label3D and Marker3D do not. Nodes without a mesh-based representation will teleport to the highlighted vertex when holding <kbd>B</kbd> and clicking on another node's vertex. Thanks to the follow-up contribution [GH-117380](https://github.com/godotengine/godot/pull/117380), you can opt into this behavior for nodes that have a mesh-based representation too.
 
 <video autoplay loop muted playsinline title="Vertex snapping in the 3D editor">
-  <source src="/storage/blog/dev-snapshot-godot-4-7-dev-3/editor-3d-vertex-snapping.mp4?1" type="video/mp4">
+  <source src="/storage/blog/dev-snapshot-godot-4-7-dev-3/editor-3d-vertex-snapping.webm?1" type="video/webm">
 </video>
 
 ### Editor: Use class name instead of Object ID in remote scene view
@@ -112,12 +112,12 @@ The improvements for Android don't stop there. Thanks to the work of [Anish Kuma
 
 
 <video autoplay loop muted playsinline title="Script editor used in portrait mode on Android after enabling distraction-free mode">
-  <source src="/storage/blog/dev-snapshot-godot-4-7-dev-3/android-script-editor-orientation-change.mp4?1" type="video/mp4">
+  <source src="/storage/blog/dev-snapshot-godot-4-7-dev-3/android-script-editor-orientation-change.webm?1" type="video/webm">
 </video>
 
 ### Linux/*BSD: Support <abbr title="High dynamic range">[HDR](https://en.wikipedia.org/wiki/High_dynamic_range)</abbr> output
 
-Continuing from the previous development snapshots which added support for HDR output on [Windows](/article/dev-snapshot-godot-4-7-dev-1/#windows-support-hdr-output) and [Apple](/article/dev-snapshot-godot-4-7-dev-2/#apple-support-hdr-output) platforms, we have added support for HDR output on Linux when using the Wayland display server.  [Stuart Carnie](https://github.com/stuartcarnie) delivered full support for <abbr title="Extended Dynamic Range; Apple's technology to display HDR on their devices.">EDR</abbr> display to all Apple platforms ([GH-106814](https://github.com/godotengine/godot/pull/106814)). Documentation is still in the works for HDR, as there's quite a lot of ground to cover, but you can expect a proper deep-dive into the concept come next snapshot!
+Continuing from the previous development snapshots which added support for HDR output on [Windows](/article/dev-snapshot-godot-4-7-dev-1/#windows-support-hdr-output) and [Apple](/article/dev-snapshot-godot-4-7-dev-2/#apple-support-hdr-output) platforms, we have added support for HDR output on Linux when using the Wayland display server ([GH-102987](https://github.com/godotengine/godot/pull/102987)). Kudos to [ArchercatNEO](https://github.com/ArchercatNEO) for their dedication to developing and maintaining the Wayland support alongside the Windows and Apple PRs for more than a year!
 
 Also of note is that documentation on HDR output is now available. [Check it out!](https://docs.godotengine.org/en/latest/tutorials/rendering/hdr_output.html) A demo project for testing HDR output will follow soon.
 
