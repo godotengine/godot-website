@@ -56,3 +56,6 @@ silver:
   - name: "Evil Trout Inc."
     link: "https://eviltrout.com/"
     image: "https://fund.godotengine.org/static/logos/evil-trout.svg?2"
+  - name: Bippinbits
+    link: https://bippinbits.com/
+    image: "https://fund.godotengine.org/static/logos/bippinbits.png"
