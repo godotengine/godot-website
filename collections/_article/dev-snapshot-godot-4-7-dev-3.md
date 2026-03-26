@@ -91,16 +91,18 @@ Here's an example of what it looks like:
 
 Thanks to the work of [Fredia Huya-Kouadio](https://github.com/m4gr3d) in [GH-114505](https://github.com/godotengine/godot/pull/114505), Godot now has the ability to run a project and move it to a small window pinned to one of the screen corners. This relies on Android's native support for picture-in-picture (PiP) display. For example, YouTube on Android uses this functionality to show the currently played video in a corner of the screen.
 
-Note that picture-in-picture does not permit interacting with the application while it is in this mode, so this feature is most useful for applications and games that have sections that require little to interactivity.
+Note that picture-in-picture does not permit interacting with the application while it is in this mode, so this feature is most useful for applications and games that have sections that don't require real-time input (idle games, autobattlers, etc.).
 
 Picture-in-picture functionality can be enabled in two ways:
 
 - Explicitly by calling `DisplayServer.pip_mode_enter()`.
-- Configured to happen automatically by calling `DisplayServer.pip_mode_set_auto_enter_on_background()`. In this case, the app will automatically go into picture-in-picture mode when the user presses the home button on their device.
+- Configured to happen automatically by calling `DisplayServer.pip_mode_set_auto_enter_on_background()`. In this case, the app will automatically go into picture-in-picture mode when the user presses the home button or uses the home gesture on their device.
 
 As an example, since this ability can be toggled at runtime, you can allow picture-in-picture mode to engage when a cutscene starts and disable it when returning to interactive contents.
 
-<video autoplay loop muted playsinline title="Showcase of picture-in-picture functionality on the game Rift Raff">
+Here's an example of it in action on the game *Rift Riff*, where PiP mode is only enabled during one of the game's waves:
+
+<video autoplay loop muted playsinline title="Showcase of picture-in-picture functionality on the game Rift Riff">
   <source src="/storage/blog/dev-snapshot-godot-4-7-dev-3/android-picture-in-picture.webm?1" type="video/webm">
 </video>
 
@@ -108,7 +110,6 @@ As an example, since this ability can be toggled at runtime, you can allow pictu
 
 The improvements for Android don't stop there. Thanks to the work of [Anish Kumar](https://github.com/syntaxerror247) in [GH-117109](https://github.com/godotengine/godot/pull/117109), you can now switch to portrait mode while in the script editor on Android devices. This makes it easier to view code while you're typing on a virtual keyboard. Note that distraction-free mode must be **enabled** for this to be possible (it can be toggled). This restriction has to be in place, since the side docks take a lot of horizontal space and the script editor in portrait mode wouldn't be practical with the side docks visible.
 
-Here's an example of it in action on the game *Rift Raff*, where PiP mode is only enabled during one of the game's waves:
 
 <video autoplay loop muted playsinline title="Script editor used in portrait mode on Android after enabling distraction-free mode">
   <source src="/storage/blog/dev-snapshot-godot-4-7-dev-3/android-script-editor-orientation-change.mp4?1" type="video/mp4">
