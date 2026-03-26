@@ -47,7 +47,7 @@ Malcolm isn't done yet, as the animation track editor got some love in [GH-11347
 
 ### Apple: Support <abbr title="High dynamic range">[HDR](https://en.wikipedia.org/wiki/High_dynamic_range)</abbr> output
 
-As you might recall from the [previous development snapshot](/article/dev-snapshot-godot-4-7-dev-1/#windows-support-hdr-output), our intention during the 4.7 cycle is to roll out HDR support across all supported platforms. Windows already got their initial implementation; now, it's Apple's turn. [Stuart Carnie](https://github.com/stuartcarnie) delivered full support for <abbr title="Extended Dynamic Range; Apple's technology to display HDR on their devices.">EDR</abbr> display to all Apple platforms ([GH-106814](https://github.com/godotengine/godot/pull/106814)). Documentation is still in the works for HDR, as there's quite a lot of ground to cover, but you can expect a proper deep-dive into the concept come next snapshot!
+As you might recall from the [previous development snapshot](/article/dev-snapshot-godot-4-7-dev-1/#windows-support-hdr-output), our intention during the 4.7 cycle is to roll out HDR support across all supported platforms. Windows already got their initial implementation; now, it's Apple's turn. [Stuart Carnie](https://github.com/stuartcarnie) delivered full support for <abbr title="Extended Dynamic Range; Apple's technology to display HDR on their devices.">EDR</abbr> display to all Apple platforms ([GH-106814](https://github.com/godotengine/godot/pull/106814)). Documentation is still in the works for HDR, as there's quite a lot of ground to cover, but you can expect a proper deep-dive into the concept in the coming weeks!
 
 ### And more!
 
