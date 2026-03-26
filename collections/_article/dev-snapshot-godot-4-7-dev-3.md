@@ -9,7 +9,7 @@ image_caption_description: A game by Lucy B. Locks
 date: 2026-03-26 12:00:00
 ---
 
-Following hot on the heels of the last snapshot, the third development snapshot is now out! This snapshot comes packed with some long-awaited features, some of which may *transform* the way you design GUIs in Godot. As always, we need as much testing as possible to ensure everything can be stabilized.
+Following hot on the heels of the last snapshot, the third development snapshot for what will become Godot 4.7 is now out! This snapshot comes packed with some long-awaited features, some of which may *transform* the way you design GUIs in Godot. As always, we need as much testing as possible to ensure everything can be stabilized.
 
 Please consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
@@ -17,15 +17,15 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ---
 
-*The cover illustration is from* [**Lucid Blocks**](https://store.steampowered.com/app/3495730/Lucid_Blocks/?curator_clanid=41324400), *a game where you explore, build and survive in a cryptic expanse oozing with dreamlike oddities and esoteric critters. You can buy the game on [Steam](https://store.steampowered.com/app/3495730/Lucid_Blocks/?curator_clanid=41324400), and follow the developers on [Bluesky](https://bsky.app/profile/ericalfaro.dev), [YouTube](https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g), or [Discord](https://discord.gg/lucidblocks).*
+*The cover illustration is from* [**Lucid Blocks**](https://store.steampowered.com/app/3495730/Lucid_Blocks/?curator_clanid=41324400), *a game where you explore, build, and survive in a cryptic expanse oozing with dreamlike oddities and esoteric critters. You can buy the game on [Steam](https://store.steampowered.com/app/3495730/Lucid_Blocks/?curator_clanid=41324400), and follow the developers on [Bluesky](https://bsky.app/profile/ericalfaro.dev), [YouTube](https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g), or [Discord](https://discord.gg/lucidblocks).*
 
 ## Highlights
 
 ### GUI: Add transform offset to Control nodes
 
-One of the most long-awaited features in Godot's GUI system is to be able to translate, rotate or scale a Control node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide in view or fade away with a scale change.
+One of the most long-awaited features in Godot's GUI system is to be able to translate, rotate, or scale a Control node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide in view or fade away with a scale change.
 
-However, Godot's various Container nodes apply the position, rotation and scale to their children, which means any changes made to the children's transform is lost when the container is sorted again (which occurs when children are added, removed or moved in the scene tree). The new transform offset properties implemented by [Timo Schwarzer](https://github.com/timoschwarzer) in [GH-87081](https://github.com/godotengine/godot/pull/87081) aim to address this limitation in a self-contained manner, similar to the `transform` property in <abbr title="Cascading Style Sheets">CSS</abbr>.
+However, Godot's various Container nodes apply the position, rotation, and scale to their children, which means any changes made to the children's transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). The new transform offset properties implemented by [Timo Schwarzer](https://github.com/timoschwarzer) in [GH-87081](https://github.com/godotengine/godot/pull/87081) aim to address this limitation in a self-contained manner, similar to the `transform` property in <abbr title="Cascading Style Sheets">CSS</abbr>.
 
 <img src="/storage/blog/dev-snapshot-godot-4-7-dev-3/render-transform-properties.webp" alt="Render transform properties in the inspector"/>
 
@@ -37,9 +37,9 @@ You can choose whether the transform offset affects mouse input. By default, tra
 
 ### GUI: Implement search bar for PopupMenu
 
-As a tool that can be used to create complex projects, Godot is no stranger to popups with dozens of options to choose from (if not more). While incremental search can be used to focus the first item that starts with a given letter (by pressing the letter in question), this can be difficult to use as incremental search lacks visible feedback once you perform it. A visible search bar also makes the ability to search more discoverable, which is a win for usability.
+As a tool that can be used to create complex projects, Godot is no stranger to popups with dozens of options to choose from (if not more). While incremental search can be used to focus the first item that starts with a given letter (by pressing the letter in question), this can be difficult to use as incremental search lacks visible feedback once you perform it.
 
-To resolve this longstanding usability quirk, [Alexander Streng](https://github.com/warriormaster12) added search bars to PopupMenu in [GH-114236](https://github.com/godotengine/godot/pull/114236). This is particularly useful for long lists such as animations, skeleton bones, inspector dropdowns for Resource properties, and more.
+To resolve this longstanding usability quirk, [Alexander Streng](https://github.com/warriormaster12) added search bars to PopupMenu in [GH-114236](https://github.com/godotengine/godot/pull/114236). This is particularly useful for long lists such as animations, skeleton bones, inspector dropdowns for Resource properties, and more. A visible search bar also makes searching more discoverable, which is a win for usability.
 
 <video autoplay loop muted playsinline title="Search bar in PopupMenu">
   <source src="/storage/blog/dev-snapshot-godot-4-7-dev-3/popupmenu-search-bar.webm?1" type="video/webm">
@@ -49,7 +49,7 @@ This feature is available in any PopupMenu node, which means it can also be used
 
 ### Editor: Add vertex snapping to the 3D editor
 
-One of the most awaited features to improve 3D editor usability is finally here! [Robert Yevdokimov](https://github.com/godotengine/godot/pull/117235) implemented this big improvement to the 3D editor in [GH-117235](https://github.com/godotengine/godot/pull/117235). This allows you to snap the selection to nearby nodes' vertices, which is useful for level design and ensuring everything is visually connected to neighboring nodes.
+One of the most keenly awaited features to improve 3D editor usability is finally here! [Robert Yevdokimov](https://github.com/godotengine/godot/pull/117235) implemented this big improvement to the 3D editor in [GH-117235](https://github.com/godotengine/godot/pull/117235). This allows you to snap the selection to nearby nodes' vertices, which is useful for level design and ensuring everything is visually connected to neighboring nodes.
 
 To use vertex snapping, hold <kbd>B</kbd> and move the mouse near the selection's vertices. Once you see a yellow circle, hold the mouse button and move the mouse to the desired location (you can release <kbd>B</kbd> at this point). The circle becomes green once a vertex to snap to is detected near the mouse cursor. For better depth perception, the yellow/green circle appears with reduced opacity if it's occluded by another surface.
 
@@ -61,7 +61,7 @@ Vertex snapping works differently depending on whether the selected node has a m
 
 ### Editor: Use class name instead of Object ID in remote scene view
 
-The remote scene tree is very useful to diagnose what's going on in a running project. However, until now, it didn't show as much information as it could. [Jayden Sipe](https://github.com/jaydensipe) resolved this limitation in [GH-115738](https://github.com/godotengine/godot/pull/115738), making this tool significantly more useful.
+The remote scene tree is very useful to diagnose what's going on in a running project. However, until now, everything was shown as a bunch of anonymous-looking Object IDs. [Jayden Sipe](https://github.com/jaydensipe) has improved this view by adding class names in [GH-115738](https://github.com/godotengine/godot/pull/115738), making this tool significantly more useful.
 
 #### Before
 
