@@ -49,7 +49,7 @@ This feature is available in any PopupMenu node, which means it can also be used
 
 ### Editor: Add vertex snapping to the 3D editor
 
-One of the most keenly awaited features to improve 3D editor usability is finally here! [Robert Yevdokimov](https://github.com/godotengine/godot/pull/117235) implemented this big improvement to the 3D editor in [GH-117235](https://github.com/godotengine/godot/pull/117235). This allows you to snap the selection to nearby nodes' vertices, which is useful for level design and ensuring everything is visually connected to neighboring nodes.
+One of the most keenly awaited features to improve 3D editor usability is finally here! [Robert Yevdokimov](https://github.com/godotengine/godot/pull/117235) implemented vertex snapping in the 3D editor in [GH-117235](https://github.com/godotengine/godot/pull/117235). This allows you to snap the selection to nearby nodes' vertices, which is useful for level design and ensuring everything is visually connected to neighboring nodes.
 
 To use vertex snapping, hold <kbd>B</kbd> and move the mouse near the selection's vertices. Once you see a yellow circle, hold the mouse button and move the mouse to the desired location (you can release <kbd>B</kbd> at this point). The circle becomes green once a vertex to snap to is detected near the mouse cursor. For better depth perception, the yellow/green circle appears with reduced opacity if it's occluded by another surface.
 
