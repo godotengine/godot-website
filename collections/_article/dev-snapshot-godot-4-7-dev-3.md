@@ -129,7 +129,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Animation: Optimize Animation Resource, Library, Mixer, and Player ([GH-116394](https://github.com/godotengine/godot/pull/116394)).
 - Animation: Optimize AnimationTree, Improve internals & Editor & `Node::process_thread_group` safety ([GH-117277](https://github.com/godotengine/godot/pull/117277)).
 - Core: Improve thread-safety of `Object` signals ([GH-117511](https://github.com/godotengine/godot/pull/117511)).
-- Core: Use `TRACY_ON_DEMAND` by default for Tracy integration ([GH-1117583](https://github.com/godotengine/godot/pull/1117583)).
+- Core: Use `TRACY_ON_DEMAND` by default for Tracy integration ([GH-117583](https://github.com/godotengine/godot/pull/117583)).
 - Editor: Add `View3DController` for editor 3D view manipulation ([GH-115957](https://github.com/godotengine/godot/pull/115957)).
 - Editor: Add 3D vertex snap base setting (Vertex/Origin) ([GH-117380](https://github.com/godotengine/godot/pull/117380)).
 - Editor: Depict version discrepancies in Project Manager ([GH-111528](https://github.com/godotengine/godot/pull/111528)).
@@ -143,7 +143,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 - Platforms: Add haptic feedback on long-press right-click in the editor ([GH-117198](https://github.com/godotengine/godot/pull/117198)).
 - Platforms: Enable wake for events if Magnet is running ([GH-116524](https://github.com/godotengine/godot/pull/116524)).
 - Rendering: Add fast path to Polygon2D ([GH-117334](https://github.com/godotengine/godot/pull/117334)).
-- Rendering: Add scale 3D and rotation 3D in particle process ([GH-1112447](https://github.com/godotengine/godot/pull/1112447)).
+- Rendering: Add scale 3D and rotation 3D in particle process ([GH-112447](https://github.com/godotengine/godot/pull/112447)).
 
 ## Changelog
 
