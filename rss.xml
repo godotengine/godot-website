@@ -71,7 +71,7 @@
 &lt;li>Animation: Optimize Animation Resource, Library, Mixer, and Player (&lt;a href="https://github.com/godotengine/godot/pull/116394">GH-116394&lt;/a>).&lt;/li>
 &lt;li>Animation: Optimize AnimationTree, Improve internals &amp;amp; Editor &amp;amp; &lt;code class="language-plaintext highlighter-rouge">Node::process_thread_group&lt;/code> safety (&lt;a href="https://github.com/godotengine/godot/pull/117277">GH-117277&lt;/a>).&lt;/li>
 &lt;li>Core: Improve thread-safety of &lt;code class="language-plaintext highlighter-rouge">Object&lt;/code> signals (&lt;a href="https://github.com/godotengine/godot/pull/117511">GH-117511&lt;/a>).&lt;/li>
-&lt;li>Core: Use &lt;code class="language-plaintext highlighter-rouge">TRACY_ON_DEMAND&lt;/code> by default for Tracy integration (&lt;a href="https://github.com/godotengine/godot/pull/1117583">GH-1117583&lt;/a>).&lt;/li>
+&lt;li>Core: Use &lt;code class="language-plaintext highlighter-rouge">TRACY_ON_DEMAND&lt;/code> by default for Tracy integration (&lt;a href="https://github.com/godotengine/godot/pull/117583">GH-117583&lt;/a>).&lt;/li>
 &lt;li>Editor: Add &lt;code class="language-plaintext highlighter-rouge">View3DController&lt;/code> for editor 3D view manipulation (&lt;a href="https://github.com/godotengine/godot/pull/115957">GH-115957&lt;/a>).&lt;/li>
 &lt;li>Editor: Add 3D vertex snap base setting (Vertex/Origin) (&lt;a href="https://github.com/godotengine/godot/pull/117380">GH-117380&lt;/a>).&lt;/li>
 &lt;li>Editor: Depict version discrepancies in Project Manager (&lt;a href="https://github.com/godotengine/godot/pull/111528">GH-111528&lt;/a>).&lt;/li>
@@ -85,7 +85,7 @@
 &lt;li>Platforms: Add haptic feedback on long-press right-click in the editor (&lt;a href="https://github.com/godotengine/godot/pull/117198">GH-117198&lt;/a>).&lt;/li>
 &lt;li>Platforms: Enable wake for events if Magnet is running (&lt;a href="https://github.com/godotengine/godot/pull/116524">GH-116524&lt;/a>).&lt;/li>
 &lt;li>Rendering: Add fast path to Polygon2D (&lt;a href="https://github.com/godotengine/godot/pull/117334">GH-117334&lt;/a>).&lt;/li>
-&lt;li>Rendering: Add scale 3D and rotation 3D in particle process (&lt;a href="https://github.com/godotengine/godot/pull/1112447">GH-1112447&lt;/a>).&lt;/li>
+&lt;li>Rendering: Add scale 3D and rotation 3D in particle process (&lt;a href="https://github.com/godotengine/godot/pull/112447">GH-112447&lt;/a>).&lt;/li>
 &lt;/ul>
 &lt;h2 id="changelog">Changelog&lt;/h2>
 &lt;p>&lt;strong>113 contributors&lt;/strong> submitted &lt;strong>297 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.7-dev3">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since &lt;a href="/article/dev-snapshot-godot-4-7-dev-2/">4.7-dev2&lt;/a>. You can also review &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.7">all changes included in 4.7&lt;/a> compared to the previous &lt;a href="/releases/4.6/">4.6 feature release&lt;/a>.&lt;/p>
