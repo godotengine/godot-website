@@ -3,30 +3,32 @@
 Welcome to the source code for the Godot Engine website. This is a static website, generated offline using
 [Jekyll](https://jekyllrb.com/).
 
-
 ### Table of Contents
-  - [Contributing](#contributing)
-  - [Browser Support](#browser-support)
-  - [Development](#development)
-    - [Building](#building)
-      - [Pre-requisites](#pre-requisites)
-      - [Building the website locally](#building-the-website-locally)
-      - [Building the website using Docker](#building-the-website-using-docker)
-      - [Local server](#local-server)
-    - [Deployment](#deployment)
-  - [Project structure](#project-structure)
-    - [Content data and metadata](#content-data-and-metadata)
-    - [Content pages and templates](#content-pages-and-templates)
-    - [File storage](#file-storage)
-    - [Build system](#build-system)
-  - [Content update guidelines](#content-update-guidelines)
-    - [Updating Godot download version](#updating-godot-download-version)
-    - [Localizing the website](#localizing-the-website)
-    - [Adding a mirrorlist host](#adding-a-mirrorlist-host)
-  - [Resources](#resources)
-***
+
+- [Contributing](#contributing)
+- [Browser Support](#browser-support)
+- [Development](#development)
+  - [Building](#building)
+    - [Pre-requisites](#pre-requisites)
+    - [Building the website locally](#building-the-website-locally)
+    - [Building the website using Docker](#building-the-website-using-docker)
+    - [Local server](#local-server)
+  - [Deployment](#deployment)
+- [Project structure](#project-structure)
+  - [Content data and metadata](#content-data-and-metadata)
+  - [Content pages and templates](#content-pages-and-templates)
+  - [File storage](#file-storage)
+  - [Build system](#build-system)
+- [Content update guidelines](#content-update-guidelines)
+  - [Updating Godot download version](#updating-godot-download-version)
+  - [Localizing the website](#localizing-the-website)
+  - [Adding a mirrorlist host](#adding-a-mirrorlist-host)
+- [Resources](#resources)
+
+---
 
 ## Contributing
+
 Contributions[^1] are always welcome! Godot's website is open source, just like Godot Engine.
 
 However, when contributing to the website, it is important to keep in mind that it acts as a public face of the Godot
@@ -36,7 +38,9 @@ or joining the discussion on the [Godot Contributors Chat](https://chat.godoteng
 idea.
 
 [^1]: https://contributing.godotengine.org/en/latest/other/website.html
+
 [^2]: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
+
 [^3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 
 ## Browser Support
@@ -57,17 +61,18 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 ### Building
 
 #### Pre-requisites
+
 - On Local Machine:
-  - Ruby 3.2+ with [rbenv](https://github.com/rbenv/rbenv) and [*(For windows)*](https://github.com/RubyMetric/rbenv-for-windows#readme)
+  - Ruby 3.2+ with [rbenv](https://github.com/rbenv/rbenv) and [_(For windows)_](https://github.com/RubyMetric/rbenv-for-windows#readme)
   - Jekyll - [Jekyll Website](https://jekyllrb.com/)
   - Minify - [Minify GitHub](https://github.com/tdewolff/minify)
 - On Docker:
   - [Docker](https://www.docker.com/) installed on your system.
-  - Jekyll Docker image - [Jekyll Docker Image](https://hub.docker.com/r/jekyll/jekyll)
+
 * For Local Server One of the following is required:
   - Jekyll - [Jekyll Website](https://jekyllrb.com/) (with `jekyll serve` command)
   - Python 3.x [Python](https://www.python.org/)
-  - Docker - If you run on Docker, also you can use the Jekyll Docker image to serve the site.
+  - Docker
 
 > [!CAUTION]
 > If you use latest versions of Ruby, you may encounter issues on building process.
@@ -78,18 +83,20 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 To build the website locally, follow these steps:
 
 1. Install Ruby 3.2 or later and Jekyll.
-  - If you don't have access to Ruby 3.2 or later in your distribution's repositories,
-    install a compatible version of Ruby using `rbenv` as well as Ruby's build-time dependencies:
-    - Install in Ubuntu:
-      - `sudo apt install rbenv build-essential libffi-dev libreadline-dev libyaml-dev zlib1g-dev`
-    - Install in Fedora:
-      - Install `rbenv` with dnf
-  - Set up `rbenv` running the following:
-    - `rbenv install 3.2.5`
-    - `rbenv global 3.2.5`
-    - `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
+
+- If you don't have access to Ruby 3.2 or later in your distribution's repositories,
+  install a compatible version of Ruby using `rbenv` as well as Ruby's build-time dependencies:
+  - Install in Ubuntu:
+    - `sudo apt install rbenv build-essential libffi-dev libreadline-dev libyaml-dev zlib1g-dev`
+  - Install in Fedora:
+    - Install `rbenv` with dnf
+- Set up `rbenv` running the following:
+  - `rbenv install 3.2.5`
+  - `rbenv global 3.2.5`
+  - `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
+
 2. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify).
-	- Make sure either `minify` or `gominify` is available from the command line.
+   - Make sure either `minify` or `gominify` is available from the command line.
 3. Clone this repository.
 4. Install the necessary dependencies: `bundle install`.
 5. Build the site: `bundle exec jekyll build`.
@@ -98,39 +105,62 @@ To build the website locally, follow these steps:
 For simplicity, these two commands are also available as a `build.sh` script in this repository.
 
 #### Building the website using Docker
-Alternatively, you can also use the official Docker container for Jekyll. This container is designed to be run once
-to perform the build, so you don't need to compose and permanently store it in your Docker setup. If you're on Linux,
-execute the following command:
+
+Alternatively, you can use Docker with the provided `ruby:3.2` based setup. This project includes a
+`.devcontainer/Dockerfile` for development and a root `Dockerfile` for production builds.
+
+To build the site using Docker on Linux:
 
 ```shell
-docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:stable ./build.sh
+docker run --rm -v "$PWD:/srv/jekyll" -w /srv/jekyll -e SERVER_HOST=0.0.0.0 -it ruby:3.2 bash -c "apt-get update && apt-get install -y build-essential libffi-dev libmagic-dev && curl -fsSL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz | tar -xz -C /usr/local/bin minify && ./build.sh"
 ```
 
-On Windows (from `CMD.exe`):
+On Windows (from PowerShell):
 
 ```shell
-docker run --rm --volume="%CD%:/srv/jekyll" -it jekyll/jekyll:stable ./build.sh
+docker run --rm -v "${PWD}:/srv/jekyll" -w /srv/jekyll -e SERVER_HOST=0.0.0.0 -it ruby:3.2 bash -c "apt-get update && apt-get install -y build-essential libffi-dev libmagic-dev && curl -fsSL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz | tar -xz -C /usr/local/bin minify && ./build.sh"
 ```
 
 Building may take several minutes to finish.
 
+> [!NOTE]
+> The `jekyll/jekyll:stable` Docker image is Alpine-based and incompatible with `sass-embedded`'s Dart VM
+> binary (musl vs glibc), which causes build failures. Use `ruby:3.2` (Debian-based) instead.
+
+#### Production Docker build
+
+A root `Dockerfile` is provided for production deployment. It uses a multi-stage build: Ruby 3.2 to build the
+site, then copies the static output into an `nginx:alpine` image for serving.
+
+```shell
+docker build -t godot-website .
+docker run --rm -p 80:80 godot-website
+```
+
+The site will be available at `http://localhost`.
+
 #### Local server
+
 As this is a static website, it can be served locally using any server stack you want.
 
 - It is possible to use Jekyll and `bundle` to immediately serve the pages upon building it. To do this, replace the final build
-step with `bundle exec jekyll serve`.
-   - When using Docker, you need to add a new argument to the `docker run` command, `-p 4000:4000`, and change
-   the shell script to `build-and-serve.sh`.
+  step with `bundle exec jekyll serve`.
+  - When using Docker, add `-p 4000:4000` and use `build-and-serve.sh`:
 
-      ```shell
-      docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:stable ./build-and-serve.sh
-      ```
-      or
-      ```shell
-      docker run --rm --volume="%CD%:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:stable ./build-and-serve.sh
-      ```
+    On Linux:
+
+    ```shell
+    docker run --rm -v "$PWD:/srv/jekyll" -w /srv/jekyll -p 4000:4000 -e SERVER_HOST=0.0.0.0 -it ruby:3.2 bash -c "apt-get update && apt-get install -y build-essential libffi-dev libmagic-dev && curl -fsSL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz | tar -xz -C /usr/local/bin minify && ./build-and-serve.sh"
+    ```
+
+    On Windows (PowerShell):
+
+    ```shell
+    docker run --rm -v "${PWD}:/srv/jekyll" -w /srv/jekyll -p 4000:4000 -e SERVER_HOST=0.0.0.0 -it ruby:3.2 bash -c "apt-get update && apt-get install -y build-essential libffi-dev libmagic-dev && curl -fsSL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz | tar -xz -C /usr/local/bin minify && ./build-and-serve.sh"
+    ```
+
 - You can also use Python, which is likely pre-installed on your system. To serve the pages with its local server, run
-`python -m http.server 4000 -d ./_site`.
+  `python -m http.server 4000 -d ./_site`.
 
 After following either one of these steps the site will be available at `http://localhost:4000`.
 
@@ -153,17 +183,17 @@ generator. Markdown files form Jekyll collections with the same name as their co
 Markdown document, you can start by copying an existing one and then change its content.
 
 - `collections/_article` contains articles for the blog. Each article is written in Markdown with a metadata header located at
-the top of the file. The following metadata fields are required for the article to be correctly displayed throughout
-the website: `title`, `excerpt`, `categories`, `author`, `image`, and `date`. The name of the file acts as a slug in
-the generated URL.
+  the top of the file. The following metadata fields are required for the article to be correctly displayed throughout
+  the website: `title`, `excerpt`, `categories`, `author`, `image`, and `date`. The name of the file acts as a slug in
+  the generated URL.
 
 - `collections/_download` contains the download instructions for Godot builds per platform. Each document is written in Markdown
-with a metadata header located at the top of the file. Download links are generated from the `downloads` field in the
-metadata. When adding a new platform, make sure to create a new tab for it in the `/_layouts/download.html` template.
+  with a metadata header located at the top of the file. Download links are generated from the `downloads` field in the
+  metadata. When adding a new platform, make sure to create a new tab for it in the `/_layouts/download.html` template.
 
 - `collections/_showcase` contains entries for the showcase. Each article is written in Markdown with a metadata header located at
-the top of the file. Showcase entries can be featured on the home page by setting the `featured_in_home` field to
-`true`. The image used is the one from the `image` field.
+  the top of the file. Showcase entries can be featured on the home page by setting the `featured_in_home` field to
+  `true`. The image used is the one from the `image` field.
 
 Some information is also stored in YAML files, acting as a file-based database for several meta properties.
 
@@ -178,27 +208,27 @@ The following folders contain entry points for almost every website page, as wel
 templating language used in Jekyll is [liquid](https://jekyllrb.com/docs/liquid/).
 
 - `_i18n` contains translations for the website. The default language is English. Only static information is
-translated, with the blog and the showcase being displayed in English. **Currently disabled and a work in progress.**
+  translated, with the blog and the showcase being displayed in English. **Currently disabled and a work in progress.**
 
 - `_includes` contains navigation and footer elements used by most pages. If you want to create an element to reuse
-in multiple pages, you can create a new include file here.
+  in multiple pages, you can create a new include file here.
 
 - `_layouts` contains the wrapping content for the pages. Each layout inherits from `_layouts/default.html` which
-contains the main structure of the page, including the head and meta tags. Other layouts are used for specific pages,
-like the blog, download, and showcase pages.
+  contains the main structure of the page, including the head and meta tags. Other layouts are used for specific pages,
+  like the blog, download, and showcase pages.
 
 - `assets` contains static assets for the website. This includes the CSS, JS, and images used in the theme and layout.
-For media content used in articles and other pages check the `storage` folder. **Some files may be obsolete and
-unused.**
+  For media content used in articles and other pages check the `storage` folder. **Some files may be obsolete and
+  unused.**
 
 - `pages` contains most of the pages for the website. The final URL for each page is specified in the metadata header
-using the `permalink` field. Generally, it should map to the file's path inside `pages`. Dynamic content pages are
-generated using Markdown collections and layouts.
+  using the `permalink` field. Generally, it should map to the file's path inside `pages`. Dynamic content pages are
+  generated using Markdown collections and layouts.
 
 ### File storage
 
 - `storage` contains media and other files uploaded for use in dynamic content pages, such as the blog, the showcase,
-the events. **Some files may be obsolete and unused.**
+  the events. **Some files may be obsolete and unused.**
 
 ### Build system
 
@@ -255,10 +285,10 @@ To localize the website, the `_i18n` folder contains translation files for each 
 If you want to add a new language, create a new file in the `_i18n` folder with the language code as the filename and add the label for that language at `/assets/js/localize.js`. For example, for French, create `/_i18n/fr.yml` and add `'fr': 'Français'` in the `languageMap` const.
 
 The translations are handled by a jekyll plugin that contains a few tags you can use inside the templates. You can read more at `/_plugins/localize.rb`. But the tl'dr is:
+
 - Use the '{% t useyourkeyhere %}' tag to translate text
 - Use the '{% current_lang %}' tag to get the current page language
 - Use the '{% tlink /your/path %}' tag to get the localized URL
-
 
 ### Adding a mirrorlist host
 
