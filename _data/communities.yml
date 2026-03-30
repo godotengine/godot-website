@@ -405,8 +405,8 @@ Spain:
         url: https://www.facebook.com/GodotEngineEnEspanol
   - name: Zenvoid
     coordinates:
-      -40.4085505
-      -3.6171139
+      - 40.4085505
+      - -3.6171139
     links:
       - title: Website
         url: https://zenvoid-studio.com/
@@ -416,6 +416,15 @@ Spain:
         url: https://t.me/todogodot
       - title: Discord
         url: https://discord.gg/gpRkxySQ8A
+  - name: Godoteires
+    coordinates:
+      - 42.8827376
+      - -8.5381682
+    links:
+      - title: Website
+        url: https://blogs.amarinha.gal/godoteires
+      - title: Mastodon
+        url: https://mastodon.gal/@godoteires@amarinha.gal
 Sweden:
   - name: Godot Sweden
     links:
