@@ -89,7 +89,7 @@
 &lt;/ul>
 &lt;h2 id="changelog">Changelog&lt;/h2>
 &lt;p>&lt;strong>113 contributors&lt;/strong> submitted &lt;strong>297 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.7-dev3">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since &lt;a href="/article/dev-snapshot-godot-4-7-dev-2/">4.7-dev2&lt;/a>. You can also review &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.7">all changes included in 4.7&lt;/a> compared to the previous &lt;a href="/releases/4.6/">4.6 feature release&lt;/a>.&lt;/p>
-&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/778cf54dabd8a9e25b698a87036ab8604183f303">&lt;code class="language-plaintext highlighter-rouge">778cf54da&lt;/code>&lt;/a>.&lt;/p>
+&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/60fff00a660a2aeb03f88c07fb7baed353bcb72f">&lt;code class="language-plaintext highlighter-rouge">60fff00a6&lt;/code>&lt;/a>.&lt;/p>
 &lt;h2 id="downloads">Downloads&lt;/h2>
 &lt;div class="card card-download">
 &lt;a class="card-download-link" href="/download/archive/4.7-dev3">
