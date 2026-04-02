@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-04-01T17:18:40+00:00</updated><id>https://godotengine.org/</id><entry><title>Maintenance release: Godot 4.6.2</title><link href="https://godotengine.org/article/maintenance-release-godot-4-6-2/"/><updated>2026-04-01T12:00:00+00:00</updated><id>https://godotengine.org/article/maintenance-release-godot-4-6-2/</id><summary>The second 4.6 maintenance release has arrived; no foolin'!</summary><content type="html">&lt;p>While the majority of our team continues to focus on development snapshots for &lt;a href="/article/dev-snapshot-godot-4-7-dev-3/">Godot 4.7&lt;/a>, we still have a commitment to maintenance releases for the latest stable version. Specifically, our &lt;a href="https://docs.godotengine.org/en/latest/about/release_policy.html#release-support-timeline">release support policy&lt;/a> promises active support until the successor’s first patch release, so there’s still room for yet more maintenance releases in the future. As for now, we’d like to thank everyone who took the time to evaluate and ratify our release candidates for Godot 4.6.2.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-04-02T17:38:35+00:00</updated><id>https://godotengine.org/</id><entry><title>Maintenance release: Godot 4.6.2</title><link href="https://godotengine.org/article/maintenance-release-godot-4-6-2/"/><updated>2026-04-01T12:00:00+00:00</updated><id>https://godotengine.org/article/maintenance-release-godot-4-6-2/</id><summary>The second 4.6 maintenance release has arrived; no foolin'!</summary><content type="html">&lt;p>While the majority of our team continues to focus on development snapshots for &lt;a href="/article/dev-snapshot-godot-4-7-dev-3/">Godot 4.7&lt;/a>, we still have a commitment to maintenance releases for the latest stable version. Specifically, our &lt;a href="https://docs.godotengine.org/en/latest/about/release_policy.html#release-support-timeline">release support policy&lt;/a> promises active support until the successor’s first patch release, so there’s still room for yet more maintenance releases in the future. As for now, we’d like to thank everyone who took the time to evaluate and ratify our release candidates for Godot 4.6.2.&lt;/p>
 &lt;p>Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="/download/archive/4.6.2-stable/">&lt;strong>Download Godot 4.6.2 now&lt;/strong>&lt;/a> or try the &lt;a href="https://editor.godotengine.org/4.6.2.stable/">online version of the Godot editor&lt;/a>.&lt;/p>
@@ -632,22 +632,22 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/638b2f1e923cfb75cc812c2cc168d81fc09ee493">&lt;code class="language-plaintext highlighter-rouge">638b2f1e9&lt;/code>&lt;/a>.&lt;/p>
 &lt;h2 id="downloads">Downloads&lt;/h2>
 &lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.6.2-stable">
-Download Godot 4.6.2 stable
+&lt;a class="card-download-link" href="/download/archive/4.6.2-rc2">
+Download Godot 4.6.2 rc2
 &lt;/a>
 &lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/maintenance-release-godot-4-6-2.jpg" />
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-6-2-rc-2.jpg" />
 &lt;div class="card-download-platforms">
 &lt;div class="download-platform platform-linux">
 &lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
 Linux
 &lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=stable&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
+&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=rc2&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=stable&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=rc2&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -656,12 +656,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
 macOS
 &lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=stable&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
+&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=rc2&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=stable&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=rc2&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -670,12 +670,12 @@ Standard
 &lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
 Windows
 &lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=stable&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
+&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=rc2&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
 &lt;div class="download-title">
 Standard
 &lt;/div>
 &lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=stable&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;a href="https://downloads.godotengine.org/?version=4.6.2&amp;amp;flavor=rc2&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
 &lt;div class="download-title">
 .NET
 &lt;/div>
@@ -683,7 +683,7 @@ Standard
 &lt;/div>
 &lt;/div>
 &lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.6.2-stable">
+&lt;a class="card-download-other" href="/download/archive/4.6.2-rc2">
 Export templates and other downloads
 &lt;/a>
 &lt;a class="card-download-donate" href="https://fund.godotengine.org/">
