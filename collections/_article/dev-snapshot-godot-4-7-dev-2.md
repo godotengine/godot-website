@@ -49,6 +49,10 @@ Malcolm isn't done yet, as the animation track editor got some love in [GH-11347
 
 As you might recall from the [previous development snapshot](/article/dev-snapshot-godot-4-7-dev-1/#windows-support-hdr-output), our intention during the 4.7 cycle is to roll out HDR support across all supported platforms. Windows already got their initial implementation; now, it's Apple's turn. [Stuart Carnie](https://github.com/stuartcarnie) delivered full support for <abbr title="Extended Dynamic Range; Apple's technology to display HDR on their devices.">EDR</abbr> display to all Apple platforms ([GH-106814](https://github.com/godotengine/godot/pull/106814)). Documentation is still in the works for HDR, as there's quite a lot of ground to cover, but you can expect a proper deep-dive into the concept in the coming weeks!
 
+### Input: Add device IDs to keyboard and mouse input events
+
+If you've used [`InputEvent`s](https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html) in your projects and their [`device` property](https://docs.godotengine.org/en/stable/classes/class_inputevent.html#class-inputevent-property-device) directly, you may have noticed that the engine sets the device ID for keyboard and mouse devices to `0`, which conflicts with the joypads that may also use this ID, and the only way to check if an `InputEvent` was sent by, for example, a keyboard, is to check its type by using `if event is InputEventKey: (your code here)`. A [proposal](https://github.com/godotengine/godot-proposals/issues/7161) was made to resolve this issue, and [Nintorch](https://github.com/Nintorch) made a PR for it here: [GH-116274](https://github.com/godotengine/godot/pull/116274). With this change the users can finally differentiate between joypad, keyboard and mouse events just by checking the `device` property. However, this also means that if your project depends on the previous behavior of keyboard and mouse having an ID of `0`, you will have to modify your project. But if you're not happy with this change, please let us know by making a [GitHub issue](https://github.com/godotengine/godot/issues). If enough people are not happy with this change, it will have to be reverted.
+
 ### And more!
 
 There are too many exciting changes to list them all here, but here's a curated selection:
@@ -60,7 +64,6 @@ There are too many exciting changes to list them all here, but here's a curated 
 - GUI: Add script editor `join_lines` keybind ([GH-111547](https://github.com/godotengine/godot/pull/111547)).
 - GUI: Improve the table in `RichTextLabel` ([GH-116277](https://github.com/godotengine/godot/pull/116277)).
 - GUI: Support tiling `AtlasTexture` in `TextureRect` ([GH-113808](https://github.com/godotengine/godot/pull/113808)).
-- Input: Add device IDs to keyboard and mouse input events ([GH-116274](https://github.com/godotengine/godot/pull/116274)).
 - Input: Add support for SDL3 joystick input driver for iOS ([GH-114316](https://github.com/godotengine/godot/pull/114316)).
 - Plugin: Android: Add support for plugins gradle platform dependencies ([GH-115888](https://github.com/godotengine/godot/pull/115888)).
 - Rendering: Editor additions for MipMaps and rd_textures ([GH-109004](https://github.com/godotengine/godot/pull/109004)).
