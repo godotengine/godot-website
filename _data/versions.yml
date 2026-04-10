@@ -1,8 +1,8 @@
 - name: "4.7"
-  flavor: "dev4"
-  release_date: "9 April 2026"
-  release_notes: "/article/dev-snapshot-godot-4-7-dev-4/"
   releases:
+    - name: "dev4"
+      release_date: "9 April 2026"
+      release_notes: "/article/dev-snapshot-godot-4-7-dev-4/"
     - name: "dev3"
       release_date: "26 March 2026"
       release_notes: "/article/dev-snapshot-godot-4-7-dev-3/"
@@ -14,11 +14,11 @@
       release_notes: "/article/dev-snapshot-godot-4-7-dev-1/"
 
 - name: "4.6.2"
-  flavor: "stable"
-  release_date: "1 April 2026"
-  release_notes: "/article/maintenance-release-godot-4-6-2/"
   featured: "4"
   releases:
+    - name: "stable"
+      release_date: "1 April 2026"
+      release_notes: "/article/maintenance-release-godot-4-6-2/"
     - name: "rc2"
       release_date: "20 March 2026"
       release_notes: "/article/release-candidate-godot-4-6-2-rc-2/"
@@ -27,19 +27,19 @@
       release_notes: "/article/release-candidate-godot-4-6-2-rc-1/"
 
 - name: "4.6.1"
-  flavor: "stable"
-  release_date: "16 February 2026"
-  release_notes: "/article/maintenance-release-godot-4-6-1/"
   releases:
+    - name: "stable"
+      release_date: "16 February 2026"
+      release_notes: "/article/maintenance-release-godot-4-6-1/"
     - name: "rc1"
       release_date: "6 February 2026"
       release_notes: "/article/release-candidate-godot-4-6-1-rc-1/"
 
 - name: "4.6"
-  flavor: "stable"
-  release_date: "26 January 2026"
-  release_notes: "/article/godot-4-6-all-about-your-flow/"
   releases:
+    - name: "stable"
+      release_date: "26 January 2026"
+      release_notes: "/article/godot-4-6-all-about-your-flow/"
     - name: "rc2"
       release_date: "20 January 2026"
       release_notes: "/article/release-candidate-godot-4-6-rc-2/"
@@ -75,19 +75,19 @@
       release_notes: "/article/dev-snapshot-godot-4-6-dev-1/"
 
 - name: "4.5.2"
-  flavor: "stable"
-  release_date: "19 March 2026"
-  release_notes: "/article/maintenance-release-godot-4-5-2/"
   releases:
+    - name: "stable"
+      release_date: "19 March 2026"
+      release_notes: "/article/maintenance-release-godot-4-5-2/"
     - name: "rc1"
       release_date: "23 January 2026"
       release_notes: "/article/release-candidate-godot-4-5-2-rc-1/"
 
 - name: "4.5.1"
-  flavor: "stable"
-  release_date: "15 October 2025"
-  release_notes: "/article/maintenance-release-godot-4-5-1/"
   releases:
+    - name: "stable"
+      release_date: "15 October 2025"
+      release_notes: "/article/maintenance-release-godot-4-5-1/"
     - name: "rc2"
       release_date: "8 October 2025"
       release_notes: "/article/release-candidate-godot-4-5-1-rc-2/"
@@ -96,10 +96,10 @@
       release_notes: "/article/release-candidate-godot-4-5-1-rc-1/"
 
 - name: "4.5"
-  flavor: "stable"
-  release_date: "15 September 2025"
-  release_notes: "/article/godot-4-5-making-dreams-accessible/"
   releases:
+    - name: "stable"
+      release_date: "15 September 2025"
+      release_notes: "/article/godot-4-5-making-dreams-accessible/"
     - name: "rc2"
       release_date: "10 September 2025"
       release_notes: "/article/release-candidate-godot-4-5-rc-2/"
@@ -144,10 +144,10 @@
       release_notes: "/article/dev-snapshot-godot-4-5-dev-1/"
 
 - name: "4.4.1"
-  flavor: "stable"
-  release_date: "26 March 2025"
-  release_notes: "/article/maintenance-release-godot-4-4-1/"
   releases:
+    - name: "stable"
+      release_date: "26 March 2025"
+      release_notes: "/article/maintenance-release-godot-4-4-1/"
     - name: "rc2"
       release_date: "21 March 2025"
       release_notes: "/article/release-candidate-godot-4-4-1-rc-2/"
@@ -156,10 +156,10 @@
       release_notes: "/article/release-candidate-godot-4-4-1-rc-1/"
 
 - name: "4.4"
-  flavor: "stable"
-  release_date: "3 March 2025"
-  release_notes: "/article/godot-4-4-a-unified-experience/"
   releases:
+    - name: "stable"
+      release_date: "3 March 2025"
+      release_notes: "/article/godot-4-4-a-unified-experience/"
     - name: "rc3"
       release_date: "28 February 2025"
       release_notes: "/article/release-candidate-godot-4-4-rc-3/"
@@ -204,10 +204,10 @@
       release_notes: "/article/dev-snapshot-godot-4-4-dev-1/"
 
 - name: "4.3"
-  flavor: "stable"
-  release_date: "15 August 2024"
-  release_notes: "/article/godot-4-3-a-shared-effort/"
   releases:
+    - name: "stable"
+      release_date: "15 August 2024"
+      release_notes: "/article/godot-4-3-a-shared-effort/"
     - name: "rc3"
       release_date: "8 August 2024"
       release_notes: "/article/release-candidate-godot-4-3-rc-3/"
@@ -246,10 +246,10 @@
       release_notes: "/article/dev-snapshot-godot-4-3-dev-1/"
 
 - name: "4.2.2"
-  flavor: "stable"
-  release_date: "17 April 2024"
-  release_notes: "/article/maintenance-release-godot-4-2-2-and-4-1-4/"
   releases:
+    - name: "stable"
+      release_date: "17 April 2024"
+      release_notes: "/article/maintenance-release-godot-4-2-2-and-4-1-4/"
     - name: "rc3"
       release_date: "12 April 2024"
       release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/"
@@ -261,19 +261,19 @@
       release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/"
 
 - name: "4.2.1"
-  flavor: "stable"
-  release_date: "12 December 2023"
-  release_notes: "/article/maintenance-release-godot-4-2-1/"
   releases:
+    - name: "stable"
+      release_date: "12 December 2023"
+      release_notes: "/article/maintenance-release-godot-4-2-1/"
     - name: "rc1"
       release_date: "8 December 2023"
       release_notes: "/article/release-candidate-godot-4-2-1-rc-1/"
 
 - name: "4.2"
-  flavor: "stable"
-  release_date: "30 November 2023"
-  release_notes: "/article/godot-4-2-arrives-in-style/"
   releases:
+    - name: "stable"
+      release_date: "30 November 2023"
+      release_notes: "/article/godot-4-2-arrives-in-style/"
     - name: "rc2"
       release_date: "24 November 2023"
       release_notes: "/article/release-candidate-godot-4-2-rc-2/"
@@ -318,10 +318,10 @@
       release_notes: "/article/dev-snapshot-godot-4-2-dev-1/"
 
 - name: "4.1.4"
-  flavor: "stable"
-  release_date: "17 April 2024"
-  release_notes: "/article/maintenance-release-godot-4-2-2-and-4-1-4/"
   releases:
+    - name: "stable"
+      release_date: "17 April 2024"
+      release_notes: "/article/maintenance-release-godot-4-2-2-and-4-1-4/"
     - name: "rc3"
       release_date: "12 April 2024"
       release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-3/"
@@ -333,37 +333,37 @@
       release_notes: "/article/release-candidate-godot-4-1-4-and-4-2-2-rc-1/"
 
 - name: "4.1.3"
-  flavor: "stable"
-  release_date: "1 November 2023"
-  release_notes: "/article/maintenance-release-godot-4-1-3/"
   releases:
+    - name: "stable"
+      release_date: "1 November 2023"
+      release_notes: "/article/maintenance-release-godot-4-1-3/"
     - name: "rc1"
       release_date: "27 October 2023"
       release_notes: "/article/release-candidate-godot-4-1-3-rc-1/"
 
 - name: "4.1.2"
-  flavor: "stable"
-  release_date: "4 October 2023"
-  release_notes: "/article/maintenance-release-godot-4-1-2/"
   releases:
+    - name: "stable"
+      release_date: "4 October 2023"
+      release_notes: "/article/maintenance-release-godot-4-1-2/"
     - name: "rc1"
       release_date: "22 September 2023"
       release_notes: "/article/release-candidate-godot-4-1-2-rc-1/"
 
 - name: "4.1.1"
-  flavor: "stable"
-  release_date: "17 July 2023"
-  release_notes: "/article/maintenance-release-godot-4-1-1/"
   releases:
+    - name: "stable"
+      release_date: "17 July 2023"
+      release_notes: "/article/maintenance-release-godot-4-1-1/"
     - name: "rc1"
       release_date: "12 July 2023"
       release_notes: "/article/release-candidate-godot-4-1-1-rc-1/"
 
 - name: "4.1"
-  flavor: "stable"
-  release_date: "6 July 2023"
-  release_notes: "/article/godot-4-1-is-here/"
   releases:
+    - name: "stable"
+      release_date: "6 July 2023"
+      release_notes: "/article/godot-4-1-is-here/"
     - name: "rc3"
       release_date: "4 July 2023"
       release_notes: "/article/release-candidate-godot-4-1-rc-3/"
@@ -396,19 +396,19 @@
       release_notes: "/article/dev-snapshot-godot-4-1-dev-1/"
 
 - name: "4.0.4"
-  flavor: "stable"
-  release_date: "3 August 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-4/"
   releases:
+    - name: "stable"
+      release_date: "3 August 2023"
+      release_notes: "/article/maintenance-release-godot-4-0-4/"
     - name: "rc1"
       release_date: "21 July 2023"
       release_notes: "/article/release-candidate-godot-4-0-4-rc-1/"
 
 - name: "4.0.3"
-  flavor: "stable"
-  release_date: "19 May 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-3/"
   releases:
+    - name: "stable"
+      release_date: "19 May 2023"
+      release_notes: "/article/maintenance-release-godot-4-0-3/"
     - name: "rc2"
       release_date: "12 May 2023"
       release_notes: "/article/release-candidate-godot-4-0-3-rc-2/"
@@ -417,19 +417,19 @@
       release_notes: "/article/release-candidate-godot-4-0-3-rc-1/"
 
 - name: "4.0.2"
-  flavor: "stable"
-  release_date: "4 April 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-2/"
   releases:
+    - name: "stable"
+      release_date: "4 April 2023"
+      release_notes: "/article/maintenance-release-godot-4-0-2/"
     - name: "rc1"
       release_date: "31 March 2023"
       release_notes: "/article/release-candidate-godot-4-0-2-rc-1/"
 
 - name: "4.0.1"
-  flavor: "stable"
-  release_date: "20 March 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-1/"
   releases:
+    - name: "stable"
+      release_date: "20 March 2023"
+      release_notes: "/article/maintenance-release-godot-4-0-1/"
     - name: "rc2"
       release_date: "17 March 2023"
       release_notes: "/article/release-candidate-godot-4-0-1-rc-2/"
@@ -438,10 +438,10 @@
       release_notes: "/article/release-candidate-godot-4-0-1-rc-1/"
 
 - name: "4.0"
-  flavor: "stable"
-  release_date: "1 March 2023"
-  release_notes: "/article/godot-4-0-sets-sail/"
   releases:
+    - name: "stable"
+      release_date: "1 March 2023"
+      release_notes: "/article/godot-4-0-sets-sail/"
     - name: "rc6"
       release_date: "27 February 2023"
       release_notes: "/article/release-candidate-godot-4-0-rc-6/"
@@ -564,26 +564,29 @@
       release_notes: "/article/dev-snapshot-godot-4-0-alpha-1/"
 
 - name: "3.7"
-  flavor: "dev1"
-  release_date: "13 November 2025"
-  release_notes: "/article/dev-snapshot-godot-3-7-dev-1/"
+  releases:
+    - name: "dev1"
+      release_date: "13 November 2025"
+      release_notes: "/article/dev-snapshot-godot-3-7-dev-1/"
 
 - name: "3.6.2"
-  flavor: "stable"
-  release_date: "23 June 2025"
-  release_notes: "/article/maintenance-release-godot-3-6-2/"
   featured: "3"
+  releases:
+    - name: "stable"
+      release_date: "23 June 2025"
+      release_notes: "/article/maintenance-release-godot-3-6-2/"
 
 - name: "3.6.1"
-  flavor: "stable"
-  release_date: "6 June 2025"
-  release_notes: "/article/maintenance-release-godot-3-6-1/"
+  releases:
+    - name: "stable"
+      release_date: "6 June 2025"
+      release_notes: "/article/maintenance-release-godot-3-6-1/"
 
 - name: "3.6"
-  flavor: "stable"
-  release_date: "9 September 2024"
-  release_notes: "/article/godot-3-6-finally-released/"
   releases:
+    - name: "stable"
+      release_date: "9 September 2024"
+      release_notes: "/article/godot-3-6-finally-released/"
     - name: "rc1"
       release_date: "9 July 2024"
       release_notes: "/article/release-candidate-godot-3-6-rc-1/"
@@ -604,19 +607,19 @@
       release_notes: "/article/dev-snapshot-godot-3-6-beta-1/"
 
 - name: "3.5.3"
-  flavor: "stable"
-  release_date: "25 September 2023"
-  release_notes: "/article/maintenance-release-godot-3-5-3/"
   releases:
+    - name: "stable"
+      release_date: "25 September 2023"
+      release_notes: "/article/maintenance-release-godot-3-5-3/"
     - name: "rc1"
       release_date: "8 September 2023"
       release_notes: "/article/release-candidate-godot-3-5-3-rc-1/"
 
 - name: "3.5.2"
-  flavor: "stable"
-  release_date: "7 March 2023"
-  release_notes: "/article/maintenance-release-godot-3-5-2/"
   releases:
+    - name: "stable"
+      release_date: "7 March 2023"
+      release_notes: "/article/maintenance-release-godot-3-5-2/"
     - name: "rc2"
       release_date: "12 January 2023"
       release_notes: "/article/release-candidate-godot-3-5-2-rc-2/"
@@ -625,10 +628,10 @@
       release_notes: "/article/release-candidate-godot-3-5-2-rc-1/"
 
 - name: "3.5.1"
-  flavor: "stable"
-  release_date: "28 September 2022"
-  release_notes: "/article/maintenance-release-godot-3-5-1/"
   releases:
+    - name: "stable"
+      release_date: "28 September 2022"
+      release_notes: "/article/maintenance-release-godot-3-5-1/"
     - name: "rc2"
       release_date: "21 September 2022"
       release_notes: "/article/release-candidate-godot-3-5-1-rc-2/"
@@ -637,10 +640,10 @@
       release_notes: "/article/release-candidate-godot-3-5-1-rc-1/"
 
 - name: "3.5"
-  flavor: "stable"
-  release_date: "5 August 2022"
-  release_notes: "/article/godot-3-5-cant-stop-wont-stop/"
   releases:
+    - name: "stable"
+      release_date: "5 August 2022"
+      release_notes: "/article/godot-3-5-cant-stop-wont-stop/"
     - name: "rc8"
       release_date: "28 July 2022"
       release_notes: "/article/release-candidate-godot-3-5-rc-8/"
@@ -682,19 +685,19 @@
       release_notes: "/article/dev-snapshot-godot-3-5-beta-1/"
 
 - name: "3.4.5"
-  flavor: "stable"
-  release_date: "2 August 2022"
-  release_notes: "/article/maintenance-release-godot-3-4-5/"
   releases:
+    - name: "stable"
+      release_date: "2 August 2022"
+      release_notes: "/article/maintenance-release-godot-3-4-5/"
     - name: "rc1"
       release_date: "20 July 2022"
       release_notes: "/article/release-candidate-godot-3-4-5-rc-1/"
 
 - name: "3.4.4"
-  flavor: "stable"
-  release_date: "23 March 2022"
-  release_notes: "/article/maintenance-release-godot-3-4-4/"
   releases:
+    - name: "stable"
+      release_date: "23 March 2022"
+      release_notes: "/article/maintenance-release-godot-3-4-4/"
     - name: "rc2"
       release_date: "16 March 2022"
       release_notes: "/article/release-candidate-godot-3-4-4-rc-2/"
@@ -703,10 +706,10 @@
       release_notes: "/article/release-candidate-godot-3-4-4-rc-1/"
 
 - name: "3.4.3"
-  flavor: "stable"
-  release_date: "25 February 2022"
-  release_notes: "/article/maintenance-release-godot-3-4-3/"
   releases:
+    - name: "stable"
+      release_date: "25 February 2022"
+      release_notes: "/article/maintenance-release-godot-3-4-3/"
     - name: "rc2"
       release_date: "17 February 2022"
       release_notes: "/article/release-candidate-godot-3-4-3-rc-2/"
@@ -715,15 +718,16 @@
       release_notes: "/article/release-candidate-godot-3-4-3-rc-1/"
 
 - name: "3.4.2"
-  flavor: "stable"
-  release_date: "22 December 2021"
-  release_notes: "/article/maintenance-release-godot-3-4-2/"
+  releases:
+    - name: "stable"
+      release_date: "22 December 2021"
+      release_notes: "/article/maintenance-release-godot-3-4-2/"
 
 - name: "3.4.1"
-  flavor: "stable"
-  release_date: "17 December 2021"
-  release_notes: "/article/maintenance-release-godot-3-4-1/"
   releases:
+    - name: "stable"
+      release_date: "17 December 2021"
+      release_notes: "/article/maintenance-release-godot-3-4-1/"
     - name: "rc3"
       release_date: "15 December 2021"
       release_notes: "/article/release-candidate-godot-3-4-1-rc-3/"
@@ -735,10 +739,10 @@
       release_notes: "/article/release-candidate-godot-3-4-1-rc-1/"
 
 - name: "3.4"
-  flavor: "stable"
-  release_date: "6 November 2021"
-  release_notes: "/article/godot-3-4-is-released/"
   releases:
+    - name: "stable"
+      release_date: "6 November 2021"
+      release_notes: "/article/godot-3-4-is-released/"
     - name: "rc3"
       release_date: "2 November 2021"
       release_notes: "/article/release-candidate-godot-3-4-rc-3/"
@@ -768,19 +772,19 @@
       release_notes: "/article/dev-snapshot-godot-3-4-beta-2/"
 
 - name: "3.3.4"
-  flavor: "stable"
-  release_date: "1 October 2021"
-  release_notes: "/article/maintenance-release-godot-3-3-4/"
   releases:
+    - name: "stable"
+      release_date: "1 October 2021"
+      release_notes: "/article/maintenance-release-godot-3-3-4/"
     - name: "rc1"
       release_date: "29 September 2021"
       release_notes: "/article/release-candidate-godot-3-3-4-rc-1/"
 
 - name: "3.3.3"
-  flavor: "stable"
-  release_date: "19 August 2021"
-  release_notes: "/article/maintenance-release-godot-3-3-3/"
   releases:
+    - name: "stable"
+      release_date: "19 August 2021"
+      release_notes: "/article/maintenance-release-godot-3-3-3/"
     - name: "rc2"
       release_date: "16 August 2021"
       release_notes: "/article/release-candidate-godot-3-3-3-rc-2/"
@@ -789,15 +793,16 @@
       release_notes: "/article/release-candidate-godot-3-3-3-rc-1/"
 
 - name: "3.3.2"
-  flavor: "stable"
-  release_date: "24 May 2021"
-  release_notes: "/article/maintenance-release-godot-3-3-2/"
+  releases:
+    - name: "stable"
+      release_date: "24 May 2021"
+      release_notes: "/article/maintenance-release-godot-3-3-2/"
 
 - name: "3.3.1"
-  flavor: "stable"
-  release_date: "18 May 2021"
-  release_notes: "/article/maintenance-release-godot-3-3-1/"
   releases:
+    - name: "stable"
+      release_date: "18 May 2021"
+      release_notes: "/article/maintenance-release-godot-3-3-1/"
     - name: "rc2"
       release_date: "15 May 2021"
       release_notes: "/article/release-candidate-godot-3-3-1-rc-2/"
@@ -806,10 +811,10 @@
       release_notes: "/article/release-candidate-godot-3-3-1-rc-1/"
 
 - name: "3.3"
-  flavor: "stable"
-  release_date: "22 April 2021"
-  release_notes: "/article/godot-3-3-has-arrived/"
   releases:
+    - name: "stable"
+      release_date: "22 April 2021"
+      release_notes: "/article/godot-3-3-has-arrived/"
     - name: "rc9"
       release_date: "14 April 2021"
       release_notes: "/article/release-candidate-godot-3-3-rc-9/"
@@ -868,10 +873,10 @@
       release_version: "3.2.4"
 
 - name: "3.2.3"
-  flavor: "stable"
-  release_date: "17 September 2020"
-  release_notes: "/article/maintenance-release-godot-3-2-3/"
   releases:
+    - name: "stable"
+      release_date: "17 September 2020"
+      release_notes: "/article/maintenance-release-godot-3-2-3/"
     - name: "rc6"
       release_date: "9 September 2020"
       release_notes: "/article/release-candidate-godot-3-2-3-rc-6/"
@@ -895,10 +900,10 @@
       release_notes: "/article/dev-snapshot-godot-3-2-3-beta-1/"
 
 - name: "3.2.2"
-  flavor: "stable"
-  release_date: "26 June 2020"
-  release_notes: "/article/maintenance-release-godot-3-2-2/"
   releases:
+    - name: "stable"
+      release_date: "26 June 2020"
+      release_notes: "/article/maintenance-release-godot-3-2-2/"
     - name: "rc4"
       release_date: "25 June 2020"
       release_notes: "/article/release-candidate-godot-3-2-2-rc-4/"
@@ -925,10 +930,10 @@
       release_notes: "/article/dev-snapshot-godot-3-2-2-beta-1/"
 
 - name: "3.2.1"
-  flavor: "stable"
-  release_date: "10 March 2020"
-  release_notes: "/article/maintenance-release-godot-3-2-1/"
   releases:
+    - name: "stable"
+      release_date: "10 March 2020"
+      release_notes: "/article/maintenance-release-godot-3-2-1/"
     - name: "rc2"
       release_date: "5 March 2020"
       release_notes: "/article/release-candidate-godot-3-2-1-rc-2/"
@@ -937,10 +942,10 @@
       release_notes: "/article/release-candidate-godot-3-2-1-rc-1/"
 
 - name: "3.2"
-  flavor: "stable"
-  release_date: "29 January 2020"
-  release_notes: "/article/here-comes-godot-3-2/"
   releases:
+    - name: "stable"
+      release_date: "29 January 2020"
+      release_notes: "/article/here-comes-godot-3-2/"
     - name: "rc4"
       release_date: "27 January 2020"
       release_notes: "/article/release-candidate-3-2-rc-4/"
@@ -985,28 +990,28 @@
       release_notes: ""
 
 - name: "3.1.2"
-  flavor: "stable"
-  release_date: "30 November 2019"
-  release_notes: "/article/maintenance-release-godot-3-1-2/"
   releases:
+    - name: "stable"
+      release_date: "30 November 2019"
+      release_notes: "/article/maintenance-release-godot-3-1-2/"
     - name: "rc1"
       release_date: "13 November 2019"
       release_notes: "/article/release-candidate-godot-3-1-2-rc-1/"
 
 - name: "3.1.1"
-  flavor: "stable"
-  release_date: "27 April 2019"
-  release_notes: "/article/maintenance-release-godot-3-1-1/"
   releases:
+    - name: "stable"
+      release_date: "27 April 2019"
+      release_notes: "/article/maintenance-release-godot-3-1-1/"
     - name: "rc1"
       release_date: "23 April 2019"
       release_notes: "/article/release-candidate-godot-3-1-1-rc-1/"
 
 - name: "3.1"
-  flavor: "stable"
-  release_date: "13 March 2019"
-  release_notes: "/article/godot-3-1-released/"
   releases:
+    - name: "stable"
+      release_date: "13 March 2019"
+      release_notes: "/article/godot-3-1-released/"
     - name: "rc3"
       release_date: "12 March 2019"
       release_notes: "/article/release-candidate-godot-3-1-rc-3/"
@@ -1066,25 +1071,28 @@
       release_notes: "/article/dev-snapshot-godot-3-1-alpha-1/"
 
 - name: "3.0.6"
-  flavor: "stable"
-  release_date: "29 July 2018"
-  release_notes: "/article/maintenance-release-godot-3-0-6/"
+  releases:
+    - name: "stable"
+      release_date: "29 July 2018"
+      release_notes: "/article/maintenance-release-godot-3-0-6/"
 
 - name: "3.0.5"
-  flavor: "stable"
-  release_date: "8 July 2018"
-  release_notes: "/article/maintenance-release-godot-3-0-5/"
+  releases:
+    - name: "stable"
+      release_date: "8 July 2018"
+      release_notes: "/article/maintenance-release-godot-3-0-5/"
 
 - name: "3.0.4"
-  flavor: "stable"
-  release_date: "22 June 2018"
-  release_notes: "/article/maintenance-release-godot-3-0-4/"
+  releases:
+    - name: "stable"
+      release_date: "22 June 2018"
+      release_notes: "/article/maintenance-release-godot-3-0-4/"
 
 - name: "3.0.3"
-  flavor: "stable"
-  release_date: "13 June 2018"
-  release_notes: "/article/maintenance-release-godot-3-0-3/"
   releases:
+    - name: "stable"
+      release_date: "13 June 2018"
+      release_notes: "/article/maintenance-release-godot-3-0-3/"
     - name: "rc3"
       release_date: "2 June 2018"
       release_notes: "/article/dev-snapshot-godot-3-0-3-rc-3/"
@@ -1096,24 +1104,25 @@
       release_notes: "/article/dev-snapshot-godot-3-0-3-rc-1/"
 
 - name: "3.0.2"
-  flavor: "stable"
-  release_date: "4 March 2018"
-  release_notes: "/article/maintenance-release-godot-302/"
+  releases:
+    - name: "stable"
+      release_date: "4 March 2018"
+      release_notes: "/article/maintenance-release-godot-302/"
 
 - name: "3.0.1"
-  flavor: "stable"
-  release_date: "25 February 2018"
-  release_notes: "/article/maintenance-release-godot-3-0-1/"
   releases:
+    - name: "stable"
+      release_date: "25 February 2018"
+      release_notes: "/article/maintenance-release-godot-3-0-1/"
     - name: "rc1"
       release_date: "23 February 2018"
       release_notes: "/article/dev-snapshot-godot-3-0-1-rc1/"
 
 - name: "3.0"
-  flavor: "stable"
-  release_date: "29 January 2018"
-  release_notes: "/article/godot-3-0-released/"
   releases:
+    - name: "stable"
+      release_date: "29 January 2018"
+      release_notes: "/article/godot-3-0-released/"
     - name: "rc3"
       release_date: "24 January 2018"
       release_notes: "/article/dev-snapshot-godot-3-0-rc-3/"
@@ -1137,80 +1146,94 @@
       release_notes: "/article/dev-snapshot-godot-3-0-alpha-1/"
 
 - name: "2.1.6"
-  flavor: "stable"
-  release_date: "11 July 2019"
-  release_notes: "/article/maintenance-release-godot-2-1-6/"
   releases:
+    - name: "stable"
+      release_date: "11 July 2019"
+      release_notes: "/article/maintenance-release-godot-2-1-6/"
     - name: "rc1"
       release_date: "4 June 2019"
       release_notes: "/article/dev-snapshot-godot-2-1-6-rc-1/"
 
 - name: "2.1.5"
-  flavor: "stable"
-  release_date: "29 July 2018"
-  release_notes: "/article/maintenance-release-godot-2-1-5/"
+  releases:
+    - name: "stable"
+      release_date: "29 July 2018"
+      release_notes: "/article/maintenance-release-godot-2-1-5/"
 
 - name: "2.1.4"
-  flavor: "stable"
-  release_date: "30 August 2017"
-  release_notes: "/article/maintenance-release-godot-2-1-4/"
+  releases:
+    - name: "stable"
+      release_date: "30 August 2017"
+      release_notes: "/article/maintenance-release-godot-2-1-4/"
 
 - name: "2.1.3"
-  flavor: "stable"
-  release_date: "12 April 2017"
-  release_notes: "/article/maintenance-release-godot-2-1-3/"
+  releases:
+    - name: "stable"
+      release_date: "12 April 2017"
+      release_notes: "/article/maintenance-release-godot-2-1-3/"
 
 - name: "2.1.2"
-  flavor: "stable"
-  release_date: "21 January 2017"
-  release_notes: "/article/maintenance-release-godot-2-1-2/"
+  releases:
+    - name: "stable"
+      release_date: "21 January 2017"
+      release_notes: "/article/maintenance-release-godot-2-1-2/"
 
 - name: "2.1.1"
-  flavor: "stable"
-  release_date: "17 November 2016"
-  release_notes: "/article/maintenance-release-godot-2-1-1/"
+  releases:
+    - name: "stable"
+      release_date: "17 November 2016"
+      release_notes: "/article/maintenance-release-godot-2-1-1/"
 
 - name: "2.1"
-  flavor: "stable"
-  release_date: "9 August 2016"
-  release_notes: "/article/godot-reaches-2-1-stable/"
+  releases:
+    - name: "stable"
+      release_date: "9 August 2016"
+      release_notes: "/article/godot-reaches-2-1-stable/"
 
 - name: "2.0.4.1"
-  flavor: "stable"
-  release_date: "10 July 2016"
-  release_notes: "/article/maintenance-release-godot-2-0-4/"
+  releases:
+    - name: "stable"
+      release_date: "10 July 2016"
+      release_notes: "/article/maintenance-release-godot-2-0-4/"
 
 - name: "2.0.4"
-  flavor: "stable"
-  release_date: "9 July 2016"
-  release_notes: "/article/maintenance-release-godot-2-0-4/"
+  releases:
+    - name: "stable"
+      release_date: "9 July 2016"
+      release_notes: "/article/maintenance-release-godot-2-0-4/"
 
 - name: "2.0.3"
-  flavor: "stable"
-  release_date: "13 May 2016"
-  release_notes: "/article/maintenance-release-godot-2-0-3/"
+  releases:
+    - name: "stable"
+      release_date: "13 May 2016"
+      release_notes: "/article/maintenance-release-godot-2-0-3/"
 
 - name: "2.0.2"
-  flavor: "stable"
-  release_date: "8 April 2016"
-  release_notes: "/article/maintenance-release-godot-2-0-2/"
+  releases:
+    - name: "stable"
+      release_date: "8 April 2016"
+      release_notes: "/article/maintenance-release-godot-2-0-2/"
 
 - name: "2.0.1"
-  flavor: "stable"
-  release_date: "7 March 2016"
-  release_notes: "/article/updates-on-the-release-cycle-and-godot-2-0-1/"
+  releases:
+    - name: "stable"
+      release_date: "7 March 2016"
+      release_notes: "/article/updates-on-the-release-cycle-and-godot-2-0-1/"
 
 - name: "2.0"
-  flavor: "stable"
-  release_date: "23 February 2016"
-  release_notes: "/article/godot-engine-reaches-2-0-stable/"
+  releases:
+    - name: "stable"
+      release_date: "23 February 2016"
+      release_notes: "/article/godot-engine-reaches-2-0-stable/"
 
 - name: "1.1"
-  flavor: "stable"
-  release_date: "21 May 2015"
-  release_notes: "/article/godot-1-1-out/"
+  releases:
+    - name: "stable"
+      release_date: "21 May 2015"
+      release_notes: "/article/godot-1-1-out/"
 
 - name: "1.0"
-  flavor: "stable"
-  release_date: "15 December 2014"
-  release_notes: "/article/godot-engine-reaches-1-0/"
+  releases:
+    - name: "stable"
+      release_date: "15 December 2014"
+      release_notes: "/article/godot-engine-reaches-1-0/"

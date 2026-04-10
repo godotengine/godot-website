@@ -221,26 +221,28 @@ To create a new version, add the following block to the file:
 
 ```
 - name: "4.0.1"
-  flavor: "stable"
-  release_date: "20 March 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-1/"
+  releases:
+    - name: "stable"
+      release_date: "20 March 2023"
+      release_notes: "/article/maintenance-release-godot-4-0-1/"
 ```
 
-Make sure to order entries correctly, with the higher version number being closer to the top. Use the `flavor` field
+Make sure to order entries correctly, with the higher version number being closer to the top. Use the `releases[].name` field
 to mark release as stable or as one of the pre-release builds. Make sure to always fill out the release date, and the release
 notes link, if available.
 
-When a new build for an existing version is published, update its corresponding block, changing the flavor and the release
+When a new build for an existing version is published, update its corresponding block, adding a new array entry and release
 information. Make sure to update this information when publishing the release notes.
 
 Stable releases featured across the website, must be marked with the `featured` field and the corresponding major version number. Only one record must be marked as featured per version, so don't forget to remove it from the current holder of the mark.
 
 ```
 - name: "4.0.3"
-  flavor: "stable"
-  release_date: "19 May 2023"
-  release_notes: "/article/maintenance-release-godot-4-0-3/"
   featured: "4"
+  releases:
+    - name: "stable"
+      release_date: "19 May 2023"
+      release_notes: "/article/maintenance-release-godot-4-0-3/"
 ```
 
 There are two additional files providing data for download pages and links: `_data/download_configs.yml` and
