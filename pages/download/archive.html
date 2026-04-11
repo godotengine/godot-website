@@ -51,12 +51,13 @@ layout: default
 							Godot {{ version.name }}
 						</h3>
 
-						<span>Current state:</span> <span class="archive-version-flavor">{{ version.releases[0].name }}</span>
+						<span>Current state:</span> <span class="archive-version-flavor">{{ version.flavor }}</span>
 					</div>
 				</div>
 
 				<div class="card base-padding archive-releases">
-					{% assign flavor_hint = version.releases[0].name | slice: 0, 2 %}
+					{% assign flavor_hint = version.flavor | slice: 0, 2 %}
+					{% include download/archive-list-item.html version=version %}
 
 					{% for release in version.releases %}
 						{% assign next_hint = release.name | slice: 0, 2 %}
