@@ -37,7 +37,7 @@ When accessing an asset in isolation, you'll have immediate access to the curren
 
 A long-standing pain point for anyone that's worked with export templates has been that they must be downloaded in bulk. This was in contrast to how our editor downloads were always isolated, causing the export templates to incur long download times for a range of platforms that aren't necessarily relevant to a developer's intended export targets.
 
-This could be achieved in two main ways: overhauling our existing distribution system to make the packages available in isolation, or somehow repurposing the existing bulk distribution to only distribute a subset of options.
+This could be solved in two main ways: overhauling our existing distribution system to make the packages available in isolation, or somehow repurposing the existing bulk distribution to only distribute a subset of options.
 
 Despite how absurd it sounded, [Tomasz Chabora](https://github.com/KoBeWi) managed to implement the latter! [GH-117072](https://github.com/godotengine/godot/pull/117072) managed the seemingly-impossible task of hijacking the bulk package and retrieving slices of the developer's choosing. This is all achieved within the Godot editor itself, making the process as seamless and expedient as possible for users.
 
