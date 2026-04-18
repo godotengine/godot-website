@@ -37,7 +37,7 @@ When accessing an asset in isolation, you'll have immediate access to the curren
 
 A long-standing pain point for anyone that's worked with export templates has been that they must be downloaded in bulk. This was in contrast to how our editor downloads were always isolated, causing the export templates to incur long download times for a range of platforms that aren't necessarily relevant to a developer's intended export targets.
 
-This could be achieved in two main ways: overhauling our existing distribution system to make the packages available in isolation, or somehow repurposing the existing bulk distribution to only distribute a subset of options.
+This could be solved in two main ways: overhauling our existing distribution system to make the packages available in isolation, or somehow repurposing the existing bulk distribution to only distribute a subset of options.
 
 Despite how absurd it sounded, [Tomasz Chabora](https://github.com/KoBeWi) managed to implement the latter! [GH-117072](https://github.com/godotengine/godot/pull/117072) managed the seemingly-impossible task of hijacking the bulk package and retrieving slices of the developer's choosing. This is all achieved within the Godot editor itself, making the process as seamless and expedient as possible for users.
 
@@ -60,7 +60,7 @@ Do you have any [img height=1em]coin.png[/img] coins?
 
 ### Shaders: Implement inline text shader previews
 
-A long-awaited quality-of-life addition to the text shader editor comes courtesy of [Yuri Rubinsky](https://github.com/Chaosus), with his PR [GH-117726](https://github.com/godotengine/godot/pull/117726) bringing inline previews. This aims to reduce the amount of guesswork when constucting text shaders, as now one can readily see the resulting effects within the text editor itself:
+A long-awaited quality-of-life addition to the text shader editor comes courtesy of [Yuri Rubinsky](https://github.com/Chaosus), with his PR [GH-117726](https://github.com/godotengine/godot/pull/117726) bringing inline previews. This is a C++ implementation of [Godot Shader Previewer](https://github.com/cashew-olddew/godot-shader-previewer), a popular addon written in GDScript by [Cashew OldDew](https://github.com/cashew-olddew). Much like the addon before it, this aims to reduce the amount of guesswork when constucting text shaders, as now one can readily see the resulting effects within the text editor itself:
 
 <img src="/storage/blog/dev-snapshot-godot-4-7-dev-5/shader-inline-preview-1.webp" alt="Showcase of the text shader inline preview on a simple selection"/>
 
