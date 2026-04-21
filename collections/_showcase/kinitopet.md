@@ -21,7 +21,6 @@ youtube_id: "6C2O1rzhKls"
 platforms: ["windows"]
 
 steam: https://store.steampowered.com/app/2075070/KinitoPET/?curator_clanid=41324400
-itch: https://kinito-interactive.itch.io/kinitopet
 
 featured_in_home: false
 
