@@ -77,7 +77,7 @@ Thanks to [Allen Pestaluky](https://github.com/allenwp), [Josh Jones](https://gi
 
 ## References
 
-- [Pull request for Windows](https://github.com/godotengine/godot/pull/102987)
+- [Pull request for Windows](https://github.com/godotengine/godot/pull/94496)
 - [Pull request for macOS, iOS, and visionOS](https://github.com/godotengine/godot/pull/106814)
 - [Pull request for Linux/Wayland](https://github.com/godotengine/godot/pull/102987)
 - [Demo project pull request](https://github.com/godotengine/godot-demo-projects/pull/1287)
