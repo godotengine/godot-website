@@ -37,6 +37,8 @@ The editor got quite a lot of QOL love this snapshot, as [Malcolm Anderson](http
 <img src="/storage/blog/dev-snapshot-godot-4-7-dev-2/monospace-font-property.webp" alt="Monospaced fonts in property"/>
 <img src="/storage/blog/dev-snapshot-godot-4-7-dev-2/monospace-font-signal.webp" alt="Monospaced fonts in connection"/>
 
+Prefer the regular font for these spots in the editor? No problem! Simply disable **Interface > Theme > Use Monospace Font for Editor Symbols** in the Editor Settings.
+
 ### Animation: Collapse groups in animation track editor
 
 Malcolm isn't done yet, as the animation track editor got some love in [GH-113479](https://github.com/godotengine/godot/pull/113479), enabling users to collapse groups. This simple change should immediately resonate with users dealing with the absurd sizes animation trees can reach, though the benefits can be felt at all sizes.
