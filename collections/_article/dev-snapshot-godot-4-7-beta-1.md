@@ -48,6 +48,7 @@ You can find a list of such issues by filtering the merged PRs in the 4.7 milest
 
 - Animation: Display and allow setting name/index of BlendSpace points ([GH-110369](https://github.com/godotengine/godot/pull/110369)).
 - Audio: Fix Spectrum Analyzer effect returning jittered values ([GH-114355](https://github.com/godotengine/godot/pull/114355)).
+- Audio: Fix volume calculation with multiple viewports in 3D ([GH-114080](https://github.com/godotengine/godot/pull/114080)).
 - Core: Change `new` overloads to use a tag instead of a pointer ([GH-112035](https://github.com/godotengine/godot/pull/112035)).
   - Should only be relevant for modules relying on unconventional initialization methods.
 - GDExtension: Bind `Object::ConnectFlags` as a bitfield, instead of enum ([GH-109892](https://github.com/godotengine/godot/pull/109892)).
