@@ -74,7 +74,7 @@ func _ready() -> void:
 	var tween := create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	tween.tween_property(self, ^"modulate", Color.RED, 1.0)
 	tween.tween_property(self, ^"freeze", false, 0)
-	tween.tween_await($"../Area2D".body_entered).set_unbinds(1)
+	tween.tween_await($"../Area2D".body_entered)
 	tween.tween_callback(queue_free)
 ```
 
@@ -155,7 +155,7 @@ When accessing an asset in isolation, you'll have immediate access to the curren
 
 <img src="/storage/blog/dev-snapshot-godot-4-7-dev-5/assetlib-new-api-2.webp" alt="Showcase of an asset item in isolation"/>
 
-Michael's work didn't stop there, as `MeshLibrary` received a similar QOL update in [GH-112992](https://github.com/godotengine/godot/pull/112992), in the form of an entirely new bottom editor.  Items are now featured on a grid with search and zoom functionality, alongside a separate inspector enabling the customization of individual items. Full undo/redo support for all actions, as well as previews falling back to an item's mesh if nothing is specified, makes this a complete package out-of-the-gate.
+Michael's work didn't stop there, as `MeshLibrary` received a similar QOL update in [GH-117376](https://github.com/godotengine/godot/pull/117376), in the form of an entirely new bottom editor.  Items are now featured on a grid with search and zoom functionality, alongside a separate inspector enabling the customization of individual items. Full undo/redo support for all actions, as well as previews falling back to an item's mesh if nothing is specified, makes this a complete package out-of-the-gate.
 
 <img src="/storage/blog/dev-snapshot-godot-4-7-dev-3/editor-gridmap-meshlibrary-new-editor.webp" alt="New GridMap MeshLibrary editor"/>
 
@@ -173,7 +173,7 @@ Tomasz brings this behemoth of a section to a close with two final QOL goodies. 
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | <img src="/storage/blog/dev-snapshot-godot-4-7-dev-4/inspector-array-old.webp" alt="Original inspector array display"/> | <img src="/storage/blog/dev-snapshot-godot-4-7-dev-4/inspector-array-new.webp" alt="Updated inspector array display"/> |
 
-The second is an improvement to how export templates are received in the editor, as it's been a long-standing pain point that they must be downloaded in bulk. [Alex2782](https://github.com/Alex2782) discovered a clever workaround clever workaround to this by retrieving slices of the bulk package itself, which was then ported over to C++ by Tomasz in [GH-117072](https://github.com/godotengine/godot/pull/117072). With this, the only downloaded export templates are what the developer explicitly requests.
+The second is an improvement to how export templates are received in the editor, as it's been a long-standing pain point that they must be downloaded in bulk. [Alex2782](https://github.com/Alex2782) discovered a clever workaround to this by retrieving slices of the bulk package itself, which was then ported over to C++ by Tomasz in [GH-117072](https://github.com/godotengine/godot/pull/117072). With this, the only downloaded export templates are what the developer explicitly requests.
 
 <video autoplay loop muted playsinline title="Showcase of the improved export template">
   <source src="/storage/blog/dev-snapshot-godot-4-7-dev-5/export-template-showcase.mp4?1" type="video/mp4">
