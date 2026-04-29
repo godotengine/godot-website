@@ -4,7 +4,7 @@ excerpt: "HDR output is coming to Godot 4.7 for Windows, macOS, iOS, visionOS, a
 categories: ["progress-report"]
 author: Hugo Locurcio
 image: /storage/blog/covers/hdr-output-arrives-in-godot-4-7.jpg
-date: 2026-04-21 14:00:00
+date: 2026-04-23 14:00:00
 ---
 
 After a long wait, HDR output is finally coming to Godot! The road to get there has been long and winding, but the result is a best-in-class HDR implementation that looks as good as possible on all supported platforms.
@@ -73,7 +73,7 @@ On top of that, many of Godot's existing rendering features needed fixes or twea
 
 To resolve this, several changes had to be made to tonemapping, glow, debanding, and more. Most notably, [the AgX tonemapper was significantly reworked in 4.6](https://github.com/godotengine/godot/pull/106940) to work with HDR output. [Glow was also modified](https://github.com/godotengine/godot/pull/110671) to use the Screen blend mode by default since 4.6, and it is now performed before tonemapping for a more convincing appearance.
 
-Thanks to [Allen Pestaluky](https://github.com/allenwp), [Josh Jones](https://github.com/DarkKilauea), [ArchercatNEO](https://github.com/ArchercatNEO), and everyone else who participated in the development of this feature!
+Thanks to [Allen Pestaluky](https://github.com/allenwp), [Josh Jones](https://github.com/DarkKilauea), [ArchercatNEO](https://github.com/ArchercatNEO), [Stuart Carnie](https://github.com/stuartcarnie), and everyone else who participated in the development of this feature!
 
 ## References
 
