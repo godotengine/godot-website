@@ -633,7 +633,7 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>Thanks to &lt;a href="https://github.com/allenwp">Allen Pestaluky&lt;/a>, &lt;a href="https://github.com/DarkKilauea">Josh Jones&lt;/a>, &lt;a href="https://github.com/ArchercatNEO">ArchercatNEO&lt;/a>, and everyone else who participated in the development of this feature!&lt;/p>
 &lt;h2 id="references">References&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="https://github.com/godotengine/godot/pull/102987">Pull request for Windows&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/godotengine/godot/pull/94496">Pull request for Windows&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/godotengine/godot/pull/106814">Pull request for macOS, iOS, and visionOS&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/godotengine/godot/pull/102987">Pull request for Linux/Wayland&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/godotengine/godot-demo-projects/pull/1287">Demo project pull request&lt;/a>&lt;/li>
