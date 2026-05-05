@@ -9,7 +9,7 @@ dates_short: "22 March 09:30"
 # The first date of the event in ISO format, used for sorting.
 date: 2026-03-22 09:30:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: "425, Hefei Women & Children’s Activity Center, Yaohai District, Hefei, Anhui, China"
 location_short: "Hefei, Anhui, China"

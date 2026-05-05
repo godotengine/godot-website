@@ -9,7 +9,7 @@ dates_short: "23-24 April"
 # The first date of the event in ISO format, used for sorting.
 date: 2026-04-23 00:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: "Pathé Amsterdam Noord. Buikslotermeerplein 2003, 1025 XL Amsterdam, Netherlands"
 location_short: "Amsterdam, The Netherlands"
