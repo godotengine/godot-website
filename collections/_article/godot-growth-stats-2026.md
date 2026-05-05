@@ -1,13 +1,13 @@
 ---
 title: "Godot usage and engine growth"
-excerpt: "Godot has been rapidly adopted in the last few years. Here is a look at the hard numbers."
+excerpt: "Godot adoption has rapidly increased in the last few years. Here is a look at the hard numbers."
 categories: ["news"]
 author: Clay John
 image: /storage/blog/godot-usage-2026/steam-google-play-installs.png
 date: 2026-05-07 14:00:00
 ---
 
-I like to keep track of Godot's growth. Since we don't have any tracking information in the engine itself, it can be challenging. So I use a variety of sources to try to get a full picture of how Godot is growing over time. I have been collecting data long enough now that I can finally put together some graphs that illustrate the growth of the engine. 
+I like to keep track of Godot's growth. Since we don't have any tracking information in the engine itself, this can be challenging. So I use a variety of sources to try to get a full picture of how Godot is growing over time. I have been collecting data long enough now that I can finally put together some graphs that illustrate the growth of the engine. 
 
 This data comes from many different sources and is collected in different ways, so it can be a little bit scattered. For example, I have data for the total number of downloads of each version of the engine from our website at a given point in time, but I don't have downloads per month. Whereas on Steam and Google Play, I have total downloads for all versions and monthly downloads. Finally, the data generally runs up into February 2026 since that is the last time I updated the data (and when I started the first draft of this post).
 
@@ -15,25 +15,25 @@ Overall, this data can give us some insight into the growth of Godot and its tra
 
 ## Engine usage
 
-Our data for engine usage is a little messy. Partly owing to the mechanism we use for collecting the data and partly due to fragmentation within the ecosystem. I track engine usage primarily from 3 sources:
+Our data for engine usage is a little messy, partly owing to the mechanism we use for collecting the data and partly due to fragmentation within the ecosystem. I track engine usage primarily from 3 sources:
 
-1. Downloads from our website/Github (we host the engine on Github and provide a link via our website)
+1. Downloads from our website/GitHub (we host the engine on GitHub and provide a link via our website)
 2. Downloads via Steam
 3. Downloads via Google Play
 
-Steam and Google Play provide data on cumulative installs by unique users while our website/Github only provides data about total download count and includes duplicates when a user downloads the engine multiple times. 
+Steam and Google Play provide data on cumulative installs by unique users while our website/GitHub only provides data about total download count and includes duplicates when a user downloads the engine multiple times. 
 
 #### Steam and Google Play - Cumulative Installs
 
 <img alt="Graph of Godot editor downloads on Steam and Google Play" src="/storage/blog/godot-usage-2026/steam-google-play-installs.png" />
 
-#### Website Downloads
+#### Website downloads
 
-We have shifted to a better method of tracking downloads from the website that will provide us with more granular data in the future, but since the shift was so recent, we don't have good data yet. So we need to make due with my imperfect data collection.
+We have shifted to a better method of tracking downloads from the website that will provide us with more granular data in the future, but since the shift was so recent, we don't have good data yet. So we need to make do with my imperfect data collection.
 
-<img alt="Graph of Godot editor downloads from website" src="/storage/blog/godot-usage-2026/website-installs.png" />
+<img alt="Graph of Godot editor downloads from the website" src="/storage/blog/godot-usage-2026/website-installs.png" />
 
-We seem to be getting pretty consistently up to the 2ish million download mark with each release. You can see that quick patch releases partially cannibalize the stable release. Importantly for us, we can see that very few people are downloading earlier releases once a patch release has come out (i.e. very few people downloaded 4.4 once 4.4.1 was available). That differs from stable release to stable release (i.e. people continued to download 4.3 to some extent once 4.4 released). This is great news and confirms that users are mostly behaving the way that we expect, they are sticking to minor versions in general and upgrading to new minor versions carefully, while being a lot less cautious about upgrading to a newer patch release.
+We seem to be getting pretty consistently up to the 2ish million download mark with each release. You can see that quick patch releases partially cannibalize the stable release. Importantly for us, we can see that very few people are downloading earlier releases once a patch release has come out (e.g. very few people downloaded 4.4 once 4.4.1 was available). That differs from stable release to stable release (e.g. people continued to download 4.3 to some extent once 4.4 released). This is great news and confirms that users are mostly behaving the way that we expect: they are sticking to major versions in general and upgrading to new minor versions carefully, while being a lot less cautious about upgrading to a newer patch release.
 
 I am looking forward to seeing how this data looks over the next few years as the current information is too sparse to draw many conclusions. 
 
@@ -45,13 +45,13 @@ For those who have been around the community for the last few years, this won't 
 
 My method of collecting data is just viewing whatever public-facing number is available when I remember to check and write it down. I have not been very scientific about my data collection practice as you can see. 
 
-Notably, this data only tracks our large communities on social media which are predominantly English-speaking and western influenced. This data leaves out the growth in communities from countries that use different social networks. For example, we know that Godot usage is growing a lot in China where Reddit, Twitter, and Blue Sky usage is a lot lower than it is in North America and Europe. Also, this data doesn't include Discord, which has a major Godot community. That is a limitation from the fact that I didn't think to include Discord when I started collecting this data!
+Notably, this data only tracks our large communities on social media which are predominantly English-speaking and Western-influenced. This data leaves out the growth in communities from countries that use different social networks. For example, we know that Godot usage is growing a lot in China where Reddit, Twitter, and Bluesky usage is a lot lower than it is in North America and Europe. Also, this data doesn't include Discord, which has a major Godot community. That is a limitation from the fact that I didn't think to include Discord when I started collecting this data!
 
-## Games Releases!
+## Games releases
 
 #### Steam
 
-Using SteamDB, we can keep track of approximately how many Godot games are released on Steam. We use SteamDB to source the header images for our dev release blog posts. It is a very helpful resource for us. The data is approximate, and it can change when SteamDB updates their algorithm, but the overall picture stays the same. The number of Godot games being released on steam is exhibiting strong signs of exponential growth! For me personally, this has to be the most exciting statistic. It is amazing that many people are adopting the engine and using it, but as a person on the technical side of things, I also want to see that users are successfully using the engine to make their games. 
+Using SteamDB, we can keep track of approximately how many Godot games are released on Steam. We use SteamDB to source the header images for our dev release blog posts. It is a very helpful resource for us. The data is approximate, and it can change when SteamDB updates their algorithm, but the overall picture stays the same. The number of Godot games being released on Steam is exhibiting strong signs of exponential growth! For me personally, this has to be the most exciting statistic. It is amazing that many people are adopting the engine and using it, but as a person on the technical side of things, I also want to see that users are successfully using the engine to make their games. 
 
 <img alt="Graph of Godot games released on Steam per year" src="/storage/blog/godot-usage-2026/steam-games.png" />
 
@@ -64,19 +64,19 @@ We also monitor itch.io. There is a much lower barrier of entry to releasing gam
 
 *source: https://itch.io/tags/tools*
 
-## Game Jams
+## Game jams
 
 #### Global Game Jam
 
 <img alt="Graph of Godot's growth in the Global Game Jam" src="/storage/blog/godot-usage-2026/ggj-games.png" />
 
-Seeing consistent growth in usage in the Global Game Jam is very rewarding. It tells us that Godot is growing consistently in the next generation of developers and especially in educational settings. We hope that this generation growth continues and we see even higher rates in the coming generation of game developers. 
+Seeing consistent growth in usage in the Global Game Jam is very rewarding. It tells us that Godot usage is growing consistently in the next generation of developers and especially in educational settings. We hope that this generational growth continues and we see even higher rates in the coming generation of game developers. 
 
 #### GMTK Game Jam
 
-<img alt="Graph of Godot's growth in the GMTK jam" src="/storage/blog/godot-usage-2026/gmtk-games.png" />
+<img alt="Graph of Godot's growth in the GMTK Game Jam" src="/storage/blog/godot-usage-2026/gmtk-games.png" />
 
-The GMTK growth chart looks very similar to the GGJ one, especially the jump between 2023 and 2024. However, it consistently features a higher proportion of Godot users. We hope to see Godot hit 50% or more one day!
+The GMTK Game Jam growth chart looks very similar to the Global Game Jam one, especially the jump between 2023 and 2024. However, it consistently features a higher proportion of Godot users. We hope to see Godot hit 50% or more one day!
 
 *source: https://bsky.app/profile/gamemakerstoolkit.com/post/3lvkrymak5s26*
 
@@ -98,7 +98,7 @@ We are still trying to understand why donations don't track with the increase in
 2. Users are happy with the pace of development and we aren't communicating the value/need of further donations well
 3. New users see Godot as the free alternative to the other big engines
 
-Notably this data does not track one time donations. Most of our corporate sponsorships come through as one time donations and represent a significant portion of our funding. They are still relatively random and sporadic, so it is difficult to draw any conclusions. 
+Notably this data does not track one-time donations. Most of our corporate sponsorships come through as one-time donations and represent a significant portion of our funding. They are still relatively random and sporadic, so it is difficult to draw any conclusions. 
 
 ## Support
 
