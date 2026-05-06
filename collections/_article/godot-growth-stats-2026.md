@@ -4,7 +4,7 @@ excerpt: "Godot adoption has rapidly increased in the last few years. Here is a 
 categories: ["news"]
 author: Clay John
 image: /storage/blog/godot-usage-2026/stonks.jpg
-date: 2026-05-07 14:00:00
+date: 2026-05-06 18:00:00
 ---
 
 I like to keep track of Godot's growth. Since we don't have any tracking information in the engine itself, this can be challenging. So I use a variety of sources to try to get a full picture of how Godot is growing over time. I have been collecting data long enough now that I can finally put together some graphs that illustrate the growth of the engine. 
