@@ -3,7 +3,7 @@ title: "Godot usage and engine growth"
 excerpt: "Godot adoption has rapidly increased in the last few years. Here is a look at the hard numbers."
 categories: ["news"]
 author: Clay John
-image: /storage/blog/godot-usage-2026/steam-google-play-installs.png
+image: /storage/blog/godot-usage-2026/stonks.jpg
 date: 2026-05-07 14:00:00
 ---
 
