@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Dev snapshot: Godot 4.7 beta 1</title><link>https://godotengine.org/article/dev-snapshot-godot-4-7-beta-1/</link><summary>Godot 4.7 enters beta!</summary><description>&lt;p>The 4.7 release cycle has finally reached an ever-important milestone: its very first beta snapshot! Our users have done a phenomenal job at squashing bugs nice and early once feature-freeze set in &lt;a href="/article/dev-snapshot-godot-4-7-dev-5">last week&lt;/a>, and we would further encourage those who haven’t already to shift their focus to &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.7">regression fixes&lt;/a> exclusively.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot usage and engine growth</title><link>https://godotengine.org/article/godot-growth-stats-2026/</link><summary>Godot adoption has rapidly increased in the last few years. Here is a look at the hard numbers.</summary><description>&lt;p>I like to keep track of Godot’s growth. Since we don’t have any tracking information in the engine itself, this can be challenging. So I use a variety of sources to try to get a full picture of how Godot is growing over time. I have been collecting data long enough now that I can finally put together some graphs that illustrate the growth of the engine.&lt;/p>
+&lt;p>This data comes from many different sources and is collected in different ways, so it can be a little bit scattered. For example, I have data for the total number of downloads of each version of the engine from our website at a given point in time, but I don’t have downloads per month. Whereas on Steam and Google Play, I have total downloads for all versions and monthly downloads. Finally, the data generally runs up into February 2026 since that is the last time I updated the data (and when I started the first draft of this post).&lt;/p>
+&lt;p>Overall, this data can give us some insight into the growth of Godot and its trajectory, but is not an exact picture.&lt;/p>
+&lt;h2 id="engine-usage">Engine usage&lt;/h2>
+&lt;p>Our data for engine usage is a little messy, partly owing to the mechanism we use for collecting the data and partly due to fragmentation within the ecosystem. I track engine usage primarily from 3 sources:&lt;/p>
+&lt;ol>
+&lt;li>Downloads from our website/GitHub (we host the engine on GitHub and provide a link via our website)&lt;/li>
+&lt;li>Downloads via Steam&lt;/li>
+&lt;li>Downloads via Google Play&lt;/li>
+&lt;/ol>
+&lt;p>Steam and Google Play provide data on cumulative installs by unique users while our website/GitHub only provides data about total download count and includes duplicates when a user downloads the engine multiple times.&lt;/p>
+&lt;h4 id="steam-and-google-play---cumulative-installs">Steam and Google Play - Cumulative Installs&lt;/h4>
+&lt;p>&lt;img alt="Graph of Godot editor downloads on Steam and Google Play" src="/storage/blog/godot-usage-2026/steam-google-play-installs.png" />&lt;/p>
+&lt;h4 id="website-downloads">Website downloads&lt;/h4>
+&lt;p>We have shifted to a better method of tracking downloads from the website that will provide us with more granular data in the future, but since the shift was so recent, we don’t have good data yet. So we need to make do with my imperfect data collection.&lt;/p>
+&lt;p>&lt;img alt="Graph of Godot editor downloads from the website" src="/storage/blog/godot-usage-2026/website-installs.png" />&lt;/p>
+&lt;p>We seem to be getting pretty consistently up to the 2ish million download mark with each release. You can see that quick patch releases partially cannibalize the stable release. Importantly for us, we can see that very few people are downloading earlier releases once a patch release has come out (e.g. very few people downloaded 4.4 once 4.4.1 was available). That differs from stable release to stable release (e.g. people continued to download 4.3 to some extent once 4.4 released). This is great news and confirms that users are mostly behaving the way that we expect: they are sticking to major versions in general and upgrading to new minor versions carefully, while being a lot less cautious about upgrading to a newer patch release.&lt;/p>
+&lt;p>I am looking forward to seeing how this data looks over the next few years as the current information is too sparse to draw many conclusions.&lt;/p>
+&lt;h2 id="community">Community&lt;/h2>
+&lt;p>For those who have been around the community for the last few years, this won’t come as a surprise. Our community has doubled in size in the last couple of years. The growth appears to be slowing down in the last year, but it’s too early to know if that is a trend or not.&lt;/p>
+&lt;p>&lt;img alt="Graph of Godot's growth in various social networks" src="/storage/blog/godot-usage-2026/community.png" />&lt;/p>
+&lt;p>My method of collecting data is just viewing whatever public-facing number is available when I remember to check and write it down. I have not been very scientific about my data collection practice as you can see.&lt;/p>
+&lt;p>Notably, this data only tracks our large communities on social media which are predominantly English-speaking and Western-influenced. This data leaves out the growth in communities from countries that use different social networks. For example, we know that Godot usage is growing a lot in China where Reddit, Twitter, and Bluesky usage is a lot lower than it is in North America and Europe. Also, this data doesn’t include Discord, which has a major Godot community. That is a limitation from the fact that I didn’t think to include Discord when I started collecting this data!&lt;/p>
+&lt;h2 id="games-releases">Games releases&lt;/h2>
+&lt;h4 id="steam">Steam&lt;/h4>
+&lt;p>Using SteamDB, we can keep track of approximately how many Godot games are released on Steam. We use SteamDB to source the header images for our dev release blog posts. It is a very helpful resource for us. The data is approximate, and it can change when SteamDB updates their algorithm, but the overall picture stays the same. The number of Godot games being released on Steam is exhibiting strong signs of exponential growth! For me personally, this has to be the most exciting statistic. It is amazing that many people are adopting the engine and using it, but as a person on the technical side of things, I also want to see that users are successfully using the engine to make their games.&lt;/p>
+&lt;p>&lt;img alt="Graph of Godot games released on Steam per year" src="/storage/blog/godot-usage-2026/steam-games.png" />&lt;/p>
+&lt;p>&lt;em>source: https://steamdb.info/stats/releases/?tech=Engine.Godot&lt;/em>&lt;/p>
+&lt;h4 id="itchio">Itch.io&lt;/h4>
+&lt;p>We also monitor itch.io. There is a much lower barrier of entry to releasing games on itch.io than on other platforms. So we see a much higher number of Godot games there. I collect this data manually by going to itch.io and recording the total number of Godot games. So the data isn’t as pretty, but it is still nice to look at.
+&lt;img alt="Graph of Godot's growth in various social networks" src="/storage/blog/godot-usage-2026/games-on-itch.png" />&lt;/p>
+&lt;p>&lt;em>source: https://itch.io/tags/tools&lt;/em>&lt;/p>
+&lt;h2 id="game-jams">Game jams&lt;/h2>
+&lt;h4 id="global-game-jam">Global Game Jam&lt;/h4>
+&lt;p>&lt;img alt="Graph of Godot's growth in the Global Game Jam" src="/storage/blog/godot-usage-2026/ggj-games.png" />&lt;/p>
+&lt;p>Seeing consistent growth in usage in the Global Game Jam is very rewarding. It tells us that Godot usage is growing consistently in the next generation of developers and especially in educational settings. We hope that this generational growth continues and we see even higher rates in the coming generation of game developers.&lt;/p>
+&lt;h4 id="gmtk-game-jam">GMTK Game Jam&lt;/h4>
+&lt;p>&lt;img alt="Graph of Godot's growth in the GMTK Game Jam" src="/storage/blog/godot-usage-2026/gmtk-games.png" />&lt;/p>
+&lt;p>The GMTK Game Jam growth chart looks very similar to the Global Game Jam one, especially the jump between 2023 and 2024. However, it consistently features a higher proportion of Godot users. We hope to see Godot hit 50% or more one day!&lt;/p>
+&lt;p>&lt;em>source: https://bsky.app/profile/gamemakerstoolkit.com/post/3lvkrymak5s26&lt;/em>&lt;/p>
+&lt;h3 id="donations">Donations&lt;/h3>
+&lt;p>Finally, let’s compare the above growth to the growth in donations.&lt;/p>
+&lt;p>We launched our development fund in September 2023 and have tracked how it has changed since then. As you can see below, the total monthly income from the dev fund hasn’t changed all that much since its inception. We had an initial spike, that slowly dropped. Then in October 2024 we had a sudden spike in donations. In August 2025 we realized that we hadn’t been properly tracking when subscriptions were cancelled through PayPal. When we corrected the tracking information it looked like a sudden drop in subscriptions, but in reality, our data was just artificially high for all the preceding dates.&lt;/p>
+&lt;p>The final spike in December 2025 was from our latest fundraising campaign. As it turns out, asking for donations is the best way to increase donations. So expect to hear us asking more often.&lt;/p>
+&lt;p>&lt;img alt="Graph of Godot's Dev Fund" src="/storage/blog/godot-usage-2026/dev-fund.png" />&lt;/p>
+&lt;p>Overall, we see our funding as a very healthy and consistent amount. Consistency is the most important thing for us since it makes it easier to budget and means we aren’t constantly laying off and re-hiring contractors.&lt;/p>
+&lt;p>We are still trying to understand why donations don’t track with the increase in users. We have a few theories:&lt;/p>
+&lt;ol>
+&lt;li>New users see the Foundation as a well-entrenched player in the market that doesn’t need funding&lt;/li>
+&lt;li>Users are happy with the pace of development and we aren’t communicating the value/need of further donations well&lt;/li>
+&lt;li>New users see Godot as the free alternative to the other big engines&lt;/li>
+&lt;/ol>
+&lt;p>Notably this data does not track one-time donations. Most of our corporate sponsorships come through as one-time donations and represent a significant portion of our funding. They are still relatively random and sporadic, so it is difficult to draw any conclusions.&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/godot-growth-stats-2026/</guid><dc:creator>Clay John</dc:creator><pubDate>Wed, 06 May 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/godot-usage-2026/stonks.jpg</image></item><item><title>Dev snapshot: Godot 4.7 beta 1</title><link>https://godotengine.org/article/dev-snapshot-godot-4-7-beta-1/</link><summary>Godot 4.7 enters beta!</summary><description>&lt;p>The 4.7 release cycle has finally reached an ever-important milestone: its very first beta snapshot! Our users have done a phenomenal job at squashing bugs nice and early once feature-freeze set in &lt;a href="/article/dev-snapshot-godot-4-7-dev-5">last week&lt;/a>, and we would further encourage those who haven’t already to shift their focus to &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Aregression+milestone%3A4.7">regression fixes&lt;/a> exclusively.&lt;/p>
 &lt;p>For those interested in aiding us on our quest to squash any bugs that come up during this time, we once again encourage you to join our bug-hunting sprints. Anyone interested should read the &lt;a href="https://github.com/godotengine/godot-maintainers-docs/blob/main/bug-triage/introduction.md">Bug Triage Introduction&lt;/a> for more information, and join the &lt;a href="https://chat.godotengine.org/channel/bugsquad">&lt;code class="language-plaintext highlighter-rouge">#bugsquad&lt;/code>&lt;/a> and &lt;a href="https://chat.godotengine.org/channel/bugsquad-sprints">&lt;code class="language-plaintext highlighter-rouge">#bugsquad-sprints&lt;/code>&lt;/a> channels on our developer RocketChat to participate.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.7.beta1/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/h9JcJGHfg">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
@@ -3134,54 +3189,4 @@ Generally though I feel like it’s super quick to iterate on features — there
 &lt;p>&lt;img src="/assets/showcase/screenshots/br-5.jpg" alt="" />&lt;/p>
 &lt;hr />
 &lt;p>Thank you very much Mike for taking the time to answer our questions!&lt;/p>
-&lt;p>&lt;a href="https://mikeklubnika.com/">Mike Klubnika&lt;/a>’s games including &lt;em>Buckshot Roulette&lt;/em> and &lt;em>s.p.l.i.t&lt;/em> are available on &lt;a href="https://store.steampowered.com/developer/mikeklubnika">Steam&lt;/a>. You can also join his &lt;a href="https://discord.gg/jDGePvU3Z5">Discord server&lt;/a>.&lt;/p></description><category>Showcase</category><guid>https://godotengine.org/article/godot-showcase-buckshot-roulette/</guid><dc:creator>Hugo Locurcio</dc:creator><pubDate>Fri, 27 Feb 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/godot-showcase-buckshot-roulette/thumbnail.jpg</image></item><item><title>GodotCon Amsterdam - Save the date!</title><link>https://godotengine.org/article/godotcon-2026/</link><summary>Want to join? Amsterdam 23-24 of April. Get your tickets now! (Call for speakers and sponsors open)</summary><description>&lt;p>The official GodotCon returns to Europe and this time, it will be the first GodotCon in the city where the Godot Foundation calls home. For this edition of the event, we teamed up with the &lt;a href="https://dutchgamesassociation.nl/">Dutch Games Association&lt;/a> to help us organize it and make sure that everything runs smoothly.&lt;/p>
-&lt;h3 id="information">Information&lt;/h3>
-&lt;table>
-&lt;tbody>
-&lt;tr>
-&lt;td>📅 Dates&lt;/td>
-&lt;td>23rd, 24th of April&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🕑 Time&lt;/td>
-&lt;td>10:00 - 18:00&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🇳🇱 Location&lt;/td>
-&lt;td>Amsterdam, The Netherlands&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>📍 Venue&lt;/td>
-&lt;td>Pathé Amsterdam Noord. &lt;a href="https://www.google.com/maps/place/Path%C3%A9+Amsterdam+Noord/@52.4006788,4.9343291,898m/data=!3m1!1e3!4m6!3m5!1s0x47c6098c4b35b89f:0x95697d3c0ded012e!8m2!3d52.4007003!4d4.9346766!16s%2Fg%2F11h5qpwf3k?entry=tts&amp;amp;g_ep=EgoyMDI2MDIxMS4wIPu8ASoASAFQAw%3D%3D&amp;amp;skid=ce7b0ad0-aef1-4865-b929-21ec88e61fe0">Buikslotermeerplein 2003, 1025 XL Amsterdam, Netherlands&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🌐 Website&lt;/td>
-&lt;td>&lt;a href="https://conference.godotengine.org/2026/">https://conference.godotengine.org&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;a class="btn" href="https://tickets.godotengine.org/foundation/godotcon-ams-2026/">Buy tickets 🎟️&lt;/a>&lt;/p>
-&lt;h3 id="call-for-speakers-and-sponsors">Call for speakers and sponsors&lt;/h3>
-&lt;p>If you would like to be a part of the conference by giving a talk or a workshop, please submit your proposals through the link below. We are looking for a diverse range of topics, from beginner to advanced, so don’t hesitate to submit your ideas.&lt;/p>
-&lt;p>&lt;a href="https://talks.godotengine.org/godotcon-ams-2026/cfp">&lt;strong>➡️ Call for submissions&lt;/strong>&lt;/a>, Deadline: 30th of March&lt;/p>
-&lt;p>We are also actively looking for sponsors to support the GodotCon Amsterdam. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to &lt;a href="mailto:godotcon@godotengine.org">godotcon@godotengine.org&lt;/a>.&lt;/p>
-&lt;h3 id="call-for-volunteers">Call for volunteers&lt;/h3>
-&lt;p>An event like this only happens thanks to passionate people like you who are willing to help behind the scenes. If you want to contribute to making GodotCon 2026 a welcoming and smooth experience for everyone, we are currently looking for volunteers to help us manage different aspects of the conference, from stage managers to photographers.&lt;/p>
-&lt;p>If you would like to participate, please fill out &lt;a href="https://docs.google.com/forms/d/1iW7ng8mHutrhYHyil3vDkcqR1SxRYrELJXqR7nQJMNQ">this form&lt;/a>.&lt;/p>
-&lt;h3 id="tickets-and-more">Tickets and more&lt;/h3>
-&lt;p>Get your tickets &lt;a href="https://tickets.godotengine.org/foundation/godotcon-ams-2026/">here&lt;/a> and stay tuned for more information by joining the &lt;a href="https://discord.gg/A2YPMR23ye">GodotCon Discord&lt;/a> or the mailing list.&lt;/p>
-&lt;form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
-&lt;style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}&lt;/style>
-&lt;div>
-&lt;input type="hidden" name="nonce" />
-&lt;input type="email" name="email" required="" placeholder="E-mail" style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);" />
-&lt;p style="display:none;">
-&lt;input id="6e6e9" type="checkbox" name="l" checked="" value="6e6e9ba4-732b-4528-b4cd-71bbe6850f8d" />
-&lt;label for="6e6e9">Godot Conference&lt;/label>
-&lt;/p>
-&lt;input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
-&lt;/div>
-&lt;/form>
-&lt;h3 id="will-there-still-be-a-godot-event-in-the-us-in-2026">Will there still be a Godot event in the US in 2026?&lt;/h3>
-&lt;p>Absolutely! The same team behind the GodotCon Boston will be announcing more details about the event for 2026 in the US. It will come back with a different name, but everything else should be the same.&lt;/p>
-&lt;p>See you soon!&lt;/p></description><category>Events</category><guid>https://godotengine.org/article/godotcon-2026/</guid><dc:creator>Emi</dc:creator><pubDate>Wed, 18 Feb 2026 13:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotcon-amsterdam-2026.png</image></item></channel></rss>
+&lt;p>&lt;a href="https://mikeklubnika.com/">Mike Klubnika&lt;/a>’s games including &lt;em>Buckshot Roulette&lt;/em> and &lt;em>s.p.l.i.t&lt;/em> are available on &lt;a href="https://store.steampowered.com/developer/mikeklubnika">Steam&lt;/a>. You can also join his &lt;a href="https://discord.gg/jDGePvU3Z5">Discord server&lt;/a>.&lt;/p></description><category>Showcase</category><guid>https://godotengine.org/article/godot-showcase-buckshot-roulette/</guid><dc:creator>Hugo Locurcio</dc:creator><pubDate>Fri, 27 Feb 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/godot-showcase-buckshot-roulette/thumbnail.jpg</image></item></channel></rss>
