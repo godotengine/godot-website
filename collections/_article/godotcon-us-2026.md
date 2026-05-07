@@ -1,6 +1,6 @@
 ---
 title: "GodotCon Boston - Save the date!"
-excerpt: "Want to join? Boston 21-22 of July. Get your tickets now! (Call for speakers, showcases, and sponsors open)"
+excerpt: "Want to join? Boston 21-22 of July. Get your tickets now! (Call for speakers, showcases, and sponsors open)."
 categories: ["events"]
 author: Chad
 image: /storage/blog/covers/godotcon-boston-2026.png
@@ -11,7 +11,7 @@ The official GodotCon returns to Boston for the second US edition. For this edit
 
 ### Information
 
-| 📅 Dates | 21st, 22nd of July |
+| 📅 Dates | 21st, 22nd of July 2026 |
 | 🕑 Time | 09:00 - 18:00|
 | 🇳🇱 Location | Boston, Massachusetts, United States |
 | 📍 Venue | Microsoft NERD Center. <a href="https://maps.app.goo.gl/LJC9R7QiTxN6S3cv7">1 Memorial Dr, Cambridge, MA 02142, United States</a> | 
@@ -23,13 +23,13 @@ The official GodotCon returns to Boston for the second US edition. For this edit
 
 If you would like to be a part of the conference by giving a talk or a workshop, please submit your proposals through the link below. We are looking for a diverse range of topics, from beginner to advanced, so don't hesitate to submit your ideas. Of note: We have a lot more room for workshops this year on the 20th of July.
 
-[**➡️ Call for submissions**](https://talks.godotengine.org/godotcon-boston-2026/cfp), Deadline: 1st of June
+[**➡️ Call for submissions**](https://talks.godotengine.org/godotcon-boston-2026/cfp), Deadline: 1st of June 2026
 
 We are also actively looking for sponsors to support GodotCon Boston. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to [president@scenetree.org](mailto:president@scenetree.org).
 
-Want to show off your Godot related project? Whether you have some really handy toolset or an amazing game made in Godot, submit to be a part of the showcase. 
+Want to show off your Godot-related project? Whether you have some really handy toolset or an amazing game made in Godot, submit to be a part of the showcase. 
 
-[**➡️ Showcase submissions**](https://talks.godotengine.org/godotcon-boston-2026/cfp), Deadline: 1st of June
+[**➡️ Showcase submissions**](https://talks.godotengine.org/godotcon-boston-2026/cfp), Deadline: 1st of June 2026
 
 
 ### Call for volunteers

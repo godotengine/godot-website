@@ -22,6 +22,6 @@ cover_image: "/storage/blog/covers/godotcon-boston-2026.png"
 ---
 
 
-The second edition of GodotCon in the United States is in Boston for 2026. GodotCon Boston's Main Conference takes places on July 21st & 22nd at the Microsoft NERD Center (New England Research and Development) with an exciting array of talks and project showcases. A more limited day of hands on workshops takes place on Monday, 20th of July.
+The second edition of GodotCon in the United States is in Boston for 2026. GodotCon Boston's Main Conference takes place on July 21st & 22nd at the Microsoft NERD Center (New England Research and Development) with an exciting array of talks and project showcases. A more limited day of hands-on workshops takes place on Monday, 20th of July.
 
-This year, GodotCon is hosted in partnership with <a href="http://scenetree.org">SceneTree</a>, a local organization dedicated to growing and educating folks about open source game development.
+This year, GodotCon is hosted in partnership with <a href="http://scenetree.org">SceneTree</a>, a local organization dedicated to growing and educating folks about open-source game development.
