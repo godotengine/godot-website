@@ -4,7 +4,7 @@ excerpt: "Want to join? Boston 21-22 of July. Get your tickets now! (Call for sp
 categories: ["events"]
 author: Chad
 image: /storage/blog/covers/godotcon-boston-2026.png
-date: 2026-05-07 13:00:00
+date: 2026-05-08 13:00:00
 ---
 
 The official GodotCon returns to Boston for the second US edition. For this edition of the event, we teamed up with [SceneTree](https://scenetree.org/) to help us organize it and make sure that everything runs smoothly. 
@@ -15,7 +15,7 @@ The official GodotCon returns to Boston for the second US edition. For this edit
 | 🕑 Time | 09:00 - 18:00|
 | 🇳🇱 Location | Boston, Massachusetts, United States |
 | 📍 Venue | Microsoft NERD Center. <a href="https://maps.app.goo.gl/LJC9R7QiTxN6S3cv7">1 Memorial Dr, Cambridge, MA 02142, United States</a> | 
-| 🌐 Website | [https://conference.godotengine.org](https://conference.godotengine.org/US/2026/) |
+| 🌐 Website | [https://conference.godotengine.org/US/2026/](https://conference.godotengine.org/US/2026/) |
 
 <a class="btn" href="https://tickets.godotengine.org/scene-tree/godotcon-us-2026/" >Buy tickets 🎟️</a>
 
