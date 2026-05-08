@@ -3,7 +3,7 @@ title: "GodotCon Boston - Save the date!"
 excerpt: "Want to join? Boston 21-22 of July. Get your tickets now! (Call for speakers, showcases, and sponsors open)."
 categories: ["events"]
 author: Chad
-image: /storage/blog/covers/godotcon-boston-2026.png
+image: /storage/blog/covers/godotcon-boston-2026.jpg
 date: 2026-05-08 13:00:00
 ---
 
