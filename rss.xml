@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot usage and engine growth</title><link>https://godotengine.org/article/godot-growth-stats-2026/</link><summary>Godot adoption has rapidly increased in the last few years. Here is a look at the hard numbers.</summary><description>&lt;p>I like to keep track of Godot’s growth. Since we don’t have any tracking information in the engine itself, this can be challenging. So I use a variety of sources to try to get a full picture of how Godot is growing over time. I have been collecting data long enough now that I can finally put together some graphs that illustrate the growth of the engine.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>GodotCon Boston - Save the date!</title><link>https://godotengine.org/article/godotcon-us-2026/</link><summary>Want to join? Boston 21-22 of July. Get your tickets now! (Call for speakers, showcases, and sponsors open).</summary><description>&lt;p>The official GodotCon returns to Boston for the second US edition. For this edition of the event, we teamed up with &lt;a href="https://scenetree.org/">SceneTree&lt;/a> to help us organize it and make sure that everything runs smoothly.&lt;/p>
+&lt;h3 id="information">Information&lt;/h3>
+&lt;table>
+&lt;tbody>
+&lt;tr>
+&lt;td>📅 Dates&lt;/td>
+&lt;td>21st, 22nd of July 2026&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🕑 Time&lt;/td>
+&lt;td>09:00 - 18:00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🇳🇱 Location&lt;/td>
+&lt;td>Boston, Massachusetts, United States&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>📍 Venue&lt;/td>
+&lt;td>Microsoft NERD Center. &lt;a href="https://maps.app.goo.gl/LJC9R7QiTxN6S3cv7">1 Memorial Dr, Cambridge, MA 02142, United States&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🌐 Website&lt;/td>
+&lt;td>&lt;a href="https://conference.godotengine.org/US/2026/">https://conference.godotengine.org/US/2026/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;a class="btn" href="https://tickets.godotengine.org/scene-tree/godotcon-us-2026/">Buy tickets 🎟️&lt;/a>&lt;/p>
+&lt;h3 id="call-for-speakers-sponsors-and-showcases">Call for speakers, sponsors, and showcases&lt;/h3>
+&lt;p>If you would like to be a part of the conference by giving a talk or a workshop, please submit your proposals through the link below. We are looking for a diverse range of topics, from beginner to advanced, so don’t hesitate to submit your ideas. Of note: We have a lot more room for workshops this year on the 20th of July.&lt;/p>
+&lt;p>&lt;a href="https://talks.godotengine.org/godotcon-boston-2026/cfp">&lt;strong>➡️ Call for submissions&lt;/strong>&lt;/a>, Deadline: 1st of June 2026&lt;/p>
+&lt;p>We are also actively looking for sponsors to support GodotCon Boston. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to &lt;a href="mailto:president@scenetree.org">president@scenetree.org&lt;/a>.&lt;/p>
+&lt;p>Want to show off your Godot-related project? Whether you have some really handy toolset or an amazing game made in Godot, submit to be a part of the showcase.&lt;/p>
+&lt;p>&lt;a href="https://talks.godotengine.org/godotcon-boston-2026/cfp">&lt;strong>➡️ Showcase submissions&lt;/strong>&lt;/a>, Deadline: 1st of June 2026&lt;/p>
+&lt;h3 id="call-for-volunteers">Call for volunteers&lt;/h3>
+&lt;p>An event like this only happens thanks to passionate people like you who are willing to help behind the scenes. If you want to contribute to making GodotCon Boston 2026 a welcoming and smooth experience for everyone, we are currently looking for volunteers to help us manage different aspects of the conference, from stage managers to photographers.&lt;/p>
+&lt;p>If you would like to participate, please fill out &lt;a href="https://forms.gle/3C5rqH8MjRuRXjS36">this form&lt;/a>.&lt;/p>
+&lt;h3 id="tickets-and-more">Tickets and more&lt;/h3>
+&lt;p>Get your tickets &lt;a href="https://tickets.godotengine.org/scene-tree/godotcon-us-2026/">here&lt;/a> and stay tuned for more information by joining the &lt;a href="https://discord.gg/A2YPMR23ye">GodotCon Discord&lt;/a> or the mailing list.&lt;/p>
+&lt;form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
+&lt;style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}&lt;/style>
+&lt;div>
+&lt;input type="hidden" name="nonce" />
+&lt;input type="email" name="email" required="" placeholder="E-mail" style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);" />
+&lt;p style="display:none;">
+&lt;input id="6e6e9" type="checkbox" name="l" checked="" value="6e6e9ba4-732b-4528-b4cd-71bbe6850f8d" />
+&lt;label for="6e6e9">Godot Conference&lt;/label>
+&lt;/p>
+&lt;input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
+&lt;/div>
+&lt;/form>
+&lt;p>See you soon!&lt;/p></description><category>Events</category><guid>https://godotengine.org/article/godotcon-us-2026/</guid><dc:creator>Chad</dc:creator><pubDate>Fri, 08 May 2026 13:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotcon-boston-2026.png</image></item><item><title>Godot usage and engine growth</title><link>https://godotengine.org/article/godot-growth-stats-2026/</link><summary>Godot adoption has rapidly increased in the last few years. Here is a look at the hard numbers.</summary><description>&lt;p>I like to keep track of Godot’s growth. Since we don’t have any tracking information in the engine itself, this can be challenging. So I use a variety of sources to try to get a full picture of how Godot is growing over time. I have been collecting data long enough now that I can finally put together some graphs that illustrate the growth of the engine.&lt;/p>
 &lt;p>This data comes from many different sources and is collected in different ways, so it can be a little bit scattered. For example, I have data for the total number of downloads of each version of the engine from our website at a given point in time, but I don’t have downloads per month. Whereas on Steam and Google Play, I have total downloads for all versions and monthly downloads. Finally, the data generally runs up into February 2026 since that is the last time I updated the data (and when I started the first draft of this post).&lt;/p>
 &lt;p>Overall, this data can give us some insight into the growth of Godot and its trajectory, but is not an exact picture.&lt;/p>
 &lt;h2 id="engine-usage">Engine usage&lt;/h2>
@@ -3157,36 +3207,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open source game engine developed by hundreds of contributors on their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
 &lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-dev-2/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Tue, 03 Mar 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-dev-2.jpg</image></item><item><title>Godot Showcase - Buckshot Roulette</title><link>https://godotengine.org/article/godot-showcase-buckshot-roulette/</link><summary>Mike Klubnika tells us about his experience working on Buckshot Roulette.</summary><description>&lt;p>Mike Klubnika tells us about his experience developing the 2024 indie hit &lt;a href="https://store.steampowered.com/app/2835570/Buckshot_Roulette/">Buckshot Roulette&lt;/a>, as well as his newer project, &lt;a href="https://store.steampowered.com/app/3684610/split/">s.p.l.i.t&lt;/a>.&lt;/p>
-&lt;p>We are extremely grateful to Mike, our latest Corporate Platinum sponsor of the &lt;a href="https://fund.godotengine.org">Godot Development Fund&lt;/a>. Thanks to his donation, we’ll be able to keep working on the engine for all of you. Like him, if you’d like to support the project financially you can do so using the &lt;a href="https://fund.godotengine.org">Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation">Godot Foundation&lt;/a>.&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/JEGxnpGqEaE" frameborder="0" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;">&lt;/iframe>
-&lt;hr />
-&lt;h2 id="how-did-you-get-your-start-in-game-development-and-how-did-it-grow-into-a-full-time-position">How did you get your start in game development? And how did it grow into a full-time position?&lt;/h2>
-&lt;p>I started out by learning to do 3D artwork around 2018, so around 3 years before I got into solo game development. Eventually I started getting more and more interested in game development, and decided to work on a small game for 2 months. Once that was released, it basically snowballed from there, and I couldn’t stop thinking about making games.&lt;/p>
-&lt;p>By the end of 2023 I had released 16 small games, and had a decent following of both players and content creators. These were all developed between studying or full-time jobs — my biggest inspirations were obscure games with weird visuals, mechanics, and narratives, and there was a lot of freedom working on stuff when I wasn’t relying on them to turn a profit or anything like that. I was already super grateful for my small community. So after selling Buckshot Roulette for a dollar in late 2023, I was absolutely floored when it hit mainstream. Since then I’ve been able to make games full time.&lt;/p>
-&lt;p>&lt;img src="/assets/showcase/screenshots/br-1.jpg" alt="" />&lt;/p>
-&lt;h2 id="some-people-may-be-familiar-with-your-game-buckshot-roulette-but-could-you-tell-us-a-bit-about-your-newer-project-split">Some people may be familiar with your game Buckshot Roulette, but could you tell us a bit about your newer project s.p.l.i.t.?&lt;/h2>
-&lt;p>&lt;a href="https://store.steampowered.com/app/3684610/split/">s.p.l.i.t&lt;/a> is a game I still don’t fully know how to describe. Basically it’s a hacking simulator with “Typing of The Dead” elements, and a bunch of existential horror. After Buckshot Roulette I had a really strong desire to do something more narrative heavy, and so s.p.l.i.t ended up being the perfect project for that.&lt;/p>
-&lt;p>For the gameplay side I tried to have somewhat “realistic” hacking, so the terminal is very barebones with no flashy visuals, and the game uses commands that players would hopefully already be familiar with.&lt;/p>
-&lt;p>&lt;img src="/storage/blog/godot-showcase-buckshot-roulette/split.webp" alt="" />&lt;/p>
-&lt;h2 id="what-were-some-of-the-biggest-challenges-you-faced-during-the-development-process-and-how-did-you-overcome-them">What were some of the biggest challenges you faced during the development process, and how did you overcome them?&lt;/h2>
-&lt;p>I decided early on that the game would run on a keyboard only, which had some challenges in figuring out a control scheme for navigating different screens, and interacting with the environment. That “Typing of The Dead” type of mechanic ended up working well for that, where the player would have their action thoughts visible in certain parts of the environment, and type them out to go through with the interaction. It also just looked cool — it was fun to frame different thoughts in a cinematic way through the different cutscenes.&lt;/p>
-&lt;p>The biggest challenge was having the game be at least somewhat accessible to people who haven’t touched a command line before. Originally the terminal puzzles in the game were designed so that the end goal was clear, but the path there wasn’t. Players ended up being left in the dark, so making the steps to the goal clearer helped a lot. The puzzles ended up in a place where the player would have a pretty clear outline of a goal, and have to translate the steps to fulfill that into terminal commands.&lt;/p>
-&lt;p>&lt;img src="/storage/blog/godot-showcase-buckshot-roulette/split-2.jpg" alt="" />&lt;/p>
-&lt;h2 id="how-did-you-discover-godot-what-made-you-pick-it-for-your-project">How did you discover Godot? What made you pick it for your project?&lt;/h2>
-&lt;p>I originally discovered Godot somewhere around 2022, but opened it up for the first time in late 2023. Before then I had used Unity for around 3 years, but once they announced the runtime fee, I decided to try switching engines. I really liked the fact that Godot was open source, and found it was pretty easy to get into since it shares a lot of similarities to the workflow I had in Unity.&lt;/p>
-&lt;h2 id="what-do-you-like-about-godot">What do you like about Godot?&lt;/h2>
-&lt;p>It’s very fast, even in bigger projects. My favourite feature has to be the AnimationPlayer, which is very powerful and quick to set up. Coming from C#, I also liked GDscript once I got used to it. I think it’s a very nice programming language.
-Generally though I feel like it’s super quick to iterate on features — there’s not a lot of friction in experimenting or tweaking small things.&lt;/p>
-&lt;p>&lt;img src="/assets/showcase/screenshots/br-3.jpg" alt="" />&lt;/p>
-&lt;h2 id="while-making-your-game-were-there-any-features-that-you-would-have-liked-to-see-in-godot">While making your game, were there any features that you would have liked to see in Godot?&lt;/h2>
-&lt;p>It’d be great to be able to see a real-time visualization of the remote scene tree in the editor. Similar to Unity where if you run the game, you can see it running in the editor, navigate around, and tweak variables of objects in real-time.&lt;/p>
-&lt;p>&lt;img src="/assets/showcase/screenshots/br-4.jpg" alt="" />&lt;/p>
-&lt;h2 id="what-advice-would-you-give-to-aspiring-game-developers-who-are-just-starting-out-in-the-field">What advice would you give to aspiring game developers who are just starting out in the field?&lt;/h2>
-&lt;p>I would highly recommend making a bunch of small games — something you can finish in a couple of weeks. The first game is always the trickiest, since you’re doing everything for the first time, but once you go through the process multiple times everything starts to make a lot more sense.&lt;/p>
-&lt;p>For solo game development, there are quite a few different hats to wear. What really helped me get into game development were those years learning 3D software before I got into a game engine. Because of that I was comfortable with quite a few things in a game engine already, and the only thing that I had to learn from scratch was programming.&lt;/p>
-&lt;p>But generally it all just takes time, best to keep on trucking. For me personally, I only started noticing my progress when I looked back at my earliest games, after just a couple months of making stuff.&lt;/p>
-&lt;p>&lt;img src="/assets/showcase/screenshots/br-5.jpg" alt="" />&lt;/p>
-&lt;hr />
-&lt;p>Thank you very much Mike for taking the time to answer our questions!&lt;/p>
-&lt;p>&lt;a href="https://mikeklubnika.com/">Mike Klubnika&lt;/a>’s games including &lt;em>Buckshot Roulette&lt;/em> and &lt;em>s.p.l.i.t&lt;/em> are available on &lt;a href="https://store.steampowered.com/developer/mikeklubnika">Steam&lt;/a>. You can also join his &lt;a href="https://discord.gg/jDGePvU3Z5">Discord server&lt;/a>.&lt;/p></description><category>Showcase</category><guid>https://godotengine.org/article/godot-showcase-buckshot-roulette/</guid><dc:creator>Hugo Locurcio</dc:creator><pubDate>Fri, 27 Feb 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/godot-showcase-buckshot-roulette/thumbnail.jpg</image></item></channel></rss>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-dev-2/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Tue, 03 Mar 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-dev-2.jpg</image></item></channel></rss>
