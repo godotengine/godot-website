@@ -646,6 +646,7 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;ul>
 &lt;li>Animation: Display and allow setting name/index of BlendSpace points (&lt;a href="https://github.com/godotengine/godot/pull/110369">GH-110369&lt;/a>).&lt;/li>
 &lt;li>Audio: Fix Spectrum Analyzer effect returning jittered values (&lt;a href="https://github.com/godotengine/godot/pull/114355">GH-114355&lt;/a>).&lt;/li>
+&lt;li>Audio: Fix volume calculation with multiple viewports in 3D (&lt;a href="https://github.com/godotengine/godot/pull/114080">GH-114080&lt;/a>).&lt;/li>
 &lt;li>Core: Change &lt;code class="language-plaintext highlighter-rouge">new&lt;/code> overloads to use a tag instead of a pointer (&lt;a href="https://github.com/godotengine/godot/pull/112035">GH-112035&lt;/a>).
 &lt;ul>
 &lt;li>Should only be relevant for modules relying on unconventional initialization methods.&lt;/li>
