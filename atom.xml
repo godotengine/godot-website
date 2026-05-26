@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-05-22T13:16:05+00:00</updated><id>https://godotengine.org/</id><entry><title>Introducing the Godot Asset Store</title><link href="https://godotengine.org/article/introducing-the-godot-asset-store/"/><updated>2026-05-22T15:00:00+00:00</updated><id>https://godotengine.org/article/introducing-the-godot-asset-store/</id><summary>We've been working on replacing the Asset Library with something built for the present and future. Here's what's coming.</summary><content type="html">&lt;p>The &lt;a href="https://godotengine.org/asset-library/asset">Asset Library&lt;/a> has served for many years as the official place to publish and acquire assets, fulfilling a valuable community need.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-05-26T16:09:51+00:00</updated><id>https://godotengine.org/</id><entry><title>JetBrains Rider brings support for Godot Asset Store addons</title><link href="https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/"/><updated>2026-05-26T15:00:00+00:00</updated><id>https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/</id><summary>Developers building add-ons for the new Godot Asset Store can now benefit from new and improved support from JetBrains Rider.</summary><content type="html">&lt;p>With the &lt;a href="https://godotengine.org/article/introducing-the-godot-asset-store/">launch&lt;/a> of the new &lt;a href="https://store.godotengine.org/">Godot Asset Store&lt;/a>, &lt;a href="https://www.jetbrains.com/rider/">JetBrains Rider&lt;/a> is among the first to embrace it as a tool provider for addon developers.&lt;/p>
+&lt;p>Starting with Rider 2026.2, JetBrains offers dedicated project templates for creating Godot addons from scratch. These templates cover the full range of addon types, from simple script-based assets and &lt;a href="https://docs.godotengine.org/en/stable/tutorials/plugins/editor/index.html">editor plugins&lt;/a> to complex addons with native C++ &lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/index.html">GDExtensions&lt;/a>.&lt;/p>
+&lt;p>Here’s what Rider brings to the table for Godot addon developers:&lt;/p>
+&lt;ul>
+&lt;li>Project templates: Godot games, assets, and editor plugins, with a preconfigured project structure, build settings, and run configurations.&lt;/li>
+&lt;li>GDExtension support: create and build native C++ extensions for Godot directly in the IDE, with full CMake integration.&lt;/li>
+&lt;li>Run and debug: run the Godot editor and debug both GDScript and native C++ code from a single IDE, with preconfigured run configurations generated automatically.&lt;/li>
+&lt;li>Publish-ready structure: the project templates follow the official Godot Asset Store submission recommendations, so your addon is ready for publishing from day one.&lt;/li>
+&lt;/ul>
+&lt;p>For a detailed, step-by-step walkthrough, check out the product documentation: &lt;a href="https://www.jetbrains.com/help/rider/2026.2/Godot_asset_store_addon.html">Develop Godot Asset Store addons in Rider&lt;/a>.&lt;/p>
+&lt;h2 id="about-jetbrains-rider-and-godot">About JetBrains Rider and Godot&lt;/h2>
+&lt;p>JetBrains has been &lt;a href="https://godotengine.org/article/jetbrains-joins-dev-fund-supports-godot/">investing in Godot support for several years&lt;/a>. Rider provides deep &lt;a href="https://www.jetbrains.com/help/rider/Godot.html">integration with the Godot engine&lt;/a>, including code insight and debugging for both C# and GDScript, scene and resource navigation, and a rich set of inspections tailored for Godot projects.&lt;/p>
+&lt;p>You can find the official JetBrains-developed addon &lt;a href="https://store.godotengine.org/asset/jetbrains/jetbrains-rider-integration/">JetBrains Rider Integration&lt;/a>, on the Godot Asset Store. It helps you develop addons and games in Rider by connecting it as an external editor to the Godot editor.&lt;/p>
+&lt;p>We’re happy to see ecosystem partners like JetBrains contribute to making Godot addon development more accessible and professional. Having a polished, end-to-end workflow for creating, debugging, and publishing addons benefits the entire Godot community.&lt;/p></content><author><name>Godot Foundation</name></author><category term="News"/></entry><entry><title>Introducing the Godot Asset Store</title><link href="https://godotengine.org/article/introducing-the-godot-asset-store/"/><updated>2026-05-22T15:00:00+00:00</updated><id>https://godotengine.org/article/introducing-the-godot-asset-store/</id><summary>We've been working on replacing the Asset Library with something built for the present and future. Here's what's coming.</summary><content type="html">&lt;p>The &lt;a href="https://godotengine.org/asset-library/asset">Asset Library&lt;/a> has served for many years as the official place to publish and acquire assets, fulfilling a valuable community need.
 However with the &lt;a href="https://godotengine.org/article/godot-growth-stats-2026/">rapid growth of the Godot community and ecosystem&lt;/a>, it was time to come up with a new infrastructure.&lt;/p>
 &lt;p>After a couple years of work and a few months of beta testing, we are pleased to introduce the new &lt;a href="https://store.godotengine.org/">Godot Asset Store&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="/storage/blog/asset-store/godot-asset-store-screenshot.webp" alt="A screenshot of the Godot Asset Store" />&lt;/p>
@@ -4629,54 +4642,4 @@ Generally though I feel like it’s super quick to iterate on features — there
 &lt;p>&lt;img src="/assets/showcase/screenshots/br-5.jpg" alt="" />&lt;/p>
 &lt;hr />
 &lt;p>Thank you very much Mike for taking the time to answer our questions!&lt;/p>
-&lt;p>&lt;a href="https://mikeklubnika.com/">Mike Klubnika&lt;/a>’s games including &lt;em>Buckshot Roulette&lt;/em> and &lt;em>s.p.l.i.t&lt;/em> are available on &lt;a href="https://store.steampowered.com/developer/mikeklubnika">Steam&lt;/a>. You can also join his &lt;a href="https://discord.gg/jDGePvU3Z5">Discord server&lt;/a>.&lt;/p></content><author><name>Hugo Locurcio</name></author><category term="Showcase"/></entry><entry><title>GodotCon Amsterdam - Save the date!</title><link href="https://godotengine.org/article/godotcon-2026/"/><updated>2026-02-18T13:00:00+00:00</updated><id>https://godotengine.org/article/godotcon-2026/</id><summary>Want to join? Amsterdam 23-24 of April. Get your tickets now! (Call for speakers and sponsors open)</summary><content type="html">&lt;p>The official GodotCon returns to Europe and this time, it will be the first GodotCon in the city where the Godot Foundation calls home. For this edition of the event, we teamed up with the &lt;a href="https://dutchgamesassociation.nl/">Dutch Games Association&lt;/a> to help us organize it and make sure that everything runs smoothly.&lt;/p>
-&lt;h3 id="information">Information&lt;/h3>
-&lt;table>
-&lt;tbody>
-&lt;tr>
-&lt;td>📅 Dates&lt;/td>
-&lt;td>23rd, 24th of April&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🕑 Time&lt;/td>
-&lt;td>10:00 - 18:00&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🇳🇱 Location&lt;/td>
-&lt;td>Amsterdam, The Netherlands&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>📍 Venue&lt;/td>
-&lt;td>Pathé Amsterdam Noord. &lt;a href="https://www.google.com/maps/place/Path%C3%A9+Amsterdam+Noord/@52.4006788,4.9343291,898m/data=!3m1!1e3!4m6!3m5!1s0x47c6098c4b35b89f:0x95697d3c0ded012e!8m2!3d52.4007003!4d4.9346766!16s%2Fg%2F11h5qpwf3k?entry=tts&amp;amp;g_ep=EgoyMDI2MDIxMS4wIPu8ASoASAFQAw%3D%3D&amp;amp;skid=ce7b0ad0-aef1-4865-b929-21ec88e61fe0">Buikslotermeerplein 2003, 1025 XL Amsterdam, Netherlands&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🌐 Website&lt;/td>
-&lt;td>&lt;a href="https://conference.godotengine.org/2026/">https://conference.godotengine.org&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;a class="btn" href="https://tickets.godotengine.org/foundation/godotcon-ams-2026/">Buy tickets 🎟️&lt;/a>&lt;/p>
-&lt;h3 id="call-for-speakers-and-sponsors">Call for speakers and sponsors&lt;/h3>
-&lt;p>If you would like to be a part of the conference by giving a talk or a workshop, please submit your proposals through the link below. We are looking for a diverse range of topics, from beginner to advanced, so don’t hesitate to submit your ideas.&lt;/p>
-&lt;p>&lt;a href="https://talks.godotengine.org/godotcon-ams-2026/cfp">&lt;strong>➡️ Call for submissions&lt;/strong>&lt;/a>, Deadline: 30th of March&lt;/p>
-&lt;p>We are also actively looking for sponsors to support the GodotCon Amsterdam. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to &lt;a href="mailto:godotcon@godotengine.org">godotcon@godotengine.org&lt;/a>.&lt;/p>
-&lt;h3 id="call-for-volunteers">Call for volunteers&lt;/h3>
-&lt;p>An event like this only happens thanks to passionate people like you who are willing to help behind the scenes. If you want to contribute to making GodotCon 2026 a welcoming and smooth experience for everyone, we are currently looking for volunteers to help us manage different aspects of the conference, from stage managers to photographers.&lt;/p>
-&lt;p>If you would like to participate, please fill out &lt;a href="https://docs.google.com/forms/d/1iW7ng8mHutrhYHyil3vDkcqR1SxRYrELJXqR7nQJMNQ">this form&lt;/a>.&lt;/p>
-&lt;h3 id="tickets-and-more">Tickets and more&lt;/h3>
-&lt;p>Get your tickets &lt;a href="https://tickets.godotengine.org/foundation/godotcon-ams-2026/">here&lt;/a> and stay tuned for more information by joining the &lt;a href="https://discord.gg/A2YPMR23ye">GodotCon Discord&lt;/a> or the mailing list.&lt;/p>
-&lt;form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
-&lt;style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}&lt;/style>
-&lt;div>
-&lt;input type="hidden" name="nonce" />
-&lt;input type="email" name="email" required="" placeholder="E-mail" style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);" />
-&lt;p style="display:none;">
-&lt;input id="6e6e9" type="checkbox" name="l" checked="" value="6e6e9ba4-732b-4528-b4cd-71bbe6850f8d" />
-&lt;label for="6e6e9">Godot Conference&lt;/label>
-&lt;/p>
-&lt;input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
-&lt;/div>
-&lt;/form>
-&lt;h3 id="will-there-still-be-a-godot-event-in-the-us-in-2026">Will there still be a Godot event in the US in 2026?&lt;/h3>
-&lt;p>Absolutely! The same team behind the GodotCon Boston will be announcing more details about the event for 2026 in the US. It will come back with a different name, but everything else should be the same.&lt;/p>
-&lt;p>See you soon!&lt;/p></content><author><name>Emi</name></author><category term="Events"/></entry></feed>
+&lt;p>&lt;a href="https://mikeklubnika.com/">Mike Klubnika&lt;/a>’s games including &lt;em>Buckshot Roulette&lt;/em> and &lt;em>s.p.l.i.t&lt;/em> are available on &lt;a href="https://store.steampowered.com/developer/mikeklubnika">Steam&lt;/a>. You can also join his &lt;a href="https://discord.gg/jDGePvU3Z5">Discord server&lt;/a>.&lt;/p></content><author><name>Hugo Locurcio</name></author><category term="Showcase"/></entry></feed>

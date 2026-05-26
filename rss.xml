@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Introducing the Godot Asset Store</title><link>https://godotengine.org/article/introducing-the-godot-asset-store/</link><summary>We've been working on replacing the Asset Library with something built for the present and future. Here's what's coming.</summary><description>&lt;p>The &lt;a href="https://godotengine.org/asset-library/asset">Asset Library&lt;/a> has served for many years as the official place to publish and acquire assets, fulfilling a valuable community need.
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>JetBrains Rider brings support for Godot Asset Store addons</title><link>https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/</link><summary>Developers building add-ons for the new Godot Asset Store can now benefit from new and improved support from JetBrains Rider.</summary><description>&lt;p>With the &lt;a href="https://godotengine.org/article/introducing-the-godot-asset-store/">launch&lt;/a> of the new &lt;a href="https://store.godotengine.org/">Godot Asset Store&lt;/a>, &lt;a href="https://www.jetbrains.com/rider/">JetBrains Rider&lt;/a> is among the first to embrace it as a tool provider for addon developers.&lt;/p>
+&lt;p>Starting with Rider 2026.2, JetBrains offers dedicated project templates for creating Godot addons from scratch. These templates cover the full range of addon types, from simple script-based assets and &lt;a href="https://docs.godotengine.org/en/stable/tutorials/plugins/editor/index.html">editor plugins&lt;/a> to complex addons with native C++ &lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/index.html">GDExtensions&lt;/a>.&lt;/p>
+&lt;p>Here’s what Rider brings to the table for Godot addon developers:&lt;/p>
+&lt;ul>
+&lt;li>Project templates: Godot games, assets, and editor plugins, with a preconfigured project structure, build settings, and run configurations.&lt;/li>
+&lt;li>GDExtension support: create and build native C++ extensions for Godot directly in the IDE, with full CMake integration.&lt;/li>
+&lt;li>Run and debug: run the Godot editor and debug both GDScript and native C++ code from a single IDE, with preconfigured run configurations generated automatically.&lt;/li>
+&lt;li>Publish-ready structure: the project templates follow the official Godot Asset Store submission recommendations, so your addon is ready for publishing from day one.&lt;/li>
+&lt;/ul>
+&lt;p>For a detailed, step-by-step walkthrough, check out the product documentation: &lt;a href="https://www.jetbrains.com/help/rider/2026.2/Godot_asset_store_addon.html">Develop Godot Asset Store addons in Rider&lt;/a>.&lt;/p>
+&lt;h2 id="about-jetbrains-rider-and-godot">About JetBrains Rider and Godot&lt;/h2>
+&lt;p>JetBrains has been &lt;a href="https://godotengine.org/article/jetbrains-joins-dev-fund-supports-godot/">investing in Godot support for several years&lt;/a>. Rider provides deep &lt;a href="https://www.jetbrains.com/help/rider/Godot.html">integration with the Godot engine&lt;/a>, including code insight and debugging for both C# and GDScript, scene and resource navigation, and a rich set of inspections tailored for Godot projects.&lt;/p>
+&lt;p>You can find the official JetBrains-developed addon &lt;a href="https://store.godotengine.org/asset/jetbrains/jetbrains-rider-integration/">JetBrains Rider Integration&lt;/a>, on the Godot Asset Store. It helps you develop addons and games in Rider by connecting it as an external editor to the Godot editor.&lt;/p>
+&lt;p>We’re happy to see ecosystem partners like JetBrains contribute to making Godot addon development more accessible and professional. Having a polished, end-to-end workflow for creating, debugging, and publishing addons benefits the entire Godot community.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 26 May 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/partners_jetbrains_rider_asset_store_addons_support.png</image></item><item><title>Introducing the Godot Asset Store</title><link>https://godotengine.org/article/introducing-the-godot-asset-store/</link><summary>We've been working on replacing the Asset Library with something built for the present and future. Here's what's coming.</summary><description>&lt;p>The &lt;a href="https://godotengine.org/asset-library/asset">Asset Library&lt;/a> has served for many years as the official place to publish and acquire assets, fulfilling a valuable community need.
 However with the &lt;a href="https://godotengine.org/article/godot-growth-stats-2026/">rapid growth of the Godot community and ecosystem&lt;/a>, it was time to come up with a new infrastructure.&lt;/p>
 &lt;p>After a couple years of work and a few months of beta testing, we are pleased to introduce the new &lt;a href="https://store.godotengine.org/">Godot Asset Store&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="/storage/blog/asset-store/godot-asset-store-screenshot.webp" alt="A screenshot of the Godot Asset Store" />&lt;/p>
@@ -2750,119 +2763,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
 &lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by the &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-dev-4/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Thu, 09 Apr 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-dev-4.jpg</image></item><item><title>Godot Showcase – Xogot: Godot for iPad &amp; iPhone</title><link>https://godotengine.org/article/godot-showcase-xogot/</link><summary>Miguel de Icaza from Xibbon shares his experience working on Xogot for iOS.</summary><description>&lt;style>
-.xogot-screenshot-container {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-margin: 1em;
-margin-top: 0;
-&amp; > .lightbox {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-}
-&amp; > img,
-&amp; > .lightbox > img {
-max-width: 450px;
-max-height: 450px;
-aspect-ratio: auto;
-margin: 0;
-}
-}
-.xogot-float-left {
-float: left;
-margin-left: 0;
-}
-.xogot-float-right {
-float: right;
-margin-right: 0;
-}
-@media screen and (width &lt; 800px), (900px &lt; width &lt; 1000px) {
-.xogot-float-left,
-.xogot-float-right {
-float: none;
-margin-left: unset;
-margin-right: unset;
-}
-}
-h1, h2, h3, h4, h5, h6 {
-float: clear;
-}
-ul, ol {
-overflow: hidden;
-}
-&lt;/style>
-&lt;p>We’re happy to showcase a project that released last year, but was long in the making. The folks at Xibbon have been working hard to port the Godot Engine to the iOS platforms. Not only did they port the editor to make it run on iOS, they successfully interfaced the editor with a custom iOS interface in order to make the engine match Apple strict UI and UX guidelines. Using their app on the iPad and iPhone feels totally native, &lt;em>because it is&lt;/em>!&lt;/p>
-&lt;p>Xibbon has been active in our community, in terms of code contributions and events. Xibbon has been our sponsor at events, such as the first &lt;a href="/article/godotcon-us-2025-wrapup/">GodotCon in the US&lt;/a>!&lt;/p>
-&lt;p>Today, &lt;a href="https://en.wikipedia.org/wiki/Miguel_de_Icaza">Miguel de Icaza&lt;/a>, known for starting the &lt;a href="https://www.gnome.org/">GNOME&lt;/a>, &lt;a href="https://www.mono-project.com/">Mono&lt;/a>, and &lt;a href="https://en.wikipedia.org/wiki/Xamarin">Xamarin&lt;/a> projects, is sharing with us his experience developing his iOS app.&lt;/p>
-&lt;hr />
-&lt;h2 id="can-you-tell-us-a-little-bit-about-your-project">Can you tell us a little bit about your project?&lt;/h2>
-&lt;div class="xogot-screenshot-container xogot-float-right">
-&lt;img src="/assets/showcase/screenshots/xogot-1.webp" alt="Screenshot of Xogot running on an iPad." />
-&lt;/div>
-&lt;p>Xogot brings the Godot Editor to the iPad and the iPhone as a native iOS application.&lt;/p>
-&lt;p>Xogot uses the Godot Editor and the Godot Engine, but we provide an alternative user interface and shell that is built on top of Apple’s native user interface elements. We tuned the user experience to be both touch friendly and to work with the more limited screen space on these devices.&lt;/p>
-&lt;p>By being a new user interface on top of the existing Godot Editor, we remain compatible with the desktop Godot and users can move seamlessly between the platforms, but we also wanted to make a product that truly belonged on the iPad, not merely running the desktop experience on the iPad.&lt;/p>
-&lt;p>While I am an engineer, the joy that I derive from using creative apps on the iPad is unmatched.&lt;/p>
-&lt;p>Interacting with the world with our fingers is one of the earliest skills that we acquire as babies - and I find the physical feedback of using touch user interfaces to be very rewarding. Not only do I spend hours playing with my iPad, I also love watching creators use their iPads for sketching, drawing, modeling, composing, editing videos, and building games.&lt;/p>
-&lt;h2 id="why-did-you-want-to-build-xogot">Why did you want to build Xogot?&lt;/h2>
-&lt;p>Xogot is very much a labor of love, the result of a perfect storm of conditions and a way of expanding our own horizons and getting out of our comfort zone.&lt;/p>
-&lt;p>We have worked on the mobile world for almost fourteen years, and built developer tools for helping .NET developers target mobile platforms. Mostly building IDEs and tools and supporting others on their adventures to bring software to users (among those, funding the early effort to bring .NET to Godot).&lt;/p>
-&lt;p>We wanted to get out of our comfort zone, and build an end-user product that followed the ethos of iOS developers that obsess over highly polished apps. Products that obsess over the details of the user experience and strive to create delightful user interfaces.&lt;/p>
-&lt;p>For almost sixteen years we have helped folks in the game industry adopt .NET for game development, and we supported various games, engines, and hardware vendors with their efforts to bring our compilers and tools to their systems. Just like we were inspired by the iOS community, we are inspired by the game developer community - people pouring their hearts out exploring ways of entertaining and surprising us, and we wanted to get closer to this joyful world.&lt;/p>
-&lt;p>Lastly, we all witnessed a major turning point in the game-engine industry when Unity’s leadership made decisions that shook developer trust across the community. We watched as the industry rushed to find alternatives - and being emotionally invested already in Godot, we were very much in the camp “How can we give the Godot community an edge?”.&lt;/p>
-&lt;h2 id="what-was-challenging-about-bringing-the-godot-editor-to-the-ipad-and-iphone">What was challenging about bringing the Godot Editor to the iPad and iPhone?&lt;/h2>
-&lt;div class="xogot-screenshot-container xogot-float-left">
-&lt;img src="/assets/showcase/screenshots/xogot-3.webp" alt="Screenshot of Xogot running on an iPhone." />
-&lt;/div>
-&lt;p>This is the poster child of a slippery slope, or an extreme case of Yak Shaving.&lt;/p>
-&lt;p>There are three buckets of challenges:&lt;/p>
-&lt;ul>
-&lt;li>Multi-process&lt;/li>
-&lt;li>User experience&lt;/li>
-&lt;li>Embedding&lt;/li>
-&lt;/ul>
-&lt;p>At first, we figured “How hard could it be to get Godot on the iPad?” and it turned out that running Godot on iPad was quite simple, but comes with some strings attached. The first thing you have to deal with is that the Godot workflow uses three processes: the home screen that creates new fresh Godot Editors on demand, the Godot Editor itself, and every time you press “play”, a new and fresh instance of Godot.&lt;/p>
-&lt;p>The challenge is that iPadOS does not really support the above model where you get a fresh new process for each step, instead you get a single process and you get to live there. Without being able to launch a new project, Godot would have worked, but would not have been very interesting to people.&lt;/p>
-&lt;p>We first experimented with a proof of concept which was to reset the state of Godot to one of a fresh process. That worked, and it allowed us to edit one game, and then edit a second one. We called this the “reset state” effort. That was still not quite useful. The second stage was to make the editor run a child process, and for that what we did was to “virtualize” every single global variable in Godot, so we could run multiple instances simultaneously. That turned out to work great, but it relied on a very manual process of editing a very large chunk of Godot to remove every access to globals and static variables. We later invested in a clang-based rewriter that would take an existing Godot codebase and produce a virtualized Godot on demand. This is what we are based on now.&lt;/p>
-&lt;p>With the above system we could open multiple projects, but also start and stop the game under development over and over. So we were now cooking with gas. One last component was not just to launch separate instances of Godot, but having those run side-by-side, which was necessary to implement debugging over a “virtual” process that happened to be running on your same address space.&lt;/p>
-&lt;p>We took the limitations of the platform as a fun challenge to solve, and I am incredibly proud of the result.&lt;/p>
-&lt;p>That was a very satisfying technical problem to solve, but it did not lend itself to a great iPad experience. Godot is designed for a desktop computer where you have a lot of space, and you can easily aim your mouse at small user interface elements. On the iPad and iPhone, Apple recommends that elements are at least 44 points in size for users to be able to interact with them comfortably. In fact, every time I thought I could get away “just this time” with a smaller user interface, I found out the hard way that neither our users nor myself could tap it. We repeatedly learned that lesson.&lt;/p>
-&lt;p>&lt;em>44 points.&lt;/em>&lt;/p>
-&lt;p>It is now hanging on a printed piece of paper next to my desk, so I do not forget.&lt;/p>
-&lt;p>But even if we resized the controls, the user interface did not feel good on the iPad. Godot was clearly intended to be used with a mouse and a keyboard, so we set out to solve the most problematic areas for our users. Some were mechanical, like “make this button larger” or “display this elsewhere”, but some were more philosophical. In my previous experience with the GNOME desktop, we pursued a path similar to Godot. That is, we tried to deliver a user interface, but whenever there were disagreements about the intended behavior, rather than making an editorial or design decision, we offered a choice. Or three. Or four. Or five, or as many choices as there were opinions.&lt;/p>
-&lt;p>Offering choices sounds great on paper, but is terrible in practice. Options can paralyze users, but each option forces you to test two codepaths - and that is if you are lucky, if you have options that interact with other options. Now you have to test combinations of those features, and so on. And then you get to document all these combinations.&lt;/p>
-&lt;p>We wanted an application that lived up to the ethos of great iOS applications. We felt that we had to act as editors and make design choices that surfaced the right defaults, and we opted to only surface what we felt was necessary.&lt;/p>
-&lt;p>Overall, I think that we did a pretty good job, but every once in a while, our users would complain and make a case for why they really needed an option. So, in those cases, we have brought back a level of configuration or re-surfaced elements that were previously not shown.&lt;/p>
-&lt;p>Our design process was documented in our blog, and you can see our process and some of the iterations on the concepts over time.&lt;/p>
-&lt;p>We initially thought we would only touch on a couple of pieces, the scene pad, the file pad - and over time we found ourselves rewriting almost all of the user interface in Godot, both because it felt so much better, but also as users struggled with different parts of the UI. This is a process that has been both extensive, but also quite enjoyable - as &lt;a href="https://developer.apple.com/swiftui/">SwiftUI&lt;/a> has made this a delightful exercise.&lt;/p>
-&lt;p>At first, we just layered a new UI on top of the Godot Editor, and we customized Godot to show fewer UI elements when running. This served us well for a while, but at some point we found ourselves needing to “host” parts of the Godot UI in SwiftUI views that we controlled, like the bottom bar panels, the plugins that render inside the inspector, as well as having a fallback for custom Godot user interface code - and for that we used a system that allows us to “rehost” parts of the Godot UI - but having this was important to fully take control of the user experience, while ensuring that everything you need to work with Godot was still there.&lt;/p>
-&lt;p>Adapting Godot from a desktop application into a pleasant, touch-first, iPad application was a lot of work, and we were convinced there was no more shrinking or adjusting in our future. But even during the beta period before we launched the iPad version, our testers kept asking us for an iPhone version. We were not convinced that this was necessary, but our users kept telling us all the reasons why they would want this - tuning their apps, experimenting on the go, testing an idea during small breaks, adjusting some properties of their game during their bus or train ride or during their lunch breaks.&lt;/p>
-&lt;p>But there is a big gap between what people tell you they want and what they are actually going to do, so we remained skeptical for a long time. The first time we reconsidered this was when we heard a presentation from Chad Stewart on using Godot on Android where he shared his real-life experiences doing his work on the go. Then the Godot foundation shared information about usage of Godot on Android, on phones and tablets - and it was then that we grasped that for some folks their phone is their sole computing device. So not only was this possible, for some folks it was a necessity.&lt;/p>
-&lt;p>So, delivering the full Godot Editor on iPad and iPhone has meant more than just porting a desktop app. To meet App Store requirements and match Apple users’ expectations, we rebuilt the interface to be truly native and touch-first - something that feels at home on touch devices rather than adapted for it.
-Xogot has been a multi-year effort and a significant engineering investment. It’s a commercial product created by a small team deeply passionate about both Godot and Apple platforms. Xogot includes a free tier open to everyone, with the complete version provided at no cost to students and contributors to the Godot open-source project.&lt;/p>
-&lt;h2 id="what-are-the-biggest-differences-between-the-xogot-and-the-godot-editor">What are the biggest differences between the Xogot and the Godot Editor?&lt;/h2>
-&lt;p>Xogot has two major limitations. First, it can not run third-party plugins authored in native code, or run .NET code. The reason for the former is that Apple’s security system does not allow for third-party dynamic code to be loaded into a process, so all of these plugins fail.&lt;/p>
-&lt;p>And the ability to run .NET code is not something we have worked on.&lt;/p>
-&lt;h2 id="considering-the-improvements-made-to-adapt-to-the-new-form-factor-are-there-any-plans-on-bringing-xogot-to-other-platforms">Considering the improvements made to adapt to the new form factor, are there any plans on bringing Xogot to other platforms?&lt;/h2>
-&lt;div class="xogot-screenshot-container xogot-float-right">
-&lt;img src="/assets/showcase/screenshots/xogot-2.webp" alt="By default, when launching the game from the Xogot Editor, the game launches in a split screen." />
-&lt;/div>
-&lt;p>We want to bring Xogot to the Apple Vision Pro. Anecdotally, just before we decided to embark on bringing Godot to the iPad, we were working on building frameworks and games for the Vision Pro. We were going to our first Boston Unity meeting to learn more about Unity and Vision when the Boston Unity group disbanded in response to Unity’s license changes. It was in this turmoil that we were inspired to jump headlong into the Godot world.&lt;/p>
-&lt;p>The idea of building and testing immersive experiences directly inside the headset feels like a natural extension of what we have done so far - creating something with your hands, right in front of you, makes the process feel immediate and physical. But like the iPad effort, there are a number of very interesting problems to solve there before we can ship a product that would meet the expectations of users, so we are going to have to work through those.&lt;/p>
-&lt;p>We don’t currently have plans to bring Xogot to non-Apple platforms. Our focus right now is on delivering the best possible experience on iPhone and iPad, and continuing to refine what it means to build games natively on Apple’s devices. So you will see us iterating on the experience and incorporating user feedback until we can score ourselves one of those Apple Design Awards.&lt;/p>
-&lt;p>That said, Godot already runs on many platforms, and we see Xogot as part of that larger ecosystem. For now, our aim is to deliver a great experience to game developers on the Apple platforms, and to maintain a high level of compatibility with Godot so that both environments can complement each other.&lt;/p>
-&lt;h2 id="were-there-some-improvements-made-in-xogot-that-made-it-upstream">Were there some improvements made in Xogot that made it upstream?&lt;/h2>
-&lt;p>Our biggest contribution so far has been the &lt;a href="https://github.com/godotengine/godot/pull/110863">LibGodot&lt;/a> effort, which is a major investment we’ve been funding with the development work led by &lt;a href="https://migeran.com/">Migeran&lt;/a>. LibGodot makes it possible to embed Godot inside modern applications, and Migeran is now in the process of getting it upstreamed so it can benefit the broader community.&lt;/p>
-&lt;p>We’ve also contributed a number of smaller patches and fixes, and we’re continuing to learn what it takes to shepherd contributions through the review and merge process. Looking ahead, we expect to contribute larger components as well. We already have a few ideas in mind. But as we’re still relatively new to the game development community, we want those contributions to be shaped by what we learn as Xogot and its user base continue to grow.&lt;/p>
-&lt;p>I would love to participate more directly in Godot’s workgroups and community discussions. Balancing that with running a company and raising three kids can be challenging, but I have enormous respect for the dedication and care of the Godot team. My hope is that over time we can contribute not just code, but also ideas and processes that help strengthen the community.&lt;/p>
-&lt;h2 id="whats-next-for-xogot">What’s next for Xogot?&lt;/h2>
-&lt;p>We’re especially excited about Xogot Connect, our new open-source Godot add-on that lets developers on Windows, Linux, or macOS easily run and debug their projects on iPhone or iPad without the usual complexity of exporting to iOS, building in Xcode, or managing provisioning profiles.&lt;/p>
-&lt;p>Our goal is to keep expanding that bridge between desktop and mobile development. Xogot Connect already makes it simple to configure on-screen controls in your game by enabling the iOS Virtual Controller in Project Settings, and we have a few more ideas like this in the works that bring the mobile-specific affordances we’ve developed for Xogot directly to Godot developers on the desktop and make targeting mobile smoother and more approachable.&lt;/p>
-&lt;hr />
-&lt;p>I would like to thank Miguel de Icaza for sharing with us the experience of his ride of adapting the Godot Editor specifically for a new platform.&lt;/p>
-&lt;p>You can easily find Xogot &lt;a href="https://apps.apple.com/us/app/xogot-godot-for-ipad-iphone/id6469385251">in the App Store&lt;/a> or at &lt;a href="https://xogot.com/">its homepage&lt;/a>.&lt;/p>
-&lt;p>Also, don’t forget to check out Xogot Connect in the &lt;a href="https://godotengine.org/asset-library/asset/4472">Godot Asset Library&lt;/a>. (Expect it to be also in the upcoming Asset Store!)&lt;/p></description><category>Showcase</category><guid>https://godotengine.org/article/godot-showcase-xogot/</guid><dc:creator>Adam Scott</dc:creator><pubDate>Sat, 04 Apr 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-showcase-xogot.jpg</image></item></channel></rss>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-dev-4/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Thu, 09 Apr 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-dev-4.jpg</image></item></channel></rss>
