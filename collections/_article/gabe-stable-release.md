@@ -3,8 +3,8 @@ title: "Creating games entirely on Android!"
 excerpt: "GABE brings full Gradle support to the Godot Android editor, so you can build and publish games entirely from your Android device."
 categories: ["release"]
 author: Anish Kumar
-image:
-date: 2026-05-19 14:00:00
+image: /storage/blog/covers/gabe-stable-release.jpg
+date: 2026-06-02 14:00:00
 ---
 
 [Since 2023](https://godotengine.org/article/android_godot_editor_play_store_beta_release/), Godot users could [develop their games on Android](https://play.google.com/store/apps/details?id=org.godotengine.editor.v4), but they still needed a PC to perform the final export. We began changing that in Godot 4.4 by adding support for [non-gradle exports](https://godotengine.org/releases/4.4/#android-editor-export-support). However, many features remained out of reach; if your project used Android plugins like [Google Play Billing](https://godot-sdk-integrations.github.io/godot-google-play-billing/) or required some gradle export customizations, you were back to using a PC.
