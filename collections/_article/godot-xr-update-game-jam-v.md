@@ -20,25 +20,25 @@ Counting down the top 5:
 This VR platformer has you take control of a character but also control of the flow of time. Rewind time to move platforms so your character can progress through the level.
 A solid base for a game that has loads of potential.
 
-<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://youtu.be/sJ-Ypb3cptE" title="ScrewTheTime" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/sJ-Ypb3cptE" title="ScrewTheTime" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## No 4. [Last Minute by Cularo Games, RodZilla, SiropFraiseCitron, Tilca, and Apolo.music](https://itch.io/jam/godot-xr-game-jam-mar-2026/rate/4406743)
 
 A great take on the escape room genre where you need to play around with time in order to solve various puzzles.
 
-<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://youtu.be/kMU8h2p1vWs" title="Last Minute" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/kMU8h2p1vWs" title="Last Minute" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## No 3. [NeuroCorp Training Demo by SurrebralDesigns](https://itch.io/jam/godot-xr-game-jam-mar-2026/rate/4409496)
 
 This incredibly detailed entry has you examine scenes from the past. Only one level was completed but it showcased the idea very well. You get teleported into an immersive recording of a past event where you can scrub through time in order to complete various tasks.
 
-<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://youtu.be/iYO10Y77Dn0" title="NeuroCorp Training Demo" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/iYO10Y77Dn0" title="NeuroCorp Training Demo" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## No 2. [Chrono Crank by Copper Tunic, LeoscaveSoul, Allen Dawodu, and Celyk](https://itch.io/jam/godot-xr-game-jam-mar-2026/rate/4402255)
 
 Arguably the most visually stunning entry of the jam, this steampunk-styled game has you take control of time through a huge handheld device with a crank. As you spin the crank, you move time backwards and forwards. In this way you can control various events in the game. The trick is to line up events to prevent catastrophe.
 
-<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://youtu.be/J9urRfjBDZg" title="Chrono Crank" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/J9urRfjBDZg" title="Chrono Crank" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## No 1. [Rewind Tower by Thatscooljack, AtomicAnt, Effiayre, and Pory](https://itch.io/jam/godot-xr-game-jam-mar-2026/rate/4405300)
 
@@ -48,7 +48,7 @@ In later levels where your units run out, you can pick them up again and rewind 
 
 This is an absolute joy to play and we hope they build it out into a full-fledged game.
 
-<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://youtu.be/aZpwhW8nMT4" title="Rewind Tower" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" style="width: 100%; height: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/aZpwhW8nMT4" title="Rewind Tower" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## XR projects to watch
 
