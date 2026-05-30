@@ -517,3 +517,31 @@ United States:
         url: https://discord.gg/CPye5BfMy7
       - title: Website
         url: https://tucsongamedev.com
+Colombia:
+  - name: La Familia Godotera - Colombia
+    coordinates:
+      - 4.6482784
+      - -74.2726212
+    links:
+      - title: Website
+        url: https://www.lafamiliagodotera.org/
+      - title: WhatsApp
+        url: https://chat.whatsapp.com/2983IPhd7zg8ecg7I1NT63
+      - title: Telegram
+        url: https://t.me/+_hMmOtt8owg3OWEx
+      - title: Discord
+        url: https://discord.gg/hNUVksjsA
+Uruguay:
+  - name: La Familia Godotera - Uruguay
+    coordinates:
+      - -34.834338
+      - -56.3622822
+    links:
+      - title: Website
+        url: https://www.lafamiliagodotera.org/
+      - title: WhatsApp
+        url: https://chat.whatsapp.com/2983IPhd7zg8ecg7I1NT63
+      - title: Telegram
+        url: https://t.me/+_hMmOtt8owg3OWEx
+      - title: Discord
+        url: https://discord.gg/hNUVksjsA
