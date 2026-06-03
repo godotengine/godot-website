@@ -20,7 +20,7 @@ platforms: ["ios", "android", "web"]
 
 
 appstore: https://apps.apple.com/us/app/callbreak-card-game/id1046460939?ppid=376a9e0c-44b4-48dd-b703-38e1f5eb3b25
-googleplay: https://play.google.com/store/apps/details?id=io.teslatech.callbreak&referrer=utm_source%3DGodot_Engine%26utm_medium%3DGame_Engine%26utm_campaign%3DBacklink
+googleplay: https://play.google.com/store/apps/details?id=io.teslatech.callbreak&referrer=utm_source%3Dgodot_engine%26utm_medium%3Dreferral%26utm_campaign%3Dbacklink
 ---
 
 
