@@ -250,6 +250,25 @@ layout: default
 				</p>
 			</div>
 
+			{% if page.platform == 'Android' %}
+				<div class="other-download-card" id="gabe">
+					{% assign gabe_info = site.data.download_platforms | find: "name", "gabe" %}
+
+					<h3>Godot Android Build Environment (GABE)</h3>
+					<p>Separate app required to export Android projects from the Android or XR editor. This app is only necessary when exporting with Gradle; it is not required for non-Gradle exports or when exporting to other platforms.</p>
+					<p>
+						<a href="https://play.google.com/store/apps/details?id=org.godotengine.godot_gradle_build_environment">Google Play Store</a> -
+						<a href="https://www.meta.com/experiences/gabe/26529365196759917">Meta Horizon Store</a>
+					</p>
+					<p>Also available as a direct APK download (no automatic updates):</p>
+					<p>
+						<a href="https://github.com/godotengine/android-editor-buildenv-app/releases/latest/download/gabe-android.apk">Android</a> -
+						<a href="https://github.com/godotengine/android-editor-buildenv-app/releases/latest/download/gabe-horizonos.apk">Horizon OS</a> -
+						<a href="https://github.com/godotengine/android-editor-buildenv-app/releases/latest/download/gabe-picoos.apk">Pico OS</a>
+					</p>
+				</div>
+			{% endif %}
+
 		</div>
 	</div>
 
