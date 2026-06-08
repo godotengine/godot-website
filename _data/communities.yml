@@ -83,6 +83,13 @@ United Kingdom:
         url: https://discord.gg/rr6Ac648nC
       - title: Website
         url: https://godot.org.uk
+  - name: Godot Scotland
+    coordinates:
+      - 55.94416
+      - -3.16197
+    links:
+      - title: Discord
+        url: https://discord.gg/3HgTZG3TBN
 Canada:
   - name: Godot Toronto
     coordinates:
