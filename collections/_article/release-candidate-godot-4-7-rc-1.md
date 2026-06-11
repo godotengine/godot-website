@@ -27,7 +27,7 @@ We covered the most important highlights from Godot 4.7 in the previous [**4.7 b
 
 Especially if you're testing 4.7 for the first time, you'll want to get a condensed overview of what new features you might want to make use of.
 
-This section covers all changes made since the [beta 5 snapshot](/article/dev-snapshot-godot-4-6-beta-5/), which are largely regression fixes:
+This section covers all changes made since the [beta 5 snapshot](/article/dev-snapshot-godot-4-7-beta-5/), which are largely regression fixes:
 
 - 3D: Fix trackball when use local space is enabled ([GH-120063](https://github.com/godotengine/godot/pull/120063)).
 - Animation: Check blend weight for AnimationNode error & remove `_validate_animation_graph()` ([GH-120059](https://github.com/godotengine/godot/pull/120059)).
