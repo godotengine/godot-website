@@ -1,6 +1,6 @@
 ---
 title: "Release candidate: Godot 4.7 RC 2"
-excerpt: The end is in sight… Race ya there!
+excerpt: Last call to report critical regressions!
 categories: [pre-release]
 author: Thaddeus Crews
 image: /storage/blog/covers/release-candidate-godot-4-7-rc-2.jpg
@@ -61,6 +61,9 @@ This release is built from commit [`3df26a02c`](https://github.com/godotengine/g
 During the Release Candidate stage, we focus exclusively on solving showstopping regressions (i.e. something that worked in a previous release is now broken, without a workaround). You can have a look at our current [list of regressions and significant issues](https://github.com/orgs/godotengine/projects/61) which we aim to address before releasing 4.7. This list is dynamic and will be updated if we discover new showstopping issues after more users start testing the RC snapshots.
 
 With every release, we accept that there are going to be various issues which have already been reported but haven't been fixed yet. See the GitHub issue tracker for a complete list of [known bugs](https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+
+- `GPUParticle3D` is broken until the scene is reloaded ([#120170](https://github.com/godotengine/godot/issues/120170)). A fix is already in progress with [#119631](https://github.com/godotengine/godot/pull/119631).
+- Setting body `PROCESS_MODE_DISABLED` on `body_entered` signal disables further collision detection ([#120193](https://github.com/godotengine/godot/issues/120193)).
 
 ## Bug reports
 
