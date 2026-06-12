@@ -21,7 +21,7 @@ This is a companion app for the Godot Editor on Android and XR devices which wor
 
 ## What GABE brings to your workflow
 
-- You can now generate **AAB** files (Android App Bundles) directly on your Android device or XR device. You no longer need to move your project to a desktop just to get it ready for the Play Store or Horizon Store.
+- You can now generate **AAB** files (Android App Bundles) and **APKs using Gradle** directly on your Android device or XR device. You no longer need to move your project to a desktop just to get it ready for the Play Store or Horizon Store.
     - This also means that you can now create, develop, export, and publish a Godot game to any store using only an Android device or XR device.
 
 - If your project uses plugins like Google Play Billing or AdMob, you previously had to use a PC to export. Now, you can directly build your apps with plugin support.
