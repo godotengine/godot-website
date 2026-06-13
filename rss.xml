@@ -787,7 +787,7 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;p>This is a companion app for the Godot Editor on Android and XR devices which works in the background whenever you trigger a Gradle export. GABE handles downloading and managing all the build dependencies. After you grant it access to your project for the first time, it &lt;em>just works&lt;/em> for subsequent exports in the background.&lt;/p>
 &lt;h2 id="what-gabe-brings-to-your-workflow">What GABE brings to your workflow&lt;/h2>
 &lt;ul>
-&lt;li>You can now generate &lt;strong>AAB&lt;/strong> files (Android App Bundles) directly on your Android device or XR device. You no longer need to move your project to a desktop just to get it ready for the Play Store or Horizon Store.
+&lt;li>You can now generate &lt;strong>AAB&lt;/strong> files (Android App Bundles) and &lt;strong>APKs using Gradle&lt;/strong> directly on your Android device or XR device. You no longer need to move your project to a desktop just to get it ready for the Play Store or Horizon Store.
 &lt;ul>
 &lt;li>This also means that you can now create, develop, export, and publish a Godot game to any store using only an Android device or XR device.&lt;/li>
 &lt;/ul>
