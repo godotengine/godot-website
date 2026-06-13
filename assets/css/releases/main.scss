@@ -1,3 +1,7 @@
+---
+---
+
+@use "footer";
 @import "./reset.css";
 @import "./components/hero.css";
 @import "./components/toc.css";
@@ -46,6 +50,24 @@
   --l: 1.6em;
   --xl: 2.6em;
   --xxl: 4.2em;
+
+  /* Duplicate from main website css to avoid importing everything*/
+  --button-border-radius: 12px;
+
+  --link-color: hsl(206, 58%, 50%);
+  --navbar-background-color: #ffffff;
+  --navbar-link-color: var(--dark-color);
+  --primary-color: hsl(206, 58%, 52%);
+  --navbar-link-current-color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --navbar-background-color: #333639;
+  --link-color: hsl(200, 60%, 70%);
+  --navbar-link-color: hsla(0, 0%, 100%, 0.9);
+  --navbar-link-current-color: hsl(200, 100%, 80%);
+  }
 }
 
 @font-face {
@@ -145,6 +167,18 @@ a {
 .items-center{align-items: center;}
 .flex-wrap{flex-wrap: wrap;}
 .hidden{display: none;}
+
+#main-nav{
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+
+  .wrapper{
+    margin: auto;
+    max-width: 1400px;
+    width: 100%;
+  }
+}
 
 .preamble{
   margin-top: 4em;
@@ -388,3 +422,4 @@ kbd > kbd {
   padding: 2px 4px;
   white-space: nowrap;
 }
+

@@ -27,7 +27,10 @@ draft: true
     <meta property="og:description" content="{{page.meta.description}}">
     <meta property="og:image" content="{{ site.baseurl }}/storage/releases/{{version}}/images/og_image.jpg">
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/releases/main.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/transparent-nav.css?3">
+    <link rel="stylesheet" href="/assets/css/releases/main.css">
+    <link rel="stylesheet" href="/assets/css/tobii.min.css">
 </head>
 <body>
 
@@ -55,6 +58,12 @@ draft: true
             </svg>
         </label>
     </nav>
+    
+    <div id="main-nav">
+        <div class="wrapper">
+            {% include header.html %}
+        </div>
+    </div>
 
     <section class="hero">
         <div id="three-container" style="z-index: 0; position: absolute; width: 100%; height: 100%;">
@@ -392,6 +401,8 @@ draft: true
         </section>
 
     </main>
+
+    {% include footer.html %}
 
     <script src="{{ site.baseurl }}/assets/js/releases/toc_nav.js" defer></script>
     <script src="{{ site.baseurl }}/assets/js/releases/video_player.js" defer></script>

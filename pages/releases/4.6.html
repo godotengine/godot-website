@@ -29,7 +29,10 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
     <meta property="og:description" content="{{page.meta.description}}">
     <meta property="og:image" content="{{ site.baseurl }}/storage/releases/4.6/images/og_image.jpg">
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/releases/main.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/transparent-nav.css?3">
+    <link rel="stylesheet" href="/assets/css/releases/main.css">
+    <link rel="stylesheet" href="/assets/css/tobii.min.css">
 </head>
 <body>
 
@@ -51,6 +54,11 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
         </label>
     </nav>
 
+    <div id="main-nav">
+        <div class="wrapper">
+            {% include header.html %}
+        </div>
+    </div>
 
     <section class="hero">
         <div id="three-container" style="z-index: 0; position: absolute; width: 100%; height: 100%;">
@@ -78,6 +86,17 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
     </div>
 
     <main class="flex flex-col items-center" style="position: relative;">
+        <div id="migration-card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" >
+                <path fill-rule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8h-1.5Z" clip-rule="evenodd" />
+            </svg>
+            <div>
+                <h3>Migrating to a new version</h3>
+                <p>
+                    Before transitioning your existing projects to Godot {{page.version}}, carefully read through our <a href="https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_{{page.version}}.html">migration guide</a> to learn about breaking changes.
+                </p>
+            </div>
+        </div>
         <div id="donation-card">
             <div>
                 Godot is made possible by <span class="color">your donations</span>
@@ -326,6 +345,9 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
         </section>
 
     </main>
+
+    {% include footer.html %}
+    
     <script src="{{ site.baseurl }}/assets/js/releases/toc_nav.js" defer></script>
     <script src="{{ site.baseurl }}/assets/js/releases/video_player.js" defer></script>
     <script src="{{ site.baseurl }}/assets/js/releases/media_compare.js" defer></script>
