@@ -1,0 +1,52 @@
+{% assign media_path = site.baseurl | append: "/storage/releases/" | append: page.version | append: "/images" %}
+{% assign item = include.item %}
+{% assign media_ext = item.media | split: "." | last %}
+
+{% assign image_exts = "png, webp, jpg, jpeg" %}
+{% assign video_exts = "mp4, webm" %}
+
+
+<div class="media-block">
+    {%if image_exts contains media_ext %}
+        <img src="{{media_path}}/{{item.media}}" alt="" loading="lazy">
+    {% endif %}
+
+    {%if video_exts contains media_ext %}
+        <video
+        poster="{{media_path}}/{{item.poster}}"
+        src="{{media_path}}/{{item.media}}" muted loop playsinline preload="none"></video>
+        <div class="video-tag">
+            <svg class="icon" name="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z" />
+            </svg>
+
+            <svg class="icon hidden" name="pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path d="M4.5 2a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-1ZM10.5 2a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-1Z" />
+            </svg>
+
+            VIDEO
+        </div>
+    {% endif %}
+    
+    {%if item.compare %}
+        <div class="media-compare">
+            <img src="{{media_path}}/{{item.compare.after_image}}" alt="" loading="lazy">
+            <div class="after-text">{{item.compare.after_text}}</div>
+            <div class="before" style="clip-path: inset(0 50% 0 0);">
+                <img src="{{media_path}}/{{item.compare.before_image}}" alt="" loading="lazy">
+                <div class="before-text">{{item.compare.before_text}}</div>
+            </div>
+
+            <div style="left:50%;" class="slider">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.5 9L5.41421 15.0858C4.63317 15.8668 4.63317 17.1332 5.41421 17.9142L11.5 24" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M19.5 9L25.5858 15.0858C26.3668 15.8668 26.3668 17.1332 25.5858 17.9142L19.5 24" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    {% endif %}
+
+    {%if item.media_author %}
+    <a class="author" href={{include.item.media_author.link}}>@{{item.media_author.name}}</a>
+    {% endif %}
+</div>

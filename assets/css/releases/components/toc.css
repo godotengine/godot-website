@@ -14,7 +14,10 @@
       flex-direction: column;
       gap: 0.8em;
       border-radius: 2.0em;
-      background: linear-gradient(25deg,var(--main-bg-color) -20%, var(--card-bg-color) 100%);
+      background: linear-gradient(
+        25deg,
+        light-dark(var(--light-bg-color), var(--dark-bg-color)) -20%,
+        light-dark(var(--light-card-bg-color), var(--dark-card-bg-color)) 100%);
       padding: 1.0em 1.4em;
     }
     .icon{
@@ -23,12 +26,16 @@
       font-size: 1em;
       border: 0;
       border-radius: 2.0em;
-      background: linear-gradient(25deg,var(--main-bg-color) -20%, var(--card-bg-color) 100%);
+      background: linear-gradient(
+        25deg,
+        light-dark(var(--light-bg-color), var(--dark-bg-color)) -20%,
+        light-dark(var(--light-card-bg-color), var(--dark-card-bg-color)) 100%);
       padding: 0.8em;
       svg{
         display: block;
         width: 1.0em;
         height: 1.0em;
+        stroke: var(--body-text-color);
       }
     }
     input[type="checkbox"]{
@@ -45,7 +52,7 @@
   
 
   a{
-    color: var(--main-text-color);
+    color: var(--body-text-color);
     text-decoration: none;
     opacity: 60%;
     position: relative;

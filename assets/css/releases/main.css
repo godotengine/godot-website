@@ -6,11 +6,29 @@
 @import "./components/media_block.css";
 @import "./components/gdquest.css";
 @import "./components/donation_card.css";
+@import "./components/migration_card.css";
+
+/* TODO: Improve color names */
 
 :root {
+  color-scheme: light dark;
+
+  --dark-text-color: #FBFBFF;
+  --light-text-color: #09090a;
+
+  --dark-bg-color: #17191a;
+  --light-bg-color: #e8ebef;
+
+  --dark-card-bg-color: #25282B;
+  --light-card-bg-color: #fbfdff;
+
+
   --main-text-color: #FBFBFF;
   --main-bg-color: #17191a;
   --card-bg-color: #25282B;
+
+  --body-text-color: light-dark(var(--light-text-color), var(--dark-text-color));
+
   --accent-color: #1684D4;
   --accent-color-hover: #41A6F0;
   --blank-color: #282828;
@@ -19,6 +37,7 @@
   --color-godot-but-even-brighter: #5fbbff;
   --color-godot-but-darker: #7998af;
   --color-godot-but-desaturated: #a9d7f9;
+
   --font-family: 'SplineSans', 'Roboto', 'Arial', sans-serif;
   --xxs: 0.2em;
   --xs: 0.4em;
@@ -45,11 +64,21 @@ body {
   margin: 0;
   font-family: var(--font-family);
   min-height: 100%;
-  color: var(--main-text-color);
-  background-color: var(--main-bg-color);
+  color: var(--body-text-color);
+  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
   font-size: 0.8em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.1em;
+  color: var(--body-text-color);
+  &:hover {
+    text-underline-offset: 0.3em;
+  }
 }
 
 .btn{
@@ -68,7 +97,7 @@ body {
     background: linear-gradient(0deg, black 20%, #185FE7 80%);
   }
   &.red::after{
-    background: linear-gradient(0deg, black 20%, #ff428e 80%);
+    background: linear-gradient(0deg, light-dark(var(--light-bg-color), var(--dark-bg-color)) 20%, #ff428e 80%);
   }
   &::after{
     transition: transform 0.8s ease-out;
@@ -119,7 +148,7 @@ body {
 
 .preamble{
   margin-top: 4em;
-  margin-bottom: 6em;
+  margin-bottom: 4em;
   padding: 0 2em;
   display: flex;
   flex-direction: column;
@@ -139,25 +168,27 @@ body {
   max-width: 70ch;
   font-size: 1.0em;
   align-self: center;
-  color: var(--color-godot-but-desaturated);
+  color: light-dark(var(--accent-color), var(--color-godot-but-desaturated));
   font-size: 1.2rem;
   .text p {
     text-align: justify;
     hyphens: auto;
+    margin-bottom: 0.8em;
   }
   .text p:first-child:before{
-    font-size: 1.2em;
+    font-size: 1.8em;
     opacity: 60%;
     content: "“";
+    padding-right: 0.2em;
   }
   .text p:last-child::after{
-    font-size: 1.2em;
+    font-size: 1.8em;
     opacity: 60%;
     content: "”";
+    padding-left: 0.2em;
   }
   a{
-    color: var(--color-godot-but-desaturated);
-    text-decoration: none;
+    color: light-dark(var(--accent-color), var(--color-godot-but-desaturated));
   }
   .text{
     margin-bottom: 1em;
@@ -185,7 +216,7 @@ body {
       text-decoration: none;
       font-weight: 400;
       opacity: 80%;
-      color: var(--main-text-color);
+      color: var(--body-text-color);
       &:hover{
         opacity: 100%;
       }
@@ -219,10 +250,7 @@ body {
     }
     .by{
       margin-bottom: 1.4em;
-    }
-    a{
-      color: var(--main-text-color);
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 }
@@ -323,4 +351,40 @@ body {
   .section-body{
     max-width: min(100%, 1400px);
   }
+}
+
+#draft-warning{
+  color: var(--main-text-color);
+  position: sticky;
+  width: 100%;
+  background-color: #ff428e;
+  top: 0;
+  z-index: 100;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 1em;
+  text-align: center;
+}
+
+/* 
+ * Taken from 
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd#try_it 
+ * and tweaked a little bit.
+ */
+kbd > kbd {
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgb(0 0 0 / 0.2),
+    0 2px 0 0 rgb(255 255 255 / 0.7) inset;
+  color: #333333;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  font-size: 0.85em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
 }

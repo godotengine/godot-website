@@ -1,0 +1,39 @@
+introduction:
+  text: |
+    Like a fine wine: Godot 4 has only gotten better with age. The first few releases had a focus of stability, granting the engine a rock-solid foundation that could be safely and easily iterated upon. Gradually, this has shifted more towards polish and quality-of-life, peaking in [Godot 4.6](https://godotengine.org/releases/4.6/) giving developers the tools to put you and your workflow first.
+
+    This brings us to Godot 4.7: With 3 years under its sleeve, the 4.7 vintage offers colors of never before reached intensity. HDR Output radiates bold and brilliant new hues, allowing your projects to shine like never before. Elevate your work even further with the new Asset Store, bask in the ease of creation with standalone Android exporting and publishing, and helm a bevy of new features to eliminate any remaining friction between you and your vision.
+
+conclusion:
+  title: Team work makes the dream work
+  text: |
+    Thanks to all the contributors who had PRs merged into this release.
+    Special thanks goes out to all the engine teams that collaborated on this release, especially since commits to other related repositories do not show up in this graphic.
+
+end_message:
+  text: |
+    It's been over 3 years since 4.0 dropped, and we’re arguably as far removed from that now as 4.0 is from 3.x. It’s only gotten easier to publish a title with the engine, as evidenced by Steam currently listing over 700 new Godot games published in 2026 so far; we’re not even halfway through the year, and we’re already over halfway to 2025’s 1,200+ total. This is to say nothing of itch.io, which receives over 1&#x2060;,&#x2060;000 new Godot games every week.
+
+    Godot 4.6 gave users their most streamlined baseline release yet, whose focus on polish and usability immediately resonated with the community. This release aimed to double-down on that approach, making not only the engine itself more streamlined, but the tooling and resources surrounding it as well.
+
+    There’s still plenty to be done with the engine, as every user with a favorite feature that’s currently missing would know. However, we’re extremely impressed and inspired by the time and energy that the community has put into this global passion project.
+
+    Well over 300 contributors are responsible for this latest feature release, totalling over 1&#x2060;,&#x2060;600 pull requests. From the bottom of our hearts, we want to thank each and every one of you for your incredible work, as well as all users who’ve sponsored our Development Fund, reported bugs, opened proposals, or supported one another on our community platforms.
+  author:
+    name: Thaddeus Crews
+    role: Release Manager
+    link: https://github.com/Repiteo
+
+credits:
+  title: Release page credits
+  list:
+    - text: Texts and revisions
+      by: "[Ilena Pegan](https://github.com/ilenawho), [Hugo Locurcio](https://github.com/calinou), and [Adam Scott](https://github.com/adamscott)"
+    - text: Page revision
+      by: "[A Thousand Ships](https://github.com/athousandships), and [John Veness](https://github.com/JohnVeness)"
+    - text: Page design and integration
+      by: "[Thibaud Goiffon](https://gotibo.fr/)"
+    - text: Additional fixes and contributions
+      by: "[Fredia Huya-Kouadio](https://github.com/m4gr3d), [Repiteo](https://github.com/Repiteo), [Emilio Coppola](https://github.com/coppolaemilio)"
+    - text: Additional media content
+      by: Tagged content creators
