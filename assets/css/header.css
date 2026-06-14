@@ -1,28 +1,25 @@
 header {
   background: none;
 
-  /* Offset the height of the nav */
-  margin-bottom: -64px;
-
   /* Show on top of GodotCon banner (if any). */
-  position: relative;
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
   z-index: 2;
 
-  height: 64px;
   display: flex;
   align-items: center;
 
-  
+  /* Fixes some y offset */
+  font-size: 1rem;
+
   .container {
     background-color: var(--navbar-background-color);
     overflow: initial;
 		width: 100%;
     box-sizing: border-box;
-    padding: 5px;
-		padding-bottom: 4px;
-  	padding-top: 1px;
+    padding: 0.2em 0.4em;
 		border-radius: 16px;
-		margin-top: 9px;
   }
 
   #logo-link {
@@ -56,6 +53,7 @@ header {
 }
 @media (max-width: 1200px) {
   header {
+    top: 0;
     .container {
       border-radius: 0;
       margin-top: 0;
@@ -74,7 +72,6 @@ header {
 			}
 		}
 		&.mobile {
-			top: -2px;
 			position: relative;
 			@media (min-width: 1200px) {
 				display: none;
@@ -113,8 +110,9 @@ header {
 
 .mobile-links {
   display: grid;
-  grid-template-columns: 1fr 49px;
+  grid-template-columns: auto auto;
   align-items: center;
+  gap: 0.2em;
   @media (min-width: 1200px) {
     display: none;
   }
@@ -263,14 +261,11 @@ header {
   }
   #nav_head {
     width: 100%;
-    margin-top: 0.25rem;
   }
   #nav_toggle_btn {
     display: block;
     /* Make the navbar toggle button easier to click. */
-    padding: 1.25rem;
-    margin-top: -0.2rem;
-    margin-right: -1rem;
+    padding: 0.8em;
   }
   #nav_toggle_btn:hover {
     background-color: hsla(0, 0%, 50%, 0.15);
@@ -299,7 +294,6 @@ header {
     width: 100%;
   }
   #nav ul a {
-    width: 100%;
     display: block;
     /* Make links easier to click but still close to each other. */
     padding-top: 0.75rem;
