@@ -57,8 +57,7 @@
   .title, .subtitle, .body {
     code {
       color: var(--color-godot-but-a-little-brighter);
-      font-size: 120%;
-      margin: 0 0.1em;
+      font-size: 1.1em;
     }
   }
   .link-icon{

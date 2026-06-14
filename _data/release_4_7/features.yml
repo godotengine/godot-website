@@ -112,6 +112,7 @@ android_gabe:
       link: "https://github.com/dsnopek"
     - name: "Fredia Huya-Kouadio"
       link: "https://github.com/m4gr3d"
+  media: android_gabe.webp
   # media_author:
   #   name: "PassiveStar"
   #   link: "https://github.com/passivestar"
@@ -128,8 +129,8 @@ nearest_neighbor_scaling:
     - name: "Hugo Locurcio"
       link: "https://github.com/Calinou"
   media_author:
-    name: "Username"
-    link: "URL"
+    name: "Hugo Locurcio"
+    link: "https://github.com/Calinou"
   compare:
     before_image: nearest.webp
     after_image: bilinear.webp
@@ -147,8 +148,8 @@ copy_past_properties:
     - name: "Raphaël Daubelcour"
       link: "https://github.com/Raftatul"
   media_author:
-    name: "Username"
-    link: "URL"
+    name: "Raphaël Daubelcour"
+    link: "https://github.com/Raftatul"
   media: editor-copy-paste-category-properties.webm
 tween_await:
   title: "Tweens can now wait for signals"
@@ -161,9 +162,6 @@ tween_await:
   contributors:
     - name: "Tomasz Chabora"
       link: "https://github.com/KoBeWi"
-  media_author:
-    name: "Tomasz Chabora"
-    link: "https://github.com/KoBeWi"
   media: tween_await.webm
 virtual_joystick:
   title: "Built-in virtual joystick"
@@ -203,10 +201,8 @@ tree_drag_and_drop_update:
   contributors:
     - name: "vaner"
       link: "https://github.com/vaner-org"
-  media_author:
-    name: "Username"
-    link: "URL"
-  media: tree-improve-drag-and-drop.mp4
+  media: tree_drag_and_drop_update.webm
+  poster: tree_drag_and_drop_update_poster.webp
 export_template_dialog_update:
   title: "Only download the templates you need"
   subtitle: "You must download additional platforms."
@@ -236,8 +232,8 @@ scene_painter_tool:
     - name: "Dexter"
       link: "https://github.com/DexterFstone"
   media_author:
-    name: "Username"
-    link: "URL"
+    name: "Dexter"
+    link: "https://github.com/DexterFstone"
   media: scene_painter_tool.mp4
 documentation_layout_update:
   title: "Improved appearance of the built-in help"
@@ -252,8 +248,8 @@ documentation_layout_update:
     name: "Danil Alexeev"
     link: "https://github.com/dalexeev"
   compare:
-    before_image: editor-help-appearance-before.webp
-    after_image: editor-help-appearance-after.webp
+    before_image: documentation_layout_update_before.webp
+    after_image: documentation_layout_update_after.webp
     before_text: Before
     after_text: After
 remote_scene_inspector_groups_folding:
@@ -268,8 +264,8 @@ remote_scene_inspector_groups_folding:
     - name: "Jayden Sipe"
       link: "https://github.com/jaydensipe"
   media_author:
-    name: "Username"
-    link: "URL"
+    name: "Jayden Sipe"
+    link: "https://github.com/jaydensipe"
   media: remote_scene_inspector_groups_folding.webm
 gdextensions_view_inside_settings:
   title: "Project GDExtensions are now displayed in the project settings"
@@ -282,9 +278,6 @@ gdextensions_view_inside_settings:
   contributors:
     - name: "Aaron Franke"
       link: "https://github.com/aaronfranke"
-  media_author:
-    name: "Aaron Franke"
-    link: "https://github.com/aaronfranke"
   media: gdextensions_view_inside_settings.webp
 ruler_3d_components:
   title: "New vector measurement tool for the 3D editor ruler"
@@ -342,9 +335,6 @@ display_enum_remote_tree:
   contributors:
     - name: "Danil Alexeev"
       link: "https://github.com/dalexeev"
-  media_author:
-    name: "Username"
-    link: "URL"
   media: display_enum_remote_tree.webp
 picture_in_picture:
   title: "Add support for picture-in-picture"
@@ -393,11 +383,7 @@ popup_search:
   contributors:
     - name: "Alexander Streng"
       link: "https://github.com/warriormaster12"
-  media_author:
-    name: "Alexander Streng"
-    link: "https://github.com/warriormaster12"
-  media: popup_search.webm
-  poster: popup_search_poster.webp
+  media: popup_search.webp
 text_label_image_scale:
   title: "Font-size aware `RichTextLabel` images"
   subtitle: "With big fonts requires big images."
@@ -506,9 +492,6 @@ particles3d_scale_and_rotation:
   contributors:
     - name: "QbieShay"
       link: "https://github.com/QbieShay"
-  media_author:
-    name: "QbieShay"
-    link: "https://github.com/QbieShay"
   media: particles3d_scale_and_rotation.webm
   poster: particles3d_scale_and_rotation_poster.webp
 vertex_snap:
@@ -793,6 +776,11 @@ script_editor_orientation_change:
   contributors:
     - name: "Anish Kumar"
       link: "https://github.com/syntaxerror247"
+  media_author:
+    - name: "Anish Kumar"
+      link: "https://github.com/syntaxerror247"
+  media: script_editor_orientation_change.webm
+  poster: script_editor_orientation_change_poster.webp
 perfetto_tracing:
   title: "Making tracing easier with Perfetto"
   subtitle: "I want to know everything there is to know about Spider-Android!!"
@@ -808,6 +796,7 @@ perfetto_tracing:
   contributors:
     - name: "Fredia Huya-Kouadio"
       link: "https://github.com/m4gr3d"
+  media: perfetto_tracing.webp
 vulkan_subsampled_images:
   title: "Vulkan subsampled images"
   subtitle: "Live long and subsample."

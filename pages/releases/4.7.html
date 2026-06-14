@@ -115,20 +115,18 @@ draft: true
 
             <!-- Highlights Cards -->
             {% include_relative _components/card.html name="rect_area_light" size="large" %}
-            
-            <div class="sub-grid">
-                {% include_relative _components/card.html name="hdr_support" %}
-            </div>
 
             <div class="sub-grid">
-                {% include_relative _components/card.html name="drawable_textures" %}
                 {% include_relative _components/card.html name="asset_store_update" order="reverse"%}
+                {% include_relative _components/card.html name="drawable_textures" %}
             </div>
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="shader_previews" order="reverse" %}
                 {% include_relative _components/card.html name="android_gabe" %}
             </div>
+
+            {% include_relative _components/card.html name="hdr_support" size="large" %}
 
         </section>
 
@@ -144,9 +142,9 @@ draft: true
 
 
             <div class="sub-grid">
-                {% include_relative _components/card.html name="documentation_layout_update" order="reverse" %}
+                {% include_relative _components/card.html name="property_list_helper_documentation" order="reverse" %}
     
-                {% include_relative _components/card.html name="property_list_helper_documentation" %}
+                {% include_relative _components/card.html name="documentation_layout_update" %}
             </div>
 
             <h4 class="sub-section">2D</h4>
@@ -167,11 +165,11 @@ draft: true
             {% include_relative _components/card.html name="path3d_snap" size="medium" %}
             
             <div class="sub-grid">
-                {% include_relative _components/card.html name="ruler_3d_components" order="reverse"%}
+                {% include_relative _components/card.html name="ruler_3d_components" order="reverse" %}
                 {% include_relative _components/card.html name="csg_smoothing" %}
             </div>
 
-            {% include_relative _components/card.html name="vertex_snap" size="medium" %}
+            {% include_relative _components/card.html name="vertex_snap" size="medium" order="reverse" %}
 
 
             <h4 class="sub-section">GUI</h4>
@@ -201,7 +199,7 @@ draft: true
 
             <!-- Editor Cards -->
 
-            {% include_relative _components/card.html name="follow_selection" size="medium" %}
+            {% include_relative _components/card.html name="follow_selection" size="large" %}
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="nearest_neighbor_scaling" order="reverse" %}
@@ -225,9 +223,9 @@ draft: true
             </div>
 
             <div class="sub-grid">
-                {% include_relative _components/card.html name="display_enum_remote_tree" %}
+                {% include_relative _components/card.html name="display_enum_remote_tree" order="reverse"%}
                 
-                {% include_relative _components/card.html name="navigate_to_script" order="reverse" %}
+                {% include_relative _components/card.html name="navigate_to_script" %}
             </div>
             <div class="sub-grid">
                 {% include_relative _components/card.html name="view_3d_controller" %}
@@ -248,9 +246,9 @@ draft: true
             <!-- Animation Cards -->
 
             <div class="sub-grid">
-                {% include_relative _components/card.html name="tween_await" order="reverse"%}
+                {% include_relative _components/card.html name="collapse_animation_groups" order="reverse"%}
     
-                {% include_relative _components/card.html name="collapse_animation_groups" %}
+                {% include_relative _components/card.html name="tween_await" %}
             </div>
 
             <h4 class="sub-section">Export</h4>
@@ -279,19 +277,19 @@ draft: true
 
             <!-- Rendering Cards -->
             
-            {% include_relative _components/card.html name="particles3d_scale_and_rotation" size="medium" order="reverse"%}
+            {% include_relative _components/card.html name="pass_unique_buffer" size="large" %}
             
             <div class="sub-grid">
                 {% include_relative _components/card.html name="clearcoat_update" order="reverse" %}
-    
-                {% include_relative _components/card.html name="pass_unique_buffer" %}
+                
+                {% include_relative _components/card.html name="particles3d_scale_and_rotation" %}
             </div>
 
             <h4 class="sub-section">XR</h4>
 
             <!-- XR Cards -->
 
-            {% include_relative _components/card.html name="action_map_improvements" size="medium" %}
+            {% include_relative _components/card.html name="action_map_improvements" size="large" %}
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="vulkan_subsampled_images" %}
@@ -310,21 +308,20 @@ draft: true
 
             <!-- Android Cards -->
 
-            {% include_relative _components/card.html name="picture_in_picture" size="medium"%}
+            {% include_relative _components/card.html name="picture_in_picture" size="large"%}
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="android_window_resize" order="reverse"%}
+
+                {% include_relative _components/card.html name="script_editor_orientation_change" %}
             </div>
 
             {% include_relative _components/card.html name="custom_splash_screen" size="medium"%}
 
             <div class="sub-grid">
-                {% include_relative _components/card.html name="gradle_plugins_support" order="reverse"%}
+                {% include_relative _components/card.html name="perfetto_tracing" order="reverse"%}
                 {% include_relative _components/card.html name="gdscript_java_interfaces" %}
-                {% include_relative _components/card.html name="perfetto_tracing" %}
             </div>
-
-            {% include_relative _components/card.html name="script_editor_orientation_change" size="medium" %}
 
             <h4 class="sub-section">Linux</h4>
 
