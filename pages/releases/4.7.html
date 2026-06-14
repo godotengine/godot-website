@@ -408,14 +408,19 @@ draft: true
     <script type="module">
         import { ReleaseBanner } from "{{ site.baseurl }}/assets/js/releases/banner_update.js";
         import { MakeLightrayMat } from "{{ site.baseurl }}/assets/js/releases/lightray_mat.js";
+        import { MakeGradientMat } from "{{ site.baseurl }}/assets/js/releases/gradient_quad_mat.js";
         import { mapRange, clamp } from "{{ site.baseurl }}/assets/js/releases/math_util.js";
         import * as THREE from "{{ site.baseurl }}/assets/js/modules/three.module.min.js";
 
         let banner = new ReleaseBanner("#three-container", "#three-canvas");
         let blueLightRay = MakeLightrayMat("#4bf6ff");
+        let quadGradientMat = MakeGradientMat("#49a7ff");
         let cameraAnchor = undefined;
         let bgMesh = undefined;
         let sceneRoot = undefined;
+        let gradient1 = undefined;
+        let gradient2 = undefined;
+
         let scrollPercent = 0.0;
         let mouseLerped = banner.mouse.clone();
 
@@ -452,13 +457,13 @@ draft: true
 
         function setBgColor() {
             if (!bgMesh) return;
+            bgMesh.material.color = new THREE.Color("hsl(200, 2.0%, 2.0%)");
             /*
             bgMesh.material.color =
                 (banner.useDarkTheme ? 
-                new THREE.Color("hsl(200, 10.0%, 10.0%)") :
-                new THREE.Color("hsl(200, 100.0%, 95.0%)"));
+                new THREE.Color("hsl(200, 2.0%, 2.0%)") :
+                new THREE.Color("hsl(200, 100.0%, 98.0%)"));
             */
-            bgMesh.material.color = new THREE.Color("hsl(200, 10.0%, 10.0%)");
         }
 
         function updateComposition() {
@@ -481,6 +486,9 @@ draft: true
                 sceneRoot.position.y = mapRange(ratioX, 0.0, 1.0, -3.0, -2.);
                 sceneRoot.rotation.y = mapRange(ratioX, 0.0, 1.0, -Math.PI * 0.1, -Math.PI * 0.18);
             }
+
+            if (gradient1) gradient1.position.x = mapRange(ratioX, 0.0, 1.0, -5.0, -15.0);
+            if (gradient2) gradient2.position.x = mapRange(ratioX, 0.0, 1.0, 10.0, 15.0);
 
         }
 
@@ -507,6 +515,11 @@ draft: true
                     if (child.name.toLowerCase().includes("receiveshadow")) child.receiveShadow = true;
                     if (child.name.toLowerCase().includes("castshadow")) child.castShadow = true;
                     if (child.name == "WorldSphereMesh") bgMesh = child;
+                    if (child.name.toLowerCase().includes("backgroundgradient")) child.material = quadGradientMat;
+
+                    if (child.name == "BackgroundGradientMesh1") gradient1 = child;
+                    if (child.name == "BackgroundGradientMesh2") gradient2 = child;
+
                 }
                 if (child.name == "SceneHolder") sceneRoot = child;
                 if (child.name == "CameraAnchor") cameraAnchor = child;
