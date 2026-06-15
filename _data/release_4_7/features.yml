@@ -8,7 +8,7 @@ hdr_support:
 
     In Godot 4.7, HDR output has been made possible for Windows, macOS, iOS, visionOS, and Linux (Wayland). Output support for HDR allows for more fine-tuned customization of exposure and glow. You also have access to ranges and colors that were simply not possible before, with higher detail especially in bright areas. 2D and 3D content can also be mixed in the same scene while keeping a consistent brightness between the two!
 
-    Read the detailed writeup on [how HDR output was implemented in Godot](https://godotengine.org/article/hdr-output-arrives-in-godot-4-7/) to know more.
+    Read the detailed write-up on [how HDR output was implemented in Godot](https://godotengine.org/article/hdr-output-arrives-in-godot-4-7/) to know more.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+94496+102987+106814"
   contributors:
     - name: "Allen Pestaluky"
@@ -27,12 +27,12 @@ hdr_support:
     before_text: SDR
     after_text: HDR
 drawable_textures:
-  title: "Drawing on a texture never been this much easy"
+  title: "Drawing on a texture has never been this easy"
   subtitle: "There are no mistakes here, only happy accidents."
   text: |
     After a long wait, we’re excited to share that it’s possible to easily draw on a texture! 
 
-    Previously, there were some hacky solutions through using the Viewpoint, but it was limited and costly to handle more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, RenderingDevice allowed for an even more complex solution. 
+    Previously, there were some hacky solutions through using a Viewport, but it was limited and costly to handle more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, RenderingDevice allowed for an even more complex solution.
 
     However, now we have something much more accessible, a solution in the form of: ✨ [`DrawableTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_drawabletexture2d.html) ✨. It’s a simple API layer that abstracts away all the technical noise and gives users of all skill levels an approachable way to do the thing: to draw on textures!
   read_more: "https://github.com/godotengine/godot/pull/105701"
@@ -63,11 +63,11 @@ shader_previews:
   title: "Inline previews of text-based shader operations"
   subtitle: "I don’t even see the code. All I see is fresnel, albedo, occlusion."
   text: |
-    We’ll keep going with this field imagery. Imagine you’re in a field. In the far distance, you see a lone developer, hunched over their laptop, you intuitively yell through the tall grass, “`VEC2 V4 = UV;`”!! The developer victoriously pumps their hand in the air, but in your heart you know you’ll need to see the results yourself. You tread through the field, and at last, you arrive, gasping for air, you look over the lone developer’s shoulder to witness your creation. 
+    We’ll keep going with this field imagery. Imagine you’re in a field. In the far distance, you see a lone developer, hunched over their laptop, you intuitively yell through the tall grass, “`VEC2 V4 = UV;`”!! The developer victoriously pumps their hand in the air, but in your heart you know you’ll need to see the results for yourself. You tread through the field, and at last, you arrive, gasping for air, you look over the lone developer’s shoulder to witness your creation.
 
     With inline text shader previews, the treacherous journey is over. 
 
-    Right as you type, `vec2 v4 = UV;` you can now preview Godot text shaders within the editor in real-time. Back in the day, you would have needed to compile a shader and view it separately in the workspace. But thanks to the long-awaited quality-of-life addition of the text shader editor, you will actually be able to preview the shader and what it will do, in the moment, as you’re working on the shader from within the editor!
+    Right as you type, `vec2 v4 = UV;` you can now preview Godot text shaders within the editor in real-time. Back in the day, you would have needed to compile a shader and view it separately in the workspace. But thanks to the long-awaited quality-of-life addition to the text shader editor, you will actually be able to preview the shader and what it will do, in the moment, as you’re working on the shader from within the editor!
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+117726+118865"
   contributors:
     - name: "Yuri Rubinsky"
@@ -97,7 +97,7 @@ rect_area_light:
   media: "arealightfhd_small.webm"
 android_gabe:
   title: "Creating games entirely on Android"
-  subtitle: "The power is in the palm of your hands."
+  subtitle: "The power is in the palm of your hand."
   text: |
     Developing on Android and XR has been possible for a while, and with Godot 4.7, developers now get the ability to export and publish their games as well thanks to the Godot Android Build Environment (GABE).
 
@@ -157,7 +157,7 @@ tween_await:
   text: |
     Tweens have always been difficult to work with at scale, especially when dealing with time based events or events that rely on external factors. With the new [`Tween.tween_await()`](https://docs.godotengine.org/en/4.7/classes/class_tween.html#class-tween-method-tween-await) method, it’s now a thing of the past.
 
-    It is now possible to pause a tween until a specific signal is triggered. This can be especially helpful when designing dialogue and cutscenes.
+    It is now possible to pause a tween until a specific signal is emitted. This can be especially helpful when designing dialogue and cutscenes.
   read_more: "https://github.com/godotengine/godot/pull/79712"
   contributors:
     - name: "Tomasz Chabora"
@@ -196,7 +196,7 @@ tree_drag_and_drop_update:
   text: |
     It’s now way more intuitive (and thus easier) to reorder items in [`Tree`](https://docs.godotengine.org/en/4.7/classes/class_tree.html) nodes, thanks to the new drop position indicator.
 
-    You’ll certainly appreciate this change when reordering your scene nodes in the editor. (Remember, Godot eats its own dog food!)
+    You’ll certainly appreciate this change when reordering your scene nodes in the editor.
   read_more: "https://github.com/godotengine/godot/pull/112993"
   contributors:
     - name: "vaner"
@@ -273,7 +273,7 @@ gdextensions_view_inside_settings:
   text: |
     Since their introduction and by their nature, GDExtensions are automatically loaded by the engine on initialization. There was unfortunately no way to know exactly which project extensions were actually present in a project, except by manually locating the project’s `.gdextension` files.
 
-    With this new feature, the project settings window has a section about the detected GDExtensions.
+    With this new feature, the project settings window has a dedicated section for GDExtensions.
   read_more: "https://github.com/godotengine/godot/pull/118063"
   contributors:
     - name: "Aaron Franke"
@@ -360,7 +360,7 @@ control_transform_offset:
   text: |
     One of the most long-awaited features in Godot’s GUI system is to be able to translate, rotate, or scale a Control node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide into view or fade away with a scale change.
 
-    However, Godot’s various Container nodes apply the position, rotation, and scale to their children, which means any changes made to the children’s transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). The new transform offset properties aim to address this limitation in a self-contained manner, similar to the `transform` property in CSS.
+    However, Godot’s various Container nodes apply their position, rotation, and scale to their children, which means any changes made to the children’s transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). The new transform offset properties aim to address this limitation in a self-contained manner, similar to the `transform` property in CSS.
 
     You can choose whether the transform offset affects mouse input. By default, transform offset is purely visual, which means there is no risk of buttons losing their hover status after being transformed.
   read_more: "https://github.com/godotengine/godot/pull/87081"
@@ -439,7 +439,7 @@ clearcoat_update:
   title: "Clearcoat improvements and fixes"
   subtitle: "~~Rip and tear!~~ Rise and shine!"
   text: |
-    The previous implementation of clearcoat in [`BaseMaterial3D`](https://docs.godotengine.org/en/latest/classes/class_basematerial3d.html) had several issues, such as not implementing energy conservation. Sky reflections and reflection probes were also not taken into account.
+    The previous implementation of clearcoat in [`BaseMaterial3D`](https://docs.godotengine.org/en/4.7/classes/class_basematerial3d.html) had several issues, such as not implementing energy conservation. Sky reflections and reflection probes were also not taken into account.
 
     The improvements and fixes made to clearcoat rendering bring it closer to [the reference Disney PBR model](https://disneyanimation.com/publications/physically-based-shading-at-disney/). This makes clearcoat a better fit for materials like car paint.
   read_more: "https://github.com/godotengine/godot/pull/111464"
@@ -471,7 +471,7 @@ wayland_touch_support:
   title: "Initial touch support for Wayland"
   subtitle: "U Can~~’t~~ Touch This"
   text: |
-    While touch support was available on Linux/*BSD using [X11](https://en.wikipedia.org/wiki/X_Window_System), it wasn’t the case when using the newer [Wayland protocol](https://en.wikipedia.org/wiki/Wayland_(protocol)) introduced in [4.3](https://godotengine.org/releases/4.3/#display-wayland-support). Well, until now.
+    While touch support was available on Linux/*BSD using [X11](https://en.wikipedia.org/wiki/X_Window_System), that wasn’t the case when using the newer [Wayland protocol](https://en.wikipedia.org/wiki/Wayland_(protocol)) introduced in [4.3](https://godotengine.org/releases/4.3/#display-wayland-support). Well, until now.
 
     While more complex touch events still need to be implemented (pan and scale gestures, long press to right click on Android), you are now able to drag windows and push buttons with your fingers.
   read_more: "https://github.com/godotengine/godot/pull/113886"
@@ -526,7 +526,7 @@ property_list_helper_documentation:
   title: "Dynamically generated properties, such as menu items, are now documented"
   subtitle: "Where no one has gone before."
   text: |
-    Dynamic properties generated by [`PropertyListHelper`](), like menu items, are now automatically documented. Before, property arrays wouldn’t show descriptions when hovered over in the inspector. In Godot 4.7, documentation for properties are automatically generated and viewable when hovered.
+    Dynamic properties generated by [`PropertyListHelper`](), like menu items, are now automatically documented. Before, property arrays wouldn’t show descriptions when hovered over in the inspector. In Godot 4.7, documentation for properties is automatically generated and viewable when hovered.
   read_more: "https://github.com/godotengine/godot/pull/115253"
   contributors:
     - name: "bruvzg"
@@ -555,7 +555,7 @@ input_events_device_ids:
   title: "Identify distinct keyboards and mice"
   subtitle: "BIG GODOT IS WATCHING YOU… keyboards and mice."
   text: |
-    Like gamepad inputs, keyboard and mouse inputs now use a device identifier. This can be used to distinguish keyboard/mouse inputs from other inputs by checking for the [`InputEvent`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html)’s `device` property. Keyboard inputs always have their device ID set to [`InputEvent.DEVICE_ID_KEYBOARD`](https://docs.godotengine.org/en/latest/classes/class_inputevent.html#class-inputevent-constant-device-id-keyboard), while mouse inputs have it set to [`InputEvent.DEVICE_ID_MOUSE`](https://docs.godotengine.org/en/latest/classes/class_inputevent.html#class-inputevent-constant-device-id-mouse).
+    Like gamepad inputs, keyboard and mouse inputs now use a device identifier. This can be used to distinguish keyboard/mouse inputs from other inputs by checking the [`InputEvent`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html)’s `device` property. Keyboard inputs always have their device ID set to [`InputEvent.DEVICE_ID_KEYBOARD`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html#class-inputevent-constant-device-id-keyboard), while mouse inputs have it set to [`InputEvent.DEVICE_ID_MOUSE`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html#class-inputevent-constant-device-id-mouse).
 
     While this change does not add support for differentiating between multiple keyboards/mice connected to the same system, it lays a foundation that makes this possible to implement in the future.
   read_more: "https://github.com/godotengine/godot/pull/116274"
@@ -567,7 +567,7 @@ create_node_type_filter:
   title: "Find quickly the node or resource to create with the new dialog filters"
   subtitle: "Cream of the crop."
   text: |
-    When opening the create dialog for a node or a resource in 4.7, you’ll be able to filter the elements shown in the tree.
+    When opening the “Create” dialog for a node or a resource in 4.7, you’ll be able to filter the elements shown in the tree.
 
     Want to instantiate something from your code? No problem, make sure “Show Custom” is the only checkbox selected in the new option menu, just underneath the favorite button.
   read_more: "https://github.com/godotengine/godot/pull/111518"
@@ -607,7 +607,7 @@ accessibility_region:
   text: |
     A new feature has been introduced in order to make the engine more accessible to both editor and end users.
 
-    The focused element of a user interface can frequently move in arbitrary ways. While we introduced screen reader support in 4.5, it lacked the ability to give context in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it named.
+    The focused element of a user interface can frequently move in arbitrary ways. While we introduced screen reader support in 4.5, it lacked the ability to provide context information in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it named.
 
     By introducing landmark navigation, the screen reader can give some context information once you enter the perimeter of a landmark, such as telling the screen reader user that the focus is currently in the inspector, on the name field.
   read_more: "https://github.com/godotengine/godot/pull/114449"
@@ -662,9 +662,9 @@ navigate_to_script:
   poster: navigate_to_script_poster.webp
 conic_gradient:
   title: "`GradientTexture2D` now able to generate conic gradients"
-  subtitle: "POV: You just drew the Wheel of Fortune card"
+  subtitle: "POV: You just drew the Wheel of Fortune card."
   text: |
-    [`FILL_CONIC`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html#class-gradienttexture2d-constant-fill-conic) was newly added to [`GradientTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html), enabling the use of CSS-style effects. This is particularly useful in custom 2D shaders to simulate surfaces with realistic 3D-like shading.
+    [`FILL_CONIC`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html#class-gradienttexture2d-constant-fill-conic) was newly added to [`GradientTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html), enabling the use of CSS-style effects. This is particularly useful in custom 2D shaders to simulate surfaces with realistic, 3D-like shading.
   read_more: "https://github.com/godotengine/godot/pull/115394"
   contributors:
     - name: "Koliur Rahman"
@@ -702,7 +702,7 @@ view_3d_controller:
   title: "Unified editor 3D view manipulation"
   subtitle: "We are the `View3DController`. Resistance is futile."
   text: |
-    The 3D camera controllers for the editor and [game embedding](https://docs.godotengine.org/en/4.7/tutorials/editor/game_embedding.html) are now unified.
+    The 3D camera controllers for the editor and [embedded game](https://docs.godotengine.org/en/4.7/tutorials/editor/game_embedding.html) are now unified.
 
     This adds support for several features in the 3D camera override when using game embedding:
 
@@ -728,7 +728,7 @@ csg_smoothing:
   title: "Automatic smoothing option for CSG nodes"
   subtitle: "You’ve been hit by… a smooth Cs’G node"
   text: |
-    When creating geometry with CSG nodes, it inherits the smooth/sharp faces from the original mesh data. This is not always suitable, as it can lead to curves being made of sharp faces depending on how they were constructed using CSG nodes.
+    When creating geometry with CSG nodes, they inherit the smooth/sharp faces from the original mesh data. This is not always suitable, as it can lead to curves being made of sharp faces depending on how they were constructed using CSG nodes.
 
     Enabling the new **Autosmooth** property on a root CSG node will automatically assign smooth or sharp faces according to the **Smoothing Angle** property (which defaults to 50 degrees). Higher values will smooth faces more aggressively.
   read_more: "https://github.com/godotengine/godot/pull/116749"
@@ -743,7 +743,7 @@ gdscript_java_interfaces:
   title: "Allow implementing Java interfaces from GDScript"
   subtitle: "😂😂😂😀😶😯🤯"
   text: |
-    The Android team continues their work to facilitate integration and access of Android APIs in GDScript through [JavaClassWrapper and the AndroidRuntime plugin](https://docs.godotengine.org/en/latest/tutorials/platform/android/javaclasswrapper_and_androidruntimeplugin.html).
+    The Android team continues their work to facilitate integration and access of Android APIs in GDScript through [JavaClassWrapper and the AndroidRuntime plugin](https://docs.godotengine.org/en/4.7/tutorials/platform/android/javaclasswrapper_and_androidruntimeplugin.html).
 
     In Godot 4.7, these capabilities have been expanded by adding support for implementing and overriding Java interfaces in GDScript.
   read_more: "https://github.com/godotengine/godot/pull/115498"
@@ -764,7 +764,7 @@ custom_splash_screen:
       link: "https://github.com/syntaxerror247"
   media: custom_splash_screen.webp
 script_editor_orientation_change:
-  title: "Enable orientation change in Script Editor"
+  title: "Enable orientation changes in the Script Editor"
   subtitle: "Code layered down in your bed or in the bus."
   text: |
     One of the main usability issues of the Android Editor is script editing. While many improvements in this area are currently in progress, we’ve addressed one big issue: the fact that the on-screen keyboard takes up a large portion of the available screen space on mobile, making it difficult to work with code.
@@ -803,7 +803,7 @@ vulkan_subsampled_images:
   text: |
     This feature dramatically improves performance of foveated rendering in the Vulkan Mobile render.
 
-    This works by storing rendered tiles at their reduced resolution with interpolation being applied when sampling the resulting subimage, greatly decreasing memory bandwidth. Without subsampled images, foveated rendering will upscales these tiles to the full resolution when writing to texture memory.
+    This works by storing rendered tiles at their reduced resolution with interpolation being applied when sampling the resulting subimage, greatly decreasing memory bandwidth. Without subsampled images, foveated rendering will upscale these tiles to the full resolution when writing to texture memory.
 
     With this change the Vulkan mobile renderer matches or even outperforms our compatibility renderer in a number of benchmarks. As a result we now recommend new XR projects use the mobile renderer.
   read_more: "https://github.com/godotengine/godot/pull/116220"
@@ -834,7 +834,7 @@ composition_layer_improvements:
 
     Noteworthy improvements here are:
 
-      - Place composition layers under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node so they are locked in the players view, ideal for head up displays.
+      - Place composition layers under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node so they are locked in the player’s view, ideal for heads-up displays.
       - The ability to place composition layer objects anywhere within your scene so they can be paired with world geometry.
       - Allowing plugins to affect the main projection layer.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+113096+114324+116207"
@@ -849,9 +849,9 @@ composition_layer_improvements:
   title: "Rotate 3D nodes intuitively with trackball-style rotation"
   subtitle: "Look at that. Not bad at all. A big trackball indeed, itty-bitty Prince. ✨&#x2060;🌌&#x2060;🟪&#x2060;🤴&#x2060;🟪&#x2060;🌌&#x2060;✨"
   text: |
-    We've added a new way to rotate 3D nodes.
+    We’ve added a new way to rotate 3D nodes.
 
-    First of all, be sure to activate **Use Trackball** (the new planet looking icon, or just press <kbd><kbd>U</kbd></kbd>) in the 3D editor toolbar. When the transform or rotation gizmo is active, you'll see that a translucent sphere will appear when hovering your mouse cursor inside the gizmo. If you click on that sphere and drag, you'll rotate the model as if you were using a genuine trackball. 
+    First of all, be sure to activate **Use Trackball** (the new planet looking icon, or just press <kbd><kbd>U</kbd></kbd>) in the 3D editor toolbar. When the transform or rotation gizmo is active, you’ll see that a translucent sphere will appear when hovering your mouse cursor inside the gizmo. If you click on that sphere and drag, you’ll rotate the model as if you were using a genuine trackball.
 
     The 3D transform gizmo now more closely behaves like the one used in Blender.
   read_more: "https://github.com/godotengine/godot/pull/109976"
