@@ -189,6 +189,8 @@ a {
   gap: var(--s);
   p{
     max-width: 70ch;
+    margin-bottom: 0.8em;
+    line-height: 160%;
   }
 }
 
@@ -204,6 +206,7 @@ a {
     text-align: justify;
     hyphens: auto;
     margin-bottom: 0.8em;
+    line-height: 160%;
   }
   .text p:first-child:before{
     font-size: 1.8em;

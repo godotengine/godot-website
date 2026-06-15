@@ -9,6 +9,9 @@ hdr_support:
     In Godot 4.7, HDR output has been made possible for Windows, macOS, iOS, visionOS, and Linux (Wayland). Output support for HDR allows for more fine-tuned customization of exposure and glow. You also have access to ranges and colors that were simply not possible before, with higher detail especially in bright areas. 2D and 3D content can also be mixed in the same scene while keeping a consistent brightness between the two!
 
     Read the detailed write-up on [how HDR output was implemented in Godot](https://godotengine.org/article/hdr-output-arrives-in-godot-4-7/) to know more.
+
+    <span class="note">Please note that, depending on the browser you are using, the HDR preview may appear differently or may not be supported (for example, Firefox does not support HDR images).</span>
+
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+94496+102987+106814"
   contributors:
     - name: "Allen Pestaluky"
@@ -92,7 +95,7 @@ rect_area_light:
     - name: "Emil Dobetsberger"
       link: "https://github.com/CookieBadger"
   media_author:
-    name: "PassiveStar"
+    name: "passivestar"
     link: "https://github.com/passivestar"
   media: "arealightfhd_small.webm"
 android_gabe:
@@ -114,7 +117,7 @@ android_gabe:
       link: "https://github.com/m4gr3d"
   media: android_gabe.webp
   # media_author:
-  #   name: "PassiveStar"
+  #   name: "passivestar"
   #   link: "https://github.com/passivestar"
   # media: "arealightfhd_small.webm"
 nearest_neighbor_scaling:
@@ -805,7 +808,7 @@ vulkan_subsampled_images:
 
     This works by storing rendered tiles at their reduced resolution with interpolation being applied when sampling the resulting subimage, greatly decreasing memory bandwidth. Without subsampled images, foveated rendering will upscale these tiles to the full resolution when writing to texture memory.
 
-    With this change the Vulkan mobile renderer matches or even outperforms our compatibility renderer in a number of benchmarks. As a result we now recommend new XR projects use the mobile renderer.
+    With this change the Vulkan mobile renderer matches or even outperforms our compatibility renderer in a number of benchmarks. As a result, we now recommend new XR projects use the Mobile renderer.
   read_more: "https://github.com/godotengine/godot/pull/116220"
   contributors:
     - name: "David Snopek"

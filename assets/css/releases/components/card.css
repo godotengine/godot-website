@@ -16,7 +16,7 @@
     font-size: 1.7em;
     margin-bottom: 0.3em;
     font-weight: 600;
-    line-height: 104%;
+    line-height: 1.4em;
   }
   .subtitle{
     font-size: 1.4em;
@@ -26,7 +26,7 @@
   }
   .body{
     font-size: 1.2em;
-    line-height: 1.2;
+    line-height: 160%;
     margin-bottom: 2.2em;
     opacity: 95%;
     p{
