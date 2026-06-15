@@ -847,7 +847,7 @@ composition_layer_improvements:
       link: "https://github.com/eritschlSC"
 3d_transform_gizmo_trackball:
   title: "Rotate 3D nodes intuitively with trackball-style rotation"
-  subtitle: "Look at that. Not bad at all. A big trackball indeed. ✨&#x2060;🌌&#x2060;🟪&#x2060;🤴&#x2060;🟪&#x2060;🌌&#x2060;✨"
+  subtitle: "Look at that. Not bad at all. A big trackball indeed, itty-bitty Prince. ✨&#x2060;🌌&#x2060;🟪&#x2060;🤴&#x2060;🟪&#x2060;🌌&#x2060;✨"
   text: |
     We've added a new way to rotate 3D nodes.
 
