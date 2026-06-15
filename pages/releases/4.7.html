@@ -134,16 +134,18 @@ draft: true
 
         <section class="section-body">
 
-            <h4 class="sub-section">Documentation</h4>
+            <h4 class="sub-section">3D</h4>
 
-            <!-- Documentation Cards -->
+            <!-- 3D Cards -->
 
-
+            {% include_relative _components/card.html name="path3d_snap" size="medium" %}
+            
             <div class="sub-grid">
-                {% include_relative _components/card.html name="property_list_helper_documentation" order="reverse" %}
-    
-                {% include_relative _components/card.html name="documentation_layout_update" %}
+                {% include_relative _components/card.html name="ruler_3d_components" order="reverse" %}
+                {% include_relative _components/card.html name="csg_smoothing" %}
             </div>
+
+            {% include_relative _components/card.html name="vertex_snap" size="medium" order="reverse" %}
 
             <h4 class="sub-section">2D</h4>
 
@@ -154,21 +156,6 @@ draft: true
     
                 {% include_relative _components/card.html name="conic_gradient" %}
             </div>
-
-            <h4 class="sub-section">3D</h4>
-
-            <!-- 3D Cards -->
-
-            
-            {% include_relative _components/card.html name="path3d_snap" size="medium" %}
-            
-            <div class="sub-grid">
-                {% include_relative _components/card.html name="ruler_3d_components" order="reverse" %}
-                {% include_relative _components/card.html name="csg_smoothing" %}
-            </div>
-
-            {% include_relative _components/card.html name="vertex_snap" size="medium" order="reverse" %}
-
 
             <h4 class="sub-section">GUI</h4>
 
@@ -229,6 +216,16 @@ draft: true
                 {% include_relative _components/card.html name="view_3d_controller" %}
 
                 {% include_relative _components/card.html name="3d_transform_gizmo_trackball" order="reverse" %}
+            </div>
+
+            <h4 class="sub-section">Documentation</h4>
+
+            <!-- Documentation Cards -->
+
+            <div class="sub-grid">
+                {% include_relative _components/card.html name="property_list_helper_documentation" order="reverse" %}
+    
+                {% include_relative _components/card.html name="documentation_layout_update" %}
             </div>
 
         </section>
