@@ -389,7 +389,7 @@ text_label_image_scale:
   title: "Font-size aware `RichTextLabel` images"
   subtitle: "With big fonts come big images."
   text: |
-    While [`RichTextLabel`](https://docs.godotengine.org/en/4.7/classes/class_richtextlabel.html) offers a way to adjust font and image sizes, you still need to manually set the size of images to match the text size.
+    While [`RichTextLabel`](https://docs.godotengine.org/en/4.7/classes/class_richtextlabel.html) offered a way to adjust font and image sizes, you still needed to manually set the size of images to match the text.
 
     Thanks to this new feature, you can now resize images relative to the font size automatically. For example, `[font_size=40]Example: [img height=1em]example.png[/img][/font_size]` will render the image `example.png` at a size that matches the parent font size.
   read_more: "https://github.com/godotengine/godot/pull/112617"
