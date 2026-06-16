@@ -813,9 +813,7 @@ composition_layer_improvements:
   title: "Composition layer improvements"
   subtitle: "Check this out."
   text: |
-    There are a number of improvements to the OpenXR composition layer system to give more control over how these are presented to the user.
-
-    Noteworthy improvements here are:
+    There are a number of improvements to the OpenXR composition layer system to give more control over how these are presented to the user, including:
 
       - Place composition layers under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node so they are locked in the player’s view, ideal for heads-up displays.
       - The ability to place composition layer objects anywhere within your scene so they can be paired with world geometry.
