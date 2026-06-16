@@ -438,7 +438,7 @@ one_way_collision_direction:
   poster: one_way_collision_direction_poster.webp
 clearcoat_update:
   title: "Clearcoat improvements and fixes"
-  subtitle: "~~Rip and tear!~~ Rise and shine!"
+  subtitle: "Rise and shine!"
   text: |
     The previous implementation of clearcoat in [`BaseMaterial3D`](https://docs.godotengine.org/en/4.7/classes/class_basematerial3d.html) had several issues, such as not implementing energy conservation. Sky reflections and reflection probes were also not taken into account.
 
