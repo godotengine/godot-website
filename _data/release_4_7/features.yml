@@ -650,7 +650,7 @@ navigate_to_script:
   poster: navigate_to_script_poster.webp
 conic_gradient:
   title: "`GradientTexture2D` now able to generate conic gradients"
-  subtitle: "POV: You just drew the Wheel of Fortune card."
+  subtitle: "Everything the gradient touches is our kingdom."
   text: |
     [`FILL_CONIC`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html#class-gradienttexture2d-constant-fill-conic) was newly added to [`GradientTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html), enabling the use of CSS-style effects. This is particularly useful in custom 2D shaders to simulate surfaces with realistic, 3D-like shading.
   read_more: "https://github.com/godotengine/godot/pull/115394"
