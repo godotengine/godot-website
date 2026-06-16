@@ -39,11 +39,11 @@ todo_for_authors_list: >
       });
     }
 
-	return authors
-		.filter((author) => author.handle !== "ghost")
-		.toSorted((a, b) => a.handle.localeCompare(b.handle, "en", { ignorePunctuation: true }))
-		.map((author) => `${author.handle},${author.commits},${author.prs}`)
-		.join("|");
+    return authors
+        .filter((author) => author.handle !== "ghost")
+        .toSorted((a, b) => a.handle.localeCompare(b.handle, "en", { ignorePunctuation: true }))
+        .map((author) => `${author.handle},${author.commits},${author.prs}`)
+        .join("|");
   })().catch((err) => console.error(err));
   ```
 authors_list: "0ttoman,1,1|0xAlexisSys,1,1|3ter,1,1|aaronfranke,14,14|aaronp64,1,1|abcjjy,1,1|adamscott,1,1|AdriaandeJongh,4,4|adriano-sudario,1,1|AeioMuch,1,1|akien-mga,20,20|Akosmo,12,12|akshat-loya,1,1|Alex2782,2,2|allenwp,17,17|almic,1,0|AltayEvrenOzsan,1,1|alvinhochun,1,1|Anyone4551,1,1|Arbee4ever,1,1|ArchercatNEO,6,6|AR-DEV-1,5,6|Arjun-explores-Arjun-learn,1,1|arkology,5,5|Arnklit,4,4|ArokhSlade,1,1|Arthurmtro,1,1|ASamBlur,1,1|ashtonmeuser,1,1|ashwinvbs,1,1|AThousandShips,20,20|AtomicAntt,2,2|aurpine,3,3|badsectoracula,1,1|barthy-koeln,1,1|Bashar-R,2,2|BastiaanOlij,6,6|BenLubar,2,2|betalars,1,1|billuo,1,1|BlueCube3310,3,3|blueskythlikesclouds,20,20|brandonhare,3,3|Brogolem35,2,2|Bromeon,5,5|BrotherShort,5,5|bruvzg,20,20|buresu,1,1|calbebop,5,5|Calinou,20,20|Canapca,1,1|carsonetb,1,1|cashew-olddew,3,3|cdemirer,5,5|celyk,1,1|cengiz-pz,1,1|Changryy,1,1|Chaosus,19,19|chocola-mint,3,3|Chtau,1,1|Chubercik,11,11|clayjohn,15,15|ColinSORourke,1,2|CookieBadger,3,3|CoolPartyMann,1,1|dagarsar,1,1|dalexeev,20,20|danbolt,3,3|DarioSamo,5,4|DarkKilauea,4,4|Daylily-Zeleen,1,1|DDarby-Lewis,1,1|DeeJayLSP,7,7|dekaravanhoc,1,1|Delsin-Yu,1,1|demolke,2,2|deralmas,16,15|Devil-Gaming-Studios,1,1|devloglogan,2,2|DexterFstone,5,5|dfdfg42,1,1|dhoverb,1,1|dillyo09,1,1|DinkeyKing,1,1|dinklydoo,1,1|dog-on-moon,1,1|dsnopek,20,20|DSOE1024,2,2|dugramen,0,1|EdwardChanCH,12,12|EGAMatsu,1,1|emanueledenaro,1,1|eritschlSC,4,3|ExpiredPopsicle,1,1|Fahien,6,4|Faless,1,1|FarizzDev,1,1|fejesievo,1,1|filipemrabreu,1,1|fire,2,2|fkeyzuwu,2,2|Gaktan,2,2|GammaGames,1,1|Geometror,2,2|ghsoares,1,1|Giganzo,16,16|gilzoide,1,1|goatchurchprime,1,1|Goldenlion5648,9,9|gongpha,1,1|GrammAcc,1,1|guillaumeriousat,1,1|Gurvan,1,1|GusatuDamianAlexandru,1,1|GustJc,1,1|H3x4g0n,1,1|hakro,1,1|HEX-23,5,4|HolonProduction,20,20|hpvb,9,9|Hrothdel,3,3|IceflowRE,1,1|Ijtihed,1,1|Image-unavailable,1,1|Infiland,4,4|IrisHormoviti,0,1|ismailivanov,1,1|Ivorforce,20,20|j20001970,3,3|jack-klein-5,3,3|jaydensipe,8,8|jaypaik,1,1|jazztickets,0,1|jelolul,2,2|Jesusemora,2,2|jgill88,1,1|jinyangcruise,8,8|jkirsteins,1,1|joelgomes1994,1,1|JohanAR,1,1|jon1solution,1,1|Jordyfel,5,5|Joseph-DiGiovanni,1,1|Josvanegmond,1,1|Joy-less,3,3|jrouwe,11,11|jsjtxietian,1,1|Jules5,1,1|JustVicctor,1,1|Kalcy-U,1,1|Kaleb-Reid,5,5|KANAjetzt,1,1|kateyvk,1,1|Kazox61,3,3|kbieganski,1,1|kevinlam508,3,3|Kiisu-Master,1,1|kimjune01,0,1|kitbdev,20,20|KJEUN99,1,1|kleonc,13,13|Klology,0,1|Kn1feKillz,1,1|KoBeWi,20,20|KosumovicDenis,1,1|KrakenByte,1,1|kus04e4ek,1,1|L3GiaBao,1,1|LanzaSchneider,6,6|lawnjelly,2,2|lazaromenezes,1,1|leandro-benedet-garcia,2,2|Lefrec,1,1|LilithSilver,1,4|LiveTrower,4,4|lodetrick,4,4|LucaTuerk,3,3|LunaCapra,1,1|luzader,1,1|lyuma,1,1|m4gr3d,20,20|M4rchy-S,1,1|Manik2607,2,2|ManpreetXSingh,1,1|marcomolinaleija,1,2|marcosc90,1,1|marcozee03,1,1|MartinDelille,1,1|matheusmdx,2,2|MattiaZir,2,2|MaxiSanc37,1,1|Meorge,6,5|Metsker,1,1|MewPurPur,2,2|Mickeon,1,1|mieko,4,4|migueldeicaza,5,5|miguelrsgoncalves,1,1|mihe,20,20|Mister-Ky,3,3|Miurg,1,1|mooflu,3,3|Mrfanta-stick,3,3|mrTag,2,2|MuffinTastic,1,1|Muteem,2,2|mxtherfxcker,4,4|Nallebeorn,2,2|nanodeath,1,1|Naros,4,4|NasheethAhmedA,1,1|ndarilek,2,2|neclor,1,1|nevido2042,0,1|nhold,1,1|nikitalita,8,9|Nintorch,20,19|NoctemCat,3,3|Nodragem,3,1|Nolkaloid,1,1|NoNormalDev,4,4|norepro,3,3|Notgoyome,1,1|notroid5,1,1|novalis,2,2|nubels,1,1|oCHIKIo,1,1|olaron,1,1|onequid,1,1|Orphaeus,1,1|paddy-exe,1,1|pafuent,1,1|Paperzlel,2,2|Parritz,1,1|passivestar,7,7|p-b-b,1,1|pgoslatara,1,1|PhairZ,2,2|pirey0,1,1|pkowal1982,1,1|poohcom1,1,1|precup,1,1|QbieShay,7,8|qqwobble,1,1|quadrimus,1,1|Quantx,1,1|Raftatul,2,2|RandomShaper,1,1|raulsntos,9,8|realbucketofchicken,1,1|realkotob,1,1|realybin,2,2|redfacedev,2,2|Repiteo,20,20|RgeditV1,3,3|riatmax,1,1|RicardRC,1,1|Rindbee,10,9|rinevard,3,3|RoeckVictor,1,1|romgerman,2,2|Rookfighter,1,1|rothej,1,1|RoyBerardo,1,1|rsanchezsaez,1,1|rsubtil,1,1|Rubonnek,1,1|rune-scape,1,1|Ryan-000,11,12|RyanVail,1,1|ryevdokimov,20,20|Saulo-de-Souza,2,2|Scarface1809,1,1|ScatteredComet,1,1|scgm0,2,2|Scrawach,4,4|sertonix,1,1|shadow-foss,2,2|Shadows-of-Fire,1,1|SheepYhangCN,1,1|shiena,7,6|shoyguer,1,1|SirLich,1,1|skiessq,2,2|smix8,2,2|snowfrogdev,1,1|sockeye-d,2,2|sorascode,1,1|SorkoPiko,2,2|Spartan322,1,1|SpencerGoodman,1,1|ssd3,1,1|StamLord,1,1|StarryWorm,20,19|stdmnpkg,1,1|stillmant,1,1|stuartcarnie,17,16|suhankins,2,2|superherointj,0,1|sydist,1,1|syntaxerror247,20,20|Sysex89,2,2|szunami,1,1|tciviero,1,1|TCROC,2,2|ThatNerdNxtDoor,1,1|thearchcoder,1,1|TheDying0fLight,8,8|TheOathMan,2,2|TheSofox,1,1|ThiLelito,1,1|timoschwarzer,1,1|timothyqiu,2,2|Togira123,2,2|TokageItLab,20,20|tomyy,1,1|TsFreddie,1,1|ttencate,1,1|ugursoy,1,1|unit-tick,3,3|unixfan2,1,1|uno1982,6,6|uoslider-wq,1,1|van800,4,4|vaner-org,19,19|viksl,1,1|virusbear,1,1|vixxi77,1,1|voylin,3,3|wagnerfs,1,1|warren,1,1|warriormaster12,3,3|WhalesState,4,4|williamchange,1,1|wjt,2,2|wkesner,1,1|XenotriX,1,1|xsellier,1,1|xuhuisheng,3,3|yahkr,1,1|Yarwin,1,1|YeldhamDev,20,20|Yelloween10,1,1|YYF233333,2,2|Zehir,1,1|zhehangd,1,1|zinefer,1,1"
@@ -98,7 +98,7 @@ draft: true
             </svg>
         </label>
     </nav>
-    
+
     <div id="main-nav">
         {% include header.html %}
     </div>
@@ -187,7 +187,7 @@ draft: true
             <!-- 3D Cards -->
 
             {% include_relative _components/card.html name="path3d_snap" size="medium" %}
-            
+
             <div class="sub-grid">
                 {% include_relative _components/card.html name="ruler_3d_components" order="reverse" %}
                 {% include_relative _components/card.html name="csg_smoothing" %}
@@ -201,7 +201,7 @@ draft: true
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="one_way_collision_direction" order="reverse"%}
-    
+
                 {% include_relative _components/card.html name="conic_gradient" %}
             </div>
 
@@ -213,9 +213,9 @@ draft: true
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="popup_search" %}
-    
+
                 {% include_relative _components/card.html name="text_label_image_scale" %}
-    
+
                 {% include_relative _components/card.html name="accessibility_region" %}
             </div>
 
@@ -223,7 +223,7 @@ draft: true
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="mono_font_code_names" order="reverse"%}
-    
+
                 {% include_relative _components/card.html name="tiling_atlas_texture" %}
             </div>
 
@@ -236,28 +236,28 @@ draft: true
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="nearest_neighbor_scaling" order="reverse" %}
-    
+
                 {% include_relative _components/card.html name="copy_past_properties" %}
             </div>
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="remote_scene_inspector_groups_folding" order="reverse" %}
-                
+
                 {% include_relative _components/card.html name="mesh_library_update" %}
             </div>
-            
+
             {% include_relative _components/card.html name="scene_painter_tool" size="medium" %}
 
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="project_version_discrepancies" order="reverse"%}
-                
+
                 {% include_relative _components/card.html name="create_node_type_filter" %}
             </div>
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="display_enum_remote_tree" order="reverse"%}
-                
+
                 {% include_relative _components/card.html name="navigate_to_script" %}
             </div>
             <div class="sub-grid">
@@ -272,7 +272,7 @@ draft: true
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="property_list_helper_documentation" order="reverse" %}
-    
+
                 {% include_relative _components/card.html name="documentation_layout_update" %}
             </div>
 
@@ -290,7 +290,7 @@ draft: true
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="collapse_animation_groups" order="reverse"%}
-    
+
                 {% include_relative _components/card.html name="tween_await" %}
             </div>
 
@@ -303,14 +303,14 @@ draft: true
             <h4 class="sub-section">Input</h4>
 
             <!-- Input Cards -->
-            
+
             {% include_relative _components/card.html name="virtual_joystick" size="medium" %}
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="ignore_joypad" %}
-    
+
                 {% include_relative _components/card.html name="input_events_device_ids" %}
-    
+
                 {% include_relative _components/card.html name="ios_sdl3" %}
             </div>
 
@@ -319,12 +319,12 @@ draft: true
             <h4 class="sub-section">Rendering</h4>
 
             <!-- Rendering Cards -->
-            
+
             {% include_relative _components/card.html name="pass_unique_buffer" size="large" %}
-            
+
             <div class="sub-grid">
                 {% include_relative _components/card.html name="clearcoat_update" order="reverse" %}
-                
+
                 {% include_relative _components/card.html name="particles3d_scale_and_rotation" %}
             </div>
 
@@ -468,7 +468,7 @@ draft: true
         let mouseLerped = banner.mouse.clone();
 
         // Light setup
-    
+
         const ambientLight = new THREE.AmbientLight(0xFFFFFF, 2.0);
         banner.scene.add(ambientLight);
 
@@ -503,7 +503,7 @@ draft: true
             bgMesh.material.color = new THREE.Color("hsl(200, 2.0%, 2.0%)");
             /*
             bgMesh.material.color =
-                (banner.useDarkTheme ? 
+                (banner.useDarkTheme ?
                 new THREE.Color("hsl(200, 2.0%, 2.0%)") :
                 new THREE.Color("hsl(200, 100.0%, 98.0%)"));
             */
@@ -511,7 +511,7 @@ draft: true
 
         function updateComposition() {
             if (banner.viewSize.x == 0.0 && banner.viewSize.y == 0.0) return;
-            
+
             let ratio = clamp(banner.viewSize.x / banner.viewSize.y, 1.0, 2.0);
             let ratioX = mapRange(ratio, 1.0, 2.0, 0.0, 1.0);
 
