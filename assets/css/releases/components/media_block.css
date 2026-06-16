@@ -6,6 +6,11 @@
   height: auto;
   background-color: var(--blank-color);
   overflow: hidden;
+  &.media-align-left-center {
+    video {
+	  object-position: left center;
+	}
+  }
   .author{
     position: absolute;
     font-size: 0.8em;

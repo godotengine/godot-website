@@ -6,9 +6,12 @@
 {% assign read_more_aria_label = include.read_more_aria_label | default: "See '[{item_title}]' Pull Request" | replace: "[{item_title}]", item.title %}
 {% assign contributor_intro = include.contributor_intro | default: "Contributed by" | replace: "[{item_read_more}]", item.read_more | append: "&nbsp;" %}
 
+{% assign media_align_h = include.media_align_h | default: "center" %}
+{% assign media_align_v = include.media_align_v | default: "center" %}
+
 <div class="card {{include.size}} {{include.order}}">
     {%if item.media or item.compare %}
-        {% include_relative _components/media.html item=item %}
+        {% include_relative _components/media.html item=item media_align_h=media_align_h media_align_v=media_align_v %}
     {% endif %}
     <div class="content">
         <h3 class="title">{{item.title | markdownify}}</h3>
@@ -29,7 +32,7 @@
 				<div class="names">
 					<span>{{ contributor_intro }}</span>
 					{% for contributor in item.contributors %}
-						<a href={{ contributor.link }} aria-label="See '{{item.title}}' contributor page" target="_blank">{{ contributor.name }}</a>
+						<a href="{{ contributor.link }}" aria-label="See '{{item.title}}' contributor page" target="_blank">{{ contributor.name }}</a>
 					{% endfor %}
 				</div>
             </div>

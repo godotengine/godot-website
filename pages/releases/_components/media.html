@@ -5,8 +5,10 @@
 {% assign image_exts = "png, webp, jpg, jpeg" %}
 {% assign video_exts = "mp4, webm" %}
 
+{% assign media_align_h = include.media_align_h | default: "center" %}
+{% assign media_align_v = include.media_align_v | default: "center" %}
 
-<div class="media-block">
+<div class="media-block media-align-{{media_align_h}}-{{media_align_v}}">
     {%if image_exts contains media_ext %}
         <img src="{{media_path}}/{{item.media}}" alt="" loading="lazy">
     {% endif %}
@@ -27,7 +29,7 @@
             VIDEO
         </div>
     {% endif %}
-    
+
     {%if item.compare %}
         <div class="media-compare">
             <img src="{{media_path}}/{{item.compare.after_image}}" alt="" loading="lazy">
