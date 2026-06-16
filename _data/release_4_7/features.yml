@@ -457,19 +457,6 @@ clearcoat_update:
     after_image: clearcoat_after.webp
     before_text: Before
     after_text: After
-# android_native_file_picker:
-#   title: "Feature Title"
-#   subtitle: "Feature Tagline"
-#   text: "Feature Content"
-#   read_more: "https://github.com/godotengine/godot/pull/115257"
-#   contributors:
-#     - name: "Anish Kumar"
-#       link: "https://github.com/syntaxerror247"
-#   media_author:
-#     name: "Anish Kumar"
-#     link: "https://github.com/syntaxerror247"
-#   media: android_native_file_picker.webm
-#   poster: android_native_file_picker_poster.webp
 wayland_touch_support:
   title: "Initial touch support for Wayland"
   subtitle: "U Can~~’t~~ Touch This"
@@ -718,15 +705,6 @@ view_3d_controller:
     - name: "Michael Alexsander"
       link: "https://github.com/YeldhamDev"
   media: view_3d_controller.webp
-# gradle_plugins_support:
-#   title: "Feature Title"
-#   subtitle: "Feature Tagline"
-#   text: "Feature Content"
-#   read_more: "https://github.com/godotengine/godot/pull/115888"
-#   contributors:
-#     - name: "Fredia Huya-Kouadio"
-#       link: "https://github.com/m4gr3d"
-# media: gradle_plugin.webp
 csg_smoothing:
   title: "Automatic smoothing option for CSG nodes"
   subtitle: "You’ve been hit by… a smooth Cs’G node"
