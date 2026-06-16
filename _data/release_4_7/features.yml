@@ -85,9 +85,7 @@ rect_area_light:
   title: "`AreaLight3D`, a new node for rectangular light sources"
   subtitle: "Do you think light can bloom even on a battlefield?"
   text: |
-    Soft radiating glows from humming TV screens, illuminated billboards in vibrant cityscapes, and ominous light through frosted windows are now achievable with rectangular area lights.
-
-    You no longer need to use an emissive material combined with Global Illumination to simulate a glowing area. By leveraging the new `AreaLight3D`, it is now possible to render real-time light from a rectangle in 3D space. Rectangular area lights can create softer shadows and more realistic reflections for your scenes.
+    The new `AreaLight3D` lets you render real-time light from a rectangle in 3D space, letting you capture effects like soft radiating glows from humming TV screens, illuminated billboards in vibrant cityscapes, and ominous light through frosted windows.
   read_more: "https://github.com/godotengine/godot/pull/108219"
   contributors:
     - name: "Emil Dobetsberger"
@@ -141,9 +139,7 @@ copy_past_properties:
   title: "Copy and paste sections of the inspector"
   subtitle: "Duplicate data. data. data. data."
   text: |
-    If you ever wanted to quickly copy inspector properties from one node to another, you’re in luck!
-
-    You’re now able to copy and paste rows of properties by right-clicking their category or group.
+    Right-click a category or group of properties in the inspector to quickly copy and paste their values.
   read_more: "https://github.com/godotengine/godot/pull/111469"
   contributors:
     - name: "Raphaël Daubelcour"
@@ -156,9 +152,7 @@ tween_await:
   title: "Tweens can now wait for signals"
   subtitle: "Stop… _signal time!_"
   text: |
-    Tweens have always been difficult to work with at scale, especially when dealing with time-based events or events that rely on external factors. With the new [`Tween.tween_await()`](https://docs.godotengine.org/en/4.7/classes/class_tween.html#class-tween-method-tween-await) method, it’s now a thing of the past.
-
-    It is now possible to pause a tween until a specific signal is emitted. This can be especially helpful when designing dialogue and cutscenes.
+    Use the new [`Tween.tween_await()`](https://docs.godotengine.org/en/4.7/classes/class_tween.html#class-tween-method-tween-await) method to pause a tween until a specific signal is emitted. This can be especially helpful when designing dialogue and cutscenes.
   read_more: "https://github.com/godotengine/godot/pull/79712"
   contributors:
     - name: "Tomasz Chabora"
@@ -813,7 +807,7 @@ composition_layer_improvements:
   title: "Composition layer improvements"
   subtitle: "Check this out"
   text: |
-    There are a number of improvements to the OpenXR composition layer system to give more control over how these are presented to the user, including:
+    There are a number of improvements to the [OpenXR composition layer system](https://docs.godotengine.org/en/4.7/tutorials/xr/openxr_composition_layers.html) to give more control over how these are presented to the user, including:
 
       - Place composition layers under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node so they are locked in the player’s view, ideal for heads-up displays.
       - The ability to place composition layer objects anywhere within your scene so they can be paired with world geometry.
