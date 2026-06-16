@@ -565,9 +565,7 @@ ios_sdl3:
   title: "Better controller support on iOS"
   subtitle: "A true controller know-it-all"
   text: |
-    One of Godot’s strengths is cross-platform controller support. However, given the large number of controllers out there, issues with incorrect mappings or non-working functionality inevitably crop up. So far, the best way to improve controller reliability has been to switch to the [SDL3 library](https://www.libsdl.org/) for input, as done on Windows, macOS, and Linux already.
-
-    By switching to the battle-tested [SDL3 library](https://wiki.libsdl.org/SDL3/FrontPage) on iOS, this fixes several issues related to controllers not being recognized properly on that platform.
+    We have switched to the battle-tested [SDL3 library](https://www.libsdl.org/) for controller support on iOS, as previously done on Windows, macOS, and Linux. This will improve controllers being recognized with better default mappings.
   read_more: "https://github.com/godotengine/godot/pull/114316"
   contributors:
     - name: "Nintorch"
