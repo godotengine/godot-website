@@ -136,10 +136,10 @@ nearest_neighbor_scaling:
     before_text: Nearest
     after_text: Bilinear
 copy_past_properties:
-  title: "Copy and paste sections of the inspector"
+  title: "Copy and paste sections of the Inspector"
   subtitle: "Duplicate data. data. data. data."
   text: |
-    Right-click a category or group of properties in the inspector to quickly copy and paste their values.
+    Right-click a category or group of properties in the Inspector to quickly copy and paste their values.
   read_more: "https://github.com/godotengine/godot/pull/111469"
   contributors:
     - name: "Raphaël Daubelcour"
@@ -164,7 +164,7 @@ virtual_joystick:
   text: |
     Virtual joysticks are a staple of mobile gaming. From twin-stick shooters to 3D platformers, they’re featured in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one.
 
-    This is no longer needed as Godot now provides its own VirtualJoystick node, complete with 3 operation modes: “Fixed”, “Dynamic”, and “Following”. Coupled with built-in theming abilities, this greatly speeds up the mobile development process.
+    This is no longer needed as Godot now provides its own [`VirtualJoystick`](https://docs.godotengine.org/en/4.7/classes/class_virtualjoystick.html) node, complete with 3 operation modes: “Fixed”, “Dynamic”, and “Following”. Coupled with built-in theming abilities, this greatly speeds up the mobile development process.
   read_more: "https://github.com/godotengine/godot/pull/110933"
   contributors:
     - name: "Kazox61"
@@ -177,7 +177,7 @@ mesh_library_update:
   title: "Introducing the `MeshLibrary` editor"
   subtitle: "It’s like a librarian, minus the shushing"
   text: |
-    The [`GridMap`](https://docs.godotengine.org/en/4.7/classes/class_gridmap.html) node uses a [`MeshLibrary`](https://docs.godotengine.org/en/4.7/classes/class_meshlibrary.html) resource to source the tiles that can be placed. Previously, editing a `MeshLibrary` resource had to be done entirely in the inspector, which made it tedious to work with.
+    The [`GridMap`](https://docs.godotengine.org/en/4.7/classes/class_gridmap.html) node uses a [`MeshLibrary`](https://docs.godotengine.org/en/4.7/classes/class_meshlibrary.html) resource to source the tiles that can be placed. Previously, editing a `MeshLibrary` resource had to be done entirely in the Inspector, which made it tedious to work with.
 
     There is now a dedicated `MeshLibrary` editor, similar to the [`TileSet`](https://docs.godotengine.org/en/4.7/classes/class_tileset.html) editor in 2D. This greatly streamlines the process of adding and editing tiles for use in a `GridMap` node.
   read_more: "https://github.com/godotengine/godot/pull/117376"
@@ -251,9 +251,9 @@ remote_scene_inspector_groups_folding:
   title: "Fold groups and subgroups in the Remote Scene Inspector"
   subtitle: "Quick! Hide!"
   text: |
-    Previously, it was possible to fold property groups and subgroups in the local inspector, but not in the remote inspector. This owes to the fact that the remote inspector is a separate implementation from the local inspector.
+    Previously, it was possible to fold property groups and subgroups in the local Inspector, but not in the remote Inspector. This owes to the fact that the remote Inspector is a separate implementation from the local Inspector.
 
-    Support for folding groups and subgroups in the remote scene inspector has been implemented. Both local and remote inspectors now support folding property groups the same way, which makes for a more seamless, consistent UX.
+    Support for folding groups and subgroups in the Remote Scene Inspector has been implemented. Both the local and remote Inspector now support folding property groups the same way, which makes for a more seamless, consistent UX.
   read_more: "https://github.com/godotengine/godot/pull/117357"
   contributors:
     - name: "Jayden Sipe"
@@ -263,12 +263,12 @@ remote_scene_inspector_groups_folding:
     link: "https://github.com/jaydensipe"
   media: remote_scene_inspector_groups_folding.webm
 gdextensions_view_inside_settings:
-  title: "Project GDExtensions are now displayed in the project settings"
+  title: "The project's GDExtensions are now displayed in the Project Settings"
   subtitle: "GDExtensions, assemble!"
   text: |
     Since their introduction and by their nature, GDExtensions are automatically loaded by the engine on initialization. There was unfortunately no way to know exactly which project extensions were actually present in a project, except by manually locating the project’s `.gdextension` files.
 
-    With this new feature, the project settings window has a dedicated section for GDExtensions.
+    With this new feature, the Project Settings window has a dedicated section for GDExtensions.
   read_more: "https://github.com/godotengine/godot/pull/118063"
   contributors:
     - name: "Aaron Franke"
@@ -320,12 +320,12 @@ path3d_snap:
     link: "https://github.com/GustJc"
   media: path3d_snap.webm
 display_enum_remote_tree:
-  title: "Remote tree inspector now properly display non-exported enum variables"
+  title: "Remote Tree Inspector now properly display non-exported enum variables"
   subtitle: "We could enumerate the benefits all day long if we really wanted"
   text: |
-    Prior to 4.7, the remote tree inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only attributed to exported variables.
+    Prior to 4.7, the Remote Tree Inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only attributed to exported variables.
 
-    We now fixed this, and the remote tree inspector now shows the enum name instead of its obscure integer value.
+    We now fixed this, and the Remote Tree Inspector now shows the enum name instead of its obscure integer value.
   read_more: "https://github.com/godotengine/godot/pull/115705"
   contributors:
     - name: "Danil Alexeev"
@@ -508,7 +508,7 @@ property_list_helper_documentation:
   title: "Dynamically generated properties, such as menu items, are now documented"
   subtitle: "Where no one has gone before"
   text: |
-    Dynamic properties generated by [`PropertyListHelper`](), like menu items, are now automatically documented. Before, property arrays wouldn’t show descriptions when hovered over in the inspector. In Godot 4.7, documentation for properties is automatically generated and viewable when hovered.
+    Dynamic properties generated by [`PropertyListHelper`](), like menu items, are now automatically documented. Before, property arrays wouldn’t show descriptions when hovered over in the Inspector. In Godot 4.7, documentation for properties is automatically generated and viewable when hovered.
   read_more: "https://github.com/godotengine/godot/pull/115253"
   contributors:
     - name: "bruvzg"
@@ -591,7 +591,7 @@ accessibility_region:
 
     The focused element of a user interface can frequently move in arbitrary ways. While we introduced screen reader support in 4.5, it lacked the ability to provide context information in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it was named.
 
-    By introducing landmark navigation, the screen reader can give some context information once you enter the perimeter of a landmark, such as telling the screen reader user that the focus is currently in the inspector, on the name field.
+    By introducing landmark navigation, the screen reader can give some context information once you enter the perimeter of a landmark, such as telling the screen reader user that the focus is currently in the Inspector, on the name field.
   read_more: "https://github.com/godotengine/godot/pull/114449"
   contributors:
     - name: "Nolan Darilek"
