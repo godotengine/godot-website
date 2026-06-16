@@ -794,7 +794,7 @@ vulkan_subsampled_images:
     link: "https://bsky.app/profile/adamscott.studio"
   media: "vulkan_subsampled_images.webm"
 action_map_improvements:
-  title: "Action maps have been simplified"
+  title: "XR action maps have been simplified"
   subtitle: "“*Le contrôleur!?* What the hell is that!” no more."
   text: |
     With the introduction of support for the [OpenXR generic controller profile](https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_KHR_generic_controller), the default [action map](https://docs.godotengine.org/en/4.7/tutorials/xr/xr_action_map.html) for new OpenXR projects has been greatly simplified.
