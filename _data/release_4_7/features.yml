@@ -457,7 +457,7 @@ clearcoat_update:
     after_text: After
 wayland_touch_support:
   title: "Initial touch support for Wayland"
-  subtitle: "U Can~~’t~~ Touch This"
+  subtitle: "U __Can__ Touch This"
   text: |
     While touch support was available on Linux/*BSD using [X11](https://en.wikipedia.org/wiki/X_Window_System), that wasn’t the case when using the newer [Wayland protocol](https://en.wikipedia.org/wiki/Wayland_(protocol)) introduced in [4.3](https://godotengine.org/releases/4.3/#display-wayland-support). Well, until now.
 
