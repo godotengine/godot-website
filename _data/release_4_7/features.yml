@@ -55,8 +55,6 @@ asset_store_update:
     The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye, what if we were to tell you, you can now see the asset ratings. Were you lost in a field of endless assets? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
 
     Behind the scenes, we have also introduced threading. This means the Asset Store can perform certain tasks in the background without blocking the editor’s main user interface. That’s pretty cool. Now while you’re exploring your organized assets, you’ll also know there’s someone paving a path and clearing brush quietly in the background, making it that much easier for you to get the lay of the land.
-
-    Be sure to read our ["Introducing the Godot Asset Store"](https://godotengine.org/article/introducing-the-godot-asset-store) blog post for more details.
   read_more: "https://github.com/godotengine/godot/pull/112992"
   contributors:
     - name: "Michael Alexsander"

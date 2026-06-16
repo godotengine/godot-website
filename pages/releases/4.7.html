@@ -115,7 +115,15 @@ draft: true
             {% include_relative _components/card.html name="rect_area_light" size="large" %}
 
             <div class="sub-grid">
-                {% include_relative _components/card.html name="asset_store_update" order="reverse"%}
+                {%
+					include_relative _components/card.html
+					name="asset_store_update"
+					order="reverse"
+					read_more_link="https://store.godotengine.org/"
+					read_more_text="Check out the Asset Store"
+					read_more_aria_label="Check out the Asset Store"
+					contributor_intro="<a class=\"not-contributor\" href=\"[{item_read_more}]\" target=\"_blank\">PR</a> contributed by"
+				%}
                 {% include_relative _components/card.html name="drawable_textures" %}
             </div>
 

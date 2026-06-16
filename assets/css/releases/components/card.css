@@ -60,6 +60,21 @@
       font-size: 1.1em;
     }
   }
+  .links {
+	> .contributors {
+		display: grid;
+		grid-template-areas: "icon contributors";
+		align-items: baseline;
+
+		> svg {
+			grid-area: icon;
+		}
+
+		> .names {
+			grid-area: contributors;
+		}
+	}
+  }
   .link-icon{
     display: flex;
     flex-direction: row;
@@ -75,7 +90,7 @@
       &:hover {
         text-underline-offset: 0.3em;
       }
-      &:not(:last-child):after{
+      &:not(:last-child):not(.not-contributor):after{
         margin-right: 0.2em;
         content: ", ";
       }
