@@ -31,7 +31,7 @@ hdr_support:
     after_text: HDR
 drawable_textures:
   title: "Drawing on a texture has never been this easy"
-  subtitle: "There are no mistakes here, only happy accidents."
+  subtitle: "There are no mistakes here, only happy accidents"
   text: |
     After a long wait, we’re excited to share that it’s possible to easily draw on a texture!
 
@@ -98,7 +98,7 @@ rect_area_light:
   media: "arealightfhd_small.webm"
 android_gabe:
   title: "Creating games entirely on Android"
-  subtitle: "The power is in the palm of your hand."
+  subtitle: "The power is in the palm of your hand"
   text: |
     Developing on Android and XR has been possible for a while, and with Godot 4.7, developers now get the ability to export and publish their games as well thanks to the Godot Android Build Environment (GABE).
 
@@ -120,7 +120,7 @@ android_gabe:
   # media: "arealightfhd_small.webm"
 nearest_neighbor_scaling:
   title: "New nearest-neighbor scaling option for viewports"
-  subtitle: "Draw me like one of your PS1 girls."
+  subtitle: "Draw me like one of your PS1 girls"
   text: |
     For 3D games with a retro art style, or when you want to maximize crispness when using a low resolution scale for performance reasons, you can now opt into nearest-neighbor filtering for 3D rendering. Like the existing 3D resolution scale options, this does not affect 2D rendering. Performance is roughly identical to bilinear filtering.
 
@@ -166,7 +166,7 @@ tween_await:
   media: tween_await.webm
 virtual_joystick:
   title: "Built-in virtual joystick"
-  subtitle: "Break in case of emergency."
+  subtitle: "Break in case of emergency"
   text: |
     Virtual joysticks are a staple of mobile gaming. From twin-stick shooters to 3D platformers, they’re featured in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one.
 
@@ -181,7 +181,7 @@ virtual_joystick:
   media: virtual-joystick.webm
 mesh_library_update:
   title: "Introducing the `MeshLibrary` editor"
-  subtitle: "It’s like a librarian, minus the shushing."
+  subtitle: "It’s like a librarian, minus the shushing"
   text: |
     The [`GridMap`](https://docs.godotengine.org/en/4.7/classes/class_gridmap.html) node uses a [`MeshLibrary`](https://docs.godotengine.org/en/4.7/classes/class_meshlibrary.html) resource to source the tiles that can be placed. Previously, editing a `MeshLibrary` resource had to be done entirely in the inspector, which made it tedious to work with.
 
@@ -206,7 +206,7 @@ tree_drag_and_drop_update:
   poster: tree_drag_and_drop_update_poster.webp
 export_template_dialog_update:
   title: "Only download the templates you need"
-  subtitle: "You must download additional platforms."
+  subtitle: "You must download additional platforms"
   text: |
     A common issue with Godot’s export system is that until now, you had to download export templates for all platforms whenever you wanted to export your project for a single platform. This led to large downloads, which not only made for a slower experience, but could also incur additional charges for people on a metered connection.
 
@@ -282,7 +282,7 @@ gdextensions_view_inside_settings:
   media: gdextensions_view_inside_settings.webp
 ruler_3d_components:
   title: "New vector measurement tool for the 3D editor ruler"
-  subtitle: "The ruler’s got new tricks."
+  subtitle: "The ruler’s got new tricks"
   text: |
     The 3D editor’s ruler tool can now display lengths for each axis. This makes it easier to measure multiple lengths in one go, such as measuring the size of a rectangular region in the 3D world.
 
@@ -297,7 +297,7 @@ ruler_3d_components:
   media: editor-3d-ruler-1.webp
 collapse_animation_groups:
   title: "Animation editor nodes are now collapsable"
-  subtitle: "Free your mind."
+  subtitle: "Free your mind"
   text: |
     This feature is a blessing for animation editor power users. As soon as an animation node tracks multiple nodes, it’s easy to become overwhelmed scrolling through tracks to find the ones you need to edit.
 
@@ -327,7 +327,7 @@ path3d_snap:
   media: path3d_snap.webm
 display_enum_remote_tree:
   title: "Remote tree inspector now properly display non-exported enum variables"
-  subtitle: "We could enumerate the benefits all day long if we really wanted."
+  subtitle: "We could enumerate the benefits all day long if we really wanted"
   text: |
     Prior to 4.7, the remote tree inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only attributed to exported variables.
 
@@ -357,7 +357,7 @@ picture_in_picture:
   poster: picture_in_picture_poster.webp
 control_transform_offset:
   title: "Add transform offset to `Control` nodes"
-  subtitle: "Transform the way you design GUIs."
+  subtitle: "Transform the way you design GUIs"
   text: |
     One of the most long-awaited features in Godot’s GUI system is to be able to translate, rotate, or scale a Control node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide into view or fade away with a scale change.
 
@@ -375,7 +375,7 @@ control_transform_offset:
   poster: control_transform_offset_poster.webp
 popup_search:
   title: "Filter out long `PopupMenu` items with a search bar"
-  subtitle: "Cut to the chase."
+  subtitle: "Cut to the chase"
   text: |
     Some features in Godot such as choosing a new class for a [`Resource`](https://docs.godotengine.org/en/4.7/classes/class_resource.html) property or selecting a language spawns tall dialogs with hundreds of options to choose from. While incremental search exists (typing some letters to highlight the first match), it’s difficult to discover and is not usable on a touch screen.
 
@@ -387,7 +387,7 @@ popup_search:
   media: popup_search.webp
 text_label_image_scale:
   title: "Font-size aware `RichTextLabel` images"
-  subtitle: "With big fonts come big images."
+  subtitle: "With big fonts come big images"
   text: |
     While [`RichTextLabel`](https://docs.godotengine.org/en/4.7/classes/class_richtextlabel.html) offered a way to adjust font and image sizes, you still needed to manually set the size of images to match the text.
 
@@ -420,7 +420,7 @@ android_window_resize:
   poster: android_window_resize_poster.webp
 one_way_collision_direction:
   title: "One-way collision support for `CollisionShape2D`"
-  subtitle: "A one-way ticket for 2D platformers."
+  subtitle: "A one-way ticket for 2D platformers"
   text: |
     Creating one-way collisions for your platformers (and more!) is now easier than ever! With this new `one_way_collision_direction` property of `CollisionShape2D`, you’re now able to set the one-way collision direction to any direction, relative and local to the shape.
 
@@ -473,7 +473,7 @@ wayland_touch_support:
   poster: wayland_touch_support_poster.webp
 particles3d_scale_and_rotation:
   title: "3D particles scale and rotation can now be tweaked"
-  subtitle: "Stretch and squash."
+  subtitle: "Stretch and squash"
   text: |
     Make the particle system of your dreams! You can now create particles that scale and rotate. It’s an easy way to add more oompf to your animations.
   read_more: "https://github.com/godotengine/godot/pull/112447"
@@ -484,7 +484,7 @@ particles3d_scale_and_rotation:
   poster: particles3d_scale_and_rotation_poster.webp
 vertex_snap:
   title: "3D vertex snapping"
-  subtitle: "On point."
+  subtitle: "On point"
   text: |
     Placing meshes in a scene in the Godot editor used to be tedious. There wasn’t any way to tell it to place the edge of a level mesh flush to the tip of the one already present.
 
@@ -500,7 +500,7 @@ vertex_snap:
   poster: vertex_snap_poster.webp
 ignore_joypad:
   title: "Ignore controller events when your game is unfocused"
-  subtitle: "Just ignore them."
+  subtitle: "Just ignore them"
   text: |
     Operating systems handle gamepad input differently from keyboard and mouse input, as gamepad input is sent even when the window is unfocused. While this can be beneficial in some situations, it can lead to unintended inputs, potentially leading to accidentally exiting a game in the worst case.
 
@@ -512,7 +512,7 @@ ignore_joypad:
   media: ignore_joypad.webp
 property_list_helper_documentation:
   title: "Dynamically generated properties, such as menu items, are now documented"
-  subtitle: "Where no one has gone before."
+  subtitle: "Where no one has gone before"
   text: |
     Dynamic properties generated by [`PropertyListHelper`](), like menu items, are now automatically documented. Before, property arrays wouldn’t show descriptions when hovered over in the inspector. In Godot 4.7, documentation for properties is automatically generated and viewable when hovered.
   read_more: "https://github.com/godotengine/godot/pull/115253"
@@ -541,7 +541,7 @@ project_version_discrepancies:
   poster: project_version_discrepancies_poster.webp
 input_events_device_ids:
   title: "Identify distinct keyboards and mice"
-  subtitle: "BIG GODOT IS WATCHING YOU, keyboards and mice."
+  subtitle: "BIG GODOT IS WATCHING YOU, keyboards and mice"
   text: |
     Like gamepad inputs, keyboard and mouse inputs now use a device identifier. This can be used to distinguish keyboard/mouse inputs from other inputs by checking the [`InputEvent`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html)’s `device` property. Keyboard inputs always have their device ID set to [`InputEvent.DEVICE_ID_KEYBOARD`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html#class-inputevent-constant-device-id-keyboard), while mouse inputs have it set to [`InputEvent.DEVICE_ID_MOUSE`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html#class-inputevent-constant-device-id-mouse).
 
@@ -553,7 +553,7 @@ input_events_device_ids:
   media: input_events_device_ids.webp
 create_node_type_filter:
   title: "Find quickly the node or resource to create with the new dialog filters"
-  subtitle: "Cream of the crop."
+  subtitle: "Cream of the crop"
   text: |
     When opening the “Create” dialog for a node or a resource in 4.7, you’ll be able to filter the elements shown in the tree.
 
@@ -569,7 +569,7 @@ create_node_type_filter:
   poster: create_node_type_filter_poster.webp
 ios_sdl3:
   title: "Better controller support on iOS"
-  subtitle: "A true controller know-it-all."
+  subtitle: "A true controller know-it-all"
   text: |
     One of Godot’s strengths is cross-platform controller support. However, given the large number of controllers out there, issues with incorrect mappings or non-working functionality inevitably crop up. So far, the best way to improve controller reliability has been to switch to the [SDL3 library](https://www.libsdl.org/) for input, as done on Windows, macOS, and Linux already.
 
@@ -591,7 +591,7 @@ joypad_motion_sensors:
   media: joypad_motion_sensors.webp
 accessibility_region:
   title: "Landmark navigation for enhanced accessibility"
-  subtitle: "You are here. 👇"
+  subtitle: "You are here 👇"
   text: |
     A new feature has been introduced in order to make the engine more accessible to both editor and end users.
 
@@ -619,7 +619,7 @@ pass_unique_buffer:
   media: pass_unique_buffer.webp
 mono_font_code_names:
   title: "Method, signals, and properties now use a monospace font"
-  subtitle: "It feels like home."
+  subtitle: "It feels like home"
   text: |
     The script editor uses a monospace font by default. In other words, every character occupies the same width, which makes it easier to compare lines of code visually.
 
@@ -650,7 +650,7 @@ navigate_to_script:
   poster: navigate_to_script_poster.webp
 conic_gradient:
   title: "`GradientTexture2D` now able to generate conic gradients"
-  subtitle: "Everything the gradient touches is our kingdom."
+  subtitle: "Everything the gradient touches is our kingdom"
   text: |
     [`FILL_CONIC`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html#class-gradienttexture2d-constant-fill-conic) was newly added to [`GradientTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html), enabling the use of CSS-style effects. This is particularly useful in custom 2D shaders to simulate surfaces with realistic, 3D-like shading.
   read_more: "https://github.com/godotengine/godot/pull/115394"
@@ -732,7 +732,7 @@ gdscript_java_interfaces:
   media: gdscript_java_interfaces.webp
 custom_splash_screen:
   title: "Easily customizable splash screens"
-  subtitle: "Take them to the next level."
+  subtitle: "Take them to the next level"
   text: |
     It was previously possible to customize the native Android splash screen of your game, but it required a Gradle build and manually installing files inside the native Android resources.
 
@@ -744,7 +744,7 @@ custom_splash_screen:
   media: custom_splash_screen.webp
 script_editor_orientation_change:
   title: "Enable orientation changes in the Script Editor"
-  subtitle: "Code layered down in your bed or in the bus."
+  subtitle: "Code layered down in your bed or in the bus"
   text: |
     One of the main usability issues of the Android Editor is script editing. While many improvements in this area are currently in progress, we’ve addressed one big issue: the fact that the on-screen keyboard takes up a large portion of the available screen space on mobile, making it difficult to work with code.
 
@@ -778,7 +778,7 @@ perfetto_tracing:
   media: perfetto_tracing.webp
 vulkan_subsampled_images:
   title: "Vulkan subsampled images"
-  subtitle: "Live long and subsample."
+  subtitle: "Live long and subsample"
   text: |
     This feature dramatically improves performance of foveated rendering in the Vulkan Mobile render.
 
@@ -811,7 +811,7 @@ action_map_improvements:
   media: "action_map_improvements.webp"
 composition_layer_improvements:
   title: "Composition layer improvements"
-  subtitle: "Check this out."
+  subtitle: "Check this out"
   text: |
     There are a number of improvements to the OpenXR composition layer system to give more control over how these are presented to the user, including:
 
