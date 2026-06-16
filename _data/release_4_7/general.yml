@@ -12,7 +12,7 @@ conclusion:
 
 end_message:
   text: |
-    It's been over 3 years since 4.0 dropped, and we’re arguably as far removed from that now as 4.0 is from 3.x. It’s only gotten easier to publish a title with the engine, as evidenced by Steam currently listing over 700 new Godot games published in 2026 so far; we’re not even halfway through the year, and we’re already over halfway to 2025’s 1,200+ total. This is to say nothing of itch.io, which receives over 1&#x2060;,&#x2060;000 new Godot games every week.
+    It’s been over 3 years since 4.0 dropped, and we’re arguably as far removed from that now as 4.0 is from 3.x. It’s only gotten easier to publish a title with the engine, as evidenced by Steam currently listing over 700 new Godot games published in 2026 so far; we’re not even halfway through the year, and we’re already over halfway to 2025’s 1,200+ total. This is to say nothing of itch.io, which receives over 1&#x2060;,&#x2060;000 new Godot games every week.
 
     Godot 4.6 gave users their most streamlined baseline release yet, whose focus on polish and usability immediately resonated with the community. This release aimed to double-down on that approach, making not only the engine itself more streamlined, but the tooling and resources surrounding it as well.
 
