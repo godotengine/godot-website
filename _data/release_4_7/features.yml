@@ -770,7 +770,7 @@ perfetto_tracing:
 
     For editor builds, this gives the Godot Android maintainers the tools to analyze and address performance issues with the Godot editor on Android devices.
 
-    [Read more in the documentation.](https://docs.godotengine.org/en/stable/engine_details/development/profiling/perfetto.html)
+    [Read more in the documentation.](https://docs.godotengine.org/en/4.7/engine_details/development/profiling/perfetto.html)
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+118401+118503"
   contributors:
     - name: "Fredia Huya-Kouadio"
