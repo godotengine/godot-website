@@ -720,7 +720,7 @@ csg_smoothing:
   media: csg_smoothing.webp
 gdscript_java_interfaces:
   title: "Allow implementing Java interfaces from GDScript"
-  subtitle: "😂😂😂😀😶😯🤯"
+  subtitle: "POV: ☕&#x2060;📐 ➡️ 🤖&#x2060;📄 You: 😂&#x2060;😂&#x2060;😂&#x2060;😀&#x2060;😶&#x2060;😯&#x2060;🤯"
   text: |
     The Android team continues their work to facilitate integration and access of Android APIs in GDScript through [JavaClassWrapper and the AndroidRuntime plugin](https://docs.godotengine.org/en/4.7/tutorials/platform/android/javaclasswrapper_and_androidruntimeplugin.html).
 
