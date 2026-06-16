@@ -83,7 +83,7 @@ shader_previews:
   media: "inline-text-shader-previews.webp"
 rect_area_light:
   title: "`AreaLight3D`, a new node for rectangular light sources"
-  subtitle: "Do you think light can bloom on a battlefield?"
+  subtitle: "Do you think light can bloom even on a battlefield?"
   text: |
     Soft radiating glows from humming TV screens, illuminated billboards in vibrant cityscapes, and ominous light through frosted windows are now achievable with rectangular area lights.
 
