@@ -583,7 +583,7 @@ joypad_motion_sensors:
   title: "Add gyro aiming support to your project!"
   subtitle: "Aim for the open spot!"
   text: |
-    This long-awaited feature makes it possible to read accelerometer and gyroscope inputs from controllers that feature the necessary hardware. This allows for the implementation of *gyro aiming* in Godot projects, which makes for responsive yet smooth aiming by tilting the controller.
+    Accelerometer and gyroscope inputs from controllers can now be read by Godot. Among other things, this allows for the implementation of responsive-yet-smooth *gyro aiming* by tilting the controller.
   read_more: "https://github.com/godotengine/godot/pull/111679"
   contributors:
     - name: "Nintorch"
