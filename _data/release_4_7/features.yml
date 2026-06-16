@@ -162,7 +162,7 @@ virtual_joystick:
   title: "Built-in virtual joystick"
   subtitle: "Break in case of emergency"
   text: |
-    Virtual joysticks are a staple of mobile gaming. From twin-stick shooters to 3D platformers, they’re featured in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one.
+    Virtual joysticks are a staple of touchscreen gaming. From twin-stick shooters to 3D platformers, they’re featured in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one.
 
     This is no longer needed as Godot now provides its own [`VirtualJoystick`](https://docs.godotengine.org/en/4.7/classes/class_virtualjoystick.html) node, complete with 3 operation modes: “Fixed”, “Dynamic”, and “Following”. Coupled with built-in theming abilities, this greatly speeds up the mobile development process.
   read_more: "https://github.com/godotengine/godot/pull/110933"
