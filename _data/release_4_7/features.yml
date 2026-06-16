@@ -618,7 +618,7 @@ pass_unique_buffer:
       link: "https://github.com/blueskythlikesclouds"
   media: pass_unique_buffer.webp
 mono_font_code_names:
-  title: "Method, signals, and properties now use a monospaced font"
+  title: "Method, signals, and properties now use a monospace font"
   subtitle: "It feels like home."
   text: |
     The script editor uses a monospace font by default. In other words, every character occupies the same width, which makes it easier to compare lines of code visually.
