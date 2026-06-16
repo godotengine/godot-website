@@ -10,7 +10,7 @@ hdr_support:
 
     Read the detailed write-up on [how HDR output was implemented in Godot](https://godotengine.org/article/hdr-output-arrives-in-godot-4-7/) to know more.
 
-    <span class="note">Please note that, depending on the browser you are using, the HDR preview may appear differently or may not be supported (for example, Firefox does not support HDR images).</span>
+    <p class="note">Please note that, depending on the browser you are using, the HDR preview may appear differently or may not be supported (for example, Firefox does not support HDR images).</p>
 
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+94496+102987+106814"
   contributors:
