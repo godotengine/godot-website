@@ -299,7 +299,7 @@ collapse_animation_groups:
   title: "Animation editor nodes are now collapsable"
   subtitle: "Free your mind"
   text: |
-    This feature is a blessing for animation editor power users. As soon as an animation node tracks multiple nodes, it’s easy to become overwhelmed scrolling through tracks to find the ones you need to edit.
+    As soon as an animation node tracks multiple nodes, it’s easy to become overwhelmed scrolling through tracks to find the ones you need to edit.
 
     Collapsing unneeded nodes should relieve the tension. Especially since you can see an aggregate representation of the collapsed animation keys.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+113479+117321"
