@@ -524,7 +524,7 @@ project_version_discrepancies:
   text: |
     While the Project Manager already displayed the engine version used by each project, it did not show an explicit indication that a project had to be upgraded (or downgraded) before it could be opened by the current editor version.
 
-    Thanks to this addition, an “upgrade” or “downgrade” icon is now displayed next to the version number if a project must be upgraded or downgraded before being opened. A different icon is also used for major version upgrades (e.g., opening a Godot 3 project in Godot 4).
+    Thanks to this addition, an “upgrade” or “downgrade” icon is now displayed next to the version number if a project must be upgraded or downgraded before being opened. A different icon is also used for major version upgrades (i.e., opening a Godot 3 project in Godot 4).
   read_more: "https://github.com/godotengine/godot/pull/111528"
   contributors:
     - name: "Malcolm Anderson"
