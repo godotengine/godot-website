@@ -822,7 +822,7 @@ composition_layer_improvements:
   title: "Rotate 3D nodes intuitively with trackball-style rotation"
   subtitle: "Look at that. Not bad at all. A big trackball indeed, itty-bitty Prince. ✨&#x2060;🌌&#x2060;🟪&#x2060;🤴&#x2060;🟪&#x2060;🌌&#x2060;✨"
   text: |
-    You can now rotate 3D nodes by hovering your mouse cursor inside the transform/rotation gizmo and by clicking and dragging the new translucent sphere. It will rotate just as if you were using a genuine trackball!
+    You can now rotate 3D nodes by hovering your mouse cursor inside the transform/rotation gizmo and clicking and dragging the new translucent sphere. It will rotate just as if you were using a genuine trackball!
 
     The 3D transform gizmo now more closely behaves like the one used in Blender.
 
