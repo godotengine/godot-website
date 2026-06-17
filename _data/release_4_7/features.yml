@@ -47,10 +47,10 @@ drawable_textures:
     link: "https://github.com/ColinSORourke"
   media: "drawable_textures.webm"
 asset_store_update:
-  title: "Exit the Asset Library, enter the Asset Store"
+  title: "Enter the Asset Store"
   subtitle: "Got a selection of good things, stranger!"
   text: |
-    The Asset Library has been due for a refresh for a while, and with the new Asset Store and API approaching on the horizon, this was the perfect opportunity to give it some extra care and attention.
+    The Asset Library did its job and it was really useful. But it's now time for it to make place for the new Asset Store.
 
     The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye; what if we told you that you can now see the asset ratings? Were you lost in a field of endless plugins? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
 
