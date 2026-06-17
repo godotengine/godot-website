@@ -304,6 +304,7 @@ collapse_animation_groups:
     name: "Malcolm Anderson"
     link: "https://github.com/Meorge"
   media: collapse_animation_groups.webm
+  poster: collapse_animation_groups_poster.webp
 path3d_snap:
   title: "`Path3D` points can now snap to colliders"
   subtitle: "Anchor up!"
