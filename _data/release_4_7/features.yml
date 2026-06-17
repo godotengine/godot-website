@@ -796,6 +796,9 @@ action_map_improvements:
       link: "https://github.com/BastiaanOlij"
     - name: "Logan Lang"
       link: "https://github.com/devloglogan"
+  media_author:
+    name: "Bastiaan Olij"
+    link: "https://github.com/BastiaanOlij"
   media: "action_map_improvements.webp"
 composition_layer_improvements:
   title: "Composition layer improvements"
