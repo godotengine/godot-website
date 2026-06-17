@@ -170,11 +170,12 @@ draft: true
             {% include_relative _components/card.html name="control_transform_offset" size="large" order="reverse" %}
 
             <div class="sub-grid">
-                {% include_relative _components/card.html name="drawable_textures" order="reverse" %}
-                {% include_relative _components/card.html name="android_gabe" %}
+                {% include_relative _components/card.html name="android_gabe" read_more_text="Read more about GABE" read_more_aria_label="Read more about GABE" %}
+                {% include_relative _components/card.html name="day_one_xr_support" read_more_hide=true %}
             </div>
 
             {% include_relative _components/card.html name="hdr_support" size="large" %}
+            {% include_relative _components/card.html name="drawable_textures" order="reverse" size="medium" %}
 
         </section>
 

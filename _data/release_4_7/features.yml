@@ -835,3 +835,28 @@ composition_layer_improvements:
     link: "https://bsky.app/profile/charlesboury.fr"
   media: "3d_transform_gizmo_trackball.webm"
   poster: "3d_transform_gizmo_trackball_poster.webp"
+day_one_xr_support:
+  title: "Day one support for the latest XR platforms"
+  subtitle: "It means buckle your seatbelt, Dorothy, 'cause Kansas is going bye-bye."
+  text: |
+    Godot continues the trend of being one of the best engines for XR development, with Godot 4.7 adding day one production ready support for Android XR and Steam Frame.
+
+    In collaboration [with Google](https://android-developers.googleblog.com/2026/05/android-xr-updates-unity-unreal-godot.html), the Godot XR team delivers [a plethora of new features](https://godotengine.org/article/godot-xr-update-may-2026/#android-xr) designed to provide developers access to the latest and greatest Android XR features.
+
+    With the [Steam Frame](https://store.steampowered.com/sale/steamframe) imminent release this summer, Godot 4.7 is also production ready on this platform, including a number of performance improvements.
+
+    From building a brand new XR game, to porting an existing 3D or XR game, Godot 4.7 provides you with the best tools for the job.
+
+    <div style="margin-top: 2rem" markdown=1>
+      [Learn more about how to develop for Android XR](https://developer.android.com/develop/xr/godot)<br>
+      [Learn more about how to develop for Steam Frame](https://partner.steamgames.com/doc/steamhardware/steamframe/engines/godot)
+    </div>
+  contributors:
+    - name: "Bastiaan Olij"
+      link: "https://github.com/BastiaanOlij"
+    - name: "David Snopek"
+      link: "https://github.com/dsnopek"
+    - name: "Fredia Huya-Kouadio"
+      link: "https://github.com/m4gr3d"
+    - name: "Logan Lang"
+      link: "https://github.com/devloglogan"
