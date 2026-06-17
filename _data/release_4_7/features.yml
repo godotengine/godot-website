@@ -85,7 +85,8 @@ rect_area_light:
   title: "`AreaLight3D`, a new node for rectangular light sources"
   subtitle: "Do you think light can bloom even on a battlefield?"
   text: |
-    The new `AreaLight3D` lets you render real-time light from a rectangle in 3D space, letting you capture effects like soft radiating glows from humming TV screens, illuminated billboards in vibrant cityscapes, and ominous light through frosted windows.
+    Soft radiating glows from humming TV screens, illuminated billboards in vibrant cityscapes, and ominous light through frosted windows are now achievable with rectangular area lights.
+    You no longer need to use an emissive material combined with Global Illumination to simulate a glowing area. By leveraging the new `AreaLight3D`, it is now possible to render real-time light from a rectangle in 3D space. Rectangular area lights can create softer shadows and more realistic reflections for your scenes.
   read_more: "https://github.com/godotengine/godot/pull/108219"
   contributors:
     - name: "Emil Dobetsberger"
