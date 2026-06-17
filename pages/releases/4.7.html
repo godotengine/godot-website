@@ -171,11 +171,10 @@ draft: true
 
             <div class="sub-grid">
                 {% include_relative _components/card.html name="android_gabe" read_more_text="Read more about GABE" read_more_aria_label="Read more about GABE" %}
-                {% include_relative _components/card.html name="day_one_xr_support" read_more_hide=true %}
+				{% include_relative _components/card.html name="drawable_textures" order="reverse" %}
             </div>
 
             {% include_relative _components/card.html name="hdr_support" size="large" %}
-            {% include_relative _components/card.html name="drawable_textures" order="reverse" size="medium" %}
 
         </section>
 
@@ -335,10 +334,10 @@ draft: true
 
 			{% include_relative _components/card.html name="vulkan_subsampled_images" size="large" %}
 
-            <div class="sub-grid">
-				{% include_relative _components/card.html name="action_map_improvements" %}
-                {% include_relative _components/card.html name="composition_layer_improvements" order="reverse" %}
-            </div>
+            {% include_relative _components/card.html name="composition_layer_improvements" order="reverse" %}
+			{% include_relative _components/card.html name="action_map_improvements" %}
+
+            {% include_relative _components/card.html name="day_one_xr_support" read_more_hide=true size="large" %}
 
         </section>
 
