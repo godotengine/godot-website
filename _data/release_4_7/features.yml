@@ -192,7 +192,7 @@ tree_drag_and_drop_update:
   text: |
     It’s now way more intuitive (and thus easier) to reorder items in [`Tree`](https://docs.godotengine.org/en/4.7/classes/class_tree.html) nodes, thanks to the new drop position indicator.
 
-    You will certainly appreciate this change when reordering nodes in your scene in the editor.
+    You will certainly appreciate this change when reordering your nodes in the editor.
   read_more: "https://github.com/godotengine/godot/pull/112993"
   contributors:
     - name: "vaner"
