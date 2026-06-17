@@ -549,9 +549,9 @@ create_node_type_filter:
   title: "Find quickly the node or resource to create with the new dialog filters"
   subtitle: "Cream of the crop"
   text: |
-    When opening the “Create” dialog for a node or a resource in 4.7, you’ll be able to filter the elements shown in the tree.
+    When opening the “Create” dialog for a node or resource in 4.7, you’ll be able to filter the elements shown in the tree.
 
-    Want to instantiate something from your code? No problem: make sure “Show Custom” is the only checkbox selected in the new option menu, just underneath the “Favorite” button.
+    Want to instantiate something from your code? No problem: make sure “Show Custom” is the only checkbox selected in the new option menu, just below the “Favorite” button.
   read_more: "https://github.com/godotengine/godot/pull/111518"
   contributors:
     - name: "Tomasz Chabora"
@@ -565,7 +565,7 @@ ios_sdl3:
   title: "Better controller support on iOS"
   subtitle: "A true controller know-it-all"
   text: |
-    We have switched to the battle-tested [SDL3 library](https://www.libsdl.org/) for controller support on iOS, as previously done on Windows, macOS, and Linux. This will improve controllers being recognized with better default mappings.
+    We have switched to the battle-tested [SDL3 library](https://www.libsdl.org/) for controller support on iOS, as previously done on Windows, macOS, and Linux. This ensures more controllers have the right default mappings.
   read_more: "https://github.com/godotengine/godot/pull/114316"
   contributors:
     - name: "Nintorch"
@@ -587,7 +587,7 @@ accessibility_region:
   text: |
     A new feature has been introduced in order to make the engine more accessible to both editor and end users.
 
-    The focused element of a user interface can frequently move in arbitrary ways. While we introduced screen reader support in 4.5, it lacked the ability to provide context information in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it was named.
+    The focused element of a user interface can move in unexpected ways. While we introduced screen reader support in 4.5, it lacked the ability to provide context information in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it is the name of.
 
     By introducing landmark navigation, the screen reader can give some context information once you enter the perimeter of a landmark, such as telling the screen reader user that the focus is currently in the Inspector, on the name field.
   read_more: "https://github.com/godotengine/godot/pull/114449"
@@ -610,12 +610,12 @@ pass_unique_buffer:
       link: "https://github.com/blueskythlikesclouds"
   media: pass_unique_buffer.webp
 mono_font_code_names:
-  title: "Method, signals, and properties now use a monospace font"
+  title: "Methods, signals, and properties now use a monospace font"
   subtitle: "It feels like home"
   text: |
     The script editor uses a monospace font by default. In other words, every character occupies the same width, which makes it easier to compare lines of code visually.
 
-    However, until now, the editor did not use a monospace font in locations where it displays names of methods, signals, and properties that come from scripts. This led to a visual discrepancy between what you see in the script editor and what you see elsewhere in the editor, when names coming from the scripts are visible.
+    However, until now, the editor did not use a monospace font when displaying the names of methods, signals, and properties that come from scripts. This led to a visual discrepancy between what you see in the script editor and what you see elsewhere in the editor.
 
     The previous behavior can still be obtained by disabling the **Interface > Theme > Use Monospace Font for Editor Symbols** editor setting.
   read_more: "https://github.com/godotengine/godot/pull/112219"
