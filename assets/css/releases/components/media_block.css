@@ -16,6 +16,11 @@
 	  object-position: center top;
 	}
   }
+  &.media-align-center-bottom {
+    > video, > img {
+	  object-position: center bottom;
+	}
+  }
   .author{
     position: absolute;
     font-size: 0.8em;
