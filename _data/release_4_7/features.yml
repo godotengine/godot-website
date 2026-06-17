@@ -43,9 +43,10 @@ drawable_textures:
     - name: "Colin O’Rourke"
       link: "https://github.com/ColinSORourke"
   media_author:
-    name: "Colin O’Rourke"
-    link: "https://github.com/ColinSORourke"
+    name: "Voylin"
+    link: "https://voylin.com"
   media: "drawable_textures.webm"
+  poster: "drawable_textures_poster.webp"
 asset_store_update:
   title: "Enter the Asset Store"
   subtitle: "Got a selection of good things, stranger!"
