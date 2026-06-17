@@ -530,10 +530,9 @@ project_version_discrepancies:
     - name: "Malcolm Anderson"
       link: "https://github.com/Meorge"
   media_author:
-    name: "Malcolm Anderson"
-    link: "https://github.com/Meorge"
-  media: project_version_discrepancies.webm
-  poster: project_version_discrepancies_poster.webp
+    name: "Adam Scott"
+    link: "https://github.com/adamscott"
+  media: project_version_discrepancies.webp
 input_events_device_ids:
   title: "Identify distinct keyboards and mice"
   subtitle: "BIG GODOT IS WATCHING YOU, keyboards and mice"

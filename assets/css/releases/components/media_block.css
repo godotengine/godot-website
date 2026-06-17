@@ -7,8 +7,13 @@
   background-color: var(--blank-color);
   overflow: hidden;
   &.media-align-left-center {
-    video {
+    > video, > img {
 	  object-position: left center;
+	}
+  }
+  &.media-align-center-top {
+    > video, > img {
+	  object-position: center top;
 	}
   }
   .author{
