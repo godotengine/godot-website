@@ -15,5 +15,15 @@ Jekyll::Hooks.register :site, :post_write do
     puts "ERROR: Neither 'minify' nor 'gominify' is installed. Please install 'minify'."
     exit 1
   end
-  `#{minify_command} -r -o #{to.relative_path_from(here)} #{from.relative_path_from(here)}`
+
+  minify_params = [
+    "--html-keep-document-tags",
+    "--html-keep-end-tags",
+    "--html-keep-quotes",
+    "-r",
+    "-o #{to.relative_path_from(here)}",
+    from.relative_path_from(here),
+  ]
+
+  `#{minify_command} #{minify_params.join(" ")}`
 end
