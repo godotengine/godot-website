@@ -34,7 +34,7 @@ drawable_textures:
 
     Previously, there were some hacky solutions through using a [`Viewport`](https://docs.godotengine.org/en/4.7/classes/class_viewport.html), but they were limited and costly when handling more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, [`RenderingDevice`](https://docs.godotengine.org/en/4.7/classes/class_renderingdevice.html) allowed for an even more complex solution.
 
-    However, now we have something much more accessible: a solution in the form of ✨ [`DrawableTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_drawabletexture2d.html) ✨. It’s a simple API layer that abstracts away all the technical noise and gives users of all skill levels an approachable way to draw on textures!
+    However, now we have something much more accessible: a solution in the form of ✨&#x2060;[`DrawableTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_drawabletexture2d.html)&#x2060;✨. It’s a simple API layer that abstracts away all the technical noise and gives users of all skill levels an approachable way to draw on textures!
   read_more: "https://github.com/godotengine/godot/pull/105701"
   contributors:
     - name: "Colin O’Rourke"
