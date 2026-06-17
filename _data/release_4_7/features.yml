@@ -323,7 +323,7 @@ display_enum_remote_tree:
   title: "Remote Tree Inspector now properly display non-exported enum variables"
   subtitle: "We could enumerate the benefits all day long if we really wanted"
   text: |
-    Prior to 4.7, the Remote Tree Inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only attributed to exported variables.
+    Prior to 4.7, the Remote Tree Inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only generated for exported variables.
 
     We now fixed this, and the Remote Tree Inspector now shows the enum name instead of its obscure integer value.
   read_more: "https://github.com/godotengine/godot/pull/115705"
