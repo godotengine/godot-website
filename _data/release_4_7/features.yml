@@ -123,7 +123,7 @@ nearest_neighbor_scaling:
   title: "New nearest-neighbor scaling option for viewports"
   subtitle: "Draw me like one of your PS1 girls"
   text: |
-    For 3D games with a retro art style, or when you want to maximize crispness when using a low-resolution scale for performance reasons, you can now use nearest-neighbor filtering for 3D rendering. Like the existing 3D resolution scale options, this does not affect 2D rendering. Performance is roughly identical to bilinear filtering.
+    For 3D games with a retro art style, or when you want to maximize crispness when using a low-resolution scale for performance reasons, you can now use **nearest-neighbor filtering** for 3D rendering. Like the existing 3D resolution scale options, this does not affect 2D rendering. Performance is roughly identical to bilinear filtering.
   read_more: "https://github.com/godotengine/godot/pull/79731"
   contributors:
     - name: "Hugo Locurcio"
