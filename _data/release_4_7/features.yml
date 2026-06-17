@@ -98,9 +98,9 @@ android_gabe:
   title: "Creating games entirely on Android"
   subtitle: "The power is in the palm of your hand"
   text: |
-    Developing on Android and XR has been possible for a while, and with Godot 4.7, developers now get the ability to export and publish their games as well thanks to the **Godot Android Build Environment** (GABE).
+    Developing on Android and XR has been possible for a while, and with the stable release of the **Godot Android Build Environment** (GABE), developers can now export and publish their games as well!
 
-    GABE is a companion app to the Godot Android editor that developers can download to support their development efforts.
+    GABE is a companion app to the Godot Android editor that developers can download for Gradle export support.
 
     Godot 4.7 sees some QOL improvements to better integrate and leverage GABE on Android devices.
   read_more: "https://godotengine.org/article/gabe-stable-release/"
@@ -217,7 +217,7 @@ scene_painter_tool:
   text: |
     Godot already offers a way to lay out scenes quickly in 2D using tile maps and their scene tiles. However, this requires some setup for projects not already using tile maps. It is also restricted to a grid pattern, and scene tiles are not considered actual nodes that can be directly modified within the editor.
 
-    To remedy these limitations, Godot now offers a scene painter tool in 2D. This can be used to quickly scatter things like foliage or decorations in a 2D scene.
+    To remedy these limitations, Godot now offers a **Scene Paint Mode** in 2D (<kbd><kbd>B</kbd></kbd> by default). This can be used to quickly scatter things like collectables, enemies, or decorations in a 2D scene.
 
     While this tool is currently only available in the 2D editor, it may be offered in the 3D editor in a future release.
   read_more: "https://github.com/godotengine/godot/pull/109360"
@@ -497,7 +497,7 @@ ignore_joypad:
   text: |
     Operating systems handle gamepad input differently from keyboard and mouse input, as gamepad input is sent even when the window is unfocused. While this can be beneficial in some situations, it can lead to unintended inputs, potentially leading to accidentally exiting a game in the worst case.
 
-    By enabling the [**Input Devices > Joypads > Ignore Joypad on Unfocused Application**](https://docs.godotengine.org/en/latest/classes/class_projectsettings.html#class-projectsettings-property-input-devices-joypads-ignore-joypad-on-unfocused-application) project setting, you can now make Godot ignore gamepad input unless the window is focused. This setting is *disabled by default* to preserve existing behavior.
+    By enabling the [**Input Devices > Joypads > Ignore Joypad on Unfocused Application**](https://docs.godotengine.org/en/4.7/classes/class_projectsettings.html#class-projectsettings-property-input-devices-joypads-ignore-joypad-on-unfocused-application) project setting, you can now make Godot ignore gamepad input unless the window is focused. This setting is *disabled by default* to preserve existing behavior.
   read_more: "https://github.com/godotengine/godot/pull/115119"
   contributors:
     - name: "Nintorch"
@@ -611,7 +611,7 @@ mono_font_code_names:
 
     However, until now, the editor did not use a monospace font when displaying the names of methods, signals, and properties that come from scripts. This led to a visual discrepancy between what you see in the script editor and what you see elsewhere in the editor.
 
-    The previous behavior can still be obtained by disabling the **Interface > Theme > Use Monospace Font for Editor Symbols** editor setting.
+    The previous behavior can still be obtained by disabling the [**Interface > Theme > Use Monospace Font for Editor Symbols**](https://docs.godotengine.org/en/4.7/classes/class_editorsettings.html#class-editorsettings-property-interface-theme-use-monospace-font-for-editor-symbols) editor setting.
   read_more: "https://github.com/godotengine/godot/pull/112219"
   contributors:
     - name: "Malcolm Anderson"
@@ -660,7 +660,7 @@ follow_selection:
   title: "Follow moving objects in the 3D editor"
   subtitle: "Taxi! Follow that node!"
   text: |
-    By pressing the Focus Selection shortcut (<kbd><kbd>F</kbd></kbd> by default) *twice*, you can make the 3D editor automatically follow an object as it’s moved. This is especially useful when previewing how lighting affects an object as it moves across the scene, such as when using [`LightmapGI`](https://docs.godotengine.org/en/4.7/classes/class_lightmapgi.html) with dynamic objects.
+    By pressing the **Focus Selection** shortcut (<kbd><kbd>F</kbd></kbd> by default) *twice*, you can make the 3D editor automatically follow an object as it’s moved. This is especially useful when previewing how lighting affects an object as it moves across the scene, such as when using [`LightmapGI`](https://docs.godotengine.org/en/4.7/classes/class_lightmapgi.html) with dynamic objects.
 
     You can still transform the object using the mouse or Blender-style manipulation shortcuts while in follow mode. This also works when playing an animation using an [`AnimationPlayer`](https://docs.godotengine.org/en/4.7/classes/class_animationplayer.html) node, or moving a node using a `@tool` script.
   read_more: "https://github.com/godotengine/godot/pull/99499"
@@ -835,13 +835,13 @@ composition_layer_improvements:
   poster: "3d_transform_gizmo_trackball_poster.webp"
 day_one_xr_support:
   title: "Day one support for the latest XR platforms"
-  subtitle: "It means buckle your seatbelt, Dorothy, 'cause Kansas is going bye-bye."
+  subtitle: "It means buckle your seatbelt, Dorothy, ’cause Kansas is going bye-bye."
   text: |
     Godot continues the trend of being one of the best engines for XR development, with Godot 4.7 adding day one production ready support for [Android XR](https://www.android.com/xr/) and [Steam Frame](https://store.steampowered.com/sale/steamframe).
 
     In collaboration [with Google](https://android-developers.googleblog.com/2026/05/android-xr-updates-unity-unreal-godot.html), the Godot XR team delivers [a plethora of new features](https://godotengine.org/article/godot-xr-update-may-2026/#android-xr) designed to provide developers access to the latest and greatest Android XR features.
 
-    With the Steam Frame imminent release this summer, Godot 4.7 is also production ready on this platform, including a number of performance improvements.
+    Godot 4.7 is also production-ready for the Steam Frame, planned to release this summer.
 
     From building a brand new XR game, to porting an existing 3D or XR game, Godot 4.7 provides you with the best tools for the job.
 
