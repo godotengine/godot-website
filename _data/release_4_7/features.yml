@@ -100,7 +100,7 @@ android_gabe:
   title: "Creating games entirely on Android"
   subtitle: "The power is in the palm of your hand"
   text: |
-    Developing on Android and XR has been possible for a while, and with Godot 4.7, developers now get the ability to export and publish their games as well thanks to the Godot Android Build Environment (GABE).
+    Developing on Android and XR has been possible for a while, and with Godot 4.7, developers now get the ability to export and publish their games as well thanks to the **Godot Android Build Environment** (GABE).
 
     GABE is a companion app to the Godot Android editor that developers can download to support their development efforts.
 
