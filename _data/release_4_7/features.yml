@@ -33,7 +33,7 @@ drawable_textures:
   title: "Drawing on a texture has never been this easy"
   subtitle: "There are no mistakes here, only happy accidents"
   text: |
-    After a long wait, we’re excited to share that it’s possible to easily draw on a texture!
+    After a long wait, we’re excited to share that it is now possible to easily draw on a texture!
 
     Previously, there were some hacky solutions through using a Viewport, but they were limited and costly when handling more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, RenderingDevice allowed for an even more complex solution.
 
@@ -52,7 +52,7 @@ asset_store_update:
   text: |
     The Asset Library has been due for a refresh for a while, and with the new Asset Store and API approaching on the horizon, this was the perfect opportunity to give it some extra care and attention.
 
-    The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye, what if we were to tell you, you can now see the asset ratings. Were you lost in a field of endless plugins? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
+    The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye; what if we told you that you can now see the asset ratings? Were you lost in a field of endless plugins? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
 
     Behind the scenes, we have also introduced threading. This means the Asset Store can perform certain tasks in the background without blocking the editor’s main user interface. Now while you’re exploring your organized assets, you’ll also know there’s someone paving a path and clearing brush quietly in the background, making it that much easier for you to get the lay of the land.
   read_more: "https://github.com/godotengine/godot/pull/112992"
