@@ -369,10 +369,10 @@ control_transform_offset:
   media: control_transform_offset.webm
   poster: control_transform_offset_poster.webp
 popup_search:
-  title: "Filter out long `PopupMenu` items with a search bar"
+  title: "Filter long `PopupMenu`s with a search bar"
   subtitle: "Cut to the chase"
   text: |
-    Some features in Godot such as choosing a new class for a [`Resource`](https://docs.godotengine.org/en/4.7/classes/class_resource.html) property or selecting a language spawns tall dialogs with hundreds of options to choose from. While incremental search exists (typing some letters to highlight the first match), it’s difficult to discover and is not usable on a touch screen.
+    Some features in Godot, such as choosing a new class for a [`Resource`](https://docs.godotengine.org/en/4.7/classes/class_resource.html) property or selecting a language, spawn tall dialogs with hundreds of options to choose from. While incremental search exists (typing some letters to highlight the first match), it’s difficult to discover and is not usable on a touchscreen.
 
     [`PopupMenu`](https://docs.godotengine.org/en/4.7/classes/class_popupmenu.html) now supports optionally showing a search dialog at the top, making this functionality much easier to discover. On top of that, this also sidesteps the limitation on incremental search delay: you can take as much time as you want to type the desired search query.
   read_more: "https://github.com/godotengine/godot/pull/114236"
@@ -524,7 +524,7 @@ project_version_discrepancies:
   text: |
     While the Project Manager already displayed the engine version used by each project, it did not show an explicit indication that a project had to be upgraded (or downgraded) before it could be opened by the current editor version.
 
-    Thanks to this addition, an “upgrade” or “downgrade” icon is now displayed next to the version number if a project must be upgraded or downgraded before being opened. A different icon is also used for major version upgrades (i.e. opening a Godot 3 project in Godot 4).
+    Thanks to this addition, an “upgrade” or “downgrade” icon is now displayed next to the version number if a project must be upgraded or downgraded before being opened. A different icon is also used for major version upgrades (e.g., opening a Godot 3 project in Godot 4).
   read_more: "https://github.com/godotengine/godot/pull/111528"
   contributors:
     - name: "Malcolm Anderson"
@@ -540,7 +540,7 @@ input_events_device_ids:
   text: |
     Like gamepad inputs, keyboard and mouse inputs now use a device identifier. This can be used to distinguish keyboard/mouse inputs from other inputs by checking the [`InputEvent`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html)’s `device` property. Keyboard inputs always have their device ID set to [`InputEvent.DEVICE_ID_KEYBOARD`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html#class-inputevent-constant-device-id-keyboard), while mouse inputs have it set to [`InputEvent.DEVICE_ID_MOUSE`](https://docs.godotengine.org/en/4.7/classes/class_inputevent.html#class-inputevent-constant-device-id-mouse).
 
-    While this change does not add support for differentiating between multiple keyboards/mice connected to the same system, it lays a foundation that makes this possible to implement in the future.
+    While this change does not add support for differentiating between multiple keyboards or mice connected to the same system, it lays a foundation that makes this possible to implement in the future.
   read_more: "https://github.com/godotengine/godot/pull/116274"
   contributors:
     - name: "Nintorch"
@@ -598,10 +598,8 @@ accessibility_region:
   media: accessibility_region.webp
 pass_unique_buffer:
   title: "Giving every pass its own unique environment uniform buffer"
-  subtitle: "You get a buffer! And you! Everyone gets a buffer!"
+  subtitle: "You get a buffer! And you get a buffer! Everyone gets a buffer!"
   text: |
-    A small performance gain for projects that use the Forward+ renderer without having to do anything! Talk about a great deal.
-
     Modern rendering uses what we call “passes” in order to create final images that are shown on your screen. These are essentially processes that end up with a painted canvas. Some passes can draw the scene objects, while others can read the output of previous passes in order to apply some post-processing effects.
 
     We figured out that by giving each pass their own unique environment uniform memory pool, we could speed up the rendering process. It’s all because sharing the same memory pool across passes added copy dependencies that often bottlenecked the whole process. As GPUs are meant to multiple tasks in parallel, it checks out.
