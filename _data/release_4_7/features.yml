@@ -35,7 +35,7 @@ drawable_textures:
   text: |
     After a long wait, we’re excited to share that it is now possible to easily draw on a texture!
 
-    Previously, there were some hacky solutions through using a Viewport, but they were limited and costly when handling more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, RenderingDevice allowed for an even more complex solution.
+    Previously, there were some hacky solutions through using a [`Viewport`](https://docs.godotengine.org/en/4.7/classes/class_viewport.html), but they were limited and costly when handling more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, [`RenderingDevice`](https://docs.godotengine.org/en/4.7/classes/class_renderingdevice.html) allowed for an even more complex solution.
 
     However, now we have something much more accessible: a solution in the form of ✨ [`DrawableTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_drawabletexture2d.html) ✨. It’s a simple API layer that abstracts away all the technical noise and gives users of all skill levels an approachable way to draw on textures!
   read_more: "https://github.com/godotengine/godot/pull/105701"
@@ -51,7 +51,7 @@ asset_store_update:
   title: "Enter the Asset Store"
   subtitle: "Got a selection of good things, stranger!"
   text: |
-    The Asset Library did its job and it was really useful. But it’s now time for it to make way for the new Asset Store.
+    The Asset Library did its job and it was really useful. But it’s now time for it to make way for the new [Asset Store](https://store.godotengine.org/).
 
     The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and you can now zoom asset preview images. But, maybe that doesn’t catch your eye; what if we told you that you can now see the asset ratings? Were you lost in a field of endless plugins? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
 
@@ -88,7 +88,7 @@ rect_area_light:
   text: |
     Soft radiating glows from humming TV screens, illuminated billboards in vibrant cityscapes, and ominous light through frosted windows are now achievable with rectangular area lights.
 
-    You no longer need to use an emissive material combined with Global Illumination to simulate a glowing area. By leveraging the new `AreaLight3D`, it is now possible to render real-time light from a rectangle in 3D space. Rectangular area lights can create softer shadows and more realistic reflections for your scenes.
+    You no longer need to use an emissive material combined with Global Illumination to simulate a glowing area. By leveraging the new [`AreaLight3D`](https://docs.godotengine.org/en/4.7/classes/class_arealight3d.html), it is now possible to render real-time light from a rectangle in 3D space. Rectangular area lights can create softer shadows and more realistic reflections for your scenes.
   read_more: "https://github.com/godotengine/godot/pull/108219"
   contributors:
     - name: "Emil Dobetsberger"
@@ -192,7 +192,7 @@ tree_drag_and_drop_update:
   text: |
     It’s now way more intuitive (and thus easier) to reorder items in [`Tree`](https://docs.godotengine.org/en/4.7/classes/class_tree.html) nodes, thanks to the new drop position indicator.
 
-    You’ll certainly appreciate this change when reordering your scene nodes in the editor.
+    You will certainly appreciate this change when reordering nodes in your scene in the editor.
   read_more: "https://github.com/godotengine/godot/pull/112993"
   contributors:
     - name: "vaner"
@@ -252,9 +252,9 @@ remote_scene_inspector_groups_folding:
   title: "Fold groups and subgroups in the Remote Scene Inspector"
   subtitle: "Quick! Hide!"
   text: |
-    Previously, it was possible to fold property groups and subgroups in the local Inspector, but not in the remote Inspector. This owes to the fact that the remote Inspector is a separate implementation from the local Inspector.
+    Previously, it was possible to fold property groups and subgroups in the Local Inspector, but not in the Remote Inspector. These two don't quite work the same, mind you.
 
-    Support for folding groups and subgroups in the Remote Scene Inspector has been implemented. Both the local and remote Inspector now support folding property groups the same way, which makes for a more seamless, consistent UX.
+    Support for folding groups and subgroups in the Remote Scene Inspector has been implemented. Both the Local and Remote Inspector now support folding property groups the same way, which makes for a more seamless, consistent UX.
   read_more: "https://github.com/godotengine/godot/pull/117357"
   contributors:
     - name: "Jayden Sipe"
@@ -325,9 +325,9 @@ display_enum_remote_tree:
   title: "Remote Tree Inspector now properly display non-exported enum variables"
   subtitle: "We could enumerate the benefits all day long if we really wanted"
   text: |
-    Prior to 4.7, the Remote Tree Inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only generated for exported variables.
+    Prior to 4.7, the Remote Tree Inspector had no way to distinguish normal integer variables from variables that held a value from an enum. That’s because variable hint strings were only generated for exported variables.
 
-    We now fixed this, and the Remote Tree Inspector now shows the enum name instead of its obscure integer value.
+    We now fixed this, and the Remote Tree Inspector now shows the name from the enum, instead of its obscure integer value.
   read_more: "https://github.com/godotengine/godot/pull/115705"
   contributors:
     - name: "Danil Alexeev"
@@ -418,7 +418,7 @@ one_way_collision_direction:
   title: "One-way collision support for `CollisionShape2D`"
   subtitle: "A one-way ticket for 2D platformers"
   text: |
-    Creating one-way collisions for your platformers (and more!) is now easier than ever! With this new `one_way_collision_direction` property of `CollisionShape2D`, you’re now able to set the one-way collision direction to any direction, relative and local to the shape.
+    Creating one-way collisions for your platformers (and more!) is now easier than ever! With this new [`one_way_collision_direction`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html#class-collisionshape2d-property-one-way-collision-direction) property of [`CollisionShape2D`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html), you’re now able to set the one-way collision direction to any direction, relative and local to the shape.
 
     Previously, it was assumed that the one-way direction was locally up relative to the `CollisionShape2D` shape. People resorted to changing the shape itself in order to edit the one-way direction. This painful workaround is no longer needed.
 
@@ -484,7 +484,7 @@ vertex_snap:
   text: |
     Placing meshes in a scene in the Godot editor used to be tedious. There wasn’t any way to tell it to place the edge of a level mesh flush to the tip of the one already present.
 
-    But now, when holding the new Vertex Snap shortcut, the editor will highlight the nearest vertex on the selected node’s geometry. This selection can then be clicked and dragged to other vertices on other meshes.
+    But now, when holding the new **Vertex Snap** shortcut, the editor will highlight the nearest vertex on the selected node’s geometry. This selection can then be clicked and dragged to other vertices on other meshes.
   read_more: "https://github.com/godotengine/godot/pull/117380"
   contributors:
     - name: "Robert Yevdokimov"
@@ -500,7 +500,7 @@ ignore_joypad:
   text: |
     Operating systems handle gamepad input differently from keyboard and mouse input, as gamepad input is sent even when the window is unfocused. While this can be beneficial in some situations, it can lead to unintended inputs, potentially leading to accidentally exiting a game in the worst case.
 
-    By enabling the **Input Devices > Joypads > Ignore Joypad on Unfocused Application** project setting, you can now make Godot ignore gamepad input unless the window is focused. This setting is *disabled by default* to preserve existing behavior.
+    By enabling the [**Input Devices > Joypads > Ignore Joypad on Unfocused Application**](https://docs.godotengine.org/en/latest/classes/class_projectsettings.html#class-projectsettings-property-input-devices-joypads-ignore-joypad-on-unfocused-application) project setting, you can now make Godot ignore gamepad input unless the window is focused. This setting is *disabled by default* to preserve existing behavior.
   read_more: "https://github.com/godotengine/godot/pull/115119"
   contributors:
     - name: "Nintorch"
