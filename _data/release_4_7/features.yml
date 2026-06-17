@@ -693,7 +693,7 @@ view_3d_controller:
   media: view_3d_controller.webp
 csg_smoothing:
   title: "Automatic smoothing option for CSG nodes"
-  subtitle: "You’ve been hit by… a smooth Cs’G node"
+  subtitle: "You’ve been hit by… a smooth C’G node"
   text: |
     When creating geometry with CSG nodes, they inherit the smooth/sharp faces from the original mesh data. This is not always suitable, as it can lead to curves being made of sharp faces depending on how they were constructed using CSG nodes.
 
