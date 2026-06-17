@@ -43,7 +43,7 @@ drawable_textures:
     - name: "Colin O’Rourke"
       link: "https://github.com/ColinSORourke"
   media_author:
-    name: "Voylin"
+    name: "Voylin (demo)"
     link: "https://voylin.com"
   media: "drawable_textures.webm"
   poster: "drawable_textures_poster.webp"
