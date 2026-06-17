@@ -354,7 +354,7 @@ control_transform_offset:
   title: "Add transform offset to `Control` nodes"
   subtitle: "Transform the way you design GUIs"
   text: |
-    One of the most long-awaited features in Godot’s GUI system is to be able to translate, rotate, or scale a [`Control`](https://docs.godotengine.org/en/4.7/classes/class_control.html) node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide into view or fade away with a scale change.
+    One of the most long-awaited features in Godot’s GUI system has been to be able to translate, rotate, or scale a [`Control`](https://docs.godotengine.org/en/4.7/classes/class_control.html) node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide into view or fade away with a scale change.
 
     However, Godot’s various [`Container`](https://docs.godotengine.org/en/4.7/classes/class_container.html) nodes apply their position, rotation, and scale to their children, which means any changes made to the children’s transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). The new transform offset properties aim to address this limitation in a self-contained manner, similar to the CSS [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform) property.
 
