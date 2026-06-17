@@ -64,7 +64,7 @@ shader_previews:
   title: "Inline previews of text-based shader operations"
   subtitle: "I don’t even see the code. All I see is fresnel, albedo, occlusion."
   text: |
-    We’ll keep going with this field imagery. Imagine you’re in a field. In the far distance, you see a lone developer, hunched over their laptop, you intuitively yell through the tall grass, “`VEC2 V4 = UV;`”!! The developer victoriously pumps their hand in the air, but in your heart you know you’ll need to see the results for yourself. You tread through the field, and at last, you arrive, gasping for air, you look over the lone developer’s shoulder to witness your creation.
+    We’ll keep going with this field imagery. Imagine you’re in a field. In the far distance, you see a lone developer, hunched over their laptop. You intuitively yell through the tall grass, “`VEC2 V4 = UV;`”!! The developer victoriously pumps their hand in the air, but in your heart you know you’ll need to see the results for yourself. You tread through the field, and at last, gasping for air, you look over the lone developer’s shoulder to witness your creation.
 
     With inline text shader previews, the treacherous journey is over.
 
@@ -120,9 +120,7 @@ nearest_neighbor_scaling:
   title: "New nearest-neighbor scaling option for viewports"
   subtitle: "Draw me like one of your PS1 girls"
   text: |
-    For 3D games with a retro art style, or when you want to maximize crispness when using a low resolution scale for performance reasons, you can now opt into nearest-neighbor filtering for 3D rendering. Like the existing 3D resolution scale options, this does not affect 2D rendering. Performance is roughly identical to bilinear filtering.
-
-    For best results, the **Scaling 3D > Scale** project setting should be set to a value that corresponds to an integer scaling factor. These factors include `0.5` (½ resolution), `0.333` (⅓ resolution), and `0.25` (¼ resolution). This ensures all pixels are evenly scaled, avoiding distortion.
+    For 3D games with a retro art style, or when you want to maximize crispness when using a low resolution scale for performance reasons, you can now use nearest-neighbor filtering for 3D rendering. Like the existing 3D resolution scale options, this does not affect 2D rendering. Performance is roughly identical to bilinear filtering.
   read_more: "https://github.com/godotengine/godot/pull/79731"
   contributors:
     - name: "Hugo Locurcio"
