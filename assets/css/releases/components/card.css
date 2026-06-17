@@ -34,7 +34,7 @@
       margin-bottom: var(--s);
     }
     a{
-      color: var(--body-text-color);
+      color: var(--color-godot-but-a-little-brighter);
       font-weight: 600;
 
       &:has(> code) {
