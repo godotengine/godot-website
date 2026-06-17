@@ -51,7 +51,7 @@ asset_store_update:
   title: "Enter the Asset Store"
   subtitle: "Got a selection of good things, stranger!"
   text: |
-    The Asset Library did its job and it was really useful. But it's now time for it to make place for the new Asset Store.
+    The Asset Library did its job and it was really useful. But it’s now time for it to make place for the new Asset Store.
 
     The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye; what if we told you that you can now see the asset ratings? Were you lost in a field of endless plugins? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
 
@@ -263,7 +263,7 @@ remote_scene_inspector_groups_folding:
     link: "https://github.com/jaydensipe"
   media: remote_scene_inspector_groups_folding.webm
 gdextensions_view_inside_settings:
-  title: "The project's GDExtensions are now displayed in the Project Settings"
+  title: "The project’s GDExtensions are now displayed in the Project Settings"
   subtitle: "GDExtensions, assemble!"
   text: |
     Since their introduction and by their nature, GDExtensions are automatically loaded by the engine on initialization. There was unfortunately no way to know exactly which project extensions were actually present in a project, except by manually locating the project’s `.gdextension` files.

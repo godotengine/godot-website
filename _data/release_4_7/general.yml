@@ -2,7 +2,7 @@ introduction:
   text: |
     Like a cult classic movie, Godot 4 has only gotten better with age. The first few releases focused on stability, granting the engine a rock-solid foundation that could be safely and easily iterated upon. Gradually, this has shifted more towards polish and quality-of-life, peaking in [Godot 4.6](https://godotengine.org/releases/4.6/) giving developers the tools to put them and their workflow first.
 
-    This brings us to Godot 4.7. With 3 years under its belt, the 4.7 _Director's Cut_ offers colors of never-before-reached intensity. HDR output radiates bold and brilliant new hues, allowing your projects to shine like never before. Inject some juice to your UI without breaking a sweat using the new `Control` offset transforms. Find the plugin that will help push your game even further with the new Asset Store, bask in the ease of creation with standalone Android exporting and publishing, and helm a bevy of new features to eliminate any remaining friction between you and your vision.
+    This brings us to Godot 4.7. With 3 years under its belt, the 4.7 _Director’s Cut_ offers colors of never-before-reached intensity. HDR output radiates bold and brilliant new hues, allowing your projects to shine like never before. Inject some juice to your UI without breaking a sweat using the new `Control` offset transforms. Find the plugin that will help push your game even further with the new Asset Store, bask in the ease of creation with standalone Android exporting and publishing, and helm a bevy of new features to eliminate any remaining friction between you and your vision.
 conclusion:
   title: Team work makes the dream work
   text: |
