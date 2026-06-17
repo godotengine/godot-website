@@ -6,7 +6,7 @@ hdr_support:
 
     HDR originally comes from photography, where multiple photos are taken from the same position at different exposures. When the photos are combined, you’re able to capture both the bright and dark areas of the image, achieving a greater dynamic range.
 
-    In Godot 4.7, HDR output has been made possible for Windows, macOS, iOS, visionOS, and Linux (Wayland). Output support for HDR allows for more fine-tuned customization of exposure and glow. You also have access to ranges and colors that were simply not possible before, with higher detail especially in bright areas. 2D and 3D content can also be mixed in the same scene while keeping a consistent brightness between the two!
+    In Godot 4.7, HDR output has been made possible for Windows, macOS, iOS, visionOS, and Linux (Wayland). Output support for HDR allows for more fine-tuned customization of exposure and glow. You have access to ranges and colors that were simply not possible before, with higher detail especially in bright areas. 2D and 3D content can also be mixed in the same scene while keeping a consistent brightness between the two!
 
     Read the detailed write-up on [how HDR output was implemented in Godot](https://godotengine.org/article/hdr-output-arrives-in-godot-4-7/) to know more.
 
@@ -51,9 +51,9 @@ asset_store_update:
   title: "Enter the Asset Store"
   subtitle: "Got a selection of good things, stranger!"
   text: |
-    The Asset Library did its job and it was really useful. But it’s now time for it to make place for the new Asset Store.
+    The Asset Library did its job and it was really useful. But it’s now time for it to make way for the new Asset Store.
 
-    The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye; what if we told you that you can now see the asset ratings? Were you lost in a field of endless plugins? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
+    The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and you can now zoom asset preview images. But, maybe that doesn’t catch your eye; what if we told you that you can now see the asset ratings? Were you lost in a field of endless plugins? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
 
     Behind the scenes, we have also introduced threading. This means the Asset Store can perform certain tasks in the background without blocking the editor’s main user interface. Now while you’re exploring your organized assets, you’ll also know there’s someone paving a path and clearing brush quietly in the background, making it that much easier for you to get the lay of the land.
   read_more: "https://github.com/godotengine/godot/pull/112992"
@@ -122,7 +122,7 @@ nearest_neighbor_scaling:
   title: "New nearest-neighbor scaling option for viewports"
   subtitle: "Draw me like one of your PS1 girls"
   text: |
-    For 3D games with a retro art style, or when you want to maximize crispness when using a low resolution scale for performance reasons, you can now use nearest-neighbor filtering for 3D rendering. Like the existing 3D resolution scale options, this does not affect 2D rendering. Performance is roughly identical to bilinear filtering.
+    For 3D games with a retro art style, or when you want to maximize crispness when using a low-resolution scale for performance reasons, you can now use nearest-neighbor filtering for 3D rendering. Like the existing 3D resolution scale options, this does not affect 2D rendering. Performance is roughly identical to bilinear filtering.
   read_more: "https://github.com/godotengine/godot/pull/79731"
   contributors:
     - name: "Hugo Locurcio"
@@ -336,9 +336,9 @@ picture_in_picture:
   title: "Add support for picture-in-picture"
   subtitle: "What is this? A game for ants?"
   text: |
-    Think [picture-in-picture](https://en.wikipedia.org/wiki/Picture-in-picture) (PIP) is only good to continue watching videos while doing something else on your phone, right? Think again!
+    Think [picture-in-picture](https://en.wikipedia.org/wiki/Picture-in-picture) (PiP) is only good to continue watching videos while doing something else on your phone, right? Think again!
 
-    With the introduction of PIP, you can render your game inside one of these little boxes. This is perfect for media players built using Godot, or for games that don’t require player input often or have long cutscenes. It enables players to keep playing while reading their emails or keeping up with their friends.
+    With the introduction of PiP, you can render your game inside one of these little boxes. This is perfect for media players built using Godot, or for games that don’t require player input often or have long cutscenes. It enables players to keep playing while reading their emails or keeping up with their friends.
 
     While it’s only available on the Android platform for now, this feature will hopefully make its way to other platforms soon.
   read_more: "https://github.com/godotengine/godot/pull/114505"
@@ -763,7 +763,7 @@ perfetto_tracing:
 
     For editor builds, this gives the Godot Android maintainers the tools to analyze and address performance issues with the Godot editor on Android devices.
 
-    [Read more in the documentation.](https://docs.godotengine.org/en/4.7/engine_details/development/profiling/perfetto.html)
+    [Read more in the documentation](https://docs.godotengine.org/en/4.7/engine_details/development/profiling/perfetto.html).
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+118401+118503"
   contributors:
     - name: "Fredia Huya-Kouadio"
@@ -777,7 +777,7 @@ vulkan_subsampled_images:
 
     This works by storing rendered tiles at their reduced resolution with interpolation being applied when sampling the resulting subimage, greatly decreasing memory bandwidth. Without subsampled images, foveated rendering will upscale these tiles to the full resolution when writing to texture memory.
 
-    With this change the Vulkan mobile renderer matches or even outperforms our compatibility renderer in a number of benchmarks. As a result, we now recommend new XR projects use the Mobile renderer.
+    With this change, the Vulkan Mobile renderer matches or even outperforms our Compatibility renderer in a number of benchmarks. As a result, we now recommend new XR projects use the Mobile renderer.
   read_more: "https://github.com/godotengine/godot/pull/116220"
   contributors:
     - name: "David Snopek"
@@ -787,14 +787,14 @@ vulkan_subsampled_images:
     link: "https://bsky.app/profile/adamscott.studio"
   media: "vulkan_subsampled_images.webm"
 action_map_improvements:
-  title: "XR action maps have been simplified"
+  title: "Action maps have been simplified"
   subtitle: "“*Le contrôleur!?* What the hell is that!” no more."
   text: |
     With the introduction of support for the [OpenXR generic controller profile](https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_KHR_generic_controller), the default [action map](https://docs.godotengine.org/en/4.7/tutorials/xr/xr_action_map.html) for new OpenXR projects has been greatly simplified.
 
     From more than 10 profiles, the default action map has been simplified to only contain entries for the generic controller profile, touch controller profile, Pico 4 controller profile, and hand interaction profile.
 
-    Developers can introduce additional profiles if their target platforms require those but with just these 4 defaults, the action map is far more manageable, while still covering most of the market.
+    Developers can introduce additional profiles if their target platforms require those but with just these four defaults, the action map is far more manageable, while still covering most of the market.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+110778+118975"
   contributors:
     - name: "Bastiaan Olij"
