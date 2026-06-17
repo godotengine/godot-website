@@ -586,8 +586,6 @@ accessibility_region:
   title: "Landmark navigation for enhanced accessibility"
   subtitle: "You are here 👇"
   text: |
-    A new feature has been introduced in order to make the engine more accessible to both editor and end users.
-
     The focused element of a user interface can move in unexpected ways. While we introduced screen reader support in 4.5, it lacked the ability to provide context information in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it is the name of.
 
     By introducing landmark navigation, the screen reader can give some context information once you enter the perimeter of a landmark, such as telling the screen reader user that the focus is currently in the Inspector, on the name field.
@@ -602,7 +600,7 @@ pass_unique_buffer:
   text: |
     Modern rendering uses what we call “passes” in order to create final images that are shown on your screen. These are essentially processes that end up with a painted canvas. Some passes can draw the scene objects, while others can read the output of previous passes in order to apply some post-processing effects.
 
-    We figured out that by giving each pass their own unique environment uniform memory pool, we could speed up the rendering process. It’s all because sharing the same memory pool across passes added copy dependencies that often bottlenecked the whole process. As GPUs are meant to multiple tasks in parallel, it checks out.
+    We figured out that by giving each pass their own unique environment uniform memory pool, we could speed up the rendering process. It’s all because sharing the same memory pool across passes added copy dependencies that often bottlenecked the whole process. As GPUs are meant to do multiple tasks in parallel, it checks out.
   read_more: "https://github.com/godotengine/godot/pull/115177"
   contributors:
     - name: "Skyth"
@@ -753,7 +751,7 @@ script_editor_orientation_change:
   poster: script_editor_orientation_change_poster.webp
 perfetto_tracing:
   title: "Making tracing easier with Perfetto"
-  subtitle: "I want to know everything there is to know about Spider-Android!!"
+  subtitle: "I want to know everything there is to know about Spider-Android!"
   text: |
     In Godot 4.7, we are making Perfetto the default tracing tool for Android editor and template builds.
 
