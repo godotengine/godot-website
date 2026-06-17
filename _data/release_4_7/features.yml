@@ -804,9 +804,9 @@ composition_layer_improvements:
   text: |
     There are a number of improvements to the [OpenXR composition layer system](https://docs.godotengine.org/en/4.7/tutorials/xr/openxr_composition_layers.html) to give more control over how these are presented to the user, including:
 
-      - Place composition layers under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node so they are locked in the player’s view, ideal for heads-up displays.
-      - The ability to place composition layer objects anywhere within your scene so they can be paired with world geometry.
-      - Allowing plugins to affect the main projection layer.
+      - Lock composition layers in the player's view by placing them under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node. It is ideal for heads-up displays.
+      - Pair composition layer objects with world geometry, as you're now able to place objects anywhere within your scene.
+      - Plugins can now affect the main projection layer.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+113096+114324+116207"
   contributors:
     - name: "stillmant"
