@@ -583,7 +583,7 @@ accessibility_region:
   title: "Landmark navigation for enhanced accessibility"
   subtitle: "You are here 👇"
   text: |
-    The focused element of a user interface can move in unexpected ways. While we introduced screen reader support in 4.5, it lacked the ability to provide context information in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it is the name of.
+    The focused element of a user interface can move in unexpected ways. While we introduced [screen reader support in 4.5](https://godotengine.org/releases/4.5/#screen-reader-support), it lacked the ability to provide context information in some cases. While a line input could be set to describe a “name” field, it doesn’t help if you don’t know what it is the name of.
 
     By introducing landmark navigation, the screen reader can give some context information once you enter the perimeter of a landmark, such as telling the screen reader user that the focus is currently in the Inspector, on the name field.
   read_more: "https://github.com/godotengine/godot/pull/114449"
