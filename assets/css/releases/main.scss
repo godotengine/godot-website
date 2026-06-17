@@ -138,7 +138,7 @@ a {
     transform: translate(-50%, -50%) rotate(-15deg);
     opacity: 100%;
   }
-  
+
   &:hover{
     transform: scale(1.05);
   }
@@ -399,9 +399,14 @@ a {
   text-align: center;
 }
 
-/* 
- * Taken from 
- * https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd#try_it 
+dfn {
+	font-style: italic;
+	text-decoration: underline dashed;
+}
+
+/*
+ * Taken from
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd#try_it
  * and tweaked a little bit.
  */
 kbd > kbd {
@@ -421,4 +426,3 @@ kbd > kbd {
   padding: 2px 4px;
   white-space: nowrap;
 }
-
