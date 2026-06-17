@@ -1,6 +1,6 @@
 hdr_support:
   title: "HDR output support"
-  subtitle: "This baby can take temperatures up to 1&#x2060;,&#x2060;000 nits!"
+  subtitle: "This baby can take temperatures up to 10&#x2060;,&#x2060;000 nits!"
   text: |
     Your Godot project just got a huge upgrade in range and color with high dynamic range (HDR) output support. Imagine vibrant colors, and more artistic control over bloom, exposure, and glow!
 
