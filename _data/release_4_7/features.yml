@@ -788,7 +788,7 @@ action_map_improvements:
   text: |
     With the introduction of support for the [OpenXR generic controller profile](https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_KHR_generic_controller), the default [action map](https://docs.godotengine.org/en/4.7/tutorials/xr/xr_action_map.html) for new OpenXR projects has been greatly simplified.
 
-    From more than 10 profiles, the default action map has been simplified to only contain entries for the generic controller profile, touch controller profile, Pico 4 controller profile, and hand interaction profile.
+    Previously containing over ten profiles, the default action map has now been simplified to only include entries for the generic controller profile, touch controller profile, Pico 4 controller profile, and hand interaction profile.
 
     Developers can introduce additional profiles if their target platforms require those but with just these four defaults, the action map is far more manageable, while still covering most of the market.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+110778+118975"
