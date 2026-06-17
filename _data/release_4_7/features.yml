@@ -205,7 +205,7 @@ export_template_dialog_update:
   text: |
     A common issue with Godot’s export system is that until now, you had to download export templates for all platforms whenever you wanted to export your project for a single platform. This led to large downloads, which not only made for a slower experience, but could also incur additional charges for people on a metered connection.
 
-    This is now remedied by the new export template downloader, which can download export templates for individual platforms or even specific architectures. This can reduce export template download sizes by a large factor when you only need to export to a single platform.
+    This is now remedied by the new **export template downloader**, which can download export templates for individual platforms or even specific architectures. This can reduce export template download sizes by a large factor when you only need to export to a single platform.
   read_more: "https://github.com/godotengine/godot/pull/117072"
   contributors:
     - name: "Tomasz Chabora"
@@ -218,7 +218,7 @@ scene_painter_tool:
   title: "2D scene painter"
   subtitle: "Use this to paint something spectacular!"
   text: |
-    Godot already offers a way to lay out scenes quickly in 2D using TileMaps and scene tiles. However, this requires some setup for projects not already using TileMaps. It is also restricted to a grid pattern, and scene tiles are not considered actual nodes that can be directly modified within the editor.
+    Godot already offers a way to lay out scenes quickly in 2D using tile maps and their scene tiles. However, this requires some setup for projects not already using tile maps. It is also restricted to a grid pattern, and scene tiles are not considered actual nodes that can be directly modified within the editor.
 
     To remedy these limitations, Godot now offers a scene painter tool in 2D. This can be used to quickly scatter things like foliage or decorations in a 2D scene.
 
