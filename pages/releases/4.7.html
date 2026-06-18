@@ -1,12 +1,12 @@
 ---
 regenerate: true
 permalink: /releases/4.7/index.html
-title: "Godot 4.7 Release"
+title: "Godot&nbsp;4.7, Lights, Camera, Action!"
 tagline: "Lights, Camera, Action!"
 meta:
     title: "Godot 4.7 Release: Lights, Camera, Action!"
-    description: "Like a cult classic movie, Godot 4 has only gotten better with age. This brings us to Godot 4.7. With 3 years under its belt, the 4.7 _Director’s Cut_ offers colors of never-before-reached intensity."
-version: 4.7
+    description: "Like a cult classic movie, Godot 4 has only gotten better with age. This brings us to Godot 4.7. With 3 years under its belt, the 4.7 Director’s Cut offers colors of never-before-reached intensity."
+version: "4.7"
 
 todo_for_authors_list: >
   1. Go to https://godotengine.github.io/godot-interactive-changelog/#4.5
@@ -59,8 +59,8 @@ draft: false
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{page.meta.description}}" />
-    <title>{{ page.title }}</title>
 
+	<title>{{ page.title }} – Godot Engine</title>
     <meta name="title" content="{{page.meta.title}}">
     <meta name="description" content="{{page.meta.description}}">
 
@@ -68,6 +68,23 @@ draft: false
     <meta property="og:title" content="{{page.meta.title}}">
     <meta property="og:description" content="{{page.meta.description}}">
     <meta property="og:image" content="{{ site.baseurl }}/storage/releases/{{page.version}}/images/og_image.jpg">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="godotengine.org">
+
+	<script defer="" data-domain="godotengine.org" src="https://plausible.godot.foundation/js/script.file-downloads.outbound-links.js"></script>
+
+	<link rel="alternate" type="application/rss+xml" title="Godot News" href="/rss.xml">
+	<link rel="alternate" type="application/json" title="Godot News" href="/rss.json">
+	<link rel="alternate" type="application/atom+xml" title="Godot News" href="/atom.xml">
+
+	<link rel="icon" href="/assets/favicon.png" sizes="any">
+	<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+
+	<link rel="me" href="https://mastodon.gamedev.place/@godotengine">
+
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-Italic-VariableFont_wght.woff2" crossorigin="">
+	<link rel="preload" as="font" href="/assets/fonts/Montserrat-VariableFont_wght.woff2" crossorigin="">
 
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/transparent-nav.css?3" />
@@ -139,7 +156,7 @@ draft: false
             <div>
                 <h3>Migrating to a new version</h3>
                 <p>
-                    Before transitioning your existing projects to Godot {{page.version}}, carefully read through our <a href="https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_{{page.version}}.html">migration guide</a> to learn about breaking changes.
+                    Before transitioning your existing projects to Godot {{page.version}}, carefully read through our <a href="https://docs.godotengine.org/en/4.7/tutorials/migrating/upgrading_to_godot_{{page.version}}.html">migration guide</a> to learn about breaking changes.
                 </p>
             </div>
         </div>
