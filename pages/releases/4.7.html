@@ -50,7 +50,6 @@ authors_list: "0ttoman,1,1|0xAlexisSys,1,1|3ter,1,1|aaronfranke,14,14|aaronp64,1
 
 draft: true
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -405,7 +404,7 @@ draft: true
                     {% assign handle = contributor_data[0] %}
                     {% assign scale = contributor_data[1] %}
                     <a class="scale-{{scale}}"
-                    href="https://github.com/godotengine/godot/pulls?q=author%3A{{handle}}+is%3Apr+milestone%3A{{page.release_version_number}}+is%3Aclosed+is%3Amerged+">
+                    href="https://github.com/godotengine/godot/pulls?q=author%3A{{handle}}+is%3Apr+milestone%3A{{page.version}}+is%3Aclosed+is%3Amerged">
                         {{- handle -}}
                     </a>
                 {% endfor %}
