@@ -66,7 +66,7 @@ shader_previews:
 
     With inline text shader previews, the treacherous journey is over.
 
-    Right as you type, `vec2 v4 = UV;` you can now preview Godot text shaders within the editor in real-time. Back in the day, you would have needed to compile a shader and view it separately in the workspace. But thanks to the long-awaited quality-of-life addition to the text shader editor, you will actually be able to preview the shader and what it will do, in the moment, as you’re working on the shader from within the editor!
+    Right as you type `vec2 v4 = UV;`, you can now preview Godot text shaders within the editor in real-time. Back in the day, you would have needed to compile a shader and view it separately in the workspace. But thanks to the long-awaited quality-of-life addition to the text shader editor, you will actually be able to preview the shader and what it will do, in the moment, as you’re working on the shader from within the editor!
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+117726+118865"
   contributors:
     - name: "Yuri Rubinsky"
@@ -200,9 +200,9 @@ export_template_dialog_update:
   title: "Only download the templates you need"
   subtitle: "You must download additional platforms"
   text: |
-    A common issue with Godot’s export system is that until now, you had to download export templates for all platforms whenever you wanted to export your project for a single platform. This led to large downloads, which not only made for a slower experience, but could also incur additional charges for people on a metered connection.
+    A common issue with Godot’s export system is that until now, you had to download export templates for all platforms even if you only you wanted to export your project for a single platform. This led to large downloads, which not only made for a slower experience, but could also incur additional charges for people on a metered connection.
 
-    This is now remedied by the new **export template downloader**, which can download export templates for individual platforms or even specific architectures. This can reduce export template download sizes by a large factor when you only need to export to a single platform.
+    This is now remedied by the new **export template downloader**, which can download export templates for individual platforms or even specific architectures.
   read_more: "https://github.com/godotengine/godot/pull/117072"
   contributors:
     - name: "Tomasz Chabora"
@@ -278,7 +278,7 @@ ruler_3d_components:
   text: |
     The 3D editor’s ruler tool can now display lengths for each axis. This makes it easier to measure multiple lengths in one go, such as measuring the size of a rectangular region in the 3D world.
 
-    To make use of this feature, switch to the Ruler mode at the top of the 3D editor, hold down <kbd><kbd>Shift</kbd></kbd>, then press and hold the left mouse button to draw a line. When <kbd><kbd>Shift</kbd></kbd> is held, individual vector components are displayed.
+    To make use of this feature, switch to the Ruler mode at the top of the 3D editor, hold down <kbd><kbd>Shift</kbd></kbd>, then press and hold the left mouse button to draw a line. While <kbd><kbd>Shift</kbd></kbd> is held, individual vector components are displayed.
   read_more: "https://github.com/godotengine/godot/pull/106785"
   contributors:
     - name: "Robert Yevdokimov"
@@ -307,7 +307,7 @@ path3d_snap:
   title: "`Path3D` points can now snap to colliders"
   subtitle: "Anchor up!"
   text: |
-    Ever wondered why moving [`Path3D`](https://docs.godotengine.org/en/4.7/classes/class_path3d.html) points never seemed to snap where you wanted them to? That’s because they snap to the camera plane by default, which is essentially an imaginary flat plane at a fixed distance from the camera.
+    Ever wondered why [`Path3D`](https://docs.godotengine.org/en/4.7/classes/class_path3d.html) points never seemed to snap where you wanted them to? That’s because they snap to the camera plane by default, which is essentially an imaginary flat plane at a fixed distance from the camera.
 
     We now added an option to snap path points on colliders instead.
   read_more: "https://github.com/godotengine/godot/pull/102085"
@@ -336,7 +336,7 @@ picture_in_picture:
   text: |
     Think [picture-in-picture](https://en.wikipedia.org/wiki/Picture-in-picture) (PiP) is only good to continue watching videos while doing something else on your phone, right? Think again!
 
-    With the introduction of PiP, you can render your game inside one of these little boxes. This is perfect for media players built using Godot, or for games that don’t require player input often or have long cutscenes. It enables players to keep playing while reading their emails or keeping up with their friends.
+    With the introduction of PiP, you can render your game inside one of those little boxes. This is perfect for media players built using Godot, or for games that don’t require player input often or have long cutscenes. It enables players to keep playing while reading their emails or keeping up with their friends.
 
     While it’s only available on the Android platform for now, this feature will hopefully make its way to other platforms soon.
   read_more: "https://github.com/godotengine/godot/pull/114505"
@@ -399,7 +399,7 @@ android_window_resize:
   text: |
     When developing a game, it’s important to ensure it looks good across a wide range of devices. With so many screen sizes and aspect ratios on the market, testing different layouts is essential.
 
-    Desktop users have been able to resize the game window to quickly test how their games behave under different aspect ratios. We are now bringing the same flexibility to the Android Editor.
+    Desktop users have been able to resize the game window to quickly test how their games behave under different aspect ratios. Godot 4.7 brings the same flexibility to the Android Editor.
 
     The embedded game window can now be freely moved and resized, making it possible to test your game across different aspect ratios directly on your Android device.
   read_more: "https://github.com/godotengine/godot/pull/118417"
@@ -415,7 +415,7 @@ one_way_collision_direction:
   title: "One-way collision support for `CollisionShape2D`"
   subtitle: "A one-way ticket for 2D platformers"
   text: |
-    Creating one-way collisions for your platformers (and more!) is now easier than ever! With this new [`one_way_collision_direction`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html#class-collisionshape2d-property-one-way-collision-direction) property of [`CollisionShape2D`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html), you’re now able to set the one-way collision direction to any direction, relative and local to the shape.
+    Creating one-way collisions for your platformers (and more!) is now easier than ever! With the new [`one_way_collision_direction`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html#class-collisionshape2d-property-one-way-collision-direction) property of [`CollisionShape2D`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html), you’re now able to set the one-way collision direction to any direction, relative and local to the shape.
 
     Previously, it was assumed that the one-way direction was locally up relative to the `CollisionShape2D` shape. People resorted to changing the shape itself in order to edit the one-way direction. This painful workaround is no longer needed.
 
@@ -433,7 +433,7 @@ clearcoat_update:
   title: "Clearcoat improvements and fixes"
   subtitle: "Rise and shine!"
   text: |
-    The previous implementation of clearcoat in [`BaseMaterial3D`](https://docs.godotengine.org/en/4.7/classes/class_basematerial3d.html) had several issues, such as not implementing energy conservation. Sky reflections and reflection probes were also not taken into account.
+    The previous implementation of clearcoat in [`BaseMaterial3D`](https://docs.godotengine.org/en/4.7/classes/class_basematerial3d.html) had several issues, such as not implementing energy conservation, or taking sky reflections and reflection probes into account.
 
     The improvements and fixes made to clearcoat rendering bring it closer to [the reference Disney PBR model](https://disneyanimation.com/publications/physically-based-shading-at-disney/). This makes clearcoat a better fit for materials like car paint.
   read_more: "https://github.com/godotengine/godot/pull/111464"
@@ -481,7 +481,7 @@ vertex_snap:
   text: |
     Placing meshes in a scene in the Godot editor used to be tedious. There wasn’t any way to tell it to place the edge of a level mesh flush to the tip of the one already present.
 
-    But now, when holding the new **Vertex Snap** shortcut, the editor will highlight the nearest vertex on the selected node’s geometry. This selection can then be clicked and dragged to other vertices on other meshes.
+    But now, while holding the new **Vertex Snap** shortcut, the editor will highlight the nearest vertex on the selected node’s geometry. This selection can then be clicked and dragged to other vertices on other meshes.
   read_more: "https://github.com/godotengine/godot/pull/117380"
   contributors:
     - name: "Robert Yevdokimov"
@@ -497,7 +497,7 @@ ignore_joypad:
   text: |
     Operating systems handle gamepad input differently from keyboard and mouse input, as gamepad input is sent even when the window is unfocused. While this can be beneficial in some situations, it can lead to unintended inputs, potentially leading to accidentally exiting a game in the worst case.
 
-    By enabling the [**Input Devices > Joypads > Ignore Joypad on Unfocused Application**](https://docs.godotengine.org/en/4.7/classes/class_projectsettings.html#class-projectsettings-property-input-devices-joypads-ignore-joypad-on-unfocused-application) project setting, you can now make Godot ignore gamepad input unless the window is focused. This setting is *disabled by default* to preserve existing behavior.
+    By enabling the [**Input Devices > Joypads > Ignore Joypad on Unfocused Application**](https://docs.godotengine.org/en/4.7/classes/class_projectsettings.html#class-projectsettings-property-input-devices-joypads-ignore-joypad-on-unfocused-application) project setting, you can now make your project ignore gamepad input unless the window is focused. This setting is *disabled by default* to preserve existing behavior.
   read_more: "https://github.com/godotengine/godot/pull/115119"
   contributors:
     - name: "Nintorch"
@@ -693,7 +693,7 @@ csg_smoothing:
   title: "Automatic smoothing option for CSG nodes"
   subtitle: "You’ve been hit by… a smooth C’G node"
   text: |
-    When creating geometry with CSG nodes, they inherit the smooth/sharp faces from the original mesh data. This is not always suitable, as it can lead to curves being made of sharp faces depending on how they were constructed using CSG nodes.
+    When creating geometry with CSG nodes, they inherit the smooth/sharp faces from the original mesh data. This is not always suitable, as it can lead to curves being made of sharp faces depending on how they were constructed.
 
     Enabling the new **Autosmooth** property on a root CSG node will automatically assign smooth or sharp faces according to the **Smoothing Angle** property (which defaults to 50 degrees). Higher values will smooth faces more aggressively.
   read_more: "https://github.com/godotengine/godot/pull/116749"
@@ -730,7 +730,7 @@ custom_splash_screen:
   media: custom_splash_screen.webp
 script_editor_orientation_change:
   title: "Enable orientation changes in the Script Editor"
-  subtitle: "Code layered down in your bed or in the bus"
+  subtitle: "Code laid down in your bed or in the bus"
   text: |
     One of the main usability issues of the Android Editor is script editing. While many improvements in this area are currently in progress, we’ve addressed one big issue: the fact that the on-screen keyboard takes up a large portion of the available screen space on mobile, making it difficult to work with code.
 
@@ -800,11 +800,11 @@ action_map_improvements:
   media: "action_map_improvements.webp"
 composition_layer_improvements:
   title: "Composition layer improvements"
-  subtitle: "Check this out"
+  subtitle: "It's about lighting. Composition. Drama."
   text: |
     There are a number of improvements to the [OpenXR composition layer system](https://docs.godotengine.org/en/4.7/tutorials/xr/openxr_composition_layers.html) to give more control over how these are presented to the user, including:
 
-      - Lock composition layers in the player’s view by placing them under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node. It is ideal for heads-up displays.
+      - Lock composition layers in the player’s view by placing them under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node. This is ideal for heads-up displays.
       - Pair composition layer objects with world geometry, as you’re now able to place objects anywhere within your scene.
       - Plugins can now affect the main projection layer.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+113096+114324+116207"
@@ -823,7 +823,7 @@ composition_layer_improvements:
 
     The 3D transform gizmo now more closely behaves like the one used in Blender.
 
-    Be sure to activate **Use Trackball** (the new planet looking icon, or just press <kbd><kbd>U</kbd></kbd>) in the 3D editor toolbar in order to use this feature.
+    Be sure to activate **Use Trackball** (the new planet-looking icon, or just press <kbd><kbd>U</kbd></kbd>) in the 3D editor toolbar in order to use this feature.
   read_more: "https://github.com/godotengine/godot/pull/109976"
   contributors:
     - name: "Charles Boury"
@@ -835,15 +835,15 @@ composition_layer_improvements:
   poster: "3d_transform_gizmo_trackball_poster.webp"
 day_one_xr_support:
   title: "Day one support for the latest XR platforms"
-  subtitle: "It means buckle your seatbelt, Dorothy, ’cause Kansas is going bye-bye."
+  subtitle: "It means buckle your seatbelt, Dorothy, ’cause Kansas is going bye-bye"
   text: |
-    Godot continues the trend of being one of the best engines for XR development, with Godot 4.7 adding day one production ready support for [Android XR](https://www.android.com/xr/) and [Steam Frame](https://store.steampowered.com/sale/steamframe).
+    Godot continues the trend of being one of the best engines for XR development, with Godot 4.7 adding day one production-ready support for [Android XR](https://www.android.com/xr/) and [Steam Frame](https://store.steampowered.com/sale/steamframe).
 
-    In collaboration [with Google](https://android-developers.googleblog.com/2026/05/android-xr-updates-unity-unreal-godot.html), the Godot XR team delivers [a plethora of new features](https://godotengine.org/article/godot-xr-update-may-2026/#android-xr) designed to provide developers access to the latest and greatest Android XR features.
+    In collaboration [with Google](https://android-developers.googleblog.com/2026/05/android-xr-updates-unity-unreal-godot.html), the Godot XR team has delivered [a plethora of new features](https://godotengine.org/article/godot-xr-update-may-2026/#android-xr) designed to provide developers access to the latest and greatest Android XR features.
 
     Godot 4.7 is also production-ready for the Steam Frame, planned to release this summer.
 
-    From building a brand new XR game, to porting an existing 3D or XR game, Godot 4.7 provides you with the best tools for the job.
+    From building a brand-new XR game, to porting an existing 3D or XR game, Godot 4.7 provides you with the best tools for the job.
 
     <div style="margin-top: 2rem" markdown=1>
       [Learn more about how to develop for Android XR](https://developer.android.com/develop/xr/godot)<br>
