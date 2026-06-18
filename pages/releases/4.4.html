@@ -47,6 +47,9 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 {% assign latest_patch = release_version_number | get_latest_patch %}
 {% assign release_version = latest_patch | make_release_version: "stable" %}
 
+{% assign cache_version = 3 %}
+{% assign cache_tag = "cache=v" | append: cache_version %}
+
 {% assign data = site.release_4_4 %}
 
 {% assign _intro = data | where: "type", "entry" | where: "category", "intro" | sort: "rank" %}
@@ -58,11 +61,11 @@ authors_list: "0x0ACB,1,1|0x53A,1,1|0xafbf,1,1|0xcafeb33f,1,1|10Drenth,1,1|2nafi
 {% assign stable_version = site.data.versions | find: "name", latest_patch %}
 
 <link rel="stylesheet" href="/assets/css/material-symbols-outlined.css" />
-<link rel="stylesheet" href="/assets/css/releases/4.4.css?cache=v2" />
-<script type="module" src="/assets/js/releases/4.4.mjs"></script>
+<link rel="stylesheet" href="/assets/css/releases/4.4.css?{{cache_tag}}" />
+<script type="module" src="/assets/js/releases/4.4.mjs?{{cache_tag}}"></script>
 
 <noscript>
-	<link rel="stylesheet" href="/assets/css/releases/4.4.noscript.css" />
+	<link rel="stylesheet" href="/assets/css/releases/4.4.noscript.css?{{cache_tag}}" />
 </noscript>
 
 <div id="top" class="release-header">

@@ -13,6 +13,9 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
 
 {% assign release_version_number = "4.6" %}
 
+{% assign cache_version = 3 %}
+{% assign cache_tag = "cache=v" | append: cache_version %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -347,7 +350,7 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
     </main>
 
     {% include footer.html %}
-    
+
     <script src="{{ site.baseurl }}/assets/js/releases/toc_nav.js" defer></script>
     <script src="{{ site.baseurl }}/assets/js/releases/video_player.js" defer></script>
     <script src="{{ site.baseurl }}/assets/js/releases/media_compare.js" defer></script>

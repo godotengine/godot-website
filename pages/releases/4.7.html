@@ -50,6 +50,9 @@ authors_list: "0ttoman,1,1|0xAlexisSys,1,1|3ter,1,1|aaronfranke,14,14|aaronp64,1
 
 draft: false
 ---
+{%- assign cache_version = 3 -%}
+{%- assign cache_tag = "cache=v" | append: cache_version -%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,8 +71,9 @@ draft: false
 
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/transparent-nav.css?3" />
-    <link rel="stylesheet" href="/assets/css/releases/main.css" />
     <link rel="stylesheet" href="/assets/css/tobii.min.css" />
+
+    <link rel="stylesheet" href="/assets/css/releases/main.css?{{cache_tag}}" />
 </head>
 <body>
 
