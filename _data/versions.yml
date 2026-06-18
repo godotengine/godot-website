@@ -1,8 +1,12 @@
 - name: "4.7"
-  flavor: "rc3"
-  release_date: "15 June 2026"
-  release_notes: "/article/release-candidate-godot-4-7-rc-3/"
+  flavor: "stable"
+  release_date: "18 June 2026"
+  release_notes: "/article/godot-4-7-lights-camera-action/"
+  featured: "4"
   releases:
+    - name: "rc3"
+      release_date: "15 June 2026"
+      release_notes: "/article/release-candidate-godot-4-7-rc-3/"
     - name: "rc2"
       release_date: "11 June 2026"
       release_notes: "/article/release-candidate-godot-4-7-rc-2/"
@@ -44,7 +48,6 @@
   flavor: "stable"
   release_date: "20 May 2026"
   release_notes: "/article/maintenance-release-godot-4-6-3/"
-  featured: "4"
   releases:
     - name: "rc2"
       release_date: "16 May 2026"
