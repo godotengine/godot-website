@@ -1,0 +1,1 @@
+#migration-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.8em;max-width:min(100%,60ch);background:#1860e745;border:solid;border-color:#75a5ff;border-width:.1em;border-radius:.8em;padding:.8em .6em;color:var(--body-text-color);fill:var(--body-text-color);margin-bottom:2em;h3 { font-weight: 700; } svg { width: 1.2em; height: 1.2em; }}

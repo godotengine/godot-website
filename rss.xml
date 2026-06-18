@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Release candidate: Godot 4.7 RC 3</title><link>https://godotengine.org/article/release-candidate-godot-4-7-rc-3/</link><summary>Critical regressions resolved!</summary><description>&lt;p>Thank you to everyone who has participated in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">release candidate&lt;/a> stages of Godot 4.7! As a result of widespread adoption and testing, we were able to unearth and squash a handful of critical regressions that very nearly got overlooked. So while we hope to have a stable version out sooner than later, these fixes alone warrant at least one more snapshot, for good measure.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot 4.7 – Lights, Camera, Action!</title><link>https://godotengine.org/article/godot-4-7-lights-camera-action/</link><summary>Like a cult classic movie, Godot 4 has only gotten better with age. This brings us to Godot 4.7. With 3 years under its belt, the 4.7 _Director’s Cut_ offers colors of never-before-reached intensity.</summary><description/><category>Release</category><guid>https://godotengine.org/article/godot-4-7-lights-camera-action/</guid><dc:creator>Godot contributors</dc:creator><pubDate>Thu, 18 Jun 2026 13:00:00 +0000</pubDate><image>https://godotengine.org/storage/releases/4.7/images/preview_image.jpg</image></item><item><title>Release candidate: Godot 4.7 RC 3</title><link>https://godotengine.org/article/release-candidate-godot-4-7-rc-3/</link><summary>Critical regressions resolved!</summary><description>&lt;p>Thank you to everyone who has participated in the &lt;a href="https://en.wikipedia.org/wiki/Software_release_life_cycle#Release_candidate">release candidate&lt;/a> stages of Godot 4.7! As a result of widespread adoption and testing, we were able to unearth and squash a handful of critical regressions that very nearly got overlooked. So while we hope to have a stable version out sooner than later, these fixes alone warrant at least one more snapshot, for good measure.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.7.rc3/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/h9JcJGHfg">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
@@ -2507,54 +2507,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
 &lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-beta-2/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Mon, 11 May 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-beta-2.jpg</image></item><item><title>GodotCon Boston - Save the date!</title><link>https://godotengine.org/article/godotcon-us-2026/</link><summary>Want to join? Boston 21-22 of July. Get your tickets now! (Call for speakers, showcases, and sponsors open).</summary><description>&lt;p>The official GodotCon returns to Boston for the second US edition. For this edition of the event, we teamed up with &lt;a href="https://scenetree.org/">SceneTree&lt;/a> to help us organize it and make sure that everything runs smoothly.&lt;/p>
-&lt;h3 id="information">Information&lt;/h3>
-&lt;table>
-&lt;tbody>
-&lt;tr>
-&lt;td>📅 Dates&lt;/td>
-&lt;td>21st, 22nd of July 2026&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🕑 Time&lt;/td>
-&lt;td>09:00 - 18:00&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🇳🇱 Location&lt;/td>
-&lt;td>Boston, Massachusetts, United States&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>📍 Venue&lt;/td>
-&lt;td>Microsoft NERD Center. &lt;a href="https://maps.app.goo.gl/LJC9R7QiTxN6S3cv7">1 Memorial Dr, Cambridge, MA 02142, United States&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>🌐 Website&lt;/td>
-&lt;td>&lt;a href="https://conference.godotengine.org/US/2026/">https://conference.godotengine.org/US/2026/&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;a class="btn" href="https://tickets.godotengine.org/scene-tree/godotcon-us-2026/">Buy tickets 🎟️&lt;/a>&lt;/p>
-&lt;h3 id="call-for-speakers-sponsors-and-showcases">Call for speakers, sponsors, and showcases&lt;/h3>
-&lt;p>If you would like to be a part of the conference by giving a talk or a workshop, please submit your proposals through the link below. We are looking for a diverse range of topics, from beginner to advanced, so don’t hesitate to submit your ideas. Of note: We have a lot more room for workshops this year on the 20th of July.&lt;/p>
-&lt;p>&lt;a href="https://talks.godotengine.org/godotcon-boston-2026/cfp">&lt;strong>➡️ Call for submissions&lt;/strong>&lt;/a>, Deadline: 1st of June 2026&lt;/p>
-&lt;p>We are also actively looking for sponsors to support GodotCon Boston. If you or your company would be interested in learning more about sponsorship opportunities, feel free to reach out to &lt;a href="mailto:president@scenetree.org">president@scenetree.org&lt;/a>.&lt;/p>
-&lt;p>Want to show off your Godot-related project? Whether you have some really handy toolset or an amazing game made in Godot, submit to be a part of the showcase.&lt;/p>
-&lt;p>&lt;a href="https://talks.godotengine.org/godotcon-boston-2026/cfp">&lt;strong>➡️ Showcase submissions&lt;/strong>&lt;/a>, Deadline: 1st of June 2026&lt;/p>
-&lt;h3 id="call-for-volunteers">Call for volunteers&lt;/h3>
-&lt;p>An event like this only happens thanks to passionate people like you who are willing to help behind the scenes. If you want to contribute to making GodotCon Boston 2026 a welcoming and smooth experience for everyone, we are currently looking for volunteers to help us manage different aspects of the conference, from stage managers to photographers.&lt;/p>
-&lt;p>If you would like to participate, please fill out &lt;a href="https://forms.gle/3C5rqH8MjRuRXjS36">this form&lt;/a>.&lt;/p>
-&lt;h3 id="tickets-and-more">Tickets and more&lt;/h3>
-&lt;p>Get your tickets &lt;a href="https://tickets.godotengine.org/scene-tree/godotcon-us-2026/">here&lt;/a> and stay tuned for more information by joining the &lt;a href="https://discord.gg/A2YPMR23ye">GodotCon Discord&lt;/a> or the mailing list.&lt;/p>
-&lt;form method="post" action="https://godot.news/subscription/form" class="listmonk-form">
-&lt;style>@media (min-width: 768px) { input[type="submit"] {border-radius: 0px var(--button-border-radius) var(--button-border-radius) 0;}}&lt;/style>
-&lt;div>
-&lt;input type="hidden" name="nonce" />
-&lt;input type="email" name="email" required="" placeholder="E-mail" style="font-size: 18px;padding: 16px 18px;border: 1px solid var(--base-color);box-shadow: 0 4px 9px -3px #0000002e;background: var(--card-footer-color);color: var(--base-color-text);" />
-&lt;p style="display:none;">
-&lt;input id="6e6e9" type="checkbox" name="l" checked="" value="6e6e9ba4-732b-4528-b4cd-71bbe6850f8d" />
-&lt;label for="6e6e9">Godot Conference&lt;/label>
-&lt;/p>
-&lt;input type="submit" class="btn" value="Subscribe" style="cursor: pointer;border: inherit;" />
-&lt;/div>
-&lt;/form>
-&lt;p>See you soon!&lt;/p></description><category>Events</category><guid>https://godotengine.org/article/godotcon-us-2026/</guid><dc:creator>Chad</dc:creator><pubDate>Fri, 08 May 2026 13:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotcon-boston-2026.jpg</image></item></channel></rss>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-beta-2/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Mon, 11 May 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-beta-2.jpg</image></item></channel></rss>

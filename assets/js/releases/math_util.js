@@ -1,0 +1,1 @@
+export function mapRange(e,t,n,s,o){return s+(o-s)*(e-t)/(n-t)}export function clamp(e,t,n){return Math.max(t,Math.min(e,n))}
