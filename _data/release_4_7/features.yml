@@ -858,3 +858,7 @@ day_one_xr_support:
       link: "https://github.com/m4gr3d"
     - name: "Logan Lang"
       link: "https://github.com/devloglogan"
+  media: "day_one_xr_support.webp"
+  media_author:
+    name: "Google (left) and Valve (right)"
+    link: ""

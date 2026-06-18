@@ -400,11 +400,48 @@ draft: false
 
         <section class="section-body">
             <div class="contributors-wall">
-                {% assign contributors = page.authors_list | split: "|" %}
-                {% for contributor in contributors %}
-                    {% assign contributor_data = contributor | split: "," %}
-                    {% assign handle = contributor_data[0] %}
-                    {% assign scale = contributor_data[1] %}
+                {%- assign contributors = page.authors_list | split: "|" -%}
+				{%- assign max_prs = 0 -%}
+
+				{%- assign scale_s = 0 -%}
+				{%- assign scale_a = 0 -%}
+				{%- assign scale_b = 0 -%}
+				{%- assign scale_c = 0 -%}
+				{%- assign scale_d = 0 -%}
+
+                {%- for contributor in contributors -%}
+                    {%- assign contributor_data = contributor | split: "," -%}
+                    {%- assign prs = contributor_data[2] | plus: 0 -%}
+					{%- if prs > max_prs -%}
+						{%- assign max_prs = prs -%}
+					{% endif %}
+				{%- endfor -%}
+
+				{%- assign scale_s = max_prs | divided_by: 2 | floor -%}
+				{%- assign scale_a = scale_s | divided_by: 2 | floor -%}
+				{%- assign scale_b = scale_a | divided_by: 2 | floor -%}
+				{%- assign scale_c = scale_b | divided_by: 2 | floor -%}
+				{%- assign scale_d = scale_c | divided_by: 2 | floor -%}
+
+                {%- for contributor in contributors %}
+                    {%- assign contributor_data = contributor | split: "," -%}
+                    {%- assign handle = contributor_data[0] -%}
+					{%- assign commits = contributor_data[1] | plus: 0 -%}
+                    {%- assign prs = contributor_data[2] | plus: 0 -%}
+                    {%- assign scale = "1" -%}
+
+					{%- if prs > scale_s -%}
+						{%- assign scale = "5" -%}
+					{%- elsif prs > scale_a -%}
+						{%- assign scale = "4" -%}
+					{%- elsif prs > scale_b -%}
+						{%- assign scale = "3" -%}
+					{%- elsif prs > scale_c -%}
+						{%- assign scale = "2" -%}
+					{%- else -%}
+						{%- assign scale = "1" -%}
+					{%- endif -%}
+
                     <a class="scale-{{scale}}"
                     href="https://github.com/godotengine/godot/pulls?q=author%3A{{handle}}+is%3Apr+milestone%3A{{page.version}}+is%3Aclosed+is%3Amerged">
                         {{- handle -}}
