@@ -47,6 +47,9 @@ authors_list: "100gold,1,1|aaronfranke,67,66|aaronjyoder,1,1|aaronp64,25,25|actu
 {% assign latest_patch = release_version_number | get_latest_patch %}
 {% assign release_version = latest_patch | make_release_version: "stable" %}
 
+{% assign cache_version = 3 %}
+{% assign cache_tag = "cache=v" | append: cache_version %}
+
 {% assign data = site.release_4_5 %}
 
 {% assign _intro = data | where: "type", "entry" | where: "category", "intro" | sort: "rank" %}
@@ -59,11 +62,11 @@ authors_list: "100gold,1,1|aaronfranke,67,66|aaronjyoder,1,1|aaronp64,25,25|actu
 
 <link rel="stylesheet" href="/assets/css/transparent-nav.css?3">
 <link rel="stylesheet" href="/assets/css/material-symbols-outlined.css" />
-<link rel="stylesheet" href="/assets/css/releases/{{release_version_number}}.css" />
-<script type="module" src="/assets/js/releases/{{release_version_number}}.mjs"></script>
+<link rel="stylesheet" href="/assets/css/releases/{{release_version_number}}.css?{{cache_tag}}" />
+<script type="module" src="/assets/js/releases/{{release_version_number}}.mjs?{{cache_tag}}"></script>
 
 <noscript>
-	<link rel="stylesheet" href="/assets/css/releases/{{release_version_number}}.noscript.css" />
+	<link rel="stylesheet" href="/assets/css/releases/{{release_version_number}}.noscript.css?{{cache_tag}}" />
 </noscript>
 
 <div id="top" class="release-header">
