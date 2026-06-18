@@ -4,7 +4,7 @@ hdr_support:
   text: |
     Your Godot project just got a huge upgrade in range and color with high dynamic range (HDR) output support. Imagine vibrant colors and ultra-bright special effects for both 2D and 3D scenes!
 
-    HDR is a method of saving, processing, or displaying colors that are as bright and as dim as you can imagine. Godot has internally rendered lighting in HDR for a long time, but the full detail can't be seen with the existing SDR output mode. Using HDR output allows the player to see more of this internal HDR simulation and also allows game developers to make full use of the screen's capabilities for all 2D and 3D visuals.
+    HDR is a method of saving, processing, or displaying colors that are as bright or as dim as you can imagine. Godot has internally rendered lighting in HDR for a long time, but the full detail can’t be seen with the existing SDR output mode. Using HDR output allows the player to see more of this internal HDR simulation and also allows game developers to make full use of the screen’s capabilities for all 2D and 3D visuals.
 
     HDR output has been made possible for Windows, macOS, iOS, visionOS, and Linux (Wayland) in Godot 4.7. Read the detailed write-up on [how HDR output was implemented in Godot](https://godotengine.org/article/hdr-output-arrives-in-godot-4-7/) to learn more.
 
@@ -160,7 +160,7 @@ virtual_joystick:
   title: "Built-in virtual joystick"
   subtitle: "Break in case of emergency"
   text: |
-    Virtual joysticks are a staple of touchscreen gaming. From twin-stick shooters to 3D platformers, they’re featured in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one.
+    Virtual joysticks are a staple of touchscreen gaming. From twin-stick shooters to 3D platformers, they feature in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one.
 
     This is no longer needed as Godot now provides its own [`VirtualJoystick`](https://docs.godotengine.org/en/4.7/classes/class_virtualjoystick.html) node, complete with 3 operation modes: “Fixed”, “Dynamic”, and “Following”. Coupled with built-in theming abilities, this greatly speeds up the mobile development process.
   read_more: "https://github.com/godotengine/godot/pull/110933"
@@ -249,7 +249,7 @@ remote_scene_inspector_groups_folding:
   title: "Fold groups and subgroups in the Remote Scene Inspector"
   subtitle: "Quick! Hide!"
   text: |
-    Previously, it was possible to fold property groups and subgroups in the Local Inspector, but not in the Remote Inspector. These two don't quite work the same, mind you.
+    Previously, it was possible to fold property groups and subgroups in the Local Inspector, but not in the Remote Inspector. These two don’t quite work the same, mind you.
 
     Support for folding groups and subgroups in the Remote Scene Inspector has been implemented. Both the Local and Remote Inspector now support folding property groups the same way, which makes for a more seamless, consistent UX.
   read_more: "https://github.com/godotengine/godot/pull/117357"
@@ -354,7 +354,7 @@ control_transform_offset:
   text: |
     One of the most long-awaited features in Godot’s GUI system has been to be able to translate, rotate, or scale a [`Control`](https://docs.godotengine.org/en/4.7/classes/class_control.html) node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide into view or fade away with a scale change.
 
-    However, Godot’s various [`Container`](https://docs.godotengine.org/en/4.7/classes/class_container.html) nodes apply their position, rotation, and scale to their children, which means any changes made to the children’s transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). `Control`'s' new [`offset_transform_*`](https://docs.godotengine.org/en/latest/classes/class_control.html#class-control-property-offset-transform-enabled) properties aim to address this limitation in a self-contained manner, similar to the CSS [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform) property.
+    However, Godot’s various [`Container`](https://docs.godotengine.org/en/4.7/classes/class_container.html) nodes apply their position, rotation, and scale to their children, which means any changes made to the children’s transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). `Control`’s new [`offset_transform_*`](https://docs.godotengine.org/en/latest/classes/class_control.html#class-control-property-offset-transform-enabled) properties aim to address this limitation in a self-contained manner, similar to the CSS [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform) property.
 
     You can choose whether the transform offset affects mouse input. By default, transform offset is purely visual, which means there is no risk of buttons losing their hover status after being transformed.
   read_more: "https://github.com/godotengine/godot/pull/87081"
@@ -507,7 +507,7 @@ property_list_helper_documentation:
   title: "Dynamically generated properties, such as menu items, are now documented"
   subtitle: "Where no one has gone before"
   text: |
-    Properties generated dynamically, like menu items and curve points, are now documented. Like any other property, their descriptions will now show up by hovering over them in the Inspector. Nice to know what you're fiddling with.
+    Properties generated dynamically, like menu items and curve points, are now documented. Like any other property, their descriptions will now show up by hovering over them in the Inspector. Nice to know what you’re fiddling with.
   read_more: "https://github.com/godotengine/godot/pull/115253"
   contributors:
     - name: "bruvzg"
@@ -804,8 +804,8 @@ composition_layer_improvements:
   text: |
     There are a number of improvements to the [OpenXR composition layer system](https://docs.godotengine.org/en/4.7/tutorials/xr/openxr_composition_layers.html) to give more control over how these are presented to the user, including:
 
-      - Lock composition layers in the player's view by placing them under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node. It is ideal for heads-up displays.
-      - Pair composition layer objects with world geometry, as you're now able to place objects anywhere within your scene.
+      - Lock composition layers in the player’s view by placing them under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node. It is ideal for heads-up displays.
+      - Pair composition layer objects with world geometry, as you’re now able to place objects anywhere within your scene.
       - Plugins can now affect the main projection layer.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+113096+114324+116207"
   contributors:
