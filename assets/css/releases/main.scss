@@ -3,14 +3,14 @@
 
 @use "footer";
 @import "./reset.css";
-@import "./components/hero.css";
-@import "./components/toc.css";
-@import "./components/section.css";
-@import "./components/card.css";
-@import "./components/media_block.css";
-@import "./components/gdquest.css";
-@import "./components/donation_card.css";
-@import "./components/migration_card.css";
+@import "./components/hero.css?cache=v2";
+@import "./components/toc.css?cache=v2";
+@import "./components/section.css?cache=v2";
+@import "./components/card.css?cache=v2";
+@import "./components/media_block.css?cache=v2";
+@import "./components/gdquest.css?cache=v2";
+@import "./components/donation_card.css?cache=v2";
+@import "./components/migration_card.css?cache=v2";
 
 /* TODO: Improve color names */
 
