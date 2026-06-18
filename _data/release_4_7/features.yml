@@ -481,7 +481,7 @@ vertex_snap:
   text: |
     Placing meshes in a scene in the Godot editor used to be tedious. There wasn’t any way to tell it to place the edge of a level mesh flush to the tip of the one already present.
 
-    But now, while holding the new **Vertex Snap** shortcut, the editor will highlight the nearest vertex on the selected node’s geometry. This selection can then be clicked and dragged to other vertices on other meshes.
+    But now, while holding the new **Vertex Snap** shortcut (<kbd><kbd>B</kbd></kbd> by default), the editor will highlight the nearest vertex on the selected node’s geometry. This selection can then be clicked and dragged to other vertices on other meshes.
   read_more: "https://github.com/godotengine/godot/pull/117380"
   contributors:
     - name: "Robert Yevdokimov"
