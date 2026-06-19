@@ -5,3 +5,14 @@ url: "http://localhost:4000"
 incremental: true
 # Switch to polling instead of I/O watching, solves Docker issues.
 force_polling: true
+
+limit_collections:
+  randomize: false
+  sort: "descending"
+
+  article: 20
+  event: 20
+  showcase: 20
+  download: 5
+  download_3: 5
+

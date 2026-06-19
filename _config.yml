@@ -75,6 +75,7 @@ defaults:
 plugins:
   - jekyll-paginate-v2
   - jekyll-redirect-from
+  - jekyll-uj-powertools
 
 # Internationalization
 lang: "en"
@@ -103,3 +104,7 @@ pagination:
 sass:
   sass_dir: _sass
   style: compressed
+
+parallel_build:
+  enabled: false
+
