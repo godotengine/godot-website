@@ -4,7 +4,7 @@ excerpt: "."
 categories: ["news"]
 author: Godot Foundation
 image: /storage/blog/covers/godot-foundation-update-2024.webp
-date: 2026-06-17 18:00:00
+date: 2026-06-23 18:00:00
 ---
 
 When Godot was open sourced in 2014, the vision for the engine was held in the minds of the original creators: Juan Linietsky and Ariel Manzur.
