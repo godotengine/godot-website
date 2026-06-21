@@ -78,7 +78,7 @@ shader_previews:
   media_author:
     name: "Yuri Rubinsky"
     link: "https://github.com/Chaosus"
-  media: "inline-text-shader-previews.webp"
+  media: "inline_text_shader_previews.webp"
 rect_area_light:
   title: "`AreaLight3D`, a new node for rectangular light sources"
   subtitle: "Do you think light can bloom even on a battlefield?"
@@ -93,7 +93,8 @@ rect_area_light:
   media_author:
     name: "passivestar"
     link: "https://github.com/passivestar"
-  media: "arealightfhd_small.webm"
+  media: "arealightfhd.webm"
+  poster: "arealightfhd_poster.webp"
 android_gabe:
   title: "Creating games entirely on Android"
   subtitle: "The power is in the palm of your hand"
@@ -102,7 +103,7 @@ android_gabe:
 
     GABE is a companion app to the Godot Android editor that developers can download for Gradle export support.
 
-    Godot 4.7 sees some QOL improvements to better integrate and leverage GABE on Android devices.
+    Godot 4.7 sees some QOL improvements to better integrate and leverage GABE on Android devices.
   read_more: "https://godotengine.org/article/gabe-stable-release/"
   contributors:
     - name: "Anish Kumar"
@@ -145,7 +146,8 @@ copy_past_properties:
   media_author:
     name: "Raphaël Daubelcour"
     link: "https://github.com/Raftatul"
-  media: editor-copy-paste-category-properties.webm
+  media: editor_copy_paste_category_properties.webm
+  poster: editor_copy_paste_category_properties_poster.webp
 tween_await:
   title: "Tweens can now wait for signals"
   subtitle: "Stop… _signal time!_"
@@ -156,6 +158,7 @@ tween_await:
     - name: "Tomasz Chabora"
       link: "https://github.com/KoBeWi"
   media: tween_await.webm
+  poster: tween_await_poster.webp
 virtual_joystick:
   title: "Built-in virtual joystick"
   subtitle: "Break in case of emergency"
@@ -170,7 +173,8 @@ virtual_joystick:
   media_author:
     name: "Kazox61"
     link: "https://github.com/Kazox61"
-  media: virtual-joystick.webm
+  media: virtual_joystick.webm
+  poster: virtual_joystick_poster.webp
 mesh_library_update:
   title: "Introducing the `MeshLibrary` editor"
   subtitle: "It’s like a librarian, minus the shushing"
@@ -182,7 +186,7 @@ mesh_library_update:
   contributors:
     - name: "Michael Alexsander"
       link: "https://github.com/YeldhamDev"
-  media: meshlibrary-editor.webp
+  media: meshlibrary_editor.webp
 tree_drag_and_drop_update:
   title: "Improved Tree drag and drop"
   subtitle: "Easy as one-two-tree!"
@@ -210,7 +214,8 @@ export_template_dialog_update:
   media_author:
     name: "Tomasz Chabora"
     link: "https://github.com/KoBeWi"
-  media: export_template_dialog_update.mp4
+  media: export_template_dialog_update.webm
+  poster: export_template_dialog_update_poster.webp
 scene_painter_tool:
   title: "2D scene painter"
   subtitle: "Use this to paint something spectacular!"
@@ -227,7 +232,8 @@ scene_painter_tool:
   media_author:
     name: "Dexter"
     link: "https://github.com/DexterFstone"
-  media: scene_painter_tool.mp4
+  media: scene_painter_tool.webm
+  poster: scene_painter_tool_poster.webp
 documentation_layout_update:
   title: "Improved appearance of the built-in help"
   subtitle: "But just TAKE A LOOK AT THIS!"
@@ -260,6 +266,7 @@ remote_scene_inspector_groups_folding:
     name: "Jayden Sipe"
     link: "https://github.com/jaydensipe"
   media: remote_scene_inspector_groups_folding.webm
+  poster: remote_scene_inspector_groups_folding_poster.webp
 gdextensions_view_inside_settings:
   title: "The project’s GDExtensions are now displayed in the Project Settings"
   subtitle: "GDExtensions, assemble!"
@@ -318,6 +325,7 @@ path3d_snap:
     name: "Gustavo Jaruga Cruz"
     link: "https://github.com/GustJc"
   media: path3d_snap.webm
+  poster: path3d_snap_poster.webp
 display_enum_remote_tree:
   title: "Remote Tree Inspector now properly display non-exported enum variables"
   subtitle: "We could enumerate the benefits all day long if we really wanted"
@@ -779,6 +787,7 @@ vulkan_subsampled_images:
     name: "Adam Scott"
     link: "https://bsky.app/profile/adamscott.studio"
   media: "vulkan_subsampled_images.webm"
+  poster: "vulkan_subsampled_images_poster.webp"
 action_map_improvements:
   title: "Action maps have been simplified"
   subtitle: "“*Le contrôleur!?* What the hell is that!” no more."
@@ -859,6 +868,3 @@ day_one_xr_support:
     - name: "Logan Lang"
       link: "https://github.com/devloglogan"
   media: "day_one_xr_support.webp"
-  media_author:
-    name: "Google (left) and Valve (right)"
-    link: ""
