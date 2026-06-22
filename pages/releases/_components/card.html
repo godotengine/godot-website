@@ -10,7 +10,14 @@
 {% assign media_align_h = include.media_align_h | default: "center" %}
 {% assign media_align_v = include.media_align_v | default: "center" %}
 
-<div id="feature_{{include.name}}" class="card {{include.size}} {{include.order}}">
+{%- capture no_media -%}
+  {% unless item.media or item.compare -%}
+    no_media
+  {%- endunless -%}
+{%- endcapture %}
+
+
+<div id="feature_{{include.name}}" class="card {{include.size}} {{include.order}} {{ no_media }}">
     {%if item.media or item.compare %}
         {% include_relative _components/media.html item=item media_align_h=media_align_h media_align_v=media_align_v %}
     {% endif %}

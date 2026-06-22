@@ -175,16 +175,16 @@ draft: false
             {% include_relative _components/card.html name="rect_area_light" size="large" %}
 
             <div class="sub-grid">
+                {% include_relative _components/card.html name="shader_previews" order="reverse" %}
+
                 {%
 					include_relative _components/card.html
 					name="asset_store_update"
-					order="reverse"
 					read_more_link="https://store.godotengine.org/"
 					read_more_text="Check out the Asset Store"
 					read_more_aria_label="Check out the Asset Store"
 					contributor_intro="<a class=\"not-contributor\" href=\"[{item_read_more}]\" target=\"_blank\">PR</a> contributed by"
 				%}
-                {% include_relative _components/card.html name="shader_previews" media_align_v="bottom" %}
             </div>
 
             {% include_relative _components/card.html name="control_transform_offset" size="large" order="reverse" %}
@@ -353,10 +353,12 @@ draft: false
             <!-- XR Cards -->
             {% include_relative _components/card.html name="day_one_xr_support" read_more_hide=true size="large" %}
 
-			{% include_relative _components/card.html name="vulkan_subsampled_images" size="large" %}
+			{% include_relative _components/card.html name="vulkan_subsampled_images" size="medium" %}
 
-            {% include_relative _components/card.html name="composition_layer_improvements" order="reverse" %}
-			{% include_relative _components/card.html name="action_map_improvements" %}
+            <div class="sub-grid">
+                {% include_relative _components/card.html name="composition_layer_improvements"%}
+                {% include_relative _components/card.html name="action_map_improvements" %}
+            </div>
         </section>
 
         <section id="section-platforms" class="section-header">

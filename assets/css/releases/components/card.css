@@ -110,4 +110,7 @@
       flex:1;
     }
   }
+  &.no_media {
+      align-self: start;
+  }
 }
