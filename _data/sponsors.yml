@@ -15,6 +15,9 @@ platinum:
   - name: "Mega Crit"
     link: "https://www.megacrit.com/"
     image: "https://fund.godotengine.org/static/logos/megacrit.png"
+  - name: "Battlefield Studios"
+    link: "https://portal.battlefield.com/"
+    image: "https://fund.godotengine.org/static/logos/battlefield.png"
 gold:
   - name: Arm
     link: "https://www.arm.com/"
