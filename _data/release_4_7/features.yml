@@ -426,8 +426,6 @@ one_way_collision_direction:
     Creating one-way collisions for your platformers (and more!) is now easier than ever! With the new [`one_way_collision_direction`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html#class-collisionshape2d-property-one-way-collision-direction) property of [`CollisionShape2D`](https://docs.godotengine.org/en/4.7/classes/class_collisionshape2d.html), you’re now able to set the one-way collision direction to any direction, relative and local to the shape.
 
     Previously, it was assumed that the one-way direction was locally up relative to the `CollisionShape2D` shape. People resorted to changing the shape itself in order to edit the one-way direction. This painful workaround is no longer needed.
-
-    You can even make the one-way direction global (making the one-way direction constant) even if the collision shape itself rotates, using `global_transform.basis_xform_inv()`.
   read_more: "https://github.com/godotengine/godot/pull/104736"
   contributors:
     - name: "szunami"
