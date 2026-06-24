@@ -1,0 +1,101 @@
+meta:
+  description: 2B & 3B oyunlarınızı, platformlar arası projelerinizi, hatta XR fikirlerinizi hayata geçirin!
+header:
+  features: Özellikler
+  showcase: Vitrin
+  blog: Blog
+  community: Topluluk
+  assets: Varlıklar
+  download: İndir
+  docs: Dokümantasyon
+  contribute: Katkıda bulun
+  donate: Bağış yap
+  language: Dil
+  events: Etkinlikler
+  console_support: Konsol desteği
+  priorities: Öncelikler
+  forum: Forum
+footer:
+  godot_engine: Godot Engine
+  download: İndir
+  documentation: Dokümantasyon
+  features: Özellikler
+  web_editor: Web editörü
+  release_archive: Sürüm arşivi
+  source_code: Kaynak kodu
+  project: Proje
+  blog: Blog
+  code_of_conduct: Davranış kuralları
+  governance: Yönetişim
+  teams: Ekipler
+  priorities: Öncelikler
+  communities: Topluluklar
+  resources: Kaynaklar
+  asset_library: Varlık kütüphanesi
+  press_kit: Basın materyalleri
+  showcase: Vitrin
+  education: Eğitim
+  console_support: Konsol desteği
+  foundation: Vakıf
+  about: Hakkında
+  donate: Bağış yap
+  license: Lisans
+  privacy_policy: Gizlilik politikası
+  contact_us: İletişim
+  text: "Juan Linietsky, Ariel Manzur ve <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>katkı sağlayanlar</a>. <a href='https://godot.foundation/' target='_blank' rel='noopener'>Godot Vakfı</a> tarafından barındırılmaktadır. İnternet sitesinin kaynak kodu <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>Github'da</a>."
+sponsors:
+  title: "Godot'nun sponsorları:"
+  text: Kurumsal sponsorlukla ilgileniyorsanız, lütfen <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a> adresi üzerinden bizimle iletişime geçin.<br>Bireysel bağış yapmak isterseniz, <a href='https://fund.godotengine.org/'>Godot Engine geliştirme fonu</a> üzerinden katkıda bulunabilirsiniz.
+  cta: Bağış yap
+home:
+  h1: Ücretsiz, açık kaynaklı<br>oyun motorunuz.
+  subtitle: 2B &amp; 3B oyunlarınızı, platformlar arası projelerinizi, hatta XR fikirlerinizi hayata geçirin!
+  whats_new: Neler yeni
+  download_latest: En Güncel Sürümü İndirin
+  looking_for: '<a href="/download/windows/" class="set-os-download-url" data-version="3" title="Download the long-term support version of Godot 3">Godot 3</a>, <a href="/download/archive">deneysel sürümlerimiz</a> veya <a href="/download/archive">önceki sürümleri</a> mi arıyorsunuz?'
+  latest_news: Güncel haberler
+  latest_releases: Güncel sürümler
+  view_all: Tümünü göster
+  more_news: Daha fazla haber
+  cards:
+    h2: Oyun geliştirmenin farklı bir yolu
+    design:
+      title: Yenilikçi tasarım
+      text: Godot'nun Düğüm ve Sahne sistemi, her şeyi yaratabilmeniz için size hem güç hem de esneklik sağlar.
+    script:
+      title: İşinize uygun dili seçin
+      text: Godot'nun kendi GDScript'ini, C#'ı, C++'ı veya GDExtension ile dilediğiniz bir dili kullanarak, nesne yönelimli API sayesinde kodunuzu modüler tutun.
+      extra: C# desteği, Godot 4.2 itibarıyla şu an için yalnızca masaüstü ve mobil platformlarda mevcuttur.<br>Web platformunda C# çalıştırmak için Godot 3 kullanın.
+    2d:
+      title: Özel 2B Motoru
+      text: Gerçek 2B piksel koordinatları ve 2B düğümleri barındıran özel 2B işleme motoruyla; keskin ve yüksek performanslı oyunlar geliştirin.
+    3d:
+      title: Basit ve güçlü 3B
+      text: Godot'nun 3B düğümleri; 3B dünyalarınızı ve karakterlerinizi oluşturmak, canlandırmak ve işlemek için ihtiyacınız olan her şeyi size sunar.
+    xr:
+      title: Üstün XR desteği
+      text: Godot, OpenXR ve WebXR için yerleşik destek sunar ve diğer çeşitli XR SDK'larını ise eklentiler aracılığıyla destekler.
+    deploy:
+      title: Tüm platformlarda yayınlayın
+      text: Oyununuzu masaüstü, mobil ve web platformlarında saniyeler içinde yayınlayın. Godot, üçüncü taraf yayıncılar aracılığıyla konsolları bile destekler.
+    open:
+      title: Açık Kaynak
+      text: "Gerçek anlamda açık geliştirme: Godot'ya katkıda bulunan herkes, başkalarının katkılarından da eşit derecede yararlanır."
+    cta: Godot'yu kullanmak hakkında daha fazlasını öğrenin
+  get_involved:
+    title: Aramıza katılın
+    text: Topluluğa katılın ve herkese ait olan bir oyun motorunun oluşturulmasına yardımcı olun.
+    cards:
+      cta: Daha fazla öğren
+      code:
+        title: Kod
+        text: Eğer kod yazmayı biliyorsanız, hataları gidererek ve yeni özelliklerin uygulanması konusunda motor geliştiricileriyle birlikte çalışarak yardımcı olabilirsiniz.
+      document:
+        title: Dokümantasyon
+        text: Bir oyun motorunda dokümantasyon kalitesi esastır; API referansını güncelleyerek, yeni kılavuzlar yazarak veya düzeltmeler sunarak dokümantasyonun iyileştirilmesine yardımcı olun.
+      report:
+        title: Bildir
+        text: Motorda bir sorun mu buldunuz? Geliştiricilerin bu sorunu takip edip kaynağını bulabilmesi için raporlamayı unutmayın.
+  foundation:
+    text: "Godot'ya yardım etmek için motor geliştiricisi olmanıza gerek yok. <a href='https://fund.godotengine.org/'>Geliştirme fonuna</a> katılın ve Godot&nbsp;Motoru'nu daha da harika bir hale getirmemize yardımcı olun!"
+    donate: Bağış yap
