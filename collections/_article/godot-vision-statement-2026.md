@@ -7,6 +7,8 @@ image: /storage/blog/covers/godot-foundation-update-2024.webp
 date: 2026-06-25 15:00:00
 ---
 
+[**Read the Godot project vision statement here.**](https://godot.foundation/policies-and-procedures/project-vision-statement)
+
 When Godot was open sourced in 2014, the vision for the engine was held in the minds of the original creators: Juan Linietsky and Ariel Manzur.
 
 When they opened the engine up to public contribution, they were able to share the vision directly with new contributors who learned from them and became today's maintainers. It wasn't formalized as a written document at the time, but the result of a shared experience building, releasing, and maintaining the engine.
@@ -19,4 +21,6 @@ It is not intended to be used as a tool for evaluating specific changes to the e
 
 Importantly, this is not a change in direction from the last decade of development. This is a formalization of the vision that we have shared and developed since the beginning of the project, we just feel the need to write it down now.
 
-You can read the full statement here: [**Vision for the Godot Engine**](https://godot.foundation/policies-and-procedures/project-vision-statement).
+You can read the full statement here:
+
+[**Vision for the Godot Engine**](https://godot.foundation/policies-and-procedures/project-vision-statement)
