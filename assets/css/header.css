@@ -15,10 +15,12 @@ header {
 
   .container {
     background-color: var(--navbar-background-color);
-    overflow: initial;
+    overflow: visible;
 		width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
-    padding: 0.2em 0.4em;
+    padding: 0.2em 6px;
+    gap: clamp(8px, 0.9vw, 18px);
 		border-radius: 16px;
   }
 
@@ -57,7 +59,23 @@ header {
     .container {
       border-radius: 0;
       margin-top: 0;
+      width: 100%;
+      max-width: 100%;
     }
+  }
+}
+
+/* Desktop: shrink-wrap the pill to nav content, centered in the viewport */
+@media (min-width: 1201px) {
+  header .container {
+    width: fit-content;
+    max-width: calc(100% - 2em);
+    margin-inline: auto;
+  }
+
+  #nav {
+    width: auto;
+    flex: 0 0 auto;
   }
 }
 
@@ -65,7 +83,6 @@ header {
 	.fund {
 		margin-right: 0px;
 		margin-left: 0px;
-		padding-left: 7px;
 		flex-shrink: 0;
 		&.desktop {
 			@media (max-width: 1200px) {
@@ -85,7 +102,7 @@ header {
 			background-color: #F35774 !important;
 			border-radius: var(--button-border-radius);
 			box-shadow: inset 0 0 0 2px #F35774;
-			padding: 13px;
+			padding: clamp(9px, 0.9vw, 13px);
 			white-space: nowrap;
 		}
 	}
@@ -125,14 +142,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 26px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
 	a {
 		text-decoration: none;
-		font-size: clamp(14px, 1.25vw, 16px);
+		font-size: clamp(13px, 1.25vw, 16px);
 		font-weight: 400;
 		color: var(--navbar-link-color);
-		margin-left: 14px;
-		padding: clamp(8px, 0.85vw, 12px);
+		margin-left: clamp(4px, 0.9vw, 14px);
+		padding: clamp(6px, 0.7vw, 12px);
 		white-space: nowrap;
     position: relative;
     background-color: transparent;
@@ -155,6 +175,7 @@ header {
   display: flex;
   align-items: center;
   height: 100%;
+  min-width: 0;
 }
 
 #nav > ul > :first-child {
@@ -282,6 +303,7 @@ header {
   #nav {
     display: none;
 		padding-left: 0;
+    padding-right: 0;
   }
   #nav ul {
     align-items: flex-start;
@@ -372,6 +394,17 @@ header {
 
 .add-nav-gap {
   padding-top: 64px;
+}
+
+/* Prevent global .container child padding rules from breaking header symmetry */
+@media (min-width: 1400px) {
+  header .container > :first-child {
+    padding-left: 0;
+  }
+
+  header .container > :last-child:not(a.btn) {
+    padding-right: 0;
+  }
 }
 
 /* Language specific fixes */
