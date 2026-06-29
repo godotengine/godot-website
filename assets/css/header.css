@@ -66,6 +66,7 @@ header {
 		margin-right: 0px;
 		margin-left: 0px;
 		padding-left: 7px;
+		flex-shrink: 0;
 		&.desktop {
 			@media (max-width: 1200px) {
 				display: none;
@@ -85,6 +86,7 @@ header {
 			border-radius: var(--button-border-radius);
 			box-shadow: inset 0 0 0 2px #F35774;
 			padding: 13px;
+			white-space: nowrap;
 		}
 	}
 }
@@ -126,11 +128,12 @@ header {
   padding-left: 26px;
 	a {
 		text-decoration: none;
-		font-size: 16px;
+		font-size: clamp(14px, 1.25vw, 16px);
 		font-weight: 400;
 		color: var(--navbar-link-color);
 		margin-left: 14px;
-		padding: 12px;
+		padding: clamp(8px, 0.85vw, 12px);
+		white-space: nowrap;
     position: relative;
     background-color: transparent;
     transition: all 0.1s ease;
@@ -372,8 +375,4 @@ header {
 }
 
 /* Language specific fixes */
-html[lang="pl"] {
-  #nav a {
-    font-size: 15px;
-  }
-}
+/* font-size and padding are handled universally via clamp() on #nav a */
