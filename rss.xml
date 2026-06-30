@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Vision for the Engine</title><link>https://godotengine.org/article/godot-vision-statement-2026/</link><summary>The Godot Foundation formalizes its vision for the engine with a written statement</summary><description>&lt;p>&lt;a href="https://godot.foundation/policies-and-procedures/project-vision-statement">&lt;strong>Read the Godot project vision statement here.&lt;/strong>&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Changes to our Contribution Policies</title><link>https://godotengine.org/article/contribution-policy-2026/</link><summary>Godot is growing fast, so here is how we are dealing with the huge increase in contributions.</summary><description>&lt;p>Over the last several years we have become overwhelmed by the large number of
+code contributions (pull requests), especially those from new contributors.
+The number of open PRs has become a meme in the community. In part, the number
+of open PRs is a healthy sign that:&lt;/p>
+&lt;ol>
+&lt;li>People are interested in contributing to Godot and are willing to put in time to contribute,&lt;/li>
+&lt;li>We are being cautious about feature creep,&lt;/li>
+&lt;li>We are dedicated to high code quality.&lt;/li>
+&lt;/ol>
+&lt;p>But ultimately, a large part of the backlog comes from the fact that the number
+of qualified reviewers is small, reviewing PRs is demanding, and we can’t keep up
+with everything coming in.&lt;/p>
+&lt;p>This problem is compounded by the recent increase in AI-generated contributions,
+both by AI agents and by humans submitting AI-generated code. The amount of
+effort required to make a PR has gone down (and number of PRs has increased as a
+result), while the amount of work to review PRs and the amount of people
+available to review has stayed the same. This reviewer shortage was already a
+problem, but it was one that we successfully ignored. We can no longer ignore it.&lt;/p>
+&lt;p>AI contributions have the added pain of being demoralizing. Reviewing PRs is
+already tedious work, but it is rewarding because reviewers generally feel
+that their efforts are contributing to educating a new contributor (who may
+become a future maintainer/reviewer). If your feedback on PRs is just being
+absorbed by a machine and not going towards mentoring a potential future
+maintainer, it becomes much harder to justify spending your free time on PR
+review.&lt;/p>
+&lt;p>It is time for us to recognize that these problems aren’t going away and
+therefore we need to take steps to reduce the burden on maintainers while
+ensuring we still have a pipeline to mentor new contributors to become future
+maintainers.&lt;/p>
+&lt;p>Accordingly, we are in the process of updating our contribution policies,
+including adding a stricter policy on AI contributions. The Foundation board
+and maintainers have been discussing a new policy for several months. Our focus will be on:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Encouraging new contributors to become future maintainers, that involves teaching and growing the understanding of new contributors.&lt;/strong>
+&lt;ul>
+&lt;li>LLMs can’t learn from specific feedback and thus can’t benefit from maintainers providing feedback.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Ensuring all contributions are made by humans who can take responsibility for their code and be able and willing to fix it when needed.&lt;/strong>
+&lt;ul>
+&lt;li>AI cannot take responsibility, and we can’t trust heavy users of AI to understand their code enough to fix it.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Adding barriers to low-effort slop.&lt;/strong>
+&lt;ul>
+&lt;li>Unfortunately, this means we need to add barriers to contribution, but want to do it in a way that does not cut off our maintainer pipeline.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Increasing the incentive to review PRs.&lt;/strong>
+&lt;ul>
+&lt;li>PR review is the largest bottleneck in the engine right now. We need to ensure that people who choose to review PRs feel their time is well spent.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>We will amend our &lt;a href="https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html">contributing
+policy&lt;/a>
+to include a prohibition on new features or significant
+re-factoring from new contributors without explicit permission from maintainers.
+This ensures that new contributors take the time to learn the codebase and
+engage with maintainers to build trust by working on bug fixes and documentation
+before diving into significant projects. We consider a new contributor to be
+someone with 3 or fewer merged pull requests.&lt;/p>
+&lt;p>Shortly we will also amend our contributing policy to align with the values described above. Our
+amended policy will include that:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>No autonomous AI agent use or vibe coding&lt;/strong>
+&lt;ul>
+&lt;li>This already leads to an auto-ban from our GitHub repository and will continue to do so.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>No use of AI to generate substantial pieces of code&lt;/strong>
+&lt;ul>
+&lt;li>We require all code to be human authored. AI assistance should be limited to menial things (like code completion, regex, or find and replace).&lt;/li>
+&lt;li>If you do use AI in some capacity to author code, you must disclose it in the PR discussion.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>No AI-generated text in human-to-human communication&lt;/strong>
+&lt;ul>
+&lt;li>When our maintainers volunteer their time to review your issue, PR, or proposal, they do not want to talk to a machine. This is a basic principle of respect.&lt;/li>
+&lt;li>Machine translations are still acceptable as long as the original content was written by a human.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>All PRs must be reviewed and approved by a human before merging&lt;/strong>
+&lt;ul>
+&lt;li>This is the case already, but we will make it more explicit in our policy.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Things change every day with respect to the current suite of AI tools available.
+We will continue taking a conservative approach in our policies towards them,
+but we will re-evaluate as things evolve.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/contribution-policy-2026/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 30 Jun 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/contribution-policy-2026.jpg</image></item><item><title>Vision for the Engine</title><link>https://godotengine.org/article/godot-vision-statement-2026/</link><summary>The Godot Foundation formalizes its vision for the engine with a written statement</summary><description>&lt;p>&lt;a href="https://godot.foundation/policies-and-procedures/project-vision-statement">&lt;strong>Read the Godot project vision statement here.&lt;/strong>&lt;/a>&lt;/p>
 &lt;p>When Godot was open sourced in 2014, the vision for the engine was held in the minds of the original creators: Juan Linietsky and Ariel Manzur.&lt;/p>
 &lt;p>When they opened the engine up to public contribution, they were able to share the vision directly with new contributors who learned from them and became today’s maintainers. It wasn’t formalized as a written document at the time, but the result of a shared experience building, releasing, and maintaining the engine.&lt;/p>
 &lt;p>However, Godot has grown rapidly over the last few years. The pool of contributors has grown as well and it is no longer feasible for new contributors to slowly learn the vision of the engine by chatting with the engine maintainers. Accordingly, the Board of the Godot Foundation has decided that it is finally time to write down a high-level statement of what our vision for the engine is so that it is easily accessible to all.&lt;/p>
@@ -1995,266 +2085,4 @@ This enables OpenXR Android projects to easily integrate the validation layers b
 &lt;p>However, developers couldn’t test them on desktop, only when deploying to the headset.&lt;/p>
 &lt;p>In v5, we’ve added the ability to simulate Hybrid App switching on desktop, which can help to accelerate iteration speed.&lt;/p>
 &lt;hr />
-&lt;p>&lt;em>The illustration picture for this article comes from &lt;a href="https://dsnopek.itch.io/expedition-to-blobotopia">Expedition to Blobotopia&lt;/a> which was &lt;a href="https://www.youtube.com/watch?v=6RE8KuCspqw">created entirely in VR&lt;/a> and available for &lt;a href="https://www.meta.com/experiences/expedition-to-blobotopia-demo/24941992168770375/">Meta&lt;/a> and &lt;a href="https://play.google.com/store/apps/details?id=com.snopekgames.gwj81">Android XR&lt;/a> headsets.&lt;/em>&lt;/p></description><category>Progress Report</category><guid>https://godotengine.org/article/godot-xr-update-may-2026/</guid><dc:creator>Bastiaan Olij, David Snopek, and Fredia Huya-Kouadio</dc:creator><pubDate>Tue, 19 May 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-openxr-vendors-plugin-v5-1-godot-xr-community.jpg</image></item><item><title>Release candidate: Godot 4.6.3 RC 2</title><link>https://godotengine.org/article/release-candidate-godot-4-6-3-rc-2/</link><summary>A Saturday surprise</summary><description>&lt;p>We rarely opt for Saturday releases for these snapshots, as the majority of the team are already enjoying their weekend (hopefully you are as well!). However, we had some exciting new regression fixes for the upcoming 4.6.3 maintenance release, so we didn’t feel right just sitting on them. As such, we’re dropping the next release candidate now, so users can get their hands on it even earlier than usual!&lt;/p>
-&lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
-&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.6.3.rc2/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/6Ls6Bfa34">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
-&lt;hr />
-&lt;p>&lt;em>The illustration picture for this article comes from&lt;/em> &lt;a href="https://store.steampowered.com/app/3441280/The_Greenening/?curator_clanid=41324400">&lt;strong>The Greenening&lt;/strong>&lt;/a>, &lt;em>a incremental game where you embark on a wholesome journey to explore and reawaken a forgotten world. You can buy the game on &lt;a href="https://store.steampowered.com/app/3441280/The_Greenening/?curator_clanid=41324400">Steam&lt;/a>, and follow the developer on &lt;a href="https://www.youtube.com/@erkberg">YouTube&lt;/a> or &lt;a href="https://bsky.app/profile/erkberg.bsky.social">Bluesky&lt;/a>.&lt;/em>&lt;/p>
-&lt;h2 id="whats-new">What’s new&lt;/h2>
-&lt;p>&lt;strong>14 contributors&lt;/strong> submitted &lt;strong>21 improvements&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.6.3-rc2">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since &lt;a href="/article/release-candidate-godot-4-6-3-rc-1/">4.6.3 RC 1&lt;/a>. You can also review &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.6.3">all changes included in 4.6.3&lt;/a> compared to the previous &lt;a href="/article/maintenance-release-godot-4-6-2/">4.6.2 maintenance release&lt;/a>.&lt;/p>
-&lt;p>This section covers all changes made since &lt;a href="/article/release-candidate-godot-4-6-3-rc-1/">4.6.3 RC 1&lt;/a>, which are largely regression fixes:&lt;/p>
-&lt;ul>
-&lt;li>3D: Fix 3D viewport selection getting stuck when editing a &lt;code class="language-plaintext highlighter-rouge">GridMap&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/117521">GH-117521&lt;/a>).&lt;/li>
-&lt;li>3D: Fix Marker3D editor gizmo being darker than intended for negative axis lines (&lt;a href="https://github.com/godotengine/godot/pull/116995">GH-116995&lt;/a>).&lt;/li>
-&lt;li>3D: Fix mouse wheel zoom scrolling contents in the &lt;code class="language-plaintext highlighter-rouge">GridMap&lt;/code> editor (&lt;a href="https://github.com/godotengine/godot/pull/117378">GH-117378&lt;/a>).&lt;/li>
-&lt;li>3D: Fix problems with undoing selection and pasting in &lt;code class="language-plaintext highlighter-rouge">GridMap&lt;/code> editor (&lt;a href="https://github.com/godotengine/godot/pull/116814">GH-116814&lt;/a>).&lt;/li>
-&lt;li>Animation: Fix compressed Pos3D track interpolation (&lt;a href="https://github.com/godotengine/godot/pull/118159">GH-118159&lt;/a>).&lt;/li>
-&lt;li>Editor: Avoid repeats in resource gather (&lt;a href="https://github.com/godotengine/godot/pull/118926">GH-118926&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix and improve the editor layout dialog (&lt;a href="https://github.com/godotengine/godot/pull/117846">GH-117846&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix blurry icons in the inspector dock’s object selector (&lt;a href="https://github.com/godotengine/godot/pull/115222">GH-115222&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix FileSystem dock visual separation when docked at bottom (&lt;a href="https://github.com/godotengine/godot/pull/115267">GH-115267&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix keying state not being updated for sub-inspectors (&lt;a href="https://github.com/godotengine/godot/pull/117673">GH-117673&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix right clicking an item in filesystem &lt;code class="language-plaintext highlighter-rouge">ItemList&lt;/code> draws focus (&lt;a href="https://github.com/godotengine/godot/pull/114968">GH-114968&lt;/a>).&lt;/li>
-&lt;li>Editor: Fix text alignment in check box inside &lt;code class="language-plaintext highlighter-rouge">EditorInspectorSection&lt;/code>s (&lt;a href="https://github.com/godotengine/godot/pull/117683">GH-117683&lt;/a>).&lt;/li>
-&lt;li>Editor: Update the notification for Auto-exposure (&lt;a href="https://github.com/godotengine/godot/pull/114732">GH-114732&lt;/a>).&lt;/li>
-&lt;li>GDScript: Fix GDScript LSP test link errors when &lt;code class="language-plaintext highlighter-rouge">websocket&lt;/code> is disabled (&lt;a href="https://github.com/godotengine/godot/pull/114951">GH-114951&lt;/a>).&lt;/li>
-&lt;li>GDScript: Pattern guard warning fix (&lt;a href="https://github.com/godotengine/godot/pull/110523">GH-110523&lt;/a>).&lt;/li>
-&lt;li>GUI: Fix &lt;code class="language-plaintext highlighter-rouge">RichTextLabel&lt;/code> not updating after change &lt;code class="language-plaintext highlighter-rouge">scroll_active&lt;/code> field (&lt;a href="https://github.com/godotengine/godot/pull/114467">GH-114467&lt;/a>).&lt;/li>
-&lt;li>GUI: Fix TextEdit IME error on mouse over (&lt;a href="https://github.com/godotengine/godot/pull/111859">GH-111859&lt;/a>).&lt;/li>
-&lt;li>Platforms: Fix clipboard history not updating on subsequent copies in Wayland (&lt;a href="https://github.com/godotengine/godot/pull/116648">GH-116648&lt;/a>).&lt;/li>
-&lt;li>Platforms: Wayland: Unify clipboard sending code (&lt;a href="https://github.com/godotengine/godot/pull/117873">GH-117873&lt;/a>).&lt;/li>
-&lt;li>Rendering: Add project setting to disable new Volumetric fog blending behavior (&lt;a href="https://github.com/godotengine/godot/pull/119414">GH-119414&lt;/a>).&lt;/li>
-&lt;li>Rendering: Fix LightmapGI probe update speed setting not applying in Compatibility (&lt;a href="https://github.com/godotengine/godot/pull/117771">GH-117771&lt;/a>).&lt;/li>
-&lt;/ul>
-&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/e880d6bbfb74479376a0cba9b106ac0c39b4cfe4">&lt;code class="language-plaintext highlighter-rouge">e880d6bbf&lt;/code>&lt;/a>.&lt;/p>
-&lt;h2 id="downloads">Downloads&lt;/h2>
-&lt;div class="card card-download">
-&lt;a class="card-download-link" href="/download/archive/4.6.3-rc2">
-Download Godot 4.6.3 rc2
-&lt;/a>
-&lt;div class="card-download-details">
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-6-3-rc-2.jpg" />
-&lt;div class="card-download-platforms">
-&lt;div class="download-platform platform-linux">
-&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
-Linux
-&lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.3&amp;amp;flavor=rc2&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.3&amp;amp;flavor=rc2&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-macos">
-&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
-macOS
-&lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.3&amp;amp;flavor=rc2&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.3&amp;amp;flavor=rc2&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;div class="download-platform platform-windows">
-&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
-Windows
-&lt;/div>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.3&amp;amp;flavor=rc2&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
-&lt;div class="download-title">
-Standard
-&lt;/div>
-&lt;/a>
-&lt;a href="https://downloads.godotengine.org/?version=4.6.3&amp;amp;flavor=rc2&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
-&lt;div class="download-title">
-.NET
-&lt;/div>
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;div class="card-download-sublinks">
-&lt;a class="card-download-other" href="/download/archive/4.6.3-rc2">
-Export templates and other downloads
-&lt;/a>
-&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
-Make a Donation
-&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;style>
-.thankyou-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.85);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 10;
-}
-.thankyou {
-background: var(--base-color);
-box-shadow: var(--more-shadow);
-padding: 30px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-position: relative;
-border-radius: 13px;
-}
-.thankyou-reading {
-font-size: 16px;
-}
-.thankyou-reading-list {
-font-size: 16px;
-margin: 0;
-margin-left: 48px;
-padding-left: 0;
-}
-.thankyou-donate {
-margin-bottom: 24px;
-text-align: center;
-}
-.btn.btn-donate {
-background-color: var(--primary-color);
-color: hsla(0, 0%, 100%, 0.9);
-font-size: 22px;
-font-weight: 600;
-margin-bottom: 26px;
-}
-.thankyou h2 {
-text-shadow: var(--base-shadow);
-font-size: 36px;
-font-weight: 800;
-margin-bottom: 12px;
-}
-.thankyou h2 .anchored-link {
-/* Hiding the anchored text automatically added on blogposts */
-display: none !important;
-}
-.thankyou p {
-max-width: 620px;
-font-size: 25px;
-}
-@media (max-width: 768px) {
-.thankyou-wrapper {
-display: block;
-}
-.thankyou {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-overflow: scroll;
-padding: 30px 40px 18px 40px;
-}
-.thankyou-reading-list {
-margin-left: 24px;
-}
-.btn-close-thankyou-popup {
-width: 48px;
-height: 48px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-}
-.btn-close-thankyou-popup {
-cursor: pointer;
-position: absolute;
-top: 12px;
-right: 12px;
-}
-.btn-close-thankyou-popup img {
-background: transparent !important; /* for overwriting the style in the blogposts img */
-}
-@media (prefers-color-scheme: light) {
-.btn-close-thankyou-popup img {
-filter: invert(1);
-opacity: 0.75;
-}
-}
-&lt;/style>
-&lt;script>
-document.addEventListener('DOMContentLoaded', () => {
-const thankYouWrapper = document.getElementById('thank-you');
-// Close itself, when clicked outside of the popup area.
-thankYouWrapper.addEventListener('click', (e) => {
-if (e.target === thankYouWrapper) {
-thankYouWrapper.style.display = 'none';
-}
-});
-// Close with a close button.
-const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
-thankYouBackButton.addEventListener('click', () => {
-thankYouWrapper.style.display = 'none';
-});
-// Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
-downloadButtons.forEach((it) => {
-if (it.dataset?.external === "yes") {
-return;
-}
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-document.querySelector('.btn.btn-donate').focus();
-});
-});
-// Open from the all downloads list.
-const downloadLinks = document.querySelectorAll('.download-link');
-downloadLinks.forEach((it) => {
-it.addEventListener('click', () => {
-thankYouWrapper.style.display = '';
-});
-});
-// Close the dialog when the user presses the escape key.
-document.addEventListener('keydown', (e) => {
-if (e.key === 'Escape') {
-thankYouWrapper.style.display = 'none';
-}
-});
-});
-&lt;/script>
-&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
-&lt;div class="thankyou">
-&lt;h2>Godot is downloading...&lt;/h2>
-&lt;p class="thankyou-donate">
-Godot exists thanks to donations from people like you. Help us continue our work:
-&lt;/p>
-&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
-Make a Donation
-&lt;/a>
-&lt;div class="btn-close-thankyou-popup">
-&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
-&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
-&lt;div class="card card-warning">
-&lt;p>
-While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
-&lt;/p>
-&lt;/div>
-&lt;h2 id="known-issues">Known issues&lt;/h2>
-&lt;p>During the Release Candidate stage, we focus exclusively on solving showstopping regressions (i.e. something that worked in a previous release is now broken, without workaround). You can have a look at our current &lt;a href="https://github.com/orgs/godotengine/projects/61">list of regressions and significant issues&lt;/a> which we aim to address before releasing 4.6.3. This list is dynamic and will be updated if we discover new showstopping issues after more users start testing the RC snapshots.&lt;/p>
-&lt;p>With every release we accept that there are going to be various issues, which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug">known bugs&lt;/a>.&lt;/p>
-&lt;h2 id="bug-reports">Bug reports&lt;/h2>
-&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
-&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
-&lt;h2 id="support">Support&lt;/h2>
-&lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
-&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a>.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/release-candidate-godot-4-6-3-rc-2/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Sat, 16 May 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-6-3-rc-2.jpg</image></item></channel></rss>
+&lt;p>&lt;em>The illustration picture for this article comes from &lt;a href="https://dsnopek.itch.io/expedition-to-blobotopia">Expedition to Blobotopia&lt;/a> which was &lt;a href="https://www.youtube.com/watch?v=6RE8KuCspqw">created entirely in VR&lt;/a> and available for &lt;a href="https://www.meta.com/experiences/expedition-to-blobotopia-demo/24941992168770375/">Meta&lt;/a> and &lt;a href="https://play.google.com/store/apps/details?id=com.snopekgames.gwj81">Android XR&lt;/a> headsets.&lt;/em>&lt;/p></description><category>Progress Report</category><guid>https://godotengine.org/article/godot-xr-update-may-2026/</guid><dc:creator>Bastiaan Olij, David Snopek, and Fredia Huya-Kouadio</dc:creator><pubDate>Tue, 19 May 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-openxr-vendors-plugin-v5-1-godot-xr-community.jpg</image></item></channel></rss>
