@@ -3,7 +3,7 @@ title: "Changes to our Contribution Policies"
 excerpt: "Godot is growing fast, here is how we are dealing with the huge increase in contributions."
 categories: ["news"]
 author: Godot Foundation
-image: /storage/blog/covers/godot-foundation-update-2024.webp
+image: /storage/blog/covers/contribution-policy-2026.jpg
 date: 2026-06-30 18:00:00
 ---
 
