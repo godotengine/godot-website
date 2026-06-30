@@ -1,6 +1,6 @@
 ---
 title: "Changes to our Contribution Policies"
-excerpt: "Godot is growing fast, here is how we are dealing with the huge increase in contributions."
+excerpt: "Godot is growing fast, so here is how we are dealing with the huge increase in contributions."
 categories: ["news"]
 author: Godot Foundation
 image: /storage/blog/covers/contribution-policy-2026.jpg
@@ -21,7 +21,7 @@ of qualified reviewers is small, reviewing PRs is demanding, and we can't keep u
 with everything coming in. 
 
 This problem is compounded by the recent increase in AI-generated contributions,
-both by AI agents and by humans submitting AI generated code. The amount of
+both by AI agents and by humans submitting AI-generated code. The amount of
 effort required to make a PR has gone down (and number of PRs has increased as a
 result), while the amount of work to review PRs and the amount of people
 available to review has stayed the same. This reviewer shortage was already a
@@ -65,12 +65,12 @@ someone with 3 or fewer merged pull requests.
 Shortly we will also amend our contributing policy to align with the values described above. Our
 amended policy will include that:
 - **No autonomous AI agent use or vibe coding**
-    - This already leads to an auto-ban from our Github repository and will continue to do so.
+    - This already leads to an auto-ban from our GitHub repository and will continue to do so.
 - **No use of AI to generate substantial pieces of code**
     - We require all code to be human authored. AI assistance should be limited to menial things (like code completion, regex, or find and replace).
     - If you do use AI in some capacity to author code, you must disclose it in the PR discussion.
-- **No AI generated text in human-to-human communication**
-    - When our maintainers volunteer their time to review your issue, PR, or proposal, they do not want to talk to a machine. This is a basic principle of respect
+- **No AI-generated text in human-to-human communication**
+    - When our maintainers volunteer their time to review your issue, PR, or proposal, they do not want to talk to a machine. This is a basic principle of respect.
     - Machine translations are still acceptable as long as the original content was written by a human.
 - **All PRs must be reviewed and approved by a human before merging**
     - This is the case already, but we will make it more explicit in our policy. 
