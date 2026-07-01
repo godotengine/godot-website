@@ -1,3 +1,8 @@
+- name: "4.7.1"
+  flavor: "rc1"
+  release_date: "1 July 2026"
+  release_notes: "/article/release-candidate-godot-4-7-1-rc-1/"
+
 - name: "4.7"
   flavor: "stable"
   release_date: "18 June 2026"
