@@ -6,7 +6,7 @@ author: Thaddeus Crews
 image: /storage/blog/covers/release-candidate-godot-4-7-1-rc-1.jpg
 image_caption_title: nophenia
 image_caption_description: A game by lane
-date: 2026-01-07 12:00:00
+date: 2026-07-01 12:00:00
 ---
 
 Ever since the release of [Godot 4.7](/releases/4.7/) just over a week ago, our team has been working nonstop in two critical areas: ensuring a strong initial development cycle for Godot 4.8, and polishing up the current stable release's foundation for an upcoming maintenance release. We weren't entirely sure which would end up coming to light first, but it's now clear that the latter will be taking an early lead with our first 4.7.1 release candidate. We'd like to thank everyone who diligently reported on any showstopping bugs that weren't present in Godot 4.6; your continued testing is making this process especially expedient!
