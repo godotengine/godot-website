@@ -42,7 +42,7 @@ This section covers all changes made since the [RC 1 snapshot](/article/release-
 
 ## Changelog
 
-As we've tightened our policy on what kind of changes can be merged leading to the release candidate stage, there aren't a lot of changes in this snapshot. **7 contributors** submitted **10 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.7-rc2) for the complete list of changes since [4.7 RC 1](/articlerelease-candidate-godot-4-7-rc-1/). You can also review [all changes included in 4.7](https://godotengine.github.io/godot-interactive-changelog/#4.7) compared to the previous [4.6 feature release](/releases/4.6/).
+As we've tightened our policy on what kind of changes can be merged leading to the release candidate stage, there aren't a lot of changes in this snapshot. **7 contributors** submitted **10 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.7-rc2) for the complete list of changes since [4.7 RC 1](/article/release-candidate-godot-4-7-rc-1/). You can also review [all changes included in 4.7](https://godotengine.github.io/godot-interactive-changelog/#4.7) compared to the previous [4.6 feature release](/releases/4.6/).
 
 This release is built from commit [`3df26a02c`](https://github.com/godotengine/godot/commit/3df26a02c446710c979daa541b74f87edeca81b0).
 
