@@ -18,6 +18,9 @@ platinum:
   - name: "Battlefield Studios"
     link: "https://portal.battlefield.com/"
     image: "https://fund.godotengine.org/static/logos/battlefield.png"
+  - name: "V-Sekai"
+    link: "https://github.com/V-Sekai"
+    image: "https://fund.godotengine.org/static/logos/v-sekai.png"
 gold:
   - name: Arm
     link: "https://www.arm.com/"
