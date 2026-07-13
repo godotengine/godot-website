@@ -25,9 +25,11 @@ Also, a brief look at the future of Godot's renderer including what to expect in
 #### What's New in Android
 🗣️ **Fredia L Huya-Kouadio**
 
-What's new in Android
+Discover what's new in Android in 2026 for Godot developers!
 
-(ASK FREDIA FOR MORE?)
+This talk will provide updates, new development, and new features to the Godot Android Platform since 2025. 
+
+The talk will also cover the growth of the Godot Android editor since 2025, and will provide a quick look at its 2026 development roadmap.
 
 ---
 
