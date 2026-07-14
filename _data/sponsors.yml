@@ -31,6 +31,9 @@ gold:
   - name: "Robot Gentleman"
     link: "http://robotgentleman.com/"
     image: "https://fund.godotengine.org/static/logos/robot-gentleman.png"
+  - name: "DeNA Co., Ltd."
+    link: "https://dena.com/intl/"
+    image: "https://fund.godotengine.org/static/logos/DeNa-logo.svg"
 silver:
   - name: "Playful Studios"
     link: "https://playfulstudios.com/"
