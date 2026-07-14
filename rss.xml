@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Release candidate: Godot 4.7.1 RC 2</title><link>https://godotengine.org/article/release-candidate-godot-4-7-1-rc-2/</link><summary>The de-specialized edition: special edition!</summary><description>&lt;p>As distance from the &lt;a href="/releases/4.7/">Godot 4.7 stable release&lt;/a> grows, so too does the amount of spotted regressions and subsequent regression fixes. We don’t have quite as many fixes to share compared to &lt;a href="/article/release-candidate-godot-4-7-1-rc-1/">4.7.1 RC 1&lt;/a>, but there’s still enough to go around to warrant a second release candidate for this maintenance cycle.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot Team Updates @ GodotCon Boston 2026</title><link>https://godotengine.org/article/godotcon-us-2026-update/</link><summary>Announcing the schedule and some official updates from the Godot Foundation expected at GodotCon Boston 2026.</summary><description>&lt;style>h4 {margin-bottom:0}&lt;/style>
+&lt;p>Our second annual &lt;a href="https://conference.godotengine.org/US/2026/">GodotCon&lt;/a> in North America is right around the corner and it is full steam ahead for the Godot community in Boston. &lt;a href="https://talks.godotengine.org/godotcon-boston-2026/schedule/">The schedule has been announced&lt;/a> so we thought it would be worth highlighting some of the official updates and fun talks from the Godot Foundation that will take place during the conference.&lt;/p>
+&lt;hr />
+&lt;h4 id="godot-rendering-team-update">Godot Rendering Team Update&lt;/h4>
+&lt;p>🗣️ &lt;strong>Clay John&lt;/strong>&lt;/p>
+&lt;p>An update on what major changes have happened within the renderer over the last two years with a focus on technical hurdles that we have overcome and the major limitations that we are now seeing.&lt;/p>
+&lt;p>Also, a brief look at the future of Godot’s renderer including what to expect in terms of new high-end features and the long-term vision for the renderer.&lt;/p>
+&lt;hr />
+&lt;h4 id="whats-new-in-android">What’s New in Android&lt;/h4>
+&lt;p>🗣️ &lt;strong>Fredia L Huya-Kouadio&lt;/strong>&lt;/p>
+&lt;p>Discover what’s new in Android in 2026 for Godot developers!&lt;/p>
+&lt;p>This talk will provide updates, new development, and new features to the Godot Android Platform since 2025.&lt;/p>
+&lt;p>The talk will also cover the growth of the Godot Android editor since 2025, and will provide a quick look at its 2026 development roadmap.&lt;/p>
+&lt;hr />
+&lt;h4 id="how-to-make-a-vr-game-entirely-in-vr-no-pc-required">How to make a VR game entirely in VR! (No PC required)&lt;/h4>
+&lt;p>🗣️ &lt;strong>David Snopek, Logan Lang&lt;/strong>&lt;/p>
+&lt;p>Did you know that the Godot editor can run on standalone VR headsets like the Meta Quest 2/3, Pico 4, or Samsung Galaxy XR?&lt;/p>
+&lt;p>This can allow you to build a game entirely in VR, without using a desktop or laptop computer at all!&lt;/p>
+&lt;p>In this talk, David Snopek and Logan Lang of Godot’s XR team, will:&lt;/p>
+&lt;ul>
+&lt;li>Tell the story of “Expedition to Blobotopia”, a VR game which they built in one week for the Godot Wild Jam #81, working entirely on Meta Quest 3 headsets&lt;/li>
+&lt;li>Explain the advantages of doing game dev in the headset&lt;/li>
+&lt;li>Share tips and tricks for how you can do it too&lt;/li>
+&lt;li>Demonstrate the newly released GABE, which allows running full Android Gradle builds on the headset&lt;/li>
+&lt;li>Explain the basics of publishing your VR game on the Meta Horizon Store and Google Play Store&lt;/li>
+&lt;li>Give a live demo of the editor running on a headset!&lt;/li>
+&lt;/ul>
+&lt;p>Discover a new way to add VR directly into your game development workflow!&lt;/p>
+&lt;hr />
+&lt;h4 id="where-every-millisecond-counts-optimizing-godot-for-low-spec-devices">Where Every Millisecond Counts: Optimizing Godot for Low-Spec Devices&lt;/h4>
+&lt;p>🗣️ &lt;strong>Clay John, Pablo Selener, David Snopek&lt;/strong>&lt;/p>
+&lt;p>Low-spec targets like mobile and standalone VR leave little room for waste. This session covers two things: the engine-level optimizations W4 Games contributed upstream that make all Godot games faster, and the techniques developers can apply in their own projects without modifying Godot’s source. Much of this work was originally funded by commercial engagements and is now upstream for everyone.&lt;/p>
+&lt;hr />
+&lt;h4 id="getting-started-with-cross-platform-xr-development">Getting started with cross-platform XR development&lt;/h4>
+&lt;p>🗣️ &lt;strong>Fredia L Huya-Kouadio, David Snopek&lt;/strong>&lt;/p>
+&lt;p>This talk will walk attendees through the process of creating an XR game that can run on all modern XR platforms (Android XR, Meta Horizon OS, Pico OS, visionOS) and leverage capabilities unique to each platform.&lt;/p>
+&lt;p>Attendees will also be walked through the process of porting an existing ‘flat’ 3D game to an immersive or volumetric game running on an XR device.&lt;/p>
+&lt;hr />
+&lt;p>&lt;a href="https://conference.godotengine.org/US/2026/">GodotCon Boston 2026&lt;/a> takes place from July 20th - July 22nd with a day of workshops on the 20th and the main conference on the 21st and 22nd. There are &lt;strong>20 other talks&lt;/strong> to see along with the Godot games showcase, nightly social events, and catered breakfast and lunch. &lt;a href="https://tickets.godotengine.org/scene-tree/godotcon-us-2026/">Tickets are on-sale now&lt;/a>. Room in workshops is still available!&lt;/p>
+&lt;p style="text-align: center;">&lt;a class="btn" href="https://tickets.godotengine.org/scene-tree/godotcon-us-2026/">Buy tickets 🎟️&lt;/a>&lt;/p></description><category>Events</category><guid>https://godotengine.org/article/godotcon-us-2026-update/</guid><dc:creator>Chad Stewart</dc:creator><pubDate>Tue, 14 Jul 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotcon-boston-2026.jpg</image></item><item><title>Release candidate: Godot 4.7.1 RC 2</title><link>https://godotengine.org/article/release-candidate-godot-4-7-1-rc-2/</link><summary>The de-specialized edition: special edition!</summary><description>&lt;p>As distance from the &lt;a href="/releases/4.7/">Godot 4.7 stable release&lt;/a> grows, so too does the amount of spotted regressions and subsequent regression fixes. We don’t have quite as many fixes to share compared to &lt;a href="/article/release-candidate-godot-4-7-1-rc-1/">4.7.1 RC 1&lt;/a>, but there’s still enough to go around to warrant a second release candidate for this maintenance cycle.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.7.1.rc2/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/6Ls6Bfa34">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
@@ -2328,58 +2367,4 @@ As with Beep Saber, it is fully open source and serves as a great example of wha
 &lt;h2 id="about-jetbrains-rider-and-godot">About JetBrains Rider and Godot&lt;/h2>
 &lt;p>JetBrains has been &lt;a href="https://godotengine.org/article/jetbrains-joins-dev-fund-supports-godot/">investing in Godot support for several years&lt;/a>. Rider provides deep &lt;a href="https://www.jetbrains.com/help/rider/Godot.html">integration with the Godot engine&lt;/a>, including code insight and debugging for both C# and GDScript, scene and resource navigation, and a rich set of inspections tailored for Godot projects.&lt;/p>
 &lt;p>You can find the official JetBrains-developed addon &lt;a href="https://store.godotengine.org/asset/jetbrains/jetbrains-rider-integration/">JetBrains Rider Integration&lt;/a>, on the Godot Asset Store. It helps you develop addons and games in Rider by connecting it as an external editor to the Godot editor.&lt;/p>
-&lt;p>We’re happy to see ecosystem partners like JetBrains contribute to making Godot addon development more accessible and professional. Having a polished, end-to-end workflow for creating, debugging, and publishing addons benefits the entire Godot community.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 26 May 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/partners_jetbrains_rider_asset_store_addons_support.png</image></item><item><title>Introducing the Godot Asset Store</title><link>https://godotengine.org/article/introducing-the-godot-asset-store/</link><summary>We've been working on replacing the Asset Library with something built for the present and future. Here's what's coming.</summary><description>&lt;p>The &lt;a href="https://godotengine.org/asset-library/asset">Asset Library&lt;/a> has served for many years as the official place to publish and acquire assets, fulfilling a valuable community need.
-However with the &lt;a href="https://godotengine.org/article/godot-growth-stats-2026/">rapid growth of the Godot community and ecosystem&lt;/a>, it was time to come up with a new infrastructure.&lt;/p>
-&lt;p>After a couple years of work and a few months of beta testing, we are pleased to introduce the new &lt;a href="https://store.godotengine.org/">Godot Asset Store&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="/storage/blog/asset-store/godot-asset-store-screenshot.webp" alt="A screenshot of the Godot Asset Store" />&lt;/p>
-&lt;h2 id="the-godot-asset-store">The &lt;a href="https://store.godotengine.org/">Godot Asset Store&lt;/a>&lt;/h2>
-&lt;p>The new Asset Store is live and stable and will be fully integrated in Godot 4.7. The Asset Store leverages Godot’s shared account system, which means that if you have donated to the &lt;a href="https://fund.godotengine.org">development fund&lt;/a>, participated on &lt;a href="https://forum.godotengine.org/">the forum&lt;/a> or on the &lt;a href="https://chat.godotengine.org/">developer chat&lt;/a>, or voted for &lt;a href="https://showreel.godotengine.org/">showreel candidates&lt;/a>, you already have an account. And if you haven’t, creating one is easy.&lt;/p>
-&lt;p>The Asset Store introduces several new features:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>User reviews and ratings
-&lt;img src="/storage/blog/asset-store/asset-store-reviews.png" alt="A screenshot showing the Reviews page of an asset" />&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Analytics for publishers
-&lt;img src="/storage/blog/asset-store/asset-store-analytics.png" alt="A screenshot of the analytics page" />&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Multiple download versions per asset
-&lt;img src="/storage/blog/asset-store/asset-store-multiple-versions.png" alt="A screenshot of the download per version drop-down" />&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>A changelog page for asset
-&lt;img src="/storage/blog/asset-store/asset-store-changelog.png" alt="A screenshot of an asset changelog page" />&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>The ability to tag asset, including creating custom tags
-&lt;img src="/storage/blog/asset-store/godot-asset-store-tags.png" alt="A screenshot of an asset's tags" />&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>In addition, many more features are &lt;a href="https://store.godotengine.org/roadmap/">coming in the near future&lt;/a> including the ability to &lt;a href="https://github.com/godotengine/godot-asset-store-tracker/issues/14">buy and sell assets&lt;/a>.&lt;/p>
-&lt;p>We encourage users to visit the store, either through the &lt;a href="https://store.godotengine.org/">website&lt;/a> or through the &lt;a href="https://godotengine.org/article/dev-snapshot-godot-4-7-beta-3/">preview builds for Godot 4.7&lt;/a> and start providing feedback.&lt;/p>
-&lt;p>And we encourage publishers to start migrating their assets to the Asset Store.
-Note that we considered automatically moving the assets from the library to the new store but decided against due to numerous issues:&lt;/p>
-&lt;ul>
-&lt;li>Need every publishers to create a new account and link them to their previous account&lt;/li>
-&lt;li>Require permission from each publisher to republish on their behalf&lt;/li>
-&lt;li>Need to re-upload all assets from the Asset Library to the new hosting solution as the Asset Library doesn’t actually host any of the assets it distributes&lt;/li>
-&lt;li>Auto-migrating abandoned or no longer supported assets would just create a lot of irrelevant entries in the new store&lt;/li>
-&lt;/ul>
-&lt;h2 id="what-about-the-asset-library">What about the Asset Library?&lt;/h2>
-&lt;p>We initially didn’t have plans to run an asset store operated by the Foundation, as with most projects outside of the Godot Engine itself, we try to foster an ecosystem that provides solutions Godot developers need. There were also existing stores that people use (like &lt;a href="https://itch.io/search?q=godot">itch&lt;/a>), so we assumed the community would centralize around the one that worked best for them.&lt;/p>
-&lt;p>Unfortunately this approach and resulting gap led to confusion within the community as to which of those existing stores were backed by the Godot Foundation (e.g., the Foundation started receiving regular support emails from users). Some of these stores were also hosting paid versions of free assets (such as &lt;a href="https://www.kenney.nl/">Kenney’s&lt;/a>) with unclear information about ownership or transparency.&lt;/p>
-&lt;p>Among these concerns, we were also running into growing tech debt with the Asset Library given that its architecture and infrastructure were not designed for the current present needs:&lt;/p>
-&lt;ul>
-&lt;li>The Asset Library doesn’t use Godot shared account system, so users and publishers have to use yet another account for it, and the Foundation has to spend resources supporting and maintaining that account system.&lt;/li>
-&lt;li>Existing infrastructure was hard to evolve while maintaining compatibility with older versions of the Godot editor.&lt;/li>
-&lt;/ul>
-&lt;p>We will keep the Asset Library running since many older versions of the engine still need it, but it should be considered deprecated, and will be set as a read-only repository in the near future.&lt;/p>
-&lt;h2 id="future">Future&lt;/h2>
-&lt;p>Our core goals for the Asset Store in Godot 4.7 and 4.8 are to ensure that the transition away from the Asset Library is fully complete, and to make the Asset Store a space that’s safe, functional, and up to the quality standards you’d expect.&lt;/p>
-&lt;p>Following that, we have several items on the &lt;a href="https://store.godotengine.org/roadmap/">Asset Store roadmap&lt;/a>, the most anticipated one being the ability to sell and buy assets.
-We also want to make it easier for users to donate to free plugins so we can improve support for many popular projects such as &lt;a href="https://store.godotengine.org/asset/ramokz/phantom-camera/">Phantom Camera&lt;/a>, &lt;a href="https://store.godotengine.org/asset/nathanhoad/dialogue-manager/">Dialogue Manager&lt;/a>, and &lt;a href="https://store.godotengine.org/asset/godotsteam/godotsteam-gdextension/">GodotSteam&lt;/a>.&lt;/p>
-&lt;p>As a mean to promote Godot’s extensibility, the Godot Foundation will use the Asset Store to publish official plugins and extensions we are working on and that we don’t believe should be part of the core out-of-the-box experience.&lt;/p>
-&lt;p>This is just the beginning, and we really value your feedback and input. We want to hear your thoughts, and we will keep making changes and adjusting to make sure the &lt;a href="https://store.godotengine.org/">Godot Asset Store&lt;/a> delivers on the wants and needs of the community. So feel free create an &lt;a href="https://github.com/godotengine/godot-asset-store-tracker/issues">issue on our tracker&lt;/a>, &lt;a href="https://github.com/godotengine/godot-asset-store-tracker/discussions">open a discussion&lt;/a>, or get in touch via email at &lt;a href="mailto:contact@godot.foundation">contact@godot.foundation&lt;/a>.&lt;/p>
-&lt;p>We’ll keep you all posted regarding the improvements of the store so expect to hear from us soon.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/introducing-the-godot-asset-store/</guid><dc:creator>Emi</dc:creator><pubDate>Fri, 22 May 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-asset-store.jpg</image></item></channel></rss>
+&lt;p>We’re happy to see ecosystem partners like JetBrains contribute to making Godot addon development more accessible and professional. Having a polished, end-to-end workflow for creating, debugging, and publishing addons benefits the entire Godot community.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 26 May 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/partners_jetbrains_rider_asset_store_addons_support.png</image></item></channel></rss>
