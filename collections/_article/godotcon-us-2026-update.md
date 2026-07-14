@@ -4,7 +4,7 @@ excerpt: "Announcing the schedule and some official updates from the Godot Found
 categories: ["events"]
 author: Chad Stewart
 image: /storage/blog/covers/godotcon-boston-2026.jpg
-date: 2026-07-08 13:00:00
+date: 2026-07-14 15:00:00
 ---
 
 <style>h4 {margin-bottom:0}</style>
