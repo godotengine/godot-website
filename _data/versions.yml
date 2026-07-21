@@ -1,7 +1,11 @@
 - name: "4.8"
-  flavor: "dev1"
-  release_date: "6 July 2026"
-  release_notes: "/article/dev-snapshot-godot-4-8-dev-1/"
+  flavor: "dev2"
+  release_date: "21 July 2026"
+  release_notes: "/article/dev-snapshot-godot-4-8-dev-2/"
+  releases:
+    - name: "dev1"
+      release_date: "6 July 2026"
+      release_notes: "/article/dev-snapshot-godot-4-8-dev-1/"
 
 - name: "4.7.1"
   flavor: "stable"
