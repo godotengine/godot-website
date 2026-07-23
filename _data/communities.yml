@@ -522,6 +522,13 @@ United States:
         url: https://discord.gg/CPye5BfMy7
       - title: Website
         url: https://tucsongamedev.com
+  - name: Godot NYC User Group
+    coordinates:
+      - 40.7128
+      - -74.0060
+    links:
+      - title: Discord
+        url: https://discord.gg/u5MbpZkZu7
 Colombia:
   - name: La Familia Godotera - Colombia
     coordinates:
