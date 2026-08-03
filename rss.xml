@@ -1,4 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Dev snapshot: Godot 4.8 dev 2</title><link>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-2/</link><summary>The cost of convenience? Nothing!</summary><description>&lt;p>Happy &lt;a href="https://conference.godotengine.org/US/2026/">GodotCon Boston&lt;/a> for those who celebrate! While many key contributors are already at this event as we speak, that doesn’t mean that development snapshots are slowing down anytime soon. We hope anyone that couldn’t make it to the event this year looks forward to further coverage and highlights in the near future, as you enjoy Godot 4.8 dev 2 in the meantime!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Release candidate: Godot 4.7.2 RC 1</title><link>https://godotengine.org/article/release-candidate-godot-4-7-2-rc-1/</link><summary>What happens when you stabilize stability? Let's find out!</summary><description>&lt;p>A month and a half has passed since our initial release of &lt;a href="/releases/4.7/">Godot 4.7&lt;/a>, which was then followed up with the &lt;a href="/article/maintenance-release-godot-4-7-1/">Godot 4.7.1 maintenance release&lt;/a> nearly three weeks ago. While we stand by the stable foundation of our maintenance releases, that doesn’t mean we’re ready to stop giving support to our most recently released version. In fact, thanks to the amount of work put into the &lt;a href="/article/dev-snapshot-godot-4-8-dev-2/">in-progress 4.8 builds&lt;/a>, the amount of resolved issues and regression fixes has only gone up! As such, we’re eager to deliver yet another maintenance release in the near future, starting with this initial release candidate: Godot 4.7.2 RC 1!&lt;/p>
+&lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
+&lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.7.2.rc1/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/6Ls6Bfa34">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
+&lt;hr />
+&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/4519130/MOLDRISE/?curator_clanid=41324400">&lt;strong>MOLDRISE&lt;/strong>&lt;/a>, &lt;em>a psychological horror game where you must go up, go up, Go Up, Go Up, GO UP, GO UP, GO—. You can buy the game on &lt;a href="https://store.steampowered.com/app/4519130/MOLDRISE/?curator_clanid=41324400">Steam&lt;/a>, and follow the developer on &lt;a href="https://bsky.app/profile/picster.bsky.social">Bluesky&lt;/a>, &lt;a href="https://www.youtube.com/@picster">YouTube&lt;/a>, and &lt;a href="https://picster.itch.io/">itch.io&lt;/a>.&lt;/em>&lt;/p>
+&lt;h2 id="highlights">Highlights&lt;/h2>
+&lt;p>This section covers the most relevant changes made since the &lt;a href="/article/maintenance-release-godot-4-7-1/">4.7.1 maintenance release&lt;/a>, which are largely regression fixes (critical changes highlighted in bold):&lt;/p>
+&lt;ul>
+&lt;li>3D: Fix 3D ruler tool tooltip (&lt;a href="https://github.com/godotengine/godot/pull/120890">GH-120890&lt;/a>).&lt;/li>
+&lt;li>Assetlib: Asset Store: Fix image width on different Editor Scales (&lt;a href="https://github.com/godotengine/godot/pull/121470">GH-121470&lt;/a>).&lt;/li>
+&lt;li>Core: Fix crash when failing to open log file for writing (&lt;a href="https://github.com/godotengine/godot/pull/121926">GH-121926&lt;/a>).&lt;/li>
+&lt;li>Core: Forbid negative weights in &lt;code class="language-plaintext highlighter-rouge">RandomPCG::rand_weighted&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/120004">GH-120004&lt;/a>).&lt;/li>
+&lt;li>&lt;strong>Core: Make it impossible to have more than one main thread, and don’t release unnecessarily (&lt;a href="https://github.com/godotengine/godot/pull/121161">GH-121161&lt;/a>)&lt;/strong>.&lt;/li>
+&lt;li>Core: Update &lt;code class="language-plaintext highlighter-rouge">DirAccess::create_temp&lt;/code> to not fail on empty &lt;code class="language-plaintext highlighter-rouge">prefix&lt;/code> parameter (&lt;a href="https://github.com/godotengine/godot/pull/121315">GH-121315&lt;/a>).&lt;/li>
+&lt;li>Editor: Fix Visual Profiler cursor not appearing when graph is partially filled (&lt;a href="https://github.com/godotengine/godot/pull/118294">GH-118294&lt;/a>).&lt;/li>
+&lt;li>GUI: Fix &lt;code class="language-plaintext highlighter-rouge">BaseButton&lt;/code> input when &lt;code class="language-plaintext highlighter-rouge">enable_long_press_as_right_click&lt;/code> is true (&lt;a href="https://github.com/godotengine/godot/pull/120962">GH-120962&lt;/a>).&lt;/li>
+&lt;li>&lt;strong>Input: Fix performance issues when moving the mouse with high polling rate on Windows (&lt;a href="https://github.com/godotengine/godot/pull/109639">GH-109639&lt;/a>)&lt;/strong>.&lt;/li>
+&lt;li>Input: Fix simultaneous shift release (&lt;a href="https://github.com/godotengine/godot/pull/120327">GH-120327&lt;/a>).&lt;/li>
+&lt;li>Input: Wayland: Fix IME popup position under fractional scaling on KDE Plasma (&lt;a href="https://github.com/godotengine/godot/pull/121571">GH-121571&lt;/a>).&lt;/li>
+&lt;li>Multiplayer: Fix peers stopping replication on deleting node they spawned with MultiplayerSpawner (&lt;a href="https://github.com/godotengine/godot/pull/109864">GH-109864&lt;/a>).&lt;/li>
+&lt;li>Navigation: Fix debug &lt;code class="language-plaintext highlighter-rouge">NavigationRegion3D&lt;/code> colors not updating until project re-start (&lt;a href="https://github.com/godotengine/godot/pull/120939">GH-120939&lt;/a>).&lt;/li>
+&lt;li>&lt;strong>Network: mbedTLS: Always use Godot’s OS as entropy source (&lt;a href="https://github.com/godotengine/godot/pull/121759">GH-121759&lt;/a>)&lt;/strong>.&lt;/li>
+&lt;li>Rendering: Fix PCSS shadows using shadow range begin in the wrong space (&lt;a href="https://github.com/godotengine/godot/pull/120774">GH-120774&lt;/a>).&lt;/li>
+&lt;li>Thirdparty: Update AccessKit to 0.22.3 (&lt;a href="https://github.com/godotengine/godot/pull/121393">GH-121393&lt;/a>).&lt;/li>
+&lt;/ul>
+&lt;h2 id="changelog">Changelog&lt;/h2>
+&lt;p>&lt;strong>37 contributors&lt;/strong> submitted &lt;strong>43 improvements&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.7.2-rc1">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the &lt;a href="/article/maintenance-release-godot-4-7-1/">4.7.1 maintenance release&lt;/a>.&lt;/p>
+&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/36a04fe528e63567203b28d0e8b27591ddee7915">&lt;code class="language-plaintext highlighter-rouge">36a04fe52&lt;/code>&lt;/a>.&lt;/p>
+&lt;h2 id="downloads">Downloads&lt;/h2>
+&lt;div class="card card-download">
+&lt;a class="card-download-link" href="/download/archive/4.7.2-rc1">
+Download Godot 4.7.2 rc1
+&lt;/a>
+&lt;div class="card-download-details">
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/release-candidate-godot-4-7-2-rc-1.jpg" />
+&lt;div class="card-download-platforms">
+&lt;div class="download-platform platform-linux">
+&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
+Linux
+&lt;/div>
+&lt;a href="https://downloads.godotengine.org/?version=4.7.2&amp;amp;flavor=rc1&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://downloads.godotengine.org/?version=4.7.2&amp;amp;flavor=rc1&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-macos">
+&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
+macOS
+&lt;/div>
+&lt;a href="https://downloads.godotengine.org/?version=4.7.2&amp;amp;flavor=rc1&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://downloads.godotengine.org/?version=4.7.2&amp;amp;flavor=rc1&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-windows">
+&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
+Windows
+&lt;/div>
+&lt;a href="https://downloads.godotengine.org/?version=4.7.2&amp;amp;flavor=rc1&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://downloads.godotengine.org/?version=4.7.2&amp;amp;flavor=rc1&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div class="card-download-sublinks">
+&lt;a class="card-download-other" href="/download/archive/4.7.2-rc1">
+Export templates and other downloads
+&lt;/a>
+&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
+Make a Donation
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;style>
+.thankyou-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.85);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 10;
+}
+.thankyou {
+background: var(--base-color);
+box-shadow: var(--more-shadow);
+padding: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+position: relative;
+border-radius: 13px;
+}
+.thankyou-reading {
+font-size: 16px;
+}
+.thankyou-reading-list {
+font-size: 16px;
+margin: 0;
+margin-left: 48px;
+padding-left: 0;
+}
+.thankyou-donate {
+margin-bottom: 24px;
+text-align: center;
+}
+.btn.btn-donate {
+background-color: var(--primary-color);
+color: hsla(0, 0%, 100%, 0.9);
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 26px;
+}
+.thankyou h2 {
+text-shadow: var(--base-shadow);
+font-size: 36px;
+font-weight: 800;
+margin-bottom: 12px;
+}
+.thankyou h2 .anchored-link {
+/* Hiding the anchored text automatically added on blogposts */
+display: none !important;
+}
+.thankyou p {
+max-width: 620px;
+font-size: 25px;
+}
+@media (max-width: 768px) {
+.thankyou-wrapper {
+display: block;
+}
+.thankyou {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: scroll;
+padding: 30px 40px 18px 40px;
+}
+.thankyou-reading-list {
+margin-left: 24px;
+}
+.btn-close-thankyou-popup {
+width: 48px;
+height: 48px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+}
+.btn-close-thankyou-popup {
+cursor: pointer;
+position: absolute;
+top: 12px;
+right: 12px;
+}
+.btn-close-thankyou-popup img {
+background: transparent !important; /* for overwriting the style in the blogposts img */
+}
+@media (prefers-color-scheme: light) {
+.btn-close-thankyou-popup img {
+filter: invert(1);
+opacity: 0.75;
+}
+}
+&lt;/style>
+&lt;script>
+document.addEventListener('DOMContentLoaded', () => {
+const thankYouWrapper = document.getElementById('thank-you');
+// Close itself, when clicked outside of the popup area.
+thankYouWrapper.addEventListener('click', (e) => {
+if (e.target === thankYouWrapper) {
+thankYouWrapper.style.display = 'none';
+}
+});
+// Close with a close button.
+const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
+thankYouBackButton.addEventListener('click', () => {
+thankYouWrapper.style.display = 'none';
+});
+// Open from the main download buttons.
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
+downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+document.querySelector('.btn.btn-donate').focus();
+});
+});
+// Open from the all downloads list.
+const downloadLinks = document.querySelectorAll('.download-link');
+downloadLinks.forEach((it) => {
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+});
+});
+// Close the dialog when the user presses the escape key.
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') {
+thankYouWrapper.style.display = 'none';
+}
+});
+});
+&lt;/script>
+&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
+&lt;div class="thankyou">
+&lt;h2>Godot is downloading...&lt;/h2>
+&lt;p class="thankyou-donate">
+Godot exists thanks to donations from people like you. Help us continue our work:
+&lt;/p>
+&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
+Make a Donation
+&lt;/a>
+&lt;div class="btn-close-thankyou-popup">
+&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Standard build&lt;/strong> includes support for GDScript and GDExtension.&lt;/p>
+&lt;p>&lt;strong>.NET build&lt;/strong> (marked as &lt;code class="language-plaintext highlighter-rouge">mono&lt;/code>) includes support for C#, as well as GDScript and GDExtension.&lt;/p>
+&lt;div class="card card-warning">
+&lt;p>
+While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong>a pre-release piece of software&lt;/strong>. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
+&lt;/p>
+&lt;/div>
+&lt;h2 id="known-issues">Known issues&lt;/h2>
+&lt;p>During the Release Candidate stage, we focus exclusively on solving showstopping regressions (i.e. something that worked in a previous release is now broken, without workaround). You can have a look at our current &lt;a href="https://github.com/orgs/godotengine/projects/61">list of regressions and significant issues&lt;/a> which we aim to address before releasing 4.7.2. This list is dynamic and will be updated if we discover new showstopping issues after more users start testing the RC snapshots.&lt;/p>
+&lt;p>With every release we accept that there are going to be various issues, which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug">known bugs&lt;/a>.&lt;/p>
+&lt;h2 id="bug-reports">Bug reports&lt;/h2>
+&lt;p>As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a> first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p>
+&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a>.&lt;/p>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/release-candidate-godot-4-7-2-rc-1/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Mon, 03 Aug 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/release-candidate-godot-4-7-2-rc-1.jpg</image></item><item><title>Dev snapshot: Godot 4.8 dev 2</title><link>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-2/</link><summary>The cost of convenience? Nothing!</summary><description>&lt;p>Happy &lt;a href="https://conference.godotengine.org/US/2026/">GodotCon Boston&lt;/a> for those who celebrate! While many key contributors are already at this event as we speak, that doesn’t mean that development snapshots are slowing down anytime soon. We hope anyone that couldn’t make it to the event this year looks forward to further coverage and highlights in the near future, as you enjoy Godot 4.8 dev 2 in the meantime!&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.8.dev2/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/3yJ7i8kop">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
@@ -2565,30 +2823,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
 &lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-beta-5/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Wed, 03 Jun 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-beta-5.jpg</image></item><item><title>Creating games entirely on Android!</title><link>https://godotengine.org/article/gabe-stable-release/</link><summary>GABE brings full Gradle support to the Godot Android &amp; XR editor, so you can build and publish games entirely from your Android device or XR device.</summary><description>&lt;p>&lt;a href="https://godotengine.org/article/android_godot_editor_play_store_beta_release/">Since 2023&lt;/a>, Godot users could &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">develop their games on Android&lt;/a>, but they still needed a PC to perform the final export. We began changing that in Godot 4.4 by adding support for &lt;a href="https://godotengine.org/releases/4.4/#android-editor-export-support">non-Gradle exports&lt;/a>. However, many features remained out of reach; if your project used Android plugins like &lt;a href="https://godot-sdk-integrations.github.io/godot-google-play-billing/">Google Play Billing&lt;/a> or required some Gradle export customizations, you were back to using a PC.&lt;/p>
-&lt;p>&lt;a href="https://godotengine.org/releases/4.6/#section-platforms">In Godot 4.6&lt;/a>, we introduced a companion app for the Android editor with a simple goal: bring full Gradle support to mobile. While that early version made the editor “feature complete” on paper, it was still in alpha and wasn’t quite ready.&lt;/p>
-&lt;p>Today, we’re happy to announce that GABE, the Godot Android Build Environment, is now stable and available on the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.godot_gradle_build_environment">Google Play Store&lt;/a> and &lt;a href="https://www.meta.com/experiences/gabe/26529365196759917/">Meta Horizon Store&lt;/a>.&lt;/p>
-&lt;h2 id="what-is-gabe">What is GABE?&lt;/h2>
-&lt;p>GABE stands for &lt;strong>G&lt;/strong>odot &lt;strong>A&lt;/strong>ndroid &lt;strong>B&lt;/strong>uild &lt;strong>E&lt;/strong>nvironment. And no, it has nothing to do with the other Gabe you are thinking about! :P&lt;/p>
-&lt;p>This is a companion app for the Godot Editor on Android and XR devices which works in the background whenever you trigger a Gradle export. GABE handles downloading and managing all the build dependencies. After you grant it access to your project for the first time, it &lt;em>just works&lt;/em> for subsequent exports in the background.&lt;/p>
-&lt;h2 id="what-gabe-brings-to-your-workflow">What GABE brings to your workflow&lt;/h2>
-&lt;ul>
-&lt;li>You can now generate &lt;strong>AAB&lt;/strong> files (Android App Bundles) and &lt;strong>APKs using Gradle&lt;/strong> directly on your Android device or XR device. You no longer need to move your project to a desktop just to get it ready for the Play Store or Horizon Store.
-&lt;ul>
-&lt;li>This also means that you can now create, develop, export, and publish a Godot game to any store using only an Android device or XR device.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>If your project uses plugins like Google Play Billing or AdMob, you previously had to use a PC to export. Now, you can directly build your apps with plugin support.&lt;/p>
-&lt;/li>
-&lt;li>Since XR apps require Gradle for vendor-specific plugins and features, GABE enables you to build and deploy XR projects directly from within your headsets. (In case you missed it: Godot is officially available on &lt;a href="https://www.meta.com/experiences/godot-game-engine/7713660705416473/">Meta Quest&lt;/a> and &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">Android XR&lt;/a> with an experimental build for PicoOS also available).&lt;/li>
-&lt;/ul>
-&lt;p>To sum it all up, with this release we are removing one of the major limitations of the Godot editor on Android and XR devices, the &lt;a href="https://godotengine.org/article/android_godot_editor_play_store_beta_release/#generating-android-apk-binaries">inability to generate Android binaries directly on device&lt;/a>. You now get the same export customizations and features set on your phone, tablet, or XR device that you’d expect on a desktop.&lt;/p>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;p>You can download GABE from:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.godot_gradle_build_environment">Play Store&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.meta.com/experiences/gabe/26529365196759917/">Horizon Store&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/godotengine/android-editor-buildenv-app/releases/latest">GitHub Release page&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>It’s been a long road to bring full build support to the Godot editor on Android and XR devices, and we are excited to see what you build &lt;em>entirely&lt;/em> on device!&lt;/p></description><category>Release</category><guid>https://godotengine.org/article/gabe-stable-release/</guid><dc:creator>Anish Kumar</dc:creator><pubDate>Tue, 02 Jun 2026 14:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/gabe-stable-release.jpg</image></item></channel></rss>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-7-beta-5/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Wed, 03 Jun 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-7-beta-5.jpg</image></item></channel></rss>
