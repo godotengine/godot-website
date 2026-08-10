@@ -77,6 +77,8 @@ To make a long story short: some mice are too fast for Windows; they were simply
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | <video autoplay loop muted playsinline title="Tracking the FPS when moving a high poll-rate mouse: before"><source src="/storage/blog/dev-snapshot-godot-4-8-dev-3/windows-mouse-old.mp4" type="video/mp4"></video> | <video autoplay loop muted playsinline title="Tracking the FPS when moving a high poll-rate mouse: after"><source src="/storage/blog/dev-snapshot-godot-4-8-dev-3/windows-mouse-new.mp4" type="video/mp4"></video> |
 
+**Update:** The dedicated blog post is now up: [Fixing high polling rate mice on Windows in Godot](/article/fixing-high-polling-rate-mice-on-windows)
+
 ### And more!
 
 There are too many exciting changes to list them all here, but here's a curated selection:
