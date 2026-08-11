@@ -1,11 +1,19 @@
 - name: "4.8"
-  flavor: "dev2"
-  release_date: "21 July 2026"
-  release_notes: "/article/dev-snapshot-godot-4-8-dev-2/"
+  flavor: "dev3"
+  release_date: "7 August 2026"
+  release_notes: "/article/dev-snapshot-godot-4-8-dev-3/"
   releases:
+    - name: "dev2"
+      release_date: "21 July 2026"
+      release_notes: "/article/dev-snapshot-godot-4-8-dev-2/"
     - name: "dev1"
       release_date: "6 July 2026"
       release_notes: "/article/dev-snapshot-godot-4-8-dev-1/"
+
+- name: "4.7.2"
+  flavor: "rc1"
+  release_date: "3 August 2026"
+  release_notes: "/article/release-candidate-godot-4-7-2-rc-1/"
 
 - name: "4.7.1"
   flavor: "stable"
