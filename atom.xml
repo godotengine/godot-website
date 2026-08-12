@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-08-07T19:18:39+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.8 dev 3</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/"/><updated>2026-08-07T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/</id><summary>✅️ TIP: Reading development snapshot articles builds character!</summary><content type="html">&lt;p>With &lt;a href="https://conference.godotengine.org/US/2026/">GodotCon Boston&lt;/a> now behind us, our contributors have had nothing but time and energy to get their most-wanted features over the finish line. While feature freeze still isn’t for at least another month, that hasn’t stopped our community from making rapid progress in their work and reviews, meaning that we have quite a lot to go over today, so buckle up!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-08-12T15:24:06+00:00</updated><id>https://godotengine.org/</id><entry><title>GodotFest 2026 returns to Munich this November</title><link href="https://godotengine.org/article/godotfest-2026/"/><updated>2026-08-12T00:00:00+00:00</updated><id>https://godotengine.org/article/godotfest-2026/</id><summary>The second GodotFest takes place on the 3rd and 4th of November in Munich, Germany.</summary><content type="html">&lt;p>Last November, close to 500 people joined us in Munich for the first GodotFest. We had 34
+speakers, two stages, a workshop room, and two busy days of Godot. For a first edition, it was
+quite a turnout.&lt;/p>
+&lt;p>GodotFest is an annual conference for people who build with Godot. We are the small Munich
+team behind GodotCon 23, and we run the event independently, in close cooperation with the
+Godot Foundation. We started it because we wanted a place where developers could share what
+they had learned, show their games, and meet others working with the engine.&lt;/p>
+&lt;p>It worked, so GodotFest is coming back to smartvillage in Munich on the &lt;strong>3rd and 4th of
+November 2026&lt;/strong>.&lt;/p>
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CRmwGa2k90U" title="GodotFest 2026 mood trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;">&lt;/iframe>
+&lt;p>This year’s theme is “Godot Means Business”. There will still be plenty of technical talks,
+panels and community time, but we are making more room for studios, publishers and
+service providers building businesses around Godot. MeetToMatch, powered by
+&lt;a href="https://www.photonengine.com/">Photon&lt;/a>, is included with every ticket, so attendees can
+arrange meetings before the event.&lt;/p>
+&lt;p>There will also be a game showcase, with space to bring your own hardware and let people play
+your game. The &lt;a href="https://www.youtube.com/@GodotFest">talks from 2025&lt;/a> are online if you would
+like an idea of what to expect from the programme.&lt;/p>
+&lt;p>And yes, the food is included again. Every ticket covers premium catering on both days:
+breakfast, lunch and afternoon snacks, plus coffee, soft drinks and water throughout the
+event. Vegan and gluten-free options will be available.&lt;/p>
+&lt;h2 id="call-for-speakers">Call for speakers&lt;/h2>
+&lt;p>Did you ship a game with Godot, build a useful tool, or learn something the hard way? We would
+like to hear about it. We are looking for talks and panels from developers, artists,
+educators, tool makers and community organizers. First-time speakers are welcome, too.&lt;/p>
+&lt;p>&lt;a href="https://talks.godotfest.com/godotfest-26/">Submit a proposal&lt;/a>, deadline: &lt;strong>August 31st, 2026 at 13:00 UTC&lt;/strong>&lt;/p>
+&lt;p>The deadline was already extended once, so this one is final.&lt;/p>
+&lt;h2 id="sponsors">Sponsors&lt;/h2>
+&lt;p>We are also looking for sponsors to help make GodotFest happen. If your company would like to
+meet Godot developers and studios in Munich, have a look at the
+&lt;a href="https://godotfest.com/become-sponsor/">sponsorship page&lt;/a> or write to
+&lt;a href="mailto:contact@godotfest.com?subject=Sponsorship%20inquiry">contact@godotfest.com&lt;/a>.&lt;/p>
+&lt;h2 id="tickets">Tickets&lt;/h2>
+&lt;p>Early Bird tickets have sold out. Regular tickets cost 249€ until &lt;strong>September 30th&lt;/strong> and Late
+Bird tickets cost 349€ after that. VIP tickets are 799€ and include the VIP dinner and a
+custom shirt.&lt;/p>
+&lt;p>&lt;a href="https://tickets.godotfest.com/godotfest/26/">Tickets are on sale here&lt;/a>.&lt;/p>
+&lt;p>We will share programme announcements on &lt;a href="https://bsky.app/profile/godotfest.com">Bluesky&lt;/a>,
+&lt;a href="https://mastodon.social/@GodotFest">Mastodon&lt;/a> and the
+&lt;a href="https://newsletter.godotfest.com/newsletter.html">newsletter&lt;/a>. You can also
+&lt;a href="https://discord.com/invite/vA4pNu4TTd">join the Discord&lt;/a>.&lt;/p>
+&lt;p>See you in Munich!&lt;/p>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;table>
+&lt;tbody>
+&lt;tr>
+&lt;td>🌐 Website&lt;/td>
+&lt;td>&lt;a href="https://godotfest.com/">GodotFest.com&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>📅 Dates&lt;/td>
+&lt;td>3rd, 4th of November 2026&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🌍 Location&lt;/td>
+&lt;td>Munich, Germany&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>📍 Venue&lt;/td>
+&lt;td>smartvillage Bogenhausen &lt;br />&lt;a href="https://www.openstreetmap.org/node/12025157887">Rosenkavalierplatz 13, 81925 Munich&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🎤 Call for talks&lt;/td>
+&lt;td>&lt;a href="https://talks.godotfest.com/godotfest-26/">talks.godotfest.com&lt;/a>, until August 31st&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>🎟️ Tickets&lt;/td>
+&lt;td>&lt;a href="https://tickets.godotfest.com/godotfest/26/">tickets.godotfest.com&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>💬 Discord&lt;/td>
+&lt;td>&lt;a href="https://discord.com/invite/vA4pNu4TTd">https://discord.com/invite/vA4pNu4TTd&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></content><author><name>GodotFest Team</name></author><category term="Events"/></entry><entry><title>Dev snapshot: Godot 4.8 dev 3</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/"/><updated>2026-08-07T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/</id><summary>✅️ TIP: Reading development snapshot articles builds character!</summary><content type="html">&lt;p>With &lt;a href="https://conference.godotengine.org/US/2026/">GodotCon Boston&lt;/a> now behind us, our contributors have had nothing but time and energy to get their most-wanted features over the finish line. While feature freeze still isn’t for at least another month, that hasn’t stopped our community from making rapid progress in their work and reviews, meaning that we have quite a lot to go over today, so buckle up!&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.8.dev3/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/3yJ7i8kop">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
@@ -4029,46 +4103,4 @@ Make a Donation
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
 &lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Release"/></entry><entry><title>Godot OpenXR Vendors plugin v5.1</title><link href="https://godotengine.org/article/godot-xr-update-may-2026/"/><updated>2026-05-19T12:00:00+00:00</updated><id>https://godotengine.org/article/godot-xr-update-may-2026/</id><summary>Introducing the new major version of the Godot OpenXR Vendors plugin with several Android XR features!</summary><content type="html">&lt;h2 id="godot-openxr-vendors-plugin-v51">Godot OpenXR Vendors plugin v5.1&lt;/h2>
-&lt;p>The &lt;a href="https://github.com/GodotVR/godot_openxr_vendors">OpenXR Vendors plugin&lt;/a> is an official GDExtension that builds on top of the OpenXR support in Godot, and provides support for additional functionality, primarily vendor-specific OpenXR extensions.&lt;/p>
-&lt;p>Today we are releasing &lt;strong>version 5.1&lt;/strong>, which can be downloaded from the &lt;a href="https://store.godotengine.org/asset/godot-xr/godot-openxr-vendors-plugin/">Asset Store&lt;/a>, &lt;a href="https://godotengine.org/asset-library/asset/5014">Asset Library&lt;/a>, or &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/5.1.0-stable">GitHub release page&lt;/a>.&lt;/p>
-&lt;p>The &lt;a href="https://godotengine.org/article/godot-openxr-vendors-plugin-400/">previous major version&lt;/a> (v4) promised support for Godot 4.4 and newer, which meant that we couldn’t take advantage of features only available in Godot 4.5 or 4.6.&lt;/p>
-&lt;p>So, an important part of the v5 upgrade was increasing the minimum supported version to Godot 4.6, which unlocked our ability to implement some things we weren’t able to before.&lt;/p>
-&lt;h3 id="breaking-changes">Breaking changes&lt;/h3>
-&lt;p>The major version upgrade introduces the following compatibility breakages:&lt;/p>
-&lt;ul>
-&lt;li>Renamed some very long class names (like &lt;code class="language-plaintext highlighter-rouge">OpenXRAndroidEnvironmentDepthExtensionWrapper&lt;/code>) to a somewhat more manageable length by dropping the superfluous &lt;code class="language-plaintext highlighter-rouge">*Wrapper&lt;/code> suffix (to become &lt;code class="language-plaintext highlighter-rouge">OpenXRAndroidEnvironmentDepthExtension&lt;/code>, for example).&lt;/li>
-&lt;li>Godot 4.6 now bundles the Khronos OpenXR loader for Android so it was removed from this plugin.&lt;/li>
-&lt;li>Rec709 is now the default color space when using Meta’s color space extension. This is an improvement we’ve wanted to do for a long time, but waited for a major version update so it would be less disruptive for users.&lt;/li>
-&lt;/ul>
-&lt;h3 id="android-xr">Android XR&lt;/h3>
-&lt;p>Quite a few of the recent improvements to the plugin (not only for v5, but also &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.2.0-stable">v4.2&lt;/a> and &lt;a href="https://github.com/GodotVR/godot_openxr_vendors/releases/tag/4.3.0-stable">v4.3&lt;/a>) have been to support vendor-specific features of Android XR.&lt;/p>
-&lt;p>This is due in large part to the collaboration between Google, the Godot Foundation, and W4 Games which was &lt;a href="https://godotengine.org/article/announcing-android-xr-support/">announced in November 2025&lt;/a>.&lt;/p>
-&lt;p>This upgrade includes the following new features:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/androidxr/trackables.html">Trackables&lt;/a>: Provides information about the physical space the user is in. Android XR also supports &lt;a href="https://docs.godotengine.org/en/latest/tutorials/xr/openxr_spatial_entities.html">OpenXR spatial entities&lt;/a>, which provides similar functionality, but at the moment there’s still features in the Android XR-specific trackables that aren’t supported yet in the multi-vendor spatial entities.&lt;/li>
-&lt;li>&lt;a href="https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_ANDROID_recommended_resolution">Dynamic Resolution&lt;/a>: Will dynamically scale down the render resolution in response to system load, which can help maintain a consistent frame rate. We implemented a &lt;a href="https://godotengine.org/article/godot-openxr-vendors-plugin-400/#dynamic-resolution">similar feature&lt;/a> for Meta headsets back in v4.&lt;/li>
-&lt;li>&lt;a href="https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_ANDROID_unbounded_reference_space">Unbounded Reference Space&lt;/a>: Enables the user to move freely through a complex environment, even many meters from where they started.&lt;/li>
-&lt;li>&lt;strong>Automatically launching the streaming client&lt;/strong>: Using Android XR’s Direct Preview functionality, you can run XR applications on your desktop which are streamed to the headset, which can allow for faster iteration time. Now, the plugin can make this easier by automatically launching the streaming client on your headset.&lt;/li>
-&lt;li>&lt;strong>Mouse interaction&lt;/strong>: Allows accessing mouse input in a similar way to traditional XR controllers.&lt;/li>
-&lt;/ul>
-&lt;p>To top up these new features, we have collaborated with Google on documentation, guidance, and samples for &lt;a href="https://developer.android.com/develop/xr/godot">developing on Android XR with Godot&lt;/a>.&lt;/p>
-&lt;h3 id="openxr-validation-layers-for-android">OpenXR validation layers for Android&lt;/h3>
-&lt;p>The Khronos Group provides validation layers for OpenXR that can perform extra validation to ensure that Godot is using OpenXR correctly. Enabling these on desktop is very easy, and Khronos even provides pre-built binaries for Windows and macOS.&lt;/p>
-&lt;p>However, enabling them on standalone Android-based headsets is much trickier. You’d need to build the layers yourself, and manually add them to your Godot project at a specific location, along with a special JSON file.&lt;/p>
-&lt;p>Version 5 of the Godot OpenXR Vendors plugin simplifies this process by building the Android binaries for the OpenXR validation layers, and wrapping them into an Android library binary (AAR). For added convenience, the generated Android library binary (AAR) is uploaded to &lt;a href="https://central.sonatype.com/artifact/org.godotengine/openxr-validation-layers/overview">MavenCentral&lt;/a> alongside each release of the Godot OpenXR Vendors plugin.
-This enables OpenXR Android projects to easily integrate the validation layers by adding a dependency to the &lt;a href="https://godotvr.github.io/godot_openxr_vendors/manual/openxr_validation_layers.html">OpenXR validation layers Android library&lt;/a>.&lt;/p>
-&lt;p>For Godot projects built with the Godot OpenXR Vendors plugin v5, all you need to do is click a checkbox in your export settings!&lt;/p>
-&lt;p>&lt;img src="/storage/blog/godot-xr/updates/validation_layer_selection.png" alt="Enable OpenXR Validation Layers checkbox in export settings" />&lt;/p>
-&lt;p>While this isn’t a feature that will be used by most XR developers, it is a tool that will allow us to develop Godot and the plugin to be more compliant with the OpenXR spec.&lt;/p>
-&lt;h3 id="using-composition-layer-extensions-on-the-main-projection-layer">Using Composition Layer extensions on the main Projection Layer&lt;/h3>
-&lt;p>The plugin allows using several OpenXR extensions to add features to the &lt;a href="https://docs.godotengine.org/en/latest/classes/class_openxrcompositionlayer.html#">OpenXRCompositionLayer&lt;/a> node (and its children), which is most frequently used for rendering UI panels or media.&lt;/p>
-&lt;p>The main 3D content that’s rendered by Godot is also associated with a composition layer, the main projection layer. However, up until now, it wasn’t possible to configure any of these extensions on that layer. That’s changed in v5.1!&lt;/p>
-&lt;p>Now you can set any of the same extra configuration that was available via &lt;strong>OpenXRCompositionLayer&lt;/strong> nodes on the main projection layer too, either through code or Project Settings.&lt;/p>
-&lt;p>On some headsets (namely, Meta’s), this can allow using the &lt;code class="language-plaintext highlighter-rouge">XR_FB_composition_layer_depth_test&lt;/code> extension to allow content rendered by Godot to correctly appear in front of or behind other composition layers, without having to use hole punching (which can’t be used with transparent layers). This is a feature that has been requested by the community for a long time.&lt;/p>
-&lt;h3 id="hybrid-app-testing-on-desktop">Hybrid App testing on desktop&lt;/h3>
-&lt;p>In v4, we added support for Hybrid Apps on Android, which can dynamically switch between fully immersive and floating 2D panels.&lt;/p>
-&lt;p>However, developers couldn’t test them on desktop, only when deploying to the headset.&lt;/p>
-&lt;p>In v5, we’ve added the ability to simulate Hybrid App switching on desktop, which can help to accelerate iteration speed.&lt;/p>
-&lt;hr />
-&lt;p>&lt;em>The illustration picture for this article comes from &lt;a href="https://dsnopek.itch.io/expedition-to-blobotopia">Expedition to Blobotopia&lt;/a> which was &lt;a href="https://www.youtube.com/watch?v=6RE8KuCspqw">created entirely in VR&lt;/a> and available for &lt;a href="https://www.meta.com/experiences/expedition-to-blobotopia-demo/24941992168770375/">Meta&lt;/a> and &lt;a href="https://play.google.com/store/apps/details?id=com.snopekgames.gwj81">Android XR&lt;/a> headsets.&lt;/em>&lt;/p></content><author><name>Bastiaan Olij, David Snopek, and Fredia Huya-Kouadio</name></author><category term="Progress Report"/></entry></feed>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Release"/></entry></feed>
