@@ -9,7 +9,7 @@ dates_short: "4 July"
 # The first date of the event in ISO format, used for sorting.
 date: 2026-07-04 00:00:00
 # Set to true to mark it as a past event
-date_passed: false
+date_passed: true
 
 location: "Palacio de Ferias y Congresos de Málaga, Málaga"
 location_short: "Málaga, Spain"
