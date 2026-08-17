@@ -8,6 +8,9 @@ image_caption_description: Illustration by André Marí Coppola
 date: 2026-07-16 17:00:00
 ---
 
+**Update:** This poll is now over. [You can view the results here](https://docs.google.com/forms/d/e/1FAIpQLSetTdpj9_KESbMNPSJGHkWQZTOHioyXkGgpitgLse-PBZ6c7A/viewanalytics) or [download the csv with all the responses](/storage/data/GodotCommunityPoll2026.csv).
+
+___
 
 We want to learn more about the Godot community, understand who the users of the engine are, and find out how we can better support you. To achieve that, we have a short set of questions and hope you will take a few minutes to fill them out. The results will also help us guide our current and future items in the [priority list](https://godotengine.org/priorities/).
 
