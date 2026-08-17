@@ -463,6 +463,13 @@ Turkey:
     links:
       - title: Discord
         url: https://discord.gg/B48HBJM
+Ukraine:
+  - name: Godot Ukraine
+    links:
+      - title: Discord
+        url: https://discord.gg/92uEustR9H
+      - title: Telegram
+        url: https://t.me/GodotUkraine
 United States:
   - name: Boston Godot Developers Group
     coordinates:
