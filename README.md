@@ -58,7 +58,7 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 
 #### Pre-requisites
 - On Local Machine:
-  - Ruby 3.2+ with [rbenv](https://github.com/rbenv/rbenv) and [*(For windows)*](https://github.com/RubyMetric/rbenv-for-windows#readme)
+  - Ruby 4.0+ with [rbenv](https://github.com/rbenv/rbenv) and [*(For windows)*](https://github.com/RubyMetric/rbenv-for-windows#readme)
   - Jekyll - [Jekyll Website](https://jekyllrb.com/)
   - Minify - [Minify GitHub](https://github.com/tdewolff/minify)
 - On Docker:
@@ -77,16 +77,16 @@ When working on new features[^2][^3], keep in mind this website only supports _e
 
 To build the website locally, follow these steps:
 
-1. Install Ruby 3.2 or later and Jekyll.
-  - If you don't have access to Ruby 3.2 or later in your distribution's repositories,
+1. Install Ruby 4.0 or later and Jekyll.
+  - If you don't have access to Ruby 4.0 or later in your distribution's repositories,
     install a compatible version of Ruby using `rbenv` as well as Ruby's build-time dependencies:
     - Install in Ubuntu:
       - `sudo apt install rbenv build-essential libffi-dev libreadline-dev libyaml-dev zlib1g-dev`
     - Install in Fedora:
-      - Install `rbenv` with dnf
+      - `sudo dnf install rbenv`
   - Set up `rbenv` running the following:
-    - `rbenv install 3.2.5`
-    - `rbenv global 3.2.5`
+    - `rbenv install 4.0.4`
+    - `rbenv global 4.0.4`
     - `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` to add the rbenv init to `.bashrc` (or `.bash_profile`)
 2. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify).
 	- Make sure either `minify` or `gominify` is available from the command line.
