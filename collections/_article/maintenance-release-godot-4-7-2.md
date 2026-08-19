@@ -9,7 +9,7 @@ image_caption_description: A game by sketbordcat
 date: 2026-08-18 12:00:00
 ---
 
-Has it already been a whole month since [the last 4.7 maintenance release](/article/maintenance-release-godot-4-7-1/)? How time flies… Well, no time to dwell on the past; let's instead dwell on the past with yet another maintenance release: Godot 4.7.2!
+Has it already been a whole month since [the last 4.7 maintenance release](/article/maintenance-release-godot-4-7-1/)? How time flies… Well, no time to dwell on the past; let's instead dwell on the present with yet another maintenance release: Godot 4.7.2!
 
 Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
 
