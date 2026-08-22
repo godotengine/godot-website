@@ -1,4 +1,257 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Maintenance release: Godot 4.7.2</title><link>https://godotengine.org/article/maintenance-release-godot-4-7-2/</link><summary>The second 4.7 maintenance release has arrived!</summary><description>&lt;p>Has it already been a whole month since &lt;a href="/article/maintenance-release-godot-4-7-1/">the last 4.7 maintenance release&lt;/a>? How time flies… Well, no time to dwell on the past; let’s instead dwell on the present with yet another maintenance release: Godot 4.7.2!&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Maintenance release: Godot 3.6.3</title><link>https://godotengine.org/article/maintenance-release-godot-3-6-3/</link><summary>Godot 3.6.2 has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS.</summary><description>&lt;p>&lt;a href="/article/maintenance-release-godot-3-6-2">Godot 3.6.2&lt;/a> has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS.&lt;/p>
+&lt;p>&lt;a href="https://developer.android.com/google/play/requirements/target-sdk">Google Play&lt;/a> now requires new apps and updates to target Android 16 (API level 36). As a result we have updated Godot Android APIs and made compatibility changes to ensure users can update their Godot 3 games on Play Store with 3.6.3.&lt;/p>
+&lt;p>On iOS, the minimum version is bumped to 15.0 (the minimum supported by XCode 27), a minimum target export option is added, and 32-bit export is removed as it is not supported since iOS 11.&lt;/p>
+&lt;p>&lt;strong>This is a safe and recommended update for all Godot 3.6.x users.&lt;/strong> It should have no major impact on your projects, even complex ones in production, if you’re already using 3.6.2-stable.&lt;/p>
+&lt;p>&lt;a href="/download/archive/3.6.3-stable/">&lt;strong>Download Godot 3.6.3 now&lt;/strong>&lt;/a> or try the &lt;a href="https://editor.godotengine.org/3.6.3.stable/">online version of the Godot editor&lt;/a>.&lt;/p>
+&lt;div class="card card-download">
+&lt;a class="card-download-link" href="/download/archive/3.6.3-stable">
+Download Godot 3.6.3 stable
+&lt;/a>
+&lt;div class="card-download-details">
+&lt;img class="lightbox-ignore" src="/storage/blog/covers/maintenance-release-godot-3-6-3.jpg" />
+&lt;div class="card-download-platforms">
+&lt;div class="download-platform platform-linux">
+&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" />
+Linux
+&lt;/div>
+&lt;a href="https://downloads.godotengine.org/?version=3.6.3&amp;amp;flavor=stable&amp;amp;slug=x11.64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://downloads.godotengine.org/?version=3.6.3&amp;amp;flavor=stable&amp;amp;slug=mono_x11_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-macos">
+&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" />
+macOS
+&lt;/div>
+&lt;a href="https://downloads.godotengine.org/?version=3.6.3&amp;amp;flavor=stable&amp;amp;slug=osx.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://downloads.godotengine.org/?version=3.6.3&amp;amp;flavor=stable&amp;amp;slug=mono_osx.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;div class="download-platform platform-windows">
+&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" />
+Windows
+&lt;/div>
+&lt;a href="https://downloads.godotengine.org/?version=3.6.3&amp;amp;flavor=stable&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows">
+&lt;div class="download-title">
+Standard
+&lt;/div>
+&lt;/a>
+&lt;a href="https://downloads.godotengine.org/?version=3.6.3&amp;amp;flavor=stable&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows">
+&lt;div class="download-title">
+.NET
+&lt;/div>
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div class="card-download-sublinks">
+&lt;a class="card-download-other" href="/download/archive/3.6.3-stable">
+Export templates and other downloads
+&lt;/a>
+&lt;a class="card-download-donate" href="https://fund.godotengine.org/">
+Make a Donation
+&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;style>
+.thankyou-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.85);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 10;
+}
+.thankyou {
+background: var(--base-color);
+box-shadow: var(--more-shadow);
+padding: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+position: relative;
+border-radius: 13px;
+}
+.thankyou-reading {
+font-size: 16px;
+}
+.thankyou-reading-list {
+font-size: 16px;
+margin: 0;
+margin-left: 48px;
+padding-left: 0;
+}
+.thankyou-donate {
+margin-bottom: 24px;
+text-align: center;
+}
+.btn.btn-donate {
+background-color: var(--primary-color);
+color: hsla(0, 0%, 100%, 0.9);
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 26px;
+}
+.thankyou h2 {
+text-shadow: var(--base-shadow);
+font-size: 36px;
+font-weight: 800;
+margin-bottom: 12px;
+}
+.thankyou h2 .anchored-link {
+/* Hiding the anchored text automatically added on blogposts */
+display: none !important;
+}
+.thankyou p {
+max-width: 620px;
+font-size: 25px;
+}
+@media (max-width: 768px) {
+.thankyou-wrapper {
+display: block;
+}
+.thankyou {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: scroll;
+padding: 30px 40px 18px 40px;
+}
+.thankyou-reading-list {
+margin-left: 24px;
+}
+.btn-close-thankyou-popup {
+width: 48px;
+height: 48px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+}
+.btn-close-thankyou-popup {
+cursor: pointer;
+position: absolute;
+top: 12px;
+right: 12px;
+}
+.btn-close-thankyou-popup img {
+background: transparent !important; /* for overwriting the style in the blogposts img */
+}
+@media (prefers-color-scheme: light) {
+.btn-close-thankyou-popup img {
+filter: invert(1);
+opacity: 0.75;
+}
+}
+&lt;/style>
+&lt;script>
+document.addEventListener('DOMContentLoaded', () => {
+const thankYouWrapper = document.getElementById('thank-you');
+// Close itself, when clicked outside of the popup area.
+thankYouWrapper.addEventListener('click', (e) => {
+if (e.target === thankYouWrapper) {
+thankYouWrapper.style.display = 'none';
+}
+});
+// Close with a close button.
+const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
+thankYouBackButton.addEventListener('click', () => {
+thankYouWrapper.style.display = 'none';
+});
+// Open from the main download buttons.
+const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
+downloadButtons.forEach((it) => {
+if (it.dataset?.external === "yes") {
+return;
+}
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+document.querySelector('.btn.btn-donate').focus();
+});
+});
+// Open from the all downloads list.
+const downloadLinks = document.querySelectorAll('.download-link');
+downloadLinks.forEach((it) => {
+it.addEventListener('click', () => {
+thankYouWrapper.style.display = '';
+});
+});
+// Close the dialog when the user presses the escape key.
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') {
+thankYouWrapper.style.display = 'none';
+}
+});
+});
+&lt;/script>
+&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;">
+&lt;div class="thankyou">
+&lt;h2>Godot is downloading...&lt;/h2>
+&lt;p class="thankyou-donate">
+Godot exists thanks to donations from people like you. Help us continue our work:
+&lt;/p>
+&lt;a href="https://fund.godotengine.org" class="btn btn-donate">
+Make a Donation
+&lt;/a>
+&lt;div class="btn-close-thankyou-popup">
+&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" />
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;hr />
+&lt;p>&lt;em>The cover illustration is from&lt;/em> &lt;a href="https://store.steampowered.com/app/3451980/Souls_Remnant/?curator_clanid=41324400">&lt;strong>Soul’s Remnant&lt;/strong>&lt;/a>, &lt;em>a 2D platformmer MMORPG, where you’ll socialize and conquer your way through this mysterious world. You can play the game for free on &lt;a href="https://store.steampowered.com/app/3451980/Souls_Remnant/?curator_clanid=41324400">Steam&lt;/a>, and check out the developers on &lt;a href="https://bsky.app/profile/soulsremnant.com">Bluesky&lt;/a> and &lt;a href="https://www.youtube.com/@chaomoon">YouTube&lt;/a>!&lt;/em>&lt;/p>
+&lt;h2 id="changed">Changed&lt;/h2>
+&lt;ul>
+&lt;li>Export: iOS: Bump min. version to 15.0, remove 32-bit code, add min. target export option (&lt;a href="https://github.com/godotengine/godot/pull/122324">GH-122324&lt;/a>).&lt;/li>
+&lt;li>Network: mbedTLS: Always use Godot’s OS as entropy source (&lt;a href="https://github.com/godotengine/godot/pull/121894">GH-121894&lt;/a>).&lt;/li>
+&lt;li>Network: mbedTLS: Update to 3.6.7 (&lt;a href="https://github.com/godotengine/godot/pull/121110">GH-121110&lt;/a>).&lt;/li>
+&lt;li>Platforms: Android: Bump default target SDK to 36 (&lt;a href="https://github.com/godotengine/godot/pull/120883">GH-120883&lt;/a>).&lt;/li>
+&lt;li>Thirdparty: libpng: Update to 1.6.58 (&lt;a href="https://github.com/godotengine/godot/pull/122506">GH-122506&lt;/a>).&lt;/li>
+&lt;/ul>
+&lt;h2 id="fixed">Fixed&lt;/h2>
+&lt;ul>
+&lt;li>Audio: Fix audio crackling issues due to incorrect WASAPI buffer size (&lt;a href="https://github.com/godotengine/godot/pull/89283">GH-89283&lt;/a>).&lt;/li>
+&lt;li>Audio: Suppress error when device is invalidated after &lt;code class="language-plaintext highlighter-rouge">IAudioClient::GetBufferSize&lt;/code> (&lt;a href="https://github.com/godotengine/godot/pull/122467">GH-122467&lt;/a>).&lt;/li>
+&lt;li>Buildsystem: Add proper flags when using external recast (&lt;a href="https://github.com/godotengine/godot/pull/112029">GH-112029&lt;/a>).&lt;/li>
+&lt;li>Buildsystem: Ping &lt;code class="language-plaintext highlighter-rouge">master&lt;/code> cache after saving cache (&lt;a href="https://github.com/godotengine/godot/pull/122267">GH-122267&lt;/a>).&lt;/li>
+&lt;li>Core: Minor BVH correctness fixes (&lt;a href="https://github.com/godotengine/godot/pull/121501">GH-121501&lt;/a>).&lt;/li>
+&lt;li>Export: Preserve the output from the gradle build command (&lt;a href="https://github.com/godotengine/godot/pull/120612">GH-120612&lt;/a>).&lt;/li>
+&lt;li>GDScript: Fix missing function signature hint (&lt;a href="https://github.com/godotengine/godot/pull/68449">GH-68449&lt;/a>).&lt;/li>
+&lt;li>Input: Fix new CI compiler warnings (&lt;a href="https://github.com/godotengine/godot/pull/120627">GH-120627&lt;/a>).&lt;/li>
+&lt;li>Platforms: iOS: Fix x86_64 simulator build. (&lt;a href="https://github.com/godotengine/godot/pull/122639">GH-122639&lt;/a>).&lt;/li>
+&lt;li>Platforms: LinuxBSD: Process TTS callback on the main thread to avoid speech-dispatcher deadlock (&lt;a href="https://github.com/godotengine/godot/pull/110481">GH-110481&lt;/a>).&lt;/li>
+&lt;li>Rendering: FTI - Optimize non-interpolated 2D items (&lt;a href="https://github.com/godotengine/godot/pull/111195">GH-111195&lt;/a>).&lt;/li>
+&lt;li>Rendering: Make physics interpolation compatible with separate-thread rendering (&lt;a href="https://github.com/godotengine/godot/pull/114211">GH-114211&lt;/a>).&lt;/li>
+&lt;li>Web: Add internal get_entropy() javascript function for web build (&lt;a href="https://github.com/godotengine/godot/pull/122647">GH-122647&lt;/a>).&lt;/li>
+&lt;/ul>
+&lt;h2 id="changelog">Changelog&lt;/h2>
+&lt;p>&lt;strong>16 contributors&lt;/strong> submitted &lt;strong>20 fixes&lt;/strong> for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#3.6.3">&lt;strong>interactive changelog&lt;/strong>&lt;/a> for the complete list of changes since the 3.6.2 release.&lt;/p>
+&lt;p>This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/a3378686f7196db78d7b3cc7947f72a13bc4864c">&lt;code class="language-plaintext highlighter-rouge">a3378686f&lt;/code>&lt;/a>.&lt;/p>
+&lt;h2 id="bug-reports">Bug reports&lt;/h2>
+&lt;p>As a tester, you are encouraged to &lt;a href="https://github.com/godotengine/godot/issues">open bug reports&lt;/a> if you experience issues with 3.6.3. Please check first the &lt;a href="https://github.com/godotengine/godot/issues">existing issues on GitHub&lt;/a>, using the search function with relevant keywords, to ensure that the bug you experience is not known already.&lt;/p>
+&lt;p>In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in 3.6.2 or earlier 3.x releases no longer works in 3.6.3).&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by the &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></description><category>Release</category><guid>https://godotengine.org/article/maintenance-release-godot-3-6-3/</guid><dc:creator>lawnjelly</dc:creator><pubDate>Sat, 22 Aug 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-6-3.jpg</image></item><item><title>Maintenance release: Godot 4.7.2</title><link>https://godotengine.org/article/maintenance-release-godot-4-7-2/</link><summary>The second 4.7 maintenance release has arrived!</summary><description>&lt;p>Has it already been a whole month since &lt;a href="/article/maintenance-release-godot-4-7-1/">the last 4.7 maintenance release&lt;/a>? How time flies… Well, no time to dwell on the past; let’s instead dwell on the present with yet another maintenance release: Godot 4.7.2!&lt;/p>
 &lt;p>Maintenance releases are expected to be safe for an upgrade, but we recommend to always make backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="/download/archive/4.7.2-stable/">&lt;strong>Download Godot 4.7.2 now&lt;/strong>&lt;/a> or try the &lt;a href="https://editor.godotengine.org/4.7.2.stable/">online version of the Godot editor&lt;/a>.&lt;/p>
@@ -2423,4 +2676,4 @@ but we will re-evaluate as things evolve.&lt;/p></description><category>News</ca
 &lt;p>It is not intended to be used as a tool for evaluating specific changes to the engine or proposals. For that we already have comprehensive guidelines, in particular the &lt;a href="https://contributing.godotengine.org/en/latest/engine/guidelines/best_practices.html">Best Practices for Engine Contributors guide&lt;/a>.&lt;/p>
 &lt;p>Importantly, this is not a change in direction from the last decade of development. This is a formalization of the vision that we have shared and developed since the beginning of the project, we just feel the need to write it down now.&lt;/p>
 &lt;p>You can read the full statement here:&lt;/p>
-&lt;p>&lt;a href="https://godot.foundation/policies-and-procedures/project-vision-statement">&lt;strong>Vision for the Godot Engine&lt;/strong>&lt;/a>&lt;/p></description><category>News</category><guid>https://godotengine.org/article/godot-vision-statement-2026/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Thu, 25 Jun 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-foundation-update-2024.webp</image></item><item><title>Godot 4.7 – Lights, Camera, Action!</title><link>https://godotengine.org/article/godot-4-7-lights-camera-action/</link><summary>Like a cult classic movie, Godot 4 has only gotten better with age. This brings us to Godot 4.7. With 3 years under its belt, the 4.7 _Director’s Cut_ offers colors of never-before-reached intensity.</summary><description/><category>Release</category><guid>https://godotengine.org/article/godot-4-7-lights-camera-action/</guid><dc:creator>Godot contributors</dc:creator><pubDate>Thu, 18 Jun 2026 13:00:00 +0000</pubDate><image>https://godotengine.org/storage/releases/4.7/images/preview_image.jpg</image></item></channel></rss>
+&lt;p>&lt;a href="https://godot.foundation/policies-and-procedures/project-vision-statement">&lt;strong>Vision for the Godot Engine&lt;/strong>&lt;/a>&lt;/p></description><category>News</category><guid>https://godotengine.org/article/godot-vision-statement-2026/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Thu, 25 Jun 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-foundation-update-2024.webp</image></item></channel></rss>
