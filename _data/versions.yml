@@ -643,11 +643,16 @@
   release_date: "13 November 2025"
   release_notes: "/article/dev-snapshot-godot-3-7-dev-1/"
 
+- name: "3.6.3"
+  flavor: "stable"
+  release_date: "22 August 2026"
+  release_notes: "/article/maintenance-release-godot-3-6-3/"
+  featured: "3"
+
 - name: "3.6.2"
   flavor: "stable"
   release_date: "23 June 2025"
   release_notes: "/article/maintenance-release-godot-3-6-2/"
-  featured: "3"
 
 - name: "3.6.1"
   flavor: "stable"
