@@ -74,7 +74,7 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "uk", "zh-cn", "zh
 				<div class="thumbnail" style="background-image: url('{{ post.image }}');"></div>
 				<div class="content">
 					<h3>{{ post.title }}</h3>
-					<p class="excerpt">{{ post.excerpt }}</p>
+					<p class="excerpt">{{ post.excerpt | markdownify | remove_first: '<p>' | remove: '</p>' | strip_newlines}}</p>
 					<span class="date" data-post-date="{{ post.date }}">{{ post.date | date: "%e %B %Y" }}</span>
 				</div>
 			</article>
@@ -90,7 +90,7 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "uk", "zh-cn", "zh
 						<div class="thumbnail" style="background-image: url('{{ post.image }}');" href="{{ post.url }}"></div>
 						<div>
 							<h3>{{ post.title }}</h3>
-							<p class="excerpt">{{ post.excerpt | truncate: 103 }}</p>
+							<p class="excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 103 }}</p>
 							<span class="date" data-post-date="{{ post.date }}">{{ post.date | date: "%e %B %Y" }}</span>
 						</div>
 					</article>
