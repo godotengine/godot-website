@@ -39,7 +39,7 @@ Unfortunately, operating systems originally didn't account for the fact that mic
 
 In practice, this manifests as significant framerate drops as soon as a certain threshold of mouse updates per second is exceeded. How fast this threshold is reached depends on the mouse movement speed (as tiny mouse movements will not send an update on every poll), as well as CPU single-core performance. As of 2026 and on recent Windows 11 versions, on most CPUs, this limit is generally somewhere between 1 kHz and 2 kHz. If your mouse sends much more updates than this limit, the framerate can drop to the single digits, leading to an unplayable experience:
 
-![Frametimes when moving the mouse quickly prior to the fix](/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_movement_frametimes_before.webp)
+![Frametimes when moving the mouse quickly prior to the fix](/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_movement_frametimes_no_vsync_before.webp)
 
 This issue is particularly difficult to troubleshoot for less tech-savvy users, as some mice can even *default* to polling rates above 1 kHz. This leads to a performance loss that appears to be related to the use of a specific mouse model, when it is in fact related to its polling rate.
 
