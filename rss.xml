@@ -1,4 +1,214 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Maintenance release: Godot 3.6.3</title><link>https://godotengine.org/article/maintenance-release-godot-3-6-3/</link><summary>Godot 3.6.2 has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS.</summary><description>&lt;p>&lt;a href="/article/maintenance-release-godot-3-6-2">Godot 3.6.2&lt;/a> has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Fixing high polling rate mice on Windows in Godot</title><link>https://godotengine.org/article/fixing-high-polling-rate-mice-on-windows/</link><summary>At long last, a performance issue with high polling rate mice on Windows has been fixed. This article describes how the fix works, and why it's so important today.</summary><description>&lt;p>At long last, a performance issue with high polling rate mice on Windows has been fixed in Godot, starting with the recently released &lt;a href="https://godotengine.org/article/maintenance-release-godot-4-7-2/">Godot 4.7.2&lt;/a>. This article describes how the fix works, and why it’s so important today.&lt;/p>
+&lt;p>&lt;em>&lt;strong>Note:&lt;/strong> The definition of “high polling rate” here refers to any mouse that can be configured to having a polling rate of at least 2 kHz. Mice that poll at 1 kHz are &lt;strong>not&lt;/strong> considered high polling rate here, as they generally did not exhibit performance issues except on CPUs with very slow single-core performance.&lt;/em>&lt;/p>
+&lt;h2 id="what-are-high-polling-rate-mice-and-what-are-they-useful-for">What are high polling rate mice, and what are they useful for?&lt;/h2>
+&lt;p>To ensure games feel good to play, we want the delay between an action being performed and the result being visible on screen (input lag) to be as low as possible. We also want inputs to be spaced as consistently as possible, avoiding jitter.&lt;/p>
+&lt;p>Mice are polled at a fixed rate. Historically, this has been 125 Hz as dictated by the USB standard. This means that the mouse input is polled every 8 milliseconds. This poses several limitations:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>The mouse position reported to the operating system only updates 125 times per second. If you have a high refresh rate monitor (144 Hz or more), the mouse position will not update every frame, which will make mouse movement look choppy. This affects not just the operating system, but also games that rely on mouse input, including captured mouse mode.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Even on monitors with a 120 Hz or lower refresh rate, the mouse position will not be as consistent across the displayed frames on screen as with higher polling rates. The reason for this is that the mouse updates don’t line up with display refreshes. With a higher polling rate, there will be a lower average deviation between the time the mouse was last updated and the display refresh.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>On average, and on top of any latency incurred by the operating system and mouse hardware, there will be a delay of 4 milliseconds between the mouse being moved by the user and the updated position being available to the operating system. While this may sound negligible at first, it &lt;em>is&lt;/em> possible for some people to notice differences in mouse latency down to a millisecond.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>In the late 2000s, manufacturers started providing options with 250 Hz, 500 Hz and 1 kHz polling rates. For a long time, 1 kHz was the fastest polling rate available on the market.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_polling_rate_comparison.webp" alt="Mouse polling rate comparison between 125 Hz, 250 Hz, 500 Hz and 1,000 Hz" />&lt;/p>
+&lt;p>However, since the early 2020s, manufacturers have pushed polling rates beyond 1 kHz, including for wireless models. We’ve seen 2 kHz, 4 kHz and even 8 kHz mice reach the market, with pricing becoming more affordable as time goes on. This high polling rate allows for slightly reduced input latency, but most importantly, it ensures mouse updates are more consistent over time. With modern displays being able to reach refresh rates of 480 Hz, 720 Hz or &lt;a href="https://www.youtube.com/watch?v=rZDcF2bDwWk">even more&lt;/a>, it becomes increasingly important to push mouse polling rates beyond the 1 kHz barrier.&lt;/p>
+&lt;p>This led to the rapid adoption of mice with such high polling rates, which poses a problem for software developers.&lt;/p>
+&lt;h2 id="whats-the-issue-with-high-polling-rate-mice">What’s the issue with high polling rate mice?&lt;/h2>
+&lt;p>As the operating system receives mouse events much more frequently, it must handle them in a timely manner to avoid dropped events, or events being handled too late (which results in additional latency). In other words, with great polling rate comes great responsibility.&lt;/p>
+&lt;p>Unfortunately, operating systems originally didn’t account for the fact that mice could one day send thousands of updates per second. While modern CPUs’ processing power makes it possible to bruteforce through this problem on some platforms, this was particularly brutal on Windows.&lt;/p>
+&lt;p>In practice, this manifests as significant framerate drops as soon as a certain threshold of mouse updates per second is exceeded. How fast this threshold is reached depends on the mouse movement speed (as tiny mouse movements will not send an update on every poll), as well as CPU single-core performance. As of 2026 and on recent Windows 11 versions, on most CPUs, this limit is generally somewhere between 1 kHz and 2 kHz. If your mouse sends much more updates than this limit, the framerate can drop to the single digits, leading to an unplayable experience:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_movement_frametimes_before.webp" alt="Frametimes when moving the mouse quickly prior to the fix" />&lt;/p>
+&lt;p>This issue is particularly difficult to troubleshoot for less tech-savvy users, as some mice can even &lt;em>default&lt;/em> to polling rates above 1 kHz. This leads to a performance loss that appears to be related to the use of a specific mouse model, when it is in fact related to its polling rate.&lt;/p>
+&lt;p>Godot is not the only engine that runs into this issue on Windows. Thousands of games suffer from this issue too, from the earliest days of Windows gaming to today’s popular releases. Games that use non-captured mouse modes (i.e. with the mouse cursor visible) are more prone to this issue, as extra care must be taken to avoid performance pitfalls in this situation.&lt;/p>
+&lt;p>Linux (on both Wayland and X11) is generally not affected by this issue, regardless of the game.&lt;/p>
+&lt;h3 id="why-does-this-issue-happen-on-windows-specifically">Why does this issue happen on Windows specifically?&lt;/h3>
+&lt;p>Windows has a long story of backward compatibility, dating back 30+ years. While this is a blessing in many cases, it ends up being a problem in this situation.&lt;/p>
+&lt;p>Windows has several types of mouse motion events:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Legacy input (known as &lt;code class="language-plaintext highlighter-rouge">WM_MOUSEMOVE&lt;/code>). This is the usual kind of mouse motion event, designed for applications rather than games.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Raw input (known as &lt;code class="language-plaintext highlighter-rouge">WM_INPUT&lt;/code>). Raw input was introduced in Windows XP as a way to allow games to read mouse input in a way that ignores OS processing (such as mouse acceleration, also known as the “Enhanced pointer precision” option). This is particularly desirable for first-person games, where mouse acceleration is usually not wanted by players (or is better configured in-game when desired).&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>However, when requesting raw input in a Windows application, it will still receive legacy input events at the same time. This is the case even when the application is currently in captured mouse mode (such as a first-person game, where the mouse cursor is not visible).&lt;/p>
+&lt;p>While it is possible to request &lt;em>only&lt;/em> raw input and no legacy input, doing so breaks several parts of the application that are expected by users, such as moving the window by dragging its title bar. Therefore, we had to implement a different solution inspired by &lt;a href="https://ph3at.github.io/posts/Windows-Input/">PH3’s blog post about high polling rate mice on Windows&lt;/a>.&lt;/p>
+&lt;h2 id="solution">Solution&lt;/h2>
+&lt;p>The solution is to treat mouse motion inputs separately from other input types, and handle them in a way that prevents congesting the input system. To achieve this:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Buffered reads are performed in the &lt;a href="https://github.com/godotengine/godot/blob/944a3c6cbbbb88284feebcb0603464cb175fa18e/platform/windows/display_server_windows.cpp#L4441-L4509">&lt;code class="language-plaintext highlighter-rouge">DisplayServerWindows::process_raw_input()&lt;/code>&lt;/a> function.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Additionally, in &lt;a href="https://github.com/godotengine/godot/blob/944a3c6cbbbb88284feebcb0603464cb175fa18e/platform/windows/display_server_windows.cpp#L4526-L4570">&lt;code class="language-plaintext highlighter-rouge">DisplayServerWindows::process_events()&lt;/code>&lt;/a>, the Windows API &lt;code class="language-plaintext highlighter-rouge">PeekMessageW()&lt;/code> function is called in a way that prevents raw input (&lt;code class="language-plaintext highlighter-rouge">WM_INPUT&lt;/code>) from being dispatched right away (which is what normally causes performance drops in captured mouse mode). Instead, it stays in queue for the next buffered read in &lt;code class="language-plaintext highlighter-rouge">process_raw_input()&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Legacy inputs (&lt;code class="language-plaintext highlighter-rouge">WM_MOUSEMOVE&lt;/code> and &lt;code class="language-plaintext highlighter-rouge">WM_NCMOUSEMOVE&lt;/code>) are handled separately, but are only dispatched once per frame at most each. This avoids performance issues at high polling rate when in non-captured mouse modes.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Other inputs (keys, mouse buttons, mouse wheel) are treated as before, as they are not sent frequently enough to be a problem under the old approach. While keyboards with a polling rate greater than 1 kHz exist, it’s humanly impossible to (de)press keys in a way that could saturate the current input system.&lt;/p>
+&lt;p>Gamepad input remains treated by a separate system on Windows, and is not impacted by this fix. In any case, there are very few gamepads that can poll above 1 kHz as of writing.&lt;/p>
+&lt;p>Note that projects should still be careful to optimize their &lt;a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-private-method-input">&lt;code class="language-plaintext highlighter-rouge">_input()&lt;/code>&lt;/a> and &lt;a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node-private-method-unhandled-input">&lt;code class="language-plaintext highlighter-rouge">_unhandled_input()&lt;/code>&lt;/a> functions, particularly the code paths that are called for &lt;a href="https://docs.godotengine.org/en/stable/classes/class_inputeventmousemotion.html">&lt;code class="language-plaintext highlighter-rouge">InputEventMouseMotion&lt;/code>&lt;/a>. These methods may be called once per rendered frame when &lt;a href="https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-property-use-accumulated-input">input accumulation&lt;/a> is enabled (the default). For example, on a 480 Hz monitor with V-Sync enabled, these methods may be called 480 times per second during fast mouse movements, assuming the system is fast enough to render at least 480 FPS. When input accumulation is disabled, these methods may be called on every mouse update, which can potentially mean 8,000 calls per second when using a mouse with 8 kHz polling rate.&lt;/p>
+&lt;h2 id="benchmark">Benchmark&lt;/h2>
+&lt;p>For testing, we use the &lt;em>InputRepro2&lt;/em> testing project which is available in the &lt;a href="https://github.com/godotengine/godot/pull/109639">pull request&lt;/a> description.&lt;/p>
+&lt;p>PC specifications:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>CPU:&lt;/strong> AMD Ryzen 9 9950X3D&lt;/li>
+&lt;li>&lt;strong>GPU:&lt;/strong> NVIDIA GeForce RTX 5090&lt;/li>
+&lt;li>&lt;strong>RAM:&lt;/strong> 64 GB (2×32 GB DDR5-6000 CL30)&lt;/li>
+&lt;li>&lt;strong>OS:&lt;/strong> Windows 11 24H2&lt;/li>
+&lt;li>&lt;strong>Monitor:&lt;/strong> ASUS ROG PG32UCDP (1080p @ 480 Hz mode)&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> 4.7.1.stable does &lt;strong>not&lt;/strong> include the fix described in this article, while &lt;a href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/">4.8.dev3&lt;/a> is the first development snapshot to include it. The recently released &lt;a href="https://godotengine.org/article/maintenance-release-godot-4-7-2/">4.7.2.stable&lt;/a> also includes the fix.&lt;/p>
+&lt;/blockquote>
+&lt;p>Average framerate when moving the mouse in circles quickly:&lt;/p>
+&lt;h4 id="no-v-sync-unlimited-maximum-framerate">No V-Sync (unlimited maximum framerate)&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Benchmark&lt;/th>
+&lt;th>4.7.1.stable&lt;/th>
+&lt;th>4.8.dev3&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>No movement&lt;/td>
+&lt;td>4097 FPS (0.24 mspf)&lt;/td>
+&lt;td>4061 FPS (0.25 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 1 kHz&lt;/td>
+&lt;td>2641 FPS (0.38 mspf)&lt;/td>
+&lt;td>2560 FPS (0.39 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 2 kHz&lt;/td>
+&lt;td>1751 FPS (0.57 mspf)&lt;/td>
+&lt;td>1848 FPS (0.54 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 4 kHz&lt;/td>
+&lt;td>973 FPS (1.03 mspf)*&lt;/td>
+&lt;td>1546 FPS (0.65 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 8 kHz&lt;/td>
+&lt;td>173 FPS (5.78 mspf)*&lt;/td>
+&lt;td>&lt;strong>1103 FPS (0.91 mspf)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 1 kHz&lt;/td>
+&lt;td>2583 FPS (0.39 mspf)&lt;/td>
+&lt;td>2669 FPS (0.37 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 2 kHz&lt;/td>
+&lt;td>1979 FPS (0.51 mspf)&lt;/td>
+&lt;td>2110 FPS (0.47 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 4 kHz&lt;/td>
+&lt;td>1778 FPS (0.56 mspf)*&lt;/td>
+&lt;td>1962 FPS (0.51 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 8 kHz&lt;/td>
+&lt;td>&amp;lt; 1 FPS (&amp;gt;1000.00 mspf)**&lt;/td>
+&lt;td>&lt;strong>1703 FPS (0.59 mspf)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Prior to the fix, performance dropped to unplayable levels when moving the mouse with 8 kHz polling rate. Even with a 4 kHz polling rate, there were significant frametime deviations that resulted in movement being visibly jagged:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_movement_frametimes_no_vsync_before.webp" alt="Frametimes when moving the mouse quickly prior to the fix" />&lt;/p>
+&lt;p>Compare the above graph with this frametime graph recorded under the same conditions, but with the fix in effect:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_movement_frametimes_no_vsync_after.webp" alt="Frametimes when moving the mouse quickly prior to the fix" />&lt;/p>
+&lt;p>The 1% low FPS figure has been increased by a factor of &lt;strong>45.8&lt;/strong> here! This is just one example of how significant the improvement can be thanks to this fix.&lt;/p>
+&lt;p>On slower CPUs, you will get more benefit from the fix described in this article, as the CPU used for this test has very high single-core performance (which is what determines how many input messages can be read per second). While this fix was not a huge change at 2 kHz polling rate on this particular CPU, it will definitely come in handy on slower processors or laptop CPUs, which have lower single-core performance compared to desktop CPUs.&lt;/p>
+&lt;p>How does this translate to a scenario where we aim to reach a high framerate &lt;em>consistently&lt;/em>? With this fix, it’s a lot more feasible at 8 kHz now:&lt;/p>
+&lt;h4 id="v-sync-480-hz">V-Sync 480 Hz&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Benchmark&lt;/th>
+&lt;th>4.7.1.stable&lt;/th>
+&lt;th>4.8.dev3&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>No movement&lt;/td>
+&lt;td>480 FPS (2.08 mspf)&lt;/td>
+&lt;td>480 FPS (2.08 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 1 kHz&lt;/td>
+&lt;td>478 FPS (2.09 mspf)&lt;/td>
+&lt;td>478 FPS (2.09 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 2 kHz&lt;/td>
+&lt;td>473 FPS (2.11 mspf)&lt;/td>
+&lt;td>477 FPS (2.10 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 4 kHz&lt;/td>
+&lt;td>472 FPS (2.12 mspf)*&lt;/td>
+&lt;td>477 FPS (2.10 mspf)**&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, visible mouse @ 8 kHz&lt;/td>
+&lt;td>151 FPS (6.62 mspf)*&lt;/td>
+&lt;td>&lt;strong>477 FPS (2.10 mspf)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 1 kHz&lt;/td>
+&lt;td>477 FPS (2.10 mspf)&lt;/td>
+&lt;td>478 FPS (2.09 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 2 kHz&lt;/td>
+&lt;td>477 FPS (2.10 mspf)&lt;/td>
+&lt;td>478 FPS (2.09 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 4 kHz&lt;/td>
+&lt;td>469 FPS (2.13 mspf)*&lt;/td>
+&lt;td>478 FPS (2.09 mspf)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>With movement, captured mouse @ 8 kHz&lt;/td>
+&lt;td>&amp;lt; 1 FPS (&amp;gt;1000.00 mspf)**&lt;/td>
+&lt;td>&lt;strong>477 FPS (2.10 mspf)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Prior to the fix, we saw a similar issue to the test case where V-Sync is disabled. The framerate didn’t quite reach the 480 FPS target we set here. In fact, it was lower when V-Sync is enabled at 8 kHz with the visible mouse mode (151 FPS instead of 173 FPS). On the frametime graph, there were frametime spikes that were easily noticeable to the naked eye:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_movement_frametimes_with_vsync_before.webp" alt="Frametimes when moving the mouse quickly prior to the fix" />&lt;/p>
+&lt;p>The framerate is much more stable now, and is &lt;em>almost&lt;/em> a locked 480 FPS:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/fixing-high-polling-rate-mice-on-windows/mouse_movement_frametimes_with_vsync_after.webp" alt="Frametimes when moving the mouse quickly with the fix" />&lt;/p>
+&lt;p>Slight deviations at framerates this high are expected, as each frame only has ~2.1 milliseconds to render. It may be possible to find further improvements, but we are getting into the realm of diminishing returns here.&lt;/p>
+&lt;ul>
+&lt;li>*: Large deviations in frametime occur, with some frames going past ~16.7 ms (slower than 1 frame at 60 FPS). Still playable, but not smooth (which is what we’d want from those high polling rates).&lt;/li>
+&lt;li>**: Huge deviations in frametime occur (some frames taking over 500 ms), making it unplayable.&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/godotengine/godot/pull/109639">Pull request&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ph3at.github.io/posts/Windows-Input/">PH3 blog post about high polling rate mice on Windows&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blurbusters.com/faq/mouse-guide/">Blur Busters mouse guide&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.godotengine.org/en/latest/tutorials/rendering/jitter_stutter.html">Fixing jitter, stutter and input lag&lt;/a> in the Godot documentation&lt;/li>
+&lt;/ul>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></description><category>Progress Report</category><guid>https://godotengine.org/article/fixing-high-polling-rate-mice-on-windows/</guid><dc:creator>Hugo Locurcio</dc:creator><pubDate>Mon, 24 Aug 2026 14:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/fixing-high-polling-rate-mice-on-windows.jpg</image></item><item><title>Maintenance release: Godot 3.6.3</title><link>https://godotengine.org/article/maintenance-release-godot-3-6-3/</link><summary>Godot 3.6.2 has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS.</summary><description>&lt;p>&lt;a href="/article/maintenance-release-godot-3-6-2">Godot 3.6.2&lt;/a> has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS.&lt;/p>
 &lt;p>&lt;a href="https://developer.android.com/google/play/requirements/target-sdk">Google Play&lt;/a> now requires new apps and updates to target Android 16 (API level 36). As a result we have updated Godot Android APIs and made compatibility changes to ensure users can update their Godot 3 games on Play Store with 3.6.3.&lt;/p>
 &lt;p>On iOS, the minimum version is bumped to 15.0 (the minimum supported by XCode 27), a minimum target export option is added, and 32-bit export is removed as it is not supported since iOS 11.&lt;/p>
 &lt;p>&lt;strong>This is a safe and recommended update for all Godot 3.6.x users.&lt;/strong> It should have no major impact on your projects, even complex ones in production, if you’re already using 3.6.2-stable.&lt;/p>
@@ -648,6 +858,7 @@ custom shirt.&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;p>&lt;strong>Update:&lt;/strong> The dedicated blog post is now up: &lt;a href="/article/fixing-high-polling-rate-mice-on-windows">Fixing high polling rate mice on Windows in Godot&lt;/a>&lt;/p>
 &lt;h3 id="and-more">And more!&lt;/h3>
 &lt;p>There are too many exciting changes to list them all here, but here’s a curated selection:&lt;/p>
 &lt;ul>
@@ -2668,12 +2879,4 @@ amended policy will include that:&lt;/p>
 &lt;/ul>
 &lt;p>Things change every day with respect to the current suite of AI tools available.
 We will continue taking a conservative approach in our policies towards them,
-but we will re-evaluate as things evolve.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/contribution-policy-2026/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 30 Jun 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/contribution-policy-2026.jpg</image></item><item><title>Vision for the Engine</title><link>https://godotengine.org/article/godot-vision-statement-2026/</link><summary>The Godot Foundation formalizes its vision for the engine with a written statement</summary><description>&lt;p>&lt;a href="https://godot.foundation/policies-and-procedures/project-vision-statement">&lt;strong>Read the Godot project vision statement here.&lt;/strong>&lt;/a>&lt;/p>
-&lt;p>When Godot was open sourced in 2014, the vision for the engine was held in the minds of the original creators: Juan Linietsky and Ariel Manzur.&lt;/p>
-&lt;p>When they opened the engine up to public contribution, they were able to share the vision directly with new contributors who learned from them and became today’s maintainers. It wasn’t formalized as a written document at the time, but the result of a shared experience building, releasing, and maintaining the engine.&lt;/p>
-&lt;p>However, Godot has grown rapidly over the last few years. The pool of contributors has grown as well and it is no longer feasible for new contributors to slowly learn the vision of the engine by chatting with the engine maintainers. Accordingly, the Board of the Godot Foundation has decided that it is finally time to write down a high-level statement of what our vision for the engine is so that it is easily accessible to all.&lt;/p>
-&lt;p>The vision statement is intended to guide the Godot Foundation as we make decisions about where to allocate the Foundation’s resources. It is a useful tool for contributors and maintainers to understand how we set &lt;a href="https://godotengine.org/priorities/">priorities&lt;/a> and what areas of development will likely see an extra boost from Foundation staff. It is a good reference for users of the engine to understand what the Foundation and contributors work towards, and how it aligns with their own expectations for the engine.&lt;/p>
-&lt;p>It is not intended to be used as a tool for evaluating specific changes to the engine or proposals. For that we already have comprehensive guidelines, in particular the &lt;a href="https://contributing.godotengine.org/en/latest/engine/guidelines/best_practices.html">Best Practices for Engine Contributors guide&lt;/a>.&lt;/p>
-&lt;p>Importantly, this is not a change in direction from the last decade of development. This is a formalization of the vision that we have shared and developed since the beginning of the project, we just feel the need to write it down now.&lt;/p>
-&lt;p>You can read the full statement here:&lt;/p>
-&lt;p>&lt;a href="https://godot.foundation/policies-and-procedures/project-vision-statement">&lt;strong>Vision for the Godot Engine&lt;/strong>&lt;/a>&lt;/p></description><category>News</category><guid>https://godotengine.org/article/godot-vision-statement-2026/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Thu, 25 Jun 2026 15:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godot-foundation-update-2024.webp</image></item></channel></rss>
+but we will re-evaluate as things evolve.&lt;/p></description><category>News</category><guid>https://godotengine.org/article/contribution-policy-2026/</guid><dc:creator>Godot Foundation</dc:creator><pubDate>Tue, 30 Jun 2026 18:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/contribution-policy-2026.jpg</image></item></channel></rss>
