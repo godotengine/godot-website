@@ -21,7 +21,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 ## Highlights
 
-In case you missed them, see the [4.8 dev 1](/article/dev-snapshot-godot-4-8-dev-1/) release notes for an overview of some key features which were already in that snapshot, and are therefore still available for testing in dev 2.
+In case you missed them, see the [4.8 dev 1](/article/dev-snapshot-godot-4-8-dev-1/) release notes for an overview of some key features which were already in that snapshot, and are therefore still available for testing in 4.8 dev 2.
 
 ### Editor: Automatically expand created resources in inspector
 
