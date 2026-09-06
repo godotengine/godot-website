@@ -1,6 +1,6 @@
 ---
 title: "Optimizing CPU-side Rendering Code"
-excerpt: "Optimizing CPU code is a lot of fun. Here's how we do it"
+excerpt: "Optimizing CPU code is a lot of fun. Here’s how we do it"
 categories: ["progress-report"]
 author: Clay John
 image: /storage/blog/rendering-optimizations-cpu-2026/progress-report-cpu-rendering-optimizations.jpg
@@ -17,7 +17,7 @@ In this article I will only be looking at optimizing CPU code. When working on r
 about optimizing code both for the CPU and for the GPU, because your ultimate performance will be dictated by the slower
 of the two processors. No amount of CPU optimization will save you from inefficient shaders. 
 
-In writing a renderer you also make tradeoffs all the time to benefit one or the other, for example, batching in 2D is a
+In writing a renderer you also make tradeoffs all the time to benefit one or the other. For example, batching in 2D is a
 technique that hurts GPU performance a little, but improves CPU performance a lot. Since 2D games tend to get CPU
 bottlenecked before they get GPU bottlenecked, batching ends up being a net positive in most cases. Conversely, 3D games
 tend to be GPU bottlenecked more often, so in Godot we do our occlusion culling on the CPU in order to take some of the
@@ -44,9 +44,9 @@ you leave in some debug code that should never have seen the light of day.
 For us, as engine developers, we have the added challenge of needing to optimize for a wide range of potential games. We
 don’t have just one target, we have thousands of moving targets and we only know there is a serious problem when people
 make bug reports. That being said, we can identify and make many improvements just testing using our existing demos and
-open source games. 
+open-source games. 
 
-The best tool for identifying CPU bottlenecks is a CPU profiler. They come in many shapes and sizes, Godot even has two
+The best tool for identifying CPU bottlenecks is a CPU profiler. They come in many shapes and sizes. Godot even has two
 built into the editor (one for profiling GDScript code and another for profiling the renderer exclusively). However,
 when working on engine code itself, you need to use an external profiler. Godot has support for building with
 [Tracy](https://docs.godotengine.org/en/stable/engine_details/development/profiling/tracy.html) to do tracing profiling,
@@ -84,12 +84,11 @@ your code slower and you would have been better off doing the work twice.
 Unless you are an absolute C++ compiler genius, you likely can’t guess the exact result of your code change on
 performance. So it is always better to re-measure and confirm your results. 
 
-## Case Study #1 Polygon2D
+## Case Study #1: Polygon2D
 
-This PR came out of a conversation I had with Aurélien Condomines who is working on Heidi's Legacy: Mountains Calling
-(https://store.steampowered.com/app/3589430/Heidis_Legacy_Mountains_Calling/). He noted that he found the animation code
+This PR came out of a conversation I had with Aurélien Condomines who is working on [Heidi's Legacy: Mountains Calling](https://store.steampowered.com/app/3589430/Heidis_Legacy_Mountains_Calling/). He noted that he found the animation code
 in Godot to be very slow which was limiting his ability to add content to his game. He found that by having 20 or so
-animated characters performance would start to fall off in his game. 
+animated characters, performance would start to fall off in his game. 
 
 I was surprised at those numbers and felt that something was wrong. Our animation code shouldn’t be a bottleneck with
 only 20 or so animated characters so I decided to investigate. I asked him to put together a minimal project with a
@@ -99,7 +98,7 @@ This first hint is that he was using an AnimationPlayer to animate the vertices 
 Viewport on a Sprite3D in order to have nice looking 2D animations in a 3D world.
 
 That alone sounds a bit unique, but it isn’t something that should cause any significant problems. So our next step is
-to boot up a Superluminal and see what is going on. 
+to boot up Superluminal and see what is going on. 
 
 I captured a few seconds of the demo running and then zoomed in on a frame. 
 
@@ -107,15 +106,15 @@ I captured a few seconds of the demo running and then zoomed in on a frame.
 
 _Note: all testing of this demo scene is done with a Ryzen 5 9600X CPU._
 
-Since it isn’t totally clear in the screenshot, here is a breakdown where we are spending our time:
+Since it isn’t totally clear in the screenshot, here is a breakdown of where we are spending our time:
 
 - **4.6 ms**:  AnimationMixer. That is slower than I would like to see, but there are a lot of animation tracks in this scene since every vertex is being animated, so it isn’t totally unexpected. 
-- **15.7 ms**: `Polygon2D::_notification()`. I will say more about this below
+- **15.7 ms**: `Polygon2D::_notification()`. I will say more about this below.
 - **11.7 ms**: Drawing the scene. Of this **3.3 ms** is spent creating vertex arrays, and **5 ms** is spent freeing vertex arrays. So we only spend about **3.4 ms** actually rendering the scene.
 
-With just this high level overview, we can immediately tell that there are two things going wrong:
+With just this high-level overview, we can immediately tell that there are two things going wrong:
 
-1. Polygon2D is doing something unexpected
+1. Polygon2D is doing something unexpected.
 2. Whatever it is, it is resulting in vertex arrays getting created and freed every frame. 
 
 So let’s take a close look and see where the time is spent in Polygon2D. We have two options, we can just zoom in on the
@@ -150,7 +149,7 @@ the vertex data to the new mesh, we can simply upload the vertex data to the exi
 That’s what I ended up doing in [my pull request](https://github.com/godotengine/godot/pull/117334). Most of the work in
 the PR was identifying which cases were suitable for updating the mesh, and which cases needed the mesh to be recreated. 
 
-This optimization roughly tripled the performance of animated Polygon2Ds. Making the technique that Aurélien was doing
+This optimization roughly tripled the performance of animated Polygon2Ds, making the technique that Aurélien was doing
 totally viable.
 
 Taking a look at a single frame after my PR, we have gone from **35 ms** per frame to just **13 ms**:
@@ -174,9 +173,9 @@ device. So it was enough for now. If someone was really interested and had the t
 further. Personally, I’m most curious about where we are spending time in the rendering frame now since that accounts
 for 50% of the frame time. 
 
-## Case Study #2 Optimizing SPIRV to DXIL Transpilation
+## Case Study #2: Optimizing SPIRV to DXIL Transpilation
 
-Earlier this year, Asilkin was investigating our shader compilation pipeline on the D3D12 backend. Our current method for compiling shaders with D3D12 is described in this [earlier blog post](https://godotengine.org/article/d3d12-adventures-in-shaderland/) from Pedro J. Estébanez. In short it is:
+Earlier this year, [Asilkin](https://github.com/blueskythlikesclouds) was investigating our shader compilation pipeline on the D3D12 backend. Our current method for compiling shaders with D3D12 is described in this [earlier blog post](https://godotengine.org/article/d3d12-adventures-in-shaderland/) from [Pedro](https://github.com/randomshaper). In short it is:
 
 1. Compile GDShader to GLSL using built in shader compiler
 2. Compile GLSL to SPIRV using GLSLang
@@ -187,11 +186,11 @@ By far the slowest part of the process is the transpilation step. Further, it le
 loading times when switching from Vulkan to DXIL since Vulkan can use SPIRV directly. 
 
 To optimize this, Asilkan ran a trace through Superluminal and analyzed the results. From a very high level you can
-already see that there are significant gaps where only one or a couple threads are active. Gaps in thread execution mean
+already see that there are significant gaps where only a couple threads are active. Gaps in thread execution mean
 that things are taking longer than they theoretically should. Ideally our loading process would fully saturate all cores
 in order to load as fast as possible. That’s the goal anyway. 
 
-![Zoomed out view showing lots of gaps in execution as the threads are stalled](/storage/blog/rendering-optimizations-cpu-2026/transpilation-before.png)
+![Zoomed-out view showing lots of gaps in execution as the threads are stalled](/storage/blog/rendering-optimizations-cpu-2026/transpilation-before.png)
 
 Right off the bat, you can see something is wrong. Green means the thread is doing work. The height of the green bar is
 basically how hard the thread is working. Red means the thread is stalled waiting for something. 
@@ -207,7 +206,7 @@ What Asilkan ended up doing is allocating a bunch of memory up front for each th
 instead of frequently asking the OS for more memory. The end result is the threads are no longer stuck waiting for the
 OS and their execution now looks like:
 
-![Zoomed out view showing much fewer gaps in execution](/storage/blog/rendering-optimizations-cpu-2026/transpilation-after.png)
+![Zoomed-out view showing much fewer gaps in execution](/storage/blog/rendering-optimizations-cpu-2026/transpilation-after.png)
 
 This optimization saved 11 seconds of load time in the TPS demo. Those 11 seconds were purely wasted time where the CPU
 ended up stalled doing nothing. 
@@ -221,6 +220,6 @@ problem was properly identified.
 
 ## Support
 
-Godot is a non-profit, open source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
+Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to [generous donations from the Godot community](https://fund.godotengine.org/). A big thank you to everyone who has contributed [their time](https://github.com/godotengine/godot/blob/master/AUTHORS.md) or [their financial support](https://github.com/godotengine/godot/blob/master/DONORS.md) to the project!
 
-If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
+If you'd like to support the project financially and help us secure our future hires, you can do so using the [Godot Development Fund](https://fund.godotengine.org/) platform managed by the [Godot Foundation](https://godot.foundation/). There are also several [alternative ways to donate](/donate) which you may find more suitable.
