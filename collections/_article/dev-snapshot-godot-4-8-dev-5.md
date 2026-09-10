@@ -72,7 +72,7 @@ There are too many exciting changes to list them all here, but here's a curated 
 
 ## Changelog
 
-**78 contributors** submitted **183 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.8-dev4) for the complete list of changes since [4.8 dev 4](/article/dev-snapshot-godot-4-8-dev-4/). You can also review [all changes included in 4.8](https://godotengine.github.io/godot-interactive-changelog/#4.8) compared to the previous [4.7 feature release](/releases/4.7/).
+**78 contributors** submitted **183 fixes** for this release. See our [**interactive changelog**](https://godotengine.github.io/godot-interactive-changelog/#4.8-dev5) for the complete list of changes since [4.8 dev 4](/article/dev-snapshot-godot-4-8-dev-4/). You can also review [all changes included in 4.8](https://godotengine.github.io/godot-interactive-changelog/#4.8) compared to the previous [4.7 feature release](/releases/4.7/).
 
 This release is built from commit [`9552dfb68`](https://github.com/godotengine/godot/commit/9552dfb6859a1aaba1e570b8e0ef5c599b830f19).
 
