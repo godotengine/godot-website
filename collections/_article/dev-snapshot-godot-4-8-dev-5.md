@@ -41,7 +41,7 @@ Once enabled, textures can be imported as streamed textures, utilizing the new t
 
 ## Import: Allow preserving alpha test coverage
 
-Speaking of mipmaps: an existing issue in the engine was actually *caused* by their use, albeit indirectly. Certain material shaders, such as alpha scissor, would look pretty rough at long distances; this was a direct result of mipmap levels causing them to overfilter and dissolve away. While technical workarounds do exist, such as using a texture format with built-in alpha coverage like `.dds`, it's still too much of a technical hurdle for what should be straightfoward.
+Speaking of mipmaps: an existing issue in the engine was actually *caused* by their use, albeit indirectly. Certain material shaders, such as alpha scissor, would look pretty rough at long distances; this was a direct result of mipmap levels causing them to overfilter and dissolve away. While technical workarounds do exist, such as using a texture format with built-in alpha coverage like `.dds`, it's still too much of a technical hurdle for what should be straightforward.
 
 [Kasper Arnklit Frandsen](https://github.com/Arnklit) shared the above sentiment, leading him to create [GH-104289](https://github.com/godotengine/godot/pull/104289). This allows any given texture to preserve their alpha data, even when falling back to their scaled-down equivalents.
 
