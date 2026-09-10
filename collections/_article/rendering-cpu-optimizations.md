@@ -149,7 +149,7 @@ the vertex data to the new mesh, we can simply upload the vertex data to the exi
 That’s what I ended up doing in [my pull request](https://github.com/godotengine/godot/pull/117334). Most of the work in
 the PR was identifying which cases were suitable for updating the mesh, and which cases needed the mesh to be recreated. 
 
-This optimization roughly tripled the performance of animated Polygon2Ds, making the technique that Aurélien was doing
+This optimization roughly tripled the performance of animated Polygon2Ds, making the technique that Aurélien was using
 totally viable.
 
 Taking a look at a single frame after my PR, we have gone from **35 ms** per frame to just **13 ms**:
@@ -175,7 +175,7 @@ for 50% of the frame time.
 
 ## Case Study #2: Optimizing SPIRV to DXIL Transpilation
 
-Earlier this year, [Asilkin](https://github.com/blueskythlikesclouds) was investigating our shader compilation pipeline on the D3D12 backend. Our current method for compiling shaders with D3D12 is described in this [earlier blog post](https://godotengine.org/article/d3d12-adventures-in-shaderland/) from [Pedro](https://github.com/randomshaper). In short it is:
+Earlier this year, [Asilkan](https://github.com/blueskythlikesclouds) was investigating our shader compilation pipeline on the D3D12 backend. Our current method for compiling shaders with D3D12 is described in this [earlier blog post](https://godotengine.org/article/d3d12-adventures-in-shaderland/) from [Pedro](https://github.com/randomshaper). In short it is:
 
 1. Compile GDShader to GLSL using built in shader compiler
 2. Compile GLSL to SPIRV using GLSLang
@@ -186,7 +186,7 @@ By far the slowest part of the process is the transpilation step. Further, it le
 loading times when switching from Vulkan to DXIL since Vulkan can use SPIRV directly. 
 
 To optimize this, Asilkan ran a trace through Superluminal and analyzed the results. From a very high level you can
-already see that there are significant gaps where only a couple threads are active. Gaps in thread execution mean
+already see that there are significant gaps where only a couple of threads are active. Gaps in thread execution mean
 that things are taking longer than they theoretically should. Ideally our loading process would fully saturate all cores
 in order to load as fast as possible. That’s the goal anyway. 
 
@@ -202,8 +202,8 @@ allocate more heap memory.
 
 So what if we just didn’t do that?
 
-What Asilkan ended up doing is allocating a bunch of memory up front for each thread and getting them to use that memory
-instead of frequently asking the OS for more memory. The end result is the threads are no longer stuck waiting for the
+What Asilkan ended up doing is giving each thread their own heap and getting them to allocate from that
+instead of frequently asking the OS for more memory from a single global heap. The end result is the threads are no longer stuck waiting for the
 OS and their execution now looks like:
 
 ![Zoomed-out view showing much fewer gaps in execution](/storage/blog/rendering-optimizations-cpu-2026/transpilation-after.png)
