@@ -4,7 +4,7 @@ excerpt: "Optimizing CPU code is a lot of fun. Here’s how we do it"
 categories: ["progress-report"]
 author: Clay John
 image: /storage/blog/rendering-optimizations-cpu-2026/progress-report-cpu-rendering-optimizations.jpg
-date: 2026-09-02 17:00:00
+date: 2026-09-14 17:00:00
 ---
 
 I want to give people a little bit of insight into what the optimization process looks like for Godot’s renderer. From
