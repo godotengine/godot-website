@@ -1,7 +1,9 @@
 require 'pathname'
 
-# Minify assets after each build
-Jekyll::Hooks.register :site, :post_write do
+# Minify assets after each build (skipped in dev_mode for faster iteration).
+Jekyll::Hooks.register :site, :post_write do |site|
+  next if site.config['dev_mode']
+
   puts "Minifying assets"
   # Project path
   Pathname here = Pathname.new(Dir.pwd)

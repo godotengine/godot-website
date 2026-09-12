@@ -25,6 +25,9 @@ module Jekyll
     }
 
     def ensure_magic_type(input, type, *error_contexts)
+      # Skip the (relatively slow) libmagic disk check in dev_mode builds.
+      return input if @context.registers[:site].config['dev_mode']
+
       types = type.split(",")
       types.each do |type|
         if not @@known_types.key? type

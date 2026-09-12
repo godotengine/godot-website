@@ -7,7 +7,11 @@ module MirrorlistGeneratorPlugin
 
 		versions = 0
 
-		site.data["versions"].each do |version|
+		site_versions = site.data["versions"]
+		limit = site.config["dev_versions_limit"]
+		site_versions = site_versions.first(limit) if limit
+
+		site_versions.each do |version|
 		  version_name = version["name"]
 		  versions += 1
 
