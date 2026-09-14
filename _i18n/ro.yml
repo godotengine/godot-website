@@ -1,0 +1,101 @@
+meta:
+  description: Dezvoltă propriile jocuri 2D și 3D, proiecte pentru mai multe platforme, sau chiar XR!
+header:
+  features: Caracteristici
+  showcase: Expoziţie
+  blog: Blog
+  community: Comunitate
+  assets: Conținut
+  download: Descarcă
+  docs: Documentație
+  contribute: Contribuie
+  donate: Donează
+  language: Limbă
+  events: Evenimente
+  console_support: Suport pentru console
+  priorities: Priorități
+  forum: Forum
+footer:
+  godot_engine: Godot Engine
+  download: Descarcă
+  documentation: Documentație
+  features: Caracteristici
+  web_editor: Editor web
+  release_archive: Arhivă versiuni
+  source_code: Cod sursă
+  project: Proiect
+  blog: Blog
+  code_of_conduct: Cod de conduită
+  governance: Guvernanță
+  teams: Echipe
+  priorities: Priorități
+  communities: Comunități
+  resources: Resurse
+  asset_library: Catalog de conținut
+  press_kit: Kit presă
+  showcase: Expoziţie
+  education: Educație
+  console_support: Suport pentru console
+  foundation: Fundație
+  about: Despre
+  donate: Donează
+  license: Licență
+  privacy_policy: Politica de confidențialitate
+  contact_us: Contact
+  text: "Juan Linietsky, Ariel Manzur și <a href='https://github.com/godotengine/godot/blob/master/AUTHORS.md' target='_blank' rel='noopener'>contribuitorii</a>. Găzduit de <a href='https://godot.foundation/' target='_blank' rel='noopener'>Fundația Godot</a>. Codul sursă pentru site-ul web <a href='https://github.com/godotengine/godot-website' target='_blank' rel='noopener'>disponibil pe GitHub</a>."
+sponsors:
+  title: "Godot este sponsorizat de:"
+  text: Dacă ești interesat de de o sponsorizare corporativă, vă rugăm să scrieți la <a href='mailto:contact@godot.foundation'>contact@godot.foundation</a>.<br>Pentru a dona ca persoană fizică, poți dona prin <a href='https://fund.godotengine.org/'>fondul de dezvoltare Godot Engine</a>.
+  cta: Donează
+home:
+  h1: Motorul gratuit de jocuri <br>cu sursă deschisă.
+  subtitle: Dezvoltă propriile jocuri 2D și 3D, proiecte pentru mai multe platforme, sau chiar XR!
+  whats_new: Ce e nou
+  download_latest: Descarcă ultima versiune
+  looking_for: 'Cauți <a href="/download/windows/" class="set-os-download-url" data-version="3" title="Descarcă versiunea de suport pe termen lung a Godot 3">Godot 3</a>, lansările de <a href="/download/archive">versiuni experimentale</a>, sau o <a href="/download/archive">versiune anterioară</a>?'
+  latest_news: Ultimele știri (în engleză)
+  latest_releases: Ultimele lansări
+  view_all: Vezi tot
+  more_news: Mai multe știri
+  cards:
+    h2: Un mod diferit de a crea jocuri
+    design:
+      title: Design inovativ
+      text: Sistemul de Scene și Noduri din Godot îți oferă atât puterea cât și flexibilitatea pentru a crea orice.
+    script:
+      title: Folosește limba potrivită
+      text: Menține codul modular cu un API object-oriented prin GDScript folosit de Godot, C#, C++, sau adu propria limbă prin intermediul GDExtensiilor.
+      extra: Suport pentru C# este momentan disponibil doar pentru platformele desktop și mobile începând cu Godot 4.2.<br>Folosește Godot 3 pentru a rula C# pe platforma Web.
+    2d:
+      title: Motor dedicat 2D
+      text: Creează jocuri 2D clare și performante cu motorul de grafică 2D dedicat din Godot, cu coordonate reale de pixeli 2D și noduri 2D.
+    3d:
+      title: 3D simplu și performant
+      text: Nodurile 3D din Godot îți oferă tot ce ai nevoie pentru a crea, anima, și reda lumile și caracterele tale în 3D.
+    xr:
+      title: Suport exemplar pentru XR
+      text: Godot are suport integrat pentru OpenXR și WebXR, și suportă alte SDK-uri XR prin extensii.
+    deploy:
+      title: Lansează pe toate platformele
+      text: Instalează jocul tău pe desktop, mobil, și web în secunde. Godot suportă chiar și consolele prin publicații terță.
+    open:
+      title: Cod Sursă Deschis
+      text: "Dezvoltare cu adevărat deschisă: oricine contribuie la Godot beneficiază în mod egal de contribuțiile altora."
+    cta: Află mai multe despre utilizarea Godot
+  get_involved:
+    title: Implică-te
+    text: Alătură-te comunității și ajută la dezvoltarea unui motor de jocuri care aparține tuturor.
+    cards:
+      cta: Află mai multe
+      code:
+        title: Cod
+        text: Dacă știi să programezi, poi ajuta la remedierea erorilor și să lucrezi alături de contribuitorii motorului în implementarea de funcionalități noi.
+      document:
+        title: Documentează
+        text: Calitatea documentației este esențială pentru un motor de joc; ajută la îmbunătățirea sa prin actualizarea referințelor de API, scrierea de ghiduri noi sau trimiterea de corectări.
+      report:
+        title: Raportează
+        text: Ai găsit o problemă cu motorul? Nu uita să o raportezi, astfel încât dezvoltatorii să o poată găsi.
+  foundation:
+    text: "Nu trebuie să fii un dezvoltator pentru a ajuta Godot. Alătură-te <a href='https://fund.godotengine.org/'>fondului de dezvoltare</a> și ajută-ne să facem Godot Engine mai grozav!"
+    donate: Donează
