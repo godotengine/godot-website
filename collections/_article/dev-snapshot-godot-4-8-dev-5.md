@@ -23,7 +23,7 @@ Please consider [supporting the project financially](#support), if you are able.
 
 In case you missed them, see the [4.8 dev 1](/article/dev-snapshot-godot-4-8-dev-1/), [4.8 dev 2](/article/dev-snapshot-godot-4-8-dev-2/), [4.8 dev 3](/article/dev-snapshot-godot-4-8-dev-3/), and [4.8 dev 4](/article/dev-snapshot-godot-4-8-dev-4/) release notes for an overview of some key features which were already in those snapshots, and are therefore still available for testing in 4.8 dev 5.
 
-## Rendering: Mip-level texture streaming
+### Rendering: Mip-level texture streaming
 
 In the context of an engine such as Godot, "texture streaming" refers to the ability to dynamically load and unload images based on a camera's relative position. Such a system would allow games to handle significantly more visible textures at any given point in time, which is why such a feature was one of the community's most desired. Unfortunately, like most highly-desired features, it's much easier said than done, and the "best" implementation direction isn't exactly set in stone.
 
@@ -39,7 +39,7 @@ Once enabled, textures can be imported as streamed textures, utilizing the new t
 
 <img src="/storage/blog/dev-snapshot-godot-4-8-dev-5/mip-level-streaming-import.webp" alt="The new texture import type shown off in the Import dock"/>
 
-## Import: Allow preserving alpha test coverage
+### Import: Allow preserving alpha test coverage
 
 Speaking of mipmaps: an existing issue in the engine was actually *caused* by their use, albeit indirectly. Certain material shaders, such as alpha scissor, would look pretty rough at long distances; this was a direct result of mipmap levels causing them to overfilter and dissolve away. While technical workarounds do exist, such as using a texture format with built-in alpha coverage like `.dds`, it's still too much of a technical hurdle for what should be straightforward.
 
@@ -47,12 +47,12 @@ Speaking of mipmaps: an existing issue in the engine was actually *caused* by th
 
 <video autoplay loop muted playsinline title="A demonstration of alpha test coverage toggled on and off"><source src="/storage/blog/dev-snapshot-godot-4-8-dev-5/preserve-alpha-test.webm" type="video/webm"></video>
 
-## Editor: Clean and simplify 2D toolbar
+### Editor: Clean and simplify 2D toolbar
 
 [Jayden Sipe](https://github.com/jaydensipe) rounds out our highlights this time with [GH-121080](https://github.com/godotengine/godot/pull/121080), bringing the editor's 2D toolbar a well-earned makeover. Being the same mind behind the overhaul of our [game view toolbar](/article/dev-snapshot-godot-4-8-dev-1/#editor-docked-game-view-by-default-simplify-toolbar), these changes increase parity between the docks with a consistent vision and design philosophy. Once again, an emphasis on usability and clarity was absolutely crucial.
 
-| Before                                                                                            | After                                                                                             |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Before                                                                                                                                                                                       | After                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <video autoplay loop muted playsinline title="A short snippet of the old 2D toolbar"><source src="/storage/blog/dev-snapshot-godot-4-8-dev-5/2d-toolbar-old.webm" type="video/webm"></video> | <video autoplay loop muted playsinline title="A short snippet of the new 2D toolbar"><source src="/storage/blog/dev-snapshot-godot-4-8-dev-5/2d-toolbar-new.webm" type="video/webm"></video> |
 
 ### And more!
