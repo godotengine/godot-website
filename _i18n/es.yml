@@ -72,6 +72,9 @@ home:
     3d:
       title: "3D simple y potente"
       text: "Los nodos 3D de Godot te dan todo lo que necesitas para construir, animar y renderizar tus mundos y personajes 3D."
+    xr:
+      title: "Soporte de XR ejemplar"
+      text: "Godot posee soporte incorporado para OpenXR y WebXR, y admite varios otros SDK de XR a través de plugins." 
     deploy:
       title: "Publica en todas las plataformas"
       text: "Publica tu juego en escritorio, móvil y web en segundos. Godot incluso soporta consolas a través de terceros."
