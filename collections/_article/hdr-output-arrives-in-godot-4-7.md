@@ -61,7 +61,7 @@ Also check out the new [HDR output demo project](https://github.com/godotengine/
 
 ## Technical implementation
 
-The implementation of HDR output in Godot was a long road. [Like most APIs in Godot](https://contributing.godotengine.org/en/latest/engine/guidelines/best_practices.html), we had several design goals:
+The implementation of HDR output in Godot was a long road. [Like most APIs in Godot](https://contributing.godotengine.org/en/latest/development/engine/best_practices.html), we had several design goals:
 
 - Have a good level of usability, making it easy to enable HDR output and start adapting a project for HDR quickly.
 - Be flexible enough to adapt to various screens' capabilities, and support both the Forward+ and Mobile renderers with no setting changes needed.

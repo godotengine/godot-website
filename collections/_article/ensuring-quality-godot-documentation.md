@@ -44,7 +44,7 @@ Godot uses [Hosted Weblate](https://hosted.weblate.org) as a collaborative trans
 
 - [**Godot Documentation**](https://hosted.weblate.org/projects/godot-engine/godot-docs/) and [**Class Reference**](https://hosted.weblate.org/projects/godot-engine/godot-class-reference/) components on Hosted Weblate
 - Localized documentation websites: [cs](https://docs.godotengine.org/cs/4.x/), [de](https://docs.godotengine.org/de/4.x/), [es](https://docs.godotengine.org/es/4.x/), [fr](https://docs.godotengine.org/fr/4.x/), [it](https://docs.godotengine.org/it/4.x/), [ja](https://docs.godotengine.org/ja/4.x/), [ko](https://docs.godotengine.org/ko/4.x/), [pl](https://docs.godotengine.org/pl/4.x/), [pt-br](https://docs.godotengine.org/pt-br/4.x/), [ru](https://docs.godotengine.org/ru/4.x/), [uk](https://docs.godotengine.org/uk/4.x/), [zh-cn](https://docs.godotengine.org/zh-cn/4.x/), [zh-tw](https://docs.godotengine.org/zh-tw/4.x/)
-- [Documentation on contributing translations](https://contributing.godotengine.org/en/latest/documentation/translation/index.html)
+- [Documentation on contributing translations](https://contributing.godotengine.org/en/latest/development/translations.html)
 - [`#translation` channel on the Godot Contributors Chat](https://chat.godotengine.org/channel/translation)
 
 <img alt="Hosted Weblate Godot documentation website screenshot" src="/storage/blog/ensuring-quality-godot-documentation/hosted-weblate.webp" />
@@ -70,7 +70,7 @@ Since the class reference represents a massive amount of items to document, we b
 
 This website relies on the [`doc_status.py`](https://github.com/godotengine/godot/blob/master/doc/tools/doc_status.py) script from the main Godot repository, which detects the completion percentage and outputs a Markdown table with the results.
 
-Being aware of the overall and per-class completion percentages at all times made it a lot easier to improve the documentation coverage. As of writing, the overall completion percentage is **97%**. With additional efforts from [contributors like you](https://contributing.godotengine.org/en/latest/documentation/class_reference.html), we can perhaps reach 100% completion in the future.
+Being aware of the overall and per-class completion percentages at all times made it a lot easier to improve the documentation coverage. As of writing, the overall completion percentage is **97%**. With additional efforts from [contributors like you](https://contributing.godotengine.org/en/latest/development/documentation/class_reference.html), we can perhaps reach 100% completion in the future.
 
 <img alt="Godot class reference status website screenshot" src="/storage/blog/ensuring-quality-godot-documentation/doc-status.webp" />
 
@@ -112,7 +112,7 @@ As a bonus, you can also watch the [godot-docs-user-notes](https://github.com/go
 
 This organization allows more people to contribute in various ways, even with limited technical know-how. Not only does the documentation benefit from those opening [pull requests](https://github.com/godotengine/godot-docs/pulls), it's also continuously improved every day by those posting user notes at the bottom of documentation pages. These user notes bring further clarifications and context to the manual pages, as well as linking to useful resources.
 
-A massive **thank you** to [all contributors to the documentation](https://github.com/godotengine/godot-docs/graphs/contributors)! As always, we welcome contributions to the documentation. [The contribution process is well-documented](https://contributing.godotengine.org/en/latest/documentation/overview.html), but you're welcome to hop on the [`#documentation` channel on the Godot Contributors Chat](https://chat.godotengine.org/channel/documentation) if you have any questions.
+A massive **thank you** to [all contributors to the documentation](https://github.com/godotengine/godot-docs/graphs/contributors)! As always, we welcome contributions to the documentation. [The contribution process is well-documented](https://contributing.godotengine.org/en/latest/development/documentation/overview.html), but you're welcome to hop on the [`#documentation` channel on the Godot Contributors Chat](https://chat.godotengine.org/channel/documentation) if you have any questions.
 
 ## Support
 

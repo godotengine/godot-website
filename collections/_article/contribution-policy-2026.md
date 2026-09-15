@@ -54,7 +54,7 @@ and maintainers have been discussing a new policy for several months. Our focus 
     - PR review is the largest bottleneck in the engine right now. We need to ensure that people who choose to review PRs feel their time is well spent.
 
 We will amend our [contributing
-policy](https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html)
+policy](https://contributing.godotengine.org/en/latest/development/contribution_rules.html)
 to include a prohibition on new features or significant
 re-factoring from new contributors without explicit permission from maintainers.
 This ensures that new contributors take the time to learn the codebase and

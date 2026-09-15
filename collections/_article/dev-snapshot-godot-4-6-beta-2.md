@@ -35,7 +35,7 @@ For an overview of what's new overall in Godot 4.6, have a look at the highlight
 - Rendering: OpenGL: Split the ubos for motion vectors into separate uniforms to fix Adreno GPU crash ([GH-114175](https://github.com/godotengine/godot/pull/114175)),
 - Thirdparty: Replace `minimp3` with `dr_mp3` ([GH-96547](https://github.com/godotengine/godot/pull/96547)).
 - Thirdparty: SDL: Update to 3.2.28 ([GH-113968](https://github.com/godotengine/godot/pull/113968)).
-- Translations: Sync with latest Weblate, new 4.6 strings are now [available to translate](https://contributing.godotengine.org/en/latest/other/translations.html).
+- Translations: Sync with latest Weblate, new 4.6 strings are now [available to translate](https://contributing.godotengine.org/en/latest/development/translations.html).
 
 ## Changelog
 

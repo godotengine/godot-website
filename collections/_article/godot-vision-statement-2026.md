@@ -17,7 +17,7 @@ However, Godot has grown rapidly over the last few years. The pool of contributo
 
 The vision statement is intended to guide the Godot Foundation as we make decisions about where to allocate the Foundation's resources. It is a useful tool for contributors and maintainers to understand how we set [priorities](https://godotengine.org/priorities/) and what areas of development will likely see an extra boost from Foundation staff. It is a good reference for users of the engine to understand what the Foundation and contributors work towards, and how it aligns with their own expectations for the engine.
 
-It is not intended to be used as a tool for evaluating specific changes to the engine or proposals. For that we already have comprehensive guidelines, in particular the [Best Practices for Engine Contributors guide](https://contributing.godotengine.org/en/latest/engine/guidelines/best_practices.html).
+It is not intended to be used as a tool for evaluating specific changes to the engine or proposals. For that we already have comprehensive guidelines, in particular the [Best Practices for Engine Contributors guide](https://contributing.godotengine.org/en/latest/development/engine/best_practices.html).
 
 Importantly, this is not a change in direction from the last decade of development. This is a formalization of the vision that we have shared and developed since the beginning of the project, we just feel the need to write it down now.
 
