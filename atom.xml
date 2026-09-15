@@ -1,4 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-09-12T17:43:51+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.8 dev 5</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/"/><updated>2026-09-10T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/</id><summary>A healthy stream of new features await!</summary><content type="html">&lt;p>As we’re hoping to enter feature freeze later in the month, you can expect this to be one of the last development snapshot highlights of the 4.8 cycle. Relatedly, many of our contributors are currently hard at work to help get their features across the finish line in time, so the number of featured points this time might be slightly lighter than usual. That shouldn’t matter too much though, as quite a few of the new offerings are things that the community have been eagerly awaiting for &lt;em>years&lt;/em>.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-09-15T11:41:46+00:00</updated><id>https://godotengine.org/</id><entry><title>Optimizing CPU-side Rendering Code</title><link href="https://godotengine.org/article/rendering-cpu-optimizations/"/><updated>2026-09-15T17:00:00+00:00</updated><id>https://godotengine.org/article/rendering-cpu-optimizations/</id><summary>Optimizing CPU code is a lot of fun. Here’s how we do it</summary><content type="html">&lt;p>I want to give people a little bit of insight into what the optimization process looks like for Godot’s renderer. From
+the outside, rendering optimization can look a little bit like black magic. I want to show a few examples of some
+optimizations that we did this year to highlight that optimizing rendering code isn’t as scary as it sounds.&lt;/p>
+&lt;h3 id="bottlenecks">Bottlenecks&lt;/h3>
+&lt;p>In this article I will only be looking at optimizing CPU code. When working on renderers, you need to be very careful
+about optimizing code both for the CPU and for the GPU, because your ultimate performance will be dictated by the slower
+of the two processors. No amount of CPU optimization will save you from inefficient shaders.&lt;/p>
+&lt;p>In writing a renderer you also make tradeoffs all the time to benefit one or the other. For example, batching in 2D is a
+technique that hurts GPU performance a little, but improves CPU performance a lot. Since 2D games tend to get CPU
+bottlenecked before they get GPU bottlenecked, batching ends up being a net positive in most cases. Conversely, 3D games
+tend to be GPU bottlenecked more often, so in Godot we do our occlusion culling on the CPU in order to take some of the
+load off the GPU.&lt;/p>
+&lt;p>Regardless of your ultimate balance between CPU and GPU work, it is always beneficial to optimize the engine since any
+optimization to the engine leaves more space for game developers to use the CPU and GPU and saves battery power for
+power-constrained platforms.&lt;/p>
+&lt;h2 id="methodology">Methodology&lt;/h2>
+&lt;p>The process of optimizing CPU performance roughly looks like:&lt;/p>
+&lt;ol>
+&lt;li>Identify the performance bottlenecks/hotspots&lt;/li>
+&lt;li>Understand why the bottleneck is where it is&lt;/li>
+&lt;li>Investigate solutions&lt;/li>
+&lt;li>Re-measure performance&lt;/li>
+&lt;li>Repeat&lt;/li>
+&lt;/ol>
+&lt;h3 id="identify-the-performance-bottlenecks">Identify the performance bottlenecks&lt;/h3>
+&lt;p>This is the hardest part of performance optimization. When your game or application starts running poorly it can be
+difficult to track down exactly why. Often once you see where the poor performance is coming from, you immediately
+understand why performance is bad. This is often the case when you accidentally call an expensive API in a hot loop, or
+you leave in some debug code that should never have seen the light of day.&lt;/p>
+&lt;p>For us, as engine developers, we have the added challenge of needing to optimize for a wide range of potential games. We
+don’t have just one target, we have thousands of moving targets and we only know there is a serious problem when people
+make bug reports. That being said, we can identify and make many improvements just testing using our existing demos and
+open-source games.&lt;/p>
+&lt;p>The best tool for identifying CPU bottlenecks is a CPU profiler. They come in many shapes and sizes. Godot even has two
+built into the editor (one for profiling GDScript code and another for profiling the renderer exclusively). However,
+when working on engine code itself, you need to use an external profiler. Godot has support for building with
+&lt;a href="https://docs.godotengine.org/en/stable/engine_details/development/profiling/tracy.html">Tracy&lt;/a> to do tracing profiling,
+but you can also use an external sampling profiler.&lt;/p>
+&lt;p>My tool of choice is &lt;a href="https://superluminal.eu/">Superluminal&lt;/a> which is an external sampling profiler. It attaches to a
+running instance of Godot and records profiling data as you run the engine. Then it provides a very nice visualization
+of what code is running when. It also recently got &lt;a href="https://superluminal.eu/applications/linux/">Linux support&lt;/a>! The
+examples below in this article will be using Superluminal.&lt;/p>
+&lt;h3 id="understand-the-bottleneck">Understand the bottleneck&lt;/h3>
+&lt;p>As mentioned above, sometimes it is easy to understand the bottleneck. Especially when the poor performance is due to a
+bug and not a poor design choice. Oftentimes understanding the bottleneck requires understanding the surrounding code.&lt;/p>
+&lt;p>Ultimately performance optimization boils down to “don’t do things that don’t need to be done”. Understanding the code
+and understanding the system is very helpful to understanding what things need to be done and what things are
+unnecessary.&lt;/p>
+&lt;h3 id="investigate-solutions">Investigate solutions&lt;/h3>
+&lt;p>Typically, once you understand the bottleneck, the solution will seem obvious. But sometimes you need to try a few
+different things before you figure out exactly what is required. For example, you might see a heavy loop with a lot of
+calculations in it and initially think the solution is to do less calculations per iteration. But it could turn out that
+the problem comes from memory bandwidth, so re-structuring your data might yield better performance gains.&lt;/p>
+&lt;p>Ultimately, you will make changes that directly reduce the impact of the bottleneck.&lt;/p>
+&lt;h3 id="re-measure-performance">Re-measure performance&lt;/h3>
+&lt;p>You always need to re-measure. Computers are very complex, game engines are very complex, sometimes the thing you think
+will be faster is not faster. Optimizations are often counter-intuitive. For example, adding a branch in a for loop to
+skip some calculations intuitively seems like it will always be faster, but in many cases it stops the compiler from
+vectorizing the loop and thus leads to worse performance. Or, a more common example, you may cache a value to avoid
+calculating something twice, but if your bottleneck in that code path is memory reads, then caching the value will make
+your code slower and you would have been better off doing the work twice.&lt;/p>
+&lt;p>Unless you are an absolute C++ compiler genius, you likely can’t guess the exact result of your code change on
+performance. So it is always better to re-measure and confirm your results.&lt;/p>
+&lt;h2 id="case-study-1-polygon2d">Case Study #1: Polygon2D&lt;/h2>
+&lt;p>This PR came out of a conversation I had with Aurélien Condomines who is working on &lt;a href="https://store.steampowered.com/app/3589430/Heidis_Legacy_Mountains_Calling/">Heidi’s Legacy: Mountains Calling&lt;/a>. He noted that he found the animation code
+in Godot to be very slow which was limiting his ability to add content to his game. He found that by having 20 or so
+animated characters, performance would start to fall off in his game.&lt;/p>
+&lt;p>I was surprised at those numbers and felt that something was wrong. Our animation code shouldn’t be a bottleneck with
+only 20 or so animated characters so I decided to investigate. I asked him to put together a minimal project with a
+bunch of animated sprites on screen so I could profile it.&lt;/p>
+&lt;p>This first hint is that he was using an AnimationPlayer to animate the vertices of a Polygon2D that was displayed on a
+Viewport on a Sprite3D in order to have nice looking 2D animations in a 3D world.&lt;/p>
+&lt;p>That alone sounds a bit unique, but it isn’t something that should cause any significant problems. So our next step is
+to boot up Superluminal and see what is going on.&lt;/p>
+&lt;p>I captured a few seconds of the demo running and then zoomed in on a frame.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/rendering-optimizations-cpu-2026/full-frame-before.png" alt="Full frame taking 35 ms" />&lt;/p>
+&lt;p>&lt;em>Note: all testing of this demo scene is done with a Ryzen 5 9600X CPU.&lt;/em>&lt;/p>
+&lt;p>Since it isn’t totally clear in the screenshot, here is a breakdown of where we are spending our time:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>4.6 ms&lt;/strong>: AnimationMixer. That is slower than I would like to see, but there are a lot of animation tracks in this scene since every vertex is being animated, so it isn’t totally unexpected.&lt;/li>
+&lt;li>&lt;strong>15.7 ms&lt;/strong>: &lt;code class="language-plaintext highlighter-rouge">Polygon2D::_notification()&lt;/code>. I will say more about this below.&lt;/li>
+&lt;li>&lt;strong>11.7 ms&lt;/strong>: Drawing the scene. Of this &lt;strong>3.3 ms&lt;/strong> is spent creating vertex arrays, and &lt;strong>5 ms&lt;/strong> is spent freeing vertex arrays. So we only spend about &lt;strong>3.4 ms&lt;/strong> actually rendering the scene.&lt;/li>
+&lt;/ul>
+&lt;p>With just this high-level overview, we can immediately tell that there are two things going wrong:&lt;/p>
+&lt;ol>
+&lt;li>Polygon2D is doing something unexpected.&lt;/li>
+&lt;li>Whatever it is, it is resulting in vertex arrays getting created and freed every frame.&lt;/li>
+&lt;/ol>
+&lt;p>So let’s take a close look and see where the time is spent in Polygon2D. We have two options, we can just zoom in on the
+timeline, which looks like this:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/rendering-optimizations-cpu-2026/polygon2d.png" alt="Zoomed in on Polygon2D" />&lt;/p>
+&lt;p>Or we can use the call graph below to get a more detailed overview:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/rendering-optimizations-cpu-2026/call-graph.png" alt="Call graph showing &amp;quot;mesh_add_surface&amp;quot; and &amp;quot;mesh_clear&amp;quot; taking most of the time" />&lt;/p>
+&lt;p>The call graph orders the function calls inside the chosen function by how expensive they are. You can see that most of
+the time is spent adding a new surface and freeing the previous one. That aligns with what we already saw in the
+rendering code. Now we know that the Polygon2D class is responsible for the poor performance even at rendering time.&lt;/p>
+&lt;p>Now, we can look over at the “Source and Disassembly” panel to see exactly what lines of code are responsible:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/rendering-optimizations-cpu-2026/code.png" alt="Screenshot of code showing context" />&lt;/p>
+&lt;p>This code is responsible for building the internal mesh for the Polygon2D. This profile is telling us that this code is
+running every frame and it is very slow. After putting everything together, its no surprise the mesh is being rebuilt
+every frame, since the vertices are changing on the CPU every frame!&lt;/p>
+&lt;p>Based on our profile result, we know that is a really slow process. So the question is, can we do something about it?&lt;/p>
+&lt;p>Of course!&lt;/p>
+&lt;p>Godot exposes a low-level API to manually update vertex data. This can be extremely helpful when you know the number of
+vertices in a mesh is going to stay the same. Instead of freeing the old mesh, allocating a new one, and then uploading
+the vertex data to the new mesh, we can simply upload the vertex data to the existing mesh.&lt;/p>
+&lt;p>That’s what I ended up doing in &lt;a href="https://github.com/godotengine/godot/pull/117334">my pull request&lt;/a>. Most of the work in
+the PR was identifying which cases were suitable for updating the mesh, and which cases needed the mesh to be recreated.&lt;/p>
+&lt;p>This optimization roughly tripled the performance of animated Polygon2Ds, making the technique that Aurélien was using
+totally viable.&lt;/p>
+&lt;p>Taking a look at a single frame after my PR, we have gone from &lt;strong>35 ms&lt;/strong> per frame to just &lt;strong>13 ms&lt;/strong>:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/rendering-optimizations-cpu-2026/full-frame-after.png" alt="Full frame taking 13 ms" />&lt;/p>
+&lt;p>Rendering now accounts for about 50% of the frame time, animation takes about 30% and the Polygon2D update takes about
+20%.&lt;/p>
+&lt;p>This same bit of code could be optimized much further of course. For one, we are re-uploading the entire mesh data each
+frame that any vertex moves. A potential optimization would be to only update the region of the mesh that changed. That
+way if you have an animation that only impacts a few vertices, you don’t pay the cost for the full upload.&lt;/p>
+&lt;p>However, such an optimization would need to be guided by a game or scene that would actually benefit from partial
+updates. This game basically animates every vertex every frame, so the tracking required to do partial updates would
+likely be a net negative. Remember, to properly optimize something you need to be able to test your optimization! If you
+don’t have a test case, you can’t do an optimization properly.&lt;/p>
+&lt;p>Ultimately, the small and safe optimization I did yielded enough performance gains to go from 28 FPS to 83 FPS on my
+device. So it was enough for now. If someone was really interested and had the time, performance could be pushed
+further. Personally, I’m most curious about where we are spending time in the rendering frame now since that accounts
+for 50% of the frame time.&lt;/p>
+&lt;h2 id="case-study-2-optimizing-spirv-to-dxil-transpilation">Case Study #2: Optimizing SPIRV to DXIL Transpilation&lt;/h2>
+&lt;p>Earlier this year, &lt;a href="https://github.com/blueskythlikesclouds">Asilkan&lt;/a> was investigating our shader compilation pipeline on the D3D12 backend. Our current method for compiling shaders with D3D12 is described in this &lt;a href="https://godotengine.org/article/d3d12-adventures-in-shaderland/">earlier blog post&lt;/a> from &lt;a href="https://github.com/randomshaper">Pedro&lt;/a>. In short it is:&lt;/p>
+&lt;ol>
+&lt;li>Compile GDShader to GLSL using built in shader compiler&lt;/li>
+&lt;li>Compile GLSL to SPIRV using GLSLang&lt;/li>
+&lt;li>Transpile SPIRV to DXIL using Mesa’s NIR converter&lt;/li>
+&lt;li>Submit DXIL to GPU driver to be compiled to binary&lt;/li>
+&lt;/ol>
+&lt;p>By far the slowest part of the process is the transpilation step. Further, it leads to a noticeable difference in
+loading times when switching from Vulkan to DXIL since Vulkan can use SPIRV directly.&lt;/p>
+&lt;p>To optimize this, Asilkan ran a trace through Superluminal and analyzed the results. From a very high level you can
+already see that there are significant gaps where only a couple of threads are active. Gaps in thread execution mean
+that things are taking longer than they theoretically should. Ideally our loading process would fully saturate all cores
+in order to load as fast as possible. That’s the goal anyway.&lt;/p>
+&lt;p>&lt;img src="/storage/blog/rendering-optimizations-cpu-2026/transpilation-before.png" alt="Zoomed-out view showing lots of gaps in execution as the threads are stalled" />&lt;/p>
+&lt;p>Right off the bat, you can see something is wrong. Green means the thread is doing work. The height of the green bar is
+basically how hard the thread is working. Red means the thread is stalled waiting for something.&lt;/p>
+&lt;p>The beautiful thing about a profiler like Superluminal in a situation like this is you can zoom in and see what is
+happening. Here, Asilkan was able to see that these gaps were all caused by threads requesting more memory from the OS.
+While the work was heavily multithreaded, all threads ended up waiting on each other while they waited on the OS to
+allocate more heap memory.&lt;/p>
+&lt;p>So what if we just didn’t do that?&lt;/p>
+&lt;p>What Asilkan ended up doing is giving each thread their own heap and getting them to allocate from that
+instead of frequently asking the OS for more memory from a single global heap. The end result is the threads are no longer stuck waiting for the
+OS and their execution now looks like:&lt;/p>
+&lt;p>&lt;img src="/storage/blog/rendering-optimizations-cpu-2026/transpilation-after.png" alt="Zoomed-out view showing much fewer gaps in execution" />&lt;/p>
+&lt;p>This optimization saved 11 seconds of load time in the TPS demo. Those 11 seconds were purely wasted time where the CPU
+ended up stalled doing nothing.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>I hope this post has helped show what we actually do to optimize components of the renderer. The process isn’t super
+complicated, especially when you have the right tools on hand. In both cases the solution was very apparent once the
+problem was properly identified.&lt;/p>
+&lt;h2 id="support">Support&lt;/h2>
+&lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part or full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
+&lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by the &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p></content><author><name>Clay John</name></author><category term="Progress Report"/></entry><entry><title>Dev snapshot: Godot 4.8 dev 5</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/"/><updated>2026-09-10T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/</id><summary>A healthy stream of new features await!</summary><content type="html">&lt;p>As we’re hoping to enter feature freeze later in the month, you can expect this to be one of the last development snapshot highlights of the 4.8 cycle. Relatedly, many of our contributors are currently hard at work to help get their features across the finish line in time, so the number of featured points this time might be slightly lighter than usual. That shouldn’t matter too much though, as quite a few of the new offerings are things that the community have been eagerly awaiting for &lt;em>years&lt;/em>.&lt;/p>
 &lt;p>Please consider &lt;a href="#support">supporting the project financially&lt;/a>, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p>
 &lt;p>&lt;a href="#downloads">Jump to the &lt;strong>Downloads&lt;/strong> section&lt;/a>, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.8.dev5/">&lt;strong>Web editor&lt;/strong>&lt;/a>, the &lt;a href="https://www.meta.com/s/3yJ7i8kop">&lt;strong>XR editor&lt;/strong>&lt;/a>, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">&lt;strong>Android editor&lt;/strong>&lt;/a> for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers">our testing group&lt;/a> to get access to pre-release builds.&lt;/p>
 &lt;hr />
@@ -4588,30 +4747,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h2 id="support">Support&lt;/h2>
 &lt;p>Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/">generous donations from the Godot community&lt;/a>. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md">their time&lt;/a> or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md">their financial support&lt;/a> to the project!&lt;/p>
 &lt;p>If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/">Godot Development Fund&lt;/a> platform managed by &lt;a href="https://godot.foundation/">Godot Foundation&lt;/a>. There are also several &lt;a href="/donate">alternative ways to donate&lt;/a> which you may find more suitable.&lt;/p>
-&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry><entry><title>Creating games entirely on Android!</title><link href="https://godotengine.org/article/gabe-stable-release/"/><updated>2026-06-02T14:00:00+00:00</updated><id>https://godotengine.org/article/gabe-stable-release/</id><summary>GABE brings full Gradle support to the Godot Android &amp; XR editor, so you can build and publish games entirely from your Android device or XR device.</summary><content type="html">&lt;p>&lt;a href="https://godotengine.org/article/android_godot_editor_play_store_beta_release/">Since 2023&lt;/a>, Godot users could &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">develop their games on Android&lt;/a>, but they still needed a PC to perform the final export. We began changing that in Godot 4.4 by adding support for &lt;a href="https://godotengine.org/releases/4.4/#android-editor-export-support">non-Gradle exports&lt;/a>. However, many features remained out of reach; if your project used Android plugins like &lt;a href="https://godot-sdk-integrations.github.io/godot-google-play-billing/">Google Play Billing&lt;/a> or required some Gradle export customizations, you were back to using a PC.&lt;/p>
-&lt;p>&lt;a href="https://godotengine.org/releases/4.6/#section-platforms">In Godot 4.6&lt;/a>, we introduced a companion app for the Android editor with a simple goal: bring full Gradle support to mobile. While that early version made the editor “feature complete” on paper, it was still in alpha and wasn’t quite ready.&lt;/p>
-&lt;p>Today, we’re happy to announce that GABE, the Godot Android Build Environment, is now stable and available on the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.godot_gradle_build_environment">Google Play Store&lt;/a> and &lt;a href="https://www.meta.com/experiences/gabe/26529365196759917/">Meta Horizon Store&lt;/a>.&lt;/p>
-&lt;h2 id="what-is-gabe">What is GABE?&lt;/h2>
-&lt;p>GABE stands for &lt;strong>G&lt;/strong>odot &lt;strong>A&lt;/strong>ndroid &lt;strong>B&lt;/strong>uild &lt;strong>E&lt;/strong>nvironment. And no, it has nothing to do with the other Gabe you are thinking about! :P&lt;/p>
-&lt;p>This is a companion app for the Godot Editor on Android and XR devices which works in the background whenever you trigger a Gradle export. GABE handles downloading and managing all the build dependencies. After you grant it access to your project for the first time, it &lt;em>just works&lt;/em> for subsequent exports in the background.&lt;/p>
-&lt;h2 id="what-gabe-brings-to-your-workflow">What GABE brings to your workflow&lt;/h2>
-&lt;ul>
-&lt;li>You can now generate &lt;strong>AAB&lt;/strong> files (Android App Bundles) and &lt;strong>APKs using Gradle&lt;/strong> directly on your Android device or XR device. You no longer need to move your project to a desktop just to get it ready for the Play Store or Horizon Store.
-&lt;ul>
-&lt;li>This also means that you can now create, develop, export, and publish a Godot game to any store using only an Android device or XR device.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>If your project uses plugins like Google Play Billing or AdMob, you previously had to use a PC to export. Now, you can directly build your apps with plugin support.&lt;/p>
-&lt;/li>
-&lt;li>Since XR apps require Gradle for vendor-specific plugins and features, GABE enables you to build and deploy XR projects directly from within your headsets. (In case you missed it: Godot is officially available on &lt;a href="https://www.meta.com/experiences/godot-game-engine/7713660705416473/">Meta Quest&lt;/a> and &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4">Android XR&lt;/a> with an experimental build for PicoOS also available).&lt;/li>
-&lt;/ul>
-&lt;p>To sum it all up, with this release we are removing one of the major limitations of the Godot editor on Android and XR devices, the &lt;a href="https://godotengine.org/article/android_godot_editor_play_store_beta_release/#generating-android-apk-binaries">inability to generate Android binaries directly on device&lt;/a>. You now get the same export customizations and features set on your phone, tablet, or XR device that you’d expect on a desktop.&lt;/p>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;p>You can download GABE from:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.godot_gradle_build_environment">Play Store&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.meta.com/experiences/gabe/26529365196759917/">Horizon Store&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/godotengine/android-editor-buildenv-app/releases/latest">GitHub Release page&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>It’s been a long road to bring full build support to the Godot editor on Android and XR devices, and we are excited to see what you build &lt;em>entirely&lt;/em> on device!&lt;/p></content><author><name>Anish Kumar</name></author><category term="Release"/></entry></feed>
+&lt;p>&lt;a class="btn" href="https://fund.godotengine.org/">Donate now&lt;/a>&lt;/p></content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry></feed>
