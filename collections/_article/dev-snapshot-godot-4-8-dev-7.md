@@ -126,7 +126,7 @@ The large scrollbar shown in the video is specific to the editor, serving as a v
 
 [Hugo Locurcio](https://github.com/Calinou) continues to give GUIs some love with [GH-111455](https://github.com/godotengine/godot/pull/111455), bringing proper audio functionality to many of those elements. Now developers can take advantage of sound events to trigger audio effects on-command with the new "audio" theme item type, including the ability to alter them with the theme override system.
 
-<video playsinline title="A showcase of audio playback across multiple UI elements">
+<video controls playsinline title="A showcase of audio playback across multiple UI elements">
 	<source src="/storage/blog/dev-snapshot-godot-4-8-dev-7/gui-theme-sounds.webm" type="video/webm">
 </video>
 
