@@ -74,7 +74,7 @@
 &lt;/div>
 &lt;h3 id="audio-add-theme-sound-items-and-playback-on-common-ui-events">Audio: Add theme sound items and playback on common UI events&lt;/h3>
 &lt;p>&lt;a href="https://github.com/Calinou">Hugo Locurcio&lt;/a> continues to give GUIs some love with &lt;a href="https://github.com/godotengine/godot/pull/111455">GH-111455&lt;/a>, bringing proper audio functionality to many of those elements. Now developers can take advantage of sound events to trigger audio effects on-command with the new “audio” theme item type, including the ability to alter them with the theme override system.&lt;/p>
-&lt;video playsinline="" title="A showcase of audio playback across multiple UI elements">
+&lt;video controls="" playsinline="" title="A showcase of audio playback across multiple UI elements">
 &lt;source src="/storage/blog/dev-snapshot-godot-4-8-dev-7/gui-theme-sounds.webm" type="video/webm" />
 &lt;/video>
 &lt;div class="card card-info" style="margin-top: 1em;">
