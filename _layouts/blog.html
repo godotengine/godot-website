@@ -142,7 +142,7 @@ collection: article
 						<span class="date">&nbsp;-&nbsp;{{ post.date | date: "%e %B %Y" }}</span>
 					</div>
 					<h3>{{ post.title }}</h3>
-					<p class="excerpt">{{ post.excerpt }}</p>
+					<p class="excerpt">{{ post.excerpt | markdownify | remove_first: '<p>' | remove: '</p>' | strip_newlines }}</p>
 				</div>
 			</article>
 		</a>
