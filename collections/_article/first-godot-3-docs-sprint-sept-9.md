@@ -13,8 +13,8 @@ After 5 docs sprints, the class reference **went up from 35% to 60% complete**! 
 
 **3 steps to become a Contributor**
 
-1. Read the **[Contributor's Guide](https://contributing.godotengine.org/en/latest/documentation/class_reference.html)**
-2. Follow the **[Writer's Guidelines](https://contributing.godotengine.org/en/latest/documentation/guidelines/docs_writing_guidelines.html)**
+1. Read the **[Contributor's Guide](https://contributing.godotengine.org/en/latest/development/documentation/class_reference.html)**
+2. Follow the **[Writer's Guidelines](https://contributing.godotengine.org/en/latest/development/documentation/docs_writing_guidelines.html)**
 3. Use the shared pad to **[tell us what you're working on](https://hackmd.io/s/H1es51Oeqb)**
 
 

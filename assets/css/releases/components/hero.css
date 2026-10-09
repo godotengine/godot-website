@@ -5,6 +5,7 @@
 
 .hero{
   background-color: rgba(0,0,0,0.4);
+  color: var(--main-text-color);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@
       }
     }
     #three-canvas{
-      transition: opacity 0.2s ease-out;
+      transition: opacity 0.4s ease-out 0.1s;
       opacity: 0;
     }
     &.loaded{

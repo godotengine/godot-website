@@ -1,7 +1,18 @@
 # Overrides from the main config
 url: "http://localhost:4000"
 
+# Flag used by plugins to skip/limit expensive work that isn't needed locally.
+dev_mode: true
+
 # Enables incremental builds to speed up iteration times.
 incremental: true
 # Switch to polling instead of I/O watching, solves Docker issues.
 force_polling: true
+
+# Cheaper to generate than the compressed style used in production.
+sass:
+  style: expanded
+
+# Only generate pages for the N most recent versions (archive + mirrorlist)
+# instead of the full history, to keep dev builds fast.
+dev_versions_limit: 5

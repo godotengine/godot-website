@@ -23,10 +23,10 @@ jobs:
 
     # Configure the build environment.
 
-    - name: Install Ruby 3.2
+    - name: Install Ruby 4.0
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2'
+        ruby-version: '4.0'
         # Runs 'bundle install' and caches installed gems automatically
         bundler-cache: true
 

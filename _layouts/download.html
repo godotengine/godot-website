@@ -248,6 +248,12 @@ layout: default
 						{% unless aar_library_info.caption == empty %} - {{ aar_library_info.caption }}{% endunless %}
 					</a>
 				</p>
+				<p>
+					<a href="{{ stable_version | make_download: "aar_library", true }}">
+						{{ aar_library_info.title }} - .NET / C#
+						{% unless aar_library_info.caption == empty %} {{ aar_library_info.caption }}{% endunless %}
+					</a>
+				</p>
 			</div>
 
 			{% if page.platform == 'Android' %}

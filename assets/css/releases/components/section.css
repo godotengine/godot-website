@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(25deg,var(--main-bg-color) 0%, var(--card-bg-color) 100%);
+  background: linear-gradient(25deg,
+    light-dark(var(--light-bg-color), var(--dark-bg-color)) 0%,
+    light-dark(var(--light-card-bg-color), var(--dark-card-bg-color)) 100%);
   margin-bottom: 4.0em;
   padding: 3.8em 2em;
   width: 100%;
@@ -34,6 +36,7 @@
     height: 12em;
     margin-top: -6em;
     margin-bottom: 0.6em;
+
   }
 }
 

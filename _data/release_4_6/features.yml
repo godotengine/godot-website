@@ -1,0 +1,942 @@
+new_theme:
+  title: Fresh look, fresh focus
+  subtitle: 'New editor theme: “Modern”'
+  text: |
+    Since its launch last year, "Godot Minimal Theme" has quickly become a fan favorite with its clean lines, reduced clutter, and contemporary feel. It was time to integrate it and make it official!
+
+    You can now choose between the older "Classic" theme and the newer "Modern" theme, with the "Modern" theme enabled by default in Godot 4.6.
+
+    The new theme, which will continue to mature with user feedback, brings you subtle contrast adjustments and improved readability and spacing between UI elements. Many testers have found it helps reduce competition on focus and gives center-stage to the viewport where your game lives.
+
+    The new grayscale allows you to do color-sensitive work on your game without the blue tint altering your perception.
+
+    Time for a test drive! Give your eyes some time to get used to the new look before you can start to notice its impact. If you still prefer the classic theme, you can easily switch back in the editor settings. Learn more in [this article by GDQuest](https://gdquest.com/library/godot_4_6_workflow_changes#the-godot-editor).
+
+  read_more: https://github.com/godotengine/godot/pull/111118
+  contributors:
+  - name: passivestar
+    link: https://github.com/passivestar
+  - name: Michael Alexsander
+    link: https://github.com/YeldhamDev
+  media_author:
+    name: passivestar
+    link: https://github.com/passivestar
+  media: new_theme.webp
+
+jolt_default:
+  title: We put a bolt on Jolt
+  subtitle: Jolt Physics by default
+  text: |
+    Remember when we integrated Jolt Physics as an experimental option in 4.4? Since then, many of you have tested it in real projects, and it has proven itself ready for production. So here it comes!
+
+    Jolt is without a doubt a fantastic standalone physics engine. It's fast, stable, and it's no surprise it powers AAA games like Hideo Kojima's Death Stranding 2. We've built a tight, high-quality integration that brings all of Jolt's power directly into the engine. With this release, we're confident enough to remove the experimental label and make Jolt the default physics engine for all new 3D projects.
+
+    <span class="note">Existing projects aren't affected: your current physics settings stay exactly as they are. Only new projects use Jolt by default. You can manually change the physics engine by going to the project settings.</span>
+  read_more: https://github.com/godotengine/godot/pull/105737
+  contributors:
+  - name: Mikael Hermansson
+    link: https://github.com/mihe
+  - name: Jorrit Rouwe
+    link: https://github.com/jrouwe
+  media_author:
+    name: Tibo
+    link: https://gotibo.fr/
+  media: jolt_preview.webm
+  poster: jolt_preview.webp
+
+new_ik:
+  title: B-B-B-B Back to the bone
+  subtitle: Brand new IK framework
+  text: |
+    It's time to pull some bone chains again! Animators and gameplay programmers among us will be thrilled to know inverse kinematics (IK) is back with a bang. You decide where the endpoint goes and your chain of bones follows naturally.
+
+    Whether you need a character's feet to plant on uneven terrain or a robot arm to reach for objects, the framework to achieve this is right at your fingertips with a full suite of modifiers and constraints.
+
+    We're introducing the core **IKModifier3D** class built on the revamped **SkeletonModifier3D**. It comes with a family of deterministic solvers including **TwoBoneIK3D**, **SplineIK3D**, and iterative solvers like **FABRIK3D**, **CCDIK3D**, and **JacobianIK3D**.
+
+    You'll also find new constraints to control the twist and angular velocity of joints, which helps prevent excessive and unwanted motion.
+
+    What's more, you can set the target of animation constraints to 3D nodes to make, for example, the arm of a character extend and snap to a weapon.
+
+    The modular approach of this new framework lets you combine IK with other modifiers and constraints to fine-tune your procedural animations directly in the engine. Documentation is in the works to help you make the best of the framework depending on your use case.
+  read_more: https://godotengine.org/article/inverse-kinematics-returns-to-godot-4-6/
+  contributors:
+  - name: Tokage
+    link: https://github.com/TokageItLab
+  media_author:
+    name: Tibo
+    link: https://gotibo.fr/
+  media: skeleton_modifier.webm
+  poster: skeleton_modifier.webp
+
+dock_system:
+  title: Dock your heart out
+  subtitle: Movable floatable docks and panels
+  text: |
+    Panel shufflers and multi-monitor Feng Shui masters rejoice... 4.6 is your version. You can finally move that bottom panel.
+
+    We unified the entire docking system in this release. Bottom panels are now regular docks, and you can drag and drop docks and move them around between the sides and the bottom of the editor. Most docks can also be floated.
+
+    It's a significant step toward a full workspace system, allowing you to arrange the editor in a way that makes sense for your workflow.
+
+    <span class="note">Note that not all docks support both horizontal and vertical layouts just yet, but they're movable!</span>
+  read_more: https://github.com/godotengine/godot-proposals/issues/12430
+  contributors:
+  - name: Tomasz Chabora
+    link: https://github.com/KoBeWi
+  - name: lodetrick
+    link: https://github.com/lodetrick
+  media_author:
+    name: Tibo
+    link: https://gotibo.fr/
+  media: dock.webm
+  poster: dock.webp
+
+new_ssr:
+  title: Reflections got real
+  subtitle: Major SSR overhaul
+  text: |
+    If your 3D game environment includes reflective materials like metal, water, and glass, things are about to get exciting for you.
+
+    Screen Space Reflection (SSR) has been completely overhauled in this version, giving you a significant leap in realism, visual stability, and performance. Not only will your reflective surfaces look more realistic with better handling of roughness, but the effect will run faster too!
+
+    To further optimize, you can choose between full-resolution mode for maximum quality, or half-resolution mode for higher performance. Even with reflections calculated at half your viewport size, the new SSR allows you to preserve decent quality. Check it out!
+
+  read_more: https://github.com/godotengine/godot/pull/111210
+  contributors:
+  - name: Skyth
+    link: https://github.com/blueskythlikesclouds
+  media_author:
+    name: passivestar
+    link: https://github.com/passivestar
+  poster: new_ssr.webp
+  media: new_ssr.webm
+
+highlights_conclusion:
+  title: So... what changes for you?
+  subtitle: Differences you can expect in everyday development
+  text: |
+    With loads and loads of new features this release, it's not always easy to tell at a quick glance which ones actually affect what you do day in and day out and which ones don't.
+
+    In practice, what differences should you be aware of most? Should you upgrade now?
+
+    We hand the mic over to GDQuest, our friends in education, for a practical rundown of the effective changes to your workflow (all positive!)
+
+    With Godot 4.6, you can mostly expect a small and varied collection of things you couldn't do before that you can do now.
+
+  read_more: https://gdquest.com/library/godot_4_6_workflow_changes/
+  media_author:
+    name: GDQuest
+    link: https://gdquest.com/
+  media: gdquest.webm
+  poster: gdquest.webp
+
+# General
+
+# Core
+
+unique_node_ids:
+  title: A node *will* remember...
+  subtitle: Introducing unique Node IDs
+  text: |
+    Nodes now have a unique internal ID, allowing the engine to track them reliably even when scenes are reorganized or refactored.
+
+    Just because you rename or move a node doesn't mean it will suddenly forget who it is and where it comes from.
+
+    So far, renaming nodes or changing scene hierarchies could sometimes break references in complex setups with inherited or instantiated scenes.
+
+    With unique Node IDs, Godot tracks and preserves the connections making refactoring safer and less error-prone. This means you can restructure your scene tree freely without worrying about ending up with invalid references or unexpected behaviors.
+
+    For Godot, this seemingly small improvement marks a turning point in robustness at scale and opens the door to bigger, more complex game projects!
+
+    <span class="note">Unique Node IDs are saved and referenced in scene files, so to benefit from this change, you should ensure that all your scenes are re-saved in 4.6. You can do so via Project > Tools > Upgrade Project Files.</span>
+
+  read_more: https://github.com/godotengine/godot/pull/106837
+  contributors:
+    - name: Juan Linietsky
+      link: https://github.com/reduz
+
+libgodot:
+  title: Godot as a library!
+  subtitle: Introducing LibGodot
+  text: |
+    With the new LibGodot, you can now embed the engine directly into your own applications. Instead of running Godot as a separate executable, you can control startup, manage the engine loop, and integrate it seamlessly into custom workflows. Whether you’re building a specialized editor, a hybrid application, or embedding Godot into a larger system, LibGodot gives you the flexibility to make it work your way!
+
+    The initial release supports Linux, Windows, and macOS, and lays the foundation for deeper integrations and expanded platform support in future releases.
+
+  read_more: https://github.com/godotengine/godot/pull/110863
+  contributors:
+    - name: Gergely Kis
+      link: https://github.com/kisg
+    - name: Gábor Koncz
+      link: https://github.com/konczg
+    - name: Ben Rog-Wilhelm
+      link: https://github.com/zorbathut
+
+tracing_profilers:
+  title: Go all Dick Tracy
+  subtitle: C++ tracing profilers
+  text: |
+    Ever wonder which of your script functions is costing you in performance, or which calls to Godot APIs are hogging your frame time? Godot 4.6 now lets you profile your scripts using dedicated tracing profilers like Tracy, Perfetto, and Instruments.
+    
+    These tools give you more detailed insights than the built-in profiler, letting you pinpoint bottlenecks, debug lag spikes, and optimize GDScript, C#, or GDExtension code with confidence.
+
+    Here are [instructions](https://docs.godotengine.org/en/4.6/engine_details/development/profiling/index.html) to start taking advantage of these powerful profilers!
+
+  read_more: https://github.com/godotengine/godot/pull/113279
+  contributors:
+    - name: Lukas Tenbrink
+      link: https://github.com/Ivorforce
+    - name: Samuel Nicholas
+      link: https://github.com/enetheru
+    - name:  Stuart Carnie
+      link: https://github.com/stuartcarnie
+  media_author:
+    name: Lukas Tenbrink
+    link: https://github.com/Ivorforce
+  media: tracy_profiler.webp
+
+# Documentation
+
+private_signals:
+  title: Getting mixed signals
+  subtitle: Hidden underscored signals
+  text: |
+    Signals starting with an underscore are now hidden from auto-completion and generated documentation, becoming more in line with other underscored methods and properties. This makes it easier to focus on the signals that are meant for public use, reducing confusion when scripting.
+
+  read_more: https://github.com/godotengine/godot/pull/112770
+  contributors:
+    - name: Tomasz Chabora
+      link: https://github.com/KoBeWi
+  media: private_signal.webp
+
+# 2D
+
+rotate_2d_tile:
+  title: When the tile turns
+  subtitle: Rotatable scene tiles
+  text: |
+    Everybody knows to rotate a tile when a tile needs rotating. Thus far in Godot, only one type of tile stood out, breaking your flow and eluding your rotational aspirations: the infamous scene tile. But no more.
+
+    Starting with Godot 4.6, when you place a scene instance on a grid cell in your tile map, such as an animated chest, a glowing lamp, or a torch, you can rotate the scene tile in 90-degree increments and that's that!
+
+  read_more: https://github.com/godotengine/godot/pull/108010
+  contributors:
+    - name: Dexter
+      link: https://github.com/DexterFstone
+  media_author:
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
+  media: turn_2d_tiles.webm
+  poster: turn_2d_tiles.webp
+
+# 3D
+
+new_select_mode:
+  title: I just wanna Select!
+  subtitle: Decoupled Select and Transform modes
+  text: |
+    How many times have you accidentally moved, rotated, or scaled the wrong object while trying to just select it in a busy scene? Your woes have come to an end.
+
+    In Godot 4.6, we've decoupled Select and Transform so you can work more intuitively in the viewport. The Select Mode has been renamed to **Transform mode** and a new **Select‑only mode** lets you pick nodes without displaying the transform gizmo, making it easier to navigate and choose what you want to edit before moving, rotating, or scaling anything.
+
+    This update also mirrors modern 3D tools where selection and transform tools are clearly distinct, bringing familiar workflows into Godot’s editor.
+
+  read_more: https://github.com/godotengine/godot/pull/101168
+  contributors:
+    - name: Robert Yevdokimov
+      link: https://github.com/ryevdokimov
+  media_author:
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
+  media: select_mode.webm
+  poster: select_mode.webp
+
+bresenham_gridmap:
+  title: Mind the gap
+  subtitle: Bresenham line algorithm for GridMap drawing
+  text: |
+    This is one that the 3D level builders among us will surely appreciate! Godot 4.6 improves how `GridMap` painting and erasing behaves in the editor by using the classic Bresenham line algorithm to interpolate between input points.
+
+    Lines now fill in smoothly and solidly as you drag, so your sketches and level layouts match your intentions on the first shot. No more gaps in tiles or blocks that you have to go back and fix!
+
+    You can expect building levels or voxel-style maps to become more fluid, letting you focus on design instead of filling gaps in your GridMap creations.
+
+  read_more: https://github.com/godotengine/godot/pull/105292
+  contributors:
+    - name: Martin Chlopecki
+      link: https://github.com/mchlopecki
+  media_author:
+    name: Tibo
+    link: https://gotibo.fr/
+  media: grid_map_bresenham.webm
+  poster: grid_map_bresenham.webp
+
+rotation_gizmo:
+  title: However you spin it...
+  subtitle: New rotation gizmo handle for view axis
+  text: |
+    No more awkward fiddling with the standard gizmo handles to rotate around the camera view.
+
+    You'll notice the rotation gizmo now has a fourth handle aligned to your camera view. When you’re rotating objects in the 3D viewport, this extra handle lets you spin things around the view direction, a common action when you want to orient objects relative to how you’re looking at them, not just their local axes.
+
+    It's another one of those little additions with a big impact on your 3D workflow.
+
+  read_more: https://github.com/godotengine/godot/pull/108608
+  contributors:
+    - name: Robert Yevdokimov
+      link: https://github.com/ryevdokimov
+  media_author:
+    name: Tibo
+    link: https://gotibo.fr/
+  media: rotation_gizmo.webm
+  poster: rotation_gizmo.webp
+
+
+
+# GUI
+
+separated_mouse_and_keyboard_focus:
+  title: Click != Focus
+  subtitle: Separated mouse and keyboard focus
+  text: |
+    As of Godot 4.6, clicking a button with your mouse or trackpad will finally no longer force the blue focus outline to appear as you would expect it to when you're navigating with a gamepad or keyboard.
+
+    You decide how to style each focus scheme independently without workarounds or hacks. Whether you keep the behavior unified or you decide you don't need the focus outline when clicking with a mouse or trackpad because you know where you clicked... It's *your* call!
+
+  read_more: https://github.com/godotengine/godot/pull/110250
+  contributors:
+    - name: Michael Alexsander
+      link: https://github.com/YeldhamDev
+  media: new_focus.webm
+  poster: new_focus.webp
+
+pivot:
+  title: Place a pivot
+  subtitle: Set the pivot point more easily for Control nodes
+  text: |
+    Centering the pivot point of UI elements just got a whole lot easier!
+
+    So far, the pivot point of `Control` nodes defaulted to the top-left corner, meaning rotations and scaling happened relative to that corner. You could change this with the `pivot_offset` property, but it only accepted pixel values. So every time your control resized, you'd need code to recalculate and update the pivot position.
+
+    Godot 4.6 introduces `pivot_offset_ratio`, which lets you express the pivot point as a normalized 0 to 1 range relative to the control's size. Set it to `Vector2(0.5, 0.5)` to keep the pivot centered no matter what.
+
+  read_more: https://github.com/godotengine/godot/pull/70646
+  contributors:
+    - name: Tomasz Chabora
+      link: https://github.com/KoBeWi
+  media: control_pivot.webm
+  poster: control_pivot.webp
+
+ui_margin:
+  title: Zero margin of error
+  subtitle: Visual feedback for MarginContainer nodes
+  text: |
+    No more guessing with your UI spacing! When you select a `MarginContainer` node in the editor, you will now see its margins drawn directly in the viewport.
+
+    This makes it crystal clear exactly how much space you're adding around child nodes, letting you fine-tune your layouts with confidence.
+
+  read_more: https://github.com/godotengine/godot/pull/111095
+  contributors:
+    - name: Malcolm Anderson
+      link: https://github.com/Meorge
+  media: control_margin.webp
+  media_author:
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
+
+# Editor
+
+hover_tabbar:
+  title: Drag, hover 'n' drop
+  subtitle: Switch tabs on hover while dragging
+  text: |
+    No more clicking to switch tabs and views before you drag and drop something. You can now just drag your resource and hover the destination tab to switch to it and drop your resource where it goes!
+
+    This is exactly one of those small improvements with a big impact on quality-of-life. It makes the editor feel smoother and more responsive during everyday use and allows you to fiddle less and focus more on your workflow.
+
+  read_more: https://github.com/godotengine/godot/pull/103478
+  contributors:
+    - name: Tomasz Chabora
+      link: https://github.com/KoBeWi
+  media_author:
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
+  media: hover_tabbar.webm
+  poster: hover_tabbar.webp
+
+resource_preview:
+  title: Check it out now
+  subtitle: Live previews in the Quick Open dialog
+  text: |
+    Remember those painful iterations every time you needed to select a texture, material, or other resource in the Quick Open dialog: guess which resource would look right, select it, close the dialog, observe the result, rinse and repeat?
+    Those days are over too!
+
+    Starting with Godot 4.6, as you move through the list, the selected resource is previewed instantly in your scene. You can quickly compare options, see the result in context, and commit only when it looks right, no extra clicks, no back-and-forth.
+
+  read_more: https://github.com/godotengine/godot/pull/106947
+  contributors:
+    - name: Malcolm Anderson
+      link: https://github.com/Meorge
+  media_author:
+    name: RespiteFromReality
+    link: https://github.com/RespiteFromReality
+  media: resource_preview.webm
+  poster: resource_preview.webp
+
+error_click:
+  title: Error, error on the wall...
+  subtitle: Clickable files in the Output panel
+  text: |
+    When it's time to squash bugs, one thing that grinds you down as a dev is having to manually search for the culprit, dig out the file, scroll to the right line, and only then start fixing.
+    But no more! Godot 4.6 brings two quality-of-life improvements to your bug hunting endeavors.
+
+    You can now pop up the offending script or resource by clicking on it inside the error or warning message directly in the Output panel. What's more, if you use an external editor, you can configure Godot to open the offending script directly there!
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+108473+111805
+  contributors:
+    - name: Tomasz Chabora
+      link: https://github.com/KoBeWi
+    - name: Mikael Hermansson
+      link: https://github.com/mihe
+  media_author:
+    name: Tomasz Chabora
+    link: https://github.com/KoBeWi
+  media: error_click.webm
+  poster: error_click.webp
+
+objectdb_snapshots:
+  title: Spot the difference
+  subtitle: ObjectDB snapshots and diffing for live object tracking
+  text: |
+    Godot 4.6 makes it much easier to understand what objects exist in your running game by adding **ObjectDB snapshots and comparisons** to the debugger.
+
+    You can now capture the internal list of all live objects at any point in your game and compare two snapshots to see exactly what was created, destroyed, or left behind. Tracking memory leaks or unexpected object growth will no longer require guesswork and logging.
+
+    You can now spot problems at a glance by visualizing clearly what changed over time!
+
+  read_more: https://github.com/godotengine/godot/pull/97210
+  contributors:
+    - name: Aleksander Litynski
+      link: https://github.com/AleksLitynski
+  media: objectdb_snapshots.webp
+
+editor_enhancements:
+  title: Editor loot drop!
+  subtitle: Small editor enhancements with big impact on workflow
+  text: |
+    A lot of subtle editor improvements landed in 4.6 to reduce friction and help you work faster and more intuitively. Here's a quick round-up of all the little ways your editing experience is about to get noticeably happier:
+
+    - You can now drag a resource directly into the script editor to automatically create an `@export` variable, saving time and reducing boilerplate when exposing properties.
+    
+    - The array Inspector got a facelift to make the most of available horizontal space, making deeply nested resources much easier to read and edit.
+
+    - When testing your game in the editor, new controls let you slow down or speed up the game while it's running, making it easier to inspect physics behavior or fine-tune gameplay without extra debug code.
+
+    - The Inspector now shows a dedicated icon for resources that are referenced elsewhere (linked-resources), helping you understand dependencies at a glance.
+
+    - A new menu button in the tab bar shows all open scenes or scripts, making it much easier to jump around in large projects.
+
+    - Collision, render, and other layer flags can now be adjusted by dragging in the property editor, speeding up common setup tasks.
+
+    - You can assign or edit groups for multiple selected nodes at once, saving time when organizing complex scenes.
+
+    - When resources go missing due to file moves or renames, the editor now lets you resolve indirect missing dependencies manually instead of being stuck.
+
+    - Newly-created scripts now open automatically, letting you start coding immediately without extra clicks.
+
+    All these little editor tweaks add up to help you stay focused on building your game rather than fighting the UI and losing steam.
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+106341+107273+109458+108079+112174+82212+112729+112187+108342+103257+
+  contributors:
+    - name: Tomasz Chabora
+      link: https://github.com/KoBeWi
+    - name: Haoyu Qiu
+      link: https://github.com/timothyqiu
+    - name: kleonc
+      link: https://github.com/kleonc
+    - name: SatLess
+      link: https://github.com/SatLess
+    - name: arkology
+      link: https://github.com/arkology
+    - name: Dexter
+      link: https://github.com/DexterFstone
+    - name: fkeyz
+      link: https://github.com/fkeyzuwu
+    - name: Koliur Rahman
+      link: https://github.com/dugramen
+
+# System
+
+animation_editor_goodies:
+  title: Animation editor goodies
+  subtitle: Timeline control and quick action buttons
+  text: |
+    Tweaking and polishing your animations just got more pleasant in Godot’s Animation Editor.
+
+    You can now resize the length of animations by dragging directly on the timeline, letting you stretch or shrink clips in place without fiddling with numeric fields or extra dialogs.
+
+    Also new are visibility, lock, and delete buttons for node groups in the Bezier track editor.
+
+    These handy icons mean you can now quickly hide, lock, or remove everything associated with a node’s tracks without hunting through menus.
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+is+110866+110623
+  contributors:
+    - name: Mikael Hermansson
+      link: https://github.com/mihe
+    - name: Kasper Arnklit Frandsen
+      link: https://github.com/Arnklit
+    - name: Michael Alexsander
+      link: https://github.com/YeldhamDev
+  media_author:
+    name:  Michael Alexsander
+    link: https://github.com/YeldhamDev
+  media: animation_editor_goodies.webm
+  poster: animation_editor_goodies.webp
+
+# Export
+
+patch_pcks:
+  title: Patch and play
+  subtitle: Delta encoding for Patch PCKs
+  text: |
+    Frequent updaters, this is a game changer for you (pun intended). Your exported patches just got leaner and faster.
+
+    Godot 4.6 improves patch PCKs by supporting delta encoding, allowing patch files to include only the parts of resources that actually changed instead of entire files. This can dramatically reduce the size of patches, especially for projects and games with large assets or frequent small updates (for example: if you're localizing your project and adding languages).
+
+    For players, this means faster downloads and updates. For developers, it makes distributing incremental patches more practical and bandwidth-friendly.
+
+  read_more: https://github.com/godotengine/godot/pull/112011
+  contributors:
+    - name: Mikael Hermansson
+      link: https://github.com/mihe
+  media_author:
+    name:  RespiteFromReality
+    link: https://github.com/RespiteFromReality
+  media: patch_pcks.webp
+
+# Input
+
+custom_keyboard_shortcuts:
+  title: Power-use that editor
+  subtitle: Add custom keyboard shortcuts through EditorSettings
+  text: |
+    Godot 4.6 gives you the power to define and register new keyboard shortcuts directly through `EditorSettings`. This opens up more customization for your workflow and lets plugins expose their own commands that feel like native editor actions.
+
+    Previously, adding custom shortcuts was awkward and often required hard-coded workarounds; now you can register and reuse shortcuts cleanly through the editor's own settings system. Whether you're building tools or fine-tuning your daily workflow, this makes managing and discovering shortcuts much more intuitive.
+
+  read_more: https://github.com/godotengine/godot/pull/102889
+  contributors:
+    - name: Robert Yevdokimov
+      link: https://github.com/ryevdokimov
+    - name: Igor Kordiukiewicz
+      link: https://github.com/IgorKordiukiewicz
+  media: custom_keyboard_shortcuts.webp
+
+controllers_led:
+  title: Light up your gamepads
+  subtitle: Foundation for advanced joypad features support
+  text: |
+    You can now customize the LED light colors on supported controllers, but this is only the beginning! Godot 4.6 lays the foundation for advanced joypad features support that will come in upcoming releases.
+
+    This groundwork opens the door to later add support for motion sensors, touchpads, haptic feedback, adaptive triggers, and controller information queries like controller type, button layout, connection method, and battery state. These future capabilities will allow you to fully leverage modern controllers and set up a richer gaming experience in your projects.
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+111681+111707
+  contributors:
+    - name: Nintorch
+      link: https://github.com/Nintorch
+  media_author:
+    name: AHarmlessPotato
+    link: https://sketchfab.com/3d-models/playstation-5-dualsense-878c1f882808477ab81c2fe86d5a3936
+  media: controller_color.webm
+  poster: controller_color.webp
+
+# Import
+
+improved_lod:
+  title: So far, so sharp
+  subtitle: Component pruning for mesh simplifications
+  text: |
+    Godot now generates LOD (level-of-detail) models that better preserve the shape of the original object, particularly for meshes built from multiple separate parts.
+
+    This ensures that distant objects in your game retain their intended form while still benefiting from performance-friendly simplification.
+
+  read_more: https://github.com/godotengine/godot/pull/110028
+  contributors:
+    - name: Arseny Kapoulkine
+      link: https://github.com/zeux
+  media_author:
+    name:  Arseny Kapoulkine
+    link: https://github.com/zeux
+  media: improved_lod.webp
+
+faster_textures:
+  title: 'Faster than you can say: Texture'
+  subtitle: 'Betsy: Convert RGB to RGBA on the GPU'
+  text: |
+    Textures in Godot are compressed by default to make your game smaller on disk and more efficient in memory, often reducing size by four to six times.
+
+    Starting with Godot 4.6, 3D textures compressed this way now import up to two times faster, so you spend less time waiting when importing assets and more time building your world. This was accomplished by changing the way Betsy handles RGB textures to instead convert them to RGBA on the GPU and use them directly.
+
+  read_more: https://github.com/godotengine/godot/pull/110060
+  contributors:
+    - name: BlueCube3310
+      link: https://github.com/BlueCube3310
+  media_author:
+    name:  BlueCube3310
+    link: https://github.com/BlueCube3310
+  media: faster_textures.webp
+
+## Rendering
+
+agx_parameters:
+  title: Tone it down
+  subtitle: Configurable AgX tonemapper parameters
+  text: |
+    The AgX tonemapper now exposes **`agx_white` and `agx_contrast`**, letting you control how bright and contrasted your scenes appear and allowing you to achieve a more consistent hue on bright colors even at high contrast.
+
+    Previously, these values were fixed, giving you limited flexibility when adjusting dynamic range. While this change lays the foundation for future HDR support, the new curves don't break compatibility with 4.4 and 4.5!
+
+  read_more: https://github.com/godotengine/godot/pull/106940
+  contributors:
+    - name: Allen Pestaluky
+      link: https://github.com/allenwp
+  media_author:
+    name: Allen Pestaluky
+    link: https://github.com/allenwp
+  compare:
+    before_image: agx_default_contrast.webp
+    after_image: agx_contrast_1.53.webp
+    before_text: Default contrast
+    after_text: 1.53 contrast
+
+glow_blending:
+  title: Glow in the dark
+  subtitle: Improved glow blending defaults
+  text: |
+    Glow is now blended **before tonemapping**, with Screen as the new default mode. This corrects the order and improves visual results with at least similar or outright better performance. The tweak standardizes behavior across renderers and takes one more step towards improving HDR support.
+
+  read_more: https://github.com/godotengine/godot/pull/110671
+  contributors:
+    - name: Allen Pestaluky
+      link: https://github.com/allenwp
+    - name: Hugo Locurcio
+      link: https://github.com/Calinou
+  media_author:
+    name: Amazon Lumberyard
+    link: http://developer.nvidia.com/orca/amazon-lumberyard-bistro
+  media: glow_blending.webp
+
+radiance_reflection_probes_improvement:
+  title: Lighten the load of reflections
+  subtitle: Octahedral maps for reflection and radiance probes
+  text: |
+    Reflection and radiance probes now use octahedral maps. This makes them cheaper to compute for your GPU and lighter on memory.
+
+    For you, it means you can efficiently add high-quality localized reflections to your scenes, like water reflecting a room or glossy surfaces in a specific area. Plus, since the dependency on cubemaps has been removed, probes work more reliably across a wider range of hardware.
+
+  read_more: https://github.com/godotengine/godot/pull/107902
+  contributors:
+    - name: Darío
+      link: https://github.com/DarioSamo
+    - name: Clay John
+      link: https://github.com/clayjohn
+  media_author:
+    name: Darío
+    link: https://github.com/DarioSamo
+  compare:
+    before_image: radiance_reflection_probes_before.webp
+    after_image: radiance_reflection_probes_after.webp
+    before_text: Before
+    after_text: After
+
+mobile_3d_upgrade:
+  title: Banding dismissed
+  subtitle: Material debanding and improved HDR precision
+  text: |
+    The Mobile renderer steps up for 3D. Previously, visible color banding made it a tough sell for projects aiming at the highest visual fidelity. Not anymore!
+
+    **Material debanding** is now available for 3D: enable the existing debanding project setting and watch those ugly color bands disappear from your scenes. Additionally, when HDR 2D is enabled, the renderer now maintains higher color precision throughout the entire 3D pipeline, preventing quality loss.
+
+    Combined with all the optimizations unique to the Mobile renderer, these changes make it an excellent choice for high-performance 3D games on both mobile and desktop platforms.
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+109084+109971+
+  contributors:
+    - name: Hugo Locurcio
+      link: https://github.com/Calinou
+    - name: Allen Pestaluky
+      link: https://github.com/allenwp
+    - name: Clay John
+      link: https://github.com/clayjohn
+  media_author:
+    name: Hugo Locurcio
+    link: https://github.com/Calinou
+  compare:
+    before_image: hdr2d_debanding_4.5.1.webp
+    after_image: hdr2d_debanding_4.6.webp
+    before_text: Before
+    after_text: After
+    
+mobile_gpu_crash_fixes:
+  title: Mobile mended
+  subtitle: Vulkan Mobile crash fixes for Mali and Adreno GPUs
+  text: |
+    Godot is a general-purpose engine used by a wide variety of people, on a wide variety of devices, with a wide variety of graphics drivers, and not all of them work gracefully. Ensuring stability across the board is a constant effort, and this release makes big strides.
+
+    Thanks to developers of games like Rift Riff and Kamaeru sharing detailed crash logs from Google Play and giving us access to their projects, we tracked down and fixed a series of crashes affecting devices with certain Mali and Adreno mobile GPUs. If you've been seeing unexplained crashes on Android with the Mobile renderer, this release should bring relief to you and your players.
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+114476+114313+
+  contributors:
+    - name: Skyth
+      link: https://github.com/blueskythlikesclouds
+    - name: Adriaan de Jongh
+      link: https://github.com/AdriaandeJongh
+    - name: and more
+      link: https://bsky.app/profile/adriaan.games/post/3mcffssfxrd2l
+
+# Internationalization
+
+csv_translation_improvement:
+  title: 1 fish, 2 fishes?
+  subtitle: Improved CSV translation support and template generation
+  text: |
+    Spreadsheet-based localization has just leveled up, making CSV files more adapted to real game translation workflows.
+
+    You can now include optional `?context` columns to pass meaningful context for translators (so the same key can mean different things in different places), and `?plural` columns to define plural forms directly in your CSVs, including rules for languages with complex plural logic.
+
+    In addition, Godot now lets you **generate CSV translation templates,** giving you a good starting point for translators and making it easier to maintain consistent, exportable localization tables across languages and projects.
+
+  read_more: https://github.com/godotengine/godot/pulls?q=is%3Apr+112073+112149+
+  contributors:
+    - name: Haoyu Qiu
+      link: https://github.com/timothyqiu
+    - name: bruvzg
+      link: https://github.com/bruvzg
+
+csharp_translation_parser_support:
+  title: Bonjour, C#
+  subtitle: C# translation parser support
+  text: |
+    C# translation calls are now parsed just like GDScript, so localized text is collected automatically during POT/CSV exports.
+
+    This means strings inside `Tr(string)` and `TrN(string)` in C# will now be picked up automatically when generating translation files, so you don’t have to manually extract or manage them yourself. It closes a longstanding gap in localization workflows.
+
+  read_more: https://github.com/godotengine/godot/pull/99195
+  contributors:
+    - name: shitake2333
+      link: https://github.com/shitake2333
+
+
+# XR
+
+openxr_support:
+  title: Hello OpenXR 1.1
+  subtitle: Native OpenXR 1.1 support
+  text: |
+    The days of OpenXR 1.1 are upon us. Godot 4.6 will now automatically enable OpenXR 1.1 features on headsets and runtimes that support it. While largely a maintenance release, OpenXR 1.1 guarantees support for previously optional features, most notably the **surface grip pose** for reliable virtual hand positioning when hand joint tracking isn't available. It also standardizes interaction profiles for VR controllers, letting you distinguish between specific controller models.
+
+    The change also comes with a **compatibility layer** that ensures as much feature parity as possible on devices where OpenXR 1.1 is not supported. Godot automatically falls back to OpenXR 1.0 and enables as many extensions as possible transparently, maximizing compatibility across devices.
+
+  read_more: https://github.com/godotengine/godot/pull/109302
+  contributors:
+    - name: Bastiaan Olij
+      link: https://github.com/BastiaanOlij
+
+openxr_spatial_entities:
+  title: One API to rule them all
+  subtitle: Support for OpenXR spatial entities
+  text: |
+    When you want to place objects on real-world surfaces, track persistent locations, or react to QR codes in AR or VR, you now get spatial anchors, surface detection, and marker tracking through the standardized OpenXR Spatial Entities extensions.
+
+    This is the first phase of a broader effort to replace vendor-specific implementations with a single, consistent API for tracking and anchoring content in the real world. While some advanced features like furniture detection still require platform-specific solutions, spatial entities give you a solid foundation that will only grow as XR ecosystems evolve.
+
+  read_more: https://github.com/godotengine/godot/pull/107391
+  contributors:
+    - name: Bastiaan Olij
+      link: https://github.com/BastiaanOlij
+
+xr_editor_android:
+  title: Headsets *in* the loop
+  subtitle: XR Editor support for Android XR devices
+  text: |
+    You can now use the Godot XR Editor with Android XR devices, making it simpler to test and iterate your extended reality projects directly on Android XR hardware.
+
+    Instead of juggling separate tools or workflows to deploy and debug your app on a headset or AR device, the editor can recognize and work with Android XR devices more directly, shortening the development loop and letting you focus on building immersive experiences.
+
+    This is an important step toward tighter device-editor integration as XR support continues to mature in Godot.
+  read_more: https://github.com/godotengine/godot/pull/112777
+  contributors:
+    - name: Fredia Huya-Kouadio
+      link: https://github.com/m4gr3d
+  media: xr_editor_android.webp
+
+# Platforms
+
+android_gradle:
+  title: Pronto Gradle
+  subtitle: Android editor Gradle build support
+  text: |
+    This feature is a major win for developers working in the Android editor. You can now build Android projects using Gradle directly from Android through a companion app called [GABE](https://github.com/godotengine/android-editor-buildenv-app/releases/latest), which helps keep the editor itself lightweight.
+    
+    Before this, you could not export apps that used Android plugins from the Android editor. Now, you can!
+
+  read_more: https://github.com/godotengine/godot/pull/111732
+  contributors:
+    - name: David Snopek
+      link: https://github.com/dsnopek
+    - name: Logan Lang
+      link: https://github.com/devloglogan
+  media: android_gradle.webp
+
+storage_access_framework:
+  title: Get *specific* consent
+  subtitle: Storage Access Framework (SAF)
+  text: |
+    Starting with Godot 4.6, you can provide players with the possibility to load and save specific files using the system file picker, without asking for broad storage permissions.
+
+    This makes it possible to support loading custom content (like levels), importing data files, or exporting saves and presets, in a more granular manner, avoiding Play Store compliance issues and keeping players in control.
+
+  read_more: https://github.com/godotengine/godot/pull/112215
+  contributors:
+    - name: Anish Kumar
+      link: https://github.com/syntaxerror247
+  media: android_saf.webp
+  media_author:
+    name: Anish Kumar
+    link: https://github.com/syntaxerror247
+
+scrcpy_support:
+  title: Coming to a big screen near you
+  subtitle: Scrcpy runs exports in the editor
+  text: |
+    When exporting to Android, you can now enable an option to automatically run your exported game or app through `scrcpy`. This mirrors your connected phone or tablet onto your computer screen while the game runs on the device itself.
+
+    Instead of picking up your phone every time you test a change, you can stay focused where you're creating and interact with the game directly from your workstation, making it easier to test on real hardware and faster to iterate. You can even test different screen sizes and run multiple apps on the same device!
+
+  read_more: https://github.com/godotengine/godot/pull/108737
+  contributors:
+    - name: bruvzg
+      link: https://github.com/bruvzg
+  media_author:
+    name: bruvzg
+    link: https://github.com/bruvzg
+  poster: scrcpy_support.webp
+  media: scrcpy_support.webm
+
+# Windows
+
+render_parity:
+  title: Render parity
+  subtitle: Direct3D 12 as the new default on Windows
+  text: |
+    With Direct3D 12 now pretty much on par with Vulkan, new Windows projects default to Direct3D 12 for more stable driver support and fewer platform quirks. This improves cross-platform rendering consistency while keeping existing projects unchanged.
+
+  read_more: https://github.com/godotengine/godot/pull/113213
+  contributors:
+    - name: Pedro J. Estébanez
+      link: https://github.com/RandomShaper
+    - name: Darío
+      link: https://github.com/DarioSamo
+    - name: Skyth
+      link: https://github.com/blueskythlikesclouds
+  media: render_parity.webp
+
+# Physics
+
+mesh_to_collision_shape:
+  title: Abracadabra, mesh to collision shape
+  subtitle: Turn meshes into collision shapes
+  text: |
+    Until now, to get a collision shape from a primitive mesh, you had to manually choose a shape type and align it by hand. Literally a drag... But no more.
+
+    Starting with Godot 4.6, whenever your mesh is a simple geometric shape like a box, sphere, cylinder, or capsule, you can now automatically generate a matching CollisionShape3D from the Mesh menu. One more quality-of-life boost!
+
+  read_more: https://github.com/godotengine/godot/pull/101521
+  contributors:
+    - name: Kit Bishop
+      link: https://github.com/kitbdev
+  media: mesh_to_collision_shape.webp
+
+# Scripting
+
+## GDExtention
+
+parameters_and_values_as_required:
+  title: It's required if you say it is...
+  subtitle: Mark object parameters and results as required
+  text: |
+    This one's for you if you're already taking advantage of GDExtension to write high-performance game code and editor plugins in languages like C and C++, or [the community-supported Rust, Zig, and more](https://github.com/Godot-Languages-Support/godot-lang-support/blob/main/README.md)!
+
+    Starting with Godot 4.6, parameters and return values in the Godot API can be declared as **required**, meaning nullable values are no longer implicitly allowed in those positions. This is especially helpful in languages with strict nullable/optional types like Rust, Swift, or Kotlin, because it helps you catch mistakes at compile time or fail clearly at runtime!
+
+    The result is safer, clearer APIs with better integration of modern type systems in your tooling.
+
+  read_more: https://github.com/godotengine/godot/pull/86079
+  contributors:
+    - name: David Snopek
+      link: https://github.com/dsnopek
+    - name: Thaddeus Crews
+      link: https://github.com/Repiteo
+    - name: Jan Haller
+      link: https://github.com/Bromeon
+  media: parameters_and_values_as_required.webp
+
+json_gdextension:
+  title: JSON's here!
+  subtitle: JSON-based GDExtension interface
+  text: |
+    This one is mostly under the hood but to many of you it will come as a great relief and open new possibilities. As of this release, GDExtension's interface, the bridge between Godot and native code, is now defined in JSON instead of a C header.
+
+    This makes it much easier for tools, scripts, and language bindings to read, analyze, and work with the API automatically. This long-awaited upgrade lays the foundation for faster automation, improved bindings, and smoother integration, unlocking possibilities that weren’t practical before.
+
+    <span class="note">The C header is of course still available, but it is now generated from the JSON definition.</span>
+
+  read_more: https://github.com/godotengine/godot/pull/107845
+  contributors:
+    - name: David Snopek
+      link: https://github.com/dsnopek
+  media: json_gdextension.webp
+
+## GDScript
+
+step_out_button:
+  title: Get outta that function already
+  subtitle: 'Script debugger: Step Out button'
+  text: |
+    If you've ever gotten stuck inside a function while debugging, wishing you could jump straight back to the caller, this small feature will surely improve your quality of life.
+
+    You now have a **Step Out** button alongside the existing Step Over and Step Into ones. It lets you leave the current function and continue execution at the point where it was called. No more manually stepping through lines or navigating the call stack when exploring complex logic or tracking elusive bugs.
+
+  read_more: https://github.com/godotengine/godot/pull/97758
+  contributors:
+    - name: Freddie W
+      link: https://github.com/TsFreddie
+  media: step_out_button.webp
+
+string_placeholder_highlighting:
+  title: I spy with my little eye
+  subtitle: String placeholder highlighting
+  text: |
+    Godot 4.6 now highlights placeholders in your strings, so `%s`, `%d`, or `{name}` jump right off the page. You’ll no longer have to squint to spot missing or miswritten placeholders. This is sure to make string substitution or formatting more pleasant.
+
+  read_more: https://github.com/godotengine/godot/pull/112575
+  contributors:
+    - name: Cyril Bissey
+      link: https://github.com/Cykyrios
+  media: string_placeholder_highlighting.webp
+
+bbcode_to_markdown:
+  title: It's written in **BOLD**
+  subtitle: 'GDScript LSP: Improved BBCode to Markdown conversion'
+  text: |
+    Now when your comments include formatting like bold, code blocks, and structured text, they render more clearly in editors and IDEs that support Markdown.
+
+    Godot 4.6 improves the GDScript language server so docstrings that use BBCode now convert to Markdown more faithfully. You get better readability in documentation popups, tooltips, and editor previews, making it easier to write and maintain rich in‑code docs.
+
+  read_more: https://github.com/godotengine/godot/pull/113099
+  contributors:
+    - name: Nathan Lovato
+      link: https://github.com/NathanLovato
+    - name: HolonProduction
+      link: https://github.com/HolonProduction
+  media: bbcode_to_markdown.webp

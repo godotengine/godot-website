@@ -32,6 +32,10 @@ collections:
     output: true
   release_4_5:
     output: true
+  release_4_6:
+    output: true
+  release_4_7:
+    output: true
 
 # Build collection items with a future date.
 future: true

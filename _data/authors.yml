@@ -86,6 +86,8 @@
   image: /assets/images/authors/everyone.webp
 - name: "Godot Foundation"
   image: /assets/images/authors/foundation.webp
+- name: "GodotFest Team"
+  image: /assets/images/authors/godotfest.webp
 - name: "Godot Security Team"
   image: /assets/images/authors/security_team.webp
 - name: default

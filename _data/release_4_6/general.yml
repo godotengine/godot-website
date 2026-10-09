@@ -1,0 +1,39 @@
+introduction:
+  text: |
+    With the stability gained over the past five Godot 4 releases, the engine has matured enough to enter a new development phase. Godot 4.6 kicks off a period of polish, quality-of-life improvements, tighter integration of industry standards, and doubled-down effort on performance optimization.
+
+    The result: a release that puts you and your workflow first. The new editor theme lets your projects take center stage, while dozens of improvements across the board reduce friction and speed up everyday development. Every aspect, from loading assets to editing, debugging, exporting, and testing, has received some love to keep you focused on creating and minimize the time you spend wrestling with UI, or fiddling with external tools and plugins.
+
+conclusion:
+  title: Team work makes the dream work
+  text: |
+    Thanks to all the contributors who had PRs merged into this release.
+    Special thanks goes out to all the engine teams that collaborated on this release, especially since commits to other related repositories do not show up in this graphic.
+
+end_message:
+  text: |
+    Almost 3 years after the 4.0 release, Godot 4 is starting to be a mature engine, including a wide array of features that enable countless developers to publish games in all genres. For example, Steam got over [1,200 new Godot games](https://steamdb.info/stats/releases/?tech=Engine.Godot) in 2025, while itch.io consistently gets around [500 new Godot games per week](https://itch.io/game-development/engines/most-projects) (including game jams, prototypes, etc.).
+    
+    While every Godot user still has their own favorite missing feature which they're eagerly awaiting, for the most part the engine is fully capable. But there are still so many minor roadblocks, papercuts, workflow issues or outright bugs which can make the experience of developing and publishing games more painful than we'd like.
+    
+    So for this release, there was a significant focus on polish and usability, aiming to firmly establish Godot as an engine that you can rely upon, while keeping the iteration speed, lightweightness, and flexibility which make users love it.
+    
+    Close to 400 contributors were involved in this new feature release, authoring 2,001 (!) commits, and we want to thank them all for their amazing contributions, as well as all users who sponsor the Development Fund, reported bugs, opened proposals, or supported each other on our community platforms.
+  author:
+    name: Rémi Verschelde
+    role: Project Maintainer
+    link: https://github.com/akien-mga
+
+credits:
+  title: Release page credits
+  list:
+    - text: Texts and revisions
+      by: '[GDQuest team](https://www.gdquest.com/)'
+    - text: Page design and integration
+      by: '[Thibaud Goiffon](https://gotibo.fr/)'
+    - text: Page revision
+      by: '[Emilio Coppola](https://coppolaemilio.com/), [Rémi Verschelde](https://github.com/akien-mga/)'
+    - text: Additional fixes and contributions
+      by: '[Allen Pestaluky](https://github.com/allenwp), [passivestar](https://github.com/passivestar), [RespiteFromReality](https://github.com/RespiteFromReality), [Malcolm Anderson](https://github.com/Meorge), [Anish Kumar](https://github.com/syntaxerror247), [David Snopek](https://github.com/dsnopek), [Lukas Tenbrink](https://github.com/Ivorforce), [Mikael Hermansson](https://github.com/mihe), [Xananax](https://github.com/Xananax), [Nathan Lovato](https://github.com/NathanLovato), [Hakim Rouatbi](https://github.com/hakro), [Nintorch](https://github.com/Nintorch)'
+    - text: Additional media content
+      by: Tagged content creators
