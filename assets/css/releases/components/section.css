@@ -31,6 +31,7 @@
     margin-top: var(--m);
     max-width: 65ch;
     text-align: center;
+    line-height: 160%;
   }
   img{
     height: 12em;
