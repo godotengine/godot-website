@@ -314,7 +314,10 @@ authors_list: "0xcafeb33f,1|2frac,1|4d49,1|aaronfranke,5|aaronp64,4|AayushSarikh
 
         <section id="section-epilogue" class="section-header">
             <div class="wrap">
-                <img src="{{ site.baseurl }}/storage/releases/team_work.webp" alt="">
+                <picture>
+                    <source srcset="{{ site.baseurl }}/storage/releases/team_work.webp" media="(prefers-color-scheme: dark)">
+                    <img src="{{ site.baseurl }}/storage/releases/team_work_light.webp">
+                </picture>
                 <h3 class="title">{{ site.data.release_4_6.general.conclusion.title}}</h3>
                 {{ site.data.release_4_6.general.conclusion.text | markdownify}}
             </div>
