@@ -65,7 +65,6 @@
 	> .contributors {
 		display: grid;
 		grid-template-areas: "icon contributors";
-		align-items: baseline;
 
 		> svg {
 			grid-area: icon;
@@ -82,7 +81,7 @@
     align-items: center;
     a, span{
       font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 1.0em;
       opacity: 0.8;
     }
     a{
