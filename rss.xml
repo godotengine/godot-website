@@ -10,7 +10,6 @@
 &lt;ul>
 &lt;li>&lt;a href="#breaking-changes">Breaking changes&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#3d">3D&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#animation">Animation&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#core">Core&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#documentation">Documentation&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#editor">Editor&lt;/a>&lt;/li>
@@ -19,7 +18,7 @@
 &lt;li>&lt;a href="#input">Input&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#physics">Physics&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#platforms">Platforms&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#rendering">Rendering&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#rendering-and-shaders">Rendering and shaders&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#shaders">Shaders&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#xr">XR&lt;/a>&lt;/li>
 &lt;/ul>
