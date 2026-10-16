@@ -72,7 +72,7 @@ You can find a list of such issues by filtering the merged PRs in the 4.8 milest
 
 <video autoplay loop muted playsinline title="A panning showcase of the new `Trail3D` class in the form of the Godot Logo"><source src="/storage/blog/dev-snapshot-godot-4-8-dev-4/trail-3d-godot-logo.webm" type="video/webm"></video>
 
-While being more of an editor feature, the 3D Viewport override functionality by [Mikael Hermansson](https://github.com/mihe) in [GH-117569](https://github.com/godotengine/godot/pull/117569) warrants a highlight in this section. Through the new editor option "Allow Viewport Override" (enabled by default), hovering the mouse over a viewport set to a specific side will cause the currently edited axis to match that side.
+While being more of an editor feature, the 3D Viewport override functionality by [Michael Alexsander](https://github.com/YeldhamDev) in [GH-117569](https://github.com/godotengine/godot/pull/117569) warrants a highlight in this section. Through the new editor option "Allow Viewport Override" (enabled by default), hovering the mouse over a viewport set to a specific side will cause the currently edited axis to match that side.
 
 <video autoplay loop muted playsinline title="`Gridmap` override showcased across multiple 3D viewports"><source src="/storage/blog/dev-snapshot-godot-4-8-dev-1/allow-viewport-override.mp4" type="video/mp4"></video>
 
