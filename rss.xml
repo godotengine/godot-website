@@ -62,12 +62,6 @@
 &lt;span class="c1"># Prints "Greater Health Potion", "Potion of Healing".&lt;/span>
 &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">target&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;/div>
-&lt;div class="language-gdscript highlighter-rouge">&lt;div class="highlight">&lt;pre class="highlight">&lt;code>&lt;span class="k">var&lt;/span> &lt;span class="n">items&lt;/span> &lt;span class="p">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">"Potion of Healing"&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">"Greater Health Potion"&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">"Poison Vial"&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;span class="k">var&lt;/span> &lt;span class="n">fuzzy&lt;/span> &lt;span class="p">:&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="n">FuzzySearch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;span class="k">for&lt;/span> &lt;span class="n">result&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">fuzzy&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">search_all&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">"health potion"&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">items&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;span class="c1"># Prints "Greater Health Potion", "Potion of Healing".&lt;/span>
-&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">target&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
 &lt;p>Those using version control will be thrilled to hear that serialization of objects has become &lt;em>much&lt;/em> cleaner starting with &lt;a href="https://github.com/godotengine/godot/pull/92102">GH-92102&lt;/a>. &lt;a href="https://github.com/robert-wallis">Robert Wallis&lt;/a> ensures that all objects are now formatted such that they won’t cause oversized diffs.&lt;/p>
 &lt;table>
 &lt;thead>
