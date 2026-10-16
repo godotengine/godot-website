@@ -92,15 +92,6 @@ for result in fuzzy.search_all("health potion", items):
 	# Prints "Greater Health Potion", "Potion of Healing".
 	print(result.target)
 ```
-
-```gdscript
-var items := ["Potion of Healing", "Greater Health Potion", "Poison Vial"]
-var fuzzy := FuzzySearch.new()
-
-for result in fuzzy.search_all("health potion", items):
-	# Prints "Greater Health Potion", "Potion of Healing".
-	print(result.target)
-```
 Those using version control will be thrilled to hear that serialization of objects has become *much* cleaner starting with [GH-92102](https://github.com/godotengine/godot/pull/92102). [Robert Wallis](https://github.com/robert-wallis) ensures that all objects are now formatted such that they won't cause oversized diffs.
 
 | Before                                                                                                                           | After                                                                                                                           |
