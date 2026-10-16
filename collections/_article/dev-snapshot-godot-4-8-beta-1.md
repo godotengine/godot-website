@@ -30,7 +30,6 @@ Because we're already in feature freeze, there are no new features to cover comp
 
 - [Breaking changes](#breaking-changes)
 - [3D](#3d)
-- [Animation](#animation)
 - [Core](#core)
 - [Documentation](#documentation)
 - [Editor](#editor)
@@ -39,7 +38,7 @@ Because we're already in feature freeze, there are no new features to cover comp
 - [Input](#input)
 - [Physics](#physics)
 - [Platforms](#platforms)
-- [Rendering](#rendering)
+- [Rendering and shaders](#rendering-and-shaders)
 - [Shaders](#shaders)
 - [XR](#xr)
 
