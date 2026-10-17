@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Godot Engine">
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{% t meta.description %}{% endif %}">
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | markdownify | strip_html | strip_newlines }}{% else %}{% t meta.description %}{% endif %}">
 
 	<!-- Plausible -->
 	<script defer data-domain="godotengine.org" src="https://plausible.godot.foundation/js/script.file-downloads.outbound-links.js"></script>
