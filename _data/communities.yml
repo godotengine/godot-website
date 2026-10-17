@@ -373,6 +373,10 @@ Russia:
         url: https://vk.com/godot_engine
       - title: Telegram
         url: https://t.me/godot_engine
+  - name: In Godot
+    links:
+      - title: Telegram
+        url: https://t.me/ingodot
   - name: Game Constructors
     links:
       - title: VKontakte
