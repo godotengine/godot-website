@@ -1,5 +1,6 @@
 .anchored-link {
-    display: none;
+    display: inline-block;
+    visibility: hidden;
     background-image: url(/assets/icons/link.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -26,7 +27,8 @@
 }
 
 .anchored:hover .anchored-link {
-    display: inline-block;
+    /* Change `visibility` instead of `display` to avoid reflows when hovering over the link. */
+    visibility: visible;
 }
 
 .anchored-toast {
