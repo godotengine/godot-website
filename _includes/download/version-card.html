@@ -20,7 +20,7 @@
 					<div class="notes-summary">
 						<div class="notes-thumbnail" style="background-image: url('{{ release_article.image }}');"></div>
 						<div class="notes-excerpt">
-							{{ release_article.excerpt }}
+							{{ release_article.excerpt | markdownify | remove_first: '<p>' | remove: '</p>' | strip_newlines }}
 						</div>
 					</div>
 				{% endunless %}
