@@ -9,7 +9,7 @@ image_caption_description: A game by Kazehita
 date: 2026-10-29 12:00:00
 ---
 
-In the two weeks since the release of [4.8 beta 1](/article/dev-snapshot-godot-4-8-beta-1/), our team has made great strides in ensuring the detection and resolution of nearly 150 regressions. This blog post covering the beta snapshot, and however many more are to come, will be lighter than the dev snapshots as 4.8 is considered feature-complete at this stage. Nonetheless, there's still a fair bit to test, so we welcome you to try our newest release for yourself: Godot 4.8 beta 2.
+In the two weeks since the release of [4.8 beta 1](/article/dev-snapshot-godot-4-8-beta-1/), our team has made great strides in ensuring the resolution of nearly 150 bugs including around 30 regressions. This blog post covering the beta snapshot, and however many more are to come, will be lighter than the dev snapshots as 4.8 is considered feature-complete at this stage. Nonetheless, there's still a fair bit to test, so we welcome you to try our newest release for yourself: Godot 4.8 beta 2.
 
 Please consider [supporting the project financially](#support), if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.
 
