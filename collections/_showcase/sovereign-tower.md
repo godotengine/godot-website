@@ -20,6 +20,14 @@ youtube_id: "aAz_CooIugY"
 platforms: ["windows", "linux"]
 
 steam: https://store.steampowered.com/app/4113940/Sovereign_Tower/
+
+developer_interview:
+  title: "Why the developer chose Godot"
+  context: "— Godot Showcase - Sovereign Tower"
+  url: "/article/godot-showcase-sovereign-tower"
+  text: "<p>
+  Godot’s scene system made it really easy to organize and integrate assets, while also giving Gobert the flexibility to tweak and adjust things himself as we moved into the visual polish phase. This allowed him to iterate on the game’s visuals without having to go through a developer for every small change.
+</p>"
 ---
 
 ### KEY FEATURES
