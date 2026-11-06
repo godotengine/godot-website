@@ -16,7 +16,7 @@ date: 2026-11-06 14:00:00
 }
 </style>
 
-Today, <strong class="paul">Paul Mozet</strong> (Lead Programmer on Sovereign Tower) and <strong class="lisa">Lisa Garnier</strong> (Narrative Design and Technical Artist on Sovereign Tower) from [Wild Wits Games](https://wildwits.games) tell us about their experience developing their first Godot game: Sovereign Tower.
+Today, <strong class="paul">Paul Mozet</strong> (Lead Programmer on Sovereign Tower) and <strong class="lisa">Lisa Garnier</strong> (Narrative Design and Technical Artist on Sovereign Tower) from [Wild Wits Games](https://wildwits.games) tell us about their experience developing their latest Godot game: Sovereign Tower.
 
 Sovereign Tower is a story-rich Round Table management RPG where you recruit eccentric Knights, assign quests and balance egos whilst carving out your kingdom's destiny. The game is already out on [Steam](https://store.steampowered.com/app/4113940/Sovereign_Tower/) for Windows and Linux.
 
