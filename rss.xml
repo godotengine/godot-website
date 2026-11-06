@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Dev snapshot: Godot 4.8 beta 2</title><link>https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/</link><summary>4.8's second beta snapshot arrives</summary><description>&lt;p&gt;In the two weeks since the release of &lt;a href="/article/dev-snapshot-godot-4-8-beta-1/"&gt;4.8 beta 1&lt;/a&gt;, our team has made great strides in ensuring the resolution of nearly 150 bugs including around 30 regressions. This blog post covering the beta snapshot, and however many more are to come, will be lighter than the dev snapshots as 4.8 is considered feature-complete at this stage. Nonetheless, there’s still a fair bit to test, so we welcome you to try our newest release for yourself: Godot 4.8 beta 2.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Godot Engine Official</title><link/><description/><atom:link href="https://godotengine.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Godot Showcase - Sovereign Tower</title><link>https://godotengine.org/article/godot-showcase-sovereign-tower/</link><summary>Paul and Lisa from Wild Wits Games tell us about their experience working on Sovereign Tower.</summary><description>&lt;style&gt;
+.paul {
+color: #aa77e2;
+}
+.lisa {
+color: #40b99f;
+}
+&lt;/style&gt;
+&lt;p&gt;Today, &lt;strong class="paul"&gt;Paul Mozet&lt;/strong&gt; (Lead Programmer on Sovereign Tower) and &lt;strong class="lisa"&gt;Lisa Garnier&lt;/strong&gt; (Narrative Design and Technical Artist on Sovereign Tower) from &lt;a href="https://wildwits.games"&gt;Wild Wits Games&lt;/a&gt; tell us about their experience developing their first Godot game: Sovereign Tower.&lt;/p&gt;
+&lt;p&gt;Sovereign Tower is a story-rich Round Table management RPG where you recruit eccentric Knights, assign quests and balance egos whilst carving out your kingdom’s destiny. The game is already out on &lt;a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/"&gt;Steam&lt;/a&gt; for Windows and Linux.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/aAz_CooIugY" frameborder="0" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;"&gt;&lt;/iframe&gt;
+&lt;h2 id="can-you-tell-us-a-little-bit-about-your-game"&gt;Can you tell us a little bit about your game?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul Mozet (Lead Programmer on Sovereign Tower):&lt;/strong&gt; &lt;em&gt;Sovereign Tower&lt;/em&gt; is a round table manager RPG, mostly narrative, where you are the new Sovereign of a kingdom. You will have to recruit knights at your round table and dispatch them through the kingdom to answer the grievances of your people and the other counties’ representatives that will come to see you, while managing the ego of all of those eccentric characters. And if anything goes awry, you can count on the demon of the tower to go back in time and try to handle things in a different way!&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-1.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="how-did-you-get-your-start-in-game-development-and-how-did-it-grow-into-a-full-time-position"&gt;How did you get your start in game development? And how did it grow into a full-time position?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; A composer friend of mine, Pierrick Veillerobe, motivated me to do a Ludum Dare game jam with him while I was studying computer science back in 2021. I loved the experience and we made a few more in the year after. At the same time, I had the opportunity to meet Corto and François, the founders of Wild Wits Games and they welcomed me in 2022 to do a two months internship as a programmer on Aetheris, the first game of the studio. As the internship went well, they offered me a full-time position at the studio, as a programmer, an offer that I immediately accepted.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa Garnier (Narrative Design and Technical Artist on Sovereign Tower):&lt;/strong&gt; I first started exploring interactive media while I was at art school, graduating in 2020. I then switched to a computer science program to develop more technical skills. Like Paul, I joined the team in 2023 after completing a few-month internship. For our previous projects, &lt;em&gt;Aetheris&lt;/em&gt; and &lt;em&gt;Crown Gambit&lt;/em&gt;, I worked in a technical art role, which suited me well given my background in art and computer science.&lt;br /&gt;
+&lt;em&gt;Sovereign Tower&lt;/em&gt; is the first project I’ve worked on as a narrative designer, which is something I’ve wanted to do for a long time!&lt;/p&gt;
+&lt;h2 id="what-were-some-of-the-biggest-challenges-you-faced-during-the-development-process-and-how-did-you-overcome-them"&gt;What were some of the biggest challenges you faced during the development process, and how did you overcome them?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; The biggest one I think about is the rewind mechanic. We needed to have two saves per played cycle, one for the morning and one for the afternoon, which should all remember the state of all previously played cycles. But it couldn’t be simple state saves as using the demon power is not simply going back to a previous state, as the Sovereign remembers all information they get. Add to that hundreds of narrative variables and quests and more than a hundred characters, and you’ll get the perfect bug factory! To overcome the issue, we split everything we needed to save as much as we could to be as precise as possible, and had to do a lot of testing. But even so, some issues slipped through at the release, which wasn’t a big surprise and we’re fixing those as fast as we can.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; When it comes to the story, one of our biggest challenges was keeping the scope under control in terms of word count and budget.&lt;br /&gt;
+One of the things that makes &lt;em&gt;Sovereign Tower&lt;/em&gt; so interesting and worth playing more than once is all the different ways the story can go, which play around with the time rewind mechanics. We always want to take these as far as we can to make the experience as interesting and cohesive as possible, but adding new time-rewind options to every little interaction just wasn’t realistic.
+Game localization is expensive, and as a small studio, every word counts. We spent ages talking about and rethinking our main story ideas, and once most of the content had been written, we had to cut out the extra bits: getting rid of some of the variations here and there and scaling back some of our ambitions, while making sure these changes weren’t too big to impact the player experience. It was a bit of a balancing act, and there were a few stressful moments during production when we really worried we’d have to throw away a lot of the story.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-2.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="how-did-you-come-up-with-game-design-elements-for-your-project-such-as-the-time-rewinding-mechanic-were-there-any-game-design-changes-based-on-iteration-and-playtesting"&gt;How did you come up with game design elements for your project, such as the time rewinding mechanic? Were there any game design changes based on iteration and playtesting?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; The rewinding mechanic came up pretty early in the project conception, as we wanted to encourage players to explore the different narrative options the game was offering, so they would want to start a new playthrough right after finishing the first one. We already made a heavy narrative game with Crown Gambit, so we knew an incentive to dwell in the different paths would add a lot to the experience. For the rest of the core loop, it didn’t change a lot since the beginning of the conception to be honest. Of course, through playtesting we found a lot of quality of life features that we implemented, and others were requested by players and have been added in the game after the release. Also, even if we started working on Sovereign Tower before learning about the project, the release of Dispatch made us rethink a few things. The best example is the implementation of the level and experience system for the knights, which we felt was mandatory after finishing Dispatch. We also made a few adjustments to the knights’ tags system to make it more understandable.&lt;/p&gt;
+&lt;h2 id="how-did-you-create-the-various-character-designs-for-your-game-what-were-your-sources-of-inspiration-how-did-you-write-character-dialogues"&gt;How did you create the various character designs for your game? What were your sources of inspiration? How did you write character dialogues?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; Our art and creative director Gobert was often the starting point for our character designs from a visual perspective. He’s full of ideas and he’s always coming up with these really distinctive concepts he’s eager to explore, whether it’s more fantastical ideas like a wolf-knight inspired by the Beast of Gévaudan (Rufus) or a mermaid knight (Ligia), or more caricature-driven concepts, like the overworked salaryman (Oliver) or the insufferable rich kid (Gwendan).&lt;br /&gt;
+His inspirations are pretty diverse, but there’s obviously a lot of medieval fantasy, pop culture, and Arthurian legend in the mix, which is also a big part of our fantasy world’s identity. These visual ideas often came together with character archetypes we wanted to explore, in terms of personality type: the shy one, the dominant one, the cursed one, and so on.&lt;br /&gt;
+Early in development, we put together a huge collaborative board where we threw all kinds of ideas around, almost like a giant moodboard we could draw from later when fleshing out individual characters. We wanted each character to have a strong, immediately recognizable archetype, a bit like the cast of &lt;em&gt;Ace Attorney&lt;/em&gt;, where every character has their own distinct personality and quirks.&lt;br /&gt;
+It was a very collaborative process. While some characters were already clear from the start, others needed more discussion and refinement to make sure their characterisation felt in line with their design.&lt;br /&gt;
+Once the characters were well-defined, with distinct personalities and clear character arcs, writing their dialogue was generally pretty straightforward and fun! Giving each of them their own way of speaking and little quirks also helped a lot, providing a clear direction and letting their voice naturally shape the writing. Of course, it still took a few iterations to get everything to the right level of quality, but overall, the process flowed really well, and bringing all these characters to life was a real pleasure.&lt;/p&gt;
+&lt;h2 id="in-reviews-your-game-is-regularly-praised-for-its-art-direction-how-did-you-handle-the-asset-pipeline-with-godot-do-you-have-any-suggestions-for-improvement-in-this-regard"&gt;In reviews, your game is regularly praised for its art direction. How did you handle the asset pipeline with Godot? Do you have any suggestions for improvement in this regard?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; For assets that were relatively straightforward to integrate (such as character portraits) Gobert would upload them to our repository and update them in Godot when needed. For more complex integrations (particularly UI elements) Paul or I would take over. Godot’s scene system made it really easy to organize and integrate assets, while also giving Gobert the flexibility to tweak and adjust things himself as we moved into the visual polish phase. This allowed him to iterate on the game’s visuals without having to go through a developer for every small change.&lt;br /&gt;
+As for potential improvements, I don’t have any major suggestions based on our experience. The workflow felt intuitive for our needs, and overall the pipeline worked well for the scope of our project.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-3.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="how-did-you-animate-scenes-and-ui-elements-in-your-project-with-godot-what-was-your-experience-with-godots-animation-system-and-do-you-have-any-ideas-for-improvement"&gt;How did you animate scenes and UI elements in your project with Godot? What was your experience with Godot’s animation system, and do you have any ideas for improvement?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; We used a fairly even mix of AnimationPlayers and Tweens depending on the needs of each scene. I find both systems very complete and intuitive to work with, and I always enjoy writing a little tween with some juicy easing curves.&lt;br /&gt;
+Animating UI nodes could be a bit tricky at the time as it often required little workarounds to animate them smoothly, given how constrained their transforms were by the UI layout system. Thankfully this became much easier with Godot 4.7 and the introduction of transform offsets making it far more straightforward to animate UI elements for small transitions.&lt;/p&gt;
+&lt;h2 id="how-did-you-discover-godot-what-made-you-pick-it-for-your-project"&gt;How did you discover Godot? What made you pick it for your project?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; I first learned game development with Unity, around 2020, mostly with Brackeys’ tutorials. I learned about Godot through game jams, as I’ve seen quite a few games made with it back then but I didn’t look into it at that time. What made me switch to it was that Wild Wits was using it for Aetheris, so we can say I switched to Godot because of a job opportunity. Which wasn’t that common back in 2022!&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; I was first introduced to Godot during my computer science studies, and I later used it for game jams at the same school. I immediately found it very intuitive, and GDScript was also quite easy to pick up. I was also instantly charmed by its goofy little robot logo.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-4.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="what-do-you-like-about-godot"&gt;What do you like about Godot?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; It’s easy to use, it’s open source, we own what we make with it. But mostly I think that I really enjoy the community around Godot. When I started with Unity, I loved to see that many creators making tutorials and all the activity on the forums. With Godot, I’m finding that energy again. I really like the idea of an engine made by the community that is friendly for beginners but at the same time is very good for professionals too.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; It’s open source and really easy to get the hang of!&lt;/p&gt;
+&lt;h2 id="while-making-your-game-were-there-any-features-that-you-would-have-liked-to-see-in-godot"&gt;While making your game, were there any features that you would have liked to see in Godot?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; I must admit that there is only one thing I still miss from my days on Unity, and it’s the possibility to have multiple files systems and inspectors tabs and locking them. I’d love to see it on Godot one day!&lt;/p&gt;
+&lt;h2 id="what-advice-would-you-give-to-aspiring-game-developers-who-are-just-starting-out-in-the-field"&gt;What advice would you give to aspiring game developers who are just starting out in the field?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; First, if you haven’t, try to do at least one game jam. You can find online game jams almost every week on itch.io and it will confront you to some of the various challenges of video game development, especially finishing a project. It’s a good way to know if you’ll enjoy game dev or not. A second advice I would give is don’t let impostor syndrome prevent you from grabbing a serious opportunity if it presents itself. The industry is in a dire state currently, and finding a place in it requires having some skills, of course, but it also requires being lucky. I was. So when a chance comes up, don’t let it slip! I’ll just assume that you should follow this advice only if you don’t endanger yourself financially. Also if you want to work in indie game dev, accept to work on different domains at once. When you are a team of four or five people making a game, you can’t expect to only do one thing, so try to be what the project might need, not only what you have on your diploma.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; I’d encourage you to take risks and try things that are a bit daring, because I think creativity is never at its best until it ends up surprising even ourselves. As Paul mentioned, game jams are incredible opportunities for experimentation in this regard, and I think it’s also important to make the most of them to occasionally create situations that take us completely out of our comfort zone and to broaden our sources of inspiration and references. You might end up creating something that feels truly your own.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-5.webp" alt="" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Thank you very much Paul and Lisa for taking the time to answer our questions, and we look forward to see what you do next with Godot!&lt;/p&gt;
+&lt;p&gt;If you want to play Sovereign Tower, it is available on &lt;a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/"&gt;Steam&lt;/a&gt; for Windows and Linux.&lt;/p&gt;</description><category>Showcase</category><guid>https://godotengine.org/article/godot-showcase-sovereign-tower/</guid><dc:creator>Hugo Locurcio</dc:creator><pubDate>Fri, 06 Nov 2026 14:00:00 +0000</pubDate><image>https://godotengine.org/assets/showcase/sovereign-tower/thumbnail.jpg</image></item><item><title>Dev snapshot: Godot 4.8 beta 2</title><link>https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/</link><summary>4.8's second beta snapshot arrives</summary><description>&lt;p&gt;In the two weeks since the release of &lt;a href="/article/dev-snapshot-godot-4-8-beta-1/"&gt;4.8 beta 1&lt;/a&gt;, our team has made great strides in ensuring the resolution of nearly 150 bugs including around 30 regressions. This blog post covering the beta snapshot, and however many more are to come, will be lighter than the dev snapshots as 4.8 is considered feature-complete at this stage. Nonetheless, there’s still a fair bit to test, so we welcome you to try our newest release for yourself: Godot 4.8 beta 2.&lt;/p&gt;
 &lt;p&gt;Please consider &lt;a href="#support"&gt;supporting the project financially&lt;/a&gt;, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p&gt;
 &lt;p&gt;&lt;a href="#downloads"&gt;Jump to the &lt;strong&gt;Downloads&lt;/strong&gt; section&lt;/a&gt;, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.8.beta2/"&gt;&lt;strong&gt;Web editor&lt;/strong&gt;&lt;/a&gt;, the &lt;a href="https://www.meta.com/s/h9JcJGHfg"&gt;&lt;strong&gt;XR editor&lt;/strong&gt;&lt;/a&gt;, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4"&gt;&lt;strong&gt;Android editor&lt;/strong&gt;&lt;/a&gt; for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers"&gt;our testing group&lt;/a&gt; to get access to pre-release builds.&lt;/p&gt;
 &lt;hr /&gt;
@@ -3164,312 +3218,4 @@ custom shirt.&lt;/p&gt;
 &lt;td&gt;&lt;a href="https://discord.com/invite/vA4pNu4TTd"&gt;https://discord.com/invite/vA4pNu4TTd&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description><category>Events</category><guid>https://godotengine.org/article/godotfest-2026/</guid><dc:creator>GodotFest Team</dc:creator><pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotfest-2026.jpg</image></item><item><title>Dev snapshot: Godot 4.8 dev 3</title><link>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/</link><summary>✅️ TIP: Reading development snapshot articles builds character!</summary><description>&lt;p&gt;With &lt;a href="https://conference.godotengine.org/US/2026/"&gt;GodotCon Boston&lt;/a&gt; now behind us, our contributors have had nothing but time and energy to get their most-wanted features over the finish line. While feature freeze still isn’t for at least another month, that hasn’t stopped our community from making rapid progress in their work and reviews, meaning that we have quite a lot to go over today, so buckle up!&lt;/p&gt;
-&lt;p&gt;Please consider &lt;a href="#support"&gt;supporting the project financially&lt;/a&gt;, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p&gt;
-&lt;p&gt;&lt;a href="#downloads"&gt;Jump to the &lt;strong&gt;Downloads&lt;/strong&gt; section&lt;/a&gt;, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.8.dev3/"&gt;&lt;strong&gt;Web editor&lt;/strong&gt;&lt;/a&gt;, the &lt;a href="https://www.meta.com/s/3yJ7i8kop"&gt;&lt;strong&gt;XR editor&lt;/strong&gt;&lt;/a&gt;, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4"&gt;&lt;strong&gt;Android editor&lt;/strong&gt;&lt;/a&gt; for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers"&gt;our testing group&lt;/a&gt; to get access to pre-release builds.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;em&gt;The cover illustration is from&lt;/em&gt; &lt;a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/?curator_clanid=41324400"&gt;&lt;strong&gt;Sovereign Tower&lt;/strong&gt;&lt;/a&gt;, &lt;em&gt;a story-rich manangement RPG, where you play as the Sovereign of a magical tower and recruit eccentric Knights to your Round Table. You can buy the game on &lt;a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/?curator_clanid=41324400"&gt;Steam&lt;/a&gt;, and follow the developers on &lt;a href="https://bsky.app/profile/wildwits.games"&gt;Bluesky&lt;/a&gt; and &lt;a href="https://wildwits.games/en/home-english/"&gt;their website&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
-&lt;p&gt;In case you missed them, see the &lt;a href="/article/dev-snapshot-godot-4-8-dev-1/"&gt;4.8 dev 1&lt;/a&gt; and &lt;a href="/article/dev-snapshot-godot-4-8-dev-2/"&gt;4.8 dev 2&lt;/a&gt; release notes for an overview of some key features which were already in those snapshots, and are therefore still available for testing in 4.8 dev 3.&lt;/p&gt;
-&lt;h3 id="documentation-support-for-admonitions"&gt;Documentation: Support for admonitions&lt;/h3&gt;
-&lt;p&gt;We rarely have the opportunity to showcase improvements in our documentation as proper highlights, much less as the opening item in a snapshot’s blog post! So when something like &lt;a href="https://github.com/Cykyrios"&gt;Cyril Bissey&lt;/a&gt;’s work in &lt;a href="https://github.com/godotengine/godot/pull/111375"&gt;GH-111375&lt;/a&gt;—salvaged from &lt;a href="https://github.com/Calinou"&gt;Hugo Locurcio&lt;/a&gt;’s &lt;a href="https://github.com/godotengine/godot/pull/63079"&gt;original PR&lt;/a&gt;—delivers something that’s just &lt;em&gt;begging&lt;/em&gt; for a spotlight, we’ll welcome the opportunity with open arms.&lt;/p&gt;
-&lt;p&gt;In particular, our documentation—both in-editor and online—now offer native support for admonitions; That being: the built-in systems many documentation tools provide to highlight crucial information. As time of writing, our documentation tools use simple prefixes like “&lt;strong&gt;Note:&lt;/strong&gt;” or “&lt;strong&gt;Warning:&lt;/strong&gt;” to convey a similar effect, but this method causes critical details to blend in with the rest of the text. So starting now, we’ll begin slowly rolling out admonition replacements for these legacy systems, which will end up looking something like what you see below:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Dark Mode&lt;/th&gt;
-&lt;th&gt;Light Mode&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img src="/storage/blog/dev-snapshot-godot-4-8-dev-3/admonitions-dark.webp" alt="A showcase of the new admonitions (dark mode)" /&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src="/storage/blog/dev-snapshot-godot-4-8-dev-3/admonitions-light.webp" alt="A showcase of the new admonitions (light mode)" /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id="gdscript-underline-warnings-and-errors-in-editor"&gt;GDScript: Underline warnings and errors in editor&lt;/h3&gt;
-&lt;p&gt;Another improvement to visual feedback of critical details, and one which you will be able to experience right away, comes in the form of in-editor underlines for GDScript warnings and errors. Courtesy of &lt;a href="https://github.com/Meorge"&gt;Malcolm Anderson&lt;/a&gt; in &lt;a href="https://github.com/godotengine/godot/pull/119588"&gt;GH-119588&lt;/a&gt;, the debugging process for GDScript will become much more streamlined thanks to the direct and immediate information provided by these underlines.&lt;/p&gt;
-&lt;p&gt;Now hang on, you might be thinking: “doesn’t GDScript already &lt;em&gt;have&lt;/em&gt; this support?” Well, yes and no. Yes, because you would previously have a line with a warning/error be highlighted if a problem existed. No, because it highlighted the &lt;em&gt;entire line&lt;/em&gt;, which both obfuscated the problem and risked multiple issues being hidden if they existed on the same line. With these changes, only the relevant portions of a given line will be underlined. For instance, the following codeblock would’ve previously been highlighted in its entirety:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/storage/blog/dev-snapshot-godot-4-8-dev-3/gdscript-underline.webp" alt="A showcase of the focused in-editor underlines for GDScript warnings/errors" /&gt;&lt;/p&gt;
-&lt;h3 id="editor-filesystem-quality-of-life"&gt;Editor: &lt;code class="language-plaintext highlighter-rouge"&gt;FileSystem&lt;/code&gt; quality-of-life&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://github.com/jaydensipe"&gt;Jayden Sipe&lt;/a&gt; is cheating a bit with this next point, as they managed to squeeze in &lt;em&gt;two&lt;/em&gt; features worthy of a highlight in &lt;a href="https://github.com/godotengine/godot/pull/119103"&gt;GH-119103&lt;/a&gt;. Not that we’re complaining; the more the merrier! Both highlights have to do with improvements to &lt;code class="language-plaintext highlighter-rouge"&gt;FileSystem&lt;/code&gt; and the way users interact with it.&lt;/p&gt;
-&lt;p&gt;The first of these features is the ability to zoom in/out of the window with a mouse’s scrollwheel. By simply holding &lt;code class="language-plaintext highlighter-rouge"&gt;Ctrl&lt;/code&gt; while hovering over a &lt;code class="language-plaintext highlighter-rouge"&gt;FileSystem&lt;/code&gt; window, the contents will either growing or shrinking upon scrolling the mouse up or down respectively.&lt;/p&gt;
-&lt;video autoplay="" loop="" muted="" playsinline="" title="A showcase of scrollwheel zoom functionality in `FileSystem`"&gt;&lt;source src="/storage/blog/dev-snapshot-godot-4-8-dev-3/filesystem-scroll-zoom.mp4" type="video/mp4" /&gt;&lt;/video&gt;
-&lt;p&gt;Next up is glob-based searching. Sometimes you want to find a type of file or something with a specific prefix, without necessarily narrowing it down to a specific file. By utilizing glob-based search, now your results can explicitly capture whatever use-case you desire.&lt;/p&gt;
-&lt;video autoplay="" loop="" muted="" playsinline="" title="A showcase of glob search functionality in `FileSystem`"&gt;&lt;source src="/storage/blog/dev-snapshot-godot-4-8-dev-3/filesystem-glob-search.mp4" type="video/mp4" /&gt;&lt;/video&gt;
-&lt;h3 id="plugin-expose-the-property-clipboard"&gt;Plugin: Expose the property clipboard&lt;/h3&gt;
-&lt;p&gt;Between this and &lt;a href="/article/dev-snapshot-godot-4-8-dev-1/#core-fuzzysearch-and-fuzzysearchmatch"&gt;&lt;code class="language-plaintext highlighter-rouge"&gt;FuzzySearch&lt;/code&gt;&lt;/a&gt;, we’ve been on a bit of a roll with granting developers access to previously-internal API. &lt;a href="https://github.com/gelvinp"&gt;Jamis Gelvin&lt;/a&gt; took the helm this time around with &lt;a href="https://github.com/godotengine/godot/pull/87087"&gt;GH-87087&lt;/a&gt;, granting access to the property clipboard directly. Previously, the only way a property’s contents could be copied/pasted is by the engine itself, meaning that users couldn’t directly modify or access this data. Moving foward, one can leverage &lt;code class="language-plaintext highlighter-rouge"&gt;get_property_clipboard()&lt;/code&gt; and &lt;code class="language-plaintext highlighter-rouge"&gt;set_property_clipboard()&lt;/code&gt; via &lt;code class="language-plaintext highlighter-rouge"&gt;EditorInspector&lt;/code&gt;, granting all developers direct access to this information.&lt;/p&gt;
-&lt;video autoplay="" loop="" muted="" playsinline="" title="A showcase of the ability to copy/paste values by utilizing the newly exposed property clipbaord"&gt;&lt;source src="/storage/blog/dev-snapshot-godot-4-8-dev-3/property-clipboard.mp4" type="video/mp4" /&gt;&lt;/video&gt;
-&lt;h3 id="xr-visionos-module"&gt;XR: visionOS module&lt;/h3&gt;
-&lt;p&gt;Remember &lt;a href="https://github.com/rsanchezsaez"&gt;Ricardo Sanchez-Saez&lt;/a&gt;, the contributor responsible for &lt;a href="/article/dev-snapshot-godot-4-5-dev-5/#native-visionos-support"&gt;native visionOS support&lt;/a&gt;? Well, their work hasn’t concluded just yet, as they—along with co-authors &lt;a href="https://github.com/stuartcarnie"&gt;Stuart Carnie&lt;/a&gt; and &lt;a href="https://github.com/huisedenanhai"&gt;huiedenanhai&lt;/a&gt;—bring visionOS to new life as a module in &lt;a href="https://github.com/godotengine/godot/pull/109975"&gt;GH-109975&lt;/a&gt;! With these changes, not only has our build server’s logic &lt;a href="https://github.com/godotengine/godot-build-scripts/pull/159"&gt;dramatically simplified&lt;/a&gt;, but this lays the groundwork for &lt;a href="https://github.com/godotengine/godot/pull/118332"&gt;tvOS support&lt;/a&gt; in the near-future! This is all because… Um…&lt;/p&gt;
-&lt;p&gt;Alright, I’ll give it to you straight: I have no idea what any of this is about. These are people way smarter than me that’ve been tirelessly at work over the course of a year to fundamentally change systems I can’t even begin to understand to entirely new systems I only marginally understand. So for the time being, we’ll have to leave it at that, with the promise of more information coming soon™.&lt;/p&gt;
-&lt;p&gt;Hopefully the next highlight won’t be as technically involved to a point that it’d necessitate a dedicated blog post as well!&lt;/p&gt;
-&lt;h3 id="input-fix-performance-issues-when-moving-the-mouse-with-high-polling-rate-on-windows"&gt;Input: Fix performance issues when moving the mouse with high polling rate on Windows&lt;/h3&gt;
-&lt;p&gt;Ah.&lt;/p&gt;
-&lt;p&gt;To make a long story short: some mice are too fast for Windows; they were simply built different. Fortunately, Godot is also built different, and can now handle those mice like a champ. Hugo, the brain behind &lt;a href="https://github.com/godotengine/godot/pull/109639"&gt;GH-109639&lt;/a&gt; which implemented this fix, is preparing a dedicated blog post to give this fix the deep-dive it deserves. In the meantime, enjoy this comically oversimplified comparison:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Before&lt;/th&gt;
-&lt;th&gt;After&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;video autoplay="" loop="" muted="" playsinline="" title="Tracking the FPS when moving a high poll-rate mouse: before"&gt;&lt;source src="/storage/blog/dev-snapshot-godot-4-8-dev-3/windows-mouse-old.mp4" type="video/mp4" /&gt;&lt;/video&gt;&lt;/td&gt;
-&lt;td&gt;&lt;video autoplay="" loop="" muted="" playsinline="" title="Tracking the FPS when moving a high poll-rate mouse: after"&gt;&lt;source src="/storage/blog/dev-snapshot-godot-4-8-dev-3/windows-mouse-new.mp4" type="video/mp4" /&gt;&lt;/video&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; The dedicated blog post is now up: &lt;a href="/article/fixing-high-polling-rate-mice-on-windows"&gt;Fixing high polling rate mice on Windows in Godot&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="and-more"&gt;And more!&lt;/h3&gt;
-&lt;p&gt;There are too many exciting changes to list them all here, but here’s a curated selection:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Editor: Add Clear Project Cache option (&lt;a href="https://github.com/godotengine/godot/pull/120093"&gt;GH-120093&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Editor: Android: Enable screen orientation change on large screens and in Project Manager (&lt;a href="https://github.com/godotengine/godot/pull/121387"&gt;GH-121387&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Editor: Automatically create default resources in the editor for many objects (&lt;a href="https://github.com/godotengine/godot/pull/88647"&gt;GH-88647&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Editor: Fix metadata formatting in inspector (&lt;a href="https://github.com/godotengine/godot/pull/108878"&gt;GH-108878&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;GDScript: Fix shutdown crash when &lt;code class="language-plaintext highlighter-rouge"&gt;ScriptInstance&lt;/code&gt; references its owner (&lt;a href="https://github.com/godotengine/godot/pull/121762"&gt;GH-121762&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;GUI: TabBar: Add options for tab sizing strategy (&lt;a href="https://github.com/godotengine/godot/pull/113385"&gt;GH-113385&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;GUI: Use OS taskbar progress when &lt;code class="language-plaintext highlighter-rouge"&gt;ProgressDialog&lt;/code&gt; is shown (&lt;a href="https://github.com/godotengine/godot/pull/121505"&gt;GH-121505&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Physics: Add &lt;code class="language-plaintext highlighter-rouge"&gt;get_velocity_at_(local)_position()&lt;/code&gt; to &lt;code class="language-plaintext highlighter-rouge"&gt;RigidBody2D&lt;/code&gt; (&lt;a href="https://github.com/godotengine/godot/pull/121142"&gt;GH-121142&lt;/a&gt;) and &lt;code class="language-plaintext highlighter-rouge"&gt;RigidBody3D&lt;/code&gt; (&lt;a href="https://github.com/godotengine/godot/pull/121122"&gt;GH-121122&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Rendering: Fix directional shadow culling for orthogonal cameras (&lt;a href="https://github.com/godotengine/godot/pull/121775"&gt;GH-121775&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Rendering: Improve SPIR-V reflection performance (&lt;a href="https://github.com/godotengine/godot/pull/121835"&gt;GH-121835&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;91 contributors&lt;/strong&gt; submitted &lt;strong&gt;176 fixes&lt;/strong&gt; for this release. See our &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.8-dev3"&gt;&lt;strong&gt;interactive changelog&lt;/strong&gt;&lt;/a&gt; for the complete list of changes since &lt;a href="/article/dev-snapshot-godot-4-8-dev-2/"&gt;4.8 dev 2&lt;/a&gt;. You can also review &lt;a href="https://godotengine.github.io/godot-interactive-changelog/#4.8"&gt;all changes included in 4.8&lt;/a&gt; compared to the previous &lt;a href="/releases/4.7/"&gt;4.7 feature release&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This release is built from commit &lt;a href="https://github.com/godotengine/godot/commit/51105ccbe58381774ecd7a7486d564b202a5192e"&gt;&lt;code class="language-plaintext highlighter-rouge"&gt;51105ccbe&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="downloads"&gt;Downloads&lt;/h2&gt;
-&lt;div class="card card-download"&gt;
-&lt;a class="card-download-link" href="/download/archive/4.8-dev3"&gt;
-Download Godot 4.8 dev3
-&lt;/a&gt;
-&lt;div class="card-download-details"&gt;
-&lt;img class="lightbox-ignore" src="/storage/blog/covers/dev-snapshot-godot-4-8-dev-3.jpg" /&gt;
-&lt;div class="card-download-platforms"&gt;
-&lt;div class="download-platform platform-linux"&gt;
-&lt;img width="24" height="24" src="/assets/images/platforms/linux.svg" title="Linux" alt="Linux" class="lightbox-ignore" /&gt;
-Linux
-&lt;/div&gt;
-&lt;a href="https://downloads.godotengine.org/?version=4.8&amp;amp;flavor=dev3&amp;amp;slug=linux.x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary platform-linux"&gt;
-&lt;div class="download-title"&gt;
-Standard
-&lt;/div&gt;
-&lt;/a&gt;
-&lt;a href="https://downloads.godotengine.org/?version=4.8&amp;amp;flavor=dev3&amp;amp;slug=mono_linux_x86_64.zip&amp;amp;platform=linux.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-linux"&gt;
-&lt;div class="download-title"&gt;
-.NET
-&lt;/div&gt;
-&lt;/a&gt;
-&lt;div class="download-platform platform-macos"&gt;
-&lt;img width="24" height="24" src="/assets/images/platforms/macos.svg" title="macOS" alt="macOS" class="lightbox-ignore" /&gt;
-macOS
-&lt;/div&gt;
-&lt;a href="https://downloads.godotengine.org/?version=4.8&amp;amp;flavor=dev3&amp;amp;slug=macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary platform-macos"&gt;
-&lt;div class="download-title"&gt;
-Standard
-&lt;/div&gt;
-&lt;/a&gt;
-&lt;a href="https://downloads.godotengine.org/?version=4.8&amp;amp;flavor=dev3&amp;amp;slug=mono_macos.universal.zip&amp;amp;platform=macos.universal" class="btn btn-download btn-download-primary btn-download-primary--mono platform-macos"&gt;
-&lt;div class="download-title"&gt;
-.NET
-&lt;/div&gt;
-&lt;/a&gt;
-&lt;div class="download-platform platform-windows"&gt;
-&lt;img width="24" height="24" src="/assets/images/platforms/windows.svg" title="Windows" alt="Windows" class="lightbox-ignore" /&gt;
-Windows
-&lt;/div&gt;
-&lt;a href="https://downloads.godotengine.org/?version=4.8&amp;amp;flavor=dev3&amp;amp;slug=win64.exe.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary platform-windows"&gt;
-&lt;div class="download-title"&gt;
-Standard
-&lt;/div&gt;
-&lt;/a&gt;
-&lt;a href="https://downloads.godotengine.org/?version=4.8&amp;amp;flavor=dev3&amp;amp;slug=mono_win64.zip&amp;amp;platform=windows.64" class="btn btn-download btn-download-primary btn-download-primary--mono platform-windows"&gt;
-&lt;div class="download-title"&gt;
-.NET
-&lt;/div&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="card-download-sublinks"&gt;
-&lt;a class="card-download-other" href="/download/archive/4.8-dev3"&gt;
-Export templates and other downloads
-&lt;/a&gt;
-&lt;a class="card-download-donate" href="https://fund.godotengine.org/"&gt;
-Make a Donation
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;style&gt;
-.thankyou-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(0, 0, 0, 0.85);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 10;
-}
-.thankyou {
-background: var(--base-color);
-box-shadow: var(--more-shadow);
-padding: 30px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-position: relative;
-border-radius: 13px;
-}
-.thankyou-reading {
-font-size: 16px;
-}
-.thankyou-reading-list {
-font-size: 16px;
-margin: 0;
-margin-left: 48px;
-padding-left: 0;
-}
-.thankyou-donate {
-margin-bottom: 24px;
-text-align: center;
-}
-.btn.btn-donate {
-background-color: var(--primary-color);
-color: hsla(0, 0%, 100%, 0.9);
-font-size: 22px;
-font-weight: 600;
-margin-bottom: 26px;
-}
-.thankyou h2 {
-text-shadow: var(--base-shadow);
-font-size: 36px;
-font-weight: 800;
-margin-bottom: 12px;
-}
-.thankyou h2 .anchored-link {
-/* Hiding the anchored text automatically added on blogposts */
-display: none !important;
-}
-.thankyou p {
-max-width: 620px;
-font-size: 25px;
-}
-@media (max-width: 768px) {
-.thankyou-wrapper {
-display: block;
-}
-.thankyou {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-overflow: scroll;
-padding: 30px 40px 18px 40px;
-}
-.thankyou-reading-list {
-margin-left: 24px;
-}
-.btn-close-thankyou-popup {
-width: 48px;
-height: 48px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-}
-.btn-close-thankyou-popup {
-cursor: pointer;
-position: absolute;
-top: 12px;
-right: 12px;
-}
-.btn-close-thankyou-popup img {
-background: transparent !important; /* for overwriting the style in the blogposts img */
-}
-@media (prefers-color-scheme: light) {
-.btn-close-thankyou-popup img {
-filter: invert(1);
-opacity: 0.75;
-}
-}
-&lt;/style&gt;
-&lt;script&gt;
-document.addEventListener('DOMContentLoaded', () =&gt; {
-const thankYouWrapper = document.getElementById('thank-you');
-// Close itself, when clicked outside of the popup area.
-thankYouWrapper.addEventListener('click', (e) =&gt; {
-if (e.target === thankYouWrapper) {
-thankYouWrapper.style.display = 'none';
-}
-});
-// Close with a close button.
-const thankYouBackButton = document.querySelector('.btn-close-thankyou-popup');
-thankYouBackButton.addEventListener('click', () =&gt; {
-thankYouWrapper.style.display = 'none';
-});
-// Open from the main download buttons.
-const downloadButtons = document.querySelectorAll('.btn-download, .download-button');
-downloadButtons.forEach((it) =&gt; {
-if (it.dataset?.external === "yes") {
-return;
-}
-it.addEventListener('click', () =&gt; {
-thankYouWrapper.style.display = '';
-document.querySelector('.btn.btn-donate').focus();
-});
-});
-// Open from the all downloads list.
-const downloadLinks = document.querySelectorAll('.download-link');
-downloadLinks.forEach((it) =&gt; {
-it.addEventListener('click', () =&gt; {
-thankYouWrapper.style.display = '';
-});
-});
-// Close the dialog when the user presses the escape key.
-document.addEventListener('keydown', (e) =&gt; {
-if (e.key === 'Escape') {
-thankYouWrapper.style.display = 'none';
-}
-});
-});
-&lt;/script&gt;
-&lt;div class="thankyou-wrapper" id="thank-you" style="display: none;"&gt;
-&lt;div class="thankyou"&gt;
-&lt;h2&gt;Godot is downloading...&lt;/h2&gt;
-&lt;p class="thankyou-donate"&gt;
-Godot exists thanks to donations from people like you. Help us continue our work:
-&lt;/p&gt;
-&lt;a href="https://fund.godotengine.org" class="btn btn-donate"&gt;
-Make a Donation
-&lt;/a&gt;
-&lt;div class="btn-close-thankyou-popup"&gt;
-&lt;img src="/assets/icons/cross.svg" width="24" height="24" alt="Close this popup" class="lightbox-ignore" /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Standard build&lt;/strong&gt; includes support for GDScript and GDExtension.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;.NET build&lt;/strong&gt; (marked as &lt;code class="language-plaintext highlighter-rouge"&gt;mono&lt;/code&gt;) includes support for C#, as well as GDScript and GDExtension.&lt;/p&gt;
-&lt;div class="card card-warning"&gt;
-&lt;p&gt;
-While engine maintainers try their best to ensure that each preview snapshot and release candidate is stable, this is by definition &lt;strong&gt;a pre-release piece of software&lt;/strong&gt;. Be sure to make frequent backups, or use a version control system such as Git, to preserve your projects in case of corruption or data loss.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id="known-issues"&gt;Known issues&lt;/h2&gt;
-&lt;p&gt;With every release we accept that there are going to be various issues, which have already been reported but haven’t been fixed yet. See the GitHub issue tracker for a complete list of &lt;a href="https://github.com/godotengine/godot/issues?q=is%3Aissue+is%3Aopen+label%3Abug"&gt;known bugs&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;There are currently no known issues introduced by this release.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="bug-reports"&gt;Bug reports&lt;/h2&gt;
-&lt;p&gt;As a tester, we encourage you to &lt;a href="https://github.com/godotengine/godot/issues"&gt;open bug reports&lt;/a&gt; if you experience issues with this release. Please check the &lt;a href="https://github.com/godotengine/godot/issues"&gt;existing issues on GitHub&lt;/a&gt; first, using the search function with relevant keywords, to ensure that the bug you experience is not already known.&lt;/p&gt;
-&lt;p&gt;In particular, any change that would cause a regression in your projects is very important to report (e.g. if something that worked fine in previous 4.x releases, but no longer works in this snapshot).&lt;/p&gt;
-&lt;h2 id="support"&gt;Support&lt;/h2&gt;
-&lt;p&gt;Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/"&gt;generous donations from the Godot community&lt;/a&gt;. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md"&gt;their time&lt;/a&gt; or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md"&gt;their financial support&lt;/a&gt; to the project!&lt;/p&gt;
-&lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/"&gt;Godot Development Fund&lt;/a&gt; platform managed by the &lt;a href="https://godot.foundation/"&gt;Godot Foundation&lt;/a&gt;. There are also several &lt;a href="/donate"&gt;alternative ways to donate&lt;/a&gt; which you may find more suitable.&lt;/p&gt;
-&lt;p&gt;&lt;a class="btn" href="https://fund.godotengine.org/"&gt;Donate now&lt;/a&gt;&lt;/p&gt;</description><category>Pre-release</category><guid>https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/</guid><dc:creator>Thaddeus Crews</dc:creator><pubDate>Fri, 07 Aug 2026 12:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-8-dev-3.jpg</image></item></channel></rss>
+&lt;/table&gt;</description><category>Events</category><guid>https://godotengine.org/article/godotfest-2026/</guid><dc:creator>GodotFest Team</dc:creator><pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate><image>https://godotengine.org/storage/blog/covers/godotfest-2026.jpg</image></item></channel></rss>

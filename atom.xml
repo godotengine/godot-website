@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-11-06T15:56:44+00:00</updated><id>https://godotengine.org/</id><entry><title>Dev snapshot: Godot 4.8 beta 2</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/"/><updated>2026-10-29T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/</id><summary>4.8's second beta snapshot arrives</summary><content type="html">&lt;p&gt;In the two weeks since the release of &lt;a href="/article/dev-snapshot-godot-4-8-beta-1/"&gt;4.8 beta 1&lt;/a&gt;, our team has made great strides in ensuring the resolution of nearly 150 bugs including around 30 regressions. This blog post covering the beta snapshot, and however many more are to come, will be lighter than the dev snapshots as 4.8 is considered feature-complete at this stage. Nonetheless, there’s still a fair bit to test, so we welcome you to try our newest release for yourself: Godot 4.8 beta 2.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-11-06T20:07:17+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot Showcase - Sovereign Tower</title><link href="https://godotengine.org/article/godot-showcase-sovereign-tower/"/><updated>2026-11-06T14:00:00+00:00</updated><id>https://godotengine.org/article/godot-showcase-sovereign-tower/</id><summary>Paul and Lisa from Wild Wits Games tell us about their experience working on Sovereign Tower.</summary><content type="html">&lt;style&gt;
+.paul {
+color: #aa77e2;
+}
+.lisa {
+color: #40b99f;
+}
+&lt;/style&gt;
+&lt;p&gt;Today, &lt;strong class="paul"&gt;Paul Mozet&lt;/strong&gt; (Lead Programmer on Sovereign Tower) and &lt;strong class="lisa"&gt;Lisa Garnier&lt;/strong&gt; (Narrative Design and Technical Artist on Sovereign Tower) from &lt;a href="https://wildwits.games"&gt;Wild Wits Games&lt;/a&gt; tell us about their experience developing their first Godot game: Sovereign Tower.&lt;/p&gt;
+&lt;p&gt;Sovereign Tower is a story-rich Round Table management RPG where you recruit eccentric Knights, assign quests and balance egos whilst carving out your kingdom’s destiny. The game is already out on &lt;a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/"&gt;Steam&lt;/a&gt; for Windows and Linux.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/aAz_CooIugY" frameborder="0" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;"&gt;&lt;/iframe&gt;
+&lt;h2 id="can-you-tell-us-a-little-bit-about-your-game"&gt;Can you tell us a little bit about your game?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul Mozet (Lead Programmer on Sovereign Tower):&lt;/strong&gt; &lt;em&gt;Sovereign Tower&lt;/em&gt; is a round table manager RPG, mostly narrative, where you are the new Sovereign of a kingdom. You will have to recruit knights at your round table and dispatch them through the kingdom to answer the grievances of your people and the other counties’ representatives that will come to see you, while managing the ego of all of those eccentric characters. And if anything goes awry, you can count on the demon of the tower to go back in time and try to handle things in a different way!&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-1.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="how-did-you-get-your-start-in-game-development-and-how-did-it-grow-into-a-full-time-position"&gt;How did you get your start in game development? And how did it grow into a full-time position?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; A composer friend of mine, Pierrick Veillerobe, motivated me to do a Ludum Dare game jam with him while I was studying computer science back in 2021. I loved the experience and we made a few more in the year after. At the same time, I had the opportunity to meet Corto and François, the founders of Wild Wits Games and they welcomed me in 2022 to do a two months internship as a programmer on Aetheris, the first game of the studio. As the internship went well, they offered me a full-time position at the studio, as a programmer, an offer that I immediately accepted.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa Garnier (Narrative Design and Technical Artist on Sovereign Tower):&lt;/strong&gt; I first started exploring interactive media while I was at art school, graduating in 2020. I then switched to a computer science program to develop more technical skills. Like Paul, I joined the team in 2023 after completing a few-month internship. For our previous projects, &lt;em&gt;Aetheris&lt;/em&gt; and &lt;em&gt;Crown Gambit&lt;/em&gt;, I worked in a technical art role, which suited me well given my background in art and computer science.&lt;br /&gt;
+&lt;em&gt;Sovereign Tower&lt;/em&gt; is the first project I’ve worked on as a narrative designer, which is something I’ve wanted to do for a long time!&lt;/p&gt;
+&lt;h2 id="what-were-some-of-the-biggest-challenges-you-faced-during-the-development-process-and-how-did-you-overcome-them"&gt;What were some of the biggest challenges you faced during the development process, and how did you overcome them?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; The biggest one I think about is the rewind mechanic. We needed to have two saves per played cycle, one for the morning and one for the afternoon, which should all remember the state of all previously played cycles. But it couldn’t be simple state saves as using the demon power is not simply going back to a previous state, as the Sovereign remembers all information they get. Add to that hundreds of narrative variables and quests and more than a hundred characters, and you’ll get the perfect bug factory! To overcome the issue, we split everything we needed to save as much as we could to be as precise as possible, and had to do a lot of testing. But even so, some issues slipped through at the release, which wasn’t a big surprise and we’re fixing those as fast as we can.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; When it comes to the story, one of our biggest challenges was keeping the scope under control in terms of word count and budget.&lt;br /&gt;
+One of the things that makes &lt;em&gt;Sovereign Tower&lt;/em&gt; so interesting and worth playing more than once is all the different ways the story can go, which play around with the time rewind mechanics. We always want to take these as far as we can to make the experience as interesting and cohesive as possible, but adding new time-rewind options to every little interaction just wasn’t realistic.
+Game localization is expensive, and as a small studio, every word counts. We spent ages talking about and rethinking our main story ideas, and once most of the content had been written, we had to cut out the extra bits: getting rid of some of the variations here and there and scaling back some of our ambitions, while making sure these changes weren’t too big to impact the player experience. It was a bit of a balancing act, and there were a few stressful moments during production when we really worried we’d have to throw away a lot of the story.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-2.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="how-did-you-come-up-with-game-design-elements-for-your-project-such-as-the-time-rewinding-mechanic-were-there-any-game-design-changes-based-on-iteration-and-playtesting"&gt;How did you come up with game design elements for your project, such as the time rewinding mechanic? Were there any game design changes based on iteration and playtesting?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; The rewinding mechanic came up pretty early in the project conception, as we wanted to encourage players to explore the different narrative options the game was offering, so they would want to start a new playthrough right after finishing the first one. We already made a heavy narrative game with Crown Gambit, so we knew an incentive to dwell in the different paths would add a lot to the experience. For the rest of the core loop, it didn’t change a lot since the beginning of the conception to be honest. Of course, through playtesting we found a lot of quality of life features that we implemented, and others were requested by players and have been added in the game after the release. Also, even if we started working on Sovereign Tower before learning about the project, the release of Dispatch made us rethink a few things. The best example is the implementation of the level and experience system for the knights, which we felt was mandatory after finishing Dispatch. We also made a few adjustments to the knights’ tags system to make it more understandable.&lt;/p&gt;
+&lt;h2 id="how-did-you-create-the-various-character-designs-for-your-game-what-were-your-sources-of-inspiration-how-did-you-write-character-dialogues"&gt;How did you create the various character designs for your game? What were your sources of inspiration? How did you write character dialogues?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; Our art and creative director Gobert was often the starting point for our character designs from a visual perspective. He’s full of ideas and he’s always coming up with these really distinctive concepts he’s eager to explore, whether it’s more fantastical ideas like a wolf-knight inspired by the Beast of Gévaudan (Rufus) or a mermaid knight (Ligia), or more caricature-driven concepts, like the overworked salaryman (Oliver) or the insufferable rich kid (Gwendan).&lt;br /&gt;
+His inspirations are pretty diverse, but there’s obviously a lot of medieval fantasy, pop culture, and Arthurian legend in the mix, which is also a big part of our fantasy world’s identity. These visual ideas often came together with character archetypes we wanted to explore, in terms of personality type: the shy one, the dominant one, the cursed one, and so on.&lt;br /&gt;
+Early in development, we put together a huge collaborative board where we threw all kinds of ideas around, almost like a giant moodboard we could draw from later when fleshing out individual characters. We wanted each character to have a strong, immediately recognizable archetype, a bit like the cast of &lt;em&gt;Ace Attorney&lt;/em&gt;, where every character has their own distinct personality and quirks.&lt;br /&gt;
+It was a very collaborative process. While some characters were already clear from the start, others needed more discussion and refinement to make sure their characterisation felt in line with their design.&lt;br /&gt;
+Once the characters were well-defined, with distinct personalities and clear character arcs, writing their dialogue was generally pretty straightforward and fun! Giving each of them their own way of speaking and little quirks also helped a lot, providing a clear direction and letting their voice naturally shape the writing. Of course, it still took a few iterations to get everything to the right level of quality, but overall, the process flowed really well, and bringing all these characters to life was a real pleasure.&lt;/p&gt;
+&lt;h2 id="in-reviews-your-game-is-regularly-praised-for-its-art-direction-how-did-you-handle-the-asset-pipeline-with-godot-do-you-have-any-suggestions-for-improvement-in-this-regard"&gt;In reviews, your game is regularly praised for its art direction. How did you handle the asset pipeline with Godot? Do you have any suggestions for improvement in this regard?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; For assets that were relatively straightforward to integrate (such as character portraits) Gobert would upload them to our repository and update them in Godot when needed. For more complex integrations (particularly UI elements) Paul or I would take over. Godot’s scene system made it really easy to organize and integrate assets, while also giving Gobert the flexibility to tweak and adjust things himself as we moved into the visual polish phase. This allowed him to iterate on the game’s visuals without having to go through a developer for every small change.&lt;br /&gt;
+As for potential improvements, I don’t have any major suggestions based on our experience. The workflow felt intuitive for our needs, and overall the pipeline worked well for the scope of our project.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-3.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="how-did-you-animate-scenes-and-ui-elements-in-your-project-with-godot-what-was-your-experience-with-godots-animation-system-and-do-you-have-any-ideas-for-improvement"&gt;How did you animate scenes and UI elements in your project with Godot? What was your experience with Godot’s animation system, and do you have any ideas for improvement?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; We used a fairly even mix of AnimationPlayers and Tweens depending on the needs of each scene. I find both systems very complete and intuitive to work with, and I always enjoy writing a little tween with some juicy easing curves.&lt;br /&gt;
+Animating UI nodes could be a bit tricky at the time as it often required little workarounds to animate them smoothly, given how constrained their transforms were by the UI layout system. Thankfully this became much easier with Godot 4.7 and the introduction of transform offsets making it far more straightforward to animate UI elements for small transitions.&lt;/p&gt;
+&lt;h2 id="how-did-you-discover-godot-what-made-you-pick-it-for-your-project"&gt;How did you discover Godot? What made you pick it for your project?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; I first learned game development with Unity, around 2020, mostly with Brackeys’ tutorials. I learned about Godot through game jams, as I’ve seen quite a few games made with it back then but I didn’t look into it at that time. What made me switch to it was that Wild Wits was using it for Aetheris, so we can say I switched to Godot because of a job opportunity. Which wasn’t that common back in 2022!&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; I was first introduced to Godot during my computer science studies, and I later used it for game jams at the same school. I immediately found it very intuitive, and GDScript was also quite easy to pick up. I was also instantly charmed by its goofy little robot logo.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-4.webp" alt="" /&gt;&lt;/p&gt;
+&lt;h2 id="what-do-you-like-about-godot"&gt;What do you like about Godot?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; It’s easy to use, it’s open source, we own what we make with it. But mostly I think that I really enjoy the community around Godot. When I started with Unity, I loved to see that many creators making tutorials and all the activity on the forums. With Godot, I’m finding that energy again. I really like the idea of an engine made by the community that is friendly for beginners but at the same time is very good for professionals too.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; It’s open source and really easy to get the hang of!&lt;/p&gt;
+&lt;h2 id="while-making-your-game-were-there-any-features-that-you-would-have-liked-to-see-in-godot"&gt;While making your game, were there any features that you would have liked to see in Godot?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; I must admit that there is only one thing I still miss from my days on Unity, and it’s the possibility to have multiple files systems and inspectors tabs and locking them. I’d love to see it on Godot one day!&lt;/p&gt;
+&lt;h2 id="what-advice-would-you-give-to-aspiring-game-developers-who-are-just-starting-out-in-the-field"&gt;What advice would you give to aspiring game developers who are just starting out in the field?&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="paul"&gt;Paul:&lt;/strong&gt; First, if you haven’t, try to do at least one game jam. You can find online game jams almost every week on itch.io and it will confront you to some of the various challenges of video game development, especially finishing a project. It’s a good way to know if you’ll enjoy game dev or not. A second advice I would give is don’t let impostor syndrome prevent you from grabbing a serious opportunity if it presents itself. The industry is in a dire state currently, and finding a place in it requires having some skills, of course, but it also requires being lucky. I was. So when a chance comes up, don’t let it slip! I’ll just assume that you should follow this advice only if you don’t endanger yourself financially. Also if you want to work in indie game dev, accept to work on different domains at once. When you are a team of four or five people making a game, you can’t expect to only do one thing, so try to be what the project might need, not only what you have on your diploma.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="lisa"&gt;Lisa:&lt;/strong&gt; I’d encourage you to take risks and try things that are a bit daring, because I think creativity is never at its best until it ends up surprising even ourselves. As Paul mentioned, game jams are incredible opportunities for experimentation in this regard, and I think it’s also important to make the most of them to occasionally create situations that take us completely out of our comfort zone and to broaden our sources of inspiration and references. You might end up creating something that feels truly your own.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/showcase/sovereign-tower/sovereign-tower-5.webp" alt="" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Thank you very much Paul and Lisa for taking the time to answer our questions, and we look forward to see what you do next with Godot!&lt;/p&gt;
+&lt;p&gt;If you want to play Sovereign Tower, it is available on &lt;a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/"&gt;Steam&lt;/a&gt; for Windows and Linux.&lt;/p&gt;</content><author><name>Hugo Locurcio</name></author><category term="Showcase"/></entry><entry><title>Dev snapshot: Godot 4.8 beta 2</title><link href="https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/"/><updated>2026-10-29T12:00:00+00:00</updated><id>https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/</id><summary>4.8's second beta snapshot arrives</summary><content type="html">&lt;p&gt;In the two weeks since the release of &lt;a href="/article/dev-snapshot-godot-4-8-beta-1/"&gt;4.8 beta 1&lt;/a&gt;, our team has made great strides in ensuring the resolution of nearly 150 bugs including around 30 regressions. This blog post covering the beta snapshot, and however many more are to come, will be lighter than the dev snapshots as 4.8 is considered feature-complete at this stage. Nonetheless, there’s still a fair bit to test, so we welcome you to try our newest release for yourself: Godot 4.8 beta 2.&lt;/p&gt;
 &lt;p&gt;Please consider &lt;a href="#support"&gt;supporting the project financially&lt;/a&gt;, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project.&lt;/p&gt;
 &lt;p&gt;&lt;a href="#downloads"&gt;Jump to the &lt;strong&gt;Downloads&lt;/strong&gt; section&lt;/a&gt;, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the &lt;a href="https://editor.godotengine.org/releases/4.8.beta2/"&gt;&lt;strong&gt;Web editor&lt;/strong&gt;&lt;/a&gt;, the &lt;a href="https://www.meta.com/s/h9JcJGHfg"&gt;&lt;strong&gt;XR editor&lt;/strong&gt;&lt;/a&gt;, or the &lt;a href="https://play.google.com/store/apps/details?id=org.godotengine.editor.v4"&gt;&lt;strong&gt;Android editor&lt;/strong&gt;&lt;/a&gt; for this release. If you are interested in the latter, please request to join &lt;a href="https://groups.google.com/g/godot-testers"&gt;our testing group&lt;/a&gt; to get access to pre-release builds.&lt;/p&gt;
 &lt;hr /&gt;
@@ -5153,94 +5207,4 @@ While engine maintainers try their best to ensure that each preview snapshot and
 &lt;h2 id="support"&gt;Support&lt;/h2&gt;
 &lt;p&gt;Godot is a non-profit, open-source game engine developed by hundreds of contributors in their free time, as well as a handful of part and full-time developers hired thanks to &lt;a href="https://fund.godotengine.org/"&gt;generous donations from the Godot community&lt;/a&gt;. A big thank you to everyone who has contributed &lt;a href="https://github.com/godotengine/godot/blob/master/AUTHORS.md"&gt;their time&lt;/a&gt; or &lt;a href="https://github.com/godotengine/godot/blob/master/DONORS.md"&gt;their financial support&lt;/a&gt; to the project!&lt;/p&gt;
 &lt;p&gt;If you’d like to support the project financially and help us secure our future hires, you can do so using the &lt;a href="https://fund.godotengine.org/"&gt;Godot Development Fund&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a class="btn" href="https://fund.godotengine.org/"&gt;Donate now&lt;/a&gt;&lt;/p&gt;</content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry><entry><title>Changes to our Contribution Policies</title><link href="https://godotengine.org/article/contribution-policy-2026/"/><updated>2026-06-30T18:00:00+00:00</updated><id>https://godotengine.org/article/contribution-policy-2026/</id><summary>Godot is growing fast, so here is how we are dealing with the huge increase in contributions.</summary><content type="html">&lt;p&gt;Over the last several years we have become overwhelmed by the large number of
-code contributions (pull requests), especially those from new contributors.
-The number of open PRs has become a meme in the community. In part, the number
-of open PRs is a healthy sign that:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;People are interested in contributing to Godot and are willing to put in time to contribute,&lt;/li&gt;
-&lt;li&gt;We are being cautious about feature creep,&lt;/li&gt;
-&lt;li&gt;We are dedicated to high code quality.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;But ultimately, a large part of the backlog comes from the fact that the number
-of qualified reviewers is small, reviewing PRs is demanding, and we can’t keep up
-with everything coming in.&lt;/p&gt;
-&lt;p&gt;This problem is compounded by the recent increase in AI-generated contributions,
-both by AI agents and by humans submitting AI-generated code. The amount of
-effort required to make a PR has gone down (and number of PRs has increased as a
-result), while the amount of work to review PRs and the amount of people
-available to review has stayed the same. This reviewer shortage was already a
-problem, but it was one that we successfully ignored. We can no longer ignore it.&lt;/p&gt;
-&lt;p&gt;AI contributions have the added pain of being demoralizing. Reviewing PRs is
-already tedious work, but it is rewarding because reviewers generally feel
-that their efforts are contributing to educating a new contributor (who may
-become a future maintainer/reviewer). If your feedback on PRs is just being
-absorbed by a machine and not going towards mentoring a potential future
-maintainer, it becomes much harder to justify spending your free time on PR
-review.&lt;/p&gt;
-&lt;p&gt;It is time for us to recognize that these problems aren’t going away and
-therefore we need to take steps to reduce the burden on maintainers while
-ensuring we still have a pipeline to mentor new contributors to become future
-maintainers.&lt;/p&gt;
-&lt;p&gt;Accordingly, we are in the process of updating our contribution policies,
-including adding a stricter policy on AI contributions. The Foundation board
-and maintainers have been discussing a new policy for several months. Our focus will be on:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Encouraging new contributors to become future maintainers, that involves teaching and growing the understanding of new contributors.&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;LLMs can’t learn from specific feedback and thus can’t benefit from maintainers providing feedback.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ensuring all contributions are made by humans who can take responsibility for their code and be able and willing to fix it when needed.&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;AI cannot take responsibility, and we can’t trust heavy users of AI to understand their code enough to fix it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Adding barriers to low-effort slop.&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Unfortunately, this means we need to add barriers to contribution, but want to do it in a way that does not cut off our maintainer pipeline.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Increasing the incentive to review PRs.&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;PR review is the largest bottleneck in the engine right now. We need to ensure that people who choose to review PRs feel their time is well spent.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We will amend our &lt;a href="https://contributing.godotengine.org/en/latest/development/contribution_rules.html"&gt;contributing
-policy&lt;/a&gt;
-to include a prohibition on new features or significant
-re-factoring from new contributors without explicit permission from maintainers.
-This ensures that new contributors take the time to learn the codebase and
-engage with maintainers to build trust by working on bug fixes and documentation
-before diving into significant projects. We consider a new contributor to be
-someone with 3 or fewer merged pull requests.&lt;/p&gt;
-&lt;p&gt;Shortly we will also amend our contributing policy to align with the values described above. Our
-amended policy will include that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;No autonomous AI agent use or vibe coding&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;This already leads to an auto-ban from our GitHub repository and will continue to do so.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;No use of AI to generate substantial pieces of code&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;We require all code to be human authored. AI assistance should be limited to menial things (like code completion, regex, or find and replace).&lt;/li&gt;
-&lt;li&gt;If you do use AI in some capacity to author code, you must disclose it in the PR discussion.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;No AI-generated text in human-to-human communication&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;When our maintainers volunteer their time to review your issue, PR, or proposal, they do not want to talk to a machine. This is a basic principle of respect.&lt;/li&gt;
-&lt;li&gt;Machine translations are still acceptable as long as the original content was written by a human.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;All PRs must be reviewed and approved by a human before merging&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;This is the case already, but we will make it more explicit in our policy.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Things change every day with respect to the current suite of AI tools available.
-We will continue taking a conservative approach in our policies towards them,
-but we will re-evaluate as things evolve.&lt;/p&gt;</content><author><name>Godot Foundation</name></author><category term="News"/></entry></feed>
+&lt;p&gt;&lt;a class="btn" href="https://fund.godotengine.org/"&gt;Donate now&lt;/a&gt;&lt;/p&gt;</content><author><name>Thaddeus Crews</name></author><category term="Pre-release"/></entry></feed>
