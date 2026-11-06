@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-11-06T20:07:17+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot Showcase - Sovereign Tower</title><link href="https://godotengine.org/article/godot-showcase-sovereign-tower/"/><updated>2026-11-06T14:00:00+00:00</updated><id>https://godotengine.org/article/godot-showcase-sovereign-tower/</id><summary>Paul and Lisa from Wild Wits Games tell us about their experience working on Sovereign Tower.</summary><content type="html">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Godot Engine Official</title><link href="https://godotengine.org/atom.xml" rel="self"/><link href="https://godotengine.org/"/><updated>2026-11-06T20:51:22+00:00</updated><id>https://godotengine.org/</id><entry><title>Godot Showcase - Sovereign Tower</title><link href="https://godotengine.org/article/godot-showcase-sovereign-tower/"/><updated>2026-11-06T14:00:00+00:00</updated><id>https://godotengine.org/article/godot-showcase-sovereign-tower/</id><summary>Paul and Lisa from Wild Wits Games tell us about their experience working on Sovereign Tower.</summary><content type="html">&lt;style&gt;
 .paul {
 color: #aa77e2;
 }
@@ -6,7 +6,7 @@ color: #aa77e2;
 color: #40b99f;
 }
 &lt;/style&gt;
-&lt;p&gt;Today, &lt;strong class="paul"&gt;Paul Mozet&lt;/strong&gt; (Lead Programmer on Sovereign Tower) and &lt;strong class="lisa"&gt;Lisa Garnier&lt;/strong&gt; (Narrative Design and Technical Artist on Sovereign Tower) from &lt;a href="https://wildwits.games"&gt;Wild Wits Games&lt;/a&gt; tell us about their experience developing their first Godot game: Sovereign Tower.&lt;/p&gt;
+&lt;p&gt;Today, &lt;strong class="paul"&gt;Paul Mozet&lt;/strong&gt; (Lead Programmer on Sovereign Tower) and &lt;strong class="lisa"&gt;Lisa Garnier&lt;/strong&gt; (Narrative Design and Technical Artist on Sovereign Tower) from &lt;a href="https://wildwits.games"&gt;Wild Wits Games&lt;/a&gt; tell us about their experience developing their latest Godot game: Sovereign Tower.&lt;/p&gt;
 &lt;p&gt;Sovereign Tower is a story-rich Round Table management RPG where you recruit eccentric Knights, assign quests and balance egos whilst carving out your kingdom’s destiny. The game is already out on &lt;a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/"&gt;Steam&lt;/a&gt; for Windows and Linux.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/aAz_CooIugY" frameborder="0" allowfullscreen="" style="width: 100%; aspect-ratio: 16 / 9; height: auto;"&gt;&lt;/iframe&gt;
 &lt;h2 id="can-you-tell-us-a-little-bit-about-your-game"&gt;Can you tell us a little bit about your game?&lt;/h2&gt;
