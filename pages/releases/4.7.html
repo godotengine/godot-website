@@ -411,7 +411,10 @@ draft: false
 
         <section id="section-epilogue" class="section-header">
             <div class="wrap">
-                <img src="{{ site.baseurl }}/storage/releases/team_work.webp" alt="">
+                <picture>
+                    <source srcset="{{ site.baseurl }}/storage/releases/team_work.webp" media="(prefers-color-scheme: dark)">
+                    <img src="{{ site.baseurl }}/storage/releases/team_work_light.webp">
+                </picture>
                 <h3 class="title">{{- general.conclusion.title -}}</h3>
                 {{- general.conclusion.text | markdownify -}}
             </div>

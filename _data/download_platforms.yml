@@ -94,6 +94,18 @@
     - x86_64
     - Headless
 
+- name: "macos.x86_64"
+  title: "macOS"
+  caption: "Intel"
+  tags:
+    - x86_64 (Intel)
+
+- name: "macos.arm64"
+  title: "macOS"
+  caption: "Apple Silicon"
+  tags:
+    - arm64 (Apple Silicon)
+
 - name: "macos.universal"
   title: "macOS"
   caption: "Universal"

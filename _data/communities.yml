@@ -265,6 +265,11 @@ Germany:
     links:
       - title: Discord
         url: https://discord.gg/WWwbDY2ubC
+Greece:
+  - name: Godot Engine Greece
+    links:
+      - title: Discord
+        url: https://discord.com/invite/2VmagxJEh8
 India:
   - name: Godot India
     links:
@@ -502,6 +507,8 @@ United States:
       - 47.620422
       - -122.349358
     links:
+      - title: Website
+        url: https://godotseattle.club/
       - title: Discord
         url: https://discord.gg/G7WNW6GYrf
   - name: Godot East Coast Guild

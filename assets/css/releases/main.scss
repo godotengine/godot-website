@@ -284,6 +284,9 @@ a {
     .by{
       margin-bottom: 1.4em;
       font-weight: 500;
+      p {
+        line-height: 180%;
+      }
     }
   }
 }
@@ -371,6 +374,11 @@ a {
     }
     .subtitle{
       font-size: 1.6rem;
+    }
+    .link-icon{
+      a, span, svg{
+        font-size: 1.1em;
+      }
     }
   }
 }

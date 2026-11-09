@@ -13,8 +13,13 @@
     color: var(--body-text-color);
     fill: var(--body-text-color);
     margin-bottom: 2.0em;
+    margin: 0 1.0em 2.0em 1.0em;
     h3 {
         font-weight: 700;
+        margin-bottom: 0.4rem;
+    }
+    p {
+        line-height: 140%;
     }
     svg {
         width: 1.2em;
