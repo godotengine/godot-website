@@ -5,6 +5,7 @@ categories: ["news"]
 author: Godot Foundation
 image: /storage/blog/covers/partners_jetbrains_rider_asset_store_addons_support.png
 date: 2026-05-26 15:00:00
+sponsorship: true
 ---
 
 With the [launch](https://godotengine.org/article/introducing-the-godot-asset-store/) of the new [Godot Asset Store](https://store.godotengine.org/), [JetBrains Rider](https://www.jetbrains.com/rider/) is among the first to embrace it as a tool provider for addon developers.

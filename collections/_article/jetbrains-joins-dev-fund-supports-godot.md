@@ -5,6 +5,7 @@ categories: ["news"]
 author: Godot Foundation
 image: /storage/blog/covers/godot-jetbrains.webp
 date: 2025-08-05 12:00:00
+sponsorship: true
 ---
 
 We would like to welcome JetBrains as a Platinum Sponsor of the Godot Foundation. The support from JetBrains means a lot to us, so we would love to thank them for enabling us to keep improving the engine for everyone. 

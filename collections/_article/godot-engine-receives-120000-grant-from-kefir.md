@@ -5,6 +5,7 @@ categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/602/3eb/707/6023eb707ee89657560854.png
 date: 2021-02-10 14:20:30
+sponsorship: true
 ---
 
 We are delighted to announce that the game development studio [*Kefir*](https://kefirgames.ru) is giving the Godot Engine project a **USD 120,000** grant to fund further development of the engine. Thank you Kefir for supporting our free and open source game engine!

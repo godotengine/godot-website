@@ -147,3 +147,15 @@
 		padding: 12px 14px;
 	}
 }
+
+.card-warning.external {
+	background: light-dark(white, #494949);
+	border-radius: 12px;
+	color: light-dark(black, white);
+	font-size: 90%;
+	padding: 8px 12px;
+	border-color: light-dark(#e3e3e3, #202020);
+	p {
+		margin: 0;
+	}
+}

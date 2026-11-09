@@ -5,6 +5,7 @@ categories: ["news"]
 author: Clay John
 image: /storage/blog/covers/android-and-vulkan.webp
 date: 2023-12-14 15:00:00
+sponsorship: true
 ---
 
 We are excited to announce that we have partnered with [Google](https://about.google) and [The Forge](https://theforge.dev/) to bring some helpful performance optimizations to our Vulkan mobile backend. This will primarily benefit users targeting Vulkan-capable mobile devices.

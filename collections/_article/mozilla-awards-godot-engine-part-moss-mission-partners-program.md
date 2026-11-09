@@ -5,6 +5,7 @@ categories: ["news"]
 author: Juan Linietsky
 image: /storage/app/uploads/public/576/ac8/b00/576ac8b00df8c332598879.jpg
 date: 2016-06-22 00:00:00
+sponsorship: true
 ---
 
 The Godot Engine developer community is honored to announce that Godot has been selected as [one of the recipients of the MOSS "Mission Partners" award](https://blog.mozilla.org/blog/2016/06/22/mozilla-awards-385000-to-open-source-projects-as-part-of-moss-mission-partners-program).

@@ -5,6 +5,7 @@ categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/5fd/3d8/93c/5fd3d893cc1bb743932204.png
 date: 2020-12-11 20:36:52
+sponsorship: true
 ---
 
 It is with great excitement that we announce that the **[Godot Engine](https://godotengine.org) project is receiving support funded by a grant from [Facebook Reality Labs](https://about.fb.com/realitylabs/)** to further the development of Virtual Reality (VR) features within Godot.

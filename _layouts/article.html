@@ -12,6 +12,12 @@ layout: default
 <div class="container">
 	<article class="padded">
 		<div class="content article-container">
+			{% if page.sponsorship %}
+				<div class="card card-warning external">
+					<p>This blog post is the result of a <a href="https://fund.godotengine.org/corporate-sponsorship">sponsorship</a>.</p>
+				</div>
+			{% endif %}
+
 			<figure class="article-cover">
 				<img src="{{ page.image }}" title="{{ page.image_caption_title }}"
 				alt="{{ page.image_caption_title }} {{ page.image_caption_description }}" class="rounded-lg"

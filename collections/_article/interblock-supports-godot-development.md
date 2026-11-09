@@ -5,6 +5,7 @@ categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/5dd/555/69a/5dd55569a6e5d003811414.png
 date: 2019-11-20 14:52:55
+sponsorship: true
 ---
 
 *We are happy to announce that [Interblock](http://www.interblockgaming.com) is now supporting Godot's development as Platinum sponsor! For this occasion, we asked them to share some words about the company, why they chose to support Godot and their plans to use the engine for their products.*
