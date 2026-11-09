@@ -5,6 +5,7 @@ categories: ["progress-report"]
 author: Ignacio Roldán Etcheverry
 image: /storage/app/uploads/public/59e/b96/e71/59eb96e712765766078430.png
 date: 2017-10-21 19:19:02
+sponsorship: true
 ---
 
 Alpha2 is around the corner and I'm glad to announce that it will come with the first usable version of C# as a Godot scripting language.

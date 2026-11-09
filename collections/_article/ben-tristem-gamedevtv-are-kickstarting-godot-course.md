@@ -6,6 +6,7 @@ categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/5b0/329/342/5b032934283e8029566244.jpg
 date: 2018-05-21 20:38:35
+sponsorship: true
 ---
 
 If you are into game development, chances are that you've heard of [Ben Tristem](https://en.wikipedia.org/wiki/Ben_Tristem) and his [GameDev.tv](https://www.gamedev.tv/) team, as they are making some of the best-rated [online courses on Udemy](https://www.gamedev.tv/) for game engines like Unity3D and Unreal Engine 4, as well as art making tools like Blender and The GIMP.

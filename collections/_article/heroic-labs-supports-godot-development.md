@@ -6,6 +6,7 @@ categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/5d9/4ea/c8a/5d94eac8a8423458863414.jpg
 date: 2019-10-02 18:34:06
+sponsorship: true
 ---
 
 *We are happy to announce that [Heroic Labs](https://heroiclabs.com) is now supporting Godot's development as Platinum sponsor!
