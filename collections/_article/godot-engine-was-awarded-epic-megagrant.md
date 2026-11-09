@@ -5,6 +5,7 @@ categories: ["news"]
 author: Juan Linietsky
 image: /storage/app/uploads/public/5e3/86b/c31/5e386bc31db0b649571269.png
 date: 2020-02-03 00:00:00
+sponsorship: true
 ---
 
 With great excitement, today we want to officially announce the great honor of having been awarded an Epic MegaGrant!

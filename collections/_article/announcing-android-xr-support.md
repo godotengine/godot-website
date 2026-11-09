@@ -5,6 +5,7 @@ categories: ["news"]
 author: Bastiaan Olij
 image: /storage/blog/covers/godot-and-androidxr.jpg
 date: 2025-11-14 12:00:00
+sponsorship: true
 ---
 
 With the recent public release of Samsung Galaxy XR, the first headset using the new Android XR operating system, we are pleased to announce that Godot already supports this new ecosystem.

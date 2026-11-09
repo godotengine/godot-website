@@ -5,6 +5,7 @@ categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/618/d28/33e/618d2833e29f9687380785.png
 date: 2021-11-11 14:27:17
+sponsorship: true
 ---
 
 We are happy to announce that the gaming platform [OP Games](https://opgames.org) is donating USD 100,000 to the Godot project. These funds will be used to further the general development of the engine.

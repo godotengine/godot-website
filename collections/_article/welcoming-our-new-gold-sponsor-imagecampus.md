@@ -5,6 +5,7 @@ categories: ["news"]
 author: Juan Linietsky
 image: /storage/app/uploads/public/5ba/550/461/5ba5504619f94509951811.png
 date: 2018-09-21 12:00:00
+sponsorship: true
 ---
 
 Godot gets a new Gold sponsor! In this case, we are welcoming [Image Campus](https://www.imagecampus.edu.ar), an education institution located in Buenos Aires, Argentina, which specializes in animation, digital art and videogames.

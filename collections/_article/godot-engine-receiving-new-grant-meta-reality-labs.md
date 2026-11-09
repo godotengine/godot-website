@@ -5,6 +5,7 @@ categories: ["news"]
 author: Rémi Verschelde
 image: /storage/app/uploads/public/61c/334/684/61c3346840ff8863294393.png
 date: 2021-12-22 16:00:35
+sponsorship: true
 ---
 
 We are delighted to announce that the Godot Engine project is receiving a new grant from [Meta's Reality Labs](https://about.facebook.com/realitylabs/) to support our work on the XR capabilities of the engine.

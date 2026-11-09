@@ -5,6 +5,7 @@ categories: ["news"]
 author: Fredia Huya-Kouadio
 image: /storage/blog/covers/godot_xreal_aura_launch_nowon.jpg
 date: 2026-10-28 12:00:00
+sponsorship: true
 ---
 
 [XREAL AURA](https://www.xreal.com/aura), the first optical see-through glasses on Android XR, [is here](https://us.shop.xreal.com/products/xreal-aura?utm_source=social&utm_medium=extension&utm_campaign=AURA_Launch&utm_content=Godot_Engine) and Godot is part of the launch lineup\!
