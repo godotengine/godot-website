@@ -20,6 +20,7 @@ youtube_id: "jg2fsVUYBeg"
 platforms: ["windows", "macos", "linux"]
 
 steam: https://store.steampowered.com/app/3808690/Pathogenic/
+featured_in_home: true
 ---
 
 ### CELLULAR COMBAT EVOLVED

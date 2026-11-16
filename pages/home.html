@@ -22,7 +22,7 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "uk", "zh-cn", "zh
 {% include header.html %}
 
 <link rel="stylesheet" href="/assets/css/transparent-nav.css?3">
-<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="stylesheet" href="/assets/css/home.css?1">
 
 <section class="hero">
 	<div class="background-image" style="background-image: url()"></div>
@@ -105,9 +105,9 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "uk", "zh-cn", "zh
 	</div>
 </section>
 
-<section class="container padded">
+<section class="container padded latest-releases">
 	<h2>{% t home.latest_releases %}</h2>
-	<div class="flex eqsize responsive" style="gap: 30px;">
+	<div class="flex eqsize responsive" style="gap: 30px; padding-top: 0;">
 
 		{% assign latest_releases = site.article
 			| sort: "date"
@@ -115,8 +115,8 @@ localize: ["de", "en", "es", "fr", "ja", "ko", "pl", "pt-br", "uk", "zh-cn", "zh
 			| where_exp: "post", "post.categories contains 'pre-release' or post.categories contains 'release'"
 		%}
 		<div class="news-list">
-			<div class="release-posts" style="display: grid; gap: 18px;">
-				{% for post in latest_releases limit:6 offset:0 %}
+			<div class="release-posts">
+				{% for post in latest_releases limit:4 offset:0 %}
 				{% if post != posts[0] %}
 				<a href="{{ post.url }}" style="text-decoration: none;">
 					<article class="article-card row">

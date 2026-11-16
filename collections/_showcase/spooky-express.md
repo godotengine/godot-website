@@ -28,8 +28,6 @@ windows: true
 macos: true
 ios: true
 android: true
-
-featured_in_home: true
 ---
 
 Take charge of the Spooky Express; the only rail service willing to carry the undead passengers of deepest, darkest Trainsylvania. In your new role you'll plan routes and lay train tracks to meet your creepy commuters' demands, and create a rail network spanning more than 200 thoughtfully designed levels.
