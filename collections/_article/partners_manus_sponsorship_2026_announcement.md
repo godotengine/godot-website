@@ -1,6 +1,6 @@
 ---
 title: "Godot Foundation welcomes Manus as Platinum Sponsor"
-excerpt: "The Godot Foundation is happy to announce that Manus is now supporting Godot's development as Platinum Sponsor!"
+excerpt: "The Godot Foundation is happy to announce that Manus is now supporting Godot's development as a Platinum Sponsor!"
 categories: ["news"]
 author: Godot Foundation
 image: /storage/blog/covers/partners_manus_sponsorship_2026_announcement.jpg
