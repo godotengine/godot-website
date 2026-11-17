@@ -63,7 +63,7 @@ module MakeDownloadFilter
   end
 
   # Input should be a value from versions.yml or the output of make_release_version().
-  def make_download(input, platform, mono = false, host = "github")
+  def make_download(input, platform, mono = false, host = "github", debug_symbols = false)
     version_name = get_version_name(input)
     version_flavor = input["flavor"]
 
@@ -87,6 +87,9 @@ module MakeDownloadFilter
       download_slug = slugs_defaults["editor"][platform]
     elsif slugs_defaults.key?("extras") and slugs_defaults["extras"].key?(platform)
       download_slug = slugs_defaults["extras"][platform]
+    elsif platform.start_with?("debugsymbols_templates_")
+      # TODO: Add support for getting the download URL of editor debug symbols.
+      download_slug = slugs_defaults["debugsymbols"]["templates"][platform.delete_prefix("debugsymbols_templates_")]
     else
       # Unknown platform key, abort.
       return "#"

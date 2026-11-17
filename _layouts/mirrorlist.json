@@ -3,7 +3,14 @@
 		{% for mirror in page.version_mirrors %}
 		{
 			"name": "{{ mirror.name }}",
-			"url": "{{ mirror.url }}"
+			"url": "{{ mirror.url }}"{% if page.debugsymbols_available %},
+			"debugsymbols": {
+				"templates": {
+					{% for debugsymbol in mirror.debugsymbols.templates %}
+					"{{ debugsymbol[0] }}": "{{ debugsymbol[1] }}"{% unless forloop.last %},{% endunless %}
+					{% endfor %}
+				}
+			}{% endif %}
 		}{% unless forloop.last %},{% endunless %}
 		{% endfor %}
 	]
