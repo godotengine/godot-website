@@ -21,6 +21,9 @@ platinum:
   - name: "V-Sekai"
     link: "https://github.com/V-Sekai"
     image: "https://fund.godotengine.org/static/logos/v-sekai.png"
+  - name: Manus
+    link: "https://manus.im/"
+    image: "https://fund.godotengine.org/static/logos/manus.png"
 gold:
   - name: Arm
     link: "https://www.arm.com/"
