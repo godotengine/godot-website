@@ -4,13 +4,10 @@ excerpt: "The Godot 2026 showreel is out! We're so grateful for every submission
 categories: ["showcase"]
 author: Emi
 image: /assets/showcase/showreels/2026.jpg
-date: 2026-11-18 18:00:00
+date: 2026-11-19 18:00:00
 ---
 
-The Godot 2026 showreel is out! We're so grateful for every submission, vote, and support from our community. This year we had 422 submissions which is a new record.
-
-
-We have some ideas to improve the process of future showreels, but we'll make a follow up post about it next year. For now, enjoy the video:
+The Godot 2026 showreel is out! We're so grateful for every submission, vote, and support from our community. This year we had 422 submissions which is a new record. To deal with the increased amount of entries, next year we'll do a first pass and disqualify the entries that don't follow the [submission requirements](https://showreel.godotengine.org/about), and then open the voting publicly to all development fund members and contributors. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-YpxNqiPRlQ" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
 
