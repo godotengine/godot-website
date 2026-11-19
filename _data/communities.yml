@@ -265,6 +265,15 @@ Germany:
     links:
       - title: Discord
         url: https://discord.gg/WWwbDY2ubC
+  - name: Godot Community Hamburg
+    coordinates:
+      - 53.550556
+      - 9.993333
+    links:
+      - title: Discord
+        url: https://discord.gg/EC45Bxu37x
+      - title: Meetups on Luma
+        url: https://luma.com/godot-hamburg
 Greece:
   - name: Godot Engine Greece
     links:
