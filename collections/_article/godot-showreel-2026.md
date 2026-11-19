@@ -9,7 +9,7 @@ date: 2026-11-19 18:00:00
 
 The Godot 2026 showreel is out! We're so grateful for every submission, vote, and support from our community. This year we had 422 submissions which is a new record. To deal with the increased amount of entries, next year we'll do a first pass and disqualify the entries that don't follow the [submission requirements](https://showreel.godotengine.org/about), and then open the voting publicly to all development fund members and contributors. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-YpxNqiPRlQ" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wNbmip0uxKM" frameborder="0" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9; height: auto;"></iframe>
 
 The games and projects featured this year are (in order):
 
