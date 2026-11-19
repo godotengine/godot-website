@@ -6,7 +6,7 @@ dates: "Tue 3 & Wed 4 November"
 dates_short: "3-4 November"
 
 date: 2026-11-03 00:00:00
-date_passed: false
+date_passed: true
 
 location: "[smartvillage Bogenhausen](https://smartvillage.com/muenchen/bogenhausen), Rosenkavalierplatz 13, 81925 Munich, Germany"
 location_short: "Munich, Germany"
