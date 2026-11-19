@@ -81,16 +81,47 @@ module MirrorlistGeneratorPlugin
 
 			mirror_hosts.each do |host_name|
 				mirror_host = mirrorlist_hosts.find { |host| host["name"] == host_name }
-				mirror_url = make_download(version, mono, host_name)
+				mirror_url = make_download(version, "templates", mono, host_name)
+
+				# TODO: Don't hardcode the list of export template platforms/architectures
+				# (source it from `download_configs.yml` instead).
+				mirror_debugsymbols = {
+					'templates' => {
+						'android.debug.apk' => make_download(version, "debugsymbols_templates_android.debug.apk", mono, host_name),
+						'android.release.apk' => make_download(version, "debugsymbols_templates_android.release.apk", mono, host_name),
+						'linux.debug.64' => make_download(version, "debugsymbols_templates_linux.debug.64", mono, host_name),
+						'linux.release.64' => make_download(version, "debugsymbols_templates_linux.release.64", mono, host_name),
+						'linux.debug.32' => make_download(version, "debugsymbols_templates_linux.debug.32", mono, host_name),
+						'linux.release.32' => make_download(version, "debugsymbols_templates_linux.release.32", mono, host_name),
+						'linux.debug.arm64' => make_download(version, "debugsymbols_templates_linux.debug.arm64", mono, host_name),
+						'linux.release.arm64' => make_download(version, "debugsymbols_templates_linux.release.arm64", mono, host_name),
+						'linux.debug.arm32' => make_download(version, "debugsymbols_templates_linux.debug.arm32", mono, host_name),
+						'linux.release.arm32' => make_download(version, "debugsymbols_templates_linux.release.arm32", mono, host_name),
+						'macos.debug.arm64' => make_download(version, "debugsymbols_templates_macos.debug.arm64", mono, host_name),
+						'macos.release.arm64' => make_download(version, "debugsymbols_templates_macos.release.arm64", mono, host_name),
+						'macos.debug.x86_64' => make_download(version, "debugsymbols_templates_macos.debug.x86_64", mono, host_name),
+						'macos.release.x86_64' => make_download(version, "debugsymbols_templates_macos.release.x86_64", mono, host_name),
+						'windows.debug.64' => make_download(version, "debugsymbols_templates_windows.debug.64", mono, host_name),
+						'windows.release.64' => make_download(version, "debugsymbols_templates_windows.release.64", mono, host_name),
+						'windows.debug.32' => make_download(version, "debugsymbols_templates_windows.debug.32", mono, host_name),
+						'windows.release.32' => make_download(version, "debugsymbols_templates_windows.release.32", mono, host_name),
+						'windows.debug.arm64' => make_download(version, "debugsymbols_templates_windows.debug.arm64", mono, host_name),
+						'windows.release.arm64' => make_download(version, "debugsymbols_templates_windows.release.arm64", mono, host_name),
+					}
+				}
 
 				unless mirror_url == "#"
-					mirror = { 'name' => mirror_host["title"], 'url' => mirror_url }
+					mirror = {
+						'name' => mirror_host["title"],
+						'url' => mirror_url,
+						'debugsymbols' => mirror_debugsymbols
+					}
 					mirrors.push(mirror)
 				end
 			end
 		else
 			mirror_host = mirrorlist_hosts.find { |host| host["name"] == "tuxfamily" }
-			mirror_url = make_download(version, mono, "tuxfamily")
+			mirror_url = make_download(version, "templates", mono, "tuxfamily")
 
 			unless mirror_url == "#"
 				mirror = { 'name' => mirror_host["title"], 'url' => mirror_url }
@@ -98,9 +129,21 @@ module MirrorlistGeneratorPlugin
 			end
 		end
 
+		# Debug symbols are available in 4.8.beta1 and later.
+		version_major = Integer(version_bits[0])
+		version_minor = Integer(version_bits[1])
+		debugsymbols_available = version_major >= 5
+		unless debugsymbols_available
+			debugsymbols_available = version_major == 4 && version_minor >= 9
+		end
+		unless debugsymbols_available
+			debugsymbols_available = version_major == 4 && version_minor == 8 && (version_flavor.start_with?("beta") || version_flavor.start_with?("rc"))
+		end
+
 		# Initialize data hash to pass objects to the template.
 		@data = {
-		  'version_mirrors' => mirrors
+		  'version_mirrors' => mirrors,
+		  'debugsymbols_available' => debugsymbols_available
 		}
 
 		# Defaults can be configured via the `_config.yml`, same as with normal
@@ -112,11 +155,12 @@ module MirrorlistGeneratorPlugin
 
 	  # This is a hack to generate the URL from code. I don't know a better way to hook into Liquid and use its
 	  # registered filters. But it's short and sweet enough for now (or for... ever).
-	  def make_download(version, mono, host)
-		template = Liquid::Template.parse('{{ version | make_download: "templates", mono, host }}')
+	  def make_download(version, platform, mono, host)
+		template = Liquid::Template.parse('{{ version | make_download: platform, mono, host }}')
 
 		assigns = {
 			'version' => version,
+			'platform' => platform,
 			'mono' => mono,
 			'host' => host
 		}

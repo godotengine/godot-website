@@ -17,6 +17,39 @@ defaults:
       web: web_editor.zip
     extras:
       aar_library: template_release.aar
+    debugsymbols:
+      templates:
+        android.debug.apk: debugsymbols_android_release.zip
+        android.release.apk: debugsymbols_android_release.zip
+        linux.debug.64: debugsymbols_linux_debug.arm32.zip
+        linux.release.64: debugsymbols_linux_release.arm32.zip
+        linux.debug.32: debugsymbols_linux_debug.arm32.zip
+        linux.release.32: debugsymbols_linux_release.arm32.zip
+        linux.debug.arm64: debugsymbols_linux_debug.arm64.zip
+        linux.release.arm64: debugsymbols_linux_release.arm64.zip
+        linux.debug.arm32: debugsymbols_linux_debug.arm32.zip
+        linux.release.arm32: debugsymbols_linux_release.arm32.zip
+        macos.debug.arm64: debugsymbols_macos_debug.arm64.zip
+        macos.release.arm64: debugsymbols_macos_release.arm64.zip
+        macos.debug.x86_64: debugsymbols_macos_debug.x86_64.zip
+        macos.release.x86_64: debugsymbols_macos_release.x86_64.zip
+        windows.debug.64: debugsymbols_windows_debug_x86_64.exe.zip
+        windows.release.64: debugsymbols_windows_release_x86_64.exe.zip
+        windows.debug.32: debugsymbols_windows_debug_x86_32.exe.zip
+        windows.release.32: debugsymbols_windows_release_x86_32.exe.zip
+        windows.debug.arm64: debugsymbols_windows_debug_arm64.exe.zip
+        windows.release.arm64: debugsymbols_windows_release_arm64.exe.zip
+      editor:
+        android.apk: android_editor.debugsymbols.zip
+        linux.64: linux.x86_64.debugsymbols.zip
+        linux.32: linux.x86_32.debugsymbols.zip
+        linux.arm64: linux.arm64.debugsymbols.zip
+        linux.arm32: linux.arm32.debugsymbols.zip
+        macos.arm64: macos.arm64.dSYM.zip
+        macos.x86_64: macos.x86_64.dSYM.zip
+        windows.64: win32.exe.debugsymbols.zip
+        windows.32: win32.exe.debugsymbols.zip
+        windows.arm64: windows_arm64.exe.debugsymbols.zip
 
     mono:
       templates: mono_export_templates.tpz
@@ -32,6 +65,39 @@ defaults:
         windows.arm64: mono_windows_arm64.zip
       extras:
         aar_library: mono.template_release.aar
+      debugsymbols:
+        templates:
+          android.debug.apk: mono_debugsymbols_android_release.zip
+          android.release.apk: mono_debugsymbols_android_release.zip
+          linux.debug.64: mono_debugsymbols_linux_debug.arm32.zip
+          linux.release.64: mono_debugsymbols_linux_release.arm32.zip
+          linux.debug.32: mono_debugsymbols_linux_debug.arm32.zip
+          linux.release.32: mono_debugsymbols_linux_release.arm32.zip
+          linux.debug.arm64: mono_debugsymbols_linux_debug.arm64.zip
+          linux.release.arm64: mono_debugsymbols_linux_release.arm64.zip
+          linux.debug.arm32: mono_debugsymbols_linux_debug.arm32.zip
+          linux.release.arm32: mono_debugsymbols_linux_release.arm32.zip
+          macos.debug.arm64: mono_debugsymbols_macos_debug.arm64.zip
+          macos.release.arm64: mono_debugsymbols_macos_release.arm64.zip
+          macos.debug.x86_64: mono_debugsymbols_macos_debug.x86_64.zip
+          macos.release.x86_64: mono_debugsymbols_macos_release.x86_64.zip
+          windows.debug.64: mono_debugsymbols_windows_debug_x86_64.exe.zip
+          windows.release.64: mono_debugsymbols_windows_release_x86_64.exe.zip
+          windows.debug.32: mono_debugsymbols_windows_debug_x86_32.exe.zip
+          windows.release.32: mono_debugsymbols_windows_release_x86_32.exe.zip
+          windows.debug.arm64: mono_debugsymbols_windows_debug_arm64.exe.zip
+          windows.release.arm64: mono_debugsymbols_windows_release_arm64.exe.zip
+        editor:
+          android.apk: mono_android_editor.debugsymbols.zip
+          linux.64: mono_linux.x86_64.debugsymbols.zip
+          linux.32: mono_linux.x86_32.debugsymbols.zip
+          linux.arm64: mono_linux.arm64.debugsymbols.zip
+          linux.arm32: mono_linux.arm32.debugsymbols.zip
+          macos.arm64: mono_macos.arm64.dSYM.zip
+          macos.x86_64: mono_macos.x86_64.dSYM.zip
+          windows.64: mono_win32.exe.debugsymbols.zip
+          windows.32: mono_win32.exe.debugsymbols.zip
+          windows.arm64: mono_windows_arm64.exe.debugsymbols.zip
 
   3:
     templates: export_templates.tpz
@@ -387,7 +453,8 @@ overrides:
         extras:
           aar_library: mono.template_release.aar
 
-  # Godot 4.8 beta 1 split universal macOS editor into separate architectures.
+  # Godot 4.8 beta 1 split universal macOS editor into separate architectures,
+  # and introduced separate downloads for debug symbols.
   - version: 4
     range:
       - 4.5-beta3
