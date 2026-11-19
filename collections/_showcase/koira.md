@@ -24,8 +24,6 @@ platforms: ["windows", "macos", "linux", "playstation"]
 steam: https://store.steampowered.com/app/1626620/Koira/?curator_clanid=41324400
 sony: https://www.playstation.com/en-us/games/koira/
 
-featured_in_home: true
-
 windows: true
 macos: true
 linux: true
