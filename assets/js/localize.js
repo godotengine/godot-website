@@ -8,6 +8,7 @@ const languageMap = {
 	'ko': '한국어',
 	'pl': 'Polski',
 	'pt-br': 'Português',
+	'tr': 'Türkçe',
 	'uk': 'Українська',
 	'zh-cn': '中文（简体）',
 	'zh-tw': '中文（繁體）',
