@@ -11,7 +11,7 @@ date: 2026-11-28 09:00:00 +0800
 # Set to true to mark it as a past event
 date_passed: false
 
-location: "Research Institute of Tsinghua University in Shenzhen"
+location: "Research Institute of Tsinghua University in Shenzhen, Shenzhen, Guangdong, China"
 location_short: "Shenzhen, Guangdong, China"
 location_map: "https://j.map.baidu.com/d0/crfh"
 
