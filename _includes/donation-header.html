@@ -1,10 +1,14 @@
 <style>
+:root {
+	--nav-margin-top: 0.5em;
+	--nav-height: 58.4px;
+}
+
 .donation-header {
 	background-color: #ffa700;
 	color: black;
-	padding: 15px;
 	text-align: center;
-	padding: 40px 15px;
+	padding: calc(40px + var(--nav-height) + var(--nav-margin-top)) 15px 40px 15px;
 	font-size: 1.5em;
 	display: none; /* Hidden by default */
 }
@@ -15,20 +19,23 @@
 	color: black;
 	margin-bottom: 0;
 	font-size: 1.5em;
+	font-weight: 800;
 }
 .donation-header p {
 	margin-top: 0;
+	margin-bottom: 27px;
+	line-height: 1.5;
 }
 .donation-header img {
 	position: absolute;
 	right: 10px;
-	top: 10px;
+	top: calc(10px + var(--nav-height) + var(--nav-margin-top));
 	filter: invert(1);
 	cursor: pointer;
 }
 .donation-header .btn {
 	background: black;
-  color: white;
+	color: white;
 }
 @media (max-width: 600px) {
 	.donation-header {
@@ -43,7 +50,7 @@
 		This has been a great year for the engine, but there are still a lot of things we would love to do.<br>
 		If everyone visiting the site would donate €5, we could hire 5 more developers to work on Godot full-time.<br>
 	</p>
-	<a class="btn" href="https://fund.godotengine.org/?ref=december-2025" onclick="dismissHeader(true)">Donate Now</a>
+	<a class="btn" href="https://fund.godotengine.org/?ref=december-2026" onclick="dismissHeader(true)">Donate Now</a>
 </div>
 
 <script>
