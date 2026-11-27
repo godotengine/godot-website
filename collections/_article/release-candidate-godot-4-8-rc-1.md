@@ -1,6 +1,6 @@
 ---
 title: "Release candidate: Godot 4.8 RC 1"
-excerpt: We give thanks to our contributors for an efficent release cycle!
+excerpt: We give thanks to our contributors for an efficient release cycle!
 categories: [pre-release]
 author: Thaddeus Crews
 image: /storage/blog/covers/release-candidate-godot-4-8-rc-1.jpg
